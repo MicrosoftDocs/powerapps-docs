@@ -17,7 +17,7 @@ contributors:
 # Contact us sample
 
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
 When you create a new portal by using the **Portal from blank** template, it creates an example page called **Contact us**. This page provides a working example of how portal users can enter information into a form that will be stored in a Dataverse table.
 

@@ -1,7 +1,7 @@
 ---
 title: "Retrieve a table row using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to form a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier"
-ms.date: 04/14/2023
+ms.date: 05/12/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
