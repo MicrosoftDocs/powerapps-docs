@@ -271,7 +271,7 @@ More information: [Use Upsert](entity-operations-update-delete.md#use-upsert)
 
 ## Create documents in storage partitions
 
-If you are creating large numbers of elastic table rows that contain non-relational data, you can create the rows in storage partitions to speed up access to those rows. More information: [Using Partitions > Create a record](../elastic-tables.md#create-a-record).
+If you are creating large numbers of elastic table rows that contain non-relational data, you can create the rows in storage partitions to speed up access to those rows. More information: [Partitioning and horizontal scaling](../elastic-tables.md#partitioning-and-horizontal-scaling)
 
 ### See also
 
