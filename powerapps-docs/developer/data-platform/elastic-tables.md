@@ -42,13 +42,13 @@ Elastic tables are Dataverse tables which are powered by Azure Cosmos DB. They a
 
 Whether you should use an elastic table depends on the specific needs of your data and your application.
 
-Elastic tables are better when:
+Use elastic tables when:
 
 - Your data is unstructured or semi-structured, or if your data model is constantly changing.
 - You need automatic horizontal scaling.
 - You need to handle a high volume of read and write requests.
 
-Standard tables are better when:
+Use standard tables when:
 
 - Your application requires strong data consistency.
 - Your application requires relational modeling and needs transactional capability across tables and during plugin execution stages.
@@ -303,7 +303,8 @@ These examples create a new column `contoso_sensortype` in elastic table `contos
 TODO
 
 I don't think we need this sample b/c it there is nothing special about it for elastic tables.
-
+We do need samples for column creation here: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/entity-attribute-metadata
+Docs and Learn 3380064: Consolidate metadata topics
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
@@ -428,6 +429,7 @@ TODO:
 Sorry, but I don't think we need these samples about relationship creation here either. 
 Unless there is something specific about elastic tables that needs to be demonstrated here.
 We need samples like this here: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/entity-relationship-metadata
+Docs and Learn 3380064: Consolidate metadata topics
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -578,10 +580,13 @@ OData-EntityId: [Organization URI]/api/data/v9.0/RelationshipDefinitions(125e6d7
 
 Following examples show how customer can work with data stored in an elastic table.
 
-- [Create a record](#create-a-record)
-- [Update a record](#update-a-record)
-- [Retrieve a record](#retrieve-a-record)
-- [Query rows in a single logical partition](#query-rows-in-a-single-logical-partition)
+- [Create a record in an elastic table](#create-a-record-in-an-elastic-table)
+- [Update a record in an elastic table](#update-a-record-in-an-elastic-table)
+- [Retrieve a record in an elastic table](#retrieve-a-record-in-an-elastic-table)
+- [Query rows in a single logical partition of an elastic table](#query-rows-in-a-single-logical-partition-of-an-elastic-table)
+- [Query rows across all logical partitions of an elastic table](#query-rows-across-all-logical-partitions-of-an-elastic-table)
+- [Upsert a record in an elastic table](#upsert-a-record-in-an-elastic-table)
+- [Delete a record in an elastic table](#delete-a-record-in-an-elastic-table)
 
 
 ### Create a record in an elastic table

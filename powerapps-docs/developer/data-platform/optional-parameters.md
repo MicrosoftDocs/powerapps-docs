@@ -292,8 +292,6 @@ static void DemonstratePartition(IOrganizationService service)
 }
 ```
 
-
-
 ### [Web API](#tab/webapi)
 
 **Request**
@@ -316,7 +314,7 @@ The response shouldn't be affected by sending the tag unless the plug-in contain
 
 ---
 
-More information: [Using Partitions](elastic-tables.md#using-partitions)
+More information: [Choosing a PartitionId value](elastic-tables.md#choosing-a-partitionid-value)
 
 ## Bypass custom synchronous logic
 
