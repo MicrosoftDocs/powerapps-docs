@@ -164,9 +164,9 @@ Console.WriteLine(entity["name"]);
 > [!NOTE]
 > Alternate keys are usually used only for data integration scenarios
 
-## Retrieve documents in storage partitions
+## Retrieve records from elastic tables
 
-If you are retrieving table data stored in partitions be sure to specify the partition key when retrieving that data. More information:  [Using Partitions > Retrieve a record](../elastic-tables.md#retrieve-a-record)
+If you are retrieving elastic table data stored in partitions be sure to specify the partition key when retrieving that data. More information:  [Retrieve a record in an elastic table](../elastic-tables.md#retrieve-a-record-in-an-elastic-table)
 
 ## Access Formatted values
 

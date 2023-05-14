@@ -294,7 +294,7 @@ There are limits on the types of columns you can add. Currently you cannot add t
 - ImageType (`ImageAttributeMetadata`)
 - Calculated or Rollup Columns
 
-Elastic tables support columns that store JSON data. More information: [Create column with Json format](#create-column-with-json-format)
+Elastic tables support columns that store JSON data. More information: [Create a column with Json format](#create-a-column-with-json-format)
 
 <!-- 
 
