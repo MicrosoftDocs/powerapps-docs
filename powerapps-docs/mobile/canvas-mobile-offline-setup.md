@@ -110,7 +110,7 @@ Enable your app for offline use in [Power Apps studio](../maker/canvas-apps/pow
 
 ## Set up a mobile offline profile
 
-It is possible to create and assign an offline profile to a canvas app. More information: [Offline profile guidelines](mobile-offline-guidelines.md)
+You can create and assign an offline profile to a canvas app. More information: [Offline profile guidelines](mobile-offline-guidelines.md)
 
 > [!Note]
 > The selected offline profile must be updated and published.
@@ -119,9 +119,9 @@ It is possible to create and assign an offline profile to a canvas app. More inf
 
 ### Create an offline profile with admin rights
 
-To create an offline profile, follow these steps:
+To create an offline profile with admin rights, follow these steps:
 
-1.  Go to Power Platform admin center, [<u>https://admin.powerplatform.microsoft.com</u>](https://admin.powerplatform.microsoft.com/) and sign-in as an admin.
+1.  Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/) and sign-in as an admin.
 
 2.  In the navigation pane, select **Environments**.
 
@@ -133,13 +133,13 @@ To create an offline profile, follow these steps:
 
 6.  Enter a name and description for your mobile offline profile. Select **Create** to create the mobile offline profile.
 
-7.  After the profile is created, select it to open the profile so you can continue editing it.
+7.  After the profile is created, select it to continue editing it.
 
 8.  In the **Data available offline** area, select **Add table** to add a table to the profile.
 
 9.  Select a table from the list of tables shown. Only tables that can be enabled for mobile offline appear in the list. Select **Next**.
 
-10. Select a filter based on the ownership type for the table. Table ownership is decided when you create a table. For more information, see [<u>Types of tables</u>](../maker/common-data-service/types-of-entities.md).
+10. Select a filter, based on the ownership type for the table. Table ownership is decided when you create a table. For more information, see [<u>Types of tables</u>](../maker/common-data-service/types-of-entities.md).
 
     | **Table ownership type** | **Available Data Download Filter options** |
     |-------------------------|-------------------------|
