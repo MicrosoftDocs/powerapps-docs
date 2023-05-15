@@ -32,7 +32,7 @@ Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-n
 
 [This article is prerelease documentation and is subject to change.]
 
-When you upload an Excel file it generates a Dataverse table. With Dataverse's standard and custom tables, you can securely store your data in the cloud. These tables enable you to define your organization's data in a way that is tailored to your business needs, making it easier to use within your apps. More information: [Why use Dataverse?](/data-platform/data-platform-intro.md#why-use-dataverse)
+When you upload an Excel file it generates a Dataverse table. With Dataverse's standard and custom tables, you can securely store your data in the cloud. These tables enable you to define your organization's data in a way that is tailored to your business needs, making it easier to use within your apps. More information: [Why use Dataverse?](../data-platform/data-platform-intro.md#why-use-dataverse)
 
 If AI is implemented in your organization, the [AI Copilot](ai-overview.md) feature can assist in table creation by suggesting table names, descriptions, column data types, and headers, even if this information is missing from the uploaded file.
 
@@ -51,16 +51,13 @@ To create an app by connecting to Excel, see [Connect to Excel from Power Apps](
 
 # [Classic](#tab/home-classic)
 
-The Excel file must be in a cloud-storage account, such as OneDrive, Google Drive, or Dropbox. This topic uses OneDrive for Business. The method in this article uses the latest version of the connector. To learn about different methods and how they affect the version of connector being used, see [Popular connectors - connect to Excel from Power Apps](connections/connection-excel.md).
+Follow these steps before you upload an Excel file.
 
-To follow this topic exactly, download the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
+- When you upload an Excel file, it's stored in Datavers tables which requires the Excel file to be formated with the appropriate schema. For more information: [Import or export data from Dataverse](/data-platform/data-platform-import-export.md) Once the table has been created, you can then proceed to upload your Excel data.
 
+- The Excel file must be in a cloud-storage account, such as OneDrive, Google Drive, or Dropbox. This topic uses OneDrive for Business. The method in this article uses the latest version of the connector. To learn about different methods and how they affect the version of connector being used, see [Popular connectors - connect to Excel from Power Apps](connections/connection-excel.md).
 
-
-to get your  Excel data stored in Dataverse tables this feature requires you to first create your own Dataverse table with all the schema set up correctly, then upload your data from Excel
-
-
-
+- To follow this topic exactly, download the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
 
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
@@ -81,7 +78,6 @@ to get your  Excel data stored in Dataverse tables this feature requires you to 
 
     ![Choose your table.](./media/get-started-create-from-data/choose-table.png)
     
-
  ---
 
 
