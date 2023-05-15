@@ -53,7 +53,7 @@ To create an app by connecting to Excel, see [Connect to Excel from Power Apps](
 
 Prior to uploading an Excel file to Dataverse tables, it's important to complete the following steps:
 
-- To upload an Excel worksheet file and store it as a Dataverse table, the Excel file must be formatted with the correct schema. For more information, see [Import or export data from Dataverse](/data-platform/data-platform-import-export). 
+- To upload an Excel worksheet file and store it as a Dataverse table, the Excel file must be formatted with the correct schema. For more information, see [Import or export data from Dataverse](../data-platform/data-platform-import-export.md). 
 - The Excel file must be saved in a cloud-storage account such as OneDrive, Google Drive, or Dropbox. This particular topic utilizes OneDrive for Business and the latest version of the [connector](connections/connection-excel.md). 
 - To follow this topic, download and utilize the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md) 
 
