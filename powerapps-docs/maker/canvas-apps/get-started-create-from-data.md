@@ -51,13 +51,11 @@ To create an app by connecting to Excel, see [Connect to Excel from Power Apps](
 
 # [Classic](#tab/home-classic)
 
-Follow these steps before you upload an Excel file.
+Prior to uploading an Excel file to Dataverse tables, it's important to complete the following steps:
 
-- When you upload an Excel file, it's stored in Datavers tables which requires the Excel file to be formated with the appropriate schema. For more information: [Import or export data from Dataverse](/data-platform/data-platform-import-export.md) Once the table has been created, you can then proceed to upload your Excel data.
-
-- The Excel file must be in a cloud-storage account, such as OneDrive, Google Drive, or Dropbox. This topic uses OneDrive for Business. The method in this article uses the latest version of the connector. To learn about different methods and how they affect the version of connector being used, see [Popular connectors - connect to Excel from Power Apps](connections/connection-excel.md).
-
-- To follow this topic exactly, download the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
+- To upload an Excel worksheet file and store it as a Dataverse table, the Excel file must be formatted with the correct schema. For more information, see [Import or export data from Dataverse](/data-platform/data-platform-import-export.md). 
+- The Excel file must be saved in a cloud-storage account such as OneDrive, Google Drive, or Dropbox. This particular topic utilizes OneDrive for Business and the latest version of the [connector](connections/connection-excel.md). 
+- To follow this topic, download and utilize the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md) 
 
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
