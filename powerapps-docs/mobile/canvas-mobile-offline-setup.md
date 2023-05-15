@@ -4,7 +4,7 @@ description: This article explains how to set up mobile offline for canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/12/2023
+ms.date: 05/15/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -27,7 +27,7 @@ When offline mode is enabled in the Power Apps mobile app, users who need to wor
 
 ## Prerequisites
 
-Verify the following prerequisites before you enable mobile offline:
+Verify the following prerequisites before you enable mobile offline.
 
 - You must be running a recent version of Power Apps mobile app. 
 
@@ -41,11 +41,11 @@ Verify the following prerequisites before you enable mobile offline:
 
 - The canvas app must use Dataverse data only.
 
--   The **Environment maker**, **System administrator**, or **System customizer** role is required to configure offline mode for canvas apps. These roles have Create, Read, Write, Delete, and Share privileges on the **Mobile offline profile** table. More information: [<u>About predefined security roles</u>](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
+-   The Environment maker, System administrator, or System customizer role is required to configure offline mode for canvas apps. These roles have Create, Read, Write, Delete, and Share privileges on the **Mobile offline profile** table. More information: [<u>About predefined security roles</u>](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
 
--   Users with the **Basic user** role can open and use an offline application. This role has the Read privilege for the **Mobile offline profile** table.
+-   Users with the Basic user role can open and use an offline application. This role has the Read privilege for the **Mobile offline profile** table.
 
-    If you have a custom security role, make sure you have the Read privilege for the **Mobile offline profile** table. More information: [Miscellaneous privileges](/power-platform/admin/miscellaneous-privileges).
+    If you have a custom security role, make sure you have the Read privilege for the **Mobile offline profile** table. More information: [Miscellaneous privileges](/power-platform/admin/miscellaneous-privileges)
 
 ## Optimize your app for mobile offline
 
@@ -63,7 +63,7 @@ Follow these best practices when building an app for mobile offline use:
 
 Tables used by your offline-first app must be enabled for offline use. Note that some built-in tables are enabled for offline use, by default. 
 
-Keep in mind that if you are using a table provided by a different solution, the solution author may not want the table to be enabled for offline use. Therefore, it may not be possible to enable some tables for offline use. However, you can enable any new custom table for offline use.
+Keep in mind that if you are using a table provided by a different solution, the solution author may not want the table to be enabled for offline use. Therefore, it may not be possible to enable some tables for offline use. However, you can enable any new, custom table for offline use.
 
 Follow these steps to enable a table for offline use.
 
@@ -79,14 +79,14 @@ Follow these steps to enable a table for offline use.
 
 ## Enable your app for offline use
 
-Enable your app for offline use in the [Power Apps studio](../maker/canvas-apps/power-apps-studio.md).
+Enable your app for offline use in [Power Apps studio](../maker/canvas-apps/power-apps-studio.md).
 
-1.  In the navigation pane, select **Apps**, 
+1.  In the navigation pane, select **Apps**. 
 1.  Select check mark next to the canvas app that you want to enable for offline use.
 1.  Select **Edit** in the command bar.
 1.  Select **Settings**.
 1.  In the window that appears, select **Upcoming Features**, and then select **Experimental**. 
-1.  Set the **Dataverse Offline** option to **On**.
+1.  Set the **Dataverse offline** option to **On**.
 
     :::image type="content" source="media/dataverse-offline.png" alt-text="Dataverse offline option.":::
 
@@ -95,15 +95,16 @@ Enable your app for offline use in the [Power Apps studio](../maker/canvas-apps
 1. Set the **Can be used offline** option to **On**.
 1. Select an offline profile. You have two options:
 
-- Use an auto-generated profile (recommended) (available soon). When an auto-generated profile is used, the app downloads on the device the tables that are used in your app.
-- Create your own profile. See [Set up mobile offline for canvas apps](#set-up-a-mobile-offline-profile) and customize for your needs. Then click **Refresh** to see your new profile in the list.
+    - Use an auto-generated profile. An auto-generated profile will be available soon and is the recommended option. 
+        When an auto-generated profile is used, the app downloads the tables that are used in your app.
+    - Create your own profile. See [Set up mobile offline for canvas apps](#set-up-a-mobile-offline-profile) and customize it for your needs. Then click the **Refresh** icon to see your new profile in the list.
 
-    :::image type="content" source="media/can-be-used-offline.png" alt-text="Can be used offline option.":::
+        :::image type="content" source="media/can-be-used-offline.png" alt-text="Can be used offline option.":::
     
-    > [!Note]
-    > If you don’t see the **Can be used offline** option, make that the app is in a solution. More information: [Create a canvas app from within a solution](../maker/canvas-apps/add-app-solution.md)
+       > [!Note]
+       > If you don’t see the **Can be used offline** option, make sure that the app is in a solution. More information: [Create a canvas app from within a solution](../maker/canvas-apps/add-app-solution.md)
 
-    A page using the **Offline** template is automatically inserted. The page contains an icon hooked up with the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function. The icon has multiple variant that reflect the offline sync status. You can decide to use it or not, and you can also customize it as appropriate.
+        A page using the **Offline** template is automatically inserted. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function. The icon reflects the [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can decide whether you want to use it, and you can also customize it, as appropriate.
 
 1.  Close the **Settings** window, and then save and publish your app. When you're done, the app will be set up for offline use.
 
