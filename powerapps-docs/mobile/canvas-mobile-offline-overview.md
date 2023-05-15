@@ -33,6 +33,9 @@ To get started with mobile offline for canvas apps, an app maker needs to enable
 
 > [!Important]
 > [!include [preview](../includes/cc-preview-features-definition.md)]
+>
+> This feature is in process of rolling out and may not be available in your region yet.
+
 
 ## Mobile offline-first
 
