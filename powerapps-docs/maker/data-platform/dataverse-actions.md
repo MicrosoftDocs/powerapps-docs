@@ -5,16 +5,20 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 03/20/2023
+ms.date: 05/15/2023
 ms.custom: template-how-to
 ---
-# Use Dataverse actions (preview)
+# Use low-code plugins (experimental)
 
-Optimize your data architecture by reducing client-side load using Microsoft Dataverse actions. Makers use the action authoring experience to define their logic using the Power Fx language. Dataverse actions are an alternative to custom APIs and custom process actions. Although, custom process actions provide a no-code way to include custom messages, they have limitations for developers and custom APIs provide business logic capabilities used for developers.
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Optimize your data architecture and reduce client-side load using Microsoft Dataverse low-code plugins. Makers use the action authoring experience to define their logic using the Power Fx language. Dataverse actions are an alternative to custom APIs and custom process actions. Although, custom process actions provide a no-code way to include custom messages, they have limitations for developers and custom APIs provide business logic capabilities used for developers.
 
 Actions are reusable, server-side synchronous (real-time) business logic workflows that allow you to execute a set of specific commands in Dataverse, called from web services, such as the Dataverse connector or the web API.
 
 Actions are defined using the Power Fx expression language. You define input and output parameters, which allow you to dynamically pass information between the formula and calling context. Actions can also perform operations on Dataverse tables, such as create and update with Patch or Delete.
+
+This is an experimental feature. More information: 
 
 ## Rules
 
