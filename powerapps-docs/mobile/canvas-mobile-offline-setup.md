@@ -172,7 +172,10 @@ To create an offline profile with admin rights, follow these steps:
 12. Select **Save** to add the table to your profile so you can continue editing it.
 
 ### Create an offline profile without admin rights
-1. Create an empty model-driven app.
+
+Coming soon, you’ll be able to create an offline profile directly in Power Apps Studio. Until then, a great way to configure an offline profile is to create a simple model-driven app in your test environment with the same tables, and then auto-generate an offline profile from the tables in that app. You’ll be able to select this offline profile from Power Apps Studio.
+
+1. Create a model-driven app.
 2. [Enable the app for offline use](setup-mobile-offline.md).
 3. [Generate a default profile](setup-mobile-offline.md#generate-a-default-profile) and [add tables to the offline profile and apply filters](setup-mobile-offline.md#add-a-table-to-an-offline-profile-and-apply-filters).
 4. Publish the model-driven app.
