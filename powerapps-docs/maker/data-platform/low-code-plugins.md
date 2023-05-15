@@ -23,10 +23,10 @@ Low-code plugins are defined in a Dataverse database and integrated into Power A
 
 ## Types of low-code plugins <!-- The doc dropped "low-code" and just refers "plugins." If this is different you need to explain before introducing this different term.-->
 
-There are two types of low-code plug-ins:
+There are two types of low-code plugins:
 
-- Instant  low-code plug-ins
-- Automated low-code plug-ins
+- Instant  low-code plugins
+- Automated low-code plugins
 
 For the most part, logic that can be defined for an instant low-code plugin can also be defined for an automated low-code plugin.
 
@@ -118,7 +118,7 @@ Observe the response.
 > [!TIP]
 > Use output parameters to help validate expected behavior and results. Otherwise, you will only see a success or failure when testing.
 
-#### Integrate
+#### Integrate test the low-code plugin
 
 On the **Integrate** tab of the test page, you can learn how to invoke the instant plug-in from other contexts within Power Platform.
 
