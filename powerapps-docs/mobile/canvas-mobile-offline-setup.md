@@ -97,7 +97,7 @@ Enable your app for offline use in [Power Apps studio](../maker/canvas-apps/pow
 
     - Use an auto-generated profile. An auto-generated profile will be available soon and is the recommended option. 
         When an auto-generated profile is used, the app downloads the tables that are used in your app.
-    - Create your own profile. See [Set up mobile offline for canvas apps](#set-up-a-mobile-offline-profile) and customize it for your needs. Then click the **Refresh** icon to see your new profile in the list.
+    - Create your own profile. See [Set up a mobile offline profile](#set-up-a-mobile-offline-profile) and customize it for your needs. Then click the **Refresh** icon to see your new profile in the list.
 
         :::image type="content" source="media/can-be-used-offline.png" alt-text="Can be used offline option.":::
     
