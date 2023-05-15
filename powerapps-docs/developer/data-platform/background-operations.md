@@ -192,7 +192,9 @@ When you send a request to be processed in the background, the response includes
   
 ### Status polling
 
-Querying the background operation table or status monitor resource to check on requests is commonly known as *status polling*. We recommend that you avoid excessive polling because it can negatively affect performance. If needed, we suggest polling at an interval of one minute or more.  More information:
+Querying the background operation table or status monitor resource to check on requests is commonly known as *status polling*. We recommend that you avoid excessive polling because it can negatively affect performance. If needed, we suggest polling at an interval of one minute or more.  
+
+More information:
 
 - [Poll the background operation table](#poll-the-background-operation-table)
 - [Poll the status monitor resource](#poll-the-status-monitor-resource)

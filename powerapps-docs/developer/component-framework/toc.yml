@@ -50,7 +50,7 @@ items:
       href: ../../maker/portals/component-framework-tutorial.md
     - name: Publish code components on AppSource
       href: publish-components-app-source.md
-    - name: Customize the editable grid control (Preview)
+    - name: Customize the editable grid control
       href: customize-editable-grid-control.md
   - name: Troubleshooting
     items:

@@ -8289,6 +8289,95 @@
       "source_path": "powerapps-docs/maker/portals/admin/clear-server-side-cache.md",
       "redirect_url": "/power-pages/admin/clear-server-side-cache",
       "redirect_document_id": false
+    },    
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/configure-knowledge-categories-articles.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/configure-knowledge-categories-articles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/manage-knowledge-articles-content-levels.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/manage-knowledge-articles-content-levels",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/display-file-attachments-knowledge-article.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/display-file-attachments-knowledge-article",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/create-edit-and-distribute-opportunities-in-dynamics-365.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/create-edit-and-distribute-opportunities-in-dynamics-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/engage-with-communities.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/engage-with-communities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/setup-manage-forums.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/setup-manage-forums",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/manage-forum-threads.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/manage-forum-threads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/create-forum-posts.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/create-forum-posts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/moderate-forums.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/moderate-forums",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/forum-access-permission.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/forum-access-permission",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/subscribe-alerts.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/subscribe-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/manage-blogs.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/manage-blogs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/crowdsource-ideas.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/crowdsource-ideas",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/enable-idea-content-moderation.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/enable-idea-content-moderation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/case-management.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/case-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/configure-web-roles-partner-portal.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/configure-web-roles-partner-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/integrate-project-service-automation.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/integrate-project-service-automation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/integrate-field-service.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/integrate-field-service",
     },
     {
       "source_path": "powerapps-docs/maker/portals/configure/configure-portal.md",
@@ -8528,6 +8617,11 @@
     {
       "source_path": "powerapps-docs/maker/portals/configure/website-bindings.md",
       "redirect_url": "/power-pages/configure/website-bindings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/index.yml",
+      "redirect_url": "/power-pages",
       "redirect_document_id": false
     },
     {
