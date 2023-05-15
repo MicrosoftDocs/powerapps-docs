@@ -1777,6 +1777,14 @@
       href: ../mobile/mobile-offline-guidelines.md  
     - name: Mobile offline capabilities and limitations
       href: ../mobile/offline-capabilities.md
+  - name: Mobile offline for canvas apps (preview)
+    items:
+    - name: Mobile offline for canvas apps overview (preview)
+      href: ../mobile/canvas-mobile-offline-overview.md
+    - name: Set up mobile offline for canvas apps (preview)
+      href: ../mobile/canvas-mobile-offline-setup.md
+    - name: Working with canvas apps offline (preview)
+      href: ../mobile/canvas-mobile-offline-working.md
   - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows 
