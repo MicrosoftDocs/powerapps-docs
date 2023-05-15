@@ -24,6 +24,8 @@ When offline mode is enabled in the Power Apps mobile app, users who need to wor
 
 > [!Important]
 > [!include [preview](../includes/cc-preview-features-definition.md)]
+>
+> This feature is in process of rolling out and may not be available in your region yet.
 
 ## Prerequisites
 
