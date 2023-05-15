@@ -24,7 +24,7 @@ The following example inserts a lightbox accessibility tip, which is stored at t
 
 Images that should appear in an include file can't be stored in the shared content repo (MicrosoftDocs/powerapps-docs-pr/shared).
 
-Instead, store the image files in **MicrosoftDocs/powerapps-docs-pr/powerapps-docs/media** and call them like this: `source="/power-apps/media/filename.png"`
+Instead, store the image files in **MicrosoftDocs/powerapps-docs-pr/powerapps-docs/media/shared-content** and call them like this: `source="/power-apps/media/shared-content/filename.png"`
 
 ## Why does the shared content repo live in the powerapps-docs-pr repo?
 
@@ -32,4 +32,4 @@ It's a long story. The TL;DR: is that powerapps-docs-pr is already set up for al
 
 ## Where can I get help with the shared content repo?
 
-Submit a Content Engineering request.
+[Submit a Content Engineering request](content-engineering-requests.md?branch=main) or reach out to [BAP Skilling Content Engineering](mailto:crmce@microsoft.com).
