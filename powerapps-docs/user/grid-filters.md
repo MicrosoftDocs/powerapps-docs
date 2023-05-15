@@ -130,6 +130,8 @@ The jump bar acts on the first sorted column. If the sort order hasn't changed, 
 <!-- I don't see the jump bar in my demo environment. I did some Binging and found that the jump bar was removed in the latest wave. You can bring it back, but it involves using the classic settings and seems kind of involved. Would it be better to remove the section on the jump bar instead? -->
 
 ## Show as
-While the default read-only grid is initially used to show data, if multiple dataset controls are confgured for the entity and/or view, users can switch between these controls using the **Show as** menu in the command bar (which is typically found under the **More commands** action). Once the last has switched to a different display of the data, that control will be remembered for future sessions on that device.   
+While the default read-only grid is initially used to show data, if multiple dataset controls are confgured for the entity and/or view, users can switch between these controls using the **Show as** menu in the command bar (which is typically found under the **More commands** action). Once the user has switched to a different display of the data, that control will be remembered for future sessions on that device.   
+
+:::image type="content" source="./media/show-as-navigation.png" alt-text="A screenshot of the Show as button in the command bar.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
