@@ -139,14 +139,14 @@ To create an offline profile with admin rights, follow these steps:
 
 9.  Select a table from the list of tables shown. Only tables that can be enabled for mobile offline appear in the list. Select **Next**.
 
-10. Select a filter, based on the ownership type for the table. Table ownership is decided when you create a table. For more information, see [<u>Types of tables</u>](../maker/common-data-service/types-of-entities.md).
+10. Select a filter, based on the ownership type for the table. Table ownership is decided when you create a table. More information: [<u>Types of tables</u>](../maker/common-data-service/types-of-entities.md).
 
-    | **Table ownership type** | **Available Data Download Filter options** |
+    | Table ownership type| Available filter options for data download  |
     |-------------------------|-------------------------|
-    | **User or Team** | <ul><li>**Download Related rows only** - Make related data for this table available offline. If you don't set any relationships, no rows for this table will be available.</br></li></br><li>**All rows** - Make all rows for this table available offline.</br></li></br><li>**Other data filter** - Make only the specified rows for this table available offline, and then choose from the following:</br></br><ul><li>**Download user rows** - Make only your rows available offline.</br></li></br><li>**Download team rows** - Make your team's rows available offline.</br></li></br><li>**Download my business unit's rows** - Make your business unit's rows available offline.</br></li></br></ul></li></ul> |
-    | **Organization** | <ul><li>**Download related rows only** - Make related data for this table available offline. If you don't set any relationships, no rows for this table will be available.</br></li></br><li>**All rows** - Make all rows for this table available offline.</br></li></ul> |
-    | **Business** | <ul><li>**Download related data only** - Make related data for this table available offline. If you don't set any relationships, no rows for this table will be available.</br></li></br><li>**All rows** - Make all rows for this table available offline.</br></li><br><li>**Other rows** - Make only the specified rows for this table available offline and choose from the following:</br></blockquote></br><ul><li>**Download my business unit's rows** - Make your business unit's rows available offline.</br></li></ul></li></ul> |
-    | **None** | <ul><li>**Download related rows only**. Make related data for this table available offline. If you don't set any relationships, no rows for this table will be available.</br></li></ul> |
+    | User or team | <ul><li>**Download related rows only** - Make related data for this table available offline. If you don't set any relationships, no rows for this table will be available.</br></li></br><li>**All rows** - Make all rows for this table available offline.</br></li></br><li>**Other data filter** - Make only the specified rows for this table available offline, and then choose from the following:</br></br><ul><li>**Download user rows** - Make only your rows available offline.</br></li></br><li>**Download team rows** - Make your team's rows available offline.</br></li></br><li>**Download my business unit's rows** - Make your business unit's rows available offline.</br></li></br></ul></li></ul> |
+    | Organization | <ul><li>**Download related rows only** - Make related data for this table available offline. If you don't set any relationships, no rows for this table will be available.</br></li></br><li>**All rows** - Make all rows for this table available offline.</br></li></ul> |
+    | Business | <ul><li>**Download related data only** - Make related data for this table available offline. If you don't set any relationships, no rows for this table will be available.</br></li></br><li>**All rows** - Make all rows for this table available offline.</br></li><br><li>**Other rows** - Make only the specified rows for this table available offline and choose from the following:</br></blockquote></br><ul><li>**Download my business unit's rows** - Make your business unit's rows available offline.</br></li></ul></li></ul> |
+    | None | <ul><li>**Download related rows only**. Make related data for this table available offline. If you don't set any relationships, no rows for this table will be available.</br></li></ul> |
 
 
     If **Custom** is selected, admins can define a custom filter based on the following rules. Admins can create filters up to three levels.
@@ -163,7 +163,7 @@ To create an offline profile with admin rights, follow these steps:
     | begins-with                   | not-begin-with             | ends-with                      |
     | not-end-with                  |                            |                                |
 
-11. In the **Include \[table name\] records related to these tables** area, select the related table relationships. You must have added the table that you want to create the relationship with. For example, if you want to add a relationship between the Account and Contact tables, then you need to add both tables to the Mobile offline profile.
+11. In the **Include \[table name\] records related to these tables** area, select the related table relationships. You must have added the table that you want to create the relationship with. For example, if you want to add a relationship between the Account and Contact tables, then you need to add both tables to the mobile offline profile.
 
     For example, if you select **Contact \| Field name: Primary contact** this means for every contact, the system will also download the account related to it.
 
@@ -190,7 +190,7 @@ You can also add a new page from this template as any other template:
   
 :::image type="content" source="media/offline-template.png" alt-text="Select the Offline template.":::
 
-The Globe icon of the template uses different icons depending on the PowerFx Connection.Sync function. You can also create your own icon and set the “Icon” property to: 
+The globe icon of the template uses different icons depending on the PowerFx Connection.Sync function. You can also create your own icon and set the Icon property using the following PowerFx script: 
 
 ```PowerFx
 Switch(Connection.Sync, 
@@ -216,9 +216,9 @@ Switch(Connection.Sync,
 
 ## Limitations and known issues
 
-- The auto-generated offline profile does not handle filters. As a result, for each table used in the app, it downloads **all** rows that the user has permissions on.
+- The auto-generated offline profile does not handle filters. As a result, for each table used in the app, it downloads **all** rows on which the user has permissions.
 
-- Non-Dataverse connectors like Sharepoint are not supported in offline mode.
+- Non-Dataverse connectors, like Sharepoint, are not supported in offline mode.
 
 - Some Dataverse tables aren't supported in offline mode. More information: [Mobile offline capabilities and limitations](offline-capabilities.md)
 
