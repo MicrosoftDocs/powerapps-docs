@@ -1,5 +1,5 @@
 ---
-title: Use Dataverse actions
+title: Use Dataverse low-code plugins
 description: Microsoft Dataverse low-code plugins  
 author: Mattp123
 ms.author: matp
@@ -45,7 +45,7 @@ You can define input and output parameters that allow you to dynamically pass in
 
 An automated low-code plugin is business logic that runs, which is invoked when based on an event for a specified table and occurs when a row is created, updated, or deleted - also known as a *data event*.
 
-###  Low-code plugin access 
+### Low-code plugin access 
 
 Low-code plugins run in the context of the user who invoked the plugin:
 
@@ -70,7 +70,7 @@ When you want to create a Jobapplication record only when the student name is no
 ## Prerequisites
 
 1. System administrator or system customizer security role membership in the Power Platform environment.
-1. Dataverse Accelerator solution. [Download and install the Dataverse Accelerator from AppSource](http://aka.ms/DataverseAccelerator/AppSource).
+1. Dataverse Accelerator solution. [Download and install the Dataverse Accelerator from AppSource](https://aka.ms/DataverseAccelerator/AppSource).
     1. Sign in to AppSource.
     1. Select **Get it now**.
     1. The **Dynamics 365 apps** page in Power Platform admin center appears.
@@ -138,20 +138,9 @@ On the **Integrate** tab of the test page, you can learn how to invoke the insta
 
 <!-- Need more complete steps than what's in the doc -->
 
-1. Sign into the environment where the **Creator Kit** solution is installed and run the **Dataverse Accelerator** app.
-1. On the app left navigation pane select **Dataverse rules**, and then on the command bar select **New rule**.
-1. On the **New rule** page, enter the following information:
-   - Name: Enter a name for the rule.
-   - Table. Select a table for the rule, such as *Contact*.
-   - **Run this rule when the row is**. Specify the trigger, such as *Update*.
-      - Create. Triggers the rule during a row create operation.
-      - Update. Triggers the rule during a row change operation.
-      - Delete. . Triggers the rule during a row delete operation.
-1. Formula. Enter a Power Fx formula in the **Formula** box. For example, `If( IsBlank( ThisRecord.Email ), Set(Contacts, ThisRecord, { ‘Email description’:  “No email” } ));`.
-1. **Advanced options** > **When should this run**.
-   - **Pre-operation**. Select this option if you want the logic to run after form validation and before the values are saved to Dataverse.
-   - **Post operation**. Enables your plugin to run after the values have been inserted or changed in Dataverse.
-1. Select **Save**.
+1. Create a new automated plugin. <!-- where do you go to do this? --
+1. 
+1. 
 
 ## Create an instant low-code plugin that connects to external data
 
@@ -179,3 +168,14 @@ Currently, there are a limited number of connectors and actions available.
    > Currently, you can't edit the parameters or formula on this page in the plugins wizard.
 
 Now, test your low-code plugin by adding in data for your inputs and validate your output.
+
+## Example low-code plugins you can create
+
+The goal of these plugins is to help you get started by simply integrating into your app. You will understand the authoring experience includes authoring Dataverse customAPIs backed by powerfx expressions which can trigger actions internal or external to Dataverse. 
+
+> [!NOTE]
+> Email templates are only available for certain entities. Please read the email template documentation for more information. 
+
+### SendEmail based on a data event
+
+<!-- What kind of low-code plugin is this? Instant or automated? -->
