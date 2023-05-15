@@ -176,6 +176,6 @@ Currently, there are a limited number of connectors and actions available.
 1. On the **Plugin** page, the name of the plugin you have just created is displayed. Select **Next**.
 1. A list of all of the inputs that will be sent to the stored procedure and their data types is displayed. The PowerFX formula that will be used to invoke the stored procedure is also displayed. This is also the screen you will later use to update the plugin.
    > [!NOTE] 
-   > Currently, you can't edit the parameters or formula on the **Plugin** page.
+   > Currently, you can't edit the parameters or formula on this page in the plugins wizard.
 
 Now, test your low-code plugin by adding in data for your inputs and validate your output.
