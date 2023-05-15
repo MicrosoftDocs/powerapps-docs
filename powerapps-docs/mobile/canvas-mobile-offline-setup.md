@@ -33,7 +33,7 @@ Verify the following prerequisites before you enable mobile offline.
 
   |Feature | Required minimum version | 
   |--------|---------------------------|
-  | Power Apps maker studio | 3.23052.00| 
+  | Power Apps Studio | 3.23052.00| 
   | Power Apps mobile app | 3.23053.00 | 
   |Auto-generated offline profile | 3.23053.00 | 
     
