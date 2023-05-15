@@ -98,10 +98,10 @@ Once the solution import has completed, the status is set to **Enabled** next to
    - You can reference any parameters you defined previously in the formula.
    - You can reference any Dataverse table rows using the `LookUp()` function.
    - For example, you can calculate the sum of two integers. Create two input parameters, X and Y, both type integer, and one output parameter, `Z`, of type string. You could use the following formula: `{Z:  X + Y }`
+   > [!TIP]
+   > Note the intellisense in the **Formula** box. Underlined red is invalid. Squiggly yellow means your logic might be affected by delegation limitations. Avoid delegation issues by using [delegable functions]( /power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
    :::image type="content" source="media/low-code-plugin2.png" alt-text="Instance low-code plugin using Power Fx to derive a sum value with two integers":::
 1. Select **Next** to review the details.
-   > [!TIP]
-   > Note the intellisense. Underlined red is invalid. Squiggly yellow means your logic might be affected by delegation limitations. Avoid delegation issues by using [delegable functions]( /power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
 1. Select **Save**.
 
 ### Test the instant low-code plugin
@@ -122,25 +122,21 @@ Observe the response.
 
 On the **Integrate** tab of the test page, you can learn how to invoke the instant plug-in from other contexts within Power Platform.
 
-1. Copy the formula and paste it into an action property, such as a button control, in your app. <!-- What's an action property. Also, model-driven apps don't have button controls-->
+1. Copy the formula and paste it into an action property, such as a button control, in your app.
 1. If input parameters are required, provide direct values or reference values from other controls in your app.
 1. Open a new browser tab, and then go to https://make.powerapps.com/.
-1.	In the same environment, create a new app from scratch.
+1.	In the same environment, create a new canvas app from scratch.
 1.	Add the **Environments** table to your app. <!-- Is this table created from the Dataverse Accelerator solution?-->
-d.	Insert a Add a button. This will be used to  that will call the formula
-e.	Copy the formula from the text area by selecting the copy icon (or manually highlighting and copying from keyboard)
-f.	Paste the formula into the Bbutton’s OnSelect property
-g.	ModifyMap each the input parameters  values to real values. 
-i.	`Environment.CalculateSum({ X: 10, Y: 200 });`
-h.	If an output parameter is defined for the plugin, capture the response using Set() or UpdateContext()
-i.	`Set( ActionResult, Environments.CalculateSum({ X: 10, Y: 200 , “The }sum is ” )) );`
-	Add a label control and set the text value to the response captured (e.g., Set the Text value of the Label control to the variable `
-i.	ActionResult`)
-a.	ClickPlay the app and click the button to run the action.
+1. Insert a button. This will be used to  call the formula. More information: [Button control in Power Apps](../canvas-apps/controls/control-button.md)
+1. Copy the formula from the text area by selecting the copy icon (or manually highlighting and copying from keyboard), and paste the formula into the button’s **OnSelect** property.
+1. Map each input parameters  values to real values, such as `Environment.CalculateSum({ X: 10, Y: 200 });`
+1. If an output parameter is defined for the low-code plugin, capture the response using `Set()` or **UpdateContext()**, such as `Set( ActionResult, Environments.CalculateSum({ X: 10, Y: 200 , “The }sum is ” )) );`
+1. Add a label control and set the text value to the response captured. For example, set the text value of the label control to the variable `ActionResult`.
+1. Play the app and select the button to run the low-code plugin.
 
+## Create an automated low-code plugin
 
-
-## Create a Dataverse rule
+<!-- Need more complete steps than what's in the doc -->
 
 1. Sign into the environment where the **Creator Kit** solution is installed and run the **Dataverse Accelerator** app.
 1. On the app left navigation pane select **Dataverse rules**, and then on the command bar select **New rule**.
@@ -156,3 +152,30 @@ a.	ClickPlay the app and click the button to run the action.
    - **Pre-operation**. Select this option if you want the logic to run after form validation and before the values are saved to Dataverse.
    - **Post operation**. Enables your plugin to run after the values have been inserted or changed in Dataverse.
 1. Select **Save**.
+
+## Create an instant low-code plugin that connects to external data
+
+You can use the plugin wizard in the Dataverse Accelerator app to connect to external data using the Power Apps connections ecosystem. The wizard takes you through the steps needed to connect to your data.
+
+Currently, there are a limited number of connectors and actions available.
+
+1.	Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to Apps, and then play the Dataverse Accelerator app. 
+1. Select **New plugin** under **Instant plugins**.
+1. Name your plugin, you can also provide a description.
+1. Select **Advanced Options**, and then select **Launch the plugins wizard**.
+1. A connections screen appears. Any SQL connections you already have configured for your organization appear here. If the connection you need is already present you can select it. Otherwise, select **New connection** or **Add connection**.
+  If you create a new connection, you'll be asked for your SQL authentication type, credentials, and other information. Complete the required fields, and then select **Create**.
+
+1. When your connection is created, return to the wizard and select your connection from the connections list, and then select **Next**.
+   Connections use a connection reference to interface between Dataverse and the data source you are connecting to. The connection reference will be created for you, but if you want to provide a custom name, you can do so by selecting **Advanced options** and then select **Manually Configure Connection Reference**. This can also be used to select from existing connection references for an existing connection.
+1. A list of available actions are provided. This allows you to pick which action you want to create a virtual plugin for. Select the action and then select **Next**. <!-- Virtual plugin? You haven't defined this anywhere yet. -->
+1. In the provided dropdown lists, select the values for each parameter. As you select values, the dropdown list values for the dependent fields are fetched when available, so you should select or provide value in order (from top to bottom).
+1. After providing values for the initial parameters available, a dynamic list of input values might be presented depending on the last parameter. These can either be configured to be input parameters for every invocation, or you can enter a static value to use for every invocation.
+1. After completing each field the Power FX formula to invoke the procedure is generated. Select **Next**.
+1. A review page appears that shows you the plugin you are about to create for the stored procedure. If everything looks correct, select **Create**.
+1. On the **Plugin** page, the name of the plugin you have just created is displayed. Select **Next**.
+1. A list of all of the inputs that will be sent to the stored procedure and their data types is displayed. The PowerFX formula that will be used to invoke the stored procedure is also displayed. This is also the screen you will later use to update the plugin.
+   > [!NOTE] 
+   > Currently, you can't edit the parameters or formula on the **Plugin** page.
+
+Now, test your low-code plugin by adding in data for your inputs and validate your output.
