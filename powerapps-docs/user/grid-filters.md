@@ -4,7 +4,7 @@ description: Explore tabular data on a grid page in model-driven apps.
 author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/04/2022
+ms.date: 05/15/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.reviewer: ""
@@ -12,9 +12,7 @@ ms.assetid:
 search.audienceType: 
   - enduser
 ---
-
-# Explore data on a grid page 
-
+# Explore data on a grid page
 
 In model-driven apps, the default control that's used to show data in tabular form is the read-only grid. When a subarea contains a table, the subarea's default layout in the app sitemap is called the grid page.
 
@@ -40,9 +38,6 @@ If a record is in a hierarchy relationship, select the hierarchy icon to open th
 :::image type="content" source="./media/grid-page-hierarchy-view.png" alt-text="A screenshot of a record hierarchy view.":::
 
  If you navigate away from the grid page and come back, the view retains your filters, sort order, and the state the page was in, including the grid control you had last chosen from the **Show as** menu.
- 
-> [!NOTE]
-> If your adm
 
 ## View selector
   
@@ -130,7 +125,8 @@ The jump bar acts on the first sorted column. If the sort order hasn't changed, 
 <!-- I don't see the jump bar in my demo environment. I did some Binging and found that the jump bar was removed in the latest wave. You can bring it back, but it involves using the classic settings and seems kind of involved. Would it be better to remove the section on the jump bar instead? -->
 
 ## Show as
-While the default read-only grid is initially used to show data, if multiple dataset controls are confgured for the entity and/or view, users can switch between these controls using the **Show as** menu in the command bar (which is typically found under the **More commands** action). Once the user has switched to a different display of the data, that control will be remembered for future sessions on that device.   
+
+While the default read-only grid is initially used to show data, if multiple dataset controls are configured for the table view, you can switch between these controls using the **Show as** menu in the command bar, which is typically found under the **More commands** action. Once you've switched to a different display of the data, that control is remembered for future sessions on that device.
 
 :::image type="content" source="./media/show-as-navigation.png" alt-text="A screenshot of the Show as button in the command bar.":::
 
