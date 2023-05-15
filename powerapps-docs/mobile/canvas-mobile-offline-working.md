@@ -29,6 +29,8 @@ With offline-first, all the calls to Dataverse data are executed against a local
 
 > [!Important]
 > [!include [preview](../includes/cc-preview-features-definition.md)]
+>
+> This feature is in process of rolling out and may not be available in your region yet.
 
 ## Initial offline sync
 
