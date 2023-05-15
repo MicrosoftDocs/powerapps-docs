@@ -105,7 +105,10 @@ Enable your app for offline use in [Power Apps studio](../maker/canvas-apps/pow
        > If you don’t see the **Can be used offline** option, make sure that the app is in a solution. More information: [Create a canvas app from within a solution](../maker/canvas-apps/add-app-solution.md)
 
         A page using the **Offline** template is automatically inserted. The page contains an icon that uses the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function. The icon reflects the [offline sync status](canvas-mobile-offline-working.md#sync-status-icons). You can decide whether you want to use it, and you can also customize it, as appropriate.
-
+        
+       > [!Note]
+       > If you are enabling a brand new canvas app for offline use, make sure the default first screen is based on the **Offline** template.
+        
 1.  Close the **Settings** window, and then save and publish your app. When you're done, the app will be set up for offline use.
 
 ## Set up a mobile offline profile
