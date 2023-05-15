@@ -4,7 +4,7 @@ description: This article explains how to work with canvas apps in offline mode 
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/17/2023
+ms.date: 05/15/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -21,7 +21,7 @@ searchScope:
 
 With the [offline-first](canvas-mobile-offline-overview.md#mobile-offline-first) experience, you can work with your Power Apps canvas app on your mobile device anytime, even when you don't have internet access. The mobile app provides a rich offline experience so that you can always stay productive. After you're back online, changes you've made are synchronized with your server in the Microsoft Dataverse environment.
 
-If you're working on a record and lose network connection, any updates made to the record are saved in offline mode and will be synchronized to the server after you're back online.
+If you're working on a record and lose network connection, any updates made to the record are saved in offline mode and are synchronized to the server after you're back online.
 
 With offline-first, all the calls to Dataverse data are executed against a local database mirroring the Dataverse server and are scoped to the need of the app.
 
@@ -34,9 +34,9 @@ With offline-first, all the calls to Dataverse data are executed against a local
 
 For the app to be available in offline mode, app and user data must be downloaded on your device. This process is called the *initial offline sync*.
 
-The initial offline sync happens when you open the canvas app. You'll see a message stating that your app is syncing the offline data with the **number of rows and tables that are downloaded** on your device. This can take a few minutes or longer, depending on what has been configured in the app. 
+The initial offline sync happens when you open the canvas app. You see a message stating that your app is syncing the offline data with the **number of rows and tables that are downloaded** on your device. This can take a few minutes or longer, depending on what has been configured in the app. 
 
-If the initial offline sync isn't complete, it will be triggered every time the app is opened.
+If the initial offline sync isn't complete, it is triggered every time the app is opened.
 
 ## Offline delta sync
 
@@ -56,7 +56,7 @@ The offline sync icon indicates the synchronization status of the Power Apps mob
 
 The offline sync icon changes based on the app's sync status. When testing your offline app, it's easy to lose track of whether you are online or offline, so be sure to check that sync status icon.
 
-When online, Power Apps is currently set to sync every 5 minutes.
+When online, Power Apps is currently set to sync every five minutes.
 
 | Icon | Description |
 |------|--------------|
@@ -69,6 +69,6 @@ When online, Power Apps is currently set to sync every 5 minutes.
 
 By clicking on the icon, you get a description of the state.
 
-## Known issues
-- Key Power Fx functions that are not yet supported include *StartsWith*, *In*, and *With*.  If you use the 'App from Data' feature you will get an app that has a search text field that uses a *StartsWith* formula which will fail silently.  
+## Known issue
+Key Power Fx functions that are not yet supported include *StartsWith*, *In*, and *With*.  When creating an app that has a search text field that uses a *StartsWith* formula, the search fails silently.  
 
