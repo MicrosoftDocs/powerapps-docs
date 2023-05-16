@@ -170,10 +170,10 @@ Similarly, for available options to unpack a solution, use `pac solution unpack 
 
 ### See Also
 
-[Power Platform developer tools](/power-platform/developer/tools)<br/>  
-[Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)<br/>  
-[Create extensions for the Code Generation tool](org-service/extend-code-generation-tool.md)<br/>  
-[Browse the metadata for your organization](browse-your-metadata.md)<br/>  
-[Deploy packages using Package Deployer and Windows PowerShell](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)<br/>
+[Power Platform developer tools](/power-platform/developer/tools)  
+[Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)  
+[Create extensions for the Code Generation tool](org-service/extend-code-generation-tool.md)  
+[Browse the metadata for your organization](browse-your-metadata.md)  
+[Deploy packages using Package Deployer and Windows PowerShell](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -4,7 +4,7 @@ description: How to check user access and security role.
 author: paulliew
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/02/2023
+ms.date: 04/25/2023
 ms.subservice: end-user
 ms.author: paulliew
 ms.custom: ""
@@ -69,6 +69,12 @@ If you're an administrator, you can check the access another user has to a row.
 The admin, owner of the record, or users who have access to a row can share the row with other users for collaboration. 
 
 To see who has access to a row and their respective access level, complete the following steps.
+
+> [!Note]
+> There are two database settings for each environment that enable the **Who has access** feature. System adminstrators can [Install the **OrganizationSettingsEditor** tool](/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool) and set the following options to true:
+> 
+> - **IsAccessCheckerAllUsersEnabled**: This allows the admin to see who has access to the row.
+> - **IsAccessCheckerNonAdminAllUsersEnabled**: This allows the admin, owner of the record, and users who have access to the row to see who has access.
 
 1. Select a row and then select **Edit** on the command bar.
 

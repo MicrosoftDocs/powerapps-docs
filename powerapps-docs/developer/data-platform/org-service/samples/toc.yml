@@ -233,6 +233,8 @@ items:
     href: issystemadmin-customapi-sample-plugin.md
   - name: CreateMultiple & UpdateMultiple plug-ins
     href: createmultiple-updatemultiple-plugin.md
+  - name: ExportDataUsingFetchXmlToAnnotation Custom API
+    href: export-data-fetchxml-annotation-custom-api-sample.md
 - name: Query Data
   items:
   - name: Query data using LINQ

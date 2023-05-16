@@ -201,7 +201,7 @@ Account account2 = retrievedEntity.ToEntity<Account>();
 
 These topics will explain more about working with Dataverse entities (table rows).
 
-[Quick Start: Organization service sample (C#)](quick-start-org-service-console-app.md)
+[Quick Start: Organization service sample (C#)](quick-start-org-service-console-app.md)<br />
 [Query data](entity-operations-query-data.md)<br />
 [Create table rows](entity-operations-create.md)<br />
 [Retrieve a table row](entity-operations-retrieve.md)<br />

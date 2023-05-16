@@ -276,7 +276,7 @@ Use the **Portal Users** entity to add and manage portal users. These portal use
     | First Name          | First name of the user.                           |
     | Last Name           | Last name of the user  |
     | Email     | Email of the user where the invitation will be sent.    |
-    | Parent Organization | Select a parent organization that this portal user will be associated with. This ensures that the user has access only to the hospital systems data under the selected parent org. If you don’t specify a parent org for the user, she/she will have access to data for all the parent orgs under the regional org. |
+    | Parent Organization | Select a parent organization that this portal user will be associated with. This ensures that the user has access only to the hospital systems data under the selected parent org. If you don’t specify a parent org for the user, they will have access to data for all the parent orgs under the regional org. |
     | Hospital System     | Select a hospital that this portal user will be associated with. |
     | Region  | Select a region that this portal user will be associated with.  |
     | Facility            | Select a facility that this portal user will be associated with. |
@@ -296,7 +296,7 @@ Use the **Portal Users** entity to add and manage portal users. These portal use
 
 7. Save the portal user record.
 
-Depending on the roles(s) you granted to the user, she/he will view respective areas in the portal. More information: [Portal for admins and report viewers](portals-admin-reporting.md) and [Portal for healthcare workers](portals-user.md)
+Depending on the roles(s) you granted to the user, they will view respective areas in the portal. More information: [Portal for admins and report viewers](portals-admin-reporting.md) and [Portal for healthcare workers](portals-user.md)
 
 An email will be sent automatically to the newly created user with an invitation code to join portals. The portal user can redeem the invitation to sign in and start using the portal. More information: [Get started with the portal](./portals-admin-reporting.md#getting-started-with-the-portal)
 

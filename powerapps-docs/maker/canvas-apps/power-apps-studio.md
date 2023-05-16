@@ -27,7 +27,7 @@ When you create a canvas app by using any method, you're taken to the canvas app
 
 ## Overview of Power Apps Studio
 
-![Screenshot of Power Apps Studio.](media/studio/pa-studio.png "Power Apps Studio")
+![Screenshot of Power Apps Studio.](media/studio/pa-studio-1.png "Power Apps Studio")
 
 1. [Power Apps Studio modern command bar](#1--power-apps-studio-modern-command-bar): Dynamic command bar that shows a different set of commands based on the control that's selected.
  
@@ -291,7 +291,7 @@ Save allows you to perform the following actions:
 - **Save with version notes**: Save and add notes about the updates you've made.
 - **Save as**: Duplicate the app by saving the app with a different name.
 - **Save and publish**: Allows you to save the app and publish it at the same time.
-- **Download a copy**: Downland a local copy of the app.
+- **Download a copy**: Download a local copy of the app.
 
 ### Publish
 
@@ -369,6 +369,7 @@ Switch between various authoring options while working with the app.
 - **Data**: Add or remove data such as tables that the app connects to.
 - **Media**: Insert or remove media from the app.
 - **Power Automate**: Add a flow using the [Power Automate pane](working-with-flows.md).
+- **Variables**(preview): Work with [variables](working-with-variables.md) and [collections](create-update-collection.md) while editing your app.
 - **Advanced tools**: Allows you to access the [Monitor](../monitor-canvasapps.md) and [Test](test-studio.md) tools to debug and test your app.
 - **Search**: Select to search for media, formulas, text, and more in your app. You can also do a search and replace.
 
@@ -445,6 +446,4 @@ Use the screen selector to switch between screens when your canvas app has multi
 
 You can zoom in or out while authoring the canvas app. Select **Ctrl**+**0** **Fit to window** to fit the screen size based on the current authoring window size. The zoom percentage or screen size you use while authoring a canvas app has no impact on the aspect ratio configured for the app when you preview your app or play a published app.
 
-### See also
 
-[Understand Power Apps Studio in Dataverse in a Teams environment](/power-apps/teams/understand-power-apps-studio.md)
