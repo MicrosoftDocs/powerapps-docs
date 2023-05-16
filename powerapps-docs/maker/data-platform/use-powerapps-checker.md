@@ -4,7 +4,7 @@ description: Use the solution checker to validate your solution.
 author: Mattp123
 ms.component: cds
 ms.topic: article
-ms.date: 03/20/2023
+ms.date: 05/16/2023
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -18,7 +18,7 @@ The solution checker analyzes these solution components:
 - Dataverse custom workflow activities 
 - Dataverse web resources (HTML and JavaScript)
 - Dataverse configurations, such as SDK message steps
-- Power Automate flows (via [flow checker](https://learn.microsoft.com/power-automate/error-checker))
+- Power Automate flows (via [flow checker](/power-automate/error-checker))
 - Power Fx expressions (via [app checker](https://powerapps.microsoft.com/en-us/blog/new-app-checker-helps-you-fix-errors-and-make-accessible-apps/))
 
 Solution checker works with unmanaged solutions that can be exported from an environment. 
@@ -76,7 +76,7 @@ When a solution check is completed, you can view the analysis report in the port
 
 1. In the left pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. Next to the unmanaged solution where you want to view the solution checker report, select **...**, point to **Solution checker**, and then select **View results**.  
-3. Select an Issue to view the details and guidance on how to resolve.
+3. Select an issue to view the details and guidance on how to resolve.
 
     > [!div class="mx-imgBorder"] 
     > ![Solution checker view results.](media/solution-checker-viewresults.png "Solution checker view results")
