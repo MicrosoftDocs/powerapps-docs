@@ -86,7 +86,7 @@ The following options are available when you add conditions in the filter editor
 
     :::image type="content" source="./media/filter-editor-add-condition-row.png" alt-text="A screenshot of the view filter editor, showing an added row.":::
     
-    If you're adding a condition to a column with lookups, you can look up the record in the **Value** field. If your administrator has enabled [Show advanced lookup in lookup fields within Edit filters](/power-platform/admin/settings-features), you can choose **Advanced lookup** to see more fields and search for records within a specific view.
+    If you're adding a condition to a column with lookups, you can look up the record in the **Value** field. Within the lookup dropdown, you can also choose **Advanced lookup** to see more fields and search for records within a specific view.
     
     ![Advanced lookup option.](media/AdvLookupInEditFilters.png)
     
