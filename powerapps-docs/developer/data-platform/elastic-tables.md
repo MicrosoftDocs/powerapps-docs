@@ -85,7 +85,7 @@ Each elastic table is created with an alternate key using these values:
 - Name: `KeyForNoSqlEntityWithPKPartitionId`
 - LogicalName: `keyfornosqlentitywithpkpartitionid`
 
-This alternate key has the key values: <table primary key name> and `partitionid`.
+This alternate key has the key values: `<table primary key name>` and `partitionid`.
 
 If you need to reference a record that has a `partitionid` value set to a value other than the default value that is equal to the value of the primary key, you can reference the record using this alternate key.
 

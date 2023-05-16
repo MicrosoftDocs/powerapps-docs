@@ -102,7 +102,7 @@ Anytime you need to uniquely identify an entity to retrieve, update, or delete, 
 
 When retrieving elastic table data stored in partitions be sure to specify the partition key when retrieving that data.
 
-More information: [Using Partitions > Retrieve a record](../elastic-tables.md#retrieve-a-record)
+More information: [Retrieve a record in an elastic table](../elastic-tables.md#retrieve-a-record-in-an-elastic-table)
 
 ## Retrieve a single property value
 

@@ -335,7 +335,7 @@ Accept: application/json
 
 If you are creating large numbers of records for elastic tables, you can create the entities in storage partitions to speed up access to those entity records.
 
-More information: [Using Partitions > Create a record](../elastic-tables.md#create-a-record)
+More information: [Create a record in an elastic table](../elastic-tables.md#create-a-record-in-an-elastic-table)
 
 ### See also
 
