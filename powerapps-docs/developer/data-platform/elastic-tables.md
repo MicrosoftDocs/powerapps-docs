@@ -36,7 +36,7 @@ Types of tables
 https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/types-of-entities?branch=pr-en-us-8083
 
 -->
-Elastic tables are Dataverse tables which are powered by Azure Cosmos DB. They are designed to automatically scale horizontally and can handle large amounts of data and high levels of throughput with low latency. Elastic tables are suitable for applications with unpredictable, spiky or rapidly growing workloads.
+Dataverse elastic tables are powered by Azure Cosmos DB. They automatically scale horizontally and can handle large amounts of data and high levels of throughput with low latency. Elastic tables are suitable for applications with unpredictable, spiky or rapidly growing workloads.
 
 ## When to use elastic tables
 
@@ -77,6 +77,21 @@ For all elastic tables, `partitionid` column should:
 
 When `partitionid` is not specified for a row, Dataverse uses the primary key as the default `partitionid`. For write-heavy tables of any size or for cases where rows are mostly retrieved using id, the primary key is naturally a great choice for the `partitionid` column.
 
+## Alternate keys
+
+Each elastic table is created with an alternate key using these values:
+
+- Display Name: Entity key for NoSql Entity that contains PrimaryKey and PartitionId attributes
+- Name: `KeyForNoSqlEntityWithPKPartitionId`
+- LogicalName: `keyfornosqlentitywithpkpartitionid`
+
+This alternate key has the key values: <table primary key name> and `partitionid`.
+
+If you need to reference a record that has a `partitionid` value set to a value other than the default value that is equal to the value of the primary key, you can reference the record using this alternate key.
+
+More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
+
+
 ## Consistency level
 
 Elastic tables support [session consistency](/azure/cosmos-db/consistency-levels#session-consistency). Elastic tables use *session tokens* to achieve session consistency. Session tokens are opaque strings returned by Dataverse when a client performs any write operation (create/update/delete).
@@ -95,7 +110,7 @@ For standard tables, transactions are a fundamental concept and are used to grou
 
 - **A**tomic: All or nothing
 - **C**onsistent: Maintains data integrity
-- **I**solated: transactions don't interfere with each other
+- **I**solated: Transactions don't interfere with each other
 - **D**urable: Committed transactions are permanent
 
 In contrast, elastic tables currently do not support transaction in any form.
@@ -106,6 +121,7 @@ For example, if you have a synchronous plug-in step registered on the `PostOpera
 Multiple write operations within same the plugin execution are also not atomic.
 
 Elastic tables also currently do not support executing two or more organization service requests in a single database transaction using the `ExecuteTransaction` message or in a Web API `$batch` operation `ChangeSet`.
+
 
 <!-- 
 TODO: What is the error thrown if you try? 
@@ -128,39 +144,44 @@ These examples create a new elastic table `contoso_SensorData` using the Dataver
 
 #### [SDK for .NET](#tab/sdk)
 
+> [!NOTE]
+> At the time of this writing the SDK [EntityMetadata]xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata) class doesn't have the `TableType` property to create an elastic table. You will need to use the Web API until this is added.
+
 ```csharp
-public static Guid CreateElasticTable(IOrganizationService service)
+public static CreateEntityResponse CreateElasticTable(IOrganizationService service)
 {
-    var request = new CreateEntityRequest
-    {
-        // Define table properties
-        Entity = new EntityMetadata
-        {
+   var request = new CreateEntityRequest
+   {
+         // Define table properties
+         Entity = new EntityMetadata
+         {
             SchemaName = "contoso_SensorData",
             DisplayName = new Label("SensorData", 1033),
             DisplayCollectionName = new Label("SensorData", 1033),
             Description = new Label("Stores IoT data emitted from devices", 1033),
             OwnershipType = OwnershipTypes.UserOwned,
-            TableType = "Elastic"
+            TableType = "Elastic",
             IsActivity = false,
             CanCreateCharts = new Microsoft.Xrm.Sdk.BooleanManagedProperty(false)
-        },
+         },
 
-        // Define the primary attribute for the entity
-        PrimaryAttribute = new StringAttributeMetadata
-        {
+         // Define the primary attribute for the entity
+         PrimaryAttribute = new StringAttributeMetadata
+         {
             SchemaName = "contoso_SensorType",
             RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
             MaxLength = 100,
             FormatName = StringFormatName.Text,
             DisplayName = new Label("Sensor Type", 1033),
             Description = new Label("Type of sensor emitting data", 1033)
-        }
+         }
 
-    };
-    return service.Execute(request);
+   };
+   return (CreateEntityResponse)service.Execute(request);
 }
 ```
+
+More information: [Create a custom table using code](org-service/create-custom-entity.md)
 
 #### [Web API](#tab/webapi)
 
@@ -272,6 +293,8 @@ OData-Version: 4.0
 OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) 
 ```
 
+More information: [Create and update table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md)
+
 ---
 
 ## Adding Columns
@@ -279,12 +302,15 @@ OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c
 You can create columns in elastic tables using [Power Apps](https://make.powerapps.com/) without writing code. More information: [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md). 
 
 Dataverse automatically creates two system columns for each elastic tables at the time of table creation.
-- `PartitionId` : Defines the logical partition a row belongs to.
-- `TimeToLiveInSeconds` :  Defines the time in seconds after which row will expire and get deleted from database automatically.
 
-Columns can also be created using standard table APIs.
 
-There are limits on the types of columns you can add. Currently you cannot add these types of columns:
+|SchemaName<br />LogicalName|Type  |Description|
+|---------|---------|---------|
+|`PartitionId`<br />`partitiond`|String|Defines the logical partition a row belongs to.|
+|`TTLInSeconds`<br />`ttlinseconds` |Integer|Defines the time in seconds after which row will expire and get deleted from database automatically.|
+
+
+Columns can also be created using standard table APIs, but there are limits on the types of columns you can add. Currently you cannot add these types of columns:
 
 - MoneyType (`MoneyAttributeMetadata`)
 - MultiSelectPicklistType (`MultiSelectPicklistAttributeMetadata`)
@@ -335,7 +361,7 @@ public static Guid OrganizationResponse CreateColumn(IOrganizationService servic
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1
+POST [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -386,7 +412,7 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
 ```
 ---
 
@@ -570,7 +596,7 @@ This example creates a One-to-Many relationship between `contact` (standard tabl
 HTTP/1.1 204 No Content
 OData-Version: 4.0
 x-ms-session-token: hj23ad#1543
-OData-EntityId: [Organization URI]/api/data/v9.0/RelationshipDefinitions(125e6d7f-2af1-ed11-8f6d-6045bdd811fa)
+OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(125e6d7f-2af1-ed11-8f6d-6045bdd811fa)
 ```
 
 ---
@@ -578,7 +604,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/RelationshipDefinitions(125e6d7
 
 ## Elastic table data operations
 
-Following examples show how customer can work with data stored in an elastic table.
+Following examples show how to work with data stored in an elastic table.
 
 - [Create a record in an elastic table](#create-a-record-in-an-elastic-table)
 - [Update a record in an elastic table](#update-a-record-in-an-elastic-table)
@@ -591,27 +617,33 @@ Following examples show how customer can work with data stored in an elastic tab
 
 ### Create a record in an elastic table
 
-This example creates a new row in `contoso_SensorData` table with `partitionid` set to `deviceid`. It also sets `ttlinseconds` column which ensures that row expires after 1 day and deleted from Dataverse automatically.
+This example creates a new row in `contoso_SensorData` table with `partitionid` set to `deviceid`. It also sets `ttlinseconds` column which ensures that row expires after 1 day (86400 seconds) and deleted from Dataverse automatically.
 
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
-public static Guid CreateExample(IOrganizationService service)
+/// <summary>
+/// Demonstrates creating elastic table row with partitionid
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="deviceId">The value used as partitionid for the contoso_sensordata table. </param>
+/// <returns></returns>
+public static Guid CreateExample(IOrganizationService service, string deviceId)
 {
-   var entity = new Entity("contoso_sensordata")
-   {
-         Attributes = 
+    var entity = new Entity("contoso_sensordata")
+    {
+        Attributes =
          {
-            { "contoso_deviceId", "deviceid-001" },
+            { "contoso_deviceid", deviceId },
             { "contoso_sensortype", "Humidity" },
             { "contoso_value", 40 },
-            { "contoso_timestamp", "2023-05-01Z05:00:00"},
-            { "partitionid", "deviceid-001" },
-            { "ttlinseconds", 86400 }
+            { "contoso_timestamp", DateTime.UtcNow},
+            { "partitionid", deviceId },
+            { "ttlinseconds", 86400  }  // 86400  seconds in a day
          }
-   };
+    };
 
-   return service.Create(entity);
+    return service.Create(entity);
 }
 ```
 
@@ -620,18 +652,19 @@ public static Guid CreateExample(IOrganizationService service)
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.1/sensordata
+POST [Organization URI]/api/data/v9.2/contoso_sensordatas
 Content-Type: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 Accept: application/json
+
 {
-  "contoso_deviceid", "deviceid-001",
-  "contoso_sensortype", "Humidity",
-  "contoso_value", 40,
-  "contoso_timestamp", "2023-05-01Z05:00:00",
-  "partitionid", "deviceid-001",
-  "ttlinseconds", 86400
+  "contoso_deviceid": "deviceid-001",
+  "contoso_sensortype": "Humidity",
+  "contoso_value": 40,
+  "contoso_timestamp": "2023-05-15T22:36:24Z",
+  "partitionid": "deviceid-001",
+  "ttlinseconds": 86400
 }
 ```
 
@@ -640,8 +673,8 @@ Accept: application/json
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-x-ms-session-token: hj23ad#1543
-OData-EntityId: [Organization URI]/api/data/v9.0/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
+x-ms-session-token: 240:8#144035050#7=-1
+OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
 ```
 
 > [!NOTE]
@@ -651,83 +684,143 @@ OData-EntityId: [Organization URI]/api/data/v9.0/sensordata(7eb682f1-ca75-e511-8
 
 ### Update a record in an elastic table
 
-This example updates sensor `value` and `timestamp` of an existing row in `contoso_SensorData` table with using the `sensordataid` primary key and `partitionid` = `'device-001'`. Note that primary key and `partitionid` columns are always required to uniquely identify an existing elastic table row. The `partitionid` of an existing row cannot be updated and is only being used to uniquely identify the row to update.
+This example updates sensor `contoso_value` and `contoso_timestamp` of an existing row in `contoso_SensorData` table with using the `contoso_sensordataid` primary key and `partitionid` = `'device-001'`. Note that primary key and `partitionid` columns are always required to uniquely identify an existing elastic table row. The `partitionid` of an existing row cannot be updated and is only being used to uniquely identify the row to update.
+
+This example uses the `KeyForNoSqlEntityWithPKPartitionId` alternate key to uniquely identify the record using both the primary key and the `partitionid`. More information: [Alternate keys](#alternate-keys)
 
 #### [SDK for .NET](#tab/sdk)
 
-```csharp
-public static void UpdateExample(IOrganizationService service, Guid sensordataid)
-{
-   var entity = new Entity("contoso_sensordata", sensordataid)
-   {
-         Attributes = {
-            { "contoso_value", 60 },
-            { "contoso_timestamp", "2023-05-01Z06:00:00" },
-            { "partitionid", "deviceid-001" }
-         }
-   };
 
-   service.Update(entity);
+
+```csharp
+/// <summary>
+/// Demonstrates updating elastic table row with partitionid
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="sensordataid">The unique identifier of the contoso_sensordata table.</param>
+/// <param name="deviceId">The value used as partitionid for the contoso_sensordata table. </param>
+public static void UpdateExample(IOrganizationService service, Guid sensordataid, string deviceId)
+{
+    var keys = new KeyAttributeCollection() {
+        { "contoso_sensordataid", sensordataid },
+        { "partitionid", deviceId }
+    };
+
+    var entity = new Entity("contoso_sensordata", keys)
+    {
+        Attributes = {
+            { "contoso_value", 60 },
+            { "contoso_timestamp", DateTime.UtcNow }
+         }
+    };
+
+    service.Update(entity);
 }
 ```
+
+More information: [Using the Entity class](use-alternate-key-reference-record.md#using-the-entity-class)
 
 #### [Web API](#tab/webapi)
 
 **Request**
 
 ```http
-PATCH [Organization URI]/api/data/v9.0/contoso_sensordata(<sensordataid value>)
-Content-Type: application/json  
-OData-MaxVersion: 4.0  
+PATCH [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=<Guid Value>,partitionid='deviceid-001')
+Content-Type: application/json
+OData-MaxVersion: 4.0
 OData-Version: 4.0
-If-Match: *  
+Accept: application/json
+If-Match: *
 
-{  
-    "contoso_value": 60,
-    "contoso_timestamp", "2023-05-01Z06:00:00",
-    "partitionid", "deviceid-001"
+{
+  "contoso_value": 60,
+  "contoso_timestamp": "2023-05-15T22:36:24Z"
 }
 ```
 
 **Response**
 
 ```http
-HTTP/1.1 204 No Content  
+HTTP/1.1 204 No Content
 OData-Version: 4.0
-x-ms-session-token: hn76qq#7324
+OData-EntityId: [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=21d455f2-70f3-ed11-8848-000d3a993550,partitionid='deviceid-001')
+x-ms-session-token: 240:8#144035978#7=-1
 ```
 
 ---
 
 ### Retrieve a record in an elastic table
 
-This example retrieves an existing row in SensorData table with SensorDataId = 'ff67610c-82ce-412c-85df-0bbc6521bb01' and `partitionid` = 'device-001'. 
-Here the `partitionid` value is passed using `partitionId` as an optional parameter. More information: [Use optional parameters](optional-parameters.md)
+If an elastic table record was created setting the `partitionid`, you must use the `partitionid` value together with the primary key value to uniquely identify a record.
 
-Note that unlike standard tables where primary key is enough to uniquely identify a row, Both primary key and `partitionid` columns are required for elastic tables. If a row has been created with non-null `partitionid` value, when retrieving the same row `partitionid` parameter MUST be passed. `404 Not Found` error will be thrown by Dataverse if `partitionid` is not passed but row was created with a non-null `partitionid` value.
-
+If the `partitionid` was not set, you can retrieve the record normally using only the primary key value.
 
 #### [SDK for .NET](#tab/sdk)
 
+There are two different ways to compose a request to retrieve a record using the `partitionid` value.
+
+This example uses the [RetrieveRequest](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest) class with the `Target` property set to an the [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) created using the constructor that accepts a [KeyAttributeCollection](xref:Microsoft.Xrm.Sdk.KeyAttributeCollection) to use the `KeyForNoSqlEntityWithPKPartitionId` alternate key. More information: [Using the EntityReference class](use-alternate-key-reference-record.md#using-the-entityreference-class)
+
 
 ```csharp
-public static Entity RetrieveExample(IOrganizationService service, Guid sensorDataId)
-{
-   var request = new RetrieveRequest
-   {
-         ColumnSet = new ColumnSet("new_firstname"),
-         Target = new EntityReference("new_customer", sensorDataId),
-         ["partitionId"] = "deviceid-001"
-   };
+public static void RetrieveExampleAlternateKey(IOrganizationService service, Guid sensorDataId, string deviceId) {
 
-   var response = (RetrieveResponse)service.Execute(request);
-   return response.Entity;
+    var keys = new KeyAttributeCollection() {
+        { "contoso_sensordataid", sensorDataId },
+        { "partitionid", deviceId }
+    };
+
+    var entityReference = new EntityReference("contoso_sensordata", keys);
+
+    var request = new RetrieveRequest { 
+        ColumnSet = new ColumnSet("contoso_value"),
+        Target = entityReference
+    };
+
+    var response = (RetrieveResponse)service.Execute(request);
+
+    Console.WriteLine($"contoso_value: {response.Entity.GetAttributeValue<int>("contoso_value")}");
+}
+```
+
+This example uses an optional parameter named `partitionId` on the [RetrieveRequest](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest) class. More information: [Use optional parameters](optional-parameters.md)
+
+```csharp
+public static void RetrieveExampleOptionalParameter(IOrganizationService service, Guid sensorDataId, string deviceId)
+{
+    var entityReference = new EntityReference("contoso_sensordata", sensorDataId);
+
+    var request = new RetrieveRequest
+    {
+        ColumnSet = new ColumnSet("contoso_value"),
+        Target = entityReference,
+        ["partitionId"] = deviceId
+    };
+
+    var response = (RetrieveResponse)service.Execute(request);
+
+    Console.WriteLine($"contoso_value: {response.Entity.GetAttributeValue<int>("contoso_value")}");
 }
 ```
 
 #### [Web API](#tab/webapi)
 
-Here the `partitionid` is being passed as query parameter.
+There are two different ways to compose a URL to retrieve a record using the `partitionid` value.
+
+- You can use the alternate key style:
+
+   `contoso_sensordatas(contoso_sensordataid=<primary key value>,partitionid='<partitionid value>')?$select=contoso_value`
+
+   More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
+
+- Or you can use the `partitionId` query parameter.
+
+   `contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'&$select=contoso_value`
+
+   > [!NOTE]
+   > The parameter has a capital `I` for `Id`.
+
+Either way, the response is the same.
 
 **Request**
 
@@ -754,11 +847,12 @@ OData-Version: 4.0
 "contoso_timestamp" : "2023-05-01Z06:00:00"
 }
 ```
+
 ---
 
 ### Query rows in a single logical partition of an elastic table
 
-These examples retrieve the first 5000 rows in the `contoso_SensorData` table which belong to logical `partitionid` = 'deviceid-001'. 
+These examples retrieve the first 5000 rows in the `contoso_SensorData` table which belong to logical `partitionid` = 'deviceid-001'.
 
 > [!NOTE]
 > When used this way, the value must use `partitionId` (capital 'I') rather than `partitionid` (all lower case).
@@ -937,7 +1031,7 @@ This example upserts a row in SensorData table with id = 'ff67610c-82ce-412c-85d
 **Request**
 
 ```http
-PATCH [Organization URI]/api/data/v9.0/sensordata(ff67610c-82ce-412c-85df-0bbc6521bb01)?partitionid="deviceid-001"
+PATCH [Organization URI]/api/data/v9.2/sensordata(ff67610c-82ce-412c-85df-0bbc6521bb01)?partitionid="deviceid-001"
 Content-Type: application/json
 x-ms-session-token: hn76qq#7324
 OData-MaxVersion: 4.0  
@@ -989,7 +1083,7 @@ This example deletes a row in SensorData table with id = 'ff67610c-82ce-412c-85d
 **Request**
 
 ```http
-DELETE [Organization URI]/api/data/v9.0/sensordata(ff67610c-82ce-412c-85df-0bbc6521bb01)?partitionId="deviceid-001"
+DELETE [Organization URI]/api/data/v9.2/sensordata(ff67610c-82ce-412c-85df-0bbc6521bb01)?partitionId="deviceid-001"
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -1050,7 +1144,7 @@ This request creates a new <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata>
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='contoso_sensordata')/Attributes HTTP/1.1
+POST [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='contoso_sensordata')/Attributes HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -1101,7 +1195,7 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
 ```
 
 More information: [Create columns](webapi/create-update-entity-definitions-using-web-api.md#create-columns)
@@ -1138,7 +1232,7 @@ public static void CreateWithJsonData(IOrganizationService service, Guid sensord
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/contoso_sensordata
+POST [Organization URI]/api/data/v9.2/contoso_sensordata
 {
    "contoso_sensorvalue": {
       "type":"Humidity",
@@ -1156,7 +1250,7 @@ POST [Organization URI]/api/data/v9.0/contoso_sensordata
 HTTP/1.1 204 No Content
 OData-Version: 4.0
 x-ms-session-token: hj23ad#1543
-OData-EntityId: [Organization URI]/api/data/v9.0/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
+OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
 ```
 
 ---
@@ -1208,7 +1302,7 @@ This request uses the [ExecuteCosmosSqlQuery Function](xref:Microsoft.Dynamics.C
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/ExecuteCosmosSqlQuery(
+GET [Organization URI]/api/data/v9.2/ExecuteCosmosSqlQuery(
    QueryText=@p1,
    EntityLogicalName=@p2,
    QueryParameters=@p3)?
