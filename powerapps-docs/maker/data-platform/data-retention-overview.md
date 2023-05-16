@@ -72,7 +72,7 @@ With Dataverse long term retention, data is never moved out of Dataverse . The r
 
 - Database capacity details reported:
   - Database capacity reported is the sum of the live and retained data. The overall database capacity consumed is reduced depending on the proportion of the data rows retained during a policy run.  
-- Notice that the policy run might take up to 96 hours to complete and there'll be an additional 24 hours afterward for the database capacity reports to appear. When available the reports display two entries for a table that has been enabled for long term retention:
+- Notice that the policy run will 72 to 96 hours to complete and there'll be an additional 24 hours afterward for the database capacity reports to appear. When available the reports display two entries for a table that has been enabled for long term retention:
     - *Table*, such as **Case**<sup>1</sup> or **Contact**.
     - *Table***-Retained**, such as **Case-Retained**.
   - Case size should be minimal to zero and case-retained size will display the retained data GB. <!-- what does this mean? -->
