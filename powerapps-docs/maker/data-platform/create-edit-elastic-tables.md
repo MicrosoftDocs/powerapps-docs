@@ -72,9 +72,20 @@ This requires an inner join of the two tables, which isn't supported with elasti
     - One elastic table -> Many standard tables
   - N:1 (Many-to-one)
     - Many elastic tables -> One standard table
-- Security features:
-   - User and organization owned tables
-   - Field level security
+
+> [!IMPORTANT]
+> When you add a lookup column to a standard table that references an elastic table, don't set the `partitionid` value on the elastic table records. Lookup columns that reference an elastic table only work correctly when a `partitionid` value isn't used for the record in the elastic table. When no `partitionid` value is specified when the row is created, it defaults to the primary key value, and the lookup works as expected. But, if the row is created with a `partitionid` value other than the primary key value, the lookup won't work.
+> 
+> You can add this kind of  lookup column three  different ways: 
+> 
+> - By adding a lookup column on a standard table that references to an elastic table.
+> - By creating a many-to-one relationship on a standard table where the related (one) table is an elastic table.
+> - By creating a one-to-many relationship on an elastic table where the related (many) table is a standard table.
+
+Security features:
+
+- User and organization owned tables
+- Field level security
 
 ### Features currently not supported with elastic tables
 
