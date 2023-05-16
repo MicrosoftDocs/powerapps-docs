@@ -8630,6 +8630,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/maker/portals/index.yml",
+      "redirect_url": "/power-pages",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/configure/view-all-activities-in-portal-timeline.md",
       "redirect_url": "/power-pages/configure/view-all-activities-in-portal-timeline",
       "redirect_document_id": false

@@ -5,7 +5,7 @@ author: alaug
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/11/2022
+ms.date: 05/08/2023
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -64,6 +64,13 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
     > [!NOTE]
     > You can't share an app with a distribution group in your organization or with a group outside your organization.
+
+1. If your app contains premium components, such as a map or address input components, users must have a Power Apps license to use the app. To request licenses for the users of your app, select **Request licenses** to submit a license request to your admin.
+
+    :::image type="content" source="media/request-licenses-for-others-banner.png" alt-text="Request Power Apps licenses for your users.":::
+    
+    > [!Note]
+    > You can't request licenses for security groups or distribution lists. For more information about requesting licenses, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md).
 
 1. If you want to allow users to edit and share the app, select the **Co-owner** check box.
 
@@ -135,8 +142,8 @@ Legend:
 4. **Add app to Teams**: Select to add the app to Teams.
 5. **Launch app in Web**: Open the app directly in your browser.
 
-
-
+## Request licenses for your users
+When sharing an app that requires a license for use, you can request Power Apps licenses for your users. For more information, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md).
 
 ## Security group considerations
 
