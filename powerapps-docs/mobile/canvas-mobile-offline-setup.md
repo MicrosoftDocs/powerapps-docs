@@ -4,7 +4,7 @@ description: This article explains how to set up mobile offline for canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/15/2023
+ms.date: 05/16/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -39,7 +39,7 @@ Verify the following prerequisites before you enable mobile offline.
   | Power Apps mobile app | 3.23053.00 | 
   |Auto-generated offline profile | 3.23053.00 | 
     
-- The canvas app must be associated to a solution. More information: [Create a canvas app from within a solution](../maker/canvas-apps/add-app-solution.md)
+- The canvas app must be in a solution. More information: [Create a canvas app from within a solution](../maker/canvas-apps/add-app-solution.md)
 
 - The canvas app must use Dataverse data only.
 
