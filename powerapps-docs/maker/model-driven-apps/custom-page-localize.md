@@ -8,12 +8,8 @@ ms.subservice: mda-maker
 ms.topic: "article"
 author: "mspilde"
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Localize labels, messages, and tooltips on a custom page
 

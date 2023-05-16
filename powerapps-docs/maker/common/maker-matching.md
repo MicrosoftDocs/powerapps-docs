@@ -1,192 +1,154 @@
 ---
-title: "Maker matching using an integrated virtual agent in Power Apps (preview) | MicrosoftDocs"
-description: Maker matching using an integrated virtual agent in Power Apps. 
-ms.custom: ""
-ms.date: 10/26/2022
-ms.reviewer: "mkaur"
-ms.topic: overview
-author: "mduelae"
+title: Maker matching using an integrated virtual agent in Power Apps (preview)
+description: Learn how to use a chat bot integrated in Microsoft Power Apps to find maker resources in your organization.
+ms.date: 04/07/2023
+author: mduelae
+ms.author: mkaur
+ms.reviewer: mkaur
+ms.topic: how-to
 ms.subservice: common
-ms.author: "mkaur"
-manager: "kvivek"
+manager: kvivek
+ms.custom: bap-template
 search.audienceType: 
   - maker, admin
-search.app: 
-  - PowerApps
 ---
 
 # Maker matching using an integrated virtual agent in Power Apps (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
-Maker matching is now available through an integrated chat bot in Power Apps. This feature allows you to find your organization's internal resources, as well as interact with experienced makers within your organization.
+Maker matching allows you to use an integrated chat bot in Power Apps to find internal maker resources and connect with experienced makers in your organization. The integrated virtual agent is available in all three Power Apps personas:
 
-The integrated virtual agent is available in all three Power Apps experiences. Maker matching enables the following personas:
+**Makers** can use the chat bot to get help from internal and public documentation and other experienced makers in the organization, known as advisors.
 
-- **Maker**: Use chat bot to get help from available documentation (internal and public) and other experienced makers in your organization (advisors).
+**Advisors** respond to requests for help that makers submit through the chat bot.
 
-- **Admin**: Set internal documentation and add experienced individual makers to help new makers.
-
-- **Advisor**: Set individual preferences as an experienced Power Apps maker to help others.
+**Admins** tell the chat bot where to find internal documentation and which advisors can help new makers.
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> This is a preview feature. Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-## Use maker matching
+## Find maker resources
 
-To access maker matching resources:
+1. Sign in to [Power Apps](https://make.powerapps.com) and select **Ask a Virtual Agent** at the bottom of the navigation pane.
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Interact with the bot to find helpful resources based on the key terms and phrases you enter.
 
-2. Select **Ask a Virtual Agent** from the lower-left corner of the screen.
+    :::image type="content" source="media/skills-match/skills-match-2.png" alt-text="Screenshot of a maker conversation with a chat bot in Power Apps.":::
+Chat bot interactions are broken into three stages:
 
-   > [!div class="mx-imgBorder"]
-   > ![Select Ask a virtual agent.](media/skills-match/skills-match-1.png "Select Ask a virtual agent.")
+- Stage 1: Microsoft documentation
 
-3. Interact with the chat bot to receive help.
+- Stage 2: Internal resources
 
-   > [!div class="mx-imgBorder"]
-   > ![Interact with the chat bot.](media/skills-match/skills-match-2.png "Interact with the chat bot.")
+- Stage 3: Advisor engagement
 
-## Virtual agent resources
+### Stage 1: Microsoft documentation
 
-When you interact with the chat bot, you'll be able to get help based on the key terms and phrases you enter. The engagement stages include:
+In the first stage of engagement, the virtual agent helps you find Microsoft documentation that relates to your responses.
 
-- Stage 1 – Microsoft documentation
+In the following example, the user wants help with connecting data, specifically to help troubleshoot a data export error.
 
-- Stage 2 – Organizational resources configured in the Power Platform admin center
+:::image type="content" source="media/skills-match/skills-match-3.png" alt-text="Screenshot of the start of a bot conversation about exporting data.":::
 
-- Stage 3 – Advisor engagement within the organization
+ In response to the user's answers to its prompts, the bot directs the user to an article about exporting data from Microsoft Dataverse.
 
-### Stage 1 – Microsoft documentation
+:::image type="content" source="media/skills-match/skills-match-4.png" alt-text="Screenshot of a bot answering a user question with a Microsoft product documentation article.":::
 
-During the first stage of engagement, your interaction with the virtual agent lets you discover relevant Microsoft documentation depending on your responses to the chat bot.
+### Stage 2: Internal resources
 
-For example, when you need help with a data export error that relates to connecting data, you'll start with the chat that includes text relevant to the data export error:
+If you select **No** when the chat bot asks whether the Microsoft documentation solved your problem, then the second stage begins. In this stage, the bot suggests organizational resources that an [admin has previously identified](#add-internal-resources), like internal documentation, a Yammer community, and Microsoft Teams groups.
 
-> [!div class="mx-imgBorder"]
-> ![Demo of skills matching.](media/skills-match/skills-match-3.png "Demo of skills matching.")
+:::image type="content" source="media/skills-match/skills-match-6.png" alt-text="Screenshot of a bot suggesting internal maker resources in a conversation with a user.":::
 
-From the list of topics that the chat bot suggests, you can then choose to be more specific to exporting data from Dataverse:
+### Stage 3: Advisor engagement
 
-> [!div class="mx-imgBorder"]
-> ![Find help with a specific error.](media/skills-match/skills-match-4.png "Find help with a specific error.")
+Stage 3 begins if you select **Next** to find an advisor in your organization. The chat bot presents a list of experienced makers in your organization who have offered to help new makers.
 
-### Stage 2 – Organizational resources
+:::image type="content" source="media/skills-match/skills-match-7.png" alt-text="Screenshot of a bot suggesting advisors in a conversation with a user.":::
 
-This stage begins once you choose **No** when asked whether the previous interaction solved your problem.
+Select **View more advisors** to get more suggestions. Select **Send message** to compose an email or a Teams chat with the advisor, depending on the advisor's preferred contact method.
 
-> [!div class="mx-imgBorder"]
-> ![Second stage when your issue is not solved.](media/skills-match/skills-match-5.png "Second stage when your issue is not solved.")
+## Sign up to be an advisor
 
-When you choose **No**, you'll see the internal documentation, Yammer community, and the Microsoft Teams group resources unique to your organization.
+Power Apps invites successful makers to become advisors based on their usage of the product. Admins can also nominate advisors. Nominated makers can opt in to the advisor program at any time.
 
-> [!div class="mx-imgBorder"]
-> ![Get help from internal documentation.](media/skills-match/skills-match-6.png "Get help from internal documentation.")
+### Respond to an invitation
 
-> [!NOTE]
-> The internal documentation, Yammer community, and Teams group information will only appear if they're [configured by your](#add-internal-resources) environment administrator using the Power Platform admin center.
+If an admin has nominated you as an advisor, a notification in the app asks whether you'd like to opt in to help other makers. The notification is also displayed if Power Apps detects that you have enough experience with making apps to help others.
 
-### Stage 3 – Advisor engagement
+:::image type="content" source="media/skills-match/skills-match-8.png" alt-text="Screenshot of the invitation to become a Power Apps advisor.":::
 
-If you choose **Next** to find an advisor for your organization in the virtual agent interaction, you're then presented with a list of advisors who are available to provide help:
+### Sign up in your Power Apps profile
 
-> [!div class="mx-imgBorder"]
-> ![Find an advisor from your organization.](media/skills-match/skills-match-7.png "Find an advisor from your organization.")
+If you respond to the invitation with **Maybe later**, you can opt in to become an advisor when you're ready.
 
-If additional advisors are available to help, you can choose to view more advisors.
+1. Select **Settings** in the upper-right corner of the screen, and then select **Power Apps settings**.
 
-Select **Send message** either to initiate an email or a Teams chat with the advisor depending on the advisor's preferred contact method.
+1. Select **Advisor program** in the navigation pane.
 
-## Advisor identification
+    The **Advisor program** tab is only available if your admin has nominated you in the Power Platform admin center.
 
-Advisors are identified one of two ways: via admin identification or the product itself will invite successful makers based on their product usage.
+1. Under **Set availability**, select the toggle to tell Power Apps that people can contact you with questions. If you need a break from answering questions, turn off your availability.
 
-> [!NOTE]
-> After you sign up as an advisor, your Power Platform administrator has the ability to remove your profile as an advisor.
+1. Select the communication method you prefer, email or Microsoft Teams chat.
 
-### Signing up 
+:::image type="content" source="media/skills-match/skills-match-9.png" alt-text="Screenshot of the advisor settings in the Power Apps user profile.":::
 
-When an advisor is identified, they receive an in-product pop-up notification asking whether they'd like to opt in to the program to help other makers.
+## Set up maker matching
 
-> [!div class="mx-imgBorder"]
-> ![Notification for advisors.](media/skills-match/skills-match-8.png "Notification for advisors.")
-
-### Sign up using Power Apps profile screen
-
-Select **Settings** from the upper-right corner of the screen, and then choose **Power Apps settings**. This lets you configure your profile for this feature. You'll be able to specify the communication preferences such as using email or Microsoft Teams chat.
-
-> [!div class="mx-imgBorder"]
-> ![Sign up using Power Apps profile screen.](media/skills-match/skills-match-9.png "Sign up using Power Apps profile screen.")
-
-Your organizational admin will be able to nominate you as a Power Apps advisor via the Power Platform admin center, in which case you'll receive an email and see the in-product notification shown above.
-
-> [!NOTE]
-> You won't see the **Advisor program** tab under Power Apps settings if you haven't been nominated as an advisor.
-
-## Administer maker matching for all makers and advisors
-
-You can administer and configure **the settings for maker matching** for all makers and advisors using the Power Platform admin center. In the admin center, you can also manually add or remove advisors.
-
-> [!NOTE]
-> By default, advisors who are identified by the system and have opted in to the advisor program are added to the advisor list automatically. As an administrator, you can add or remove advisors. An advisor discovered via telemetry criteria, if removed by an administrator, can only be added back by an administrator.
-
-Along with advisor configuration, you can also configure internal resources to share with the makers who use the chat bot experience through the internal resources chat experience.
+If you're an admin, you can set up internal resources and add and remove advisors in the Power Platform admin center.
 
 ### Add internal resources
 
-To add internal resources:
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.com).
+
+1. In the navigation pane, select **Power Apps assets**.
+
+1. Enter the links to your organization's internal **Documentation**, **Teams Group**, and **Yammer Community**.
+
+    :::image type="content" source="media/skills-match/skills-match-10.png" alt-text="Screenshot of adding internal Documentation, Teams Group, and Yammer Community links in the Power Platform admin center.":::
+
+1. Select **Save**.
+
+### Add and remove advisors
+
+As a Power Platform administrator, you can add and remove advisors. Adding an advisor nominates the maker for the advisor program. The maker must opt in to join.
+
+By default, makers who are identified by the system and have opted in to the advisor program are added to the advisor list automatically. If advisors are identified by the system but removed by an administrator, only an administrator can add them back.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.com).
 
-2. Select **Power Apps assets** from the left pane.
+1. In the navigation pane, select **Power Apps assets**.
 
-3. Add the **Documentation**, **Teams Group**, and **Yammer Community** links.
+1. Select the **Advisors** tab.
 
-   > [!div class="mx-imgBorder"]
-   > ![Add the Documentation, Teams Group, and Yammer Community links.](media/skills-match/skills-match-10.png "Add the Documentation, Teams Group, and Yammer Community links.")
+    :::image type="content" source="media/skills-match/skills-match-11.png" alt-text="Screenshot of the Advisors tab in the Power Platform admin center.":::
 
-4. Select **Save**.
+1. Add or remove an advisor:
 
-### Configure advisors
+    - To add an advisor, select **Add an advisor** and enter the requested information.
 
-To configure advisors:
+    - To remove an advisor, selecting the menu (**&hellip;**), and then select **Remove**.
 
-1. Sign in to the [Power Platform admin center](https://admin.powerplatform.com).
+## Turn off maker matching for your tenant
 
-2. Select **Power Apps assets** from the left pane.
+Power Platform admins can turn off maker matching for a tenant using the Windows PowerShell **Set-TenantSettings** cmdlet.
 
-3. Select the **Advisors** tab.
-
-   > [!div class="mx-imgBorder"]
-   > ![Configure advisors.](media/skills-match/skills-match-11.png "Configure advisors.")
-
-4. Configure an advisor with the following options:
-
-    - To add an advisor, select **Add an advisor**.
-
-    - To remove an advisor, choose an advisor by selecting the ellipsis (**…**), and then select **Remove**.
-
-
-## Disable maker matching for your tenant
-
-Members of the Power Platform admin role can disable maker matching by running the Set-TenantSettings cmdlet.
-
-To display tenant settings, run the cmdlet:
+To display the current setting, run the following command at the PowerShell prompt:
 
    ```powershell
    $settings=Get-TenantSettings 
    $settings.PowerPlatform.PowerApps.disableMakerMatch
    ```
-To disable maker matching, run this cmdlet:
+
+To turn off maker matching, run the following command:
 
    ```powershell
    $settings.powerPlatform.powerApps.disableMakerMatch = $True
    Set-TenantSettings -RequestBody $settings
    ```
 
-
 ## Known issues
 
--  The virtual agent dialog may appear blank when you [restart the virtual agent](virtual-agent.md#restart-or-close-a-session). To fix the issue, refresh your browser page.
+The virtual agent panel may be blank when you [restart the virtual agent](virtual-agent.md#restart-or-close-a-session). To fix the issue, refresh your browser page.

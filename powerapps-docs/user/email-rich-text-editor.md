@@ -2,7 +2,6 @@
 title: "Use the rich text editor toolbar in email | MicrosoftDocs"
 description: Use the rich text editor toolbar in email
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Use the rich text editor toolbar in email

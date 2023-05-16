@@ -9,16 +9,12 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: matp
 ms.date: 05/04/2022
 ms.topic: how-to
 ms.assetid: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Add a chart to a form
 

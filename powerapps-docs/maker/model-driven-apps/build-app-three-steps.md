@@ -20,9 +20,6 @@ caps.latest.revision: 17
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Build an app in three steps (preview)
 

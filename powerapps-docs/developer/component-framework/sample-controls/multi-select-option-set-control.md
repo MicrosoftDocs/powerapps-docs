@@ -3,16 +3,12 @@ title: " Multi Select OptionSet component| Microsoft Docs"
 description: "This sample demonstrates how to leverage the multi select option set type on properties of field components." 
 author: noazarur-microsoft
 ms.author: noazarur
-manager: kvivek
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: sample
 ms.subservice: pcf
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---

@@ -10,8 +10,6 @@ ms.author: chmoncay
 ms.reviewer: mduelae
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - chmoncay

@@ -10,13 +10,9 @@ ms.topic: "how-to"
 author: "lalexms"
 ms.subservice: mda-maker
 ms.author: "laalexan"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - lalexms
 ---

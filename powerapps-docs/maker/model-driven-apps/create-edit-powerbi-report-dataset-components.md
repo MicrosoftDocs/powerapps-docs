@@ -2,7 +2,6 @@
 title: Create Power BI report and dataset components (preview)
 description: Learn how to create Power BI report and dataset components to use in Power Apps solutions.
 author: paulinbar
-manager: kfollis
 ms.component: cds
 ms.topic: how-to
 ms.date: 09/21/2022
@@ -10,8 +9,6 @@ ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Create Power BI report and dataset components (preview)
 

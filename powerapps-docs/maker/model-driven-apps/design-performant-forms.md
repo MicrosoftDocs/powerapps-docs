@@ -13,12 +13,8 @@ applies_to:
 author: "mspilde"
 ms.subservice: mda-maker
 ms.author: "mspilde"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Design forms for performance in model-driven apps
 

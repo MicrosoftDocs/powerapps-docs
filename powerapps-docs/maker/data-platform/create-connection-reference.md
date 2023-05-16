@@ -14,9 +14,6 @@ ms.subservice: dataverse-maker
 ms.author: cgarty
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use a connection reference in a solution
 

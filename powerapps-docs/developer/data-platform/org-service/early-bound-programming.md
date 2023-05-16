@@ -6,13 +6,9 @@ ms.topic: "article"
 ms.date: 04/03/2022
 author: kkanakas
 ms.author: kartikka
-manager: pemikkel
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke

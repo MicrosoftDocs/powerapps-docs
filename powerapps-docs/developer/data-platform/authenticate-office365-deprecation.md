@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Use of Office365 authentication with Microsoft Dataverse

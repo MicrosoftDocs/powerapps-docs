@@ -5,15 +5,11 @@ Keywords: command bar, command designer
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-manager: kvivek
 ms.date: 02/13/2023
 ms.subservice: mda-maker
 ms.topic: conceptual
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Modern commanding known limitations
 

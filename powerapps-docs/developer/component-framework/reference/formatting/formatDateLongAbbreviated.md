@@ -3,7 +3,6 @@ title: formatDateLongAbbreviated | Microsoft Docs
 description: Returns a formatted string that represents a date in the long form using abbreviation. Results pattern is based on culture. In USA it's "Abbreviated Day of week, Month dd, yyyy".
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

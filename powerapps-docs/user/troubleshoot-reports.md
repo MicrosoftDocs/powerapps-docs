@@ -2,7 +2,6 @@
 title: Troubleshoot problems with data not displaying in a report | Microsoft Docs
 description: Troubleshoot problems with data not displaying in a report
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Troubleshoot problems with data not displaying in a report
 

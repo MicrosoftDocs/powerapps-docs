@@ -3,7 +3,6 @@ title: AttributeMetadata | Microsoft Docs
 description: Provides all the information about attributes/columns definitions.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 07/20/2022
 ms.reviewer: jdaly
 ms.topic: reference

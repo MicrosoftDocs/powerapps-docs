@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: makolomi
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mkaur
   - makolomi

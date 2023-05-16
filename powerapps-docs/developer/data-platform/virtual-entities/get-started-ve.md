@@ -5,16 +5,12 @@ ms.date: 04/01/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: pehecke
-manager: sunilg
 ms.topic: conceptual
 ms.custom: intro-internal
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly

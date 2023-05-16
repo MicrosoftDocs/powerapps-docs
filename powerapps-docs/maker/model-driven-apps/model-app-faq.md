@@ -6,7 +6,6 @@ author: alcerri
 ms.subservice: mda-maker
 ms.author: alcerri
 ms.reviewer: matp
-manager: kvivek
 ms.date: 12/02/2020
 
 ms.topic: troubleshooting
@@ -14,8 +13,6 @@ applies_to:
   - "powerapps"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Model-driven app frequently asked questions
 

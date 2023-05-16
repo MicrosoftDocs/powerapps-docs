@@ -12,9 +12,6 @@ ms.author: matp
 ms.reviewer: v-roryneary
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---

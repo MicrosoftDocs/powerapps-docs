@@ -5,13 +5,9 @@ ms.date: 04/06/2022
 author: mayadumesh
 ms.author: mayadu
 ms.reviewer: pehecke
-manager: jamesol
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke

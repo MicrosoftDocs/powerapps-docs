@@ -6,12 +6,8 @@ ms.topic: reference
 ms.date: 03/07/2023
 ms.author: pehecke
 ms.reviewer: jdaly
-manager: kvivek
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Dataverse table/entity reference
 

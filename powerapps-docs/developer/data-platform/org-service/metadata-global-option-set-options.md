@@ -4,14 +4,10 @@ description: "Code samples to show how to insert, update, delete, and order glob
 ms.date: 04/03/2022
 author: NHelgren
 ms.author: nhelgren
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Insert, update, delete, and order global choices

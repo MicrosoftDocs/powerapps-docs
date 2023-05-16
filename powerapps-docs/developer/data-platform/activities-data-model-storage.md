@@ -10,9 +10,6 @@ ms.subservice: dataverse-developer
 ms.author: dmartens
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Activities data model and storage

@@ -22,7 +22,7 @@ organization has inefficiencies for multiple departments and employees.
 As you can see from the example, every person has their own issues, but the
 common issue here is that the expense approval process is done on paper, which
 is tedious and difficult for Lee, Shawna, and Rebecca when they create their
-reports. Nick is overwhelmed by the incoming paperwork from his team. Abhay then
+reports. Nick is overwhelmed by the incoming paperwork from the team. Abhay then
 needs to transcribe and put everything into Excel for the weekly budget report,
 in addition to posting to the financial system. It takes time until Charlotte
 can find out how much Lee, Shawna, and Rebecca have spent.

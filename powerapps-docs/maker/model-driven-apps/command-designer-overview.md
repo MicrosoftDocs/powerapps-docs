@@ -5,15 +5,11 @@ Keywords: command bar, command designer, ribbon, action bar, Power Fx command, c
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-manager: kvivek
 ms.date: 05/26/2022
 ms.subservice: mda-maker
 ms.topic: overview
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Modern commanding overview
 

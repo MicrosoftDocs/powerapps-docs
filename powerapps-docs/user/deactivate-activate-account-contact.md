@@ -2,7 +2,6 @@
 title: "Deactivate or activate an account or contact in a Model-driven app| MicrosoftDocs"
 description: How to deactivate and activate an account or contact
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Deactivate or activate an account or contact

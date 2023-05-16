@@ -2,7 +2,6 @@
 title: "Use OneDrive for Business| MicrosoftDocs"
 description: How to use OneDrive for Business
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use OneDrive for Business 
 

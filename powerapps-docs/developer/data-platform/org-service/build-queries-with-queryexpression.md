@@ -6,12 +6,8 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divkamath" 
 ms.author: "jdaly" 
-manager: "kvivek" 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly

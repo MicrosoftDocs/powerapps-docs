@@ -4,14 +4,10 @@ description: "Demonstrates how to connect to the Organization service of Microso
 ms.date: 10/05/2022
 author: phecke
 ms.author: pehecke
-manager: kvivek
 ms.reviewer: jdaly
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke

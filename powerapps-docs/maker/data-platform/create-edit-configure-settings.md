@@ -6,14 +6,10 @@ author: aneesmsft
 ms.subservice: dataverse-maker
 ms.author: aneesa
 ms.reviewer: matp
-manager: kvivek
 ms.date: 03/01/2022
 ms.topic: how-to
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use settings to provide customized app experiences
 

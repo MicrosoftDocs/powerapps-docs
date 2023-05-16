@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "RichdiMSFT" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "richdi" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Use SQL to query data

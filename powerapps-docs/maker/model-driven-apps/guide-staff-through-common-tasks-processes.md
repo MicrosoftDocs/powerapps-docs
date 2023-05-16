@@ -17,12 +17,8 @@ caps.latest.revision: 44
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Apply custom business logic with business rules and flows in model-driven apps
 

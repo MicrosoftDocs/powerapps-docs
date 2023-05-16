@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft

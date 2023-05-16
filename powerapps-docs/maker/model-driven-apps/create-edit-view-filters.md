@@ -13,7 +13,6 @@ ms.assetid:
 author: iangpgh
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: srihas
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -21,9 +20,6 @@ caps.latest.revision: 25
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create or edit filters in model-driven app views
 

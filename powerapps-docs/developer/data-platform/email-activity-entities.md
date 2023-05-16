@@ -1,7 +1,7 @@
 ---
 title: "Email activity tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The email activity in lets you track and manage email communications with customers." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/27/2022
+ms.date: 04/26/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: DanaMartens # GitHub ID
@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: dmartens # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - ProfessorKendrick
 ---
@@ -108,7 +105,37 @@ To reuse an existing file attachment:
      AttachmentId = retrievedAttachment.AttachmentId};  
    ```  
   
-Because you're reusing an existing attachment file, you don't have to specify the `ActivityMimeAttachment.Body` and `ActivityMimeAttachment.FileName` column values while you're creating and associating email attachment rows to emails or email templates.  
+  Because you're reusing an existing attachment file, you don't have to specify the `ActivityMimeAttachment.Body` and `ActivityMimeAttachment.FileName` column values while you're creating and associating email attachment rows to emails or email templates.  
+
+## Email storage
+
+Email descriptions (body of the email) have up to this point been stored in the Dataverse relational store. That is changing as the [Email.Description](reference/entities/email.md#BKMK_Description) column in the [email activity](reference/entities/email.md) table is being relocated to unstructured Azure Blob storage. Azure Blob storage is also used for storage of attachments, annotations, files, and images.
+
+### Transition period
+
+The data migration from Dataverse relation store to Azure Blob storage for all customers is expected to start in May 2023. This data migration will take place as a background process. The initial data movement for existing customers is expected to last for about 6 to 12 weeks, and possibly even longer depending on the size of the data. After the initial data movement, any remaining migration is a continuous process. All email descriptions older than 12 months will be moved into Azure blob storage automatically.
+
+This data migration will be transparent to you with the exception that you will see a reduction in the size of the [ActivityPointer](reference/entities/activitypointer.md) table after the migration process is fully completed. In Power Platform admin center within the **Capacity** report, a new email line item will be available in **File usage**.
+
+The limitations mentioned in the next section will start applying to any data that has already moved to the Dataverse managed Azure blob storage even if all the data movement is not complete.
+
+### Search and filtering limitations
+
+For email descriptions (bodies) stored in Azure Blob storage, certain limitations apply to filtering, finding, and searching email descriptions as described below.
+
+#### Filtering
+
+Filtering on email descriptions is not supported. Some specific points to consider are as follows.
+
+- FetchXML - You will not be able to search in email bodies using FetchXML.
+- Quick Find and Advanced Find - Filtering email descriptions using these methods is not supported.
+
+> [!TIP]
+> For Quick Find, while filtering is not supported, the email body can be added as a returned column and the body data will be returned in the result.
+
+#### Searching
+
+You can enable [Dataverse search](webapi/relevance-search.md) on email descriptions to search email descriptions.
   
 ### See also
 

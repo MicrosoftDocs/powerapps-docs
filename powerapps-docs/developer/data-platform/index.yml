@@ -100,7 +100,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Publish your app on AppSource
-            url: ./publish-app-appsource.md
+            url: /power-platform/developer/appsource/publish-app
 
     # Card
   - title: Create client applications

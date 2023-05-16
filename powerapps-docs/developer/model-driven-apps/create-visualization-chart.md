@@ -10,9 +10,6 @@ ms.assetid: 9dbed5ee-21a4-ab86-fc4c-08c3838e42f2
 ms.subservice: mda-developer
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---

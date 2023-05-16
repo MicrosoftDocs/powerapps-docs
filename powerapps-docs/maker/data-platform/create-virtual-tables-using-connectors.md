@@ -8,9 +8,6 @@ author: NHelgren # GitHub ID
 ms.author: nhelgren
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke 

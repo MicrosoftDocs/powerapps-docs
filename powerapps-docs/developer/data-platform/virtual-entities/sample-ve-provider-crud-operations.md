@@ -5,13 +5,9 @@ ms.date: 04/01/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: pehecke
-manager: sunilg
 ms.topic: sample
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke

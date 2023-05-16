@@ -7,7 +7,6 @@ ms.reviewer:
 ms.topic: how-to
 ms.date: 03/06/2023
 ms.custom: 
-manager: tapanm-MSFT
 search.audienceType: 
   - admin
   - customizer

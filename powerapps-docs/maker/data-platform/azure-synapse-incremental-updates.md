@@ -13,12 +13,8 @@ author: "JasonHQX"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "jasonhuang"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Query and analyze the incremental updates
 

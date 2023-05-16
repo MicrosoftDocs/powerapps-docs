@@ -11,9 +11,6 @@ ms.subservice: mda-maker
 ms.author: v-roryneary
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---

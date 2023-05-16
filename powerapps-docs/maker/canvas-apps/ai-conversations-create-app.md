@@ -12,8 +12,6 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
 ---
@@ -22,11 +20,11 @@ contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-Create Power Apps with the help of AI. Simply describe the app that you want to build, and AI will design it for you.
+Create Power Apps with the help of AI. Describe the app that you want to build, and AI will design it for you.
 
-With the **Copilot** feature in Power Apps you'll get in-app guidance using natural language processing to help you build your app.
+With the **Copilot** feature in Power Apps, you get in-app guidance using natural language processing to help you build your app.
 
-The AI assistant is available from the Power Apps Home screen. You can tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.
+The AI assistant is available from the Power Apps home screen. You can tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.
 
 > [!div class="mx-imgBorder"]
 > ![Tell the AI assistant the information you want to track in your app.](media/artificial-intelligence/create-app-using-ai-1.png)
@@ -51,7 +49,7 @@ To help you get started, let's build an app to track housekeeping tasks for a ho
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. In the text box enter **hotel housekeeping**.
+2. In the text box, enter **hotel housekeeping**.
 
    > [!div class="mx-imgBorder"]
    > ![Describle your app.](media/artificial-intelligence/describe-your-app.png)
@@ -60,7 +58,7 @@ To help you get started, let's build an app to track housekeeping tasks for a ho
 
 ## Step 2: Review the table for your app
 
-Based on what you described, AI will generate a table for your app. The following are actions you can take:
+Based on what you described, AI generates a table for your app. You can take the following actions:
 
 1. **Suggestions**: These are suggested actions that you can ask the AI assistant to take to help you finalize the table.
 
@@ -70,7 +68,7 @@ Based on what you described, AI will generate a table for your app. The followin
 
 4. **Copilot**: Enter text to instruct the AI assistant on how to modify the table, such as remove room type column.
 
-5. **Create app or Cancel**: Select **Create app** to create an app based on the table or select **Cancel** to start over.
+5. **Create app: Select **Create app** to create an app based on the table or select **Cancel** to start over.
 
    > [!div class="mx-imgBorder"]
    > ![Review table for your app.](media/artificial-intelligence/table-created.png)

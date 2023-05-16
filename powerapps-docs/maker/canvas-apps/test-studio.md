@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: chrisbal
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - ChrisBal-MSFT

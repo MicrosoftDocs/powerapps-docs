@@ -4,14 +4,10 @@ description: "Browse code samples of LINQ queries." # 115-145 characters includi
 ms.date: 04/03/2022
 author: kkanakas
 ms.author: kartikka
-manager: pemikkel
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke

@@ -92,12 +92,17 @@ sections:
           Can I add apps that use Power BI data to wrap?
         answer: |
           Yes. However, you need to grant *Power BI* API permission to all your apps that use Power BI data during the [App Registration](how-to.md#app-registration) step. More information: [Configure API permissions](how-to.md#configure-api-permissions).
-          
+        
 
       - question: |
           Can I deep link into a wrapped mobile app?
         answer: |
           Yes. You can use ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>``` schema to deep link into your wrapped mobile apps. Refer to [Using deep links with wrapped mobile apps](wrap-deep-links.md) for more information.
+          
+      - question: |
+          Why do I see this error message when I try to open my wrapped native app on a mobile device: You can't get there from here error message 
+        answer: |
+         You organization might have **Require Approved Client App** conditional access policy that restricts access to mobile apps. To fix this issue see, [Edit your conditional access policy](/azure/active-directory/conditional-access/migrate-approved-client-app#edit-an-existing-conditional-access-policy).
                 
       - question: |
           Can I create B2C mobile apps with Power Apps?

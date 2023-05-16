@@ -1,15 +1,12 @@
 ---
 title: "Retrieve a table row using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to form a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier"
-ms.date: 03/27/2023
+ms.date: 05/12/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -31,7 +28,7 @@ This example returns data for an account entity record with the primary key valu
 GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)
 ```
 
-To retrieve more than one entity record at a time, see [Basic query example](query-data-web-api.md#bkmk_basicQuery) in the [Query Data using the Web API](query-data-web-api.md) article.
+To retrieve more than one entity record at a time, see [Query Data using the Web API](query-data-web-api.md).
 
 > [!CAUTION]
 > The above example will return all the properties for account record, which is not a performance best practice for retrieving data.
@@ -74,7 +71,7 @@ OData-Version: 4.0
 
 When you request certain types of properties, you can expect more read-only properties to be returned automatically.
 
-If you request a money value, the `_transactioncurrencyid_value` lookup property will be returned. This property contains only the GUID value of the transaction currency so you could use this value to retrieve information about the currency using the [transactioncurrency EntityType](xref:Microsoft.Dynamics.CRM.transactioncurrency). Alternatively, by requesting annotations you can also get more data in the same request. More information: [Retrieve data about lookup properties](query-data-web-api.md#bkmk_lookupProperty)  
+If you request a money value, the `_transactioncurrencyid_value` lookup property will be returned. This property contains only the GUID value of the transaction currency so you could use this value to retrieve information about the currency using the [transactioncurrency EntityType](xref:Microsoft.Dynamics.CRM.transactioncurrency). Alternatively, by requesting annotations you can also get more data in the same request. More information: [Lookup property data](query-data-web-api.md#lookup-property-data)
 
 If you request a property that is part of a composite attribute for an address, you'll get the composite property as well. For example, if your query requests the `address1_line1` property for a contact, the `address1_composite` property will be returned as well.
 
@@ -87,6 +84,9 @@ If an entity has an alternate key defined, you can also use the alternate key to
 ```http
 GET [Organization URI]/api/data/v9.2/contacts(firstname='Joe',emailaddress1='abc@example.com')
 ```
+
+> [!NOTE]
+> Alternate key values containing a '+' character are not currently supported for retrieval through OData.
 
 If the alternate key definition contains lookup type field (for example, the `primarycontactid` property for the `account` entity), you can retrieve the `account` using the [Lookup properties](web-api-properties.md#lookup-properties) as shown here.
 
@@ -242,7 +242,7 @@ OData-Version: 4.0
 
 ## Retrieve related records by expanding navigation properties
 
-Use the `$expand` system query option to control what data from related entities is returned. More information: [Retrieve related table records with a query](retrieve-related-entities-query.md)
+Use the `$expand` system query option to control what data from related entities is returned. More information: [Join Tables](query-data-web-api.md#join-tables)
 
 <a name="bkmk_DetectIfChanged"></a>
 
@@ -254,11 +254,10 @@ As a performance best practice you should only request data that you need. If yo
 
 ## Retrieve formatted values
 
-Requesting formatted values for individual record retrievals is done the same way as done when querying entity sets. More information: [Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues).
+Requesting formatted values for individual record retrievals is done the same way as done when querying entity sets. More information: [Formatted values](query-data-web-api.md#formatted-values)
 
 ### See also
 
-[Retrieve related table records with a query](retrieve-related-entities-query.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />

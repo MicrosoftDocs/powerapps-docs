@@ -10,8 +10,6 @@ ms.author: chmoncay
 ms.reviewer: mkaur-msft
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - chmoncay
   - tahoon-ms

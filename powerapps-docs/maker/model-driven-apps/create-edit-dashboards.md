@@ -15,13 +15,9 @@ ms.assetid: 641885d2-4a08-41b8-b914-d9a244e4d5b1
 caps.latest.revision: 10
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 author: "Mattp123"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create or edit model-driven app dashboards
 
