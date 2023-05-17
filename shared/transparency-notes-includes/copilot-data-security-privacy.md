@@ -15,15 +15,15 @@ This transparency note provides answers to common questions related to business 
 
 ChatGPT is a general-purpose large language model (LLM) trained by OpenAI on a massive dataset of text, designed to engage in human-like conversations and answer a wide range of questions on several topics.
 
-Copilot also uses an LLM, however, the enterprise-ready AI technology is prompted and optimized for your business processes, your business data, and your security and privacy requirements. It offers enterprise-ready AI technology tuned for your business processes, your business data, and your security and privacy requirements. For Dynamics 365 and Power Platform users, Copilot suggests optional actions and content recommendations in context with the task at hand.
+Copilot also uses an LLM, however, the enterprise-ready AI technology is prompted and optimized for your business processes and your business data to meet security and privacy requirements. It offers enterprise-ready AI technology tuned for your business processes, your business data, and your security and privacy requirements. For Dynamics 365 and Power Platform users, Copilot suggests optional actions and content recommendations in context with the task at hand.
 
 A few ways in which Copilot for natural language generation is unique:  
 
 - AI-generated responses are uniquely contextual and relevant to the task at hand informed by business data whether a response to an email from Dynamics 365, an application that automates a specific manual process, or creating a targeted list of customer segments from your CRM system.
 
-- Copilot uses both an LLM (like GPT) and your organization’s business data to produce more accurate, relevant, and personalized results. In short, your business data stays within your tenancy and is used to improve context only for your scenario and the LLM itself doesn't learn from your usage. More on how the system works is below.
+- Copilot uses both an LLM (like GPT) and your organization’s business data to produce more accurate, relevant, and personalized results. In short, we adhere to the documented data, privacy, and security controls for [Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/overview). This information is used to improve context only for your scenario, and the LLM itself doesn't learn from your usage except for when interactions are flagged as offensive or abusive. See later for more information on how the system works.
 
-- Powered by [Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/overview), Copilot is designed from the ground up on a foundation of enterprise-grade security, compliance, and privacy.
+- Powered by Azure OpenAI Service, Copilot is designed from the ground up on a foundation of enterprise-grade security, compliance, and privacy.
   
 ## How does Copilot work in Dynamics 365 and Power Platform?
 
@@ -31,13 +31,13 @@ With Copilot, Dynamics 365 and Power Platform harness the power of foundation mo
 
 - Search (using Bing and [Azure Cognitive Search](https://learn.microsoft.com/azure/search/search-what-is-azure-search)) brings domain-specific context to a Copilot prompt, enabling a response to integrate information from content like manuals, documents or other data within the organization's tenant. Currently, Power Virtual Agents and Dynamics 365 Customer Service use this Retrieval Augmented Generation approach as preprocessing to calling an LLM
 
-- Microsoft applications like Dynamics 365, Viva Sales, and Power Platform and the business data stored in Dataverse
+- Microsoft applications like Dynamics 365, Viva Sales, Dataverse, and Power Platform
 
-- [Microsoft Graph API](https://learn.microsoft.com/graph/use-the-api) brings more context from customer signals into the prompt, such as information from emails, chats, documents, meetings, and more
+- [Microsoft Graph API](https://learn.microsoft.com/graph/use-the-api) brings more context from customer signals into the prompt, such as information from emails, chats, documents, and meetings when you have authorized the service to do so.
 
 Here's a high-level overview of how Copilot works in Dynamics 365 and Power Platform.
 
-:::image type="content" source="/power-apps/media/shared-includes/copilot.png" alt-text="<How Copilot works in Dynamics 365 and Power Platform>":::
+:::image type="content" source="/power-apps/media/shared-content/copilot.png" alt-text="<This diagram illustrates how Copilot works in Dynamics 365 and Power Platform>":::
 
 1. Copilot requests an input prompt from a business user in an app, like Dynamics 365 Sales or Power Apps.
 
