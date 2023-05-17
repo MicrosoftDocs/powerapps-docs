@@ -147,7 +147,7 @@ plug-in for connectors solution after installing the Dataverse Accelerator.
 
 #### Why is the low-code plug-in for connectors solution optional?
 
-The virtual plugin wizard uses the **Power Apps for Makers** connector to retrieve assets used to construct a more convenient experience (e.g., connections and connector details).
+The low-code plug-in for connectors wizard uses the **Power Apps for Makers** connector to retrieve assets used to construct a more convenient experience (e.g., connections and connector details).
 
 If your tenant has a data loss prevention (DLP) policy with certain configurations applied to your environment, these changes might prevent both the low-code plug-ins for connectors feature and the Dataverse Accelerator from working.
 
@@ -172,11 +172,11 @@ If you can't see the DLP policy applied to the environment where you want to ins
 
 #### Troubleshooting the low-code plug-in for connectors solution
 
-If you accidentally installed the low-code plug-in for connectors solution and the Dataverse Accelerator app is now blocked by a DLP policy, uninstall the Virtual Plugins Wizard solution and the Dataverse Accelerator will be able to run.
+If you accidentally installed the low-code plug-in for connectors solution and the Dataverse Accelerator app is now blocked by a DLP policy, uninstall the low-code plug-in for connectors wizard solution and the Dataverse Accelerator will be able to run.
 
 1. Go to https://make.powerapps.com/
-2. Navigate to the environment where the Virtual Plugins Wizard solution is installed.
-3. Select the Virtual Plugins Wizard solution.
+2. Go to the environment where the low-code plug-in for connectors solution is installed, and then select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+3. Select the low-code plug-in for connectors solution.
 4. On the command bar, select **Delete**.
 5. In the dialog, select **Delete** to confirm.
 6. On the command bar, publish all customizations.
@@ -188,7 +188,7 @@ If you accidentally installed the low-code plug-in for connectors solution and t
 
 #### Install the low-code plug-ins for connectors solution
 
-The option to install the virtual plugin wizard is provided when you install the Dataverse Accelerator.
+The option to install the low-code plug-in for connectors wizard is provided when you install the Dataverse Accelerator.
 
 1.	You can install the Dataverse Accelerator two ways:
    - App Source 
