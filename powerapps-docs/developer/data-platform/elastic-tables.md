@@ -425,7 +425,7 @@ Dataverse currently does not support creating Many-to-Many relationships with el
 One-to-Many relationships are supported for elastic tables with following limitations:
 
 - Cascading is not supported. Cascading behavior must be set to `Cascade.None` when creating relationship.
-- When the table on the Many side of relationship is a standard table.
+- In a One-to-Many relationship when many side is a standard table, while retrieving rows for standard table the lookup column that points to an elastic table row will not have the formatted value returned when the partitionid is set.
 
 <!-- 
 TODO: I'm still not clear here. 
@@ -437,8 +437,32 @@ TODO: I'm still not clear here.
 Where is the limitation?
 -->
 
-> [!NOTE]
-> You can't add filters to queries for related tables. You can retrieve related data, but you can't limit the data returned based on criteria in the related tables.
+Although elastic table supports having One-to-Many relationships and get related rows using fetchXml, there are restrictions when it comes retrieving data using fetchXml from related tables. In FetchXML queries, the `link-type` attribute is used within the <link-entity> element to specify the type of join between two tables. Elastic table only supports `outer` link-type. Elastic tables does not support `inner` link-type.
+
+Here's an example that demonstrates the usage of the outer "link-type" attribute for elastic tables
+```xml
+<fetch>
+	<entity name="contoso_sensordata">
+		<attribute name="contoso_sensortype"/>
+		<attribute name="contoso_value"/>
+		<order attribute="contoso_timestamp" descending="false"/>
+		<attribute name="toasttype"/>
+		<link-entity name="Devices" alias="devices" link-type="inner" from="contoso_deviceid" to="contoso_deviceid">
+         <attribute name="contoso_OwnerName" />
+         <attribute name="contoso_OwnerEmailAddres" />
+			<filter type="and">
+				<condition attribute="contoso_location" operator="eq" value="Seattle"/>
+			</filter>
+		</link-entity>
+	</entity>
+</fetch>
+```
+In the above example, the `link-type` attribute is set to `outer` within the `<link-entity>` element. This means that all records from the `contoso_SensorData` entity will be retrieved, regardless of whether they have related records in the `contoso_Devices` entity. If a related record exists, the attributes `contoso_OwnerName` and `contoso_OwnerEmail` from the `contoso_Devices` table will be included in the query results. If no related record is found, null values will be returned for these columns.
+
+If the `link-type` is set to `inner`, Dataverse will throw an error with code `0x80048d0b` and message **Link entities are not supported**.
+To perform inner join operation across two tables when working with elastic tables, it is recommended that 
+- Either columns from related tables are denormalized into main table so that filter can be applied on a single table without join requirement, or
+- Two queries are performed on both table separately with appropriate conditions and do in-memory join on client side.
 
 <!-- 
 Try to simplify with the description above.
