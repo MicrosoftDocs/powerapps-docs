@@ -37,29 +37,31 @@ With Copilot, Dynamics 365 and Power Platform harness the power of foundation mo
 
 Here's a high-level overview of how Copilot works in Dynamics 365 and Power Platform.
 
-:::image type="content" source="/power-apps/media/shared-content/copilot.png" alt-text="<This diagram illustrates how Copilot works in Dynamics 365 and Power Platform>":::
+:::image type="content" source="/power-apps/media/shared-content/copilot.png" alt-text="<This diagram illustrates how Copilot works in Dynamics 365 and Power Platform, which is also described in the content following the diagram.>":::
 
 1. Copilot requests an input prompt from a business user in an app, like Dynamics 365 Sales or Power Apps.
 
 1. Copilot preprocesses the prompt through an approach called *grounding*, which improves the specificity of the prompt, so you get answers that are relevant and actionable to your specific task. It does this, in part, by making a call to Microsoft Graph and Dataverse and accessing the enterprise data you consent to and grant permissions to use for the retrieval of your business content and context. We also scope the grounding to documents and data that is visible to the authenticated user through role-based access controls (RBAC). For instance, an intranet question about benefits would only return an answer based on documents relevant to the employee’s role.
 
-    This retrieval of information is referred to as *retrieval-augmented generation* and allows Copilot to provide exactly the right type of information as input to a large language model, combining this user data with other inputs such as information retrieved from knowledge base articles to improve the prompt.  
+    This retrieval of information is referred to as *retrieval augmented generation* and allows Copilot to provide more contextual information as input to an LLM, combining the user data with other inputs such as information retrieved from knowledge base articles to improve the prompt.  
 
-1. Copilot takes the response from the LLM and post-processes it. This post-processing includes additional grounding calls to Microsoft Graph, responsible AI checks, security, compliance and privacy reviews, and command generation.
+1. Copilot takes the response from the LLM and post processes it. This post-processing includes additional grounding calls to Microsoft Graph, responsible AI checks, filtering with Azure content moderation, and additional business-specific constraints and command generation.
 
-1. Finally, Copilot returns a recommended response to the user and commands back to the apps where a human-in-the-loop can review and assess. Copilot iteratively processes and orchestrates these sophisticated services to produce results that are relevant to your business, accurate, and secure.
+1. Finally, Copilot returns a recommended response to the user and commands back to the apps where a human-in-the-loop can review iteratively processing with the user to align with results that are relevant to your business.
 
 ## How does Copilot use your proprietary business data? Is it used to train AI models?
 
 Copilot unlocks business value by connecting LLMs to your business data in a secure, compliant, privacy-preserving way.
 
-Copilot has real-time access to both your content and context in Microsoft 365 Graph and Dataverse. This implies that Copilot:
+With your (customer) approval that can be revoked by you at any time, Copilot has real-time access to both your content and context in Microsoft 365 Graph and Dataverse. This implies that Copilot:
 
-1. Generates answers anchored in your business content, such as your documents, emails, calendar, chats, meetings, contacts, and other business data.
+1. Generates answers anchored in your business content when relevant and consented by the user. The business data could include your documents, emails, calendar, chats, meetings, or contacts.
 
 1. Combines them with your working context. For example, the meeting you’re in now, the email exchanges you’ve had on a topic, the chat conversations you had last week.
 
-1. Delivers accurate, relevant, and contextual responses based on the above.
+1. Validates that the user has appropriate access to receive the information in the response.
+
+1. Delivers grounded, relevant, and contextual responses based on the above.
 
 > [!IMPORTANT]
 >
@@ -69,13 +71,13 @@ Copilot has real-time access to both your content and context in Microsoft 365 G
 
 ## Are Copilot responses always factual?
 
-Responses produced with generative AI aren't guaranteed to be 100% factual. While we continue to improve responses to fact-based inquiries, people should still use their judgment when reviewing outputs. Our Copilot capabilities leave you in the driver's seat while providing useful drafts and summaries to help you achieve more.
+Responses produced with generative AI aren't guaranteed to be 100% factual. While we continue to improve responses to fact-based inquiries, people should still use their judgment when reviewing outputs before sending to final recipient. Our Copilot capabilities provide useful drafts and summaries to help you achieve more while giving you a chance to review the generated AI rather than fully automating these tasks.
 
-Our teams are working to address issues, such as misinformation and disinformation, content blocking, data safety, and preventing the promotion of harmful or discriminatory content in line with our [responsible AI principles](https://www.microsoft.com/en-us/ai/our-approach?activetab=pivot1:primaryr5).
+Our teams continue to improve algorithms to proactively address issues, such as misinformation and disinformation, content blocking, data safety, and preventing the promotion of harmful or discriminatory content in line with our [responsible AI principles](https://www.microsoft.com/en-us/ai/our-approach?activetab=pivot1:primaryr5).
 
 We also provide guidance within the user experience to reinforce the responsible use of AI-generated content and actions. To help guide users on how to use Copilot and properly use suggested actions and content, we provide:  
 
-- **Instructive guidance and prompts**. When using Copilot, informational elements instruct users how to responsibly use suggested content and actions, including prompts to review and edit responses as needed prior to usage, as well as to manually check facts, data, and text for accuracy
+- **Instructive guidance and prompts**. When using Copilot, informational elements instruct users how to responsibly use suggested content and actions, including prompts to review and edit responses as needed prior to usage, as well as to manually check facts, data, and text for accuracy.
 
 - **Cited sources**. Copilot cites public sources when applicable, so you’re able to see links to the web content it references.
 
@@ -91,4 +93,6 @@ Microsoft is uniquely positioned to deliver enterprise-ready AI. Powered by [Azu
 
 ## Will Copilot meet requirements for regulatory compliance mandates?
 
-Copilot is offered within the Azure ecosystem and thus our compliance follows that of [Azure](https://learn.microsoft.com/azure/compliance/). Additionally, Copilot adheres to our commitment to responsible AI, which is described in our [responsible AI principles](https://www.microsoft.com/en-us/ai/responsible-ai). As regulation in the AI space evolves, Microsoft will continue to adapt and respond to fulfill future regulatory requirements in this space.
+Copilot is offered within the Dynamics 365 and Power Platform ecosystem. For details on the regulatory certifications for a Microsoft service, go to [Service Trust Portal](https://servicetrust.microsoft.com). Additionally, Copilot adheres to our commitment to responsible AI, which is described in our [responsible AI principles](https://www.microsoft.com/en-us/ai/responsible-ai).
+
+As regulation in the AI space evolves, Microsoft will continue to adapt and respond to fulfill future regulatory requirements in this space.
