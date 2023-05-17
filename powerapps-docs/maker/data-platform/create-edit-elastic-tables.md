@@ -65,8 +65,7 @@ This requires an inner join of the two tables, which isn't supported with elasti
 ## Elastic tables feature support
 
 - Record ownership, change tracking, auditing, mobile offline, and Dataverse search.
-- Create, retrieve, update, delete (CRUD) operations including `XMultiple` (for high throughput), bulk delete, and requests from plugins.
-- Bulk deletion.
+- Create, retrieve, update, delete (CRUD) operations including `xMultiple` (for high throughput), bulk deletion, and requests from plugins.
 - Relationships:
   - 1:N (One-to-many)
     - One elastic table -> Many elastic tables
