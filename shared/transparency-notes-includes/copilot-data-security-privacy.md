@@ -43,7 +43,7 @@ Here's a high-level overview of how Copilot works in Dynamics 365 and Power Plat
 
 1. Copilot preprocesses the prompt through an approach called *grounding*, which improves the specificity of the prompt, so you get answers that are relevant and actionable to your specific task. It does this, in part, by making a call to Microsoft Graph and Dataverse and accessing the enterprise data you consent to and grant permissions to use for the retrieval of your business content and context. We also scope the grounding to documents and data that is visible to the authenticated user through role-based access controls (RBAC). For instance, an intranet question about benefits would only return an answer based on documents relevant to the employee’s role.
 
-    This retrieval of information is referred to as *Retrieval Augmented Generation* approach, and allows Copilot to provide more contextual information as input to an LLM, combining the user data with other inputs such as information retrieved from knowledge base articles to improve the prompt.  
+    This retrieval of information is referred to as *Retrieval Augmented Generation* approach and allows Copilot to provide more contextual information as input to an LLM, combining the user data with other inputs such as information retrieved from knowledge base articles to improve the prompt.  
 
 1. Copilot takes the response from the LLM and post processes it. This post-processing includes additional grounding calls to Microsoft Graph, responsible AI checks, filtering with Azure content moderation, and additional business-specific constraints and command generation.
 
