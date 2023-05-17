@@ -77,7 +77,7 @@ Our teams continue to improve algorithms to proactively address issues, such as 
 
 We also provide guidance within the user experience to reinforce the responsible use of AI-generated content and actions. To help guide users on how to effectively use Copilot and suggested actions and content, we provide:  
 
-- **Instructive guidance and prompts**. When using Copilot, informational elements instruct users how to responsibly use suggested content and actions, including prompts to review and edit responses as needed prior to usage, as well as to manually check facts, data, and text for accuracy.
+- **Instructive guidance and prompts**. When using Copilot, informational elements instruct users how to responsibly use suggested content and actions, including prompts to review and edit responses as needed prior to usage, and to manually check facts, data, and text for accuracy.
 
 - **Cited sources**. Copilot cites public sources when applicable, so you’re able to see links to the web content it references.
 
