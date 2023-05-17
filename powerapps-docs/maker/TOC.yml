@@ -2055,8 +2055,11 @@
           href: ./data-platform/monitor-manage-processes.md
         - name: Best practices for real-time workflow processes
           href: ./data-platform/best-practices-workflow-processes.md
-      - name: Use Dataverse low-code plugins (experiemental)
-        href: ./data-platform/low-code-plugins.md
+      - name: Use Dataverse low-code plug-ins (experiemental)
+        href: ./data-platform/low-code-plug-ins.md
+        items:
+         -name: Low-code plug-ins
+          href: ./data-platform/lowcode-plug-ins-examples.md
       - name: Work with actions
         items:
         - name: Use actions
