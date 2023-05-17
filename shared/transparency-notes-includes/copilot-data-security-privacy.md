@@ -29,9 +29,9 @@ A few ways in which Copilot for natural language generation is unique:
 
 With Copilot, Dynamics 365 and Power Platform harness the power of foundation models coupled with proprietary Microsoft technologies applied to your business data:
 
-- Search (using Bing and [Azure Cognitive Search](https://learn.microsoft.com/azure/search/search-what-is-azure-search)) brings domain-specific context to a Copilot prompt, enabling a response to integrate information from content like manuals, documents or other data within the organization's tenant. Currently, Power Virtual Agents and Dynamics 365 Customer Service use this Retrieval Augmented Generation approach as preprocessing to calling an LLM
+- Search (using Bing and [Azure Cognitive Search](https://learn.microsoft.com/azure/search/search-what-is-azure-search)) brings domain-specific context to a Copilot prompt, enabling a response to integrate information from content like manuals, documents or other data within the organization's tenant. Currently, Power Virtual Agents and Dynamics 365 Customer Service use this Retrieval Augmented Generation approach as preprocessing to calling an LLM.
 
-- Microsoft applications like Dynamics 365, Viva Sales, Dataverse, and Power Platform
+- Microsoft applications like Dynamics 365, Viva Sales, Dataverse, and Power Platform.
 
 - [Microsoft Graph API](https://learn.microsoft.com/graph/use-the-api) brings more context from customer signals into the prompt, such as information from emails, chats, documents, and meetings when you have authorized the service to do so.
 
@@ -43,7 +43,7 @@ Here's a high-level overview of how Copilot works in Dynamics 365 and Power Plat
 
 1. Copilot preprocesses the prompt through an approach called *grounding*, which improves the specificity of the prompt, so you get answers that are relevant and actionable to your specific task. It does this, in part, by making a call to Microsoft Graph and Dataverse and accessing the enterprise data you consent to and grant permissions to use for the retrieval of your business content and context. We also scope the grounding to documents and data that is visible to the authenticated user through role-based access controls (RBAC). For instance, an intranet question about benefits would only return an answer based on documents relevant to the employee’s role.
 
-    This retrieval of information is referred to as *retrieval augmented generation* and allows Copilot to provide more contextual information as input to an LLM, combining the user data with other inputs such as information retrieved from knowledge base articles to improve the prompt.  
+    This retrieval of information is referred to as *Retrieval Augmented Generation* approach, and allows Copilot to provide more contextual information as input to an LLM, combining the user data with other inputs such as information retrieved from knowledge base articles to improve the prompt.  
 
 1. Copilot takes the response from the LLM and post processes it. This post-processing includes additional grounding calls to Microsoft Graph, responsible AI checks, filtering with Azure content moderation, and additional business-specific constraints and command generation.
 
@@ -59,7 +59,7 @@ With your (customer) approval that can be revoked by you at any time, Copilot ha
 
 1. Combines them with your working context. For example, the meeting you’re in now, the email exchanges you’ve had on a topic, the chat conversations you had last week.
 
-1. Validates that the user has appropriate access to receive the information in the response.
+1. Validates that the user has appropriate access to receive the information in response.
 
 1. Delivers grounded, relevant, and contextual responses based on the above.
 
@@ -71,11 +71,11 @@ With your (customer) approval that can be revoked by you at any time, Copilot ha
 
 ## Are Copilot responses always factual?
 
-Responses produced with generative AI aren't guaranteed to be 100% factual. While we continue to improve responses to fact-based inquiries, people should still use their judgment when reviewing outputs before sending to final recipient. Our Copilot capabilities provide useful drafts and summaries to help you achieve more while giving you a chance to review the generated AI rather than fully automating these tasks.
+Responses produced with generative AI aren't guaranteed to be 100% factual. While we continue to improve responses to fact-based inquiries, people should still use their judgment when reviewing outputs before sending them to final recipient. Our Copilot capabilities provide useful drafts and summaries to help you achieve more while giving you a chance to review the generated AI rather than fully automating these tasks.
 
 Our teams continue to improve algorithms to proactively address issues, such as misinformation and disinformation, content blocking, data safety, and preventing the promotion of harmful or discriminatory content in line with our [responsible AI principles](https://www.microsoft.com/en-us/ai/our-approach?activetab=pivot1:primaryr5).
 
-We also provide guidance within the user experience to reinforce the responsible use of AI-generated content and actions. To help guide users on how to use Copilot and properly use suggested actions and content, we provide:  
+We also provide guidance within the user experience to reinforce the responsible use of AI-generated content and actions. To help guide users on how to effectively use Copilot and suggested actions and content, we provide:  
 
 - **Instructive guidance and prompts**. When using Copilot, informational elements instruct users how to responsibly use suggested content and actions, including prompts to review and edit responses as needed prior to usage, as well as to manually check facts, data, and text for accuracy.
 
