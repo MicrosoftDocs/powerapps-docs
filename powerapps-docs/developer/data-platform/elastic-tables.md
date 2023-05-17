@@ -56,13 +56,13 @@ Use standard tables when:
 
 The choice of table should be based on the specific needs of your application. A combination of both types of tables may be appropriate.
 
-## Partitioning and horizontal scaling
+### Partitioning and horizontal scaling
 
 Elastic tables use Azure Cosmos DB partitioning to scale individual tables to meet the performance needs of your application. All elastic tables contain a system-defined **Partition Id** string column with the schema name `PartitionId` and logical name `partitionid`.
 
 Azure Cosmos DB ensures that the rows in a table are divided into distinct subsets called [logical partitions](/azure/cosmos-db/partitioning-overview#logical-partitions) which are formed based on the value of `partitionid` column of each row.
 
-### Choosing a PartitionId value
+#### Choosing a PartitionId value
 
 The `partitionid` value you should use depends on the nature of your data.  A logical partition in an elastic table consists of a set of rows that have the same `partitionid`. For example, in a table that contains data about various products, you can use product category as the `partitionid` for the table. Groups of items that have specific values for product category, such as Clothing, Books, Electronic Appliances and Pet supplies, form distinct logical partitions.
 
@@ -70,29 +70,14 @@ Dataverse transparently and automatically manages logical partitions associated 
 
 For all elastic tables, `partitionid` column should:
 
-- Have a value which doesn't change. Once a row is created with a `partitionid` value, you cannot change it later. <!-- TODO: need clarity on whether this is 'can not' or 'should not'. IsValidForUpdate is set to 'true', which suggests it can be updated. -->
+- Have a value which doesn't change. Once a row is created with a `partitionid` value, you cannot change it.
 - Have a high cardinality value. In other words, the property should have a wide range of possible values. Each logical partition can store 20 GB of data. So, choosing a `partitionid` with a wide range of possible values ensures that the table can scale without reaching limits for any specific logical partition.
 - Spread data as evenly as possible between all logical partitions.
 - Have values that are no larger than 1024 bytes.
 
 When `partitionid` is not specified for a row, Dataverse uses the primary key as the default `partitionid`. For write-heavy tables of any size or for cases where rows are mostly retrieved using id, the primary key is naturally a great choice for the `partitionid` column.
 
-## Alternate keys
-
-Each elastic table is created with an alternate key using these values:
-
-- Display Name: Entity key for NoSql Entity that contains PrimaryKey and PartitionId attributes
-- Name: `KeyForNoSqlEntityWithPKPartitionId`
-- LogicalName: `keyfornosqlentitywithpkpartitionid`
-
-This alternate key has the key values: `<table primary key name>` and `partitionid`.
-
-If you need to reference a record that has a `partitionid` value set to a value other than the default value that is equal to the value of the primary key, you can reference the record using this alternate key.
-
-More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
-
-
-## Consistency level
+### Consistency level
 
 Elastic tables support [session consistency](/azure/cosmos-db/consistency-levels#session-consistency). Elastic tables use *session tokens* to achieve session consistency. Session tokens are opaque strings returned by Dataverse when a client performs any write operation (create/update/delete).
 
@@ -102,7 +87,7 @@ You will find session token as `x-ms-session-token` header in response of all wr
 
 When calling a retrieve API, you can use `MSCRM.SessionToken` header to pass corresponding `x-ms-session-token` to retrieve the most up-to-date row value.
 
-## Transactional behavior
+### Transactional behavior
 
 Elastic tables are vastly different from standard tables when it comes to transactional guarantees.
 
@@ -120,15 +105,16 @@ For example, if you have a synchronous plug-in step registered on the `PostOpera
 
 Multiple write operations within same the plugin execution are also not atomic.
 
-Elastic tables also currently do not support executing two or more organization service requests in a single database transaction using the `ExecuteTransaction` message or in a Web API `$batch` operation `ChangeSet`.
+Elastic tables also do not support grouping requests in a single database transaction using the SDK [ExecuteTransactionRequest](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) class or in a Web API `$batch` operation change set.  More information:
+
+- [Execute messages in a single database transaction](org-service/use-executetransaction.md)
+- [Change sets](webapi/execute-batch-operations-using-web-api.md#change-sets)
+- [Known issue: Error not returned when grouping elastic table data operations in a transaction](#error-not-returned-when-grouping-elastic-table-data-operations-in-a-transaction)
 
 
-<!-- 
-TODO: What is the error thrown if you try? 
-Or does it simply succeed without actually having a transaction?
--->
+## Scenario
 
-### Scenario
+The examples in the rest of this article will use this scenario.
 
 Imagine Contoso operates large number of Internet of Things (IoT) devices deployed by the company all across the world. Contoso needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights.
 
@@ -140,12 +126,12 @@ You can create elastic tables using [Power Apps](https://make.powerapps.com/) wi
 
 These examples create a new elastic table `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `EntityMetadata.TableType` property with a value of `Elastic` to create an elastic table with code.
 
-
-
 #### [SDK for .NET](#tab/sdk)
 
 > [!NOTE]
-> At the time of this writing the SDK [EntityMetadata]xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata) class doesn't have the `TableType` property to create an elastic table. You will need to use the Web API until this is added.
+> At the time of this writing the SDK [EntityMetadata](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata) class doesn't have the `TableType` property to create an elastic table. You will need to use the Web API until this is added.
+>
+> After the SDK is updated, you will be able to use the [CreateEntityRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> class as shown below.
 
 ```csharp
 public static CreateEntityResponse CreateElasticTable(IOrganizationService service)
@@ -179,7 +165,7 @@ public static CreateEntityResponse CreateElasticTable(IOrganizationService servi
    };
    return (CreateEntityResponse)service.Execute(request);
 }
-```
+``` 
 
 More information: [Create a custom table using code](org-service/create-custom-entity.md)
 
@@ -310,113 +296,35 @@ Dataverse automatically creates two system columns for each elastic tables at th
 |`TTLInSeconds`<br />`ttlinseconds` |Integer|Defines the time in seconds after which row will expire and get deleted from database automatically.|
 
 
-Columns can also be created using standard table APIs, but there are limits on the types of columns you can add. Currently you cannot add these types of columns:
+Columns can also be created using the SDK or Web API, but there are limits on the types of columns you can add. Currently you cannot add these types of columns:
 
-- MoneyType (`MoneyAttributeMetadata`)
-- MultiSelectPicklistType (`MultiSelectPicklistAttributeMetadata`)
-- StateType (`StateAttributeMetadata`)
-- StatusType (`StatusAttributeMetadata`)
-- FileType (`FileAttributeMetadata`)
-- ImageType (`ImageAttributeMetadata`)
-- Calculated or Rollup Columns
+- Money (`MoneyAttributeMetadata`)
+- MultiSelectPicklist (`MultiSelectPicklistAttributeMetadata`)
+- State (`StateAttributeMetadata`)
+- Status (`StatusAttributeMetadata`)
+- File (`FileAttributeMetadata`)
+- Image (`ImageAttributeMetadata`)
+- Calculated, Rollup, or Formula Columns
 
-Elastic tables support columns that store JSON data. More information: [Create a column with Json format](#create-a-column-with-json-format)
-
-<!-- 
-
-These examples create a new column `contoso_sensortype` in elastic table `contoso_SensorData` using the Dataverse SDK for .NET and Web API.
-
-TODO
-
-I don't think we need this sample b/c it there is nothing special about it for elastic tables.
-We do need samples for column creation here: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/entity-attribute-metadata
-Docs and Learn 3380064: Consolidate metadata topics
-#### [SDK for .NET](#tab/sdk)
-
-```csharp
-public static Guid OrganizationResponse CreateColumn(IOrganizationService service)
-{
-    var request = new CreateAttributeRequest
-    {
-        EntityName = "contoso_sensordata",
-        Attribute = new StringAttributeMetadata
-        {
-            SchemaName = "contoso_sensortype",
-            RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-            MaxLength = 1000,
-            FormatName = StringFormatName.Text,
-            DisplayName = new Label("Sensor Type", 1033),
-            Description = new Label("Type of sensor. e.g. pressure, Humidity", 1033)
-        }
-    };
-
-   var response = service.Execute(request);
-    return response.AttributeId
-}
-```
-
-#### [Web API](#tab/webapi)
+Elastic tables support string columns that store JSON data. More information: [Create a column with Json format](#create-a-column-with-json-format)
 
 
-**Request**
 
-```http
-POST [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-Accept: application/json  
-Content-Type: application/json; charset=utf-8  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+## Alternate keys
 
-{
-   "AttributeType":"String",
-   "AttributeTypeName":{
-      "Value":"StringType"
-   },
-   "Description":{
-      "@odata.type":"Microsoft.Dynamics.CRM.Label",
-      "LocalizedLabels":[
-         {
-            "@odata.type":"Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label":"Type of sensor e.g. Pressure, Humidity",
-            "LanguageCode":1033
-         }
-      ]
-   },
-   "DisplayName":{
-      "@odata.type":"Microsoft.Dynamics.CRM.Label",
-      "LocalizedLabels":[
-         {
-            "@odata.type":"Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label":"SensorType",
-            "LanguageCode":1033
-         }
-      ]
-   },
-   "RequiredLevel":{
-      "Value":"None",
-      "CanBeChanged":true,
-      "ManagedPropertyLogicalName":"canmodifyrequirementlevelsettings"
-   },
-   "SchemaName":"contoso_sensorvalue",
-   "@odata.type":"Microsoft.Dynamics.CRM.StringAttributeMetadata",
-   "FormatName":{
-      "Value":"Text"
-   },
-   "MaxLength":3500
-}
-```
+You cannot create custom alternate keys for elastic tables.
 
-**Response**
+Each elastic table is created with one alternate key using these values:
 
-```http
-HTTP/1.1 204 No Content  
-OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
-```
----
+- Display Name: Entity key for NoSql Entity that contains PrimaryKey and PartitionId attributes
+- Name: `KeyForNoSqlEntityWithPKPartitionId`
+- LogicalName: `keyfornosqlentitywithpkpartitionid`
 
--->
+This alternate key has the key values: `<table primary key name>` and `partitionid`.
+
+If you need to reference a record that has a `partitionid` value set to a value other than the default value that is equal to the value of the primary key, you can reference the record using this alternate key.
+
+More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
 
 ## Adding Relationships
 
@@ -425,38 +333,33 @@ Dataverse currently does not support creating Many-to-Many relationships with el
 One-to-Many relationships are supported for elastic tables with following limitations:
 
 - Cascading is not supported. Cascading behavior must be set to `Cascade.None` when creating relationship.
-- In a One-to-Many relationship when many side is a standard table, while retrieving rows for standard table the lookup column that points to an elastic table row will not have the formatted value returned when the partitionid is set.
+- Formatted values for lookup columns are not returned when the following conditions are true:
 
-<!-- 
-TODO: I'm still not clear here. 
-1:N relationship means creating a lookup column.
-
-- I can create a lookup on an elastic table to a standard table.
-- I can create a lookup on a standard table to an elastic table.
-
-Where is the limitation?
--->
+   - The table being retrieved is a standard table and the lookup refers to an elastic table.
+   - The elastic table `partitionid` value is set to a value other than the primary key value of the elastic table row.
 
 Although elastic table supports having One-to-Many relationships and get related rows using fetchXml, there are restrictions when it comes retrieving data using fetchXml from related tables. In FetchXML queries, the `link-type` attribute is used within the <link-entity> element to specify the type of join between two tables. Elastic table only supports `outer` link-type. Elastic tables does not support `inner` link-type.
 
 Here's an example that demonstrates the usage of the outer "link-type" attribute for elastic tables
+
 ```xml
 <fetch>
-	<entity name="contoso_sensordata">
-		<attribute name="contoso_sensortype"/>
-		<attribute name="contoso_value"/>
-		<order attribute="contoso_timestamp" descending="false"/>
-		<attribute name="toasttype"/>
-		<link-entity name="Devices" alias="devices" link-type="inner" from="contoso_deviceid" to="contoso_deviceid">
+   <entity name="contoso_sensordata">
+      <attribute name="contoso_sensortype"/>
+      <attribute name="contoso_value"/>
+      <order attribute="contoso_timestamp" descending="false"/>
+      <attribute name="toasttype"/>
+      <link-entity name="Devices" alias="devices" link-type="inner" from="contoso_deviceid" to="contoso_deviceid">
          <attribute name="contoso_OwnerName" />
          <attribute name="contoso_OwnerEmailAddres" />
-			<filter type="and">
-				<condition attribute="contoso_location" operator="eq" value="Seattle"/>
-			</filter>
-		</link-entity>
-	</entity>
+         <filter type="and">
+            <condition attribute="contoso_location" operator="eq" value="Seattle"/>
+         </filter>
+      </link-entity>
+   </entity>
 </fetch>
 ```
+
 In the above example, the `link-type` attribute is set to `outer` within the `<link-entity>` element. This means that all records from the `contoso_SensorData` entity will be retrieved, regardless of whether they have related records in the `contoso_Devices` entity. If a related record exists, the attributes `contoso_OwnerName` and `contoso_OwnerEmail` from the `contoso_Devices` table will be included in the query results. If no related record is found, null values will be returned for these columns.
 
 If the `link-type` is set to `inner`, Dataverse will throw an error with code `0x80048d0b` and message **Link entities are not supported**.
@@ -471,159 +374,6 @@ Try to simplify with the description above.
 
 TODO: Does an error occur if you try to add a filter? Or is the filter just ignored?
 
--->
-
-<!-- 
-
-TODO:
-Sorry, but I don't think we need these samples about relationship creation here either. 
-Unless there is something specific about elastic tables that needs to be demonstrated here.
-We need samples like this here: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/entity-relationship-metadata
-Docs and Learn 3380064: Consolidate metadata topics
-
-#### [SDK for .NET](#tab/sdk)
-
-This example creates a One-to-Many relationship between `contact` (standard table) and `contoso_SensorData` (elastic table).
-
-```csharp
-public static OrganizationResponse CreateOneToManyRelationship(IOrganizationService service)
-{
-    CreateOneToManyRequest createOneToManyRelationshipRequest =
-        new CreateOneToManyRequest
-        {
-            OneToManyRelationship =
-                new OneToManyRelationshipMetadata
-                {
-                    ReferencedEntity = "contact",
-                    ReferencingEntity = "contoso_sensordata",
-                    SchemaName = "contoso_contact_contoso_sensordata",
-                    AssociatedMenuConfiguration = new AssociatedMenuConfiguration
-                    {
-                        Behavior = AssociatedMenuBehavior.UseLabel,
-                        Group = AssociatedMenuGroup.Details,
-                        Label = new Label("Contact", 1033),
-                        Order = 10000
-                    },
-                    CascadeConfiguration = new CascadeConfiguration
-                    {
-                        Assign = CascadeType.NoCascade,
-                        Delete = CascadeType.NoCascade,
-                        Merge = CascadeType.NoCascade,
-                        Reparent = CascadeType.NoCascade,
-                        Share = CascadeType.NoCascade,
-                        Unshare = CascadeType.NoCascade
-                    }
-                },
-            Lookup = new LookupAttributeMetadata
-            {
-                SchemaName = "contoso_DeviceOwner",
-                DisplayName = new Label("Device owner", 1033),
-                RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-                Description = new Label("Owner of the IoT device", 1033)
-            }
-        };
-
-    return service.Execute(createOneToManyRelationshipRequest);
-}
-```
-
-#### [Web API](#tab/webapi)
-
-This example creates a One-to-Many relationship between `contact` (standard table) and `contoso_SensorData` (elastic table).
-
-**Request**
-
-```http
-{  
- "SchemaName": "contoso_contact_contoso_sensordata",  
- "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata",  
- "AssociatedMenuConfiguration": {  
-  "Behavior": "UseCollectionName",  
-  "Group": "Details",  
-  "Label": {  
-   "@odata.type": "Microsoft.Dynamics.CRM.Label",  
-   "LocalizedLabels": [  
-    {  
-     "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
-     "Label": "SensorData",  
-     "LanguageCode": 1033  
-    }  
-   ],  
-   "UserLocalizedLabel": {  
-    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
-    "Label": "SensorData",  
-    "LanguageCode": 1033  
-   }  
-  },  
-  "Order": 10000  
- },  
- "CascadeConfiguration": {  
-  "Assign": "NoCascade",  
-  "Delete": "NoCascade",  
-  "Merge": "NoCascade",  
-  "Reparent": "NoCascade",  
-  "Share": "NoCascade",  
-  "Unshare": "NoCascade"  
- },  
- "ReferencedAttribute": "contactid",  
- "ReferencedEntity": "contact",  
- "ReferencingEntity": "contoso_sensordata",  
- "Lookup": {  
-  "AttributeType": "Lookup",  
-  "AttributeTypeName": {  
-   "Value": "LookupType"  
-  },  
-  "Description": {  
-   "@odata.type": "Microsoft.Dynamics.CRM.Label",  
-   "LocalizedLabels": [  
-    {  
-     "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
-     "Label": "Owner of the IoT device",  
-     "LanguageCode": 1033  
-    }  
-   ],  
-   "UserLocalizedLabel": {  
-    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
-    "Label": "Owner of the IoT device",  
-    "LanguageCode": 1033  
-   }  
-  },  
-  "DisplayName": {  
-   "@odata.type": "Microsoft.Dynamics.CRM.Label",  
-   "LocalizedLabels": [  
-    {  
-     "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
-     "Label": "Device Owner",  
-     "LanguageCode": 1033  
-    }  
-   ],  
-   "UserLocalizedLabel": {  
-    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
-    "Label": "Device Owner",  
-    "LanguageCode": 1033  
-   }  
-  },  
-  "RequiredLevel": {  
-   "Value": "ApplicationRequired",  
-   "CanBeChanged": true,  
-   "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"  
-  },  
-  "SchemaName": "contoso_DeviceOwner",  
-  "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"  
- }  
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-x-ms-session-token: hj23ad#1543
-OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(125e6d7f-2af1-ed11-8f6d-6045bdd811fa)
-```
-
----
 -->
 
 ## Elastic table data operations
@@ -643,33 +393,47 @@ Following examples show how to work with data stored in an elastic table.
 
 This example creates a new row in `contoso_SensorData` table with `partitionid` set to `deviceid`. It also sets `ttlinseconds` column which ensures that row expires after 1 day (86400 seconds) and deleted from Dataverse automatically.
 
+These examples also capture the value of the `x-ms-session-token` that you can use when retrieving the created record.
+
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
-/// Demonstrates creating elastic table row with partitionid
+/// Demonstrates creating a record with a partitionid and capturing the session token
 /// </summary>
 /// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
 /// <param name="deviceId">The value used as partitionid for the contoso_sensordata table. </param>
-/// <returns></returns>
-public static Guid CreateExample(IOrganizationService service, string deviceId)
+/// <param name="sessionToken">The current session token</param>
+/// <returns>The Id of the created record.</returns>
+public static Guid CreateExample(IOrganizationService service, string deviceId, ref string sessionToken )
 {
     var entity = new Entity("contoso_sensordata")
     {
         Attributes =
-         {
+            {
             { "contoso_deviceid", deviceId },
             { "contoso_sensortype", "Humidity" },
             { "contoso_value", 40 },
             { "contoso_timestamp", DateTime.UtcNow},
             { "partitionid", deviceId },
             { "ttlinseconds", 86400  }  // 86400  seconds in a day
-         }
+            }
     };
 
-    return service.Create(entity);
+    var request = new CreateRequest { 
+        Target = entity
+    };
+
+    var response = (CreateResponse)service.Execute(request);
+
+    // Capture the session token
+    sessionToken = response.Results["x-ms-session-token"].ToString();
+
+    return response.id;            
 }
 ```
+
+Use the `x-ms-session-token` value to set the `SessionToken` optional parameter when retrieving the record.
 
 #### [Web API](#tab/webapi)
 
@@ -714,11 +478,11 @@ This example uses the `KeyForNoSqlEntityWithPKPartitionId` alternate key to uniq
 
 #### [SDK for .NET](#tab/sdk)
 
-
+This example shows using the partitionid value as an alternate key.
 
 ```csharp
 /// <summary>
-/// Demonstrates updating elastic table row with partitionid
+/// Demonstrates updating elastic table row with partitionid as alternate key.
 /// </summary>
 /// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
 /// <param name="sensordataid">The unique identifier of the contoso_sensordata table.</param>
@@ -742,7 +506,9 @@ public static void UpdateExample(IOrganizationService service, Guid sensordataid
 }
 ```
 
-More information: [Using the Entity class](use-alternate-key-reference-record.md#using-the-entity-class)
+More information: [Use an alternate key to reference a record > Using the Entity class](use-alternate-key-reference-record.md#using-the-entity-class)
+
+This example shows using the PartitionId optional parameter.
 
 #### [Web API](#tab/webapi)
 
@@ -949,7 +715,7 @@ OData-Version: 4.0
 
 ### Query rows across all logical partitions of an elastic table
 
-This example retrieves all rows in SensorData table across all logical partitions. Not applying any filter on logical partition allows us to get rows from all logical partitions. Note that this query will not be performant and table should be modeled in a way which keeps queries limited to a single logical partition as much as possible.
+This example retrieves all rows in `contoso_SensorData` table across all logical partitions. Not applying any filter on logical partition allows us to get rows from all logical partitions. Note that this query will not be as performant as it would be with a `partitionid` and table should be modeled in a way which keeps queries limited to a single logical partition as much as possible.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -992,7 +758,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
 
 {
-    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#contoso_sensorata/$entity",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#contoso_sensordata/$entity",
     "value": [
         {
             "@odata.etag": "W/\"81052965\"",
@@ -1015,11 +781,12 @@ OData-Version: 4.0
     ]
 }
 ```
+
 ---
 
 ### Upsert a record in an elastic table
 
-An Upsert operation is similar to update. The difference is that if record with given id and `partitionid` doesn't exist it will be created. If it already exists, it will be updated.
+An upsert operation is similar to update. The difference is that if record with given id and `partitionid` doesn't exist it will be created. If it already exists, it will be updated.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -1527,6 +1294,13 @@ public static OrganizationResponse DeleteMultiple(IOrganizationService service)
 }
 ```
 
+## Known issues
+
+Following are known issues with elastic tables that should be addressed before this feature is generally available.
+
+### Error not returned when grouping elastic table data operations in a transaction
+
+Dataverse does not return an error when you group data operations using SDK [ExecuteTransactionRequest](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) class or with Web API `$batch` `ChangeSets`. These data operations will complete, but no transaction is actually applied. No transaction can be applied, so this operation should fail and return an error.
 
 ## Frequently Asked Questions (FAQ)
 
