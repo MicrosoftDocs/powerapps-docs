@@ -62,23 +62,15 @@ Plug-ins access the following contexts natively in Dataverse:
 - Any table rows the user can access.
 - Any connections the user can access.
 
-<!-- ### When to use Power Automate
-
-When you want to create Jobapplication statistic record every night, which is a recurring task that runs every night. For this situation, create a flow in Power Automate.
-
-:::image type="content" source="media/jobapplication-flow.png" alt-text="Job application flow":::
-
-When you want to create a Jobapplication record only when the student name is not available in the system. For this situation, use a Dataverse action. -->
-
 ## Prerequisites for creating a low-code plug-in
 
-1. System administrator or system customizer security role membership in the Power Platform environment.
-1. Dataverse Accelerator solution. [Download and install the Dataverse Accelerator from AppSource](https://aka.ms/DataverseAccelerator/AppSource).
+- System administrator or system customizer security role membership in the Power Platform environment.
+- Dataverse Accelerator solution. [Download and install the Dataverse Accelerator from AppSource](https://aka.ms/DataverseAccelerator/AppSource).
     1. Sign in to AppSource.
     1. Select **Get it now**.
     1. The **Dynamics 365 apps** page in Power Platform admin center appears.
     1. Select the environment you want.
-    1. Review and accept the legal terms and privacy statement to continue.
+    1. Review the legal terms and privacy statement to continue.
     1. Select **Install**.
 
 Once the solution import has completed, the status is set to **Enabled** next to **Dataverse Accelerator**.
@@ -261,11 +253,4 @@ On the **Integrate** tab of the test page, you can learn how to invoke the insta
 
 ## Example low-code plug-ins you can create
 
-The goal of these plug-ins is to help you get started by simply integrating into your app. You will understand the authoring experience includes authoring Dataverse customAPIs backed by powerfx expressions which can trigger actions internal or external to Dataverse. 
-
-> [!NOTE]
-> Email templates are only available for certain entities. Please read the email template documentation for more information. 
-
-### SendEmail based on a data event
-
-<!-- What kind of low-code plug-in is this? Instant or automated? -->
+For a few examples of how to create a low-code plug-in, go to [Example Dataverse low-code plug-ins (experimental)](lowcode-plug-ins-examples.md)
