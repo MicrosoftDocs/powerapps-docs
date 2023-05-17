@@ -18,7 +18,7 @@ contributors:
 # Configure Dataverse search in portals
 
 
-[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
 
 ## Overview
 
