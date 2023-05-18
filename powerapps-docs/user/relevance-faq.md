@@ -5,7 +5,7 @@ author: sericks
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 5/11/2023
+ms.date: 5/18/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -16,6 +16,7 @@ search.audienceType:
 contributors:
 - mspilde
 - manish1604
+- prdeka 
 ---
 
 # Frequently asked questions about Dataverse search
@@ -65,9 +66,9 @@ Columns are enabled for Dataverse search only if a quick find view is set as the
 
 Data from the Owner column isn't available for search and suggest operations. More information: [Types of columns](../maker/data-platform/types-of-fields.md)
 
-## How are Dataverse search API throttled?
+## How is the Dataverse search API throttled?
 
-When using the Dataverse search API, there is a throttling limit of 1 request per second for each user. Additionally there is a throttling limit of 150 requests per minute per organization.
+When using the Dataverse search API, there is a throttling limit of one request per second for each user. Additionally, there is a throttling limit of 150 requests per minute per organization.
 
 ### See also
 
