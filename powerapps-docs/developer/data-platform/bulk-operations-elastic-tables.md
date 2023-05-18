@@ -174,6 +174,12 @@ public static OrganizationResponse DeleteMultiple(IOrganizationService service)
 }
 ```
 
+### See also
+
+[Use elastic tables (Preview)](elastic-tables.md)<br />
+[Create elastic tables (Preview)](create-elastic-tables.md)<br />
+[Use elastic tables (Preview)](use-elastic-tables.md)<br />
+[Query JSON columns in elastic tables (Preview)](query-json-columns-elastic-tables.md)
 
 
 

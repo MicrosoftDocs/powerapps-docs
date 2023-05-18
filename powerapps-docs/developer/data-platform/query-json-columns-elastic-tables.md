@@ -263,6 +263,13 @@ OData-Version: 4.0
 
 ---
 
+## Next steps
+
+Learn how to perform bulk operations on elastic tables with code.
+
+> [!div class="nextstepaction"]
+> [Properties](bulk-operations-elastic-tables.md)<br/>
+
 ### See also
 
 [Use elastic tables (Preview)](elastic-tables.md)<br />

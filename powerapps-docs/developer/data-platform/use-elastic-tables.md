@@ -26,7 +26,7 @@ You will find session token as `x-ms-session-token` header in response of all wr
 For any [OrganizationResponse](xref:Microsoft.Xrm.Sdk.OrganizationResponse) that performs a write operation ([CreateResponse](xref:Microsoft.Xrm.Sdk.Messages.CreateResponse),[UpdateResponse](xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse),[UpsertResponse](xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse),[DeleteResponse](xref:Microsoft.Xrm.Sdk.Messages.DeleteResponse)) you can capture the `x-ms-session-token` in the [Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results) collection.
 
 > [!NOTE]
-> [DeleteResponse](xref:Microsoft.Xrm.Sdk.Messages.DeleteResponse) does not currently return the x-ms-session-token. More information: [Known issues: x-ms-session-token value not returned for delete operations](#x-ms-session-token-value-not-returned-for-delete-operations)
+> [DeleteResponse](xref:Microsoft.Xrm.Sdk.Messages.DeleteResponse) does not currently return the x-ms-session-token. More information: [Known issues:  x-ms-session-token value not returned for delete operations](elastic-tables.md#x-ms-session-token-value-not-returned-for-delete-operations)
 
 ```csharp
 string sessionToken = response.Results["x-ms-session-token"].ToString();
@@ -37,7 +37,7 @@ string sessionToken = response.Results["x-ms-session-token"].ToString();
 The session token value will be returned as the `x-ms-session-token` response header.
 
 > [!NOTE]
-> DELETE operations do not currently return the x-ms-session-token. More information: [Known issues: x-ms-session-token value not returned for delete operations](#x-ms-session-token-value-not-returned-for-delete-operations)
+> DELETE operations do not currently return the x-ms-session-token. More information: [Known issues:  x-ms-session-token value not returned for delete operations](elastic-tables.md#x-ms-session-token-value-not-returned-for-delete-operations)
 
 ```http
 x-ms-session-token: 240:8#144100870#7=-1
@@ -162,7 +162,7 @@ Use the `x-ms-session-token` value returned with the `MSCRM.SessionToken` reques
 
 This example updates the `contoso_value` and `contoso_timestamp` values of an existing row in `contoso_SensorData` table with using the `contoso_sensordataid` primary key and `partitionid` = `'device-001'`. Note that primary key and `partitionid` columns are always required to uniquely identify an existing elastic table row. The `partitionid` of an existing row cannot be updated and is only being used to uniquely identify the row to update.
 
-This example uses the `KeyForNoSqlEntityWithPKPartitionId` alternate key to uniquely identify the record using both the primary key and the `partitionid`. More information: [Alternate keys](#alternate-keys)
+This example uses the `KeyForNoSqlEntityWithPKPartitionId` alternate key to uniquely identify the record using both the primary key and the `partitionid`. More information: [Alternate keys](create-elastic-tables.md#alternate-keys)
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -617,6 +617,13 @@ OData-Version: 4.0
 ```
 
 ---
+
+## Next steps
+
+Learn how to create and query JSON data in JSON columns in elastic tables with code
+
+> [!div class="nextstepaction"]
+> [Properties](query-json-columns-elastic-tables.md)<br/>
 
 ### See also
 

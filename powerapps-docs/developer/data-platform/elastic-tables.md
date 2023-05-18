@@ -13,7 +13,7 @@ contributors:
  - JimDaly
 ---
 
-# Use elastic tables (Preview)
+# Elastic tables (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -141,6 +141,13 @@ Dataverse does not return an error when you group data operations using SDK [Exe
 Dataverse doesn't return the `x-ms-session-token` value for delete operations. More information: [Consistency level](#consistency-level)
 
 ## Frequently Asked Questions (FAQ)
+
+## Next steps
+
+Learn how to create elastic tables with code
+
+> [!div class="nextstepaction"]
+> [Properties](create-elastic-tables.md)<br/>
 
 <!-- 
 

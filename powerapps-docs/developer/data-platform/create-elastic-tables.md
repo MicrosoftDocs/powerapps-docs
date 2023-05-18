@@ -200,7 +200,7 @@ Columns can also be created using the SDK or Web API, but there are limits on th
 - Image (`ImageAttributeMetadata`)
 - Calculated, Rollup, or Formula Columns
 
-Elastic tables support string columns that store JSON data. More information: [Create a column with Json format](#create-a-column-with-json-format)
+Elastic tables support string columns that store JSON data. More information: [Create a column with Json format](query-json-columns-elastic-tables.md#create-a-column-with-json-format)
 
 
 
@@ -269,6 +269,13 @@ Try to simplify with the description above.
 TODO: Does an error occur if you try to add a filter? Or is the filter just ignored?
 
 -->
+
+## Next steps
+
+Learn how to perform data operations on elastic tables with code
+
+> [!div class="nextstepaction"]
+> [Properties](use-elastic-tables.md)<br/>
 
 ### See also
 
