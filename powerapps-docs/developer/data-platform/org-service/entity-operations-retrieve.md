@@ -1,12 +1,11 @@
 ---
 title: "Retrieve a table row using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes options available when retrieving a row programmatically." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "divkamath" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.date: 05/18/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: divkamath # GitHub ID
+ms.author: dikmath # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
@@ -166,7 +165,7 @@ Console.WriteLine(entity["name"]);
 
 ## Retrieve records from elastic tables
 
-If you are retrieving elastic table data stored in partitions be sure to specify the partition key when retrieving that data. More information:  [Retrieve a record in an elastic table](../elastic-tables.md#retrieve-a-record-in-an-elastic-table)
+If you are retrieving elastic table data stored in partitions be sure to specify the partition key when retrieving that data. More information: [Retrieve a record in an elastic table](../use-elastic-tables.md#retrieve-a-record-in-an-elastic-table)
 
 ## Access Formatted values
 

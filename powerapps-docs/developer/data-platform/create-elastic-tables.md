@@ -275,7 +275,7 @@ TODO: Does an error occur if you try to add a filter? Or is the filter just igno
 Learn how to perform data operations on elastic tables with code
 
 > [!div class="nextstepaction"]
-> [Properties](use-elastic-tables.md)<br/>
+> [Create elastic tables](use-elastic-tables.md)<br/>
 
 ### See also
 

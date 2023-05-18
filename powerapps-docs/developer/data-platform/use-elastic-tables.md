@@ -623,7 +623,7 @@ OData-Version: 4.0
 Learn how to create and query JSON data in JSON columns in elastic tables with code
 
 > [!div class="nextstepaction"]
-> [Properties](query-json-columns-elastic-tables.md)<br/>
+> [Query JSON columns](query-json-columns-elastic-tables.md)<br/>
 
 ### See also
 
