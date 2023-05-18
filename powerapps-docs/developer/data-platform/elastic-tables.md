@@ -389,7 +389,7 @@ One-to-Many relationships are supported for elastic tables with following limita
    - The table being retrieved is a standard table and the lookup refers to an elastic table.
    - The elastic table `partitionid` value is set to a value other than the primary key value of the elastic table row.
 
-Although elastic table supports having One-to-Many relationships and get related rows using fetchXml, there are restrictions when it comes retrieving data using fetchXml from related tables. In FetchXML queries, the `link-type` attribute is used within the <link-entity> element to specify the type of join between two tables. Elastic table only supports `outer` link-type. Elastic tables does not support `inner` link-type.
+Although elastic table supports having One-to-Many relationships and get related rows using fetchXml, there are restrictions when it comes retrieving data using fetchXml from related tables. In FetchXML queries, the `link-type` attribute is used within the `<link-entity>` element to specify the type of join between two tables. Elastic table only supports `outer` link-type. Elastic tables does not support `inner` link-type.
 
 Here's an example that demonstrates the usage of the outer "link-type" attribute for elastic tables
 
@@ -434,8 +434,7 @@ Following examples show how to work with data stored in an elastic table.
 - [Create a record in an elastic table](#create-a-record-in-an-elastic-table)
 - [Update a record in an elastic table](#update-a-record-in-an-elastic-table)
 - [Retrieve a record in an elastic table](#retrieve-a-record-in-an-elastic-table)
-- [Query rows in a single logical partition of an elastic table](#query-rows-in-a-single-logical-partition-of-an-elastic-table)
-- [Query rows across all logical partitions of an elastic table](#query-rows-across-all-logical-partitions-of-an-elastic-table)
+- [Query rows of an elastic table](#query-rows-of-an-elastic-table)
 - [Upsert a record in an elastic table](#upsert-a-record-in-an-elastic-table)
 - [Delete a record in an elastic table](#delete-a-record-in-an-elastic-table)
 
@@ -612,7 +611,7 @@ When applying an update, you need to uniquely identify the record you are going 
 
 - You can use the alternate key style:
 
-   `contoso_sensordatas(contoso_sensordataid=<primary key value>,partitionid='<partitionid value>')
+   `contoso_sensordatas(contoso_sensordataid=<primary key value>,partitionid='<partitionid value>')`
 
    More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
 
