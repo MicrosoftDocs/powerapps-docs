@@ -25,7 +25,7 @@ You can preview your app to see how it will look on different devices using the 
 
 
 > [!div class="mx-imgBorder"] 
-> ![Studio save options.](media/studio/preview-app.png)
+> ![Preview your app.](media/studio/preview-app.png)
 
 Legend: 
 1. **Tablet Devices**: Allows you to select from common tablet devices from several manufacturers, along with the ability to select a custom size based on your needs. This option shows a device frame and device safe zone, shown as the black area either on the top and bottom or sides depending upon the orientation. It also shows a black area with the home bar at the bottom.  
