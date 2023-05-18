@@ -3,7 +3,6 @@ title: Position | Microsoft Docs
 description: Provides access to get geographical information from context.device.getCurrentPosition method.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - alaug

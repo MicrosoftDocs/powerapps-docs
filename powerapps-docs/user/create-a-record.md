@@ -2,7 +2,6 @@
 title: "Create a row quickly| MicrosoftDocs"
 description: How to create a row
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create a new row
 

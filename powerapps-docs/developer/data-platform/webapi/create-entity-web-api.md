@@ -1,7 +1,7 @@
 ---
 title: "Create a table row using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Read how to create a POST request to send data to create a table row on Microsoft Dataverse using the Web API"
-ms.date: 08/05/2022
+ms.date: 03/27/2023
 ms.service: powerapps
 ms.topic: article
 author: divkamath
@@ -9,9 +9,6 @@ ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -72,7 +69,7 @@ You can compose your `POST` request so that data from the created record will be
 To control which properties are returned, append the `$select` query option to the URL to the entity set. You may also use `$expand` to return related entities.
 
 > [!NOTE]
-> Nested `$expand` on collection-valued navigation properties will not return data. More information: [Retrieve related records for a table row by expanding collection-valued navigation properties](retrieve-entity-using-web-api.md#retrieve-related-records-for-a-table-row-by-expanding-collection-valued-navigation-properties)
+> Nested `$expand` on collection-valued navigation properties will not return data when used with the `return=representation` preference. More information: [Nested $expand on collection-valued navigation properties](query-data-web-api.md#nested-expand-on-collection-valued-navigation-properties)
 
 When an entity is created in this way the `OData-EntityId` header containing the URI to the created record is not returned.
 

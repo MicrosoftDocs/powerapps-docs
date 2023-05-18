@@ -2,24 +2,23 @@
 title: Debug a model-driven app with Monitor
 description: Learn how to diagnose model-driven app issues using Monitor
 author: mattp123
-
 ms.subservice: troubleshoot
 ms.topic: troubleshooting
 ms.custom: 
 ms.reviewer: Mattp123
-ms.date: 11/16/2020
+ms.date: 04/04/2023
 ms.author: austinj
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mattp123
 ---
-
 # Debug a model-driven app with Monitor
 
 Monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all key activities in your app as the app runs.
+
+> [!IMPORTANT]
+> Monitor is temporarily unavailable for model-driven apps. We're working to enable this again soon. Monitor is still available for canvas apps. More information: [Microsoft 365 Message center post MC530354](https://portal.office.com/adminportal/home?ref=MessageCenter/:/messages/MC530354)
 
 For more information about when you should monitor an app, see [Monitor overview](monitor-overview.md). To run Monitor with a canvas app, see [Debugging canvas apps with Monitor](monitor-canvasapps.md).
 

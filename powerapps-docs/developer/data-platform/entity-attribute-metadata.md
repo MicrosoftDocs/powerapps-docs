@@ -3,16 +3,12 @@ title: Column definitions | Microsoft Docs
 description: Learn about column definitions use in Microsoft Dataverse.
 suite: powerapps
 author: NHelgren # GitHub ID
-manager: sunilg
 ms.topic: article
 ms.date: 06/15/2022
 ms.subservice: dataverse-developer
 ms.author: nhelgren
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---

@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: jdaly # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
@@ -1048,7 +1045,7 @@ OData-Version: 4.0
 
 More information:
 
-[Basic query example](webapi/query-data-web-api.md#basic-query-example)
+[Query data using the Web API](webapi/query-data-web-api.md)
 
 ---
 

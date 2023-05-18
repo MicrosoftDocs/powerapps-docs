@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - lancedmicrosoft
@@ -41,6 +39,9 @@ The name of the selected environment appears under the tables list.
 ## Visibility and access
 
 When you select **Change environment**, you're presented with a list of environments. Though you might see an environment in the list, the security role(s) in the environment govern what you can do in that environment. For example, if you don't have read privileges, you won't be able to see the tables and records in the environment.
+
+> [!NOTE]
+> Connections listed in the app details pane outside of the app designer show connections that require user consent. Since native Dataverse connections used in the app don't require that additional consent, a native connection won't be in that list.
 
 ## Power Apps data type mappings
 
@@ -77,10 +78,10 @@ Dataverse for processing (rather than processing locally within Power Apps).
 | Sum, Min, Max, Avg [5]                                          | Yes            | \-           | \-         | No               | \-       |
 | CountRows [6] [7], CountIf [5]                                  | Yes            | Yes          | Yes        | Yes              | Yes      |
 
-1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable.
+1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable. Casting to a column to a number isn't supported. 
 
 2.  Doesn't support Trim[Ends] or Len. Does support other functions such as
-    Left, Mid, Right, Upper, Lower, Replace, Substitute, etc.
+    Left, Mid, Right, Upper, Lower, Replace, Substitute, etc. Also, casting such as Text(column) isn't supported for delegation.
 
 3.  DateTime is delegable except for DateTime functions Now() and
     Today().

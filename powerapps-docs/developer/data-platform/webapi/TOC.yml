@@ -45,8 +45,6 @@
     items:
     - name: Query data
       href: query-data-web-api.md
-    - name: Retrieve related rows with query
-      href: retrieve-related-entities-query.md
     - name: Use FetchXml with Web API
       href: use-fetchxml-web-api.md
     - name: Retrieve and execute predefined queries

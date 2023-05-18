@@ -9,8 +9,6 @@ ms.author: jorisde
 ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - jorisdg
   - mduelae

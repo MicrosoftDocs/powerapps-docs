@@ -10,8 +10,6 @@ ms.date: 02/23/2022
 ms.author: alaug
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - alaug
   - mduelae

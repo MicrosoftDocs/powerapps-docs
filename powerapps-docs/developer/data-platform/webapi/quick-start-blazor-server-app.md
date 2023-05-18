@@ -8,9 +8,6 @@ ms.author: jdaly # MSFT alias of Microsoft employees only
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Quickstart: Blazor Server Web API sample (C#)
 

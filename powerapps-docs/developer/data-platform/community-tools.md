@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "annbe" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Community tools for Microsoft Dataverse
 

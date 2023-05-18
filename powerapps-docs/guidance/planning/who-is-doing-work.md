@@ -135,7 +135,7 @@ looked into our expense reporting process.
 
        -   Doesn't always have internet connectivity, so must be able to work offline
 
-       -   Prefers to capture his expenses and receipts as soon as possible after they happen
+       -   Prefers to capture their own expenses and receipts as soon as possible after they happen
     :::column-end:::
     :::column:::
        ![Illustration of Nick the Sales Manager.](media/nick-small.png "Illustration of Nick the Sales Manager")
@@ -148,7 +148,7 @@ looked into our expense reporting process.
 
       -   Requires offline support for remote locations
 
-      -   Responsible for approving the expense reports of all his direct reports
+      -   Responsible for approving the expense reports of all their direct reports
     :::column-end:::
 :::row-end:::
 
@@ -171,7 +171,7 @@ looked into our expense reporting process.
 
         -  Has occasional travel expenses
 
-        -  Mainly uses a desktop, but prefers to use her mobile phone
+        -  Mainly uses a desktop, but prefers to use a mobile phone
 
         -  Usually has access to the internet
 
@@ -204,10 +204,10 @@ looked into our expense reporting process.
         stay within budget
 
         -   Travels to various offices, has external meetings and conferences, and
-        must capture her own expenses
+        must capture their own expenses
 
         -   Works from the office, remotely, and from home using various devices&mdash;desktop,
-        tablet, and her phone
+        phone, and tablet
 
         -   Isn't always connected to the internet
     :::column-end:::

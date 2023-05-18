@@ -12,8 +12,6 @@ ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - lancedMicrosoft
   - mduelae
@@ -27,7 +25,7 @@ A connector may provide **tables** of data or **actions**. Some connectors provi
 
 ## Tables
 
-If your connector provides tables, you add your data source and then select the table in the data source that you want to manage. Power Apps both retrieve table data into your app and updates data in your data source for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
+If your connector provides tables, you add your data source and then select the table in the data source that you want to manage. Power Apps both retrieves table data into your app and updates data in your data source automatically for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
 
  ![Plain data source Items property.](./media/connections-list/ItemPropertyPlain.png)
 
@@ -52,6 +50,9 @@ If your connector provides actions, you must still select your data source as yo
 ![Action data source Items property.](./media/connections-list/ItemPropertyAction.png)
 
 If you need to handle custom data updates for action connectors, build a formula that includes the **Patch** function. In the formula, identify the action and the fields that you'll bind to the action.  
+
+> [!NOTE]
+> For action-based connectors, galleries and other controls don't page in more data automatically the same way they do for tables. For instance, if you bind an action to a gallery then it’ll retrieve the first set or page of records. But if the data requested exceeds the size for a page of data, then the control won't automatically fetch the next page. You must manage this directly with collections.
 
 For more information about how to customize your formula for custom updates, see these articles:
 
@@ -91,7 +92,8 @@ You can ask questions about a specific connector in the [Power Apps forums](http
 As you author your app and create a connection to a data source, you may see that your choice of connector allows you to use different ways to authenticate. For instance, the SQL Server connector allows you to use Azure AD Integrated, SQL Server Authentication, and Windows Authentication. Each type of authentication has different levels of security associated with it.  It's important to understand what information and rights you share with users who use your application. The primary example in this article is SQL Server, however the principles apply to all types of connections.
 
 > [!NOTE]
-> For detailed information about security considerations when using a relational database server (such as Microsoft SQL Server, or Oracle) as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
+> - For detailed information about security considerations when using a relational database server (such as Microsoft SQL Server, or Oracle) as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
+> - Power Apps doesn't  support **External member** identities. For more information, see [Properties of an Azure Active Directory B2B collaboration user](/azure/active-directory/external-identities/user-properties). 
 
 ### Azure AD Integrated
 
@@ -129,7 +131,7 @@ Sign in to [Power Apps](https://make.powerapps.com) and create a new app that us
 
 Open an existing [app open for editing](../../edit-app.md) with implicitly shared connections that has previously been published:
 1. On the command bar, select **Settings** > **Upcoming features**.
-2. From the Preview tab, set the toggle for **Try out the modern controls** to **On**.
+2. From the **Experimental** tab, set the toggle for **Secure implicit connections** to **On**.
 3. Save and publish the app.
 
 #### Sharing

@@ -7,9 +7,6 @@ ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -421,7 +418,6 @@ OData-Version: 4.0
 
 [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)<br />
 [Query data using the Web API](query-data-web-api.md)<br />
-[Retrieve related table records with a query](retrieve-related-entities-query.md)<br />
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)
 
 

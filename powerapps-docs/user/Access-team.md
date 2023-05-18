@@ -2,7 +2,6 @@
 title: "Share records using Access Team| MicrosoftDocs"
 description: How to share records using Access Team
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Share rows using Access Team
 

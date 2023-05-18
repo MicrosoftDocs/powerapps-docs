@@ -16,12 +16,8 @@ caps.latest.revision: 63
 ms.subservice: mda-maker
 ms.author: "matp"
 author: "Mattp123"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Configure a map on a form
 

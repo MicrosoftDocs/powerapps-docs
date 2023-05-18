@@ -2,7 +2,6 @@
 title: "Advanced find | MicrosoftDocs"
 description: How to use advanced find search in model-driven apps
 author: sericks007
-manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Advanced find in model-driven apps

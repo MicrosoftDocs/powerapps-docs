@@ -12,8 +12,6 @@ ms.subservice: dataverse-maker
 ms.author: NHelgren
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
 ---
 # System tables and columns in Dataverse and Dataverse for Teams

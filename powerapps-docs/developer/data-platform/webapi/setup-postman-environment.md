@@ -4,13 +4,10 @@ description: "Learn how to set up and configure a Postman environment that conne
 ms.date: 05/04/2022
 author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: article
 search.audienceType: 
   - developer
-search.app: 
-  - D365CE
 contributors:
  - JimDaly
  - phecke

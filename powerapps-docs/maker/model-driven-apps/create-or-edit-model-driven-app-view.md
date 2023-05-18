@@ -45,6 +45,9 @@ In the solution that we opened earlier, create a new table or find an existing t
    :::image type="content" source="media/create-a-view-dialog.png" alt-text="Create a view":::
 1. In the view designer, select **+ View column** to add additional columns needed within the view. Or, select **Table columns** in the left navigation and drag the table columns into your view.
 
+    > [!TIP]
+    > Only include the specific columns you need for the view, as larger numbers of columns in a view can cause degradation of grid performance.  
+
    ![Add column.](../data-platform/media/add-column-to-view.png)
 
    > [!TIP]

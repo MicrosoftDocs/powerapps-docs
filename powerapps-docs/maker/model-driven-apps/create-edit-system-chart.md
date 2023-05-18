@@ -13,13 +13,9 @@ applies_to:
 author: "joel-lindstrom"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 ms.reviewer: matp
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create a model-driven app system chart
 

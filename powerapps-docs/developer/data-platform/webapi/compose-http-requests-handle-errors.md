@@ -1,22 +1,17 @@
 ---
 title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests for the Web API. Learn how to identify and handle errors returned in the response"
-ms.date: 03/10/2023
+ms.date: 04/19/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
 
 # Compose HTTP requests and handle errors
-
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 You interact with the Web API by composing and sending HTTP requests. You need to know how to set the appropriate HTTP headers and handle any errors included in the response.  
 
@@ -106,14 +101,43 @@ You can use other headers to enable specific capabilities.
 
 ### Prefer Headers
 
-You can use the [Prefer](https://tools.ietf.org/html/rfc7240) header with the values below to specify preferences.
+You can use the [Prefer](https://www.rfc-editor.org/rfc/rfc7240) header with the values below to specify preferences.
 
 
 |Prefer value |Description |
 |---------|---------|
 |`return=representation`|Use this preference to return data on create (`POST`) or update (`PATCH`) operations for entities. When this preference is applied to a `POST` request, a successful response has status `201 Created` . For a `PATCH` request, a successful response has a status `200 OK.` Without this preference applied, both operations return status `204 No Content` to reflect that no data is returned in the body of the response by default. More information: [Create with data returned](create-entity-web-api.md#create-with-data-returned) & [Update with data returned](update-delete-entities-using-web-api.md#update-with-data-returned)|
-|`odata.include-annotations`|Use this preference with the value set to `OData.Community.Display.V1.FormattedValue` to return formatted values with a query. More information: [Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)<br /> You can also use this preference to request more error details returned by a plug-in as described in [Include more details with errors](#include-more-details-with-errors) below.<br /> You can filter which annotations you want by including a wildcard character `*`, or you can specify to return all annotations using `Prefer: odata.include-annotations="*"`|
-|`odata.maxpagesize`|Use this preference to specify how many pages you want to return in a query. More information: [Specify the number of rows to return in a page](query-data-web-api.md#bkmk_specifyNumber) |
+|`odata.include-annotations`|See [Request annotations](#request-annotations)|
+|`odata.maxpagesize`|Use this preference to specify how many pages you want to return in a query. More information: [Page results](query-data-web-api.md#page-results) |
+|`odata.track-changes`|The change tracking feature allows you to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md)|
+|`respond-async`|Specifies that the request should be processed asynchronously. More information: [Background operations (Preview)](../background-operations.md)|
+
+> [!NOTE]
+> Multiple Prefer headers can be specified using comma separated values. For example:
+> `Prefer: respond-async,odata.include-annotations="*"`
+
+
+#### Request annotations
+
+You can request different OData annotation data to be returned with the results using the `Prefer: odata.include-annotations` request header. You can choose to return all annotations, or specify specific annotations. The following table describes the annotations Dataverse Web API supports:
+
+
+|Annotation|Description|
+|---------|---------|
+|`OData.Community.Display.V1.FormattedValue`| Returns formatted string values you can use in your application. More information: [Formatted values](query-data-web-api.md#formatted-values)|
+|`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|Returns information about related lookup columns. More information:  [Lookup property data](query-data-web-api.md#lookup-property-data)|
+|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5000 records can be returned at a time. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds 5000.  More information: [Count number of rows](query-data-web-api.md#count-number-of-rows) |
+|`Microsoft.Dynamics.CRM.globalmetadataversion`|This annotation is returned on the request and you can cache it in your application. This value will change when any schema change occurs. This is an indication that you may need to refresh any schema data that your application has cached. More information: [Cache Schema data](../cache-schema-data.md)|
+|`Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br />`Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br />`Microsoft.PowerApps.CDS.HelpLink`<br />`Microsoft.PowerApps.CDS.TraceText`<br />`Microsoft.PowerApps.CDS.InnerError.Message`|These annotations provide additional details when errors are returned. More information: [Include more details with errors](#include-more-details-with-errors)|
+
+If you want only specific annotations, you can request them as comma separated values. You can also use the '`*`' character as a wildcard.  For example, the following `Prefer` request header only includes the formatted values and any additional error detail annotations:
+
+```
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.ErrorDetails*"
+```
+
+> [!TIP]
+> It is common to simply use the `Prefer: odata.include-annotations="*"` request header to return all annotations.
 
 ### Other headers
 
@@ -251,6 +275,8 @@ This response includes the following annotations:
 
 If you don't want to receive all annotations in the response, you can specify which specific annotations you want to have returned. Rather than using `Prefer: odata.include-annotations="*"`, you can use the following to receive only formatted values for operations that retrieve data and the helplink if an error occurs:
 `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.HelpLink"`.
+
+More information: [Request annotations](#request-annotations)
 
 ## Add a Shared Variable from the Web API
 

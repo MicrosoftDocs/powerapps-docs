@@ -2,7 +2,6 @@
 title: Edit the default filter of a report| Microsoft Docs
 description: Edit the default filter of a report
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Edit the default filter of a report
 

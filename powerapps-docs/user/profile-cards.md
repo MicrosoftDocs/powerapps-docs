@@ -3,7 +3,6 @@ title: "View the profile card for a contact or user | MicrosoftDocs"
 description: View a contact's or user profile card
 ms.custom: ""
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # View the profile card for a contact or user

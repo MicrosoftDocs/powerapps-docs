@@ -3,16 +3,12 @@ title: Personalize emails with dynamic text
 description: Personalize your customer engagement emails with dynamic text in Power Apps.
 ms.custom: ""
 author: gandhamm
-manager: shujoshi
 ms.topic: conceptual
 ms.date: 06/16/2022
 ms.subservice: end-user
 ms.author: mgandham
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Personalize emails with dynamic text

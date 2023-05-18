@@ -15,12 +15,8 @@ applies_to:
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create N:N (many-to-many) table relationships in Microsoft Dataverse using solution explorer

@@ -13,14 +13,12 @@ ms.author: yogupt
 
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - yogeshgupta698
 ---
 
-# Overview of modern controls in canvas apps
+# Overview of modern controls in canvas apps (preview)
 
 [This article is pre-release document and is subject to change.]
 

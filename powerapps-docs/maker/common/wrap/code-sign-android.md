@@ -1,4 +1,4 @@
-﻿---
+---
 title: Code sign for Android
 description: Learn about how to code sign for Android for Power Apps wrap.
 author: larryk78
@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - larryk78

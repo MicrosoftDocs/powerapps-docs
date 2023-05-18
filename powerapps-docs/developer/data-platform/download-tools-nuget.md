@@ -4,16 +4,9 @@ description: "Download and launch the Plug-in Registration, Package Deployment, 
 ms.date: 03/24/2023
 ms.reviewer: pehecke
 ms.topic: article
-applies_to: 
-  - "Dynamics 365 (online)"
 author: davidjenni # GitHub ID
 ms.subservice: "dataverse-developer"
 ms.author: davidjen
-search.audienceType: 
-  - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Dataverse development tools
@@ -24,20 +17,20 @@ There are a number of developer tools that are needed for different aspects of M
 |-|-|-|
 |Configuration Migration tool (CMT)|Transport configuration and test data from one environment to another|[Configuration Migraton tool](/power-platform/alm/configure-and-deploy-tools)|
 |Package Deployer (PD)|Deploy packages to Dataverse environments where the packages contain solutions, custom code, HTML files, and more|[Deploy a package](/power-platform/alm/package-deployer-tool#deploy-a-package)|
-|Plug-in Registration tool (PRT)|Registers custom code (plug-ins, custom workflow activities), service endpoints, and more|[Register a plug-in](register-plug-in.md)|
+|Plug-in Registration tool (PRT)|Registers custom code (plug-ins, custom workflow activities), service endpoints, and more|[Register a plug-in](register-plug-in.md)<br/>[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)|
 |SolutionPackager tool (SP)|A tool that can reversibly decompose a Dataverse compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system|[SolutionPackager tool](/power-platform/alm/solution-packager-tool)|
-|Code Generation tool (CG)|A command-line code generation tool that generates early-bound (strong-typed) .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse|[Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)|
-
-The Code Generation tool functionality has been integrated into the Power Platform CLI. The output of the CLI [modelbuilder](/power-platform/developer/cli/reference/modelbuilder) subcommand supports cross-platform .NET (Core) compilation.
+|Code Generation tool (CG)|A command-line code generation tool that generates early-bound (strong-typed) .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse.<br/><br/>The Code Generation tool functionality is integrated into Power Platform CLI. The output of the CLI [modelbuilder](/power-platform/developer/cli/reference/modelbuilder) subcommand supports cross-platform .NET (Core) compilation.|[Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)|
 
 > [!NOTE]
 > The CMT, PD, and PRT tools provide a Windows (WPF) user interface and only run on a Microsoft Windows operating system. Also, the `pac tool` command only is available on a Windows install of the CLI.
 
-All the above mentioned tools, with the exception of the Code Generation tool, is described below. 
+All the above mentioned tools, except the Code Generation tool, are described below.
 
 ## Download and launch tools using Power Platform CLI
 
-Make sure that you have version 1.19.3 (or newer) of the Power Platform CLI. Now get help on the tools.
+Make sure that you have version 1.19.3 (or newer) of [Power Platform CLI](/power-platform/developer/cli/introduction).
+
+Now get help on the tools.
 
 ```bash
 > pac tool help
@@ -177,7 +170,7 @@ Similarly, for available options to unpack a solution, use `pac solution unpack 
 
 ### See Also
 
-[Developer tools](developer-tools.md)  
+[Power Platform developer tools](/power-platform/developer/tools)  
 [Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)  
 [Create extensions for the Code Generation tool](org-service/extend-code-generation-tool.md)  
 [Browse the metadata for your organization](browse-your-metadata.md)  

@@ -4,14 +4,10 @@ description: "Read how you can use the FilterExpression class to build a query t
 ms.date: 04/03/2022
 author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke

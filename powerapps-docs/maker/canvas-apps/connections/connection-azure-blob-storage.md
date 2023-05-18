@@ -11,8 +11,6 @@ ms.author: vabhavir
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - vasavib
   - mduelae

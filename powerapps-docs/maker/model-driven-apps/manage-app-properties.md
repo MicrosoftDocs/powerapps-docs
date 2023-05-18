@@ -14,7 +14,6 @@ author: "Mattp123"
 ms.assetid: e773e60f-0211-4c4b-a1af-663be4997629
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,9 +21,6 @@ caps.latest.revision: 14
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Manage model-driven app properties in the app designer (classic)

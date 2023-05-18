@@ -2,7 +2,6 @@
 title: "Export to an Excel PivotTable in model-driven Power Apps| MicrosoftDocs"
 description: How to export to an Excel PivotTable in model-driven Power Apps
 author: sericks007
-manager: tapanm-msft
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Export to an Excel PivotTable
 

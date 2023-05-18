@@ -3,7 +3,6 @@ title: updatePopup | Microsoft Docs
 description: Updates an existing popup in the service with the given name. Does nothing if popup does not exist yet.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

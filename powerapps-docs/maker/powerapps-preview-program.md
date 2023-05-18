@@ -10,9 +10,6 @@ ms.date: 09/03/2021
 ms.author: jimholtz
 search.audienceType: 
   - admin
-search.app:
-  - D365CE
-  - PowerApps
 ---
 # Power Apps preview program
 

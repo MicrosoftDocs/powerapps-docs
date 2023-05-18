@@ -13,14 +13,12 @@ ms.author: yogupt
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - yogeshgupta698
   
 ---
-# Text modern control in Power Apps
+# Text modern control in Power Apps (preview)
 
 [This article is pre-release document and is subject to change.]
 
@@ -31,11 +29,11 @@ Use this versatile **Text** control to display text, messages, information on th
 
 ## Key properties
 
-**Value** – Value to show as text on canvas.
+**Text** – Text to display on canvas.
 
 **Font size** –The font size of the text that appears on a control.
 
-**FontWeight** – The weight of the text in a control: Bold, Semibold, Regular, or Medium.
+**Weight** – The weight of the text in a control: Bold, Semibold, Regular, or Medium.
 
 **Font style** – The name of the family of fonts in which text appears.
 
@@ -49,12 +47,11 @@ Use this versatile **Text** control to display text, messages, information on th
 
 
 ## Additional properties
-**Accessible label** – Label for screen readers.
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
 **[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-**[Size](../properties-text.md)** – The size of the control on the canvas.
+**[Size](../properties-text.md)** – The size of the text control on the canvas.
 
 

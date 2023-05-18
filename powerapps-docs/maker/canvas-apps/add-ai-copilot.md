@@ -12,8 +12,6 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
 ---
@@ -60,19 +58,23 @@ With your [canvas app open for editing](edit-app.md):
 
 ## Choose data
 
-1. When the Copilot control is added, select a data source from the pane. Note that at this time, only a single Dataverse table can be selected for the Copilot control.
+1. When the Copilot control is added, select a data source from the pane. Currently, only a single Dataverse table can be selected for the Copilot control.
 
    > [!div class="mx-imgBorder"]
    > ![Select a data source.](media/copilot/copilot-3.png)
 
-2. Alternatively, on the **Properties** tab of the right-hand pane, set **Data source (Items)** to the desired Dataverse table as your source of data.
-
-3. Select the specific **Fields** and/or **View** over which the Copilot control answer questions.
-
+   Or, from the control **Properties** tab, select **Data source (Items)** and choose a Dataverse table for your data source.
    > [!div class="mx-imgBorder"]
    > ![Select fields or views.](media/copilot/copilot-4.png)
+   
 
-Due to current limitations, the Copilot control can answer questions over Dataverse tables that are smaller in size.
+2. Select the specific **Fields** and/or **View** that the Copilot control will answer questions for.
+
+
+> [!NOTE]
+> - For lookups, add the related tables to your app by going to the app authoring menu and then select **Data** > **Add data**.
+
+Due to current limitations, the Copilot control can answer questions for Dataverse tables that are smaller in size.
 
 ## Configure the control (optional)
 

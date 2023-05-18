@@ -1,7 +1,7 @@
 ---
 title: "Use multi-tenant server-to-server authentication (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to access Microsoft Dataverse data across multiple tenants from an application or service without explicit user authentication." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 2/28/2019
+ms.date: 4/05/2019
 ms.reviewer: pehecke
 ms.topic: article
 author: ritesp # GitHub ID
@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: ritesp # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use multi-tenant server-to-server authentication
 
@@ -130,29 +127,9 @@ In the next step you will create a Dataverse application user. The privileges an
 
 ### Manually create a Dataverse application user  
 
- The procedure to create this unlicensed user is different from creating a licensed user. Use the following steps:  
-  
-1. Navigate to **Settings** > **Security** > **Users**.
-1. In the view drop-down, select **Application Users**.
-1. Click **New**. Then verify that you are using the **Application user** form.
+The interactive procedure to create an unlicensed application user is described in this article [Create an application user](/power-platform/admin/manage-application-users#create-an-application-user). After creating the application user, associate the user with the custom security role you created in [Create a security role for the application user](#bkmk_CreateSecurityRole).
 
-   If you do not see the **Application ID**, **Application ID URI** and **Azure AD Object ID** fields in the form, you must select the **Application User** form from the list:  
-  
-   :::image type="content" source="media/select-application-user-form.PNG" alt-text="Select Application User Form.":::
-  
-1. Add the appropriate values to the fields:
-  
-   |Field|Value|  
-   |-----------|-----------|  
-   |**Application ID**|The Application ID value for the application registered with Azure AD.|  
-   |**Full Name**|The name of your application.|  
-   |**Primary Email**|The email address you want your subscribers to use to contact you.|  
-  
-   The **User Name**, **Application ID URI** and **Azure AD Object ID** fields are locked and you cannot set values for these fields.  
-  
-   When you create this user the values for these fields will be retrieved from Azure AD based on the **Application ID** value when you save the user.  
-  
-1. Associate the application user with the custom security role you created in [Create a security role for the application user](#bkmk_CreateSecurityRole). More information: [Create users and assign security roles](/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles)  
+More information: [Manage application users in the Power Platform admin center](/power-platform/admin/manage-application-users)  
   
 <a name="bkmk_TestUsingYourTenant"></a>  
 

@@ -16,12 +16,8 @@ ms.assetid: 25f5aa52-56dc-4be5-884e-9346616f665f
 caps.latest.revision: 25
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Sort rows in a model-driven app view
 

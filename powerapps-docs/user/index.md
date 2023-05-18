@@ -8,15 +8,11 @@ ms.topic: overview
 ms.date: 3/14/2023
 ms.subservice: end-user
 ms.author: mkaur
-manager: "kvivek"
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # How do I find and run apps?

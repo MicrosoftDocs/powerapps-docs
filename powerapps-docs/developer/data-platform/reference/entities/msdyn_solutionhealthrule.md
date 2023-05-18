@@ -7,12 +7,8 @@ ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # msdyn_solutionhealthrule table/entity reference
@@ -187,7 +183,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|This message will be visible to end use when he/she tried to resolve rule failure.|
+|Description|This message will be visible to end use when they tried to resolve rule failure.|
 |DisplayName|Resolution Message|
 |FormatName|Text|
 |IsLocalizable|False|

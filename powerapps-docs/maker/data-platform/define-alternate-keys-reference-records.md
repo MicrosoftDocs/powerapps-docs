@@ -2,7 +2,7 @@
 title: "Define alternate keys to reference rows with Microsoft Dataverse | MicrosoftDocs"
 description: "Learn how to define alternate keys that can be used to reference rows in Microsoft Dataverse"
 ms.custom: ""
-ms.date: 01/12/2023
+ms.date: 03/30/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,12 +16,8 @@ ms.assetid: 29e53691-0b18-4fde-a1d0-7490aa227898
 caps.latest.revision: 10
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Define alternate keys to reference rows
 
@@ -79,6 +75,9 @@ Only these kinds of columns can be used to create alternate keys:
  - Date and Time
  - Lookup
  - Choice
+
+> [!NOTE]
+> Columns that have the **Enable column security** property enabled can’t be used as an alternate key. More information: [Field security tables]( /power-apps/developer/data-platform/field-security-entities)
 
 ### Number of keys
 

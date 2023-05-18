@@ -5,15 +5,11 @@ ms.date: 01/30/2023
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-manager: jstrauss
 ms.topic: get-started-article
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Build Windows client applications using the XRM tools
 

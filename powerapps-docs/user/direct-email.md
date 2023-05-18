@@ -2,7 +2,6 @@
 title: "Send email to multiple recipients | MicrosoftDocs"
 description: Learn how to send email to multiple recipients.
 author: sbmjais
-manager: shujoshi
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Send email to multiple recipients

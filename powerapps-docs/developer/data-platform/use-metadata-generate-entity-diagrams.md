@@ -9,9 +9,6 @@ ms.author: pehecke # MSFT alias of Microsoft employees only
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Use metadata to generate entity diagrams
