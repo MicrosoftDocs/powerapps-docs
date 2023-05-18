@@ -15,7 +15,7 @@ contributors:
   - mduelae
   - tashas
 ---
-# Preview your app
+# Preview an app
 
 When building an app, it's helpful to preview it and see how it will look for your users. When you preview an app, you can also preview how the app will appear on various devices and at different sizes, which can be especially beneficial if you're building a responsive application.
 
