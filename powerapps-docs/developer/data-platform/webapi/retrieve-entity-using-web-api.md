@@ -1,7 +1,7 @@
 ---
 title: "Retrieve a table row using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to form a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier"
-ms.date: 05/12/2023
+ms.date: 05/18/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -102,7 +102,7 @@ Anytime you need to uniquely identify an entity to retrieve, update, or delete, 
 
 When retrieving elastic table data stored in partitions be sure to specify the partition key when retrieving that data.
 
-More information: [Retrieve a record in an elastic table](../elastic-tables.md#retrieve-a-record-in-an-elastic-table)
+More information: [Retrieve a record in an elastic table](../use-elastic-tables.md#retrieve-a-record-in-an-elastic-table)
 
 ## Retrieve a single property value
 

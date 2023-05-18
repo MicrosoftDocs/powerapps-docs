@@ -5,7 +5,7 @@ ms.date: 05/18/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath # GitHub ID
-ms.author: dikmath # MSFT alias of Microsoft employees only
+ms.author: dikamath # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
