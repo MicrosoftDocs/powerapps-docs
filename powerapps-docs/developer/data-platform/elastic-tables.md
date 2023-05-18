@@ -914,7 +914,7 @@ An upsert operation is similar to update. The difference is that if a record wit
 
 #### [SDK for .NET](#tab/sdk)
 
-This example upserts a row in the `contoso_SensorData` table with the specified `id` and `partitionid` = 'deviceid-001'.
+This example upserts a row in the `contoso_SensorData` table with the specified `id` and `partitionid` = `deviceid-001`.
 
 ```csharp
 /// <summary>
@@ -1034,7 +1034,7 @@ There are two different ways to compose a URL to delete a record using the `part
    > [!NOTE]
    > For GET and DELETE operations parameter has a capital `I` for `Id`.
 
-This example deletes a row in `contoso_SensorData` table with `contoso_sensordataid` = '02d82842-f3f4-ed11-8848-000d3a993550' and `partitionid` = 'deviceid-001' using the alternate key style.
+This example deletes a row in `contoso_SensorData` table with `contoso_sensordataid` = `02d82842-f3f4-ed11-8848-000d3a993550` and `partitionid` = `'deviceid-001'` using the alternate key style.
 
 **Request**
 
