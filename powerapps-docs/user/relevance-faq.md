@@ -29,7 +29,7 @@ Your administrator defines the scope of content that's searched. An administrato
 
 ## Why am I not seeing search results from a table that is enabled for Dataverse search?
 
-If a table is not part of the model-driven app, it's not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. For more information see, [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
+If a table isn't part of the model-driven app, it's not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. For more information see, [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
 
 ## Can I configure quick actions to show or hide certain commands?
@@ -54,11 +54,11 @@ Currently, Dataverse search searches your data in Microsoft Dataverse only. Shar
 
 Party list fields are special fields that aren't searchable or viewable in the results page. 
 
-## How come returns do not support HTLM formatting for memo data types?
+## How come returns don't support HTLM formatting for memo data types?
 
-Dataverse search does not return HTML formatting for memo types to optomize the UI experience.
+Dataverse search doesn't return HTML formatting for memo types to optomize the UI experience.
 
-## Why columns are not enabled for Dataverse search after adding to a quick find view?
+## Why columns aren't enabled for Dataverse search after adding to a quick find view?
 
 Columns are enabled for Dataverse search only if a quick find view is set as the default view. For more information on how to set a default view, see [Specify a default view for a table](../maker/model-driven-apps/specify-default-views.md#specify-a-default-view-for-a-table).
 
@@ -68,7 +68,7 @@ Data from the Owner column isn't available for search and suggest operations. Mo
 
 ## How is the Dataverse search API throttled?
 
-When using the Dataverse search API, there is a throttling limit of one request per second for each user. Additionally, there is a throttling limit of 150 requests per minute per organization.
+When using the Dataverse search API, there's a throttling limit of one request per second for each user. Additionally, there's a throttling limit of 150 requests per minute per organization.
 
 ### See also
 
