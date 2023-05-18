@@ -474,7 +474,10 @@ OData-Version: 4.0
 
 ## Upsert a record in an elastic table
 
-An upsert operation is similar to update. The difference is that if a record with given id and `partitionid` doesn't exist it will be created. If it already exists, it will be updated.
+> [!IMPORTANT]
+> Upsert operations with elastic tables are different than with standard tables. Upsert operations are expected to contain the full payload will over-write any existing record.
+
+With elastic tables, if a record with given id and `partitionid` doesn't exist it will be created. If it already exists, it will be replaced.
 
 #### [SDK for .NET](#tab/sdk)
 

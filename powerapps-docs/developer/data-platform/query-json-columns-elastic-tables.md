@@ -16,104 +16,7 @@ contributors:
 
 Elastic table supports a new JSON format for text columns. This column can be used to store schema-less arbitrary json as per application needs. You can use the `ExecuteCosmosSQLQuery` message to run any Cosmos SQL query directly against your elastic table and filter rows based on properties inside JSON.
 
-## Create a column with Json format
-
-This example creates a string column `contoso_SensorValue` with Json format in our `contoso_SensorData` elastic table. For cases where large json need to be stored, instead of using `StringAttributeMetadata` type, we can use `MemoAttributeMetadata` type with JSON format.
-
-#### [SDK for .NET](#tab/sdk)
-
-This function creates a new <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> column using the <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> class.
-
-```csharp
-public static Guid CreateJsonAttribute(IOrganizationService service)
-{
-   var request = new CreateAttributeRequest
-   {
-         EntityName = "contoso_sensordata",
-         Attribute = new StringAttributeMetadata
-         {
-            SchemaName = "contoso_SensorValue",
-            RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-            MaxLength = 1000,
-            FormatName = StringFormatName.Json,
-            DisplayName = new Label("Sensor Value", 1033),
-            Description = new Label("Stores unstructured sensor data as reported by device", 1033)
-         }
-   };
-
-   var response = (CreateAttributeResponse)service.Execute(request);
-
-   return response.AttributeId;
-}
-```
-
-More information: [Add a String column to a table](org-service/create-custom-entity.md#add-a-string-column-to-the-custom-table)
-
-
-#### [Web API](#tab/webapi)
-
-This request creates a new <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata> column by posting to the Web API `EntityDefinitions` resource referring to the `contoso_sensordata` table.
-
-**Request**
-
-```http
-POST [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='contoso_sensordata')/Attributes
-MSCRM.SolutionUniqueName: examplesolution
-Accept: application/json  
-Content-Type: application/json; charset=utf-8  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-
-{
-   "AttributeType":"String",
-   "AttributeTypeName":{
-      "Value":"StringType"
-   },
-   "Description":{
-      "@odata.type":"Microsoft.Dynamics.CRM.Label",
-      "LocalizedLabels":[
-         {
-            "@odata.type":"Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label":"Contains sensor data reported by IOT devices as JSON values",
-            "LanguageCode":1033
-         }
-      ]
-   },
-   "DisplayName":{
-      "@odata.type":"Microsoft.Dynamics.CRM.Label",
-      "LocalizedLabels":[
-         {
-            "@odata.type":"Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label":"sensorvalue",
-            "LanguageCode":1033
-         }
-      ]
-   },
-   "RequiredLevel":{
-      "Value":"None",
-      "CanBeChanged":true,
-      "ManagedPropertyLogicalName":"canmodifyrequirementlevelsettings"
-   },
-   "SchemaName":"sensorvalue",
-   "@odata.type":"Microsoft.Dynamics.CRM.StringAttributeMetadata",
-   "FormatName":{
-      "Value":"Json"
-   },
-   "MaxLength":3500
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 No Content  
-OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
-```
-
-More information: [Create columns](webapi/create-update-entity-definitions-using-web-api.md#create-columns)
-
----
+For an example showing how to create a JSON column, see [Create a column with Json format](create-elastic-tables.md#create-a-column-with-json-format)
 
 ## Set Json column data
 
@@ -149,7 +52,6 @@ public static Guid CreateWithJsonData(IOrganizationService service, string devic
 ```
 
 #### [Web API](#tab/webapi)
-
 
 **Request**
 

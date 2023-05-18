@@ -56,6 +56,8 @@ Use standard tables when:
 
 The choice of table should be based on the specific needs of your application. A combination of both types of tables may be appropriate.
 
+
+
 ## Partitioning and horizontal scaling
 
 Elastic tables use Azure Cosmos DB partitioning to scale individual tables to meet the performance needs of your application. All elastic tables contain a system-defined **Partition Id** string column with the schema name `PartitionId` and logical name `partitionid`.
@@ -96,18 +98,22 @@ More information: [Work with Session token](use-elastic-tables.md#work-with-sess
 
 Elastic tables do not support multi-record transactions. This means that for a single request execution, multiple write operation happening in same or different synchronous plugin stages are not transactional with each other.
 
-For example, if you have a synchronous plug-in step registered on the `PostOperation` stage of the `Create` message on an elastic table, any error in your plug-in will not roll back the created record in Dataverse. You cannot cancel the operation by throwing a [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException) in the `PreOperation` or `PostOperation` synchronous stages. The request will return an error, but the data operation will succeed.
+For example, if you have a synchronous plug-in step registered on the `PostOperation` stage of the `Create` message on an elastic table, any error in your plug-in will not roll back the created record in Dataverse. You should always avoid intentionally cancelling any operation by throwing a [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException) in the `PreOperation` or `PostOperation` synchronous stages. If the error is thrown after the `Main` operation, the request will return an error, but the data operation will succeed. If any write operations are started in the `PreOperation` stage, they will also succeed.
 
-However, you can apply validation rules in a plug-in registered for the `PreValidation` synchronous stage. This is the correct stage to apply validation logic. The request will return an error and the data operation will not begin. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline)
+However, you should always apply validation rules in a plug-in registered for the `PreValidation` synchronous stage. This is the purpose of this stage. Even with elastic tables, the request will return an error and the data operation will not begin. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline)
 
-Multiple write operations within same the plugin execution are also not atomic.
-
-Elastic tables also do not support grouping requests in a single database transaction using the SDK [ExecuteTransactionRequest](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) class or in a Web API `$batch` operation change set.  More information:
+Multiple write operations within same the plugin execution are also not atomic. Elastic tables also do not support grouping requests in a single database transaction using the SDK [ExecuteTransactionRequest](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) class or in a Web API `$batch` operation change set.  More information:
 
 - [Execute messages in a single database transaction](org-service/use-executetransaction.md)
 - [Change sets](webapi/execute-batch-operations-using-web-api.md#change-sets)
 - [Known issue: Error not returned when grouping elastic table data operations in a transaction](#error-not-returned-when-grouping-elastic-table-data-operations-in-a-transaction)
 
+
+## Expire data with Time to live
+
+Dataverse automatically creates an integer column with the name **Time to live**, schema name `TTLInSeconds` and logical name `ttlinseconds`.
+
+When a value is set to this column, it defines the time in seconds after which row will expire and get deleted from database automatically.
 
 ## Scenario
 
