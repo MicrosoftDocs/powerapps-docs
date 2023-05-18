@@ -19,7 +19,8 @@ contributors:
 
 While building your canvas app, it can be beneficial to preview it periodically to get a sense of how it will appear to your users. With this feature, you can also preview how your app will appear on various devices and at different sizes, which can be especially helpful if you are constructing a responsive application.
 
-To see how your app will look for your app users, open the app for editing in [Power Apps Studio](https://create.powerapps.com), in the app actions menu, select the **Preview the app** button ![Preview button.](media/studio/preview-button.png). 
+To see how your app will look for your app users, open the app for editing in [Power Apps Studio](https://create.powerapps.com), in the app actions menu, select ![Preview button.](media/studio/preview-button.png)
+to **Preview the app**.
 
 You can preview your app to see how it will look on different devices using the device picker.  
 
