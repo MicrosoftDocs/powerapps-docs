@@ -31,6 +31,7 @@ Legend:
 1. **Tablet Devices**: Allows you to select from common tablet devices from several manufacturers, along with the ability to select a custom size based on your needs. This option shows a device frame and device safe zone, shown as the black area either on the top and bottom or sides depending upon the orientation. It also shows a black area with the home bar at the bottom.  
 2. **Mobile devices**: Lets you to select from common phones from several manufacturers, along with the ability to select a custom size based on your needs. This option shows a device frame and device safe zone, shown as the black area either on the top and bottom or sides depending upon the orientation. It also shows a black area with the home bar at the bottom. 
 3. **Web view**: Lets you to preview what the app will look like on a web browser. You can select Window size to fill the browser window, or you can specify a custom size to emulate your app embedded at a certain size. This option does not include a device frame.  
+4. **Orientation Switcher**: Switch between vertical and horizontal orientation. This button will be disabled if the Lock Orientation setting is set to **On**. 
 
 ## Display settings
 The behavior of your app using each of the preview options will depend on the app type and selected display settings. 
