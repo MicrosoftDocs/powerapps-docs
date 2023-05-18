@@ -12,7 +12,7 @@ ms.custom: template-how-to
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The goal of these plug-ins is to help you get started by simply integrating into your app. You will understand the authoring experience includes authoring Dataverse customAPIs backed by powerfx expressions which can trigger actions internal or external to Dataverse. 
+The goal of these example plug-ins is to help you get started by integrating them into your apps. You'll understand the authoring experience includes authoring Microsoft Dataverse custom APIs backed by Power Fx expressions, which can trigger actions internal or external to Dataverse.
 
 > [!IMPORTANT]
 > - This is an experimental feature. Use this if you're an early adopter, see something useful to you, and would like to help test the feature.
@@ -100,10 +100,10 @@ In-app notifications enable makers to configure contextual, actionable notificat
 
 ### Invoke the in-app notification instant action
 
-1. Select the **Service Order App** canvas app, and then select **Edit** on the command bar.
-1. Select the **SchedulingResultScreen** page on the left navigation pane.
+1. Select a canvas app and then select **Edit** on the command bar.
+1. Select screen on the left navigation pane, or create a new one.
 1. On the **Insert** menu, add a **Button** to the page using the **Text** *Notify technician*.
-1. Select the button, and enter the following in the **fx** formula bar, where *DataCardValue17* is the column that contains the Order ID, and *DataCardValue15* is the column that contains the technician’s email address.:
+1. Select the button, and enter the following in the **fx** formula bar, where *DataCardValue17* is the column that contains the Order ID, and *DataCardValue15* is the column that contains the technician’s email address. In this example, a canvas app named **Service Order App** is used.
 	```powerapps-dot
        Environment.cr8b8_Notifytechnician1(
        {OrderID: DataCardValue17.Text,
@@ -205,12 +205,44 @@ To set the button to invoke the stored procedure:
    For an example, there's a stored procedure named *cr8b8_FindBestTech*, that has an input parameter of *customerZipCode* in SQL and a canvas app form has a column named *ZipCode*, you create it as: 
    
    ```powerappsfl
-Environment.cr8b8_FindBestTech ({
+   Environment.cr8b8_FindBestTech ({
    customerZipCode: ZipCode.text,
    }
    );
    ```
 
-1. The formula to populate the plug-in is now complete. Select the button in the running app. Then, it takes the input values from the columns specified, and passes them to SQL for processing. Then the stored procedure processes the data based on its configuration.
+1. The formula to populate the plug-in is complete. Select the button in the running app. Then, it takes the input values from the columns specified, and passes them to SQL for processing. The stored procedure processes the data based on its configuration.
 
+### How to get the stored procedure results
 
+At this time, plug-ins can't pass output values back to Dataverse. So you'll be limited to stored procedures that, once run, process and handle the result entirely in SQL. You can however access the output if it's stored in a SQL table. You can do that by creating a virtual table using the SQL server connector. The virtual table allows you to view and manage the output data and integrate it with your Dataverse data and app. More information: [Create virtual tables using the virtual connector provider (preview)](create-virtual-tables-using-connectors.md) 
+
+### Stored procedure plug-ins limitations
+
+Currently stored procedures will only output the results into SQL. Due to this, you'll need to take additional steps if you need to use the output of these procedures in Dataverse. In the future, outputs to Dataverse will be supported.
+
+Once the formula is generated and the input parameters are configured, you can't edit them directly. Currently, instead of making changes to the existing plug-in you must create a new one.
+
+If a stored procedure runs longer than two minutes, Dataverse and the Power Apps (make.powerapps.com) timeout and you won't receive the completion notification. However, you can still directly access the SQL table to get the results though direct connections or virtual tables.
+
+Currently, there is no application lifecycle management (ALM) support for stored procedure plug-ins. This means they'll have to be re-created when moving solutions between environments.
+
+## Perform input validation to throw custom errors
+
+Create this plug-in to implement server-side input validation to ensure data quality is maintained no matter where the data is being accessed.
+
+1. Create a new automated plug-in.
+1. Provide the following values:
+   - **Name**: *Input validation*
+   - **Description**: *Checks for valid date and throws an error if invalid*
+   - **Table**:  **Appointment**
+   - **Run this plugin when the row is**: **Updated**
+1. Enter the formula below:
+
+   ```powerapps-dot
+   If(ThisRecord.'Due Date' < Now(), Error({ Kind: ErrorKind.Validation , Message: "The due date cannot be in the past" }))
+   ```
+1. Under **Advanced options**, set **When should this run** to **Pre-operation**; you want to run this rule before data is saved to prevent invalid data.
+1. Select **Save**.
+
+Go to the [Error() function](/power-platform/power-fx/reference/function-iferror#error) to learn more.

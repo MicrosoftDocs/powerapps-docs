@@ -16,7 +16,7 @@ Optimize your data architecture and reduce client-side load using Microsoft Data
 
 A plug-in is a custom event handler that executes in response to a specific event raised during processing of a Microsoft Dataverse data action. Traditionally, a plug-in was created as custom class compiled into a .NET Framework assembly that is then uploaded and registered with Dataverse. With low-code plug-ins, makers can create plug-ins with no or little coding and without having to manually register the plug-in.
 
-Low-code plug-ins are defined in a Dataverse database and integrated into Power Apps. They can add business logic using the Power Fx expression language and directly integrate with Dataverse business data and external data through Power Platform connectors. With low-code plug-ins, you can quickly build rich workflows with any code.
+Low-code plug-ins are defined in a Dataverse database and integrated into Power Apps. They can add business logic using the Power Fx expression language and directly integrate with Dataverse business data and external data through Power Platform connectors. With low-code plug-ins, you can quickly build rich workflows without any code.
 
 > [!IMPORTANT]
 > - This is an experimental feature. Use this if you're an early adopter, see something useful to you, and would like to help test the feature.
@@ -48,7 +48,7 @@ You can define input and output parameters that allow certain values in the form
 
 An automated plug-in is business logic that runs when a data event (create, update, or delete) occurs for a specified table. You can also design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.
 
-## Plug-in access 
+## Plug-in access
 
 Plug-ins run in the context of the user who invoked the plug-in:
 
@@ -74,6 +74,27 @@ Plug-ins access the following contexts natively in Dataverse:
     1. Select **Install**.
 
 Once the solution import has completed, the status is set to **Enabled** next to **Dataverse Accelerator**.
+
+## Calling low-code plug-ins as actions from a canvas app
+
+When a low-code plug-in is created for the first time, you'll be able to call the plug-ins as a Dataverse action inside a canvas app as described here: [Call Dataverse actions directly in Power Fx](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx-experimental). However, for any subsequent plugins created, you'll have to remove and re-add the Power Fx environment language object. Then you'll be able to see all the low-code plug-ins as actions.
+
+## When to use Dataverse plug-ins vs flows
+
+Since low-code plug-ins are real-time business logic that run on the Dataverse environment, logic is run directly on the server and is executed without additional API calls. Consider using plug-ins whenever you are dealing with business data in Dataverse.
+
+You can invoke plug-ins whether you are designing a Power App, Power Automate flow, or even an application with a different interface that uses the Dataverse web API.
+
+When to use Power Automate:
+
+- If you need to run business logic on a schedule.
+- If you need to connect to other external data.
+
+<!-- This is flagged for revision in doc-- Star – needs revision -->
+Imagine you have a custom table named jobapplication that's used for job applications in your organization.
+
+- When you want to create Jobapplication statistic record every night, which is a recurring task that runs every night. For this situation, create a flow in Power Automate.
+- When you want to create a Jobapplication record only when the student name is not available in the system. For this situation, use a Dataverse action.
 
 ## Create an instant low-code plug-in
 
@@ -250,6 +271,13 @@ On the **Integrate** tab of the test page, you can learn how to invoke the insta
 1. If an output parameter is defined for the low-code plug-in, capture the response using `Set()` or **UpdateContext()**, such as `Set( ActionResult, Environments.CalculateSum({ X: 10, Y: 200 , “The }sum is ” )) );`
 1. Add a label control and set the text value to the response captured. For example, set the text value of the label control to the variable `ActionResult`.
 1. Play the app and select the button to run the low-code plug-in.
+
+## Contacting Help + support
+
+For issues with the Dataverse Accelerator solution installation or low-code plug-ins, such as errors received, [use the Help + support experience](/power-platform/admin/get-help-support) and include the following information:
+
+- Problem Type- Dataverse Web API and SDK
+- Problem Subtype- Accelerator kit for Dataverse
 
 ## Example low-code plug-ins you can create
 
