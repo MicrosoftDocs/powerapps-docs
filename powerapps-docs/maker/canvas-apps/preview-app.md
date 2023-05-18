@@ -17,9 +17,9 @@ contributors:
 ---
 # Preview an app
 
-When building an app, it's helpful to preview it and see how it will look for your users. When you preview an app, you can also preview how the app will appear on various devices and at different sizes, which can be especially beneficial if you're building a responsive application.
+When building an app, it's helpful to preview it and see how it looks for your users. When you preview an app, you can also preview how the app will appear on various devices and at different sizes, this is especially beneficial when you're building a responsive app.
 
-To see how your app will look to app users, open the app for editing in [Power Apps Studio](https://create.powerapps.com) and in the app actions menu, select ![Preview button.](media/studio/preview-button.png)
+To preview how the app will look like for your app users, open the app for editing in [Power Apps Studio](https://create.powerapps.com) and in the app actions menu, select ![Preview button.](media/studio/preview-button.png)
 to **Preview the app**.
 
 You can preview the app to see how it will look on different devices using the device picker. 
