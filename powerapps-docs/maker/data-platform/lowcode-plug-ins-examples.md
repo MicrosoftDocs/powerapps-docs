@@ -70,7 +70,7 @@ Here's an email template example that you can create for the SenMail based data 
 
 The confirmation message **Plugin successfully saved** appears.
 
-## SendInapp notifications based on an instant action
+## Send in-app notifications based on an instant action
 
 In-app notifications enable makers to configure contextual, actionable notifications for users in model-driven apps.
 
@@ -98,7 +98,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
 1. Select **Next**.
 1. On the **Summary** page, select **Save**.
 
-### Invoke the in app notification instant action
+### Invoke the in-app notification instant action
 
 1. Select the **Service Order App** canvas app, and then select **Edit** on the command bar.
 1. Select the **SchedulingResultScreen** page on the left navigation pane.
@@ -113,3 +113,10 @@ In-app notifications enable makers to configure contextual, actionable notificat
        Notify("The technician was notified!", NotificationType.Success, 2000);
 
 	 ```
+   :::image type="content" source="media/low-code-plugin-ex-notify-inapp.png" alt-text="Add a button with Power Fx formula to send notification to technician":::
+1. **Save** and **Publish** your changes.
+
+When the notify technician action is selected in the app, an in-app notification is sent to the technician who has been assigned to the service order. An action on the notification opens the service order details in a side pane.
+
+:::image type="content" source="media/low-code-plugin-ex-notification-sent.png" alt-text="Notification sent to technician who receives in app":::
+
