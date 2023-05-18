@@ -49,9 +49,10 @@ When setting up an Azure Synapse Link for Dataverse, you can enable the **export
 
 ## Prerequisites
 
-- Azure Synapse Link for Dataverse. This guide assumes that you have already met the prerequisites to create an Azure Synapse Link with a Synapse workspace. More information: [Prerequisites](azure-synapse-link-synapse.md#prerequisites)
-- An Azure Synapse workspace under the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant. For information about how to create the workspace, go to: [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace)
-- A Spark Pool in the connect Azure Synapse workspace with Apache Spark Version 3.1 using this [recommended Spark Pool configuration](#recommended-spark-pool-configuration). For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool).
+- Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
+- Synapse workspace: You must have a Synapse workspace and **Owner** and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
+- A Spark Pool in the connected Azure Synapse workspace with **Apache Spark Version 3.1** using this [recommended Spark Pool configuration](#recommended-spark-pool-configuration). For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool).
 - The Microsoft Dynamics 365 minimum version requirement to use this feature is 9.2.22082. More information: [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates#how-to-enableearly-access-updates)
 
 ### Recommended Spark Pool configuration
