@@ -282,3 +282,7 @@ For issues with the Dataverse Accelerator solution installation or low-code plug
 ## Example low-code plug-ins you can create
 
 For a few examples of how to create a low-code plug-in, go to [Example Dataverse low-code plug-ins (experimental)](lowcode-plug-ins-examples.md)
+
+## See also
+
+[Low-code plug-ins Power Fx (preview)](low-code-plug-ins-powerfx.md)
