@@ -81,9 +81,8 @@ The following table lists the Power Fx formulas that have limitations or don’t
 ## See also
 
 The Power Fx documentation is the primary source of information about Power Fx. When you’re working with actions, you’ll find the following articles helpful:
-•	Expression grammar
-•	Operators
-•	Variables
-•	Formula reference
 
-
+- [Expression grammar](/power-platform/power-fx/expression-grammar)
+- [Operators](/power-platform/power-fx/operators)
+- [Variables](/power-platform/power-fx/variables)
+- [Formula reference](/power-platform/power-fx/formula-reference)
