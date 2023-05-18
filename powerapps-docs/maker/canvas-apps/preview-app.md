@@ -17,12 +17,12 @@ contributors:
 ---
 # Preview an app
 
-When you create an app, it's helpful to preview it and see how it will look for your users. When you preview an app, you can also preview how the app will appear on various devices and at different sizes, this is especially beneficial when you're building a responsive app.
+When you create an app, it's helpful to preview it and see how it will look for your users. When you preview an app, you can also preview how the app appears on various devices and at different sizes, this is especially beneficial when you're building a responsive app.
 
 To preview an app, open the app for editing in [Power Apps Studio](https://create.powerapps.com), in the app actions menu, select the ![Preview button.](media/studio/preview-button.png)
 **Preview the app** button.
 
-You can preview the app to see how it will look on different devices using the device picker. 
+You can preview the app to see how it looks on different devices using the device picker. 
 
 > [!div class="mx-imgBorder"] 
 > ![Preview your app.](media/studio/preview-app.png)
@@ -43,7 +43,7 @@ VIDEO LINK
 
 The way the preview appears can differ based on the app settings and whether you selected a phone or tablet layout during the app creation process.
 
-- Apps created using the phone setting can still be viewed in the preview while selecting a tablet type device from the device picker, but if the app wasn't built using responsive app creation techniques, the app appears in a phone shape on tablet devices. You get a message explaining why the preview is narrow. If you’d like the app to be responsive to phone, tablet, and web sizes then we recommend selecting the tablet option when you create your app. You can use responsive auto layout containers to determine the flow of the content for different screen sizes including phones. More information: [Building responsive canvas apps](build-responsive-apps.md)  
+- If an app is created using the phone layout, you can still preview it by using the device picker by selecting a tablet layout. However, if the app isn't created using a responsive layout, it then appears in a phone shape on the tablet device on tablet devices. You get a message explaining why the preview is narrow. If you’d like the app to be responsive to phone, tablet, and web sizes then we recommend selecting the tablet option when you create an app. You can use responsive auto layout containers to determine the flow of the content for different screen sizes including phones. More information: [Building responsive canvas apps](build-responsive-apps.md)  
 
 - Under Display settings:
    - **Scale To Fit**: When set to **On** your entire app is scaled to fit the available space. If a smaller space is available to the app, you may notice empty space on the sides to accommodate the scaling. When a user plays the app, they will also see the empty space.
