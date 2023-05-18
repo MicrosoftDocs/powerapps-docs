@@ -125,7 +125,6 @@ Accept: application/json
 
 ```json
 {
-"PageSize":1000,
 "FetchXml": "<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
 <entity name='account'>
 <attribute name='accountid' />
@@ -136,6 +135,17 @@ Accept: application/json
 </entity>
 </fetch>",
 "EntityName" : "account"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+{
+    "@odata.context": "[Organization Uri]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.ValidateRetentionConfigResponse",
+    "IsValidationSuccessful": true,
+    "ErrorMessage": null
 }
 ```
 
@@ -166,16 +176,40 @@ Accept: application/json
 
 **JSON body**
 
-The following is an example of JSON body to call all the retention on the opportunity record.
+The following is an example of JSON body to call all the retention on the email record.
 
 ```json
 {
 "OperationId":"fd2639b2-f300-408c-b605-75febff98d4f" ,
 "Target":{
-"@odata.type": "Microsoft.Dynamics.CRM.opportunity",
-"opportunityid": "8b9cc8c0-8c08-46cf-a5c3-00057edc8e4e"}
+"@odata.type": "Microsoft.Dynamics.CRM.email",
+"activityid": "8b9cc8c0-8c08-46cf-a5c3-00057edc8e4e"}
 }
 ```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+{
+    "@odata.context": "[Organization Uri]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.RetainResponse",
+    "EntityCountCollection": {
+        "Count": 3,
+        "IsReadOnly": false,
+        "Keys": [
+            "activityparty",
+            "activitypointer",
+            "email"
+        ],
+        "Values": [
+            2,
+            1,
+            1
+        ]
+    }
+}
+```
+
 ---
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
