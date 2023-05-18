@@ -31,7 +31,7 @@ Legend:
 1. **Tablet Devices**: Allows you to select from common tablet devices from several manufacturers, along with the ability to select a custom size based on your needs. This option shows a device frame and device safe zone, shown as the black area either on the top and bottom or sides depending upon the orientation. It also shows a black area with the home bar at the bottom.  
 2. **Mobile devices**: Lets you select from common phones from several manufacturers, along with the ability to select a custom size based on your needs. This option shows a device frame and device safe zone, shown as the black area either on the top and bottom or sides depending upon the orientation. It also shows a black area with the home bar at the bottom. 
 3. **Web view**: Lets you preview what the app looks like on a web browser. You can select Window size to fill the browser window, or you can specify a custom size to emulate your app embedded at a certain size. This option does not include a device frame.  
-4. **Orientation Switcher**: Switch between vertical and horizontal orientation. This button is disabled if the Lock Orientation setting is set to **On**. 
+4. **Orientation Switcher**: Switch between vertical and horizontal orientation. The **Orientation Switcher** option is disabled if the Lock Orientation setting is set to **On**. 
 
 ## Display settings
 
@@ -51,7 +51,7 @@ The way the preview appears can differ based on the app settings and whether you
 
 ## Known Issues 
 
-- If **Scale To Fit** setting is on and **Lock Aspect Ratio** is off, your preview won't accurate. This configuration is not recommended. More information: [Change screen size and orientation of canvas apps](set-aspect-ratio-portrait-landscape.md)  
+- If **Scale To Fit** setting is on and **Lock Aspect Ratio** is off, your preview won't accurate. This configuration isn't recommended. More information: [Change screen size and orientation of canvas apps](set-aspect-ratio-portrait-landscape.md)  
 
 - If **Scale to Fit** is off and you resize your browser window while in preview mode, the preview won't be accurate. To address the issue, close and reopen the preview once your browser window is in the desired size. 
 
