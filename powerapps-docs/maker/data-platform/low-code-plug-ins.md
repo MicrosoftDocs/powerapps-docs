@@ -79,13 +79,13 @@ Once the solution import has completed, the status is set to **Enabled** next to
 
 When a low-code plug-in is created for the first time, you'll be able to call the plug-ins as a Dataverse action inside a canvas app as described here: [Call Dataverse actions directly in Power Fx](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx-experimental). However, for any subsequent plugins created, you'll have to remove and re-add the Power Fx environment language object. Then you'll be able to see all the low-code plug-ins as actions.
 
-## When to use Dataverse plug-ins vs flows
+## When to use Dataverse plug-ins vs Power Automate flows
 
 Since low-code plug-ins are real-time business logic that run on the Dataverse environment, logic is run directly on the server and is executed without additional API calls. Consider using plug-ins whenever you are dealing with business data in Dataverse.
 
 You can invoke plug-ins whether you are designing a Power App, Power Automate flow, or even an application with a different interface that uses the Dataverse web API.
 
-When to use Power Automate:
+When to use Power Automate flows:
 
 - If you need to run business logic on a schedule.
 - If you need to connect to other external data.
@@ -206,10 +206,11 @@ The option to install the low-code plug-in for connectors wizard is provided whe
 1.	You can install the Dataverse Accelerator two ways:
    - App Source 
    - In the Power Platform admin center
-2.	When the installer launches, select the environment.
-3. An option to install the low-code plug-ins for connectors solution is displayed. Make sure the checkbox is selected if you want to install the solution.
-4. Review the terms of service.
-5. Select **Install**.
+1.	When the installer launches, select the environment.
+1. An option to install the low-code plug-ins for connectors solution is displayed. Make sure the checkbox is selected if you want to install the solution.
+   :::image type="content" source="media/low-code-plugin-for-connectors-optin.png" alt-text="Install the low-code plug-ins for connectors solution":::
+1. Review the terms of service.
+1. Select **Install**.
 
 Once you have installed the solution, play the Dataverse Accelerator app and [Create the low-code plug-in that uses connectors](#create-the-low-code-plug-in-that-uses-connectors).
 
