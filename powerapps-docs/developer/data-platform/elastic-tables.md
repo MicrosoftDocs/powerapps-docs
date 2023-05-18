@@ -79,29 +79,79 @@ When `partitionid` is not specified for a row, Dataverse uses the primary key as
 
 ### Consistency level
 
-Elastic tables support [session consistency](/azure/cosmos-db/consistency-levels#session-consistency). Elastic tables use *session tokens* to achieve session consistency. Session tokens are opaque strings returned by Dataverse when a client performs any write operation (create/update/delete).
+Elastic table supports strong consistency within a logical session. A logical session here represents a logical connection between client and Dataverse. When a client performs a write operation on an elastic tables, it receives a session token that uniquely identifies this logical session. The session token is then included in subsequent requests to maintain the logical session context.
 
-When the client performs a subsequent read operation, it includes the session token in the request, allowing Dataverse to return the most up-to-date data for that client.
+With session tokens, all the read operations performed within the same logical session will return the most recent write made within that logical session. In other words, reads are guaranteed to honor the read-your-writes, and write-follows-reads guarantees within a logical session. If a different logical session performs a write operation, other logical sessions may not see those changes immediately.
+
+You will find session token as `x-ms-session-token` header in response of all write operations.  
+
+When calling a retrieve API, you can use `MSCRM.SessionToken` header to pass corresponding `x-ms-session-token` to retrieve the most up-to-date row. If you retrieve a record without a session token, the changes applied recently may not be applied, but will eventually be returned.
+
+<!-- Elastic tables support [session consistency](/azure/cosmos-db/consistency-levels#session-consistency). Elastic tables use *session tokens* to achieve session consistency. Session tokens are opaque strings returned by Dataverse when your client performs any write operation (create/update/delete).
+
+When your client performs a subsequent read operation, include the session token in the request, allowing Dataverse to return the most up-to-date data for that client. -->
+
+#### Getting the session token
 
 You will find session token as `x-ms-session-token` header in response of all write operations.
 
-When calling a retrieve API, you can use `MSCRM.SessionToken` header to pass corresponding `x-ms-session-token` to retrieve the most up-to-date row value.
+#### [SDK for .NET](#tab/sdk)
+
+For any [OrganizationResponse](xref:Microsoft.Xrm.Sdk.OrganizationResponse) that performs a write operation ([CreateResponse](xref:Microsoft.Xrm.Sdk.Messages.CreateResponse),[UpdateResponse](xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse),[UpsertResponse](xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse),[DeleteResponse](xref:Microsoft.Xrm.Sdk.Messages.DeleteResponse)) you can capture the `x-ms-session-token` in the [Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results) collection.
+
+> [!NOTE]
+> [DeleteResponse](xref:Microsoft.Xrm.Sdk.Messages.DeleteResponse) does not currently return the x-ms-session-token. More information: [Known issues: x-ms-session-token value not returned for delete operations](#x-ms-session-token-value-not-returned-for-delete-operations)
+
+```csharp
+string sessionToken = response.Results["x-ms-session-token"].ToString();
+```
+
+#### [Web API](#tab/webapi)
+
+The session token value will be returned as the `x-ms-session-token` response header.
+
+> [!NOTE]
+> DELETE operations do not currently return the x-ms-session-token. More information: [Known issues: x-ms-session-token value not returned for delete operations](#x-ms-session-token-value-not-returned-for-delete-operations)
+
+```http
+x-ms-session-token: 240:8#144100870#7=-1
+```
+
+---
+
+#### Sending the session token
+
+How you send the session token in a read operation depends on whether you are using the SDK or Web API.
+#### [SDK for .NET](#tab/sdk)
+
+When performing an operation that retrieves data, set the `SessionToken` optional parameter on the [OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest).
+
+```csharp
+
+var request = new RetrieveRequest
+{
+   Target = new EntityReference("contoso_sensordata", sensordataid),
+   ColumnSet = new ColumnSet("contoso_value"),
+   ["partitionId"] = deviceId,
+   ["SessionToken"] = sessionToken
+};
+
+```
+
+#### [Web API](#tab/webapi)
+
+When performing a `GET` operation, use `MSCRM.SessionToken` request header to pass corresponding `x-ms-session-token` to retrieve the most up-to-date row value.
+
+```http
+MSCRM.SessionToken: 240:8#144100870#7=-1
+```
+---
 
 ### Transactional behavior
 
-Elastic tables are vastly different from standard tables when it comes to transactional guarantees.
+Elastic tables do not support multi-record transactions. This means that for a single request execution, multiple write operation happening in same or different synchronous plugin stages are not transactional with each other.
 
-For standard tables, transactions are a fundamental concept and are used to group a set of requests into a single unit of work that must be either fully completed or fully rolled back in case of failure. Standard tables provide **ACID** guarantees for transactions, meaning that each transaction is:
-
-- **A**tomic: All or nothing
-- **C**onsistent: Maintains data integrity
-- **I**solated: Transactions don't interfere with each other
-- **D**urable: Committed transactions are permanent
-
-In contrast, elastic tables currently do not support transaction in any form.
-For single request execution, write operation happening in synchronous plugin stages are **NOT** transactional.
-
-For example, if you have a synchronous plug-in step registered on the `PostOperation` stage for the `Create` message an elastic table, any error in your plug-in will not roll back the operation.
+For example, if you have a synchronous plug-in step registered on the PostOperation stage for Create message on an elastic table, any error in your plug-in will not roll back the created record in Dataverse.
 
 Multiple write operations within same the plugin execution are also not atomic.
 
@@ -171,6 +221,7 @@ More information: [Create a custom table using code](org-service/create-custom-e
 
 #### [Web API](#tab/webapi)
 
+Set the [EntityMetadata](xref:Microsoft.Dynamics.CRM.EntityMetadata) `TableType` property to `Elastic`.
 
 **Request**
 
@@ -433,7 +484,7 @@ public static Guid CreateExample(IOrganizationService service, string deviceId, 
 }
 ```
 
-Use the `x-ms-session-token` value to set the `SessionToken` optional parameter when retrieving the record.
+Use the `x-ms-session-token` value returned to set the `SessionToken` optional parameter when retrieving the record. More information: [Sending the session token](#sending-the-session-token)
 
 #### [Web API](#tab/webapi)
 
@@ -465,20 +516,19 @@ x-ms-session-token: 240:8#144035050#7=-1
 OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
 ```
 
-> [!NOTE]
-> The `x-ms-session-token` value returned can be used to with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. More information: [Consistency level](#consistency-level)
+Use the `x-ms-session-token` value returned with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. More information: More information: [Sending the session token](#sending-the-session-token)
 
 ---
 
 ### Update a record in an elastic table
 
-This example updates sensor `contoso_value` and `contoso_timestamp` of an existing row in `contoso_SensorData` table with using the `contoso_sensordataid` primary key and `partitionid` = `'device-001'`. Note that primary key and `partitionid` columns are always required to uniquely identify an existing elastic table row. The `partitionid` of an existing row cannot be updated and is only being used to uniquely identify the row to update.
+This example updates the `contoso_value` and `contoso_timestamp` values of an existing row in `contoso_SensorData` table with using the `contoso_sensordataid` primary key and `partitionid` = `'device-001'`. Note that primary key and `partitionid` columns are always required to uniquely identify an existing elastic table row. The `partitionid` of an existing row cannot be updated and is only being used to uniquely identify the row to update.
 
 This example uses the `KeyForNoSqlEntityWithPKPartitionId` alternate key to uniquely identify the record using both the primary key and the `partitionid`. More information: [Alternate keys](#alternate-keys)
 
 #### [SDK for .NET](#tab/sdk)
 
-This example shows using the partitionid value as an alternate key.
+This example shows using the `partitionid` value as an alternate key.
 
 ```csharp
 /// <summary>
@@ -487,7 +537,8 @@ This example shows using the partitionid value as an alternate key.
 /// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
 /// <param name="sensordataid">The unique identifier of the contoso_sensordata table.</param>
 /// <param name="deviceId">The value used as partitionid for the contoso_sensordata table. </param>
-public static void UpdateExample(IOrganizationService service, Guid sensordataid, string deviceId)
+/// <param name="sessionToken">The current session token</param>
+public static void UpdateExample(IOrganizationService service, Guid sensordataid, string deviceId, ref string sessionToken)
 {
     var keys = new KeyAttributeCollection() {
         { "contoso_sensordataid", sensordataid },
@@ -499,27 +550,87 @@ public static void UpdateExample(IOrganizationService service, Guid sensordataid
         Attributes = {
             { "contoso_value", 60 },
             { "contoso_timestamp", DateTime.UtcNow }
-         }
+        }
     };
 
-    service.Update(entity);
+    var request = new UpdateRequest { 
+        Target = entity,
+        ["SessionToken"] = sessionToken
+    };
+
+    var response = (UpdateResponse)service.Execute(request);
+
+    // Capture the session token
+    sessionToken = response.Results["x-ms-session-token"].ToString();
 }
 ```
 
 More information: [Use an alternate key to reference a record > Using the Entity class](use-alternate-key-reference-record.md#using-the-entity-class)
 
-This example shows using the PartitionId optional parameter.
+This example shows using the `partitionId` optional parameter.
+
+```csharp
+/// <summary>
+/// Demonstrates updating elastic table row with partitionid set as optional Parameter.
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="sensordataid">The unique identifier of the contoso_sensordata table.</param>
+/// <param name="deviceId">The value used as partitionid for the contoso_sensordata table. </param>
+/// <param name="sessionToken">The current session token</param>
+public static void UpdateExampleOptionalParameter(
+    IOrganizationService service, 
+    Guid sensordataid, 
+    string deviceId, 
+    ref string sessionToken)
+{
+
+    var entity = new Entity("contoso_sensordata", sensordataid)
+    {
+        Attributes = {
+            { "contoso_value", 60 },
+            { "contoso_timestamp", DateTime.UtcNow }
+        }
+    };
+
+    var request = new UpdateRequest { 
+        Target = entity,
+        ["partitionId"] = deviceId,
+        ["SessionToken"] = sessionToken
+    };
+
+    var response = (UpdateResponse)service.Execute(request);
+
+    // Capture the session token
+    sessionToken = response.Results["x-ms-session-token"].ToString();
+
+}
+```
 
 #### [Web API](#tab/webapi)
+
+When applying an update, you need to uniquely identify the record you are going to update.
+
+- You can use the alternate key style:
+
+   `contoso_sensordatas(contoso_sensordataid=<primary key value>,partitionid='<partitionid value>')
+
+   More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
+
+- Or you can use the `partitionId` query parameter.
+
+   `contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'`
+
+The following example uses the alternate key style.
 
 **Request**
 
 ```http
-PATCH [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=<Guid Value>,partitionid='deviceid-001')
+PATCH [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=<Guid Value>,partitionId='deviceid-001')
 Content-Type: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 Accept: application/json
+MSCRM.SessionToken: 240:8#144035978#7=-1
 If-Match: *
 
 {
@@ -608,9 +719,9 @@ There are two different ways to compose a URL to retrieve a record using the `pa
    `contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'&$select=contoso_value`
 
    > [!NOTE]
-   > The parameter has a capital `I` for `Id`.
+   > For GET and DELETE operations parameter has a capital `I` for `Id`.
 
-Either way, the response is the same.
+The following example uses the `partitionId` query parameter.
 
 **Request**
 
@@ -640,12 +751,19 @@ OData-Version: 4.0
 
 ---
 
-### Query rows in a single logical partition of an elastic table
+### Query rows of an elastic table
 
-These examples retrieve the first 5000 rows in the `contoso_SensorData` table which belong to logical `partitionid` = 'deviceid-001'.
+When you query the rows of an elastic table you will get best performance if you limit your query to a specific partition. If you don't limit your query to a specific partition, your query will return data across all logical partitions, which is not as fast.
+
 
 > [!NOTE]
-> When used this way, the value must use `partitionId` (capital 'I') rather than `partitionid` (all lower case).
+> When used this way, the parameter must use the name `partitionId` (capital 'I') rather than `partitionid` (all lower case).
+> 
+> When specifying a filter this way, you don't need to specify the filter criteria on `partitionid` in your query in the normal manner (using FetchXML, QueryExpression, or Web API `$filter`.)
+> 
+> A filter on the `partitionid` value in the normal manner will not have the same performance benefits as specifying it with the `partitionId` shown below.
+
+These examples retrieve the first 5000 rows in the `contoso_SensorData` table which belong to logical `partitionid` = 'deviceid-001'.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -667,6 +785,9 @@ public static EntityCollection RetrieveMultipleExample(IOrganizationService serv
 ```
 
 #### [Web API](#tab/webapi)
+
+> [!NOTE]
+> For the `DELETE` and `GET` operations, the `partitionId` parameter must use a capital `I` for `Id`.
 
 **Request**
 
@@ -712,6 +833,10 @@ OData-Version: 4.0
 ```
 
 ---
+
+<!-- 
+
+I don't think we need this
 
 ### Query rows across all logical partitions of an elastic table
 
@@ -782,33 +907,50 @@ OData-Version: 4.0
 }
 ```
 
----
+--- -->
 
 ### Upsert a record in an elastic table
 
-An upsert operation is similar to update. The difference is that if record with given id and `partitionid` doesn't exist it will be created. If it already exists, it will be updated.
+An upsert operation is similar to update. The difference is that if a record with given id and `partitionid` doesn't exist it will be created. If it already exists, it will be updated.
 
 #### [SDK for .NET](#tab/sdk)
 
-This example upserts a row in SensorData table with id = 'ff67610c-82ce-412c-85df-0bbc6521bb01' and `partitionid` = 'deviceid-001'.
+This example upserts a row in the `contoso_SensorData` table with the specified `id` and `partitionid` = 'deviceid-001'.
 
 ```csharp
-public static void UpsertExample(IOrganizationService service, Guid id)
+/// <summary>
+/// Demonstrates an upsert operation
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="id">The id of the record to update or create.</param>
+/// <param name="sessionToken">The current session token</param>
+/// <returns>Whether a record was created or not</returns>
+public static bool UpsertExample(IOrganizationService service, Guid id, ref string sessionToken)
 {
-   var entity = new Entity("SensorData")
-   {
-         Attributes = {
-            { "sensordataid", "ff67610c-82ce-412c-85df-0bbc6521bb01" },
-            { "deviceId", "deviceid-001" },
-            { "sensortype", "Humidity" },
-            { "value", 60 },
-            { "timestamp", "2023-05-01Z12:30:00"},
+    var entity = new Entity("contoso_sensordata", id)
+    {
+        Attributes = {
+            { "contoso_deviceid", "deviceid-001" },
+            { "contoso_sensortype", "Humidity" },
+            { "contoso_value", 60 },
+            { "contoso_timestamp", DateTime.UtcNow },
             { "partitionid", "deviceid-001" },
             { "ttlinseconds", 86400 }
-         }
-   };
+        }
+    };
 
-   service.Execute(request);
+    var request = new UpsertRequest
+    {
+        Target = entity,
+        ["SessionToken"] = sessionToken
+    };
+
+    var response = (UpsertResponse)service.Execute(request);
+
+    // Capture the session token
+    sessionToken = response.Results["x-ms-session-token"].ToString();
+
+    return response.RecordCreated;
 }
 ```
 
@@ -829,7 +971,6 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
   
 {  
-  "sensordataid", "ff67610c-82ce-412c-85df-0bbc6521bb01",
   "deviceid", "deviceid-001",
   "sensortype", "Humidity",
   "value", 40,
@@ -852,29 +993,54 @@ OData-Version: 4.0
 
 #### [SDK for .NET](#tab/sdk)
 
-This example deletes a row in SensorData table with id = 'ff67610c-82ce-412c-85df-0bbc6521bb01' and `partitionid` = 'deviceid-001'.
+This example deletes a row in `contoso_SensorData` table with specified `id` and `partitionid` = 'deviceid-001'.
 
 ```csharp
-public static void DeleteExample(IOrganizationService service, Guid id)
+/// <summary>
+/// Demonstrates a delete operation
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="sensordataid">The unique identifier of the contoso_sensordata table.</param>
+/// <param name="sessionToken">The current session token</param>
+public static void DeleteExample(IOrganizationService service, Guid sensordataid, ref string sessionToken)
 {
-   var request = new DeleteRequest
-   {
-         Target = new EntityReference("sensordataid", new Guid("ff67610c-82ce-412c-85df-0bbc6521bb01")),
-         ["partitionId"] = "deviceid-001"
-   };
+    var request = new DeleteRequest
+    {
+        Target = new EntityReference("contoso_sensordata", sensordataid),
+        ["partitionId"] = "deviceid-001"
+    };
 
-   service.Execute(request);
+    var response = service.Execute(request);
+    // Known issue: Value not currently being returned.
+    // sessionToken = response.Results["x-ms-session-token"].ToString();
 }
 ```
 
 #### [Web API](#tab/webapi)
 
-This example deletes a row in SensorData table with id = 'ff67610c-82ce-412c-85df-0bbc6521bb01' and `partitionid` = 'deviceid-001'.
+There are two different ways to compose a URL to delete a record using the `partitionid` value.
+
+- You can use the alternate key style:
+
+   `contoso_sensordatas(contoso_sensordataid=<primary key value>,partitionid='<partitionid value>')`
+
+   More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
+
+- Or you can use the `partitionId` query parameter.
+
+   `contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'`
+
+   For example: `contoso_sensordatas(bbae4948-f3f4-ed11-8848-000d3a993550)?partitionId=deviceid-001`
+
+   > [!NOTE]
+   > For GET and DELETE operations parameter has a capital `I` for `Id`.
+
+This example deletes a row in `contoso_SensorData` table with `contoso_sensordataid` = '02d82842-f3f4-ed11-8848-000d3a993550' and `partitionid` = 'deviceid-001' using the alternate key style.
 
 **Request**
 
 ```http
-DELETE [Organization URI]/api/data/v9.2/sensordata(ff67610c-82ce-412c-85df-0bbc6521bb01)?partitionId="deviceid-001"
+DELETE [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=02d82842-f3f4-ed11-8848-000d3a993550,partitionid='deviceid-001')
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -885,14 +1051,13 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 No Content  
 OData-Version: 4.0
-x-ms-session-token: hn76qq#7324
 ```
 
 ---
 
 ## Query JSON columns in an elastic table
 
-Elastic table supports a new JSON format for text columns. This column can be used to store schema less arbitrary json as per application needs. You can use `ExecuteCosmosSQLQuery` message to run any Cosmos SQL query directly against your elastic table and filter rows based on properties inside JSON.
+Elastic table supports a new JSON format for text columns. This column can be used to store schema-less arbitrary json as per application needs. You can use the `ExecuteCosmosSQLQuery` message to run any Cosmos SQL query directly against your elastic table and filter rows based on properties inside JSON.
 
 ### Create a column with Json format
 
@@ -903,23 +1068,23 @@ This example creates a string column `contoso_SensorValue` with Json format in o
 This function creates a new <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> column using the <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> class.
 
 ```csharp
-public static Guid OrganizationResponse CreateJsonAttribute(IOrganizationService service)
+public static Guid CreateJsonAttribute(IOrganizationService service)
 {
-    var request = new CreateAttributeRequest
-    {
-        EntityName = "contoso_sensordata",
-        Attribute = new StringAttributeMetadata
-        {
+   var request = new CreateAttributeRequest
+   {
+         EntityName = "contoso_sensordata",
+         Attribute = new StringAttributeMetadata
+         {
             SchemaName = "contoso_SensorValue",
             RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
             MaxLength = 1000,
             FormatName = StringFormatName.Json,
             DisplayName = new Label("Sensor Value", 1033),
             Description = new Label("Stores unstructured sensor data as reported by device", 1033)
-        }
-    };
+         }
+   };
 
-    var response = (CreateAttributeResponse)service.Execute(request);
+   var response = (CreateAttributeResponse)service.Execute(request);
 
    return response.AttributeId;
 }
@@ -935,7 +1100,7 @@ This request creates a new <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata>
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='contoso_sensordata')/Attributes HTTP/1.1
+POST [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='contoso_sensordata')/Attributes
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -999,21 +1164,30 @@ This example creates a row in `contoso_SensorData` elastic table with JSON value
 
 #### [SDK for .NET](#tab/sdk)
 
-When using SDK for .Net, Json column value need to serialized into a string. Dataverse will store it as raw json in the table after parsing.
-
 ```csharp
-public static void CreateWithJsonData(IOrganizationService service, Guid sensordataid)
+public static Guid CreateWithJsonData(IOrganizationService service, string deviceId, ref string sessionToken)
 {
-   var entity = new Entity("contoso_sensordata", sensordataid)
+   var entity = new Entity("contoso_sensordata")
    {
-         Attributes = {
+         Attributes =
+         {
             { "contoso_sensorvalue", "{\"type\":\"Humidity\",\"value\": \"40\",\"timestamp\":\"2023-05-01Z05:00:00\"}" },
-            { "deviceid", "deviceid-001" }
-            { "partitionid", "deviceid-001" }
+            { "contoso_deviceid", deviceId },
+            { "partitionid", deviceId }
          }
    };
 
-   service.Update(entity);
+   var request = new CreateRequest
+   {
+         Target = entity
+   };
+
+   var response = (CreateResponse)service.Execute(request);
+
+   // Capture the session token
+   sessionToken = response.Results["x-ms-session-token"].ToString();
+
+   return response.id;
 }
 ```
 
@@ -1023,14 +1197,11 @@ public static void CreateWithJsonData(IOrganizationService service, Guid sensord
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.2/contoso_sensordata
+POST [Organization URI]/api/data/v9.2/contoso_sensordatas
+
 {
-   "contoso_sensorvalue": {
-      "type":"Humidity",
-      "value": "40",
-      "timestamp":"2023-05-01Z05:00:00"
-   }
-   "contoso_deviceid" : "device-001"
+   "contoso_sensorvalue": "{\"type\":\"Humidity\",\"value\": \"40\",\"timestamp\":\"2023-05-01Z05:00:00\"}",
+   "contoso_deviceid" : "device-001",
    "partitionid" : "device-001"
 }
 ```
@@ -1049,13 +1220,15 @@ OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-8
 
 ### Query Json column data
 
-This example runs a query on SensorData elastic table with filter on sensorvalue.type json element to be equal to "Humidity". 
+This example runs a query on `contoso_SensorData` elastic table with filter on sensorvalue.type json element to be equal to "Humidity".
 
 All table columns can be queried with a `c.props` prefix to the schema name of the columns where `"c"` is an alias or a shorthand notation for the elastic table being queried. For example, `contoso_deviceid` column in `contoso_sensordata` table can be referenced in the Cosmos SQL query using `c.props.contoso_deviceid`.
 
 #### [SDK for .NET](#tab/sdk)
 
 The SDK for .NET doesn't yet have request and response classes for the  `ExecuteCosmosSqlQuery` message. You can use <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. 
+
+<!-- TODO This sample didn't work for me -->
 
 ```csharp
 public static List<SensorValue> QueryJsonAttribute(IOrganizationService service)
@@ -1135,9 +1308,9 @@ OData-Version: 4.0
 
 ## Bulk operations
 
-Often applications need to ingest large amount of data into Dataverse in a short amount of time which can be be processed later. Using Bulk APIs with elastic tables provides a great way to achieve high throughput for such large volume ingestions.
+Often applications need to ingest large amount of data into Dataverse in a short amount of time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput is very high.
 
-Bulk APIs are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. Multiple bulk operation can be run in parallel to achieve high throughput. Read more about them here <!--> TODO. Link here. -->
+Bulk operations are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. Multiple bulk operation can be run in parallel to achieve high throughput. More information <!--> TODO. Link here. -->
 
 Elastic tables currently supports following messages for Bulk execution:
 
@@ -1150,7 +1323,7 @@ Support for `UpsertMultiple` mesage will be coming soon. Also, Bulk APIs are cur
 ### CreateMultiple
 
 
-This example uses CreateMultiple message to create mutiple rows in `contoso_SensorData` elastic table.
+This example uses the `CreateMultiple` message to create mutiple rows in `contoso_SensorData` elastic table.
 
 ```csharp
 public static Guid CreateMultiple(IOrganizationService service)
@@ -1212,7 +1385,7 @@ public static Guid CreateMultiple(IOrganizationService service)
 
 ### UpdateMultiple
 
-This example uses UpdateMultiple message to update mutiple rows of `contoso_SensorData` elastic table.
+This example uses `UpdateMultiple` message to update mutiple rows of `contoso_SensorData` elastic table.
 
 ```csharp
 public static Guid UpdateMultiple(IOrganizationService service)
@@ -1262,7 +1435,7 @@ public static Guid UpdateMultiple(IOrganizationService service)
 
 ### DeleteMultiple
 
-This example uses DeleteMultiple message to delete mutiple rows from `contoso_SensorData` elastic table.
+This example uses `DeleteMultiple` message to delete mutiple rows from `contoso_SensorData` elastic table.
 
 ```csharp
 public static OrganizationResponse DeleteMultiple(IOrganizationService service)
@@ -1301,6 +1474,10 @@ Following are known issues with elastic tables that should be addressed before t
 ### Error not returned when grouping elastic table data operations in a transaction
 
 Dataverse does not return an error when you group data operations using SDK [ExecuteTransactionRequest](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) class or with Web API `$batch` `ChangeSets`. These data operations will complete, but no transaction is actually applied. No transaction can be applied, so this operation should fail and return an error.
+
+### x-ms-session-token value not returned for delete operations
+
+Dataverse doesn't return the `x-ms-session-token` value for delete operations. More information: [Consistency level](#consistency-level)
 
 ## Frequently Asked Questions (FAQ)
 
