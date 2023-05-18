@@ -191,7 +191,7 @@ Columns can also be created using the SDK or Web API, but there are limits on th
 - Image (`ImageAttributeMetadata`)
 - Calculated, Rollup, or Formula Columns
 
-Elastic tables support string columns that store JSON data. More information: [Create a column with Json format](query-json-columns-elastic-tables.md#create-a-column-with-json-format)
+Elastic tables support string columns that store JSON data.
 
 ### Create a column with Json format
 
@@ -320,43 +320,8 @@ One-to-Many relationships are supported for elastic tables with following limita
    - The table being retrieved is a standard table and the lookup refers to an elastic table.
    - The elastic table `partitionid` value is set to a value other than the primary key value of the elastic table row.
 
-Although elastic table supports having One-to-Many relationships and get related rows using fetchXml, there are restrictions when it comes retrieving data using fetchXml from related tables. In FetchXML queries, the `link-type` attribute is used within the `<link-entity>` element to specify the type of join between two tables. Elastic table only supports `outer` link-type. Elastic tables does not support `inner` link-type.
+Elastic tables supports having One-to-Many relationships and returning related rows using several different query languages, but there are some restrictions. More information : [Link entities are not supported](use-elastic-tables.md#link-entities-are-not-supported)
 
-Here's an example that demonstrates the usage of the outer "link-type" attribute for elastic tables
-
-```xml
-<fetch>
-   <entity name="contoso_sensordata">
-      <attribute name="contoso_sensortype"/>
-      <attribute name="contoso_value"/>
-      <order attribute="contoso_timestamp" descending="false"/>
-      <attribute name="toasttype"/>
-      <link-entity name="Devices" alias="devices" link-type="inner" from="contoso_deviceid" to="contoso_deviceid">
-         <attribute name="contoso_OwnerName" />
-         <attribute name="contoso_OwnerEmailAddres" />
-         <filter type="and">
-            <condition attribute="contoso_location" operator="eq" value="Seattle"/>
-         </filter>
-      </link-entity>
-   </entity>
-</fetch>
-```
-
-In the above example, the `link-type` attribute is set to `outer` within the `<link-entity>` element. This means that all records from the `contoso_SensorData` entity will be retrieved, regardless of whether they have related records in the `contoso_Devices` entity. If a related record exists, the attributes `contoso_OwnerName` and `contoso_OwnerEmail` from the `contoso_Devices` table will be included in the query results. If no related record is found, null values will be returned for these columns.
-
-If the `link-type` is set to `inner`, Dataverse will throw an error with code `0x80048d0b` and message **Link entities are not supported**.
-To perform inner join operation across two tables when working with elastic tables, it is recommended that 
-- Either columns from related tables are denormalized into main table so that filter can be applied on a single table without join requirement, or
-- Two queries are performed on both table separately with appropriate conditions and do in-memory join on client side.
-
-<!-- 
-Try to simplify with the description above.
-
-> Although elastic table supports having One-to-Many relationships and fetch related rows using fetchXml or OData  `$expand`, adding filters on related tables is not supported. This is because elastic tables cannot perform join operations between two tables. 
-
-TODO: Does an error occur if you try to add a filter? Or is the filter just ignored?
-
--->
 
 ## Next steps
 

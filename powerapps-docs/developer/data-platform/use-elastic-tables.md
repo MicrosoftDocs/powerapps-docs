@@ -15,7 +15,11 @@ contributors:
 
 # Use elastic tables (Preview)
 
+This article describes how to perform data operations with elastic tables.
+
 ## Work with Session token
+
+As mentioned in [Consistency level](elastic-tables.md#consistency-level), you can achieve session level consistency by passing the current session token with your requests. If you don't include the session token, the data you retrieve may not include data changes you have just made.
 
 ### Getting the session token
 
@@ -76,7 +80,41 @@ MSCRM.SessionToken: 240:8#144100870#7=-1
 
 ## Specifying PartitionId
 
+As mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `PartitionId` column that you must use to uniquely identify a record that has been assigned to a partition.
 
+If you have a partitioning strategy you must consistently apply it for data operations with the elastic table. If you don't set a `partitionid` for a record when it is created, the default partition value is a string that represents the Guid value of the primary key.
+
+If you are not applying a partitioning strategy, that's fine too. But you won't get the optimum performance possible with retrieve operations. In this case, you can simply identify records using the primary key as you normally do with standard tables.
+
+> [!NOTE]
+> The examples in this article assume that you are applying a partitioning strategy.
+
+### Alternate Key style or PartitionId parameter with Web API
+
+As mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key named KeyForNoSqlEntityWithPKPartitionId. This alternate key combines the primary key of the table with the `partitionid` column. You can use the special syntax in Web API to refer to records using the alternate key. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
+
+#### Alternate key style
+
+The alternate key style looks like this:
+
+> `<entity set name>(<primary key name>=<primary key value>,partitionid='<partitionid value>')`
+
+> [!NOTE]
+> The primary key value is a Guid, so no quote characters are needed. `partitionid` is a string, so it requires quote characters.
+
+For example:
+
+> `contoso_sensordatas(contoso_sensordataid=e61a662e-68d8-487e-94e7-ae3a22fd4bbd,partitionid='device-001')`
+
+
+#### PartitionId parameter
+
+Alternatively, you can use a special query parameter that is either `partitionId` or `partitionid`.
+
+<!-- TODO Please explain the rules about which one to use. -->
+
+- `contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'`
+- `contoso_sensordatas(<primary key value>)?partitionid='<partitionid value>'`
 
 ## Create a record in an elastic table
 
@@ -471,6 +509,54 @@ OData-Version: 4.0
 ```
 
 ---
+
+### Link entities are not supported
+
+<!-- 
+
+TODO People use QueryExpression, OData, and even T-SQL with the TDS endpoint. The description below sounds like it only occurs using FetchXML.
+The description should explain that this limitation applies despite the query method chosen 
+
+-->
+
+In FetchXML queries, the `link-type` attribute is used within the `<link-entity>` element to specify the type of join between two tables. Elastic table only supports `outer` link-type. Elastic tables does not support `inner` link-type.
+
+Here's an example that demonstrates the usage of the outer "link-type" attribute for elastic tables
+
+```xml
+<fetch>
+   <entity name="contoso_sensordata">
+      <attribute name="contoso_sensortype"/>
+      <attribute name="contoso_value"/>
+      <order attribute="contoso_timestamp" descending="false"/>
+      <attribute name="toasttype"/>
+      <link-entity name="Devices" alias="devices" link-type="inner" from="contoso_deviceid" to="contoso_deviceid">
+         <attribute name="contoso_OwnerName" />
+         <attribute name="contoso_OwnerEmailAddres" />
+         <filter type="and">
+            <condition attribute="contoso_location" operator="eq" value="Seattle"/>
+         </filter>
+      </link-entity>
+   </entity>
+</fetch>
+```
+
+In the above example, the `link-type` attribute is set to `outer` within the `<link-entity>` element. This means that all records from the `contoso_SensorData` entity will be retrieved, regardless of whether they have related records in the `contoso_Devices` entity. If a related record exists, the attributes `contoso_OwnerName` and `contoso_OwnerEmail` from the `contoso_Devices` table will be included in the query results. If no related record is found, null values will be returned for these columns.
+
+If the `link-type` is set to `inner`, Dataverse will throw an error with code `0x80048d0b` and message **Link entities are not supported**.
+To perform inner join operation across two tables when working with elastic tables, it is recommended that 
+- Either columns from related tables are denormalized into main table so that filter can be applied on a single table without join requirement, or
+- Two queries are performed on both table separately with appropriate conditions and do in-memory join on client side.
+
+<!-- 
+Try to simplify with the description above.
+
+> Although elastic table supports having One-to-Many relationships and fetch related rows using fetchXml or OData  `$expand`, adding filters on related tables is not supported. This is because elastic tables cannot perform join operations between two tables. 
+
+TODO: Does an error occur if you try to add a filter? Or is the filter just ignored?
+
+-->
+
 
 ## Upsert a record in an elastic table
 
