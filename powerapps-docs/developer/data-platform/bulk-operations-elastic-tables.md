@@ -14,9 +14,9 @@ contributors:
 ---
 # Bulk operations with elastic tables (Preview)
 
-Often applications need to ingest large amount of data into Dataverse in a short amount of time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput is very high.
+Often applications need to ingest large amount of data into Dataverse in a short amount of time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput can be much higher.
 
-Bulk operations are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. Multiple bulk operation can be run in parallel to achieve high throughput. More information <!--> TODO. Link here. -->
+Bulk operations are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. Multiple bulk operation can be run in parallel to achieve high throughput. More information [Send parallel requests](send-parallel-requests.md)
 
 Elastic tables currently supports following messages for Bulk execution:
 
@@ -24,7 +24,7 @@ Elastic tables currently supports following messages for Bulk execution:
 - `UpdateMultiple`
 - `DeleteMultiple`
 
-Support for `UpsertMultiple` mesage will be coming soon. Also, Bulk APIs are currently supported only in SDK for .NET
+Support for `UpsertMultiple` message will be coming soon. Also, these messages are currently supported only using the SDK for .NET
 
 ## Use CreateMultiple with elastic tables
 

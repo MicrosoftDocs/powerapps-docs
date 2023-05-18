@@ -91,7 +91,7 @@ If you are not applying a partitioning strategy, that's fine too. But you won't 
 
 ### Alternate Key style or PartitionId parameter with Web API
 
-As mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key named KeyForNoSqlEntityWithPKPartitionId. This alternate key combines the primary key of the table with the `partitionid` column. You can use the special syntax in Web API to refer to records using the alternate key. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
+As mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key named `KeyForNoSqlEntityWithPKPartitionId`. This alternate key combines the primary key of the table with the `partitionid` column. You can use the special syntax in Web API to refer to records using the alternate key. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
 
 #### Alternate key style
 
@@ -111,9 +111,12 @@ For example:
 
 Alternatively, you can use a special query parameter that is either `partitionId` or `partitionid`.
 
-<!-- TODO Please explain the rules about which one to use. -->
+For `GET` and `DELETE` operations parameter name is `partitionId``:
 
 - `contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'`
+
+Otherwise use `partitionid`:
+
 - `contoso_sensordatas(<primary key value>)?partitionid='<partitionid value>'`
 
 ## Create a record in an elastic table
@@ -160,7 +163,7 @@ public static Guid CreateExample(IOrganizationService service, string deviceId, 
 }
 ```
 
-Use the `x-ms-session-token` value returned to set the `SessionToken` optional parameter when retrieving the record. More information: [Sending the session token](#sending-the-session-token)
+Use the `x-ms-session-token` value returned to set the `SessionToken` optional parameter when retrieving the record you created. More information: [Sending the session token](#sending-the-session-token)
 
 #### [Web API](#tab/webapi)
 
@@ -198,7 +201,9 @@ Use the `x-ms-session-token` value returned with the `MSCRM.SessionToken` reques
 
 ## Update a record in an elastic table
 
-This example updates the `contoso_value` and `contoso_timestamp` values of an existing row in `contoso_SensorData` table with using the `contoso_sensordataid` primary key and `partitionid` = `'device-001'`. Note that primary key and `partitionid` columns are always required to uniquely identify an existing elastic table row. The `partitionid` of an existing row cannot be updated and is only being used to uniquely identify the row to update.
+This example updates the `contoso_value` and `contoso_timestamp` values of an existing row in `contoso_SensorData` table using the `contoso_sensordataid` primary key and `partitionid` = `'device-001'`.
+
+When using a partitioning strategy, the primary key and `partitionid` columns are required to uniquely identify an existing elastic table row. The `partitionid` of an existing row cannot be updated and is only being used to uniquely identify the row to update.
 
 This example uses the `KeyForNoSqlEntityWithPKPartitionId` alternate key to uniquely identify the record using both the primary key and the `partitionid`. More information: [Alternate keys](create-elastic-tables.md#alternate-keys)
 
@@ -284,19 +289,6 @@ public static void UpdateExampleOptionalParameter(
 
 #### [Web API](#tab/webapi)
 
-When applying an update, you need to uniquely identify the record you are going to update.
-
-- You can use the alternate key style:
-
-   `contoso_sensordatas(contoso_sensordataid=<primary key value>,partitionid='<partitionid value>')`
-
-   More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
-
-- Or you can use the `partitionId` query parameter.
-
-   `contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'`
-
-The following example uses the alternate key style.
 
 **Request**
 
@@ -328,7 +320,7 @@ x-ms-session-token: 240:8#144035978#7=-1
 
 ## Retrieve a record in an elastic table
 
-If an elastic table record was created setting the `partitionid`, you must use the `partitionid` value together with the primary key value to uniquely identify a record.
+If an elastic table record was created setting the `partitionid` value, you must use the `partitionid` value together with the primary key value to uniquely identify a record.
 
 If the `partitionid` was not set, you can retrieve the record normally using only the primary key value.
 
@@ -382,21 +374,6 @@ public static void RetrieveExampleOptionalParameter(IOrganizationService service
 
 #### [Web API](#tab/webapi)
 
-There are two different ways to compose a URL to retrieve a record using the `partitionid` value.
-
-- You can use the alternate key style:
-
-   `contoso_sensordatas(contoso_sensordataid=<primary key value>,partitionid='<partitionid value>')?$select=contoso_value`
-
-   More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
-
-- Or you can use the `partitionId` query parameter.
-
-   `contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'&$select=contoso_value`
-
-   > [!NOTE]
-   > For GET and DELETE operations parameter has a capital `I` for `Id`.
-
 The following example uses the `partitionId` query parameter.
 
 **Request**
@@ -439,7 +416,7 @@ When you query the rows of an elastic table you will get best performance if you
 > 
 > A filter on the `partitionid` value in the normal manner will not have the same performance benefits as specifying it with the `partitionId` shown below.
 
-These examples retrieve the first 5000 rows in the `contoso_SensorData` table which belong to logical `partitionid` = 'deviceid-001'.
+These examples retrieve the first 5000 rows in the `contoso_SensorData` table which belong to logical `partitionid` = `'deviceid-001'`.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -461,9 +438,6 @@ public static EntityCollection RetrieveMultipleExample(IOrganizationService serv
 ```
 
 #### [Web API](#tab/webapi)
-
-> [!NOTE]
-> For the `DELETE` and `GET` operations, the `partitionId` parameter must use a capital `I` for `Id`.
 
 **Request**
 
@@ -526,15 +500,22 @@ Here's an example that demonstrates the usage of the outer "link-type" attribute
 ```xml
 <fetch>
    <entity name="contoso_sensordata">
-      <attribute name="contoso_sensortype"/>
-      <attribute name="contoso_value"/>
-      <order attribute="contoso_timestamp" descending="false"/>
-      <attribute name="toasttype"/>
-      <link-entity name="Devices" alias="devices" link-type="inner" from="contoso_deviceid" to="contoso_deviceid">
+      <attribute name="contoso_sensortype" />
+      <attribute name="contoso_value" />
+      <order attribute="contoso_timestamp"
+         descending="false" />
+      <attribute name="toasttype" />
+      <link-entity name="Devices"
+         alias="devices"
+         link-type="inner"
+         from="contoso_deviceid"
+         to="contoso_deviceid">
          <attribute name="contoso_OwnerName" />
          <attribute name="contoso_OwnerEmailAddres" />
          <filter type="and">
-            <condition attribute="contoso_location" operator="eq" value="Seattle"/>
+            <condition attribute="contoso_location"
+               operator="eq"
+               value="Seattle" />
          </filter>
       </link-entity>
    </entity>
@@ -544,7 +525,8 @@ Here's an example that demonstrates the usage of the outer "link-type" attribute
 In the above example, the `link-type` attribute is set to `outer` within the `<link-entity>` element. This means that all records from the `contoso_SensorData` entity will be retrieved, regardless of whether they have related records in the `contoso_Devices` entity. If a related record exists, the attributes `contoso_OwnerName` and `contoso_OwnerEmail` from the `contoso_Devices` table will be included in the query results. If no related record is found, null values will be returned for these columns.
 
 If the `link-type` is set to `inner`, Dataverse will throw an error with code `0x80048d0b` and message **Link entities are not supported**.
-To perform inner join operation across two tables when working with elastic tables, it is recommended that 
+To perform inner join operation across two tables when working with elastic tables, it is recommended that:
+
 - Either columns from related tables are denormalized into main table so that filter can be applied on a single table without join requirement, or
 - Two queries are performed on both table separately with appropriate conditions and do in-memory join on client side.
 
@@ -608,7 +590,7 @@ public static bool UpsertExample(IOrganizationService service, Guid id, ref stri
 
 #### [Web API](#tab/webapi)
 
-This example upserts a row in SensorData table with id = 'ff67610c-82ce-412c-85df-0bbc6521bb01' and `partitionid` = 'deviceid-001'. Note that unlike standard tables where `primarykey` is sufficient and `partitionid` columns are needed to uniquely identify a row in elastic tables.
+This example upserts a row in SensorData table with ID = `ff67610c-82ce-412c-85df-0bbc6521bb01` and `partitionid` = `'deviceid-001'`. 
 
 > [!NOTE]
 > Upsert is identical to update except that the `If-Match: *` request header isn't included.
@@ -645,7 +627,7 @@ OData-Version: 4.0
 
 #### [SDK for .NET](#tab/sdk)
 
-This example deletes a row in `contoso_SensorData` table with specified `id` and `partitionid` = 'deviceid-001'.
+This example deletes a row in `contoso_SensorData` table with specified ID and `partitionid` = `'deviceid-001'`.
 
 ```csharp
 /// <summary>
@@ -654,7 +636,10 @@ This example deletes a row in `contoso_SensorData` table with specified `id` and
 /// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
 /// <param name="sensordataid">The unique identifier of the contoso_sensordata table.</param>
 /// <param name="sessionToken">The current session token</param>
-public static void DeleteExample(IOrganizationService service, Guid sensordataid, ref string sessionToken)
+public static void DeleteExample(
+   IOrganizationService service, 
+   Guid sensordataid, 
+   ref string sessionToken)
 {
     var request = new DeleteRequest
     {
@@ -669,23 +654,6 @@ public static void DeleteExample(IOrganizationService service, Guid sensordataid
 ```
 
 #### [Web API](#tab/webapi)
-
-There are two different ways to compose a URL to delete a record using the `partitionid` value.
-
-- You can use the alternate key style:
-
-   `contoso_sensordatas(contoso_sensordataid=<primary key value>,partitionid='<partitionid value>')`
-
-   More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
-
-- Or you can use the `partitionId` query parameter.
-
-   `contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'`
-
-   For example: `contoso_sensordatas(bbae4948-f3f4-ed11-8848-000d3a993550)?partitionId=deviceid-001`
-
-   > [!NOTE]
-   > For GET and DELETE operations parameter has a capital `I` for `Id`.
 
 This example deletes a row in `contoso_SensorData` table with `contoso_sensordataid` = `02d82842-f3f4-ed11-8848-000d3a993550` and `partitionid` = `'deviceid-001'` using the alternate key style.
 

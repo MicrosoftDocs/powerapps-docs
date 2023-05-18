@@ -57,6 +57,9 @@ public static Guid CreateWithJsonData(IOrganizationService service, string devic
 
 ```http
 POST [Organization URI]/api/data/v9.2/contoso_sensordatas
+Content-Type: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
 
 {
    "contoso_sensorvalue": "{\"type\":\"Humidity\",\"value\": \"40\",\"timestamp\":\"2023-05-01Z05:00:00\"}",
@@ -79,7 +82,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-8
 
 ## Query Json column data
 
-This example runs a query on `contoso_SensorData` elastic table with filter on sensorvalue.type json element to be equal to "Humidity".
+This example runs a query on `contoso_SensorData` elastic table with filter on `sensorvalue.type` json element to be equal to `"Humidity"`.
 
 All table columns can be queried with a `c.props` prefix to the schema name of the columns where `"c"` is an alias or a shorthand notation for the elastic table being queried. For example, `contoso_deviceid` column in `contoso_sensordata` table can be referenced in the Cosmos SQL query using `c.props.contoso_deviceid`.
 
