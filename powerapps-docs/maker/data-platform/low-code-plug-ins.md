@@ -72,6 +72,11 @@ Plug-ins access the following contexts natively in Dataverse:
     1. Select the environment you want.
     1. Review the legal terms and privacy statement to continue.
     1. Select **Install**.
+    1. <!-- begin temp additional instructions-->On the next screen, select the same environment
+    1. Optionally check the box to **Include the Low code plug-ins for connectors solution**. Carefully read about [this option below](#why-the-low-code-plug-in-for-connectors-solution-is-optional) before choosing this option. You can install later if needed.
+    1. Agree to the terms of service to continue
+    2. Select **Install**.<!-- end temp install instructions -->
+
 
 Once the solution import has completed, the status is set to **Enabled** next to **Dataverse Accelerator**.
 
@@ -119,7 +124,7 @@ When a low-code plug-in is created for the first time, you'll be able to call th
    For example:
 
    ```powerapps-dot 
-   If( IsBlank( ThisRecord.Email ), SetPatch(Contacts, ThisRecord, { ‘Email description’: “No email” } ));  
+   If( IsBlank( ThisRecord.Email ), Patch(Contacts, ThisRecord, { 'Email description': "No email" } ));  
    ```
 
 1. **Advanced options** > **When should this run**:
@@ -138,10 +143,10 @@ The low-code plug-in for connectors solution is a streamlined user interface tha
 ### Prerequisites
 
 - All prerequisites described earlier for creating an instant or automated plug-in. More information: [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
-- To try the new low-code plugins for connectors feature, you must install the additional low-code
-plug-in for connectors solution after installing the Dataverse Accelerator.
+- To try the new low-code plugins for connectors feature, you must install the additional low-code plug-in for connectors solution after installing the Dataverse Accelerator.
+- The environment cannot have a DLP policy that restricts the Power Apps for Makers connector
 
-#### Why is the low-code plug-in for connectors solution optional?
+#### Why the low-code plug-in for connectors solution is optional
 
 The low-code plug-in for connectors wizard uses the **Power Apps for Makers** connector to retrieve assets used to construct a more convenient experience (e.g., connections and connector details).
 
@@ -166,20 +171,12 @@ If you can't see the DLP policy applied to the environment where you want to ins
 - Create a new developer environment, which you will be the system administrator of, then check the DLP policies applied to that environment once created.
 - Contact your Power Platform tenant admin to ask if the desired environment has either of the DLP policy configurations described above.
 
-#### Install the low-code plug-ins for connectors solution
+### Install the low-code plug-ins for connectors solution
+If you confirm your environment does not have a DLP policy with the above configurations applied, you can include the Low code plug-in solution in the installation.
 
-The option to install the low-code plug-in for connectors wizard is provided when you install the Dataverse Accelerator.
+Follow the [installation steps](#prerequisites-for-creating-a-low-code-plug-in) and check the box to include the **Low-code plug-ins for connectors** solution.
 
-1.	You can install the Dataverse Accelerator two ways:
-   - App Source 
-   - In the Power Platform admin center
-1.	When the installer launches, select the environment.
-1. An option to **Include the low-code plug-ins for connectors solution** is displayed. Make sure the checkbox is selected if you want to install the solution.
-   :::image type="content" source="media/low-code-plugin-for-connectors-optin.png" alt-text="Include the low-code plug-ins for connectors solution option":::
-1. Review the terms of service.
-1. Select **Install**.
-
-Once you have installed the solution, play the Dataverse Accelerator app and [Create the low-code plug-in that uses connectors](#create-the-low-code-plug-in-that-uses-connectors).
+![appsource-edited](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/3adb159a-b94b-48a4-b720-433bae71f1e1)
 
 #### Create the low-code plug-in that uses connectors
 
