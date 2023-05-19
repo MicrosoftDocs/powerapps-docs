@@ -180,7 +180,7 @@ conceptualContent:
 additionalContent:
   # Supports up to 3 sections
   sections:
-    - title: Related features and products # < 60 chars (optional)
+    - title: Related content # < 60 chars (optional)
     - items:
         # Card
         - title: Power Platform
