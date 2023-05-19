@@ -20,7 +20,7 @@ For an example showing how to create a JSON column, see [Create a column with Js
 
 ## Set Json column data
 
-This example creates a row in `contoso_SensorData` elastic table with JSON values in the `contoso_Value` column.
+This example creates a row in `contoso_SensorData` elastic table with JSON data in the `contoso_energyconsumption` column.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -31,9 +31,13 @@ public static Guid CreateWithJsonData(IOrganizationService service, string devic
    {
          Attributes =
          {
-            { "contoso_sensorvalue", "{\"type\":\"Humidity\",\"value\": \"40\",\"timestamp\":\"2023-05-01Z05:00:00\"}" },
             { "contoso_deviceid", deviceId },
-            { "partitionid", deviceId }
+            { "contoso_sensortype", "Humidity" },
+            { "contoso_value", 40 },
+            { "contoso_energyconsumption", "{ \"power\": 0.55, \"powerUnit\":\"kWh\", \"voltage\": 2, \"voltageUnit\": \"kV\" }",
+            { "contoso_timestamp", DateTime.UtcNow},
+            { "partitionid", deviceId },
+            { "ttlinseconds", 86400  }  // 86400  seconds in a day
          }
    };
 
@@ -62,9 +66,13 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 
 {
-   "contoso_sensorvalue": "{\"type\":\"Humidity\",\"value\": \"40\",\"timestamp\":\"2023-05-01Z05:00:00\"}",
-   "contoso_deviceid" : "device-001",
-   "partitionid" : "device-001"
+    "contoso_deviceid" : "device-001",
+    "contoso_sensortype", "Humidity",
+    "contoso_value", 40,
+    "contoso_energyconsumption": "{ \"power\": 0.55, \"powerUnit\":\"kWh\", \"voltage\": 2, \"voltageUnit\": \"kV\" }",
+    "contoso_timestamp", DateTime.UtcNow},
+    "partitionid", device-001
+    "ttlinseconds", 86400,  // 86400  seconds in a day
 }
 ```
 
@@ -82,7 +90,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-8
 
 ## Query Json column data
 
-This example runs a query on `contoso_SensorData` elastic table with filter on `sensorvalue.type` json element to be equal to `"Humidity"`.
+This example runs a query on `contoso_SensorData` elastic table with filters all rows which has `energyconsumption.power` greater than 5
 
 All table columns can be queried with a `c.props` prefix to the schema name of the columns where `"c"` is an alias or a shorthand notation for the elastic table being queried. For example, `contoso_deviceid` column in `contoso_sensordata` table can be referenced in the Cosmos SQL query using `c.props.contoso_deviceid`.
 
@@ -93,28 +101,28 @@ The SDK for .NET doesn't yet have request and response classes for the  `Execute
 <!-- TODO This sample didn't work for me -->
 
 ```csharp
-public static List<SensorValue> QueryJsonAttribute(IOrganizationService service)
+public static List<QueryResult> QueryJsonAttribute(IOrganizationService service)
 {
     var request = new OrganizationRequest("ExecuteCosmosSqlQuery");
     
-    request.Parameters["EntityLogicalName"] = "cr03e_hyperdocument";
-    request.Parameters["QueryText"] = "select c.sensorvalue.type, c.sensorvalue.value, c.deviceid * from c where c.props.sensorvalue.type='Humidity'";
+    request.Parameters["EntityLogicalName"] = "contoso_sensordata";
+    request.Parameters["QueryText"] = "select c.props.contoso_deviceid as deviceId, c.props.contoso_timestamp as timestamp, c.props.contoso_energyconsumption.power as power from c where c.props.contoso_sensortype='Humidity' and c.props.contoso_energyconsumption.power > 5";
 
     OrganizationResponse response = service.Execute(request);
 
     // Deserialized query result into a class with expected schema.
     Entity result = (Entity)response.Results["Result"];    
-    return JsonConvert.Deserialize<List<SensorValue>>(result["Result"].ToString());
+    return JsonConvert.Deserialize<List<QueryResult>>(result["Result"].ToString());
 }
 
-public class SensorValue
+public class QueryResult
 {
-   [JsonProperty("type")]
-   public string Type {get;set;}
-   [JsonProperty("value")]
-   public string Value {get;set;}
-   [JsonProperty("deviceid")]
+   [JsonProperty("deviceId")]
    public string DeviceId {get;set;}
+   [JsonProperty("timestamp")]
+   public DateTime Timestamp {get;set;}
+   [JsonProperty("power")]
+   public int Power {get;set;}
 }
 
 ```
@@ -132,9 +140,9 @@ GET [Organization URI]/api/data/v9.2/ExecuteCosmosSqlQuery(
    QueryText=@p1,
    EntityLogicalName=@p2,
    QueryParameters=@p3)?
-   @p1='select c.contoso_sensorvalue.type, c.contoso_sensorvalue.value, c.contoso_deviceid * from c where c.props.sensorvalue.type=@sensortype'
+   @p1='select c.props.contoso_deviceid as deviceId, c.props.contoso_timestamp as timestamp, c.props.contoso_energyconsumption.power as power from c where c.props.contoso_sensortype=@sensortype and c.props.contoso_energyconsumption.power > @power'
    &@p2='contoso_sensordata'
-   &@p3={'Keys':['@sensortype'],'Values':[{'Type':'System.String','Value':'Humidity'}]}
+   &@p3={'Keys':['@sensortype', '@power'],'Values':[{'Type':'System.String','Value':'Humidity'}, {'Type':'System.Int32','Value': 5}]}
 ```
 
 **Response**
@@ -148,19 +156,19 @@ OData-Version: 4.0
     "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#executecosmossqlquery",
     "Result": [
         {
-            "type" : "Humidity",
-            "value": "60",
             "deviceid" : "device-001"
+            "timestamp" : "2023-05-02T16:30:00Z",
+            "power": "12"
         },
         {
-            "type" : "Humidity",
-            "value": "80",
+            "deviceid" : "device-001"
+            "timestamp" : "2023-05-05T07:00:00Z",
+            "power": "7"
+        },
+        {
             "deviceid" : "device-002"
-        },
-        {
-            "type" : "Humidity",
-            "value": "15",
-            "deviceid" : "device-003"
+            "timestamp" : "2023-05-01T05:00:00Z",
+            "power": "16"
         }
     ]
 }
