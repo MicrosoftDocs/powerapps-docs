@@ -15,18 +15,20 @@ search.audienceType:
 # Long-term data retention
 
 *Long-term retention* (LTR) is a Dataverse capability that enables customers to transfer their data from a transactional database to the Dataverse managed data lake. To perform the LTR operations, you are required to set up retention policies by defining the criteria for a given table. To set up the retention policy, you should have your environment (organization) and tables both enabled for retention.
+
+More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview), [Enable a table for long term retention](../../maker/data-platform/data-retention-set#enable-a-table-for-long-term-retention)
   
 ## Configure retention policy using code
 
 You can set up the retention policy by creating an entry in the retention configuration table. As part of retention policy set up, the platform will validate the policy against a Validate Retention Config table row.
 
-More information: [validateretentionconfig EntityType](webapi/reference/validateretentionconfig.md)
+More information: <xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType>, [Set a data retention policy for a table](../../maker/data-platform/data-retention-set)
 
 The following code example demonstrates the retention APIs.
 
 ### [Web API](#tab/webapi)
 
-The following is an example of a Web API request to retain all the closed opportunities, and will be run on a yearly basis. This example uses the [retentionconfigs EntitType](webapi/reference/retentionconfig.md).
+The following is an example of a Web API request to retain all the closed opportunities, and will be run on a yearly basis. This example uses the <xref:Microsoft.Dynamics.CRM.retentionconfig?displayProperty=nameWithType>.
 
 **Request**
 
@@ -42,7 +44,24 @@ Accept: application/json
    "name": "Retain all closed opportunities",
    "uniquename": "ui_RetainAllClosedOpportunities",
    "statuscode": 10,
-   "criteria": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\"><entity name=\"opportunity\"><attribute name=\"name\" /><attribute name=\"statecode\" /><attribute name=\"actualvalue\" /><attribute name=\"actualclosedate\" /><attribute name=\"customerid\" /><attribute name=\"opportunityid\" /><order attribute=\"actualclosedate\" descending=\"true\" /><filter type=\"and\"><filter type=\"or\"><condition attribute=\"statecode\" operator=\"eq\" value=\"1\" /><condition attribute=\"statecode\" operator=\"eq\" value=\"2\" /></filter></filter></entity></fetch>",
+   "criteria": 
+        "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\">
+            <entity name=\"opportunity\">
+                <attribute name=\"name\" />
+                <attribute name=\"statecode\" />
+                <attribute name=\"actualvalue\" />
+                <attribute name=\"actualclosedate\" />
+                <attribute name=\"customerid\" />
+                <attribute name=\"opportunityid\" />
+                <order attribute=\"actualclosedate\" descending=\"true\" />
+                <filter type=\"and\">
+                    <filter type=\"or\">
+                        <condition attribute=\"statecode\" operator=\"eq\" value=\"1\" />
+                        <condition attribute=\"statecode\" operator=\"eq\" value=\"2\" />
+                    </filter>
+                </filter>
+            </entity>
+        </fetch>",
    "starttime": "2023-05-01T00:00:00",
    "recurrence": "FREQ=YEARLY;INTERVAL=1",
    "retentionconfigid": "35cc1317-20b7-4f4f-829d-5d9d5d77f712",
@@ -93,7 +112,7 @@ Table and app owners can add their own custom validations whenever a retention p
 
 `ValidateRetentionConfig` is a bound action, which gets bound to the table whenever retention is enabled.
 
-More information: [validateretentionconfig Action](webapi/reference/validateretentionconfig.md)
+More information: [ValidateRetentionConfig Action](webapi/reference/validateretentionconfig.md)
 
 The following code example demonstrates retention policy validation.
 
@@ -143,7 +162,7 @@ HTTP/1.1 200 OK
 
 A message named *Retain* executes whenever a table row is marked for retention. You can optionally register a custom plug-in to be executed when the row is being marked for retention.
 
-More information: [retain Action](webapi/reference/retain.md)
+More information: [Retain Action](webapi/reference/retain.md)
 
 The following example executes retention on the an email record.
 
