@@ -43,7 +43,7 @@ To follow this topic exactly, download the [Flooring Estimates](https://download
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen, select **Start with data** > **Upload an Excel file**. 
 1. Select **Select from device** and navigate to the location where your Excel file is saved and upload it. The maximum file size limit is 5 GB.
-1. When the table is created, select a column name or the table name to edit the properties to suit your needs. 
+1. When the table is created, select a column name or the table name to edit the properties to suit your needs. If there's values in cells that are incompatible with the selected data type when changing column data types, those values will be removed when the table is generated.
 1. Select **Row ownership** and choose how you want to manage row ownership.
 1. When you're done, select **Create app**. The system will upload the first 20 rows of sample data so you can start reviewing the data in your app. The remaining data will be uploaded in the background.
 
@@ -51,8 +51,8 @@ To create an app by connecting to Excel, see [Connect to Excel from Power Apps](
 
 
 ### Known issuess
-- The uploaded date value from Excel is not currently adjusted to the user's time zone.
-- The decimal, float, and currency values are currently restricted to two decimal places.
+- The decimal, float, and currency values are currently restricted to two decimal places
+- Negative float values are currently not accepted as valid values.
 - The current data upload process doesn't take into account the environment data format setting.
 
 
