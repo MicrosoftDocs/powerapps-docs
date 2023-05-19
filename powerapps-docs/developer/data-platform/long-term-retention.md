@@ -40,32 +40,32 @@ If-None-Match: null
 Accept: application/json
 
 {
-  "statecode": 0,
-   "name": "Retain all closed opportunities",
-   "uniquename": "ui_RetainAllClosedOpportunities",
-   "statuscode": 10,
-   "criteria": 
-        "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\">
-            <entity name=\"opportunity\">
-                <attribute name=\"name\" />
-                <attribute name=\"statecode\" />
-                <attribute name=\"actualvalue\" />
-                <attribute name=\"actualclosedate\" />
-                <attribute name=\"customerid\" />
-                <attribute name=\"opportunityid\" />
-                <order attribute=\"actualclosedate\" descending=\"true\" />
-                <filter type=\"and\">
-                    <filter type=\"or\">
-                        <condition attribute=\"statecode\" operator=\"eq\" value=\"1\" />
-                        <condition attribute=\"statecode\" operator=\"eq\" value=\"2\" />
-                    </filter>
-                </filter>
-            </entity>
-        </fetch>",
-   "starttime": "2023-05-01T00:00:00",
-   "recurrence": "FREQ=YEARLY;INTERVAL=1",
-   "retentionconfigid": "35cc1317-20b7-4f4f-829d-5d9d5d77f712",
-   "entitylogicalname": "incident"
+"statecode": 0,
+ "name": "Retain all closed opportunities",
+ "uniquename": "ui_RetainAllClosedOpportunities",
+ "statuscode": 10,
+ "criteria": 
+      "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\">
+          <entity name=\"opportunity\">
+              <attribute name=\"name\" />
+              <attribute name=\"statecode\" />
+              <attribute name=\"actualvalue\" />
+              <attribute name=\"actualclosedate\" />
+              <attribute name=\"customerid\" />
+              <attribute name=\"opportunityid\" />
+              <order attribute=\"actualclosedate\" descending=\"true\" />
+              <filter type=\"and\">
+                  <filter type=\"or\">
+                      <condition attribute=\"statecode\" operator=\"eq\" value=\"1\" />
+                      <condition attribute=\"statecode\" operator=\"eq\" value=\"2\" />
+                  </filter>
+              </filter>
+          </entity>
+      </fetch>",
+ "starttime": "2023-05-01T00:00:00",
+ "recurrence": "FREQ=YEARLY;INTERVAL=1",
+ "retentionconfigid": "35cc1317-20b7-4f4f-829d-5d9d5d77f712",
+ "entitylogicalname": "incident"
 }
 ```
 
@@ -112,7 +112,7 @@ Table and app owners can add their own custom validations whenever a retention p
 
 `ValidateRetentionConfig` is a bound action, which gets bound to the table whenever retention is enabled.
 
-More information: [ValidateRetentionConfig Action](webapi/reference/validateretentionconfig.md)
+More information: <xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType>
 
 The following code example demonstrates retention policy validation.
 
@@ -131,14 +131,14 @@ Accept: application/json
 
 {
 "FetchXml": "<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
-<entity name='account'>
-<attribute name='accountid' />
-<order attribute='name' descending='false' />
-<filter type='and'>
-<condition attribute='name' operator='like' value='Name%' />
-</filter>
-</entity>
-</fetch>",
+    <entity name='account'>
+        <attribute name='accountid' />
+        <order attribute='name' descending='false' />
+        <filter type='and'>
+            <condition attribute='name' operator='like' value='Name%' />
+        </filter>
+    </entity>
+  </fetch>",
 "EntityName" : "account"
 }
 ```
@@ -148,9 +148,9 @@ Accept: application/json
 ```http
 HTTP/1.1 200 OK
 {
-    "@odata.context": "[Organization Uri]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.ValidateRetentionConfigResponse",
-    "IsValidationSuccessful": true,
-    "ErrorMessage": null
+  "@odata.context": "[Organization Uri]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.ValidateRetentionConfigResponse",
+  "IsValidationSuccessful": true,
+  "ErrorMessage": null
 }
 ```
 
@@ -162,7 +162,7 @@ HTTP/1.1 200 OK
 
 A message named *Retain* executes whenever a table row is marked for retention. You can optionally register a custom plug-in to be executed when the row is being marked for retention.
 
-More information: [Retain Action](webapi/reference/retain.md)
+More information: <xref:Microsoft.Dynamics.CRM.Retain?displayProperty=nameWithType>
 
 The following example executes retention on the an email record.
 
@@ -189,21 +189,21 @@ Accept: application/json
 ```http
 HTTP/1.1 200 OK
 {
-    "@odata.context": "[Organization Uri]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.RetainResponse",
-    "EntityCountCollection": {
-        "Count": 3,
-        "IsReadOnly": false,
-        "Keys": [
-            "activityparty",
-            "activitypointer",
-            "email"
-        ],
-        "Values": [
-            2,
-            1,
-            1
-        ]
-    }
+  "@odata.context": "[Organization Uri]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.RetainResponse",
+  "EntityCountCollection": {
+      "Count": 3,
+      "IsReadOnly": false,
+      "Keys": [
+          "activityparty",
+          "activitypointer",
+          "email"
+      ],
+      "Values": [
+          2,
+          1,
+          1
+      ]
+  }
 }
 ```
 
@@ -211,8 +211,8 @@ HTTP/1.1 200 OK
 
 ### See also
 
-[Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview)  
+[Manage data retention policies](../../maker/data-platform/data-retention-manage)  
+[View long term retained data](../../maker/data-platform/data-retention-view)  
 [Use the Microsoft Dataverse Web API](webapi/overview.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
