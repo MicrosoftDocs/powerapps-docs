@@ -17,33 +17,33 @@ contributors:
 ---
 # Preview an app
 
-When you create an app, it's helpful to preview it and see how it will look for your users. When you preview an app, you can also preview how the app appears on various devices and at different sizes, this is especially beneficial when you're building a responsive app.
+When you create an app, it's helpful to preview it and see how it will look for your users. When you preview an app, you can also preview how your app appears on various devices and in different sizes. Previewing an app is especially beneficial when you're building a responsive app.
 
-To preview an app, open the app for editing in [Power Apps Studio](https://create.powerapps.com), in the app actions menu, select the ![Preview button.](media/studio/preview-button.png)
+To preview an app, open the app for editing in [Power Apps Studio](https://create.powerapps.com), in actions menu, select the ![Preview button.](media/studio/preview-button.png)
 **Preview the app** button.
 
-You can preview the app to see how it looks on different devices using the device picker. 
+You can preview an app to see how it looks on different devices using the device picker. 
 
 > [!div class="mx-imgBorder"] 
 > ![Preview your app.](media/studio/preview-app.png)
 
 Legend: 
-1. **Tablet Devices**: Allows you to select from common tablet devices from several manufacturers, along with the ability to select a custom size based on your needs. This option shows a device frame and device safe zone, shown as the black area either on the top and bottom or sides depending upon the orientation. It also shows a black area with the home bar at the bottom.  
-2. **Mobile devices**: Lets you select from common phones from several manufacturers, along with the ability to select a custom size based on your needs. This option shows a device frame and device safe zone, shown as the black area either on the top and bottom or sides depending upon the orientation. It also shows a black area with the home bar at the bottom. 
-3. **Web view**: Lets you preview what the app looks like on a web browser. You can select Window size to fill the browser window, or you can specify a custom size to emulate your app embedded at a certain size. This option doesn't include a device frame.  
-4. **Orientation Switcher**: Switch between vertical and horizontal orientation. The **Orientation Switcher** option is disabled if the Lock Orientation setting is set to **On**. 
+1. **Tablet Devices**: Allows you to select from common tablet devices from several manufacturers, along with the ability to select a custom size based on your needs. This option shows a device frame and device safe zone, which is shown as the black area either on the top and bottom or sides depending on the orientation of the device. It also shows a black area with the home bar at the bottom.  
+2. **Mobile devices**: Lets you select from common phones from different manufacturers, along with the ability to select a custom size based on your needs. This option shows a device frame and device safe zone, which is shown as the black area either on the top and bottom or sides depending on the orientation of the device. It also shows a black area with the home bar at the bottom. 
+3. **Web view**: See how your app looks like on a web browser. You can select a window size to fill the browser window, or you can specify a custom size to emulate your app embedded at a certain size. This option doesn't include a device frame.  
+4. **Orientation Switcher**: Switch between vertical and horizontal orientation. The **Orientation Switcher** option is disabled if the **Lock Orientation** setting turned on. 
 
 ## Display settings
 
-The way your app behaves with each preview option is determined by app type and your display settings. For instance, if you're developing a responsive app, the content within it adjusts to fit the screen size of the device being used. 
+The way your app behaves with each preview option is determined by app type and your display settings. For instance, if you're developing a responsive app, the content within the app adjusts to fit the screen size of the device being used. 
 
-Watch this video to learn how the device picker can help you confirm that the content is adjusting correctly.
+Watch this video to learn how the device picker helps you confirm that your app is adjusting correctly.
 
 VIDEO LINK
 
-The way the preview appears can differ based on the app settings and whether you selected a phone or tablet layout during the app creation process.
+The way the preview appears can vary based on app settings and if you selected a phone or tablet layout when you created the app.
 
-- If an app is created using the phone layout, you can still preview it by using the device picker by selecting a tablet layout. However, if the app isn't created using a responsive layout, it then appears in a phone shape on the tablet device on tablet devices. You get a message explaining why the preview is narrow. If you’d like the app to be responsive to phone, tablet, and web sizes then we recommend selecting the tablet option when you create an app. You can use responsive auto layout containers to determine the flow of the content for different screen sizes including phones. More information: [Building responsive canvas apps](build-responsive-apps.md)  
+- If an app is created using the phone layout, you can still preview it by using the device picker by selecting a tablet layout. However, if an app isn't created using a responsive layout, it then appears in a phone shape on the tablet device on tablet devices. You get a message explaining why the preview is narrow. If you’d like an app to be responsive to phone, tablet, and web sizes then we recommend selecting the tablet option when you create an app. You can use responsive auto layout containers to determine the flow of the content for different screen sizes including phones. More information: [Building responsive canvas apps](build-responsive-apps.md)  
 
 - Under Display settings:
    - **Scale To Fit**: When set to **On** your entire app is scaled to fit the available space. If a smaller space is available to the app, you may notice empty space on the sides to accommodate the scaling. When a user plays the app, they will also see the empty space.
