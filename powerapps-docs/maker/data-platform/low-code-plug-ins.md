@@ -181,23 +181,7 @@ Before you install the low-code plug-ins for connectors solution, check the DLP 
 If you can't see the DLP policy applied to the environment where you want to install the solution:
 
 - Create a new developer environment, which you will be the system administrator of, then check the DLP policies applied to that environment once created.
-- Contact your Power Platform tenant admin to ask if the desired environment has either of the DLP Policy configurations shown above.
-
-#### Troubleshooting the low-code plug-in for connectors solution
-
-If you accidentally installed the low-code plug-in for connectors solution and the Dataverse Accelerator app is now blocked by a DLP policy, uninstall the low-code plug-in for connectors wizard solution and the Dataverse Accelerator will be able to run.
-
-1. Go to https://make.powerapps.com/
-2. Go to the environment where the low-code plug-in for connectors solution is installed, and then select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-3. Select the low-code plug-in for connectors solution.
-4. On the command bar, select **Delete**.
-5. In the dialog, select **Delete** to confirm.
-6. On the command bar, publish all customizations.
-
-> [!NOTE]
->
-> - When you play the Dataverse Accelerator app, you'll need to refresh the browser tab where the app is running. It might take some time for the app to reflect the updates.
-> - If there was a DLP policy blocking the app, it might take at least 10 minutes after the uninstall is completed for the platform to unblock the Dataverse Accelerator app.
+- Contact your Power Platform tenant admin to ask if the desired environment has either of the DLP policy configurations described above.
 
 #### Install the low-code plug-ins for connectors solution
 
@@ -207,8 +191,8 @@ The option to install the low-code plug-in for connectors wizard is provided whe
    - App Source 
    - In the Power Platform admin center
 1.	When the installer launches, select the environment.
-1. An option to install the low-code plug-ins for connectors solution is displayed. Make sure the checkbox is selected if you want to install the solution.
-   :::image type="content" source="media/low-code-plugin-for-connectors-optin.png" alt-text="Install the low-code plug-ins for connectors solution":::
+1. An option to **Include the low-code plug-ins for connectors solution** is displayed. Make sure the checkbox is selected if you want to install the solution.
+   :::image type="content" source="media/low-code-plugin-for-connectors-optin.png" alt-text="Include the low-code plug-ins for connectors solution option":::
 1. Review the terms of service.
 1. Select **Install**.
 
@@ -242,6 +226,22 @@ Once you have installed the solution, play the Dataverse Accelerator app and [Cr
    > Currently, you can't edit the parameters or formula on this page in the plug-ins wizard.
 
 Now, test your low-code plug-in by adding in data for your inputs and validate your output.
+
+#### Troubleshooting the low-code plug-in for connectors solution
+
+If you accidentally installed the low-code plug-in for connectors solution and the Dataverse Accelerator app is now blocked by a DLP policy, uninstall the low-code plug-in for connectors wizard solution and the Dataverse Accelerator will be able to run.
+
+1. Go to https://make.powerapps.com/
+2. Go to the environment where the low-code plug-in for connectors solution is installed, and then select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+3. Select the low-code plug-in for connectors solution.
+4. On the command bar, select **Delete**.
+5. In the dialog, select **Delete** to confirm.
+6. On the command bar, publish all customizations.
+
+> [!NOTE]
+>
+> - When you play the Dataverse Accelerator app, you'll need to refresh the browser tab where the app is running. It might take some time for the app to reflect the updates.
+> - If there was a DLP policy blocking the app, it might take at least 10 minutes after the uninstall is completed for the platform to unblock the Dataverse Accelerator app.
 
 ## Test an instant low-code plug-in
 
