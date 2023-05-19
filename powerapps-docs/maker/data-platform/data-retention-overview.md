@@ -19,6 +19,7 @@ Microsoft Dataverse supports custom retention policies to securely retain data l
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - For public preview, only non-production environments are allowed for previewing the long-term data retention feature. Production and Dataverse for Teams environments can't be used with this feature.
 > - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
+> - Pricing information for long term data retention will be available at general availability.
 
 ## Business application data lifecycle
 
