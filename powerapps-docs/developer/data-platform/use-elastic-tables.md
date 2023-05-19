@@ -545,9 +545,9 @@ OData-Version: 4.0
 ### Fetch related rows in query
 
 Elastic table currently does not support fetching related rows when executing a query.
-Dataverse will throw an error with code `0x80048d0b` and message **Link entities are not supported** when trying to fetch related rows in query.
+Dataverse will throw an error with code `0x80048d0b` and message **Link entities are not supported** when trying to do so.
 
-However, Elastic table does support fetching related rows when retrieving a single record.
+However, Elastic table supports fetching related rows when retrieving a single row.
 
 ## Upsert a record in an elastic table
 
