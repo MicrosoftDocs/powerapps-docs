@@ -72,7 +72,7 @@ Below is sample solution customization.xml code to create a retention policy.
             <condition attribute="prioritycode" operator="eq" value="3"/>
         </filter>
     </entity>
-</fetch></criteria>
+  </fetch></criteria>
   <entitylogicalname>incident</entitylogicalname>
   <iscustomizable>1</iscustomizable>
   <name>Resolved Cases in EastR1</name>
@@ -192,6 +192,7 @@ HTTP/1.1 200 OK
 
 ### See also
 
+[Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview)  
 [Use the Microsoft Dataverse Web API](webapi/overview.md)
 
 
