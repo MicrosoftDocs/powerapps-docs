@@ -18,7 +18,7 @@ contributors:
 # Customize the Azure AD B2C user interface for portals
 
 
-[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
 
 Azure Active Directory B2C (Azure AD B2C) supports user interface customization for sign-up and sign-in experience. With this feature, you can configure Azure AD B2C tenant with a custom sign-up and sign-in page created inside your portal. In this article, you'll learn about how to create, and configure a custom sign-up/sign-in web page with sample HTML in portals for use with Azure AD B2C authentication.
 
