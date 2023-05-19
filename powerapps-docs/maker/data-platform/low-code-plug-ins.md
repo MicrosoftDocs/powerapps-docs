@@ -79,23 +79,6 @@ Once the solution import has completed, the status is set to **Enabled** next to
 
 When a low-code plug-in is created for the first time, you'll be able to call the plug-ins as a Dataverse action inside a canvas app as described here: [Call Dataverse actions directly in Power Fx](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx-experimental). However, for any subsequent plugins created, you'll have to remove and re-add the Power Fx environment language object. Then you'll be able to see all the low-code plug-ins as actions.
 
-## When to use Dataverse plug-ins vs Power Automate flows
-
-Since low-code plug-ins are real-time business logic that run on the Dataverse environment, logic is run directly on the server and is executed without additional API calls. Consider using plug-ins whenever you are dealing with business data in Dataverse.
-
-You can invoke plug-ins whether you are designing a Power App, Power Automate flow, or even an application with a different interface that uses the Dataverse web API.
-
-When to use Power Automate flows:
-
-- If you need to run business logic on a schedule.
-- If you need to connect to other external data.
-
-<!-- This is flagged for revision in doc-- Star – needs revision -->
-Imagine you have a custom table named jobapplication that's used for job applications in your organization.
-
-- When you want to create Jobapplication statistic record every night, which is a recurring task that runs every night. For this situation, create a flow in Power Automate.
-- When you want to create a Jobapplication record only when the student name is not available in the system. For this situation, use a Dataverse action.
-
 ## Create an instant low-code plug-in
 
 1. Sign into the environment where the Dataverse Accelerator solution is installed and play the Dataverse Accelerator app.

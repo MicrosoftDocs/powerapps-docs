@@ -17,7 +17,14 @@ Low-code plug-ins can add business logic to your apps using the Power Fx express
 > [!IMPORTANT]
 > This is a preview feature.
 
-The following table lists the Power Fx formulas that have limitations or don’t work with low-code plug-ins. Power Fx formulas not listed here are supported.
+Low-code plug-ins support many of the Power Fx operators, variables, and formulas. For more information about Power Fx, go to these articles:
+
+- [Expression grammar](/power-platform/power-fx/expression-grammar)
+- [Operators](/power-platform/power-fx/operators)
+- [Variables](/power-platform/power-fx/variables)
+- [Formula reference](/power-platform/power-fx/formula-reference)
+
+The following table lists the Power Fx formulas that work but have limitations or don’t work but have an alternative for use with low-code plug-ins.
 
 |Power Fx formula  |Supported in plug-ins?  | Limitation or work around   |
 |---------|---------|---------|
@@ -25,64 +32,208 @@ The following table lists the Power Fx formulas that have limitations or don’t
 |Collect     | Yes        | Requires the variable to exist and the variable type to match what you’re trying to set it to.    |
 |Defaults     |  No       | Use Collect instead. For example, instead of *Patch(account, Defaults(account), {“Account Name”: “Example Account”})* use `Collect(account, {“Account Name”: “Example Account”})`.    |
 |User()     | No        | Instead use Viewer, which has a subset of information about the user who invoked the action (both instant and automated).    |
-|Clear     | No        |     |
-|ClearCollect    |  No       |     |
-|Update     |  No       |     |
-|UpdateIf    |  No       |     |
-|Device sensor formulas (Acceleration, App, Compass, Connection, and Location)    |   No      |     |
-|SaveData, LoadData, and ClearData     |   No      |     |
-|Form-related formulas (EditForm, NewForm, SubmitForm, ResetForm, and ViewForm)     |  No       |     |
-|AddColumns     | No        |     |
-|Concurrent     |  No       |     |
-|DropColumns     | No        |     |
-|EncodeUrl   |  No       |     |
-|IsEmpty    |  No       |     |
-|IsMatch     |  No       |     |
-|IsType    |  No       |     |
-|JSON     |  No       |     |
-|Match    |  No       |     |
-|PlainText    |  No       |     |
-|RemoveIf     |  No       |     |
-|SortByColumns     |  No       |     |
-|Update    |  No       |     |
-|UpdateIf    |  No       |     |
-|AsType   |   No      |     |
-|Distinct    |  No       |     |
-|exactin     |  No       |     |
-|GroupBy     |    No     |     |
-|in    |     No    |     |
-|RenameColumns      |  No         |       |
-| Search     |   No        |       |
-| ShowColumns     |   No        |       |
-| UTCNow     |   No        |       |
-|UTCToday     |   No        |       |
-| Validate     |   No        |       |
-| Weekday     |  No         |       |
-| As     |   No        |       |
-| Calendar     |  No         |       |
-| Choices     |   No        |       |
-| Clock     |  No         |       |
-| ColorFade     |   No        |       |
-| ColorValue     |  No         |       |
-| Errors     |   No        |       |
-| HashTags     |  No         |       |
-| ISOWeekNum     |  No         |       |
-| Language     |  No         |       |
-| MatchAll     |  No         |       |
-| Refresh     |  No         |       |
-| RGBA     |  No         |       |
-| WeekNum     | No          |       |
-| Notify     |  No         |       |
-| Select     |  No         |       |
-| SetProperty     |  No         |       |
-| Download     |  No         |       |
-| SetFocus     |  No         |       |
+
+## Formulas not currently supported with low-code plug-ins
+
+:::row:::
+   :::column span="":::
+      Clear
+   :::column-end:::
+   :::column span="":::
+      ClearCollect
+   :::column-end:::
+   :::column span="":::
+      Update
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      UpdateIf
+   :::column-end:::
+   :::column span="":::
+      EncodeUrl
+   :::column-end:::
+   :::column span="":::
+      Concurrent
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      DropColumns
+   :::column-end:::
+   :::column span="":::
+      AddColumns
+   :::column-end:::
+   :::column span="":::
+      IsEmpty
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      IsMatch
+   :::column-end:::
+   :::column span="":::
+      IsType
+   :::column-end:::
+   :::column span="":::
+      JSON
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Match
+   :::column-end:::
+   :::column span="":::
+      PlainText
+   :::column-end:::
+   :::column span="":::
+     RemoveIf
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      SortByColumns
+   :::column-end:::
+   :::column span="":::
+      Update
+   :::column-end:::
+   :::column span="":::
+      UpdateIf
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      AsType
+   :::column-end:::
+   :::column span="":::
+      Distinct
+   :::column-end:::
+   :::column span="":::
+      exactin
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      GroupBy
+   :::column-end:::
+   :::column span="":::
+      in
+   :::column-end:::
+   :::column span="":::
+      RenameColumns
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Search
+   :::column-end:::
+   :::column span="":::
+      ShowColumns
+   :::column-end:::
+   :::column span="":::
+      UTCNow
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      UTCToday
+   :::column-end:::
+   :::column span="":::
+      Validate
+   :::column-end:::
+   :::column span="":::
+      Weekday
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      As
+   :::column-end:::
+   :::column span="":::
+      Calendar
+   :::column-end:::
+   :::column span="":::
+      Choices
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Clock
+   :::column-end:::
+   :::column span="":::
+      ColorFade
+   :::column-end:::
+   :::column span="":::
+      ColorValue
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Errors
+   :::column-end:::
+   :::column span="":::
+      HashTags
+   :::column-end:::
+   :::column span="":::
+      ISOWeekNum 
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Language
+   :::column-end:::
+   :::column span="":::
+      MatchAll
+   :::column-end:::
+   :::column span="":::
+      Refresh
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      RGBA
+   :::column-end:::
+   :::column span="":::
+      WeekNum
+   :::column-end:::
+   :::column span="":::
+      Notify
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Select
+   :::column-end:::
+   :::column span="":::
+      SetProperty
+   :::column-end:::
+   :::column span="":::
+      Download
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      SetFocus
+   :::column-end:::
+   :::column span="":::
+      Device sensor formulas (Acceleration, App, Compass, Connection, and Location)
+   :::column-end:::
+   :::column span="":::
+      SaveData, LoadData, and ClearData
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Form-related formulas (EditForm, NewForm, SubmitForm, ResetForm, and ViewForm)
+   :::column-end:::
+   :::column span="":::
+      
+   :::column-end:::
+   :::column span="":::
+      
+   :::column-end:::
+:::row-end:::
 
 ## See also
 
-The Power Fx documentation is the primary source of information about Power Fx. When you’re working with actions, you’ll find the following articles helpful:
-
-- [Expression grammar](/power-platform/power-fx/expression-grammar)
-- [Operators](/power-platform/power-fx/operators)
-- [Variables](/power-platform/power-fx/variables)
-- [Formula reference](/power-platform/power-fx/formula-reference)
+[Use Dataverse low-code plug-ins (experimental)](low-code-plug-ins.md)
