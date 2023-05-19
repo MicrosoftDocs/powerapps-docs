@@ -151,7 +151,7 @@ For example:
 
 #### [SDK for .NET](#tab/sdk)
 
-For `Create`, `Update` and `Upsert` requests, you can directly set the value of `partitionid` column in the `Entity`.
+For `Create`, `Update` and `Upsert` requests, you can directly specify the value of `partitionid` column in the `Entity`.
 
 ```csharp
     var entity = new Entity("contoso_sensordata", sensordataid)
@@ -164,7 +164,7 @@ For `Create`, `Update` and `Upsert` requests, you can directly set the value of 
 
 #### [Web API](#tab/webapi)
 
-For `POST` and `PATCH` operations, you can directly set the value of `partitionid` column in request body.
+For `POST` and `PATCH` operations, you can directly specify the value of `partitionid` column in request body.
 
 For example:
 ```http
