@@ -209,12 +209,12 @@ public static Guid CreateJsonAttribute(IOrganizationService service)
          EntityName = "contoso_sensordata",
          Attribute = new StringAttributeMetadata
          {
-            SchemaName = "contoso_SensorValue",
+            SchemaName = "contoso_energyconsumption",
             RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
             MaxLength = 1000,
             FormatName = StringFormatName.Json,
-            DisplayName = new Label("Sensor Value", 1033),
-            Description = new Label("Stores unstructured sensor data as reported by device", 1033)
+            DisplayName = new Label("Energy Consumption", 1033),
+            Description = new Label("Contains information about energy consumed by the IoT devices", 1033)
          }
    };
 
@@ -251,7 +251,7 @@ OData-Version: 4.0
       "LocalizedLabels":[
          {
             "@odata.type":"Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label":"Contains sensor data reported by IOT devices as JSON values",
+            "Label":"Contains information about energy consumed by the IoT devices",
             "LanguageCode":1033
          }
       ]
@@ -261,7 +261,7 @@ OData-Version: 4.0
       "LocalizedLabels":[
          {
             "@odata.type":"Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label":"sensorvalue",
+            "Label":"Energy Consumption",
             "LanguageCode":1033
          }
       ]
@@ -271,7 +271,7 @@ OData-Version: 4.0
       "CanBeChanged":true,
       "ManagedPropertyLogicalName":"canmodifyrequirementlevelsettings"
    },
-   "SchemaName":"sensorvalue",
+   "SchemaName":"contoso_energyconsumption",
    "@odata.type":"Microsoft.Dynamics.CRM.StringAttributeMetadata",
    "FormatName":{
       "Value":"Json"
