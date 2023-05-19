@@ -147,7 +147,7 @@
         href: ../user/faq-for-grids-views.md
     - name: Charts and dashboards
       items:
-      - name: Visualize data in a view with Power BI service (preview)
+      - name: Visualize data in a view with Power BI service
         href: ../user/visualize-in-power-bi.md
       - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
@@ -1162,6 +1162,8 @@
       href: ./canvas-apps/how-to/deep-linking.md
     - name: Work with the PDF function (experimental)
       href: ./canvas-apps/how-to/pdf-function.md
+  - name: Preview an app
+    href: ./canvas-apps/preview-app.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
@@ -1777,6 +1779,14 @@
       href: ../mobile/mobile-offline-guidelines.md  
     - name: Mobile offline capabilities and limitations
       href: ../mobile/offline-capabilities.md
+  - name: Mobile offline for canvas apps (preview)
+    items:
+    - name: Mobile offline for canvas apps overview (preview)
+      href: ../mobile/canvas-mobile-offline-overview.md
+    - name: Set up mobile offline for canvas apps (preview)
+      href: ../mobile/canvas-mobile-offline-setup.md
+    - name: Working with canvas apps offline (preview)
+      href: ../mobile/canvas-mobile-offline-working.md
   - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows 
