@@ -16,13 +16,13 @@ search.audienceType:
 
 *Long-term retention* (LTR) is a Dataverse capability that enables customers to transfer their data from a transactional database to the Dataverse managed data lake. To perform the LTR operations, you are required to set up retention policies by defining the criteria for a given table. To set up the retention policy, you should have your environment (organization) and tables both enabled for retention.
 
-More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview), [Enable a table for long term retention](../../maker/data-platform/data-retention-set#enable-a-table-for-long-term-retention)
+More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md), [Enable a table for long term retention](../../maker/data-platform/data-retention-set#enable-a-table-for-long-term-retention.md)
   
 ## Configure retention policy using code
 
 You can set up the retention policy by creating an entry in the retention configuration table. As part of retention policy set up, the platform will validate the policy against a Validate Retention Config table row.
 
-More information: <xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType>, [Set a data retention policy for a table](../../maker/data-platform/data-retention-set)
+More information: <xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType>, [Set a data retention policy for a table](../../maker/data-platform/data-retention-set.md)
 
 The following code example demonstrates the retention APIs.
 
@@ -211,8 +211,8 @@ HTTP/1.1 200 OK
 
 ### See also
 
-[Manage data retention policies](../../maker/data-platform/data-retention-manage)  
-[View long term retained data](../../maker/data-platform/data-retention-view)  
+[Manage data retention policies](../../maker/data-platform/data-retention-manage.md)  
+[View long term retained data](../../maker/data-platform/data-retention-view.md)  
 [Use the Microsoft Dataverse Web API](webapi/overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
