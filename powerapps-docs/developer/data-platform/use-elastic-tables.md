@@ -82,20 +82,33 @@ MSCRM.SessionToken: 240:8#144100870#7=-1
 
 As mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `PartitionId` column that you must use to uniquely identify a record that has been assigned to a partition.
 
-If you have a partitioning strategy you must consistently apply it for data operations with the elastic table. If you don't set a `partitionid` for a record when it is created, the default partition value is a string that represents the Guid value of the primary key.
+If you have a partitioning strategy, you must consistently apply it by setting the value of `partitionid` column as appropriate when creating the row.
 
-If you are not applying a partitioning strategy, that's fine too. But you won't get the optimum performance possible with retrieve operations. In this case, you can simply identify records using the primary key as you normally do with standard tables.
+If you don't set a `partitionid` for a record when it is created, the Guid value of the primary key is used a default value of `partitionid` column. In this case, you can simply identify records using the primary key as you normally do with standard tables. Having no partitioning strategy can be good for cases where read scenarios are limited to retrieve based on primary key. However, you won't get the optimum performance when running queries on your table. This is because in lack of a partitioning strategy each record belongs in its own logical partition and any query would need to scan all logical partitions to get result.
 
 > [!NOTE]
 > The examples in this article assume that you are applying a partitioning strategy.
 
-### Alternate Key style or PartitionId parameter with Web API
+### Using Alternate Key
 
-As mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key named `KeyForNoSqlEntityWithPKPartitionId`. This alternate key combines the primary key of the table with the `partitionid` column. You can use the special syntax in Web API to refer to records using the alternate key. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
+As mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key named `KeyForNoSqlEntityWithPKPartitionId`. This alternate key combines the primary key of the table with the `partitionid` column.
 
-#### Alternate key style
+#### [SDK for .NET](#tab/sdk)
 
-The alternate key style looks like this:
+You can use this alternate key to specify `partitionid` when using `Retrieve`,`RetrieveMultiple`, `Update` and `Delete` requests on elastic tables.
+
+```csharp
+    var keys = new KeyAttributeCollection() {
+        { "contoso_sensordataid", sensordataid },
+        { "partitionid", deviceId }
+    };
+```
+
+#### [Web API](#tab/webapi)
+
+You can use this alternate key to specify `partitionid` when performing GET, PATCH and DELETE operations on elastic tables.
+
+ You can use the special syntax in Web API to refer to records using the alternate key. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
 
 > `<entity set name>(<primary key name>=<primary key value>,partitionid='<partitionid value>')`
 
@@ -103,21 +116,68 @@ The alternate key style looks like this:
 > The primary key value is a Guid, so no quote characters are needed. `partitionid` is a string, so it requires quote characters.
 
 For example:
+```http
+/contoso_sensordatas(contoso_sensordataid=e61a662e-68d8-487e-94e7-ae3a22fd4bbd,partitionid='device-001')
+```
 
-> `contoso_sensordatas(contoso_sensordataid=e61a662e-68d8-487e-94e7-ae3a22fd4bbd,partitionid='device-001')`
+---
+### Using partitionId parameter
 
+#### [SDK for .NET](#tab/sdk)
 
-#### PartitionId parameter
+For `Retrieve`, `RetrieveMultiple` and `Delete` requests, you can use a special parameter `partitionId` to specify the value of `partitionid` column.
 
-Alternatively, you can use a special query parameter that is either `partitionId` or `partitionid`.
+> [!NOTE]
+> partitionId parameter will not work with Create, Update or Upsert requests and will be ignored if sent.
 
-For `GET` and `DELETE` operations parameter name is `partitionId``:
+```csharp
+    request["partitionId"] = deviceId,
+```
 
-- `contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'`
+#### [Web API](#tab/webapi)
 
-Otherwise use `partitionid`:
+For `GET` and `DELETE` operations, you can use a special query parameter `partitionId` to specify the value of `partitionid` column.
 
-- `contoso_sensordatas(<primary key value>)?partitionid='<partitionid value>'`
+> [!NOTE]
+> partitionId parameter will not work with POST or PATCH requests and will be ignored if sent.
+
+For example:
+```http
+/contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'
+```
+---
+
+### Use `partitionid` column directly
+
+#### [SDK for .NET](#tab/sdk)
+
+For `Create`, `Update` and `Upsert` requests, you can directly set the value of `partitionid` column in the `Entity`.
+
+```csharp
+    var entity = new Entity("contoso_sensordata", sensordataid)
+    {
+        Attributes = {
+            { "partitionid", <partitionid> }
+        }
+    };
+```
+
+#### [Web API](#tab/webapi)
+
+For `POST` and `PATCH` operations, you can directly set the value of `partitionid` column in request body.
+
+For example:
+```http
+POST [Organization URI]/api/data/v9.2/contoso_sensordatas
+Content-Type: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+
+{
+  "partitionid": "deviceid-001"
+}
+```
 
 ## Create a record in an elastic table
 
