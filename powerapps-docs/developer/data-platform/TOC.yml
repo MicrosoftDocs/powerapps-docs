@@ -328,6 +328,8 @@
           href: aaduser-entity.md
     - name: Template tables
       href: upload-manage-document-templates.md
+    - name: Long-term data retention
+      href: long-term-retention.md
 - name: Work with table definitions using code
   href: metadata-services.md
   items:
