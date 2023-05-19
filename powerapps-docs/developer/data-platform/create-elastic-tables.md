@@ -271,7 +271,7 @@ OData-Version: 4.0
       "CanBeChanged":true,
       "ManagedPropertyLogicalName":"canmodifyrequirementlevelsettings"
    },
-   "SchemaName":"contoso_energyconsumption",
+   "SchemaName":"contoso_EnergyConsumption",
    "@odata.type":"Microsoft.Dynamics.CRM.StringAttributeMetadata",
    "FormatName":{
       "Value":"Json"
