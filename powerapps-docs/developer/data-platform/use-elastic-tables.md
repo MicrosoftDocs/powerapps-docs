@@ -82,7 +82,7 @@ MSCRM.SessionToken: 240:8#144100870#7=-1
 
 As mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `PartitionId` column that you must use to uniquely identify a record. 
 
-Once you have specified a non-null value to the `partitionid` column while creating a row, you must specify the same when performing any other data operation on the same row.
+Once you have specified a non-null value to the `partitionid` column while creating a row, you must specify it when performing any other data operation on the row.
 
 If you don't set a `partitionid` for a record when it is created, the Guid value of the primary key is used a default value of `partitionid` column. In this case, you can simply identify records using the primary key as you normally do with standard tables. Specifying `partitionid` is not required.
 
