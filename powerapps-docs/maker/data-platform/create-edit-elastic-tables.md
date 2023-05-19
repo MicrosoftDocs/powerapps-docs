@@ -13,7 +13,9 @@ ms.author: matp
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-An elastic table is a table managed by the Microsoft Dataverse storage service. Elastic tables come with the same familiar user experience and API that are offered with standard tables. They share many aspects and options with standard tables, but come with their own unique features and capabilities that are powered by Azure Cosmos DB.
+An elastic table is a table managed by Microsoft Dataverse. Elastic tables come with the same familiar user experience and API that are offered with standard tables. They share many aspects and options with standard tables, but come with their own unique features and capabilities that are powered by Azure Cosmos DB.
+
+As with standard tables, elastic tables are included with your Dataverse database capacity use.
 
 > [!IMPORTANT]
 > This is a preview feature.
@@ -36,11 +38,25 @@ Elastic tables will automatically scale for this high throughput scenario.
 
 For example, in the above scenario, an elastic table named *Coupon* with millions of records can be associated with Dataverse standard tables like *Contact* (customer info) and *Offer* (a custom standard table). Since the elastic tables are isolated from the standard tables, performance for the overall marketing application won't be negatively impacted. In addition, time-to-live capability with elastic table (*Coupon* in this scenario) allows removal of data automatically after fixed periods and ensure optimization of storage capacity.
 
+Use elastic tables when:
+
+- Your data might be unstructured or semi-structured, or if your data model might constantly change.
+- You need automatic horizontal scaling.
+- You need to handle a high volume of read and write requests.
+
+Use standard tables when:
+
+- Your application requires strong consistency.
+- Your application requires relational modeling and needs transactional capability across tables and during plugin execution stages.
+- Your application requires complex joins.
+
+The choice of table should be based on the specific needs of your application. A combination of both types of tables may be appropriate.
+
 ## Horizontal scaling and performance  
 
 As your business data grows, elastic tables provide unlimited auto scalability based on your application workload, both for storage size and throughput, such as the number of records created, updated, or deleted in a given timeframe. 
 
-If your business scenario requires very large volume of data writes, application makers can make use of Dataverse XMultiple <!-- what is xmultiple? Use a term that exists in the Power Platform vernacular --> API's to achieve more thoughput within Dataverse throttling limits. Learn more.
+If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request API's, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits.
 
 ### Automatic removal of data
 
@@ -52,39 +68,27 @@ Elastic tables enable you to store and query data with varying structures, witho
 
 ## Considerations when you use elastic tables  
 
-Elastic tables don't provide the same level transaction support as standard tables. Standard tables support strong, consistent transactions support. Elastic tables support what is called *eventual consistency* for transactions, which means that updates made to the database might take some time to propagate to all nodes in the system. More information: [Eventual consistency](/azure/cosmos-db/consistency-levels#eventual-consistency).
+Although elastic tables are great for handling large volume of requests at scale, the advantages come with a few trades offs, which should be kept in mind:
 
-Elastic tables support only left-outer JOIN in queries. This means that filters on related tables when creating views or in Advanced Find won't work. We recommend to denormalize columns by grouping them on the same table, such as  from related tables into the main table if filters on related tables are needed.
-
-### Denormalize columns
-
-Consider a retailer with two elastic tables: customer and address. One customer has many addresses. You want to return query results for all customers from the customer table whose city value in the address table is *New York*.
-
-This requires an inner join of the two tables, which isn't supported with elastic tables. One way to make this work for the elastic tables is to denormalize the city data into the customer table so that all customers city values are present in the customer table.  
+- Elastic tables don't support multi-record transactions. This means that multiple write operations happening as part of a single request execution aren't transactional with each other. For example, if you have a synchronous plug-in step registered on the `PostOperation` stage for `Create message` on an elastic table, any error in your plug-in won't roll back the created record in Dataverse. Validations in preplug-ins will still work as expected since they run before the main stage.
+- Elastic tables support strong consistency only within a logical session. Outside session context, you might not see changes to a row immediately. <!-- Add more information link to developer doc section --> 
+- Elastic tables don't support filters on related tables when creating views, advanced find, or any query in general using API. If you frequently need to filter on related table columns, we recommend that you denormalize columns from related tables, which needs filtering into the main table itself. Consider a retailer with two elastic tables: customer and address. One customer has many addresses. You want to return query results for all customers from the customer table whose city value in the address table is New York. In this example, when querying customer table, you want to apply a filter on the city column of the related address table. This isn't supported for elastic tables. One way to make this work is to denormalize the city column into the Customer table so that all customers city values are present in the customer table itself.
 
 ## Elastic tables feature support
 
+- Create, retrieve, update, delete (CRUD) operations including API multiple operations (for high throughput), bulk deletion, and requests from plug-ins.
+- Relationships: 
+   - One-to-many
+   - Many-to-one 
 - Record ownership, change tracking, auditing, mobile offline, and Dataverse search.
-- Create, retrieve, update, delete (CRUD) operations including `xMultiple` (for high throughput), bulk deletion, and requests from plugins.
-- Relationships:
-  - 1:N (One-to-many)
-    - One elastic table -> Many elastic tables
-    - One elastic table -> Many standard tables
-  - N:1 (Many-to-one)
-    - Many elastic tables -> One standard table
 
-> [!IMPORTANT]
-> When you add a lookup column to a standard table that references an elastic table, don't set the `partitionid` value on the elastic table records. Lookup columns that reference an elastic table only work correctly when a `partitionid` value isn't used for the record in the elastic table. When no `partitionid` value is specified when the row is created, it defaults to the primary key value, and the lookup works as expected. But, if the row is created with a `partitionid` value other than the primary key value, the lookup won't work.
-> 
-> You can add this kind of  lookup column three  different ways: 
-> 
-> - By adding a lookup column on a standard table that references to an elastic table.
-> - By creating a many-to-one relationship on a standard table where the related (one) table is an elastic table.
-> - By creating a one-to-many relationship on an elastic table where the related (many) table is a standard table.
+### Security features support
 
-Security features:
+Elastic tables adhere to the Dataverse security model.
 
-- User and organization owned tables
+When creating an elastic table, you can set:
+
+- Either user or organization owned
 - Field level security
 
 ### Features currently not supported with elastic tables
@@ -103,7 +107,7 @@ Table features currently not supported with elastic tables:
 - Currency columns
 - [Column comparison in queries using FetchXML, Web API, or the SDK API](../../developer/data-platform/column-comparison.md)
 - Table sharing
-- Composite indexes (all fields are indexed)
+- Composite indexes
 - Cascade operations: Delete, Reparent, Assign, Share, Unshare 
 - Ordering on lookup columns
 - Aggregate queries:
@@ -135,9 +139,10 @@ You create an elastic table just like any other new table in Dataverse.
 1. Select **Elastic** as the table **Type**.
 1. Select the properties you want, and then select **Save**. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
-## Known issue
+## Known issues
 
-Currently Power Apps (make.powerapps.com) allows you to set a many-to-one (N:1) relationship with an elastic table where the N table is a standard table. However this relationship isn't supported and won't function as expected.
+- Currently Power Apps (make.powerapps.com) allows you to set a many-to-one (N:1) relationship with an elastic table where the N table is a standard table. Standard table will have a lookup column pointing to an elastic table row. While retrieving rows for a standard table in such a relationship, the lookup column that points to an elastic table row won't have the formatted value returned when the elastic table row has the `partitionid` set. More information: [Improve performance using storage partitions when accessing entity data](../../developer/data-platform/org-service/azure-storage-partitioning-sdk.md)
+- Getting related rows when making a query on an elastic table currently doesn't work. However, getting related rows works when retrieving a single elastic table row.
 
 ## See also
 
