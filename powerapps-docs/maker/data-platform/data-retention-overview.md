@@ -76,7 +76,6 @@ With Dataverse long term retention, data is never moved out of Dataverse . The r
 - When available, the reports display two entries for a table that has been enabled for long term retention:
    - *Table*, such as **Case**<sup>1</sup> or **Contact**.
    - *Table-Retained*, such as **Case-Retained** and **Contact-Retained**.
-   - In the above case table example, notice that when the Dataverse environment is static with no new data added into the live data, as live data is transferred to retained data, the case table size will reduce and the case-retained size will increase to store and display the retained data.
 
    <sup>1</sup> The case table requires a Dynamics 365 app, such as Dynamics 365 Service.
 
