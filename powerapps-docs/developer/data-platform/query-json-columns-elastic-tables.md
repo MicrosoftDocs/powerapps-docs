@@ -142,7 +142,7 @@ GET [Organization URI]/api/data/v9.2/ExecuteCosmosSqlQuery(
    QueryParameters=@p3)?
    @p1='select c.props.contoso_deviceid as deviceId, c.props.contoso_timestamp as timestamp, c.props.contoso_energyconsumption.power as power from c where c.props.contoso_sensortype=@sensortype and c.props.contoso_energyconsumption.power > @power'
    &@p2='contoso_sensordata'
-   &@p3={'Keys':['@sensortype', '@power'],'Values':[{'Type':'System.String','Value':'Humidity'}, {'Type':'System.Int32','Value': 5}]}
+   &@p3={'Keys':['@sensortype', '@power'],'Values':[{'Type':'System.String','Value':'Humidity'}, {'Type':'System.Int32','Value': '5'}]}
 ```
 
 **Response**
