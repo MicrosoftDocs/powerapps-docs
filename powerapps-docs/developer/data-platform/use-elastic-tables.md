@@ -84,7 +84,7 @@ As mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitio
 
 Once you have specified a non-null value to the `partitionid` column while creating a row, you must specify it when performing any other data operation on the row.
 
-If you don't set a `partitionid` for a record when it is created, the Guid value of the primary key is used a default value of `partitionid` column. In this case, you can simply identify records using the primary key as you normally do with standard tables. Specifying `partitionid` is not required.
+If you don't set a `partitionid` for a record when it is created, the Guid value of the primary key is used as default value of `partitionid` column. In this case, you can simply identify records using the primary key as you normally do with standard tables. Specifying `partitionid` is not required.
 
 > [!NOTE]
 > The examples in this article assume that you are specifying a non-null value to the `partitionid` column.
@@ -94,11 +94,11 @@ You can specify `partitionid` value in following ways when performing various da
 ### Using Alternate Key
 
 As mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key named `KeyForNoSqlEntityWithPKPartitionId`. This alternate key combines the primary key of the table with the `partitionid` column.
-You can use this alternate key to specify `partitionid` when using Read, Update or Delete operations.
+You can use this alternate key to specify `partitionid` when using Retrieve, Update or Delete operations.
 
 #### [SDK for .NET](#tab/sdk)
 
-This example shows how you can use alternate key to specify `partitionid` when using `Retrieve`,`RetrieveMultiple`, `Update` and `Delete` requests on elastic tables.
+This example shows how you can use alternate key to specify `partitionid` when using `Retrieve`, `Update` and `Delete` requests on elastic tables.
 
 ```csharp
     var keys = new KeyAttributeCollection() {
@@ -111,7 +111,7 @@ This example shows how you can use alternate key to specify `partitionid` when u
 
 #### [Web API](#tab/webapi)
 
-This example shows how you can use the special syntax in Web API to refer to records using the alternate key when performing GET, PATCH and DELETE operations on elastic tables. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
+This example shows how you can use the special syntax in Web API to refer to records using the alternate key when performing GET, PATCH and DELETE operation on a single row of elastic table. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
 
 > `<entity set name>(<primary key name>=<primary key value>,partitionid='<partitionid value>')`
 
