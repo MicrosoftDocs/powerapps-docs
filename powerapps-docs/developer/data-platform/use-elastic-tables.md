@@ -124,20 +124,18 @@ For example:
 ---
 ### Using partitionId parameter
 
-#### [SDK for .NET](#tab/sdk)
+For Read and Delete requests, you can use a special parameter `partitionId` to specify the value of `partitionid` column.
 
-For `Retrieve`, `RetrieveMultiple` and `Delete` requests, you can use a special parameter `partitionId` to specify the value of `partitionid` column.
+#### [SDK for .NET](#tab/sdk)
 
 > [!NOTE]
 > partitionId parameter will not work with Create, Update or Upsert requests and will be ignored if sent.
 
 ```csharp
-request["partitionId"] = deviceId
+request["partitionId"] = "device-001"
 ```
 
 #### [Web API](#tab/webapi)
-
-For `GET` and `DELETE` operations, you can use a special query parameter `partitionId` to specify the value of `partitionid` column.
 
 > [!NOTE]
 > partitionId parameter will not work with POST or PATCH requests and will be ignored if sent.
@@ -150,31 +148,27 @@ For example:
 
 ### Using `partitionid` column directly
 
+For `Create`, `Upsert` or `Update` operations, you can directly specify the value of `partitionid` column.
+
 #### [SDK for .NET](#tab/sdk)
 
-For `Create`, `Upsert` and `Update` requests, you can directly specify the value of `partitionid` column in the `Entity`.
+This examples shows how you can set directly specify `partitionid` column in `Entity` when executing a `Create`, `Upsert` or `Update` request.
 
 ```csharp
     var entity = new Entity("contoso_sensordata", sensordataid)
     {
         Attributes = {
-            { "partitionid", <partitionid> }
+            { "partitionid", "device-001" }
         }
     };
 ```
 
 #### [Web API](#tab/webapi)
 
-For `POST` and `PATCH` operations, you can directly specify the value of `partitionid` column in request body.
+This example shows how you can directly specify the value of `partitionid` column in request body when making a POST or PATCH request.
 
 For example:
 ```http
-POST [Organization URI]/api/data/v9.2/contoso_sensordatas
-Content-Type: application/json
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-Accept: application/json
-
 {
   "partitionid": "deviceid-001"
 }
