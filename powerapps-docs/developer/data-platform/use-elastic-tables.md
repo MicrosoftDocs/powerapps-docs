@@ -131,7 +131,7 @@ For `Retrieve`, `RetrieveMultiple` and `Delete` requests, you can use a special 
 > partitionId parameter will not work with Create, Update or Upsert requests and will be ignored if sent.
 
 ```csharp
-    request["partitionId"] = deviceId,
+request["partitionId"] = deviceId
 ```
 
 #### [Web API](#tab/webapi)
@@ -147,7 +147,7 @@ For example:
 ```
 ---
 
-### Use `partitionid` column directly
+### Using `partitionid` column directly
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -178,6 +178,7 @@ Accept: application/json
   "partitionid": "deviceid-001"
 }
 ```
+---
 
 ## Create a record in an elastic table
 
