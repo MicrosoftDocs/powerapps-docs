@@ -55,6 +55,8 @@
               href: org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
+    - name: Use open types with Custom APIs 
+      href: use-open-types.md
     - name: Background operations (Preview)
       href: background-operations.md
     - name: Use optional parameters
