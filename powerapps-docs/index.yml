@@ -184,7 +184,7 @@ additionalContent:
     - items:
         # Card
         - title: Power Platform
-          summary: One-stop resource for Power Platform documentation and training including admin, developer, and guidance documentation.
+          summary: One-stop learning resource for Power Platform applications and features.
           url: /power-platform
         # Card
         - title: Power Automate
