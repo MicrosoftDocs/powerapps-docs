@@ -8,14 +8,16 @@ ms.topic: how-to
 ms.date: 05/18/2023
 ms.custom: template-how-to
 ---
-# Low-code plug-ins Power Fx (preview)
+# Low-code plug-ins Power Fx (experimental)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Low-code plug-ins can add business logic to your apps using the Power Fx expression language and directly integrate with Dataverse business data and external data through Power Platform connectors. With low-code plug-ins, you can quickly build rich workflows without any code.
 
 > [!IMPORTANT]
-> This is a preview feature.
+> - This is an experimental feature. Use this if you're an early adopter, see something useful to you, and would like to help test the feature.
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - Experimental features can radically change or completely disappear at any time. For this reason the feature is not enabled by default and you must explicitly opt in to use it.
 
 Low-code plug-ins support many of the Power Fx operators, variables, and formulas. For more information about Power Fx, go to these articles:
 
@@ -88,17 +90,6 @@ The following table lists the Power Fx formulas that work but have limitations o
    :::column-end:::
    :::column span="":::
      RemoveIf
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      SortByColumns
-   :::column-end:::
-   :::column span="":::
-      Update
-   :::column-end:::
-   :::column span="":::
-      UpdateIf
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -216,7 +207,7 @@ The following table lists the Power Fx formulas that work but have limitations o
       SetFocus
    :::column-end:::
    :::column span="":::
-      Device sensor formulas (Acceleration, App, Compass, Connection, and Location)
+      SortByColumns
    :::column-end:::
    :::column span="":::
       SaveData, LoadData, and ClearData
@@ -227,7 +218,7 @@ The following table lists the Power Fx formulas that work but have limitations o
       Form-related formulas (EditForm, NewForm, SubmitForm, ResetForm, and ViewForm)
    :::column-end:::
    :::column span="":::
-      
+      Device sensor formulas (Acceleration, App, Compass, Connection, and Location)
    :::column-end:::
    :::column span="":::
       
