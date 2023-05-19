@@ -24,7 +24,7 @@ Microsoft Dataverse supports custom retention policies to securely retain data l
 
 Consider the business application data lifecycle in three stages. First active data, which over time transitions to inactive data, and finally transitions to deleted data.
 
-:::image type="content" source="media/business-app-data-lifecycle.png" alt-text="Business application data lifecycle diagram":::  <!-- Girish to update diagram -->
+:::image type="content" source="media/business-app-data-lifecycle.png" alt-text="Business application data lifecycle diagram"::: 
 
 |Stage  |Description  |
 |---------|---------|
