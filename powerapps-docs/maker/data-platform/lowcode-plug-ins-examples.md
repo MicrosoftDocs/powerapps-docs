@@ -26,7 +26,7 @@ The goal of these example plug-ins is to help you get started by integrating the
 
 To use one of the example plug-ins for the data event the Dataverse Accelerator app must be installed in the environment. More information: [Prerequisites for creating a low-code plug-in](low-code-plug-ins.md#prerequisites-for-creating-a-low-code-plug-in)
 
-## SendEmail based on a data event
+## Send email based on a data event
 
 To set this up, you need these prerequisites:
 
@@ -42,7 +42,7 @@ Here's an email template example that you can create for the SenMail based data 
 - **Subject**: `Thank you for your order <orderconfirmation-{!salesorder:Order Number;  }>`
 - **Body**: Use this code.
 
-```powerappsfl
+```
    Hello {!Sales Order:First Name;},
    Order Type: {! Sales Order: Order Type;},
    Location Type: {! Sales Order: Location Type;},
