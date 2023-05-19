@@ -44,14 +44,14 @@ Whether you should use an elastic table depends on the specific needs of your da
 
 Use elastic tables when:
 
-- Your data is unstructured or semi-structured, or if your data model is constantly changing.
-- You need automatic horizontal scaling.
+- Your data may be unstructured or semi-structured, or if your data model may constantly be changing.
+- You need horizontal scaling to handle workload growth over time or bursty workload at a given point.
 - You need to handle a high volume of read and write requests.
 
 Use standard tables when:
 
 - Your application requires strong data consistency.
-- Your application requires relational modeling and needs transactional capability across tables and during plugin execution stages.
+- Your application requires relational modeling and needs transactional capability across tables or  during plugin execution.
 - Your application requires complex joins.
 
 The choice of table should be based on the specific needs of your application. A combination of both types of tables may be appropriate.
@@ -86,7 +86,7 @@ When `partitionid` is not specified for a row, Dataverse uses the primary key va
 
 Elastic table supports strong consistency within a logical session. A logical session is a connection between client and Dataverse. When a client performs a write operation on an elastic table, it receives a *session token* that uniquely identifies this logical session. To have strong consistency, you need to maintain the logical session context. To maintain the logical session context, you must include the session token with all subsequent requests.
 
-With session tokens, all the read operations performed within the same logical session context will return the most recent write made within that logical session. In other words, reads are guaranteed to honor the *read-your-writes*, and *write-follows-reads* guarantees within a logical session. If a different logical session performs a write operation, other logical sessions may not see those changes immediately. More information: [Consistency levels in Azure Cosmos DB: Session consistency](/azure/cosmos-db/consistency-levels#session-consistency)
+With session tokens, all the read operations performed within the same logical session context will return the most recent write made within that logical session. In other words, reads are guaranteed to honor the *read-your-writes*, and *write-follows-reads* guarantees within a logical session. If a different logical session performs a write operation, other logical sessions may not see those changes immediately.
 
 You will find session token as `x-ms-session-token` header in response of all write operations.  
 
@@ -102,7 +102,7 @@ For example, if you have a synchronous plug-in step registered on the `PostOpera
 
 However, you should always apply validation rules in a plug-in registered for the `PreValidation` synchronous stage. This is the purpose of this stage. Even with elastic tables, the request will return an error and the data operation will not begin. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline)
 
-Multiple write operations within same the plugin execution are also not atomic. Elastic tables also do not support grouping requests in a single database transaction using the SDK [ExecuteTransactionRequest](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) class or in a Web API `$batch` operation change set.  More information:
+Elastic tables also do not support grouping requests in a single database transaction using the SDK [ExecuteTransactionRequest](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) class or in a Web API `$batch` operation change set.  More information:
 
 - [Execute messages in a single database transaction](org-service/use-executetransaction.md)
 - [Change sets](webapi/execute-batch-operations-using-web-api.md#change-sets)
