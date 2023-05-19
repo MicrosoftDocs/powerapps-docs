@@ -78,7 +78,7 @@ With Dataverse long term retention, data is never moved out of Dataverse . The r
    - *Table-Retained*, such as **Case-Retained** and **Contact-Retained**.
    - In the above case table example, notice that when the Dataverse environment is static with no new data added into the live data, as live data is transferred to retained data, the case table size will reduce and the case-retained size will increase to store and display the retained data.
 
-<sup>1</sup> The case table requires a Dynamics 365 app, such as Dynamics 365 Service.
+   <sup>1</sup> The case table requires a Dynamics 365 app, such as Dynamics 365 Service.
 
 - File capacity details reported:
   - If there are associated file attachments retained long term, the file capacity reflects the sum of the live and retained data. There will be no reduction or savings observed with file capacity after running a retention policy, which involved file attachments.  
@@ -92,7 +92,10 @@ Imagine a non-production scenario where all the live data for the case and conta
 :::image type="content" source="media/data-retention-storage-capacity-report.png" alt-text="Storage capacity report that includes retained table data" lightbox="media/data-retention-storage-capacity-report.png":::
 
 > [!NOTE]
-> Since the case table commonly has associated child tables, the capacity reports also display the childtable-retained GB size.
+> - If the tables are not visible in the report, export the view to an Excel worksheet by selecting the three vertical bars on the top right of the capacity report, and then select **Download all tables**. 
+> - Since the case table commonly has associated child tables, the capacity reports also display the child table-retained GB size.
+
+For more information about capacity reports, go to [New Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage).
 
 ## Solution aware retention policies
 
