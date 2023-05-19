@@ -12,11 +12,20 @@ search.audienceType:
   - developer
 ---
 
-# Long-term data retention
+# Long-term data retention (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 *Long-term retention* (LTR) is a Dataverse capability that enables customers to transfer their data from a transactional database to the Dataverse managed data lake. To perform the LTR operations, you are required to set up retention policies by defining the criteria for a given table. To set up the retention policy, you should have your environment (organization) and tables both enabled for retention.
 
-More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md), [Enable a table for long term retention](../../maker/data-platform/data-retention-set#enable-a-table-for-long-term-retention.md)
+More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md), [Enable a table for long term retention](../../maker/data-platform/data-retention-set.md#enable-a-table-for-long-term-retention)
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - For public preview, only non-production environments are allowed for previewing the long-term data retention feature. Production and Dataverse for Teams environments can't be used with this feature.
+> - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
+> - Pricing information for long term data retention will be available at general availability.
   
 ## Configure retention policy using code
 
@@ -213,6 +222,7 @@ HTTP/1.1 200 OK
 
 [Manage data retention policies](../../maker/data-platform/data-retention-manage.md)  
 [View long term retained data](../../maker/data-platform/data-retention-view.md)  
+[Delete data in bulk](delete-data-bulk.md)  
 [Use the Microsoft Dataverse Web API](webapi/overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
