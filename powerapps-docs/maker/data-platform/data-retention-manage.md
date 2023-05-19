@@ -23,15 +23,13 @@ Use the retention policies dashboard to view and manage retention policies. From
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Retention policies**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
    > [!TIP]
-   > If the **Retention policies** area isn't available, add this parameter to the end of the URL in your browser address bar: `?retentionPolicies.registration=true&retentionPolicies.leftNavigation=true`
+   > If the **Retention policies** area isn't available, add this parameter to the end of the make.powerapps.com URL in your browser address bar: `?retentionPolicies.registration=true&retentionPolicies.leftNavigation=true`
 1. Select a retention policy from the list, and then on the command bar select **Policy details**.
 1. The following retention policy actions are available:
   - **History**. Displays the retention [policy run status](#policy-run-status), run start, run end and table. For every run, you can view  and all tables (root and child tables) and the number of rows retained in the run.
   - **Policy details**. Displays the properties for the policy where you can view and edit the policy name, criteria, and frequency.
   - **Deactivate**. Stops the retention policy from running by disabling the policy schedule. To activate a deactivated policy, select **Policy details**, set the policy **Schedule**, and then select **Update**.
   - **Delete**. Removes the policy.
-
-Selecting **Policy details** displays table, policy name, criteria (view), scheduled start, and frequency specified for the policy.
 
 :::image type="content" source="media/data-retention-policy-details.png" alt-text="Policy run details":::
 
@@ -46,7 +44,8 @@ Selecting **Policy details** displays table, policy name, criteria (view), sched
 |Pending Delete     |  Waiting to delete all retained rows.       |
 |In progress – Delete     |  Delete of retained rows from applications.       |
 |Succeeded     |  Retention process completed successfully.       |
-|Failed     |  The retention process failed  .     |
+|Failed     |  The retention process failed.     |
 
+## See also
 
-<!-- Brief intro and link to dev article for Enterprise governance - GDPR Bulk Delete-->
+[View long term retained data (preview)](data-retention-view.md)
