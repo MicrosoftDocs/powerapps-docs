@@ -16,17 +16,15 @@ search.audienceType:
 
 *Long-term retention* (LTR) is a Dataverse capability that enables customers to transfer their data from a transactional database to the Dataverse managed data lake. To perform the LTR operations, you are required to set up retention policies by defining the criteria for a given table. To set up the retention policy, you should have your environment (organization) and tables both enabled for retention.
   
-## Configure retention policy using the APIs
+## Configure retention policy using code
 
 You can set up the retention policy by creating an entry in the retention configuration table. As part of retention policy set up, the platform will validate the policy against a Validate Retention Config table row.
 
 More information: [validateretentionconfig EntityType](webapi/reference/validateretentionconfig.md)
-  
-### Sample configurations
 
 The following code example demonstrates the retention APIs.
 
-#### [Web API](#tab/webapi)
+### [Web API](#tab/webapi)
 
 The following is an example of a Web API request to retain all the closed opportunities, and will be run on a yearly basis. This example uses the [retentionconfigs EntitType](webapi/reference/retentionconfig.md).
 
@@ -65,16 +63,16 @@ Below is sample solution customization.xml code to create a retention policy.
 
 ```xml
 <retentionconfig retentionconfigid="8fd449d1-f389-4f63-84c6-023c77275359">
-  <criteria>&lt;fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true"&gt;
-    &lt;entity name="incident"&gt;
-        &lt;attribute name="title"/&gt;
-        &lt;attribute name="incidentid"/&gt;
-        &lt;attribute name="prioritycode"/&gt;
-        &lt;filter type="and"&gt;
-            &lt;condition attribute="prioritycode" operator="eq" value="3"/&gt;
-        &lt;/filter&gt;
-    &lt;/entity&gt;
-&lt;/fetch&gt;</criteria>
+  <criteria><fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+    <entity name="incident">
+        <attribute name="title"/>
+        <attribute name="incidentid"/>
+        <attribute name="prioritycode"/>
+        <filter type="and">
+            <condition attribute="prioritycode" operator="eq" value="3"/>
+        </filter>
+    </entity>
+</fetch></criteria>
   <entitylogicalname>incident</entitylogicalname>
   <iscustomizable>1</iscustomizable>
   <name>Resolved Cases in EastR1</name>
@@ -93,15 +91,13 @@ Below is sample solution customization.xml code to create a retention policy.
 
 Table and app owners can add their own custom validations whenever a retention policy is created or updated. This validation can be done by registering a custon [plug-in](apply-business-logic-with-code.md) against the `ValidateRetentionConfig` action.
 
-`ValidateRetentionConfig` is an bound action, which gets bound to the table whenever retention is enabled.
+`ValidateRetentionConfig` is a bound action, which gets bound to the table whenever retention is enabled.
 
 More information: [validateretentionconfig Action](webapi/reference/validateretentionconfig.md)
 
-### Sample configuration
-
 The following code example demonstrates retention policy validation.
 
-#### [Web API](#tab/webapi)
+### [Web API](#tab/webapi)
 
 The following example validates all closed opportunities, and will be run on a yearly basis.
 
@@ -149,7 +145,7 @@ A message named *Retain* executes whenever a table row is marked for retention. 
 
 More information: [retain Action](webapi/reference/retain.md)
 
-The following example executes retention on the email record.
+The following example executes retention on the an email record.
 
 **Request**
 
@@ -193,5 +189,10 @@ HTTP/1.1 200 OK
 ```
 
 ---
+
+### See also
+
+[Use the Microsoft Dataverse Web API](webapi/overview.md)
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
