@@ -92,23 +92,24 @@ If you don't set a `partitionid` for a record when it is created, the Guid value
 ### Using Alternate Key
 
 As mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key named `KeyForNoSqlEntityWithPKPartitionId`. This alternate key combines the primary key of the table with the `partitionid` column.
+You can use this alternate key to specify `partitionid` when using Read, Update or Delete operations.
 
 #### [SDK for .NET](#tab/sdk)
 
-You can use this alternate key to specify `partitionid` when using `Retrieve`,`RetrieveMultiple`, `Update` and `Delete` requests on elastic tables.
+This example shows how you can use alternate key to specify `partitionid` when using `Retrieve`,`RetrieveMultiple`, `Update` and `Delete` requests on elastic tables.
 
 ```csharp
     var keys = new KeyAttributeCollection() {
         { "contoso_sensordataid", sensordataid },
         { "partitionid", deviceId }
     };
+
+    var entity = new Entity("contoso_sensordata", keys)
 ```
 
 #### [Web API](#tab/webapi)
 
-You can use this alternate key to specify `partitionid` when performing GET, PATCH and DELETE operations on elastic tables.
-
- You can use the special syntax in Web API to refer to records using the alternate key. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
+This example shows how you can use the special syntax in Web API to refer to records using the alternate key when performing GET, PATCH and DELETE operations on elastic tables. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
 
 > `<entity set name>(<primary key name>=<primary key value>,partitionid='<partitionid value>')`
 
