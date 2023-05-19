@@ -94,17 +94,6 @@ The following table lists the Power Fx formulas that work but have limitations o
 :::row-end:::
 :::row:::
    :::column span="":::
-      SortByColumns
-   :::column-end:::
-   :::column span="":::
-      Update
-   :::column-end:::
-   :::column span="":::
-      UpdateIf
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
       AsType
    :::column-end:::
    :::column span="":::
@@ -218,7 +207,7 @@ The following table lists the Power Fx formulas that work but have limitations o
       SetFocus
    :::column-end:::
    :::column span="":::
-      Device sensor formulas (Acceleration, App, Compass, Connection, and Location)
+      SortByColumns
    :::column-end:::
    :::column span="":::
       SaveData, LoadData, and ClearData
@@ -229,7 +218,7 @@ The following table lists the Power Fx formulas that work but have limitations o
       Form-related formulas (EditForm, NewForm, SubmitForm, ResetForm, and ViewForm)
    :::column-end:::
    :::column span="":::
-      
+      Device sensor formulas (Acceleration, App, Compass, Connection, and Location)
    :::column-end:::
    :::column span="":::
       
