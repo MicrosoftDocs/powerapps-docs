@@ -56,10 +56,10 @@ An automated plug-in is business logic that runs when a data event (create, upda
 
 ## Plug-in permissions
 
-### Design time
+**Design time**
 Makers who have system customizer or system administrator security role membership in the Power Platform environment can access all plug-ins in that environment.
 
-### Run time
+**Run time**
 When a plug-in is invoked, it accesses the table data involved in the plug-in definition (the tables that are part of the formula, or if the table is associated with the settings of an automated plug-in) in the context of the user who invoked it.
 
 If a plug-in uses a connector action, the connector permissions enforce the ability for organizational users to access and operate on the plug-in call to the connector. The connection can be shared with one user or can be shared with the entire organization. This allows users to access and operate plug-ins with connectors using a shared connection if desired. By using security roles, plug-is with connectors access can be restricted to a specific set of users within your organization. You can even specify which roles have create, read, update, or delete privileges in this way.
