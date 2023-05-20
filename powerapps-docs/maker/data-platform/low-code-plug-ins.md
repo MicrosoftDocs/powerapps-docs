@@ -222,10 +222,13 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
    - Input parameters, which allow you to change the value every time the plugin is run. Check the box below the parameter to expose it as an input parameter.
    - Static values, which stay the same every time the plugin is run. Provide a static value by typing in the text field or make a selection from the dropdown.
    :::image type="content" source="media/lowcode-plug-in-input-param.png" alt-text="Specify input and static values":::
+
    Once all parameters have values the Power FX formula to invoke the procedure is generated. Select **Next**.
-1. A review page appears that shows you the plug-in you are about to create for the connector action. If everything looks correct, select **Create**.
-3. Once the plug-in is created successfully, the plug-in editor opens. On the **plug-in** page, the name of the plug-in you have just created is displayed. Select **Next**.
-4. A list of all of the inputs that will be sent to the connector and their data types is displayed. The PowerFX formula that will be used to invoke the stored procedure is also displayed. This is also the screen you will later use to update the plug-in.
+   
+1. The Review page shows you the plug-in that will be created in Dataverse, and the external connector action you are connecting to in the formula. If everything looks correct, select **Create**.
+3. Once the plug-in is created, you're taken directly to your new plug-in in where you can view the definition and begin testing it. 
+   - On the **plug-in** page, the name of the plug-in you have just created is displayed. Select **Next**.
+   - A list of all of the inputs that will be sent to the connector and their data types is displayed. The PowerFX formula that will be used to invoke the stored procedure is also displayed. This is also the screen you will later use to update the plug-in.
    > [!NOTE] 
    > Currently, you can't edit the parameters or formula on this page in the plug-ins wizard.
 
