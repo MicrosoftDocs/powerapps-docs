@@ -15,9 +15,16 @@ contributors:
 
 # Create elastic tables (Preview)
 
-You can create elastic tables using [Power Apps](https://make.powerapps.com/) without writing code. More information: [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md). 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-These examples create a new elastic table `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `EntityMetadata.TableType` property with a value of `Elastic` to create an elastic table with code.
+> [!IMPORTANT]
+> This is a preview feature.
+> 
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+You can create elastic tables using [Power Apps](https://make.powerapps.com/) without writing code. More information: [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md).
+
+But sometimes it is useful to be able to create and update tables with code. These examples create a new elastic table `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `EntityMetadata.TableType` property with a value of `Elastic` to create an elastic table with code.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -58,7 +65,13 @@ public static CreateEntityResponse CreateElasticTable(IOrganizationService servi
    };
    return (CreateEntityResponse)service.Execute(request);
 }
-``` 
+```
+
+The [CreateEntityResponse](xref:Microsoft.Xrm.Sdk.Messages.CreateEntityResponse) has these properties:
+
+- [AttributeId](xref:Microsoft.Xrm.Sdk.Messages.CreateEntityResponse.AttributeId): The ID of the `contoso_SensorType` primary name string column.
+- [EntityId](xref:Microsoft.Xrm.Sdk.Messages.CreateEntityResponse.EntityId): The ID of the `contoso_SensorData` table.
+
 
 More information: [Create a custom table using code](org-service/create-custom-entity.md)
 
@@ -173,6 +186,8 @@ OData-Version: 4.0
 OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) 
 ```
 
+In this case, `417129e1-207c-e511-80d2-00155d2a68d2` is the ID of the `contoso_SensorData` table. You must make a separate request to get the ID of the `contoso_SensorType` primary name string column.
+
 More information: [Create and update table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md)
 
 ---
@@ -209,13 +224,14 @@ public static Guid CreateJsonAttribute(IOrganizationService service)
          EntityName = "contoso_sensordata",
          Attribute = new StringAttributeMetadata
          {
-            SchemaName = "contoso_energyconsumption",
+            SchemaName = "contoso_EnergyConsumption",
             RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
             MaxLength = 1000,
             FormatName = StringFormatName.Json,
             DisplayName = new Label("Energy Consumption", 1033),
             Description = new Label("Contains information about energy consumed by the IoT devices", 1033)
-         }
+         },
+         SolutionUniqueName  = "examplesolution"
    };
 
    var response = (CreateAttributeResponse)service.Execute(request);
@@ -229,7 +245,7 @@ More information: [Add a String column to a table](org-service/create-custom-ent
 
 #### [Web API](#tab/webapi)
 
-This request creates a new <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata> column by posting to the Web API `EntityDefinitions` resource referring to the `contoso_sensordata` table.
+This request creates a new <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata> column by posting to the Web API `EntityDefinitions` resource referring to the `contoso_SensorData` table.
 
 **Request**
 
@@ -298,13 +314,13 @@ You cannot create custom alternate keys for elastic tables.
 
 Each elastic table is created with one alternate key using these values:
 
-- Display Name: Entity key for NoSql Entity that contains PrimaryKey and PartitionId attributes
+- Display Name: **Entity key for NoSql Entity that contains PrimaryKey and PartitionId attributes**
 - Name: `KeyForNoSqlEntityWithPKPartitionId`
 - LogicalName: `keyfornosqlentitywithpkpartitionid`
 
 This alternate key has the key values: `<table primary key name>` and `partitionid`.
 
-If you need to reference a record that has a `partitionid` value set to a value other than the default value that is equal to the value of the primary key, you can reference the record using this alternate key.
+If you need to reference a record that has a `partitionid` value set to a value other than the default value (that is equal to the value of the primary key) you can reference the record using this alternate key.
 
 More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
 
@@ -318,9 +334,9 @@ One-to-Many relationships are supported for elastic tables with following limita
 - Formatted values for lookup columns are not returned when the following conditions are true:
 
    - The table being retrieved is a standard table and the lookup refers to an elastic table.
-   - The elastic table `partitionid` value is set to a value other than the primary key value of the elastic table row.
+   - The elastic table `partitionid` value is set to a value other than the default value, the primary key value of the elastic table row. In other words, when you are using a custom `partitionid` value. More information: [Choosing a PartitionId value](elastic-tables.md#choosing-a-partitionid-value)
 
-Elastic tables supports having One-to-Many relationships and returning related rows using several different query languages, but there are some restrictions. More information : [Link entities are not supported](use-elastic-tables.md#link-entities-are-not-supported)
+Elastic tables supports having One-to-Many relationships and returning related rows using several different query languages, but there are some restrictions. More information : [Return related rows in a query](use-elastic-tables.md#Return-related-rows-in-a-query)
 
 
 ## Next steps

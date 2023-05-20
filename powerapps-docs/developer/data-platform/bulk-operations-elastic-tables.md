@@ -14,11 +14,18 @@ contributors:
 ---
 # Bulk operations with elastic tables (Preview)
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+> This is a preview feature.
+> 
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
 Often applications need to ingest large amount of data into Dataverse in a short amount of time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput can be much higher.
 
 Bulk operations are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. Multiple bulk operation can be run in parallel to achieve high throughput. More information [Send parallel requests](send-parallel-requests.md)
 
-Elastic tables currently supports following messages for Bulk execution:
+Elastic tables currently supports following messages for bulk operations:
 
 - `CreateMultiple`
 - `UpdateMultiple`
@@ -34,9 +41,11 @@ This example uses the `CreateMultiple` message to create mutiple rows in `contos
 ```csharp
 public static Guid CreateMultiple(IOrganizationService service)
 {
+   string tableLogicalName = "contoso_sensordata";
+
     List<Microsoft.Xrm.Sdk.Entity> entityList = new List<Microsoft.Xrm.Sdk.Entity>
-      {
-         new Microsoft.Xrm.Sdk.Entity("contoso_sensordata")
+      {      
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
          {
             Attributes =
             {
@@ -48,7 +57,7 @@ public static Guid CreateMultiple(IOrganizationService service)
                { "ttlinseconds", 86400 }
             }
          },
-         new Microsoft.Xrm.Sdk.Entity("contoso_sensordata")
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
          {
             Attributes =
             {
@@ -60,7 +69,7 @@ public static Guid CreateMultiple(IOrganizationService service)
                { "ttlinseconds", 86400 }
             }
          }
-         new Microsoft.Xrm.Sdk.Entity("contoso_sensordata")
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
          {
             Attributes =
             {
@@ -92,14 +101,16 @@ public static Guid CreateMultiple(IOrganizationService service)
 
 ## Use UpdateMultiple with elastic tables
 
-This example uses `UpdateMultiple` message to update mutiple rows of `contoso_SensorData` elastic table.
+This example uses `UpdateMultiple` message to update multiple rows of `contoso_SensorData` elastic table.
 
 ```csharp
 public static Guid UpdateMultiple(IOrganizationService service)
 {
+   string tableLogicalName = "contoso_sensordata";
+
     List<Microsoft.Xrm.Sdk.Entity> entityList = new List<Microsoft.Xrm.Sdk.Entity>
       {
-         new Microsoft.Xrm.Sdk.Entity("contoso_sensordata")
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
          {
             Attributes =
             {
@@ -107,7 +118,7 @@ public static Guid UpdateMultiple(IOrganizationService service)
                { "partitionid", "deviceid-001" }
             }
          },
-         new Microsoft.Xrm.Sdk.Entity("contoso_sensordata")
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
          {
             Attributes =
             {
@@ -115,7 +126,7 @@ public static Guid UpdateMultiple(IOrganizationService service)
                { "partitionid", "deviceid-002" }
             }
          }
-         new Microsoft.Xrm.Sdk.Entity("contoso_sensordata")
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
          {
             Attributes =
             {
@@ -147,8 +158,10 @@ This example uses `DeleteMultiple` message to delete multiple rows from `contoso
 ```csharp
 public static OrganizationResponse DeleteMultiple(IOrganizationService service)
 {
+   string tableLogicalName = "contoso_sensordata";
+
     EntityReference record1 = new EntityReference(
-        "contoso_sensordata", 
+        tableLogicalName, 
         new KeyAttributeCollection
         {
             { "contoso_sensordataid", "3f56361a-b210-4a74-8708-3c664038fa41" },
@@ -156,7 +169,7 @@ public static OrganizationResponse DeleteMultiple(IOrganizationService service)
         });
 
     EntityReference record2 = new EntityReference(
-        "contoso_sensordata",
+        tableLogicalName,
         new KeyAttributeCollection
         {
             { "contoso_sensordataid", "e682715b-1bba-415e-b2bc-de9327308423" },
@@ -180,7 +193,3 @@ public static OrganizationResponse DeleteMultiple(IOrganizationService service)
 [Create elastic tables (Preview)](create-elastic-tables.md)<br />
 [Use elastic tables (Preview)](use-elastic-tables.md)<br />
 [Query JSON columns in elastic tables (Preview)](query-json-columns-elastic-tables.md)
-
-
-
-

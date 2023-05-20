@@ -51,18 +51,23 @@ Use elastic tables when:
 Use standard tables when:
 
 - Your application requires strong data consistency.
-- Your application requires relational modeling and needs transactional capability across tables or  during plugin execution.
+- Your application requires relational modeling and needs transactional capability across tables or during plugin execution.
 - Your application requires complex joins.
 
 The choice of table should be based on the specific needs of your application. A combination of both types of tables may be appropriate.
 
+For more information about differences in modeling elastic tables, see:
+
+- [Adding Columns](create-elastic-tables.md#adding-columns)
+- [Alternate keys](create-elastic-tables.md#alternate-keys)
+- [Adding Relationships](create-elastic-tables.md#adding-relationships)
 
 
 ## Partitioning and horizontal scaling
 
 Elastic tables use Azure Cosmos DB partitioning to scale individual tables to meet the performance needs of your application. All elastic tables contain a system-defined **Partition Id** string column with the schema name `PartitionId` and logical name `partitionid`.
 
-Azure Cosmos DB ensures that the rows in a table are divided into distinct subsets called [logical partitions](/azure/cosmos-db/partitioning-overview#logical-partitions) which are formed based on the value of `partitionid` column of each row.
+Azure Cosmos DB ensures that the rows in a table are divided into distinct subsets called [logical partitions](/azure/cosmos-db/partitioning-overview#logical-partitions) which are formed based on the value of the `partitionid` column of each row.
 
 > [!NOTE]
 > To get the optimum performance available with elastic tables, you must choose and consistently apply a partitioning strategy. If you don't set a `partitionid` value for each row, the value will default to the primary key value and you will not be able to change it later.
@@ -73,14 +78,14 @@ The `partitionid` value you should use depends on the nature of your data.  A lo
 
 Dataverse transparently and automatically manages logical partitions associated with a table. There is no limit on the number of logical partitions you can have in a table. You also don't have to worry about deleting a logical partition when the underlying rows belonging to that partition is deleted.
 
-For all elastic tables, `partitionid` column should:
+For all elastic tables, the `partitionid` column should:
 
 - Have a value which doesn't change. Once a row is created with a `partitionid` value, you cannot change it.
 - Have a high cardinality value. In other words, the property should have a wide range of possible values. Each logical partition can store 20 GB of data. So, choosing a `partitionid` with a wide range of possible values ensures that the table can scale without reaching limits for any specific logical partition.
 - Spread data as evenly as possible between all logical partitions.
 - Have values that are no larger than 1024 bytes.
 
-When `partitionid` is not specified for a row, Dataverse uses the primary key value as the default `partitionid` value. For write-heavy tables of any size or for cases where rows are mostly retrieved using the primary key, the primary key is naturally a great choice for the `partitionid` column.
+When `partitionid` is not specified for a row, Dataverse uses the primary key value as the default `partitionid` value. For write-heavy tables of any size, or for cases where rows are mostly retrieved using the primary key, the primary key is naturally a great choice for the `partitionid` column.
 
 ## Consistency level
 
@@ -88,21 +93,26 @@ Elastic table supports strong consistency within a logical session. A logical se
 
 With session tokens, all the read operations performed within the same logical session context will return the most recent write made within that logical session. In other words, reads are guaranteed to honor the *read-your-writes*, and *write-follows-reads* guarantees within a logical session. If a different logical session performs a write operation, other logical sessions may not see those changes immediately.
 
-You will find session token as `x-ms-session-token` header in response of all write operations.  
+You will find session token as a `x-ms-session-token` value in the response of all write operations.  You need to include this value when you retrieve data to retrieve the most up-to-date row.
 
-When calling a retrieve API, you can use `MSCRM.SessionToken` header to pass corresponding `x-ms-session-token` to retrieve the most up-to-date row. If you retrieve a record without a session token, the changes applied recently may not be applied, but will eventually be returned in subsequent requests.
+- With the SDK, use the `SessionToken` optional parameter.
+- With Web API, use the `MSCRM.SessionToken` request header
+
+If you retrieve a record without a session token, the changes applied recently may not be applied, but will eventually be returned in subsequent requests.
 
 More information: [Work with Session token](use-elastic-tables.md#work-with-session-token)
 
 ## Transactional behavior
 
-Elastic tables do not support multi-record transactions. This means that for a single request execution, multiple write operation happening in same or different synchronous plugin stages are not transactional with each other.
+Elastic tables do not support multi-record transactions. This means that for a single request execution, multiple write operations happening in same or different synchronous plugin stages are not transactional with each other.
 
 For example, if you have a synchronous plug-in step registered on the `PostOperation` stage of the `Create` message on an elastic table, any error in your plug-in will not roll back the created record in Dataverse. You should always avoid intentionally cancelling any operation by throwing a [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException) in the `PreOperation` or `PostOperation` synchronous stages. If the error is thrown after the `Main` operation, the request will return an error, but the data operation will succeed. If any write operations are started in the `PreOperation` stage, they will also succeed.
 
 However, you should always apply validation rules in a plug-in registered for the `PreValidation` synchronous stage. This is the purpose of this stage. Even with elastic tables, the request will return an error and the data operation will not begin. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline)
 
-Elastic tables also do not support grouping requests in a single database transaction using the SDK [ExecuteTransactionRequest](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) class or in a Web API `$batch` operation change set.  More information:
+Elastic tables also do not support grouping requests in a single database transaction using the SDK [ExecuteTransactionRequest](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) class or in a Web API `$batch` operation change set. Currently, these operations succeed but are not atomic. In the future, an error will thrown.  
+
+More information:
 
 - [Execute messages in a single database transaction](org-service/use-executetransaction.md)
 - [Change sets](webapi/execute-batch-operations-using-web-api.md#change-sets)
@@ -146,6 +156,8 @@ Dataverse does not return an error when you group data operations using SDK [Exe
 Dataverse doesn't return the `x-ms-session-token` value for delete operations. More information: [Consistency level](#consistency-level)
 
 ## Frequently Asked Questions (FAQ)
+
+This section will include any frequently asked questions. If you have a question that isn't addressed in the documentation, click the **This Page** button in the **Feedback** section at the bottom of the page. You will need to have a GitHub account to submit questions this way.
 
 ## Next steps
 

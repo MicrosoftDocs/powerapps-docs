@@ -15,6 +15,13 @@ contributors:
 
 # Use elastic tables (Preview)
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+> This is a preview feature.
+> 
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
 This article describes how to perform data operations with elastic tables.
 
 ## Work with Session token
@@ -23,7 +30,7 @@ As mentioned in [Consistency level](elastic-tables.md#consistency-level), you ca
 
 ### Getting the session token
 
-You will find session token as `x-ms-session-token` header in response of all write operations.
+You will find the session token as `x-ms-session-token` value in the response of all write operations.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -41,7 +48,7 @@ string sessionToken = response.Results["x-ms-session-token"].ToString();
 The session token value will be returned as the `x-ms-session-token` response header.
 
 > [!NOTE]
-> DELETE operations do not currently return the x-ms-session-token. More information: [Known issues:  x-ms-session-token value not returned for delete operations](elastic-tables.md#x-ms-session-token-value-not-returned-for-delete-operations)
+> DELETE operations do not currently return the `x-ms-session-token`. More information: [Known issues:  x-ms-session-token value not returned for delete operations](elastic-tables.md#x-ms-session-token-value-not-returned-for-delete-operations)
 
 ```http
 x-ms-session-token: 240:8#144100870#7=-1
@@ -68,14 +75,17 @@ var request = new RetrieveRequest
 
 ```
 
+More information: [Use optional parameters](optional-parameters.md)
+
+
 #### [Web API](#tab/webapi)
 
-When performing a `GET` operation, use `MSCRM.SessionToken` request header to pass corresponding `x-ms-session-token` to retrieve the most up-to-date row value.
+When performing a `GET` operation, use the `MSCRM.SessionToken` request header to pass corresponding `x-ms-session-token` to retrieve the most up-to-date row value.
 
 ```http
 MSCRM.SessionToken: 240:8#144100870#7=-1
-
 ```
+
 ---
 
 ## Specifying PartitionId
@@ -84,12 +94,12 @@ As mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitio
 
 Once you have specified a non-null value to the `partitionid` column while creating a row, you must specify it when performing any other data operation on the row.
 
-If you don't set a `partitionid` for a record when it is created, the Guid value of the primary key is used as default value of `partitionid` column. In this case, you can simply identify records using the primary key as you normally do with standard tables. Specifying `partitionid` is not required.
+If you don't set a `partitionid` for a record when it is created, the GUID value of the primary key is used as default value of the `partitionid` column. In this case, you can simply identify records using the primary key as you normally do with standard tables. Specifying `partitionid` is not required.
 
 > [!NOTE]
 > The examples in this article assume that you are specifying a non-null value to the `partitionid` column.
 
-You can specify `partitionid` value in following ways when performing various data operations.
+You can set the `partitionid` value in following ways when performing various data operations.
 
 ### Using Alternate Key
 
@@ -116,7 +126,7 @@ This example shows how you can use the special syntax in Web API to refer to rec
 > `<entity set name>(<primary key name>=<primary key value>,partitionid='<partitionid value>')`
 
 > [!NOTE]
-> The primary key value is a Guid, so no quote characters are needed. `partitionid` is a string, so it requires quote characters.
+> The primary key value is a GUID, so no quote characters are needed. `partitionid` is a string, so it requires quote characters.
 
 For example:
 ```http
@@ -126,12 +136,12 @@ For example:
 ---
 ### Using partitionId parameter
 
-For Read and Delete requests, you can use a special parameter `partitionId` to specify the value of `partitionid` column.
+For `Retrieve` and `Delete` operations, you can use a special parameter `partitionId` to specify the value of `partitionid` column.
 
 #### [SDK for .NET](#tab/sdk)
 
 > [!NOTE]
-> partitionId parameter will not work with Create, Update or Upsert requests and will be ignored if sent.
+> `partitionId` parameter will not work with `Create`, `Update` or `Upsert` messages and will be ignored if sent.
 
 ```csharp
 request["partitionId"] = "device-001"
@@ -140,12 +150,14 @@ request["partitionId"] = "device-001"
 #### [Web API](#tab/webapi)
 
 > [!NOTE]
-> partitionId parameter will not work with POST or PATCH requests and will be ignored if sent.
+> `partitionId` parameter will not work with `POST` or `PATCH` requests and will be ignored if sent.
 
 For example:
+
 ```http
 /contoso_sensordatas(<primary key value>)?partitionId='<partitionid value>'
 ```
+
 ---
 
 ### Using `partitionid` column directly
@@ -154,7 +166,7 @@ For `Create`, `Upsert` or `Update` operations, you can directly specify the valu
 
 #### [SDK for .NET](#tab/sdk)
 
-This examples shows how you can set directly specify `partitionid` column in `Entity` when executing a `Create`, `Upsert` or `Update` request.
+This examples shows how you can set directly specify `partitionid` column in `Entity` when executing a `Create`, `Upsert` or `Update` operation.
 
 ```csharp
     var entity = new Entity("contoso_sensordata", sensordataid)
@@ -167,14 +179,16 @@ This examples shows how you can set directly specify `partitionid` column in `En
 
 #### [Web API](#tab/webapi)
 
-This example shows how you can directly specify the value of `partitionid` column in request body when making a POST or PATCH request.
+This example shows how you can directly specify the value of `partitionid` column in request body when making a `POST` or `PATCH` request.
 
 For example:
+
 ```http
 {
   "partitionid": "deviceid-001"
 }
 ```
+
 ---
 
 ## Create a record in an elastic table
@@ -193,7 +207,10 @@ These examples also capture the value of the `x-ms-session-token` that you can u
 /// <param name="deviceId">The value used as partitionid for the contoso_sensordata table. </param>
 /// <param name="sessionToken">The current session token</param>
 /// <returns>The Id of the created record.</returns>
-public static Guid CreateExample(IOrganizationService service, string deviceId, ref string sessionToken )
+public static Guid CreateExample(
+    IOrganizationService service, 
+    string deviceId, 
+    ref string sessionToken )
 {
     var entity = new Entity("contoso_sensordata")
     {
@@ -277,7 +294,11 @@ This example shows using the `partitionid` value as an alternate key.
 /// <param name="sensordataid">The unique identifier of the contoso_sensordata table.</param>
 /// <param name="deviceId">The value used as partitionid for the contoso_sensordata table. </param>
 /// <param name="sessionToken">The current session token</param>
-public static void UpdateExample(IOrganizationService service, Guid sensordataid, string deviceId, ref string sessionToken)
+public static void UpdateExample(
+    IOrganizationService service, 
+    Guid sensordataid, 
+    string deviceId, 
+    ref string sessionToken)
 {
     var keys = new KeyAttributeCollection() {
         { "contoso_sensordataid", sensordataid },
@@ -542,19 +563,19 @@ OData-Version: 4.0
 
 ---
 
-### Fetch related rows in query
+### Return related rows in a query
 
-Elastic table currently does not support fetching related rows when executing a query.
+Elastic tables currently do not support returning related rows when executing a query.
 Dataverse will throw an error with code `0x80048d0b` and message **Link entities are not supported** when trying to do so.
 
-However, Elastic table supports fetching related rows when retrieving a single row.
+However, elastic tables support returning related rows when retrieving a single row.
 
 ## Upsert a record in an elastic table
 
 > [!IMPORTANT]
-> Upsert operations with elastic tables are different than with standard tables. Upsert operations are expected to contain the full payload will over-write any existing record.
+> Upsert operations with elastic tables are different than with standard tables. Upsert operations are expected to contain the full payload and will over-write any existing record data.
 
-With elastic tables, if a record with given id and `partitionid` doesn't exist it will be created. If it already exists, it will be replaced.
+With elastic tables, if a record with a given id and `partitionid` doesn't exist it will be created. If it already exists, it will be replaced.
 
 #### [SDK for .NET](#tab/sdk)
 

@@ -14,18 +14,28 @@ contributors:
 ---
 # Query JSON columns in elastic tables (Preview)
 
-Elastic table supports a new JSON format for text columns. This column can be used to store schema-less arbitrary json as per application needs. You can use the `ExecuteCosmosSQLQuery` message to run any Cosmos SQL query directly against your elastic table and filter rows based on properties inside JSON.
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+> This is a preview feature.
+> 
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+Elastic table supports the JSON format for text columns. This column can be used to store schema-less arbitrary json as per application needs. You can use the `ExecuteCosmosSQLQuery` message to run any Cosmos SQL query directly against your elastic table and filter rows based on properties inside JSON.
 
 For an example showing how to create a JSON column, see [Create a column with Json format](create-elastic-tables.md#create-a-column-with-json-format)
 
 ## Set Json column data
 
-This example creates a row in `contoso_SensorData` elastic table with JSON data in the `contoso_energyconsumption` column.
+This example creates a row in `contoso_SensorData` elastic table with JSON data in the `contoso_EnergyConsumption` column.
 
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
-public static Guid CreateWithJsonData(IOrganizationService service, string deviceId, ref string sessionToken)
+public static Guid CreateWithJsonData(
+    IOrganizationService service, 
+    string deviceId, 
+    ref string sessionToken)
 {
    var entity = new Entity("contoso_sensordata")
    {
@@ -96,23 +106,31 @@ All table columns can be queried with a `c.props` prefix to the schema name of t
 
 #### [SDK for .NET](#tab/sdk)
 
-The SDK for .NET doesn't yet have request and response classes for the  `ExecuteCosmosSqlQuery` message. You can use <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. 
-
-<!-- TODO This sample didn't work for me -->
+The SDK for .NET doesn't yet have request and response classes for the  `ExecuteCosmosSqlQuery` message. You can use <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes.
 
 ```csharp
 public static List<QueryResult> QueryJsonAttribute(IOrganizationService service)
 {
-    var request = new OrganizationRequest("ExecuteCosmosSqlQuery");
-    
-    request.Parameters["EntityLogicalName"] = "contoso_sensordata";
-    request.Parameters["QueryText"] = "select c.props.contoso_deviceid as deviceId, c.props.contoso_timestamp as timestamp, c.props.contoso_energyconsumption.power as power from c where c.props.contoso_sensortype='Humidity' and c.props.contoso_energyconsumption.power > 5";
+    StringBuilder query = new();
+    query.Append("select c.props.contoso_deviceid as deviceId, ");
+    query.Append("c.props.contoso_timestamp as timestamp, ");
+    query.Append("c.props.contoso_energyconsumption.power as power ");
+    query.Append("from c where c.props.contoso_sensortype='Humidity' ");
+    query.Append("and c.props.contoso_energyconsumption.power > 5");
+
+    var request = new OrganizationRequest("ExecuteCosmosSqlQuery")
+    {
+        Parameters = {
+            { "EntityLogicalName","contoso_sensordata" },
+            { "QueryText", query.ToString() }
+        }
+    };
 
     OrganizationResponse response = service.Execute(request);
 
     // Deserialized query result into a class with expected schema.
-    Entity result = (Entity)response.Results["Result"];    
-    return JsonConvert.Deserialize<List<QueryResult>>(result["Result"].ToString());
+    Entity result = (Entity)response.Results["Result"];
+    return JsonConvert.DeserializeObject<List<QueryResult>>(result["Result"].ToString());
 }
 
 public class QueryResult
