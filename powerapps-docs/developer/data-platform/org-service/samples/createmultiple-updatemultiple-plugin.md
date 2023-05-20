@@ -75,7 +75,7 @@ The **Create and Update Multiple Sample** contains 4 separate projects that do t
 1. Create the `sample_example` records. Each project uses a different method.
    
    > [!NOTE]
-   > Each project will pass a `tag` parameter with the name of the project so that it is available as a shared variable to the plug-in. This value will be used by the `CreateMultiplePreOp.cs` plug-in in this sample. More information [Add a shared variable from the Organization Service](../use-messages.md#add-a-shared-variable-from-the-organization-service)
+   > Each project will pass a `tag` parameter with the name of the project so that it is available as a shared variable to the plug-in. This value will be used by the `CreateMultiplePreOp.cs` plug-in in this sample. More information: [Add a shared variable to the plugin execution context](../../optional-parameters.md#add-a-shared-variable-to-the-plugin-execution-context)
    >
    > The `FollowupPluginSingle.cs` OR `FollowupPluginMultiple.cs` plug-ins in this sample create a follow up task record on create on the `Create` OR `CreateMultiple` message respectively.
 

@@ -18,6 +18,13 @@ contributors:
 
 # Use CreateMultiple and UpdateMultiple (Preview)
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+> This is a preview feature.
+> 
+> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
+
 The `CreateMultiple` and `UpdateMultiple` messages are optimized for performance when performing multiple create or update operations on the same table. This optimization is useful in cases where you're loading or updating records in bulk.
 
 ## Usage
@@ -227,7 +234,7 @@ Yes. We plan to release `UpsertMultiple` later.
 
 ### Will there be a DeleteMultiple?
 
-At this time, `DeleteMultiple` is supported only for elastic tables, which is a preview feature. Elastic tables don't support cascading operations. More information [Bulk operations with elastic tables (Preview)](../bulk-operations-elastic-tables.md)
+At this time, `DeleteMultiple` is supported only for elastic tables, which is a preview feature. Elastic tables don't support cascading operations. More information: [Bulk operations with elastic tables (Preview)](../bulk-operations-elastic-tables.md) <!-- Link should resolve after merge -->
 
 For standard tables, cascading operations can result in unpredictable execution times. If we support `DeleteMultiple` for standard tables, it may not be the best choice. For standard tables, we recommend the `BulkDelete` message that enables asynchronous deletion of records that match a query.
 
