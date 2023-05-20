@@ -64,7 +64,13 @@ Here's an email template example that you can create for the SenMail based data 
    - **Run this plugin with the row is**: **Created**
    - **Formula**: Paste the code below into the **Formula** box. For more information abut the SendEmailFromTemplate function, to to [SendEmailFromTemplate Action](/power-apps/developer/data-platform/webapi/reference/sendemailfromtemplate?view=dataverse-latest).
    
-     `XSendEmailFromTemplate(LookUp('Email Templates',StartsWith(description,"solar")).'Email Template',ThisRecord,LookUp(Users,'Primary Email'="sampleemail@sample.com"),[ThisRecord.Email])`
+     ```powerapps-dot
+     XSendEmailFromTemplate(
+         LookUp('Email Templates',StartsWith(title,"Order Thank You")).'Email Template',
+	 ThisRecord,
+	 LookUp(Users,'Primary Email'="sampleemail@sample.com"),[ThisRecord.Email]
+     )
+     ```
 1. Select **Advanced** > **Post-operation**.
 1. Select **Save**. 
 
@@ -86,13 +92,18 @@ In-app notifications enable makers to configure contextual, actionable notificat
 1. **Formula**. Paste the following code in the **Formula** box. For more information about this function, go to [SendAppNotification Action](/power-apps/developer/data-platform/webapi/reference/sendappnotification?view=dataverse-latest).
    ```powerapps-dot
     XSendAppNotification(
-    "New service",
-    LookUp(Users,'Primary Email'=TechnicianEmail),
-    "You have a new solar panel installation scheduled on "& LookUp('Scheduling Results','OrderId'=OrderID).'ServiceDate'&" in "& LookUp('Service Orders','Order Number'=OrderID).City &". Contact the coordinator with any questions.",
-    [XCreateSidePaneActionForEntity(
-        "View order",OrderID,"Sales Order","cr8b8_serviceorder1",LookUp('Service Orders','Order Number'=OrderID).'Service Order'
-        )
-    ]
+    	"New service",
+    	LookUp(Users,'Primary Email'=TechnicianEmail),
+    	"You have a new solar panel installation scheduled on "& LookUp('Scheduling Results','OrderId'=OrderID).'ServiceDate'&" in "& LookUp('Service Orders','Order Number'=OrderID).City &". Contact the coordinator with any questions.",
+	[
+		XCreateSidePaneActionForEntity(
+        		"View order",
+			OrderID,
+			"Sales Order",
+			"cr8b8_serviceorder1",
+			LookUp('Service Orders','Order Number'=OrderID).'Service Order'
+        	)
+    	]
     )
     ```
 1. Select **Next**.
@@ -105,12 +116,12 @@ In-app notifications enable makers to configure contextual, actionable notificat
 1. On the **Insert** menu, add a **Button** to the page using the **Text** *Notify technician*.
 1. Select the button, and enter the following in the **fx** formula bar, where *DataCardValue17* is the column that contains the Order ID, and *DataCardValue15* is the column that contains the technician’s email address. In this example, a canvas app named **Service Order App** is used.
 	```powerapps-dot
-       Environment.cr8b8_Notifytechnician1(
-       {OrderID: DataCardValue17.Text,
-       TechnicianEmail: DataCardValue15.Text }
-       );
+	Environment.cr8b8_Notifytechnician1({
+           OrderID: DataCardValue17.Text,
+	   TechnicianEmail: DataCardValue15.Text 
+	});
 
-       Notify("The technician was notified!", NotificationType.Success, 2000);
+       	Notify("The technician was notified!", NotificationType.Success, 2000);
 
 	 ```
    :::image type="content" source="media/low-code-plugin-ex-notify-inapp.png" alt-text="Add a button with Power Fx formula to send notification to technician" lightbox="media/low-code-plugin-ex-notify-inapp.png":::
@@ -189,14 +200,12 @@ To set the button to invoke the stored procedure:
 
    If an input parameter is configured to a static value and not a variable, that parameter doesn't need to be defined.
    
-   ```powerappsfl
-   Formula format: 
-   Environment.<plug-in logical name> ({
-   <<input parameter 1>>: <<form field 1>>. Selected<datatype>,
-   <<input parameter 2>>: <<form field 2>>. Selected<datatype>,
-   …
-   }
-   );
+   ```powerapps-dot 
+   Environment.<plug-in logical name>({
+   	<<input parameter 1>>: <<form field 1>>. Selected<datatype>,
+   	<<input parameter 2>>: <<form field 2>>. Selected<datatype>,
+   	…
+   });
    ```
    - *Environment* is the environment data source, which is used to call and execute plug-ins and actions from within canvas apps in Dataverse. After it is entered and selected enter the period "." You will then enter the logical name of your stored procedure plug-in you created.
    - Input parameters are the individual parameters that are used as inputs to the stored procedure when invoking it. There must be one line for each input parameter. Then add the colon ":".
@@ -204,11 +213,10 @@ To set the button to invoke the stored procedure:
 
    For an example, there's a stored procedure named *cr8b8_FindBestTech*, that has an input parameter of *customerZipCode* in SQL and a canvas app form has a column named *ZipCode*, you create it as: 
    
-   ```powerappsfl
+   ```powerapps-dot
    Environment.cr8b8_FindBestTech ({
-   customerZipCode: ZipCode.text,
-   }
-   );
+   	customerZipCode: ZipCode.text,
+   });
    ```
 
 1. The formula to populate the plug-in is complete. Select the button in the running app. Then, it takes the input values from the columns specified, and passes them to SQL for processing. The stored procedure processes the data based on its configuration.
@@ -219,13 +227,13 @@ At this time, plug-ins can't pass output values back to Dataverse. So you'll be 
 
 ### Stored procedure plug-ins limitations
 
-Currently stored procedures will only output the results into SQL. Due to this, you'll need to take additional steps if you need to use the output of these procedures in Dataverse. In the future, outputs to Dataverse will be supported.
+- Currently stored procedures will only output the results into SQL. Due to this, you'll need to take additional steps if you need to use the output of these procedures in Dataverse. In the future, outputs to Dataverse will be supported.
 
-Once the formula is generated and the input parameters are configured, you can't edit them directly. Currently, instead of making changes to the existing plug-in you must create a new one.
+- Once the formula is generated and the input parameters are configured, you can't edit them directly. Currently, instead of making changes to the existing plug-in you must create a new one.
 
-If a stored procedure runs longer than two minutes, Dataverse and the Power Apps (make.powerapps.com) timeout and you won't receive the completion notification. However, you can still directly access the SQL table to get the results though direct connections or virtual tables.
+- If a stored procedure runs longer than two minutes, Dataverse and the Power Apps (make.powerapps.com) timeout and you won't receive the completion notification. However, you can still directly access the SQL table to get the results though direct connections or virtual tables.
 
-Currently, there is no application lifecycle management (ALM) support for stored procedure plug-ins. This means they'll have to be re-created when moving solutions between environments.
+- Currently, there is no application lifecycle management (ALM) support for stored procedure plug-ins. This means they'll have to be re-created when moving solutions between environments.
 
 ## Perform input validation to throw custom errors
 
