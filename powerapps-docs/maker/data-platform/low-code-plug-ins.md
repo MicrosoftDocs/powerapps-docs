@@ -54,19 +54,16 @@ More information on how to integrate: [Integrate a low-code plug-in](#integrate-
 
 An automated plug-in is business logic that runs when a data event (create, update, or delete) occurs for a specified table. You can also design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.
 
-## Plug-in access
+## Plug-in permissions
 
-Plug-ins run in the context of the user who invoked the plug-in:
+### Design time
+Makers who have system customizer or system administrator security role membership in the Power Platform environment can access all plug-ins in that environment.
 
-- Instant plug-ins use the identity of the user who manually triggered it.
-- Automated plug-ins use the identity of the user who performs the data event.
+### Run time
+When a plug-in is invoked, it accesses the table data involved in the plug-in definition (the tables that are part of the formula, or if the table is associated with the settings of an automated plug-in) in the context of the user who invoked it.
 
-To invoke a plug-in, a user accesses the table data involved in the plug-in definition (the tables that are part of the formula, or if it’s <!-- what is "it's here?--> associated with the settings of an automated plug-in).
- 
-Plug-ins access the following contexts natively in Dataverse:
-
-- Any table rows the user can access.
-- Any connections the user can access.
+If a plug-in uses a connector action, the connector permissions enforce the ability for organizational users to access and operate on the plug-in call to the connector. The connection can be shared with one user or can be shared with the entire organization. This allows users to access and operate plug-ins with connectors using a shared connection if desired. By using security roles, plug-is with connectors access can be restricted to a specific set of users within your organization. You can even specify which roles have create, read, update, or delete privileges in this way.
+<!--Copied out from here, it has the same functionality https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-virtual-tables-using-connectors?tabs=sql#:~:text=The%20connector%20permissions,in%20this%20way.-->
 
 ## Prerequisites for creating a low-code plug-in
 
