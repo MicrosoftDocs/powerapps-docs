@@ -234,6 +234,19 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
 
 1. Test your plug-in. More information: [Test an instant low-code plug-in](#test-an-instant-low-code-plug-in)
 
+
+### Plug-ins with connectors limitations
+
+- Currently the SQL Server Execute stored procedures (V2) action is available
+ 
+- Plug-ins that use connectors will only output results into the external data source. Due to this, you'll need to take additional steps if you need to use the output of stored procedures in Dataverse. In the future, outputs to Dataverse will be supported.
+
+- Once the formula is generated and the input parameters are configured, you can't edit them directly. Currently, instead of making changes to the existing plug-in you must create a new one.
+
+- If a stored procedure runs longer than two minutes, Dataverse and Power Apps (make.powerapps.com) timeout and you won't receive the completion notification. However, you can still directly access the SQL table to get the results though direct connections or virtual tables.
+
+- Currently, there is no application lifecycle management (ALM) support for stored procedure plug-ins. This means they'll have to be re-created when moving solutions between environments.
+
 ## Test a low-code plug-in
 
 - Manually test the instant plug-in to verify it behaves as expected.
@@ -241,7 +254,7 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
   1. From the **plug-ins** page, select an instant low-code plug-in from the list, and then select **Test** on the command bar.
   :::image type="content" source="media/low-code-plugin-test.png" alt-text="Test low-code plug-in":::
 
-  1.	Provide values for any input parameters that are defined in the low-code plug-in, and then select **Run**.
+  1. Provide values for any input parameters that are defined in the low-code plug-in, and then select **Run**.
 
   Observe the response.
   
