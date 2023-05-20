@@ -177,6 +177,7 @@ The option to install the low-code plug-in for connectors wizard is provided whe
 
 1. Follow the [installation steps](#prerequisites-for-creating-a-low-code-plug-in) to install the Dataverse Accelerator
 2. On the second screen, an option to **Include the low-code plug-ins for connectors solution** is displayed. Make sure the checkbox is selected if you want to install the solution.
+
    ![appsource-edited](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/3adb159a-b94b-48a4-b720-433bae71f1e1)
 
 3. Review the terms of service and select **Install**
