@@ -233,8 +233,6 @@ At this time, plug-ins can't pass output values back to Dataverse. So you'll be 
 
 - If a stored procedure runs longer than two minutes, Dataverse and the Power Apps (make.powerapps.com) timeout and you won't receive the completion notification. However, you can still directly access the SQL table to get the results though direct connections or virtual tables.
 
-- Currently, there is no application lifecycle management (ALM) support for stored procedure plug-ins. This means they'll have to be re-created when moving solutions between environments.
-
 ## Perform input validation to throw custom errors
 
 Create this plug-in to implement server-side input validation to ensure data quality is maintained no matter where the data is being accessed.
