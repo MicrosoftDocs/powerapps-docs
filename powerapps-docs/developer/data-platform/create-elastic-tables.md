@@ -336,7 +336,7 @@ One-to-Many relationships are supported for elastic tables with following limita
    - The table being retrieved is a standard table and the lookup refers to an elastic table.
    - The elastic table `partitionid` value is set to a value other than the default value, the primary key value of the elastic table row. In other words, when you are using a custom `partitionid` value. More information: [Choosing a PartitionId value](elastic-tables.md#choosing-a-partitionid-value)
 
-Elastic tables supports having One-to-Many relationships and returning related rows using several different query languages, but there are some restrictions. More information : [Return related rows in a query](use-elastic-tables.md#Return-related-rows-in-a-query)
+Elastic tables supports having One-to-Many relationships and returning related rows using several different query languages, but there are some restrictions. More information : [Return related rows in a query](use-elastic-tables.md#return-related-rows-in-a-query)
 
 
 ## Next steps
