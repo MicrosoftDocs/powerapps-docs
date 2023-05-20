@@ -206,7 +206,7 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
 1. Name your plugin and provide a description.
 1. Open **Advanced Options**, and then select **Launch the plug-ins wizard**.
 
-#### Create the plug-in
+#### Configure the connector action
 1. In the **plug-in from external data** wizard on the **Connections** screen, you can either select an existing connection if you're already made one or choose to create a new connection 
     - If you want to use an existing connection, select the connection you want
     - Otherwise, select **New connection** or **Add connection**. You'll be asked for your SQL authentication type, credentials, and other information. Complete the required fields, and then select **Create**.
