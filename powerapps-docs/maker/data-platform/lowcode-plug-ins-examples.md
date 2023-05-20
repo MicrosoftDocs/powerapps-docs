@@ -83,10 +83,10 @@ In-app notifications enable makers to configure contextual, actionable notificat
 ### Create the low-code plugin that sends an in-app notification
 
 1. Play the Dataverse Accelerator app, and then select  **+New plugin** under under **Instant plugins**.
-1. Enter the following information: 
+1. Enter the following information, select **Next**: 
    - **Name**: *NotifyTechnican1*
    - **Description**: *This instant plug-in notifies the app user.*
-1. On the **Parameters** page, use these **Data types**:
+1. On the **Definitions** page, create input parameters with these data types:
    - **OrderID**: **String**
    - **TechnicianEmail**: **String**
 1. **Formula**. Paste the following code in the **Formula** box. For more information about this function, go to [SendAppNotification Action](/power-apps/developer/data-platform/webapi/reference/sendappnotification?view=dataverse-latest).
@@ -111,7 +111,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
 
 ### Invoke the in-app notification instant action
 
-1. Select a canvas app and then select **Edit** on the command bar.
+1. Select a canvas app and then select **Edit** on the command bar (or [create a new one](https://learn.microsoft.com/power-apps/maker/canvas-apps/create-blank-app)).
 1. Select screen on the left navigation pane, or create a new one.
 1. On the **Insert** menu, add a **Button** to the page using the **Text** *Notify technician*.
 1. Select the button, and enter the following in the **fx** formula bar, where *DataCardValue17* is the column that contains the Order ID, and *DataCardValue15* is the column that contains the technician’s email address. In this example, a canvas app named **Service Order App** is used.
@@ -246,7 +246,9 @@ Create this plug-in to implement server-side input validation to ensure data qua
 1. Enter the formula below:
 
    ```powerapps-dot
-   If(ThisRecord.'Due Date' < Now(), Error({ Kind: ErrorKind.Validation , Message: "The due date cannot be in the past" }))
+   If(ThisRecord.'Due Date' < Now(), 
+   	Error({ Kind: ErrorKind.Validation , Message: "The due date cannot be in the past" })
+   );
    ```
 1. Under **Advanced options**, set **When should this run** to **Pre-operation**; you want to run this rule before data is saved to prevent invalid data.
 1. Select **Save**.
