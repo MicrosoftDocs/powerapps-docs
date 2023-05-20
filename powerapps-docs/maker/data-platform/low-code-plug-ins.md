@@ -200,29 +200,38 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
 
 ### Create a low-code plug-in that uses connectors
 
+#### Launch the plug-ins for connectors wizard
 1. In Power Apps (make.powerapps.com) go to apps and play the Dataverse Accelerator app.
 1. In the Dataverse Accelerator app, on the **Instant Plugins** card select **New plugin**.
 1. Name your plugin and provide a description.
 1. Open **Advanced Options**, and then select **Launch the plug-ins wizard**.
-1. A connections screen appears. Any SQL connections you already have configured for your organization appear here. If the connection you need is already present you can select it. Otherwise, select **New connection** or **Add connection**.
-  If you create a new connection, you'll be asked for your SQL authentication type, credentials, and other information. Complete the required fields, and then select **Create**.
 
-1. When your connection is created, return to the wizard and select your connection from the connections list, and then select **Next**.
-   Connections use a connection reference to interface between Dataverse and the data source you are connecting to. The connection reference will be created for you, but if you want to provide a custom name, you can do so by opening  **Advanced options** and then check the **Manually Configure Connection Reference** checkbox, which adds another step in the wizard. This can also be used to select from existing connection references for an existing connection.
+#### Create the plug-in
+1. In the **plug-in from external data** wizard on the **Connections** screen, you can either select an existing connection if you're already made one or choose to create a new connection 
+    - If you want to use an existing connection, select the connection you want, and then select **Next**
+    - If the connection you need is already present you can select it. Otherwise, select **New connection** or **Add connection**. You'll be asked for your SQL authentication type, credentials, and other information. Complete the required fields, and then select **Create**.
+      When your connection is created, return to the wizard and select **Refresh**, then select your connection
+
+1. (Optional) Create and select a connection reference
+   If you click next after selecting the connection, the connection reference will be automatically created for you with the plug-in. 
+   
+   However, if you want to provide a custom name, you can do so by expanding **Advanced options** and then select **Manually Configure Connection Reference** to create a connection reference for the plug-in.
+   
+   On the Connection Reference page, select or name your connection reference, and then select **Next**.
+
 1. A list of available connector actions are provided. This allows you to pick which action you want to create plug-in for. Select the action and then select **Next**.
-1. In the provided dropdown lists, select the values for each parameter. As you select values, the dropdown list values for the dependent fields are fetched when available, so you should select or provide value in order (from top to bottom).
+1. In the provided dropdown lists, provide a value for each parameter. As you select values, the dropdown list values for the dependent fields are fetched if more are available, so you should provide values in order (from top to bottom).
 1. After providing values for the initial parameters available, a dynamic list of input values might be presented depending on the last parameter. These can either be configured to be input parameters for every invocation, or you can enter a static value to use for every invocation.
    :::image type="content" source="media/lowcode-plug-in-from-connector.png" alt-text="Specify parameters for low-code plug-in for connectors wizard":::
    <!--Is it possible to make this image smaller?-->
-
    If dynamic values are returned, they can be configured in two ways:
    - Input parameters, which allow you to change the value every time the plugin is run. Check the box below the parameter to expose it as an input parameter.
    - Static values, which stay the same every time the plugin is run. Provide a static value by typing in the text field or make a selection from the dropdown.
    :::image type="content" source="media/lowcode-plug-in-input-param.png" alt-text="Specify input and static values":::
-1. After providing values for all fields the Power FX formula to invoke the procedure is generated. Select **Next**.
+   Once all parameters have values the Power FX formula to invoke the procedure is generated. Select **Next**.
 1. A review page appears that shows you the plug-in you are about to create for the connector action. If everything looks correct, select **Create**.
-1. The plug-in editor opens. On the **plug-in** page, the name of the plug-in you have just created is displayed. Select **Next**.
-1. A list of all of the inputs that will be sent to the connector and their data types is displayed. The PowerFX formula that will be used to invoke the stored procedure is also displayed. This is also the screen you will later use to update the plug-in.
+3. Once the plug-in is created successfully, the plug-in editor opens. On the **plug-in** page, the name of the plug-in you have just created is displayed. Select **Next**.
+4. A list of all of the inputs that will be sent to the connector and their data types is displayed. The PowerFX formula that will be used to invoke the stored procedure is also displayed. This is also the screen you will later use to update the plug-in.
    > [!NOTE] 
    > Currently, you can't edit the parameters or formula on this page in the plug-ins wizard.
 
