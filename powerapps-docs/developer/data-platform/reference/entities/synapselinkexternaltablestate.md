@@ -1,18 +1,14 @@
 ---
 title: "synapselinkexternaltablestate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the synapselinkexternaltablestate table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # synapselinkexternaltablestate table/entity reference
@@ -65,9 +61,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EntityName](#BKMK_EntityName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [LakehouseShortcutState](#BKMK_LakehouseShortcutState)
+- [LastSynchronizedOn](#BKMK_LastSynchronizedOn)
+- [LastSyncState](#BKMK_LastSyncState)
+- [MaxRecordVersion](#BKMK_MaxRecordVersion)
 - [MetadataVersion](#BKMK_MetadataVersion)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
+- [RecordCount](#BKMK_RecordCount)
 - [SchemaModifiedOn](#BKMK_SchemaModifiedOn)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -149,6 +149,59 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_LastSynchronizedOn"></a> LastSynchronizedOn
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Last SynchronizedOn Date time|
+|DisplayName|Last Synchronized On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lastsynchronizedon|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_LastSyncState"></a> LastSyncState
+
+|Property|Value|
+|--------|-----|
+|Description|Last data synchronization state|
+|DisplayName|Last Synchronization State|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lastsyncstate|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### LastSyncState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Created|Not created|
+|1|Created|Created|
+|2|Failed|Failed|
+|3|Deleted|Deleted|
+
+
+
+### <a name="BKMK_MaxRecordVersion"></a> MaxRecordVersion
+
+|Property|Value|
+|--------|-----|
+|Description|Maximum record version synchronized to the lake|
+|DisplayName|Maximum Record Version|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|maxrecordversion|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
+
 ### <a name="BKMK_MetadataVersion"></a> MetadataVersion
 
 |Property|Value|
@@ -195,6 +248,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|overriddencreatedon|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_RecordCount"></a> RecordCount
+
+|Property|Value|
+|--------|-----|
+|Description|Record count synchronized to lake|
+|DisplayName|Record Count|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|recordcount|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
 
 
 ### <a name="BKMK_SchemaModifiedOn"></a> SchemaModifiedOn

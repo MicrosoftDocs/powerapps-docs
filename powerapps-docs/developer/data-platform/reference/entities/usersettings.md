@@ -1,18 +1,14 @@
 ---
 title: "UserSettings table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the UserSettings table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # UserSettings table/entity reference
@@ -63,6 +59,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CurrencyDecimalPrecision](#BKMK_CurrencyDecimalPrecision)
 - [CurrencyFormatCode](#BKMK_CurrencyFormatCode)
 - [CurrencySymbol](#BKMK_CurrencySymbol)
+- [D365AutoInstallAttemptStatus](#BKMK_D365AutoInstallAttemptStatus)
 - [DataValidationModeForExportToExcel](#BKMK_DataValidationModeForExportToExcel)
 - [DateFormatCode](#BKMK_DateFormatCode)
 - [DateFormatString](#BKMK_DateFormatString)
@@ -304,6 +301,35 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|13|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_D365AutoInstallAttemptStatus"></a> D365AutoInstallAttemptStatus
+
+**Added by**: Microsoft D365 Auto Install Plugin Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Determines the status of auto install of Dynamics 365 to Teams attempt has been completed|
+|DisplayName|d365autoinstallattemptstatus|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|d365autoinstallattemptstatus|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### D365AutoInstallAttemptStatus Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not attempted||
+|1|Auto installed|Dynamics 365 App installed successfully|
+|2|Already installed|Dynamics 365 app is already installed in Teams|
+|3|Teams admin blocked|Teams admin blocked installing Dynamics 365 app|
+|4|Unauthorized|Not authorized to execute auto install|
+|5|No Solution|D365 auto install solution is no available|
+|6|No Graph API|Graph API is not available for auto install|
+
 
 
 ### <a name="BKMK_DataValidationModeForExportToExcel"></a> DataValidationModeForExportToExcel

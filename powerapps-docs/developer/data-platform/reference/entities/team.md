@@ -1,18 +1,14 @@
 ---
 title: "Team table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Team table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Team table/entity reference
@@ -1063,6 +1059,10 @@ Listed by **SchemaName**.
 - [team_powerbireport](#BKMK_team_powerbireport)
 - [team_msdyn_fileupload](#BKMK_team_msdyn_fileupload)
 - [team_msdyn_aievent](#BKMK_team_msdyn_aievent)
+- [team_recentlyused](#BKMK_team_recentlyused)
+- [team_msdyn_mobileapp](#BKMK_team_msdyn_mobileapp)
+- [team_workqueue](#BKMK_team_workqueue)
+- [team_workqueueitem](#BKMK_team_workqueueitem)
 
 
 ### <a name="BKMK_team_principalobjectattributeaccess_principalid"></a> team_principalobjectattributeaccess_principalid
@@ -3696,6 +3696,74 @@ Same as the [team_msdyn_aievent](msdyn_aievent.md#BKMK_team_msdyn_aievent) many-
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|team_msdyn_aievent|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_recentlyused"></a> team_recentlyused
+
+**Added by**: Active Solution Solution
+
+Same as the [team_recentlyused](recentlyused.md#BKMK_team_recentlyused) many-to-one relationship for the [recentlyused](recentlyused.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|recentlyused|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_recentlyused|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_msdyn_mobileapp"></a> team_msdyn_mobileapp
+
+**Added by**: Active Solution Solution
+
+Same as the [team_msdyn_mobileapp](msdyn_mobileapp.md#BKMK_team_msdyn_mobileapp) many-to-one relationship for the [msdyn_mobileapp](msdyn_mobileapp.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_mobileapp|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_msdyn_mobileapp|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_workqueue"></a> team_workqueue
+
+**Added by**: Active Solution Solution
+
+Same as the [team_workqueue](workqueue.md#BKMK_team_workqueue) many-to-one relationship for the [workqueue](workqueue.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|workqueue|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_workqueue|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_workqueueitem"></a> team_workqueueitem
+
+**Added by**: Active Solution Solution
+
+Same as the [team_workqueueitem](workqueueitem.md#BKMK_team_workqueueitem) many-to-one relationship for the [workqueueitem](workqueueitem.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|workqueueitem|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_workqueueitem|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

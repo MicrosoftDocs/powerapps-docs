@@ -1,18 +1,14 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Organization table/entity reference
@@ -224,6 +220,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsAuditEnabled](#BKMK_IsAuditEnabled)
 - [IsAutoDataCaptureEnabled](#BKMK_IsAutoDataCaptureEnabled)
 - [IsAutoDataCaptureV2Enabled](#BKMK_IsAutoDataCaptureV2Enabled)
+- [IsAutoInstallAppForD365InTeamsEnabled](#BKMK_IsAutoInstallAppForD365InTeamsEnabled)
 - [IsAutoSaveEnabled](#BKMK_IsAutoSaveEnabled)
 - [IsBaseCardStaticFieldDataEnabled](#BKMK_IsBaseCardStaticFieldDataEnabled)
 - [IsBasicGeospatialIntegrationEnabled](#BKMK_IsBasicGeospatialIntegrationEnabled)
@@ -3887,6 +3884,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_IsAutoInstallAppForD365InTeamsEnabled"></a> IsAutoInstallAppForD365InTeamsEnabled
+
+**Added by**: Second Patch for Application Common Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|IsAutoInstallAppForD365InTeamsEnabled|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isautoinstallappford365inteamsenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsAutoInstallAppForD365InTeamsEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_IsAutoSaveEnabled"></a> IsAutoSaveEnabled
 
 |Property|Value|
@@ -5359,7 +5381,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|isrpaboxcrossgeoenabled|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Boolean|
 
 #### IsRpaBoxCrossGeoEnabled Choices/Options
@@ -6217,7 +6239,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|multicolumnsortenabled|
 |MaxValue|100|
 |MinValue|0|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Integer|
 
 
@@ -7111,7 +7133,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|releasechannel|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|Picklist|
 
 #### ReleaseChannel Choices/Options

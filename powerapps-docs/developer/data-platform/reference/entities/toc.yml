@@ -374,6 +374,8 @@
   href: msdyn_knowledgesearchfilter.md
 - name: msdyn_knowledgesearchinsight
   href: msdyn_knowledgesearchinsight.md
+- name: msdyn_mobileapp
+  href: msdyn_mobileapp.md
 - name: msdyn_nonrelationalds
   href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
@@ -514,6 +516,8 @@
   href: queue.md
 - name: QueueItem
   href: queueitem.md
+- name: recentlyused
+  href: recentlyused.md
 - name: RecommendedDocument
   href: recommendeddocument.md
 - name: reconciliationentityinfo
@@ -586,6 +590,8 @@
   href: sharedobject.md
 - name: sharedworkspace
   href: sharedworkspace.md
+- name: sharedworkspacepool
+  href: sharedworkspacepool.md
 - name: SharePointDocumentLocation
   href: sharepointdocumentlocation.md
 - name: SharePointSite
@@ -618,6 +624,8 @@
   href: solutionhistorydata.md
 - name: StagedEntity
   href: stagedentity.md
+- name: StagedEntityAttribute
+  href: stagedentityattribute.md
 - name: StageSolutionUpload
   href: stagesolutionupload.md
 - name: Subject
@@ -694,3 +702,7 @@
   href: workflowbinary.md
 - name: WorkflowLog
   href: workflowlog.md
+- name: workqueue
+  href: workqueue.md
+- name: workqueueitem
+  href: workqueueitem.md

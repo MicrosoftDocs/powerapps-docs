@@ -1,18 +1,14 @@
 ---
 title: "synapselinkschedule table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the synapselinkschedule table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # synapselinkschedule table/entity reference
@@ -186,7 +182,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|recurrenceinterval|
-|MaxValue|1000|
+|MaxValue|999999|
 |MinValue|0|
 |RequiredLevel|ApplicationRequired|
 |Type|Integer|

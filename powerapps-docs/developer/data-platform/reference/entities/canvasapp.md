@@ -1,18 +1,14 @@
 ---
 title: "CanvasApp table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CanvasApp table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # CanvasApp table/entity reference
@@ -1285,6 +1281,7 @@ Listed by **SchemaName**.
 
 - [canvasapp_appaction_onclickeventformulacomponentlibraryid](#BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid)
 - [canvasapp_appaction_visibilityformulacomponentlibraryid](#BKMK_canvasapp_appaction_visibilityformulacomponentlibraryid)
+- [canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName](#BKMK_canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName)
 
 
 ### <a name="BKMK_canvasapp_appaction_onclickeventformulacomponentlibraryid"></a> canvasapp_appaction_onclickeventformulacomponentlibraryid
@@ -1317,6 +1314,23 @@ Same as the [canvasapp_appaction_visibilityformulacomponentlibraryid](appaction.
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|canvasapp_appaction_visibilityformulacomponentlibraryid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName"></a> canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName
+
+**Added by**: Mobile Apps Solution Solution
+
+Same as the [canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName](msdyn_mobileapp.md#BKMK_canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName) many-to-one relationship for the [msdyn_mobileapp](msdyn_mobileapp.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_mobileapp|
+|ReferencingAttribute|msdyn_primarypublishedappname|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

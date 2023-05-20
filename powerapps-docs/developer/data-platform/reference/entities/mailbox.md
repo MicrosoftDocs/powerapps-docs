@@ -1,18 +1,14 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Mailbox table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Mailbox table/entity reference
@@ -83,6 +79,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ItemsFailedForLastSync](#BKMK_ItemsFailedForLastSync)
 - [ItemsProcessedForLastSync](#BKMK_ItemsProcessedForLastSync)
 - [LastAutoDiscoveredOn](#BKMK_LastAutoDiscoveredOn)
+- [LastMessageId](#BKMK_LastMessageId)
 - [LastSuccessfulSyncCompletedOn](#BKMK_LastSuccessfulSyncCompletedOn)
 - [LastSyncError](#BKMK_LastSyncError)
 - [LastSyncErrorCode](#BKMK_LastSyncErrorCode)
@@ -540,6 +537,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|lastautodiscoveredon|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_LastMessageId"></a> LastMessageId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the last message.|
+|DisplayName|Last Message ID|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|lastmessageid|
+|MaxLength|320|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_LastSuccessfulSyncCompletedOn"></a> LastSuccessfulSyncCompletedOn
@@ -1234,7 +1248,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [LastActiveOn](#BKMK_LastActiveOn)
 - [LastDuration](#BKMK_LastDuration)
 - [LastMailboxForcedUnlockOccurredOn](#BKMK_LastMailboxForcedUnlockOccurredOn)
-- [LastMessageId](#BKMK_LastMessageId)
 - [LastSyncStartedOn](#BKMK_LastSyncStartedOn)
 - [MailboxStatus](#BKMK_MailboxStatus)
 - [ModifiedBy](#BKMK_ModifiedBy)
@@ -1714,22 +1727,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|lastmailboxforcedunlockoccurredon|
 |RequiredLevel|None|
 |Type|DateTime|
-
-
-### <a name="BKMK_LastMessageId"></a> LastMessageId
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier of the last message.|
-|DisplayName|Last Message ID|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|False|
-|LogicalName|lastmessageid|
-|MaxLength|320|
-|RequiredLevel|None|
-|Type|String|
 
 
 ### <a name="BKMK_LastSyncStartedOn"></a> LastSyncStartedOn

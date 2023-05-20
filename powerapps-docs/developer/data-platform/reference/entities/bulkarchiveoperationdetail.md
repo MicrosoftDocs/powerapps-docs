@@ -1,18 +1,14 @@
 ---
 title: "BulkArchiveOperationDetail table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the BulkArchiveOperationDetail table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # BulkArchiveOperationDetail table/entity reference
@@ -20,7 +16,7 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Holds operation details values for entities for archival. For internal use only.
+Holds operation details values for entities for archival
 
 **Added by**: Retention Base Components Solution
 

@@ -1,18 +1,14 @@
 ---
 title: "StagedEntity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the StagedEntity table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # StagedEntity table/entity reference
@@ -61,15 +57,38 @@ Stores staged entity metadata to be processed before fully created.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [CollectionName](#BKMK_CollectionName)
 - [EntityDescription](#BKMK_EntityDescription)
+- [EntitySetName](#BKMK_EntitySetName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [LogicalCollectionName](#BKMK_LogicalCollectionName)
+- [LogicalName](#BKMK_LogicalName)
 - [Name](#BKMK_Name)
+- [OriginalLocalizedCollectionName](#BKMK_OriginalLocalizedCollectionName)
+- [OriginalLocalizedName](#BKMK_OriginalLocalizedName)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
+- [PhysicalName](#BKMK_PhysicalName)
 - [StagedEntityId](#BKMK_StagedEntityId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_CollectionName"></a> CollectionName
+
+|Property|Value|
+|--------|-----|
+|Description|The collection name of the staged entity.|
+|DisplayName|Collection Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|collectionname|
+|MaxLength|128|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_EntityDescription"></a> EntityDescription
@@ -86,6 +105,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|8000|
 |RequiredLevel|None|
 |Type|Memo|
+
+
+### <a name="BKMK_EntitySetName"></a> EntitySetName
+
+|Property|Value|
+|--------|-----|
+|Description|The entity set name of the staged entity.|
+|DisplayName|Entity Set Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|entitysetname|
+|MaxLength|128|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -105,6 +140,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_LogicalCollectionName"></a> LogicalCollectionName
+
+|Property|Value|
+|--------|-----|
+|Description|The logical collection name of the staged entity.|
+|DisplayName|Logical Collection Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|logicalcollectionname|
+|MaxLength|128|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_LogicalName"></a> LogicalName
+
+|Property|Value|
+|--------|-----|
+|Description|The logical name of the staged entity.|
+|DisplayName|Logical Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|logicalname|
+|MaxLength|128|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
@@ -116,6 +183,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|name|
+|MaxLength|128|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_OriginalLocalizedCollectionName"></a> OriginalLocalizedCollectionName
+
+|Property|Value|
+|--------|-----|
+|Description|The original localized collection name of the staged entity.|
+|DisplayName|Original Localized Collection Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|originallocalizedcollectioname|
+|MaxLength|128|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_OriginalLocalizedName"></a> OriginalLocalizedName
+
+|Property|Value|
+|--------|-----|
+|Description|The original localized name of the staged entity.|
+|DisplayName|Original Localized Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|originallocalizedname|
 |MaxLength|128|
 |RequiredLevel|None|
 |Type|String|
@@ -135,6 +234,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|overriddencreatedon|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_PhysicalName"></a> PhysicalName
+
+|Property|Value|
+|--------|-----|
+|Description|The physical name of the staged entity.|
+|DisplayName|Physical Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|physicalname|
+|MaxLength|128|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_StagedEntityId"></a> StagedEntityId
@@ -487,8 +602,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|

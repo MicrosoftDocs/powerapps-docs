@@ -1,18 +1,14 @@
 ---
 title: "msdyn_integratedsearchprovider table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_integratedsearchprovider table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # msdyn_integratedsearchprovider table/entity reference
@@ -489,7 +485,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |--------|-----|
 |Description|State of the external search provider|
 |DisplayName|Status|
-|IsValidForCreate|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|statecode|
@@ -521,8 +516,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|State|
 |-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
+|1|Ingestion Ready|0|
+|2|Validated|1|
+|3|Draft|1|
 
 
 

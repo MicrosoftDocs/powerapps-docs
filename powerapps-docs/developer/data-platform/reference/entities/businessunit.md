@@ -1,18 +1,14 @@
 ---
 title: "BusinessUnit table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the BusinessUnit table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # BusinessUnit table/entity reference
@@ -1713,6 +1709,10 @@ Listed by **SchemaName**.
 - [business_unit_powerbireport](#BKMK_business_unit_powerbireport)
 - [business_unit_msdyn_fileupload](#BKMK_business_unit_msdyn_fileupload)
 - [business_unit_msdyn_aievent](#BKMK_business_unit_msdyn_aievent)
+- [business_unit_recentlyused](#BKMK_business_unit_recentlyused)
+- [business_unit_msdyn_mobileapp](#BKMK_business_unit_msdyn_mobileapp)
+- [business_unit_workqueue](#BKMK_business_unit_workqueue)
+- [business_unit_workqueueitem](#BKMK_business_unit_workqueueitem)
 
 
 ### <a name="BKMK_business_unit_exchangesyncidmapping"></a> business_unit_exchangesyncidmapping
@@ -4541,6 +4541,74 @@ Same as the [business_unit_msdyn_aievent](msdyn_aievent.md#BKMK_business_unit_ms
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_aievent|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_recentlyused"></a> business_unit_recentlyused
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_recentlyused](recentlyused.md#BKMK_business_unit_recentlyused) many-to-one relationship for the [recentlyused](recentlyused.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|recentlyused|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_recentlyused|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msdyn_mobileapp"></a> business_unit_msdyn_mobileapp
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msdyn_mobileapp](msdyn_mobileapp.md#BKMK_business_unit_msdyn_mobileapp) many-to-one relationship for the [msdyn_mobileapp](msdyn_mobileapp.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_mobileapp|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_mobileapp|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_workqueue"></a> business_unit_workqueue
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_workqueue](workqueue.md#BKMK_business_unit_workqueue) many-to-one relationship for the [workqueue](workqueue.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|workqueue|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_workqueue|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_workqueueitem"></a> business_unit_workqueueitem
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_workqueueitem](workqueueitem.md#BKMK_business_unit_workqueueitem) many-to-one relationship for the [workqueueitem](workqueueitem.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|workqueueitem|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_workqueueitem|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

@@ -1,18 +1,14 @@
 ---
 title: "Plug-in Type Statistic (PluginTypeStatistic)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Plug-in Type Statistic (PluginTypeStatistic)  table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Plug-in Type Statistic (PluginTypeStatistic)  table/entity reference

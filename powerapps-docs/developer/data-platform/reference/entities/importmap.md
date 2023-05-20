@@ -1,18 +1,14 @@
 ---
 title: "Data Map (ImportMap)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Data Map (ImportMap)  table/entity."
-ms.date: 05/04/2023
+ms.date: 05/19/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Data Map (ImportMap)  table/entity reference
@@ -1075,6 +1071,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4810|Time Zone Definition|Time zone definition, including name and time zone code.|
 |4811|Time Zone Rule|Definition for time conversion between local time and Coordinated Universal Time (UTC) for a particular time zone at a particular time period.|
 |4812|Time Zone Localized Name|Localized name of the time zone.|
+|5000|Recently Used|Most recently used data table.|
 |7000|System Application Metadata|For internal use only.|
 |7001|User Application Metadata|For internal use only.|
 |7100|Solution|A solution which contains CRM customizations.|
@@ -1378,6 +1375,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10195|Power BI Report||
 |10327|File Upload||
 |10331|AI Event||
+|10363|Staged Entity Attribute|Stores staged entity attribute metadata to be processed in async.|
+|10364|Shared Workspace Pool|Contains metadata about a container used to store real-time collaboration data. Once claimed, a sharedworkspace record would be created with copied metadata.|
+|10365|Mobile App|Mobile App|
+|10389|Work Queue||
+|10390|Work Queue Item||
 
 
 <a name="onetomany"></a>
