@@ -290,6 +290,17 @@ These will be used to provide input into and call the formula. More information:
 3. Select your plug-in (it will have the unique name with a prefix)
 4. Provide values for all of the input parameters (if any)
 
+## Manage low-code plugins using solutions
+The Dataverse Accelerator app lets you identify an unmangaed solution to write all your changes to. This makes your plug-in assets easier to find and transfer between environments. 
+
+1. Before you start working on any plug-ins, create an unmanged solution in the maker portal. Then you can select that solution in the app to save your plug-in assets to that solution.
+1. In each editor screen on the top right corner, there is a dropdown of unmanaged solutions in the environment you can choose from. 
+   ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/40b78566-867c-4806-ae52-da4ba6d61586)
+1. Once you choose a solution, the Dataverse Accelerator will save that selection every time you run the app in that environment. It will assign the prefix of the selected solution's publisher to some of the assets.
+
+> [!TIP] 
+> Make sure to change the solution if you are working on for different projects, so your assets are easier to find.
+
 ## Contacting Help + support
 
 For issues with the Dataverse Accelerator solution installation or low-code plug-ins, such as errors received, [use the Help + support experience](/power-platform/admin/get-help-support) and include the following information:
