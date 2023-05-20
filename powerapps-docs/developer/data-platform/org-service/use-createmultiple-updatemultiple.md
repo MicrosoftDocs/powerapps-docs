@@ -39,18 +39,21 @@ With `CreateMultiple` and `UpdateMultiple`, operations become more efficient and
 
 Consider this: If you create a *single* record using `Create` or `CreateMultiple`, the result is exactly the same. The same is true for `Update` and `UpdateMultiple`. Not only is the result the same, the performance is the same as well. `CreateMultiple` and `UpdateMultiple` provide greater efficiency and performance benefits as the number of records included in the `Targets` property increases.
 
-Performance is improved because these messages apply the data operations in a single transaction against multiple rows in the table rather than as separate operations on individual rows. This design also enables improving performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual create and update events. More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../write-plugin-multiple-operation.md)
+Performance is improved because these messages apply the data operations in a single transaction against multiple rows in the table rather than as separate operations on individual rows. This design also enables improving performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual `Create` or `Update` events. 
 
-Each time a plug-in is invoked, some milliseconds are required to invoke the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this invocation adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is invoked once and can process all the records with greater efficiency.
+Each time a plug-in is invoked, some milliseconds are required to invoke the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this invocation adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is invoked once and can process all the records with greater efficiency. More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../write-plugin-multiple-operation.md)
 
 ## Message pipelines merged
 
-As mentioned above, creating or updating a single record using the single or multiple version of the operation has the same result and performance characteristics. It must also have the same custom logic applied to it and developers must not be required to maintain this logic in two different places. In order to have the same custom logic and maintain that logic in a single place, we've *merged* the message processing pipelines for these messages. What does this mean?
+As mentioned above, creating or updating a single record using the single or multiple version of the operation has the same result and performance characteristics. It must also have the same custom logic applied to it. Developers must not be required to maintain this logic in two different places. In order to have the same custom logic and maintain that logic in a single place, we've *merged* the message processing pipelines for these messages. What does this mean?
 
-This means:
+- When `CreateMultiple` and `UpdateMultiple` messages are used, the respective `Create` and `Update` events occur for each [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance in the `Targets` parameter. Any existing plug-ins or other event handlers for the `Create` and `Update` events continue to work as they always have.
 
-- When `CreateMultiple` and `UpdateMultiple` messages are used, the respective `Create` and `Update` events occur for each [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance in the `Targets` parameter. Any existing plug-ins or other event handlers for the `Create` and `Update` events continue to work as they always have. You aren't required to write new plug-ins to manage events raised by these messages.
-- When `Create` and `Update` messages are used, the respective `CreateMultiple` and `UpdateMultiple` events occur with an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing a *single* [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance passed in the `Targets` parameter. You can move any existing logic that currently responds to individual `Create` and `Update` events to the more efficient `CreateMultiple` and `UpdateMultiple` events and the logic is applied for both single and multiple operations.
+   You aren't required to write new plug-ins to manage events raised by these messages.
+
+- When `Create` and `Update` messages are used, the respective `CreateMultiple` and `UpdateMultiple` events occur with an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing a *single* [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance passed in the `Targets` parameter.
+
+   You can move any existing logic that currently responds to individual `Create` and `Update` events to the more efficient `CreateMultiple` and `UpdateMultiple` events and the logic is applied for both single and multiple operations.
 
 Before the introduction of `CreateMultiple` and `UpdateMultiple`, all custom logic has been on the `Create` or `Update` messages. That logic must continue to be applied when client applications use the `CreateMultiple` and `UpdateMultiple` messages.
 
@@ -69,7 +72,7 @@ Keep these limitations in mind when using `CreateMultiple` and `UpdateMultiple` 
 
 ### Limited to certain tables
 
-Currently, `CreateMultiple` and `UpdateMultiple` messages are not available for all tables. These messages will be enabled for all tables that support individual `Create` and `Update` messages in the coming months.
+Currently, `CreateMultiple` and `UpdateMultiple` messages aren't available for all tables. These messages will be enabled for all tables that support individual `Create` and `Update` messages in the coming months.
 
 You can test whether individual tables support these messages today using the examples below.
 
@@ -186,7 +189,7 @@ The default timeout set using ServiceClient is 4 minutes, which is long for any 
 
 The `ExecuteMultiple` message supports the option that continues processing requests even when one or more requests fail. Because `CreateMultiple` and `UpdateMultiple` messages achieve performance improvements by unifying all operations in a single transaction, it isn't possible to support the continue-on-error behaviors.
 
-You should use `CreateMultiple` and `UpdateMultiple` messages when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that allows the set of operations to fall back to use `ExecuteMultiple` if `CreateMultiple` and `UpdateMultiple` messages fail. If the success rate for your initial try is low, this will result in worse performance. Only use this fall back strategy when most operations are expected to succeed.
+You should use `CreateMultiple` and `UpdateMultiple` messages when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that allows the set of operations to fall back to use `ExecuteMultiple` if `CreateMultiple` and `UpdateMultiple` messages fail. If the success rate for your initial try is low, this strategy will result in worse performance. Only use this fall back strategy when most operations are expected to succeed.
 
 ### .NET SDK only
 
@@ -202,7 +205,13 @@ The following are known issues that will be addressed before this feature become
 
 ### UpdateMultipleRequest.ConcurrencyBehavior not working
 
-<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.ConcurrencyBehavior> isn't working correctly.
+<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.ConcurrencyBehavior> specifies the type of optimistic concurrency behavior that should be applied. Possible values are `AlwaysOverwrite`, `Default`, and `IfRowVersionMatches`.
+
+<!-- TODO Samson please confirm this: -->
+
+Currently the `Default` option is always applied regardless of what you set. The behavior depends on whether [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) is set for the table.
+
+More information: [ConcurrencyBehavior Enum](xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior)
 
 
 ## Frequently Asked Questions
@@ -214,19 +223,21 @@ The following are frequently asked question related to the introduction of these
 
 ### Will there be an UpsertMultiple?
 
-Yes. `UpsertMultiple` is planned to be released later.
+Yes. We plan to release `UpsertMultiple` later.
 
 ### Will there be a DeleteMultiple?
 
-DeleteMultiple is currently not in consideration because delete operations frequently include cascading operations that can result in unpredictable execution times. We already have a `BulkDelete` message that enables asynchronous deletion of records that match a query.
+At this time, `DeleteMultiple` is supported only for elastic tables, which is a preview feature. Elastic tables don't support cascading operations. More information [Bulk operations with elastic tables (Preview)](../bulk-operations-elastic-tables.md)
+
+For standard tables, cascading operations can result in unpredictable execution times. If we support `DeleteMultiple` for standard tables, it may not be the best choice. For standard tables, we recommend the `BulkDelete` message that enables asynchronous deletion of records that match a query.
 
 ### Will Retrieve and RetrieveMultiple logic be merged?
 
-There are no plans to change `Retrieve` and `RetrieveMultiple` message behavior. Attempting to merge the message pipeline for these messages would be highly problematic because these have been separate messages for many years and developers have always needed to maintain logic for them separately. Also, we discourage applying custom logic for these messages due to the impact they can have on performance. More information: [Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages](../best-practices/business-logic/limit-registration-plugins-retrieve-retrievemultiple.md)
+No. There are no plans to change `Retrieve` and `RetrieveMultiple` message behavior. Attempting to merge the message pipeline for these messages would be highly problematic because these have been separate messages for many years and developers have always needed to maintain logic for them separately. Also, we discourage applying custom logic for these messages due to the impact they can have on performance. More information: [Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages](../best-practices/business-logic/limit-registration-plugins-retrieve-retrievemultiple.md)
 
 ### How are API limits applied?
 
-There are two kinds of API limits: Service Protection limits and Power Platform Request (API Entitlement) limits.
+There are two kinds of API limits:
 
 [!INCLUDE [cc-api-limits-summary-table](../../../includes/cc-api-limits-summary-table.md)]
 
@@ -234,8 +245,8 @@ There are two kinds of API limits: Service Protection limits and Power Platform 
 
 As described in [Service protection API limits](../api-limits.md), limits have three facets. Two of these limits are evaluated on a 5-minute sliding window and apply when using these messages.
 
-- **Number of requests**: Each `CreateMultiple` and `UpdateMultiple` request counts as single request that accrues to the limit of 6000 requests per user, per server, during the 5-minute window. By grouping multiple requests with these messages, the likelihood of hitting this limit is reduced.
-- **Execution time**: Because each request takes longer, and if you're sending requests in parallel, you're more likely to hit the execution time limit that is 20 minutes per user, per server, during the 5-minute window. More information: [Send parallel requests](../send-parallel-requests.md)
+- **Number of requests**: Each `CreateMultiple` and `UpdateMultiple` request counts as single request that accrues to the limit of 6000 requests per user, per server, during the 5-minute window. Because these requests group individual operations, the likelihood of hitting this limit is reduced.
+- **Execution time**: Because each `CreateMultiple` and `UpdateMultiple` typically request takes longer, and if you're sending requests in parallel, you're more likely to hit the execution time limit that is 20 minutes per user, per server, during the 5-minute window. More information: [Send parallel requests](../send-parallel-requests.md)
 
 #### Power Platform Request (API Entitlement) limits
 
