@@ -208,17 +208,12 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
 
 #### Create the plug-in
 1. In the **plug-in from external data** wizard on the **Connections** screen, you can either select an existing connection if you're already made one or choose to create a new connection 
-    - If you want to use an existing connection, select the connection you want, and then select **Next**
+    - If you want to use an existing connection, select the connection you want
     - Otherwise, select **New connection** or **Add connection**. You'll be asked for your SQL authentication type, credentials, and other information. Complete the required fields, and then select **Create**.
       When your connection is created, return to the wizard and select **Refresh**, then select your connection
-
-1. (Optional) Create and select a connection reference
-   If you click next after selecting the connection, the connection reference will be automatically created for you with the plug-in. 
-   
-   However, if you want to provide a custom name, you can do so by expanding **Advanced options** and then select **Manually Configure Connection Reference** to create a connection reference for the plug-in.
-   
-   On the Connection Reference page, select or name your connection reference, and then select **Next**.
-
+1. (Optional) If you click **Next** after selecting the connection, the connection reference will be automatically created for you with the plug-in.<br>
+   However, if you want to provide a custom name, you can do so by expanding **Advanced options** and then select **Manually Configure Connection Reference** to create a connection reference for the plug-in.<br>
+   On the Connection Reference page, select or name your connection reference, and then select **Next**.<br>
 1. A list of available connector actions are provided. This allows you to pick which action you want to create plug-in for. Select the action and then select **Next**.
 1. In the provided dropdown lists, provide a value for each parameter. As you select values, the dropdown list values for the dependent fields are fetched if more are available, so you should provide values in order (from top to bottom).
 1. After providing values for the initial parameters available, a dynamic list of input values might be presented depending on the last parameter. These can either be configured to be input parameters for every invocation, or you can enter a static value to use for every invocation.
