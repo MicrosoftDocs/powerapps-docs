@@ -59,7 +59,7 @@ The following basic examples show how to use the API to send in-app notification
 > [!div class="mx-imgBorder"]
 > ![Screenshot of a Welcome notification.](../media/welcome-notification.png "Welcome notification")
 
-# [Client API](#tab/clientapi)
+# [Client API](#tab/clientapi1)
 
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Welcome",
@@ -84,7 +84,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
     console.log(error.message);
 });
 ```
-# [Web API](#tab/webapi)
+# [Web API](#tab/webapi1)
 
 **Request**
 
@@ -113,7 +113,7 @@ OData-Version: 4.0
 
 More information: [Use Web API actions](../../data-platform/webapi/use-web-api-actions.md).
 
-# [SDK for .NET](#tab/sdk)
+# [SDK for .NET](#tab/sdk1)
 
 ```csharp
 /// <summary>
@@ -193,7 +193,7 @@ This example shows how to create a notification by adding a custom body definiti
 > [!div class="mx-imgBorder"]
 > ![Notification with a block of text that includes an inline link.](../media/app-notification-with-custom-body.png "Notification with an inline link")
 
-# [Client API](#tab/clientapi)
+# [Client API](#tab/clientapi2)
 
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "SLA critical",
@@ -223,7 +223,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
     console.log(error.message);
 });
 ```
-# [Web API](#tab/webapi)
+# [Web API](#tab/webapi2)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification
@@ -245,7 +245,7 @@ Accept: application/json
   }
 }
 ```
-# [SDK for .NET](#tab/sdk)
+# [SDK for .NET](#tab/sdk2)
 
 ```csharp
 /// <summary>
@@ -291,7 +291,7 @@ This example adds a custom title and a body definition that allows multiple link
 > [!div class="mx-imgBorder"]
 > ![Notification that includes a custom title, multiple links, bold text, and italic formatting.](../media/app-notification-with-custom-title-body.png "Notification with a custom title and body")
 
-# [Client API](#tab/clientapi)
+# [Client API](#tab/clientapi3)
 
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Complete overhaul required (sample)",
@@ -327,7 +327,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 
 ```
 
-# [Web API](#tab/webapi)
+# [Web API](#tab/webapi3)
 
 **Request**
 
@@ -358,7 +358,7 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 ```
 
-# [SDK for .NET](#tab/sdk)
+# [SDK for .NET](#tab/sdk3)
 
 ```csharp
 /// <summary>
@@ -478,8 +478,53 @@ The following example shows how to create a notification with a single URL actio
 
 > [!div class="mx-imgBorder"] 
 > ![App notification with a single action.](../media/app-notification-with-single-action.png "App notification with a single action")
-  
-# [Web API](#tab/webapi)
+
+# [Client API](#tab/clientapi4)
+
+```javascript
+var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Congratulations",
+    recipient = "/systemusers(<GUID of the user>)",
+    body = "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
+    iconType = 100000001,
+    toastType = 200000000,
+    overrideContent = {
+        "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+        "title": "**SLA critical**",
+        "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned is critically past SLA and has been escalated to your manager."
+
+    },
+    actions = {
+        "@odata.type": "Microsoft.Dynamics.CRM.expando",
+        "actions@odata.type": "#Collection(Microsoft.Dynamics.CRM.expando)",
+        "actions": [
+            {
+                "title": "Consult Chat GPT",
+                "data": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "type": "url",
+                    "url": "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039",
+                    "navigationTarget": "newWindow"
+                }
+            }
+        ]
+    }
+);
+
+Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
+
+        return response.json();
+    }
+})
+.then(function (responseBody) {
+    console.log("Response Body: %s", responseBody.NotificationId);
+})
+.catch(function (error) {
+    console.log(error.message);
+});
+```
+# [Web API](#tab/webapi4)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification
@@ -512,7 +557,7 @@ Accept: application/json
 }
 ```
 
-# [SDK for .NET](#tab/sdk)
+# [SDK for .NET](#tab/sdk4)
 
 ```csharp
 /// <summary>
