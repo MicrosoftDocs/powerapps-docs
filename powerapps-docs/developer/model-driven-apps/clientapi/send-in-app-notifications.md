@@ -59,6 +59,92 @@ The following basic examples show how to use the API to send in-app notification
 > [!div class="mx-imgBorder"]
 > ![Screenshot of a Welcome notification.](../media/welcome-notification.png "Welcome notification")
 
+# [Client API](#tab/clientapi)
+
+```javascript
+var Example = window.Example || {};
+Example.SendAppNotificationRequest = function (title, recipient, body, priority, iconType, toastType, expiry, overrideContent, actions) {
+    this.Title = title;
+    this.Recipient = recipient;
+    this.Body = body;
+    this.Priority = priority;
+    this.IconType = iconType;
+    this.ToastType = toastType;
+    this.Expiry = expiry;
+    this.OverrideContent = overrideContent;
+    this.Actions = actions;
+};
+
+Example.SendAppNotificationRequest.prototype.getMetadata = function () {
+    return {
+        boundParameter: null,
+        parameterTypes: {
+            "Title": {
+                "typeName": "Edm.String",
+                "structuralProperty": 1
+            },
+            "Recipient": {
+                "typeName": "mscrm.systemuser",
+                "structuralProperty": 5
+            },
+            "Body": {
+                "typeName": "Edm.String",
+                "structuralProperty": 1
+            },
+            "Priority": {
+                "typeName": "Edm.Int",
+                "structuralProperty": 1
+            },
+            "IconType": {
+                "typeName": "Edm.Int",
+                "structuralProperty": 1
+            },
+            "ToastType": {
+                "typeName": "Edm.Int",
+                "structuralProperty": 1
+            },
+            "Expiry": {
+                "typeName": "Edm.Int",
+                "structuralProperty": 1
+            },
+            "OverrideContent": {
+                "typeName": "mscrm.expando",
+                "structuralProperty": 5
+            },
+            "Actions": {
+                "typeName": "mscrm.expando",
+                "structuralProperty": 5
+            },
+        },
+        operationType: 0, 
+        operationName: "SendAppNotification",
+    };
+};
+
+var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Welcome",
+    recipient = "/systemusers(bf9ab449-c9f4-ed11-8f6b-000d3a1a711c)",
+    body = "Welcome to the world of app notifications!",
+    priority = 200000000,
+    iconType = 100000000,
+    toastType = 200000000,
+);
+
+Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
+
+        return response.json();
+    }
+})
+.then(function (responseBody) {
+    console.log("Response Body: %s", responseBody.NotificationId);
+})
+.catch(function (error) {
+    console.log(error.message);
+});
+
+
+```
 
 # [Web API](#tab/webapi)
 
@@ -180,7 +266,7 @@ Accept: application/json
 
 {
   "Title": "SLA critical",
-  "Body": "Record assigned to yo uis critically past SLA.",
+  "Body": "Record assigned to you is critically past SLA.",
   "Recipient": "/systemusers(<Guid of the user>)",
   "IconType": 100000003, // warning
   "ToastType": 200000000, // timed
@@ -236,6 +322,42 @@ This example adds a custom title and a body definition that allows multiple link
 
 > [!div class="mx-imgBorder"]
 > ![Notification that includes a custom title, multiple links, bold text, and italic formatting.](../media/app-notification-with-custom-title-body.png "Notification with a custom title and body")
+
+# [Client API](#tab/clientapi)
+
+```
+var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Complete overhaul required (sample)",
+    recipient = "/systemusers(<GUID of the user>)",
+    body = "Maria Campbell mentioned you in a post.",
+    priority = 200000000,
+    iconType = 100000004,
+    toastType = 200000000,
+    expiry = 120000,
+    overrideContent = {
+        "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+        "title": "[Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8)",
+        "body": "[Maria Campbell](?pagetype=entityrecord&etn=contact&id=43m770h2-6567-ebm1-ob2b-000d3ac3kd6c) mentioned you in a post: _\"**[@Paul](?pagetype=entityrecord&etn=contact&id=03f770b2-6567-eb11-bb2b-000d3ac2be4d)** we need to prioritize this overdue case, [@Robert](?pagetype=entityrecord&etn=contact&id=73f970b2-6567-eb11-bb2b-000d3ac2se4h) will work with you to engage with engineering team ASAP.\"_"
+    }
+);
+
+// Use the request object to execute the function
+Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
+
+        // Use response.json() to access the content of the response body.
+        return response.json();
+    }
+})
+.then(function (responseBody) {
+    console.log("Response Body: %s", responseBody.NotificationId);
+})
+.catch(function (error) {
+    console.log(error.message);
+    // handle error conditions
+});
+
+```
 
 # [Web API](#tab/webapi)
 
