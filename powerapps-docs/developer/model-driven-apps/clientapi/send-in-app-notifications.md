@@ -62,67 +62,8 @@ The following basic examples show how to use the API to send in-app notification
 # [Client API](#tab/clientapi)
 
 ```javascript
-var Example = window.Example || {};
-Example.SendAppNotificationRequest = function (title, recipient, body, priority, iconType, toastType, expiry, overrideContent, actions) {
-    this.Title = title;
-    this.Recipient = recipient;
-    this.Body = body;
-    this.Priority = priority;
-    this.IconType = iconType;
-    this.ToastType = toastType;
-    this.Expiry = expiry;
-    this.OverrideContent = overrideContent;
-    this.Actions = actions;
-};
-
-Example.SendAppNotificationRequest.prototype.getMetadata = function () {
-    return {
-        boundParameter: null,
-        parameterTypes: {
-            "Title": {
-                "typeName": "Edm.String",
-                "structuralProperty": 1
-            },
-            "Recipient": {
-                "typeName": "mscrm.systemuser",
-                "structuralProperty": 5
-            },
-            "Body": {
-                "typeName": "Edm.String",
-                "structuralProperty": 1
-            },
-            "Priority": {
-                "typeName": "Edm.Int",
-                "structuralProperty": 1
-            },
-            "IconType": {
-                "typeName": "Edm.Int",
-                "structuralProperty": 1
-            },
-            "ToastType": {
-                "typeName": "Edm.Int",
-                "structuralProperty": 1
-            },
-            "Expiry": {
-                "typeName": "Edm.Int",
-                "structuralProperty": 1
-            },
-            "OverrideContent": {
-                "typeName": "mscrm.expando",
-                "structuralProperty": 5
-            },
-            "Actions": {
-                "typeName": "mscrm.expando",
-                "structuralProperty": 5
-            },
-        },
-        operationType: 0, 
-        operationName: "SendAppNotification",
-    };
-};
-
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Welcome",
-    recipient = "/systemusers(bf9ab449-c9f4-ed11-8f6b-000d3a1a711c)",
+    recipient = "/systemusers(<GUID of the user>)",
     body = "Welcome to the world of app notifications!",
     priority = 200000000,
     iconType = 100000000,
@@ -325,7 +266,7 @@ This example adds a custom title and a body definition that allows multiple link
 
 # [Client API](#tab/clientapi)
 
-```
+```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Complete overhaul required (sample)",
     recipient = "/systemusers(<GUID of the user>)",
     body = "Maria Campbell mentioned you in a post.",
@@ -454,7 +395,7 @@ You can change the in-app notification icon by setting `IconType` to one of the 
 |Failure|`100000002`|:::image type="content" source="media/send-in-app-notifications/app-notification-failure-icon.png" alt-text="Failure Icon":::|
 |Warning|`100000003`|:::image type="content" source="media/send-in-app-notifications/app-notification-warning-icon.png" alt-text="Warning Icon":::|
 |Mention|`100000004`|:::image type="content" source="media/send-in-app-notifications/app-notification-mention-icon.png" alt-text="Mention Icon":::|
-|Custom|`100000005`||
+|Custom|`100000005`| |
 
 The following example demonstrates using Web API to send a notification with a custom icon.
 
@@ -911,6 +852,73 @@ public static Guid SendAppNotificationWithTeamChatAction(
 ```
 
 ---
+
+## Creating a function for your client script
+The client API examples in this topic provide examples of client scripting to send in-app notifications. The examples call a SendAppNotificationRequest function. To complete the examples, you will need to construct the reusable function in your environment. Below is an example of the function.
+  
+```javascript
+var Example = window.Example || {};
+Example.SendAppNotificationRequest = function (title, recipient, body, priority, iconType, toastType, expiry, overrideContent, actions) {
+    this.Title = title;
+    this.Recipient = recipient;
+    this.Body = body;
+    this.Priority = priority;
+    this.IconType = iconType;
+    this.ToastType = toastType;
+    this.Expiry = expiry;
+    this.OverrideContent = overrideContent;
+    this.Actions = actions;
+};
+
+Example.SendAppNotificationRequest.prototype.getMetadata = function () {
+    return {
+        boundParameter: null,
+        parameterTypes: {
+            "Title": {
+                "typeName": "Edm.String",
+                "structuralProperty": 1
+            },
+            "Recipient": {
+                "typeName": "mscrm.systemuser",
+                "structuralProperty": 5
+            },
+            "Body": {
+                "typeName": "Edm.String",
+                "structuralProperty": 1
+            },
+            "Priority": {
+                "typeName": "Edm.Int",
+                "structuralProperty": 1
+            },
+            "IconType": {
+                "typeName": "Edm.Int",
+                "structuralProperty": 1
+            },
+            "ToastType": {
+                "typeName": "Edm.Int",
+                "structuralProperty": 1
+            },
+            "Expiry": {
+                "typeName": "Edm.Int",
+                "structuralProperty": 1
+            },
+            "OverrideContent": {
+                "typeName": "mscrm.expando",
+                "structuralProperty": 5
+            },
+            "Actions": {
+                "typeName": "mscrm.expando",
+                "structuralProperty": 5
+            },
+        },
+        operationType: 0, 
+        operationName: "SendAppNotification",
+    };
+};
+
+```
+
+For more examples of client scripting using client API, see [Walkthrough: Write your first client script](../walkthrough-write-your-first-client-script.md).
 
 ## Managing security for notifications
 
