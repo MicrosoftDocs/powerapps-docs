@@ -196,6 +196,36 @@ This example shows how to create a notification by adding a custom body definiti
 > [!div class="mx-imgBorder"]
 > ![Notification with a block of text that includes an inline link.](../media/app-notification-with-custom-body.png "Notification with an inline link")
 
+# [Client API](#tab/clientapi)
+
+```javascript
+var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "SLA critical",
+    recipient = "/systemusers(<GUID of the user>)",
+    body = "Record assigned to you is critically past SLA.",
+    iconType = 100000003,
+    toastType = 200000000,
+    overrideContent = {
+        "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+        "title": "**SLA critical**",
+        "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned is critically past SLA and has been escalated to your manager."
+
+    }
+);
+
+Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
+
+        return response.json();
+    }
+})
+.then(function (responseBody) {
+    console.log("Response Body: %s", responseBody.NotificationId);
+})
+.catch(function (error) {
+    console.log(error.message);
+});
+```
 # [Web API](#tab/webapi)
 
 ```http
