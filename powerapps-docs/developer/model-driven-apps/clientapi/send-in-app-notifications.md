@@ -1,7 +1,7 @@
 ---
 title: "Send in-app notifications within model-driven apps" 
 description: Learn how to configure notifications in model-driven apps by using a client API.
-ms.date: 05/10/2023
+ms.date: 05/22/2023
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
@@ -61,7 +61,7 @@ The following basic examples show how to use the API to send in-app notification
 > [!div class="mx-imgBorder"]
 > ![Screenshot of a Welcome notification.](../media/welcome-notification.png "Welcome notification")
 
-# [Client API](#tab/clientapi1)
+#### [Client API](#tab/clientapi)
 
 This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
 
@@ -88,7 +88,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
     console.log(error.message);
 });
 ```
-# [Web API](#tab/webapi1)
+#### [Web API](#tab/webapi)
 
 **Request**
 
@@ -117,7 +117,7 @@ OData-Version: 4.0
 
 More information: [Use Web API actions](../../data-platform/webapi/use-web-api-actions.md).
 
-# [SDK for .NET](#tab/sdk1)
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -197,7 +197,7 @@ This example shows how to create a notification by adding a custom body definiti
 > [!div class="mx-imgBorder"]
 > ![Notification with a block of text that includes an inline link.](../media/app-notification-with-custom-body.png "Notification with an inline link")
 
-# [Client API](#tab/clientapi2)
+#### [Client API](#tab/clientapi)
 
 This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
 
@@ -229,7 +229,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
     console.log(error.message);
 });
 ```
-# [Web API](#tab/webapi2)
+#### [Web API](#tab/webapi)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification
@@ -251,7 +251,7 @@ Accept: application/json
   }
 }
 ```
-# [SDK for .NET](#tab/sdk2)
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -297,7 +297,7 @@ This example adds a custom title and a body definition that allows multiple link
 > [!div class="mx-imgBorder"]
 > ![Notification that includes a custom title, multiple links, bold text, and italic formatting.](../media/app-notification-with-custom-title-body.png "Notification with a custom title and body")
 
-# [Client API](#tab/clientapi3)
+#### [Client API](#tab/clientapi)
 
 This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
 
@@ -335,7 +335,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 
 ```
 
-# [Web API](#tab/webapi3)
+#### [Web API](#tab/webapi)
 
 **Request**
 
@@ -366,7 +366,7 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 ```
 
-# [SDK for .NET](#tab/sdk3)
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -487,7 +487,7 @@ The following example shows how to create a notification with a single URL actio
 > [!div class="mx-imgBorder"] 
 > ![App notification with a single action.](../media/app-notification-with-single-action.png "App notification with a single action")
 
-# [Client API](#tab/clientapi4)
+#### [Client API](#tab/clientapi)
 
 This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
   
@@ -534,7 +534,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
     console.log(error.message);
 });
 ```
-# [Web API](#tab/webapi4)
+#### [Web API](#tab/webapi)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification
@@ -567,7 +567,7 @@ Accept: application/json
 }
 ```
 
-# [SDK for .NET](#tab/sdk4)
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -632,7 +632,7 @@ When using the side pane action type, you have control over the options of the s
   
 The following example shows creating an app notification with a two side pane actions.
   
-# [Client API](#tab/clientapi5)
+#### [Client API](#tab/clientapi)
 
 This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
   
@@ -682,7 +682,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
     console.log(error.message);
 });
 ```
-# [Web API](#tab/webapi5)
+#### [Web API](#tab/webapi)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification 
@@ -742,7 +742,7 @@ Accept: application/json
 }
 ```
 
-# [SDK for .NET](#tab/sdk5)
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -873,7 +873,7 @@ The following are the parameters for defining a Teams chat action on the app not
 
 The following example shows creating an app notification with a single Teams chat action. When the action is selected on the toast notification it initiates the chat with the participants defined. The chat is linked to a defined account record.
   
-# [Client API](#tab/clientapi6)
+#### [Client API](#tab/clientapi)
 
 This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
   
@@ -919,7 +919,8 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
     console.log(error.message);
 });
 ```
-# [Web API](#tab/webapi6)
+
+#### [Web API](#tab/webapi)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification 
@@ -957,7 +958,7 @@ Accept: application/json
 }
 ```
 
-# [SDK for .NET](#tab/sdk6)
+#### [SDK for .NET](#tab/sdk)
 
 <!-- TODO test this line:  ["memberIds"] = Array.ConvertAll(userIds, x => x.ToString()), -->
 
@@ -1124,12 +1125,11 @@ The Power Apps Notification connector is for push notifications, which are separ
 - [Power Apps Notification V2 connector](/connectors/powerappsnotificationv2/)
 - [Create push notifications for Power Apps Mobile](../../../mobile/power-apps-mobile-notification.md)
 
-## Related articles
+### See also
 
-- [SendAppNotification Action](../../data-platform/webapi/reference/sendappnotification.md)
-- [Create a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md)
-- [createRecord (Client API reference)](reference/xrm-webapi/createrecord.md)
-- [In-app notifications in model-driven apps](/powerapps/user/notifications)
-- [appnotification EntityType](/power-apps/developer/data-platform/webapi/reference/appnotification)
-- [Notification (appnotification) table/entity reference](../../data-platform/reference/entities/appnotification.md)
-
+[SendAppNotification Action](../../data-platform/webapi/reference/sendappnotification.md)<br />
+[Create a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md)<br />
+[createRecord (Client API reference)](reference/xrm-webapi/createrecord.md)<br />
+[In-app notifications in model-driven apps](/powerapps/user/notifications)<br />
+[appnotification EntityType](/power-apps/developer/data-platform/webapi/reference/appnotification)<br />
+[Notification (appnotification) table/entity reference](../../data-platform/reference/entities/appnotification.md)
