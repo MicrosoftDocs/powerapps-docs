@@ -6,7 +6,7 @@ ms.subservice: common
 ms.topic: conceptual
 ms.custom: 
 ms.reviewer: 
-ms.date: 08/30/2022
+ms.date: 05/22/2023
 ms.author: kvivek
 contributors:
   - kumarvivek
@@ -33,5 +33,9 @@ For information about new features being released over the next few months that 
 ## Known limitations
 
 For information about known limitations, see [Common issues and resolutions](/powerapps/maker/canvas-apps/common-issues-and-resolutions).
+
+### See also 
+
+[Power Platform release plans](/dynamics365/release-plans/)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
