@@ -39,6 +39,14 @@ There are three categories of controls that you can add to your card:
 
 1. With the control selected, use the properties pane to modify it.
 
+## Rename a control
+
+1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (preview)** > **Cards**, and then select a card.
+
+1. In the left pane of the card designer, select **Tree View**.
+
+1. Double click a control to rename or select a control and click the pencil icon next to the current control name in the right-hand properties pane.
+
 ## Controls reference
 
 Learn about the [different controls and their properties](../../controls/control-reference.md).

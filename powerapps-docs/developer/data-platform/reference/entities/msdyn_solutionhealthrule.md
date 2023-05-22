@@ -183,7 +183,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|This message will be visible to end use when he/she tried to resolve rule failure.|
+|Description|This message will be visible to end use when they tried to resolve rule failure.|
 |DisplayName|Resolution Message|
 |FormatName|Text|
 |IsLocalizable|False|
