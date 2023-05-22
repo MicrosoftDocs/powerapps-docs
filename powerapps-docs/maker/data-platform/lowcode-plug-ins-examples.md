@@ -111,7 +111,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
 
 ### Invoke the in-app notification instant action
 
-1. Select a canvas app and then select **Edit** on the command bar (or [create a new one](https://learn.microsoft.com/power-apps/maker/canvas-apps/create-blank-app)).
+1. Select a canvas app and then select **Edit** on the command bar (or [create a new one](/power-apps/maker/canvas-apps/create-blank-app)).
 1. Select screen on the left navigation pane, or create a new one.
 1. On the **Insert** menu, add a **Button** to the page using the **Text** *Notify technician*.
 1. Select the button, and enter the following in the **fx** formula bar, where *DataCardValue17* is the column that contains the Order ID, and *DataCardValue15* is the column that contains the technician’s email address. In this example, a canvas app named **Service Order App** is used.

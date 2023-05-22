@@ -104,7 +104,7 @@ Once the solution import has completed, the status is set to **Enabled** next to
    :::image type="content" source="media/low-code-plugin2.png" alt-text="Instance low-code plug-in using Power Fx to derive a sum value with two integers":::
 1. Select **Next** to review the details.
 1. Select **Save**.
-1. Test your plug-in. More information: [Test an instant low-code plug-in](#test-an-instant-low-code-plug-in)
+1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
 
 ## Create an automated low-code plug-in
 
@@ -128,7 +128,7 @@ Once the solution import has completed, the status is set to **Enabled** next to
    - **Pre-operation**. Select this option if you want to run your plug-in logic after the form validation, but before the values are inserted or changed in Dataverse.
    - **Post operation**. Select this option to run your plug-in logic after the values have been inserted or changed in Dataverse.
 1. Select **Save**.
-1. Test your plug-in. More information: [Test an instant low-code plug-in](#test-an-instant-low-code-plug-in)
+1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)(#test-an-instant-low-code-plug-in)
 
 ## Create a low-code plug-in that uses connectors
 
@@ -181,7 +181,7 @@ The option to install the low-code plug-in for connectors wizard is provided whe
 
 3. Review the terms of service and select **Install**.
 
-Once you have installed the solution, play the Dataverse Accelerator app and [Create the low-code plug-in that uses connectors](#create-the-low-code-plug-in-that-uses-connectors).
+Once you have installed the solution, play the Dataverse Accelerator app and [Create a low-code plug-in that uses connectors](#create-a-low-code-plug-in-that-uses-connectors).
 
 #### Troubleshooting the low-code plug-in for connectors solution install
 
@@ -202,7 +202,7 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
 
 #### Launch the plug-ins for connectors wizard
 
-1. In [Power Apps](make.powerapps.com) go to apps and play the Dataverse Accelerator app.
+1. In [Power Apps](https://make.powerapps.com) go to apps and play the Dataverse Accelerator app.
 1. In the Dataverse Accelerator app, on the **Instant Plugins** card select **New plugin**.
 1. Name your plug-in and provide a description.
 1. Open **Advanced Options**, and then select **Launch the plug-ins wizard**.
@@ -219,7 +219,7 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
 1. In the provided dropdown lists, provide a value for each parameter. As you select values, the dropdown list values for the dependent fields are fetched if more are available, so you should provide values in order (from top to bottom).
 1. After providing values for the initial parameters available, a dynamic list of input values might be presented depending on the last parameter. These can either be configured to be input parameters for every invocation, or you can enter a static value to use for every invocation.
    :::image type="content" source="media/lowcode-plug-in-from-connector.png" alt-text="Specify parameters for low-code plug-in for connectors wizard":::
-   <!--Is it possible to make this image smaller?-->
+
    If dynamic values are returned, they can be configured in two ways:
    - Input parameters, which allow you to change the value every time the plug-in is run. Check the box below the parameter to expose it as an input parameter.
    - Static values, which stay the same every time the plug-in is run. Provide a static value by typing in the text field or make a selection from the dropdown.
@@ -234,7 +234,7 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
    > [!NOTE]
    > Currently, you can't edit the parameters or formula on this page in the plug-ins wizard.
 
-1. Test your plug-in. More information: [Test an instant low-code plug-in](#test-an-instant-low-code-plug-in)
+1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)(#test-an-instant-low-code-plug-in)
 
 ### Plug-ins with connectors limitations
 
