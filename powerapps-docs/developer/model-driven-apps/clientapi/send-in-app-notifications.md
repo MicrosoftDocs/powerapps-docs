@@ -498,7 +498,7 @@ var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = 
         "actions@odata.type": "#Collection(Microsoft.Dynamics.CRM.expando)",
         "actions": [
             {
-                "title": "Consult Chat GPT",
+                "title": "View cases",
                 "data": {
                     "@odata.type": "#Microsoft.Dynamics.CRM.expando",
                     "type": "url",
@@ -622,7 +622,55 @@ When using the side pane action type, you have control over the options of the s
   
 The following example shows creating an app notification with a two side pane actions.
   
-# [Web API](#tab/webapi)
+# [Client API](#tab/clientapi5)
+
+```javascript
+var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "New task",
+    recipient = "/systemusers(<GUID of the user>)",
+    body = "A new task has been assigned to you to follow up on the Contoso account",
+    iconType = 100000000,
+    toastType = 200000000,
+    actions = {
+        "@odata.type": "Microsoft.Dynamics.CRM.expando",
+        "actions@odata.type": "#Collection(Microsoft.Dynamics.CRM.expando)",
+        "actions": [
+            {
+                "title": "View task",
+                "data": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "type": "sidepane",
+                    "paneOptions": {
+                        "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                        "title": "Task Record",
+                        "width": 400
+                    },
+                    "navigationTarget": {
+                        "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                        "pageType": "entityrecord",
+                        "entityName": "task",
+                        "entityId": "<Task ID>"
+                    }
+                }
+            }
+        ]
+    }
+);
+
+Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
+
+        return response.json();
+    }
+})
+.then(function (responseBody) {
+    console.log("Response Body: %s", responseBody.NotificationId);
+})
+.catch(function (error) {
+    console.log(error.message);
+});
+```
+# [Web API](#tab/webapi5)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification 
@@ -682,7 +730,7 @@ Accept: application/json
 }
 ```
 
-# [SDK for .NET](#tab/sdk)
+# [SDK for .NET](#tab/sdk5)
 
 ```csharp
 /// <summary>
@@ -811,9 +859,53 @@ The following are the parameters for defining a Teams chat action on the app not
 |`chatTitle` | String | The title of the Teams chat. |
 |`initialMessage` | String | The text of an introduction message you may optionally provide that will be automatically sent when the chat is created. |
 
-The following example shows creating an app notification with a single Teams chat action.
+The following example shows creating an app notification with a single Teams chat action. When the action is selected on the toast notification it initiates the chat with the participants defined. The chat is linked to a defined account record.
   
-# [Web API](#tab/webapi)
+# [Client API](#tab/clientapi6)
+
+```javascript
+var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "New order posted",
+    recipient = "/systemusers(<GUID of the user>)",
+    body = "A new sales order has been posted for Contoso",
+    iconType = 100000000,
+    toastType = 200000000,
+    actions = {
+        "@odata.type": "Microsoft.Dynamics.CRM.expando",
+        "actions@odata.type": "#Collection(Microsoft.Dynamics.CRM.expando)",
+        "actions": [
+            {
+                "title": "Chat with sales rep",
+                "data": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "type": "teamsChat",
+                    "memberIds@odata.type": "#Collection(String)",
+                    "memberIds": ["<AAD User ID 1>", "<AAD User ID 2>"],
+                    "entityContext": {
+                        "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                        "entityName": "account",
+                        "recordId": "<Account ID value>"
+                    }
+                }
+            }
+        ]
+    }
+);
+
+Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
+    if (response.ok) {
+        console.log("Status: %s %s", response.status, response.statusText);
+
+        return response.json();
+    }
+})
+.then(function (responseBody) {
+    console.log("Response Body: %s", responseBody.NotificationId);
+})
+.catch(function (error) {
+    console.log(error.message);
+});
+```
+# [Web API](#tab/webapi6)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification 
@@ -851,7 +943,7 @@ Accept: application/json
 }
 ```
 
-# [SDK for .NET](#tab/sdk)
+# [SDK for .NET](#tab/sdk6)
 
 <!-- TODO test this line:  ["memberIds"] = Array.ConvertAll(userIds, x => x.ToString()), -->
 
