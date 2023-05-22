@@ -65,15 +65,15 @@ Admins set retention policies on tables when the application maker has enabled l
 
 ### Long term data retention and existing delete action and plugins
 
-All the existing delete action cascade relationships and plugins for tables are started when a data retention policy is run on the table.
+All the existing delete action cascade relationships and plugins for tables are executed when a data retention policy is run on the table.
 
 ## Storage capacity reports
 
-With Dataverse long term retention, data is never moved out of Dataverse . The reported capacity in the existing Power Platform admin reports includes both live (active) and retained (inactive) data in GBs.
+With Dataverse long term retention, data is never moved out of Dataverse. The reported capacity in the existing Power Platform admin reports includes both live (active) and retained (inactive) data in GBs.
 
 - Database capacity details reported:
   - Database capacity reported is the sum of the live and retained data. The overall database capacity consumed is reduced depending on the proportion of the data rows retained during a policy run.  
-- Notice that the policy run will 72 to 96 hours to complete and there'll be an additional 24 hours afterward for the database capacity reports to appear.
+- Notice that the policy run will take 72 to 96 hours to complete and there will be an additional 24 hours afterward for the database capacity reports to appear.
 - When available, the reports display two entries for a table that has been enabled for long term retention:
    - *Table*, such as **Case**<sup>1</sup> or **Contact**.
    - *Table-Retained*, such as **Case-Retained** and **Contact-Retained**.
@@ -87,13 +87,13 @@ Log capacity reports aren't currently available.
 
 ### Viewing the capacity reports
 
-Imagine a non-production scenario where all the live data for the case and contacts tables are retained with Dataverse long term retention. After the long term retention policy is successfully completed, there are entries for **Case-Retained** and **Contact-Retained** in the report. Notice that the reduction in database capacity consumed depends on the number of rows and column data types involved in the retention process.
+Imagine a non-production scenario where all the live data for the case and contacts tables are retained with Dataverse long term retention. After the long term retention policy is successfully completed, there are entries for **Case-Retained** and **Contact-Retained** in the report. The reduction in database capacity consumed depends on the number of rows and column data types involved in the retention process.
 
 :::image type="content" source="media/data-retention-storage-capacity-report.png" alt-text="Storage capacity report that includes retained table data" lightbox="media/data-retention-storage-capacity-report.png":::
 
 > [!NOTE]
 > - If the tables are not visible in the report, export the view to an Excel worksheet by selecting the three vertical bars on the top right of the capacity report, and then select **Download all tables**. 
-> - Since the case table commonly has associated child tables, the capacity reports also display the child table-retained GB size.
+> - If a table commonly has associated child tables, the capacity reports also display the child table-retained GB size.
 
 For more information about capacity reports, go to [New Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage).
 

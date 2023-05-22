@@ -74,4 +74,8 @@ sections:
      answer: |
         Yes. When a retention policy runs, the process makes API requests to Microsoft Power Platform. These requests are counted towards your available API request limits.
 
+   - question: What is the cost of long term storage? 
+     answer: |
+        Pricing details will be available by general availability (GA). 
+
                               
