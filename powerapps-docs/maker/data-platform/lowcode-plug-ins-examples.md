@@ -35,7 +35,7 @@ This example uses the Abs function to return the non-negative value of its argum
 1. Create an `Out` parameter to validate expected behavior that makes sense, such as a string Optionally use input parameters to make testing easier, that makes sense with the formula. 
 1. In the formula editor, wrap the `Out` parameter in curly brackets: 
 
- ```powerappsfl
+ ```powerapps-dot
   {
     Out: ""
    }
@@ -45,7 +45,7 @@ This example uses the Abs function to return the non-negative value of its argum
    - Validate that intellisense accepts the formula (text will turn light blue).
    - Implement an expression that provides an output to help validate the result, for example.
 
- ```powerappsfl
+ ```powerapps-dot
   {  
     Out: "Abs(-5) = 5: " & Text( Abs(-5) = 5 )  
   }
@@ -64,7 +64,7 @@ This example implements server-side input validation, such as duplicate error de
 1. For **Run this plugin when the row is**, select **Created**.
 1. In the **Formula** box, enter this formula:
 
- ```powerapps-fl
+ ```powerapps-dot
   If(!IsBlank(LookUp(Contacts, 'First Name'="Jon" && 'Last Name'="Doe")),Error("You have two contacts with the same first and last name")) 
   ```
 
