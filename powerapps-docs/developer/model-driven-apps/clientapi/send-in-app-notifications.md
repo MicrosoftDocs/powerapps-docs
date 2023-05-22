@@ -52,9 +52,9 @@ Notifications can be sent using the `SendAppNotification` message.
 
 See [SendAppNotification Action](xref:Microsoft.Dynamics.CRM.SendAppNotification) for information on the message and parameters. 
 
-The `SendAppNotification` message doesn't currently have request & response classes in the Dataverse SDK for .NET. To get strongly typed classes for this message, you must generate classes or use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. More information: [Use messages with the Organization service](../../data-platform/use-open-types.md).
+The `SendAppNotification` message doesn't currently have request and response classes in the Dataverse SDK for .NET. To get strongly typed classes for this message, you must generate classes or use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. More information: [Use messages with the Organization service](../../data-platform/org-service/use-messages.md).
 
-The `SendAppNotification` message uses open types, enabling dynamic properties on the in-app notification. For example, a notification can have zero to many actions, and each action may have different action types. Open types enable having dynamic properties for the actions depending on the action types selected. For more information on open types, see [Use open types with Custom APIs](../../data-platform/use-open-types.md)
+The `SendAppNotification` message uses open types, enabling dynamic properties on the in-app notification. For example, a notification can have zero to many actions, and each action may have different action types. Open types enable having dynamic properties for the actions depending on the action types selected. More information: [Use open types with Custom APIs](../../data-platform/use-open-types.md)
 
 The following basic examples show how to use the API to send in-app notifications.
 
@@ -66,7 +66,8 @@ The following basic examples show how to use the API to send in-app notification
 This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
 
 ```javascript
-var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Welcome",
+var SendAppNotificationRequest = new Example.SendAppNotificationRequest(
+    title = "Welcome",
     recipient = "/systemusers(<GUID of the user>)",
     body = "Welcome to the world of app notifications!",
     priority = 200000000,
@@ -174,7 +175,7 @@ Notifications sent using the `SendAppNotification` message are stored in the [No
 
 ## Customizing the notification
 
-In addition to the basic properties of the notification, there are options for customizing the notification delivered to the user. Customizing the notification involves changing the styles in the `Title` and `Body` of the notification, customizing the notification icon, and changing the behavior of the notification.
+In addition to the basic properties of the notification, you have options for customizing the notification delivered to the user. Customizing the notification involves changing the styles in the `Title` and `Body` of the notification, customizing the notification icon, and changing the behavior of the notification.
 
 ### Using markdown in Title and Body
 
@@ -1037,7 +1038,17 @@ The client API examples in this topic provide examples of client scripting to se
   
 ```javascript
 var Example = window.Example || {};
-Example.SendAppNotificationRequest = function (title, recipient, body, priority, iconType, toastType, expiry, overrideContent, actions) {
+Example.SendAppNotificationRequest = function (
+   title, 
+   recipient, 
+   body, 
+   priority, 
+   iconType, 
+   toastType, 
+   expiry, 
+   overrideContent, 
+   actions) 
+{
     this.Title = title;
     this.Recipient = recipient;
     this.Body = body;
@@ -1097,7 +1108,7 @@ Example.SendAppNotificationRequest.prototype.getMetadata = function () {
 
 ```
 
-For more examples of client scripting using client API, see [Walkthrough: Write your first client script](../walkthrough-write-your-first-client-script.md).
+For more examples of client scripting using client API, see [Walkthrough: Write your first client script](walkthrough-write-your-first-client-script.md).
 
 ## Managing security for notifications
 
@@ -1127,7 +1138,7 @@ The Power Apps Notification connector is for push notifications, which are separ
 
 ### See also
 
-[SendAppNotification Action](../../data-platform/webapi/reference/sendappnotification.md)<br />
+[SendAppNotification Action](xref:Microsoft.Dynamics.CRM.SendAppNotification)<br />
 [Create a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md)<br />
 [createRecord (Client API reference)](reference/xrm-webapi/createrecord.md)<br />
 [In-app notifications in model-driven apps](/powerapps/user/notifications)<br />
