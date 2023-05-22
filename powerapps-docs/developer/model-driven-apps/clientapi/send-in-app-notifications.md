@@ -93,7 +93,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/SendAppNotification
+POST [Organization URI]/api/data/v9.2/SendAppNotification
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -232,7 +232,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 #### [Web API](#tab/webapi)
 
 ```http
-POST [Organization URI]/api/data/v9.0/SendAppNotification
+POST [Organization URI]/api/data/v9.2/SendAppNotification
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -340,7 +340,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/SendAppNotification
+POST [Organization URI]/api/data/v9.2/SendAppNotification
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -435,7 +435,7 @@ You can change the in-app notification icon by setting `IconType` to one of the 
 The following example demonstrates using Web API to send a notification with a custom icon.
 
 ```http
-POST [Organization URI]/api/data/v9.0/SendAppNotification 
+POST [Organization URI]/api/data/v9.2/SendAppNotification 
 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -537,7 +537,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 #### [Web API](#tab/webapi)
 
 ```http
-POST [Organization URI]/api/data/v9.0/SendAppNotification
+POST [Organization URI]/api/data/v9.2/SendAppNotification
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -685,7 +685,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 #### [Web API](#tab/webapi)
 
 ```http
-POST [Organization URI]/api/data/v9.0/SendAppNotification 
+POST [Organization URI]/api/data/v9.2/SendAppNotification 
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -923,7 +923,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 #### [Web API](#tab/webapi)
 
 ```http
-POST [Organization URI]/api/data/v9.0/SendAppNotification 
+POST [Organization URI]/api/data/v9.2/SendAppNotification 
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
