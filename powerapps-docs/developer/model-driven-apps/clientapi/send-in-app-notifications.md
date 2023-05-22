@@ -1090,7 +1090,7 @@ For more examples of client scripting using client API, see [Walkthrough: Write 
 
 The in-app notification feature uses three tables. A user needs to have the correct security roles to receive notifications and to send notifications to themselves or other users.  
 
-In addition to the appropriate table permissions, a user must be assigned the **Send In-App Notification** `prvSendAppNotification` privilege to execute the `SendAppNotification` message. The privilege is granted to the **Environment Maker** role by default. This privilege is required for sending app notifications. It isn't required to receive notifications.
+In addition to the appropriate table permissions, a user must be assigned the **Send In-App Notification** `prvSendAppNotification` privilege to execute the `SendAppNotification` message. The privilege is granted to the **Environment Maker** role by default. This privilege is required for sending in-app notifications. It isn't required to receive notifications.
 
 |Usage|Required table privileges|
 |------------|----------------|
