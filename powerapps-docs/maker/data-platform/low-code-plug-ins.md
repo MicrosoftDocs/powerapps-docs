@@ -85,7 +85,7 @@ Once the solution import has completed, the status is set to **Enabled** next to
 
 1. Sign into the environment where the Dataverse Accelerator solution is installed and play the Dataverse Accelerator app.
 1. On **Instant plug-ins** card, select **New plug-in**.
-   :::image type="content" source="media/low-code-plugin1.png" alt-text="New plug-in in Dataverse Accelerator solution":::
+   :::image type="content" source="media/low-code-plugin1.png" alt-text="New plug-in Dataverse Accelerator solution":::
 1. On the first page of the editor, enter the following information, and then select **Next**.
 
    - **Display name**. Enter a name for the instant plug-in, such as *Calculate sum*.
@@ -228,7 +228,7 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
    Once all parameters have values, the Power Fx formula to invoke the procedure is generated. Select **Next**.
 
 1. The **Review** page shows you the plug-in that will be created in Dataverse, and the external connector action you're connecting to in the formula. If everything looks correct, select **Create**.
-1. Once the plug-in is created, you're taken directly to your new plug-in in where you can view the definition and begin testing it:
+1. Once the plug-in is created, you're taken directly to your new plug-in where you can view the definition and begin testing it:
    - On the **plug-in** page, the name of the plug-in you have just created is displayed. Select **Next**.
    - A list of all of the inputs that will be sent to the connector and their data types is displayed. The Power Fx formula that will be used to invoke the stored procedure is also displayed. This is also the screen you'll later use to update the plug-in.
    > [!NOTE]
