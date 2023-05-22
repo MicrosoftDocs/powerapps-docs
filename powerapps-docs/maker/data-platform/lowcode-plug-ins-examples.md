@@ -35,21 +35,21 @@ This example uses the Abs function to return the non-negative value of its argum
 1. Create an `Out` parameter to validate expected behavior that makes sense, such as a string Optionally use input parameters to make testing easier, that makes sense with the formula. 
 1. In the formula editor, wrap the `Out` parameter in curly brackets: 
 
- ```powerapps-dot
-  {
-    Out: ""
+   ```powerapps-dot
+   {
+   Out: ""
    }
- ```
+   ```
 
 1. Enter an expression that tests the formula: 
    - Validate that intellisense accepts the formula (text will turn light blue).
    - Implement an expression that provides an output to help validate the result, for example.
 
- ```powerapps-dot
-  {  
-    Out: "Abs(-5) = 5: " & Text( Abs(-5) = 5 )  
-  }
- ```
+   ```powerapps-dot
+   {  
+   Out: "Abs(-5) = 5: " & Text( Abs(-5) = 5 )  
+   }
+   ```
 
 1. Select **Next**, and then select **Save**.
 1. Select **Test** to test the formula. Use the output parameter to validate the result.
