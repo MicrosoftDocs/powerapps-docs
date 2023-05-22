@@ -1,6 +1,6 @@
 ---
 title: Use Dataverse low-code plug-ins
-description: Microsoft Dataverse low-code plug-ins  
+description: Overview and how to create Microsoft Dataverse low-code plug-ins  
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
@@ -30,7 +30,7 @@ There are two types of plug-ins:
 
 For the most part, logic that can be defined for an instant plug-in can also be defined for an automated low-code plug-in.
 
-The main difference between the plug-in types are, in the way the plug-in type is triggered, and whether parameters can be used. Only instant plug-ins support parameters.
+The main difference between the plug-in types are in the way the plug-in type is triggered, and whether parameters can be used. Only instant plug-ins support parameters.
 
 > [!IMPORTANT]
 > Currently, only automated plug-ins allow you to interact with a specific record when the plug-in is invoked. This is referred as the *bound* table record. When defining logic for bound records in Power Fx, use the `ThisRecord` keyword to reference the record and use dot notation to access the column values.
@@ -66,7 +66,7 @@ Plug-ins access the following contexts natively in Dataverse:
 
 - System administrator or system customizer security role membership in the Power Platform environment.
 - Dataverse Accelerator solution. [Download and install the Dataverse Accelerator from AppSource](https://aka.ms/DataverseAccelerator/AppSource).
-    1. Sign in to AppSource.
+    1. Sign in to [AppSource](https://aka.ms/DataverseAccelerator/AppSource).
     1. Select **Get it now**.
     1. The **Dynamics 365 apps** page in Power Platform admin center appears.
     1. Select the environment you want.
@@ -214,7 +214,7 @@ Now, test your low-code plug-in by adding in data for your inputs and validate y
 
 If you accidentally installed the low-code plug-in for connectors solution and the Dataverse Accelerator app is now blocked by a DLP policy, uninstall the low-code plug-in for connectors wizard solution and the Dataverse Accelerator will be able to run.
 
-1. Go to https://make.powerapps.com/
+1. Go to [Power Apps](https://make.powerapps.com/).
 2. Go to the environment where the low-code plug-in for connectors solution is installed, and then select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 3. Select the low-code plug-in for connectors solution.
 4. On the command bar, select **Delete**.
@@ -246,7 +246,7 @@ On the **Integrate** tab of the test page, you can learn how to invoke the insta
 
 1. Copy the formula and paste it into an action property, such as a button control, in your app.
 1. If input parameters are required, provide direct values or reference values from other controls in your app.
-1. Open a new browser tab, and then go to https://make.powerapps.com/.
+1. Open a new browser tab, and then go to [Power Apps](https://make.powerapps.com/).
 1.	In the same environment, create a new canvas app from scratch.
 1.	Add the **Environments** table to your app. <!-- Is this table created from the Dataverse Accelerator solution?-->
 1. Insert a button. This will be used to  call the formula. More information: [Button control in Power Apps](../canvas-apps/controls/control-button.md)

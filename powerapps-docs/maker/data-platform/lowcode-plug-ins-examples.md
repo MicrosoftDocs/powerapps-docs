@@ -1,6 +1,6 @@
 ---
 title: Example Dataverse low-code plug-ins
-description: Microsoft Dataverse low-code plug-ins  
+description: Examples of Microsoft Dataverse low-code plug-ins  
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
@@ -62,7 +62,7 @@ Here's an email template example that you can create for the SenMail based data 
    - **Name**: *SendEmailUponCreate*
    - **Table**: Select the logical table name of the sales orders, which is **SalesOrder**. This event is based off of Sales Orders table.
    - **Run this plugin with the row is**: **Created**
-   - **Formula**: Paste the code below into the **Formula** box. For more information abut the SendEmailFromTemplate function, to to [SendEmailFromTemplate Action](/power-apps/developer/data-platform/webapi/reference/sendemailfromtemplate?view=dataverse-latest).
+   - **Formula**: Paste the code below into the **Formula** box. For more information abut the SendEmailFromTemplate function, to to [SendEmailFromTemplate Action](/power-apps/developer/data-platform/webapi/reference/sendemailfromtemplate?view=dataverse-latest&preserve-view=true ).
    
      `XSendEmailFromTemplate(LookUp('Email Templates',StartsWith(description,"solar")).'Email Template',ThisRecord,LookUp(Users,'Primary Email'="sampleemail@sample.com"),[ThisRecord.Email])`
 1. Select **Advanced** > **Post-operation**.
@@ -83,7 +83,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
 1. On the **Parameters** page, use these **Data types**:
    - **OrderID**: **String**
    - **TechnicianEmail**: **String**
-1. **Formula**. Paste the following code in the **Formula** box. For more information about this function, go to [SendAppNotification Action](/power-apps/developer/data-platform/webapi/reference/sendappnotification?view=dataverse-latest).
+1. **Formula**. Paste the following code in the **Formula** box. For more information about this function, go to [SendAppNotification Action](/power-apps/developer/data-platform/webapi/reference/sendappnotification?view=dataverse-latest&preserve-view=true ).
    ```powerapps-dot
     XSendAppNotification(
     "New service",
