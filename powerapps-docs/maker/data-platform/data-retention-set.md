@@ -84,6 +84,10 @@ Now you can view and manage the policy. More information: [Manage data retention
 > - A policy run will take from 72-96 hours irrespective of the data volume. Data retention policies are given a low priority by the platform. Dataverse will always run the retention process in the background to avoid any impact on other platform services, such as apps and flows.
 > - Consider a situation where two policies (Policy1 and Policy2) run on separate parent tables that have common child tables. Policy1 begins running prior to Policy2. If the status for Policy1 hasn't progressed beyond **Pending reconciliation**, then Policy2 status will remain at **Pending delete** status until Policy1 progresses from **Pending reconciliation** to **Pending delete**. This behavior occurs to prevent deletes on any common records from common tables in the two policies.
 
+## Known issue
+
+If a parent table has many child tables, and the size of the parent or child tables is large, you may encounter timeouts. To mitigate this, enable a few child tables separately first. Then go back and enable the parent table.
+
 ## Next steps
 
 [Manage data retention policies](data-retention-manage.md)
