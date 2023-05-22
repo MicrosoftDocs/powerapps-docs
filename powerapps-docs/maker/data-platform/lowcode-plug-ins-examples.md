@@ -26,6 +26,59 @@ The goal of these example plug-ins is to help you get started by integrating the
 
 To use one of the example plug-ins for the data event the Dataverse Accelerator app must be installed in the environment. More information: [Prerequisites for creating a low-code plug-in](low-code-plug-ins.md#prerequisites-for-creating-a-low-code-plug-in)
 
+## Return a non-negative value
+
+This example uses the Abs function to return the non-negative value of its argument. If a number is negative, Abs returns the positive equivalent.
+
+1. Play the Dataverse Accelerator app, on the command bar select **New action** > **Instant plugin**. 
+1. Provide a display name, such as the formula name, and description.
+1. Create an `Out` parameter to validate expected behavior that makes sense, such as a string Optionally use input parameters to make testing easier, that makes sense with the formula. 
+1. In the formula editor, wrap the `Out` parameter in curly brackets: 
+
+  ```powerappsfl
+   {
+    Out: ""
+   }
+  ```
+
+1. Enter an expression that tests the formula: 
+   - Validate that intellisense accepts the formula (text will turn light blue).
+   - Implement an expression that provides an output to help validate the result, for example.
+
+  ```powerappsfl
+  {  
+    Out: "Abs(-5) = 5: " & Text( Abs(-5) = 5 )  
+  }
+  ```
+
+1. Select **Next**, and then select **Save**.
+1. Select **Test** to test the formula. Use the output parameter to validate the result.
+
+## Input validation and custom errors
+
+This example implements server-side input validation, such as duplicate error detection and notification and returns a custom message.
+
+1. Play the Dataverse Accelerator app, on the command bar select **New action** > **Automated plugin**.
+1. In the **Name** box enter *Duplicate check*.
+1. For **Table**, select **Contact**.
+1. For **Run this plugin when the row is**, select **Created**.
+1. In the **Formula** box, enter this formula:
+
+  ```powerapps-fl
+  If(!IsBlank(LookUp(Contacts, 'First Name'="Jon" && 'Last Name'="Doe")),Error("You have two contacts with the same first and last name")) 
+   ```
+
+1. Select **Save**.
+
+### Test the plug-in
+
+1. To test the plug-in, create a canvas app using the contacts table by following the steps here: [Specify a table](../canvas-apps/data-platform-create-app-scratch.md#specify-a-table)
+1. Create a contact row.
+1. Create another contact with the same name as in the previous step.
+1. A message is displayed indicating duplicate records found. Select **Ignore and save** on the error message prompt.
+
+This custom error message is displayed: **You have two contacts with the same first and last name**.
+
 ## Send email based on a data event
 
 To set this up, you need these prerequisites:

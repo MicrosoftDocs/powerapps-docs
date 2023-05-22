@@ -53,7 +53,7 @@ The following table lists the Power Fx formulas that work but have limitations o
       UpdateIf
    :::column-end:::
    :::column span="":::
-      EncodeUrl
+      SortByColumns
    :::column-end:::
    :::column span="":::
       Concurrent
@@ -72,7 +72,7 @@ The following table lists the Power Fx formulas that work but have limitations o
 :::row-end:::
 :::row:::
    :::column span="":::
-      IsMatch
+      SetFocus
    :::column-end:::
    :::column span="":::
       IsType
@@ -83,7 +83,7 @@ The following table lists the Power Fx formulas that work but have limitations o
 :::row-end:::
 :::row:::
    :::column span="":::
-      Match
+      Download
    :::column-end:::
    :::column span="":::
       PlainText
@@ -93,22 +93,13 @@ The following table lists the Power Fx formulas that work but have limitations o
    :::column-end:::
 :::row-end:::
 :::row:::
-   :::column span="":::
-      AsType
-   :::column-end:::
-   :::column span="":::
-      Distinct
-   :::column-end:::
-   :::column span="":::
-      exactin
-   :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
       GroupBy
    :::column-end:::
    :::column span="":::
-      in
+      SetProperty
    :::column-end:::
    :::column span="":::
       RenameColumns
@@ -152,10 +143,10 @@ The following table lists the Power Fx formulas that work but have limitations o
       Clock
    :::column-end:::
    :::column span="":::
-      ColorFade
+      Select
    :::column-end:::
    :::column span="":::
-      ColorValue
+      Notify
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -171,43 +162,10 @@ The following table lists the Power Fx formulas that work but have limitations o
 :::row-end:::
 :::row:::
    :::column span="":::
-      Language
-   :::column-end:::
-   :::column span="":::
-      MatchAll
-   :::column-end:::
-   :::column span="":::
-      Refresh
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      RGBA
-   :::column-end:::
-   :::column span="":::
       WeekNum
    :::column-end:::
    :::column span="":::
-      Notify
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      Select
-   :::column-end:::
-   :::column span="":::
-      SetProperty
-   :::column-end:::
-   :::column span="":::
-      Download
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      SetFocus
-   :::column-end:::
-   :::column span="":::
-      SortByColumns
+      Refresh
    :::column-end:::
    :::column span="":::
       SaveData, LoadData, and ClearData
@@ -221,7 +179,7 @@ The following table lists the Power Fx formulas that work but have limitations o
       Device sensor formulas (Acceleration, App, Compass, Connection, and Location)
    :::column-end:::
    :::column span="":::
-      
+      <!--empty-->
    :::column-end:::
 :::row-end:::
 
