@@ -63,6 +63,8 @@ The following basic examples show how to use the API to send in-app notification
 
 # [Client API](#tab/clientapi1)
 
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
+
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Welcome",
     recipient = "/systemusers(<GUID of the user>)",
@@ -197,6 +199,8 @@ This example shows how to create a notification by adding a custom body definiti
 
 # [Client API](#tab/clientapi2)
 
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
+
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "SLA critical",
     recipient = "/systemusers(<GUID of the user>)",
@@ -294,6 +298,8 @@ This example adds a custom title and a body definition that allows multiple link
 > ![Notification that includes a custom title, multiple links, bold text, and italic formatting.](../media/app-notification-with-custom-title-body.png "Notification with a custom title and body")
 
 # [Client API](#tab/clientapi3)
+
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
 
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Complete overhaul required (sample)",
@@ -474,7 +480,7 @@ The URL action type enables navigation from the action on the app notification t
 |Parameter | Required | Data type | Description |
 |-------------|-------------|-------------|-------------|
 |`url` | Yes | String | The URL of the web address to be opened when the action is selected. |
-|`navigationTarget` | No | String | This parameter controls where a navigation link opens. The options are:<br><ul><li>`dialog`: Opens in the center dialog.</li><li>`inline`: Default. Opens in the current page.</li><li>`newWindow`: Opens in a new browser tab.</li><ul> |
+|`navigationTarget` | No | String | This parameter controls where a navigation link opens. The options are:<br><ul><li>`dialog`: Opens in the center dialog.</li><li>`inline`: Default. Opens in the current page.</li><li>`newWindow`: Opens in a new browser tab.</li></ul> |
 
 The following example shows how to create a notification with a single URL action.
 
@@ -483,6 +489,8 @@ The following example shows how to create a notification with a single URL actio
 
 # [Client API](#tab/clientapi4)
 
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
+  
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "Congratulations",
     recipient = "/systemusers(<GUID of the user>)",
@@ -626,6 +634,8 @@ The following example shows creating an app notification with a two side pane ac
   
 # [Client API](#tab/clientapi5)
 
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
+  
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "New task",
     recipient = "/systemusers(<GUID of the user>)",
@@ -865,6 +875,8 @@ The following example shows creating an app notification with a single Teams cha
   
 # [Client API](#tab/clientapi6)
 
+This example uses the custom `Example.SendAppNotificationRequest` function described in [Creating a function for your client script](#creating-a-function-for-your-client-script) below.
+  
 ```javascript
 var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = "New order posted",
     recipient = "/systemusers(<GUID of the user>)",
