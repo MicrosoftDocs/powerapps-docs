@@ -36,9 +36,7 @@ This example uses the Abs function to return the non-negative value of its argum
 1. In the formula editor, wrap the `Out` parameter in curly brackets: 
 
    ```powerapps-dot
-   {
-   Out: ""
-   }
+   {Out: "" }
    ```
 
 1. Enter an expression that tests the formula: 
@@ -46,9 +44,7 @@ This example uses the Abs function to return the non-negative value of its argum
    - Implement an expression that provides an output to help validate the result, for example.
 
    ```powerapps-dot
-   {  
-   Out: "Abs(-5) = 5: " & Text( Abs(-5) = 5 )  
-   }
+   {Out: "Abs(-5) = 5: " & Text( Abs(-5) = 5 )  }
    ```
 
 1. Select **Next**, and then select **Save**.
