@@ -1,7 +1,7 @@
 ---
 title: Transparency note for AI Copilot
 description: The transparency note discusses AI Copilot and the key considerations for making use of this technology responsibly.
-ms.date: 5/23/23
+ms.date: 5/23/2023
 ms.custom: 
   - transparency-note
 ms.topic: article
@@ -85,4 +85,4 @@ Follow these procedures to make the most of the feature:
 
  
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+[!INCLUDE[footer-include](../includes/footer-banner.md)
