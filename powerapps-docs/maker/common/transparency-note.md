@@ -16,5 +16,4 @@ ms.reviewer: mduelae
 
 [!INCLUDE[transparency-note-features](../includes/transparency-note-features.md)]
 
-- [AI Copilot overview ](../canvas-apps/ai-overview.md)
-- [Build apps through conversation](../canvas-apps/ai-conversations-create-app.md)
+- [AI Copilot](transparency-note-copilot.md)
