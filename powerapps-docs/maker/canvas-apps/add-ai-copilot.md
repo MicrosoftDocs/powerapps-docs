@@ -77,11 +77,11 @@ In addition to choosing the data source, you can also configure the following pr
 
 - **Title**: Replaces the control's default title of **Have a question about this app? Ask Copilot.**, and can be updated to something more indicative of what this Copilot control can help app users with.
 
-- **Introductory message**: Replaces the control's default introductory message of **Copilot can answer questions about the data in this app, and help you navigate. It's always learning from your feedback.**. It can be updated to something more descriptive of what this Copilot control can help app users with.
+- **Introductory message**: Replaces the control's default introductory message of **Copilot can answer questions about the data in this app, and help you navigate. It's always learning from your feedback**. The current description of the Copilot control can be enhanced to provide a more specific explanation of how it benefits app users.
 
 - **Data summary**: Helps Copilot control give better responses to questions from app users. We recommend a brief 2-3 lines describing what the app is and what sort of questions this Copilot control will answer. This property does not impact the control's UI.
 
-- **Placeholder text**: Replaces the control's default placeholder text in the text input box **Ask a question about the data in this app, or tell me what you're looking for**. We recommend updating this to a short line sharing guidance to app users about what type of questions this Copilot control can answer.
+- **Placeholder text**: Replaces the control's default placeholder text in the text input box **Ask a question about the data in this app, or tell me what you're looking for**. We recommend for you to provide a concise message to app users, explaining what types of questions can be addressed by the Copilot control.
 
    > [!div class="mx-imgBorder"]
    > ![Configure the control.](media/copilot/Updated-Copilot-properties.png)
