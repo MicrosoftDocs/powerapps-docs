@@ -100,6 +100,6 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 
 [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai) 
 
-[Steps to building a model-driven app](app-building-steps.md) 
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
