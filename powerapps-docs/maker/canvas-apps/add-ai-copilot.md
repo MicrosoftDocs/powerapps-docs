@@ -90,9 +90,13 @@ In addition to choosing the data source, you can also configure the following pr
    > ![Configure the control.](media/copilot/copilot-5.png)
 
 
+## See also
 
+[Build apps through conversation (preview)](ai-conversations-create-app.md)
 
+[Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 
+[Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai) 
 
 
 
