@@ -16,8 +16,8 @@ search.audienceType:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-*Long-term retention* (LTR) is a Dataverse capability that enables customers to transfer their data from a transactional database to the Dataverse managed data lake. To perform the LTR operations, you are required to set up retention policies by defining the criteria for a given table. To set up the retention policy, you should have your environment (organization) and tables both enabled for retention.
-
+*Long-term retention* (LTR) is a Dataverse capability that enables customers to transfer their data from a transactional database to the Dataverse managed data lake. To perform the LTR operations, you are required to set up retention policies by defining the criteria for a given table. Based on the policy, retention will run at the scheduled time and retain rows matching the critiera.     
+   
 More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md), [Enable a table for long term retention](../../maker/data-platform/data-retention-set.md#enable-a-table-for-long-term-retention)
 
 > [!IMPORTANT]
@@ -27,11 +27,8 @@ More information: [Dataverse long term data retention overview](../../maker/data
 > - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
 > - Pricing information for long term data retention will be available at general availability.
   
-## Configure retention policy using code
-
-You can set up the retention policy by creating an entry in the retention configuration table. As part of retention policy set up, the platform will validate the policy against a set of system rule defined under ValidateRetentionConfig SDK Message. 
-
-More information: <xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType>, [Set a data retention policy for a table](../../maker/data-platform/data-retention-set.md)
+## Retention policy setup and validation
+Retention policy setup can be done using API, maker portal and solution installation. Below example shows how to setup retention policy using Web API and SDK Message. 
 
 The following code example demonstrates the retention APIs to create retention policy.
  
@@ -134,438 +131,143 @@ Accept: application/json
 > Valid recurrence parameters are: DAILY, WEEKLY, MONTHLY, YEARLY
 
 ---
+ 
+Retention moves data from transaction storage to data lake. Once data moved to the data lake, customer can not perform any transactional operations on the data. And hence it is important to make sure that incorrect policies are not being setup for retention. You can add your own validations by optionally registering the custom plugin to *ValidateRetentionConfig* message.
 
-## Configure retention policy using solution import
 
-The retention policy can be configured during solution import. More information about solutions: [Solutions overview](../../maker/data-platform/solutions-overview.md).
-
-Below is sample solution customization.xml code to create a retention policy.
-
-```xml
-<retentionconfig retentionconfigid="8fd449d1-f389-4f63-84c6-023c77275359">
-  <criteria><fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
-    <entity name="incident">
-        <attribute name="title"/>
-        <attribute name="incidentid"/>
-        <attribute name="prioritycode"/>
-        <filter type="and">
-            <condition attribute="prioritycode" operator="eq" value="3"/>
-        </filter>
-    </entity>
-  </fetch></criteria>
-  <entitylogicalname>incident</entitylogicalname>
-  <iscustomizable>1</iscustomizable>
-  <name>Resolved Cases in EastR1</name>
-  <recurrence>FREQ=MONTHLY;INTERVAL=1</recurrence>
-  <referenceconfigid>360ec029-5688-42e0-bc56-34833c8233d5</referenceconfigid>
-  <starttime>5/5/2023 6:32:50 PM</starttime>
-  <statecode>0</statecode>
-  <statuscode>10</statuscode>
-  <timezoneruleversionnumber>0</timezoneruleversionnumber>
-  <uniquename>ui_360ec029-5688-42e0-bc56-34833c8233d5</uniquename>
-</retentionconfig>
-
-```
-
-## Add custom validation to the retention policy
-
-Table and app owners can add their own custom validations whenever a retention policy is created or updated. This validation can be done by registering a custon [plug-in](apply-business-logic-with-code.md) against the `ValidateRetentionConfig` action.
-
-`ValidateRetentionConfig` is a bound action, which gets bound to the table whenever retention is enabled.
-
-More information: <xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType>
-
-The following code example demonstrates retention policy validation.
-
-### [SDK for .NET](#tab/sdk)
+### [Custom plugin on ValidateRetentionConfig](#tab/sdk)
 
 ```csharp
-public void ValidateRetentionConfig(IOrganizationService orgService)
+class SampleValidateRetentionConfigPlugin : IPlugin
 {
-    var request = new OrganizationRequest
+    public void Execute(IServiceProvider serviceProvider)
     {
-        RequestName = "ValidateRetentionConfig"
-    };
-
-    string xml = "<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>< entity name = 'account' >< attribute name = 'accountid' />< order attribute = 'name' descending = 'false' /></ entity ></ fetch > ";
-    request.Parameters["FetchXml"] = xml;
-    request.Parameters.Add("EntityName", "account");
-
-    OrganizationResponse response = orgService.Execute(request);
-
-    if (response != null
-        && response.Results != null)
-    {
-        if (response.Results.TryGetValue("IsValidationSuccessful", out var IsValidationSuccessful))
+        var pluginContext = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
+        var entityName = pluginContext.PrimaryEntityName;
+        if( pluginContext.InputParameters.TryGetValue("FetchXml", out var fetchXml) )
         {
-            Console.WriteLine($"IsValidationSuccessful : {IsValidationSuccessful}");
+            // Add custom validation against the fetch XML. 
+        }
+        else
+        {
+            throw new Exception("No critiera provided.");
         }
     }
 }
 ```
 
-**Output**
-```
-IsValidationSuccessful : True
-```
+More information: <xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType>, [Set a data retention policy for a table](../../maker/data-platform/data-retention-set.md)
 
-### [Web API](#tab/webapi)
-
-The following example validates all closed opportunities, and will be run on a yearly basis.
-
-**Request**
-
-```http
-POST [Organization Uri]/api/data/v9.1/ValidateRetentionConfig
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-
-{
-"FetchXml": "<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
-    <entity name='account'>
-        <attribute name='accountid' />
-        <order attribute='name' descending='false' />
-        <filter type='and'>
-            <condition attribute='name' operator='like' value='Name%' />
-        </filter>
-    </entity>
-  </fetch>",
-"EntityName" : "account"
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.ValidateRetentionConfigResponse",
-  "IsValidationSuccessful": true,
-  "ErrorMessage": null
-}
-```
-
----
-
-## Custom logic during retention process
+## Custom logic while retention execution
 Long term retention is an async process which gets executed whenever retention policy is setup. Behind the scene it does below operations.   
         1. Mark records ready for retention  
         2. Copy marked records to the data lake  
         3. Purge records from source.  
-        4. Rollback marked record if purge fails. 
-  
-You can perform custom operation in form of additional validation and/or pre and post processing by registring a custom plugin on below SDK Messages. 
+        4. Rollback marked record if purge fails.   
 
-## BulkRetain
-A message named *BulkRetain* executes whenever retenion policy execution happens. You can optionally register a custom plug-in to be executed whenever rows matching to criteria are being marked for retention
+During retention execution you can optionally add custom plugin during the process of records are being marked for the retention, when records are getting purged at the source or when marked record for retention get rolledback. 
+
+### Custom logic while record gets marked for retention
+As part of marking record for retention, platform calls *BulkRetain* and *Retain* message. You can add custom logic (such as having additional records marked for retenion, validation before records are being marked for retained) by optionally registering plugin to *BulkRetain* and *Retain* message.
+
+#### [Custom plugin while retention of single row](#tab/sdk)
+
+```csharp
+class SampleRetainPlugin : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
+    {
+        var pluginContext = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
+        var entityName = pluginContext.PrimaryEntityName;
+        if( pluginContext.InputParameters.TryGetValue("Target", out var _target) )
+        {
+            EntityReference target = (EntityReference)_target;
+            Console.WriteLine($"Request came for table : {target.Name} with id : {target.Id}");
+            // Add your logic for validation or additional operation. 
+            // For example - you can call Retain on Additional record of another table. 
+        }
+        else
+        {
+            throw new Exception("No target present.");
+        }
+    }
+}
+```
+> [!NOTE]
+> To run the simpilar plugin for rollback retain, write plugin similar to above on *RollbackRetain* message. 
+> More information: <xref:Microsoft.Dynamics.CRM.RollbackRetain?displayProperty=nameWithType>
+
+#### [Custom plugin on BulkRetain](#tab/sdk)
+Below is the sample plugin logic when you want to add the custom logic on the last page execution of Bulk Retain. 
+
+```csharp
+class SampleBulkRetainPlugin : IPlugin
+{
+    // Send notification when bulk retain execution is done. 
+    public void Execute(IServiceProvider serviceProvider)
+    {
+        var pluginContext = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
+        var entityName = pluginContext.PrimaryEntityName;
+        if(pluginContext.OutputParameters != null 
+            && pluginContext.OutputParameters.TryGetValue("HasMoreRecords", out var _hasMoreRecords) )
+        {    
+            if(!(bool)_hasMoreRecords)
+            {
+                Console.WriteLine("This is a last execution of this request.");
+                // SendNotifcation that retention for an entity is completed. 
+            }
+        }
+    }
+}
+```
 
 More information: <xref:Microsoft.Dynamics.CRM.BulkRetain?displayProperty=nameWithType>
-
-### [SDK for .NET](#tab/sdk)
-
-```csharp
-public void BulkRetain(IOrganizationService orgService)
-{
-    var request = new OrganizationRequest
-    {
-        RequestName = "BulkRetain"
-    };
-
-    string xml = "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\"> " +
-        "<entity name=\"opportunity\"> " +
-            "<attribute name=\"name\" /> " +
-            "<attribute name=\"statecode\" />" +
-            "<attribute name=\"actualvalue\" />" +
-            "<attribute name=\"actualclosedate\" />" +
-            "<attribute name=\"customerid\" />" +
-            "<attribute name=\"opportunityid\" />" +
-            "<order attribute=\"actualclosedate\" descending=\"true\" />" +
-            "<filter type=\"and\">" +
-                "<filter type=\"or\">" +
-                    "<condition attribute=\"statecode\" operator=\"eq\" value=\"1\" />" +
-                    "<condition attribute=\"statecode\" operator=\"eq\" value=\"2\" />" +
-                "</filter>" +
-            "</filter>" +
-        "</entity></fetch>";
-    request.Parameters["FetchXml"] = xml;
-    request.Parameters["PageSize"] = 10;
-    request.Parameters["OperationId"] = Guid.NewGuid().ToString();
-    request.Parameters.Add["EntityName"] = "opportunity";
-    
-    try
-    {
-        bool hasMoreRecords = true;
-        while (hasMoreRecords) { 
-            OrganizationResponse response = orgService.Execute(request);
-            if (response?.Results != null )
-            {
-                if (response.Results.TryGetValue("PagingCookie", out var pagingCookie))
-                {
-                    request.Parameters["PagingCookie"] = pagingCookie;
-                }
-
-                if (response.Results.TryGetValue("HasMoreRecords", out var _hasMoreRecords))
-                {
-                    hasMoreRecords = (bool) _hasMoreRecords;
-                }
-
-                if (response.Results.TryGetValue("EntityCountCollection", out var entityRecordCollection))
-                {
-                    foreach (var entityRecord in (EntityRecordCountCollection)entityRecordCollection)
-                    {
-                        Console.WriteLine($"Entity Name: {entityRecord.Key}, Retained Record Count: {entityRecord.Value}");
-                    }
-                }
-            }
-        }
-    }
-    catch (Exception ex)
-    {
-        throw new Exception($"Bulk Retain request failed. Error: {ex.Message})", ex);
-    }
-    
-}
-```
-
-**Output**
-```
-Entity Name: opportunity, Retained Record Count: 10
-Entity Name: opportunity, Retained Record Count: 10
-Entity Name: opportunity, Retained Record Count: 2
-```
-
-
-### [Web API](#tab/webapi)
-
-The following example executes bulk retention on the an opportunity table.
-
-**Request**
-
-```http
-POST [Organization Uri]/api/data/v9.1/BulkRetain
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-
-{
-  "OperationId":"fd2639b2-f300-408c-b605-75febff98d4f" ,
-  "PageSize":10,
-  "FetchXml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\"> <entity name=\"opportunity\"> <attribute name=\"name\" /> <attribute name=\"statecode\" /><attribute name=\"actualvalue\" /><attribute name=\"actualclosedate\" /><attribute name=\"customerid\" /><attribute name=\"opportunityid\" /><order attribute=\"actualclosedate\" descending=\"true\" /><filter type=\"and\"><filter type=\"or\"><condition attribute=\"statecode\" operator=\"eq\" value=\"1\" /><condition attribute=\"statecode\" operator=\"eq\" value=\"2\" /></filter></filter></entity></fetch>",
-  "EntityName": "opportunity"
-}
-
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-{
-  "@odata.context": "http://10.139.166.40/CITTest/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.BulkRetainResponse",
-    "PagingCookie": "<cookie page=\"1\"><versionnumber last=\"2036955\" first=\"2036955\" /><actualclosedate lastnull=\"1\" firstnull=\"1\" /><opportunityid last=\"{1EE2137D-99F8-ED11-884E-000D3A7080DA}\" first=\"{1EE2137D-99F8-ED11-884E-000D3A7080DA}\" /></cookie>",
-    "HasMoreRecords": true,
-    "FailedRecords": 0,
-    "EntityCountCollection": {
-        "Count": 1,
-        "IsReadOnly": false,
-        "Keys": [
-            "opportunity"
-        ],
-        "Values": [
-            10
-        ]
-    }
-}
-```
-
-> [!NOTE]
-> If you get HasMoreRecords as true in response, there are records remaining for the criteria. 
-
-
-## Retain
-A message named *Retain* executes whenever a table row is marked for retention. You can optionally register a custom plug-in to be executed when the row is being marked for retention.
-
 More information: <xref:Microsoft.Dynamics.CRM.Retain?displayProperty=nameWithType>
 
-The following example executes retention on the an email record.
-
-### [SDK for .NET](#tab/sdk)
-
-```csharp
-public void Retain(IOrganizationService orgService)
-{
-
-    var request = new OrganizationRequest { RequestName = "Retain" };
-    request.Parameters["Target"] = new EntityReference("email", new Guid("8b9cc8c0-8c08-46cf-a5c3-00057edc8e4e"));
-
-    try
-    {
-        OrganizationResponse response = orgService.Execute(request);
-        if (response?.Results != null && response.Results.TryGetValue("EntityCountCollection", out var entityRecordCollection))
-        {
-            // Put your logic here. 
-            foreach( var entityRecord in (EntityRecordCountCollection) entityRecordCollection)
-            {
-                Console.WriteLine($"Entity Name: {entityRecord.Key}, Retained Record Count: {entityRecord.Value}");
-            }
-        }
-    }
-    catch (Exception ex)
-    {
-        throw new Exception($"Retain request failed. Error: {ex.Message})", ex);
-    }
-}
-```
-
-**Output**
-```
-Entity Name: activityparty, Retained Record Count: 2
-Entity Name: activitypointer, Retained Record Count: 1
-Entity Name: email, Retained Record Count: 1
-```
-
-### [Web API](#tab/webapi)
-
-
-**Request**
-
-```http
-POST [Organization Uri]/api/data/v9.1/Retain
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-
-{
-"OperationId":"fd2639b2-f300-408c-b605-75febff98d4f" ,
-"Target":{
-"@odata.type": "Microsoft.Dynamics.CRM.email",
-"activityid": "8b9cc8c0-8c08-46cf-a5c3-00057edc8e4e"}
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.RetainResponse",
-  "EntityCountCollection": {
-      "Count": 3,
-      "IsReadOnly": false,
-      "Keys": [
-          "activityparty",
-          "activitypointer",
-          "email"
-      ],
-      "Values": [
-          2,
-          1,
-          1
-      ]
-  }
-}
-```
-
-## Rollback Retain
-
-A message named *RollbackRetain* executes whenever a marked table row for retention is rolled back to normal one on failure of further processing. You can optionally register a custom plug-in to be executed whenever retention for the row is rolledback. 
-
-More information: <xref:Microsoft.Dynamics.CRM.RollbackRetain?displayProperty=nameWithType>
-
-The following example executes rollback retention on the an email record.
-
-### [SDK for .NET](#tab/sdk)
-
-```csharp
-public void RollbackRetain(IOrganizationService orgService)
-{
-
-    var request = new OrganizationRequest { RequestName = "RollbackRetain" };
-    request.Parameters["Target"] = new EntityReference("email", new Guid("8b9cc8c0-8c08-46cf-a5c3-00057edc8e4e"));
-
-    try
-    {
-        OrganizationResponse response = orgService.Execute(request);
-        if (response?.Results != null && response.Results.TryGetValue("EntityCountCollection", out var entityRecordCollection))
-        {
-            // Put your logic here. 
-            foreach( var entityRecord in (EntityRecordCountCollection) entityRecordCollection)
-            {
-                Console.WriteLine($"Entity Name: {entityRecord.Key}, Rollback Record Count: {entityRecord.Value}");
-            }
-        }
-    }
-    catch (Exception ex)
-    {
-        throw new Exception($"RollbackRetain request failed. Error: {ex.Message})", ex);
-    }
-}
-```
-
-**Output**
-```
-Entity Name: activityparty, Rollback Record Count: 2
-Entity Name: activitypointer, Rollback Record Count: 1
-Entity Name: email, Rollback Record Count: 1
-```
-
-### [Web API](#tab/webapi)
-
-**Request**
-
-```http
-POST [Organization Uri]/api/data/v9.1/RollbackRetain
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-
-{
-"OperationId":"fd2639b2-f300-408c-b605-75febff98d4f" ,
-"Target":{
-"@odata.type": "Microsoft.Dynamics.CRM.email",
-"activityid": "8b9cc8c0-8c08-46cf-a5c3-00057edc8e4e"}
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.RollbackRetainResponse",
-  "EntityCountCollection": {
-      "Count": 3,
-      "IsReadOnly": false,
-      "Keys": [
-          "activityparty",
-          "activitypointer",
-          "email"
-      ],
-      "Values": [
-          2,
-          1,
-          1
-      ]
-  }
-}
-```
-
-## Purge of retained record
+### Custom logic while record gets deleted due to retention
 Platform calls *PurgeRetainedContent* to delete the rows which are successfully moved to data lake. PurgeRetainedContent internal calls the *Delete* method to delete the retained table rows which are successfully moved to data lake.     
 
 You can optionally add a custom plugin to *PurgeRetainedContent* message, if you need any custom logic during the purge operation at the table label. Optionally You can also  modify or create custom plugin for *Delete* message if you need a specific custom logic when record gets deleted due to retention. You can identify whether the delete happened due to retention or not by checking the ParentContext. ParentContext for the Delete API due to retention would be *PurgeRetainedContent*. 
 
-Below is the sample code for custom plugin for the delete due to retention. 
-
-### [Sample Plugin](#tab/sdk)
+#### [Sample plugin to block purge unless record are validated](#tab/sdk)
+Below is the sample plugin to block the purge on table whenever records are not ready for purge. 
 
 ```csharp
-class SampleRetentionDeletePlugin : IPlugin
+class SamplePurgeRetainedContentPlugin : IPlugin
+{
+    // Block purge if all the rows are not validatd. 
+    public void Execute(IServiceProvider serviceProvider)
+    {
+        var pluginContext = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
+        var entityName = pluginContext.PrimaryEntityName;
+        if( pluginContext.InputParameters.TryGetValue("MaxVersionToPurge", out var _maxVersiontoPurge) )
+        {
+            long MaxVersionToPurge = (long)_maxVersiontoPurge;
+            var rowsToBePurged = GetToBePurgedRows(entityName, MaxVersionToPurge);
+            // Add custom validation to process rowsToBePurged.
+        }
+    }
+
+    public EntityCollection GetToBePurgedRows(string  entityName, long maxVersionToPurge)
+    {
+        IOrganizationService organizationService; // Create OrgService. 
+        QueryExpression queryExpression = new QueryExpression()
+        {
+            EntityName = entityName,
+            ColumnSet = new ColumnSet(new string[] { "versionnumber", "msft_datastate" })
+        };
+        queryExpression.Criteria.AddCondition("msft_datastate", ConditionOperator.Equal, 1);
+        queryExpression.Criteria.AddCondition("versionnumber", ConditionOperator.LessEqual, maxVersionToPurge);
+        var response = organizationService.RetrieveMultiple(queryExpression);
+        return response;
+    }
+}
+```
+
+#### [Sample plugin for delete record due to retention](#tab/sdk)
+Below is the sample code for custom plugin for the delete due to retention. 
+```csharp
+class SampleDeletePlugin : IPlugin
 {
     public void Execute(IServiceProvider serviceProvider)
     {
@@ -581,8 +283,7 @@ class SampleRetentionDeletePlugin : IPlugin
 
     private bool IsDeleteDueToRetention(IServiceProvider serviceProvider)
     {
-        var currentContext = GetPluginContext(serviceProvider);
-
+        var currentContext = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
         while (currentContext != null)
         {
             if (string.Equals(currentContext.MessageName, "PurgeRetainedContent"))
@@ -594,13 +295,7 @@ class SampleRetentionDeletePlugin : IPlugin
                 currentContext = currentContext.ParentContext;
             }
         }
-
         return false;
-    }
-
-    private IPluginExecutionContext GetPluginContext(IServiceProvider serviceProvider)
-    {
-        return (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
     }
 }
 ```
