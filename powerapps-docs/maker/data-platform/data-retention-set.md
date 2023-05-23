@@ -86,7 +86,7 @@ Now you can view and manage the policy. More information: [Manage data retention
 
 ## Known issue
 
-If a parent table has many child tables, and the size of the parent or child tables is large, you may encounter timeouts. For example, when the number of tables is large in a cascade relationship chain, such as thirty or more. To mitigate this, enable a few child tables separately first. Then go back and enable the parent table.
+If a parent table has many child tables, and the size of the parent or child tables is large, you may encounter timeouts. For example, when the number of tables is large in a cascade relationship chain, such as twenty-five or more. To mitigate this, enable a few child tables separately first. Then go back and enable the parent table.
 
 ## Next steps
 
