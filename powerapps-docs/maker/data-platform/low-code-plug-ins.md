@@ -128,7 +128,7 @@ Once the solution import has completed, the status is set to **Enabled** next to
    - **Pre-operation**. Select this option if you want to run your plug-in logic after the form validation, but before the values are inserted or changed in Dataverse.
    - **Post operation**. Select this option to run your plug-in logic after the values have been inserted or changed in Dataverse.
 1. Select **Save**.
-1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)(#test-an-instant-low-code-plug-in)
+1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
 
 ## Create a low-code plug-in that uses connectors
 

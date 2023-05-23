@@ -64,7 +64,7 @@ This example implements server-side input validation, such as duplicate error de
   If(!IsBlank(LookUp(Contacts, 'First Name'="Jon" && 'Last Name'="Doe")),Error("You have two contacts with the same first and last name")) 
   ```
 
-1. Select **Save**.
+6. Select **Save**.
 
 ### Test the plug-in
 
