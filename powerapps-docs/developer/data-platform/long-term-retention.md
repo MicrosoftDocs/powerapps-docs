@@ -399,6 +399,23 @@ In the following example, the **FetchXML** statement retrieves detailed retentio
 </fetch>
 ```
 
+In the following example, the **FetchXML** statement retrieves failure details while executing retention operation.
+```xml
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="retentionfailuredetail">
+    <attribute name="retentionfailuredetailid" />
+    <attribute name="name" />
+    <attribute name="createdon" />
+    <attribute name="recordid" />
+    <attribute name="operation" />
+    <attribute name="message" />
+    <order attribute="name" descending="false" />
+    <filter type="and">
+      <condition attribute="operationid" operator="eq" value="35CC1317-20B7-4F4F-829D-5D9D5D77F763" />
+    </filter>
+  </entity>
+</fetch>
+```
 ---
 
 ### See also
