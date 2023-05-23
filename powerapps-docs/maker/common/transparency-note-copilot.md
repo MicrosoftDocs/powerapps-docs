@@ -63,7 +63,7 @@ AI Builder must be enabled for your environment to use the AI models or controls
 
 3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**. 
 
-   For more information, see [AI Copilot overview](../canvas-apps/ai-overview) 
+   For more information, see [AI Copilot overview](../canvas-apps/ai-overview.md) 
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 
@@ -81,8 +81,7 @@ Follow these procedures to make the most of the feature:
 - When in doubt, you can ask the AI assistant for help by typing, “Give me suggestions”
 
 ## See also 
-
-- [AI Copilot overview (preview)](/canvas-apps/ai-overview.md) 
+- [Build apps through conversation (preview)](../canvas-apps/ai-conversations-create-app.md)
 
  
 
