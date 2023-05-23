@@ -314,6 +314,28 @@ For issues with the Dataverse Accelerator solution installation or low-code plug
 
 For a few examples of how to create a low-code plug-in, go to [Example Dataverse low-code plug-ins (experimental)](lowcode-plug-ins-examples.md)
 
+## Known issues limitations
+
+- The environment language object needs to be re-added to access new plug-ins inside existing canvas apps.
+- For any plug-ins created after you have added the environment table data source to an existing canvas app, you'll have to remove and re-add the Power Fx environment language object. Then you'll see the updated list of plug-ins as actions.
+- Application lifecycle management (ALM) is not currently supported with low-code plug-ins. When you import a solution with a low-code plugin, the plug-in logic won't be successfully executed in the target environment.
+- Intellisense requires explicit notation.
+- In automated plugins, if you want to refer any tables in the formula, then use the following syntax such as [@Accounts] (and not Accounts).
+- Nested support. 
+  - Plug-ins can only call first-party actions published by Microsoft from Power Fx expressions. In the future, plug-ins will be able to call other user-defined plug-ins.
+- Some `Collect` scenarios require `Patch`.
+  - There are some scenarios where `Collect()` doesn't work. The workaround is to use `Patch()` as shown in the populating regarding column example below.
+
+```powerapps-dot
+
+Patch(Faxes,
+    Collect(Faxes, { Subject : "Sub1" } ),
+    { Regarding : First(Accounts) }
+
+)
+
+```
+
 ## See also
 
 [Low-code plug-ins Power Fx (preview)](low-code-plug-ins-powerfx.md)
