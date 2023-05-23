@@ -129,11 +129,11 @@ Accept: application/json
 
 ---
 
-The data retention capability moves data from Dataverse transactional storage to a managed data lake. Once data is moved to the data lake, you can not perform any transactional operations on that data. It is important to make sure that incorrect policies are not being set up for data retention. You can add your own validations by optionally registering a custom [plug-in](plug-ins.md) on the `ValidateRetentionConfig` message.
+### Custom plug-in on ValidateRetentionConfig
+
+The data retention process moves data from Dataverse transactional storage to a managed data lake. Once data is moved to the data lake, you can not perform any transactional operations on that data. It is important to make sure that incorrect policies are not being set up for data retention. You can add your own validations by optionally registering a custom [plug-in](plug-ins.md) on the `ValidateRetentionConfig` message.
 
 ### [SDK for .NET](#tab/sdk)
-
-#### Custom plug-in on ValidateRetentionConfig
 
 ```csharp
 class SampleValidateRetentionConfigPlugin : IPlugin
@@ -179,7 +179,7 @@ The following sections provide more information about writing custom plug-in cod
 
 As part of marking rows for retention, Dataverse invokes the `BulkRetain` and `Retain` messages. You can add custom logic by optionally registering a plug-in on execution of those messages. Some examples of such logic would be having additional rows marked for retenion or performing validation before rows are being marked for retained.
 
-This code sample shows a custom plug-in to be executed during retention of single row.
+This code sample shows a custom plug-in to be executed during retention of a single table row.
 
 ```csharp
 class SampleRetainPlugin : IPlugin
@@ -209,7 +209,7 @@ class SampleRetainPlugin : IPlugin
 
 ### Custom logic on bulk retain
 
-Plug-in code is shown below demonstrating custom logic on the last page execution of a `BulkRetain` message operation.
+The plug-in code shown below demonstrates custom logic on the last page execution of a `BulkRetain` message operation.
 
 ```csharp
 class SampleBulkRetainPlugin : IPlugin
@@ -236,9 +236,9 @@ class SampleBulkRetainPlugin : IPlugin
 
 Dataverse executes the `PurgeRetainedContent` message to delete the transactional data rows which were successfully moved to the data lake. The `PurgeRetainedContent` message internally executes a `Delete` message operation to delete the retained table rows that were successfully moved.
 
-You can optionally register a custom plug-in on the `PurgeRetainedContent` message if you need any custom logic invoked during the purge operation at the table label. Optionally, you can register a custom plug-in on the `Delete` message if you need to invoke code when a row gets deleted due to retention. You can identify whether the delete happened due to retention or not by checking the plug-in's [ParentContext](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext) property. The `ParentContext` property value for the `Delete` message operation due to retention is "PurgeRetainedContent".
+You can optionally register a custom plug-in on the `PurgeRetainedContent` message if you need any custom logic invoked during the purge operation at the table level. Optionally, you can register a custom plug-in on the `Delete` message if you need to invoke code when a row gets deleted due to retention. You can identify whether the delete happened due to retention or not by checking the plug-in's [ParentContext](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext) property. The `ParentContext` property value for the `Delete` message operation due to retention is "PurgeRetainedContent".
 
-Below is shown sample plug-in code to block the purge on a table whenever rows are not ready for purge.
+The plug-in code shown below blocks the purge on a table whenever rows are not ready for purge.
 
 ```csharp
 class SamplePurgeRetainedContentPlugin : IPlugin
@@ -272,7 +272,7 @@ class SamplePurgeRetainedContentPlugin : IPlugin
 }
 ```
 
-Sample plug-in code is shown below for the delete operation due to retention.
+The example plug-in code shown below applies to the delete operation due to retention.
 
 ```csharp
 class SampleDeletePlugin : IPlugin
@@ -312,40 +312,44 @@ class SampleDeletePlugin : IPlugin
 
 Retention policy details are stored in the `RetentionConfig` table. Retention execution details are stored in `RetentionOperation` and `RetentionOperationDetail` tables. You can query these tables to get the retention policy and execution details.
 
-Below are a few examples of FetchXML which can be used to query the retention details. FetchXML is a proprietary XML-based query language that can be used with SDK based queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. 
+Below are a few examples of FetchXML which can be used to query the retention details. FetchXML is a proprietary XML-based query language that can be used with SDK based queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string.
 
 The following example shows a simple query to return all active retention policies for an email order by name.
 
 ### [SDK for .NET](#tab/sdk)
 
-#### FetchXml to retrieve all active retention policies
-
 ```csharp
-string fetchXml = @"
-<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
-  <entity name='retentionconfig'>
-    <attribute name='retentionconfigid' />
-    <attribute name='name' />
-    <attribute name='createdon' />
-    <attribute name='starttime' />
-    <attribute name='recurrence' />
-    <attribute name='entitylogicalname' />
-    <attribute name='criteria' />
-    <order attribute='name' descending='false' />
-    <filter type='and'>
-      <condition attribute='entitylogicalname' operator='eq' value='email' />
-      <condition attribute='statuscode' operator='eq' value='10' />
-    </filter>
-  </entity>
-</fetch>";
 
-var query = new FetchExpression(fetchXml);
+public EntityCollection GetActivePolicies(IOrganizationService orgService)
+{
+    string fetchXml = @"
+    <fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
+      <entity name='retentionconfig'>
+        <attribute name='retentionconfigid' />
+        <attribute name='name' />
+        <attribute name='createdon' />
+        <attribute name='starttime' />
+        <attribute name='recurrence' />
+        <attribute name='entitylogicalname' />
+        <attribute name='criteria' />
+        <order attribute='name' descending='false' />
+        <filter type='and'>
+          <condition attribute='entitylogicalname' operator='eq' value='email' />
+          <condition attribute='statuscode' operator='eq' value='10' />
+        </filter>
+      </entity>
+    </fetch>";
 
-EntityCollection results = svc.RetrieveMultiple(query);
+    var query = new FetchExpression(fetchXml);
 
-results.Entities.ToList().ForEach(x => {
-  Console.WriteLine(x.Attributes["name"]);
-});
+    EntityCollection results = orgService.RetrieveMultiple(query);
+
+    results.Entities.ToList().ForEach(x => {
+      Console.WriteLine(x.Attributes["name"]);
+    });
+
+    return(results);
+}
 ```
 
 ### [Web API](#tab/webapi)
@@ -354,7 +358,7 @@ More information: [Use FetchXml with Web API](./webapi/use-fetchxml-web-api.md)
 
 ---
 
-### More examples of FetchXML query strings
+### Additional examples of FetchXML query strings
 
 In the following example, the FetchXML statement retrieves all paused retention policies for an email.  
   
