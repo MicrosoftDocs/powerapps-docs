@@ -112,7 +112,7 @@ Once the solution import has completed, the status is set to **Enabled** next to
 1. On the **Automated plugins** card, select **New plugin**.
 1. Provide the following values:
    - **Name**: Enter a name for the plug-in, such as *Input validation*.
-   - **Description**: Enter a description for the plug-in, such as *Test error handling*.
+   - **Table**: Choose a table to associate the plug-in to, such as *Account*.
    - **Run this plugin rule when the row is**. Specify the data event used to trigger the plug-in:
       - **Create**. Triggers the rule during a row create operation.
       - **Update**. Triggers the rule during a row change operation.
@@ -121,7 +121,7 @@ Once the solution import has completed, the status is set to **Enabled** next to
    For example:
 
    ```powerapps-dot 
-   If( IsBlank( ThisRecord.Email ), Patch(Contacts, ThisRecord, { 'Email description': "No email" } ));  
+   If( IsBlank( ThisRecord.Email ), Patch([@Accounts], ThisRecord, { 'Do not allow Emails': true }))  
    ```
 
 1. **Advanced options** > **When should this run**:
@@ -137,7 +137,7 @@ The low-code plug-in for connectors solution is a streamlined user interface tha
 > [!NOTE]
 > Currently, there are a limited number of connectors and actions available.
 
-### Prerequisites
+### Prerequisites for low-code plug-ins with connectors wizard
 
 - All prerequisites described earlier for creating an instant or automated plug-in. More information: [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
 - To try the new low-code plug-ins for connectors feature, you must install the additional low-code plug-in for connectors solution after installing the Dataverse Accelerator.
