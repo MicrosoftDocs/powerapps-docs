@@ -112,7 +112,7 @@ Once the solution import has completed, the status is set to **Enabled** next to
 1. On the **Automated plugins** card, select **New plugin**.
 1. Provide the following values:
    - **Name**: Enter a name for the plug-in, such as *Input validation*.
-   - **Description**: Enter a description for the plug-in, such as *Test error handling*.
+   - **Table**: Choose a table to associate the plug-in to, such as *Account*.
    - **Run this plugin rule when the row is**. Specify the data event used to trigger the plug-in:
       - **Create**. Triggers the rule during a row create operation.
       - **Update**. Triggers the rule during a row change operation.
@@ -121,14 +121,14 @@ Once the solution import has completed, the status is set to **Enabled** next to
    For example:
 
    ```powerapps-dot 
-   If( IsBlank( ThisRecord.Email ), Patch(Contacts, ThisRecord, { 'Email description': "No email" } ));  
+   If( IsBlank( ThisRecord.Email ), Patch([@Accounts], ThisRecord, { 'Do not allow Emails': true }))  
    ```
 
 1. **Advanced options** > **When should this run**:
    - **Pre-operation**. Select this option if you want to run your plug-in logic after the form validation, but before the values are inserted or changed in Dataverse.
    - **Post operation**. Select this option to run your plug-in logic after the values have been inserted or changed in Dataverse.
 1. Select **Save**.
-1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)(#test-an-instant-low-code-plug-in)
+1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
 
 ## Create a low-code plug-in that uses connectors
 
@@ -137,7 +137,7 @@ The low-code plug-in for connectors solution is a streamlined user interface tha
 > [!NOTE]
 > Currently, there are a limited number of connectors and actions available.
 
-### Prerequisites
+### Prerequisites for low-code plug-ins with connectors wizard
 
 - All prerequisites described earlier for creating an instant or automated plug-in. More information: [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
 - To try the new low-code plug-ins for connectors feature, you must install the additional low-code plug-in for connectors solution after installing the Dataverse Accelerator.
@@ -234,7 +234,7 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
    > [!NOTE]
    > Currently, you can't edit the parameters or formula on this page in the plug-ins wizard.
 
-1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)(#test-an-instant-low-code-plug-in)
+1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
 
 ### Plug-ins with connectors limitations
 
@@ -290,19 +290,6 @@ On the **Integrate** tab of the test page, you can learn how to invoke the insta
 3. Select your plug-in (it will have the unique name with a prefix).
 4. Provide values for all of the input parameters (if any).
 
-## Manage low-code plug-ins using solutions
-
-The Dataverse Accelerator app lets you identify an unmangaed solution to write all your changes to. This makes your plug-in assets easier to find and transfer between environments.
-
-1. Before you start working on any plug-ins, create an unmanaged solution in [Power Apps](https://make.powerapps.com). Then, select that solution in the app to save your plug-in assets.
-1. In each editor screen on the top right corner, there is a dropdown of unmanaged solutions in the environment you can choose from.
-   :::image type="content" source="media/low-code-solution-picker.png" alt-text="Select the solution that has the low-code plug-in changes":::
-
-1. Once you choose a solution, the Dataverse Accelerator saves that selection every time you run the app in that environment. It assigns the prefix of the selected solution's publisher to some of the assets.
-
-> [!TIP]
-> Make sure to change the solution if you are working on for different projects, so your assets are easier to find.
-
 ## Contacting Help + support
 
 For issues with the Dataverse Accelerator solution installation or low-code plug-ins, such as errors received, [use the Help + support experience](/power-platform/admin/get-help-support) and include the following information:
@@ -313,6 +300,24 @@ For issues with the Dataverse Accelerator solution installation or low-code plug
 ## Example low-code plug-ins you can create
 
 For a few examples of how to create a low-code plug-in, go to [Example Dataverse low-code plug-ins (experimental)](lowcode-plug-ins-examples.md)
+
+## Known limitations
+
+- The environment language object needs to be re-added to access new plug-ins inside existing canvas apps. For any plug-ins created after you have added the environment table data source to an existing canvas app, you'll have to remove and re-add the Power Fx environment language object. Then you'll see the updated list of plug-ins as actions.
+- Application lifecycle management (ALM) is not currently supported for automated low-code plug-ins. When you import a solution with an automated low-code plugin, the plug-in logic won't be successfully executed in the target environment. However, ALM is supported for instant low-code plug-ins; users can manually add plug-in solution components to an unmanaged solution, and the plug-in will run successfully in the target environment.
+- Intellisense requires explicit notation in automated plugins if you want to refer any tables in the formula. Use the following disambiguation syntax such as [@Accounts] (and not Accounts).
+- Nested support. Plug-ins can only call first-party actions published by Microsoft from Power Fx expressions. In the future, plug-ins will be able to call other user-defined plug-ins.
+- Some `Collect` scenarios require `Patch`. There are some scenarios where `Collect()` doesn't work. The workaround is to use `Patch()` as shown in the populating regarding column example below.
+
+    ```powerapps-dot
+
+    Patch(Faxes,
+        Collect(Faxes, { Subject : "Sub1" } ),
+        { Regarding : First(Accounts) }
+
+    )
+
+    ```
 
 ## See also
 
