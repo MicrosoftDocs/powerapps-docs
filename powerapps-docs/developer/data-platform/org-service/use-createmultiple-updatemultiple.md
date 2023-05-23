@@ -1,7 +1,7 @@
 ---
 title: "Use CreateMultiple and UpdateMultiple (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the CreateMultiple and UpdateMultiple messages to optimize bulk data operations." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 12/12/2022
+ms.date: 05/23/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -232,9 +232,13 @@ The following are frequently asked question related to the introduction of these
 
 Yes. We plan to release `UpsertMultiple` later.
 
+<!-- TODO: uncomment after merging elastic tables
+
 ### Will there be a DeleteMultiple?
 
-At this time, `DeleteMultiple` is supported only for elastic tables, which is a preview feature. Elastic tables don't support cascading operations. More information: [Bulk operations with elastic tables (Preview)](../bulk-operations-elastic-tables.md) <!-- Link should resolve after merge -->
+At this time, `DeleteMultiple` is supported only for elastic tables, which is a preview feature. Elastic tables don't support cascading operations. More information: [Bulk operations with elastic tables (Preview)](../bulk-operations-elastic-tables.md)  
+
+ -->
 
 For standard tables, cascading operations can result in unpredictable execution times. If we support `DeleteMultiple` for standard tables, it may not be the best choice. For standard tables, we recommend the `BulkDelete` message that enables asynchronous deletion of records that match a query.
 

@@ -3,7 +3,7 @@ title: Optimize performance for Create and Update operations | Microsoft Docs
 description: Choose the best approach when creating or updating large numbers records.
 author: divkamath
 ms.topic: article
-ms.date: 05/20/2023
+ms.date: 05/23/2023
 ms.subservice: dataverse-developer
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -25,10 +25,16 @@ Performance is important for all applications, but it's critical for certain sce
 
 ### Elastic tables
 
-Elastic tables are a preview feature at the time of this writing. Elastic tables can provide dramatically improved performance for bulk data operations, but they don't provide strong data consistency or transactions across tables. If performance for bulk operations is most important for your application, consider elastic tables. More information: 
+Elastic tables are a preview feature at the time of this writing. Elastic tables can provide dramatically improved performance for bulk data operations, but they don't provide strong data consistency or transactions across tables. If performance for bulk operations is most important for your application, consider elastic tables. 
+
+ <!-- TODO Add links back after elastic tables content published
+
+More information:
 
  - [Create and edit elastic tables (preview)](/power-apps/maker/data-platform/create-edit-elastic-tables)
- - [Developer documentation: Elastic tables (preview)](/power-apps/developer/data-platform/elastic-tables)
+ - [Developer documentation: Elastic tables (preview)](/power-apps/developer/data-platform/elastic-tables) 
+ 
+-->
 
 ### Bulk data operations
 
@@ -144,4 +150,8 @@ If your application doesn't depend on the data modeling and transactional capabi
 [Use CreateMultiple and UpdateMultiple (Preview)](org-service/use-createmultiple-updatemultiple.md)<br />
 [Send parallel requests](send-parallel-requests.md)<br />
 [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)<br />
-[Elastic tables (preview)](/power-apps/developer/data-platform/elastic-tables)
+<!-- TODO Add links back after Elastic tables content published
+      
+[Elastic tables (preview)](/power-apps/developer/data-platform/elastic-tables) 
+
+-->
