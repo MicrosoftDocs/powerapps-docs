@@ -57,4 +57,5 @@ This restrictions are enforced by Dataverse for each environment:
 
 ## See also
 
-[Dataverse long term data retention overview (preview)](data-retention-overview.md)
+[Dataverse long term data retention overview (preview)](data-retention-overview.md) <br />
+[Share your ideas](https://experience.dynamics.com/ideas/categories/list/?category=55f731de-11f3-ed11-8848-00224827ed7b&forum=eef9aef6-0ff3-ed11-8848-00224827e88b)

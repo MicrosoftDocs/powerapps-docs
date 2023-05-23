@@ -113,4 +113,5 @@ For more information about solutions and solution components, go to [Solutions o
 
 ## Next steps
 
-[Set a data retention policy for a table](data-retention-set.md)
+[Set a data retention policy for a table](data-retention-set.md) <br />
+[Share your ideas](https://experience.dynamics.com/ideas/categories/list/?category=55f731de-11f3-ed11-8848-00224827ed7b&forum=eef9aef6-0ff3-ed11-8848-00224827e88b)

@@ -48,4 +48,5 @@ Use the retention policies dashboard to view and manage retention policies. From
 
 ## See also
 
-[View long term retained data (preview)](data-retention-view.md)
+[View long term retained data (preview)](data-retention-view.md) <br />
+[Share your ideas](https://experience.dynamics.com/ideas/categories/list/?category=55f731de-11f3-ed11-8848-00224827ed7b&forum=eef9aef6-0ff3-ed11-8848-00224827e88b)
