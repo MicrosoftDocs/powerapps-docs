@@ -58,7 +58,7 @@ With your [canvas app open for editing](edit-app.md):
 
 ## Choose data
 
-1. When the Copilot control is added, select a data source from the pane. Currently, only a single Dataverse table can be selected for the Copilot control. For any other data sources, note that the Copilot control can only answer questions for smaller datasets.
+1. When the Copilot control is added, select a data source from the pane. Currently, only a single Dataverse table can be selected for the Copilot control. For any other data sources, the Copilot control can only answer questions for smaller datasets.
 
    > [!div class="mx-imgBorder"]
    > ![Select a data source.](media/copilot/copilot-3.png)
