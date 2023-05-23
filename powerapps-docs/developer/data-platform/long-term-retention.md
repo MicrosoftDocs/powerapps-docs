@@ -348,7 +348,7 @@ results.Entities.ToList().ForEach(x => {
 });
 ```
 
-[Web API](#tab/webapi)
+### [Web API](#tab/webapi)
 
 More information: [Use FetchXml with Web API](./webapi/use-fetchxml-web-api.md)
 
