@@ -54,40 +54,37 @@ With your [canvas app open for editing](edit-app.md):
 2. Expand the **Input** menu and select **Copilot (preview)** to add this control.
 
    > [!div class="mx-imgBorder"]
-   > ![Add teh copilot control.](media/copilot/copilot-2.png)
+   > ![Add the copilot control.](media/copilot/Copilot-Insert-menu.png)
 
 ## Choose data
 
-1. When the Copilot control is added, select a data source from the pane. Currently, only a single Dataverse table can be selected for the Copilot control.
+1. When the Copilot control is added, select a data source from the pane. Currently, only a single Dataverse table can be selected for the Copilot control. For any other data sources, note that the Copilot control can only answer questions for smaller datasets.
 
    > [!div class="mx-imgBorder"]
    > ![Select a data source.](media/copilot/copilot-3.png)
 
    Or, from the control **Properties** tab, select **Data source (Items)** and choose a Dataverse table for your data source.
    > [!div class="mx-imgBorder"]
-   > ![Select fields or views.](media/copilot/copilot-4.png)
+   > ![Select fields or views.](media/copilot/Copilot-choose-data-properties.png)
    
 
 2. Select the specific **Fields** and/or **View** that the Copilot control will answer questions for.
 
 
-> [!NOTE]
-> - For lookups, add the related tables to your app by going to the app authoring menu and then select **Data** > **Add data**.
-
-Due to current limitations, the Copilot control can answer questions for Dataverse tables that are smaller in size.
-
 ## Configure the control (optional)
 
 In addition to choosing the data source, you can also configure the following properties:
 
-- **Title**: Replaces the control's default title of **Copilot**, and can be updated to something more descriptive of what this Copilot control can help app users with.
+- **Title**: Replaces the control's default title of **Have a question about this app? Ask Copilot.**, and can be updated to something more indicative of what this Copilot control can help app users with.
+
+- **Introductory message**: Replaces the control's default introductory message of **Copilot can answer questions about the data in this app, and help you navigate. It's always learning from your feedback.**. It can be updated to something more descriptive of what this Copilot control can help app users with.
 
 - **Data summary**: Helps Copilot control give better responses to questions from app users. We recommend a brief 2-3 lines describing what the app is and what sort of questions this Copilot control will answer. This property does not impact the control's UI.
 
-- **Placeholder text**: Replaces the control's default placeholder text in the text input box **Ask a question about the data**. We recommend updating this to a short line sharing guidance to app users about what type of questions this Copilot control can answer.
+- **Placeholder text**: Replaces the control's default placeholder text in the text input box **Ask a question about the data in this app, or tell me what you're looking for**. We recommend updating this to a short line sharing guidance to app users about what type of questions this Copilot control can answer.
 
    > [!div class="mx-imgBorder"]
-   > ![Configure the control.](media/copilot/copilot-5.png)
+   > ![Configure the control.](media/copilot/Updated-Copilot-properties.png)
 
 
 
