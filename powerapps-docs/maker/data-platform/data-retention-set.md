@@ -90,4 +90,5 @@ If a parent table has many child tables, and the size of the parent or child tab
 
 ## Next steps
 
-[Manage data retention policies](data-retention-manage.md)
+[Manage data retention policies](data-retention-manage.md) <br />
+[Share your ideas](https://experience.dynamics.com/ideas/categories/list/?category=55f731de-11f3-ed11-8848-00224827ed7b&forum=eef9aef6-0ff3-ed11-8848-00224827e88b)
