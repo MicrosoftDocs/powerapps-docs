@@ -2,7 +2,7 @@
 title: "Use elastic tables (Preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to perform data operations on elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/18/2022
+ms.date: 05/23/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -34,7 +34,7 @@ You will find the session token as `x-ms-session-token` value in the response of
 
 #### [SDK for .NET](#tab/sdk)
 
-For any [OrganizationResponse](xref:Microsoft.Xrm.Sdk.OrganizationResponse) that performs a write operation ([CreateResponse](xref:Microsoft.Xrm.Sdk.Messages.CreateResponse),[UpdateResponse](xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse),[UpsertResponse](xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse),[DeleteResponse](xref:Microsoft.Xrm.Sdk.Messages.DeleteResponse)) you can capture the `x-ms-session-token` in the [Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results) collection.
+For any [OrganizationResponse](xref:Microsoft.Xrm.Sdk.OrganizationResponse) that performs a write operation, you can capture the `x-ms-session-token` in the [Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results) collection.
 
 > [!NOTE]
 > [DeleteResponse](xref:Microsoft.Xrm.Sdk.Messages.DeleteResponse) does not currently return the x-ms-session-token. More information: [Known issues:  x-ms-session-token value not returned for delete operations](elastic-tables.md#x-ms-session-token-value-not-returned-for-delete-operations)
@@ -90,7 +90,7 @@ MSCRM.SessionToken: 240:8#144100870#7=-1
 
 ## Specifying PartitionId
 
-As mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `PartitionId` column that you must use to uniquely identify a record. 
+As mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `partitionid` column that you must use to uniquely identify a record.
 
 Once you have specified a non-null value to the `partitionid` column while creating a row, you must specify it when performing any other data operation on the row.
 
@@ -129,6 +129,7 @@ This example shows how you can use the special syntax in Web API to refer to rec
 > The primary key value is a GUID, so no quote characters are needed. `partitionid` is a string, so it requires quote characters.
 
 For example:
+
 ```http
 /contoso_sensordatas(contoso_sensordataid=e61a662e-68d8-487e-94e7-ae3a22fd4bbd,partitionid='device-001')
 ```
@@ -136,7 +137,7 @@ For example:
 ---
 ### Using partitionId parameter
 
-For `Retrieve` and `Delete` operations, you can use a special parameter `partitionId` to specify the value of `partitionid` column.
+Currently, you can use a `partitionId` parameter to specify the value of `partitionid` column only for `Retrieve` and `Delete` operations. More information: [Known Issue: partitionId optional parameter not available for all messages](elastic-tables.md#partitionid-optional-parameter-not-available-for-all-messages)
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -166,7 +167,7 @@ For `Create`, `Upsert` or `Update` operations, you can directly specify the valu
 
 #### [SDK for .NET](#tab/sdk)
 
-This examples shows how you can set directly specify `partitionid` column in `Entity` when executing a `Create`, `Upsert` or `Update` operation.
+This examples shows how you can set directly specify `partitionid` column in `Entity` when executing a `Create`, `Upsert`, or `Update` operation.
 
 ```csharp
     var entity = new Entity("contoso_sensordata", sensordataid)
@@ -183,7 +184,7 @@ This example shows how you can directly specify the value of `partitionid` colum
 
 For example:
 
-```http
+```json
 {
   "partitionid": "deviceid-001"
 }
@@ -216,12 +217,12 @@ public static Guid CreateExample(
     {
         Attributes =
             {
-            { "contoso_deviceid", deviceId },
-            { "contoso_sensortype", "Humidity" },
-            { "contoso_value", 40 },
-            { "contoso_timestamp", DateTime.UtcNow},
-            { "partitionid", deviceId },
-            { "ttlinseconds", 86400  }  // 86400  seconds in a day
+               { "contoso_deviceid", deviceId },
+               { "contoso_sensortype", "Humidity" },
+               { "contoso_value", 40 },
+               { "contoso_timestamp", DateTime.UtcNow},
+               { "partitionid", deviceId },
+               { "ttlinseconds", 86400  }  // 86400  seconds in a day
             }
     };
 
@@ -326,45 +327,6 @@ public static void UpdateExample(
 ```
 
 More information: [Use an alternate key to reference a record > Using the Entity class](use-alternate-key-reference-record.md#using-the-entity-class)
-
-This example shows using the `partitionId` optional parameter.
-
-```csharp
-/// <summary>
-/// Demonstrates updating elastic table row with partitionid set as optional Parameter.
-/// </summary>
-/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
-/// <param name="sensordataid">The unique identifier of the contoso_sensordata table.</param>
-/// <param name="deviceId">The value used as partitionid for the contoso_sensordata table. </param>
-/// <param name="sessionToken">The current session token</param>
-public static void UpdateExampleOptionalParameter(
-    IOrganizationService service, 
-    Guid sensordataid, 
-    string deviceId, 
-    ref string sessionToken)
-{
-
-    var entity = new Entity("contoso_sensordata", sensordataid)
-    {
-        Attributes = {
-            { "contoso_value", 60 },
-            { "contoso_timestamp", DateTime.UtcNow }
-        }
-    };
-
-    var request = new UpdateRequest { 
-        Target = entity,
-        ["partitionId"] = deviceId,
-        ["SessionToken"] = sessionToken
-    };
-
-    var response = (UpdateResponse)service.Execute(request);
-
-    // Capture the session token
-    sessionToken = response.Results["x-ms-session-token"].ToString();
-
-}
-```
 
 #### [Web API](#tab/webapi)
 
@@ -481,6 +443,10 @@ OData-Version: 4.0
 }
 ```
 
+You could also use the alternate key:
+
+`contoso_sensordatas(contoso_sensordataid=<Guid Value>,partitionId='deviceid-001')`
+
 ---
 
 ## Query rows of an elastic table
@@ -491,7 +457,7 @@ When you query the rows of an elastic table you will get best performance if you
 > [!NOTE]
 > When used this way, the parameter must use the name `partitionId` (capital 'I') rather than `partitionid` (all lower case).
 > 
-> When specifying a filter this way, you don't need to specify the filter criteria on `partitionid` in your query in the normal manner (using FetchXML, QueryExpression, or Web API `$filter`.)
+> When specifying a filter this way, you don't need to specify the filter criteria on `partitionid` in your query in the normal manner (using FetchXML `condition`, [QueryExpression](xref:Microsoft.Xrm.Sdk.Query.QueryExpression) [ConditionExpression](xref:Microsoft.Xrm.Sdk.Query.ConditionExpression), or Web API `$filter`.)
 > 
 > A filter on the `partitionid` value in the normal manner will not have the same performance benefits as specifying it with the `partitionId` shown below.
 
@@ -620,7 +586,7 @@ public static bool UpsertExample(IOrganizationService service, Guid id, ref stri
 
 #### [Web API](#tab/webapi)
 
-This example upserts a row in SensorData table with ID = `ff67610c-82ce-412c-85df-0bbc6521bb01` and `partitionid` = `'deviceid-001'`. 
+This example upserts a row in SensorData table with ID = `ff67610c-82ce-412c-85df-0bbc6521bb01` and `partitionid` = `'deviceid-001'`.
 
 > [!NOTE]
 > Upsert is identical to update except that the `If-Match: *` request header isn't included.
@@ -628,7 +594,7 @@ This example upserts a row in SensorData table with ID = `ff67610c-82ce-412c-85d
 **Request**
 
 ```http
-PATCH [Organization URI]/api/data/v9.2/sensordata(ff67610c-82ce-412c-85df-0bbc6521bb01)?partitionid="deviceid-001"
+PATCH [Organization URI]/api/data/v9.2/sensordata(ff67610c-82ce-412c-85df-0bbc6521bb01)
 Content-Type: application/json
 x-ms-session-token: hn76qq#7324
 OData-MaxVersion: 4.0  
@@ -654,6 +620,8 @@ OData-Version: 4.0
 ---
 
 ## Delete a record in an elastic table
+
+When deleting a record that uses a custom `partitionid` value, you must include the `partitionid` value.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -702,6 +670,10 @@ OData-Version: 4.0
 HTTP/1.1 204 No Content  
 OData-Version: 4.0
 ```
+
+You could also use the `partitionId` parameter:
+
+`sensordata(02d82842-f3f4-ed11-8848-000d3a993550)?partitionId=deviceid-001`
 
 ---
 

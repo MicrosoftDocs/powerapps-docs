@@ -2,7 +2,7 @@
 title: "Elastic tables (Preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/14/2022
+ms.date: 05/23/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -69,8 +69,10 @@ Elastic tables use Azure Cosmos DB partitioning to scale individual tables to me
 
 Azure Cosmos DB ensures that the rows in a table are divided into distinct subsets called [logical partitions](/azure/cosmos-db/partitioning-overview#logical-partitions) which are formed based on the value of the `partitionid` column of each row.
 
-> [!NOTE]
+> [!IMPORTANT]
 > To get the optimum performance available with elastic tables, you must choose and consistently apply a partitioning strategy. If you don't set a `partitionid` value for each row, the value will default to the primary key value and you will not be able to change it later.
+> 
+> When you use a custom `partitionid` value, the primary key value doesn't have a unique constraint. In other words, can create multiple records with the same primary key, but different `partitionid` values. It is important to understand that unique references for elastic tables is the combination of the primary key AND the `partitionid` value.
 
 #### Choosing a PartitionId value
 
@@ -106,7 +108,7 @@ More information: [Work with Session token](use-elastic-tables.md#work-with-sess
 
 Elastic tables do not support multi-record transactions. This means that for a single request execution, multiple write operations happening in same or different synchronous plugin stages are not transactional with each other.
 
-For example, if you have a synchronous plug-in step registered on the `PostOperation` stage of the `Create` message on an elastic table, any error in your plug-in will not roll back the created record in Dataverse. You should always avoid intentionally cancelling any operation by throwing a [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException) in the `PreOperation` or `PostOperation` synchronous stages. If the error is thrown after the `Main` operation, the request will return an error, but the data operation will succeed. If any write operations are started in the `PreOperation` stage, they will also succeed.
+For example, if you have a synchronous plug-in step registered on the `PostOperation` stage of the `Create` message on an elastic table, any error in your plug-in <u>will not</u> roll back the created record in Dataverse. You should always avoid intentionally cancelling any operation by throwing a [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException) in the `PreOperation` or `PostOperation` synchronous stages. If the error is thrown after the `Main` operation, the request will return an error, but the data operation will succeed. If any write operations are started in the `PreOperation` stage, they will also succeed.
 
 However, you should always apply validation rules in a plug-in registered for the `PreValidation` synchronous stage. This is the purpose of this stage. Even with elastic tables, the request will return an error and the data operation will not begin. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline)
 
@@ -123,7 +125,7 @@ More information:
 
 Dataverse automatically creates an integer column with the name **Time to live**, schema name `TTLInSeconds` and logical name `ttlinseconds`.
 
-When a value is set to this column, it defines the time in seconds after which row will expire and get deleted from database automatically.
+When a value is set to this column, it defines the time in seconds after which row will expire and get deleted from database automatically. If no value is set, the record will persist indefinitely, just like standard tables.
 
 ## Scenario
 
@@ -133,13 +135,7 @@ Imagine Contoso operates large number of Internet of Things (IoT) devices deploy
 
 Contoso can create an elastic table named `contoso_SensorData` to store and query large volume of IoT data. It can choose to use a string column named `contoso_DeviceId` as the partitionid value for each row corresponding to that device. Since `contoso_DeviceId` is unique to each device and Contoso performs queries mostly in context of a given `contoso_DeviceId`, it acts as a good partition strategy for entire dataset.
 
-<!-- ## Create elastic tables Moved to powerapps-docs\developer\data-platform\create-elastic-tables.md -->
 
-<!-- ## Elastic table data operations Moved to powerapps-docs\developer\data-platform\use-elastic-tables.md -->
-
-<!-- ## Query JSON columns in an elastic table Moved to powerapps-docs\developer\data-platform\query-json-columns-elastic-tables.md -->
-
-<!-- ## Bulk operations Moved to powerapps-docs\developer\data-platform\bulk-operations-elastic-tables.md -->
 
 
 
@@ -154,6 +150,10 @@ Dataverse does not return an error when you group data operations using SDK [Exe
 ### x-ms-session-token value not returned for delete operations
 
 Dataverse doesn't return the `x-ms-session-token` value for delete operations. More information: [Consistency level](#consistency-level)
+
+### partitionId optional parameter not available for all messages
+
+Any time that a record that uses a custom `partitionid` must be identified, such as for `Retrieve`, `Update`, or `Upsert` operations you need a way to reference the `partitionid` value. You can use the alternate key to reference the record. You should also be able to use the `partitionId` optional parameter style if you prefer. At this time, only `Retrieve` and `Delete` operations support using the `partitionId` optional parameter. More information: [Using partitionId parameter](use-elastic-tables.md#using-partitionid-parameter)
 
 ## Frequently Asked Questions (FAQ)
 

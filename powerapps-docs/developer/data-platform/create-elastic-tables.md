@@ -2,7 +2,7 @@
 title: "Create elastic tables (Preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to create elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/18/2022
+ms.date: 05/23/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -24,7 +24,7 @@ contributors:
 
 You can create elastic tables using [Power Apps](https://make.powerapps.com/) without writing code. More information: [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md).
 
-But sometimes it is useful to be able to create and update tables with code. These examples create a new elastic table `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `EntityMetadata.TableType` property with a value of `Elastic` to create an elastic table with code.
+But sometimes it is useful to be able to create and update table definitions with code. These examples create a new elastic table with the `SchemaName` `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `EntityMetadata.TableType` property with a value of `Elastic` to create an elastic table with code. When this is not set, the value will default to `Standard` and a standard table will be created.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -336,7 +336,7 @@ One-to-Many relationships are supported for elastic tables with following limita
    - The table being retrieved is a standard table and the lookup refers to an elastic table.
    - The elastic table `partitionid` value is set to a value other than the default value, the primary key value of the elastic table row. In other words, when you are using a custom `partitionid` value. More information: [Choosing a PartitionId value](elastic-tables.md#choosing-a-partitionid-value)
 
-Elastic tables supports having One-to-Many relationships and returning related rows using several different query languages, but there are some restrictions. More information : [Return related rows in a query](use-elastic-tables.md#return-related-rows-in-a-query)
+Elastic tables support One-to-Many relationships and related rows can be retrieved when retrieving a record. Related records can't be included in a query. More information : [Return related rows in a query](use-elastic-tables.md#return-related-rows-in-a-query)
 
 
 ## Next steps
@@ -344,7 +344,7 @@ Elastic tables supports having One-to-Many relationships and returning related r
 Learn how to perform data operations on elastic tables with code
 
 > [!div class="nextstepaction"]
-> [Create elastic tables](use-elastic-tables.md)<br/>
+> [Use elastic tables](use-elastic-tables.md)<br/>
 
 ### See also
 
