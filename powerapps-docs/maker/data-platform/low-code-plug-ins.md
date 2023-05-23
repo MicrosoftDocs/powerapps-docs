@@ -290,6 +290,7 @@ On the **Integrate** tab of the test page, you can learn how to invoke the insta
 3. Select your plug-in (it will have the unique name with a prefix).
 4. Provide values for all of the input parameters (if any).
 
+<!-- Bug discovered, commenting out until fixed
 ## Manage low-code plug-ins using solutions
 
 The Dataverse Accelerator app lets you identify an unmangaed solution to write all your changes to. This makes your plug-in assets easier to find and transfer between environments.
@@ -302,6 +303,7 @@ The Dataverse Accelerator app lets you identify an unmangaed solution to write a
 
 > [!TIP]
 > Make sure to change the solution if you are working on for different projects, so your assets are easier to find.
+-->
 
 ## Contacting Help + support
 
