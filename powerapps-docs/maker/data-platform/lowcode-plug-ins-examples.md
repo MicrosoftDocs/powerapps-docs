@@ -62,7 +62,9 @@ Implement server-side input validation, such as duplicate error detection, that 
 1. In the **Formula** box, enter this formula:
 
  ```powerapps-dot
-  If(!IsEmpty(Filter(Contacts,'Last Name'=ThisRecord.'Last Name' && 'First Name'=ThisRecord.'First Name')),Error("You have two contacts with the same first name and last name");)
+  If( !IsBlank(LookUp([@Contacts],'Last Name'=ThisRecord.'Last Name' && 'First Name'=ThisRecord.'First Name')),
+  	Error("You have two contacts with the same first name and last name")
+  )
   ```
 
 1. Select **Save**.
