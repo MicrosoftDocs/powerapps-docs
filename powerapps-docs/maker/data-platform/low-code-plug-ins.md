@@ -234,7 +234,7 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
    > [!NOTE]
    > Currently, you can't edit the parameters or formula on this page in the plug-ins wizard.
 
-1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)(#test-an-instant-low-code-plug-in)
+1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
 
 ### Plug-ins with connectors limitations
 
