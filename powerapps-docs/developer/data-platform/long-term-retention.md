@@ -299,6 +299,105 @@ class SampleDeletePlugin : IPlugin
     }
 }
 ```
+## Query retention policy and execution details
+Retention policy details are stored in the *RetentionConfig* table. Retention execution details are stored in *RetentionOperation* and *RetentionOperationDetail* table. You can query these tables to get the retention policy and execution details. 
+
+Below are few examples of sample FetchXML which can be used to query the retention details. FetchXml is a proprietary XML-based query language that can be used with SDK Assembly queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. More information: [Use FetchXml with Web API](../webapi/use-fetchxml-web-api.md)
+
+The following example shows a simple query to return all active retention policies for an email order by name.
+
+#### [FetchXml to retrieve all active retention policies ](#tab/sdk)
+
+```csharp
+string fetchXml = @"
+<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
+  <entity name='retentionconfig'>
+    <attribute name='retentionconfigid' />
+    <attribute name='name' />
+    <attribute name='createdon' />
+    <attribute name='starttime' />
+    <attribute name='recurrence' />
+    <attribute name='entitylogicalname' />
+    <attribute name='criteria' />
+    <order attribute='name' descending='false' />
+    <filter type='and'>
+      <condition attribute='entitylogicalname' operator='eq' value='email' />
+      <condition attribute='statuscode' operator='eq' value='10' />
+    </filter>
+  </entity>
+</fetch>";
+
+var query = new FetchExpression(fetchXml);
+
+EntityCollection results = svc.RetrieveMultiple(query);
+
+results.Entities.ToList().ForEach(x => {
+  Console.WriteLine(x.Attributes["name"]);
+});
+```
+
+### Other example FetchXML query strings
+
+In the following example, the **FetchXML** statement retrieves all paused retention policies for an email.  
+  
+```xml  
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="retentionconfig">
+    <attribute name="retentionconfigid" />
+    <attribute name="name" />
+    <attribute name="createdon" />
+    <attribute name="starttime" />
+    <attribute name="recurrence" />
+    <attribute name="entitylogicalname" />
+    <attribute name="criteria" />
+    <order attribute="name" descending="false" />
+    <filter type="and">
+      <condition attribute="entitylogicalname" operator="eq" value="email" />
+      <condition attribute="statuscode" operator="eq" value="20" />
+    </filter>
+  </entity>
+</fetch>
+```  
+
+In the following example, the **FetchXML** statement retrieves all retention operations for retention policy.
+```xml  
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="retentionoperation">
+    <attribute name="retentionoperationid" />
+    <attribute name="name" />
+    <attribute name="statuscode" />
+    <attribute name="statecode" />
+    <attribute name="starttime" />
+    <attribute name="rootentitylogicalname" />
+    <attribute name="endtime" />
+    <attribute name="criteria" />
+    <order attribute="name" descending="false" />
+    <filter type="and">
+      <condition attribute="retentionconfigid" operator="eq" uiname="All closed opportunities" uitype="retentionconfig" value="{35CC1317-20B7-4F4F-829D-5D9D5D77F763}" />
+    </filter>
+  </entity>
+</fetch>
+```
+
+In the following example, the **FetchXML** statement retrieves detailed retention operation details for retention operation.
+```xml  
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="retentionoperationdetail">
+    <attribute name="retentionoperationdetailid" />
+    <attribute name="name" />
+    <attribute name="createdon" />
+    <attribute name="retentionoperationid" />
+    <attribute name="retentioncount" />
+    <attribute name="isrootentity" />
+    <attribute name="failedcount" />
+    <attribute name="entitylogicalname" />
+    <order attribute="name" descending="false" />
+    <filter type="and">
+      <condition attribute="retentionoperationid" operator="eq"  uitype="retentionoperation" value="{35CC1317-20B7-4F4F-829D-5D9D5D77F763}"/>
+    </filter>
+  </entity>
+</fetch>
+```
 
 ---
 
