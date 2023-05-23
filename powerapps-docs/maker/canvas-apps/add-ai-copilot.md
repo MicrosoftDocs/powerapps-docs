@@ -75,7 +75,7 @@ With your [canvas app open for editing](edit-app.md):
 
 In addition to choosing the data source, you can also configure the following properties:
 
-- **Title**: Replaces the control's default title of **Have a question about this app? Ask Copilot.**, and can be updated to something more indicative of what this Copilot control can help app users with.
+- **Title**: Replaces the control's default title of **Have a question about this app? Ask Copilot**, and can be replaced with a more appropriate title that reflects the assistance that the Copilot control can provide to app users.
 
 - **Introductory message**: Replaces the control's default introductory message of **Copilot can answer questions about the data in this app, and help you navigate. It's always learning from your feedback**. The current description of the Copilot control can be enhanced to provide a more specific explanation of how it benefits app users.
 
