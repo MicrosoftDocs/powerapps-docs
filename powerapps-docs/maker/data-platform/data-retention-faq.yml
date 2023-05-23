@@ -50,7 +50,7 @@ sections:
 
    - question: Are data retention policies solution aware?
      answer: |
-        Yes. You can create a solution and add the policy from, from an environment, such as a development environment, to a test environment, and then to a production environment.
+        Yes. You can create a solution and add the policy from, from an environment, such as a development environment, to a test environment, and then to a production environment. More information: [Dataverse long term data retention overview](data-retention-overview.md#solution-aware-retention-policies)
 
    - question: In which regions is Dataverse long term retention available? 
      answer: | 
