@@ -63,14 +63,14 @@ AI Builder must be enabled for your environment to use the AI models or controls
 
 3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**. 
 
-   For more information, see [AI Copilot overview](../canvas-apps/ai-overview.md) 
+For more information, see [AI Copilot overview](../canvas-apps/ai-overview.md) 
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 
 Follow these procedures to make the most of the feature: 
 
 - Use everyday words to describe what your app should collect, track, list, or manage such as the following:
-  - “Collect RSVPs for the team birthday party,” 
+  - “Collect RSVPs for the team birthday party” 
   - “Track sales leads” 
 
 - Customize the data table with prompts such as:
