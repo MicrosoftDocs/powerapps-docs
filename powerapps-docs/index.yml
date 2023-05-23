@@ -159,6 +159,9 @@ conceptualContent:
         - text: Planning a Power Apps project
           url: guidance/planning/introduction.md
           itemType: reference
+        - text: Collaborating and co-developing apps
+          url: guidance/co-develop/overview.md
+          itemType: reference
         - text: "Ebook: Fusion development approach"
           url: guidance/fusion-dev-ebook/index.md
           itemType: overview
