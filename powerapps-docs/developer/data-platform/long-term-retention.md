@@ -307,14 +307,18 @@ class SampleDeletePlugin : IPlugin
     }
 }
 ```
-## Query retention policy and execution details
-Retention policy details are stored in the *RetentionConfig* table. Retention execution details are stored in *RetentionOperation* and *RetentionOperationDetail* table. You can query these tables to get the retention policy and execution details. 
 
-Below are few examples of sample FetchXML which can be used to query the retention details. FetchXml is a proprietary XML-based query language that can be used with SDK Assembly queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. More information: [Use FetchXml with Web API](../webapi/use-fetchxml-web-api.md)
+## Query retention policy and execution details
+
+Retention policy details are stored in the `RetentionConfig` table. Retention execution details are stored in `RetentionOperation` and `RetentionOperationDetail` tables. You can query these tables to get the retention policy and execution details.
+
+Below are a few examples of FetchXML which can be used to query the retention details. FetchXML is a proprietary XML-based query language that can be used with SDK based queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. More information: [Use FetchXml with Web API](../webapi/use-fetchxml-web-api.md)
 
 The following example shows a simple query to return all active retention policies for an email order by name.
 
-#### [FetchXml to retrieve all active retention policies ](#tab/sdk)
+### [SDK for .NET](#tab/sdk)
+
+#### FetchXml to retrieve all active retention policies
 
 ```csharp
 string fetchXml = @"
@@ -344,9 +348,11 @@ results.Entities.ToList().ForEach(x => {
 });
 ```
 
-### Other example FetchXML query strings
+---
 
-In the following example, the **FetchXML** statement retrieves all paused retention policies for an email.  
+### Other examples of FetchXML query strings
+
+In the following example, the FetchXML statement retrieves all paused retention policies for an email.  
   
 ```xml  
 <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
@@ -367,7 +373,8 @@ In the following example, the **FetchXML** statement retrieves all paused retent
 </fetch>
 ```  
 
-In the following example, the **FetchXML** statement retrieves all retention operations for retention policy.
+In the following example, the FetchXML statement retrieves all retention operations for retention policy.
+
 ```xml  
 <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
   <entity name="retentionoperation">
@@ -387,7 +394,8 @@ In the following example, the **FetchXML** statement retrieves all retention ope
 </fetch>
 ```
 
-In the following example, the **FetchXML** statement retrieves detailed retention operation details for retention operation.
+In the following example, the FetchXML statement retrieves detailed retention operation details for retention operation.
+
 ```xml  
 <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
   <entity name="retentionoperationdetail">
@@ -407,7 +415,8 @@ In the following example, the **FetchXML** statement retrieves detailed retentio
 </fetch>
 ```
 
-In the following example, the **FetchXML** statement retrieves failure details while executing retention operation.
+In the following example, the FetchXML statement retrieves failure details while executing retention operation.
+
 ```xml
 <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
   <entity name="retentionfailuredetail">
@@ -424,7 +433,6 @@ In the following example, the **FetchXML** statement retrieves failure details w
   </entity>
 </fetch>
 ```
----
 
 ### See also
 
