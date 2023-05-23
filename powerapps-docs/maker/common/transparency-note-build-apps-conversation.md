@@ -1,6 +1,6 @@
 ---
-title: Transparency note for AI Copilot
-description: The transparency note discusses AI Copilot and the key considerations for making use of this technology responsibly.
+title: Transparency note for building apps through conversation
+description: The transparency note discusses building apps through conversation and the key considerations for making use of this technology responsibly.
 ms.date: 5/23/2023
 ms.custom: 
   - transparency-note
@@ -10,13 +10,13 @@ ms.author: franklan
 ms.reviewer: mduelae
 ---
 
-# Transparency note for AI Copilot feature
+# Transparency note for build apps through conversation
 
- This transparency note describes the AI impact of AI Copilot feature. 
+This transparency note describes the AI impact of build apps through conversation feature.
 
-## What is AI Copilot? 
+## What is build apps through conversation? 
 
-AI Copilot is a feature in the Power Apps maker portal that allows you to describe the app that you want to build, and AI will design it for you. To start, you use natural language to tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.  The AI assistant is available from the Power Apps home screen. 
+Build apps through conversation is a feature in the Power Apps maker portal that allows you to describe the app that you want to build, and AI will design it for you. To start, you use natural language to tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.  The AI assistant is available from the Power Apps home screen. 
  
 ## What are the system’s capabilities? 
 
@@ -26,18 +26,18 @@ Using Azure OpenAI service as a foundation, Build apps through conversation cons
 
 ## What is the system’s intended use? 
 
- AI Copilot is intended to simplify your app creation process by automatically generating a data table on which your app will be built. AI-generated content may have mistakes. Make sure it's accurate and appropriate before using it. Read the full preview terms 
+Build apps through conversation is intended to simplify your app creation process by automatically generating a data table on which your app will be built. AI-generated content may have mistakes. Make sure it's accurate and appropriate before using it. Read the full preview terms 
 
 
-## How was AI Copilot evaluated? What metrics are used to measure performance? 
+## How was build apps through conversation evaluated? What metrics are used to measure performance? 
 
-AI Copilot underwent substantial testing before the feature was released in preview.  If you encounter issues with the content being generated, please submit feedback.  Your feedback will be used to improve Microsoft products and services. IT admins for your organization will be able to view and manage your feedback data. 
+Build apps through conversation underwent substantial testing before the feature was released in preview.  If you encounter issues with the content being generated, please submit feedback.  Your feedback will be used to improve Microsoft products and services. IT admins for your organization will be able to view and manage your feedback data. 
 
 For more information, see:
 - [Microsoft Global Data Privacy Notice for Employees, External Staff, Candidates and Guests](https://go.microsoft.com/fwlink/?linkid=2182930) 
 - [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy)
 
-## What are the limitations of AI Copilot? How can users minimize the impact of the AI Copilot limitations when using the system? 
+## What are the limitations of build apps through conversation? How can users minimize the impact of the build apps through conversation limitations when using the system? 
 
 Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
 

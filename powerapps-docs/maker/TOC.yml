@@ -2522,8 +2522,8 @@
   items:
   - name: Overview
     href: ./common/transparency-note.md
-  - name: Transparency note for AI Copilot
-    href: ./common/transparency-note-copilot.md
+  - name: Transparency note for build apps through conversation
+    href: ./common/transparency-build-apps-conversation.md
 - name: Resources
   items:
   - name: Blog
