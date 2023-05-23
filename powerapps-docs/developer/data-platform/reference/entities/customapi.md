@@ -1,7 +1,7 @@
 ---
 title: "CustomAPI table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomAPI table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -70,6 +70,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Description](#BKMK_Description)
 - [DisplayName](#BKMK_DisplayName)
 - [ExecutePrivilegeName](#BKMK_ExecutePrivilegeName)
+- [FxExpressionId](#BKMK_FxExpressionId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsFunction](#BKMK_IsFunction)
@@ -212,6 +213,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_FxExpressionId"></a> FxExpressionId
+
+**Added by**: msft_PowerfxRuleSolutionExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for fxexpression associated with Custom API.|
+|DisplayName|FxExpression|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|fxexpressionid|
+|RequiredLevel|None|
+|Targets|fxexpression|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -533,6 +550,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [FxExpressionIdName](#BKMK_FxExpressionIdName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -712,6 +730,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_FxExpressionIdName"></a> FxExpressionIdName
+
+**Added by**: msft_PowerfxRuleSolutionExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|fxexpressionidname|
+|MaxLength|100|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -1255,6 +1291,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [sdkmessage_customapi](#BKMK_sdkmessage_customapi)
 - [plugintype_customapi](#BKMK_plugintype_customapi)
 - [powerfxrule_customapi](#BKMK_powerfxrule_customapi)
+- [fxexpression_customapi](#BKMK_fxexpression_customapi)
 
 
 ### <a name="BKMK_lk_customapi_createdby"></a> lk_customapi_createdby
@@ -1316,6 +1353,12 @@ See the [plugintype_customapi](plugintype.md#BKMK_plugintype_customapi) one-to-m
 **Added by**: msft_PowerfxRuleSolution Solution
 
 See the [powerfxrule_customapi](powerfxrule.md#BKMK_powerfxrule_customapi) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
+
+### <a name="BKMK_fxexpression_customapi"></a> fxexpression_customapi
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [fxexpression_customapi](fxexpression.md#BKMK_fxexpression_customapi) one-to-many relationship for the [fxexpression](fxexpression.md) table/entity.
 
 ### See also
 

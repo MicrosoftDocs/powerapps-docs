@@ -1,7 +1,7 @@
 ---
 title: "SdkMessageProcessingStep table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SdkMessageProcessingStep table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -62,6 +62,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EventHandler](#BKMK_EventHandler)
 - [EventHandlerTypeCode](#BKMK_EventHandlerTypeCode)
 - [FilteringAttributes](#BKMK_FilteringAttributes)
+- [FxExpressionId](#BKMK_FxExpressionId)
 - [ImpersonatingUserId](#BKMK_ImpersonatingUserId)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [InvocationSource](#BKMK_InvocationSource)
@@ -263,6 +264,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100000|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_FxExpressionId"></a> FxExpressionId
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for fxexpression associated with SdkMessageProcessingStep.|
+|DisplayName|fxexpressionid|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|fxexpressionid|
+|RequiredLevel|None|
+|Targets|fxexpression|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ImpersonatingUserId"></a> ImpersonatingUserId
@@ -612,6 +629,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [CustomizationLevel](#BKMK_CustomizationLevel)
 - [EventHandlerName](#BKMK_EventHandlerName)
+- [FxExpressionIdName](#BKMK_FxExpressionIdName)
 - [ImpersonatingUserIdName](#BKMK_ImpersonatingUserIdName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
@@ -773,6 +791,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|eventhandlername|
 |MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_FxExpressionIdName"></a> FxExpressionIdName
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|fxexpressionidname|
+|MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
 
@@ -1097,6 +1133,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [createdby_sdkmessageprocessingstep](#BKMK_createdby_sdkmessageprocessingstep)
 - [plugintypeid_sdkmessageprocessingstep](#BKMK_plugintypeid_sdkmessageprocessingstep)
 - [powerfxrule_sdkmessageprocessingstep](#BKMK_powerfxrule_sdkmessageprocessingstep)
+- [fxexpression_sdkmessageprocessingstep](#BKMK_fxexpression_sdkmessageprocessingstep)
 
 
 ### <a name="BKMK_plugintype_sdkmessageprocessingstep"></a> plugintype_sdkmessageprocessingstep
@@ -1152,6 +1189,12 @@ See the [plugintypeid_sdkmessageprocessingstep](plugintype.md#BKMK_plugintypeid_
 **Added by**: msft_PowerfxRuleSolution Solution
 
 See the [powerfxrule_sdkmessageprocessingstep](powerfxrule.md#BKMK_powerfxrule_sdkmessageprocessingstep) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
+
+### <a name="BKMK_fxexpression_sdkmessageprocessingstep"></a> fxexpression_sdkmessageprocessingstep
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [fxexpression_sdkmessageprocessingstep](fxexpression.md#BKMK_fxexpression_sdkmessageprocessingstep) one-to-many relationship for the [fxexpression](fxexpression.md) table/entity.
 
 ### See also
 

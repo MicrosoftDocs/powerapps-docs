@@ -1,7 +1,7 @@
 ---
 title: "SLA table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SLA table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1240,7 +1240,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10128|BulkArchiveOperation||
 |10129|BulkArchiveOperationDetail|Holds operation details values for entities for archival|
 |10130|EnableArchivalRequest||
-|10131|MetadataForArchival|Holds  metadata values for entities for archival|
+|10131|MetadataForArchival|Holds  metadata values for entities for retention|
 |10132|ReconciliationEntityInfo||
 |10133|ReconciliationInfo||
 |10134|RetentionCleanupInfo||
@@ -1309,6 +1309,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10365|Mobile App|Mobile App|
 |10389|Work Queue||
 |10390|Work Queue Item||
+|10391|FxExpression||
 
 
 

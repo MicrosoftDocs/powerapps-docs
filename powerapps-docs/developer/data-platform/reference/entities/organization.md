@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -64,9 +64,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AllowAutoUnsubscribe](#BKMK_AllowAutoUnsubscribe)
 - [AllowAutoUnsubscribeAcknowledgement](#BKMK_AllowAutoUnsubscribeAcknowledgement)
 - [AllowClientMessageBarAd](#BKMK_AllowClientMessageBarAd)
+- [AllowConnectorsOnPowerFXActions](#BKMK_AllowConnectorsOnPowerFXActions)
 - [AllowedIpRangeForFirewall](#BKMK_AllowedIpRangeForFirewall)
 - [AllowedIpRangeForStorageAccessSignatures](#BKMK_AllowedIpRangeForStorageAccessSignatures)
 - [AllowedMimeTypes](#BKMK_AllowedMimeTypes)
+- [AllowedServiceTagsForFirewall](#BKMK_AllowedServiceTagsForFirewall)
 - [AllowEntityOnlyAudit](#BKMK_AllowEntityOnlyAudit)
 - [AllowLeadingWildcardsInGridSearch](#BKMK_AllowLeadingWildcardsInGridSearch)
 - [AllowLeadingWildcardsInQuickFind](#BKMK_AllowLeadingWildcardsInQuickFind)
@@ -799,6 +801,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_AllowConnectorsOnPowerFXActions"></a> AllowConnectorsOnPowerFXActions
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information on whether connectors on power fx actions is enabled.|
+|DisplayName|Enable connectors on power fx actions.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|allowconnectorsonpowerfxactions|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AllowConnectorsOnPowerFXActions Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
+
+
+
 ### <a name="BKMK_AllowedIpRangeForFirewall"></a> AllowedIpRangeForFirewall
 
 **Added by**: AuthenticationExtension Solution
@@ -849,6 +876,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|allowedmimetypes|
 |MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_AllowedServiceTagsForFirewall"></a> AllowedServiceTagsForFirewall
+
+**Added by**: AuthenticationExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies the List of Service Tags that should be allowed by the firewall.|
+|DisplayName|List of Service Tags to be allowed by the firewall rule|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|allowedservicetagsforfirewall|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -9605,7 +9650,6 @@ Listed by **SchemaName**.
 - [organization_organizationdatasyncsubscriptionfnotable](#BKMK_organization_organizationdatasyncsubscriptionfnotable)
 - [organization_organizationdatasyncfnostate](#BKMK_organization_organizationdatasyncfnostate)
 - [organization_organizationdatasyncstate](#BKMK_organization_organizationdatasyncstate)
-- [organization_bulkarchiveoperationdetail](#BKMK_organization_bulkarchiveoperationdetail)
 - [organization_metadataforarchival](#BKMK_organization_metadataforarchival)
 - [organization_retentionoperationdetail](#BKMK_organization_retentionoperationdetail)
 - [organization_msdyn_appinsightsmetadata](#BKMK_organization_msdyn_appinsightsmetadata)
@@ -11246,23 +11290,6 @@ Same as the [organization_organizationdatasyncstate](organizationdatasyncstate.m
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organization_organizationdatasyncstate|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_organization_bulkarchiveoperationdetail"></a> organization_bulkarchiveoperationdetail
-
-**Added by**: Active Solution Solution
-
-Same as the [organization_bulkarchiveoperationdetail](bulkarchiveoperationdetail.md#BKMK_organization_bulkarchiveoperationdetail) many-to-one relationship for the [bulkarchiveoperationdetail](bulkarchiveoperationdetail.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkarchiveoperationdetail|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_bulkarchiveoperationdetail|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

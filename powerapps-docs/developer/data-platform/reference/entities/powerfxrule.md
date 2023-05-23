@@ -1,7 +1,7 @@
 ---
 title: "powerfxrule table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the powerfxrule table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -65,6 +65,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [Category](#BKMK_Category)
 - [CompiledExpression](#BKMK_CompiledExpression)
+- [Dependencies](#BKMK_Dependencies)
 - [EntityLogicalName](#BKMK_EntityLogicalName)
 - [Expression](#BKMK_Expression)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -116,6 +117,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|compiledexpression|
 |MaxLength|200000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_Dependencies"></a> Dependencies
+
+|Property|Value|
+|--------|-----|
+|Description|The dependencies for powerfx expressions|
+|DisplayName|PowerFx Expression dependencies|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|dependencies|
+|MaxLength|20000|
 |RequiredLevel|None|
 |Type|Memo|
 
@@ -1069,10 +1086,10 @@ Same as the [powerfxrule_customapi](customapi.md#BKMK_powerfxrule_customapi) man
 |ReferencingEntity|customapi|
 |ReferencingAttribute|powerfxruleid|
 |IsHierarchical|False|
-|IsCustomizable|False|
+|IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|powerfxrule_customapi|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

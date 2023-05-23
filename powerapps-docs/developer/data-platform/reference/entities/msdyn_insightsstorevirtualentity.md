@@ -1,7 +1,7 @@
 ---
 title: "msdyn_InsightsStoreVirtualEntity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_InsightsStoreVirtualEntity table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,19 +25,15 @@ Insights Store Virtual Entity
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Archive|<xref href="Microsoft.Dynamics.CRM.Archive?text=Archive Action" />|<xref:Microsoft.Crm.Sdk.Messages.ArchiveRequest>|
-|BulkArchive|<xref href="Microsoft.Dynamics.CRM.BulkArchive?text=BulkArchive Action" />|<xref:Microsoft.Crm.Sdk.Messages.BulkArchiveRequest>|
 |Create|POST [*org URI*]/api/data/v9.2/msdyn_insightsstorevirtualentities<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE [*org URI*]/api/data/v9.2/msdyn_insightsstorevirtualentities(*msdyn_insightsstorevirtualentityid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|PurgeArchivedContent|<xref href="Microsoft.Dynamics.CRM.PurgeArchivedContent?text=PurgeArchivedContent Action" />|<xref:Microsoft.Crm.Sdk.Messages.PurgeArchivedContentRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.2/msdyn_insightsstorevirtualentities(*msdyn_insightsstorevirtualentityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.2/msdyn_insightsstorevirtualentities<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |SetState|PATCH [*org URI*]/api/data/v9.2/msdyn_insightsstorevirtualentities(*msdyn_insightsstorevirtualentityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.2/msdyn_insightsstorevirtualentities(*msdyn_insightsstorevirtualentityid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-|ValidateArchiveConfig|<xref href="Microsoft.Dynamics.CRM.ValidateArchiveConfig?text=ValidateArchiveConfig Action" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateArchiveConfigRequest>|
 
 ## Properties
 

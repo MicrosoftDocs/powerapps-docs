@@ -44,10 +44,6 @@
   href: appnotification.md
 - name: Appointment
   href: appointment.md
-- name: ArchiveCleanupInfo
-  href: archivecleanupinfo.md
-- name: ArchiveCleanupOperation
-  href: archivecleanupoperation.md
 - name: AsyncOperation
   href: asyncoperation.md
 - name: Attribute
@@ -62,14 +58,6 @@
   href: bot.md
 - name: botcomponent
   href: botcomponent.md
-- name: BulkArchiveConfig
-  href: bulkarchiveconfig.md
-- name: BulkArchiveFailureDetail
-  href: bulkarchivefailuredetail.md
-- name: BulkArchiveOperation
-  href: bulkarchiveoperation.md
-- name: BulkArchiveOperationDetail
-  href: bulkarchiveoperationdetail.md
 - name: BulkDeleteFailure
   href: bulkdeletefailure.md
 - name: BulkDeleteOperation
@@ -158,8 +146,6 @@
   href: email.md
 - name: EmailServerProfile
   href: emailserverprofile.md
-- name: enablearchivalrequest
-  href: enablearchivalrequest.md
 - name: Entity
   href: entity.md
 - name: EntityAnalyticsConfig
@@ -210,6 +196,8 @@
   href: flowmachinenetwork.md
 - name: flowsession
   href: flowsession.md
+- name: fxexpression
+  href: fxexpression.md
 - name: Goal
   href: goal.md
 - name: GoalRollupQuery
@@ -520,10 +508,6 @@
   href: recentlyused.md
 - name: RecommendedDocument
   href: recommendeddocument.md
-- name: reconciliationentityinfo
-  href: reconciliationentityinfo.md
-- name: reconciliationinfo
-  href: reconciliationinfo.md
 - name: RecordFilter
   href: recordfilter.md
 - name: RecurrenceRule
@@ -538,10 +522,6 @@
   href: report.md
 - name: ReportCategory
   href: reportcategory.md
-- name: retentioncleanupinfo
-  href: retentioncleanupinfo.md
-- name: retentioncleanupoperation
-  href: retentioncleanupoperation.md
 - name: retentionconfig
   href: retentionconfig.md
 - name: retentionfailuredetail

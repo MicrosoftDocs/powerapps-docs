@@ -1,7 +1,7 @@
 ---
 title: "Recurring Appointment (RecurringAppointmentMaster)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Recurring Appointment (RecurringAppointmentMaster)  table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -24,7 +24,6 @@ The Master appointment of a recurring appointment series.
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
 |AddRecurrence|<xref href="Microsoft.Dynamics.CRM.AddRecurrence?text=AddRecurrence Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddRecurrenceRequest>|
-|Archive|<xref href="Microsoft.Dynamics.CRM.Archive?text=Archive Action" />|<xref:Microsoft.Crm.Sdk.Messages.ArchiveRequest>|
 |Assign|PATCH [*org URI*]/api/data/v9.2/recurringappointmentmasters(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Book|<xref href="Microsoft.Dynamics.CRM.Book?text=Book Action" />|<xref:Microsoft.Crm.Sdk.Messages.BookRequest>|
 |Create|POST [*org URI*]/api/data/v9.2/recurringappointmentmasters<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|

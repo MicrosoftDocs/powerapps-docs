@@ -1,7 +1,7 @@
 ---
 title: "solutioncomponentconfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the solutioncomponentconfiguration table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -57,6 +57,7 @@ search.audienceType:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AllowExportKeyWithoutPrefix](#BKMK_AllowExportKeyWithoutPrefix)
 - [EntityId](#BKMK_EntityId)
 - [FileFormat](#BKMK_FileFormat)
 - [FileScope](#BKMK_FileScope)
@@ -73,6 +74,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_AllowExportKeyWithoutPrefix"></a> AllowExportKeyWithoutPrefix
+
+|Property|Value|
+|--------|-----|
+|Description|Boolean that indicates if an export key without a prefix is allowed.|
+|DisplayName|Allow Export Key Without Prefix|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|allowexportkeywithoutprefix|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### AllowExportKeyWithoutPrefix Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
 
 
 ### <a name="BKMK_EntityId"></a> EntityId

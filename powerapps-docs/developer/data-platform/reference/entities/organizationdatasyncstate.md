@@ -1,7 +1,7 @@
 ---
 title: "organizationdatasyncstate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the organizationdatasyncstate table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -79,6 +79,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [paginationcookie](#BKMK_paginationcookie)
 - [pagingcookie](#BKMK_pagingcookie)
 - [partitionid](#BKMK_partitionid)
+- [partitionssyncstatedata](#BKMK_partitionssyncstatedata)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -456,6 +457,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|300|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_partitionssyncstatedata"></a> partitionssyncstatedata
+
+|Property|Value|
+|--------|-----|
+|Description|SyncStatesForPartitions|
+|DisplayName|partitionssyncstatedata|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|partitionssyncstatedata|
+|MaxLength|1000000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_statecode"></a> statecode

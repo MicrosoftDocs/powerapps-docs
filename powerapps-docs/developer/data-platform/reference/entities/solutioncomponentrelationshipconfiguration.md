@@ -1,7 +1,7 @@
 ---
 title: "solutioncomponentrelationshipconfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the solutioncomponentrelationshipconfiguration table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -64,6 +64,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [name](#BKMK_name)
+- [NoMissingDependencyForApiManagedSolution](#BKMK_NoMissingDependencyForApiManagedSolution)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [PrimaryEntityDependencyType](#BKMK_PrimaryEntityDependencyType)
 - [RespectParentRootComponentBehavior](#BKMK_RespectParentRootComponentBehavior)
@@ -207,6 +208,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
+
+
+### <a name="BKMK_NoMissingDependencyForApiManagedSolution"></a> NoMissingDependencyForApiManagedSolution
+
+|Property|Value|
+|--------|-----|
+|Description|Boolean that indicates if this relationship can be excluded from the export as a missing dependency if the target is part of an api managed solution.|
+|DisplayName|Do Not Export As Missing Dependency For Api Managed Solution|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|nomissingdependencyforapimanagedsolution|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### NoMissingDependencyForApiManagedSolution Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn

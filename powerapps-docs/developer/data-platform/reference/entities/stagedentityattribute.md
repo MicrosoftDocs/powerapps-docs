@@ -1,7 +1,7 @@
 ---
 title: "StagedEntityAttribute table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the StagedEntityAttribute table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,24 +25,20 @@ Stores staged entity attribute metadata to be processed in async.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Archive|<xref href="Microsoft.Dynamics.CRM.Archive?text=Archive Action" />|<xref:Microsoft.Crm.Sdk.Messages.ArchiveRequest>|
-|BulkArchive|<xref href="Microsoft.Dynamics.CRM.BulkArchive?text=BulkArchive Action" />|<xref:Microsoft.Crm.Sdk.Messages.BulkArchiveRequest>|
-|BulkRetain|<xref href="Microsoft.Dynamics.CRM.BulkRetain?text=BulkRetain Action" />|<xref:Microsoft.Crm.Sdk.Messages.BulkRetainRequest>|
+|BulkRetain|<xref href="Microsoft.Dynamics.CRM.BulkRetain?text=BulkRetain Action" />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="BulkRetain"|
 |Create|POST [*org URI*]/api/data/v9.2/stagedentityattributes<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE [*org URI*]/api/data/v9.2/stagedentityattributes(*stagedentityattributeid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|PurgeArchivedContent|<xref href="Microsoft.Dynamics.CRM.PurgeArchivedContent?text=PurgeArchivedContent Action" />|<xref:Microsoft.Crm.Sdk.Messages.PurgeArchivedContentRequest>|
-|PurgeRetainedContent|<xref href="Microsoft.Dynamics.CRM.PurgeRetainedContent?text=PurgeRetainedContent Action" />|<xref:Microsoft.Crm.Sdk.Messages.PurgeRetainedContentRequest>|
-|Retain|<xref href="Microsoft.Dynamics.CRM.Retain?text=Retain Action" />|<xref:Microsoft.Crm.Sdk.Messages.RetainRequest>|
+|PurgeRetainedContent|<xref href="Microsoft.Dynamics.CRM.PurgeRetainedContent?text=PurgeRetainedContent Action" />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="PurgeRetainedContent"|
+|Retain|<xref href="Microsoft.Dynamics.CRM.Retain?text=Retain Action" />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="Retain"|
 |Retrieve|GET [*org URI*]/api/data/v9.2/stagedentityattributes(*stagedentityattributeid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.2/stagedentityattributes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RollbackRetain|<xref href="Microsoft.Dynamics.CRM.RollbackRetain?text=RollbackRetain Action" />|<xref:Microsoft.Crm.Sdk.Messages.RollbackRetainRequest>|
+|RollbackRetain|<xref href="Microsoft.Dynamics.CRM.RollbackRetain?text=RollbackRetain Action" />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="RollbackRetain"|
 |SetState|PATCH [*org URI*]/api/data/v9.2/stagedentityattributes(*stagedentityattributeid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.2/stagedentityattributes(*stagedentityattributeid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-|ValidateArchiveConfig|<xref href="Microsoft.Dynamics.CRM.ValidateArchiveConfig?text=ValidateArchiveConfig Action" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateArchiveConfigRequest>|
-|ValidateRetentionConfig|<xref href="Microsoft.Dynamics.CRM.ValidateRetentionConfig?text=ValidateRetentionConfig Action" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateRetentionConfigRequest>|
+|ValidateRetentionConfig|<xref href="Microsoft.Dynamics.CRM.ValidateRetentionConfig?text=ValidateRetentionConfig Action" />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="ValidateRetentionConfig"|
 
 ## Properties
 

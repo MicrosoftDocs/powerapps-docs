@@ -1,7 +1,7 @@
 ---
 title: "Team table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Team table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -24,7 +24,6 @@ Collection of system users that routinely collaborate. Teams can be used to simp
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
 |AddMembersTeam|<xref href="Microsoft.Dynamics.CRM.AddMembersTeam?text=AddMembersTeam Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddMembersTeamRequest>|
-|Archive|<xref href="Microsoft.Dynamics.CRM.Archive?text=Archive Action" />|<xref:Microsoft.Crm.Sdk.Messages.ArchiveRequest>|
 |ConvertOwnerTeamToAccessTeam|<xref href="Microsoft.Dynamics.CRM.ConvertOwnerTeamToAccessTeam?text=ConvertOwnerTeamToAccessTeam Action" />|<xref:Microsoft.Crm.Sdk.Messages.ConvertOwnerTeamToAccessTeamRequest>|
 |Create|POST [*org URI*]/api/data/v9.2/teams<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.2/teams(*teamid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -1003,16 +1002,6 @@ Listed by **SchemaName**.
 - [team_keyvaultreference](#BKMK_team_keyvaultreference)
 - [team_managedidentity](#BKMK_team_managedidentity)
 - [team_teammobileofflineprofilemembership_TeamId](#BKMK_team_teammobileofflineprofilemembership_TeamId)
-- [team_archivecleanupinfo](#BKMK_team_archivecleanupinfo)
-- [team_archivecleanupoperation](#BKMK_team_archivecleanupoperation)
-- [team_bulkarchiveconfig](#BKMK_team_bulkarchiveconfig)
-- [team_bulkarchivefailuredetail](#BKMK_team_bulkarchivefailuredetail)
-- [team_bulkarchiveoperation](#BKMK_team_bulkarchiveoperation)
-- [team_enablearchivalrequest](#BKMK_team_enablearchivalrequest)
-- [team_reconciliationentityinfo](#BKMK_team_reconciliationentityinfo)
-- [team_reconciliationinfo](#BKMK_team_reconciliationinfo)
-- [team_retentioncleanupinfo](#BKMK_team_retentioncleanupinfo)
-- [team_retentioncleanupoperation](#BKMK_team_retentioncleanupoperation)
 - [team_retentionconfig](#BKMK_team_retentionconfig)
 - [team_retentionfailuredetail](#BKMK_team_retentionfailuredetail)
 - [team_retentionoperation](#BKMK_team_retentionoperation)
@@ -1063,6 +1052,7 @@ Listed by **SchemaName**.
 - [team_msdyn_mobileapp](#BKMK_team_msdyn_mobileapp)
 - [team_workqueue](#BKMK_team_workqueue)
 - [team_workqueueitem](#BKMK_team_workqueueitem)
+- [team_fxexpression](#BKMK_team_fxexpression)
 
 
 ### <a name="BKMK_team_principalobjectattributeaccess_principalid"></a> team_principalobjectattributeaccess_principalid
@@ -2748,176 +2738,6 @@ Same as the [team_teammobileofflineprofilemembership_TeamId](teammobileofflinepr
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_team_archivecleanupinfo"></a> team_archivecleanupinfo
-
-**Added by**: Active Solution Solution
-
-Same as the [team_archivecleanupinfo](archivecleanupinfo.md#BKMK_team_archivecleanupinfo) many-to-one relationship for the [archivecleanupinfo](archivecleanupinfo.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|archivecleanupinfo|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_archivecleanupinfo|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_archivecleanupoperation"></a> team_archivecleanupoperation
-
-**Added by**: Active Solution Solution
-
-Same as the [team_archivecleanupoperation](archivecleanupoperation.md#BKMK_team_archivecleanupoperation) many-to-one relationship for the [archivecleanupoperation](archivecleanupoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|archivecleanupoperation|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_archivecleanupoperation|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_bulkarchiveconfig"></a> team_bulkarchiveconfig
-
-**Added by**: Active Solution Solution
-
-Same as the [team_bulkarchiveconfig](bulkarchiveconfig.md#BKMK_team_bulkarchiveconfig) many-to-one relationship for the [bulkarchiveconfig](bulkarchiveconfig.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkarchiveconfig|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_bulkarchiveconfig|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_bulkarchivefailuredetail"></a> team_bulkarchivefailuredetail
-
-**Added by**: Active Solution Solution
-
-Same as the [team_bulkarchivefailuredetail](bulkarchivefailuredetail.md#BKMK_team_bulkarchivefailuredetail) many-to-one relationship for the [bulkarchivefailuredetail](bulkarchivefailuredetail.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkarchivefailuredetail|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_bulkarchivefailuredetail|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_bulkarchiveoperation"></a> team_bulkarchiveoperation
-
-**Added by**: Active Solution Solution
-
-Same as the [team_bulkarchiveoperation](bulkarchiveoperation.md#BKMK_team_bulkarchiveoperation) many-to-one relationship for the [bulkarchiveoperation](bulkarchiveoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bulkarchiveoperation|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_bulkarchiveoperation|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_enablearchivalrequest"></a> team_enablearchivalrequest
-
-**Added by**: Active Solution Solution
-
-Same as the [team_enablearchivalrequest](enablearchivalrequest.md#BKMK_team_enablearchivalrequest) many-to-one relationship for the [enablearchivalrequest](enablearchivalrequest.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|enablearchivalrequest|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_enablearchivalrequest|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_reconciliationentityinfo"></a> team_reconciliationentityinfo
-
-**Added by**: Active Solution Solution
-
-Same as the [team_reconciliationentityinfo](reconciliationentityinfo.md#BKMK_team_reconciliationentityinfo) many-to-one relationship for the [reconciliationentityinfo](reconciliationentityinfo.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|reconciliationentityinfo|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_reconciliationentityinfo|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_reconciliationinfo"></a> team_reconciliationinfo
-
-**Added by**: Active Solution Solution
-
-Same as the [team_reconciliationinfo](reconciliationinfo.md#BKMK_team_reconciliationinfo) many-to-one relationship for the [reconciliationinfo](reconciliationinfo.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|reconciliationinfo|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_reconciliationinfo|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_retentioncleanupinfo"></a> team_retentioncleanupinfo
-
-**Added by**: Active Solution Solution
-
-Same as the [team_retentioncleanupinfo](retentioncleanupinfo.md#BKMK_team_retentioncleanupinfo) many-to-one relationship for the [retentioncleanupinfo](retentioncleanupinfo.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|retentioncleanupinfo|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_retentioncleanupinfo|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_retentioncleanupoperation"></a> team_retentioncleanupoperation
-
-**Added by**: Active Solution Solution
-
-Same as the [team_retentioncleanupoperation](retentioncleanupoperation.md#BKMK_team_retentioncleanupoperation) many-to-one relationship for the [retentioncleanupoperation](retentioncleanupoperation.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|retentioncleanupoperation|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_retentioncleanupoperation|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_team_retentionconfig"></a> team_retentionconfig
 
 **Added by**: Active Solution Solution
@@ -3764,6 +3584,23 @@ Same as the [team_workqueueitem](workqueueitem.md#BKMK_team_workqueueitem) many-
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|team_workqueueitem|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_fxexpression"></a> team_fxexpression
+
+**Added by**: Active Solution Solution
+
+Same as the [team_fxexpression](fxexpression.md#BKMK_team_fxexpression) many-to-one relationship for the [fxexpression](fxexpression.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|fxexpression|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_fxexpression|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

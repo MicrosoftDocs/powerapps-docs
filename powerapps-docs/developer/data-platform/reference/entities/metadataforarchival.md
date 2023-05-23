@@ -1,7 +1,7 @@
 ---
 title: "MetadataForArchival table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the MetadataForArchival table/entity."
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -16,7 +16,7 @@ search.audienceType:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Holds  metadata values for entities for archival
+Holds  metadata values for entities for retention
 
 **Added by**: Retention Base Components Solution
 
@@ -61,6 +61,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsAvailableForArchival](#BKMK_IsAvailableForArchival)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [IsReadyForArchival](#BKMK_IsReadyForArchival)
 - [MetadataForArchivalId](#BKMK_MetadataForArchivalId)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -76,8 +77,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The metadata for archival.|
-|DisplayName|Metadata For Archival|
+|Description|The metadata for retention.|
+|DisplayName|Metadata For Retention|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -110,8 +111,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Is available for archival.|
-|DisplayName|Is available for archival.|
+|Description|Is available for retention.|
+|DisplayName|Is available for retention.|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|isavailableforarchival|
@@ -142,6 +143,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|iscustomizable|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
+
+
+### <a name="BKMK_IsReadyForArchival"></a> IsReadyForArchival
+
+|Property|Value|
+|--------|-----|
+|Description|Is ready for retention.|
+|DisplayName|Is ready for retention.|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isreadyforarchival|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsReadyForArchival Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_MetadataForArchivalId"></a> MetadataForArchivalId
