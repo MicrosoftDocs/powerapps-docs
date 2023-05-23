@@ -2518,6 +2518,12 @@
       href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
     - name: Use dashboards
       href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
+- name: Responsible AI transparency notes 
+  items:
+  - name: Overview
+    href: /common/transparency-note.md
+  - name: Transparency note for AI Copilot
+    href: ./common/transparency-note-copilot.md
 - name: Resources
   items:
   - name: Blog
