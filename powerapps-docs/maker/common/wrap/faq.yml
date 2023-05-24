@@ -56,7 +56,7 @@ sections:
       - question: |
           How do I configure my mobile app for distribution through Microsoft Intune?
         answer: |
-          Wrap wizard automatically configures your app for distribution with [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). To troubleshoot, you can manually grant all the canvas app(s) that you intend to wrap *Microsoft Mobile Application Management* API permission manually. More information: [Configuring the API permissions for your app manually](wrap-how-to.md#Configuring-the-API-permissions-for-your-app-manually).
+          Wrap wizard automatically configures your app for distribution with [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). To troubleshoot, you can manually grant all the canvas app(s) that you intend to wrap *Microsoft Mobile Application Management* API permission manually. More information: [Configuring the API permissions for your app manually](wrap-how-to.md#wrap-how-to.md#configuring-the-api-permissions-for-your-app-manually-optional).
 
       - question: |
           Do I need to rewrap and redistribute my mobile app frequently?
