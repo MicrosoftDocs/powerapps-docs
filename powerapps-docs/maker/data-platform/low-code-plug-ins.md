@@ -67,8 +67,8 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
 ## Prerequisites for creating a low-code plug-in
 
 - System administrator or system customizer security role membership in the Power Platform environment.
-- Dataverse Accelerator solution. [Download and install the Dataverse Accelerator from AppSource](https://aka.ms/DataverseAccelerator/AppSource).
-    1. Sign in to [AppSource](https://aka.ms/DataverseAccelerator/AppSource).
+- Dataverse Accelerator solution. [Download and install the Dataverse Accelerator from AppSource](https://aka.ms/dvaccelerator).
+    1. Sign in to [AppSource](https://aka.ms/dvaccelerator).
     1. Select **Get it now**.
     1. The **Dynamics 365 apps** page in Power Platform admin center appears.
     1. Select the environment you want.
