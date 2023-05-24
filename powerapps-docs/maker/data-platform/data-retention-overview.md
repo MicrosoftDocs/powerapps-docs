@@ -5,7 +5,7 @@ author: Mattp123
 ms.service: powerapps
 ms.author: matp
 ms.topic: overview
-ms.date: 05/09/2023
+ms.date: 05/24/2023
 ms.custom: template-overview
 ---
 # Dataverse long term data retention overview (preview)
@@ -66,6 +66,8 @@ Admins set retention policies on tables when the application maker has enabled l
 ### Long term data retention and existing delete action and plugins
 
 All the existing delete action cascade relationships and plugins for tables are executed when a data retention policy is run on the table.
+
+More information: [Long-term data retention](../../developer/data-platform/long-term-retention.md)
 
 ## Storage capacity reports
 
