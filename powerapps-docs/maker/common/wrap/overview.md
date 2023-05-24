@@ -97,7 +97,7 @@ The following list explains what you'll need before you can start using wrap fea
 
 Wrap involves multiple components across Power Apps, App Center, and third-party platforms such as iOS and Android. Hence, it becomes important to understand the components involved while working with wrap functionality in Power Apps.
 
-### App Center location
+### App center location
 
 Container in App Center to store the built packages for mobile app distribution. Build output types differ depending on the target platform you select.
 
