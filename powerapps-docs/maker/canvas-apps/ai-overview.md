@@ -75,3 +75,7 @@ Follow these steps to disable **Copilot** for your environment.
 2. In the left-side navigation pane **Environment**.
 3. Select the environment and on the command bar, select **Settings**.
 4. Set the toggle to **Off** for **Copilot**.
+
+## See also
+
+[Transparency notes for Power Apps](../common/transparency-note.md)
