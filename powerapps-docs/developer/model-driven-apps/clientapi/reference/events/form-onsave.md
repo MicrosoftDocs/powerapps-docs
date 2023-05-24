@@ -16,7 +16,7 @@ contributors:
 
 The `OnSave` event occurs when:
 
-- The user selects the **Save** icon in the lower right corner of the form, even when there is no changed data to be saved.
+- The user selects the **Save** or **Refresh** button in the command bar, even when there is no changed data to be saved.
 - Code executes the [formContext.data.entity.save](../formContext-data-entity/save.md) method, even when there is no changed data to be saved.
 - The user navigates away from the form and there is unsaved data in the form.
 - The auto-save option is enabled, 30 seconds after data has changed and there is unsaved data in the form.
