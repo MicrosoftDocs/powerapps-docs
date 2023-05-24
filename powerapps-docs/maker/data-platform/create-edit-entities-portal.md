@@ -1,22 +1,12 @@
 ---
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
-ms.custom: ""
+author: "Mattp123"
 ms.date: 04/24/2023
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "how-to"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-author: "Mattp123"
-ms.assetid: fa04f99d-a5f9-48cb-8bfb-f0f50718ccee
-caps.latest.revision: 41
 ms.subservice: dataverse-maker
 ms.author: "matp"
-search.audienceType: 
-  - maker
 ---
 # Create and edit tables using Power Apps
 

@@ -1925,6 +1925,17 @@
       href: ./data-platform/create-custom-entity.md
     - name: Import or export data
       href: ./data-platform/data-platform-import-export.md
+    - name: Long term data retention for tables (preview)
+      href: ./data-platform/data-retention-overview.md
+      items:
+      - name: Set a data retention policy
+        href: ./data-platform/data-retention-set.md
+      - name: Manage data retention policies  
+        href: ./data-platform/data-retention-manage.md
+      - name: View long term retained data
+        href: ./data-platform/data-retention-view.md
+      - name: Data retention FAQ
+        href: ./data-platform/data-retention-faq.yml
     - name: Create and edit virtual tables
       href: ./data-platform/create-edit-virtual-entities.md
       items:
