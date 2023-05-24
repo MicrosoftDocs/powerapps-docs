@@ -61,7 +61,7 @@ Power Platform administrators setup retention policies.
 >
 > - To complete this task you must have the Power Platform administrator role.
 
-1. [Ensure the table has been enabled for long term retention](#ensure-the-table-has-been-enabled-for-long-term-retention).
+1. [Enable a table for long term retention](#enable-a-table-for-long-term-retention).
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Retention policies**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
    > [!TIP]
    > If the **Retention policies** area isn't available, add this parameter to the end of the make.powerapps.com URL in your browser address bar: `?retentionPolicies.registration=true&retentionPolicies.leftNavigation=true`
