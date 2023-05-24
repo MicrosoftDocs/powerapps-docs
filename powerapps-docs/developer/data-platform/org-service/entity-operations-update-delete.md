@@ -252,9 +252,9 @@ More information:
 - [Work with alternate keys](../define-alternate-keys-entity.md)
 - [Use an alternate key to reference a record](../use-alternate-key-reference-record.md)
 
-## Update and delete documents in storage partitions
+## Update and delete records in elastic tables
 
-If you are updating or deleting table data stored in partitions be sure to specify the partition key when accessing that data. More information: [Improve performance when accessing table data using storage partitions](azure-storage-partitioning-sdk.md)
+If you are updating or deleting elastic table data stored in partitions be sure to specify the partition key when accessing that data. More information: [Partitioning and horizontal scaling](../elastic-tables.md#partitioning-and-horizontal-scaling)
 
 ## Use Upsert
 

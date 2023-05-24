@@ -274,7 +274,7 @@ More information: [Shared variables](understand-the-data-context.md#shared-varia
 
 ## Perform a data operation with specified partition
 
-When using NoSQL tables, you can pass a unique string value with the `partitionid` parameter to access non-relational table data within a storage partition. Use this method to improve performance when accessing table data in Azure heterogenous storage.
+When using elastic tables, you can pass a unique string value with the `partitionid` parameter to access non-relational table data within a storage partition.
 
 The following examples set the `partitionid` value of `CustomerPartition` when creating a `new_msdyn_customer` record. You can use this `partitionid` value later to retrieve the record more efficiently.
 
@@ -291,8 +291,6 @@ static void DemonstratePartition(IOrganizationService service)
     service.Create(entity);
 }
 ```
-
-More information: [Improve performance using storage partitions when accessing entity data](org-service/azure-storage-partitioning-sdk.md)
 
 ### [Web API](#tab/webapi)
 
@@ -314,9 +312,9 @@ Accept: application/json
 
 The response shouldn't be affected by sending the tag unless the plug-in contains logic to change it.
 
-More information: [Access entity data faster using storage partitions](webapi/azure-storage-partitioning.md)
-
 ---
+
+More information: [Choosing a PartitionId value](elastic-tables.md#choosing-a-partitionid-value)
 
 ## Bypass custom synchronous logic
 
