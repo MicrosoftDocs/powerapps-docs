@@ -1,43 +1,40 @@
 ---
-title: "Configure auditing (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Explains how to configure programatically configure auditing settins for the organization, tables and columns." # 115-145 characters including spaces. This abstract displays in the search result.
+title: Configure auditing
+description: Learn how to programatically configure auditing settings for the organization, tables, and columns in Microsoft Dataverse.
 ms.date: 06/13/2022
-ms.reviewer: jdaly
 ms.topic: overview
-author: paulliew # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: paulliew # MSFT alias of Microsoft employees only
+author: paulliew
+ms.author: paulliew
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 contributors:
  - JimDaly
  - phecke
+ms.custom: bap-template
 ---
 
 # Configure auditing
 
-Auditing uses settings in the [Organization table](../reference/entities/organization.md) and definitions of individual tables and columns to determine what kind of audit history data to capture.
-
-Anyone can read this configuration data, but you must have the System Administrator or System Customizer roles to change these settings.
-
-Changes made to audit configuration are included in the auditing history. More information: [Audit change events](retrieve-audit-data.md#audit-change-events)
+Microsoft Dataverse auditing uses settings in the [Organization table](../reference/entities/organization.md) and definitions of individual tables and columns to determine what kind of audit history data to capture. Anyone can view the configuration, but you must have the System Administrator or System Customizer role to change the settings. [Changes made to the audit configuration](retrieve-audit-data.md#audit-change-events) are included in the audit history.
 
 ## Configure organization settings
 
-Four properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The `organization` table contains a single row. The `organizationid` column is the primary key. You can get the key value by querying the row directly or you may already have it cached by previously executing the `WhoAmI` message. The `WhoAmIResponse.OrganizationId` property returns the primary key value for the single row in the `organization` table.
+Four properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The `organization` table contains a single row. The `organizationid` column is the primary key. Query the row directly to get the key value, or execute the `WhoAmI` message and take the value of the `WhoAmIResponse.OrganizationId` property.
 
 The following table describes the `organization` table columns that control auditing behavior.
 
-|Schema Name<br />Logical Name<br />Display Name|Type|Description  |
+|Schema Name<br/>Logical Name<br/>Display Name|Type|Description|
 |---------|---------|---------|
-|`IsAuditEnabled`<br />`isauditenabled`<br />**Is Auditing Enabled**|Boolean|Whether auditing is enabled for the environment.|
-|`AuditRetentionPeriodV2`<br />`auditretentionperiodv2`<br />**Audit Retention Period Settings**|Integer|The number of days to retain audit log records.<br />The default value is 30. Valid values are between 1 and 365,000 days (~1000 years) or if the value is set to -1, the records will be retained forever.<br />More information: [Microsoft Power Platform admin: Start/stop auditing and set retention policy](/power-platform/admin/manage-dataverse-auditing#startstop-auditing-for-a-dataverse-environment-and-set-retention-policy)|
-|`IsUserAccessAuditEnabled`<br />`isuseraccessauditenabled`<br />**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled.<br />Auditing for the environment must also be enabled for user access logging to be enabled.|
-|`UserAccessAuditingInterval`<br />`useraccessauditinginterval`<br />**User Authentication Auditing Interval**|Integer|The interval how often user access is logged in hours. Default value is 4.|
+|`IsAuditEnabled`<br/>`isauditenabled`<br/>**Is Auditing Enabled**|Boolean|Whether auditing is enabled for the environment|
+|`AuditRetentionPeriodV2`<br/>`auditretentionperiodv2`<br/>**Audit Retention Period Settings**|Integer|The number of days to retain audit log records<br/>The default value is 30. Valid values are between 1 and 365,000 days (~1,000 years). If the value is set to -1, the records are retained forever.<br/>[Start/stop auditing and set retention policy](/power-platform/admin/manage-dataverse-auditing#startstop-auditing-for-a-dataverse-environment-and-set-retention-policy)|
+|`IsUserAccessAuditEnabled`<br/>`isuseraccessauditenabled`<br/>**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled<br/>Auditing for the environment must be enabled for user access logging to be enabled.|
+|`UserAccessAuditingInterval`<br/>`useraccessauditinginterval`<br/>**User Authentication Auditing Interval**|Integer|How often user access is logged, in hours<br/>The default value is 4.|
 
 ### Retrieve organization settings
 
-You can retrieve these values using the following queries:
+Use the following queries to retrieve these values:
 
 # [Web API](#tab/webapi)
 
@@ -126,25 +123,25 @@ More information:
 
 ### Change organization settings
 
-Update the column properties in the table above to change how auditing works for the environment. You must have the System Administrator or System Customizer roles to change these settings.
+Change the column values in the `organization` table to change how auditing works for the environment. You must have the System Administrator or System Customizer role to change these settings.
 
-You can set these column values using Web API or Dataverse SDK for .NET. More information:
+You can use Web API or Dataverse SDK for .NET to set these column values.
 
 - [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
 - [Update and delete table rows using the Organization Service](../org-service/entity-operations-update-delete.md)
 
 ## Configure tables and columns
 
-When auditing is configured for the organization, any tables configured for auditing will write auditing data for all of the columns that are enabled for auditing. The primary control is at the organization and then table level.
+When auditing is enabled for the organization, any tables that are enabled for auditing write audit data for all columns that are enabled for auditing. The primary control is at the organization and then the table level.
 
-Tables and columns each have a *managed property* named `IsAuditEnabled` that controls whether they are enabled for auditing.
+Tables and columns each have a *managed property* named `IsAuditEnabled` that controls whether they're enabled for auditing.
 
 |Item |Web API | SDK for .NET|
 |---------|---------|---------|
 |Table|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled Property>|
 |Column|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled Property>|
 
-The `IsAuditEnabled` property is a managed property that is defined by the following types:
+The `IsAuditEnabled` property is a managed property that's defined by the following types:
 
 |Web API  |SDK for .NET|
 |---------|---------|
@@ -157,14 +154,14 @@ A `BooleanManagedProperty` has two important properties:
 |`Value`|Determines whether the setting is enabled.|
 |`CanBeChanged` |Determines whether the `Value` setting can be changed after the table or column is included in a managed solution.|
 
-The publisher of the solution that adds a table  may block people who install their managed solution from enabling auditing. Some Dataverse system tables cannot be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
+The publisher of a managed solution that adds a table may prevent people who install the solution from enabling auditing. Some Dataverse system tables can't be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. [Learned more about managed properties](/power-platform/alm/managed-properties-alm).
 
 > [!NOTE]
 > The `IsAuditEnabled` property is exposed in the designer as a simple boolean property with the label **Audit changes to its data** for tables or **Enable auditing** for columns. The `CanBeChanged` property can only be read or set programmatically.
 
 ### Detect which tables are enabled for auditing
 
-Query the table definitions to detect which tables currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
+Query the table definitions and look at the `IsAuditEnabled` property to determine which tables support auditing and which ones can be changed.
 
 # [Web API](#tab/webapi)
 
@@ -281,12 +278,11 @@ More information:
 
 ### Detect which columns are enabled for auditing
 
-Query the column definitions to detect which table columns currently support auditing and which ones can be changed by looking at the `IsAuditEnabled` property.
-
+Query the column definitions and look at the `IsAuditEnabled` property to determine which columns support auditing and which ones can be changed.
 
 # [Web API](#tab/webapi)
 
-This returns all the columns enabled for auditing for the `account` table.
+The following query returns all the columns enabled for auditing for the `account` table:
 
 **Request**
 
@@ -417,7 +413,7 @@ More information: [Retrieve and detect changes to table definitions](../org-serv
 
 ## Enable or disable tables and columns for auditing
 
-If you want to change which tables or columns support auditing, you must update the respective `IsAuditEnabled.Value` property.
+To change which tables and columns support auditing, update their `IsAuditEnabled.Value` property.
 
 ### Tables
 
@@ -433,10 +429,8 @@ If you want to change which tables or columns support auditing, you must update 
 |Web API|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled.Value`|[Update a column](../webapi/create-update-entity-definitions-using-web-api.md#update-a-column)|
 |SDK for .NET|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled>.`Value`|[Update a column](../org-service/metadata-attributemetadata.md#update-a-column)|
 
-
 > [!IMPORTANT]
-> After you change the value for columns you must publish customizations for the table.
-> Changes will not take effect until the table customizations are published.
+> Changes don't take effect until you publish the table customizations.
 
 ### Publish column changes
 
@@ -444,7 +438,7 @@ Use the `PublishXml` message to publish customizations for the table.
 
 # [Web API](#tab/webapi)
 
-This example publishes the `account` table.
+The following example publishes the `account` table:
 
 **Request**
 
@@ -474,7 +468,7 @@ More information:
 
 # [SDK for .NET](#tab/sdk)
 
-This example publishes the `account` table.
+The following example publishes the `account` table:
 
 ```csharp
 PublishXmlRequest request = new PublishXmlRequest()
@@ -490,20 +484,19 @@ svc.Execute(request);
 
 More information:
 
- - <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
- - <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest?text=PublishXmlRequest Class>
- - [Publish customizations](../../model-driven-apps/publish-customizations.md)
- - [Publish request schema](../../model-driven-apps/publish-request-schema.md)
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
+- <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest?text=PublishXmlRequest Class>
+- [Publish customizations](../../model-driven-apps/publish-customizations.md)
+- [Publish request schema](../../model-driven-apps/publish-request-schema.md)
 
 ---
 
-
 ### See also
 
-[Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)<br />
-[Administrators Guide: System Settings Auditing tab](/power-platform/admin/system-settings-dialog-box-auditing-tab)<br />
-[Auditing overview](overview.md)<br />
-[Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
+[Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)  
+[System Settings Auditing tab](/power-platform/admin/system-settings-dialog-box-auditing-tab)  
+[Auditing overview](overview.md)  
+[Retrieve the history of audited data changes](retrieve-audit-data.md)  
 [Delete audit data](delete-audit-data.md)
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+[!INCLUDE [footer-include](../../../includes/footer-banner.md)]
