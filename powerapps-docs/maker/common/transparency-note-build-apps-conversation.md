@@ -16,22 +16,22 @@ This transparency note describes the AI impact of build apps through conversatio
 
 ## What is build apps through conversation? 
 
-Build apps through conversation is a feature in the Power Apps maker portal that allows you to describe the app that you want to build, and AI will design it for you. To start, you use natural language to tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.  The AI assistant is available from the Power Apps home screen. 
+Build apps through conversation is a feature in the Power Apps maker portal that allows you to describe the app that you want to build, and AI will design it for you. To start, you use natural language to tell the AI assistant what kind of information you want to collect, track, or show. The assistant will generate a Dataverse table and use it to build your canvas app. The AI assistant is available from the Power Apps home page. 
  
 ## What are the system’s capabilities? 
 
-This capability is powered by Azure OpenAI Service, which uses powerful language models. These language models generate new text in English that looks and sounds like text written by humans.  
+This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview), which uses powerful language models. These language models generate new text in English that looks and sounds like text written by humans.  
 
-Using Azure OpenAI service as a foundation, Build apps through conversation considers your app description to propose relevant data tables on which to build your app. As part of data generation, the system recommends relevant columns, sample row data, and data types that you can customize. The sample data is not real organizational data.  
+Using Azure OpenAI service as a foundation, build apps through conversation considers your app description to propose relevant data tables on which to build your app. As part of data generation, the system recommends relevant columns, sample row data, and data types that you can customize. The sample data is not real organizational data.  
 
 ## What is the system’s intended use? 
 
-Build apps through conversation is intended to simplify your app creation process by automatically generating a data table on which your app will be built. AI-generated content may have mistakes. Make sure it's accurate and appropriate before using it. Read the full preview terms 
+Build apps through conversation is intended to simplify your app creation process by automatically generating a data table on which your app will be built. AI-generated content may have mistakes. Make sure it's accurate and appropriate before using it. For more information, read the full [preview terms](https://powerplatform.microsoft.com/en-us/legaldocs/supp-powerplatform-preview).
 
 
 ## How was build apps through conversation evaluated? What metrics are used to measure performance? 
 
-Build apps through conversation underwent substantial testing before the feature was released in preview.  If you encounter issues with the content being generated, please submit feedback.  Your feedback will be used to improve Microsoft products and services. IT admins for your organization will be able to view and manage your feedback data. 
+Build apps through conversation underwent substantial testing before the feature was released in preview. If you encounter issues with the content being generated, please submit feedback. Your feedback will be used to improve Microsoft products and services. IT admins for your organization will be able to view and manage your feedback data. 
 
 For more information, see:
 - [Microsoft Global Data Privacy Notice for Employees, External Staff, Candidates and Guests](https://go.microsoft.com/fwlink/?linkid=2182930) 
@@ -39,7 +39,7 @@ For more information, see:
 
 ## What are the limitations of build apps through conversation? How can users minimize the impact of the build apps through conversation limitations when using the system? 
 
-Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
+Preview features aren’t meant for production use and may have restricted functionality.These features are available before an official release so that customers can get early access and provide feedback. 
 
 This capability is in the process of rolling out, and may not be available in your region yet. 
 
@@ -47,21 +47,21 @@ This capability may be subject to usage limits or capacity throttling.
 
 The following are requirements to access the waitlist for this preview: 
 
-Your environment must be in the United States region. 
+- Your environment must be in the United States region. 
 
-Your account must have English (United States) as the browser language. 
+- Your account must have English (United States) as the browser language. 
 
-Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment. 
+- Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment. 
 
-Licensed customers will be prioritized for access. 
+- Licensed customers will be prioritized for access. 
 
-AI Builder must be enabled for your environment to use the AI models or controls leveraging AI models: 
+- AI Builder must be enabled for your environment to use the AI models or controls leveraging AI models: 
 
-1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+    1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
-2. Go to **Environments** > [select an environment] > **Settings** > **Features**. 
+    2. Go to **Environments** > [select an environment] > **Settings** > **Features**. 
 
-3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**. 
+    3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**. 
 
 For more information, see [AI Copilot overview](../canvas-apps/ai-overview.md) 
 
