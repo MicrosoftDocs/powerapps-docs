@@ -55,6 +55,8 @@
               href: org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
+    - name: Use open types with Custom APIs 
+      href: use-open-types.md
     - name: Background operations (Preview)
       href: background-operations.md
     - name: Use optional parameters
@@ -171,6 +173,8 @@
           href: access-web-services.md
         - name: Dependent Assemblies (preview)
           href: dependent-assembly-plugins.md
+        - name: Write plug-ins for CreateMultiple and UpdateMultiple (Preview)
+          href: write-plugin-multiple-operation.md
         - name: Quickstarts
           items:
             - name: Create a plug-in using Power Platform Tools
