@@ -35,7 +35,7 @@ The AI assistant is available from the Power Apps home screen. You can tell the 
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in process of rolling out, and may not be available in your region yet.
-> - This capability  may be subject to usage limits or capacity throttling.
+> - This capability may be subject to usage limits or capacity throttling.
 
 
 ## Prerequisites
