@@ -133,7 +133,7 @@ For detailed steps, refer to [Request the permissions in the app registration po
 
 ## Create an App Center container for your mobile app
 
-In this step, you'll use App Center to create an app container for your mobile app. More information: [App Center container](overview.md#app-center-container)
+In this step, you'll use App Center to create an app container for your mobile app. More information: [App center container](overview.md#app-center-location)
 
 > [!TIP]
 > For more information about App Center, go to [Visual Studio App Center documentation](/appcenter/).
