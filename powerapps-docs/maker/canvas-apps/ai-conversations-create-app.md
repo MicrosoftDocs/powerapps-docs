@@ -30,12 +30,12 @@ The AI assistant is available from the Power Apps home screen. You can tell the 
 > ![Tell the AI assistant the information you want to track in your app.](media/artificial-intelligence/create-app-using-ai-1.png)
 
 > [!IMPORTANT]
-> - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://go.microsoft.com/fwlink/?linkid=2227838).
+> - To use capability you must have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in process of rolling out, and may not be available in your region yet.
-> - This capability  may be subject to usage limits or capacity throttling.
+> - This capability may be subject to usage limits or capacity throttling.
 
 
 ## Prerequisites
