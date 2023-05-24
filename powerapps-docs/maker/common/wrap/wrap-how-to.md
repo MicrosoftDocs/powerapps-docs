@@ -94,7 +94,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
 3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and click **Next**. 
-If you do not have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. For more information, see [Set up Azure Key Vault for automated code signing](#Set-up-Azure-Key-Vault-for-automated-code-signing).
+If you do not have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. For more information, see [Set up Azure Key Vault for automated code signing](wrap-how-to.md#set-up-azure-key-vault-for-automated-code-signing).
 
      > [!div class="mx-imgBorder"] 
      > ![Choose the apps which you want to wrap.](media/how-to-v2/select-target-platforms.png "Select target platforms")
@@ -134,9 +134,9 @@ Select **New app registration** to create a new registration for your app automa
    > [!div class="mx-imgBorder"] 
    > ![Create a new app registration.](media/how-to-v2/new-app-reg.png "New app registration")
 
-You can also create a **new app registration** manually. See [Registering your app on Azure portal manually](#Registering-your-app-on-Azure-portal-manually) for more information.
+You can also create a **new app registration** manually. For more information, see [Registering your app on Azure portal manually](wrap-how-to.md#registering-your-app-on-azure-portal-manually-optional).
 
-The wrap wizard will configure all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to stoubeshoot this step. See [Configuring the API permissions for your app manually](#Configuring-the-API-permissions-for-your-app-manually) for details.
+The wrap wizard will configure all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to stoubeshoot this step. For more information, see [Configuring the API permissions for your app manually](wrap-how-to.md#configuring-the-api-permissions-for-your-app-manually-optional).
 
 ### Step 5: Manage output
 
@@ -149,7 +149,7 @@ On the **Manage output** screen, create or select an existing **App Center locat
 
 - **iOS**: Choose an existing location or create a new location.
 
-You can also choose to create your **App Center location** manually at [App Center](https://appcenter.ms/). For more information. see [Creating an App Center location for your mobile app manually](#Creating-an-App-Center-location-for-your-mobile-app-manually).
+You can also choose to create your **App Center location** manually at [App Center](https://appcenter.ms/). For more information, see [Creating an App Center location for your mobile app manually](wrap-how-to.md#creating-an-app-center-location-for-your-mobile-app-manually-optional).
 
 ### Step 6: Wrap up
 
@@ -222,7 +222,6 @@ Whether you're a single or multitenant maker, you must select any of the options
 
 > [!IMPORTANT]
 > - Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information on the account types: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types).
-> - To ensure the **Redirect URI** matches the [required format](#redirect-uri-format), don't create the **Redirect URI** while creating the app registration. Once the app registration is complete, go to app, and then choose **Authentication** > **+ Add a platform** to add the platform instead.
 > - You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
 
 ## Configuring the API permissions for your app manually (optional)
@@ -254,7 +253,7 @@ For detailed steps, refer to [Request the permissions in the app registration po
   
 ## Creating an App Center location for your mobile app manually (optional)
 
-You have an option to automatically create a new **App Center location** to store your mobile app in **Step 5** in wrap wizard, but you can also manually create it directly in App Center. More information: [App Center container](overview.md#app-center-container)
+You have an option to automatically create a new **App Center location** to store your mobile app in **Step 5** in wrap wizard, but you can also manually create it directly in App Center. More information: [App center location](overview.md#app-center-location)
 
 > [!TIP]
 > For more information about App Center, go to [Visual Studio App Center documentation](/appcenter/).
@@ -286,7 +285,6 @@ You have an option to automatically create a new **App Center location** to stor
 
     :::image type="content" source="media/wrap-canvas-app/app-center-url.png" alt-text="App center URL.":::
 
-    More information: [App Center URL](overview.md#app-center-url)
  
 
 ## Signing your mobile app package manually (optional)

@@ -42,7 +42,7 @@ The following section explains steps involved in using the wrap feature to creat
 
 :::image type="content" source="media/wrap-intro/wrap-steps.png" alt-text="Steps involved in using wrap feature to create mobile apps." border="false":::
 
-1. Select your **primary canvas app** and start wrap wizard. A primary canvas app is the app that provides the initial experience you want your mobile users to see when they launch your mobile app. Your canvas apps must be part of a solution. More information: [Add canvas app to solution](#wrap-how-to.md#Add-canvas-app-to-solution).
+1. Select your **primary canvas app** and start wrap wizard. A primary canvas app is the app that provides the initial experience you want your mobile users to see when they launch your mobile app. Your canvas apps must be part of a solution. More information: [Add canvas app to solution](wrap-how-to.md#add-canvas-app-to-solution).
 1. Optionally, add **secondary canvas apps** to your mobile app in wrap wizard. More information: [Wrapping multiple canvas apps together](#wrap-multiple-canvas-apps-together).
 1. Select the **target platforms** (iOS and Android) for your mobile app. Optionally, select to **automatically code sign** your mobile app package in wrap wizard.
 1. Customize **app branding** with icons, images, and color palette to personalize your mobile app.
@@ -50,7 +50,7 @@ The following section explains steps involved in using the wrap feature to creat
 1. Select **App Center location** to store your mobile app. Use an existing **App Center location** or create a new one in wrap wizard. 
 1. Start the build process in **Wrap up** step to generate your custom-branded mobile app.
 1. Download your mobile app from the **App Center location**.
-1. If **automatically code sign** is not chosen in wrap wizard, you must **code sign** the mobile app package manually. More information: [Signing your mobile app package manually](#wrap-how-to.md#Signing-your-mobile-app-package-manually).
+1. If **automatically code sign** is not chosen in wrap wizard, you must **code sign** the mobile app package manually. More information: [Signing your mobile app package manually](wrap-how-to.md#signing-your-mobile-app-package-manually-optional).
 1. Test the app package.
 1. Distribute the app package to mobile users.
 
