@@ -97,24 +97,7 @@ The following sections summarize strategies that can be applied for bulk create 
 
 ### CreateMultiple and UpdateMultiple (Preview)
 
-- These specialized messages optimize performance when the same operation (`Create` or `Update`) is performed on a single table.
-- Rather than apply data changes row-by-row, these messages apply changes to multiple rows at the same time, which is much more efficient and performant.
-- These messages are currently only available using the Dataverse SDK for .NET. Web API support will be available later.
-- These messages are only available for tables that have been created recently, but we're rolling out changes that will enable them for any table that supports `Create` or `Update` operations.
-- These messages are currently not supported for use in plug-ins.
-- There's no *continue-on-error* behavior for these operations. An error for any single item causes the entire request to fall and roll back.
-- There's no set limit on the number of items that can be sent with these requests. The per-row efficiency improves as the number of items sent increases, but if you send too many items, the request will time out.
-- You should make sure to enable configuration to adjust the number of items sent with each request. We recommend starting with 1000 and adjusting until you determine a safe maximum number of items to send.
-- The optimum number of items to send depends on several factors including:
-
-    - Whether any synchronous plug-in steps are registered for the operation. All synchronous business logic for the operations is applied. For best performance, no synchronous plug-in logic at all is recommended. You can suppress synchronous plug-ins logic for all items using the `BypassCustomPluginExecution` header.
-    - The nature of the entities sent. For example, operations that create related records using 'deep insert' must include changes to related tables in the transaction, and execute any plug-in logic for the related records. You are able to send more items with smaller individual entity changes using simple data types.
-    - Whether synchronous plug-in steps for the table have been optimized for the `CreateMultiple` or `UpdateMultiple` operations.
-    
-      - All logic for plug-ins registered for individual `Create` and `Update` operations are applied when the `CreateMultiple` or `UpdateMultiple` messages are used, but these plug-ins limit optimum performance.
-      - We recommend transferring logic from plug-ins that support single operations to plug-ins that support multiple operations to achieve optimum performance.
-
-- You can use these messages with `ExecuteMultiple` and in parallel.
+These specialized messages optimize performance when the same operation (`Create` or `Update`) is performed on a single table. These messages can provide substantial performance gains, but also a number of constraints you need to be aware of.
 
 - More information:
 
