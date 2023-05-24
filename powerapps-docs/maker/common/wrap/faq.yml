@@ -91,7 +91,7 @@ sections:
       - question: |
           Can I add apps that use Power BI data to wrap?
         answer: |
-          Yes. Wrap wizard automatically configures your mobile app to be able to use Power BI. To troubleshoot, you can manualy grant *Power BI* API permission to all your apps that use Power BI data. More information: [Configuring the API permissions for your app manually](wrap-how-to.md#Configuring-the-API-permissions-for-your-app-manually)
+          Yes. Wrap wizard automatically configures your mobile app to be able to use Power BI. To troubleshoot, you can manualy grant *Power BI* API permission to all your apps that use Power BI data. More information: [Configuring the API permissions for your app manually](wrap-how-to.md#configuring-the-api-permissions-for-your-app-manually-optional)
         
       - question: |
           Can I deep link into a wrapped mobile app?
