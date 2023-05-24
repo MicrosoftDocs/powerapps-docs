@@ -1,7 +1,7 @@
 ---
 title: "Use file column data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about uploading, downloading, and deleting data in file columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 02/04/2023
+ms.date: 05/24/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -11,6 +11,7 @@ search.audienceType:
   - developer
 contributors:
  - JimDaly
+ - trin-msft
 ---
 # Use file column data
 
@@ -716,11 +717,18 @@ There at three different methods to download files from a file column:
 
 > [!NOTE]
 > These methods can also be used to download image columns, but there are some differences. More information: [Download images](image-column-data.md#download-images)
+> 
+> For on-premises environments or when an environment uses Customer Managed Keys, the file is not in file storage. When a file is not in file storage, downloading in multiple chunks is not supported. The [InitializeFileBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse) and [InitializeFileBlocksDownloadResponse Class](xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadResponse) have an `IsChunkingSupported`property that indicates if the file can be downloaded in multiple chunks or not. If chunking is not supported, then set `BlockLength` to the file size.
+> 
+> Trying to download partial chunk when IsChunkingSupported is set to false will result in this error:<br />
+> 
+> Name: `UploadingAndDownloadingInMultipleChunksNotSupported`<br />
+> Code: `0x80090017`<br />
+> Message: `Downloading in multiple chunks is not supported for the files stored in the database.`
 
 ### Use Dataverse messages to download a file
 
 You can use Dataverse messages using the SDK for .NET or Web API. Downloading a file this way requires using a pair of messages:
-
 
 |Message|Description|
 |---------|---------|
@@ -761,7 +769,8 @@ private static byte[] DownloadFile(
    List<byte> fileBytes = new((int)fileSizeInBytes);
 
    long offset = 0;
-   long blockSizeDownload = 4 * 1024 * 1024; // 4 MB
+   // If chunking is not supported, chunk size will be full size of the file.
+   long blockSizeDownload = !initializeFileBlocksDownloadResponse.IsChunkingSupported ? fileSizeInBytes :  4 * 1024 * 1024;
 
    // File size may be smaller than defined block size
    if (fileSizeInBytes < blockSizeDownload)
@@ -839,7 +848,8 @@ OData-Version: 4.0
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse",
   "FileSizeInBytes": 25870370,
   "FileName": "25mb.pdf",
-  "FileContinuationToken": "<file continuation token value removed for brevity>"
+  "FileContinuationToken": "<file continuation token value removed for brevity>",
+  "IsChunkingSupported": true
 }
 ```
 
@@ -848,8 +858,12 @@ The response is a [InitializeFileBlocksDownloadResponse ComplexType](xref:Micros
 - `FileSizeInBytes`: The size of the file
 - `FileName`: The name of the file
 - `FileContinuationToken`: The file continuation token to use in subsequent requests
+- `IsChunkingSupported`: Flag to indicate if downloading in chunks is supported or not
 
 Based on the size of the file and the size of the block you'll download, send more requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below.
+
+> [!NOTE]
+> The example below is for cases when `IsChunkingSupported` is set to true. If it is false, set `BlockLength` to full file size.
 
 **Request**
 
@@ -924,6 +938,9 @@ Access-Control-Expose-Headers: x-ms-file-size; x-ms-file-name; mimetype
 ```
 
 ### Download the file in chunks using Web API
+
+> [!NOTE]
+> The example below is for cases when `IsChunkingSupported` is set to true. If it is false, please use [Download a file in a single request using Web API](#download-a-file-in-a-single-request-using-web-api).
 
 To download your file in chunks using the Web API, use the following set of requests.
 
