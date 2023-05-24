@@ -16,7 +16,7 @@ This transparency note describes the AI impact of build apps through conversatio
 
 ## What is build apps through conversation? 
 
-Build apps through conversation is a feature in the Power Apps maker portal that allows you to describe the app that you want to build, and AI will design it for you. To start, you use natural language to tell the AI assistant what kind of information you want to collect, track, or show. The assistant will generate a Dataverse table and use it to build your canvas app. The AI assistant is available from the Power Apps home page. 
+Build apps through conversation is a feature in the Power Apps that allows you to describe the app that you want to build, and AI will design it for you. To start, you use natural language to tell the AI assistant what kind of information you want to collect, track, or show. The assistant will generate a Dataverse table and use it to build your canvas app. The AI assistant is available from the Power Apps home page. 
  
 ## What are the system’s capabilities? 
 
