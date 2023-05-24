@@ -1,7 +1,7 @@
 ---
 title: "Use CreateMultiple and UpdateMultiple (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the CreateMultiple and UpdateMultiple messages to optimize bulk data operations." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/23/2023
+ms.date: 05/24/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -214,8 +214,6 @@ The following are known issues that will be addressed before this feature become
 
 <xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.ConcurrencyBehavior> specifies the type of optimistic concurrency behavior that should be applied. Possible values are `AlwaysOverwrite`, `Default`, and `IfRowVersionMatches`.
 
-<!-- TODO Samson please confirm this: -->
-
 Currently the `Default` option is always applied regardless of what you set. The behavior depends on whether [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) is set for the table.
 
 More information: [ConcurrencyBehavior Enum](xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior)
@@ -232,13 +230,10 @@ The following are frequently asked question related to the introduction of these
 
 Yes. We plan to release `UpsertMultiple` later.
 
-<!-- TODO: uncomment after merging elastic tables
 
 ### Will there be a DeleteMultiple?
 
 At this time, `DeleteMultiple` is supported only for elastic tables, which is a preview feature. Elastic tables don't support cascading operations. More information: [Bulk operations with elastic tables (Preview)](../bulk-operations-elastic-tables.md)  
-
- -->
 
 For standard tables, cascading operations can result in unpredictable execution times. If we support `DeleteMultiple` for standard tables, it may not be the best choice. For standard tables, we recommend the `BulkDelete` message that enables asynchronous deletion of records that match a query.
 

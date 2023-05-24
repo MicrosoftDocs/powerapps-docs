@@ -1,6 +1,16 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/azure-storage-partitioning-sdk.md",
+      "redirect_url": "../elastic-tables",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/azure-storage-partitioning.md",
+      "redirect_url": "../elastic-tables",
+      "redirect_document_id": "false"
+    },   
+   {
       "source_path": "powerapps-docs/developer/data-platform/webapi/retrieve-related-entities-query.md",
       "redirect_url": "query-data-web-api#join-tables",
       "redirect_document_id": "false"
