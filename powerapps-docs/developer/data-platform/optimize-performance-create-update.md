@@ -29,8 +29,8 @@ Elastic tables are a preview feature at the time of this writing. Elastic tables
 
 More information:
 
-- [Create and edit elastic tables (preview)](/power-apps/maker/data-platform/create-edit-elastic-tables)
-- [Developer documentation: Elastic tables (preview)](/power-apps/developer/data-platform/elastic-tables)
+- [Create and edit elastic tables (preview)](../../maker/data-platform/create-edit-elastic-tables.md)
+- [Elastic tables (Preview)](elastic-tables.md)
  
 
 ### Bulk data operations
@@ -147,4 +147,4 @@ If your application doesn't depend on the data modeling and transactional capabi
 [Use CreateMultiple and UpdateMultiple (Preview)](org-service/use-createmultiple-updatemultiple.md)<br />
 [Send parallel requests](send-parallel-requests.md)<br />
 [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)<br />
-[Elastic tables (preview)](/power-apps/developer/data-platform/elastic-tables)
+[Elastic tables (Preview)](elastic-tables.md)
