@@ -10,7 +10,7 @@ ms.author: franklan
 ms.reviewer: mduelae
 ---
 
-# Transparency note for build apps through conversation
+# Transparency note for building apps through conversation
 
 This transparency note describes the AI impact of build apps through conversation feature.
 
