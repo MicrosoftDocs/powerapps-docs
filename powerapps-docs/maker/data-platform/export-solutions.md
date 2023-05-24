@@ -32,12 +32,12 @@ You can manually export solutions using the steps in this article. We recommend 
 2.  In the list of solutions, select the unmanaged solution you want to export, and then select **Export**. Notice that you can't export managed solutions. 
 
 3. The **Before you export** right pane appears. Choose from the following options, and then select **Next**:  
-    - **Publish all changes**. Notice that, when you export an unmanaged solution, only published components are exported. We recommend that you select **Publish all changes** to make sure all components are included in the exported solution. 
-    - **Check for issues**. Run the solution checker against the solution to detect performance and stability issues.
+    - **Publish all changes**. Notice that, when you export an unmanaged solution, only published components are exported. We recommend that you select **Publish all changes** to make sure all components are included in the exported solution.
 
 4.  The **Export this solution** right pane appears. Enter or select from the following options, and then select **Export**:  
     - **Version number**: Power Apps automatically increments your solution version while displaying the current version. You can accept the default version or enter your own. 
-    - **Export as**: Select the package type, either **Managed** or **Unmanaged**. More information: [Managed and unmanaged solutions](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions)
+    - **Export as**: Select the package type, either **Managed** or **Unmanaged**. More information: [Managed and unmanaged solutions](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions) 
+    - **Run solution checker on export**. Run the solution checker against the solution to detect performance and stability issues.
 
     > [!div class="mx-imgBorder"]  
     > ![Export solution.](media/solution-export.png "Export solution")
