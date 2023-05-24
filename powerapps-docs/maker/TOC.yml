@@ -2522,7 +2522,7 @@
   items:
   - name: Overview
     href: ./common/transparency-note.md
-  - name: Transparency note for build apps through conversation
+  - name: Transparency note for building apps through conversation
     href: ./common/transparency-note-build-apps-conversation.md     
 - name: Resources
   items:
