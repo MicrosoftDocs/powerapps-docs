@@ -77,7 +77,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
    - **Secondary app(s)**: Optional additional apps that you can bundle the same build for mobile app package along with the Primary app.
 
      > [!div class="mx-imgBorder"] 
-     > ![Choose the apps to wrap.](media/how-to-v2/select-apps.png "Choose the apps to wrap")
+     > ![Choose theapps that you want to wrap.](media/how-to-v2/select-apps.png "Choose the apps to wrap")
   
      > [!NOTE]
      > You can use the same Primary app in multiple wrap projects.
@@ -97,7 +97,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 If you do not have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. For more information, see [Set up Azure Key Vault for automated code signing](#Set-up-Azure-Key-Vault-for-automated-code-signing).
 
      > [!div class="mx-imgBorder"] 
-     > ![Choose the apps to wrap.](media/how-to-v2/select-target-platforms.png "Select target platforms")
+     > ![Choose the apps which you want to wrap.](media/how-to-v2/select-target-platforms.png "Select target platforms")
 
 You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
   
@@ -132,7 +132,7 @@ On the **Register your app** screen, register your application in Azure to estab
 Select **New app registration** to create a new registration for your app automatically.
 
    > [!div class="mx-imgBorder"] 
-   > ![New app registration.](media/how-to-v2/new-app-reg.png "New app registration")
+   > ![Create a new app registration.](media/how-to-v2/new-app-reg.png "New app registration")
 
 You can also create a **new app registration** manually. See [Registering your app on Azure portal manually](#Registering-your-app-on-Azure-portal-manually) for more information.
 
@@ -143,7 +143,7 @@ The wrap wizard will configure all the required API permissions for your app aut
 On the **Manage output** screen, create or select an existing **App Center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, select **New location** on top of the screen and then select **Android** or **iOS**.
 
 > [!div class="mx-imgBorder"] 
-   > ![New app registration.](media/how-to-v2/new-app-center-location.png "Create new App Center location")
+> ![New app center location.](media/how-to-v2/new-app-center-location.png "Create new App Center location")
 
 - **Android**: Choose an existing location or create a new location.
 
@@ -162,7 +162,7 @@ For testing and distribution, see [App Center Test](/appcenter/test-cloud/) and 
 
 ## Set up Azure Key Vault for automated code signing 
 
-You need to have [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in **Step 2** of wrap wizard.
+You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in **Step 2** of wrap wizard.
   
 **Prerequisites**
   
