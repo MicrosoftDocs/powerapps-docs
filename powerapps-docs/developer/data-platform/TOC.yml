@@ -395,6 +395,17 @@
       href: customize-labels-support-multiple-languages.md
     - name: Best Practices
       href: best-practices/work-with-metadata/index.md
+- name: Elastic tables (Preview)
+  href: elastic-tables.md
+  items:
+    - name: Create elastic tables (Preview)
+      href: create-elastic-tables.md
+    - name: Use elastic tables (Preview)
+      href: use-elastic-tables.md
+    - name: Query JSON columns (Preview)
+      href: query-json-columns-elastic-tables.md
+    - name: Bulk operations with elastic tables (Preview)
+      href: bulk-operations-elastic-tables.md                      
 - name: Introduction to solutions
   href: introduction-solutions.md
 - name: Create applications

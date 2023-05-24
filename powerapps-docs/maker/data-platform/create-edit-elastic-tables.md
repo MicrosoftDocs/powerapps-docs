@@ -2,7 +2,7 @@
 title: Create and edit elastic tables
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 04/24/2023
+ms.date: 05/24/2023
 ms.reviewer: matp
 author: Mattp123
 ms.topic: how-to
@@ -32,7 +32,7 @@ Elastic tables automatically scale to ingest tens of millions of rows every hour
 
 Consider a scenario where Contoso is a retailer with millions of existing customers. Contoso has a large database of customers and are looking to increase sales while retaining customers. Based on prior customer history, they're looking to have 24-hour flash sale events with different coupons targeting their customers and products. They have estimated that the number of coupons required will be 100 million plus per flash sale campaign. Marketing plans to run multiple 24-hour campaigns targeting different customer segments.  
 
-The requirement for Contoso’s marketing application is that it must be able to ingest up to 100 million or more coupon details within a few hours, read millions of coupons per hour, and send coupons to customers.  
+The requirement for Contoso's marketing application is that it must be able to ingest up to 100 million or more coupon details within a few hours, read millions of coupons per hour, and send coupons to customers.  
 
 Elastic tables will automatically scale for this high throughput scenario.  
 
@@ -54,9 +54,9 @@ The choice of table should be based on the specific needs of your application. A
 
 ## Horizontal scaling and performance  
 
-As your business data grows, elastic tables provide unlimited auto scalability based on your application workload, both for storage size and throughput, such as the number of records created, updated, or deleted in a given timeframe. 
+As your business data grows, elastic tables provide unlimited auto scalability based on your application workload, both for storage size and throughput, such as the number of records created, updated, or deleted in a given timeframe.
 
-If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request API's, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits.
+If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request API's, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits. More information: [Developer guide: Bulk operations with elastic tables (Preview)](../../developer/data-platform/bulk-operations-elastic-tables.md)
 
 ### Automatic removal of data
 
@@ -64,14 +64,14 @@ Time to live (TTL) policies ensure that you're always working with the most up-t
 
 ### Flexible schema with JSON columns
 
-Elastic tables enable you to store and query data with varying structures, without the need for pre-defined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. <!-- Need link to How to query JSON columns in elastic tables -->
+Elastic tables enable you to store and query data with varying structures, without the need for pre-defined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. More information: [Developer guide: Query JSON columns in elastic tables (Preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
 
 ## Considerations when you use elastic tables  
 
 Although elastic tables are great for handling large volume of requests at scale, the advantages come with a few trades offs, which should be kept in mind:
 
 - Elastic tables don't support multi-record transactions. This means that multiple write operations happening as part of a single request execution aren't transactional with each other. For example, if you have a synchronous plug-in step registered on the `PostOperation` stage for `Create message` on an elastic table, any error in your plug-in won't roll back the created record in Dataverse. Validations in preplug-ins will still work as expected since they run before the main stage.
-- Elastic tables support strong consistency only within a logical session. Outside session context, you might not see changes to a row immediately. <!-- Add more information link to developer doc section --> 
+- Elastic tables support strong consistency only within a logical session. Outside session context, you might not see changes to a row immediately. More information: [Developer guide: Consistency level](../../developer/data-platform/elastic-tables.md#consistency-level)
 - Elastic tables don't support filters on related tables when creating views, advanced find, or any query in general using API. If you frequently need to filter on related table columns, we recommend that you denormalize columns from related tables, which needs filtering into the main table itself. Consider a retailer with two elastic tables: customer and address. One customer has many addresses. You want to return query results for all customers from the customer table whose city value in the address table is New York. In this example, when querying customer table, you want to apply a filter on the city column of the related address table. This isn't supported for elastic tables. One way to make this work is to denormalize the city column into the Customer table so that all customers city values are present in the customer table itself.
 
 ## Elastic tables feature support
@@ -108,7 +108,7 @@ Table features currently not supported with elastic tables:
 - [Column comparison in queries using FetchXML, Web API, or the SDK API](../../developer/data-platform/column-comparison.md)
 - Table sharing
 - Composite indexes
-- Cascade operations: Delete, Reparent, Assign, Share, Unshare 
+- Cascade operations: Delete, Reparent, Assign, Share, Unshare
 - Ordering on lookup columns
 - Aggregate queries:
   - Distinct value of `attribute1` while orderby on `attribute2` value
@@ -146,4 +146,5 @@ You create an elastic table just like any other new table in Dataverse.
 
 ## See also
 
-[Create and edit tables using Power Apps](create-edit-entities-portal.md)
+[Create and edit tables using Power Apps](create-edit-entities-portal.md)<br />
+[Developer guide: Elastic tables (Preview)](../../developer/data-platform/elastic-tables.md)
