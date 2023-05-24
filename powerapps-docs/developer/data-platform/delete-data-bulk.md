@@ -99,6 +99,7 @@ bulkDeleteRequest.SendEmailNotification = false;
 bulkDeleteRequest.ToRecipients = new Guid[] { };
 bulkDeleteRequest.CCRecipients = new Guid[] { };
 
+// Svc is a client that implements IOrganizationService.
 BulkDeleteResponse bulkDeleteResponse = (BulkDeleteResponse)svc.Execute(bulkDeleteRequest);
 ```
 
@@ -130,6 +131,7 @@ bulkDeleteRequest.SendEmailNotification = false;
 bulkDeleteRequest.ToRecipients = new Guid[] { };
 bulkDeleteRequest.CCRecipients = new Guid[] { };
 
+// Svc is a client that implements IOrganizationService.
 BulkDeleteResponse bulkDeleteResponse = (BulkDeleteResponse)svc.Execute(bulkDeleteRequest);
 ```
 
