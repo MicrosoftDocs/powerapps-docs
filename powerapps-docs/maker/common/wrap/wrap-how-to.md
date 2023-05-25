@@ -134,9 +134,9 @@ Select **New app registration** to create a new registration for your app automa
    > [!div class="mx-imgBorder"] 
    > ![Create a new app registration.](media/how-to-v2/new-app-reg.png "New app registration")
 
-You can also create a **new app registration** manually. For more information, see [Registering your app on Azure portal manually](wrap-how-to.md#registering-your-app-on-azure-portal-manually-optional).
+You can also create a **new app registration** manually. For more information, see [Registering your app on Azure portal manually](wrap-how-to.md#register-your-app-on-azure-portal-manually-optional).
 
-The wrap wizard will configure all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to stoubeshoot this step. For more information, see [Configuring the API permissions for your app manually](wrap-how-to.md#configuring-the-api-permissions-for-your-app-manually-optional).
+The wrap wizard will configure all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to stoubeshoot this step. For more information, see [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
 
 ### Step 5: Manage output
 
@@ -149,7 +149,7 @@ On the **Manage output** screen, create or select an existing **app center locat
 
 - **iOS**: Choose an existing location or create a new location.
 
-You can also choose to create your **app center location** manually at [App Center](https://appcenter.ms/). For more information, see [Creating an app center location for your mobile app manually](wrap-how-to.md#creating-an-app-center-location-for-your-mobile-app-manually-optional).
+You can also choose to create your **app center location** manually at [App Center](https://appcenter.ms/). For more information, see [Create an app center location for your mobile app manually](wrap-how-to.md#create-an-app-center-location-for-your-mobile-app-manually-optional).
 
 ### Step 6: Wrap up
 
