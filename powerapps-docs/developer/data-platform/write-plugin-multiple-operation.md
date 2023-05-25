@@ -230,7 +230,13 @@ else
 
 All errors that occur withing plug-ins should be returned using [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException). More information: [Use InvalidPluginExecutionException in plug-ins and workflow activities](best-practices/business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities.md)
 
-When you throw an exception for steps registered on the `CreateMultiple` and `UpdateMultiple` messages, you should specify which record caused the plug-in to fail. To capture this information, you need to use this constructor: <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})?displayProperty=nameWithType>. Use the constructor's `exceptionDetails` parameter to include information about the failed record and any other relevant information.
+When you throw an exception for steps registered on the `CreateMultiple` and `UpdateMultiple` messages, you should specify which record caused the plug-in to fail. To capture this information, you need to use one of these constructors:
+
+- [InvalidPluginExecutionException(String, Dictionary<String,String>)](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String}))
+- [InvalidPluginExecutionException(OperationStatus, String, Dictionary<String,String>)](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(Microsoft.Xrm.Sdk.OperationStatus,System.Collections.Generic.Dictionary{System.String,System.String}))
+
+
+Use the constructor's `exceptionDetails` parameter to include information about the failed record and any other relevant information.
 
 ### Set exception details
 
