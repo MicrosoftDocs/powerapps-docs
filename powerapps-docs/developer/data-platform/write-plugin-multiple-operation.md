@@ -235,11 +235,11 @@ When you throw an exception for steps registered on the `CreateMultiple` and `Up
 - [InvalidPluginExecutionException(String, Dictionary<String,String>)](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String}))
 - [InvalidPluginExecutionException(OperationStatus, String, Dictionary<String,String>)](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(Microsoft.Xrm.Sdk.OperationStatus,System.String,System.Collections.Generic.Dictionary{System.String,System.String}))
 
-Use the constructor's `exceptionDetails` parameter to include information about the failed record and any other relevant information.
+Use the constructor's `Dictionary<String,String>` `exceptionDetails` parameter to include information about the failed record and any other relevant information.
 
 ### Set exception details
 
-For the `CreateMultiple` and `UpdateMultiple` messages, your code iterates through the respective [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection). `Targets` property and apply logic to each [Entity](xref:Microsoft.Xrm.Sdk.Entity). When some logic fails, you can pass the [Id](xref:Microsoft.Xrm.Sdk.Entity.Id) of the record to the <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})?displayProperty=nameWithType> in the following way:
+For the `CreateMultiple` and `UpdateMultiple` messages, your code iterates through the respective [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) `Targets` property and applies logic to each [Entity](xref:Microsoft.Xrm.Sdk.Entity). When some logic fails, you can pass the [Id](xref:Microsoft.Xrm.Sdk.Entity.Id) of the record to the `InvalidPluginExecutionException` constructor in the following way:
 
 ```csharp
 // in plugin code
@@ -271,7 +271,9 @@ catch (FaultException<OrganizationServiceFault> ex)
 
 ```
 
-In this way, the caller can know which record caused the failure and any other relevant details you want to include. If the client application is using Web API, they can get these details by setting the `Prefer: odata.include-annotations="*"` request header. More information: [Include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors).
+If the client application is using Web API, they can get these details by setting the `Prefer: odata.include-annotations="*"` request header. More information: [Include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors).
+
+In this way, the caller can know which record caused the failure and any other relevant details you want to include.
 
 ## Replace Single operation plug-ins in solution
 
