@@ -38,6 +38,8 @@
     items:
       - name: Service Protection API Limits
         href: ../api-limits.md
+      - name: Optimize performance for Create and Update operations
+        href: ../optimize-performance-create-update.md
       - name: Manage invalid characters
         href: work-with-data/invalidcharactersinfield.md
       - name: Retrieve specific columns for an entity via query APIs
