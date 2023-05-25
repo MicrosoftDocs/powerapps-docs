@@ -1164,6 +1164,8 @@
       href: ./canvas-apps/how-to/deep-linking.md
     - name: Work with the PDF function (experimental)
       href: ./canvas-apps/how-to/pdf-function.md
+  - name: Preview an app
+    href: ./canvas-apps/preview-app.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
@@ -1925,6 +1927,17 @@
       href: ./data-platform/create-custom-entity.md
     - name: Import or export data
       href: ./data-platform/data-platform-import-export.md
+    - name: Long term data retention for tables (preview)
+      href: ./data-platform/data-retention-overview.md
+      items:
+      - name: Set a data retention policy
+        href: ./data-platform/data-retention-set.md
+      - name: Manage data retention policies  
+        href: ./data-platform/data-retention-manage.md
+      - name: View long term retained data
+        href: ./data-platform/data-retention-view.md
+      - name: Data retention FAQ
+        href: ./data-platform/data-retention-faq.yml
     - name: Create and edit virtual tables
       href: ./data-platform/create-edit-virtual-entities.md
       items:
@@ -1936,6 +1949,8 @@
         href: ./data-platform/setup-virtual-table-relationships.md
       - name: Virtual tables known issues and troubleshooting 
         href: ./data-platform/limits-tshoot-virtual-tables.md
+    - name: Create and edit elastic tables
+      href: ./data-platform/create-edit-elastic-tables.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
     - name: Define alternate keys using Power Apps
@@ -2057,6 +2072,14 @@
           href: ./data-platform/monitor-manage-processes.md
         - name: Best practices for real-time workflow processes
           href: ./data-platform/best-practices-workflow-processes.md
+      - name: Use Dataverse low-code plug-ins (experiemental)
+        items:
+        - name: Create low-code plug-ins
+          href: ./data-platform/low-code-plug-ins.md
+        - name: Example low-code plug-ins
+          href: ./data-platform/lowcode-plug-ins-examples.md
+        - name: Low-code plug-ins Power Fx 
+          href: ./data-platform/low-code-plug-ins-powerfx.md  
       - name: Work with actions
         items:
         - name: Use actions
@@ -2388,7 +2411,7 @@
     href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
-- name: Cards (preview)
+- name: Cards
   items:
     - name: What are cards?
       href: ../cards/overview.md

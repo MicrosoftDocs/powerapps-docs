@@ -1,5 +1,5 @@
 ---
-title: Add connectors to a card (preview)
+title: Add connectors to a card
 description: Learn how to add connectors to your cards for Microsoft Power Apps.
 ms.date: 01/19/2023
 ms.topic: how-to
@@ -10,9 +10,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add connectors to a card (preview)
-
-[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
+# Add connectors to a card
 
 Connectors allow your card to connect to other apps, data sources, and devices in the cloud. Insert, modify, and remove them in the [card designer](../designer-overview.md). [Learn more about connectors in Power Platform](/connectors/connectors).
 

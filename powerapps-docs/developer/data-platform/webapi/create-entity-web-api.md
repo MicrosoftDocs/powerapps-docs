@@ -1,7 +1,7 @@
 ---
 title: "Create a table row using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Read how to create a POST request to send data to create a table row on Microsoft Dataverse using the Web API"
-ms.date: 03/27/2023
+ms.date: 05/18/2023
 ms.service: powerapps
 ms.topic: article
 author: divkamath
@@ -333,9 +333,9 @@ Accept: application/json
 
 ## Create documents in storage partitions
 
-If you are creating large numbers of entities that contain documents, you can create the entities in storage partitions to speed up access to those entity records.
+If you are creating large numbers of records for elastic tables, you can create the entities in storage partitions to speed up access to those entity records.
 
-More information: [Access documents faster using storage partitions](azure-storage-partitioning.md)
+More information: [Create a record in an elastic table](../use-elastic-tables.md#create-a-record-in-an-elastic-table)
 
 ### See also
 

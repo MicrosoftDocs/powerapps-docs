@@ -18,13 +18,13 @@ Configure folder-level tracking rules to map a Microsoft Exchange inbox folder t
 
 - The folder-level tracking feature is enabled for your Dataverse instance. You can enable folder-level tracking by using the web client or Dynamics 365 for Outlook. More information: [Configure folder-level tracking](/dynamics365/customer-engagement/admin/configure-outlook-exchange-folder-level-tracking)  
 
-- The folder that you are tracking is under the **Inbox** folder in Microsoft Exchange. Emails in the folders that are not under the **Inbox** folder won’t be tracked.  
+- The folder that you are tracking is under the **Inbox** folder in Microsoft Exchange. Emails in the folders that are not under the **Inbox** folder won't be tracked.  
 
 <a name="Create"></a>   
 
 ## Create and manage folder-level tracking rules
  
- Use the  [MailboxTrackingFolder table](reference/entities/mailboxtrackingfolder.md) to programmatically configure and manage your folder-level tracking rules. To set up a tracking rule, use the following columns.  
+ Use the [Mailbox Auto Tracking Folder (MailboxTrackingFolder)  table](reference/entities/mailboxtrackingfolder.md) to programmatically configure and manage your folder-level tracking rules. To set up a tracking rule, use the following columns.  
 
 
 |  Column       |  Description |
@@ -53,7 +53,7 @@ _folderTrackingId = _serviceProxy.Create(newTrackingFolder);
 Console.WriteLine("Created folder-level tracking rule for '{0}'.\n", _mailboxName);  
 ```  
 
- You can create a maximum of 25 folder-level tracking rules per mailbox. The folder ID of the Microsoft Exchange folder can’t be validated at the time of creating the mapping using SDK. However, as soon as you create a mapping rule, and if the folder ID is invalid, it will show up in the UI in Dataverse to indicate that the mapping is invalid.  
+ You can create a maximum of 25 folder-level tracking rules per mailbox. The folder ID of the Microsoft Exchange folder can't be validated at the time of creating the mapping using SDK. However, as soon as you create a mapping rule, and if the folder ID is invalid, it will show up in the UI in Dataverse to indicate that the mapping is invalid.  
 
  Any manual changes done to the regarding object in the tracked activity records, created in Dataverse as a result of the folder-level tracking rule, will be overridden the next time server-side synchronization occurs. For example, if you have set up a mapping between the `Adventure Works` folder and the `Adventure Works` account, all the emails in the `Adventure Works`Microsoft Exchange folder will be tracked as activities in Dataverse with the regarding set to the `Adventure Works` account record. If you change the regarding of some activities to any other record, it will automatically be overridden the next time server-side synchronization occurs.  
 
@@ -86,8 +86,8 @@ foreach (var folderMapping in resp.MailboxTrackingFolderMappings)
 ### See also
 
  <xref:Microsoft.Dynamics.CRM.RetrieveMailboxTrackingFolders?text=RetrieveMailboxTrackingFolders Function><br />
- [MailboxTrackingFolder table](/reference/entities/mailboxtrackingfolder.md)<br />
- [Mailbox table](/reference/entities/mailbox.md)<br />
+ [Mailbox Auto Tracking Folder (MailboxTrackingFolder)  table](reference/entities/mailboxtrackingfolder.md)<br />
+ [Mailbox table](reference/entities/mailbox.md)<br />
  [Configure folder-level tracking](/dynamics365/customer-engagement/admin/configure-outlook-exchange-folder-level-tracking)<br />
  [Server-side Synchronization tables](server-side-synchronization-entities.md)<br />
 
