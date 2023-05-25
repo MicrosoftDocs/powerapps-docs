@@ -21,9 +21,9 @@ Microsoft Dataverse auditing uses settings in the [Organization table](../refere
 
 ## Configure organization settings
 
-Four properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The `organization` table contains a single row. The `organizationid` column is the primary key. Query the row directly to get the key value, or execute the `WhoAmI` message and take the value of the `WhoAmIResponse.OrganizationId` property.
+Four properties in the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. The organization table contains a single row. The `organizationid` column is the primary key. Query the row directly to get the key value, or execute the `WhoAmI` message and take the value of the `WhoAmIResponse.OrganizationId` property.
 
-The following table describes the `organization` table columns that control auditing behavior.
+The following table describes the organization table columns that control auditing behavior.
 
 |Schema Name<br/>Logical Name<br/>Display Name|Type|Description|
 |---------|---------|---------|
@@ -34,9 +34,17 @@ The following table describes the `organization` table columns that control audi
 
 ### Retrieve organization settings
 
-Use the following queries to retrieve these values:
+Use the following queries to retrieve your organization settings.
+
+Learn more about:
+
+- [Retrieve a table row using the Web API](../webapi/retrieve-entity-using-web-api.md)
 
 # [Web API](#tab/webapi)
+
+Learn more about:
+
+- <xref:Microsoft.Dynamics.CRM.organization?text=organization EntityType>
 
 **Request**
 
@@ -73,12 +81,14 @@ HTTP/1.1 200 OK
 }
 ```
 
-More information:
-
-- <xref:Microsoft.Dynamics.CRM.organization?text=organization EntityType>
-- [Retrieve a table row using the Web API](../webapi/retrieve-entity-using-web-api.md)
-
 # [SDK for .NET](#tab/sdk)
+
+Learn more about:
+
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
+- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest?text=WhoAmIRequest Class>
+- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse?text=WhoAmIResponse Class>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*?text=IOrganizationService.Retrieve Method>
 
 ```csharp
 /// <summary>
@@ -112,20 +122,13 @@ static void ShowAuditingConfig(IOrganizationService svc)
 }
 ```
 
-More information:
-
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
-- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest?text=WhoAmIRequest Class>
-- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse?text=WhoAmIResponse Class>
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*?text=IOrganizationService.Retrieve Method>
-
 ---
 
 ### Change organization settings
 
-Change the column values in the `organization` table to change how auditing works for the environment. You must have the System Administrator or System Customizer role to change these settings.
+Change the column values in the organization table to change how auditing works for the environment. You must have the System Administrator or System Customizer role to change these settings.
 
-You can use Web API or Dataverse SDK for .NET to set these column values.
+You can use Web API or Dataverse SDK for .NET to change your organization settings:
 
 - [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
 - [Update and delete table rows using the Organization Service](../org-service/entity-operations-update-delete.md)
@@ -154,7 +157,7 @@ A `BooleanManagedProperty` has two important properties:
 |`Value`|Determines whether the setting is enabled.|
 |`CanBeChanged` |Determines whether the `Value` setting can be changed after the table or column is included in a managed solution.|
 
-The publisher of a managed solution that adds a table may prevent people who install the solution from enabling auditing. Some Dataverse system tables can't be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. [Learned more about managed properties](/power-platform/alm/managed-properties-alm).
+The publisher of a managed solution that adds a table may prevent people who install the solution from enabling auditing. Some Dataverse system tables can't be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. [Learn more about managed properties](/power-platform/alm/managed-properties-alm).
 
 > [!NOTE]
 > The `IsAuditEnabled` property is exposed in the designer as a simple boolean property with the label **Audit changes to its data** for tables or **Enable auditing** for columns. The `CanBeChanged` property can only be read or set programmatically.
@@ -163,9 +166,16 @@ The publisher of a managed solution that adds a table may prevent people who ins
 
 Query the table definitions and look at the `IsAuditEnabled` property to determine which tables support auditing and which ones can be changed.
 
+Learn more about:
+
+- <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>
+- [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
+- [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
+- [Private tables](../entities.md#private-tables)
+
 # [Web API](#tab/webapi)
 
-This query returns the `Logicalname` for all public tables that are enabled for auditing:
+This query returns the `Logicalname` for all public tables that are enabled for auditing.
 
 **Request**
 
@@ -201,12 +211,6 @@ If-None-Match: null
     ]
 }
 ```
-
-More information:
-
-- [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
-- <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>
-- [Private tables](../entities.md#private-tables)
 
 # [SDK for .NET](#tab/sdk)
 
@@ -269,20 +273,18 @@ static void ShowTableAuditConfigurations(IOrganizationService svc)
 }
 ```
 
-More information:
-
-- [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
-- [Private tables](../entities.md#private-tables)
-
 ---
 
 ### Detect which columns are enabled for auditing
 
 Query the column definitions and look at the `IsAuditEnabled` property to determine which columns support auditing and which ones can be changed.
 
-# [Web API](#tab/webapi)
+Learn more about:
 
-The following query returns all the columns enabled for auditing for the `account` table:
+- [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
+- [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
+
+# [Web API](#tab/webapi)
 
 **Request**
 
@@ -318,8 +320,6 @@ If-None-Match: null
     ]
 }
 ```
-
-More information: [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
 
 # [SDK for .NET](#tab/sdk)
 
@@ -407,8 +407,6 @@ response.EntityMetadata.ToList().ForEach(x =>
 }
 ```
 
-More information: [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
-
 ---
 
 ## Enable or disable tables and columns for auditing
@@ -436,9 +434,16 @@ To change which tables and columns support auditing, update their `IsAuditEnable
 
 Use the `PublishXml` message to publish customizations for the table.
 
+Learn more about:
+
+- [Publish customizations](../../model-driven-apps/publish-customizations.md)
+- [Publish request schema](../../model-driven-apps/publish-request-schema.md)
+
 # [Web API](#tab/webapi)
 
-The following example publishes the `account` table:
+Learn more about:
+
+- <xref:Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action>
 
 **Request**
 
@@ -461,12 +466,12 @@ If-None-Match: null
 HTTP/1.1 204 OK 
 ```
 
-More information:
-
-- [Use Web API actions](../webapi/use-web-api-actions.md)
-- <xref:Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action>
-
 # [SDK for .NET](#tab/sdk)
+
+Learn more about:
+
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
+- <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest?text=PublishXmlRequest Class>
 
 The following example publishes the `account` table:
 
@@ -481,13 +486,6 @@ PublishXmlRequest request = new PublishXmlRequest()
 };
 svc.Execute(request);
 ```
-
-More information:
-
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
-- <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest?text=PublishXmlRequest Class>
-- [Publish customizations](../../model-driven-apps/publish-customizations.md)
-- [Publish request schema](../../model-driven-apps/publish-request-schema.md)
 
 ---
 
