@@ -13,8 +13,6 @@ ms.collection:
 
 # Requirements for cards
 
-[!INCLUDE[cards_preview_notice](includes/preview-include.md)]
-
 This article contains information about requirements for cards to show up and work as expected.
 
 ## Environment requirements

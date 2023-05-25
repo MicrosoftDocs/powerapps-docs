@@ -1,5 +1,5 @@
 ---
-title: Add buttons to a card (preview)
+title: Add buttons to a card
 description: Learn how to add interactive buttons to your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add buttons to a card (preview)
+# Add buttons to a card
 
 Buttons are a type of control that lets users perform actions in cards without entering any input aside from a click. Insert, modify, and remove them in the [card designer](../designer-overview.md).
 

@@ -1,5 +1,5 @@
 ---
-title: Card designer overview (preview)
+title: Card designer overview
 description: Learn about the card designer.
 ms.date: 11/17/2022
 ms.topic: overview
@@ -11,9 +11,7 @@ ms.collection:
 
 ---
 
-# Card designer overview (preview)
-
-[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
+# Card designer overview
 
 The Power Apps card designer is the drag-and-drop interface in which you build cards.
 
