@@ -16,19 +16,19 @@ contributors:
 
 # Code sign for iOS
 
-In this article, you'll learn about how to code sign for iOS. You'll need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
+In this article, you'll learn about how to code sign for iOS. You need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
 
  > [!Important]
  > Using Xcode to digitally sign your wrapped mobile apps for iOS is not supported. Follow the instructions below to sign your wrapped mobile app packages for iOS correctly.
 
 ## Prerequisites
 
-You'll need the following information to get started:
+You need the following information to get started:
 
 - App ID
 - Device UDIDs (only for testing and development purpose)
 
-You'll also need a macOS device to code sign for iOS.
+You also need a macOS device to code sign for iOS.
 
 ## Prepare your Mac
 
@@ -37,7 +37,7 @@ Set up your Mac with the following configuration.
 1. Install **Xcode**. More information: [Xcode](https://developer.apple.com/support/xcode/)
 1. Install PowerShell for macOS. More information: [Installing PowerShell on macOS](/powershell/scripting/install/installing-powershell-on-macos)
 1. Enroll in [Apple Developer Program](https://developer.apple.com/programs/)
-1. To distribute your apps within the organization, you'll need to sign up for [Apple Enterprise Developer Program](https://developer.apple.com/programs/enterprise/).
+1. To distribute your apps within the organization, you need to sign up for [Apple Enterprise Developer Program](https://developer.apple.com/programs/enterprise/).
 
 ## Create App ID
 
