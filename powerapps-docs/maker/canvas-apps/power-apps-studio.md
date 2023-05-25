@@ -291,7 +291,7 @@ Save allows you to perform the following actions:
 - **Save with version notes**: Save and add notes about the updates you've made.
 - **Save as**: Duplicate the app by saving the app with a different name.
 - **Save and publish**: Allows you to save the app and publish it at the same time.
-- **Download a copy**: Downland a local copy of the app.
+- **Download a copy**: Download a local copy of the app.
 
 ### Publish
 

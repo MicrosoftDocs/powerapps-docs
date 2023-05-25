@@ -1,7 +1,7 @@
 ---
 title: "Retrieve a table row using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to form a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier"
-ms.date: 04/14/2023
+ms.date: 05/18/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -85,6 +85,9 @@ If an entity has an alternate key defined, you can also use the alternate key to
 GET [Organization URI]/api/data/v9.2/contacts(firstname='Joe',emailaddress1='abc@example.com')
 ```
 
+> [!NOTE]
+> Alternate key values containing a '+' character are not currently supported for retrieval through OData.
+
 If the alternate key definition contains lookup type field (for example, the `primarycontactid` property for the `account` entity), you can retrieve the `account` using the [Lookup properties](web-api-properties.md#lookup-properties) as shown here.
 
 ```http
@@ -97,9 +100,9 @@ Anytime you need to uniquely identify an entity to retrieve, update, or delete, 
 
 ## Retrieve documents in storage partitions
 
-When retrieving entity data stored in partitions be sure to specify the partition key when retrieving that data.
+When retrieving elastic table data stored in partitions be sure to specify the partition key when retrieving that data.
 
-More information: [Access table data faster using storage partitions](azure-storage-partitioning.md)
+More information: [Retrieve a record in an elastic table](../use-elastic-tables.md#retrieve-a-record-in-an-elastic-table)
 
 ## Retrieve a single property value
 

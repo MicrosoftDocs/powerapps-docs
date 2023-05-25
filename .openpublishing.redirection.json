@@ -1,6 +1,16 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/azure-storage-partitioning-sdk.md",
+      "redirect_url": "../elastic-tables",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/azure-storage-partitioning.md",
+      "redirect_url": "../elastic-tables",
+      "redirect_document_id": "false"
+    },   
+   {
       "source_path": "powerapps-docs/developer/data-platform/webapi/retrieve-related-entities-query.md",
       "redirect_url": "query-data-web-api#join-tables",
       "redirect_document_id": "false"
@@ -8289,7 +8299,7 @@
       "source_path": "powerapps-docs/maker/portals/admin/clear-server-side-cache.md",
       "redirect_url": "/power-pages/admin/clear-server-side-cache",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/configure-knowledge-categories-articles.md",
       "redirect_url": "/power-pages/templates/dynamics-365-apps/configure-knowledge-categories-articles",
@@ -8378,6 +8388,7 @@
     {
       "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/integrate-field-service.md",
       "redirect_url": "/power-pages/templates/dynamics-365-apps/integrate-field-service",
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/maker/portals/configure/configure-portal.md",
@@ -8617,6 +8628,11 @@
     {
       "source_path": "powerapps-docs/maker/portals/configure/website-bindings.md",
       "redirect_url": "/power-pages/configure/website-bindings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/index.yml",
+      "redirect_url": "/power-pages",
       "redirect_document_id": false
     },
     {
