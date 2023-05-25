@@ -17,14 +17,14 @@ contributors:
 
 # Code sign for Android 
 
-In this article, you'll learn about how to code sign for Android (APK). You'll need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
+In this article, you'll learn about how to code sign for Android (APK). You need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
 
 > [!IMPORTANT]
 > If you'd like to sign an AAB app for Google Play distribution instead, refer to [Sign your app](https://developer.android.com/studio/publish/app-signing).
 
 ## Prepare your PC
 
-You'll need the following information to get started:
+You need the following information to get started:
 
 - Install [Android Studio](https://developer.android.com/studio)
 - Install [OpenSSL](https://www.openssl.org/)
@@ -44,7 +44,7 @@ To generate a key, open a command prompt and run the following command:
 Parameters:
 
 - **genkey** - command to generate a key.
-- **alias** - indicates the alias to be used in the future to refer to the keystore entry containing the keys that will be generated.
+- **alias** - indicates the alias to be used in the future to refer to the keystore entry containing the keys that are generated.
 - **keyalg** - key algorithm name.
 - **keystore** - the name of the keystore you're using.
 - **keysize** - the size of each key to be generated.
@@ -70,7 +70,7 @@ Example:
 > [!NOTE]
 > Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-4-register-app).
 
-After generating the key, we'll use the **exportcert** command in **keytool** to export the keystore certificate.
+After generating the key, the **exportcert** command is used in **keytool** to export the keystore certificate.
 
 `keytool -exportcert -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE | openssl sha1 -binary | openssl base64`
 
@@ -85,7 +85,7 @@ Add the generated signature hash in the **Redirect URI** while [registering the 
 
 ### Convert SHA1 hex to Base64-encoded signature hash manually
 
-You might see the following error if your signature hash is not correctly encoded or unacceptable in the Azure portal:
+You might see the following error if your signature hash isn't correctly encoded or unacceptable in the Azure portal:
 
 "The signature hash must be base64-encoded SHA1."
 
@@ -100,7 +100,7 @@ When this error appears, try to generate the signature hash using the following 
 
 ## Sign the APK package
 
-To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature will be verified successfully on all Android platforms supported by the APKs.
+To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature are verified successfully on all Android platforms supported by the APKs.
 
 ### Find your apksigner
 
