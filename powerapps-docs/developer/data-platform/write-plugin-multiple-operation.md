@@ -64,7 +64,7 @@ More information: [Include filtering attributes with plug-in registration](best-
 
 ### Handling Exceptions
 
-Exceptions thrown by plugins registered on CreateMultiple and UpdateMultiple may additionally need to specify the record where the plugin failed in order to be useful.
+Exceptions thrown by plugins registered on CreateMultiple and UpdateMultiple may need to specify the record where the plugin failed in order to be useful.
 
 #### Setting the record where a plugin failed
 In order to surface information on where the plugin failed, the plugin must specify this information when throwing a [_InvalidPluginExecutionException_](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/best-practices/business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities).
