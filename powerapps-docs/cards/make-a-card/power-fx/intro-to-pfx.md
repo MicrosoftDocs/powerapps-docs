@@ -1,5 +1,5 @@
 ---
-title: Power Fx and cards overview (preview)
+title: Power Fx and cards overview
 description: Learn about Power FX and how it's used to add business logic in cards for Microsoft Power Apps.
 ms.date: 11/17/2022
 ms.topic: overview
@@ -11,9 +11,7 @@ ms.collection:
 
 ---
 
-# Power Fx and cards overview (preview)
-
-[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
+# Power Fx and cards overview
 
 [Power Fx](/power-platform/power-fx/overview) is a low-code programming language available across the Power Platform, including in Power Apps cards. Cards can calculate values, perform tasks, and respond to user input using formulas expressed in Power Fx. Power Fx expressions can also update variables and data sources. Expressions can be combined to create complex formulas that can handle advanced business logic.
 

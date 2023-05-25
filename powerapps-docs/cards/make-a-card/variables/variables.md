@@ -1,5 +1,5 @@
 ---
-title: Add variables to a card (preview)
+title: Add variables to a card
 description: Learn how to add variables to your cards for Microsoft Power Apps.
 ms.date: 11/17/2022
 ms.topic: how-to
@@ -11,9 +11,7 @@ ms.collection:
 
 ---
 
-# Add variables to a card (preview)
-
-[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
+# Add variables to a card
 
 Variables store data for reuse. The data can be of different types, like collection, text, or a number. Variables have unique names, which is how you refer to them in [Power Fx formulas](../../make-a-card/power-fx/intro-to-pfx.md). Insert, modify, and remove them in the [card designer](../designer-overview.md).
 
