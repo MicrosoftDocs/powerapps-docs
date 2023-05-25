@@ -62,6 +62,46 @@ For a plug-in registered on `Update` or `UpdateMultiple`, you can specify **Filt
 
 More information: [Include filtering attributes with plug-in registration](best-practices/business-logic/include-filtering-attributes-plugin-registration.md)
 
+### Handling Exceptions
+
+Exceptions thrown by plugins registered on CreateMultiple and UpdateMultiple may additionally need to specify the record where the plugin failed in order to be useful.
+
+## Setting the record where a plugin failed
+In order to surface information on where the plugin failed, the plugin must specify this information when throwing a [_InvalidPluginExecutionException_](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/best-practices/business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities).
+
+### Exception Handling Example
+Let's take for example a plugin registered on UpdateMultiple—where _Targets_ is an _EntityCollection_. This plugin iterates through this _EntityCollection_ and performs an operation on each record.
+
+If during one of these operations, the plugin encounters a failure, the plugin should throw an _InvalidPuginExecutionException_ using [a constructor that allows passing _exceptionDetails_](https://learn.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor?view=dataverse-sdk-latest#microsoft-xrm-sdk-invalidpluginexecutionexception-ctor(system-string-system-collections-generic-dictionary((system-string-system-string)))). For instance:
+
+```
+// in plugin code
+
+foreach (Entity entity in Targets)
+{
+	// [...] When an error occurs:
+
+	var exceptionDetails = new Dictionary<string, string>();
+	exceptionDetails.Add("failedRecordId", (string)entity.PrimaryKey);
+	throw new InvalidPluginExecutionException("This is an error message.", exceptionDetails);
+}
+```
+
+Any other information relevant to the failure may be added as string key-value pairs to the _exceptionDetails_.
+
+## Getting the record where a plugin failed
+Once the plugin code has been updated with the instructions above, the _exceptionDetails_ are surfaced all the way to the _FaultException_ obtained by the user of the SDK, who can now know exactly which record caused the plugin failure:
+
+```
+try
+{
+	// xMultiple request that triggers our plugin
+}
+catch (FaultException<OrganizationServiceFault> ex)
+{
+	ex.Detail.ErrorDetails.TryGetValue("failedRecordId", out object failedRecordId);
+}
+```
 
 ## Example
 
