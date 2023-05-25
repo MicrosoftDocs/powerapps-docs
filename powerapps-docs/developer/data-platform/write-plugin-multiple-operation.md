@@ -228,7 +228,7 @@ else
 
 ## Handling Exceptions
 
-All errors that occur withing plug-ins should be returned using [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException). More information: [Use InvalidPluginExecutionException in plug-ins and workflow activities](best-practices/business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities.md)
+All errors that occur within plug-ins should be returned using [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException). More information: [Use InvalidPluginExecutionException in plug-ins and workflow activities](best-practices/business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities.md)
 
 When you throw an exception for steps registered on the `CreateMultiple` and `UpdateMultiple` messages, you should specify which record caused the plug-in to fail. To capture this information, you need to use one of these constructors:
 
@@ -239,7 +239,7 @@ Use the constructor's `Dictionary<String,String>` `exceptionDetails` parameter t
 
 ### Set exception details
 
-For the `CreateMultiple` and `UpdateMultiple` messages, your code iterates through the respective [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) `Targets` property and applies logic to each [Entity](xref:Microsoft.Xrm.Sdk.Entity). When some logic fails, you can pass the [Id](xref:Microsoft.Xrm.Sdk.Entity.Id) of the record to the `InvalidPluginExecutionException` constructor in the following way:
+For the `UpdateMultiple` message, your code iterates through the [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) [Targets](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.Targets) property and applies logic to each [Entity](xref:Microsoft.Xrm.Sdk.Entity). When some logic fails, you can pass the [Id](xref:Microsoft.Xrm.Sdk.Entity.Id) of the record to the `InvalidPluginExecutionException` constructor in the following way:
 
 ```csharp
 // in plugin code
@@ -247,12 +247,12 @@ foreach (Entity entity in Targets)
 {
    // [...] When an error occurs:
    var exceptionDetails = new Dictionary<string, string>();
-   exceptionDetails.Add("failedRecordId", (string)entity.PrimaryKey);
+   exceptionDetails.Add("failedRecordId", (string)entity.Id);
    throw new InvalidPluginExecutionException("This is an error message.", exceptionDetails);
 }
 ```
 
-Any other information relevant to the failure may be added as string key-value pairs to the `exceptionDetails` parameter.
+For `CreateMultiple`, unless the primary key value is set, you will need to choose some other unique identifier. Any other information relevant to the failure may be added as string key-value pairs to the `exceptionDetails` parameter. You may need multiple data points to identify a record that fails during `CreateMultiple`.
 
 ### Get exception details
 

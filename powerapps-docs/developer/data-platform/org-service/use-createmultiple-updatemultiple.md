@@ -1,5 +1,5 @@
 ---
-title: "Use CreateMultiple and UpdateMultiple (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use CreateMultiple and UpdateMultiple (Microsoft Dataverse) (preview) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the CreateMultiple and UpdateMultiple messages to optimize bulk data operations." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/24/2023
 author: divkamath
@@ -16,7 +16,7 @@ contributors:
  - phecke
 ---
 
-# Use CreateMultiple and UpdateMultiple (Preview)
+# Use CreateMultiple and UpdateMultiple (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
