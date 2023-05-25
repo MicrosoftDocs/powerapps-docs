@@ -256,7 +256,7 @@ For `CreateMultiple`, unless the primary key value is set, you will need to choo
 
 ### Get exception details
 
-When you have included details about the failing operation in the [InvalidPluginExecutionException.ExceptionDetails](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.ExceptionDetails) property, the client application can get these details from the [OrganizationServiceFault.ErrorDetails](xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails) property through the [FaultException<OrganizationServiceFault>.Detail](xref:System.ServiceModel.FaultException`1.Detail) property. The following code shows how:
+When you have included details about the failing operation in the [InvalidPluginExecutionException.ExceptionDetails](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.ExceptionDetails) property, the client application can get these details from the [OrganizationServiceFault.ErrorDetails](xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails) property through the [FaultException&lt;OrganizationServiceFault&gt;.Detail](xref:System.ServiceModel.FaultException`1.Detail) property. The following code shows how:
 
 ```csharp
 
