@@ -4,7 +4,7 @@ description: Use unified search to find what you need.
 author: Mattp123
 ms.subservice: common
 ms.topic: conceptual
-ms.date: 05/03/2023
+ms.date: 05/25/2023
 ms.author: matp
 search.audienceType: 
   - maker
@@ -47,7 +47,7 @@ By default, all search providers are enabled, except for the docs search provide
 
 |Search provider namespace |Default |Description  |
 |---------|---------|---------|
-|`PowerPlatform.Search.disableDocsSearch`  |True |  Setting the provider namespace to True disables search for the provider. When this provider is disabled, users in the environment will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.   |
+|`PowerPlatform.Search.disableDocsSearch`  |True |  Setting the provider namespace to True disables search for the provider. When this provider is disabled, users in the environment will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.  <br /><br /> When the provider is enabled, users' keywords might be sent outside their company, region, or cloud. Make sure keywords don't contain sensitive or confidential information. |
 |`PowerPlatform.Search.disableCommunitySearch`     |False | Setting the provider namespace to True disables search for the provider. When this provider is disabled, users in the environment will see a message that Community and Blog search categories have been turned off by the administrator in the search results page.   |
 | `PowerPlatform.Search.disableBingVideoSearch`    |False |Setting the provider namespace to True disables search for the provider. When this provider is disabled, users in the environment will see a message that Video search categories have been turned off by the administrator in the search results page.   |
 
