@@ -48,6 +48,7 @@ If you're using the `PluginBase` class that is the standard when initializing pl
 > [!IMPORTANT]
 > When configuring entity images for plug-in steps for `CreateMultiple` and `UpdateMultiple`, it is very important that you carefully select which column data to include in the entity image. Do not select the default option of all columns. This data is multiplied by the number of entities passed in the `Targets` parameter and contributes to the total message size that will be sent to the sandbox.
 > More information:
+>
 > - [Define entity images](register-plug-in.md#define-entity-images)
 > - [Message size limits](org-service/use-createmultiple-updatemultiple.md#message-size-limits)
 
@@ -62,9 +63,6 @@ For a plug-in registered on `Update` or `UpdateMultiple`, you can specify **Filt
 > For `UpdateMultiple` you can't assume that every entity in the `Targets` parameter contains attributes used in a filter.
 
 More information: [Include filtering attributes with plug-in registration](best-practices/business-logic/include-filtering-attributes-plugin-registration.md)
-
-
-
 
 ## Example
 
@@ -235,6 +233,8 @@ When you throw an exception for steps registered on the `CreateMultiple` and `Up
 - [InvalidPluginExecutionException(String, Dictionary<String,String>)](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String}))
 - [InvalidPluginExecutionException(OperationStatus, String, Dictionary<String,String>)](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(Microsoft.Xrm.Sdk.OperationStatus,System.String,System.Collections.Generic.Dictionary{System.String,System.String}))
 
+These constructors allow you to add values to the [InvalidPluginExecutionException.ExceptionDetails](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.ExceptionDetails) property, which can't be set directly.
+
 Use the constructor's `Dictionary<String,String>` `exceptionDetails` parameter to include information about the failed record and any other relevant information.
 
 ### Set exception details
@@ -256,7 +256,7 @@ For `CreateMultiple`, unless the primary key value is set, you will need to choo
 
 ### Get exception details
 
-When you have included details about the failing operation in the [InvalidPluginExecutionException.ExceptionDetails](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.ExceptionDetails) property, the client application can get these details from the [OrganizationServiceFault.ErrorDetails](xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails) property through the [FaultException&lt;OrganizationServiceFault&gt;.Detail](xref:System.ServiceModel.FaultException`1.Detail) property. The following code shows how:
+When you have included details about the failing operation in the [InvalidPluginExecutionException.ExceptionDetails](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.ExceptionDetails) property, the client application can get these details from the [OrganizationServiceFault.ErrorDetails](xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails) property through the [FaultException&lt;OrganizationServiceFault&gt;.Detail](xref:System.ServiceModel.FaultException%601.Detail) property. The following code shows how:
 
 ```csharp
 
