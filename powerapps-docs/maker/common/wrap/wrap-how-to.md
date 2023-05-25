@@ -20,7 +20,7 @@ contributors:
 Use the wrap feature to package one or more canvas app(s) as a single native mobile app package using the step-by-step wizard.
 
 The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps. 
-You can distribute such *wrapped* native mobile apps to the end users through [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
+You can distribute such *wrapped* native mobile apps to the end users through [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft app center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
 
 Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
 
@@ -35,7 +35,7 @@ The wrap feature will wrap your canvas apps in a native mobile app shell that yo
 
 You'll need access to:
 - [Azure portal](https://portal.azure.com/) to register your app.
-- [App Center](https://appcenter.ms/) to add new organization and apps.
+- [App center](https://appcenter.ms/) to add new organization and apps.
 - This feature requires the apps to be part of a  [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution). 
 
 If you are creating a mobile app package for Android platform and you plan to code sign it manually, ensure you [<u>generate keys</u>](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you start. You'll need the generated signature hash to configure the **Redirect URI**.
@@ -69,7 +69,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
    > ![Select the app to wrap.](media/how-to-v2/select-app-to-wrap.png "Select the app to wrap")
 
 
-### Step 1: Select Apps 
+### Step 1: Select apps 
 
 1. On the **Select the app(s) to wrap** screen, select your primary and secondary app.
 
@@ -84,7 +84,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 
 2.  Select **Next**.
 
-### Step 2: Target Platform 
+### Step 2: Target platform 
 
 1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
 
@@ -107,7 +107,7 @@ You can also code sign your mobile app package manually instead of using automat
 
 4.  Select **Next**.
 
-### Step 3: Configure Branding
+### Step 3: Configure branding
 
 1. On the **Configure Branding Step**, set the following look and feel options for your app:
    
@@ -140,25 +140,25 @@ The wrap wizard will configure all the required API permissions for your app aut
 
 ### Step 5: Manage output
 
-On the **Manage output** screen, create or select an existing **App Center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, select **New location** on top of the screen and then select **Android** or **iOS**.
+On the **Manage output** screen, create or select an existing **app center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, select **New location** on top of the screen and then select **Android** or **iOS**.
 
 > [!div class="mx-imgBorder"] 
-> ![New app center location.](media/how-to-v2/new-app-center-location.png "Create new App Center location")
+> ![New app center location.](media/how-to-v2/new-app-center-location.png "Create new app center location")
 
 - **Android**: Choose an existing location or create a new location.
 
 - **iOS**: Choose an existing location or create a new location.
 
-You can also choose to create your **App Center location** manually at [App Center](https://appcenter.ms/). For more information, see [Creating an App Center location for your mobile app manually](wrap-how-to.md#creating-an-app-center-location-for-your-mobile-app-manually-optional).
+You can also choose to create your **app center location** manually at [App Center](https://appcenter.ms/). For more information, see [Creating an app center location for your mobile app manually](wrap-how-to.md#creating-an-app-center-location-for-your-mobile-app-manually-optional).
 
 ### Step 6: Wrap up
 
 On the **Wrap up** screen, review the app details and then select **Build**.
-After a successful build, you'll see your mobile app in the **App Center location** that you have selected in the previous step.
+After a successful build, you'll see your mobile app in the **app center location** that you have selected in the previous step.
 
 ## Test and distribute mobile app package
 
-For testing and distribution, see [App Center Test](/appcenter/test-cloud/) and [Distribute](/appcenter/distribution/).
+For testing and distribution, see [App center test](/appcenter/test-cloud/) and [Distribute](/appcenter/distribution/).
 
 ## Set up Azure Key Vault for automated code signing 
 
@@ -207,7 +207,7 @@ Follow these steps to create Azure Key Valut and configure KeyVault URI:
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
   
-## Registering your app on Azure portal manually (optional)
+## Register your app on Azure portal manually (optional)
 You have an option to automatically create your app registration in wrap wizard **Step 4**, you can also create a new registration for your app on Azure portal manually. For details steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 > [!NOTE]
@@ -224,7 +224,7 @@ Whether you're a single or multitenant maker, you must select any of the options
 > - Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information on the account types: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types).
 > - You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
 
-## Configuring the API permissions for your app manually (optional)
+## Configure the API permissions for your app manually (optional)
 
 The wrap wizard will automatically configure all the required API permissions for your app automatically in **Step 4**. In case you enrounter some errors in wrap wizard, you can also confifure API persmisison mnamually. See [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal) the following API permissions for the app manually:
 
@@ -251,14 +251,14 @@ The wrap wizard will automatically configure all the required API permissions fo
 
 For detailed steps, refer to [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
   
-## Creating an App Center location for your mobile app manually (optional)
+## Create an app center location for your mobile app manually (optional)
 
-You have an option to automatically create a new **App Center location** to store your mobile app in **Step 5** in wrap wizard, but you can also manually create it directly in App Center. More information: [App center location](overview.md#app-center-location)
+You have an option to automatically create a new **app center location** to store your mobile app in **Step 5** in wrap wizard, but you can also manually create it directly in app center. More information: [App center location](overview.md#app-center-location)
 
 > [!TIP]
-> For more information about App Center, go to [Visual Studio App Center documentation](/appcenter/).
+> For more information about app center, go to [Visual Studio app center documentation](/appcenter/).
 
-1. Go to [App Center](https://appcenter.ms/).
+1. Go to [app center](https://appcenter.ms/).
 1. Sign in with your work or school account.
 1. If you don't have any existing organization, select **Add new** &gt; **Add new organization** to create a new organization.
 1. Select the organization from the list on the left-pane.
@@ -268,18 +268,18 @@ You have an option to automatically create a new **App Center location** to stor
 1. Select **Custom** OS for iOS apps, or **Android** OS for Android apps.
 
     > [!NOTE]
-    > You must create separate App Center containers for each platform.
+    > You must create separate app center containers for each platform.
 
 1. For **Android** OS, select **Platform** as **React Native**.
 
     > [!NOTE]
-    > **Platform** must be **React Native** for all apps in App Center.
+    > **Platform** must be **React Native** for all apps in app center.
 
     :::image type="content" source="media/wrap-canvas-app/app-center-app.png" alt-text="App center app configuration.":::
 
 1. Select **Add new app**.
 
-1. Copy the app's App Center URL that you'll need later when configuring the wrap project inside Power Apps.
+1. Copy the app's app center URL that you'll need later when configuring the wrap project inside Power Apps.
 
     For example, `https://appcenter.ms/orgs/Contoso-sales/apps/Sample-canvas-app-for-Android-OS/`
 
@@ -287,7 +287,7 @@ You have an option to automatically create a new **App Center location** to stor
 
  
 
-## Signing your mobile app package manually (optional)
+## Sign your mobile app package manually (optional)
 You can automatically sign your mobile app package during wrap process in **Step 2**, but you can also do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
 - [Code signing for iOS](code-sign-ios.md)

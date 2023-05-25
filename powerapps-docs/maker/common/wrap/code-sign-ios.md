@@ -16,7 +16,7 @@ contributors:
 
 # Code sign for iOS
 
-In this article, you'll learn about how to code sign for iOS. You'll need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
+In this article, you'll learn about how to code sign for iOS. You'll need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
 
  > [!Important]
  > Using Xcode to digitally sign your wrapped mobile apps for iOS is not supported. Follow the instructions below to sign your wrapped mobile app packages for iOS correctly.
@@ -63,7 +63,7 @@ Set up your Mac with the following configuration.
 
     1. **Description** - Name of your app.
     1. **Bundle ID** - select **Explicit Bundle ID**.
-    1. Enter the bundle ID that you used while [creating the wrap project](how-to.md#bundle-id). More information: [Bundle ID](overview.md#bundle-id)
+    1. Enter the bundle ID that you used while [creating the wrap project](wrap-how-to.md#step-2-target-platform). More information: [Bundle ID](overview.md#bundle-id)
     1. Enable the following capabilities:
         - Associated Domains
         - iCloud
@@ -170,7 +170,7 @@ To create a distribution certificate, create a new certificate signing request f
 
 ## Sign the iOS Archive
 
-1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](how-to.md#bundle-id). In the example below, the Bundle ID is **com.single.wrap**.
+1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](wrap-how-to.md#step-2-target-platform). In the example below, the Bundle ID is **com.single.wrap**.
 
 1. If signing with enterprise certificate, open the **Distribution-exportOptions.plist** file. Open the folder with Xcode and change the value for the **method** field inside the file to **enterprise**.
 
@@ -195,7 +195,7 @@ To create a distribution certificate, create a new certificate signing request f
 
     :::image type="content" source="media/code-sign-ios/folder-structure.png" alt-text="IPA package.":::
 
-1. Install the .ipa file in the registered devices using the **Finder** app. You can also host it on a distribution service such as [App Center](how-to.md#test-and-distribute-mobile-app-package). To distribute using Microsoft Intune, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
+1. Install the .ipa file in the registered devices using the **Finder** app. You can also host it on a distribution service such as [App Center](wrap-how-to.md#test-and-distribute-mobile-app-package). To distribute using Microsoft Intune, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-ios). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
 
 ### See also
 
