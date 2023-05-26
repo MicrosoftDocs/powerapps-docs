@@ -111,7 +111,7 @@ When anyone tries to upload a file using one of the blocked types the following 
 
 ### Block or allow certain mime types
 
-You can now block/allow upload of files based on mime types. More Information [Mime Type Validation](https://learn.microsoft.com/en-us/power-platform/admin/settings-privacy-security#mime-type-validation).
+You can now block/allow upload of files based on mime types. More Information [Mime Type Validation](power-platform/admin/settings-privacy-security#mime-type-validation).
 
 You can also query and modify this data programmatically. It is stored in the [Organization.BlockedMimeTypes](reference/entities/organization.md#BKMK_BlockedMimeTypes) and [Organization.AllowedMimeTypes](reference/entities/organization.md#BKMK_AllowedMimeTypes) columns. There's only one row in the organization table. You can use the SDK or Web API to query this data:
 
