@@ -33,7 +33,11 @@ Dataverse provides several different ways to save binary data representing files
 |**More information**|[Use file column data](file-column-data.md)|[Use image column data](image-column-data.md)|[Use file data with Attachment and Note records](attachment-annotation-files.md)|
 |**Sample Code**|[SDK for .NET](org-service/samples/file-operations.md)<br />[Web API](webapi/samples/file-operations.md)|[SDK for .NET](org-service/samples/set-retrieve-entity-images.md)<br />[Web API](webapi/samples/image-operations.md)|[SDK for .NET](org-service/samples/attachment-annotation-files.md)<br />[Web API](webapi/samples/attachment-annotation-file-operations.md)|
 
-## Block files by extension 
+## Block certain types of files
+
+You can block the types of files that can be uploaded by the extension or mime type.
+
+### Block files by extension 
 
 You can specify which types of files can't be saved in file columns, attachments and notes. Use the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting to control the file types to be blocked.
 
@@ -107,7 +111,7 @@ When anyone tries to upload a file using one of the blocked types, the following
 > Number: `-2147205623`<br />
 > Message: `The attachment is either not a valid type or is too large. It cannot be uploaded or downloaded.`
 
-## Block or allow certain mime types
+### Block or allow certain mime types
 
 You can block or allow upload of files based on mime types. More Information [Mime Type Validation](power-platform/admin/settings-privacy-security#mime-type-validation).
 
