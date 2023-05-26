@@ -17,11 +17,6 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!IMPORTANT]
-> This is a preview feature.
-> 
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-
 You can create elastic tables using [Power Apps](https://make.powerapps.com/) without writing code. More information: [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md).
 
 But sometimes it is useful to be able to create and update table definitions with code. These examples create a new elastic table with the `SchemaName` `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `EntityMetadata.TableType` property with a value of `Elastic` to create an elastic table with code. When this is not set, the value will default to `Standard` and a standard table will be created.
@@ -341,14 +336,12 @@ Elastic tables support One-to-Many relationships and related rows can be retriev
 
 ## Next steps
 
-Learn how to perform data operations on elastic tables with code
-
 > [!div class="nextstepaction"]
-> [Use elastic tables](use-elastic-tables.md)<br/>
+> [Use elastic tables using code](use-elastic-tables.md)<br/>
 
 ### See also
 
-[Elastic tables (Preview)](elastic-tables.md)<br />
-[Use elastic tables (Preview)](use-elastic-tables.md)<br />
-[Query JSON columns in elastic tables (Preview)](query-json-columns-elastic-tables.md)<br />
+[Elastic tables](elastic-tables.md)<br />
+[Use elastic tables](use-elastic-tables.md)<br />
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)<br />
 [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
