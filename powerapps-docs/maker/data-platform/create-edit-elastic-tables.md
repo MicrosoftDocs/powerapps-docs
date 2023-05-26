@@ -18,9 +18,8 @@ An elastic table is a table managed by Microsoft Dataverse. Elastic tables come 
 As with standard tables, elastic tables are included with your Dataverse database capacity use.
 
 > [!IMPORTANT]
-> This is a preview feature.
-> 
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## When to consider Dataverse elastic tables?
 
@@ -147,4 +146,4 @@ You create an elastic table just like any other new table in Dataverse.
 ## See also
 
 [Create and edit tables using Power Apps](create-edit-entities-portal.md)<br />
-[Developer guide: Elastic tables (Preview)](../../developer/data-platform/elastic-tables.md)
+[Developer guide: Elastic tables](../../developer/data-platform/elastic-tables.md)
