@@ -35,6 +35,8 @@ Dataverse provides several different ways to save binary data representing files
 
 ## Block certain types of files
 
+### Block certain file extensions
+
 You can specify which types of files can't be saved in file columns, attachments and notes. Use the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting to control the file types to be blocked.
 
 You can also query and modify this data programmatically. It's stored in the [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments) column. There's only one row in the organization table. You can use the SDK or Web API to query this data:
@@ -106,6 +108,77 @@ When anyone tries to upload a file using one of the blocked types the following 
 > Code: `0x80043e09`<br />
 > Number: `-2147205623`<br />
 > Message: `The attachment is either not a valid type or is too large. It cannot be uploaded or downloaded.`
+
+### Block or allow certain mime types
+
+You can now block/allow upload of files based on mime types. More Information [Mime Type Validation](https://learn.microsoft.com/en-us/power-platform/admin/settings-privacy-security#mime-type-validation).
+
+You can also query and modify this data programmatically. It is stored in the [Organization.BlockedMimeTypes](reference/entities/organization.md#BKMK_BlockedMimeTypes) and [Organization.AllowedMimeTypes](reference/entities/organization.md#BKMK_AllowedMimeTypes) columns. There's only one row in the organization table. You can use the SDK or Web API to query this data:
+
+#### [SDK for .NET](#tab/sdk)
+
+```csharp
+public static (string, string) RetrieveMimeTypes(IOrganizationService service)
+{
+    var query = new QueryExpression("organization")
+    {
+        ColumnSet = new ColumnSet("blockedmimetypes", "allowedmimetypes"),
+        TopCount = 1
+    };
+
+    EntityCollection results = service.RetrieveMultiple(query);
+    Entity organization = results.Entities.FirstOrDefault();
+
+    return (
+        organization.Contains("blockedmimetypes") ? (string)organization["blockedmimetypes"] : string.Empty,
+        organization.Contains("allowedmimetypes") ? (string)organization["allowedmimetypes"] : string.Empty);
+}
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/organizations?$select=blockedmimetypes,allowedmimetypes HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#organizations(blockedmimetypes,allowedmimetypes)",
+    "value": [
+        {
+            "@odata.etag": "W/\"4719801\"",
+            "blockedmimetypes": "image/svg+xml",
+            "allowedmimetypes": null,
+            "organizationid": "8daa44aa-e2f8-ed11-a66e-00224820c64b"
+        }
+    ]
+}
+```
+
+If allowed mime types is set, the blocked mime types is ignored, and only the mime types specified in the allowed mime types property will be allowed.
+
+If blocked mime types is not empty and allowed mime types is empty and user tries to upload a mime type which is in blocked mime types, the following error will be thrown: 
+
+> Name: `MimeTypeBlocked`<br />
+> Code: `0x80072522`<br />
+> Message: `Operation not allowed as mime type image/svg+xml is blocked.`
+
+If allowed mime types is not empty and user tries to upload a mime type which is not in allowed mime types, the following error will be thrown: 
+
+> Name: `MimeTypeNotInAllowedList`<br />
+> Code: `0x80072521`<br />
+> Message: `Operation not allowed as mime type image/svg+xml is not in the allow list.`
 
 ### See also
 
