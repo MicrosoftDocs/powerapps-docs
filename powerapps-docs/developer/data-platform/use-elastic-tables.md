@@ -19,7 +19,7 @@ contributors:
 
 This article describes how to perform data operations with elastic tables.
 
-## Work with Session token
+## Work with session token
 
 As mentioned in [Consistency level](elastic-tables.md#consistency-level), you can achieve session level consistency by passing the current session token with your requests. If you don't include the session token, the data you retrieve may not include data changes you have just made.
 
