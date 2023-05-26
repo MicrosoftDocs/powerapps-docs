@@ -24,10 +24,6 @@ contributors:
 
 The `CreateMultiple` and `UpdateMultiple` messages are optimized for performance when performing multiple create or update operations on the same table. This optimization is useful in cases where you're loading or updating records in bulk.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
-
 ## Usage
 
 The .NET SDK classes to use these messages are just like the individual operation classes, except they support multiple entities to be passed in their respective request properties.
