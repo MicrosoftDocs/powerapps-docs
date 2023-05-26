@@ -1,5 +1,5 @@
 ---
-title: "Use elastic tables (Preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to perform data operations on elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
 ms.date: 05/23/2022
@@ -13,14 +13,9 @@ contributors:
  - JimDaly
 ---
 
-# Use elastic tables (Preview)
+# Use elastic tables (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-> [!IMPORTANT]
-> This is a preview feature.
-> 
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 This article describes how to perform data operations with elastic tables.
 
