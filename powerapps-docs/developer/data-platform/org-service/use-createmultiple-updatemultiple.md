@@ -6,11 +6,6 @@ author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 ms.topic: article
-search.audienceType: 
-  - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -28,6 +23,10 @@ contributors:
 > This article describes how `CreateMultiple` and `UpdateMultiple` messages are used for standard tables. These messages are also used by elastic tables, and the behavior can be different. See [Bulk operations with elastic tables (Preview)](../bulk-operations-elastic-tables.md) for more information about using these messages, as well as `DeleteMultiple`.
 
 The `CreateMultiple` and `UpdateMultiple` messages are optimized for performance when performing multiple create or update operations on the same table. This optimization is useful in cases where you're loading or updating records in bulk.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Usage
 
