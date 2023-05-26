@@ -1,21 +1,19 @@
 ---
 title: "Get started with virtual tables (entities) (Microsoft Dataverse) | Microsoft Docs"
 description: "Virtual tables enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding."
-ms.date: 04/08/2021
-
+ms.date: 04/01/2022
+author: NHelgren
+ms.author: nhelgren
+ms.reviewer: pehecke
 ms.topic: conceptual
 ms.custom: intro-internal
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 14c5fbbc-98db-4e49-b245-2c84c1cd11cd
-author: "Sunil-Garg" # GitHub ID
-ms.author: "pehecke"
-manager: "ryjones"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # Get started with virtual tables (entities)
@@ -31,7 +29,7 @@ Virtual tables replace previous client-side and server-side approaches to integr
 
 ## Virtual tables, data providers and data sources
 
-A virtual table is a definition of a table in the Dataverse platform without the associated physical tables for table instances created in the Dataverse database. Instead during runtime, when a table instance is required, its state is dynamically retrieved from the associated external system. Each virtual table type is associated with a *virtual table data provider* and (optionally) some configuration information from an associated *virtual table data source*.
+A virtual table is a definition of a table in the Dataverse platform without the associated physical tables for records created in the Dataverse database. Instead during runtime, when a record is required, its state is dynamically retrieved from the associated external system. Each virtual table type is associated with a *virtual table data provider* and (optionally) some configuration information from an associated *virtual table data source*.
 
 <!-- TODO:
 A data provider is a particular type of Dataverse plug-in, which is registered against CRUD events that occur in the platform. More information: [Write a plug-in](../write-plugin.md) -->
@@ -46,7 +44,7 @@ If a data provider cannot be found for your external data source, you can develo
 
 ## Virtual table creation and mapping
 
-Initially, defining a virtual table is the same as defining a custom table: you specify the table, columns, and relationships for the new virtual table type. However, additionally, you then connect the virtual table to a data provider to manage data operations. The custom table type and its columns must be mapped to the corresponding data in the external data source.  For example, a virtual table might be represented as a row in an external relational database, and each of its columns might correspond to a column in that row.  (Note that these external data names are often different than their corresponding virtual table names.) A specific, required mapping occurs for the entity ID field: the data provider must be able to provide this GUID and associate it to the external record that represents this table instance. The most direct way to achieve this is to actually use GUIDs as primary keys in the external data source.  
+Initially, defining a virtual table is the same as defining a custom table: you specify the table, columns, and relationships for the new virtual table type. However, additionally, you then connect the virtual table to a data provider to manage data operations. The custom table type and its columns must be mapped to the corresponding data in the external data source.  For example, a virtual table might be represented as a row in an external relational database, and each of its columns might correspond to a column in that row.  (Note that these external data names are often different than their corresponding virtual table names.) A specific, required mapping occurs for the entity ID field: the data provider must be able to provide this GUID and associate it to the external record that represents this record. The most direct way to achieve this is to actually use GUIDs as primary keys in the external data source.  
 
 In this example, a corresponding virtual table data source would also be provided to supply user and connection information for the external database.
 
@@ -62,12 +60,13 @@ Following are the limitations in virtual tables that must be considered.
     - A column on a virtual table cannot be calculated or rollup.  Any desired calculations must be done on the external side, possibly within or directed by the data provider.
     - Although you can add virtual table columns as a lookup on a grid or other UI views, you cannot filter or sort based on this virtual table lookup column.
 - Auditing is not supported.
-- Search functionality is not support for virtual tables as they do not persist data.
+- Search functionality is not supported for virtual tables as they do not persist data.
 - Charts and dashboards are not supported for virtual tables.
 - Virtual tables cannot be enabled for queues.
 - Offline caching of values is not supported for virtual tables.
 - A virtual table cannot represent an activity and do not support business process flows.
 - Once created, a virtual table cannot be changed to be a standard (non-virtual) table.  The reverse is also true: a standard table cannot be converted into a virtual table.
+- Selecting attributes in Retrieve and RetrieveMultiple queries will not be applied since all attributes will be returned
 
 For more information about how these limitations are reflected in the Dataverse API, see [API considerations of virtual tables](api-considerations-ve.md).
 

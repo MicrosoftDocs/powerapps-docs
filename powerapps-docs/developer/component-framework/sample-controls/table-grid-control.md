@@ -1,19 +1,21 @@
 ---
 title: " Table grid component| Microsoft Docs" 
-description: "This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form." 
-ms.custom: ""
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+description: "This sample showcases how to create a simple dataset component, view's column metadata binding, record binding, more records from paging and record navigation to form." 
+author: noazarur-microsoft
+ms.author: noazarur
+ms.date: 03/12/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+contributors:
+ - JimDaly
 ---
 
 # Implementing table grid component
 
-This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form.
+This sample showcases how to create a simple dataset component, view's column metadata binding, record binding, more records from paging and record navigation to form.
 The component header columns and internal record values are bound to the existing views. 
 
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
@@ -31,7 +33,7 @@ You can download the complete sample component from [here](https://github.com/mi
 
 Column Header bind to the View :
 
-View column info lies at `context.parameters.[dataset_property_name].columns`. It’s an array type.
+View column info lies at `context.parameters.[dataset_property_name].columns`. It's an array type.
 
 Record binding :
 

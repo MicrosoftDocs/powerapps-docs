@@ -1,20 +1,17 @@
 ---
 title: "Xrm.Device| MicrosoftDocs"
 description: Provides methods to use native device capabilities via Xrm.Device.
-ms.date: 09/08/2021
-
-ms.topic: "reference"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: d065fdce-d9de-4d05-a5b9-863e197b4f4d
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 
 # Xrm.Device (Client API reference)

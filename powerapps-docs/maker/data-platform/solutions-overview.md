@@ -1,27 +1,19 @@
 ---
 title: "Solutions in Power Apps | MicrosoftDocs"
 description: "Provides an overview of solutions in Power Apps"
-
-ms.date: 06/22/2021
+ms.date: 05/04/2023
 ms.reviewer: ""
-
 ms.topic: overview
 author: "Mattp123"
 ms.assetid: ece68f5f-ad40-4bfa-975a-3e5bafb854aa
 caps.latest.revision: 55
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
    
 # Solutions overview  
-
-
 
 Solutions are used to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, tables, processes, web resources, choices, flows, and more.
 
@@ -94,6 +86,7 @@ From the **Solutions** area, select a solution to view all of its components.
  
 
  ## Contextual commands
+
  As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
  
 > [!div class="mx-imgBorder"]  
@@ -120,19 +113,22 @@ To use or run a flow from a canvas app that is included in a solution, you must 
 
 More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
+## Use pipelines in Power Platform to deploy solutions
+
+Easily deploy solutions to test and production environments using pipelines in Power Platform. Once pipelines are in place, makers can initiate in-product deployments with a few clicks. Makers do so directly within their development environments. More information: [Overview of pipelines in Power Platform](/power-platform/alm/pipelines)
+
 ## Known limitations
 
 The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
 
+-	If you encounter a canvas app publishing error: **the app has connections to flows that are no longer in the environment**, remove any deleted flows from the app. Then save and publish the app.  
+- Canvas apps shared with 'Everyone' that go through environment backup and environment restore operations aren't shared with 'Everyone' in the restored environment. Notice that, the canvas app can be shared with a security group and the app in the restored environment will be shared with that security group.  
 - Canvas app instant flows must be created from an app already in a solution since adding this type of flow from outside solutions is blocked. 
    - Workaround for this limitation: Remove the trigger, replace with another trigger like recurrence, save the flow, add it into a solution, and then change the trigger as needed.
--	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
-- Flows created from solutions will not be displayed in the**Shared with me** list. They must be accessed through a solution. 
+- Instant flows (flows that use a manual trigger) can't be added to a solution after the flow has been created. To include an instant flow in a solution, it must be created from the solution. To do this, from the solution select **New** > **Automation** > **Cloud flow** > **Instant**.
 - The [Power Automate mobile app](/power-automate/mobile-manage-flows) does not currently support flows created in a solution. 
 - The Flow action menu in [Power Apps Mobile](/powerapps/mobile/run-powerapps-on-mobile) and [Dynamics 365 for phones and tablets](/dynamics365/mobile-app/overview) does not currently support flows created in a solution. 
-- Flows in solutions don't support delegated authentication. For example, access to a flow cannot be automatically granted based on having access to the SharePoint list the flow was created from.
-- Custom connectors created outside solutions cannot be added to solutions at this time.
-- Canvas apps shared with 'Everyone' that go through environment backup and environment restore operations aren't shared with 'Everyone' in the restored environment. Notice that, the canvas app can be shared with a security group and the app in the restored environment will be shared with that security group.  
+- Flows in solutions don't support delegated authorization. For example, access to a flow cannot be automatically granted based on having access to the SharePoint list the flow was created from. 
 - Flows using [connectors](/connectors/connector-reference/) that are 'indexed' cannot be added into solutions. Indexing isn't supported for solution cloud flows yet. Indexing enables the quick retrieval of those flows to display in a menu or list. Indexed connectors include Power Automate instant (button) flows, Power Apps, Teams, SharePoint, Dynamics 365 Customer Voice, Microsoft Forms, legacy Dataverse connector, Dynamics 365, Excel Online, Microsoft Project, Azure IOT Central V2, and Project Online. 
    - Workarounds for this limitation: 
       - Edit the flow to remove the indexed connector triggers/actions, add it into a solution, and then change it back.
@@ -150,7 +146,8 @@ For details about customizing the individual components in a solution, see the f
 -   For business rules, see [Business Rules](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
  
  
-### Next steps  
+### Next steps
+
 [Create a solution](create-solution.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

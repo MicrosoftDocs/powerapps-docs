@@ -1,18 +1,14 @@
 ---
-title: "Calendar table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Calendar table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Calendar table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Calendar table/entity reference
@@ -25,14 +21,14 @@ Calendar used by the scheduling system to define when an appointment or activity
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/calendars<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/calendars(*calendarid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|ExpandCalendar|<xref href="Microsoft.Dynamics.CRM.ExpandCalendar?text=ExpandCalendar Function" />|<xref:Microsoft.Crm.Sdk.Messages.ExpandCalendarRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/calendars(*calendarid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/calendars<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/calendars(*calendarid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.2/calendars<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/calendars(*calendarid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|ExpandCalendar|<xref:Microsoft.Dynamics.CRM.ExpandCalendar?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ExpandCalendarRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/calendars(*calendarid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/calendars<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.2/calendars(*calendarid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -140,10 +136,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -535,7 +531,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_calendar_system_users"></a> calendar_system_users
 
-Same as systemuser table [calendar_system_users](systemuser.md#BKMK_calendar_system_users) Many-To-One relationship.
+Same as the [calendar_system_users](systemuser.md#BKMK_calendar_system_users) many-to-one relationship for the [systemuser](systemuser.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -550,7 +546,7 @@ Same as systemuser table [calendar_system_users](systemuser.md#BKMK_calendar_sys
 
 ### <a name="BKMK_Calendar_AsyncOperations"></a> Calendar_AsyncOperations
 
-Same as asyncoperation table [Calendar_AsyncOperations](asyncoperation.md#BKMK_Calendar_AsyncOperations) Many-To-One relationship.
+Same as the [Calendar_AsyncOperations](asyncoperation.md#BKMK_Calendar_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -565,7 +561,7 @@ Same as asyncoperation table [Calendar_AsyncOperations](asyncoperation.md#BKMK_C
 
 ### <a name="BKMK_Calendar_Annotation"></a> Calendar_Annotation
 
-Same as annotation table [Calendar_Annotation](annotation.md#BKMK_Calendar_Annotation) Many-To-One relationship.
+Same as the [Calendar_Annotation](annotation.md#BKMK_Calendar_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -580,7 +576,7 @@ Same as annotation table [Calendar_Annotation](annotation.md#BKMK_Calendar_Annot
 
 ### <a name="BKMK_calendar_customercalendar_holidaycalendar"></a> calendar_customercalendar_holidaycalendar
 
-Same as calendar table [calendar_customercalendar_holidaycalendar](calendar.md#BKMK_calendar_customercalendar_holidaycalendar) Many-To-One relationship.
+Same as the [calendar_customercalendar_holidaycalendar](calendar.md#BKMK_calendar_customercalendar_holidaycalendar) many-to-one relationship for the [calendar](calendar.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -595,7 +591,7 @@ Same as calendar table [calendar_customercalendar_holidaycalendar](calendar.md#B
 
 ### <a name="BKMK_Calendar_BulkDeleteFailures"></a> Calendar_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Calendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Calendar_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Calendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Calendar_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -610,7 +606,7 @@ Same as bulkdeletefailure table [Calendar_BulkDeleteFailures](bulkdeletefailure.
 
 ### <a name="BKMK_BusinessUnit_Calendar"></a> BusinessUnit_Calendar
 
-Same as businessunit table [BusinessUnit_Calendar](businessunit.md#BKMK_BusinessUnit_Calendar) Many-To-One relationship.
+Same as the [BusinessUnit_Calendar](businessunit.md#BKMK_BusinessUnit_Calendar) many-to-one relationship for the [businessunit](businessunit.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -625,7 +621,7 @@ Same as businessunit table [BusinessUnit_Calendar](businessunit.md#BKMK_Business
 
 ### <a name="BKMK_slabase_businesshoursid"></a> slabase_businesshoursid
 
-Same as sla table [slabase_businesshoursid](sla.md#BKMK_slabase_businesshoursid) Many-To-One relationship.
+Same as the [slabase_businesshoursid](sla.md#BKMK_slabase_businesshoursid) many-to-one relationship for the [sla](sla.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -640,7 +636,7 @@ Same as sla table [slabase_businesshoursid](sla.md#BKMK_slabase_businesshoursid)
 
 ### <a name="BKMK_calendar_organization"></a> calendar_organization
 
-Same as organization table [calendar_organization](organization.md#BKMK_calendar_organization) Many-To-One relationship.
+Same as the [calendar_organization](organization.md#BKMK_calendar_organization) many-to-one relationship for the [organization](organization.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -657,7 +653,7 @@ Same as organization table [calendar_organization](organization.md#BKMK_calendar
 
 **Added by**: Service Level Agreement (SLA) Solution
 
-Same as slaitem table [calendar_slaitem](slaitem.md#BKMK_calendar_slaitem) Many-To-One relationship.
+Same as the [calendar_slaitem](slaitem.md#BKMK_calendar_slaitem) many-to-one relationship for the [slaitem](slaitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -686,34 +682,34 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_calendar_createdby"></a> lk_calendar_createdby
 
-See systemuser Table [lk_calendar_createdby](systemuser.md#BKMK_lk_calendar_createdby) One-To-Many relationship.
+See the [lk_calendar_createdby](systemuser.md#BKMK_lk_calendar_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_calendar_createdonbehalfby"></a> lk_calendar_createdonbehalfby
 
-See systemuser Table [lk_calendar_createdonbehalfby](systemuser.md#BKMK_lk_calendar_createdonbehalfby) One-To-Many relationship.
+See the [lk_calendar_createdonbehalfby](systemuser.md#BKMK_lk_calendar_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_calendar_modifiedby"></a> lk_calendar_modifiedby
 
-See systemuser Table [lk_calendar_modifiedby](systemuser.md#BKMK_lk_calendar_modifiedby) One-To-Many relationship.
+See the [lk_calendar_modifiedby](systemuser.md#BKMK_lk_calendar_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_calendars"></a> organization_calendars
 
-See organization Table [organization_calendars](organization.md#BKMK_organization_calendars) One-To-Many relationship.
+See the [organization_calendars](organization.md#BKMK_organization_calendars) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_calendar_customercalendar_holidaycalendar"></a> calendar_customercalendar_holidaycalendar
 
-See calendar Table [calendar_customercalendar_holidaycalendar](calendar.md#BKMK_calendar_customercalendar_holidaycalendar) One-To-Many relationship.
+See the [calendar_customercalendar_holidaycalendar](calendar.md#BKMK_calendar_customercalendar_holidaycalendar) one-to-many relationship for the [calendar](calendar.md) table/entity.
 
 ### <a name="BKMK_lk_calendar_modifiedonbehalfby"></a> lk_calendar_modifiedonbehalfby
 
-See systemuser Table [lk_calendar_modifiedonbehalfby](systemuser.md#BKMK_lk_calendar_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_calendar_modifiedonbehalfby](systemuser.md#BKMK_lk_calendar_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_calendars"></a> business_unit_calendars
 
-See businessunit Table [business_unit_calendars](businessunit.md#BKMK_business_unit_calendars) One-To-Many relationship.
+See the [business_unit_calendars](businessunit.md#BKMK_business_unit_calendars) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.calendar?text=calendar EntityType" />

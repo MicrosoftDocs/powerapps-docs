@@ -1,19 +1,17 @@
 ---
 title: "get method for collections (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
-
-ms.topic: "reference"
+description: "Describes the get method used for collections."
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # get method for collections (Client API reference)
 
@@ -30,7 +28,7 @@ search.app:
 |Parameter  |Return value |Return type  |
 |---------|------|-------|
 |None  |All the objects in the collection  |Array|
-|String  |The object where the name matches the argument<br/><br/>The objects returned in the **formContext.data.process** namespace don’t contain names. So, using the string parameter for this method returns no objects.  |Object|
+|String  |The object where the name matches the argument<br/><br/>The objects returned in the **formContext.data.process** namespace don't contain names. So, using the string parameter for this method returns no objects.  |Object|
 |Number  |The object where the index matches the number  |Object|
 |delegate function(attribute, index)  |Any objects that cause the delegate function to return **true**.  |Array|
 

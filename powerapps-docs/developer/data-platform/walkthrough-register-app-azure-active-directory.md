@@ -2,20 +2,16 @@
 title: "Tutorial: Register an app with Azure Active Directory (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to register an application with Azure Active Directory for authentication with Microsoft Dataverse web services."
 keywords: ""
-ms.date: 07/22/2021
+ms.date: 01/19/2023
 
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: "paulliew" # MSFT alias of Microsoft employees only
 ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Tutorial: Register an app with Azure Active Directory
@@ -52,25 +48,27 @@ App registration can also be done by an application developer or individual user
 
       ![New App registration page.](media/new-app-registration-page.png "New App registration page")
 
+4. On the app **Overview** page, set the **Application ID URI** value by selecting **Add an Application ID URI** and then **+ Add a scope**. Set the URI value to your target environment (organization) base address.
+
 5. On the app **Overview** page, hover over **Application (client) ID** value, and select the **Copy to clipboard** icon to copy the value as you'll need to specify this in your application's authentication code or app.config file where appropriate.
 
     ![Copy application ID.](media/app-registration-overview-page.png "Copy application ID")
   
-5. Select **Manifest** tab, in the manifest editor, set the *allowPublicClient** property to **true** and click on **Save**.
+6. Select **Manifest** tab, in the manifest editor, set the *allowPublicClient** property to **true** and click on **Save**.
    
     ![App registration Manifest.](media/app-registration-manifest-page.png "App registration Manifest")
 
-6. Select **API permissions** tab, click on **Add a permission**. 
+7. Select **API permissions** tab, click on **Add a permission**. 
 
     ![Add app permission.](media/azure-api-permissions-page.png "Add app permission")
 
-7. Search for and choose **Dataverse** under the **APIs my organization uses** tab. If "Dataverse" is not found, then search for "Common Data Service".
+8. Search for and choose **Dataverse** under the **APIs my organization uses** tab. If "Dataverse" is not found, then search for "Common Data Service".
     
     ![Select API.](media/app-registration-select-api-page.png "Select API")    
     > [!TIP]
     > If you are presented with more than one **Common Data Service** item in the search list, choose any one of them. In the next step the service name and URL will be shown. At that point you can go back to the API search and choose a different Dataverse list item if needed.
     
-8.  Click on **Delegated permissions** and check the options and click on **Add permissions**. 
+9.  Click on **Delegated permissions** and check the options and click on **Add permissions**. 
     
     ![Delegate Permissions.](media/app-registration-delegate-permissions-page.png "Delegate Permission")
     > [!NOTE]
@@ -80,14 +78,12 @@ This completes the registration of your application in Azure Active Directory.
 
 ## Additional configuration options
 
-If your application will be a Single Page Application (SPA) that depends on CORS you must configure the app registration to support the implicit flow. 
-More information: [Tutorial: Registering and configuring a SPA application with adal.js](walkthrough-registering-configuring-simplespa-application-adal-js.md)
-
 If your application will support server-to-server connections, see [Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md)
   
-### See also  
- [Application registration in Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)    
- [Authenticate Users with Dataverse Web Services](authentication.md)
+### See also
+
+[Application registration in Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)<br />
+[Authenticate Users with Dataverse Web Services](authentication.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

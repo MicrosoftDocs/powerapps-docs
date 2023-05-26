@@ -5,24 +5,21 @@ author: NickWaggoner
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 10/22/2021
+ms.reviewer: mkaur
+ms.date: 08/02/2022
 ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
-  - navjotm
-  - wimcoor
+  - mduelae
+  - amchern
   - lancedMicrosoft
 ---
 # Understand SharePoint forms integration
-You can now easily [customize any SharePoint list form](customize-list-form.md) in Power Apps. In this article, we'll walk through the details of how these forms work and how you can customize them.
+You can now easily [customize any Microsoft Lists or SharePoint library form](customize-list-form.md) in Power Apps. In this article, we'll walk through the details of how these forms work and how you can customize them.
 
-If you've customized a form for a SharePoint list, you've likely noticed that the default generated form works for all operations, like creating, showing, or editing an item. This is accomplished with the help of generated formulas and the **SharePointIntegration** control.
+If you've customized a form for a list, you've likely noticed that the default generated form works for all operations, like creating, showing, or editing an item. This is accomplished with the help of generated formulas and the **SharePointIntegration** control.
 
 ## Understand the default generated form
 
@@ -88,7 +85,7 @@ The **SharePointIntegration** control communicates user actions between SharePoi
 
 The **SharePointIntegration** control has the following properties:
 
-**Selected** - The selected item from the SharePoint list.
+**Selected** - The selected item from the list.
 
 **OnNew** - Actions to perform when a user selects the **New** button or opens the **Create item** form in SharePoint.
 
@@ -100,7 +97,7 @@ The **SharePointIntegration** control has the following properties:
 
 **OnCancel** - Actions to perform when a user selects the **Cancel** button in SharePoint.
 
-**SelectedListItemID** - Item ID for the selected item in a SharePoint list.
+**SelectedListItemID** - Item ID for the selected item in a list.
 
 **Data Source** - The list that contains the record that the form will show, edit, or create. If you change this property, the **Selected** and **SelectedItemID** properties may stop working.
 
@@ -113,7 +110,7 @@ Now that you have a better understanding of the default generated form and the *
   > [!TIP]
   >    Set different values for a variable in the **OnNew**, **OnView**, and **OnEdit** formulas. You can use this variable in the **OnSave** formula to determine which form is being used.
 
-* Make sure to include **RequestHide()** in the **OnSuccess** formula of all your forms. If you forget this, SharePoint won't know when to hide the form.
+* Make sure to include **RequestHide()** in the **OnSuccess** formula of all your forms. If you forget this, SharePoint won't know when to hide the form. Also, avoid running important code after calling **RequestHide()**, so that all code runs while the form is still visible and able to run logic. 
 
 * You can't control the hiding of a form when a user selects **Cancel** in SharePoint, so make sure you reset your forms in the **OnCancel** formula of the **SharePointIntegration** control.
 
@@ -140,6 +137,8 @@ Now that you have a better understanding of the default generated form and the *
         ```
 
 - Collection variables aren't reset on closing the Power Apps form and the state is persisted for the entire session. That's why, if there are any use-cases where the variables need to be reset, clear the variables in the **OnView** property of the SharePointIntegration object.
+
+- Don't use imperative functions such as **Launch()** in the SharePointIntegration properties (such as **OnNew** and **OnView**). This use can cause unexpected behavior since the SharePointIntegration lifecycle events (such as selections changing) can trigger in the background even when the form is not visible.
 
 ### See also
 

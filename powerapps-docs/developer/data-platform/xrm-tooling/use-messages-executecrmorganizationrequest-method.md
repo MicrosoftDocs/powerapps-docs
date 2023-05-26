@@ -1,31 +1,27 @@
 ---
 title: "Use messages with the ExecuteCrmOrganizationRequest method (Microsoft Dataverse)| Microsoft Docs"
 description: "Learn how to use messages with the ExecuteCrmOrganizationRequest method. The samples demonstrate how to execute CreateRequest and RetrieveMultipleRequest message using the CrmServiceClient.String) method."
-ms.custom: ""
-ms.date: 04/12/2021
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 1ba60f67-522d-4540-a6f9-0787d7074a79
-caps.latest.revision: 17
-author: "MattB-msft"
-ms.author: "kvivek"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
+  - phecke
 ---
 # Use messages with the ExecuteCrmOrganizationRequest method
   
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-The following code samples demonstrate how you can execute messages using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmOrganizationRequest*> method.  
+The following code samples demonstrate how you can execute messages using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmOrganizationRequest*> method.
+
+> [!NOTE]
+> You could also use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.ExecuteOrganizationRequest%2A?displayProperty=nameWithType> to obtain the same results.
   
 ## Example 1: CreateRequest message  
 
@@ -33,7 +29,8 @@ The following code samples demonstrate how you can execute messages using the <x
   
 ```csharp 
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  
-  
+// ServiceClient svc = new ServiceClient(connectionstring); 
+
 // Verify that you are connected.  
 if (svc != null && svc.IsReady)  
 {  
@@ -66,7 +63,8 @@ else
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  
-  
+// ServiceClient svc = new ServiceClient(connectionstring); 
+
 // Verify that you are connected.  
 if (svc != null && svc.IsReady)  
 {  

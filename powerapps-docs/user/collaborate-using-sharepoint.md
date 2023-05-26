@@ -3,7 +3,6 @@ title: Collaborate using SharePoint | Microsoft Docs
 description: Learn how to collaborate using SharePoint within a model-driven app
 documentationcenter: ''
 author: mduelae
-manager: kvivek
 editor: ''
 tags: ''
 
@@ -15,9 +14,6 @@ ms.subservice: end-user
 ms.author: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Collaborate using SharePoint 

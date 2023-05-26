@@ -1,26 +1,22 @@
 ---
 title: "Data (XML) Web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about using data (XML) Web resources to save and access data." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 10/31/2018
-
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: 2bf0d49f-8b6d-6d5b-0af5-edf6dd485fed
-author: Nkrb # GitHub ID
 ms.subservice: mda-developer
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
-ms.reviewer: 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 
 # Data (XML) Web resources
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/data-xml-web-resources -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/data-xml-web-resources -->
 
 Use Data (XML) Web resources to save and access data.  
   
@@ -38,7 +34,7 @@ Use Data (XML) Web resources to save and access data.
  [Web resources](web-resources.md)   
  [Using Web Page (HTML) web resources](webpage-html-web-resources.md)   
  [Using Style Sheet (CSS) web resources](css-web-resources.md)   
- [Using Script (JScript) web resources](script-jscript-web-resources.md)   
+ [Using JavaScript web resources](script-jscript-web-resources.md)   
  [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md) 
 

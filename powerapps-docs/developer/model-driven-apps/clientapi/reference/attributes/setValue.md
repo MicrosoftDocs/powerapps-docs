@@ -1,20 +1,17 @@
 ---
 title: "setValue (Client API reference)| MicrosoftDocs"
 description: Sets the data value for a column.
-ms.date: 04/15/2021
-
-ms.topic: "reference"
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/14/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 1324b465-6012-47d4-bf35-837df82014cb
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # setValue (Client API reference)
 
@@ -40,7 +37,7 @@ Depends on the type of column.
 | decimal| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|
 | double| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx) |
 | Integer|[Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|
-| lookup  | [Array](https://msdn.microsoft.com/library/k4h76zbx.aspx) An array of lookup objects. <br/><br/>Certain lookups, known as ‘partylist’ lookups, allow for multiple records to be associated in a lookup, such as the **To:** column for an email table record. Therefore, all lookup data values use an array of lookup objects – even when the lookup column does not support more than one record reference to be added.<br/><br/>Each lookup has the following properties:<br/>- *entityType*: String. The name of the table displayed in the lookup.<br/>- *id*: String: The string representation of the GUID value for the record displayed in the lookup. The value should match the following format: {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}<br/>- *name*: String: The text representing the record to be displayed in the lookup.|
+| lookup  | [Array](https://msdn.microsoft.com/library/k4h76zbx.aspx) An array of lookup objects. <br/><br/>Certain lookups, known as 'partylist' lookups, allow for multiple records to be associated in a lookup, such as the **To:** column for an email table record. Therefore, all lookup data values use an array of lookup objects – even when the lookup column does not support more than one record reference to be added.<br/><br/>Each lookup has the following properties:<br/>- *entityType*: String. The name of the table displayed in the lookup.<br/>- *id*: String: The string representation of the GUID value for the record displayed in the lookup. The value should match the following format: {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}<br/>- *name*: String: The text representing the record to be displayed in the lookup.|
 | memo  | [String](https://msdn.microsoft.com/library/ecczf11c.aspx)  |
 | money| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)  |
 | choice | [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)  |
@@ -53,7 +50,7 @@ Depends on the type of column.
 
 > [!NOTE]
 > Updating a column using **setValue** will not cause the **OnChange** event handlers to run. If you want the **OnChange** event handlers to run you must use [fireOnChange](../attributes/fireOnChange.md) in addition to **setValue**. <br/><br/>
-When model-driven apps for tablets is not connected to the server, **setValue** will not work.<br/><br/>You cannot set the value of composite columns. More information: [Write scripts for composite columns](../composite-attributes.md).
+You cannot set the value of composite columns. More information: [Write scripts for composite columns](../composite-attributes.md).
 
 ### Related topic
 [getValue (Client API reference)](getValue.md)

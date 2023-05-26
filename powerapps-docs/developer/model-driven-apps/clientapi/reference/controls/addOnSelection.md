@@ -1,19 +1,16 @@
 ---
 title: "addOnSelection (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the addOnSelection method.
-ms.date: 04/19/2021
-
-ms.topic: "reference"
+author: chmoncay
+ms.author: chmoncay
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 66cfb2ff-4d78-4bb9-8dc0-e214ae1d2880
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # addOnSelection (Client API reference)
 

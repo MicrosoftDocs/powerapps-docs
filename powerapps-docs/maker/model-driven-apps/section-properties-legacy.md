@@ -9,20 +9,13 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 03/23/2020
-
 ms.topic: how-to
 ms.assetid: 2d3af6e9-e8a4-4129-b708-383b2740c015
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Model-driven app form section properties (classic)
-
-
 
 A section in a form occupies the space available in a tab column. Sections have a label that can be displayed and a line might be shown below the label.  
   
@@ -30,13 +23,16 @@ Sections can have up to four columns and includes options for displaying how lab
   
 Headers and footers are similar to sections but cannot be removed. If they don't contain anything they will not be shown.
 
+> [!NOTE]
+> For the modern experience when working with sections on a form, see [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)
+
 ## Section properties in classic form designer
 
 You can access **Section properties** in solution explorer from Power Apps (make.powerapps.com).
 
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
+2. Select **Tables** on the left navigation pane, select the table that you want, and then select the **Forms** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 3.  In the list of forms, open the form of type **Main**. 
 

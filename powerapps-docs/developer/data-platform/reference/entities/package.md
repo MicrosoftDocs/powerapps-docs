@@ -1,18 +1,14 @@
 ---
-title: "package table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "package table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the package table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # package table/entity reference
@@ -27,15 +23,17 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/packages<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/packages(*packageid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/packages(*packageid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/packages<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/packages(*packageid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/packages(*packageid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.2/packages<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/packages(*packageid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/packages(*packageid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/packages<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/packages(*packageid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/packages(*packageid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -61,6 +59,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [AppId](#BKMK_AppId)
 - [ApplicationName](#BKMK_ApplicationName)
+- [CatalogId](#BKMK_CatalogId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [InstalledOn](#BKMK_InstalledOn)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -103,6 +102,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|applicationname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_CatalogId"></a> CatalogId
+
+|Property|Value|
+|--------|-----|
+|Description|The Catalog identifier for packages installed from a Catalog|
+|DisplayName|Catalog Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|catalogid|
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
@@ -359,6 +374,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [DeploymentLog](#BKMK_DeploymentLog)
+- [DeploymentLog_Name](#BKMK_DeploymentLog_Name)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -487,6 +504,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_DeploymentLog"></a> DeploymentLog
+
+|Property|Value|
+|--------|-----|
+|Description|Stores the package deployment logs for an installation|
+|DisplayName|Deployment Log|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|deploymentlog|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_DeploymentLog_Name"></a> DeploymentLog_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|deploymentlog_name|
+|MaxLength|200|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -679,7 +725,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [package_SyncErrors](syncerror.md#BKMK_package_SyncErrors) Many-To-One relationship.
+Same as the [package_SyncErrors](syncerror.md#BKMK_package_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -696,7 +742,7 @@ Same as syncerror table [package_SyncErrors](syncerror.md#BKMK_package_SyncError
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [package_DuplicateMatchingRecord](duplicaterecord.md#BKMK_package_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [package_DuplicateMatchingRecord](duplicaterecord.md#BKMK_package_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -713,7 +759,7 @@ Same as duplicaterecord table [package_DuplicateMatchingRecord](duplicaterecord.
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [package_DuplicateBaseRecord](duplicaterecord.md#BKMK_package_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [package_DuplicateBaseRecord](duplicaterecord.md#BKMK_package_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -730,7 +776,7 @@ Same as duplicaterecord table [package_DuplicateBaseRecord](duplicaterecord.md#B
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [package_AsyncOperations](asyncoperation.md#BKMK_package_AsyncOperations) Many-To-One relationship.
+Same as the [package_AsyncOperations](asyncoperation.md#BKMK_package_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -747,7 +793,7 @@ Same as asyncoperation table [package_AsyncOperations](asyncoperation.md#BKMK_pa
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [package_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_package_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [package_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_package_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -764,7 +810,7 @@ Same as mailboxtrackingfolder table [package_MailboxTrackingFolders](mailboxtrac
 
 **Added by**: System Solution Solution
 
-Same as processsession table [package_ProcessSession](processsession.md#BKMK_package_ProcessSession) Many-To-One relationship.
+Same as the [package_ProcessSession](processsession.md#BKMK_package_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -781,7 +827,7 @@ Same as processsession table [package_ProcessSession](processsession.md#BKMK_pac
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [package_BulkDeleteFailures](bulkdeletefailure.md#BKMK_package_BulkDeleteFailures) Many-To-One relationship.
+Same as the [package_BulkDeleteFailures](bulkdeletefailure.md#BKMK_package_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -798,7 +844,7 @@ Same as bulkdeletefailure table [package_BulkDeleteFailures](bulkdeletefailure.m
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [package_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_package_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [package_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_package_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -827,31 +873,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_package_createdby](systemuser.md#BKMK_lk_package_createdby) One-To-Many relationship.
+See the [lk_package_createdby](systemuser.md#BKMK_lk_package_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_package_createdonbehalfby"></a> lk_package_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_package_createdonbehalfby](systemuser.md#BKMK_lk_package_createdonbehalfby) One-To-Many relationship.
+See the [lk_package_createdonbehalfby](systemuser.md#BKMK_lk_package_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_package_modifiedby"></a> lk_package_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_package_modifiedby](systemuser.md#BKMK_lk_package_modifiedby) One-To-Many relationship.
+See the [lk_package_modifiedby](systemuser.md#BKMK_lk_package_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_package_modifiedonbehalfby"></a> lk_package_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_package_modifiedonbehalfby](systemuser.md#BKMK_lk_package_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_package_modifiedonbehalfby](systemuser.md#BKMK_lk_package_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_package"></a> organization_package
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_package](organization.md#BKMK_organization_package) One-To-Many relationship.
+See the [organization_package](organization.md#BKMK_organization_package) one-to-many relationship for the [organization](organization.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -884,6 +930,6 @@ IntersectEntityName: package_solution<br />
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.package?text=package EntityType" />

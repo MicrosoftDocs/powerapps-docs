@@ -17,12 +17,8 @@ ms.assetid: fecf23c9-05e6-4397-9a5d-37210bcc2816
 caps.latest.revision: 25
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Edit filter criteria for a table view
 
@@ -36,10 +32,10 @@ Along with the [columns](../model-driven-apps/model-driven-app-glossary.md#colum
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.
+2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Views** area.
 
 > [!note]
-> Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution open your solution from the **Solutions** area, select the table, and then select the **Views** tab.
+> Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution open your solution from the **Solutions** area, select the table, and then select the **Views** area.
 
 3.  Select a column, and from the column menu, select **Filter by**.
 

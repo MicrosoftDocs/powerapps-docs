@@ -2,7 +2,6 @@
 title: Deploy the Hospital Emergency Response app | Microsoft Docs
 description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
 author: pankajarora-msft
-manager: annbe
 
 ms.topic: conceptual
 ms.custom: 
@@ -506,7 +505,7 @@ You must enable the following flows that help in collating the data from various
 - Populate CDC Data - Healthcare Supply
 - Populate CDC Data - Patients and Hospitals Capacities
 
-1.  Sign into [Power Automate](https://flow.microsoft.com/).
+1.  Sign into [Power Automate](https://make.powerautomate.com/).
 
 2.  In the left pane, select **Solutions.** From the solution list, select **Hospital Emergency Response Solution** to open the solution.
 

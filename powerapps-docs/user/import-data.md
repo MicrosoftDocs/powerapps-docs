@@ -3,7 +3,6 @@ title: "Import data in model-driven apps| MicrosoftDocs"
 description: How to import data
 ms.custom: ""
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # How to import data
 

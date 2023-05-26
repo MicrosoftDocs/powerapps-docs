@@ -6,7 +6,6 @@ author: alcerri
 ms.subservice: mda-maker
 ms.author: alcerri
 ms.reviewer: matp
-manager: kvivek
 ms.date: 12/02/2020
 
 ms.topic: troubleshooting
@@ -14,8 +13,6 @@ applies_to:
   - "powerapps"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Model-driven app frequently asked questions
 
@@ -102,7 +99,7 @@ More advanced users can review the solution's customization.xml file. When you i
 * Removed
 * Modified
 
-This value specifies the changes in the current layer with respect to the previous managed layer. For example, on solution import, `solutionAction="Removed"` will remove the component from the app. More information: [*Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form message during solution import](../data-platform/import-update-export-solutions.md#microsoftcrmcrminvalidoperationexception-full-formxml-is-expected-to-create-a-form--message-during-solution-import)
+This value specifies the changes in the current layer with respect to the previous managed layer. For example, on solution import, `solutionAction="Removed"` will remove the component from the app. More information: [*Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form &lt;formid&gt;* message during solution import](../data-platform/import-update-export-solutions.md#microsoftcrmcrminvalidoperationexception-full-formxml-is-expected-to-create-a-form-formid-message-during-solution-import)
 
 ## What is an app module?
 

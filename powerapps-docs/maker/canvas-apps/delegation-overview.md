@@ -5,16 +5,14 @@ author: lancedMicrosoft
 
 ms.topic: overview
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 02/23/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
   - lanced-microsoft
 ---
@@ -38,7 +36,7 @@ Delegation is supported for certain tabular data sources only. If a data source 
 
 - [Power Apps delegable functions and operations for Microsoft Dataverse](connections/connection-common-data-service.md#power-apps-delegable-functions-and-operations-for-dataverse) 
 - [Power Apps delegable functions and operations for SharePoint](/connectors/sharepointonline/#power-apps-delegable-functions-and-operations-for-sharepoint) 
-- [Power Apps delegable functions and operations for SQL Server](/connectors/sql/#power-apps-delegable-functions-and-operations-for-sql-server) 
+- [Power Apps delegable functions and operations for SQL Server](/connectors/sql/#power-apps-functions-and-operations-delegable-to-sql-server) 
 - [Power Apps delegable functions and operations for Salesforce](/connectors/salesforce/#power-apps-delegable-functions-and-operations-for-salesforce) 
 
 Imported Excel workbooks (using the **Add static data to your app** data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full Power Apps language can be applied.
@@ -70,6 +68,7 @@ The previous list doesn't include these notable items:
 
 * **[If](functions/function-if.md)**
 * **[*](functions/operators.md)**, **[/](functions/operators.md)**, **[Mod](functions/function-mod.md)**
+*  Column casting operations **[Text](/power-platform/power-fx/reference/function-text)**, **[Value](/power-platform/power-fx/reference/function-value)**
 * **[Concatenate](functions/function-concatenate.md)** (including **[&](functions/operators.md)**)
 * **[ExactIn](functions/operators.md)**
 * String manipulation functions: **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Len](functions/function-left-mid-right.md)**, ...
@@ -116,7 +115,7 @@ All other functions don't support delegation, including these notable functions:
 * **[Choices](functions/function-choices.md)**
 * **[Concat](functions/function-concatenate.md)**
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
-* **[CountIf](functions/function-table-counts.md)**, **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](functions/function-update-updateif.md)**
+* **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](functions/function-update-updateif.md)**
 * **[GroupBy](functions/function-groupby.md)**, **[Ungroup](functions/function-groupby.md)**
 
 ## Non-delegable limits
@@ -156,11 +155,11 @@ Marching dots appear momentarily near the top of the screen as the app communica
 
 ![Search text-input control.](./media/delegation-overview/products-apple.png)
 
-The search results include **"Apples"**, **"Crab apples"**, and **"Pineapple"** because the **Search** function looks everywhere in a text column. If you wanted to find only records that contain the search term at the start of the fruit's name, you can use another delegable function, **Filter**, with a more complicated search term. (For simplicity, remove the **SortByColumns** call.)
+The search results include **"Apples"** and **"Pineapple"** because the **Search** function looks everywhere in a text column. If you wanted to find only records that contain the search term at the start of the fruit's name, you can use another delegable function, **Filter**, with a more complicated search term. (For simplicity, remove the **SortByColumns** call.)
 
 ![Remove SortByColumns call.](./media/delegation-overview/products-apple-delegationwarning.png)
 
-The new results include **"Apples"** but not **"Crab apples"** or **"Pineapple"**.  However, a yellow triangle appears next to the gallery (and in the screen thumbnail if the left navigation bar shows thumbnails), and a blue, wavy line appears under a portion of the formula. Each of these elements indicate a warning. If you hover over the yellow triangle next to the gallery, this message appears:
+The new results include **"Apples"** but not **"Pineapple"**.  However, a yellow triangle appears next to the gallery (and in the screen thumbnail if the left navigation bar shows thumbnails), and a blue, wavy line appears under a portion of the formula. Each of these elements indicate a warning. If you hover over the yellow triangle next to the gallery, this message appears:
 
 ![Hover over delegation warning.](./media/delegation-overview/products-apple-yellowwarning.png)
 

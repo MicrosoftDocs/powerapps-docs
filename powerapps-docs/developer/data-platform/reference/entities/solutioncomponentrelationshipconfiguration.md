@@ -1,18 +1,14 @@
 ---
-title: "solutioncomponentrelationshipconfiguration table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "solutioncomponentrelationshipconfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the solutioncomponentrelationshipconfiguration table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # solutioncomponentrelationshipconfiguration table/entity reference
@@ -27,15 +23,17 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/solutioncomponentrelationshipconfigurations<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/solutioncomponentrelationshipconfigurations(*solutioncomponentrelationshipconfigurationid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/solutioncomponentrelationshipconfigurations(*solutioncomponentrelationshipconfigurationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/solutioncomponentrelationshipconfigurations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/solutioncomponentrelationshipconfigurations(*solutioncomponentrelationshipconfigurationid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/solutioncomponentrelationshipconfigurations(*solutioncomponentrelationshipconfigurationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.2/solutioncomponentrelationshipconfigurations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/solutioncomponentrelationshipconfigurations(*solutioncomponentrelationshipconfigurationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/solutioncomponentrelationshipconfigurations(*solutioncomponentrelationshipconfigurationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/solutioncomponentrelationshipconfigurations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/solutioncomponentrelationshipconfigurations(*solutioncomponentrelationshipconfigurationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/solutioncomponentrelationshipconfigurations(*solutioncomponentrelationshipconfigurationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -66,6 +64,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [name](#BKMK_name)
+- [NoMissingDependencyForApiManagedSolution](#BKMK_NoMissingDependencyForApiManagedSolution)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [PrimaryEntityDependencyType](#BKMK_PrimaryEntityDependencyType)
 - [RespectParentRootComponentBehavior](#BKMK_RespectParentRootComponentBehavior)
@@ -93,10 +92,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -116,10 +115,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -154,10 +153,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -209,6 +208,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
+
+
+### <a name="BKMK_NoMissingDependencyForApiManagedSolution"></a> NoMissingDependencyForApiManagedSolution
+
+|Property|Value|
+|--------|-----|
+|Description|Boolean that indicates if this relationship can be excluded from the export as a missing dependency if the target is part of an api managed solution.|
+|DisplayName|Do Not Export As Missing Dependency For Api Managed Solution|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|nomissingdependencyforapimanagedsolution|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### NoMissingDependencyForApiManagedSolution Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -264,10 +286,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -605,10 +627,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -848,7 +870,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [solutioncomponentrelationshipconfiguration_SyncErrors](syncerror.md#BKMK_solutioncomponentrelationshipconfiguration_SyncErrors) Many-To-One relationship.
+Same as the [solutioncomponentrelationshipconfiguration_SyncErrors](syncerror.md#BKMK_solutioncomponentrelationshipconfiguration_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -865,7 +887,7 @@ Same as syncerror table [solutioncomponentrelationshipconfiguration_SyncErrors](
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [solutioncomponentrelationshipconfiguration_DuplicateMatchingRecord](duplicaterecord.md#BKMK_solutioncomponentrelationshipconfiguration_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [solutioncomponentrelationshipconfiguration_DuplicateMatchingRecord](duplicaterecord.md#BKMK_solutioncomponentrelationshipconfiguration_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -882,7 +904,7 @@ Same as duplicaterecord table [solutioncomponentrelationshipconfiguration_Duplic
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [solutioncomponentrelationshipconfiguration_DuplicateBaseRecord](duplicaterecord.md#BKMK_solutioncomponentrelationshipconfiguration_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [solutioncomponentrelationshipconfiguration_DuplicateBaseRecord](duplicaterecord.md#BKMK_solutioncomponentrelationshipconfiguration_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -899,7 +921,7 @@ Same as duplicaterecord table [solutioncomponentrelationshipconfiguration_Duplic
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [solutioncomponentrelationshipconfiguration_AsyncOperations](asyncoperation.md#BKMK_solutioncomponentrelationshipconfiguration_AsyncOperations) Many-To-One relationship.
+Same as the [solutioncomponentrelationshipconfiguration_AsyncOperations](asyncoperation.md#BKMK_solutioncomponentrelationshipconfiguration_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -916,7 +938,7 @@ Same as asyncoperation table [solutioncomponentrelationshipconfiguration_AsyncOp
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [solutioncomponentrelationshipconfiguration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_solutioncomponentrelationshipconfiguration_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [solutioncomponentrelationshipconfiguration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_solutioncomponentrelationshipconfiguration_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -933,7 +955,7 @@ Same as mailboxtrackingfolder table [solutioncomponentrelationshipconfiguration_
 
 **Added by**: System Solution Solution
 
-Same as processsession table [solutioncomponentrelationshipconfiguration_ProcessSession](processsession.md#BKMK_solutioncomponentrelationshipconfiguration_ProcessSession) Many-To-One relationship.
+Same as the [solutioncomponentrelationshipconfiguration_ProcessSession](processsession.md#BKMK_solutioncomponentrelationshipconfiguration_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -950,7 +972,7 @@ Same as processsession table [solutioncomponentrelationshipconfiguration_Process
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [solutioncomponentrelationshipconfiguration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_solutioncomponentrelationshipconfiguration_BulkDeleteFailures) Many-To-One relationship.
+Same as the [solutioncomponentrelationshipconfiguration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_solutioncomponentrelationshipconfiguration_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -967,7 +989,7 @@ Same as bulkdeletefailure table [solutioncomponentrelationshipconfiguration_Bulk
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [solutioncomponentrelationshipconfiguration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_solutioncomponentrelationshipconfiguration_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [solutioncomponentrelationshipconfiguration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_solutioncomponentrelationshipconfiguration_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -997,40 +1019,40 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_solutioncomponentrelationshipconfiguration_createdby](systemuser.md#BKMK_lk_solutioncomponentrelationshipconfiguration_createdby) One-To-Many relationship.
+See the [lk_solutioncomponentrelationshipconfiguration_createdby](systemuser.md#BKMK_lk_solutioncomponentrelationshipconfiguration_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_solutioncomponentrelationshipconfiguration_createdonbehalfby"></a> lk_solutioncomponentrelationshipconfiguration_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_solutioncomponentrelationshipconfiguration_createdonbehalfby](systemuser.md#BKMK_lk_solutioncomponentrelationshipconfiguration_createdonbehalfby) One-To-Many relationship.
+See the [lk_solutioncomponentrelationshipconfiguration_createdonbehalfby](systemuser.md#BKMK_lk_solutioncomponentrelationshipconfiguration_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_solutioncomponentrelationshipconfiguration_modifiedby"></a> lk_solutioncomponentrelationshipconfiguration_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_solutioncomponentrelationshipconfiguration_modifiedby](systemuser.md#BKMK_lk_solutioncomponentrelationshipconfiguration_modifiedby) One-To-Many relationship.
+See the [lk_solutioncomponentrelationshipconfiguration_modifiedby](systemuser.md#BKMK_lk_solutioncomponentrelationshipconfiguration_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_solutioncomponentrelationshipconfiguration_modifiedonbehalfby"></a> lk_solutioncomponentrelationshipconfiguration_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_solutioncomponentrelationshipconfiguration_modifiedonbehalfby](systemuser.md#BKMK_lk_solutioncomponentrelationshipconfiguration_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_solutioncomponentrelationshipconfiguration_modifiedonbehalfby](systemuser.md#BKMK_lk_solutioncomponentrelationshipconfiguration_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_solutioncomponentrelationshipconfiguration"></a> organization_solutioncomponentrelationshipconfiguration
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_solutioncomponentrelationshipconfiguration](organization.md#BKMK_organization_solutioncomponentrelationshipconfiguration) One-To-Many relationship.
+See the [organization_solutioncomponentrelationshipconfiguration](organization.md#BKMK_organization_solutioncomponentrelationshipconfiguration) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_entityrelationship_config"></a> entityrelationship_config
 
 **Added by**: System Solution Solution
 
-See entityrelationship Table [entityrelationship_config](entityrelationship.md#BKMK_entityrelationship_config) One-To-Many relationship.
+See the [entityrelationship_config](entityrelationship.md#BKMK_entityrelationship_config) one-to-many relationship for the [entityrelationship](entityrelationship.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.solutioncomponentrelationshipconfiguration?text=solutioncomponentrelationshipconfiguration EntityType" />

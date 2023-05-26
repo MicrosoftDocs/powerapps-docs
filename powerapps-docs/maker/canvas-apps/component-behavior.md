@@ -1,29 +1,32 @@
 ---
-title: Behavior formulas for components (preview)
+title: Behavior formulas for components (experimental)
 description: Do one or more tasks in canvas app when a component-based action occurs.
-author: hemantgaur
-
+author: jorisdg
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 07/01/2020
-ms.author: hemantg
-ms.reviewer: tapanm
+ms.date: 06/01/2022
+ms.author: jorisde
+ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - hemantgaur
-  - tapanm-msft
+  - jorisdg
+  - mduelae
 ---
 
-# Behavior formulas for components (preview)
+# Behavior formulas for components (experimental)
 
 [This article is pre-release documentation and is subject to change.]
 
-Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances. 
+> [!IMPORTANT]
+> This is an experimental feature. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
+
+Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances.
 
 For example, set a component's **OnReset** property to one or more formulas that do initialization and clear input. Reset values when the **Reset** function runs on the component instances.
+
+> [!NOTE]
+> The feature to create custom behavioral properties is currently experimental. However, you can use the default **OnReset** property that is available on all components in your production environment.
 
 ## OnReset
 
@@ -63,8 +66,11 @@ To do so, check **Raise OnReset when value changes** of the default input prope
 
 ### See also
 
-- [Canvas app components overview](create-component.md)
-- [Canvas app components library](component-library.md)
-
+- [Canvas components](create-component.md)
+- [Component library](component-library.md)
+- [Component library application lifecycle management (ALM)](component-library.md)
+- [Behavior formulas for components](component-behavior.md)
+- [Power Apps component framework](../../developer/component-framework/component-framework-for-canvas-apps.md) 
+- [Add canvas components to a custom page in a model-driven app](../model-driven-apps/page-canvas-components.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

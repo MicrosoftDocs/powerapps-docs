@@ -6,15 +6,13 @@ author: joel-lindstrom
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ms.topic: conceptual
 ms.custom: canvas
 ms.date: 11/22/2021
 ms.author: anuitz
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 
@@ -130,8 +128,8 @@ Use the back button in the top-left corner to return to the app screen and chang
 
 ### See also
 
-- [View in 3D control](../mixed-reality-component-view-3d.md)
-- [Measure in MR control](../mixed-reality-component-measure-distance.md)
+- [3D object control](../mixed-reality-component-view-3d.md)
+- [Measuring Camera control](../mixed-reality-component-measure-distance.md)
 - [View shape in MR control](../mixed-reality-component-view-shape.md) 
 
 

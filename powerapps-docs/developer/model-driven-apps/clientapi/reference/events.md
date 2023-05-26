@@ -1,23 +1,18 @@
 ---
 title: "Events (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the Events method.
-ms.date: 04/21/2021
-
-ms.topic: "reference"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "Nkrb"
-ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # Events (Client API reference)
-
 
 
 Events occur in Custom Engagement forms and grids whenever a form or grid loads, data is changed, or saved. You execute your JavaScript code by associating it an events so that it is executed when the event occurs. More information: [Events in forms and grids](../events-forms-grids.md)
@@ -25,6 +20,10 @@ Events occur in Custom Engagement forms and grids whenever a form or grid loads,
 ## Column event
 
 - [OnChange](events/attribute-onchange.md)
+
+## Control event
+
+- [OnOutputChange](events/onoutputchange.md)
 
 ## Form events
 

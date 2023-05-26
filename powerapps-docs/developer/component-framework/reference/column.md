@@ -1,17 +1,14 @@
 ---
 title: Column in Microsoft Dataverse| Microsoft Docs
 description: Learn how to use different methods and properties available for column in Power Apps component framework.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: db4be085-c31e-4045-8834-b0f45c569964
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Column

@@ -1,20 +1,18 @@
 ---
 title: "Tutorial: Write and register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The first of three tutorials that will show you how to work with plug-ins." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/16/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - PHecke
+  - marcelbf 
+
 ---
 # Tutorial: Write and register a plug-in
 
@@ -46,14 +44,15 @@ Create an asynchronous plug-in registered on the Create message of the account t
     - If you don't have a model-driven app that includes these, see [Build your first model-driven app from scratch](../../maker/model-driven-apps/build-first-model-driven-app.md) for steps to make one in just a few minutes.
 - Visual Studio 2017 (or later version)
 - Knowledge of the Visual C# programming language
-- Download the Plug-in Registration tool.
-    - Information about downloading the Plug-in registration tool is at : [Download tools from NuGet](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
+- Download the Plug-in Registration tool by following the instructions here: [Dataverse development tools](download-tools-nuget.md).
 
 <a name="BKMK_create"></a>
 
 ## Create a plug-in project
 
-You need to use Visual Studio to write a plug-in. Use these steps to write a basic plug-in. Alternately, you can find the complete plug-in solution files here: [Sample: Create a basic plug-in](org-service/samples/basic-followup-plugin.md).
+You need to use Visual Studio to write a plug-in. Use these steps to write a basic plug-in. Alternately, you can use [Power Platform CLI](/power-platform/developer/cli/reference/plugin-command) to create a new project using the command [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init).
+
+You can also find the complete plug-in solution files here: [Sample: Create a basic plug-in](org-service/samples/basic-followup-plugin.md).
 
 ### Create a Visual Studio project for the plug-in
 
@@ -216,7 +215,7 @@ In Visual Studio, press **F6** to build the assembly. Verify that it compiles wi
     ![Sign the assembly.](media/tutorial-write-plug-in-sign-assembly.png)
 
 1. In the **Choose a strong name key file**: dropdown, select **<New…>**. 
-1. In the **Create Strong Name Key**dialog, enter a **key file name** and deselect the **Protect my key file with a password** checkbox.
+1. In the **Create Strong Name Key** dialog, enter a **key file name** and deselect the **Protect my key file with a password** checkbox.
 1. Click **OK** to close the **Create Strong Name Key** dialog.
 1. In the project properties **Build** tab, verify that the **Configuration** is set to **Debug**.
 1. Press **F6** to build the plug-in again.

@@ -1,13 +1,16 @@
 ---
 title: " IFRAME component| Microsoft Docs" 
 description: "This sample describes how to bind a code component to different columns on the form and use the value of these columns as input properties to the component." 
-ms.custom: ""
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+author: noazarur-microsoft
+ms.author: noazarur
+ms.date: 03/12/2022
 ms.reviewer: jdaly
-manager: kvivek
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+contributors:
+ - JimDaly
 ---
 # Implementing a IFRAME component
 

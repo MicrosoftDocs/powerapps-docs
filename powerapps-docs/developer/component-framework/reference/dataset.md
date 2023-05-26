@@ -1,17 +1,14 @@
 ---
 title: DataSet in Microsoft Dataverse| Microsoft Docs
 description: Learn how to use different methods and properties available for DatSet in Power Apps component framework.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 0202d51f-e9a9-4a2e-b3e9-0bfd7f6afb86
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # DataSet
@@ -164,8 +161,6 @@ The sorting status for the current query. This is supported in both model-driven
 | [refresh](dataset/refresh.md)                               | [!INCLUDE [refresh-description](dataset/includes/refresh-description.md)]                               | Model-driven and Canvas apps |
 | [retrieveRecordCommand](dataset/retrieveRecordCommand.md)   | [!INCLUDE [retrieverecordcommand-description](dataset/includes/retrieverecordcommand-description.md)]   | Model-driven                 |
 | [setSelectedRecordIds](dataset/setselectedrecordids.md)     | [!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]     | Model-driven and Canvas apps |
-
-<!-- | [getRelatedDataSet](dataset/getRelatedDataSet.md)           | [!INCLUDE [getrelateddataset-description](dataset/includes/getrelateddataset-description.md)]           | Canvas apps                  | -->
 
 ## Lookup columns
 

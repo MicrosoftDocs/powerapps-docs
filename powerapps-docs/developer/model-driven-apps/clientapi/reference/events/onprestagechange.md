@@ -1,17 +1,16 @@
 ---
 title: "OnPreStageChange event (Client API reference) in model-driven apps in Power Apps| MicrosoftDocs"
 description: This event occurs before the stage of a business process flow control changes.
-ms.date: 04/15/2021
+author: HemantGaur
+ms.author: hemantg
 
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: reference
-ms.assetid: 
-author: msftman
-ms.author: deonhe
-manager: kvivek
 search.audienceType: 
   - developer
-search.app: 
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # OnPreStageChange event (Client API reference)
 
@@ -34,7 +33,7 @@ When you invoke `preventDefault`:
 
 An execution context object is passed to event handlers for this event. You can use the [getEventArgs](../executioncontext/getEventArgs.md) method to retrieve an object that has the following methods:
 
-- **getDirection**: Returns a string that is either “next” or “previous” to show the direction of the stage change.
+- **getDirection**: Returns a string that is either `Next` or `Previous` to show the direction of the stage change.
 - **getStage**: Returns a stage object. Except when the navigation moves to a new table, the stage returned represents the destination stage object—that is, the next active stage. When the navigation moves to a new table, the stage is the stage being navigated from—that is, the previous active stage object. More information: [Stage methods](../formContext-data-process.md#stage-methods).
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]

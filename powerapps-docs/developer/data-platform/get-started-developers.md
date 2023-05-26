@@ -3,18 +3,13 @@ title: "Developers: Get started with Microsoft Dataverse | Microsoft Docs"
 description: Learn about some available methods that developers can use to access business data, customize business logic, write applications, and access external systems.
 suite: powerapps
 author: JimDaly
-manager: ryjones
-
-ms.date: 07/21/2021
+ms.date: 04/03/2022
 ms.subservice: dataverse-developer
 ms.author: jdaly
-ms.reviewer: "pehecke"
+ms.reviewer: pehecke
 ms.custom: intro-internal
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Developers: Get started with Microsoft Dataverse
@@ -23,7 +18,7 @@ Where to start depends on what problem you are trying to solve. This guide inclu
 
 ## Work with data using web services
 
-There are two different access points, each using a different protocol, for the business data web service: a RESTful (OData) data access point, and (SOAP) Organization service endpoint. Your code can access the OData access point using the Web API, or the Organization service endpoint using the SDK API.
+There are two different access points, each using a different protocol, for the business data web service: a RESTful (OData) data access point, and the Organization service endpoint. Your code can access the OData access point using the Web API, or the Organization service endpoint using the SDK for .NET.
 
 Which one you should use depends on the type of project you are working on. More information: [Work with data using code](work-with-data.md)
 
@@ -66,7 +61,7 @@ If you are going to distribute the extensions you create or any customizations t
  - [Introduction to solutions](introduction-solutions.md)
  - [SolutionPackager tool](/power-platform/alm/solution-packager-tool)
  - [Package Deployer tool](/power-platform/alm/package-deployer-tool)
- - [Publish your app on AppSource](publish-app-appsource.md)
+ - [Publish your app on AppSource](/power-platform/developer/appsource/publish-app)
 
 ## Create client applications and authentication
 

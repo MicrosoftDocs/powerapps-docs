@@ -1,18 +1,14 @@
 ---
-title: "SdkMessageProcessingStep table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SdkMessageProcessingStep table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SdkMessageProcessingStep table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # SdkMessageProcessingStep table/entity reference
@@ -25,14 +21,14 @@ Stage in the execution pipeline that a plug-in is to execute.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/sdkmessageprocessingsteps<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/sdkmessageprocessingsteps<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -61,10 +57,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Category](#BKMK_Category)
 - [Configuration](#BKMK_Configuration)
 - [Description](#BKMK_Description)
+- [EnablePluginProfiler](#BKMK_EnablePluginProfiler)
 - [EventExpander](#BKMK_EventExpander)
 - [EventHandler](#BKMK_EventHandler)
 - [EventHandlerTypeCode](#BKMK_EventHandlerTypeCode)
 - [FilteringAttributes](#BKMK_FilteringAttributes)
+- [FxExpressionId](#BKMK_FxExpressionId)
 - [ImpersonatingUserId](#BKMK_ImpersonatingUserId)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [InvocationSource](#BKMK_InvocationSource)
@@ -73,6 +71,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Mode](#BKMK_Mode)
 - [Name](#BKMK_Name)
 - [PluginTypeId](#BKMK_PluginTypeId)
+- [PowerfxRuleId](#BKMK_PowerfxRuleId)
 - [Rank](#BKMK_Rank)
 - [RuntimeIntegrationProperties](#BKMK_RuntimeIntegrationProperties)
 - [SdkMessageFilterId](#BKMK_SdkMessageFilterId)
@@ -101,10 +100,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -125,10 +124,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -181,6 +180,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_EnablePluginProfiler"></a> EnablePluginProfiler
+
+**Added by**: Plugin Infrastructure Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|EnablePluginProfiler|
+|DisplayName|EnablePluginProfiler|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enablepluginprofiler|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### EnablePluginProfiler Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_EventExpander"></a> EventExpander
@@ -240,6 +264,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100000|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_FxExpressionId"></a> FxExpressionId
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for fxexpression associated with SdkMessageProcessingStep.|
+|DisplayName|fxexpressionid|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|fxexpressionid|
+|RequiredLevel|None|
+|Targets|fxexpression|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ImpersonatingUserId"></a> ImpersonatingUserId
@@ -369,6 +409,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|plugintypeid|
 |RequiredLevel|SystemRequired|
 |Targets|sdkmessagefilter|
+|Type|Lookup|
+
+
+### <a name="BKMK_PowerfxRuleId"></a> PowerfxRuleId
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for powerfxrule associated with SdkMessageProcessingStep.|
+|DisplayName|powerfxruleid|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|powerfxruleid|
+|RequiredLevel|None|
+|Targets|powerfxrule|
 |Type|Lookup|
 
 
@@ -573,6 +629,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [CustomizationLevel](#BKMK_CustomizationLevel)
 - [EventHandlerName](#BKMK_EventHandlerName)
+- [FxExpressionIdName](#BKMK_FxExpressionIdName)
 - [ImpersonatingUserIdName](#BKMK_ImpersonatingUserIdName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
@@ -584,6 +641,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OrganizationId](#BKMK_OrganizationId)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [PluginTypeIdName](#BKMK_PluginTypeIdName)
+- [PowerfxRuleIdName](#BKMK_PowerfxRuleIdName)
 - [SdkMessageIdName](#BKMK_SdkMessageIdName)
 - [SdkMessageProcessingStepIdUnique](#BKMK_SdkMessageProcessingStepIdUnique)
 - [SolutionId](#BKMK_SolutionId)
@@ -737,6 +795,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_FxExpressionIdName"></a> FxExpressionIdName
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|fxexpressionidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ImpersonatingUserIdName"></a> ImpersonatingUserIdName
 
 |Property|Value|
@@ -769,10 +845,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -912,6 +988,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_PowerfxRuleIdName"></a> PowerfxRuleIdName
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|powerfxruleidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_SdkMessageIdName"></a> SdkMessageIdName
 
 |Property|Value|
@@ -993,7 +1087,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_SdkMessageProcessingStep_AsyncOperations"></a> SdkMessageProcessingStep_AsyncOperations
 
-Same as asyncoperation table [SdkMessageProcessingStep_AsyncOperations](asyncoperation.md#BKMK_SdkMessageProcessingStep_AsyncOperations) Many-To-One relationship.
+Same as the [SdkMessageProcessingStep_AsyncOperations](asyncoperation.md#BKMK_SdkMessageProcessingStep_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1008,7 +1102,7 @@ Same as asyncoperation table [SdkMessageProcessingStep_AsyncOperations](asyncope
 
 ### <a name="BKMK_sdkmessageprocessingstepid_sdkmessageprocessingstepimage"></a> sdkmessageprocessingstepid_sdkmessageprocessingstepimage
 
-Same as sdkmessageprocessingstepimage table [sdkmessageprocessingstepid_sdkmessageprocessingstepimage](sdkmessageprocessingstepimage.md#BKMK_sdkmessageprocessingstepid_sdkmessageprocessingstepimage) Many-To-One relationship.
+Same as the [sdkmessageprocessingstepid_sdkmessageprocessingstepimage](sdkmessageprocessingstepimage.md#BKMK_sdkmessageprocessingstepid_sdkmessageprocessingstepimage) many-to-one relationship for the [sdkmessageprocessingstepimage](sdkmessageprocessingstepimage.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1038,58 +1132,72 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep](#BKMK_sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep)
 - [createdby_sdkmessageprocessingstep](#BKMK_createdby_sdkmessageprocessingstep)
 - [plugintypeid_sdkmessageprocessingstep](#BKMK_plugintypeid_sdkmessageprocessingstep)
+- [powerfxrule_sdkmessageprocessingstep](#BKMK_powerfxrule_sdkmessageprocessingstep)
+- [fxexpression_sdkmessageprocessingstep](#BKMK_fxexpression_sdkmessageprocessingstep)
 
 
 ### <a name="BKMK_plugintype_sdkmessageprocessingstep"></a> plugintype_sdkmessageprocessingstep
 
-See plugintype Table [plugintype_sdkmessageprocessingstep](plugintype.md#BKMK_plugintype_sdkmessageprocessingstep) One-To-Many relationship.
+See the [plugintype_sdkmessageprocessingstep](plugintype.md#BKMK_plugintype_sdkmessageprocessingstep) one-to-many relationship for the [plugintype](plugintype.md) table/entity.
 
 ### <a name="BKMK_sdkmessagefilterid_sdkmessageprocessingstep"></a> sdkmessagefilterid_sdkmessageprocessingstep
 
-See sdkmessagefilter Table [sdkmessagefilterid_sdkmessageprocessingstep](sdkmessagefilter.md#BKMK_sdkmessagefilterid_sdkmessageprocessingstep) One-To-Many relationship.
+See the [sdkmessagefilterid_sdkmessageprocessingstep](sdkmessagefilter.md#BKMK_sdkmessagefilterid_sdkmessageprocessingstep) one-to-many relationship for the [sdkmessagefilter](sdkmessagefilter.md) table/entity.
 
 ### <a name="BKMK_serviceendpoint_sdkmessageprocessingstep"></a> serviceendpoint_sdkmessageprocessingstep
 
-See serviceendpoint Table [serviceendpoint_sdkmessageprocessingstep](serviceendpoint.md#BKMK_serviceendpoint_sdkmessageprocessingstep) One-To-Many relationship.
+See the [serviceendpoint_sdkmessageprocessingstep](serviceendpoint.md#BKMK_serviceendpoint_sdkmessageprocessingstep) one-to-many relationship for the [serviceendpoint](serviceendpoint.md) table/entity.
 
 ### <a name="BKMK_lk_sdkmessageprocessingstep_createdonbehalfby"></a> lk_sdkmessageprocessingstep_createdonbehalfby
 
-See systemuser Table [lk_sdkmessageprocessingstep_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstep_createdonbehalfby) One-To-Many relationship.
+See the [lk_sdkmessageprocessingstep_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstep_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_sdkmessageprocessingstep"></a> organization_sdkmessageprocessingstep
 
-See organization Table [organization_sdkmessageprocessingstep](organization.md#BKMK_organization_sdkmessageprocessingstep) One-To-Many relationship.
+See the [organization_sdkmessageprocessingstep](organization.md#BKMK_organization_sdkmessageprocessingstep) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_impersonatinguserid_sdkmessageprocessingstep"></a> impersonatinguserid_sdkmessageprocessingstep
 
-See systemuser Table [impersonatinguserid_sdkmessageprocessingstep](systemuser.md#BKMK_impersonatinguserid_sdkmessageprocessingstep) One-To-Many relationship.
+See the [impersonatinguserid_sdkmessageprocessingstep](systemuser.md#BKMK_impersonatinguserid_sdkmessageprocessingstep) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_sdkmessageprocessingstep_modifiedonbehalfby"></a> lk_sdkmessageprocessingstep_modifiedonbehalfby
 
-See systemuser Table [lk_sdkmessageprocessingstep_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstep_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_sdkmessageprocessingstep_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessageprocessingstep_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_modifiedby_sdkmessageprocessingstep"></a> modifiedby_sdkmessageprocessingstep
 
-See systemuser Table [modifiedby_sdkmessageprocessingstep](systemuser.md#BKMK_modifiedby_sdkmessageprocessingstep) One-To-Many relationship.
+See the [modifiedby_sdkmessageprocessingstep](systemuser.md#BKMK_modifiedby_sdkmessageprocessingstep) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_sdkmessageid_sdkmessageprocessingstep"></a> sdkmessageid_sdkmessageprocessingstep
 
-See sdkmessage Table [sdkmessageid_sdkmessageprocessingstep](sdkmessage.md#BKMK_sdkmessageid_sdkmessageprocessingstep) One-To-Many relationship.
+See the [sdkmessageid_sdkmessageprocessingstep](sdkmessage.md#BKMK_sdkmessageid_sdkmessageprocessingstep) one-to-many relationship for the [sdkmessage](sdkmessage.md) table/entity.
 
 ### <a name="BKMK_sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep"></a> sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep
 
-See sdkmessageprocessingstepsecureconfig Table [sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep](sdkmessageprocessingstepsecureconfig.md#BKMK_sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep) One-To-Many relationship.
+See the [sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep](sdkmessageprocessingstepsecureconfig.md#BKMK_sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep) one-to-many relationship for the [sdkmessageprocessingstepsecureconfig](sdkmessageprocessingstepsecureconfig.md) table/entity.
 
 ### <a name="BKMK_createdby_sdkmessageprocessingstep"></a> createdby_sdkmessageprocessingstep
 
-See systemuser Table [createdby_sdkmessageprocessingstep](systemuser.md#BKMK_createdby_sdkmessageprocessingstep) One-To-Many relationship.
+See the [createdby_sdkmessageprocessingstep](systemuser.md#BKMK_createdby_sdkmessageprocessingstep) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_plugintypeid_sdkmessageprocessingstep"></a> plugintypeid_sdkmessageprocessingstep
 
-See plugintype Table [plugintypeid_sdkmessageprocessingstep](plugintype.md#BKMK_plugintypeid_sdkmessageprocessingstep) One-To-Many relationship.
+See the [plugintypeid_sdkmessageprocessingstep](plugintype.md#BKMK_plugintypeid_sdkmessageprocessingstep) one-to-many relationship for the [plugintype](plugintype.md) table/entity.
+
+### <a name="BKMK_powerfxrule_sdkmessageprocessingstep"></a> powerfxrule_sdkmessageprocessingstep
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [powerfxrule_sdkmessageprocessingstep](powerfxrule.md#BKMK_powerfxrule_sdkmessageprocessingstep) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
+
+### <a name="BKMK_fxexpression_sdkmessageprocessingstep"></a> fxexpression_sdkmessageprocessingstep
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [fxexpression_sdkmessageprocessingstep](fxexpression.md#BKMK_fxexpression_sdkmessageprocessingstep) one-to-many relationship for the [fxexpression](fxexpression.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.sdkmessageprocessingstep?text=sdkmessageprocessingstep EntityType" />

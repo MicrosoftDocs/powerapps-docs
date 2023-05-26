@@ -5,18 +5,14 @@ author: mduelae
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 2/1/2021
+ms.date: 3/14/2023
 ms.subservice: end-user
 ms.author: mkaur
-manager: "kvivek"
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # How do I find and run apps?
@@ -34,14 +30,9 @@ This section provides information about how to find and run canvas and model-dri
 
 ## What's required to run apps?
 
-Ensure that you're using a supported web browser and operating system.
+Ensure that you're using a supported web browser and operating system. For more information, see [System requirements, limits, and configuration values for Power Apps](../maker/canvas-apps/limits-and-config.md)
 
-- For canvas apps, see: [System requirements, limits, and configuration values](../maker/canvas-apps/limits-and-config.md)
-- For model-driven apps, see: [Requirements/supported configurations](/power-platform/admin/online-requirements)
-- To run model-driven apps or canvas apps on your mobile device, see [Get started with Power Apps mobile](../mobile/run-powerapps-on-mobile.md)
-
-
-
+Additionally, you need a Power Apps license to run an app. If you don't have a license, you can request one by following instructions here: [Request a Power Apps license](request-license.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

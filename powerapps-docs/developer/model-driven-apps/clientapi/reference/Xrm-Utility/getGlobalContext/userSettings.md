@@ -1,19 +1,16 @@
 ---
 title: "getGlobalContext.userSettings (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getGlobalContext.UserSettings method.
-ms.date: 07/13/2021
-
-ms.topic: "reference"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 44296667-f1cd-49be-a300-7259bc3b41e0
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 
 # getGlobalContext.userSettings (Client API reference)
@@ -144,9 +141,9 @@ Returns a promise which resolves with an object whose keys are the security role
 
 `userSettings.getSecurityRolePrivilegesInfo().then(successCallback, errorCallback);`
 
-## Parameters
+### Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -196,8 +193,8 @@ userSettings
 
     // Print information about the first role privilege in the dictionary
     var guid = privilegeGuids[0];
-    console.log("Privilege Id: " + privilege[guid].id);
-    console.log("Privilege Name: " + privilege[guid].privilegeName);
+    console.log("Privilege Id: " + rolePrivileges[guid].id);
+    console.log("Privilege Name: " + rolePrivileges[guid].privilegeName);
     console.log("Privilege Business Unit Id: " + rolePrivileges[guid].businessUnitId);
     console.log("Privilege depth: " + rolePrivileges[guid].depth);
   });

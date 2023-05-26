@@ -1,26 +1,23 @@
 ---
 title: "Grid OnSave event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the grid OnSave event.
-ms.date: 04/19/2021
-
-ms.topic: "reference"
+author: jasongre
+ms.author: jasongre
+ms.date: 09/15/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # Grid OnSave event (Client API reference)
 
 The `OnSave` event occurs before sending the updated information to the server, and when any of the following occurs: 
 
 - There is a change in the record selection.
-- The user explicitly triggers a save operation using the editable grid’s save button.
+- The user explicitly triggers a save operation using the editable grid's save button.
 - The user applies a sort, filter, group, pagination, or navigation operation from the editable grid while there are pending changes.
 
 Some important points to consider for the `OnSave` event: 
@@ -32,7 +29,10 @@ Some important points to consider for the `OnSave` event:
 - Editable grid control does not implement an auto-save timer.
 Editable grid suppresses duplicate detection rules.
 
+[!INCLUDE [cc_book-instead-of-save](../../../../../includes/cc_book-instead-of-save.md)]
+
 ### Related topic
+
 [Form OnSave Event](form-onsave.md)
 
 

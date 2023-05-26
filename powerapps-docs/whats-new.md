@@ -2,23 +2,15 @@
 title: What's new in Power Apps | Microsoft Docs
 description: Find information about the new features that have been recently released, features that will be releasing in the next few months, and known limitations.
 author: KumarVivek
-manager: kvivek
-
+ms.subservice: common
 ms.topic: conceptual
 ms.custom: 
 ms.reviewer: 
-ms.date: 01/25/2022
+ms.date: 05/22/2023
 ms.author: kvivek
-search.audienceType: 
-  - maker
-  - admin
-  - user
-  - developer
-search.app: 
-  - PowerApps
 contributors:
   - kumarvivek
-  - tapanm-msft
+  - mduelae
 ---
 
 # What's new in Power Apps?
@@ -36,11 +28,14 @@ To learn more about how to browse information in the weekly release notes, read 
 
 ## Release plan
 
-For information about new features being released over the next few months that you can use for planning, see  [2022 release wave 1 plan](/power-platform-release-plan/2022wave1/power-apps/planned-features) and [2021 release wave 2 plan](/power-platform-release-plan/2021wave2/power-apps/planned-features).
+For information about new features being released over the next few months that you can use for planning, see [2023 release wave 1 plan](/power-platform/release-plan/2023wave1/power-apps/planned-features).
 
 ## Known limitations
 
-For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+For information about known limitations, see [Common issues and resolutions](/powerapps/maker/canvas-apps/common-issues-and-resolutions).
+
+### See also 
+
+[Power Platform release plans](/dynamics365/release-plans/)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
-

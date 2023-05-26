@@ -4,7 +4,6 @@ description: "Learn how to create many-to-may relationships"
 ms.custom: ""
 ms.date: 06/10/2021
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -15,17 +14,10 @@ applies_to:
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-
 # Create Many-to-many table relationships in Microsoft Dataverse using Power Apps portal
-
-
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit Many-to-many table relationships for Dataverse.
 
@@ -36,8 +28,8 @@ The portal enables configuring the most common options, but certain options can 
 ## View Many-to-many table relationships
 
 1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
-2. Select **Data** > **Tables** and select the table that has the relationships you want to view.
-3. With the **Relationships** tab selected, you can select the following views: 
+2. Select **Tables** and select the table that has the relationships you want to view. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+3. With the **Relationships** area selected, you can select the following views: 
 
  |View|Description|
  |--|--|

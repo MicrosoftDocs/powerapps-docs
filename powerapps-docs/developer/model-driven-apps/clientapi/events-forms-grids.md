@@ -1,19 +1,18 @@
 ---
 title: "Events in forms and grids in model-driven apps| MicrosoftDocs"
 description: All client-side code is initiated by events. In model-driven apps, you associate a specific function in a JavaScript library to be executed when an event occurs. This function is called an *event handler*.
-ms.date: 04/15/2021
+author: HemantGaur
+ms.author: hemantg
 
-ms.topic: "reference"
-ms.assetid: 9fb38429-55ef-45ce-a3a3-e649e1be89d0
-author: "Nkrb"
+ms.date: 04/01/2022
+ms.reviewer: jdaly
+ms.topic: reference
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Events in forms and grids in model-driven apps
 
@@ -56,7 +55,7 @@ To add or remove event handler functions to events in the new Unified Interface:
 
 By default, events handlers aren't called when a form is in bulk edit mode. 
 
-To enable an event handler in bulk edit mode, modify the Form XML by finding the relevant `event` element and creating/setting the `BehaviorInBulkEditForm` attribute to `Enabled`.
+To enable an event handler in bulk edit mode, modify the Form XML by finding the relevant `event` element and creating/setting the `BehaviorInBulkEditForm` attribute to `Enabled`. Currently, this is only supported for [OnLoad events](reference/events/form-onload.md).
 
 For more information on Form XML customization, see [When to edit the customizations file](../when-edit-customization-file.md), [Customize forms](../customize-entity-forms.md), and the [Form XML schema](../form-xml-schema.md).
 

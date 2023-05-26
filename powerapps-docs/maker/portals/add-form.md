@@ -1,20 +1,23 @@
 ---
 title: Add form
-description: Learn about how to add form component to a Power Apps portals page using portals Studio.
+description: Learn how to add form component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/02/2022
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add form
+
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 Form is a data-driven configuration that collects data in the portal without the need for a developer to surface the form in the portal. 
 
@@ -22,22 +25,22 @@ Forms are [created in Microsoft Dataverse](../model-driven-apps/form-designer-ov
 
 To add a form component:
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
+1. [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select the page on which you want to add the component.
+1. Select the page on which you want to add the component.
 
-3.  Select an editable element on the canvas.
+1. Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
+1. Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
 
-5.  Under **Portal components**, select **Form**.
+1. Under **Portal components**, select **Form**.
 
-6.  In the properties pane on the right side of the screen, select one of the following options:
+1. In the properties pane on the right side of the screen, select one of the following options:
 
     - **Create new**: Create a new form.
     - **Use existing**: Use an existing form.
 
-7. Enter information or make selection:
+1. Enter information or make selection:
 
     - **Name**: Name of the form.
 
@@ -69,12 +72,12 @@ To add a form component:
     - **Show captcha for authenticated users**: Displays captcha to authenticated users.
 
     - **Permissions**: Table permissions to be considered for the form. [Configure table permissions](configure/entity-permissions-studio.md) to make the form available to anyone, or any specific roles.
-    
-        > [!NOTE]
-        > If one or more forms/lists have no permissions configured, you'll see this warning: "One or more lists or forms on your site have no set permissions. Permissions must be enabled for all data components by April 2022 or they will be set by the system."
 
         > [!div class=mx-imgBorder]
         > ![Form properties.](media/form-props.png "Form properties")
+
+    > [!NOTE]
+    > By default, permissions are applied to components containing data. Making it visible to anyone, or only to specific roles, is done by managing table permissions.
 
 ### See also
 

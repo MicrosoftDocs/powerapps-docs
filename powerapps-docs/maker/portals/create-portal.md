@@ -1,11 +1,11 @@
 ---
-title: Create a Dataverse starter portal
+title: Create a Dataverse starter site
 description: Learn about how to create a Dataverse starter portal in Power Apps.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 01/27/2022
+ms.date: 07/21/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -14,9 +14,12 @@ contributors:
     - nickdoelman
 ---
 
-# Create a Dataverse starter portal
+# Create a Dataverse starter site
 
-With the capability to build a portal in Power Apps, you can create a website for external and internal users enabling them to interact with data stored in Microsoft Dataverse.
+
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
+
+With the capability to build a site (portal) in Power Apps, you can create a website for external and internal users enabling them to interact with data stored in Microsoft Dataverse.
 
 Some of the benefits of creating a Power Apps portal:
 
@@ -33,7 +36,7 @@ If you choose to create your portal in an existing environment without portal pr
 Based on the selected environment in Power Apps, you can create a Dataverse starter portal or a portal in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service).
 
 > [!NOTE]
-> - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
+> - There can be up to fifty portals of each type created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
 > - When you create a portal, a few solutions are installed and sample data is imported.
 
 More information on working with environments: [Environments overview](/power-platform/admin/environments-overview)
@@ -133,9 +136,7 @@ Once the provisioning request is successfully placed, a confirmation email notif
 [Common problems and resolutions while creating a portal](create-common-problems.md) <br>
 [Control portal creation in a tenant](control-portal-creation.md) <br>
 [Create additional portals in an environment](create-additional-portals.md) <br>
-[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/) <br>
-[Microsoft Learn: Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/) <br>
+[Administer Power Apps portals](/training/paths/administer-portals/) <br>
 [Contact us sample](contact-us-sample.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

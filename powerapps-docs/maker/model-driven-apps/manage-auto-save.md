@@ -4,7 +4,6 @@ description: Learn how to configure autosave for a model-driven app
 ms.custom: ""
 ms.date: 07/28/2021
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -16,22 +15,17 @@ ms.assetid: 2e7f75dd-7a3f-4716-b995-b626929c0501
 caps.latest.revision: 14
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Disable auto-save in a model-driven app
-
-
 
 Auto-save helps app users focus on their work without having to manage saving data in the form. Most people will appreciate not having to explicitly save data each time they update a row, but some organizations may have customizations that were designed expecting an explicit save. For these organizations there are options to manage how auto-save is applied.  
   
 <a name="BKMK_HowAutoSaveWorks"></a>   
 
-## How auto-save works  
+## How auto-save works
+
  By default all main forms for [Updated tables and classic tables](create-design-forms.md#updated-versus-classic-tables) will have auto-save enabled. After a row is created (initially saved), any changes made to a form will automatically be saved thirty seconds after the change is made. If no changes are made in the form, the automatic save won't occur while the form is open. After a change is made the 30-second period before an auto-save begins again. If someone else has updated the same row while you're editing it, those changes will be retrieved and displayed in the form when auto-save occurs.  
   
  With auto-save enabled, the save button only appears for the initial save of the row. After the row is created, the save button in the command bar isn't shown, but you can see a ![Auto save button.](media/auto-save-icon.png "Auto save button") button in the lower right corner that will show if there are any unsaved changes. This control is also displayed if auto-save is disabled.  
@@ -47,7 +41,6 @@ Auto-save helps app users focus on their work without having to manage saving da
 <a name="BKMK_DisableAutoSaveOrg"></a>   
 ## Disable auto-save for the organization  
  If you determine that auto-save will cause problems with any extensions you are using, you can disable it for your organization. There is no setting to disable auto-save for individual tables or forms.  
-
 
 1. Open a model-driven app, and then on the command bar select **Settings** ![Settings.](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
 
@@ -68,9 +61,9 @@ Auto-save helps app users focus on their work without having to manage saving da
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.
+2.  Select **Tables** on the left navigation pane, select the table that you want, and then select the **Forms** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
    
-    You can also make adjustments to the tables from within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution).  To do this, select **Solutions** on the side pane, select the table, and then select the **Forms** tab.
+    You can also make adjustments to the tables from within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution).  To do this, select **Solutions** on the left pane, select the table, and then select the **Forms** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
 3.  Open the form you want to edit.
 

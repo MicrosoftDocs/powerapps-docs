@@ -4,7 +4,6 @@ description: Learn how to sort rows in a model-driven app
 ms.custom: ""
 ms.date: 04/17/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,16 +16,10 @@ ms.assetid: 25f5aa52-56dc-4be5-884e-9346616f665f
 caps.latest.revision: 25
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Sort rows in a model-driven app view
-
-
 
 When you create or edit a view, you can configure the sort order for either ascending or descending.
 
@@ -35,25 +28,24 @@ To change the sort order in the view designer, see [Create a public view in Powe
 ## Change the sort order of a view
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Tables**, open the table you want, and then select the **Views** area.
+1. Select a view to open it in the view designer.
 
-2.  Select **Solutions**, open the solution you want, select **Tables**, open the table you want, and then select the **Views** tab.
+   > [!div class="mx-imgBorder"] 
+   > ![Edit filters.](media/view-column-menu.png "Edit filters")
 
-3.  Select a view to open it in the view designer.
+1. Select a column name in the column head, and from the column menu, select **Sort A to Z** or **Sort Z to A**. The sort order is indicated in the column head with an up arrow or a down arrow.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Edit filters.](media/view-column-menu.png "Edit filters")
+   The sort order can be changed by using the view properties panel. 
 
-4.  Select a column name in the column head, and from the column menu, select **Sort A to Z** or **Sort Z to A**. The sort order is indicated in the column head with an up arrow or a down arrow.
+1. If a sort order has not been set for the view, select **Sort by**, and then select the primary sort by column.
 
-    The sort order can be changed by using the view properties panel. 
+1. To sort the view by additional columns, select **Then sort by** and then select a sort by column for the view.
 
-5.  If a sort order has not been set for the view, select **Sort by**, and then select the primary sort by column.
+   :::image type="content" source="media/create-or-edit-model-driven-app-view/sort-view-by-multiple-columns.png" alt-text="Sorting a table view by multiple columns":::
 
-6.  To sort the view by additional columns, select **Then sort by** and then select a sort by column for the view.
-
-    :::image type="content" source="media/create-or-edit-model-driven-app-view/sort-view-by-multiple-columns.png" alt-text="Sorting a table view by multiple columns":::
-
-7.  To remove a sort expression, select **Remove sort expression** (the **X** button).
+1. To remove a sort expression, select **Remove sort expression** (the **X** button).
 
 ## Next steps
 

@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 06/11/2020
 ms.subservice: sample-apps
 ms.author: pankar
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ---
 
 # Use the Hospital Emergency Response mobile app

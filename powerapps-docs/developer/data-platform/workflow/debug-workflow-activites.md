@@ -1,19 +1,14 @@
 ---
 title: "Debug Workflow Activities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to debug workflow activities using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/21/2019
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.date: 04/06/2022
+author: divkamath
+ms.author: dikamath
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
 ---
 # Debug Workflow Activities
 
@@ -23,7 +18,7 @@ Because custom workflow extensions are .NET Framework assemblies you can debug t
 
 ## Use the Plug-in Registration Tool
 
-The Plug-in Registration Tool (PRT) is one of the tools you can download from NuGet. More information: [Download tools from NuGet](../download-tools-nuget.md).
+The Plug-in Registration Tool (PRT) is one of the tools you can download from NuGet. More information: [Dataverse development tools](../download-tools-nuget.md).
 
 Once you have downloaded the PRT, click the `PluginRegistration.exe` to run it.
 

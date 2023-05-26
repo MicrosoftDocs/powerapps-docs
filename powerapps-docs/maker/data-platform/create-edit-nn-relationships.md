@@ -17,12 +17,8 @@ ms.assetid: 248cecfd-c9e8-430b-b4b0-860669866084
 caps.latest.revision: 33
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create many-to-many table relationships overview
 
@@ -63,7 +59,7 @@ You should use the Power Apps portal to create and edit Many-to-many (N:N) table
 [Create Many-to-many table relationships in Dataverse using Power Apps portal](create-edit-nn-relationships-portal.md)<br />
 [Create N:N (many-to-many) table relationships in Dataverse using solution explorer](create-edit-nn-relationships-solution-explorer.md)<br />
 [Developer documentation: Customize table relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
-[Developer documentation: table relationship eligibility](/dynamics365/customer-engagement/developer/table-relationship-eligibility)
+[Developer documentation: Entity relationship eligibility](/dynamics365/customer-engagement/developer/entity-relationship-eligibility)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

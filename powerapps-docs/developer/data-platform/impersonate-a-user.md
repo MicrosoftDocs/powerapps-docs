@@ -1,20 +1,17 @@
 ---
 title: "Impersonate a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to write plug-in code to act on behalf of a specific user."
-ms.custom: ""
-ms.date: 03/15/2021
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: divkamath
+ms.author: dikamath
+ms.reviewer: pehecke
 ms.topic: "article"
-author: JimDaly
 ms.subservice: dataverse-developer
-ms.author: pehecke
-manager: kvivek
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 # Impersonate a user
 

@@ -1,19 +1,16 @@
 ---
 title: "captureAudio| MicrosoftDocs"
 description: Includes description and supported parameters for the captureAudio method.
-ms.date: 09/08/2021
-
-ms.topic: "reference"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: fa39d18e-4b82-423a-84a0-e54450b7964e
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 
 # captureAudio (Client API reference)
@@ -41,7 +38,7 @@ On success, returns a base64 encoded audio object with the values specified earl
 
 ## Exceptions
 
-See [Web service error codes](../../../../data-platform/org-service/web-service-error-codes.md)
+See [Web service error codes](../../../../data-platform/reference/web-service-error-codes.md)
 
 ### Related topics
 

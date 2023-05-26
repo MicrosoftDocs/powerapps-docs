@@ -2,19 +2,16 @@
 title: Limitations of controls in canvas apps
 description: Learn about the limitations of controls in canvas apps.
 author: navjotm
-
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.reviewer: mkaur
+ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: namarwah
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
   - chmoncay
 ---
@@ -27,10 +24,12 @@ In this article, learn about the general limitations of the controls used in can
 
 - [Audio, and video controls](controls/control-audio-video.md) - see [Audio and video alternatives](controls/control-audio-video.md#audio-and-video-alternatives).
 
-- [Barcode control](controls/control-new-barcode-scanner.md), [Camera control](controls/control-camera.md)
+- [Barcode control](controls/control-barcodereader.md), [Camera control](controls/control-camera.md)
     - On iOS, the camera control is supported in the Power Apps for mobile app. It's not supported within the browser or Teams Mobile.
    - On Android, the camera control isn't supported in Teams Mobile.
-   - When using desktop browsers, the barcode scanner isn't supported. Use the Power Apps for mobile app.
+   - When using desktop browsers, the barcode reader isn't supported. Use the Power Apps for mobile app.
+
+- [Container control](controls/control-container.md) - see [Container control limitations](controls/control-container.md#limitations).
 
 - [Export and import controls](controls/control-export-import.md) - see [Export and import control limitations](controls/control-export-import.md#limitations).
 
@@ -54,7 +53,7 @@ Apps made with Power Apps in a Dataverse for Teams environment can't be opened o
 
 ### Limitations of specific controls
 
-- [Barcode control](controls/control-new-barcode-scanner.md) - the barcode scanner control isn't supported in Teams Mobile.
+- [Barcode control](controls/control-barcodereader.md) - the barcode reader control isn't supported in Teams Mobile.
 
 - [Camera control](controls/control-camera.md) - the Camera control isn't supported in Teams Mobile. If you're creating a Power Apps app for use inside Teams, use the [Add picture](controls/control-add-picture.md) control instead.
 
@@ -71,7 +70,7 @@ The following controls aren't supported by apps embedded in Teams:
 - [Address Input](geospatial-component-input-address.md)
 - [Camera](controls/control-camera.md) (in Teams Mobile)
 - [Map](geospatial-component-map.md)
-- [Mixed reality](mixed-reality-overview.md) (View in MR, View shape in MR, Measure in MR)
+- [Mixed reality](mixed-reality-overview.md) (View in MR, View shape in MR, Measuring Camera)
 - [Power BI tile control](controls/control-power-bi-tile.md)
 - [Web barcode scanner control](controls/control-barcodescanner.md)
 

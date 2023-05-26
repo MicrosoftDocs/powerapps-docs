@@ -1,14 +1,16 @@
 ---
 title: " Lookup component| Microsoft Docs" 
 description: "demonstrates how to leverage the Lookup.Simple type on properties of field components." 
-ms.custom: ""
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+author: noazarur-microsoft
+ms.author: noazarur
+ms.date: 03/12/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+contributors:
+ - JimDaly
 ---
 # Implementing simple lookup component
 

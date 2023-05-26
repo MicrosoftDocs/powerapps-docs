@@ -1,17 +1,14 @@
 ---
 title: EntityRecord.getValue | Microsoft Docs
 description: Gets the value of the record's column.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+ms.date: 04/21/2023
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+  - JimDaly
 ---
 
 # EntityRecord.getValue
@@ -28,13 +25,16 @@ Model-driven and canvas apps
 
 ## Parameters
 
-| Parameter Name | Type     | Required | Description               |
-| -------------- | -------- | -------- | ------------------------- |
-| `columnName`   | `string` | Yes      | Name of the column.|
+| Parameter Name | Type     | Required | Description         |
+| -------------- | -------- | -------- | ------------------- |
+| `columnName`   | `string` | Yes      | The logical name of the column. |
 
 ## Return Value
 
-Type: `string`
+Type: `string` | `Date` | `number` | `number[]` | `boolean` | [EntityReference](./../entityreference.md) | `EntityReference[]` | [FileObject](./../fileobject.md) | [ImageObject](./../imageobject.md)
+
+> [!NOTE]
+> For Canvas apps the [fileSize](../fileobject.md#filesize) and [mimeType](../fileobject.md#mimetype) properties for file columns will be missing on the first call, but the call initiates an asynchronous process to cache these values. After these values are cached, the next `getValue` call will return all attribute values.
 
 ### Related topics
 

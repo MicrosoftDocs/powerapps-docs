@@ -1,19 +1,16 @@
 ---
 title: "pickFile| MicrosoftDocs"
 description: Opens a dialog box to select files for the upload
-ms.date: 09/08/2021
-
-ms.topic: "reference"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: c777a0b8-2b07-458b-8a4f-8938f7a2e696
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 
 # pickFile (Client API reference)
@@ -42,7 +39,7 @@ On success, returns a promise with array of objects as specified earlier for the
 
 ## Exceptions
 
-See [Web service error codes](../../../../data-platform/org-service/web-service-error-codes.md)
+See [Web service error codes](../../../../data-platform/reference/web-service-error-codes.md)
 
 ### Related topics
 

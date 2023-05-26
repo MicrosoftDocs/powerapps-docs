@@ -2,12 +2,11 @@
 title: Start building apps | Microsoft Docs
 description: Get an introduction to creating canvas or model-driven apps in Power Apps, and incorporating the Microsoft Dataverse.
 author: alaug
-
+ms.subservice: common
 ms.topic: overview
-
-ms.date: 01/07/2021
+ms.date: 11/01/2022
 ms.author: alaug
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 searchScope:
   - "Power Apps"
 ---
@@ -18,7 +17,7 @@ Power Apps is a high-productivity development platform for business apps, and ha
 
 - Canvas apps
 - Model-driven apps
-- Portals
+- Cards (preview)
 - Microsoft Dataverse
 
 Let's learn more about each of these.
@@ -32,7 +31,7 @@ Canvas apps give you the flexibility to arrange the user experience and interfac
 You can start to build your app from Microsoft tools where your data lives, such as:
 
 - [From a SharePoint list](canvas-apps/app-from-sharepoint.md#create-an-app-from-within-sharepoint-online)
-- [From a Power BI dashboard](canvas-apps/embed-powerapps-powerbi.md)
+- [From a Power BI dashboard](/power-bi/visuals/power-bi-visualization-powerapp)
 
 Creating a canvas app is easy. With Power Apps, you can find or create your app in several ways:
 
@@ -68,17 +67,16 @@ Getting started with model-driven apps is simple. You can begin with these topic
 - [Add business logic](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 - [Converging model and canvas using custom page (preview)](model-driven-apps/model-app-page-overview.md)
 
-## Portals
+## Cards (preview)
 
-[Portals](portals/overview.md) help you create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Dataverse, or even browse content anonymously.
+Cards (preview) are micro-apps with lightweight UI elements that can be used across multiple applications that doesn't require any coding or IT expertise. You can quickly design and develop cards that can surface business data through Power Platform connectors, or use your own business logic for more customization.
 
-Use these topics to quickly get started with portals:
+Get started with cards (preview) with these topics:
 
-- [Create a starter portal](/powerapps/maker/portals/create-portal)
-- [About the portal lifecycle](/powerapps/maker/portals/admin/portal-lifecycle)
-- [Portal authentication](/powerapps/maker/portals/configure/configure-portal-authentication)
-- [Power BI integration for portals](/powerapps/maker/portals/admin/set-up-power-bi-integration)
-- [Azure integration for portals](/powerapps/maker/portals/enable-azure-storage)
+- [What are cards for Power Apps (preview)?](../cards/overview.md)
+- [Card designer overview](../cards/make-a-card/designer-overview.md)
+- [Add connectors to cards](../cards/make-a-card/connectors/connector-intro.md)
+- [Send cards using Microsoft Teams](../cards/send-a-card/send-card-in-teams.md)
 
 ## Dataverse
 

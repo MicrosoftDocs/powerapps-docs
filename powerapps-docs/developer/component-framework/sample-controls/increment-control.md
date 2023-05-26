@@ -1,14 +1,16 @@
 ---
 title: " Increment component| Microsoft Docs" 
 description: "This sample component shows how to bind data with Power Apps component framework and error handling." 
-ms.custom: ""
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+author: noazarur-microsoft
+ms.author: noazarur
+ms.date: 03/12/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+contributors:
+ - JimDaly
 ---
 
 # Implementing increment component
@@ -35,7 +37,7 @@ When you click on the button, the value in the text box is increased by 1. The u
 > [!NOTE]
 > You can change the increment value when you are configuring the component to the field on the form.
 
-Edit the value in the text box, and if it is a valid integer, then it updates the value to Power Apps component framework. You can continuously click the `Increment` button and update it. If it’s an invalid integer, an error message pops out.
+Edit the value in the text box, and if it is a valid integer, then it updates the value to Power Apps component framework. You can continuously click the `Increment` button and update it. If it's an invalid integer, an error message pops out.
 
 ### Related topics
 

@@ -1,20 +1,16 @@
 ---
 title: "Collections (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the Collections method.
-ms.date: 09/22/2021
-
-ms.topic: "reference"
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 29ec134e-8fa5-4f88-a353-a3c15398eb37
-author: "Nkrb"
-ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 
 # Collections (Client API reference)
@@ -23,11 +19,11 @@ Collections are structures to provide access to data that represent an array, bu
 
 These methods are available to all the collections in the `formContext` object model.
 
-| Method                                | Description                                                                                              |
-| ------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [forEach](collections/forEach.md)     | [!INCLUDE[collections/includes/forEach-description.md](collections/includes/forEach-description.md)]     |
-| [get](collections/get.md)             | [!INCLUDE[collections/includes/get-description.md](collections/includes/get-description.md)]             |
-| [getLength](collections/getLength.md) | [!INCLUDE[collections/includes/getLength-description.md](collections/includes/getLength-description.md)] |
+|Method|Description|
+|----|----|
+|[forEach](collections/forEach.md)| [!INCLUDE[collections/includes/forEach-description.md](collections/includes/forEach-description.md)]|
+|[get](collections/get.md)| [!INCLUDE[collections/includes/get-description.md](collections/includes/get-description.md)]|
+|[getLength](collections/getLength.md)|[!INCLUDE[collections/includes/getLength-description.md](collections/includes/getLength-description.md)]|
 
 ### Related topics
 

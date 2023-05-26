@@ -1,0 +1,1 @@
+Returns information whether the network is available or not

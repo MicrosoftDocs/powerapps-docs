@@ -14,7 +14,6 @@ author: "Mattp123"
 ms.assetid: 2a44229e-44f0-4c4e-ba21-a476210d0a12
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,9 +21,6 @@ caps.latest.revision: 19
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create a model-driven app using the classic app designer
@@ -35,7 +31,7 @@ This article describes the basics of creating and editing a model-driven app tha
 
 Verify the following prerequisites before creating an app:
 - A Power Apps [environment](model-driven-app-glossary.md#environment) used for app development must exist within the tenant. More information [Create an environment](/power-platform/admin/create-environment) and [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
-- The environment used will need to have a Dataverse database associated with it.  Dataverse environments can exist with or without a database and generally these are provisioned on creation of the environment.  The database holds the tables and other components that will be used by the model-driven app. [Create and manage environments in Dataverse](/learn/modules/create-manage-environments/)
+- The environment used will need to have a Dataverse database associated with it.  Dataverse environments can exist with or without a database and generally these are provisioned on creation of the environment.  The database holds the tables and other components that will be used by the model-driven app. [Create and manage environments in Dataverse](/training/modules/create-manage-environments/)
 - Within the environment the app developer needs to have an environment maker, system administrator, or system customizer security role. More information: [About predefined security roles](./share-model-driven-app.md#about-predefined-security-roles)
 
 ## Create a model-driven app  
@@ -43,8 +39,7 @@ Verify the following prerequisites before creating an app:
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 1. Choose the environment by selecting the environment icon ![Environment icon.](media/icon-environment.PNG "Environment icon")
-1. Select **Solutions** from the left navigation pane.
-
+1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open an unmanaged solution or create a new one. More information: [Create a solution](../data-platform/create-solution.md)
 1. Select **New** > **App** > **Model-driven app**.  
 1. There a two options.  [Modern app designer](app-designer-overview.md) and Classic App designer.  Select **Classic App Designer**.  

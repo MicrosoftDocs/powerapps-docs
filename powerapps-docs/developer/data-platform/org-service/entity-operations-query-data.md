@@ -1,19 +1,16 @@
 ---
 title: "Query data using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Introduces the different ways to query data using Microsoft Dataverse SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/01/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divkamath" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # Query data using the Organization service
@@ -65,7 +62,7 @@ To avoid this when using the late-bound style, you can use two strategies:
 
 ## Use FetchXML with FetchExpression
 
-FetchXml is a proprietary XML-based query language that can be used with SDK Assembly queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. More information: [Web API : Retrieve and execute predefined queries > Use custom FetchXML](../webapi/retrieve-and-execute-predefined-queries.md#use-custom-fetchxml)
+FetchXml is a proprietary XML-based query language that can be used with SDK Assembly queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. More information: [Use FetchXml with Web API](../webapi/use-fetchxml-web-api.md)
 
 The following example shows a simple query to return up to 50 matching account rows where the `address1_city` value equals `Redmond`, ordered by `name`.
 
@@ -100,7 +97,7 @@ More information:
 
 - [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
 - [FetchXML schema](../fetchxml-schema.md)
-- [Work with Quick Find’s search item limit](../quick-find-limit.md)
+- [Work with Quick Find's search item limit](../quick-find-limit.md)
 - [Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
 - [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
 - [Fiscal date and older than datetime query operators in FetchXML](../use-fetchxml-fiscal-date-older-datetime-query-operators.md)
@@ -255,7 +252,7 @@ More information: [Sample: Convert queries between Fetch and QueryExpression](sa
 
 Dataverse has a limit of 500 total conditions allowed in a query. Any joins included in the query are counted as part of this limit. If a query (and its joins) exceeds 500 conditions, the user will receive the following error when the query is executed:  "Number of conditions in query exceeded maximum limit." 
 
-If this occurs aa user must either: 
+If this occurs a user must either: 
 
 - Reduce the number of conditions in their query. 
 - Use the In clause, which allows GUIDs and strings up to 850 characters with no limit on integers.

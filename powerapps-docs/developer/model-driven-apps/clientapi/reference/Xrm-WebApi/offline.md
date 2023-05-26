@@ -1,19 +1,16 @@
 ---
 title: "Xrm.WebApi.offline (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the Xrm.WebApi.offline method.
-ms.date: 04/21/2021
-
-ms.topic: "reference"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 848c277b-bd44-4388-852a-0f59a3a15538
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # Xrm.WebApi.offline (Client API reference)
 
@@ -28,7 +25,7 @@ For information about the mobile offline feature, see  [Configure mobile offline
 > [!NOTE]
 > Use **Xrm.WebApi.offline** instead of the [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) **Xrm.Mobile.Offline** namespace to create and manage records in the mobile clients while working in the offline mode.
 
-The **offlineWebApi** object provides the following methods. When in the offline mode, these methods will work only for tables that are enabled for mobile offline synchronization and available in current user’s mobile offline profile.
+The **offlineWebApi** object provides the following methods. When in the offline mode, these methods will work only for tables that are enabled for mobile offline synchronization and available in current user's mobile offline profile.
 
 - [createRecord](createRecord.md)
 - [deleteRecord](deleteRecord.md)

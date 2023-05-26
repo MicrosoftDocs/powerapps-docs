@@ -1,19 +1,18 @@
 ---
 title: "Web Resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Web resources are virtual files that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/15/2021
-ms.reviewer: ""
+author: sriharibs-msft
+ms.author: srihas
 
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: overview
-author: "KumarVivek" # GitHub ID
 ms.subservice: mda-developer
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 # Web resources in model-driven apps
 
@@ -159,7 +158,7 @@ A web resource control configured to use a certain number of rows will have diff
 
  [Create Accessible web resources](create-accessible-web-resources.md)<br />
  [Web Page (HTML) web resources](webpage-html-web-resources.md)<br />
- [Script (JScript) web resources](script-jscript-web-resources.md)<br />
+ [JavaScript web resources](script-jscript-web-resources.md)<br />
  [Image web resources](image-web-resources.md)<br />
  [Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
  [Data (XML) web resources](data-xml-web-resources.md)<br />

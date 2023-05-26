@@ -5,16 +5,14 @@ author: chmoncay
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 09/01/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
   - gregli-msft
 ---
@@ -82,7 +80,7 @@ These properties are in effect when the control is focused.
 
 ## Disabled
 
-These properties are in effect when the control is disabled.  A control can be disabled if the **[Disabled](properties-core.md)** property is set to *true*.
+These properties are in effect when the control is disabled.  A control can be disabled if the **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **DisabledBorderColor** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 

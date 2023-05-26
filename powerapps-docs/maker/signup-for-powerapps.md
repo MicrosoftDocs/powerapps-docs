@@ -2,16 +2,16 @@
 title: Power Apps 30-day free trial
 description: Explore Power Apps for free with a 30-day trial. You’ll be able to extend the capabilities of Office 365, create and run apps, manage environments, and more.
 author: alaug
-
+ms.subservice: common
 ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
-ms.date: 01/25/2022
+ms.date: 07/14/2022
 ms.author: alaug
 ms.reviewer: kvivek
 contributors:
-  - tapanm-msft
+  - mduelae
   - alaug
 ---
 # Explore Power Apps for free for 30 days
@@ -27,8 +27,17 @@ You can explore all the Power Apps capabilities for free by signing up for a 30-
 If you have a Power Apps license or a license through Office 365, you already have access to some of these features. However, the trial license temporarily expands your access to include all features in the previous list. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
 > [!NOTE]
-> - If you're an administrator, see [Purchase Power Apps for your organization](../administrator/signup-for-powerapps-admin.md) or [Power Apps in your organization Q&A](../administrator/signup-question-and-answer.md).
+> - If you're an administrator, see [Purchase Power Apps for your organization](/power-platform/admin/signup-for-powerapps-admin) or [Power Apps in your organization Q&A](/power-platform/admin/signup-question-and-answer).
 > - Beginning January 2020, self-service purchase, subscription, and license management capabilities for Power Platform products (Power BI, Power Apps, and Power Automate) are available for commercial cloud customers in the United States. For more information, including steps to enable or disable self-service purchasing in your organization, see [Self-service purchase FAQ](/microsoft-365/commerce/subscriptions/self-service-purchase-faq).
+
+## Need an account?  
+If you don't have a work or school account, you can create a free account with Azure AD and you can be a low code developer with Power Apps. To continue building apps beyond the trial period, just opt-in to the free [Power Apps Developer Plan](https://powerapps.microsoft.com/developerplan/). 
+
+1. Go to [PowerApps.com](https://powerapps.microsoft.com/) and then select, **Start free**. 
+2. Enter your email. If your email isn't a work or school account, you'll be prompted to create a free Azure AD account using [this sign up experience](https://signup.microsoft.com/get-started/signup?products=83d3609a-14c1-4fc2-a18e-0f5ca7047e46). 
+
+If you want to evaluate Power Apps integrations with Microsoft 365 then you can sign up for a [Office 365 trial](https://signup.microsoft.com/get-started/signup?products=ec920d3e-7e24-492d-ba28-79763d637b79) account. 
+
 
 ## Identify your current license
 
@@ -51,11 +60,11 @@ To start a free 30-day trial of Power Apps per user plan from an existing licens
 
 Regardless of whether you have a license for Power Apps, you can start a free 30-day trial per user plan by following these steps:
 
-1. Open the [Power Apps site](https://powerapps.microsoft.com), and then select **Sign up free**.
+1. Open the [Power Apps site](https://powerapps.microsoft.com), and then select **Try free**.
 
-    If you're using a phone, open the menu in the upper-right corner first, and then select **Sign up free**.
+    If you're using a phone, select the menu in the top right corner, and then select **Try free**.
 
-1. Near the middle of the screen, select **Pricing** and then select **Start free trial**.
+1. Near the middle of the screen, select **Pricing**, and then select **Start free trial**.
 
 1. In the dialog box that appears, type or paste your work or school email address and then select **Submit**.
 
@@ -67,6 +76,14 @@ Regardless of whether you have a license for Power Apps, you can start a free 30
     ![Sign in with work account.](./media/signup-for-powerapps/we-know-you.png)
 
     Otherwise, follow the prompts to check your email, verify your email address, provide more information if necessary, and then select **Start**.
+
+    You'll see the following message if your admin has disabled free trials.
+
+    ![It turned off sign-ups](./media/signup-for-powerapps/it-turned-off.png)
+
+    >[!NOTE]
+    >For more information, including the steps to enable or disable trial licenses in your organization, see [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands).
+
 
 ## FAQ
 

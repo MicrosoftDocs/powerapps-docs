@@ -1,22 +1,23 @@
 ---
 title: loadNextPage | Microsoft Docs
 description: Request the next page of results to be loaded.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: e119c1e1-e35f-47cf-9437-e7376657bbc0
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # loadNextPage
 
 [!INCLUDE [loadnextpage-description](includes/loadnextpage-description.md)]
+
+> [!NOTE]
+> `loadNextPage` does not support parallel execution.
+> Executing `loadNextPage` will trigger `updateView` on the control with newly fetched results.
 
 ## Available for
 

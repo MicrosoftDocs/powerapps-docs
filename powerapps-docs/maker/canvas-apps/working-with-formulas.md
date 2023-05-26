@@ -7,22 +7,22 @@ ms.custom:
 - "intro-internal"
 - "canvas"
 ms.topic: conceptual
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 # Get started with formulas in canvas apps
 
 > [!NOTE]
-> Have you checked out new [Microsoft Power Fx](/power-platform/power-fx/overview)? 
+> Have you checked out [Microsoft Power Fx](/power-platform/power-fx/overview)? 
+>
+> Try the new experimental Power Fx formula bar in Power Apps Studio, with better intellisense and improved error highlighting. To learn more about turning this feature on, see [Controlling which features are enabled](working-with-experimental-preview.md#controlling-which-features-are-enabled).
 
 Configure your canvas app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 
@@ -91,13 +91,13 @@ In Power Apps, you can achieve a similar result by adding controls to a screen a
 
 Regardless of what numbers you type in the text-input controls, the label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula:
 
-`TextInput1 + TextInput2`
+`TextInput1.Text + TextInput2.Text`
 
 ![Animation of Power Apps recalculating the sum of two numbers.](./media/working-with-formulas/recalc2.gif)
 
 In Excel, you can use conditional-formatting formulas to show, for example, negative values in red. In Power Apps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label automatically shows negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
 
-`If( Value(Label1.Text) < 0, Red, Black )`
+`If( Value(Label1.Text) < 0, Color.Red, Color.Black )`
 
 ![Animation of conditional formatting.](media/working-with-variables/recalc-color.gif)
 

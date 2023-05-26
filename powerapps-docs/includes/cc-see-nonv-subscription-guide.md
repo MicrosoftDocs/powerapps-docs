@@ -1,2 +1,2 @@
 > [!NOTE]
-> This content is for [!INCLUDE [pn-crm-9-0-0-online](../includes/pn-crm-9-0-0-online.md)], or later. For documentation for earlier versions, see [Administering Dynamics 365](https://technet.microsoft.com/library/dn531101.aspx).
+> This content is for [!INCLUDE [pn-crm-9-0-0-online](../includes/pn-crm-9-0-0-online.md)], or later. For documentation for earlier versions, see [Administering Dynamics 365](/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn531101(v=crm.8)).

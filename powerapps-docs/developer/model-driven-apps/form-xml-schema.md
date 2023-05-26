@@ -1,20 +1,16 @@
 ---
 title: "Form XML schema (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about schema definition for form customizations." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/14/2021
-ms.reviewer: ""
-
-ms.topic: "article"
-author: "KumarVivek" # GitHub ID
+author: HemantGaur
+ms.author: hemantg
+ms.date: 04/01/2022
+ms.reviewer: jdaly
+ms.topic: reference
 ms.subservice: mda-developer
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
 ---
 # Form XML schema
 
@@ -776,7 +772,7 @@ The following is the schema definition for form customizations for model-driven 
                           minOccurs="0"  
                           maxOccurs="1" />  
               <!--Web Resource related parameters. Included in this section since they   
-								can include Url, PassParameters etc-->  
+                        can include Url, PassParameters etc-->  
               <xs:element name="Height"  
                           type="xs:unsignedInt"  
                           minOccurs="0"  

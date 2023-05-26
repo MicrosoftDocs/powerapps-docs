@@ -1,21 +1,18 @@
 ---
-title: "getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getEntityReference method.
-ms.date: 04/21/2021
-
-ms.topic: "reference"
+title: gridEntity.getEntityReference (Client API reference)
+description: Includes description and supported parameters for the gridEntity.getEntityReference method.
+author: jasongre
+ms.author: jasongre
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: b8e23eee-f20f-4db9-9cc6-7fa5dd7ce2bb
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
-# getEntityReference (Client API reference)
+# gridEntity.getEntityReference (Client API reference)
 
 
 

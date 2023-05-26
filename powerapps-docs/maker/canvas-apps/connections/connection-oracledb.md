@@ -5,16 +5,14 @@ author: lancedMicrosoft
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
 # Connect to an Oracle database from Power Apps
@@ -23,7 +21,7 @@ List tables, and create, read, update, and delete table rows in an Oracle databa
 
 ## Prerequisites
 * Oracle 9 and later
-* Oracle Data Access Client (ODAC) software 11.2 and later
+* Oracle Data Access Client (ODAC) software 11.2 or later
 * Installation of an on-premises data gateway
 * Installation of the Oracle client SDK
 
@@ -33,7 +31,7 @@ To install a gateway, follow the steps in [this tutorial](../gateway-management.
 An on-premises data gateway acts as a bridge, providing quick and secure data transfer between on-premises data (data that isn't in the cloud) and the Power BI, Power Automate, Logic Apps, and Power Apps services. You can use the same gateway with multiple services and multiple data sources. For more information, see [Understand gateways](../gateway-reference.md).
 
 ### Install Oracle client
-On the same computer as the on-premises data gateway, install the [64-bit ODAC 12c Release 4 (12.1.0.2.4) for Windows x64](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html). You must choose a windows installer version since xcopy version does not work with on-premises data gateway.  Otherwise, an error will appear if you try to create or use the connection, as the list of known issues describes.
+On the same computer as the on-premises data gateway, install ODAC 11.2 or later. For example, you can install [64-bit ODAC 12c Release 4 (12.1.0.2.4) for Windows x64](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html) or choose a version that you prefer. You must choose a windows installer version since xcopy version does not work with on-premises data gateway.  Otherwise, an error will appear if you try to create or use the connection, as the list of known issues describes.
 
 ## Create an app from a table in an Oracle database
 

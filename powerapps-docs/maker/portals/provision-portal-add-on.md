@@ -1,5 +1,5 @@
 ---
-title: Provision a portal using the older portal add-on
+title: Provision a site using the older add-on
 description: Instructions to provision a portal using the older portal add-on.
 author: neerajnandwana-msft
 
@@ -14,9 +14,12 @@ contributors:
     - nickdoelman
 ---
 
-# Provision a portal using the older portal add-on
+# Provision a site using the older add-on
 
-If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page and provision the portal.
+
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
+
+If you have purchased an older site (portal) add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page and provision the portal.
 
 > [!NOTE]
 > - To provision a portal, you must be assigned either System Administrator or System Customizer role of the Microsoft Dataverse environment selected for the portal. You must also have the [required permissions](/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to create and register an application in Azure AD. If you don't have the required permissions, contact the Global Administrator to update your permissions or ask the Global Administrator to provision the portal.
@@ -163,7 +166,7 @@ The table below summarizes the features associated with each portal option:
 | Web Notifications                      |  *                           | *              |  *                           | *                | *             |
 | [!INCLUDE[cc-microsoft](../../includes/cc-microsoft.md)] Identity                     |     *                         |  *              |     *                         |   *               | *             |
 | Identity Workflows                     | *                            |  *             |     *                         |   *               | *             |
-| Advanced Forms                              |  *                            | *               |    *                          | *                 | *             |
+| Multistep Forms                              |  *                            | *               |    *                          | *                 | *             |
 | Feedback                               |   *                           |  *              |  *                            | *                 | *             |
 ||
 
@@ -206,7 +209,6 @@ However, you can change the audience and type of portal after it's provisioned b
 
 ### See also
 
-[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/)
-
+[Administer Power Apps portals](/training/paths/administer-portals/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

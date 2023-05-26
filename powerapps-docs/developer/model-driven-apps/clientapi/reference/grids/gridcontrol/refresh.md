@@ -1,21 +1,18 @@
 ---
-title: "refresh (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the refresh method.
-ms.date: 04/21/2021
-
-ms.topic: "reference"
+title: "gridContext.refresh (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the gridContext.refresh method.
+author: jasongre
+ms.author: jasongre
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: c6cbe4c5-c5a1-4330-a3ba-c0716e0c92ad
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
-# refresh (Client API reference)
+# gridContext.refresh (Client API reference)
 
 
 

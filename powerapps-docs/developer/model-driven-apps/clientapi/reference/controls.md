@@ -1,19 +1,15 @@
 ---
 title: "Controls in model-driven apps for Dynamics 365| MicrosoftDocs"
 description: A control represents an HTML element present on the form.
-ms.date: 04/15/2021
-
-ms.topic: "reference"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
-ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.author: hemantg
+author: HemantGaur
+ms.date: 01/06/2023
+ms.reviewer: jdaly
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # Controls (Client API reference)
 
@@ -52,13 +48,15 @@ These are the methods available for a Standard control.
 <ul>
 <li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
 <li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>
+<li><a href="controls/getoutputs.md" data-raw-source="[getOutputs](controls/getoutputs.md)">getOutputs</a></li>
 <li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
 <li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
-<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
+
 </ul>
 </td>
 <td>
 <ul>
+<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
 <li><a href="controls/setFocus.md" data-raw-source="[setFocus](controls/setFocus.md)">setFocus</a></li>
 <li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
 <li><a href="controls/setNotification.md" data-raw-source="[setNotification](controls/setNotification.md)">setNotification</a></li>
@@ -151,7 +149,7 @@ These are the methods available for knowledge base search control.
 </table>
 
 >[!NOTE]
->When the knowledge base search control is added to the social pane, the name of the control will be "searchwidgetcontrol_notescontrol". This name can’t be changed. 
+>When the knowledge base search control is added to the social pane, the name of the control will be "searchwidgetcontrol_notescontrol". This name can't be changed. 
 
 ## lookup control type
 
@@ -340,6 +338,9 @@ The Sliverlight web resource has these additional methods:
  >  formContext.getAttribute("name").controls.forEach(control => control.addNotification(notification));
  > ```
 
+## Form component control type
+
+A form component control type has the same set of methods available as the [formContext](../clientapi-form-context.md) on a main form. See [Form component behavior > Client API](../../../../maker/model-driven-apps/form-component-control.md#client-api)
 
 ### Related topics
 

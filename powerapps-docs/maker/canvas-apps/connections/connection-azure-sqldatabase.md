@@ -8,13 +8,11 @@ ms.custom: canvas
 ms.date: 04/28/2021
 ms.subservice: canvas-maker
 ms.author: lanced
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
 # Connect to SQL Server from Power Apps
@@ -23,7 +21,7 @@ contributors:
 Connect to SQL Server, in either Azure or an on-premises database, so that you can manage your data with create, read, update, and delete operations.
 
 > [!NOTE] 
-> Newly created SQL data sources are no longer prefixed with "[dbo]" as they have been in previous versions of Power Apps. See the [common issues and resolutions](../common-issues-and-resolutions.md) page for more information.
+> Newly created SQL data sources are no longer prefixed with "[dbo]" as they have been in previous versions of Power Apps. See the [common issues and resolutions](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) page for more information.
 
 ## Prerequisites
 
@@ -39,6 +37,27 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 * For an on-premises database, identify a [data gateway](../gateway-management.md) that was shared with you (or create one).
 
 ## Generate an app automatically
+
+
+Depending upon whether you have the [new look](../intro-maker-portal.md?tabs=home-new-look) or [classic look](../intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
+
+# [New look (preview)](#tab/home-new-look)
+
+[This article is prerelease documentation and is subject to change.]
+
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Depending on how you want to create your app, from the home screen, select one of the following options:
+   - To create a single-page gallery app with a responsive layout, choose either:
+     - **Start with data** > **Connect to external data** > **From SQL**.
+     - **Start with a page design** > **Gallery connected to external table** > **From SQL**.
+   - To create a three screen mobile app, select **Start with an app template** > **From SQL**.
+1. Select your SQL connection and then select a table. Note, that only one connection is shown at a time. To select a different connection, select on the **...** button to switch connection or create a new SQL connection.
+1. When you're done, select **Create app**.
+
+
+# [Classic](#tab/home-classic)
+
 1. In Power Apps Studio, click or tap **New** on the **File** menu (along the left edge).
    
     ![New option on the File menu.](./media/connection-azure-sqldatabase/file-new.png)
@@ -64,7 +83,8 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
     Power Apps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
 8. Customize the app by using techniques that are similar to those that [Create an app from Excel](../get-started-create-from-data.md) describes, starting with changing the app layout.
 
-## Build an app from scratch
+
+### Build an app from scratch
 1. Sign in to [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with the same account that you used to sign up for Power Apps.
 2. In the left navigation bar, click or tap **Connections**:  
    
@@ -84,7 +104,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 5. Click or tap **Create** to create the connection.
 6. Create an app by using techniques that are similar to those that [Create an app from scratch](../get-started-create-from-blank.md) describes.
 
-## Update an existing app
+### Update an existing app
 1. In Power Apps Studio, open the app that you want to update.
 2. Click or tap **Data sources** on the **View** tab of the ribbon.
 3. In the right-hand pane, click or tap **Add a data source**.
@@ -105,6 +125,8 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 6. Click or tap **Connect**.
 7. Under **Choose a dataset**, click or tap an option.
 8. Under **Choose a table**, select one or more checkboxes, and then click or tap **Connect**.
+
+---
 
 ## Next steps
 * Learn how to [show data from a data source](../add-gallery.md).

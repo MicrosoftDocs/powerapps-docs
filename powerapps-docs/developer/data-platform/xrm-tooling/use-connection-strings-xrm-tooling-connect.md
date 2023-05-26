@@ -1,19 +1,16 @@
 ---
 title: "Use connection strings in XRM tooling to connect to Microsoft Dataverse (Dataverse)| Microsoft Docs"
 description: "XRM tooling enables you to connect to your Microsoft Dataverse environment by using connection strings"
-ms.custom: ""
-ms.date: 1/6/2022
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+ms.topic: article
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
+  - phecke
 ---
 # Use connection strings in XRM tooling to connect to Microsoft Dataverse
 
@@ -41,12 +38,18 @@ With Dataverse, XRM tooling enables you to connect to your Dataverse environment
 //Use the connection string named "MyCDSServer"  
 //from the configuration file  
 CrmServiceClient svc = new CrmServiceClient(ConnectionString);  
-```  
+```
+
+Alternately, you could use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class.
+
+```csharp
+ServiceClient svc = new ServiceClient(ConnectionString);  
+```
   
 > [!NOTE]
 > You’ll have to use the following `using` directive in your code to reference the `System.Configuration` namespace to access the connection string in your code: `using System.Configuration;`  
   
- After creating a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> object, you can use the object to perform actions in Dataverse. More information: [Use XRM Tooling to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)  
+ After creating a service client object, you can use the object to perform actions in Dataverse. More information: [Use XRM Tooling to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)  
   
 <a name="Parameters"></a>
 

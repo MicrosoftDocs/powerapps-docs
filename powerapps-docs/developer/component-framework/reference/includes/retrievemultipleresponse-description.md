@@ -1,0 +1,1 @@
+The response from `webAPI.retrieveMultipleRecords`

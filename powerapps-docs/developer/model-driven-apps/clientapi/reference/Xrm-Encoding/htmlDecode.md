@@ -1,19 +1,16 @@
 ---
 title: "htmlDecode| MicrosoftDocs"
 description: "The Client API method converts a string that has been HTML-encoded into a decoded string."
-ms.date: 04/21/2021
-
-ms.topic: "reference"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 4ef7160b-ac01-4d08-8a98-f8e3012ef20b
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # htmlDecode (Client API reference)
 

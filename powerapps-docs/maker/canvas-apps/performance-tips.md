@@ -5,17 +5,15 @@ author: yingchin
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/21/2022
 ms.subservice: canvas-maker
 ms.author: yingchin
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - yingchin
-  - tapanm-msft
+  - mduelae
   - chmoncay
   - melzoghbi
 ---
@@ -27,7 +25,7 @@ In the previous articles, you learned about the [execution phases and data call 
 
 **Don't add more than 30 connections in one app**. Apps prompt new users to sign in to each connector, so every extra connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources, memory, and network bandwidth when the app requests data from that source.
 
-You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 connections. Each added connection is counted individually in this limit, irrespective of the connected data source type&mdash;such as Microsoft Dataverse or SQL Server tables, or SharePoint lists.
+You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 connections. Each added connection is counted individually in this limit, irrespective of the connected data source type&mdash;such as Microsoft Dataverse or SQL Server tables, or lists created using Microsoft Lists.
 
 ## Limit the number of controls
 
@@ -103,12 +101,12 @@ Where possible, use functions that delegate data processing to the data source i
 > [!TIP]
 > To learn about delegable functions supported by specific connectors, go to the [connector documentation](/connectors/).
 
-For an example of delegable functions, consider an ID column defined as the **Number** data type in a SharePoint list. Formulas in the following example will return the results as expected. However, the first formula is delegable while the second is non-delegable.
+For an example of delegable functions, consider an ID column defined as the **Number** data type in a list created using Microsoft Lists. Formulas in the following example will return the results as expected. However, the first formula is delegable while the second is non-delegable.
 
 | Formula                                           | Delegable? |
 |---------------------------------------------------|------------|
-| ``Filter ('SharePoint list data source', ID = 123 )`` | Yes        |
-| ``Filter(`SharePoint list data source', ID ="123")``  | No         |
+| ``Filter ('List data source', ID = 123 )`` | Yes        |
+| ``Filter(`List data source', ID ="123")``  | No         |
 
 Because we assume that the ID column in SharePoint is defined with the data type of **Number**, the right-side value should be a numeric variable instead of a string variable. Otherwise, this mismatch might trigger the formula to be non-delegable.
 
@@ -148,6 +146,30 @@ Depending on the configuration, Gallery can take longer to render the visible ro
 - Simplify the template. For example, consider reducing the number of controls, references to lookups.
 - Galleries with complex templates can benefit from having **DelayItemLoading** set to **true**, and **LoadingSpinner** set to **LoadingSpinner.Controls**. This change will improve the perceived experience when render time is longer. **DelayItemLoading** will also defer the rendering of templates which will allow the rest of the screen to render faster as both screen and gallery are not competing for resources.
 
+## Enable Preload app for enhanced performance
+
+You can optionally preload your app to increase performance.
+
+1. Sign in to [Power Apps](https://make.powerapps.com), and then select **Apps** in the menu.
+
+2. Select **More actions** (...) for the app you want to share, and then select **Settings**.
+
+3. In the Settings panel, toggle **Preload app for enhanced performance** to **Yes**. App will then pre-load.
+
+![Preload app for enhanced performance.](./media/performance-tips/preload-app.png)
+    
+4. For the changes to take effect for apps embedded in Teams, remove and add your app into Teams again.
+
+    > [!NOTE]
+    > This makes the compiled app assets accessible via unauthenticated endpoints to enable loading them before authentication. However, users can still only use your app to access data via connectors only after authentication and authorization completes. This behavior ensures that the data an app retrieves from data sources won’t be available to unauthorized users. Compiled app assets include a collection of JavaScript files containing text authored in app controls (such as PCF controls), media assets (such as images), the app name, and the environment URL the app resides in.
+    > 
+    > In general, apps should retrieve media and information from data sources, through connections. If media and information must be added to the app, without coming from a connection, and it is considered sensitive you may want to disable this setting. Note, disabling this setting will result in users waiting a bit longer to access an app.
+
+## App data stored on your device
+
+To allow users to retrieve app details faster when the app starts, certain data is locally stored on your device in the browser cache. Information that's stored includes app, environment, and connection details. This data will stay stored in the browser based on each browsers’ storage limits.. To clear stored data, see [instructions for each browser](/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues).
+
+
 ## Next steps
 
 Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.
@@ -157,8 +179,8 @@ Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maxi
 [Understand canvas app execution phases and data call flow](execution-phases-data-flow.md) <br>
 [Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md) <br>
 [Common sources of slow performance for a canvas app](slow-performance-sources.md) <br>
-[Common issues and resolutions for Power Apps](common-issues-and-resolutions.md) <br>
-[Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+[Common issues and resolutions for Power Apps](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) <br>
+[Troubleshooting startup issues for Power Apps](/troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

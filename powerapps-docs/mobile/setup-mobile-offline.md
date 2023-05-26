@@ -1,21 +1,18 @@
 ---
 title: Set up mobile offline (preview) | Microsoft Docs
 description: Set up and configure mobile offline for model-driven apps made with Power Apps.
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 02/18/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Set up mobile offline (preview)
@@ -68,11 +65,8 @@ Set up the new mobile offline experience in the [modern app designer](../maker/m
 
 2. On the left pane, select **Apps**, and then select the model-driven app that you want to enable for offline.
 
-3. Select **More (...)** > **Edit** > **Edit in preview** to open the modern app designer.
+3. Select **More (...)** > **Edit** to open the modern app designer.
 
-    > [!div class="mx-imgBorder"]
-    > ![Edit an app.](media/offline-edit-app.png)
- 
 4. On the command bar, select **Settings**.
 
     > [!div class="mx-imgBorder"]
@@ -91,7 +85,7 @@ Set up the new mobile offline experience in the [modern app designer](../maker/m
 7. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, go to the following section, [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
     
     > [!NOTE]
-    >  If you edit an app that has more than one offline profile, that was created using the [classic offline experience](/dynamics365/mobile-app/setup-mobile-offline#step-2-create-a-mobile-offline-profile-to-determine-what-data-will-be-available-while-offline), then you will get this message: **There is more than one mobile offline profile associated with this app, so you can't edit it here.** To use the new offline experience, your app can only have one offline profile.
+    >  If you edit an app that has more than one offline profile, that was created using the [offline experience that is generally available](/dynamics365/mobile-app/setup-mobile-offline#step-2-create-a-mobile-offline-profile-to-determine-what-data-will-be-available-while-offline), then you will get this message: **There is more than one mobile offline profile associated with this app, so you can't edit it here.** To use the new offline experience, your app can only have one offline profile.
     
     > [!div class="mx-imgBorder"]
     > ![Select an offline profile.](media/mobile-offline-image7.png)
@@ -110,9 +104,6 @@ A table needs to be enabled for offline to add it to a offline profile. Some tab
 
 2. On the left pane, select **Data** > **Tables**. 
 3. Select the table that you want to add to an offline profile, and then on the command bar, select **Settings**
-
-    > [!div class="mx-imgBorder"]
-    > ![Table settings.](media/offline-table-settings.png)
     
 4. In the **Edit table** settings, select **Advanced options**, and in the **Rows in this table** section, select **Can be taken offline**.
 
@@ -147,8 +138,8 @@ The modern app designer can generate a default offline profile that's based on h
 
 Applying an appropriate filter for each of the tables configured in the offline profile is critical to limit the amount of data that's downloaded on users' devices.
 
-Keep in mind, that you can have ten related tables in a custom filter. You can also have ten relationships. These are distinct checks that might not add up.
-The ten relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it will increase the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
+Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. These are distinct checks that might not add up.
+The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it will increase the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
 
 
 1. Select **Add table**.
@@ -169,7 +160,7 @@ The ten relationships limit is transitive, meaning if table B has N relationship
    4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently—like a catalog or a product table—you might want to focus on only syncing data when necessary, for example refreshing only once a day.
    
      > [!NOTE]
-     > You can only have up to ten related tables in an profile. If you exceed the limit, then you will get an error and won't be able to publish the offline profile.
+     > You can only have up to 15 related tables in an profile. If you exceed the limit, then you will get an error and won't be able to publish the offline profile.
       
       > [!div class="mx-imgBorder"]
       >![Screenshot showing the filters available for an offline table.](media/mobile-offline-image11.png)

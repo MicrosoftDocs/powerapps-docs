@@ -1,17 +1,15 @@
 ---
 title: "getWebResourceUrl (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getWebResourceUrl method.
-ms.date: 04/21/2021
-
-ms.topic: "reference"
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # getWebResourceUrl (Client API reference)
 
@@ -40,7 +38,7 @@ globalContext.getWebResourceUrl(webResourceName);
 > If you:
 > - Use this method every time, you will have the latest version of the web resource and it will be cached for up to one year. 
 > - Use this method once and save the URL, you will get the version, which was current at the time the URL was built, for next one year.
-> - Don’t use this method and construct the URL yourself, the item returned won't be cached.
+> - Don't use this method and construct the URL yourself, the item returned won't be cached.
 
 ## Example
 

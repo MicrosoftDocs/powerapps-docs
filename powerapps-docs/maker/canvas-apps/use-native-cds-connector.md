@@ -5,16 +5,14 @@ author: lancedMicrosoft
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 05/24/2021
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
 # Microsoft Dataverse and the improve data source experience
@@ -26,7 +24,7 @@ contributors:
 
 If you created a canvas app with either the Dataverse or the Dynamics 365 connector before November 2019, then you might not have the benefits of using the current native connection experience for the Dataverse. This article explains both the benefits of using the new experience and how to convert from the legacy Dataverse or Dynamics 365 connectors to this current and native connection experience enabled by the **Improve data source experience and Microsoft Dataverse views** option.
 
-The **Improve data source experience and Microsoft Dataverse views** option has following benefits:
+The **Improve data source experience and Microsoft Dataverse views** option has the following benefits:
 
 1. Significant speed gains.
 2. Increased reliability.

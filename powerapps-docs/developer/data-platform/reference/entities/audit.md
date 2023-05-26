@@ -1,21 +1,17 @@
 ---
-title: "Auditing (Audit) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Auditing (Audit) table/entity."
-ms.date: 10/05/2021
-
+title: "Auditing (Audit)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Auditing (Audit)  table/entity."
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Auditing (Audit) table/entity reference
+# Auditing (Audit)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -25,16 +21,16 @@ Track changes to records for analysis, record keeping, and compliance.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|DeleteAuditData|<xref href="Microsoft.Dynamics.CRM.DeleteAuditData?text=DeleteAuditData Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest>|
-|DeleteRecordChangeHistory|<xref href="Microsoft.Dynamics.CRM.DeleteRecordChangeHistory?text=DeleteRecordChangeHistory Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/audits(*auditid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveAttributeChangeHistory|<xref href="Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest>|
-|RetrieveAuditDetails|<xref href="Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest>|
-|RetrieveAuditPartitionList|<xref href="Microsoft.Dynamics.CRM.RetrieveAuditPartitionList?text=RetrieveAuditPartitionList Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditPartitionListRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/audits<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrieveRecordChangeHistory|<xref href="Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest>|
+|DeleteAuditData|<xref:Microsoft.Dynamics.CRM.DeleteAuditData?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest>|
+|DeleteRecordChangeHistory|<xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistory?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/audits(*auditid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveAttributeChangeHistory|<xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest>|
+|RetrieveAuditDetails|<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest>|
+|RetrieveAuditPartitionList|<xref:Microsoft.Dynamics.CRM.RetrieveAuditPartitionList?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditPartitionListRequest>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/audits<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveRecordChangeHistory|<xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest>|
 
 ## Properties
 
@@ -129,6 +125,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [TransactionId](#BKMK_TransactionId)
 - [UserId](#BKMK_UserId)
 - [UserIdName](#BKMK_UserIdName)
+- [VersionNumber](#BKMK_VersionNumber)
 
 
 ### <a name="BKMK_Action"></a> Action
@@ -153,6 +150,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |3|Delete||
 |4|Activate||
 |5|Deactivate||
+|6|Upsert||
 |11|Cascade||
 |12|Merge||
 |13|Assign||
@@ -221,6 +219,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |111|Audit Log Deletion||
 |112|User Access Audit Started||
 |113|User Access Audit Stopped||
+|115|Archive||
 
 
 
@@ -292,7 +291,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Format|Text|
 |IsLocalizable|False|
 |IsValidForForm|False|
-|IsValidForRead|False|
+|IsValidForRead|True|
 |LogicalName|changedata|
 |MaxLength|2000|
 |RequiredLevel|None|
@@ -361,7 +360,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|The action that causes the audit--it will be create, delete, or update|
+|Description|The action that causes the audit--it will be create, delete, update, upsert or archive|
 |DisplayName|Operation|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -377,6 +376,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Update||
 |3|Delete||
 |4|Access||
+|5|Upsert||
+|115|Archive||
 
 
 
@@ -422,6 +423,23 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
+
+### <a name="BKMK_VersionNumber"></a> VersionNumber
+
+**Added by**: NonRelational Data Provider Custom Actions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Version number of the audit.|
+|DisplayName|Version Number|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|versionnumber|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -434,14 +452,14 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_audit_userid"></a> lk_audit_userid
 
-See systemuser Table [lk_audit_userid](systemuser.md#BKMK_lk_audit_userid) One-To-Many relationship.
+See the [lk_audit_userid](systemuser.md#BKMK_lk_audit_userid) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_audit_callinguserid"></a> lk_audit_callinguserid
 
-See systemuser Table [lk_audit_callinguserid](systemuser.md#BKMK_lk_audit_callinguserid) One-To-Many relationship.
+See the [lk_audit_callinguserid](systemuser.md#BKMK_lk_audit_callinguserid) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.audit?text=audit EntityType" />

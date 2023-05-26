@@ -1,17 +1,15 @@
 ---
 title: "navigateTo (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the navigateTo method.
-ms.date: 02/15/2022
-
-ms.topic: "reference"
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # navigateTo (Client API reference)
 
@@ -56,7 +54,7 @@ The entity record object contains the following values.
 | entityName | String | Logical name of the table to display the form for. |
 | entityId | String | (Optional) ID of the table record to display the form for. If you don't specify this value, the form will be opened in create mode. |
 | createFromEntity | Lookup | (Optional) Designates a record that will provide default values based on mapped column values. The lookup object has the following String properties: entityType, id, and name (optional). |
-| data | Object | (Optional) A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error. <p/>For information about passing parameters to a form, see [Set column values using parameters passed to a form](/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form.md) and [Configure a form to accept custom querystring parameters](/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters.md). |
+| data | Object | (Optional) A dictionary object that passes extra parameters to the form. <p/> The parameters can be table columns with default values that are set on new forms (see [Set column values using parameters passed to a form](/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form)), or custom parameters that are accessed on the form using `formContext.data.attributes` (see [Configure a form to accept custom querystring parameters](/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters), and [formContext.data](/powerapps/developer/model-driven-apps/clientapi/reference/formContext-data.md)). Invalid parameters will cause an error. |
 | formId | String | (Optional) ID of the form instance to be displayed. |
 | isCrossEntityNavigate | Boolean | (Optional) Indicates whether the form is navigated to from a different table using cross-table business process flow. |
 | isOfflineSyncError | Boolean | (Optional) Indicates whether there are any offline sync errors. |
@@ -72,7 +70,7 @@ The relationship object, used in the [Entity record](#entity-record), contains t
 
 | Name | Type | Description |
 | --- | --- | --- |
-| attributeName	| String | Name of the column used for relationship. |
+| attributeName   | String | Name of the column used for relationship. |
 | name | String | Name of the relationship. |
 | navigationPropertyName | String | Name of the navigation property for this relationship. |
 | relationshipType | Number | Relationship type. Specify one of the following values: *0*:OneToMany, *1*:ManyToMany. |

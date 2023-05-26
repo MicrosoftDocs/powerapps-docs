@@ -1,18 +1,14 @@
 ---
-title: "connectionreference table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "connectionreference table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the connectionreference table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # connectionreference table/entity reference
@@ -27,21 +23,23 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/connectionreferences(*connectionreferenceid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/connectionreferences<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/connectionreferences(*connectionreferenceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/connectionreferences(*connectionreferenceid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/connectionreferences<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/connectionreferences(*connectionreferenceid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/connectionreferences(*connectionreferenceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH [*org URI*]/api/data/v9.2/connectionreferences(*connectionreferenceid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.2/connectionreferences<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/connectionreferences(*connectionreferenceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/connectionreferences(*connectionreferenceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/connectionreferences<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/connectionreferences(*connectionreferenceid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/connectionreferences(*connectionreferenceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -375,6 +373,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
@@ -575,10 +574,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -762,12 +761,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -860,6 +877,9 @@ Listed by **SchemaName**.
 - [connectionreference_ProcessSession](#BKMK_connectionreference_ProcessSession)
 - [connectionreference_BulkDeleteFailures](#BKMK_connectionreference_BulkDeleteFailures)
 - [connectionreference_PrincipalObjectAttributeAccesses](#BKMK_connectionreference_PrincipalObjectAttributeAccesses)
+- [connectionreference_connectioninstance](#BKMK_connectionreference_connectioninstance)
+- [bot_connectionreference](#BKMK_bot_connectionreference)
+- [msdyn_connreference_msdyn_connectordatasource](#BKMK_msdyn_connreference_msdyn_connectordatasource)
 - [msdyn_AIConfiguration_ConnectionReference](#BKMK_msdyn_AIConfiguration_ConnectionReference)
 
 
@@ -867,7 +887,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [connectionreference_SyncErrors](syncerror.md#BKMK_connectionreference_SyncErrors) Many-To-One relationship.
+Same as the [connectionreference_SyncErrors](syncerror.md#BKMK_connectionreference_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -884,7 +904,7 @@ Same as syncerror table [connectionreference_SyncErrors](syncerror.md#BKMK_conne
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [connectionreference_AsyncOperations](asyncoperation.md#BKMK_connectionreference_AsyncOperations) Many-To-One relationship.
+Same as the [connectionreference_AsyncOperations](asyncoperation.md#BKMK_connectionreference_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -901,7 +921,7 @@ Same as asyncoperation table [connectionreference_AsyncOperations](asyncoperatio
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [connectionreference_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_connectionreference_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [connectionreference_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_connectionreference_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -918,7 +938,7 @@ Same as mailboxtrackingfolder table [connectionreference_MailboxTrackingFolders]
 
 **Added by**: System Solution Solution
 
-Same as processsession table [connectionreference_ProcessSession](processsession.md#BKMK_connectionreference_ProcessSession) Many-To-One relationship.
+Same as the [connectionreference_ProcessSession](processsession.md#BKMK_connectionreference_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -935,7 +955,7 @@ Same as processsession table [connectionreference_ProcessSession](processsession
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [connectionreference_BulkDeleteFailures](bulkdeletefailure.md#BKMK_connectionreference_BulkDeleteFailures) Many-To-One relationship.
+Same as the [connectionreference_BulkDeleteFailures](bulkdeletefailure.md#BKMK_connectionreference_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -952,7 +972,7 @@ Same as bulkdeletefailure table [connectionreference_BulkDeleteFailures](bulkdel
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [connectionreference_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_connectionreference_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [connectionreference_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_connectionreference_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -965,11 +985,62 @@ Same as principalobjectattributeaccess table [connectionreference_PrincipalObjec
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_connectionreference_connectioninstance"></a> connectionreference_connectioninstance
+
+**Added by**: Connection Instance Solution Solution
+
+Same as the [connectionreference_connectioninstance](connectioninstance.md#BKMK_connectionreference_connectioninstance) many-to-one relationship for the [connectioninstance](connectioninstance.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|connectioninstance|
+|ReferencingAttribute|connectionreferenceid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|connectionreference_connectioninstance|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_bot_connectionreference"></a> bot_connectionreference
+
+**Added by**: Power Virtual Agents Solution
+
+Same as the [bot_connectionreference](bot.md#BKMK_bot_connectionreference) many-to-one relationship for the [bot](bot.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|bot|
+|ReferencingAttribute|providerconnectionreferenceid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|bot_connectionreference|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_connreference_msdyn_connectordatasource"></a> msdyn_connreference_msdyn_connectordatasource
+
+**Added by**: Virtual Connector Provider Solution
+
+Same as the [msdyn_connreference_msdyn_connectordatasource](msdyn_connectordatasource.md#BKMK_msdyn_connreference_msdyn_connectordatasource) many-to-one relationship for the [msdyn_connectordatasource](msdyn_connectordatasource.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_connectordatasource|
+|ReferencingAttribute|msdyn_connectionreferenceid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_connreference_msdyn_connectordatasource|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_msdyn_AIConfiguration_ConnectionReference"></a> msdyn_AIConfiguration_ConnectionReference
 
 **Added by**: AISolution Solution
 
-Same as msdyn_aiconfiguration table [msdyn_AIConfiguration_ConnectionReference](msdyn_aiconfiguration.md#BKMK_msdyn_AIConfiguration_ConnectionReference) Many-To-One relationship.
+Same as the [msdyn_AIConfiguration_ConnectionReference](msdyn_aiconfiguration.md#BKMK_msdyn_AIConfiguration_ConnectionReference) many-to-one relationship for the [msdyn_aiconfiguration](msdyn_aiconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1001,52 +1072,62 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_connectionreference_createdby](systemuser.md#BKMK_lk_connectionreference_createdby) One-To-Many relationship.
+See the [lk_connectionreference_createdby](systemuser.md#BKMK_lk_connectionreference_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_connectionreference_createdonbehalfby"></a> lk_connectionreference_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_connectionreference_createdonbehalfby](systemuser.md#BKMK_lk_connectionreference_createdonbehalfby) One-To-Many relationship.
+See the [lk_connectionreference_createdonbehalfby](systemuser.md#BKMK_lk_connectionreference_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_connectionreference_modifiedby"></a> lk_connectionreference_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_connectionreference_modifiedby](systemuser.md#BKMK_lk_connectionreference_modifiedby) One-To-Many relationship.
+See the [lk_connectionreference_modifiedby](systemuser.md#BKMK_lk_connectionreference_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_connectionreference_modifiedonbehalfby"></a> lk_connectionreference_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_connectionreference_modifiedonbehalfby](systemuser.md#BKMK_lk_connectionreference_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_connectionreference_modifiedonbehalfby](systemuser.md#BKMK_lk_connectionreference_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_connectionreference"></a> user_connectionreference
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_connectionreference](systemuser.md#BKMK_user_connectionreference) One-To-Many relationship.
+See the [user_connectionreference](systemuser.md#BKMK_user_connectionreference) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_connectionreference"></a> team_connectionreference
 
 **Added by**: System Solution Solution
 
-See team Table [team_connectionreference](team.md#BKMK_team_connectionreference) One-To-Many relationship.
+See the [team_connectionreference](team.md#BKMK_team_connectionreference) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_connectionreference"></a> business_unit_connectionreference
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_connectionreference](businessunit.md#BKMK_business_unit_connectionreference) One-To-Many relationship.
+See the [business_unit_connectionreference](businessunit.md#BKMK_business_unit_connectionreference) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_connector_connectionreference"></a> connector_connectionreference
 
 **Added by**: Power Connector Solution Solution
 
-See connector Table [connector_connectionreference](connector.md#BKMK_connector_connectionreference) One-To-Many relationship.
+See the [connector_connectionreference](connector.md#BKMK_connector_connectionreference) one-to-many relationship for the [connector](connector.md) table/entity.
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the connectionreference table is the first table in the relationship. Listed by **SchemaName**.
+
+
+### <a name="BKMK_botcomponent_connectionreference"></a> botcomponent_connectionreference
+
+See the [botcomponent_connectionreference](botcomponent.md#BKMK_botcomponent_connectionreference) many-to-many relationship for the [botcomponent](botcomponent.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.connectionreference?text=connectionreference EntityType" />

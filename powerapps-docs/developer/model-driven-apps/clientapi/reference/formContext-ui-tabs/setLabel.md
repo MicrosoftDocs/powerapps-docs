@@ -1,21 +1,18 @@
 ---
-title: "setLabel (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the setLabel method.
-ms.date: 04/21/2021
-
-ms.topic: "reference"
+title: "tab.setLabel (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the tab.setLabel method.
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: f41f179a-9748-409b-9d44-a1e2dbd9ae87
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
-# setLabel (Client API reference)
+# tab.setLabel (Client API reference)
 
 
 

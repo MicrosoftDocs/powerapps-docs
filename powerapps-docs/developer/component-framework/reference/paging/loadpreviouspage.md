@@ -1,22 +1,23 @@
 ---
 title: loadPreviousPage | Microsoft Docs
 description: Request the previous page of results to be loaded.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 93cecfc6-bdce-421f-a410-07d95ea77c37
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # loadPreviousPage
 
 [!INCLUDE [loadpreviouspage-description](includes/loadpreviouspage-description.md)]
+
+> [!NOTE]
+> `loadPreviousPage` does not support parallel execution.
+> Executing `loadPreviousPage` will trigger `updateView` on the control with newly fetched results.
 
 ## Available for
 

@@ -14,7 +14,6 @@ author: "Mattp123"
 ms.assetid: 666ab3f3-abda-468c-b248-3a0b410286b0
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,9 +21,6 @@ caps.latest.revision: 1
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create and edit public or system views (legacy)
@@ -58,7 +54,7 @@ From within the solution there are two ways to edit views: app designer and tabl
 
 In the solution that we opened earlier create a new table or find an existing table that where the public views need to be edited.
 
-1. Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.
+1. Expand **Data**, select **Tables**, select the table you want, and then select the **Views** area.
 1. On the toolbar, select **Add view**.
    :::image type="content" source="media/add-view.png" alt-text="Add view to table":::
 1. On the **Create a view** dialog, enter a name and, optionally, a description, and then select **Create**.
@@ -91,7 +87,8 @@ An alternative to editing views in the tables is to edit views from the app desi
 
 The following steps explain how to open and add a view in the app designer.
 
-1. In Power Apps select **Solutions** from the left navigation pane, select **...** next to the app required, and then select **Edit**.
+1. In Power Apps select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **...** next to the app you want, and then select **Edit**.
 1. In the app designer **Table View** section, select **Views**.
    In this example, **Views** from the **Account** table are selected.
 

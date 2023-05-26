@@ -5,16 +5,14 @@ author: emcoope-msft
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 ms.date: 05/24/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 # Create responsive layouts in canvas apps
@@ -100,7 +98,7 @@ To create that effect, you'd need to update the **Height** property of the **Upp
 | **Upper** | **X**        | `0`                 |
 | **Upper** | **Y**        | `0`                 |
 | **Upper** | **Width**    | `Parent.Width`      |
-| **Upper** | **Height**   | `Parent.Height / 2` |
+| **Upper** | **Height**   | `Parent.Height / 3` |
 | **Lower** | **X**        | `0`                       |
 | **Lower** | **Y**        | `Upper.Y + Upper.Height`  |
 | **Lower** | **Width**    | `Parent.Width`            |
@@ -235,18 +233,22 @@ You can adjust your layout based on the size of the device. The screen's **Size*
 
 Use these sizes to make decisions about your app's layout. For example, if you want a control to be hidden on a phone-sized device but visible otherwise, you could set the control's **Visible** property to this formula:
 
-`Parent.Width >= ScreenSize.Medium`
+```powerapps-dot
+Parent.Size >= ScreenSize.Medium
+```
 
 This formula evaluates to **true** when the size is medium or larger and **false** otherwise.
 
 If you want a control to occupy a different fraction of the screen width based on the screen size, set the control's **Width** property to this formula:
 
 ```powerapps-dot
-Parent.Width *  
-    Switch(Parent.Width,  
-        ScreenSize.Small, 0.5,  
-        ScreenSize.Medium, 0.3,  
-        0.25)
+Parent.Width *
+Switch(
+    Parent.Size,
+    ScreenSize.Small, 0.5,
+    ScreenSize.Medium, 0.3,
+    0.25
+)
 ```
 This formula sets the control's width to half of the screen width on a small screen, three-tenths of the screen width on a medium screen, and a quarter of the screen width on all other screens.
 

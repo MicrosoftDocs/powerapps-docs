@@ -2,9 +2,8 @@
 title: "Define calculated columns in Power Apps | MicrosoftDocs"
 description: "Learn how to define calculated columns"
 ms.custom: ""
-ms.date: 04/15/2021
+ms.date: 01/19/2023
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,16 +16,10 @@ ms.assetid: 6d58a297-2ddf-4236-be3a-47249b49d5fa
 caps.latest.revision: 67
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Define calculated columns to automate calculations
-
-
 
 Use calculated columns to automate otherwise manual calculations used in your business processes.
 
@@ -67,18 +60,19 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 ## Create a calculated column
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
-1. Expand **Data** > **Tables**.  
-1. Open the table you want, select the **Columns** tab, and then select **Add Column**.  
-1. Provide the required information for the column, including the **Display name**, **Name**, and **Data type**.
-1. If the data type is one of the [column types that support calculations](#column-types-that-support-calculations), you can make the column a calculated column by selecting **Add** > **Calculation**.
+1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the unmanaged solution that has the table you want.
+1. Select the **Columns** area, and then select **New column** on the command bar.  
+1. Provide the information for the column, including the **Display name**, **Name**, and **Data type**.
+1. If the data type is one of the [column types that support calculations](#column-types-that-support-calculations), you can make the column a calculated column by selecting **Calculated** from the **Behavior** dropdown list.
 
-    ![Make column calculated.](media/make-field-calculated-maker.png)
+    :::image type="content" source="media/make-field-calculated-maker.png" alt-text="Make a column a calculated column":::
 
-1. By selecting **Calculation**, you're prompted to save the changes to the table. On the **Pending changes** dialog, select **Save**.
-1. On the **Columns** tab, open the column that you saved in the previous step.
-1. On the column properties pane, select **Open calculation**.
+1. The **Save and edit** link appears under the dropdown list. Select it.
+1. The new column is saved. In the **Columns** list, open the column that you saved in the previous step.
+1. On the **Edit column** pane, under the **Behavior** dropdown list, select **Edit**.
 
-   <img src = "media/open-calculation-link.png" alt = "Link to open calculated column definition editor" width = "320" height = "620">
+    :::image type="content" source="media/open-calculation-link.png" alt-text="Link to open calculated column definition editor":::
 
 1. In the calculated column definition editor, notice that the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
   ![New Column Calculation form.](media/empty-field-calculation.png)

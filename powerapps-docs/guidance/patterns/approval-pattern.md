@@ -18,7 +18,7 @@ ms.reviewer: kathyos
 Power Apps makers use the approval pattern to ensure that data, decisions,
 and documents are reviewed by a stakeholder or multiple stakeholders, either all at
 once or in sequence. Although the approval pattern can be valuable on its own, it's
-frequently combined with other patterns, especially the [inspection or audit pattern](/inspection-pattern).
+frequently combined with other patterns, especially the [inspection or audit pattern](/powerapps/guidance/patterns/inspection-pattern).
 Approvals can be easily implemented with [Power Automate approval workflows](/power-automate/modern-approvals), but
 can also be implemented with capability you build into your app.
 
@@ -103,7 +103,6 @@ story.](https://powerapps.microsoft.com/blog/virgin-atlantic-drives-agile-wins-f
 
 Virgin Atlantic created an app for employees to request a corporate credit card.
 After an employee submits this request, it goes to the relevant
-manager to approve. This process was previously managed by using paper forms, which
 were printed out and handed to the Procurement team. It has now been digitized
 by using Power Apps.
 

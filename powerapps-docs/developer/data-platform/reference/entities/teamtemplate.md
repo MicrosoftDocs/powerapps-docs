@@ -1,18 +1,14 @@
 ---
-title: "TeamTemplate table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "TeamTemplate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the TeamTemplate table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # TeamTemplate table/entity reference
@@ -25,15 +21,15 @@ Team template for an entity enabled for automatically created access teams.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|AddUserToRecordTeam|<xref href="Microsoft.Dynamics.CRM.AddUserToRecordTeam?text=AddUserToRecordTeam Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddUserToRecordTeamRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/teamtemplates<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/teamtemplates(*teamtemplateid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|RemoveUserFromRecordTeam|<xref href="Microsoft.Dynamics.CRM.RemoveUserFromRecordTeam?text=RemoveUserFromRecordTeam Action" />|<xref:Microsoft.Crm.Sdk.Messages.RemoveUserFromRecordTeamRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/teamtemplates(*teamtemplateid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/teamtemplates<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/teamtemplates(*teamtemplateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|AddUserToRecordTeam|<xref:Microsoft.Dynamics.CRM.AddUserToRecordTeam?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.AddUserToRecordTeamRequest>|
+|Create|POST [*org URI*]/api/data/v9.2/teamtemplates<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/teamtemplates(*teamtemplateid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|RemoveUserFromRecordTeam|<xref:Microsoft.Dynamics.CRM.RemoveUserFromRecordTeam?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RemoveUserFromRecordTeamRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/teamtemplates(*teamtemplateid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/teamtemplates<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.2/teamtemplates(*teamtemplateid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -270,10 +266,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -396,7 +392,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_teamtemplate_Teams"></a> teamtemplate_Teams
 
-Same as team table [teamtemplate_Teams](team.md#BKMK_teamtemplate_Teams) Many-To-One relationship.
+Same as the [teamtemplate_Teams](team.md#BKMK_teamtemplate_Teams) many-to-one relationship for the [team](team.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -411,7 +407,7 @@ Same as team table [teamtemplate_Teams](team.md#BKMK_teamtemplate_Teams) Many-To
 
 ### <a name="BKMK_TeamTemplate_SyncErrors"></a> TeamTemplate_SyncErrors
 
-Same as syncerror table [TeamTemplate_SyncErrors](syncerror.md#BKMK_TeamTemplate_SyncErrors) Many-To-One relationship.
+Same as the [TeamTemplate_SyncErrors](syncerror.md#BKMK_TeamTemplate_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -437,22 +433,22 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_teamtemplate_createdonbehalfby"></a> lk_teamtemplate_createdonbehalfby
 
-See systemuser Table [lk_teamtemplate_createdonbehalfby](systemuser.md#BKMK_lk_teamtemplate_createdonbehalfby) One-To-Many relationship.
+See the [lk_teamtemplate_createdonbehalfby](systemuser.md#BKMK_lk_teamtemplate_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_teamtemplate_modifiedby"></a> lk_teamtemplate_modifiedby
 
-See systemuser Table [lk_teamtemplate_modifiedby](systemuser.md#BKMK_lk_teamtemplate_modifiedby) One-To-Many relationship.
+See the [lk_teamtemplate_modifiedby](systemuser.md#BKMK_lk_teamtemplate_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_teamtemplate_createdby"></a> lk_teamtemplate_createdby
 
-See systemuser Table [lk_teamtemplate_createdby](systemuser.md#BKMK_lk_teamtemplate_createdby) One-To-Many relationship.
+See the [lk_teamtemplate_createdby](systemuser.md#BKMK_lk_teamtemplate_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_teamtemplate_modifiedonbehalfby"></a> lk_teamtemplate_modifiedonbehalfby
 
-See systemuser Table [lk_teamtemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_teamtemplate_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_teamtemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_teamtemplate_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.teamtemplate?text=teamtemplate EntityType" />

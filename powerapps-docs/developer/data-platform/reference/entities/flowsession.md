@@ -1,18 +1,14 @@
 ---
-title: "flowsession table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "flowsession table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowsession table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # flowsession table/entity reference
@@ -20,28 +16,32 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Entity to store the information that is generated when a modern flow or UI flow runs.
+Entity to store the information that is generated when a Power Automate Desktop flow runs.
 
 **Added by**: Power Automate Extensions core package Solution
 
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/flowsessions(*flowsessionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/flowsessions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/flowsessions(*flowsessionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/flowsessions(*flowsessionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/flowsessions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/flowsessions(*flowsessionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/flowsessions(*flowsessionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH [*org URI*]/api/data/v9.2/flowsessions(*flowsessionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|CancelDesktopFlowRun|<xref:Microsoft.Dynamics.CRM.CancelDesktopFlowRun?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="CancelDesktopFlowRun"|
+|Create|POST [*org URI*]/api/data/v9.2/flowsessions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/flowsessions(*flowsessionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/flowsessions(*flowsessionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/flowsessions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/flowsessions(*flowsessionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|TriggerDesktopFlowRunCallback|<xref:Microsoft.Dynamics.CRM.TriggerDesktopFlowRunCallback?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="TriggerDesktopFlowRunCallback"|
+|Update|PATCH [*org URI*]/api/data/v9.2/flowsessions(*flowsessionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -65,10 +65,13 @@ Entity to store the information that is generated when a modern flow or UI flow 
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [CallbackUrl](#BKMK_CallbackUrl)
 - [CompletedOn](#BKMK_CompletedOn)
 - [Context](#BKMK_Context)
 - [CorrelationId](#BKMK_CorrelationId)
 - [ErrorCode](#BKMK_ErrorCode)
+- [ErrorDetails](#BKMK_ErrorDetails)
+- [ErrorInnerError](#BKMK_ErrorInnerError)
 - [ErrorMessage](#BKMK_ErrorMessage)
 - [flowsessionId](#BKMK_flowsessionId)
 - [Gateway](#BKMK_Gateway)
@@ -82,11 +85,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ProcessVersion](#BKMK_ProcessVersion)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
+- [RunDetails](#BKMK_RunDetails)
+- [RunDuration](#BKMK_RunDuration)
+- [RunExecutionDuration](#BKMK_RunExecutionDuration)
+- [RunWaitDuration](#BKMK_RunWaitDuration)
 - [StartedOn](#BKMK_StartedOn)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_CallbackUrl"></a> CallbackUrl
+
+|Property|Value|
+|--------|-----|
+|Description|URL that will be called once the flow session is complete.|
+|DisplayName|Callback URL|
+|FormatName|Url|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|callbackurl|
+|MaxLength|2000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CompletedOn"></a> CompletedOn
@@ -150,6 +173,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|1000|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_ErrorDetails"></a> ErrorDetails
+
+|Property|Value|
+|--------|-----|
+|Description|Details of the failure in flow session execution.|
+|DisplayName|ErrorDetails|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|errordetails|
+|MaxLength|10000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_ErrorInnerError"></a> ErrorInnerError
+
+|Property|Value|
+|--------|-----|
+|Description|Specific information about the failure in flow session execution.|
+|DisplayName|ErrorInnerError|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|errorinnererror|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_ErrorMessage"></a> ErrorMessage
@@ -352,6 +407,67 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|EntityName|
 
 
+### <a name="BKMK_RunDetails"></a> RunDetails
+
+|Property|Value|
+|--------|-----|
+|Description|Details about the run.|
+|DisplayName|RunDetails|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|rundetails|
+|MaxLength|10000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_RunDuration"></a> RunDuration
+
+|Property|Value|
+|--------|-----|
+|Description|Duration of the run.|
+|DisplayName|RunDuration|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|runduration|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
+
+### <a name="BKMK_RunExecutionDuration"></a> RunExecutionDuration
+
+|Property|Value|
+|--------|-----|
+|Description|Duration of the run execution.|
+|DisplayName|RunExecutionDuration|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|runexecutionduration|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
+
+### <a name="BKMK_RunWaitDuration"></a> RunWaitDuration
+
+|Property|Value|
+|--------|-----|
+|Description|Time the run spent waiting.|
+|DisplayName|RunWaitDuration|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|runwaitduration|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
+
 ### <a name="BKMK_StartedOn"></a> StartedOn
 
 |Property|Value|
@@ -460,6 +576,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [AdditionalContext](#BKMK_AdditionalContext)
 - [AdditionalContext_Name](#BKMK_AdditionalContext_Name)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -468,6 +585,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [Inputs](#BKMK_Inputs)
+- [Inputs_Name](#BKMK_Inputs_Name)
 - [MachineGroupIdName](#BKMK_MachineGroupIdName)
 - [MachineIdName](#BKMK_MachineIdName)
 - [ModifiedBy](#BKMK_ModifiedBy)
@@ -477,10 +596,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [Outputs](#BKMK_Outputs)
 - [Outputs_Name](#BKMK_Outputs_Name)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
@@ -488,9 +609,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [VersionNumber](#BKMK_VersionNumber)
 
 
-### <a name="BKMK_AdditionalContext_Name"></a> AdditionalContext_Name
+### <a name="BKMK_AdditionalContext"></a> AdditionalContext
 
-**Added by**: Active Solution Solution
+|Property|Value|
+|--------|-----|
+|Description|Additional context about flow session.|
+|DisplayName|AdditionalContext|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|additionalcontext|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_AdditionalContext_Name"></a> AdditionalContext_Name
 
 |Property|Value|
 |--------|-----|
@@ -622,6 +754,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_Inputs"></a> Inputs
+
+|Property|Value|
+|--------|-----|
+|Description|Inputs provided for the flow session execution.|
+|DisplayName|Inputs|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|inputs|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_Inputs_Name"></a> Inputs_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|inputs_name|
+|MaxLength|200|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -776,9 +937,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_Outputs_Name"></a> Outputs_Name
+### <a name="BKMK_Outputs"></a> Outputs
 
-**Added by**: Active Solution Solution
+|Property|Value|
+|--------|-----|
+|Description|Outputs generated by the flow session execution.|
+|DisplayName|Outputs|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|outputs|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_Outputs_Name"></a> Outputs_Name
 
 |Property|Value|
 |--------|-----|
@@ -838,12 +1010,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -944,7 +1134,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [flowsession_SyncErrors](syncerror.md#BKMK_flowsession_SyncErrors) Many-To-One relationship.
+Same as the [flowsession_SyncErrors](syncerror.md#BKMK_flowsession_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -961,7 +1151,7 @@ Same as syncerror table [flowsession_SyncErrors](syncerror.md#BKMK_flowsession_S
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [flowsession_AsyncOperations](asyncoperation.md#BKMK_flowsession_AsyncOperations) Many-To-One relationship.
+Same as the [flowsession_AsyncOperations](asyncoperation.md#BKMK_flowsession_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -978,7 +1168,7 @@ Same as asyncoperation table [flowsession_AsyncOperations](asyncoperation.md#BKM
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [flowsession_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_flowsession_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [flowsession_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_flowsession_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -995,7 +1185,7 @@ Same as mailboxtrackingfolder table [flowsession_MailboxTrackingFolders](mailbox
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [flowsession_BulkDeleteFailures](bulkdeletefailure.md#BKMK_flowsession_BulkDeleteFailures) Many-To-One relationship.
+Same as the [flowsession_BulkDeleteFailures](bulkdeletefailure.md#BKMK_flowsession_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1012,7 +1202,7 @@ Same as bulkdeletefailure table [flowsession_BulkDeleteFailures](bulkdeletefailu
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [flowsession_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_flowsession_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [flowsession_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_flowsession_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1027,7 +1217,7 @@ Same as principalobjectattributeaccess table [flowsession_PrincipalObjectAttribu
 
 ### <a name="BKMK_flowsession_workflowbinary_FlowSessionId"></a> flowsession_workflowbinary_FlowSessionId
 
-Same as workflowbinary table [flowsession_workflowbinary_FlowSessionId](workflowbinary.md#BKMK_flowsession_workflowbinary_FlowSessionId) Many-To-One relationship.
+Same as the [flowsession_workflowbinary_FlowSessionId](workflowbinary.md#BKMK_flowsession_workflowbinary_FlowSessionId) many-to-one relationship for the [workflowbinary](workflowbinary.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1061,60 +1251,60 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_flowsession_createdby](systemuser.md#BKMK_lk_flowsession_createdby) One-To-Many relationship.
+See the [lk_flowsession_createdby](systemuser.md#BKMK_lk_flowsession_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_flowsession_createdonbehalfby"></a> lk_flowsession_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_flowsession_createdonbehalfby](systemuser.md#BKMK_lk_flowsession_createdonbehalfby) One-To-Many relationship.
+See the [lk_flowsession_createdonbehalfby](systemuser.md#BKMK_lk_flowsession_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_flowsession_modifiedby"></a> lk_flowsession_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_flowsession_modifiedby](systemuser.md#BKMK_lk_flowsession_modifiedby) One-To-Many relationship.
+See the [lk_flowsession_modifiedby](systemuser.md#BKMK_lk_flowsession_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_flowsession_modifiedonbehalfby"></a> lk_flowsession_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_flowsession_modifiedonbehalfby](systemuser.md#BKMK_lk_flowsession_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_flowsession_modifiedonbehalfby](systemuser.md#BKMK_lk_flowsession_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_flowsession"></a> user_flowsession
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_flowsession](systemuser.md#BKMK_user_flowsession) One-To-Many relationship.
+See the [user_flowsession](systemuser.md#BKMK_user_flowsession) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_flowsession"></a> team_flowsession
 
 **Added by**: System Solution Solution
 
-See team Table [team_flowsession](team.md#BKMK_team_flowsession) One-To-Many relationship.
+See the [team_flowsession](team.md#BKMK_team_flowsession) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_flowsession"></a> business_unit_flowsession
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_flowsession](businessunit.md#BKMK_business_unit_flowsession) One-To-Many relationship.
+See the [business_unit_flowsession](businessunit.md#BKMK_business_unit_flowsession) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_regardingobjectid_process"></a> regardingobjectid_process
 
 **Added by**: System Solution Solution
 
-See workflow Table [regardingobjectid_process](workflow.md#BKMK_regardingobjectid_process) One-To-Many relationship.
+See the [regardingobjectid_process](workflow.md#BKMK_regardingobjectid_process) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### <a name="BKMK_flowmachine_flowsession_MachineId"></a> flowmachine_flowsession_MachineId
 
-See flowmachine Table [flowmachine_flowsession_MachineId](flowmachine.md#BKMK_flowmachine_flowsession_MachineId) One-To-Many relationship.
+See the [flowmachine_flowsession_MachineId](flowmachine.md#BKMK_flowmachine_flowsession_MachineId) one-to-many relationship for the [flowmachine](flowmachine.md) table/entity.
 
 ### <a name="BKMK_flowmachinegroup_flowsession_MachineGroupId"></a> flowmachinegroup_flowsession_MachineGroupId
 
-See flowmachinegroup Table [flowmachinegroup_flowsession_MachineGroupId](flowmachinegroup.md#BKMK_flowmachinegroup_flowsession_MachineGroupId) One-To-Many relationship.
+See the [flowmachinegroup_flowsession_MachineGroupId](flowmachinegroup.md#BKMK_flowmachinegroup_flowsession_MachineGroupId) one-to-many relationship for the [flowmachinegroup](flowmachinegroup.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.flowsession?text=flowsession EntityType" />

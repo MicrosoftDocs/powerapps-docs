@@ -1,19 +1,16 @@
 ---
 title: "addNotification (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Displays an error or recommendation notification for a control, and lets you specify to execute based on the notification.
-ms.date: 04/15/2021
-
-ms.topic: "reference"
+author: chmoncay
+ms.author: chmoncay
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # addNotification (Client API reference)
 
@@ -29,7 +26,7 @@ All
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>

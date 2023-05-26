@@ -57,8 +57,8 @@ When we spoke to Lee, Shawna, and Rebecca, they told us the steps were:
 > [!NOTE]
 > If your task is done fully on the desktop, you can discover all the steps 
 different people in your organization are performing to complete the task by 
-using our process discovery functionality called [process advisor](/power-automate/process-advisor-overview.md). 
-Process advisor visualizes your process in a [process map](/power-automate/process-advisor-visualize.md) 
+using our process discovery functionality called [process advisor](/power-automate/process-advisor-overview). 
+Process advisor visualizes your process in a [process map](/power-automate/process-advisor-visualize) 
 and reveals bottlenecks and metrics for your process through an analytical report.
 
 > [!div class="nextstepaction"]

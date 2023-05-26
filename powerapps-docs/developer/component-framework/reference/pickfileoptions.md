@@ -1,22 +1,19 @@
 ---
 title: PickFileOptions| Microsoft Docs
-description: 
-keywords: 
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+description: Provides set of options for the pickFile options parameter.
+ms.author: noazarur
+author: noazarur-microsoft
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 9053eee8-2851-427d-88ae-4fc137ca0444
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # PickFileOptions
 
-## Available for 
+## Available for
 
 Model-driven apps
 
@@ -36,7 +33,7 @@ Whether to allow selecting multiple files.
 
 ### maximumAllowedFileSize
 
-Maximum size of the file(s) ro be selected.
+Maximum size of the file(s) to be selected.
 
 **Type**: `number`
 

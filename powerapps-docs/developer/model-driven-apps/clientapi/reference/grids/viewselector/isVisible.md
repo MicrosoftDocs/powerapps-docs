@@ -1,19 +1,16 @@
 ---
 title: "isVisible (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the isVisible method.
-ms.date: 04/21/2021
-
-ms.topic: "reference"
+author: sriharibs-msft
+ms.author: srihas
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: d22cd046-064c-47ef-9e46-5cc4c8b6e280
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # isVisible (Client API reference)
 

@@ -1,31 +1,23 @@
 ---
 title: "Use XRM tooling to update data (Microsoft Dataverse)| Microsoft Docs"
 description: "Use CrmServiceClient class to update data on Microsoft Dataverse"
-ms.custom: ""
-ms.date: 04/12/2021
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: 8ec3d4ca-d836-4e7e-b2bf-9d9f806bd145
-caps.latest.revision: 14
-author: "MattB-msft"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use XRM tooling to update data
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for updating data in Microsoft Dataverse: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateEntity(System.String,System.String,System.Guid,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.String,System.Boolean,System.Guid)> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateStateAndStatusForEntity(System.String,System.Guid,System.String,System.String,System.Guid)>.  
+There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for updating data in Microsoft Dataverse: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateEntity(System.String,System.String,System.Guid,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.String,System.Boolean,System.Guid)> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateStateAndStatusForEntity(System.String,System.Guid,System.String,System.String,System.Guid)>.
+
+Similarly for the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class there are <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions.UpdateEntity%2A> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateStateAndStatusForEntity%2A> methods.
   
 An update action using XRM Tooling API requires a data payload. The data payload takes the form of a Dictionary\<string, CrmDataTypeWrapper> object. <xref:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper> is used to inform the interface what sort of handling needs to be applied to the data point you are referencing.  
   
@@ -109,10 +101,9 @@ else
 }  
   
 ```  
-  
+
 ### See also  
 
-[Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
 [Use XRM Tooling to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)<br />
 

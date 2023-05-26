@@ -1,21 +1,18 @@
 ---
-title: "getControlType (Client API reference) in model-driven apps for Dynamics 365| MicrosoftDocs"
+title: "control.getControlType (Client API reference) in model-driven apps for Dynamics 365| MicrosoftDocs"
 description: Includes  description and supported parameters for the getControlType method.
-ms.date: 04/19/2021
-
-ms.topic: "reference"
+author: chmoncay
+ms.author: chmoncay
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
-# getControlType (Client API reference)
+# control.getControlType (Client API reference)
 
 Returns a value that categorizes controls.
 
@@ -43,6 +40,7 @@ All
 |notes|A notes control|
 |choice|A choice control|
 |quickform | A [quick view](../formContext-ui-quickForms.md) control|
+|formcomponent | A [form component control](../../../../../maker/model-driven-apps/form-component-control.md#client-api)|
 |subgrid | A [subgrid](../grids.md) control|
 |timercontrol | A timer control|
 |timelinewall | A timeline control (for Unified Interface)|

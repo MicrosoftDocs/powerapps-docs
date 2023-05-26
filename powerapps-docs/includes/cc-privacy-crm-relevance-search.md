@@ -54,6 +54,6 @@ Changes to customer data are stored for up to 2 days in [!INCLUDE[pn_azure_blob_
   
 The [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Load Balancer is used to distribute incoming traffic among healthy service instances in cloud services or virtual machines defined in a load balancer set. Dataverse search uses it to load balance the end points in a deployment.  
   
-[Azure Virtual Networks](https://azure.microsoft.com/documentation/articles/virtual-networks-overview/)  
+[Azure Virtual Networks](/azure/virtual-network/virtual-networks-overview)  
   
 The Virtual Machines on the Service Fabric cluster running in one or more subnets are connected by [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Virtual Network. The security policies, DNS settings, route tables, and IP addresses are fully controlled within this virtual network. Network Security Groups are leveraged to apply security rules on this virtual network. These rules allow or deny network traffic to the VMs in the virtual network.

@@ -1,32 +1,23 @@
 ---
-title: "Localize labels and strings on a custom page (preview)" 
+title: "Localize labels and strings on a custom page" 
 description: "This article outlines how to load resx files with localized content and how to use PowerFx to set content for labels on your custom page."
 ms.custom: ""
-ms.date: 11/01/2021
+ms.date: 05/26/2022
 ms.reviewer: ""
-
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "mspilde"
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
-# Localize labels, messages, and tooltips on a custom page (preview)
+# Localize labels, messages, and tooltips on a custom page
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This article outlines how to add localized content to a custom page by uploading [web resource RESX](/powerapps/developer/model-driven-apps/resx-web-resources) files for each language into your solution. 
 
 This article shows you how to use Power Fx to set the content of a control on a custom page. You can use similar steps for tooltips and any messages that use a text control on the custom page.
-
-  > [!IMPORTANT]
-  > - This is a preview feature, and isn't available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Localizing labels on a custom page
 
@@ -53,8 +44,8 @@ Adding a web resource while working on a custom page is covered later in this ar
 
 Localized content will be based on the user or organizational locale for the application the custom page is running. The language for your application is based on user or admin defined language preferences in the user app settings or admin settings in the Power Platform admin center.  If neither has been set, the base language set when the environment was created is used.
 
-> [NOTE!]
-> Content shown in a Power App Control Framework (PCF) control will localize to the applications locale language without additional changes needed on the custom page.  More Information [Localizing PCF Controls](/powerapps/developer/component-framework/sample-controls/localization-api-control)
+> [!NOTE]
+> Content shown in a Power Apps Control Framework (PCF) control will localize to the applications locale language without additional changes needed on the custom page.  More Information [Localizing PCF Controls](/powerapps/developer/component-framework/sample-controls/localization-api-control)
 
 ## Add localized RESX Web resource files to your solution
 

@@ -5,16 +5,14 @@ author: aneesmsft
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 07/06/2017
 ms.subservice: canvas-maker
 ms.author: aneesa
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
   - aneesmsft
 ---
@@ -180,7 +178,8 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## More information
-For a comprehensive overview of how forms work, see [Understand data forms](../working-with-forms.md).
+- For a comprehensive overview of how forms work, see [Understand data forms](../working-with-forms.md).
+- See the [Power Fx formula reference for EditForm](/power-platform/power-fx/reference/function-form).
 
 ## Accessibility guidelines
 ### Screen reader support

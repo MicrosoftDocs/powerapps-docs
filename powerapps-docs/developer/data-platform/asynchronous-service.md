@@ -1,20 +1,17 @@
 ---
 title: "Asynchronous service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the asynchronous service that manages system jobs." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/15/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "swylezol" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 # Asynchronous service
 
@@ -215,7 +212,7 @@ Some of the types of these platform generated jobs are included in the following
 
 Recurring system jobs require information about when they should start and how often they will recur. These values are stored in the `AsyncOperation` table, `RecurrenceStartTime` and `RecurrencePattern` columns.
 
-Because you will not create `AsyncOperation` tables directly with code, you will just need to interpret these values if you query the data. You will only set these properties indirectly by using messages that will create new system jobs. The `BulkDelete` and `BulkDeleteDuplicates` messages both include parameters or properties in the corresponding Web API actions or organization service request classes. More information: <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest> Class, <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates Action" />, <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> Class, and <xref href="Microsoft.Dynamics.CRM.BulkDelete?text=BulkDelete Action" />
+Because you will not create `AsyncOperation` records directly with code, you will just need to interpret these values if you query the data. You will only set these properties indirectly by using messages that will create new system jobs. The `BulkDelete` and `BulkDeleteDuplicates` messages both include parameters or properties in the corresponding Web API actions or organization service request classes. More information: <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest> Class, <xref:Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates Action>, <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> Class, and <xref:Microsoft.Dynamics.CRM.BulkDelete?text=BulkDelete Action>
 
 The `RecurrenceStartTime` is simply a datetime value to indicate when the system job should start. If it isn’t set, the system job was expected to start immediately.
 

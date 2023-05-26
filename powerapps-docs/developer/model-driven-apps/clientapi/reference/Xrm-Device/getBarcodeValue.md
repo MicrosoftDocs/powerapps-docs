@@ -1,19 +1,16 @@
 ---
 title: "getBarcodeValue| MicrosoftDocs"
 description: Includes description and supported parameters for the getBarCodeValue method.
-ms.date: 09/08/2021
-
-ms.topic: "reference"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 0218b96c-2809-4f2d-9f9f-d8ee8f8e3b7b
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 
 # getBarcodeValue (Client API reference)
@@ -41,7 +38,7 @@ On success, returns a string containing the scanned barcode value.
 
 ## Exceptions
 
-See [Web service error codes](../../../../data-platform/org-service/web-service-error-codes.md)
+See [Web service error codes](../../../../data-platform/reference/web-service-error-codes.md)
 
 ## Example
 

@@ -1,25 +1,21 @@
 ---
 title: "Customize commands and the ribbon (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Microsoft Dataverse displays commands in different ways depending on the table and the client. In most places in the web application, you will see a command bar instead of a ribbon. Dynamics 365 for tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 04/15/2021
-
-ms.custom: "intro-internal"
+author: caburk
+ms.author: caburk
+ms.date: 10/03/2022
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: 926364b0-ede6-00e9-39d4-5aae5e00be0b
-author: Nkrb # GitHub ID
 ms.subservice: mda-developer
-ms.author: nabuthuk # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
-ms.reviewer: 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Customize commands and the ribbon
+
+[!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
 Microsoft Dataverse displays commands in different ways depending on the table and the client. In most places in the web application, you will see a *command bar* instead of a ribbon. Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch.  
   
@@ -35,6 +31,10 @@ The articles in this section introduce you to key concepts that you must underst
 ## Troubleshoot ribbon issues
 
 If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete) to find and solve the problem.
+
+## Reference documentation
+
+You can find reference documentation for Ribbon XML elements here: [Ribbon XML reference](/previous-versions/dynamicscrm-2016/developers-guide/gg327947%28v=crm.8%29). This documentation is not maintained and includes many elements that are no longer relevant. It provides information about the elements defined in the ribbon schema files: [Ribbon core schema](ribbon-core-schema.md), [Ribbon types schema](ribbon-types-schema.md), and [Ribbon WSS schema](ribbon-wss-schema.md). There are some remarks within this reference that may be helpful.
 
 
 ## Community tool

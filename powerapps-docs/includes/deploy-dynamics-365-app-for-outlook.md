@@ -13,7 +13,6 @@ ms.assetid: 09736e14-e744-48ca-a755-1b05bb55340e
 caps.latest.revision: 39
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
 ---
 # Deploy Dynamics 365 App for Outlook
 People can use [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-crm-app-for-outlook.md)] to tap the power of [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] while using  [!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)] on the desktop, web, or tablet. For example, view information about email or appointment recipients, or link an [!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)] email or appointment  to a [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] record such as an opportunity, account, or case. To learn more about what [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-crm-app-for-outlook.md)] offers, see the [Dynamics 365 App for Outlook User's Guide](https://go.microsoft.com/fwlink/p/?LinkID=613099).  
@@ -237,9 +236,9 @@ People can use [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-cr
 ## To deploy to Dynamics 365 on-premises users  
  Follow these steps if you're using Dynamics 365 on-premises.  
   
--   Configure your Dynamics 365 server for Internet-facing deployment. See [Configure IFD for Microsoft Dynamics 365](https://technet.microsoft.com/library/dn609803.aspx).  
+-   Configure your Dynamics 365 server for Internet-facing deployment. See [Configure IFD for Microsoft Dynamics 365](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/dn609803(v=crm.8)).  
   
--   If you're connecting to Exchange on-premises, configure the OAuth provider and register client apps. See [Configure Windows Server 2012 R2 for Dynamics 365 applications that use OAuth](https://technet.microsoft.com/library/hh699726.aspx).  
+-   If you're connecting to Exchange on-premises, configure the OAuth provider and register client apps. See [Configure Windows Server 2012 R2 for Dynamics 365 applications that use OAuth](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/hh699726(v=crm.8)).  
   
 <a name="BKMK_Troubleshoot"></a>   
 ## Troubleshooting installation problems  
@@ -255,5 +254,5 @@ People can use [!INCLUDE[pn_ms_dyn_crm_app_for_outlook](../includes/pn-ms-dyn-cr
  [Dynamics 365 App for Outlook User's Guide](https://go.microsoft.com/fwlink/p/?LinkID=613099)   
  [Read more details about supported clients in this blog: Dynamics 365 App for Outlook Support Matrix](https://blogs.msdn.microsoft.com/crm/2016/12/13/dynamics-365-app-for-outlook-support-matrix/)   
  [Set up server-side synchronization of email, appointments, contacts, and tasks](../Topic/Set%20up%20server-side%20synchronization%20of%20email,%20appointments,%20contacts,%20and%20tasks.md)   
- [Add users, licenses, and security roles](https://msdn.microsoft.com/23612155-f92d-4871-a109-186419d5c19d)   
+ [Add users, licenses, and security roles](/previous-versions/dynamicscrm-2013/crm.6/jj863697(v=crm.6))   
  [Add interoperation features to Microsoft Dynamics 365 (online)](../DocSets/CRMIGv9_Admin/Toc/Add%20interoperation%20features%20to%20Microsoft%20Dynamics%20365%20\(online\).md)

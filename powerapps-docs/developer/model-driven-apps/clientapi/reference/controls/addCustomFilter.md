@@ -1,19 +1,16 @@
 ---
 title: "addCustomFilter (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Adds filters to the results displayed in the lookup. Each filter is combined with any previously added filter.
-ms.date: 04/15/2021
-
-ms.topic: "reference"
+author: chmoncay
+ms.author: chmoncay
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: e359b-c4d9-48ac-a57b-367c2e6168c5
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # addCustomFilter (Client API reference)
 
@@ -25,7 +22,7 @@ Lookup
 
 ## Syntax
 
-`formContext.getControl(arg).addCustomFilter(filter, entityLogicaName)`
+`formContext.getControl(arg).addCustomFilter(filter, entityLogicalName)`
 
 ## Parameters
 

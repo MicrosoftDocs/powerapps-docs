@@ -1,21 +1,17 @@
 ---
 title: "Walkthrough: Configure Microsoft Azure (SAS) for integration (Microsoft Dataverse) | Microsoft Docs"
 description: "This walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Microsoft Dataverse messages posted to the Azure Service Bus."
-keywords: ""
-ms.date: 03/18/2021
-
+ms.date: 04/03/2022
+author: jaredha
+ms.author: jaredha
+ms.reviewer: pehecke
 ms.topic: article
-ms.assetid: d7b24b11-57f0-ab05-4bec-0b64efee178d
-author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Tutorial: Configure Azure (SAS) for integration with Microsoft Dataverse
@@ -27,7 +23,7 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
 > [!NOTE]
 >  This walkthrough applies to any Dataverse deployment when using SAS authorization for Azure messaging. For more information about Azure Service Bus authorization, see [Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization).  
 >   
-> You must use the Plug-in Registration Tool. To download the plug-in registration tool, see [Download tools from NuGet](download-tools-NuGet.md).
+> You must use the Plug-in Registration Tool. To download the plug-in registration tool, see [Dataverse development tools](download-tools-NuGet.md).
   
 ## Prerequisites  
 
@@ -76,7 +72,7 @@ A [ServiceEndpoint Table](reference/entities/serviceendpoint.md) contains config
 ### See also
 
 [Azure integration](azure-integration.md)<br />
-[Azure Service Bus](/azure/service-bus-messaging/service-bus-fundamentals-hybrid-solutions.md)
+[What is Azure Service Bus?](/azure/service-bus-messaging/service-bus-messaging-overview)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

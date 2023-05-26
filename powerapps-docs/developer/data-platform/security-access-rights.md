@@ -9,18 +9,14 @@ ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "paulliew" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Data operations and access rights
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Let's talk about the data operations that you can performs and the access rights required for each. The following table lists the messages that correspond with common data operations and the access rights required to execute those messages.
+Let's talk about the data operations that you can perform and the access rights required for each. The following table lists the messages that correspond with common data operations and the access rights required to execute those messages.
 
 | Message(s) | Access rights required |
 |---|---|

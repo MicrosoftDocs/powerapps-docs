@@ -1,18 +1,15 @@
 ---
 title: "openFile (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the openFile method.
-ms.date: 04/21/2021
-
-ms.topic: "reference"
-ms.assetid: 6a2497fe-08ad-4953-b3ff-44c72bc25082
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # openFile (Client API reference)
 

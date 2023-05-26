@@ -5,16 +5,14 @@ author: emcoope-msft
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/15/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 
@@ -69,7 +67,7 @@ You're now editing the app in the Power Apps Studio version you've selected. Sin
 ## Known limitations and workarounds
 
 - Selecting **Reload + apply version** only changes the current authoring session to the version you choose. This change doesn't persist for future sessions. New Power Apps Studio sessions always start with the default Power Apps Studio version for your environment.
-- To update the app with the Power Apps Studio version you selected, you must [save the app](save-publish-app.md#save-changes-to-an-app) with the chosen Power Apps Studio version.
+- To update the app with the Power Apps Studio version you selected, you must [save the app](save-publish-app.md) with the chosen Power Apps Studio version.
 - If you save an app using a version newer than the default for your environment, you might not be able to open that app using the default version of Power Apps Studio. In that case, you'll see the following dialog:
 
     :::image type="content" source="media/studio-versions/saved-new-version.png" alt-text="Open in new version, or restore previous version.":::

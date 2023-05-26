@@ -1,41 +1,29 @@
 ---
-title: Notifications in Power Apps mobile| Microsoft Docs
+title: In-app notifications in the Power Apps mobile app
 description: How notifications work in Power Apps mobile
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 08/21/2021
+ms.date: 04/26/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---
 
-# In-app notifications in Power Apps mobile (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+# In-app notifications in the Power Apps mobile app
 
 
 In-app notifications allow users to receive notifications in the notification center and as a notification toast. For more information, see [In-app notifications in model-driven apps](../user/notifications.md). In Power Apps mobile, toast notifications appear one at a time.
 
 > [!div class="mx-imgBorder"] 
 > ![Example of a toast notifications.](media/mobile-toast-1.png)  
-
-
-> [!IMPORTANT]
-> - This is a preview feature, and isn't available in all regions. Your administrator needs to enable [early access](/power-platform/admin/opt-in-early-access-updates) to use the new app notifications feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
-
-
 
 ## Access notifications
 

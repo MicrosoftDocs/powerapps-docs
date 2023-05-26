@@ -5,16 +5,14 @@ author: gregli-msft
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 06/29/2020
+ms.reviewer: mkaur
+ms.date: 02/7/2023
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 # Understand variables in canvas apps
@@ -62,7 +60,7 @@ In Power Apps, you can use formulas to determine not only the primary value of a
 You can use formulas for a wide variety of scenarios:
 
 * By using your device's GPS, a map control can display your current location with a formula that uses **Location.Latitude** and **Location.Longitude**.  As you move, the map will automatically track your location.
-* Other users can update [data sources](working-with-data-sources.md).  For example, others on your team might update items in a SharePoint list.  When you refresh a data source, any dependent formulas are automatically recalculated to reflect the updated data. Furthering the example, you might set a gallery's **[Items](controls/properties-core.md)** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of [records](working-with-tables.md#records).
+* Other users can update [data sources](working-with-data-sources.md).  For example, others on your team might update items in a list.  When you refresh a data source, any dependent formulas are automatically recalculated to reflect the updated data. Furthering the example, you might set a gallery's **[Items](controls/properties-core.md)** property to the formula **Filter( SharePointList )**, which will automatically display the newly filtered set of [records](working-with-tables.md#records).
 
 ### Benefits
 
@@ -137,13 +135,17 @@ Let's rebuild our adding machine by using a global variable:
 
     ![Text-input control contains a value, and the label contains the running total.](media/working-with-variables/global-variable-4.png)
 
-7. To show the global variable's value, select the **File** menu, and select **Variables** in the left-hand pane.
+7. To show the global variable's value, do one of the following:
+ 
+    - If you're using the preview version of Power Apps Studio, select **Variables** on the app authoring menu.
 
-    ![Variables option in the File menu.](media/working-with-variables/global-variable-file-1.png)
+      ![Variables and collections menu.](media/working-with-variables/var-collections-menu.png)
+      
+     - If you're using the classic version of Power Apps Studio, select the **File** menu, and select **Variables** in the left-hand pane.
 
-8. To show all the places where the variable is defined and used, select it.
+8. To show all the places where the variable is defined and used, select it under **Global variables**.
 
-    ![List of location where variable is used.](media/working-with-variables/global-variable-file-2.png)
+      ![List of location where variable is used.](media/working-with-variables/var-collections-1.png)
 
 ## Types of variables
 
@@ -241,13 +243,14 @@ Let's rebuild our adding machine by using a context variable:
 
     ![Screen1 is open.](media/working-with-variables/context-variable-6.png)
 
-8. To show the value of the context variable, select the **File** menu, and then select **Variables** in the left-hand pane.
+8. To show the value of the context variable, do one of the following:
 
-    ![Variables option on the File menu.](media/working-with-variables/context-variable-file-1.png)
+   - If you're using the preview version of Power Apps Studio, select **Variables** in the app authoring menu.
+    
+   - If you're using the classic version of Power Apps Studio, select the **File** menu, and then select **Variables** in the left-hand pane.
 
-9. To show where the context variable is defined and used, select it.
+9. To show where the context variable is defined and used, select it under **Context variables**.
 
-    ![List of where a variable is used.](media/working-with-variables/context-variable-file-2.png)
 
 ## Use a collection
 
@@ -301,9 +304,11 @@ Let's recreate our adding machine by using a collection:
 
     ![Data table that shows the values added to the collection.](media/working-with-variables/papertape-4.png)
 
-9. To see the values in your collection, select **Collections** on the **File** menu.
+9. To see the values in your collection, do one of the following:
 
-    ![Preview of the PaperTape collection.](media/working-with-variables/papertape-file.png)
+   - If you're using the preview version of Power Apps Studio, select **Variables** in the app authoring menu and then select **Collections**. 
+    
+   - If you're using the classic versionof Power Apps Studio, select **Collections** on the **File** menu.
 
 10. To store and retrieve your collection, add two additional button controls, and set their **Text** properties to **Load** and **Save**. Set the **OnSelect** property of the **Load** button to this formula:
 

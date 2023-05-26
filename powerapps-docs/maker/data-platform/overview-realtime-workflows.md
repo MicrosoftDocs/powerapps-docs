@@ -10,9 +10,6 @@ ms.assetid: 1f3c9780-26ad-49ec-a3fb-fc226def19c5
 author: msftman
 ms.subservice: dataverse-maker
 ms.author: "deonhe"
-manager: "kvivek"
-search.app: 
-  - Flow
 search.audienceType: 
   - flowmaker
   - enduser

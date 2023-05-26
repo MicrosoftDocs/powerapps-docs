@@ -1,18 +1,14 @@
 ---
-title: "CustomControlResource table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "CustomControlResource table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomControlResource table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # CustomControlResource table/entity reference
@@ -25,13 +21,13 @@ Custom Control Resource Id
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/customcontrolresources<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/customcontrolresources(*customcontrolresourceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/customcontrolresources(*customcontrolresourceid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/customcontrolresources<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/customcontrolresources(*customcontrolresourceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.2/customcontrolresources<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/customcontrolresources(*customcontrolresourceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/customcontrolresources(*customcontrolresourceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/customcontrolresources<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.2/customcontrolresources(*customcontrolresourceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -360,10 +356,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -575,30 +571,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_customcontrolresource_createdby"></a> lk_customcontrolresource_createdby
 
-See systemuser Table [lk_customcontrolresource_createdby](systemuser.md#BKMK_lk_customcontrolresource_createdby) One-To-Many relationship.
+See the [lk_customcontrolresource_createdby](systemuser.md#BKMK_lk_customcontrolresource_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_customcontrolresource_createdonbehalfby"></a> lk_customcontrolresource_createdonbehalfby
 
-See systemuser Table [lk_customcontrolresource_createdonbehalfby](systemuser.md#BKMK_lk_customcontrolresource_createdonbehalfby) One-To-Many relationship.
+See the [lk_customcontrolresource_createdonbehalfby](systemuser.md#BKMK_lk_customcontrolresource_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_customcontrol_resource_id"></a> customcontrol_resource_id
 
-See customcontrol Table [customcontrol_resource_id](customcontrol.md#BKMK_customcontrol_resource_id) One-To-Many relationship.
+See the [customcontrol_resource_id](customcontrol.md#BKMK_customcontrol_resource_id) one-to-many relationship for the [customcontrol](customcontrol.md) table/entity.
 
 ### <a name="BKMK_lk_customcontrolresource_modifiedonbehalfby"></a> lk_customcontrolresource_modifiedonbehalfby
 
-See systemuser Table [lk_customcontrolresource_modifiedonbehalfby](systemuser.md#BKMK_lk_customcontrolresource_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_customcontrolresource_modifiedonbehalfby](systemuser.md#BKMK_lk_customcontrolresource_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_customcontrolresource_organization"></a> customcontrolresource_organization
 
-See organization Table [customcontrolresource_organization](organization.md#BKMK_customcontrolresource_organization) One-To-Many relationship.
+See the [customcontrolresource_organization](organization.md#BKMK_customcontrolresource_organization) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_customcontrolresource_modifiedby"></a> lk_customcontrolresource_modifiedby
 
-See systemuser Table [lk_customcontrolresource_modifiedby](systemuser.md#BKMK_lk_customcontrolresource_modifiedby) One-To-Many relationship.
+See the [lk_customcontrolresource_modifiedby](systemuser.md#BKMK_lk_customcontrolresource_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.customcontrolresource?text=customcontrolresource EntityType" />

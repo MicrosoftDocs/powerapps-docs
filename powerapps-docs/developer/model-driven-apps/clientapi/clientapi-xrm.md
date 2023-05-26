@@ -1,21 +1,20 @@
 ---
 title: "Client API Xrm object for model-driven apps | MicrosoftDocs"
-description: "The topic provides client API reference for model-driven apps."
-ms.date: 10/31/2018
+description: "Describes the client api Xrm object"
+author: adrianorth
+ms.author: aorth
 
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.topic: "conceptual"
 applies_to:
   - "Dynamics 365 (online)"
-ms.assetid: 15272ad9-25d7-499e-9361-a65f789daf20
-author: "Nkrb"
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 
 # Client API Xrm object
@@ -37,7 +36,7 @@ Here is the information about each of the namespaces in the Xrm object:
 | [Xrm.Navigation](reference/xrm-navigation.md) | Provides methods for navigating forms and items in model-driven apps.                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | [Xrm.Panel](reference/xrm-panel.md)           | Provides a method to display a web page in the side pane of model-driven apps form.                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | [Xrm.Utility](reference/xrm-utility.md)       | Provides a container for useful methods.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| [Xrm.WebApi](reference/xrm-webapi.md)         | Provides methods to use Web API to create and manage records and execute Web API actions and functions.<br/><br/>[Xrm.WebApi.offline](reference/xrm-webapi/offline.md): Provides methods to create and manage records in the model-driven apps mobile clients while working in the _offline_ mode.<br/><br/>[Xrm.WebApi.online](reference/xrm-webapi/online.md): Provides methods to use Web API to create and manage records and execute Web API actions and functions when connected to the server. |
+| [Xrm.WebApi](reference/xrm-webapi.md)         | Provides methods to use Web API to create and manage records and execute Web API actions and functions.<br/><br/>[Xrm.WebApi.offline](reference/xrm-webapi/offline.md): Provides methods to create and manage records in the model-driven apps in mobile clients while working in _offline_ mode.<br/><br/>[Xrm.WebApi.online](reference/xrm-webapi/online.md): Provides methods to use Web API to create and manage records and execute Web API actions and functions when connected to the server. |
 
 ## Client API global context
 

@@ -1,18 +1,14 @@
 ---
-title: "MobileOfflineProfileItem table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "MobileOfflineProfileItem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the MobileOfflineProfileItem table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # MobileOfflineProfileItem table/entity reference
@@ -25,15 +21,15 @@ Information on entity availability to mobile devices in offline mode for a mobil
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/mobileofflineprofileitems<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/mobileofflineprofileitems(*mobileofflineprofileitemid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/mobileofflineprofileitems(*mobileofflineprofileitemid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/mobileofflineprofileitems<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrieveUnpublished|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublished?text=RetrieveUnpublished Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedRequest>|
-|RetrieveUnpublishedMultiple|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/mobileofflineprofileitems(*mobileofflineprofileitemid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.2/mobileofflineprofileitems<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/mobileofflineprofileitems(*mobileofflineprofileitemid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/mobileofflineprofileitems(*mobileofflineprofileitemid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/mobileofflineprofileitems<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveUnpublished|<xref:Microsoft.Dynamics.CRM.RetrieveUnpublished?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedRequest>|
+|RetrieveUnpublishedMultiple|<xref:Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/mobileofflineprofileitems(*mobileofflineprofileitemid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -97,10 +93,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -120,10 +116,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -161,10 +157,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -298,10 +294,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -321,10 +317,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -344,10 +340,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -672,10 +668,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -695,10 +691,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -947,7 +943,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_MobileOfflineProfileItem_MobileOfflineProfileItemAssociation"></a> MobileOfflineProfileItem_MobileOfflineProfileItemAssociation
 
-Same as mobileofflineprofileitemassociation table [MobileOfflineProfileItem_MobileOfflineProfileItemAssociation](mobileofflineprofileitemassociation.md#BKMK_MobileOfflineProfileItem_MobileOfflineProfileItemAssociation) Many-To-One relationship.
+Same as the [MobileOfflineProfileItem_MobileOfflineProfileItemAssociation](mobileofflineprofileitemassociation.md#BKMK_MobileOfflineProfileItem_MobileOfflineProfileItemAssociation) many-to-one relationship for the [mobileofflineprofileitemassociation](mobileofflineprofileitemassociation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -976,34 +972,34 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_mobileofflineprofileitem_createdonbehalfby"></a> lk_mobileofflineprofileitem_createdonbehalfby
 
-See systemuser Table [lk_mobileofflineprofileitem_createdonbehalfby](systemuser.md#BKMK_lk_mobileofflineprofileitem_createdonbehalfby) One-To-Many relationship.
+See the [lk_mobileofflineprofileitem_createdonbehalfby](systemuser.md#BKMK_lk_mobileofflineprofileitem_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_mobileofflineprofileitem_savedquery"></a> lk_mobileofflineprofileitem_savedquery
 
-See savedquery Table [lk_mobileofflineprofileitem_savedquery](savedquery.md#BKMK_lk_mobileofflineprofileitem_savedquery) One-To-Many relationship.
+See the [lk_mobileofflineprofileitem_savedquery](savedquery.md#BKMK_lk_mobileofflineprofileitem_savedquery) one-to-many relationship for the [savedquery](savedquery.md) table/entity.
 
 ### <a name="BKMK_lk_mobileofflineprofileitem_modifiedby"></a> lk_mobileofflineprofileitem_modifiedby
 
-See systemuser Table [lk_mobileofflineprofileitem_modifiedby](systemuser.md#BKMK_lk_mobileofflineprofileitem_modifiedby) One-To-Many relationship.
+See the [lk_mobileofflineprofileitem_modifiedby](systemuser.md#BKMK_lk_mobileofflineprofileitem_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_MobileOfflineProfile_MobileOfflineProfileItem"></a> MobileOfflineProfile_MobileOfflineProfileItem
 
-See mobileofflineprofile Table [MobileOfflineProfile_MobileOfflineProfileItem](mobileofflineprofile.md#BKMK_MobileOfflineProfile_MobileOfflineProfileItem) One-To-Many relationship.
+See the [MobileOfflineProfile_MobileOfflineProfileItem](mobileofflineprofile.md#BKMK_MobileOfflineProfile_MobileOfflineProfileItem) one-to-many relationship for the [mobileofflineprofile](mobileofflineprofile.md) table/entity.
 
 ### <a name="BKMK_lk_mobileofflineprofileitem_modifiedonbehalfby"></a> lk_mobileofflineprofileitem_modifiedonbehalfby
 
-See systemuser Table [lk_mobileofflineprofileitem_modifiedonbehalfby](systemuser.md#BKMK_lk_mobileofflineprofileitem_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_mobileofflineprofileitem_modifiedonbehalfby](systemuser.md#BKMK_lk_mobileofflineprofileitem_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_MobileOfflineProfileItem_organization"></a> MobileOfflineProfileItem_organization
 
-See organization Table [MobileOfflineProfileItem_organization](organization.md#BKMK_MobileOfflineProfileItem_organization) One-To-Many relationship.
+See the [MobileOfflineProfileItem_organization](organization.md#BKMK_MobileOfflineProfileItem_organization) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_MobileOfflineProfileItem_createdby"></a> lk_MobileOfflineProfileItem_createdby
 
-See systemuser Table [lk_MobileOfflineProfileItem_createdby](systemuser.md#BKMK_lk_MobileOfflineProfileItem_createdby) One-To-Many relationship.
+See the [lk_MobileOfflineProfileItem_createdby](systemuser.md#BKMK_lk_MobileOfflineProfileItem_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.mobileofflineprofileitem?text=mobileofflineprofileitem EntityType" />

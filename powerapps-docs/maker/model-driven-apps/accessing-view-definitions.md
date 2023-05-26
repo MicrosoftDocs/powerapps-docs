@@ -4,7 +4,6 @@ description: Learn how to open the view designer
 ms.custom: ""
 ms.date: 03/23/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: how-to
@@ -17,28 +16,19 @@ ms.assetid: 034c8bef-0d1c-4ef9-8da7-f81343c4553a
 caps.latest.revision: 25
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Opening the view designer
-
-
 
 In this article, a view definition will be opened to display properties and options to configure the view.
 
 ## Open a view for editing in the solution explorer
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Select **Solutions**, and then open the solution that needs to be modified.  
+1. Select **Solutions**, and then open the solution that needs to be modified. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
 1. Select the table that contains the required view, such as the **Account** table.
-1. Select the **Views** tab.
-
-    > [!div class="mx-imgBorder"]
-    > ![Account view definitions.](media/account-view-definitions.png)
+1. Select the **Views** area.
 
 1. Select the view, such as the account table **All Accounts** view.
 

@@ -1,0 +1,1 @@
+Interface for `context.parameters.<property_key>`

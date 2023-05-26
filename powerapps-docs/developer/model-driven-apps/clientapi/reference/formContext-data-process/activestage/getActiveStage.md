@@ -1,19 +1,16 @@
 ---
 title: "getActiveStage (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getActiveStage method.
-ms.date: 04/19/2021
-
-ms.topic: "reference"
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 57a17f91-38f2-4666-bd23-0b7c63b0516f
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # getActiveStage (Client API reference)
 
@@ -33,7 +30,7 @@ search.app:
 
 ### Related topics
 
-[setActiveStage)](setActiveStage.md)
+[setActiveStage](setActiveStage.md)
 
 [getSelectedStage (Client API reference)](../getSelectedStage.md)
 

@@ -4,7 +4,6 @@ description: Learn how to change the color scheme for your app with Power Apps
 ms.custom: ""
 ms.date: 01/12/2021
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -13,12 +12,8 @@ ms.assetid: 21a166a0-d25e-4260-a1e4-2ddc528787c2
 caps.latest.revision: 17
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use a theme to create a custom look for your app
 
@@ -155,8 +150,7 @@ On a mobile device running the app in a web browser, the view is displayed in th
 
 ## See also  
          
- [Video: Themes](https://go.microsoft.com/fwlink/p/?LinkId=529568) <br />
- [Query and edit an organization theme](/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme)
+[Query and edit an organization theme](/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme)
 
 
 

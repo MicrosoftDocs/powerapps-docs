@@ -1,23 +1,18 @@
 ---
 title: "updateRecord (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the updateRecord method.
-ms.date: 04/21/2021
-
-ms.topic: "reference"
+ms.author: aorth
+author: adrianorth
+ms.date: 08/22/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: f5d4c8a9-4188-472a-83bf-b986dd135754
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # updateRecord (Client API reference)
-
-
 
 [!INCLUDE[./includes/updateRecord-description.md](./includes/updateRecord-description.md)] 
 
@@ -27,7 +22,7 @@ search.app:
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -81,11 +76,11 @@ On success, returns a promise object containing the values specified earlier in 
 
 ## Examples
 
-These examples use some of the same request objects as demonstrated in [Update and delete tables using the Web API](../../../../data-platform/webapi/update-delete-entities-using-web-api.md) to define the data object for updating a table record.
+These examples use some of the same request objects as demonstrated in [Update and delete table rows using the Web API](../../../../data-platform/webapi/update-delete-entities-using-web-api.md) to define the data object for updating a table record.
 
-### Basic update 
+### Basic update
 
-Updates an existing account record with record ID = 5531d753-95af-e711-a94e-000d3a11e605.
+Updates an existing account record with record ID = `5531d753-95af-e711-a94e-000d3a11e605`.
 
 ```JavaScript
 // define the data to update a record
@@ -113,9 +108,9 @@ Xrm.WebApi.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605", data)
 
 ### Update associations to the related tables
 
-To update association to the related table records (lookups), set the value of single-valued navigation properties using the `@odata.bind` annotation to another record. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record. Here are code examples for both the scenarios:
+To update association to the related table records (lookups), set the value of single-valued navigation properties using the `@odata.bind` annotation to another record.
 
-**For online scenario (connected to server)**
+Here is code example:
 
 The following example updates an account record to associate another contact record as the primary contact for the account:
 
@@ -138,9 +133,12 @@ Xrm.WebApi.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605", data)
 );
 ```
 
-**For mobile offline scenario**
+**Deprecated method for mobile offline scenario**
 
-Here is the updated sample code to update an account record to associate another contact record as the primary contact for the account from mobile clients when working in the offline mode:
+> [!NOTE]
+>  Instead of using `@odata.bind` annotation example above, the deprecated **lookup** object with case-sensitive properties (`logicalname` and `id`) is still supported for exisiting customizations. However, it is recommended to use `@odata.bind` annotation for both online and offline scenario instead of using this deprecated object.
+
+The following example uses the deprecated method to update an account record to associate another contact record as the primary contact for the account from mobile clients when working in the offline mode:
 
 ```JavaScript
 // define the data to update a record
@@ -164,6 +162,7 @@ Xrm.WebApi.offline.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605
     }
 );
 ```
+
 ### Update associations to the related tables of type Activity
 
 To update association to the related tables of type Activity, set the value of single-valued navigation properties using the `@odata.bind` annotation to another record.
@@ -188,6 +187,7 @@ Xrm.WebApi.updateRecord("task", "5531d753-95af-e711-a94e-000d3a11e605", data).th
     }
 );
 ```
+
 **Update Regarding column on task**
 
  ```JavaScript
@@ -210,6 +210,7 @@ Xrm.WebApi.updateRecord("task", "5531d753-95af-e711-a94e-000d3a11e605", data).th
 ```
 
 ### Update associations for collection-valued navigation properties
+
 The [Xrm.WebApi.online.execute](online/execute.md) API can be used to associate and disassociate collection-valued navigation properties. This is **NOT** supported for mobile offline scenarios.
 
 ### Related topics

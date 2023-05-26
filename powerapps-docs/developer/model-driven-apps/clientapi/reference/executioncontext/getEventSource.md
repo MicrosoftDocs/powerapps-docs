@@ -1,19 +1,16 @@
 ---
 title: "getEventSource (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about the getEventSource method that returns a reference to the object that the event occurred on." 
-ms.date: 04/15/2021
-
-ms.topic: "reference"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 9f3b2fed-fde5-46e4-8c59-43aa51aa82df
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # getEventSource (Client API reference)
 
@@ -45,6 +42,7 @@ Returns a reference to the object that the event occurred on.
 |[OnRecordSelect](../events/grid-onrecordselect.md)|[formContext.data.entity](../formcontext-data-entity.md)|
 |[OnResultOpened](../events/onresultopened.md)|[kbSearch](../controls.md#kbsearch-knowledge-base-search-control-type) control|
 |[OnSave](../events/form-onsave.md)|[formContext.data.entity](../formcontext-data-entity.md)|
+|[OnPostSave](../events/postsave.md)|None|
 |[OnSelection](../events/onselection.md)|None|
 |[OnStageChange](../events/onstagechange.md)|[formContext.data.process](../formcontext-data-process.md)|
 |[OnStageSelected](../events/onstageselected.md)|[formContext.data.process](../formcontext-data-process.md)|

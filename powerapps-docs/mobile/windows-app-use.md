@@ -1,38 +1,38 @@
 ---
-title: Use Power Apps for Windows (preview) | Microsoft Docs
-description: Use Power Apps for Windows (preview).
-author: mduelae
+title: Use Power Apps for Windows | Microsoft Docs
+description: Use Power Apps for Windows.
+author: sericks007
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/18/2022
+ms.date: 10/13/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---
 
-# Use Power Apps for Windows (preview) 
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+# Use Power Apps for Windows 
 
 This topic covers how to sign in and run your apps on Power Apps for Windows.
 
 ## Sign in 
 
-Sign into Power Apps for Windows quickly using your work email address. If you need help with your sign-in information, contact your Power Apps administrator.
+Sign into Power Apps for Windows quickly using your work email address. If you need help with your sign-in information, contact your Power Apps administrator. 
 
-1.  On the Welcome screen, select **Sign in**.
+1.  On the Welcome screen, select **Sign in**. 
 
     > [!div class="mx-imgBorder"] 
     > ![Sign in.](media/pam-windows-image1.png)
+
+    > [!NOTE]
+    > You also have the option to sign in as a guest user and choose a different region.
+    >  ![Sign in to a differnt region.](media/mobile-gcc.png)
+
 
 2.  Enter your email address, and then select **Next**. Then enter your password and then select **Sign in**.
 
@@ -43,6 +43,16 @@ Sign into Power Apps for Windows quickly using your work email address. If you n
 
     > [!div class="mx-imgBorder"] 
     > ![Select an app to use.](media/pam-windows-image3.png)
+
+### See non-production apps
+
+By default, only production model-driven apps are shown in the list of apps.
+
+To see model-driven apps from non-production environments, select the More button (...) > **Settings** and then turn on **Show non-production apps**. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![See non-production apps.](media/non-prod-apps.png)
+
 
 
 ## Move between apps
@@ -63,7 +73,7 @@ For model-driven apps, you can also select the name of the current app that you'
     > [!div class="mx-imgBorder"] 
     > ![From the list of apps, select an app.](media/pam-windows-image3.png)
 
-### Switch to another model-driven app
+## Switch to another model-driven app
 
 1.  Select the back button or select the current app name.
 
@@ -77,9 +87,9 @@ For model-driven apps, you can also select the name of the current app that you'
 
 ## Run an app
 
-Because [canvas apps](/maker/canvas-apps/getting-started) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
+Because [canvas apps](../maker/canvas-apps/getting-started.md) can essentially be anything, there isn't much help documentation on how to use an app once it's created. If you need help using a canvas app, contact your app maker or Power Apps admin.
 
-You'll find below the documentation on how to run [model-driven apps](/user/use-model-driven-apps) on Power Apps for Windows.
+You'll find below the documentation on how to run [model-driven apps](../user/use-model-driven-apps.md) on Power Apps for Windows.
 
 ## Navigation in model-driven apps
 
@@ -106,18 +116,8 @@ Legend:
 
 8. **User Information**: See the current user that's signed in, sign out of the app, or reconfigure the app**.**
 
-### Go back, row set navigation, open a new window
+9. **Go back**: Use the back button for form, view, and dashboard pages on the command bar to go back to the previous page.
 
-Use the buttons on the command bar to navigation forms, views, and dashboard pages.
-
-> [!div class="mx-imgBorder"] 
->![Command bar navigation.](media/pam-windows-image7.png)
-
-Legend
-
-1. **Go back**: Use the back button for form, view, and dashboard pages on the command bar to go back to the previous page.
-
-2. **Open Record Set**: Navigate through multiple rows by using preset views and queries. The row-focused navigation improves productivity by allowing users to jump from row to row in the list and easily navigate back without losing their working list. The number of rows that you see in the row set navigation pane is based on the number of rows that your system administrator has defined for the table.
 
 ### Create and edit rows
 
@@ -158,19 +158,50 @@ Note, the Quick create option is only available for rows that are enabled by you
 
 ## Use search
 
-With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. For more information, see [Search for tables and rows by using Dataverse search](/user/relevance-search).
+With Dataverse search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. For more information, see [Search for tables and rows by using Dataverse search](../user/relevance-search.md).
 
 ![Search bar at the top](media/pam-windows-image13.png)
 
-## Limitations and know issues
+## Notifications 
 
--   The app doesn't support advanced controls such as [sensors](/maker/canvas-apps/how-to/mobile-sensors) and [location](/maker/canvas-apps/functions/signals#location).
+Notifications on Power Apps for Windows work the same as when you run a model-driven app on the web. For more information, see [In-app notifications in model-driven apps](../user/notifications.md).
 
--   The app doesn't support push notifications. More information: [Create push notifications for Power Apps mobile](power-apps-mobile-notification.md)
+## Set up mobile offline
 
--   You can't pin an app on your Windows desktop.
+To configure your app in offline mode, see:
+ 
+- For canvas apps: [Develop offline-capable canvas app](../maker/canvas-apps/offline-apps.md)
+- For model-driven apps: [Set up mobile offline](setup-mobile-offline.md)
 
--   You can't see your favorites, recent, featured apps, or the app details.
 
--   The app doesn't support [guest access](/maker/canvas-apps/share-app-guests)
+## Session ID
+
+If you are having an issue with Power Apps for Windows then send a description of your issue with a screenshot and the session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). 
+
+To get the session ID, select the More button (...) > **Settings** and then copy the session ID. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![See non-production apps.](media/non-prod-apps.png)
+
+## Log files
+Open the following directory on your device to find the log files related to the Windows session for Power Apps for Windows:
+
+`%LocalAppData%\Packages\MicrosoftCorporationII.PowerAppsforWindows10_8wekyb3d8bbwe\LocalState`
+
+The Power Apps support team can use the log files to investigate issues.
+
+## Deep links
+
+For more information on deep links, see [Use deep links with Power Apps mobile](mobile-deep-links.md).
+
+## Limitations and known issues
+- The following is not supported:
+  - Advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md).
+  - Pinning an app on Windows desktop
+  - [Mixed reality controls](../maker/canvas-apps/mixed-reality-overview.md)
+  - [NFC function](../maker/canvas-apps/functions/function-readnfc.md)
+- You can't see favorites, recent, featured apps, or the app details.
+- A user picture isn’t displayed in the app list.
+- The **Optimize images for Upload** option is not available on Windows.
+- The barcode scanner doesn’t support **BarcodeType**, **PreferFrontCamera**, and **FlashlightEnabled** properties. For more information, see [Barcode scanner control in Power Apps - Power Apps](../maker/canvas-apps/controls/control-new-barcode-scanner.md). The barcode scanner does support [symbologies](/windows/uwp/devices-sensors/pos-camerabarcode-symbologies).
 

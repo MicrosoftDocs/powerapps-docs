@@ -5,29 +5,47 @@ Keywords: command bar, command designer, commanding, modern, dialog, flow
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-manager: kvivek
-ms.date: 07/26/2021
-
+ms.date: 12/04/2022
 ms.topic: conceptual
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-# Using Power Fx with commands (preview)
+# Using Power Fx with commands
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+This article covers aspects of Power Fx that are specific to commanding. Many other functions that are in use today within canvas apps can also be used. Keep in mind there are differences because commanding is for model-driven apps.
 
-This section covers aspects of Power Fx that are specific to commanding. Many other functions that are in use today within canvas apps can also be used. Keep in mind there are differences because commanding is for model-driven apps.
-- All existing data flow functions are supported.
+- All existing dataflow functions are supported. [What are dataflows?](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)
 - Imperative functions that work with data are supported.
-- Imperative functions for simple Confirm and Notify are supported.
-- For a list of functions not supported, go to [Power Fx functions not supported](#power-fx-functions-not-supported).
+- Imperative functions for simple `Confirm` and `Notify` are supported.
+- For a list of functions not supported, go to [Functions not supported](#functions-not-supported).
 
-  > [!IMPORTANT]
-  > - This is a preview feature, and may not be available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> [!NOTE]
+> Publishing Power Fx commands may take a few minutes. It might not be obvious that background operations are still running even after the publish operation appears to have completed. You may need to wait a few minutes after publishing, then refresh the app to see your changes reflected. This typically takes longer the first time a Power Fx based command is published for an app.
+
+## OnSelect
+
+Defines the logic that will be executed when the button is selected within the app.
+
+## Visible
+
+Defines logic for hiding or showing the button when running the app. 
+
+To define visibility logic select the command. Then select **Visibility** on the right command properties pane and choose **Show on condition from formula**. You may now select **Visible** on the left of the formula bar then write a Power Fx expression using the formula bar.
+
+## Selected property
+
+|Field  |Type  |Description  |
+|---------|---------|---------|
+|Item     |Record of DataSource         |One of the records selected from the DataSource.         |
+|AllItems     |Table of records from the DataSource         |All of the records selected from the DataSource.        |
+|State     |Enum    |State of the selected control. Edit (=0), New (=1), View (=2)    |
+|Unsaved     |Boolean     |Returns true if Selected or SelectedItems have unsaved changes. Otherwise returns false. Always returns false if AutoSave is set to true (default option) within the command component library.     |
+
+- The **Selected** property is provided by the host of the command.
+- **Item** and **AllItems** names are somewhat consistent with the ComboBox control and Gallery control, but this is a new pattern.
+- If there is no record selected, **Item** returns Blank (IsBlank returns true) and **AllItems** returns an empty table (IsEmpty returns true).
+- Null DataSource for record references (polymorphic record types). Generic functions can be called, such as Save or IsType/AsType can be used.
+- **Item** is always blank if **SelectionMax** <> 1.  This prevents writing formulas to just one item and not scaling to more than one.  
 
 ## AutoSave
 
@@ -35,23 +53,10 @@ This section covers aspects of Power Fx that are specific to commanding. Many ot
 - By default, the form buffer is saved on behalf of the app maker.
   - The form is saved before the command is initiated.
   - Any problems that occur during the save operation are dealt with in the form's UI.
-<!--- Not currently configurable:
-  - We later need facilities for working with the buffer.  -->
- 
- ## Selected property
 
-|Field  |Type  |Description  |
-|---------|---------|---------|
-|Item     |Record of DataSource         |One of the records selected from the DataSource         |
-|AllItems     |Table of records from the DataSource         |All of the records selected from the DataSource         |
+## Patch function
 
-- The **Selected** property is provided by the host of the command.
-- **Item** and **AllItems** names are somewhat consistent with the ComboBox control and Gallery control, but this is a new pattern.
-- If there is no record selected, **Item** returns Blank (IsBlank returns true) and **AllItems** returns an empty table (IsEmpty returns true).
-- Null DataSource for record references (polymorphic record types). Generic functions can be called, such as Save or IsType/AsType can be used.
-- **Item** is always Blank if **SelectionMax** <> 1.  This prevents writing formulas to just one item and not scaling to more than one.  
-
-### Patch the current selected record
+### Patch (update) the current selected record
 
 ```powerapps-dot
 Patch(Accounts, Self.Selected.Item, {'Account Name': "Changed Account name"})
@@ -60,7 +65,7 @@ Patch(Accounts, Self.Selected.Item, {'Account Name': "Changed Account name"})
 ### Create a related record
 
 > [!NOTE]
-> If the related table is not already in the command component library you will need to open it in canvas studio and add the data source there.
+> If the related table is not already in the command component library you'll need to open it in canvas studio and add the data source there.
 
 ```powerapps-dot
 Patch(Tasks,Defaults(Tasks),{Regarding:Self.Selected.Item},{Subject:"Subject of the Task"})
@@ -94,22 +99,23 @@ Self.Selected.Item.'Account Rating'>20
 
 To navigate to a custom canvas page within a model-driven app, pass the page name as the first argument.
 
-```powerappsfl
+```powerapps-dot
 Navigate( myCustomPage )
 ```
+
 ### Navigate to the default view of the table
 
-To navigate to the default view of the table, passed table name as the first argument.
+To navigate to the default view of the table, pass the table name as the first argument.
 
-```powerappsfl
+```powerapps-dot
 Navigate( Accounts )
 ```
 
 ### Navigate to specific system view of the table
 
-To navigate to a specific system view of the table, pass the table's Views enum.
+To navigate to a specific system view of the table, pass the table's `Views` enum.
 
-```powerappsfl
+```powerapps-dot
 Navigate( 'Accounts (Views)'.'My Active Accounts' )
 ```
 
@@ -117,7 +123,7 @@ Navigate( 'Accounts (Views)'.'My Active Accounts' )
 
 To navigate to the default form of the table, pass the record as the first argument.
 
-```powerappsfl
+```powerapps-dot
 Navigate( Gallery1.Selected )
 ```
 
@@ -125,66 +131,50 @@ Navigate( Gallery1.Selected )
 
 To navigate to the default form of the table, pass a Dataverse record created from the [Defaults](../canvas-apps/functions/function-defaults.md) function. This will open the default form with the record as a new record. The **Defaults** function takes the table name to create the record.
 
-```powerappsfl
+```powerapps-dot
 Navigate( Defaults( Accounts ) )
 ```
 
-## Confirm function
+## Optimize the user experience with data source and record information
 
-The `Confirm` function displays a dialog box on top of the current screen. Two buttons are provided: a confirm button and a cancel button, which default to localized versions of "OK" and "Cancel", respectively. The user must confirm or cancel before the dialog box is dismissed and the function returns. Besides the dialog button, cancel can also be selected with the Esc key or other gestures that are platform-specific.
+Use the [**DataSourceInfo** function](/power-platform/power-fx/reference/function-datasourceinfo) and [**RecordInfo** function](/power-platform/power-fx/reference/function-recordinfo) to optimize the user experience with information about the data being displayed and manipulated.
 
-The `Message` parameter is displayed in the body of the dialog box. If the message is very long, it will either be truncated or a scroll bar provided.
+For example, use **RecordInfo** to determine if the current user has permission to modify a record and appropriately show or hide an "Edit" button using its **Visible** property:
 
-Use the `OptionsRecord` parameter to specify options for the dialog box. Not all options are available on every platform and are handled on a "best effort" basis. 
+```powerapps-dot
+EditButton.Visible = 
+   RecordInfo( Gallery1.Selected, RecordInfo.EditPermission )
+```
+
+For example, use **DataSourceInfo** to determine if the current user has permission to create a record and appropriately show or hide an "Create" button using its **Visible** property:
+
+```powerapps-dot
+CreateButton.Visible = 
+   DataSourceInfo( Accounts, DataSourceInfo.CreatePermission )
+```
+
+## Ask for confirmation before taking action
+
+Use the [**Confirm** function](/power-platform/power-fx/reference/function-confirm) to display a dialog box on top of the current screen.
+
+```powerapps-dot
+Notify( Confirm( "Are you sure?", 
+                 { ConfirmButton: "Yes", CancelButton: "No" } 
+        ) 
+)
+```
+
+Will display a notification **true** if the **Yes** button is pressed, and a notification **false** if the **No** button is pressed.
+
+
+## Notify the user
+
+A notification can be shown to app users by calling the [Notify function](../canvas-apps/functions/function-showerror.md).
 
 > [!NOTE]
-> The options in the table below aren't currently available with canvas apps.
-
-|Option Field  |Description  |
-|---------|---------|
-|ConfirmButton     |The text to display on the *confirm* button, replacing the default, localized "OK" text.         |
-|CancelButton     |The text to display on the *cancel* button, replacing the default, localized "Cancel" text.         |
-|Title     |The text to display as the *title* of the dialog box. A larger, bolder font than the message font may be used to display this text. If this value is very long, it will be truncated.         |
-|Subtitle     |   The text to display as the *subtitle* of the dialog box. A larger, bolder font than the message font may be used to display this text. If this value is very long, it will be truncated.      |
-
-`Confirm` returns true if the confirm button was selected, false otherwise.
-
-Use the `Notify` function to display a banner at the top of the app that doesn't need to be dismissed.
-
-> [!NOTE]
-> The `Notify` function isn't currently available with canvas apps.
-
-### Syntax
-
-**Confirm**( Message [, OptionsRecord ] )
-- `Message` - Required. Message to display to the user.
-- `OptionsRecord` - Optional. Provide advanced options for the dialog. Not all options are available on every platform and are handled on a best effort basis. At this time, in canvas apps, none of these options are supported.
-	
-### Examples
-
-Simple confirmation dialog, asking the user to confirm deletion of a record before it is removed. Unless the user presses the **OK** button, the record will not be deleted.
+> `NotificationType.Success` is not currently supported and will result in an informational notification type.
 
 ```powerapps-dot
-If( Confirm( "Are you sure?" ), Remove( ThisItem ) )
-```
-
-Same dialog as the last example, but adds title text.
-
-```powerapps-dot
-If( Confirm( "Are you sure?", {Title: "Delete Confirmation"} ), Remove( ThisItem ) )
-```
-
-Displays a message much like the `Notify` function does, but is modal and requires the user to select a button to proceed. Use in situations where it is important that the user acknowledge the message before proceeding. In this case, which button was selected isn't important.
-
-```powerapps-dot
-Confirm( "There was a problem, please review your order." )
-```
-
-## Add notifications to a model-driven app
-
-A notification can be shown to app users by calling the [Notify function](../canvas-apps/functions/function-showerror.md).  
-
-```powerappsfl
 Notify( "Model-driven app notification message" )
 ```
 
@@ -208,7 +198,7 @@ Self.Selected.Item.'Recurring Appointments'
 Self.Selected.Item.'Parent Account'.'Account Name'="parent"
 ```
 
-## Power Fx functions not supported
+## Functions not supported
 
 The following Power Fx functions are currently not supported with commanding in model-driven apps.
 
@@ -216,23 +206,74 @@ The following Power Fx functions are currently not supported with commanding in 
 - Clear()
 - Collect()
 - Disable()
-- EditForm()
 - Enable()
 - Exit()
 - InvokeControl()
+- Language()
 - LoadData()
-- NewForm()
 - Param()
 - ReadNFC()
 - RequestHide()
+- ResetForm()
 - Revert()
 - SaveData()
-- ResetForm()
 - ScanBarcode()
 - Set()
 - SubmitForm()
 - UpdateContext()
+- User()
 - ViewForm()
+
+### Enums not supported
+
+- Align
+- AlignInContainer
+- BarcodeType
+- BorderStyle
+- Color
+- Direction
+- DisplayMode
+- Font
+- FontWeight
+- FormPattern
+- GridStyle
+- ImagePosition
+- ImageRotation
+- LabelPosition
+- Layout
+- LayoutAlignItems
+- LayoutDirection
+- LayoutJustifyContent
+- LayoutMode
+- LayoutOverflow
+- ListItemTemplate
+- MapStyle
+- Overflow
+- PDFPasswordState
+- PenMode
+- RemoveFlags
+- ScreenTransition
+- TeamsTheme
+- TextFormat
+- TextMode
+- TextPosition
+- Themes
+- Transition
+- VerticalAlign
+- VirtualKeyboardMode
+- Zoom
+
+### Other unsupported areas
+
+- Acceleration
+- App
+- Compass
+- Connection
+- Environment
+- Host
+- Layout
+- Location
+- ScreenSize
 
 ### See also
 
@@ -241,4 +282,3 @@ The following Power Fx functions are currently not supported with commanding in 
 [Formula reference](../canvas-apps/formula-reference.md)
 
 [Overview of Power Fx](/power-platform/power-fx/overview)
-

@@ -1,18 +1,14 @@
 ---
-title: "msdyn_knowledgesearchinsight table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_knowledgesearchinsight table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_knowledgesearchinsight table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # msdyn_knowledgesearchinsight table/entity reference
@@ -27,21 +23,23 @@ Knowledge Search Insight
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_knowledgesearchinsights(*msdyn_knowledgesearchinsightid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/msdyn_knowledgesearchinsights<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_knowledgesearchinsights(*msdyn_knowledgesearchinsightid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_knowledgesearchinsights(*msdyn_knowledgesearchinsightid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_knowledgesearchinsights<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_knowledgesearchinsights(*msdyn_knowledgesearchinsightid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_knowledgesearchinsights(*msdyn_knowledgesearchinsightid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH [*org URI*]/api/data/v9.2/msdyn_knowledgesearchinsights(*msdyn_knowledgesearchinsightid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.2/msdyn_knowledgesearchinsights<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/msdyn_knowledgesearchinsights(*msdyn_knowledgesearchinsightid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/msdyn_knowledgesearchinsights(*msdyn_knowledgesearchinsightid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/msdyn_knowledgesearchinsights<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/msdyn_knowledgesearchinsights(*msdyn_knowledgesearchinsightid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/msdyn_knowledgesearchinsights(*msdyn_knowledgesearchinsightid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -506,6 +504,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -793,12 +792,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -869,7 +886,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_knowledgesearchinsight_SyncErrors](syncerror.md#BKMK_msdyn_knowledgesearchinsight_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchinsight_SyncErrors](syncerror.md#BKMK_msdyn_knowledgesearchinsight_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -886,7 +903,7 @@ Same as syncerror table [msdyn_knowledgesearchinsight_SyncErrors](syncerror.md#B
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_knowledgesearchinsight_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_knowledgesearchinsight_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchinsight_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_knowledgesearchinsight_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -903,7 +920,7 @@ Same as duplicaterecord table [msdyn_knowledgesearchinsight_DuplicateMatchingRec
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_knowledgesearchinsight_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_knowledgesearchinsight_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchinsight_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_knowledgesearchinsight_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -920,7 +937,7 @@ Same as duplicaterecord table [msdyn_knowledgesearchinsight_DuplicateBaseRecord]
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_knowledgesearchinsight_AsyncOperations](asyncoperation.md#BKMK_msdyn_knowledgesearchinsight_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchinsight_AsyncOperations](asyncoperation.md#BKMK_msdyn_knowledgesearchinsight_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -937,7 +954,7 @@ Same as asyncoperation table [msdyn_knowledgesearchinsight_AsyncOperations](asyn
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_knowledgesearchinsight_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_knowledgesearchinsight_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchinsight_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_knowledgesearchinsight_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -954,7 +971,7 @@ Same as mailboxtrackingfolder table [msdyn_knowledgesearchinsight_MailboxTrackin
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_knowledgesearchinsight_ProcessSession](processsession.md#BKMK_msdyn_knowledgesearchinsight_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchinsight_ProcessSession](processsession.md#BKMK_msdyn_knowledgesearchinsight_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -971,7 +988,7 @@ Same as processsession table [msdyn_knowledgesearchinsight_ProcessSession](proce
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_knowledgesearchinsight_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_knowledgesearchinsight_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchinsight_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_knowledgesearchinsight_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -988,7 +1005,7 @@ Same as bulkdeletefailure table [msdyn_knowledgesearchinsight_BulkDeleteFailures
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_knowledgesearchinsight_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_knowledgesearchinsight_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_knowledgesearchinsight_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_knowledgesearchinsight_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1019,46 +1036,46 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgesearchinsight_createdby](systemuser.md#BKMK_lk_msdyn_knowledgesearchinsight_createdby) One-To-Many relationship.
+See the [lk_msdyn_knowledgesearchinsight_createdby](systemuser.md#BKMK_lk_msdyn_knowledgesearchinsight_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_knowledgesearchinsight_createdonbehalfby"></a> lk_msdyn_knowledgesearchinsight_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgesearchinsight_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgesearchinsight_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_knowledgesearchinsight_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgesearchinsight_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_knowledgesearchinsight_modifiedby"></a> lk_msdyn_knowledgesearchinsight_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgesearchinsight_modifiedby](systemuser.md#BKMK_lk_msdyn_knowledgesearchinsight_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_knowledgesearchinsight_modifiedby](systemuser.md#BKMK_lk_msdyn_knowledgesearchinsight_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_knowledgesearchinsight_modifiedonbehalfby"></a> lk_msdyn_knowledgesearchinsight_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_knowledgesearchinsight_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgesearchinsight_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_knowledgesearchinsight_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_knowledgesearchinsight_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_knowledgesearchinsight"></a> user_msdyn_knowledgesearchinsight
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_knowledgesearchinsight](systemuser.md#BKMK_user_msdyn_knowledgesearchinsight) One-To-Many relationship.
+See the [user_msdyn_knowledgesearchinsight](systemuser.md#BKMK_user_msdyn_knowledgesearchinsight) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_knowledgesearchinsight"></a> team_msdyn_knowledgesearchinsight
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_knowledgesearchinsight](team.md#BKMK_team_msdyn_knowledgesearchinsight) One-To-Many relationship.
+See the [team_msdyn_knowledgesearchinsight](team.md#BKMK_team_msdyn_knowledgesearchinsight) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_knowledgesearchinsight"></a> business_unit_msdyn_knowledgesearchinsight
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_knowledgesearchinsight](businessunit.md#BKMK_business_unit_msdyn_knowledgesearchinsight) One-To-Many relationship.
+See the [business_unit_msdyn_knowledgesearchinsight](businessunit.md#BKMK_business_unit_msdyn_knowledgesearchinsight) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_knowledgesearchinsight?text=msdyn_knowledgesearchinsight EntityType" />

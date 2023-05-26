@@ -1,7 +1,7 @@
 ---
 title: Create a canvas app from scratch using Microsoft Dataverse
 description: Learn about how to create a canvas app to add, update, and delete records in Microsoft Dataverse.
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
 ms.custom: canvas
@@ -11,10 +11,8 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
 # Create a canvas app from scratch using Microsoft Dataverse

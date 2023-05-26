@@ -8,13 +8,11 @@ ms.custom: canvas
 ms.date: 04/17/2020
 ms.subservice: canvas-maker
 ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Add picture control in canvas apps
@@ -101,7 +99,7 @@ See the [Image control reference](control-image.md) for **Image** properties.
 
 **[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
-**UseMobileCamera** – Whether to use a mobile camera directly, when available.
+**UseMobileCamera** – Whether to use a mobile camera directly, when available. For Android devices, this property requires the experimental setting **Improved Media Capture** turned on.
 
 **[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 

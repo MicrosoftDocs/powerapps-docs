@@ -1,21 +1,17 @@
 ---
-title: "Duplicate Detection Rule (DuplicateRule) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Duplicate Detection Rule (DuplicateRule) table/entity."
-ms.date: 10/05/2021
-
+title: "Duplicate Detection Rule (DuplicateRule)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Duplicate Detection Rule (DuplicateRule)  table/entity."
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Duplicate Detection Rule (DuplicateRule) table/entity reference
+# Duplicate Detection Rule (DuplicateRule)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -25,23 +21,23 @@ Rule used to identify potential duplicates.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|CompoundUpdateDuplicateDetectionRule|<xref href="Microsoft.Dynamics.CRM.CompoundUpdateDuplicateDetectionRule?text=CompoundUpdateDuplicateDetectionRule Action" />|<xref:Microsoft.Crm.Sdk.Messages.CompoundUpdateDuplicateDetectionRuleRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/duplicaterules<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|PublishDuplicateRule|<xref href="Microsoft.Dynamics.CRM.PublishDuplicateRule?text=PublishDuplicateRule Action" />|<xref:Microsoft.Crm.Sdk.Messages.PublishDuplicateRuleRequest>|
-|PublishXml|<xref href="Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action" />|<xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/duplicaterules<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|UnpublishDuplicateRule|<xref href="Microsoft.Dynamics.CRM.UnpublishDuplicateRule?text=UnpublishDuplicateRule Action" />|<xref:Microsoft.Crm.Sdk.Messages.UnpublishDuplicateRuleRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/duplicaterules(*duplicateruleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH [*org URI*]/api/data/v9.2/duplicaterules(*duplicateruleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|CompoundUpdateDuplicateDetectionRule|<xref:Microsoft.Dynamics.CRM.CompoundUpdateDuplicateDetectionRule?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.CompoundUpdateDuplicateDetectionRuleRequest>|
+|Create|POST [*org URI*]/api/data/v9.2/duplicaterules<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/duplicaterules(*duplicateruleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|PublishDuplicateRule|<xref:Microsoft.Dynamics.CRM.PublishDuplicateRule?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.PublishDuplicateRuleRequest>|
+|PublishXml|<xref:Microsoft.Dynamics.CRM.PublishXml?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/duplicaterules(*duplicateruleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/duplicaterules<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|UnpublishDuplicateRule|<xref:Microsoft.Dynamics.CRM.UnpublishDuplicateRule?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.UnpublishDuplicateRuleRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/duplicaterules(*duplicateruleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -70,12 +66,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DuplicateRuleId](#BKMK_DuplicateRuleId)
 - [ExcludeInactiveRecords](#BKMK_ExcludeInactiveRecords)
 - [IsCaseSensitive](#BKMK_IsCaseSensitive)
+- [IsCustomizable](#BKMK_IsCustomizable)
 - [MatchingEntityName](#BKMK_MatchingEntityName)
 - [Name](#BKMK_Name)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [StatusCode](#BKMK_StatusCode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [UniqueName](#BKMK_UniqueName)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
@@ -142,10 +140,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -165,11 +163,26 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
+
+
+### <a name="BKMK_IsCustomizable"></a> IsCustomizable
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Is Customizable|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscustomizable|
+|RequiredLevel|SystemRequired|
+|Type|ManagedProperty|
 
 
 ### <a name="BKMK_MatchingEntityName"></a> MatchingEntityName
@@ -199,6 +212,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|name|
 |MaxLength|160|
 |RequiredLevel|SystemRequired|
@@ -271,6 +285,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_UniqueName"></a> UniqueName
+
+**Added by**: msft_DupDetectionNewColumnsExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|UniqueName|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|uniquename|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
+
+
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
@@ -294,6 +327,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 - [BaseEntityMatchCodeTable](#BKMK_BaseEntityMatchCodeTable)
 - [BaseEntityTypeCode](#BKMK_BaseEntityTypeCode)
+- [ComponentIdUnique](#BKMK_ComponentIdUnique)
+- [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
 - [CreatedByYomiName](#BKMK_CreatedByYomiName)
@@ -301,6 +336,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [IsManaged](#BKMK_IsManaged)
 - [MatchingEntityMatchCodeTable](#BKMK_MatchingEntityMatchCodeTable)
 - [MatchingEntityTypeCode](#BKMK_MatchingEntityTypeCode)
 - [ModifiedBy](#BKMK_ModifiedBy)
@@ -310,12 +346,16 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [SolutionId](#BKMK_SolutionId)
 - [StateCode](#BKMK_StateCode)
+- [SupportingSolutionId](#BKMK_SupportingSolutionId)
 
 
 ### <a name="BKMK_BaseEntityMatchCodeTable"></a> BaseEntityMatchCodeTable
@@ -379,11 +419,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |55|FileAttachment|File Attachment|
 |60|SystemUserAuthorizationChangeTracker|Internal authorization table to track user authorization changes|
 |61|PrincipalEntityBusinessUnitMap|Internal authorization table to track user authorization changes|
+|72|Record Filter|Record Access Filter|
+|73|EntityRecordFilter|RecordFilter Object Type Codes|
 |78|Virtual Entity Data Provider|Developers can register plug-ins on a data provider to enable data access for virtual entities in the system.|
 |85|Virtual Entity Data Source|Internal entity that stores data source information for all installed providers.|
 |92|Team template|Team template for an entity enabled for automatically created access teams.|
 |99|Social Profile|This entity is used to store social profile information of its associated account and contacts on different social channels.|
 |101|Service Plan|Service Plan|
+|103|Privileges Removal Setting|Privileges Removal Setting|
 |126|Indexed Article|Article indexed for search purposes.|
 |127|Article|Structured content that is part of the knowledge base.|
 |129|Subject|Information regarding subjects available in the system.|
@@ -393,6 +436,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |300|Canvas App|An application built through a canvas-based editing experience.|
 |301|Callback Registration|Callback Registration that stores configuration.|
 |372|Connector|Connector Entity to support Solutioning Integration|
+|373|Connection Instance||
 |380|Environment Variable Definition|Contains information about the settable variable: its type, default value, and etc.|
 |381|Environment Variable Value|Holds the value for the associated EnvironmentVariableDefinition entity.|
 |400|AI Template||
@@ -547,7 +591,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4710|Process Session|Information that is generated when a dialog is run. Every time that you run a dialog, a dialog session is created.|
 |4711|Expander Event|For internal use only. An event that will be expanded into jobs whose executions can proceed in the background.|
 |4712|Process Trigger|Trigger that invoke a rule.|
-|4720|Flow Session|Entity to store the information that is generated when a modern flow or UI flow runs.|
+|4720|Flow Session|Entity to store the information that is generated when a Power Automate Desktop flow runs.|
 |4724|Process Stage|Stage associated with a process.|
 |4725|Business Process Flow Instance|Active path associated with every Business Process Flow instance|
 |4800|Web Wizard|Definition for a Web-based wizard.|
@@ -556,6 +600,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4810|Time Zone Definition|Time zone definition, including name and time zone code.|
 |4811|Time Zone Rule|Definition for time conversion between local time and Coordinated Universal Time (UTC) for a particular time zone at a particular time period.|
 |4812|Time Zone Localized Name|Localized name of the time zone.|
+|5000|Recently Used|Most recently used data table.|
 |7000|System Application Metadata|For internal use only.|
 |7001|User Application Metadata|For internal use only.|
 |7100|Solution|A solution which contains CRM customizations.|
@@ -691,92 +736,220 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10014|Solution Component Count Summary||
 |10015|Solution Component Data Source||
 |10016|Solution Component Count Data Source||
-|10017|Catalog|Entity for cataloging records to make it easier for your customers to find them on portals and through search.|
-|10018|Catalog Assignment|Entity for assigning records to a specific catalog |
-|10019|Internal Catalog Assignment||
-|10020|Custom API|Entity that defines a custom API|
-|10021|Custom API Request Parameter|Entity that defines a request parameter for a custom API|
-|10022|Custom API Response Property|Entity that defines a response property for a custom API |
-|10023|ProvisionLanguageForUser||
-|10024|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
-|10025|Data Lake Folder Permission||
-|10026|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
-|10027|Data Lake Workspace Permission||
-|10028|CascadeGrantRevokeAccessRecordsTracker||
-|10029|CascadeGrantRevokeAccessVersionTracker||
-|10030|RevokeInheritedAccessRecordsTracker||
-|10031|Model-Driven App Element|Associates a model-driven app with its components.|
-|10032|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
-|10033|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
-|10034|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
-|10035|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
-|10036|Organization Setting|Holds the value for the associated Organization Setting Definition.|
-|10037|Setting Definition|Contains Setting Definitions|
-|10038|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
-|10039|Service Plan Mapping|Service Plan Mapping|
-|10041|ApplicationUser|Application User that has non-interactive access to the CDS system|
-|10044|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
-|10045|Flow Machine||
-|10046|Flow Machine Group||
-|10047|ProcessStageParameter||
-|10048|Workflow Binary||
-|10049|Connection Reference||
-|10050|AI Form Processing Document||
-|10051|AI Object Detection Image||
-|10052|AI Object Detection Label||
-|10053|AI Object Detection Bounding Box||
-|10054|AI Object Detection Image Mapping||
-|10056|AI Builder Dataset||
-|10057|AI Builder Dataset File||
-|10058|AI Builder Dataset Record||
-|10059|AI Builder Datasets Container||
-|10060|AI Builder File||
-|10061|AI Builder File Attached Data||
-|10062|Help Page||
-|10063|Tour||
-|10064|BotContent||
-|10065|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
-|10066|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
-|10067|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
-|10073|PDF Setting|PDF Settings to save enabled pdf entities|
-|10074|Activity File Attachment|Attachment entity with data stored in file type attribute|
-|10075|Service Configuration||
-|10076|SLA KPI||
-|10077|Knowledge Federated Article||
-|10078|Knowledge Federated Article Incident||
-|10079|Search provider||
-|10080|Knowledge Article Image||
-|10081|Knowledge Interaction Insight|Knowledge Interaction Insight|
-|10082|Knowledge Search Insight|Knowledge Search Insight|
-|10083|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
-|10084|Knowledge Article Attachment||
-|10085|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
-|10086|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
-|10087|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
-|10088|Knowledge search filter|Allows you to configure and manage filter settings.|
-|10090|Plugin Package||
-|10091|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
-|10092|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
-|10093|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
-|10094|TeamMobileOfflineProfileMembership||
-|10095|UserMobileOfflineProfileMembership||
-|10096|OrganizationDataSyncSubscription||
-|10097|OrganizationDataSyncSubscriptionEntity||
-|10098|NonRelational Data Source||
-|10099|Notification|Notification to be provided to a user.|
-|10100|App Action||
-|10101|Rich Text Attachment|Image or file attached to a rich text field|
-|10102|Search Telemetry|Entity to log telemetry that used to improve search quality|
-|10103|PM Inferred Task||
-|10104|PM Recording||
-|10105|Analysis Component||
-|10106|Analysis Job||
-|10107|Analysis Result||
-|10108|Analysis Result Detail||
-|10109|Solution Health Rule||
-|10110|Solution Health Rule Argument||
-|10111|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
-|10112|Comment|A collaborative comment on a maker artifact|
+|10017|AAD User|Virtual entity that represents AAD user|
+|10018|Staged Entity|Stores staged entity metadata to be processed before fully created.|
+|10019|Catalog|Entity for cataloging records to make it easier for your customers to find them on portals and through search.|
+|10020|Catalog Assignment|Entity for assigning records to a specific catalog |
+|10021|Internal Catalog Assignment||
+|10022|Custom API|Entity that defines a custom API|
+|10023|Custom API Request Parameter|Entity that defines a request parameter for a custom API|
+|10024|Custom API Response Property|Entity that defines a response property for a custom API |
+|10025|ProvisionLanguageForUser||
+|10026|Shared Object|A record that is being shared in a real time collaboration session.|
+|10027|Shared Workspace|References a container that stores real-time collaboration data.|
+|10028|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
+|10029|Data Lake Folder Permission||
+|10030|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
+|10031|Data Lake Workspace Permission||
+|10032|Data Processing configuration||
+|10033|Exported Excel|A Place holder entity to save excel file for each exportretaineddata custom api requests.|
+|10034|Synapse Database|This entity represents an external Synapse database and its associated datalake folder link.|
+|10035|Synapse Link External Table State|Synapse Link external table states|
+|10036|Synapse Link Profile|Synapse Link Profile|
+|10037|Synapse Link Profile Entity|Entities associated with the Synapse Link profile|
+|10038|Synapse Link Profile Entity State|Runtime state of the Synapse Link entity|
+|10039|Synapse Link Schedule|Synapse link schedules|
+|10040|DataflowRefreshHistory||
+|10041|EntityRefreshHistory||
+|10042|Shared Link Setting|Shared Link Setting|
+|10043|CascadeGrantRevokeAccessRecordsTracker||
+|10044|CascadeGrantRevokeAccessVersionTracker||
+|10045|RevokeInheritedAccessRecordsTracker||
+|10046|TdsMetadata||
+|10047|Model-Driven App Element|Associates a model-driven app with its components.|
+|10048|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
+|10049|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
+|10050|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
+|10051|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
+|10052|Organization Setting|Holds the value for the associated Organization Setting Definition.|
+|10053|Setting Definition|Contains Setting Definitions|
+|10054|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
+|10055|Service Plan Mapping|Service Plan Mapping|
+|10057|ApplicationUser|Application User that has non-interactive access to the CDS system|
+|10060|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
+|10061|Workflow Binary||
+|10062|Desktop Flow Module||
+|10063|Flow Machine||
+|10064|Flow Machine Group||
+|10065|Flow Machine Image||
+|10066|Flow Machine Image Version||
+|10067|Flow Machine Network||
+|10068|ProcessStageParameter||
+|10069|Desktop Flow Binary||
+|10070|Connection Reference||
+|10071|Help Page||
+|10072|Tour||
+|10073|BotContent||
+|10074|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
+|10075|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
+|10076|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
+|10083|Comment|A collaborative comment on a maker artifact|
+|10084|PDF Setting|PDF Settings to save enabled pdf entities|
+|10085|Activity File Attachment|Attachment entity with data stored in file type attribute|
+|10086|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10087|Service Configuration||
+|10088|SLA KPI||
+|10089|Knowledge Management Setting|Setup knowledge management for your organization.|
+|10090|Knowledge Federated Article||
+|10091|Knowledge Federated Article Incident||
+|10092|Integrated search provider|Ingest and search files, documents, or articles from data sources outside of your current Dynamics 365 organization with a unified ranking.|
+|10093|Search provider||
+|10094|Knowledge Article Image||
+|10095|Knowledge Configuration|Represents the possible settings used in Knowledge management|
+|10096|Knowledge Interaction Insight|Knowledge Interaction Insight|
+|10097|Knowledge Search Insight|Knowledge Search Insight|
+|10098|Favorite knowledge article|Entity for favorite knowledge articles|
+|10099|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
+|10100|Knowledge Article Attachment||
+|10101|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
+|10102|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10103|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
+|10104|Knowledge search filter|Allows you to configure and manage filter settings.|
+|10106|Plugin Package||
+|10107|PowerfxRule||
+|10108|SupportUserTable||
+|10109|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
+|10110|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
+|10111|Ms Graph Resource To Subscription|For internal use only. The mapping between Ms Graph Resources and Subscriptions.|
+|10112|NonRelational Data Source||
+|10113|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
+|10114|Background Operation||
+|10115|MobileOfflineProfileExtension||
+|10116|MobileOfflineProfileItemFilter||
+|10117|TeamMobileOfflineProfileMembership||
+|10118|UserMobileOfflineProfileMembership||
+|10119|OrganizationDataSyncSubscription||
+|10120|OrganizationDataSyncSubscriptionEntity||
+|10121|OrganizationDataSyncSubscriptionFnoTable||
+|10122|OrganizationDataSyncFnoState|Information regarding data synchronization state|
+|10123|OrganizationDataSyncState|Information regarding data synchronization state|
+|10124|ArchiveCleanupInfo||
+|10125|ArchiveCleanupOperation||
+|10126|BulkArchiveConfig||
+|10127|BulkArchiveFailureDetail||
+|10128|BulkArchiveOperation||
+|10129|BulkArchiveOperationDetail|Holds operation details values for entities for archival|
+|10130|EnableArchivalRequest||
+|10131|MetadataForArchival|Holds  metadata values for entities for retention|
+|10132|ReconciliationEntityInfo||
+|10133|ReconciliationInfo||
+|10134|RetentionCleanupInfo||
+|10135|RetentionCleanupOperation||
+|10136|RetentionConfig||
+|10137|RetentionFailureDetail||
+|10138|RetentionOperation||
+|10139|RetentionOperationDetail|Holds operation details values for entities for long term data retention.|
+|10140|App Insights Metadata|Metadata for App Insights Platform components|
+|10141|Dataflow Template|An entity to store information about dataflow templates|
+|10142|Workflow Action Status|PA Workflows action processing status|
+|10143|Notification|Notification to be provided to a user.|
+|10144|User Rating||
+|10145|Insights Store Data Source||
+|10146|Insights Store Virtual Entity|Insights Store Virtual Entity|
+|10147|RoleEditorLayout||
+|10148|App Action|Contains Modern Command Information|
+|10149|App Action Migration||
+|10150|App Action Rule||
+|10153|Card|Card|
+|10154|Card State Item||
+|10155|Entity link chat configuration||
+|10156|Rich Text Attachment|Image or file attached to a rich text field|
+|10157|Custom Control Extended Setting||
+|10158|SearchRelationshipSettings||
+|10159|Search Telemetry|Entity to log telemetry that used to improve search quality|
+|10160|Virtual Connector Data Source||
+|10161|Virtual Table Column Candidate||
+|10162|AI Builder Feedback Loop||
+|10163|AI Form Processing Document||
+|10164|AI Object Detection Image||
+|10165|AI Object Detection Label||
+|10166|AI Object Detection Bounding Box||
+|10167|AI Object Detection Image Mapping||
+|10169|AI Builder Dataset||
+|10170|AI Builder Dataset File||
+|10171|AI Builder Dataset Record||
+|10172|AI Builder Datasets Container||
+|10173|AI Builder File||
+|10174|AI Builder File Attached Data||
+|10175|PM Analysis History||
+|10176|PM Calendar||
+|10177|PM Calendar Version||
+|10178|PM Inferred Task||
+|10179|PM Process Extended Metadata Version||
+|10180|PM Process Template||
+|10181|PM Process User Settings||
+|10182|PM Process Version||
+|10183|PM Recording||
+|10184|PM Template||
+|10185|PM View||
+|10186|Analysis Component||
+|10187|Analysis Job||
+|10188|Analysis Result||
+|10189|Analysis Result Detail||
+|10190|Solution Health Rule||
+|10191|Solution Health Rule Argument||
+|10192|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
+|10193|Power BI Dataset||
+|10194|Power BI Mashup Parameter||
+|10195|Power BI Report||
+|10327|File Upload||
+|10331|AI Event||
+|10363|Staged Entity Attribute|Stores staged entity attribute metadata to be processed in async.|
+|10364|Shared Workspace Pool|Contains metadata about a container used to store real-time collaboration data. Once claimed, a sharedworkspace record would be created with copied metadata.|
+|10365|Mobile App|Mobile App|
+|10389|Work Queue||
+|10390|Work Queue Item||
+|10391|FxExpression||
+
+
+
+### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Row id unique|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentidunique|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_ComponentState"></a> ComponentState
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Component State|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentstate|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ComponentState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
 
 
 
@@ -887,6 +1060,31 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_IsManaged"></a> IsManaged
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether the solution component is part of a managed solution.|
+|DisplayName|Is Managed|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ismanaged|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsManaged Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_MatchingEntityMatchCodeTable"></a> MatchingEntityMatchCodeTable
 
 |Property|Value|
@@ -948,11 +1146,14 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |55|FileAttachment|File Attachment|
 |60|SystemUserAuthorizationChangeTracker|Internal authorization table to track user authorization changes|
 |61|PrincipalEntityBusinessUnitMap|Internal authorization table to track user authorization changes|
+|72|Record Filter|Record Access Filter|
+|73|EntityRecordFilter|RecordFilter Object Type Codes|
 |78|Virtual Entity Data Provider|Developers can register plug-ins on a data provider to enable data access for virtual entities in the system.|
 |85|Virtual Entity Data Source|Internal entity that stores data source information for all installed providers.|
 |92|Team template|Team template for an entity enabled for automatically created access teams.|
 |99|Social Profile|This entity is used to store social profile information of its associated account and contacts on different social channels.|
 |101|Service Plan|Service Plan|
+|103|Privileges Removal Setting|Privileges Removal Setting|
 |126|Indexed Article|Article indexed for search purposes.|
 |127|Article|Structured content that is part of the knowledge base.|
 |129|Subject|Information regarding subjects available in the system.|
@@ -962,6 +1163,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |300|Canvas App|An application built through a canvas-based editing experience.|
 |301|Callback Registration|Callback Registration that stores configuration.|
 |372|Connector|Connector Entity to support Solutioning Integration|
+|373|Connection Instance||
 |380|Environment Variable Definition|Contains information about the settable variable: its type, default value, and etc.|
 |381|Environment Variable Value|Holds the value for the associated EnvironmentVariableDefinition entity.|
 |400|AI Template||
@@ -1116,7 +1318,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4710|Process Session|Information that is generated when a dialog is run. Every time that you run a dialog, a dialog session is created.|
 |4711|Expander Event|For internal use only. An event that will be expanded into jobs whose executions can proceed in the background.|
 |4712|Process Trigger|Trigger that invoke a rule.|
-|4720|Flow Session|Entity to store the information that is generated when a modern flow or UI flow runs.|
+|4720|Flow Session|Entity to store the information that is generated when a Power Automate Desktop flow runs.|
 |4724|Process Stage|Stage associated with a process.|
 |4725|Business Process Flow Instance|Active path associated with every Business Process Flow instance|
 |4800|Web Wizard|Definition for a Web-based wizard.|
@@ -1125,6 +1327,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4810|Time Zone Definition|Time zone definition, including name and time zone code.|
 |4811|Time Zone Rule|Definition for time conversion between local time and Coordinated Universal Time (UTC) for a particular time zone at a particular time period.|
 |4812|Time Zone Localized Name|Localized name of the time zone.|
+|5000|Recently Used|Most recently used data table.|
 |7000|System Application Metadata|For internal use only.|
 |7001|User Application Metadata|For internal use only.|
 |7100|Solution|A solution which contains CRM customizations.|
@@ -1260,92 +1463,180 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10014|Solution Component Count Summary||
 |10015|Solution Component Data Source||
 |10016|Solution Component Count Data Source||
-|10017|Catalog|Entity for cataloging records to make it easier for your customers to find them on portals and through search.|
-|10018|Catalog Assignment|Entity for assigning records to a specific catalog |
-|10019|Internal Catalog Assignment||
-|10020|Custom API|Entity that defines a custom API|
-|10021|Custom API Request Parameter|Entity that defines a request parameter for a custom API|
-|10022|Custom API Response Property|Entity that defines a response property for a custom API |
-|10023|ProvisionLanguageForUser||
-|10024|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
-|10025|Data Lake Folder Permission||
-|10026|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
-|10027|Data Lake Workspace Permission||
-|10028|CascadeGrantRevokeAccessRecordsTracker||
-|10029|CascadeGrantRevokeAccessVersionTracker||
-|10030|RevokeInheritedAccessRecordsTracker||
-|10031|Model-Driven App Element|Associates a model-driven app with its components.|
-|10032|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
-|10033|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
-|10034|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
-|10035|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
-|10036|Organization Setting|Holds the value for the associated Organization Setting Definition.|
-|10037|Setting Definition|Contains Setting Definitions|
-|10038|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
-|10039|Service Plan Mapping|Service Plan Mapping|
-|10041|ApplicationUser|Application User that has non-interactive access to the CDS system|
-|10044|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
-|10045|Flow Machine||
-|10046|Flow Machine Group||
-|10047|ProcessStageParameter||
-|10048|Workflow Binary||
-|10049|Connection Reference||
-|10050|AI Form Processing Document||
-|10051|AI Object Detection Image||
-|10052|AI Object Detection Label||
-|10053|AI Object Detection Bounding Box||
-|10054|AI Object Detection Image Mapping||
-|10056|AI Builder Dataset||
-|10057|AI Builder Dataset File||
-|10058|AI Builder Dataset Record||
-|10059|AI Builder Datasets Container||
-|10060|AI Builder File||
-|10061|AI Builder File Attached Data||
-|10062|Help Page||
-|10063|Tour||
-|10064|BotContent||
-|10065|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
-|10066|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
-|10067|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
-|10073|PDF Setting|PDF Settings to save enabled pdf entities|
-|10074|Activity File Attachment|Attachment entity with data stored in file type attribute|
-|10075|Service Configuration||
-|10076|SLA KPI||
-|10077|Knowledge Federated Article||
-|10078|Knowledge Federated Article Incident||
-|10079|Search provider||
-|10080|Knowledge Article Image||
-|10081|Knowledge Interaction Insight|Knowledge Interaction Insight|
-|10082|Knowledge Search Insight|Knowledge Search Insight|
-|10083|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
-|10084|Knowledge Article Attachment||
-|10085|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
-|10086|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
-|10087|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
-|10088|Knowledge search filter|Allows you to configure and manage filter settings.|
-|10090|Plugin Package||
-|10091|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
-|10092|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
-|10093|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
-|10094|TeamMobileOfflineProfileMembership||
-|10095|UserMobileOfflineProfileMembership||
-|10096|OrganizationDataSyncSubscription||
-|10097|OrganizationDataSyncSubscriptionEntity||
-|10098|NonRelational Data Source||
-|10099|Notification|Notification to be provided to a user.|
-|10100|App Action||
-|10101|Rich Text Attachment|Image or file attached to a rich text field|
-|10102|Search Telemetry|Entity to log telemetry that used to improve search quality|
-|10103|PM Inferred Task||
-|10104|PM Recording||
-|10105|Analysis Component||
-|10106|Analysis Job||
-|10107|Analysis Result||
-|10108|Analysis Result Detail||
-|10109|Solution Health Rule||
-|10110|Solution Health Rule Argument||
-|10111|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
-|10112|Comment|A collaborative comment on a maker artifact|
+|10017|AAD User|Virtual entity that represents AAD user|
+|10018|Staged Entity|Stores staged entity metadata to be processed before fully created.|
+|10019|Catalog|Entity for cataloging records to make it easier for your customers to find them on portals and through search.|
+|10020|Catalog Assignment|Entity for assigning records to a specific catalog |
+|10021|Internal Catalog Assignment||
+|10022|Custom API|Entity that defines a custom API|
+|10023|Custom API Request Parameter|Entity that defines a request parameter for a custom API|
+|10024|Custom API Response Property|Entity that defines a response property for a custom API |
+|10025|ProvisionLanguageForUser||
+|10026|Shared Object|A record that is being shared in a real time collaboration session.|
+|10027|Shared Workspace|References a container that stores real-time collaboration data.|
+|10028|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
+|10029|Data Lake Folder Permission||
+|10030|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
+|10031|Data Lake Workspace Permission||
+|10032|Data Processing configuration||
+|10033|Exported Excel|A Place holder entity to save excel file for each exportretaineddata custom api requests.|
+|10034|Synapse Database|This entity represents an external Synapse database and its associated datalake folder link.|
+|10035|Synapse Link External Table State|Synapse Link external table states|
+|10036|Synapse Link Profile|Synapse Link Profile|
+|10037|Synapse Link Profile Entity|Entities associated with the Synapse Link profile|
+|10038|Synapse Link Profile Entity State|Runtime state of the Synapse Link entity|
+|10039|Synapse Link Schedule|Synapse link schedules|
+|10040|DataflowRefreshHistory||
+|10041|EntityRefreshHistory||
+|10042|Shared Link Setting|Shared Link Setting|
+|10043|CascadeGrantRevokeAccessRecordsTracker||
+|10044|CascadeGrantRevokeAccessVersionTracker||
+|10045|RevokeInheritedAccessRecordsTracker||
+|10046|TdsMetadata||
+|10047|Model-Driven App Element|Associates a model-driven app with its components.|
+|10048|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
+|10049|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
+|10050|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
+|10051|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
+|10052|Organization Setting|Holds the value for the associated Organization Setting Definition.|
+|10053|Setting Definition|Contains Setting Definitions|
+|10054|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
+|10055|Service Plan Mapping|Service Plan Mapping|
+|10057|ApplicationUser|Application User that has non-interactive access to the CDS system|
+|10060|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
+|10061|Workflow Binary||
+|10062|Desktop Flow Module||
+|10063|Flow Machine||
+|10064|Flow Machine Group||
+|10065|Flow Machine Image||
+|10066|Flow Machine Image Version||
+|10067|Flow Machine Network||
+|10068|ProcessStageParameter||
+|10069|Desktop Flow Binary||
+|10070|Connection Reference||
+|10071|Help Page||
+|10072|Tour||
+|10073|BotContent||
+|10074|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
+|10075|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
+|10076|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
+|10083|Comment|A collaborative comment on a maker artifact|
+|10084|PDF Setting|PDF Settings to save enabled pdf entities|
+|10085|Activity File Attachment|Attachment entity with data stored in file type attribute|
+|10086|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10087|Service Configuration||
+|10088|SLA KPI||
+|10089|Knowledge Management Setting|Setup knowledge management for your organization.|
+|10090|Knowledge Federated Article||
+|10091|Knowledge Federated Article Incident||
+|10092|Integrated search provider|Ingest and search files, documents, or articles from data sources outside of your current Dynamics 365 organization with a unified ranking.|
+|10093|Search provider||
+|10094|Knowledge Article Image||
+|10095|Knowledge Configuration|Represents the possible settings used in Knowledge management|
+|10096|Knowledge Interaction Insight|Knowledge Interaction Insight|
+|10097|Knowledge Search Insight|Knowledge Search Insight|
+|10098|Favorite knowledge article|Entity for favorite knowledge articles|
+|10099|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
+|10100|Knowledge Article Attachment||
+|10101|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
+|10102|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10103|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
+|10104|Knowledge search filter|Allows you to configure and manage filter settings.|
+|10106|Plugin Package||
+|10107|PowerfxRule||
+|10108|SupportUserTable||
+|10109|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
+|10110|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
+|10111|Ms Graph Resource To Subscription|For internal use only. The mapping between Ms Graph Resources and Subscriptions.|
+|10112|NonRelational Data Source||
+|10113|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
+|10114|Background Operation||
+|10115|MobileOfflineProfileExtension||
+|10116|MobileOfflineProfileItemFilter||
+|10117|TeamMobileOfflineProfileMembership||
+|10118|UserMobileOfflineProfileMembership||
+|10119|OrganizationDataSyncSubscription||
+|10120|OrganizationDataSyncSubscriptionEntity||
+|10121|OrganizationDataSyncSubscriptionFnoTable||
+|10122|OrganizationDataSyncFnoState|Information regarding data synchronization state|
+|10123|OrganizationDataSyncState|Information regarding data synchronization state|
+|10124|ArchiveCleanupInfo||
+|10125|ArchiveCleanupOperation||
+|10126|BulkArchiveConfig||
+|10127|BulkArchiveFailureDetail||
+|10128|BulkArchiveOperation||
+|10129|BulkArchiveOperationDetail|Holds operation details values for entities for archival|
+|10130|EnableArchivalRequest||
+|10131|MetadataForArchival|Holds  metadata values for entities for retention|
+|10132|ReconciliationEntityInfo||
+|10133|ReconciliationInfo||
+|10134|RetentionCleanupInfo||
+|10135|RetentionCleanupOperation||
+|10136|RetentionConfig||
+|10137|RetentionFailureDetail||
+|10138|RetentionOperation||
+|10139|RetentionOperationDetail|Holds operation details values for entities for long term data retention.|
+|10140|App Insights Metadata|Metadata for App Insights Platform components|
+|10141|Dataflow Template|An entity to store information about dataflow templates|
+|10142|Workflow Action Status|PA Workflows action processing status|
+|10143|Notification|Notification to be provided to a user.|
+|10144|User Rating||
+|10145|Insights Store Data Source||
+|10146|Insights Store Virtual Entity|Insights Store Virtual Entity|
+|10147|RoleEditorLayout||
+|10148|App Action|Contains Modern Command Information|
+|10149|App Action Migration||
+|10150|App Action Rule||
+|10153|Card|Card|
+|10154|Card State Item||
+|10155|Entity link chat configuration||
+|10156|Rich Text Attachment|Image or file attached to a rich text field|
+|10157|Custom Control Extended Setting||
+|10158|SearchRelationshipSettings||
+|10159|Search Telemetry|Entity to log telemetry that used to improve search quality|
+|10160|Virtual Connector Data Source||
+|10161|Virtual Table Column Candidate||
+|10162|AI Builder Feedback Loop||
+|10163|AI Form Processing Document||
+|10164|AI Object Detection Image||
+|10165|AI Object Detection Label||
+|10166|AI Object Detection Bounding Box||
+|10167|AI Object Detection Image Mapping||
+|10169|AI Builder Dataset||
+|10170|AI Builder Dataset File||
+|10171|AI Builder Dataset Record||
+|10172|AI Builder Datasets Container||
+|10173|AI Builder File||
+|10174|AI Builder File Attached Data||
+|10175|PM Analysis History||
+|10176|PM Calendar||
+|10177|PM Calendar Version||
+|10178|PM Inferred Task||
+|10179|PM Process Extended Metadata Version||
+|10180|PM Process Template||
+|10181|PM Process User Settings||
+|10182|PM Process Version||
+|10183|PM Recording||
+|10184|PM Template||
+|10185|PM View||
+|10186|Analysis Component||
+|10187|Analysis Job||
+|10188|Analysis Result||
+|10189|Analysis Result Detail||
+|10190|Solution Health Rule||
+|10191|Solution Health Rule Argument||
+|10192|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
+|10193|Power BI Dataset||
+|10194|Power BI Mashup Parameter||
+|10195|Power BI Report||
+|10327|File Upload||
+|10331|AI Event||
+|10363|Staged Entity Attribute|Stores staged entity attribute metadata to be processed in async.|
+|10364|Shared Workspace Pool|Contains metadata about a container used to store real-time collaboration data. Once claimed, a sharedworkspace record would be created with copied metadata.|
+|10365|Mobile App|Mobile App|
+|10389|Work Queue||
+|10390|Work Queue Item||
+|10391|FxExpression||
 
 
 
@@ -1456,6 +1747,23 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_OverwriteTime"></a> OverwriteTime
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|For internal use only.|
+|DisplayName|Record Overwrite Time|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|overwritetime|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
+
+
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
@@ -1494,12 +1802,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns duplicate detection rule.|
 |DisplayName||
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -1530,6 +1854,21 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Lookup|
 
 
+### <a name="BKMK_SolutionId"></a> SolutionId
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the associated solution.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|solutionid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
 ### <a name="BKMK_StateCode"></a> StateCode
 
 |Property|Value|
@@ -1550,6 +1889,21 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |1|Active|2|Active|
 
 
+
+### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|supportingsolutionid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
 <a name="onetomany"></a>
 
 ## One-To-Many Relationships
@@ -1564,7 +1918,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_DuplicateRule_Annotation"></a> DuplicateRule_Annotation
 
-Same as annotation table [DuplicateRule_Annotation](annotation.md#BKMK_DuplicateRule_Annotation) Many-To-One relationship.
+Same as the [DuplicateRule_Annotation](annotation.md#BKMK_DuplicateRule_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1579,7 +1933,7 @@ Same as annotation table [DuplicateRule_Annotation](annotation.md#BKMK_Duplicate
 
 ### <a name="BKMK_DuplicateRule_SyncErrors"></a> DuplicateRule_SyncErrors
 
-Same as syncerror table [DuplicateRule_SyncErrors](syncerror.md#BKMK_DuplicateRule_SyncErrors) Many-To-One relationship.
+Same as the [DuplicateRule_SyncErrors](syncerror.md#BKMK_DuplicateRule_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1594,7 +1948,7 @@ Same as syncerror table [DuplicateRule_SyncErrors](syncerror.md#BKMK_DuplicateRu
 
 ### <a name="BKMK_DuplicateRule_DuplicateRuleConditions"></a> DuplicateRule_DuplicateRuleConditions
 
-Same as duplicaterulecondition table [DuplicateRule_DuplicateRuleConditions](duplicaterulecondition.md#BKMK_DuplicateRule_DuplicateRuleConditions) Many-To-One relationship.
+Same as the [DuplicateRule_DuplicateRuleConditions](duplicaterulecondition.md#BKMK_DuplicateRule_DuplicateRuleConditions) many-to-one relationship for the [duplicaterulecondition](duplicaterulecondition.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1609,7 +1963,7 @@ Same as duplicaterulecondition table [DuplicateRule_DuplicateRuleConditions](dup
 
 ### <a name="BKMK_DuplicateRule_DuplicateBaseRecord"></a> DuplicateRule_DuplicateBaseRecord
 
-Same as duplicaterecord table [DuplicateRule_DuplicateBaseRecord](duplicaterecord.md#BKMK_DuplicateRule_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [DuplicateRule_DuplicateBaseRecord](duplicaterecord.md#BKMK_DuplicateRule_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1638,34 +1992,34 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_duplicaterulebase_createdby"></a> lk_duplicaterulebase_createdby
 
-See systemuser Table [lk_duplicaterulebase_createdby](systemuser.md#BKMK_lk_duplicaterulebase_createdby) One-To-Many relationship.
+See the [lk_duplicaterulebase_createdby](systemuser.md#BKMK_lk_duplicaterulebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_duplicaterule_createdonbehalfby"></a> lk_duplicaterule_createdonbehalfby
 
-See systemuser Table [lk_duplicaterule_createdonbehalfby](systemuser.md#BKMK_lk_duplicaterule_createdonbehalfby) One-To-Many relationship.
+See the [lk_duplicaterule_createdonbehalfby](systemuser.md#BKMK_lk_duplicaterule_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_SystemUser_DuplicateRules"></a> SystemUser_DuplicateRules
 
-See systemuser Table [SystemUser_DuplicateRules](systemuser.md#BKMK_SystemUser_DuplicateRules) One-To-Many relationship.
+See the [SystemUser_DuplicateRules](systemuser.md#BKMK_SystemUser_DuplicateRules) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_DuplicateRules"></a> team_DuplicateRules
 
-See team Table [team_DuplicateRules](team.md#BKMK_team_DuplicateRules) One-To-Many relationship.
+See the [team_DuplicateRules](team.md#BKMK_team_DuplicateRules) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_duplicaterule_modifiedonbehalfby"></a> lk_duplicaterule_modifiedonbehalfby
 
-See systemuser Table [lk_duplicaterule_modifiedonbehalfby](systemuser.md#BKMK_lk_duplicaterule_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_duplicaterule_modifiedonbehalfby](systemuser.md#BKMK_lk_duplicaterule_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_duplicaterulebase_modifiedby"></a> lk_duplicaterulebase_modifiedby
 
-See systemuser Table [lk_duplicaterulebase_modifiedby](systemuser.md#BKMK_lk_duplicaterulebase_modifiedby) One-To-Many relationship.
+See the [lk_duplicaterulebase_modifiedby](systemuser.md#BKMK_lk_duplicaterulebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_BusinessUnit_DuplicateRules"></a> BusinessUnit_DuplicateRules
 
-See businessunit Table [BusinessUnit_DuplicateRules](businessunit.md#BKMK_BusinessUnit_DuplicateRules) One-To-Many relationship.
+See the [BusinessUnit_DuplicateRules](businessunit.md#BKMK_BusinessUnit_DuplicateRules) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.duplicaterule?text=duplicaterule EntityType" />

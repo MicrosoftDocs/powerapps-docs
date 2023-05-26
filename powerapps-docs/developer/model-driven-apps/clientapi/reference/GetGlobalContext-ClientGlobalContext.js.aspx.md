@@ -1,18 +1,16 @@
 ---
 title: "GetGlobalContext function and ClientGlobalContext.js.aspx in model-driven apps| MicrosoftDocs"
-ms.date: 02/24/2022
-
-ms.topic: "conceptual"
-ms.assetid: b58e6173-e3cd-4a3b-b39a-334c295503ec
-author: "Nkrb"
+description: "Describes the GetGlobalContext function and ClientGlobalContext.js.aspx used with web resources."
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: conceptual
 ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # GetGlobalContext function and ClientGlobalContext.js.aspx (Client API reference)
 
@@ -21,7 +19,7 @@ Use the **GetGlobalContext** function when programming with [web resources](../.
 To get access to the **GetGlobalContext** function in your HTML web resource, include a reference to **ClientGlobalContext.js.aspx**.
 
 > [!IMPORTANT]
-> Including a reference to **ClientGlobalContext.js.aspx** does not make the **Xrm** object available in HTML web resources. Therefore, scripts containing `Xrm.*` methods aren’t supported in HTML web resources. `parent.Xrm.*` will work if the HTML web resource is loaded in a form container. However, for other places, such as loading an HTML web resource as part of the SiteMap, `parent.Xrm.*` also won’t work.
+> Including a reference to **ClientGlobalContext.js.aspx** does not make the **Xrm** object available in HTML web resources. Therefore, scripts containing `Xrm.*` methods aren't supported in HTML web resources. `parent.Xrm.*` will work if the HTML web resource is loaded in a form container. However, for other places, such as loading an HTML web resource as part of the SiteMap, `parent.Xrm.*` also won't work.
 
 ## GetGlobalContext function
 

@@ -1,20 +1,17 @@
 ---
 title: "Understand the execution context (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about the data that is passed to your plug-in when it is executed." 
-ms.custom: ""
-ms.date: 03/12/2021
+ms.date: 04/03/2022
+author: divkamath
+ms.author: dikamath
 ms.reviewer: pehecke
-
 ms.topic: "article"
-author: JimDaly
 ms.subservice: dataverse-developer
-ms.author: pehecke
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Understand the execution context
@@ -189,12 +186,7 @@ If you need to introduce a shared variable when you call an API, use the keyword
 
 This value will be accessible in the Shared Variable collection using the `tag` key. Once set, this value cannot be changed, it is immutable.
 
-For information about how to set this see the following topics:
-
-- [Add a Shared Variable from the Web API](webapi/compose-http-requests-handle-errors.md#add-a-shared-variable-from-the-web-api)
-- [Add a Shared Variable from the Organization Service](org-service/use-messages.md#add-a-shared-variable-from-the-organization-service)
-
-
+More information: [Add a shared variable to the plugin execution context](optional-parameters.md#add-a-shared-variable-to-the-plugin-execution-context).
 
 ## Entity images
 

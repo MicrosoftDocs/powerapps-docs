@@ -4,7 +4,6 @@ description: "Learn how to create or edit a quick create form"
 ms.custom: ""
 ms.date: 08/28/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,12 +16,8 @@ ms.assetid: 68ca9059-cc5a-45e7-88bd-cc57186bbb48
 caps.latest.revision: 18
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create or edit model-driven app quick create forms
 
@@ -50,29 +45,25 @@ Custom activity tables that support quick create forms can be enabled, and it is
   
 > [!NOTE]
 >  - The table must have the **Enable quick create forms** option enabled for the quick create form to be displayed. 
->  - The table and the quick create form must be added to your app.
+>  - The table must be added to your app.
 >  - Some columns, such as the CREATEDON column, aren't available to add to a quick create form.  
   
 ### How to create a quick create form
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-2.  Select **Solutions**, open the solution you want, select **Tables**, select the table, and then select the **Forms** tab.  
-
-3.  On the toolbar, select **Add form** > **Quick Create Form**.  
-  
-4.  In the form designer, drag any columns from the **Column Explorer** into the sections on the form.  
-  
-5.  When you are finished, select **Save**.  
-  
-6.  Select **Publish** to see the new form in the application.  
+1. Select **Solutions** on the left navigation pane, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Tables**, select the table, and then select the **Forms** area.  
+1. On the toolbar, select **Add form** > **Quick Create Form**.  
+1. In the form designer, drag any columns from the **Column Explorer** into the sections on the form.  
+1. When you are finished, select **Save**.  
+1. Select **Publish** to see the new form in the application.  
   
 <a name="BKMK_EditQuickCreate"></a>   
 ## Edit a quick create form
 
- While quick create forms support form scripts and business rules, their purpose is different from main forms and they don't support all the capabilities of main forms. Quick create forms always have one section with three columns. You can't add more sections or columns.
+While quick create forms support form scripts and business rules, their purpose is different from main forms and they don't support all the capabilities of main forms. Quick create forms always have one section with three columns. You can't add more sections or columns.
   
- The following controls can't be added to quick create forms:  
+The following controls can't be added to quick create forms:  
   
 -   Subgrids  
   
@@ -91,20 +82,17 @@ If you add a composite column to a quick create form, it will be displayed as se
 ### To edit a quick create form  
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-
-2. Select **Solutions**, open the solution you want, select **Tables**, select the table, and then select the **Forms** tab.
-
-3. In the form list, select a form where the form **Type** is **Quick Create**.  
+1. Select **Solutions** on the left navigation pane, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Tables**, select the table, and then select the **Forms** area.
+1. In the form list, select a form where the form **Type** is **Quick Create**.  
+1. Drag any columns from the **Column Explorer** into the sections in the form.  
   
-4.  Drag any columns from the **Column Explorer** into the sections in the form.  
-  
-     See [Configure event handlers](configure-event-handlers-legacy.md) for information about editing event handlers for form scripts.  
+   See [Configure event handlers](configure-event-handlers-legacy.md) for information about editing event handlers for form scripts.  
 
-    :::image type="content" source="media/create-and-edit-a-model-driven-form/create-quick-create-form.gif" alt-text="Default model-driven app site map":::
+   :::image type="content" source="media/create-and-edit-a-model-driven-form/create-quick-create-form.gif" alt-text="Default model-driven app site map":::
 
-5.  When you're finished, select **Save**.  
-  
-6.  Select **Publish** to see the modified form in the application.  
+1. When you're finished, select **Save**.  
+1. Select **Publish** to see the modified form in the application.  
 
 ## Enable Quick Create Form property behavior for activities
 
@@ -159,7 +147,7 @@ The social pane is a special case because it doesn't use the **Enable quick crea
 ### Solution import Allow Quick Create value behavior
 
 When a solution from version 8.2 is imported, regardless of the value of the **Enable quick create forms** property in the solution, the following tables will be reset to the default form display value. Also, the main form will display: task, phone call, email, and appointment. In this situation, you'll need to reset the **Enable quick create forms** option back to *enabled* for those activity tables after the import.
- 
+
 If there is a customization made in a version 9.0 solution to tables where **Enable quick create forms** is enabled, the value will not change after import.  However, if the **Enable quick create forms** option has been set to *disabled* for the task, phone call, email, and appointment tables, the value will be overwritten to enabled. In this situation, the **Enable quick create forms** option needs to be reset back to disabled for those activity tables after the import.
 
 > [!IMPORTANT]

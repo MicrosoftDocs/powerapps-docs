@@ -1,17 +1,14 @@
 ---
 title: setValue | Microsoft Docs
 description: Set value for the column.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+ms.date: 04/21/2023
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+  - JimDaly
 ---
 
 # setValue
@@ -20,7 +17,7 @@ ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 
 ## Available for
 
-Model-driven and canvas apps
+Model-driven and canvas [experimental](../../../../maker/canvas-apps/working-with-experimental-preview.md#feature-roll-out-stages) apps
 
 ## Syntax
 
@@ -28,14 +25,18 @@ Model-driven and canvas apps
 
 ## Parameters
 
-| Parameter Name | Type     | Required | Description               |
-| -------------- | -------- | -------- | ------------------------- |
-| `columnName`   | `string` | Yes      | Name of the column. |
-| `value`        | `string  | Date     | number | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record. |
+|Parameter Name |Type| Required | Description|
+|----|----|----|----|
+| `columnName`|`string`| Yes| The logical name of the column.|
+| `value`|`string`<br />`Date`<br />`number`<br />`number[]`<br />`boolean`<br />[EntityReference](./../entityreference.md)<br />`EntityReference[]`<br />[FileObject](./../fileobject.md)<br />[ImageObject](./../imageobject.md)| Yes      | New value for the record. |
 
 ## Return Value
 
 Type: `Promise`
+
+## Limitations
+
+Canvas [experimental](../../../../maker/canvas-apps/working-with-experimental-preview.md#feature-roll-out-stages) apps do not support `Decimal Number` and `Floating Point Number` types.
 
 ### Related topics
 

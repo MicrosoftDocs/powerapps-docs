@@ -1,19 +1,16 @@
 ---
 title: "getActiveProcess (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getActiveProcess method.
-ms.date: 04/19/2021
-
-ms.topic: "reference"
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: a977a250-b79f-4c88-a6af-776350b110f7
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # getActiveProcess (Client API reference)
 
@@ -27,13 +24,13 @@ search.app:
 
 ## Return Value
 
-**Type**: Process. 
+**Type**: Process | null
 
-**Description**: The currently active process. See [Process methods](../../formContext-data-process.md#process-methods) for the methods to access the properties of the process returned.
+**Description**: The currently active process or null if there is no active process. See [Process methods](../../formContext-data-process.md#process-methods) for the methods to access the properties of the process returned.
 
 ### Related topics
 
-[setActiveProcess)](setActiveProcess.md)
+[setActiveProcess](setActiveProcess.md)
 
 [formContext.data.process](../../formContext-data-process.md)
  

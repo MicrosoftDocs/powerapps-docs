@@ -6,15 +6,13 @@ author: mattgon
 ms.subservice: troubleshoot
 ms.topic: overview
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/23/2021
 ms.author: austinj
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - mattgon
   - maustinjones
 ---

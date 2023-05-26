@@ -2,7 +2,6 @@
 title: Create a custom table that has components with Power Apps | Microsoft Docs
 description: Topic with step-by-step instructions for creating and configuring a table to use with a Power Apps app.
 author: Mattp123
-manager: kvivek
 
 ms.component: cds
 ms.topic: tutorial
@@ -11,9 +10,6 @@ ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create a custom table that has components in Power Apps
@@ -38,12 +34,9 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 ## Create a custom table
 
-1. On the left navigation pane expand **Data**, select **Tables**, and then select **New table**.
-
-    > [!div class="mx-imgBorder"] 
-    > ![New table.](media/create-custom-entity/create-new-entity.png)
-
-2. In the right pane, enter the following values, and then select **Create**.
+1. On the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the command bar select **New table**.
+1. In the right pane, enter the following values, and then select **Create**.
 
     - **Display name**: *Pet* 
     - **Description**: *Custom table to track pet services*
@@ -52,7 +45,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. Open the **Pet** table that was created in the previous section.
 
-1. On the **Columns** tab, select the **Pet** column.
+1. Select **Columns**, and select the **Pet** column.
 
 1. In the right pane make the following changes to the **Display name** column: 
 
@@ -64,7 +57,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. Select **Done**.
 
-1. On the **Columns** tab on the table designer toolbar select **Add column**. On the **Column properties** pane, enter or select the following values and options.
+1. On the **Columns** area on the table designer toolbar select **Add column**. On the **Column properties** pane, enter or select the following values and options.
     - **Display name**. *Species*
     - **Data type**. *Choice*
     - **Choice**. *New choice*
@@ -100,7 +93,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 ## Add a relationship
 
-1. Select the **Relationships** tab. Then, on the table designer toolbar, select **Add relationship**, and then select **Many-to-one**.
+1. Select the **Relationships** area. Then, on the table designer toolbar, select **Add relationship**, and then select **Many-to-one**.
 
 1. On the right pane, in the **Related** list select **Account**.
 
@@ -108,13 +101,11 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. Select **Save table**.
 
-  Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns on the **Columns** tab.
-  > [!div class="mx-imgBorder"]
-  > ![Account lookup column.](media/create-custom-entity/account-lookup-field.png)
+  Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns in the **Columns** area.
 
 ## Customize a view
 
-1. Select the **Views** tab, and then open the **Active Pets** view. If you don't see the **Active Pets** view, change the filter on the command bar from **Default** to **All**.
+1. Select the **Views** area, and then open the **Active Pets** view. If you don't see the **Active Pets** view, change the filter on the command bar from **Default** to **All**.
 
 1. On the view designer **Table columns** left pane, select the following columns to add them to the view.
 
@@ -137,9 +128,10 @@ Skip this step if you only want to use the Pet table in a canvas app.
 
 1. Select **Back** to close the view designer and return to Power Apps.
 
-1. On the left navigation pane, expand **Data**, select **Tables**, and then select **Pet**.
+1. On the left navigation pane, select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Pet**.
 
-1. In the **Pet** table, select the **Forms** tab, and then select **Information** next to the **Main** form type to open the form designer.
+1. In the **Pet** table, select the **Forms** area, and then select **Information** next to the **Main** form type to open the form designer.
 
     > [!div class="mx-imgBorder"] 
     > ![Edit main form.](media/create-custom-entity/main-form-edit.png)

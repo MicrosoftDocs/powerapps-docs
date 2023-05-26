@@ -1,7 +1,7 @@
 ---
 title: Overview of building canvas apps
 description: Get an introduction to designing and building canvas apps in Power Apps so that users can manage line-of-business data in a browser or on mobile devices.
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
 ms.custom: 
@@ -13,12 +13,10 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 searchScope:
   - "Power Apps"
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 # What are canvas apps?
 
@@ -47,7 +45,7 @@ After you've gained some experience generating an app automatically and customiz
 ## Share and run an app
 When you finish the app and save it to the cloud, [share it with others](share-app.md) in your organization. Specify which users or groups can run the app and whether they can also customize and share it with additional people in the organization.
 
-Run your own apps (and any apps shared with you) on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](/powerapps/maker/canvas-apps/run-canvas-and-model-apps-on-mobile).
+Run your own apps (and any apps shared with you) on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](/powerapps/mobile/run-powerapps-on-mobile).
 
 ## Learn more
 - Ready to convert your ideas into an app? Start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
@@ -57,7 +55,7 @@ Run your own apps (and any apps shared with you) on Windows, in a [web browser](
 
 ## Share your experience
 * Read and post in the [Power Apps Community](https://aka.ms/powerapps-community), where anyone who uses Power Apps can post a question for others to answer. Before you post a question, search the community to see whether your question has already been answered.
-* Submit an idea for how we can improve Power Apps in [Power Apps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
+* Submit an idea for how we can improve Power Apps in [Power Apps Ideas Forum](https://ideas.powerapps.com/).
 * Create a [support ticket](https://powerapps.microsoft.com/support/pro/) to get technical assistance. If you're a Power Apps administrator for your organization, you can also open a support ticket in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).
 
 ## Next steps

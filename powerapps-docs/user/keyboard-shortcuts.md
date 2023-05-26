@@ -1,22 +1,19 @@
 ---
 title: "Use keyboard shortcuts in Power Apps| MicrosoftDocs"
 description: How to use keyboard shortcuts
-author: mduelae
-manager: kvivek
-
+author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 09/30/2021
+ms.date: 04/12/2023
+ms.contributors:
+- yingchin
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 
 ---
 # Use keyboard shortcuts in Power Apps
@@ -25,6 +22,15 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 
 > [!NOTE]
 > The keyboard shortcuts described here refer to the United States keyboard layout. Keys on other keyboard layouts might not correspond exactly to the keys on a US keyboard. 
+
+## Global shortcuts 
+
+|Type | Shortcut key | Description |
+|----------------------|-------------------------|-----------------------------|
+| General | F2 | Activates the flyouts inlcuding toast notifcations. |
+| Landmark | Ctrl+F6 | Navigates you through the landmarks of a page in clockwise order. Remembers the last selected item in each landmark and will navigate to that last item. |
+| Landmark | Ctrl+F6+Shift | Navigates you through the landmarks of a page in counter clockwise order. Remembers the last selected item in each landmark and will navigate to that last item. |
+| General | Ctrl+[  or Ctrl+Shift+[ | Set the focus on first focusable element of the main page| 
 
 ## Form shortcuts
 
@@ -57,7 +63,7 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 |Move to the previous option, option group, or column| Shift+Tab |
 |Move between options in an open list, or between options in a group of options|Arrow keys|
 |Go to the Command Bar| N/A |
-|Go to the landmark section of a page| Ctrl+\[ |
+|Go to the landmark section of a page| Ctrl+HOME   |
 
 
 ## Email 

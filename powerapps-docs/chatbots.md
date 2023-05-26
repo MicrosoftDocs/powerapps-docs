@@ -2,7 +2,7 @@
 title: Create chatbots from Power Apps | Microsoft Docs
 description: Provides information about how to create chatbots from Power Apps.
 author: iaanw
-
+ms.subservice: common
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/26/2020

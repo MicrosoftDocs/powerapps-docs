@@ -1,18 +1,14 @@
 ---
-title: "Solution table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Solution table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Solution table/entity."
-ms.date: 10/05/2021
-
+ms.date: 05/23/2023
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Solution table/entity reference
@@ -25,16 +21,16 @@ A solution which contains CRM customizations.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|CloneAsPatch|<xref href="Microsoft.Dynamics.CRM.CloneAsPatch?text=CloneAsPatch Action" />|<xref:Microsoft.Crm.Sdk.Messages.CloneAsPatchRequest>|
-|CloneAsSolution|<xref href="Microsoft.Dynamics.CRM.CloneAsSolution?text=CloneAsSolution Action" />|<xref:Microsoft.Crm.Sdk.Messages.CloneAsSolutionRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/solutions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/solutions(*solutionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|DeleteAndPromote|<xref href="Microsoft.Dynamics.CRM.DeleteAndPromote?text=DeleteAndPromote Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/solutions(*solutionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/solutions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/solutions(*solutionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|CloneAsPatch|<xref:Microsoft.Dynamics.CRM.CloneAsPatch?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.CloneAsPatchRequest>|
+|CloneAsSolution|<xref:Microsoft.Dynamics.CRM.CloneAsSolution?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.CloneAsSolutionRequest>|
+|Create|POST [*org URI*]/api/data/v9.2/solutions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/solutions(*solutionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|DeleteAndPromote|<xref:Microsoft.Dynamics.CRM.DeleteAndPromote?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/solutions(*solutionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/solutions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.2/solutions(*solutionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -267,6 +263,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [FileId](#BKMK_FileId)
 - [InstalledOn](#BKMK_InstalledOn)
 - [IsApiManaged](#BKMK_IsApiManaged)
 - [IsInternal](#BKMK_IsInternal)
@@ -401,6 +398,19 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_FileId"></a> FileId
+
+|Property|Value|
+|--------|-----|
+|Description|File Id for the blob url used for file storage.|
+|DisplayName|File Id|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|fileid|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_InstalledOn"></a> InstalledOn
 
 |Property|Value|
@@ -432,10 +442,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -455,10 +465,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -478,10 +488,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -501,10 +511,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -834,7 +844,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_solution_solutioncomponent"></a> solution_solutioncomponent
 
-Same as solutioncomponent table [solution_solutioncomponent](solutioncomponent.md#BKMK_solution_solutioncomponent) Many-To-One relationship.
+Same as the [solution_solutioncomponent](solutioncomponent.md#BKMK_solution_solutioncomponent) many-to-one relationship for the [solutioncomponent](solutioncomponent.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -849,7 +859,7 @@ Same as solutioncomponent table [solution_solutioncomponent](solutioncomponent.m
 
 ### <a name="BKMK_solution_parent_solution"></a> solution_parent_solution
 
-Same as solution table [solution_parent_solution](solution.md#BKMK_solution_parent_solution) Many-To-One relationship.
+Same as the [solution_parent_solution](solution.md#BKMK_solution_parent_solution) many-to-one relationship for the [solution](solution.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -864,7 +874,7 @@ Same as solution table [solution_parent_solution](solution.md#BKMK_solution_pare
 
 ### <a name="BKMK_Solution_SyncErrors"></a> Solution_SyncErrors
 
-Same as syncerror table [Solution_SyncErrors](syncerror.md#BKMK_Solution_SyncErrors) Many-To-One relationship.
+Same as the [Solution_SyncErrors](syncerror.md#BKMK_Solution_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -879,7 +889,7 @@ Same as syncerror table [Solution_SyncErrors](syncerror.md#BKMK_Solution_SyncErr
 
 ### <a name="BKMK_FK_CanvasApp_Solution"></a> FK_CanvasApp_Solution
 
-Same as canvasapp table [FK_CanvasApp_Solution](canvasapp.md#BKMK_FK_CanvasApp_Solution) Many-To-One relationship.
+Same as the [FK_CanvasApp_Solution](canvasapp.md#BKMK_FK_CanvasApp_Solution) many-to-one relationship for the [canvasapp](canvasapp.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -894,7 +904,7 @@ Same as canvasapp table [FK_CanvasApp_Solution](canvasapp.md#BKMK_FK_CanvasApp_S
 
 ### <a name="BKMK_solution_fieldpermission"></a> solution_fieldpermission
 
-Same as fieldpermission table [solution_fieldpermission](fieldpermission.md#BKMK_solution_fieldpermission) Many-To-One relationship.
+Same as the [solution_fieldpermission](fieldpermission.md#BKMK_solution_fieldpermission) many-to-one relationship for the [fieldpermission](fieldpermission.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -909,7 +919,7 @@ Same as fieldpermission table [solution_fieldpermission](fieldpermission.md#BKMK
 
 ### <a name="BKMK_solution_fieldsecurityprofile"></a> solution_fieldsecurityprofile
 
-Same as fieldsecurityprofile table [solution_fieldsecurityprofile](fieldsecurityprofile.md#BKMK_solution_fieldsecurityprofile) Many-To-One relationship.
+Same as the [solution_fieldsecurityprofile](fieldsecurityprofile.md#BKMK_solution_fieldsecurityprofile) many-to-one relationship for the [fieldsecurityprofile](fieldsecurityprofile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -924,7 +934,7 @@ Same as fieldsecurityprofile table [solution_fieldsecurityprofile](fieldsecurity
 
 ### <a name="BKMK_solution_privilege"></a> solution_privilege
 
-Same as privilege table [solution_privilege](privilege.md#BKMK_solution_privilege) Many-To-One relationship.
+Same as the [solution_privilege](privilege.md#BKMK_solution_privilege) many-to-one relationship for the [privilege](privilege.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -939,7 +949,7 @@ Same as privilege table [solution_privilege](privilege.md#BKMK_solution_privileg
 
 ### <a name="BKMK_solution_role"></a> solution_role
 
-Same as role table [solution_role](role.md#BKMK_solution_role) Many-To-One relationship.
+Same as the [solution_role](role.md#BKMK_solution_role) many-to-one relationship for the [role](role.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -969,35 +979,35 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_solution_createdby"></a> lk_solution_createdby
 
-See systemuser Table [lk_solution_createdby](systemuser.md#BKMK_lk_solution_createdby) One-To-Many relationship.
+See the [lk_solution_createdby](systemuser.md#BKMK_lk_solution_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_solution_modifiedby"></a> lk_solution_modifiedby
 
-See systemuser Table [lk_solution_modifiedby](systemuser.md#BKMK_lk_solution_modifiedby) One-To-Many relationship.
+See the [lk_solution_modifiedby](systemuser.md#BKMK_lk_solution_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_solution_parent_solution"></a> solution_parent_solution
 
-See solution Table [solution_parent_solution](solution.md#BKMK_solution_parent_solution) One-To-Many relationship.
+See the [solution_parent_solution](solution.md#BKMK_solution_parent_solution) one-to-many relationship for the [solution](solution.md) table/entity.
 
 ### <a name="BKMK_solution_configuration_webresource"></a> solution_configuration_webresource
 
-See webresource Table [solution_configuration_webresource](webresource.md#BKMK_solution_configuration_webresource) One-To-Many relationship.
+See the [solution_configuration_webresource](webresource.md#BKMK_solution_configuration_webresource) one-to-many relationship for the [webresource](webresource.md) table/entity.
 
 ### <a name="BKMK_lk_solutionbase_modifiedonbehalfby"></a> lk_solutionbase_modifiedonbehalfby
 
-See systemuser Table [lk_solutionbase_modifiedonbehalfby](systemuser.md#BKMK_lk_solutionbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_solutionbase_modifiedonbehalfby](systemuser.md#BKMK_lk_solutionbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_solution"></a> organization_solution
 
-See organization Table [organization_solution](organization.md#BKMK_organization_solution) One-To-Many relationship.
+See the [organization_solution](organization.md#BKMK_organization_solution) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_solutionbase_createdonbehalfby"></a> lk_solutionbase_createdonbehalfby
 
-See systemuser Table [lk_solutionbase_createdonbehalfby](systemuser.md#BKMK_lk_solutionbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_solutionbase_createdonbehalfby](systemuser.md#BKMK_lk_solutionbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_publisher_solution"></a> publisher_solution
 
-See publisher Table [publisher_solution](publisher.md#BKMK_publisher_solution) One-To-Many relationship.
+See the [publisher_solution](publisher.md#BKMK_publisher_solution) one-to-many relationship for the [publisher](publisher.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -1007,10 +1017,10 @@ Relationship details provided where the Solution table is the first table in the
 
 ### <a name="BKMK_package_solution"></a> package_solution
 
-See package Table [package_solution](package.md#BKMK_package_solution) Many-To-Many Relationship.
+See the [package_solution](package.md#BKMK_package_solution) many-to-many relationship for the [package](package.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.solution?text=solution EntityType" />

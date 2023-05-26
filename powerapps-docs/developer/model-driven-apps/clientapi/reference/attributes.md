@@ -1,26 +1,22 @@
 ---
 title: "Columns in model-driven apps| MicrosoftDocs"
 description: "Learn about working with columns in model-driven apps using client API."
-ms.date: 10/31/2018
-
-ms.topic: "reference"
+author: HemantGaur
+ms.author: hemantg
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: 32e8d1d0-4093-4588-a517-2930eec34dce
-author: "Nkrb"
-ms.subservice: mda-developer
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # Columns (Client API reference)
 
 Columns contain data in the model-driven apps form or grids. Use the `formContext.data.entity.attributes` collection or the `formContext.getAttribute` shortcut method to access a collection of columns. For more information about collections, see [Collections (Client API reference)](collections.md). 
 
-To access a column within the collection, you pass either the name (string) or the index value (number) of the column as an argument to the method. For example: `formContext.getAttribute(arg)`
+To access a column within the collection, you pass either the name (string) or the index value (number) of the column as an argument to the method. For example: `formContext.getAttribute(arg)`. If no argument is specified, it will return a collection of all attributes on the form.
 
 Columns are categorized by type. You can determine the type of the column by using the [getAttributeType](attributes/getAttributeType.md) method. Certain column methods are only available for specific types of columns.
 

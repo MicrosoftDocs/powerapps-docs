@@ -5,16 +5,14 @@ author: lancedMicrosoft
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
 # Connect to Twitter from Power Apps
@@ -88,7 +86,7 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 
        `Twitter.MyFollowers()`  
        `Twitter.MyFollowers({maxResults:3})`
-   * To show the another user's followers, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
+   * To show another user's followers, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:  
 
        `Twitter.Followers( *TwitterHandle* )`
 

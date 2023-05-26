@@ -2,27 +2,20 @@
 title: "Guidelines and troubleshooting when working with embedded canvas apps | MicrosoftDocs"
 description: Understand the recommended ways to work with embedded canvas apps in Power Apps
 ms.custom: ""
-ms.date: 09/02/2021
+ms.date: 07/21/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"
 author: "RichdiMSFT"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Guidelines and troubleshooting for embedded canvas apps
-
-
 
 ## Guidance on embedding canvas apps
 
@@ -36,7 +29,7 @@ This article provides guidance on working with embedded canvas apps as well as h
 -	We recommend that you have a single embedded canvas app for each form tab.
 -	When adding an embedded canvas app to a model-driven form always use a required column that is guaranteed to have a value. If your column does not have a value your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
 -	Publishing a model-driven form does not also publish the embedded canvas app.
-     - Embedded canvas apps must be published independent of the host model-driven form. More information: [Publish an app](../canvas-apps/save-publish-app.md#publish-an-app).
+     - Embedded canvas apps must be published independent of the host model-driven form. More information: [Publish an app](../canvas-apps/save-publish-app.md).
 -	If opening Power Apps Studio to create or edit an embedded canvas app via the **Customize** button in the canvas app control properties is blocked due to a web browser pop-up blocker, you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
 -	Embedded canvas apps are not displayed when creating a new row since they need a row context to be passed to them.
 -	The ModelDrivenFormIntegration.Item object is read-only.
@@ -87,13 +80,20 @@ To access columns of a related table, makers can use either of the expressions l
 
 ### Embedded canvas app doesn’t render correctly
 
+You can build your canvas app to be [responsive](../../maker/canvas-apps/build-responsive-apps.md), which refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly. Depending on whether your app is built to be responsive or not, we recommend different settings to ensure that your canvas app may render correctly within the field on the model-driven app form. If you are experiencing additional whitespace or scroll bars around your canvas app, we recommend checking the following in your app.
+
+For responsive apps:
+- Disable the **Scale to fit** option. This will allow your app to scale according to the dimensions and properties you have set for your app.
 An embedded canvas app may not render correctly within the field on the model-driven app form, such as additional whitespace or scroll bars around the canvas app.
-This issue can occur when one or both of the following are true.
 
-- The **Scale to fit** option isn’t enabled with the canvas app. 
-- The **App Name** property value is missing or is incorrectly defined in the embedded canvas app control.  This might occur when the model-driven app and canvas app have been imported as a solution into another Dataverse environment.
+For non-responsive apps:
+- We recommend that you enable the **Scale to fit** option. This will help the app to resize to fit the available space.
 
-Instead of creating apps that scale to the space available, you can create apps that are **responsive** to the form factor.  [Learn more about responsive apps](../../maker/canvas-apps/build-responsive-apps.md)
+In both scenarios, ensure that the **App Name** property value is set and correctly defined in the embedded canvas app control.
+
+### Embedded canvas app doesn't respect height
+
+The **Form field height** property is not respected by the canvas app component. When embedded, the dimensions of the canvas app component respect the aspect ratio set on the canvas app. Because the aspect ratio is fixed, the height of the canvas app component is calculated relative to the width of the app. The width of the app is determined based on the horizontal space available in the model-driven app. If you would like to make adjustments to the height of the canvas app component, we recommend [customizing the aspect ratio](../../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md) on your canvas app. Note that to customize the aspect ratio, the app must be in tablet layout.
 
 #### Enable scale to fit
 

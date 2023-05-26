@@ -1,13 +1,16 @@
 ---
 title: "Device API component | Microsoft Docs"
 description: "This sample component showcases Device API capabilities of the Power Apps control framework."
-ms.custom: ""
-manager: kkaul
-ms.date: 03/07/2022
-ms.author: jdaly
-ms.reviewer: jdaly
-ms.topic: "article"
 author: lesyk
+ms.author: vilesyk
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+contributors:
+ - JimDaly
 ---
 
 # Implementing a Device API component

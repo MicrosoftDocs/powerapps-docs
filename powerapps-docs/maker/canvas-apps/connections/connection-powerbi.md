@@ -2,19 +2,16 @@
 title: Connect to Power BI from Power Apps
 description: Learn about connecting to Power BI from Power Apps.
 author: lancedMicrosoft
-
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 10/12/2016
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
 # Connect to Power BI from Power Apps
@@ -30,8 +27,8 @@ This topic shows you how to use the Power BI connection in an app, and lists the
 
 ## Prerequisites
 * [Sign up](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
-* Add the Power BI [connection](https://powerapps.microsoft.com/tutorials/add-manage-connections/)
-* Create an app from a [template](https://powerapps.microsoft.com/tutorials/get-started-test-drive/), from [data](https://powerapps.microsoft.com/tutorials/get-started-create-from-data/), or from [scratch](https://powerapps.microsoft.com/tutorials/get-started-create-from-blank/)
+* Add the Power BI [connection](../add-manage-connections.md)
+* Create an app from a [template](../get-started-test-drive.md), from [data](../get-started-create-from-data.md), or from [scratch](../get-started-create-from-blank.md)
 
 ## Use the Power BI connection in your app
 ### List the alerts that you've set up in the Power BI service

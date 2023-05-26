@@ -5,7 +5,6 @@ keywords: App designer; site map designer; my apps
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 10/26/2021
 
 ms.topic: article
@@ -14,8 +13,6 @@ applies_to:
 ms.assetid: 26c79c20-2987-476e-983a-406e0db13034
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 
 ---
 
@@ -29,7 +26,7 @@ At a fundamental level, model-driven app making consists of the following stages
 
 |Stage|Purpose|
 |-----|-------|
-|Modeling business data|To ensure that the data constructed in the correct way to address the business problem.
+|Modeling business data|To ensure that the data is constructed in the correct way to address the business problem.
 |Defining business processes|To help users to update the tables and complete their work efficiently and accurately.
 |Composing the app|To create the app and select the tables, and elements of tables relevant to the app.
 |Configuring security roles|To ensure that app users can only interact with data relevant to their roles.
@@ -92,7 +89,7 @@ These actions cover Create, Read, Write, Delete, Append, Append To, Assign and S
 For more information on understanding, creating and configuring security roles go to:
 
 - [Power Platform documentation](/power-platform/admin/security-roles-privileges)
-- [Microsoft Learn module](/learn/modules/get-started-security-roles/)
+- [Get started with security roles in Dataverse](/training/modules/get-started-security-roles/)
 
 ## Sharing the app
 

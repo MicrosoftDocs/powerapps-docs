@@ -2,9 +2,8 @@
 title: "Create and edit global choices for Microsoft Dataverse using solution explorer | MicrosoftDocs"
 description: Learn how to create and edit choices using solution explorer
 ms.custom: ""
-ms.date: 05/26/2018
+ms.date: 01/12/2023
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -14,23 +13,16 @@ applies_to:
   - "PowerApps"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 author: "Mattp123"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create and edit global choices for Microsoft Dataverse using solution explorer
 
+Solution explorer provides one way to create and edit global choices for Dataverse.
 
-
-Solution explorer provides one way to Create and edit global choices for Dataverse.
-
-The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
-- [Create and edit global choices for Dataverse](create-edit-global-option-sets.md)
-- [Create a choice ](custom-picklists.md)
+> [!NOTE]
+> There's a better way to create global choices using the modern experience. More information: [Create a choice](../data-platform/custom-picklists.md)
 
 ## Open solution explorer
 

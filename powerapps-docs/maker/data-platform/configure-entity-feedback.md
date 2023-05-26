@@ -17,12 +17,8 @@ ms.assetid: 5b25cf09-d43b-4165-9eaa-7549f4855e7c
 caps.latest.revision: 13
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Configure a table for feedback/ratings
 
@@ -89,7 +85,7 @@ The feedback table form has the following columns:
 Optionally, you can create a rollup column that's based on the feedback or ratings for the table, and then add it to the form of the table you're enabling for feedback.
 
 For example, you can provide a running total of all feedback records created for a given record.
-1. Open the table that contains the form with the feeback grid and select the **Columns** tab.
+1. Open the table that contains the form with the feedback grid and select **Columns**.
 1. Select **Add column**, and then select the following properties:
    - **Display name**: *Total feedback*
    - **Data type**: **Whole Number**

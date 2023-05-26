@@ -2,11 +2,10 @@
 title: "Example: Create and customize a model-driven app form | MicrosoftDocs"
 description: "Learn how to create and customize forms in model-driven Power Apps."
 ms.date: 07/05/2021
-
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
-ms.author: v-roryneary
+ms.author: matp
 ms.reviewer: matp
 ---
 # Create and customize a model-driven app form
@@ -22,8 +21,8 @@ Main forms have a default three-column layout. Model-driven form fields and comp
 ## Create and configure a form
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Select **Data** > **Tables** > **Account**.
-1. Select the **Forms** tab.
+1. Select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
+1. Open the **Account** table, and then select the **Forms** area.
 1. Select **Add Form** from the command bar, and then select **Main Form**.
 1. The form designer opens to enable you to configure the properties for the form.
 

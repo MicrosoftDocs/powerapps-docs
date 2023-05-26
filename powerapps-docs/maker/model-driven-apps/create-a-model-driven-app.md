@@ -1,17 +1,14 @@
 ---
 title: "Create a model-driven app using the account page"
 description: "Learn how to create a model-driven app that has the account table added to it."
-ms.date: 07/05/2021
-
+ms.date: 12/15/2022
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
 ms.author: matp
 ms.reviewer: matp
 ---
-# Create a model-driven app that has an account table page (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create a model-driven app that has an account table page
 
 Model-driven app design is a component-focused approach to app development. Model-driven apps are especially well suited for process driven apps that are data dense and make it easy for users to move between related records. For example, if you are building an app to manage a complex process, such as onboarding new employees, managing a sales process, or member relationships in an organization like a bank, a model-driven app is a great choice. Model-driven apps also allow you to quickly build an app by combining components like forms, views, charts, and dashboards.
 
@@ -33,7 +30,8 @@ Select the environment you want, or go to the [Power Platform admin center](http
 
 We recommend creating your model-driven app from a solution. A solution is a package that can contain Dataverse tables, forms, views, apps, flows, and other components. By building your model driven-app in a solution, you can easily move it to other environments or preserve a copy in your source control repository.
 
-1. Select **Solutions** on the left navigation pane, and then select **New solution**. More information: [Create a solution](/powerapps/maker/data-platform/create-solution).
+1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **New solution**. More information: [Create a solution](/powerapps/maker/data-platform/create-solution).
 
 1. Enter a **Display name** for your solution, such as **Power Apps Training**. Next, you add the account table that will be included in your model-driven app.
 
@@ -46,10 +44,6 @@ We recommend creating your model-driven app from a solution. A solution is a pac
    Now that you have a solution and have added the account table to it, you're ready to create a model-driven app.
 
 1. In your solution, select **New**, select **App**, and then select **Model-driven app.**
-
-1. Select **Modern app designer**, and then select **Create**
-
-   :::image type="content" source="media/create-a-model-driven-app/create-your-model-driven-app-1.png" alt-text="Use the modern app designer to create a model-driven app.":::
 
 1. Enter a name for the app, such as *My new custom app2*, and then select **Create**.
 
@@ -66,17 +60,16 @@ Next, you add a new page to the model-driven app.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-2.png" alt-text="Select a table-based view and form.":::
 
-1. Select the **Account** table, and then select **Add**.
+1. Select table such as **Contact**, and then select **Add**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-3.png" alt-text="Select the account table to add it to the app.":::
 
-   The account form and view appear in the pages menu.
+   The contact form and view appear in the pages menu.
 
-1. Select **Account view**, and then select **Manage views**.
-
-   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view.":::
-
-1. Select the following views: **Active Accounts**, **All Accounts**, **My Active Accounts, Account Advanced** **Find**, and **Account Lookup**, and then select **Save**.
+1. Select **Contact views** to display the table views and charts right pane:
+   - To remove a view, under **In this app** next to the view your want to remove select **...** > **Remove**. 
+   - To add a view, under **Not in this app** next to the view you want to add select **...** > **+ Add**.
+   - To edit a view, next to the view select **...** > **Edit** or **Edit in new tab**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app.":::
 

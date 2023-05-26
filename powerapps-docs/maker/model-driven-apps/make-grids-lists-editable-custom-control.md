@@ -2,9 +2,8 @@
 title: "Make model-driven app views and grids (lists) editable by using the Editable Grid custom control with Power Apps | MicrosoftDocs"
 description: "Learn how to use the editable grid custom control"
 ms.custom: ""
-ms.date: 04/09/2020
+ms.date: 04/19/2023
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,78 +16,66 @@ caps.latest.revision: 8
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Make model-driven app views editable using the editable grid control
 
-
-
-By default, users can't enter data directly using the read-only view control for views and subgrids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and subgrids whether they're using a web app, tablet, or phone.  
+By default, users can't enter data directly using the read-only view control for views and subgrids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and subgrids whether they're using a web app or tablet. This editing experience is not available on phones.
   
  ![Editable grid examples.](media/editable-grid-example.png "Editable grid examples")  
   
- When editable grids are enabled through the editable grid control, users can edit the data inside most types of columns, including basic Lookup columns and choices.  This avoids the need to navigate to a form.
-
-With editable grids, users can do rich in-line editing directly from views and subgrids whether they're using a web app, tablet, or phone.  
-  
- ![Editable grid examples.](media/editable-grid-example.png "Editable grid examples")  
-  
-When editable grids are enabled through the editable grid control, users can edit the data inside most types of columns, including basic lookup columns and choices.  This avoids the need to navigate to a form.
+When editable grids are enabled through the editable grid control, users can edit the data inside most types of columns, including basic Lookup columns and choices.  This avoids the need to navigate to a form.
 
 ## Make main grids editable  
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**.  This opens solution explorer in a new browser window.
+1. Select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the toolbar select **Switch to classic**.  This opens solution explorer in a new browser window.
+1. In the **Entities** list (these represent Dataverse tables), open the table you want, select the **Controls** tab, and then select **Add Control**.  
   
-2. In the **Entities** list (these represent Dataverse tables), open the table you want, select the **Controls** tab, and then select **Add Control**.  
+   ![Add Editable Grids custom control.](media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
   
-     ![Add Editable Grids custom control.](media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
+1. In the **Add Control** dialog box, select **Editable Grid**, and then select **Add**.  
   
-3. In the **Add Control** dialog box, select **Editable Grid**, and then select **Add**.  
-  
-4. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  As a minimum in most instances select **Web**.
-  
-     ![Editable Grid row with form factor selection.](media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")
+1. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s). As a minimum in most instances, select **Web**. At runtime, users will be able to toggle between editable grids and read-only grids.
 
    > [!NOTE]
-   >  At runtime, users can toggle between editable grids and read-only grids.  
-      
-5.  To add a lookup, in the **Editable Grid** option group, select **Add Lookup**, and then in the **Configure Property "Add Lookup"** dialog box:  
+   >  Since the editing experience is not available on the **Phone** form factor, if this control is configured for phones, you will see a read-only version of the list control.
   
-    1.  In the **Available Views** list, select the view to add the lookup to (for example, select **My Active Accounts**).  
+   ![Editable Grid row with form factor selection.](media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")
+
+1. To add a lookup, in the **Editable Grid** option group, select **Add Lookup**, and then in the **Configure Property "Add Lookup"** dialog box:  
   
-    2.  In the **Available Columns** list, select the lookup column to add (for example, select **Primary Contact**).  
+   1. In the **Available Views** list, select the view to add the lookup to (for example, select **My Active Accounts**).  
   
-    3.  In the **Default View** list, select the data source for the lookup column.  
+   1. In the **Available Columns** list, select the lookup column to add (for example, select **Primary Contact**).  
   
-    4.  If you want to limit the rows displayed, select the **Only show rows where** check box, and then select your criteria from the list, and then select **OK**.  
+   1. In the **Default View** list, select the data source for the lookup column.  
   
-         ![Add lookup in Editable Grid control.](media/add-lookup-in-editable-grid-control.png "Add lookup in Editable Grid control")  
-     
-6.  If you have a nested grid, select the pencil button for **Nested grid view**, and then select the table and view for the nested grid. For the **Nested grid parent ID** select the relationship for the tables. For example, the **ParentAccountID** column connects the **Account** and **Contact** tables.  
+   1. If you want to limit the rows displayed, select the **Only show rows where** check box, and then select your criteria from the list, and then select **OK**.  
   
-    > [!NOTE]
-    >  Nested grids are only available for phones and tablets, not the web.  
+       ![Add lookup in Editable Grid control.](media/add-lookup-in-editable-grid-control.png "Add lookup in Editable Grid control")  
+
+1. If you have a nested grid, select the pencil button for **Nested grid view**, and then select the table and view for the nested grid. For the **Nested grid parent ID** select the relationship for the tables. For example, the **ParentAccountID** column connects the **Account** and **Contact** tables.  
   
-7.  If you don't want to allow the user to group data by any column in the view (you want to save space, for example), in the **Group by Column** row, select the pencil button, and then in the **Configure Property "Group by Column"** dialog box, select **Disabled**, and then select **OK**.  
+   > [!NOTE]
+   >  Nested grids are only available for phones and tablets, not the web.  
   
-    > [!TIP]
-    >  This is mostly useful for sub-grids on forms.  
+1. If you don't want to allow the user to group data by any column in the view (you want to save space, for example), in the **Group by Column** row, select the pencil button, and then in the **Configure Property "Group by Column"** dialog box, select **Disabled**, and then select **OK**.  
   
-8.  If you want to add JavaScript events, select the **Events** tab, and then select the appropriate tables, columns, and events. More information: [Developer Documentation: Use editable grids](../../developer/model-driven-apps/use-editable-grids.md)
+   > [!TIP]
+   >  This is mostly useful for sub-grids on forms.  
   
-     ![Add events in Editable Grid control.](media/add-events-in-editable-grid-control.png "Add events in Editable Grid control")  
+1. If you want to add JavaScript events, select the **Events** tab, and then select the appropriate tables, columns, and events. More information: [Developer Documentation: Use editable grids](../../developer/model-driven-apps/use-editable-grids.md)
   
-9. To save your work, select **Save** on the action bar.  
+   ![Add events in Editable Grid control.](media/add-events-in-editable-grid-control.png "Add events in Editable Grid control")  
   
-10. When you're ready to make changes available to your team, select **Publish** on the action bar.  
+1. To save your work, select **Save** on the action bar.  
   
-11. To test your changes, go to the view you specified in step 5, and then make some in-line editing changes.  
+1. When you're ready to make changes available to your team, select **Publish** on the action bar.  
+  
+1. To test your changes, go to the view you specified in the previous step, and then make some in-line editing changes.  
   
 ## Make a subgrid on a form editable
 
@@ -97,9 +84,9 @@ When editable grids are enabled through the editable grid control, users can edi
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
-2. Select **Solutions**, open the solution you want. 
+2. Select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
-3. Select the **Table** within the solution, and then navigate to the **Forms** tab.  Select the **Main Form** that contains the subgrid.
+3. Select the **Table** within the solution, and then select the **Forms** area.  Select the **Main Form** that contains the subgrid.
 
 4. Select **Switch to Classic**. This will open a new tab in your browser.
   
@@ -135,8 +122,6 @@ When editable grids are enabled through the editable grid control, users can edi
   
 - Pagination. 
   
-- Saving changes from one session to another for grouping, sorting, filtering, pagination, and moving and resizing columns.
-  
 - Lookup configuration.
   
 - Calculated columns and rollup columns.
@@ -155,17 +140,31 @@ When editable grids are enabled through the editable grid control, users can edi
 |---------|---------|---------|
 |Account<br /><br /> Appointment<br /><br /> Bookable Resource<br /><br /> Bookable Resource Booking<br /><br /> Bookable Resource Booking Header<br /><br /> Bookable Resource Category<br /><br /> Bookable Resource Category Assn<br /><br /> Bookable Resource Characteristic<br /><br /> Bookable Resource Group<br /><br /> Booking Status<br /><br /> Case<br /><br /> Category<br /><br /> Characteristic<br /><br /> Competitor<br /><br /> Contact<br /><br /> Email<br /><br /> Entitlement<br /><br /> Feedback<br /><br /> Invoice<br /><br /> Knowledge Article<br /><br /> Knowledge Article Views<br /><br /> Knowledge Base Record<br /><br /> Lead<br /><br /> Opportunity<br /><br /> Order<br /><br /> Phone Call<br /><br /> Price List<br /><br /> Product<br /><br /> Queue<br /><br /> Quote<br /><br /> Rating Model<br /><br /> Rating Value<br /><br /> SLA KPI Instance<br /><br /> Social Activity<br /><br /> Social Profile<br /><br /> Sync Error<br /><br /> Task<br /><br /> Team<br /><br /> User|Activity<br /><br /> Attachment<br /><br /> Channel Access Profile Rule Item<br /><br /> Competitor Address<br /><br /> Connection<br /><br /> Connection Role<br /><br /> Email Signature<br /><br /> Email Template<br /><br /> Expired Process<br /><br /> Invoice Product<br /><br /> Knowledge Article Incident<br /><br /> Lead To Opportunity Sales<br /><br /> Process<br /><br /> Mailbox<br /><br /> New Process<br /><br /> Note<br /><br /> Opportunity Product<br /><br /> Opportunity Sales Process<br /><br /> Order Product<br /><br /> Organization<br /><br /> Phone to Case Process<br /><br /> Price List Item<br /><br /> Queue Item<br /><br /> Quote Product<br /><br /> Sharepoint Document<br /><br /> Translation Process|Campaign<br /><br /> Campaign Activity<br /><br /> Campaign Response<br /><br /> Channel Access Profile<br /><br /> Channel Access Profile Rule<br /><br /> Contract<br /><br /> Entitlement Template<br /><br /> External Party<br /><br /> Fax<br /><br /> Letter<br /><br /> Marketing List<br /><br /> Position<br /><br /> Quick Campaign<br /><br /> Recurring Appointment<br /><br /> Sales Literature<br /><br /> SLA|  
 
-## Data types that aren't editable in an editable grid
+## Limitations
+
+### Data types that aren't editable in an editable grid
 
 The following data types aren't editable in editable grids: Customer and Partylist Lookup columns; Composite (address) columns; State/Status columns; Lookup table-related columns (for example, the Account table includes a contact lookup, where the Contact column is editable but the EmailAddress(Contact) column is not editable). 
 
-## Group by views work on client side only
+### Group by views work on client side only
 
 Grouping behavior works only on the client side and does not span pages. Group by is a client only function and works only on one page of data. Group by does not show you all options based on your complete data set on the server. Group by shows grouping only on the current page. You can disable the grouping by using the property on custom control configuration. More information: [Make main grids editable](#make-main-grids-editable)
 
-## Business rules work only if conditional column is a column on the grid
+### Inline grid modifications are not persisted
+
+Changes made to the structure of the editable grid from within the grid, such as column resizing, colum reordering, grouping, filtering, and sorting, will be reset the next time the user visits the page. These types of changes are not saved across sessions or within views.  
+
+### Business rules work only if conditional column is a column on the grid
 
 Business rules on an editable grid are supported only if the conditional column is also a column on the grid. If the column is not a column the business rules won’t work. Verify that each column referenced in the business rule is also included on the form. Note that business rules on an editable grid do not fire if the editable grid is configured on a dashboard.
+
+### Editable grids don't work on phones
+
+Based on customer feedback, we have removed the editable grid experience from phones. When using a editable grid on a phone, you will see a read-only version of the list control.
+
+### Duplicate rows in a dataset might not be displayed in the grid
+
+If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find.
 
 ## Next steps
 

@@ -1,19 +1,16 @@
 ---
 title: "getObject (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getObject method.
-ms.date: 04/19/2021
-
-ms.topic: "reference"
+author: chmoncay
+ms.author: chmoncay
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
-ms.assetid: ad68d177-3715-468e-b4af-8cf9b3c77799
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+  - JimDaly
 ---
 # getObject (Client API reference)
 
