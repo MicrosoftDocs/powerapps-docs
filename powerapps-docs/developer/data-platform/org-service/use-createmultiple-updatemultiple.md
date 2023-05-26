@@ -79,11 +79,14 @@ More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview
 
 Keep these limitations in mind when using `CreateMultiple` and `UpdateMultiple` messages.
 
-### Limited to certain tables
+### Limited to certain standard tables
 
-Currently, `CreateMultiple` and `UpdateMultiple` messages aren't available for all tables. These messages will be enabled for all tables that support individual `Create` and `Update` messages in the coming months.
+Currently, `CreateMultiple` and `UpdateMultiple` messages aren't available for all standard tables. These messages will be enabled for all standard tables that support individual `Create` and `Update` messages in the coming months.
 
-You can test whether individual tables support these messages today using the examples below.
+> [!NOTE]
+> All elastic tables support these messages.
+
+You can test whether individual standard tables support these messages today using the examples below.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -196,9 +199,12 @@ The default timeout set using ServiceClient is 4 minutes, which is long for any 
 
 ### No continue on error
 
-The `ExecuteMultiple` message supports the option that continues processing requests even when one or more requests fail. Because `CreateMultiple` and `UpdateMultiple` messages achieve performance improvements by unifying all operations in a single transaction, it isn't possible to support the continue-on-error behaviors.
+The `ExecuteMultiple` message supports the option that continues processing requests even when one or more requests fail. Because `CreateMultiple` and `UpdateMultiple` messages with standard tables achieve performance improvements by unifying all operations in a single transaction, it isn't possible to support the continue-on-error behaviors.
 
-You should use `CreateMultiple` and `UpdateMultiple` messages when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that allows the set of operations to fall back to use `ExecuteMultiple` if `CreateMultiple` and `UpdateMultiple` messages fail. If the success rate for your initial try is low, this strategy will result in worse performance. Only use this fall back strategy when most operations are expected to succeed.
+> [!NOTE]
+> Elastic tables do not have transactions, so partial success is possible. More information: [Bulk operations with elastic tables (Preview)](../bulk-operations-elastic-tables.md)
+
+You should use `CreateMultiple` and `UpdateMultiple` messages with standard tables when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that allows the set of operations to fall back to use `ExecuteMultiple` if `CreateMultiple` and `UpdateMultiple` messages fail. If the success rate for your initial try is low, this strategy will result in worse performance. Only use this fall back strategy when most operations are expected to succeed.
 
 ### .NET SDK only
 
