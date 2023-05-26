@@ -1,5 +1,5 @@
 ---
-title: Add screens to a card (preview)
+title: Add screens to a card
 description: Learn how to add screens to your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to
@@ -10,9 +10,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add screens to a card (preview)
-
-[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
+# Add screens to a card
 
 Cards can have multiple screens, each presenting a different interface for a specific scenario or purpose. For example, a polling card might have a screen to collect user responses and a screen to show the current aggregated poll results. Use buttons to let users switch between screens or use Power Fx formulas for more complex scenarios. Insert, modify, and remove them in the [card designer](../designer-overview.md).
 

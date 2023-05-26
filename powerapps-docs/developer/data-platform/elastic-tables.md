@@ -1,5 +1,5 @@
 ---
-title: "Elastic tables (Preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
 ms.date: 05/23/2022
@@ -13,14 +13,11 @@ contributors:
  - JimDaly
 ---
 
-# Elastic tables (Preview)
+# Elastic tables (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!IMPORTANT]
-> This is a preview feature.
-> 
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
 
 <!-- 
 Maker topics to refer to from https://github.com/MicrosoftDocs/powerapps-docs-pr/pull/8083
@@ -37,6 +34,10 @@ https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/types-of
 
 -->
 Dataverse elastic tables are powered by Azure Cosmos DB. They automatically scale horizontally to handle large amounts of data and high levels of throughput with low latency. Elastic tables are suitable for applications with unpredictable, spiky or rapidly growing workloads.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## When to use elastic tables
 

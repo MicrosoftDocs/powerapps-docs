@@ -1,31 +1,25 @@
 ---
-title: "Use CreateMultiple and UpdateMultiple (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use CreateMultiple and UpdateMultiple (Microsoft Dataverse) (preview) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the CreateMultiple and UpdateMultiple messages to optimize bulk data operations." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/24/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 ms.topic: article
-search.audienceType: 
-  - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
 ---
 
-# Use CreateMultiple and UpdateMultiple (Preview)
+# Use CreateMultiple and UpdateMultiple (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!IMPORTANT]
-> This is a preview feature.
-> 
-> [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
-
 The `CreateMultiple` and `UpdateMultiple` messages are optimized for performance when performing multiple create or update operations on the same table. This optimization is useful in cases where you're loading or updating records in bulk.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
 
 ## Usage
 

@@ -3,7 +3,7 @@ title: Write plug-ins for CreateMultiple and UpdateMultiple | Microsoft Docs
 description: How to write plug-ins for CreateMultiple and UpdateMultiple messages.
 author: divkamath
 ms.topic: article
-ms.date: 05/20/2023
+ms.date: 05/25/2023
 ms.subservice: dataverse-developer
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -14,13 +14,14 @@ search.app:
   - D365CE
 contributors:
   - JimDaly
+  - hakhemic
 ---
 # Write plug-ins for CreateMultiple and UpdateMultiple (Preview)
 
 > [!NOTE]
 > Not all tables currently support using the `CreateMultiple` and `UpdateMultiple` messages. These messages are currently being deployed and all tables that currently support `Create` and `Update` will support `CreateMultiple` and `UpdateMultiple` in the coming months. More information: [Use CreateMultiple and UpdateMultiple (Preview)](org-service/use-createmultiple-updatemultiple.md)
 
-You should write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages with tables where records may need to be created or updated in bulk, or when performance in creating and updating large numbers of records is important. This is true for just about every table that stores business data.
+You should write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages with tables where records may need to be created or updated in bulk, or when performance in creating and updating large numbers of records is important. Just about every table that stores business data may need to be created or updated in bulk.
 
 If you have existing plug-ins for the `Create` and `Update` messages for tables like these, you should migrate them to use `CreateMultiple` and `UpdateMultiple` instead.
 
@@ -47,6 +48,7 @@ If you're using the `PluginBase` class that is the standard when initializing pl
 > [!IMPORTANT]
 > When configuring entity images for plug-in steps for `CreateMultiple` and `UpdateMultiple`, it is very important that you carefully select which column data to include in the entity image. Do not select the default option of all columns. This data is multiplied by the number of entities passed in the `Targets` parameter and contributes to the total message size that will be sent to the sandbox.
 > More information:
+>
 > - [Define entity images](register-plug-in.md#define-entity-images)
 > - [Message size limits](org-service/use-createmultiple-updatemultiple.md#message-size-limits)
 
@@ -61,7 +63,6 @@ For a plug-in registered on `Update` or `UpdateMultiple`, you can specify **Filt
 > For `UpdateMultiple` you can't assume that every entity in the `Targets` parameter contains attributes used in a filter.
 
 More information: [Include filtering attributes with plug-in registration](best-practices/business-logic/include-filtering-attributes-plugin-registration.md)
-
 
 ## Example
 
@@ -222,6 +223,57 @@ else
 ```
 
 ---
+
+## Handling Exceptions
+
+All errors that occur within plug-ins should be returned using [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException). More information: [Use InvalidPluginExecutionException in plug-ins and workflow activities](best-practices/business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities.md)
+
+When you throw an exception for steps registered on the `CreateMultiple` and `UpdateMultiple` messages, you should specify which record caused the plug-in to fail. To capture this information, you need to use one of these constructors:
+
+- [InvalidPluginExecutionException(String, Dictionary<String,String>)](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String}))
+- [InvalidPluginExecutionException(OperationStatus, String, Dictionary<String,String>)](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(Microsoft.Xrm.Sdk.OperationStatus,System.String,System.Collections.Generic.Dictionary{System.String,System.String}))
+
+These constructors allow you to add values to the [InvalidPluginExecutionException.ExceptionDetails](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.ExceptionDetails) property, which can't be set directly.
+
+Use the constructor's `Dictionary<String,String>` `exceptionDetails` parameter to include information about the failed record and any other relevant information.
+
+### Set exception details
+
+For the `UpdateMultiple` message, your code iterates through the [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) [Targets](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.Targets) property and applies logic to each [Entity](xref:Microsoft.Xrm.Sdk.Entity). When some logic fails, you can pass the [Id](xref:Microsoft.Xrm.Sdk.Entity.Id) of the record to the `InvalidPluginExecutionException` constructor in the following way:
+
+```csharp
+// in plugin code
+foreach (Entity entity in Targets)
+{
+   // [...] When an error occurs:
+   var exceptionDetails = new Dictionary<string, string>();
+   exceptionDetails.Add("failedRecordId", (string)entity.Id);
+   throw new InvalidPluginExecutionException("This is an error message.", exceptionDetails);
+}
+```
+
+For `CreateMultiple`, unless the primary key value is set, you will need to choose some other unique identifier. Any other information relevant to the failure may be added as string key-value pairs to the `exceptionDetails` parameter. You may need multiple data points to identify a record that fails during `CreateMultiple`.
+
+### Get exception details
+
+When you have included details about the failing operation in the [InvalidPluginExecutionException.ExceptionDetails](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.ExceptionDetails) property, the client application can get these details from the [OrganizationServiceFault.ErrorDetails](xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails) property through the [FaultException&lt;OrganizationServiceFault&gt;.Detail](xref:System.ServiceModel.FaultException%601.Detail) property. The following code shows how:
+
+```csharp
+
+try
+{
+   // xMultiple request that triggers your plugin
+}
+catch (FaultException<OrganizationServiceFault> ex)
+{
+   ex.Detail.ErrorDetails.TryGetValue("failedRecordId", out object failedRecordId);
+}
+
+```
+
+If the client application is using Web API, they can get these details by setting the `Prefer: odata.include-annotations="*"` request header. More information: [Include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors).
+
+In this way, the caller can know which record caused the failure and any other relevant details you want to include.
 
 ## Replace Single operation plug-ins in solution
 
