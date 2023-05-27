@@ -2,7 +2,7 @@
 title: "Elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/23/2022
+ms.date: 05/26/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -17,23 +17,9 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-
-
-<!-- 
-Maker topics to refer to from https://github.com/MicrosoftDocs/powerapps-docs-pr/pull/8083
-These are in the peakerbl-1 branch.
-
-Create and edit elastic tables (preview)
-https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-elastic-tables?branch=pr-en-us-8083
-
-Create and edit tables using Power Apps
-https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-entities-portal?branch=pr-en-us-8083
-
-Types of tables
-https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/types-of-entities?branch=pr-en-us-8083
-
--->
 Dataverse elastic tables are powered by Azure Cosmos DB. They automatically scale horizontally to handle large amounts of data and high levels of throughput with low latency. Elastic tables are suitable for applications with unpredictable, spiky or rapidly growing workloads.
+
+This article focuses on information developers need to know about using elastic tables. For more information about capabilities of elastic tables and what is supported, see [Create and edit elastic tables (preview)](../../maker/data-platform/create-edit-elastic-tables.md)
 
 > [!IMPORTANT]
 > - This is a preview feature.
