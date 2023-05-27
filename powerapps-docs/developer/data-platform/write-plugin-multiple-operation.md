@@ -252,7 +252,7 @@ foreach (Entity entity in Targets)
 }
 ```
 
-Any other information relevant to the failure may be added as string key-value pairs to the `exceptionDetails` parameter. You may need multiple data points to identify a record that fails during `CreateMultiple` in cases were the primary key value is not set. For instance, a `failedRecordIndex` indicating the record's place in the EntityCollection—or any other useful unique identifier—can be added to `exceptionDetails` to help troubleshoot the failure.
+Any other information relevant to the failure may be added as string key-value pairs to the `exceptionDetails` parameter. You may need multiple data points to identify a record that fails during `CreateMultiple` in cases where the primary key value is not set. For instance, a `failedRecordIndex` indicating the record's place in the EntityCollection—or any other useful unique identifier—can be added to `exceptionDetails` to help troubleshoot the failure.
 
 ### Get exception details
 
