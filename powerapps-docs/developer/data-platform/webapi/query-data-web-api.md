@@ -1097,6 +1097,9 @@ Within the expression, use `o/<property or collection name>` to refer to propert
 
 You can include conditions on multiple collection-valued navigation properties and nested collections.
 
+> [!NOTE]
+> You cannot include conditions on collection-valued navigation properties that are nested in a lookup navigation property. For example, `$filter=primarycontactid/new_contact_account/any(a:a/accountid eq '{GUID}')` is not supported.
+
 More information: [Lambda Operators at odata.org](https://www.odata.org/getting-started/basic-tutorial/#lambda)
 
 ##### Lambda operator examples
