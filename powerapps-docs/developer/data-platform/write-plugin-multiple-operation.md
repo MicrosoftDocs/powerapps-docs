@@ -3,7 +3,7 @@ title: Write plug-ins for CreateMultiple and UpdateMultiple | Microsoft Docs
 description: How to write plug-ins for CreateMultiple and UpdateMultiple messages.
 author: divkamath
 ms.topic: article
-ms.date: 05/25/2023
+ms.date: 05/26/2023
 ms.subservice: dataverse-developer
 ms.author: dikamath
 ms.reviewer: jdaly
