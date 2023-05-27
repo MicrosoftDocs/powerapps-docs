@@ -37,7 +37,7 @@ Dataverse provides several different ways to save binary data representing files
 
 You can block the types of files that can be uploaded by the extension or mime type.
 
-### Block files by extension 
+### Block files by extension
 
 You can specify which types of files can't be saved in file columns, attachments and notes. Use the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting to control the file types to be blocked.
 
@@ -113,7 +113,7 @@ When anyone tries to upload a file using one of the blocked types, the following
 
 ### Block or allow certain mime types
 
-You can block or allow upload of files based on mime types. More Information [Mime Type Validation](power-platform/admin/settings-privacy-security#mime-type-validation).
+You can block or allow upload of files based on mime types. More Information: [Mime Type Validation](/power-platform/admin/settings-privacy-security#mime-type-validation).
 
 You can also query and modify this data programmatically. It's stored in the [Organization.BlockedMimeTypes](reference/entities/organization.md#BKMK_BlockedMimeTypes) and [Organization.AllowedMimeTypes](reference/entities/organization.md#BKMK_AllowedMimeTypes) columns. There's only one row in the organization table. You can use the SDK or Web API to query this data:
 
