@@ -134,7 +134,12 @@ More information:
 
 ## Blocked file types
 
-You can control which types of files aren't allowed to be saved in file columns. More information: [Block certain types of files](files-images-overview.md#block-certain-types-of-files)
+You can control which types of files aren't allowed to be saved in file columns based on the file extension and mime type.
+
+More information:
+
+- [Block files by extension](files-images-overview.md#block-files-by-extension)
+- [Block or allow certain mime types](files-images-overview.md#block-or-allow-certain-mime-types)
 
 ## Restrictions with Customer Managed Keys (CMK)
 

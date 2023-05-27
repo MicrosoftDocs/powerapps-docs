@@ -1,5 +1,5 @@
 ---
-title: "Create elastic tables (Preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create elastic tables using code (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to create elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
 ms.date: 05/23/2022
@@ -13,14 +13,9 @@ contributors:
  - JimDaly
 ---
 
-# Create elastic tables (Preview)
+# Create elastic tables using code (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-> [!IMPORTANT]
-> This is a preview feature.
-> 
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 You can create elastic tables using [Power Apps](https://make.powerapps.com/) without writing code. More information: [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md).
 
@@ -341,14 +336,12 @@ Elastic tables support One-to-Many relationships and related rows can be retriev
 
 ## Next steps
 
-Learn how to perform data operations on elastic tables with code
-
 > [!div class="nextstepaction"]
-> [Use elastic tables](use-elastic-tables.md)<br/>
+> [Use elastic tables using code](use-elastic-tables.md)<br/>
 
 ### See also
 
-[Elastic tables (Preview)](elastic-tables.md)<br />
-[Use elastic tables (Preview)](use-elastic-tables.md)<br />
-[Query JSON columns in elastic tables (Preview)](query-json-columns-elastic-tables.md)<br />
+[Elastic tables](elastic-tables.md)<br />
+[Use elastic tables](use-elastic-tables.md)<br />
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)<br />
 [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />

@@ -1,13 +1,11 @@
 ---
-title: "Bulk operations with elastic tables (Preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Bulk operations with elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to perform bulk data operations on  elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
 ms.date: 05/23/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
-search.audienceType: 
-  - developer
 contributors:
  - sumantb-msft
  - JimDaly
@@ -15,11 +13,6 @@ contributors:
 # Bulk operations with elastic tables (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-> [!IMPORTANT]
-> This is a preview feature.
-> 
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Often applications need to ingest large amount of data into Dataverse in a short amount of time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput can be much higher.
 
@@ -189,7 +182,7 @@ public static OrganizationResponse DeleteMultiple(IOrganizationService service)
 
 ### See also
 
-[Use elastic tables (Preview)](elastic-tables.md)<br />
-[Create elastic tables (Preview)](create-elastic-tables.md)<br />
-[Use elastic tables (Preview)](use-elastic-tables.md)<br />
-[Query JSON columns in elastic tables (Preview)](query-json-columns-elastic-tables.md)
+[Use elastic tables](elastic-tables.md)<br />
+[Create elastic tables using code](create-elastic-tables.md)<br />
+[Use elastic tables](use-elastic-tables.md)<br />
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)
