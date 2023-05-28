@@ -102,6 +102,7 @@ Once the solution import has completed, the status is set to **Enabled** next to
    > [!TIP]
    > Note the intellisense in the **Formula** box. Underlined red is invalid. Squiggly yellow means your logic might be affected by delegation limitations. Avoid delegation issues by using [delegable functions]( /power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
    :::image type="content" source="media/low-code-plugin2.png" alt-text="Instance low-code plug-in using Power Fx to derive a sum value with two integers":::
+   >Note: Modern commanding in model driven apps doesn't currently support instant low code plugins
 1. Select **Next** to review the details.
 1. Select **Save**.
 1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
@@ -135,7 +136,7 @@ Once the solution import has completed, the status is set to **Enabled** next to
 The low-code plug-in for connectors solution is a streamlined user interface that makes creating low-code plug-ins for connector actions easier. It supports the creation of plug-ins for stored procedures, which can then be invoked in Power Apps. A wizard is installed as an additional feature of the Dataverse Accelerator, which is used for creating plug-ins with Power Fx formulas.
 
 > [!NOTE]
-> Currently, there are a limited number of connectors and actions available.
+> Currently, there are a limited number of connectors and actions available. Only SQL Server Connector presently supported. 
 
 ### Prerequisites for low-code plug-ins with connectors wizard
 
@@ -247,6 +248,7 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
 - If a stored procedure runs longer than two minutes, Dataverse and Power Apps (make.powerapps.com) timeout and you won't receive the completion notification. However, you can still directly access the SQL table to get the results though direct connections or virtual tables.
 
 - Currently, there is no application lifecycle management (ALM) support for stored procedure plug-ins. This means they'll have to be re-created when importing solutions between environments.
+- Only supported in instant low code plugins, not automated
 
 ## Test a low-code plug-in
 
