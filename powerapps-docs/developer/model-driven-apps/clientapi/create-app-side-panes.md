@@ -110,7 +110,8 @@ Xrm.App.sidePanes.createPane({
                     });
 ```
 > [!div class="mx-imgBorder"] 
-> ![Screenshot showing a webresource opened](https://1drv.ms/f/s!Arfh2bLp2csDgQgvEADlmP5Bz2WY?e=pgvppA "Open webresource")
+> ![Screenshot showing a webresource opened]<img width="291" alt="app-side-panes-opening-webresource" src="https://github.com/TheSarcasticGuy/powerapps-docs/assets/37799232/fbdc3fed-18f3-4be6-999f-47d1a032339c">
+
 
 ### Managing side panes
 
