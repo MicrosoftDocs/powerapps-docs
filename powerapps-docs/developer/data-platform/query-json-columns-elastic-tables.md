@@ -2,7 +2,7 @@
 title: "Query JSON columns in elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query data stored in JSON columns with elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/23/2022
+ms.date: 05/27/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -105,18 +105,18 @@ More information: [Azure Cosmos DB / NoSQL / Getting started with queries](/azur
 
 The SDK for .NET doesn't yet have request and response classes for the  `ExecuteCosmosSqlQuery` message. You can use <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes.
 
-`ExecuteCosmosSqlQuery` has the following input parameters:
+`ExecuteCosmosSqlQuery` message has the following input parameters:
 
 |Name|Type|Description|
 |---------|---------|---------|
 |`QueryText`|string|(Required) Cosmos sql query.|
-|`EntityLogicalName`|string|(Required) Cosmos sql query.|
+|`EntityLogicalName`|string|(Required) The logical name of the table.|
 |`QueryParameters`|[ParameterCollection](xref:Microsoft.Xrm.Sdk.ParameterCollection)|(Optional) Values for any parameters that are specified in the QueryText parameter.|
 |`PageSize`|Long|(Optional) Number of records returned in a single page.|
 |`PagingCookie`|string|(Optional) Paging cookie to be used.|
 |`PartitionId`|string|(Optional) Partitionid to set the scope of the query.|
 
-`ExecuteCosmosSqlQuery` returns an [Entity](xref:Microsoft.Xrm.Sdk.Entity) that is an open type. 
+`ExecuteCosmosSqlQuery` returns an [Entity](xref:Microsoft.Xrm.Sdk.Entity) that is an open type.
 
 This entity has the following attributes:
 
@@ -124,7 +124,7 @@ This entity has the following attributes:
 |---------|---------|---------|
 |`PagingCookie`|String|A value to set for subsequent requests when there are more results.|
 |`HasMore`|Bool|Whether there are more records in the results.|
-|`Result`|[EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection)|A collection of entities with attribute values with the results.|
+|`Result`|String|JSON with values with the results.|
 
 ```csharp
 public static List<QueryResult> QueryJsonAttribute(IOrganizationService service)

@@ -2,7 +2,7 @@
 title: "Elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/26/2022
+ms.date: 05/27/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -121,9 +121,6 @@ The examples in related articles use this scenario.
 Imagine Contoso operates large number of Internet of Things (IoT) devices deployed by the company all across the world. Contoso needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights.
 
 Contoso can create an elastic table named `contoso_SensorData` to store and query large volume of IoT data. It can choose to use a string column named `contoso_DeviceId` as the partitionid value for each row corresponding to that device. Since `contoso_DeviceId` is unique to each device and Contoso performs queries mostly in context of a given `contoso_DeviceId`, it acts as a good partition strategy for entire dataset.
-
-
-
 
 
 ## Known issues
