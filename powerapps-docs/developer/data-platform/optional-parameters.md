@@ -278,6 +278,8 @@ When using elastic tables with a partitioning strategy, you can pass a unique st
 
 The following examples use the `partitionid` value of `deviceId` when retrieving a `contoso_sensordata` record.
 
+### [SDK for .NET](#tab/sdk)
+
 ```csharp
 private static Entity RetrieveRecord(
     IOrganizationService service,
