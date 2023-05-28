@@ -1,7 +1,7 @@
 ---
 title: "Use optional parameters (Microsoft Dataverse) | Microsoft Docs" 
 description: "Use optional parameters to control operation behaviors" 
-ms.date: 03/08/2023
+ms.date: 05/27/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -274,21 +274,31 @@ More information: [Shared variables](understand-the-data-context.md#shared-varia
 
 ## Perform a data operation with specified partition
 
-When using elastic tables, you can pass a unique string value with the `partitionid` parameter to access non-relational table data within a storage partition.
+When using elastic tables with a partitioning strategy, you can pass a unique string value with the `partitionid` parameter to access non-relational table data within a storage partition.
 
-The following examples set the `partitionid` value of `CustomerPartition` when creating a `new_msdyn_customer` record. You can use this `partitionid` value later to retrieve the record more efficiently.
+The following examples use the `partitionid` value of `deviceId` when retrieving a `contoso_sensordata` record.
 
 ### [SDK for .NET](#tab/sdk)
 
 ```csharp
-static void DemonstratePartition(IOrganizationService service)
+private static Entity RetrieveRecord(
+    IOrganizationService service,
+    Guid contosoSensorDataId,
+    string deviceId,
+    string sessionToken)
 {
-    Entity entity = new("new_msdyn_customer");
-    entity["new_firstname"] = "Monica";
-    entity["new_lastname"] = "Thompson";
-    entity["partitionid"] = "CustomerPartition";
+    EntityReference entityReference = new("contoso_sensordata", contosoSensorDataId);
 
-    service.Create(entity);
+    RetrieveRequest request = new()
+    {
+        ColumnSet = new ColumnSet("contoso_value"),
+        Target = entityReference,
+        ["partitionId"] = deviceId, //To identify the record
+        ["SessionToken"] = sessionToken //Pass the session token for strong consistency
+    };
+    var response = (RetrieveResponse)service.Execute(request);
+    return response.Entity;
+
 }
 ```
 
@@ -297,24 +307,19 @@ static void DemonstratePartition(IOrganizationService service)
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.2/new_msdyn_customers?partitionid=CustomerPartition HTTP/1.1
-If-None-Match: null
-OData-Version: 4.0
+GET [Organization Uri]/api/data/v9.2/contoso_sensordatas(da9c32cc-2df8-ed11-8849-000d3a993550)?partitionId=Device-ABC-1234&$select=contoso_value
+MSCRM.SessionToken: 207:8#142792105#7=-1
 OData-MaxVersion: 4.0
-Content-Type: application/json
+OData-Version: 4.0
+If-None-Match: null
 Accept: application/json
-
-{
-  "new_firstname": "Monica",
-  "new_lastname": "Thompson",
-}
 ```
-
-The response shouldn't be affected by sending the tag unless the plug-in contains logic to change it.
 
 ---
 
-More information: [Choosing a PartitionId value](elastic-tables.md#choosing-a-partitionid-value)
+Alternatively, you can use the `partitionid` value using alternate key style. More information: [Using Alternate Key](use-elastic-tables.md#using-alternate-key)
+
+More information: [Specifying PartitionId](use-elastic-tables.md#specifying-partitionid)
 
 ## Bypass custom synchronous logic
 
