@@ -1,13 +1,11 @@
 ---
-title: "Elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Elastic tables for developers (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
 ms.date: 05/27/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
-search.audienceType: 
-  - developer
 contributors:
  - sumantb-msft
  - JimDaly
@@ -145,10 +143,8 @@ This section includes any frequently asked questions. If you have a question tha
 
 ## Next steps
 
-Learn how to create elastic tables with code
-
 > [!div class="nextstepaction"]
-> [Create elastic tables](create-elastic-tables.md)<br/>
+> [Create elastic tables using code](create-elastic-tables.md)<br/>
 
 <!-- 
 
@@ -159,8 +155,7 @@ They should ALWAYS include a link to the section of the docs where the informati
 
 ### See Also
 
-[Create elastic tables (Preview)](create-elastic-tables.md)<br />
-[Use elastic tables (Preview)](use-elastic-tables.md)<br />
-[Query JSON columns in elastic tables (Preview)](query-json-columns-elastic-tables.md)<br />
-[Bulk operations with elastic tables (Preview)](bulk-operations-elastic-tables.md)<br />
+[Use elastic tables](use-elastic-tables.md)<br />
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)<br />
+[Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
 [Partitioning and horizontal scaling in Azure Cosmos DB](/azure/cosmos-db/partitioning-overview)
