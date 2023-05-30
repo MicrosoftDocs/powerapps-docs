@@ -6,7 +6,7 @@ author: NHelgren
 ms.author: nhelgren
 ms.reviewer: pehecke
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 

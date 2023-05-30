@@ -13,7 +13,7 @@ contributors:
   - jorisdg
   - mduelae
   - gregli-msft
-ms.custom: intro-internal
+ms.collection: get-started
 ---
 
 # Canvas component overview

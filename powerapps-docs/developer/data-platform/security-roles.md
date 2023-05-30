@@ -1,7 +1,7 @@
 ---
 title: "Security roles and templates (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Microsoft Dataverse provides security roles that can be assigned to system users allowing or restricting access to table data. In addition, standard templates provide a means to obtain security roles that are valid across environments."
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 11/11/2021
 ms.reviewer: "pehecke"
 

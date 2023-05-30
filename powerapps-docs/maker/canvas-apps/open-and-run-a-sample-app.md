@@ -4,9 +4,8 @@ description: Follow these steps for creating a canvas app from a sample in Power
 author: wimcoor
 
 ms.topic: overview
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker

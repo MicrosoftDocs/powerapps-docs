@@ -1,7 +1,7 @@
 ---
 title: "About table relationships for Microsoft Dataverse | MicrosoftDocs"
 description: Learn about table relationships in Microsoft Dataverse
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 08/17/2020
 ms.reviewer: ""
 

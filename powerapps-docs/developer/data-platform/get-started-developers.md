@@ -7,7 +7,7 @@ ms.date: 04/03/2022
 ms.subservice: dataverse-developer
 ms.author: jdaly
 ms.reviewer: pehecke
-ms.custom: intro-internal
+ms.collection: get-started
 search.audienceType: 
   - developer
 ---

@@ -14,9 +14,8 @@ contributors:
   - mduelae
   - wimcoor
   - alaug
-ms.custom:
-  - intro-internal
-  - canvas
+ms.custom: canvas
+ms.collection: get-started
 ---
 # Customize a Microsoft Lists or SharePoint form by using Power Apps
 
