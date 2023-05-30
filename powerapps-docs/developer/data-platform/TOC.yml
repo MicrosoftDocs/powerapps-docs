@@ -407,10 +407,8 @@
       href: query-json-columns-elastic-tables.md
     - name: Bulk operations with elastic tables
       href: bulk-operations-elastic-tables.md    
-    - name: SDK for .NET elastic tables sample
-      href: https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/ElasticTableOperations/README.md
-    - name: Web API elastic tables sample
-      href: https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/ElasticTableOperations/README.md
+    - name: Elastic tables sample code
+      href: elastic-table-samples.md
 - name: Introduction to solutions
   href: introduction-solutions.md
 - name: Create applications
