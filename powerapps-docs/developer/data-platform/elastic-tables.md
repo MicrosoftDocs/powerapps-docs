@@ -55,7 +55,7 @@ Elastic tables use Azure Cosmos DB partitioning to scale individual tables to me
 Azure Cosmos DB ensures that the rows in a table are divided into distinct subsets called [logical partitions](/azure/cosmos-db/partitioning-overview#logical-partitions) that are formed based on the value of the `partitionid` column of each row.
 
 > [!IMPORTANT]
-> To get the optimum performance available with elastic tables, you must choose and consistently apply a partitioning strategy. If you don't set a `partitionid` value for each row, the value will default to the primary key value and you will not be able to change it later.
+> To get the optimum performance available with elastic tables, you must choose and consistently apply a partitioning strategy. If you don't set a `partitionid` value for each row, the value will remain null and you will not be able to change it later.
 > 
 > When you use a custom `partitionid` value, the primary key value doesn't have a unique constraint. In other words, can create multiple records with the same primary key, but different `partitionid` values. It is important to understand that unique references for elastic tables is the combination of the primary key AND the `partitionid` value.
 
