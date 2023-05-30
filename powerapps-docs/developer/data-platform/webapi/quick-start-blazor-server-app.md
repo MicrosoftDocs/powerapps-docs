@@ -204,9 +204,9 @@ Add the following below `"AllowedHosts": "*"` where `<your org>` represents the 
        .EnableTokenAcquisitionToCallDownstreamApi(new string[] { $"{dataverseBaseUri}user_impersonation" })
        .AddInMemoryTokenCaches();
    ```
-
-    - <xref:Microsoft.Identity.Web.MicrosoftIdentityWebApiAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi(System.Action{Microsoft.Identity.Client.ConfidentialClientApplicationOptions})?displayProperty=nameWithType> adds support for the web app to acquire tokens to call an API. By passing the `user_impersonation` scope, the user is can consent to the capability to use the Dataverse Web API.
-    - [AddInMemoryTokenCaches Method](xref:Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder.AddInMemoryTokenCaches%2A) Enables caching the token issued for requests.
+   <!-- xref link was causing build errors -->
+   - The [MicrosoftIdentityWebApiAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi Method](/dotnet/api/microsoft.identity.web.microsoftidentitywebapiauthenticationbuilder.enabletokenacquisitiontocalldownstreamapi) adds support for the web app to acquire tokens to call an API. By passing the `user_impersonation` scope, the user is can consent to the capability to use the Dataverse Web API.
+   - [AddInMemoryTokenCaches Method](xref:Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder.AddInMemoryTokenCaches%2A) Enables caching the token issued for requests.
 
 
 ### Pages/FetchData.razor
