@@ -682,5 +682,8 @@ Learn how to create and query JSON data in JSON columns in elastic tables with c
 
 ### See also
 
+[Elastic tables (preview)](elastic-tables.md)<br />
 [Create elastic tables using code](create-elastic-tables.md)<br />
 [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
+[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)<br />
+[Elastic table sample code (preview)](elastic-table-samples.md)

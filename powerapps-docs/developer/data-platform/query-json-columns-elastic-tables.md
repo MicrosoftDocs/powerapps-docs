@@ -226,3 +226,4 @@ OData-Version: 4.0
 [Create elastic tables using code](create-elastic-tables.md)<br />
 [Use elastic tables](use-elastic-tables.md)<br />
 [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
+[Elastic table sample code (preview)](elastic-table-samples.md)
