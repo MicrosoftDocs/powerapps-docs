@@ -20,12 +20,11 @@ The following sample applications on GitHub demonstrate how to work with elastic
 - Create, retrieve, update, upsert, and delete elastic table records.
 - Use the <xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest> classes to perform bulk operations with elastic table records.
 - Set JSON data for a column.
-- Use the ExecuteCosmosSqlQuery message.
+- Use the `ExecuteCosmosSqlQuery` message.
 - Use the `DeleteMultiple` message to delete elastic table record in bulk.
 
 > [!div class="nextstepaction"]
 > [SDK for .NET elastic tables sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/ElasticTableOperations/README.md)
-
 
 
 ## [Web API](#tab/webapi)
@@ -34,7 +33,7 @@ The following sample applications on GitHub demonstrate how to work with elastic
 - Create, retrieve, update, upsert, and delete elastic table records.
 - Set JSON data for a column.
 - Use `$batch` to create elastic tables in bulk.
-- Use the `ExecuteCosmosSqlQuery` message to query JSON data in columns.
+- Use the [ExecuteCosmosSqlQuery Function](xref:Microsoft.Dynamics.CRM.ExecuteCosmosSqlQuery) to query JSON data in columns.
 
 
 > [!div class="nextstepaction"]
