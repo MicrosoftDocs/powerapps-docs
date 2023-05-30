@@ -4,9 +4,8 @@ description: In this tutorial, you'll create a two-screen canvas app so that use
 author: mduelae
 
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 01/27/2022
 ms.subservice: canvas-maker

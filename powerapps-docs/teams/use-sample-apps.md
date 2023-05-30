@@ -4,7 +4,7 @@ description: Learn how to use sample app templates in Teams
 author: msftsamperl
 
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 01/19/2023
 ms.subservice: teams
 ms.author: saperlmu

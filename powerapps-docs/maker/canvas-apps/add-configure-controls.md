@@ -13,9 +13,8 @@ search.audienceType:
 contributors:
   - mduelae
   - chmoncay
-ms.custom:
-  - intro-internal
-  - canvas
+ms.custom: canvas
+ms.collection: get-started
 ---
 # Add and configure controls in canvas apps
 

@@ -3,9 +3,8 @@ title: Overview of connectors for canvas apps
 description: Overview of all the available connections that you can use to build canvas apps.
 author: lancedMicrosoft
 ms.topic: overview
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: mkaur
 ms.date: 03/15/2022
 ms.subservice: canvas-maker
