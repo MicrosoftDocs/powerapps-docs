@@ -71,6 +71,7 @@ For all elastic tables, the `partitionid` column should:
 - Have a high cardinality value. In other words, the property should have a wide range of possible values. Each logical partition can store 20 GB of data. So, choosing a `partitionid` with a wide range of possible values ensures that the table can scale without reaching limits for any specific logical partition.
 - Spread data as evenly as possible between all logical partitions.
 - Have values that are no larger than 1024 bytes.
+- Not contain values with the following characters that are not supported for alternate keys: `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`.
 
 When `partitionid` isn't specified for a row, Dataverse uses the primary key value as the default `partitionid` value. For write-heavy tables of any size, or for cases where rows are mostly retrieved using the primary key, the primary key is naturally a great choice for the `partitionid` column.
 
