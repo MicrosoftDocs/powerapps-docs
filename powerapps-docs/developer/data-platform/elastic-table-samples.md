@@ -41,3 +41,11 @@ The following sample applications on GitHub demonstrate how to work with elastic
 > [Web API elastic tables sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/ElasticTableOperations/README.md)
 
 ---
+
+## See also
+
+[Elastic tables (preview)](elastic-tables.md)<br />
+[Create elastic tables using code (preview)](create-elastic-tables.md)<br />
+[Use elastic tables using code (preview)](use-elastic-tables.md)<br />
+[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)<br />
+[Bulk operations with elastic tables (Preview)](bulk-operations-elastic-tables.md)

@@ -344,3 +344,4 @@ Elastic tables support One-to-Many relationships and related rows can be retriev
 [Elastic tables](elastic-tables.md)<br />
 [Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)<br />
 [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
+[Elastic table sample code (preview)](elastic-table-samples.md)
