@@ -3,9 +3,8 @@ title: Build apps through conversation
 description: Build apps through conversation with AI.
 author: mduelae
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 3/13/2022
 ms.subservice: canvas-maker

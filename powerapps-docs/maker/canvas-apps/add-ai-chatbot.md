@@ -3,9 +3,8 @@ title: Add Chatbot control to your canvas app
 description: A control that enables embedding of any published Power Virtual Agent (PVA) bot into Power Apps for end-user.
 author: mduelae
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 3/13/2023
 ms.subservice: canvas-maker

@@ -4,7 +4,7 @@ description: Learn about installing the Power Apps app in Teams.
 author: mduelae
 
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 03/26/2021
 ms.subservice: teams
 ms.author: saperlmu

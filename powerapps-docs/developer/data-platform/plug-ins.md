@@ -1,7 +1,7 @@
 ---
 title: "Use plug-ins to extend business processes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how plug-ins execute in response to a data processing event to augment or modify the default behavior of the platform." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 02/14/2023
 ms.reviewer: "phecke"
 ms.topic: "article"
