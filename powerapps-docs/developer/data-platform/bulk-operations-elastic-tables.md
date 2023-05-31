@@ -2,7 +2,7 @@
 title: "Bulk operations with elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to perform bulk data operations on  elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/27/2023
+ms.date: 05/30/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -25,6 +25,9 @@ Elastic tables currently supports following messages for bulk operations:
 - `DeleteMultiple`
 
 Support for `UpsertMultiple` message will be coming soon. Also, these messages are currently supported only using the SDK for .NET.
+
+> [!NOTE]
+> `CreateMultiple` and `UpdateMultiple` are also available for standard tables. More information: [Use CreateMultiple and UpdateMultiple (preview)](org-service/use-createmultiple-updatemultiple.md)
 
 ## Use CreateMultiple with elastic tables
 
