@@ -2,7 +2,7 @@
 title: "Create elastic tables using code (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to create elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/23/2022
+ms.date: 05/30/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -315,7 +315,7 @@ Each elastic table is created with one alternate key using these values:
 
 This alternate key has the key values: `<table primary key name>` and `partitionid`.
 
-If you need to reference a record that has a `partitionid` value set to a value other than the default value (that is equal to the value of the primary key) you can reference the record using this alternate key.
+If you need to reference a record that has a `partitionid` value set, you can reference the record using this alternate key.
 
 More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
 
