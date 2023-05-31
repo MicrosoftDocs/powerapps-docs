@@ -4,9 +4,8 @@ description: Step-by-step instructions for creating a canvas app automatically b
 author: mduelae
 
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 10/20/2021
 ms.subservice: canvas-maker

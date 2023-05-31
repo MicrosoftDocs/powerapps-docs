@@ -1,7 +1,7 @@
 ---
 title: Model-driven app glossary of terms | Microsoft Docs
 description: Simple descriptions of commonly used terms when building model-driven apps
-ms.custom: intro-internal
+ms.collection: get-started
 author: Mattp123
 
 ms.topic: overview

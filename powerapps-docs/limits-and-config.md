@@ -84,7 +84,7 @@ This list identifies all services to which Power Apps communicates and their usa
 
 | Domain(s) | Protocols | Uses |
 | --- | --- | --- |
-| api.bap.microsoft.com | https | Environment permissions management|
+| api.bap.microsoft.com<br>\*.api.bap.microsoft.com | https | Environment permissions management |
 | management.azure.com |https |Power Apps Management Service |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com<br>*.odc.officeapps.live.com |https |Microsoft Authentication Library |

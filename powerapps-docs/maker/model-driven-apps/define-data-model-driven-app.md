@@ -2,7 +2,7 @@
 title: Define data for your model-driven app in Power Apps | MicrosoftDocs
 description: "Understand how to define data for your model-driven app"
 Keywords: data, table, columns, relationship, attributes, model-driven app
-ms.custom: intro-internal
+ms.collection: get-started
 author: Mattp123
 applies_to: 
   - "Dynamics 365 (online)"

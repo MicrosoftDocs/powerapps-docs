@@ -1,8 +1,8 @@
 ---
-title: "Use elastic tables (Preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to perform data operations on elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use elastic tables using code (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to perform data operations on elastic tables using code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/23/2022
+ms.date: 05/27/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -13,24 +13,19 @@ contributors:
  - JimDaly
 ---
 
-# Use elastic tables (Preview)
+# Use elastic tables using code (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!IMPORTANT]
-> This is a preview feature.
-> 
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+This article describes how to perform data operations on elastic tables using code.
 
-This article describes how to perform data operations with elastic tables.
-
-## Work with Session token
+## Work with session token
 
 As mentioned in [Consistency level](elastic-tables.md#consistency-level), you can achieve session level consistency by passing the current session token with your requests. If you don't include the session token, the data you retrieve may not include data changes you have just made.
 
 ### Getting the session token
 
-You will find the session token as `x-ms-session-token` value in the response of all write operations.
+You'll find the session token as `x-ms-session-token` value in the response of all write operations.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -45,7 +40,7 @@ string sessionToken = response.Results["x-ms-session-token"].ToString();
 
 #### [Web API](#tab/webapi)
 
-The session token value will be returned as the `x-ms-session-token` response header.
+The session token value is returned as the `x-ms-session-token` response header.
 
 > [!NOTE]
 > DELETE operations do not currently return the `x-ms-session-token`. More information: [Known issues:  x-ms-session-token value not returned for delete operations](elastic-tables.md#x-ms-session-token-value-not-returned-for-delete-operations)
@@ -58,7 +53,7 @@ x-ms-session-token: 240:8#144100870#7=-1
 
 ### Sending the session token
 
-How you send the session token in a read operation depends on whether you are using the SDK or Web API.
+How you send the session token in a read operation depends on whether you're using the SDK or Web API.
 #### [SDK for .NET](#tab/sdk)
 
 When performing an operation that retrieves data, set the `SessionToken` optional parameter on the [OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest).
@@ -90,11 +85,11 @@ MSCRM.SessionToken: 240:8#144100870#7=-1
 
 ## Specifying PartitionId
 
-As mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `partitionid` column that you must use to uniquely identify a record.
+As mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `partitionid` column that you must use if you choose to apply a partitioning strategy for the table. Otherwise, don't set a value for the `partitionid` column.
 
-Once you have specified a non-null value to the `partitionid` column while creating a row, you must specify it when performing any other data operation on the row.
+Once you have specified a non-null value to the `partitionid` column while creating a row, you must specify it when performing any other data operation on the row. You can't change this value later.
 
-If you don't set a `partitionid` for a record when it is created, the GUID value of the primary key is used as default value of the `partitionid` column. In this case, you can simply identify records using the primary key as you normally do with standard tables. Specifying `partitionid` is not required.
+If you don't set a `partitionid` for a record when it's created, the `partitionid` column value remains null and you can't change it later. In this case, you can identify records using the primary key as you normally do with standard tables. Specifying `partitionid` isn't required.
 
 > [!NOTE]
 > The examples in this article assume that you are specifying a non-null value to the `partitionid` column.
@@ -104,7 +99,8 @@ You can set the `partitionid` value in following ways when performing various da
 ### Using Alternate Key
 
 As mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key named `KeyForNoSqlEntityWithPKPartitionId`. This alternate key combines the primary key of the table with the `partitionid` column.
-You can use this alternate key to specify `partitionid` when using Retrieve, Update or Delete operations.
+
+You can use this alternate key to specify `partitionid` when using `Retrieve`, `Update` or `Delete` operations.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -121,12 +117,12 @@ This example shows how you can use alternate key to specify `partitionid` when u
 
 #### [Web API](#tab/webapi)
 
-This example shows how you can use the special syntax in Web API to refer to records using the alternate key when performing GET, PATCH and DELETE operation on a single row of elastic table. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
+This example shows how you can use the special syntax in Web API to refer to records using the alternate key when performing `GET`, `PATCH` and `DELETE` operation on a single row of an elastic table. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi)
 
 > `<entity set name>(<primary key name>=<primary key value>,partitionid='<partitionid value>')`
 
 > [!NOTE]
-> The primary key value is a GUID, so no quote characters are needed. `partitionid` is a string, so it requires quote characters.
+> The primary key value is a GUID, so no single quote characters are needed. `partitionid` is a string, so it requires single quote characters.
 
 For example:
 
@@ -167,7 +163,7 @@ For `Create`, `Upsert` or `Update` operations, you can directly specify the valu
 
 #### [SDK for .NET](#tab/sdk)
 
-This examples shows how you can set directly specify `partitionid` column in `Entity` when executing a `Create`, `Upsert`, or `Update` operation.
+This example shows how you can directly specify the `partitionid` column in `Entity` when executing a `Create`, `Upsert`, or `Update` operation.
 
 ```csharp
     var entity = new Entity("contoso_sensordata", sensordataid)
@@ -194,7 +190,7 @@ For example:
 
 ## Create a record in an elastic table
 
-This example creates a new row in `contoso_SensorData` table with `partitionid` set to `deviceid`. It also sets `ttlinseconds` column which ensures that row expires after 1 day (86400 seconds) and deleted from Dataverse automatically.
+This example creates a new row in `contoso_SensorData` table with `partitionid` set to `deviceid`. It also sets `ttlinseconds` column that ensures that row expires after one day (86,400 seconds) and deleted from Dataverse automatically.
 
 These examples also capture the value of the `x-ms-session-token` that you can use when retrieving the created record.
 
@@ -279,7 +275,7 @@ Use the `x-ms-session-token` value returned with the `MSCRM.SessionToken` reques
 
 This example updates the `contoso_value` and `contoso_timestamp` values of an existing row in `contoso_SensorData` table using the `contoso_sensordataid` primary key and `partitionid` = `'device-001'`.
 
-When using a partitioning strategy, the primary key and `partitionid` columns are required to uniquely identify an existing elastic table row. The `partitionid` of an existing row cannot be updated and is only being used to uniquely identify the row to update.
+If you're using a partitioning strategy, the primary key and `partitionid` columns are required to uniquely identify an existing elastic table row. The `partitionid` of an existing row can't be updated and is only being used to uniquely identify the row to update.
 
 This example uses the `KeyForNoSqlEntityWithPKPartitionId` alternate key to uniquely identify the record using both the primary key and the `partitionid`. More information: [Alternate keys](create-elastic-tables.md#alternate-keys)
 
@@ -363,13 +359,13 @@ x-ms-session-token: 240:8#144035978#7=-1
 
 If an elastic table record was created setting the `partitionid` value, you must use the `partitionid` value together with the primary key value to uniquely identify a record.
 
-If the `partitionid` was not set, you can retrieve the record normally using only the primary key value.
+If the `partitionid` wasn't set, you can retrieve the record normally using only the primary key value.
 
 #### [SDK for .NET](#tab/sdk)
 
 There are two different ways to compose a request to retrieve a record using the `partitionid` value.
 
-This example uses the [RetrieveRequest](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest) class with the `Target` property set to an the [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) created using the constructor that accepts a [KeyAttributeCollection](xref:Microsoft.Xrm.Sdk.KeyAttributeCollection) to use the `KeyForNoSqlEntityWithPKPartitionId` alternate key. More information: [Using the EntityReference class](use-alternate-key-reference-record.md#using-the-entityreference-class)
+This example uses the [RetrieveRequest](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest) class with the `Target` property set to an  [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) created using the constructor that accepts a [KeyAttributeCollection](xref:Microsoft.Xrm.Sdk.KeyAttributeCollection) to use the `KeyForNoSqlEntityWithPKPartitionId` alternate key. More information: [Using the EntityReference class](use-alternate-key-reference-record.md#using-the-entityreference-class)
 
 
 ```csharp
@@ -451,7 +447,7 @@ You could also use the alternate key:
 
 ## Query rows of an elastic table
 
-When you query the rows of an elastic table you will get best performance if you limit your query to a specific partition. If you don't limit your query to a specific partition, your query will return data across all logical partitions, which is not as fast.
+When you query the rows of an elastic table, you get best performance if you limit your query to a specific partition. If you don't limit your query to a specific partition, your query returns data across all logical partitions, which isn't as fast.
 
 
 > [!NOTE]
@@ -461,7 +457,7 @@ When you query the rows of an elastic table you will get best performance if you
 > 
 > A filter on the `partitionid` value in the normal manner will not have the same performance benefits as specifying it with the `partitionId` shown below.
 
-These examples retrieve the first 5000 rows in the `contoso_SensorData` table which belong to logical `partitionid` = `'deviceid-001'`.
+These examples retrieve the first 5000 rows in the `contoso_SensorData` table that belong to logical `partitionid` = `'deviceid-001'`.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -531,8 +527,8 @@ OData-Version: 4.0
 
 ### Return related rows in a query
 
-Elastic tables currently do not support returning related rows when executing a query.
-Dataverse will throw an error with code `0x80048d0b` and message **Link entities are not supported** when trying to do so.
+Elastic tables currently don't support returning related rows when executing a query.
+Dataverse throws an error with code `0x80048d0b` and message **Link entities are not supported** when trying to do so.
 
 However, elastic tables support returning related rows when retrieving a single row.
 
@@ -541,7 +537,7 @@ However, elastic tables support returning related rows when retrieving a single 
 > [!IMPORTANT]
 > Upsert operations with elastic tables are different than with standard tables. Upsert operations are expected to contain the full payload and will over-write any existing record data.
 
-With elastic tables, if a record with a given id and `partitionid` doesn't exist it will be created. If it already exists, it will be replaced.
+With elastic tables, if a record with a given ID and `partitionid` doesn't exist, it will be created. If it already exists, it is replaced.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -686,7 +682,8 @@ Learn how to create and query JSON data in JSON columns in elastic tables with c
 
 ### See also
 
-[Use elastic tables (Preview)](elastic-tables.md)<br />
-[Create elastic tables (Preview)](create-elastic-tables.md)<br />
-[Query JSON columns in elastic tables (Preview)](query-json-columns-elastic-tables.md)<br />
+[Elastic tables (preview)](elastic-tables.md)<br />
+[Create elastic tables using code](create-elastic-tables.md)<br />
 [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
+[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)<br />
+[Elastic table sample code (preview)](elastic-table-samples.md)

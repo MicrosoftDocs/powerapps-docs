@@ -1,7 +1,7 @@
 ---
 title: "Use messages with the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 04/24/2023
 author: divkamath
 ms.author: dikamath

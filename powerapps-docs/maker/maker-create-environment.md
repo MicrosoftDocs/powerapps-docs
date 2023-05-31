@@ -4,7 +4,7 @@ description: Find out how to create your own developer type environment to build
 author: marcelbf
 ms.subservice: canvas-developer
 ms.topic: how-to
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 04/17/2023
 ms.author: marcelbf
 ms.reviewer: matp

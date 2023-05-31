@@ -2,7 +2,7 @@
 title: Create and edit elastic tables
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 05/24/2023
+ms.date: 05/27/2023
 ms.reviewer: matp
 author: Mattp123
 ms.topic: how-to
@@ -18,9 +18,8 @@ An elastic table is a table managed by Microsoft Dataverse. Elastic tables come 
 As with standard tables, elastic tables are included with your Dataverse database capacity use.
 
 > [!IMPORTANT]
-> This is a preview feature.
-> 
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## When to consider Dataverse elastic tables?
 
@@ -141,10 +140,10 @@ You create an elastic table just like any other new table in Dataverse.
 
 ## Known issues
 
-- Currently Power Apps (make.powerapps.com) allows you to set a many-to-one (N:1) relationship with an elastic table where the N table is a standard table. Standard table will have a lookup column pointing to an elastic table row. While retrieving rows for a standard table in such a relationship, the lookup column that points to an elastic table row won't have the formatted value returned when the elastic table row has the `partitionid` set. More information: [Improve performance using storage partitions when accessing entity data](../../developer/data-platform/org-service/azure-storage-partitioning-sdk.md)
+- Currently Power Apps (make.powerapps.com) allows you to set a many-to-one (N:1) relationship with an elastic table where the N table is a standard table. Standard table will have a lookup column pointing to an elastic table row. While retrieving rows for a standard table in such a relationship, the lookup column that points to an elastic table row won't have the formatted value returned when the elastic table row has the `partitionid` set. More information: [Developer Guide: Partitioning and horizontal scaling](../../developer/data-platform/elastic-tables.md#partitioning-and-horizontal-scaling)
 - Getting related rows when making a query on an elastic table currently doesn't work. However, getting related rows works when retrieving a single elastic table row.
 
 ## See also
 
 [Create and edit tables using Power Apps](create-edit-entities-portal.md)<br />
-[Developer guide: Elastic tables (Preview)](../../developer/data-platform/elastic-tables.md)
+[Developer guide: Elastic tables](../../developer/data-platform/elastic-tables.md)

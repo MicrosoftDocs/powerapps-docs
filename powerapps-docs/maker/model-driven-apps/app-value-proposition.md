@@ -1,7 +1,7 @@
 ---
 title: "App Value Proposition | MicrosoftDocs"
 description: "App Value Proposition"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 09/27/2021
 ms.reviewer: ""
 

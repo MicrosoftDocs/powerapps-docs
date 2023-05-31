@@ -3,9 +3,8 @@ title: Add Copilot control to a canvas app
 description: Add copilot AI control to your canvas app.
 author: mduelae
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 3/13/2023
 ms.subservice: canvas-maker
@@ -58,7 +57,7 @@ With your [canvas app open for editing](edit-app.md):
 
 ## Choose data
 
-1. When the Copilot control is added, select a data source from the pane. Currently, only a single Dataverse table can be selected for the Copilot control. For any other data sources, the Copilot control can only answer questions for smaller datasets.
+1. When the Copilot control is added, select a data source from the pane. Currently, the Copilot control can only answer questions for smaller datasets.
 
    > [!div class="mx-imgBorder"]
    > ![Select a data source.](media/copilot/copilot-3.png)
