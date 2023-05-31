@@ -34,7 +34,7 @@ This has implications for where you apply business logic for events. A new recor
 
 <a name="BKMK_upsert"></a>
 
-## Understanding the Upsert process
+## Understanding the upsert process for standard tables
 
 `Upsert` messages are processed on the server. The SDK for .NET classes use the same objects used on the server. Therefore, the following explanation uses the SDK for .NET classes to describe how an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> instance is processed and the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse> instance returned.
 
