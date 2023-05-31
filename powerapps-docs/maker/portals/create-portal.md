@@ -4,7 +4,7 @@ description: Learn about how to create a Dataverse starter portal in Power Apps.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 07/21/2022
 ms.subservice: portals
 ms.author: nenandw

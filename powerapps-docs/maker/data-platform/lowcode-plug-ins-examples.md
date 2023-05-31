@@ -52,7 +52,8 @@ This example uses the Abs function to return the non-negative value of its argum
 
 ## Input validation and custom errors
 
-This example implements server-side input validation, such as duplicate error detection and notification and returns a custom message.
+### Duplicate detection
+Implement server-side input validation, such as duplicate error detection, that throws a custom error message.
 
 1. Play the Dataverse Accelerator app, on the command bar select **New action** > **Automated plugin**.
 1. In the **Name** box enter *Duplicate check*.
@@ -61,7 +62,9 @@ This example implements server-side input validation, such as duplicate error de
 1. In the **Formula** box, enter this formula:
 
  ```powerapps-dot
-  If(!IsBlank(LookUp(Contacts, 'First Name'="Jon" && 'Last Name'="Doe")),Error("You have two contacts with the same first and last name")) 
+  If( !IsBlank(LookUp([@Contacts],'Last Name'=ThisRecord.'Last Name' && 'First Name'=ThisRecord.'First Name')),
+  	Error("You have existing contacts with the same first name and last name")
+  )
   ```
 
 1. Select **Save**.
@@ -74,6 +77,27 @@ This example implements server-side input validation, such as duplicate error de
 1. A message is displayed indicating duplicate records found. Select **Ignore and save** on the error message prompt.
 
 This custom error message is displayed: **You have two contacts with the same first and last name**.
+
+### Data validation
+Display specific types of errors using the _ErrorKind_ enumeration.
+
+1. Create a new automated plug-in.
+1. Provide the following values:
+   - **Name**: *Input validation*
+   - **Description**: *Checks for valid date and throws an error if invalid*
+   - **Table**:  **Appointment**
+   - **Run this plugin when the row is**: **Updated**
+1. Enter the formula below:
+
+   ```powerapps-dot
+   If(ThisRecord.'Due Date' < Now(), 
+   	Error({ Kind: ErrorKind.Validation , Message: "The due date cannot be in the past" })
+   );
+   ```
+1. Under **Advanced options**, set **When should this run** to **Pre-operation**; you want to run this rule before data is saved to prevent invalid data.
+1. Select **Save**.
+
+Go to the [Error() function](/power-platform/power-fx/reference/function-iferror#error) to learn more about custom errors.
 
 ## Send email based on a data event
 
@@ -281,28 +305,6 @@ At this time, plug-ins can't pass output values back to Dataverse. So you'll be 
 - Once the formula is generated and the input parameters are configured, you can't edit them directly. Currently, instead of making changes to the existing plug-in you must create a new one.
 
 - If a stored procedure runs longer than two minutes, Dataverse and the Power Apps (make.powerapps.com) timeout and you won't receive the completion notification. However, you can still directly access the SQL table to get the results though direct connections or virtual tables.
-
-## Perform input validation to throw custom errors
-
-Create this plug-in to implement server-side input validation to ensure data quality is maintained no matter where the data is being accessed.
-
-1. Create a new automated plug-in.
-1. Provide the following values:
-   - **Name**: *Input validation*
-   - **Description**: *Checks for valid date and throws an error if invalid*
-   - **Table**:  **Appointment**
-   - **Run this plugin when the row is**: **Updated**
-1. Enter the formula below:
-
-   ```powerapps-dot
-   If(ThisRecord.'Due Date' < Now(), 
-   	Error({ Kind: ErrorKind.Validation , Message: "The due date cannot be in the past" })
-   );
-   ```
-1. Under **Advanced options**, set **When should this run** to **Pre-operation**; you want to run this rule before data is saved to prevent invalid data.
-1. Select **Save**.
-
-Go to the [Error() function](/power-platform/power-fx/reference/function-iferror#error) to learn more.
 
 ## See also
 

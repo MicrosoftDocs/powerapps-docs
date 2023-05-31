@@ -14,7 +14,7 @@ search.audienceType:
   - enduser
 searchScope:
   - "Power Apps"
-ms.custom: intro-internal
+ms.collection: get-started
 contributors:
 - makolomi
 ---

@@ -4,9 +4,8 @@ description: Learn about how to automatically create a canvas app to manage data
 author: mduelae
 
 ms.topic: quickstart
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 01/27/2022
 ms.subservice: canvas-maker

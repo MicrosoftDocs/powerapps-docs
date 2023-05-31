@@ -13,9 +13,8 @@ contributors:
   - chmoncay
   - tahoon-ms
   - mduelae
-ms.custom:
-  - intro-internal
-  - canvas
+ms.custom: canvas
+ms.collection: get-started
 ---
 # Create accessible canvas apps
 

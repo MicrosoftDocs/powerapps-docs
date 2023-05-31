@@ -3,9 +3,8 @@ title: Build apps through conversation
 description: Build apps through conversation with AI.
 author: mduelae
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 3/13/2022
 ms.subservice: canvas-maker
@@ -30,13 +29,14 @@ The AI assistant is available from the Power Apps home screen. You can tell the 
 > ![Tell the AI assistant the information you want to track in your app.](media/artificial-intelligence/create-app-using-ai-1.png)
 
 > [!IMPORTANT]
-> - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://go.microsoft.com/fwlink/?linkid=2227838).
+> - To use this capability you must have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in process of rolling out, and may not be available in your region yet.
 > - This capability  may be subject to usage limits or capacity throttling.
 > - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Transparency notes for Power Apps](../common/transparency-note.md)
+
 
 
 ## Prerequisites

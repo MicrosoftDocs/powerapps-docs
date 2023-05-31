@@ -26,7 +26,7 @@ Model-driven and canvas apps
 |name |Name of the property |string |Yes |Model-driven and canvas apps|
 |display-name-key |Used in the customization screens as localized strings that describes the name of the property. |string |Yes |Model-driven apps|
 |of-type| Defines the data type of the property| See [Remarks](#remarks)|Optional|Model-driven and canvas apps|
-|usage |The usage property identifies if the property is meant to represent a column that the component can change (bound) or read-only values (input)|bound or input |Yes|Model-driven apps|
+|usage |The usage property identifies if the property is meant to represent a column that the component can change (bound), read-only (input) or output values|bound, input or output |Yes|Model-driven apps|
 |required |Whether the property is required or not |boolean |Optional |Model-driven apps|
 |of-type-group |Name of the type-group as defined in manifest| string |Optional |Model-driven apps|
 |description-key |Used in the customization screens as localized strings that describes the description of the property. |string |Optional |Model-driven and canvas apps|

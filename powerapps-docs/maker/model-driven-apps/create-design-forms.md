@@ -1,7 +1,7 @@
 ---
 title: "Create and design model-driven app forms | MicrosoftDocs"
 description: "Overview of model-driven forms in Power Apps"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 10/21/2022
 ms.reviewer: ""
 ms.suite: ""
