@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps (preview)
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: sericks007
 ms.topic: overview
-ms.date: 04/07/2023
+ms.date: 05/31/2023
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: sericks
@@ -80,7 +80,7 @@ The modern, refreshed look for model-driven apps has some limitations:
 - The mobile app, mail app, and embedded Teams mode don't support the modern, refreshed look and aren't part of the preview.
 - The modern, refreshed look isn't validated for Dynamics 365 applications at this time. Don't try out the preview in any production, Dynamics 365 applications.
 - With the new look, Power Apps are moving away from the classic theme customizations. This means that the app header and colors for business process flows can't be customized yet. 
-- The SharePoint documents grid does not support the modern look settings, and functionality will appear broken.  
+- The SharePoint document grid does not support the modern, refreshed look.  
 
 ## Frequently asked questions (FAQs)
 
