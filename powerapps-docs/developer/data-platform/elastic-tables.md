@@ -2,7 +2,7 @@
 title: "Elastic tables for developers (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Provides information to developers about elastic tables in Dataverse and how to use elastic tables using code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/27/2022
+ms.date: 05/27/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
