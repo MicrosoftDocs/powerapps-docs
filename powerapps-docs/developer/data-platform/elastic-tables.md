@@ -2,7 +2,7 @@
 title: "Elastic tables for developers (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Provides information to developers about elastic tables in Dataverse and how to use elastic tables using code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/27/2022
+ms.date: 05/27/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -55,9 +55,9 @@ Elastic tables use Azure Cosmos DB partitioning to scale individual tables to me
 Azure Cosmos DB ensures that the rows in a table are divided into distinct subsets called [logical partitions](/azure/cosmos-db/partitioning-overview#logical-partitions) that are formed based on the value of the `partitionid` column of each row.
 
 > [!IMPORTANT]
-> To get the optimum performance available with elastic tables, you must choose and consistently apply a partitioning strategy. If you don't set a `partitionid` value for each row, the value will default to the primary key value and you will not be able to change it later.
+> To get the optimum performance available with elastic tables, you must choose and consistently apply a partitioning strategy. If you don't set a `partitionid` value for each row, the value will remain null and you will not be able to change it later.
 > 
-> When you use a custom `partitionid` value, the primary key value doesn't have a unique constraint. In other words, can create multiple records with the same primary key, but different `partitionid` values. It is important to understand that unique references for elastic tables is the combination of the primary key AND the `partitionid` value.
+> When you use a custom `partitionid` value, the primary key value doesn't have a unique constraint. In other words, you can create multiple records with the same primary key, but different `partitionid` values. It is important to understand that unique references for elastic tables is the combination of the primary key AND the `partitionid` value.
 
 #### Choosing a PartitionId value
 
@@ -71,6 +71,7 @@ For all elastic tables, the `partitionid` column should:
 - Have a high cardinality value. In other words, the property should have a wide range of possible values. Each logical partition can store 20 GB of data. So, choosing a `partitionid` with a wide range of possible values ensures that the table can scale without reaching limits for any specific logical partition.
 - Spread data as evenly as possible between all logical partitions.
 - Have values that are no larger than 1024 bytes.
+- Not contain values with the following characters that are not supported for alternate keys: `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+`.
 
 When `partitionid` isn't specified for a row, Dataverse uses the primary key value as the default `partitionid` value. For write-heavy tables of any size, or for cases where rows are mostly retrieved using the primary key, the primary key is naturally a great choice for the `partitionid` column.
 
@@ -158,4 +159,5 @@ They should ALWAYS include a link to the section of the docs where the informati
 [Use elastic tables](use-elastic-tables.md)<br />
 [Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)<br />
 [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
+[Elastic table sample code (preview)](elastic-table-samples.md)<br />
 [Partitioning and horizontal scaling in Azure Cosmos DB](/azure/cosmos-db/partitioning-overview)

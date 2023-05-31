@@ -2,7 +2,7 @@
 title: "Use elastic tables using code (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to perform data operations on elastic tables using code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/27/2022
+ms.date: 05/27/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -682,5 +682,8 @@ Learn how to create and query JSON data in JSON columns in elastic tables with c
 
 ### See also
 
+[Elastic tables (preview)](elastic-tables.md)<br />
 [Create elastic tables using code](create-elastic-tables.md)<br />
 [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
+[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)<br />
+[Elastic table sample code (preview)](elastic-table-samples.md)
