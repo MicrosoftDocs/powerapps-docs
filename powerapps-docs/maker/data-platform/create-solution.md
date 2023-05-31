@@ -116,6 +116,9 @@ The solution publisher indicates who developed the app. For this reason, you sho
    - **Contact Details**. Optionally, you can add contact and address information.
 4. Select **Save and Close**.
 
+> [!NOTE]
+> Do not use _upgrade as part of the solution name.  _upgrade is an internal reserved word for solution [upgrade  process](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/update-solutions#apply-the-upgrade-or-update-in-the-target-environment). 
+
 ### Change a solution publisher
 
 You can change a solution publisher for an unmanaged solution by following these steps:
