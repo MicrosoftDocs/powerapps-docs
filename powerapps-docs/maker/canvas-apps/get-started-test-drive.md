@@ -69,9 +69,9 @@ Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-n
 
 ## Run the app
 
-An app from a template opens in Power Apps Studio, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in **Preview** mode.
+An app from a template opens in Power Apps Studio, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in [Preview](preview-app.md) mode.
 
-1. Press F5 to open the app in **Preview** mode. Alternatively, you can also select the play button on the top-right corner of the screen.
+1. Press F5 to open the app in preview mode. Alternatively, you can also select the play button on the top-right corner of the screen to [preview the app](preview-app.md).
 
     :::image type="content" source="media/get-started-test-drive/play-button.png" alt-text="Play the app":::
 
