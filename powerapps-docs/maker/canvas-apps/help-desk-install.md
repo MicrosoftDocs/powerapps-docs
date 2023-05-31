@@ -46,7 +46,7 @@ The Help Desk sample app is available in [Power Apps](https://make.powerapps.com
 
 1. When prompted, select **Allow** to let the app use the connections.
 
-1. Press **F5** on the keyboard or use ![Preview button](./media/help-desk-install/preview.png "Preview button") to play the app.
+1. Press **F5** on the keyboard or use ![Preview button](./media/help-desk-install/preview.png "Preview button") to [preview the app](preview-app.md).
 
 > [!NOTE]
 > This sample app includes locally saved information using [collections](create-update-collection.md). To use the app for business purposes, customize the app to store information using [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors).
