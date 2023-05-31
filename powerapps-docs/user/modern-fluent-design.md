@@ -80,6 +80,7 @@ The modern, refreshed look for model-driven apps has some limitations:
 - The mobile app, mail app, and embedded Teams mode don't support the modern, refreshed look and aren't part of the preview.
 - The modern, refreshed look isn't validated for Dynamics 365 applications at this time. Don't try out the preview in any production, Dynamics 365 applications.
 - With the new look, Power Apps are moving away from the classic theme customizations. This means that the app header and colors for business process flows can't be customized yet. 
+- The SharePoint documents grid does not support the modern look settings, and functionality will appear broken.  
 
 ## Frequently asked questions (FAQs)
 
