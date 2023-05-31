@@ -1,7 +1,7 @@
 ---
 title: "Use Upsert to Create or Update a record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "When loading data into Dataverse from an external system, you may not know if a record already exists in Dataverse and should be updated, or whether you must create a new record. Upsert is a combination of Update or Insert which enables the server to detect whether a record exists or not and apply the appropriate Update or Create operation in Dataverse. " # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/26/2022
+ms.date: 05/30/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath # GitHub ID
@@ -23,13 +23,22 @@ There is a performance penalty in using `Upsert` versus using `Create`. If you a
 > [!NOTE]
 > While you can use primary key values with `Upsert`, it is generally expected that you will be using alternate keys because the common use case is data integration scenarios. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
 
+# Elastic table upsert
+
+Elastic table behavior for `Upsert` is different than standard tables. With elastic tables, the `Upsert` operation doesn't call the `Create` or `Update` message depending on whether the record already exists or not. `Upsert` directly applies the changes in the entity.
+
+- **If the record exists**: All the data in the record will be overwritten by the data in the entity. There will be no `Update` event.
+- **If the record doesn't exist**: A new record will be created. There is no `Create` event.
+
+This has implications for where you apply business logic for events. A new record can be created using either `Create` or `Upsert`. A record may be updated using either `Update` or `Upsert`. If you need to apply logic consistently for `Create` or `Update` in elastic tables, you must also include that logic in `Upsert`. More information: [Upsert a record in an elastic table](use-elastic-tables.md#upsert-a-record-in-an-elastic-table)
+
 <a name="BKMK_upsert"></a>
 
 ## Understanding the Upsert process
 
 `Upsert` messages are processed on the server. The SDK for .NET classes use the same objects used on the server. Therefore, the following explaination uses the SDK for .NET classes to describe how an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> instance is processed what is returned by the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse> instance.
 
-The following steps describe the processing logic on the server when an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> is received:
+The following steps describe the processing logic on the server when an <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> is received for a standard table:
 
 1. The <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> instance arrives with the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest.Target?text=Target Property> set with an <xref:Microsoft.Xrm.Sdk.Entity> instance containing the data for a `Create` or `Update` operation.
    - The <xref:Microsoft.Xrm.Sdk.Entity> instance will typically have the <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes Property> set with values used to identify the record using alternate keys.
@@ -60,10 +69,10 @@ When using alternate keys to identify a record, including the alternate key data
 
 If you are using the Web API and not familar with the SDK for .NET, the server-side process described above may be difficult to follow. The Web API doesn't have the same object model as the SDK objects used in the description and the diagram above, but the data can be mapped as shown in the table below.
 
-| Web API           | SDK                                                                                                                                      | Description                                             |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| Key values in URL | <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes Property>                                                         | Contains the alternate key data to identify the record. |
-| Body of request   | The <xref:Microsoft.Xrm.Sdk.Entity> set to the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest.Target?text=UpsertRequest.Target Property> | Contains the data to use for `Create` or `Update`.      |
+| Web API|SDK| Description|
+| --- | --- | --- |
+| Key values in URL | <xref:Microsoft.Xrm.Sdk.Entity.KeyAttributes?text=Entity.KeyAttributes Property> | Contains the alternate key data to identify the record. |
+| Body of request| The <xref:Microsoft.Xrm.Sdk.Entity> set to the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest.Target?text=UpsertRequest.Target Property> | Contains the data to use for `Create` or `Update`.|
 
 Although these requests are processed on the server as described above, you can think of it this way:
 
