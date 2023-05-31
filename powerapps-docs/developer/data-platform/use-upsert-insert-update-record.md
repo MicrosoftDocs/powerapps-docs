@@ -23,7 +23,7 @@ There's a performance penalty in using `Upsert` versus using `Create`. If you're
 > [!NOTE]
 > While you can use primary key values with `Upsert`, it is generally expected that you will be using alternate keys because the common use case is data integration scenarios. More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
 
-# Elastic table upsert
+## Elastic table upsert
 
 Elastic table behavior for `Upsert` is different than standard tables. With elastic tables, the `Upsert` operation doesn't call the `Create` or `Update` message depending on whether the record already exists or not. `Upsert` directly applies the changes in the entity.
 
