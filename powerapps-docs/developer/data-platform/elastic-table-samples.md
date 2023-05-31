@@ -12,6 +12,8 @@ contributors:
 ---
 # Elastic table sample code (preview)
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 The following sample applications on GitHub demonstrate how to work with elastic tables using code. See the README.md file in each sample for detailed instructions about how to run the sample and what it does.
 
 ## [SDK for .NET](#tab/sdk)
@@ -47,4 +49,4 @@ The following sample applications on GitHub demonstrate how to work with elastic
 [Create elastic tables using code (preview)](create-elastic-tables.md)<br />
 [Use elastic tables using code (preview)](use-elastic-tables.md)<br />
 [Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)<br />
-[Bulk operations with elastic tables (Preview)](bulk-operations-elastic-tables.md)
+[Bulk operations with elastic tables (preview)](bulk-operations-elastic-tables.md)
