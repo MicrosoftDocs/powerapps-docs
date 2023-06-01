@@ -57,7 +57,7 @@ Follow these best practices when building an app for mobile offline use:
 
 -   Identify the on-the-go scenarios that are functionally related, such as tasks that are performed by users who work in the field.
 
--   Reduce the complexity of your app by limiting the amount of tables that need to be downloaded on a user's device. Sometimes it is better to have two apps instead of one.
+-   Reduce the complexity of your app by limiting the number of tables that need to be downloaded on a user's device. Sometimes it is better to have two apps instead of one.
 
 -   Use views that are optimized for the experience rather than displaying a large set of data. For example, it is preferable to use the **My active accounts** view, rather than the **All accounts** view.
 
@@ -71,7 +71,7 @@ Follow these steps to enable a table for offline use.
 
 1.  Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.  In the navigation pane, select **Tables**.
-3.  Select the table you want to enbable for offline use.
+3.  Select the table you want to enable for offline use.
 4.  Select **Edit**.
 5.  Select **Edit table properties**. 
 6.  In the **Edit table** pane, select **Advanced options**. Then scroll to the **Rows in this table** section.
@@ -232,6 +232,6 @@ Switch(Connection.Sync,
 
 - Items in a gallery may appear in a different order in an offline-enabled app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to ensure that the app behaves consistently in mobile apps and web browsers.
 
-- Canvas apps that are in offline mode, do not yet support files or images. This means that if you are using a Dataverse table that has an image on it, it may create some unanticipated errors.  For instance, if you are using a gallery, you need to make sure that the template and the layout is not using images. 
+- Canvas apps that are in offline mode, do not yet support files or images. This means that if you are using a Dataverse table that has an image on it, it may create some unanticipated errors.  For instance, if you are using a gallery, you need to make sure that the template and the layout are not using images. 
 
 - [Wrapped apps](../maker/common/wrap/overview.md) are not supported in offline mode.
