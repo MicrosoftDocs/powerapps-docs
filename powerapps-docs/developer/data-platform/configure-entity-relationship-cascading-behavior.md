@@ -5,7 +5,7 @@ suite: powerapps
 author: NHelgren
 ms.author: nhelgren
 ms.topic: article
-ms.date: 04/25/2023
+ms.date: 06/01/2023
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -116,6 +116,7 @@ If you update the owner:
   - Child records' business unit is not updated (no cascade)
 
 #### Allowed record ownership across business units is enabled
+
 When [allow record ownership across business units](/power-platform/admin/wp-security-cds#to-enable-this-matrix-data-access-structure-preview) is enabled,
 the Owning Business Unit column can be explicitly updated when changing the record's owner. The following lists the cascading behaviors when the parent's record owner and/or the business unit is updated.
 
@@ -167,6 +168,7 @@ the Owning Business Unit column can be explicitly updated when changing the reco
      - Child records' business unit is not updated 
 
 #### Change the cascade behaviors with the OrgDBSettings AlwaysMoveRecordToOwnerBusinessUnit
+
 You can set **AlwaysMoveRecordToOwnerBusinessUnit** to false; the user owned records' Business unit is not moved to the new user's business unit.
 
 **AlwaysMoveRecordToOwnerBusinessUnit** can be set in [environment database settings](/power-platform/admin/environment-database-settings) and can also be set using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](https://support.microsoft.com/help/2691237/orgdborgsettings-tool-for-microsoft-dynamics-crm).
@@ -233,12 +235,15 @@ You can set **AlwaysMoveRecordToOwnerBusinessUnit** to false; the user owned rec
 
 <a name="BKMK_ReparentAction"></a>   
 
-### About the reparent action  
- The reparent action is very similar to the share action except that it deals with the inherited access rights instead of explicit access rights. The reparent action is when you change the value of the referencing column in a parental relationship. When a reparent action occurs, the desired scope of the inherited  access rights for related tables might change for ReadAccess, WriteAccess, DeleteAccess, AssignAccess, ShareAccess, AppendAccess and AppendToAccess. It will not change for CreateAccess. The cascade actions related to the reparent action refer to changes to access rights indicated above for the table record and any table records related to it.  
+### About the reparent action
 
-<a name="BKMK_MergeAction"></a>  
-### About the merge action  
- The merge action can sometimes have problems completing if a record that is part of the operation set is deleted while the merge system job is running. Often this will result in an error indicating that the record will be "differently parented" or the child record "might lose its parenting". If this occurs, and you would prefer the merge continue forward even if the record is missing, you can choose to disable the parent check when you select the columns to merge.
+The reparent action is very similar to the share action except that it deals with the inherited access rights instead of explicit access rights. The reparent action is when you change the value of the referencing column in a parental relationship. When a reparent action occurs, the desired scope of the inherited  access rights for related tables might change for ReadAccess, WriteAccess, DeleteAccess, AssignAccess, ShareAccess, AppendAccess and AppendToAccess. It will not change for CreateAccess. The cascade actions related to the reparent action refer to changes to access rights indicated above for the table record and any table records related to it.  
+
+<a name="BKMK_MergeAction"></a>
+
+### About the merge action
+
+The merge action can sometimes have problems completing if a record that is part of the operation set is deleted while the merge system job is running. Often this will result in an error indicating that the record will be "differently parented" or the child record "might lose its parenting". If this occurs, and you would prefer the merge continue forward even if the record is missing, you can choose to disable the parent check when you select the columns to merge.
 
 
 > [!NOTE]
@@ -250,8 +255,10 @@ You can use two cascade async notification helper messages to provide notificati
 
 The two notification messages are:
 
-- ``cascadeAsync_FailureAPI`` <br/>This message is processed (executed) when an asynchronous cascade job is paused due to multiple failures. This can be used to inform users they need to review their dataset for issues with existing plug-ins, data issues, or workflow problems.
-- ``cascadeAsync_SuccessAPI`` <br/>This message is processed (executed) when the asynchronous cascade job is successfully completed. This is helpful to let users know when longer running jobs are finished.
+|Name|Description|
+|---------|---------|
+|`cascadeAsync_FailureAPI`|This message is processed (executed) when an asynchronous cascade job is paused due to multiple failures. This can be used to inform users they need to review their dataset for issues with existing plug-ins, data issues, or workflow problems.<br />**InputParameters**:<br />`casadeAsyncExceptionDetails`: Details of the exception causing cascade async job failure.<br />`casadeAsyncJobName`:Name of the cascade async job.|
+|`cascadeAsync_SuccessAPI`|This message is processed (executed) when the asynchronous cascade job is successfully completed.<br />**InputParameters**:<br />`casadeAsync_JobName`: Name of the cascade async job.|
 
 The custom plug-in must be registered during the post-operation stage and must be set to asynchronous mode. The following figure shows an example plug-in registration using the Plug-in Registration tool.
 
