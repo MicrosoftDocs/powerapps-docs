@@ -4,7 +4,7 @@ description: This article explains how to set up mobile offline for canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/16/2023
+ms.date: 06/01/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -233,3 +233,5 @@ Switch(Connection.Sync,
 - Items in a gallery may appear in a different order in an offline-enabled app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to ensure that the app behaves consistently in mobile apps and web browsers.
 
 - Canvas apps that are in offline mode, do not yet support files or images. This means that if you are using a Dataverse table that has an image on it, it may create some unanticipated errors.  For instance, if you are using a gallery, you need to make sure that the template and the layout is not using images. 
+
+- [Wrapped apps](../maker/common/wrap/overview.md) are not supported in offline mode.
