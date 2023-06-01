@@ -535,7 +535,7 @@ However, elastic tables support returning related rows when retrieving a single 
 ## Upsert a record in an elastic table
 
 > [!IMPORTANT]
-> Upsert operations with elastic tables are different than with standard tables. Upsert operations are expected to contain the full payload and will over-write any existing record data.
+> Upsert operations with elastic tables are different than with standard tables. Upsert operations are expected to contain the full payload and will over-write any existing record data. Upsert operations will not call the Create or Update messages. More information:  [Use Upsert to Create or Update a record > Elastic table upsert](use-upsert-insert-update-record.md#elastic-table-upsert)
 
 With elastic tables, if a record with a given ID and `partitionid` doesn't exist, it will be created. If it already exists, it is replaced.
 
