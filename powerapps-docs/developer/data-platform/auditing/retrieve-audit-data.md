@@ -646,7 +646,7 @@ Learn more about:
 
 - [RetrieveAuditDetailsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest)
 - [RetrieveAuditDetailsResponse Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsResponse)
-- [IOrganizationService.Execute Method>](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 ---
 

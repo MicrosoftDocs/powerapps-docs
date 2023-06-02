@@ -36,10 +36,6 @@ The following table describes the organization table columns that control auditi
 
 Use the following queries to retrieve your organization settings.
 
-Learn more about:
-
-- [Retrieve a table row using the Web API](../webapi/retrieve-entity-using-web-api.md)
-
 #### [Web API](#tab/webapi)
 
 **Request**
@@ -76,8 +72,10 @@ HTTP/1.1 200 OK
     ]
 }
 ```
+
 Learn more about:
 
+- [Retrieve a table row using the Web API](../webapi/retrieve-entity-using-web-api.md)
 - [organization EntityType](xref:Microsoft.Dynamics.CRM.organization)
 
 #### [SDK for .NET](#tab/sdk)
