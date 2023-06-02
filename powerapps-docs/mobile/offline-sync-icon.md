@@ -42,7 +42,7 @@ The offline sync icon changes based on the app's sync status. The following tabl
 ## Types of syncs
 There are three different types of syncs that can occur on your mobile device.
 
-- **First sync** - This sync is the initial sync that occurs on the mobile device. All data in the offline profile is downloaded to the device. A user can use the Power Apps mobile app in online mode until the sync is completed.
+- **First sync** - This sync is the initial sync that occurs on the mobile device. All data in the offline profile is downloaded to the device. A user must use the Power Apps mobile app in online mode until the first sync is completed.
 
   The first sync, which is the longest sync, is triggered when you sign-in to the Power Apps mobile app.
 
