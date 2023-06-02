@@ -1,7 +1,7 @@
 ---
 title: Auditing overview
 description: Learn how to programmatically use the auditing capability of Microsoft Dataverse to record data changes over time for use in analysis and reporting.
-ms.date: 06/13/2022
+ms.date: 06/02/2022
 ms.topic: overview
 ms.subservice: dataverse-developer
 author: paulliew
@@ -19,7 +19,8 @@ ms.custom: bap-template
 
 Microsoft Dataverse provides capabilities to meet the external and internal auditing, compliance, security, and governance policies that are common to many enterprises. Dataverse logs both user access and changes that are made to records. You can use the auditing tables and APIs to create client applications or programmatically interact with auditing data.
 
-Refer to [Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing) for a complete description of auditing concepts and capabilities, how it's exposed in apps, and tasks for administrators.
+> [!NOTE]
+> Refer to [Administrator's Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing) for a complete description of auditing concepts and capabilities, how it's exposed in apps, and tasks for administrators. The tables and APIs described here support client applications used by administrators and can be used by developers for integration projects. This content doesn't describe all auditing concepts and capabilities.
 
 You can use Dataverse tables and APIs to:
 

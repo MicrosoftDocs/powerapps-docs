@@ -1,7 +1,7 @@
 ---
 title: Delete audit data
-description: Learn how to programatically delete audit data stored in Microsoft Dataverse.
-ms.date: 06/03/2022
+description: Learn how to programmatically delete audit data stored in Microsoft Dataverse.
+ms.date: 06/03/2023
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.author: paulliew
@@ -39,14 +39,14 @@ To delete the audit change history for a record, [make sure you have](../securit
 
 Use the `Target` parameter to specify the record. The `DeletedEntriesCount` property of the response tells you how many audit records were deleted.
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
-The following example uses the <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=DeleteRecordChangeHistoryRequest Action> to delete the audited data changes for an account record.
+The following example uses the [DeleteRecordChangeHistory Action](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistory) to delete the audited data changes for an account record.
 
 Learn more about:
 
-- <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=DeleteRecordChangeHistoryRequest Action>
-- <xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistoryResponse?text=DeleteRecordChangeHistoryResponse ComplexType>
+- [DeleteRecordChangeHistory Action](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistory)
+- [DeleteRecordChangeHistoryResponse ComplexType](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistoryResponse)
 
 **Request**
 
@@ -77,13 +77,13 @@ OData-Version: 4.0
 }
 ```
 
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 Learn more about:
 
-- <xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest?text=DeleteRecordChangeHistoryRequest Class>
-- <xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryResponse?text=DeleteRecordChangeHistoryResponse Class>
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
+- [DeleteRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest)
+- [DeleteRecordChangeHistoryResponse Class](xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryResponse)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 ```csharp
 /// <summary>
@@ -116,20 +116,20 @@ Use the `BulkDelete` message to delete audit records your organization no longer
 
 ### BulkDelete message
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 The following example deletes audit records with an action value of 64 (User Access via Web).
 
 Learn more about:
 
-- <xref:Microsoft.Dynamics.CRM.BulkDelete?text=BulkDelete Action>
-- <xref:Microsoft.Dynamics.CRM.BulkDeleteResponse?text=BulkDeleteResponse ComplexType>
-- <xref:Microsoft.Dynamics.CRM.QueryExpression?text=QueryExpression ComplexType>
+- [BulkDelete Action](xref:Microsoft.Dynamics.CRM.BulkDelete)
+- [BulkDeleteResponse ComplexType](xref:Microsoft.Dynamics.CRM.BulkDeleteResponse)
+- [QueryExpression ComplexType](xref:Microsoft.Dynamics.CRM.QueryExpression)
 
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.1/BulkDelete HTTP/1.1  
+POST [Organization URI]/api/data/v9.1/BulkDelete
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -178,14 +178,14 @@ OData-Version: 4.0
 }
 ```
 
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 Learn more about:
 
-- <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest?text=BulkDeleteRequest Class>
-- <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteResponse?text=BulkDeleteResponse Class>
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*?text=IOrganizationService.Retrieve Method>
+- [BulkDeleteRequest Class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest)
+- [BulkDeleteResponse Class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteResponse)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+- [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
 
 ```csharp
 /// <summary>
@@ -257,6 +257,6 @@ Dataverse automatically creates partitions every quarter. You can't change or st
 [Auditing overview](overview.md)  
 [Configure auditing](configure.md)  
 [Retrieve the history of audited data changes](retrieve-audit-data.md)  
-[Recover database space by deleting audit logs](/power-platform/admin/recover-database-space-deleting-audit-logs)
+[Administrator's Guide: Recover database space by deleting audit logs](/power-platform/admin/recover-database-space-deleting-audit-logs)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

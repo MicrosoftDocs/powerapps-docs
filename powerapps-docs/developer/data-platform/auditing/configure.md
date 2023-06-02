@@ -1,7 +1,7 @@
 ---
 title: Configure auditing
-description: Learn how to programatically configure auditing settings for the organization, tables, and columns in Microsoft Dataverse.
-ms.date: 06/13/2022
+description: Learn how to programmatically configure auditing settings for the organization, tables, and columns in Microsoft Dataverse.
+ms.date: 06/02/2023
 ms.topic: overview
 ms.subservice: dataverse-developer
 author: paulliew
@@ -28,7 +28,7 @@ The following table describes the organization table columns that control auditi
 |Schema Name<br/>Logical Name<br/>Display Name|Type|Description|
 |---------|---------|---------|
 |`IsAuditEnabled`<br/>`isauditenabled`<br/>**Is Auditing Enabled**|Boolean|Whether auditing is enabled for the environment|
-|`AuditRetentionPeriodV2`<br/>`auditretentionperiodv2`<br/>**Audit Retention Period Settings**|Integer|The number of days to retain audit log records<br/>The default value is 30. Valid values are between 1 and 365,000 days (~1,000 years). If the value is set to -1, the records are retained forever.<br/>[Start/stop auditing and set retention policy](/power-platform/admin/manage-dataverse-auditing#startstop-auditing-for-a-dataverse-environment-and-set-retention-policy)|
+|`AuditRetentionPeriodV2`<br/>`auditretentionperiodv2`<br/>**Audit Retention Period Settings**|Integer|The number of days to retain audit log records<br/>The default value is 30. Valid values are between 1 and 365,000 days (~1,000 years). If the value is set to -1, the records are retained forever.<br/>[Administrator's guide: Start/stop auditing and set retention policy](/power-platform/admin/manage-dataverse-auditing#startstop-auditing-for-a-dataverse-environment-and-set-retention-policy)|
 |`IsUserAccessAuditEnabled`<br/>`isuseraccessauditenabled`<br/>**Is User Access Auditing Enabled**|Boolean|Whether user access logging is enabled<br/>Auditing for the environment must be enabled for user access logging to be enabled.|
 |`UserAccessAuditingInterval`<br/>`useraccessauditinginterval`<br/>**User Authentication Auditing Interval**|Integer|How often user access is logged, in hours<br/>The default value is 4.|
 
@@ -40,11 +40,11 @@ Learn more about:
 
 - [Retrieve a table row using the Web API](../webapi/retrieve-entity-using-web-api.md)
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 Learn more about:
 
-- <xref:Microsoft.Dynamics.CRM.organization?text=organization EntityType>
+- [organization EntityType](xref:Microsoft.Dynamics.CRM.organization)
 
 **Request**
 
@@ -81,14 +81,14 @@ HTTP/1.1 200 OK
 }
 ```
 
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 Learn more about:
 
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
-- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest?text=WhoAmIRequest Class>
-- <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse?text=WhoAmIResponse Class>
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*?text=IOrganizationService.Retrieve Method>
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+- [WhoAmIRequest Class](xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest)
+- [WhoAmIResponse Class](xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse)
+- [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
 
 ```csharp
 /// <summary>
@@ -141,14 +141,14 @@ Tables and columns each have a *managed property* named `IsAuditEnabled` that co
 
 |Item |Web API | SDK for .NET|
 |---------|---------|---------|
-|Table|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled Property>|
-|Column|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled`|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled Property>|
+|Table|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled`|[EntityMetadata.IsAuditEnabled Property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled)|
+|Column|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled`|[AttributeMetadata.IsAuditEnabled Property](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled)|
 
 The `IsAuditEnabled` property is a managed property that's defined by the following types:
 
 |Web API  |SDK for .NET|
 |---------|---------|
-|<xref:Microsoft.Dynamics.CRM.BooleanManagedProperty?text=BooleanManagedProperty ComplexType>|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty?text=BooleanManagedProperty Class>|
+|[BooleanManagedProperty ComplexType](xref:Microsoft.Dynamics.CRM.BooleanManagedProperty)|[BooleanManagedProperty Class](xref:Microsoft.Xrm.Sdk.BooleanManagedProperty)|
 
 A `BooleanManagedProperty` has two important properties:
 
@@ -168,12 +168,12 @@ Query the table definitions and look at the `IsAuditEnabled` property to determi
 
 Learn more about:
 
-- <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>
+- [EntityMetadata EntityType](xref:Microsoft.Dynamics.CRM.EntityMetadata)
 - [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
 - [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
 - [Private tables](../entities.md#private-tables)
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 This query returns the `Logicalname` for all public tables that are enabled for auditing.
 
@@ -212,7 +212,7 @@ If-None-Match: null
 }
 ```
 
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -284,7 +284,7 @@ Learn more about:
 - [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
 - [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 **Request**
 
@@ -321,7 +321,7 @@ If-None-Match: null
 }
 ```
 
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -418,14 +418,14 @@ To change which tables and columns support auditing, update their `IsAuditEnable
 |API|Property|More information|
 |---------|---------|---------|
 |Web API|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled.Value`|[Update table definitions](../webapi/create-update-entity-definitions-using-web-api.md#update-table-definitions)|
-|SDK for .NET|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled?text=EntityMetadata.IsAuditEnabled>.`Value`|[Retrieve and update a table](../org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)|
+|SDK for .NET|[EntityMetadata.IsAuditEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled).`Value`|[Retrieve and update a table](../org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)|
 
 ### Columns
 
 |API|Property|More information|
 |---------|---------|---------|
 |Web API|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled.Value`|[Update a column](../webapi/create-update-entity-definitions-using-web-api.md#update-a-column)|
-|SDK for .NET|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled?text=AttributeMetadata.IsAuditEnabled>.`Value`|[Update a column](../org-service/metadata-attributemetadata.md#update-a-column)|
+|SDK for .NET|[AttributeMetadata.IsAuditEnabled](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled).`Value`|[Update a column](../org-service/metadata-attributemetadata.md#update-a-column)|
 
 > [!IMPORTANT]
 > Changes don't take effect until you publish the table customizations.
@@ -439,11 +439,11 @@ Learn more about:
 - [Publish customizations](../../model-driven-apps/publish-customizations.md)
 - [Publish request schema](../../model-driven-apps/publish-request-schema.md)
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 Learn more about:
 
-- <xref:Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action>
+- [PublishXml Action](xref:Microsoft.Dynamics.CRM.PublishXml)
 
 **Request**
 
@@ -466,12 +466,12 @@ If-None-Match: null
 HTTP/1.1 204 OK 
 ```
 
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 Learn more about:
 
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
-- <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest?text=PublishXmlRequest Class>
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+- [PublishXmlRequest Class](xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest)
 
 The following example publishes the `account` table:
 
@@ -491,8 +491,8 @@ svc.Execute(request);
 
 ### See also
 
-[Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)  
-[System Settings Auditing tab](/power-platform/admin/system-settings-dialog-box-auditing-tab)  
+[Administrator's guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)  
+[Administrator's guide: System Settings Auditing tab](/power-platform/admin/system-settings-dialog-box-auditing-tab)  
 [Auditing overview](overview.md)  
 [Retrieve the history of audited data changes](retrieve-audit-data.md)  
 [Delete audit data](delete-audit-data.md)
