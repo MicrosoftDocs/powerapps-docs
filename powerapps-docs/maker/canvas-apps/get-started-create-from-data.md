@@ -4,9 +4,8 @@ description: Learn about how to use Power Apps to automatically create a canvas 
 author: mduelae
 
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
@@ -88,7 +87,7 @@ Prior to uploading an Excel file to Dataverse tables, it's important to complete
 
 ## Run the app
 
-1. Select the play icon near the upper-right corner to  **Preview the app**.
+1. Select the play icon near the upper-right corner to  **[Preview the app](preview-app.md)**.
 
 1. Filter the list by typing one or more characters in the search box.
 

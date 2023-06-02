@@ -1,22 +1,17 @@
 ---
-title: "Use CreateMultiple and UpdateMultiple (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use CreateMultiple and UpdateMultiple (Microsoft Dataverse) (preview) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the CreateMultiple and UpdateMultiple messages to optimize bulk data operations." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/24/2023
+ms.date: 05/26/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 ms.topic: article
-search.audienceType: 
-  - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
 ---
 
-# Use CreateMultiple and UpdateMultiple (Preview)
+# Use CreateMultiple and UpdateMultiple (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -24,6 +19,8 @@ contributors:
 > This is a preview feature.
 > 
 > [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
+> 
+> This article describes how `CreateMultiple` and `UpdateMultiple` messages are used for standard tables. These messages are also used by elastic tables, and the behavior can be different. See [Bulk operations with elastic tables (Preview)](../bulk-operations-elastic-tables.md) for more information about using these messages, as well as `DeleteMultiple`.
 
 The `CreateMultiple` and `UpdateMultiple` messages are optimized for performance when performing multiple create or update operations on the same table. This optimization is useful in cases where you're loading or updating records in bulk.
 
@@ -42,11 +39,11 @@ As with all Dataverse messages, use the [IOrganizationService.Execute](xref:Micr
 
 ## Performance improvements
 
-With `CreateMultiple` and `UpdateMultiple`, operations become more efficient and performant as the number of records passed with the `Targets` parameter increases.
+Using standard tables with `CreateMultiple` and `UpdateMultiple`, operations become more efficient and performant as the number of records passed with the `Targets` parameter increases.
 
 Consider this: If you create a *single* record using `Create` or `CreateMultiple`, the result is exactly the same. The same is true for `Update` and `UpdateMultiple`. Not only is the result the same, the performance is the same as well. `CreateMultiple` and `UpdateMultiple` provide greater efficiency and performance benefits as the number of records included in the `Targets` property increases.
 
-Performance is improved because these messages apply the data operations in a single transaction against multiple rows in the table rather than as separate operations on individual rows. This design also enables improving performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual `Create` or `Update` events. 
+With standard tables, performance is improved because these messages apply the data operations in a single transaction against multiple rows in the table rather than as separate operations on individual rows. This design also enables improving performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual `Create` or `Update` events. 
 
 Each time a plug-in is invoked, some milliseconds are required to invoke the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this invocation adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is invoked once and can process all the records with greater efficiency. More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../write-plugin-multiple-operation.md)
 
@@ -77,11 +74,14 @@ More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview
 
 Keep these limitations in mind when using `CreateMultiple` and `UpdateMultiple` messages.
 
-### Limited to certain tables
+### Limited to certain standard tables
 
-Currently, `CreateMultiple` and `UpdateMultiple` messages aren't available for all tables. These messages will be enabled for all tables that support individual `Create` and `Update` messages in the coming months.
+Currently, `CreateMultiple` and `UpdateMultiple` messages aren't available for all standard tables. These messages will be enabled for all standard tables that support individual `Create` and `Update` messages in the coming months.
 
-You can test whether individual tables support these messages today using the examples below.
+> [!NOTE]
+> All elastic tables support these messages.
+
+You can test whether individual standard tables support these messages today using the examples below.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -171,9 +171,9 @@ OData-Version: 4.0
 
 ---
 
-### Message Size and Time limits
+### Message size and time limits
 
-The efficiency gained per operation using `CreateMultiple` and `UpdateMultiple` messages increases with the number of entities included in the `Targets` parameter, so there's incentive to try to use the largest possible number with projects that perform bulk operations.
+With standard tables, the efficiency gained per operation using `CreateMultiple` and `UpdateMultiple` messages increases with the number of entities included in the `Targets` parameter, so there's incentive to try to use the largest possible number with projects that perform bulk operations.
 
 There's currently no set limit on the number of entities you might try to send with your requests. If you send too many records in a single request, the entire request fails. You need to experiment to find the best number. Generally, we expect that 1000 entities per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you may encounter can usually be addressed by sending fewer entities with each request. We recommend you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
 
@@ -183,7 +183,7 @@ When you have a plug-in registered for any message, you may encounter the [Messa
 
 This error doesn't occur if there's no plug-in registered for the event. You can avoid this error by disabling the plugin(s) or by sending your request with the `BypassCustomPluginExecution` optional parameter. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)
 
-#### Time Limits
+#### Time limits
 
 If you're using the Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), you may encounter this error `The request channel timed out attempting to send after 00:04:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.`
 
@@ -194,9 +194,12 @@ The default timeout set using ServiceClient is 4 minutes, which is long for any 
 
 ### No continue on error
 
-The `ExecuteMultiple` message supports the option that continues processing requests even when one or more requests fail. Because `CreateMultiple` and `UpdateMultiple` messages achieve performance improvements by unifying all operations in a single transaction, it isn't possible to support the continue-on-error behaviors.
+The `ExecuteMultiple` message supports the option that continues processing requests even when one or more requests fail. Because `CreateMultiple` and `UpdateMultiple` messages with standard tables achieve performance improvements by unifying all operations in a single transaction, it isn't possible to support the continue-on-error behaviors.
 
-You should use `CreateMultiple` and `UpdateMultiple` messages when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that allows the set of operations to fall back to use `ExecuteMultiple` if `CreateMultiple` and `UpdateMultiple` messages fail. If the success rate for your initial try is low, this strategy will result in worse performance. Only use this fall back strategy when most operations are expected to succeed.
+> [!NOTE]
+> Elastic tables do not have transactions, so partial success is possible. More information: [Bulk operations with elastic tables (Preview)](../bulk-operations-elastic-tables.md)
+
+You should use `CreateMultiple` and `UpdateMultiple` messages with standard tables when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that allows the set of operations to fall back to use `ExecuteMultiple` if `CreateMultiple` and `UpdateMultiple` messages fail. If the success rate for your initial try is low, this strategy will result in worse performance. Only use this fall back strategy when most operations are expected to succeed.
 
 ### .NET SDK only
 
@@ -229,7 +232,6 @@ The following are frequently asked question related to the introduction of these
 ### Will there be an UpsertMultiple?
 
 Yes. We plan to release `UpsertMultiple` later.
-
 
 ### Will there be a DeleteMultiple?
 
@@ -264,6 +266,7 @@ These limits are based on data changes, so each item included in the `Targets` p
 [Sample: Use CreateMultiple and UpdateMultiple](samples/create-update-multiple.md)<br />
 [Sample: CreateMultiple and UpdateMultiple plug-ins](samples/createmultiple-updatemultiple-plugin.md)<br />
 [Use messages with the Organization service](use-messages.md)<br />
+[Bulk operations with elastic tables (Preview)](../bulk-operations-elastic-tables.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

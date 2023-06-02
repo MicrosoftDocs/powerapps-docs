@@ -1,7 +1,7 @@
 ---
 title: "Create or edit a model-driven app view in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a view"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 08/03/2022
 ms.reviewer: ""
 ms.suite: ""

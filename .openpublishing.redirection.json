@@ -8639,6 +8639,16 @@
       "source_path": "powerapps-docs/maker/portals/configure/view-all-activities-in-portal-timeline.md",
       "redirect_url": "/power-pages/configure/view-all-activities-in-portal-timeline",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/wrap/how-to.md",
+      "redirect_url": "/power-apps/maker/common/wrap/wrap-how-to",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/formula-repair.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/working-with-formulas",
+      "redirect_document_id": false
     }
   ]
 }
