@@ -1,7 +1,7 @@
 ---
 title: View offline sync status
 description: Learn how to interpret the offline sync icon in the mobile app navigation bar.
-ms.date: 02/08/2023
+ms.date: 06/02/2023
 ms.author: sericks
 author: sericks007
 ms.reviewer: 
@@ -38,6 +38,11 @@ The offline sync icon changes based on the app's sync status. The following tabl
 | ![Icon showing that the app has pending changes to upload.](media/upload-pending-changes.png "Icon showing that the app has pending changes to upload.") | The app has pending changes to upload. |
 | ![Icon showing that the synchronization process encountered an error.](media/error.png "Icon showing that the synchronization process encountered an error.") | The synchronization process encountered an error. |
 | ![Icon showing that the synchronization process encountered a warning.](media/warning.png "Icon showing that the synchronization process encountered a warning.") | The synchronization process encountered a warning. |
+
+## Types of syncs
+There are three different types of syncs that can occur on your mobile device.
+
+
 
 ## Offline Status page
 
