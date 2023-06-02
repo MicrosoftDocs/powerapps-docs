@@ -893,7 +893,7 @@ Learn more about:
 - [RetrieveRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest)
 - [RetrieveRecordChangeHistoryResponse Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryResponse)
 - [PagingInfo Class](xref:Microsoft.Xrm.Sdk.Query.PagingInfo)
-- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute$2A)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 ```csharp
 /// <summary>
