@@ -50,6 +50,8 @@ There are three different types of syncs that can occur on your mobile device.
 
 - **Full delta sync** - This sync checks all records for changes. Only new or updated data is downloaded to your mobile device. This type of sync runs slower for organizations with a high number of records.
 
+  The full delta sync occurrs once a day when you open, or resume use of the app.
+
   Users are free to use the Power Apps mobile app during the full delta sync. However, users must refresh a page (or navigate away from a page, and then come back to that page) to see updated data on the page. 
 
 ## Offline Status page
