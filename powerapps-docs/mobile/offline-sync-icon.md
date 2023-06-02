@@ -42,11 +42,11 @@ The offline sync icon changes based on the app's sync status. The following tabl
 ## Types of offline syncs
 There are three different types of syncs that can occur on your mobile device.
 
-- **First sync** - This sync is the initial sync that occurs on the mobile device. All data in the offline profile is downloaded to the device. A user must use the Power Apps mobile app in online mode until the first sync is completed.
+- **First sync** - This sync is the initial offline sync that occurs for the Power Apps mobile app. All data in the offline profile is downloaded to the device. A user must use the Power Apps mobile app in online mode until the first sync is completed.
 
   The first sync, which is the longest sync, is triggered when you sign-in to the Power Apps mobile app.
 
-- **Incremental delta sync** - This sync is the fastest sync, and occurs every 5 minutes. Only the data that has changed since the last sync is downloaded to the mobile device.
+- **Incremental delta sync** - This sync is the fastest sync, and occurs every 5 minutes. Only the data that has changed since the last sync occurred is downloaded to the mobile device.
 
 - **Full delta sync** - This sync checks all records for changes. Only new or updated data is downloaded to your mobile device. This type of sync runs slower for organizations with a high number of records.
 
