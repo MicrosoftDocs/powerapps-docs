@@ -91,7 +91,7 @@ Consider the following when using the rich text editor:
 
 - Rich text fields will store HTML tags, which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
 
-- By default, the rich text editor will upload images to the Azure Blob storage store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64. 
+- By default, the rich text editor will upload images to the Azure Blob storage store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64.
 
 ## How configuration is applied to the rich text editor
 
@@ -465,7 +465,11 @@ Default:
 </td>
 
 <td>
-  By default, images will be uploaded using the client API. As soon as an image is added to the editor, it will be uploaded to the platform. To store images as base64 strings directly in the column configured to use the rich text editor control set this value to **true**.
+  By default, images will be uploaded using the client API. As soon as an image is added to the editor, it will be uploaded to the platform. To store images as base64 strings directly in the column configured to use the rich text editor control set this value to true. 
+	
+   > [!TIP]
+   > If images will be viewed externally, such as through email, it is generally advised to not use the default image processing. Default image processing uploads images to the "attachmentEntity" defined in the configuration, and external user could lack permissions to view the content. Instead an alternative upload such base64 strings can be used i.e.  ```"disableDefaultImageProcessing": true```
+	
 </td>
 <td>
 
