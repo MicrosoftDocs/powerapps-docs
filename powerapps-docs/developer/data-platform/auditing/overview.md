@@ -39,7 +39,9 @@ Properties of the [Organization table](../reference/entities/organization.md) co
 - Whether user access logging is enabled
 - How often user access is logged
 
-If you have the System Administrator or System Customizer role, you can [configure organization settings](configure.md#configure-organization-settings) to change the auditing behavior.
+If you have the System Administrator or System Customizer role, you can configure organization settings to change the auditing behavior.
+
+**More information:** [Configure organization settings](configure.md#configure-organization-settings)
 
 ## Table and column settings
 
@@ -49,11 +51,13 @@ When auditing is enabled for a table, the columns that are enabled for auditing 
 
 Use Dataverse APIs to query table and column definitions to determine which tables and columns are enabled for auditing.
 
-If you have the System Administrator or System Customizer role, you can [configure tables and columns](configure.md#configure-tables-and-columns) to change the auditing behavior.
+If you have the System Administrator or System Customizer role, you can configure tables and columns to change the auditing behavior.
+
+**More information**: [Configure tables and columns](configure.md#configure-tables-and-columns)
 
 ## Retrieve audit history
 
-Audit history data is stored in the [Auditing (Audit) table](../reference/entities/audit.md). Use the following messages to [retrieve audit history data](retrieve-audit-data.md):
+Audit history data is stored in the [Auditing (Audit) table](../reference/entities/audit.md). Use the following messages to retrieve audit history data:
 
 |Message|Description|
 |---------|---------|
@@ -61,17 +65,19 @@ Audit history data is stored in the [Auditing (Audit) table](../reference/entiti
 |`RetrieveAttributeChangeHistory`|Retrieve the change history for a single column of an audited record.|
 |`RetrieveRecordChangeHistory`|Retrieve the change history for all columns of an audited record.|
 
-Audit history isn't available for tables in the mobile app.
+**More information**: [Retrieve the history of audited data changes](retrieve-audit-data.md):
 
 ## Delete audit data
 
-You may need to [delete audit data](delete-audit-data.md) to comply with a customer's request to delete their history or to free up log capacity space. You can't directly delete records in the [Auditing (Audit) table](../reference/entities/audit.md). Instead, Dataverse provides the following messages to delete audit history data:
+You may need to delete audit data to comply with a customer's request to delete their history or to free up log capacity space. You can't directly delete records in the [Auditing (Audit) table](../reference/entities/audit.md). Instead, Dataverse provides the following messages to delete audit history data:
 
 |Message|Description|
 |---------|---------|
 |`DeleteRecordChangeHistory`|Deletes all the change history for a particular record.|
 |`BulkDelete`|Asynchronously deletes records identified by a query. This message can be used to delete large numbers of audit records without blocking other activities.|
 |`DeleteAuditData`|For customers using customer-managed encryption keys, this message deletes all audit data records up to a specified end date.|
+
+**More information**: [Delete audit data](delete-audit-data.md)
   
 ### See also
 
