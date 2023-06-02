@@ -39,7 +39,7 @@ The offline sync icon changes based on the app's sync status. The following tabl
 | ![Icon showing that the synchronization process encountered an error.](media/error.png "Icon showing that the synchronization process encountered an error.") | The synchronization process encountered an error. |
 | ![Icon showing that the synchronization process encountered a warning.](media/warning.png "Icon showing that the synchronization process encountered a warning.") | The synchronization process encountered a warning. |
 
-## Types of syncs
+## Types of offline syncs
 There are three different types of syncs that can occur on your mobile device.
 
 - **First sync** - This sync is the initial sync that occurs on the mobile device. All data in the offline profile is downloaded to the device. A user must use the Power Apps mobile app in online mode until the first sync is completed.
