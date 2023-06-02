@@ -21,6 +21,8 @@ When auditing is enabled and data in audited tables and columns is changed, you 
 
 Audit data isn't available using the [Dataverse TDS (SQL) endpoint](../dataverse-sql-query.md).
 
+Audit history is not available for tables in the mobile app.
+
 ## Audit table
 
 Auditing events are stored in the [Auditing (Audit) table](../reference/entities/audit.md). In the Web API, the [audit EntityType](xref:Microsoft.Dynamics.CRM.audit) is the resource for this data. The audit table is read-only.
