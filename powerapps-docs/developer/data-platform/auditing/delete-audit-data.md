@@ -25,8 +25,6 @@ You may need to delete audit data to comply with a customer's request to delete 
 |`BulkDelete`|Asynchronously deletes records identified by a query. Use this message to delete large numbers of audit records without blocking other activities.|
 |`DeleteAuditData`|For customers using customer-managed encryption keys, deletes all audit data records up to a specified end date.|
 
-[Learn more about using Web API actions](../webapi/use-web-api-actions.md).
-
 [!INCLUDE [gdpr-dsr-delete-note](~/../shared-content/shared/privacy-includes/gdpr-dsr-delete-note.md)]
 
 ## Delete the change history for a record
@@ -42,11 +40,6 @@ Use the `Target` parameter to specify the record. The `DeletedEntriesCount` prop
 #### [Web API](#tab/webapi)
 
 The following example uses the [DeleteRecordChangeHistory Action](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistory) to delete the audited data changes for an account record.
-
-Learn more about:
-
-- [DeleteRecordChangeHistory Action](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistory)
-- [DeleteRecordChangeHistoryResponse ComplexType](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistoryResponse)
 
 **Request**
 
@@ -77,13 +70,13 @@ OData-Version: 4.0
 }
 ```
 
-#### [SDK for .NET](#tab/sdk)
-
 Learn more about:
 
-- [DeleteRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest)
-- [DeleteRecordChangeHistoryResponse Class](xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryResponse)
-- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+- [Using Web API actions](../webapi/use-web-api-actions.md).
+- [DeleteRecordChangeHistory Action](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistory)
+- [DeleteRecordChangeHistoryResponse ComplexType](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistoryResponse)
+
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -108,6 +101,12 @@ EntityReference target)
 
 ```
 
+Learn more about:
+
+- [DeleteRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest)
+- [DeleteRecordChangeHistoryResponse Class](xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryResponse)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+
 ---
 
 ## Use BulkDelete to delete audit data
@@ -116,15 +115,8 @@ Use the `BulkDelete` message to delete audit records your organization no longer
 
 ### BulkDelete message
 
-#### [Web API](#tab/webapi)
-
 The following example deletes audit records with an action value of 64 (User Access via Web).
-
-Learn more about:
-
-- [BulkDelete Action](xref:Microsoft.Dynamics.CRM.BulkDelete)
-- [BulkDeleteResponse ComplexType](xref:Microsoft.Dynamics.CRM.BulkDeleteResponse)
-- [QueryExpression ComplexType](xref:Microsoft.Dynamics.CRM.QueryExpression)
+#### [Web API](#tab/webapi)
 
 **Request**
 
@@ -178,14 +170,13 @@ OData-Version: 4.0
 }
 ```
 
-#### [SDK for .NET](#tab/sdk)
-
 Learn more about:
 
-- [BulkDeleteRequest Class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest)
-- [BulkDeleteResponse Class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteResponse)
-- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
-- [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
+- [BulkDelete Action](xref:Microsoft.Dynamics.CRM.BulkDelete)
+- [BulkDeleteResponse ComplexType](xref:Microsoft.Dynamics.CRM.BulkDeleteResponse)
+- [QueryExpression ComplexType](xref:Microsoft.Dynamics.CRM.QueryExpression)
+
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -238,6 +229,13 @@ static void BulkDeleteAuditHistoryByAction(IOrganizationService svc, int actionV
     }
 }
 ```
+
+Learn more about:
+
+- [BulkDeleteRequest Class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest)
+- [BulkDeleteResponse Class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteResponse)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+- [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
 
 ---
 

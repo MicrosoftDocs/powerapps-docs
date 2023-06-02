@@ -42,10 +42,6 @@ Learn more about:
 
 #### [Web API](#tab/webapi)
 
-Learn more about:
-
-- [organization EntityType](xref:Microsoft.Dynamics.CRM.organization)
-
 **Request**
 
 ```http
@@ -80,15 +76,11 @@ HTTP/1.1 200 OK
     ]
 }
 ```
-
-#### [SDK for .NET](#tab/sdk)
-
 Learn more about:
 
-- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
-- [WhoAmIRequest Class](xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest)
-- [WhoAmIResponse Class](xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse)
-- [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
+- [organization EntityType](xref:Microsoft.Dynamics.CRM.organization)
+
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -121,6 +113,13 @@ static void ShowAuditingConfig(IOrganizationService svc)
         $"{organization["useraccessauditinginterval"]}");
 }
 ```
+
+Learn more about:
+
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+- [WhoAmIRequest Class](xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest)
+- [WhoAmIResponse Class](xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse)
+- [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
 
 ---
 
@@ -166,13 +165,6 @@ The publisher of a managed solution that adds a table may prevent people who ins
 
 Query the table definitions and look at the `IsAuditEnabled` property to determine which tables support auditing and which ones can be changed.
 
-Learn more about:
-
-- [EntityMetadata EntityType](xref:Microsoft.Dynamics.CRM.EntityMetadata)
-- [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
-- [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
-- [Private tables](../entities.md#private-tables)
-
 #### [Web API](#tab/webapi)
 
 This query returns the `Logicalname` for all public tables that are enabled for auditing.
@@ -211,6 +203,12 @@ If-None-Match: null
     ]
 }
 ```
+
+Learn more about:
+
+- [EntityMetadata EntityType](xref:Microsoft.Dynamics.CRM.EntityMetadata)
+- [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
+- [Private tables](../entities.md#private-tables)
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -272,17 +270,16 @@ static void ShowTableAuditConfigurations(IOrganizationService svc)
     });
 }
 ```
+Learn more about:
+
+- [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
+- [Private tables](../entities.md#private-tables)
 
 ---
 
 ### Detect which columns are enabled for auditing
 
 Query the column definitions and look at the `IsAuditEnabled` property to determine which columns support auditing and which ones can be changed.
-
-Learn more about:
-
-- [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
-- [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
 
 #### [Web API](#tab/webapi)
 
@@ -320,6 +317,8 @@ If-None-Match: null
     ]
 }
 ```
+
+Learn more about: [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -407,6 +406,8 @@ response.EntityMetadata.ToList().ForEach(x =>
 }
 ```
 
+Learn more about: [Query schema definitions](../query-schema-definitions.md)
+
 ---
 
 ## Enable or disable tables and columns for auditing
@@ -433,17 +434,7 @@ To change which tables and columns support auditing, update their `IsAuditEnable
 ### Publish column changes
 
 Use the `PublishXml` message to publish customizations for the table.
-
-Learn more about:
-
-- [Publish customizations](../../model-driven-apps/publish-customizations.md)
-- [Publish request schema](../../model-driven-apps/publish-request-schema.md)
-
 #### [Web API](#tab/webapi)
-
-Learn more about:
-
-- [PublishXml Action](xref:Microsoft.Dynamics.CRM.PublishXml)
 
 **Request**
 
@@ -466,12 +457,11 @@ If-None-Match: null
 HTTP/1.1 204 OK 
 ```
 
-#### [SDK for .NET](#tab/sdk)
-
 Learn more about:
 
-- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
-- [PublishXmlRequest Class](xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest)
+- [PublishXml Action](xref:Microsoft.Dynamics.CRM.PublishXml)
+
+#### [SDK for .NET](#tab/sdk)
 
 The following example publishes the `account` table:
 
@@ -487,7 +477,17 @@ PublishXmlRequest request = new PublishXmlRequest()
 svc.Execute(request);
 ```
 
+Learn more about:
+
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+- [PublishXmlRequest Class](xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest)
+
 ---
+
+Learn more about:
+
+- [Publish customizations](../../model-driven-apps/publish-customizations.md)
+- [Publish request schema](../../model-driven-apps/publish-request-schema.md)
 
 ### See also
 

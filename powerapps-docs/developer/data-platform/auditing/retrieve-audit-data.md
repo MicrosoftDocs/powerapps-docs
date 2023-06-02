@@ -34,7 +34,7 @@ The following table summarizes important columns in the audit table.
 |SchemaName<br/>LogicalName<br/>DisplayName|Type|Description|
 |---------|---------|---------|
 |`Action`<br/>`action`<br/>**Event**|Choice|Represents the event that caused the change. [Learn more about actions](#audit-actions).|
-|`AttributeMask`<br/>`attributemask`<br/>**Changed Field**|Memo|When the change represents a change to record data, contains a comma-separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns that were changed.<br/><br/>**Note:** Don't use this data. Instead, use the messages to [retrieve change history](#retrieve-audit-change-history).|
+|`AttributeMask`<br/>`attributemask`<br/>**Changed Field**|Memo|When the change represents a change to record data, contains a comma-separated list of numbers that correspond to the [AttributeMetadata.ColumnNumber](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber) for the columns that were changed.<br/><br/>**Note:** Don't use this data. Instead, use the messages to [retrieve change history](#retrieve-audit-change-history).|
 |`AuditId`<br/>`auditid`<br/> **Record Id**|Unique identifier|Identifies the primary key for the audit table.|
 |`CallingUserId`<br/>`callinguserid`<br/>**Calling User**|Lookup|Identifies the calling user when impersonation is used for the operation; otherwise, null.|
 |`CreatedOn`<br/>`createdon`<br/>**Changed Date**|DateTime|Identifies when the audit record was created, which is when the user operation took place.|
@@ -94,7 +94,7 @@ These options capture the history of user access when user access auditing is en
 |112|User Access Audit Started|User access audit began.|
 |113|User Access Audit Stopped|User access audit ended.|
 
-Get an SDK for [.NET sample code that shows how to use these action options to audit user access](../org-service/samples/audit-user-access.md).
+The [Sample: Audit user access](../org-service/samples/audit-user-access.md) shows how to use these action options to audit user access.
 
 #### Metadata change events
 
@@ -261,9 +261,7 @@ The following two static methods show the number of contact records the specifie
 
 `ShowNumberContactsDeletedByUserQE` uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>.
 
-Learn more about:
 
-- [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
 
 ```csharp
 /// <summary>
@@ -319,12 +317,13 @@ static void ShowNumberContactsDeletedByUserQE(
 }
 ```
 
-`ShowNumberContactsDeletedByUserFetchXml` uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> with a query composed using FetchXml.
-
 Learn more about:
 
-- [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
-- [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
+- [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
+
+
+`ShowNumberContactsDeletedByUserFetchXml` uses <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> with a query composed using FetchXml.
+
 
 ```csharp
 /// <summary>
@@ -379,6 +378,11 @@ Guid systemuserid)
 }
 ```
 
+Learn more about:
+
+- [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
+- [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
+
 ---
 
 ## Retrieve audit change history
@@ -419,11 +423,6 @@ Use this message to retrieve the audit details for a single audit record.
 # [Web API](#tab/webapi)
 
 <xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails> is a function bound to the audit table. Include the `Prefer: odata.include-annotations="*"` request header to get [formatted values](../webapi/query-data-web-api.md#formatted-values).
-
-Learn more about:
-
-- [RetrieveAuditDetails Function](xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails)
-- [RetrieveAuditDetailsResponse ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveAuditDetailsResponse)
 
 The following example shows the [AttributeAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.AttributeAuditDetail) returned when the `parentaccountid` is set on an `account` record.
 
@@ -471,6 +470,11 @@ Preference-Applied: odata.include-annotations="*"
 }
 ```
 
+Learn more about:
+
+- [RetrieveAuditDetails Function](xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails)
+- [RetrieveAuditDetailsResponse ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveAuditDetailsResponse)
+
 # [SDK for .NET](#tab/sdk)
 
 The following `ShowAuditDetail` static method returns audit details for any type of audit details that can be tracked by an audit record.
@@ -501,13 +505,9 @@ static void ShowAuditDetail(
 
 #### DisplayAuditDetail method
 
-The `DisplayAuditDetail` static method outputs different details to the console depending on the type of audit detail. This method is used by other SDKs for .NET samples on this page.
+The `DisplayAuditDetail` static method outputs different details to the console depending on the type of audit detail. This method is used by other SDK for .NET samples on this page.
 
-Learn more about:
 
-- [RetrieveAuditDetailsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest)
-- [RetrieveAuditDetailsResponse Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsResponse)
-- [IOrganizationService.Execute Method>](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 ```csharp
 /// <summary>
@@ -640,6 +640,12 @@ static void DisplayAuditDetail(AuditDetail auditDetail)
 }
 ```
 
+Learn more about:
+
+- [RetrieveAuditDetailsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest)
+- [RetrieveAuditDetailsResponse Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsResponse)
+- [IOrganizationService.Execute Method>](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+
 ---
 
 ### RetrieveAttributeChangeHistory Message
@@ -653,12 +659,6 @@ Changes for this message are always `AttributeAuditDetail` types.
 #### [Web API](#tab/webapi)
 
 This example returns a single audited change history for the `description` column of an `account` table record.
-
-Learn more about:
-
-- [RetrieveAttributeChangeHistory Function](xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory)
-- [RetrieveAttributeChangeHistoryResponse ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistoryResponse)
-- [AuditDetailCollection ComplexType](xref:Microsoft.Dynamics.CRM.AuditDetailCollection)
 
 **Request**
 
@@ -714,17 +714,17 @@ HTTP/1.1 200 OK
 }
 ```
 
+Learn more about:
+
+- [RetrieveAttributeChangeHistory Function](xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory)
+- [RetrieveAttributeChangeHistoryResponse ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistoryResponse)
+- [AuditDetailCollection ComplexType](xref:Microsoft.Dynamics.CRM.AuditDetailCollection)
+
 #### [SDK for .NET](#tab/sdk)
 
 The `ShowAttributeChangeHistory` static method returns the first 20 audited changes for the specified column in the specified record.
 
 This method depends on the example [DisplayAuditDetail method](#displayauditdetail-method) included in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) example on this page.
-
-Learn more about:
-
-- [RetrieveAttributeChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest)
-- [RetrieveAttributeChangeHistoryResponse Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryResponse)
-- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 ```csharp
 /// <summary>
@@ -780,6 +780,12 @@ static void ShowAttributeChangeHistory(IOrganizationService svc,
 }
 ```
 
+Learn more about:
+
+- [RetrieveAttributeChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest)
+- [RetrieveAttributeChangeHistoryResponse Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryResponse)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+
 ---
 
 ### RetrieveRecordChangeHistory Message
@@ -795,12 +801,6 @@ This message can also be used with the `systemuser` and `role` tables to return 
 #### [Web API](#tab/webapi)
 
 The following example returns just the first two of four changes to an account record.
-
-Learn more about:
-
-- [RetrieveRecordChangeHistory Function](xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory)
-- [RetrieveRecordChangeHistoryResponse ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse)
-- [PagingInfo ComplexType](xref:Microsoft.Dynamics.CRM.PagingInfo)
 
 **Request**
 
@@ -880,20 +880,17 @@ HTTP/1.1 200 OK
 > [!NOTE]
 > The [AuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.AuditDetail) values returned don't include the `AuditRecord` property, so no data about who made the change and when it was made is available.
 
-#### [SDK for .NET](#tab/sdk)
+Learn more about:
 
-[Sample: Audit table data changes](../org-service/samples/audit-entity-data-changes.md).
+- [RetrieveRecordChangeHistory Function](xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory)
+- [RetrieveRecordChangeHistoryResponse ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistoryResponse)
+- [PagingInfo ComplexType](xref:Microsoft.Dynamics.CRM.PagingInfo)
+
+#### [SDK for .NET](#tab/sdk)
 
 This `ShowRetrieveRecordChangeHistory` static method executes the `RetrieveRecordChangeHistory` message for a specified record and processes the response.
 
 For each audit record, it displays the properties and uses the example [DisplayAuditDetail method](#displayauditdetail-method) defined in the [RetrieveAuditDetails Message](#retrieveauditdetails-message) on this page to display the details.
-
-Learn more about:
-
-- [RetrieveRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest)
-- [RetrieveRecordChangeHistoryResponse Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryResponse)
-- [PagingInfo Class](xref:Microsoft.Xrm.Sdk.Query.PagingInfo)
-- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 ```csharp
 /// <summary>
@@ -939,6 +936,14 @@ static void ShowRetrieveRecordChangeHistory(
     });
 }
 ```
+
+Learn more about:
+
+- [RetrieveRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest)
+- [RetrieveRecordChangeHistoryResponse Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryResponse)
+- [PagingInfo Class](xref:Microsoft.Xrm.Sdk.Query.PagingInfo)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+- [Sample: Audit table data changes](../org-service/samples/audit-entity-data-changes.md).
 
 ---
 
