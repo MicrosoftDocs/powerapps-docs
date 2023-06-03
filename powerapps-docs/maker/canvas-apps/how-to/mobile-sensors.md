@@ -11,8 +11,6 @@ ms.date: 10/06/2021
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
     - joel-lindstrom
     - mduelae

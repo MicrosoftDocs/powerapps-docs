@@ -1,22 +1,20 @@
 ---
 title: "Merge duplicate records| MicrosoftDocs"
 description: How to merge duplicate records
-author: mduelae
-manager: kvivek
+author: sericks
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/10/2020
+ms.date: 04/07/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+- fafuxa-ms
 ---
 # Merge duplicate rows 
 
@@ -45,10 +43,13 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
   
 > [!NOTE]
 >  If available on your system, you may also be able to check for duplicates of other row types, in addition to contacts and accounts. Check with your system administrator. [Find your administrator or support person](find-admin.md)  
+
+> [!NOTE]
+>  To modify the columns that are visible for the current record in the duplicate detection dialog, administrators can modify the **Advanced Find View** for that entity. 
   
 ### How to merge duplicate rows
 > [!NOTE]
->  Merging rows is only supported for account, contact, and lead tables, it does not support any other Dataverse out of box tables or custom tables.  
+>  Merging rows is only supported for account, contact, and lead tables, it does not support any other Dataverse out of box tables or custom tables. You can only merge two records at a time.
   
 1. Select the duplicate rows from the view page in your model-driven app, and then select **Merge** in the command bar at the top of the page.  
   

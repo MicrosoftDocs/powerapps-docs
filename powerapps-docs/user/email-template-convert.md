@@ -2,7 +2,6 @@
 title: "Convert an email to a template in model-driven apps | MicrosoftDocs"
 description: How to convert an email to a template
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Convert an email to a template

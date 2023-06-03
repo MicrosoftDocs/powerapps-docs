@@ -1,18 +1,14 @@
 ---
 title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to write custom code to be executed in response to data processing events." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 02/24/2023
+ms.date: 05/31/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "dikamath" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - phecke
 ---
@@ -182,7 +178,9 @@ More information about handling exceptions: [Handle exceptions in plug-ins](hand
 
 When writing your plug-in, it is critical that it must execute efficiently and quickly. However long your plug-in takes to execute causes the end user that invoked the message operation (which triggered your plug-in) to wait. In addition to processing the message operation, Dataverse executes all registered synchronous plug-ins in the pipeline including your plug-in. When plug-ins take too long to execute, or if too many plug-ins are registered in a pipeline, this can result in a non-responsive application UI or worst case a timeout error with pipeline rollback.
 
-More information: [Anaylyze plug-in performance](analyze-performance.md)
+> [!IMPORTANT]
+> Plug-ins must adhere to an execution time limit and resource constraints.
+> More information: [Anaylyze plug-in performance](analyze-performance.md)
 
 ## Using early-bound types in plug-in code
 

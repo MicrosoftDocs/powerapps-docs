@@ -3,18 +3,15 @@ title: Modern, refreshed look for model-driven apps (preview)
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: sericks007
 ms.topic: overview
-ms.date: 02/03/2023
+ms.date: 05/31/2023
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: sericks
-manager: tapanm-MSFT
 ms.custom: bap-template
 ms.reviewer:
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
 contributors:
   - HemantGaur
 
@@ -63,7 +60,7 @@ The following example shows a form page with the modern, refreshed look.
 ### Field controls
 Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls will be modernized using Fluent design in future updates.
 
-Field sections, which are containers for the fields on a form, have a more streamlined design. Icons have been moved to the right side of the field labels. Some redundant icons have been removed for a cleaner layout. For example, the explicit lock icon isn't shown for read-only fields. Input and error message styling has also been refreshed based on Fluent design. 
+Field sections, which are containers for the fields on a form, have a more streamlined design. Icons have been moved to the right side of the field labels. Some redundant icons have been removed for a cleaner layout. For example, the explicit lock icon isn't shown for read-only fields, and recommended icons have been removed for simplicity. Input and error message styling has also been refreshed based on Fluent design. 
 
 The following example shows a set of fields with the modern, refreshed look.
 
@@ -83,6 +80,7 @@ The modern, refreshed look for model-driven apps has some limitations:
 - The mobile app, mail app, and embedded Teams mode don't support the modern, refreshed look and aren't part of the preview.
 - The modern, refreshed look isn't validated for Dynamics 365 applications at this time. Don't try out the preview in any production, Dynamics 365 applications.
 - With the new look, Power Apps are moving away from the classic theme customizations. This means that the app header and colors for business process flows can't be customized yet. 
+- The SharePoint document grid does not support the modern, refreshed look.  
 
 ## Frequently asked questions (FAQs)
 

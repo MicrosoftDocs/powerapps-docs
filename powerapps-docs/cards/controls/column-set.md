@@ -9,8 +9,6 @@ ms.date: 03/01/2023
 ms.author: anuitz
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -19,6 +17,8 @@ contributors:
 # Column set control in cards
 
 A collection of columns, each column is a container. These columns allow controls to sit side-by-side.
+
+Column set is useful for showing a row of data. You can add a column for the different UI elements you want within the column set, then drag and drop those elements into the column within the card canvas. You can also [data bind](../make-a-card/ui-elements/data-binding.md) a column set to a collection or data source to repeat the column set for each row, resulting in a list of data. 
 
 ## Properties
 
@@ -39,7 +39,5 @@ A collection of columns, each column is a container. These columns allow control
 **[Height](control-reference.md#h)** – Specifies the height of the control.
 
 **[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](control-reference.md#r).
-
-
 
 **[Show when](control-reference.md#s)** – Conditional layout expression.

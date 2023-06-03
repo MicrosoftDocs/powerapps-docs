@@ -5,15 +5,11 @@ ms.date: 04/06/2022
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 ms.service: powerapps
 applies_to: 
   - "Dynamics 365 (online)" 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---

@@ -7,12 +7,8 @@ ms.reviewer:
 ms.topic: sample
 author: "phecke" # GitHub ID
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Solution staging with asynchronous import

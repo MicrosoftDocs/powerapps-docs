@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 02/08/2023
+ms.date: 04/20/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -10,13 +10,9 @@ ms.topic: "how-to"
 author: "lalexms"
 ms.subservice: mda-maker
 ms.author: "laalexan"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Set up the timeline control
@@ -43,9 +39,9 @@ More information: [Create a custom table](../data-platform/data-platform-create-
 
 ### Add the timeline component to a form
 
-1. Sign into [Power Apps](https://make.powerapps.com), and then go to the **Dataverse** section.
-1. Select **Tables**, open the table you want, and then select the **Forms** area.
-1. Open the form where you want to add or configure a timeline.
+1. Sign into [Power Apps](https://make.powerapps.com).
+1. Select **Tables** on the left navigation pane, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select the **Forms** area, and then open the form where you want to add or configure a timeline.
 1. In the form designer, select **Components** from the left navigation, and then scroll down to the **Timeline** component on the left side. Drag and drop it into a section on the form.
    ![Adding or removing a timeline from an entity form.](media\timeline-add-or-remove-entity-from-form-1b.png "Adding or removing a timeline from an entity form")
 1. Make the changes you want to the timeline settings. More information: [Configure the timeline component](#configure-the-timeline-component)
@@ -109,6 +105,10 @@ There are three primary record types: Activities, notes, and posts. All record t
 The timeline shows a simple icon before the activity, note, post, and custom table, making it easy for you to identify the record type.
 
 Dates and timestamps always appear on each record on the bottom-right side of the preview, and are always viewable.
+
+> [!NOTE]
+>
+> When a custom table has a custom icon, activities related to the custom table are displayed using the default custom table icon not the custom icon.
 
 ### Advanced
 
@@ -226,8 +226,6 @@ You can send and receive records with images, but they won't display when the re
    This email has been blocked due to potentially harmful content. View full email content.
 3. When you select the message, the warning goes away, and the image appears.
 
-If you don’t see a message and the image isn't displayed, see [Timeline FAQs](/power-platform/user/faq-for-timeline-and-activity) for more information.
-
 #### Enable “What you’ve missed” summary
 
 **What you’ve missed** helps you stay on top of updates and changes made to records by displaying updates at the top of the timeline when you access a record.
@@ -323,10 +321,10 @@ Accounts, contacts, cases, and opportunities linked to an activity are displayed
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Configure related records](media\maker-enable-records-1.png "Enable related records to display on timeline") | ![Display related records on the timeline](media\maker-enable-records-2.png "Display related records for activities from timeline") |
-|1. Expand and view Activities under the Record settings section using the caret (^) <br> 2. A list of records are displayed on in **Regarding records**. <br> 3. To enable records, select the box next to **Enable** and select **Done**. | When the checkbox is enabled, users can link records to an activity. The record linked to the activity is then displayed on the timeline.|
+|1. Expand and view activities under the **Record settings** section using the caret (^). <br> 2. A list of records are displayed in **Regarding records**. <br> 3. To enable records, select the box next to **Enable** and select **Done**. | When the checkbox is enabled, users can view the linked records to an activity. The record linked to the activity is then displayed on the timeline. The linking of the record is not manual and it occurs due to the rollup of the record. More information: [Set the activity rollup type in timeline](/power-apps/maker/model-driven-apps/set-up-timeline-control#set-the-activity-rollup-type-in-timeline)|
 
 > [!NOTE]
-> A check mark appears to the right, next to the enabled record.
+> A check mark appears to the right, next to the enabled record. Disabling the table type only disables the linked record for the Timeline records rolled up for that table.
 
 
 #### Create and use card forms in timeline
@@ -383,6 +381,9 @@ This section isn't visible on the timeline record.
 |![Customize a card form in timeline - Footer section.](media\timeline-create-and-use-card-forms-details-footer-1a.png "Customize a card form in timeline - Footer section")|             |
 |**Column 1**<BR>1. For this example, we selected **Owner** for this column.<br><BR>**Column 2**<BR>2. For this example, we selected **Regarding** for this column.<br><BR>**Column 3**<BR>3. For this example, we selected **Priority** for this column.| These columns aren't visible on the timeline record |
 
+> [!NOTE]
+> Records _Modified On_ are all updated to the same time by which the modification occurred and & _Modified By_ is assigned to one user when the table is assigned to a new user. This occurs due to the cascading behaviour. More information: [Configure table relationships cascading behavior](/power-apps/developer/data-platform/configure-entity-relationship-cascading-behavior?preserve-view=true)  
+  
 #### Set the date to use when sorting activities in timeline
 
 How users view data is important, and setting a default display view of the data varies based on the needs of your business. App makers can choose how data is sorted and create a default setting for **Activity types** in **Record settings**. **Last Updated** is on all activities, which is why it's set as the default in ascending order.
@@ -554,7 +555,8 @@ The following image shows the Activities tab, where you can modify the Timeline 
 ## Configure auto-post messages to display on the timeline
 
 > [!NOTE]
-> The auto-post functionality is only available with environments that are configured for **Enable Dynamics 365 apps**.
+> - The auto-post functionality is only available with environments that are configured for **Enable Dynamics 365 apps**.
+> - Dynamics 365 incudes auto-post rules for some standard tables such as account, contact, lead, and case. It is not possible to create new auto-post rules. However, you can use other options such as Power Automate or a custom plug-in to create a post record based on the desired conditions.
 
 You can configure which auto-post messages will appear on the timeline when a system event occurs. The auto-post configuration replaces the legacy Activity Feed Configuration and Activity Feed Configuration Rules.
 
@@ -602,8 +604,13 @@ Power platform administrators can restrict the file size of attachments users ca
 
 ## Known issues
   
-- When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
-> This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
+### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
+
+This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
+
+### Timeline fails to load with error `code:"0x8004430d","message":"Number of link entity: <number> exceed limit 15`
+
+There's a limit of 15 different tables that can be associated with a timeline. Either disable some of the activities associated with the timeline, or follow one of the workarounds described in this article: [Timeline does not render and shows "Records could not be loaded"](https://support.microsoft.com/topic/timeline-does-not-render-and-shows-records-could-not-be-loaded-4ce9200a-1afe-3ef4-ac11-a74b91f4f40c)
 
 ### See also
 

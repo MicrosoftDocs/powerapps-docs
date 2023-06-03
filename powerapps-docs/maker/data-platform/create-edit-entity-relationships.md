@@ -1,7 +1,7 @@
 ---
 title: "About table relationships for Microsoft Dataverse | MicrosoftDocs"
 description: Learn about table relationships in Microsoft Dataverse
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 08/17/2020
 ms.reviewer: ""
 
@@ -16,13 +16,9 @@ ms.assetid: c765b6d9-4d87-4c2d-aae2-5b1c3b664a71
 caps.latest.revision: 28
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 author: "Mattp123"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Table relationships 
 

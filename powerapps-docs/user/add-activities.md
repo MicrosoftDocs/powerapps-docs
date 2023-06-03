@@ -2,11 +2,10 @@
 title: "Timeline Overview for Users| MicrosoftDocs"
 description: Timeline Overview for Users 
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 11/11/2022
+ms.date: 05/03/2023
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use timeline 
 
@@ -135,7 +131,9 @@ Legend
 1. The **Refresh timeline** command updates row details in the timeline.
 1. The **Sort newer to older** or **Sort older to newer** command is used to sort rows.
 1. The **Show email as** command is used to enable or disable threaded email views.
+1. The **Display layout** command allows you to choose from two different views: **Roomy** or **Cozy**. **Roomy** (set by default) shows you more information, such as profile details, and adds space between the rows. **Cozy** hides some of the details, such as icons, and compacts the space between rows.
 1. The **Remember my filters** command allows your filters to persist when you close the record so that they continue to be applied across sessions.
+1. The **Reset to default** command will revert all of the command settings you've changed back to the default settings.
 
 
 ## View email inline in timeline
@@ -264,7 +262,9 @@ In read mode:
 1. Select the attachment. The **Attachment preview** dialog opens with the attachment displayed. You can view and download the attachment from the dialog.
 2. When you're finished viewing or downloading the attachment, select **Close** to return to the note or post.
 
-
+> [!Note]
+> The use of the **Attachment preview** dialog to view the file can be skipped in the browser by using **Ctrl + Left click (of mouse)**. By doing so, the attachment will be directly downloaded without previewing it.
+  
 ### Access the command bar to perform actions
 
 When you hover your cursor on or expand an activity, post, or note, the command bar appears in the top-right corner of the row with the specific options that support that activity, such as assigning it to others, adding it to a queue, converting it to a case, liking or replying to a post, editing a note, or deleting an activity. However, not all rows can perform the same actions. 
@@ -326,7 +326,13 @@ Legend
 > - You can only format the message body of a note; not the title.
 > - The rich text editor is available only for Unified Interface.
 > - If you create a rich text editor note in Unified Interface and then view the note in the web client, it will display in HTML syntax.
-> 
+
+### View whether a note has attachments and inline files in the timeline
+  
+If you attach a file to a note or include an inline image in the note, the timeline will show that the note has an attachment or inline files. If you attach a file or include multiple files inline, the note will show the number of files using the first two file names and a number to represent the remaining count of and the file type.
+
+![View the number of attachments in a note on timeline.](media\timeline-attachments-notes.png "View the number of attachments in a note on timeline")
+
 ### Add a mention or reference a team member in a note
 
 ![Add a mention or reference to a team member in a note on timeline.](media\timeline_at_1_legend_note.png "Add a mention or reference to a team member in a note on timeline")
@@ -438,7 +444,7 @@ The following table describes the different formatting features and functionalit
 |![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it. |
 |![Remove Link.](media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
 |![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type small letters just above the line of text. |
-|![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type  small letters just below the line of text. |
+|![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type small letters just below the line of text. |
 |![Strikethrough.](media/format-strikethrough.png "Strikethrough")| Strikethrough |  | Cross out text by drawing a line through it. |
 |![Insert Image.](media\insert-picture.png "Insert Image")| Insert Image|	|You can insert an image by directly copying and pasting it inline in the editor, dragging and dropping it from your desktop or local folder directly into the editor, or by typing a URL. The following formats are supported: .PNG, .JPG., or .GIF.<br /><br />To insert an image inline in your article: <br />1. Drag and drop the image or copy and paste it directly into the article. <br />2. Drag any corner of the image to resize it.<br /><br />To insert an image using a URL or navigating to the local image:<br />1. Choose Insert Image.<br />2. In the **Image** property dialog, choose from the following options:<br /><ul><li>Select **Browse** to navigate to the image on your computer.</li><li>Or specify the web address of the image, and properties to define how the image will appear in the email or article.</li><br />**Note:**<ul><li>If the image is located on the external server, use the full absolute path. </li><li>If the image is located on a local server, you can use a relative path. </li><li>If you want the image to be linked to a target, add a URL for the image.</li><li>You can also specify if you want the targeted page to open in a new window, topmost window, same window, or parent window.</li></ul>
 |![Left to Right.](media/left-to-right.png "Left to Right")| Left to Right |  | Change the text to left-to-right for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. This is the default setting.|
@@ -448,10 +454,11 @@ The following table describes the different formatting features and functionalit
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
 |![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
 |![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Appears when the toolbar is collapsed. Click to expand the toolbar and make all options visible. |
+|![Copy to Clipboard.](media/copy-clipboard.png "Copy to Clipboard")| Copy to Clipboard | | Copies entire text in a note to the clipboard so that you can paste the contents in another location.
 
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
 
-For more information, see [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options).
+For more information, see [Commonly used rich text editor configurations](../maker/model-driven-apps/rich-text-editor-control.md#commonly-used-rich-text-editor-configurations).
   
   
 ## View a conversation transcript

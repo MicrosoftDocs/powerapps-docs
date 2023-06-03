@@ -4,14 +4,10 @@ description: "You can execute two or more organization service requests in a sin
 ms.date: 04/03/2022
 author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---

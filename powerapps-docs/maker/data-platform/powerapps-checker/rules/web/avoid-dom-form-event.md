@@ -2,7 +2,6 @@
 title: avoid-dom-form-event Power Apps checker reference | Microsoft Docs
 description: Power Apps checker rule reference for avoid-dom-form-event.
 author: ecarrleemsft
-manager: tapanm-msft
 ms.topic: reference
 ms.date: 02/14/2023
 ms.service: "powerapps"
@@ -10,8 +9,6 @@ ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # `avoid-dom-form-event`
 

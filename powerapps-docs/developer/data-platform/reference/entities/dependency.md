@@ -1,18 +1,14 @@
 ---
 title: "Dependency table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Dependency table/entity."
-ms.date: 12/07/2022
+ms.date: 05/23/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Dependency table/entity reference
@@ -27,13 +23,13 @@ A component dependency in CRM.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.2/dependencies(*dependencyid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveDependenciesForDelete|<xref href="Microsoft.Dynamics.CRM.RetrieveDependenciesForDelete?text=RetrieveDependenciesForDelete Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependenciesForDeleteRequest>|
-|RetrieveDependenciesForUninstall|<xref href="Microsoft.Dynamics.CRM.RetrieveDependenciesForUninstall?text=RetrieveDependenciesForUninstall Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependenciesForUninstallRequest>|
-|RetrieveDependentComponents|<xref href="Microsoft.Dynamics.CRM.RetrieveDependentComponents?text=RetrieveDependentComponents Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependentComponentsRequest>|
-|RetrieveMissingDependencies|<xref href="Microsoft.Dynamics.CRM.RetrieveMissingDependencies?text=RetrieveMissingDependencies Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveMissingDependenciesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/dependencies<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrieveRequiredComponents|<xref href="Microsoft.Dynamics.CRM.RetrieveRequiredComponents?text=RetrieveRequiredComponents Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRequiredComponentsRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/dependencies(*dependencyid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveDependenciesForDelete|<xref:Microsoft.Dynamics.CRM.RetrieveDependenciesForDelete?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependenciesForDeleteRequest>|
+|RetrieveDependenciesForUninstall|<xref:Microsoft.Dynamics.CRM.RetrieveDependenciesForUninstall?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependenciesForUninstallRequest>|
+|RetrieveDependentComponents|<xref:Microsoft.Dynamics.CRM.RetrieveDependentComponents?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependentComponentsRequest>|
+|RetrieveMissingDependencies|<xref:Microsoft.Dynamics.CRM.RetrieveMissingDependencies?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveMissingDependenciesRequest>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/dependencies<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveRequiredComponents|<xref:Microsoft.Dynamics.CRM.RetrieveRequiredComponents?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRequiredComponentsRequest>|
 
 ## Properties
 

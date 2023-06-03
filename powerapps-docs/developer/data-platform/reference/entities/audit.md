@@ -1,18 +1,14 @@
 ---
 title: "Auditing (Audit)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Auditing (Audit)  table/entity."
-ms.date: 12/07/2022
+ms.date: 05/23/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Auditing (Audit)  table/entity reference
@@ -27,14 +23,14 @@ Track changes to records for analysis, record keeping, and compliance.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|DeleteAuditData|<xref href="Microsoft.Dynamics.CRM.DeleteAuditData?text=DeleteAuditData Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest>|
-|DeleteRecordChangeHistory|<xref href="Microsoft.Dynamics.CRM.DeleteRecordChangeHistory?text=DeleteRecordChangeHistory Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/audits(*auditid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveAttributeChangeHistory|<xref href="Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest>|
-|RetrieveAuditDetails|<xref href="Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest>|
-|RetrieveAuditPartitionList|<xref href="Microsoft.Dynamics.CRM.RetrieveAuditPartitionList?text=RetrieveAuditPartitionList Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditPartitionListRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/audits<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrieveRecordChangeHistory|<xref href="Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest>|
+|DeleteAuditData|<xref:Microsoft.Dynamics.CRM.DeleteAuditData?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest>|
+|DeleteRecordChangeHistory|<xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistory?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/audits(*auditid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveAttributeChangeHistory|<xref:Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest>|
+|RetrieveAuditDetails|<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest>|
+|RetrieveAuditPartitionList|<xref:Microsoft.Dynamics.CRM.RetrieveAuditPartitionList?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditPartitionListRequest>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/audits<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveRecordChangeHistory|<xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest>|
 
 ## Properties
 
@@ -154,6 +150,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |3|Delete||
 |4|Activate||
 |5|Deactivate||
+|6|Upsert||
 |11|Cascade||
 |12|Merge||
 |13|Assign||
@@ -222,6 +219,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |111|Audit Log Deletion||
 |112|User Access Audit Started||
 |113|User Access Audit Stopped||
+|115|Archive||
 
 
 
@@ -362,7 +360,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|The action that causes the audit--it will be create, delete, or update|
+|Description|The action that causes the audit--it will be create, delete, update, upsert or archive|
 |DisplayName|Operation|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -378,6 +376,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Update||
 |3|Delete||
 |4|Access||
+|5|Upsert||
+|115|Archive||
 
 
 

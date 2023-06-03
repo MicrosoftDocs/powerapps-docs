@@ -2,7 +2,6 @@
 title: Create Power BI report and dataset components (preview)
 description: Learn how to create Power BI report and dataset components to use in Power Apps solutions.
 author: paulinbar
-manager: kfollis
 ms.component: cds
 ms.topic: how-to
 ms.date: 09/21/2022
@@ -10,8 +9,6 @@ ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Create Power BI report and dataset components (preview)
 
@@ -45,7 +42,7 @@ In this article, you'll learn how to do the following tasks:
 * Sharing Power BI reports and datasets can only be done from Power BI (sharing the model driven app doesn't share the embedded report).
 * Recovery from workspace deletion isn't supported. Once the dedicated environment workspace has been deleted, you won't be able to add/import any Power BI component to the Power Apps environment.
 * Power Apps Application IDs aren't supported during public preview.
-* The Power Apps environment and the Power BI workspaces all need to be in the same geography. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#cross-geo-operations).
+* Information sharing between Power Platform environments and Power BI workspaces located in different geographies is supported if the relevant settings are **ON**. More information: [Cross-geo operations](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#cross-geo-operations).
 * Environment life cycle operations aren't supported during preview. More information: [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#environment-life-cycle-operations).
 * Dataverse for Teams environments are not supported.
 * National clouds are not currently supported.  
@@ -53,8 +50,6 @@ In this article, you'll learn how to do the following tasks:
 ## Create Power BI report and dataset components
 
 1. Open your Power Apps solution development environment.
-    > [!NOTE]
-    > During public preview, your Power Apps solution development environment must be created in the geography where the Power BI tenant is located. More information: [Cross-geo operations](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#cross-geo-operations) more information. 
 
 1. Create a new solution.
 

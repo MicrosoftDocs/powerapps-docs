@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 01/03/2023
+ms.date: 04/27/2023
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -12,19 +12,17 @@ ms.assetid: 6828238b-1645-4710-a192-0014acb03196
 caps.latest.revision: 1
 ms.author: sericks
 author: sericks007
-manager: tapanm-MSFT
 search.audienceType: 
   - admin
   - customizer
   - enduser
-search.app: 
-  - D365CE
-  - D365Sales
+contributors:
+- joliedes 
 ---
 
 # Mobile offline capabilities and limitations
 
-Before you set-up the mobile app in offline mode, be sure to read through the following capabilities, tips,  and limitations. We recommend that you also review the [Offline profile guidelines](mobile-offline-guidelines.md).
+Before you set up the mobile app in offline mode, be sure to read through the following capabilities, tips,  and limitations. We recommend that you also review the [Offline profile guidelines](mobile-offline-guidelines.md).
 
 These tables and corresponding commands are available in offline mode.
   > [!NOTE]
@@ -79,7 +77,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Supported view**: Only System views and Quick view are supported in mobile offline. Personal views are not supported.
 
-- **Offline search**: Available only for offline tables. User can only search one table at a time. Only categorized search is supported in offline mode and not relevant search.
+- **Offline search**: Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search is not supported in offline mode. On grid pages, view-based search (filter by keyword) is not supported in offline mode and grid search switches to a quick, find-based search.
 
 - **Notes on the Timeline control**: Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode.
   > [!NOTE]
@@ -116,6 +114,8 @@ For more information, see [Run business process flows offline](/power-automate/b
 
     Any views that have linked tables (related table) that are not available offline are also not supported.
 
+- **Advanced lookups**: The **[Advanced lookup]**(../user/lookup-field.md#advanced-lookup) functionality isn't supported in offline scenarios. When you're offline, the **Advanced lookup** button is replaced by a **Change view** dropdown list.
+
 - **Add Existing on subgrids**: **Add Existing** is not supported for mobile offline for certain types of relationships. When you are offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command will be hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command will not work in offline.
 
 - **Web resources**: Web resources are partially supported in offline mode. Refer to the table below for more information.
@@ -123,8 +123,8 @@ For more information, see [Run business process flows offline](/power-automate/b
     |Web resource configuration |Offline support on Android and Windows|Offline support on iOS|  
     |-------------|---------|--------|  
     |Web resource used on form handlers, form scripts and ribbon commands|Supported (File names should be in lower case)|Supported (file names need should be in lower case)|
-    |JavaScript files referenced within an HTML web resource|Supported| Partially supported: The web resource needs to be opened at least once you are in online mode so that it's cached by your browser. Then it is handled for lifetime and or availability.|
-    |HTML, JS, CSS, XML web resources embedded on a model-driven app form|Supported| Partially supported: The web resource needs to be opened at least once while online so that it's cached by the browser which will handle its lifetime and or availability.|
+    |JavaScript files referenced within an HTML web resource|Not supported| Web resources may be available offline in some circumstances if they are retrieved while online and cached by the browser. |
+    |HTML, JS, CSS, XML web resources embedded on a model-driven app form|Not supported| Web resources may be available offline in some circumstances if they are retrieved while online and cached by the browser.|
     |Other web resources embedded on a model-driven app form (like images, resx, etc.) <br><br>**Note**: The [Dataverse file](/power-apps/developer/data-platform/file-attributes) and [image](/power-apps/developer/data-platform/image-attributes) attributes are not webresources but regular Dataverse data. To enable them offline, see  [Configure mobile offline profiles for images and files](/power-apps/mobile/offline-file-images). |Not supported**|Not supported**|
     |Webpage (HTML web resource) via a model-driven app’s sitemap|Not supported|Not supported|
     |Custom JS files that create a fetchXML dynamically |Not supported|Not supported|
@@ -133,7 +133,11 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Calculated and rollup fields**: Calculated and rollup fields that are part of rows synced to the client will not be re-evaluated by the client. The re-evaluation will happen on the server when the updated row is synced.
 
-- **Mapped fields**: When you run an app in offline mode, mapped field aren’t prepopulated when you create a new record from a table that has fields mapped to another table. 
+- **Mapped fields**: When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
+
+- **Filter operations**: Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
+
+- **Appointments**: Appointments can be created or updated in Dataverse, but they won't be sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
 
 ## Tips
 
@@ -157,7 +161,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 > [!IMPORTANT]
 > Organization data filters are no longer used. Changes to filters should be edited within the mobile profile itself.
 
-It is recommended that you have at least one rule defined for all mobile offline enabled table for org filters, if you are using the tables across profiles. By default, this value is set to last 10 days for most of the offline-enabled tables.
+It is recommended that you have at least one rule defined for all mobile offline-enabled data filters, if you are using tables across profiles. By default, this value is set to last 10 days for most of the offline-enabled tables.
 
  > [!div class="mx-imgBorder"]
  >![Edit org data filter.](media/datafilter_1.png "Edit org data filter")
@@ -181,7 +185,7 @@ Ensure that you have configured at least one of the Profile rules for each table
 |-------------|---------|  
 |All Records|	If you are selecting this filter, you cannot define any other filter rule.|
 |Download Related Data only|If you are selecting this filter, you cannot define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
-|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It is highly recommended to not have Business Unit level filter for an table unless there is a strong justification. It is recommended for a master data scenario with a small data set like Country codes. |
+|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It is highly recommended to not have Business Unit level filter for a table unless there is a strong justification. It is recommended for a master data scenario with a small data set like Country codes. |
 |Custom Data Filter |<=3 filters can be defined in the custom data filter. |
 
 

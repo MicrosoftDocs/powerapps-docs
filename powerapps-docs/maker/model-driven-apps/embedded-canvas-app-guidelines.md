@@ -10,14 +10,10 @@ ms.topic: "troubleshooting"
 author: "RichdiMSFT"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Guidelines and troubleshooting for embedded canvas apps
 

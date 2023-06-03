@@ -1,18 +1,14 @@
 ---
 title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to register a plug-in in a step of the Microsoft Dataverse event pipeline." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/12/2022
+ms.date: 04/07/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - ProfessorKendrick
@@ -50,7 +46,7 @@ This topic describes how to register a plug-in assembly and step, and add them t
 
 You'll use the Plug-in Registration tool (PRT) to register your plug-in assemblies and steps.
 
-PRT is one of the tools available for download from NuGet. Follow the instructions in [Dataverse development tools](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
+PRT is one of the tools available for download from NuGet. Follow the instructions in [Dataverse development tools](download-tools-nuget.md). That topic includes Power Platform CLI instructions to download PRT and other development tools from NuGet.
 
 After you download the PRT, use the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) steps in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to connect to your Microsoft Dataverse environment.
 
@@ -223,7 +219,7 @@ Within your plug-in, you may want to reference primary table property values tha
 If your plug-in step is registered in the **PreValidation** or **PreOperation** stages of the execution pipeline, you could use the Organization service to retrieve the current value of the property, but this isn't a good practice for performance. A better practice is to define a pre-entity image with your plug-in step registration. This will capture a 'snapshot' of the table with the fields you're interested in as they existed before the operation that you can use to compare with the changed values.
 
 > [!IMPORTANT]
-> The default behavior when creating an entity image is to select all columns. However, this can result in reduced web service performance. Developers should only include those columns that are required.
+> The default behavior when creating an entity image is to select all columns. **Don't use this default behavior.** This will negatively impact performance. Only include those columns that are required by the logic of your plug-in.
 
 #### Messages that support entity images
 

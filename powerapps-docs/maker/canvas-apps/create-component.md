@@ -9,13 +9,11 @@ ms.author: jorisde
 ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - jorisdg
   - mduelae
   - gregli-msft
-ms.custom: intro-internal
+ms.collection: get-started
 ---
 
 # Canvas component overview

@@ -2,7 +2,7 @@
 title: Use a connection reference in a solution
 description: Learn how to create a connection reference.
 ms.custom: ""
-ms.date: 02/24/2023
+ms.date: 03/27/2023
 ms.reviewer: angieandrews
 ms.topic: conceptual
 author: ChrisGarty
@@ -14,9 +14,6 @@ ms.subservice: dataverse-maker
 ms.author: cgarty
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use a connection reference in a solution
 
@@ -46,7 +43,7 @@ Connection references can be added to a solution in different ways:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/) or [Power Automate](https://make.powerautomate.com/).
 
-1. On the left pane, select **Solutions**.
+1. On the left pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Create a new or open an existing solution.
 
@@ -95,9 +92,9 @@ When a flow is enabled, the enabling user needs to own all the connections. This
 
 Sharing connections can be accomplished with the following steps.
 
-1. Open the maker portal and select the environment containing the connection.
+1. Go to  [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment containing the connection.
 
-1. Select **Connections**, and then select the connection you want to share.
+1. Select **Connections** on the left navigation pane, and then select the connection you want to share. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. From the menu, select **Share**.
 
@@ -109,15 +106,15 @@ Sharing connections can be accomplished with the following steps.
 
 ### Automated sharing of connections for flow enablement
 
-To automate sharing of connections, use the [Edit Connection Role Assignment action](/connectors/powerappsformakers/#edit-connection-role-assignment) on the Power Apps for Makers connector. You can find an automated connection sharing example in the **ShareConnectionWithServicePrincipal** flow in the [ALM Accelerator for Power Platform](/power-platform/guidance/coe/setup-almacceleratorpowerplatform-preview).
+To automate sharing of connections, use the [Edit Connection Role Assignment action](/connectors/powerappsforappmakers/#edit-connection-role-assignment) on the Power Apps for Makers connector. You can find an automated connection sharing example in the **ShareConnectionWithServicePrincipal** flow in the [ALM Accelerator for Power Platform](/power-platform/guidance/coe/setup-almacceleratorpowerplatform-preview).
 
 :::image type="content" source="media/share-connections-with-service-principal-flow.png" alt-text="Screenshot of a connection sharing example.":::
 
 ## Limits
 
-Connection references are now saved asynchronously. Unlike during the preview period, there's no longer a limit to how many flows can reference the same connection reference. When connection references are updated, an info banner that links to a panel containing asynchronous update details appears.
-
-There is also no limit to the number of actions in each flow that can be associated with the connection reference.
+- Connection references are now saved asynchronously. Unlike during the preview period, there's no longer a limit to how many flows can reference the same connection reference. When connection references are updated, an info banner that links to a panel containing asynchronous update details appears.
+- There is also no limit to the number of actions in each flow that can be associated with the connection reference.
+- Canvas apps don't recognize connection references on custom connectors. To work around this limitation, after a solution is imported to an environment the app must be edited to remove and then re-add the custom connector connection. Note, if this app is in a managed solution, proceeding to edit the app will create an unmanaged layer. More information: [Solution layers](solution-layers.md)
 
 ## See also
 

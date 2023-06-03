@@ -17,12 +17,8 @@ ms.assetid:
 caps.latest.revision: 0
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Columns overview
 

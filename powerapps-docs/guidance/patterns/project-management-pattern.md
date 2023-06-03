@@ -62,9 +62,9 @@ wanted to empower anyone in the organization to report on issues via their
 mobile devices. One of the key problems they were facing was that the "traveler"
 document&mdash;a paper document that was used to track quality checks&mdash;was getting lost.
 
-Rebecca Sackett, a data analyst assistant, found Power Apps in her Office
+Rebecca Sackett, a data analyst assistant, found Power Apps in the Office
 365 subscription and began experimenting with creating apps against SharePoint
-lists to replace manual processes. She built a Power Apps solution to digitize the
+lists to replace manual processes. Rebecca built a Power Apps solution to digitize the
 traveler document, named CAPS Traveler. Project managers and stakeholders use the main Traveler management app to get an overview of all active projects, see key statistics, and manage the testing and shipping calendars.
 
 ![Screenshot of the CAPS Traveler app calendar view.](media/CAPS-traveller-calendar.png "Screenshot of the CAPS Traveler app calendar view")

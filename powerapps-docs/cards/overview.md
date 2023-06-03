@@ -1,39 +1,26 @@
 ---
-title: Cards for Power Apps overview (preview)
+title: Cards for Power Apps overview
 description: Learn about cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: overview
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
 ---
 
-# Cards for Power Apps overview (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Cards for Power Apps overview
 
 Power Apps cards are micro-apps with enterprise data and workflows and interactive, lightweight UI elements that other applications can use as content. Because they're part of the Power Apps ecosystem, cards can add business logic through Power Fx and integration with business data through Power Platform connectors. Using cards, you can quickly build and share rich, actionable apps without any coding or IT expertise.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Get started with cards
 
 You can create cards with just a few clicks. There are no complex systems or services to deploy and maintain.
 
-To get started, sign in to [Power Apps](https://make.powerapps.com). Select **Cards (preview)**, and then select **+ Create a card**.
+To get started, sign in to [Power Apps](https://make.powerapps.com). Select **Cards (preview)**, and then select **+ Create a card**. [!INCLUDE [left-navigation-pane](../includes/left-navigation-pane.md)]
 
-:::image type="content" source="media/overview/cards-get-started.png" alt-text="Screenshot of the card create page in Power Apps.":::
-
-There are two key components of a card:
-
-- **Card designer**: The interface in which you create cards using drag-and-drop controls, Power Fx logic, and data from Power Platform connectors
-
-- **Power Apps data and resource management**: The services that manage sending and receiving cards with embedded data and workflows
+:::image type="content" source="media/overview/create-card-screen.png" alt-text="Screenshot of the card create page in Power Apps.":::
 
 ### Drag and drop UI elements in the card designer
 

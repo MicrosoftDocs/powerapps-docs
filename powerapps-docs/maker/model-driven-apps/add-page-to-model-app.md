@@ -8,11 +8,8 @@ ms.subservice: mda-maker
 ms.topic: "How-to"
 author: "aorth"
 ms.author: "aorth"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
 ---
 # Add a custom page to your model-driven app
 

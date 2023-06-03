@@ -3,7 +3,7 @@ title: " Use Power BI using Microsoft Dataverse data | MicrosoftDocs"
 description: "Learn how to use Power BI to create reports using Microsoft Dataverse data."
 keywords: PBI
 ms.date: 05/05/2022
-ms.custom: intro-internal
+ms.collection: get-started
 ms.topic: article
 applies_to: 
   - Dynamics 365 for Customer Engagement (online)
@@ -11,7 +11,6 @@ ms.assetid: 424d7f29-de44-4ce0-94f1-be8777ad6485
 author: Mattp123
 ms.subservice: dataverse-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -20,8 +19,6 @@ topic-status: Drafting
 tags: 
 search.audienceType: 
   - customizer
-search.app: 
-  - D365CE
 ---
 
 # Use Power BI with Microsoft Dataverse data

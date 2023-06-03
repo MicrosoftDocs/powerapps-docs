@@ -9,9 +9,6 @@ ms.author: paulliew # MSFT alias of Microsoft employees only
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -26,11 +23,11 @@ After auditing is enabled and data changes are made to those tables and columns 
 
 ## Audit table
 
-Data for auditing events is in the [Auditing (Audit) table](../reference/entities/audit.md). In the Web API the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> is the resource for this data. The audit table is read-only.
+Data for auditing events are in the [Auditing (Audit) table](../reference/entities/audit.md). In the Web API the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> is the resource for this data. The audit table is read-only.
 
 The audit table provides the data for the **View Audit Summary** displayed in the Power Platform admin center. More information: [Administrators Guide: View audit logging details](/power-platform/admin/manage-dataverse-auditing#view-audit-logging-details)
 
-Calling user must have the `prvReadAuditSummary` privilege to retrieve data from this table. More information: [Example: Check whether a user has a privilege](../security-access-coding.md#example-check-whether-a-user-has-a-privilege)
+The calling user must have the `prvReadAuditSummary` privilege to retrieve data from this table. More information: [Example: Check whether a user has a privilege](../security-access-coding.md#example-check-whether-a-user-has-a-privilege)
 
 The following table summarizes important columns in the audit table.
 
@@ -48,7 +45,7 @@ The following table summarizes important columns in the audit table.
 
 ### Audit Actions
 
-At the time this topic was written there were 74 options in the [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) which correspond to events in the system. You can use these to filter for specific events.
+When this topic was written there were 76 options in the [Action Choices/Options](/power-apps/developer/data-platform/reference/entities/audit#action-choicesoptions) which correspond to events in the system. You can use these to filter for specific events.
 
 The following groups categorize these events.
 
@@ -81,7 +78,7 @@ These events capture changes when data changes for Many-to-Many relationships.
 
 |Value|Label|Message|Description|
 |-----|-----|-------|-------|
-|33|Associate Entities|`Associate`|One or more records are associated to another.|
+|33|Associate Entities|`Associate`|One or more records are associated with another.|
 |34|Disassociate Entities|`Disassociate`|One or more records are disassociated from another.|
 |53|Assign Role To Team|`Associate`|A security role is assigned to a team.|
 |54|Remove Role From Team|`Disassociate`|A security role is removed from a team.|
@@ -91,7 +88,7 @@ These events capture changes when data changes for Many-to-Many relationships.
 
 #### User Access Events
 
-These options are used to capture history of user access when user access auditing is enabled. The audit record for these events will have the `operation` column value of 4.
+These options are used to capture the history of user access when user access auditing is enabled. The audit record for these events will have the `operation` column value of 4.
 
 |Value|Label|Description|
 |-----|-----|-------|
@@ -100,7 +97,7 @@ These options are used to capture history of user access when user access auditi
 |112|User Access Audit Started|User access audit began.|
 |113|User Access Audit Stopped|User access audit ended.|
 
-For a SDK for .NET sample showing use of these action options, see [Sample: Audit user access](../org-service/samples/audit-user-access.md).
+For an SDK for .NET sample showing the use of these action options, see [Sample: Audit user access](../org-service/samples/audit-user-access.md).
 
 #### Metadata change events
 
@@ -140,9 +137,9 @@ These events capture changes to audit settings.
 
 The remaining action options will generally refer to auditable operations that apply to specific solutions, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Marketing.
 
-The labels for these actions should align to an [SdkMessage.Name](../reference/entities/sdkmessage.md#BKMK_Name) value that represents the action. The specific operation may be a combination of the action name and a table. For example, option with value 10 and label **Close** should correspond to the `CloseIncident` or `CloseQuote` messages.
+The labels for these actions should align with an [SdkMessage.Name](../reference/entities/sdkmessage.md#BKMK_Name) value that represents the action. The specific operation may be a combination of the action name and a table. For example, an option with a value of 10 and the label **Close** should correspond to the `CloseIncident` or `CloseQuote` messages.
 
-### audit table relationships
+### Audit table relationships
 
 The audit table has only two Many-to-One relationships with the `systemuser` table:
 
@@ -158,7 +155,7 @@ You can use these relationships to filter audit data records created for a speci
 > You cannot build queries using QueryExpression or FetchXml that join audit data with tables other than the two formal relationships that exist with the `systemuser` table.
 
 
-### audit EntityType definition
+### Audit EntityType definition
 
 With the Web API, you will use the <xref:Microsoft.Dynamics.CRM.audit?text=audit EntityType> resource to read data from the `audit` table. The following is the **EntityType** definition Web API $metadata service document without annotations:
 
@@ -265,7 +262,7 @@ Preference-Applied: odata.include-annotations="*"
 
 # [SDK for .NET](#tab/sdk)
 
-There are two static methods below that show the number of deleted contact records for the specified user. These queries use aggregation so they are not limited to 5,000 results. But they are limited to the higher 50,000 record limit for aggregation.
+There are two static methods below that show the number of deleted contact records for the specified user. These queries use aggregation, so they are not limited to 5,000 results. But they are limited to the higher 50,000 record limit for aggregation.
 
 `ShowNumberContactsDeletedByUserQE` uses <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>.
 
@@ -482,7 +479,7 @@ More information:
 - <xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function>
 - <xref:Microsoft.Dynamics.CRM.RetrieveAuditDetailsResponse?text=RetrieveAuditDetailsResponse ComplexType>
 - [Use Web API functions](../webapi/use-web-api-functions.md)
-- [Include formatted values](../webapi/query-data-web-api.md#include-formatted-values)
+- [Formatted values](../webapi/query-data-web-api.md#formatted-values)
 
 
 # [SDK for .NET](#tab/sdk)
@@ -517,7 +514,7 @@ static void ShowAuditDetail(
 
 #### DisplayAuditDetail method
 
-The `DisplayAuditDetail` static method will output different details to the console depending on the type of audit detail. This method is used by other SDK for .NET samples on this page.
+The `DisplayAuditDetail` static method will output different details to the console depending on the type of audit detail. This method is used by other SDKs for .NET samples on this page.
 
 ```csharp
 /// <summary>

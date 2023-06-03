@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -39,7 +37,7 @@ Latitude of the pin | ItemsLatitudes | Required
 Color of the pin | ItemsColors | Optional
 Icon for the pin | ItemsIcons | Optional
 
-The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](/functions/function-colors).
+The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](/power-platform/power-fx/reference/function-colors).
 
 You can use the icons described in the [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) topic as your icon.
 
@@ -99,7 +97,9 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
     ![A screenshot of the map control with custom icons and different colors.](./media/geospatial/pins-map.png)
 
  >[!NOTE]
- > Each map control has a pin limitation of 5000 pins where it prioritizes latitude and longitude columns over the address column. Within the 5000 pin limitation, up to 50 addresses can be geocoded for each map control. Therefore, for pins with both latitude / longitude and an address bound, the map control will prioritize using the latitude / longitude to avoid geocoding the address.
+ > Each map control can display up to 5000 pins from latitude or longitude and 50 pins from addresses. The pin limit is lower for addresses as the map needs to geocode these addresses into latitude or longitude to display them. We recommend not using addresses where possible. You can [save geocoded addresses back to your data source](geospatial-map-excel.md#save-geocoded-addresses-from-map-control-to-data-source).
+ >
+ > When both latitude or longitude and an address is given for a single pin, the map control will prioritize using the latitude or longitude to avoid geocoding the address.
 
 ## Save geocoded addresses from map control to data source
 

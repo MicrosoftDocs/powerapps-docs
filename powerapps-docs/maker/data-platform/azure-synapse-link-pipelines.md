@@ -12,12 +12,8 @@ applies_to:
 author: "JasonHQX"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: "sama-zaki"
 ---
 # Copy Dataverse data into Azure SQL

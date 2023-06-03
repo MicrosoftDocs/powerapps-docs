@@ -9,15 +9,11 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 06/06/2018
 ms.topic: overview
 ms.assetid: 6ad7e43c-b6a1-48c4-9dfb-ed830142a841
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Overview of model-driven app special column properties
 

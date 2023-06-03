@@ -9,13 +9,9 @@ author: "Mattp123"
 ms.assetid: 734b4ffa-5543-4f88-8517-299589f433f7
 ms.subservice: dataverse-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Types of columns
 

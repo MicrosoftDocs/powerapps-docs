@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "NHelgren" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "nhelgren" # MSFT alias of Microsoft employees only
-manager: "mayadu" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Use column comparison in queries
@@ -68,8 +64,8 @@ the same value across both columns.
 
 ### See Also
 
-[Use FetchXML to construct a query](use-fetchxml-construct-query.md)  
-[Column comparison using the Web API](webapi/query-data-web-api.md#column-comparison-using-the-web-api)  
+[Use FetchXML to construct a query](use-fetchxml-construct-query.md)<br />
+[Column comparison](webapi/query-data-web-api.md#column-comparison)<br />
 [Column comparison using the SDK API](org-service/use-conditionexpression-class.md#column-comparison-using-the-sdk-api)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

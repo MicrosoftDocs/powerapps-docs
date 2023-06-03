@@ -1,10 +1,10 @@
 ---
-title: Create a portal in an environment containing customer engagement apps
+title: Create a site in an environment containing customer engagement apps
 description: Instructions to create a portal in an environment containing customer engagement apps.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 07/29/2022
 ms.subservice: portals
 ms.author: nenandw
@@ -14,10 +14,10 @@ contributors:
     - nickdoelman
 ---
 
-# Create a portal in an environment containing customer engagement apps
+# Create a site in an environment containing customer engagement apps
 
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
 If you select an environment that contains customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), you can create the portals mentioned in [Portal templates](portal-templates.md).
 
@@ -25,7 +25,7 @@ If you select an environment that contains customer engagement apps (Dynamics 36
 > - Some portal types support creating multiple portals on a single environment. For more information, go to [creating additional portals](create-additional-portals.md).
 > - To learn about the roles required to create a portal, read [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md).
 
-To create a portal in an environment containing customer engagement apps, sign in to [Power Apps](https://make.powerapps.com) and follow these steps.
+To create a site (portal) in an environment containing customer engagement apps, sign in to [Power Apps](https://make.powerapps.com) and follow these steps.
 
 1. On the left pane, select **Create**. 
 

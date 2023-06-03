@@ -9,15 +9,11 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 09/26/2022
 ms.topic: conceptual
 ms.assetid: 82892cd3-3436-4677-b96b-f2ccd0a4f078
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Subgrid properties for model-driven app main forms (classic)
 

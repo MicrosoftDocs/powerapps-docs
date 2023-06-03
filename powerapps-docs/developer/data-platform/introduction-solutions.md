@@ -6,14 +6,11 @@ author: shmcarth # GitHub ID
 ms.author: shmcarth
 ms.topic: article
 ms.reviewer: pehecke
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 03/17/2021
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Introduction to solutions

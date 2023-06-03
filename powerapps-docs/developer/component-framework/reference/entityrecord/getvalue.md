@@ -3,7 +3,7 @@ title: EntityRecord.getValue | Microsoft Docs
 description: Gets the value of the record's column.
 ms.author: noazarur
 author: noazarur-microsoft
-ms.date: 08/22/2022
+ms.date: 04/21/2023
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 | Parameter Name | Type     | Required | Description         |
 | -------------- | -------- | -------- | ------------------- |
-| `columnName`   | `string` | Yes      | Name of the column. |
+| `columnName`   | `string` | Yes      | The logical name of the column. |
 
 ## Return Value
 

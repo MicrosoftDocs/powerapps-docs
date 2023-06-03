@@ -3,17 +3,14 @@ title: Working with untyped and dynamic objects
 description: How to work with untyped and dynamic objects.
 author: lancedMicrosoft
 ms.topic: overview
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: mkaur
 ms.date: 03/2/2023
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - lancedMicrosoft
   - mduelae

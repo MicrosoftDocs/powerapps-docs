@@ -14,7 +14,6 @@ author: "Mattp123"
 ms.assetid: 2461bd71-6cb4-46b7-8d1f-6a0aa3dca809
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,9 +21,6 @@ caps.latest.revision: 18
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create a model-driven app site map using the site map designer

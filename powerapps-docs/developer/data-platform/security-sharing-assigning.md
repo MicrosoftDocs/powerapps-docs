@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: paulliew # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Sharing and assigning
 
@@ -32,14 +29,14 @@ For security reasons, develop the practice of sharing only the necessary records
 with the smallest set of users possible. Only grant the minimum access required
 for users to do their jobs. A user might have access to the same record in more
 than one context. For example, a user might share a record directly with
-specific access rights, and he or she might also be on a team in which the same
+specific access rights, and they might also be on a team in which the same
 record is shared with different access rights. In this case, the access rights
 that this user has on the record are the union of all the rights.
 
 When you share a record with another user using the `GrantAccess` message (<xref:Microsoft.Dynamics.CRM.GrantAccess> action, <xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest> class), or modify access using the `ModifyAccess` message (<xref:Microsoft.Dynamics.CRM.ModifyAccess> action, <xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest> class), you must indicate what access rights you want to
 grant to the other user. Access rights on a shared record can be different for
 each user with whom the record is shared. However, you cannot give a user any
-rights that he or she would not have for that type of table, based on the role
+rights that they would not have for that type of table, based on the role
 assigned to that user. For example, if a user does not have **Read** privileges on
 accounts and you share an account with that user, the user will be unable to see
 that account.
@@ -51,7 +48,7 @@ new record inherits those properties. For example, Joe and Mike are working on a
 high priority lead. Joe creates a new lead and two activities, shares the lead
 with Mike, and selects cascade sharing. Mike makes a telephone call and sends an
 email regarding the new lead. Joe sees that Mike has contacted the company two
-times, so he does not make another call.
+times, so Joe does not make another call.
 
 Sharing is maintained on individual records. A record inherits the sharing
 properties from its parent and maintains its own sharing properties. Therefore,
@@ -76,7 +73,7 @@ whether records should be shared with previous owners or not after the assign
 operation. If **Share reassigned records with original owner** is selected (see **System Settings** > **General**), then the previous owner
 shares the record with all access rights after the assign operation. Otherwise,
 the previous owner does not share the record and may not have access to the
-record, depending on his or her privileges. The Organization table's
+record, depending on their privileges. The Organization table's
 [ShareToPreviousOwnerOnAssign](reference/entities/organization.md#sharetopreviousowneronassign-choicesoptions) column controls this setting.
 
 > [!NOTE]

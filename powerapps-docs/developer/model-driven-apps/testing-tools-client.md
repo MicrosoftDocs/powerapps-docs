@@ -9,9 +9,6 @@ ms.author: chrisbal
  # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Testing tools for client-side development
 

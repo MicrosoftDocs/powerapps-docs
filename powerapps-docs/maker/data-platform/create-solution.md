@@ -10,12 +10,8 @@ ms.assetid: e21a4876-08b4-417a-a644-c577a27c5cf1
 caps.latest.revision: 12
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create a solution
 
@@ -25,7 +21,7 @@ To locate and work with just the components you’ve customized, create a soluti
 > For information about implementing healthy application lifecycle management (ALM) using solutions, see the [Power Platform ALM guide](/power-platform/alm).
   
 To create a solution:   
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
 2.  Select **New solution** and then complete the required columns for the solution.
   
@@ -87,7 +83,7 @@ When you make unmanaged changes in an environment, some components, such as form
  
 ### Publish your customizations
 
-1.  Select **Solutions** from the left navigation.
+1.  Select **Solutions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 2.  Select the solution that you want to publish to open it.
 
@@ -107,7 +103,8 @@ The solution publisher indicates who developed the app. For this reason, you sho
 > The **Common Data Services Default Solution** is associated with the **Microsoft Dataverse Default Publisher**. The default customization prefix will be randomly assigned for this publisher, for example it could be `cr8a3`. This means that the name of every new item of metadata created for your organization will have this prepended to the names used to uniquely identify the items.
 
 ### Create a solution publisher
-1.	In the Power Apps portal, select **Solutions**. 
+
+1.	In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2.	On the command bar, select **New solution**, in the right pane select the **Publisher** drop down list, and then select **+ Publisher**. 
     > [!div class="mx-imgBorder"] 
     > <img src="media/create-new-pubisher.png" alt="Create a new publisher" height="738" width="400">
@@ -120,8 +117,9 @@ The solution publisher indicates who developed the app. For this reason, you sho
 4. Select **Save and Close**.
 
 ### Change a solution publisher
+
 You can change a solution publisher for an unmanaged solution by following these steps:
-1.	In the Power Apps portal, select **Solutions**, select **…** next to the solution you want, and then select **Settings**. 
+1.	In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, select **…** next to the solution you want, and then select **Settings**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2.	In the **Solution settings** pane, select **Edit publisher**. 
 3.	Edit the **Display name** and **Prefix** columns to the values you want. The **Option Value Prefix** column generates a number based on the publisher prefix. This number is used when you add options to choices and provides an indicator of which solution was used to add the option. 
 4.	In addition to the prefix, you can also change the solution publisher display name, contact information, and address in the **Contact Details** section. 
@@ -131,12 +129,13 @@ You can change a solution publisher for an unmanaged solution by following these
 
 Use solution segmentation so that you only include table components that are updated when you distribute solution updates. More information: [Use segmented solutions](/power-platform/alm/segmented-solutions-alm) in the Power Platform ALM guide
 
-### Create a segmented solution with table assets 
+### Create a segmented solution with table assets
+
  To create a segmented solution, start with creating an unmanaged solution and add only the components that you've updated. The wizard-like setup takes you step by step through the process of adding table assets. 
 
 For example, imagine that you've created a new custom table that doesn't exist in any other environment named *Custom table* and also added a new column named *topten* for the account table. To create a segmented solution, follow these steps. 
   
-1. Go to the Power Apps portal and then select **Solutions**.  
+1. Go to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and then select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
 2.  Select **New solution** and create a solution. Enter information in the required columns. Select **Create**.  
   

@@ -8,12 +8,8 @@ ms.subservice: mda-maker
 ms.topic: "article"
 author: "adrianorth"
 ms.author: "aorth"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Known issues with custom pages in a model-driven app
 

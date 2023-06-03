@@ -2,7 +2,6 @@
 title: Topic title that doesn't specify PowerApps | Microsoft Docs
 description: Longer summary of topic with customer-centric keywords and PowerApps reference
 author: PM's or writer's GitHub alias
-manager: writer's manager's MSFT alias 
 
 ms.author: PM's or writer's MSFT alias 
 ms.reviewer: writer's MSFT alias 

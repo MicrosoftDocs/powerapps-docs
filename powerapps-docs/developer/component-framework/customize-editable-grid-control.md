@@ -1,5 +1,5 @@
 ---
-title: "Customize the editable grid control (Preview)| Microsoft Docs"
+title: "Customize the editable grid control | Microsoft Docs"
 description: "Learn how you can customize the editable grid control."
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: jasongre
@@ -13,11 +13,9 @@ contributors:
  - aliry
 ---
 
-# Customize the editable grid control (Preview)
+# Customize the editable grid control
 
-[This article is pre-release documentation and is subject to change.]
-
-The  [Power Apps grid control (preview)](../../maker/model-driven-apps/the-power-apps-grid-control.md) uses modern Microsoft Fluent controls to allow users to see and edit values in grid cells. Scenarios may exist that have special needs requiring modification of the out-of-the-box visuals and user interactions. To facilitate this, the Power Apps grid control provides extensibility APIs that allow the grid interface to be customized. Using these APIs, makers can implement a grid customizer control (code component) to provide custom cell renderer and editor components to the grid.
+The  [Power Apps grid control](../../maker/model-driven-apps/the-power-apps-grid-control.md) uses modern Microsoft Fluent controls to allow users to see and edit values in grid cells. Scenarios may exist that have special needs requiring modification of the out-of-the-box visuals and user interactions. To facilitate this, the Power Apps grid control provides extensibility APIs that allow the grid interface to be customized. Using these APIs, makers can implement a grid customizer control (code component) to provide custom cell renderer and editor components to the grid.
 
 :::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-custom-renderers.png" alt-text="Custom cell renderers for the Power Apps grid control" lightbox="../../maker/model-driven-apps/media/power-apps-grid-custom-renderers.png":::
 
@@ -75,9 +73,9 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
 
    :::image type="content" source="media/customize-editable-grid-control-tab.png" alt-text="The grid control tab":::
 
-1. From the **Controls** list, add the **(Preview) Power Apps grid control**.
+1. From the **Controls** list, add the **Power Apps grid control**.
 
-   :::image type="content" source="media/customize-editable-grid-add-power-apps-grid-control.png" alt-text="Adding the (Preview) Power Apps grid control" lightbox="media/customize-editable-grid-add-power-apps-grid-control-full.png":::
+   :::image type="content" source="media/customize-editable-grid-add-power-apps-grid-control.png" alt-text="Adding the Power Apps grid control" lightbox="media/customize-editable-grid-add-power-apps-grid-control-full.png":::
 
 1. In the **Properties** panel, set the **Customizer control** property to the full logical name of your grid customizer code component.
 

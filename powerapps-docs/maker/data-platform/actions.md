@@ -1,7 +1,7 @@
 ---
 title: "Use custom process actions | MicrosoftDocs"
 description: "With custom process actions, you can perform operations, such as Create, Update, Delete, Assign, or Perform Action. Internally, an custom process action creates a custom message."
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 04/28/2021
 ms.reviewer: ""
 
@@ -13,9 +13,6 @@ ms.assetid: 1475985f-d3c4-429d-beac-cb455965e792
 caps.latest.revision: 20
 ms.subservice: dataverse-maker
 ms.author: "DEONHE"
-manager: "kvivek"
-search.app: 
-  - Flow
 search.audienceType: 
   - flowmaker
   - enduser

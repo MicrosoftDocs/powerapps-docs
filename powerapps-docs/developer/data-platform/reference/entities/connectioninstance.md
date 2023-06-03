@@ -1,18 +1,14 @@
 ---
 title: "ConnectionInstance table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ConnectionInstance table/entity."
-ms.date: 12/07/2022
+ms.date: 05/23/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # ConnectionInstance table/entity reference
@@ -29,19 +25,23 @@ search.app:
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.2/connectioninstances(*connectioninstanceid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.2/connectioninstances<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/connectioninstances(*connectioninstanceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/connectioninstances(*connectioninstanceid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/connectioninstances<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.2/connectioninstances(*connectioninstanceid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/connectioninstances(*connectioninstanceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH [*org URI*]/api/data/v9.2/connectioninstances(*connectioninstanceid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|ConfirmConsentCode|<xref:Microsoft.Dynamics.CRM.ConfirmConsentCode?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="ConfirmConsentCode"|
+|Create|POST [*org URI*]/api/data/v9.2/connectioninstances<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/connectioninstances(*connectioninstanceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GetConsentLink|<xref:Microsoft.Dynamics.CRM.GetConsentLink?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="GetConsentLink"|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/connectioninstances(*connectioninstanceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/connectioninstances<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/connectioninstances(*connectioninstanceid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/connectioninstances(*connectioninstanceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -65,30 +65,33 @@ search.app:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [accountname](#BKMK_accountname)
-- [allowsharing](#BKMK_allowsharing)
+- [AccountName](#BKMK_AccountName)
+- [AllowSharing](#BKMK_AllowSharing)
+- [ConnectionInstanceDisplayName](#BKMK_ConnectionInstanceDisplayName)
 - [ConnectionInstanceId](#BKMK_ConnectionInstanceId)
+- [ConnectionInstanceLogicalName](#BKMK_ConnectionInstanceLogicalName)
 - [ConnectionInternalId](#BKMK_ConnectionInternalId)
-- [connectionmetadata](#BKMK_connectionmetadata)
-- [connectionparameters](#BKMK_connectionparameters)
-- [connectionparametersset](#BKMK_connectionparametersset)
+- [ConnectionMetadata](#BKMK_ConnectionMetadata)
+- [ConnectionParametersConfig](#BKMK_ConnectionParametersConfig)
+- [ConnectionParametersSetConfig](#BKMK_ConnectionParametersSetConfig)
+- [ConnectionReferenceId](#BKMK_ConnectionReferenceId)
 - [ConnectionStatus](#BKMK_ConnectionStatus)
-- [connectorid](#BKMK_connectorid)
-- [connectorinternalid](#BKMK_connectorinternalid)
-- [displayname](#BKMK_displayname)
-- [IconBlobContent](#BKMK_IconBlobContent)
+- [ConnectorId](#BKMK_ConnectorId)
+- [ConnectorInternalId](#BKMK_ConnectorInternalId)
+- [IconUri](#BKMK_IconUri)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [IsCustomizable](#BKMK_IsCustomizable)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
-- [testconnectionlinks](#BKMK_testconnectionlinks)
+- [TestConnectionLinks](#BKMK_TestConnectionLinks)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
-### <a name="BKMK_accountname"></a> accountname
+### <a name="BKMK_AccountName"></a> AccountName
 
 |Property|Value|
 |--------|-----|
@@ -99,12 +102,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|accountname|
-|MaxLength|200|
+|MaxLength|400|
 |RequiredLevel|None|
 |Type|String|
 
 
-### <a name="BKMK_allowsharing"></a> allowsharing
+### <a name="BKMK_AllowSharing"></a> AllowSharing
 
 |Property|Value|
 |--------|-----|
@@ -116,7 +119,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Boolean|
 
-#### allowsharing Choices/Options
+#### AllowSharing Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|
@@ -125,6 +128,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
+### <a name="BKMK_ConnectionInstanceDisplayName"></a> ConnectionInstanceDisplayName
+
+|Property|Value|
+|--------|-----|
+|Description|The display name of the Connection as seen by the user.|
+|DisplayName|Display Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|connectioninstancedisplayname|
+|MaxLength|400|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
 
 
 ### <a name="BKMK_ConnectionInstanceId"></a> ConnectionInstanceId
@@ -141,6 +160,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_ConnectionInstanceLogicalName"></a> ConnectionInstanceLogicalName
+
+|Property|Value|
+|--------|-----|
+|Description|Connection Instance unique name|
+|DisplayName|Connection Instance Logical Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|connectioninstancelogicalname|
+|MaxLength|400|
+|RequiredLevel|SystemRequired|
+|Type|String|
+
+
 ### <a name="BKMK_ConnectionInternalId"></a> ConnectionInternalId
 
 |Property|Value|
@@ -152,12 +188,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|connectioninternalid|
-|MaxLength|200|
+|MaxLength|400|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
 
-### <a name="BKMK_connectionmetadata"></a> connectionmetadata
+### <a name="BKMK_ConnectionMetadata"></a> ConnectionMetadata
 
 |Property|Value|
 |--------|-----|
@@ -173,36 +209,51 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
-### <a name="BKMK_connectionparameters"></a> connectionparameters
+### <a name="BKMK_ConnectionParametersConfig"></a> ConnectionParametersConfig
 
 |Property|Value|
 |--------|-----|
-|Description|The connection parameters that will be passed on creation|
-|DisplayName|Connection Parameters|
+|Description|The connection parameters and values that will be passed on creation|
+|DisplayName|Connection Parameters Config|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|connectionparametersconfig|
+|MaxLength|20000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_ConnectionParametersSetConfig"></a> ConnectionParametersSetConfig
+
+|Property|Value|
+|--------|-----|
+|Description|The connection parameters set and values that are mainly used in case of multiauth connections|
+|DisplayName|Connection Parameters Set Config|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|connectionparameters|
-|MaxLength|500000|
+|LogicalName|connectionparameterssetconfig|
+|MaxLength|20000|
 |RequiredLevel|None|
 |Type|String|
 
 
-### <a name="BKMK_connectionparametersset"></a> connectionparametersset
+### <a name="BKMK_ConnectionReferenceId"></a> ConnectionReferenceId
 
 |Property|Value|
 |--------|-----|
-|Description|The connection parameters set that are mainly used in case of multiauth connections|
-|DisplayName|Connection Parameters Set|
-|FormatName|Text|
-|IsLocalizable|False|
+|Description|Unique identifier for Connection Reference associated with the Connection Instance.|
+|DisplayName|Parent Connection Reference|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|connectionparametersset|
-|MaxLength|500000|
-|RequiredLevel|None|
-|Type|String|
+|IsValidForUpdate|False|
+|LogicalName|connectionreferenceid|
+|RequiredLevel|SystemRequired|
+|Targets|connectionreference|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ConnectionStatus"></a> ConnectionStatus
@@ -216,12 +267,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|connectionstatus|
-|MaxLength|100|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
 
-### <a name="BKMK_connectorid"></a> connectorid
+### <a name="BKMK_ConnectorId"></a> ConnectorId
 
 |Property|Value|
 |--------|-----|
@@ -235,7 +286,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 
 
-### <a name="BKMK_connectorinternalid"></a> connectorinternalid
+### <a name="BKMK_ConnectorInternalId"></a> ConnectorInternalId
 
 |Property|Value|
 |--------|-----|
@@ -246,46 +297,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|connectorinternalid|
-|MaxLength|200|
+|MaxLength|400|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
 
-### <a name="BKMK_displayname"></a> displayname
-
-|Property|Value|
-|--------|-----|
-|Description|The display name of the Connection as seen by the user.|
-|DisplayName|Display Name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|displayname|
-|MaxLength|200|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-
-
-### <a name="BKMK_IconBlobContent"></a> IconBlobContent
-
-**Added by**: Active Solution Solution
+### <a name="BKMK_IconUri"></a> IconUri
 
 |Property|Value|
 |--------|-----|
 |Description|Icon for the Connection Instance|
 |DisplayName|Icon Uri|
-|IsPrimaryImage|True|
-|IsValidForForm|False|
+|FormatName|Url|
+|IsLocalizable|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|iconblobcontent|
-|MaxHeight|144|
-|MaxWidth|144|
+|LogicalName|iconuri|
+|MaxLength|1000|
 |RequiredLevel|None|
-|Type|Image|
+|Type|String|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
+
+**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -300,6 +335,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_IsCustomizable"></a> IsCustomizable
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Is Customizable|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscustomizable|
+|RequiredLevel|SystemRequired|
+|Type|ManagedProperty|
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -392,7 +442,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
-### <a name="BKMK_testconnectionlinks"></a> testconnectionlinks
+### <a name="BKMK_TestConnectionLinks"></a> TestConnectionLinks
 
 |Property|Value|
 |--------|-----|
@@ -445,6 +495,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [ComponentIdUnique](#BKMK_ComponentIdUnique)
+- [ComponentState](#BKMK_ComponentState)
+- [ConnectionReferenceIdName](#BKMK_ConnectionReferenceIdName)
 - [connectoridName](#BKMK_connectoridName)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -453,9 +506,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [IconBlobContent_Timestamp](#BKMK_IconBlobContent_Timestamp)
-- [IconBlobContent_URL](#BKMK_IconBlobContent_URL)
-- [IconBlobContentId](#BKMK_IconBlobContentId)
+- [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -463,13 +514,72 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [SolutionId](#BKMK_SolutionId)
+- [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
+
+
+### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Row id unique|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentidunique|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_ComponentState"></a> ComponentState
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Component State|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentstate|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ComponentState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
+
+
+
+### <a name="BKMK_ConnectionReferenceIdName"></a> ConnectionReferenceIdName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|connectionreferenceidname|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_connectoridName"></a> connectoridName
@@ -607,54 +717,29 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_IconBlobContent_Timestamp"></a> IconBlobContent_Timestamp
+### <a name="BKMK_IsManaged"></a> IsManaged
 
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|iconblobcontent_timestamp|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
-|RequiredLevel|None|
-|Type|BigInt|
-
-
-### <a name="BKMK_IconBlobContent_URL"></a> IconBlobContent_URL
-
-**Added by**: Active Solution Solution
+**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Url|
-|IsLocalizable|False|
+|Description|Indicates whether the solution component is part of a managed solution.|
+|DisplayName|Is Managed|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|iconblobcontent_url|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
+|LogicalName|ismanaged|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
 
+#### IsManaged Choices/Options
 
-### <a name="BKMK_IconBlobContentId"></a> IconBlobContentId
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
 
-**Added by**: Active Solution Solution
+**DefaultValue**: 0
 
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|iconblobcontentid|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
@@ -776,6 +861,23 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_OverwriteTime"></a> OverwriteTime
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|For internal use only.|
+|DisplayName|Record Overwrite Time|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|overwritetime|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
+
+
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 **Added by**: Active Solution Solution
@@ -876,6 +978,36 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
+
+
+### <a name="BKMK_SolutionId"></a> SolutionId
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the associated solution.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|solutionid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|supportingsolutionid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
@@ -1059,6 +1191,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [team_connectioninstance](#BKMK_team_connectioninstance)
 - [business_unit_connectioninstance](#BKMK_business_unit_connectioninstance)
 - [lk_connectioninstance_connectorid](#BKMK_lk_connectioninstance_connectorid)
+- [connectionreference_connectioninstance](#BKMK_connectionreference_connectioninstance)
 
 
 ### <a name="BKMK_lk_connectioninstance_createdby"></a> lk_connectioninstance_createdby
@@ -1108,6 +1241,12 @@ See the [business_unit_connectioninstance](businessunit.md#BKMK_business_unit_co
 **Added by**: Power Connector Solution Solution
 
 See the [lk_connectioninstance_connectorid](connector.md#BKMK_lk_connectioninstance_connectorid) one-to-many relationship for the [connector](connector.md) table/entity.
+
+### <a name="BKMK_connectionreference_connectioninstance"></a> connectionreference_connectioninstance
+
+**Added by**: Power Platform Connection References Solution
+
+See the [connectionreference_connectioninstance](connectionreference.md#BKMK_connectionreference_connectioninstance) one-to-many relationship for the [connectionreference](connectionreference.md) table/entity.
 
 ### See also
 

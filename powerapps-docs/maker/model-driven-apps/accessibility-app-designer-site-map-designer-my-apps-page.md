@@ -5,7 +5,6 @@ keywords: App designer; site map designer
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 05/20/2019
 ms.topic: article
 applies_to: 
@@ -15,9 +14,6 @@ applies_to:
 ms.assetid: 26c79c20-2987-476e-983a-406e0db13034
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Shortcuts and accessibility in app designer and site map designer
 
