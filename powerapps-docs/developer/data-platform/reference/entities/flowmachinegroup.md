@@ -1,7 +1,7 @@
 ---
 title: "flowmachinegroup table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowmachinegroup table/entity."
-ms.date: 05/23/2023
+ms.date: 06/02/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,24 +25,24 @@ search.audienceType:
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.2/flowmachinegroups(*flowmachinegroupid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.2/flowmachinegroups<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Assign|PATCH /flowmachinegroups(*flowmachinegroupid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /flowmachinegroups<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/flowmachinegroups(*flowmachinegroupid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|DeleteFlowMachineGroup|<xref:Microsoft.Dynamics.CRM.DeleteFlowMachineGroup?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="DeleteFlowMachineGroup"|
-|GetPublicKey|<xref:Microsoft.Dynamics.CRM.GetPublicKey?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="GetPublicKey"|
+|Delete|DELETE /flowmachinegroups(*flowmachinegroupid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|DeleteFlowMachineGroup|<xref:Microsoft.Dynamics.CRM.DeleteFlowMachineGroup?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = DeleteFlowMachineGroup|
+|GetPublicKey|<xref:Microsoft.Dynamics.CRM.GetPublicKey?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = GetPublicKey|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/flowmachinegroups(*flowmachinegroupid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/flowmachinegroups<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET /flowmachinegroups(*flowmachinegroupid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /flowmachinegroups<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|RotateGroupKey|<xref:Microsoft.Dynamics.CRM.RotateGroupKey?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="RotateGroupKey"|
-|SetState|PATCH [*org URI*]/api/data/v9.2/flowmachinegroups(*flowmachinegroupid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/flowmachinegroups(*flowmachinegroupid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateAccountCredentials|<xref:Microsoft.Dynamics.CRM.UpdateAccountCredentials?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="UpdateAccountCredentials"|
+|RotateGroupKey|<xref:Microsoft.Dynamics.CRM.RotateGroupKey?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = RotateGroupKey|
+|SetState|PATCH /flowmachinegroups(*flowmachinegroupid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /flowmachinegroups(*flowmachinegroupid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateAccountCredentials|<xref:Microsoft.Dynamics.CRM.UpdateAccountCredentials?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = UpdateAccountCredentials|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties

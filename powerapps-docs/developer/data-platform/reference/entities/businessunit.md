@@ -1,7 +1,7 @@
 ---
 title: "BusinessUnit table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the BusinessUnit table/entity."
-ms.date: 05/23/2023
+ms.date: 06/02/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -23,16 +23,16 @@ Business, division, or department in the Microsoft Dynamics 365 database.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.2/businessunits<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/businessunits(*businessunitid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/businessunits(*businessunitid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Create|POST /businessunits<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /businessunits(*businessunitid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET /businessunits(*businessunitid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveBusinessHierarchyBusinessUnit|<xref:Microsoft.Dynamics.CRM.RetrieveBusinessHierarchyBusinessUnit?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveBusinessHierarchyBusinessUnitRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/businessunits<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET /businessunits<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |SetParentBusinessUnit|[Associate and disassociate entities](/powerapps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api)|<xref:Microsoft.Crm.Sdk.Messages.SetParentBusinessUnitRequest>|
 |SetParentSystemUser|<xref:Microsoft.Dynamics.CRM.SetParentSystemUser?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SetParentSystemUserRequest>|
 |SetParentTeam|<xref:Microsoft.Dynamics.CRM.SetParentTeam?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SetParentTeamRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.2/businessunits(*businessunitid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/businessunits(*businessunitid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH /businessunits(*businessunitid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /businessunits(*businessunitid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -1607,8 +1607,8 @@ Listed by **SchemaName**.
 - [business_unit_customapirequestparameter](#BKMK_business_unit_customapirequestparameter)
 - [business_unit_customapiresponseproperty](#BKMK_business_unit_customapiresponseproperty)
 - [business_unit_datalakefolder](#BKMK_business_unit_datalakefolder)
-- [business_unit_datalakefolderpermission](#BKMK_business_unit_datalakefolderpermission)
 - [business_unit_exportedexcel](#BKMK_business_unit_exportedexcel)
+- [business_unit_retaineddataexcel](#BKMK_business_unit_retaineddataexcel)
 - [business_unit_synapsedatabase](#BKMK_business_unit_synapsedatabase)
 - [business_unit_msdyn_dataflow](#BKMK_business_unit_msdyn_dataflow)
 - [business_unit_msdyn_dataflowrefreshhistory](#BKMK_business_unit_msdyn_dataflowrefreshhistory)
@@ -1625,6 +1625,8 @@ Listed by **SchemaName**.
 - [business_unit_flowmachineimageversion](#BKMK_business_unit_flowmachineimageversion)
 - [business_unit_flowmachinenetwork](#BKMK_business_unit_flowmachinenetwork)
 - [business_unit_processstageparameter](#BKMK_business_unit_processstageparameter)
+- [business_unit_workqueue](#BKMK_business_unit_workqueue)
+- [business_unit_workqueueitem](#BKMK_business_unit_workqueueitem)
 - [business_unit_desktopflowbinary](#BKMK_business_unit_desktopflowbinary)
 - [business_unit_flowsession](#BKMK_business_unit_flowsession)
 - [business_unit_connectionreference](#BKMK_business_unit_connectionreference)
@@ -1650,6 +1652,7 @@ Listed by **SchemaName**.
 - [business_unit_msdyn_knowledgearticletemplate](#BKMK_business_unit_msdyn_knowledgearticletemplate)
 - [business_unit_msdyn_knowledgepersonalfilter](#BKMK_business_unit_msdyn_knowledgepersonalfilter)
 - [business_unit_msdyn_knowledgesearchfilter](#BKMK_business_unit_msdyn_knowledgesearchfilter)
+- [business_unit_fxexpression](#BKMK_business_unit_fxexpression)
 - [business_unit_powerfxrule](#BKMK_business_unit_powerfxrule)
 - [business_unit_keyvaultreference](#BKMK_business_unit_keyvaultreference)
 - [business_unit_managedidentity](#BKMK_business_unit_managedidentity)
@@ -1658,11 +1661,14 @@ Listed by **SchemaName**.
 - [business_unit_retentionoperation](#BKMK_business_unit_retentionoperation)
 - [business_unit_msdyn_dataflowtemplate](#BKMK_business_unit_msdyn_dataflowtemplate)
 - [business_unit_appnotification](#BKMK_business_unit_appnotification)
+- [business_unit_msdyn_mobileapp](#BKMK_business_unit_msdyn_mobileapp)
 - [business_unit_card](#BKMK_business_unit_card)
 - [business_unit_msdyn_entitylinkchatconfiguration](#BKMK_business_unit_msdyn_entitylinkchatconfiguration)
 - [business_unit_msdyn_richtextfile](#BKMK_business_unit_msdyn_richtextfile)
 - [business_unit_msdyn_customcontrolextendedsettings](#BKMK_business_unit_msdyn_customcontrolextendedsettings)
+- [business_unit_recentlyused](#BKMK_business_unit_recentlyused)
 - [business_unit_msdyn_virtualtablecolumncandidate](#BKMK_business_unit_msdyn_virtualtablecolumncandidate)
+- [business_unit_msdyn_aievent](#BKMK_business_unit_msdyn_aievent)
 - [business_unit_msdyn_aimodel](#BKMK_business_unit_msdyn_aimodel)
 - [business_unit_msdyn_aitemplate](#BKMK_business_unit_msdyn_aitemplate)
 - [business_unit_msdyn_aibfeedbackloop](#BKMK_business_unit_msdyn_aibfeedbackloop)
@@ -1690,6 +1696,7 @@ Listed by **SchemaName**.
 - [business_unit_msdyn_pmview](#BKMK_business_unit_msdyn_pmview)
 - [business_unit_msdyn_analysiscomponent](#BKMK_business_unit_msdyn_analysiscomponent)
 - [business_unit_msdyn_analysisjob](#BKMK_business_unit_msdyn_analysisjob)
+- [business_unit_msdyn_analysisoverride](#BKMK_business_unit_msdyn_analysisoverride)
 - [business_unit_msdyn_analysisresult](#BKMK_business_unit_msdyn_analysisresult)
 - [business_unit_msdyn_analysisresultdetail](#BKMK_business_unit_msdyn_analysisresultdetail)
 - [business_unit_msdyn_solutionhealthrule](#BKMK_business_unit_msdyn_solutionhealthrule)
@@ -1698,12 +1705,12 @@ Listed by **SchemaName**.
 - [business_unit_powerbimashupparameter](#BKMK_business_unit_powerbimashupparameter)
 - [business_unit_powerbireport](#BKMK_business_unit_powerbireport)
 - [business_unit_msdyn_fileupload](#BKMK_business_unit_msdyn_fileupload)
-- [business_unit_msdyn_aievent](#BKMK_business_unit_msdyn_aievent)
-- [business_unit_recentlyused](#BKMK_business_unit_recentlyused)
-- [business_unit_msdyn_mobileapp](#BKMK_business_unit_msdyn_mobileapp)
-- [business_unit_workqueue](#BKMK_business_unit_workqueue)
-- [business_unit_workqueueitem](#BKMK_business_unit_workqueueitem)
-- [business_unit_fxexpression](#BKMK_business_unit_fxexpression)
+- [business_unit_mspcat_catalogsubmissionfiles](#BKMK_business_unit_mspcat_catalogsubmissionfiles)
+- [business_unit_mspcat_packagestore](#BKMK_business_unit_mspcat_packagestore)
+- [business_unit_msdyn_schedule](#BKMK_business_unit_msdyn_schedule)
+- [business_unit_msdyn_dataflow_datalakefolder](#BKMK_business_unit_msdyn_dataflow_datalakefolder)
+- [business_unit_msdyn_dmsrequest](#BKMK_business_unit_msdyn_dmsrequest)
+- [business_unit_msdyn_dmsrequeststatus](#BKMK_business_unit_msdyn_dmsrequeststatus)
 
 
 ### <a name="BKMK_business_unit_exchangesyncidmapping"></a> business_unit_exchangesyncidmapping
@@ -2802,23 +2809,6 @@ Same as the [business_unit_datalakefolder](datalakefolder.md#BKMK_business_unit_
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_business_unit_datalakefolderpermission"></a> business_unit_datalakefolderpermission
-
-**Added by**: Active Solution Solution
-
-Same as the [business_unit_datalakefolderpermission](datalakefolderpermission.md#BKMK_business_unit_datalakefolderpermission) many-to-one relationship for the [datalakefolderpermission](datalakefolderpermission.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|datalakefolderpermission|
-|ReferencingAttribute|owningbusinessunit|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_datalakefolderpermission|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_business_unit_exportedexcel"></a> business_unit_exportedexcel
 
 **Added by**: Active Solution Solution
@@ -2832,6 +2822,23 @@ Same as the [business_unit_exportedexcel](exportedexcel.md#BKMK_business_unit_ex
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_exportedexcel|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_retaineddataexcel"></a> business_unit_retaineddataexcel
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_retaineddataexcel](retaineddataexcel.md#BKMK_business_unit_retaineddataexcel) many-to-one relationship for the [retaineddataexcel](retaineddataexcel.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|retaineddataexcel|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_retaineddataexcel|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -3104,6 +3111,40 @@ Same as the [business_unit_processstageparameter](processstageparameter.md#BKMK_
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_processstageparameter|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_workqueue"></a> business_unit_workqueue
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_workqueue](workqueue.md#BKMK_business_unit_workqueue) many-to-one relationship for the [workqueue](workqueue.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|workqueue|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_workqueue|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_workqueueitem"></a> business_unit_workqueueitem
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_workqueueitem](workqueueitem.md#BKMK_business_unit_workqueueitem) many-to-one relationship for the [workqueueitem](workqueueitem.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|workqueueitem|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_workqueueitem|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -3533,6 +3574,23 @@ Same as the [business_unit_msdyn_knowledgesearchfilter](msdyn_knowledgesearchfil
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_business_unit_fxexpression"></a> business_unit_fxexpression
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_fxexpression](fxexpression.md#BKMK_business_unit_fxexpression) many-to-one relationship for the [fxexpression](fxexpression.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|fxexpression|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_fxexpression|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_business_unit_powerfxrule"></a> business_unit_powerfxrule
 
 **Added by**: Active Solution Solution
@@ -3669,6 +3727,23 @@ Same as the [business_unit_appnotification](appnotification.md#BKMK_business_uni
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_business_unit_msdyn_mobileapp"></a> business_unit_msdyn_mobileapp
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msdyn_mobileapp](msdyn_mobileapp.md#BKMK_business_unit_msdyn_mobileapp) many-to-one relationship for the [msdyn_mobileapp](msdyn_mobileapp.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_mobileapp|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_mobileapp|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_business_unit_card"></a> business_unit_card
 
 **Added by**: Active Solution Solution
@@ -3737,6 +3812,23 @@ Same as the [business_unit_msdyn_customcontrolextendedsettings](msdyn_customcont
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_business_unit_recentlyused"></a> business_unit_recentlyused
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_recentlyused](recentlyused.md#BKMK_business_unit_recentlyused) many-to-one relationship for the [recentlyused](recentlyused.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|recentlyused|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_recentlyused|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_business_unit_msdyn_virtualtablecolumncandidate"></a> business_unit_msdyn_virtualtablecolumncandidate
 
 **Added by**: Active Solution Solution
@@ -3750,6 +3842,23 @@ Same as the [business_unit_msdyn_virtualtablecolumncandidate](msdyn_virtualtable
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_virtualtablecolumncandidate|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msdyn_aievent"></a> business_unit_msdyn_aievent
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msdyn_aievent](msdyn_aievent.md#BKMK_business_unit_msdyn_aievent) many-to-one relationship for the [msdyn_aievent](msdyn_aievent.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aievent|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_aievent|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -4213,6 +4322,23 @@ Same as the [business_unit_msdyn_analysisjob](msdyn_analysisjob.md#BKMK_business
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_business_unit_msdyn_analysisoverride"></a> business_unit_msdyn_analysisoverride
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msdyn_analysisoverride](msdyn_analysisoverride.md#BKMK_business_unit_msdyn_analysisoverride) many-to-one relationship for the [msdyn_analysisoverride](msdyn_analysisoverride.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_analysisoverride|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_analysisoverride|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_business_unit_msdyn_analysisresult"></a> business_unit_msdyn_analysisresult
 
 **Added by**: Active Solution Solution
@@ -4349,104 +4475,104 @@ Same as the [business_unit_msdyn_fileupload](msdyn_fileupload.md#BKMK_business_u
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_business_unit_msdyn_aievent"></a> business_unit_msdyn_aievent
+### <a name="BKMK_business_unit_mspcat_catalogsubmissionfiles"></a> business_unit_mspcat_catalogsubmissionfiles
 
 **Added by**: Active Solution Solution
 
-Same as the [business_unit_msdyn_aievent](msdyn_aievent.md#BKMK_business_unit_msdyn_aievent) many-to-one relationship for the [msdyn_aievent](msdyn_aievent.md) table/entity.
+Same as the [business_unit_mspcat_catalogsubmissionfiles](mspcat_catalogsubmissionfiles.md#BKMK_business_unit_mspcat_catalogsubmissionfiles) many-to-one relationship for the [mspcat_catalogsubmissionfiles](mspcat_catalogsubmissionfiles.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|msdyn_aievent|
+|ReferencingEntity|mspcat_catalogsubmissionfiles|
 |ReferencingAttribute|owningbusinessunit|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_msdyn_aievent|
+|ReferencedEntityNavigationPropertyName|business_unit_mspcat_catalogsubmissionfiles|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_business_unit_recentlyused"></a> business_unit_recentlyused
+### <a name="BKMK_business_unit_mspcat_packagestore"></a> business_unit_mspcat_packagestore
 
 **Added by**: Active Solution Solution
 
-Same as the [business_unit_recentlyused](recentlyused.md#BKMK_business_unit_recentlyused) many-to-one relationship for the [recentlyused](recentlyused.md) table/entity.
+Same as the [business_unit_mspcat_packagestore](mspcat_packagestore.md#BKMK_business_unit_mspcat_packagestore) many-to-one relationship for the [mspcat_packagestore](mspcat_packagestore.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|recentlyused|
+|ReferencingEntity|mspcat_packagestore|
 |ReferencingAttribute|owningbusinessunit|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_recentlyused|
+|ReferencedEntityNavigationPropertyName|business_unit_mspcat_packagestore|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_business_unit_msdyn_mobileapp"></a> business_unit_msdyn_mobileapp
+### <a name="BKMK_business_unit_msdyn_schedule"></a> business_unit_msdyn_schedule
 
 **Added by**: Active Solution Solution
 
-Same as the [business_unit_msdyn_mobileapp](msdyn_mobileapp.md#BKMK_business_unit_msdyn_mobileapp) many-to-one relationship for the [msdyn_mobileapp](msdyn_mobileapp.md) table/entity.
+Same as the [business_unit_msdyn_schedule](msdyn_schedule.md#BKMK_business_unit_msdyn_schedule) many-to-one relationship for the [msdyn_schedule](msdyn_schedule.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|msdyn_mobileapp|
+|ReferencingEntity|msdyn_schedule|
 |ReferencingAttribute|owningbusinessunit|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_msdyn_mobileapp|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_schedule|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_business_unit_workqueue"></a> business_unit_workqueue
+### <a name="BKMK_business_unit_msdyn_dataflow_datalakefolder"></a> business_unit_msdyn_dataflow_datalakefolder
 
 **Added by**: Active Solution Solution
 
-Same as the [business_unit_workqueue](workqueue.md#BKMK_business_unit_workqueue) many-to-one relationship for the [workqueue](workqueue.md) table/entity.
+Same as the [business_unit_msdyn_dataflow_datalakefolder](msdyn_dataflow_datalakefolder.md#BKMK_business_unit_msdyn_dataflow_datalakefolder) many-to-one relationship for the [msdyn_dataflow_datalakefolder](msdyn_dataflow_datalakefolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|workqueue|
+|ReferencingEntity|msdyn_dataflow_datalakefolder|
 |ReferencingAttribute|owningbusinessunit|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_workqueue|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_dataflow_datalakefolder|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_business_unit_workqueueitem"></a> business_unit_workqueueitem
+### <a name="BKMK_business_unit_msdyn_dmsrequest"></a> business_unit_msdyn_dmsrequest
 
 **Added by**: Active Solution Solution
 
-Same as the [business_unit_workqueueitem](workqueueitem.md#BKMK_business_unit_workqueueitem) many-to-one relationship for the [workqueueitem](workqueueitem.md) table/entity.
+Same as the [business_unit_msdyn_dmsrequest](msdyn_dmsrequest.md#BKMK_business_unit_msdyn_dmsrequest) many-to-one relationship for the [msdyn_dmsrequest](msdyn_dmsrequest.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|workqueueitem|
+|ReferencingEntity|msdyn_dmsrequest|
 |ReferencingAttribute|owningbusinessunit|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_workqueueitem|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_dmsrequest|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_business_unit_fxexpression"></a> business_unit_fxexpression
+### <a name="BKMK_business_unit_msdyn_dmsrequeststatus"></a> business_unit_msdyn_dmsrequeststatus
 
 **Added by**: Active Solution Solution
 
-Same as the [business_unit_fxexpression](fxexpression.md#BKMK_business_unit_fxexpression) many-to-one relationship for the [fxexpression](fxexpression.md) table/entity.
+Same as the [business_unit_msdyn_dmsrequeststatus](msdyn_dmsrequeststatus.md#BKMK_business_unit_msdyn_dmsrequeststatus) many-to-one relationship for the [msdyn_dmsrequeststatus](msdyn_dmsrequeststatus.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|fxexpression|
+|ReferencingEntity|msdyn_dmsrequeststatus|
 |ReferencingAttribute|owningbusinessunit|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_fxexpression|
+|ReferencedEntityNavigationPropertyName|business_unit_msdyn_dmsrequeststatus|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

@@ -1,7 +1,7 @@
 ---
 title: "Process (Workflow)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Process (Workflow)  table/entity."
-ms.date: 05/23/2023
+ms.date: 06/02/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -23,25 +23,25 @@ Set of logical rules that define the steps necessary to automate a specific busi
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.2/workflows(*workflowid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.2/workflows<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Assign|PATCH /workflows(*workflowid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /workflows<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateWorkflowFromTemplate|<xref:Microsoft.Dynamics.CRM.CreateWorkflowFromTemplate?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.CreateWorkflowFromTemplateRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/workflows(*workflowid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Delete|DELETE /workflows(*workflowid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |ExecuteWorkflow|<xref:Microsoft.Dynamics.CRM.ExecuteWorkflow?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ExecuteWorkflowRequest>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |InitializeModernFlowFromAsyncWorkflow|<xref:Microsoft.Dynamics.CRM.InitializeModernFlowFromAsyncWorkflow?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.InitializeModernFlowFromAsyncWorkflowRequest>|
-|install|<xref:Microsoft.Dynamics.CRM.install?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="install"|
-|ListConnectionReferences|<xref:Microsoft.Dynamics.CRM.ListConnectionReferences?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="ListConnectionReferences"|
+|install|<xref:Microsoft.Dynamics.CRM.install?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = install|
+|ListConnectionReferences|<xref:Microsoft.Dynamics.CRM.ListConnectionReferences?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = ListConnectionReferences|
 |ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/workflows(*workflowid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/workflows<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET /workflows(*workflowid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /workflows<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|RunDesktopFlow|<xref:Microsoft.Dynamics.CRM.RunDesktopFlow?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="RunDesktopFlow"|
-|SaveAsDesktopFlow|<xref:Microsoft.Dynamics.CRM.SaveAsDesktopFlow?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="SaveAsDesktopFlow"|
-|SetState|PATCH [*org URI*]/api/data/v9.2/workflows(*workflowid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/workflows(*workflowid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|RunDesktopFlow|<xref:Microsoft.Dynamics.CRM.RunDesktopFlow?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = RunDesktopFlow|
+|SaveAsDesktopFlow|<xref:Microsoft.Dynamics.CRM.SaveAsDesktopFlow?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = SaveAsDesktopFlow|
+|SetState|PATCH /workflows(*workflowid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /workflows(*workflowid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 

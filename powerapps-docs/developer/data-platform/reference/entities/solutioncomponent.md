@@ -1,7 +1,7 @@
 ---
 title: "SolutionComponent table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SolutionComponent table/entity."
-ms.date: 05/23/2023
+ms.date: 06/02/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -26,8 +26,8 @@ A component of a CRM solution.
 |AddSolutionComponent|<xref:Microsoft.Dynamics.CRM.AddSolutionComponent?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.AddSolutionComponentRequest>|
 |IsComponentCustomizable|<xref:Microsoft.Dynamics.CRM.IsComponentCustomizable?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsComponentCustomizableRequest>|
 |RemoveSolutionComponent|<xref:Microsoft.Dynamics.CRM.RemoveSolutionComponent?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RemoveSolutionComponentRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/solutioncomponents(*solutioncomponentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/solutioncomponents<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET /solutioncomponents(*solutioncomponentid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /solutioncomponents<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |UpdateSolutionComponent|<xref:Microsoft.Dynamics.CRM.UpdateSolutionComponent?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.UpdateSolutionComponentRequest>|
 
 ## Properties

@@ -1,7 +1,7 @@
 ---
 title: "msdyn_AIConfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_AIConfiguration table/entity."
-ms.date: 05/23/2023
+ms.date: 06/02/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,22 +25,23 @@ search.audienceType:
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|CancelTraining|<xref:Microsoft.Dynamics.CRM.CancelTraining?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="CancelTraining"|
-|Create|POST [*org URI*]/api/data/v9.2/msdyn_aiconfigurations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/msdyn_aiconfigurations(*msdyn_aiconfigurationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|PublishAIConfiguration|<xref:Microsoft.Dynamics.CRM.PublishAIConfiguration?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="PublishAIConfiguration"|
-|QuickTest|<xref:Microsoft.Dynamics.CRM.QuickTest?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="QuickTest"|
-|Retrieve|GET [*org URI*]/api/data/v9.2/msdyn_aiconfigurations(*msdyn_aiconfigurationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/msdyn_aiconfigurations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|ScheduleTraining|<xref:Microsoft.Dynamics.CRM.ScheduleTraining?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="ScheduleTraining"|
-|SetState|PATCH [*org URI*]/api/data/v9.2/msdyn_aiconfigurations(*msdyn_aiconfigurationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Train|<xref:Microsoft.Dynamics.CRM.Train?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="Train"|
-|UnpublishAIConfiguration|<xref:Microsoft.Dynamics.CRM.UnpublishAIConfiguration?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="UnpublishAIConfiguration"|
-|UnscheduleTraining|<xref:Microsoft.Dynamics.CRM.UnscheduleTraining?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/> where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName>="UnscheduleTraining"|
-|Update|PATCH [*org URI*]/api/data/v9.2/msdyn_aiconfigurations(*msdyn_aiconfigurationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|CancelTraining|<xref:Microsoft.Dynamics.CRM.CancelTraining?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = CancelTraining|
+|Create|POST /msdyn_aiconfigurations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /msdyn_aiconfigurations(*msdyn_aiconfigurationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|PublishAIConfiguration|<xref:Microsoft.Dynamics.CRM.PublishAIConfiguration?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = PublishAIConfiguration|
+|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|QuickTest|<xref:Microsoft.Dynamics.CRM.QuickTest?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = QuickTest|
+|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Retrieve|GET /msdyn_aiconfigurations(*msdyn_aiconfigurationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /msdyn_aiconfigurations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|ScheduleTraining|<xref:Microsoft.Dynamics.CRM.ScheduleTraining?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = ScheduleTraining|
+|Train|<xref:Microsoft.Dynamics.CRM.Train?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = Train|
+|UnpublishAIConfiguration|<xref:Microsoft.Dynamics.CRM.UnpublishAIConfiguration?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = UnpublishAIConfiguration|
+|UnscheduleTraining|<xref:Microsoft.Dynamics.CRM.UnscheduleTraining?displayProperty=nameWithType />|Use <xref:Microsoft.Xrm.Sdk.OrganizationRequest><br/>where <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> = UnscheduleTraining|
+|Update|PATCH /msdyn_aiconfigurations(*msdyn_aiconfigurationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
 

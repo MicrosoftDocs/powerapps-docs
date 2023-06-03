@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 05/23/2023
+ms.date: 06/02/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -23,9 +23,9 @@ Top level of the Microsoft Dynamics 365 business hierarchy. The organization can
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.2/organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/organizations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.2/organizations(*organizationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Retrieve|GET /organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /organizations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH /organizations(*organizationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -5426,7 +5426,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|isrpaboxcrossgeoenabled|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Boolean|
 
 #### IsRpaBoxCrossGeoEnabled Choices/Options
@@ -6284,7 +6284,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|multicolumnsortenabled|
 |MaxValue|100|
 |MinValue|0|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Integer|
 
 
@@ -7178,7 +7178,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|releasechannel|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Picklist|
 
 #### ReleaseChannel Choices/Options
@@ -9634,6 +9634,7 @@ Listed by **SchemaName**.
 - [organization_sharedlinksetting](#BKMK_organization_sharedlinksetting)
 - [organization_entityrecordfilter](#BKMK_organization_entityrecordfilter)
 - [organization_recordfilter](#BKMK_organization_recordfilter)
+- [organization_delegatedauthorization](#BKMK_organization_delegatedauthorization)
 - [organization_msdyn_helppage](#BKMK_organization_msdyn_helppage)
 - [organization_msdyn_tour](#BKMK_organization_msdyn_tour)
 - [organization_territories](#BKMK_organization_territories)
@@ -9643,8 +9644,6 @@ Listed by **SchemaName**.
 - [organization_pluginpackage](#BKMK_organization_pluginpackage)
 - [organization_virtualentitymetadata](#BKMK_organization_virtualentitymetadata)
 - [organization_mobileofflineprofileextension](#BKMK_organization_mobileofflineprofileextension)
-- [organization_teammobileofflineprofilemembership](#BKMK_organization_teammobileofflineprofilemembership)
-- [organization_usermobileofflineprofilemembership](#BKMK_organization_usermobileofflineprofilemembership)
 - [organization_organizationdatasyncsubscription](#BKMK_organization_organizationdatasyncsubscription)
 - [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
 - [organization_organizationdatasyncsubscriptionfnotable](#BKMK_organization_organizationdatasyncsubscriptionfnotable)
@@ -11022,6 +11021,23 @@ Same as the [organization_recordfilter](recordfilter.md#BKMK_organization_record
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_delegatedauthorization"></a> organization_delegatedauthorization
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_delegatedauthorization](delegatedauthorization.md#BKMK_organization_delegatedauthorization) many-to-one relationship for the [delegatedauthorization](delegatedauthorization.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|delegatedauthorization|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_delegatedauthorization|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_msdyn_helppage"></a> organization_msdyn_helppage
 
 **Added by**: Active Solution Solution
@@ -11171,40 +11187,6 @@ Same as the [organization_mobileofflineprofileextension](mobileofflineprofileext
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organization_mobileofflineprofileextension|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_organization_teammobileofflineprofilemembership"></a> organization_teammobileofflineprofilemembership
-
-**Added by**: Active Solution Solution
-
-Same as the [organization_teammobileofflineprofilemembership](teammobileofflineprofilemembership.md#BKMK_organization_teammobileofflineprofilemembership) many-to-one relationship for the [teammobileofflineprofilemembership](teammobileofflineprofilemembership.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|teammobileofflineprofilemembership|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_teammobileofflineprofilemembership|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_organization_usermobileofflineprofilemembership"></a> organization_usermobileofflineprofilemembership
-
-**Added by**: Active Solution Solution
-
-Same as the [organization_usermobileofflineprofilemembership](usermobileofflineprofilemembership.md#BKMK_organization_usermobileofflineprofilemembership) many-to-one relationship for the [usermobileofflineprofilemembership](usermobileofflineprofilemembership.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|usermobileofflineprofilemembership|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_usermobileofflineprofilemembership|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

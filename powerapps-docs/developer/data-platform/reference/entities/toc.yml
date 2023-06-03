@@ -126,6 +126,8 @@
   href: dataperformance.md
 - name: DataProcessingConfiguration
   href: dataprocessingconfiguration.md
+- name: DelegatedAuthorization
+  href: delegatedauthorization.md
 - name: Dependency
   href: dependency.md
 - name: desktopflowbinary
@@ -298,6 +300,8 @@
   href: msdyn_analysiscomponent.md
 - name: msdyn_analysisjob
   href: msdyn_analysisjob.md
+- name: msdyn_analysisoverride
+  href: msdyn_analysisoverride.md
 - name: msdyn_analysisresult
   href: msdyn_analysisresult.md
 - name: msdyn_analysisresultdetail
@@ -314,12 +318,18 @@
   href: msdyn_customcontrolextendedsettings.md
 - name: msdyn_dataflow
   href: msdyn_dataflow.md
+- name: msdyn_dataflow_datalakefolder
+  href: msdyn_dataflow_datalakefolder.md
 - name: msdyn_dataflowrefreshhistory
   href: msdyn_dataflowrefreshhistory.md
 - name: msdyn_DataflowTemplate
   href: msdyn_dataflowtemplate.md
 - name: msdyn_datalakeds
   href: msdyn_datalakeds.md
+- name: msdyn_dmsrequest
+  href: msdyn_dmsrequest.md
+- name: msdyn_dmsrequeststatus
+  href: msdyn_dmsrequeststatus.md
 - name: msdyn_entitylinkchatconfiguration
   href: msdyn_entitylinkchatconfiguration.md
 - name: msdyn_entityrefreshhistory
@@ -392,6 +402,8 @@
   href: msdyn_pmview.md
 - name: msdyn_richtextfile
   href: msdyn_richtextfile.md
+- name: msdyn_schedule
+  href: msdyn_schedule.md
 - name: msdyn_serviceconfiguration
   href: msdyn_serviceconfiguration.md
 - name: msdyn_slakpi
@@ -424,6 +436,10 @@
   href: msdynce_botcontent.md
 - name: MsGraphResourceToSubscription
   href: msgraphresourcetosubscription.md
+- name: mspcat_CatalogSubmissionFiles
+  href: mspcat_catalogsubmissionfiles.md
+- name: mspcat_PackageStore
+  href: mspcat_packagestore.md
 - name: NavigationSetting
   href: navigationsetting.md
 - name: NewProcess
@@ -522,6 +538,8 @@
   href: report.md
 - name: ReportCategory
   href: reportcategory.md
+- name: retaineddataexcel
+  href: retaineddataexcel.md
 - name: retentionconfig
   href: retentionconfig.md
 - name: retentionfailuredetail
@@ -632,8 +650,6 @@
   href: task.md
 - name: Team
   href: team.md
-- name: teammobileofflineprofilemembership
-  href: teammobileofflineprofilemembership.md
 - name: TeamTemplate
   href: teamtemplate.md
 - name: Template
@@ -662,8 +678,6 @@
   href: userform.md
 - name: UserMapping
   href: usermapping.md
-- name: usermobileofflineprofilemembership
-  href: usermobileofflineprofilemembership.md
 - name: UserQuery
   href: userquery.md
 - name: UserQueryVisualization

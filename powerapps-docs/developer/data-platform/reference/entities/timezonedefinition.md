@@ -1,7 +1,7 @@
 ---
 title: "TimeZoneDefinition table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the TimeZoneDefinition table/entity."
-ms.date: 05/23/2023
+ms.date: 06/02/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -26,8 +26,8 @@ Time zone definition, including name and time zone code.
 |GetAllTimeZonesWithDisplayName|<xref:Microsoft.Dynamics.CRM.GetAllTimeZonesWithDisplayName?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GetAllTimeZonesWithDisplayNameRequest>|
 |GetTimeZoneCodeByLocalizedName|<xref:Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedName?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GetTimeZoneCodeByLocalizedNameRequest>|
 |LocalTimeFromUtcTime|<xref:Microsoft.Dynamics.CRM.LocalTimeFromUtcTime?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.LocalTimeFromUtcTimeRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/timezonedefinitions(*timezonedefinitionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/timezonedefinitions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET /timezonedefinitions(*timezonedefinitionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /timezonedefinitions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |UtcTimeFromLocalTime||<xref:Microsoft.Crm.Sdk.Messages.UtcTimeFromLocalTimeRequest>|
 
 ## Properties

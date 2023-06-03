@@ -1,7 +1,7 @@
 ---
-title: "teammobileofflineprofilemembership table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the teammobileofflineprofilemembership table/entity."
-ms.date: 05/23/2023
+title: "DelegatedAuthorization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the DelegatedAuthorization table/entity."
+ms.date: 06/02/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -11,38 +11,45 @@ search.audienceType:
   - developer
 ---
 
-# teammobileofflineprofilemembership table/entity reference
+# DelegatedAuthorization table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
+Context for delegated authorization.
 
-
-**Added by**: MobileOfflineMembership Solution
+**Added by**: Delegated Authorization Solution
 
 
 ## Messages
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
+|Create|POST /DelegatedAuthorizations<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE /DelegatedAuthorizations(*delegatedauthorizationid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|Retrieve|GET /DelegatedAuthorizations(*delegatedauthorizationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /DelegatedAuthorizations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH /DelegatedAuthorizations(*delegatedauthorizationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /DelegatedAuthorizations(*delegatedauthorizationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
 |Property|Value|
 |--------|-----|
-|CollectionSchemaName|teammobileofflineprofilememberships|
-|DisplayCollectionName|TeamMobileOfflineProfileMemberships|
-|DisplayName|TeamMobileOfflineProfileMembership|
-|EntitySetName|teammobileofflineprofilememberships|
+|CollectionSchemaName|DelegatedAuthorizations|
+|DisplayCollectionName|DelegatedAuthorizations|
+|DisplayName|DelegatedAuthorization|
+|EntitySetName|DelegatedAuthorizations|
 |IsBPFEntity|False|
-|LogicalCollectionName|teammobileofflineprofilememberships|
-|LogicalName|teammobileofflineprofilemembership|
+|LogicalCollectionName|delegatedauthorizations|
+|LogicalName|delegatedauthorization|
 |OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|teammobileofflineprofilemembershipid|
+|PrimaryIdAttribute|delegatedauthorizationid|
 |PrimaryNameAttribute|name|
-|SchemaName|teammobileofflineprofilemembership|
+|SchemaName|DelegatedAuthorization|
 
 <a name="writable-attributes"></a>
 
@@ -50,16 +57,32 @@ search.audienceType:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [DelegatedAuthorizationId](#BKMK_DelegatedAuthorizationId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [MobileOfflineProfileId](#BKMK_MobileOfflineProfileId)
-- [name](#BKMK_name)
+- [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
+- [ProviderType](#BKMK_ProviderType)
+- [RoadmapProjectId](#BKMK_RoadmapProjectId)
+- [SharePointListId](#BKMK_SharePointListId)
+- [SharePointSite](#BKMK_SharePointSite)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
-- [TeamId](#BKMK_TeamId)
-- [teammobileofflineprofilemembershipId](#BKMK_teammobileofflineprofilemembershipId)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_DelegatedAuthorizationId"></a> DelegatedAuthorizationId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for entity instances|
+|DisplayName|DelegatedAuthorization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|delegatedauthorizationid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -79,30 +102,17 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
-### <a name="BKMK_MobileOfflineProfileId"></a> MobileOfflineProfileId
+### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName|MobileOfflineProfileId|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|mobileofflineprofileid|
-|RequiredLevel|None|
-|Targets|mobileofflineprofile|
-|Type|Lookup|
-
-
-### <a name="BKMK_name"></a> name
-
-|Property|Value|
-|--------|-----|
-|Description|The name of the custom entity.|
+|Description|The name of delegated authorization (generally unused)|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|name|
 |MaxLength|100|
 |RequiredLevel|ApplicationRequired|
@@ -125,11 +135,79 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 
 
+### <a name="BKMK_ProviderType"></a> ProviderType
+
+|Property|Value|
+|--------|-----|
+|Description|Type of provider.|
+|DisplayName|Provider Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|providertype|
+|RequiredLevel|ApplicationRequired|
+|Type|Picklist|
+
+#### ProviderType Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|SharePoint||
+|2|Roadmap||
+
+
+
+### <a name="BKMK_RoadmapProjectId"></a> RoadmapProjectId
+
+|Property|Value|
+|--------|-----|
+|Description|Identifier for Project Roadmap|
+|DisplayName|Roadmap Project Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|roadmapprojectid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_SharePointListId"></a> SharePointListId
+
+|Property|Value|
+|--------|-----|
+|Description|Identifier for SharePoint list|
+|DisplayName|SharePoint List Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|sharepointlistid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_SharePointSite"></a> SharePointSite
+
+|Property|Value|
+|--------|-----|
+|Description|SharePoint site (URL)|
+|DisplayName|SharePoint Site|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|sharepointsite|
+|MaxLength|400|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the TeamMobileOfflineProfileMembership|
+|Description|Status of the DelegatedAuthorization|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -151,7 +229,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the TeamMobileOfflineProfileMembership|
+|Description|Reason for the status of the DelegatedAuthorization|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -166,34 +244,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
-
-
-### <a name="BKMK_TeamId"></a> TeamId
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|TeamId|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|teamid|
-|RequiredLevel|None|
-|Targets|team|
-|Type|Lookup|
-
-
-### <a name="BKMK_teammobileofflineprofilemembershipId"></a> teammobileofflineprofilemembershipId
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|TeamMobileOfflineProfileMembership|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|teammobileofflineprofilemembershipid|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
@@ -240,7 +290,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [MobileOfflineProfileIdName](#BKMK_MobileOfflineProfileIdName)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -250,8 +299,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
 - [OrganizationIdName](#BKMK_OrganizationIdName)
-- [TeamIdName](#BKMK_TeamIdName)
-- [TeamIdYomiName](#BKMK_TeamIdYomiName)
 - [VersionNumber](#BKMK_VersionNumber)
 
 
@@ -371,22 +418,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_MobileOfflineProfileIdName"></a> MobileOfflineProfileIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|mobileofflineprofileidname|
-|MaxLength|255|
-|RequiredLevel|None|
 |Type|String|
 
 
@@ -543,45 +574,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_TeamIdName"></a> TeamIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|teamidname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_TeamIdYomiName"></a> TeamIdYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|teamidyominame|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Version number of TeamMobileOfflineProfileMembership.|
+|Description|Version Number|
 |DisplayName|Version Number|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -597,19 +596,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [teammobileofflineprofilemembership_SyncErrors](#BKMK_teammobileofflineprofilemembership_SyncErrors)
-- [teammobileofflineprofilemembership_AsyncOperations](#BKMK_teammobileofflineprofilemembership_AsyncOperations)
-- [teammobileofflineprofilemembership_MailboxTrackingFolders](#BKMK_teammobileofflineprofilemembership_MailboxTrackingFolders)
-- [teammobileofflineprofilemembership_ProcessSession](#BKMK_teammobileofflineprofilemembership_ProcessSession)
-- [teammobileofflineprofilemembership_BulkDeleteFailures](#BKMK_teammobileofflineprofilemembership_BulkDeleteFailures)
-- [teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses](#BKMK_teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses)
+- [delegatedauthorization_SyncErrors](#BKMK_delegatedauthorization_SyncErrors)
+- [delegatedauthorization_AsyncOperations](#BKMK_delegatedauthorization_AsyncOperations)
+- [delegatedauthorization_MailboxTrackingFolders](#BKMK_delegatedauthorization_MailboxTrackingFolders)
+- [delegatedauthorization_ProcessSession](#BKMK_delegatedauthorization_ProcessSession)
+- [delegatedauthorization_BulkDeleteFailures](#BKMK_delegatedauthorization_BulkDeleteFailures)
+- [delegatedauthorization_PrincipalObjectAttributeAccesses](#BKMK_delegatedauthorization_PrincipalObjectAttributeAccesses)
+- [team_delegatedauthorization](#BKMK_team_delegatedauthorization)
 
 
-### <a name="BKMK_teammobileofflineprofilemembership_SyncErrors"></a> teammobileofflineprofilemembership_SyncErrors
+### <a name="BKMK_delegatedauthorization_SyncErrors"></a> delegatedauthorization_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as the [teammobileofflineprofilemembership_SyncErrors](syncerror.md#BKMK_teammobileofflineprofilemembership_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
+Same as the [delegatedauthorization_SyncErrors](syncerror.md#BKMK_delegatedauthorization_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -617,16 +617,16 @@ Same as the [teammobileofflineprofilemembership_SyncErrors](syncerror.md#BKMK_te
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|teammobileofflineprofilemembership_SyncErrors|
+|ReferencedEntityNavigationPropertyName|delegatedauthorization_SyncErrors|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_teammobileofflineprofilemembership_AsyncOperations"></a> teammobileofflineprofilemembership_AsyncOperations
+### <a name="BKMK_delegatedauthorization_AsyncOperations"></a> delegatedauthorization_AsyncOperations
 
 **Added by**: System Solution Solution
 
-Same as the [teammobileofflineprofilemembership_AsyncOperations](asyncoperation.md#BKMK_teammobileofflineprofilemembership_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
+Same as the [delegatedauthorization_AsyncOperations](asyncoperation.md#BKMK_delegatedauthorization_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -634,16 +634,16 @@ Same as the [teammobileofflineprofilemembership_AsyncOperations](asyncoperation.
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|teammobileofflineprofilemembership_AsyncOperations|
+|ReferencedEntityNavigationPropertyName|delegatedauthorization_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_teammobileofflineprofilemembership_MailboxTrackingFolders"></a> teammobileofflineprofilemembership_MailboxTrackingFolders
+### <a name="BKMK_delegatedauthorization_MailboxTrackingFolders"></a> delegatedauthorization_MailboxTrackingFolders
 
 **Added by**: System Solution Solution
 
-Same as the [teammobileofflineprofilemembership_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_teammobileofflineprofilemembership_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
+Same as the [delegatedauthorization_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_delegatedauthorization_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -651,16 +651,16 @@ Same as the [teammobileofflineprofilemembership_MailboxTrackingFolders](mailboxt
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|teammobileofflineprofilemembership_MailboxTrackingFolders|
+|ReferencedEntityNavigationPropertyName|delegatedauthorization_MailboxTrackingFolders|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_teammobileofflineprofilemembership_ProcessSession"></a> teammobileofflineprofilemembership_ProcessSession
+### <a name="BKMK_delegatedauthorization_ProcessSession"></a> delegatedauthorization_ProcessSession
 
 **Added by**: System Solution Solution
 
-Same as the [teammobileofflineprofilemembership_ProcessSession](processsession.md#BKMK_teammobileofflineprofilemembership_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
+Same as the [delegatedauthorization_ProcessSession](processsession.md#BKMK_delegatedauthorization_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -668,16 +668,16 @@ Same as the [teammobileofflineprofilemembership_ProcessSession](processsession.m
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|teammobileofflineprofilemembership_ProcessSession|
+|ReferencedEntityNavigationPropertyName|delegatedauthorization_ProcessSession|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_teammobileofflineprofilemembership_BulkDeleteFailures"></a> teammobileofflineprofilemembership_BulkDeleteFailures
+### <a name="BKMK_delegatedauthorization_BulkDeleteFailures"></a> delegatedauthorization_BulkDeleteFailures
 
 **Added by**: System Solution Solution
 
-Same as the [teammobileofflineprofilemembership_BulkDeleteFailures](bulkdeletefailure.md#BKMK_teammobileofflineprofilemembership_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
+Same as the [delegatedauthorization_BulkDeleteFailures](bulkdeletefailure.md#BKMK_delegatedauthorization_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -685,16 +685,16 @@ Same as the [teammobileofflineprofilemembership_BulkDeleteFailures](bulkdeletefa
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|teammobileofflineprofilemembership_BulkDeleteFailures|
+|ReferencedEntityNavigationPropertyName|delegatedauthorization_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses"></a> teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses
+### <a name="BKMK_delegatedauthorization_PrincipalObjectAttributeAccesses"></a> delegatedauthorization_PrincipalObjectAttributeAccesses
 
 **Added by**: System Solution Solution
 
-Same as the [teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
+Same as the [delegatedauthorization_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_delegatedauthorization_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -702,8 +702,23 @@ Same as the [teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses
 |ReferencingAttribute|objectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses|
+|ReferencedEntityNavigationPropertyName|delegatedauthorization_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_delegatedauthorization"></a> team_delegatedauthorization
+
+Same as the [team_delegatedauthorization](team.md#BKMK_team_delegatedauthorization) many-to-one relationship for the [team](team.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|team|
+|ReferencingAttribute|delegatedauthorizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_delegatedauthorization|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
@@ -712,59 +727,45 @@ Same as the [teammobileofflineprofilemembership_PrincipalObjectAttributeAccesses
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
-- [lk_teammobileofflineprofilemembership_createdby](#BKMK_lk_teammobileofflineprofilemembership_createdby)
-- [lk_teammobileofflineprofilemembership_createdonbehalfby](#BKMK_lk_teammobileofflineprofilemembership_createdonbehalfby)
-- [lk_teammobileofflineprofilemembership_modifiedby](#BKMK_lk_teammobileofflineprofilemembership_modifiedby)
-- [lk_teammobileofflineprofilemembership_modifiedonbehalfby](#BKMK_lk_teammobileofflineprofilemembership_modifiedonbehalfby)
-- [organization_teammobileofflineprofilemembership](#BKMK_organization_teammobileofflineprofilemembership)
-- [mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId](#BKMK_mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId)
-- [team_teammobileofflineprofilemembership_TeamId](#BKMK_team_teammobileofflineprofilemembership_TeamId)
+- [lk_delegatedauthorization_createdby](#BKMK_lk_delegatedauthorization_createdby)
+- [lk_delegatedauthorization_createdonbehalfby](#BKMK_lk_delegatedauthorization_createdonbehalfby)
+- [lk_delegatedauthorization_modifiedby](#BKMK_lk_delegatedauthorization_modifiedby)
+- [lk_delegatedauthorization_modifiedonbehalfby](#BKMK_lk_delegatedauthorization_modifiedonbehalfby)
+- [organization_delegatedauthorization](#BKMK_organization_delegatedauthorization)
 
 
-### <a name="BKMK_lk_teammobileofflineprofilemembership_createdby"></a> lk_teammobileofflineprofilemembership_createdby
+### <a name="BKMK_lk_delegatedauthorization_createdby"></a> lk_delegatedauthorization_createdby
 
 **Added by**: System Solution Solution
 
-See the [lk_teammobileofflineprofilemembership_createdby](systemuser.md#BKMK_lk_teammobileofflineprofilemembership_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_delegatedauthorization_createdby](systemuser.md#BKMK_lk_delegatedauthorization_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_lk_teammobileofflineprofilemembership_createdonbehalfby"></a> lk_teammobileofflineprofilemembership_createdonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_teammobileofflineprofilemembership_createdonbehalfby](systemuser.md#BKMK_lk_teammobileofflineprofilemembership_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_teammobileofflineprofilemembership_modifiedby"></a> lk_teammobileofflineprofilemembership_modifiedby
+### <a name="BKMK_lk_delegatedauthorization_createdonbehalfby"></a> lk_delegatedauthorization_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See the [lk_teammobileofflineprofilemembership_modifiedby](systemuser.md#BKMK_lk_teammobileofflineprofilemembership_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_delegatedauthorization_createdonbehalfby](systemuser.md#BKMK_lk_delegatedauthorization_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_lk_teammobileofflineprofilemembership_modifiedonbehalfby"></a> lk_teammobileofflineprofilemembership_modifiedonbehalfby
-
-**Added by**: System Solution Solution
-
-See the [lk_teammobileofflineprofilemembership_modifiedonbehalfby](systemuser.md#BKMK_lk_teammobileofflineprofilemembership_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_organization_teammobileofflineprofilemembership"></a> organization_teammobileofflineprofilemembership
+### <a name="BKMK_lk_delegatedauthorization_modifiedby"></a> lk_delegatedauthorization_modifiedby
 
 **Added by**: System Solution Solution
 
-See the [organization_teammobileofflineprofilemembership](organization.md#BKMK_organization_teammobileofflineprofilemembership) one-to-many relationship for the [organization](organization.md) table/entity.
+See the [lk_delegatedauthorization_modifiedby](systemuser.md#BKMK_lk_delegatedauthorization_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId"></a> mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId
-
-**Added by**: System Solution Solution
-
-See the [mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId](mobileofflineprofile.md#BKMK_mobileofflineprofile_teammobileofflineprofilemembership_MobileOfflineProfileId) one-to-many relationship for the [mobileofflineprofile](mobileofflineprofile.md) table/entity.
-
-### <a name="BKMK_team_teammobileofflineprofilemembership_TeamId"></a> team_teammobileofflineprofilemembership_TeamId
+### <a name="BKMK_lk_delegatedauthorization_modifiedonbehalfby"></a> lk_delegatedauthorization_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See the [team_teammobileofflineprofilemembership_TeamId](team.md#BKMK_team_teammobileofflineprofilemembership_TeamId) one-to-many relationship for the [team](team.md) table/entity.
+See the [lk_delegatedauthorization_modifiedonbehalfby](systemuser.md#BKMK_lk_delegatedauthorization_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_organization_delegatedauthorization"></a> organization_delegatedauthorization
+
+**Added by**: System Solution Solution
+
+See the [organization_delegatedauthorization](organization.md#BKMK_organization_delegatedauthorization) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.teammobileofflineprofilemembership?text=teammobileofflineprofilemembership EntityType" />
+<xref href="Microsoft.Dynamics.CRM.delegatedauthorization?text=delegatedauthorization EntityType" />
