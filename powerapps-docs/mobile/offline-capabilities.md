@@ -91,7 +91,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 ## Limitations 
 
-- **Qualify a lead**: When a lead created in mobile offline is qualified and when the user goes online, the business process stage will still show the  qualify stage. The user will have to manually click **Next stage** to move to the next stage.
+- **Qualify a lead**: When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the  qualify stage. The user has to manually select **Next stage** to move to the next stage.
 
 - **Grids**: Column filtering is disabled when an offline profile is set up even when there is network connectivity. The grid works with the local database and does not support custom filters.
 
@@ -119,7 +119,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Advanced lookups**: The **[Advanced lookup]**(../user/lookup-field.md#advanced-lookup) functionality isn't supported in offline scenarios. When you're offline, the **Advanced lookup** button is replaced by a **Change view** dropdown list.
 
-- **Add Existing on subgrids**: **Add Existing** is not supported for mobile offline for certain types of relationships. When you are offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command will be hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command will not work in offline.
+- **Add Existing on subgrids**: **Add Existing** is not supported for mobile offline for certain types of relationships. When you are offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command is hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command doesn't work in offline.
 
 - **Web resources**: Web resources are partially supported in offline mode. Refer to the table below for more information.
 
@@ -134,7 +134,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
     ** Accessing RESX web resources as a dependency through Client API from within a JS file is supported.
 
-- **Calculated and rollup fields**: Calculated and rollup fields that are part of rows synced to the client will not be re-evaluated by the client. The re-evaluation will happen on the server when the updated row is synced.
+- **Calculated and rollup fields**: Calculated and rollup fields that are part of rows synced to the client aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
 
 - **Mapped fields**: When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
 
@@ -150,9 +150,9 @@ For more information, see [Run business process flows offline](/power-automate/b
   
 - The time for initial metadata download is determined by the number of total tables in offline-enabled app modules. Make sure to enable only those tables and app modules for offline that are necessary to optimize the experience for end users. 
   
-- Ensure that any view that you want to work in offline doesn’t reference the tables that are not offline enabled. For example, assuming Account is in the offline profile, then an Account view that references the primary contact when Contact is not in the profile will not be available.
+- Ensure that any view that you want to work in offline doesn’t reference the tables that are not offline enabled. For example, assuming Account is in the offline profile, then an Account view that references the primary contact when Contact is not in the profile isn't available.
 
-- Changes to a user’s security privileges are updated during the next synchronization cycle. Until that time, users can continue to access data according to their previous security privileges, but any changes they make will be validated during the synchronization to the server. If they no longer have privileges to make changes for a row, they will receive an error and the row won’t be created, updated, or deleted.
+- Changes to a user’s security privileges are updated during the next synchronization cycle. Until that time, users can continue to access data according to their previous security privileges, but any changes they make are validated during the synchronization to the server. If they no longer have privileges to make changes for a row, they receive an error and the row won’t be created, updated, or deleted.
 
 - Any changes to a user’s privilege to view a row won’t take effect on the mobile device until the next synchronization cycle.
 
