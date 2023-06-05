@@ -2,7 +2,7 @@
 title: "Background operations (Preview) (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to invoke custom apis asynchronously." 
 ms.collection: get-started
-ms.date: 05/02/2023
+ms.date: 06/05/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: sumadhey
