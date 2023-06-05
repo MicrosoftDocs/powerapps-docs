@@ -98,7 +98,7 @@ As you author your app and create a connection to a data source, you may see tha
 
 This is a secure type of connection.  For example, SharePoint uses this type of authentication.  SQL Server also allows for this type of authentication.  When you connect, the Azure AD service identifies you separately to SharePoint on your behalf.  You don't have to supply a username or password.  As an author you can create and work with the data source with your credentials.  When you publish your application and your application user logs in, they do so with their credentials. If the data is appropriately secured on a back-end your users can only see what they're authorized to see based on their credentials.   This type of security allows you to change rights for specific application users on the back-end data source after the application has been published.  For instance you can grant access, deny access, or refine what a user or set of users can see all on the back-end data source.
 > [!NOTE]
-> Power Apps does not yet formally support Service Principal types of authentication. For more information, see [Authentication methods using Azure Active Directory]([/azure/active-directory/external-identities/user-properties](/azure-sphere/deployment/authenticate-options).
+> Power Apps does not yet formally support Service Principal types of authentication. For more information, see [Authentication methods using Azure Active Directory](/azure-sphere/deployment/authenticate-options).
 
 ### Open-standard authorization (OAuth)
 
