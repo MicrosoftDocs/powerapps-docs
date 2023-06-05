@@ -281,7 +281,7 @@
       - name: Create an app from conversations
         href: ./canvas-apps/ai-conversations-create-app.md
       - name: Use natural language to edit an app (preview) 
-        href: ./canvas-app/ai-edit-app.md
+        href: ./canvas-apps/ai-edit-app.md
     - name: Create an app using data
       items:
       - name: From Microsoft Dataverse
