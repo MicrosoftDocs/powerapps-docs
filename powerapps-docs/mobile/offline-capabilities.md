@@ -57,9 +57,9 @@ These tables and corresponding commands are available in offline mode.
 
 ## Supported  capabilities 
 
-- **Business rules**: Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
+- **Business rules** - Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
 
-- **Business Process Flows**: You can use business process flows in offline mode if the following conditions are met:
+- **Business Process Flows** - You can use business process flows in offline mode if the following conditions are met:
 
     - The business process flow is used in an app that you can run on Power Apps mobile.
     - The Power Apps mobile app is enabled for offline use.
@@ -76,17 +76,17 @@ These tables and corresponding commands are available in offline mode.
 
 For more information, see [Run business process flows offline](/power-automate/business-process-flows-overview#run-business-process-flows-offline).
 
-- **Lookup support**: Lookups are supported for the tables that are mobile offline-enabled. All the tables participating in the lookup should also be offline-enabled.
+- **Lookup support** - Lookups are supported for the tables that are mobile offline-enabled. All the tables participating in the lookup should also be offline-enabled.
 
-- **Supported view**: Only System views and Quick view are supported in mobile offline. Personal views are not supported.
+- **Supported view** - Only System views and Quick view are supported in mobile offline. Personal views are not supported.
 
-- **Offline search**: Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search is not supported in offline mode. On grid pages, view-based search (filter by keyword) is not supported in offline mode and grid search switches to a quick, find-based search.
+- **Offline search** - Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search is not supported in offline mode. On grid pages, view-based search (filter by keyword) is not supported in offline mode and grid search switches to a quick, find-based search.
 
-- **Notes on the Timeline control**: Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode.
+- **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode.
   > [!NOTE]
   > The **Date** field is not available for mobile offline search.
   
-- **Custom tables**: These commands are available on edit the form, **Mark Complete**, **Refresh**, **Convert To- Opportunity**, and **Delete**.
+- **Custom tables** - These commands are available on edit the form, **Mark Complete**, **Refresh**, **Convert To- Opportunity**, and **Delete**.
 
 
 ## Limitations 
@@ -121,7 +121,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Add Existing on subgrids**: **Add Existing** is not supported for mobile offline for certain types of relationships. When you are offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command is hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command doesn't work in offline.
 
-- **Web resources**: Web resources are partially supported in offline mode. Refer to the table below for more information.
+- **Web resources**: Web resources are partially supported in offline mode. Refer to the following table for more information.
 
     |Web resource configuration |Offline support on Android and Windows|Offline support on iOS|  
     |-------------|---------|--------|  
@@ -140,7 +140,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Filter operations**: Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
 
-- **Appointments**: Appointments can be created or updated in Dataverse, but they won't be sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
+- **Appointments**: Appointments can be created or updated in Dataverse, but they aren't sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
 
 ## Tips
 
