@@ -21,7 +21,7 @@ contributors:
 
 Edit and build your app with the power of AI and Copilot. Tell AI what changes you want to make to your app in simple language, and let AI do the work for you.
 
-The Copilot panel is available when you edit an app in Power Apps Studio. Use AI to build your app by simply telling the AI assistant what kind of changes you want to make such as add a screen or add a text label.
+The Copilot panel is available when you edit an app in Power Apps Studio. Use AI to build your app by telling the AI assistant what kind of changes you want to make such as add a screen or add a text label.
 
 > [!div class="mx-imgBorder"]
 > ![Copilot panel.](media/artificial-intelligence/copilot-pane.png)
@@ -53,16 +53,15 @@ The following commands are supported by AI Copilot panel:
     - Label
     - Text input
     - Containers 
-     > [!NOTE]
-> [Modern controls](controls/modern-controls/overview-modern-controls.md) are not supported.
-- Make bulk updates to controls within a single screen.
-- Utilize formula templates
+    > [!NOTE]
+    > [Modern controls](controls/modern-controls/overview-modern-controls.md) are not supported.
+- Make bulk updates to controls within a single screen and utilize formula templates.
 
 ## Use Copilot to edit your app
 
-1. Open your app for editing in [Power Apps Studio](https://create.powerapps.com):
+1. Open your app for editing in [Power Apps Studio](https://create.powerapps.com).
 1. On the app actions menu, select **Copilot**.
-1. In the **Copilot** panel enter text to describe what changes you want to make such as **Add a  new sceen**.
+1. In the **Copilot** panel, describe what changes you want to make such as **Add a  new sceen**.
 
    > [!div class="mx-imgBorder"]
    > ![Add a screen.](media/artificial-intelligence/copilot-pane-add-screen.png)
