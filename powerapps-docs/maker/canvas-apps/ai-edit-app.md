@@ -62,7 +62,10 @@ The following commands are supported by AI Copilot panel:
 
 1. Open your app for editing in [Power Apps Studio](https://create.powerapps.com):
 1. On the app actions menu, select **Copilot**.
-1. In the **Copilot** panel enter text to describe what changes you want to make.
+1. In the **Copilot** panel enter text to describe what changes you want to make such as **Add a  new sceen**.
+
+  > [!div class="mx-imgBorder"]
+  > ![Add a screen.](media/artificial-intelligence/copilot-pane-add-screen.png)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
