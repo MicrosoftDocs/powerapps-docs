@@ -26,7 +26,7 @@ The Copilot panel is available when you edit an app in Power Apps Studio. Use AI
 > [!div class="mx-imgBorder"]
 > ![Copilot panel.](media/artificial-intelligence/copilot-pane.png)
 
-> [!IMPORTANT]
+    > [!IMPORTANT]
 > - To use this capability you must have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
@@ -41,6 +41,8 @@ Prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
 
 ## What's supported
 
+The following commands are supported by AI Copilot panel:
+
 - [Use a screen template](add-screen-context-variables.md) to add a new screen.
 - Modify the properties of various controls. Supported controls: 
     - Screen
@@ -50,8 +52,8 @@ Prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
     - Button
     - Label
     - Text input
-    - Containers
-> [!NOTE]
+    - Containers 
+     > [!NOTE]
 > [Modern controls](controls/modern-controls/overview-modern-controls.md) are not supported.
 - Make bulk updates to controls within a single screen.
 - Utilize formula templates
