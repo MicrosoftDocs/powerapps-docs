@@ -41,7 +41,7 @@ Prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
 
 ## What's supported
 
-The following commands are supported by AI Copilot panel:
+AI Copilot supports the following commands:
 
 - [Use a screen template](add-screen-context-variables.md) to add a new screen.
 - Modify the properties of various controls. Supported controls: 
@@ -61,7 +61,7 @@ The following commands are supported by AI Copilot panel:
 
 1. Open your app for editing in [Power Apps Studio](https://create.powerapps.com).
 1. On the app actions menu, select **Copilot**.
-1. In the **Copilot** panel, describe what changes you want to make such as **Add a  new sceen**.
+1. In the **Copilot** panel, describe what changes you want to make such as **Add a  new screen**.
 
    > [!div class="mx-imgBorder"]
    > ![Add a screen.](media/artificial-intelligence/copilot-pane-add-screen.png)
