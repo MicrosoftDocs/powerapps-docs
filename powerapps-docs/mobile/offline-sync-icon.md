@@ -1,7 +1,7 @@
 ---
 title: View offline sync status
 description: Learn how to interpret the offline sync icon in the mobile app navigation bar.
-ms.date: 06/02/2023
+ms.date: 06/05/2023
 ms.author: sericks
 author: sericks007
 ms.reviewer: 
@@ -40,19 +40,17 @@ The offline sync icon changes based on the app's sync status. The following tabl
 | ![Icon showing that the synchronization process encountered a warning.](media/warning.png "Icon showing that the synchronization process encountered a warning.") | The synchronization process encountered a warning. |
 
 ## Types of offline syncs
-There are three different types of syncs that can occur on your mobile device.
+Data is synchronized from Dataverse to your device over the lifetime of your app using several synchronization modes.
 
 - **First sync** - This sync is the initial offline sync that occurs for the Power Apps mobile app. All data in the offline profile is downloaded to the device. A user must use the Power Apps mobile app in online mode until the first sync is completed.
 
-  The first sync, which is the longest sync, is triggered when you sign-in to the Power Apps mobile app.
+  The first sync, which is the longest sync, is triggered when you sign-in to the Power Apps mobile app. It is also triggered after using the Reconfigure action (not recommended).
 
-- **Incremental delta sync** - This sync is the fastest sync, and occurs every 5 minutes. Only the data that has changed since the last sync occurred is downloaded to the mobile device.
+- **Delta sync** - This sync is the fastest sync, and occurs regularly based on the offline configuration for the organization. For example, a delta sync could occur every five minutes. Only data that has changed since the last sync occurred is downloaded to the mobile device.
 
-- **Full delta sync** - This sync checks all records for changes. Only new or updated data is downloaded to your mobile device. This type of sync runs slower for organizations with a high number of records.
+- **Full delta sync** - When you select **Refresh** on the **Device status** page, you trigger a full sync. A full sync doesn't redownload data, but it does recheck every record on the device, so it may take longer than a regular delta sync.
 
-  The full delta sync occurrs once a day when you open, or resume use of the app.
-
-  Users are free to use the Power Apps mobile app during the full delta sync. However, users must refresh a page (or navigate away from a page, and then come back to that page) to see updated data on the page. 
+- **Grid sync** - If you select **Refresh** on a grid or calendar view, the app will immediately synchronize all tables visible in the view. When the sync is complete, the view will refresh automatically.
 
 ## Offline Status page
 
