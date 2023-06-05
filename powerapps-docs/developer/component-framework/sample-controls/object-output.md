@@ -48,15 +48,11 @@ We also need to create a property dependency between these two properties.
 In the index.ts file we need to add [getOutputSchema](../reference/control/getoutputschema.md) method to provide the output object schema. When the control is added to a Canvas App, the platform will call to this method prior to control initialization to receive the output object(s) schema(s). 
 
 ```typescript
-<!-- A hidden property used by Canvas to get the output object schema -->
-    <property name="DataSchema" display-name-key="DataSchema" description-key="DataSchema" of-type="SingleLine.Text" usage="input" hidden="true"/>
-    <!-- The object type output property -->
-    <property name="Data" display-name-key="Data" description-key="Data" of-type="Object" usage="output" hidden="false" default-value=""/>
-
-    <property-dependencies>
-      <!-- Define the dependency between schema and the object type property -->
-      <property-dependency input="DataSchema" output="Data" required-for="schema" />
-    </property-dependencies>
+    public async getOutputSchema(context: ComponentFramework.Context<IInputs>): Promise<Record<string, unknown>> {
+        return Promise.resolve({
+            Data: StaticDataSchema
+        });
+    }
 
 ```
 
