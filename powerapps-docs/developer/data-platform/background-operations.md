@@ -180,7 +180,7 @@ When you send a request to be processed in the background, the response includes
    > |URL |Example|
    > |---------|---------|
    > |Status Monitor Resource|`[Organization URI]/api/backgroundoperation/<backgroundoperationid value>`|
-   > |`backgroundoperation` EntityType resource|`[Organization URI]/api/data/v9.0/backgroundoperations(<backgroundoperationid value>)`|
+   > |`backgroundoperation` EntityType resource|`[Organization URI]/api/data/v9.2/backgroundoperations(<backgroundoperationid value>)`|
 
    The status monitor resource isn't part of the Dataverse Web API. Notice that the URL doesn't contain `/data/v9.2/`. This resource supports only `GET` and `DELETE` operations and doesn't have the same behaviors as the Web API `backgroundoperation` EntityType resource.  You can use this URL to poll and cancel background operations. More information:
 
