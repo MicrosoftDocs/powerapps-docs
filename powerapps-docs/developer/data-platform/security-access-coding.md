@@ -1,7 +1,7 @@
 ---
 title: "Verifying access in code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the security related APIs to verify user access to a record." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/21/2022
+ms.date: 06/05/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: paulliew # GitHub ID
@@ -52,67 +52,173 @@ other strategy (mentioned above) to check the user's security privileges.
 However, if the user was successful in retrieving table records using a query, you
 can then test a record using the `RetrievePrincipalAccess` message.
 
-The following method uses the SDK <xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest> class to allow retrieving a set of access rights defined within the <xref:Microsoft.Crm.Sdk.Messages.AccessRights> enumeration.
+### [SDK for .NET](#tab/sdk)
+
+The following `GetAccessRights` static method uses the SDK [RetrievePrincipalAccessRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest) to retrieve a set of access rights that a user, team, or organization has for a record using the [AccessRights Enum](xref:Microsoft.Crm.Sdk.Messages.AccessRights).
 
 ```csharp
 /// <summary>
-/// Gets which access rights a user has for a specific record.
+/// Gets which access rights a user, team, or organization has for a specific record.
 /// </summary>
-/// <param name="svc">The IOrganizationService instance to use.</param>
-/// <param name="user">The user to check</param>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="userOrTeamOrOrganization">The user, team, or organization to check</param>
 /// <param name="entity">A reference to the entity to check.</param>
 /// <returns>The access rights the user can perform.</returns>
+static AccessRights GetAccessRights(
+        IOrganizationService service,
+        EntityReference userOrTeamOrOrganization,
+        EntityReference entity)
+{
+    var request = new RetrievePrincipalAccessRequest()
+    {
+        Principal = userOrTeamOrOrganization,
+        Target = entity
+    };
 
-static AccessRights GetAccessRights(IOrganizationService svc, EntityReference
-user, EntityReference entity) {
+    var response = (RetrievePrincipalAccessResponse)service.Execute(request);
 
-  try
-  {
-    var accessRightsRequest = new RetrievePrincipalAccessRequest() 
-        { Principal = user, Target = entity };
-
-    return ((RetrievePrincipalAccessResponse)svc.Execute(accessRightsRequest)).AccessRights;
-  }
-  catch (Exception)
-  {
-    throw;
-  }
+    return response.AccessRights;
 }
 ```
 
-For the Web API use the <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess> function and <xref:Microsoft.Dynamics.CRM.AccessRights> EnumType.
-
 With the value returned by this method, you can use the [Enum.HasFlag Method](/dotnet/api/system.enum.hasflag#System_Enum_HasFlag_System_Enum_)
-to return a Boolean value when the user has access to perform specific
-operations on the table. The following code snippet shows how to use the above
-GetAccessRights() method to test whether a user has access to append records
-to a specific account record using the `AppendToAccess` member.
+to return a [Boolean](xref:System.Boolean) value when the user has access to perform specific
+operations on the table.
+
+The following code snippet shows how to use the
+`GetAccessRights` static method to test whether a user has access to append records
+to an account record using the `AppendToAccess` member.
 
 ```C#
-var whoIAm = (WhoAmIResponse)svc.Execute(new WhoAmIRequest());
+var whoIAm = (WhoAmIResponse)service.Execute(new WhoAmIRequest());
 
-var me = new EntityReference("systemuser", whoIAm.UserId);
+var meRef = new EntityReference("systemuser", whoIAm.UserId);
 
-// TODO Substitute a valid accountid GUID here.
-var exampleAccount = (Account)svc.Retrieve("account",
-    new Guid("4e9f3434-20e5-e811-a975-000d3af49bf8"), new ColumnSet("accountid"));
+QueryExpression query = new("account") { 
+        ColumnSet = new ColumnSet("accountid"),
+        TopCount = 1
+};
 
-var accessRights = GetAccessRights(svc, me, exampleAccount.ToEntityReference());
+EntityCollection accounts = service.RetrieveMultiple(query);
 
-var canAppendTo = accessRights.HasFlag(AccessRights.AppendToAccess);
+EntityReference accountRef = accounts
+    .Entities
+    .FirstOrDefault()
+    .ToEntityReference();
+
+AccessRights rights = GetAccessRights(service, meRef, accountRef);
+
+var canAppendTo = rights.HasFlag(AccessRights.AppendToAccess);
 ```
 
-With access to a table record, you can use this method to test any
+### [Web API](#tab/webapi)
+
+The following example shows how to use the [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) to retrieve the access rights that a user has for an account record. The [RetrievePrincipalAccessResponse ComplexType](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccessResponse) provides the details of the users rights using [AccessRights EnumType](xref:Microsoft.Dynamics.CRM.AccessRights).
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(e41ac31a-dcdf-ed11-a7c7-000d3a993550)'}
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrievePrincipalAccessResponse",
+  "AccessRights": "ReadAccess, WriteAccess, AppendAccess, AppendToAccess, CreateAccess, DeleteAccess, ShareAccess, AssignAccess"
+}
+```
+
+---
+
+With access to a table record, you can use the access rights returned to test any
 operations that apply to that record. But this doesn't include capabilities that
 apply to other operations, such as creating a new record or any other privilege
-that isn't bound to a specific table.
+that isn't bound to a specific table. For these operations, you need to [Check a user's security privileges](#check-a-users-security-privileges).
 
-### Get Principals with access to a record
+### Get principals with access to a record
 
 Some data operations require another user have access to a record. If you have
-just one specific user or team, you can test the other user using the `RetrievePrincipalAccess` message (<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess> function, <xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest> class).
+just one specific user, team, or organization, you can test using the `RetrievePrincipalAccess` message.
 
-The `RetrieveSharedPrincipalsAndAccess` message (Web API <xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function> or .NET SDK <xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest?text=RetrieveSharedPrincipalsAndAccessRequest Class>) returns a list of all the users that a record has been shared with. It provides details about the access rights each user has because the record was shared with them.
+However, if you need a list of all the  users, teams, or organizations that a record has been shared with, use the `RetrieveSharedPrincipalsAndAccess` message. `RetrieveSharedPrincipalsAndAccess` provides details about the access rights each user, team, or organization has because the record was shared with them.
+
+#### [SDK for .NET](#tab/sdk)
+
+The following `GetSharedPrincipalsAndAccess` static method uses the [RetrieveSharedPrincipalsAndAccessRequest](xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest) and [RetrieveSharedPrincipalsAndAccessResponse](xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessResponse) classes to return an array of [PrincipalAccess](xref:Microsoft.Crm.Sdk.Messages.PrincipalAccess) data with details about the principals and the access they have because the record was shared with them.
+
+```csharp
+/// <summary>
+/// Returns details about access principals have because a record was shared with them.
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="target">The record to check</param>
+/// <returns>The principal access data for each user, team, or organization</returns>
+static PrincipalAccess[] GetSharedPrincipalsAndAccess(
+    IOrganizationService service,
+    EntityReference target)
+{
+    var request = new RetrieveSharedPrincipalsAndAccessRequest()
+    {
+        Target = target
+    };
+
+    var response = (RetrieveSharedPrincipalsAndAccessResponse)service.Execute(request);
+
+    return response.PrincipalAccesses;
+}
+```
+
+#### [Web API](#tab/webapi)
+
+The following example uses the [RetrieveSharedPrincipalsAndAccess Function](xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess) and the [RetrieveSharedPrincipalsAndAccessResponse ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccessResponse) returned provides an array of [PrincipalAccess ComplexType](xref:Microsoft.Dynamics.CRM.PrincipalAccess) with details about the principals and the access they have because the record was shared with them.
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/RetrieveSharedPrincipalsAndAccess(Target=@p1)?@p1={'@odata.id':'accounts(86914942-34cb-ed11-b596-0022481d68cd)'}
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccessResponse",
+  "PrincipalAccesses": [
+    {
+      "AccessMask": "DeleteAccess",
+      "Principal": {
+        "@odata.type": "#Microsoft.Dynamics.CRM.systemuser",
+        "ownerid": "7761da90-2383-e911-a962-000d3a13c05d"
+      }
+    },
+    {
+      "AccessMask": "DeleteAccess",
+      "Principal": {
+        "@odata.type": "#Microsoft.Dynamics.CRM.systemuser",
+        "ownerid": "8061643d-ebf7-e811-a974-000d3a1e1c9a"
+      }
+    }
+  ]
+}
+```
+
+---
 
 ## Check a user's security privileges
 
@@ -178,7 +284,7 @@ Use these messages to retrieve privileges by privilege ID or name. They include 
 
 The following examples show the use of the `RetrieveUserPrivilegeByPrivilegeName` message.
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 This example tests whether the a user with systemuserid of `00000000-0000-0000-0000-000000000001` has the `prvReadAuditSummary` privilege. Because the <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse?text=RetrieveUserPrivilegeByPrivilegeNameResponse  ComplexType>`.RolePrivileges` collection contains data, the user has the privilege.
 
@@ -220,7 +326,7 @@ More information:
 - <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName?text=RetrieveUserPrivilegeByPrivilegeName Function>
 - <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse?text=RetrieveUserPrivilegeByPrivilegeNameResponse  ComplexType>
 
-# [.NET SDK](#tab/sdk)
+#### [.NET SDK](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -272,13 +378,23 @@ More information:
 
 ## Retrieve privileges for a security role
 
-You can retrieve privileges by security role. Below is a Web API example showing how this is done.
+You can retrieve privileges by security role.
+
+#### [SDK for .NET](#tab/sdk)
+
+Content for SDK...
+
+#### [Web API](#tab/webapi)
 
 **Request**
 
 ```http
 GET [Organization URI]/api/data/v9.0/roles(<role ID>)/roleprivileges_association?$select=name&$orderby=privilegeid 
 ```
+
+---
+
+
 
 ### See Also
 
