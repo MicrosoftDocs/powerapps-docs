@@ -20,10 +20,6 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-> [!NOTE]
-> As of May 2, 2023, this feature is being deployed and is not yet available in all regions.
-
-
 Use background operations to send requests that Dataverse processes asynchronously. Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
 
 Dataverse immediately responds that the request is accepted. When the operation completes successfully, you can retrieve the result. You can poll the `backgroundoperations` table or use two different methods to get notified when a background operation completes.
@@ -33,6 +29,7 @@ Background operations require that the operation performed is defined as a custo
 - [Create and use custom APIs](custom-api.md)
 - [Retrieve data about custom APIs](custom-api-tables.md#retrieve-data-about-custom-apis)
 
+Custom APIs use plug-ins to perform the data operations. Like all Dataverse plug-ins, these plug-ins have a two-minute execution time out. Sending the request asynchronously doesn't provide more execution time.
 
 ## Required Privileges
 
