@@ -129,8 +129,10 @@ foreach (var c in result.Entities)
 }  
 ```
 
-> [!NOTE]
-> You can convert a FetchXML query to a query expression with the <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> message.
+> [!IMPORTANT]
+> When working with code such as the above example, always make sure that your string is a valid encoded XML string. This is especially true regarding the possibility of containing special characters in condition values such as &<> being encoded as \&amp;\&lt;\&gt;.
+
+You can convert a FetchXML query to a query expression with the <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> message.
   
 ## FetchXML query results
 
