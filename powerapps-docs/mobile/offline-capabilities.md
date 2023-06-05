@@ -91,9 +91,9 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 ## Limitations 
 
-- **Qualify a lead**: When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the  qualify stage. The user has to manually select **Next stage** to move to the next stage.
+- **Qualify a lead** - When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the  qualify stage. The user has to manually select **Next stage** to move to the next stage.
 
-- **Grids**: Column filtering is disabled when an offline profile is set up even when there is network connectivity. The grid works with the local database and does not support custom filters.
+- **Grids** - Column filtering is disabled when an offline profile is set up even when there is network connectivity. The grid works with the local database and does not support custom filters.
 
 - **Views** are not supported for the following tables in offline mode: 
 
@@ -117,11 +117,11 @@ For more information, see [Run business process flows offline](/power-automate/b
 
     Any views that have linked tables (related table) that are not available offline are also not supported.
 
-- **Advanced lookups**: The **[Advanced lookup]**(../user/lookup-field.md#advanced-lookup) functionality isn't supported in offline scenarios. When you're offline, the **Advanced lookup** button is replaced by a **Change view** dropdown list.
+- **Advanced lookups** - The **[Advanced lookup]**(../user/lookup-field.md#advanced-lookup) functionality isn't supported in offline scenarios. When you're offline, the **Advanced lookup** button is replaced by a **Change view** dropdown list.
 
-- **Add Existing on subgrids**: **Add Existing** is not supported for mobile offline for certain types of relationships. When you are offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command is hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command doesn't work in offline.
+- **Add Existing on subgrids** - The **Add Existing** functionality isn't supported for mobile offline for certain types of relationships. When you are offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command is hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command doesn't work in offline.
 
-- **Web resources**: Web resources are partially supported in offline mode. Refer to the following table for more information.
+- **Web resources** - Web resources are partially supported in offline mode. Refer to the following table for more information.
 
     |Web resource configuration |Offline support on Android and Windows|Offline support on iOS|  
     |-------------|---------|--------|  
@@ -134,13 +134,13 @@ For more information, see [Run business process flows offline](/power-automate/b
 
     ** Accessing RESX web resources as a dependency through Client API from within a JS file is supported.
 
-- **Calculated and rollup fields**: Calculated and rollup fields that are part of rows synced to the client aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
+- **Calculated and rollup fields** - Calculated and rollup fields that are part of rows synced to the client aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
 
-- **Mapped fields**: When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
+- **Mapped fields** - When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
 
-- **Filter operations**: Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
+- **Filter operations** - Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
 
-- **Appointments**: Appointments can be created or updated in Dataverse, but they aren't sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
+- **Appointments** - Appointments can be created or updated in Dataverse, but they aren't sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
 
 ## Tips
 
