@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 02/28/2023
+ms.date: 06/05/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -467,7 +467,7 @@ Default:
   By default, images are uploaded using the client API. When as an image is added to the editor, it is uploaded to the platform. To store images as base64 strings directly in the column configured to use the rich text editor control set this value to true. 
 	
    > [!TIP]
-   > If images are viewed externally, such as through email, it is generally advised to not use the default image processing. Default image processing uploads images to the "attachmentEntity" defined in the configuration, and external user could lack permissions to view the content. Instead an alternative upload such base64 strings can be used i.e.  ```"disableDefaultImageProcessing": true```
+   > If images are viewed externally, such as through email, we recommend that you not use default image processing. Default image processing uploads images to the `attachmentEntity` defined in the configuration, and an external user might lack privileges to view the content. Instead, an alternative upload, base64 strings can be used with ```"disableDefaultImageProcessing": true```.
 	
 </td>
 <td>
