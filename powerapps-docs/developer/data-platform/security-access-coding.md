@@ -15,21 +15,20 @@ search.audienceType:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-The only time you don't need to be concerned about security concepts is when you
-are writing code that is expected to be run by a user with the System
-Administrator security role. Because this role is all powerful and cannot be
+The only time you don't need to be concerned about security concepts is when you're writing code that a user with the System
+Administrator security role runs. Because this role is all powerful and can't be
 edited, you can be assured that the user can do anything. In all other cases,
 you need to consider how security is applied.
 
-- If you are creating a **client application**, you should evaluate the user's
+- If you're creating a **client application**, you should evaluate the user's
     privileges for a table or for a specific table record and control which
-    commands you enable. If a user is not allowed to create a table, you can
+    commands you enable. If a user isn't allowed to create a table, you can
     disable the user interface in your app to allow creating a new table of that type. If they don't have read access to a table, your client application can choose to not
     display components related to viewing lists of that type of table.
 
-- If you are writing a **synchronous plug-in**, you can't simply attempt some
+- If you're writing a **synchronous plug-in**, you can't attempt some
     data operation and throw away the exception. Any operation that fails within a
-    synchronous plug-in will cause the entire data transaction to be rolled back. If
+    synchronous plug-in causes the entire data transaction to be rolled back. If
     you have some part of the process that is optional depending on the user's
     privileges, you should check the user's privileges first.
 
@@ -44,8 +43,8 @@ These strategies are described below.
 ## Test individual table records
 
 User interaction with specific table records usually begins with a query. If a
-user has no access to any records for that table, the query will simply return
-no records and there is nothing further the user can attempt except to create a
+user has no access to any records for that table, the query returns
+no records, and there's nothing further the user can attempt except to create a
 new record. Testing whether the user can create a new record requires using the
 other strategy (mentioned above) to check the user's security privileges.
 
@@ -140,7 +139,7 @@ OData-Version: 4.0
 ---
 
 With access to a table record, you can use the access rights returned to test any
-operations that apply to that record. But this doesn't include capabilities that
+operations that apply to that record. But this test doesn't include capabilities that
 apply to other operations, such as creating a new record or any other privilege
 that isn't bound to a specific table. For these operations, you need to [Check a user's security privileges](#check-a-users-security-privileges).
 
@@ -226,8 +225,8 @@ When you don't have a specific table record to test, such as whether a user can
 create a new table record, you must rely on checking the user's security
 privileges. These privileges are stored in the [Privilege table](reference/entities/privilege.md).
 
-There are nearly one thousand individual privileges in the Dataverse database and the
-number will grow with every table or custom action that is added to the system.
+There are nearly 1000 individual privileges in the Dataverse database and the
+number grows with every table that is added to the system.
 You can retrieve a list of the privileges available in your environment by executing the
 following FetchXML query.
 
@@ -246,9 +245,9 @@ The value of the `name` attribute follows this naming convention pattern when th
 privilege applies to tables: "prv+Verb+Table SchemaName". The verb is one of **Append**, **AppendTo**, **Assign**, **Create**, **Delete**,
 **Share**, **Write**.
 
-In addition to the privileges for tables, there are less than one hundred other
-special privileges that are not associated with tables. You can use the
-following query to retrieve these.
+In addition to the privileges for tables, there are less than 100 other
+special privileges that aren't associated with tables. You can use the
+following query to retrieve these privileges.
 
 ```XML
 <fetch version='1.0' distinct='true' no-lock='true' >
@@ -322,7 +321,7 @@ More information:
 
 #### [Web API](#tab/webapi)
 
-This example tests whether the a user with systemuserid of `00000000-0000-0000-0000-000000000001` has the `prvReadAuditSummary` privilege. Because the [RetrieveUserPrivilegeByPrivilegeNameResponse  ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse)`.RolePrivileges` collection contains [RolePrivilege ComplexType](xref:Microsoft.Dynamics.CRM.RolePrivilege) data, the user has the privilege.
+This example tests whether a user with systemuserid of `00000000-0000-0000-0000-000000000001` has the `prvReadAuditSummary` privilege. Because the [RetrieveUserPrivilegeByPrivilegeNameResponse  ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse)`.RolePrivileges` collection contains [RolePrivilege ComplexType](xref:Microsoft.Dynamics.CRM.RolePrivilege) data, the user has the privilege.
 
 **Request**
 
