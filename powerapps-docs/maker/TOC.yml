@@ -280,7 +280,7 @@
         href: ./canvas-apps/ai-overview.md
       - name: Create an app from conversations
         href: ./canvas-apps/ai-conversations-create-app.md
-      - name: Use natural language to edit an app (preview) 
+      - name: Use natural language to edit an app 
         href: ./canvas-apps/ai-edit-app.md
     - name: Create an app using data
       items:
