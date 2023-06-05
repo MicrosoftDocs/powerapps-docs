@@ -222,7 +222,7 @@ OData-Version: 4.0
 
 ## Check a user's security privileges
 
-When you don't have a specific table record to test, such as whether they can
+When you don't have a specific table record to test, such as whether a user can
 create a new table record, you must rely on checking the user's security
 privileges. These privileges are stored in the [Privilege table](reference/entities/privilege.md).
 
@@ -273,25 +273,61 @@ Use these messages to retrieve privileges by privilege ID or name. They include 
 
 | Message | Web API function<br/>SDK request class |
 | --- | --- |
-|`RetrieveUserPrivilegeByPrivilegeId`| <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId?text=RetrieveUserPrivilegeByPrivilegeId Function><br/><xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest?text=RetrieveUserPrivilegeByPrivilegeIdRequest Class> |
-|`RetrieveUserPrivilegeByPrivilegeName`| <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName?text=RetrieveUserPrivilegeByPrivilegeName Function><br/><xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest?text=RetrieveUserPrivilegeByPrivilegeNameRequest Class> |
-|`RetrieveUserSetOfPrivilegesByIds`| <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds?text=RetrieveUserSetOfPrivilegesByIds Function>|
-|`RetrieveUserSetOfPrivilegesByNames`| <xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames?text=RetrieveUserSetOfPrivilegesByNames Function>|
-
-<!-- As of 2022-5-21 there are no SDK request classes for RetrieveUserSetOfPrivilegesByIds or RetrieveUserSetOfPrivilegesByNames -->
+|`RetrieveUserPrivilegeByPrivilegeId`| [RetrieveUserPrivilegeByPrivilegeId Function](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId)<br/>[RetrieveUserPrivilegeByPrivilegeIdRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest)|
+|`RetrieveUserPrivilegeByPrivilegeName`| [RetrieveUserPrivilegeByPrivilegeName Function](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName)<br/>[RetrieveUserPrivilegeByPrivilegeNameRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest)|
+|`RetrieveUserSetOfPrivilegesByIds`|[RetrieveUserSetOfPrivilegesByIds Function](xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds)<br/>[RetrieveUserSetOfPrivilegesByIdsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByIdsRequest)|
+|`RetrieveUserSetOfPrivilegesByNames`|[RetrieveUserSetOfPrivilegesByNames Function](xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames)<br/>[RetrieveUserSetOfPrivilegesByNamesRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByNamesRequest)|
 
 ### Example: Check whether a user has a privilege
 
-The following examples show the use of the `RetrieveUserPrivilegeByPrivilegeName` message.
+The following examples show the use of the `RetrieveUserPrivilegeByPrivilegeName` message. This message retrieves the list of privileges for a system user (user) from all direct roles associated with the system user and from all indirect roles associated with teams in which the system user is a member of based on the specified privilege name.
+
+#### [.NET SDK](#tab/sdk)
+
+The following `HasPrivilege` static method returns the [RolePrivilege](xref:Microsoft.Crm.Sdk.Messages.RolePrivilege) data for a given privilege name.
+
+```csharp
+/// <summary>
+/// Returns whether specified user has a named privilege
+/// </summary>
+/// <param name="service">The IOrganizationService instance to use.</param>
+/// <param name="systemUserId">The Id of the user.</param>
+/// <param name="privilegeName">The name of the privilege.</param>
+/// <returns></returns>
+static bool HasPrivilege(IOrganizationService service,
+        Guid systemUserId,
+        string privilegeName)
+{
+    var request = new
+        RetrieveUserPrivilegeByPrivilegeNameRequest
+    {
+        PrivilegeName = privilegeName,
+        UserId = systemUserId
+    };
+    var response =
+        (RetrieveUserPrivilegeByPrivilegeNameResponse)service
+        .Execute(request);
+    if (response.RolePrivileges.Length > 0)
+    {
+        return true;
+    }
+    return false;
+}
+```
+
+More information:
+
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+- [RetrieveUserPrivilegeByPrivilegeNameResponse Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameResponse)
 
 #### [Web API](#tab/webapi)
 
-This example tests whether the a user with systemuserid of `00000000-0000-0000-0000-000000000001` has the `prvReadAuditSummary` privilege. Because the <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse?text=RetrieveUserPrivilegeByPrivilegeNameResponse  ComplexType>`.RolePrivileges` collection contains data, the user has the privilege.
+This example tests whether the a user with systemuserid of `00000000-0000-0000-0000-000000000001` has the `prvReadAuditSummary` privilege. Because the [RetrieveUserPrivilegeByPrivilegeNameResponse  ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse)`.RolePrivileges` collection contains [RolePrivilege ComplexType](xref:Microsoft.Dynamics.CRM.RolePrivilege) data, the user has the privilege.
 
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/systemusers(00000000-0000-0000-0000-000000000001)/Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName(PrivilegeName='prvReadAuditSummary') HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/systemusers(00000000-0000-0000-0000-000000000001)/Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName(PrivilegeName='prvReadAuditSummary')
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -323,78 +359,109 @@ More information:
 
 - [Use Web API functions](webapi/use-web-api-functions.md)
 - [Bound functions](webapi/use-web-api-functions.md#bound-functions)
-- <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName?text=RetrieveUserPrivilegeByPrivilegeName Function>
-- <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse?text=RetrieveUserPrivilegeByPrivilegeNameResponse  ComplexType>
-
-#### [.NET SDK](#tab/sdk)
-
-```csharp
-/// <summary>
-/// Returns whether specified user has a named privilege
-/// </summary>
-/// <param name="svc">The IOrganizationService instance to use.</param>
-/// <param name="systemUserId">The Id of the user.</param>
-/// <param name="privilegeName">The name of the privilege.</param>
-/// <returns></returns>
-static bool HasPrivilege(IOrganizationService svc,
-Guid systemUserId,
-string privilegeName)
-{
-    var req = new
-        RetrieveUserPrivilegeByPrivilegeNameRequest
-    {
-        PrivilegeName = privilegeName,
-        UserId = systemUserId
-    };
-    try
-    {
-        var resp =
-            (RetrieveUserPrivilegeByPrivilegeNameResponse)svc
-            .Execute(req);
-        if (resp.RolePrivileges.Length > 0)
-        {
-            return true;
-        }
-    }
-    catch (System.ServiceModel.FaultException)
-    {
-        //Invalid userid or privilege name
-        throw;
-    }
-    catch (Exception)
-    {
-        throw;
-    }
-    return false;
-}
-```
-
-More information:
-
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
-- <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameResponse?text=RetrieveUserPrivilegeByPrivilegeNameResponse Class>
+- [RetrieveUserPrivilegeByPrivilegeName Function](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName)
+- [RetrieveUserPrivilegeByPrivilegeNameResponse ComplexType](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse)
 
 ---
 
 ## Retrieve privileges for a security role
 
-You can retrieve privileges by security role.
+You can retrieve the privileges associated with a security role.
 
 #### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
+The following static `GetRolePrivileges` method retrieves the privileges associated with a role.
+
+```csharp
+/// <summary>
+/// Retrieves the privileges for a role.
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="roleId">The id of the role</param>
+/// <returns>Privilege records associated to the role</returns>
+static EntityCollection GetRolePrivileges(IOrganizationService service, Guid roleId) {
+
+    Relationship roleprivileges_association = new("roleprivileges_association");
+
+    var relationshipQueryCollection = new RelationshipQueryCollection();
+
+    var relatedPrivileges = new QueryExpression("privilege")
+    {
+        ColumnSet = new ColumnSet("name")
+    };
+
+    relationshipQueryCollection.Add(roleprivileges_association, relatedPrivileges);
+
+    var request = new RetrieveRequest()
+    {
+        ColumnSet = new ColumnSet(true),
+        RelatedEntitiesQuery = relationshipQueryCollection,
+        Target = new EntityReference("role", roleId)
+    };
+
+    var response = (RetrieveResponse)service.Execute(request);
+
+    return response.Entity.RelatedEntities[roleprivileges_association];
+}
+```
+
+More information: [Retrieve with related rows](org-service/entity-operations-retrieve.md#retrieve-with-related-rows)
 
 #### [Web API](#tab/webapi)
+
+The following example returns the privileges associated with a role with a given `roleid`.
 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/roles(<role ID>)/roleprivileges_association?$select=name&$orderby=privilegeid 
+GET [Organization Uri]/api/data/v9.2/roles(<roleid>)/roleprivileges_association?$select=name&$orderby=name
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
 ```
 
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#privileges(name)",
+  "value": [
+    {
+      "@odata.etag": "W/\"10646316\"",
+      "name": "prvCreateSharePointData",
+      "privilegeid": "5eb85025-363b-46ea-a77e-ce24159cd231"
+    },
+    {
+      "@odata.etag": "W/\"35414093\"",
+      "name": "prvReadconversationtranscript",
+      "privilegeid": "448bd4ab-41e4-4055-b288-36110522d6e8"
+    },
+    {
+      "@odata.etag": "W/\"10646495\"",
+      "name": "prvReadSharePointData",
+      "privilegeid": "fecbd29c-df64-4ede-a611-47226b402c22"
+    },
+    {
+      "@odata.etag": "W/\"10646213\"",
+      "name": "prvReadSharePointDocument",
+      "privilegeid": "d71fc8d0-99bc-430e-abd7-d95c64f11e9c"
+    },
+    {
+      "@odata.etag": "W/\"10646645\"",
+      "name": "prvWriteSharePointData",
+      "privilegeid": "cfdd12cf-090b-4599-8302-771962d2350a"
+    }
+  ]
+}
+```
+
+More information: [Filtered collections](webapi/query-data-web-api.md#filtered-collections)
+
 ---
-
-
 
 ### See Also
 
