@@ -88,14 +88,10 @@ private onLoadData = async () => {
 
 ### Related topics
 
-[onOutputChange Event](../../model-driven-apps/clientapi/reference/events/onoutputchange.md)
-
-[StandardControl.getOutputSchema](../reference/control/getoutputschema.md)
-
-[ReactControl.getOutputSchema](../reference/react-control/getoutputschema.md)
-
-[StandardControl.getOutputs](../reference/control/getoutputs.md)
-
-[ReactControl.getOutputs](../reference/react-control/getOutputs.md)
+[onOutputChange Event](../../model-driven-apps/clientapi/reference/events/onoutputchange.md)  
+[StandardControl.getOutputSchema](../reference/control/getoutputschema.md)  
+[ReactControl.getOutputSchema](../reference/react-control/getoutputschema.md)  
+[StandardControl.getOutputs](../reference/control/getoutputs.md)  
+[ReactControl.getOutputs](../reference/react-control/getOutputs.md)  
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
