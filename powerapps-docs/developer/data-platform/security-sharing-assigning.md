@@ -34,8 +34,7 @@ record is shared with different access rights. In this case, the access rights
 that this user has on the record are the union of all the rights.
 
 When you share a record with another user using the `GrantAccess` message, you must indicate what access rights you want to
-grant to the other user. Access rights on a shared record can be different for
-each user with whom the record is shared. However, you can't give a user any
+grant to the other user. To modify the access of a shared record, use the `ModifyAccess` message. Access rights on a shared record can be different for each user with whom the record is shared. However, you can't give a user any
 rights that they wouldn't have for that type of table, based on the role
 assigned to that user. For example, if a user doesn't have **Read** privileges on
 accounts and you share an account with that user, the user is unable to see
@@ -43,7 +42,7 @@ that account.
 
 ### GrantAccess example
 
-These examples show the use of the `GrantAccess` message.
+These examples show the use of the `GrantAccess` message to share a record with another principal.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -121,7 +120,7 @@ OData-Version: 4.0
 
 ### ModifyAccess example
 
-These examples show the use of the `ModifyAccess` message.
+These examples show the use of the `ModifyAccess` message to change the access granted to a principal for a shared record.
 
 #### [SDK for .NET](#tab/sdk)
 
