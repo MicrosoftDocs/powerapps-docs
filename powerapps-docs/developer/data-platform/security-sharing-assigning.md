@@ -220,7 +220,12 @@ from the parent record.
 ## Assigning records
 
 Anyone with **Assign** access rights on a record can assign that record to
-another user. When a record is assigned, the new user, team or organization becomes the owner
+another user. To assign a record, change the `ownerid` lookup value to refer to a new principal.
+
+> [!NOTE]
+> The SDK has an [AssignRequest class](xref:Microsoft.Crm.Sdk.Messages.AssignRequest) that is deprecated. More information: [Legacy update messages](org-service/entity-operations-update-delete.md#legacy-update-messages)
+
+When a record is assigned, the new user, team or organization becomes the owner
 of the record and its related records. The original user, team or organization loses ownership
 of the record, but automatically shares it with the new owner.
 
