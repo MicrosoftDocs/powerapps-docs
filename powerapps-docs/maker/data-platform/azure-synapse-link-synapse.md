@@ -135,6 +135,7 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 
 > [!NOTE]
 > For empty table data and metadata table, only near real-time data is created.
+> To create read-only snapshot data, please ensure that the **Permitted scope for copy operations** setting is configured to **From any storage account**. More information: [Configure the Permitted scope for copy operations]( /azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview)
 
 1. Select the desired Azure Synapse Link, and then select the **Go to Azure Synapse Analytics workspace** from the top panel.
 1. Expand **Lake Databases** from the left panel, select **dataverse**-*environmentName*-*organizationUniqueName*, and then expand **Tables**.
