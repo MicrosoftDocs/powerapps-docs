@@ -237,7 +237,7 @@ record, depending on their privileges. The Organization table's
 [ShareToPreviousOwnerOnAssign](reference/entities/organization.md#sharetopreviousowneronassign-choicesoptions) column controls this setting.
 
 > [!NOTE]
-> The [Appointment table](reference/entities/appointment.md) has special logic which is used when an appointment is assigned to another user. If the current owner is still a participant such as the organizer or an attendee, the appointment record is shared with this user when the appointment is reassigned. This behavior occurs even if the **Share reassigned records with original owner** setting is disabled. Because the appointment may be shared with the previous owner, the user assigning the meeting requires both the **Assign** and **Share** access rights on the record.
+> The [Appointment table](reference/entities/appointment.md) has special logic when an appointment is assigned to another user. If the current owner is still a participant, such as the organizer or an attendee, the appointment record is shared with this user when the appointment is reassigned. This behavior occurs even if the **Share reassigned records with original owner** setting is disabled. Because the appointment may be shared with the previous owner, the user assigning the meeting requires both the **Assign** and **Share** access rights on the record.
 
 ## Revoking access
 
@@ -245,7 +245,7 @@ The owner of the record can use the `RevokeAccess` message to revoke (remove) us
 
 ### [SDK for .NET](#tab/sdk)
 
-The following `RevokeShare` static method shows how to remove sharing access for a user to a record using the [RevokeAccessRequest Class](xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest)
+The following `RevokeShare` static method shows how to remove sharing access for a user to a record using the [RevokeAccessRequest Class](xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest).
 
 ```csharp
 /// <summary>
@@ -271,7 +271,7 @@ static void RevokeShare(
 
 ### [Web API](#tab/webapi)
 
-The following example shows how to use the [RevokeAccess Action](xref:Microsoft.Dynamics.CRM.RevokeAccess) to remove sharing access for a user to a record.
+The following example shows how to use the [RevokeAccess Action](xref:Microsoft.Dynamics.CRM.RevokeAccess) to remove sharing access for a user to a record. In this example, a user is the `Revokee`, and an account record is the `Target`.
 
 **Request**
 
