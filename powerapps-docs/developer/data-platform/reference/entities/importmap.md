@@ -1,7 +1,7 @@
 ---
 title: "Data Map (ImportMap)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Data Map (ImportMap)  table/entity."
-ms.date: 06/02/2023
+ms.date: 06/05/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1390,6 +1390,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10345|Dataflow DatalakeFolder||
 |10346|Data Movement Service Request|Table for Data Movement Service Requests|
 |10347|Data Movement Service Request Status|Table for Data Movement Service Request Status|
+|10348|SearchAttributeSettings||
+|10349|SearchCustomAnalyzer||
 
 
 <a name="onetomany"></a>

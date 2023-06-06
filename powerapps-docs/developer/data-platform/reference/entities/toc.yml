@@ -570,6 +570,10 @@
   href: sdkmessageprocessingstepimage.md
 - name: SdkMessageProcessingStepSecureConfig
   href: sdkmessageprocessingstepsecureconfig.md
+- name: searchattributesettings
+  href: searchattributesettings.md
+- name: searchcustomanalyzer
+  href: searchcustomanalyzer.md
 - name: searchrelationshipsettings
   href: searchrelationshipsettings.md
 - name: searchtelemetry
@@ -650,6 +654,8 @@
   href: task.md
 - name: Team
   href: team.md
+- name: teammobileofflineprofilemembership
+  href: teammobileofflineprofilemembership.md
 - name: TeamTemplate
   href: teamtemplate.md
 - name: Template
@@ -678,6 +684,8 @@
   href: userform.md
 - name: UserMapping
   href: usermapping.md
+- name: usermobileofflineprofilemembership
+  href: usermobileofflineprofilemembership.md
 - name: UserQuery
   href: userquery.md
 - name: UserQueryVisualization

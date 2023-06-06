@@ -1,7 +1,7 @@
 ---
 title: "mobileofflineprofileitemfilter table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the mobileofflineprofileitemfilter table/entity."
-ms.date: 06/02/2023
+ms.date: 06/05/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -65,6 +65,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [mobileofflineprofileitemid](#BKMK_mobileofflineprofileitemid)
 - [Name](#BKMK_Name)
 - [offlinesql](#BKMK_offlinesql)
+- [outerFetchXml](#BKMK_outerFetchXml)
 - [returnedtypecode](#BKMK_returnedtypecode)
 - [subtype](#BKMK_subtype)
 - [type](#BKMK_type)
@@ -201,6 +202,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|offlinesql|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_outerFetchXml"></a> outerFetchXml
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|OuterFetchXML|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|outerfetchXml|
 |MaxLength|1048576|
 |RequiredLevel|None|
 |Type|Memo|

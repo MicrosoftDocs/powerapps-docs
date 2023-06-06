@@ -1,7 +1,7 @@
 ---
 title: "RecordFilter table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the RecordFilter table/entity."
-ms.date: 06/02/2023
+ms.date: 06/05/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -273,6 +273,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [IsManaged](#BKMK_IsManaged)
+- [IsRoleBusinessUnitQuery](#BKMK_IsRoleBusinessUnitQuery)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -467,6 +468,29 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |-----|-----|--------|
 |1|Managed||
 |0|Unmanaged||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsRoleBusinessUnitQuery"></a> IsRoleBusinessUnitQuery
+
+|Property|Value|
+|--------|-----|
+|Description|Is Record Filter Query using Role's Business Unit|
+|DisplayName|Is Role BusinessUnit Query|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isrolebusinessunitquery|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsRoleBusinessUnitQuery Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
 
 **DefaultValue**: 0
 

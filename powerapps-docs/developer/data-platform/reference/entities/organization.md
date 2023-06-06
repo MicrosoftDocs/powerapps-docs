@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 06/02/2023
+ms.date: 06/05/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -134,6 +134,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DateFormatCode](#BKMK_DateFormatCode)
 - [DateFormatString](#BKMK_DateFormatString)
 - [DateSeparator](#BKMK_DateSeparator)
+- [DaysBeforeEmailDescriptionIsMigrated](#BKMK_DaysBeforeEmailDescriptionIsMigrated)
 - [DaysBeforeInactiveTeamsChatSyncDisabled](#BKMK_DaysBeforeInactiveTeamsChatSyncDisabled)
 - [DecimalSymbol](#BKMK_DecimalSymbol)
 - [DefaultCountryCode](#BKMK_DefaultCountryCode)
@@ -352,6 +353,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PaiPreviewScenarioEnabled](#BKMK_PaiPreviewScenarioEnabled)
 - [PastExpansionWindow](#BKMK_PastExpansionWindow)
 - [PcfDatasetGridEnabled](#BKMK_PcfDatasetGridEnabled)
+- [PerformACTSyncAfter](#BKMK_PerformACTSyncAfter)
 - [Picture](#BKMK_Picture)
 - [PinpointLanguageCode](#BKMK_PinpointLanguageCode)
 - [PluginTraceLogSetting](#BKMK_PluginTraceLogSetting)
@@ -2160,6 +2162,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|5|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_DaysBeforeEmailDescriptionIsMigrated"></a> DaysBeforeEmailDescriptionIsMigrated
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Number of days before we migrate email description to blob.|
+|DisplayName|Number of days before we migrate email description to blob.|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|daysbeforeemaildescriptionismigrated|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_DaysBeforeInactiveTeamsChatSyncDisabled"></a> DaysBeforeInactiveTeamsChatSyncDisabled
@@ -6656,6 +6676,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_PerformACTSyncAfter"></a> PerformACTSyncAfter
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|This setting contains the date time before an ACT sync can execute.|
+|DisplayName|PerformACTSyncAfter|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|performactsyncafter|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
 ### <a name="BKMK_Picture"></a> Picture
 
 |Property|Value|
@@ -9644,6 +9681,8 @@ Listed by **SchemaName**.
 - [organization_pluginpackage](#BKMK_organization_pluginpackage)
 - [organization_virtualentitymetadata](#BKMK_organization_virtualentitymetadata)
 - [organization_mobileofflineprofileextension](#BKMK_organization_mobileofflineprofileextension)
+- [organization_teammobileofflineprofilemembership](#BKMK_organization_teammobileofflineprofilemembership)
+- [organization_usermobileofflineprofilemembership](#BKMK_organization_usermobileofflineprofilemembership)
 - [organization_organizationdatasyncsubscription](#BKMK_organization_organizationdatasyncsubscription)
 - [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
 - [organization_organizationdatasyncsubscriptionfnotable](#BKMK_organization_organizationdatasyncsubscriptionfnotable)
@@ -9661,6 +9700,8 @@ Listed by **SchemaName**.
 - [organization_appactionrule](#BKMK_organization_appactionrule)
 - [organization_searchrelationshipsettings](#BKMK_organization_searchrelationshipsettings)
 - [organization_msdyn_solutionhealthruleset](#BKMK_organization_msdyn_solutionhealthruleset)
+- [organization_searchattributesettings](#BKMK_organization_searchattributesettings)
+- [organization_searchcustomanalyzer](#BKMK_organization_searchcustomanalyzer)
 
 
 ### <a name="BKMK_lk_principalobjectattributeaccess_organizationid"></a> lk_principalobjectattributeaccess_organizationid
@@ -11191,6 +11232,40 @@ Same as the [organization_mobileofflineprofileextension](mobileofflineprofileext
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_teammobileofflineprofilemembership"></a> organization_teammobileofflineprofilemembership
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_teammobileofflineprofilemembership](teammobileofflineprofilemembership.md#BKMK_organization_teammobileofflineprofilemembership) many-to-one relationship for the [teammobileofflineprofilemembership](teammobileofflineprofilemembership.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|teammobileofflineprofilemembership|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_teammobileofflineprofilemembership|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_usermobileofflineprofilemembership"></a> organization_usermobileofflineprofilemembership
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_usermobileofflineprofilemembership](usermobileofflineprofilemembership.md#BKMK_organization_usermobileofflineprofilemembership) many-to-one relationship for the [usermobileofflineprofilemembership](usermobileofflineprofilemembership.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|usermobileofflineprofilemembership|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_usermobileofflineprofilemembership|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_organizationdatasyncsubscription"></a> organization_organizationdatasyncsubscription
 
 **Added by**: Active Solution Solution
@@ -11476,6 +11551,40 @@ Same as the [organization_msdyn_solutionhealthruleset](msdyn_solutionhealthrules
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|organization_msdyn_solutionhealthruleset|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_searchattributesettings"></a> organization_searchattributesettings
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_searchattributesettings](searchattributesettings.md#BKMK_organization_searchattributesettings) many-to-one relationship for the [searchattributesettings](searchattributesettings.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|searchattributesettings|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_searchattributesettings|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_searchcustomanalyzer"></a> organization_searchcustomanalyzer
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_searchcustomanalyzer](searchcustomanalyzer.md#BKMK_organization_searchcustomanalyzer) many-to-one relationship for the [searchcustomanalyzer](searchcustomanalyzer.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|searchcustomanalyzer|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_searchcustomanalyzer|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
