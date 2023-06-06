@@ -21,6 +21,9 @@ Microsoft Dataverse supports custom retention policies to securely retain data l
 > - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
 > - Pricing information for long term data retention will be available at general availability.
 
+Watch this video to learn about Dataverse long term data retention.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAf]
+
 ## Business application data lifecycle
 
 Consider the business application data lifecycle in three stages. First active data, which over time transitions to inactive data, and finally transitions to deleted data.
