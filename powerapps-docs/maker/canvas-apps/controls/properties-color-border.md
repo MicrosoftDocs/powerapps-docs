@@ -67,7 +67,7 @@ These properties are in effect normally, when the user is not interacting with t
 
 **Drop Shadow** - Adds shadow effects around the control.
 
-- Applies to **[Horizontal container](control-horizontal-container.md)**, and **[Vertical container](control-vertical-container.md)** controls.
+- Applies to **[Horizontal container](control-horizontal-container.md)** and **[Vertical container](control-vertical-container.md)** controls.
 
 **Fill** – The background color of a control.
 
