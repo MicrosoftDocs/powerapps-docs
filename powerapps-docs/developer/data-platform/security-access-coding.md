@@ -272,10 +272,10 @@ Use these messages to retrieve privileges by privilege ID or name. They include 
 
 | Message | Web API function<br/>SDK request class |
 | --- | --- |
-|`RetrieveUserPrivilegeByPrivilegeId`| [RetrieveUserPrivilegeByPrivilegeId Function](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId)<br/>[RetrieveUserPrivilegeByPrivilegeIdRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest)|
-|`RetrieveUserPrivilegeByPrivilegeName`| [RetrieveUserPrivilegeByPrivilegeName Function](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName)<br/>[RetrieveUserPrivilegeByPrivilegeNameRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest)|
-|`RetrieveUserSetOfPrivilegesByIds`|[RetrieveUserSetOfPrivilegesByIds Function](xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds)<br/>[RetrieveUserSetOfPrivilegesByIdsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByIdsRequest)|
-|`RetrieveUserSetOfPrivilegesByNames`|[RetrieveUserSetOfPrivilegesByNames Function](xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames)<br/>[RetrieveUserSetOfPrivilegesByNamesRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByNamesRequest)|
+|`RetrieveUserPrivilegeByPrivilegeId`<br/>Retrieves the list of privileges for a system user (user) from all direct roles associated with the system user and from all indirect roles associated with teams in which the system user is a member of based on the specified privilege ID.| [RetrieveUserPrivilegeByPrivilegeId Function](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId)<br/>[RetrieveUserPrivilegeByPrivilegeIdRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest)|
+|`RetrieveUserPrivilegeByPrivilegeName`<br/>Retrieves the list of privileges for a system user (user) from all direct roles associated with the system user and from all indirect roles associated with teams in which the system user is a member of based on the specified privilege name.| [RetrieveUserPrivilegeByPrivilegeName Function](xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName)<br/>[RetrieveUserPrivilegeByPrivilegeNameRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest)|
+|`RetrieveUserSetOfPrivilegesByIds`<br/>Retrieves the filtered privileges a system user (user) has through their roles in the specified business unit.|[RetrieveUserSetOfPrivilegesByIds Function](xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByIds)<br/>[RetrieveUserSetOfPrivilegesByIdsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByIdsRequest)|
+|`RetrieveUserSetOfPrivilegesByNames`<br/>Retrieves the filtered privileges a system user (user) has through his or her roles in the specified business unit.|[RetrieveUserSetOfPrivilegesByNames Function](xref:Microsoft.Dynamics.CRM.RetrieveUserSetOfPrivilegesByNames)<br/>[RetrieveUserSetOfPrivilegesByNamesRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveUserSetOfPrivilegesByNamesRequest)|
 
 ### Example: Check whether a user has a privilege
 
@@ -283,7 +283,7 @@ The following examples show the use of the `RetrieveUserPrivilegeByPrivilegeName
 
 #### [.NET SDK](#tab/sdk)
 
-The following `HasPrivilege` static method returns the [RolePrivilege](xref:Microsoft.Crm.Sdk.Messages.RolePrivilege) data for a given privilege name.
+The following `HasPrivilege` static method returns whether the user has the named privilege.
 
 ```csharp
 /// <summary>
