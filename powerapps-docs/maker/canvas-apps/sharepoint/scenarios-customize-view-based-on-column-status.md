@@ -103,7 +103,3 @@ Similarly, you can use different screens in your app based on the column value, 
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
-
-[!INCLUDE [preview-includes](../../../../shared/preview-includes/preview-banner.md)]
-
-[!INCLUDE [preview-includes](~/../shared-content/shared/preview-includes/preview-banner.md)]
