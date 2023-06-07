@@ -1,6 +1,6 @@
 ---
 title: "Retrieve table definitions by name or MetadataId (Microsoft Dataverse) | Microsoft Docs"
-description: "Microsoft Dataverse uses a metadata-driven architecture to provide the flexibility to create custom tables and additional system table columns."
+description: "Microsoft Dataverse uses a metadata-driven architecture to provide the flexibility to create custom tables and more system table columns."
 ms.date: 08/15/2022
 author: NHelgren
 ms.author: nhelgren
@@ -23,9 +23,9 @@ Your applications can adapt to configuration changes by querying the table and c
 
 ## Retrieve definition items by name
   
-All retrievable definition items have a `MetadataId` primary key that can be used to retrieve individual items. For those types of definition which have a defined alternate key, you can retrieve them by name.  
+All retrievable definition items have a `MetadataId` primary key that can be used to retrieve individual items. For definitions that have an alternate key, you can retrieve them by name.
   
-Retrieving definition items by name is generally easier because you probably already have some reference to the item name in your code. The following table lists the alternate key properties for retrieving such items by name.
+Retrieving definition items by name is easier because you probably already have some reference to the item name in your code. The following table lists the alternate key properties for retrieving such items by name.
   
 |Definition item|Alternate Key|Example|  
 |-------------------|-------------------|-------------|  
@@ -146,7 +146,7 @@ Because the `MetadataId` is the primary key for definition items, retrieving ind
   
 ### Example: Retrieve definition items by MetadataId  
 
-To achieve the same result as shown in [Example: Retrieve definition items by name](#bkmk_exampleByName), you will need to perform a series of query operations to get the `MetadataId` by filtering by the entity `LogicalName` and then by the attribute `LogicalName`.  
+To achieve the same result as shown in [Example: Retrieve definition items by name](#bkmk_exampleByName), you need to perform a series of query operations to get the `MetadataId` by filtering by the entity `LogicalName` and then by the attribute `LogicalName`.  
   
  **Request**
 

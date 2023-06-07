@@ -17,7 +17,7 @@ contributors:
 Multi-table lookup type columns allow a user to use a specific table that has
 multiple one-to-many (1:N) relationships to other tables in the environment. A single lookup
 type column can refer to multiple other tables. A lookup value submitted to the
-multi-table type column will be matched to a record in any of the related
+multi-table type column is matched to a record in any of the related
 tables. Multi-table lookups can be created with both local tables and virtual tables as referenced tables.
 
 Multi-table types are currently built into Microsoft Dataverse as static types like
@@ -30,11 +30,11 @@ power to define any other multi-table lookups they may need.
 
 ## Examples
 
-Let's say you are hosting media for users in a library. You have many different
+Let's say you're hosting media for users in a library. You have many different
 MediaObjects, many of them have the same name but are in different formats like
-"Books", "Audio", and "Video". Creating a multi-table lookup called "new_Media"
-that has 1:N relationships to "new_Books", "new_Audio", and "new_Video" will
-result in a "new_Media" lookup table that provides quick identifications of
+Books, Audio, and Video. Creating a multi-table lookup called `new_Media`
+that has 1:N relationships to `new_Books`, `new_Audio`, and `new_Video` 
+results in a `new_Media` lookup table that provides quick identifications of
 records stored in specific tables.
 
 ### new_Media lookup table
@@ -177,7 +177,7 @@ The response from the HTTP post is shown below containing the ID of the polymorp
     "AttributeId":"d378dd3e-42f4-4bd7-95c7-0ee546c7de40"
 ```
 
-## Use the multi-table lookup API's
+## Use the multi-table lookup APIs
 
 The following table lists the operations relevant for table and attribute definitions.
 
@@ -194,10 +194,10 @@ The following table lists the operations relevant for table and attribute data.
 
 | Operation<br/>(method) | Description | URL format |
 | --- | --- | --- |
-| Create<br/>(POST) | See the "new_checkouts" example below | [OrganizationUrl]/api/data/v9.2<br/>/\<entitysetName\> |
+| Create<br/>(POST) | See the `new_checkouts` example below | [OrganizationUrl]/api/data/v9.2<br/>/\<entitysetName\> |
 | Retrieve<br/>(GET) | Add the following header to get annotations:<p/>Content-Type: application/json<br/>Prefer: odata.include-annotations="*" | [OrganizationUrl]/api/data/v9.2<br/>/\<entitysetName\>(\<recordId\>) |
 
-Below is an example request that creates a new entityset with 2 rows.<p/>
+Below is an example request that creates a new entityset with two rows.<p/>
 
 ```http
 POST [OrganizationUrl]/api/data/v9.1/new_checkouts
