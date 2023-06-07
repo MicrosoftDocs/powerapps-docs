@@ -291,7 +291,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 
 ### Insert options
 
-The following example uses the [InsertOptionValue Action](xref:Microsoft.Dynamics.CRM.InsertOptionValue) to add a new option with the value `727000005` and label **Echo** to the local choice column created by [Create a choice column](create-update-entity-definitions-using-web-api.md#create-a-choice-column).
+The following example uses the [InsertOptionValue Action](xref:Microsoft.Dynamics.CRM.InsertOptionValue) to add a new option with the value `727000005` and label **Echo** to the local choice column created by [Create a choice column](create-update-column-definitions-using-web-api.md#create-a-choice-column).
 
 **Request**
 
