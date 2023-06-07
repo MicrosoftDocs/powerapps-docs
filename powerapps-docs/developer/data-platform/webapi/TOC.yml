@@ -82,7 +82,9 @@
   - name: Retrieve table definitions by name or MetadataId
     href: retrieve-metadata-name-metadataid.md
   - name: Create and update table definitions
-    href: create-update-entity-definitions-using-web-api.md 
+    href: create-update-entity-definitions-using-web-api.md
+  - name: Create and update column definitions
+    href: create-update-column-definitions-using-web-api.md
   - name: Create and update table relationships
     href: create-update-entity-relationships-using-web-api.md
   - name: Use multi-table lookup columns
