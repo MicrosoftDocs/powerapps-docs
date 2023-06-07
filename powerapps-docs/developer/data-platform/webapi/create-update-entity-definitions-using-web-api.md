@@ -1,6 +1,6 @@
 ---
-title: "Create and update table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
-description: "Learn about creating and updating table definitions using the Web API."
+title: "Create and update table definitions using the Web API"
+description: "Learn about creating and updating Dataverse table definitions using the Web API."
 ms.date: 06/07/2023
 author: NHelgren
 ms.author: nhelgren
@@ -14,7 +14,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can perform all the same operations on table definitions using the Web API that you can with the Organization service. This topic focuses on working with table definitions (metadata) using the Web API. To find details about the table definition properties, see [Customize table definitions](../customize-entity-metadata.md) and [EntityMetadata EntityType](xref:Microsoft.Dynamics.CRM.EntityMetadata).
+You can perform all the same operations on table definitions using the Web API that you can with the Organization service. This article focuses on working with table definitions (metadata) using the Web API. To find details about the table definition properties, see [Customize table definitions](../customize-entity-metadata.md) and [EntityMetadata EntityType](xref:Microsoft.Dynamics.CRM.EntityMetadata).
 
 <a name="bkmk_createEntities"></a>
 
@@ -23,7 +23,7 @@ You can perform all the same operations on table definitions using the Web API t
 
 ## Create table definitions
 
-To create a table definition, `POST` the JSON representation of the entity definition data to the `EntityDefinitions` entity set path. The entity must include the definition for the primary name attribute. You don't need to set values for all the properties. The items on this list except for Description are required, although setting a description is a recommended best practice. Property values you do not specify will be set to default values. To understand the default values, look at the example in the [Update table definitions](#bkmk_updateEntities) section. The example in this topic uses the following entity properties.  
+To create a table definition, `POST` the JSON representation of the entity definition data to the `EntityDefinitions` entity set path. The entity must include the definition for the primary name attribute. You don't need to set values for all the properties. The items on this list except for Description are required, although setting a description is a recommended best practice. Property values you don't specify are set to default values. To understand the default values, look at the example in the [Update table definitions](#bkmk_updateEntities) section. The example in this article uses the following entity properties.  
   
 |EntityMetadata property|Value|  
 |---------------------|-----------|  
@@ -168,9 +168,9 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c
 >  If you don't include a `MSCRM.MergeLabels` header, the default behavior is as if the value were `false` and any localized labels not included in your update will be lost.  
   
 When you update a table or column definition, you must use the  [PublishXml Action](xref:Microsoft.Dynamics.CRM.PublishXml) or 
-[PublishAllXml Action](xref:Microsoft.Dynamics.CRM.PublishAllXml) before the changes you make will be applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
+[PublishAllXml Action](xref:Microsoft.Dynamics.CRM.PublishAllXml) before the changes you make are applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
   
-Typically, you will retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the `DisplayName` changed to "Bank Business Name." It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
+Typically, you'll retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the `DisplayName` changed to "Bank Business Name." It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
 
 > [!NOTE]
 > Some of the examples below use the `MetadataId` primary key value. But you can also use the `LogicalName` alternate key to reference schema entities. More information: [Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)
@@ -488,21 +488,27 @@ OData-Version: 4.0
 
 You can create table columns (entity attributes) at the same time you create the table definition by including the JSON definition of the attributes in the `Attributes` array for the entity you post in addition to the string attribute that serves as the primary name attribute. If you want to add attributes to an entity that is already created, you can send a `POST` request including the JSON definition of them to the entity `Attributes` collection-valued navigation property.
 
+The following examples show how to create different kinds of columns
+
 - [Create a string column](#create-a-string-column)
-- [Create a Money column](#create-a-money-column)
+- [Create a money column](#create-a-money-column)
 - [Create a datetime column](#create-a-datetime-column)
-- [Create a Boolean column](#create-a-boolean-column)
+- [Create a boolean column](#create-a-boolean-column)
 - [Create a customer lookup column](#create-a-customer-lookup-column)
-- 
+- [Create a decimal column](#create-a-decimal-column)
+- [Create an integer column](#create-an-integer-column)
+- [Create a memo column](#create-a-memo-column)
+- [Create a choice column](#create-a-choice-column)
+- [Create a multi-select choice column](#create-a-multi-select-choice-column)
 
   
 <a name="bkmk_CreateString"></a>
 
 ### Create a string column
 
-The following example will use these properties to create a string attribute.  
+The following example uses these properties to create a string column.  
   
-|String attribute properties|Values|  
+|[StringAttributeMetadata](xref:Microsoft.Dynamics.CRM.StringAttributeMetadata) properties|Values|  
 |---------------------------------|------------|  
 |`SchemaName`|`new_BankName`|  
 |`DisplayName`|Bank Name|  
@@ -511,7 +517,7 @@ The following example will use these properties to create a string attribute.
 |`MaxLength`|100|  
 |`FormatName`|`Text`|  
   
-The following example creates a string attribute using the properties and adds it to the entity with the `MetadataId` value of `402fa40f-287c-e511-80d2-00155d2a68d2`.
+The following example creates a string column using the properties and adds it to the `sample_bankaccount` table.
 
 The URI for the attribute is returned in the response.
   
@@ -575,19 +581,19 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='
   
 <a name="bkmk_createMoney"></a>
 
-### Create a Money column
+### Create a money column
 
-The following example will use these properties to create a money attribute.  
+The following example uses these properties to create a money attribute.  
   
-|Money attribute properties|Values|  
+|[MoneyAttributeMetadata](xref:Microsoft.Dynamics.CRM.MoneyAttributeMetadata) properties|Values|  
 |--------------------------------|------------|  
 |`SchemaName`|`new_Balance`|  
 |`DisplayName`|Balance|  
 |`Description`|Enter the balance amount.|  
 |`RequiredLevel`|None|  
-|`PrecisionSource`|2 <br />**Note:**  For information on the valid values for PrecisionSource, see [MoneyType](../entity-attribute-metadata.md#money_type). The value 2 means that the level of decimal precision will match TransactionCurrency.CurrencyPrecision that is associated with the current record.|  
+|`PrecisionSource`|`2` <br />**Note:**  For information on the valid values for PrecisionSource, see [MoneyType](../entity-attribute-metadata.md#money_type). The value `2` means that the level of decimal precision matches [TransactionCurrency.CurrencyPrecision](/power-apps/developer/data-platform/reference/entities/transactioncurrency#BKMK_CurrencyPrecision) that is associated with the current record.|
   
-The following example creates a money attribute using the properties and adds it to the entity with the `MetadataId` value of `402fa40f-287c-e511-80d2-00155d2a68d2`. The URI for the attribute is returned in the response.  
+The following example creates a money attribute using the properties and adds it to the `sample_bankaccount` table. The URI for the attribute is returned in the response.  
   
  **Request**
 
@@ -647,9 +653,9 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='
 
 ### Create a datetime column
 
-The following example will use these properties to create a datetime attribute.  
+The following example uses these properties to create a datetime attribute.  
   
-|Datetime attribute properties|Values|  
+|[DateTimeAttributeMetadata](xref:Microsoft.Dynamics.CRM.DateTimeAttributeMetadata) properties|Values|  
 |-----------------------------------|------------|  
 |`SchemaName`|`new_Checkeddate`|  
 |`DisplayName`|`Date`|  
@@ -657,7 +663,7 @@ The following example will use these properties to create a datetime attribute.
 |`RequiredLevel`|`None`|  
 |`Format`|`DateOnly` **Note:**  For the valid options for this property, see [DateTimeFormat EnumType](xref:Microsoft.Dynamics.CRM.DateTimeFormat)|  
   
-The following example creates a datetime attribute using the properties and adds it to the entity with the `MetadataId` value of `402fa40f-287c-e511-80d2-00155d2a68d2`.
+The following example creates a datetime attribute using the properties and adds it to the `sample_bankaccount` table.
  The URI for the attribute is returned in the response.  
   
  **Request**
@@ -714,11 +720,11 @@ OData-Version: 4.0
 OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(fe1bef16-287c-e511-80d2-00155d2a68d2)  
 ```  
 
-### Create a Boolean column
+### Create a boolean column
 
-The following example will use these properties to create a boolean attribute.  
+The following example uses these properties to create a boolean column.  
   
-|Boolean attribute properties|Values|  
+|[BooleanAttributeMetadata](xref:Microsoft.Dynamics.CRM.BooleanAttributeMetadata) properties|Values|  
 |-----------------------------------|------------|  
 |`SchemaName`|`new_Boolean`|  
 |`DisplayName`|Sample Boolean|  
@@ -824,11 +830,11 @@ Unlike other attributes, a customer lookup attribute is created using the [Creat
 
 The parameters for this action require the definition of the lookup attribute and a pair of one-to-many relationships. A customer lookup attribute has two one-to-many relationships: one to the account entity and the other one to contact entity.  
   
- The following example will use these properties to create a customer lookup attribute.  
+ The following example uses these properties to create a customer lookup attribute.  
   
 |Customer lookup attribute properties|Values|  
 |------------------------------------------|------------|  
-|`SchemaName`|new_CustomerId|  
+|`SchemaName`|`new_CustomerId`|  
 |`DisplayName`|Customer|  
 |`Description`|Sample Customer Lookup Attribute|  
   
@@ -908,9 +914,23 @@ OData-Version: 4.0
   
 ```
 
-### Create decimal column
+### Create a decimal column
 
-//TODO
+The following example uses these properties to create a decimal column. 
+  
+|[DecimalAttributeMetadata](xref:Microsoft.Dynamics.CRM.DecimalAttributeMetadata) properties|Values|  
+|---------------------------------|------------|  
+|`SchemaName`|`sample_Decimal`|  
+|`DisplayName`|Sample Decimal|  
+|`Description`|Decimal Attribute|  
+|`RequiredLevel`|`None`|  
+|`MaxValue`|100.0|  
+|`MinValue`|0.0|
+|`Precision`|1|
+  
+The following example creates a decimal attribute using the properties and adds it to the `sample_bankaccount` table.
+
+The URI for the attribute is returned in the response.
 
 **Request**
 
@@ -988,7 +1008,21 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 
 ### Create an integer column
 
-//TODO
+The following example uses these properties to create an integer column. 
+  
+|[IntegerAttributeMetadata](xref:Microsoft.Dynamics.CRM.IntegerAttributeMetadata) properties|Values|  
+|---------------------------------|------------|  
+|`SchemaName`|`sample_Integer`|  
+|`DisplayName`|Sample Integer|  
+|`Description`|Integer Attribute|  
+|`RequiredLevel`|`None`|  
+|`MaxValue`|100|  
+|`MinValue`|0|
+|`Format`|None|
+  
+The following example creates an integer column using the properties and adds it to the `sample_bankaccount` table.
+
+The URI for the column is returned in the response.
 
 **Request**
 
@@ -1065,7 +1099,20 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 
 ### Create a memo column
 
-//TODO
+The following example uses these properties to create a memo column.  
+  
+|[MemoAttributeMetadata](xref:Microsoft.Dynamics.CRM.MemoAttributeMetadata) properties|Values|  
+|---------------------------------|------------|  
+|`SchemaName`|`sample_Memo`|  
+|`DisplayName`|Sample Memo|  
+|`Description`|Memo Attribute|  
+|`RequiredLevel`|`None`|  
+|`MaxLength`|500|  
+|`Format`|TextArea|  
+  
+The following example creates a memo column using the properties and adds it to the `sample_bankaccount` table.
+
+The URI for the attribute is returned in the response.
 
 **Request**
 
@@ -1142,7 +1189,22 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 
 ### Create a choice column
 
-//TODO
+The following example uses these properties to create a local choice column.  
+  
+|[PicklistAttributeMetadata](xref:Microsoft.Dynamics.CRM.PicklistAttributeMetadata) properties|Values|  
+|---------------------------------|------------|  
+|`SchemaName`|`sample_Choice`|  
+|`DisplayName`|Sample Choice|  
+|`Description`|Choice Attribute|  
+|`RequiredLevel`|`None`|  
+|`OptionSet`|value:`727000000`, label:**Bravo**<br />value:`727000001`, label:**Delta**<br />value:`727000002`, label:**Alpha**<br />value:`727000003`, label:**Charlie**<br />value:`727000004`, label:**Foxtrot**<br />|
+  
+The following example creates a local column using the properties and adds it to the `sample_bankaccount` table.
+
+The URI for the attribute is returned in the response.
+
+> [!NOTE]
+> For an example showing how to create a choice column with a global option set, see [Create a choice column using a global option set](create-update-optionsets.md#create-a-choice-column-using-a-global-option-set)
 
 **Request**
 
@@ -1323,7 +1385,19 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 
 ### Create a multi-select choice column
 
-//TODO
+The following example uses these properties to create a local multi-select choice column.
+  
+|[MultiSelectPicklistAttributeMetadata](xref:Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata) properties|Values|  
+|---------------------------------|------------|  
+|`SchemaName`|`sample_Choice`|  
+|`DisplayName`|Sample Choice|  
+|`Description`|Choice Attribute|  
+|`RequiredLevel`|`None`|  
+|`OptionSet`|value:`727000000`, label:**Appetizer**<br />value:`727000001`, label:**Entree**<br />value:`727000002`, label:**Dessert**|
+  
+The following example creates a local multi-select choice column using the properties and adds it to the `sample_bankaccount` table.
+
+The URI for the attribute is returned in the response.
 
 **Request**
 
@@ -1467,7 +1541,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
  
 ## Update a column
 
-As mentioned in [Update table definitions](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities), data model entities are updated using the HTTP `PUT` method with the entire JSON definition of the current item. This applies to entity attributes as well as entities. Just like with entities, you have the option to overwrite labels using the `MSCRM.MergeLabels` header with the value set to `false`, and you must publish customizations before they are active in the system.  
+As mentioned in [Update table definitions](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities), data model entities are updated using the HTTP `PUT` method with the entire JSON definition of the current item. This pattern applies to entity attributes and entities. Just like with entities, you can overwrite labels using the `MSCRM.MergeLabels` header with the value set to `false`, and you must publish customizations before they're active in the system.  
 
 Using the boolean attribute created in [Create a Boolean column](#create-a-boolean-column) above, we must first retrieve the entire attribute.
 
@@ -1614,14 +1688,14 @@ OData-Version: 4.0
 
 Then, change the properties you want to change.
 
-|Boolean attribute properties|Old Values|New Values|
+|[BooleanAttributeMetadata](xref:Microsoft.Dynamics.CRM.BooleanAttributeMetadata) properties|Old Values|New Values|
 |-----------------------------------|------------|------------|
 |`DisplayName`|Sample Boolean|Sample Boolean Updated|
 |`Description`|Boolean Attribute|Boolean Attribute Updated|
 |`RequiredLevel`|`None`|`ApplicationRequired`|
 
 > [!NOTE]
-> If you want to update the options, you must send a different request. See [Update Options](#update-options).
+> If you want to update the options, you must send a different request. More information: [Update options](create-update-optionsets.md#update-options).
 
 Now you can send the `PUT` request with the modified properties:
 
