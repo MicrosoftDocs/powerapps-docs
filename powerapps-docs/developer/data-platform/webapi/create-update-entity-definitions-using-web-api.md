@@ -1,7 +1,7 @@
 ---
 title: "Create and update table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating table definitions using the Web API."
-ms.date: 08/15/2022
+ms.date: 06/07/2023
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly
@@ -14,7 +14,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can perform all the same operations on table definitions using the Web API that you can with the Organization service. This topic focuses on working with table definitions (metadata) using the Web API. To find details about the table definition properties, see [Customize table definitions](../customize-entity-metadata.md) and <xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType">.  
+You can perform all the same operations on table definitions using the Web API that you can with the Organization service. This topic focuses on working with table definitions (metadata) using the Web API. To find details about the table definition properties, see [Customize table definitions](../customize-entity-metadata.md) and [EntityMetadata EntityType](xref:Microsoft.Dynamics.CRM.EntityMetadata).
 
 <a name="bkmk_createEntities"></a>
 
@@ -31,18 +31,18 @@ To create a table definition, `POST` the JSON representation of the entity defin
 |`DisplayName`|Bank Account|  
 |`DisplayCollectionName`|Bank Accounts|  
 |`Description`|An entity to store information about customer bank accounts.|  
-|`OwnershipType`|`UserOwned` **Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.OwnershipTypes?text=OwnershipTypes EnumType">.|  
+|`OwnershipType`|`UserOwned` **Note:**  For the values you can set here, see [OwnershipTypes EnumType](xref:Microsoft.Dynamics.CRM.OwnershipTypes).|  
 |`IsActivity`|false|  
 |`HasActivities`|false|  
 |`HasNotes`|false|  
   
  In addition to the properties listed previously, the `EntityMetadataAttributes` property must contain an array that includes one 
- <xref href="Microsoft.Dynamics.CRM.StringAttributeMetadata?text=StringAttributeMetadata EntityType"> to represent the primary name attribute for the entity. The attribute `IsPrimaryName` property must be true. The following table describes the properties set in the example.  
+ [StringAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.StringAttributeMetadata) to represent the primary name attribute for the entity. The attribute `IsPrimaryName` property must be true. The following table describes the properties set in the example.  
   
 |Primary Attribute property|Value|  
 |--------------------------------|-----------|  
 |`SchemaName`|`new_AccountName`|  
-|`RequiredLevel`|None <br />**Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty?text=AttributeRequiredLevelManagedProperty ComplexType"> and <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevel?text=AttributeRequiredLevel EnumType">.|  
+|`RequiredLevel`|None <br />**Note:**  For the values you can set here, see [AttributeRequiredLevelManagedProperty ComplexType](xref:Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty) and [AttributeRequiredLevel EnumType](xref:Microsoft.Dynamics.CRM.AttributeRequiredLevel).|  
 |`MaxLength`|100|  
 |`FormatName`|`Text` <br />**Note:**  The primary name attribute must use Text format. For format options available for other string attributes, see [String formats](../entity-attribute-metadata.md#string-formats).|  
 |`DisplayName`|Account Name|  
@@ -50,7 +50,7 @@ To create a table definition, `POST` the JSON representation of the entity defin
 |`IsPrimaryName`|true|  
   
 > [!NOTE]
->  When you create or update labels using the <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType">, you only need to set the `LocalizedLabels` property. The `UserLocalizedLabel` value returned is based on the user's language preference and is read-only.  
+>  When you create or update labels using the [Label ComplexType](xref:Microsoft.Dynamics.CRM.Label), you only need to set the `LocalizedLabels` property. The `UserLocalizedLabel` value returned is based on the user's language preference and is read-only.  
   
 The following example shows the creation of a custom table with the properties set. The language is English using the locale ID (LCID) of 1033. [!INCLUDE [lcid](../../../includes/lcid.md)]  
   
@@ -158,7 +158,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c
   
 > [!IMPORTANT]
 >  You can't use the `PATCH` method to update data model entities. The table definitions have parity with the Organization service 
->  <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> that replaces the entity definition with the one included. 
+>  [UpdateEntityRequest Class](xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest) that replaces the entity definition with the one included.
 >  Therefore, you must use the `PUT` method when updating data model entities and be careful to include all the existing properties that you don't intend to change.
 >  You can't update individual properties.  
   
@@ -167,8 +167,8 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c
 > [!IMPORTANT]
 >  If you don't include a `MSCRM.MergeLabels` header, the default behavior is as if the value were `false` and any localized labels not included in your update will be lost.  
   
-When you update a table or column definition, you must use the  <xref href="Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action"> or 
-<xref href="Microsoft.Dynamics.CRM.PublishAllXml?text=PublishAllXml Action"> before the changes you make will be applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
+When you update a table or column definition, you must use the  [PublishXml Action](xref:Microsoft.Dynamics.CRM.PublishXml) or 
+[PublishAllXml Action](xref:Microsoft.Dynamics.CRM.PublishAllXml) before the changes you make will be applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
   
 Typically, you will retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the `DisplayName` changed to "Bank Business Name." It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
 
@@ -486,7 +486,15 @@ OData-Version: 4.0
 
 ## Create columns
 
-You can create table columns (entity attributes) at the same time you create the table definition by including the JSON definition of the attributes in the `Attributes` array for the entity you post in addition to the string attribute that serves as the primary name attribute. If you want to add attributes to an entity that is already created, you can send a POST request including the JSON definition of them to the entity `Attributes` collection-valued navigation property.  
+You can create table columns (entity attributes) at the same time you create the table definition by including the JSON definition of the attributes in the `Attributes` array for the entity you post in addition to the string attribute that serves as the primary name attribute. If you want to add attributes to an entity that is already created, you can send a `POST` request including the JSON definition of them to the entity `Attributes` collection-valued navigation property.
+
+- [Create a string column](#create-a-string-column)
+- [Create a Money column](#create-a-money-column)
+- [Create a datetime column](#create-a-datetime-column)
+- [Create a Boolean column](#create-a-boolean-column)
+- [Create a customer lookup column](#create-a-customer-lookup-column)
+- 
+
   
 <a name="bkmk_CreateString"></a>
 
@@ -505,12 +513,12 @@ The following example will use these properties to create a string attribute.
   
 The following example creates a string attribute using the properties and adds it to the entity with the `MetadataId` value of `402fa40f-287c-e511-80d2-00155d2a68d2`.
 
-The URI for the attribute is returned in the response.  
+The URI for the attribute is returned in the response.
   
  **Request**
 
 ```http 
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1
+POST [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -562,7 +570,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
 ```  
   
 <a name="bkmk_createMoney"></a>
@@ -584,7 +592,7 @@ The following example creates a money attribute using the properties and adds it
  **Request**
 
 ```http   
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1
+POST [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -632,7 +640,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f11bef16-287c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f11bef16-287c-e511-80d2-00155d2a68d2)  
 ```  
   
 <a name="bkmk_createDateTime"></a>
@@ -647,7 +655,7 @@ The following example will use these properties to create a datetime attribute.
 |`DisplayName`|`Date`|  
 |`Description`|The date the account balance was last confirmed.|  
 |`RequiredLevel`|`None`|  
-|`Format`|`DateOnly` **Note:**  For the valid options for this property, see <xref href="Microsoft.Dynamics.CRM.DateTimeFormat?text=DateTimeFormat EnumType">.|  
+|`Format`|`DateOnly` **Note:**  For the valid options for this property, see [DateTimeFormat EnumType](xref:Microsoft.Dynamics.CRM.DateTimeFormat)|  
   
 The following example creates a datetime attribute using the properties and adds it to the entity with the `MetadataId` value of `402fa40f-287c-e511-80d2-00155d2a68d2`.
  The URI for the attribute is returned in the response.  
@@ -655,7 +663,7 @@ The following example creates a datetime attribute using the properties and adds
  **Request**
 
 ```http 
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes HTTP/1.1
+POST [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -703,7 +711,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(fe1bef16-287c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(fe1bef16-287c-e511-80d2-00155d2a68d2)  
 ```  
 
 ### Create a Boolean column
@@ -812,7 +820,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 
 ### Create a customer lookup column
 
-Unlike other attributes, a customer lookup attribute is created using the <xref href="Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action">. 
+Unlike other attributes, a customer lookup attribute is created using the [CreateCustomerRelationships Action](xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships).
 
 The parameters for this action require the definition of the lookup attribute and a pair of one-to-many relationships. A customer lookup attribute has two one-to-many relationships: one to the account entity and the other one to contact entity.  
   
@@ -824,7 +832,7 @@ The parameters for this action require the definition of the lookup attribute an
 |`DisplayName`|Customer|  
 |`Description`|Sample Customer Lookup Attribute|  
   
-The example creates a customer lookup attribute, `new_CustomerId`, and adds it to the custom entity:  `new_bankaccount`. The response is a <xref href="Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse?text=CreateCustomerRelationshipsResponse ComplexType">.  
+The example creates a customer lookup attribute, `new_CustomerId`, and adds it to the custom entity:  `new_bankaccount`. The response is a [CreateCustomerRelationshipsResponse ComplexType"](xref:Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse).  
   
  **Request**
 
@@ -899,6 +907,561 @@ OData-Version: 4.0
 }  
   
 ```
+
+### Create decimal column
+
+//TODO
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
+MSCRM.SolutionUniqueName: examplesolution
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 1370
+
+{
+  "@odata.type": "Microsoft.Dynamics.CRM.DecimalAttributeMetadata",
+  "AttributeType": "Decimal",
+  "AttributeTypeName": {
+    "Value": "DecimalType"
+  },
+  "MaxValue": 100.0,
+  "MinValue": 0.0,
+  "Precision": 1,
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Decimal Attribute",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "Decimal Attribute",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Sample Decimal",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "Sample Decimal",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "RequiredLevel": {
+    "Value": "None",
+    "CanBeChanged": false,
+    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+  },
+  "SchemaName": "sample_Decimal"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(dba9c0df-4c05-ee11-8f6e-000d3a993550)
+```
+
+
+
+### Create an integer column
+
+//TODO
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
+MSCRM.SolutionUniqueName: examplesolution
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 1392
+
+{
+  "@odata.type": "Microsoft.Dynamics.CRM.IntegerAttributeMetadata",
+  "AttributeType": "Integer",
+  "AttributeTypeName": {
+    "Value": "IntegerType"
+  },
+  "MaxValue": 100,
+  "MinValue": 0,
+  "Format": "None",
+  "SourceTypeMask": 0,
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Integer Attribute",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "Integer Attribute",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Sample Integer",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "Sample Integer",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "RequiredLevel": {
+    "Value": "None",
+    "CanBeChanged": false,
+    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+  },
+  "SchemaName": "sample_Integer"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(17aac0df-4c05-ee11-8f6e-000d3a993550)
+```
+
+### Create a memo column
+
+//TODO
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
+MSCRM.SolutionUniqueName: examplesolution
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 1384
+
+{
+  "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata",
+  "AttributeType": "Memo",
+  "AttributeTypeName": {
+    "Value": "MemoType"
+  },
+  "Format": "TextArea",
+  "ImeMode": "Disabled",
+  "MaxLength": 500,
+  "IsLocalizable": false,
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Memo Attribute",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "Memo Attribute",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Sample Memo",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "Sample Memo",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "RequiredLevel": {
+    "Value": "None",
+    "CanBeChanged": false,
+    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+  },
+  "SchemaName": "sample_Memo"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(b12d3cee-4c05-ee11-8f6e-000d3a993550)
+```
+
+### Create a choice column
+
+//TODO
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
+MSCRM.SolutionUniqueName: examplesolution
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 4524
+
+{
+  "@odata.type": "Microsoft.Dynamics.CRM.PicklistAttributeMetadata",
+  "AttributeType": "Picklist",
+  "AttributeTypeName": {
+    "Value": "PicklistType"
+  },
+  "SourceTypeMask": 0,
+  "OptionSet": {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Options": [
+      {
+        "Value": 727000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Bravo",
+              "LanguageCode": 1033,
+              "IsManaged": false
+            }
+          ],
+          "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Bravo",
+            "LanguageCode": 1033,
+            "IsManaged": false
+          }
+        }
+      },
+      {
+        "Value": 727000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Delta",
+              "LanguageCode": 1033,
+              "IsManaged": false
+            }
+          ],
+          "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Delta",
+            "LanguageCode": 1033,
+            "IsManaged": false
+          }
+        }
+      },
+      {
+        "Value": 727000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Alpha",
+              "LanguageCode": 1033,
+              "IsManaged": false
+            }
+          ],
+          "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Alpha",
+            "LanguageCode": 1033,
+            "IsManaged": false
+          }
+        }
+      },
+      {
+        "Value": 727000003,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Charlie",
+              "LanguageCode": 1033,
+              "IsManaged": false
+            }
+          ],
+          "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Charlie",
+            "LanguageCode": 1033,
+            "IsManaged": false
+          }
+        }
+      },
+      {
+        "Value": 727000004,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Foxtrot",
+              "LanguageCode": 1033,
+              "IsManaged": false
+            }
+          ],
+          "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Foxtrot",
+            "LanguageCode": 1033,
+            "IsManaged": false
+          }
+        }
+      }
+    ],
+    "IsGlobal": false,
+    "OptionSetType": "Picklist"
+  },
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Choice Attribute",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "Choice Attribute",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Sample Choice",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "Sample Choice",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "RequiredLevel": {
+    "Value": "None",
+    "CanBeChanged": false,
+    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+  },
+  "SchemaName": "sample_Choice"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(eed205fb-4c05-ee11-8f6e-000d3a993550)
+```
+
+### Create a multi-select choice column
+
+//TODO
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
+MSCRM.SolutionUniqueName: examplesolution
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 3404
+
+{
+  "@odata.type": "Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata",
+  "AttributeType": "Virtual",
+  "AttributeTypeName": {
+    "Value": "MultiSelectPicklistType"
+  },
+  "SourceTypeMask": 0,
+  "OptionSet": {
+    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+    "Options": [
+      {
+        "Value": 727000000,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Appetizer",
+              "LanguageCode": 1033,
+              "IsManaged": false
+            }
+          ],
+          "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Appetizer",
+            "LanguageCode": 1033,
+            "IsManaged": false
+          }
+        }
+      },
+      {
+        "Value": 727000001,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Entree",
+              "LanguageCode": 1033,
+              "IsManaged": false
+            }
+          ],
+          "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Entree",
+            "LanguageCode": 1033,
+            "IsManaged": false
+          }
+        }
+      },
+      {
+        "Value": 727000002,
+        "Label": {
+          "@odata.type": "Microsoft.Dynamics.CRM.Label",
+          "LocalizedLabels": [
+            {
+              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+              "Label": "Dessert",
+              "LanguageCode": 1033,
+              "IsManaged": false
+            }
+          ],
+          "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Dessert",
+            "LanguageCode": 1033,
+            "IsManaged": false
+          }
+        }
+      }
+    ],
+    "IsGlobal": false,
+    "OptionSetType": "Picklist"
+  },
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "MultiSelect Choice Attribute",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "MultiSelect Choice Attribute",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Sample MultiSelect Choice",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "Sample MultiSelect Choice",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "RequiredLevel": {
+    "Value": "None",
+    "CanBeChanged": false,
+    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+  },
+  "SchemaName": "sample_MultiSelectChoice"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(afd63201-4d05-ee11-8f6e-000d3a993550)
+```
+
   
 <a name="bkmk_updateAttribute"></a>
  
@@ -1207,52 +1770,6 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes(LogicalName='new_boolean')
 ```
 
-## Update Options
-
-To update individual options you must use the <xref:Microsoft.Dynamics.CRM.UpdateOptionValue?text=UpdateOptionValue Action>. The following example updates the `TrueOption` from the Boolean column example in [Create a Boolean column](#create-a-boolean-column) and changes the label so that it is `Up` rather than `True`. Because this is a 'local' option set, it uses `AttributeLogicalName` and `EntityLogicalName`. For a global option set, use the `OptionSetName` parameter instead.
-
-**Request**
-
-```http
-POST [Organization Uri]/api/data/v9.2/UpdateOptionValue HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-
-{
-  "AttributeLogicalName": "new_boolean",
-  "EntityLogicalName": "new_bankaccount",
-  "Value": 1,
-  "Label": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Up",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Up",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "MergeLabels": true
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-```
-
-  
 ### See also
 
 [Use the Web API with Microsoft Dataverse metadata](use-web-api-metadata.md)<br />
