@@ -686,8 +686,6 @@
           href: ./canvas-apps/show-current-user.md
         - name: Connect lists using lookups
           href: ./canvas-apps/sharepoint-lookup-fields.md
-        - name: Formula repair in canvas apps (preview)
-          href: common/formula-repair.md
         - name: Working with flows
           items:
           - name: Use Power Automate pane 
@@ -1386,8 +1384,6 @@
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
-          - name: Formula repair in custom pages (preview)
-            href: common/formula-repair.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md 
       - name: Work with views
@@ -1947,7 +1943,7 @@
         href: ./data-platform/setup-virtual-table-relationships.md
       - name: Virtual tables known issues and troubleshooting 
         href: ./data-platform/limits-tshoot-virtual-tables.md
-    - name: Create and edit elastic tables
+    - name: Create and edit elastic tables (preview)
       href: ./data-platform/create-edit-elastic-tables.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
@@ -2491,6 +2487,8 @@
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
+  - name: Solution templates for Power Platform (preview)
+    href: /power-platform/solution-templates/overview
   - name: Crisis Communication
     href: ./canvas-apps/sample-crisis-communication-app.md
   - name: Hospital Emergency Response

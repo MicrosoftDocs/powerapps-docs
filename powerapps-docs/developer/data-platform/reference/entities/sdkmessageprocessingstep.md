@@ -1,7 +1,7 @@
 ---
 title: "SdkMessageProcessingStep table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SdkMessageProcessingStep table/entity."
-ms.date: 05/23/2023
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -23,12 +23,12 @@ Stage in the execution pipeline that a plug-in is to execute.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST /sdkmessageprocessingsteps<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET /sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /sdkmessageprocessingsteps<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH /sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /sdkmessageprocessingsteps(*sdkmessageprocessingstepid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -1132,8 +1132,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep](#BKMK_sdkmessageprocessingstepsecureconfigid_sdkmessageprocessingstep)
 - [createdby_sdkmessageprocessingstep](#BKMK_createdby_sdkmessageprocessingstep)
 - [plugintypeid_sdkmessageprocessingstep](#BKMK_plugintypeid_sdkmessageprocessingstep)
-- [powerfxrule_sdkmessageprocessingstep](#BKMK_powerfxrule_sdkmessageprocessingstep)
 - [fxexpression_sdkmessageprocessingstep](#BKMK_fxexpression_sdkmessageprocessingstep)
+- [powerfxrule_sdkmessageprocessingstep](#BKMK_powerfxrule_sdkmessageprocessingstep)
 
 
 ### <a name="BKMK_plugintype_sdkmessageprocessingstep"></a> plugintype_sdkmessageprocessingstep
@@ -1184,17 +1184,17 @@ See the [createdby_sdkmessageprocessingstep](systemuser.md#BKMK_createdby_sdkmes
 
 See the [plugintypeid_sdkmessageprocessingstep](plugintype.md#BKMK_plugintypeid_sdkmessageprocessingstep) one-to-many relationship for the [plugintype](plugintype.md) table/entity.
 
-### <a name="BKMK_powerfxrule_sdkmessageprocessingstep"></a> powerfxrule_sdkmessageprocessingstep
-
-**Added by**: msft_PowerfxRuleSolution Solution
-
-See the [powerfxrule_sdkmessageprocessingstep](powerfxrule.md#BKMK_powerfxrule_sdkmessageprocessingstep) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
-
 ### <a name="BKMK_fxexpression_sdkmessageprocessingstep"></a> fxexpression_sdkmessageprocessingstep
 
 **Added by**: msft_PowerfxRuleSolution Solution
 
 See the [fxexpression_sdkmessageprocessingstep](fxexpression.md#BKMK_fxexpression_sdkmessageprocessingstep) one-to-many relationship for the [fxexpression](fxexpression.md) table/entity.
+
+### <a name="BKMK_powerfxrule_sdkmessageprocessingstep"></a> powerfxrule_sdkmessageprocessingstep
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [powerfxrule_sdkmessageprocessingstep](powerfxrule.md#BKMK_powerfxrule_sdkmessageprocessingstep) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
 
 ### See also
 

@@ -1,7 +1,7 @@
 ---
 title: "Email table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Email table/entity."
-ms.date: 05/23/2023
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -23,20 +23,20 @@ Activity that is delivered using email protocols.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.2/emails(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Assign|PATCH /emails(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |BackgroundSendEmail|<xref:Microsoft.Dynamics.CRM.BackgroundSendEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest>|
 |CheckIncomingEmail|<xref:Microsoft.Dynamics.CRM.CheckIncomingEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.CheckIncomingEmailRequest>|
 |CheckPromoteEmail|<xref:Microsoft.Dynamics.CRM.CheckPromoteEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.CheckPromoteEmailRequest>|
-|Create|POST [*org URI*]/api/data/v9.2/emails<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/emails(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Create|POST /emails<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /emails(*activityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |DeliverImmediatePromoteEmail|<xref:Microsoft.Dynamics.CRM.DeliverImmediatePromoteEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeliverImmediatePromoteEmailRequest>|
 |DeliverIncomingEmail|<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeliverIncomingEmailRequest>|
 |DeliverPromoteEmail|<xref:Microsoft.Dynamics.CRM.DeliverPromoteEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.DeliverPromoteEmailRequest>|
 |GetTrackingTokenEmail|<xref:Microsoft.Dynamics.CRM.GetTrackingTokenEmail?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GetTrackingTokenEmailRequest>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/emails(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/emails<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET /emails(*activityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /emails<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
@@ -44,8 +44,8 @@ Activity that is delivered using email protocols.
 |SendEmailFromTemplate|<xref:Microsoft.Dynamics.CRM.SendEmailFromTemplate?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SendEmailFromTemplateRequest>|
 |SendFax|<xref:Microsoft.Dynamics.CRM.SendFax?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SendFaxRequest>|
 |SendTemplate|<xref:Microsoft.Dynamics.CRM.SendTemplate?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.SendTemplateRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.2/emails(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/emails(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH /emails(*activityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /emails(*activityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
