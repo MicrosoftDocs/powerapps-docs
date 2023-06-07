@@ -230,6 +230,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Document](controls/control-pdf-viewer.md)** – The URL, enclosed in double-quotation marks, of a PDF file.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
+**[Drop shadow](controls/properties-color-border.md)** - Adds shadow effects around the control.  Applies to the **[Horizontal container ](controls/control-horizontal-container.md)** and **[Vertical container ](controls/control-vertical-container.md)** control.
+
+- 
 **[Duration](controls/control-timer.md)** – How long a timer runs.  Applies to the **[Timer](controls/control-timer.md)** control.
 
 ### E

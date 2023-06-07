@@ -33,6 +33,8 @@ Horizontal container control determines the position of the child components so 
 
 **[Color](properties-color-border.md)** - The color of the container control.
 
+**[Drop shadow](properties-color-border.md)** - Adds shadow effects around the control.
+
 **[Fill](properties-color-border.md)** – The background color of a control.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
