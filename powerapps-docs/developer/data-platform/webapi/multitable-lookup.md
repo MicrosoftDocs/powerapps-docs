@@ -81,7 +81,7 @@ lookup.
 Shown below is an HTTP post for a polymorphic lookup attribute. 
 
 ```http
-POST [Organization URI]/api/data/v9.0/CreatePolymorphicLookupAttribute HTTP/1.1 
+POST [Organization URI]/api/data/v9.2/CreatePolymorphicLookupAttribute HTTP/1.1 
 
 Accept: application/json 
 Content-Type: application/json; charset=utf-8 
@@ -183,19 +183,19 @@ The following table lists the operations relevant for table and attribute defini
 
 | Operation<br/>(method) | Description | URL format |
 | --- | --- | --- |
-| Create<br/>(POST) | New API | [OrganizationUrl]/api/data/v9.0<br/>/CreatePolymorphicLookupAttribute |
-| Retrieve attribute<br/>(GET) | Existing API | [OrganizationUrl]/api/data/v9.0<br/>/EntityDefinitions(\<EntityId\>)/Attributes(\<AttributeId\>) |
-| Retrieve relationship<br/>(GET) | Existing API | [OrganizationUrl]/api/data/v9.0<br/>/RelationshipDefinitions(\<RelationshipId\>) |
-| Add relationship<br/>(POST) | Adds a relationship<br/>to an existing<br/>polymorphic lookup<br/>attribute | [OrganizationUrl]/api/data/v9.0<br/>/RelationshipDefinitions |
-| Remove relationship<br/>(DELETE) | Existing API | [OrganizationUrl]/api/data/v9.0<br/>/RelationshipDefinitions(\<RelationshipId\>) |
-| Remove attribute<br/>(DELETE) | Existing API | [OrganizationUrl]/api/data/v9.0<br/>/EntityDefinitions(\<EntityId\>)/Attributes(\<AttributeId\>) |
+| Create<br/>(POST) | New API | [OrganizationUrl]/api/data/v9.2<br/>/CreatePolymorphicLookupAttribute |
+| Retrieve attribute<br/>(GET) | Existing API | [OrganizationUrl]/api/data/v9.2<br/>/EntityDefinitions(\<EntityId\>)/Attributes(\<AttributeId\>) |
+| Retrieve relationship<br/>(GET) | Existing API | [OrganizationUrl]/api/data/v9.2<br/>/RelationshipDefinitions(\<RelationshipId\>) |
+| Add relationship<br/>(POST) | Adds a relationship<br/>to an existing<br/>polymorphic lookup<br/>attribute | [OrganizationUrl]/api/data/v9.2<br/>/RelationshipDefinitions |
+| Remove relationship<br/>(DELETE) | Existing API | [OrganizationUrl]/api/data/v9.2<br/>/RelationshipDefinitions(\<RelationshipId\>) |
+| Remove attribute<br/>(DELETE) | Existing API | [OrganizationUrl]/api/data/v9.2<br/>/EntityDefinitions(\<EntityId\>)/Attributes(\<AttributeId\>) |
 
 The following table lists the operations relevant for table and attribute data.
 
 | Operation<br/>(method) | Description | URL format |
 | --- | --- | --- |
-| Create<br/>(POST) | See the "new_checkouts" example below | [OrganizationUrl]/api/data/v9.0<br/>/\<entitysetName\> |
-| Retrieve<br/>(GET) | Add the following header to get annotations:<p/>Content-Type: application/json<br/>Prefer: odata.include-annotations="*" | [OrganizationUrl]/api/data/v9.0<br/>/\<entitysetName\>(\<recordId\>) |
+| Create<br/>(POST) | See the "new_checkouts" example below | [OrganizationUrl]/api/data/v9.2<br/>/\<entitysetName\> |
+| Retrieve<br/>(GET) | Add the following header to get annotations:<p/>Content-Type: application/json<br/>Prefer: odata.include-annotations="*" | [OrganizationUrl]/api/data/v9.2<br/>/\<entitysetName\>(\<recordId\>) |
 
 Below is an example request that creates a new entityset with 2 rows.<p/>
 
@@ -218,7 +218,7 @@ POST [OrganizationUrl]/api/data/v9.1/new_checkouts
 ### Create polymorphic lookup (example payload)
 
 ```http
-POST [OrganizationUrl]/api/data/v9.0/CreatePolymorphicLookupAttribute
+POST [OrganizationUrl]/api/data/v9.2/CreatePolymorphicLookupAttribute
 ```
 
 ```rest
@@ -292,7 +292,7 @@ POST [OrganizationUrl]/api/data/v9.0/CreatePolymorphicLookupAttribute
 ### Add relationship to existing polymorphic lookup (example payload)
 
 ```http
-POST [OrganizationUrl]/api/data/v9.0/RelationshipDefinitions
+POST [OrganizationUrl]/api/data/v9.2/RelationshipDefinitions
 ```
 
 ```rest

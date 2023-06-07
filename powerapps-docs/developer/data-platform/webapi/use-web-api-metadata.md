@@ -20,10 +20,10 @@ You can perform any of the table and column definition (metadata) operations wit
   
 |Entity Set Path|Description|  
 |---------------------|-----------------|  
-|*[Organization URI]*/api/data/v9.0/EntityDefinitions|Contains a collection of <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>.|  
-|*[Organization URI]*/api/data/v9.0/RelationshipDefinitions|Contains <xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata?text=ManyToManyRelationshipMetadata EntityType> and <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType> as both inherit from <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType>.|  
-|*[Organization URI]*/api/data/v9.0/GlobalOptionSetDefinitions|Contains a collection of globally defined <xref:Microsoft.Dynamics.CRM.BooleanOptionSetMetadata?text=BooleanOptionSetMetadata EntityType> and <xref:Microsoft.Dynamics.CRM.OptionSetMetadata?text=OptionSetMetadata EntityType> as both inherit from <xref:Microsoft.Dynamics.CRM.OptionSetMetadata?text=OptionSetMetadata EntityType>.|  
-|*[Organization URI]*/api/data/v9.0/ManagedPropertyDefinitions|  For internal use only|  
+|*[Organization URI]*/api/data/v9.2/EntityDefinitions|Contains a collection of <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>.|  
+|*[Organization URI]*/api/data/v9.2/RelationshipDefinitions|Contains <xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata?text=ManyToManyRelationshipMetadata EntityType> and <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType> as both inherit from <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType>.|  
+|*[Organization URI]*/api/data/v9.2/GlobalOptionSetDefinitions|Contains a collection of globally defined <xref:Microsoft.Dynamics.CRM.BooleanOptionSetMetadata?text=BooleanOptionSetMetadata EntityType> and <xref:Microsoft.Dynamics.CRM.OptionSetMetadata?text=OptionSetMetadata EntityType> as both inherit from <xref:Microsoft.Dynamics.CRM.OptionSetMetadata?text=OptionSetMetadata EntityType>.|  
+|*[Organization URI]*/api/data/v9.2/ManagedPropertyDefinitions|  For internal use only|  
   
 Each definition entity type uses `MetadataId` as the unique identifier property, which it inherits from the <xref:Microsoft.Dynamics.CRM.MetadataBase?text=MetadataBase EntityType>. While all definition entities have a `MetadataId`, you can't query all of them directly. For example, you can query and perform operations on attributes (table columns) only in the context of the `EntityMetadata` entity that contains them.  
   

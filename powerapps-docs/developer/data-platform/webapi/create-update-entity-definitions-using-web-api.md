@@ -57,7 +57,7 @@ The following example shows the creation of a custom table with the properties s
  **Request**
 
 ```http 
-POST [Organization URI]/api/data/v9.0/EntityDefinitions HTTP/1.1
+POST [Organization URI]/api/data/v9.2/EntityDefinitions HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -149,7 +149,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2)  
 ```  
   
 <a name="bkmk_updateEntities"></a>
@@ -178,7 +178,7 @@ Typically, you'll retrieve the JSON definition of the entity attribute and modif
  **Request**
 
 ```http 
-PUT [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) HTTP/1.1
+PUT [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -187,7 +187,7 @@ OData-Version: 4.0
 MSCRM.MergeLabels: true  
   
 {  
- "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#EntityDefinitions/$entity",  
+ "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions/$entity",  
  "ActivityTypeMask": 0,  
  "AutoRouteToOwnerQueue": false,  
  "CanTriggerWorkflow": true,  

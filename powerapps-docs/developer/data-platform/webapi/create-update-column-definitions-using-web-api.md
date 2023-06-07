@@ -54,7 +54,7 @@ The URI for the attribute is returned in the response.
  **Request**
 
 ```http 
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+POST [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -106,7 +106,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
 ```  
   
 <a name="bkmk_createMoney"></a>
@@ -128,7 +128,7 @@ The following example creates a money attribute using the properties and adds it
  **Request**
 
 ```http   
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+POST [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -176,7 +176,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f11bef16-287c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f11bef16-287c-e511-80d2-00155d2a68d2)  
 ```  
   
 <a name="bkmk_createDateTime"></a>
@@ -199,7 +199,7 @@ The following example creates a datetime attribute using the properties and adds
  **Request**
 
 ```http 
-POST [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+POST [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
@@ -247,7 +247,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(fe1bef16-287c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(fe1bef16-287c-e511-80d2-00155d2a68d2)  
 ```  
 
 ### Create a boolean column
@@ -373,7 +373,7 @@ The example creates a customer lookup attribute, `new_CustomerId`, and adds it t
  **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/CreateCustomerRelationships HTTP/1.1
+POST [Organization URI]/api/data/v9.2/CreateCustomerRelationships HTTP/1.1
 MSCRM.SolutionUniqueName: examplesolution
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -435,7 +435,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
   
 {  
-    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse",  
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse",  
     "RelationshipIds": [  
         "a7d261bc-3580-e611-80d7-00155d2a68de", "aed261bc-3580-e611-80d7-00155d2a68de"  
     ],  

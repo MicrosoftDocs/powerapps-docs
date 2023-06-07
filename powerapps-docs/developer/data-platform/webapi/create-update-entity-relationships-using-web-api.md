@@ -44,7 +44,7 @@ Once you have generated the necessary JSON to define the relationship and the lo
   
  **Request**  
 ```http 
-POST [Organization URI]/api/data/v9.0/RelationshipDefinitions HTTP/1.1  
+POST [Organization URI]/api/data/v9.2/RelationshipDefinitions HTTP/1.1  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -134,7 +134,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/RelationshipDefinitions(d475020f-5d7c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(d475020f-5d7c-e511-80d2-00155d2a68d2)  
 ```  
   
 <a name="bkmk_CreateManyToMany"></a>
@@ -151,7 +151,7 @@ When you create a many-to-many relationship, you must the relationship by using 
  **Request**
   
 ```http 
-POST [Organization URI]/api/data/v9.0/RelationshipDefinitions HTTP/1.1  
+POST [Organization URI]/api/data/v9.2/RelationshipDefinitions HTTP/1.1  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -210,7 +210,7 @@ OData-Version: 4.0
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/RelationshipDefinitions(420245fa-c77c-e511-80d2-00155d2a68d2)    
+OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(420245fa-c77c-e511-80d2-00155d2a68d2)    
 ```
 
 ## Create relationships to support a multi-table lookup
