@@ -350,4 +350,10 @@ POST [OrganizationUrl]/api/data/v9.0/RelationshipDefinitions
 
 ### See Also
 
-[Create and update entity relationships](create-update-entity-relationships-using-web-api.md)
+[Use the Web API with table definitions](use-web-api-metadata.md)  
+[Create and update table relationships](create-update-entity-relationships-using-web-api.md)  
+[Query table definitions using the Web API](query-metadata-web-api.md)  
+[Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)  
+[Model tables and columns using the Web API](create-update-entity-definitions-using-web-api.md)  
+[Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
+[Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)

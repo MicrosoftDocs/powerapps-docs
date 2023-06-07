@@ -490,7 +490,9 @@ OData-Version: 4.0
 [Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)  
 [Model table relationships using the Web API](create-update-entity-relationships-using-web-api.md)  
 [Work with table definitions using the Organization service](../org-service/work-with-metadata.md)  
-[Column (attribute) definitions](../entity-attribute-metadata.md)
+[Column (attribute) definitions](../entity-attribute-metadata.md)  
+[Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
+[Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

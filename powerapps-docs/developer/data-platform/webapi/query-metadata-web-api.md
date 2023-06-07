@@ -357,22 +357,25 @@ The following example shows retrieving a global option set using the `MetadataId
 ```http
 GET [Organization URI]/api/data/v9.0/GlobalOptionSetDefinitions(08fa2cb2-e3fe-497a-9b5d-ee887f5cc3cd)
 ```
-### Example: By Name
+
+### Example By Name
 
 The following example shows retrieving a global option set by name:
 
 ```http
 GET [Organization URI]/api/data/v9.0/GlobalOptionSetDefinitions(Name='incident_caseorigincode')
-````
+```
 
 You can also access the definition of a global option set from within the `GlobalOptionSet` single-valued navigation property for any attribute that uses it. This is available for all the [EnumAttributeMetadata EntityType Derived Types](/power-apps/developer/data-platform/webapi/reference/enumattributemetadata#Derived_Types). More information:  [Retrieving attributes](query-metadata-web-api.md#bkmk_retrieveAttributes)  
 
 ### See also
 
-[Use the Web API with Dataverse metadata](use-web-api-metadata.md)<br />
-[Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
-[Metadata entities and attributes using the Web API](create-update-entity-definitions-using-web-api.md)<br />
-[Metadata entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)
+[Use the Web API with Dataverse metadata](use-web-api-metadata.md)  
+[Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)  
+[Metadata entities and attributes using the Web API](create-update-entity-definitions-using-web-api.md)  
+[Metadata entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)  
+[Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
+[Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

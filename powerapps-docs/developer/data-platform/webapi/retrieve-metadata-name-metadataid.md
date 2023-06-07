@@ -289,9 +289,11 @@ OData-Version: 4.0
   
 ### See also
 
-[Use the Web API with table definitions](use-web-api-metadata.md)<br />
-[Query table definitions using the Web API](query-metadata-web-api.md)<br />
-[Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)<br /> 
-[Create and update table relationships using the Web API](create-update-entity-relationships-using-web-api.md)
+[Use the Web API with table definitions](use-web-api-metadata.md)  
+[Query table definitions using the Web API](query-metadata-web-api.md)  
+[Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)  
+[Create and update table relationships using the Web API](create-update-entity-relationships-using-web-api.md)  
+[Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
+[Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
