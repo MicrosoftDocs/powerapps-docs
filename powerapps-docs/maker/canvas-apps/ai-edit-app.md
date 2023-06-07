@@ -58,8 +58,8 @@ AI Copilot supports the following commands:
 
 ## Use Copilot to edit your app
 
-1. Open your app for editing in [Power Apps Studio](https://create.powerapps.com).
-1. On the app actions menu, select **Copilot**.
+1. Sign in to [Power Apps](https://make.powerapps.com) and open a canvas app for editing.
+1. In Power Apps Studio, on the top right, select **Copilot**.
 1. In the **Copilot** panel, chat with Copilot and describe the changes you want to make such as  **Add a  new screen**.
 
    > [!div class="mx-imgBorder"]
