@@ -1,0 +1,3 @@
+> [!IMPORTANT]
+> - This is a Production Ready Preview feature.
+> - Poduction Ready Previews are subject to supplemental terms of use. More information: [Supplemental terms of use for Power Platform preview](/legaldocs/supp-powerplatform-preview/)
