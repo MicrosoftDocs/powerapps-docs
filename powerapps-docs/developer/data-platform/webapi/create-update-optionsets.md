@@ -343,7 +343,7 @@ OData-Version: 4.0
 
 ### Update options
 
-To update individual options, you must use the [UpdateOptionValue Action](xref:Microsoft.Dynamics.CRM.UpdateOptionValue). The following example updates the `TrueOption` from the Boolean column example in [Create a Boolean column](create-update-entity-definitions-using-web-api.md#create-a-boolean-column)  and changes the label so that it's `Up` rather than `True`. Because this is a 'local' option set, it uses `AttributeLogicalName` and `EntityLogicalName`. For a global option set, use the `OptionSetName` parameter instead.
+To update individual options, you must use the [UpdateOptionValue Action](xref:Microsoft.Dynamics.CRM.UpdateOptionValue). The following example updates the `TrueOption` from the Boolean column example in [Create a boolean column](create-update-column-definitions-using-web-api.md#create-a-boolean-column) and changes the label so that it's `Up` rather than `True`. Because this is a 'local' option set, it uses `AttributeLogicalName` and `EntityLogicalName`. For a global option set, use the `OptionSetName` parameter instead.
 
 **Request**
 
