@@ -52,6 +52,8 @@
   href: attributeimageconfig.md
 - name: Audit
   href: audit.md
+- name: backgroundoperation
+  href: backgroundoperation.md
 - name: bot
   href: bot.md
 - name: botcomponent
@@ -72,6 +74,8 @@
   href: canvasapp.md
 - name: card
   href: card.md
+- name: cardstateitem
+  href: cardstateitem.md
 - name: Catalog
   href: catalog.md
 - name: CatalogAssignment
@@ -122,6 +126,8 @@
   href: dataperformance.md
 - name: DataProcessingConfiguration
   href: dataprocessingconfiguration.md
+- name: DelegatedAuthorization
+  href: delegatedauthorization.md
 - name: Dependency
   href: dependency.md
 - name: desktopflowbinary
@@ -152,6 +158,8 @@
   href: entityimageconfig.md
 - name: EntityKey
   href: entitykey.md
+- name: EntityRecordFilter
+  href: entityrecordfilter.md
 - name: EntityRelationship
   href: entityrelationship.md
 - name: EnvironmentVariableDefinition
@@ -162,6 +170,8 @@
   href: exchangesyncidmapping.md
 - name: ExpiredProcess
   href: expiredprocess.md
+- name: exportedexcel
+  href: exportedexcel.md
 - name: ExportSolutionUpload
   href: exportsolutionupload.md
 - name: Fax
@@ -188,6 +198,8 @@
   href: flowmachinenetwork.md
 - name: flowsession
   href: flowsession.md
+- name: fxexpression
+  href: fxexpression.md
 - name: Goal
   href: goal.md
 - name: GoalRollupQuery
@@ -236,6 +248,8 @@
   href: mailmergetemplate.md
 - name: ManagedIdentity
   href: managedidentity.md
+- name: MetadataForArchival
+  href: metadataforarchival.md
 - name: Metric
   href: metric.md
 - name: MobileOfflineProfile
@@ -266,6 +280,8 @@
   href: msdyn_aibfileattacheddata.md
 - name: msdyn_AIConfiguration
   href: msdyn_aiconfiguration.md
+- name: msdyn_AIEvent
+  href: msdyn_aievent.md
 - name: msdyn_AIFpTrainingDocument
   href: msdyn_aifptrainingdocument.md
 - name: msdyn_AIModel
@@ -284,6 +300,8 @@
   href: msdyn_analysiscomponent.md
 - name: msdyn_analysisjob
   href: msdyn_analysisjob.md
+- name: msdyn_analysisoverride
+  href: msdyn_analysisoverride.md
 - name: msdyn_analysisresult
   href: msdyn_analysisresult.md
 - name: msdyn_analysisresultdetail
@@ -300,18 +318,30 @@
   href: msdyn_customcontrolextendedsettings.md
 - name: msdyn_dataflow
   href: msdyn_dataflow.md
+- name: msdyn_dataflow_datalakefolder
+  href: msdyn_dataflow_datalakefolder.md
 - name: msdyn_dataflowrefreshhistory
   href: msdyn_dataflowrefreshhistory.md
+- name: msdyn_DataflowTemplate
+  href: msdyn_dataflowtemplate.md
 - name: msdyn_datalakeds
   href: msdyn_datalakeds.md
+- name: msdyn_dmsrequest
+  href: msdyn_dmsrequest.md
+- name: msdyn_dmsrequeststatus
+  href: msdyn_dmsrequeststatus.md
 - name: msdyn_entitylinkchatconfiguration
   href: msdyn_entitylinkchatconfiguration.md
 - name: msdyn_entityrefreshhistory
   href: msdyn_entityrefreshhistory.md
+- name: msdyn_favoriteknowledgearticle
+  href: msdyn_favoriteknowledgearticle.md
 - name: msdyn_federatedarticle
   href: msdyn_federatedarticle.md
 - name: msdyn_federatedarticleincident
   href: msdyn_federatedarticleincident.md
+- name: msdyn_FileUpload
+  href: msdyn_fileupload.md
 - name: msdyn_helppage
   href: msdyn_helppage.md
 - name: msdyn_InsightsStoreVirtualEntity
@@ -330,6 +360,8 @@
   href: msdyn_knowledgearticleimage.md
 - name: msdyn_knowledgearticletemplate
   href: msdyn_knowledgearticletemplate.md
+- name: msdyn_knowledgeconfiguration
+  href: msdyn_knowledgeconfiguration.md
 - name: msdyn_knowledgeinteractioninsight
   href: msdyn_knowledgeinteractioninsight.md
 - name: msdyn_knowledgemanagementsetting
@@ -340,6 +372,8 @@
   href: msdyn_knowledgesearchfilter.md
 - name: msdyn_knowledgesearchinsight
   href: msdyn_knowledgesearchinsight.md
+- name: msdyn_mobileapp
+  href: msdyn_mobileapp.md
 - name: msdyn_nonrelationalds
   href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
@@ -368,6 +402,8 @@
   href: msdyn_pmview.md
 - name: msdyn_richtextfile
   href: msdyn_richtextfile.md
+- name: msdyn_schedule
+  href: msdyn_schedule.md
 - name: msdyn_serviceconfiguration
   href: msdyn_serviceconfiguration.md
 - name: msdyn_slakpi
@@ -400,6 +436,10 @@
   href: msdynce_botcontent.md
 - name: MsGraphResourceToSubscription
   href: msgraphresourcetosubscription.md
+- name: mspcat_CatalogSubmissionFiles
+  href: mspcat_catalogsubmissionfiles.md
+- name: mspcat_PackageStore
+  href: mspcat_packagestore.md
 - name: NavigationSetting
   href: navigationsetting.md
 - name: NewProcess
@@ -408,12 +448,16 @@
   href: officegraphdocument.md
 - name: Organization
   href: organization.md
+- name: organizationdatasyncfnostate
+  href: organizationdatasyncfnostate.md
 - name: organizationdatasyncstate
   href: organizationdatasyncstate.md
 - name: organizationdatasyncsubscription
   href: organizationdatasyncsubscription.md
 - name: organizationdatasyncsubscriptionentity
   href: organizationdatasyncsubscriptionentity.md
+- name: organizationdatasyncsubscriptionfnotable
+  href: organizationdatasyncsubscriptionfnotable.md
 - name: OwnerMapping
   href: ownermapping.md
 - name: package
@@ -476,8 +520,12 @@
   href: queue.md
 - name: QueueItem
   href: queueitem.md
+- name: recentlyused
+  href: recentlyused.md
 - name: RecommendedDocument
   href: recommendeddocument.md
+- name: RecordFilter
+  href: recordfilter.md
 - name: RecurrenceRule
   href: recurrencerule.md
 - name: RecurringAppointmentMaster
@@ -490,6 +538,16 @@
   href: report.md
 - name: ReportCategory
   href: reportcategory.md
+- name: retaineddataexcel
+  href: retaineddataexcel.md
+- name: retentionconfig
+  href: retentionconfig.md
+- name: retentionfailuredetail
+  href: retentionfailuredetail.md
+- name: retentionoperation
+  href: retentionoperation.md
+- name: retentionoperationdetail
+  href: retentionoperationdetail.md
 - name: RibbonMetadataToProcess
   href: ribbonmetadatatoprocess.md
 - name: Role
@@ -512,6 +570,10 @@
   href: sdkmessageprocessingstepimage.md
 - name: SdkMessageProcessingStepSecureConfig
   href: sdkmessageprocessingstepsecureconfig.md
+- name: searchattributesettings
+  href: searchattributesettings.md
+- name: searchcustomanalyzer
+  href: searchcustomanalyzer.md
 - name: searchrelationshipsettings
   href: searchrelationshipsettings.md
 - name: searchtelemetry
@@ -530,6 +592,8 @@
   href: sharedobject.md
 - name: sharedworkspace
   href: sharedworkspace.md
+- name: sharedworkspacepool
+  href: sharedworkspacepool.md
 - name: SharePointDocumentLocation
   href: sharepointdocumentlocation.md
 - name: SharePointSite
@@ -560,6 +624,10 @@
   href: solutioncomponentrelationshipconfiguration.md
 - name: SolutionHistoryData
   href: solutionhistorydata.md
+- name: StagedEntity
+  href: stagedentity.md
+- name: StagedEntityAttribute
+  href: stagedentityattribute.md
 - name: StageSolutionUpload
   href: stagesolutionupload.md
 - name: Subject
@@ -586,6 +654,8 @@
   href: task.md
 - name: Team
   href: team.md
+- name: teammobileofflineprofilemembership
+  href: teammobileofflineprofilemembership.md
 - name: TeamTemplate
   href: teamtemplate.md
 - name: Template
@@ -614,6 +684,8 @@
   href: userform.md
 - name: UserMapping
   href: usermapping.md
+- name: usermobileofflineprofilemembership
+  href: usermobileofflineprofilemembership.md
 - name: UserQuery
   href: userquery.md
 - name: UserQueryVisualization
@@ -632,3 +704,7 @@
   href: workflowbinary.md
 - name: WorkflowLog
   href: workflowlog.md
+- name: workqueue
+  href: workqueue.md
+- name: workqueueitem
+  href: workqueueitem.md

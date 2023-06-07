@@ -1,7 +1,7 @@
 ---
 title: "Virtual Entity Data Provider (EntityDataProvider)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Virtual Entity Data Provider (EntityDataProvider)  table/entity."
-ms.date: 03/07/2023
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -23,11 +23,11 @@ Developers can register plug-ins on a data provider to enable data access for vi
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.2/entitydataproviders<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/entitydataproviders(*entitydataproviderid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/entitydataproviders(*entitydataproviderid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/entitydataproviders<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.2/entitydataproviders(*entitydataproviderid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST /entitydataproviders<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /entitydataproviders(*entitydataproviderid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET /entitydataproviders(*entitydataproviderid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /entitydataproviders<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH /entitydataproviders(*entitydataproviderid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -53,6 +53,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [ArchivePlugin](#BKMK_ArchivePlugin)
 - [BulkArchivePlugin](#BKMK_BulkArchivePlugin)
+- [BulkRetainPlugin](#BKMK_BulkRetainPlugin)
 - [CreateMultiplePlugin](#BKMK_CreateMultiplePlugin)
 - [CreatePlugin](#BKMK_CreatePlugin)
 - [DataSourceLogicalName](#BKMK_DataSourceLogicalName)
@@ -64,14 +65,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Name](#BKMK_Name)
 - [PurgeArchivedContentPlugin](#BKMK_PurgeArchivedContentPlugin)
+- [PurgeRetainedContentPlugin](#BKMK_PurgeRetainedContentPlugin)
+- [RetainPlugin](#BKMK_RetainPlugin)
 - [RetrieveEntityChangesPlugin](#BKMK_RetrieveEntityChangesPlugin)
 - [RetrieveMultiplePlugin](#BKMK_RetrieveMultiplePlugin)
 - [RetrievePlugin](#BKMK_RetrievePlugin)
+- [RollbackRetainPlugin](#BKMK_RollbackRetainPlugin)
 - [UpdateMultiplePlugin](#BKMK_UpdateMultiplePlugin)
 - [UpdatePlugin](#BKMK_UpdatePlugin)
 - [UpsertMultiplePlugin](#BKMK_UpsertMultiplePlugin)
 - [UpsertPlugin](#BKMK_UpsertPlugin)
 - [ValidateArchiveConfigPlugin](#BKMK_ValidateArchiveConfigPlugin)
+- [ValidateRetentionConfigPlugin](#BKMK_ValidateRetentionConfigPlugin)
 
 
 ### <a name="BKMK_ArchivePlugin"></a> ArchivePlugin
@@ -100,6 +105,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|bulkarchiveplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_BulkRetainPlugin"></a> BulkRetainPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the bulkretainplugin id that should be run when BulkRetain is invoked|
+|DisplayName|Contains the bulkretainplugin id that should be run when BulkRetain is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|bulkretainplugin|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
@@ -267,6 +287,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_PurgeRetainedContentPlugin"></a> PurgeRetainedContentPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the purgeretainedcontentplugin id that should be run when PurgeRetainedContent is invoked|
+|DisplayName|Contains the purgeretainedcontentplugin id that should be run when PurgeRetainedContent is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|purgeretainedcontentplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_RetainPlugin"></a> RetainPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the retainplugin id that should be run when Retain is invoked|
+|DisplayName|Contains the retainplugin id that should be run when Retain is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|retainplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
 ### <a name="BKMK_RetrieveEntityChangesPlugin"></a> RetrieveEntityChangesPlugin
 
 **Added by**: EntityDataProviderExtensions Solution
@@ -304,6 +354,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|retrieveplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_RollbackRetainPlugin"></a> RollbackRetainPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the rollbackretainplugin id that should be run when Rollback Retain is invoked|
+|DisplayName|Contains the rollbackretainplugin id that should be run when Rollback Retain is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|rollbackretainplugin|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
@@ -377,6 +442,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|validatearchiveconfigplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_ValidateRetentionConfigPlugin"></a> ValidateRetentionConfigPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the validateretentionconfigplugin id that should be run when ValidateRetentionConfig is invoked|
+|DisplayName|Contains the validateretentionconfigplugin id that should be run when ValidateRetentionConfig is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|validateretentionconfigplugin|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 

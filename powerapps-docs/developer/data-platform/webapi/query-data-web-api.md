@@ -1099,6 +1099,9 @@ You can include conditions on multiple collection-valued navigation properties a
 
 More information: [Lambda Operators at odata.org](https://www.odata.org/getting-started/basic-tutorial/#lambda)
 
+> [!NOTE]
+> You cannot include conditions on collection-valued navigation properties that are nested in a lookup navigation property. For example, `$filter=primarycontactid/new_contact_account/any(a:a/accountid eq '{GUID}')` is not supported.
+
 ##### Lambda operator examples
 
 The example given below shows how you can retrieve all account entity records that have at least one email with `sometext` in the subject.

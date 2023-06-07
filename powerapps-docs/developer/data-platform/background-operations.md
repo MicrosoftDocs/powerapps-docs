@@ -1,8 +1,8 @@
 ---
 title: "Background operations (Preview) (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to invoke custom apis asynchronously." 
-ms.custom: intro-internal
-ms.date: 05/02/2023
+ms.collection: get-started
+ms.date: 06/05/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: sumadhey
@@ -20,10 +20,6 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-> [!NOTE]
-> As of May 2, 2023, this feature is being deployed and is not yet available in all regions.
-
-
 Use background operations to send requests that Dataverse processes asynchronously. Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
 
 Dataverse immediately responds that the request is accepted. When the operation completes successfully, you can retrieve the result. You can poll the `backgroundoperations` table or use two different methods to get notified when a background operation completes.
@@ -33,6 +29,7 @@ Background operations require that the operation performed is defined as a custo
 - [Create and use custom APIs](custom-api.md)
 - [Retrieve data about custom APIs](custom-api-tables.md#retrieve-data-about-custom-apis)
 
+Custom APIs use plug-ins to perform the data operations. Like all Dataverse plug-ins, these plug-ins have a two-minute execution time out. Sending the request asynchronously doesn't provide more execution time.
 
 ## Required Privileges
 
@@ -183,7 +180,7 @@ When you send a request to be processed in the background, the response includes
    > |URL |Example|
    > |---------|---------|
    > |Status Monitor Resource|`[Organization URI]/api/backgroundoperation/<backgroundoperationid value>`|
-   > |`backgroundoperation` EntityType resource|`[Organization URI]/api/data/v9.0/backgroundoperations(<backgroundoperationid value>)`|
+   > |`backgroundoperation` EntityType resource|`[Organization URI]/api/data/v9.2/backgroundoperations(<backgroundoperationid value>)`|
 
    The status monitor resource isn't part of the Dataverse Web API. Notice that the URL doesn't contain `/data/v9.2/`. This resource supports only `GET` and `DELETE` operations and doesn't have the same behaviors as the Web API `backgroundoperation` EntityType resource.  You can use this URL to poll and cancel background operations. More information:
 
@@ -192,7 +189,9 @@ When you send a request to be processed in the background, the response includes
   
 ### Status polling
 
-Querying the background operation table or status monitor resource to check on requests is commonly known as *status polling*. We recommend that you avoid excessive polling because it can negatively affect performance. If needed, we suggest polling at an interval of one minute or more.  More information:
+Querying the background operation table or status monitor resource to check on requests is commonly known as *status polling*. We recommend that you avoid excessive polling because it can negatively affect performance. If needed, we suggest polling at an interval of one minute or more.  
+
+More information:
 
 - [Poll the background operation table](#poll-the-background-operation-table)
 - [Poll the status monitor resource](#poll-the-status-monitor-resource)

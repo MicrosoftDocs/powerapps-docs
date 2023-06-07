@@ -1,7 +1,7 @@
 ---
 title: "organizationdatasyncstate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the organizationdatasyncstate table/entity."
-ms.date: 03/07/2023
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,14 +25,14 @@ Information regarding data synchronization state
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.2/organizationdatasyncstates<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Create|POST /organizationdatasyncstates<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/organizationdatasyncstates(*organizationdatasyncstateid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/organizationdatasyncstates(*organizationdatasyncstateid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/organizationdatasyncstates<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.2/organizationdatasyncstates(*organizationdatasyncstateid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/organizationdatasyncstates(*organizationdatasyncstateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Delete|DELETE /organizationdatasyncstates(*organizationdatasyncstateid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|Retrieve|GET /organizationdatasyncstates(*organizationdatasyncstateid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /organizationdatasyncstates<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH /organizationdatasyncstates(*organizationdatasyncstateid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /organizationdatasyncstates(*organizationdatasyncstateid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
@@ -75,11 +75,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [organizationdatasyncstateId](#BKMK_organizationdatasyncstateId)
 - [organizationdatasyncsubscriptionid](#BKMK_organizationdatasyncsubscriptionid)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
+- [pagenumber](#BKMK_pagenumber)
+- [paginationcookie](#BKMK_paginationcookie)
 - [pagingcookie](#BKMK_pagingcookie)
 - [partitionid](#BKMK_partitionid)
+- [partitionssyncstatedata](#BKMK_partitionssyncstatedata)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [usepagingcookiemax](#BKMK_usepagingcookiemax)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
@@ -213,7 +217,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|implicitlastdataversion|
-|MaxLength|1000|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -246,7 +250,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|lastdataversion|
-|MaxLength|1000|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -262,7 +266,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|lastmetadataversion|
-|MaxLength|1000|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -293,7 +297,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|lockowner|
-|MaxLength|500|
+|MaxLength|1000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -309,7 +313,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|minactiverowversion|
-|MaxLength|1000|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -390,6 +394,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 
 
+### <a name="BKMK_pagenumber"></a> pagenumber
+
+|Property|Value|
+|--------|-----|
+|Description|pagenumber|
+|DisplayName|pagenumber|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|pagenumber|
+|MaxValue|2147483647|
+|MinValue|-1|
+|RequiredLevel|None|
+|Type|Integer|
+
+
+### <a name="BKMK_paginationcookie"></a> paginationcookie
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|paginationcookie|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|paginationcookie|
+|MaxLength|300000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
 ### <a name="BKMK_pagingcookie"></a> pagingcookie
 
 |Property|Value|
@@ -421,6 +457,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|300|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_partitionssyncstatedata"></a> partitionssyncstatedata
+
+|Property|Value|
+|--------|-----|
+|Description|SyncStatesForPartitions|
+|DisplayName|partitionssyncstatedata|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|partitionssyncstatedata|
+|MaxLength|1000000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_statecode"></a> statecode
@@ -480,6 +532,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-1|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_usepagingcookiemax"></a> usepagingcookiemax
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|usepagingcookiemax|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|usepagingcookiemax|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### usepagingcookiemax Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode

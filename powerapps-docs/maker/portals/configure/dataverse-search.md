@@ -4,7 +4,7 @@ description: "Learn how Dataverse search works in a portal."
 author: nageshbhat-msft
 
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 04/20/2022
 ms.subservice: portals
 ms.author: nabha
@@ -18,7 +18,7 @@ contributors:
 # Configure Dataverse search in portals
 
 
-[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
 
 ## Overview
 

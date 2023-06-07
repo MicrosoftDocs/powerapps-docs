@@ -24,6 +24,7 @@ Mobile users often need to be productive even when they have limited or no conne
 - Use [collections](create-update-collection.md) and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic data storage when offline.
 
 > [!NOTE]
+> - Offline capability is now built-in with the preview of [offline-first](../../mobile/canvas-mobile-offline-overview.md) experience for apps based on Microsoft Dataverse. Learn more: [Set up mobile offline for canvas apps (preview)](../../mobile/canvas-mobile-offline-setup.md), [Working with canvas apps offline (preview)](../../mobile/canvas-mobile-offline-working.md)
 > - Offline capability for canvas apps is only available while running the apps using the native [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) players on iOS, Android, and Windows.
 > - Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
 > - Canvas apps in Teams are limited to 1 MB of data through the LoadData and SaveData functions&mdash;useful for a small number of text strings, numbers, and dates. Use of images or other media is inappropriate for this limit. More information: [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md)

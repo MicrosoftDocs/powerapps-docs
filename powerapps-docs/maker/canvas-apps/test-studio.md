@@ -14,9 +14,8 @@ contributors:
   - mduelae
   - ChrisBal-MSFT
   - maustinjones
-ms.custom:
-  - intro-internal
-  - canvas
+ms.custom: canvas
+ms.collection: get-started
 ---
 
 # Test Studio

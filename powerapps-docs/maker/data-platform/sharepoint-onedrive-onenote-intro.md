@@ -1,7 +1,7 @@
 ---
 title: SharePoint, OneNote, and OneDrive integration with Microsoft Dataverse | Microsoft Docs
 description: Learn about Microsoft 365 services integration with Microsoft Dataverse.
-ms.custom: intro-internal
+ms.collection: get-started
 author: Mattp123
 
 ms.component: cds
