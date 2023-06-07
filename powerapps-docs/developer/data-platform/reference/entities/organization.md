@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 05/23/2023
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -23,9 +23,9 @@ Top level of the Microsoft Dynamics 365 business hierarchy. The organization can
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.2/organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/organizations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.2/organizations(*organizationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Retrieve|GET /organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /organizations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH /organizations(*organizationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -134,6 +134,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DateFormatCode](#BKMK_DateFormatCode)
 - [DateFormatString](#BKMK_DateFormatString)
 - [DateSeparator](#BKMK_DateSeparator)
+- [DaysBeforeEmailDescriptionIsMigrated](#BKMK_DaysBeforeEmailDescriptionIsMigrated)
 - [DaysBeforeInactiveTeamsChatSyncDisabled](#BKMK_DaysBeforeInactiveTeamsChatSyncDisabled)
 - [DecimalSymbol](#BKMK_DecimalSymbol)
 - [DefaultCountryCode](#BKMK_DefaultCountryCode)
@@ -352,6 +353,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PaiPreviewScenarioEnabled](#BKMK_PaiPreviewScenarioEnabled)
 - [PastExpansionWindow](#BKMK_PastExpansionWindow)
 - [PcfDatasetGridEnabled](#BKMK_PcfDatasetGridEnabled)
+- [PerformACTSyncAfter](#BKMK_PerformACTSyncAfter)
 - [Picture](#BKMK_Picture)
 - [PinpointLanguageCode](#BKMK_PinpointLanguageCode)
 - [PluginTraceLogSetting](#BKMK_PluginTraceLogSetting)
@@ -2160,6 +2162,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|5|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_DaysBeforeEmailDescriptionIsMigrated"></a> DaysBeforeEmailDescriptionIsMigrated
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Number of days before we migrate email description to blob.|
+|DisplayName|Number of days before we migrate email description to blob.|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|daysbeforeemaildescriptionismigrated|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_DaysBeforeInactiveTeamsChatSyncDisabled"></a> DaysBeforeInactiveTeamsChatSyncDisabled
@@ -5426,7 +5446,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|isrpaboxcrossgeoenabled|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Boolean|
 
 #### IsRpaBoxCrossGeoEnabled Choices/Options
@@ -6284,7 +6304,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|multicolumnsortenabled|
 |MaxValue|100|
 |MinValue|0|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Integer|
 
 
@@ -6654,6 +6674,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|16|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_PerformACTSyncAfter"></a> PerformACTSyncAfter
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|This setting contains the date time before an ACT sync can execute.|
+|DisplayName|PerformACTSyncAfter|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|performactsyncafter|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_Picture"></a> Picture
@@ -7178,7 +7215,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|releasechannel|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Picklist|
 
 #### ReleaseChannel Choices/Options
@@ -9634,6 +9671,7 @@ Listed by **SchemaName**.
 - [organization_sharedlinksetting](#BKMK_organization_sharedlinksetting)
 - [organization_entityrecordfilter](#BKMK_organization_entityrecordfilter)
 - [organization_recordfilter](#BKMK_organization_recordfilter)
+- [organization_delegatedauthorization](#BKMK_organization_delegatedauthorization)
 - [organization_msdyn_helppage](#BKMK_organization_msdyn_helppage)
 - [organization_msdyn_tour](#BKMK_organization_msdyn_tour)
 - [organization_territories](#BKMK_organization_territories)
@@ -9662,6 +9700,8 @@ Listed by **SchemaName**.
 - [organization_appactionrule](#BKMK_organization_appactionrule)
 - [organization_searchrelationshipsettings](#BKMK_organization_searchrelationshipsettings)
 - [organization_msdyn_solutionhealthruleset](#BKMK_organization_msdyn_solutionhealthruleset)
+- [organization_searchattributesettings](#BKMK_organization_searchattributesettings)
+- [organization_searchcustomanalyzer](#BKMK_organization_searchcustomanalyzer)
 
 
 ### <a name="BKMK_lk_principalobjectattributeaccess_organizationid"></a> lk_principalobjectattributeaccess_organizationid
@@ -11022,6 +11062,23 @@ Same as the [organization_recordfilter](recordfilter.md#BKMK_organization_record
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_delegatedauthorization"></a> organization_delegatedauthorization
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_delegatedauthorization](delegatedauthorization.md#BKMK_organization_delegatedauthorization) many-to-one relationship for the [delegatedauthorization](delegatedauthorization.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|delegatedauthorization|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_delegatedauthorization|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_msdyn_helppage"></a> organization_msdyn_helppage
 
 **Added by**: Active Solution Solution
@@ -11494,6 +11551,40 @@ Same as the [organization_msdyn_solutionhealthruleset](msdyn_solutionhealthrules
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|organization_msdyn_solutionhealthruleset|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_searchattributesettings"></a> organization_searchattributesettings
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_searchattributesettings](searchattributesettings.md#BKMK_organization_searchattributesettings) many-to-one relationship for the [searchattributesettings](searchattributesettings.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|searchattributesettings|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_searchattributesettings|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_searchcustomanalyzer"></a> organization_searchcustomanalyzer
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_searchcustomanalyzer](searchcustomanalyzer.md#BKMK_organization_searchcustomanalyzer) many-to-one relationship for the [searchcustomanalyzer](searchcustomanalyzer.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|searchcustomanalyzer|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_searchcustomanalyzer|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

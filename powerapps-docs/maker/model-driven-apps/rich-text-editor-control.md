@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 02/28/2023
+ms.date: 06/05/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -91,7 +91,7 @@ Consider the following when using the rich text editor:
 
 - Rich text fields will store HTML tags, which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
 
-- By default, the rich text editor will upload images to the Azure Blob storage store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64. 
+- By default, the rich text editor uploads images to the Azure Blob storage store and they won’t be stored as part of the field. Images are stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64.
 
 ## How configuration is applied to the rich text editor
 
@@ -231,8 +231,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 
 <td>
-
-  A list of toolbar buttons that will be loaded.
+  A list of the loaded toolbar buttons.
 </td>
 <td>
 
@@ -279,7 +278,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  Comma-separated list of plug-ins to be used in an editor instance. The actual plug-ins that are loaded might still be affected by two other settings: *extraPlugins* and *removePlugins*. <br></br> Updating this setting might remove the plug-ins from the toolbar. If you set this property to an empty string, the editor will load without the toolbar. <br></br> If you want to add one or more plug-ins to the toolbar, we recommend that you use *extraPlugins*. If you want to remove one or more from the default list, use *removePlugins*.     
+  Comma-separated list of plug-ins to be used in an editor instance. The actual plug-ins that are loaded might still be affected by two other settings: *extraPlugins* and *removePlugins*. <br></br> Updating this setting might remove the plug-ins from the toolbar. If you set this property to an empty string, the editor loads without the toolbar. <br></br> If you want to add one or more plug-ins to the toolbar, we recommend that you use *extraPlugins*. If you want to remove one or more from the default list, use *removePlugins*.     
 </td>
 <td>
 
@@ -294,7 +293,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  A comma-separated list of other plug-ins to be loaded. This setting makes it easier to add new plug-ins without touching the plugins setting. <br></br> There are many plug-ins that are required for other plug-ins to work. For example, the dialog plug-in is required for the link plug-in. The rich text editor automatically adds those, and you can't override them by updating this property. This setting will simply append new plug-ins to the previous list. <br></br> If you want to remove any of the presets, we recommend that you use the *removePlugins* property.
+  A comma-separated list of other plug-ins to be loaded. This setting makes it easier to add new plug-ins without touching the plugins setting. <br></br> There are many plug-ins that are required for other plug-ins to work. For example, the dialog plug-in is required for the link plug-in. The rich text editor automatically adds those, and you can't override them by updating this property. This setting appends new plug-ins to the previous list. <br></br> If you want to remove any of the presets, we recommend that you use the *removePlugins* property.
 </td>
 <td>
 
@@ -450,7 +449,7 @@ Default:
 </td>
 
 <td>
-  By default, content sanitization is disabled to allow successful copying and pasting of rich text content from external sources. When enabled, the content sanitization will remove some of the custom attributes or tags. This configuration applies only to edit mode. Read-only or disabled state rendering will always be sanitized.
+  By default, content sanitization is disabled to allow successful copying and pasting of rich text content from external sources. When enabled, the content sanitization removes some of the custom attributes or tags. This configuration applies only to edit mode. Read-only or disabled state rendering is always sanitized.
 
 </td>
 <td>
@@ -465,7 +464,11 @@ Default:
 </td>
 
 <td>
-  By default, images will be uploaded using the client API. As soon as an image is added to the editor, it will be uploaded to the platform. To store images as base64 strings directly in the column configured to use the rich text editor control set this value to **true**.
+  By default, images are uploaded using the client API. When as an image is added to the editor, it is uploaded to the platform. To store images as base64 strings directly in the column configured to use the rich text editor control set this value to true. 
+	
+   > [!TIP]
+   > If images are viewed externally, such as through email, we recommend that you not use default image processing. Default image processing uploads images to the `attachmentEntity` defined in the configuration, and an external user might lack privileges to view the content. Instead, an alternative upload, base64 strings can be used with ```"disableDefaultImageProcessing": true```.
+	
 </td>
 <td>
 
@@ -481,7 +484,7 @@ Default:
 
 <td>
 
-  Setting this property to true will disable images. This property will have highest priority. This means that when this property is set to true, irrespective of the imageEntity property value, images will be disabled. By default, images are enabled.
+  Setting this property to true disables images. This property has highest priority. This means that when this property is set to true, irrespective of the imageEntity property value, images are disabled. By default, images are enabled.
 </td>
 <td>
 
@@ -955,7 +958,7 @@ Set this ```Individual configuration settings``` property in your configuration 
  
 :::image type="content" source="media/rte-plain-text-surface.png" alt-text="Creating a plain text surface makes the strips html.":::
 
-### Remove the context menu so right-clicking will work with the default browser's spell check
+### Remove the context menu so right-clicking works with the default browser's spell check
 
 Enabling this functionality removes the contextual right-click editing capability.
 
@@ -967,7 +970,7 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 
  ```
 
-:::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking will work with the default browser spell check.":::
+:::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking works with the default browser spell check.":::
 
 ## Use the default web resource for organization-wide changes
 
@@ -1031,7 +1034,7 @@ The following table describes the different formatting features and functionalit
 |![Align Left.](media/align-left.png "Align Left")| Align Left | Ctrl+L | Align your content with the left margin. (Commonly used for body text to make it easier to read.) |
 |![Align Center.](media/align-center.png "Align Center")| Align Center | Ctrl+E | Center your content on the page. (Commonly used for a formal appearance.) |
 |![Align Right.](media/align-right.png "Align Right")| Align Right | Ctrl+R | Align your content with the right margin. (Commonly used for a formal appearance.) |
-|![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it.<br /> |
+|![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" becomes "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link opens after you select it.<br /> |
 |![Remove Link.](media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
 |![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type small letters just above the line of text. |
 |![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type small letters just below the line of text. |
