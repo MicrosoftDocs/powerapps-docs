@@ -207,7 +207,7 @@ public class BulkApiErrorDetail
 When using Web API, you need to pass the `Prefer` header with value `odata.include-annotations=*` or `odata.include-annotations=Microsoft.PowerApps.CDS.ErrorDetails.*`, which gives the status of each record. More information: [Include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors)
 
 > [!NOTE]
-> You can see the errors in the above format only when the errors have occurred while writing the data. More information: [Handling Exceptions](write-plugin-multiple-operation.md#handling-exceptions).
+> You can see the errors in the above format only when the errors have occurred while writing data. More information: [Handling Exceptions](write-plugin-multiple-operation.md#handling-exceptions).
 
 ### See also
 
