@@ -177,7 +177,7 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 ## Configure network access to the Azure Synapse Workspace
 
 > [!IMPORTANT]
-> You must have an Azure Synapse workspace **Synapse workspace** role to complete this task.
+> You must have an Azure **Synapse workspace** role to complete this task.
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Open the Azure Synapse workspace connected to your Azure Synapse Link for Dataverse profile.
