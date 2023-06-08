@@ -2,7 +2,7 @@
 title: "Bulk operations with elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to perform bulk data operations on  elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/30/2023
+ms.date: 06/07/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -183,9 +183,11 @@ public static OrganizationResponse DeleteMultiple(IOrganizationService service)
 }
 ```
 ## Exception Handling for elastic tables
-As the records within a bulk operation are not written to database in a transaction, there can be failures for some entities in the payload.
 
-For Soap request, a FaultException will be thrown in the case of a failure and you can get the status of each record as below.
+Unlike standard tables, an error within a bulk operation with an elastic table will not rollback the entire request. It is possible for the operation to succeed and you can detect any failures.
+
+
+When using the SDK, a [FaultException](xref:System.ServiceModel.FaultException%601) of type [OrganizationServiceFault](xref:Microsoft.Xrm.Sdk.OrganizationServiceFault) will be thrown in the case of a failure. You can get the status of each record using the code below.
 
 ```csharp
 if (ex.Detail.ErrorDetails.TryGetValue("Plugin.BulkApiErrorDetails", out object errorDetails))
@@ -200,10 +202,11 @@ public class BulkApiErrorDetail
    public int StatusCode { get; set; }
 }
 ```
-When using Web API, you need to pass the Prefer header with value odata.include-annotations=* or odata.include-annotations=Microsoft.PowerApps.CDS.ErrorDetails.*, which gives the status of each record.
+
+When using Web API, you need to pass the `Prefer` header with value `odata.include-annotations=*` or `odata.include-annotations=Microsoft.PowerApps.CDS.ErrorDetails.*`, which gives the status of each record. More information: [Include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors)
 
 > [!NOTE]
-> You can see the errors in the above format only when the errors have occurred while writing the data to the db. For handling exceptions in the plugins, please refer to the documentation [here](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/write-plugin-multiple-operation?tabs=single#handling-exceptions).
+> You can see the errors in the above format only when the errors have occurred while writing the data. More information: [Handling Exceptions](write-plugin-multiple-operation.md#handling-exceptions).
 
 ### See also
 
