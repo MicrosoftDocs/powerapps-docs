@@ -42,7 +42,6 @@ With managed identities, access to your storage account is restricted to request
 ## Create enterprise policy
 
 > [!IMPORTANT]
-> 
 > You must have **Azure resource group Owner** role access to complete this task.
 > Obtain your Azure **Subscription ID**, **Location**, and **Resource group** name, from the overview page for the Azure resource group.
 
@@ -127,8 +126,7 @@ Azure global admins, Dynamics 365 admins, and Power Platform admins can access t
 Only the Dynamics 365 and Power Platform admins who were granted the reader role to the enterprise policy can ‘add environment’ to the policy. Other Dynamics 365 and PowerPlatform admins might be able to view the enterprise policy, but they'll get an error when they try to add environment.
 
 > [!IMPORTANT]
-> 
-> You must have - `Microsoft.Authorization/roleAssignments/write` permissions, such as [User Access Administrator](../../articles/role-based-access-control/built-in-roles.md#user-access-administrator) or [Owner](../../articles/role-based-access-control/built-in-roles.md#owner) to complete this task.
+> You must have - `Microsoft.Authorization/roleAssignments/write` permissions, such as  [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) or [Owner](/azure/role-based-access-control/built-in-roles#owner) to complete this task.
 
 1. Sign into the [Azure portal](https://portal.azure.com/).
 1. Obtain the Dynamics 365 Power Platform admin user’s **ObjectID**.
@@ -147,7 +145,6 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 ## Connect enterprise policy to Dataverse environment
 
 > [!IMPORTANT]
->
 > You must have the **Power Platform administrator** or **Dynamics 365 administrator** role to complete this task.
 > You must have the **Reader** role for the enterprise policy to complete this task.
 
@@ -166,7 +163,6 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 ## Configure network access to the Azure Data Lake Storage Gen2
 
 > [!IMPORTANT]
-> 
 > You must have an Azure Data Lake Storage Gen2 **Owner** role to complete this task.
 
 1. Go to the [Azure portal](https://portal.azure.com/).
