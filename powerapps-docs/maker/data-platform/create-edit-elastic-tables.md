@@ -2,7 +2,7 @@
 title: Create and edit elastic tables
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 05/27/2023
+ms.date: 06/06/2023
 ms.reviewer: matp
 author: Mattp123
 ms.topic: how-to
@@ -20,6 +20,9 @@ As with standard tables, elastic tables are included with your Dataverse databas
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+Watch this video that to learn about elastic tables.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAi ]
 
 ## When to consider Dataverse elastic tables?
 
