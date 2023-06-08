@@ -25,7 +25,17 @@ You can easily enable canvas apps that are based on Dataverse for [offline-first
 Basic offline-first apps are easy to build. There is no need to use [PowerFx’s SaveData or LoadData functions](/power-platform/power-fx/reference/function-savedata-loaddata) or manage offline data with complex, collection schemes in PowerFx. Just build your app with normal [Power Fx formulas](/power-platform/power-fx/formula-reference) and the offline features handle all the complexity for you. 
 
 > [!Important]
-> This offline-first feature currently only works with Dataverse tables, and there are some Power Fx expressions that are not yet supported.  
+> This offline-first feature currently only works with Dataverse tables. The following list enumerates the commonly delegated Power Fx functions not yet supported for offline-first. This list is not exhaustive. Delegation support for these functions is under active development. Check back with this list for the most current information. The functions are listed in alphbetical order.
+> * CountRows 
+> * Filter/Lookup on Lookup field 
+> * First 
+> * In 
+> * IsBlank 
+> * Relate 
+> * Search 
+> * StartsWith 
+> * Sum/Min/Max/Avg 
+> * Unrelate
 
 Complex, offline apps are also supported. Complex, offline scenarios are enabled with custom *offline profiles*. An offline profile is a set of filters and restrictions on the data that you load to your device. For example, while you may have access rights to millions of records for a table, you may only need a thousand records for your app. If you only download a thousand records, your app performs better. Use offline profiles to optimize your app’s performance by reducing the data downloaded to the mobile device. If you need more than 15 tables in your offline app, you may want to consider a custom offline profile. 
 
