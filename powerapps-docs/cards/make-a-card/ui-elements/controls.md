@@ -1,7 +1,7 @@
 ---
 title: Add controls to a card
 description: Learn about controls you can add to your cards for Microsoft Power Apps.
-ms.date: 09/20/2022
+ms.date: 06/8/2023
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
