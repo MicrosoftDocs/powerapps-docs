@@ -14,17 +14,17 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Often applications need to ingest large amount of data into Dataverse in a short amount of time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput can be much higher.
+Often applications need to ingest large amount of data into Dataverse in a short amount of time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput can be higher.
 
-Bulk operations are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. For elastic tables, we recommend sending 100 items in a batch. Multiple bulk operation can be run in parallel to achieve high throughput. More information [Send parallel requests](send-parallel-requests.md)
+Bulk operations are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. For elastic tables, we recommend sending 100 items in a batch. Multiple bulk operations can be run in parallel to achieve high throughput. More information [Send parallel requests](send-parallel-requests.md)
 
-Elastic tables currently supports following messages for bulk operations:
+Elastic tables currently support following messages for bulk operations:
 
 - `CreateMultiple`
 - `UpdateMultiple`
 - `DeleteMultiple`
 
-Support for `UpsertMultiple` message will be coming soon. Also, these messages are currently supported only using the SDK for .NET.
+Support for `UpsertMultiple` message is coming soon. Also, these messages are currently supported only using the SDK for .NET.
 
 > [!NOTE]
 > `CreateMultiple` and `UpdateMultiple` are also available for standard tables. More information: [Use CreateMultiple and UpdateMultiple (preview)](org-service/use-createmultiple-updatemultiple.md)
@@ -182,12 +182,13 @@ public static OrganizationResponse DeleteMultiple(IOrganizationService service)
     return service.Execute(deleteMultipleRequest);
 }
 ```
-## Exception Handling for elastic tables
 
-Unlike standard tables, an error within a bulk operation with an elastic table will not rollback the entire request. It is possible for the operation to succeed and you can detect any failures.
+## Exception handling for elastic tables
+
+Unlike standard tables, an error within a bulk operation with an elastic table doesn't roll back the entire request. It's possible for the operation to succeed and you can detect any failures.
 
 
-When using the SDK, a [FaultException](xref:System.ServiceModel.FaultException%601) of type [OrganizationServiceFault](xref:Microsoft.Xrm.Sdk.OrganizationServiceFault) will be thrown in the case of a failure. You can get the status of each record using the code below.
+When you use the SDK, a [FaultException](xref:System.ServiceModel.FaultException%601) of type [OrganizationServiceFault](xref:Microsoft.Xrm.Sdk.OrganizationServiceFault) is thrown if a failure occurs. You can get the status of each record using the following code.
 
 ```csharp
 if (ex.Detail.ErrorDetails.TryGetValue("Plugin.BulkApiErrorDetails", out object errorDetails))
