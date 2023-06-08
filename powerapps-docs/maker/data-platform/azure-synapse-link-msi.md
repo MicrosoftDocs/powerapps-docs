@@ -6,7 +6,7 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 05/08/2023
+ms.date: 06/08/2023
 ms.custom: template-how-to 
 ---
 # Use managed identities for Azure with your Azure data lake storage
@@ -17,7 +17,7 @@ Managed identities for Azure, formerly know as Managed Service Identity (MSI), h
 
 With managed identities, access to your storage account is restricted to requests originating from the Dataverse environment associated with your tenant. When Dataverse connects to storage on behalf of you, it includes additional context information to prove that the request originates from a secure, trusted environment. This allows storage to grant Dataverse access to your storage account. Managed identities are used to sign the context information in order to establish trust. This adds application-level security in addition to the network and infrastructure security provided by Azure for connections between Azure services.
 
-## Before we start
+## Before you start
 
 - Azure CLI is required on your local machine. [Download and install](https://aka.ms/InstallAzureCliWindows)
 - You need these two PowerShell modules. If you don't have them, open PowerShell and run these commands:
@@ -26,22 +26,23 @@ With managed identities, access to your storage account is restricted to request
 - Go to this [compressed folder file on GitHub](https://github.com/Mattp123/PowerApps-Samples/blob/patch-1/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. **All files and folders extracted from a compressed folder should be preserved in their original location.**
 - We recommend that you create a new storage container under the same Azure resource group to onboard this feature.
 
+## Enable enterprise policy for the selected Azure subscription
 
-## Enable enterprise policy for the selected Azure SAubscription
-> [!Prerequisite]
-> You must have **Azure subscription Owner** role access to enable enterprise policy for the selected Azure SAubscription.
-> Obtain your Azure **Subscription ID** from the overview page for the Azure resource group.
+> [!IMPORTANT]
+>
+> - You must have **Azure subscription Owner** role access to complete this task.
+> - Obtain your Azure **Subscription ID** from the overview page for the Azure resource group.
 
 1. Open Azure CLI with run as administrator and sign into your Azure subscription using the command: `az login`  More information: [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
 1. (Optional) if you have multiple Azure subscriptions, make sure to run `Update-AzConfig -DefaultSubscriptionForLogin { Azure subscription id }` to update your default subscription.
-1. Expand the compressed folder you downloaded as part of the [Before we start](#Before we start) for this feature to a location where you can run PowerShell.
+1. Expand the compressed folder you downloaded as part of the [Before you start](#before-you-start) for this feature to a location where you can run PowerShell.
 1. To enable the enterprise policy for the selected Azure subscription, run the PowerShell script **./SetupSubscriptionForPowerPlatform.ps1**.
    1. Provide the Azure subscription ID.
 
-
 ## Create enterprise policy
-> [!Prerequisite]
-> You must have **Azure resource group Owner** role access to create enterprise policy.
+
+> [!IMPORTANT]
+> You must have **Azure resource group Owner** role access to complete this task.
 > Obtain your Azure **Subscription ID**, **Location**, and **Resource group** name, from the overview page for the Azure resource group.
 
 1. Create the enterprise policy. Run PowerShell script `./CreateIdentityEnterprisePolicy.ps1`
@@ -52,8 +53,9 @@ With managed identities, access to your storage account is restricted to request
    - Provide the Azure resource group location.
 1. Save the copy of the **ResourceId** after policy creation.
 
-> [!Note]
+> [!NOTE]
 > The following are the valid **location** inputs supported for policy creation. Select the location that's most appropriate for you.
+
 ### Locations available for enterprise policy
 
 :::row:::
@@ -118,12 +120,13 @@ With managed identities, access to your storage account is restricted to request
 :::row-end:::
 
 ## Grant reader access to the enterprise policy via Azure
-> [!Prerequisite]
-> You must have **Azure resource group Owner** or **Azure key vault administrator** role access to grant reader access to the enterprise policy via Azure.
 
 Azure global admins, Dynamics 365 admins, and Power Platform admins can access the Power Platform admin center to assign environments to the enterprise policy. To access the enterprise policies, the global or Azure Key vault admin is required to grant the **Reader role** to the Dynamics 365 or Power Platform admin. Once the reader role is granted, the Dynamics 365 or Power Platform admins will see the enterprise policies on the Power Platform admin center.
 
 Only the Dynamics 365 and Power Platform admins who were granted the reader role to the enterprise policy can ‘add environment’ to the policy. Other Dynamics 365 and PowerPlatform admins might be able to view the enterprise policy, but they'll get an error when they try to add environment.
+
+> [!IMPORTANT]
+> You must have **Azure resource group Owner** or **Azure key vault administrator** role access to complete this task.
 
 1. Sign into the [Azure portal](https://portal.azure.com/).
 1. Obtain the Dynamics 365 Power Platform admin user’s **ObjectID**.
@@ -140,9 +143,11 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
    - `New-AzRoleAssignment -ObjectId <objId> -RoleDefinitionName Reader -Scope <EP Resource Id>`
 
 ## Connect enterprise policy to Dataverse environment
-> [!Prerequisite]
-> You must have **Power platform administrator** or **Dynamics 365 administrator** role to connect enterprise policy to Dataverse environment.
-> You must have **Reader** role of the enterprise policy to connect connect enterprise policy to Dataverse environment.
+
+> [!IMPORTANT]
+>
+> - You must have the **Power Platform administrator** or **Dynamics 365 administrator** role to complete this task.
+> - You must have the **Reader** role for the enterprise policy to complete this task.
 
 1. Obtain the Dataverse environment ID.
    1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
@@ -156,10 +161,10 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 1. Select **Environments**, and then open the environment you specified earlier.
 1. In the **Recent operations** area, select **Full history** to validate the connection of the new identity.
 
-
 ## Configure network access to the Azure Data Lake Storage Gen2
-> [!Prerequisite]
-> You must have an Azure Data Lake Storage Gen2 **Owner** role to connect enterprise policy to Dataverse environment.
+
+> [!IMPORTANT]
+> You must have an Azure Data Lake Storage Gen2 **Owner** role to complete this task.
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Open the storage account connected to your Azure Synapse Link for Dataverse profile.
@@ -170,8 +175,9 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 1. Select **Save**.
 
 ## Configure network access to the Azure Synapse Workspace
-> [!Prerequisite]
-> You must have an Azure Synapse workspace **Synapse workspace** role to connect enterprise policy to Dataverse environment.
+
+> [!IMPORTANT]
+> You must have an Azure Synapse workspace **Synapse workspace** role to complete this task.
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Open the Azure Synapse workspace connected to your Azure Synapse Link for Dataverse profile.
@@ -185,13 +191,13 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 
 :::image type="content" source="media/synapse-workspace-network-settings.png" alt-text="Azure Synapse workspace network settings":::
 
-
 ## Create Azure Synapse Link for Dataverse with managed identity
 
-> [!Prerequisite]
-> Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
-> Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
-> Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account with **allowAll** IP addresses access rule. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
+> [!IMPORTANT]
+>
+> - Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+> - Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
+> - Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account with **allowAll** IP addresses access rule. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
 
 When you create the link, Azure Synapse Link for Dataverse gets details about the currently linked enterprise policy under the Dataverse environment then caches the identity client secret URL to connect to Azure.
 
