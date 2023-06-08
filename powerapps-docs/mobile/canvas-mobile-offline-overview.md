@@ -25,7 +25,7 @@ You can easily enable canvas apps that are based on Dataverse for [offline-first
 Basic offline-first apps are easy to build. There is no need to use [PowerFx’s SaveData or LoadData functions](/power-platform/power-fx/reference/function-savedata-loaddata) or manage offline data with complex, collection schemes in PowerFx. Just build your app with normal [Power Fx formulas](/power-platform/power-fx/formula-reference) and the offline features handle all the complexity for you. 
 
 > [!Important]
-> This offline-first feature currently only works with Dataverse tables. The following list enumerates the commonly delegated Power Fx functions not yet supported for offline-first.  This list is not exhaustive. Delegation support for these functions is under active development.  Check back with this list for the most current information. The functions are listed in alphbetical order.
+> This offline-first feature currently only works with Dataverse tables. The following list enumerates the commonly delegated Power Fx functions not yet supported for offline-first. This list is not exhaustive. Delegation support for these functions is under active development. Check back with this list for the most current information. The functions are listed in alphbetical order.
 > * CountRows 
 > * Filter/Lookup on Lookup field 
 > * First 
