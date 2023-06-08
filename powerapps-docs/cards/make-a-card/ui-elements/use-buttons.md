@@ -28,7 +28,7 @@ Buttons can do one of four things:
 
 ## Insert a button
 
-1. Sign in to [Power Apps](https://powerapps.microsoft.com/) and then select **Cards**. [!INCLUDE [left-navigation-pane](../includes/left-navigation-pane.md)]
+1. Sign in to [Power Apps](https://powerapps.microsoft.com/) and then select **Cards**. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)]
 
 1. In the left pane of the card designer, select **Insert**.
 
