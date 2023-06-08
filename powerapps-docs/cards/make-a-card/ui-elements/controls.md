@@ -27,7 +27,7 @@ There are three categories of controls that you can add to your card:
 
 ## Insert a control
 
-1. To get started, sign in to [Power Apps](https://make.powerapps.com) and then select **Cards**. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)]
+1. To get started, sign in to [Power Apps](https://make.powerapps.com) and then select **Cards**. If the item isn’t in the left navigation pane, select **More** and then select the item you want.
 
 
 1. Select **Create a card**. 
