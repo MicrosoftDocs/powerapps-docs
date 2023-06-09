@@ -24,7 +24,7 @@ A more manual process of writing, registering, and debugging a plug-in is:
 
 1. Create a .NET Framework class library project in Visual Studio
 1. Add the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to the project
-1. Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface on classes that will be registered as steps.
+1. Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface on classes to be registered on plug-in steps.
 1. Add your code to the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method required by the interface
     1. Get references to services you need
     1. Add your custom business logic
@@ -44,7 +44,7 @@ This topic describes how to register a plug-in assembly and step, and add them t
 
 ## Plug-in Registration tool (PRT)
 
-You'll use the Plug-in Registration tool (PRT) to register your plug-in assemblies and steps.
+You use the Plug-in Registration tool (PRT) to register your plug-in assemblies and steps.
 
 PRT is one of the tools available for download from NuGet. Follow the instructions in [Dataverse development tools](download-tools-nuget.md). That topic includes Power Platform CLI instructions to download PRT and other development tools from NuGet.
 
@@ -146,16 +146,16 @@ When you select the plug-in assembly you added, you can view the plug-in classes
 
 ## Register plug-in step
 
-When an assembly is loaded or updated, any classes that implement <xref:Microsoft.Xrm.Sdk.IPlugin> will be available in the PRT. Use the instructions in [Register a new step](tutorial-write-plug-in.md#register-a-new-step) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to create a new step registration.
+When an assembly is loaded or updated, any classes that implement <xref:Microsoft.Xrm.Sdk.IPlugin> are made available in the PRT. Use the instructions in [Register a new step](tutorial-write-plug-in.md#register-a-new-step) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to create a new step registration.
 
-When you register a step, there are many options available to you, which depend on the stage of the event pipeline and the nature of the operation you'll register your code to respond to.
+When you register a step, there are a number of registration options available to you depending on the stage of the event pipeline and the type of operation you intend to register your code on.
 
 ### General Configuration Information Fields
 
 |Field|Description|
 |--|--|
-|**Message**|PRT will auto-complete available message names in the system. More information: [Use messages with the Organization service](org-service/use-messages.md)|
-|**Primary Entity**|PRT will auto-complete valid tables that apply to the selected message. These messages have a `Target` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid tables apply, you should set this when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core table messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the tables that support this message.|
+|**Message**|PRT auto-completes available message names in the system. More information: [Use messages with the Organization service](org-service/use-messages.md)|
+|**Primary Entity**|PRT auto-completes valid tables that apply to the selected message. These messages have a `Target` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid tables apply, you should set this field value when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core table messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the tables that support this message.|
 |**Secondary Entity**|This field remains for backward compatibility for deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> as the `Target` parameter. This field is typically not used anymore.|
 |**Filtering Attributes**|With the `Update` or `OnExternalUpdated` message, when you set the **Primary Entity**, filtering columns limits the execution of the plug-in to cases where the selected columns are included in the update. This is a best practice for performance. |
 |**Event Handler**|This value will be populated based on the name of the assembly and the plug-in class. |
