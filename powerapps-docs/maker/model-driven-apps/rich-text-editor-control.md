@@ -112,7 +112,7 @@ A rich text-enabled column has a limited set of configuration that can be config
 
 ## Rich text editor properties
 
-The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
+The JSON file is composed of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
 
 The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. More information: [Visualization of the rich text editor configuration file](#visualization-of-the-rich-text-editor-configuration-file). The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for more plug-ins that you add or create. More information about CKEditor plug-ins: [Plug-ins available](https://ckeditor.com/cke4/addons/plugins/all)
 
@@ -136,7 +136,7 @@ More information: [Individual configuration settings](#individual-configuration-
 
 ### defaultSupportedProps
 
-You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html). The rich text editor currently uses CKEditor version 4.17.1.
+You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described in the table. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html). The rich text editor currently uses CKEditor version 4.17.1.
 
 
 <table>
@@ -219,7 +219,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  The location of the user interface where the toolbar will be rendered. Supported values are *top* and *bottom*. The default is bottom.
+  The location of the user interface where the toolbar renders. Supported values are *top* and *bottom*. The default is bottom.
 </td>
 <td>
 
@@ -486,7 +486,7 @@ Default:
 
 <td>
 
-  Setting this property to true disables images. This property has highest priority. This means that when this property is set to true, irrespective of the imageEntity property value, images are disabled. By default, images are enabled.
+  Setting this property to true disables images. This property has highest priority. When this property is set to true, regardless of the imageEntity property value, images are disabled. By default, images are enabled.
 </td>
 <td>
 
