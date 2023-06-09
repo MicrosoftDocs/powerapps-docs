@@ -93,6 +93,8 @@ Consider the following when using the rich text editor:
 
 - By default, the rich text editor uploads images to the Azure Blob storage store and they won’t be stored as part of the field. Images are stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64.
 
+-  If you have a system administrator or basic user role, the User Personalizatoin feature works by default. If you do not have these roles, you must have Create, Read, and Write privileges added to the msdyn_customcontrolextendedsettings entity for the plugin to work.
+
 ## How configuration is applied to the rich text editor
 
 The experience and capabilities of the rich text editor are controlled with configuration. The default configuration for the rich text editor control has property and values that are intended to meet normal rich text needs but they can be adjusted. Configuration properties and values can be applied to a specific rich text editor control instance. There can be up to three levels of configuration that can be applied to each rich text editor instance. The logic used for applying properties and values are as follows:
