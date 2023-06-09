@@ -89,11 +89,11 @@ Consider the following when using the rich text editor:
 
 - The best performance is achieved when the HTML content size is 1 MB or less. When your HTML content size exceeds 1 MB, you may notice slower response times for loading and editing content. By default, image content is referenced from the content HTML but isn't stored as part of the HTML content, so in the default configuration, images don't negatively impact performance. 
 
-- Rich text fields will store HTML tags, which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
+- Rich text fields stores HTML tags, which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
 
-- By default, the rich text editor uploads images to the Azure Blob storage store and they won’t be stored as part of the field. Images are stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64.
+- By default, the rich text editor uploads images to the Azure Blob storage store and isn't stored as part of the field. Images are stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64.
 
--  If you have a system administrator or basic user role, the User Personalizatoin feature works by default. If you do not have these roles, you must have Create, Read, and Write privileges added to the msdyn_customcontrolextendedsettings entity for the plugin to work.
+-  If you have a System Administrator or Basic User security role, the User Personalization feature works by default. If you don't have these roles, you must have Create, Read, and Write privileges added to the msdyn_customcontrolextendedsettings entity for the plugin to work.
 
 ## How configuration is applied to the rich text editor
 
