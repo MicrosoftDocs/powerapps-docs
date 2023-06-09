@@ -600,7 +600,7 @@ Power platform administrators can restrict the file size of attachments users ca
 1.	Go to **Advanced Settings**, and then on the Settings menu, select System > Administration.
 1.	On the **Administration page**, select **System Settings**.
 1.	On the **System Settings** dialog, select the **Email** tab, and then scroll down to find the **Set file size limit for attachments** value.
-1.	Enter the desired size limit for attachments, and then select **Save**. Please note 131072 KB is the maximum allowed value. 
+1.	Enter the desired size limit for attachments, and then select **Save**. 131072 KB is the maximum allowed value.
 
 ## Known issues
   
