@@ -50,8 +50,6 @@ To create an app by connecting to Excel, see [Connect to Excel from Power Apps](
 
 
 ### Known issues
-- The decimal, float, and currency values are currently restricted to two decimal places
-- Negative float values are currently not accepted as valid values.
 - The current data upload process doesn't take into account the environment data format setting.
 
 
