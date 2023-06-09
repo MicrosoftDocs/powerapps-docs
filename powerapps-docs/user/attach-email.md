@@ -5,7 +5,7 @@ author: mduelae
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 6/30/2021
+ms.date: 06/09/2023
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -17,18 +17,10 @@ search.audienceType:
 
 # Attach a file to email
 
-Having the ability to attach file(s) to a message is one of the most useful features of email. You can attach a file using one of the two ways:
+The option to attach files to an email is a useful feature when you need to share additional information. Use the **Attach file** button on the command menu or the **New Attachments** button in the email body to attach files to the email.
 
-   ![How to attach a file to email.](media\email-how-to-attach-file-to-email-1a.png "How to attach a file to email")
-
-   1. **Attach file**. Located in the top nav bar, **Attach file** allows you to do file attachments.
-   2. **New Attachments**. Located above the rich text editor, the **New Attachments** ![New Attachments.](media\email-new-attachment-icon.png "new attachment") icon allows you to use drag-and-drop or copy-and-paste functionality. 
-
-      > [!Note] 
-      > Once you save your email, you can use **Attach file** and **New Attachments** interchangeably.
-
-      > [!Important] 
-      > The default file size limit for an email file attachment is 5MB. The size limitations on email file attachments can be increased by your system administrators. 
+  > [!Important] 
+  > The default file size limit for an email file attachment is 5MB. The size limitations on email file attachments can be increased by your system administrators. 
 
 ## Work with attachments
 
