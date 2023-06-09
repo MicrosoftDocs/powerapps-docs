@@ -290,9 +290,12 @@ Plug-in assemblies can be versioned using a semantic versioning format of `major
   When an updated solution containing the revised assembly is imported, the assembly is considered a different assembly than the previous version of that assembly in the existing solution. Plug-in registration steps in the existing solution will continue to refer to the previous version of the assembly. If you want existing plug-in registration steps for the previous assembly to point to the revised assembly, you'll need to use the Plug-in Registration tool to manually change the step configuration to refer to the revised assembly type. This should be done before exporting the updated assembly into a solution for later import.
 
 
-## Unregister or disable plug-in components
+## Unregister or disable plug-ins and components
 
-You can unregister or disable plug-in components.
+You can unregister or disable plug-ins and their components using the Plug-in Registration tool (PRT).
+
+> [!IMPORTANT]
+> It is no longer possible to unregister or disable Microsoft or out-of-box system plug-ins and steps. Previously, you were able to unregister or disable some of the Microsoft.* and other out-of-box system plug-ins. We have changed this behavior to no longer allow this. The change in functionality was made because unregistering or disabling these plug-ins or steps can cause product features not to work as expected. If you have a need to unregister or disable such a plug-in or step, file a Microsoft support request.
 
 ### Unregister components
 
@@ -305,7 +308,7 @@ You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** 
 ![Deleting step in solution explorer.](media/delete-sdk-message-processing-step.png)
 
 > [!NOTE]
-> You cannot delete any **Plug-in Assemblies** while existing **Sdk Message Processing Steps** depend on them. Entity images are not available to be deleted separately, but they will be deleted when any steps that use them are deleted.
+> You cannot delete (unregister) any **Plug-in Assemblies** while existing **Sdk Message Processing Steps** depend on them. Entity images are not available to be deleted separately, but they will be deleted when any steps that use them are deleted.
 
 ### Disable steps
 
