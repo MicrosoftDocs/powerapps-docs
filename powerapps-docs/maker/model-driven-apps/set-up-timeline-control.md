@@ -595,12 +595,12 @@ Power platform administrators can configure the file types that are blocked from
 Power platform administrators can restrict the file size of attachments users can upload in the rich text editor.
 
 > [!NOTE]
-> File sizes for attachments generally can be any size under 128 MB, but for optimal system performance, smaller file sizes are recommended.
+> File sizes for attachments generally can be any size under 90 MB, but for optimal system performance, smaller file sizes are recommended.
 
 1.	Go to **Advanced Settings**, and then on the Settings menu, select System > Administration.
 1.	On the **Administration page**, select **System Settings**.
 1.	On the **System Settings** dialog, select the **Email** tab, and then scroll down to find the **Set file size limit for attachments** value.
-1.	Enter the desired size limit for attachments, and then select **Save**.
+1.	Enter the desired size limit for attachments, and then select **Save**. Please note 131072 KB is the maximum allowed value. 
 
 ## Known issues
   
