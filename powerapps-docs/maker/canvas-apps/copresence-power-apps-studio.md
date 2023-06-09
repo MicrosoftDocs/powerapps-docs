@@ -5,7 +5,7 @@ author: mkaur
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 05/08/2023
+ms.date: 06/09/2023
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -25,7 +25,10 @@ Use copresence to identify individuals working on the same app as you in Power A
 Legend
 
 1. The command bar displays the names and icons of other makers who are working on the app and may be making changes. 
-2. The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being worked on. You'll receive a notification to refresh the app when the maker that's editing the app makes changes and saves that app.
+2. The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being worked on. You receive a notification to refresh the app when the maker that's editing the app makes changes and saves that app.
+
+> [!NOTE]
+> This feature is in the process of rolling out, and might not be available in your region yet.
 
 ## How copresence works
 
@@ -35,4 +38,4 @@ The maker that opens the app first has editing control. If a second user tries t
 
 Icons of copresent makers appear in both the command bar and the left navigation pane showing where other makers are working in the app.
 
-You may be working on the app, or you may be idle, but once someone else saves a change to the app, you receive a notification letting you know that another maker made changes. When this happens, you're advised to refresh the app to get latest version.
+You may be working on the app, or you may be idle, but once someone else saves a change to the app, you receive a notification letting you know that another maker made changes. When you see this notification, consider refreshing the app to get the latest version.
