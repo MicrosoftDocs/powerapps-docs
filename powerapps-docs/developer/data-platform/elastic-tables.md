@@ -2,7 +2,7 @@
 title: "Elastic tables for developers (preview)"
 description: "Provides information to developers about Dataverse elastic tables and how to use elastic tables using code."
 ms.topic: article
-ms.date: 05/27/2023
+ms.date: 06/10/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -71,7 +71,7 @@ For all elastic tables, the `partitionid` column should:
 - Have a high cardinality value. In other words, the property should have a wide range of possible values. Each logical partition can store 20 GB of data. So, choosing a `partitionid` with a wide range of possible values ensures that the table can scale without reaching limits for any specific logical partition.
 - Spread data as evenly as possible between all logical partitions.
 - Have values that are no larger than 1024 bytes.
-- Not contain values with the following characters that are not supported for alternate keys: `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+`.
+- Not contain values with the following characters that aren't supported for alternate keys: `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+`.
 
 When `partitionid` isn't specified for a row, Dataverse uses the primary key value as the default `partitionid` value. For write-heavy tables of any size, or for cases where rows are mostly retrieved using the primary key, the primary key is naturally a great choice for the `partitionid` column.
 
@@ -81,7 +81,7 @@ Elastic table supports strong consistency within a logical session. A logical se
 
 With session tokens, all the read operations performed within the same logical session context return the most recent write made within that logical session. In other words, reads are guaranteed to honor the *read-your-writes*, and *write-follows-reads* guarantees within a logical session. If a different logical session performs a write operation, other logical sessions may not see those changes immediately.
 
-You'll find the session token as a `x-ms-session-token` value in the response of all write operations.  You need to include this value when you retrieve data to retrieve the most up-to-date row.
+Find the session token as a `x-ms-session-token` value in the response of all write operations.  You need to include this value when you retrieve data to retrieve the most up-to-date row.
 
 - With the SDK, use the `SessionToken` optional parameter.
 - With Web API, use the `MSCRM.SessionToken` request header
@@ -94,11 +94,11 @@ More information: [Work with Session token](use-elastic-tables.md#work-with-sess
 
 Elastic tables don't support multi-record transactions. For a single request execution, multiple write operations happening in same or different synchronous plugin stages aren't transactional with each other.
 
-For example, if you have a synchronous plug-in step registered on the `PostOperation` stage of the `Create` message on an elastic table, any error in your plug-in <u>won't</u> roll back the created record in Dataverse. You should always avoid intentionally canceling any operation by throwing a [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException) in the `PreOperation` or `PostOperation` synchronous stages. If the error is thrown after the `Main` operation, the request will return an error, but the data operation will succeed. If any write operations are started in the `PreOperation` stage, they'll also succeed.
+For example, if you have a synchronous plug-in step registered on the `PostOperation` stage of the `Create` message on an elastic table, any error in your plug-in <u>won't</u> roll back the created record in Dataverse. You should always avoid intentionally canceling any operation by throwing a [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException) in the `PreOperation` or `PostOperation` synchronous stages. If the error is thrown after the `Main` operation, the request will return an error, but the data operation will succeed. If any write operations are started in the `PreOperation` stage, they'll succeed.
 
 However, you should always apply validation rules in a plug-in registered for the `PreValidation` synchronous stage. Validation is the purpose of this stage. Even with elastic tables, the request returns an error and the data operation won't begin. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline)
 
-Elastic tables also don't support grouping requests in a single database transaction using the SDK [ExecuteTransactionRequest](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) class or in a Web API `$batch` operation change set. Currently, these operations succeed but aren't atomic. In the future, an error will be thrown.  
+Elastic tables also don't support grouping requests in a single database transaction using the SDK [ExecuteTransactionRequest](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) class or in a Web API `$batch` operation change set. Currently, these operations succeed but aren't atomic. In the future, an error is thrown.  
 
 More information:
 
@@ -111,7 +111,7 @@ More information:
 
 Dataverse automatically creates an integer column with the name **Time to live**, schema name `TTLInSeconds` and logical name `ttlinseconds`.
 
-When a value is set to this column, it defines the time in seconds after which the row will expire and get deleted from database automatically. If no value is set, the record persists indefinitely, just like standard tables.
+When a value is set to this column, it defines the time in seconds after which the row will expire and be deleted from database automatically. If no value is set, the record persists indefinitely, just like standard tables.
 
 ## Scenario
 

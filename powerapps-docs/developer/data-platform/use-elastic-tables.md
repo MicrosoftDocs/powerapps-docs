@@ -25,7 +25,7 @@ As mentioned in [Consistency level](elastic-tables.md#consistency-level), you ca
 
 ### Getting the session token
 
-You'll find the session token as `x-ms-session-token` value in the response of all write operations.
+Find the session token as `x-ms-session-token` value in the response of all write operations.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -537,7 +537,7 @@ However, elastic tables support returning related rows when retrieving a single 
 > [!IMPORTANT]
 > Upsert operations with elastic tables are different than with standard tables. Upsert operations are expected to contain the full payload and will over-write any existing record data. Upsert operations will not call the Create or Update messages. More information:  [Use Upsert to Create or Update a record > Elastic table upsert](use-upsert-insert-update-record.md#elastic-table-upsert)
 
-With elastic tables, if a record with a given ID and `partitionid` doesn't exist, it will be created. If it already exists, it is replaced.
+With elastic tables, if a record with a given ID and `partitionid` doesn't exist, it's created. If it already exists, it's replaced.
 
 #### [SDK for .NET](#tab/sdk)
 

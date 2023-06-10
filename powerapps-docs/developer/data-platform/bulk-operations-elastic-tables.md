@@ -18,13 +18,13 @@ Often applications need to ingest large amount of data into Dataverse in a short
 
 Bulk operations are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. For elastic tables, we recommend sending 100 items in a batch. Multiple bulk operation can be run in parallel to achieve high throughput. More information [Send parallel requests](send-parallel-requests.md)
 
-Elastic tables currently supports following messages for bulk operations:
+Elastic tables currently support the following messages for bulk operations:
 
 - `CreateMultiple`
 - `UpdateMultiple`
 - `DeleteMultiple`
 
-Support for `UpsertMultiple` message will be coming soon. Also, these messages are currently supported only using the SDK for .NET.
+These messages are currently supported only using the SDK for .NET. Support for the `UpsertMultiple` message is coming soon.
 
 > [!NOTE]
 > `CreateMultiple` and `UpdateMultiple` are also available for standard tables. More information: [Use CreateMultiple and UpdateMultiple (preview)](org-service/use-createmultiple-updatemultiple.md)
