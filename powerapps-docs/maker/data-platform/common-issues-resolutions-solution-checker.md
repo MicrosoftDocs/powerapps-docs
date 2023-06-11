@@ -256,10 +256,6 @@ The workaround is to create smaller solutions with fewer components to be analyz
 
 When HTML web resources are processed within solution checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource will not be correct.
 
-## Web-avoid-eval error for Power Apps component framework code components
-
-If a web-avoid-eval error is reported for a Power Apps component framework code component created using CLI tooling, package your control with `msbuild /p:configuration=Release` or `npm run build -- --buildMode production` to produce a release build that does not include 'eval' usage.
-
 ## Web-unsupported-syntax issue for web resources
 
 Solution checker supports global variables for ECMAScript 2015 (ES6) and up to ECMAScript 2018 (ES9) syntax. When solution checker analyzes JavaScript using global variables later than ES6, or syntax later than ES9, a web-unsupported-syntax issue for the web resource is reported.  
@@ -274,7 +270,9 @@ The solution checker will list the number of the errors found in the app, *inclu
 
 ## Solution Checker violations reported for code components
 
-Solution Checker reports multiple violation when run on the solution which has code components built in debug mode. Solution checker is targeted to validate code for production use, thus code components must be build using proper buildMode: `npm run build -- --buildMode production or msbuild /p:configuration=Release` depending on your building system. More information [Create and build a code component](../../developer/component-framework/create-custom-controls-using-pcf.md).
+Solution Checker reports multiple violations when run on the solution which has code components built in debug mode. One common error that occurs in debug mode is `web-avoid-eval`. Solution checker is targeted to validate code for production use, thus code components must be build using proper buildMode: `npm run build -- --buildMode production` or `msbuild /p:configuration=Release` depending on your building system. More information [Create and build a code component](../../developer/component-framework/create-custom-controls-using-pcf.md).
+
+If there are errors occurring in `bundle.js` introduced by code components, you may exclude this file from analysis. See documentation for [Microsoft.PowerApps.Checker.PowerShell module](/powershell/module/Microsoft.PowerApps.Checker.PowerShell/invoke-powerappschecker?view=pa-ps-latest#-excludedfilenamepattern) and [PAC CLI](/power-platform/developer/cli/reference/solution#--excludedfiles--ef)
 
 ## See also
 
