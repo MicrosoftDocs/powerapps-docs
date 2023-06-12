@@ -2,19 +2,14 @@
 title: "Use Power Fx in custom page for your model-driven app" 
 description: "This article outlines how the common Microsoft Power FX functions work within a custom page."
 ms.custom: ""
-ms.date: 12/04/2022
+ms.date: 02/03/2023
 ms.reviewer: ""
-
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "aorth"
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Use Power Fx in a custom page for your model-driven app
 
@@ -64,6 +59,9 @@ To navigate to the default view of the table, pass table name as the first param
 ```powerapps-dot
 Navigate( Accounts )
 ```
+
+> [!IMPORTANT]
+> Make sure you add the accounts Microsoft Dataverse table to the custom page before publishing and testing.
 
 ### Navigate to specific system view of the table
 

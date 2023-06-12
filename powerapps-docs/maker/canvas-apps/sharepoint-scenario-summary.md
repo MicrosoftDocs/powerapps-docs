@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - navjotm
@@ -159,7 +157,7 @@ We have covered a huge amount of ground in this series of tutorials, from buildi
 That brings us to the conclusion of our end-to-end walkthrough and this series of tutorials. We encourage you to continue your journey at the following sites:
 
 * [Power Apps](https://www.powerapps.com/)
-* [Power Automate](https://flow.microsoft.com)
+* [Power Automate](https://make.powerautomate.com)
 * [Power BI](https://www.powerbi.com)
 * [Power Users Community](https://powerusers.microsoft.com/)
 * [SharePoint](https://sharepoint.microsoft.com)

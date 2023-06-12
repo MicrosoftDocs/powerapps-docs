@@ -1,18 +1,16 @@
 ---
 title: Component library application lifecycle management (ALM)
 description: Learn about the application lifecycle management (ALM) with component libraries
-author: hemantgaur
+author: jorisdg
 ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 06/10/2022
-ms.author: hemantg
+ms.author: jorisde
 ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - hemantgaur
+  - jorisdg
   - mduelae
 ---
 

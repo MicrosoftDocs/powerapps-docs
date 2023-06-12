@@ -8,9 +8,6 @@ ms.reviewer: jdaly
 ms.topic: article
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke
@@ -46,7 +43,7 @@ You can also mitigate the liklihood of this error occurring by sending your requ
 
 When you make a connection to a service on Azure a cookie is returned with the response and all your subsequent requests will attempt to be routed to the same server unless capacity management forces it to go to another server. Interactive client applications, especially browser clients, benefit from this because it allows for re-using data cached on the server. Web browsers always have server affinity enabled and it cannot be disabled.
 
-When sending requests in parallel from your client applcation, you can gain performance benefits by disabling this cookie. Each request you send will be routed any of the eligible servers. Not only does this increase total throughput, it also helps reduce impact of service protection limits because each limit is applied per server.
+When sending requests in parallel from your client application, you can gain performance benefits by disabling this cookie. Each request you send will be routed any of the eligible servers. Not only does this increase total throughput, it also helps reduce impact of service protection limits because each limit is applied per server.
 
 Following are some examples showing how to disable server affinity with .NET.
 

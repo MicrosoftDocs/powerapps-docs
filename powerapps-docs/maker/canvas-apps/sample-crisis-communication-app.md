@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: mabolan
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - matthewbolanos
@@ -94,7 +92,7 @@ The app uses multiple lists to store its data. You can use the DeploySPLists flo
 
 #### Import the list deployment flow
 
-1. Go to [flow.microsoft.com](https://flow.microsoft.com).
+1. Go to [make.powerautomate.com](https://make.powerautomate.com).
 1. Select **My flows** from the left navigation pane.
 1. Select **Import** on the command bar.
 1. Upload the **DeploySPLists.zip** package from the GitHub repository.
@@ -399,7 +397,7 @@ and bring it into your flow. More information about creating a Teams team: [Crea
    
    `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`,
 
-1. Go to [flow.microsoft.com](https://flow.microsoft.com).
+1. Go to [make.powerautomate.com](https://make.powerautomate.com).
 
 1. Select **My flows** from the left navigation pane.
 
@@ -638,7 +636,7 @@ The app uses a flow to send notifications to end users whenever there is a new c
 
 ### Import the news notification flow
 
-1. Go to [flow.microsoft.com](https://flow.microsoft.com).
+1. Go to [make.powerautomate.com](https://make.powerautomate.com).
 1. Select **My flows** from the left navigation pane.
 1. Select **Import** on the command bar.
 1. Upload the **CrisisCommunicationNewsNotification.zip** package from the GitHub repository.

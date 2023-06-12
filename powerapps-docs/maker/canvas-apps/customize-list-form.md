@@ -9,16 +9,13 @@ ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - Steven-Jia
   - mduelae
   - wimcoor
   - alaug
-ms.custom:
-  - intro-internal
-  - canvas
+ms.custom: canvas
+ms.collection: get-started
 ---
 # Customize a Microsoft Lists or SharePoint form by using Power Apps
 

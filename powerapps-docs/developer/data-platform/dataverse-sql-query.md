@@ -1,31 +1,26 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 09/06/2022
-ms.reviewer: "pehecke"
 
+ms.date: 05/18/2023
+ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "RichdiMSFT" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "richdi" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Use SQL to query data
 
-[This topic is pre-release documentation and is subject to change. Note that only the SQL data connection is in preview. Power BI is General Availability (GA)]
+[This topic is pre-release documentation and is subject to change. Note that only the SQL data connection through SQL Server Management Studio and .NET libraries is in preview. Power BI is General Availability (GA)]
 
-The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
+The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access.
 
 ## Prerequisites
 
-The **Enable TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
+The **Enable TDS endpoint** setting must be enabled in your environment. It is enabled by default. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 ## Applications support
 
@@ -34,10 +29,10 @@ TDS (SQL) endpoint applications support for Power BI and SQL Server Management S
 ### SQL Server Management Studio (Preview)
 
 > [!NOTE]
-> A compatibility issue has been found with the SQL Server Management Studio 18.9.2 build. A fix is being investigated. Until the fix is available please use build [18.9.1 of SQL Server Management Studio](/sql/ssms/release-notes-ssms?view=sql-server-ver15#1891).
+> A compatibility issue has been found with the SQL Server Management Studio 19.0.1 build. A fix is being investigated. Until the fix is available please use build [18.12.1 of SQL Server Management Studio](/sql/ssms/release-notes-ssms?view=sql-server-ver15#1891).
 > This note will be updated once a fix is available.
 
-You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
+You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.12.1 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
 
 ![Expanded account table.](media/ssms-table-expanded.PNG)
 
@@ -101,10 +96,32 @@ Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label i
 >[!TIP]
 > After making changes to labels for a choice column, the table needs to have customizations published. 
 
+> [!NOTE]
+> Including a large number of choice lables in your query will have significant impact on performance. It is best to use less than 10 labels if possible. Because choice lables are localized, the localized string is more expensive to return. 
+
 ### Reported SQL version
 The Dataverse TDS endpoint emulates Microsoft SQL Server read-only query capabilities over the Dataverse business logic. Dataverse returns the current SQL Azure version 12.0.2000.8 for `select @@version`.
 
+## Performance guidance
 
+When retrieving data through through the TDS endpoint, there are a few key query patterns that should be used. Described below, these query patterns will manage performance and size of result sets.
+
+### Only necessary columns
+
+When building a query, only return the necessary columns. This helps both execution of the query and also transferring the results back to the client application. In general keeping a query under 100 columns is recommended. 
+
+### Choice columns
+
+Choice columns have been flattened into two columns which helps usability. However, it is important to do any aggregates and filters against the value portion of the choice column. The value portion can have indexes and is stored in the base table. However, the label portion ('choicecolumn' name) is stored separately which cost more to retrieve and can't be indexed. Using a significant number of choice label columns may generate a very slow query. 
+
+### Use Top X
+
+It is very important to use a top clause in your queries to prevent trying to return the whole table of data. For example, use `Select Top 1000 accountid,name From account Where revenue > 50000` limits the results to the first 1000 accounts. 
+
+### Do not use NOLOCK
+
+When building queries do not use the table hint NOLOCK. This will prevent Dataverse from optimizing queries. 
+  
 ## Limitations
 
 There is an 80-MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Azure Synapse Link for Dataverse](../../maker/data-platform/export-to-data-lake.md) and [dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80 MB of data. More information: [Importing and exporting data](../../maker/data-platform/import-export-data.md)
@@ -117,6 +134,8 @@ Dates returned in query results are formatted as Universal Time Coordinated (UTC
 Querying data using SQL does not trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any rewriting of the query or results that would normally be performed by such a plug-in will therefore not take effect for a SQL query.
 
 Queries using the TDS endpoint execute under the service protection API limits.
+
+The TDS endpoint can't be used with elastic tables. More information: [Elastic tables (Preview)](elastic-tables.md)
 
 ## Troubleshooting connection problems
 
@@ -131,21 +150,21 @@ Only Azure Active Directory authentication is supported on the Dataverse endpoin
 
 - Error returned when using **Azure Active Directory – Integrated** authentication.
 
-“Login failed: The HTTP request was forbidden with client authentication scheme 'Anonymous'.
+"Login failed: The HTTP request was forbidden with client authentication scheme 'Anonymous'.
 RequestId: TDS;81d8a4f7-0d49-4d21-8f50-04364bddd370;2
-Time: 2020-12-17T01:10:59.8628578Z (.Net SqlClient Data Provider)”
+Time: 2020-12-17T01:10:59.8628578Z (.Net SqlClient Data Provider)"
 
 - Error returned when using **SQL Server** authentication.
 
-“Login failed: Request is not authenticated.
+"Login failed: Request is not authenticated.
 RequestId: TDS;918aa372-ccc4-438a-813e-91b086355343;1
-Time: 2020-12-17T01:13:14.4986739Z (.Net SqlClient Data Provider)”
+Time: 2020-12-17T01:13:14.4986739Z (.Net SqlClient Data Provider)"
 
 - Error returned when using **Windows** authentication.
 
-“Login failed: Request is not authenticated.
+"Login failed: Request is not authenticated.
 RequestId: TDS;fda17c60-93f7-4d5a-ad79-7ddfbb917979;1
-Time: 2020-12-17T01:15:01.0497703Z (.Net SqlClient Data Provider)”
+Time: 2020-12-17T01:15:01.0497703Z (.Net SqlClient Data Provider)"
 
 ### Blocked ports
 
@@ -182,14 +201,15 @@ This should return "TcpTestSucceeded : True"
 
 If the connection is successful, you will be in an active telnet session. If unsuccessful, you will receive the error:
 
-“Connecting to \<environmentname>.crm.dynamics.com… Could not open connection to the host, on port 1433: connect failed”. 
+"Connecting to \<environmentname>.crm.dynamics.com… Could not open connection to the host, on port 1433: connect failed". 
 
 This means the port has been blocked at the client.
 
 ### See also
 
+[How Dataverse SQL differs from Transact-SQL](./how-dataverse-sql-differs-from-transact-sql.md)
 [Get started with virtual tables (entities)](./virtual-entities/get-started-ve.md)  
-[Use FetchXML to construct a query](dataverse-sql-query.md)  
+[Use FetchXML to construct a query](./use-fetchxml-construct-query.md)  
 [Service Protection API Limits](api-limits.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

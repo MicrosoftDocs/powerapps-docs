@@ -1,18 +1,16 @@
 ---
 title: "Use wildcard characters in conditions for string values in Microsoft Dataverse (PowerApps) | Microsoft Docs" 
 description: "You can use wildcard characters when querying for conditions using string values." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/13/2022
-ms.reviewer: "jdaly"
-ms.topic: "article"
-author: "mayadumesh" # GitHub ID Temp owner
+ms.date: 04/17/2023
+ms.reviewer: jdaly
+ms.topic: article
+author: mayadumesh # GitHub ID Temp owner
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
+contributors: 
+  - JimDaly
 ---
 # Use wildcard characters in conditions for string values
 
@@ -48,9 +46,9 @@ More information: [Use the ConditionExpression class](org-service/use-conditione
 `startswith`<br/>
 `not startswith`<br/>
 `endswith`<br/>
-`notendswith`<br/>
+`not endswith`<br/>
 
-More information: [Standard query functions](webapi/query-data-web-api.md#standard-query-functions)
+More information: [Use OData query functions](webapi/query-data-web-api.md#use-odata-query-functions)
 
 ---
 

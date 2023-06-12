@@ -1,15 +1,12 @@
 ---
 title: "Update and delete table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to perform update and delete operations on tables using the Web API"
-ms.date: 12/14/2022
+ms.date: 05/14/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -258,9 +255,9 @@ See [Detect duplicates during Update operation using the Web API](manage-duplica
 
 ## Update and delete documents in storage partitions
 
-If you are updating or deleting entity data stored in partitions be sure to specify the partition key when accessing that data.
+If you are updating or deleting elastic table data stored in partitions be sure to specify the partition key when accessing that data.
 
-More information: [Access table data faster using storage partitions](azure-storage-partitioning.md)
+More information: [Choosing a PartitionId value](../elastic-tables.md#choosing-a-partitionid-value)
 
 ### See also
 

@@ -7,9 +7,6 @@ ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -363,7 +360,7 @@ This section demonstrates how to create a table row and related row, in a single
   
 This section creates an account, its primary contact, and a set of tasks for that contact in one request.  
   
-1. Create the account `Fourth Coffee` and its primary contact `Susie Curtis` and her three related tasks in one operation.  Note the use of the single-valued `primarycontactid` navigation property and the collection-valued navigation property `Contact_Tasks` to define these relationships, respectively.  Single-valued navigational properties take an object value, whereas collection-valued navigation properties take an array value.  
+1. Create the account `Fourth Coffee` and its primary contact `Susie Curtis` and their three related tasks in one operation.  Note the use of the single-valued `primarycontactid` navigation property and the collection-valued navigation property `Contact_Tasks` to define these relationships, respectively.  Single-valued navigational properties take an object value, whereas collection-valued navigation properties take an array value.  
   
    **Request**
    
@@ -728,7 +725,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Retrieved role: Example Security Role
    ``` 
    
-1. Dissociate the the security role from the from your user record.  Note again, that this has the same general syntax used to remove a one-to-many association.  
+1. Dissociate the security role from the from your user record.  Note again, that this has the same general syntax used to remove a one-to-many association.  
    
    **Request**
    

@@ -5,13 +5,9 @@ ms.date: 04/01/2022
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-manager: jstrauss
 ms.topic: get-started-article
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke

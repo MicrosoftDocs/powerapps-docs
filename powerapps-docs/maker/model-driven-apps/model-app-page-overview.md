@@ -8,11 +8,8 @@ ms.subservice: mda-maker
 ms.topic: overview
 author: "adrianorth"
 ms.author: "aorth"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
 ---
 # Overview of custom pages for model-driven apps
 

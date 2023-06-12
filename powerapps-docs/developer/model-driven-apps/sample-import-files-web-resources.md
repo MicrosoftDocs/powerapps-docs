@@ -10,9 +10,6 @@ ms.topic: sample
 ms.subservice: mda-developer
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Import files as web resources

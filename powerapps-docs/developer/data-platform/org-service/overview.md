@@ -1,5 +1,5 @@
 ---
-title: "What is the Organization service"
+title: "Use the Organization service"
 description: "Learn how you can use the Microsoft Dataverse Organization service to work with business data."
 ms.date: 09/27/2022
 author: divkamath
@@ -7,13 +7,12 @@ ms.author: dikamath
 ms.reviewer: pehecke
 ms.topic: overview
 ms.custom: bap-template
-ms.service: power-platform
 contributors:
  - JimDaly
  - phecke
 ---
 
-# What is the Organization service
+# Use the Organization service
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 

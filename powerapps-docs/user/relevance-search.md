@@ -2,7 +2,6 @@
 title: "Search for records by using Dataverse search| MicrosoftDocs"
 description: How to use Dataverse search
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Search for records by using Dataverse search

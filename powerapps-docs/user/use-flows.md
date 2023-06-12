@@ -2,7 +2,6 @@
 title: "Use Power Automate to automate processes in model-driven apps| MicrosoftDocs"
 description: How to sse Power Automate to automate processes
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use Power Automate to automate processes
 

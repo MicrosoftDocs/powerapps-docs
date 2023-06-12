@@ -291,7 +291,7 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
 
 ## How we use SaveData and LoadData in the Inspection app
 
-In the Inspection sample app, we use load data and save data on the inspection form&mdash;if a user is in the middle of an inspection, and they switch away from the apps in Teams (like to send someone a message), we don’t want them to lose their place in the inspection. When they return to the app tab in Teams, the app gives them the option to resume the in-progress inspection.
+In the Inspection sample app template, we use load data and save data on the inspection form&mdash;if a user is in the middle of an inspection, and they switch away from the apps in Teams (like to send someone a message), we don’t want them to lose their place in the inspection. When they return to the app tab in Teams, the app gives them the option to resume the in-progress inspection.
 
 ## Considerations
 
@@ -301,18 +301,5 @@ In Dataverse for Teams, there are some limits to the SaveData() and LoadData() c
 - Doesn't work in a browser.
 - Apps in mobile are limited by the amount of local storage available to the app.
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected (preview)](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

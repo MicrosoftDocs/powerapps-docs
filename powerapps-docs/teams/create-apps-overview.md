@@ -37,8 +37,6 @@ There are two ways to use the apps created by using Power Apps in Teams:
 
 - You can use the Power Apps app from the default Teams catalog as a personal app and create apps to share with teams in Teams. More information: [Install the Power Apps personal app](install-personal-app.md)
 
-- You can install the apps created using Power Apps directly from the Microsoft Teams store. More information: [Use sample apps from Teams store](use-sample-apps-from-teams-store.md).
-
 When you create an app in Teams with the Power Apps app for the first time, or install an app created with Power Apps from the app catalog for the first time, a new Dataverse for Teams environment is created for the selected team. The Dataverse for Teams environment is used to store, manage, and share team-specific data, apps, flows, and chatbots. Each team can have one Dataverse for Teams environment, and all data, apps, and flows created with the Power Apps app inside a team are available from that environment. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
 When you create an app in Teams with the Power Apps app for the first time, or install an app created with Power Apps from the app catalog for the first time, you get to choose which team is responsible for customizing, maintaining, and sharing the app.

@@ -3,7 +3,6 @@ title: getSelectedRecordIds | Microsoft Docs
 description: Retrieves all the selected record IDs.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

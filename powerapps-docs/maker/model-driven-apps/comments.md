@@ -5,10 +5,10 @@ author: Mattp123
 ms.author: "emcoope"
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 05/19/2022
+ms.date: 03/28/2023
 ms.custom: template-how-to
 ---
-# Add comments
+# Add comments in the model-driven app designer
 
 Comments are notes that are associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.  
 
@@ -36,7 +36,11 @@ Comments are commonly questions, feedback, or ideas that are important context t
 1. The comment thread appears as **Resolved**.
 1. To reopen select <img src = "media/reopen-thread-button.png" alt = "reopen comment thread button" width = "20" height = "20"> **Reopen thread** or <img src = "media/delete-thread-button.png" alt = "Delete comment thread button" width = "20" height = "20"> **Delete thread** to remove the comment.
 
+## Moving comments between environments
+
+Comments in model-driven apps can't be exported or imported as solution components because they contain user collaboration data. You can, however export the **Comment** table to Excel and then import the Excel file into the environment you want. More information: [Export data](../data-platform/data-platform-import-export.md#export-data)
+
 ## Next steps
 
-[Discover who's working on an app (preview)](copresence.md) <br />
+[Discover who's working on an app](copresence.md) <br />
 [Coauthoring in model-driven apps (preview)](coauthoring.md)

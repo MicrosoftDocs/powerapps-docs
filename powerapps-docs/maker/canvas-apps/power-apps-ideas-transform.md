@@ -11,8 +11,6 @@ ms.author: norliu
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - norliu
   - mduelae
@@ -108,7 +106,7 @@ To get the best results, follow these tips when writing the plain natural langua
 ## Limitations
 
 > [!NOTE]
-> We're improving the model so it can accomplish more complex tasks and support more functions, controls, and properties. If you have a wish list, submit your ideas through [Power Apps Ideas - Power Platform Community](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas).
+> We're improving the model so it can accomplish more complex tasks and support more functions, controls, and properties. If you have a wish list, submit your ideas through [Power Apps Ideas - Power Platform Community](https://ideas.powerapps.com/).
 
 Power Apps Ideas currently has the following limitations:
 

@@ -1,7 +1,7 @@
 ---
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand what a developer needs to do to manage service protection limits for API requests." 
-ms.date: 12/18/2022
+ms.date: 01/31/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: dikamath 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -254,7 +251,7 @@ With the Organization Service this means using <xref:Microsoft.Xrm.Sdk.Messages.
 
 In the past, `ExecuteMultiple` operations were limited to just 2 at a time because of the impact on performance that this could have. This is no longer the case, because service protection execution time API limits have made that limit redundant.
 
-When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. Only use `$batch` if you want to manage transactions using `changesets`. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
+When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
 
 > [!NOTE]
 > Batch operations are not a valid strategy to bypass entitlement limits. Service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
@@ -289,6 +286,10 @@ More information: [Dataverse Search Service Protection Limits](search/overview.m
 ### How do these limits apply to how many requests a user is entitled to each day?
 
 These limits are not related to entitlement limits. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
+
+### Are limits applied differently for application users?
+
+No. The limits are applied to all users in the same way.
 
 ### See also
 

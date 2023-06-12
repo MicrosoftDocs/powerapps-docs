@@ -1,30 +1,25 @@
 ---
-title: Card designer overview (preview)
+title: Card designer overview
 description: Learn about the card designer.
 ms.date: 11/17/2022
 ms.topic: overview
 author: sericks007
 ms.author: sericks
-manager: tapanm-MSFT
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
 
 ---
 
-# Card designer overview (preview)
-
-[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
+# Card designer overview
 
 The Power Apps card designer is the drag-and-drop interface in which you build cards.
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and select your environment.
 
-1. In the left pane, select **Cards (preview)**.
+1. In the left pane, select **Cards**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. To open the card designer, select **Create**, and then select **+ Create a card**.
-
-   :::image type="content" source="../media/designer-overview/create-new-card.png" alt-text="Screenshot showing card creation screen.":::
 
 ## The card designer interface
 

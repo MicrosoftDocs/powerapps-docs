@@ -3,17 +3,13 @@ title: "Creating side panes by using a client API in model-driven apps"
 description: Learn how to create side panes in model-driven apps by using a client API.
 author: adrianorth
 ms.author: aorth
-
-ms.date: 04/17/2022
+ms.date: 01/27/2023
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: "article"
 search.audienceType: 
   - maker
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -28,6 +24,8 @@ Tabs are listed in the side pane in two groups&mdash;non-closable and closable. 
 You can use a platform-provided header with the title and Close button, or you can use a custom header.
 
 You can add a badge to the side pane to indicate to the user that a change needs attention. The badge supports three modes: a simple dot, a count, or an image. By default, the badge is cleared when the user switches to the pane. You can control when the badge is cleared.
+
+App side panes are only supported in web browsers and are prevented within native players.
 
 
 ## Examples
@@ -127,6 +125,6 @@ By switching to use `createPane`, both limitations can be avoid by providing an 
 
 ### Related topics
 
-[sidePanes (Client API reference)](reference/xrm-app-sidepanes.md)
-
-[loadPanel (Client API Reference)](reference/xrm-panel/loadpanel.md)
+[sidePanes (Client API reference)](reference/xrm-app-sidepanes.md)<br />
+[loadPanel (Client API Reference)](reference/xrm-panel/loadpanel.md)<br />
+[Walkthrough: Write your first client script](walkthrough-write-your-first-client-script.md)

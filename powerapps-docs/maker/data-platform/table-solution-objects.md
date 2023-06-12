@@ -10,9 +10,6 @@ ms.subservice: dataverse-maker
 ms.author: "simatthe"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # View and edit tables representing solution objects
 

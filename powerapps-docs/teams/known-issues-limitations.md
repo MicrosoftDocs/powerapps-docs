@@ -33,10 +33,6 @@ The following components aren't supported:
 > - The app or flow is running in the context of Microsoft Teams.
 > - And, the custom connector points at an APIM endpoint in Azure. 
 
-## Component library
-
-[Component library](../maker/canvas-apps/component-library.md) isn't supported.
-
 ## Controls
 
 To learn about the limitations of controls in Dataverse for Teams environments, go to [Limitations of controls in Power Apps](../maker/canvas-apps/control-limitations.md).
@@ -120,6 +116,8 @@ Power Apps Studio and apps currently don't support **Dark theme**.
 -	It may take up to 2 hours for deleting, renaming, or restoring a team to reflect correctly within the Power Apps and Power Virtual Agents apps.
 
 -	It may take up to 15 minutes for new team users to be able to see the team within the Power Apps and Power Virtual Agents apps.
+
+- Users with the **Teams Guest** role con't trigger flows embedded in canvas apps.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

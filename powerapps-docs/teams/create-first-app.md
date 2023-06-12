@@ -1,10 +1,10 @@
 ---
 title: Create your first app in Teams (contains video) | Microsoft Docs
 description: Learn how to create your first app in Teams. 
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 08/05/2021
 ms.subservice: teams
 ms.author: saperlmu
@@ -35,7 +35,7 @@ Now let's go through each step in detail.
 
 ## Create your app
 
-After installing the Power Apps app from the Teams store:
+After installing the Power Apps app template:
 
 1. Start Teams, and sign in.
 

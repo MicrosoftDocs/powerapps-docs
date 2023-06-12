@@ -4,14 +4,10 @@ description: "This sample showcases how to audit table data changes" # 115-145 c
 ms.date: 12/08/2022
 author: paulliew
 ms.author: paulliew
-manager: mayadu
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke

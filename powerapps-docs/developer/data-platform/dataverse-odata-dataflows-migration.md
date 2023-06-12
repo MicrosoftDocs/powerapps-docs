@@ -7,8 +7,6 @@ ms.date: 12/09/2022
 ms.topic: article
 ms.subservice: dataverse-developer
 ms.author: demora
-search.app: 
-  - PowerApps
 contributors:
  - JimDaly
 ---

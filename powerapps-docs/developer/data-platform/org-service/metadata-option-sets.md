@@ -1,16 +1,13 @@
 ---
 title: "Customize choices (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to work with global and local choices (option sets) in code." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 11/03/2022
+ms.date: 01/09/2023
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly
 ms.topic: article
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -20,10 +17,10 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Typically, you use _global_ choices (option sets) to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike _local_ choices which are defined only for a specific table column, you can reuse global choices. You will also see them used in request parameters in a manner similar to an enumeration.
+Typically, you use _global_ choices (option sets) to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike _local_ choices that are defined only for a specific table column, you can reuse global choices. You'll also see them used in request parameters in a manner similar to an enumeration.
 
 > [!NOTE]
-> Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets. In order to make a change to the option sets, an Upgrade must be made to the solution that added the option set. More information: [Upgrade or update a solution](../../../maker/data-platform/update-solutions.md)
+> Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets. In order to make a change to the option sets, an Upgrade must be made to the solution that added the option set. More information: [Upgrade or update a solution](../../../maker/data-platform/update-solutions.md). Users can manually delete an option in their environment if they are unable to modify the solution or contact the solution publisher, but this must be done on every environment manually.
 
 When you define a global choice by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest>,
 we recommend that you let the system assign a value. You do this by passing a **null** value when you create the

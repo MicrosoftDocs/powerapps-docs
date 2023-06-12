@@ -4,14 +4,10 @@ description: "Read how you can page the results of a FetchXML query by using the
 ms.date: 04/03/2022
 author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke

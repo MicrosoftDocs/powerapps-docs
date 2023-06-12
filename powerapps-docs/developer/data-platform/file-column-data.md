@@ -1,7 +1,7 @@
 ---
 title: "Use file column data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about uploading, downloading, and deleting data in file columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 11/08/2022
+ms.date: 05/24/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -9,19 +9,15 @@ ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
+ - trin-msft
 ---
 # Use file column data
 
-File columns store binary data. File columns may be in any custom or customizable Dataverse table.
+File columns are different from the other system columns that can store binary data because you can't directly set the values in a create or update operation, or retrieve the file data with the record. You must use the methods described in this article to create, retrieve, update, or delete binary data for file columns.
 
-File columns are different from the other system columns that can store binary data because you cannot directly set the values in a create or update operation or retrieve the file data with the record. You must use the methods described in this topic to create, retrieve, update, or delete binary data for file columns.
-
-There are several different ways to work with file column data using Web API. All methods are supported equally. Choose the method that works best for you. Because binary files may be large, it is frequently necessary to split the file into multiple chunks, (or blocks) that can be sent or received sequentially or in parallel to improve performance.
+There are several different ways to work with file column data using Web API. All methods are supported equally. Choose the method that works best for you. Because binary files may be large, it's frequently necessary to split the file into multiple chunks (or blocks) that can be sent or received sequentially or in parallel to improve performance.
 
 ## File name column
 
@@ -34,24 +30,27 @@ Each file column has a supporting read-only string column that contains the name
 
 When a file column is created for a table, a new one-to-many relationship is created between the table and the `FileAttachment` table. The name of the relationship is `{table logical name}_FileAttachments`. For example, if the file column is part of the account table, the relationship name will be `account_FileAttachments`.
 
-You can use this relationship to return additional data about the file column and any other file columns for the table. More information: [Retrieve additional information about files for a record](#retrieve-additional-information-about-files-for-a-record).
+You can use this relationship to return more data about the file column and any other file columns for the table. More information: [Retrieve additional information about files for a record](#retrieve-additional-information-about-files-for-a-record).
 
 ## Behavior when retrieving
 
-When you retrieve a record and include a file column, the value returned will be a unique identifier for the file. You can use this value to delete the file using the `DeleteFile` message. There is no other use for this id other than to check whether the column has a value. More information: [Use the DeleteFile message](#use-the-deletefile-message).
+When you retrieve a record and include a file column, the value returned will be a unique identifier for the file. You can use this value to delete the file using the `DeleteFile` message. There's no other use for this ID other than to check whether the column has a value. More information: [Use the DeleteFile message](#use-the-deletefile-message).
 
 The following examples show what you can expect when retrieving data from file columns as you would with other columns.
 
-These examples retrieve the  `name`, `sample_filecolumn`, and `sample_filecolumn_name` columns for  account record with the primary key value of `352edda9-4c52-ed11-bba1-000d3a9933c9`.
+These examples retrieve the  `name`, `sample_filecolumn`, and `sample_filecolumn_name` columns for an account record:
 
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
-static void RetrieveAccountRecordWithFileColumns(IOrganizationService service) {
+static void RetrieveAccountRecordWithFileColumns(
+    IOrganizationService service,
+    Guid accountid) 
+{
 
    Entity account = service.Retrieve(
          "account", 
-         new Guid("352edda9-4c52-ed11-bba1-000d3a9933c9"), 
+         accountid, 
          new ColumnSet("name", "sample_filecolumn", "sample_filecolumn_name"));
 
    Console.WriteLine($"name: {account["name"]}");
@@ -64,14 +63,14 @@ static void RetrieveAccountRecordWithFileColumns(IOrganizationService service) {
 
 ```
 name: Contoso Ltd.
-sample_filecolumn: 63a6afb7-4c52-ed11-bba1-000d3a9933c9
+sample_filecolumn: <file id>
 sample_filecolumn_name: 25mb.pdf
 ```
 
 > [!NOTE]
 > You must explicitly request the column to return the file id. If you use [ColumnSet.AllColumns](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true in your query the file column will not be returned. If you used `new ColumnSet(true)` in the function above, the result would be a <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=fullName>.
 
-More information: 
+More information:
 
 - [What is the Organization service](org-service/overview.md)
 - [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
@@ -81,7 +80,7 @@ More information:
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/accounts(352edda9-4c52-ed11-bba1-000d3a9933c9)?$select=name,sample_filecolumn,sample_filecolumn_name HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/accounts(<accountid>)?$select=name,sample_filecolumn,sample_filecolumn_name HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -97,9 +96,9 @@ HTTP/1.1 200 OK
     "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts(name,sample_filecolumn,sample_filecolumn_name)/$entity",
     "@odata.etag": "W/\"75119522\"",
     "name": "Contoso Ltd.",
-    "sample_filecolumn": "63a6afb7-4c52-ed11-bba1-000d3a9933c9",
+    "sample_filecolumn": "<file id>",
     "sample_filecolumn_name": "25mb.pdf",
-    "accountid": "352edda9-4c52-ed11-bba1-000d3a9933c9"
+    "accountid": "<accountid>"
 }
 ```
 
@@ -113,10 +112,12 @@ You can use the relationship between the file column table and the `FileAttachme
 
 #### [SDK for .NET](#tab/sdk)
 
-The `RetrieveAccountRecordWithFileData` static method below will return information about all the file columns that contain data related to the `account` record with the matching `accountid` value.
+The `RetrieveAccountRecordWithFileData` static method shows how to return information about all the file columns that contain data related to the `account` record with the matching `accountid` value.
 
 ```csharp
-static void RetrieveAccountRecordWithFileData(IOrganizationService service, Guid accountid)
+static void RetrieveAccountRecordWithFileData(
+    IOrganizationService service, 
+    Guid accountid)
 {
     // Create query for related records
     var relationshipQueryCollection = new RelationshipQueryCollection {
@@ -161,7 +162,7 @@ static void RetrieveAccountRecordWithFileData(IOrganizationService service, Guid
 
 **Output**:
 
-In this case, there is a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
+In this case, there's a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
 
 ```
 createdon: 10/22/2022 2:01 PM
@@ -179,12 +180,12 @@ More information:
 
 #### [Web API](#tab/webapi)
 
-The request below below will return information about all the file columns that contain data related to the `account` record with `accountid` equal to `352edda9-4c52-ed11-bba1-000d3a9933c9`.
+The request below will return information about all the file columns that contain data related to the `account` record specified using `accountid`.
 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/accounts(352edda9-4c52-ed11-bba1-000d3a9933c9)?$filter=sample_filecolumn%20ne%20null&$expand=account_FileAttachments($select=createdon,mimetype,filesizeinbytes,filename,regardingfieldname)&$select=accountid HTTP/1.1
+GET [Organization URI]/api/data/v9.2/accounts(<accountid>)?$filter=sample_filecolumn ne null&$expand=account_FileAttachments($select=createdon,mimetype,filesizeinbytes,filename,regardingfieldname)&$select=accountid HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -193,7 +194,7 @@ Accept: application/json
 
 **Response**
 
-In this case, there is a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
+In this case, there's a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
 
 ```http
 HTTP/1.1 200 OK
@@ -203,7 +204,7 @@ OData-Version: 4.0
 {
   "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(accountid,account_FileAttachments(createdon,mimetype,filesizeinbytes,filename,regardingfieldname))/$entity",
   "@odata.etag": "W/\"75119522\"",
-  "accountid": "352edda9-4c52-ed11-bba1-000d3a9933c9",
+  "accountid": "<accountid>",
   "account_FileAttachments": [
     {
       "@odata.etag": "W/\"75119363\"",
@@ -212,7 +213,7 @@ OData-Version: 4.0
       "filesizeinbytes": 25870370,
       "filename": "25mb.pdf",
       "regardingfieldname": "sample_filecolumn",
-      "fileattachmentid": "63a6afb7-4c52-ed11-bba1-000d3a9933c9"
+      "fileattachmentid": "<file id>"
     }
   ]
 }
@@ -231,7 +232,8 @@ There at three different ways to upload files to a file column:
 - Upload the file in chunks using Web API
 
 > [!NOTE]
-> You should verify whether the column maximum file size is large enough to accept the file you are uploading. More information: [Check maximum file size](#check-maximum-file-size).
+> - You should verify whether the column maximum file size is large enough to accept the file you are uploading. More information: [Check maximum file size](#check-maximum-file-size).
+> - You can also use these APIs to upload image column data. More information: [Use image column data](image-column-data.md)
 
 ### Use Dataverse messages to upload a file
 
@@ -245,17 +247,17 @@ You can use Dataverse messages using the SDK for .NET or Web API. Uploading a fi
 
 #### [SDK for .NET](#tab/sdk)
 
-You can use a function like the following to upload a file using the [InitializeFileBlocksUploadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest), [UploadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest), and [CommitFileBlocksUploadRequest](xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest) classes.
+You can use a function like the following to upload a file or image using the [InitializeFileBlocksUploadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest), [UploadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest), and [CommitFileBlocksUploadRequest](xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest) classes.
 
 ```csharp
 /// <summary>
-/// Uploads a file
+/// Uploads a file or image column value
 /// </summary>
 /// <param name="service">The service</param>
-/// <param name="entityReference">A reference to the record with the file column</param>
-/// <param name="fileAttributeName">The name of the file column</param>
-/// <param name="fileInfo">Information about the file to upload.</param>
-/// <param name="fileMimeType">The mime type of the file, if known.</param>
+/// <param name="entityReference">A reference to the record with the file or image column</param>
+/// <param name="fileAttributeName">The name of the file or image column</param>
+/// <param name="fileInfo">Information about the file or image to upload.</param>
+/// <param name="fileMimeType">The mime type of the file or image, if known.</param>
 /// <returns></returns>
 static Guid UploadFile(
          IOrganizationService service,
@@ -308,14 +310,10 @@ static Guid UploadFile(
 
          blockIds.Add(blockId);
 
-         // Copy the next block of data to send.
-         var blockData = new byte[buffer.Length];
-         buffer.CopyTo(blockData, 0);
-
          // Prepare the request
          UploadBlockRequest uploadBlockRequest = new()
          {
-            BlockData = blockData,
+            BlockData = buffer,
             BlockId = blockId,
             FileContinuationToken = fileContinuationToken,
          };
@@ -352,16 +350,16 @@ static Guid UploadFile(
 }
 ```
 
-More information: 
+More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [Use the Organization service](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
-This function includes some logic to try and get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it is not provided. If not found it will set the mime type to `application/octet-stream`.
+[!INCLUDE [cc-trygetcontenttype-note](includes/cc-trygetcontenttype-note.md)]
 
 #### [Web API](#tab/webapi)
 
-The following series of requests and responses show the interaction when using the Web API to set a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2578e950-8e51-ed11-bba1-000d3a9933c9`.
+The following series of requests and responses show the interaction when using the Web API to set a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with the specified `accountid`.
 
 **Request**
 
@@ -378,7 +376,7 @@ Content-Length: 207
 
 {
   "Target": {
-    "accountid": "2578e950-8e51-ed11-bba1-000d3a9933c9",
+    "accountid": "<accountid>",
     "@odata.type": "Microsoft.Dynamics.CRM.account"
   },
   "FileName": "25mb.pdf",
@@ -396,29 +394,20 @@ OData-Version: 4.0
 
 {
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.InitializeFileBlocksUploadResponse",
-  "FileContinuationToken": "<file continuation token value removed for brevity>"
+  "FileContinuationToken": "<Removed for brevity>"
 }
 ```
 
-You must then break the file up into blocks of 4MB or less and send each block using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock) with the following properties:
+You must then break up the file into blocks of 4 MB or less and send each block using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock) with the following properties:
 
 
 |Property|Description:  |
 |---------|---------|
 |`BlockId`|A valid Base64 string value that identifies the block. Prior to encoding, the string must be less than or equal to 64 bytes in size.<br />For a given file, the length of the `BlockId` value must be the same size for each block.|
-|`BlockData`|A Base64 encoded string containing the byte[] less than 4MB in size representing the portion of the file being sent.|
+|`BlockData`|A Base64 encoded string containing the byte[] less than 4 MB in size representing the portion of the file being sent.|
 |`FileContinuationToken`|The value of the `InitializeFileBlocksUploadResponse.FileContinuationToken`|
 
-
-> [!TIP]
-> With .NET, you can generate a `BlockId` using this code:
-> 
-> ```csharp
-> string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
-> ```
->
-> Also with .NET, if you set the `byte[]` data to a `JObject` `BlockData` property, the `byte[]` will be Base64 encoded when you set the [HttpRequestMessage.Content](xref:System.Net.Http.HttpRequestMessage.Content) using `JObject.ToString()`.;
-
+[!INCLUDE [cc-generate-blockid-tip](includes/cc-generate-blockid-tip.md)]
 
 **Request**
 
@@ -503,14 +492,14 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 ### Upload a file in a single request using Web API
 
-If the size of the file is less than 128MB, you can upload the file in a single request using the Web API.
+If the size of the file is less than 128 MB, you can upload the file in a single request using the Web API.
 
-The following example uploads a text file named `4094kb.txt` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `cc4ed4a2-8c51-ed11-bba1-000d3a993550`.
+The following example uploads a text file named `4094kb.txt` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
 **Request**
 
 ```http
-PATCH [Organization Uri]/api/data/v9.2/accounts(cc4ed4a2-8c51-ed11-bba1-000d3a993550)/sample_filecolumn HTTP/1.1
+PATCH [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -533,7 +522,7 @@ OData-Version: 4.0
 
 To upload your file in chunks using the Web API, use the following set of requests.
 
-The following example uploads a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2a9ebdff-8c51-ed11-bba1-000d3a9933c9`.
+The following example uploads a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
 **Request**
 
@@ -543,7 +532,7 @@ Set the file name using the `x-ms-file-name` query parameter.
 
 
 ```http
-PATCH [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn?x-ms-file-name=25mb.pdf HTTP/1.1
+PATCH [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn?x-ms-file-name=25mb.pdf HTTP/1.1
 x-ms-transfer-mode: chunked
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -559,7 +548,7 @@ Accept: application/json
 ```http
 HTTP/1.1 200 OK
 Accept-Ranges: bytes
-Location: [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn?sessiontoken=<sessiontoken value removed for brevity>
+Location: [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn?sessiontoken=<sessiontoken value removed for brevity>
 OData-Version: 4.0
 x-ms-chunk-size: 4194304
 Access-Control-Expose-Headers: x-ms-chunk-size
@@ -585,11 +574,11 @@ Each request must contain that portion of the file in the body and the following
 |---------|---------|
 |`x-ms-file-name`|The name of the file.|
 |[Content-Type](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type)| Set to `application/octet-stream`|
-|[Content-Range](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Range)|Using this format: <br />`<unit> <range-start>-<range-end>/<size>`<br />The value of the first request: `bytes 0-4194303/25870370` indicates that the measurement is using bytes. This request includes the first `4194303` bytes of a file that is `25870370` bytes (almost 25MB) in size.<br />Each subsequent request will see this value increase until the entire file has been sent:<br />`bytes 4194304-8388607/25870370`<br />`bytes 8388608-12582911/25870370`<br />`bytes 12582912-16777215/25870370`<br />`bytes 16777216-20971519/25870370`<br />`bytes 20971520-25165823/25870370`<br />`bytes 25165824-25870369/25870370`<br />|
+|[Content-Range](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Range)|Using this format: <br />`<unit> <range-start>-<range-end>/<size>`<br />The value of the first request: `bytes 0-4194303/25870370` indicates that the measurement is using bytes. This request includes the first `4194303` bytes of a file that is `25870370` bytes (almost 25 MB) in size.<br />Each subsequent request will see this value increase until the entire file has been sent:<br />`bytes 4194304-8388607/25870370`<br />`bytes 8388608-12582911/25870370`<br />`bytes 12582912-16777215/25870370`<br />`bytes 16777216-20971519/25870370`<br />`bytes 20971520-25165823/25870370`<br />`bytes 25165824-25870369/25870370`<br />|
 |[Content-Length](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Length)|Indicates the size of the message. In the example above, this value for the last request will be `704546` rather than `4194304`.|
 
 ```http
-PATCH [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn?sessiontoken=<sessiontoken value removed for brevity> HTTP/1.1
+PATCH [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn?sessiontoken=<sessiontoken value removed for brevity> HTTP/1.1
 x-ms-file-name: 25mb.pdf
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -622,9 +611,9 @@ OData-Version: 4.0
 
 ### Check maximum file size
 
-Before you upload a file you can check whether the size of the file exceeds the configured **Maximum file size** stored in the `MaxSizeInKB` property.
+Before you upload a file, you can check whether the size of the file exceeds the configured **Maximum file size** stored in the `MaxSizeInKB` property.
 
-If you try to upload a file that is too large, you will get the following error:
+If you try to upload a file that is too large, you'll get the following error:
 
 > Name: `unManagedidsattachmentinvalidfilesize`<br />
 > Code: `0x80044a02`<br />
@@ -635,6 +624,8 @@ You can use the following examples to check the maximum file size:
 
 #### [SDK for .NET](#tab/sdk)
 
+The static `GetFileColumnMaxSizeInKb` method returns the `MaxSizeInKB` value for a file column.
+
 ```csharp
 /// <summary>
 /// Retrieves the MaxSizeInKb property of a file column.
@@ -644,7 +635,11 @@ You can use the following examples to check the maximum file size:
 /// <param name="fileColumnLogicalName">The logical name of the file column.</param>
 /// <returns></returns>
 /// <exception cref="Exception"></exception>
-public static int GetFileColumnMaxSizeInKb(IOrganizationService service, string entityLogicalName, string fileColumnLogicalName) {
+public static int GetFileColumnMaxSizeInKb(
+    IOrganizationService service, 
+    string entityLogicalName, 
+    string fileColumnLogicalName) 
+{
 
    RetrieveAttributeRequest retrieveAttributeRequest = new() { 
          EntityLogicalName = entityLogicalName,
@@ -714,45 +709,55 @@ More information:
 
 ## Download Files
 
-There at three different ways to download files to a file column:
+There at three different methods to download files from a file column:
 
 - Use Dataverse messages available to both the SDK and Web API
 - Download a file in a single request using Web API
 - Download the file in chunks using Web API
 
+> [!NOTE]
+> These methods can also be used to download image columns, but there are some differences. More information: [Download images](image-column-data.md#download-images)
+> 
+> For on-premises environments or when an environment uses Customer Managed Keys, the file is not in file storage. When a file is not in file storage, downloading in multiple chunks is not supported. The [InitializeFileBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse) and [InitializeFileBlocksDownloadResponse Class](xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadResponse) have an `IsChunkingSupported`property that indicates if the file can be downloaded in multiple chunks or not. If chunking is not supported, then set `BlockLength` to the file size.
+> 
+> Trying to download partial chunk when IsChunkingSupported is set to false will result in this error:<br />
+> 
+> Name: `UploadingAndDownloadingInMultipleChunksNotSupported`<br />
+> Code: `0x80090017`<br />
+> Message: `Downloading in multiple chunks is not supported for the files stored in the database.`
+
 ### Use Dataverse messages to download a file
 
 You can use Dataverse messages using the SDK for .NET or Web API. Downloading a file this way requires using a pair of messages:
-
 
 |Message|Description|
 |---------|---------|
 |`InitializeFileBlocksDownload`|Use this message to indicate the column that you want to download a file from. It returns the file size in bytes and a *file continuation token* that you can use to download the file in blocks using the `DownloadBlock` message.|
 |`DownloadBlock`|Request the size of the block, the offset value and the file continuation token.|
 
-Once you have downloaded all the blocks, you must join them to create the entire downloaded file.
+Once you've downloaded all the blocks, you must join them to create the entire downloaded file.
 
 #### [SDK for .NET](#tab/sdk)
 
-You can use a function like the following to download a file using the SDK using the [InitializeFileBlocksDownloadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest) and [DownloadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest) classes.
+You can use a function like the following to download a file or image using the SDK using the [InitializeFileBlocksDownloadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest) and [DownloadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest) classes.
 
 ```csharp
 /// <summary>
-/// Downloads a file
+/// Downloads a file or image
 /// </summary>
 /// <param name="service">The service</param>
-/// <param name="entityReference">A reference to the record with the file column</param>
-/// <param name="fileAttributeName">The name of the file column</param>
+/// <param name="entityReference">A reference to the record with the file or image column</param>
+/// <param name="attributeName">The name of the file or image column</param>
 /// <returns></returns>
 private static byte[] DownloadFile(
             IOrganizationService service,
             EntityReference entityReference,
-            string fileAttributeName)
+            string attributeName)
 {
    InitializeFileBlocksDownloadRequest initializeFileBlocksDownloadRequest = new()
    {
          Target = entityReference,
-         FileAttributeName = fileAttributeName
+         FileAttributeName = attributeName
    };
 
    var initializeFileBlocksDownloadResponse =
@@ -761,10 +766,11 @@ private static byte[] DownloadFile(
    string fileContinuationToken = initializeFileBlocksDownloadResponse.FileContinuationToken;
    long fileSizeInBytes = initializeFileBlocksDownloadResponse.FileSizeInBytes;
 
-   List<byte> fileBytes = new();
+   List<byte> fileBytes = new((int)fileSizeInBytes);
 
    long offset = 0;
-   long blockSizeDownload = 4 * 1024 * 1024; // 4 MB
+   // If chunking is not supported, chunk size will be full size of the file.
+   long blockSizeDownload = !initializeFileBlocksDownloadResponse.IsChunkingSupported ? fileSizeInBytes :  4 * 1024 * 1024;
 
    // File size may be smaller than defined block size
    if (fileSizeInBytes < blockSizeDownload)
@@ -801,14 +807,14 @@ private static byte[] DownloadFile(
 }
 ```
 
-More information: 
+More information:
 
 - [What is the Organization service](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 #### [Web API](#tab/webapi)
 
-The following series of requests and responses show the interaction when using the Web API to download a PDF file named `25mb.pdf` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2578e950-8e51-ed11-bba1-000d3a9933c9`.
+The following series of requests and responses show the interaction when using the Web API to download a PDF file named `25mb.pdf` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
 **Request**
 
@@ -825,7 +831,7 @@ Content-Length: 180
 
 {
   "Target": {
-    "accountid": "2578e950-8e51-ed11-bba1-000d3a9933c9",
+    "accountid": "<accountid>",
     "@odata.type": "Microsoft.Dynamics.CRM.account"
   },
   "FileAttributeName": "sample_filecolumn"
@@ -842,7 +848,8 @@ OData-Version: 4.0
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse",
   "FileSizeInBytes": 25870370,
   "FileName": "25mb.pdf",
-  "FileContinuationToken": "<file continuation token value removed for brevity>"
+  "FileContinuationToken": "<file continuation token value removed for brevity>",
+  "IsChunkingSupported": true
 }
 ```
 
@@ -851,8 +858,12 @@ The response is a [InitializeFileBlocksDownloadResponse ComplexType](xref:Micros
 - `FileSizeInBytes`: The size of the file
 - `FileName`: The name of the file
 - `FileContinuationToken`: The file continuation token to use in subsequent requests
+- `IsChunkingSupported`: Flag to indicate if downloading in chunks is supported or not
 
-Based on the size of the file and the size of the block you will download, send additional requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below.
+Based on the size of the file and the size of the block you'll download, send more requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below.
+
+> [!NOTE]
+> The example below is for cases when `IsChunkingSupported` is set to true. If it is false, set `BlockLength` to full file size.
 
 **Request**
 
@@ -872,20 +883,7 @@ Content-Length: 921
 }
 ```
 
-With each request the `Offset` value will increment by the amount of bytes sent in the previous request.  For example, these are the values used to download a file that is `25870370` bytes:
-
-|Request number|Offset|BlockLength|
-|---------|---------|---------|
-|1|`0`|`4194304`|
-|2|`4194304`|`4194304`|
-|3|`8388608`|`4194304`|
-|4|`12582912`|`4194304`|
-|5|`16777216`|`4194304`|
-|6|`20971520`|`4194304`|
-|7|`25165824`|`4194304`|
-
-> [!NOTE]
-> The `BlockLength` value can be constant. For example, it isn't required to be adjusted for the last request in the example above where the actual size of the last block downloaded was `704546`bytes.
+[!INCLUDE [cc-offset-blocklength-example](includes/cc-offset-blocklength-example.md)]
 
 **Response**
 
@@ -906,12 +904,12 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 ### Download a file in a single request using Web API
 
-The following example downloads a text file named `4094kb.txt` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `cc4ed4a2-8c51-ed11-bba1-000d3a993550`.
+The following example downloads a text file named `4094kb.txt` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/accounts(cc4ed4a2-8c51-ed11-bba1-000d3a993550)/sample_filecolumn/$value HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn/$value HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -941,9 +939,12 @@ Access-Control-Expose-Headers: x-ms-file-size; x-ms-file-name; mimetype
 
 ### Download the file in chunks using Web API
 
+> [!NOTE]
+> The example below is for cases when `IsChunkingSupported` is set to true. If it is false, please use [Download a file in a single request using Web API](#download-a-file-in-a-single-request-using-web-api).
+
 To download your file in chunks using the Web API, use the following set of requests.
 
-The following example downloads a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2a9ebdff-8c51-ed11-bba1-000d3a9933c9`.
+The following example downloads a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
 **Request**
 
@@ -956,7 +957,7 @@ You won't know how many iterations are required to download the entire file unti
 While the `<range-start>` is smaller than total size of the file, for each subsequent request increment the `<range-start>` and `<range-end>` values to request the next chunk of the file.
 
 ```http
-GET [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn/$value HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn/$value HTTP/1.1
 Range: bytes=0-4194303
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -998,7 +999,7 @@ There at two different ways to delete files to a file column:
 
 ### Use the DeleteFile message
 
-Using the unique identifier returned from the `CommitFileBlocksUploadResponse.FileId` or retrieved from from the column as described in [Behavior when retrieving](#behavior-when-retrieving), you can delete the file using the `DeleteFile` message.
+Using the unique identifier returned from the `CommitFileBlocksUploadResponse.FileId` or retrieved from the column as described in [Behavior when retrieving](#behavior-when-retrieving), you can delete the file using the `DeleteFile` message.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -1017,7 +1018,7 @@ static Guid DeleteFile(IOrganizationService service, Guid fileId)
 
 #### [Web API](#tab/webapi)
 
-Use the following request to delete a file with the Id using the Web API [DeleteFile Action](xref:Microsoft.Dynamics.CRM.DeleteFile).
+Use the following request to delete a file with the ID using the Web API [DeleteFile Action](xref:Microsoft.Dynamics.CRM.DeleteFile).
 
 ```http
 POST [Organization Uri]/api/data/v9.2/DeleteFile HTTP/1.1
@@ -1048,12 +1049,12 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 With the Web API, you can delete a file by sending a `DELETE` request to the location of the file resource. 
 
-The following example deletes file data for a column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2a9ebdff-8c51-ed11-bba1-000d3a9933c9`.
+The following example deletes file data for a column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
 **Request**
 
 ```http
-DELETE [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn HTTP/1.1
+DELETE [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -1072,6 +1073,7 @@ More information: [Delete a single property value](webapi/update-delete-entities
 
 ### See Also
 
+[Files and images overview](files-images-overview.md)<br />
 [Column data types > File columns](../../maker/data-platform/types-of-fields.md#file-columns)<br />
 [File columns](file-attributes.md)<br />
 [Sample: File Operations using Dataverse SDK for .NET](org-service/samples/file-operations.md)<br />

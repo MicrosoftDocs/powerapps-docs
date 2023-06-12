@@ -17,13 +17,9 @@ ms.assetid: 52c00707-b2bc-4950-abec-89baefd94f6e
 caps.latest.revision: 33
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create one-to-many or many-to-one table relationships overview
 

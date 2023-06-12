@@ -1,18 +1,16 @@
 ---
 title: Add multimedia to a component
 description: Learn about how to add multimedia to a canvas component.
-author: hemantgaur
+author: jorisdg
 ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 06/01/2022
-ms.author: hemantg
+ms.author: jorisde
 ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - hemantgaur
+  - jorisdg
   - mduelae
 ---
 

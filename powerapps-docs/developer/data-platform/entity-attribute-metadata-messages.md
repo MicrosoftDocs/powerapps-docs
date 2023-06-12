@@ -7,12 +7,8 @@ ms.topic: article
 author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Table column definitions messages
 
@@ -26,7 +22,7 @@ The following table lists the messages that you can use to perform actions on ta
   
 |Message|Web API Operation|SDK Assembly|
 |-------------|-----------------|-----------------|  
-|`CreateAttribute`</br></br>Create table columns|POST to EntityMetadata Attributes collection-valued navigation property with JSON definition of column. More information: [Create columns](webapi/create-update-entity-definitions-using-web-api.md#create-columns)|<xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest>|
+|`CreateAttribute`</br></br>Create table columns|POST to EntityMetadata Attributes collection-valued navigation property with JSON definition of column. More information: [Create columns](webapi/create-update-column-definitions-using-web-api.md#create-columns)|<xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest>|
 |`DeleteAttribute`</br></br>Delete table columns|DELETE to the URL of the column.|<xref:Microsoft.Xrm.Sdk.Messages.DeleteAttributeRequest>|  
 |`DeleteOptionValue`</br></br>Delete a choice from <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> or <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata> columns|<xref:Microsoft.Dynamics.CRM.DeleteOptionValue?text=DeleteOptionValue Action>|<xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionValueRequest>|
 |`InsertOptionValue`</br></br>Add a choice to a <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> column|<xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action" />|<xref:Microsoft.Xrm.Sdk.Messages.InsertOptionValueRequest>|

@@ -14,7 +14,6 @@ ms.assetid: d0031ffc-8754-4a12-b8c1-e08edc49ff73
 author: Mattp123
 ms.subservice: dataverse-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,9 +21,6 @@ caps.latest.revision:
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Preview feature: Azure Cosmos DB for NoSQL Data Provider requirements

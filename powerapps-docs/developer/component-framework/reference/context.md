@@ -3,7 +3,6 @@ title: Context | Microsoft Docs
 description: Provides all the properties and methods available in the Power Apps component framework
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -15,6 +14,8 @@ contributors:
 # Context
 
 [!INCLUDE [context-description](includes/context-description.md)]
+
+[FAQ: How can I access the record id or table name?](../faq.yml#how-can-i-access-the-record-id-or-table-name)
 
 ## Available for
 
@@ -61,7 +62,7 @@ Model-driven apps, canvas apps, & portals.
 
 The data provided to the component. Structure defined by the component's manifest, corresponding to parameter and dataset nodes.
 
-**Type**: `TInputs`
+**Type**: `IInputs`
 
 ### resources
 

@@ -8,12 +8,8 @@ ms.topic: "article"
 author: "divkamath"
 ms.subservice: dataverse-developer
 ms.author: "pehecke"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
 ---
@@ -34,7 +30,7 @@ Other methods of accessing web services include the use of Webhooks and the [!IN
 
 Today most people are familiar with  the [System.Net.Http.HttpClient Class](/dotnet/api/system.net.http.httpclient). `HttpClient` was introduced with .NET 4.5 and provides significant capabilities over the [System.Net.WebClient Class](/dotnet/api/system.net.webclient) which is still available.
 
-For new plug-ins you should use `HttpClient` because [the .NET team doesn't recommend WebClient for new development](/dotnet/api/system.net.webclient?#remarks). However, this doesn't mean you must replace any legacy code uses of `WebClient` that you find. Most of the advantages provided in `HttpClient` do not necessarily provide advantages within a plug-in. `HttpClient` is intended to be re-used and is asynchronous by default. Unless you are making multiple HTTP requests within your plug-in, `WebClient` is designed for a single request. Because `HttpClient` is asynchronous by default, you need to break away from typical use patterns and add code to force the operations to be performed synchronously, typically by removing the `await` keyword and appending `.Result` to any asynchronous calls.
+For new plug-ins you should use `HttpClient` because [the .NET team doesn't recommend WebClient for new development](/dotnet/api/system.net.webclient?#remarks). However, this doesn't mean you must replace any legacy code uses of `WebClient` that you find. Most of the advantages provided in `HttpClient` do not necessarily provide advantages within a plug-in. `HttpClient` is intended to be re-used and is asynchronous by default. Unless you are making multiple HTTP requests within your plug-in, `WebClient` is designed for a single request. Because `HttpClient` is asynchronous by default, you need to break away from typical use patterns and add code to force the operations to be performed synchronously, typically by removing the `await` keyword and appending `.GetAwaiter().GetResult()` to any asynchronous calls.
 
 `WebClient` provides simple synchronous methods such as [UploadData](/dotnet/api/system.net.webclient.uploaddata), [DownloadFile](/dotnet/api/system.net.webclient.downloadfile) which don't clearly expose the underlying HTTP method used, but they can be set using specific overrides such as [UploadString(String, String, String)](/dotnet/api/system.net.webclient.uploadstring?#system-net-webclient-uploadstring(system-string-system-string-system-string)) in case you want to use `PATCH` instead of `POST`.
 

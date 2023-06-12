@@ -3,7 +3,6 @@ title: How to use the sample components that are built using Power Apps componen
 description: Provides information on how you can use the sample components created using Power Apps Component Framework in your model-driven and canvas apps
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: article

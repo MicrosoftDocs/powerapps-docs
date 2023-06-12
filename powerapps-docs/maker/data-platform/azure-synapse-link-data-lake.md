@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake | MicrosoftDocs"
 description: "Learn how to export table data to Azure Data Lake Storage Gen2 in Power Apps"
 ms.custom: ""
-ms.date: 11/14/2022
+ms.date: 01/18/2023
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,12 +13,8 @@ author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - sama-zaki
 ---
@@ -39,7 +35,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and we recommend that replication is set to **read-access geo-redundant storage (RA-GRS)** properties")
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup. We recommend that replication is set to **read-access geo-redundant storage (RA-GRS)**.
 
 > [!NOTE]
 >
@@ -52,24 +48,21 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 ## Connect Dataverse to Azure Data Lake Storage Gen2
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
-
-2. On the left navigation pane, select **Data**, select **Azure Synapse Link**, and then on the command bar, select **+ New link to data lake**.
-
-    ![Navigate to Power Apps.](media/navigate-to-powerapps.png "Navigate to Power Apps")
-
-3. Select the **Subscription**, **Resource group**, and **Storage account**. Ensure that storage account meets the requirements specified in the [Prerequisites](#prerequisites) section. Select **Next**.
+1. On the left navigation pane, select **Azure Synapse Link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the command bar, select **+ New link to data lake**.
+1. Select the **Subscription**, **Resource group**, and **Storage account**. Ensure that storage account meets the requirements specified in the [Prerequisites](#prerequisites) section. Select **Next**.
 
     > [!NOTE]
     > As part of linking the environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
 
-4. Add the tables you want to export, and then select **Save**. Only tables with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization).
+1. Add the tables you want to export, and then select **Save**. Only tables with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization).
 
    ![Select tables for export.](media/export-data-lake-select-entity.png "Select tables for export")
 
 You can follow the steps above to create a link from one environment to multiple Azure data lakes in your Azure subscription. Similarly, you could create a link from multiple environments to the same Azure Data Lake, all within the same tenant.
 
 > [!NOTE]
-> The data exported by Azure Synapse Link service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
+> The data exported by Azure Synapse Link service is encrypted at transit using Transport Layer Security(TLS) 1.2 or higher and encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
 >
 > Currently, you can't provide public IPs for the Azure Synapse Link for Dataverse service that can be used in **Azure Data Lake firewall settings**. Public IP network rules have no effect on requests originating from the same Azure region as the storage account. Services deployed in the same region as the storage account use private Azure IP addresses for communication. Thus, you can't restrict access to specific Azure services based on their public outbound IP address range.
 More information: [Configure Azure Storage firewalls and virtual networks]( /azure/storage/common/storage-network-security)
@@ -124,6 +117,15 @@ The model.json file, along with its name and version, provides a list of tables 
 
 A folder that includes snapshot comma-delimited (CSV format) files is displayed for each table exported to the data lake.
    ![Table data in the data lake.](media/entity-data-in-lake.png "Table data in the data lake")
+   
+## Link a Synapse workspace to an existing Synapse Link profile with data lake only
+
+1. In web browsers address bar, append `?athena.updateLake=true` to the web address that ends with **exporttodatalake**.
+
+2. Select an existing profile from the Synapse Link homepage and click extended option
+
+3. Select **Link to Azure Synapse Analytics Workspace** and allow a few minutes for everything to be linked.
+
 
 ### Continuous snapshot updates
 

@@ -9,8 +9,6 @@ ms.subservice: canvas-maker
 ms.date: 06/17/2022
 ms.author: tapanm
 ms.reviewer: mkaur
-search.app: 
-  - PowerApps
 contributors:
     - sbahl10
     - mduelae

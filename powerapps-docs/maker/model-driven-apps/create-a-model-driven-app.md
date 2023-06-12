@@ -8,9 +8,7 @@ author: joel-lindstrom
 ms.author: matp
 ms.reviewer: matp
 ---
-# Create a model-driven app that has an account table page (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create a model-driven app that has an account table page
 
 Model-driven app design is a component-focused approach to app development. Model-driven apps are especially well suited for process driven apps that are data dense and make it easy for users to move between related records. For example, if you are building an app to manage a complex process, such as onboarding new employees, managing a sales process, or member relationships in an organization like a bank, a model-driven app is a great choice. Model-driven apps also allow you to quickly build an app by combining components like forms, views, charts, and dashboards.
 
@@ -32,7 +30,8 @@ Select the environment you want, or go to the [Power Platform admin center](http
 
 We recommend creating your model-driven app from a solution. A solution is a package that can contain Dataverse tables, forms, views, apps, flows, and other components. By building your model driven-app in a solution, you can easily move it to other environments or preserve a copy in your source control repository.
 
-1. Select **Solutions** on the left navigation pane, and then select **New solution**. More information: [Create a solution](/powerapps/maker/data-platform/create-solution).
+1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **New solution**. More information: [Create a solution](/powerapps/maker/data-platform/create-solution).
 
 1. Enter a **Display name** for your solution, such as **Power Apps Training**. Next, you add the account table that will be included in your model-driven app.
 

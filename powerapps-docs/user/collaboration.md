@@ -1,41 +1,36 @@
 ---
 title: "Collaborate with others in model-driven apps| MicrosoftDocs"
 description: Collaborate with others in model-driven apps
-author: sericks007
-manager: tapanm-MSFT
-
+author: fikaradz 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/13/2022
+ms.date: 05/01/2023
 ms.subservice: end-user
-ms.author: sericks
+ms.author: fikaradz
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Collaborate with others in model-driven apps 
 
 Collaborate with colleagues and share links in model-driven Power Apps the same way do you as in Microsoft Office.
 
-
 ### Multiplayer apps (preview)
 [This section is pre-release documentation and is subject to change.]
 
-When you're working on a record such as an **Opportunity**, **Account**, **Contact**, or **Case** you can also see other users that are working on the same record.
+> [!IMPORTANT]
+> This feature is rolling out gradually, slower than the standard, weekly deployments and will be enabled by default for all customers through April and May 2023. If you have enabled this capability before 2023 Release Wave 1, you may not see other users working on the same record intermittently. This will be addressed as part of the gradual rollout through April and May 2023.
 
-You can also select a user's picture to see their online status, send them an email, or start a Teams chat.
+When you're working on a record, you can also see other users who are working on the same record.
+
+You can also select a user's picture to see their online status, send them an email, or start a Teams chat. 
 
 > [!div class="mx-imgBorder"]
 > ![View a user's online status.](media/collob-1.png "View a user's online status")
 
-> [!NOTE]
-> - This is currently a preview feature. Your system administrator needs to turn on the **Copresence** feature in your environment. For information, see [Manage feature settings](/power-platform/admin/settings-features).
-> - During the preview period, these features are only available in the **Opportunity**, **Account**, **Contact**, and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub), or stand-alone Power Apps.
+This feature uses the Azure Fluid Relay service, which must be available in your region. For more information, see [Azure Fluid Relay service availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=fluid-relay). Because this feature uses the [Azure Fluid Relay](/azure/azure-fluid-relay/overview/overview) service, users must be able to access fluidrelay.azure.com. 
 
 ### View a user's status and picture
 
@@ -49,8 +44,10 @@ App users, such as the record owner, as well as the users appearing in grids and
 
 
 ### Share 
+You can now easily share records with your colleagues using the new **Share** button.  Select **Copy link** or **Email link** in order to send a record link to your colleagues.
 
-Easy sharing of direct links with others will be enabled during the preview period.
+> [!Note]
+> If you have the share privilege on a record and you email a record link to a colleague, the colleague will automatically get read access to the record.
 
 
 

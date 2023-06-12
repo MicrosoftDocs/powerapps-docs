@@ -53,7 +53,7 @@ And if the user is a worker, should they only see their own work items?
 app:
 > - The originator of the expense report: they should be able to see only their own
     expense reports.
-> - Managers (Nick): Nick should only be able to see the expense reports of his
+> - Managers (Nick): Nick should only be able to see the expense reports of their
     direct reports.
 > - Accountant (Abhay): Abhay should have the authority to review *all* the expense
     reports.

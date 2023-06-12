@@ -1,6 +1,6 @@
 ---
 title: Enable users to discuss ideas (contains video)
-description: Explains how to extend the Employee Ideas sample app for Microsoft Teams to take users to a discussion about an idea in Teams.
+description: Explains how to extend the Employee Ideas sample app template for Microsoft Teams to take users to a discussion about an idea in Teams.
 author: joel-lindstrom
 
 ms.topic: conceptual
@@ -18,7 +18,7 @@ contributors:
 
 # Enable users to discuss ideas
 
-The Employee Ideas sample app for Microsoft Teams makes it easy to capture ideas and suggestions from your colleagues and have colleagues vote for their favorite ideas. But you might want to make this more interactive by facilitating discussions around ideas.
+The Employee Ideas sample app template for Microsoft Teams makes it easy to capture ideas and suggestions from your colleagues and have colleagues vote for their favorite ideas. But you might want to make this more interactive by facilitating discussions around ideas.
 
 Currently the Employee Ideas app posts messages to a teams channel when an Idea is submitted. In this article, we'll extend the app to provide a mechanism for users to go to the idea channel message so the can interact and discuss the idea with other users.
 
@@ -37,7 +37,7 @@ Watch this video to learn how to enable users to discuss ideas:
 
 ## Add the message ID column
 
-The Employee Ideas sample app posts messages to teams channels when an app or a campaign are created. However, it currently doesn't store any record of that message. Since we want the app to give users the ability to comment, and discuss the idea using the posted message thread, we'll update the app to preserve the ID of the message.
+The Employee Ideas sample app template posts messages to teams channels when an app or a campaign are created. However, it currently doesn't store any record of that message. Since we want the app to give users the ability to comment, and discuss the idea using the posted message thread, we'll update the app to preserve the ID of the message.
 
 1. Open the Ideas app using Power Apps in Microsoft Teams.
 
@@ -176,8 +176,8 @@ Now that you've the discuss button to the app, lets test the process:
 ### See also
 
 - [Understand Employee ideas app architecture](employee-ideas-architecture.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
-- [Use sample apps from the Teams store](use-sample-apps-from-Teams-store.md)
+- [Customize sample app templates](customize-sample-apps.md)
+- [Sample app templates FAQs](sample-apps-faqs.md)
+- [Use sample app templates in Microsoft Teams](use-sample-apps.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

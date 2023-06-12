@@ -70,6 +70,9 @@ You can build Power Apps for free. Simply sign in to [Power Apps](https://make.p
 
 A license is needed to play the apps made with Power Apps. You can play Power Apps for free by signing up for a [30-day trial](maker/signup-for-powerapps.md).
 
+##  Request a Power Apps license
+If you're a Power Apps user and want to run apps, you can request a Power Apps license while running the app. More information: [Request a Power Apps license](user/request-license.md)
+
 ## Purchase Power Apps
 
 If you've decided to purchase Power Apps, see here for detailed information: [Purchase Power Apps](/power-platform/admin/signup-for-powerapps-admin).

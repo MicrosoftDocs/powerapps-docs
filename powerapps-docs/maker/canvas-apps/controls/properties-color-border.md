@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - chmoncay
@@ -65,6 +63,11 @@ These properties are in effect normally, when the user is not interacting with t
 **Color** – The color of text in a control.
 
 - Applies to **[Add picture](control-add-picture.md)**, **[Button](control-button.md)**, **[Check box](control-check-box.md)**, **[Column chart](control-column-line-chart.md)**, **[Date Picker](control-date-picker.md)**, **[Drop down](control-drop-down.md)**, **[Export](control-export-import.md)**, **[HTML text](control-html-text.md)**, **[Import](control-export-import.md)**, **[Label](control-text-box.md)**, **[Line chart](control-column-line-chart.md)**, **[List Box](control-list-box.md)**, **[Microphone](control-microphone.md)**, **[Pen input](control-pen-input.md)**, **[Pie chart](control-pie-chart.md)**, **[Radio](control-radio.md)**, **[Text input](control-text-input.md)**, and **[Timer](control-timer.md)** controls.
+
+
+**Drop Shadow** - Adds shadow effects around the control.
+
+- Applies to **[Horizontal container](control-horizontal-container.md)** and **[Vertical container](control-vertical-container.md)** controls.
 
 **Fill** – The background color of a control.
 

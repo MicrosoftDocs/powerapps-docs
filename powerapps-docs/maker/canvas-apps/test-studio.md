@@ -5,20 +5,17 @@ author: ChrisBal-MSFT
 
 ms.topic: conceptual
 ms.reviewer: mkaur
-ms.date: 11/04/2022
+ms.date: 01/05/2022
 ms.subservice: canvas-maker
 ms.author: chrisbal
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - ChrisBal-MSFT
   - maustinjones
-ms.custom:
-  - intro-internal
-  - canvas
+ms.custom: canvas
+ms.collection: get-started
 ---
 
 # Test Studio
@@ -102,6 +99,7 @@ While work to provide full control coverage in Power Apps Test Studio is in prog
 - Formula-level error management experimental feature needs to be turned on for the app.
 - Support for controls not listed in the [Select](./functions/function-select.md) and [SetProperty](./functions/function-setproperty.md) functions.
 - Person-type columns.
+- Test Studio is not compatible with the experimental [Git version control feature](git-version-control.md), and will not work properly if that feature is enabled.
 
 ## Next steps
 

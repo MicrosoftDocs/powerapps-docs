@@ -1,5 +1,5 @@
 ---
-title: Use deep links with Power Apps  mobile| Microsoft Docs
+title: Use deep links with the Power Apps mobile app
 description: How to configure deep links for Power Apps mobile.
 author: sericks007
 ms.component: pa-user
@@ -12,14 +12,11 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---
 
-# Use deep links with Power Apps mobile
+# Use deep links with the Power Apps mobile app
 
 Deep links let users move from one application to another on computers and mobile devices. Simple examples include a mobile app deep-linking to Facebook to sign in, an email address deep-linking to a mail app to compose a message, or a website deep-linking to an app store to download a related mobile app. 
 

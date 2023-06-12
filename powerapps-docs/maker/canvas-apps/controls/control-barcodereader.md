@@ -1,5 +1,5 @@
 ---
-title: Barcode reader control in Power Apps (experimental)
+title: Barcode reader control in Power Apps
 description: Learn about the details, properties and examples of the Barcode reader control in Power Apps.
 author: anuitz
 ms.topic: reference
@@ -10,40 +10,31 @@ ms.author: anuitz
 ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - anuitz
 ---
-# Barcode reader control in Power Apps (experimental)
+# Barcode reader control in Power Apps
 
-Scans barcodes, QR codes, and data-matrix codes on Android and iOS devices.
+Scans barcodes, QR codes, and data-matrix codes on Android, iOS, and Windows devices.
 
-> [!IMPORTANT]
-> - This is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
-## Prerequisites
-
-The barcode reader control is experimental and needs to be enabled to show up in the insert pane.
-
-With your app open for [editing](../edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
-
-1. Open **Settings**
-1. Select **Upcoming features** in the left-hand menu and select the **Experimental** tab
-1. Turn on the **Barcode reader** setting
-
-:::image type="content" source="./media/control-barcode-reader/barcode-experimental-app-setting.png" alt-text="A photo of the app setting for enabling the experimental barcode reader control.":::
+:::image type="content" source="./media/control-barcode-reader/barcode-hero.gif" alt-text="A gif showcasing the different capabilities of the barcode reader control.":::
 
 ## Description
 
-The control opens a native scanner on Android and iOS devices. The scanner supports the following scanning modes:
+The control opens a native scanner on Android, iOS, and Windows devices. On iOS and Android, the scanner supports the following scanning modes:
 
 - **Automatically scan** – A barcode is scanned as soon as it's detected.
 - **Select to scan** – The user can determine which of the detected barcodes to scan. The control doesn't support scanning in a web browser.
+- **Scan multiple** – The user can scan multiple barcodes during the barcode session.
+
+On Windows devices, the barcode reader will always **automatically scan**.
+
+The barcode reader control supports different zoom levels and turning on/off the device's flashlight from within the scanning experience.
 
 > [!NOTE]
-> The barcode scanner control is supported on Android and iOS devices. All other platforms will show a warning stating that some features of the app won't work.
+> The barcode scanner control is supported on Android, iOS, and Windows devices. All other platforms will show a warning stating that some features of the app won't work.
+
+:::image type="content" source="./media/control-barcode-reader/barcode-three-screens.PNG" alt-text="A set of three screens side-by-side showing the different capabilities of the barcode reader control.":::
 
 ## Key properties
 
@@ -57,9 +48,15 @@ The control opens a native scanner on Android and iOS devices. The scanner suppo
 
 **BarcodeType** - The barcode type to scan. You can target multiple barcode types by concatenating them. Ex. `'Microsoft.BarcodeReader.BarcodeType'.Code128 & 'Microsoft.BarcodeReader.BarcodeType'.Code39`.  **Default: Auto**
 
-**Scanning mode** - Whether to `Automatically scan` the first barcode detected in view or to allow the user to `Select to scan`, which of the barcodes in view to scan.  
+**Scanning mode** - Whether to `Automatically scan` the first barcode detected in view, to allow the user to `Select to scan` which of the barcodes in view to scan, or to `Scan multiple` barcodes in a single session. On Windows, the barcode reader will always `Automatically scan`.
+
+**Scanning quality** - The image quality the barcode reader scans at. A higher quality is good for small barcodes, but could lead to slow performance. On Windows, the barcode reader will always scan at the device's camera quality. **Default: Automatic**.
 
 **PreferFrontCamera** - If enabled the barcode reader will default to using the front facing camera instead of the rear facing camera.
+
+**BeepOnScan** - If enabled, the barcode reader will play a beep noise when a barcode is scanned.
+
+**VibrateOnScan** - If enabled, the barcode reader will vibrate when a barcode is scanned.
 
 ## Additional properties
 
@@ -87,7 +84,7 @@ The control opens a native scanner on Android and iOS devices. The scanner suppo
 
 ## Accessibility guidelines
 
-The same guidelines for the **[Button](control-button.md)** control apply to the **Barcode scanner** control because it's a button that launches the scan.
+The same guidelines for the **[Button](control-button.md)** control apply to the **Barcode reader** control because it's a button that launches the scan.
 
 ### Visual alternatives
 
@@ -97,24 +94,28 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 
 ## Barcode Availability by Device
 
-| Barcode Type | Supported on iOS and Android | Notes |
-|--------------|:---:|:--------:|
-| QR_CODE | ✔ | |
-| DATA_MATRIX | ✔ | |
-| AZTEC | ✔ | |
-| CODABAR | ✔ | |
-| CODE_128 | ✔ | |
-| CODE_39 | ✔ | |
-| CODE_93 | ✔ | |
-| EAN | ✔ | Supports EAN_8 and EAN_13 |
-| Interleaved 2 of 5 <br> ITF | ✔ | |
-| PDF_417 | ✔ | |
-| RSS14 <br> Databar 14 | ✔ | Supports Stacked and Omnidirectional |
-| RSS_EXPANDED <br> Databar Expanded | ✔ | Supports Stacked and Omnidirectional |
-| UPC | ✔ | Supports UPC_A and UPC_E |
-| GS1-DWCode | ✖ | |
-| Micro QR Code | ✖ | |
-| MSI | ✖ | |
+| Barcode Type | Supported on iOS and Android | Supported on Windows | Notes |
+|--------------|:---:|:---:|:--------:|
+| QR_CODE | ✔ | ✔ | |
+| DATA_MATRIX | ✔ | ✖ | |
+| AZTEC | ✔ | ✖ | |
+| CODABAR | ✔ | ✔ | |
+| CODE_128 | ✔ | ✔ | |
+| CODE_39 | ✔ | ✔ | |
+| CODE_93 | ✔ | ✖ | |
+| EAN | ✔ | ✔ | Supports EAN_8 and EAN_13 |
+| Interleaved 2 of 5 <br> ITF | ✔ | ✖ | |
+| PDF_417 | ✔ | ✖ | |
+| RSS14 <br> Databar 14 | ✔ | ✖ | Android and iOS support Stacked and Omnidirectional |
+| RSS_EXPANDED <br> Databar Expanded | ✔ | ✖ | Android and iOS support Stacked and Omnidirectional |
+| UPC | ✔ | ✔ | Supports UPC_A and UPC_E |
+| Micro QR Code | ✔ | ✖ | |
+| GS1-DWCode | ✖ | ✖ | |
+| MSI | ✖ | ✖ | |
+
+## Select() barcode reader control
+
+The barcode reader control doesn't support Select(). As a workaround, set the barcode reader fill color to transparent and put it in front of the control you wanted to select the barcode reader with. This will result in the same experience for the app user where selecting the control launches the barcode reader experience as they will be selecting an invisible barcode reader button instead of the actual control.
 
 ### See also
 

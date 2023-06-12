@@ -41,7 +41,7 @@ Your **Power Apps** experience in Teams starts with the **Home** tab. Use the **
 
 1. **Recent apps**: You'll find the apps that you have recently edited in this section. Select an app from this section to directly open the app inside the Studio. This section may be empty if you haven't edited any app yet.
 
-1. **Sample apps**: This section shows available sample apps from the Teams store. You can try out these apps by selecting on these tiles and installing them for your team. More information: [Use sample apps](use-sample-apps-from-teams-store.md)
+1. **Sample app templates**: This section shows available sample app templates.
 
 1. **Learn**: You'll find helpful articles in this section to get you started with Power Apps in Teams.
 

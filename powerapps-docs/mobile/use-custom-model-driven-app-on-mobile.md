@@ -1,8 +1,7 @@
 ---
-title: How to use a model-driven app on a mobile device | Microsoft Docs
+title: Use model-driven apps in the Power Apps mobile app
 description: Learn how to use a custom model-driven app on a mobile device.
 author: sericks007
-manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: quickstart
@@ -14,12 +13,9 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
-# Use model-driven apps on Power Apps mobile
+# Use model-driven apps in the Power Apps mobile app
 
 Use Power Apps mobile to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Install Power Apps mobile](run-powerapps-on-mobile.md).
 
@@ -205,11 +201,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   | :---:         |     :---:      |
   | ![Old process command.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
  
-- Commands such as **Edit columns**, **Edit filters**, and **Show Chart** have been moved from the main set of commands to overflow menu. This gives priority to other commands including custom commands. 
-
-  | Before | After |
-  | :---:         |     :---:      |
-  | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
+- Some commands have been moved from the main set of commands to an overflow menu. This gives priority to other commands, including custom commands. 
   
 ### Tablet optimization for command bar
 

@@ -9,12 +9,8 @@ author: "NHelgren" # GitHub ID
 ms.service: powerapps
 ms.subservice: dataverse-developer
 ms.author: "nhelgren" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Azure Active Directory user table
 

@@ -45,8 +45,6 @@
     items:
     - name: Query data
       href: query-data-web-api.md
-    - name: Retrieve related rows with query
-      href: retrieve-related-entities-query.md
     - name: Use FetchXml with Web API
       href: use-fetchxml-web-api.md
     - name: Retrieve and execute predefined queries
@@ -73,8 +71,6 @@
     href: perform-conditional-operations-using-web-api.md
   - name: Detect duplicate data
     href: manage-duplicate-detection-create-update.md
-  - name: Access table data faster using partitions
-    href: azure-storage-partitioning.md
   - name: Troubleshoot client errors
     href: /troubleshoot/power-platform/power-apps/web-api-client-errors
 - name: Work with table definitions (metadata)
@@ -86,13 +82,19 @@
   - name: Retrieve table definitions by name or MetadataId
     href: retrieve-metadata-name-metadataid.md
   - name: Create and update table definitions
-    href: create-update-entity-definitions-using-web-api.md 
+    href: create-update-entity-definitions-using-web-api.md
+  - name: Create and update column definitions
+    href: create-update-column-definitions-using-web-api.md
   - name: Create and update table relationships
     href: create-update-entity-relationships-using-web-api.md
   - name: Use multi-table lookup columns
     href: multitable-lookup.md
   - name: Work with choices (option sets)
     href: create-update-optionsets.md
+  - name: Web API Metadata Operations Sample
+    href: web-api-metadata-operations-sample.md
+  - name: Web API Metadata Operations Sample (C#)
+    href: samples/webapiservice-metadata-operations.md
 - name: Use Postman with Web API
   items:
   - name: Get started with Postman

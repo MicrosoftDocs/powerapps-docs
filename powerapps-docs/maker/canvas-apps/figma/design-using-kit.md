@@ -1,7 +1,7 @@
 ---
-title: Design your app using the UI kit (preview)
+title: Design your app using the UI kit
 description: Learn about the various components that the "Create Apps from Figma UI Kit" supports.
-author: tapanm-msft
+author: mduelae
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
@@ -10,13 +10,11 @@ ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
 ---
 
-# Design your app using the UI kit (preview)
+# Design your app using the UI kit
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -61,10 +59,10 @@ The kit also provides additional pages for more information as summarized below:
 - **Supported components** - lists information about supported components. For more information, see [Components supported by the UI kit](supported-components.md).
 
 > [!div class="nextstepaction"]
-> [Next step: Create a canvas app from Figma (preview)](create-app-from-figma.md)
+> [Next step: Create a canvas app from Figma](create-app-from-figma.md)
 
 ### See also
 
-- [Components supported by the UI Kit (preview)](supported-components.md)
+- [Components supported by the UI Kit](supported-components.md)
 - [Troubleshoot common errors](common-errors.md)
 

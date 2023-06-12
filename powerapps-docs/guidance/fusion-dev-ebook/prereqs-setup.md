@@ -23,7 +23,7 @@ To perform the steps described in this guide, you must have the following licens
 
 -   The **Azure CLI**, available at [https://learn.microsoft.com/cli/azure/install-azure-cli](/cli/azure/install-azure-cli).
 
--   **.NET 5.0**, available on at <https://dotnet.microsoft.com/download>.
+-   **.NET 6.0**, available on at <https://dotnet.microsoft.com/download>.
 
 -   **Visual Studio Code**, available at <https://code.visualstudio.com/download>. You'll also need the following extensions for Visual Studio Code:
 

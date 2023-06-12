@@ -8,14 +8,11 @@ ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
 ---
-# Sample: File Operations using Dataverse Web API 
+# Sample: File Operations using Dataverse Web API
 
 This .NET 6.0 sample demonstrates how to perform operations with file columns using the Dataverse Web API.
 
@@ -80,11 +77,11 @@ At a high level, each project performs these operations:
 
 ### Create a file column
 
-The `Utility.CreateFileColumn` function creates a file column named `sample_FileColumn` in the account table with a `MaxSizeInKb` value of 10MB.
+The `Utility.CreateFileColumn` function creates a file column named `sample_FileColumn` in the account table with a `MaxSizeInKb` value of 10 MB.
 
 ### Update a file column
 
-The `Utility.UpdateFileColumnMaxSizeInKB` function updates the `MaxSizeInKb` value of the `sample_FileColumn` file column to 100MB.
+The `Utility.UpdateFileColumnMaxSizeInKB` function updates the `MaxSizeInKb` value of the `sample_FileColumn` file column to 100 MB.
 
 > **Tip**: If you want to create some error scenarios because the file column size is too small, comment out this line.
 
@@ -118,6 +115,8 @@ To leave the system in the state before the sample ran, it does the following:
 ### See Also
 
 [Use file column data](../../file-column-data.md)<br />
-[Sample: File Operations using Dataverse SDK for .NET](../../org-service/samples/file-operations.md)
+[Sample: File Operations using Dataverse SDK for .NET](../../org-service/samples/file-operations.md)<br />
+[Use image column data](../../image-column-data.md)<br />
+[Sample: Image Operations using Dataverse Web API](image-operations.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

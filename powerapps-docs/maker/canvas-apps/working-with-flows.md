@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - TashasEv
@@ -139,7 +137,7 @@ You can now edit flows added to your app without leaving Power Apps Studio.
 
 ## Refresh a flow
 
-If any changes are made to the flow in [Power Automate](https://flow.microsoft.com) (instead of using Power Apps Studio) while you're editing the app, you'll need to refresh your flow to get the latest changes.
+If any changes are made to the flow in [Power Automate](https://make.powerautomate.com) (instead of using Power Apps Studio) while you're editing the app, you'll need to refresh your flow to get the latest changes.
 
 To refresh the flow and pull the latest changes, select **...** (ellipsis) to the right of your flow, and then select **Refresh**.
 

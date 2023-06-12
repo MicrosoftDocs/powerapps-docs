@@ -1,19 +1,16 @@
 ---
-title: Test and debug cards (preview)
+title: Test and debug cards
 description: Learn how to test and debug your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
 ---
 
-# Test and debug cards (preview)
-
-[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
+# Test and debug cards
 
 Use the **Play** page to preview your cards before sending them out to users. The **Play** page has tools to test your card and help you debug any issues. Get to the **Play** page in the [card designer](../designer-overview.md).
 
@@ -26,7 +23,7 @@ Card instances that you preview in the **Play** page expire 48 hours after you c
 
 ## Preview a card in the Play page
 
-1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (preview)** > **Cards**, and then select a card.
+1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards**, and then select a card. If the **Cards** tab is not visible, select **More** and pin the **Cards** tab.
 1. Select **Play** at the top of the card designer window. The **Play** page opens in a new browser tab.
 
    :::image type="content" source="../../media/debugging-cards/play-button-in-designer.png" alt-text="Screenshot of the Play button in the card designer.":::

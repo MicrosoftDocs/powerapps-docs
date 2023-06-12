@@ -1,7 +1,7 @@
 ---
 title: "Azure Synapse Link | MicrosoftDocs"
 description: "Learn how to export table data to an Azure Synapse Analytics and Azure Data Lake in Power Apps"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 05/26/2021
 ms.reviewer: "Mattp123"
 
@@ -14,12 +14,8 @@ author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - sama-zaki
 ---

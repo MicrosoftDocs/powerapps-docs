@@ -4,14 +4,10 @@ description: "This sample plug-in can post the pipeline execution context to the
 ms.date: 04/03/2022
 author: jaredha
 ms.author: jaredha
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: article
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke

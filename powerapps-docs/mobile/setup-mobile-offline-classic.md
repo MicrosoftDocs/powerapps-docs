@@ -2,7 +2,7 @@
 title: Set up mobile offline (classic)
 ms.custom: Configure mobile offline synchronization
 description: Set up mobile offline for Power Apps mobile and Dynamics 365 phones and tablets app and
-ms.date: 10/13/2022
+ms.date: 02/08/2023
 ms.reviewer: 
 
 ms.suite: 
@@ -13,14 +13,10 @@ ms.assetid: 7f992860-8c7b-48ba-806a-63a3634d209d
 caps.latest.revision: 1
 ms.author: sericks
 author: sericks007
-manager: tapanm-MSFT
 search.audienceType: 
   - admin
   - customizer
   - enduser
-search.app: 
-  - D365CE
-  - D365Sales
 ---
 
 # Set up mobile offline (classic)
@@ -37,27 +33,16 @@ One of the first things you need to do is enable tables that will be available t
 To enable a table for mobile offline synchronization, follow the steps below.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-
-  
-2. In the navigation pane, select **Dataverse** > **Tables**.  
+ 
+2. In the navigation pane, select **Tables**. [!include [left nav](../includes/left-navigation-pane.md)] 
   
 3. Select the row for the table that you want to enable for mobile offline, such as **Account**.  
 
-   > [!div class="mx-imgBorder"]
-   > ![Select the row for the table that you want to enable for mobile offline.](media/SelectTable.png "Select the row for the table that you want to enable for mobile offline.")
- 
-
 4. On the command bar, select **Properties**. 
 
-   > [!div class="mx-imgBorder"]
-   >![Select Properties.](media/SelectProperties.png "Select Properties.")
- 
-  
-5. On the **Edit table** pane, expand **Advanced options**. Under **Rows in this table**, make sure the **Can be taken offline** check box is selected, and then select **Save**.
+5. On the **Edit table** pane, expand **Advanced options**. 
 
-   > [!div class="mx-imgBorder"]
-   >![Select enable mobile offline check box.](media/enable_mobileoffline_checkbox.png "Select enable mobile offline check box")
-
+6. Under **Rows in this table**, make sure the **Can be taken offline** check box is selected, and then select **Save**.
 
    > [!NOTE]
    > Keep in mind that the amount of data you make available to users while they’re offline can affect data sync times, device performance, and can affect the data usage rates for devices on a cellular network. The amount of data that gets downloaded to the device depends on: 
@@ -73,30 +58,14 @@ To create a profile, follow the steps below.
 1. Go to Power Platform Admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
 2. In the navigation pane, select **Environments**.
-
-   > [!div class="mx-imgBorder"]
-   >![Select a Environment.](media/offline_admincenter_enviroments.png "Select a Environment")
  
 3. Choose an environment and then select **Settings**.
-
-   > [!div class="mx-imgBorder"]
-   >![Environment settings.](media/offline_open_an_enviroment.png "Environment settings")
  
 4. Expand **Users + permissions**,  and then select **Mobile configuration**.
-
-   > [!div class="mx-imgBorder"]
-   >![Mobile configuration setting.](media/offline_mobile_config_settings.png "Mobile configuration settings")
   
 5. Select **New Profile** to create a new profile for mobile offline. If you already have a profile that you want to edit, select it from the list.
 
-   > [!div class="mx-imgBorder"]
-   >![Mobile Offline Profile screen.](media/mol_new_profile.png "Crearte new Mobile Offline Profile")
-
-  
 6. Enter a name and description for your mobile offline profile. Select **Create** to create the mobile offline profile.
-    
-   > [!div class="mx-imgBorder"]
-   >![Name your mobile offline profile.](media/mol_sample_profile.png "Name your mobile offline profile")
   
 7. After the profile is created, select it to open the profile so you can continue editing it.  
 
@@ -116,28 +85,27 @@ To create a profile, follow the steps below.
 10. Select a filter based on the ownership type for the table. Table ownership is decided when you create a table. For more information, see [Types of tables](/powerapps/maker/common-data-service/types-of-entities).
 
 
-
-   |Table ownership type|Available Data Download Filter options |  
-  |---------------|-----------------|  
-  |**User or Team**| <ul><li>**Download Related rows only** - Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> <li>**All rows** - Make all rows for this table available offline.</li> <li>**Other data filter** - Make only the specified rows for this table available offline and then choose from the following: </li> <ul><li> **Download user rows** - Make only your rows available offline.</li>  <li> **Download team rows** - Make your team’s rows available offline.</li> <li>**Download my business unit’s rows** - Make your business unit’s rows available offline.</lu>|  
-  |**Organization**|<ul><li>**Download related rows only** - Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> <li>**All rows** - Make all rows for this table available offline. </li>|  
-  |**Business**|<ul><li>**Download related data only** -  Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available. </li> <li>**All rows** - Make all rows for this table available offline.</li> <li>**Other rows** - Make only the specified rows for this table available offline and choose from the following:</li> <ul><li> **Download my business unit’s rows** - Make your business unit’s rows available offline.</li>   |  
-  |**None**|  <ul><li>**Download related rows only**. Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> |        
+    |Table ownership type|Available Data Download Filter options |  
+    |---------------|-----------------|  
+    |**User or Team**| <ul><li>**Download Related rows only** - Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> <li>**All rows** - Make all rows for this table available offline.</li> <li>**Other data filter** - Make only the specified rows for this table available offline and then choose from the following: </li> <ul><li> **Download user rows** - Make only your rows available offline.</li>  <li> **Download team rows** - Make your team’s rows available offline.</li> <li>**Download my business unit’s rows** - Make your business unit’s rows available offline.</lu>|  
+    |**Organization**|<ul><li>**Download related rows only** - Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> <li>**All rows** - Make all rows for this table available offline. </li>|  
+    |**Business**|<ul><li>**Download related data only** -  Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available. </li> <li>**All rows** - Make all rows for this table available offline.</li> <li>**Other rows** - Make only the specified rows for this table available offline and choose from the following:</li> <ul><li> **Download my business unit’s rows** - Make your business unit’s rows available offline.</li>   |  
+    |**None**|  <ul><li>**Download related rows only**. Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> |        
  
     
-   If **Custom** is selected, admins can define a custom filter based on the following rules. Admins can create filters up to three levels.  
+    If **Custom** is selected, admins can define a custom filter based on the following rules. Admins can create filters up to three levels.  
 
-   |&nbsp; |&nbsp; |&nbsp; |
-   |---------|---------|---------|
-   |equal     |     not equal     |   gt – greater than      |
-   |ge – greater than or equal to     |   le – less than or equal to      |   lt – less than      |
-   |like     |   not-like      |     in   |
-   |not-in     |    null     |    not-null     |
-   |eq-userid     |   ne-userid      |    eq-userteams     |
-   |eq-useroruserteams     |    eq-useroruserhierarchy     |    eq-useroruserhierarchyandteams     |
-   |eq-businessid     |    ne-businessid     |   eq-userlanguage      |
-   |begins-with     |     not-begin-with    |    ends-with     |
-   |not-end-with    |       |         |
+    |&nbsp; |&nbsp; |&nbsp; |
+    |---------|---------|---------|
+    |equal     |     not equal     |   gt – greater than      |
+    |ge – greater than or equal to     |   le – less than or equal to      |   lt – less than      |
+    |like     |   not-like      |     in   |
+    |not-in     |    null     |    not-null     |
+    |eq-userid     |   ne-userid      |    eq-userteams     |
+    |eq-useroruserteams     |    eq-useroruserhierarchy     |    eq-useroruserhierarchyandteams     |
+    |eq-businessid     |    ne-businessid     |   eq-userlanguage      |
+    |begins-with     |     not-begin-with    |    ends-with     |
+    |not-end-with    |       |         |
 
  
 11. In the **Include [table name] rows related to these tables** area, select the related table relationships. You need to have added the table you want to create the relationship with. For example, if you want to add a relationship between the Account and Contact tables, then you need to add both tables to the mobile offline profile. 
@@ -210,19 +178,10 @@ Following these steps to publish the profile:
 1. Go to Power Platform Admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
 2. In the navigation pane, select **Environments**.
-
-   > [!div class="mx-imgBorder"]
-   >![Select a environment.](media/offline_admincenter_enviroments.png "Select a Environment")
  
-3. Choose an environment and then select **Settings**.
-
-   > [!div class="mx-imgBorder"]
-   >![Environment settings.](media/offline_open_an_enviroment.png "Environment settings")
+3. Select an environment and then select **Settings**.
  
 4. Expand **Users + permissions**,  and then select **Mobile configuration**.
-
-   > [!div class="mx-imgBorder"]
-   >![Mobile configuration setting.](media/offline_mobile_config_settings.png "Mobile configuration settings")
   
 5. Select **Go to legacy** on the command bar.
 
@@ -230,9 +189,6 @@ Following these steps to publish the profile:
    >![Go to legacy option.](media/go-to-legacy.png "Go to legacy option.")
   
 6. Select **Mobile Offline Settings**.
-
-   > [!div class="mx-imgBorder"]
-   >![Mobile offline settings](media/mobile-offline-settings.png "Mobile offline settings")
    
 7. When there is a mismatch of data between client and server, conflict errors occur. To resolve the issue, choose one of the following settings:
 
@@ -246,17 +202,16 @@ Enable mobile offline for a specific app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. In the left navigation pane, select **Apps** and then select the app that you want open. On the command bar, select **Edit**. This will open the app in the **App Designer**.
-
-   > [!div class="mx-imgBorder"]
-   >![Open App Designer.](media/mol_edit_apps.png "Open App Designer")
+2. In the left navigation pane, select **Apps** and then select the app that you want open. 
   
-3. In the command bar, select the elipses (...) icon, and then select **Switch to classic**.
+3. On the command bar, select **Edit**. This will open the app in the **App Designer**.
+  
+4. In the command bar, select the elipses (...) icon, and then select **Switch to classic**.
   
    > [!div class="mx-imgBorder"]
    >![Switch to classic option.](media/switch-to-classic.png "Switch to classic option")
   
-4. Select the **Properties** tab and scroll down to select the **Enable Mobile Offline** check box. Then select the drop-down menu and choose a mobile offline profile.
+5. Select the **Properties** tab and scroll down to select the **Enable Mobile Offline** check box. Then select the drop-down menu and choose a mobile offline profile.
 
    > [!div class="mx-imgBorder"]
    >![Enable mobile offline for the app.](media/mol_edit_app_designer.png "Enable mobile offline for the app")
@@ -264,7 +219,7 @@ Enable mobile offline for a specific app.
    > [!NOTE] 
    > You can add more than one profile for an app module.
 
-5. When you're done, at the top choose **Save** and then **Publish**.
+6. When you're done, at the top choose **Save** and then **Publish**.
 
    > [!div class="mx-imgBorder"]
    > ![Publish the app.](media/mol_publish_app.png "Publish the app")

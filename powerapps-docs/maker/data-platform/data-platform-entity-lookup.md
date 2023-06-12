@@ -2,7 +2,6 @@
 title: Create a relationship between tables by using a lookup column | Microsoft Docs
 description: Step-by-step instructions for how to create a relationship between tables in Power Apps by using a lookup column.
 author: lancedMicrosoft
-manager: kvivek
 
 ms.component: cds
 ms.topic: how-to
@@ -11,17 +10,14 @@ ms.subservice: dataverse-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create a relationship between tables
 
-
 Data in one table often relates to data in another table. For example, you might have a **Teachers** table and a **Class** table, and the **Class** table might have a lookup relation to the **Teachers** table to show which teacher teaches the class. You can use a lookup column to show data from the **Teachers** table. This is commonly referred to as a lookup column.
 
 ## Define a relationship
+
 You can create several types of relationships from one table to another (or between a table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table. Some common relationship types are:
 
 * **Many-to-one** - In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class has a single classroom. This is the most common type of relationship and is shown in the column list as a **Lookup column**
@@ -34,7 +30,7 @@ Additionally, you can set advanced cascading behaviors on many-to-one and one-to
 
 To add a lookup relation to a table, create a relation under the **Relationships** area and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section, and then select **Tables** on the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Select an existing table, or [Create a new table](data-platform-create-entity.md)
 
@@ -56,7 +52,7 @@ To add a lookup relation to a table, create a relation under the **Relationships
 
 To add a One-to-many relationship, create a relation under the **Relationships** area and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and select **Tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Tables** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 2. Select an existing table, or [Create a new table](data-platform-create-entity.md)
 
@@ -75,9 +71,10 @@ To add a One-to-many relationship, create a relation under the **Relationships**
 6. Select **Save table**.
 
 ## Add a Many-to-many relationship
+
 To add a Many-to-many relationship, create a relation under the **Relationships** area and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and select **Tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Tables** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 2. Select an existing table, or [Create a new table](data-platform-create-entity.md)
 
@@ -91,7 +88,6 @@ To add a Many-to-many relationship, create a relation under the **Relationships*
     > ![Many to Many Relationship.](./media/data-platform-cds-newrelationship/manytomany-1.png "Many to Many Relationship")
 
 6. Select **Done** to add the relationship to your table, and then click **Save table**.
-
 
 ## Add advanced relationship behavior
 
@@ -122,17 +118,17 @@ As you model your business data by creating custom tables or when using existing
 For more information on defaults and custom behaviors: [Configure table relationship behavior](./create-edit-entity-relationships.md#table-relationship-behavior).
 
 
-
 ## Use a lookup column in an app
+
 If you [create an app automatically](../canvas-apps/data-platform-create-app.md) from a table that contains a lookup column, it appears as a **Drop down** control that contains data from the **Primary name** column of the table.
 
 ## Add 1:N and N:N relationships for canvas apps
+
 Use the **Relate** function to link two rows through a one-to-many or many-to-many relationship in Microsoft Dataverse. More information: [Relate and Unrelate functions in Power Apps](../canvas-apps/functions/function-relate-unrelate.md)
 
 ## Next steps
+
 * [Generate an app by using a Dataverse database](../canvas-apps/data-platform-create-app.md)
 * [Create an app from scratch using a Dataverse database](../canvas-apps/data-platform-create-app-scratch.md)
-
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -5,12 +5,8 @@ ms.date: 04/26/2022
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---

@@ -2,7 +2,6 @@
 title: Create a choice| Microsoft Docs
 description: Step-by-step instructions for how to create a choice.
 author: lancedMicrosoft
-manager: tapanm
 ms.component: cds
 ms.topic: how-to
 ms.date: 03/21/2018
@@ -10,9 +9,6 @@ ms.subservice: dataverse-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create a choice
 
@@ -28,7 +24,7 @@ Choices are either global or local. You can define a choice to use a set of opti
 
 ## Create a global choice within a solution
 
-1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the solution you want.
+1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. On the command bar, select **New** > **Choice**.
 1. Enter the following properties:
    - **Display name**.  Enter the **Display name** for your column. The **Display name** is used when presenting this column to your users.
@@ -50,7 +46,7 @@ Choices are either global or local. You can define a choice to use a set of opti
 
 ## Create a local choice within a solution
 
-1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the solution you want.
+1. Sign into [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Open the table where you want to create the choice, and then on the command bar, select **New** > **Choice**.
 

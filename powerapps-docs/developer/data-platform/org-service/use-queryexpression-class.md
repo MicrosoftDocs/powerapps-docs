@@ -1,17 +1,13 @@
 ---
 title: "Use the QueryExpression class (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use the QueryExpression class to build complex queries for use with the IOrganizationService.QueryBase method or the RetrieveMultipleRequest message." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
+ms.date: 04/05/2023
 author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -64,7 +60,7 @@ The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property nam
 |---------|---------|
 |OptimizeForUnknown | Optimize For Unknown|
 |ForceOrder | Force Order |
-|Recompile | Recompile |
+|Recompile &nbsp;(see note)| Recompile |
 |DisableRowGoal | use hint(‘Disable_Optimizer_RowGoal’) |
 |EnableOptimizerHotfixes | use hint('ENABLE_QUERY_OPTIMIZER_HOTFIXES') |
 |LoopJoin | Loop Join |
@@ -73,6 +69,9 @@ The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property nam
 |NO_PERFORMANCE_SPOOL | NO_PERFORMANCE_SPOOL |
 |MaxRecursion | MAXRECURSION number |
 |ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS | ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS |
+
+> [!IMPORTANT]
+> In general, the “Recompile” query hint should be avoided. This query hint will require extra computation and database resources for every execution of the query on the database. Please read Microsoft’s documentation on the “OPTION (RECOMPILE)” query hint, or work with Microsoft customer support, to find out more about the appropriate use cases of this query hint.
 
 More information: [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 

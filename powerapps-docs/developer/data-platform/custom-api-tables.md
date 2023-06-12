@@ -1,7 +1,7 @@
 ---
 title: "CustomAPI tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the tables and column values to use when creating Custom APIs." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 09/27/2022
+ms.date: 02/24/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath # GitHub ID
@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: dikamath # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
@@ -292,7 +289,7 @@ The table below includes selected columns of a Custom API table that you can set
 |**Name**<br />`Name`<br />`name`|Text<br />String|The primary name of the custom API. This will display in the list of custom apis when viewed in the solution.|
 |**Owner**<br />`OwnerId`<br />`ownerid`|Owner|A reference to the user or team that owns the API. |
 |**Plugin Type**<br />`PluginTypeId`<br />`plugintypeid`|Lookup|A reference to the plug-in type that provides the main operation for this Custom API. See: [Use a plug-in to include logic in your Custom API](custom-api.md#use-a-plug-in-to-include-logic-in-your-custom-api)|
-|**Unique Name**<br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API. This will be the name of the message created.<br /> This value must include a customization prefix that matches the prefix set for your solution publisher.<br />**Cannot be changed after it is saved.**|
+|**Unique Name**<br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API. This will be the name of the message created.<br /> This value must include a customization prefix that matches the prefix set for your solution publisher.<br /> This value can't contain any special characters.<br />**Cannot be changed after it is saved.**|
 |**Enabled for Workflow**<br />`WorkflowSdkStepEnabled`<br />`workflowsdkstepenabled`|Yes/No<br />Boolean|Indicates if the custom API is enabled as a workflow action. See: [Use a Custom API in a workflow](custom-api.md#use-a-custom-api-in-a-workflow)<br />**Cannot be changed after it is saved.**|
 
 ## CustomAPIRequestParameter Table Columns
@@ -318,7 +315,7 @@ The table shown below includes columns (attributes) of the Custom API Request Pa
 |**Name**<br />`Name`<br />`name`|Text<br />String|The primary name of the custom API request parameter.  This will display in the list of custom api request parameters when viewed in the solution. Use this to differentiate this parameter from others that share a common Unique Name. <br />This naming convention is recommended: `{Custom API Unique Name}.{Parameter UniqueName}`|
 |**Owner** <br />`OwnerId`<br />`ownerid`|Owner|A reference to the user or team that owns the API.|
 |**Type**<br />`Type`<br />`type`|Choice<br />Picklist|The data type of the custom API request parameter.<ul> <li>**Value**: 0 **Label**: Boolean </li> <li>**Value**: 1 **Label**: DateTime</li> <li>**Value**: 2 **Label**: Decimal </li> <li>**Value**: 3 **Label**: Entity</li> <li>**Value**: 4 **Label**: EntityCollection </li> <li>**Value**: 5 **Label**: EntityReference</li> <li>**Value**: 6 **Label**: Float </li> <li>**Value**: 7 **Label**: Integer</li> <li>**Value**: 8 **Label**: Money </li> <li>**Value**: 9 **Label**: Picklist</li> <li>**Value**: 10 **Label**: String </li> <li>**Value**: 11 **Label**: StringArray </li> <li>**Value**: 12 **Label**: Guid </li> </ul>**Cannot be changed after it is saved.**|
-|**Unique Name** <br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API request parameter. This will be the name of the parameter when you call the Custom API.<br/>**Cannot be changed after it is saved.**|
+|**Unique Name** <br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API request parameter. This will be the name of the parameter when you call the Custom API.<br /> This value can't contain any special characters.<br/>**Cannot be changed after it is saved.**|
 
 ## CustomAPIResponseProperty Table Columns
 
@@ -341,7 +338,7 @@ The table below includes columns (attributes) of the Custom API Response Propert
 |**Name**<br />`Name`<br />`name`|String|The primary name of the custom API response property .  This will display in the list of custom api request parameters when viewed in the solution. Use this to differentiate this parameter from others that share a common Unique Name. <br />This naming convention is recommended: `{Custom API Unique Name}.{Property UniqueName}`|
 |**Owner** <br />`OwnerId`<br />`ownerid`|Owner|A reference to the user or team that owns the API.|
 |**Type**<br />`Type`<br />`type`|Picklist|The data type of the custom API response property <ul> <li>**Value**: 0 **Label**: Boolean </li> <li>**Value**: 1 **Label**: DateTime</li> <li>**Value**: 2 **Label**: Decimal </li> <li>**Value**: 3 **Label**: Entity</li> <li>**Value**: 4 **Label**: EntityCollection </li> <li>**Value**: 5 **Label**: EntityReference</li> <li>**Value**: 6 **Label**: Float </li> <li>**Value**: 7 **Label**: Integer</li> <li>**Value**: 8 **Label**: Money </li> <li>**Value**: 9 **Label**: Picklist</li> <li>**Value**: 10 **Label**: String </li> <li>**Value**: 11 **Label**: StringArray </li> <li>**Value**: 12 **Label**: Guid </li> </ul>**Cannot be changed after it is saved.**|
-|**Unique Name** <br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API response property . This will be the name of the parameter when you call the Custom API.<br/>**Cannot be changed after it is saved.**|
+|**Unique Name** <br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API response property . This will be the name of the parameter when you call the Custom API.<br /> This value can't contain any special characters.<br/>**Cannot be changed after it is saved.**|
 
 ### See also
 

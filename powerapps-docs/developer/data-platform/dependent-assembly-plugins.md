@@ -1,18 +1,14 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 12/01/2022
+ms.date: 04/20/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dikamath # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -41,7 +37,7 @@ You will still be able to register plug-in assemblies individually, but using `P
 
 ## Send feedback
 
-If you have questions or issues with this feature you can contact technical support. If you have suggestions please post them on the [Power Apps Ideas](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas) site.
+If you have questions or issues with this feature you can contact technical support. If you have suggestions please post them on the [Power Apps Ideas Forum](https://ideas.powerapps.com/) site.
 
 ## Limitations
 
@@ -49,6 +45,7 @@ The following limitations apply to dependent assembly plug-ins.
 
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* are not supported.
 - On-premises environments are not supported.
+- Unmanaged code is not supported. You can't include references to unmanaged resources.
 
 ## Signing Assemblies
 
@@ -85,7 +82,7 @@ To use this feature with PAC CLI and PRT, you should use these tools and applica
 |Tool/App|Instructions |
 |---------|---------|
 |**Microsoft Power Platform CLI**|You must have version 1.17 or higher.<br />The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the Windows version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the Windows version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](/power-platform/developer/cli/introduction)|
-|**PRT**|You should use version 9.1.0.155 or higher.<br /><br />Use these instructions to install the latest version: [Dataverse development tools](download-tools-nuget.md).|
+|**PRT**|You should use version 9.1.0.184 or higher.<br /><br />Use these instructions to install the latest version: [Dataverse development tools](download-tools-nuget.md).|
 |**Visual Studio**|We require Visual Studio 2019 or newer.|
 
 ### Create a Visual Studio project
@@ -176,7 +173,7 @@ While viewing the list of plugin packages using the **Display by Package** view,
 :::image type="content" source="media/prt-pluginpackage-unregister-command.png" alt-text="Showing the Unregister command while a plugin package is selected.":::
 
 > [!IMPORTANT]
-> Unregistering a package will delete the package, all assemblies within it, all plug-ins within the assembly, and any plug-in step registrations for the plug-ins.
+> You cannot unregister a package that has any plug-in step registrations for any plug-in assemblies in the package. You must first unregister all step registrations for the assemblies in the package before you can delete the package.
 
 ## Use Power Platform Tools for Visual Studio
 
@@ -297,6 +294,18 @@ More information:
 - [Create a NuGet package using MSBuild](/nuget/create-packages/creating-a-package-msbuild)
 - [NuGet pack and restore as MSBuild targets](/nuget/reference/msbuild-targets)
 
+
+## Using System.Text.Json
+
+If you use [System.Text.Json](xref:System.Text.Json), please pay special attention to explicitly add a reference to the [System.Text.Json NuGet package](https://www.nuget.org/packages/System.Text.Json/).
+
+With dependent assemblies you must include NuGet package dependencies for any external libraries you use. You must do this to be able to refer to those types at design time.  Your class library project must also include a reference to the [Microsoft.CrmSdk.CoreAssemblies NuGet package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies) so that you can refer to essential interfaces for to write your plug-in.
+
+Because the [Microsoft.CrmSdk.CoreAssemblies Nuget package has a dependency on System.Text.Json](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies#dependencies-body-tab), you will be able to refer to `System.Text.Json` types at design time without explicitly adding the `System.Text.Json` Nuget package. However, the `System.Text.Json ` NuGet package will not be included in your plug-in package due to this indirect dependency. You must explicitly add it as a first level dependency for your plug-in package.
+
+Currently, `System.Text.Json` is the only dependency in the Microsoft.CrmSdk.CoreAssemblies Nuget package. This guidance will be true if any other  new dependencies are added in the future.
+
+
 ## FAQ
 
 ### Q: Can I continue to use ILMerge?
@@ -307,28 +316,24 @@ More information:
 
 The following are known issues that should be resolved before dependent assemblies for plug-ins becomes generally available.
 
-### Asynchronous plug-in steps do not work
-
-If you use dependent assemblies for a plug-in registered for an asynchronous step an error with the message `Expected non-empty Guid.` will occur.
-
 ### Plug-in profiler
 
-You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in package. More information: [Use Plug-in profiler](debug-plug-in.md#use-plug-in-profiler)
+To debug plug-ins that are part of a plug-in package, you must:
 
-### Solution containing plugin package cannot include any steps using the plug-in
+1. Use the latest version of the Plug-in Registration tool (PRT). Version 9.1.0.184 or higher.
 
-When you prepare a solution that contains a plugin package, do not include any plug-in step registrations that use an assembly included in the plug-in package.
+   Using pac cli, use [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt) with the `--update` switch to update.
 
-The export of the solution will succeed, but you will not be able to import the solution. To test plug-ins that use a dependent assembly in a different environment, you must manually register the steps.
+1. In the folder that contains the PRT, edit the `appsettings.json` file. Set `LegacyPluginProfiler` to `false`.
 
-### Users must be granted read access to plug-in package
+   If you have installed using pac cli, the folder should be:
+   
+   `C:\Users\<you>\AppData\Local\Microsoft\PowerPlatform\PRT\9.1.0.184\tools`
 
-Any users without the System Administrator security role must be granted read access to the [PluginPackage table](reference/entities/pluginpackage.md).
+More information:
 
-You can manually edit this for each security role following the steps here: [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role). **Plugin Package** is located in the **Custom Entities** tab.
-
-:::image type="content" source="media/set-pluginpackage-read-access.png" alt-text="Setting plugin package read access.":::
-
+- [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt)
+- [Use Plug-in profiler](debug-plug-in.md#use-plug-in-profiler)
 
 ### See also
 

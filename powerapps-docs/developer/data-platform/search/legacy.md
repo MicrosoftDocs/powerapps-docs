@@ -163,7 +163,7 @@ The Lucene query syntax supports the following functionality:
 
 | **Functionality** | **Description** |
 |---|---|
-| Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by AND, &&, +<br/>OR operator; denoted by OR, \|\|<br/>NOT operator; denoted by NOT, !, – |
+| Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by AND, +<br/>OR operator; denoted by OR, \|\|<br/>NOT operator; denoted by NOT, !, – |
 | Precedence operators              | The same functionality as simple query syntax. |
 | Wildcards                         | In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – "alp\*"<br/>Leading wildcard - "/.\*pine/" |
 | Fuzzy search                      | Supports queries misspelled by up to two characters.<br/>"Uniersty\~" will return "University"<br/>"Blue\~1" will return "glue", "blues" |

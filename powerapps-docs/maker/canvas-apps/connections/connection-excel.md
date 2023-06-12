@@ -11,8 +11,6 @@ ms.author: lanced
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - lancedMicrosoft
   - mduelae
@@ -33,6 +31,27 @@ Store the Excel file in a cloud-storage account, such as Dropbox, Google Drive, 
 
 ## Step 3 - Add Excel as a data source for your Power App
 
+Depending upon whether you have the [new look](../intro-maker-portal.md?tabs=home-new-look) or [classic look](../intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
+
+# [New look (preview)](#tab/home-new-look)
+
+[This article is prerelease documentation and is subject to change.]
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Depending on how you want to create your app, from the home screen, select one of the following options:
+   - To create a single-page gallery app with a responsive layout, choose either:
+     - **Start with data** > **Connect to external data** > **From Excel**.
+     - **Start with page design** > **Gallery connected to external data** > **From Excel**
+   - To create a three screen mobile app, select **Start with an app template** > **From Excel**.
+1. Only one connection is shown at a time. To select a different connection, select on the **...** button to switch connection or add a new connection.
+1. Enter the file location and select the table.
+1. When you're done, select **Create app**.
+
+
+# [Classic](#tab/home-classic)
+
+
+
 There are currently two ways to add the Excel table as a data source in your application. These two different approaches each uses a slightly different version of the connector.
 
 > [!NOTE]
@@ -44,7 +63,7 @@ There are currently two ways to add the Excel table as a data source in your app
 > [!IMPORTANT]
 > If you choose this method, you'll use an older version of the connector.
 
-You can automatically add Excel and create a 3 screen application by [creating a canvas app with data from an Excel file](../get-started-create-from-data.md)
+You can automatically add Excel and create a three screen application by [creating a canvas app with data from an Excel file](../get-started-create-from-data.md)
 
 When you're finished, you'll have an application and in the Data Source window, you'll see your data source has been added with a **OneDrive** connector.
 
@@ -52,7 +71,7 @@ When you're finished, you'll have an application and in the Data Source window, 
 
 #### Start from Excel with new connector
 
-If you want to start with data from Excel, but with the newer version of the connector, [create an app from scratch from Excel](../get-started-create-from-blank.md) first. Then, drop the OneDrive or any other cloud data source that stores your Excel file, and then readd the Excel data source using the new connector (**Excel Online (Business)**). Because the names of the tables are the same and the file is the same, the Power Apps will  connect to the updated data source and work without any more changes required.
+If you want to start with data from Excel, but with the newer version of the connector, [create an app from scratch from Excel](../get-started-create-from-blank.md) first. Then, drop the OneDrive or any other cloud data source that stores your Excel file, and then read the Excel data source using the new connector (**Excel Online (Business)**). Because the names of the tables are the same and the file is the same, the Power Apps will  connect to the updated data source and work without any more changes required.
 
 ![Using Start from Data with new connector.](./media/connection-excel/excel-data-source-with-app.png "Using Start from Data with new connector")
 
@@ -83,6 +102,8 @@ The Excel Online (Business) connector allows you to choose from more locations t
 Once you've selected your Excel file, and then table within it, you'll have added a new Excel data source to your application. You can verify the use of the newer version of the connector with the presence of an Excel icon, as opposed to a OneDrive icon for older connector version.
 
 ![Updated connector version using Excel icon instead of older OneDrive icon.](./media/connection-excel/excel-data-source.png "Updated connector version using Excel icon instead of older OneDrive icon")
+
+---
 
 ## Other connectors
 

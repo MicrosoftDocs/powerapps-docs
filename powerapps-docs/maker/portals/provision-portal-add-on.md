@@ -1,10 +1,10 @@
 ---
-title: Provision a portal using the older portal add-on
+title: Provision a site using the older add-on
 description: Instructions to provision a portal using the older portal add-on.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: nenandw
@@ -14,12 +14,12 @@ contributors:
     - nickdoelman
 ---
 
-# Provision a portal using the older portal add-on
+# Provision a site using the older add-on
 
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
-If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page and provision the portal.
+If you have purchased an older site (portal) add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page and provision the portal.
 
 > [!NOTE]
 > - To provision a portal, you must be assigned either System Administrator or System Customizer role of the Microsoft Dataverse environment selected for the portal. You must also have the [required permissions](/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to create and register an application in Azure AD. If you don't have the required permissions, contact the Global Administrator to update your permissions or ask the Global Administrator to provision the portal.

@@ -4,7 +4,6 @@ description: Learn how to create code components using Power Apps component fram
 keywords:
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -15,9 +14,9 @@ contributors:
 
 # Code components for canvas apps
 
-App makers can use Power Apps component framework to create code components that can be used in their canvas apps. More information: [Power Apps component framework overview](overview.md) 
+Professional developers can use Power Apps component framework to create code components that can be used in their canvas apps. More information: [Power Apps component framework overview](overview.md) 
 
-Professional developers can use Power Apps component framework to create, import, and add code components to canvas apps by using [Microsoft Power Platform CLI](get-powerapps-cli.md). Certain APIs might not be available in canvas apps. We recommend that you check each API to determine where it's available.  
+App makers can use Power Apps component framework to create, import, and add code components to canvas apps by using [Microsoft Power Platform CLI](get-powerapps-cli.md). Certain APIs might not be available in canvas apps. We recommend that you check each API to determine where it's available.  
 
 ## Security considerations
 

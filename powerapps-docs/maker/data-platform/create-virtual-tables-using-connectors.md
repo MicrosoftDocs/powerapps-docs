@@ -1,33 +1,27 @@
 ---
-title: "Create virtual tables using virtual connectors (preview) (Microsoft Dataverse) | Microsoft Docs"
+title: "Create virtual tables using virtual connectors (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 01/04/2023
+ms.date: 06/08/2023
 ms.reviewer: matp
 ms.topic: article
 author: NHelgren # GitHub ID
 ms.author: nhelgren
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke 
 ---
-# Create virtual tables using the virtual connector provider (preview)
+# Create virtual tables using the virtual connector provider
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Virtual tables enable integrating data from external data sources by seamlessly representing that data as tables in Microsoft Dataverse, without data replication. Solutions, apps, flows, and more can use virtual tables as if they were native Dataverse tables. Virtual tables allow for full create, read, update, and delete privileges unless the data source they're connecting to specifically forbids it. More information about virtual tables: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md).
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - In this public preview release, we're introducing a new user experience using Power Apps (make.powerapps.com) to create virtual tables using the following virtual connector providers:
->   - SQL Server
->   - Microsoft SharePoint
+This document covers the new  experience using Power Apps (make.powerapps.com) to create virtual tables using the following virtual connector providers:
+- SQL Server
+- Microsoft SharePoint
 
-You can create a virtual table for Excel using the virtual connector provider by following the earlier process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
+You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
 
 To learn more about supported actions and limitations with the connector, go to:
 
@@ -89,7 +83,7 @@ Creating a virtual table in Power Apps (make.powerapps.com) using the virtual co
 
 These steps describe how to create a virtual table from a solution. Use similar steps to create a virtual table by going to **Data** > **Tables**.
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** in the left navigation pane.
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Create a new solution or open an existing unmanaged solution.
 1. On the command bar, select **New** > **Table** > **Table from external data**.
 
@@ -114,7 +108,6 @@ Watch a short video showing how to create a virtual table with the virtual conne
 > [!IMPORTANT]
 > These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions with SQL Server.
 
-
 - **Azure AD**: Select and sign in with your credentials.
 - **SQL Server**: Server name, database name, user name, password, gateway (on-premises deployments only).
 
@@ -123,17 +116,13 @@ Watch a short video showing how to create a virtual table with the virtual conne
 > [!IMPORTANT]
 > These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions in SharePoint.
 
-- Select to **Connect directly (cloud-services)** or **Connect using on-premises data gateway**.
+> [!NOTE]
+> At this time virtual tables using the virtual connector provider wizard only support online versions of SharePoint.
+
+- Select to **Connect directly (cloud-services)** 
 
    :::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
 
-- For **Direct connection**, sign into SharePoint.
-
-   :::image type="content" source="media/ve-sharepoint-direct-connect.png" alt-text="Use Direct connection":::
-
-- For on-premises, select your authentication type, provide your credentials, choose a gateway, and then select **Create**.
-
-   :::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
 
 ---
 
@@ -163,7 +152,7 @@ To create a connection reference, when you're creating the connection for the vi
    - If you chose SQL and Azure AD as your authentication method, you'll be asked for your SQL server name and database name. Provide these and select **Next**.
    
 ### Configure your Data
-   - If you're creating a SharePoint virtual table, you're asked to enter the URL of your SharePoint site or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Microsoft Graph and your Azure AD credentials. If you're pasting the SharePoint URL, only include the information up to the site name, such as *https://microsoft.sharepoint.com/teams/Contoso*.
+   - If you're creating a SharePoint virtual table, you're asked to enter the URL of your SharePoint site or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Microsoft Graph and your Azure AD credentials. If you're pasting the SharePoint URL, only include the information up to the site name, such as :::no-loc text="https://microsoft.sharepoint.com/teams/Contoso":::.
 
 1. A page is displayed where you can either search your data source for a specific table or list, or select a table or list from the provided list. 
 1. Select the check box if you want to configure the table name, column names, and primary field.
@@ -228,7 +217,7 @@ Watch a short video showing how to create a virtual table with the Excel virtual
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcGf]
 
 1.	Go to Power Apps (make.powerapps.com), and select the environment in which you would like to set up the virtual table.
-1.	In the left navigation pane, select **Data** > **Connections**, and then select **New connection**.
+1.	In the left navigation pane, select **Connections**, and then select **New connection**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the **Microsoft Excel Online (Business) Virtual Connector** from the list of connections.
 1. You'll be asked to provide additional details to connect to the data source.
 1. Select **Create**, your current signed-in credentials will be used.
@@ -238,7 +227,7 @@ Watch a short video showing how to create a virtual table with the Excel virtual
 
 1. Go to **Solutions**.
 1. Select the **Default Solution** or any other existing solution you have in your environment to create the virtual table.
-1. Select **New** and then select **Connection Reference (preview).**
+1. Select **New** and then select **Connection Reference.**
 1. Enter **Display name**, select the connection you created for the **Connectors** option and then select the data connection that you've created.
 
    :::image type="content" source="media/ve-new-connection-reference.png" alt-text="New connection reference":::

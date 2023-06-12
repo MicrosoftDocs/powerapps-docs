@@ -4,14 +4,10 @@ description: "Add a security principal to a queue" # 115-145 characters includin
 ms.date: 04/03/2022
 author: JimDaly
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke

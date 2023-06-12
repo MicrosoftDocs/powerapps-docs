@@ -1,18 +1,14 @@
 ---
 title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to register a plug-in in a step of the Microsoft Dataverse event pipeline." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/12/2022
+ms.date: 04/07/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - ProfessorKendrick
@@ -28,7 +24,7 @@ A more manual process of writing, registering, and debugging a plug-in is:
 
 1. Create a .NET Framework class library project in Visual Studio
 1. Add the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to the project
-1. Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface on classes that will be registered as steps.
+1. Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface on classes to be registered on plug-in steps.
 1. Add your code to the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method required by the interface
     1. Get references to services you need
     1. Add your custom business logic
@@ -48,9 +44,9 @@ This topic describes how to register a plug-in assembly and step, and add them t
 
 ## Plug-in Registration tool (PRT)
 
-You'll use the Plug-in Registration tool (PRT) to register your plug-in assemblies and steps.
+You use the Plug-in Registration tool (PRT) to register your plug-in assemblies and steps.
 
-PRT is one of the tools available for download from NuGet. Follow the instructions in [Dataverse development tools](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
+PRT is one of the tools available for download from NuGet. Follow the instructions in [Dataverse development tools](download-tools-nuget.md). That topic includes Power Platform CLI instructions to download PRT and other development tools from NuGet.
 
 After you download the PRT, use the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) steps in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to connect to your Microsoft Dataverse environment.
 
@@ -150,22 +146,22 @@ When you select the plug-in assembly you added, you can view the plug-in classes
 
 ## Register plug-in step
 
-When an assembly is loaded or updated, any classes that implement <xref:Microsoft.Xrm.Sdk.IPlugin> will be available in the PRT. Use the instructions in [Register a new step](tutorial-write-plug-in.md#register-a-new-step) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to create a new step registration.
+When an assembly is loaded or updated, any classes that implement <xref:Microsoft.Xrm.Sdk.IPlugin> are made available in the PRT. Use the instructions in [Register a new step](tutorial-write-plug-in.md#register-a-new-step) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to create a new step registration.
 
-When you register a step, there are many options available to you, which depend on the stage of the event pipeline and the nature of the operation you'll register your code to respond to.
+When you register a step, there are several registration options available to you depending on the stage of the event pipeline and the type of operation you intend to register your code on.
 
 ### General Configuration Information Fields
 
 |Field|Description|
 |--|--|
-|**Message**|PRT will auto-complete available message names in the system. More information: [Use messages with the Organization service](org-service/use-messages.md)|
-|**Primary Entity**|PRT will auto-complete valid tables that apply to the selected message. These messages have a `Target` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid tables apply, you should set this when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core table messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the tables that support this message.|
+|**Message**|PRT auto-completes available message names in the system. More information: [Use messages with the Organization service](org-service/use-messages.md)|
+|**Primary Entity**|PRT auto-completes valid tables that apply to the selected message. These messages have a `Target` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid tables apply, you should set this field value when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core table messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the tables that support this message.|
 |**Secondary Entity**|This field remains for backward compatibility for deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> as the `Target` parameter. This field is typically not used anymore.|
-|**Filtering Attributes**|With the `Update` or `OnExternalUpdated` message, when you set the **Primary Entity**, filtering columns limits the execution of the plug-in to cases where the selected columns are included in the update. This is a best practice for performance. |
-|**Event Handler**|This value will be populated based on the name of the assembly and the plug-in class. |
+|**Filtering Attributes**|With the `Update` or `OnExternalUpdated` message, when you set the **Primary Entity**, filtering columns limits the execution of the plug-in to cases where the selected columns are included in the update. Setting this field is a best practice for performance. |
+|**Event Handler**|This field value will be populated based on the name of the assembly and the plug-in class. |
 |**Step Name**|The name of the step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
-|**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this to a user who has these privileges. More information: [Impersonate a user](impersonate-a-user.md) |
-|**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they'll be applied from lowest to highest. <br/> **Note**: You should set this to control the order in which plug-ins are applied in the stage. It not recommended to simply accept the default value. The actual execution order of the plugins with the same Execution Order value (for the same stage, table and message) isn't guaranteed and can be random.|
+|**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this field value to a user who has these privileges. More information: [Impersonate a user](impersonate-a-user.md) |
+|**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they'll be applied from lowest to highest. <br/> **Note**: You should set this to control the order in which plug-ins are applied in the stage. It's not recommended to simply accept the default value. The actual execution order of the plugins with the same Execution Order value (for the same stage, table and message) isn't guaranteed and can be random.|
 |**Description**|A description for step. This value is pre-populated but can be overwritten.|
 
 ### Event Pipeline Stage of execution
@@ -223,7 +219,7 @@ Within your plug-in, you may want to reference primary table property values tha
 If your plug-in step is registered in the **PreValidation** or **PreOperation** stages of the execution pipeline, you could use the Organization service to retrieve the current value of the property, but this isn't a good practice for performance. A better practice is to define a pre-entity image with your plug-in step registration. This will capture a 'snapshot' of the table with the fields you're interested in as they existed before the operation that you can use to compare with the changed values.
 
 > [!IMPORTANT]
-> The default behavior when creating an entity image is to select all columns. However, this can result in reduced web service performance. Developers should only include those columns that are required.
+> The default behavior when creating an entity image is to select all columns. **Don't use this default behavior.** This will negatively impact performance. Only include those columns that are required by the logic of your plug-in.
 
 #### Messages that support entity images
 
@@ -294,9 +290,12 @@ Plug-in assemblies can be versioned using a semantic versioning format of `major
   When an updated solution containing the revised assembly is imported, the assembly is considered a different assembly than the previous version of that assembly in the existing solution. Plug-in registration steps in the existing solution will continue to refer to the previous version of the assembly. If you want existing plug-in registration steps for the previous assembly to point to the revised assembly, you'll need to use the Plug-in Registration tool to manually change the step configuration to refer to the revised assembly type. This should be done before exporting the updated assembly into a solution for later import.
 
 
-## Unregister or disable plug-in components
+## Unregister or disable plug-ins and components
 
-You can unregister or disable plug-in components.
+You can unregister or disable plug-ins and their components using the Plug-in Registration tool (PRT).
+
+> [!IMPORTANT]
+> It is no longer possible to unregister or disable Microsoft or out-of-box system plug-ins and steps. Previously, you were able to unregister or disable some of the Microsoft.* and other out-of-box system plug-ins. We have changed this behavior to no longer allow this. The change in functionality was made because unregistering or disabling these plug-ins or steps can cause product features not to work as expected. If you have a need to unregister or disable such a plug-in or step, file a Microsoft support request.
 
 ### Unregister components
 
@@ -309,7 +308,7 @@ You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** 
 ![Deleting step in solution explorer.](media/delete-sdk-message-processing-step.png)
 
 > [!NOTE]
-> You cannot delete any **Plug-in Assemblies** while existing **Sdk Message Processing Steps** depend on them. Entity images are not available to be deleted separately, but they will be deleted when any steps that use them are deleted.
+> You cannot delete (unregister) any **Plug-in Assemblies** while existing **Sdk Message Processing Steps** depend on them. Entity images are not available to be deleted separately, but they will be deleted when any steps that use them are deleted.
 
 ### Disable steps
 

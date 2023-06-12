@@ -10,14 +10,8 @@ ms.assetid: 56363ea3-ea76-4311-9b7a-b71675e446fb
 caps.latest.revision: 57
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
-contributors:
-  - Lezucket
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Import solutions
 
@@ -36,7 +30,7 @@ When you import an **unmanaged** solution:
 
 To import a solution:
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.  
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
   
 1. On the command bar, select **Import**.  
 
@@ -47,7 +41,7 @@ To import a solution:
 
 1. Select **Next**.  
   
-1. Information about the solution is displayed. By default, in the **Advanced settings** section, if SDK messages and flows exist in the solution, they will be imported. Clear the **Enable SDK messages and flows included in the solution** option if you want them to import in an inactive state. 
+1. Information about the solution is displayed. By default, in the **Advanced settings** section, if plugin steps (also known as SDK message processing steps) and flows exist in the solution, they will be imported. Clear the **Enable Plugin steps and flows included in the solution** option if you want them to import in an inactive state.
 
 1. If your solution contains [connection references](create-connection-reference.md), you’ll be prompted to select the connections you want. If a connection does not already exist, create a new one. Select **Next**.
 

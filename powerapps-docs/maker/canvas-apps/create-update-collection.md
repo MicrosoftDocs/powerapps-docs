@@ -1,7 +1,7 @@
 ---
 title: Create and update a collection in a canvas app (contains video)
 description: Create a collection, add items to the collection, and remove one or all items from a collection in a canvas app.
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
 ms.custom: canvas
@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - gregli-msft
   - mduelae
@@ -70,9 +68,16 @@ Watch this video to learn how to create and update a collection:
 
 1. Repeat the previous step at least two more times, and then press Esc.
 
-1. On the **File** menu, select **Collections** to show the collection that you created.
+1. If you're using the preview version of Power Apps Studio, select the **Variables** pane and then select **Collections** to see the collections that you created.
 
-    ![Show collection.](./media/create-update-collection/show-collection.png)
+   ![Show collections.](./media/create-update-collection/collections.png)
+
+   If you're using the classic version of Power Apps Studio, on the **File** menu, select **Collections**.
+   
+   ![Show collection.](./media/create-update-collection/show-collection.png)
+   
+
+
 
 ## Show a collection
 

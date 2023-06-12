@@ -5,7 +5,6 @@ ms.date: 11/17/2022
 ms.topic: overview
 author: sericks007
 ms.author: sericks
-manager: tapanm-msft
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -13,8 +12,6 @@ ms.collection:
 ---
 
 # Requirements for cards
-
-[!INCLUDE[cards_preview_notice](includes/preview-include.md)]
 
 This article contains information about requirements for cards to show up and work as expected.
 
@@ -35,8 +32,8 @@ The table below shows the environment regions cards are supported in.
 | India | Yes |
 | Canada | Yes |
 | United Kingdom | Yes |
-| Germany | No |
-| Switzerland | No |
+| Germany | Yes |
+| Switzerland | Yes |
 | United Arab Emirates | No |
 | South Africa | No |
 | Korea | No |
@@ -49,4 +46,4 @@ Cards has the same [system requirements as Power Apps](../limits-and-config.md) 
 
 ## Supported platforms for sending cards
 
-Cards can be sent to [Microsoft Teams](/send-a-card/send-card-in-teams.md) in desktop, mobile, or web clients.
+Cards can be sent to [Microsoft Teams](send-a-card/send-card-in-teams.md) in desktop, mobile, or web clients.

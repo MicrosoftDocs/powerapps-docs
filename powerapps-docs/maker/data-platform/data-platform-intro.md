@@ -2,19 +2,15 @@
 title: What is Microsoft Dataverse? | Microsoft Docs
 description: Introduction to Microsoft Dataverse, tables, server-side logic, security, and developer capabilities.
 author: mattp123
-manager: kvivek
 ms.topic: overview
 ms.component: cds
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 06/15/2022
 ms.reviewer: matp
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---

@@ -18,9 +18,6 @@ ms.subservice: mda-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # List of controls available for model-driven apps
 
@@ -35,12 +32,11 @@ Most controls are configured for a table column, but some controls, like the gri
 To use these controls in the form designer:  
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Expand **Dataverse** in the left hand menu, and then select **Tables**.
+1. Select **Tables** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the required table and then select the **Forms** area.
 1. Select the [main form](model-driven-app-glossary.md#main-form) to be edited.
-   
 1. Select the column or section where you want to add the control.
- 
+
 1. In the right properties pane, select **+ Component** to display the available controls, and then select the control you want.  
   
     > [!NOTE]

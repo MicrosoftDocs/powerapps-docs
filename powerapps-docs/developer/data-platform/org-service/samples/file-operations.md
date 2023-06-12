@@ -8,9 +8,6 @@ ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -131,6 +128,8 @@ To leave the system in the state before the sample ran, it does the following:
 ### See Also
 
 [Use file column data](../../file-column-data.md)<br />
-[Sample: File Operations using Dataverse Web API](../../webapi/samples/file-operations.md)
+[Sample: File Operations using Dataverse Web API](../../webapi/samples/file-operations.md)<br />
+[Use image column data](../../image-column-data.md)<br />
+[Sample: Image Operations using Dataverse SDK for .NET](set-retrieve-entity-images.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

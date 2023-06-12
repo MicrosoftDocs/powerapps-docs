@@ -10,8 +10,6 @@ ms.author: caburk
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - caburk
@@ -55,7 +53,7 @@ To export a canvas app package, select your app, and then select **Export Packag
 You can change the default **Import Action** for each resource that your canvas app uses. The default action for resources in a canvas app package, including the app, is **Update**. You can choose to **Create as new** during import, to create the resource during the import instead of updating existing resource. However, the import action that you select will become the default action during the app import.
 
 > [!IMPORTANT]
-> You can only import the exported package. Changes to the the exported package file aren't supported.
+> You can only import the exported package. Changes to the exported package file aren't supported.
 
 <!--markdownlint-disable MD036-->
 **To export a canvas app package**

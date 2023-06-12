@@ -14,7 +14,6 @@ author: "Mattp123"
 ms.assetid: 666ab3f3-abda-468c-b248-3a0b410286b0
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 ms.reviewer:
 ms.suite:
 ms.tgt_pltfrm:
@@ -22,9 +21,6 @@ caps.latest.revision: 1
 topic-status: Drafting
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Dataverse community tools

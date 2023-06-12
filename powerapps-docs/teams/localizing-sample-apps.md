@@ -1,5 +1,5 @@
 ---
-title: Localize sample apps (contains video)
+title: Localize sample app templates (contains video)
 description: Learn how to add extra localizations to the sample for Microsoft Teams.
 
 ms.topic: conceptual
@@ -14,15 +14,15 @@ contributors:
   - mduelae
 ---
 
-# Localize sample apps
+# Localize sample app templates
 
-The sample apps for Microsoft Teams have been localized to support eight different languages so that they can be used by people with different languages. Depending on the user’s language, you can see the text in an app in the appropriate language, if that language has been included in the app localization.
+The sample app templates for Microsoft Teams have been localized to support eight different languages so that they can be used by people with different languages. Depending on the user’s language, you can see the text in an app in the appropriate language, if that language has been included in the app localization.
 
 For example, consider that you use the Russian language. Russian isn't a language included in the standard localization; however, you can still use the app in Russian&mdash;if you add that language and localize the app labels.
 
-This article covers the approach used for localization of the sample apps for Teams, and how to extend it to add support for another language (such as Russian). In this example, we'll use the [Milestones app](milestones.md); but this same approach is used consistently across all of the Teams template Power Apps, and you can follow the same approach for localization of your own canvas apps.
+This article covers the approach used for localization of the sample app templates for Teams, and how to extend it to add support for another language (such as Russian). In this example, we'll use the [Milestones app](milestones.md); but this same approach is used consistently across all of the Teams template Power Apps, and you can follow the same approach for localization of your own canvas apps.
 
-Watch this video to learn how to localize sample apps:
+Watch this video to learn how to localize sample app templates:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWKV6N]
 
 ## Prerequisites
@@ -210,17 +210,5 @@ Let us add a label to the Loading screen:
 
 1. Select Milestones to open the app and the **Welcome to the app** label has been localized to the language that was selected in the previous step. You can verify the same by going to the specific Team channel where the app was installed and playing the published app.
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
