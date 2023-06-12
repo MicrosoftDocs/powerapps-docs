@@ -135,7 +135,8 @@ In addition to the properties inherited from the [AttributeMetadata class](xref:
 > The `MaxHeight` and `MaxWidth` values are always 144 and cannot be changed. These define the size of the thumbnail-sized images that are created for every image column value.
 
 More information:
-- [Update a column using Web API](webapi/create-update-entity-definitions-using-web-api.md#update-a-column)
+
+- [Update a column using Web API](webapi/create-update-column-definitions-using-web-api.md#update-a-column)
 - [Update a column using SDK](org-service/metadata-attributemetadata.md#update-a-column)
 
 ## Retrieve image column definitions
