@@ -299,7 +299,7 @@ OData-Version: 4.0
 OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
 ```
 
-More information: [Create columns](webapi/create-update-entity-definitions-using-web-api.md#create-columns)
+More information: [Create columns](webapi/create-update-column-definitions-using-web-api.md#create-columns)
 
 ---
 
