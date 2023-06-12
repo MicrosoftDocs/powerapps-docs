@@ -101,18 +101,14 @@ The unescaped response contains JSON using the following properties.
 |---------|---------|---------|
 |`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
 |`Value`|string|The text|
-|`QueryContext` |[QueryContext](#querycontext)|TODO: find out. It is always null. Why is it included?|
+|`QueryContext` |[QueryContext](#querycontext)|This request is used for backend search, this is included for future feature releases, it is not currently used.
 
 ### Types
 
 The following types are returned by the Query Response.
 
 #### ErrorDetail
-
-TODO: Why is this included? Why doesn't the service just return an error?
-GUESS: This will be a Cognitive Search error
-
-TODO: Use include if this is the same for all types
+Will include error details and needed information if a query errors for any condition or reason.
 
 |Name|Type|Description|
 |---------|---------|---------|
@@ -136,6 +132,7 @@ The following examples show how to use the autocomplete operation.
 ### Example: TODO specific scenario
 
 This is a template for an example about how to achieve a specific scenario.
+TODO - Manish will send us an example
 
 
 #### [SDK for .NET](#tab/sdk)
@@ -146,12 +143,12 @@ static void SDKExampleMethod(IOrganizationService service){
    {
       Parameters = new ParameterCollection
       {
-         { "search", "TODO" },
-         { "entities", "TODO" },
-         { "filter","TODO" },
+         { "search", "string" },
+         { "entities", "common seperated string" },
+         { "filter","string" },
          { "fuzzy", true },
-         { "options","TODO" },
-         { "propertybag","TODO" }
+         { "options","dictionary key(string), value(string)" },
+         { "propertybag","dictionary key(string), value(string)" }
       }
    };
 
@@ -179,12 +176,12 @@ If-None-Match: null
 Accept: application/json
 
 {
- "search": "TODO",
- "entities": "TODO",
- "filter": "TODO",
- "fuzzy": true,
- "options": "TODO",
- "propertybag": "TODO"
+  { "search", "string" },
+  { "entities", "entitylist" },
+  { "filter","string" }, - need to provide an example of a string with a proper filter
+  { "fuzzy", true },
+  { "options","dictionary key(string), value(string)" }, - provide an example of a string with a proper key,value pair
+  { "propertybag","dictionary key(string), value(string)" }- provide an example of a string with a proper key,value pair
 }
 ```
 
@@ -204,12 +201,12 @@ HTTP/1.1 200 OK
 POST [Organization URI]/api/search/v2.0/autocomplete HTTP/1.1
 
 {
- "search": "TODO",
- "entities": "TODO",
- "filter": "TODO",
- "fuzzy": true,
- "options": "TODO",
- "propertybag": "TODO"
+  { "search", "string" },
+  { "entities", "entitylist" },
+  { "filter","string" },
+  { "fuzzy", true },
+  { "options","dictionary key(string), value(string)" },
+  { "propertybag","dictionary key(string), value(string)" }
 }
 ```
 

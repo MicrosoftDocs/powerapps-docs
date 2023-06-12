@@ -126,7 +126,8 @@ To use this data you must escape the string and pass it as the value of the `ent
 **Type**: string<br />
 **Optional**: true
 
-Facets support the ability to drill down into data results after they've been retrieved. By default, no facets are returned with search results.
+The facet parameter is optional.  The string may contain parameters to customize the faceting, expressed as comma-separated name-value pairs. Use facets to group your search results.
+
 
 #### Facet definition
 
@@ -325,11 +326,9 @@ Each `QueryResult` item returned in the response `Value` property represents a r
 
 ## Examples
 
-The following examples show how to use the query operation.
+The following example shows how to use the query operation.
 
-### TODO: Specific scenario
-
-If we will have more than one example here, we need to differentiate it from the others by the use case scenario.
+You want to find a specific product or opportunity that contains the text "bread" in the name where the record was modified on specific dates and times.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -339,14 +338,15 @@ static void SDKExampleMethod(IOrganizationService service){
    {
       Parameters = new ParameterCollection
       {
-         { "search", "TODO" },
+         { "search", "bread" },
          { "count", true },
-         { "entities", "TODO" },
-         { "facets","TODO" },
-         { "filter","TODO" },
-         { "options","TODO" },
-         { "orderby","TODO" },
-         { "propertybag","TODO" },
+         { "entities", "product", "opportunity" },
+         { "facets","product:name,count:100","opportunity,name:100",
+             "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00","createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00",
+         },
+         { "filter","string" },
+         { "options","fuzzymatching", "groupranking" },
+         { "orderby","@search.score desc","id", "product.name" },
          { "skip", 3 },
          { "top", 1 }
       }
@@ -355,14 +355,14 @@ static void SDKExampleMethod(IOrganizationService service){
    var searchQueryResponse = service.Execute(query);
    string responseString = searchQueryResponse.Results["response"];
    
-   //TODO: Parse the string to get the objects.
+   //TODO: Parse the string to get the objects. (need more info)
 }
 ```
 
 **Output**
 
 ```
-TODO: The Console Writeline output of the SDK Sample
+TODO: The Console Writeline output of the SDK Sample (we don't have, will need to work to get this, remove for now)
 ```
 
 #### [Web API](#tab/webapi)
@@ -377,16 +377,16 @@ If-None-Match: null
 Accept: application/json
 
 {
- "search": "TODO",
- "count": true,
- "entities": "TODO",
- "facets": "TODO",
- "filter": "TODO",
- "options": "TODO",
- "orderby": "TODO",
- "propertybag": "TODO",
- "skip": 3,
- "top": 1    
+ "search": "bread", 
+"entities": ["product", "opportunity"],      
+"facets": [ "product:name,count:100","opportunity,name:100",
+             "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00","createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00"],   
+"count": true,   
+"orderby": ["@search.score desc","id", "product.name"],   
+"options": ["fuzzymatching", "groupranking"],
+"propertybag": "dictionary (key/value pairs)" - NEED EXAMPLE      
+"skip": # (3),   
+"top": # (1)
 }
 ```
 
@@ -395,9 +395,39 @@ Accept: application/json
 ```http
 HTTP/1.1 200 OK
 
-{
-    "response": "TODO"
-}
+{ 
+    "count": # (if $count=true was provided in the query. -1 if false), 
+    "querycontext": { QueryContext }, 
+    "facets": { (if faceting was specified in the query) 
+      "facet_field": [ 
+        { 
+          "value": facet_entry_value (for non-range facets), 
+          "from": facet_entry_value (for range facets), 
+          "to": facet_entry_value (for range facets), 
+          "count": number_of_documents 
+        } 
+      ], 
+      ... 
+    }, 
+    "value": [ 
+      { 
+        "score": document_score, 
+        "highlights": { 
+          field_name: [ subset of text, ... ], 
+          ... 
+        },         
+        “Id”: “object_id”, 
+        “entityname”: “entity_logical_name”, 
+        “objecttypecode”: object_type_code, 
+        "attributes": { 
+          field_name: field_value (retrievable fields or specified projection), 
+          ... 
+        }, 
+        ... 
+      }, 
+      ... 
+    ], 
+}  
 ```
 
 #### [Search 2.0 endpoint](#tab/search)
@@ -410,17 +440,16 @@ The parameters and response value using the search 2.0 endpoint are identical to
 POST [Organization URI]/api/search/v2.0/query HTTP/1.1
 
 {
- "search": "TODO",
- "count": true,
- "entities": "TODO",
- "facets": "TODO",
- "filter": "TODO",
- "options": "TODO",
- "orderby": "TODO",
- "propertybag": "TODO",
- "skip": 3,
- "top": 1
-    
+ "search": "bread", 
+"entities": ["product", "opportunity"],      
+"facets": [ "product:name,count:100","opportunity,name:100",
+             "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00","createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00"],   
+"count": true,   
+"orderby": "@search.score desc","id", "product.name",   
+"options": ["fuzzymatching", "groupranking"],
+"propertybag": "dictionary (key/value pairs)" - NEED EXAMPLE      
+"skip": # (3),   
+"top": # (1)
 }
 ```
 
@@ -429,9 +458,39 @@ POST [Organization URI]/api/search/v2.0/query HTTP/1.1
 ```http
 HTTP/1.1 200 OK
 
-{
-    "response": "TODO"
-}
+{ 
+    "count": # (if $count=true was provided in the query. -1 if false), 
+    "querycontext": { QueryContext }, 
+    "facets": { (if faceting was specified in the query) 
+      "facet_field": [ 
+        { 
+          "value": facet_entry_value (for non-range facets), 
+          "from": facet_entry_value (for range facets), 
+          "to": facet_entry_value (for range facets), 
+          "count": number_of_documents 
+        } 
+      ], 
+      ... 
+    }, 
+    "value": [ 
+      { 
+        "score": document_score, 
+        "highlights": { 
+          field_name: [ subset of text, ... ], 
+          ... 
+        },         
+        “Id”: “object_id”, 
+        “entityname”: “entity_logical_name”, 
+        “objecttypecode”: object_type_code, 
+        "attributes": { 
+          field_name: field_value (retrievable fields or specified projection), 
+          ... 
+        }, 
+        ... 
+      }, 
+      ... 
+    ], 
+} 
 ```
 
 ---

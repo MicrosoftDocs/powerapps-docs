@@ -129,7 +129,7 @@ If you use the query, suggest, or autocomplete operations when the environment i
 
 #### [SDK for .NET](#tab/sdk)
 
-TODO
+//TODO We don't have any example at this time - will need to add this later, we should remove it for now.
 
 #### [Web API](#tab/webapi)
 
