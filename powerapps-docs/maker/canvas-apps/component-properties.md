@@ -6,7 +6,7 @@ ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 04/04/2023
 ms.author: jorisde
-ms.reviewer: 
+ms.reviewer: mkaur
 search.audienceType:
   - maker
 search.app:
@@ -30,7 +30,7 @@ contributors:
 There are four types of properties available to makers:
 
 1. [Data properties](component-properties.md#data-property): This type of property deals with data, such as a color or text value. A **Data** property can be set to be **Input** or **Output**, which indicates if the component provides data to the app (**Output**) or the app will provide data to the component (**Input**). **Data** properties are the only properties that participate in app data flow.
-2. [Function](component-properties.md#function-property) properties: This type of property deals with logic, such as doing a calculation given a set of parameters, or manipulating text. A **Function** property can be set to be **Input** or **Output**, which indicates if the component provides a function the app can call (**Output**), or the app provides a function the component can call (**Input**). **Function** properties do not participate in an app's data flow, and cannot use component or app variables.
+2. [Function properties](component-properties.md#function-property) properties: This type of property deals with logic, such as doing a calculation given a set of parameters, or manipulating text. A **Function** property can be set to be **Input** or **Output**, which indicates if the component provides a function the app can call (**Output**), or the app provides a function the component can call (**Input**). **Function** properties do not participate in an app's data flow, and cannot use component or app variables.
 3. [Action properties](component-properties.md#action-property): This type of property deals with logic, and is essentially a behavior **Output** **Function**. This means the component has the logic defined, and that logic can use chained expressions and manipulate collections or variables ("behavior"). For example, a `Clear()` **Action** property could provide functionality the app can call to clear out some values in the component, or a `Save()` **Action** property that updates a datasource.
 4. [Event properties](component-properties.md#event-property): This type of property deals with logic, and is essentially a behavior **Input** **Function**. This means the app defines the logic which the component can call, and that logic can use chained expressions and manipulate collections or variables ("behavior"). Typically these properties' names reflect an event such as `OnSelect` or `OnChanged`.
 
@@ -64,7 +64,7 @@ When a **Data** property is **Output**, the component provides the value to the 
 
 Now our component's `SliderValue` property will reflect the value of the slider inside the component, which can then be read from the consuming app.
 
-## Function property
+### Function property
 
 A function property contains an expression that returns a value. Typically, the function takes some arguments which it uses to calculate or determine the value to return.
 
@@ -75,13 +75,13 @@ An **Output** function is a simple way to create a custom function for Power App
 
 An **Input** function is a way for a consuming app to provide logic to a component, similar to a function pointer or callback function. For example, your component may be dealing with people's names and have an input function with arguments `firstname` and `lastname` and respects a string back. The app could define the function expression to return `$"{firstname} {lastname}"` or it could choose to define an expression for `$"{lastname}, {firstname}"`. The component can just call the function the app maker has provided, and use the returned string.
 
-## Action property
+### Action property
 
 Action properties are similar to function properties of type **Output**, but they allow side-effect formulas, and expression chaining. A component could have an action property named `AddRecord` that allows the app to add a record to a collection inside the component, or a `Reset` action that clears variables or collections inside the component.
 
 In the example of the slider examples used for the **Data property** earlier, we can introduce an action property called `ResetValue` to set the slider back to its default value. We can user the formula `Reset( Slider1 )` for this. Now, instances of our component in the app can call `Component1.ResetValue()` to set the slider back to the default value.
 
-## Event property
+### Event property
 
 There are many common **Event**-type properties, effectively input behavior function properties, in standard controls. **OnSelect** on the button control is the most obvious example. A component could define any number of event properties, and call these events like a function. For example, a component that has a button control could have an event property named `OnButtonClicked`. In the button control's **OnSelect** the component can call its `Component1.OnButtonClicked()` property. A consuming app can then define its own logic for this property, to act when the button inside the component is pressed.
 
