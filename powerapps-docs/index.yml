@@ -69,7 +69,7 @@ additionalContent:
           url: mobile/use-custom-model-driven-app-on-mobile.md
         - text: Configure mobile offline
           url: mobile/setup-mobile-offline.md
-  - title: Integrate and extend
+  - title: Develop and integrate
     items:
     - title: Integrate with Microsoft Teams
       links:
@@ -79,6 +79,14 @@ additionalContent:
           url: teams/create-apps-overview.md
         - text: What is Microsoft Dataverse for Teams?
           url: teams/overview-data-platform.md
+    - title: Develop Power Apps
+      links:
+        - text: Dataverse
+          url: developer/data-platform/index.yml
+        - text: Model-driven apps
+          url: developer/model-driven-apps/index.yml
+        - text: Canvas apps
+          url: maker/canvas-apps/dev-enterprise-intro.md
     - title: Use solutions for ALM
       links:
         - text: What are solutions?
@@ -87,15 +95,7 @@ additionalContent:
           url: /power-platform/alm/overview-alm
         - text: Use Microsoft Power Platform Build Tools
           url: /power-platform/alm/devops-build-tools
-    - title: Sample apps and solutions
-      links:
-        - text: Hospital Emergency Response
-          url: sample-apps/emergency-response/overview.md
-        - text: Regional Government Emergency Response and Monitoring
-          url: sample-apps/regional-emergency-response/overview.md
-        - text: Higher Education Crisis Financial Impact Tracker
-          url: sample-apps/crisis-financial-impact-tracker/overview.md
-  - title: Administer and develop
+  - title: Administer and enhance
     items:
     - title: Administer Power Apps
       links:
@@ -105,14 +105,6 @@ additionalContent:
           url: /power-platform/admin/pricing-billing-skus
         - text: Microsoft Power Platform guidance documentation
           url: /power-platform/guidance
-    - title: Develop Power Apps
-      links:
-        - text: Dataverse developer
-          url: developer/data-platform/index.yml
-        - text: Model-driven apps developer
-          url: developer/model-driven-apps/index.yml
-        - text: Canvas apps developer
-          url: maker/canvas-apps/dev-enterprise-intro.md
     - title: Best practices guidance
       links:
         - text: Power Apps patterns
