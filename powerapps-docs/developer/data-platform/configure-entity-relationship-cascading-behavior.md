@@ -281,6 +281,8 @@ activities is currently not supported.
 >
 > Resetting inherited access using FetchXML is more targeted and gives you more control over inherited access clean up as compared to [CreateAsyncJobToRevokeInheritedAccessRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateAsyncJobToRevokeInheritedAccessRequest).
 
+More information: [Inherited access rights cleanup](../../maker/data-platform/create-edit-entity-relationships.md#inherited-access-rights-cleanup)
+
 Below are three example scenerios where inherited access is revoked using FetchXML queries.
 
 ### Reset inherited access given to a certain user for a specific account
@@ -324,7 +326,7 @@ Below are three example scenerios where inherited access is revoked using FetchX
 </fetch>
 ```
 
-More information: [Inherited access rights cleanup](../../maker/data-platform/create-edit-entity-relationships.md#inherited-access-rights-cleanup)
+To learn how to execute a FetchXML query using either the Web API or Dataverse SDK for .NET see [Use FetchXML to construct a query](use-fetchxml-construct-query.md).
 
 ### See also
 
