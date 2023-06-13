@@ -123,25 +123,31 @@ additionalContent:
           url: guidance/co-develop/overview.md
         - text: "Ebook: Fusion development approach"
           url: guidance/fusion-dev-ebook/index.md
-    - title: Related products
-      links:
-        - text: Power Platform
+
+  - title: Related content # < 60 chars (optional)
+    items:
+        # Card
+        - title: Power Platform
+          summary: One-stop learning resource for Power Platform applications and features including admin, developer, and guidance documentation.
           url: /power-platform
         # Card
-        - text: Power Automate
+        - title: Power Automate
+          summary: Create automated workflows between your favorite apps and services to synchronize files, get notifications, collect data, and more.
           url: /power-automate
         # Card
-        - text: Power BI
+        - title: Power BI
+          summary: Turn your unrelated sources of data into coherent, visually immersive, and interactive insights.
           url: /power-bi
-        - text: Power Pages
+        - title: Power Pages
+          summary: Design, host, and administer secure, modern, and low-code business websites.
           url: /power-pages
-        - text: Power Virtual Agents
+        - title: Power Virtual Agents
+          summary: Create powerful bots using a guided, no-code graphical interface without the need for data scientists or developers.
           url: /power-virtual-agents
-    - title: See also
-      links:
-        # Card
-        - text: Dynamics 365
+        - title: Dynamics 365
+          summary: "The next generation of CRM and ERP applications"
           url: /dynamics365/
         # Card
-        - text: Microsoft Azure
+        - title: Microsoft Azure
+          summary: "Ever-expanding set of cloud computing services to help your organization meet it's business challenges"
           url: /azure
