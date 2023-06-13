@@ -41,7 +41,7 @@ highlightedContent:
 
 additionalContent: 
   sections:
-  - title: Design and build
+  - title: Design and Build
 # Guidance should be the first card under implement. On this card, include links for Security and Compliance, Implementation, Adoption frameworks, and Best practices. 
 # Each card should have at least three and no more than five links. Do not include a "See also" link.
     items:
@@ -69,7 +69,7 @@ additionalContent:
           url: maker/data-platform/create-edit-metadata.md
         - text: Create and use dataflows
           url: maker/data-platform/create-and-use-dataflows.md
-  - title: Develop and integrate
+  - title: Develop and Integrate
     items:
     - title: Develop Power Apps
       links:
@@ -95,7 +95,7 @@ additionalContent:
           url: teams/create-apps-overview.md
         - text: What is Microsoft Dataverse for Teams?
           url: teams/overview-data-platform.md
-  - title: Use and administer
+  - title: Use and Administer
     items:
     - title: Use Power Apps
       links:
