@@ -39,177 +39,109 @@ highlightedContent:
       itemType: learn
       url: /training/powerplatform/power-apps
 
-# conceptualContent section
-# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
-conceptualContent:
-  items:
-    - title: Get started with Power Apps
-      links:
-        - text: Sign up for free
-          url: maker/signup-for-powerapps.md
-          itemType: get-started
-        - text: Get started with app creation
-          url: maker/index.md
-          itemType: overview
-        - text: Plan a Power Apps project
-          url: guidance/planning/introduction.md
-          itemType: overview
-
+additionalContent: 
+  sections:
+  - title: Design and build
+# Guidance should be the first card under implement. On this card, include links for Security and Compliance, Implementation, Adoption frameworks, and Best practices. 
+# Each card should have at least three and no more than five links. Do not include a "See also" link.
+    items:
     - title: Create apps
       links:
         - text: Canvas apps
           url: maker/canvas-apps/index.yml
-          itemType: overview
         - text: Model-driven apps
           url: maker/model-driven-apps/index.yml
-          itemType: overview
         - text: Cards
           url: cards/overview.md
-          itemType: overview
-
     - title: Work with data platform
       links:
         - text: What is Microsoft Dataverse?
           url: maker/data-platform/data-platform-intro.md
-          itemType: overview
         - text: Tables and metadata
           url: maker/data-platform/create-edit-metadata.md
-          itemType: concept
-      footerLink:
-        url: maker/data-platform/index.yml
-        text: More
-
+        - text: Create and use dataflows
+          url: maker/data-platform/create-and-use-dataflows
+    - title: Configure mobile experience
+      links:
+        - text: Get started with Power Apps mobile
+          url: mobile/run-powerapps-on-mobile.md
+        - text: Use model-driven apps on Power Apps mobile
+          url: mobile/use-custom-model-driven-app-on-mobile.md
+        - text: Configure mobile offline
+          url: mobile/setup-mobile-offline.md
+  - title: Integrate and extend
+    items:
     - title: Integrate with Microsoft Teams
       links:
         - text: Embed a canvas app in Teams
           url: teams/embed-teams-app.md
-          itemType: overview
         - text: Create apps in Teams
           url: teams/create-apps-overview.md
-          itemType: overview
         - text: What is Microsoft Dataverse for Teams?
           url: teams/overview-data-platform.md
-          itemType: overview
-
     - title: Use solutions for ALM
       links:
         - text: What are solutions?
           url: maker/data-platform/solutions-overview.md
-          itemType: overview
         - text: Implement healthy ALM using solutions
           url: /power-platform/alm/overview-alm
-          itemType: overview
         - text: Use Microsoft Power Platform Build Tools
           url: /power-platform/alm/devops-build-tools
-          itemType: how-to-guide
-
-    - title: Administer Power Apps
-      links:
-        - text: Use Power Platform admin center
-          url: /power-platform/admin/admin-documentation
-          itemType: overview
-        - text: Power Apps licensing
-          url: /power-platform/admin/pricing-billing-skus
-          itemType: overview
-        - text: Microsoft Power Platform guidance documentation
-          url: /power-platform/guidance
-          itemType: how-to-guide
-
-    - title: Power Apps for developers
-      links:
-        - text: Dataverse developer
-          url: developer/data-platform/index.yml
-          itemType: reference
-        - text: Model-driven apps developer
-          url: developer/model-driven-apps/index.yml
-          itemType: reference
-        - text: Canvas apps developer
-          url: maker/canvas-apps/dev-enterprise-intro.md
-          itemType: reference
-
-    - title: Power Apps mobile
-      links:
-        - text: Get started with Power Apps mobile
-          url: mobile/run-powerapps-on-mobile.md
-          itemType: get-started
-        - text: Use model-driven apps on Power Apps mobile
-          url: mobile/use-custom-model-driven-app-on-mobile.md
-          itemType: how-to-guide
-        - text: Configure mobile offline
-          url: mobile/setup-mobile-offline.md
-          itemType: how-to-guide
-
     - title: Sample apps and solutions
       links:
         - text: Hospital Emergency Response
           url: sample-apps/emergency-response/overview.md
-          itemType: overview
         - text: Regional Government Emergency Response and Monitoring
           url: sample-apps/regional-emergency-response/overview.md
-          itemType: overview
         - text: Higher Education Crisis Financial Impact Tracker
           url: sample-apps/crisis-financial-impact-tracker/overview.md
-          itemType: overview
-
+  - title: Administer and develop
+    items:
+    - title: Administer Power Apps
+      links:
+        - text: Use Power Platform admin center
+          url: /power-platform/admin/admin-documentation
+        - text: Power Apps licensing
+          url: /power-platform/admin/pricing-billing-skus
+        - text: Microsoft Power Platform guidance documentation
+          url: /power-platform/guidance
+    - title: Develop Power Apps
+      links:
+        - text: Dataverse developer
+          url: developer/data-platform/index.yml
+        - text: Model-driven apps developer
+          url: developer/model-driven-apps/index.yml
+        - text: Canvas apps developer
+          url: maker/canvas-apps/dev-enterprise-intro.md
     - title: Best practices guidance
       links:
         - text: Power Apps patterns
           url: guidance/patterns/overview.md
-          itemType: reference
         - text: Planning a Power Apps project
           url: guidance/planning/introduction.md
-          itemType: reference
         - text: Collaborating and co-developing apps
           url: guidance/co-develop/overview.md
-          itemType: reference
         - text: "Ebook: Fusion development approach"
           url: guidance/fusion-dev-ebook/index.md
-          itemType: overview
-
-    - title: Learning catalog
+    - title: Related products
       links:
-        - text: App maker
-          url: learning-catalog/app-maker.md
-          itemType: learn
-        - text: Developer
-          url: learning-catalog/developer.md
-          itemType: learn
-      footerLink:
-        url: learning-catalog/learning-catalog.md
-        text: More
-
-# additionalContent section (optional)
-# Card with summary style
-additionalContent:
-  # Supports up to 3 sections
-  sections:
-    - title: Related content # < 60 chars (optional)
-    - items:
-        # Card
-        - title: Power Platform
-          summary: One-stop learning resource for Power Platform applications and features including admin, developer, and guidance documentation.
+        - text: Power Platform
           url: /power-platform
         # Card
-        - title: Power Automate
-          summary: Create automated workflows between your favorite apps and services to synchronize files, get notifications, collect data, and more.
+        - text: Power Automate
           url: /power-automate
         # Card
-        - title: Power BI
-          summary: Turn your unrelated sources of data into coherent, visually immersive, and interactive insights.
+        - text: Power BI
           url: /power-bi
-        - title: Power Pages
-          summary: Design, host, and administer secure, modern, and low-code business websites.
+        - text: Power Pages
           url: /power-pages
-        - title: Power Virtual Agents
-          summary: Create powerful bots using a guided, no-code graphical interface without the need for data scientists or developers.
+        - text: Power Virtual Agents
           url: /power-virtual-agents
     - title: See also
-      items:
+      links:
         # Card
-        - title: Dynamics 365
-          summary: "The next generation of CRM and ERP applications"
+        - text: Dynamics 365
           url: /dynamics365/
         # Card
-        - title: Microsoft Azure
-          summary: "Ever-expanding set of cloud computing services to help your organization meet it's business challenges"
+        - text: Microsoft Azure
           url: /azure
