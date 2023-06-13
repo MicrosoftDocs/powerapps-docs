@@ -382,6 +382,8 @@
             href: ./canvas-apps/power-apps-studio.md
           - name: Add comments
             href: ./canvas-apps/comments.md
+          - name: Understand copresence
+            href: ./canvas-apps/copresence-power-apps-studio.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
           - name: Add and configure a screen
@@ -546,7 +548,7 @@
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
               href: ./canvas-apps/controls/control-audio-video.md
-            - name: Barcode reader (experimental)
+            - name: Barcode reader
               href: ./canvas-apps/controls/control-barcodereader.md
             - name: Barcode scanner
               href: ./canvas-apps/controls/control-new-barcode-scanner.md
@@ -1935,13 +1937,13 @@
       items:
       - name: Virtual table OData v4 data provider
         href: ./data-platform/virtual-entity-odata-provider-requirements.md
-      - name: Create a virtual table using a virtual connector provider (preview)
+      - name: Create a virtual table using a virtual connector provider
         href: ./data-platform/create-virtual-tables-using-connectors.md
       - name: Set up virtual table relationships
         href: ./data-platform/setup-virtual-table-relationships.md
       - name: Virtual tables known issues and troubleshooting 
         href: ./data-platform/limits-tshoot-virtual-tables.md
-    - name: Create and edit elastic tables
+    - name: Create and edit elastic tables (preview)
       href: ./data-platform/create-edit-elastic-tables.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
@@ -2485,6 +2487,8 @@
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
+  - name: Solution templates for Power Platform (preview)
+    href: /power-platform/solution-templates/overview
   - name: Crisis Communication
     href: ./canvas-apps/sample-crisis-communication-app.md
   - name: Hospital Emergency Response
