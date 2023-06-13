@@ -41,7 +41,7 @@ highlightedContent:
 
 additionalContent: 
   sections:
-  - title: Design and Build
+  - title: Create and Design
 # Guidance should be the first card under implement. On this card, include links for Security and Compliance, Implementation, Adoption frameworks, and Best practices. 
 # Each card should have at least three and no more than five links. Do not include a "See also" link.
     items:
