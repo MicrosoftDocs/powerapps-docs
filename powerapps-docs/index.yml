@@ -45,6 +45,14 @@ additionalContent:
 # Guidance should be the first card under implement. On this card, include links for Security and Compliance, Implementation, Adoption frameworks, and Best practices. 
 # Each card should have at least three and no more than five links. Do not include a "See also" link.
     items:
+    - title: Try/Buy/Deploy
+      links:
+        - text: Try Power Apps
+          url: maker/signup-for-powerapps.md
+        - text: Buy Power Apps
+          url: /power-platform/admin/signup-for-powerapps-admin
+        - text: Deploy Power Apps
+          url: /power-platform/admin/admin-powerapps-enterprise-deployment
     - title: Create apps
       links:
         - text: Canvas apps
@@ -61,24 +69,8 @@ additionalContent:
           url: maker/data-platform/create-edit-metadata.md
         - text: Create and use dataflows
           url: maker/data-platform/create-and-use-dataflows.md
-    - title: Configure mobile experience
-      links:
-        - text: Get started with Power Apps mobile
-          url: mobile/run-powerapps-on-mobile.md
-        - text: Use model-driven apps on Power Apps mobile
-          url: mobile/use-custom-model-driven-app-on-mobile.md
-        - text: Configure mobile offline
-          url: mobile/setup-mobile-offline.md
   - title: Develop and integrate
     items:
-    - title: Integrate with Microsoft Teams
-      links:
-        - text: Embed a canvas app in Teams
-          url: teams/embed-teams-app.md
-        - text: Create apps in Teams
-          url: teams/create-apps-overview.md
-        - text: What is Microsoft Dataverse for Teams?
-          url: teams/overview-data-platform.md
     - title: Develop Power Apps
       links:
         - text: Dataverse
@@ -95,8 +87,24 @@ additionalContent:
           url: /power-platform/alm/overview-alm
         - text: Use Microsoft Power Platform Build Tools
           url: /power-platform/alm/devops-build-tools
-  - title: Administer and enhance
+    - title: Integrate with Microsoft Teams
+      links:
+        - text: Embed a canvas app in Teams
+          url: teams/embed-teams-app.md
+        - text: Create apps in Teams
+          url: teams/create-apps-overview.md
+        - text: What is Microsoft Dataverse for Teams?
+          url: teams/overview-data-platform.md
+  - title: Use and administer
     items:
+    - title: Use Power Apps
+      links:
+        - text: Get started with Power Apps mobile
+          url: mobile/run-powerapps-on-mobile.md
+        - text: Use model-driven apps on Power Apps mobile
+          url: mobile/use-custom-model-driven-app-on-mobile.md
+        - text: Configure mobile offline
+          url: mobile/setup-mobile-offline.md
     - title: Administer Power Apps
       links:
         - text: Use Power Platform admin center
