@@ -121,8 +121,6 @@ additionalContent:
           url: guidance/planning/introduction.md
         - text: Collaborating and co-developing apps
           url: guidance/co-develop/overview.md
-        - text: "Ebook: Fusion development approach"
-          url: guidance/fusion-dev-ebook/index.md
 
   - title: Related content # < 60 chars (optional)
     items:
