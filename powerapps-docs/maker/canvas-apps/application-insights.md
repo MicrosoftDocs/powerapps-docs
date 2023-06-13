@@ -58,8 +58,8 @@ Before you can send system-generated logs from an app, you need to create an App
 ## Connect your app to Application Insights
 
 > [!NOTE]
-> - When specifying an instrumentation key, be aware that data may be sent across tenants. Trace events are sent to the App Insights resource that corresponds to the instrumentation key you set for your app, even if the target App Insights instance is in a different tenant than the app.
-> - Use caution when importing existing .msapp files since instrumentation keys for App Insights may be present.  Manually open the app after import to verify that the correct App Insights instrumentation key is being used.
+> - When specifying an instrumentation key, be aware that data can be sent across tenants. Trace events are sent to the App Insights resource that corresponds to the instrumentation key you set for your app, even if the target App Insights instance is in a different tenant than the app.
+> - Use caution when importing existing .msapp files since instrumentation keys for App Insights may be present. Manually open the app after import to verify that the correct App Insights instrumentation key is being used.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
