@@ -182,7 +182,7 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 1. Open the Azure Synapse workspace connected to your Azure Synapse Link for Dataverse profile.
 1. On the left navigation pane, select **Networking**.
 
-   1. Select **Allow all azure services and resources to access this workspace**.
+   1. Select **Allow Azure services and resources to access this workspace**.
    2. If there is a **IP firewall rules** created for all IP range, delete them to restrict public network access.
    3. Add a new **IP firewall rule** based on the client IP address. 
    4. Select Save when done. For more information: [Azure Synapse Analytics IP firewall rules](/azure/synapse-analytics/security/synapse-workspace-ip-firewall#ip-firewall-rules)
