@@ -1,8 +1,8 @@
 ---
-title: "Bulk operations with elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to perform bulk data operations on  elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Bulk operations with elastic tables (preview)"
+description: "Learn how to perform bulk data operations on Dataverse elastic tables with code"
 ms.topic: article
-ms.date: 05/30/2023
+ms.date: 06/10/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -18,13 +18,13 @@ Often applications need to ingest large amount of data into Dataverse in a short
 
 Bulk operations are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. For elastic tables, we recommend sending 100 items in a batch. Multiple bulk operation can be run in parallel to achieve high throughput. More information [Send parallel requests](send-parallel-requests.md)
 
-Elastic tables currently supports following messages for bulk operations:
+Elastic tables currently support the following messages for bulk operations:
 
 - `CreateMultiple`
 - `UpdateMultiple`
 - `DeleteMultiple`
 
-Support for `UpsertMultiple` message will be coming soon. Also, these messages are currently supported only using the SDK for .NET.
+These messages are currently supported only using the SDK for .NET. Support for the `UpsertMultiple` message is coming soon.
 
 > [!NOTE]
 > `CreateMultiple` and `UpdateMultiple` are also available for standard tables. More information: [Use CreateMultiple and UpdateMultiple (preview)](org-service/use-createmultiple-updatemultiple.md)
