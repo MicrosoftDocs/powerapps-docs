@@ -60,7 +60,7 @@ additionalContent:
         - text: Tables and metadata
           url: maker/data-platform/create-edit-metadata.md
         - text: Create and use dataflows
-          url: maker/data-platform/create-and-use-dataflows
+          url: maker/data-platform/create-and-use-dataflows.md
     - title: Configure mobile experience
       links:
         - text: Get started with Power Apps mobile
