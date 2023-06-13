@@ -22,7 +22,7 @@ contributors:
 > [!IMPORTANT]
 > - This is an experimental feature.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. More information: [Experimental and preview features](working-with-experimental-preview.md)
-> - The behavior that this article describes is available only when the _Enhanced component properties_ experimental feature in [Settings > Upcoming features > Experimental](./working-with-experimental-preview#controlling-which-features-are-enabled) is turned on (off by default).
+> - The behavior that this article describes is available only when the _Enhanced component properties_ experimental feature in [Settings > Upcoming features > Experimental](./working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
 > - Your feedback is very valuable to us - please let us know what you think in the [Power Apps experimental features community forum](https://powerusers.microsoft.com/t5/Power-Apps-Experimental-Features/bd-p/PA_ExperimentalFeatures).
 
 ## Types of properties
