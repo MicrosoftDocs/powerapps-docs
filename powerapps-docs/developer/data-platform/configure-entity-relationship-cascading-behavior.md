@@ -5,7 +5,7 @@ suite: powerapps
 author: NHelgren
 ms.author: nhelgren
 ms.topic: article
-ms.date: 06/01/2023
+ms.date: 06/13/2023
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -270,6 +270,55 @@ Some examples of the kind of notifications that your custom plug-in can provide 
 - On success, add an entry to a run-time log
 -   On failure, add an entry to a run-time log, and then send an email (or other communication) to the administrator indicating the date/time and nature of the failure
 - Display a message to the interactive user
+
+## Reset cascade inherited access
+
+if a parent table row's cascading access option is changed from **Cascade All** to **Cascade None**, it is important to ensure that child rows have the appropriate access permissions. This section describes how to programmatically revoke inherited access rights granted to child rows when a parent row is changed to **Cascade None**. The ability to revoke inherited access on child rows requires Administrator or System Customizer security role.
+
+Below are three example scenerios where inherited access is revoked using FetchXML queries.
+
+### Reset inherited access given to a certain user for a specific account
+
+```xml
+<fetch mapping="logical">
+    <entity name="principalobjectaccess">
+        <attribute name="principalobjectaccessid"/>
+        <filter type="and">
+            <condition attribute="principalid" operator="eq" value="9b5f621b-584e-423f-99fd-4620bb00bf1f" />
+            <condition attribute="objectid" operator="eq" value="B52B7A48-EAFB-ED11-884B-00224809B6C7" />
+        </filter>
+    </entity>
+</fetch>
+```
+
+### Reset inherited access given to all child rows for a specified object type
+
+```xml
+<fetch mapping="logical">
+    <entity name="principalobjectaccess">
+        <attribute name="principalobjectaccessid"/>
+        <filter type="and">
+            <condition attribute="objecttypecode" operator="eq" value="10042" />
+        </filter>
+    </entity>
+</fetch>
+
+```
+
+### Reset inherited access given to a specified user for all object types
+
+```xml
+<fetch mapping="logical">
+    <entity name="principalobjectaccess">
+        <attribute name="principalobjectaccessid"/>
+        <filter type="and">
+            <condition attribute="principalid" operator="eq" value="9b5f621b-584e-423f-99fd-4620bb00bf1f" />
+        </filter>
+    </entity>
+</fetch>
+```
+
+More information: [Inherited access rights cleanup](../../maker/data-platform/create-edit-entity-relationships#inherited-access-rights-cleanup)
 
 ### See also
 
