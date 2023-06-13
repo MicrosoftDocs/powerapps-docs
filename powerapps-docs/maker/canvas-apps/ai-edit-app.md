@@ -55,6 +55,20 @@ AI Copilot supports the following commands:
     > [!NOTE]
     > [Modern controls](controls/modern-controls/overview-modern-controls.md) are not supported.
 
+## Sample commands you can try
+| Scenario      | Commands |
+| ----------- | ----------- |
+|Add a new screen using template	      |Adding a new email screen|
+|             |Adding a new screen|
+|             |Add a new screen with header body and footer|
+|Add/edit/style a control	|Add a new button|
+|             |change selected button to have width 100|
+|             |add a new icon|
+|             |add a new text label|
+|Bulk editing	|Change all buttons to gray|
+|             |Change all labels in the selected container to be red|
+|Working with containers	|Add a button to the selected container|
+|Templatized formulas|	when clicking on Button1, show screen 2|
 
 ## Use Copilot to edit your app
 
