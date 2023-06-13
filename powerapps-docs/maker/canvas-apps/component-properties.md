@@ -21,22 +21,21 @@ contributors:
 
 > [!IMPORTANT]
 > - This is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. More information: [Understand experimental, preview, and deprecated features in Power Apps](./working-with-experimental-preview)
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. More information: [Experimental and preview features](working-with-experimental-preview.md)
 > - The behavior that this article describes is available only when the _Enhanced component properties_ experimental feature in [Settings > Upcoming features > Experimental](./working-with-experimental-preview#controlling-which-features-are-enabled) is turned on (off by default).
 > - Your feedback is very valuable to us - please let us know what you think in the [Power Apps experimental features community forum](https://powerusers.microsoft.com/t5/Power-Apps-Experimental-Features/bd-p/PA_ExperimentalFeatures).
 
-# Types of properties
+## Types of properties
 
-There are three types of properties available to makers:
+There are four types of properties available to makers:
 
-1. **Data** properties: This type of property deals with data, such as a color or text value. A **Data** property can be set to be **Input** or **Output**, which indicates if the component provides data to the app (**Output**) or the app will provide data to the component (**Input**). **Data** properties are the only properties that participate in app data flow.
-2. **Function** properties: This type of property deals with logic, such as doing a calculation given a set of parameters, or manipulating text. A **Function** property can be set to be **Input** or **Output**, which indicates if the component provides a function the app can call (**Output**), or the app provides a function the component can call (**Input**). **Function** properties do not participate in an app's data flow, and cannot use component or app variables.
-3. **Action** properties: This type of property deals with logic, and is essentially a behavior **Output** **Function**. This means the component has the logic defined, and that logic can use chained expressions and manipulate collections or variables ("behavior"). For example, a `Clear()` **Action** property could provide functionality the app can call to clear out some values in the component, or a `Save()` **Action** property that updates a datasource.
-4. **Event** properties: This type of property deals with logic, and is essentially a behavior **Input** **Function**. This means the app defines the logic which the component can call, and that logic can use chained expressions and manipulate collections or variables ("behavior"). Typically these properties' names reflect an event such as `OnSelect` or `OnChanged`.
+1. [Data properties](component-properties.md#data-property): This type of property deals with data, such as a color or text value. A **Data** property can be set to be **Input** or **Output**, which indicates if the component provides data to the app (**Output**) or the app will provide data to the component (**Input**). **Data** properties are the only properties that participate in app data flow.
+2. [Function](component-properties.md#function-property) properties: This type of property deals with logic, such as doing a calculation given a set of parameters, or manipulating text. A **Function** property can be set to be **Input** or **Output**, which indicates if the component provides a function the app can call (**Output**), or the app provides a function the component can call (**Input**). **Function** properties do not participate in an app's data flow, and cannot use component or app variables.
+3. [Action properties](component-properties.md#action-property): This type of property deals with logic, and is essentially a behavior **Output** **Function**. This means the component has the logic defined, and that logic can use chained expressions and manipulate collections or variables ("behavior"). For example, a `Clear()` **Action** property could provide functionality the app can call to clear out some values in the component, or a `Save()` **Action** property that updates a datasource.
+4. [Event properties](component-properties.md#event-property): This type of property deals with logic, and is essentially a behavior **Input** **Function**. This means the app defines the logic which the component can call, and that logic can use chained expressions and manipulate collections or variables ("behavior"). Typically these properties' names reflect an event such as `OnSelect` or `OnChanged`.
 
-Let's review each type of property with some examples.
 
-## Data property
+### Data property
 
 A data property's usage is easy to imagine. Standard controls in apps typically have several data properties, to set default values, text color, size, etc. Let's look at a simple example where we wish to make properties of a control within the component available to the hosting app. In this example, our component is named `Component1`. We will put a slider control in inside our component. We will have an **Input** property to specify the color from the consuming app, and an **Output** property where the component can tell the app what the current value of the slider is. The following example assumes your component contains a **Slider** control named `Slider`.
 
