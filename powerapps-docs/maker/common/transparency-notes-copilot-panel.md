@@ -22,110 +22,90 @@ Continue to edit your app with Copilot is a feature that aims at taking the heav
  
 ## What are the system’s capabilities? 
 
-This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview), which uses powerful language models. These language models generate new text in English that looks and sounds like text written by humans.  
+The system has following capabilities:
 
-Using Azure OpenAI service as a foundation, build apps through conversation considers your app description to propose relevant data tables on which to build your app. As part of data generation, the system recommends relevant columns, sample row data, and data types that you can customize. The sample data is not real organizational data.  
+- Adding a screen from existing screen templates 
+
+- Adding and updating properties of a single control – classic controls only 
+
+- Bulk updating controls 
+
+- Working with containers 
+
+- Default suggestions for people to know what to type in. 
+
+- Templatized formulas:
+
+    - Navigate(), (~"Create button Home that navigates to the Home Screen") 
+
+    - SubmitForm() (~"Create Submit button for Form2") 
+
+Supported components/controls: 
+
+- Screen 
+
+- Container 
+
+- Gallery 
+
+- Form 
+
+- Button 
+
+- Label 
+
+- TextInput 
 
 ## What is the system’s intended use? 
 
-Build apps through conversation is intended to simplify your app creation process by automatically generating a data table on which your app will be built. AI-generated content may have mistakes. Make sure it's accurate and appropriate before using it. For more information, read the full [preview terms](https://powerplatform.microsoft.com/en-us/legaldocs/supp-powerplatform-preview).
+Generate UI actions for makers. The scope for preview release includes: 
 
+- Add a screen from existing screen templates 
 
-## How was build apps through conversation evaluated? What metrics are used to measure performance? 
+- Add and update properties of a single classic control 
 
-Build apps through conversation underwent substantial testing before the feature w ---
+- Bulk update controls on a single screen 
 
-title: Transparency note for building apps through conversation
+- Work with containers 
 
-description: The transparency note discusses building apps through conversation and the key considerations for making use of this technology responsibly.
+- Default suggestions for people to know what to type in. 
 
-ms.date: 5/23/2023
+- Templatized formulas for build: 
 
-ms.custom: 
+    - Navigate(), (~"Create button Home that navigates to the Home Screen") 
 
-  - transparency-note
+    - Gallery.Selected (~"Link Form2 with Gallery 3") 
 
-ms.topic: article
+    - SubmitForm() (~"Create Submit button for Form2") 
 
-author: franklanmsft
+- Merging with Power Apps Ideas for MPPC 
 
-ms.author: franklan
+## How was continue to edit your app with Copilot evaluated? What metrics are used to measure performance? 
 
-ms.reviewer: mduelae
+We measure the feature qualitatively and quantitatively. We will conduct user studies with makers to ask for their feedback, how they think about the quality of the feature, feedback on experiences, and suggestions for improvement. 
+We will also track from telemetry including how many makers tried the feature, how many were able to get a response and what’s the thumbsup and down ratio. 
+Continue to build apps with Copilot underwent substantial testing before the feature was released in preview. If you encounter issues with the content being generated, please submit feedback.  Your feedback will be used to improve Microsoft products and services. IT admins for your organization will be able to view and manage your feedback data. Read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
 
----
+## What are the limitations of continue to edit your app with Copilot? How can users minimize the impact of the [Feature] limitations when using the system? 
 
-
-
-# Transparency note for building apps through conversation
-
-
-
-This transparency note describes the AI impact of build apps through conversation feature.
-
-
-
-## What is build apps through conversation? 
-
-
-
-Build apps through conversation is a feature in the Power Apps that allows you to describe the app that you want to build, and AI will design it for you. To start, you use natural language to tell the AI assistant what kind of information you want to collect, track, or show. The assistant will generate a Dataverse table and use it to build your canvas app. The AI assistant is available from the Power Apps home page. 
-
- 
-
-## What are the system’s capabilities? 
-
-
-
-
-This capability is powered by [Azure OpenAI Service](/azure/co as released in preview. If you encounter issues with the content being generated, please submit feedback. Your feedback will be used to improve Microsoft products and services. IT admins for your organization will be able to view and manage your feedback data. 
-
-For more information, see:
-- [Microsoft Global Data Privacy Notice for Employees, External Staff, Candidates and Guests](https://go.microsoft.com/fwlink/?linkid=2182930) 
-- [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy)
-
-## What are the limitations of build apps through conversation? How can users minimize the impact of the build apps through conversation limitations when using the system? 
-
-Preview features aren’t meant for production use and may have restricted functionality.These features are available before an official release so that customers can get early access and provide feedback. 
-
-This capability is in the process of rolling out, and may not be available in your region yet. 
-
-This capability may be subject to usage limits or capacity throttling. 
-
-The following are requirements to access the waitlist for this preview: 
-
-- Your environment must be in the United States region. 
-
-- Your account must have English (United States) as the browser language. 
-
-- Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment. 
-
-- Licensed customers will be prioritized for access. 
-
-- AI Builder must be enabled for your environment to use the AI models or controls leveraging AI models: 
-
-    1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-
-    2. Go to **Environments** > [select an environment] > **Settings** > **Features**. 
-
-    3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**. 
-
-For more information, see [AI Copilot overview](../canvas-apps/ai-overview.md) 
+- To use this capability, you must have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment. 
+- Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
+- For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520). 
+- This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview). 
+- This capability is in process of rolling out, and may not be available in your region yet. 
+- This capability may be subject to usage limits or capacity throttling. 
+- Your environment must be in the United States region.
+- The feature works best on English, it doesn’t support other languages well yet. 
+- The feature only supports limited controls and actions (as listed in the intended use section above) and MSFT is actively working on expanding scope and supporting more actions incrementally. 
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 
-Follow these procedures to make the most of the feature: 
+Follow these guildlines to make the most of the feature:  
 
-- Use everyday words to describe what your app should collect, track, list, or manage such as the following:
-  - “Collect RSVPs for the team birthday party” 
-  - “Track sales leads” 
+- Use everyday words to describe how you want to edit your app, such as “add a new screen”, “add a new email screen”, or “add 2 buttons”.
+- When results don't meet your expectations, try to be specific, like “add a new button in the selected container”, “make the selected button red”, or “when clicking on Button1 show Screen 2”. 
+- You can also try the default suggestions that are offered in the Copilot panel and make modifications. And if it still doesn’t meet your needs, send us your feedback. 
 
-- Customize the data table with prompts such as:
-   - “Add a column for …” 
-   - “Remove the … row” 
-   - “Change the data type for the … column to… “ 
-
-- When in doubt, you can ask the AI assistant for help by typing, “Give me suggestions”
 
 ## See also 
 - [Build apps through conversation (preview)](../canvas-apps/ai-conversations-create-app.md)
