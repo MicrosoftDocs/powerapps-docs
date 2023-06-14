@@ -6,7 +6,7 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 06/08/2023
+ms.date: 06/13/2023
 ms.custom: template-how-to 
 ---
 # Use managed identities for Azure with your Azure data lake storage
@@ -181,14 +181,11 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Open the Azure Synapse workspace connected to your Azure Synapse Link for Dataverse profile.
 1. On the left navigation pane, select **Networking**.
-
-   1. Enable **Public network access to workspace endpoints**
-   2. Select **Allow all azure services and resources to access this workspace**.
-   3. If there is a **IP firewall rules** created for all IP range, delete them.
-   4. Add a new **IP firewall rule**, give it a name, Start IP, and End IP. 
-   5. Select Save when done. For more information: [Azure Synapse Analytics IP firewall rules](/azure/synapse-analytics/security/synapse-workspace-ip-firewall#ip-firewall-rules)
-
-:::image type="content" source="media/synapse-workspace-network-settings.png" alt-text="Azure Synapse workspace network settings":::
+1. Select **Allow Azure services and resources to access this workspace**.
+1. If there are **IP firewall rules** created for all IP range, delete them to restrict public network access.
+   :::image type="content" source="media/synapse-workspace-network-settings.png" alt-text="Azure Synapse workspace network settings":::
+1. Add a new **IP firewall rule** based on the client IP address.
+1. Select **Save** when done. More information: [Azure Synapse Analytics IP firewall rules](/azure/synapse-analytics/security/synapse-workspace-ip-firewall#ip-firewall-rules)
 
 ## Create Azure Synapse Link for Dataverse with managed identity
 
