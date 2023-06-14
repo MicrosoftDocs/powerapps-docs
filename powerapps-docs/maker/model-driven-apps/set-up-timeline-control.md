@@ -23,7 +23,7 @@ The timeline helps app users see all activity history. The timeline control is u
 
 The timeline control provides an easy way to view information related to a table, such as accounts or contacts. This immersive experience helps give users a better understanding of their customer interactions, and helps them deliver more personalized service in an efficient and effective manner.
 
-App makers have the ability to configure the information displayed on the timeline to help users access information and create new activity records, such as emails and tasks directly from the timeline quickly so they can deliver more personalized service.
+App makers can configure the information displayed on the timeline to help users access information and create new activity records, such as emails and tasks directly from the timeline quickly so they can deliver more personalized service.
 
 ## Add a timeline
 
@@ -134,7 +134,7 @@ Using filters provides a quick option to sort and look for specific data quickly
 |Form designer configuration View | Form designer display View |
 |--------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 |![Configure filter pane](media\timeline-enable-filter-pane-display-options-advanced-2a.png "Configure Enable filter pane")|![Enable filter pane](media\timeline-enable-filter-pane-display-options-advanced-3b.png "Enable filter pane")|
-|The **filter pane** setting allows you to enable or disable filter functionality on timeline. It's enabled by default.   | Enable the **filter pane** by checking the box next to the setting.  This will enable the filter icon to display on the timeline.  <BR><BR> To disable the **filter pane**, clear the box next to the setting and the filter icon will no longer appear on the timeline.   |
+|The **filter pane** setting allows you to enable or disable filter functionality on timeline. It's enabled by default.   | Enable the **filter pane** by checking the box next to the setting.  This enables the filter icon to display on the timeline.  <BR><BR> To disable the **filter pane**, clear the box next to the setting and the filter icon will no longer appear on the timeline.   |
 
 #### Filter records on timeline
 
@@ -157,7 +157,7 @@ The following category and subcategory options are available on the filer menu:
 |Record type                |<li>Notes</li>                     <li>Activities</li><li>Posts</li>                     |
 |Activity type              |<li>Appointment</li><li>Campaign Activity<sup>1<sup></li> <li>Campaign Response<sup>1<sup></li><li>Email</li><li>Fax</li><li>Case Resolution<sup>1<sup></li><li>Letter</li><li>Opportunity Case<sup>1<sup></li>   <li>Order Case<sup>1<sup></li><li>Phone Call</li><li>Quote Close<sup>1<sup></li>           <li>Recurring Appointment</li><li>Social Activity</li><li>Task</li>   <li>Project Service Approval<sup>1<sup></li><li>Booking Alert<sup>1<sup></li><li>Conversation</li><li>Session</li><li>Customer Voice survey invite<sup>1<sup></li><li>Customer Voice survey response<sup>1<sup></li><li>Custom activities (made available by imported solutions)</li>|
 |Activity status            |<li>Active</li><li>Overdue</li>       <li>Closed</li>                         |
-|Activity status reason     |Allows you to filter using specific status reasons. The values are a unique list of all of the status reasons from the activities in the timeline. The status reasons will change depending on the activity. If there are multiple activities on the timeline that have the same status reason, it will be reflected once, but then the number next to it will indicate how many occurrences of that status reason appear in the timeline.                       |
+|Activity status reason     |Allows you to filter using specific status reasons. The values are a unique list of all of the status reasons from the activities in the timeline. The status reasons change depending on the activity. If there are multiple activities on the timeline that have the same status reason, it is reflected once, but then the number next to it indicates how many occurrences of that status reason appear in the timeline.                       |
 |Activity due date (active) |<li>Next 30 days</li><li>Next 7 days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last 7 days</li>   <li>Last 30 days</li>                   |
 |Posts by                   |<li>Auto post</li><li>Users</li>                          |
 |Modified date              |<li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li>                   |
@@ -202,7 +202,7 @@ You can configure the default filters that are applied when a form loads or is r
 
 #### Configure email commands for timeline
  
-You can configure email options for the timeline so that users can reply, reply-all, and forward messages. You can select the order in which the options are displayed for users, as well as exclude them if they're not needed. Reply-all is the default order setting.
+You can configure email options for the timeline so that users can reply, reply-all, and forward messages. You can select the order in which the options are displayed for users, and exclude them if they're not needed. Reply-all is the default order setting.
   
 1. Select the form for which you want to apply the email settings, and then in **Properties** in **Conversation Tabs**, select the **Email** activity type. The **Email** properties pane is displayed.
 
@@ -280,11 +280,11 @@ App makers have the ability to enable activity types so they can be created dire
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Configure the ability to create directly from timeline](media\timeline-enable-ability-to-create-directly-from-timeline-11a.png "Enable create directly from the timeline") | ![Display the option to create directly from timeline](media\timeline-enable-ability-to-create-directly-from-timeline-11b.png "Display the create options directly from timeline") |
-| To allow users to create activity types directly from the timeline, check the box next to **Create directly from timeline**.<br> | When enabled, the activity type will appear in a dropdown box on the  **Create a timeline record** ![Use this icon for create a timeline record.](media\timeline-create-a-record-icon.png "Select this icon to create a record") icon in the top-right of the timeline.|
+| To allow users to create activity types directly from the timeline, check the box next to **Create directly from timeline**.<br> | When enabled, the activity type appears in a dropdown box on the  **Create a timeline record** ![Use this icon for create a timeline record.](media\timeline-create-a-record-icon.png "Select this icon to create a record") icon in the top-right of the timeline.|
 
 #### Set form types to create and open activities
 
-Set the **Create activities using** and **Open activities using** individually for an activity type or for all activity types  to set the form type users will use based on your business needs. 
+Set the **Create activities using** and **Open activities using** individually for an activity type or for all activity types to set the form type users use based on your business needs. 
 You can set these fields as follows:
 - Select an activity type in **Activities**  and specify the values.
 - Specify the value for these fields in the  **Activities** pane.
@@ -371,7 +371,7 @@ The card **Details** section displays in the body of your timeline email record.
 |Form designer configuration view |Form designer display view|
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 |![Customize a card form in timeline - Details section](media\timeline-create-and-use-card-forms-details-1a.png "Customize a card form in timeline - Details section") |![Display the card form in timeline - Details section](media\timeline-create-and-use-card-forms-details-display-1a.png "Display the card form in timeline - Details section")|
-|The card details will always appear below the header regardless of the column you choose.<BR><BR>**Column 1**<BR>1. In the card details Column 1 acts as a subheader on the timeline record. For this example, **To** is selected for this column.<BR><BR>**Column 2**<BR>2. This column will only display one line of text in a summary view on the timeline record.  When you expand your timeline record,  content in this column is fully displayed and formatted. For this example, **CC** is selected for this column.<BR><BR>**Column 3**<BR>3. This column follows the content of Column 2 and is part of the main body of your timeline record that is only viewable when you expand the record. For this example, **Description** is selected for this column.|**Column 1**<BR>1. This column always displays in this section and acts as a subheader on the timeline record. <BR><BR>**Column 2**<BR>2. This column always displays in this section and only displays one line of text in the summary view but when expanded, content is fully displayed. <BR><BR>**Column 3**<BR>3. This column will always display in this section and is only viewable when the record is expanded.|	
+|The card details will always appear below the header regardless of the column you choose.<BR><BR>**Column 1**<BR>1. In the card details Column 1 acts as a subheader on the timeline record. For this example, **To** is selected for this column.<BR><BR>**Column 2**<BR>2. This column only displays one line of text in a summary view on the timeline record.  When you expand your timeline record,  content in this column is fully displayed and formatted. For this example, **CC** is selected for this column.<BR><BR>**Column 3**<BR>3. This column follows the content of Column 2 and is part of the main body of your timeline record that is only viewable when you expand the record. For this example, **Description** is selected for this column.|**Column 1**<BR>1. This column always displays in this section and acts as a subheader on the timeline record. <BR><BR>**Column 2**<BR>2. This column always displays in this section and only displays one line of text in the summary view but when expanded, content is fully displayed. <BR><BR>**Column 3**<BR>3. This column always displays in this section and is only viewable when the record is expanded.|	
 
 **Footer section**<br>
 This section isn't visible on the timeline record.  
@@ -595,12 +595,12 @@ Power platform administrators can configure the file types that are blocked from
 Power platform administrators can restrict the file size of attachments users can upload in the rich text editor.
 
 > [!NOTE]
-> File sizes for attachments generally can be any size under 128 MB, but for optimal system performance, smaller file sizes are recommended.
+> File sizes for attachments generally can be any size under 90 MB, but for optimal system performance, smaller file sizes are recommended.
 
 1.	Go to **Advanced Settings**, and then on the Settings menu, select System > Administration.
 1.	On the **Administration page**, select **System Settings**.
 1.	On the **System Settings** dialog, select the **Email** tab, and then scroll down to find the **Set file size limit for attachments** value.
-1.	Enter the desired size limit for attachments, and then select **Save**.
+1.	Enter the desired size limit for attachments, and then select **Save**. 131072 KB is the maximum allowed value.
 
 ## Known issues
   

@@ -2,8 +2,7 @@
 title: "Common issues and resolutions for solution checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: " A list of common issues and resolutions within solution checker"
 keywords: ""
-ms.date: 09/09/2020
-
+ms.date: 06/12/2023
 ms.custom:
   - ""
 ms.topic: troubleshooting
@@ -17,8 +16,6 @@ search.audienceType:
   - developer
 ---
 # Common issues and resolutions for solution checker
-
-
 
 This article lists some common issues that you might encounter while using solution checker. Where applicable, workarounds are provided.
 
@@ -36,14 +33,14 @@ Failures that occur during background processing of the analysis will fail with 
 
 ![Error status.](media/solution-checker-exception-status.png)
 
-Selecting the portal notification will link to this page of common issues for further troubleshooting. If one of the provided common issues does not resolve the problem, a reference number is also returned. Provide this reference number to Microsoft Support for further investigation.
+Selecting the portal notification will link to this page of common issues for further troubleshooting. If one of the provided common issues doesn't resolve the problem, a reference number is also returned. Provide this reference number to Microsoft Support for further investigation.
 
 ![Failure notification.](media/solution-checker-failure-notification.png)
 
 
 ## Solution checker fails to check Default solution
 
-Solution checker exports the solution from the Microsoft Power Platform environment for analysis. Exporting the Default solution is not supported and the check may not complete successfully. More information: [Solution Checker fails to export large solutions](#solution-checker-fails-to-export-large-solutions).
+Solution checker exports the solution from the Microsoft Power Platform environment for analysis. Exporting the Default solution isn't supported and the check may not complete successfully. More information: [Solution Checker fails to export large solutions](#solution-checker-fails-to-export-large-solutions).
 
 
 ## Solution checker fails due to unsupported version of Power Apps Checker
@@ -96,7 +93,7 @@ To disable administration mode for an organization instance:
 
 ## Solution checker fails due to missing security roles
 
-The application user for solution checker requires two security roles assigned in order to provide the necessary privileges to communicate with the Dataverse organization. If either of these roles are not assigned to the user **'Power Apps Checker'**,  attempts to run analysis, download results, and run cancelation will fail. This occurs most often when customers have automation in place that removes security roles from unexpected users. The following security roles contain minimum required permissions:
+The application user for solution checker requires two security roles assigned in order to provide the necessary privileges to communicate with the Dataverse organization. If either of these roles aren't assigned to the user **'Power Apps Checker'**,  attempts to run analysis, download results, and run cancellation will fail. This occurs most often when customers have automation in place that removes security roles from unexpected users. The following security roles contain minimum required permissions:
 
 - Export customizations
 - Solution checker
@@ -153,9 +150,9 @@ The Power Apps Checker application user in the Dataverse organization containing
 
 ![Enable user from form.](media/solution-checker-enable-application-user-form.png)
 
-## Solution checker remains in a Running state for more than thirty minutes
+## Solution checker remains in a Running state for more than 30 minutes
 
-Solution checker may remain in a running state indefinitely if the analyzed solution contains plugin components developed using .NET Standard 2.0. Plugins using .NET Standard 2.0 are not currently supported in solution checker and should be excluded from analysis. Exclude the plugin component by either removing it from the target solution, or by using the 'ExcludedFileNamePattern' parameter in the Power Apps Checker PowerShell module.
+Solution checker may remain in a running state indefinitely if the analyzed solution contains plugin components developed using .NET Standard 2.0. Plugins using .NET Standard 2.0 aren't currently supported in solution checker and should be excluded from analysis. Exclude the plugin component by either removing it from the target solution, or by using the 'ExcludedFileNamePattern' parameter in the Power Apps Checker PowerShell module.
 
 ## Common plugin conditions that cause solution checker to fail
 
@@ -163,38 +160,38 @@ When solution checker receives and processes analysis requests, it must call the
 
 Typical Dataverse operations requested by solution checker:
 
-- Retrieve solution, systemuser, and organization table data
+- Retrieve solution, `systemuser`, and organization table data
 - Create, update, and retrieve analysis job, analysis component, and analysis result table data
 - Export solutions
 
 ### Plugin step registered to execute in context of an unlicensed user
 
-When solution checker fails due to an "unlicensed user" exception, it is often caused by a triggered plugin step configured to execute in the context of a specific system user that is currently unlicensed. Ensure that any plugin steps that could be triggered by solution checker execute in context of a licensed user.
+When solution checker fails due to an "unlicensed user" exception, it's often caused by a triggered plugin step configured to execute in the context of a specific system user that is currently unlicensed. Ensure that any plugin steps that could be triggered by solution checker execute in context of a licensed user.
 
 >[!IMPORTANT]
 >It is highly recommended that plugin steps be configured to execute in context of the calling user rather than specific users which are subject to assigned license being revoked.
 
 ### Plugin step performs operations that require privileges not granted to Power Apps Checker application user
 
-When solution checker fails due to Dataverse denying access based on a missing privilege, it is often caused by a triggered plugin step that performs operations that require privileges not currently granted to the Power Apps Checker application user. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or grant the Power Apps Checker application user the necessary privileges to execute the custom plugin step.
+When solution checker fails due to Dataverse denying access based on a missing privilege, it's often caused by a triggered plugin step that performs operations that require privileges not currently granted to the Power Apps Checker application user. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or grant the Power Apps Checker application user the necessary privileges to execute the custom plugin step.
 
 ### Plugin step unexpectedly interrupts execution by throwing InvalidPluginExecutionException
 
-Solution checker may fail due to the errors "ISV code aborted the operation" or "An unexpected error occurred from ISV code". When this occurs, it indicates a plugin step was triggered that explicitly interrupted execution by throwing an InvalidPluginExcecutionException or that an error was not caught properly in plugin code. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or adjust the plugin implementation not to interrupt execution based on the conditions presented by solution checker.
+Solution checker may fail due to the errors "ISV code aborted the operation" or "An unexpected error occurred from ISV code". When this occurs, it indicates a plugin step was triggered that explicitly interrupted execution by throwing an InvalidPluginExcecutionException or that an error wasn't caught properly in plugin code. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or adjust the plugin implementation not to interrupt execution based on the conditions presented by solution checker.
 
 Common operations invoked by solution checker include Create and Update. These operations can occur on the following tables: Analysis Job, Analysis Component, or Analysis Result.
 
 ## Solution checker fails due to disabled first-party application in Azure Active Directory
 
-The first-party enterprise application identity used by solution checker (PowerApps-Advisor) should not be disabled in Azure Active Directory (AAD). If disabled, the identity cannot authenticate when requesting bearer tokens for Dataverse and other required resource providers on-behalf of the requesting user.
+The first-party enterprise application identity used by solution checker (PowerApps-Advisor) shouldn't be disabled in Azure Active Directory (Azure AD). If disabled, the identity can't authenticate when requesting bearer tokens for Dataverse and other required resource providers on-behalf of the requesting user.
 
-Follow the below steps to verify that the application identity hasn't been disabled in AAD and if necessary enable the application.
+Follow the below steps to verify that the application identity hasn't been disabled in Azure AD and if necessary enable the application.
 
 ### How to verify and/or modify application enabled status
 
 To verify and/or modify the enabled status of the PowerApps-Advisor enterprise application identity
 
-1. Access your tenant in the [Azure Active Directory (AAD) Portal](https://aad.portal.azure.com/).
+1. Access your tenant in the [Azure Active Directory (Azure AD) Portal](https://aad.portal.azure.com/).
 2. Navigate to **Enterprise Applications**.
 3. Select **All Application** and search for **'PowerApps-Advisor'**.
 
@@ -218,13 +215,13 @@ To verify and/or modify the enabled status of the PowerApps-Advisor enterprise a
 
 ## Solution checker fails to export solutions with draft business process flow components
 
-If a solution contains a business process flow component in draft state that has never been previously activated, then solution checker will fail to export the solution for analysis. This error is not unique to solution checker and is caused by the business process flow having a dependency on a backing (custom) table component that doesn't get created until the business process flow is activated for the first time. This issue can also occur if a business process flow is activated from within solution explorer.
+If a solution contains a business process flow component in draft state that has never been previously activated, then solution checker will fail to export the solution for analysis. This error isn't unique to solution checker and is caused by the business process flow having a dependency on a backing (custom) table component that doesn't get created until the business process flow is activated for the first time. This issue can also occur if a business process flow is activated from within solution explorer.
 
 Reference [KB Article #4337537: Invalid Export - Business Process table Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-table-missing) for details about the issue and steps to resolve.
 
 ## Solution checker fails to export solutions with model-driven app components
 
-If a solution contains a model-driven app, solution checker might fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user does not have appropriate access to model-driven apps, any solutions containing them will fail to export with solution checker.
+If a solution contains a model-driven app, solution checker might fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user doesn't have appropriate access to model-driven apps, any solutions containing them will fail to export with solution checker.
 
 To resolve this issue, grant the **Environment Maker** security role to the Power Apps Checker application user.
 
@@ -234,13 +231,13 @@ If a solution has had a [patch](/power-platform/alm/create-patches-simplify-solu
 
 To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](/power-platform/alm/update-solutions-alm#clone-a-solution).
 
-## Solution checker will not analyze empty solutions
+## Solution checker won't analyze empty solutions
 
-If solution checker exports a solution that contains no components to analyze, it will terminate further processing and consider the run a failure. Ensure that the selected solution submitted for a solution checker analysis contains at least one component.
+If solution checker exports a solution that contains no components to analyze, it terminates further processing and consider the run a failure. Ensure that the selected solution submitted for a solution checker analysis contains at least one component.
 
 ## Solution checker fails to export large solutions
 
-The primary scenario for failure to export a large solution from the environment involves a timeout exception on the export request. This will occur if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this time frame, and the check will not complete successfully. If solution checker encounters a timeout during export, it will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
+The primary scenario for failure to export a large solution from the environment involves a timeout exception on the export request. This occurs if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this time frame, and the check won't complete successfully. If solution checker encounters a timeout during export, it retries three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
 
 The workaround is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to many plug-in assembly components, see guidance to [Optimize custom assembly development](../../developer/data-platform/best-practices/business-logic/optimize-assembly-development.md).
 
@@ -252,13 +249,9 @@ The workaround is to create smaller solutions with fewer components to be analyz
 > - When you add HTML web resources, include any dependent scripts that are defined within the HTML web resource.
 > - When you add custom workflows, include the assembly used within the workflow.
 
-## Line number references for issues in HTML resources with embedded JavaScript are not correct
+## Line number references for issues in HTML resources with embedded JavaScript aren't correct
 
-When HTML web resources are processed within solution checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource will not be correct.
-
-## Web-avoid-eval error for Power Apps component framework code components
-
-If a web-avoid-eval error is reported for a Power Apps component framework code component created using CLI tooling, package your control with `msbuild /p:configuration=Release` or `npm run build -- --buildMode production` to produce a release build that does not include 'eval' usage.
+When HTML web resources are processed within solution checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource won't be correct.
 
 ## Web-unsupported-syntax issue for web resources
 
@@ -266,15 +259,17 @@ Solution checker supports global variables for ECMAScript 2015 (ES6) and up to E
 
 ## Multiple violations reported for plug-ins and workflow activities based on call scope
 
-For plug-in and workflow activity rules where the issue is only relevant in the calling context, the solution checker tool starts its analysis at the IPlugin interface implementation and traverses a call graph to detect issues within the scope of that implementation.  In some cases, many call paths may arrive at the same location where the issue is detected.  Since the issue is relevant to the call scope, the tool may report based on that scope to provide a better picture of impact rather than on distinct locations. As a result, multiple issues may reference a single location that should be fixed.
+For plug-in and workflow activity rules where the issue is only relevant in the calling context, the solution checker tool starts its analysis at the `IPlugin` interface implementation and traverses a call graph to detect issues within the scope of that implementation.  In some cases, many call paths may arrive at the same location where the issue is detected.  Since the issue is relevant to the call scope, the tool may report based on that scope to provide a better picture of impact rather than on distinct locations. As a result, multiple issues may reference a single location that should be fixed.
 
 ## app-formula-issues-high may show different number of errors than those shown in design mode
 
-The solution checker will list the number of the errors found in the app, *including those from tests*. The app checker in design mode only shows errors from screen controls and components. If the error count shown in the app checker in design mode is smaller, open the [Test Studio](../canvas-apps/test-studio.md) and search for the errors in the expressions used in tests.
+The solution checker lists the number of the errors found in the app, *including those from tests*. The app checker in design mode only shows errors from screen controls and components. If the error count shown in the app checker in design mode is smaller, open the [Test Studio](../canvas-apps/test-studio.md) and search for the errors in the expressions used in tests.
 
-## Solution Checker violations reported for code components
+## Solution checker violations reported for code components
 
-Solution Checker reports multiple violation when run on the solution which has code components built in debug mode. Solution checker is targeted to validate code for production use, thus code components must be build using proper buildMode: `npm run build -- --buildMode production or msbuild /p:configuration=Release` depending on your building system. More information [Create and build a code component](../../developer/component-framework/create-custom-controls-using-pcf.md).
+Solution checker reports multiple violations when run on the solution that has code components built in debug mode. One common error that occurs in debug mode is `web-avoid-eval`. Solution checker is targeted to validate code for production use, thus code components must be built using proper buildMode: `npm run build -- --buildMode production` or `msbuild /p:configuration=Release` depending on your building system. More information: [Create and build a code component](../../developer/component-framework/create-custom-controls-using-pcf.md)
+
+If there are errors occurring in `bundle.js` introduced by code components, you can exclude this file from analysis. More information: [Microsoft.PowerApps.Checker.PowerShell module](/powershell/module/Microsoft.PowerApps.Checker.PowerShell/invoke-powerappschecker?view=pa-ps-latest#-excludedfilenamepattern&preserve-view=true) and [PAC CLI](/power-platform/developer/cli/reference/solution#--excludedfiles--ef)
 
 ## See also
 
