@@ -108,7 +108,7 @@ Follow these guildlines to make the most of the feature: 
 
 
 ## See also 
-- [Build apps through conversation (preview)](../canvas-apps/ai-conversations-create-app.md)
+- [Use natural language to edit an app (preview)](../canvas-apps/ai-edit-app.md)
 
  
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
