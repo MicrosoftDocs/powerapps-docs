@@ -66,7 +66,7 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 - This capability may be subject to usage limits or capacity throttling. 
 - Your environment must be in the United States region.
 - This feature doesn’t support non-English language input. 
-- This feature only supports limited controls and actions as listed in the intended use section above. Microsoft is actively working on expanding scope and supporting more actions incrementally. 
+- This feature only supports limited controls and actions as listed in the [intended use](transparency-notes-copilot-panel.md#what-is-the-systems-intended-use) section. Microsoft is actively working on expanding scope and supporting more actions incrementally. 
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 
