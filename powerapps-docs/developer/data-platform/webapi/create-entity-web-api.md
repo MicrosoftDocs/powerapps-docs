@@ -1,7 +1,7 @@
 ---
 title: "Create a table row using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Read how to create a POST request to send data to create a table row on Microsoft Dataverse using the Web API"
-ms.date: 05/18/2023
+ms.date: 06/14/2023
 ms.service: powerapps
 ms.topic: article
 author: divkamath
@@ -26,13 +26,13 @@ Use a POST request to send data to create a table row (entity record). You can c
 
 ## Basic Create
 
- This example creates a new account entity record. The response `OData-EntityId` header contains the Uri of the created entity.
+ This example creates a new account entity record. `accounts` is the entity set name for the [account EntityType](xref:Microsoft.Dynamics.CRM.account). The response `OData-EntityId` header contains the Uri of the created entity.
 
  **Request**
 
 ```http
 
-POST [Organization URI]/api/data/v9.0/accounts HTTP/1.1
+POST [Organization URI]/api/data/v9.0/accounts
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -58,7 +58,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(7eb682f1-ca75-e511-80d
 
 ```
 
-To create a new entity record you must identify the valid property names and types. For all system tables and attributes (table columns), you can find this information in the topic for that entity in the [Dataverse table/entity reference](../reference/about-entity-reference.md). For custom tables or columns, refer to the definition of that table in the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). More information: [Web API EntityTypes](web-api-entitytypes.md)
+To create a new entity record you must identify the valid [Entity set name](web-api-service-documents.md#entity-set-name), property names, and types. For all system tables and attributes (table columns), you can find this information in the topic for that entity in the [Web API Entity Type Reference](xref:Microsoft.Dynamics.CRM.EntityTypeIndex). For custom tables or columns, refer to the definition of that table in the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). More information: [Web API EntityTypes](web-api-entitytypes.md)
 
 <a name="bkmk_createWithDataReturned"></a>
 
@@ -79,7 +79,7 @@ This example creates a new account entity and returns the requested data in the 
 
  ```http
 
-POST [Organization URI]/api/data/v9.0/accounts?$select=name,creditonhold,address1_latitude,description,revenue,accountcategorycode,createdon HTTP/1.1
+POST [Organization URI]/api/data/v9.0/accounts?$select=name,creditonhold,address1_latitude,description,revenue,accountcategorycode,createdon
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 Accept: application/json
@@ -143,7 +143,7 @@ OData-Version: 4.0
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/accounts HTTP/1.1
+POST [Organization URI]/api/data/v9.0/accounts
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -195,7 +195,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(3c6e4b5f-86f6-e411-80d
 
 ```http
 
-POST [Organization URI]/api/data/v9.0/accounts?$select=name&$expand=primarycontactid($select=fullname),Account_Tasks($select=subject) HTTP/1.1
+POST [Organization URI]/api/data/v9.0/accounts?$select=name&$expand=primarycontactid($select=fullname),Account_Tasks($select=subject)
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -279,7 +279,7 @@ The following example shows how to create an account record using the values of 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(00000000-0000-0000-0000-000000000001)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate' HTTP/1.1
+GET [Organization URI]/api/data/v9.0/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(00000000-0000-0000-0000-000000000001)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate'
 If-None-Match: null
 OData-Version: 4.0
 OData-MaxVersion: 4.0
@@ -310,7 +310,7 @@ The response received from `InitializeFrom` function consists of values of mappe
 Other property values can also be set and/or modified for the new record by adding them in the JSON request body, as shown in the example below.
 
 ```http
-POST [Organization URI]/api/data/v9.0/accounts HTTP/1.1
+POST [Organization URI]/api/data/v9.0/accounts
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
