@@ -2,7 +2,7 @@
 title: "Create a solution in Power Apps | MicrosoftDocs"
 description: "Learn how to create a solution in Power Apps"
 ms.custom: ""
-ms.date: 06/08/2022
+ms.date: 06/14/2023
 ms.reviewer: ""
 ms.topic: "how-to"
 author: "Mattp123"
@@ -117,7 +117,7 @@ The solution publisher indicates who developed the app. For this reason, you sho
 4. Select **Save and Close**.
 
 > [!NOTE]
-> Do not use _upgrade as part of the solution name.  _upgrade is an internal reserved word for solution [upgrade  process](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/update-solutions#apply-the-upgrade-or-update-in-the-target-environment). 
+> Do not use _upgrade as part of the solution name.  _upgrade is an internal reserved word for the solution [upgrade  process](/power-apps/maker/data-platform/update-solutions#apply-the-upgrade-or-update-in-the-target-environment). 
 
 ### Change a solution publisher
 
