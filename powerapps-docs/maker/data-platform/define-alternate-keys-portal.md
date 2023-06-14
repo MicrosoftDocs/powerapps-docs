@@ -1,8 +1,7 @@
 ---
 title: "Define alternate keys using Power Apps | MicrosoftDocs"
 description: "Learn how to define alternate keys using Power Apps (make.powerapps.com)"
-ms.custom: ""
-ms.date: 08/01/2020
+ms.date: 05/30/2023
 ms.reviewer: ""
 ms.topic: "how-to"
 author: "Mattp123"
@@ -18,7 +17,7 @@ Power Apps provides an easy way to view and create table alternate keys with the
 Power Apps enables configuring the most common options, but certain options can only be set using solution explorer. More information: [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)
 
 > [!IMPORTANT]
-> If the data within a column that is used in an alternate key will contain one of the following characters `/`, `#`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?` then `GET` or `PATCH` actions will not work. If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on columns that won't have data with those characters.
+> If the data within a column that is used in an alternate key will contain one of the following characters `/`, `#`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+` then `GET` or `PATCH` actions will not work. If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on columns that won't have data with those characters.
 
 ## View alternate keys
 

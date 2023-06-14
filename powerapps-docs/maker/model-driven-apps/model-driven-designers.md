@@ -1,7 +1,7 @@
 ---
 title: "Model-driven-designers | MicrosoftDocs"
 description: "Model-driven app designers"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 09/27/2021
 ms.reviewer: ""
 

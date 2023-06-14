@@ -1,7 +1,7 @@
 ---
 title: "msdyn_integratedsearchprovider table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_integratedsearchprovider table/entity."
-ms.date: 03/07/2023
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,20 +25,20 @@ Ingest and search files, documents, or articles from data sources outside of you
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.2/msdyn_integratedsearchproviders(*msdyn_integratedsearchproviderid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.2/msdyn_integratedsearchproviders<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Assign|PATCH /msdyn_integratedsearchproviders(*msdyn_integratedsearchproviderid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /msdyn_integratedsearchproviders<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/msdyn_integratedsearchproviders(*msdyn_integratedsearchproviderid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/msdyn_integratedsearchproviders(*msdyn_integratedsearchproviderid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/msdyn_integratedsearchproviders<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.2/msdyn_integratedsearchproviders(*msdyn_integratedsearchproviderid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/msdyn_integratedsearchproviders(*msdyn_integratedsearchproviderid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Delete|DELETE /msdyn_integratedsearchproviders(*msdyn_integratedsearchproviderid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET /msdyn_integratedsearchproviders(*msdyn_integratedsearchproviderid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /msdyn_integratedsearchproviders<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH /msdyn_integratedsearchproviders(*msdyn_integratedsearchproviderid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /msdyn_integratedsearchproviders(*msdyn_integratedsearchproviderid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
@@ -64,14 +64,17 @@ Ingest and search files, documents, or articles from data sources outside of you
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [msdyn_allowedlanguages](#BKMK_msdyn_allowedlanguages)
 - [msdyn_articlepropertiesmapping](#BKMK_msdyn_articlepropertiesmapping)
 - [msdyn_authenticationtype](#BKMK_msdyn_authenticationtype)
 - [msdyn_clientid](#BKMK_msdyn_clientid)
 - [msdyn_clientsecret](#BKMK_msdyn_clientsecret)
 - [msdyn_datasourcetype](#BKMK_msdyn_datasourcetype)
 - [msdyn_description](#BKMK_msdyn_description)
+- [msdyn_htmlmetatags](#BKMK_msdyn_htmlmetatags)
 - [msdyn_includedsitemapurls](#BKMK_msdyn_includedsitemapurls)
 - [msdyn_integratedsearchproviderId](#BKMK_msdyn_integratedsearchproviderId)
+- [msdyn_isfieldmappingoptionselected](#BKMK_msdyn_isfieldmappingoptionselected)
 - [msdyn_lastfetchtime](#BKMK_msdyn_lastfetchtime)
 - [msdyn_lookbackperiod](#BKMK_msdyn_lookbackperiod)
 - [msdyn_name](#BKMK_msdyn_name)
@@ -103,6 +106,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_msdyn_allowedlanguages"></a> msdyn_allowedlanguages
+
+|Property|Value|
+|--------|-----|
+|Description|Languages allowed for ingestion|
+|DisplayName|Allowed Languages|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_allowedlanguages|
+|MaxLength|10000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_msdyn_articlepropertiesmapping"></a> msdyn_articlepropertiesmapping
@@ -210,6 +229,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_msdyn_htmlmetatags"></a> msdyn_htmlmetatags
+
+|Property|Value|
+|--------|-----|
+|Description|Information about the meta tags extracted from sample dataprovider html|
+|DisplayName|Html meta tags information|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_htmlmetatags|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
+
+
 ### <a name="BKMK_msdyn_includedsitemapurls"></a> msdyn_includedsitemapurls
 
 |Property|Value|
@@ -238,6 +273,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|msdyn_integratedsearchproviderid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_msdyn_isfieldmappingoptionselected"></a> msdyn_isfieldmappingoptionselected
+
+|Property|Value|
+|--------|-----|
+|Description|Value is true when field mapping option is selected|
+|DisplayName|Is Field Mapping Option Selected|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_isfieldmappingoptionselected|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### msdyn_isfieldmappingoptionselected Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_msdyn_lastfetchtime"></a> msdyn_lastfetchtime
@@ -271,10 +329,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|0|2 hours||
-|1|4 hours||
-|2|6 hours||
-|3|8 hours||
+|0|No Lookback||
+|1|2 hours||
+|2|4 hours||
+|3|6 hours||
+|4|8 hours||
 
 
 
@@ -426,7 +485,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |--------|-----|
 |Description|State of the external search provider|
 |DisplayName|Status|
-|IsValidForCreate|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|statecode|
@@ -458,8 +516,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|State|
 |-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
+|1|Ingestion Ready|0|
+|2|Validated|1|
+|3|Draft|1|
 
 
 
@@ -514,6 +573,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_htmlsample](#BKMK_msdyn_htmlsample)
+- [msdyn_htmlsample_Name](#BKMK_msdyn_htmlsample_Name)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
@@ -758,6 +819,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|modifiedonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_htmlsample"></a> msdyn_htmlsample
+
+|Property|Value|
+|--------|-----|
+|Description|The reference to the sample html file uploaded for the integrated search provider|
+|DisplayName|Sample HTML File of Data Provider uploaded for metatags extraction|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_htmlsample|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_msdyn_htmlsample_Name"></a> msdyn_htmlsample_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_htmlsample_name|
+|MaxLength|200|
+|RequiredLevel|None|
 |Type|String|
 
 

@@ -1,7 +1,7 @@
 ---
 title: "organizationdatasyncsubscription table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the organizationdatasyncsubscription table/entity."
-ms.date: 03/07/2023
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,14 +25,14 @@ search.audienceType:
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Create|POST /organizationdatasyncsubscriptions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Delete|DELETE /organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|Retrieve|GET /organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /organizationdatasyncsubscriptions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH /organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
@@ -73,6 +73,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [NeedCopyAttachmentsToBlob](#BKMK_NeedCopyAttachmentsToBlob)
 - [NeedToCopyFilesToBlob](#BKMK_NeedToCopyFilesToBlob)
 - [NewEntities](#BKMK_NewEntities)
+- [NewFnoTables](#BKMK_NewFnoTables)
 - [organizationdatasyncsubscriptionId](#BKMK_organizationdatasyncsubscriptionId)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [PartnerPrefix](#BKMK_PartnerPrefix)
@@ -81,8 +82,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SubscribedToAllEntities](#BKMK_SubscribedToAllEntities)
 - [SubscriptionEndpointStatus](#BKMK_SubscriptionEndpointStatus)
 - [SubscriptionEntities](#BKMK_SubscriptionEntities)
+- [SubscriptionFnoTables](#BKMK_SubscriptionFnoTables)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UnsubscribedEntities](#BKMK_UnsubscribedEntities)
+- [UnsubscribedFnoTables](#BKMK_UnsubscribedFnoTables)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
@@ -405,6 +408,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Memo|
 
 
+### <a name="BKMK_NewFnoTables"></a> NewFnoTables
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|NewFnoTables|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|newfnotables|
+|MaxLength|50000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
 ### <a name="BKMK_organizationdatasyncsubscriptionId"></a> organizationdatasyncsubscriptionId
 
 |Property|Value|
@@ -549,6 +568,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Memo|
 
 
+### <a name="BKMK_SubscriptionFnoTables"></a> SubscriptionFnoTables
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|subscriptionfnotables|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|subscriptionfnotables|
+|MaxLength|50000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
@@ -576,6 +611,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|unsubscribedentities|
+|MaxLength|20000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_UnsubscribedFnoTables"></a> UnsubscribedFnoTables
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|UnsubscribedFnoTables|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|unsubscribedfnotables|
 |MaxLength|20000|
 |RequiredLevel|None|
 |Type|Memo|
@@ -925,7 +976,10 @@ Listed by **SchemaName**.
 - [organizationdatasyncsubscription_PrincipalObjectAttributeAccesses](#BKMK_organizationdatasyncsubscription_PrincipalObjectAttributeAccesses)
 - [subscription_subscriptionentity](#BKMK_subscription_subscriptionentity)
 - [subscription_subscriptionentity_duplicate](#BKMK_subscription_subscriptionentity_duplicate)
+- [subscription_subscriptionfnotable](#BKMK_subscription_subscriptionfnotable)
+- [subscription_subscriptionfnotable_duplicate](#BKMK_subscription_subscriptionfnotable_duplicate)
 - [organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid](#BKMK_organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid)
+- [organizationdatasyncsubscription_organizationdatasyncfnostate_organizationdatasyncsubscriptionid](#BKMK_organizationdatasyncsubscription_organizationdatasyncfnostate_organizationdatasyncsubscriptionid)
 
 
 ### <a name="BKMK_organizationdatasyncsubscription_SyncErrors"></a> organizationdatasyncsubscription_SyncErrors
@@ -1094,6 +1148,36 @@ Same as the [subscription_subscriptionentity_duplicate](organizationdatasyncsubs
 |CascadeConfiguration|Assign: Cascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
+### <a name="BKMK_subscription_subscriptionfnotable"></a> subscription_subscriptionfnotable
+
+Same as the [subscription_subscriptionfnotable](organizationdatasyncsubscriptionfnotable.md#BKMK_subscription_subscriptionfnotable) many-to-one relationship for the [organizationdatasyncsubscriptionfnotable](organizationdatasyncsubscriptionfnotable.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|organizationdatasyncsubscriptionfnotable|
+|ReferencingAttribute|organizationdatasyncsubscriptioid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|subscription_subscriptionfnotable|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_subscription_subscriptionfnotable_duplicate"></a> subscription_subscriptionfnotable_duplicate
+
+Same as the [subscription_subscriptionfnotable_duplicate](organizationdatasyncsubscriptionfnotable.md#BKMK_subscription_subscriptionfnotable_duplicate) many-to-one relationship for the [organizationdatasyncsubscriptionfnotable](organizationdatasyncsubscriptionfnotable.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|organizationdatasyncsubscriptionfnotable|
+|ReferencingAttribute|organizationdatasyncsubscription|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|subscription_subscriptionfnotable_duplicate|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
 ### <a name="BKMK_organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid"></a> organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid
 
 **Added by**: DataSyncState Solution
@@ -1107,6 +1191,23 @@ Same as the [organizationdatasyncsubscription_organizationdatasyncstate_organiza
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organizationdatasyncsubscription_organizationdatasyncfnostate_organizationdatasyncsubscriptionid"></a> organizationdatasyncsubscription_organizationdatasyncfnostate_organizationdatasyncsubscriptionid
+
+**Added by**: DataSyncState Solution
+
+Same as the [organizationdatasyncsubscription_organizationdatasyncfnostate_organizationdatasyncsubscriptionid](organizationdatasyncfnostate.md#BKMK_organizationdatasyncsubscription_organizationdatasyncfnostate_organizationdatasyncsubscriptionid) many-to-one relationship for the [organizationdatasyncfnostate](organizationdatasyncfnostate.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|organizationdatasyncfnostate|
+|ReferencingAttribute|organizationdatasyncsubscriptionid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organizationdatasyncsubscription_organizationdatasyncfnostate_organizationdatasyncsubscriptionid|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

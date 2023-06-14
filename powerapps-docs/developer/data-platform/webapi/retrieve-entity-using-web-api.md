@@ -1,7 +1,7 @@
 ---
 title: "Retrieve a table row using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to form a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier"
-ms.date: 04/14/2023
+ms.date: 05/30/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -79,6 +79,9 @@ If you request a property that is part of a composite attribute for an address, 
 
 ## Retrieve using an alternate key
 
+> [!NOTE]
+> Alternate key values with the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+` are not currently supported.
+
 If an entity has an alternate key defined, you can also use the alternate key to retrieve the entity instead of the unique identifier for the entity. For example, if the `Contact` entity has an alternate key definition that includes both the `firstname` and `emailaddress1` properties, you can retrieve the contact using a query with data provided for those keys as shown here.
 
 ```http
@@ -97,9 +100,9 @@ Anytime you need to uniquely identify an entity to retrieve, update, or delete, 
 
 ## Retrieve documents in storage partitions
 
-When retrieving entity data stored in partitions be sure to specify the partition key when retrieving that data.
+When retrieving elastic table data stored in partitions be sure to specify the partition key when retrieving that data.
 
-More information: [Access table data faster using storage partitions](azure-storage-partitioning.md)
+More information: [Retrieve a record in an elastic table](../use-elastic-tables.md#retrieve-a-record-in-an-elastic-table)
 
 ## Retrieve a single property value
 
