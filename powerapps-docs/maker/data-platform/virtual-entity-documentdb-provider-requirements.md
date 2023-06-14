@@ -3,26 +3,18 @@ title: "Preview Feature: Use the Azure Cosmos DB for NoSQL Data Provider with Mi
 description: "Learn how to configure the Azure Cosmos DB for NoSQL Data Provider to use with virtual tables."
 keywords: "SQL API"
 ms.date: 02/15/2019
-
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
   - "powerapps"
-ms.assetid: d0031ffc-8754-4a12-b8c1-e08edc49ff73
 author: Mattp123
 ms.subservice: dataverse-maker
 ms.author: matp
 ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-caps.latest.revision: 
-topic-status: Drafting
 search.audienceType: 
   - maker
 ---
-
 # Preview feature: Azure Cosmos DB for NoSQL Data Provider requirements
 
 This topic describes the requirements for the Azure Cosmos DB for NoSQL data provider as well as how to configure and recommended best practices when you use the Azure Cosmos DB for NoSQL data provider with virtual tables.
