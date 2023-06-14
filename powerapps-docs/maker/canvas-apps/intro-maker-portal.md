@@ -134,6 +134,8 @@ For best results, start by ensuring that the home page is set to the right envir
 > [!div class="mx-imgBorder"]
 > ![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
 
+Environments can be managed using [Power Platform Admin Center](/power-platform/admin/environments-overview#manage-environments-in-the-power-platform-admin-center).
+
 ### Notifications
 
 Select the bell icon to see notifications. Notifications are stored in the notification center until you dismiss them or when they expire.
