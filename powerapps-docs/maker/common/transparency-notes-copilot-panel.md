@@ -10,81 +10,52 @@ ms.author: norliu
 ms.reviewer: mduelae
 ---
 
-# Transparency note for continue to edit your app with Copilot 
+# Transparency notes for continue to edit your app with Copilot 
 
 This transparency note describes the AI impact of Power Apps' continue to edit your app with Copilot feature. 
 
 ##  What is continue to edit your app with Copilot? 
 
-[Describe the system in plain English. What type of system is this? What does it do? At a high level, what does the system take as input? What kind of outputs does the system produce?] 
-
-Continue to edit your app with Copilot is a feature that aims at taking the heavy lift for makers in the app making process so makers can tell Copilot their requirements and Copilot make it happen for makers. It will include actions like adding/editing/styling a control, working with containers, bulk editing etc. So makers can focus more on designing the app and also stay in control by reviewing all actions Copilot does for them. 
+With continue to edit your app with Copilot feature, makers can delegate the more arduous aspects of app development to the AI assistant. By simply communicating their requirements to Copilot, makers can expect actions such as adding, editing, or styling controls, working with containers, and bulk editing to be taken care of. This allows makers to concentrate on designing the app while maintaining oversight of all actions taken by Copilot.
  
 ## What are the system’s capabilities? 
 
-The system has following capabilities:
+The system is capable of the following:
+- Adding  a screen using pre-existing templates.
+- Adding and modifying properties of a single control, limited to classic controls only.
+- Updating multiple controls at once.
+- Working with containers.
+- Providing default suggestions for users to assist in typing.
+- Using templatized formulas such as Navigate() to create buttons that perform specific actions, like navigating to the Home Screen, and SubmitForm() for creating a Submit button for Form2.
 
-- Adding a screen from existing screen templates 
-
-- Adding and updating properties of a single control – classic controls only 
-
-- Bulk updating controls 
-
-- Working with containers 
-
-- Default suggestions for people to know what to type in. 
-
-- Templatized formulas:
-
-    - Navigate(), (~"Create button Home that navigates to the Home Screen") 
-
-    - SubmitForm() (~"Create Submit button for Form2") 
-
-Supported components/controls: 
-
+The following contorls are supported: 
 - Screen 
-
 - Container 
-
 - Gallery 
-
 - Form 
-
 - Button 
-
 - Label 
-
 - TextInput 
 
 ## What is the system’s intended use? 
 
-Generate UI actions for makers. The scope for preview release includes: 
-
-- Add a screen from existing screen templates 
-
-- Add and update properties of a single classic control 
-
-- Bulk update controls on a single screen 
-
-- Work with containers 
-
-- Default suggestions for people to know what to type in. 
-
-- Templatized formulas for build: 
-
-    - Navigate(), (~"Create button Home that navigates to the Home Screen") 
-
-    - Gallery.Selected (~"Link Form2 with Gallery 3") 
-
-    - SubmitForm() (~"Create Submit button for Form2") 
-
-- Merging with Power Apps Ideas for MPPC 
+As an AI assistant that helps people find information, Copilot provides the following list of UI actions for makers that are included in the preview release scope:
+- Adding a screen using existing screen templates
+- Adding and updating properties of a single classic control
+- Bulk updating controls on a single screen
+- Working with containers
+- Providing default suggestions to guide users on what to type in
+- Offering templatized formulas for building, including:
+    - Navigate() (e.g. "Create a button for Home that navigates to the Home Screen")
+    - Gallery.Selected (e.g. "Link Form2 with Gallery 3")
+    - SubmitForm() (e.g. "Create a Submit button for Form2")
+- Merging with Power Apps Ideas for MPPC
 
 ## How was continue to edit your app with Copilot evaluated? What metrics are used to measure performance? 
 
-We measure the feature qualitatively and quantitatively. We will conduct user studies with makers to ask for their feedback, how they think about the quality of the feature, feedback on experiences, and suggestions for improvement. 
-We will also track from telemetry including how many makers tried the feature, how many were able to get a response and what’s the thumbsup and down ratio. 
-Continue to build apps with Copilot underwent substantial testing before the feature was released in preview. If you encounter issues with the content being generated, please submit feedback.  Your feedback will be used to improve Microsoft products and services. IT admins for your organization will be able to view and manage your feedback data. Read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
+We evaluate the feature both qualitatively and quantitatively. To assess the quality of the feature, we will be conducting user studies with makers to gather their feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. Additionally, we will be monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
+
+Prior to releasing the Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, please provide feedback. Your feedback will be used to enhance Microsoft's products and services. Your organization's IT admins will have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
 
 ## What are the limitations of continue to edit your app with Copilot? How can users minimize the impact of the [Feature] limitations when using the system? 
 
@@ -100,11 +71,11 @@ Continue to build apps with Copilot underwent substantial testing before the fea
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 
-Follow these guildlines to make the most of the feature:  
+Here are some tips to help you get the most out of this feature:
 
-- Use everyday words to describe how you want to edit your app, such as “add a new screen”, “add a new email screen”, or “add 2 buttons”.
-- When results don't meet your expectations, try to be specific, like “add a new button in the selected container”, “make the selected button red”, or “when clicking on Button1 show Screen 2”. 
-- You can also try the default suggestions that are offered in the Copilot panel and make modifications. And if it still doesn’t meet your needs, send us your feedback. 
+- Use simple language to explain the changes you want to make to your app, such as "add a new screen" or "insert 2 buttons".
+- If the results you get aren't what you were expecting, try being more precise. For example, you could say "add a new button to the selected container", "change the color of the selected button to red", or "display Screen 2 when Button1 is clicked".
+- You can also try using the default suggestions provided in the Copilot panel and then customize them to suit your needs. And if you still can't get the desired results, send us your feedback.
 
 
 ## See also 
