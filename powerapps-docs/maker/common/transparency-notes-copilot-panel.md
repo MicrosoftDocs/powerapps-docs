@@ -1,6 +1,6 @@
 ---
 title: Transparency note for continue to edit your app with Copilot 
-description: The transparency note discusses continue to edit your app with Copilot and the key considerations for making use of this technology responsibly. .
+description: The transparency note discusses continuing to edit your app with Copilot and the key considerations for making use of this technology responsibly.
 ms.date: 6/14/2023
 ms.custom: 
   - transparency-note
@@ -16,17 +16,17 @@ This transparency note describes the AI impact of Power Apps' continue to edit y
 
 ##  What is continue to edit your app with Copilot? 
 
-With continue to edit your app with Copilot feature, makers can delegate the more arduous aspects of app development to the AI assistant. By simply communicating their requirements to Copilot, makers can expect actions such as adding, editing, or styling controls, working with containers, and bulk editing to be taken care of. This allows makers to concentrate on designing the app while maintaining oversight of all actions taken by Copilot.
+With continue to edit your app with Copilot feature, makers can delegate the more arduous aspects of app development to the AI assistant. By communicating their requirements to Copilot, makers can expect actions such as adding, editing, or styling controls, working with containers, and bulk editing to be taken care of. This allows makers to concentrate on designing the app while maintaining oversight of all actions taken by Copilot.
  
 ## What are the system’s capabilities? 
 
-The system is capable of the following:
-- Adding  a screen using pre-existing templates.
-- Adding and modifying properties of a single control, limited to classic controls only.
-- Updating multiple controls at once.
-- Working with containers.
-- Providing default suggestions for users to assist in typing.
-- Using templatized formulas such as Navigate() to create buttons that perform specific actions, like navigating to the Home Screen, and SubmitForm() for creating a Submit button for Form2.
+The following system capabilities supported:
+- Add a screen using pre-existing templates.
+- Add and modify properties of a single control, limited to classic controls only.
+- Update multiple controls at once.
+- Work with containers.
+- Provide default suggestions for users to help in typing.
+- Use templatized formulas such as Navigate() to create buttons that perform specific actions, like navigating to the Home screen, and SubmitForm() for creating a Submit button for Form2.
 
 The following contorls are supported: 
 - Screen 
@@ -40,34 +40,33 @@ The following contorls are supported:
 ## What is the system’s intended use? 
 
 As an AI assistant that helps people find information, Copilot provides the following list of UI actions for makers that are included in the preview release scope:
-- Adding a screen using existing screen templates
-- Adding and updating properties of a single classic control
-- Bulk updating controls on a single screen
-- Working with containers
-- Providing default suggestions to guide users on what to type in
-- Offering templatized formulas for building, including:
-    - Navigate() (e.g. "Create a button for Home that navigates to the Home Screen")
-    - Gallery.Selected (e.g. "Link Form2 with Gallery 3")
-    - SubmitForm() (e.g. "Create a Submit button for Form2")
-- Merging with Power Apps Ideas for MPPC
+- Add a screen using existing screen templates
+- Add and update properties of a single classic control
+- Bulk updates controls on a single screen
+- Work with containers
+- Provide default suggestions to guide users on what to type in
+- Offer the follwoing templatized formulas for to build your app:
+    - Navigate() - for example "Create a button for Home that navigates to the Home Screen"
+    - Gallery.Selected - for example "Link Form2 with Gallery 3"
+    - SubmitForm() - for example "Create a Submit button for Form2"
+- Merge with Power Apps Ideas for Microsoft Power Platform Conference
 
 ## How was continue to edit your app with Copilot evaluated? What metrics are used to measure performance? 
 
 We evaluate the feature both qualitatively and quantitatively. To assess the quality of the feature, we will be conducting user studies with makers to gather their feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. Additionally, we will be monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
-
-Prior to releasing the Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, please provide feedback. Your feedback will be used to enhance Microsoft's products and services. Your organization's IT admins will have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
+Before releasing the Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, provide feedback. Your feedback is used to enhance Microsoft's products and services. Your organization's IT admins have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
 
 ## What are the limitations of continue to edit your app with Copilot? How can users minimize the impact of the [Feature] limitations when using the system? 
 
 - To use this capability, you must have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment. 
 - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
-- For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520). 
+- For more information, see [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520). 
 - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview). 
 - This capability is in process of rolling out, and may not be available in your region yet. 
 - This capability may be subject to usage limits or capacity throttling. 
 - Your environment must be in the United States region.
-- The feature works best on English, it doesn’t support other languages well yet. 
-- The feature only supports limited controls and actions (as listed in the intended use section above) and MSFT is actively working on expanding scope and supporting more actions incrementally. 
+- This feature doesn’t support non-English language input. 
+- This feature only supports limited controls and actions as listed in the intended use section above. Microsoft is actively working on expanding scope and supporting more actions incrementally. 
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 
