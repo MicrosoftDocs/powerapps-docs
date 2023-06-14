@@ -1290,6 +1290,8 @@
           href: ./canvas-apps/component-multimedia.md
         - name: Behavior formulas (experimental)
           href: ./canvas-apps/component-behavior.md
+        - name: Canvas component properties (experimental)
+          href: ./canvas-apps/component-properties.md
   - name: Performance and optimization
     items:
     - name: Understand canvas app execution phases and data flow
