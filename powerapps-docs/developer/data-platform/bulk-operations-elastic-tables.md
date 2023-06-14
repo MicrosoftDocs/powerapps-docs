@@ -185,7 +185,7 @@ public static OrganizationResponse DeleteMultiple(IOrganizationService service)
 
 ## Exception handling for elastic tables
 
-Unlike standard tables, an error within a bulk operation with an elastic table doesn't roll back the entire request. It's possible for the operation to succeed and you can detect any failures.
+Unlike standard tables, an error within a bulk operation with an elastic table doesn't roll back the entire request. It's possible for the operation to partially succeed and you can detect which records have failed from the ErrorDetails.
 
 
 When you use the SDK, a [FaultException](xref:System.ServiceModel.FaultException%601) of type [OrganizationServiceFault](xref:Microsoft.Xrm.Sdk.OrganizationServiceFault) is thrown if a failure occurs. You can get the status of each record using the following code.
@@ -207,7 +207,7 @@ public class BulkApiErrorDetail
 When using Web API, you need to pass the `Prefer` header with value `odata.include-annotations=*` or `odata.include-annotations=Microsoft.PowerApps.CDS.ErrorDetails.*`, which gives the status of each record. More information: [Include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors)
 
 > [!NOTE]
-> You can see the errors in the above format only when the errors have occurred while writing data. More information: [Handling Exceptions](write-plugin-multiple-operation.md#handling-exceptions).
+> You can see the errors in the above format only when the errors have occurred while writing data and cannot capture errors occurred in Pre and Post plugins. More information: [Handling Exceptions](write-plugin-multiple-operation.md#handling-exceptions).
 
 ### See also
 
