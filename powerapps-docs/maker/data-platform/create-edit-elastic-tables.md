@@ -1,8 +1,8 @@
 ---
-title: Create and edit elastic tables
+title: Create and edit elastic tables (preview)
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 05/27/2023
+ms.date: 06/06/2023
 ms.reviewer: matp
 author: Mattp123
 ms.topic: how-to
@@ -20,6 +20,9 @@ As with standard tables, elastic tables are included with your Dataverse databas
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+Watch this video that to learn about elastic tables.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAi ]
 
 ## When to consider Dataverse elastic tables?
 
@@ -143,7 +146,20 @@ You create an elastic table just like any other new table in Dataverse.
 - Currently Power Apps (make.powerapps.com) allows you to set a many-to-one (N:1) relationship with an elastic table where the N table is a standard table. Standard table will have a lookup column pointing to an elastic table row. While retrieving rows for a standard table in such a relationship, the lookup column that points to an elastic table row won't have the formatted value returned when the elastic table row has the `partitionid` set. More information: [Developer Guide: Partitioning and horizontal scaling](../../developer/data-platform/elastic-tables.md#partitioning-and-horizontal-scaling)
 - Getting related rows when making a query on an elastic table currently doesn't work. However, getting related rows works when retrieving a single elastic table row.
 
+## For developers
+
+Elastic tables have different behaviors and capabilities than standard tables when developers use them with Dataverse APIs. The following articles for developers describe these differences:
+
+- [Elastic tables (preview)](../../developer/data-platform/elastic-tables.md)
+- [Create elastic tables using code (preview)](../../developer/data-platform/create-elastic-tables.md)
+- [Use elastic tables using code (preview)](../../developer/data-platform/use-elastic-tables.md)
+- [Query JSON columns in elastic tables (preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
+- [Bulk operations with elastic tables (Preview)](../../developer/data-platform/bulk-operations-elastic-tables.md)
+- [Elastic table sample code (preview)](../../developer/data-platform/elastic-table-samples.md)
+
+
+
 ## See also
 
-[Create and edit tables using Power Apps](create-edit-entities-portal.md)<br />
-[Developer guide: Elastic tables](../../developer/data-platform/elastic-tables.md)
+[Create and edit tables using Power Apps](create-edit-entities-portal.md)
+

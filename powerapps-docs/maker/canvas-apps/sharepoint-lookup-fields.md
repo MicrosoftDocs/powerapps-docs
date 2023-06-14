@@ -105,7 +105,7 @@ Create a [canvas app](app-from-sharepoint.md) from the [Assets list](#define-the
 
 ## Add data to the Assets list
 
-Now you can run the app and see how the view details screen looks for the lookup columns.
+Now you can [preview the app](preview-app.md) and see how the view details screen looks for the lookup columns.
 
 1. Press F5 or select Preview ( ![Preview icon.](./media/sharepoint-lookup-fields/preview.png) ).
 
