@@ -152,7 +152,7 @@ additionalContent:
               url: mobile/windows-app-use.md
             - text: Troubleshoot issues
               url: mobile/powerapps-mobile-troubleshoot.md
-        - title: Use Model-driven apps
+        - title: Use model-driven apps
           links:
             - text: Basic navigation
               url: user/navigation.md
