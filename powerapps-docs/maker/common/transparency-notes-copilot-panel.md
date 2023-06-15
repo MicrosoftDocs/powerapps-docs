@@ -10,7 +10,7 @@ ms.author: norliu
 ms.reviewer: mduelae
 ---
 
-# Transparency notes for continue to edit your app with Copilot 
+# Transparency note for continue to edit your app with Copilot 
 
 This transparency note describes the AI impact of Power Apps' continue to edit your app with Copilot feature. 
 
