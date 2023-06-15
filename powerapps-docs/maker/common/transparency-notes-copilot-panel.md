@@ -78,7 +78,7 @@ Here are some tips to help you get the most out of this feature:
 
 
 ## See also 
-- [Use natural language to edit an app (preview)](../canvas-apps/ai-edit-app.md)
+- [Continue editing your app with Copilot (preview)](../canvas-apps/ai-edit-app.md)
 
  
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
