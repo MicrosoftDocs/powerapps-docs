@@ -21,7 +21,7 @@ highlightedContent:
   items:
     # Card
     - title: What is Power Apps?
-      itemType: overview
+      itemType: get-started
       url: powerapps-overview.md
 
     # Card
@@ -30,100 +30,94 @@ highlightedContent:
       url: whats-new.md
 
     # Card
-    - title: "Power Apps videos"
-      itemType: video
-      url: https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg
+    - title: "Troubleshoot"
+      itemType: concept
+      url: /troubleshoot/power-platform/power-apps/welcome-power-apps
 
     # Card
     - title: Power Apps training
       itemType: learn
       url: /training/powerplatform/power-apps
 
-additionalContent: 
+additionalContent:
   sections:
-  - title: Create and Design
-# Guidance should be the first card under implement. On this card, include links for Security and Compliance, Implementation, Adoption frameworks, and Best practices. 
-# Each card should have at least three and no more than five links. Do not include a "See also" link.
-    items:
-    - title: Try/Buy/Deploy
-      links:
-        - text: Try Power Apps
-          url: maker/signup-for-powerapps.md
-        - text: Buy Power Apps
-          url: /power-platform/admin/signup-for-powerapps-admin
-        - text: Deploy Power Apps
-          url: /power-platform/admin/admin-powerapps-enterprise-deployment
-    - title: Create apps
-      links:
-        - text: Canvas apps
-          url: maker/canvas-apps/index.yml
-        - text: Model-driven apps
-          url: maker/model-driven-apps/index.yml
-        - text: Cards
-          url: cards/overview.md
-    - title: Work with data platform
-      links:
-        - text: What is Microsoft Dataverse?
-          url: maker/data-platform/data-platform-intro.md
-        - text: Tables and metadata
-          url: maker/data-platform/create-edit-metadata.md
-        - text: Create and use dataflows
-          url: maker/data-platform/create-and-use-dataflows.md
-  - title: Develop and Integrate
-    items:
-    - title: Develop Power Apps
-      links:
-        - text: Dataverse
-          url: developer/data-platform/index.yml
-        - text: Model-driven apps
-          url: developer/model-driven-apps/index.yml
-        - text: Canvas apps
-          url: maker/canvas-apps/dev-enterprise-intro.md
-    - title: Use solutions for ALM
-      links:
-        - text: What are solutions?
-          url: maker/data-platform/solutions-overview.md
-        - text: Implement healthy ALM using solutions
-          url: /power-platform/alm/overview-alm
-        - text: Use Microsoft Power Platform Build Tools
-          url: /power-platform/alm/devops-build-tools
-    - title: Integrate with Microsoft Teams
-      links:
-        - text: Embed a canvas app in Teams
-          url: teams/embed-teams-app.md
-        - text: Create apps in Teams
-          url: teams/create-apps-overview.md
-        - text: What is Microsoft Dataverse for Teams?
-          url: teams/overview-data-platform.md
-  - title: Use and Administer
-    items:
-    - title: Use Power Apps
-      links:
-        - text: Get started with Power Apps mobile
-          url: mobile/run-powerapps-on-mobile.md
-        - text: Use model-driven apps on Power Apps mobile
-          url: mobile/use-custom-model-driven-app-on-mobile.md
-        - text: Configure mobile offline
-          url: mobile/setup-mobile-offline.md
-    - title: Administer Power Apps
-      links:
-        - text: Use Power Platform admin center
-          url: /power-platform/admin/admin-documentation
-        - text: Power Apps licensing
-          url: /power-platform/admin/pricing-billing-skus
-        - text: Microsoft Power Platform guidance documentation
-          url: /power-platform/guidance
-    - title: Best practices guidance
-      links:
-        - text: Power Apps patterns
-          url: guidance/patterns/overview.md
-        - text: Planning a Power Apps project
-          url: guidance/planning/introduction.md
-        - text: Collaborating and co-developing apps
-          url: guidance/co-develop/overview.md
+    - title: Create and design
+      # Guidance should be the first card under implement. On this card, include links for Security and Compliance, Implementation, Adoption frameworks, and Best practices.
+      # Each card should have at least three and no more than five links. Do not include a "See also" link.
+      items:
+        - title: Try/Buy
+          links:
+            - text: Try Power Apps
+              url: maker/signup-for-powerapps.md
+            - text: Buy Power Apps
+              url: /power-platform/admin/signup-for-powerapps-admin
 
-  - title: Related content # < 60 chars (optional)
-    items:
+        - title: Create apps
+          links:
+            - text: Canvas apps
+              url: maker/canvas-apps/index.yml
+            - text: Model-driven apps
+              url: maker/model-driven-apps/index.yml
+            - text: Cards
+              url: cards/overview.md
+            - text: Apps in Teams
+              url: teams/create-apps-overview.md
+        - title: Create and manage data
+          links:
+            - text: What is Microsoft Dataverse?
+              url: maker/data-platform/data-platform-intro.md
+            - text: Tables and metadata
+              url: maker/data-platform/create-edit-metadata.md
+            - text: Create and use dataflows
+              url: maker/data-platform/create-and-use-dataflows.md
+        - title: Use solutions for ALM
+          links:
+            - text: What are solutions?
+              url: maker/data-platform/solutions-overview.md
+            - text: Implement healthy ALM using solutions
+              url: /power-platform/alm/overview-alm
+            - text: Use Microsoft Power Platform Build Tools
+              url: /power-platform/alm/devops-build-tools
+        - title: Best practices guidance
+          links:
+            - text: Power Apps patterns
+              url: guidance/patterns/overview.md
+            - text: Planning a Power Apps project
+              url: guidance/planning/introduction.md
+            - text: Collaborating and co-developing apps
+              url: guidance/co-develop/overview.md
+    - title: Administer and extend
+      items:
+        - title: Administer Power Apps
+          links:
+            - text: Use Power Platform admin center
+              url: /power-platform/admin/admin-documentation
+            - text: Power Apps licensing
+              url: /power-platform/admin/pricing-billing-skus
+            - text: Security and governance
+              url: /power-platform/admin/security
+        - title: Extend Power Apps
+          links:
+            - text: Dataverse dev guide
+              url: developer/data-platform/index.yml
+            - text: Model-driven apps dev guide
+              url: developer/model-driven-apps/index.yml
+            - text: Canvas apps dev guide
+              url: maker/canvas-apps/dev-enterprise-intro.md
+
+    - title: Use and Administer
+      items:
+        - title: Use Power Apps
+          links:
+            - text: Get started with Power Apps mobile
+              url: mobile/run-powerapps-on-mobile.md
+            - text: Use model-driven apps on Power Apps mobile
+              url: mobile/use-custom-model-driven-app-on-mobile.md
+            - text: Configure mobile offline
+              url: mobile/setup-mobile-offline.md
+
+    - title: Related content # < 60 chars (optional)
+      items:
         # Card
         - title: Power Platform
           summary: One-stop learning resource for Power Platform applications and features including admin, developer, and guidance documentation.
