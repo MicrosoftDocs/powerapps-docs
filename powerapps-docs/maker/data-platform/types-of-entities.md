@@ -2,7 +2,7 @@
 title: "Types of tables | MicrosoftDocs"
 description: "Learn about the different types of Microsoft Dataverse tables."
 ms.custom: ""
-ms.date: 04/24/2023
+ms.date: 06/14/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -56,31 +56,17 @@ To create a custom activity table, open the **Advanced options** section in the 
 
 Enable activities to add activities to a table and use the Regarding lookup for the table.
 
-1. To enable activities, Sign in to [Power Apps](https://make.powerapps.com).
-
+1. To enable activities, sign in to [Power Apps](https://make.powerapps.com).
   
-2. On the left nav, select **Data** to expand it and then select **Tables**.  
+2. On the left nav, select **Tables**, and then open the table you want.
 
-   > [!div class="mx-imgBorder"]
-   >![Go to Tables in maker portal.](media/maker-data-tables.png "Go to Tables in maker portal")
-   
+3. Select **Properties**. 
+
+4. Expand **Advanced options**, and then select **Creating a new activity**. 
   
-3. Select a table.
-
-4. On the command bar, select **Settings**. 
-
-   > [!div class="mx-imgBorder"]
-   >![Select settings.](media/maker-row-settings.png "Select setting")
-
-5. Expand **Collaboration**, and select **Enable for activities** and then choose **Done**. 
-
-   > [!div class="mx-imgBorder"]
-   >![Communication and collaboration activity enabled.](media/enable-activity-for-table.png "Communication and collaboration activity enabled")
-   
    > [!IMPORTANT]
-   > Once enabled this setting can't be disabled. If prompted, select **Okay** to confirm.
-   
-6.  Select **Save Table** and then publish the table.
+   > Once enabled this setting can't be disabled.
+5. Select **Save**.
 
 ## Table ownership
 
