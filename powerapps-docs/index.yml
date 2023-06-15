@@ -85,8 +85,8 @@ additionalContent:
               url: maker/data-platform/solutions-overview.md
             - text: Implement healthy ALM using solutions
               url: /power-platform/alm/overview-alm
-            - text: Use Microsoft Power Platform Build Tools
-              url: /power-platform/alm/devops-build-tools
+            - text: Deploy solutions using pipelines
+              url: /power-platform/alm/pipelines
         - title: Integrate with other products
           links:
             - text: Add Chatbot control to a canvas app
