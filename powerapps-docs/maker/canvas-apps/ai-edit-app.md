@@ -15,7 +15,7 @@ contributors:
   - mduelae
 ---
 
-# Use natural language to edit an app (preview)
+# Continue editing your app with Copilot (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
