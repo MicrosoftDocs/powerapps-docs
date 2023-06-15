@@ -43,22 +43,22 @@ To embed a canvas app on a model-driven app main form, such as the main form for
 1. On the left navigation pane select **Components**, expand **Display**, and then select the **Canvas app** component.
 
 1. The following properties can be configured for the control.
-   - The optional **Entity name** area lets you specify the following properties:
+   - The **Entity name** area lets you specify the following properties:
 
        - **Bind to table column**: When the **Bind to table column** is selected, the **Static value** property changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when **Bind to table column** is selected for the **Entity name**, at app runtime the value of the table name takes the value of the **Table column** specified.
 
        - **Static value**: Use this to add a name for you to refer to the canvas app. Notice that this value has no effect on the embedded canvas app. It's meant only to serve as a reference point.
-   - The **App name** area specifies the unique name of the canvas app. More information: [How to find the unique name and app ID for a canvas app](#how-to-find-the-unique-name-and-app-id-for-a-canvas-app)
+   - The **App name** area specifies the unique name of the canvas app.
        - **Bind to table column**: When you select the **Bind to table column**, the **Static value** property changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when you select **Bind to table column** for the **App Name**, at app runtime the value of the app name takes the value of the Table column, such as the value from a custom text column.
 
-       - **Static value**: Specifies the name of the canvas app to embed. The model-driven form looks for the canvas app with the specified name in the current environment. If a canvas app with that name can't be found in the environment, the canvas app control will use the App ID to load the canvas app. Enter the app name for an existing canvas app.
+       - **Static value**: Specifies the unique name of the canvas app to embed. Enter the canvas app's unique name for an existing canvas app. More information: [How to find the unique name and app ID for a canvas app](#how-to-find-the-unique-name-and-app-id-for-a-canvas-app)
 
-   - The required **App ID** area specifies the app ID for the canvas app. More information: [How to find the unique name and app ID for a canvas app](#how-to-find-the-unique-name-and-app-id-for-a-canvas-app)
+   - The required **App ID** area specifies the app ID for the canvas app.
        - **Bind to table column**: When you select **Bind to table column**, the list changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when you select **Bind to table column** for the **App Name**, at app runtime the value of the app name takes the value of the column, such as the value from a custom text column.
         > [!IMPORTANT]
         > For most situations, we don’t recommend using the **Bind to table column** option for the App ID as this would require the correct app ID to be shown in a field within the record.
 
-       - **Static value**: Enter the app ID for an existing canvas app. The canvas app ID can be found on Power Apps, go to **Apps**, select the canvas app, and then select **Details** on the command bar.
+       - **Static value**: Enter the app ID for an existing canvas app. More information: [How to find the unique name and app ID for a canvas app](#how-to-find-the-unique-name-and-app-id-for-a-canvas-app)
   
     - **Show component on**. Specifies the client type to display the embedded canvas app. Choose from **Web**, **Mobile**, and **Tablet**.
      :::image type="content" source="media/add-canvas-app-control.png" alt-text="Add the canvas app control to a table column.":::
