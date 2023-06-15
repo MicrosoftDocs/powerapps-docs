@@ -30,14 +30,14 @@ highlightedContent:
       url: whats-new.md
 
     # Card
-    - title: "Troubleshoot"
-      itemType: concept
-      url: /troubleshoot/power-platform/power-apps/welcome-power-apps
-
-    # Card
     - title: Power Apps training
       itemType: learn
       url: /training/powerplatform/power-apps
+
+    # Card
+    - title: "Troubleshoot"
+      itemType: concept
+      url: /troubleshoot/power-platform/power-apps/welcome-power-apps
 
 additionalContent:
   sections:
