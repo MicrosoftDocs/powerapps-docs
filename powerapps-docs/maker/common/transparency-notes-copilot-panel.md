@@ -16,7 +16,7 @@ This transparency note describes the AI impact of Power Apps' continue to edit y
 
 ##  What is continue to edit your app with Copilot? 
 
-With continue to edit your app with Copilot feature, makers can delegate the more tedious tasks of app development to an AI assistant bying telling Copilot their requirements. Makers can expect actions such as add, edit, or style controls, work with containers, and bulk edits. This allows makers to concentrate on designing the app while maintaining oversight of all actions taken by Copilot.
+With continue to edit your app with Copilot feature, makers can delegate the more tedious tasks of app development to an AI assistant by telling Copilot their requirements. Makers can expect actions such as add, edit, or style controls, work with containers, and bulk edits. This allows makers to concentrate on designing the app while maintaining oversight of all actions taken by Copilot.
  
 ## What are the system’s capabilities? 
 
@@ -28,7 +28,7 @@ The following system capabilities supported:
 - Provide default suggestions for users to help in typing.
 - Use templatized formulas such as Navigate() to create buttons that perform specific actions, like navigating to the Home screen, and SubmitForm() for creating a Submit button for Form2.
 
-The following contorls are supported: 
+The following controls are supported: 
 - Screen 
 - Container 
 - Gallery 
@@ -45,15 +45,15 @@ As an AI assistant that helps people find information, Copilot provides the foll
 - Bulk updates controls on a single screen
 - Work with containers
 - Provide default suggestions to guide users on what to type in
-- Offer the follwoing templatized formulas for to build your app:
-    - Navigate() - for example "Create a button for Home that navigates to the Home Screen"
-    - Gallery.Selected - for example "Link Form2 with Gallery 3"
-    - SubmitForm() - for example "Create a Submit button for Form2"
+- Offer the following templatized formulas to build your app:
+    - Navigate(): For example, "Create a button for Home that navigates to the Home Screen"
+    - Gallery.Selected: For example, "Link Form2 with Gallery 3"
+    - SubmitForm(): For example, "Create a Submit button for Form2"
 - Merge with Power Apps Ideas for Microsoft Power Platform Conference
 
 ## How was continue to edit your app with Copilot evaluated? What metrics are used to measure performance? 
 
-We evaluate the feature both qualitatively and quantitatively. To assess the quality of the feature, we will be conducting user studies with makers to gather their feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. Additionally, we will be monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
+We evaluate the feature both qualitatively and quantitatively. To assess the quality of the feature, we'll be conducting user studies with makers to gather their feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. Additionally, we'll be monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
 Before releasing the Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, provide feedback. Your feedback is used to enhance Microsoft's products and services. Your organization's IT admins have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
 
 ## What are the limitations of continue to edit your app with Copilot? How can users minimize the impact of the [Feature] limitations when using the system? 
@@ -66,7 +66,7 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 - This capability may be subject to usage limits or capacity throttling. 
 - Your environment must be in the United States region.
 - This feature doesn’t support non-English language input. 
-- This feature only supports limited controls and actions as listed in the [intended use](transparency-notes-copilot-panel.md#what-is-the-systems-intended-use) section. Microsoft is actively working on expanding scope and supporting more actions incrementally. 
+- This feature only supports limited controls and actions as listed in the [intended use](transparency-notes-copilot-panel.md#what-is-the-systems-intended-use) section. Microsoft is actively working on expanding the scope of this feature and support more actions incrementally. 
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 
