@@ -90,7 +90,7 @@ additionalContent:
         - title: Integrate with other products
           links:
             - text: Add Chatbot control to a canvas app
-              url: maker/canvas-apps/add-ai-chatbot
+              url: maker/canvas-apps/add-ai-chatbot.md
             - text: Visualize data with Power BI
               url: user/visualize-in-power-bi.md
             - text: Get real-time insights with Azure Synapse Link
@@ -120,7 +120,7 @@ additionalContent:
             - text: Work with data using code
               url: developer/data-platform/work-with-data.md
             - text: Apply business logic using code
-              url: data-platform/apply-business-logic-with-code.md
+              url: developer/data-platform/apply-business-logic-with-code.md
             - text: Create client applications
               url: developer/data-platform/connect-dataverse.md
         - title: Extend model-driven apps
