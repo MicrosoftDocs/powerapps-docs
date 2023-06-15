@@ -17,4 +17,4 @@ ms.reviewer: mduelae
 [!INCLUDE[transparency-note-features](../../includes/transparency-note-features.md)]
 
 - [Transparency notes for continue to edit your app with Copilot](transparency-notes-copilot-panel.md)
-- [Continue editing your app with Copilot (preview)(../canvas-apps/ai-edit-app.md)
+- [Continue editing your app with Copilot (preview)](../canvas-apps/ai-edit-app.md)
