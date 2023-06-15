@@ -53,7 +53,7 @@ additionalContent:
               url: /power-platform/admin/signup-for-powerapps-admin
         - title: Create apps
           links:
-            - text: Types of apps
+            - text: Choose app type
               url: maker/index.md
             - text: Canvas apps
               url: maker/canvas-apps/index.yml
