@@ -97,12 +97,24 @@ additionalContent:
               url: /power-platform/admin/pricing-billing-skus
             - text: Security and governance
               url: /power-platform/admin/security
-        - title: Extend Power Apps
+        - title: Extend data platform
           links:
             - text: Dataverse dev guide
               url: developer/data-platform/index.yml
+            - text: Work with data using code
+              url: developer/data-platform/work-with-data.md
+            - text: Apply business logic using code
+              url: data-platform/apply-business-logic-with-code.md
+            - text: Create client applications
+              url: developer/data-platform/connect-dataverse.md
+        - title: Extend model-driven apps
+          links:
             - text: Model-driven apps dev guide
               url: developer/model-driven-apps/index.yml
+            - text: Apply business logic using client scripting
+              url: developer/model-driven-apps/client-scripting.md
+        - title: Extend canvas apps
+          links:
             - text: Canvas apps dev guide
               url: maker/canvas-apps/dev-enterprise-intro.md
 
