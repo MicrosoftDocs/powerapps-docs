@@ -12,7 +12,7 @@ metadata:
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/22/2023 #Required; mm/dd/yyyy format.
+  ms.date: 06/15/2023 #Required; mm/dd/yyyy format.
   hide_bc: false
 
 highlightedContent:
@@ -93,8 +93,8 @@ additionalContent:
               url: maker/canvas-apps/add-ai-chatbot
             - text: Visualize data with Power BI
               url: user/visualize-in-power-bi.md
-            - text: Collaborating and co-developing apps
-              url: guidance/co-develop/overview.md
+            - text: Get real-time insights with Azure Synapse Link
+              url: maker/data-platform/export-to-data-lake.md
         - title: Best practices guidance
           links:
             - text: Power Apps patterns
@@ -144,16 +144,32 @@ additionalContent:
 
     - title: Use
       items:
-        - title: Use Power Apps
+        - title: Use Power Apps mobile
           links:
-            - text: Power Apps mobile
+            - text: Install and use Power Apps mobile
               url: mobile/run-powerapps-on-mobile.md
-            - text: Use model-driven apps on browser
-              url: user/use-model-driven-apps.md
-            - text: Use model-driven apps in Power Apps mobile
-              url: mobile/use-custom-model-driven-app-on-mobile.md
-            - text: Use apps in Teams
+            - text: Use Power Apps for Windows
+              url: mobile/windows-app-use.md
+            - text: Troubleshoot issues
+              url: mobile/powerapps-mobile-troubleshoot.md
+        - title: Use Model-driven apps
+          links:
+            - text: Basic navigation
+              url: user/navigation.md
+            - text: Search records
+              url: user/search.md
+            - text: View reports
+              url: user/work-with-reports.md
+        - title: Use apps in Teams
+          links:
+            - text: Embed a canvas app as tab app
               url: teams/embed-teams-tab.md
+            - text: Embed a canvas app as personal app
+              url: teams/embed-teams-app.md
+            - text: Embed a model-driven app as tab app
+              url: teams/embed-model-driven-teams-tab.md
+            - text: Embed a model-driven app as personal app
+              url: teams/embed-model-driven-teams-personal.md
 
     - title: Related content # < 60 chars (optional)
       items:
