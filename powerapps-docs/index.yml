@@ -113,10 +113,18 @@ additionalContent:
               url: developer/model-driven-apps/index.yml
             - text: Apply business logic using client scripting
               url: developer/model-driven-apps/client-scripting.md
+            - text: Code components for model-driven apps
+              url: developer/component-framework/code-components-model-driven-apps.md
         - title: Extend canvas apps
           links:
             - text: Canvas apps dev guide
               url: maker/canvas-apps/dev-enterprise-intro.md
+            - text: Custom connectors
+              url: maker/canvas-apps/register-custom-api.md
+            - text: Develop offline-capable canvas apps
+              url: maker/canvas-apps/offline-apps.md
+            - text: Canvas component
+              url: maker/canvas-apps/create-component.md
 
     - title: Use
       items:
