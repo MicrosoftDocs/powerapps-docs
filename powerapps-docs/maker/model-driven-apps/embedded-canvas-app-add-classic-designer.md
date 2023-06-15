@@ -62,7 +62,7 @@ To embed a canvas app on a model-driven app main form, such as the main form for
   
     - **Show component on**. Specifies the client type to display the embedded canvas app. Choose from **Web**, **Mobile**, and **Tablet**.
      :::image type="content" source="media/add-canvas-app-control.png" alt-text="Add the canvas app control to a table column.":::
- 
+
 1. Select **Done**. Then, to publish your app to make it available to users, select **Publish**.
 
 After you have published an embedded canvas app to your model-driven form, share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
