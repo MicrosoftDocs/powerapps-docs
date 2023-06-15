@@ -61,6 +61,14 @@ additionalContent:
               url: cards/overview.md
             - text: Apps in Teams
               url: teams/create-apps-overview.md
+        - title: AI Copilot capabilities
+          links:
+            - text: Get start with AI Copilot
+              url: maker/canvas-apps/ai-overview.md
+            - text: Build apps through conversation
+              url: maker/canvas-apps/ai-conversations-create-app.md
+            - text: Add Copilot control to a canvas app
+              url: maker/canvas-apps/add-ai-copilot.md
         - title: Create and manage data
           links:
             - text: What is Microsoft Dataverse?
@@ -79,6 +87,14 @@ additionalContent:
               url: /power-platform/alm/overview-alm
             - text: Use Microsoft Power Platform Build Tools
               url: /power-platform/alm/devops-build-tools
+        - title: Integrate with other products
+          links:
+            - text: Add Chatbot control to a canvas app
+              url: maker/canvas-apps/add-ai-chatbot
+            - text: Visualize data with Power BI
+              url: user/visualize-in-power-bi.md
+            - text: Collaborating and co-developing apps
+              url: guidance/co-develop/overview.md
         - title: Best practices guidance
           links:
             - text: Power Apps patterns
