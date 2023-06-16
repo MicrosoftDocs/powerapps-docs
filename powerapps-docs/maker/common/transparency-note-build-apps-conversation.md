@@ -1,7 +1,7 @@
 ---
 title: Transparency note for building apps through conversation
 description: The transparency note discusses building apps through conversation and the key considerations for making use of this technology responsibly.
-ms.date: 5/23/2023
+ms.date: 6/16/2023
 ms.custom: 
   - transparency-note
 ms.topic: article
@@ -33,9 +33,7 @@ Build apps through conversation is intended to simplify your app creation proces
 
 Build apps through conversation underwent substantial testing before the feature was released in preview. If you encounter issues with the content being generated, please submit feedback. Your feedback will be used to improve Microsoft products and services. IT admins for your organization will be able to view and manage your feedback data. 
 
-For more information, see:
-- [Microsoft Global Data Privacy Notice for Employees, External Staff, Candidates and Guests](https://go.microsoft.com/fwlink/?linkid=2182930) 
-- [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy)
+For more information, see: [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy)
 
 ## What are the limitations of build apps through conversation? How can users minimize the impact of the build apps through conversation limitations when using the system? 
 
