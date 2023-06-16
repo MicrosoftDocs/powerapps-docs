@@ -2,7 +2,7 @@
 title: "Get started with Power Apps| MicrosoftDocs"
 description: How to navigate the Power Apps home page. 
 ms.custom: ""
-ms.date: 11/28/2022
+ms.date: 06/15/2023
 ms.reviewer: "mkaur"
 ms.topic: overview
 author: "mkaur"
@@ -134,7 +134,7 @@ For best results, start by ensuring that the home page is set to the right envir
 > [!div class="mx-imgBorder"]
 > ![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
 
-Environments can be managed using [Power Platform Admin Center](/power-platform/admin/environments-overview#manage-environments-in-the-power-platform-admin-center).
+Environments can be managed using [Power Platform admin center](/power-platform/admin/environments-overview#manage-environments-in-the-power-platform-admin-center).
 
 ### Notifications
 
