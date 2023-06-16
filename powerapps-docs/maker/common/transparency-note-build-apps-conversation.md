@@ -22,7 +22,7 @@ Build apps through conversation is a feature in the Power Apps that allows you t
 
 This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview), which uses powerful language models. These language models generate new text in English that looks and sounds like text written by humans.  
 
-Using Azure OpenAI service as a foundation, build apps through conversation considers your app description to propose relevant data tables on which to build your app. As part of data generation, the system recommends relevant columns, sample row data, and data types that you can customize. The sample data is not real organizational data.  
+Using Azure OpenAI service as a foundation, build apps through conversation considers your app description to propose relevant data tables on which to build your app. As part of data generation, the system recommends relevant columns, sample row data, and data types that you can customize. The sample data is for illustration only and is fictitious. No real association is intended or inferred.
 
 ## What is the system’s intended use? 
 
