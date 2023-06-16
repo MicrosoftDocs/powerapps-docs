@@ -110,29 +110,20 @@ This type of connection isn't secure because it doesn't rely on end-user authent
 
 In SQL Server, this type of connection is called **SQL Server Authentication**.  Many other database data sources provide a similar capability.  When you publish your application, your users don't need to supply a unique user name and password.  They're using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users can't see the user name or password, but the connection will be available to them.  **There are valid scenarios for this type of connection. For instance if you have a read-only database that is available to everyone in the company. Reference data scenarios (for example, a corporate calendar) can be useful for this kind of connection.** More information: [Use Microsoft SQL Server securely with Power Apps](connections/sql-server-security.md)
 
-### Secure Implicit Connections (experimental)
-Power Apps now has support for **[Secure implicit connections (experimental)](working-with-experimental-preview.md)**. The secure implicit shared connections are more secure than the existing implicit connections. Power Apps implicitly shared connections are ones that use a fixed credential such as a SQL Server connection string rather than the end user's specific credentials such as AAD. With this feature, connections are no longer directly shared with the users of Power Apps. Instead, a proxy connection object that only grants access to the underlying resource such as a specific SQL server table is shared. End user authors can't create new applications with either the connection or the proxy connection. This feature also limits the end user to such actions as **get**, **put/patch**, and **delete** that are defined in the corresponding app. The result is that end users who are also authors can't create new applications with either the connection or the proxy connection object.
+### Secure Implicit Connections (preview)
 
-While in preview, an app author must opt-in to use this feature. Eventually, this feature will be on for all apps. With the experimental preview switch turned on for a given Power Apps app, all implicit connections in the app will automatically use this feature.  
+[This section is prerelease documentation and is subject to change.]
 
-#### Enable secure implicit connections for new app
+Power Apps now has full preview support for **[Secure implicit connections)](working-with-experimental-preview.md)**. The default setting for this feature is **On**. The secure implicit shared connections are more secure than the existing implicit connections. Power Apps implicitly shared connections are ones that use a fixed credential such as a SQL Server connection string rather than the end user's specific credentials such as AAD. With this feature, connections are no longer directly shared with the users of Power Apps. Instead, a proxy connection object that only grants access to the underlying resource such as a specific SQL server table is shared. End user authors can't create new applications with either the connection or the proxy connection. This feature also limits the end user to such actions as **get**, **put/patch**, and **delete** that are defined in the corresponding app. The result is that end users who are also authors can't create new applications with either the connection or the proxy connection object.
 
-Sign in to [Power Apps](https://make.powerapps.com) and create a new app that uses an implicitly shared connection:
-
-1. In Power Apps Studio, on the command bar, select **Settings** > **Upcoming features**.
-2. Select the **Experimental** tab.
-3. Set the toggle for **Secure implicit connections** to **On**
-   > [!div class="mx-imgBorder"]
-   > ![Secure implicit connections.](./media/connections-list/secure_implicit_connection_option.png)
-3. When you're done, publish the app. 
-
-   To share with different users, see [Sharing](connections-list.md#sharing).
+> [!NOTE]
+> **Secure implicit connections** to **On** by default for new apps.
 
 #### Enable secure implicit connections for an existing app
 
 Open an existing [app open for editing](../../edit-app.md) with implicitly shared connections that has previously been published:
 1. On the command bar, select **Settings** > **Upcoming features**.
-2. From the **Experimental** tab, set the toggle for **Secure implicit connections** to **On**.
+2. From the **Preview** tab, set the toggle for **Secure implicit connections** to **On**.
 3. Save and publish the app.
 
 #### Sharing
@@ -157,7 +148,7 @@ When your app is republished and shared, then end-users won't have access to the
 
 #### Limitations
 
-1. All types of implicitly shared connection work such as action and tabular.
+1. All types of implicitly shared connections work such as action and tabular.
 2. Server and database names are hidden in network traces but visible in the consent dialog. Column names are not hidden.
 3. For tabular connectors, we only limit CRUD actions such as Get, Post, Put, or Delete. If you have permissions to **Put** then you have access to **Post**.
 4. Action based connectors limit based on the specific API being used in the application. 
