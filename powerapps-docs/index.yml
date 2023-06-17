@@ -63,7 +63,7 @@ additionalContent:
               url: cards/overview.md
         - title: AI Copilot capabilities
           links:
-            - text: Get start with AI Copilot
+            - text: Get started with AI Copilot
               url: maker/canvas-apps/ai-overview.md
             - text: Build apps through conversation
               url: maker/canvas-apps/ai-conversations-create-app.md
