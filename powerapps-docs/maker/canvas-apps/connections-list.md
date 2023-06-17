@@ -114,10 +114,23 @@ In SQL Server, this type of connection is called **SQL Server Authentication**. 
 
 [This section is prerelease documentation and is subject to change.]
 
-Power Apps now has full preview support for **[Secure implicit connections)](working-with-experimental-preview.md)**. The default setting for this feature is **On**. The secure implicit shared connections are more secure than the existing implicit connections. Power Apps implicitly shared connections are ones that use a fixed credential such as a SQL Server connection string rather than the end user's specific credentials such as AAD. With this feature, connections are no longer directly shared with the users of Power Apps. Instead, a proxy connection object that only grants access to the underlying resource such as a specific SQL server table is shared. End user authors can't create new applications with either the connection or the proxy connection. This feature also limits the end user to such actions as **get**, **put/patch**, and **delete** that are defined in the corresponding app. The result is that end users who are also authors can't create new applications with either the connection or the proxy connection object.
+Power Apps now has full preview support for **[Secure implicit connections](working-with-experimental-preview.md)**. The default setting for this feature is **On**. The secure implicit shared connections are more secure than the existing implicit connections. Power Apps implicitly shared connections are ones that use a fixed credential such as a SQL Server connection string rather than the end user's specific credentials such as AAD. With this feature, connections are no longer directly shared with the users of Power Apps. Instead, a proxy connection object that only grants access to the underlying resource such as a specific SQL server table is shared. End user authors can't create new applications with either the connection or the proxy connection. This feature also limits the end user to such actions as **get**, **put/patch**, and **delete** that are defined in the corresponding app. The result is that end users who are also authors can't create new applications with either the connection or the proxy connection object.
 
 > [!NOTE]
-> **Secure implicit connections** to **On** by default for new apps.
+> **Secure implicit connections** is now **On** by default for new apps.
+
+#### Notification to update your apps
+If you have applications that may be upgraded to use this feature then you will see a message on the Apps page. It will indicate the number of apps that need your attention.  
+
+   > [!div class="mx-imgBorder"]
+   > ![Notification to update your apps.](./media/connections-list/attention-alert.png)
+
+Select the link and it will open a side panel that will list all of the apps that need attention.  
+
+   > [!div class="mx-imgBorder"]
+   > ![Side panel.](./media/connections-list/app-needs-attention.png)
+
+Select the *open* icon to the right of the app name to open and republish it.  See the directions below.
 
 #### Enable secure implicit connections for an existing app
 
@@ -133,7 +146,7 @@ Once the app is published follow these steps to verify that sharing works correc
 - Check if connections are shared with co-owners. If you don't want an end-user to get a connection, then uncheck the **Co-owner** checkbox.
 
    > [!div class="mx-imgBorder"]
-   > ![Co-owner property.](./media/connections-list/co-owner-property.png)
+   > ![Uncheck co-owner.](./media/connections-list/co-owner-property.png)
 
 - To verify the feature works correctly, share the app with a different user who isn't an owner. Once you have shared the app, check the **Connections** list in the **Dataverse** tab in [Power Apps](https://make.powerapps.com) for that user. Verify that the user doesn't have a connection available.
 
