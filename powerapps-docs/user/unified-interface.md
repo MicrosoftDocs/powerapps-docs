@@ -1,18 +1,19 @@
 ---
 title: "Enhanced user experience with Unified Interface for model-driven apps | MicrosoftDocs"
 description: Overview of Unified Interface in Power Apps
-author: mduelae
-
+author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/30/2020
+ms.date: 06/19/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
+ms.contributors:
+- fafuxa
 ---
 # Enhanced user experience with Unified Interface for model-driven apps 
 
@@ -32,9 +33,7 @@ When columns in a form section reflows from multiple columns to one column, it r
 
 In example below, each number corresponds to a control.
 
-|Reflow experience from left to right: When multiple columns reflow to one column   |Reflow experience from top to bottom: When a control spans at least two columns in a section (notice control #5 spans across) |
-|---------|---------|
-| ![Reflow experience from multiple columns to one column](media/reflow_example1.png "Reflow experience from multiple columns to one column")     |     ![Reflow experience when control spans at least two columns in a section](media/reflow_example2.png "Reflow experience when control spans at least two columns in a section")   |
+:::image type="content" source="media/reflow.png" alt-text="When columns in a form section reflows from multiple columns to one column, it reflows from left to right (in left-to-right languages). When a control spans at least two columns in a section, then it reflows from top to bottom.":::
 
 ## Navigation
 
