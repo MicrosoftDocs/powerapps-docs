@@ -143,7 +143,7 @@ In addition to the admin consent granted on a custom application in Azure AD, wh
   Set-AdminPowerAppApisToBypassConsent -AppName <Power Apps app id>
 ```
 
-### Remove consent suppression for apps that use custom connectors using OAuth
+### Remove consent suppression for apps that use custom connectors using Azure AD OAuth
 
 To remove consent suppression for a custom connector, an admin must perform at least one of the following actions:
 
