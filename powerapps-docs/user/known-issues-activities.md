@@ -1,6 +1,6 @@
 ---
 title: Known issues about activities
-description: Learn about the known issues that occur with activities.
+description: Learn about known issues that may occur with activities in model-driven apps.
 author: sriharibs-msft
 ms.component: pa-user
 ms.topic: overview
@@ -15,4 +15,10 @@ search.audienceType:
 ---
 # Known issues about activities
 
-Content goes here.
+Learn about known issues that may occur with activities in model-driven apps.
+
+- On appointment grids, all-day appointments may show incorrect values for **Start Time** and **End Time**. This issue is limited to the grid control showing appointment records, as forms and calendar control show correct **Start Time** and **End Time** for all-day appointments.
+  
+  To fix this issue, use the [calendar control](../maker/model-driven-apps/add-calendar-control) as the default control to view appointments.
+
+- Conflict-check for the people and resources on an appointment is triggered only with a valid Dynamics 365 solution installed on the environment, as this requires a few scheduling-related tables to be a part of the environment. For more information on the scheduling tables and the license required, see [Restricted tables for create, update, and delete operations](../maker/data-platform/data-platform-restricted-entities#restricted-tables-for-create-update-and-delete-operations).
