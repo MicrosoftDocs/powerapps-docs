@@ -16,7 +16,7 @@ This transparency note describes the AI impact of Power Apps' continue to edit y
 
 ##  What is continue to edit your app with Copilot? 
 
-With continue to edit your app with Copilot feature, makers can delegate the more difficult tasks of app development to an AI assistant by telling Copilot their requirements. Makers can expect actions such as add, edit, or style controls, work with containers, and bulk edits. This allows makers to concentrate on designing the app while maintaining oversight of all actions taken by Copilot.
+With continue to edit your app with Copilot feature, makers can delegate some tasks of app development to an AI assistant by telling Copilot their requirements. Makers can expect actions such as add, edit, or style controls, work with containers, and bulk edits. This allows makers to concentrate on designing the app while maintaining oversight of all actions taken by Copilot.
  
 ## What are the system’s capabilities? 
 
