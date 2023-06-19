@@ -104,7 +104,9 @@
       - name: Use timeline
         href: ../user/add-activities.md
       - name: Create and join a Teams meeting from an appointment
-        href: ../user/join-teams-meeting-from-appointments.md  
+        href: ../user/join-teams-meeting-from-appointments.md 
+      - name: Known issues about activities
+        href: ../user/known-issues-activities.md
     - name: Work with email
       items:
       - name: Understand the email experience
