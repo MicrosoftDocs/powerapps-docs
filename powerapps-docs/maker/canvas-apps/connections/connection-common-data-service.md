@@ -115,7 +115,7 @@ Working with untyped fields is not restricted to Dataverse. It works for all typ
 
 For new apps, **Enable access to Microsoft Dataverse actions** is set to **On** by default. For apps created previously you'll need to enable access to Dataverse actions. 
 
-To turn on Dataverse actions open your canvas app for editing and navigate to **Settings** > **Upcoming features** > **Experimental** > **Enable access to Microsoft Dataverse actions** and set the toggle to **On**.
+To turn on Dataverse actions, open your canvas app for editing and navigate to **Settings** > **Upcoming features** > **Experimental** > **Enable access to Microsoft Dataverse actions** and set the toggle to **On**.
 
 > [!div class="mx-imgBorder"] 
 > ![Enable access to Microsoft Dataverse actions.](media/connection-common-data-service/common-data-service-connection-dataverse-action-switch-preview.png)
