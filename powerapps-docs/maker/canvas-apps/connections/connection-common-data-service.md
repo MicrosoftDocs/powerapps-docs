@@ -17,8 +17,6 @@ contributors:
 
 # Connect to Microsoft Dataverse
 
-## Overview
-
 You can securely store your business data in Dataverse and build rich apps in Power Apps so that users can manage that data. You can also integrate that data into solutions that include Power Automate, Power BI, and data from Dynamics 365.
 
 By default, the app connects to the current environment for Dataverse tables. If your app moves to another environment, the connector connects to data in the new environment. This behavior works well for an app using a single environment or an app that follows an application lifecycle management (ALM) process for moving from development, to test, and then to production.
