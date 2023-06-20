@@ -104,7 +104,9 @@
       - name: Use timeline
         href: ../user/add-activities.md
       - name: Create and join a Teams meeting from an appointment
-        href: ../user/join-teams-meeting-from-appointments.md  
+        href: ../user/join-teams-meeting-from-appointments.md 
+      - name: Known issues about activities
+        href: ../user/known-issues-activities.md
     - name: Work with email
       items:
       - name: Understand the email experience
@@ -2533,6 +2535,12 @@
       href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
     - name: Use dashboards
       href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
+- name: Responsible AI transparency notes 
+  items:
+  - name: Overview
+    href: ./common/transparency-note.md
+  - name: Transparency note for building apps through conversation
+    href: ./common/transparency-note-build-apps-conversation.md     
 - name: Resources
   items:
   - name: Blog
