@@ -96,15 +96,11 @@ Dataverse for processing (rather than processing locally within Power Apps).
 7.  For CountRows, ensure that users have appropriate permissions to get totals for the table. 
 
 
-## Call Dataverse actions directly in Power Fx (Experimental)
+## Call Dataverse actions directly in Power Fx (preview)
 
 [This section is pre-release documentation and is subject to change.]
 
-> [!IMPORTANT]
-> - This is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
-As a part of the Power Fx language, authors can now directly invoke a Dataverse action within a formula. A new Power Fx `Environment` language object that authors can add to their app enables access to Dataverse actions. It is available with Power Apps release version 3.23022.
+As a part of the Power Fx language, authors can now directly invoke a Dataverse action within a formula. Both unbound and bound actions are supported.  A new Power Fx `Environment` language object that authors can add to their app enables access to Dataverse actions. It is available with Power Apps release version 3.23022.
 
 This feature update also allows authors to work with untyped object fields for both inputs and outputs, on the input side, for instance, many Dataverse actions require an untyped object as an argument. You can now pass these arguments in by using ParseJSON to convert a Power Fx record into an untyped object. On the output side, for actions that return untyped objects, you can simply `dot` into returned objects properties. You will need to cast specific values for use in specific contexts for use in Power Apps (such as a label.)
 
@@ -117,10 +113,12 @@ Working with untyped fields is not restricted to Dataverse. It works for all typ
 
 ### Enable access to Microsoft Dataverse actions
 
+For new apps, this preview switch is set to 'On' by default.  For apps created previously you will need to turn this feature switch 'On'. 
+
 To enable access to Dataverse actions, you will need to open your canvas app for editing and navigate to **Settings** > **Upcoming features** > **Experimental** > **Enable access to Microsoft Dataverse actions** and set the toggle to **On**.
 
 > [!div class="mx-imgBorder"] 
-> ![Enable access to Microsoft Dataverse actions.](media/connection-common-data-service/common-data-service-connection-dataverse-action-switch.png)
+> ![Enable access to Microsoft Dataverse actions.](media/connection-common-data-service/common-data-service-connection-dataverse-action-switch-preview.png)
 
 ### Add the Power Fx Environment language object to your app
 
@@ -139,7 +137,7 @@ When the Power Fx `Environment` object is added to your application, you can acc
 
 ![ Using the Power Fx Environment object.](media/connection-common-data-service/common-data-service-connection-using-the-Envrionment-PowerFx-object.png)
 
-Unbound Dataverse actions are peer level to tables and need the parenting scope of the **Environment** language object. All actions in your environment will be available – both system level and custom. 
+Unbound Dataverse actions are peer level to tables and need the parenting scope of the **Environment** language object. All actions in your environment will be available – both system level and custom. Both bound and unbound actions are available. The 2-level call limit has been removed. 
 
 ![Using a Dataverse action.](media/connection-common-data-service/common-data-service-connection-hooking-up-an-action-to-a-button.png)
 
