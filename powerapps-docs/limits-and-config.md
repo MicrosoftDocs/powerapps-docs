@@ -84,7 +84,7 @@ This list identifies all services to which Power Apps communicates and their usa
 
 | Domain(s) | Protocols | Uses |
 | --- | --- | --- |
-| api.bap.microsoft.com | https | Environment permissions management|
+| api.bap.microsoft.com<br>\*.api.bap.microsoft.com | https | Environment permissions management |
 | management.azure.com |https |Power Apps Management Service |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com<br>*.odc.officeapps.live.com |https |Microsoft Authentication Library |
@@ -101,7 +101,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | 127.0.0.1 | http | Power Apps Mobile|
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
-| \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| api.powerplatform.com<br>\*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
 
 

@@ -14,7 +14,7 @@ contributors:
     - nickdoelman
     - sandhangitmsft
     - ProfessorKendrick
-ms.custom: intro-internal
+ms.collection: get-started
 ---
 
 # Get started with the portal content editor

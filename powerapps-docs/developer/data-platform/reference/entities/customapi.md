@@ -1,7 +1,7 @@
 ---
 title: "CustomAPI table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomAPI table/entity."
-ms.date: 03/07/2023
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,20 +25,20 @@ Entity that defines a custom API
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.2/customapis(*customapiid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.2/customapis<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Assign|PATCH /customapis(*customapiid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /customapis<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/customapis(*customapiid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/customapis(*customapiid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/customapis<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.2/customapis(*customapiid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/customapis(*customapiid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Delete|DELETE /customapis(*customapiid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET /customapis(*customapiid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /customapis<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH /customapis(*customapiid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /customapis(*customapiid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
@@ -70,6 +70,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Description](#BKMK_Description)
 - [DisplayName](#BKMK_DisplayName)
 - [ExecutePrivilegeName](#BKMK_ExecutePrivilegeName)
+- [FxExpressionId](#BKMK_FxExpressionId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsFunction](#BKMK_IsFunction)
@@ -79,6 +80,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [PluginTypeId](#BKMK_PluginTypeId)
+- [PowerfxRuleId](#BKMK_PowerfxRuleId)
 - [SdkMessageId](#BKMK_SdkMessageId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -211,6 +213,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_FxExpressionId"></a> FxExpressionId
+
+**Added by**: msft_PowerfxRuleSolutionExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for fxexpression associated with Custom API.|
+|DisplayName|FxExpression|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|fxexpressionid|
+|RequiredLevel|None|
+|Targets|fxexpression|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -371,6 +389,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 
 
+### <a name="BKMK_PowerfxRuleId"></a> PowerfxRuleId
+
+**Added by**: msft_PowerfxRuleSolutionExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for powerfxrule associated with Custom API.|
+|DisplayName|PowerFx Rule|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|powerfxruleid|
+|RequiredLevel|None|
+|Targets|powerfxrule|
+|Type|Lookup|
+
+
 ### <a name="BKMK_SdkMessageId"></a> SdkMessageId
 
 |Property|Value|
@@ -516,6 +550,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [FxExpressionIdName](#BKMK_FxExpressionIdName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -532,6 +567,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [PluginTypeIdName](#BKMK_PluginTypeIdName)
+- [PowerfxRuleIdName](#BKMK_PowerfxRuleIdName)
 - [SdkMessageIdName](#BKMK_SdkMessageIdName)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
@@ -694,6 +730,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_FxExpressionIdName"></a> FxExpressionIdName
+
+**Added by**: msft_PowerfxRuleSolutionExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|fxexpressionidname|
+|MaxLength|100|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -976,6 +1030,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_PowerfxRuleIdName"></a> PowerfxRuleIdName
+
+**Added by**: msft_PowerfxRuleSolutionExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|powerfxruleidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_SdkMessageIdName"></a> SdkMessageIdName
 
 |Property|Value|
@@ -1218,6 +1290,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [business_unit_customapi](#BKMK_business_unit_customapi)
 - [sdkmessage_customapi](#BKMK_sdkmessage_customapi)
 - [plugintype_customapi](#BKMK_plugintype_customapi)
+- [fxexpression_customapi](#BKMK_fxexpression_customapi)
+- [powerfxrule_customapi](#BKMK_powerfxrule_customapi)
 
 
 ### <a name="BKMK_lk_customapi_createdby"></a> lk_customapi_createdby
@@ -1273,6 +1347,18 @@ See the [sdkmessage_customapi](sdkmessage.md#BKMK_sdkmessage_customapi) one-to-m
 **Added by**: System Solution Solution
 
 See the [plugintype_customapi](plugintype.md#BKMK_plugintype_customapi) one-to-many relationship for the [plugintype](plugintype.md) table/entity.
+
+### <a name="BKMK_fxexpression_customapi"></a> fxexpression_customapi
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [fxexpression_customapi](fxexpression.md#BKMK_fxexpression_customapi) one-to-many relationship for the [fxexpression](fxexpression.md) table/entity.
+
+### <a name="BKMK_powerfxrule_customapi"></a> powerfxrule_customapi
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [powerfxrule_customapi](powerfxrule.md#BKMK_powerfxrule_customapi) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
 
 ### See also
 

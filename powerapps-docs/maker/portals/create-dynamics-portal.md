@@ -4,7 +4,7 @@ description: Instructions to create a portal in an environment containing custom
 author: neerajnandwana-msft
 
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 07/29/2022
 ms.subservice: portals
 ms.author: nenandw

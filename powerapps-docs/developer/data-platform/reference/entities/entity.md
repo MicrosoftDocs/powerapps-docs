@@ -1,7 +1,7 @@
 ---
 title: "Entity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Entity table/entity."
-ms.date: 03/07/2023
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -23,7 +23,7 @@ search.audienceType:
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/entities<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET /entities<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -451,6 +451,7 @@ Listed by **SchemaName**.
 - [sharedlinksetting_extensionofrecordid](#BKMK_sharedlinksetting_extensionofrecordid)
 - [entity_serviceplanmapping](#BKMK_entity_serviceplanmapping)
 - [virtualentitymetadata_extensionofrecordid](#BKMK_virtualentitymetadata_extensionofrecordid)
+- [metadataforarchival_extensionofrecordid](#BKMK_metadataforarchival_extensionofrecordid)
 - [msdyn_insightsstorevirtualentity_extensionofrecordid](#BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid)
 - [entity_appaction_ContextEntity](#BKMK_entity_appaction_ContextEntity)
 - [entity_appactionrule_ContextEntity](#BKMK_entity_appactionrule_ContextEntity)
@@ -589,6 +590,23 @@ Same as the [virtualentitymetadata_extensionofrecordid](virtualentitymetadata.md
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|virtualentitymetadata_extensionofrecordid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_metadataforarchival_extensionofrecordid"></a> metadataforarchival_extensionofrecordid
+
+**Added by**: Active Solution Solution
+
+Same as the [metadataforarchival_extensionofrecordid](metadataforarchival.md#BKMK_metadataforarchival_extensionofrecordid) many-to-one relationship for the [metadataforarchival](metadataforarchival.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|metadataforarchival|
+|ReferencingAttribute|extensionofrecordid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|metadataforarchival_extensionofrecordid|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 

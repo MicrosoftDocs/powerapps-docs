@@ -2,7 +2,7 @@
 title: "Get started with Power Apps| MicrosoftDocs"
 description: How to navigate the Power Apps home page. 
 ms.custom: ""
-ms.date: 11/28/2022
+ms.date: 06/15/2023
 ms.reviewer: "mkaur"
 ms.topic: overview
 author: "mkaur"
@@ -134,6 +134,8 @@ For best results, start by ensuring that the home page is set to the right envir
 > [!div class="mx-imgBorder"]
 > ![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
 
+Environments can be managed using [Power Platform admin center](/power-platform/admin/environments-overview#manage-environments-in-the-power-platform-admin-center).
+
 ### Notifications
 
 Select the bell icon to see notifications. Notifications are stored in the notification center until you dismiss them or when they expire.
@@ -179,7 +181,7 @@ If your organization has [AI enabled](ai-overview.md) then you'll see AI assista
 To create an app, select from the following options:
 
 
-- **Start with data**: Lets you build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/connection-azure-sqldatabase.md) to start building your app.
+- **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/connection-azure-sqldatabase.md) to start building your app.
 - **Choose a page template**: Select the type of app you want to create. You can also use the **Filter** option located in the top-right to narrow down templates by app type or features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md)
 - **Pick an app template**: Choose from an app template including, data-centered templates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md)
 

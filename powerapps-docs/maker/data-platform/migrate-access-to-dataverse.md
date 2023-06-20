@@ -3,9 +3,8 @@ title: Migrate Microsoft Access data to Microsoft Dataverse (contains video) | M
 description: You can migrate your Microsoft Access data to Microsoft Dataverse or Microsoft Dataverse for Teams
 author: NHelgren
 ms.topic: overview
-ms.custom: 
-  - model
-  - intro-internal
+ms.custom: model
+ms.collection: get-started
 ms.reviewer: matp
 ms.date: 01/09/2023
 ms.subservice: dataverse-maker

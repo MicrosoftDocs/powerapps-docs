@@ -4,7 +4,7 @@ description: Instructions to provision a portal using the older portal add-on.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: nenandw

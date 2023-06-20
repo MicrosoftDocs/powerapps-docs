@@ -1,10 +1,9 @@
 ---
 title: "About table relationships for Microsoft Dataverse | MicrosoftDocs"
 description: Learn about table relationships in Microsoft Dataverse
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 08/17/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "overview"
@@ -21,7 +20,6 @@ search.audienceType:
   - maker
 ---
 # Table relationships 
-
 
 Table relationships define how rows can be related to each other in the database. At the simplest level, adding a lookup column to a table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup column in a form. With the lookup column, users can associate multiple *child* rows of that table to a single *parent* table row.  
   
@@ -58,14 +56,9 @@ The **N:1 (many-to-one)** relationship type exists in the user interface because
 Behaviors  for related tables is important because it helps ensure data integrity and can automate business processes for your company.
 
 ### Preserve data integrity
-Some tables exist to support other tables. They don't make sense on their own. They will typically have a required lookup column to link to the primary table they support. What should happen when the primary row is deleted?
+Some tables exist to support other tables. They don't make sense on their own. They will typically have a required lookup column to link to the primary table they support. What should happen when a primary row is deleted?
 
-You can use the relationship behavior to define this according to the rules for your business. Two options are:
-
-- Prevent deleting the primary table so that the related table rows can be reconciled, perhaps by associating them with a different primary table.
-- Allow the related tables to be deleted automatically with the deletion of the primary table row.
-
-If the related table doesn't support a primary table, you can allow the primary table to be deleted and the value of the lookup will be cleared.
+You can use the relationship behavior to define what happens to related rows according to the rules for your business. More information: [Add advanced relationship behavior](data-platform-entity-lookup.md#add-advanced-relationship-behavior)
 
 ### Automate business processes
 Let's say that you have a new salesperson and you want to assign them a number of existing accounts currently assigned to another salesperson. Each account row may have a number of task activities associated with it. You can easily locate the active accounts you want to reassign and assign them to the new salesperson. But what should happen for any of the task activities that are associated with the accounts? Do you want to open each task and decide whether they should also be assigned to the new salesperson? Probably not. Instead, you can let the relationship apply some standard rules for you automatically. These rules only apply to task rows associated to the accounts you are reassigning. Your options are:  

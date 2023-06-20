@@ -55,7 +55,9 @@
               href: org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
-    - name: Background operations (Preview)
+    - name: Use open types with Custom APIs 
+      href: use-open-types.md
+    - name: Background operations (preview)
       href: background-operations.md
     - name: Use optional parameters
       href: optional-parameters.md
@@ -171,6 +173,8 @@
           href: access-web-services.md
         - name: Dependent Assemblies (preview)
           href: dependent-assembly-plugins.md
+        - name: Write plug-ins for CreateMultiple and UpdateMultiple (Preview)
+          href: write-plugin-multiple-operation.md
         - name: Quickstarts
           items:
             - name: Create a plug-in using Power Platform Tools
@@ -326,6 +330,8 @@
           href: aaduser-entity.md
     - name: Template tables
       href: upload-manage-document-templates.md
+    - name: Long-term data retention (preview)
+      href: long-term-retention.md
 - name: Work with table definitions using code
   href: metadata-services.md
   items:
@@ -389,6 +395,20 @@
       href: customize-labels-support-multiple-languages.md
     - name: Best Practices
       href: best-practices/work-with-metadata/index.md
+- name: Work with elastic tables using code (preview)  
+  items:
+    - name: Overview of elastic tables
+      href: elastic-tables.md
+    - name: Create elastic tables
+      href: create-elastic-tables.md
+    - name: Use elastic tables
+      href: use-elastic-tables.md
+    - name: Query JSON columns
+      href: query-json-columns-elastic-tables.md
+    - name: Bulk operations with elastic tables
+      href: bulk-operations-elastic-tables.md    
+    - name: Elastic tables sample code
+      href: elastic-table-samples.md
 - name: Introduction to solutions
   href: introduction-solutions.md
 - name: Create applications

@@ -2,7 +2,7 @@
 title: "Types of tables | MicrosoftDocs"
 description: "Learn about the different types of Microsoft Dataverse tables."
 ms.custom: ""
-ms.date: 02/13/2023
+ms.date: 06/14/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,18 +21,16 @@ search.audienceType:
 ---
 # Types of tables
 
-A table defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone.
+A table defines information that you want to track in the form of rows (records), which typically include column data such as company name, location, products, email, phone, and so on.
 
-Tables appear in Power Apps as one of three different types, which indicate how the table came into the environment, whether the table is managed or unmanaged, and whether it can be customized.  
-- Standard: Several standard tables, also known as out-of-box tables, are included with a Power Platform environment, that includes Microsoft Dataverse. Account, business unit, contact, task, and user tables are examples of standard tables in Dataverse. Most of the standard tables included with Dataverse can be customized. Tables that are imported as part of a managed solution and set as customizable also appear as standard tables. Any user with appropriate privileges can customize these tables where the table property has customizable set to true.
-- Managed: Are tables that aren’t customizable and have been imported into the environment as part of a managed solution.
-- Custom: Custom tables are unmanaged tables that are either imported from an unmanaged solution or are new tables created directly in the environment. Any user with appropriate privileges can fully customize these tables.
+Tables appear in Power Apps as one of these different types:
 
-For more information about how components are customizable, see [Managed properties](solutions-overview.md#managed-properties).
+- **Standard**: Several standard tables, also known as out-of-box tables, are included with a Power Platform environment, that includes Microsoft Dataverse. Account, business unit, contact, task, and user tables are examples of standard tables in Dataverse. Most of the standard tables included with Dataverse can be customized. Tables that are imported as part of a managed solution and set as customizable also appear as standard tables. Any user with appropriate privileges can customize these tables where the table property has customizable set to true.
+- **Activity**: Are a special kind of table and are best for rows that have an activity-based element, which can include a subject, start time, stop time, due date, and duration. Dataverse already comes with several out-of-the-box activity tables, such as appointment, task, email, and phone call. More information: [Activity tables](#activity-tables)
+- **Virtual**: Are when you need the table to be populated with data from an external source outside of Dataverse.
+- **Elastic**: Are for when the table will store a very large dataset in excess of tens of millions of rows.
 
-For more information about managed and unmanaged customizations, see [Managed and unmanaged solutions](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions).
-
-### Activity tables
+## Activity tables
 
 An activity can be thought of as any action for which an entry can be made on a calendar. An activity has time dimensions (start time, stop time, due date, and duration) that help determine when the action occurred or will occur. Activities also contain data that helps determine what action the activity represents, for example, subject and description. An activity can be opened, canceled, or completed. The completed status of an activity will have several sub-status values associated with it to clarify the way that the activity was completed.  
   
@@ -54,35 +52,21 @@ When you can create a new custom activity table, you might create it to read ins
 
 To create a custom activity table, open the **Advanced options** section in the **New table** panel, select the **Activity** option from the **Type** drop-down list. After you select this, you’ll see that **Display in Activity menus** is selected. This setting allows people to create this type of activity in the activity menus. This isn’t selected for activities that are typically associated with specific events and created behind using code or by a workflow. After you save the table, you can’t change these settings.  
 
-#### Enable activities for a table
+### Enable activities for a table
 
 Enable activities to add activities to a table and use the Regarding lookup for the table.
 
-1. To enable activities, Sign in to [Power Apps](https://make.powerapps.com).
-
+1. To enable activities, sign in to [Power Apps](https://make.powerapps.com).
   
-2. On the left nav, select **Data** to expand it and then select **Tables**.  
+2. On the left nav, select **Tables**, and then open the table you want.
 
-   > [!div class="mx-imgBorder"]
-   >![Go to Tables in maker portal.](media/maker-data-tables.png "Go to Tables in maker portal")
-   
+3. Select **Properties**. 
+
+4. Expand **Advanced options**, and then select **Creating a new activity**. 
   
-3. Select a table.
-
-4. On the command bar, select **Settings**. 
-
-   > [!div class="mx-imgBorder"]
-   >![Select settings.](media/maker-row-settings.png "Select setting")
-
-5. Expand **Collaboration**, and select **Enable for activities** and then choose **Done**. 
-
-   > [!div class="mx-imgBorder"]
-   >![Communication and collaboration activity enabled.](media/enable-activity-for-table.png "Communication and collaboration activity enabled")
-   
    > [!IMPORTANT]
-   > Once enabled this setting can't be disabled. If prompted, select **Okay** to confirm.
-   
-6.  Select **Save Table** and then publish the table.
+   > Once enabled this setting can't be disabled.
+5. Select **Save**.
 
 ## Table ownership
 
@@ -104,7 +88,12 @@ Notice that there are a few Dataverse  system tables that are similar to standar
 
 A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database dynamically at runtime, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
+## Elastic tables
+
+Elastic tables offer performance benefits over standard tables when the table contains a very large dataset. Elastic tables are powered by Azure Cosmos DB. More information: [Create and edit elastic tables (preview)](create-edit-elastic-tables.md)
+
 ### See also
+
 [Create tables](./data-platform-create-entity.md)<br/>
 [Edit tables](./edit-entities.md)
 

@@ -3,9 +3,8 @@ title: Overview of connectors for canvas apps
 description: Overview of all the available connections that you can use to build canvas apps.
 author: lancedMicrosoft
 ms.topic: overview
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: mkaur
 ms.date: 03/15/2022
 ms.subservice: canvas-maker
@@ -95,9 +94,11 @@ As you author your app and create a connection to a data source, you may see tha
 > - For detailed information about security considerations when using a relational database server (such as Microsoft SQL Server, or Oracle) as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
 > - Power Apps doesn't  support **External member** identities. For more information, see [Properties of an Azure Active Directory B2B collaboration user](/azure/active-directory/external-identities/user-properties). 
 
-### Azure AD Integrated
+### Azure Active Directory (AAD)
 
 This is a secure type of connection.  For example, SharePoint uses this type of authentication.  SQL Server also allows for this type of authentication.  When you connect, the Azure AD service identifies you separately to SharePoint on your behalf.  You don't have to supply a username or password.  As an author you can create and work with the data source with your credentials.  When you publish your application and your application user logs in, they do so with their credentials. If the data is appropriately secured on a back-end your users can only see what they're authorized to see based on their credentials.   This type of security allows you to change rights for specific application users on the back-end data source after the application has been published.  For instance you can grant access, deny access, or refine what a user or set of users can see all on the back-end data source.
+> [!NOTE]
+> Power Apps does not yet formally support Service Principal types of authentication. For more information, see [Authentication methods using Azure Active Directory](/azure-sphere/deployment/authenticate-options).
 
 ### Open-standard authorization (OAuth)
 
@@ -105,33 +106,37 @@ This type of connection is also secure.  For example Twitter uses this type of a
 
 ### SQL User name and password authentication
 
-This type of connection isn't secure because it doesn't rely on end-user authentication. **It should only be used in cases where you can safely assume that everyone who has access to this connection can see and use all of the data to which the connection provides access.**  You can't reliably lock down portions of the data accessible within the connection. For instance, if the connection allows access to a single table, you can't rely on a userID to filter and only show data for that specific user within that table. For a reliable security, use more secure connection such as [Azure AD Integrated](#azure-ad-integrated).  
+This type of connection isn't secure because it doesn't rely on end-user authentication. **It should only be used in cases where you can safely assume that everyone who has access to this connection can see and use all of the data to which the connection provides access.**  You can't reliably lock down portions of the data accessible within the connection. For instance, if the connection allows access to a single table, you can't rely on a userID to filter and only show data for that specific user within that table. For a reliable security, use more secure connection such as [Azure AD Integrated](connections-list.md#azure-active-directory-aad).  
 
 In SQL Server, this type of connection is called **SQL Server Authentication**.  Many other database data sources provide a similar capability.  When you publish your application, your users don't need to supply a unique user name and password.  They're using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users can't see the user name or password, but the connection will be available to them.  **There are valid scenarios for this type of connection. For instance if you have a read-only database that is available to everyone in the company. Reference data scenarios (for example, a corporate calendar) can be useful for this kind of connection.** More information: [Use Microsoft SQL Server securely with Power Apps](connections/sql-server-security.md)
 
-### Secure Implicit Connections (experimental)
-Power Apps now has support for **[Secure implicit connections (experimental)](working-with-experimental-preview.md)**. The secure implicit shared connections are more secure than the existing implicit connections. Power Apps implicitly shared connections are ones that use a fixed credential such as a SQL Server connection string rather than the end user's specific credentials such as AAD. With this feature, connections are no longer directly shared with the users of Power Apps. Instead, a proxy connection object that only grants access to the underlying resource such as a specific SQL server table is shared. End user authors can't create new applications with either the connection or the proxy connection. This feature also limits the end user to such actions as **get**, **put/patch**, and **delete** that are defined in the corresponding app. The result is that end users who are also authors can't create new applications with either the connection or the proxy connection object.
+### Secure Implicit Connections (preview)
 
-While in preview, an app author must opt-in to use this feature. Eventually, this feature will be on for all apps. With the experimental preview switch turned on for a given Power Apps app, all implicit connections in the app will automatically use this feature.  
+[This section is prerelease documentation and is subject to change.]
 
-#### Enable secure implicit connections for new app
+Power Apps now has full preview support for **[Secure implicit connections](working-with-experimental-preview.md)**. The default setting for this feature is **On**. The secure implicit shared connections are more secure than the existing implicit connections. Power Apps implicitly shared connections are ones that use a fixed credential such as a SQL Server connection string rather than the end user's specific credentials such as AAD. With this feature, connections are no longer directly shared with the users of Power Apps. Instead, a proxy connection object that only grants access to the underlying resource such as a specific SQL server table is shared. End user authors can't create new applications with either the connection or the proxy connection. This feature also limits the end user to such actions as **get**, **put/patch**, and **delete** that are defined in the corresponding app. The result is that end users who are also authors can't create new applications with either the connection or the proxy connection object.
 
-Sign in to [Power Apps](https://make.powerapps.com) and create a new app that uses an implicitly shared connection:
+> [!NOTE]
+> **Secure implicit connections** is now **On** by default for new apps.
 
-1. In Power Apps Studio, on the command bar, select **Settings** > **Upcoming features**.
-2. Select the **Experimental** tab.
-3. Set the toggle for **Secure implicit connections** to **On**
+#### Notification to update your apps
+If you have applications that may be upgraded to use this feature then you will see a message on the Apps page. It will indicate the number of apps that need your attention.  
+
    > [!div class="mx-imgBorder"]
-   > ![Secure implicit connections.](./media/connections-list/secure_implicit_connection_option.png)
-3. When you're done, publish the app. 
+   > ![Notification to update your apps.](./media/connections-list/attention-alert.png)
 
-   To share with different users, see [Sharing](connections-list.md#sharing).
+Select the link and it will open a side panel that will list all of the apps that need attention.  
+
+   > [!div class="mx-imgBorder"]
+   > ![Side panel.](./media/connections-list/app-needs-attention.png)
+
+Select the *open* icon to the right of the app name to open and republish it.  See the directions below.
 
 #### Enable secure implicit connections for an existing app
 
 Open an existing [app open for editing](../../edit-app.md) with implicitly shared connections that has previously been published:
 1. On the command bar, select **Settings** > **Upcoming features**.
-2. From the **Experimental** tab, set the toggle for **Secure implicit connections** to **On**.
+2. From the **Preview** tab, set the toggle for **Secure implicit connections** to **On**.
 3. Save and publish the app.
 
 #### Sharing
@@ -141,7 +146,7 @@ Once the app is published follow these steps to verify that sharing works correc
 - Check if connections are shared with co-owners. If you don't want an end-user to get a connection, then uncheck the **Co-owner** checkbox.
 
    > [!div class="mx-imgBorder"]
-   > ![Co-owner property.](./media/connections-list/co-owner-property.png)
+   > ![Uncheck co-owner.](./media/connections-list/co-owner-property.png)
 
 - To verify the feature works correctly, share the app with a different user who isn't an owner. Once you have shared the app, check the **Connections** list in the **Dataverse** tab in [Power Apps](https://make.powerapps.com) for that user. Verify that the user doesn't have a connection available.
 
@@ -156,7 +161,7 @@ When your app is republished and shared, then end-users won't have access to the
 
 #### Limitations
 
-1. All types of implicitly shared connection work such as action and tabular.
+1. All types of implicitly shared connections work such as action and tabular.
 2. Server and database names are hidden in network traces but visible in the consent dialog. Column names are not hidden.
 3. For tabular connectors, we only limit CRUD actions such as Get, Post, Put, or Delete. If you have permissions to **Put** then you have access to **Post**.
 4. Action based connectors limit based on the specific API being used in the application. 

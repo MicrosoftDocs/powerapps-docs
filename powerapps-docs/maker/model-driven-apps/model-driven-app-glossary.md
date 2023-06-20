@@ -1,9 +1,8 @@
 ---
 title: Model-driven app glossary of terms | Microsoft Docs
 description: Simple descriptions of commonly used terms when building model-driven apps
-ms.custom: intro-internal
+ms.collection: get-started
 author: Mattp123
-
 ms.topic: overview
 ms.component: model
 ms.date: 02/03/2022
@@ -379,7 +378,7 @@ Unmanaged solutions are used by makers and developers for exporting projects as 
 
 ## Solution explorer
 
-The name given to the app designers make edits to solution. While it is a legacy experience, solution explorer currently offers additional functionality when editing solutions.
+This is the classic experience that makers and customizers can use to view and make changes to most any solution component. More modern experiences are available from make.powerapps.com and the model-driven app designers and solution explorer will eventually be replaced with those modern experiences.
 
 To access the modern solution interface follow these steps:
 

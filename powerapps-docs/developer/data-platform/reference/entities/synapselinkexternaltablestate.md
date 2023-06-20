@@ -1,7 +1,7 @@
 ---
 title: "synapselinkexternaltablestate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the synapselinkexternaltablestate table/entity."
-ms.date: 03/07/2023
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,14 +25,14 @@ Synapse Link external table states
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.2/synapselinkexternaltablestates<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Create|POST /synapselinkexternaltablestates<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/synapselinkexternaltablestates<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.2/synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Delete|DELETE /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|Retrieve|GET /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /synapselinkexternaltablestates<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /synapselinkexternaltablestates(*synapselinkexternaltablestateid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
@@ -60,9 +60,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [datalakefolder](#BKMK_datalakefolder)
 - [EntityName](#BKMK_EntityName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [LakehouseShortcutState](#BKMK_LakehouseShortcutState)
+- [LastSynchronizedOn](#BKMK_LastSynchronizedOn)
+- [LastSyncState](#BKMK_LastSyncState)
+- [MaxRecordVersion](#BKMK_MaxRecordVersion)
 - [MetadataVersion](#BKMK_MetadataVersion)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
+- [RecordCount](#BKMK_RecordCount)
 - [SchemaModifiedOn](#BKMK_SchemaModifiedOn)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -121,6 +126,82 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_LakehouseShortcutState"></a> LakehouseShortcutState
+
+|Property|Value|
+|--------|-----|
+|Description|State of lakehouse shortcut creation for an entity|
+|DisplayName|Lakehouse Shortcut State|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lakehouseshortcutstate|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### LakehouseShortcutState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Created|Not created|
+|1|Created|Created|
+|2|Failed|Failed|
+|3|Deleted|Deleted|
+
+
+
+### <a name="BKMK_LastSynchronizedOn"></a> LastSynchronizedOn
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Last SynchronizedOn Date time|
+|DisplayName|Last Synchronized On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lastsynchronizedon|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_LastSyncState"></a> LastSyncState
+
+|Property|Value|
+|--------|-----|
+|Description|Last data synchronization state|
+|DisplayName|Last Synchronization State|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lastsyncstate|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### LastSyncState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Created|Not created|
+|1|Created|Created|
+|2|Failed|Failed|
+|3|Deleted|Deleted|
+
+
+
+### <a name="BKMK_MaxRecordVersion"></a> MaxRecordVersion
+
+|Property|Value|
+|--------|-----|
+|Description|Maximum record version synchronized to the lake|
+|DisplayName|Maximum Record Version|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|maxrecordversion|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
+
 ### <a name="BKMK_MetadataVersion"></a> MetadataVersion
 
 |Property|Value|
@@ -167,6 +248,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|overriddencreatedon|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_RecordCount"></a> RecordCount
+
+|Property|Value|
+|--------|-----|
+|Description|Record count synchronized to lake|
+|DisplayName|Record Count|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|recordcount|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
 
 
 ### <a name="BKMK_SchemaModifiedOn"></a> SchemaModifiedOn

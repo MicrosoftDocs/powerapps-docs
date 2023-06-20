@@ -3,9 +3,8 @@ title: Get started with formulas in canvas apps
 description: Learn about how to use formulas to customize a canvas app.
 author: gregli-msft
 
-ms.custom: 
-- "intro-internal"
-- "canvas"
+ms.custom: canvas
+ms.collection: get-started
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.date: 01/27/2022

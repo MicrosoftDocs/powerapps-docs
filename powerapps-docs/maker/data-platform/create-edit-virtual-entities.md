@@ -156,7 +156,7 @@ This issue occurs because virtual tables don't support business process flows.
 
 [OData v4 Data Provider requirements and best practices](virtual-entity-odata-provider-requirements.md)</br> 
 [Create and edit tables](./data-platform-create-entity.md)</br>
-[Create and edit columns](create-edit-fields.md)
+[Configure virtual tables in Power Pages](/power-pages/configure/virtual-tables)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

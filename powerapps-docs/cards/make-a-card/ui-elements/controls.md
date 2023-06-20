@@ -1,7 +1,7 @@
 ---
-title: Add controls to a card (preview)
+title: Add controls to a card
 description: Learn about controls you can add to your cards for Microsoft Power Apps.
-ms.date: 09/20/2022
+ms.date: 06/8/2023
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
@@ -10,9 +10,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add controls to a card (preview)
-
-[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
+# Add controls to a card
 
 Controls are the building blocks of your card's interface and functionality. They add text, images, and other elements to create a rich cards experience. Insert, modify, and remove them in the [card designer](../designer-overview.md).
 
@@ -29,7 +27,9 @@ There are three categories of controls that you can add to your card:
 
 ## Insert a control
 
-1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (preview)** > **Cards**, and then select a card.
+1. To get started, sign in to [Power Apps](https://make.powerapps.com) and then select **Cards**. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)]
+
+1. Select **Create a card**. 
 
 1. In the left pane of the card designer, select **Insert**.
 
@@ -41,7 +41,9 @@ There are three categories of controls that you can add to your card:
 
 ## Rename a control
 
-1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (preview)** > **Cards**, and then select a card.
+1. Sign in to [Power Apps](https://powerapps.microsoft.com/) and then select **Cards**. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)]
+
+1. Select a card. 
 
 1. In the left pane of the card designer, select **Tree View**.
 

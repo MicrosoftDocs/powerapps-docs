@@ -1,7 +1,7 @@
 ---
 title: "Privilege table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Privilege table/entity."
-ms.date: 03/07/2023
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -23,8 +23,8 @@ Permission to perform an action in Microsoft CRM. The platform checks for the pr
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.2/privileges(*privilegeid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/privileges<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET /privileges(*privilegeid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /privileges<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -55,7 +55,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CanBeGlobal](#BKMK_CanBeGlobal)
 - [CanBeLocal](#BKMK_CanBeLocal)
 - [CanBeParentEntityReference](#BKMK_CanBeParentEntityReference)
+- [CanBeRecordFilter](#BKMK_CanBeRecordFilter)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
+- [IsCustomizable](#BKMK_IsCustomizable)
 - [Name](#BKMK_Name)
 - [PrivilegeId](#BKMK_PrivilegeId)
 - [PrivilegeRowId](#BKMK_PrivilegeRowId)
@@ -215,6 +217,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_CanBeRecordFilter"></a> CanBeRecordFilter
+
+**Added by**: AuthorizationCore Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies whether the privilege applies to the record filters.|
+|DisplayName|Can Be Record Filter|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|canberecordfilter|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### CanBeRecordFilter Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
 
 |Property|Value|
@@ -230,6 +257,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|48|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_IsCustomizable"></a> IsCustomizable
+
+**Added by**: AuthorizationCore Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies whether this component can be customized.|
+|DisplayName|Customizable|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscustomizable|
+|RequiredLevel|SystemRequired|
+|Type|ManagedProperty|
 
 
 ### <a name="BKMK_Name"></a> Name

@@ -5,7 +5,7 @@ author: mduelae
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/03/2022
+ms.date: 06/09/2023
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -17,7 +17,7 @@ search.audienceType:
 
 # View, compose and respond to email
 
-Users can view, create, and send email faster with streamlined access that helps users compose, reply, and send emails using rich text editing and drag-and-drop attachment features and functionalities.
+Users can view, create, and send email faster with streamlined access that helps users compose, reply, and send emails using rich text editing and drag-and-drop attachment features and functionalities to embed images in emails.
 
 
 ## Access and view emails
@@ -59,7 +59,7 @@ For more information, see [Insert an email template](insert-email-template.md).
    > The **To** box must contain a recipient to select a template.
 
 7. **New Attachment**. This command is used to add a file to your email.
-8. **Attach File**.  This command uses the 'plus' ![attach file icon.](media\email-new-attachment-icon.png "attach file icon") icon functionality to drag-and-drop or copy-and-paste attachments. 
+8. **Attach File**.  This command uses the 'plus' ![attach file icon.](media\email-new-attachment-icon.png "attach file icon") icon functionality to add attachments. 
 
    > [!Note] 
    > After you save your email, you can use Attach file and New Attachments interchangeably.
