@@ -4,7 +4,7 @@ description: Learn about known issues that may occur with activities in model-dr
 author: sriharibs-msft
 ms.component: pa-user
 ms.topic: overview
-ms.date: 06/19/2023
+ms.date: 06/20/2023
 ms.subservice: end-user
 ms.author: srihas
 ms.reviewer: sericks
@@ -21,4 +21,4 @@ Learn about known issues that may occur with activities in model-driven apps.
   
   To fix this issue, use the [calendar control](../maker/model-driven-apps/add-calendar-control.md) as the default control to view appointments.
 
-- Conflict-check for the people and resources on an appointment is triggered only with a valid Dynamics 365 solution installed on the environment, as this requires a few scheduling-related tables to be a part of the environment. Appointments created in an environment without the relevant Dynamics 365 solution installed have an **Open** status, rather than the **Scheduled** status. For more information on the scheduling tables and the license required, see [Restricted tables for create, update, and delete operations](../maker/data-platform/data-platform-restricted-entities.md#restricted-tables-for-create-update-and-delete-operations).
+- The process that checks for conflicts for the people and resources on an appointment is triggered only when a valid Dynamics 365 solution is installed on the environment, as this requires a few scheduling-related tables to be a part of the environment. Appointments created in an environment without a relevant Dynamics 365 solution installed have an **Open** status, rather than the **Scheduled** status. For more information on the scheduling tables and the license required, see [Restricted tables for create, update, and delete operations](../maker/data-platform/data-platform-restricted-entities.md#restricted-tables-for-create-update-and-delete-operations).
