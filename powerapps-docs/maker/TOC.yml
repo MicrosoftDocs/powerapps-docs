@@ -104,7 +104,9 @@
       - name: Use timeline
         href: ../user/add-activities.md
       - name: Create and join a Teams meeting from an appointment
-        href: ../user/join-teams-meeting-from-appointments.md  
+        href: ../user/join-teams-meeting-from-appointments.md 
+      - name: Known issues about activities
+        href: ../user/known-issues-activities.md
     - name: Work with email
       items:
       - name: Understand the email experience
@@ -2423,6 +2425,8 @@
           href: ../cards/make-a-card/ui-elements/use-buttons.md
         - name: Add and configure screens
           href: ../cards/make-a-card/screens/use-screens.md
+        - name: Work with repeating controls in cards
+          href: ../cards/make-a-card/ui-elements/data-binding.md
         - name: Control reference
           items: 
             - name: List of controls and properties
