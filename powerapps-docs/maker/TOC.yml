@@ -2425,6 +2425,8 @@
           href: ../cards/make-a-card/ui-elements/use-buttons.md
         - name: Add and configure screens
           href: ../cards/make-a-card/screens/use-screens.md
+        - name: Work with repeating controls in cards
+          href: ../cards/make-a-card/ui-elements/data-binding.md
         - name: Control reference
           items: 
             - name: List of controls and properties
