@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to 
-ms.date: 05/09/2023
+ms.date: 06/19/2023
 ms.custom: template-how-to
 ---
 # Set a data retention policy for a table (preview)
@@ -79,6 +79,8 @@ Power Platform administrators setup retention policies.
 Now you can view and manage the policy. More information: [Manage data retention policies](data-retention-manage.md)
 
 > [!IMPORTANT]
+>
+> - The retention policy can't be set for the tables where bulk delete isn't supported. For example, Activity Pointer, Activity Party, and Attachment tables don't support bulk delete.
 > - The parent table and all related rows from child tables, of the parent, will be marked and stored in Dataverse long term storage.
 > - Logic associated with an existing delete action of any table (parent and children) will always be executed during the policy run.
 > - A policy run will take from 72-96 hours irrespective of the data volume. Data retention policies are given a low priority by the platform. Dataverse will always run the retention process in the background to avoid any impact on other platform services, such as apps and flows.
@@ -91,4 +93,5 @@ If a parent table has many child tables, and the size of the parent or child tab
 ## Next steps
 
 [Manage data retention policies](data-retention-manage.md) <br />
-[Share your ideas](https://experience.dynamics.com/ideas/categories/list/?category=55f731de-11f3-ed11-8848-00224827ed7b&forum=eef9aef6-0ff3-ed11-8848-00224827e88b)
+[Share your ideas](https://experience.dynamics.com/ideas/categories/list/?category=55f731de-11f3-ed11-8848-00224827ed7b&forum=eef9aef6-0ff3-ed11-8848-00224827e88b) <br />
+[For developers: Long-term data retention](../../developer/data-platform/long-term-retention.md)
