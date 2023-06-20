@@ -179,20 +179,20 @@ additionalContent:
         - title: Power Platform
           summary: One-stop learning resource for Power Platform applications and features including admin, developer, and guidance documentation.
           url: /power-platform
+        - title: Power Pages
+          summary: Design, host, and administer secure, modern, and low-code business websites.
+          url: /power-pages
         # Card
         - title: Power Automate
           summary: Create automated workflows between your favorite apps and services to synchronize files, get notifications, collect data, and more.
           url: /power-automate
+        - title: Power Virtual Agents
+          summary: Create powerful bots using a guided, no-code graphical interface without the need for data scientists or developers.
+          url: /power-virtual-agents
         # Card
         - title: Power BI
           summary: Turn your unrelated sources of data into coherent, visually immersive, and interactive insights.
           url: /power-bi
-        - title: Power Pages
-          summary: Design, host, and administer secure, modern, and low-code business websites.
-          url: /power-pages
-        - title: Power Virtual Agents
-          summary: Create powerful bots using a guided, no-code graphical interface without the need for data scientists or developers.
-          url: /power-virtual-agents
         - title: Dynamics 365
           summary: "The next generation of CRM and ERP applications"
           url: /dynamics365/
