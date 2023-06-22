@@ -47,9 +47,6 @@ As an AI assistant that helps people find information, Copilot provides the foll
 - Provide default suggestions to guide users on what to type in
 - Offer the following templatized formulas to build your app:
     - Navigate(): For example, "Create a button for Home that navigates to the Home Screen"
-    - Gallery.Selected: For example, "Link Form2 with Gallery 3"
-    - SubmitForm(): For example, "Create a Submit button for Form2"
-- Merge with Power Apps Ideas for Microsoft Power Platform Conference
 
 ## How was continue to edit your app with Copilot evaluated? What metrics are used to measure performance? 
 
