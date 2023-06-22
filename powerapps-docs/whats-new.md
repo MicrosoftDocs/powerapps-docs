@@ -6,7 +6,7 @@ ms.subservice: common
 ms.topic: conceptual
 ms.custom: 
 ms.reviewer: 
-ms.date: 05/22/2023
+ms.date: 06/27/2023
 ms.author: kvivek
 contributors:
   - kumarvivek
@@ -29,6 +29,17 @@ To learn more about how to browse information in the weekly release notes, read 
 ## Release plan
 
 For information about new features being released over the next few months that you can use for planning, see [2023 release wave 1 plan](/power-platform/release-plan/2023wave1/power-apps/planned-features).
+
+## Monthly releases for model-driven apps
+
+Model-driven apps have the ability for admins to define the release cadence for features.
+
+| Channel | Frequency | Notes |
+| --- | --- | --- |
+| Semi-annual | Twice per year | Rollout follows weekly releases starting in early April and early October. Default release cadence within Power Apps and Dynamics 365. |
+| Monthly | Once per month | Rollout follows weekly release schedule starting with the first weekly release for the month. |
+
+For more information on release channel options and Monthly Channel, see [Release Channel Overview](maker/model-driven-apps/channel-overview.md).
 
 ## Known limitations
 
