@@ -16,13 +16,15 @@ search.audienceType:
   - maker
 ---
 
-# Introduction
+# Import or export data from Dataverse
+
+## Introduction
 
 Microsoft Dataverse is a SaaS data platform that helps you **easily create and manage your data, events, and logic and generate analytics** and **insights** to support **interconnected** **apps** built on the Dataverse platform. Apps include first-party apps such as Sales, Service, Marketing, Customer Insights, Customer Journey Orchestration, as well as custom third-party apps and **processes,** all of which operate in a **secure** and **compliant** manner. Dataverse, being a hyperscale polyglot storage, can store any type of data (relational, file, observational, etc.) for all your transactional and analytical applications. For this reason, it is **the** data platform for all Power Platform products and Dynamics 365 applications. Dataverse is a critical element of Microsoft Power Platform, supporting all the data, events, analytics, and related processing, in addition to generating insights for citizen app makers and professional developers to build, store, and manage data for their applications.
 
 ![Shape Description automatically generated](media/ppp-main.png)
 
-# Importing and exporting data
+## Importing and exporting data
 
 Data required by apps and processes does not often originate from or reside within Dataverse. Mashing up external data with Dataverse is an essential component in building apps, adding data to existing apps, and creating valuable insights. With the proliferation of big data and the ever-multiplying types of data sources (e.g., AI, ML, IoT, web commerce, web API, services), ERP and line of business apps require Dataverse customers to be agile with using this variety of data.
 
