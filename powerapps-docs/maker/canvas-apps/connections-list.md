@@ -166,7 +166,7 @@ When your app is republished and shared, then end-users won't have access to the
 3. For tabular connectors, we only limit CRUD actions such as Get, Post, Put, or Delete. If you have permissions to **Put** then you have access to **Post**.
 4. Action based connectors limit based on the specific API being used in the application. 
 5. Warnings are still enabled in sharing. The warning around implicitly shared connections still warns while in private preview. However, your connection with this feature is secure – despite the warning.
-6. Publishing to an entire tenant - as opposed to specific groups or individuals - is not yet supported.  
+6. Publishing to an entire tenant, as opposed to specific groups or individuals isn't supported.  
 
 ### Windows Authentication
 
