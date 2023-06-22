@@ -1,12 +1,12 @@
 ---
-title: Changing release channels for model-driven apps (NDA) | MicrosoftDocs
+title: Changing release channels for model-driven apps | MicrosoftDocs
 description: Understand the release channels for Power Apps model-driven apps.
 Keywords: 
 author: aorth
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
-ms.date: 05/23/2023
+ms.date: 06/27/2023
 
 ms.topic: troubleshooting
 applies_to: 
@@ -14,7 +14,7 @@ applies_to:
 search.audienceType: 
   - maker
 ---
-# Changing release channels for model-driven apps (NDA)
+# Changing release channels for model-driven apps
 
 The release channel affects the features that are shown to a user. When the monthly channel is enabled for an environment, makers need to validate that their customizations work with each monthly release. This page outlines different approaches for a maker.
 
@@ -25,7 +25,7 @@ The release channel for model-driven apps can be changed in a few different ways
 1. Environment channel
 1. Browser session channel
 
-Environment channel can be set using the Power Platform Admin Center or through API calls.
+Environment channel can be set using the Power Platform Admin Center or through WebApi calls.
 
 > Note: When the release channel is changed on the environment level, a user will need to refresh twice to take effect. The first refresh will trigger a background update of feature configuration to a local cache. The second refresh will use the feature configuration local cache.
 
@@ -33,7 +33,7 @@ Browser session channel can be applies using a URL parameter so is a temporary o
 
 ## Changing the environment channel
 
-Power Platform Admin Center provides a UI that allows an easy way to change the environment channel. Admins can open **Settings** > **Product** > **Behavior** and change the **Model-driven app release channel**. Click **Save** in the bottom right of the page. This is currently hidden and is enabled by request until the public announcement.
+Power Platform Admin Center provides a UI that allows an easy way to change the environment channel. Admins can open **Settings** > **Product** > **Behavior** and change the **Model-driven app release channel**. Click **Save** in the bottom right of the page.
 
 ![PPAC settings behavior change channel](media/model-app-channels/ppac-settings-behavior-change-channel.png)
 
@@ -44,14 +44,14 @@ Starting with weekly release 2305.1, an admin can use WebApi to update the organ
 | Semi-Annual | 0 | Default; follows normal twice yearly release waves |
 | Monthly | 1 |
 
-Set the current environment's channel to **Monthly** (```value = 1```)
+Set the current environment's channel to **Monthly** (```value = 1```).
 ```Javascript
 Xrm.WebApi.online.updateRecord('organization', 
     Xrm.Utility.getGlobalContext().organizationSettings.organizationId, 
     { 'releasechannel': 1 })
 ```
 
-Set the current environment's channel to **Semi-annual** (```value = 0```)
+Set the current environment's channel to **Semi-annual** (```value = 0```).
 ```Javascript
 Xrm.WebApi.online.updateRecord('organization', 
     Xrm.Utility.getGlobalContext().organizationSettings.organizationId, 
@@ -60,7 +60,7 @@ Xrm.WebApi.online.updateRecord('organization',
 
 ## Changing browser session channel
 
-A single browser session can be changed by adding the URL parameter ```&channel=<channelname>```. This applies to all navigation within the browser tab. It might not be copied to a new browser tab.
+A single browser session can be changed by adding the URL parameter ```&channel=<channelname>```. This URL parameter is used for all navigation within the browser tab. It might not be copied to a new browser tab.
 
 | Channel | URL parameter |
 | --- | --- |

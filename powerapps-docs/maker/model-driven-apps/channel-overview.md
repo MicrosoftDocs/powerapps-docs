@@ -1,5 +1,5 @@
 ---
-title: "Release Channel for your model-driven app (NDA)" 
+title: "Release Channel for your model-driven app | MicrosoftDocs" 
 description: "This article outlines how release channels enable features within a model driven app."
 ms.custom: ""
 ms.date: 06/27/2023
@@ -12,7 +12,7 @@ search.audienceType:
   - maker
 ---
 
-# Release Channels for your model driven app (NDA)
+# Release Channels for your model driven app
 
 The concept of multiple release channels comes from [Microsoft 365 channels](https://learn.microsoft.com/deployoffice/updates/overview-update-channels) and provides customer admins with a choice of how often end user impacting features are released.
 
@@ -27,7 +27,7 @@ The following table provides a comparison of **Monthly Channel** and **Semi-Annu
 
 Security and non-end user impacting changes continue to be delivered with the weekly releases and changes outlined in [Unified Interface Weekly Release Notes](/power-platform/released-versions/powerapps#all--microsoft-unified-interface-versions).
 
-Environment admins use Power Platform Admin Center to select the channel for the org. The existing cadence of twice-yearly release waves is called the "Semi-Annual channel" and is the default for all existing orgs. The new "Monthly channel" option enables GA-ready features to be turned on each month with a four week preview/notification period to allow customer validation with existing customizations.
+Environment admins use the Power Platform Admin Center to select the channel for the org. The existing cadence of twice-yearly release waves is called the "Semi-Annual channel" and is the default for all existing orgs. The new "Monthly channel" option enables GA-ready features to be turned on each month with a four week preview/notification period to allow customer validation with existing customizations.
 
 The key idea is that GA-ready end user impacting features release monthly instead of waiting for the twice-yearly release cadence. The same number of features are delivered in 12 smaller releases instead of two larger releases.
 
