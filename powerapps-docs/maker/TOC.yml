@@ -282,6 +282,8 @@
         href: ./canvas-apps/ai-overview.md
       - name: Create an app from conversations
         href: ./canvas-apps/ai-conversations-create-app.md
+      - name: Continue editing your app with Copilot
+        href: ./canvas-apps/ai-edit-app.md
     - name: Create an app using data
       items:
       - name: From Microsoft Dataverse
@@ -2541,6 +2543,8 @@
     href: ./common/transparency-note.md
   - name: Transparency note for building apps through conversation
     href: ./common/transparency-note-build-apps-conversation.md     
+  - name: Transparency notes for continue to edit your app with Copilot
+    href: ./common/transparency-notes-copilot-panel.md   
 - name: Resources
   items:
   - name: Blog

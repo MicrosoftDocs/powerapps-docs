@@ -16,5 +16,9 @@ ms.reviewer: mduelae
 
 [!INCLUDE[transparency-note-features](../../includes/transparency-note-features.md)]
 
+
 - [Transparency note for building apps through conversation](transparency-note-build-apps-conversation.md)
 - [Build apps through conversation (preview)](../canvas-apps/ai-conversations-create-app.md)
+- [Transparency notes for continue to edit your app with Copilot](transparency-notes-copilot-panel.md)
+- [Continue editing your app with Copilot (preview)](../canvas-apps/ai-edit-app.md)
+
