@@ -34,7 +34,9 @@ The AI assistant is available from the Power Apps home screen. You can tell the 
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in process of rolling out, and may not be available in your region yet.
-> - This capability may be subject to usage limits or capacity throttling.
+> - This capability  may be subject to usage limits or capacity throttling.
+> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Transparency notes for Power Apps](../common/transparency-note.md)
+
 
 
 ## Prerequisites
@@ -89,6 +91,16 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 
 3. You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room. When you're ready to create your app, select **Create app**.
 
- 
+### See also
+
+[AI Copilot overview (preview)](ai-overview.md)
+
+[Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
+
+[Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
+
+[Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai) 
+
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

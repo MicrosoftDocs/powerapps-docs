@@ -101,11 +101,21 @@ Use the other properties or move the control on the screen to set position and s
 
 ## See also
 
+[AI Copilot overview (preview)](ai-overview.md)
+
 [Power Virtual Agents preview quickstart (preview)](/power-virtual-agents/preview/quickstart)
 
 [AI-based boosted conversations overview (preview)](/power-virtual-agents/nlu-gpt-overview)
 
 [Use the Copilot control](add-ai-copilot.md)
+
+[Build apps through conversation (preview)](ai-conversations-create-app.md)
+
+
+
+
+
+ 
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
