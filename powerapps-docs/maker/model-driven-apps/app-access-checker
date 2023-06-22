@@ -1,0 +1,22 @@
+# App Access Checker
+
+How to use App access checker
+- Admin / Customizers can use this tool to search apps based on userid / email address.
+- Launch this diagnostics page in your browser by typing https://<orgURL>/WebResources/msdyn_AppAccessChecker.html
+- Enter UserId or email address in Search Field.
+
+# Issues Addressed by App access checker
+
+App access checker tool helps to identify 
+
+- If an app is visible to the user or not.
+- Reason why app is visible or not.
+- If user has required license or not.
+- To have an access to the app, user should have 
+  1. create / edit privilege on app module
+  2. read privilege + role association
+  3. read privilege + team association with user + team associated with role
+  4. For sales and svc apps, user must have license assigned as well
+
+# Examples
+1. :::image type="content" source="media/share-model-driven-app/user-can-view-apps.png" alt-text="Assign security roles to app":::
