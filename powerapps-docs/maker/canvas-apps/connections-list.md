@@ -167,6 +167,7 @@ When your app is republished and shared, then end-users won't have access to the
 4. Action based connectors limit based on the specific API being used in the application. 
 5. Warnings are still enabled in sharing. The warning around implicitly shared connections still warns while in private preview. However, your connection with this feature is secure – despite the warning.
 6. Publishing to an entire tenant, as opposed to specific groups or individuals isn't supported.  
+7. There is a known issue when importing an implicitly shared secure connection via a connection reference.  The security is not set properly in the target enviroment. 
 
 ### Windows Authentication
 
