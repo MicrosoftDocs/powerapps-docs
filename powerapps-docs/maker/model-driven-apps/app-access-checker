@@ -36,4 +36,4 @@ How to use App access checker
 1. If Page shows that User and App are associated to any common roles and if you notice that User is not associated to that role, then Please check if user is part of any team and if that team is associated with that role.
 
 # Limitation
-- It will not show Details for Outlook App as it is visible only to administrators.
+- It will not show Details for Outlook App as it is only visible to administrators.
