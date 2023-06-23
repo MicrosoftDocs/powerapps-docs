@@ -213,7 +213,7 @@ This quick start sample shows a simple approach to create a Visual Studio projec
 
 For a more complete example that demonstrates recommended design patterns, review the [WebAPIService class library (C#)](samples/webapiservice.md). This is the project we use for our [Web API Data operations Samples (C#)](web-api-samples-csharp.md). It demonstrates:
 
-- Managing Dataverse [service protection limits](../../api-limits.md) with the .NET resilience and transient fault handling library [Polly](https://github.com/App-vNext/Polly).
+- Managing Dataverse [service protection API limits](../api-limits.md) with the .NET resilience and transient fault handling library [Polly](https://github.com/App-vNext/Polly).
 - Managing an [HttpClient](/dotnet/api/system.net.http.httpclient) in .NET using [IHttpClientFactory](/dotnet/api/system.net.http.ihttpclientfactory).
 - Using configuration data to manage the behavior of the client.
 - Managing errors returned by Dataverse Web API.
