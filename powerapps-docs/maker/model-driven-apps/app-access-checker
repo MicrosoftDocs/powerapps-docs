@@ -19,10 +19,10 @@ App access checker tool helps to identify
   4. For sales and svc apps, user must have license assigned as well
 
 # Examples
-1. :::image type="content" source="media/share-model-driven-app/user-can-view-apps.png" alt-text="Assign security roles to app":::
-1. :::image type="content" source="media/share-model-driven-app/user-no-access.png" alt-text="Assign security roles to app":::
-1. :::image type="content" source="media/share-model-driven-app/user-access-role.png" alt-text="Assign security roles to app":::
-1. :::image type="content" source="media/share-model-driven-app/user-access-role-2.png" alt-text="Assign security roles to app":::
-1. :::image type="content" source="media/share-model-driven-app/user-no-license-access.png" alt-text="Assign security roles to app":::
-1. :::image type="content" source="media/share-model-driven-app/user-no-security-access.png" alt-text="Assign security roles to app":::
-1. :::image type="content" source="media/share-model-driven-app/user-yes-security-no-license.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/app-access-checker/user-can-view-apps.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/app-access-checker/user-no-access.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/app-access-checker/user-access-role.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/app-access-checker/user-access-role-2.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/app-access-checker/user-no-license-access.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/app-access-checker/user-no-security-access.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/app-access-checker/user-yes-security-no-license.png" alt-text="Assign security roles to app":::
