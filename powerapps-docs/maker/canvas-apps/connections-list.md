@@ -25,7 +25,7 @@ A connector may provide **tables** of data or **actions**. Some connectors provi
 
 ## Tables
 
-If your connector provides tables, you add your data source and then select the table in the data source that you want to manage. Power Apps both retrieves table data into your app and updates data in your data source automatically for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
+If your connector provides tables, you add your data source, and then select the table in the data source that you want to manage. Power Apps both retrieve table data into your app and updates data in your data source automatically for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
 
  ![Plain data source Items property.](./media/connections-list/ItemPropertyPlain.png)
 
@@ -121,12 +121,12 @@ Power Apps now has full preview support for **[Secure implicit connections](work
 > **Secure implicit connections** is now **On** by default for new apps.
 
 #### Notification to update your apps
-If you have applications that may be upgraded to use this feature then you will see a message on the Apps page. It will indicate the number of apps that need your attention.  
+If you have applications that may be upgraded to use this feature then you'll see a message on the Apps page. It indicates the number of apps that need your attention.  
 
    > [!div class="mx-imgBorder"]
    > ![Notification to update your apps.](./media/connections-list/attention-alert.png)
 
-Select the link and it will open a side panel that will list all of the apps that need attention.  
+Select the link and it opens a side panel that will list all of the apps that need attention.  
 
    > [!div class="mx-imgBorder"]
    > ![Side panel.](./media/connections-list/app-needs-attention.png)
@@ -163,8 +163,8 @@ When your app is republished and shared, then end-users won't have access to the
 #### Limitations
 
 1. All types of implicitly shared connections work such as action and tabular.
-2. Server and database names are hidden in network traces but visible in the consent dialog. Column names are not hidden.
-3. For tabular connectors, we only limit CRUD actions such as Get, Post, Put, or Delete. If you have permissions to **Put** then you have access to **Post**.
+2. Server and database names are hidden in network traces but visible in the consent dialog. Column names aren't hidden.
+3. For tabular connectors, we only limit CRUD actions such as Get, Post, Put, or Delete. If you have permissions to **Put**, then you have access to **Post**.
 4. Action based connectors limit based on the specific API being used in the application. 
 5. Warnings are still enabled in sharing. The warning around implicitly shared connections still warns while in private preview. However, your connection with this feature is secure – despite the warning.
 6. Publishing to an entire tenant, as opposed to specific groups or individuals isn't supported.  
@@ -199,7 +199,7 @@ When users open an app that uses connectors for the first time, they'll see a "c
 
 1. To facilitate manual end-user authentication, when needed.
 
-For some connections, Power Platform can automatically authenticate a user to access a data source. However, if the automatic sign-in fails, this dialog prompts users to fix a connection by manually signing in. Power Platform can only attempt automatic sign-in for a connection when a data source pre-authorizes Microsoft’s Azure API connections service principal, granting it permission to perform single sign-on for a user when a connection is created. For more information on single sign-on, see [What is single sign-on (SSO)?](/azure/active-directory/manage-apps/what-is-single-sign-on)
+For some connections, Power Platform can automatically authenticate a user to access a data source. However, if the automatic sign-in fails, this dialog prompts users to fix a connection by manually signing in. Power Platform can only attempt automatic sign-in for a connection when a data source preauthorizes Microsoft’s Azure API connections service principal, granting it permission to perform single sign-on for a user when a connection is created. For more information on single sign-on, see [What is single sign-on (SSO)?](/azure/active-directory/manage-apps/what-is-single-sign-on)
 
 The following image is an example of the connection consent dialog for an app connecting to a SharePoint site.  
 
@@ -219,10 +219,10 @@ For select connectors, admins can suppress this dialog, and consent on behalf of
 Microsoft Power Platform is only able to suppress the consent dialog for connections to data sources where:
 
 1. There isn’t an obligation by the data source to show an explicit consent UI.
-1. The data source pre-authorizes Microsoft’s Azure API connections service principal to enable single-sign-on.
+1. The data source preauthorizes Microsoft’s Azure API connections service principal to enable single-sign-on.
 1. An admin configures an app to suppress the consent for the preceding connections.
 
-The pre-authorization of Microsoft’s Azure API connections service principal exists for Microsoft's first-party data sources, and may be configured by custom applications registered in an Azure AD tenant that are used by custom connectors. An admin manages consent suppression on a per-app basis (as opposed to connector basis), so suppression is managed at the most granular app experience level&mdash;this level of granularity prevents consent suppression for an organization’s "approved apps" from inadvertently suppressing consent for apps that aren't approved or reviewed.
+The preauthorization of Microsoft’s Azure API connections service principal exists for Microsoft's first-party data sources, and may be configured by custom applications registered in an Azure AD tenant that are used by custom connectors. An admin manages consent suppression on a per-app basis (as opposed to connector basis), so suppression is managed at the most granular app experience level&mdash;this level of granularity prevents consent suppression for an organization’s "approved apps" from inadvertently suppressing consent for apps that aren't approved or reviewed.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
 
