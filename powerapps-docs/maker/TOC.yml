@@ -75,6 +75,8 @@
         href: ../user/screen-reader.md
       - name: Keyboard shortcuts
         href: ../user/keyboard-shortcuts.md
+      - name: About dialog
+        href: ../user/about-dialog.md
     - name: Work with rows 
       items:
       - name: Create a row
