@@ -18,17 +18,21 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-After a plug-in is written and compiled, it must be registered with the event framework to execute when a specific entity type (table) and operation (message) is processed by Dataverse. To register a plug-in with the Dataverse event framework requires use of a tool - Plug-in Registration tool (PRT), or the Power Platform Tools extension for Visual Studio. 
+After a plug-in is written and compiled, it must be registered with the event framework to execute when a specific entity type (table) and operation (message) is processed by Dataverse. To register a plug-in with the Dataverse event framework requires use of a tool - Plug-in Registration tool (PRT), or the Power Platform Tools extension for Visual Studio.
 
-The PRT specializes in object registrations and editing those registrations. This article describes how to register a plug-in assembly and step using the Plug-in Registration tool.
+The PRT creates Dataverse object registrations and supports editing those registrations. This article describes how to register a plug-in assembly and step using the Plug-in Registration tool.
 
-The Visual Studio extension provides a more feature rich development environment and covers the entire coding, deployment, and debugging/profiling flow. For information about using the Power Platform Tools extension for Visual Studio see [quickstart](tools/devtools-create-plugin.md).
+The Visual Studio extension provides a more feature rich development environment and covers the entire coding, deployment, and debugging/profiling development process. For information about using the Power Platform Tools extension for Visual Studio, see the [quickstart](tools/devtools-create-plugin.md).
 
-## Plug-in Registration tool
+More information: [Event framework](event-framework.md)
 
-The Plug-in Registration tool (PRT) enables you to register your plug-in assemblies, and other types of objects, with Dataverse. PRT is one of several Dataverse tools available for download from NuGet.org. Follow the instructions in [Dataverse development tools](download-tools-nuget.md) to download PRT and optionally other development tools.
+## About the Plug-in Registration tool
+
+The Plug-in Registration tool (PRT) supports registration of plug-in assemblies, message processing steps, and other types of objects with Dataverse. PRT is one of several Dataverse tools available for download from [NuGet.org](https://www.nuget.org). Follow the instructions in [Dataverse development tools](download-tools-nuget.md) to download PRT and optionally other development tools.
 
 After you download the PRT, follow the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) instructions to connect the tool to your target Dataverse environment where your plug-in is to be registered.
+
+:::image type="content" source="media/dv_plugin_registration_tool.png" alt-text="The Plug-in Registration tool main window.":::
 
 ## Register an assembly
 
@@ -242,28 +246,28 @@ You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** 
 
 With the Plug-in Registration tool running and logged into the target Dataverse environment, you can proceed to disable or enable plug-in steps. Disabling a step effectively turns off the plug-in from executing when Dataverse processes the entity and message combination specified in the step registration.
 
+> [!IMPORTANT]
+> Disabling a plug-in can negatively affect the functionality of your app, a solution, or the Dataverse system. Make sure you understand the implications before you proceed.
+
 To disable or enable a registered plug-in step:
 
 1. Expand the target plug-in assembly node in the assembly view until you see the desired step registration node.
 1. Choose the step, and then choose **Enable** or **Disable** in either the context menu or the toolbar.
 
-|Disable a plug-in step|Enable a plug-in step|
-|--|---|
-|:::image type="content" source="media/enable-step-prt.png" alt-text="Disable a step using the Plug-in Registration tool.":::
-|:::image type="content" source="media/enable-step-prt.png" alt-text="Enable a step using the Plug-in Registration tool.":::|
+:::image type="content" source="media/disable-step-prt.png" alt-text="Disable a step using the Plug-in Registration tool.":::
 
 You can also disable or enable steps in the legacy Dataverse Solution Explorer user interface using the **Activate** and **Deactivate** command options.
 
-![Changing a plug-in step in legacy Solution Explorer.](media/step-activate-deactivate-commands-solution-explorer.png)
+:::image type="content" source="media/step-activate-deactivate-commands-solution-explorer.png" alt-text="Changing a plug-in step in legacy Solution Explorer.":::
 
 ### Change user impersonation for a step
 
-With the Plug-in Registration tool running and logged into the target Dataverse environment, you can proceed to make changes to an existing step registration. In this section, we will discuss changing the user on whos behalf the plug-in will perform its operations. Meaning, the effective user that is performing the data operations initiated by the plug-in. By default, the calling user (the user that invoked an operation in Dataverse) is the owner of said operations. However a different user can be specified in the step registration. You will need to have the System Administrator or System Customizer role to perform this operation.
+With the Plug-in Registration tool running and logged into the target Dataverse environment, you can proceed to make changes to an existing step registration. In this section, we will discuss changing the user on whos behalf the plug-in will perform its operations. Meaning, the effective user that is performing the data operations initiated by the plug-in. By default, the calling user (the user that invoked an operation in Dataverse) is the owner of said operations. However a different user can be specified in the step registration. You will need to have the System Administrator or System Customizer security role to perform this operation.
 
 To change the user in a registered plug-in step:
 
 1. Expand the target plug-in assembly node in the assembly view until you see the desired (Step) registration node.
-1. Select the step, and then select **Update** in either the context menu or the toolbar.
+1. Choose the step node, and then choose **Update** in either the context menu or the toolbar.
 1. Choose a different user from the drop-down list of available users next to the **Run in User's Context** label.
 1. Choose **Update Step**.
 
