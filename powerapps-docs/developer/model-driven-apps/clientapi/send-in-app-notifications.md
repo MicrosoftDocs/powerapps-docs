@@ -1,7 +1,7 @@
 ---
 title: "Send in-app notifications within model-driven apps" 
 description: Learn how to configure notifications in model-driven apps by using a client API.
-ms.date: 05/22/2023
+ms.date: 06/23/2023
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
@@ -20,13 +20,13 @@ contributors:
 
 Developers of model-driven apps can configure notifications to be displayed to app users as a toast or within the notification center. Your model-driven app automatically polls the system for new notifications and displays them to the user. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
 
-Notifications are user-specific. Each notification is intended for a single user, identified as the recipient when the notification is sent. Sending a notification to a team is not supported. If a notification needs to be sent to multiple users, individual notifications must be created and sent for each recipient. 
+Notifications are user-specific. Each notification is intended for a single user, identified as the recipient when the notification is sent. Sending a notification to a team isn't supported. If you need to send notifications to multiple users, you must create notifications for each individual user.
 
 This article outlines the steps for how to send in-app notifications to a specific user. To see how these notifications appear in applications, see [In-app notifications in model-driven apps](/powerapps/user/notifications).
 
 ## Enable the in-app notification feature
 
-To use the in-app notification feature, you need to enable the **In-app notifications** setting.  This setting is stored within the model-driven app.
+To use the in-app notification feature, you need to enable the **In-app notifications** setting. This setting is stored within the model-driven app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -36,7 +36,7 @@ To use the in-app notification feature, you need to enable the **In-app notifica
 
 1. Open **Settings** and switch to **Features**.
 
-1. Enable "In-app notifications".
+1. Enable **In-app notifications**.
 
     > [!div class="mx-imgBorder"]
     > ![Custom page as main page](media/send-in-app-notifications/app-designer-settings-enable-in-app-notifications.png "Custom page as main page")
@@ -162,7 +162,7 @@ Notifications sent using the `SendAppNotification` message are stored in the [No
 |Display Name|Schema Name|Description|
 |---|---|---|
 |**Title**|`Title`|The title of the notification.|
-|**Owner**|`OwnerId`|The user who receives the notification. This must be a user and not a team because notifications are only read for a user. |
+|**Owner**|`OwnerId`|The *user* who receives the notification. While this column can be set to either a user or team, you must only set this to a user. The notification can't be set to a team.|
 |**Body**|`Body`|Details about the notification.|
 |IconType|`IconType`|The list of predefined icons. The default value is `Info`. For more information, go to [Changing the notification icon](#changing-the-notification-icon) later in this article.|
 |**Toast Type**|`ToastType`|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this article.|
