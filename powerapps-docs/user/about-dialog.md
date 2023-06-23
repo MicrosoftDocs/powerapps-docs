@@ -29,7 +29,7 @@ This article explains the various parts of the **About** dialog for model-driven
 
 
 ## See also
-* [Release channel overview](../maker/model-driven-apps/channel-overview.md)
-* [Changing release channel](../maker/model-driven-apps/channel-change.md)
+* [Release Channels for your model driven app](../maker/model-driven-apps/channel-overview.md)
+* [Changing release channels for model-driven apps](../maker/model-driven-apps/channel-change.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
