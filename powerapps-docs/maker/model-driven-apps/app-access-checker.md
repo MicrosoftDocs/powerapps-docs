@@ -20,18 +20,11 @@ Issues found by the app access checker:
 - The reason why an app is visible or not visible to the user.
 - If the user has the required license.
 
-To be able to view and play an app, the user must have:
-
-- Create and edit privileges on the app module table.
-- Read privilege and security role association. <!-- Read privilege on what table? What does security role association mean? -->
-- Read privilege, team association with user, and team associated with security role. <!-- Read privilege on what table? What does team association with user and team association with role mean?  -->
-- For Dynamics for Sales and Dynamics for Service apps, the user must have that licensing assigned as well.
-
 ## How to use the app access checker
 
 Power Platform admins and makers can use the app access checker to search apps based on userid or email address.
 
-Open the diagnostics page in your browser by typing https://*environmentURL*/WebResources/msdyn_AppAccessChecker.html, such as *https://contoso.crm.dynamics.com/WebResources/msdyn_AppAccessChecker.html*. Then enter the user ID or email address in the box and then select **Search**. <!-- How do you find the User ID? -->
+Open the diagnostics page in your browser by typing https://*environmentURL*/WebResources/msdyn_AppAccessChecker.html, such as *https://contoso.crm.dynamics.com/WebResources/msdyn_AppAccessChecker.html*. Then enter the user principal name(UPN) or email address in the box and then select **Search**.
 
 ## How to interpret the results
 
@@ -41,10 +34,9 @@ Open the diagnostics page in your browser by typing https://*environmentURL*/Web
 - **License**.
    - If the user has appropriate licensing to play the app, **Yes** is displayed.
 - **Security**.
-   - If user has create or write privilege on the app module table, Yes is displayed. If the user isn't associated to one or more security roles assigned to the app, check if the user is member of a team and whether that team is associated with that security role.
+   - If the user has create or write privilege on the app module table, Yes is displayed. If the user isn't associated to one or more security roles assigned to the app, check if the user is member of a team and whether that team is associated with that security role.
 
 ### Example results
-<!-- Images below have what look like what might be real people's names. Are they approved fictitious names? -->
 
 User has access to all visible apps in the environment.
 :::image type="content" source="media/app-access-checker/user-can-view-apps.png" alt-text="User has access to all visible apps in the environment" lightbox="media/app-access-checker/user-can-view-apps.png":::
@@ -68,4 +60,4 @@ If **Security** is **Yes** and **License** is **No** or **Unknown** the issue ne
 
 ## Limitation
 
-- It will not show Details for Outlook App as it is only visible to administrators.
+- It will not show Details for the Outlook App as it is only visible to administrators.
