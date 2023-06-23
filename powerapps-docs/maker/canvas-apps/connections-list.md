@@ -56,7 +56,7 @@ If you need to handle custom data updates for action connectors, build a formula
 
 For more information about how to customize your formula for custom updates, see these articles:
 
-[Patch](functions/function-patch.md)<br>[Collect](functions/function-clear-collect-clearcollect.md)<br>[Update](functions/function-update-updateif.md)
+[Patch](functions/function-patch.md)<br />[Collect](functions/function-clear-collect-clearcollect.md)<br />[Update](functions/function-update-updateif.md)
 
 > [!NOTE]
 > To work with dynamic schema, you can use an **experimental** feature called **Dynamic schema**. Dynamic schema refers to the possibility that the same action may return a different table with different columns. Conditions that may cause the columns in the tables to differ include the action input parameters, the user or role that's executing the action, and the group in which the user is working, among others. For example, SQL Server stored procedures may return different columns if run with different inputs, or an Azure DevOps instance may use custom fields that aren't available by default. For working with dynamic schema, the [connector documentation](/connectors) shows **The outputs of this operation are dynamic.** as the return value.
