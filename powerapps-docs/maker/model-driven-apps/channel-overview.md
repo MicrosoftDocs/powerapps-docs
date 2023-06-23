@@ -35,14 +35,23 @@ The Microsoft 365 products have seen a consistently higher user satisfaction for
 
 ## Monthly release schedule
 
-The monthly release is the first weekly release of each month. The release would match ```YYMM.1``` where ```YY``` is the release year and ```MM``` is the release month. The monthly release notes are published to [Released versions for Power Apps](/power-platform/released-versions/powerapps) four weeks before the release reaches stations 2. Station 2 is used because it's the first production stations for customer orgs and Station 1 is used for customer early validation.
+Model-driven apps release updates every week which are gradually rolled out to groups of regions over several weeks. Below are the region groups with each group happening in successive weekend updates.
 
-| Monthly Release | Doc Published | Feature Release | Station 1 | Station 2 | Station 3 | Station 4 | Station 5 | Station 6 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| May 2023 | Apr 14 | 2305.1 | May 5 | May 12 | May 19 | May 26 | Jun 2 | Jun 9 |
-| June 2023 |  May 12 | 2306.1 | Jun 9 | Jun 16 | Jun 23 | Jun 30 | Jul 7 | Jul 14 |
-| July 2023 | Jun 16 | 2307.1 | Jul 7 | Jul 14 | Jul 21 | Jul 28 | Aug 4 | Aug 11 |
-| August 2023 | Jul 14 | 2308.1 | Aug 11 | Aug 18 | Aug 25 | Sep 1 | Sep 8 | Sep 15 |
+1. First Release Environment (FRE) 
+1. Canada, South America, India, France, South Africa, Germany, Switzerland, Norway, Korea, Singapore
+1. United Arab Emirates, Japan, Asia Pacific, Great Britain, Australia
+1. Europe
+1. United States
+
+The monthly release is the first weekly release of each month. The release would match ```YYMM.1``` where ```YY``` is the release year and ```MM``` is the release month. The monthly release notes are published to [Released versions for Power Apps](/power-platform/released-versions/powerapps) four weeks before the release reaches the region group 2. Region group 2 is used because it's the first region group for production customer orgs and region group 1 is used for customer early validation.
+
+| Monthly Release | Doc Published | Feature Release | Group 1 | Group 2 | Group 3 | Group 4 | Group 5 | 
+| --- | --- | --- | --- | --- | --- | --- | --- | 
+| May 2023 | Apr 14 | 2305.1 | May 5 | May 12 | May 19 | May 26 | Jun 2 |
+| June 2023 |  May 12 | 2306.1 | Jun 9 | Jun 16 | Jun 23 | Jun 30 | Jul 7 |
+| July 2023 | Jun 16 | 2307.1 | Jul 7 | Jul 14 | Jul 21 | Jul 28 | Aug 4 |
+| August 2023 | Jul 14 | 2308.1 | Aug 11 | Aug 18 | Aug 25 | Sep 1 | Sep 8 |
+| September 2023 | Aug ? | 2309.1 | Sep 8 | Sep 15 | Sep 22 | Sep 29 | Oct 6 |
 
 ## Related links
 
