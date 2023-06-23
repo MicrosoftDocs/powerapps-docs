@@ -20,7 +20,7 @@ contributors:
 
 After a plug-in is written and compiled, it must be registered with the event framework to execute when a specific entity type (table) and operation (message) is processed by Dataverse. To register a plug-in with the Dataverse event framework requires use of a tool - Plug-in Registration tool (PRT), or the Power Platform Tools extension for Visual Studio.
 
-The PRT creates Dataverse object registrations and supports editing those registrations. This article describes how to register a plug-in assembly and step using the Plug-in Registration tool.
+The PRT creates Dataverse object registrations and supports editing those registrations. This article describes how to register a plug-in assembly and step, add an assembly to a solution, and perform other common operations using the Plug-in Registration tool.
 
 The Visual Studio extension provides a more feature rich development environment and covers the entire coding, deployment, and debugging/profiling development process. For information about using the Power Platform Tools extension for Visual Studio, see the [quickstart](tools/devtools-create-plugin.md).
 
@@ -30,7 +30,7 @@ More information: [Event framework](event-framework.md)
 
 The Plug-in Registration tool (PRT) supports registration of plug-in assemblies, message processing steps, and other types of objects with Dataverse. PRT is one of several Dataverse tools available for download from [NuGet.org](https://www.nuget.org). Follow the instructions in [Dataverse development tools](download-tools-nuget.md) to download PRT and optionally other development tools.
 
-After you download the PRT, follow the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) instructions to connect the tool to your target Dataverse environment where your plug-in is to be registered.
+After you download the PRT, follow the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#register-plug-in) instructions to connect the tool to your target Dataverse environment where your plug-in is to be registered.
 
 :::image type="content" source="media/dv_plugin_registration_tool.png" alt-text="The Plug-in Registration tool main window.":::
 
@@ -95,7 +95,7 @@ When you register a step, there are several registration options available to yo
 |**Filtering Attributes**|With the `Update` or `OnExternalUpdated` message, when you set the **Primary Entity**, filtering columns limits the execution of the plug-in to cases where the selected columns are included in the update. Setting this field is a best practice for performance. |
 |**Event Handler**|This field value will be populated based on the name of the assembly and the plug-in class. |
 |**Step Name**|The name of the step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
-|**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this field value to a user who has these privileges. More information: [Impersonate a user](impersonate-a-user.md) |
+|**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this field value to a user who has these privileges. More information: [Set user impersonation for a step](#set-user-impersonation-for-a-step) |
 |**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they'll be applied from lowest to highest. <br/> **Note**: You should set this to control the order in which plug-ins are applied in the stage. It's not recommended to simply accept the default value. The actual execution order of the plugins with the same Execution Order value (for the same stage, table and message) isn't guaranteed and can be random.|
 |**Description**|A description for step. This value is pre-populated but can be overwritten.|
 
@@ -204,6 +204,19 @@ If you encounter this, you should usually select **OK** to bring the assembly in
 
 Similarly, you should note that removing the assembly from the solution won't remove any steps that depend on it.
 
+### Set user impersonation for a step
+
+With the Plug-in Registration tool running and logged into the target Dataverse environment, you can proceed to set or change a step registration. In this section, we will discuss changing the user on whos behalf the plug-in will perform its operations. Meaning, the effective user that is performing the data operations initiated by the plug-in. By default, the calling user (the user that invoked an operation in Dataverse) is the owner of said operations. However a different user can be specified in the step registration. You will need to have the System Administrator or System Customizer security role to perform this operation.
+
+To set the user in a plug-in step:
+
+1. Expand the target plug-in assembly node in the assembly view until you see the desired (Step) registration node.
+1. Choose the step node, and then choose **Update** in either the context menu or the toolbar.
+1. Choose a different user from the drop-down list of available users next to the **Run in User's Context** label.
+1. Choose **Update Step**.
+
+More information: [Impersonate a user](impersonate-a-user.md)
+
 ## Update an assembly
 
 When you change and rebuild an assembly that you've previously registered, you'll need to update it. See the [Update the plug-in assembly registration](tutorial-update-plug-in.md#update-the-plug-in-assembly-registration) step in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md) for the steps.
@@ -229,19 +242,6 @@ You can unregister or disable plug-ins and their components using the Plug-in Re
 > [!IMPORTANT]
 > It is no longer possible to unregister or disable Microsoft or out-of-box system plug-ins and steps. Previously, you were able to unregister or disable some of the Microsoft.* and other out-of-box system plug-ins. We have changed this behavior to no longer allow this. The change in functionality was made because unregistering or disabling these plug-ins or steps can cause product features not to work as expected. If you have a need to unregister or disable such a plug-in or step, file a Microsoft support request.
 
-### Unregister components
-
-The PRT provides commands to unregister assemblies, types, steps, and images. See the [Unregister assembly, plug-in, and step](tutorial-update-plug-in.md#unregister-assembly-plug-in-and-step) instructions in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md) for the procedure.
-
-These are delete operations on the [PluginAssembly](reference/entities/pluginassembly.md), [PluginType](reference/entities/plugintype.md), [SdkMessageProcessingStep](reference/entities/sdkmessageprocessingstep.md), and [SdkMessageProcessingStepImage](reference/entities/sdkmessageprocessingstepimage.md) tables.
-
-You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** in the solution explorer to achieve the same result. In the figure below, a custom solution named Common Data Service Default Solution is shown.
-
-![Deleting step in solution explorer.](media/delete-sdk-message-processing-step.png)
-
-> [!NOTE]
-> You cannot delete (unregister) any **Plug-in Assemblies** while existing **Sdk Message Processing Steps** depend on them. Entity images are not available to be deleted separately, but they will be deleted when any steps that use them are deleted.
-
 ### Disable or enable a plug-in step
 
 With the Plug-in Registration tool running and logged into the target Dataverse environment, you can proceed to disable or enable plug-in steps. Disabling a step effectively turns off the plug-in from executing when Dataverse processes the entity and message combination specified in the step registration.
@@ -260,18 +260,18 @@ You can also disable or enable steps in the legacy Dataverse Solution Explorer u
 
 :::image type="content" source="media/step-activate-deactivate-commands-solution-explorer.png" alt-text="Changing a plug-in step in legacy Solution Explorer.":::
 
-### Change user impersonation for a step
+### Unregister components
 
-With the Plug-in Registration tool running and logged into the target Dataverse environment, you can proceed to make changes to an existing step registration. In this section, we will discuss changing the user on whos behalf the plug-in will perform its operations. Meaning, the effective user that is performing the data operations initiated by the plug-in. By default, the calling user (the user that invoked an operation in Dataverse) is the owner of said operations. However a different user can be specified in the step registration. You will need to have the System Administrator or System Customizer security role to perform this operation.
+The PRT provides commands to unregister assemblies, types, steps, and images. See the [Unregister assembly, plug-in, and step](tutorial-update-plug-in.md#unregister-assembly-plug-in-and-step) instructions in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md) for the procedure.
 
-To change the user in a registered plug-in step:
+These are delete operations on the [PluginAssembly](reference/entities/pluginassembly.md), [PluginType](reference/entities/plugintype.md), [SdkMessageProcessingStep](reference/entities/sdkmessageprocessingstep.md), and [SdkMessageProcessingStepImage](reference/entities/sdkmessageprocessingstepimage.md) tables.
 
-1. Expand the target plug-in assembly node in the assembly view until you see the desired (Step) registration node.
-1. Choose the step node, and then choose **Update** in either the context menu or the toolbar.
-1. Choose a different user from the drop-down list of available users next to the **Run in User's Context** label.
-1. Choose **Update Step**.
+You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** in the solution explorer to achieve the same result. In the figure below, a custom solution named Common Data Service Default Solution is shown.
 
-More information: [Impersonate a user](impersonate-a-user.md)
+![Deleting step in solution explorer.](media/delete-sdk-message-processing-step.png)
+
+> [!NOTE]
+> You cannot delete (unregister) any **Plug-in Assemblies** while existing **Sdk Message Processing Steps** depend on them. Entity images are not available to be deleted separately, but they will be deleted when any steps that use them are deleted.
 
 ## Next steps
 
