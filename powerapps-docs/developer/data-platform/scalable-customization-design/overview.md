@@ -13,7 +13,7 @@ search.audienceType:
 
 > [!NOTE]
 > This is the first in a series of articles about scalable customization design. While this content has been divided into separate articles, it presents a wholistic view of concepts, issues, and strategies surrounding the design of scalable customizations. Each article builds upon concepts established in preceding articles.
-> You can [download these articles as a single PDF document](/pdf?url=https://learn.microsoft.com/en-us/power-apps/developer/data-platform/scalable-customization-design/toc.json) if you want to read it offline.
+> You can download these articles as a single PDF document if you want to read it offline. Select the **Download PDF** link in the table of contents.
 
 Dataverse protects itself and its users from long running activities that could affect both the response times for the user making a request and the stability and responsiveness of the system for other users.
 
