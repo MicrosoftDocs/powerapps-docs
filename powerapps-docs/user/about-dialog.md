@@ -28,9 +28,8 @@ This article explains the various parts of the **About** dialog for model-driven
 - The **monthly channel** is the new, release cadence that happens once per month. The release for the monthly channel is shown after **Channel: Monthly** as a month and year. For example, in the screenshot provided, the monthly channel is May 2023.
 
 
-## Related links
-
-* [Release Channel Overview](../maker/model-driven-apps/channel-overview.md)
-* [Changing Release Channel](../maker/model-driven-apps/channel-change.md)
+## See also
+* [Release channel overview](../maker/model-driven-apps/channel-overview.md)
+* [Changing release channel](../maker/model-driven-apps/channel-change.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
