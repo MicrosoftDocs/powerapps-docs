@@ -169,6 +169,7 @@ When your app is republished and shared, then end-users won't have access to the
 5. Warnings are still enabled in sharing. The warning around implicitly shared connections still warns while in private preview. However, your connection with this feature is secure – despite the warning.
 6. Publishing to an entire tenant, as opposed to specific groups or individuals isn't supported.  
 7. There is a known issue when importing an implicitly shared secure connection via a connection reference. The security is not set properly in the target enviroment. 
+8. There is a known issue importing a solution using a service principal, causing import failure. A workaround is to share the connection with the service principal.
 
 ### Windows Authentication
 
