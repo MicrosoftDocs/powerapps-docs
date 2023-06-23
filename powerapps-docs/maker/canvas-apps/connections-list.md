@@ -175,7 +175,7 @@ This type of connection isn't secure because it doesn't rely on end-user authent
 
 ## Data sources in solutions
 
-Solutions are used for [application lifecycle management](/power-platform/alm/overview-alm) and provide additional capabilities for managing the lifecycle of **data sources**. If a canvas app is in a solution, [connection references](../data-platform/create-connection-reference.md) and [environment variables](../data-platform/environmentvariables.md) may be created to store information about the data sources. This ensures data sources can be changed or re-established when solutions are migrated to different environments. 
+Solutions are used for [application lifecycle management](/power-platform/alm/overview-alm) and provide other capabilities for managing the lifecycle of **data sources**. If a canvas app is in a solution, [connection references](../data-platform/create-connection-reference.md) and [environment variables](../data-platform/environmentvariables.md) may be created to store information about the data sources. This ensures data sources can be changed or re-established when solutions are migrated to different environments. 
 
 ## Rename data sources in apps
 
@@ -183,13 +183,13 @@ To learn about renaming data sources in an app, and the difference between tabul
 
 ## Connection consent dialog
 
-When users open an app that uses connectors for the first time, they'll see a "connection consent" dialog for the following purposes.
+When users open an app that uses connectors for the first time, they see a "connection consent" dialog for the following purposes.
 
 1. To inform users about the data sources accessed by the app.
 
 1. To outline the actions a connector may, or may not perform in an app. For example, for apps using the **Office 365 Users** connector, this could be the following.
 
-    - This app will be able to:
+    - This app is able to:
         - Read your full user profile
         - Read the full profile of all users
     - It won't be able to:
