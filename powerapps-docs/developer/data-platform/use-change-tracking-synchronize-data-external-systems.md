@@ -38,6 +38,10 @@ There are two ways to check whether change tracking is enabled for a table using
    ```http
    GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName&$filter=ChangeTrackingEnabled eq true
    ```
+   There is a set of system/out-of-the-box tables that is shipped with change tracking enabled, example Audit. You can use the following query to see the full list:
+   ```http
+   GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName&$filter=ChangeTrackingEnabled eq true and IsCustomEntity eq false&$select=LogicalName
+   ```
 
    More information: [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
 
