@@ -206,7 +206,7 @@ Similarly, you should note that removing the assembly from the solution won't re
 
 ### Set user impersonation for a step
 
-With the Plug-in Registration tool running and logged into the target Dataverse environment, you can proceed to set or change a step registration. In this section, we will discuss changing the user on whos behalf the plug-in will perform its operations. Meaning, the effective user that is performing the data operations initiated by the plug-in. By default, the calling user (the user that invoked an operation in Dataverse) is the owner of said operations. However a different user can be specified in the step registration. You will need to have the System Administrator or System Customizer security role to perform this operation.
+With the [Plug-in Registration tool](#about-the-plug-in-registration-tool) running and logged into the target Dataverse environment, you can proceed to set or change a step registration. In this section, we will discuss changing the user on whos behalf the plug-in will perform its operations. Meaning, the effective user that is performing the data operations initiated by the plug-in. By default, the calling user (the user that invoked an operation in Dataverse) is the owner of said operations. However a different user can be specified in the step registration. You will need to have the System Administrator or System Customizer security role to perform this operation.
 
 To set the user in a plug-in step:
 
@@ -244,7 +244,7 @@ You can unregister or disable plug-ins and their components using the Plug-in Re
 
 ### Disable or enable a plug-in step
 
-With the Plug-in Registration tool running and logged into the target Dataverse environment, you can proceed to disable or enable plug-in steps. Disabling a step effectively turns off the plug-in from executing when Dataverse processes the entity and message combination specified in the step registration.
+With the [Plug-in Registration tool](#about-the-plug-in-registration-tool) running and logged into the target Dataverse environment, you can proceed to disable or enable plug-in steps. Disabling a step effectively turns off the plug-in from executing when Dataverse processes the entity and message combination specified in the step registration.
 
 > [!IMPORTANT]
 > Disabling a plug-in can negatively affect the functionality of your app, a solution, or the Dataverse system. Make sure you understand the implications before you proceed.
