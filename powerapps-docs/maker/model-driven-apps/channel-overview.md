@@ -23,7 +23,7 @@ The following table provides a comparison of **Monthly Channel** and **Semi-Annu
 | Category | Monthly Channel | Semi-Annual Channel |
 | --- | --- | --- |
 | Recommended use | Provide your users with new end user impacting features only once a month and on a predictable schedule. | For users in your organization where more training and extensive testing are needed before rollout out new end user impacting features. | 
-| Release frequency | Once a month, on the first release for the month and following the weekly station rollout | Twice a year, starting early April and early October and following the weekly station rollout |
+| Release frequency | Once a month, on the first release for the month and following the gradual weekly rollout | Twice a year, starting early April and early October and following the gradual weekly rollout |
 
 Security and non-end user impacting changes continue to be delivered with the weekly releases and changes outlined in [Unified Interface Weekly Release Notes](/power-platform/released-versions/powerapps#all--microsoft-unified-interface-versions).
 
