@@ -1,6 +1,6 @@
 ---
-title: "Get started with Microsoft Dataverse Web API (C#) (Dataverse)| Microsoft Docs"
-description: "Learn how to access the Microsoft Dataverse Web API using the Microsoft Visual C# programming language"
+title: "Get started with Dataverse Web API (C#) (Dataverse)| Microsoft Docs"
+description: "Learn how to access the Dataverse Web API using the Microsoft Visual C# programming language."
 ms.date: 06/22/2023
 author: divkamath
 ms.author: dikamath
@@ -10,11 +10,11 @@ search.audienceType:
 contributors: 
   - JimDaly
 ---
-# Get started with Microsoft Dataverse Web API (C#)
+# Get started with the Dataverse Web API (C#)
 
 This section introduces some simple ways start accessing the Dataverse Web API using the C# programming language.
 
-- [Quick Start: Web API sample (C#)](quick-start-console-app-csharp.md), provides the quickest example of how to accomplish this, as all source code is simplified and provided in one file.
+- [Quick Start: Web API sample (C#)](quick-start-console-app-csharp.md), provides the quickest example of how to access data, as all source code is simplified and provided in one file.
 - [Quickstart: Blazor Server Web API sample (C#)](quick-start-blazor-server-app.md) shows how to create a web application that can connect to Dataverse and retrieve data using the Web API.
 
 
@@ -22,7 +22,7 @@ To learn more, please explore the [Web API Samples (C#)](web-api-samples-csharp.
   
 ## In this section
 
-[Quick Start: Web API sample](quick-start-console-app-csharp.md)
+[Quick Start: Web API sample](quick-start-console-app-csharp.md)  
 [Quickstart: Blazor Server Web API sample (C#)](quick-start-blazor-server-app.md)
 
 ### See also
