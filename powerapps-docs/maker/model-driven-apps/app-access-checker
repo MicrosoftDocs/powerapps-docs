@@ -20,3 +20,9 @@ App access checker tool helps to identify
 
 # Examples
 1. :::image type="content" source="media/share-model-driven-app/user-can-view-apps.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/share-model-driven-app/user-no-access.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/share-model-driven-app/user-access-role.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/share-model-driven-app/user-access-role-2.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/share-model-driven-app/user-no-license-access.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/share-model-driven-app/user-no-security-access.png" alt-text="Assign security roles to app":::
+1. :::image type="content" source="media/share-model-driven-app/user-yes-security-no-license.png" alt-text="Assign security roles to app":::
