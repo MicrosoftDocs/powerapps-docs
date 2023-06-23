@@ -31,8 +31,6 @@ One of the most fundamental concepts behind many of the challenges faced here is
 A common reason that problems can occur in this area is the lack of awareness of how customizations can affect transactions.
 
 Although the details of how this is done is beyond the scope of this topic, the most simple element to consider is that as Dataverse interacts with data in its database. SQL Server determines the appropriate locks to be taken by transactions on that data such as:
-- When retrieving a particular record, SQL Server takes a read lock on that record.
-- When retrieving a range of records, in some scenarios it can take a read lock on that range of records or the entire table.
 - When creating a record, it generates a write lock against that record.
 - When updating a record, it takes a write lock against the record.
 - When a lock is taken against a table or record, it’s also taken against any corresponding index records.
