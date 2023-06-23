@@ -6,7 +6,7 @@ ms.author: matp
 ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: how-to 
-ms.date: 06/13/2023
+ms.date: 06/23/2023
 ms.custom: template-how-to
 ---
 # Coauthoring in model-driven apps
@@ -40,13 +40,6 @@ When someone is adding or removing a page, all other makers will see it appearin
 :::image type="content" source="media/coauthoring2.png" alt-text="Sparkle graphic indicator appears when changes are made by other makers":::
 
 Once someone removes the page, it disappears for other makers in real-time.
-
-## Disable coauthoring
-
-1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments/), and select an environment.
-1. Select **Settings** > **Product** > **Features**. 
-1. Under **Coauthoring**, set the option, which lets people simultaneously edit model-driven apps together, to **Off**.
-1. Select **Save**.
 
 ## Limitations
 
