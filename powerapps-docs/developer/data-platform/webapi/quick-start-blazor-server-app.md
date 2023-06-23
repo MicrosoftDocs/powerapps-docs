@@ -204,7 +204,7 @@ Add the following below `"AllowedHosts": "*"` where `<your org>` represents the 
        .EnableTokenAcquisitionToCallDownstreamApi(new string[] { $"{dataverseBaseUri}user_impersonation" })
        .AddInMemoryTokenCaches();
    ```
-   <!-- xref link was causing build errors -->
+ 
    - The [MicrosoftIdentityWebApiAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi Method](/dotnet/api/microsoft.identity.web.microsoftidentitywebapiauthenticationbuilder.enabletokenacquisitiontocalldownstreamapi) adds support for the web app to acquire tokens to call an API. By passing the `user_impersonation` scope, the user is can consent to the capability to use the Dataverse Web API.
    - [AddInMemoryTokenCaches Method](xref:Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder.AddInMemoryTokenCaches%2A) Enables caching the token issued for requests.
 
@@ -335,6 +335,13 @@ The application is now ready!
 **Congratulations!** You have successfully connected to the Web API.
 
 This quickstart shows a simple approach to create a Blazor Server web application that connects to data in Dataverse.
+
+Learn more about Dataverse Web API capabilities by understanding the service documents.
+
+> [!div class="nextstepaction"]
+> [Web API types and operations](web-api-types-operations.md)
+
+
 
 ### See Also
 
