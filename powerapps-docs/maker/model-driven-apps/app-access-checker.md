@@ -23,8 +23,8 @@ Issues found by the app access checker:
 To be able to view and play an app, the user must have:
 
 - Create and edit privileges on the app module table.
-- Read privilege and security role association. <!-- Read privilege on what? What does security role association mean? -->
-- Read privilege, team association with user, and team associated with security role. <!-- Read privilege on what? What does team association with user and team association with role mean?  -->
+- Read privilege and security role association. <!-- Read privilege on what table? What does security role association mean? -->
+- Read privilege, team association with user, and team associated with security role. <!-- Read privilege on what table? What does team association with user and team association with role mean?  -->
 - For Dynamics for Sales and Dynamics for Service apps, the user must have that licensing assigned as well.
 
 ## How to use the app access checker
@@ -44,7 +44,7 @@ Open the diagnostics page in your browser by typing https://*environmentURL*/Web
    - If user has create or write privilege on the app module table, Yes is displayed. If the user isn't associated to one or more security roles assigned to the app, check if the user is member of a team and whether that team is associated with that security role.
 
 ### Example results
-<!-- Images below have user names. Are they approved fictitious names? -->
+<!-- Images below have what look like what might be real people's names. Are they approved fictitious names? -->
 
 User has access to all visible apps in the environment.
 :::image type="content" source="media/app-access-checker/user-can-view-apps.png" alt-text="User has access to all visible apps in the environment" lightbox="media/app-access-checker/user-can-view-apps.png":::
