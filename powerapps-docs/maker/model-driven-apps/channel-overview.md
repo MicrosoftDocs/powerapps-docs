@@ -48,10 +48,10 @@ The monthly release is the first weekly release of each month. The release would
 | Monthly Release | Doc Published | Feature Release | Group 1 | Group 2 | Group 3 | Group 4 | Group 5 | 
 | --- | --- | --- | --- | --- | --- | --- | --- | 
 | May 2023 | Apr 14 | 2305.1 | May 5 | May 12 | May 19 | May 26 | Jun 2 |
-| June 2023 |  May 12 | 2306.1 | Jun 9 | Jun 16 | Jun 23 | Jun 30 | Jul 7 |
+| June 2023 |  May 19 | 2306.1 | Jun 9 | Jun 16 | Jun 23 | Jun 30 | Jul 7 |
 | July 2023 | Jun 16 | 2307.1 | Jul 7 | Jul 14 | Jul 21 | Jul 28 | Aug 4 |
-| August 2023 | Jul 14 | 2308.1 | Aug 11 | Aug 18 | Aug 25 | Sep 1 | Sep 8 |
-| September 2023 | Aug ? | 2309.1 | Sep 8 | Sep 15 | Sep 22 | Sep 29 | Oct 6 |
+| August 2023 | Jul 21 | 2308.1 | Aug 11 | Aug 18 | Aug 25 | Sep 1 | Sep 8 |
+| September 2023 | Aug 18 | 2309.1 | Sep 8 | Sep 15 | Sep 22 | Sep 29 | Oct 6 |
 
 ## Related links
 
