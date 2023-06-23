@@ -1,6 +1,6 @@
 ---
 title: "About dialog for model-driven apps | MicrosoftDocs"
-description: Explains key elements of the about dialog.
+description: Learn about the various parts of the About dialog for model-driven apps.
 author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
@@ -25,7 +25,7 @@ This article explains the various parts of the **About** dialog for model-driven
 
 - The **semi-annual channel** is the current, twice-a-year release wave that is updated in April and October. The release for the semi-annual channel is shown at the top of the dialog like **2023 release wave 1 enabled**.
 
-- The **monthly channel** is the new, release cadence that happens once per month. The release for the monthly channel is shown after **Channel: Monthly** as a month and year. For example, in the screen shot provided, the monthly channel is May 2023.
+- The **monthly channel** is the new, release cadence that happens once per month. The release for the monthly channel is shown after **Channel: Monthly** as a month and year. For example, in the screenshot provided, the monthly channel is May 2023.
 
 
 ## Related links
