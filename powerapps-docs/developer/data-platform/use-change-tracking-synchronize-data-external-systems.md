@@ -39,7 +39,7 @@ There are two ways to check whether change tracking is enabled for a table using
    GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName&$filter=ChangeTrackingEnabled eq true
    ```
 
-   There are system tables with change tracking enabled, for example [Auditing (Audit)(reference/entities/audit.md). You can use the following query to see the full list:
+   There are system tables with change tracking enabled, for example [Auditing (Audit)](reference/entities/audit.md). You can use the following query to see the full list:
 
    ```http
    GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName&$filter=ChangeTrackingEnabled eq true and IsCustomEntity eq false&$select=LogicalName
