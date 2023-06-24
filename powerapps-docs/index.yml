@@ -12,7 +12,7 @@ metadata:
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
-  ms.date: 06/15/2023 #Required; mm/dd/yyyy format.
+  ms.date: 06/30/2023 #Required; mm/dd/yyyy format.
   hide_bc: false
 
 highlightedContent:
@@ -63,11 +63,11 @@ additionalContent:
               url: cards/overview.md
         - title: AI Copilot capabilities
           links:
-            - text: Get started with AI Copilot
+            - text: Get started with AI Copilot (preview)
               url: maker/canvas-apps/ai-overview.md
-            - text: Build apps through conversation
+            - text: Build apps through conversation (preview)
               url: maker/canvas-apps/ai-conversations-create-app.md
-            - text: Add Copilot control to a canvas app
+            - text: Add Copilot control to a canvas app (preview)
               url: maker/canvas-apps/add-ai-copilot.md
         - title: Create and manage data
           links:
