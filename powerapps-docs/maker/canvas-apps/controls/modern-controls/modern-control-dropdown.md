@@ -31,6 +31,9 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Items](../properties-core.md)** – The source of data that contains the items that appear in the control. If the source has multiple columns, set the control's **Value** property to the column of data that you want to show.
 
+**DefaultSelectedItems** - Sets the default items when the control loads.
+                    Note: When using Sharepoint List, if a choice column is used as source, your code for the default selected item should look like this: Choices(List Name.Column Name,"value")
+
 **Required** - must fill in field.
 
 **Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
