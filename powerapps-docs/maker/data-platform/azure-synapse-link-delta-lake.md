@@ -69,7 +69,7 @@ This configuration can be considered a bootstrap step for average use cases.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment you want.
 1. On the left navigation pane, select **Azure Synapse Link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. On the command bar select **+ New link**, and then in your web browsers address bar, append `?athena.deltaLake=true` to the web address that ends with `exporttodatalake`.
+1. On the command bar select **+ New link**
 1. Select **Connect to your Azure Synapse Analytics workspace**, and then select the **Subscription**, **Resource group**, and **Workspace name**.
 1. Select **Use Spark pool for processing**, and then select the pre-created **Spark pool** and **Storage account**.
    :::image type="content" source="media/synapse-link-usesparkpool.png" alt-text="Azure Synapse Link for Dataverse configuration that includes spark pool.":::
