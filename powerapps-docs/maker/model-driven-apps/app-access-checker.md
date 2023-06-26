@@ -41,15 +41,15 @@ Open the diagnostics page in your browser by typing https://*environmentURL*/Web
 User has access to all visible apps in the environment.
 :::image type="content" source="media/app-access-checker/user-can-view-apps.png" alt-text="User has access to all visible apps in the environment" lightbox="media/app-access-checker/user-can-view-apps.png":::
 
-User doesn't have visibility or access to any apps in the environment because of missing security role membership associated with the app.
+User doesn't have visibility or access to any apps in the environment because of missing security role membership associated with each app.
 :::image type="content" source="media/app-access-checker/user-no-access.png" alt-text="Assign security roles to app" lightbox="media/app-access-checker/user-no-access.png":::
 
-Two examples where the user has visibility to some apps visible but not others because of missing security role membership associated with the app.
+Two examples where the user has visibility to some apps but not others because of missing security role membership associated with the app.
 :::image type="content" source="media/app-access-checker/user-access-role.png" alt-text="User has access to some apps visible but not others" lightbox="media/app-access-checker/user-access-role.png":::
 
 :::image type="content" source="media/app-access-checker/user-access-role-2.png" alt-text="Assign missing security roles to user" lightbox="media/app-access-checker/user-access-role-2.png":::
 
-In this example, the user has the required security privilege for the app but doesn't have the required license to access the app.
+In this example, the user has the required security privilege for the app but doesn't have the required license to access some of the apps.
 :::image type="content" source="media/app-access-checker/user-no-license-access.png" alt-text="User doesn't have required license." lightbox="media/app-access-checker/user-no-license-access.png":::
 
 In this example, the user doesn't have the required security privilege, so the app access checker isn't able to show licensing details.
