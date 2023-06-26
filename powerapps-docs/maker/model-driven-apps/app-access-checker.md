@@ -22,19 +22,19 @@ Issues found by the app access checker:
 
 ## How to use the app access checker
 
-Power Platform admins and makers can use the app access checker to search apps based on userid or email address.
+Power Platform admins and makers can use the app access checker to search apps based on user principal name (UPN) or email address.
 
-Open the diagnostics page in your browser by typing https://*environmentURL*/WebResources/msdyn_AppAccessChecker.html, such as *https://contoso.crm.dynamics.com/WebResources/msdyn_AppAccessChecker.html*. Then enter the user principal name(UPN) or email address in the box and then select **Search**.
+Open the diagnostics page in your browser by typing https://*environmentURL*/WebResources/msdyn_AppAccessChecker.html, such as *https://contoso.crm.dynamics.com/WebResources/msdyn_AppAccessChecker.html*. Then enter the UPN or email address in the box and then select **Search**.
 
 ## How to interpret the results
 
 - **Visible**.
-   - If the user doesn't have read privilege on app module table, none of the apps are visible to the user, and **No** is displayed.
+   - If the user doesn't have read privilege on the app module table, none of the apps are visible to the user, and **No** is displayed.
    - If the user has read and/or write privilege on the app module table, then all the apps are visible and **Yes** is displayed.
 - **License**.
    - If the user has appropriate licensing to play the app, **Yes** is displayed.
 - **Security**.
-   - If the user has create or write privilege on the app module table, Yes is displayed. If the user isn't associated to one or more security roles assigned to the app, check if the user is member of a team and whether that team is associated with that security role.
+   - If the user has create or write privilege on the app module table, **Yes** is displayed. If the user isn't associated to one or more security roles assigned to the app, check if the user is member of a team and whether the team is associated with that security role.
 
 ### Example results
 
@@ -52,7 +52,7 @@ Two examples where the user has visibility to some apps visible but not others b
 In this example, the user has the required security privilege for the app but doesn't have the required license to access the app.
 :::image type="content" source="media/app-access-checker/user-no-license-access.png" alt-text="User doesn't have required license." lightbox="media/app-access-checker/user-no-license-access.png":::
 
-In this example, the user doesn't have the required security privilege, so this tool isn't able to show licensing details.
+In this example, the user doesn't have the required security privilege, so the app access checker isn't able to show licensing details.
 :::image type="content" source="media/app-access-checker/user-no-security-access.png" alt-text="Missing privileges to run the app" lightbox="media/app-access-checker/user-no-security-access.png":::
 
 If **Security** is **Yes** and **License** is **No** or **Unknown** the issue needs to be investigated by licensing team. <!-- You mean contact Support? -->
