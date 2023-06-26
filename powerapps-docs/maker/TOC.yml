@@ -2579,6 +2579,8 @@
     href: ./canvas-apps/studio-versions.md
   - name: Troubleshoot startup issues for Power Apps
     href: /troubleshoot/power-platform/power-apps/troubleshooting-startup-issues
+  - name: Check model-driven app access for a user
+    href: ./model-driven-apps/app-access-checker.md
   - name: Troubleshoot Power Query
     href: /troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues
   - name: Support
