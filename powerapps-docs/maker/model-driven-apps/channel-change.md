@@ -42,11 +42,7 @@ Developers can change this by updating the [ReleaseChannel](/power-apps/develope
 More information:
 
 * [Update a record using Web API](/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
-
 * [Update a record using the SDK for .NET](/power-apps/developer/data-platform/org-service/entity-operations-update-delete?tabs=late#basic-update)
-
-
-
 
 ## Changing browser session channel
 
