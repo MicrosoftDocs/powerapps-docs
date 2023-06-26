@@ -1326,6 +1326,11 @@
       href: ./model-driven-apps/build-app-three-steps.md            
     - name: Explore sample apps
       href: ./model-driven-apps/overview-model-driven-samples.md
+    - name: Release channels for your model-driven app
+      href: ./model-driven-apps/channel-overview.md
+      items:
+      - name: Change release channels
+        href: ./model-driven-apps/channel-change.md
     - name: Meet the model-driven designers
       href: ./model-driven-apps/model-driven-designers.md      
   - name: Design and build an app

@@ -3,12 +3,12 @@ title: Changing release channels for model-driven apps | MicrosoftDocs
 description: Understand the release channels for Power Apps model-driven apps.
 Keywords: 
 author: aorth
+ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
 ms.date: 06/27/2023
-
-ms.topic: troubleshooting
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 search.audienceType: 
