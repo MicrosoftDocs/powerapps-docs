@@ -14,7 +14,7 @@ ms.custom: template-how-to
 
 Use the app access checker tool to identify common issues found for a specific user that can occur when running a model-driven app.
 
-Issues found by the app access checker:
+Issues found by the app access checker include:
 
 - If an app is visible to the user or not.
 - The reason why an app is visible or not visible to the user.
@@ -55,9 +55,9 @@ In this example, the user has the required security privilege for the app but do
 In this example, the user doesn't have the required security privilege, so the app access checker isn't able to show licensing details.
 :::image type="content" source="media/app-access-checker/user-no-security-access.png" alt-text="Missing privileges to run the app" lightbox="media/app-access-checker/user-no-security-access.png":::
 
-If **Security** is **Yes** and **License** is **No** or **Unknown** please contact support.
+If **Security** is **Yes** and **License** is **No** or **Unknown** contact Help + support. More information: [Get Help + support](/power-platform/admin/get-help-support)
 :::image type="content" source="media/app-access-checker/user-yes-security-no-license.png" alt-text="Licensing issue is detected." lightbox="media/app-access-checker/user-yes-security-no-license.png":::
 
 ## Limitation
 
-- It will not show Details for the Outlook App as it is only visible to administrators.
+- App access checker doesn't show details for the Outlook App. This is because that information is only visible to Power Platform administrators.
