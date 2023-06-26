@@ -38,8 +38,6 @@ Environment channel can be set using the Power Platform Admin Center or with cod
 
 Admins can change the release channel in [Manange Behavior Settings](/power-platform/admin/settings-behavior).
 
-![PPAC settings behavior change channel](media/model-app-channels/ppac-settings-behavior-change-channel.png)
-
 Developers can change this by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/organization#BKMK_ReleaseChannel) column value for the row in the [Organization](/power-apps/developer/data-platform/reference/entities/organization) table. There is always a single row in the organization table.
 More information:
 
