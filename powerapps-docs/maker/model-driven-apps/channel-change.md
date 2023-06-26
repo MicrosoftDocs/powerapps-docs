@@ -20,20 +20,21 @@ The release channel affects the features that are shown to a user. When the mont
 
 ## Flexible channel configuration
 
-The release channel for model-driven apps can be changed in a few different ways.
+The release channel for model-driven apps can be changed in a couple different ways.
 
-1. Environment channel
-1. Browser session channel
+- Environment channel
+- Browser session channel
 
-Environment channel can be set using the Power Platform Admin Center or through WebApi calls.
+Environment channel can be set using the Power Platform admin center or through Web API calls.
 
-> Note: When the release channel is changed on the environment level, a user will need to refresh twice to take effect. The first refresh will trigger a background update of feature configuration to a local cache. The second refresh will use the feature configuration local cache.
+> [!NOTE]
+> When the release channel is changed on the environment level, a user will need to refresh twice to take effect. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
 
 Browser session channel can be applies using a URL parameter so is a temporary override.
 
 ## Changing the environment channel
 
-Power Platform Admin Center provides a UI that allows an easy way to change the environment channel. Admins can open **Settings** > **Product** > **Behavior** and change the **Model-driven app release channel**. Click **Save** in the bottom right of the page.
+Power Platform admin center provides a place where admins can easily change the environment channel. Go to **Settings** > **Product** > **Behavior** and change the **Model-driven app release channel**. Select **Save** on the bottom right of the page.
 
 ![PPAC settings behavior change channel](media/model-app-channels/ppac-settings-behavior-change-channel.png)
 
