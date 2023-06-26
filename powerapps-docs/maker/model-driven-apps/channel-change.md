@@ -33,30 +33,21 @@ Browser session channel can be applies using a URL parameter so is a temporary o
 
 ## Changing the environment channel
 
-Power Platform Admin Center provides a UI that allows an easy way to change the environment channel. Admins can open **Settings** > **Product** > **Behavior** and change the **Model-driven app release channel**. Click **Save** in the bottom right of the page.
+Environment channel can be set using the Power Platform Admin Center or with code.
+
+Admins can change the release channel in [Manange Behavior Settings](/power-platform/admin/settings-behavior).
 
 ![PPAC settings behavior change channel](media/model-app-channels/ppac-settings-behavior-change-channel.png)
 
-Starting with weekly release 2305.1, an admin can use WebApi to update the organization table ReleaseChannel field using the following field values.
+Developers can change this by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/organization#BKMK_ReleaseChannel) column value for the row in the [Organization](/power-apps/developer/data-platform/reference/entities/organization) table. There is always a single row in the organization table.
+More information:
 
-| Name | Value | Notes |
-| --- | --- | --- |
-| Semi-Annual | 0 | Default; follows normal twice yearly release waves |
-| Monthly | 1 |
+* [Update a record using Web API](/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
 
-Set the current environment's channel to **Monthly** (```value = 1```).
-```Javascript
-Xrm.WebApi.online.updateRecord('organization', 
-    Xrm.Utility.getGlobalContext().organizationSettings.organizationId, 
-    { 'releasechannel': 1 })
-```
+* [Update a record using the SDK for .NET](/power-apps/developer/data-platform/org-service/entity-operations-update-delete?tabs=late#basic-update)
 
-Set the current environment's channel to **Semi-annual** (```value = 0```).
-```Javascript
-Xrm.WebApi.online.updateRecord('organization', 
-    Xrm.Utility.getGlobalContext().organizationSettings.organizationId, 
-    { 'releasechannel': 0 })
-```
+
+
 
 ## Changing browser session channel
 
