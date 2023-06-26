@@ -55,7 +55,7 @@ In this example, the user has the required security privilege for the app but do
 In this example, the user doesn't have the required security privilege, so the app access checker isn't able to show licensing details.
 :::image type="content" source="media/app-access-checker/user-no-security-access.png" alt-text="Missing privileges to run the app" lightbox="media/app-access-checker/user-no-security-access.png":::
 
-If **Security** is **Yes** and **License** is **No** or **Unknown** the issue needs to be investigated by licensing team. <!-- You mean contact Support? -->
+If **Security** is **Yes** and **License** is **No** or **Unknown** please contact support.
 :::image type="content" source="media/app-access-checker/user-yes-security-no-license.png" alt-text="Licensing issue is detected." lightbox="media/app-access-checker/user-yes-security-no-license.png":::
 
 ## Limitation
