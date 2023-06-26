@@ -82,9 +82,9 @@ When the channel is monthly, the monthly release can be changed using the URL pa
 
 ## Validating the next monthly release
 
-Validation should be done for each monthly channel release before it is automatically enabled for users. This can be done when the validation build version has reached the environment.
+Validation should be done for each monthly channel release before it's automatically enabled for users. Users can test when the validation build version has reached the environment.
 
-1. Find the current monthly release in **Settings** > **About** dialog. It will be after "Channel: Monthly" and be a date like "July 2023".
+1. Find the current monthly release in **Settings** > **About** dialog; it will be after "Channel: Monthly" and be a date like "July 2023"
 
 1. Find the next monthly release short name by opening [Unified Interface Monthly Channel Releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
 
@@ -92,11 +92,11 @@ Validation should be done for each monthly channel release before it is automati
 
 ## Comparing features across channels and releases
 
-When users running monthly channel report has unexpected behavior, the following steps can help investigate where it is occurring.
+When users running the monthly channel report has unexpected behavior, the following steps can help investigate where it's occurring.
 
-1. Check if the unexpected behavior exists in the semi-annual channel by using the URL parameter ```&channel=semiannual```. If the behavior also exists in semi-annual channel, is it unrelated to monthly channel and should follow normal support processes.
+1. Check if the unexpected behavior exists in the semi-annual channel by using the URL parameter ```&channel=semiannual```. If the behavior also exists in the semi-annual channel, is it unrelated to the monthly channel and should follow normal support processes.
 
-1. Check if the unexpected behavior exists in the previous monthly release by using the URL parameter ```&channelrelease=``` with the prior release short name (e.g. "Jun2023"). If the two monthly releases behave the same, hten it is likely unrlated to a specific monthly channel release and should follow normal support processes.
+1. Check if the unexpected behavior exists in the previous monthly release by using the URL parameter ```&channelrelease=``` with the prior release short name like "Jun2023". If the two monthly releases behave the same, then it's likely unrelated to a specific monthly channel release and should follow normal support processes.
 
 1. When a change is noticed between monthly releases, review the changed features in [Unified Interface Monthly Channel Releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases) to learn more.
 
