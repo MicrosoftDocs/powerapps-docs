@@ -3,12 +3,12 @@ title: Changing release channels for model-driven apps | MicrosoftDocs
 description: Understand the release channels for Power Apps model-driven apps.
 Keywords: 
 author: aorth
+ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
 ms.date: 06/27/2023
-
-ms.topic: troubleshooting
+ms.topic: how-to
 applies_to: 
   - "powerapps"
 search.audienceType: 
@@ -20,14 +20,15 @@ The release channel affects the features that are shown to a user. When the mont
 
 ## Flexible channel configuration
 
-The release channel for model-driven apps can be changed in a few different ways.
+The release channel for model-driven apps can be changed in a couple different ways.
 
-1. Environment channel
-1. Browser session channel
+- Environment channel
+- Browser session channel
 
-Environment channel can be set using the Power Platform Admin Center or through WebApi calls.
+Environment channel can be set using the Power Platform admin center or through Web API calls.
 
-> Note: When the release channel is changed on the environment level, a user will need to refresh twice to take effect. The first refresh will trigger a background update of feature configuration to a local cache. The second refresh will use the feature configuration local cache.
+> [!NOTE]
+> When the release channel is changed on the environment level, a user will need to refresh twice to take effect. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
 
 Browser session channel can be applies using a URL parameter so is a temporary override.
 

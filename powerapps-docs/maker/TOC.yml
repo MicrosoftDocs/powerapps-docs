@@ -1326,6 +1326,12 @@
       href: ./model-driven-apps/build-app-three-steps.md            
     - name: Explore sample apps
       href: ./model-driven-apps/overview-model-driven-samples.md
+    - name: Release channels for model-driven apps
+      items:
+      - name: Release channel overview
+        href: ./model-driven-apps/channel-overview.md
+      - name: Change release channels
+        href: ./model-driven-apps/channel-change.md
     - name: Meet the model-driven designers
       href: ./model-driven-apps/model-driven-designers.md      
   - name: Design and build an app
@@ -2579,6 +2585,8 @@
     href: ./canvas-apps/studio-versions.md
   - name: Troubleshoot startup issues for Power Apps
     href: /troubleshoot/power-platform/power-apps/troubleshooting-startup-issues
+  - name: Check model-driven app access for a user
+    href: ./model-driven-apps/app-access-checker.md
   - name: Troubleshoot Power Query
     href: /troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues
   - name: Support

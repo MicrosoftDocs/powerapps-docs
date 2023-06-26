@@ -32,14 +32,14 @@ For information about new features being released over the next few months that 
 
 ## Monthly releases for model-driven apps
 
-Model-driven apps have the ability for admins to define the release cadence for features.
+ Power Platform admins can define the release cadence for features in model-driven apps.
 
 | Channel | Frequency | Notes |
 | --- | --- | --- |
 | Semi-annual | Twice per year | Rollout follows weekly releases starting in early April and early October. Default release cadence within Power Apps and Dynamics 365. |
 | Monthly | Once per month | Rollout follows the weekly release schedule starting with the first weekly release for the month. |
 
-For more information on release channel options and Monthly Channel, see [Release Channel Overview](maker/model-driven-apps/channel-overview.md).
+For more information about release channel options and monthly channel, go to [Release channel overview](maker/model-driven-apps/channel-overview.md).
 
 ## Known limitations
 
