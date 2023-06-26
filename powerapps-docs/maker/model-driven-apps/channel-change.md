@@ -78,8 +78,6 @@ When the channel is monthly, the monthly release can be changed using the URL pa
 
 > Note: Any valid ```MmmYYYY``` date can be entered but future dates might not have any features defined.  
 
-# Working with channels
-
 ## Validating the next monthly release
 
 Validation should be done for each monthly channel release before it's automatically enabled for users. Users can test when the validation build version has reached the environment.
