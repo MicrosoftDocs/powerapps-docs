@@ -14,7 +14,7 @@ search.audienceType:
 
 # Release Channels for your model driven app
 
-The concept of multiple release channels comes from [Microsoft 365 channels](https://learn.microsoft.com/deployoffice/updates/overview-update-channels) and provides customer admins with a choice of how often end user impacting features are released.
+The concept of multiple release channels comes from [Microsoft 365 channels](https://learn.microsoft.com/deployoffice/updates/overview-update-channels) and provides admins with a choice of how often end user impacting features are released.
 
 The default channel is the Semi-annual channel, which is the twice yearly release wave features. 
 
