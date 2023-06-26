@@ -11,8 +11,6 @@ ms.custom: template-how-to
 ---
 # Export Dataverse data in Delta Lake format
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Use Azure Synapse Link for Dataverse to export your Microsoft Dataverse data to Azure Synapse
 Analytics in Delta Lake format. Then explore your data and accelerate time to insight. This article
 provides the following information and shows you how to perform the following tasks:
