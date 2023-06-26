@@ -1327,8 +1327,9 @@
     - name: Explore sample apps
       href: ./model-driven-apps/overview-model-driven-samples.md
     - name: Release channels for model-driven apps
-      href: ./model-driven-apps/channel-overview.md
       items:
+      - name: Release channel overview
+        href: ./model-driven-apps/channel-overview.md
       - name: Change release channels
         href: ./model-driven-apps/channel-change.md
     - name: Meet the model-driven designers
