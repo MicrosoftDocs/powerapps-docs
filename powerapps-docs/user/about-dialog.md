@@ -21,7 +21,7 @@ This article explains the various parts of the **About** dialog for model-driven
 
 :::image type="content" source="media/about-dialog/about-dialog-channel.png" alt-text="About dialog for model-driven apps.":::
 
-- The **Channel** attribute indicates the feature set being used. Admins can set a channel value of **Semi-annual** or **Monthly** in the Power Platform admin center or through WebApi calls.
+- The **Channel** attribute indicates the feature set being used. Admins can set a channel value of **Semi-annual** or **Monthly** in the Power Platform admin center or through code. More information: [Manage behavior settings](/power-platform/admin/settings-behavior)
 
 - The **semi-annual channel** is the current, twice-a-year release wave that is updated in April and October. The release for the semi-annual channel is shown at the top of the dialog like **2023 release wave 1 enabled**.
 
