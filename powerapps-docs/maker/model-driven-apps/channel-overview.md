@@ -14,9 +14,9 @@ search.audienceType:
 ---
 # Release channels for your model-driven app
 
-Microsoft provides new (and updated) features for your model-driven apps, on a regular basis. You can control how often the users in your organization get these new features by specifying the release channel.The concept of multiple release channels originated from [Microsoft 365 channels](/deployoffice/updates/overview-update-channels) and provides Power Platform admins with a choice of how often end user impacting features are released.
+Microsoft provides new (and updated) features for your model-driven apps, on a regular basis. You can control how often the users in your organization get these new features by specifying the release channel. The concept of multiple release channels originated from [Microsoft 365 channels](/deployoffice/updates/overview-update-channels) and provides Power Platform admins with a choice of how often end user impacting features are released.
 
-The default channel is the semi-annual channel, which are the twice yearly release wave features.
+Environment admins use the Power Platform admin center to select the channel for the environment. The existing cadence of twice-yearly release waves is called the *Semi-annual channel* and is the default for all existing orgs. The new *monthly channel* option enables GA-ready features to be turned on each month with a four week preview notification period to allow customer validation with existing customizations.
 
 The following table provides a comparison of monthly channel and semi-annual channel.
 
@@ -26,8 +26,6 @@ The following table provides a comparison of monthly channel and semi-annual cha
 | Release frequency | Once a month, on the first release for the month and following the gradual weekly rollout. | Twice a year, starting early April and early October and following the gradual weekly rollout. |
 
 Security and non-end user impacting changes continue to be delivered with the weekly releases and changes outlined in [Microsoft Unified Interface versions](/power-platform/released-versions/powerapps#all--microsoft-unified-interface-versions).
-
-Environment admins use the Power Platform admin center to select the channel for the environment. The existing cadence of twice-yearly release waves is called the *Semi-annual channel* and is the default for all existing orgs. The new *monthly channel* option enables GA-ready features to be turned on each month with a four week preview notification period to allow customer validation with existing customizations.
 
 The key idea is that GA-ready end user impacting features release monthly instead of waiting for the twice-yearly release cadence. The same number of features are delivered in twelve smaller releases instead of two larger releases.
 

@@ -15,7 +15,7 @@ search.audienceType:
 ---
 # Changing release channels for model-driven apps
 
-The release channel affects the features that are shown to a user. When the monthly channel is enabled for an environment, makers need to validate that their customizations work with each monthly release. This article describes different approaches for a maker.
+The release channel affects the features that are shown to a user. When the monthly channel is enabled for an environment, makers need to validate that their customizations work with each monthly release. This article describes different approaches for a maker to change channels and validate an upcoming release..
 
 ## Flexible channel configuration
 
@@ -23,8 +23,6 @@ The release channel for model-driven apps can be changed in a couple different w
 
 - Environment channel
 - Browser session channel
-
-The environment channel can be set using the Power Platform admin center or through code.
 
 > [!NOTE]
 > - When the release channel is changed on the environment level, a user must refresh the browser tab twice to update the release channel information. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
