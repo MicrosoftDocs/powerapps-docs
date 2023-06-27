@@ -173,17 +173,18 @@ You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set 
    
 Follow these steps to create Azure Key Vault and configure KeyVault URI:
   
-1. Sign in to your tenent as an admin and create an Azure service principal for 1P AAD application: 4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp) by running the following script: <br>
-`Connect-AzureAD -TenantId <your tenant ID> New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
+1. Sign in to your tenent as an admin and create a new Azure service principal for 1P AAD application: 4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp) by running the following script: <br>
+`Connect-AzureAD -TenantId <your tenant ID>
+New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
   
-2. Add a role to the service principal listed above in the subscription where the Key Vault is going to exist. For detailed steps, see [Assign a user as an administrator of an Azure subscription](/azure/role-based-access-control/role-assignments-portal-subscription-admin). Note: In step 3, you may choose Contributor, as only a minimal role is required to access the Key vault.
+3. Add a role to the service principal listed above in the subscription where the Key Vault is going to exist. For detailed steps, see [Assign a user as an administrator of an Azure subscription](/azure/role-based-access-control/role-assignments-portal-subscription-admin). Note: In step 3, you may choose Contributor, as only a minimal role is required to access the Key vault.
 
-3. Create or access existing key vault: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal)
-4. Add access policies for the key vault.
+4. Create or access existing key vault: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal)
+5. Add access policies for the key vault.
   
    :::image type="content" source="media/wrap-canvas-app/wrap-keyvault.gif" alt-text="Add access policies for the key vault.":::
   
-5. Follow one of the these options, depending on your device:
+6. Follow one of the these options, depending on your device:
    - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
   
      :::image type="content" source="media/wrap-canvas-app/wrap-1.png" alt-text="Create a cert for Android.":::
@@ -202,7 +203,7 @@ Follow these steps to create Azure Key Vault and configure KeyVault URI:
   
         :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
 
-6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
+7. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
   
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
