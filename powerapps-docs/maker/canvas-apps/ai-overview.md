@@ -36,6 +36,7 @@ To learn how to use the new AI features in Power Apps, see:
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in the process of rolling out, and may not be available in your region yet.
 > - This capability may be subject to usage limits or capacity throttling.
+> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Transparency notes for Power Apps](../common/transparency-note.md)
 
 ## Prerequisites for the AI features in Power Apps
 
@@ -73,3 +74,7 @@ Follow these steps to disable **Copilot** for your environment.
 2. In the left-side navigation pane **Environment**.
 3. Select the environment and on the command bar, select **Settings**.
 4. Set the toggle to **Off** for **Copilot**.
+
+## See also
+
+[Transparency notes for Power Apps](../common/transparency-note.md)
