@@ -68,9 +68,6 @@ If you have requirements to create your own experience on Unified Interface, you
 
 ![Create new Unified Interface app.](media/uci-model-driven-app_1.png "Create new Unified Interface app")
 
-## Unified Interface Community
-
-Go to the [Unified Interface Community site](https://community.dynamics.com/365/unified-interface/) to engage with experts and peers on blogs, webinars, videos, events, and more.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
