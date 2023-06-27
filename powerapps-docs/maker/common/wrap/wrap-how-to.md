@@ -189,7 +189,7 @@ Follow these steps to create Azure Key Vault and configure KeyVault URI:
     > [!div class="mx-imgBorder"] 
    > ![Click on Members tab.](media/how-to-v2/Add_members.png "Click on Members tab.")
 
-   Search for **Wrap KeyVault Access App**.
+   Search for **Wrap KeyVault Access App** on **Members** tab.
    
    > [!div class="mx-imgBorder"] 
    > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Search for Wrap KeyVault Access App.")
