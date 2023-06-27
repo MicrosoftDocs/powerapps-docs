@@ -180,8 +180,9 @@ Follow these steps to create Azure Key Vault and configure KeyVault URI:
 2. In your default subscription's **Access Control (IAM)**, add a **Reader** role assignment to the **Service Principal** representing your app, e.g. **Wrap KeyVault Access App**. Make sure it is present in the **Subscription's IAM**, and the **Keyvault's IAM**.
 
    Go to **Access control (IAM)** tab and select **Add role assignment** option under **Add** button.
-   
-  :::image type="content" source="media/how-to-v2/Access_control_tab.png" alt-text="Add role assignment on Access control tab.":::
+
+    > [!div class="mx-imgBorder"] 
+   > ![Add role assignment on Access control tab.](media/how-to-v2/Access_control_tab.png "Add role assignment on Access control tab.")
 
   Select **Job fucntion roles** tab and make sure **Reader** role is selcetdd. Then click on **Members** tab in the top menu to assign this **Reader** role to your new **Wrap KeyVault Access App** Service Principal you have created in Step 1.
    
