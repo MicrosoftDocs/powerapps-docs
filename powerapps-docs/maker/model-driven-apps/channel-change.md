@@ -54,7 +54,7 @@ A single browser session can be changed by adding the URL parameter ```&channel=
 | Semi-annual | ```&channel=semiannual``` |
 | Monthly | ```&channel=monthly``` |
 
-When the channel is monthly, the monthly release can be changed using the URL parameter ```&channelrelease=<releasename>```. The release name is three letter month and four digit year like MmmYYYY.
+When the channel is monthly, the monthly release can be changed using the URL parameter ```&channelrelease=<releasename>```. The release name is three letter month and four digit year like *MmmYYYY*.
 
 | Monthly Release | Release Name Parameter |
 | --- | --- |
