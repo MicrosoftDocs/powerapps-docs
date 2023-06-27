@@ -85,5 +85,4 @@ When a user running the monthly channel report observes unexpected behavior, the
 
 [Release channel overview](channel-overview.md) <br />
 [User About dialog - channel](../../user/about-dialog.md) <br />
-[Power Platform admin center - Manage behavior settings](/power-platform/admin/settings-behavior) <br />
-[Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
+[Power Platform admin center - Manage behavior settings](/power-platform/admin/settings-behavior)

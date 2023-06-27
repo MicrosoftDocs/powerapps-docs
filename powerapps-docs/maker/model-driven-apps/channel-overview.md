@@ -16,7 +16,7 @@ search.audienceType:
 
 Microsoft provides new (and updated) features for your model-driven apps, on a regular basis. You can control how often the users in your organization get these new features by specifying the release channel.The concept of multiple release channels originated from [Microsoft 365 channels](/deployoffice/updates/overview-update-channels) and provides Power Platform admins with a choice of how often end user impacting features are released.
 
-The default channel is the semi-annual channel, which is the twice yearly release wave features.
+The default channel is the semi-annual channel, which are the twice yearly release wave features.
 
 The following table provides a comparison of monthly channel and semi-annual channel.
 
