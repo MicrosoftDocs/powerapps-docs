@@ -1,7 +1,6 @@
 ---
 title: Changing release channels for model-driven apps | MicrosoftDocs
 description: Understand the release channels for Power Apps model-driven apps.
-Keywords: 
 author: aorth
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -40,15 +39,11 @@ Admins can change the release channel in [Manange Behavior Settings](/power-plat
 
 ![PPAC settings behavior change channel](media/model-app-channels/ppac-settings-behavior-change-channel.png)
 
-Developers can change this by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/organization#BKMK_ReleaseChannel) column value for the row in the [Organization](/power-apps/developer/data-platform/reference/entities/organization) table. There is always a single row in the organization table.
-More information:
+Developers can change this by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/organization#BKMK_ReleaseChannel) column value for the row in the [Organization](/power-apps/developer/data-platform/reference/entities/organization) table. There is always a single row in the organization table. More information:
 
 * [Update a record using Web API](/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
 
 * [Update a record using the SDK for .NET](/power-apps/developer/data-platform/org-service/entity-operations-update-delete?tabs=late#basic-update)
-
-
-
 
 ## Changing browser session channel
 
@@ -68,13 +63,14 @@ When the channel is monthly, the monthly release can be changed using the URL pa
 | July 2023 | ```&channelrelease=Jul2023``` |  
 | August 2023 | ```&channelrelease=Aug2023``` |  
 
-> Note: Any valid ```MmmYYYY``` date can be entered but future dates might not have any features defined.  
+> [!NOTE]
+> Any valid ```MmmYYYY``` date can be entered but future dates might not have any features defined.  
 
 ## Validating the next monthly release
 
 Validation should be done for each monthly channel release before it's automatically enabled for users. Users can test when the validation build version has reached the environment.
 
-1. Find the current monthly release in **Settings** > **About** dialog; it will be after "Channel: Monthly" and be a date like "July 2023"
+1. Find the current monthly release a model-driven app by selecting **Settings** > **About**. The release version follows **Channel: Monthly** and is a date like *July 2023*.
 
 1. Find the next monthly release short name by opening [Unified Interface Monthly Channel Releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
 
@@ -82,17 +78,15 @@ Validation should be done for each monthly channel release before it's automatic
 
 ## Comparing features across channels and releases
 
-When users running the monthly channel report has unexpected behavior, the following steps can help investigate where it's occurring.
+When a user running the monthly channel report observes unexpected behavior, the following steps can help investigate where the behavior occurred.
 
-1. Check if the unexpected behavior exists in the semi-annual channel by using the URL parameter ```&channel=semiannual```. If the behavior also exists in the semi-annual channel, is it unrelated to the monthly channel and should follow normal support processes.
+- Check if the unexpected behavior exists in the semi-annual channel by using the URL parameter ```&channel=semiannual```. If the behavior also exists in the semi-annual channel, it's unrelated to the monthly channel and should follow normal support processes.
+- Check if the unexpected behavior exists in the previous monthly release by using the URL parameter ```&channelrelease=``` with the prior release short name like *Jun2023*. If the two monthly releases behave the same, then it's likely unrelated to a specific monthly channel release and should follow normal support processes.
+- When a change is noticed between monthly releases, review the changed features in [Unified Interface Monthly Channel Releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases) to learn more.
 
-1. Check if the unexpected behavior exists in the previous monthly release by using the URL parameter ```&channelrelease=``` with the prior release short name like "Jun2023". If the two monthly releases behave the same, then it's likely unrelated to a specific monthly channel release and should follow normal support processes.
+## See also
 
-1. When a change is noticed between monthly releases, review the changed features in [Unified Interface Monthly Channel Releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases) to learn more.
-
-## Related links
-
-* [Release Channel Overview](channel-overview.md)
-* [User About Dialog - Channel](../../user/about-dialog.md)
-* [Power Platform Admin Center - Manage behavior settings](/power-platform/admin/settings-behavior)
-* [Unified Interface Monthly Channel Releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
+[Release Channel Overview](channel-overview.md) <br />
+[User About Dialog - Channel](../../user/about-dialog.md) <br />
+[Power Platform Admin Center - Manage behavior settings](/power-platform/admin/settings-behavior) <br />
+[Unified Interface Monthly Channel Releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
