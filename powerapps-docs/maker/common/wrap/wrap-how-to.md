@@ -177,15 +177,15 @@ Follow these steps to create Azure Key Vault and configure KeyVault URI:
 `Connect-AzureAD -TenantId <your tenant ID>` <br>
 `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
   
-3.In your default subscription's Access Control (IAM), add a **Reader** role assignment to the **Service Principal** representing your app, e.g. **Wrap KeyVault Access App**. Make sure it is present in the **Subscription's IAM**, and the **Keyvault's IAM**.
+2.In your default subscription's Access Control (IAM), add a **Reader** role assignment to the **Service Principal** representing your app, e.g. **Wrap KeyVault Access App**. Make sure it is present in the **Subscription's IAM**, and the **Keyvault's IAM**.
 
-7. Create or access existing key vault. Please ensure this key vault is located in the default subscription for your tenant. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
+3. Create or access existing key vault. Please ensure this key vault is located in the default subscription for your tenant. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
    
-8. Add access policies for the key vault.
+4. Add access policies for the key vault.
   
    :::image type="content" source="media/wrap-canvas-app/wrap-keyvault.gif" alt-text="Add access policies for the key vault.":::
   
-9. Follow one of the these options, depending on your device:
+5. Follow one of the these options, depending on your device:
    - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
   
      :::image type="content" source="media/wrap-canvas-app/wrap-1.png" alt-text="Create a cert for Android.":::
@@ -204,7 +204,7 @@ Follow these steps to create Azure Key Vault and configure KeyVault URI:
   
         :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
 
-10. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
+6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
   
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
