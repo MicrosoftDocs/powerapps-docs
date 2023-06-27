@@ -74,10 +74,6 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
     1. Select the environment you want.
     1. Review the legal terms and privacy statement to continue.
     1. Select **Install**.
-    1. <!-- begin temp additional instructions-->On the next screen, select the same environment
-    1. Optionally check the box to **Include the Low code plug-ins for connectors solution**. Carefully read about [this option below](#why-the-low-code-plug-in-for-connectors-solution-is-optional) before choosing this option. You can install later if needed.
-    1. Agree to the terms of service to continue
-    1. Select **Install**.<!-- end temp install instructions -->
 
 Once the solution import has completed, the status is set to **Enabled** next to **Dataverse Accelerator**.
 
