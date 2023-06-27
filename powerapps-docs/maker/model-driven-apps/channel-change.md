@@ -15,7 +15,7 @@ search.audienceType:
 ---
 # Changing release channels for model-driven apps
 
-The release channel affects the features that are shown to a user. When the monthly channel is enabled for an environment, makers need to validate that their customizations work with each monthly release. This page outlines different approaches for a maker.
+The release channel affects the features that are shown to a user. When the monthly channel is enabled for an environment, makers need to validate that their customizations work with each monthly release. This article describes different approaches for a maker.
 
 ## Flexible channel configuration
 
@@ -24,28 +24,25 @@ The release channel for model-driven apps can be changed in a couple different w
 - Environment channel
 - Browser session channel
 
-Environment channel can be set using the Power Platform admin center or through Web API calls.
+The environment channel can be set using the Power Platform admin center or through Web API calls.
 
 > [!NOTE]
-> When the release channel is changed on the environment level, a user will need to refresh twice to take effect. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
-
-Browser session channel can be applies using a URL parameter so is a temporary override.
+> - When the release channel is changed on the environment level, a user must refresh the browser tab twice to update the release channel information. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
+> - The browser session channel can be applied using a URL parameter, which is a temporary override.
 
 ## Changing the environment channel
 
-Environment channel can be set using the Power Platform Admin Center or with code.
+The environment channel can be set using the Power Platform admin center or with code.
 
-Admins can change the release channel in [Manange Behavior Settings](/power-platform/admin/settings-behavior).
+Power Platform admins can change the release channel in [Manange behavior settings](/power-platform/admin/settings-behavior).
 
-![PPAC settings behavior change channel](media/model-app-channels/ppac-settings-behavior-change-channel.png)
-
-Developers can change this by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/organization#BKMK_ReleaseChannel) column value for the row in the [Organization](/power-apps/developer/data-platform/reference/entities/organization) table. There is always a single row in the organization table. More information:
+Developers can change the release channel by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/organization#BKMK_ReleaseChannel) column value for the row in the [Organization](/power-apps/developer/data-platform/reference/entities/organization) table. There is always a single row in the organization table.
+More information:
 
 * [Update a record using Web API](/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
-
 * [Update a record using the SDK for .NET](/power-apps/developer/data-platform/org-service/entity-operations-update-delete?tabs=late#basic-update)
 
-## Changing browser session channel
+## Changing the browser session channel
 
 A single browser session can be changed by adding the URL parameter ```&channel=<channelname>```. This URL parameter is used for all navigation within the browser tab. It might not be copied to a new browser tab.
 
@@ -72,9 +69,9 @@ Validation should be done for each monthly channel release before it's automatic
 
 1. Find the current monthly release a model-driven app by selecting **Settings** > **About**. The release version follows **Channel: Monthly** and is a date like *July 2023*.
 
-1. Find the next monthly release short name by opening [Unified Interface Monthly Channel Releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
+1. Find the next monthly release short name by opening [Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
 
-1. Add the URL parameter ```&channelrelease=``` with the next release short name like "Aug2023"
+1. Add the URL parameter ```&channelrelease=``` with the next release short name like *Aug2023*.
 
 ## Comparing features across channels and releases
 
@@ -82,11 +79,11 @@ When a user running the monthly channel report observes unexpected behavior, the
 
 - Check if the unexpected behavior exists in the semi-annual channel by using the URL parameter ```&channel=semiannual```. If the behavior also exists in the semi-annual channel, it's unrelated to the monthly channel and should follow normal support processes.
 - Check if the unexpected behavior exists in the previous monthly release by using the URL parameter ```&channelrelease=``` with the prior release short name like *Jun2023*. If the two monthly releases behave the same, then it's likely unrelated to a specific monthly channel release and should follow normal support processes.
-- When a change is noticed between monthly releases, review the changed features in [Unified Interface Monthly Channel Releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases) to learn more.
+- When a change is noticed between monthly releases, review the changed features in [Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases) to learn more.
 
 ## See also
 
-[Release Channel Overview](channel-overview.md) <br />
-[User About Dialog - Channel](../../user/about-dialog.md) <br />
-[Power Platform Admin Center - Manage behavior settings](/power-platform/admin/settings-behavior) <br />
-[Unified Interface Monthly Channel Releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
+[Release channel overview](channel-overview.md) <br />
+[User About dialog - channel](../../user/about-dialog.md) <br />
+[Power Platform admin center - Manage behavior settings](/power-platform/admin/settings-behavior) <br />
+[Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
