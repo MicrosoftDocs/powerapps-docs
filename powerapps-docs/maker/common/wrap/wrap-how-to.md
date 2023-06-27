@@ -184,20 +184,20 @@ Follow these steps to create Azure Key Vault and configure KeyVault URI:
     > [!div class="mx-imgBorder"] 
    > ![Add role assignment on Access control tab.](media/how-to-v2/Access_control_tab.png "Add role assignment on Access control tab.")
 
-  Select **Job fucntion roles** tab and make sure **Reader** role is selcetdd. Then click on **Members** tab in the top menu to assign this **Reader** role to your new **Wrap KeyVault Access App** Service Principal you have created in Step 1.
+  Select **Job fucntion roles** tab and make sure **Reader** role is selcetdd. Then click on **Members** tab in the top menu.
    
     > [!div class="mx-imgBorder"] 
-   > ![Click on Members tab..](media/how-to-v2/Add_members.png" "Click on Members tab.")
+   > ![Click on Members tab.](media/how-to-v2/Add_members.png" "Click on Members tab.")
 
    Search for **Wrap KeyVault Access App**.
    
       > [!div class="mx-imgBorder"] 
-   > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Search for Wrap KeyVault Access App.")
+   > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Search for Wrap KeyVault Access App.")
 
-   Add **Reader** role to **Wrap KeyVault Access App** and click on **Review + assign**.
+   Add **Reader** role to **Wrap KeyVault Access App** and click on **Review + assign** button on the bottom of the tab.
   
     > [!div class="mx-imgBorder"] 
-   > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Assign Reader role to Wrap KeyVault Access App.")
+   > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing "Assign Reader role to Wrap KeyVault Access App.")
   
 4. Create or access existing key vault. Please ensure this key vault is located in the default subscription for your tenant. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
    
