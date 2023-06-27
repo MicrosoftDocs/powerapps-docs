@@ -24,7 +24,7 @@ The release channel for model-driven apps can be changed in a couple different w
 - Environment channel
 - Browser session channel
 
-The environment channel can be set using the Power Platform admin center or through Web API calls.
+The environment channel can be set using the Power Platform admin center or through code.
 
 > [!NOTE]
 > - When the release channel is changed on the environment level, a user must refresh the browser tab twice to update the release channel information. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
@@ -34,7 +34,7 @@ The environment channel can be set using the Power Platform admin center or thro
 
 The environment channel can be set using the Power Platform admin center or with code.
 
-Power Platform admins can change the release channel in [Manange behavior settings](/power-platform/admin/settings-behavior).
+Power Platform admins can change the release channel using the environment's behavior settings. More information: [Manange behavior settings](/power-platform/admin/settings-behavior).
 
 Developers can change the release channel by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/organization#BKMK_ReleaseChannel) column value for the row in the [Organization](/power-apps/developer/data-platform/reference/entities/organization) table. There is always a single row in the organization table.
 More information:
