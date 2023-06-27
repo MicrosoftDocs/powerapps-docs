@@ -194,7 +194,7 @@ Follow these steps to create Azure Key Vault and configure KeyVault URI:
    > [!div class="mx-imgBorder"] 
    > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Search for Wrap KeyVault Access App.")
 
-   Add **Reader** role to **Wrap KeyVault Access App** and click on **Review + assign** button on the bottom of the tab.
+   Select **Wrap KeyVault Access App** and click on **Review + assign** button on the bottom of the tab to assign **Reader** role to it.
   
    > [!div class="mx-imgBorder"] 
    > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
