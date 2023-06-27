@@ -179,22 +179,25 @@ Follow these steps to create Azure Key Vault and configure KeyVault URI:
   
 2. In your default subscription's **Access Control (IAM)**, add a **Reader** role assignment to the **Service Principal** representing your app, e.g. **Wrap KeyVault Access App**. Make sure it is present in the **Subscription's IAM**, and the **Keyvault's IAM**.
 
-   Go to **Access control (IAM)** tab and select **Add role assignment** option under **Add** button.
+   Go to **Access control (IAM)** tab and select **Add role assignment** option under **Add** menu button.
 
     > [!div class="mx-imgBorder"] 
    > ![Add role assignment on Access control tab.](media/how-to-v2/Access_control_tab.png "Add role assignment on Access control tab.")
 
   Select **Job fucntion roles** tab and make sure **Reader** role is selcetdd. Then click on **Members** tab in the top menu to assign this **Reader** role to your new **Wrap KeyVault Access App** Service Principal you have created in Step 1.
    
-  :::image type="content" source="media/how-to-v2/Add_members.png" alt-text="Click on Members tab.":::
+    > [!div class="mx-imgBorder"] 
+   > ![Click on Members tab..](media/how-to-v2/Add_members.png" "Click on Members tab.")
 
    Search for **Wrap KeyVault Access App**.
    
-  :::image type="content" source="media/how-to-v2/Add_role_for_wrap_signing.png" alt-text=Search for Wrap KeyVault Access App.":::
+      > [!div class="mx-imgBorder"] 
+   > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Search for Wrap KeyVault Access App.")
 
-   Add **Wrap KeyVault Access App** to have a **Reader** role, then click on **Review + assign**.
-   
-  :::image type="content" source="media/how-to-v2/Add_role_assignment.png" alt-text=Search for Wrap KeyVault Access App.":::
+   Add **Reader** role to **Wrap KeyVault Access App** and click on **Review + assign**.
+  
+    > [!div class="mx-imgBorder"] 
+   > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Assign Reader role to Wrap KeyVault Access App.")
   
 4. Create or access existing key vault. Please ensure this key vault is located in the default subscription for your tenant. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
    
