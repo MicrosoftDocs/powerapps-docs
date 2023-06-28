@@ -1,7 +1,7 @@
 ---
 title: "Use optional parameters (Microsoft Dataverse) | Microsoft Docs" 
 description: "Use optional parameters to control operation behaviors" 
-ms.date: 05/27/2023
+ms.date: 06/28/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -221,6 +221,9 @@ More information:
 ## Add a shared variable to the plugin execution context
 
 Use the `tag` parameter to include a shared variable value that is accessible within a plug-in. This extra information allows a plug-in to apply logic that depends on the client application.
+
+> [!NOTE]
+> This parameter is intended for client applications to be able to set any value they wish. No Dataverse feature should require that you set a specific value in your client application code to enable different behaviors.
 
 To access the value in a plug-in, use the [IExecutionContext.SharedVariables collection](xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables)
 
