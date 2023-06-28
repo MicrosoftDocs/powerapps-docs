@@ -17,7 +17,7 @@ contributors:
 The `OnRecordSelect` event occurs when a single row (record) is selected in the editable grid. This event won't occur if a user selects different cells in the same row, or selects multiple rows. 
 
 ## Override the default open behavior in model-driven grids 
-There might be situations where you don't want the table record to open (which is the default behavior), but want a custom action to be performed such as opening a URL using JavaScript functions. Here is an example to acheive this using the [Power Apps Grid Control](../../../../power-apps/maker/model-driven-apps/the-power-apps-grid-control) and the `OnRecordSelect` event.
+There might be situations where you don't want the table record to open (which is the default behavior), but want a custom action to be performed such as opening a URL using JavaScript functions. Here is an example to acheive this using the [Power Apps Grid Control](/power-apps/maker/model-driven-apps/the-power-apps-grid-control) and the `OnRecordSelect` event.
 
 ### Step 1: Create a web resource
 
@@ -55,8 +55,8 @@ Create a web resource to change the default behavior. In the following example, 
 
 ### Step 2: Enable Power Apps Grid Control 
 Follow these steps to enable the **Power Apps Grid Control** as the main grid (table view) or within a model-driven form subgrid:
-- [Use as main grid](../../../../power-apps/maker/model-driven-apps/the-power-apps-grid-control#add-the-power-apps-grid-control-to-views-for-an-entity)
-- [Use as subgrid](../../../../power-apps/maker/model-driven-apps/the-power-apps-grid-control#add-the-power-apps-grid-control-to-a-subgrid)
+- [Use as main grid](/power-apps/maker/model-driven-apps/the-power-apps-grid-control#add-the-power-apps-grid-control-to-views-for-an-entity)
+- [Use as subgrid](/power-apps/maker/model-driven-apps/the-power-apps-grid-control#add-the-power-apps-grid-control-to-a-subgrid)
 
 
 ### Step 3: Register the custom behavior on OnRecordSelect Event
