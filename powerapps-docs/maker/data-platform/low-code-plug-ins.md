@@ -27,7 +27,7 @@ There are two types of low code plug-ins:
 
 # [Instant](#tab/instant)
 
-An instant low code plug-in is business logic that is manually triggered. A user must explicitly invoke an instant plug-in. This can be defined on a button click in an app, or within a Power Automate cloud flow using **perform an unbound action**.
+An instant low code plug-in is business logic that is manually triggered. A user must explicitly invoke an instant plug-in. This can be defined on a button click in an app, or within a Power Automate cloud flow using perform an unbound action.
 
 You can define input and output parameters that allow certain values in the formula to change, or be variable. They also give you the ability to pass information between the plug-in and the context that runs it, so the same business logic can be designed generically and reused in varying situations.  
 - Input parameters can take information into the formula when it’s run.
@@ -109,8 +109,8 @@ Once the solution import has completed, the status is set to **Enabled** next to
    - **Description**. Enter a description for the instant plug-in.
 
 1. Optionally, define your parameters:
-   - Select **New input parameter**. Available data types are **Boolean**, **String**, **Float**, **Decimal**, **DateTime**, or **Integer**. Enter an input parameter, such as **Label:** *X* and **Data type**: *Integer*.
-   - Select **New output parameter**. Available data types are **Boolean**, **String**, **Float**, **Decimal**, **DateTime**, or **Integer**. Enter an output parameter, such as **Label**: *Sum* and **Data type**: *Integer*.
+   - Select **New input parameter**. (Example: **Label:** *X* and **Data type**: *Integer*).
+   - Select **New output parameter**. (Example: **Label**: *Sum* and **Data type**: *Integer*).
 1. Add more input and output parameters as necessary.
 1. Enter the Power Fx formula in the **Formula** box.
    - You can reference any parameters you defined previously in the formula.
