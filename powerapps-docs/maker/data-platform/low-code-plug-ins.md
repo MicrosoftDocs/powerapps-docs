@@ -25,24 +25,21 @@ Low-code plug-ins are defined in a Dataverse database and integrated into Power 
 
 There are two types of plug-ins:
 
-- Instant  plug-ins
-- Automated plug-ins
-
-For the most part, logic that can be defined for an instant plug-in can also be defined for an automated low-code plug-in.
-
-The main difference between the plug-in types are in the way the plug-in type is triggered, and whether parameters can be used. Only instant plug-ins support parameters.
-
-> [!IMPORTANT]
-> Currently, only automated plug-ins allow you to interact with a specific record when the plug-in is invoked. This is referred as the *bound* table record. When defining logic for bound records in Power Fx, use the `ThisRecord` keyword to reference the record and use dot notation to access the column values.
-
-## Instant plug-ins
+# [Instant plug-ins](#tab/instant)
 
 An instant plug-in is business logic that is manually triggered. A user must explicitly invoke an instant plug-in. This can be defined on a button click in an app, or within a Power Automate cloud flow using **perform an unbound action**.
 
-You can define input and output parameters that allow certain values in the formula to change, or be variable. They also give you the ability to pass information between the plug-in and the context that runs it, so the same business logic can be reused in varying situations.  
-
+You can define input and output parameters that allow certain values in the formula to change, or be variable. They also give you the ability to pass information between the plug-in and the context that runs it, so the same business logic can be designed generically and reused in varying situations.  
 - Input parameters can take information into the formula when it’s run.
 - Output parameters let you define information that is returned when the plug-in completes successfully.
+
+Supported data types for input and output parameters:
+- Boolean
+- String
+- Float
+- Decimal
+- DateTime
+- Integer
 
 ### Calling instant low-code plug-ins as actions from a canvas app
 
@@ -50,9 +47,18 @@ When an instant low-code plug-in is created, you'll be able to call the plug-in 
 
 More information on how to integrate: [Integrate a low-code plug-in](#integrate-a-low-code-plug-in)
 
-## Automated plug-ins
+# [Automated plug-ins](#tab/automated)
 
 An automated plug-in is business logic that runs when a data event (create, update, or delete) occurs for a specified table. You can also design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.
+
+---
+
+For the most part, logic that can be defined for an instant plug-in can also be defined for an automated low-code plug-in.
+
+The main difference between the plug-in types are in the way the plug-in type is triggered, and whether parameters can be used. Only instant plug-ins support parameters.
+
+> [!IMPORTANT]
+> Currently, only automated plug-ins allow you to interact with a specific record when the plug-in is invoked. This is referred as the *bound* table record. When defining logic for bound records in Power Fx, use the `ThisRecord` keyword to reference the record and use dot notation to access the column values.
 
 ## Plug-in permissions
 
