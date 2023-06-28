@@ -23,11 +23,11 @@ Low-code plug-ins are defined in a Dataverse database and integrated into Power 
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - Experimental features can radically change or completely disappear at any time. For this reason the feature is not enabled by default and you must explicitly opt in to use it.
 
-There are two types of plug-ins:
+There are two types of low code plug-ins:
 
-# [Instant plug-ins](#tab/instant)
+# [Instant](#tab/instant)
 
-An instant plug-in is business logic that is manually triggered. A user must explicitly invoke an instant plug-in. This can be defined on a button click in an app, or within a Power Automate cloud flow using **perform an unbound action**.
+An instant low code plug-in is business logic that is manually triggered. A user must explicitly invoke an instant plug-in. This can be defined on a button click in an app, or within a Power Automate cloud flow using **perform an unbound action**.
 
 You can define input and output parameters that allow certain values in the formula to change, or be variable. They also give you the ability to pass information between the plug-in and the context that runs it, so the same business logic can be designed generically and reused in varying situations.  
 - Input parameters can take information into the formula when it’s run.
@@ -47,9 +47,9 @@ When an instant low-code plug-in is created, you'll be able to call the plug-in 
 
 More information on how to integrate: [Integrate a low-code plug-in](#integrate-a-low-code-plug-in)
 
-# [Automated plug-ins](#tab/automated)
+# [Automated](#tab/automated)
 
-An automated plug-in is business logic that runs when a data event (create, update, or delete) occurs for a specified table. You can also design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.
+An automated low code plug-in is business logic that runs when a data event (create, update, or delete) occurs for a specified table. You can also design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.
 
 ---
 
@@ -58,7 +58,7 @@ For the most part, logic that can be defined for an instant plug-in can also be 
 The main difference between the plug-in types are in the way the plug-in type is triggered, and whether parameters can be used. Only instant plug-ins support parameters.
 
 > [!IMPORTANT]
-> Currently, only automated plug-ins allow you to interact with a specific record when the plug-in is invoked. This is referred as the *bound* table record. When defining logic for bound records in Power Fx, use the `ThisRecord` keyword to reference the record and use dot notation to access the column values.
+> Currently, only automated plug-ins allow you to interact with a specific record when the plug-in is invoked. This is referred as the *bound* table record. When defining logic for bound records in Power Fx, use the `ThisRecord` keyword to reference the record and use dot notation to access the column values. In the future, instant plug-ins will support bound settings. 
 
 ## Plug-in permissions
 
