@@ -150,63 +150,7 @@ The low-code plug-in for connectors solution is a streamlined user interface tha
 ### Prerequisites for low-code plug-ins with connectors wizard
 
 - All prerequisites described earlier for creating an instant or automated plug-in. More information: [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
-- To try the new low-code plug-ins for connectors feature, you must install the additional low-code plug-in for connectors solution after installing the Dataverse Accelerator.
-- The environment can't have a data loss prevention (DLP) policy that restricts the Power Apps for Makers connector.
-
-#### Why the low-code plug-in for connectors solution is optional
-
-The low-code plug-in for connectors wizard uses the **Power Apps for Makers** connector to retrieve assets used to construct a more convenient experience such as, connections and connector details.
-
-If your tenant has a DLP policy with certain configurations applied to your environment, these changes might prevent both the low-code plug-ins for connectors feature and the Dataverse Accelerator from working.
-
-#### Risk: Data Loss Prevention policy configurations that block the low-code plug-in for connectors solution
-
-If your tenant has a DLP policy applied to your environment that has one of the following configurations you won't be able to run the Dataverse Accelerator app in that environment, including the low-code plug-ins for connectors feature:
-
-- The Power Apps for makers connector is blocked.
-- The Power Apps for makers connector and the Microsoft Dataverse connector are in different business groups.
-
-#### How to avoid this risk
-
-Before you install the low-code plug-ins for connectors solution, check the DLP policy applied to the environment where you want to install the Dataverse Accelerator.
-
-> [!IMPORTANT]
-> Admin and non-admin users can see DLP policies impacting environments where they have system administrator or system customizer privileges.
-
-If you can't see the DLP policy applied to the environment where you want to install the solution:
-
-- Create a new developer environment, which you will be the system administrator of, then check the DLP policies applied to that environment once created.
-- Contact your Power Platform tenant admin to ask if the desired environment has either of the DLP policy configurations described above.
-
-### Install the low-code plug-ins for connectors solution
-
-If you confirm your environment doesn't have a DLP policy with the above configurations applied, you can include the low-code plug-in solution in the installation.
-
-The option to install the low-code plug-in for connectors wizard is provided when you install the Dataverse Accelerator.
-
-1. Follow the [installation steps](#prerequisites-for-creating-a-low-code-plug-in) to install the Dataverse Accelerator.
-2. On the second screen, an option to **Include the low-code plug-ins for connectors solution** is displayed. Make sure the checkbox is selected if you want to install the solution.
-
-   :::image type="content" source="media/appsource-edited.png" alt-text="Select the low-code plug-ins for connectors solution checkbox":::
-
-3. Review the terms of service and select **Install**.
-
-Once you have installed the solution, play the Dataverse Accelerator app and [Create a low-code plug-in that uses connectors](#create-a-low-code-plug-in-that-uses-connectors).
-
-#### Troubleshooting the low-code plug-in for connectors solution install
-
-If you installed the low-code plug-in for connectors solution and the Dataverse Accelerator app gets blocked by a DLP policy, uninstall the low-code plug-in for connectors wizard solution and the Dataverse Accelerator will be able to run.
-
-1. Go to [Power Apps](https://make.powerapps.com/).
-2. Go to the environment where the low-code plug-in for connectors solution is installed, and then select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-3. Select the low-code plug-in for connectors solution.
-4. On the command bar, select **Delete**.
-5. In the dialog, select **Delete** to confirm.
-6. On the command bar, publish all customizations.
-
-> [!NOTE]
-> - When you play the Dataverse Accelerator app, you'll need to refresh the browser tab where the app runs. It might take some time for the app to reflect the updates.
-> - If there was a DLP policy blocking the app, it might take at least 10 minutes after the uninstall is completed for the platform to unblock the Dataverse Accelerator app.
+- At least "can use and share" permission to a SQL Server connection (using SQL Server Authentication), or "owner" permission on a SQL Server connection using any other authentication type (e.g, Azure Active Directory)
 
 ### Create a low-code plug-in that uses connectors
 
@@ -248,14 +192,10 @@ If you installed the low-code plug-in for connectors solution and the Dataverse 
 
 ### Plug-ins with connectors limitations
 
-- Currently, only the SQL Server execute stored procedures (V2) action is available.
-
+- Currently, only the SQL Server **Execute Stored Procedure (V2)** action is available.
 - Plug-ins that use connectors will only output results into the external data source. Due to this, you'll need to take additional steps if you need to use the output of stored procedures in Dataverse. In the future, outputs to Dataverse will be supported.
-
 - Once the formula is generated and the input parameters are configured, you can't edit them directly. Currently, instead of making changes to the existing plug-in you must create a new one.
-
 - If a stored procedure runs longer than two minutes, Dataverse and Power Apps (make.powerapps.com) timeout and you won't receive the completion notification. However, you can still directly access the SQL table to get the results though direct connections or virtual tables.
-
 - Currently, there is no application lifecycle management (ALM) support for stored procedure plug-ins. This means they'll have to be re-created when importing solutions between environments.
 
 ## Test a low-code plug-in
