@@ -46,7 +46,7 @@ You can define input and output parameters that allow certain values in the form
 
 ### Calling instant low-code plug-ins as actions from a canvas app
 
-When an instant low-code plug-in is created, you'll be able to call the plug-in as a Dataverse action inside a canvas app as described in this article: [Call Dataverse actions directly in Power Fx](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx-experimental). However, for any subsequent plug-ins created, you'll have to remove and re-add the Power Fx environment language object. Then you'll be able to see all the low-code plug-ins as actions.
+When an instant low-code plug-in is created, you'll be able to call the plug-in as a Dataverse action inside a canvas app as described in this article: [Call Dataverse actions directly in Power Fx](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx-preview). However, for any subsequent plug-ins created, you'll have to remove and re-add the Power Fx environment language object. Then you'll be able to see all the low-code plug-ins as actions.
 
 More information on how to integrate: [Integrate a low-code plug-in](#integrate-a-low-code-plug-in)
 

@@ -1,8 +1,8 @@
 ---
-title: "Create elastic tables using code (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to create elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create elastic tables using code (preview)"
+description: "Learn how to create Dataverse elastic tables with code." 
 ms.topic: article
-ms.date: 05/23/2022
+ms.date: 06/10/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -19,7 +19,7 @@ contributors:
 
 You can create elastic tables using [Power Apps](https://make.powerapps.com/) without writing code. More information: [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md).
 
-But sometimes it is useful to be able to create and update table definitions with code. These examples create a new elastic table with the `SchemaName` `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `EntityMetadata.TableType` property with a value of `Elastic` to create an elastic table with code. When this is not set, the value will default to `Standard` and a standard table will be created.
+But sometimes it's useful to be able to create and update table definitions with code. These examples create a new elastic table with the `SchemaName` `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `EntityMetadata.TableType` property with a value of `Elastic` to create an elastic table with code. When `TableType` isn't set, the value defaults to `Standard` and a standard table is created.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -191,7 +191,7 @@ More information: [Create and update table definitions using the Web API](webapi
 
 You can create columns in elastic tables using [Power Apps](https://make.powerapps.com/) without writing code. More information: [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md).
 
-Columns can also be created using the SDK or Web API, but there are limits on the types of columns you can add. Currently you cannot add these types of columns:
+Columns can also be created using the SDK or Web API, but there are limits on the types of columns you can add. Currently you can't add these types of columns:
 
 - Money (`MoneyAttributeMetadata`)
 - MultiSelectPicklist (`MultiSelectPicklistAttributeMetadata`)
@@ -299,13 +299,13 @@ OData-Version: 4.0
 OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
 ```
 
-More information: [Create columns](webapi/create-update-entity-definitions-using-web-api.md#create-columns)
+More information: [Create columns](webapi/create-update-column-definitions-using-web-api.md#create-columns)
 
 ---
 
 ## Alternate keys
 
-You cannot create custom alternate keys for elastic tables.
+You can't create custom alternate keys for elastic tables.
 
 Each elastic table is created with one alternate key using these values:
 
@@ -315,23 +315,23 @@ Each elastic table is created with one alternate key using these values:
 
 This alternate key has the key values: `<table primary key name>` and `partitionid`.
 
-If you need to reference a record that has a `partitionid` value set to a value other than the default value (that is equal to the value of the primary key) you can reference the record using this alternate key.
+If you need to reference a record that has a `partitionid` value set, you can reference the record using this alternate key.
 
 More information: [Use an alternate key to reference a record](use-alternate-key-reference-record.md)
 
 ## Adding Relationships
 
-Dataverse currently does not support creating Many-to-Many relationships with elastic tables.
+Dataverse currently doesn't support creating Many-to-Many relationships with elastic tables.
 
 One-to-Many relationships are supported for elastic tables with following limitations:
 
-- Cascading is not supported. Cascading behavior must be set to `Cascade.None` when creating relationship.
-- Formatted values for lookup columns are not returned when the following conditions are true:
+- Cascading isn't supported. Cascading behavior must be set to `Cascade.None` when creating relationship.
+- Formatted values for lookup columns aren't returned when the following conditions are true:
 
    - The table being retrieved is a standard table and the lookup refers to an elastic table.
-   - The elastic table `partitionid` value is set to a value other than the default value, the primary key value of the elastic table row. In other words, when you are using a custom `partitionid` value. More information: [Choosing a PartitionId value](elastic-tables.md#choosing-a-partitionid-value)
+   - The elastic table `partitionid` value is set to a value other than the default value, the primary key value of the elastic table row. In other words, when you're using a custom `partitionid` value. More information: [Choosing a PartitionId value](elastic-tables.md#choosing-a-partitionid-value)
 
-Elastic tables support One-to-Many relationships and related rows can be retrieved when retrieving a record. Related records can't be included in a query. More information : [Return related rows in a query](use-elastic-tables.md#return-related-rows-in-a-query)
+Elastic tables support One-to-Many relationships and related rows can be retrieved when retrieving a record. Related records can't be included in a query. More information: [Return related rows in a query](use-elastic-tables.md#return-related-rows-in-a-query)
 
 
 ## Next steps
@@ -342,6 +342,6 @@ Elastic tables support One-to-Many relationships and related rows can be retriev
 ### See also
 
 [Elastic tables](elastic-tables.md)<br />
-[Use elastic tables](use-elastic-tables.md)<br />
 [Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)<br />
 [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
+[Elastic table sample code (preview)](elastic-table-samples.md)

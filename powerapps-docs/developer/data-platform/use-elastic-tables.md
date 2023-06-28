@@ -1,8 +1,8 @@
 ---
-title: "Use elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to perform data operations on elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use elastic tables using code (preview)"
+description: "Learn how to perform data operations on Dataverse elastic tables using code"
 ms.topic: article
-ms.date: 05/27/2022
+ms.date: 05/27/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -13,11 +13,11 @@ contributors:
  - JimDaly
 ---
 
-# Use elastic tables (preview)
+# Use elastic tables using code (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article describes how to perform data operations with elastic tables.
+This article describes how to perform data operations on elastic tables using code.
 
 ## Work with session token
 
@@ -25,7 +25,7 @@ As mentioned in [Consistency level](elastic-tables.md#consistency-level), you ca
 
 ### Getting the session token
 
-You'll find the session token as `x-ms-session-token` value in the response of all write operations.
+Find the session token as `x-ms-session-token` value in the response of all write operations.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -535,9 +535,9 @@ However, elastic tables support returning related rows when retrieving a single 
 ## Upsert a record in an elastic table
 
 > [!IMPORTANT]
-> Upsert operations with elastic tables are different than with standard tables. Upsert operations are expected to contain the full payload and will over-write any existing record data.
+> Upsert operations with elastic tables are different than with standard tables. Upsert operations are expected to contain the full payload and will over-write any existing record data. Upsert operations will not call the Create or Update messages. More information:  [Use Upsert to Create or Update a record > Elastic table upsert](use-upsert-insert-update-record.md#elastic-table-upsert)
 
-With elastic tables, if a record with a given ID and `partitionid` doesn't exist, it will be created. If it already exists, it is replaced.
+With elastic tables, if a record with a given ID and `partitionid` doesn't exist, it's created. If it already exists, it's replaced.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -682,7 +682,8 @@ Learn how to create and query JSON data in JSON columns in elastic tables with c
 
 ### See also
 
-[Use elastic tables (Preview)](elastic-tables.md)<br />
-[Create elastic tables (Preview)](create-elastic-tables.md)<br />
-[Query JSON columns in elastic tables (Preview)](query-json-columns-elastic-tables.md)<br />
+[Elastic tables (preview)](elastic-tables.md)<br />
+[Create elastic tables using code](create-elastic-tables.md)<br />
 [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
+[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)<br />
+[Elastic table sample code (preview)](elastic-table-samples.md)

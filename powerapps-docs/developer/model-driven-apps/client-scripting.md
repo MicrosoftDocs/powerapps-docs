@@ -6,7 +6,7 @@ author: HemantGaur
 ms.author: hemantg
 ms.date: 04/01/2022
 ms.reviewer: jdaly
-ms.custom: "intro-internal"
+ms.collection: get-started
 ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 

@@ -11,9 +11,9 @@ search.audienceType:
 ---
 # Quickstart: Blazor Server Web API sample (C#)
 
-In this quickstart, you'll create a Blazor Server application to connect to your Microsoft Dataverse environment using the Web API.
+In this quickstart, you create a Blazor Server application to connect to your Microsoft Dataverse environment using the Web API.
 
-You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` request containing the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). The response will be a [WhoAmIResponse ComplexType ](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). After call completion, the `WhoAmIResponse` properties are displayed.
+You authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` request containing the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). The response is a [WhoAmIResponse ComplexType ](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). After call completion, the `WhoAmIResponse` properties are displayed.
 
 > [!NOTE]
 > This is a very simple example to show how to get connected with a minimum of code.
@@ -21,13 +21,13 @@ You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` re
 ## Prerequisites
 
 - Visual Studio 2022 with the **ASP.NET and web development** workload.
-- [.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
-- Familiarity with the Microsoft Azure portal
-- Internet connection
-- Valid user account for a Dataverse instance
-- Administrator access to grant application registrations
-- URL to the Dataverse environment you want to connect with
-- Basic understanding of the Visual C# language
+- [.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
+- Familiarity with the Microsoft Azure portal.
+- Internet connection.
+- Valid user account for a Dataverse instance.
+- Administrator access to grant application registrations.
+- URL to the Dataverse environment you want to connect with.
+- Basic understanding of the Visual C# language.
 
 
 > [!NOTE]
@@ -35,31 +35,31 @@ You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` re
 
 ## Create a Visual Studio project
 
-1. Open Visual Studio 2022 and click **Create a new project**.
+1. Open Visual Studio 2022 and select **Create a new project**.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-1.png" alt-text="Open Visual Studio 2022":::
 
-1. In the **Create a new project** dialog, search for *Blazor Server App*. Select the template and click **Next**.
+1. In the **Create a new project** dialog, search for *Blazor Server App*. Select the template and select **Next**.
 
     :::image type="content" source="../media/quick-start-blazor-server-app-csharp-2.png" alt-text="Create a new project":::
 
-1. In the **Configure your new project** dialog, set the **Project name**, and **Location**. Then click **Next**.
+1. In the **Configure your new project** dialog, set the **Project name**, and **Location**. Then select **Next**.
 
     :::image type="content" source="../media/quick-start-blazor-server-app-csharp-2.5.png" alt-text="Enter project name and location":::
 
-   In this example we will use **DataverseWebApiBlazorServerQuickStart** as the **Project name**.
+   In this example, we'll use **DataverseWebApiBlazorServerQuickStart** as the **Project name**.
 
-1. In the **Additional information** dialog specify **Framework** and **Authentication type**.
+1. In the **Additional information** dialog, specify **Framework** and **Authentication type**.
 
-   In this example the Framework is **.NET 7.0 (Standard Term Support)**
+   In this example, the Framework is **.NET 7.0 (Standard Term Support)**.
 
    > [!IMPORTANT]
-   > Set the **Authentication type** to **Microsoft identity platform**
+   > Set the **Authentication type** to **Microsoft identity platform**.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-3.png" alt-text="Set the Authentication type to Microsoft identity platform":::
 
-1. Click **Create** to create the project.
-1. The project template opens a **Required components** dialog. Click **Next**.
+1. Select **Create** to create the project.
+1. The project template opens a **Required components** dialog. Select **Next**.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-4.png" alt-text="Required components":::
 
@@ -67,37 +67,37 @@ You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` re
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-5.png" alt-text="Microsoft identity platform dialog":::
 
-1. Click **Create new**.
-1. In the **Register an application** dialog, set the **Display name** and click **Register** to close the dialog.
+1. Select **Create new**.
+1. In the **Register an application** dialog, set the **Display name** and select **Register** to close the dialog.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-6.png" alt-text="Register an application":::
 
-   In this example we are using the name *Dataverse Web Api Blazor Server Quick Start*. We will search for the application using this name in a later step.
+   In this example, we're using the name *Dataverse Web Api Blazor Server Quick Start*. We'll search for the application using this name in a later step.
 
-1. Click **Next**.
+1. Select **Next**.
 
     > [!NOTE]
     > You don't need to do anything in this step.
 
-   This step provides capabilities to connect to Microsoft Graph or another API, but this isn't necessary for this quickstart.
+   This step provides capabilities to connect to Microsoft Graph or another API, but connecting to another API isn't necessary for this quickstart.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-6.5.png" alt-text="Additional settings step.":::
 
-1. Click **Next**. This step summarizes the changes that will be made to the project.
+1. Select **Next**. This step summarizes the changes that are made to the project.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-6.6.png" alt-text="Summary of changes":::
 
-1. Click **Finish**.
+1. Select **Finish**.
 
    The **Dependency configuration progress** dialog shows the automated steps performed by the template to register the application.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-7.png" alt-text="Dependency configuration progress":::
 
-1. Click **Close** to close the dialog.
+1. Select **Close** to close the dialog.
 
 ## Configure the application in Active Directory
 
-The Visual Studio template created a registered application using the information you provided. Connecting to Dataverse requires additional permissions.
+The Visual Studio template created a registered application using the information you provided. Connecting to Dataverse requires more permissions.
 
 1. From the [Power Platform admin center](https://admin.powerplatform.microsoft.com/home), select the **Azure Active Directory** admin center.
 
@@ -107,7 +107,7 @@ The Visual Studio template created a registered application using the informatio
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-9.png" alt-text="Search for the application registration":::
 
-1. Open the application and select **API permissions**. Click **Add a permission**.
+1. Open the application and select **API permissions**. Select **Add a permission**.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-10.png" alt-text="API permissions":::
 
@@ -115,16 +115,16 @@ The Visual Studio template created a registered application using the informatio
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-11.png" alt-text="search for Dataverse in APIs my organization uses":::
 
-1. Select **Dataverse**, and **Dynamics CRM API** will open.
-1. Select the `user_impersonation` delegated permission and click **Add permissions**.
+1. Select **Dataverse**, and **Dynamics CRM API** opens.
+1. Select the `user_impersonation` delegated permission and select **Add permissions**.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-12.png" alt-text="Add the user_impersonation delegated privilege":::
 
-1. Select **Certificates & secrets** and click **New client secret**.
+1. Select **Certificates & secrets** and select **New client secret**.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-13.png" alt-text="Certificates & secrets":::
 
-1. In the **Add a client secret** fly-out, enter a **Description** and **Expires** duration, then click **Add**.
+1. In the **Add a client secret** fly-out, enter a **Description** and **Expires** duration, then select **Add**.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-14.png" alt-text="Add a client secret":::
 
@@ -157,7 +157,7 @@ The Visual Studio template created a registered application using the informatio
 
 ## Edit the app
 
-To enable calls to Dataverse you must edit three files in the application:
+To enable calls to Dataverse, you must edit three files in the application:
 
 - appsettings.json
 - Program.cs
@@ -165,9 +165,9 @@ To enable calls to Dataverse you must edit three files in the application:
 
 ### appsettings.json
 
-There are several places in the other files that require a reference to the base uri used to access the Dataverse Web API. Adding this to the `appsettings.json` allows you to set this in one place.
+There are several places in the other files that require a reference to the base uri used to access the Dataverse Web API. Adding this data to the `appsettings.json` allows you to set this data in one place.
 
-Add the following below `"AllowedHosts": "*"` where `<your org>` represents the base url to access the Dataverse Web API. If you are not sure what this is, see [Web API URL and versions](compose-http-requests-handle-errors.md#web-api-url-and-versions).
+Add the following below `"AllowedHosts": "*"` where `<your org>` represents the base url to access the Dataverse Web API. If you aren't sure what this is, see [Web API URL and versions](compose-http-requests-handle-errors.md#web-api-url-and-versions).
 
 ```json
   "AllowedHosts": "*",
@@ -204,14 +204,14 @@ Add the following below `"AllowedHosts": "*"` where `<your org>` represents the 
        .EnableTokenAcquisitionToCallDownstreamApi(new string[] { $"{dataverseBaseUri}user_impersonation" })
        .AddInMemoryTokenCaches();
    ```
-
-    - [EnableTokenAcquisitionToCallDownstreamApi Method](xref:Microsoft.Identity.Web.MicrosoftIdentityWebApiAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi%2A) Adds support for the web app to acquire tokens to call an API. By passing the `user_impersonation` scope, the user is can consent to the capability to use the Dataverse Web API.
-    - [AddInMemoryTokenCaches Method](xref:Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder.AddInMemoryTokenCaches%2A) Enables caching the token issued for requests.
+ 
+   - The [MicrosoftIdentityWebApiAuthenticationBuilder.EnableTokenAcquisitionToCallDownstreamApi Method](/dotnet/api/microsoft.identity.web.microsoftidentitywebapiauthenticationbuilder.enabletokenacquisitiontocalldownstreamapi) adds support for the web app to acquire tokens to call an API. By passing the `user_impersonation` scope, the user can consent to the capability to use the Dataverse Web API.
+   - [AddInMemoryTokenCaches Method](xref:Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder.AddInMemoryTokenCaches%2A) Enables caching the token issued for requests.
 
 
 ### Pages/FetchData.razor
 
-The default `Pages/FetchData.razor` component retrieves some weather forecast data. We are going to replace this completely.
+The default `Pages/FetchData.razor` component retrieves some weather forecast data. We're going to replace this completely.
 
 Copy the following code and replace all the code in `Pages/FetchData.razor`:
 
@@ -319,14 +319,14 @@ else
 
 ## Run the program
 
-The application is now ready!
+The application is now ready.
 
 1. Press F5 to run the program. The first time the program runs you should see this consent dialog:
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-15.5.png" alt-text="Consent dialog":::
 
-1. Click **Accept**.
-1. Click **Fetch data**.
+1. Select **Accept**.
+1. Select **Fetch data**.
 
    The output should look like this:
 
@@ -335,6 +335,13 @@ The application is now ready!
 **Congratulations!** You have successfully connected to the Web API.
 
 This quickstart shows a simple approach to create a Blazor Server web application that connects to data in Dataverse.
+
+Learn more about Dataverse Web API capabilities by understanding the service documents.
+
+> [!div class="nextstepaction"]
+> [Web API types and operations](web-api-types-operations.md)
+
+
 
 ### See Also
 

@@ -6,12 +6,10 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 05/24/2023
+ms.date: 06/26/2023
 ms.custom: template-how-to
 ---
-# Export Dataverse data in Delta Lake format (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Export Dataverse data in Delta Lake format
 
 Use Azure Synapse Link for Dataverse to export your Microsoft Dataverse data to Azure Synapse
 Analytics in Delta Lake format. Then explore your data and accelerate time to insight. This article
@@ -24,7 +22,6 @@ provides the following information and shows you how to perform the following ta
 - View your data from Synapse Workspace.
 
 > [!IMPORTANT]
-> - This is a preview feature.
 > - For the Dataverse configuration, append-only is enabled by default to export CSV data in `appendonly` mode. But the delta lake table will have an in-place update structure because the delta lake conversion comes with a periodic merge process.
 > - There are no costs incurred with the creation of Spark pools. Charges are only incurred once a Spark job is executed on the target Spark pool and the Spark instance is instantiated on demand. These costs are related to the usage of Azure Synapse workspace Spark and are billed monthly. The cost of conducting Spark computing mainly depends on the time interval for incremental update and the data volumes. More information: [Azure Synapse Analytics pricing](https://azure.microsoft.com/pricing/details/synapse-analytics/)
 > - It's important to take these additional costs into consideration when deciding to use this feature as they are not optional and must be paid in order to continue using this feature.
@@ -70,7 +67,7 @@ This configuration can be considered a bootstrap step for average use cases.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment you want.
 1. On the left navigation pane, select **Azure Synapse Link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. On the command bar select **+ New link**, and then in your web browsers address bar, append `?athena.deltaLake=true` to the web address that ends with `exporttodatalake`.
+1. On the command bar select **+ New link**
 1. Select **Connect to your Azure Synapse Analytics workspace**, and then select the **Subscription**, **Resource group**, and **Workspace name**.
 1. Select **Use Spark pool for processing**, and then select the pre-created **Spark pool** and **Storage account**.
    :::image type="content" source="media/synapse-link-usesparkpool.png" alt-text="Azure Synapse Link for Dataverse configuration that includes spark pool.":::

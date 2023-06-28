@@ -4,9 +4,8 @@ description: Create an app from scratch and then add your data.
 author: franklanmsft
 
 ms.topic: quickstart
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 01/27/2022
 ms.subservice: canvas-maker

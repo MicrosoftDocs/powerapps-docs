@@ -1,8 +1,8 @@
 ---
-title: "Bulk operations with elastic tables (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to perform bulk data operations on  elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Bulk operations with elastic tables (preview)"
+description: "Learn how to perform bulk data operations on Dataverse elastic tables with code"
 ms.topic: article
-ms.date: 05/27/2022
+ms.date: 06/10/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -14,17 +14,20 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Often applications need to ingest large amount of data into Dataverse in a short amount of time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput can be much higher.
+Often applications need to ingest large amount of data into Dataverse in a short amount of time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput can be higher.
 
-Bulk operations are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. For elastic tables, we recommend sending 100 items in a batch. Multiple bulk operation can be run in parallel to achieve high throughput. More information [Send parallel requests](send-parallel-requests.md)
+Bulk operations are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. For elastic tables, we recommend sending 100 items in a batch. Multiple bulk operations can be run in parallel to achieve high throughput. More information [Send parallel requests](send-parallel-requests.md)
 
-Elastic tables currently supports following messages for bulk operations:
+Elastic tables currently support the following messages for bulk operations:
 
 - `CreateMultiple`
 - `UpdateMultiple`
 - `DeleteMultiple`
 
-Support for `UpsertMultiple` message will be coming soon. Also, these messages are currently supported only using the SDK for .NET.
+These messages are currently supported only using the SDK for .NET. Support for the `UpsertMultiple` message is coming soon.
+
+> [!NOTE]
+> `CreateMultiple` and `UpdateMultiple` are also available for standard tables. More information: [Use CreateMultiple and UpdateMultiple (preview)](org-service/use-createmultiple-updatemultiple.md)
 
 ## Use CreateMultiple with elastic tables
 
@@ -180,9 +183,36 @@ public static OrganizationResponse DeleteMultiple(IOrganizationService service)
 }
 ```
 
+## Exception handling for elastic tables
+
+Unlike standard tables, an error within a bulk operation with an elastic table doesn't roll back the entire request. It's possible for the operation to partially succeed and you can detect which records have failed from the ErrorDetails.
+
+
+When you use the SDK, a [FaultException](xref:System.ServiceModel.FaultException%601) of type [OrganizationServiceFault](xref:Microsoft.Xrm.Sdk.OrganizationServiceFault) is thrown if a failure occurs. You can get the status of each record using the following code.
+
+```csharp
+if (ex.Detail.ErrorDetails.TryGetValue("Plugin.BulkApiErrorDetails", out object errorDetails))
+{
+   List<BulkApiErrorDetail> bulkApiErrorDetails = JsonConvert.DeserializeObject<List<BulkApiErrorDetail>>(errorDetails.ToString());
+}
+
+public class BulkApiErrorDetail
+{
+   public int RequestIndex { get; set; }
+   public string Id { get; set; }
+   public int StatusCode { get; set; }
+}
+```
+
+When using Web API, you need to pass the `Prefer` header with value `odata.include-annotations=*` or `odata.include-annotations=Microsoft.PowerApps.CDS.ErrorDetails.*`, which gives the status of each record. More information: [Include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors)
+
+> [!NOTE]
+> You can see the errors in the above format only when the errors have occurred while writing data and cannot capture errors occurred in Pre and Post plugins. More information: [Handling Exceptions](write-plugin-multiple-operation.md#handling-exceptions).
+
 ### See also
 
 [Use elastic tables](elastic-tables.md)<br />
 [Create elastic tables using code](create-elastic-tables.md)<br />
 [Use elastic tables](use-elastic-tables.md)<br />
-[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)<br />
+[Elastic table sample code (preview)](elastic-table-samples.md)

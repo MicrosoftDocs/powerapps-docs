@@ -12,7 +12,7 @@ ms.custom: template-overview
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Microsoft Dataverse supports custom retention policies to securely retain data long term in a cost-efficient way. With retention policies, you can support your business growth with unlimited storage.
+Microsoft Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. While Dataverse can support your business growth with no limit on active data, you might want to consider moving inactive data to the Dataverse long term retention store.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -20,6 +20,9 @@ Microsoft Dataverse supports custom retention policies to securely retain data l
 > - For public preview, only non-production environments are allowed for previewing the long-term data retention feature. Production and Dataverse for Teams environments can't be used with this feature.
 > - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
 > - Pricing information for long term data retention will be available at general availability.
+
+Watch this video to learn about Dataverse long term data retention.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAf]
 
 ## Business application data lifecycle
 

@@ -25,16 +25,16 @@ To view retained data in an environment requires the system administrator securi
 
 Imagine an auditor requires access to long term data retained for the accounts table. To provide the auditor access, a Power Platform admin creates a new role, for example a role named *LTRAccounts Access Role* and grants organization scope read privilege to the accounts table. Then add the auditor's Power Platform user account to the security role. When the auditor's job is complete, it's a best practice to remove the auditor from the security role. For more information about creating and editing Dataverse security roles, go to [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
 
-## View retained data using advanced find
+## View retained data using edit filters from a model-driven app
 
 > [!NOTE]
-> - You can't save or export the advanced find query results of the retained data for sharing with others. To share retained data, [create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow).
-> - Advanced find doesn't retrieve table row attachments. To view attachment data, create a flow. More information: [Create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow)
+> - You can't save or export the the view query results of the retained data for sharing with others. To share retained data, [create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow).
+> - Edit filters doesn't retrieve table row attachments. To view attachment data, create a flow. More information: [Create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow)
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Settings** > **Advanced settings**.
-1. On the **Dynamics 365 Settings** page, select **Advanced Find** (filter icon) on the command bar.
-1. At the top of the advanced find pane, select **Change to retained data**.
-   :::image type="content" source="media/data-retention-advanced-find.png" alt-text="Select change to retained data on the advanced find pane.":::
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), play an app that includes a table that has retained data.
+1. Open the view you want. From the view select **Edit filters**.
+1. Select **Change to retained data**.
+   :::image type="content" source="media/data-retention-advanced-find.png" alt-text="Select change to retained data on the edit filter pane.":::
 1. Select the tables and search filters you want, and then select **Apply**. The retained data is displayed in the read-only grid.
    :::image type="content" source="media/data-retention-advanced-find-results.png" alt-text="Advanced find query results displaying retained case records":::
 If you need to retrieve long term data from multiple related tables, such as the account table, which has an associated retained case table, first use advanced find retrieve the retained case row. Then use the **Casenumber** column and use advanced find to retrieve the account row that contains the case number.

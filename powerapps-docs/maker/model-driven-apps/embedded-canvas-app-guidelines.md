@@ -33,14 +33,14 @@ This article provides guidance on working with embedded canvas apps as well as h
 -	If opening Power Apps Studio to create or edit an embedded canvas app via the **Customize** button in the canvas app control properties is blocked due to a web browser pop-up blocker, you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
 -	Embedded canvas apps are not displayed when creating a new row since they need a row context to be passed to them.
 -	The ModelDrivenFormIntegration.Item object is read-only.
-     - To write back data, you must use the Common Data Service connector. More information: [Microsoft Dataverse](/connectors/commondataservice/)
+     - To write back data, you must use the Dataverse connector. More information: [Microsoft Dataverse](/connectors/commondataservice/)
 -	Embedded canvas apps can only be created via the host model-driven form.
 - When viewing a model-driven form with an embedded canvas app, if an error message reads "It looks like you don’t have access to this app" ask its owner to share it with you" make sure that the author has shared the embedded canvas app with you. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 - Adding a canvas app on the subgrid control is no longer available.
     - In the preview release, makers were able to add a canvas app on a subgrid control. With canvas app embedding on model-driven forms now generally available, adding an embedded canvas app on a model-driven form is streamlined to the column. 
     - This makes it easier for makers since they don't have to decide up front whether to pass the current (main form) row as data context or a list of rows related to the current (main form) row. 
     - Makers always start with a column and can access both the current (main form) row or a list of rows related to the current (main form) row.
-    - To access the list of related rows in the canvas app, makers can use the Common Data Service connector and [Filter](../canvas-apps/functions/function-filter-lookup.md) function with the [Improve data sources experience and Dataverse views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/) capability enabled in the canvas app.  
+    - To access the list of related rows in the canvas app, makers can use the Dataverse connector and [Filter](../canvas-apps/functions/function-filter-lookup.md) function with the [Improve data sources experience and Dataverse views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/) capability enabled in the canvas app.  
     For example, to access the *Active Contacts* view of the *Contacts* table, makers can use: *Filter(Contacts, 'Contacts (Views)'.'Active Contacts')*.
     - Existing canvas apps that use the subgrid control will continue to work. However, we recommend that you migrate these apps to use a column instead. More information: [Migrating embedded canvas apps on model-driven forms that use a list of rows related to the current (main form) row](embedded-canvas-app-migrate-from-preview.md#migrating-embedded-canvas-apps-on-model-driven-forms-that-use-a-list-of-rows-related-to-the-current-main-form-row) for details.
 

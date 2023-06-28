@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
 ms.custom: ""
-ms.date: 02/23/2023
+ms.date: 06/21/2023
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -37,7 +37,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 - Dataverse: You must have the Dataverse **system administrator** security role. Additionally, tables you want to export via Synapse Link must have the **Track changes** property enabled. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup.  
 
 - Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account with **allowAll** IP addresses access rule. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
 
@@ -45,7 +45,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 >
 > - The storage account and Synapse workspace must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
 > - The storage account and Synapse workspace must be created in the same region as the Power Apps environment you will use the feature in and the same resource group.
-> - Using private endpoints for storage account or Synapse workspace isn't supported.
+> - By default, you must enable **public network access** for Azure resources for both initial setup and delta sync. To set **Enabled from selected virtual networks and IP addresses** for linked storage account and workspace to grant access only from selected virtual networks and IP addresses or to use private endpoints, you must create a Synapse Link with managed identities.[Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md)
 > - You must have **Reader** role access to the resource group with the storage account and Synapse workspace.  
 > - When you add multiple users to the synapse workspace, they must have the **Synapse Administrator** role access within the Synapse Studio and the **Storage Blob Data Contributor** role on the Azure Data Lake Storage Gen2 account.
 > - The creation of Synapse Link profiles under a single DV environment is limited to a maximum of 10.
@@ -134,7 +134,7 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 - Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).  
 
 > [!NOTE]
-> For empty table data and metadata table, only near real-time data is created.
+> To create read-only snapshot data, ensure that the **Permitted scope for copy operations** setting is configured to **From any storage account**. More information: [Configure the permitted scope for copy operations]( /azure/storage/common/security-restrict-copy-operations?tabs=portal#configure-the-permitted-scope-for-copy-operations-preview)
 
 1. Select the desired Azure Synapse Link, and then select the **Go to Azure Synapse Analytics workspace** from the top panel.
 1. Expand **Lake Databases** from the left panel, select **dataverse**-*environmentName*-*organizationUniqueName*, and then expand **Tables**.
