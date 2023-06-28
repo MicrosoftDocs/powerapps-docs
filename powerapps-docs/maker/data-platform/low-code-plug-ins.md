@@ -259,16 +259,13 @@ For a few examples of how to create a low-code plug-in, go to [Example Dataverse
 - Intellisense requires explicit notation in automated plugins if you want to refer any tables in the formula. Use the following disambiguation syntax such as [@Accounts] (and not Accounts).
 - Nested support. Plug-ins can only call first-party actions published by Microsoft from Power Fx expressions. In the future, plug-ins will be able to call other user-defined plug-ins.
 - Some `Collect` scenarios require `Patch`. There are some scenarios where `Collect()` doesn't work. The workaround is to use `Patch()` as shown in the populating regarding column example below.
-
     ```powerapps-dot
-
     Patch(Faxes,
         Collect(Faxes, { Subject : "Sub1" } ),
         { Regarding : First(Accounts) }
-
     )
-
     ```
+- `ForAll()` operations will fail at runtime on tables greater than 1000 rows.
 
 ## See also
 
