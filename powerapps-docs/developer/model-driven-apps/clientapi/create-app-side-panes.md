@@ -109,8 +109,6 @@ Xrm.App.sidePanes.createPane({
                         })
                     });
 ```
-> [!div class="mx-imgBorder"] 
-> ![Screenshot showing a webresource opened](../media/app-side-panes-opening-HTML-page.png "Open Webresource")
 
 
 ### Managing side panes
