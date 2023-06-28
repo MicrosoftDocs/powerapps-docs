@@ -271,7 +271,7 @@ For a few examples of how to create a low-code plug-in, go to [Example Dataverse
         { Regarding : First(Accounts) }
     )
     ```
-- Any formulas operating on tables with more than 1000 rows will fail at runtime, except if a primary ID is provided as a condition formula (e.g., `LookUp(Accounts, Account = GUID(AccountID))`, where AccountID is an input parameter)
+- Any formulas operating on tables with more than 1000 rows will fail at runtime, except if a primary ID is provided as a condition formula (e.g., `LookUp(Accounts, Account = GUID(AccountID))`, where AccountID is an input parameter of type string)
 
 ## See also
 
