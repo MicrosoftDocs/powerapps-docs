@@ -67,7 +67,7 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
 ## Prerequisites for creating a low-code plug-in
 
 - System administrator or system customizer security role membership in the Power Platform environment.
-- Dataverse Accelerator solution. [Download and install the Dataverse Accelerator from AppSource](https://aka.ms/dvaccelerator).
+- Install the Dataverse Accelerator solution. [Download and install the Dataverse Accelerator from AppSource](https://aka.ms/dvaccelerator).
     1. Sign in to [AppSource](https://aka.ms/dvaccelerator).
     1. Select **Get it now**.
     1. The **Dynamics 365 apps** page in Power Platform admin center appears.
@@ -79,11 +79,12 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
 > Alternatively, the Dataverse Accelerator can be [installed from the environment apps view](https://learn.microsoft.com/en-us/power-platform/admin/manage-apps#install-an-app-in-the-environment-view).
 
 Once the solution import has completed, the status is set to **Enabled** next to **Dataverse Accelerator** in the [list of licensed applications in the environment](https://learn.microsoft.com/en-us/power-platform/admin/manage-apps#environment-level-view-of-apps).
- 
+
+   
 ### Update the Dataverse Accelerator
-    1. Follow the instructions to [view licensed apps in your environment](https://learn.microsoft.com/en-us/power-platform/admin/manage-apps#environment-level-view-of-apps).
-    1. If the **Dataverse Accelerator** is already installed and an update is available, it will be indicated in the table next to the item.
-    1. Select **Dataverse Accelerator**, then click **Update** in the top menu bar.
+1. Follow the instructions to [view licensed apps in your environment](https://learn.microsoft.com/en-us/power-platform/admin/manage-apps#environment-level-view-of-apps).
+1. If the **Dataverse Accelerator** is already installed and an update is available, it will be indicated in the table next to the item.
+1. Select **Dataverse Accelerator** and click **Update** in the top menu bar.
 
 > [!TIP]
 > Enable [auto app updates](https://learn.microsoft.com/en-us/power-platform/developer/isvstudio/auto-update) for the **Microsoft - Power CAT** publisher to automatically recieve updates when available. 
