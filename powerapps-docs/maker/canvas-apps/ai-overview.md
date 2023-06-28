@@ -54,7 +54,7 @@ The following are requirements to access the waitlist for this preview:
 
     1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
-    2. In the admin center, go to **Environments** &gt; *\[select an environment\]* &gt; **Settings** &gt; **Features**.
+    2. In the admin center, go to **Environments** &gt; *\[select an environment\]* &gt; **Settings** &gt; **Product** &gt; **Features**.
 
     3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
 
