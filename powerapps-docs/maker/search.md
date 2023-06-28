@@ -1,5 +1,5 @@
 ---
-title: Find the apps, templates, and information you need using Power Apps unified search | Microsoft Docs
+title: Find it with unified search
 description: Use unified search to find what you need.
 author: Mattp123
 ms.subservice: common
@@ -10,8 +10,15 @@ search.audienceType:
   - maker
 contributors:
   - mattp123
+  - v-aangie
 ---
-# Find the apps, templates, and information you need
+
+# Find it with unified search
+
+Unified search helps you find the information you need easily in Power Apps and Power Automate.
+
+> [!NOTE]
+> **For Power Automate users:** Information you need includes flows and templates. To open the Power Automate documentation after reading this article, go to the [Find the flows, templates, and information you need](/power-automate/flows-unified-search) article.
 
 Power Apps unified search helps you quickly discover apps, templates, and external web content. From a single entry point you can find:
 
