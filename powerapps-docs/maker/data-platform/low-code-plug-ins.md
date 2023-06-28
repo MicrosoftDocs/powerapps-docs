@@ -75,7 +75,21 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
     1. Review the legal terms and privacy statement to continue.
     1. Select **Install**.
 
-Once the solution import has completed, the status is set to **Enabled** next to **Dataverse Accelerator**.
+> [!TIP]
+> Alternatively, the Dataverse Accelerator can be [installed from the environment apps view](https://learn.microsoft.com/en-us/power-platform/admin/manage-apps#install-an-app-in-the-environment-view).
+
+Once the solution import has completed, the status is set to **Enabled** next to **Dataverse Accelerator** in the [list of licensed applications in the environment](https://learn.microsoft.com/en-us/power-platform/admin/manage-apps#environment-level-view-of-apps).
+ 
+### Update the Dataverse Accelerator
+    1. Follow the instructions to [view licensed apps in your environment](https://learn.microsoft.com/en-us/power-platform/admin/manage-apps#environment-level-view-of-apps).
+    1. If the **Dataverse Accelerator** is already installed and an update is available, it will be indicated in the table next to the item.
+    1. Select **Dataverse Accelerator**, then click **Update** in the top menu bar.
+
+> [!TIP]
+> Enable [auto app updates](https://learn.microsoft.com/en-us/power-platform/developer/isvstudio/auto-update) for the **Microsoft - Power CAT** publisher to automatically recieve updates when available. 
+
+> [!NOTE]
+> If you previously installed the optional Low Code Plugins for Connectors solution, it will be automatically deleted if you update after June 29. The capabilities will be available in the main solution.
 
 ## Create an instant low-code plug-in
 
