@@ -3,7 +3,7 @@ title: "Grid OnRecordSelect event (Client API reference) in model-driven apps| M
 description: Includes description and supported parameters for the grid OnRecordSelect event.
 author: jasongre
 ms.author: jasongre
-ms.date: 06/28/2023
+ms.date: 06/29/2023
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -23,19 +23,20 @@ There might be situations where you don't want the table record to open (which i
 
 ### Step 1: Create a web resource
 
-Create, save and publish  a JavaScript (JS) web resource that contains the following code:
+Create, save and publish a JavaScript (JS) web resource that contains the following code:
 
-   ```JavaScript
-   function ChangeBehavior(){
+```JavaScript
+function OnSelect(context) {
+   var pageInput = {
+         pageType: "entityrecord",
+         entityName: "contact",
+         entityId: context.getFormContext().data.entity.getId()   
+   };
+   Xrm.Navigation.navigateTo(pageInput);
+}
+```
 
-    // Enter the url
-    var url =  "Enter the URL";
-    var OpenUrlOptions = {height: 800, width: 1000};
-    Xrm.Navigation.openUrl(url, openUrlOptions);
-   }
-   ```
-
-More information: [Create or edit model-driven app web resources ](../../../../../maker/model-driven-apps/create-edit-web-resources.md)
+More information: [Create or edit model-driven app web resources](../../../../../maker/model-driven-apps/create-edit-web-resources.md)
 
 ### Step 2: Enable Power Apps Grid Control
 
@@ -50,7 +51,7 @@ When enabling the **Power Apps Grid Control**, an **Events** tab appears. Select
 
 1. Under the **Form Libraries** section, add the Form Library from the web resource just created.
 1. Under the **Event Handlers** section, select the event **OnRecordSelect** and click **Add**, a popup will appear.
-1. In the popup, select the form library just added and the function name **ChangeBehavior**. This is the name of the JavaScript function created in the web resource.
+1. In the popup, select the form library just added and the function name **OnSelect**. This is the name of the JavaScript function created in the web resource.
 
 
 More information: [Power Apps grid control](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md)
