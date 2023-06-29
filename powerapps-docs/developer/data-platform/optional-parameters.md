@@ -223,7 +223,7 @@ More information:
 Use the `tag` parameter to include a shared variable value that is accessible within a plug-in. This extra information allows a plug-in to apply logic that depends on the client application.
 
 > [!NOTE]
-> This parameter is intended for client applications to be able to set any value they wish. No Dataverse feature should require that you set a specific value in your client application code to enable different behaviors.
+> This parameter is intended for client applications to be able to set any value they wish. No Microsoft feature should require that you set a specific value in your client application code to enable different behaviors.
 
 To access the value in a plug-in, use the [IExecutionContext.SharedVariables collection](xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables)
 
