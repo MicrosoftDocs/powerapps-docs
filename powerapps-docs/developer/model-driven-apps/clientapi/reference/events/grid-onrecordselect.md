@@ -17,7 +17,7 @@ contributors:
 The `OnRecordSelect` event occurs when a single row (record) is selected in the editable grid. This event won't occur if a user selects different cells in the same row, or selects multiple rows. 
 
 ## Override the default open behavior in model-driven grids 
-There might be situations where you don't want the table record to open (which is the default behavior), but want a custom action to be performed such as opening a URL using JavaScript functions. Here is an example to acheive this using the [Power Apps Grid Control](/power-apps/maker/model-driven-apps/the-power-apps-grid-control) and the `OnRecordSelect` event.
+There might be situations where you don't want the table record to open (which is the default behavior), but want a custom action to be performed such as opening a URL using JavaScript functions. Here is an example to acheive this using the [Power Apps Grid Control](../../../../../maker/model-driven-apps/the-power-apps-grid-control) and the `OnRecordSelect` event.
 
 ### Step 1: Create a web resource
 
@@ -40,32 +40,33 @@ Create a web resource to change the default behavior. In the following example, 
 
 5. Enter the name of the web resource,  and select the **Type** as **JavaScript (JS)**.
 
-6. Select **Text Editor**, copy the code shown below, paste it into the text editor, and enter the value of the URL you want to open:
+6. Select **Text Editor**, copy the code shown below, paste it into the text editor. This example uses the **contact** table. Set the `entityName` to the table you want. 
 
    ```JavaScript
-     function ChangeBehavior(){
-
-    // Enter the url
-    var url =  "Enter the URL";
-    var OpenUrlOptions = {height: 800, width: 1000};
-    Xrm.Navigation.openUrl(url, openUrlOptions);
-   }
+    function OnSelect(context) {
+      var pageInput = {
+          pageType: "entityrecord",
+          entityName: "contact",
+          entityId: context.getFormContext().data.entity.getId()   
+      };
+      Xrm.Navigation.navigateTo(pageInput);
+    }
    ```
 7. Save and publish the web resource.
 
 ### Step 2: Enable Power Apps Grid Control 
-Follow these steps to enable the **Power Apps Grid Control** as the main grid (table view) or within a model-driven form subgrid:
-- [Use as main grid](/power-apps/maker/model-driven-apps/the-power-apps-grid-control#add-the-power-apps-grid-control-to-views-for-an-entity)
-- [Use as subgrid](/power-apps/maker/model-driven-apps/the-power-apps-grid-control#add-the-power-apps-grid-control-to-a-subgrid)
+Follow these steps to enable the **Power Apps Grid Control** as the main grid (table view) or within a model-driven form subgrid.
+- [Use as main grid](../../../../../maker/model-driven-apps/the-power-apps-grid-control#add-the-power-apps-grid-control-to-views-for-an-entity)
+- [Use as subgrid](../../../../../maker/model-driven-apps/the-power-apps-grid-control#add-the-power-apps-grid-control-to-a-subgrid)
 
 
 ### Step 3: Register the custom behavior on OnRecordSelect Event
 When enabling the **Power Apps Grid Control**, an **Events** tab appears. Select the **Events** tab:
   1. Under the **Form Libraries** section, add the Form Libary from the web resource just created.
   2. Under the **Event Handlers** section, select the event **OnRecordSelect** and click Add, a popup will appear.
-  3. In the popup, select the form library just added and the Function name **ChangeBehavior**. This is the name of the JavaScript function created in the web resource.
+  3. In the popup, select the form library just added and the Function name **OnSelect**. This is the name of the JavaScript function created in the web resource, and check the option **Pass execution context as first parameter**.
 
 
-For more infomation, see [Power Apps Grid Control](../../../../power-apps/maker/model-driven-apps/the-power-apps-grid-control)
+For more infomation, see [Power Apps Grid Control](../../../../../maker/model-driven-apps/the-power-apps-grid-control)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
