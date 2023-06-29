@@ -16,7 +16,9 @@ contributors:
 # Create Azure key valut to automically sign your mobile app in wrap for Power Apps
 You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in **Step 2** of wrap wizard. Azure key vault is a cloud service that provides a secure store for secrets. You can securely store keys, passwords, certificates, and other secrets. More information: [Intoduction to Azure key vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview).
 
-You can use an exsiting Azure key vault or create a new one one on Azure portal at [https://portal.azure.com](https://portal.azure.com).
+You can use an exsiting Azure key vault or create a new one one using the isnructions below.
+
+//on Azure portal at [https://portal.azure.com](https://portal.azure.com).
   
 **Prerequisites**
   
@@ -25,10 +27,10 @@ You can use an exsiting Azure key vault or create a new one one on Azure portal 
 - You need to have a [Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
 - Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
    
-Follow these steps to create Azure Key Vault and configure KeyVault URI:
+Follow these steps to create **Azure key vault** for wrap for Power Apps and configure **KeyVault URI**:
   
-1. Sign in to your tenent as an admin and create a new Azure service principal for 1P AAD application: 4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp) by running the following script: <br>
-`Connect-AzureAD -TenantId <your tenant ID>` <br>
+1. Sign in to your tenent as an admin and create a new Azure service principal for 1P AAD application: **4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp)** by running the following script: <br>
+`Connect-AzureAD -TenantId <your tenant ID>` in Power Shell <br>
 `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
   
 2. In your default subscription's **Access Control (IAM)**, add a **Reader** role assignment to the **Service Principal** representing your app, e.g. **Wrap KeyVault Access App**. Make sure it is present in the **Subscription's IAM**, and the **Keyvault's IAM**.
