@@ -87,9 +87,9 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
 # Troubleshoot Azure key valut for wrap for Power Apps
 The following Azure key vault errors might appear in wrap for Power Apps and can be rectified.
 
+## 1000118
 
 | Error code      | Description          | Cool  |
 | ------------- |:-------------:| -----:|
-| #1000118    | Default subscription not found, or missing access permissions| $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+|## 1000118    | Default subscription not found, or missing access permissions| $1600 |
+
