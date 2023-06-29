@@ -103,6 +103,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 | Error code      | Description          | 
 | ------------- |:-------------:| 
+|1000120   | No organization ID tags found on key vault|
 
 ## 1000121
 
