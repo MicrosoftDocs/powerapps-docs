@@ -12,6 +12,8 @@ ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
+ms.contributors:
+- DanaMartens
 ---
 # Collaborate with others in model-driven apps 
 
@@ -21,7 +23,7 @@ Collaborate with colleagues and share links in model-driven Power Apps the same 
 [This section is pre-release documentation and is subject to change.]
 
 > [!IMPORTANT]
-> This feature is rolling out gradually, slower than the standard, weekly deployments and will be enabled by default for all customers through June 2023. If you have enabled this capability before 2023 release wave 1, you may not see other users working on the same record intermittently while we address a few issues. All the issues are expected to be addressed and deployed by June 30, 2023.
+> This feature is rolling out gradually, slower than the standard, weekly deployments and will be enabled by default for all customers through April and August 2023. If you have enabled this capability before 2023 release wave 1, you may not see other users working on the same record intermittently. This will be addressed as part of the gradual rollout through April and August 2023.
 
 When you're working on a record, you can also see other users who are working on the same record.
 
