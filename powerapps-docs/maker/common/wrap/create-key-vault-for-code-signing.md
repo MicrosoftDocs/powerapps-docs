@@ -84,3 +84,4 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
   
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
+# Toubleshoot Azure key valut for wrap for Power Apps
