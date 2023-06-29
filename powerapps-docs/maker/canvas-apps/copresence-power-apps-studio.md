@@ -39,3 +39,39 @@ The maker that opens the app first has editing control. If a second user tries t
 Icons of copresent makers appear in both the command bar and the left navigation pane showing where other makers are working in the app.
 
 You may be working on the app, or you may be idle, but once someone else saves a change to the app, you receive a notification letting you know that another maker made changes. When you see this notification, consider refreshing the app to get the latest version.
+
+## Coauthor (experimental)
+
+[This section is pre-release documentation and is subject to change.]
+
+> [!IMPORTANT]
+> - This is an experimental feature.
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+Coauthoring is a new experimental feature that works similar to copresence. The user who initiates the app has the editing privileges. When another user attempts to open the app, a notification is displayed, informing them that someone else is currently editing the app and they are limited to read-only access. In read-only mode, users have the option to save a copy of the app. The benefit of coauthoring is that you can see in real-time the changes that are being made by the person editing the app without the need to refresh to see the changes.
+
+### Enable coauthoring
+
+Coauthoring needs to be tuned on per app.
+
+1. To enable coauthoring, open your app for editing in Power Apps Studio.
+2. Go to **Settings** > **Upcoming features** > **Experimental**.
+3. Set the toggle for **Enable coauthoring** to **On**.
+
+
+#### Limitations of coauthoring
+
+The following options cannot be performed or are disabled for the maker editing the app and the makers wtih read only access:
+- undo/redo
+- switch authoring version
+- open, new, app from data, or app from template
+- Save as
+- Monitor tool
+- Search pane 
+
+The following 
+All the limitations of the writers
+All the limitations of copresence (e.g. no save)
+Making changes to the app is disabled
+
+
