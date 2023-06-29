@@ -110,20 +110,20 @@ You can also code sign your mobile app package manually instead of using automat
 ### Step 3: Configure branding
 
 1. On the **Configure Branding Step**, set the following look and feel options for your app:
+
+     > [!NOTE]
+     > All the images must be in .png format. A default image will be used if no custom images are selected.
    
-   - **App icons**: Upload icons to use for your app.
-     ⋅⋅*iOS
-     ⋅⋅*Android
+   - **App icons**: Upload icons to use for your app. Recommended size for iOS: 1024px by 1024px .png image or larger. Recommended image size for Android: 432px by 432px .png image or larger. 
    - **Splash screen image**: Image that's used on the splash screen of your mobile app, while it loads. Default image used when not provided.
    - **Welcome screen image**: Image that's used on the welcome (sign in) screen of your mobile app, while it loads. Default image used when not provided.
    - **Background fill color**: Hexadecimal color code used for the background of the welcome screen.
    - **Button fill color**: Hexadecimal color code used to fill the button color.
    - **Status bar text theme**: Color for the status bar text at the top of the app.
    
-     > [!NOTE]
-     > All the images must be in .png format. A default image will be used if no custom images are selected.
 
-2.  Select **Next**.
+
+3.  Select **Next**.
 
 ### Step 4: Register app
 
