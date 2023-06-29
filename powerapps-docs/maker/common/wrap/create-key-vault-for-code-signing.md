@@ -90,6 +90,6 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 | Error code      | Description          | Cool  |
 | ------------- |:-------------:| -----:|
-| ##1000118    | Default subscription not found, or missing access permissions| $1600 |
+| #1000118    | Default subscription not found, or missing access permissions| $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
