@@ -88,8 +88,8 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
 The following Azure key vault errors might appear in wrap for Power Apps and can be rectified.
 
 
-| Tables        | Are           | Cool  |
+| Error code      | Description          | Cool  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
+| ##1000118    | Default subscription not found, or missing access permissions| $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
