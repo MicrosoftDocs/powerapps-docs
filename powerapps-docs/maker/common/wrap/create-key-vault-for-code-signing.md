@@ -93,3 +93,34 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | ------------- |:-------------:| 
 |1000118    | Default subscription not found, or missing access permissions|
 
+## 1000119
+
+| Error code      | Description          | 
+| ------------- |:-------------:| 
+|1000119    | Keyvault does not exist, OR Keyvault is missing access privileges|
+
+## 1000120
+
+| Error code      | Description          | 
+| ------------- |:-------------:| 
+
+## 1000121
+
+| Error code      | Description          | 
+| ------------- |:-------------:| 
+|1000121    | Android keystore is not valid. Missing Tag and/or Certificate|
+
+## 1000122
+
+| Error code      | Description          | 
+| ------------- |:-------------:| 
+|1000122    |  iOS certificate is not valid|
+
+## 1000123
+
+| Error code      | Description          | 
+| ------------- |:-------------:| 
+|1000123    |   iOS profile is not valid|
+
+
+
