@@ -1,12 +1,12 @@
 ---
 title: "Collaborate with others in model-driven apps| MicrosoftDocs"
 description: Collaborate with others in model-driven apps
-author: fikaradz 
+author: sriharibs-msft
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/29/2023
 ms.subservice: end-user
-ms.author: fikaradz
+ms.author: srihas
 ms.custom: ""
 ms.reviewer: sericks
 ms.assetid: 
