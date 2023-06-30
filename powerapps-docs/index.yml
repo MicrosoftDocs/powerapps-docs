@@ -2,18 +2,17 @@
 
 title: Microsoft Power Apps documentation # < 60 chars
 summary: Discover how to make the most of Power Apps with online training courses, docs, and videos covering product capabilities and how-to articles. Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps.
-# brand: aspnet | azure | dotnet | dynamics | m365 | office | sql | windows | visual-studio | xamarin
 brand: power-apps
 
 metadata:
   title: Official Microsoft Power Apps documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Discover how to make the most of Power Apps with online training courses, docs, and videos covering product capabilities and how-to articles. Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps. 
-
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
   ms.date: 06/30/2023 #Required; mm/dd/yyyy format.
-  hide_bc: false
+  ms.custom: bap-template
+  hide_bc: true
 
 highlightedContent:
   # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample tutorial | video | whats-new
@@ -35,15 +34,13 @@ highlightedContent:
       url: /training/powerplatform/power-apps
 
     # Card
-    - title: "Troubleshoot"
+    - title: Troubleshoot
       itemType: concept
       url: /troubleshoot/power-platform/power-apps/welcome-power-apps
 
 additionalContent:
   sections:
     - title: Create and design
-      # Guidance should be the first card under implement. On this card, include links for Security and Compliance, Implementation, Adoption frameworks, and Best practices.
-      # Each card should have at least three and no more than five links. Do not include a "See also" link.
       items:
         - title: Try/Buy
           links:
@@ -53,27 +50,27 @@ additionalContent:
               url: /power-platform/admin/signup-for-powerapps-admin
         - title: Create apps
           links:
-            - text: Choose app type
+            - text: Choose an app type
               url: maker/index.md
-            - text: Canvas apps
+            - text: Create a canvas app
               url: maker/canvas-apps/index.yml
-            - text: Model-driven apps
+            - text: Create a model-driven app
               url: maker/model-driven-apps/index.yml
-            - text: Cards
+            - text: Create a card
               url: cards/overview.md
-        - title: AI Copilot capabilities
+        - title: AI copilot capabilities
           links:
-            - text: Get started with AI Copilot (preview)
+            - text: Get started with AI copilot (preview)
               url: maker/canvas-apps/ai-overview.md
             - text: Build apps through conversation (preview)
               url: maker/canvas-apps/ai-conversations-create-app.md
-            - text: Add Copilot control to a canvas app (preview)
+            - text: Add a Copilot control to a canvas app (preview)
               url: maker/canvas-apps/add-ai-copilot.md
         - title: Create and manage data
           links:
             - text: What is Microsoft Dataverse?
               url: maker/data-platform/data-platform-intro.md
-            - text: Tables and metadata
+            - text: Create and use tables and metadata
               url: maker/data-platform/create-edit-metadata.md
             - text: Apply business logic
               url: maker/data-platform/processes.md
@@ -89,7 +86,7 @@ additionalContent:
               url: /power-platform/alm/pipelines
         - title: Integrate with other products
           links:
-            - text: Add Chatbot control to a canvas app
+            - text: Add a Chatbot control to a canvas app
               url: maker/canvas-apps/add-ai-chatbot.md
             - text: Visualize data with Power BI
               url: user/visualize-in-power-bi.md
@@ -99,23 +96,23 @@ additionalContent:
               url: teams/create-apps-overview.md
         - title: Best practices guidance
           links:
-            - text: Power Apps patterns
+            - text: Understand Power Apps patterns
               url: guidance/patterns/overview.md
-            - text: Planning a Power Apps project
+            - text: Plan a Power Apps project
               url: guidance/planning/introduction.md
-            - text: Collaborating and co-developing apps
+            - text: Collaborate and co-develop apps
               url: guidance/co-develop/overview.md
     - title: Administer and extend
       items:
         - title: Administer Power Apps
           links:
-            - text: Use Power Platform admin center
+            - text: Use the Power Platform admin center
               url: /power-platform/admin/admin-documentation
-            - text: Power Apps licensing
+            - text: Understand Power Apps licensing
               url: /power-platform/admin/pricing-billing-skus
-            - text: Security and governance
+            - text: Understand security and governance
               url: /power-platform/admin/security
-        - title: Extend data platform
+        - title: Extend the data platform
           links:
             - text: Dataverse developer guide
               url: developer/data-platform/index.yml
@@ -131,17 +128,17 @@ additionalContent:
               url: developer/model-driven-apps/index.yml
             - text: Apply business logic using client scripting
               url: developer/model-driven-apps/client-scripting.md
-            - text: Code components for model-driven apps
+            - text: Use code components in model-driven apps
               url: developer/component-framework/code-components-model-driven-apps.md
         - title: Extend canvas apps
           links:
             - text: Canvas apps developer guide
               url: maker/canvas-apps/dev-enterprise-intro.md
-            - text: Custom connectors
+            - text: Create and use custom connectors
               url: maker/canvas-apps/register-custom-api.md
             - text: Develop offline-capable canvas apps
               url: maker/canvas-apps/offline-apps.md
-            - text: Canvas component
+            - text: Create and use canvas components
               url: maker/canvas-apps/create-component.md
 
     - title: Use
@@ -156,7 +153,7 @@ additionalContent:
               url: mobile/powerapps-mobile-troubleshoot.md
         - title: Use apps in web browsers
           links:
-            - text: Basic navigation
+            - text: Understand basic navigation
               url: user/navigation.md
             - text: Search records
               url: user/search.md
@@ -164,20 +161,20 @@ additionalContent:
               url: user/work-with-reports.md
         - title: Use apps in Teams
           links:
-            - text: Embed a canvas app as tab app
+            - text: Embed a canvas app as a tab
               url: teams/embed-teams-tab.md
-            - text: Embed a canvas app as personal app
+            - text: Embed a canvas app as a personal app
               url: teams/embed-teams-app.md
-            - text: Embed a model-driven app as tab app
+            - text: Embed a model-driven app as a tab
               url: teams/embed-model-driven-teams-tab.md
-            - text: Embed a model-driven app as personal app
+            - text: Embed a model-driven app as a personal app
               url: teams/embed-model-driven-teams-personal.md
 
     - title: Related content # < 60 chars (optional)
       items:
         # Card
         - title: Power Platform
-          summary: One-stop learning resource for Power Platform applications and features including admin, developer, and guidance documentation.
+          summary: One-stop learning resource for Power Platform applications and features, with admin, developer, and guidance documentation.
           url: /power-platform
         # Card
         - title: Power Automate
@@ -194,9 +191,9 @@ additionalContent:
           summary: Create powerful bots using a guided, no-code graphical interface without the need for data scientists or developers.
           url: /power-virtual-agents
         - title: Dynamics 365
-          summary: "The next generation of CRM and ERP applications"
+          summary: Empower your organization with the next generation of CRM and ERP applications.
           url: /dynamics365/
         # Card
         - title: Microsoft Azure
-          summary: "Ever-expanding set of cloud computing services to help your organization meet it's business challenges"
+          summary: Learn how this ever-expanding set of cloud computing services can help your organization meet its business challenges.
           url: /azure
