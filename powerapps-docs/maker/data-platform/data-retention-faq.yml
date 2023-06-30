@@ -42,7 +42,7 @@ sections:
 
    - question: How long will a policy run take to complete?
      answer: |
-        A policy run takes about 24 - 72 hours irrespective of the data volume. Data retention policies are given a low priority by the application. Dataverse runs the process in the background typically during off hours to avoid impacting active applications and processes.
+        A policy run takes about 72 - 96 hours irrespective of the data volume. Data retention policies are given a low priority by the application. Dataverse runs the process in the background typically during off hours to avoid impacting active applications and processes.
 
    - question: What is expected for the performance when accessing retained non-active data from Dataverse?
      answer: |
