@@ -118,7 +118,7 @@ From that app designer select **Save** > **Validate** > **Play**. This runs the 
   
     - **Title**: Enter the title for the area in the base language of the organization.  
   
-    - **Icon**: A default application icon is selected. Select a different icon for the area from the list of web resources available in the solution.  
+    - **Icon**: A default application icon is selected. Select a different icon for the area from the list of web resources available in the solution. The icon only applies to the deprecated web client sitemap and not the modern model-driven app sitemap.  
   
     - **ID**: A unique ID is automatically generated, but different one can be entered if necessary. It's best practice to use the provided ID because if the ID entered isn't unique, users might get an error when they're using the app, or app designers may get an error when importing a solution that contains this site map.  
   
