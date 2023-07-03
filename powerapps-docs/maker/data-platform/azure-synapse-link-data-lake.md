@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake | MicrosoftDocs"
 description: "Learn how to export table data to Azure Data Lake Storage Gen2 in Power Apps"
 ms.custom: ""
-ms.date: 01/18/2023
+ms.date: 06/21/2023
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,7 +18,6 @@ search.audienceType:
 contributors:
   - sama-zaki
 ---
-
 # Create an Azure Synapse Link for Dataverse with Azure Data Lake
 
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Data Lake Storage Gen2 to enable various analytics scenarios. This article shows you how to perform the following tasks:
@@ -35,12 +34,13 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup. We recommend that replication is set to **read-access geo-redundant storage (RA-GRS)**.
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup. We recommend that replication is set to **read-access geo-redundant storage (RA-GRS)**.
 
 > [!NOTE]
 >
 > - The storage account must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
 > - The storage account must be created in the same region as the Power Apps environment you will use the feature in.
+> - By default, you must enable **public network access** for Azure resources for both initial setup and delta sync. To set **Enabled from selected virtual networks and IP addresses** for linked storage account to grant access only from selected virtual networks and IP addresses or to use private endpoints, you must create a Synapse Link with managed identities.[Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md)
 > - You must have **Reader** role access to the resource group with the storage account.  
 > - To link the environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
 > - Only tables that have change tracking enabled can be exported.

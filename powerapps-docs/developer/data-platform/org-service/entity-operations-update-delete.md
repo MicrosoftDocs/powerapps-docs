@@ -290,7 +290,7 @@ Target = account
 };
 
 //The existing entity is updated.
-var response2 = (UpsertResponse)svc.Execute(request1);
+var response2 = (UpsertResponse)svc.Execute(request2);
 Console.WriteLine("Record Created: {0}", response2.RecordCreated); //false
 ```
 
