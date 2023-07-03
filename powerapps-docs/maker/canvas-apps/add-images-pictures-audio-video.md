@@ -244,7 +244,7 @@ You can remove all unused media from the app to clean up or reduce the size of t
 - To enable better performance while loading an app, following size restrictions apply:
     - The total size of all media files uploaded to an app can't exceed 200 MB.
     - Maximum size of an individual media file in an app can't exceed 64 MB.
-- Supported media file types: `.jpg, .jpeg, .gif, .png, .bmp, .tif, .tiff, .svg, .wav, .mp3, .mp4, .wma, .wmv`.
+- Supported media file types: `.jpg, .jpeg, .gif, .png, .bmp, .tif, .tiff, .svg, .wav, .mp3, .mp4`.
 - [Cloud-storage known limitations](connections/cloud-storage-blob-connections.md#known-limitations) apply when connecting your app with cloud-based storage.
 
 ## See also
