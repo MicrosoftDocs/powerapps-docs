@@ -555,7 +555,7 @@ Complete all the fields as shown in the following table, and then select **Save*
 |-|-|-|
 | Full name | FullName | The name of the contact. |
 | E-mail | E-mail | The email address that's shown for the contact. |
-| Country | Country | The country for the contact. This field is used to group the contacts; you can use other values to group contacts by if countries don't make sense for you. |
+| Country | Country | The country/region for the contact. This field is used to group the contacts; you can use other values to group contacts by if countries/regions don't make sense for you. |
 | Comments | Comments | Shows additional information about the contact; useful to describe when to reach out to this contact. |
 | Deprecated | Deprecated | Use to hide an existing emergency contact. |
 

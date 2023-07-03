@@ -87,11 +87,11 @@ In the list of connections, find the connection that you want to update or delet
 
 ## Manage the consent dialog appearance for custom connectors using Azure Active Directory OAuth
 
-By default, when end-users launch Power Apps apps they’re presented a connection consent dialog before they’re able to access the app experience for the first time. It’s possible for admins to suppress this consent dialog for select connectors: Microsoft First Party connectors (like SharePoint, Office 365 Users) and custom connectors using OAuth.
+By default, when end-users launch Power Apps apps they’re presented a connection consent dialog before they’re able to access the app experience for the first time. It’s possible for admins to suppress this consent dialog for select connectors: Microsoft First Party connectors (like SharePoint, Office 365 Users) and custom connectors using Azure Active Directory (Azure AD) OAuth.
 
-### Suppress consent dialog for apps that use custom connectors using OAuth
+### Suppress consent dialog for apps that use custom connectors using Azure AD OAuth
 
-To suppress consent dialog for apps created using Power Apps that connect through custom connectors using OAuth, follow the below steps.
+To suppress consent dialog for apps created using Power Apps that connect through custom connectors using Azure AD OAuth, follow the below steps.
 
 #### Step 1. Provision Microsoft’s Azure API connections service principal in your Azure AD tenant
 
@@ -143,7 +143,7 @@ In addition to the admin consent granted on a custom application in Azure AD, wh
   Set-AdminPowerAppApisToBypassConsent -AppName <Power Apps app id>
 ```
 
-### Remove consent suppression for apps that use custom connectors using OAuth
+### Remove consent suppression for apps that use custom connectors using Azure AD OAuth
 
 To remove consent suppression for a custom connector, an admin must perform at least one of the following actions:
 
