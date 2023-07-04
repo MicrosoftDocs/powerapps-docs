@@ -28,7 +28,7 @@ When you write code that sets or modifies activity columns, it's important to ke
 
 In this section, let's review state code option differences between `ActivityPointer` and derived types.
 
-[ActivityPointer.StateCode](/power-apps/developer/data-platform/reference/entities/activitypointer#statecode-choicesoptions) defines four options:<!-- EDITOR'S NOTE: This table and section need an introductory sentence. -->
+[ActivityPointer.StateCode](/power-apps/developer/data-platform/reference/entities/activitypointer#statecode-choicesoptions) defines four options:
 
 | Label | Value |
 | --------- | ---------|
