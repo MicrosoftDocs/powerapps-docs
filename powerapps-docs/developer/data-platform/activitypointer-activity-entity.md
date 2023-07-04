@@ -1,7 +1,7 @@
 ---
 title: Activity (ActivityPointer) table
 description: Learn how to work with the Activity (ActivityPointer) table in Microsoft Dataverse.
-ms.date: 03/25/2023
+ms.date: 07/03/2023
 ms.reviewer: pehecke
 ms.topic: conceptual
 author: DanaMartens
@@ -22,9 +22,11 @@ The [`ActivityPointer.ActivityTypeCode`](/power-apps/developer/data-platform/ref
 
 ## Inherited statecode and statuscode options
 
-When you interact with activities with code, it's important to keep in mind that the `statecode` and `statuscode` columns of the types that are derived from `ActivityPointer` can have differences from the `ActivityPointer` `statecode` and `statuscode` column definitions.<!-- EDITOR'S NOTE: This sentence doesn't make sense to me. I can't figure out a way to rewrite it so that it does make sense. Can you please explain what you mean as if you were talking to a knowledgeable friend? -->
+When you write code that sets or modifies activity columns, it's important to keep in mind that the `statecode` and `statuscode` columns of`ActivityPointer` derived types can have a somewhat different purpose from the base `ActivityPointer` `statecode` and `statuscode` column definitions. The following sections describe these differences.
 
 ### StateCode option differences
+
+In this section, let's review state code option differences between `ActivityPointer` and derived types.
 
 [ActivityPointer.StateCode](/power-apps/developer/data-platform/reference/entities/activitypointer#statecode-choicesoptions) defines four options:<!-- EDITOR'S NOTE: This table and section need an introductory sentence. -->
 
