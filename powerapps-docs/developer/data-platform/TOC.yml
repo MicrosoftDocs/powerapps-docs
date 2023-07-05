@@ -282,7 +282,7 @@
           href: task-fax-phone-call-letter-activity-entities.md
         - name: ActivityParty table
           href: activityparty-entity.md
-        - name: ActivityPointer (activity) table
+        - name: Activity (ActivityPointer) table
           href: activitypointer-activity-entity.md
         - name: Recurring Appointments
           items:
