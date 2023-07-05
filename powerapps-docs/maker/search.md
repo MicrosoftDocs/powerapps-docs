@@ -15,36 +15,40 @@ contributors:
 
 # Find it with unified search
 
-Unified search helps you find the information you need easily in Power Apps and Power Automate.
-
-> [!NOTE]
-> **For Power Automate users:** Information you need includes flows and templates. To open the Power Automate documentation after reading this article, go to the [Find the flows, templates, and information you need](/power-automate/flows-unified-search) article.
-
-Power Apps unified search helps you quickly discover apps, templates, and external web content. From a single entry point you can find:
+Unified search helps you quickly discover apps in Power Apps, flows in Power Automate, templates, and external web content. From a single entry point, you can find:
 
 |Item  |Content type  |
 |---------|---------|
-|Apps that have been built and published   | Environment        |
+|(Power Apps) Apps that have been built and published   | Environment        |
+|(Power Automate) Flows that have been built and published   | Environment        |
 |Templates    | Environment  |
 |Documentation and learn content    |  External web     |
 |Community content     |  External web       |
 |Blog posts     | External web        |
 | Video tutorials  | External web  |
 
+> [!NOTE]
+> To open the Power Automate documentation, go to the [Power Automate Overview](/power-automate/getting-started).
+
 ## Use search
 
-Type in the **Search** box to see suggestions for apps and templates appear in the drop down below the search box.
+By default, search displays items only from your environment, which are apps, flows, and templates.
 
-Choose any suggestion to go directly to that item.
+1. To display suggestions, type in the **Search** box.
 
-> [!NOTE]
-> By default, search only displays items from your environment, which are apps and templates. Users can select the **See web results** option to expand their search to external web content.
-> :::image type="content" source="data-platform/media/search-see-web-results.png" alt-text="See web results .":::
+    - For Power Apps, suggestions include apps and templates.
+    - For Power Automate, suggestions include flows and templates.
 
-> [!WARNING]
-> Do not send personal data or confidential/proprietary information as part of your search when you choose this option.
+1. To go directly to that item, select any suggestion.
 
-To prevent users from using the **See web results** option to perform external web content searches for an environment, see [Manage search providers](#manage-search-providers).
+1. (Optional) To expand your search to external web content, select **See web results**.
+
+    :::image type="content" source="data-platform/media/search-see-web-results.png" alt-text="See web results .":::
+
+    > [!WARNING]
+    > Don't send personal data or confidential/proprietary information as part of your search when you choose this option.
+
+To prevent users from using the **See web results** option to perform external web content searches for an environment, go to [Manage search providers](#manage-search-providers).
 
 ## Manage search providers
 
