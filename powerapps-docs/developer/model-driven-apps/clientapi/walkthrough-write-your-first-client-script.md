@@ -10,9 +10,6 @@ applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -343,7 +340,7 @@ To test your code:
 
 ### See also
 
-[Debug your JavaScript code for model-driven apps](debug-JavaScript-code.md)<br />
+[Debug JavaScript code for model-driven apps](debug-JavaScript-code.md)<br />
 [Events in forms and grids in model-driven apps](events-forms-grids.md)<br />
 [Form OnLoad event](reference/events/form-onload.md)<br />
 [Form OnSave event (Client API reference) in model-driven apps](reference/events/form-onsave.md)<br />

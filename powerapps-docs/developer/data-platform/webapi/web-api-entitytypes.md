@@ -1,19 +1,15 @@
 ---
 title: "Web API EntityTypes (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData EntityTypes which are named structured types with a key. EntityTypes describe the data types available in Dataverse Web API."
-ms.date: 04/06/2022
-author: divka78
+ms.date: 05/18/2023
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 ms.service: powerapps
 applies_to: 
   - "Dynamics 365 (online)" 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
@@ -66,7 +62,9 @@ This element defines an entity type that inherits from `crmbaseentity` but is al
 
 `<EntityType Name="expando" BaseType="mscrm.crmbaseentity" OpenType="true" />`
 
-An expando entity type can be used as a parameter to an action or function. 
+An expando entity type can be used as a parameter to an action, or as a response property from a function or action.
+
+More information: [Use open types with Custom APIs](../use-open-types.md)
 
 ### crmmodelbaseentity
 

@@ -1,17 +1,14 @@
 ---
 title: "Grid OnSave event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the grid OnSave event.
-ms.author: jdaly
-author: adrianorth
+author: jasongre
+ms.author: jasongre
 ms.date: 09/15/2022
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---

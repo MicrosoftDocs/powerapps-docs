@@ -7,9 +7,6 @@ ms.author: nhelgren
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -18,23 +15,21 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This collection of http requests and responses demonstrate how to perform selected operations that modify the Dataverse schema, or metadata, using the Microsoft Dataverse Web API.  
+This collection of http requests and responses demonstrate how to perform selected operations that modify the Dataverse schema, or metadata, using the [Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
   
-- [Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
-  
-This topic describes a common set of operations implemented by each sample in this group. This topic describes the HTTP requests and responses and text output that each sample will perform without the language specific details. See the language specific descriptions and the individual samples for details about how these operations are performed.  
+This article describes a common set of operations implemented by each sample in this group. This article describes the HTTP requests and responses and text output that each sample performs without the language specific details. See the language specific descriptions and the individual samples for details about how these operations are performed.  
   
 <a name="bkmk_demonstrates"></a>  
 
 ## Demonstrates  
 
-This sample is divided into the following sections, containing Dataverse Web API operations which are discussed in greater detail in the specified associated conceptual topics.  
+This sample is divided into the following sections, containing Dataverse Web API operations that are discussed in greater detail in the specified associated conceptual articles.  
   
-|Code section|Associated conceptual and reference topics|  
+|Code section|Associated conceptual and reference articles|  
 |------------------|----------------------------------|  
 |[Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution)|[Create a table row](create-entity-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.publisher?text=publisher EntityType><br /><xref:Microsoft.Dynamics.CRM.solution?text=soluion EntityType>|
 |[Section 1: Create, Retrieve and Update Table](#section-1-create-retrieve-and-update-table)|[Create and update table definitions](create-update-entity-definitions-using-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>|
-|[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)<br />- [Boolean Column](#boolean-column)<br />&nbsp;&nbsp;&nbsp;- [Update Option Values](#update-option-values)<br />- [DateTime Column](#datetime-column)<br />- [Decimal Column](#decimal-column)<br />- [Integer Column](#integer-column)<br />- [Memo Column](#memo-column)<br />- [Money Column](#money-column)<br />- [Picklist Column](#picklist-column)<br />&nbsp;&nbsp;&nbsp;- [Add an option to the local optionset](#add-an-option-to-the-local-optionset)<br />&nbsp;&nbsp;&nbsp;- [Re-order choice column options](#re-order-choice-column-options)<br />&nbsp;&nbsp;&nbsp;- [Delete local option value](#delete-local-option-value)<br />- [Multi-Select Picklist Column](#multi-select-picklist-column)<br />- [Insert Status Value](#insert-status-value)|[Create columns](create-update-entity-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)<br /><xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action><br /><xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action><br /><xref:Microsoft.Dynamics.CRM.DeleteOptionValue?text=DeleteOptionValue Action><br /><xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action>|
+|[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)<br />- [Boolean Column](#boolean-column)<br />&nbsp;&nbsp;&nbsp;- [Update Option Values](#update-option-values)<br />- [DateTime Column](#datetime-column)<br />- [Decimal Column](#decimal-column)<br />- [Integer Column](#integer-column)<br />- [Memo Column](#memo-column)<br />- [Money Column](#money-column)<br />- [Picklist Column](#picklist-column)<br />&nbsp;&nbsp;&nbsp;- [Add an option to the local optionset](#add-an-option-to-the-local-optionset)<br />&nbsp;&nbsp;&nbsp;- [Re-order choice column options](#re-order-choice-column-options)<br />&nbsp;&nbsp;&nbsp;- [Delete local option value](#delete-local-option-value)<br />- [Multi-Select Picklist Column](#multi-select-picklist-column)<br />- [Insert Status Value](#insert-status-value)|[Create columns](create-update-column-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)<br />[InsertOptionValue Action](xref:Microsoft.Dynamics.CRM.InsertOptionValue)<br />[OrderOption Action](xref:Microsoft.Dynamics.CRM.OrderOption)<br />[DeleteOptionValue Action](xref:Microsoft.Dynamics.CRM.DeleteOptionValue)<br />[InsertStatusValue Action](xref:Microsoft.Dynamics.CRM.InsertStatusValue)|
 |[Section 3: Create and use Global OptionSet](#section-3-create-and-use-global-optionset)|[Create and update choices (option sets)](create-update-optionsets.md)|
 |[Section 4: Create Customer Relationship](#section-4-create-customer-relationship)|<xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action>|
 |[Section 5: Create and retrieve a one-to-many relationship](#section-5-create-and-retrieve-a-one-to-many-relationship)|[Eligibility for relationships](create-update-entity-relationships-using-web-api.md#eligibility-for-relationships)<br /> [Create a one-to-many relationship](create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship)<br />[Querying relationship metadata](query-metadata-web-api.md#querying-relationship-metadata)|
@@ -49,7 +44,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 
 ## Section 0: Create Publisher and Solution
 
-1. Create the publisher first since the solution must be related to it. All the items created or modified in this sample will use the publisher `customizationprefix` and `customizationoptionvalueprefix` values.
+1. Create the publisher first since the solution must be related to it. All the items created or modified in this sample uses the publisher `customizationprefix` and `customizationoptionvalueprefix` values.
 
    **Request**
 
@@ -271,8 +266,8 @@ This sample is divided into the following sections, containing Dataverse Web API
 
 1. Retrieve the `sample_BankAccount` table definition.
 
-   - This retrieve doesn't include any `$select` to filter the properties returned because this data will be modified and sent back to update the table definition using `PUT`, which overwrites the existing value.
-   - This query also doesn't include an `$expand` to include related data, such as attributes, because those must be updated separately.
+   - This retrieve operation doesn't include any `$select` to filter the properties returned because this data is modified and sent back to update the table definition using `PUT`, which overwrites the existing value.
+   - This query also doesn't include an `$expand` to include related data, such as attributes, because related data must be updated separately.
 
    > [!NOTE]
    > This request and others in this sample use the `Consistency: Strong` header. Use this header when you retrieve metadata definition changes right after you apply them. Metadata changes are cached for performance reasons and a request for a newly created item may return a 404 because it hasn't been cached yet. Caching may take 30 seconds. This header will force the server to read the latest version including your changes. By using this header, you negate the performance gain that caching provides, so you should only use it when in scenarios like this sample where you are retrieving changes you have just made. More information: [HTTP headers > Other headers](compose-http-requests-handle-errors.md#other-headers).
@@ -1035,7 +1030,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 
 ## Section 2: Create, Retrieve and Update Columns
 
-This section will create and retrieve a selected group of column definitions. Each of these types are derived from <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType> so they share most of the same common properties. However, each derived type has a few special properties.
+This section creates and retrieves a selected group of column definitions. Each of these types are derived from <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType> so they share most of the same common properties. However, each derived type has a few special properties.
 
 ### Boolean Column
 
@@ -3155,7 +3150,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 ### Insert Status Value
 
-Use <xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action> to add a new option to a `statuscode` column. You must specify which `StateCode` it is valid for.
+Use <xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action> to add a new option to a `statuscode` column. You must specify which `StateCode` it's valid for.
 
 > [!NOTE]
 > Notice that the value returned applies the publisher `customizationoptionvalueprefix` value (72700) automatically.
@@ -3605,7 +3600,7 @@ Created new Status value:727000000
 
 ## Section 4: Create Customer Relationship
 
-1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action> to create a customer relationship. This will add a lookup column for the `sample_BankAccount` table that allows for either an `account` or `contact` record to be set.
+1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action> to create a customer relationship. This action adds a lookup column for the `sample_BankAccount` table that allows for either an `account` or `contact` record to be set.
 
    `CreateCustomerRelationships` has a `Lookup` <xref:Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata?text=ComplexLookupAttributeMetadata ComplexType> parameter and a `OneToManyRelationships` parameter containing a pair of relationships defined using <xref:Microsoft.Dynamics.CRM.ComplexOneToManyRelationshipMetadata?text=ComplexOneToManyRelationshipMetadata ComplexType>.
 
@@ -3914,7 +3909,7 @@ Created new Status value:727000000
 
 ## Section 5: Create and retrieve a one-to-many relationship
 
-Before you create a relationship using code you should confirm that the relationship is valid. The designers in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) use special functions to show you which combinations are valid. You can use the same functions in your code to detect whether a particular relationship can be created or not.
+Before you create a relationship using code, you should confirm that the relationship is valid. The designers in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) use special functions to show you which combinations are valid. You can use the same functions in your code to detect whether a particular relationship can be created or not.
 
 ### Validate 1:N relationship eligibility
 
@@ -3952,7 +3947,7 @@ Before you create a relationship using code you should confirm that the relation
    The sample_BankAccount table is eligible to be a primary table in a one-to-many relationship.
    ```
 
-1. <xref:Microsoft.Dynamics.CRM.CanBeReferencing?text=CanBeReferencing Function> tells you whether a table can be the referencing table in a one-to-many relationship. This is the table that will have a Lookup column added to it to be the 'many' in the one-to-many relationship.
+1. <xref:Microsoft.Dynamics.CRM.CanBeReferencing?text=CanBeReferencing Function> tells you whether a table can be the referencing table in a one-to-many relationship. The referencing table is the table that has a Lookup column added to it to be the 'many' in the one-to-many relationship.
 
    **Request**
 
@@ -4119,7 +4114,7 @@ The contact table is in the list of potential referencing entities for sample_Ba
 
 ### Create 1:N relationship
 
-The following request will create a one-to-many relationship between `sample_BankAccount` and contact tables with a lookup column added to the `contact` table.
+The following request creates a one-to-many relationship between `sample_BankAccount` and contact tables with a lookup column added to the `contact` table.
 
 **Request**
 
@@ -4240,7 +4235,7 @@ Created one-to-many relationship: RelationshipDefinitions(991efd5f-112a-ed11-9db
 
 ### Retrieve 1:N relationship
 
-The following request will retrieve the relationship created by the previous request.
+The following request retrieves the relationship created by the previous request.
 
 > [!NOTE]
 > Because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve: `/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata`.
@@ -4342,7 +4337,7 @@ Retrieved relationship: sample_BankAccount_Contacts
 
 ## Section 6: Create and retrieve a many-to-one relationship
 
-A many-to-one relationship is a one-to-many relationship viewed from the other direction. The following examples will create a lookup column named `sample_relatedaccountid` on the `sample_BankAccount` table referencing a row in the `account` table.
+A many-to-one relationship is a one-to-many relationship viewed from the other direction. The following examples create a lookup column named `sample_relatedaccountid` on the `sample_BankAccount` table referencing a row in the `account` table.
 
 ### Create N:1 relationship
 
@@ -4558,10 +4553,10 @@ Retrieved relationship: sample_Account_BankAccounts
 
 ## Section 7: Create and retrieve a many-to-many relationship
 
-Like one-to-many relationships, there are special functions used by the designers in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) prevent invalid combinations when createing many-to-many relationships.
+Like one-to-many relationships, there are special functions used by the designers in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) prevent invalid combinations when creating many-to-many relationships.
 ### Validate N:N relationship eligibility
 
-1. <xref:Microsoft.Dynamics.CRM.CanManyToMany?text=CanManyToMany Function> tells you whether a table can participate in a many-to-many relationship. So this request will test the `contact` table.
+1. <xref:Microsoft.Dynamics.CRM.CanManyToMany?text=CanManyToMany Function> tells you whether a table can participate in a many-to-many relationship. So this request tests the `contact` table.
 
    **Request**
 
@@ -4595,7 +4590,7 @@ Like one-to-many relationships, there are special functions used by the designer
    The contact table can participate in many-to-many relationships.
    ```
 
-1. This request will perform the same test on the `sample_bankaccount` table.
+1. This request performs the same test on the `sample_bankaccount` table.
 
    **Request**
 
@@ -4632,7 +4627,7 @@ Like one-to-many relationships, there are special functions used by the designer
 
 ### Identify Potential Entities for N:N relationships
 
-Use the <xref:Microsoft.Dynamics.CRM.GetValidManyToMany?text=GetValidManyToMany Function> to get a list of tables that can particpate in many-to-many relationships.
+Use the <xref:Microsoft.Dynamics.CRM.GetValidManyToMany?text=GetValidManyToMany Function> to get a list of tables that can participate in many-to-many relationships.
 
 **Request**
 
@@ -4803,7 +4798,7 @@ sample_BankAccount is in the list of potential tables for N:N.
 
 ### Create N:N relationship
 
-This request will create a many-to-many relationship between `sample_BankAccount` and `Contact` tables.
+This request creates a many-to-many relationship between `sample_BankAccount` and `Contact` tables.
 
 **Request**
 
@@ -4891,7 +4886,7 @@ Created Many-to-Many relationship at: RelationshipDefinitions(55c9f86c-112a-ed11
 
 ### Retrieve N:N relationship
 
-This request will retrieve the many-to-many relationship created by the previous request.
+This request retrieves the many-to-many relationship created by the previous request.
 
 > [!NOTE]
 > As mentioned above, because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve: `/Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata`.
@@ -5170,7 +5165,7 @@ Deleting created records...
 
 ## Section 10: Import and Delete managed solution
 
-1. This step will import managed solution exported in [Section 8: Export managed solution](#section-8-export-managed-solution) using the <xref:Microsoft.Dynamics.CRM.ImportSolution?text=ImportSolution Action>.
+1. This step imports managed solution exported in [Section 8: Export managed solution](#section-8-export-managed-solution) using the <xref:Microsoft.Dynamics.CRM.ImportSolution?text=ImportSolution Action>.
    
    **Request**
 
@@ -5235,7 +5230,7 @@ Deleting created records...
 
 ### Delete managed solution
 
-This final step will delete the managed solution imported to return the system to the original state.
+This final step deletes the managed solution imported to return the system to the original state.
 
 **Request**
 

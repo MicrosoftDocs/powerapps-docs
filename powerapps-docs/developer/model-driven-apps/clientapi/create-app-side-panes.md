@@ -1,19 +1,15 @@
 ---
 title: "Creating side panes by using a client API in model-driven apps" 
 description: Learn how to create side panes in model-driven apps by using a client API.
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
-ms.date: 04/17/2022
+author: adrianorth
+ms.author: aorth
+ms.date: 01/27/2023
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: "article"
 search.audienceType: 
   - maker
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -28,6 +24,8 @@ Tabs are listed in the side pane in two groups&mdash;non-closable and closable. 
 You can use a platform-provided header with the title and Close button, or you can use a custom header.
 
 You can add a badge to the side pane to indicate to the user that a change needs attention. The badge supports three modes: a simple dot, a count, or an image. By default, the badge is cleared when the user switches to the pane. You can control when the badge is cleared.
+
+App side panes are only supported in web browsers and are prevented within native players.
 
 
 ## Examples
@@ -93,6 +91,26 @@ Xrm.App.sidePanes.createPane({
 > [!div class="mx-imgBorder"] 
 > ![Screenshot showing an Active Reservations list opened to an individual record.](../media/app-side-panes-opening-record.png "Open record")
 
+### Showing a web resource
+
+This example shows how to display a webresource in the side pane. A custom html page is opened in a side pane where the default header is visible & close button is hidden.
+
+```javascript
+Xrm.App.sidePanes.createPane({
+                        title: "Registration Page",
+                        imageSrc: "WebResources/msfp_SurveyIcon_32",
+                        paneId: "RegistrationPage",
+                        canClose: false
+                    }).then((pane) => {
+                        //navigate to webresource
+                        pane.navigate({
+                            pageType: "webresource",
+                            webresourceName: "new_RegistrationPage",
+                        })
+                    });
+```
+
+
 ### Managing side panes
 
 In addition to creating side panes and showing rows or views within the side pane, you can also: 
@@ -127,6 +145,6 @@ By switching to use `createPane`, both limitations can be avoid by providing an 
 
 ### Related topics
 
-[sidePanes (Client API reference)](reference/xrm-app-sidepanes.md)
-
-[loadPanel (Client API Reference)](reference/xrm-panel/loadpanel.md)
+[sidePanes (Client API reference)](reference/xrm-app-sidepanes.md)<br />
+[loadPanel (Client API Reference)](reference/xrm-panel/loadpanel.md)<br />
+[Walkthrough: Write your first client script](walkthrough-write-your-first-client-script.md)

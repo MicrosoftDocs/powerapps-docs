@@ -5,16 +5,12 @@ ms.date: 04/01/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: pehecke
-manager: sunilg
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -64,12 +60,13 @@ Following are the limitations in virtual tables that must be considered.
     - A column on a virtual table cannot be calculated or rollup.  Any desired calculations must be done on the external side, possibly within or directed by the data provider.
     - Although you can add virtual table columns as a lookup on a grid or other UI views, you cannot filter or sort based on this virtual table lookup column.
 - Auditing is not supported.
-- Search functionality is not support for virtual tables as they do not persist data.
+- Search functionality is not supported for virtual tables as they do not persist data.
 - Charts and dashboards are not supported for virtual tables.
 - Virtual tables cannot be enabled for queues.
 - Offline caching of values is not supported for virtual tables.
 - A virtual table cannot represent an activity and do not support business process flows.
 - Once created, a virtual table cannot be changed to be a standard (non-virtual) table.  The reverse is also true: a standard table cannot be converted into a virtual table.
+- Selecting attributes in Retrieve and RetrieveMultiple queries will not be applied since all attributes will be returned
 
 For more information about how these limitations are reflected in the Dataverse API, see [API considerations of virtual tables](api-considerations-ve.md).
 

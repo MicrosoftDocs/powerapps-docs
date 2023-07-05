@@ -17,12 +17,8 @@ ms.assetid: 5b25cf09-d43b-4165-9eaa-7549f4855e7c
 caps.latest.revision: 13
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Configure a table for feedback/ratings
 

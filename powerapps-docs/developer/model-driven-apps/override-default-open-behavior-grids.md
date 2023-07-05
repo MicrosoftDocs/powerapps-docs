@@ -3,16 +3,12 @@ title: "Override the default open behavior of data rows in grids (model-driven a
 description: "Provides information on how to override the default open behavior of the records in grids" # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
-ms.date: 05/24/2022
+ms.date: 12/09/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -155,6 +151,8 @@ Create a custom button on the form where you want to change the default behavior
 
      > [!NOTE]
      > You need to replace the function name and also the name of the web resource in the above XML file. Edit the above example XML file to replace it with your own default publisher.
+     > 
+     > This example is to change the button for a button for a subgrid on the accounts form that displays contact records in the subgrid. Therefore the `Location` is `Location="Mscrm.SubGrid.contact.MainTab.Management.Controls._children"`. You will need to change this to have this apply to a different button. 
 
 ## Step 3: Import the XML file
 

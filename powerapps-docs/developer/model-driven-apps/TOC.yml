@@ -71,7 +71,7 @@
       href: clientapi/clientapi-xrm.md
   - name: 'Walkthrough: Write your first client script'
     href: clientapi/walkthrough-write-your-first-client-script.md
-  - name: Debug your JavaScript code for model-driven apps
+  - name: Debug JavaScript code for model-driven apps
     href: clientapi/debug-JavaScript-code.md
   - name: Troubleshoot form issues in Unified Interface
     href: troubleshoot-forms.md
@@ -634,21 +634,21 @@
         href: clientapi/reference/formcontext-ui-tabs/setLabel.md
       - name: setVisible
         href: clientapi/reference/formcontext-ui-tabs/setVisible.md
-    - name: formContext.ui Tab sections
-      href: clientapi/reference/formContext-ui-tab-sections.md
-      items:
-      - name: getLabel
-        href: clientapi/reference/formContext-ui-tab-sections/getLabel.md
-      - name: getName
-        href: clientapi/reference/formContext-ui-tab-sections/getName.md
-      - name: getParent
-        href: clientapi/reference/formContext-ui-tab-sections/getParent.md
-      - name: getVisible
-        href: clientapi/reference/formContext-ui-tab-sections/getVisible.md
-      - name: setLabel
-        href: clientapi/reference/formContext-ui-tab-sections/setLabel.md
-      - name: setVisible
-        href: clientapi/reference/formContext-ui-tab-sections/setVisible.md
+      - name: sections
+        href: clientapi/reference/formContext-ui-tab-sections.md
+        items:
+        - name: getLabel
+          href: clientapi/reference/formContext-ui-tab-sections/getLabel.md
+        - name: getName
+          href: clientapi/reference/formContext-ui-tab-sections/getName.md
+        - name: getParent
+          href: clientapi/reference/formContext-ui-tab-sections/getParent.md
+        - name: getVisible
+          href: clientapi/reference/formContext-ui-tab-sections/getVisible.md
+        - name: setLabel
+          href: clientapi/reference/formContext-ui-tab-sections/setLabel.md
+        - name: setVisible
+          href: clientapi/reference/formContext-ui-tab-sections/setVisible.md
     - name: Grids and subgrids
       href: clientapi/reference/grids.md
       items:

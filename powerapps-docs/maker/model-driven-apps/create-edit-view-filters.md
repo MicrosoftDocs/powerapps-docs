@@ -3,7 +3,6 @@ title: "Create or edit filters in model-driven app views | MicrosoftDocs"
 description: "Learn how to create and edit filters or views for your app"
 keywords: "expression builder"
 ms.date: 2/04/2020
-
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -14,7 +13,6 @@ ms.assetid:
 author: iangpgh
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: srihas
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,14 +20,8 @@ caps.latest.revision: 25
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-
 # Create or edit filters in model-driven app views
-
-
 
 <a name="BKMK_CreateOrEditViewFilters"></a>   
 
@@ -53,27 +45,28 @@ In this article, you create or edit filters by performing the following tasks:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** area. 
-   
-   You may want to navigate to the table via the solution. If so, go to **Solutions**, select your solution, select the table, and then select the **Views** area.  
+1. Select **Tables**, open the table that you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select the **Views** area.
 
-4. Select a view to open it. The view properties panel lists existing filters.
+   To open the table from a solution, go to **Solutions**, select your solution, select the table, and then select the **Views** area.  
 
-    > [!div class="mx-imgBorder"] 
-    > ![View panel filters.](media/views-panel-filters.png "View panel filters")
+1. Select a view to open it. The view properties panel lists existing filters.
 
-5. On the view properties panel, select a filter condition.
+   > [!div class="mx-imgBorder"] 
+   > ![View panel filters.](media/views-panel-filters.png "View panel filters")
 
-    > [!div class="mx-imgBorder"] 
-    > ![Edit filters.](media/edit-filter-viewpanel.png "Edit filters")
+1. On the view properties panel, select a filter condition.
 
-6. Select the conditional operator that you want to use.
+   > [!div class="mx-imgBorder"] 
+   > ![Edit filters.](media/edit-filter-viewpanel.png "Edit filters")
 
-7. Type or select the comparison value for the condition.
+1. Select the conditional operator that you want to use.
 
-8. Select **Apply**.
+1. Type or select the comparison value for the condition.
 
-9. To remove a condition, select **Close**. The condition is removed without confirmation.
+1. Select **Apply**.
+
+1. To remove a condition, select **Close**. The condition is removed without confirmation.
 
 ### Open the expression builder
 

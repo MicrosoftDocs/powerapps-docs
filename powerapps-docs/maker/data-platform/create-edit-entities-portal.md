@@ -1,26 +1,12 @@
 ---
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
-ms.custom: ""
-ms.date: 06/09/2022
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "how-to"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
 author: "Mattp123"
-ms.assetid: fa04f99d-a5f9-48cb-8bfb-f0f50718ccee
-caps.latest.revision: 41
+ms.date: 04/24/2023
+ms.reviewer: ""
+ms.topic: "how-to"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
-search.audienceType: 
-  - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create and edit tables using Power Apps
 
@@ -28,7 +14,7 @@ search.app:
 
 ## View tables
 
-Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Data** > **Tables**.
+Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Tables** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 Filter the tables that are displayed using the following tabs:
 
@@ -43,6 +29,9 @@ Filter the tables that are displayed using the following tabs:
 You can also select a column heading from the table view, and then select **Filter by** to display tables by a certain property, such as **Type**, **Managed**, or **Tags**.
 
 ## Create a table
+
+Watch this video for a quick overview about how to create a table:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM]
 
 While [viewing tables](#view-tables), on the menu bar select **New table**. This opens the **New table** panel.
 
@@ -60,17 +49,19 @@ Select **Enable Attachments** to append notes and files to records for this tabl
 
 Select the **Primary column** tab if you want to change the **Display Name** or **Name** of the primary column. The primary column is used by lookup fields when establishing relationships with other tables.
 
+### Advanced options
+
 Select **Advanced options** to display additional properties that are optional for a table.
 
 |Property |Description|
 |--|--|
 | **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved.  |
-|**Type**  | Select the type of table. Use standard for most tables. Activity tables are a special table that can only be owned by a user or team, but can’t be owned by an organization. Virtual tables require the table be populated with data from an external source.  |
+|**Type**  | Select the type of table. Use standard for most tables. [Activity tables](/power-apps/maker/data-platform/types-of-entities#activity-tables) are a special table that can only be owned by a user or team, but can’t be owned by an organization. [Virtual tables](create-edit-virtual-entities.md) require the table be populated with data from an external source. [Elastic tables](create-edit-elastic-tables.md) should be considered when your business scenario entails very large data volumes with high throughput, storage, and low latency requirements.  |
 |**Record ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record.|
 | **Choose a table image**  | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](types-of-fields.md#image-columns) |
 | **Color** | Set a color to be used for the table in model-driven apps.  |
 |**Apply duplicate detection rules**   | If duplicate detection is enabled for your organization, enabling this allows you to create duplicate detection rules for this table.  |
-|**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.  |
+|**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.  This option must be enabled for certain features such as Azure Synapse Link for Dataverse. |
 | **Provide custom help**  | When selected, set a **Help URL** to control what page users will see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table.  |
 | **Audit changes to its data**  | When auditing is enabled for your organization, this allows for changes to table records to be captured over time. When you enable auditing for a table, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on.  |
 | **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people will have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity will be visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don’t support quick create forms, the main form will be used when the custom table icon is selected.  |
@@ -138,6 +129,10 @@ View and create table record data for the table. Select the number of columns, s
 From the table hub, select **Edit** to open the table designer. The table designer lets you make extensive changes to a table including editing or adding new records and columns, editing table properties, or creating a model-driven app based on the table.
 
 :::image type="content" source="media/table-hub.gif" alt-text="Table hub video":::
+
+#### Update forms and views
+
+From the table hub, select **Update forms and views** to add selected columns to forms and views in this table without having to edit them in the form and view designers. More information: [Update forms and views using table designer](update-forms-and-views.md)
 
 ## Delete a table
 

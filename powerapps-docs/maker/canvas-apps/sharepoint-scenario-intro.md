@@ -4,21 +4,18 @@ description: In this series of tutorials, we'll explore how to build out a basic
 author: NickWaggoner
 
 ms.topic: conceptual
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/18/2020
 ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
   - wimcoor
-ms.custom:
-  - intro-internal
-  - canvas
+ms.custom: canvas
+ms.collection: get-started
 ---
 # Integrate Power Apps, Power Automate, and Power BI with SharePoint Online
 Do you have SharePoint Online and want to better automate and streamline your business processes? Have you worked with Power Apps, Power Automate, or Power BI, but you're not sure how to use them with SharePoint Online? You've come to the right place! This series of tutorials explores how to build out a basic canvas app for project management based on lists and three key technologies that integrate with SharePoint Online: Power Apps, Power Automate, and Power BI. These technologies work together, making it easy to *measure* your business, *act* on the results, and *automate* your workflows. When you're done with this series, you will have a cool scenario like the following:
@@ -51,8 +48,8 @@ To complete the scenario, you need the following subscriptions and desktop tools
 Ideally, you have basic familiarity with each technology, but you can still complete the scenario if you're new to some of these technologies. Use the following content to get up to speed:
 
 * [Get started with SharePoint](https://support.office.com/article/Get-started-with-SharePoint-909ec2f0-05c8-4e92-8ad3-3f8b0b6cf261)
-* [Power Apps Guided Learning](/training/browse/?products=powerapps&resource_type=learning+path)
-* [Power Automate Guided Learning](/flow/guided-learning/)
+* [Power Apps Guided Learning](/training/browse/?terms=power%20apps&levels=beginner&expanded=power-platform&resource_type=learning%20path&products=power-apps)
+* [Power Automate Guided Learning](/training/browse/?terms=power%20apps&levels=beginner&expanded=power-platform&products=power-automate&resource_type=learning%20path)
 * [Power BI Guided Learning](/power-bi/guided-learning/)
 
 ## Next steps

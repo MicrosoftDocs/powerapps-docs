@@ -3,22 +3,19 @@ title: Customize a Microsoft Lists or SharePoint form by using Power Apps (conta
 description: Learn about how to use Power Apps to customize the form with which users create and update entries in a list.
 author: wimcoor
 ms.topic: conceptual
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 02/04/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - Steven-Jia
-  - tapanm-msft
+  - mduelae
   - wimcoor
   - alaug
-ms.custom:
-  - intro-internal
-  - canvas
+ms.custom: canvas
+ms.collection: get-started
 ---
 # Customize a Microsoft Lists or SharePoint form by using Power Apps
 

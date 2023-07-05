@@ -8,11 +8,8 @@ ms.topic: overview
 author: "yogeshgupta698"
 ms.subservice: common
 ms.author: "mkaur"
-manager: "kvivek"
 search.audienceType: 
   - maker, admin
-search.app: 
-  - PowerApps
 ---
 
 # Get help building your app from a virtual agent

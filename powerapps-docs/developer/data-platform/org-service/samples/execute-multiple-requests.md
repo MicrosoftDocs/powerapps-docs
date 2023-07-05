@@ -2,16 +2,12 @@
 title: "Sample: Execute multiple requests (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to execute multiple organization messages requests by using a single web service method call." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -21,7 +17,7 @@ contributors:
 
 This sample shows how to execute multiple organization message requests by using a single web service method call, passing [ExecuteMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.executemultiplerequest) as a parameter. Reducing the number of message requests that must be transmitted over the network results in increased message processing performance.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExecutemultipleRequests).
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExecuteMultipleRequests).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

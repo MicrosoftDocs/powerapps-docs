@@ -1,22 +1,20 @@
 ---
-title: Components supported by the UI kit (preview)
+title: Components supported by the UI kit
 description: Learn about different components supported by the Create Apps from Figma UI Kit.
-author: tapanm-msft
+author: mduelae
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 05/24/2022
 ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
-# Components supported by the UI kit (preview)
+# Components supported by the UI kit
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -265,4 +263,4 @@ Images and rectangles will render as-is when the design is converted into an app
 
 ### See also
 
-- [Create a canvas app from Figma (preview)](create-app-from-figma.md)
+- [Create a canvas app from Figma](create-app-from-figma.md)

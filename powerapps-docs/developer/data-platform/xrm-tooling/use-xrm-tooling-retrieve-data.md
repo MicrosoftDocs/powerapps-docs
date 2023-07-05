@@ -5,15 +5,11 @@ ms.date: 10/24/2022
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-manager: jstrauss
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke 
@@ -23,9 +19,6 @@ contributors:
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes for retrieving data in Microsoft Dataverse. The following examples demonstrate how you can retrieve a record by ID or FetchXML query. 
-
-> [!NOTE]
-> Consider using the new `ServiceClient` class that brings in enhancements over the `CrmServiceClient` class, such as .NET cross-platform application support, MSAL authentication, ILogger support, and performance benefits. More information: [Transition client applications to Dataverse ServiceClient](../sdk-client-transition.md) 
   
 ## GetEntityDataById  
 
@@ -105,7 +98,6 @@ else
   
 ### See also  
 
-[Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
 [Use XRM Tooling to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)
 

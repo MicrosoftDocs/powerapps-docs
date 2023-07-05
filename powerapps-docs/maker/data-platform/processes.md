@@ -1,7 +1,7 @@
 ---
 title: "Apply business logic in Microsoft Dataverse | MicrosoftDocs"
 description: "Learn about the different types of business logic you can use in your app"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 12/20/2019
 ms.reviewer: ""
 
@@ -17,12 +17,8 @@ caps.latest.revision: 44
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Apply business logic in Microsoft Dataverse
 

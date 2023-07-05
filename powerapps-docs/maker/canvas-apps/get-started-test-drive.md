@@ -1,22 +1,19 @@
 ---
 title: Create a canvas app from a template
 description: Step-by-step instructions for creating a canvas app automatically based on a Power Apps template.
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 10/20/2021
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Create a canvas app from a template
@@ -29,11 +26,30 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 ## Create an app
 
+Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-new-look) or [classic look](intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
+
+# [New look (preview)](#tab/home-new-look)
+
+[This article is prerelease documentation and is subject to change.]
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. From the home screen select, **Start with an app template**. Select a template to learn more. If you want to choose another template, select **Cancel** and then select another template.
+2. Select one of the following options:
+    - To create a three screen mobile app using data stored in Dataverse, select **From Dataverse**.
+    - To create a three screen mobile app by connecting to an external data source, select one of these data sources:
+      - **From SharePoint**
+      - **From Excel**
+      - **From SQL**
+    - To use other templates, select a template from the list of **other app templates**.
+5. After you select a template, you can update the app name and select the layout for your app. 
+6. When you're done, select **Next**.
+
+
+# [Classic](#tab/home-classic)
+
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **+ Create** from the left-pane.
-
-    :::image type="content" source="media/get-started-test-drive/create-left-pane.png" alt-text="Select + Create from Power Apps.":::
 
 1. Scroll down to **Start from template** section, and choose the template of your choice for canvas apps.
 
@@ -49,11 +65,13 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
     > [!NOTE]
     > You may be prompted to create or allow connections for connectors that the selected app is configured to use.
 
+---
+
 ## Run the app
 
-An app from a template opens in Power Apps Studio, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in **Preview** mode.
+An app from a template opens in Power Apps Studio, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in [Preview](preview-app.md) mode.
 
-1. Press F5 to open the app in **Preview** mode. Alternatively, you can also select the play button on the top-right corner of the screen.
+1. Press F5 to open the app in preview mode. Alternatively, you can also select the play button on the top-right corner of the screen to [preview the app](preview-app.md).
 
     :::image type="content" source="media/get-started-test-drive/play-button.png" alt-text="Play the app":::
 

@@ -1,18 +1,14 @@
 ---
 title: "appaction table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the appaction table/entity."
-ms.date: 08/31/2022
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # appaction table/entity reference
@@ -20,7 +16,7 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-
+Contains Modern Command Information
 
 **Added by**: Power Apps Actions Solution
 
@@ -29,13 +25,20 @@ search.app:
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/appactions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/appactions(*appactionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/appactions(*appactionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appactions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/appactions(*appactionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/appactions(*appactionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Create|POST /appactions<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE /appactions(*appactionid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Retrieve|GET /appactions(*appactionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /appactions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|SetState|PATCH /appactions(*appactionid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /appactions(*appactionid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
 
@@ -76,6 +79,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IconWebResourceId](#BKMK_IconWebResourceId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [IsDisabled](#BKMK_IsDisabled)
 - [isGroupTitleHidden](#BKMK_isGroupTitleHidden)
 - [Location](#BKMK_Location)
 - [name](#BKMK_name)
@@ -87,6 +91,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OnClickEventJavaScriptParameters](#BKMK_OnClickEventJavaScriptParameters)
 - [OnClickEventJavaScriptWebResourceId](#BKMK_OnClickEventJavaScriptWebResourceId)
 - [OnClickEventType](#BKMK_OnClickEventType)
+- [Origin](#BKMK_Origin)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [ParentAppActionId](#BKMK_ParentAppActionId)
 - [Sequence](#BKMK_Sequence)
@@ -121,7 +126,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Unique identifier for AppModule associated with Modern Command|
 |DisplayName|App Module Id|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -137,7 +142,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |--------|-----|
 |Description||
-|DisplayName|Button Accessibility Text|
+|DisplayName|Accessibility Text for Modern Command Button|
 |FormatName|Text|
 |IsLocalizable|True|
 |IsValidForForm|True|
@@ -152,7 +157,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Label Text renders for Modern Command Button|
 |DisplayName|Button Label Text|
 |FormatName|Text|
 |IsLocalizable|True|
@@ -168,7 +173,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Order of the Modern Command Button (Depreciated)|
 |DisplayName|Button Sequence Priority (Depreciated)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -184,7 +189,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Tooltip Description for Modern Command Button|
 |DisplayName|Button Tooltip Description|
 |FormatName|Text|
 |IsLocalizable|True|
@@ -200,7 +205,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Tooltip Title for Modern Command Button|
 |DisplayName|Button Tooltip Title|
 |FormatName|Text|
 |IsLocalizable|True|
@@ -216,7 +221,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Client Type associated with Modern Command|
 |DisplayName|Client Type|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -238,7 +243,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Context scope associated with Modern Command|
 |DisplayName|Context|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -260,7 +265,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Context Entity associated with Modern Command|
 |DisplayName|Context Entity|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -275,7 +280,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Context Name associated with Modern Command|
 |DisplayName|Context Value|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -292,7 +297,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Font Icon for Modern Command Button|
 |DisplayName|Font Icon|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -308,7 +313,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Group Title for Modern Command Group Button|
 |DisplayName|Group Title|
 |FormatName|Text|
 |IsLocalizable|True|
@@ -347,7 +352,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Unique identifier of the Icon Webresource from Webresource entity which used by the associated Modern Command|
 |DisplayName|Icon WebResource Id|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -391,11 +396,34 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|ManagedProperty|
 
 
+### <a name="BKMK_IsDisabled"></a> IsDisabled
+
+|Property|Value|
+|--------|-----|
+|Description|Flag indicates the Modern Command Button is disabled for end user usage i.e. ribbon equivalent will be shown|
+|DisplayName|IsDisabled|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isdisabled|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsDisabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_isGroupTitleHidden"></a> isGroupTitleHidden
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Flag indicates the Modern Command Group Button Title is hidden|
 |DisplayName|isGroupTitleHidden|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -418,7 +446,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Location of the Command bar associated with the Modern Command.|
 |DisplayName|Location|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -445,7 +473,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the custom entity.|
+|Description|The name of the AppAction entity.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -462,7 +490,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Name of the Component Library where FX Action stored.|
 |DisplayName|On Click Event Formula Component Library|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -478,7 +506,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Unique identifier of the Component Library associated with Modern Command.|
 |DisplayName|On Click Event Formula Component Library Id|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -492,7 +520,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Name of the Component for FX Modern Command.|
 |DisplayName|On Click Event Formula Component Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -508,7 +536,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Name of the Function for FX Modern Command.|
 |DisplayName|On Click Event Formula Function Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -524,7 +552,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Name of the Function for JS Modern Command.|
 |DisplayName|On Click Event JavaScript Function Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -540,7 +568,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Parameters of the Function for JS Modern Command.|
 |DisplayName|On Click Event JavaScript Parameters|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -556,7 +584,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Unique identifier of the JavaScript WebResource from the Webresource entity which used by associated JS Modern Command.|
 |DisplayName|On Click Event JavaScript WebResource Id|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -570,7 +598,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Type of Action associated with Modern Command.|
 |DisplayName|On Click Event Type|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -585,6 +613,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|None||
 |1|Formula||
 |2|JavaScript||
+
+
+
+### <a name="BKMK_Origin"></a> Origin
+
+|Property|Value|
+|--------|-----|
+|Description|Origin of App Action.|
+|DisplayName|Origin|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|origin|
+|RequiredLevel|ApplicationRequired|
+|Type|Picklist|
+
+#### Origin Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Default||
+|1|Migrated||
+|2|Enhanced Migrated||
 
 
 
@@ -608,7 +659,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for App Action associated with App Action.|
+|Description|Unique identifier for Parent Modern Command associated with Modern Command.|
 |DisplayName|Parent AppAction|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -622,7 +673,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Order of the Modern Command to be Displayed.|
 |DisplayName|Sequence|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -697,7 +748,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Type of Modern Command Button|
 |DisplayName|Type|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -720,7 +771,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Unique Name of the AppAction|
 |DisplayName|Unique Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -753,7 +804,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Name of the Component Library where FX Visible Rule stored associated with Modern Command.|
 |DisplayName|Visibility Formula Component Library|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -769,7 +820,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Unique identifier of the Component Library associated with Modern Command.|
 |DisplayName|Visibility Formula Component Library Id|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -783,7 +834,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Name of the Component for FX Visible Rule associated with Modern Command.|
 |DisplayName|Visibility Formula Component Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -799,7 +850,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Name of the Function for FX Visible Rule assoicated with Modern Command.|
 |DisplayName|Visibility Formula Function Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -815,7 +866,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Visibily Type of the Modern Command which should be either FX/Classic or None.|
 |DisplayName|Visibility Type|
 |IsValidForForm|True|
 |IsValidForRead|True|

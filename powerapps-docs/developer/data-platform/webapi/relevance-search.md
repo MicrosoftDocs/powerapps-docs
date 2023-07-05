@@ -8,12 +8,8 @@ applies_to:
 author: mspilde
 ms.author: mspilde
 ms.reviewer: pehecke
-manager: mayadumesh
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Search across table data using Dataverse search
@@ -166,7 +162,7 @@ The Lucene query syntax supports the following functionality:
 
 | **Functionality** | **Description** |
 |---|---|
-| Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by AND, &&, +<br/>OR operator; denoted by OR, \|\|<br/>NOT operator; denoted by NOT, !, – |
+| Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by AND, +<br/>OR operator; denoted by OR, \|\|<br/>NOT operator; denoted by NOT, !, – |
 | Precedence operators              | The same functionality as simple query syntax. |
 | Wildcards                         | In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – "alp\*"<br/>Leading wildcard - "/.\*pine/" |
 | Fuzzy search                      | Supports queries misspelled by up to two characters.<br/>"Uniersty\~" will return "University"<br/>"Blue\~1" will return "glue", "blues" |
@@ -495,10 +491,9 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### See also
 
-[Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)  
-[Compare search options in Microsoft Dataverse](../../../user/search.md)  
-[Retrieve related table records with a query](retrieve-related-entities-query.md)  
-[Query Data using the Web API](query-data-web-api.md)  
+[Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)<br />
+[Compare search options in Microsoft Dataverse](../../../user/search.md)<br />
+[Query Data using the Web API](query-data-web-api.md)<br />
 [Connect with your Dataverse environment](setup-postman-environment.md#connect-with-your-dataverse-environment)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

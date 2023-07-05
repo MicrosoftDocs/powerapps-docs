@@ -4,14 +4,10 @@ description: "This sample showcases how to dump table relationships to a file." 
 ms.date: 04/03/2022
 author: NHelgren
 ms.author: nhelgren
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Dump table relationships information to a file

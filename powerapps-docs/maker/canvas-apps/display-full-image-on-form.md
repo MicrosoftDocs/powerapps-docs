@@ -17,11 +17,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
-  - tapanm-msft
+  - mduelae
   - mattp123
 ---
 # Display a full-sized image on a canvas app form

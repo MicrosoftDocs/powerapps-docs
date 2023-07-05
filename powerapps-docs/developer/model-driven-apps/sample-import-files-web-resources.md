@@ -3,16 +3,13 @@ title: "Sample: Import files as web resources(model-driven apps) | Microsoft Doc
 description: "The sample provides a simplified example of importing files as web resources." # 115-145 characters including spaces. This abstract displays in the search result.
 author: JimDaly
 ms.author: jdaly
-manager: kvivek
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: sample
 ms.subservice: mda-developer
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Import files as web resources

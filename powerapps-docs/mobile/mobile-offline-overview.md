@@ -1,21 +1,18 @@
 ---
 title: Configure model-driven apps for offline (preview)| Microsoft Docs
 description: Configure model-driven apps for offline mode (preview).
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 02/01/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---
@@ -33,7 +30,7 @@ Note, an internet connection is required to sync data between your mobile device
 To get started with mobile offline, an app maker needs to enable and define the tables that are available for offline by using the [modern app designer](../maker/model-driven-apps/app-designer-overview.md). For more information, go to [Set up mobile offline](setup-mobile-offline.md).
 
 > [!IMPORTANT] 
-> The mobile offline experience is not available for canvas apps.
+> The mobile offline experience for canvas apps is in Preview.
 
 ## Mobile offline-first
 

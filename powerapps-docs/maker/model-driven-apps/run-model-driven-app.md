@@ -10,13 +10,9 @@ ms.topic: "how-to"
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # How to run a model-driven app
 
@@ -30,7 +26,7 @@ To get the direct link to an app:
 
 1. Go to make.powerapps.com.
 1. Select  the **Environment** where the app is located.
-1. On the left navigation pane, select **Apps**, or select **Solutions** and open the solution where the app is located.
+1. On the left navigation pane, select **Apps**, or select **Solutions** and open the solution where the app is located. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the **...** next to the model-driven app, and then select **Edit**. The classic app designer opens.
 1. Select the **Properties** tab, and then scroll down to **Unified Interface URL**. Copy the **Unified Interface URL**.
 

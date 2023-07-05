@@ -5,16 +5,14 @@ author: emcoope-msft
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/11/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
   - TashasEv
 ---
@@ -55,7 +53,7 @@ To use the **Media** pane to add, remove or use media files in your app:
 
     ![Add media.](./media/add-images-pictures-audio-video/add-media.png "Add media")
 
-1. [Save](save-publish-app.md#save-changes-to-an-app) and [Publish](save-publish-app.md#publish-an-app) you app.
+1. [Save and publish](save-publish-app.md) your app.
 
 1. [Share app](share-app.md) with others.
 
@@ -85,7 +83,7 @@ For **Image** control, update the *Image* property with the image file name, wit
 
     ![Set media property.](./media/add-images-pictures-audio-video/ams-with-powerapps.png)
 
-1. [Save](save-publish-app.md#save-changes-to-an-app) and [Publish](save-publish-app.md#publish-an-app) you app.
+1. [Save and publish](save-publish-app.md) your app.
 
 1. [Share app](share-app.md) with others.
 
@@ -140,7 +138,7 @@ This scenario uses the [CreateFirstApp.zip](https://pwrappssamples.blob.core.win
 
     When you set the **Items** property, a column named **PowerAppsId** is automatically added to the Excel table.
 
-1. [Save](save-publish-app.md#save-changes-to-an-app) and [Publish](save-publish-app.md#publish-an-app) you app.
+1. [Save and publish](save-publish-app.md) your app.
 
 1. [Share app](share-app.md) with others.
 
@@ -231,7 +229,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
     In **SavePen.xlsx**, the **Image** column specifies the path to the new images.
 
-1. [Save](save-publish-app.md#save-changes-to-an-app) and [Publish](save-publish-app.md#publish-an-app) you app.
+1. [Save and publish](save-publish-app.md) your app.
 
 1. [Share app](share-app.md) with others.
 
@@ -246,7 +244,7 @@ You can remove all unused media from the app to clean up or reduce the size of t
 - To enable better performance while loading an app, following size restrictions apply:
     - The total size of all media files uploaded to an app can't exceed 200 MB.
     - Maximum size of an individual media file in an app can't exceed 64 MB.
-- Supported media file types: `.jpg, .jpeg, .gif, .png, .bmp, .tif, .tiff, .svg, .wav, .mp3, .mp4, .wma, .wmv`.
+- Supported media file types: `.jpg, .jpeg, .gif, .png, .bmp, .tif, .tiff, .svg, .wav, .mp3, .mp4`.
 - [Cloud-storage known limitations](connections/cloud-storage-blob-connections.md#known-limitations) apply when connecting your app with cloud-based storage.
 
 ## See also

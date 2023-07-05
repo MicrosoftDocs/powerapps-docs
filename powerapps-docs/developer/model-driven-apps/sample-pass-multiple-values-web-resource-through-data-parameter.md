@@ -3,16 +3,12 @@ title: "Sample: Pass multiple values to a  web resource through the data paramet
 description: "The sample represents a technique to pass the additional values within a single parameter and then process them within your web resource." # 115-145 characters including spaces. This abstract displays in the search result.
 author: JimDaly
 ms.author: jdaly
-manager: kvivek
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: sample
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Sample: Pass multiple values to a  web resource through the data parameter
 
@@ -168,7 +164,7 @@ An (HTML) web resource page can only accept a single custom parameter called `da
      The parameters you want to pass are: `first=First Value&second=Second Value&third=Third Value`  
   
     > [!NOTE]
-    >  If you’re adding static parameters using the Web Resource Properties dialog box from the form editor, you can simply paste the parameters without encoding them into the **Custom Parameter(data)** column. These values will be encoded for you, but you’ll still need to decode them and extract the values in your page.  
+    >  If you're adding static parameters using the Web Resource Properties dialog box from the form editor, you can simply paste the parameters without encoding them into the **Custom Parameter(data)** column. These values will be encoded for you, but you'll still need to decode them and extract the values in your page.  
   
 2.  For dynamic values generated in code, use the `encodeURIComponent` method on the parameters. The encoded values should be:  
   

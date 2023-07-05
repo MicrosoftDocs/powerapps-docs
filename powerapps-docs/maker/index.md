@@ -6,7 +6,7 @@ ms.subservice: common
 ms.topic: overview
 ms.date: 11/01/2022
 ms.author: alaug
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 searchScope:
   - "Power Apps"
 ---

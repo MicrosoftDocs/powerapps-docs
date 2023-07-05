@@ -7,15 +7,13 @@ ms.component: canvas
 ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - chmoncay
   - tahoon-ms
-  - tapanm-msft
+  - mduelae
 ---
 # Container control in Power Apps
 

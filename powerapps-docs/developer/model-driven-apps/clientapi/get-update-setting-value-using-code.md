@@ -5,28 +5,19 @@ Keywords: settings, settings environment value, settings app value, model-driven
 ms.subservice: dataverse-developer
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
-ms.date: 04/01/2022
+
+ms.date: 02/03/2023
 ms.reviewer: jdaly
 ms.topic: how-to
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
 ---
-# Get or update a setting value using client API (preview)
+# Get or update a setting value using client API
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
-Settings are solution components that enable developers to quickly configure apps to provide a customized experience. Settings can be used to enable or disable features or configure feature behavior for a single app or all apps within an environment. More information: [Use settings to provide customized app experiences (preview)](../../../maker/data-platform/create-edit-configure-settings.md)
-
-  > [!IMPORTANT]
-  > - This is a preview feature and may not be available in all regions.
-  > - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)]
+Settings are solution components that enable developers to quickly configure apps to provide a customized experience. Settings can be used to enable or disable features or configure feature behavior for a single app or all apps within an environment. More information: [Use settings to provide customized app experiences](../../../maker/data-platform/create-edit-configure-settings.md)
 
 The following functions can be used to get or update a setting value using client API.
 
@@ -83,4 +74,4 @@ You can also use the following Web APIs to get or update a setting value
 
 [Solutions overview](../../../maker/data-platform/solutions-overview.md)
 
-[Use settings to provide customized app experiences (preview)](../../../maker/data-platform/create-edit-configure-settings.md)
+[Use settings to provide customized app experiences](../../../maker/data-platform/create-edit-configure-settings.md)

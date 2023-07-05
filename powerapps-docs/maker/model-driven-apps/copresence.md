@@ -4,13 +4,12 @@ description: The copresence feature in model-driven app lets you know who's work
 author: Mattp123
 ms.author: matp
 ms.service: "powerapps"
+ms.subservice: mda-maker
 ms.topic: how-to
-ms.date: 10/19/2022
+ms.date: 03/01/2023
 ms.custom: template-how-to
 ---
-# Discover who's working on an app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Discover who's working on an app
 
 Find who's working on an app at the same time as you with copresence. Copresence provides the following benefits:
 
@@ -21,8 +20,7 @@ Find who's working on an app at the same time as you with copresence. Copresence
 - The name of the maker who made the first save or the last save is displayed.
 
 > [!IMPORTANT]
-> - This is a public preview feature. More information: Public previews for [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
-> - This feature is being rolled out, and&mdash;depending on your region&mdash;it might not be available for your tenant yet.
+> By default, most Power Platform environments have [coauthoring](coauthoring.md) enabled by default. In case you disable coauthoring or your tenant doesn’t have coauthoring yet, you'll have the copresence experience that is described in this article. 
 
 :::image type="content" source="media/co-authoring.png" alt-text="Copresence feature in app designer":::
 1. Command bar displays makers currently working in the app and allows you to chat or email them.
@@ -57,6 +55,8 @@ If you've ignored or closed the refresh notification, you won’t be at the late
 - There may be a delay up to 20 seconds between when new members join the app and when you see their presence and location.
 - There may also be a delay up to one minute between when someone saves a change and when you get a notification about the change. However, if there is a conflict, you will always get the prompt to choose whether to refresh or overwrite when you try to save.
 - Making a comment on a new page or area triggers a background save and if your app is not on the latest version you'll be prompted to either refresh or overwrite.
+- Instead of copresence, your environment may have coauthoring enabled, which allows app change merges to occur in real-time with seamless collaboration. More information: [Coauthoring in model-driven apps (preview)](coauthoring.md) 
 
-## Next steps
+## See also
 
+[Collaboration in model-driven apps](collaboration-model-driven-apps.md)

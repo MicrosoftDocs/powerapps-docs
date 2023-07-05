@@ -3,7 +3,6 @@ title: reset | Microsoft Docs
 description: Reload the results from the server, and reset to page 1.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

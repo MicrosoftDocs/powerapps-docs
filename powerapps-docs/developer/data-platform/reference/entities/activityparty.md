@@ -1,18 +1,14 @@
 ---
 title: "ActivityParty table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ActivityParty table/entity."
-ms.date: 08/31/2022
+ms.date: 06/06/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # ActivityParty table/entity reference
@@ -27,7 +23,7 @@ Person or group associated with an activity. An activity can have multiple activ
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activityparties<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET /activityparties<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Properties
 
@@ -60,6 +56,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PartyId](#BKMK_PartyId)
 - [PartyIdName](#BKMK_PartyIdName)
 - [PartyObjectTypeCode](#BKMK_PartyObjectTypeCode)
+- [UnresolvedPartyName](#BKMK_UnresolvedPartyName)
 
 
 ### <a name="BKMK_ActivityId"></a> ActivityId
@@ -165,6 +162,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |9|Owner||
 |10|Resource||
 |11|Customer||
+|12|Chat Participant||
 
 
 
@@ -210,6 +208,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|partyobjecttypecode|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
+
+### <a name="BKMK_UnresolvedPartyName"></a> UnresolvedPartyName
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The name of the party to be used when the party is not resolved to an entity.|
+|DisplayName|Unresolved Party Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|unresolvedpartyname|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
 
 <a name="read-only-attributes"></a>
 

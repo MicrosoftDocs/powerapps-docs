@@ -2,16 +2,12 @@
 title: "Sample: Create and update records with related records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to create and update records with related records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -46,7 +42,7 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `Account` method creates a account record for which we will add letters.
+1. The `Account` method creates an account record for which we will add letters.
 1. The `Relationship` method creates the reference between letter and account.
 
 ### Clean up

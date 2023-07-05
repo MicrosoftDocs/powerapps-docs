@@ -4,7 +4,6 @@ description: "Learn how to set managed properties for a view"
 ms.custom: ""
 ms.date: 06/12/2018
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,20 +16,14 @@ ms.assetid: a9014576-8fb2-4f28-b8bb-5d2d49d76e12
 caps.latest.revision: 25
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Model-driven app managed properties for views
 
-
-
 <a name="BKMK_ManagedProperties"></a>   
  
- If a custom public view has been created for a table in Power Apps and is included in a managed solution, there is the option to limit the ability of anyone who is installing the solution from customizing the view.
+If a custom public view has been created for a table in Power Apps and is included in a managed solution, there is the option to limit the ability of anyone who is installing the solution from customizing the view.
 
 Additionally, there are high-level options that can be applied to the table that apply to all views.
   
@@ -40,7 +33,7 @@ By default, most views have their **Customizable** managed property set to true 
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Select **Solutions**, and then open the solution you want. 
+2.  Select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 3. Select the table you want. Select **...**, and then select **Managed properties** on the command bar.
 

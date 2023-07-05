@@ -83,7 +83,8 @@ In this section, you sign in to Power BI and create a workspace and add a Power 
 
 In this section, you create a solution in Power Apps that includes a Power BI embedded dashboard.
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Solutions**, and then on the command bar select **+New solution**.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the command bar select **+New solution**.
 
    ![Select new solution**](media/add-a-power-bi-visual-into-a-model-driven-app/add-the-dashboard-and-report-to-a-solution-1.png "Select new solution")
 

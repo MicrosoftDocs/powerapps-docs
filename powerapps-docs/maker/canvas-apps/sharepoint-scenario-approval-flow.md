@@ -11,10 +11,8 @@ ms.subservice: canvas-maker
 ms.author: stepsic
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
   - wimcoor
 ---
@@ -158,7 +156,7 @@ By default, this branch sends a rejection email to the requestor. We'll also upd
 4. After you click **Approve** or **Reject**, the flow runs another process, and you get feedback like the following, directly in the email.
    
     ![Approval action complete.](./media/sharepoint-scenario-approval-flow/03-02-04-action-complete.png)
-5. The flow sends an email to Megan with Allan's response, as in the following image. This email comes *from* Megan because she owns the flow.
+5. The flow sends an email to Megan with Allan's response, as in the following image. This email comes *from* Megan because they owns the flow.
    
     ![Email to Megan Bowen.](./media/sharepoint-scenario-approval-flow/03-02-05-megan-email.png)
 

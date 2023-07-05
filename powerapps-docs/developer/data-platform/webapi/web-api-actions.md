@@ -2,18 +2,14 @@
 title: "Web API Actions (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData Action elements defined for the Dataverse Web API."
 ms.date: 04/06/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 ms.service: powerapps
 applies_to: 
   - "Dynamics 365 (online)" 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---

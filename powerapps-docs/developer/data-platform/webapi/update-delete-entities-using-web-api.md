@@ -1,15 +1,12 @@
 ---
 title: "Update and delete table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to perform update and delete operations on tables using the Web API"
-ms.date: 08/01/2022
-author: divka78
+ms.date: 05/14/2023
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -30,6 +27,8 @@ The `If-Match: *` header ensures you don't create a new record by accidentally p
   
 > [!IMPORTANT]
 > When updating an entity, only include the properties you are changing in the request body. Simply updating the properties of an entity that you previously retrieved, and including that JSON in your request, will update each property even though the value is the same. This can cause system events that can trigger business logic that expects that the values have changed. This can cause properties to appear to have been updated in auditing data when in fact they haven't actually changed.
+>
+> When you update the `statecode` property, it is important to always set the desired `statuscode`. `statecode` and `statuscode` have dependent values. There can be multiple valid `statuscode` values for a given `statecode` value, but each `statecode` column has a single [DefaultStatus](xref:Microsoft.Xrm.Sdk.Metadata.StateOptionMetadata.DefaultStatus) value configured.   When you update `statecode` without specifying a `statuscode`, the default status value will be set by the system. Also, when auditing is enabled on the table and the `statuscode` column, the changed value for the `statuscode` column will not be captured in the audit data unless it is specified in the update operation.
 
 > [!NOTE] 
 > The definition for attributes includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these attributes to a null value. More information: [Attribute requirement level](../entity-attribute-metadata.md#column-requirement-level)
@@ -256,9 +255,9 @@ See [Detect duplicates during Update operation using the Web API](manage-duplica
 
 ## Update and delete documents in storage partitions
 
-If you are updating or deleting entity data stored in partitions be sure to specify the partition key when accessing that data.
+If you are updating or deleting elastic table data stored in partitions be sure to specify the partition key when accessing that data.
 
-More information: [Access table data faster using storage partitions](azure-storage-partitioning.md)
+More information: [Choosing a PartitionId value](../elastic-tables.md#choosing-a-partitionid-value)
 
 ### See also
 

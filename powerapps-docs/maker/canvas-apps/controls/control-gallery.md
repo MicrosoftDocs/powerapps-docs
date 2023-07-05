@@ -4,16 +4,14 @@ description: Learn about the details, properties and examples of the gallery con
 author: chmoncay
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Gallery control in Power Apps
@@ -58,7 +56,9 @@ Predefined templates for showing images and text in a gallery are available, and
 
 [AccessibleLabel](properties-accessibility.md) – Label of the gallery (not the items it contains) for screen readers. Should describe what the list of items are.
 
-**AllItems** – All items in a gallery, including additional control values that are a part of the gallery's template.
+**AllItems** – Items that are loaded in the gallery. This may be less than the actual number of **Items** of the data source. More items may be loaded when the gallery is scrolled. **AllItems** also contains controls that are used in each gallery item.
+
+**AllItemsCount** - Count of items that are loaded in the gallery. This may be less than the actual number of **Items** of the data source. More items may be loaded when the gallery is scrolled.
 
 [BorderColor](properties-color-border.md) – The color of a control's border.
 

@@ -9,12 +9,8 @@ author: "NHelgren" # GitHub ID
 ms.service: powerapps
 ms.subservice: dataverse-developer
 ms.author: "nhelgren" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Azure Active Directory user table
 
@@ -22,6 +18,8 @@ Microsoft Dataverse includes a virtual table named AAD user (aaduser). This virt
 
 > [!NOTE]
 > Your results with AAD User may differ depending on where it is being used. AAD User in Dataverse will provide the full list of users on the Azure AD for the organization. AAD User in Dataverse for Teams is limited to providing all AAD Users who are also a member of the Team.
+> 
+> AAD User does not return groups or distribution lists.
 
 ## Lookups using AADUser
 

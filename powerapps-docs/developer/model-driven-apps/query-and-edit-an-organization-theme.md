@@ -3,16 +3,12 @@ title: "Query and edit an organization theme(model-driven apps) | Microsoft Docs
 description: "Learn about defining and applying visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.author: hemantg
 author: HemantGaur
-manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -23,8 +19,6 @@ You can define and apply visual themes for an organization. This provides a supp
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
   
 Theme customization is supported in this release only for the web application. The changes made for an organization's theme are not included in solutions exported from the organization. You can define multiple themes, but only one can be set and published as the default theme.  
-  
-Video: [Theming](https://go.microsoft.com/fwlink/p/?LinkId=529568)  
   
 <a name="BKMK_QueryTheme"></a>
 

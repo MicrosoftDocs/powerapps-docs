@@ -4,14 +4,10 @@ description: "Learn about the Entity class used for data operations using the Mi
 ms.date: 09/16/2022
 ms.reviewer: pehecke
 ms.topic: article
-author: divka78 # GitHub ID
+author: divkamath # GitHub ID
 ms.author: dikamath # MSFT alias of Microsoft employees only
-manager: kvivek # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -205,7 +201,7 @@ Account account2 = retrievedEntity.ToEntity<Account>();
 
 These topics will explain more about working with Dataverse entities (table rows).
 
-[Quick Start: Organization service sample (C#)](quick-start-org-service-console-app.md)
+[Quick Start: Organization service sample (C#)](quick-start-org-service-console-app.md)<br />
 [Query data](entity-operations-query-data.md)<br />
 [Create table rows](entity-operations-create.md)<br />
 [Retrieve a table row](entity-operations-retrieve.md)<br />

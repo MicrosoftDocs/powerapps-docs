@@ -3,16 +3,12 @@ title: "Create a dashboard (model-driven apps) | Microsoft Docs" # Intent and pr
 description: "Organization-owned dashboards can be created by using the Microsoft Dataverse web services (SDK) or by customizing the form in Dataverse by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
 ms.date: 04/01/2022
 ms.topic: article
-author: mspilde # GitHub ID
+author: sriharibs-msft
 ms.subservice: mda-developer
-ms.author: mspilde # MSFT alias of Microsoft employees only
-manager: lwelicki # MSFT alias of manager or PM counterpart
+ms.author: srihas
 ms.reviewer:
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -172,7 +168,7 @@ The customizations.xml file that is exported with an unmanaged solution contains
       <IsDefault>0</IsDefault>
       <FormXml>
          <forms type="dashboard">
-   *** Dashboard definition goes here. *** // See “Sample Dashboards” topic for the FormXML content to be used here.
+   *** Dashboard definition goes here. *** // See "Sample Dashboards" topic for the FormXML content to be used here.
          </forms>
       </FormXml>
    </Dashboard>

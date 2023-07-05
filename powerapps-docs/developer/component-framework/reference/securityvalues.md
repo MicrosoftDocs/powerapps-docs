@@ -3,7 +3,6 @@ title: SecurityValues | Microsoft Docs
 description: Provides all the information about table definitions security values.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

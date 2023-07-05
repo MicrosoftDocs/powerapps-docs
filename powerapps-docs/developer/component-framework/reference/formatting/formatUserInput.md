@@ -3,7 +3,6 @@ title: formatUserInput | Microsoft Docs
 description: Returns formatter user input based on the passed in attribute type. If type is not recognized, returns the input itself.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

@@ -1,21 +1,18 @@
 ---
 title: Set appearance to light mode, dark mode, or use the system default| Microsoft Docs
 description: Set appearance to light mode, dark mode, or use the system default for Power Apps mobile.
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 08/04/2021
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---

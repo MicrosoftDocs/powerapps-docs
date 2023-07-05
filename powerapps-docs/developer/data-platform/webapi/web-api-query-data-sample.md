@@ -1,22 +1,17 @@
 ---
 title: "Web API Query Data Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "These code samples shows how to query data using the Web API. These samples are implemented using C# and client-side JavaScript."
-ms.date: 09/02/2022
-author: divka78
+ms.date: 04/14/2023
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
 
 # Web API Query Data Sample
-
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 This group of  samples demonstrate how to query data using the Microsoft Dataverse Web API. This sample is implemented as a separate project for the following languages:
 
@@ -31,13 +26,13 @@ This sample is divided into the following principal sections, containing Web API
 
 |Topic section|Associated topic(s)|
 |-------------------|---------------------------|
-|[Section 1: Selecting specific properties](#section-1-selecting-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br />[Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)|
-|[Section 2: Using query functions](#section-2-using-query-functions)|[Filter results](query-data-web-api.md#bkmk_filter)<br /> [Standard query functions](query-data-web-api.md#bkmk_buildInQueryFunctions)<br />[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
-|[Section 3: Ordering and aliases](#section-3-ordering-and-aliases)|[Order results](query-data-web-api.md#bkmk_order)<br /> [Filter results](query-data-web-api.md#bkmk_filter)<br />[Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases)|
-|[Section 4: Limit and count results](#section-4-limit-and-count-results)|[Limit results](query-data-web-api.md#bkmk_limitResults)<br /> [Limits on number of rows returned](query-data-web-api.md#bkmk_limits)|
-|[Section 5: Pagination](#section-5-pagination)|[Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page)|
-|[Section 6: Expanding results](#section-6-expanding-results)|[Retrieve related table records with a query](retrieve-related-entities-query.md)|
-|[Section 7: Aggregate results](#section-7-aggregate-results)|[Aggregate and grouping results](query-data-web-api.md#aggregate-and-grouping-results)|
+|[Section 1: Selecting specific properties](#section-1-selecting-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br /> [Formatted values](query-data-web-api.md#formatted-values)|
+|[Section 2: Using query functions](#section-2-using-query-functions)|[Filter rows](query-data-web-api.md#filter-rows)<br />[Use OData query functions](query-data-web-api.md#use-odata-query-functions)<br />[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
+|[Section 3: Ordering and aliases](#section-3-ordering-and-aliases)|[Order rows](query-data-web-api.md#order-rows)<br /> [Filter rows](query-data-web-api.md#filter-rows)<br />|
+|[Section 4: Limit and count results](#section-4-limit-and-count-results)|[Use $top query option](query-data-web-api.md#use-top-query-option)<br />[Count number of rows](query-data-web-api.md#count-number-of-rows)|
+|[Section 5: Pagination](#section-5-pagination)|[Page results](query-data-web-api.md#page-results)|
+|[Section 6: Expanding results](#section-6-expanding-results)|[Join Tables](query-data-web-api.md#join-tables)|
+|[Section 7: Aggregate results](#section-7-aggregate-results)|[Aggregate data](query-data-web-api.md#aggregate-data)|
 |[Section 8: FetchXML queries](#section-8-fetchxml-queries)|[FetchXML schema](../fetchxml-schema.md)<br /> [Use FetchXml with Web API](use-fetchxml-web-api.md)|
 |[Section 9: Using predefined queries](#section-9-using-predefined-queries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
 |[Section 10: Delete sample records](#section-10-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
@@ -288,7 +283,7 @@ The data is added using *deep insert* in a single `POST` request and matches the
 
 ## Section 1: Selecting specific properties
   
-Always construct  queries using the `$select` query option, otherwise the server will return all properties of each table row which reduces performance. This example demonstrates how to construct a basic query by selecting three properties of a <xref:Microsoft.Dynamics.CRM.contact?text=contact EntityType>. The properties are `fullname`, `jobtitle`, `annualincome`. The section also illustrates the differences between formatted and unformatted values as seen in the results of the contact's `annualincome` property. More information: [Request specific properties](query-data-web-api.md#bkmk_requestProperties), [Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues).  
+Always construct  queries using the `$select` query option, otherwise the server will return all properties of each table row which reduces performance. This example demonstrates how to construct a basic query by selecting three properties of a <xref:Microsoft.Dynamics.CRM.contact?text=contact EntityType>. The properties are `fullname`, `jobtitle`, `annualincome`. The section also illustrates the differences between formatted and unformatted values as seen in the results of the contact's `annualincome` property. More information: [Select Columns](query-data-web-api.md#select-columns), [Formatted values](query-data-web-api.md#formatted-values).  
   
 In this example, we are requesting for a specific contact. In this case, it's the primary contact of the account, `Yvonne McKay (sample)`.  
   
@@ -340,13 +335,13 @@ Contact basic info:
   
 ## Section 2: Using query functions
  
-Use filter options to set criteria for the results you want. You can  build simple to complex filters using a combination of query functions, comparison operators, and logical operators. More information: [Filter results](query-data-web-api.md#bkmk_filter).  
+Use filter options to set criteria for the results you want. You can  build simple to complex filters using a combination of query functions, comparison operators, and logical operators. More information: [Filter rows](query-data-web-api.md#filter-rows)  
   
 Query functions are functions that can be used as a filter criteria in a query. There are standard query functions and Dataverse specific query functions. These functions accept parameters and return a `Boolean` value. This sample illustrates how to create a query for each type.  
   
 ### Standard query functions
 
-Dataverse supports a subset of OData built-in query functions, specifically: `contains`, `endswith`, and `startswith`. For example, the `contains` standard query function allows us to filter for properties matching a string. In this operation, we are querying for all contacts with `fullname` containing the string `(sample)`. More information: [Standard query functions](query-data-web-api.md#bkmk_buildInQueryFunctions).  
+Dataverse supports a subset of OData built-in query functions, specifically: `contains`, `endswith`, and `startswith`. For example, the `contains` standard query function allows us to filter for properties matching a string. In this operation, we are querying for all contacts with `fullname` containing the string `(sample)`. More information: [Use OData query functions](query-data-web-api.md#use-odata-query-functions)  
   
 **Request**
 
@@ -638,7 +633,7 @@ Contacts that were created within the last 1hr:
 
 ### Using operators
 
-Use the [Standard filter operators](query-data-web-api.md#bkmk_buildInFilterOperators) (`eq`,`ne`,`gt`,`ge`,`lt`,`le`,`and`,`or`,`not`)  to further refine our results. In this example, we are requesting a list of all contacts with `fullname` containing `(sample)` and annual income greater than `55000`.  
+Use the [Comparison operators](query-data-web-api.md#comparison-operators) and [Logical operators](query-data-web-api.md#logical-operators) (`eq`,`ne`,`gt`,`ge`,`lt`,`le`,`and`,`or`,`not`)  to further refine our results. In this example, we are requesting a list of all contacts with `fullname` containing `(sample)` and annual income greater than `55000`.  
   
 **Request**
 
@@ -747,7 +742,7 @@ Contacts with '(sample)' in name and income above $55,000:
  
 You will use parentheses to establish the order in which your conditions are evaluated.  
   
-In this example, we are requesting a list of all contacts with `fullname` containing `(sample)`, `jobtitle` containing either `senior` or `specialist`, and `annualincome` greater than `55000`. To get the results we want, parentheses are used to group the `jobtitle` filters together. Since all operators have the same precedence, omitting the parentheses will give the `or` operator the same precedence as the `and` operators.  Filters are applied from left to right. The order in which these statements appear in the filter can affect the results. This is what the query in this example looks like: `$filter=contains(fullname,'(sample)') and (contains(jobtitle,'senior') or contains(jobtitle,'specialist')) and annualincome gt 55000`.  
+In this example, we are requesting a list of all contacts with `fullname` containing `(sample)`, `jobtitle` containing either `senior` or `manager`, and `annualincome` greater than `55000`. To get the results we want, parentheses are used to group the `jobtitle` filters together. Since all operators have the same precedence, omitting the parentheses will give the `or` operator the same precedence as the `and` operators.  Filters are applied from left to right. The order in which these statements appear in the filter can affect the results. This is what the query in this example looks like: `$filter=contains(fullname,'(sample)') and (contains(jobtitle,'senior') or contains(jobtitle,'manager')) and annualincome gt 55000`.  
   
 **Request**
 
@@ -831,7 +826,7 @@ Contacts with '(sample)' in name senior jobtitle or high income:
 
 ### Ordering results
 
-You can specify either an ascending or descending order on the results by using the `$orderby` filter option . In this example, we will query for all contacts with `fullname` containing `(sample)` and request the data in ascending order based on the `jobtitle` property value and then in  descending based on the `annualincome` property value using this syntax: `$orderby=jobtitle asc, annualincome desc`. More information: [Order results](query-data-web-api.md#bkmk_order).  
+You can specify either an ascending or descending order on the results by using the `$orderby` filter option . In this example, we will query for all contacts with `fullname` containing `(sample)` and request the data in ascending order based on the `jobtitle` property value and then in  descending based on the `annualincome` property value using this syntax: `$orderby=jobtitle asc, annualincome desc`. More information: [Order rows](query-data-web-api.md#order-rows)  
   
 **Request**
 
@@ -977,7 +972,7 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
 
 ### Parameter alias
 
-Use parameter aliases to more easily reuse  parameters in your filters. Parameterized aliases can be used in `$filter` and `$orderby` options. If the alias isn't assigned a value it is assumed to be null. You can also use parameter aliases when calling functions. More information: [Use Web API functions](use-web-api-functions.md), [Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases). Taking the order results operation for example, we can write that query again using parameters and we would get the same output results.  
+Use parameter aliases to more easily reuse  parameters in your filters. Parameterized aliases can be used in `$filter` and `$orderby` options. If the alias isn't assigned a value it is assumed to be null. You can also use parameter aliases when calling functions. More information: [Use Web API functions](use-web-api-functions.md). Taking the order results operation for example, we can write that query again using parameters and we would get the same output results.  
   
 **Request**
 
@@ -1123,7 +1118,7 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
 
 ## Section 4: Limit and count results
 
-Returning more data than you need is bad for performance. The server will return a maximum of 5000 table rows per request. You can limit the number of results returned using the `$top` query option or by adding `odata.maxpagesize` in the request header. The `$top` query option only returns the top number of rows from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of rows returned per page with an `@odata.nextLink` property to get results of the next page. For more information about `odata.maxpagesize`, see the section on [Pagination](#bkmk_filterPagination) and see also [Limits on number of rows returned](query-data-web-api.md#bkmk_limits).  
+Returning more data than you need is bad for performance. The server will return a maximum of 5000 table rows per request. You can limit the number of results returned using the `$top` query option or by adding `odata.maxpagesize` in the request header. The `$top` query option only returns the top number of rows from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of rows returned per page with an `@odata.nextLink` property to get results of the next page. For more information about `odata.maxpagesize`, see the section on [Pagination](#bkmk_filterPagination) and see also [Use $top query option](query-data-web-api.md#use-top-query-option) and [Page results](query-data-web-api.md#page-results).  
   
 <a name="bkmk_topResults"></a>
  
@@ -1265,7 +1260,7 @@ The contacts collection has 9 contacts.
 
 ### Result count
 
-You can get just the count of rows from a collection-valued property or a count of matched table rows in a filter. Getting a count tells us the number of possible rows in our result. However, the Dataverse server will return 5000 as the maximum count even if the result may have more. In this example, we constructed a filter with `jobtitle` containing either `Senior` or `Manager` and we also requested a `$count` of the result. The response contains the count in the `@odata.count` property as well as the results of the query. More information: [Retrieve a count of table rows](query-data-web-api.md#bkmk_retrieveCount).  
+You can get just the count of rows from a collection-valued property or a count of matched table rows in a filter. Getting a count tells us the number of possible rows in our result. However, the Dataverse server will return 5000 as the maximum count even if the result may have more. In this example, we constructed a filter with `jobtitle` containing either `Senior` or `Manager` and we also requested a `$count` of the result. The response contains the count in the `@odata.count` property as well as the results of the query. More information: [Count number of rows](query-data-web-api.md#count-number-of-rows) 
   
 **Request**
 
@@ -1386,7 +1381,7 @@ Preference-Applied: odata.include-annotations="*"
 
 ## Section 5: Pagination
 
-To retrieve a sequential subset of results for a query that returns a large number of rows, use the `odata.maxpagesize` instead of `$top`. More information: [Specify the number of rows to return in a page](query-data-web-api.md#bkmk_specifyNumber).  
+To retrieve a sequential subset of results for a query that returns a large number of rows, use the `odata.maxpagesize` instead of `$top`. More information: [Page results](query-data-web-api.md#page-results)  
   
 In this example, we ask for a `$count` and we set the `odata.maxpagesize` to `4`. This filter matches 10 contacts, but we are only retrieving 4 at a time. We also use the count and the max page size to figured out how many total pages there are. The result of the first page is returned in this request.  
   
@@ -1577,7 +1572,7 @@ Page 2 of 3:
 
 ## Section 6: Expanding results
 
-To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information: [Retrieve related table records with a query](retrieve-related-entities-query.md)
+To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information: [Join Tables](query-data-web-api.md#join-tables)
   
 ### Expand on single-valued navigation property
 
@@ -1635,7 +1630,7 @@ Account Contoso, Ltd. (sample) has the following primary contact person:
 
 Each navigation property has a corresponding "partner" property. Once an association is made, we can retrieve information through this association. Which column we use depends on the base table that the query is against. For example, in the previous operation, we created a query against the <xref:Microsoft.Dynamics.CRM.account?text=account EntityType> and we wanted to get additional information about its primary contact. We did that via the `primarycontactid` column (attribute). If we look up the <xref:Microsoft.Dynamics.CRM.account?text=account EntityType">, under the [Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/account#single-valued-navigation-properties) section, we can see that the partner property that corresponds to `primarycontactid` is  `account_primary_contact` collection-valued navigation property found on the <xref:Microsoft.Dynamics.CRM.contact?text=contact EntityType>.  
   
-Writing a query against a contact, you can expand on the `account_primary_contact` column to get information about accounts where this contact is the primary contact. In the sample data, `Yvonne McKay (sample)` is the primary contact person for only one account. However, she can potentially be assigned to other accounts as primary contact. Because the `account_primary_contact` property has a many-to-one relationship the result is returned as an array of account rows.  
+Writing a query against a contact, you can expand on the `account_primary_contact` column to get information about accounts where this contact is the primary contact. In the sample data, `Yvonne McKay (sample)` is the primary contact person for only one account. However, Yvonne can potentially be assigned to other accounts as primary contact. Because the `account_primary_contact` property has a many-to-one relationship the result is returned as an array of account rows.  
   
 **Request**
 

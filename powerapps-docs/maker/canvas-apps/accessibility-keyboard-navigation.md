@@ -10,11 +10,9 @@ ms.subservice: canvas-maker
 ms.author: hemantg
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - MSYuey
-  - tapanm-msft
+  - mduelae
   - hemantgaur
 ---
 

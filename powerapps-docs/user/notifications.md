@@ -9,12 +9,8 @@ ms.subservice: end-user
 ms.topic: "article"
 author: "aorth"
 ms.author: "mkaur"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 
 # In-app notifications in model-driven apps
@@ -39,7 +35,7 @@ You only see notifications when you're using an app. That's when the system runs
 
 ## Toast notifications
 
-Toast notifications appear temporarily to the left side of your app. When multiple notifications appear, they are stacked. When there's more than three toast notifications at the same time, you'll get a toast letting you know that there's more notifications. You can use the F2 shortcut key to access the notification toasts.
+Toast notifications appear temporarily to the right side of your app. When multiple notifications appear, they are stacked. When there's more than three toast notifications at the same time, you'll get a toast letting you know that there's more notifications. You can use the F2 shortcut key to access the notification toasts.
 
 > [!div class="mx-imgBorder"] 
 > ![Example on how toast notifications appear.](media/notifications-toast.png)  

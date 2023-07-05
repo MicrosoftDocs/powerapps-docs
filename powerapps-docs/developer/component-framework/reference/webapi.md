@@ -3,7 +3,6 @@ title: WebAPI | Microsoft Docs
 description: Provides properties and methods to use Web API to create and manage records.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -18,7 +17,7 @@ contributors:
 
 ## Available for 
 
-Model-driven apps, canvas apps, & portals.
+Model-driven apps & portals.
 
 ## Methods
 

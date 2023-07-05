@@ -4,16 +4,14 @@ description: Learn about the details, properties, and examples of the HTML text 
 author: chmoncay
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.date: 07/19/2022
 ms.author: chmoncay
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # HTML text control in Power Apps

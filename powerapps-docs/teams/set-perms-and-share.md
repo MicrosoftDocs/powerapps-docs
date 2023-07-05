@@ -8,9 +8,9 @@ ms.custom:
 ms.date: 07/18/2022
 ms.subservice: teams
 ms.author: mabolan
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Set permission and share apps with colleagues

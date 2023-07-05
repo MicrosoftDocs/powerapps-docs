@@ -11,11 +11,9 @@ ms.author: norliu
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - norliu
-  - tapanm-msft
+  - mduelae
 ---
 
 # Power Apps Ideas

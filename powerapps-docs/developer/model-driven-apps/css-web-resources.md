@@ -1,18 +1,14 @@
 ---
 title: "CSS web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Use cascading style sheet (CSS) web resources to create style sheets for use in webpage web resources. " # 115-145 characters including spaces. This abstract displays in the search result."
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -43,7 +39,7 @@ With CSS web resources, you can manage the appearance of webpage web resources b
  To reference a style sheet from a different publisher, the path must include that solution publisher customization prefix. For example, for the `sample_/content/contentpage.htm` page to reference the `MyIsv_/styles/styles.css` page, the href parameter value should be `../../MyIsv_/styles/styles.css`.  
   
 > [!NOTE]
->  References included in code between web resources aren’t tracked as solution dependencies.  
+>  References included in code between web resources aren't tracked as solution dependencies.  
   
 ### See also  
 

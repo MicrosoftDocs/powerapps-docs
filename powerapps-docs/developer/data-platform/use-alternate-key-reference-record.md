@@ -1,17 +1,14 @@
 ---
 title: "Use an alternate key to reference a record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Alternate keys can be used to create instances of Entity and EntityReference classes. This topic discusses the usage patterns and possible exceptions that might be thrown when using alternate keys." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 08/09/2022
+ms.date: 05/30/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: divka78 # GitHub ID
+author: divkamath # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dikamath # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -46,8 +43,9 @@ The following table provides examples showing how to reference records using rel
 ## Exceptions when using alternate keys with the Web API
 
 You have to be aware of the following conditions and possible exceptions when using alternate keys:  
-  
+
 - If you specify a column that is not defined as a unique key, an error will be thrown indicating that use of unique key columns is required. The error message is: `The key in the request URI is not valid for resource 'Microsoft.Dynamics.CRM.<table logical name>'. Ensure that the names and number of key properties match the declared or alternate key properties for the resource 'Microsoft.Dynamics.CRM.<table logical name>'.`  
+- Alternate key values with the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+` are not currently supported.
 
 More information: [Retrieve using an alternate key](webapi/retrieve-entity-using-web-api.md#retrieve-using-an-alternate-key)
 

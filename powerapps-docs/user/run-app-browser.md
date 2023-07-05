@@ -5,18 +5,14 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/23/2022
+ms.date: 02/10/2023
 ms.subservice: end-user
 ms.author: sericks
-manager: tapanm-MSFT
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Run an app in a web browser
@@ -44,16 +40,15 @@ The Home page may show several types of business apps.
 
 The apps that meet the following criteria will be shown in the list of **Office** apps:
 
-- Apps hosted in production or default environments.
 - Apps that you launched in the last week.
 - Apps that you created. 
 - Apps your admin marked as **Featured** in your tenant.
-- First-party, model-driven apps such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access.
+- First-party, model-driven apps such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access and are hosted in production or default environments.
 
 ### Known limitations
 - When a new app is shared with users, the app needs to meet the criteria listed above. Be aware that it can take up to 24 hours for the app to appear in the list of **Office** apps.
 - Some model-driven apps are not recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true). Note that featured apps will only appear to users who have access to the apps. Featured apps do not appear to all users.
-- Until February 2023, it's possible that users will be able to see model-driven apps that they used to be able to access, but can no longer. There's also a chance that users will not be able to see model-driven apps that they have access to.    
+- It's possible that users will be able to see model-driven apps that they used to be able to access, but can no longer. There's also a chance that users will not be able to see model-driven apps that they have access to.    
 
 ### What if I cannot find an app?
 
@@ -97,6 +92,7 @@ To sign out of the Microsoft 365 apps page, select your profile image and then s
 In this topic, you learned how to run a canvas or model-driven app in a web browser. To learn how to:
 - run a model-driven apps or canvas apps on a mobile device, see [Run model-driven apps and canvas apps on Power Apps mobile](../mobile/run-powerapps-on-mobile.md)
 - use a model-driven app, see [Use model-driven apps](use-model-driven-apps.md)
+- mark an app as featured, see [Set-AdminPowerAppsFeatured](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true)
 
 
 

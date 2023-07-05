@@ -1,20 +1,17 @@
 ---
-title: Create a card with data from Dataverse (preview)
+title: Create a card with data from Dataverse
 description: Learn how to use Dataverse connectors in a card.
 keywords: "Card Designer, Power Apps, cards, tutorial, Dataverse, connectors"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
 ---
 
 # Create a card with data from Dataverse (preview)
-
-[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
 In this tutorial, you'll create a card that uses the Microsoft Dataverse connector to display and update information about an account. You'll use the [card designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), [connectors](../make-a-card/connectors/connector-intro.md), and more complex [Power Fx expressions](../make-a-card/power-fx/intro-to-pfx.md).
 
@@ -27,7 +24,7 @@ We'll assume that you've honed your Power Apps card skills in the [Hello World t
 
 ## Create a card
 
-1. Sign in to [Power Apps](https://make.powerapps.com). Select **Cards (preview)** > **+ Create a card**.
+1. Sign in to [Power Apps](https://make.powerapps.com) and select **Cards**. If the **Cards** tab is not visible, select **More** and pin the **Cards** tab.
 
 1. Name the card *DataverseCard* and then select **Create**.
 
@@ -71,7 +68,7 @@ We'll assume that you've honed your Power Apps card skills in the [Hello World t
 
 1. Select the card title and set its **Text** property to *LookUp(account, 'Account Name' = EnteredAccountName).'Account Name'*.
 
-    This expression changes the card title to a string that incorporates the account name. You can enter the expression in the formula bar or the properties pane.
+    This expression changes the card title to a string incorporating the account name. You can enter the expression in the formula bar or the properties pane.
 
     :::image type="content" source="..\media\tutorial-dataverse-card\details-title-pfx.png" alt-text="Screenshot of the Detailsscreen title set to a Power Fx expression.":::
 
@@ -97,6 +94,6 @@ We'll assume that you've honed your Power Apps card skills in the [Hello World t
 
 ## Test the card
 
-You should always save your changes before you play a card. Select **Save**, and then select **Play**.
+You should permanently save your changes before you play a card. Select **Save**, and then select **Play**.
 
-Test all the controls in both screens in your card. The first screen should list all the accounts and allow you to type the name of an account to open a screen with more details. The second screen should show the account name and number and allow you to change the account name.
+Test all the controls on both screens on your card. The first screen should list all the accounts and allow you to type the name of an account to open a screen with more details. The second screen should show the account name and number and enable you to change the account name.

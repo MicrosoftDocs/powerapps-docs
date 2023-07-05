@@ -4,16 +4,14 @@ description: Learn about how to share canvas app with guest users.
 author: alaug
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 05/11/2022
+ms.reviewer: mkaur
+ms.date: 01/27/2023
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - alaug
 ---
 # Share a canvas app with guest users
@@ -74,7 +72,7 @@ After you share an app for guest access, guests can discover and access apps sha
 
 ## Considerations and limitations for guest access
 
-- Guests can be assigned the User role or Co-owner role for apps shared with them. However, guests can't edit apps currently. More information: [Power Apps support for B2B guest maker (preview)](/power-platform/admin/invite-users-azure-active-directory-b2b-collaboration#power-apps-support-for-b2b-guest-maker-preview).
+- Users accessing web experiences in different Azure Active Directory tenants must acces Power Apps in a standalone browser session (different browser or InPrivate browser session) otherwise Power Apps may not pick up the correct Azure B2B user identity for the app being accessed. 
 - Power Apps guest access uses Azure B2B.
 - Power Apps Mobile doesn't support authentication using [Azure AD direct federation](/azure/active-directory/b2b/direct-federation). More information: [Sign in using Power Apps Mobile](../../mobile/run-powerapps-on-mobile.md#sign-in)
 - Power Apps [per app plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants.
@@ -136,7 +134,7 @@ For more information about pricing and the capabilities of various plans, go to 
 
 ### In Power Apps Mobile, how does a guest see apps for their home tenant?
 
-Any user who has used their mobile device to access a canvas app that was published in an Azure AD tenant that isn't their home tenant, must sign out of Power Apps and sign back in to Power Apps Mobile. 
+Any user who has used their mobile device to access a canvas app that was published in an Azure AD tenant that isn't their home tenant, can [switch to a different directory](../../mobile/tenant-switcher.md).
 
 ### In Power Apps Mobile, how does a guest see apps in the guest tenant?
 
@@ -162,7 +160,7 @@ Intune only applies the policies of a user's home tenant. For instance, if Lesa@
 
 Connectors that don't use any type of Azure AD authentication will support guest access. The following table enumerates all connectors that do use Azure AD authentication, and identifies which connectors currently support guest access. More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
 
-| **Connector**                                     | **Supports guest access**                                              |
+| **Connector**                                     | **Supports guest access** [1]                                             |
 |---------------------------------------------------|------------------------------------------------------------------------|
 | 10to8 Appointment Scheduling                      | No                                                                     |
 | Adobe Creative Cloud                              | No                                                                     |
@@ -172,6 +170,7 @@ Connectors that don't use any type of Azure AD authentication will support guest
 | AtBot Logic                                       | No                                                                     |
 | Azure AD                                          | Yes                                                                    |
 | Azure Automation                                  | Yes                                                                    |
+| Azure Blob Storage                                | No                                                                     |
 | Azure Container Instance                          | Yes                                                                    |
 | Azure Data Factory                                | Yes                                                                    |
 | Azure Data Lake                                   | Yes                                                                    |
@@ -266,6 +265,9 @@ Connectors that don't use any type of Azure AD authentication will support guest
 | Word Online (Business)                            | No                                                                     |
 
 \* When using the Microsoft Dataverse as the data source, ensure that the guest user is licensed from the same tenant where you have Dataverse data located.
+
+[1] External users explicitly added directly to your tenant are not considered guest users. External users that you have extended an invitation to access your tenant (but not directly added) are considered guest users.
+
 
 ### See also
 

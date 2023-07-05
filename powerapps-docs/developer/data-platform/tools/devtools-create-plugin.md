@@ -2,52 +2,45 @@
 title: "Quickstart: Create a plug-in using Power Platform Tools | Microsoft Docs"
 description: "Learn how to create and register a Dataverse plug-in using the Power Platform Tools extension for Visual Studio."
 ms.custom: ""
-ms.date: 06/20/2020
+ms.date: 03/30/2023
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
-search.audienceType: 
-  - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Quickstart: Create a plug-in using Power Platform Tools
 
-To create and deploy a plug-in using the Power Platform Tools extension for Visual Studio, start by creating a new Dataverse solution with a plug-in library. Instructions to do this can be found in the topic [Create a Power Platform Tools project](devtools-create-project.md).
-
-If you already have an existing Dataverse solution set up, then follow these [instructions](devtools-create-project.md#add-a-new-project-to-a-power-platform-solution) to add a Plug-in Library project to the solution using the Power Platform Tools template.
+This article provides information on how to create a plug-in using the Power Platform Tools extension for Visual Studio.
 
 ## Prerequisites
 
-- Visual Studio 2019
-- Power Platform Tools extension for Visual Studio
-- C# language
-- .NET Framework 4.6.2 (only for plug-in or custom workflow activity development)
-- Power Apps/Dataverse subscription or a trial environment
+- Visual Studio 2019 or 2022
+- [Power Platform Tools extension for Visual Studio](/power-platform/developer/devtools-vs)
+- .NET Framework 4.6.2 is required for plug-in or custom workflow activity development
+- Power Apps subscription or a trial environment
 
-## Connect to your Dataverse environment
+## Create a solution with plug-in library
 
-To connect to your Dataverse environment and register custom code assemblies, steps, and more, follow these steps.
+Follow these instructions to create a solution with plug-in library, connect to your Power Platform environment and register custom code assemblies, steps, and more.
+
+1. Use Power Platform Tools extension for Visual Studio to create a new solution with a plug-in library. For instructions to do this, go to the [Create a Power Platform Tools project](/power-platform/developer/devtools-vs) article in the Power Platform developer guide.
+
+    If you already have an existing solution set up, follow instructions in [Add a new project to a Power Platform solution](/power-platform/developer/devtools-vs-create-project#add-a-new-project-to-a-power-platform-solution) in the Power Platform developer guide to add a Plug-in Library project to the solution using the Power Platform Tools template.
 
 1. In the **Tools** menu, select **Connect to Dataverse**.
 
-1. Step #1 is to login. Check the desired options in the dialog and select **Login**.
+1. Select the desired options in the dialog and select **Login**.
 
-1. Step #2 is to select an existing Dataverse solution, or the **Default** solution. This is the solution that your plug-in and workflow activity assemblies will be registered with.
+1. Select an existing solution or the **Default** solution. This is the solution that your plug-in and workflow activity assemblies will be registered with.
 
-1. Choose **Done** when finished.
+1. Select **Done** when finished.
 
 The Power Platform Explorer view will be displayed or you can open that view from the **View** menu. Expand the nodes to see what kinds of environment data you can view. Right-click on nodes to see what options are available.
 
 > [!NOTE]
 > The Power Platform Explorer view of the Power Platform Tools extension is capable of more than plug-in and workflow activity registration. Documentation for additional features will be provided in a future documentation release. In the meantime, feel free to explore.  
-
 
 ## Register a plug-in step with Dataverse
 
@@ -147,7 +140,6 @@ All plug-in and custom workflow assemblies must be digitally signed before they 
 
 1. On the **Signing** tab, check **Sign the assembly**, and then specify a strong name key file.
 
-
 ## Deploy the plug-in to the environment solution
 
 After you are done modifying code and are ready to deploy the plug-in assembly and step(s) to you environment, follow these steps.
@@ -196,14 +188,10 @@ You can send tool feedback to Microsoft using the feedback icon in the Power Pla
 
 ### See Also
 
-*Power Platform Tools specific articles*  
-[Install Power Platform Tools](devtools-install.md)  
-[Create a Power Platform Tools project](devtools-create-project.md)  
-[Tutorial: Debug a plug-in](../tutorial-debug-plug-in.md?tabs=pptools)
-
-*General event handler articles*  
-[Event framework](../event-framework.md)  
-[Use plug-ins to extend business processes](../plug-ins.md)  
-[Workflow extensions](../workflow/workflow-extensions.md)
+[Power Platform Tools for Visual Studio](/power-platform/developer/devtools-vs)<br/>  
+[Create a Power Platform Tools project](/power-platform/developer/devtools-vs-create-project)<br/>  
+[Tutorial: Debug a plug-in](../tutorial-debug-plug-in.md?tabs=pptools)<br/>  
+[Event framework](../event-framework.md)<br/>  
+[Use plug-ins to extend business processes](../plug-ins.md)<br/>  
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

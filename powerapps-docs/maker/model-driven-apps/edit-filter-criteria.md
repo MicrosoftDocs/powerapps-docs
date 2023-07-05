@@ -17,12 +17,8 @@ ms.assetid: fecf23c9-05e6-4397-9a5d-37210bcc2816
 caps.latest.revision: 25
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Edit filter criteria for a table view
 

@@ -5,17 +5,15 @@ author: joel-lindstrom
 
 ms.topic: sample
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.date: 10/06/2021
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
     - joel-lindstrom
-    - tapanm-msft
+    - mduelae
 ---
 
 # Create an app that uses mobile sensors

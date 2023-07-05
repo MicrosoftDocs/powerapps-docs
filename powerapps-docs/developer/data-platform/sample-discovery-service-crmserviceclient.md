@@ -4,13 +4,9 @@ description: "This sample code shows how to use discovery services" # 115-145 ch
 ms.date: 07/18/2022
 author: JimDaly
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke

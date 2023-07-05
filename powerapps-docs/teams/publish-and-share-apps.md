@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 04/07/2021
 ms.subservice: teams
 ms.author: mabolan
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ---
 
 # Publish your app in Teams
@@ -38,7 +38,7 @@ Select **Add a tab** ![Add a tab.](media/publish-app-9.png "Add a tab"), and the
 
 ![Select and save.](media/publish-app-8.png "Select and save")
 
-More information: [Publish an app](../maker/canvas-apps/save-publish-app.md#publish-an-app)
+More information: [Publish an app](../maker/canvas-apps/save-publish-app.md)
 
 ## Move an app to another Teams channel in the same team
 

@@ -5,7 +5,6 @@ keywords: Interactive dashboards; Customer Service; Microsoft Dynamics 365; Inte
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.custom: ""
 ms.date: 06/01/2021
 ms.reviewer: ""
@@ -20,14 +19,9 @@ applies_to:
 ms.assetid: d1446a95-14bf-4b15-a905-72fce07f4c76
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create and configure model-driven app interactive experience dashboards
-
-
 
 ## Introducing interactive dashboards
 
@@ -57,9 +51,9 @@ Interactive experience dashboards can be a **one-stop workplace** for app users,
  Users can apply additional filtering with global filter and timeframe filter. The global filter works at a column level on all charts, and also on streams and tiles that are based on the filter table (you specify the filter table when you configure the visual filters). 
   
 > [!NOTE]
->  The interactive dashboards are solution aware and can be exported and then imported into a different environment as a solution. However, the queues that the streams and tiles are based on aren’t solution aware. Before importing the dashboard solution into the target system, the queues have to be manually created in the target system in **Settings** > **Service Management** > **Queues**. After you create the queues, import the dashboard solution to the target system, and then edit the streams or tiles that are based on the queues to assign the newly created queues appropriately.  
+> The interactive dashboards are solution aware and can be exported and then imported into a different environment as a solution. However, the queues that the streams and tiles are based on aren’t solution aware. Before importing the dashboard solution into the target system, the queues have to be manually created in the target system in **Settings** > **Service Management** > **Queues**. After you create the queues, import the dashboard solution to the target system, and then edit the streams or tiles that are based on the queues to assign the newly created queues appropriately.  
   
- The illustrations in this topic show multi-stream and single-stream dashboards with the header pane. Below the header you see visual filters and streams. In the single-stream dashboard, you also see tiles. For each dashboard type, you can choose from several different layouts that are also shown. The dashboard header contains the following controls and select-able icons, from left to right: dashboard picker, refresh, visual filter icon, global filter icon, and time frame filter.  
+The illustrations in this article show multi-stream and single-stream dashboards with the header pane. Below the header you see visual filters and streams. In the single-stream dashboard, you also see tiles. For each dashboard type, you can choose from several different layouts that are also shown. The dashboard header contains the following controls and select-able icons, from left to right: dashboard picker, refresh, visual filter icon, global filter icon, and time frame filter.  
 
 ## Dashboard layouts
 
@@ -122,11 +116,12 @@ In this example there are two interactive dashboard options available in the Cas
 ### Configure the 'Appears in global filter in interactive experience' option
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Select **Solutions**, open the solution required, and then on the toolbar select **Switch to classic**.
-3. Under **Components**, expand **Entities** (which are effectively tables), and then expand the specific table.
-4. In the navigation pane, select **Fields** and in the grid, double-click the column, or data field, required.
-5. In the **General** tab, select the **Appears in global filter in interactive experience** check box. Select **Save and Close**.
-6. Select **Publish All Customizations** for the changes to take effect.
+1. On the left navigation pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution you want, and then on the toolbar select **Switch to classic**.
+1. Under **Components**, expand **Entities** (which are effectively tables), and then expand the specific table.
+1. In the navigation pane, select **Fields** and in the grid, double-click the column, or data field, required.
+1. In the **General** tab, select the **Appears in global filter in interactive experience** check box. Select **Save and Close**.
+1. Select **Publish All Customizations** for the changes to take effect.
   
  The columns that are enabled for **Appears in global filter in interactive experience** appear in the global filter flyout window when the global filter icon is selected on the dashboard header. In the flyout window, the service reps can select the columns on which they want to filter globally, in charts, and also in streams and tiles that are based on the filter table.
   
@@ -135,21 +130,17 @@ In this example there are two interactive dashboard options available in the Cas
  ![Add two global filter columns.](media/global-filter-escalated.png "Global filter columns")  
   
 > [!TIP]
->  When a visual filter is configured based on the columns like priority or status, a best practice is to also enable these columns (priority, status) to appear in the global filter.  
+> When a visual filter is configured based on the columns like priority or status, a best practice is to also enable these columns (priority, status) to appear in the global filter.  
   
 ### Configure the 'Sortable in interactive experience dashboard' option
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-2. Select **Solutions**, open the solution required, and then on the toolbar select **Switch to classic**.
-
-3. Under **Components**, expand **Entities** (which are effectively tables), and then expand the specific table.
-
-4. In the navigation pane, select **Columns** and in the grid, double-click the column for which sorting is required.
-
-5. In the **General** tab, select the **Sortable in interactive experience dashboard** check box. Select **Save and Close**.
-
-6. Select **Publish All Customizations** for the changes to take effect.
+1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution you want, and then on the toolbar select **Switch to classic**.
+1. Under **Components**, expand **Entities** (which are effectively tables), and then expand the specific table.
+1. In the navigation pane, select **Columns** and in the grid, double-click the column for which sorting is required.
+1. In the **General** tab, select the **Sortable in interactive experience dashboard** check box. Select **Save and Close**.
+1. Select **Publish All Customizations** for the changes to take effect.
   
 The columns that are configured for sorting appear in the drop-down list on the stream header.
 
@@ -163,40 +154,38 @@ Select and enable security roles that will be able to view the interactive dashb
   
 #### Enable security roles for interactive dashboards
 
-1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-  
-2.  Select **Solutions**, and then open the required solution. 
-
-3.  Select the dashboard and then on the toolbar select **Enable security roles**.  This will open a new tab with the classic interface.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the required solution. 
+1. Select the dashboard and then on the toolbar select **Enable security roles**.  This will open a new tab with the classic interface.
   
     > [!div class="mx-imgBorder"] 
     > ![Enable security roles.](media/dashboard-enable-security-roles.png)
 
-4.  In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
+1. In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
 
      ![Select display only these selected security roles.](media/security-roles.png "Select display only these selected security roles")    
   
-5.  Select **Publish** for the changes to take effect.
+1. Select **Publish** for the changes to take effect.
   
 <a name="BKMK_Configure"></a>   
-## Create interactive experience dashboards  
+## Create interactive experience dashboards
+
 The following sections describe how to create and then configure the various types of interactive dashboards.  
   
 ### Configure a multi-stream interactive dashboard using the 4-column layout  
- 
-1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Navigate to an environment with an unmanaged solution.
-  
-2.  Select **Solutions**, open the solution required, and then on the toolbar select **Switch to classic**.
-
-3.  In the left navigation pane, select **Dashboards**, on the toolbar select **New**, and then select **Interactive experience dashboard**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Select an environment with an unmanaged solution.
+1. On the left navigation pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution you want, and then on the toolbar select **Switch to classic**.
+1. In the left navigation pane, select **Dashboards**, on the toolbar select **New**, and then select **Interactive experience dashboard**.
 
     ![New Interactive experience dashboard.](media/interactive-exp-dash-sol-explorer.png)
   
-4.  Choose the layout, either 2, 3, or 4 column width.  
+1. Choose the layout, either 2, 3, or 4 column width.  
   
-5.  When the dashboard form opens, fill in the filtering information at the top of form, as shown here.  
+1. When the dashboard form opens, fill in the filtering information at the top of form, as shown here.  
  
     > [!div class="mx-imgBorder"] 
     > ![Add visual filters.](media/interactive-dashboards-add-visual-filters.png "Add visual filters")  
@@ -219,7 +208,7 @@ The following sections describe how to create and then configure the various typ
  Some charts, such as bar charts or pie charts, render showing the data stored in the system. The doughnut charts and tag charts load as static images and don’t show the preview of the actual data.  
   
 > [!NOTE]
->  The charts configured for the visual filters can use the columns of the **Filter** table as well as related tables. When charts are based on related table columns, the customer service representatives can filter charts using these related table columns. The columns that are based on the related table usually have the following format in the chart configuration window: “field name (entity name)”, such as the **Modified By (Delegate)** column. To create multi-entity charts, columns of a related table must be added to any of the views, and then use these columns while creating charts.  
+> The charts configured for the visual filters can use the columns of the **Filter** table as well as related tables. When charts are based on related table columns, the customer service representatives can filter charts using these related table columns. The columns that are based on the related table usually have the following format in the chart configuration window: “field name (entity name)”, such as the **Modified By (Delegate)** column. To create multi-entity charts, columns of a related table must be added to any of the views, and then use these columns while creating charts.  
 
  > [!div class="mx-imgBorder"] 
  > ![Creating charts for visual filters.](media/interactive-dashboard-visual-charts-x-y-axes.PNG "Creating charts for visual filters")  
@@ -244,15 +233,13 @@ The following illustration is an example of a fully configured chart panel and s
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
-2. Select **Solutions**, open the solution required, and then open the interactive dashboard.  
+1. On the left navigation pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution required, and then open the interactive dashboard.  
+1. Select the stream that you want to edit to select it, and then select **Edit Component**.  
+1. Depending on whether you want to add a view or queue to the stream, select the view or queue details for the stream, and then select **Set**.  
+1. Select **Save**.  
   
-3.  Select the stream that you want to edit to select it, and then select **Edit Component**.  
-  
-4.  Depending on whether you want to add a view or queue to the stream, select the view or queue details for the stream, and then select **Set**.  
-  
-5.  Select **Save**.  
-  
- It is also possible to delete an individual stream from a dashboard. To do this, select the stream, and then on the toolbar, select **Delete**.  
+It is also possible to delete an individual stream from a dashboard. To do this, select the stream, and then on the toolbar, select **Delete**.  
   
 ### Create a table-specific dashboard
 
@@ -260,15 +247,12 @@ A table-specific dashboard is a multi-stream dashboard. Configuring this dashboa
 
 For example, instead of selecting a table, some columns in the table-specific dashboard are preset to the table relevant to the dashboard.  
 
-1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-2.  Select **Data** > **Tables** > select the required table.
-
-3.  Select the **Dashboards** area, and then on the toolbar select **Add dashboard**.
-
-4.  Choose the layout, either 2, 3, or 4 column width.
-  
-5.  When the dashboard form opens, the **Filter Table** is preset to the table which is tied to the dashboard. The **Table View** drop-down list contains the available views for the table. Select the view and fill in the rest of the required information on the page.  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. On the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the table you want.
+1. Select the **Dashboards** area, and then on the toolbar select **Add dashboard**.
+1. Choose the layout, either 2, 3, or 4 column width.
+1. When the dashboard form opens, the **Filter Table** is preset to the table which is tied to the dashboard. The **Table View** drop-down list contains the available views for the table. Select the view and fill in the rest of the required information on the page.  
   
  The rest of the setup is very similar to the home page multi-stream dashboard setup described in the previous section.  
   
@@ -291,25 +275,19 @@ The color that will appear in the charts and streams for specific column values 
 > 
 >    More information: [Chart colors are not correct on dashboards]( https://support.microsoft.com/topic/chart-colors-are-not-correct-on-dashboards-82dd1165-b509-ab64-954e-2e09a3487fd7)
 
-1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Navigate to an environment with an unmanaged solution.
+1. Select an environment with an unmanaged solution.
   
-1.  Select **Solutions**, open the solution required, and then on the toolbar select **Switch to classic**.
-  
-1.  Under **Components**, expand **Tables**, and then expand the table required. If the table isn't displayed select **Add Existing** to add it.  
-  
-1.  In the navigation pane, select **Columns**. In the grid, double-click the relevant column.  
+1. On the left navigation pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution you want, and then on the toolbar select **Switch to classic**.
+1. Under **Components**, expand **Tables**, and then expand the table required. If the table isn't displayed select **Add Existing** to add it.  
+1. In the navigation pane, select **Columns**. In the grid, double-click the relevant column.  
+1. In the **General** tab, in the **Type** sub-area, select **Yes** and then select **Edit**.
+1. When the **Modify List Value** dialog appears, set the new value in the **Color** text box. Select **OK**.  
+1. Select **Save and Close**.  
+1. Select **Publish** for the changes to take effect.  
 
-1.  In the **General** tab, in the **Type** sub-area, select **Yes** and then select **Edit**.
-  
-1.  When the **Modify List Value** dialog appears, set the new value in the **Color** text box. Select **OK**.  
-  
-1.  Select **Save and Close**.  
-  
-1.  Select **Publish** for the changes to take effect.  
-
-  
 In the following example, the color for the **IsEscalated** column is changed. Use the **Edit** button to open the **Modify List Value** dialog box:  
  
  > [!div class="mx-imgBorder"] 

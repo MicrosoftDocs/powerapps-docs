@@ -4,21 +4,18 @@ description: Learn about the execution phases of canvas apps while starting-up, 
 author: JinManAhn-MSFT
 
 ms.topic: conceptual
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/22/2021
 ms.subservice: canvas-maker
 ms.author: jiahn
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - JinManAhn-MSFT
   - lancedMicrosoft
   - yingchin
-ms.custom:
-  - intro-internal
-  - canvas
+ms.custom: canvas
+ms.collection: get-started
 ---
 
 # Understand canvas app execution phases and data call flow

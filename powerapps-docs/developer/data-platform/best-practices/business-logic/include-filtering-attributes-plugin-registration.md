@@ -5,7 +5,6 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: jowells
-manager: austinj
 editor: ''
 tags: ''
 
@@ -18,9 +17,6 @@ ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Include filtering attributes with plug-in registration
 
@@ -54,7 +50,7 @@ Filtering attributes are a list of entity attributes that, when changed, cause t
 
 ### See also
 
-[Register a plug-in](../../register-plug-in.md)
-[Disable auto-save in a model-driven app](../../../../maker/model-driven-apps/manage-auto-save.md)
+[Register a plug-in](../../register-plug-in.md)<br />
+[Disable auto-save in a model-driven app](../../../../maker/model-driven-apps/manage-auto-save.md)<br />
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

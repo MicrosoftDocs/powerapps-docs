@@ -14,8 +14,6 @@ author: phecke
 ms.author: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - D365CE
 ---
 
 # Use Postman to perform operations with the Web API

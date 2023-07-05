@@ -1,6 +1,6 @@
 - name: Work with data using code
   href: ../work-with-data.md
-- name: What is the Organization Service?
+- name: Use the Organization service
   href: overview.md
 - name: Get started
   items:
@@ -51,12 +51,12 @@
     href: entity-operations-update-delete.md
   - name: Associate and disassociate table rows
     href: entity-operations-associate-disassociate.md
-  - name: Access table data faster using partitions
-    href: azure-storage-partitioning-sdk.md
 - name: Use messages
   href: use-messages.md
 - name: Special Operations
   items:
+  - name: Use CreateMultiple & UpdateMultiple (Preview)
+    href: use-createmultiple-updatemultiple.md
   - name: Use ExecuteAsync
     href: use-executeAsync.md
   - name: Use ExecuteTransaction

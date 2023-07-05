@@ -1,17 +1,13 @@
 ---
 title: "getSelectedPane (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getSelectedPane method.
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 04/04/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---

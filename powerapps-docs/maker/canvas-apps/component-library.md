@@ -5,15 +5,13 @@ author: jorisde
 ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 10/10/2022
-ms.author: hemantg
-ms.reviewer: tapanm
+ms.author: jorisde
+ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - jorisdg
-  - tapanm-msft
+  - mduelae
 ---
 
 # Component library

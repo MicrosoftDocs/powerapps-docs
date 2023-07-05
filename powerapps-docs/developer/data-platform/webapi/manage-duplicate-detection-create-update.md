@@ -1,17 +1,14 @@
 ---
 title: "Detect duplicate data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetection header and Microsoft Dataverse Web API"
-ms.date: 08/03/2022
+ms.date: 12/31/2022
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-author: divka78
+author: divkamath
 ms.author: dikamath
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -28,11 +25,7 @@ Use the `MSCRM.SuppressDuplicateDetection` request header with a `POST` request 
 - `true` – Create or update the record, if a duplicate is found.
 - `false` – Do not create or update the record, if a duplicate is found.
 
-> [!NOTE]
-> Passing of the `CalculateMatchCodeSynchronously` optional parameter is not required. The match codes used to detect duplicates are calculated synchronously regardless of the value passed in this parameter.
-
 Use preference header `MSCRM.SuppressDuplicateDetection` and set its value to `false` in the Web API request.
-
 
 > [!NOTE]
 > Make sure there are appropriate duplicate detection rules in place. Dataverse includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you'll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, see [Duplicate rule tables](../duplicaterule-entities.md) 

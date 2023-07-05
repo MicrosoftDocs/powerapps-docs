@@ -5,16 +5,14 @@ author: arthiriyer
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 10/16/2019
 ms.subservice: canvas-maker
 ms.author: arthii
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - arthiriyer
 ---
 

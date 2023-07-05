@@ -15,12 +15,8 @@ author: "Mattp123"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Upgrade or update a solution  
@@ -38,7 +34,7 @@ There are times when you need to update an existing managed solution. To update 
 
 The procedure to import the updated solution is similar to installing a new managed solution, except you will get some different options. If you are updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the target environment you want, and then select **Solutions** from the left navigation.  
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the target environment you want, and then select **Solutions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
 
 2. On the command bar, select **Import**.  
 
@@ -93,9 +89,8 @@ The option to overwrite customizations is only available with the classic import
 > Selecting the **Overwrite Customizations (not recommended)**  option will overwrite or remove any unmanaged customizations previously performed on components included in this solution. This option does not affect components that support merge behavior (forms, sitemap, ribbon, app modules).  Components that have other managed solutions on top of the existing solution you are replacing do also still remain on top and are not affected by this option.  
 
 ### See also
+[Layering within a managed solution](/power-platform/alm/solution-layers-alm#layering-within-a-managed-solution)
 [Add solution components](create-solution.md#add-solution-components) <br />
-[Export solutions](export-solutions.md) <br />
-[Import solutions](import-update-export-solutions.md) <br />
 [Create solution patches](/power-platform/alm/update-solutions-alm#create-solution-patches) <br />
 [For developers: Cloning, patching, and upgrading](/power-platform/alm/solution-api#cloning-patching-and-upgrading)
 

@@ -2,7 +2,7 @@
 title: "Edit table records directly from another table’s main form | MicrosoftDocs"
 description: Learn how to design a main form that can be used to edit a related table record.
 ms.custom: ""
-ms.date: 10/17/2022
+ms.date: 02/28/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,12 +12,8 @@ applies_to:
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "mspilde"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Edit related table records directly from another table’s main form
 
@@ -35,7 +31,8 @@ For example, here's the form component on an **existing tab** on the main accoun
 
 ## Add the form component to a table main form
 
-1. On the left navigation pane, select **Components**, expand either **Input** or **Display**, and then select **Form**.
+1. On the left navigation pane select **Components**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Expand either **Input** or **Display**, and then select **Form**.
 On the form component control configuration page, select the properties for the control:  
    - Select the **Lookup column** for the form.
    - Select the **Related form**. Depending on the related table configuration for the column:
@@ -55,7 +52,7 @@ In this example, the **Contact** standard main form is configured for the form c
 > The way you add a form component control has changed. We recommend that you use the latest experience. More information: [Add the form component to a table main form](#add-the-form-component-to-a-table-main-form)
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Select **Dataverse**, and then select **Tables** in the left pane. Alternatively, select a [solution](model-driven-app-glossary.md#solution) from the menu and then select a table, such as **Account**.
+1. Select **Tables** in the left pane. Alternatively, open a [solution](model-driven-app-glossary.md#solution), and then select a table, such as **Account**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Forms** from the components menu.
 1. Select a form with a form type of **Main** from the forms available.
 1. Select **Switch to classic**. The classic form editor interface opens as a tab in your browser.
@@ -129,6 +126,8 @@ Note the following limitations when you add the form component control to a tabl
 - Using the same form for different form component controls on a single form isn't supported.
 
 - The form that you use with a form component must be included in your app. If it isn't, or if the current user doesn't have access to the form, it will fall back to the top-most main form that is included in the app and available to the user (based on form order). More information: [Add a component](add-edit-app-components.md#add-a-component).
+
+- Form component controls have certain limitations when rendered in multi-session apps. If the client API is used to modify the form component control, or if data is entered on the form, the changes might not be persisted when switching multi-session tabs.
 
 - You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
 

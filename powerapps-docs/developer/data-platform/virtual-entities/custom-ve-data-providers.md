@@ -1,19 +1,15 @@
 ---
 title: "Custom virtual table data providers (Microsoft Dataverse) | Microsoft Docs"
 description: "Using the Microsoft Dataverse Data SDK, .NET Developers have the option of creating custom virtual table data providers to help integrate external data source types that are not supported by an existing data provider."
-ms.date: 03/22/2022
+ms.date: 01/24/2023
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
 author: "NHelgren" # GitHub ID
 ms.author: nhelgren
 ms.reviewer: pehecke
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -60,6 +56,7 @@ There are several steps that are required to create a virtual table data provide
 4. Customize the data source table to reflect your data type or specific instance.
 5. Export the custom data provider solution.
 
+More information: [Sample: Custom virtual table provider with CRUD operations](sample-ve-provider-crud-operations.md)
 
 ### Plug-in development
 
@@ -102,6 +99,8 @@ Unlike an ordinary plug-in, you will only use the Plug-in Registration Tool (PRT
 |[EntityDataProvider](../reference/entities/entitydataprovider.md)|Defines the plug-ins to use for each event and the logical name of the data source.|
 
 When the definitions for your virtual table is configured, your plug-ins are registered using the PRT and the correct configuration data is set in the **EntityDataProvider** table, your virtual table will start to respond to requests.
+
+More information: [Creating data provider and adding plug-ins to the provider](sample-ve-provider-crud-operations.md#step-2-creating-data-provider-and-adding-plug-ins-to-the-provider)
 
 ### Debugging plug-ins
 

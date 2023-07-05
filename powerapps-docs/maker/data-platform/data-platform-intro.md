@@ -2,19 +2,15 @@
 title: What is Microsoft Dataverse? | Microsoft Docs
 description: Introduction to Microsoft Dataverse, tables, server-side logic, security, and developer capabilities.
 author: mattp123
-manager: kvivek
 ms.topic: overview
 ms.component: cds
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 06/15/2022
 ms.reviewer: matp
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---
@@ -112,5 +108,7 @@ To get started using Dataverse:
 ## Privacy notice
 With the Microsoft Power Apps common data model, Microsoft collects and stores custom table and column names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The table and column names that app Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service's standard table coverage, such as schemas related to organizations. The data in the database tables associated with these tables is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom table and column names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
 
+### See also
+[Dataverse for Teams](/power-apps/teams/overview-data-platform)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

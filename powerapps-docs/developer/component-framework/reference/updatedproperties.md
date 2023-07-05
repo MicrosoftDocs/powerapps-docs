@@ -3,7 +3,6 @@ title: updatedProperties | Microsoft Docs
 description: Provides updatesProperties related methods.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

@@ -8,14 +8,12 @@ ms.custom: canvas
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: vabhavir
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - vasavib
-  - tapanm-msft
+  - mduelae
   - lancedMicrosoft
 ---
 

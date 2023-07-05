@@ -14,17 +14,11 @@ ms.assetid:
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Virtual table walkthrough using the OData v4 Data Provider
-
-
 
 Imagine that you want to access, create, update, and delete some personal information about a contact from an external data source within your model-driven app. In this simple walkthrough, you will model a virtual table named *Person* with columns mapped to the external schema to these operations at runtime from an OData web service.
 
@@ -182,12 +176,13 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
 1. After all customizations are published, close the Solution Explorer window.
 
 ## Use the virtual table in a model-driven app
+
 Create a model-driven app and add the **Person** table to the site map. Then, select the **Person** main form and the **Person Advance Find** view. Publish the app. More information: [Build your first model-driven app from scratch](../model-driven-apps/build-first-model-driven-app.md)
 
 Then, app users can perform read, create, update, and delete operations using the virtual table just like any other table in Microsoft Dataverse.
 
 ### Create, view, and delete records using the virtual table
-    
+
 1. Run the model-driven app. Select **New**, complete the required columns, and then save the record.
 1. Select **New** again to create another record and save it.
 1. You should now have two records similar to the following in the **All Persons** view.

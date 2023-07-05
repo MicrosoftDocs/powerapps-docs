@@ -1,23 +1,23 @@
 ---
 title: Use code editor
-description: Learn about how to use code editor in Power Apps portals Studio to customize your portal page.
+description: Learn how to use code editor in Power Apps portals Studio to customize your portal page.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2022
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Use code editor
 
-
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 To view the source of a component on the canvas, select the component, and then select the source code editor icon **&lt;/&gt;** in the footer.
 

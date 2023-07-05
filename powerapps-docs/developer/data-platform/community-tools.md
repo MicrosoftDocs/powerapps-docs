@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "annbe" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Community tools for Microsoft Dataverse
 
@@ -46,9 +42,9 @@ The following is a selected list of community tools distributed via the XrmToolB
 
 ## Browser Extensions
 
-### Chromium Metadata Browser
+### Pascalcase Metadata Browser
 
-Here is another tool, [Chromium Metadata Browser](https://pascalcase.com/Home/Metadata), that lets you browse metadata such as tables, columns, relationships, choices of Dataverse environments. It works with Microsoft Edge and Google Chrome browsers. 
+Here is another tool, [Pascalcase Metadata Browser](https://pascalcase.com/Home/Metadata), that lets you browse metadata such as tables, columns, relationships, choices of Dataverse environments. It works with Microsoft Edge browser. 
 
 ### Level up for Dynamics 365/Power Apps
 
