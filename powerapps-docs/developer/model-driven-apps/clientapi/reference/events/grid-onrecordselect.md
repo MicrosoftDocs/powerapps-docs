@@ -21,7 +21,7 @@ There might be situations where you don't want the table record to open (which i
 
 ### Step 1: Create a web resource
 
-Create, save and publish a JavaScript (JS) web resource that contains the following code. This example uses **contact** table and a specific form. Set the `entityName` you want to use.
+Create, save and publish a JavaScript (JS) web resource that contains the following code. It automatically gets the entity name and entity ID from [execution context](power-apps/developer/model-driven-apps/clientapi/reference/execution-context).
 
    ```JavaScript
     var Example = window.Example || {};
@@ -29,8 +29,8 @@ Create, save and publish a JavaScript (JS) web resource that contains the follow
       this.OnSelect = function (executionContext) {
         var pageInput = {
             pageType: "entityrecord",
-            entityName: "contact",
-            entityId: executionContext.getFormContext().data.entity.getId(),
+            entityName: executionContext.getEventSource().getEntityName(),
+            entityId: executionContext.getEventSource().getId(),
             formId: "420786E3-D342-4A9A-914B-AA331FF2D25E"    
         };
         Xrm.Navigation.navigateTo(pageInput);
