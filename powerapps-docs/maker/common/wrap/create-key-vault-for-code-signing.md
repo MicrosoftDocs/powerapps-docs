@@ -93,6 +93,13 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | ------------- |:-------------:| 
 |1000118    | Default subscription not found, or missing access permissions|
 
+ - Make sure your key vault is in the Default Subscription for your tenant. 
+
+ - Run these PowerShell commands as an admin: 
+
+`Connect-AzureAD -TenantId <your tenant ID>` in Power Shell <br>
+`New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
+
 ## 1000119
 
 | Error code      | Description          | 
