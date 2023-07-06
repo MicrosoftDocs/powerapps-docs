@@ -205,7 +205,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 - Add a new **Tag** for your **Android Certificate**.
  1. The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be  **com.testApp.wrap.keystore**.
- 2. The **Tag value** should correspod to the name you chose for your **Certificate** when uploading a certificate file in the previous step. For example, if your **Android cerfificate** is named  **AndroidWrapCertificate**, then the value for the **Tag value** should also be **AndroidWrapCertificate**.
+ 2. The **Tag value** should correspod to the name you chose for your **Certificate** when uploading a certificate file in the previous step. For example, if your **Cerfificate** is named  **AndroidWrapCertificate**, then the value for the **Tag value** should also be **AndroidWrapCertificate**.
 
    > [!div class="mx-imgBorder"] 
    > ![Create a certificate tag.](media/how-to-v2/CertificateTag.png "Create a certificate tag")
@@ -225,8 +225,8 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > ![Create an iOS certificate.](media/how-to-v2/CertificateNameiOS.png "Create an iOS certificate")
 
 - Add a new **Tag** for your **iOS Certificate**.
--  1. The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be  **com.testApp.wrap.cert**.
- 2. The **Tag value** should correspod to the name you chose for your **Certificate** when uploading a certificate file in the previous step. For example, if your **iOS Cerfificate** is named  **iOSCertificate1**, then the value for the **Tag value** should also be **iOSCertificate1**.
+ 1. The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be  **com.testApp.wrap.cert**.
+ 2. The **Tag value** should correspod to the name you chose for your **Certificate** when uploading a certificate file in the previous step. For example, if your **Cerfificate** is named  **iOSCertificate1**, then the value for the **Tag value** should also be **iOSCertificate1**.
 
    > [!div class="mx-imgBorder"] 
    > ![Create a certificate tag for iOS.](media/how-to-v2/CertificateTagiOS.png "Create a certificate tag for iOS")
@@ -237,5 +237,12 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | ------------- |:-------------:| 
 |1000123    |   iOS profile is not valid|
 
+- Import your **Provisioning Profile** as a **Secret** 
+- Add a new **Tag** for your **Provisioning Profile**.
+-  1. The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be  **com.testApp.wrap.profile**.
+ 2. The **Tag value** should correspod to the name you chose for your **Secret** when uploading a povisioning profile in the previous step. For example, if your **Secret** is named  **iOSProvisioningProfileSecret**, then the value for the **Tag value** should also be **iOSProvisioningProfileSecret**.
+  
+    > [!div class="mx-imgBorder"] 
+   > ![Create a tag for iOS Provisioning Profile Secret.](media/how-to-v2/ProvisioningProfileSecretTag.png "Create a tag for iOS Provisioning Profile Secret")
 
 
