@@ -204,8 +204,8 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 
 - Add a new **Tag** for your **Android Cerficicate**.
- The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be  **com.testApp.wrap.keystore**.
- The **Tag value** should correspod to the name you chose for your **Certificate** when uploading a certificate file in the previous step. For example, if your **Android cerfificate** is named  **AndroidWrapCertificate**, then the value for the **Tag value** should also be **AndroidWrapCertificate**.
+ 1. The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be  **com.testApp.wrap.keystore**.
+ 2. The **Tag value** should correspod to the name you chose for your **Certificate** when uploading a certificate file in the previous step. For example, if your **Android cerfificate** is named  **AndroidWrapCertificate**, then the value for the **Tag value** should also be **AndroidWrapCertificate**.
 
    > [!div class="mx-imgBorder"] 
    > ![Create a certificate tag.](media/how-to-v2/CertificateTag.png "Create a certificate tag")
