@@ -194,6 +194,20 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | ------------- |:-------------:| 
 |1000121    | Android keystore is not valid. Missing Tag and/or Certificate|
 
+- Import your **Android Certificate**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Import certificate.](media/how-to-v2/ImportCertificate.png "Import certoficate")
+   
+   > [!div class="mx-imgBorder"] 
+   > ![Create a certificate.](media/how-to-v2/CreateName.png "Create a certificate")
+
+
+- Add a new **Tag** for your **Android Cerficicate**.
+ The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be  **com.testApp.wrap.keystore**.
+ The **Tag value** should correspod to the name you chose for your **Certificate** when uploading a certificate file in the previous step. For example, if your **Android cerfificate** is named  **AndroidWrapCertificate**, then the value for the **Tag value** should also be **AndroidWrapCertificate**.
+  
+
 ## 1000122
 
 | Error code      | Description          | 
