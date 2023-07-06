@@ -125,7 +125,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 | Error code      | Description          | 
 | ------------- |:-------------:| 
-|1000119    | Keyvault does not exist, OR Keyvault is missing access privileges|
+|1000119    | Keyvault does not exist, or Keyvault is missing access privileges|
 
  - Verify that your Azure key vault is in the Default Subscription for your tenant. 
 
@@ -163,8 +163,9 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 - Add access policies for your Azure key vault.
    > [!div class="mx-imgBorder"] 
    > ![Add Vault Access policies.](media/how-to-v2/CreateVaultAccessPolicy.png "Add Vault access policies.")
-   > 
-     > [!div class="mx-imgBorder"] 
+
+   
+   > [!div class="mx-imgBorder"] 
    > ![Review and Create Vault access policy.](media/how-to-v2/ReviewandCreateVaultPolicy.png "Review and Create Vault Access policy.")
 
 ## 1000120
@@ -172,6 +173,20 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | Error code      | Description          | 
 | ------------- |:-------------:| 
 |1000120   | No organization ID tags found on key vault|
+
+- Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments) and click on the **Environment** where your wrap project is.
+   > [!div class="mx-imgBorder"] 
+   > ![Select environment.](media/how-to-v2/SelectEnvironment.png "Select environment.")
+
+
+- Copy the **Organization ID**.
+   > [!div class="mx-imgBorder"] 
+   > ![Copy Organization ID.](media/how-to-v2/CopyOrganizationID.png "Copy Organization ID.")
+
+
+- In your keyvault at [Azure portal](https://portal.azure.com), go to **Tags** and add a new tag named **organization-id**  and add your **Organization ID** from previous step as a value for this tag.
+-  > [!div class="mx-imgBorder"] 
+   > ![Add tag.](media/how-to-v2/AddTag.png "Add tag.")
 
 ## 1000121
 
