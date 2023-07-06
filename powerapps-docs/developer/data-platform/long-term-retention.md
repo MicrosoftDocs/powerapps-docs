@@ -16,7 +16,7 @@ search.audienceType:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-*Long-term retention* (LTR) is a capability that enables customers to transfer their data from a Dataverse transactional database to a managed data lake. To perform LTR operations, you are required to set up retention policies by defining criteria for a given data table. Based on the policy, retention will run at the scheduled time and retain rows matching the critiera.
+*Dataverse long-term retention* (LTR) is a capability that allows customers to securely store their in-active rarely accessed data, in a Dataverse managed data lake. To perform LTR operations, you are required to set up retention policies by defining criteria for a given data table. Based on the policy, retention will run at the scheduled time and retain rows matching the critiera.
 
 More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md), [Enable a table for long term retention](../../maker/data-platform/data-retention-set.md#enable-a-table-for-long-term-retention)
 
@@ -26,6 +26,7 @@ More information: [Dataverse long term data retention overview](../../maker/data
 > - For public preview, only non-production environments are allowed for previewing the long-term data retention feature. Production and Dataverse for Teams environments can't be used with this feature.
 > - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
 > - Pricing information for long term data retention will be available at general availability.
+> - Customers that bring own key(BYOK), note that long term retained data in the Dataverse managed data lake is encrypted with Microsoft managed key only.
   
 ## Retention policy setup and validation
 
