@@ -16,9 +16,7 @@ contributors:
 # Create Azure key valut for wrap for Power Apps
 You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in **Step 2** of wrap wizard. Azure key vault is a cloud service that provides a secure store for secrets. You can securely store keys, passwords, certificates, and other secrets. More information: [Intoduction to Azure key vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview).
 
-You can use an exsiting Azure key vault or create a new one one using the isnructions below.
-
-//on Azure portal at [https://portal.azure.com](https://portal.azure.com).
+You can use an exsiting Azure key vault or create a new one one on Azure portal at [https://portal.azure.com](https://portal.azure.com) using the isnructions below.
   
 **Prerequisites**
   
@@ -29,7 +27,7 @@ You can use an exsiting Azure key vault or create a new one one using the isnruc
    
 Follow these steps to create **Azure key vault** for wrap for Power Apps and configure **KeyVault URI**:
   
-1. Sign in to your tenent as an admin and create a new Azure service principal for 1P AAD application: **4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp)** by running the following script: <br>
+1. Sign in to your tenant as an admin and create a new Azure service principal for 1P AAD application: **4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp)** by running the following script: <br>
 `Connect-AzureAD -TenantId <your tenant ID>` in Power Shell <br>
 `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
   
@@ -93,18 +91,45 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | ------------- |:-------------:| 
 |1000118    | Default subscription not found, or missing access permissions|
 
- - Make sure your key vault is in the Default Subscription for your tenant. 
+ - Make sure your Azure key vault is in the Default Subscription for your tenant. 
 
  - Run these PowerShell commands as an admin: 
 
 `Connect-AzureAD -TenantId <your tenant ID>` in Power Shell <br>
 `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
 
+- In your Default subscription's **Access Control (IAM)** on  Azure portal at [https://portal.azure.com](https://portal.azure.com), add a **Reader** role assignment to the **Service Principal** representing your app, e.g. **Wrap KeyVault Access App**. Make sure it is present in both **Subscription's IAM**, and the **Keyvault's IAM**.
+
+   Go to **Access control (IAM)** tab and select **Add role assignment** option under **Add** menu button.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Add role assignment on Access control tab.](media/how-to-v2/Access_control_tab.png "Add role assignment on Access control tab.")
+
+  Select **Job fucntion roles** tab and make sure **Reader** role is selcetdd. Then click on **Members** tab in the top menu.
+   
+    > [!div class="mx-imgBorder"] 
+   > ![Click on Members tab.](media/how-to-v2/Add_members.png "Click on Members tab.")
+
+   Search for **Wrap KeyVault Access App** on **Members** tab.
+   
+   > [!div class="mx-imgBorder"] 
+   > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Search for Wrap KeyVault Access App.")
+
+   Select **Wrap KeyVault Access App** and click on **Review + assign** button on the bottom of the tab to assign **Reader** role to it.
+  
+   > [!div class="mx-imgBorder"] 
+   > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
+  
+
 ## 1000119
 
 | Error code      | Description          | 
 | ------------- |:-------------:| 
 |1000119    | Keyvault does not exist, OR Keyvault is missing access privileges|
+
+ - Verify that your Azure key vault is in the Default Subscription for your tenant. 
+
+ - Make sure to to select **Vault access policy** option when creating your key vault.
 
 ## 1000120
 
