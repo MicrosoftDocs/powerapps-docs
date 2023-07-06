@@ -200,7 +200,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > ![Import certificate.](media/how-to-v2/ImportCertificate.png "Import certoficate")
    
    > [!div class="mx-imgBorder"] 
-   > ![Create a certificate.](media/how-to-v2/CreateName.png "Create a certificate")
+   > ![Create a certificate.](media/how-to-v2/CertificateName.png "Create a certificate")
 
 
 - Add a new **Tag** for your **Android Cerficicate**.
