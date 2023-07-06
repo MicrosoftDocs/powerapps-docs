@@ -130,6 +130,42 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
  - Verify that your Azure key vault is in the Default Subscription for your tenant. 
 
  - Make sure to to select **Vault access policy** option when creating your key vault.
+   > [!div class="mx-imgBorder"] 
+   > ![Select Vault Access policy.](media/how-to-v2/VaultAccessPolicy.png "Select Vault access policy option.")
+
+ - Run these PowerShell commands as an admin: 
+
+`Connect-AzureAD -TenantId <your tenant ID>` in Power Shell <br>
+`New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
+
+- In your Default subscription's **Access Control (IAM)** on  Azure portal at [https://portal.azure.com](https://portal.azure.com), add a **Reader** role assignment to the **Service Principal** representing your app, e.g. **Wrap KeyVault Access App**. Make sure it is present in both **Subscription's IAM**, and the **Keyvault's IAM**.
+
+   Go to **Access control (IAM)** tab and select **Add role assignment** option under **Add** menu button.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Add role assignment on Access control tab.](media/how-to-v2/Access_control_tab.png "Add role assignment on Access control tab.")
+
+  Select **Job fucntion roles** tab and make sure **Reader** role is selcetdd. Then click on **Members** tab in the top menu.
+   
+    > [!div class="mx-imgBorder"] 
+   > ![Click on Members tab.](media/how-to-v2/Add_members.png "Click on Members tab.")
+
+   Search for **Wrap KeyVault Access App** on **Members** tab.
+   
+   > [!div class="mx-imgBorder"] 
+   > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Search for Wrap KeyVault Access App.")
+
+   Select **Wrap KeyVault Access App** and click on **Review + assign** button on the bottom of the tab to assign **Reader** role to it.
+  
+   > [!div class="mx-imgBorder"] 
+   > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
+
+- Add access policies for your Azure key vault.
+   > [!div class="mx-imgBorder"] 
+   > ![Add Vault Access policies.](media/how-to-v2/CreateVaultAccessPolicy.png "Add Vault access policies.")
+   > 
+     > [!div class="mx-imgBorder"] 
+   > ![Review and Create Vault access policy.](media/how-to-v2/ReviewandCreateVaultPolicy.png "Review and Create Vault Access policy.")
 
 ## 1000120
 
