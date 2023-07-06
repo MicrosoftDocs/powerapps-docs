@@ -16,7 +16,7 @@ contributors:
 # Create Azure key valut for wrap for Power Apps
 You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in **Step 2** of wrap wizard. Azure key vault is a cloud service that provides a secure store for secrets. You can securely store keys, passwords, certificates, and other secrets. More information: [Intoduction to Azure key vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview).
 
-You can use an exsiting Azure key vault or create a new one one on Azure portal at [https://portal.azure.com](https://portal.azure.com) using the isnructions below.
+You can use an exsiting Azure key vault or create a new one one [Azure portal](https://portal.azure.com) using the instructions below.
   
 **Prerequisites**
   
@@ -185,7 +185,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 
 - In your keyvault at [Azure portal](https://portal.azure.com), go to **Tags** and add a new tag named **organization-id**  and add your **Organization ID** from previous step as a value for this tag.
--  > [!div class="mx-imgBorder"] 
+   > [!div class="mx-imgBorder"] 
    > ![Add tag.](media/how-to-v2/AddTag.png "Add tag.")
 
 ## 1000121
