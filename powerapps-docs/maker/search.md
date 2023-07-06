@@ -1,6 +1,6 @@
 ---
 title: Find it with unified search
-description: Use unified search to find what you need.
+description: Use unified search to find apps, flows, templates, and web content.
 author: Mattp123
 ms.subservice: common
 ms.topic: conceptual
@@ -11,6 +11,7 @@ search.audienceType:
 contributors:
   - mattp123
   - v-aangie
+ms.reviewer: angieandrews
 ---
 
 # Find it with unified search
