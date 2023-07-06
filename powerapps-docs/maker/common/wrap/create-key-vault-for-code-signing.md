@@ -197,13 +197,13 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 - Import your **Android Certificate**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Import certificate.](media/how-to-v2/ImportCertificate.png "Import certoficate")
+   > ![Import certificate.](media/how-to-v2/ImportCertificate.png "Import certificate")
    
    > [!div class="mx-imgBorder"] 
-   > ![Create a certificate.](media/how-to-v2/CertificateName.png "Create a certificate")
+   > ![Create an Android certificate.](media/how-to-v2/CertificateName.png "Create an Android certificate")
 
 
-- Add a new **Tag** for your **Android Cerficicate**.
+- Add a new **Tag** for your **Android Certificate**.
  1. The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be  **com.testApp.wrap.keystore**.
  2. The **Tag value** should correspod to the name you chose for your **Certificate** when uploading a certificate file in the previous step. For example, if your **Android cerfificate** is named  **AndroidWrapCertificate**, then the value for the **Tag value** should also be **AndroidWrapCertificate**.
 
@@ -216,6 +216,20 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | Error code      | Description          | 
 | ------------- |:-------------:| 
 |1000122    |  iOS certificate is not valid|
+
+- Import your **iOS Certificate**.
+  > [!div class="mx-imgBorder"] 
+  > ![Import certificate.](media/how-to-v2/ImportCertificate.png "Import certificate")
+
+   > [!div class="mx-imgBorder"] 
+   > ![Create an iOS certificate.](media/how-to-v2/CertificateNameiOS.png "Create an iOS certificate")
+
+- Add a new **Tag** for your **iOS Certificate**.
+-  1. The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be  **com.testApp.wrap.cert**.
+ 2. The **Tag value** should correspod to the name you chose for your **Certificate** when uploading a certificate file in the previous step. For example, if your **iOS Cerfificate** is named  **iOSCertificate1**, then the value for the **Tag value** should also be **iOSCertificate1**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Create a certificate tag for iOS.](media/how-to-v2/CertificateTagiOS.png "Create a certificate tag for iOS")
 
 ## 1000123
 
