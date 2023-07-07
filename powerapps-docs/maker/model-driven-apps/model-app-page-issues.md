@@ -55,7 +55,7 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 * Native player support is available for iOS, Android, and Windows in online-only mode. Offline support currently isn't supported.
 
-* When navigating back to a custom page from another page, the page state isn't restored so the page appears like a new navigation.
+* When navigating back to a custom page from another page, the page state isn't restored so the page appears like a new navigation. State is also not persisted when switching between multi-session tabs in multi-session apps.
 
 * While attempting to sign in, the current behavior caused by a user selecting anywhere away from the sign in box causes the pop out window for sign in to shift behind the app browser.
 
