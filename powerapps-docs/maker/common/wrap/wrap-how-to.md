@@ -59,7 +59,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 
 ## Create native mobile apps for iOS and Android using the wizard
 
-1. Sign in to [Power Apps](https://make.powerapp.com/).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 2. Select **Apps**, from the left navigation pane. 
 
@@ -94,7 +94,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
 3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and click **Next**. 
-If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Set up Azure Key Vault for automated code signing](wrap-how-to.md#set-up-azure-key-vault-for-automated-code-signing).
+If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Create Azure key valut for wrap for Power Apps](create-key-vault-for-code-signing.md).
 
      > [!div class="mx-imgBorder"] 
      > ![Choose the apps which you want to wrap.](media/how-to-v2/select-target-platforms.png "Select target platforms")
