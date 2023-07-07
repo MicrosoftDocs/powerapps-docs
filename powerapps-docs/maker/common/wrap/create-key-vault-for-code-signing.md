@@ -16,7 +16,7 @@ contributors:
 # Create Azure key valut for wrap for Power Apps
 You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in [Step 2](wrap-how-to.md#step-2-target-platform) of the wrap wizard. Azure key vault is a cloud service that provides a secure store for secrets. You can securely store keys, passwords, certificates, and other secrets. For more information, see [Intoduction to Azure key vault](/azure/key-vault/general/overview).
 
-You can use an exsiting Azure key vault or create a new one one [Azure portal](https://portal.azure.com) using the instructions below.
+You can use an exsiting Azure key vault or create a new one one [Azure portal](https://portal.azure.com) by following the instructions in the topic.
   
 ## Prerequisites
   
@@ -52,7 +52,7 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
       > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
 
 
-3. Create or access existing key vault. Please ensure this key vault is located in the default subscription for your tenant. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
+3. Create or access existing key vault. Make sure this key vault is located in the default subscription for your tenant. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
    
 4. Add access policies for the key vault.
   
@@ -72,7 +72,7 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
         > [!NOTE]
         > The .p12 password that you set in step 4 is required when uploading it to the keyvault in the next step.
         
-     2. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run the following command to encode it to base64:
+     2. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run this command to encode it to base64:
         - Mac: base64 `-i example.mobileprovision`
         - Windows:  `certutil -encode data.txt tmp.b64`
      
