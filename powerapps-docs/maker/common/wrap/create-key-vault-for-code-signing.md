@@ -5,7 +5,7 @@ author: makolomi
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 29/06/2023
+ms.date: 7/7/2023
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -14,7 +14,7 @@ contributors:
   - mkaur-msft
 ---
 # Create Azure key valut for wrap for Power Apps
-You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in **Step 2** of wrap wizard. Azure key vault is a cloud service that provides a secure store for secrets. You can securely store keys, passwords, certificates, and other secrets. More information: [Intoduction to Azure key vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview).
+You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in **Step 2** of wrap wizard. Azure key vault is a cloud service that provides a secure store for secrets. You can securely store keys, passwords, certificates, and other secrets. More information: [Intoduction to Azure key vault](/azure/key-vault/general/overview).
 
 You can use an exsiting Azure key vault or create a new one one [Azure portal](https://portal.azure.com) using the instructions below.
   
@@ -40,8 +40,8 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
 
   Select **Job fucntion roles** tab and make sure **Reader** role is selcetdd. Then click on **Members** tab in the top menu.
    
-    > [!div class="mx-imgBorder"] 
-   > ![Click on Members tab.](media/how-to-v2/Add_members.png "Click on Members tab.")
+   > [!div class="mx-imgBorder"] 
+   > ![Select the Members tab.](media/how-to-v2/Add_members.png "Selet the Members tab.")
 
    Search for **Wrap KeyVault Access App** on **Members** tab.
    
@@ -82,10 +82,10 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
   
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
-# Troubleshoot Azure key valut for wrap for Power Apps
+## Troubleshoot Azure key valut for wrap for Power Apps
 The following Azure key vault errors might appear in wrap for Power Apps and can be rectified.
 
-## 1000118
+### Error code 1000118
 
 | Error code      | Description          | 
 | ------------- |:-------------:| 
@@ -121,7 +121,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
   
 
-## 1000119
+### Error code 1000119
 
 | Error code      | Description          | 
 | ------------- |:-------------:| 
@@ -168,7 +168,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > [!div class="mx-imgBorder"] 
    > ![Review and Create Vault access policy.](media/how-to-v2/ReviewandCreateVaultPolicy.png "Review and Create Vault Access policy.")
 
-## 1000120
+### Error code 1000120
 
 | Error code      | Description          | 
 | ------------- |:-------------:| 
@@ -188,7 +188,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > [!div class="mx-imgBorder"] 
    > ![Add tag.](media/how-to-v2/AddTag.png "Add tag.")
 
-## 1000121
+### Error code 1000121
 
 | Error code      | Description          | 
 | ------------- |:-------------:| 
@@ -211,7 +211,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > ![Create a certificate tag.](media/how-to-v2/CertificateTag.png "Create a certificate tag")
   
 
-## 1000122
+### Error code 1000122
 
 | Error code      | Description          | 
 | ------------- |:-------------:| 
@@ -231,7 +231,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > [!div class="mx-imgBorder"] 
    > ![Create a certificate tag for iOS.](media/how-to-v2/CertificateTagiOS.png "Create a certificate tag for iOS")
 
-## 1000123
+### Error code 1000123
 
 | Error code      | Description          | 
 | ------------- |:-------------:| 
@@ -246,7 +246,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > ![Create a tag for iOS Provisioning Profile Secret.](media/how-to-v2/ProvisioningProfileSecretTag.png "Create a tag for iOS Provisioning Profile Secret")
 
 
-## See also
+### See also
 
 - [Wrap overview](overview.md)
 - [Code sign for iOS](code-sign-ios.md)
