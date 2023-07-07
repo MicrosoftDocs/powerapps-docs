@@ -14,7 +14,7 @@ contributors:
   - mkaur-msft
 ---
 # Create Azure key valut for wrap for Power Apps
-You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in [Step 2](wrap-how-to.mdstep-2-target-platform) of wrap wizard. Azure key vault is a cloud service that provides a secure store for secrets. You can securely store keys, passwords, certificates, and other secrets. More information: [Intoduction to Azure key vault](/azure/key-vault/general/overview).
+You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in [Step 2](wrap-how-to.mdstep-2-target-platform) of the wrap wizard. Azure key vault is a cloud service that provides a secure store for secrets. You can securely store keys, passwords, certificates, and other secrets. For more information, see [Intoduction to Azure key vault](/azure/key-vault/general/overview).
 
 You can use an exsiting Azure key vault or create a new one one [Azure portal](https://portal.azure.com) using the instructions below.
   
@@ -24,6 +24,7 @@ You can use an exsiting Azure key vault or create a new one one [Azure portal](h
 - Admin access for your tenant.
 - You need to have a [Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
 - Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
+
    
 Follow these steps to create **Azure key vault** for wrap for Power Apps and configure **KeyVault URI**:
   
@@ -31,24 +32,21 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
 `Connect-AzureAD -TenantId <your tenant ID>` in Power Shell <br>
 `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
   
-2. In your default subscription's **Access Control (IAM)**, add a **Reader** role assignment to the **Service Principal** representing your app, e.g. **Wrap KeyVault Access App**. Make sure it is present in the **Subscription's IAM**, and the **Keyvault's IAM**.
+2. In your default subscription's **Access Control (IAM)**, add a **Reader** role assignment to the **Service Principal** representing your app such as **Wrap KeyVault Access App**. Make sure it's present in the **Subscription's IAM**, and the **Keyvault's IAM**.
 
-    1. Go to **Access control (IAM)** tab and select **Add role assignment** option under **Add** menu button.
-
-       > [!div class="mx-imgBorder"] 
-       > ![Add role assignment on Access control tab.](media/how-to-v2/Access_control_tab.png "Add role assignment on Access control tab.")
-
-   2. Select **Job fucntion roles** tab and make sure **Reader** role is selcetdd. Then click on **Members** tab in the top menu.
+  1. On the left select **Access control (IAM)** tab and then select **Add** > **Add role assignment**.
+  
+  2. Select the **Members** tab and then select **Job fucntion roles**. Make sure the  **Reader** role is selected.
    
       > [!div class="mx-imgBorder"] 
-       ![Select the Members tab.](media/how-to-v2/Add_members.png "Selet the Members tab.")
+      > ![Select the Members tab.](media/how-to-v2/Add_members.png "Select the Members tab.")
 
-   3. Search for **Wrap KeyVault Access App** on **Members** tab.
+   4. Search for **Wrap KeyVault Access App** on **Members** tab.
    
       > [!div class="mx-imgBorder"] 
       > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Search for Wrap KeyVault Access App.")
 
-   4. Select **Wrap KeyVault Access App** and click on **Review + assign** button on the bottom of the tab to assign **Reader** role to it.
+   5. Select **Wrap KeyVault Access App** > **Review + assign** to assign **Reader** role to it.
   
       > [!div class="mx-imgBorder"] 
       > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
@@ -58,14 +56,14 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
    
 4. Add access policies for the key vault.
   
-   :::image type="content" source="media/wrap-canvas-app/wrap-keyvault.gif" alt-text="Add access policies for the key vault.":::
   
 5. Follow one of the these options, depending on your device:
    - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
   
      :::image type="content" source="media/wrap-canvas-app/wrap-1.png" alt-text="Create a cert for Android.":::
+  
      > [!NOTE]
-      > The name of the certificate must be present in the tag step. The password also needs match the password you entered during the store pass parameter used to create the .pfx file in step 2.
+     > The name of the certificate must be present in the tag step. The password also needs match the password you entered during the store pass parameter used to create the .pfx file in step 2.
   
    - For iOS: 
      1. Install the .cer into Keychain Access app by double clicking it. More information: [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate) </br> Then export the file as a .p12 file by right clicking your certificate file and the select **Export** and select the file format .p12. 
