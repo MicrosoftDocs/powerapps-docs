@@ -41,13 +41,13 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
       > [!div class="mx-imgBorder"] 
       > ![Select the Members tab.](media/how-to-v2/Add_members.png "Select the Members tab.")
 
-   4. Search for **Wrap KeyVault Access App** on **Members** tab.
+   4. on **Members** tab, select **Select member** and in the text box on the right enter **Wrap KeyVault Access App**.
    
       > [!div class="mx-imgBorder"] 
       > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Search for Wrap KeyVault Access App.")
 
-   5. Select **Wrap KeyVault Access App** > **Review + assign** to assign **Reader** role to it.
-  
+   5. Select **Wrap KeyVault Access App** and then select **Review + assign** to assign the **Reader** role.
+      
       > [!div class="mx-imgBorder"] 
       > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
 
@@ -57,7 +57,8 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
 4. Add access policies for the key vault.
   
   
-5. Follow one of the these options, depending on your device:
+5.  Depending on your device follow one of the these options:
+   
    - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
   
      :::image type="content" source="media/wrap-canvas-app/wrap-1.png" alt-text="Create a cert for Android.":::
@@ -66,9 +67,11 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
      > The name of the certificate must be present in the tag step. The password also needs match the password you entered during the store pass parameter used to create the .pfx file in step 2.
   
    - For iOS: 
-     1. Install the .cer into Keychain Access app by double clicking it. More information: [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate) </br> Then export the file as a .p12 file by right clicking your certificate file and the select **Export** and select the file format .p12. 
+     1. Install the .cer into Keychain Access app by selecting it. More information: [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate) </br> Then export the file as a .p12 file by right clicking your certificate file and the select **Export** and select the file format .p12. 
+       
         > [!NOTE]
         > The .p12 password that you set in step 4 is required when uploading it to the keyvault in the next step.
+        
      2. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run the following command to encode it to base64:
         - Mac: base64 `-i example.mobileprovision`
         - Windows:  `certutil -encode data.txt tmp.b64`
