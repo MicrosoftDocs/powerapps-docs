@@ -85,7 +85,7 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
 ## Troubleshoot Azure key valut for wrap for Power Apps
 The following Azure key vault errors might appear in wrap for Power Apps and can be rectified.
 
-### Error code 1000118
+#### 1000118
 
 | Error code      | Description          | 
 | ------------- |:-------------:| 
