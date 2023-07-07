@@ -41,7 +41,7 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
       > [!div class="mx-imgBorder"] 
       > ![Select the Members tab.](media/how-to-v2/Add_members.png "Select the Members tab.")
 
-   4. on **Members** tab, select **Select member** and in the text box on the right enter **Wrap KeyVault Access App**.
+   4. On **Members** tab, select **Select member** and in the text box on the right enter **Wrap KeyVault Access App** and search for it.
    
       > [!div class="mx-imgBorder"] 
       > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Search for Wrap KeyVault Access App.")
@@ -67,7 +67,7 @@ Follow these steps to create **Azure key vault** for wrap for Power Apps and con
      > The name of the certificate must be present in the tag step. The password also needs match the password you entered during the store pass parameter used to create the .pfx file in step 2.
   
    - For iOS: 
-     1. Install the .cer into Keychain Access app by selecting it. More information: [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate) </br> Then export the file as a .p12 file by right clicking your certificate file and the select **Export** and select the file format .p12. 
+     1. Install the .cer into Keychain Access app by selecting it. More information: [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate) </br> Then export the file as a .p12 file by right clicking your certificate file and select **Export**, and then select the file format .p12. 
        
         > [!NOTE]
         > The .p12 password that you set in step 4 is required when uploading it to the keyvault in the next step.
