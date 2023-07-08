@@ -263,7 +263,17 @@ If you're an admin, you can avoid users getting this error by making sure all mo
   
 5. Add the components you want on your dashboard and select **Save**.  
   
-6. In the mobile app, follow the previous procedure to select your new dashboard and set it as your home page.    
+6. In the mobile app, follow the previous procedure to select your new dashboard and set it as your home page.
+   
+
+## Network requests fail when Power Apps mobile app is running in the background
+
+When the Power Apps mobile app is running in the background and a canvas or model-driven app makes a network request, a mobile operating system could deprioritize or cancel this network request. This can cause an error message to appear in the mobile app when it returns from the background. 
+
+If you experience a failed network request when the Power Apps mobile app is running in the background, contact your app developer.
+
+## App does not appear in the app list offline 
+New and recently re=published apps might not appear in the offline app list right away. To make your app appear in the app list offline, open the app on your device when it is online and keep it open for 1-2 minutes.
 
 ## Issue still not resolved?  
 If the information provided previously doesn’t resolve your issue, either [Post your issue in the Power App Community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1) or [Contact Technical Support](https://powerapps.microsoft.com/support/).
@@ -282,11 +292,6 @@ If the information provided previously doesn’t resolve your issue, either [Pos
 
 - What type of device are you using, such as iPad 4th Generation, Microsoft Surface. What is the version of the operating system, such as iOS 10.0 or Windows 10.
 
-## Network requests fail when Power Apps mobile app is running in the background
-
-When the Power Apps mobile app is running in the background and a canvas or model-driven app makes a network request, a mobile operating system could deprioritize or cancel this network request. This can cause an error message to appear in the mobile app when it returns from the background. 
-
-If you experience a failed network request when the Power Apps mobile app is running in the background, contact your app developer.
 
 ### See also
 [Setup overview for mobile apps](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets)
