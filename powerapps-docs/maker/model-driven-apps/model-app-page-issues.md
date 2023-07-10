@@ -2,7 +2,7 @@
 title: "Known issues with custom pages in a model-driven app"
 description: "Find the known issue that might occur when you create a custom page" 
 ms.custom: ""
-ms.date: 05/26/2022
+ms.date: 07/10/2023
 ms.reviewer: ""
 ms.subservice: mda-maker
 ms.topic: "article"
@@ -55,7 +55,7 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
 * Native player support is available for iOS, Android, and Windows in online-only mode. Offline support currently isn't supported.
 
-* When navigating back to a custom page from another page, the page state isn't restored so the page appears like a new navigation. State is also not persisted when switching between multi-session tabs in multi-session apps.
+* When navigating back to a custom page from another page, the page state isn't restored so the page appears like a new navigation. State is also not persisted when switching between multi-session tabs in multi-session apps. For more information about multi-session support with model-driven apps, go to [Customer Service workspace sessions and tabs](/dynamics365/customer-service/csw-overview?tabs=customerserviceadmincenter).
 
 * While attempting to sign in, the current behavior caused by a user selecting anywhere away from the sign in box causes the pop out window for sign in to shift behind the app browser.
 
