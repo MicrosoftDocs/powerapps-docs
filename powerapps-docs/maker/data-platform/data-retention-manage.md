@@ -46,9 +46,9 @@ Use the retention policies dashboard to view and manage retention policies. From
 |Succeeded     |  Retention process completed successfully.       |
 |Failed     |  The retention process failed.     |
 
-### Bulk Delete long term retained data
-Dataverse Bulk Delete API's support deletion of long term retained data. [Learn more](https://learn.microsoft.com/power-apps/developer/data-platform/delete-data-bulk#:~:text=Bulk%20delete%20is%20also%20available,DataSource%20field%20to%20%22retained%22). 
+### Bulk delete long term retained data
 
+Dataverse bulk delete with the Dataverse SDK supports deletion of long term retained data. [More information](/power-apps/developer/data-platform/delete-data-bulk#:~:text=Bulk%20delete%20is%20also%20available,DataSource%20field%20to%20%22retained%22). 
 
 ## See also
 
