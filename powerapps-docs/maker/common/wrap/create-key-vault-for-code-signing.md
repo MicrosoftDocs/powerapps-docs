@@ -1,6 +1,6 @@
 ---
 title: Create key vault for code signing
-description:  Learn how to create Azure key valut for automated code signing of native mobile apps in wrap wizard.
+description:  Learn how to create Azure key vault for automated code signing of native mobile apps in wrap wizard.
 author: makolomi
 ms.topic: article
 ms.custom: canvas
@@ -13,12 +13,12 @@ search.audienceType:
 contributors:
   - mkaur-msft
 ---
-# Create Azure key valut for wrap in Power Apps
+# Create Azure key vault for wrap in Power Apps
 
-In order to automatically sign your Android or iOS mobile app package during  [Step 2](wrap-how-to.md#step-2-target-platform) of the wrap wizard, it is necessary to have Azure Key Vault configured. Azure Key Vault is a cloud-based service designed to provide a secure storage solution for secrets, which can include certificates, passwords, keys, and other sensitive information. To learn more about Azure Key Vault, see [Introduction to Azure key vault](/azure/key-vault/general/overview).
+In order to automatically, sign your Android or iOS mobile app package during  [Step 2](wrap-how-to.md#step-2-target-platform) of the wrap wizard, it's necessary to have Azure Key Vault configured. Azure Key Vault is a cloud-based service designed to provide a secure storage solution for secrets, which can include certificates, passwords, keys, and other sensitive information. To learn more about Azure Key Vault, see [Introduction to Azure key vault](/azure/key-vault/general/overview).
 
 
-In this article, you'll learn how to use an exsiting Azure key vault or create a new [Azure portal](https://portal.azure.com) 
+In this article, you will learn how to use an existing Azure key vault or create a new [Azure portal](https://portal.azure.com).
 
 ## Prerequisites
   
@@ -40,7 +40,7 @@ In this article, you'll learn how to use an exsiting Azure key vault or create a
 
    1. On the left select **Access control (IAM)** tab and then select **Add** > **Add role assignment**.
   
-   2. Select the **Members** tab and then select **Job fucntion roles**. Make sure the  **Reader** role is selected.
+   2. Select the **Members** tab and then select **Job function roles**. Make sure the  **Reader** role is selected.
    
        > [!div class="mx-imgBorder"] 
        > ![Select the Members tab.](media/how-to-v2/Add_members.png "Select the Members tab.")
@@ -87,7 +87,7 @@ In this article, you'll learn how to use an exsiting Azure key vault or create a
   
           :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
 
-6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
+6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle ID, and the value corresponding to the name of the uploaded certificate(s).
   
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
