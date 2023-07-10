@@ -13,11 +13,13 @@ search.audienceType:
 contributors:
   - mkaur-msft
 ---
-# Create Azure key valut for wrap for Power Apps
-You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in [Step 2](wrap-how-to.md#step-2-target-platform) of the wrap wizard. Azure key vault is a cloud service that provides a secure store for secrets. You can securely store keys, passwords, certificates, and other secrets. For more information, see [Intoduction to Azure key vault](/azure/key-vault/general/overview).
+# Create Azure key valut for wrap in Power Apps
 
-You can use an exsiting Azure key vault or create a new one one [Azure portal](https://portal.azure.com) by following the instructions in the topic.
-  
+In order to automatically sign your Android or iOS mobile app package during  [Step 2](wrap-how-to.md#step-2-target-platform) of the wrap wizard, it is necessary to have Azure Key Vault configured. Azure Key Vault is a cloud-based service designed to provide a secure storage solution for secrets, which can include certificates, passwords, keys, and other sensitive information. To learn more about Azure Key Vault, see [Introduction to Azure key vault](/azure/key-vault/general/overview).
+
+
+In this article, you'll learn how to use an exsiting Azure key vault or create a new [Azure portal](https://portal.azure.com) 
+
 ## Prerequisites
   
 - Azure Active Directory subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
@@ -26,57 +28,62 @@ You can use an exsiting Azure key vault or create a new one one [Azure portal](h
 - Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
 
    
-Follow these steps to create **Azure key vault** for wrap for Power Apps and configure **KeyVault URI**:
-  
-1. Sign in to your tenant as an admin and create a new Azure service principal for 1P AAD application: **4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp)** by running the following script: <br>
-`Connect-AzureAD -TenantId <your tenant ID>` in Power Shell <br>
-`New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
-  
-2. In your default subscription's **Access Control (IAM)**, add a **Reader** role assignment to the **Service Principal** representing your app such as **Wrap KeyVault Access App**. Make sure it's present in the **Subscription's IAM**, and the **Keyvault's IAM**.
+## Create Azure key vault and configure KeyVault URI
 
-  1. On the left select **Access control (IAM)** tab and then select **Add** > **Add role assignment**.
+1. To create a new Azure service principal for the 1P AAD application **4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp)**, sign in to your tenant as an admin. Then, run the following script in PowerShell:
+
+    `Connect-AzureAD -TenantId <your tenant ID>`<br>
+   `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
+
+
+2. Follow these steps to ensure that the Service Principal representing your app, such as Wrap KeyVault Access App, has the necessary access permissions, add a **Reader** role assignment to it in the **Access Control (IAM)** of your default subscription. This should also be present in the IAM of both the subscription and the Keyvault.
+
+   1. On the left select **Access control (IAM)** tab and then select **Add** > **Add role assignment**.
   
-  2. Select the **Members** tab and then select **Job fucntion roles**. Make sure the  **Reader** role is selected.
+   2. Select the **Members** tab and then select **Job fucntion roles**. Make sure the  **Reader** role is selected.
    
-      > [!div class="mx-imgBorder"] 
-      > ![Select the Members tab.](media/how-to-v2/Add_members.png "Select the Members tab.")
+       > [!div class="mx-imgBorder"] 
+       > ![Select the Members tab.](media/how-to-v2/Add_members.png "Select the Members tab.")
 
    4. On **Members** tab, select **Select member** and in the text box on the right enter **Wrap KeyVault Access App** and search for it.
    
-      > [!div class="mx-imgBorder"] 
-      > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Search for Wrap KeyVault Access App.")
+       > [!div class="mx-imgBorder"] 
+       > ![Search for Wrap KeyVault Access App.](media/how-to-v2/Add_role_assignment.png "Search for Wrap KeyVault Access App.")
 
    5. Select **Wrap KeyVault Access App** and then select **Review + assign** to assign the **Reader** role.
       
-      > [!div class="mx-imgBorder"] 
-      > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
+       > [!div class="mx-imgBorder"] 
+       > ![Assign Reader role to Wrap KeyVault Access App.](media/how-to-v2/Add_role_for_wrap_signing.png "Assign Reader role to Wrap KeyVault Access App.")
 
 
 3. Create or access existing key vault. Make sure this key vault is located in the default subscription for your tenant. More information: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
    
 4. Add access policies for the key vault.
   
-  
-5.  Depending on your device follow one of the these options:
+5. Choose one of the following options based on your device:
    
-     - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
+     - **Android**
+
+       Generate the .pfx file and then proceed to upload it to the certificate section of the keyvault. More information: [Generate keys](code-sign-android.md#generate-keys) 
   
        :::image type="content" source="media/wrap-canvas-app/wrap-1.png" alt-text="Create a cert for Android.":::
   
-       > [!NOTE]
-       > The name of the certificate must be present in the tag step. The password also needs match the password you entered during the store pass parameter used to create the .pfx file in step 2.
-  
-     - For iOS: 
-       1. Install the .cer into Keychain Access app by selecting it. More information: [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate) </br> Then export the file as a .p12 file by right clicking your certificate file and select **Export**, and then select the file format .p12. 
-       
         > [!NOTE]
-        > The .p12 password that you set in step 4 is required when uploading it to the keyvault in the next step.
+        > Ensure that the certificate name is included in the tag step and that the password matches the one entered for the store pass parameter used in creating the .pfx file during step 2.
+  
+     - **iOS** 
+       1. Select the .cer into Keychain Access app to install it. For more information, see [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate).
+       2. Right-click your certificate file to export the file as a .p12 file, select **Export**, and then select the file format .p12. 
+       
+         > [!NOTE]
+         > When you upload to the keyvault, you'll need to provide the password that you set in previous step for the .p12 file.
         
-       2. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run this command to encode it to base64:
+       3. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run this command to encode it to base64:
           - Mac: base64 `-i example.mobileprovision`
           - Windows:  `certutil -encode data.txt tmp.b64`
      
-       3. Get the outputted `base64` string from previous step and upload to Keyvault secret. Then, get the .p12 file and upload it to Keyvault Certificate.
+       4.Upload the `base64` string obtained from the previous step to the Keyvault secret. Next, upload the .p12 file to Keyvault Certificate.
+    
   
           :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
 
