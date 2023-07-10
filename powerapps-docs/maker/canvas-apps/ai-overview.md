@@ -58,11 +58,11 @@ The following are requirements to access the waitlist for this preview:
 
     3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
 
-## Disable Copilot
+## Disable Copilot in Power Apps
 
-For this preview, Copilot will be turn on by default. To disable it, you need to have administrator access.
+For this preview, Copilot in Power Apps will be turn on by default. To disable it, you need to have administrator access.
 
-Follow these steps to disable **Copilot** for your tenant.
+Follow these steps to disable **Copilot** in Power Apps for your tenant.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. Select **Settings** > **Tenant settings** in the left-side navigation pane.
