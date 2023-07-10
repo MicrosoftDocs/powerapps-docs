@@ -82,7 +82,7 @@ In this article, you will learn how to use an existing Azure key vault or create
           - Mac: base64 `-i example.mobileprovision`
           - Windows:  `certutil -encode data.txt tmp.b64`
      
-       4.Upload the `base64` string obtained from the previous step to the Keyvault secret. Next, upload the .p12 file to Keyvault Certificate.
+       4. Upload the `base64` string obtained from the previous step to the Keyvault secret. Next, upload the .p12 file to Keyvault Certificate.
     
   
           :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
