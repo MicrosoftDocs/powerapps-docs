@@ -2545,12 +2545,12 @@
       href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
     - name: Use dashboards
       href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
-- name: Responsible AI transparency notes 
+- name: Responsible AI
   items:
   - name: Overview
-    href: ./common/transparency-note.md
-  - name: Transparency note for building apps through conversation
-    href: ./common/transparency-note-build-apps-conversation.md     
+    href: ./common/responsible-ai-overview.md
+  - name: FAQ for building apps through conversation
+    href: ./common/faqs-build-apps-conversation.md     
 - name: Resources
   items:
   - name: Blog
