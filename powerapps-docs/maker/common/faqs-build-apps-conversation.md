@@ -12,7 +12,7 @@ ms.reviewer: mduelae
 
 # FAQ for building apps through conversation
 
-This article describes the AI impact of build apps through conversation feature.
+These frequently asked questions (FAQ) describe the AI impact of build apps through conversation feature.
 
 ## What is build apps through conversation? 
 
