@@ -1,18 +1,18 @@
 ---
-title: Transparency note for building apps through conversation
-description: The transparency note discusses building apps through conversation and the key considerations for making use of this technology responsibly.
+title: FAQ for building apps through conversation
+description: FAQ that discusses building apps through conversation and the key considerations for making use of this technology responsibly.
 ms.date: 6/16/2023
 ms.custom: 
-  - transparency-note
+  - responsible-ai-faqs
 ms.topic: article
 author: franklanmsft
 ms.author: franklan
 ms.reviewer: mduelae
 ---
 
-# Transparency note for building apps through conversation
+# FAQ for building apps through conversation
 
-This transparency note describes the AI impact of build apps through conversation feature.
+This article describes the AI impact of build apps through conversation feature.
 
 ## What is build apps through conversation? 
 
