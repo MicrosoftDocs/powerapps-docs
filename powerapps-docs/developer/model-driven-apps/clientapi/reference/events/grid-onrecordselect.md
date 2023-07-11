@@ -15,15 +15,17 @@ contributors:
 ---
 # Grid OnRecordSelect event (Client API reference)
 
-The `OnRecordSelect` event occurs when a single row (record) is selected in the editable grid. This event won't occur if a user selects different cells in the same row, or selects multiple rows.
+The `OnRecordSelect` event occurs when a single row (record) is selected in the editable grid. This event doesn't occur if a user selects different cells in the same row, or selects multiple rows.
 
 ## Example: Override the default open behavior in model-driven grids
 
-There might be situations where you don't want the table record to open (which is the default behavior), but want a custom action to be performed such as opening a URL using JavaScript functions. Here is an example to achieve this using the [Power Apps grid control](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md) and the `OnRecordSelect` event. The following function will ensure that the record opens using the form specified `pageInput` `formId` value.
+When you want to customize the way that a table record opens from the [Power Apps grid control](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md), you can control how this opens with a JavaScript function associated with the grid `OnRecordSelect` event.
+
+The following example ensures that the record opens using the form specified `pageInput` `formId` value using the [Xrm.Navigation.navigateTo](../Xrm-Navigation/navigateTo.md) method.
 
 ### Step 1: Create a web resource
 
-Create, save and publish a JavaScript (JS) web resource that contains the following code:
+Create, save, and publish a JavaScript (JS) web resource that contains the following code:
 
 ```JavaScript
 var Example = window.Example || {};
@@ -51,10 +53,10 @@ Follow these steps to enable the **Power Apps Grid Control** as the main grid (t
 
 ### Step 3: Register the custom behavior on OnRecordSelect Event
 
-When enabling the **Power Apps Grid Control**, an **Events** tab appears. Select the **Events** tab:
+When you enable the **Power Apps Grid Control**, an **Events** tab appears. Select the **Events** tab:
 
-1. Under the **Form Libraries** section, add the Form Library from the web resource just created.
-1. Under the **Event Handlers** section, select the event **OnRecordSelect** and click Add, a popup will appear.
+1. Under the **Form Libraries** section, add the Form Library from the web resource created.
+1. Under the **Event Handlers** section, select the event **OnRecordSelect** and select **Add** and a popup appears.
 1. In the popup, select the form library just added and the function name `Example.OnSelect`. This is the name of the JavaScript function created in the web resource. Make sure to check the option **Pass execution context as first parameter**.
 
 More information: [Power Apps grid control](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md)
