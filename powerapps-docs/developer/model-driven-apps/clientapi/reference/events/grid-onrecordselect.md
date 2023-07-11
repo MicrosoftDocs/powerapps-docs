@@ -21,7 +21,7 @@ The `OnRecordSelect` event occurs when a single row (record) is selected in an e
 
 When you want to customize the way that a table record opens from the [Power Apps grid control](../../../../../maker/model-driven-apps/the-power-apps-grid-control.md), you can control how this opens with a JavaScript function associated with the grid `OnRecordSelect` event.
 
-The following example ensures that the record opens using the form specified `pageInput` `formId` value using the [Xrm.Navigation.navigateTo](../Xrm-Navigation/navigateTo.md) method. Note that in this example the form and grid must belong to the same entity.  
+The following example ensures that the record opens using the form specified by the `pageInput` `formId` value using the [Xrm.Navigation.navigateTo](../Xrm-Navigation/navigateTo.md) method. In this example, the form and grid must belong to the same entity.
 
 ### Step 1: Create a web resource
 
