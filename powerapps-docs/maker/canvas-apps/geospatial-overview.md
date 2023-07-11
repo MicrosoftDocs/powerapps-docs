@@ -35,7 +35,7 @@ Before you can use geospatial features in your apps, your Power Platform adminis
 2. Make sure the geospatial controls aren't blocked by the environment's data loss prevention policies.
 
   >[!IMPORTANT]
-  > Geospatial controls are not available in [Power Apps US Government](power-platform/admin/powerapps-us-government).
+  > Geospatial controls are not available in [Power Apps US Government](/power-platform/admin/powerapps-us-government).
 
 ### Enable geospatial features for the environment
 
