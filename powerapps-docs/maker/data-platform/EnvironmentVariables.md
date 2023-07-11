@@ -126,18 +126,13 @@ Ensure environment variable names are unique so they can be referenced accuratel
 The names **$authentication** and **$connection** are specially reserved parameters for flows and should be avoided. Flow save will be blocked if environment variables with those names are used.
 If an environment variable is used in a flow and the display name of the environment variable is changed, then the designer will show both the old and new display name tokens to help with identification. When updating the flow, it's recommended to remove the environment variable reference and add it again.
 
-## Use Azure Key Vault secrets (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+## Use Azure Key Vault secrets
 
 Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use within Power Automate flows and custom connectors. Notice that the secrets aren't available for use in other customizations or generally via the API.
 
 The actual secrets are stored in Azure Key Vault and the environment variable references the key vault secret location. Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference.
 
 Environment variables referencing secrets aren't currently available from the dynamic content selector for use in flows.
-
-> [!IMPORTANT]
-> This is a preview feature. More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
 
 ### Configure Azure Key Vault
 
@@ -276,7 +271,7 @@ No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use 
 
 ### Is there a limit to the number of environment variables I can have?
 
-No. However, the max size of a solution is 32 MB. See [Create a solution](/power-apps/maker/data-platform/create-solution)
+No. However, the max size of a solution is 120 MB. See [Create a solution](/power-apps/maker/data-platform/create-solution)
 
 ### Can environment variable display names and descriptions be localized?
 
