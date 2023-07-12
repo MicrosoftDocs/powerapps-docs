@@ -1266,6 +1266,8 @@
         href: ./common/wrap/code-sign-ios.md
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
+      - name: Create Azure key vault for wrap 
+        href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
       - name: Frequently asked questions
@@ -2543,12 +2545,12 @@
       href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
     - name: Use dashboards
       href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
-- name: Responsible AI transparency notes 
+- name: Responsible AI
   items:
   - name: Overview
-    href: ./common/transparency-note.md
-  - name: Transparency note for building apps through conversation
-    href: ./common/transparency-note-build-apps-conversation.md     
+    href: ./common/responsible-ai-overview.md
+  - name: FAQ for building apps through conversation
+    href: ./common/faqs-build-apps-conversation.md     
 - name: Resources
   items:
   - name: Blog
