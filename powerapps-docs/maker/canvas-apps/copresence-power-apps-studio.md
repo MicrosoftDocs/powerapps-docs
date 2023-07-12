@@ -48,11 +48,11 @@ You may be working on the app, or you may be idle, but once someone else saves a
 > - This is an experimental feature.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-Coauthoring is a new experimental feature that works similarly to copresence. The user who initiates the app has the editing privileges. When another user attempts to open the app, a notification is displayed, informing them that someone else is currently editing the app and they're limited to read-only access. In read-only mode, users have the option to download a copy of the app. The benefit of coauthoring is that you can see in real-time the changes that are being made by the maker editing the app without the need to refresh the app.
+Coauthoring is a new experimental feature that works similarly to copresence. The user who opens the app first has the editing privileges. When another user attempts to open the app, a notification is displayed, informing them that someone else is currently editing the app and they're limited to read-only access. The benefit of coauthoring is that you can see in real-time the changes that are being made by the maker editing the app without the need to refresh the app.
 
 ### Enable coauthoring
 
-To use coauthoring, it must be tuned on for each individual app. Once coauthoring is enabled, it takes precedence over copresence.
+To use coauthoring, it must be turned on for each individual app. Once coauthoring is enabled, it takes precedence over the copresence feature.
 
 1. To enable coauthoring, open your app for editing in Power Apps Studio.
 2. Go to **Settings** > **Upcoming features** > **Experimental**.
@@ -65,8 +65,8 @@ The maker editing the app and those accessing it in read-only mode are unable to
 
 - Undo or redo changes
 - Switch authoring version
-- Open a new app from data or app from template
-- Use **Save as** option
+- Open a new app from data, app from template, new app from blank, and edit app
+- Use **Save as** option or save the app locally
 - [Monitor tool](../monitor-overview.md)
 - Search pane
 - Makers accessing the app in read-only mode can't make any changes
