@@ -16,5 +16,5 @@ ms.reviewer: mduelae
 
 [!INCLUDE[responsible-ai-features](../../includes/responsible-ai-features.md)]
 
-- [FAQs for building apps through conversation](faqs-build-apps-conversation.md)
+- [FAQ for building apps through conversation](faqs-build-apps-conversation.md)
 - [Build apps through conversation (preview)](../canvas-apps/ai-conversations-create-app.md)
