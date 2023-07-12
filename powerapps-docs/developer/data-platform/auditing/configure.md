@@ -423,7 +423,7 @@ To change which tables and columns support auditing, update their `IsAuditEnable
 
 |API|Property|More information|
 |---------|---------|---------|
-|Web API|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled.Value`|[Update a column](../webapi/create-update-entity-definitions-using-web-api.md#update-a-column)|
+|Web API|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled.Value`|[Update a column](../webapi/create-update-column-definitions-using-web-api.md#update-a-column)|
 |SDK for .NET|[AttributeMetadata.IsAuditEnabled](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled).`Value`|[Update a column](../org-service/metadata-attributemetadata.md#update-a-column)|
 
 > [!IMPORTANT]

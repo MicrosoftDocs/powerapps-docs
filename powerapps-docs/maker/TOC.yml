@@ -75,6 +75,8 @@
         href: ../user/screen-reader.md
       - name: Keyboard shortcuts
         href: ../user/keyboard-shortcuts.md
+      - name: About dialog
+        href: ../user/about-dialog.md
     - name: Work with rows 
       items:
       - name: Create a row
@@ -104,7 +106,9 @@
       - name: Use timeline
         href: ../user/add-activities.md
       - name: Create and join a Teams meeting from an appointment
-        href: ../user/join-teams-meeting-from-appointments.md  
+        href: ../user/join-teams-meeting-from-appointments.md 
+      - name: Known issues about activities
+        href: ../user/known-issues-activities.md
     - name: Work with email
       items:
       - name: Understand the email experience
@@ -382,6 +386,8 @@
             href: ./canvas-apps/power-apps-studio.md
           - name: Add comments
             href: ./canvas-apps/comments.md
+          - name: Understand copresence
+            href: ./canvas-apps/copresence-power-apps-studio.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
           - name: Add and configure a screen
@@ -546,7 +552,7 @@
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
               href: ./canvas-apps/controls/control-audio-video.md
-            - name: Barcode reader (experimental)
+            - name: Barcode reader
               href: ./canvas-apps/controls/control-barcodereader.md
             - name: Barcode scanner
               href: ./canvas-apps/controls/control-new-barcode-scanner.md
@@ -1260,6 +1266,8 @@
         href: ./common/wrap/code-sign-ios.md
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
+      - name: Create Azure key vault for wrap 
+        href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
       - name: Frequently asked questions
@@ -1288,6 +1296,8 @@
           href: ./canvas-apps/component-multimedia.md
         - name: Behavior formulas (experimental)
           href: ./canvas-apps/component-behavior.md
+        - name: Canvas component properties (experimental)
+          href: ./canvas-apps/component-properties.md
   - name: Performance and optimization
     items:
     - name: Understand canvas app execution phases and data flow
@@ -1318,6 +1328,12 @@
       href: ./model-driven-apps/build-app-three-steps.md            
     - name: Explore sample apps
       href: ./model-driven-apps/overview-model-driven-samples.md
+    - name: Release channels for model-driven apps
+      items:
+      - name: Release channel overview
+        href: ./model-driven-apps/channel-overview.md
+      - name: Change release channels
+        href: ./model-driven-apps/channel-change.md
     - name: Meet the model-driven designers
       href: ./model-driven-apps/model-driven-designers.md      
   - name: Design and build an app
@@ -1624,7 +1640,7 @@
         href: ./model-driven-apps/comments.md 
       - name: Copresence
         href: ./model-driven-apps/copresence.md 
-      - name: Coauthoring (preview)
+      - name: Coauthoring
         href: ./model-driven-apps/coauthoring.md
     - name: Apply business logic in an app
       href: 
@@ -1935,7 +1951,7 @@
       items:
       - name: Virtual table OData v4 data provider
         href: ./data-platform/virtual-entity-odata-provider-requirements.md
-      - name: Create a virtual table using a virtual connector provider (preview)
+      - name: Create a virtual table using a virtual connector provider
         href: ./data-platform/create-virtual-tables-using-connectors.md
       - name: Set up virtual table relationships
         href: ./data-platform/setup-virtual-table-relationships.md
@@ -2248,7 +2264,7 @@
         href: ./data-platform/azure-synapse-link-incremental.md
       - name: Access Dataverse choices with serverless SQL pool
         href: ./data-platform/azure-synapse-link-choices-serverless.md
-      - name: Export data in Delta Lake format (preview) 
+      - name: Export data in Delta Lake format
         href: ./data-platform/azure-synapse-link-delta-lake.md
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
@@ -2419,6 +2435,8 @@
           href: ../cards/make-a-card/ui-elements/use-buttons.md
         - name: Add and configure screens
           href: ../cards/make-a-card/screens/use-screens.md
+        - name: Work with repeating controls in cards
+          href: ../cards/make-a-card/ui-elements/data-binding.md
         - name: Control reference
           items: 
             - name: List of controls and properties
@@ -2485,6 +2503,8 @@
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
+  - name: Solution templates for Power Platform (preview)
+    href: /power-platform/solution-templates/overview
   - name: Crisis Communication
     href: ./canvas-apps/sample-crisis-communication-app.md
   - name: Hospital Emergency Response
@@ -2525,6 +2545,12 @@
       href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
     - name: Use dashboards
       href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
+- name: Responsible AI
+  items:
+  - name: Overview
+    href: ./common/responsible-ai-overview.md
+  - name: FAQ for building apps through conversation
+    href: ./common/faqs-build-apps-conversation.md     
 - name: Resources
   items:
   - name: Blog
@@ -2561,6 +2587,8 @@
     href: ./canvas-apps/studio-versions.md
   - name: Troubleshoot startup issues for Power Apps
     href: /troubleshoot/power-platform/power-apps/troubleshooting-startup-issues
+  - name: Check model-driven app access for a user
+    href: ./model-driven-apps/app-access-checker.md
   - name: Troubleshoot Power Query
     href: /troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues
   - name: Support

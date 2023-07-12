@@ -12,7 +12,7 @@ ms.custom: template-overview
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Microsoft Dataverse supports custom retention policies to securely retain data long term in a cost-efficient way. With retention policies, you can support your business growth with unlimited storage.
+Microsoft Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. While Dataverse can support your business growth with no limit on active data, you might want to consider moving inactive data to the Dataverse long term retention store.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -20,6 +20,9 @@ Microsoft Dataverse supports custom retention policies to securely retain data l
 > - For public preview, only non-production environments are allowed for previewing the long-term data retention feature. Production and Dataverse for Teams environments can't be used with this feature.
 > - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
 > - Pricing information for long term data retention will be available at general availability.
+
+Watch this video to learn about Dataverse long term data retention.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAf]
 
 ## Business application data lifecycle
 
@@ -46,6 +49,7 @@ Application admins set up custom policies for a table with criterion to retain d
 
 > [!IMPORTANT]
 > - Once data is retained in the Dataverse long term (inactive) store it can't be moved back to the Dataverse live (active) data store.
+> - Customers using self-managed encryption key (BYOK) should be aware that long term retained data in the Azure data lake is encrypted with Microsoft managed key. Consider migrating to customer managed key. More information: [Migrate bring-your-own-key environments to customer-managed key](/power-platform/admin/cmk-migrate-from-byok)
 > - When a retention policy is run, the process makes API requests in Microsoft Power Platform. These requests are counted towards the existing API requests available with your plan. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
 
 Dataverse provides read-only access to the retained data via:
