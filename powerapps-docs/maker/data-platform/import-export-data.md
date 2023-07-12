@@ -77,13 +77,13 @@ Data Factory is a data integration service that provides a low-code or no-code a
 
 ![Data Factory.](media/azure-data-factory.png "Data Factory")
 
-Depending on your data needs, at some point you may require more involved data engineering to bring the data from external sources into Dataverse. It is not just about the data volume, but also about the amount and complexity of data transformations required for the source data to meet your data requirements in Dataverse. An additional consideration is the IT resources are available to assist with the effort. These more complex data scenarios can be addressed with [Power Platform Data Flows](https://learn.microsoft.com/en-us/power-query/dataflows/create-use), [Azure Data Factory](https://learn.microsoft.com/en-us/azure/data-factory/connector-dynamics-crm-office-365?tabs=data-factory) (ADF) and [Web API,](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/perform-operations-web-api) as well as other tools as outlined in the outcome matrix. ADF and Web API integration patterns shine at building pipelines that require involved workflow and algorithm rich transformations. Conversely, PPDF is faster to start with and easier to use.
+Depending on your data needs, at some point you may require more involved data engineering to bring the data from external sources into Dataverse. It isn't just about the data volume, but also about the amount and complexity of data transformations required for the source data to meet your data requirements in Dataverse. An additional consideration is the IT resources are available to assist with the effort. These more complex data scenarios can be addressed with [Power Platform dataflows](/power-query/dataflows/create-use), [Azure Data Factory](/azure/data-factory/connector-dynamics-crm-office-365?tabs=data-factory), and [Web API](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/perform-operations-web-api) as well as other tools as outlined in the outcome matrix. <!-- Where's the outcome matrix? -->Data Factory and Web API integration patterns shine at building pipelines that require involved workflow and algorithm rich transformations. Conversely, dataflows are faster to start with and easier to use.
 
 With Data Factory, you can visually integrate Dataverse and other data sources by using more than 90 natively built and maintenance-free connectors.
 
 ![Data Factory ETL.](media/azure-data-factory-etl.png "Data Factory ETL")
 
-In addition to bringing data into Dataverse, Data Factory can also be used to prepare, transform, and enrich data with Databricks and move data into Azure Synapse Analytics.
+In addition to bringing data into Dataverse, Data Factory can also be used to prepare, transform, and enrich data with Azure Databricks and move data into Azure Synapse Analytics.
 
 ## Exporting data from Dataverse
 
@@ -99,4 +99,3 @@ Dynamics customers who are targeting SQL Server or Azure SQL Database can use Az
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-
