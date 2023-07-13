@@ -1,6 +1,6 @@
 ---
-title: Transparency note for continue to edit your app with Copilot 
-description: The transparency note discusses continuing to edit your app with Copilot and the key considerations for making use of this technology responsibly.
+title: FAQ for continue to edit your app with Copilot 
+description: FAQ that discusses continuing to edit your app with Copilot and the key considerations for making use of this technology responsibly.
 ms.date: 6/14/2023
 ms.custom: 
   - transparency-note
@@ -10,7 +10,7 @@ ms.author: norliu
 ms.reviewer: mduelae
 ---
 
-# Transparency note for continue to edit your app with Copilot 
+# FAQ for continue to edit your app with Copilot 
 
 This transparency note describes the AI impact of Power Apps' continue to edit your app with Copilot feature. 
 
