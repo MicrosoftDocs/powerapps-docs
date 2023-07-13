@@ -1,5 +1,5 @@
 
-# Overview
+# View in Microsoft Fabric
 
 Dataverse direct integration with Microsoft Fabric enables organizations to extend their Dynamics 365 enterprise applications and business processes into Fabric. **View in Microsoft Fabric** feature built into PowerApps maker portal makes all your Dynamics 365 data available for analysis in Microsoft Fabric.
 
