@@ -21,7 +21,7 @@ Dataverse integration with Microsoft Fabric is currently in private preview. To 
 
 Low code makers can use PowerApps maker portal to work with their data and build new Apps and automations using PowerApps, Power Automate and other tools already available in the Power platform. 
 
-![View in Microsoft Fabric built into Power Apps Maker portal](media/Fabric/Maker-experience-view-in-Fabric.png)
+![View in Microsoft Fabric built into Power Apps Maker portal](media/Fabric/Maker-portal-view-in-fabric-2.png.png)
 
 Now, makers can choose one or more tables from Dataverse and launch Microsoft Fabric with the “View in Microsoft Fabric” option. First time, System creates a workspace in your Power BI subscription and creates shortcuts in Fabric to Dataverse tables. System also creates a Synapse Lake house and a default data warehouse, enabling makers to explore data with SQL or work with Spark and other Fabric tools.
 
