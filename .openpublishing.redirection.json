@@ -8656,6 +8656,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/maker/common/transparency-note.md",
+      "redirect_url": "/power-apps/maker/common/responsible-ai-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/transparency-note-build-apps-conversation.md",
+      "redirect_url": "/power-apps/maker/common/faqs-build-apps-conversation",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/common/formula-repair.md",
       "redirect_url": "/power-apps/maker/canvas-apps/working-with-formulas",
       "redirect_document_id": false
