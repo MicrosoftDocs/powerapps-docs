@@ -42,9 +42,9 @@ The following is a selected list of community tools distributed via the XrmToolB
 
 ## Browser Extensions
 
-### Chromium Metadata Browser
+### Pascalcase Metadata Browser
 
-Here is another tool, [Chromium Metadata Browser](https://pascalcase.com/Home/Metadata), that lets you browse metadata such as tables, columns, relationships, choices of Dataverse environments. It works with Microsoft Edge and Google Chrome browsers. 
+Here is another tool, [Pascalcase Metadata Browser](https://pascalcase.com/Home/Metadata), that lets you browse metadata such as tables, columns, relationships, choices of Dataverse environments. It works with Microsoft Edge browser. 
 
 ### Level up for Dynamics 365/Power Apps
 

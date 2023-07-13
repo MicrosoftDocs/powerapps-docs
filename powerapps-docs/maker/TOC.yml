@@ -75,6 +75,8 @@
         href: ../user/screen-reader.md
       - name: Keyboard shortcuts
         href: ../user/keyboard-shortcuts.md
+      - name: About dialog
+        href: ../user/about-dialog.md
     - name: Work with rows 
       items:
       - name: Create a row
@@ -1266,6 +1268,8 @@
         href: ./common/wrap/code-sign-ios.md
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
+      - name: Create Azure key vault for wrap 
+        href: ./common/wrap/create-key-vault-for-code-signing.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
       - name: Frequently asked questions
@@ -1326,6 +1330,12 @@
       href: ./model-driven-apps/build-app-three-steps.md            
     - name: Explore sample apps
       href: ./model-driven-apps/overview-model-driven-samples.md
+    - name: Release channels for model-driven apps
+      items:
+      - name: Release channel overview
+        href: ./model-driven-apps/channel-overview.md
+      - name: Change release channels
+        href: ./model-driven-apps/channel-change.md
     - name: Meet the model-driven designers
       href: ./model-driven-apps/model-driven-designers.md      
   - name: Design and build an app

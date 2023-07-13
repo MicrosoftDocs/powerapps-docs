@@ -61,37 +61,31 @@ Dataverse for processing (rather than processing locally within Power Apps).
 
 | **Item**                                                        | **Number [1]** | **Text [2]** | **Choice** | **DateTime [3]** | **Guid** |
 |-----------------------------------------------------------------|----------------|--------------|------------|------------------|----------|
+| \<, \<=, \>, \>=                                                | Yes            | Yes          | No         | Yes              | \-       |
+| =, \<\>                                                         | Yes            | Yes          | Yes        | Yes              | Yes      |
+| And/Or/Not                                                      | Yes            | Yes          | Yes        | Yes              | Yes      |
+| CountRows [4] [5], CountIf [6]                                  | Yes            | Yes          | Yes        | Yes              | Yes      |
 | Filter                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
+| First [7]                                                       | Yes            | Yes          | Yes        | Yes              | Yes      |
+| In (membership) (preview)                                       | Yes            | Yes          | Yes        | Yes              | Yes      |
+| In (substring)                                                  | \-             | Yes          | \-         | \-               | \-       |
+| IsBlank [8]                                                     | Yes            | Yes          | No         | Yes              | Yes      |
+| Lookup                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
+| Search                                                          | No             | Yes          | No         | No               | \-       |
 | Sort                                                            | Yes            | Yes          | Yes        | Yes              | \-       |
 | SortByColumns                                                   | Yes            | Yes          | Yes        | Yes              | \-       |
-| Search                                                          | No             | Yes          | No         | No               | \-       |
-| Lookup                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
-| =, \<\>                                                         | Yes            | Yes          | Yes        | Yes              | Yes      |
-| \<, \<=, \>, \>=                                                | Yes            | Yes          | No         | Yes              | \-       |
-| In (substring)                                                  | \-             | Yes          | \-         | \-               | \-       |
-| In (membership) (preview)                                       | Yes            | Yes          | Yes        | Yes              | Yes      |
-| And/Or/Not                                                      | Yes            | Yes          | Yes        | Yes              | Yes      |
 | StartsWith                                                      | \-             | Yes          | \-         | \-               | \-       |
-| IsBlank                                                         | Yes [4]        | Yes [4]      | No [4]     | Yes [4]          | Yes      |
-| Sum, Min, Max, Avg [5]                                          | Yes            | \-           | \-         | No               | \-       |
-| CountRows [6] [7], CountIf [5]                                  | Yes            | Yes          | Yes        | Yes              | Yes      |
+| Sum, Min, Max, Avg [6]                                          | Yes            | \-           | \-         | No               | \-       |
 
 1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable. Casting to a column to a number isn't supported. 
-
-2.  Doesn't support Trim[Ends] or Len. Does support other functions such as
-    Left, Mid, Right, Upper, Lower, Replace, Substitute, etc. Also, casting such as Text(column) isn't supported for delegation.
-
+2.  Doesn't support Trim[Ends] or Len. Does support other functions such as Left, Mid, Right, Upper, Lower, Replace, Substitute, etc. Also, casting such as Text(column) isn't supported for delegation.
 3.  DateTime is delegable except for DateTime functions Now() and
     Today().
-
-4.  Supports comparisons. For example, `Filter(TableName, MyCol = Blank())`.
-
-5.  The aggregate functions are limited to a collection of 50,000 rows. If
-    needed, use the Filter function to select 50,000 
-
-6.  CountRows on Dataverse uses a cached value. For non-cached values where the record count is expected to be under 50,000 records, use `CountIf(table, True)`.  
-
-7.  For CountRows, ensure that users have appropriate permissions to get totals for the table. 
+4.  CountRows on Dataverse uses a cached value. For non-cached values where the record count is expected to be under 50,000 records, use `CountIf(table, True)`.  
+5.  For CountRows, ensure that users have appropriate permissions to get totals for the table. 
+6.  The aggregate functions are limited to a collection of 50,000 rows. If needed, use the Filter function to select 50,000.  Aggregate functions are not supported on Views.  
+7.  FirstN is not supported.
+8.  Supports comparisons. For example, `Filter(TableName, MyCol = Blank())`.
 
 
 ## Call Dataverse actions directly in Power Fx (preview)
