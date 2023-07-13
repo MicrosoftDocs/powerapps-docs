@@ -37,13 +37,32 @@ The Azure Synapse Link for Dataverse offers these additional features for D365 F
 > [!NOTE]
 >This is a preview feature
 >
-> Enabling F&O tables in Synapse Link is in private preview. If you would like to join private preview, join the preview group by visiting [https://aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics)
+> Export to data lake feature in Dynamics 365 Finance and Operations (F&O) will be combined with Synapse Link for Dataverse in the future. We also plan to retire Export to Data Lake service and transition existing customers to Synapse Link for Dataverse.
+If you are planning to adopt Export to Data Lake feature in F&O the future, you should consider adopting Synapse Link with F&O data support instead. 
+We will provide a path for existing customers to transition to Synapse Link for Dataverse. If you are currently using Export to Data Lake feature in F&O, you can continue to operate both services in parallel until transition. 
+
 
 # Prerequisites
-- Finance and Operations Cloud Hosted Environment (CHE) or Tier 2+ environment with version update 10.0.34 (PU 58) (We Recommend using CHE environment or a Sandbox for validation) 
+- F&O Sandbox (Tier-2) with version update 10.0.34 (PU 58) or later. You can also use F&O Cloud Hosted environment (CHE) for validation. Your CHE needs to be version update 10.0.36 (PU 60) or later  
 - Finance and Operations environment is linked with Power Platform. 
 - Azure Subscription with owner access (you can also add F&O data to an existing storage account configured with Synapse Link)
 o	Storage account 
 o	Synapse Analytics workspace 
 o	Synapse Spark pool with version 3.1 or higher (For Delta Lake conversion)
+
+# Power platform integration
+You can enable the preview with an existing F&O environment if your F&O environment is updated to ver. 10.0.34 (PU58) or later. You can also validate the feature by provisioning a new Tier-1 environment, also known as a **Cloud Hosted Environment (CHE), with version 10.0.34 (PU 60) or later**.
+
+Enabling Power platform integration is mandatory. You can link with Power Platform deploying the new environment. See [Enable the Microsoft Power Platform integration - Finance & Operations \| Dynamics 365 \| Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-power-platform-integration#enable-during-deploy)
+
+You can confirm that the F&O environment is linked with Power platform by visiting Dynamics Life cycle services and reviewing the environment page.
+
+**NOTE:** Dual-Write setup is not required to enable F&O data in Synapse Link
+
+## Add configurations in F&O environment
+
+During preview, you need to enable configuration key **Enable SQL row version change tracking** by turning on maintenance mode. See here for details of [Maintenance mode - Finance & Operations \| Dynamics 365 \| Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode#turn-maintenance-mode-on-and-off-in-devtestdemo-environments-hosted-in-customers-subscription)
+
+
+
 
