@@ -7,7 +7,7 @@ Dataverse direct integration with Microsoft Fabric enables organizations to exte
 -   You can use Dataverse provisioned storage, ie. the data lake build into Dataverse, no need to bring your own storage or Synapse compute
 -   You can integrate existing Synapse Links or new links created with your own Azure storage
 
-With just one click, you’ll get more insights from your business data stored in Dataverse. ![A screenshot of a computer Description automatically generated](media/56e40ffbfe294b0418216d111bb4e558.png)
+With just one click, you’ll get more insights from your business data stored in Dataverse. ![View in Microsoft Fabric](media/Fabric/Azure-Synapse-Link-two-experiences.png)
 
 As data gets updated, changes are reflected in Microsoft Fabric automatically. Dataverse also generates an enterprise-ready Synapse Lakehouse and SQL endpoint for your Dynamics 365 data. This makes it easier for data engineers and DB admins to combine data from multiple sources and build custom analytics with Spark, Python, or SQL.
 
@@ -19,7 +19,9 @@ Dataverse integration with Microsoft Fabric is currently in private preview. To 
 
 # View in Microsoft Fabric in PowerApps maker portal
 
-Low code makers can use PowerApps maker portal to work with their data and build new Apps and automations using PowerApps, Power Automate and other tools already available in the Power platform. ![A screenshot of a computer Description automatically generated](media/d52815e01e49e42594fea32f9991c0fb.png)
+Low code makers can use PowerApps maker portal to work with their data and build new Apps and automations using PowerApps, Power Automate and other tools already available in the Power platform. 
+
+![View in Microsoft Fabric built into Power Apps Maker portal](media/Fabric/Maker-experience-view-in-Fabric.png)
 
 Now, makers can choose one or more tables from Dataverse and launch Microsoft Fabric with the “View in Microsoft Fabric” option. First time, System creates a workspace in your Power BI subscription and creates shortcuts in Fabric to Dataverse tables. System also creates a Synapse Lake house and a default data warehouse, enabling makers to explore data with SQL or work with Spark and other Fabric tools.
 
@@ -33,7 +35,9 @@ Makers can build Apps and automations with enterprise-wide data available in One
 
 Synapse Link feature in Dataverse is used by IT admins to integrate Dynamics and PowerApps data with Azure Synapse. Synapse Link helped with configuring and provisioning Azure resources in the past. IT admins had to work with Synapse query and integrate Power BI for reporting (or Azure data factory to integrate data).
 
-![A screenshot of a computer Description automatically generated](media/755cd92a5f6993d5623cfc69bbec0134.png)Now Synapse Link enables IT admins to direct link to Microsoft Fabric and work with SQL and other workloads without provisioning Synapse and other services.
+![View in Microsoft Fabric in Synapse Link](media/Fabric/Azure-Syunapse-Link-with-View-In-Fabric.png)
+
+Now Synapse Link enables IT admins to direct link to Microsoft Fabric and work with SQL and other workloads without provisioning Synapse and other services.
 
 **NOTES:**
 
@@ -52,7 +56,7 @@ Synapse Link feature in Dataverse is used by IT admins to integrate Dynamics and
 4.  It is highly recommended that you create a new Power BI workspace to direct link to Dataverse. You can use this workspace to validate Synapse Link scenario.
 5.  To confirm that you can create a premium workspace. Choose **workspace settings \> premium** and ensure that you have **Trial** or **Premium capacity** selected.
 
-![A screenshot of a computer Description automatically generated](media/319368344bd004b4df96367184cd8fbc.png)
+![Premium or Trial capacity assigned to a Fabric workspace](media/Fabric/PBI premium capacity selected.png)
 
 1.  Launch Power BI with Microsoft Fabric with the URL to work with Microsoft Fabric
 
