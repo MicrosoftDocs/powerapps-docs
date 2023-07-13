@@ -29,7 +29,7 @@ There are multiple ways to import and export data into Microsoft Dataverse. You 
 
 ## Where to start?
 
-The first consideration is to start with the external data, which already exists outside of Dataverse that is required for building an app, form, or other component. It isn't necessary to persist that data in Dataverse to start using it. Many times, it's best to continue to let the other system manage the data while using the data as needed in Dataverse. The virtual table feature in Dataverse provides this capability. More information: [Create virtual tables using virtual connectors](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-virtual-tables-using-connectors?source=recommendations&tabs=sql).
+The first consideration is to start with the external data, which already exists outside of Dataverse that is required for building an app, form, or other component. It isn't necessary to persist that data in Dataverse to start using it. Many times, it's best to continue to let the other system manage the data while using the data as needed in Dataverse. The virtual table feature in Dataverse provides this capability. More information: [Create virtual tables using virtual connectors](/power-apps/maker/data-platform/create-virtual-tables-using-connectors?source=recommendations&tabs=sql).
 
 <!-- This is just the maker home page and not really relevant for virtual tables or necessary ![Figure 3: Creating a Virtual Table in Microsoft Dataverse](media/dv-home-scr.png) -->
 
@@ -37,7 +37,7 @@ With virtual tables, you can build an app that uses the external data as if it w
 
 ![Graphical user interface, table Description automatically generated](media/extdata-virtual-table.png)
 
-# Import external data to Dataverse
+## Import external data to Dataverse
 
 Your desired outcomes may drive the decision to persist data in Dataverse versus using virtual tables to surface external data in Dataverse. If you want your data to be managed by [security concepts in Dataverse](/power-platform/admin/wp-security-cds) and [application lifecycle management](/power-platform/alm/) features or if you're interested in mashing up external data with native Dataverse data, consider moving data into Dataverse. Additionally, if you’re interested in using Dataverse workflow and business rules, you might consider migrating that data into Dataverse. You should also consider the economic impact of loading data into Dataverse, which may increase storage costs. If the data must continue to be managed by an external system, it can be beneficial to leave it there and interact with it in Dataverse using virtual tables.
 
@@ -77,7 +77,7 @@ Data Factory is a data integration service that provides a low-code or no-code a
 
 ![Data Factory.](media/azure-data-factory.png "Data Factory")
 
-Depending on your data needs, at some point you may require more involved data engineering to bring the data from external sources into Dataverse. It isn't just about the data volume, but also about the amount and complexity of data transformations required for the source data to meet your data requirements in Dataverse. An additional consideration is the IT resources are available to assist with the effort. These more complex data scenarios can be addressed with [Power Platform dataflows](/power-query/dataflows/create-use), [Azure Data Factory](/azure/data-factory/connector-dynamics-crm-office-365?tabs=data-factory), and [Web API](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/perform-operations-web-api) as well as other tools as outlined in the outcome matrix. <!-- Where's the outcome matrix? -->Data Factory and Web API integration patterns shine at building pipelines that require involved workflow and algorithm rich transformations. Conversely, dataflows are faster to start with and easier to use.
+Depending on your data needs, at some point you may require more involved data engineering to bring the data from external sources into Dataverse. It isn't just about the data volume, but also about the amount and complexity of data transformations required for the source data to meet your data requirements in Dataverse. An additional consideration is the IT resources are available to assist with the effort. These more complex data scenarios can be addressed with [Power Platform dataflows](/power-query/dataflows/create-use), [Azure Data Factory](/azure/data-factory/connector-dynamics-crm-office-365?tabs=data-factory), and [Web API](/power-apps/developer/data-platform/webapi/perform-operations-web-api) as well as other tools as outlined in the outcome matrix. <!-- Where's the outcome matrix? -->Data Factory and Web API integration patterns shine at building pipelines that require involved workflow and algorithm rich transformations. Conversely, dataflows are faster to start with and easier to use.
 
 With Data Factory, you can visually integrate Dataverse and other data sources by using more than 90 natively built and maintenance-free connectors.
 
