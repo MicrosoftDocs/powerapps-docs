@@ -1,12 +1,12 @@
 ---
-title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Dependent Assembly plug-ins (preview)" 
+description: "Learn how to include additional assemblies that your plug-in assembly can depend on."
 ms.date: 07/14/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: divkamath # GitHub ID
+author: divkamath
 ms.subservice: dataverse-developer
-ms.author: dikamath # MSFT alias of Microsoft employees only
+ms.author: dikamath
 search.audienceType: 
   - developer
 contributors:

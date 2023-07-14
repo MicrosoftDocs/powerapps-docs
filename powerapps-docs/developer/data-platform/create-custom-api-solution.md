@@ -1,16 +1,19 @@
 ---
-title: "Create a Custom API with solution files
+title: "Create a Custom API with solution files"
 description: "You can write create custom APis by editing solution files." 
 ms.date: 07/14/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
 ms.subservice: dataverse-developer
-ms.author: jdaly
+ms.author: dikamath
 search.audienceType: 
   - developer
+contributors:
+  - PHecke
+  - JimDaly
 ---
-# Create a Custom API with solution files 
+# Create a Custom API with solution files
 
 > [!NOTE]
 > This is an advanced topic that assumes you have already read and understood these topics:
@@ -123,7 +126,7 @@ OR
 > [!NOTE]
 > Either value will work, but we recommend you use the `plugintypeexportkey`.
 
-You can retrieve the **Plug-in Type Export Key** and **Plug-in Type Id** values using a Web API query like this where you know the name of the plug-in type:
+You can retrieve the [PluginTypeExportKey](reference/entities/plugintype.md#BKMK_PluginTypeExportKey) and [PluginTypeId](reference/entities/plugintype.md#BKMK_PluginTypeId) values using a Web API query like this where you know the name of the plug-in type:
 
 ```http
 GET [Organization Uri]/api/data/v9.2/plugintypes?$select=name,plugintypeid,plugintypeexportkey&$filter=contains(name,'MyPlugin.TypeName')
