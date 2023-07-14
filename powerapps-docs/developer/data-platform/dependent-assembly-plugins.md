@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/20/2023
+ms.date: 07/14/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath # GitHub ID
@@ -315,6 +315,16 @@ Currently, `System.Text.Json` is the only dependency in the Microsoft.CrmSdk.Cor
 ## Known issues
 
 The following are known issues that should be resolved before dependent assemblies for plug-ins becomes generally available.
+
+### Custom API export key changes
+
+When importing a solution that contains a Custom API that uses a plug-in package, you may encounter the following error:
+
+`Lookup value <plugintypeexportkey>{guid value}</plugintypeexportkey> is not resolvable.`
+
+This error will occur only for solutions that were exported/generated before May 2023. The exact date will vary by region. The fix to this issue was deployed to North America region on May 26, 2023.
+
+To resolve this issue you need to update the plug-in package, export/generate the solution and re-install it.
 
 ### Plug-in profiler
 

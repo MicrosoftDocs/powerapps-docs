@@ -1,13 +1,12 @@
 ---
-title: "Create a Custom API with solution files (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "You can write create custom APis by editing solution files." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 04/29/2022
-ms.reviewer: "jdaly"
-ms.topic: "article"
-author: "divkamath" # GitHub ID
+title: "Create a Custom API with solution files
+description: "You can write create custom APis by editing solution files." 
+ms.date: 07/14/2023
+ms.reviewer: jdaly
+ms.topic: article
+author: divkamath
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: jdaly
 search.audienceType: 
   - developer
 ---
@@ -102,21 +101,33 @@ Within the folder, the data representing the Custom API is found within an XML f
     ```
 
   See the information in [Custom API table columns](custom-api-tables.md#custom-api-table-columns) to set the values of the elements.
-      
-  > [!NOTE]
-  > If you already have a Plug-in Type that you want to associate with this Custom API, you can include a reference to it in this definition by adding the following element within the  `<customapi>` element:
-  >
-  >  ```xml
-  >    <plugintypeid>
-  >      <plugintypeid>{Add the GUID value of the plug-in type id}</plugintypeid>
-  >    </plugintypeid>
-  >  ```
-  >
-  >  You can retrieve the Plug-in Type Id using a Web API query like this where you know the name of the plug-in type:
-  >
-  >  ```http
-  >  GET https://yourorg.crm.dynamics.com/api/data/v9.1/plugintypes?$select=name&$filter=contains(name,'MyPlugin.TypeName')
-  >  ```
+
+### Set a relation to a plug-in type (optional)
+
+If you already have a Plug-in Type that you want to associate with this Custom API, you can include a reference to it in this definition by adding the following element within the `<customapi>` element:
+
+```xml
+<plugintypeid>
+   <plugintypeexportkey>{Add the GUID value of the plug-in type export key}</plugintypeexportkey>
+</plugintypeid>
+  ```
+
+OR
+
+  ```xml
+<plugintypeid>
+   <plugintypeid>{Add the GUID value of the plug-in type id}</plugintypeid>
+</plugintypeid>
+  ```
+
+> [!NOTE]
+> Either value will work, but we recommend you use the `plugintypeexportkey`.
+
+You can retrieve the **Plug-in Type Export Key** and **Plug-in Type Id** values using a Web API query like this where you know the name of the plug-in type:
+
+```http
+GET [Organization Uri]/api/data/v9.2/plugintypes?$select=name,plugintypeid,plugintypeexportkey&$filter=contains(name,'MyPlugin.TypeName')
+```
 
 ## Step 4: Add any Custom API Request Parameters
 
