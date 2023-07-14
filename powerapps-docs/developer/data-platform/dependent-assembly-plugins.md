@@ -326,6 +326,8 @@ This error occurs only for solutions that were exported/generated before May 202
 
 To resolve this issue you need to update the plug-in package, export/generate the solution and reinstall it.
 
+More information: [Set a relation to a plug-in type (optional)](create-custom-api-solution.md#set-a-relation-to-a-plug-in-type-optional)
+
 ### Plug-in profiler
 
 To debug plug-ins that are part of a plug-in package, you must:
