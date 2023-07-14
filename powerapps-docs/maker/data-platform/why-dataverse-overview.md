@@ -1,7 +1,7 @@
 ---
 title: "Why choose Microsoft Dataverse? | MicrosoftDocs"
 description: Understand how Microsoft Dataverse can help your business become more agile.
-ms.date: 06/16/2020
+ms.date: 04/11/2023
 ms.reviewer: "Mattp123"
 ms.topic: overview
 author: "mmercuri"
