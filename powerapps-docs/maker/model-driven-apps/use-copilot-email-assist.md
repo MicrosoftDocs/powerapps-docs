@@ -1,5 +1,5 @@
 ---
-title: Use Copilot in rich text editor for email
+title: Use Copilot in rich text editor for email (preview)
 description: Refine content for emails with Copilot in rich text editor.
 author: udaykirang
 ms.author: udag
@@ -15,7 +15,11 @@ ms.custom: bap-template
 
 The Copilot for email assist feature helps in refining content for emails specific to customer’s needs with clarity, conciseness, and compelling content.
 
-> [!NOTE]
+> [!IMPORTANT]
+> This is a preview feature
+>
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+>
 > By using Copilot features powered by Azure OpenAI, you agree that data may be stored and/or processed outside of your geographic region, compliance boundary, or national cloud instance. More information: [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy#preventing-abuse-and-harmful-content-generation)
 
 ## Prerequisites
