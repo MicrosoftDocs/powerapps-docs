@@ -63,7 +63,7 @@ You can confirm that the F&O environment is linked with Power platform by visiti
 
 During preview, you need to enable configuration key **Enable SQL row version change tracking** by turning on maintenance mode. See here for details of [Maintenance mode - Finance & Operations \| Dynamics 365 \| Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode#turn-maintenance-mode-on-and-off-in-devtestdemo-environments-hosted-in-customers-subscription)
 
-![Enable Configuration](/Media/Synapse-Link-Enable-Fno-Configuration.png)
+![Enable Configuration](/media/Synapse-Link-Enable-Fno-Configuration.png)
 
 **NOTE:** When using Tier 1 or CHE environment, you need to perform full DBSync using Visual Studio to complete the maintenance mode.
 
