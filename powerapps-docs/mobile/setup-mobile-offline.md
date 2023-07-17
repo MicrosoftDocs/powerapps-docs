@@ -161,17 +161,11 @@ If you selected the **Default** offline profile mode, there is nothing to do. Al
 
 However, if you selected **Advanced** you have to manually add users (requires admin privileges) to the offline profile. The app will be enabled for offline use only for those configured users.
 
-![A screenshot of a computer Description automatically generated](media/image1.png)
-
 1.  Select Add users (requires admin privileges).
 
 1.  Sign in to the Admin Portal.
 
 1.  In the Users with offline access area, select Add users.
-
-![A screenshot of a computer Description automatically generated](media/image2.png)
-
-
 
 1.  Choose the users that you want to add to the mobile offline profile. The actual users added based on teams are displayed under each team. User's that are added individually are displayed under individual users.
 
@@ -194,14 +188,14 @@ Offline-first is the default mode when you enable an app for offline use. If you
 
 1.  Sign in to [<u>Power Apps</u>](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 
-1.  On the left pane, select Apps, and then select the model-driven app that you want to enable for offline.
+1.  On the left pane, select **Apps**, and then select the model-driven app that you want to enable for offline.
 
-1.  Select More (...) &gt; Edit to open the modern app designer.
+1.  Select **More** (**...**) &gt; **Edit** to open the modern app designer.
 
-1.  On the command bar, select Settings.
+1.  On the command bar, select **Settings**.
 
-1.  On the Features tab, set the Enable offline classic toggle to Yes.
+1.  On the **Features** tab, set the **Enable offline classic** toggle to **Yes**.
 
-1.  Select Save and then Publish the app.
+1.  Select **Save** and then publish the app.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
