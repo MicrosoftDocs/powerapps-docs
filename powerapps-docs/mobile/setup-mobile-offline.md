@@ -68,13 +68,19 @@ Follow these best practices when building an app for mobile offline use:
 
     - If you select **Default**, the app is enabled for offline for all users. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline#set-up-a-mobile-offline-profile).
 
-   	- If you select **Advanced**, the app is enabled for offline only for a selected list of users. (It is required to have admin privileges to assign users to an offline profile.) Select one or multiple offline profiles, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline#set-up-a-mobile-offline-profile).
-
+   	- If you select **Advanced**, the app is enabled for offline only for a selected list of users. Select one or multiple offline profiles, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline#set-up-a-mobile-offline-profile).
+  
+    > [!Note]
+    > You must have admin privileges to assign users to an offline profile.
+    
 1. Close the **Settings** dialog, and then save and publish your app. When you're done, the app will be set up for offline use.
 
 ## Set up a mobile offline profile
 
 The mobile offline profile represents the dataset that's synced on a user's device. The profile contains the tables, including related filters, that are applied when data is synced to a user's device.
+
+> [!Note]
+> If the offline profile is in advanced mode, it is required to add users to the offline profile. If you don't add a user to the offline profile, the user can't use the app in offline mode.
 
 ### Prerequisite: Enable a table for offline
 
