@@ -43,6 +43,8 @@ Predefined templates for showing images and text in a gallery are available, and
     - [Scrollable screen (Fluid grid)](../add-scrolling-screen.md)
     - [Web barcode scanner](control-barcodescanner.md)
 - You can only add one gallery inside another gallery.
+- The minimum **TemplateSize** is 1. This can cause controls in the **Gallery** to drift from their expected **X** or **Y** values, when you don't account for the template size.
+
 
 ## Key properties
 
@@ -92,7 +94,7 @@ Predefined templates for showing images and text in a gallery are available, and
 
 **TemplatePadding** – The distance between items in a gallery.
 
-**TemplateSize** – The height of the template for a gallery in vertical/portrait orientation. Or the width of the template for a gallery in horizontal/landscape orientation.
+**TemplateSize** – The height of the template for a gallery in vertical/portrait orientation. Or the width of the template for a gallery in horizontal/landscape orientation. The minimum size is 1.
 
 **Transition** – The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.
 
