@@ -131,7 +131,10 @@ Not all F&O entities can be enabled for change tracking at this point in time. T
 
 [Allow Row version change tracking for tables and data entities - Finance & Operations \| Dynamics 365 \| Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities)
 
-For a list of ready-made entities that pass validation rules, see here: \<need to add this list somewhere\> [SupportedEntitiesLink](https://www.yammer.com/dynamicsaxfeedbackprograms/uploaded_files/1647660802048)
+> [!NOTE]
+>
+> For a list of ready-made entities that pass validation rules, see here: [SupportedEntitiesLink](https://www.yammer.com/dynamicsaxfeedbackprograms/uploaded_files/1647660802048)
+> You need to be a member of the preview yammer group to access this list. To join [visit https://aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics)
 
 ### Virtual entity definition is obsolete
 
