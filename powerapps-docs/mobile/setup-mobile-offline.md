@@ -155,6 +155,53 @@ The 15 relationships limit is transitive, meaning if table B has N relationships
 
 When the app is published, the app will be enabled for offline use.
 
+### Add users to an offline profile
 
+If you selected the **Default** offline profile mode, there is nothing to do. All your users who have access to the app can also use it in offline mode.
+
+However, if you selected **Advanced** you have to manually add users (requires admin privileges) to the offline profile. The app will be enabled for offline use only for those configured users.
+
+![A screenshot of a computer Description automatically generated](media/image1.png)
+
+1.  Select Add users (requires admin privileges).
+
+1.  Sign in to the Admin Portal.
+
+1.  In the Users with offline access area, select Add users.
+
+![A screenshot of a computer Description automatically generated](media/image2.png)
+
+
+
+1.  Choose the users that you want to add to the mobile offline profile. The actual users added based on teams are displayed under each team. User's that are added individually are displayed under individual users.
+
+1.  When you're done adding people, select **Save**.
+
+> [!Note]
+> If you made any changes to an Azure Active Directory (Azure AD) group team, you must remove and add the team back to the mobile offline profile for the changes to take effect.
+
+## Offline-first vs. classic offline
+
+With the offline-first experience, it's important to understand the key benefits of <u>the offline-first experience</u> versus the [<u>classic offline experience</u>](https://learn.microsoft.com/en-us/dynamics365/mobile-app/work-in-offline-mode).
+
+| **Offline-first** | **Classic offline** |
+|-------------------------|-------------------------|
+| <ul></br><li>Your data is always the same, regardless of your network connection.</li></br></ul></br><blockquote></br>![A screenshot of a phone Description automatically generated](media/image3.png)</br></blockquote></br><ul></br><li>There's no toggle for users to switch from offline to online mode. A user will never forget to sync their changes back to the server because the app will do it automatically.</li></br></ul></br><blockquote></br>![A screenshot of a phone Description automatically generated](media/image4.png)</br> </br></blockquote> | <ul></br><li>Users have the option to skip the initial offline sync and stay online, which means that users in your organization might not have the same experience.</li></br></ul></br><blockquote></br>![A screenshot of a phone Description automatically generated](media/image5.png)</br></blockquote></br><ul></br><li>Users have to remember to disable the Work in offline mode toggle before they can sync changes with the server.</li></br></ul></br><blockquote></br>![A screenshot of a phone Description automatically generated](media/image6.png)</br></blockquote></br><ul></br><li>To save your changes in offline mode, you need to set the Work in offline mode toggle to On. Otherwise, when you're working on a row and suddenly lose internet connection your changes will be lost.</li></br><li>The rows you see in offline mode are listed from the local database. Which means, the rows you see in offline mode vs. online can be different.</li></br></ul> |
+
+## Enable mobile offline classic
+
+Offline-first is the default mode when you enable an app for offline use. If you want to switch to the offline classic mode, you need to enable it for each of your model-driven apps. It's a separate app setting for each app.
+
+1.  Sign in to [<u>Power Apps</u>](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+
+1.  On the left pane, select Apps, and then select the model-driven app that you want to enable for offline.
+
+1.  Select More (...) &gt; Edit to open the modern app designer.
+
+1.  On the command bar, select Settings.
+
+1.  On the Features tab, set the Enable offline classic toggle to Yes.
+
+1.  Select Save and then Publish the app.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
