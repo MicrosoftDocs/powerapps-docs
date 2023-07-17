@@ -69,6 +69,33 @@ During preview, you need to enable configuration key **Enable SQL row version ch
 
 Enabling **Row Version Change Tracking** triggers a system event in your environment that may cause tables in Export to Data lake to re-initialize. If you have downstream consumption pipelines, you may also need to re-initialize the pipelines. See documentation for more details.
 
+# Enable F&O Tables in Synapse Link
+
+You can enable F&O entities as well as F&O Tables in Synapse Link for Dataverse. This section focuses on enabling F&O Tables.
+
+F&O Tables are allowed only in Synapse Link and they are not enabled for makers to build apps at this point in time. **You do not need to define F&O tables as virtual entities or enable change tracking for each table**.
+
+To Enable this feature during preview, you need to launch the maker portal with the following
+
+**https://make.powerapps.com/environments/{environment-id}/exporttodatalake?athena.enableFnOTables=true**
+
+**NOTE:** selection of Delta Lake feature is mandatory for F&O Tables preview.
+
+## Known limitations
+
+There are several limitations in the preview. These limitations will be addressed in the future. To know more about the upcoming roadmap and stay in touch with product team, you can join the preview yammer group at <https://aka,ms/SynapseLinkforDynamics>
+
+1.  You need to create a new synapse Link profile. You can’t add F&O tables into existing Synapse Link profiles.
+2.  F&O Tables can’t be added to Managed Store, aka. Data lake provisioned with Dataverse at this point in time.
+3.  F&O Tables shipped by Microsoft are already enabled in Synapse Link except for a set of tables identified below. To enable custom tables, you need to enable change tracking in custom tables as explained here: [Allow Row version change tracking for tables and data entities - Finance & Operations \| Dynamics 365 \| Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables)
+4.  Following Tables shipped by Microsoft are not enabled at this point in time. We will enable these tables in a future release.
+    1.  Tables without a unique index on Rec id column (ex. REQPLAN)
+    2.  Tables that contain sensitive fields including: CUSTTABLE, VENDTABLE, CONTACTPERSON, VENDBANKACCOUNT, HCMPERSONPRIVATECITIZENSHIPDETAILS, HCMPERSONPRIVATEDETAILS, WHSWORKUSER, CUSTBANKACCOUNT, BANKACCOUNTTABLE, BANKSTMTISOREPORTENTRY, JMGEMPLOYEE
+    3.  Tables that contain EDT Array types PROJTABLE, TSTIMESHEETLINEWEEK, WHSCONTAINERTABLE, WHSWAVETABLE, WHSINVENTTABLE, RESOURCESETUP
+5.  F&O table updates in Delta parquet format may take upto 1hr. We are working to reduce the time.
+6.  You must choose the Delta lake format as the default when working with F&O data. You can enable Delta lake format by following steps here: [Export Microsoft Dataverse data in Delta Lake format - Power Apps \| Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-delta-lake)
+7.  At this point, you can only choose up to 1000 tables in a single Synapse Link profile.
+
 # Enable F&O data entities in Synapse Link
 
 You can enable F&O entities as well as F&O Tables in Synapse Link for Dataverse. This section focuses on enabling F&O data entities. To enable F&O Entities;
@@ -110,32 +137,7 @@ For a list of ready-made entities that pass validation rules, see here: \<need t
 
 Underlying Entity definition may have changed since it was defined. You will need to refresh
 
-# Enable F&O Tables in Synapse Link
 
-You can enable F&O entities as well as F&O Tables in Synapse Link for Dataverse. This section focuses on enabling F&O Tables.
-
-F&O Tables are allowed only in Synapse Link and they are not enabled for makers to build apps at this point in time. **You do not need to define F&O tables as virtual entities or enable change tracking for each table**.
-
-To Enable this feature during preview, you need to launch the maker portal with the following
-
-**https://make.powerapps.com/environments/{environment-id}/exporttodatalake?athena.enableFnOTables=true**
-
-**NOTE:** selection of Delta Lake feature is mandatory for F&O Tables preview.
-
-## Known limitations
-
-There are several limitations in the preview. These limitations will be addressed in the future. To know more about the upcoming roadmap and stay in touch with product team, you can join the preview yammer group at <https://aka,ms/SynapseLinkforDynamics>
-
-1.  You need to create a new synapse Link profile. You can’t add F&O tables into existing Synapse Link profiles.
-2.  F&O Tables can’t be added to Managed Store, aka. Data lake provisioned with Dataverse at this point in time.
-3.  F&O Tables shipped by Microsoft are already enabled in Synapse Link except for a set of tables identified below. To enable custom tables, you need to enable change tracking in custom tables as explained here: [Allow Row version change tracking for tables and data entities - Finance & Operations \| Dynamics 365 \| Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables)
-4.  Following Tables shipped by Microsoft are not enabled at this point in time. We will enable these tables in a future release.
-    1.  Tables without a unique index on Rec id column (ex. REQPLAN)
-    2.  Tables that contain sensitive fields including: CUSTTABLE, VENDTABLE, CONTACTPERSON, VENDBANKACCOUNT, HCMPERSONPRIVATECITIZENSHIPDETAILS, HCMPERSONPRIVATEDETAILS, WHSWORKUSER, CUSTBANKACCOUNT, BANKACCOUNTTABLE, BANKSTMTISOREPORTENTRY, JMGEMPLOYEE
-    3.  Tables that contain EDT Array types PROJTABLE, TSTIMESHEETLINEWEEK, WHSCONTAINERTABLE, WHSWAVETABLE, WHSINVENTTABLE, RESOURCESETUP
-5.  F&O table updates in Delta parquet format may take upto 1hr. We are working to reduce the time.
-6.  You must choose the Delta lake format as the default when working with F&O data. You can enable Delta lake format by following steps here: [Export Microsoft Dataverse data in Delta Lake format - Power Apps \| Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-delta-lake)
-7.  At this point, you can only choose up to 1000 tables in a single Synapse Link profile.
 
 
 
