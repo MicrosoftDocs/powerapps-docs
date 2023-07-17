@@ -67,8 +67,6 @@ During preview, you need to enable configuration key **Enable SQL row version ch
 
 **NOTE:** When using Tier 1 or CHE environment, you need to perform full DBSync using Visual Studio to complete the maintenance mode.
 
-Enabling “Allow Row version change tracking” property on a table adds **SysRowVersionNumber** field to tables. In future versions, the system may add a field **SysRowVersion** may change without notice. You should not build a solution using this field. See [Allow Row version change tracking for tables and data entities - Finance & Operations \| Dynamics 365 \| Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track)
-
 Enabling **Row Version Change Tracking** triggers a system event in your environment that may cause tables in Export to Data lake to re-initialize. If you have downstream consumption pipelines, you may also need to re-initialize the pipelines. See documentation for more details.
 
 # Enable F&O data entities in Synapse Link
