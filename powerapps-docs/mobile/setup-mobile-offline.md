@@ -49,7 +49,7 @@ Follow these best practices when building an app for mobile offline use:
       > [!div class="mx-imgBorder"]
       > ![Form properties.](media/mobile-offline-image2.png)
 
-## Enable your app for offline use (preview)
+## Enable your app for offline use
 
 1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
 
@@ -59,21 +59,16 @@ Follow these best practices when building an app for mobile offline use:
 
 1. On the command bar, select **Settings**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Select Settings on the command bar.](media/mobile-offline-image4.png)
-
 1. On the **General** tab, set the **Can be used offline** toggle to **On**.
 
     > [!div class="mx-imgBorder"]
     > ![Turn on the Can be used offline toggle.](media/mobile-offline-image6.png)
 
-1. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, go to the following section, [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
-    
-    > [!NOTE]
-    >  If you edit an app that has more than one offline profile, that was created using the [offline experience that is generally available](/dynamics365/mobile-app/setup-mobile-offline#step-2-create-a-mobile-offline-profile-to-determine-what-data-will-be-available-while-offline), then you will get this message: **There is more than one mobile offline profile associated with this app, so you can't edit it here.** To use the new offline experience, your app can only have one offline profile.
-    
-    > [!div class="mx-imgBorder"]
-    > ![Select an offline profile.](media/mobile-offline-image7.png)
+1. Select the type of offline profile: **Default** or **Advanced**.
+
+    - If you select **Default**, the app is enabled for offline for all users. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline#set-up-a-mobile-offline-profile).
+
+   	- If you select **Advanced**, the app is enabled for offline only for a selected list of users. (It is required to have admin privileges to assign users to an offline profile.) Select one or multiple offline profiles, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline#set-up-a-mobile-offline-profile).
 
 1. Close the **Settings** dialog, and then save and publish your app. When you're done, the app will be set up for offline use.
 
