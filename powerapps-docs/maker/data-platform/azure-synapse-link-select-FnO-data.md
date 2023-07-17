@@ -51,7 +51,7 @@ o	Synapse Analytics workspace
 o	Synapse Spark pool with version 3.1 or higher (For Delta Lake conversion)
 
 # Power platform integration
-You can enable the preview with an existing F&O environment if your F&O environment is updated to ver. 10.0.34 (PU58) or later. You can also validate the feature by provisioning a new Tier-1 environment, also known as a **Cloud Hosted Environment (CHE), with version 10.0.34 (PU 60) or later**.
+You can enable the preview with an existing F&O environment if your F&O environment is updated to ver. 10.0.34 (PU58) or later. You can also validate the feature by provisioning a new Tier-1 environment, also known as a **Cloud Hosted Environment (CHE), with version 10.0.36 (PU 60) or later**.
 
 Enabling Power platform integration is mandatory. You can link with Power Platform deploying the new environment. See [Enable the Microsoft Power Platform integration - Finance & Operations \| Dynamics 365 \| Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-power-platform-integration#enable-during-deploy)
 
