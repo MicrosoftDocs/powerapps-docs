@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/01/2022
+ms.date: 07/17/2023
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -29,23 +29,20 @@ Note, an internet connection is required to sync data between your mobile device
 
 To get started with mobile offline, an app maker needs to enable and define the tables that are available for offline by using the [modern app designer](../maker/model-driven-apps/app-designer-overview.md). For more information, go to [Set up mobile offline](setup-mobile-offline.md).
 
-> [!IMPORTANT] 
-> The mobile offline experience for canvas apps is in Preview.
+## Mobile offline is offline-first by default
 
-## Mobile offline-first
+_Offline-first_ means that all the data you may need when offline is copied to your mobile device. This requires initial network access to download the data. Once you have your data, you only work with the data on your local device all the time. This is true both when your device is connected and disconnected to the network.
 
-After offline is configured, anyone who uses the [Power Apps mobile app](run-powerapps-on-mobile.md) can also use the app in offline mode. The Power Apps mobile app always runs offline-first, either with or without an internet connection. This new functionality optimizes offline performance and creates a consistent experience for users as they change locations:
+Moving in and out of network access does not affect performance of the app because it is using local data. Power Apps monitors network access and automatically syncs the changes you have made locally with the server, and downloads any updates made on the server. The offline features automatically handle spotty network connections, download data, upload data, and handle conflict detection and more. The built-in offline features minimize system resources and are highly performant.
 
--	**Online**: Occurs when an internet connection is available, but offline mode isn't set up. The mobile app functions similar to using the app with an internet connection on your PC. When the internet connection is lost, the mobile app is unusable. Not recommended.
--	**Offline-first without an internet connection**: Data is downloaded, and all changes are saved to your mobile device. When the internet connection is restored, the changes are automatically synced to the server.
+When offline is configured and enabled for your model-driven app, anyone who uses the [Power Apps mobile app](run-powerapps-on-mobile.md) can also use the app in offline mode. By default, the Power Apps mobile app runs offline-first, either with or without an internet connection. This functionality optimizes offline performance and creates a consistent experience for users as they change locations:
+
+- **Online**: Occurs when an internet connection is available, but offline mode isn't set up. The mobile app functions similar to using the app with an internet connection on your PC. When the internet connection is lost, the mobile app is unusable. Not recommended.
+- **Offline-first without an internet connection**: Data is downloaded, and all changes are saved to your mobile device. When the internet connection is restored, the changes are automatically synced to the server.
 - **Offline-first with an internet connection**: Data is downloaded to the device, and all changes are saved locally. Because there's an internet connection, the app will automatically attempt to sync every few minutes.
 
-For more information, go to [Set up and use mobile offline-first](work-in-offline-mode.md).
-
 > [!IMPORTANT] 
-> - For information about the mobile offline setup exerience that is generally available, go to [Mobile offline overview (classic)](mobile-offline-overview-classic.md).
-> - For more information about how to set up mobile offline for canvas apps, go to [Develop offline-capable canvas apps](../maker/canvas-apps/offline-apps.md)
-> - The offline-first experience is in general availability for Field Service mobile app. For more information, see [Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-2020-power-platform).
+> For more information about how to set up mobile offline for canvas apps, go to [Develop offline-capable canvas apps](../maker/canvas-apps/offline-apps.md)
 
 
 
