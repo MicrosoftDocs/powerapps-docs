@@ -1,15 +1,14 @@
 ---
 title: Set up mobile offline (preview) | Microsoft Docs
 description: Set up and configure mobile offline for model-driven apps made with Power Apps.
-author: sericks007
-
+author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/18/2022
+ms.date: 07/17/2023
 ms.subservice: mobile
-ms.author: sericks
+ms.author: trdehove
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - maker
@@ -21,7 +20,6 @@ search.audienceType:
 
 Use the [modern app designer](../maker/model-driven-apps/app-designer-overview.md) to enable your model-driven apps for offline use on a mobile device. When offline mode is enabled, users can interact with their data without internet connectivity on the [Power Apps mobile app](https://powerapps.microsoft.com/downloads/).
 
-
 ## Prerequisites 
 
 Verify the following prerequisites before you enable mobile offline: 
@@ -31,10 +29,6 @@ Verify the following prerequisites before you enable mobile offline:
 - Users with the **basic user** role can open and use an offline application. This role has the Read privilege for the **mobile offline profile** table.
 
    If you have a custom security role, make sure you have the Read privilege for **Mobile Offline profile**. For more information, go to [Miscellaneous privileges - Core Records tab](/power-platform/admin/miscellaneous-privileges).
-
-  > [!div class="mx-imgBorder"] 
-  > ![Required security roles to use mobile offline.](media/mobile-offline-image1.png)
-
 
 ## Optimize your app for mobile offline 
 
@@ -51,38 +45,29 @@ Follow these best practices when building an app for mobile offline use:
   - Build dedicated forms for mobile use.
 
   - Share forms across the mobile and desktop experience, but disable some fields on mobile.
-
    
       > [!div class="mx-imgBorder"]
       > ![Form properties.](media/mobile-offline-image2.png)
 
-
 ## Enable your app for offline use (preview)
-
-Set up the new mobile offline experience in the [modern app designer](../maker/model-driven-apps/app-designer-overview.md).
 
 1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
 
-2. On the left pane, select **Apps**, and then select the model-driven app that you want to enable for offline.
+1. On the left pane, select **Apps**, and then select the model-driven app that you want to enable for offline.
 
-3. Select **More (...)** > **Edit** to open the modern app designer.
+1. Select **More (...)** > **Edit** to open the modern app designer.
 
-4. On the command bar, select **Settings**.
+1. On the command bar, select **Settings**.
 
     > [!div class="mx-imgBorder"]
     > ![Select Settings on the command bar.](media/mobile-offline-image4.png)
 
-5. On the **Features** tab, set the **Offline setup from the app designer** toggle to **Yes**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Turn on the Offline setup from the modern app designer toggle.](media/mobile-offline-image5.png)
-
-6. On the **General** tab, set the **Can be used offline** toggle to **On**.
+1. On the **General** tab, set the **Can be used offline** toggle to **On**.
 
     > [!div class="mx-imgBorder"]
     > ![Turn on the Can be used offline toggle.](media/mobile-offline-image6.png)
 
-7. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, go to the following section, [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
+1. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, go to the following section, [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
     
     > [!NOTE]
     >  If you edit an app that has more than one offline profile, that was created using the [offline experience that is generally available](/dynamics365/mobile-app/setup-mobile-offline#step-2-create-a-mobile-offline-profile-to-determine-what-data-will-be-available-while-offline), then you will get this message: **There is more than one mobile offline profile associated with this app, so you can't edit it here.** To use the new offline experience, your app can only have one offline profile.
@@ -90,7 +75,7 @@ Set up the new mobile offline experience in the [modern app designer](../maker/m
     > [!div class="mx-imgBorder"]
     > ![Select an offline profile.](media/mobile-offline-image7.png)
 
-8. Close the **Settings** dialog, and then save and publish your app. When you're done, the app will be set up for offline use.
+1. Close the **Settings** dialog, and then save and publish your app. When you're done, the app will be set up for offline use.
 
 ## Set up a mobile offline profile
 
