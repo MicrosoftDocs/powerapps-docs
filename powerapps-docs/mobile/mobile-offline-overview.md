@@ -1,13 +1,12 @@
 ---
 title: Configure model-driven apps for offline (preview)| Microsoft Docs
 description: Configure model-driven apps for offline mode (preview).
-author: sericks007
-
+author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 07/17/2023
 ms.subservice: mobile
-ms.author: sericks
+ms.author: trdehove
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
