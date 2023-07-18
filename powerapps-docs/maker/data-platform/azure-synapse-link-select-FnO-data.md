@@ -53,7 +53,7 @@ o	Synapse Spark pool with version 3.1 or higher (For Delta Lake conversion)
 ## Power platform integration
 You can enable the preview with an existing finance and operations apps environment if your finance and operations apps environment is updated to ver. 10.0.34 (PU58) or later. You can also validate the feature by provisioning a new Tier-1 environment, also known as a **Cloud Hosted Environment (CHE), with version 10.0.36 (PU 60) or later**.
 
-Enabling Power platform integration is mandatory. You can link with Power Platform deploying the new environment. See [Enable the Microsoft Power Platform integration](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-power-platform-integration.md#enable-during-deploy)
+Enabling Power platform integration is mandatory. You can link with Power Platform deploying the new environment. See [Enable the Microsoft Power Platform integration](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-power-platform-integration#enable-during-deploy)
 
 You can confirm that the finance and operations apps environment is linked with Power platform by visiting Dynamics Life cycle services and reviewing the environment page.
 
@@ -61,7 +61,7 @@ You can confirm that the finance and operations apps environment is linked with 
 
 ## Add configurations in finance and operations apps environment
 
-During preview, you need to enable configuration key **Enable SQL row version change tracking** by turning on maintenance mode. See here for details of [Turn maintenance mode on and off in DevTest/Demo environments hosted in Customer's subscription](/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode.md#turn-maintenance-mode-on-and-off-in-devtestdemo-environments-hosted-in-customers-subscription)
+During preview, you need to enable configuration key **Enable SQL row version change tracking** by turning on maintenance mode. See here for details of [Turn maintenance mode on and off in DevTest/Demo environments hosted in Customer's subscription](/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode#turn-maintenance-mode-on-and-off-in-devtestdemo-environments-hosted-in-customers-subscription)
 
 ![Enable Configuration](/media/Synapse-Link-Enable-Fno-Configuration.png)
 
