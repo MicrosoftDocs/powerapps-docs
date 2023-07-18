@@ -33,6 +33,8 @@
       href: ./webapi/overview.md
     - name: Use Organization Service
       href: ./org-service/overview.md
+    - name: Bulk Operation APIs
+      href: bulk-operations.md
     - name: Create your own messages
       href: custom-actions.md
       items:
