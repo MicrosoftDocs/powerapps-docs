@@ -1,63 +1,59 @@
 ---
-title: Choose Dynamics 365 Finance and Operations data
-description: Learn how to choose Dynamics 365 Finance and Operations data in Synapse Link for Dataverse and work with Synapse Link and Power BI.
-ms.custom: ""
-ms.date: 05/25/2023
-ms.reviewer: "matp"
-ms.suite: ""
-ms.tgt_pltfrm: ""
+title: Choose finance and operations data in Azure Synapse Link for Dataverse
+description: Learn how to choose finance and operations data in Azure Synapse Link for Dataverse and work with Synapse Link and Power BI.
+ms.date: 07/18/2023
+ms.reviewer: johnmichalak
 ms.topic: "how-to"
 applies_to: 
   - "powerapps"
-author: "Milindav"
-ms.assetid: 
+author: Milindav
 ms.subservice: dataverse-maker
-ms.author: "Milindav"
+ms.author: Milindav
 search.audienceType: 
   - maker
+ms.custom: bap-template
 ---
-# Choose Dynamics 365 Finance and Operations data
+# Choose finance and operations data in Azure Synapse Link for Dataverse
 
-Azure Synapse Link for Dataverse enables choosing data from Dynamics 365 for finance and operations apps. Using Azure Synapse Link, you can continuously export data from finance and operations apps into
-- Azure Synapse Analytics
-- Azure Data Lake Storage Gen2
+Azure Synapse Link for Dataverse enables you to choose data from finance and operations apps. Use Azure Synapse Link to continuously export data from finance and operations apps into Azure Synapse Analytics and Azure Data Lake Storage Gen2.
 
-The Azure Synapse Link for Dataverse is a service designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments. 
+Azure Synapse Link for Dataverse is a service that is designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments. 
 
-The Azure Synapse Link for Dataverse offers these features finance and operations data.
+Azure Synapse Link for Dataverse offers the following features to use with finance and operations data:
 - Support for choosing both standard and custom finance and operations entities and tables.
 - Continuous replication of Entity and table data as well as create, update, and delete (CUD) transactions. 
-- Linking or unlinking the environment to Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure Subscription. No need to visit Azure portal or Dynamics Life Cycle Services (LCS) for system configuration.
-- Simply choose data and explore with Synapse. No need to run external tools to configure Synapse Analytics workspaces
-- Support all the features of Synapse Link for Dataverse including, availability in all regions, save as Parquet Delta files and support for restricted storage accounts
+- Linking or unlinking the environment to Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure Subscription. No need to visit Azure portal or Microsoft Dynamics 365 Lifecycle Services for system configuration.
+- Simply choose data and explore with Synapse. No need to run external tools to configure Synapse Analytics workspaces.
+- Support for all of the features of Synapse Link for Dataverse including, availability in all regions, save as Parquet Delta files, and support for restricted storage accounts.
 - Table limits in Export to Data lake service are not applicable in Synapse Link for Dataverse.
 - Save as Parquet Delta lake format is enabled by default for finance and operations data enabling faster query response times. 
 
 
 > [!NOTE]
->This is a preview feature
+> This is a preview feature
 >
-> Export to data lake feature in Dynamics 365 finance and operations apps will be combined with Synapse Link for Dataverse in the future. We also plan to retire Export to Data Lake service and transition existing customers to Synapse Link for Dataverse.
+> Export to data lake feature in finance and operations apps will be combined with Synapse Link for Dataverse in the future. We also plan to retire Export to Data Lake service and transition existing customers to Synapse Link for Dataverse.
 If you are planning to adopt Export to Data Lake feature in finance and operations apps the future, you should consider adopting Synapse Link with finance and operations data support instead. 
 We will provide a path for existing customers to transition to Synapse Link for Dataverse. If you are currently using Export to Data Lake feature in finance and operations apps, you can continue to operate both services in parallel until transition. 
 
 
 ## Prerequisites
-- Finance and operations sandbox (Tier-2) with version update 10.0.34 (PU 58) or later. You can also use finance and operations Cloud Hosted environment (CHE) for validation. Your CHE needs to be version update 10.0.36 (PU 60) or later  
-- Finance and Operations environment is linked with Power Platform. 
-- Azure Subscription with owner access (you can also add finance and operations data to an existing storage account configured with Synapse Link)
-o	Storage account 
-o	Synapse Analytics workspace 
-o	Synapse Spark pool with version 3.1 or higher (For Delta Lake conversion)
+- Finance and operations sandbox (Tier-2) with version update 10.0.34 (PU 58) or later. You can use finance and operations Cloud Hosted environment (CHE) for validation. Your CHE needs to be version update 10.0.36 (PU 60) or later.  
+- Finance and operations apps environment is linked with Power Platform. 
+- Azure Subscription with owner access (you can also add finance and operations data to an existing storage account configured with Synapse Link):
+  - Storage account. 
+  - Synapse Analytics workspace.
+  - Synapse Spark pool with version 3.1 or higher (For Delta Lake conversion).
 
 ## Power platform integration
 You can enable the preview with an existing finance and operations apps environment if your finance and operations apps environment is updated to ver. 10.0.34 (PU58) or later. You can also validate the feature by provisioning a new Tier-1 environment, also known as a **Cloud Hosted Environment (CHE), with version 10.0.36 (PU 60) or later**.
 
-Enabling Power platform integration is mandatory. You can link with Power Platform deploying the new environment. See [Enable the Microsoft Power Platform integration](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-power-platform-integration#enable-during-deploy).
+Enabling Power platform integration is mandatory. You can link with Power Platform when deploying the new environment. For more information on Powe Platform integration, see [Enable the Microsoft Power Platform integration](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-power-platform-integration#enable-during-deploy).
 
-You can confirm that the finance and operations apps environment is linked with Power platform by visiting Dynamics Life cycle services and reviewing the environment page.
+You can confirm that the finance and operations apps environment is linked with Power platform by visiting Lifecycle Services and reviewing the environment page.
 
-**NOTE:** Dual-Write setup is not required to enable finance and operations data in Synapse Link.
+> [!NOTE]
+> Dual-Write setup is not required to enable finance and operations data in Synapse Link.
 
 ## Add configurations in finance and operations apps environment
 
