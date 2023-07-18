@@ -181,7 +181,7 @@ OData-Version: 4.0
 
 **With elastic tables**, all tables support bulk operations.
 
-## DeleteMultiple
+### DeleteMultiple
 
 At this time, `DeleteMultiple` is supported only for elastic tables because elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md).
 
@@ -191,9 +191,50 @@ At this time, `DeleteMultiple` is supported only for elastic tables because elas
 
 ## Message pipelines merged
 
+Each of the bulk operation messages has a corresponding single message: `Create`, `Update`, `Upsert`, and `Delete`. These messages have existed for a long time and many people have customized logic that depends on the events that occur when these messages are used.
+
+A key requirement for these bulk operation messages is that people must not be required to maintain this logic in two different places. In order to have the same custom logic and maintain that logic in a single place, we've *merged* the message processing pipelines for these messages. What does this mean?
+
+- When the bulk operation messages are used, the respective `Create` and `Update` events occur for each [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance in the `Targets` parameter. Any existing plug-ins or other event handlers for the corresponding single events continue to work as they always have.
+
+   This means you aren't required to write new plug-ins to manage events raised by these messages.
+
+- When the single operation messages are used, the respective bulk operation events occur with an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing a *single* [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance passed in the `Targets` parameter.
+
+   This means you can move any existing logic that currently responds to single operation events to the more efficient bulk operation events and the logic is applied for both single and multiple operations.
+
+Before the introduction of bulk operation messages, all custom logic has been on the single operation messages. That logic must continue to be applied when client applications use the bulk operation messages.
+
+With the introduction of the bulk operation messages, for tables used with high-volume bulk operations, we recommend that you begin to move any existing synchronous logic from single message events to bulk operation events. If you're introducing new logic, use the bulk operation events rather than the single operation events.
+
+> [!CAUTION]
+> With this design there is potential for duplicate logic to be applied on both the single and multiple versions of events for the operations. Dataverse does not try to prevent this because we cannot know your intent.
+>
+> It is the plug-in developer's responsibility to make sure that the same logic applied for the single version of events is migrated to the multiple version of the event *and removed* from the single version of the event. Otherwise, the logic will be applied twice.
+
+More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../write-plugin-multiple-operation.md)
+
 ## Limitations
 
+Keep the following limitations in mind when using bulk operation messages.
 ### Message size and time limits
+
+As mentioned in [Number of records](#number-of-records), with standard tables there is a performance incentive to send more records with each request. However, the number of records you can send is limited by the size of the payload and the amount of time required to process the operation.
+
+#### Message size limits
+
+When you have a plug-in registered for any message, you may encounter the [Message size exceeded when sending context to Sandbox](/troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors#error-message-size-exceeded-when-sending-context-to-sandbox) error when the total size of the request exceeds 116.85 MB. With bulk operation messages, it's more likely to hit this limit as you send larger payloads.
+
+This error doesn't occur if there's no plug-in registered for the event. You can avoid this error by disabling the plugin(s) or by sending your request with the `BypassCustomPluginExecution` optional parameter. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)
+
+#### Time limits
+
+If you're using the Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), you may encounter this error `The request channel timed out attempting to send after 00:04:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.`
+
+The default timeout set using ServiceClient is 4 minutes, which is long for any synchronous operation. You can change this using the static [ServiceClient.MaxConnectionTimeout](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.MaxConnectionTimeout) property. The default timeout using [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) is 2 minutes.
+
+> [!NOTE]
+> Before you increase the time limits, you should consider reducing the number of records passed in the `Targets` parameter.
 
 ### Not supported for use in Plug-ins
 
