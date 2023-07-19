@@ -1,7 +1,7 @@
 ---
 title: "Formula, calculated, and rollup columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about common elements and characteristics, calculated columns, rollup columns, retrieve a calculated rollup column value immediately, and SourceTypeMasks enumeration." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/15/2022
+ms.date: 07/19/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
