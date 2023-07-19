@@ -230,6 +230,10 @@ More information
 - [Map table columns](../../maker/data-platform/map-entity-fields.md)
 - [Customize table and column mappings](customize-entity-attribute-mappings.md)
 
+## Logical columns
+
+Logical columns contain values which are stored in different database tables than other columns in the table. In most cases this internal implementation is not relevant to working with Dataverse. When you use logical columns as sources for a calculated field, the values in the calculated field cannot be sorted. Use the [AttributeMetadata.IsLogical](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsLogical) property to detect if an attribute is a logical attribute.
+
 ### See also
 
 [Dataverse tables](entities.md)
