@@ -1771,8 +1771,10 @@
         href: ../mobile/offline-capabilities.md
     - name: User guide
       items:
-      - name: Enable and use offline-first (preview)
+      - name: Work offline on your mobile device (offline-first mode)
         href: ../mobile/work-in-offline-mode.md 
+      - name: Work offline on your mobile device (classic mode)
+        href: ../mobile/work-offline-mode-classic.md 
       - name: View offline sync status
         href: ../mobile/offline-sync-icon.md
       - name: Sync data in the background
