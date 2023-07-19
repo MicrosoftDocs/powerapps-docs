@@ -43,7 +43,7 @@ When offline is configured and enabled for your model-driven app, anyone who use
 
 ## Offline-first vs. classic offline
 
-With the offline-first experience, it's important to understand the key benefits of <u>the offline-first experience</u> versus the [<u>classic offline experience</u>](https://learn.microsoft.com/en-us/dynamics365/mobile-app/work-in-offline-mode).
+With the offline-first experience, it's important to understand the key benefits of the *offline-first experience* versus the *classic offline experience*.
 
 | **Offline-first** | **Classic offline** |
 |-------------------------|-------------------------|
