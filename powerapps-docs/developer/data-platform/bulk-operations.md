@@ -21,14 +21,14 @@ contributors:
 > 
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-Use the following bulk operations messages get the best performance when performing data operations on multiple rows of data:
+Use the following bulk operation messages get the best performance when performing data operations on multiple rows of data in a table:
 
 |Message |Details|
 |---------|---------|
 |`CreateMultiple`|Use the SDK [CreateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest) or the Web API `CreateMultiple` action to create multiple records of the same type in a single request.|
 |`UpdateMultiple`|Use the SDK [UpdateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest) or the Web API `UpdateMultiple` action to update multiple records of the same type in a single request.|
 |`UpsertMultiple`|*Coming soon*|
-|`DeleteMultiple`|For elastic tables only, use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type. This message isn't available in the Web API yet.|
+|`DeleteMultiple`|For elastic tables only. Use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type. This message isn't available in the Web API yet.|
 
 ## Standard and Elastic table usage
 
@@ -185,7 +185,7 @@ OData-Version: 4.0
 
 At this time, `DeleteMultiple` is supported only for elastic tables because elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md).
 
-**With standard tables**, relationship cascading behavior can result in unpredictable execution times. If we support `DeleteMultiple` for standard tables, it may not be the best choice. For standard tables, we recommend using the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete), that enables asynchronous deletion of records that match a query.
+**With standard tables**, relationship cascading behavior can result in unpredictable execution times. If we support `DeleteMultiple` for standard tables, it may not be the best choice. For standard tables, we recommend using the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete), that enables asynchronous deletion of records that match a query. More information: [Delete data in bulk](delete-data-bulk.md)
 
 **With elastic tables**, the `DeleteMultiple` message is not available for use with the Web API and the SDK doesn't include a DeleteMultipleRequest class. Use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type.
 
@@ -238,6 +238,8 @@ The default timeout set using ServiceClient is 4 minutes, which is long for any 
 
 ### Not supported for use in Plug-ins
 
+At this time, we don't support using bulk operation messages within plug-ins. More information: [Do not use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md)
+
 ## Known issues
 
 The following are known issues that will be addressed before this feature becomes generally available.
@@ -249,7 +251,6 @@ The following are known issues that will be addressed before this feature become
 Currently the `Default` option is always applied regardless of what you set. The behavior depends on whether [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) is set for the table.
 
 More information: [ConcurrencyBehavior Enum](xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior)
-
 
 ## Frequently Asked Questions (FAQ)
 
