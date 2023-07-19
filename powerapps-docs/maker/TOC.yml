@@ -1755,12 +1755,6 @@
     href: ../mobile/scan-QR-code.md
   - name: Switch to a different directory in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
-  - name: Troubleshoot issues in the mobile app
-    items:
-    - name: Troubleshoot issues in the Power Apps mobile app
-      href: ../mobile/powerapps-mobile-troubleshoot.md
-    - name: Prevent canvas app restarts in the Power Apps mobile app
-      href: ../mobile/power-apps-mobile-canvas-app-restarts.md
   - name: Mobile offline for model-driven apps
     items:
     - name: Set up mobile offline (classic)
@@ -1797,6 +1791,12 @@
       href: ../mobile/canvas-mobile-offline-setup.md
     - name: Working with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
+  - name: Troubleshoot issues in the mobile app
+    items:
+    - name: Troubleshoot issues in the Power Apps mobile app
+      href: ../mobile/powerapps-mobile-troubleshoot.md
+    - name: Prevent canvas app restarts in the Power Apps mobile app
+      href: ../mobile/power-apps-mobile-canvas-app-restarts.md
   - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows 
