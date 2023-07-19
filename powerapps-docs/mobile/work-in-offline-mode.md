@@ -1,5 +1,5 @@
 ---
-title: Work in offline-first mode 
+title: Work offline on your mobile device (offline-first mode)
 description: Work in offline-first mode on your device.
 author: trdehove
 ms.component: pa-user
@@ -13,7 +13,7 @@ search.audienceType:
   - enduser
 ---
 
-# Work in offline-first mode
+# Work offline on your mobile device (offline-first mode)
 
 For the app to be available in offline mode, app and user data must be downloaded on your device. This process is called *initial offline sync*.
 
