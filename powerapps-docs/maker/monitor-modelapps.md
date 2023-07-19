@@ -12,15 +12,17 @@ search.audienceType:
   - maker
 contributors:
   - mattp123
+  - eshwarne
 ---
 # Debug a model-driven app with Monitor
 
-Monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all key activities in your app as the app runs.
+Monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all key activities in your app as the app runs. You can also collaboratively debug a published model-driven app with a support engineer or debug issues of another user's session. For more information on how to collaboratively debug a published model-driven app, see [Collaborative troubleshooting using Monitor](monitor-collaborative-debugging.md).
 
 > [!IMPORTANT]
-> Monitor is temporarily unavailable for model-driven apps. We're working to enable this again soon. Monitor is still available for canvas apps. More information: [Microsoft 365 Message center post MC530354](https://portal.office.com/adminportal/home?ref=MessageCenter/:/messages/MC530354)
+> Monitor for model-driven app requires the Unified Client version of your app to be 1.4.5973-2307.2 or later.
 
 For more information about when you should monitor an app, see [Monitor overview](monitor-overview.md). To run Monitor with a canvas app, see [Debugging canvas apps with Monitor](monitor-canvasapps.md).
+
 
 ## Use Monitor to diagnose a model-driven app
 
