@@ -69,16 +69,22 @@ The following are the main properties for Chatbot control:
 
 - **Header label**: This is the name of the bot that your end-user will see. If don't enter a header label, it will be **Chatbot**.
 
-- **Schema name**: This property refers to the Power Virtual Agents bot that you connect to. The property will automatically populate once a bot is selected. To choose a bot, for **Schema name** property select, **Select bot**.  
+- **Schema name**: This property refers to the Power Virtual Agents bot that you connect to. The property will automatically populate once a bot is selected. To choose a bot, for **Schema name** property select, **Select bot**.
+
+- **Visible**: Choose if you want the bot be visible or not
+  
+- **Position** and **Size**: Determines how your bot will look on the screen. Use the other properties or move the control on the screen to set position and size of the control on the screen.
+
+  After selecting the bot and adjusting its placement or dimensions, the appearance of the property panel looks like this:
 
   > [!div class="mx-imgBorder"]
   > ![Add schema name.](media/chatbot-control/ai-chatbot-control-4.png)
 
-Use the other properties or move the control on the screen to set position and size of the control on the screen. 
 
 ## Limitations
 
-- You can only embed a bot with no user authentication.
+1. ChatBot control isn't supported on the Power Apps mobile app.
+2. Chatbot control isn't available in [Power Apps US Government](/power-platform/admin/powerapps-us-government) or Mookcake.
 
 ## See also
 
