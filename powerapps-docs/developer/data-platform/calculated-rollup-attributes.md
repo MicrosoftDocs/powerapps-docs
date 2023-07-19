@@ -38,7 +38,7 @@ All columns that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata
 |3|Formula column|
 
   
-Formula, Calculated, and rollup columns are based on existing column types that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>. The following types of column have new properties:  
+Formula, calculated, and rollup columns are based on existing column types that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>. The following types of column have new properties:  
   
 - <xref:Microsoft.Xrm.Sdk.Metadata.BooleanAttributeMetadata>  
 - <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata>  
