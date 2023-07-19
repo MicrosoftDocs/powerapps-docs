@@ -1,10 +1,10 @@
 ---
-title: Configure model-driven apps for offline (preview)| Microsoft Docs
-description: Configure model-driven apps for offline mode (preview).
+title: Configure model-driven apps for offline | Microsoft Docs
+description: Configure model-driven apps for offline mode.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/17/2023
+ms.date: 07/19/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -16,9 +16,7 @@ searchScope:
   - "Power Apps"
 ---
 
-# Mobile offline overview (preview)
-
-[This topic is pre-release documentation and is subject to change.]
+# Mobile offline overview
 
 Wouldn't it be great to use your mobile app without worrying about spotty internet connectivity? With model-driven apps made with Power Apps and the new mobile offline-first experience, it's possible. People who need to work from remote locations can continue to work seamlessly without worrying about their internet connection.
 
@@ -42,6 +40,14 @@ When offline is configured and enabled for your model-driven app, anyone who use
 
 > [!IMPORTANT] 
 > For more information about how to set up mobile offline for canvas apps, go to [Develop offline-capable canvas apps](../maker/canvas-apps/offline-apps.md)
+
+## Offline-first vs. classic offline
+
+With the offline-first experience, it's important to understand the key benefits of <u>the offline-first experience</u> versus the [<u>classic offline experience</u>](https://learn.microsoft.com/en-us/dynamics365/mobile-app/work-in-offline-mode).
+
+| **Offline-first** | **Classic offline** |
+|-------------------------|-------------------------|
+| <ul></br><li>Your data is always the same, regardless of your network connection.</li></br></ul></br><blockquote></br>![A screenshot showing your data is always the same.](media/always-same.png)</br></blockquote></br><ul></br><li>There's no toggle for users to switch from offline to online mode. A user will never forget to sync their changes back to the server because the app will do it automatically.</li></br></ul></br><blockquote></br>![A screenshot showing that there's no toggle for users to switch from offline to online mode.](media/no-toggle.png)</br> </br></blockquote> | <ul></br><li>Users have the option to skip the initial offline sync and stay online, which means that users in your organization might not have the same experience.</li></br></ul></br><blockquote></br>![A screenshot showing the option to skip the initial offline sync.](media/skip.png)</br></blockquote></br><ul></br><li>Users have to remember to disable the Work in offline mode toggle before they can sync changes with the server.</li></br></ul></br><blockquote></br>![A screenshot of a phone Description automatically generated](media/remember-to-disable.png)</br></blockquote></br><ul></br><li>To save your changes in offline mode, you need to set the Work in offline mode toggle to On. Otherwise, when you're working on a row and suddenly lose internet connection your changes will be lost.</li></br><li>The rows you see in offline mode are listed from the local database. Which means, the rows you see in offline mode vs. online can be different.</li></br></ul> |
 
 
 
