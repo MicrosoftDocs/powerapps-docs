@@ -23,9 +23,9 @@ Azure Synapse Link for Dataverse offers the following features to use with finan
 - Support for choosing both standard and custom finance and operations entities and tables.
 - Continuous replication of Entity and table data as well as create, update, and delete (CUD) transactions. 
 - Linking or unlinking the environment to Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure Subscription. No need to visit Azure portal or Microsoft Dynamics 365 Lifecycle Services for system configuration.
-- Simply choose data and explore with Synapse. No need to run external tools to configure Synapse Analytics workspaces.
+- Choose data and explore with Synapse. No need to run external tools to configure Synapse Analytics workspaces.
 - Support for all of the features of Synapse Link for Dataverse including, availability in all regions, save as Parquet Delta files, and support for restricted storage accounts.
-- Table limits in Export to Data lake service are not applicable in Synapse Link for Dataverse.
+- Table limits in Export to Data lake service aren't applicable in Synapse Link for Dataverse.
 - Save as Parquet Delta lake format is enabled by default for finance and operations data enabling faster query response times. 
 
 
@@ -46,7 +46,7 @@ You can enable the preview with an existing finance and operations apps environm
 
 Enabling Power Platform integration is mandatory. You can link with Power Platform when deploying the new environment. For more information on Powe Platform integration, see [Enable the Microsoft Power Platform integration](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-power-platform-integration#enable-during-deploy).
 
-You can confirm that the finance and operations apps environment is linked with Power Platform by visiting Lifecycle Services and reviewing the environment page.
+To confirm that the finance and operations apps environment is linked with Power Platformse, use Lifecycle Services and review the **Environment** page.
 
 > [!NOTE]
 > Dual-write setup is not required to enable finance and operations data in Synapse Link.
@@ -66,7 +66,7 @@ After **Row Version Change Tracking** is enabled, a system event triggers in you
 
 You can enable finance and operations entities and finance and operations apps tables in Synapse Link for Dataverse. This section focuses on enabling finance and operations apps tables.
 
-Finance and operations apps tables are allowed only in Synapse Link and they are not currently enabled for makers to build apps. **You do not need to define finance and operations apps tables as virtual entities or enable change tracking for each table**.
+Finance and operations apps tables are allowed only in Synapse Link and they aren't currently enabled for makers to build apps. **You do not need to define finance and operations apps tables as virtual entities or enable change tracking for each table**.
 
 To enable this feature during preview, you need to launch the maker portal using the following URL: [https://make.powerapps.com/environments/{environment-id}/exporttodatalake?athena.enableFnOTables=true](https://make.powerapps.com/environments/{environment-id}/exporttodatalake?athena.enableFnOTables=true).
 
@@ -80,11 +80,11 @@ There are several limitations in the preview. These limitations will be addresse
 - You need to create a new synapse Link profile. You can’t add finance and operations apps tables into existing Synapse Link profiles.
 - Finance and operations apps tables can’t be added to Managed Store, aka. Data lake provisioned with Dataverse.
 - Finance and operations apps tables shipped by Microsoft are already enabled in Synapse Link except for the set of tables identified below. To enable custom tables, you need to enable change tracking in custom tables. For more information on enabling change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
-- The following tables that are shipped by Microsoft are not currently enabled. These tables will be enabled in a future release.
+- The following tables that Microsoft provides aren't currently enabled. These tables will be enabled in a future release.
   - Tables without a unique index on the Rec ID column. For example, REQPLAN.
   - Tables that contain sensitive fields including: CUSTTABLE, VENDTABLE, CONTACTPERSON, VENDBANKACCOUNT, HCMPERSONPRIVATECITIZENSHIPDETAILS, HCMPERSONPRIVATEDETAILS, WHSWORKUSER, CUSTBANKACCOUNT, BANKACCOUNTTABLE, BANKSTMTISOREPORTENTRY, JMGEMPLOYEE.
   - Tables that contain EDT Array types PROJTABLE, TSTIMESHEETLINEWEEK, WHSCONTAINERTABLE, WHSWAVETABLE, WHSINVENTTABLE, RESOURCESETUP.
-- Finance and operations apps table updates in Delta parquet format may take up to one hour. We are working to reduce the time.
+- Finance and operations apps table updates in Delta parquet format may take up to one hour. We're working to reduce the time.
 - When working with finance and operations data, you must choose the Delta lake format as the default. You can enable Delta lake format by following steps here: [Export Microsoft Dataverse data in Delta Lake format](azure-synapse-link-delta-lake.md)
 - You can only choose up to 1000 tables in a single Synapse Link profile.
 
@@ -119,9 +119,13 @@ To enable Track changes, follow these steps.
 
 1. In Dataverse, select the table.
 2. Select **Properties \> Advance Options**.
-3. Select **Track changes**. The checkbox should be enabled. See troubleshooting steps below in case the checkbox is disabled.
+3. Select **Track changes**. The checkbox should be enabled. If the checkbox is disabled, see [Troubleshooting](#Troubleshooting).
 
-#### The chosen entity does not pass validation rules required to enable change tracking.
+### Troubleshooting 
+
+This section explains how to troubleshoot issues that may occur when you enable change tracking. 
+
+#### The chosen entity doesn't pass validation rules required to enable change tracking.
 
 Currently not all finance and operations entities can be enabled for change tracking. If the **Track changes** checkbox is disabled for entities that fail validation rules. For more information on entity validation rules and how you can fix the validation rules, see [Enable row version change tracking for data entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You may need developer assistance to complete the steps.
 
