@@ -55,7 +55,7 @@ To confirm that the finance and operations apps environment is linked with Power
 
 During the preview, you need to enable the configuration key **Enable SQL row version change tracking** by turning on maintenance mode. For more information about using maintenance mode, see [Turn maintenance mode on and off in DevTest/Demo environments hosted in Customer's subscription](/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode#turn-maintenance-mode-on-and-off-in-devtestdemo-environments-hosted-in-customers-subscription).
 
-![Enable Configuration](/media/synapse-link-enable-fno-configuration.png)
+![Enable Configuration](media/Synapse-Link-Enable-Fno-Configuration.png)
 
 > [!NOTE]
 > When using a Tier 1 or CHE environment, you need to perform a full DBSync using Microsoft Visual Studio to complete the maintenance mode.
@@ -119,7 +119,7 @@ To enable Track changes, follow these steps.
 
 1. In Dataverse, select the table.
 2. Select **Properties \> Advance Options**.
-3. Select **Track changes**. The checkbox should be enabled. If the checkbox is disabled, see [Troubleshooting](azure-synapse-link-select-FnO-data.md#Troubleshooting).
+3. Select **Track changes**. The checkbox should be enabled. If the checkbox is disabled, see **The chosen entity doesn't pass validation rules required to enable change tracking**.
 
 ### Troubleshooting 
 
