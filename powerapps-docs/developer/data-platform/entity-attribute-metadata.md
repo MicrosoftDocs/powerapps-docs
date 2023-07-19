@@ -117,15 +117,15 @@ Because `RequiredLevel` is a managed property, as a publisher of a managed solut
 
 More information: [Managed Properties](/power-platform/alm/managed-properties-alm)
 
-## Formula, Rollup, and calculated columns
+## Formula, rollup, and calculated columns
 
-Formula, Rollup, and calculated columns free the user from having to manually perform calculations and focus on their work. System administrators can define a column to contain the value of many common calculations without having to work with a developer. Developers can also use the platform capabilities to perform these calculations rather than within their own code.
+Formula, rollup, and calculated columns free the user from having to manually perform calculations and focus on their work. System administrators can define a column to contain the value of many common calculations without having to work with a developer. Developers can also use the platform capabilities to perform these calculations rather than within their own code.
 
 More information:
 
 - [Define rollup columns that aggregate values](../../maker/data-platform/define-rollup-fields.md)
 - [Define calculated columns to automate calculations](../../maker/data-platform/define-calculated-fields.md)
-- [Formula, Rollup, and calculated columns](calculated-rollup-attributes.md)
+- [Formula, rollup, and calculated columns](calculated-rollup-attributes.md)
 
 ## Column format
 
