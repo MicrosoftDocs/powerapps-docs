@@ -1,5 +1,5 @@
 ---
-title: "Formula columns, Calculated and rollup columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Formula, Calculated, and rollup columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about common elements and characteristics, calculated columns, rollup columns, retrieve a calculated rollup column value immediately, and SourceTypeMasks enumeration." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 10/15/2022
 ms.reviewer: jdaly
@@ -12,17 +12,17 @@ search.audienceType:
 contributors:
  - JimDaly
 ---
-# Calculated and rollup columns
+# Formula, Calculated, and rollup columns
 
-"Formula columns",*Calculated* and *rollup* columns free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.  
+*Formula*,*Calculated* and *rollup* columns free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.  
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)] 
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
   
 <a name="BKMK_CommonElements"></a>   
 
 ## Common elements and characteristics
 
-Formula Columns, Calculated and rollup columns share some common elements and characteristics, for example:  
+Formula, Calculated, and rollup columns share some common elements and characteristics, for example:  
   
 - They're read-only.  
 - They're not specific to the user. The calculation is performed using a system user account, so the values may be based on records that the user doesn't otherwise have privileges to view, such as columns that have field-level security enabled.  
@@ -55,9 +55,9 @@ Each of these types of column have the following properties to support calculati
 |`FormulaDefinition`| Contains the XAML definition of the formula used to perform the calculation or rollup. The only supported way to change this value is through the application formula editor.<br /><br /> For information about configuring the formulas for these columns see the following topics in the customization guide: [Define rollup columns](../../maker/data-platform/define-rollup-fields.md) and [Define calculated columns](../../maker/data-platform/define-calculated-fields.md).  |
 |`SourceTypeMask`| The bitmask value of this read-only property describes the types of sources used in the formula of the calculated column or if the formula of a calculated or rollup column is not valid.<br /><br /> -   0: `Undefined`. The default value for simple and rollup columns.<br />-   1: `Simple`. The calculated column refers to a column in the same record.<br />-   2: `Related`. The calculated column refers to a column in a related record.<br />-   4: `Logical`. The calculated column refers to a column in the same record which is actually stored in a different database table. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes#BKMK_LogicalAttributes)<br />-   8: `Calculated`. The calculated column refers to another calculated column.<br />-   16: `Rollup`. The calculated column refers a rollup column.<br />-   32: `Invalid`. The calculated or rollup column is invalid.<br />Typically this would be where a column refers to a column that no longer exists.<br /><br />**Note:**  One or more of these conditions may be true for any calculated or rollup column. Because this is a bitmask value, you may find it useful to use the [SourceTypeMasks enumeration](calculated-rollup-attributes.md#BKMK_SourceTypeMasks) when performing bitwise operations. |
 
-## Calculated columns & Formula Columns
+## Calculated and Formula Columns
 
-Both Calculated columns & Formula Columns are calculated in real-time when they are retrieved. These columns can be composed using different data types. For example, an Integer calculated column may reference values from Decimal or Currency columns. More information: [Define calculated columns](../../maker/data-platform/define-calculated-fields.md).  
+Both Calculated columns and Formula Columns are calculated in real-time when they are retrieved. These columns can be composed using different data types. For example, an Integer calculated column may reference values from Decimal or Currency columns. More information: [Define calculated columns](../../maker/data-platform/define-calculated-fields.md).  
   
 Calculated column values are available in the retrieve plug-in pipeline. Post image of a table record update or create contains the calculated column value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Entity images](understand-the-data-context.md#entity-images)
   
@@ -109,13 +109,8 @@ The state of a rollup column calculation is available in the corresponding *\<at
   
 ### Retrieve a calculated rollup column value immediately  
 
- Rollup columns support a `CalculateRollupField` message that developers can use to calculate a rollup column value on demand. The request and response, along with the members, are shown in the following table.  
-  
-|Request/Response|Members|  
-|-----|-------|  
-|<xref:Microsoft.Crm.Sdk.Messages.CalculateRollupFieldRequest>|`Target`: <xref:Microsoft.Xrm.Sdk.EntityReference> for the record.<br /><br /> `FieldName`: String representing the logical name of the column.|  
-|<xref:Microsoft.Crm.Sdk.Messages.CalculateRollupFieldResponse>|`Entity`: <xref:Microsoft.Xrm.Sdk.Entity> containing the rollup column and the supporting *\<attribute SchemaName>*`_Date` and *\<attribute SchemaName>*`_State` columns.|  
-  
+Rollup columns support a `CalculateRollupField` message that developers can use to calculate a rollup column value on demand. For the SDK use the [CalculateRollupFieldRequest class](xref:Microsoft.Crm.Sdk.Messages.CalculateRollupFieldRequest) and for Web API use the [CalculateRollupField Function](xref:Microsoft.Dynamics.CRM.CalculateRollupField)
+
 This message is a synchronous operation for just the column identified in the request. If the value of that record is included as part of other rollup columns, the values of those columns won't take the possible value change caused by calling this method into consideration until the regularly scheduled asynchronous jobs that perform those calculations occur.  
   
 ### Limitations
@@ -171,9 +166,9 @@ The `SourceTypeMask` property for those columns that support calculated and roll
   
 ### See also  
 
-[Column definitions](entity-attribute-metadata.md)<br />
-[Define calculated columns](../../maker/data-platform/define-calculated-fields.md)<br />
-[Define rollup columns](../../maker/data-platform/define-rollup-fields.md)<br />
-[Sample: Rollup records related to a specific record](org-service/samples/rollup-records-related-to-specificed-record.md)
+[Column definitions](entity-attribute-metadata.md)   
+[Define calculated columns](../../maker/data-platform/define-calculated-fields.md)   
+[Define rollup columns](../../maker/data-platform/define-rollup-fields.md)   
+[Sample: Rollup records related to a specific record](org-service/samples/rollup-records-related-to-specificed-record.md)   
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
