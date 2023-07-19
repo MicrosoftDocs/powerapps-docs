@@ -69,7 +69,7 @@ The following are the main properties for Chatbot control:
 
 - **Header label**: This is the name of the bot that your end-user will see. If don't enter a header label, it will be **Chatbot**.
 
-- **Schema name**: This property refers to the Power Virtual Agents bot that you connect to. This property will automatically populate once a bot has been selected from the bot selection panel. To open the bot selection panel, select the highlighted text of the property value **Select bot**.  
+- **Schema name**: This property refers to the Power Virtual Agents bot that you connect to. The property will automatically populate once a bot is selected. To choose a bot, for **Schema name** property select, **Select bot**.  
 
   > [!div class="mx-imgBorder"]
   > ![Add schema name.](media/chatbot-control/ai-chatbot-control-4.png)
