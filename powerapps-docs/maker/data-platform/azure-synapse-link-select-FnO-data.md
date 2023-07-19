@@ -119,7 +119,7 @@ To enable Track changes, follow these steps.
 
 1. In Dataverse, select the table.
 2. Select **Properties \> Advance Options**.
-3. Select **Track changes**. The checkbox should be enabled. If the checkbox is disabled, see [Troubleshooting](#Troubleshooting).
+3. Select **Track changes**. The checkbox should be enabled. If the checkbox is disabled, see [Troubleshooting](azure-synapse-link-select-FnO-data.md#Troubleshooting).
 
 ### Troubleshooting 
 
