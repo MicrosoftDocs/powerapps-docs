@@ -59,7 +59,7 @@ With your [canvas app open for editing](edit-app.md):
    > [!div class="mx-imgBorder"]
    > ![Add the Chatbot control.](media/chatbot-control/ai-chatbot-control-3.png)
 
-2. In the Chatbot properties pane, enter the Power Virtual Agents bot schema name in the **Schema Name** field.
+3. Choose the bot you want to connect from one of your published Power Virtual Agents bots, or select **New chatbot** to create a new one.
 
     You can change the name, the position, and size of the control.
 
@@ -67,9 +67,9 @@ With your [canvas app open for editing](edit-app.md):
 
 The following are the main properties for Chatbot control: 
 
-- **Schema name**:  The schema name property must be entered to connect your published Power Virtual Agents bot to your canvas app. For more information on how to get the Schema name, see [Prerequisites](add-ai-chatbot.md#prerequisites) section in this article.
-
 - **Header label**: This is the name of the bot that your end-user will see. If don't enter a header label, it will be **Chatbot**.
+
+- **Schema name**: This property refers to the Power Virtual Agents bot that you connect to. This property will automatically populate once a bot has been selected from the bot selection panel. To open the bot selection panel, select the highlighted text of the property value **Select bot**.  
 
   > [!div class="mx-imgBorder"]
   > ![Add schema name.](media/chatbot-control/ai-chatbot-control-4.png)
