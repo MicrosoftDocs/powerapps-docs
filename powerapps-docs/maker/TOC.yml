@@ -1757,32 +1757,26 @@
     href: ../mobile/tenant-switcher.md
   - name: Mobile offline for model-driven apps
     items:
-    - name: Set up mobile offline (classic)
+    - name: Mobile offline overview
+      href: ../mobile/mobile-offline-overview.md
+    - name: Set up guide
       items:
-      - name: Mobile offline overview (classic)
-        href: ../mobile/mobile-offline-overview-classic.md
-      - name: Set up mobile offline (classic)
-        href: ../mobile/setup-mobile-offline-classic.md
-      - name: Work offline on your mobile device (classic)
-        href: ../mobile/work-offline-mode-classic.md
-    - name: Set up mobile offline (preview)
-      items:
-      - name: Mobile offline overview (preview)
-        href: ../mobile/mobile-offline-overview.md
-      - name: Set up mobile offline (preview)
+      - name: Set up mobile offline
         href: ../mobile/setup-mobile-offline.md 
+      - name: Configure mobile offline profiles for images and files
+        href: ../mobile/offline-file-images.md
+      - name: Offline profile guidelines
+        href: ../mobile/mobile-offline-guidelines.md  
+      - name: Mobile offline capabilities and limitations
+        href: ../mobile/offline-capabilities.md
+    - name: User guide
+      items:
       - name: Enable and use offline-first (preview)
         href: ../mobile/work-in-offline-mode.md 
-    - name: View offline sync status
-      href: ../mobile/offline-sync-icon.md
-    - name: Sync data in the background
-      href: ../mobile/sync-data-offline-background.md
-    - name: Configure mobile offline profiles for images and files
-      href: ../mobile/offline-file-images.md
-    - name: Offline profile guidelines
-      href: ../mobile/mobile-offline-guidelines.md  
-    - name: Mobile offline capabilities and limitations
-      href: ../mobile/offline-capabilities.md
+      - name: View offline sync status
+        href: ../mobile/offline-sync-icon.md
+      - name: Sync data in the background
+        href: ../mobile/sync-data-offline-background.md
   - name: Mobile offline for canvas apps (preview)
     items:
     - name: Mobile offline for canvas apps overview (preview)
