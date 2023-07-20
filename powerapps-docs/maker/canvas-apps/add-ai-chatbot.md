@@ -85,7 +85,7 @@ The following are the main properties for Chatbot control:
 
 ## Limitations
 
-1. ChatBot control isn't supported on the Power Apps mobile app.
+1. Chatbot control isn't supported on the Power Apps mobile app.
 2. Chatbot control isn't available in [Power Apps US Government](/power-platform/admin/powerapps-us-government) or Mookcake.
 
 ## See also
