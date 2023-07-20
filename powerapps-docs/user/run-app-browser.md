@@ -38,7 +38,7 @@ The Home page may show several types of business apps.
 
 ![Busines Apps.](media/bussinessapps.png)
 
-The apps that meet the following criteria will be shown in the list of **Office** apps:
+The list of **Office** apps is a limited, curated list based on the following criteria:
 
 - Apps that you launched in the last week.
 - Apps that you created. 
