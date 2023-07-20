@@ -21,13 +21,13 @@ contributors:
 
 Add Chatbot control to your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
-The Chabot control is also available in [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md). The control also supports authenticated Power Virtual Agent bots. A bot picker will list all bots that are in the same environment as your app.
+The Chabot control is also available in [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md). The control also supports authenticated Power Virtual Agents bots. A bot picker lists all bots that are in the same environment as your app.
 
 You can use an AI bot or AI boosted conversations bot:
 
-- With AI chatbots, you can create an extended tree of answers to support your users. More information:  [Power Virtual Agents preview quickstart (preview)](./power-virtual-agents/preview/quickstart)
+- With AI chatbots, you can create an extended tree of answers to support your users. More information: [Power Virtual Agents quickstart](/power-virtual-agents/quickstart-preview)
 
-- With AI boosted conversations Power Virtual Agents bot your bot can have a higher ability to respond to the user by using a number of prompts or generating a response based on provided "fallback" website which you set. The "fallback" website can include internal documents or publicly available websites. More information: [AI-based boosted conversations overview (preview)](/power-virtual-agents/nlu-gpt-overview)
+- With AI boosted conversations Power Virtual Agents bot your bot can have a higher ability to respond to the user by using a number of prompts or generating a response based on provided "fallback" website, which you set. The "fallback" website can include internal documents or publicly available websites. More information: [AI-based boosted conversations overview (preview)](/power-virtual-agents/nlu-gpt-overview)
 
 
 You can design the Chabot control by giving it a name, change the size of the control window, and position it anywhere on the screen.
@@ -69,15 +69,15 @@ With your [canvas app open for editing](edit-app.md):
 
 The following are the main properties for Chatbot control: 
 
-- **Header label**: This is the name of the bot that your end-user will see. If you don't enter a header label, it will be **Chatbot**.
+- **Header label**: This is the name of the bot that your end-user sees. If you don't enter a header label, then the name is **Chatbot**.
 
-- **Schema name**: This property refers to the Power Virtual Agents bot that you connect to. The property will automatically populate once a bot is selected. To choose a bot, for **Schema name** property select, **Select bot**.
+- **Schema name**: This property refers to the Power Virtual Agents bot that you connect to. The property automatically populates once a bot is selected. To choose a bot, for **Schema name** property select, **Select bot**.
 
-- **Visible**: Choose if you want the bot be visible or not
+- **Visible**: Choose if you want the bot be visible or not.
   
-- **Position** and **Size**: Determines how your bot will look on the screen. Use the other properties or move the control on the screen to set position and size of the control on the screen.
+- **Position** and **Size**: Determines how your bot looks on the screen. Use the other properties or move the control on the screen to set position and size of the control on the screen.
 
-  Once you select the bot and set the properties, the properties pane will look like this:
+  Once you select the bot and set the properties, the properties pane looks like this:
 
   > [!div class="mx-imgBorder"]
   > ![Add schema name.](media/chatbot-control/ai-chatbot-control-4.png)
