@@ -4,7 +4,7 @@ description: Set up and configure mobile offline for model-driven apps made with
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/18/2023
+ms.date: 07/20/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
