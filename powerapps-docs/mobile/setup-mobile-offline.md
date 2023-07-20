@@ -75,7 +75,7 @@ Follow these best practices when building an app for mobile offline use:
 
 ## Set up a mobile offline profile
 
-The mobile offline profile represents the dataset that's synced on a user's device. The profile contains the tables, including related filters, that are applied when data is synced to a user's device. For more information about offline profiles, see [Offline profile guidelines](mobile-offline-guidelines).
+The mobile offline profile represents the dataset that's synced on a user's device. The profile contains the tables, including related filters, that are applied when data is synced to a user's device. For more information about offline profiles, see [Offline profile guidelines](mobile-offline-guidelines.md).
 
 > [!Note]
 > If the offline profile is in advanced mode, it is required to add users to the offline profile. If you don't add a user to the offline profile, the user can't use the app in offline mode.
