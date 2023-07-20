@@ -16,7 +16,7 @@ Before you create a relationship you should confirm whether the table is eligibl
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
   
-|Message<br />Web API<br />SDK Request class|Description|
+|Message<br />Web API operation<br />SDK Request class|Description|
 |-------------|-----------------|
 |`CanBeReferenced`</br>[CanBeReferenced Action](xref:Microsoft.Dynamics.CRM.CanBeReferenced)<br /><xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencedRequest>|Checks whether the specified table can be the primary table (one) in a one-to-many relationship.|
 |`CanBeReferencing`</br>[CanBeReferencing Action](xref:Microsoft.Dynamics.CRM.CanBeReferencing)<br /><xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencingRequest>|Checks whether the specified table can be the referencing table (many) in a one-to-many relationship.|
