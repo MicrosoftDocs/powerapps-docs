@@ -101,6 +101,41 @@ To workaround this issue, enable the languages that you want and then import the
 
 Notice that when you try to create a security role in the Power Platform admin center when there’s already a security role with the same name in the environment, you receive a message that a role with the specified name already exists and the role isn’t created. However, it is possible through solution import to import a security role into an environment that already has a different security role with the same name. When this occurs, both security roles with the same name exist in the environment, which can make it difficult to distinguish between the two roles.
 
+### PrimaryName attribute not found for Entity
+Issue: During solution import, the following error is displayed: "PrimaryName attribute not found for Entity <entityname>"
+
+This error happens when the primary name attribute of the an entity is not part of the solution xml file. To mitigate, remove the entity from the solution  in source org, and then add the entity back to the source org with full assets, this will add the entity and the necessary metadata.
+
+### An entitykey with the selected attributes already exists on entity
+Issue: During solution import, the following error is displayed: "An entitykey (<entity key name>) with the selected attributes (<GUID>) already exists on entity with id <GUID> and name <entity name>"
+
+This error happens when a table and column already exist in the target environment which includes an entitykey. To resolve this, either:
+Delete the entity key for the table and column in the target environment
+[NOTE!] If the entity key is part of a managed solution. you will need to perform a solution upgrade for every solution listed above the solution that included the deleted entity key.
+or
+Remove the entity key from the solution.xml before importing
+
+
+### Maximum row size exceeds the allowed maximum of 8060 bytes
+
+Issue: During a solution import that includes columns that are not already present in a target table, the following information is included in an error: 
+
+"Exception type: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]
+
+Creating or altering table <table name> failed because the minimum row size would be 8070, including 1287 bytes of internal overhead. This exceeds the maximum allowable table row size of 8060 bytes."
+
+SQL has a hard row limit of 8060 bytes per row. Each column consumes some of this space, the size varies by data type. This limit cannot be extended. Users will have to remove columns in orter to successfully import. 
+
+The following include estimated toat columns and sized for various data types:
+- Option Set - 4 bytes
+- Date and Time - 8 bytes 
+- ID 20 bytes + more depending on unicode values
+- Lookups: 2 - 3 columns each consuming 16 bytes or more depending on unicode values are added for each lookup depending on if it is a standard lookup or custom polymorphic lookup
+- Image: 2 columns are used one for the image and one for the thumbnail, size may vary depending on pointer size and thumbnail
+- File: varies depending on pointer size
+- Currency: consumes between 2 to 4 columns depending on the decimal conversion. Number of bytes vary depending on the decimal conversion
+- Multiline text - up to 24 bytes
+
 ### See also
 
 [Update solutions](update-solutions.md) <br />
