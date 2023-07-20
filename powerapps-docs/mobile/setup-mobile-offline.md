@@ -174,7 +174,7 @@ However, if you selected **Advanced** you have to manually add users (requires a
 
 ## Enable mobile offline classic
 
-Offline-first is the default mode when you enable an app for offline use. If you want to switch to the offline classic mode, you need to enable it for each of your model-driven apps. It's a separate app setting for each app.
+Offline-first is the default mode when you enable an app for offline use. If you want to switch to the [offline classic mode](mobile-offline-overview.md#offline-first-vs-classic-offline), you need to enable it for each of your model-driven apps. It's a separate app setting for each app.
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 
