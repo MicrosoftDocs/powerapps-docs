@@ -21,7 +21,7 @@ contributors:
 
 Add Chatbot control to your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
-The chatbot control is also available in [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md). The control also supports authenticated Power Virtual Agent bots. A bot picker will list all bots that are in the same environment as your app.
+The Chabot control is also available in [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md). The control also supports authenticated Power Virtual Agent bots. A bot picker will list all bots that are in the same environment as your app.
 
 You can use an AI bot or AI boosted conversations bot:
 
@@ -56,7 +56,7 @@ Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-ove
 With your [canvas app open for editing](edit-app.md):
 
 1. On the app authoring menu, select **Insert**.
-2. Expand the **Input** menu and then select **Chatbot (preview)**). Place the chatbot control where you want to add it on the screen. 
+2. Expand the **Input** menu and then select **Chatbot (preview)**). Place the Chatbot control where you want to add it on the screen. 
 
    > [!div class="mx-imgBorder"]
    > ![Add the Chatbot control.](media/chatbot-control/ai-chatbot-control-3.png)
