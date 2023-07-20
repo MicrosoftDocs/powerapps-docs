@@ -45,6 +45,9 @@ The list of **Office** apps is a limited, curated list based on the following cr
 - Apps your admin marked as **Featured** in your tenant.
 - First-party, model-driven apps such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access and are hosted in production or default environments.
 
+> [!NOTE]
+> Marking an app as **Featured** is the only way to guarantee inclusion in the list.
+
 ### Known limitations
 - When a new app is shared with users, the app needs to meet the criteria listed above. Be aware that it can take up to 24 hours for the app to appear in the list of **Office** apps.
 - Some model-driven apps are not recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true). Note that featured apps will only appear to users who have access to the apps. Featured apps do not appear to all users.
