@@ -21,7 +21,7 @@ contributors:
 
 Add Chatbot control to your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
-The chatbot control is available in authenticated Power Virtual Agents 2 and in custom pages. A bot picker will list all bots that are in the same enviroment as your Power Apps.
+The chatbot control is available in authenticated Power Virtual Agents 2 and in custom pages. A bot picker will list all bots that are in the same environment as your Power Apps.
 
 You can use an AI bot or AI boosted conversations bot:
 
@@ -69,7 +69,7 @@ With your [canvas app open for editing](edit-app.md):
 
 The following are the main properties for Chatbot control: 
 
-- **Header label**: This is the name of the bot that your end-user will see. If don't enter a header label, it will be **Chatbot**.
+- **Header label**: This is the name of the bot that your end-user will see. If you don't enter a header label, it will be **Chatbot**.
 
 - **Schema name**: This property refers to the Power Virtual Agents bot that you connect to. The property will automatically populate once a bot is selected. To choose a bot, for **Schema name** property select, **Select bot**.
 
@@ -77,7 +77,7 @@ The following are the main properties for Chatbot control:
   
 - **Position** and **Size**: Determines how your bot will look on the screen. Use the other properties or move the control on the screen to set position and size of the control on the screen.
 
-  After selecting the bot and adjusting its placement or dimensions, the appearance of the property panel looks like this:
+  Once you select the bot and set the properties, the properties pane will look like this:
 
   > [!div class="mx-imgBorder"]
   > ![Add schema name.](media/chatbot-control/ai-chatbot-control-4.png)
