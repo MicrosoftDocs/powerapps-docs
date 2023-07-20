@@ -21,7 +21,7 @@ contributors:
 
 Add Chatbot control to your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
-The chatbot control is also available in [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md). THe control also supports authenticated Power Virtual Agent bots. A bot picker will list all bots that are in the same environment as your app.
+The chatbot control is also available in [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md). The control also supports authenticated Power Virtual Agent bots. A bot picker will list all bots that are in the same environment as your app.
 
 You can use an AI bot or AI boosted conversations bot:
 
