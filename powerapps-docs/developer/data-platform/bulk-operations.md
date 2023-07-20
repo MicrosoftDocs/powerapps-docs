@@ -284,4 +284,4 @@ These limits are based on data changes, so each item included in the `Targets` p
 [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)   
 [Sample: Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)   
 [Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)   
-[Use messages with the Organization service](use-messages.md)  
+[Use messages with the Organization service](org-service/use-messages.md)  
