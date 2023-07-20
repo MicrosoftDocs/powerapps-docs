@@ -60,7 +60,7 @@ During the preview, you need to enable the configuration key **Enable SQL row ve
 > [!NOTE]
 > When using a Tier 1 or CHE environment, you need to perform a full DBSync using Microsoft Visual Studio to complete the maintenance mode.
 
-After **Row Version Change Tracking** is enabled, a system event triggers in your environment that may cause tables in Export to Data lake to reinitialize. If you have downstream consumption pipelines, you may also need to re-initialize the pipelines. See documentation for more details.
+After **Row Version Change Tracking** is enabled, a system event triggers in your environment that may cause tables in Export to Data lake to reinitialize. If you have downstream consumption pipelines, you may also need to re-initialize the pipelines. For more information, see [Some tables have been "initialized" without user action](/dynamics365/fin-ops-core/dev-itpro/data-entities/finance-data-azure-data-lake#some-tables-have-been-initialized-without-user-action).
 
 ## Enable finance and operations apps tables in Synapse Link
 
@@ -78,14 +78,13 @@ To enable this feature during preview, you need to launch the maker portal using
 There are several limitations in the preview. These limitations will be addressed in the future. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Yammer group](https://aka.ms/SynapseLinkforDynamics).
 
 - You need to create a new synapse Link profile. You can’t add finance and operations apps tables into existing Synapse Link profiles.
-- Finance and operations apps tables can’t be added to Managed Store, aka. Data lake provisioned with Dataverse.
 - Finance and operations apps tables shipped by Microsoft are already enabled in Synapse Link except for the set of tables identified below. To enable custom tables, you need to enable change tracking in custom tables. For more information on enabling change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
 - The following tables that Microsoft provides aren't currently enabled. These tables will be enabled in a future release.
   - Tables without a unique index on the Rec ID column. For example, REQPLAN.
   - Tables that contain sensitive fields including: CUSTTABLE, VENDTABLE, CONTACTPERSON, VENDBANKACCOUNT, HCMPERSONPRIVATECITIZENSHIPDETAILS, HCMPERSONPRIVATEDETAILS, WHSWORKUSER, CUSTBANKACCOUNT, BANKACCOUNTTABLE, BANKSTMTISOREPORTENTRY, JMGEMPLOYEE.
   - Tables that contain EDT Array types PROJTABLE, TSTIMESHEETLINEWEEK, WHSCONTAINERTABLE, WHSWAVETABLE, WHSINVENTTABLE, RESOURCESETUP.
-- Finance and operations apps table updates in Delta parquet format may take up to one hour. We're working to reduce the time.
-- When working with finance and operations data, you must choose the Delta lake format as the default. You can enable Delta lake format by following steps here: [Export Microsoft Dataverse data in Delta Lake format](azure-synapse-link-delta-lake.md)
+- When working with finance and operations data, you must choose the Delta lake format as the default. You can enable Delta lake format by following steps here: [Export Microsoft Dataverse data in Delta Lake format](azure-synapse-link-delta-lake.md).
+- Finance and operations apps table export using the Delta lake format may take up to an hour to complete during the initial data export. Performance of the initial export will improve in the future updates.
 - You can only choose up to 1000 tables in a single Synapse Link profile.
 
 ## Enable finance and operations data entities in Synapse Link
@@ -97,11 +96,14 @@ Finance and operations apps entities are enabled in the following two steps. Eac
 1. **Enable finance and operations virtual entities in Power Apps maker portal** - this step enables you to use finance and operations entities in Power Apps maker portal to build apps and use with Synapse Link.
 2. **Enable change tracking** - this step is required to enable Synapse Link for finance and operations apps entities.
 
-You're able to choose finance and operations entities in Synapse Link (Hint: see tables with the mserp\_ prefix).
+You can now, select finance and operations entities in Synapse Link. Follow the steps to create Synapse link for Dataverse with Delta lake format in the [Export Dataverse data in Delta Lake format](/power-apps/maker/data-platform/azure-synapse-link-delta-lake) article.
+
+> [!NOTE]
+> Finance and Operations apps entities starts with prefix mserp\_.
 
 ### Enable finance and operations virtual entities in Power Apps maker portal
 
-Finance and operations entities need to be enabled as **virtual entities** in Dataverse. By Enabling finance and operations entities in Power Apps maker portal as a **Virtual entity**, you enable the chosen finance and operations entities to makers to build Apps and for Synapse Link. You need to perform the following steps to enable finance and operations entities as virtual entities in Power Apps maker portal.
+Finance and operations entities need to be enabled as **virtual entities** in Dataverse. By Enabling finance and operations entities in Dataverse as a **Virtual entity**, you enable the chosen finance and operations entities to makers to build Apps and for Synapse Link. You need to perform the following steps to enable finance and operations entities as virtual entities in Power Apps maker portal.
 
 To Enable finance and operations entities as virtual entities, follow the steps in [Enable Microsoft Dataverse virtual entities](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-virtual-entities).
 
@@ -132,12 +134,4 @@ Currently not all finance and operations entities can be enabled for change trac
 > [!NOTE]
 > For a list of ready-made entities that pass validation rules, see [SupportedEntitiesLink](https://www.yammer.com/dynamicsaxfeedbackprograms/uploaded_files/1647660802048)
 > You need to be a member of the preview yammer group to access this list. To join, visit [https://aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics)
-
-#### Virtual entity definition is obsolete
-
-Underlying entity definition may have changed since it was defined. You need to refresh.
-
-
-
-
 
