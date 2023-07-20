@@ -19,7 +19,7 @@ contributors:
 Monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all key activities in your app as the app runs. You can also collaboratively debug a published model-driven app with a support engineer or debug issues of another user's session. For more information on how to collaboratively debug a published model-driven app, see [Collaborative troubleshooting using Monitor](monitor-collaborative-debugging.md).
 
 > [!IMPORTANT]
-> Monitor for model-driven app requires the Unified Client version of your app to be 1.4.5973-2307.2 or later.
+> Monitor for model-driven app requires the client version of your model-driven app to be 1.4.5973-2307.2 or later.
 
 For more information about when you should monitor an app, see [Monitor overview](monitor-overview.md). To run Monitor with a canvas app, see [Debugging canvas apps with Monitor](monitor-canvasapps.md).
 
