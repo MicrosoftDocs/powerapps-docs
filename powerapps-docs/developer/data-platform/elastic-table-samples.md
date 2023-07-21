@@ -2,7 +2,7 @@
 title: "Elastic table sample code (preview)"
 description: "Learn about the sample code available on GitHub for Dataverse elastic table operations and the ExecuteCosmosSqlQuery message."
 ms.topic: article
-ms.date: 05/30/2023
+ms.date: 07/21/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -33,9 +33,10 @@ The following sample applications on GitHub demonstrate how to work with elastic
 
 - Create elastic tables using code.
 - Create, retrieve, update, upsert, and delete elastic table records.
-- Set JSON data for a column.
-- Use `$batch` to create elastic tables in bulk.
+- Use the `CreateMultiple` action to create elastic table records. <!--TODO Add link -->
+- Use the `UpdateMultiple` action to set JSON data for a column.<!--TODO Add link -->
 - Use the [ExecuteCosmosSqlQuery Function](xref:Microsoft.Dynamics.CRM.ExecuteCosmosSqlQuery) to query JSON data in columns.
+- Use the `DeleteMultiple` action to delete elastic table records <!--TODO Add link -->
 
 
 > [!div class="nextstepaction"]
@@ -45,8 +46,8 @@ The following sample applications on GitHub demonstrate how to work with elastic
 
 ## See also
 
-[Elastic tables (preview)](elastic-tables.md)<br />
-[Create elastic tables using code (preview)](create-elastic-tables.md)<br />
-[Use elastic tables using code (preview)](use-elastic-tables.md)<br />
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)<br />
-[Bulk operations with elastic tables (preview)](bulk-operations-elastic-tables.md)
+[Elastic tables (preview)](elastic-tables.md)   
+[Create elastic tables using code (preview)](create-elastic-tables.md)   
+[Use elastic tables using code (preview)](use-elastic-tables.md)   
+[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)   
+[Bulk Operation messages (preview)](bulk-operations.md)

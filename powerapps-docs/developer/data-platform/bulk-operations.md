@@ -1,7 +1,7 @@
 ---
 title: Bulk Operation messages (preview)
 description: Learn how to use special APIs to perform operations on multiple rows of data. These API provide performance benefits compared to other options. 
-ms.date: 04/03/2022
+ms.date: 07/21/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -45,20 +45,32 @@ Standard and elastic table usage is different because standard tables use Azure 
 
 ### Number of records
 
-**With standard tables**, bulk operations are optimized to perform operations on multiple rows within a single transaction. Operations become more efficient, and therefore more performant overall, as the number of operations per request increases. This also allows for any plug-in steps registered for the bulk operation to be more efficient. Each time a plug-in is invoked for a single operation, some milliseconds are required to invoke the plug-in class containing the logic. When a plug-in is registered for a bulk operation message, the class is invoked once and can process all the operations more efficiently. More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)
+The number of records you should include with each request is different depending on whether you are using standard or elastic tables.
 
-This performance benefit gives you an incentive to send the largest number of records you can in each request. However, as the number of records increases, the size of the request becomes larger and takes longer to process and you will encounter limits. If you hit these limits, the entire operation will fail. There is no set limit on the number of records to send. You will need to experiment to find the best number. Generally, we expect that 1000 records per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you may encounter can usually be addressed by sending fewer records with each request. We recommend that you include the ability to configure the number of entities sent so you can adapt by sending fewer.
+#### Number of records with standard tables
 
-**With elastic tables**, there is no transaction, so there is no performance benefit in trying to send the largest number per request. We recommend sending 100 operations per request and sending requests in parallel to achieve maximum throughput.
+Bulk operations with standard tables are optimized to perform operations on multiple rows within a single transaction. Operations become more efficient, and therefore more performant overall, as the number of operations per request increases. This also allows for any plug-in steps registered for the bulk operation to be more efficient. Each time a plug-in is invoked for a single operation, some milliseconds are required to invoke the plug-in class containing the logic. When a plug-in is registered for a bulk operation message, the class is invoked once and can process all the operations more efficiently. More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)
+
+This performance benefit gives you an incentive to send the largest number of records you can in each request. However, as the number of records increases, the size of the request becomes larger and takes longer to process and you will encounter limits. If you hit these limits, the entire operation will fail. There is no set limit on the number of records to send. You will need to experiment to find the best number. Generally, we expect that 1000 records per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you may encounter can usually be addressed by sending fewer records with each request. We recommend that you include the ability to configure the number of entities sent so you can adapt by sending fewer. More information: [Message size and time limits](#message-size-and-time-limits)
+
+#### Number of records with elastic tables
+
+Because there is no transaction with elastic tables, there is no performance benefit in trying to send the largest number per request. We recommend sending 100 operations per request and sending requests in parallel to achieve maximum throughput.
 
 > [!TIP]
 > Both standard and elastic tables have greater throughput when you use bulk operation messages in parallel. More information: [Send parallel requests](send-parallel-requests.md)
 
 ### On Error behavior
 
-**With standard tables**, any error that occurs within a bulk operation will cause the entire operation to rollback. You should only use bulk operations with standard tables when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that allows the set of operations to fall back to use the SDK [ExecuteMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest) or Web API `$batch` if the bulk operation fails. If the success rate for your initial try is low, this strategy will result in worse performance. Only use this fall back strategy when most operations are expected to succeed.
+The behavior when errors occur is different depending on whether you are using standard or elastic tables.
 
-**With elastic tables**, a bulk operation may partially succeed and you can detect which records have failed from the error details.
+#### On Error behavior with standard tables
+
+Any error that occurs within a bulk operation with a standard table will cause the entire operation to rollback. You should only use bulk operations with standard tables when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that allows the set of operations to fall back to use the SDK [ExecuteMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest) or Web API `$batch` if the bulk operation fails. If the success rate for your initial try is low, this strategy will result in worse performance. Only use this fall back strategy when most operations are expected to succeed.
+
+#### On Error behavior with elastic tables
+
+With elastic tables a bulk operation may partially succeed and you can detect which records have failed from the error details.
 
 # [SDK for .NET](#tab/sdk)
 
@@ -85,13 +97,15 @@ When using Web API to perform a bulk operation with an elastic table, you need t
 ---
 ### Availability
 
-**With standard tables**, you can use the `CreateMultiple` and `UpdateMultiple` bulk operation messages for all tables that support the `Create` and `Update` messages except the following:
+Bulk operation message availability is different depending on whether you are using standard or elastic tables. All elastic tables support the `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple` messages.
 
-Account, Contact, ... TBD
+#### Availability with standard tables
+
+You can use the `CreateMultiple` and `UpdateMultiple` bulk operation messages for custom tables and most common tables.
 
 You can test whether individual standard tables support these messages today using the examples below.
 
-#### [SDK for .NET](#tab/sdk)
+##### [SDK for .NET](#tab/sdk)
 
 Use this static method to detect whether a given table supports any specific named message, including `CreateMultiple` or `UpdateMultiple`.
 
@@ -146,7 +160,7 @@ public static bool IsMessageAvailable(
 }
 ```
 
-#### [Web API](#tab/webapi)
+##### [Web API](#tab/webapi)
 
 Use the following `GET` request to detect whether a message is available for a table. The request below tests whether the `sample_example` table supports the `CreateMultiple` message.  Replace the `@message` and `@table` parameter values for the message and table you want to test.
 
@@ -179,15 +193,15 @@ OData-Version: 4.0
 
 ---
 
-**With elastic tables**, all tables support bulk operations.
-
 ### DeleteMultiple
 
-**With standard tables**, At this time, `DeleteMultiple` is supported only for elastic tables because elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md). Relationship cascading behavior can result in unpredictable execution times for delete operations. If you use `DeleteMultiple` on a standard table you will get the error `DeleteMultiple has not yet been implemented.`
+At this time, `DeleteMultiple` is supported only for elastic tables because elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md). Relationship cascading behavior can result in unpredictable execution times for delete operations. If you use `DeleteMultiple` on a standard table you will get the error `DeleteMultiple has not yet been implemented.`
 
 For standard tables, we recommend using the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete), that enables asynchronous deletion of records that match a query. More information: [Delete data in bulk](delete-data-bulk.md)
 
-**With elastic tables**, the `DeleteMultiple` message is not available for use with the Web API and the SDK doesn't include a `DeleteMultipleRequest` class yet. Use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type.
+With elastic tables, the `DeleteMultiple` message is not yet available for use with the Web API and the SDK doesn't include a `DeleteMultipleRequest` class. Until these are available, use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type.
+
+
 
 ## Message pipelines merged
 
@@ -217,6 +231,7 @@ More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview
 ## Limitations
 
 Keep the following limitations in mind when using bulk operation messages.
+
 ### Message size and time limits
 
 As mentioned in [Number of records](#number-of-records), with standard tables there is a performance incentive to send more records with each request. However, the number of records you can send is limited by the size of the payload and the amount of time required to process the operation.

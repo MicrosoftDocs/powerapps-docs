@@ -2,7 +2,7 @@
 title: "Use elastic tables using code (preview)"
 description: "Learn how to perform data operations on Dataverse elastic tables using code"
 ms.topic: article
-ms.date: 05/27/2023
+ms.date: 07/21/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -673,6 +673,339 @@ You could also use the `partitionId` parameter:
 
 ---
 
+## Bulk operations with elastic tables
+
+Often applications need to ingest large amount of data into Dataverse in a short amount of time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput can be higher.
+
+Bulk operations are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. More information: [Bulk Operation messages (preview)](bulk-operations.md)
+
+### Use CreateMultiple with elastic tables
+
+You can use the `CreateMultiple` message with either the SDK for .NET or Web API.
+
+#### [SDK for .NET](#tab/sdk)
+
+This example uses the [CreateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest) to create multiple rows in `contoso_SensorData` elastic table.
+
+```csharp
+public static Guid CreateMultiple(IOrganizationService service)
+{
+   string tableLogicalName = "contoso_sensordata";
+
+    List<Microsoft.Xrm.Sdk.Entity> entityList = new List<Microsoft.Xrm.Sdk.Entity>
+      {      
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
+         {
+            Attributes =
+            {
+               { "contoso_deviceId", "deviceid-001" },
+               { "contoso_sensortype", "Humidity" },
+               { "contoso_value", "40" },
+               { "contoso_timestamp", "2023-05-01Z05:00:00"},
+               { "partitionid", "deviceid-001" },
+               { "ttlinseconds", 86400 }
+            }
+         },
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
+         {
+            Attributes =
+            {
+               { "contoso_deviceId", "deviceid-002" },
+               { "contoso_sensortype", "Humidity" },
+               { "contoso_value", "10" },
+               { "contoso_timestamp", "2023-05-01Z09:30:00"},
+               { "partitionid", "deviceid-002" },
+               { "ttlinseconds", 86400 }
+            }
+         }
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
+         {
+            Attributes =
+            {
+               { "contoso_deviceId", "deviceid-002" },
+               { "contoso_sensortype", "Pressure" },
+               { "contoso_value", "20" },
+               { "contoso_timestamp", "2023-05-01Z07:20:00"},
+               { "partitionid", "deviceid-002" },
+               { "ttlinseconds", 86400 }
+            }
+         }
+      };
+
+    // Create an EntityCollection populated with the list of entities.
+    EntityCollection entities = new(entityList)
+    {
+        EntityName = tableLogicalName
+    };
+
+    // Use CreateMultipleRequest
+    CreateMultipleRequest createMultipleRequest = new()
+    {
+        Targets = entities,
+    };
+    return service.Execute(request);
+}
+```
+
+#### [Web API](#tab/webapi)
+
+The following example shows how to use the `CreateMultiple` action to create multiple rows in the `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows. These operations set the `contoso_deviceid`,`contoso_sensortype`, `partitionid`, and `ttlinseconds` properties.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/contoso_sensordatas/Microsoft.Dynamics.CRM.CreateMultiple
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 741
+
+{
+  "Targets": [
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_deviceid": "Device-ABC-1234",
+      "contoso_sensortype": "Humidity",
+      "partitionid": "Device-ABC-1234",
+      "ttlinseconds": 86400
+    },
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_deviceid": "Device-ABC-1234",
+      "contoso_sensortype": "Humidity",
+      "partitionid": "Device-ABC-1234",
+      "ttlinseconds": 86400
+    },
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_deviceid": "Device-ABC-1234",
+      "contoso_sensortype": "Humidity",
+      "partitionid": "Device-ABC-1234",
+      "ttlinseconds": 86400
+    }
+  ]
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreateMultipleResponse",
+  "Ids": [
+    "6114ca58-0928-ee11-9965-6045bd5cd155",
+    "6214ca58-0928-ee11-9965-6045bd5cd155",
+    "6314ca58-0928-ee11-9965-6045bd5cd155"
+  ]
+}
+```
+
+---
+
+### Use UpdateMultiple with elastic tables
+
+You can use the `UpdateMultiple` message with either the SDK for .NET or Web API.
+
+#### [SDK for .NET](#tab/sdk)
+
+This example uses the [UpdateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest) to update multiple rows of `contoso_SensorData` elastic table. These examples are setting the `contoso_value` column.
+
+```csharp
+public static Guid UpdateMultiple(IOrganizationService service)
+{
+   string tableLogicalName = "contoso_sensordata";
+
+    List<Microsoft.Xrm.Sdk.Entity> entityList = new List<Microsoft.Xrm.Sdk.Entity>
+      {
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
+         {
+            Attributes =
+            {
+               { "contoso_value", "45" },
+               { "partitionid", "deviceid-001" }
+            }
+         },
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
+         {
+            Attributes =
+            {
+               { "contoso_value", "15" },
+               { "partitionid", "deviceid-002" }
+            }
+         }
+         new Microsoft.Xrm.Sdk.Entity(tableLogicalName)
+         {
+            Attributes =
+            {
+               { "contoso_value", "25" },
+               { "partitionid", "deviceid-002" }
+            }
+         }
+      };
+
+    // Create an EntityCollection populated with the list of entities.
+    EntityCollection entities = new(entityList)
+    {
+        EntityName = tableLogicalName
+    };
+
+    // Use UpdateMultipleRequest
+    UpdateMultipleRequest updateMultipleRequest = new()
+    {
+        Targets = entities,
+    };
+    return service.Execute(request);
+}
+```
+
+#### [Web API](#tab/webapi)
+
+The following example shows how to use the `UpdateMultiple` action to update multiple rows from `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows. These updates set the `contoso_energyconsumption` property.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/contoso_sensordatas/Microsoft.Dynamics.CRM.UpdateMultiple
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 954
+
+{
+  "Targets": [
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_sensordataid": "6114ca58-0928-ee11-9965-6045bd5cd155",
+      "partitionid": "Device-ABC-1234",
+      "contoso_energyconsumption": "{\"power\":2,\"powerUnit\":\"Watts\",\"voltage\":1,\"voltageUnit\":\"Volts\"}"
+    },
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_sensordataid": "6214ca58-0928-ee11-9965-6045bd5cd155",
+      "partitionid": "Device-ABC-1234",
+      "contoso_energyconsumption": "{\"power\":4,\"powerUnit\":\"Watts\",\"voltage\":2,\"voltageUnit\":\"Volts\"}"
+    },
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_sensordataid": "6314ca58-0928-ee11-9965-6045bd5cd155",
+      "partitionid": "Device-ABC-1234",
+      "contoso_energyconsumption": "{\"power\":6,\"powerUnit\":\"Watts\",\"voltage\":3,\"voltageUnit\":\"Volts\"}"
+    }
+  ]
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+---
+
+### Use DeleteMultiple with elastic tables
+
+You can use the `DeleteMultiple` message with either the SDK for .NET or Web API.
+#### [SDK for .NET](#tab/sdk)
+
+> [!NOTE]
+> With the SDK you must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) class because the SDK doesn't currently have a `DeleteMultipleRequest` class. More information: [Use messages with the Organization service](org-service/use-messages.md)
+
+The following `DeleteMultipleExample` static method uses `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from `contoso_SensorData` elastic table using the alternate key to include the `partitionid` to uniquely identify the rows.
+
+```csharp
+public static void DeleteMultipleExample(IOrganizationService service)
+{
+    string tableLogicalName = "contoso_sensordata";
+
+    List<EntityReference> entityReferences = new() {
+        {
+            new EntityReference(logicalName: tableLogicalName,
+               keyAttributeCollection: new KeyAttributeCollection
+               {
+                  { "contoso_sensordataid", "3f56361a-b210-4a74-8708-3c664038fa41" },
+                  { "partitionid", "deviceid-001" }
+               })
+        },
+        { new EntityReference(logicalName: tableLogicalName,
+               keyAttributeCollection: new KeyAttributeCollection
+               {
+                  { "contoso_sensordataid", "e682715b-1bba-415e-b2bc-de9327308423" },
+                  { "partitionid", "deviceid-002" }
+               })
+        }
+    };
+
+    OrganizationRequest request = new(requestName:"DeleteMultiple")
+    {
+        Parameters = {
+            {"Targets", new EntityReferenceCollection(entityReferences)}
+        }
+    };
+
+    service.Execute(request);
+}
+```
+
+#### [Web API](#tab/webapi)
+
+The following example shows how to use the `DeleteMultiple` action to delete multiple rows from `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows.
+
+> [!NOTE]
+> At the time of this writing, the Web API `DeleteMultiple` action is a private action. You won't find it in the [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) or in the Dataverse <xref:Microsoft.Dynamics.CRM.ActionIndex?displayProperty=fullName>. This action will become public in the coming weeks. You can use it while it is private.
+
+
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/contoso_sensordatas/Microsoft.Dynamics.CRM.DeleteMultiple
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 603
+
+{
+  "Targets": [
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_sensordataid": "6114ca58-0928-ee11-9965-6045bd5cd155",
+      "partitionid": "Device-ABC-1234"
+    },
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_sensordataid": "6214ca58-0928-ee11-9965-6045bd5cd155",
+      "partitionid": "Device-ABC-1234"
+    },
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_sensordataid": "6314ca58-0928-ee11-9965-6045bd5cd155",
+      "partitionid": "Device-ABC-1234"
+    }
+  ]
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+---
+
+
 ## Next steps
 
 Learn how to create and query JSON data in JSON columns in elastic tables with code
@@ -682,8 +1015,8 @@ Learn how to create and query JSON data in JSON columns in elastic tables with c
 
 ### See also
 
-[Elastic tables (preview)](elastic-tables.md)<br />
-[Create elastic tables using code](create-elastic-tables.md)<br />
-[Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)<br />
-[Elastic table sample code (preview)](elastic-table-samples.md)
+[Elastic tables (preview)](elastic-tables.md)   
+[Create elastic tables using code](create-elastic-tables.md)   
+[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)   
+[Elastic table sample code (preview)](elastic-table-samples.md)   
+[Bulk Operation messages (preview)](bulk-operations.md)
