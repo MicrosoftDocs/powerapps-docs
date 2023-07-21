@@ -13,6 +13,8 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
+contributors:
+- brsova
 ---
 
 # Run an app in a web browser
@@ -38,7 +40,7 @@ The Home page may show several types of business apps.
 
 ![Busines Apps.](media/bussinessapps.png)
 
-The list of **Office** apps is a limited, curated list based on the following criteria:
+The list of Office apps is a limited, curated list based on the following criteria:
 
 - Apps that you launched in the last week.
 - Apps that you created. 
