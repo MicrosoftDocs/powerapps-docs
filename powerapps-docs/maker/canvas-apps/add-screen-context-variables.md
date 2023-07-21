@@ -17,19 +17,25 @@ contributors:
 ---
 # Add a screen using screen layouts
 
-When you add a new screen, you have the option to choose from a variety of screen layouts. The new layouts automatically adjust to fit the screen size of the device being used to run the app.
+When you add a new screen, you have the option to choose from a variety of screen layouts. The new layouts automatically adjust to fit the screen size of the device being used to run the app. 
 
 > [!div class="mx-imgBorder"]
 > ![Screen layouts.](./media/add-screen-context-variables/screen-layouts.png)
 
+When you preview the app, you can preview the layout by selecting different screen sizes to see how it reponds. 
+
 ## Add a new screen
 
-When you The app's screen layout adjusts to varying screen sizes, and you can preview it by selecting different screen sizes to see how it reponds. 
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+2. Create a canvas app in tablet format. 
+3. In Power Apps Studio, on the command bar, select **New screen** and then select a screen layout.
 
-On the command bar, select **New screen** and then select a screen layout.
+When you're done, you can preview the app and see how the app displays on different devices. More information: [Preview an app](preview-app.md)
 
 
 ## Reorder screens
+
+When you have more then one screen you can reorder them.
 
 In the left pane, hover over a screen that you want to move up or down, and then select **Move up** or **Move down**.
 
@@ -38,7 +44,9 @@ In the left pane, hover over a screen that you want to move up or down, and then
 
 ## Add navigation
 
-1. With the **Source** screen selected, open the **Insert** tab, select **Icons**, and then select **Next arrow**.  
+
+
+1. With the sceen screen selected, open the **Insert** tab, select **Icons**, and then select **Next arrow**.  
 
     ![The Shapes option on the Insert tab.](./media/add-screen-context-variables/add-next-arrow.png)
 
