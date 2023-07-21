@@ -50,13 +50,13 @@ When you create a canvas app with multiple screens, you can add navigatation so 
 
 2. (optional) Move the arrow so that it appears in the lower-right corner of the screen.
 
-3. With the arrow still selected, set t he **[OnSelect](controls/properties-core.md)** property for the arrow is automatically set to a **Navigate** function.
+3. With the arrow is selected, set the **[OnSelect](controls/properties-core.md)** property for the arrow is automatically set to a **Navigate** function.
 
     ![OnSelect property set to Navigate function.](./media/add-screen-context-variables/onselect-default.png)
 
     When a user selects the arrow, the **Target** screen fades in.
 
-4. On the **Target** screen, add a **Back arrow**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
+4. On the **Target** screen, add a **Back arrow** icon, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
     `Navigate(Target, ScreenTransition.Fade)`
 
