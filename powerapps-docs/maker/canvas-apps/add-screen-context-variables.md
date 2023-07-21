@@ -15,29 +15,23 @@ contributors:
   - mduelae
   - emcoope-msft
 ---
-# Add a screen to a canvas app and navigate between screens
+# Add a screen using screen layouts
 
-Create a canvas app with multiple screens, and add ways for users to navigate between them.
+When you add a new screen, you have the option to choose from a variety of screen layouts. The new layouts automatically adjust to fit the screen size of the device being used to run the app.
 
-## Add and rename a screen
+> [!div class="mx-imgBorder"]
+> ![Screen layouts.](./media/add-screen-context-variables/sceen-layouts.png)
 
-1. On the **Home** tab, select **New screen**, and then select the type of screen that you want to add.
+## Add a new screen
 
-    ![Add Screen option on the Home tab.](./media/add-screen-context-variables/add-screen.png)
+When you The app's screen layout adjusts to varying screen sizes, and you can preview it by selecting different screen sizes to see how it reponds. 
 
-2. In the right-hand pane, select the name of the screen (just above the **Properties** tab), and then type **Source**.
+On the command bar, select **New screen** and then select a screen layout.
 
-    ![Rename the default screen.](./media/add-screen-context-variables/name-source-screen.png)
-
-3. Add another screen, and name it **Target**.
-
-    ![Two screens in the left navigation bar.](./media/add-screen-context-variables/two-screens-in-nav.png)
 
 ## Reorder screens
 
-In the left navigation bar, hover over a screen that you want to move up or down, select the ellipsis button that appears, and then select **Move up** or **Move down**.
-
-![Reorder screen.](./media/add-screen-context-variables/reorder-screen.png)
+In the left pane, hover over a screen that you want to move up or down, and then select **Move up** or **Move down**.
 
 > [!NOTE]
 > When the app is opened, the screen at the top of the hierarchical list of controls usually appears first. But you can specify a different screen by setting the **[OnStart](controls/control-screen.md)** property to a formula that includes the **[Navigate](functions/function-navigate.md)** function.
