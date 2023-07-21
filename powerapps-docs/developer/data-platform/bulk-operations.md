@@ -183,11 +183,11 @@ OData-Version: 4.0
 
 ### DeleteMultiple
 
-At this time, `DeleteMultiple` is supported only for elastic tables because elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md).
+**With standard tables**, At this time, `DeleteMultiple` is supported only for elastic tables because elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md). Relationship cascading behavior can result in unpredictable execution times for delete operations. If you use `DeleteMultiple` on a standard table you will get the error `DeleteMultiple has not yet been implemented.`
 
-**With standard tables**, relationship cascading behavior can result in unpredictable execution times. If we support `DeleteMultiple` for standard tables, it may not be the best choice. For standard tables, we recommend using the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete), that enables asynchronous deletion of records that match a query. More information: [Delete data in bulk](delete-data-bulk.md)
+For standard tables, we recommend using the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete), that enables asynchronous deletion of records that match a query. More information: [Delete data in bulk](delete-data-bulk.md)
 
-**With elastic tables**, the `DeleteMultiple` message is not available for use with the Web API and the SDK doesn't include a DeleteMultipleRequest class. Use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type.
+**With elastic tables**, the `DeleteMultiple` message is not available for use with the Web API and the SDK doesn't include a `DeleteMultipleRequest` class yet. Use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type.
 
 ## Message pipelines merged
 
@@ -282,6 +282,7 @@ These limits are based on data changes, so each item included in the `Targets` p
 
 [Elastic tables (preview)](elastic-tables.md)   
 [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)   
-[Sample: Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)   
+[Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)   
+[Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](webapi/samples/create-update-multiple.md)   
 [Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)   
-[Use messages with the Organization service](org-service/use-messages.md)  
+[Use messages with the Organization service](org-service/use-messages.md)   
