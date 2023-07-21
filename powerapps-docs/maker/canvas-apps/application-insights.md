@@ -432,8 +432,8 @@ A set of default dimensions is also added to the *customDimensions* property on 
 
 Application Insights doesn't support the following scenarios.
 
-- Offline and mobile apps player events (both Android and iOS) aren't captured.
-- Network requests and errors aren't captured.  
+- Offline player events aren't captured.
+- Mobile app (both iOS and Android) events aren't captured when app is suspended.
 - GCC and non-public clouds aren't supported.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
