@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/10/2023
+ms.date: 07/21/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -51,11 +51,11 @@ The list of Office apps is a limited, curated list based on the following criter
 > Marking an app as **Featured** is the only way to guarantee inclusion in the list.
 
 ### Known limitations
-- When a new app is shared with users, the app needs to meet the criteria listed above. Be aware that it can take up to 24 hours for the app to appear in the list of **Office** apps.
-- Some model-driven apps are not recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true). Note that featured apps will only appear to users who have access to the apps. Featured apps do not appear to all users.
-- It's possible that users will be able to see model-driven apps that they used to be able to access, but can no longer. There's also a chance that users will not be able to see model-driven apps that they have access to.    
+- When a new app is shared with users, the app needs to meet the criteria listed above. It can take up to 24 hours for the app to appear in the list of **Office** apps.
+- Some model-driven apps aren't recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true). Featured appsF only appear to users who have access to the apps. Featured apps don't appear to all users.
+- It's possible that users will be able to see model-driven apps that they used to be able to access, but can no longer. There's also a chance that users won't be able to see model-driven apps that they have access to.    
 
-### What if I cannot find an app?
+### What if I can't find an app?
 
 Apps that haven't been used in the last week won't appear in the list of **Office** apps. If you can't find an app, then you need to use the web link to open the app directly in your browser.
 
