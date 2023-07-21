@@ -103,13 +103,13 @@ Notice that when you try to create a security role in the Power Platform admin c
 
 ### PrimaryName attribute not found for Entity
 
-Issue: During solution import, the following error is displayed: "PrimaryName attribute not found for Entity <entityname>"
+Issue: During solution import, the following error is displayed: "PrimaryName attribute not found for Entity [entityname]"
 
 This error happens when the primary name attribute of an entity isn't part of the solution xml file. To mitigate, remove the entity from the solution  in source org, and then add the entity back to the source org with full assets, this adds the entity and the necessary metadata.
 
 ### An entitykey with the selected attributes already exists on entity
 
-Issue: During solution import, the following error is displayed: "An entitykey (<entity key name>) with the selected attributes (<GUID>) already exists on entity with id <GUID> and name <entity name>"
+Issue: During solution import, the following error is displayed: "An entitykey [entity key name] with the selected attributes [GUID] already exists on entity with id [GUID] and name [entity name]"
 
 This error happens when a table and column already exist in the target environment that includes an entitykey.
 
@@ -127,7 +127,7 @@ Issue: During a solution import that includes columns that aren't already presen
 
 "Exception type: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]
 
-Creating or altering table <table name> failed because the minimum row size would be 8070, including 1287 bytes of internal overhead. This exceeds the maximum allowable table row size of 8060 bytes."
+Creating or altering table [table name] failed because the minimum row size would be 8070, including 1287 bytes of internal overhead. This exceeds the maximum allowable table row size of 8060 bytes."
 
 SQL has a hard row limit of 8060 bytes per row. Each column consumes some of this space, the size varies by data type. This limit can't be extended. Users have to remove columns in order to successfully import. 
 
