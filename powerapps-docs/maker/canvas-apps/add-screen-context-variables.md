@@ -20,7 +20,7 @@ contributors:
 When you add a new screen, you have the option to choose from a variety of screen layouts. The new layouts automatically adjust to fit the screen size of the device being used to run the app.
 
 > [!div class="mx-imgBorder"]
-> ![Screen layouts.](./media/add-screen-context-variables/sceen-layouts.png)
+> ![Screen layouts.](./media/add-screen-context-variables/screen-layouts.png)
 
 ## Add a new screen
 
