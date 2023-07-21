@@ -44,6 +44,7 @@ In the left pane, hover over a screen that you want to move up or down, and then
 
 ## Add navigation
 
+When you create a canvas app with multiple screens, you can add navigate so you're users can navigate between them.
 
 
 1. With the sceen screen selected, open the **Insert** tab, select **Icons**, and then select **Next arrow**.  
