@@ -2,7 +2,7 @@
 title: "Import solutions | MicrosoftDocs"
 description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
-ms.date: 03/21/2022
+ms.date: 07/21/2023
 ms.reviewer: ""
 ms.topic: "article"
 author: "Mattp123"
@@ -39,11 +39,11 @@ To import a solution:
 
 1. Select **Next**.  
   
-1. Information about the solution is displayed. By default, in the **Advanced settings** section, if plugin steps (also known as SDK message processing steps) and flows exist in the solution, they will be imported. Clear the **Enable Plugin steps and flows included in the solution** option if you want them to import in an inactive state.
+1. Information about the solution is displayed. By default, in the **Advanced settings** section, if plugin steps (also known as SDK message processing steps) and flows exist in the solution, they'll be imported. Clear the **Enable Plugin steps and flows included in the solution** option if you want them to import in an inactive state.
 
-1. If your solution contains [connection references](create-connection-reference.md), you’ll be prompted to select the connections you want. If a connection does not already exist, create a new one. Select **Next**.
+1. If your solution contains [connection references](create-connection-reference.md), you are prompted to select the connections you want. If a connection doesn't already exist, create a new one. Select **Next**.
 
-1. If your solution contains [environment variables](EnvironmentVariables.md), you will be prompted to enter values. You will not see this screen if value(s) are already present in your solution or the target environment. 
+1. If your solution contains [environment variables](EnvironmentVariables.md), you'll be prompted to enter values. You won't see this screen if value(s) are already present in your solution or the target environment. 
 
 1. If missing dependencies are detected in the target environment, a list of the dependencies is presented. In environments where the required package version is available for import in the target environment, a link to resolve the dependency is presented. Selecting the link takes you to the Power Platform admin center where you can install the application update. After the application update is completed, you can start the solution import again.
 
@@ -51,11 +51,11 @@ To import a solution:
 
 Your solution imports in the background and may take a few moments.  
   
- If you have imported any changes that require publishing, you must publish customizations before they are available.
+ If you have imported any changes that require publishing, you must publish customizations before they're available.
   
- If the import isn’t successful, you will see a notification on the solutions page showing any errors or warnings that were captured. Select **Download Log File** to capture details about what caused the import to fail. The most common cause for an import to fail is that the solution did not contain some required components.  
+ If the import isn’t successful, you'll see a notification on the solutions page showing any errors or warnings that were captured. Select **Download Log File** to capture details about what caused the import to fail. The most common cause for an import to fail is that the solution didn't contain some required components.  
 
-When you download the log file, you will find an XML file that you can open using Office Excel to view the contents.
+When you download the log file, you'll find an XML file that you can open using Office Excel to view the contents.
 
 > [!NOTE]
 > You can view the details of all solution operations including solution import with the [solution history](solution-history.md) feature. To view these operations, select **See history** on the solutions page.
@@ -64,7 +64,7 @@ When you download the log file, you will find an XML file that you can open usin
 
 ### There's an active unmanaged layer created after importing a managed solution
 
-During solution import the system must ensure that there is a fallback form for a table. This requirement is enforced when you create tables or forms. If during import there isn't a fallback form specified for a table, then the import creates an unmanaged active layer for one of the main forms and the unmanaged customization indicates the form as the fallback form. This ensures that users can view a form when they don’t have access to any of the other table forms. More information: [Set the fallback form for a table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-a-table)
+During solution import, the system must ensure that there's a fallback form for a table. This requirement is enforced when you create tables or forms. If during import there isn't a fallback form specified for a table, then the import creates an unmanaged active layer for one of the main forms and the unmanaged customization indicates the form as the fallback form. This ensures that users can view a form when they don’t have access to any of the other table forms. More information: [Set the fallback form for a table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-a-table)
 
 ### The form doesn't appear in target environment after importing the unmanaged solution
 
@@ -72,11 +72,11 @@ During export of unmanaged solutions, some forms that aren't modified get export
 
 ### *Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form &lt;formid&gt;* message during solution import
 
-This error can occur when the form you are importing doesn’t exist in the target environment and the form is imported for the first time. The solution you are importing has only form changes (diff) in the form XML when it should have the full form XML. A solution should only import a diff form XML when the form is already present in the environment and you’re importing the changes.  To verify, open your solution’s customizations.xml file and search for the FormXml node using the form ID that appears in the error message. If the form XML contains an attribute named `solutionaction`, then the form XML is a diff. To resolve this scenario the form XML must be a full form XML (should not contain the `solutionaction` attribute) and can be obtained from the instance this form was originally created in as unmanaged.
+This error can occur when the form you're importing doesn’t exist in the target environment and the form is imported for the first time. The solution you're importing has only form changes (diff) in the form XML when it should have the full form XML. A solution should only import a diff form XML when the form is already present in the environment and you’re importing the changes.  To verify, open your solution’s customizations.xml file and search for the FormXml node using the form ID that appears in the error message. If the form XML contains an attribute named `solutionaction`, then the form XML is a diff. To resolve this scenario the form XML must be a full form XML (shouldn't contain the `solutionaction` attribute) and can be obtained from the instance this form was originally created in as unmanaged.
 
 ### *Microsoft.Crm.CrmException: You cannot delete this form because it is the only fallback form of type main for the 'table' table. Each table must have at least one fallback form for each form type* message during solution upgrade or uninstall
 
-This error occurs when a solution upgrade or uninstall attempts to delete the last remaining form for a table. This behavior is by design. Each table must be able to display a form for any valid user. Therefore, at least one form must be designated as a fallback form. A fallback form is available to users whose security roles do not have any forms explicitly assigned to them. To work around this issue, create a temporary form configured as the fallback form for the table, and then try the upgrade or uninstall again. More information: [Set the fallback form for a table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-a-table)
+This error occurs when a solution upgrade or uninstall attempts to delete the last remaining form for a table. This behavior is by design. Each table must be able to display a form for any valid user. Therefore, at least one form must be designated as a fallback form. A fallback form is available to users whose security roles don't have any forms explicitly assigned to them. To work around this issue, create a temporary form configured as the fallback form for the table, and then try the upgrade or uninstall again. More information: [Set the fallback form for a table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-a-table)
 
 ### *Solution cannot be deleted due to dependencies from other components in the system* message when uninstalling a solution
 
@@ -95,42 +95,47 @@ To work around this behavior, select each component individually, such as the ne
 
 After you import a solution, label text doesn’t display in other languages. This issue can occur when you import the solution with the translations *before* you enable the language in the target environment.
 
-To workaround this issue, enable the languages that you want and then import the solution again. More information: [Enable the language](/power-platform/admin/enable-languages#enable-the-language)
+To work around this issue, enable the languages that you want and then import the solution again. More information: [Enable the language](/power-platform/admin/enable-languages#enable-the-language)
 
 ### Duplicate security roles after solution import
 
-Notice that when you try to create a security role in the Power Platform admin center when there’s already a security role with the same name in the environment, you receive a message that a role with the specified name already exists and the role isn’t created. However, it is possible through solution import to import a security role into an environment that already has a different security role with the same name. When this occurs, both security roles with the same name exist in the environment, which can make it difficult to distinguish between the two roles.
+Notice that when you try to create a security role in the Power Platform admin center when there’s already a security role with the same name in the environment, you receive a message that a role with the specified name already exists and the role isn’t created. However, it's possible through solution import to import a security role into an environment that already has a different security role with the same name. When this occurs, both security roles with the same name exist in the environment, which can make it difficult to distinguish between the two roles.
 
 ### PrimaryName attribute not found for Entity
+
 Issue: During solution import, the following error is displayed: "PrimaryName attribute not found for Entity <entityname>"
 
-This error happens when the primary name attribute of the an entity is not part of the solution xml file. To mitigate, remove the entity from the solution  in source org, and then add the entity back to the source org with full assets, this will add the entity and the necessary metadata.
+This error happens when the primary name attribute of an entity isn't part of the solution xml file. To mitigate, remove the entity from the solution  in source org, and then add the entity back to the source org with full assets, this adds the entity and the necessary metadata.
 
 ### An entitykey with the selected attributes already exists on entity
+
 Issue: During solution import, the following error is displayed: "An entitykey (<entity key name>) with the selected attributes (<GUID>) already exists on entity with id <GUID> and name <entity name>"
 
-This error happens when a table and column already exist in the target environment which includes an entitykey. To resolve this, either:
-Delete the entity key for the table and column in the target environment
-[NOTE!] If the entity key is part of a managed solution. you will need to perform a solution upgrade for every solution listed above the solution that included the deleted entity key.
-or
-Remove the entity key from the solution.xml before importing
+This error happens when a table and column already exist in the target environment that includes an entitykey.
 
+To resolve this error, do one of the following:
+
+- Delete the entity key for the table and column in the target environment.
+
+    [NOTE!] If the entity key is part of a managed solution. you'll need to perform a solution upgrade for every solution listed above the solution that included the deleted entity key.
+
+- Remove the entity key from the solution.xml before importing.
 
 ### Maximum row size exceeds the allowed maximum of 8060 bytes
 
-Issue: During a solution import that includes columns that are not already present in a target table, the following information is included in an error: 
+Issue: During a solution import that includes columns that aren't already present in a target table, the following information is included in an error: 
 
 "Exception type: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]
 
 Creating or altering table <table name> failed because the minimum row size would be 8070, including 1287 bytes of internal overhead. This exceeds the maximum allowable table row size of 8060 bytes."
 
-SQL has a hard row limit of 8060 bytes per row. Each column consumes some of this space, the size varies by data type. This limit cannot be extended. Users will have to remove columns in orter to successfully import. 
+SQL has a hard row limit of 8060 bytes per row. Each column consumes some of this space, the size varies by data type. This limit can't be extended. Users have to remove columns in order to successfully import. 
 
-The following include estimated toat columns and sized for various data types:
+The following include estimated total columns and sized for various data types:
 - Option Set - 4 bytes
 - Date and Time - 8 bytes 
 - ID 20 bytes + more depending on unicode values
-- Lookups: 2 - 3 columns each consuming 16 bytes or more depending on unicode values are added for each lookup depending on if it is a standard lookup or custom polymorphic lookup
+- Lookups: 2 - 3 columns each consuming 16 bytes or more depending on unicode values are added for each lookup depending on if it's a standard lookup or custom polymorphic lookup
 - Image: 2 columns are used one for the image and one for the thumbnail, size may vary depending on pointer size and thumbnail
 - File: varies depending on pointer size
 - Currency: consumes between 2 to 4 columns depending on the decimal conversion. Number of bytes vary depending on the decimal conversion
