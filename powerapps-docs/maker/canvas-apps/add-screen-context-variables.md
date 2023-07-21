@@ -58,10 +58,10 @@ When you create a canvas app with multiple screens, you can add navigatation so 
 
 4. On the **Target** screen, add a **Back arrow**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
-    `Navigate(screen name, ScreenTransition.Fade)`
+    `Navigate(Target, ScreenTransition.Fade)`
 
    > [!NOTE]
-   > In the formula above where it says **screen name** enter the name of the screen that you are navigating to. 
+   > In the formula above where it says **Target** enter the name of the screen that you are navigating to. 
 
 
 ## More information
