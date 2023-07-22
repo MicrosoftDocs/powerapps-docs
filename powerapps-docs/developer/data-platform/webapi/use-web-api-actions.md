@@ -1,7 +1,7 @@
 ---
 title: "Use Web API actions (Microsoft Dataverse)| Microsoft Docs"
 description: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on Microsoft Dataverse"
-ms.date: 04/26/2022
+ms.date: 07/22/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -13,7 +13,7 @@ contributors:
 
 # Use Web API actions
 
-Actions and functions represent re-usable operations you can perform using the Web API. Use a POST request with actions listed in <xref:Microsoft.Dynamics.CRM.ActionIndex> to perform operations that have side effects. You can also define custom actions and they’ll be available for you to use. More information: [Create your own messages](../custom-actions.md).
+Actions and functions represent re-usable operations you can perform using the Web API. Use a POST request with actions listed in <xref:Microsoft.Dynamics.CRM.ActionIndex> to perform operations that have side effects. You can also define custom actions and they'll be available for you to use. More information: [Create your own messages](../custom-actions.md).
 
 Actions are defined in [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document). See [Web API Actions](web-api-actions.md) for more information.
 
@@ -40,7 +40,7 @@ The following is the definition of the <xref:Microsoft.Dynamics.CRM.Merge> actio
 </Action>
 ```
 
-The <xref:Microsoft.Dynamics.CRM.Merge> action corresponds to the <xref:Microsoft.Crm.Sdk.Messages.MergeRequest> using the organization service. Use this action to merge a pair of duplicate records. This action doesn’t include a return value. If it succeeds, the operation is complete.
+The <xref:Microsoft.Dynamics.CRM.Merge> action corresponds to the <xref:Microsoft.Crm.Sdk.Messages.MergeRequest> using the organization service. Use this action to merge a pair of duplicate records. This action doesn't include a return value. If it succeeds, the operation is complete.
 
 The following example is the HTTP request and response to call the `Merge` action for two account records.
 
@@ -154,28 +154,57 @@ OData-Version: 4.0
 
 It is less common to find actions bound to an entity collection. The following are some you may find:
 
-|&nbsp; |&nbsp;|&nbsp;|&nbsp;|
-|-|-|-|  
-|<xref:Microsoft.Dynamics.CRM.CreateException>|<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail>|<xref:Microsoft.Dynamics.CRM.ExportTranslation>|  
-|<xref:Microsoft.Dynamics.CRM.ValidateSavedQuery>|`FulfillSalesOrder` in [Dynamics 365 for Sales](/dynamics365/sales/help-hub)||
+:::row:::
+   :::column:::
+      <xref:Microsoft.Dynamics.CRM.CreateException>
+   :::column-end:::
+   :::column:::
+      <xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail>
+   :::column-end:::
+   :::column:::
+      <xref:Microsoft.Dynamics.CRM.ExportTranslation>
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      <xref:Microsoft.Dynamics.CRM.ValidateSavedQuery>
+   :::column-end:::
+   :::column:::
+      `FulfillSalesOrder` in [Dynamics 365 for Sales](/dynamics365/sales/help-hub)
+   :::column-end:::
+   :::column:::
+      <xref:Microsoft.Dynamics.CRM.CreateMultiple>
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      <xref:Microsoft.Dynamics.CRM.UpdateMultiple>
+   :::column-end:::
+   :::column:::
+      
+   :::column-end:::
+   :::column:::
+      
+   :::column-end:::
+:::row-end:::
 
 As an example of an action bound to an entity collection, the following is the definition of the <xref:Microsoft.Dynamics.CRM.ExportTranslation> action represented in the CSDL $metadata:
 
 ```xml
 <ComplexType Name="ExportTranslationResponse">
-	<Property Name="ExportTranslationFile" 
+   <Property Name="ExportTranslationFile" 
     Type="Edm.Binary" />
 </ComplexType>
 <Action Name="ExportTranslation" 
     IsBound="true">
-	<Parameter Name="entityset" 
+   <Parameter Name="entityset" 
     Type="Collection(mscrm.solution)" 
     Nullable="false" />
-	<Parameter Name="SolutionName" 
+   <Parameter Name="SolutionName" 
     Type="Edm.String" 
     Nullable="false" 
     Unicode="false" />
-	<ReturnType Type="mscrm.ExportTranslationResponse" 
+   <ReturnType Type="mscrm.ExportTranslationResponse" 
     Nullable="false" />
 </Action>
 ```
@@ -221,7 +250,7 @@ The following example is for a custom process action.
 
 ### Custom action example: Add a note to a contact
 
- Let’s say that you want to create a custom action that will add a new note to a specific contact. You can create a custom action bound to the contact entity with the following properties.
+ Let's say that you want to create a custom action that will add a new note to a specific contact. You can create a custom action bound to the contact entity with the following properties.
 
 |UI Label|Value|
 |--------------|-----------|
@@ -273,7 +302,7 @@ The following HTTP request and response shows how to call the custom action and 
  **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/contacts(94d8c461-a27a-e511-80d2-00155d2a68d2)/Microsoft.Dynamics.CRM.new_AddNoteToContact HTTP/1.1
+POST [Organization URI]/api/data/v9.2/contacts(94d8c461-a27a-e511-80d2-00155d2a68d2)/Microsoft.Dynamics.CRM.new_AddNoteToContact HTTP/1.1
 Accept: application/json
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -295,7 +324,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
 {
- "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#annotations/$entity",
+ "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#annotations/$entity",
  "annotationid": "9ad8c461-a27a-e511-80d2-00155d2a68d2"
 }
 ```
