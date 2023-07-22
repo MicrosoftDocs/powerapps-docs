@@ -111,7 +111,7 @@ You must use the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> class if you wa
 
 ## Use the CreateMultipleRequest class (Preview)
 
-When you need to create multiple records of the same type, the most performant way to do this is to use the [CreateMultipleRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest). You will typically use this when performing bulk create operations. More information: [Use CreateMultiple and UpdateMultiple (Preview)](use-createmultiple-updatemultiple.md).
+When you need to create multiple records of the same type, the most performant way to do this is to use the [CreateMultipleRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest). You will typically use this when performing bulk create operations. More information: [Bulk Operation messages (preview)](../bulk-operations.md)
 
 ## Create related entities in one operation
 

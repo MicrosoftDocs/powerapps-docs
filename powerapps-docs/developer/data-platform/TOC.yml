@@ -407,8 +407,6 @@
       href: use-elastic-tables.md
     - name: Query JSON columns
       href: query-json-columns-elastic-tables.md
-    - name: Bulk operations with elastic tables
-      href: bulk-operations-elastic-tables.md    
     - name: Elastic tables sample code
       href: elastic-table-samples.md
 - name: Introduction to solutions

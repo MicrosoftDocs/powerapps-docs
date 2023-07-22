@@ -218,12 +218,12 @@ OData-Version: 4.0
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br/>
+> [Elastic table sample code (preview)](elastic-table-samples.md)<br/>
 
 ### See also
 
-[Use elastic tables](elastic-tables.md)<br />
-[Create elastic tables using code](create-elastic-tables.md)<br />
-[Use elastic tables](use-elastic-tables.md)<br />
-[Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
+[Use elastic tables](elastic-tables.md)   
+[Create elastic tables using code](create-elastic-tables.md)   
+[Use elastic tables](use-elastic-tables.md)   
+[Bulk Operation messages (preview)](bulk-operations.md)   
 [Elastic table sample code (preview)](elastic-table-samples.md)

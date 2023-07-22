@@ -31,8 +31,8 @@ See the README.md file in each sample for detailed instructions about how to run
 
 ### See Also
 
-[Use CreateMultiple and UpdateMultiple (Preview)](../use-createmultiple-updatemultiple.md)<br />
-[Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../../write-plugin-multiple-operation.md)<br />
+[Bulk Operation messages (preview)](../../bulk-operations.md)   
+[Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../../write-plugin-multiple-operation.md)   
 [Sample: CreateMultiple and UpdateMultiple plug-ins](createmultiple-updatemultiple-plugin.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
