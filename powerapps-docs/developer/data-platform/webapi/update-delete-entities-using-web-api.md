@@ -268,12 +268,12 @@ See [Detect duplicates during Update operation using the Web API](manage-duplica
 The fastest way to delete multiple records of the same type in a single request is to use the `DeleteMultiple` action. At the time of this writing the `DeleteMultiple` action is a preview feature. Standard tables do not support this action, but all elastic tables do.
 
 > [!NOTE]
-> For standard tables, we recommend using the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete), that enables asynchronous deletion of records that match a query. More information: [Delete data in bulk](delete-data-bulk.md)
+> For standard tables, we recommend using the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete), that enables asynchronous deletion of records that match a query. More information: [Delete data in bulk](../delete-data-bulk.md)
 
 More information:
 
 - [Bulk Operation messages (preview)](../bulk-operations.md)
-- [Elastic table sample code (preview)](../elastic-table-samples.md&tabs=webapi)
+- [Elastic table sample code (preview)](../elastic-table-samples.md?tabs=webapi)
 - [Use DeleteMultiple with elastic tables](../use-elastic-tables.md#use-deletemultiple-with-elastic-tables)
 
 
