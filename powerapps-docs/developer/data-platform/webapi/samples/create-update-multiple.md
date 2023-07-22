@@ -33,6 +33,6 @@ See the README.md file in each sample for detailed instructions about how to run
 [Bulk Operation messages (preview)](../../bulk-operations.md)   
 [Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](../../org-service/samples/create-update-multiple.md)   
 [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../../write-plugin-multiple-operation.md)   
-[Sample: CreateMultiple and UpdateMultiple plug-ins](createmultiple-updatemultiple-plugin.md)   
+[Sample: CreateMultiple and UpdateMultiple plug-ins](../../org-service/samples/createmultiple-updatemultiple-plugin.md)
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
