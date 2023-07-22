@@ -233,7 +233,7 @@ When updating a table row, you may change the values so that the row represents 
 
 If you have an alternate key defined for a table, you can use that in place of the primary key to update a row. You can't use the early-bound class to specify the alternate key. You must use the [Entity(String, KeyAttributeCollection) constructor](/dotnet/api/microsoft.xrm.sdk.entity.-ctor#Microsoft_Xrm_Sdk_Entity__ctor_System_String_Microsoft_Xrm_Sdk_KeyAttributeCollection_) to specify the alternate key.
 
-If you want to use early bound types, you can convert the <xref:Microsoft.Xrm.Sdk.Entity> to an early bound class using the [Entity.ToEntity<T> method](xref:Microsoft.Xrm.Sdk.Entity.ToEntity``1).
+If you want to use early bound types, you can convert the <xref:Microsoft.Xrm.Sdk.Entity> to an early bound class using the [Entity.ToEntity&lt;T&gt; method](xref:Microsoft.Xrm.Sdk.Entity.ToEntity``1).
 
 The following example shows how to update an `Account` using an alternate key defined for the `accountnumber` column (attribute).
 
