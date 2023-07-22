@@ -95,7 +95,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-8
 
 ## Query Json column data
 
-This example runs a query on `contoso_SensorData` elastic table with filters all rows which has `energyconsumption.power` greater than 5
+This example runs a query on the `contoso_SensorData` elastic table with filters all rows which have `energyconsumption.power` greater than 5
 
 All table columns can be queried with a `c.props` prefix to the schema name of the columns where `"c"` is an alias or a shorthand notation for the elastic table being queried. For example, `contoso_deviceid` column in `contoso_sensordata` table can be referenced in the Cosmos SQL query using `c.props.contoso_deviceid`.
 
