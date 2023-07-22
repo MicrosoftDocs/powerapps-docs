@@ -1,7 +1,7 @@
 ---
 title: "Update and delete table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to perform update and delete operations on tables using the Web API"
-ms.date: 05/14/2023
+ms.date: 07/22/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -112,6 +112,16 @@ OData-Version: 4.0
 }  
   
 ```  
+
+## Update multiple records in a single request
+
+The fastest way to update multiple records of the same type in a single request is to use the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple). At the time of this writing the `UpdateMultiple` action is a preview feature. Not all standard tables support this action, but all elastic tables do.
+
+More information:
+
+- [Bulk Operation messages (preview)](../bulk-operations.md)
+- [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](samples/create-update-multiple.md)
+- [Use UpdateMultiple with elastic tables](../use-elastic-tables.md&tabs=webapi#use-updatemultiple-with-elastic-tables)
   
 <a name="bkmk_updateSingleProperty"></a> 
   
@@ -252,6 +262,17 @@ OData-Version: 4.0
 ## Check for duplicate records
 
 See [Detect duplicates during Update operation using the Web API](manage-duplicate-detection-create-update.md#bkmk_update) for more information on how to check for duplicate records during an update operation.
+
+## Delete multiple records in a single request
+
+The fastest way to delete multiple records of the same type in a single request is to use the `DeleteMultiple` action. At the time of this writing the `DeleteMultiple` action is a preview feature. Standard tables do not support this action, but all elastic tables do.
+
+More information:
+
+- [Bulk Operation messages (preview)](../bulk-operations.md)
+- [Elastic table sample code (preview)](../elastic-table-samples.md&tabs=webapi)
+- [Use DeleteMultiple with elastic tables](../use-elastic-tables.md&tabs=webapi#use-deletemultiple-with-elastic-tables)
+
 
 ## Update and delete documents in storage partitions
 
