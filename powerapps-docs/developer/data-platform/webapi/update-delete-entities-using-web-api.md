@@ -115,13 +115,13 @@ OData-Version: 4.0
 
 ## Update multiple records in a single request
 
-The fastest way to update multiple records of the same type in a single request is to use the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple). At the time of this writing the `UpdateMultiple` action is a preview feature. Not all standard tables support this action, but all elastic tables do.
+The fastest way to update multiple records of the same type in a single request is to use the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple). At the time of this writing the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) is a preview feature. Not all standard tables support this action, but all elastic tables do.
 
 More information:
 
 - [Bulk Operation messages (preview)](../bulk-operations.md)
 - [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](samples/create-update-multiple.md)
-- [Use UpdateMultiple with elastic tables](../use-elastic-tables.md&tabs=webapi#use-updatemultiple-with-elastic-tables)
+- [Use UpdateMultiple with elastic tables](../use-elastic-tables.md#use-updatemultiple-with-elastic-tables)
   
 <a name="bkmk_updateSingleProperty"></a> 
   
@@ -267,11 +267,14 @@ See [Detect duplicates during Update operation using the Web API](manage-duplica
 
 The fastest way to delete multiple records of the same type in a single request is to use the `DeleteMultiple` action. At the time of this writing the `DeleteMultiple` action is a preview feature. Standard tables do not support this action, but all elastic tables do.
 
+> [!NOTE]
+> For standard tables, we recommend using the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete), that enables asynchronous deletion of records that match a query. More information: [Delete data in bulk](delete-data-bulk.md)
+
 More information:
 
 - [Bulk Operation messages (preview)](../bulk-operations.md)
 - [Elastic table sample code (preview)](../elastic-table-samples.md&tabs=webapi)
-- [Use DeleteMultiple with elastic tables](../use-elastic-tables.md&tabs=webapi#use-deletemultiple-with-elastic-tables)
+- [Use DeleteMultiple with elastic tables](../use-elastic-tables.md#use-deletemultiple-with-elastic-tables)
 
 
 ## Update and delete documents in storage partitions

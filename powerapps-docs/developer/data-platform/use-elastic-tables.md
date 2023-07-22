@@ -749,7 +749,7 @@ public static Guid CreateMultiple(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-The following example shows how to use the `CreateMultiple` action to create multiple rows in the `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows. These operations set the `contoso_deviceid`,`contoso_sensortype`, `partitionid`, and `ttlinseconds` properties.
+The following example shows how to use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple) to create multiple rows in the `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows. These operations set the `contoso_deviceid`,`contoso_sensortype`, `partitionid`, and `ttlinseconds` properties.
 
 **Request**
 
@@ -865,7 +865,7 @@ public static Guid UpdateMultiple(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-The following example shows how to use the `UpdateMultiple` action to update multiple rows from `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows. These updates set the `contoso_energyconsumption` property.
+The following example shows how to use the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) to update multiple rows from `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows. These updates set the `contoso_energyconsumption` property.
 
 **Request**
 

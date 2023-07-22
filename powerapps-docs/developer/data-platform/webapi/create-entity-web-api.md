@@ -123,13 +123,13 @@ OData-Version: 4.0
 
 ## Create multiple records in a single request
 
-The fastest way to create multiple records of the same type in a single request is to use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple). At the time of this writing the `CreateMultiple` action is a preview feature. Not all standard tables support this action, but all elastic tables do.
+The fastest way to create multiple records of the same type in a single request is to use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple). At the time of this writing the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple) is a preview feature. Not all standard tables support this action, but all elastic tables do.
 
 More information:
 
 - [Bulk Operation messages (preview)](../bulk-operations.md)
 - [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](samples/create-update-multiple.md)
-- [Use CreateMultiple with elastic tables](../use-elastic-tables.md&tabs=webapi#use-createmultiple-with-elastic-tables)
+- [Use CreateMultiple with elastic tables](../use-elastic-tables.md#use-createmultiple-with-elastic-tables)
 
 <a name="bkmk_CreateRelated"></a>
 
