@@ -143,7 +143,7 @@ To create an app from scratch that uses data from Dataverse, the first step is t
 
 ## Test the app
 
-1. On the actions menu, select select ![Preview button.](media/studio/preview-button.png) **Preview the app**. More information: [ Preview an app](preview-app.md)
+1. On the actions menu, select ![Preview button.](media/studio/preview-button.png) **Preview the app**. More information: [ Preview an app](preview-app.md)
 
 1. Toggle the list between ascending and descending sort orders, and filter the list by one or more characters in the account name.
 
