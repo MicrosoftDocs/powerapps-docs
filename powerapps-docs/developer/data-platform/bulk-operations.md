@@ -28,7 +28,7 @@ Use the following bulk operation messages get the best performance when performi
 |`CreateMultiple`|Use the SDK [CreateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest) or the Web API `CreateMultiple` action to create multiple records of the same type in a single request.|
 |`UpdateMultiple`|Use the SDK [UpdateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest) or the Web API `UpdateMultiple` action to update multiple records of the same type in a single request.|
 |`UpsertMultiple`|*Coming soon*|
-|`DeleteMultiple`|For elastic tables only. Use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type. This message isn't available in the Web API yet.|
+|`DeleteMultiple`|For elastic tables only. Use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type. The Web API `DeleteMultiple` action is currently private, but will become public in the coming weeks. You can use this private message now.|
 
 ## Standard and Elastic table usage
 
@@ -39,14 +39,16 @@ Both standard and elastic tables see significant performance benefits when using
 |**[Number of records](#number-of-records)**|Operations are more efficient with larger number of records. There is no set limit, but there are message size and time limits.|Recommend sending 100 records at a time.|
 |**[On Error behavior](#on-error-behavior)**|All operations rollback on error.|Partial success is possible.|
 |**[Availability](#availability)**|Not all standard tables support these messages.|Messages available for all elastic tables.|
-|**[DeleteMultiple](#deletemultiple)**|Not available. Use the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) instead.|Available using SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) .|
+|**[DeleteMultiple](#deletemultiple)**|Not available. Use the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) instead.|Available using SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). The Web API `DeleteMultiple` action is currently private, but will become public in the coming weeks. You can use this private message now.|
 
-Standard and elastic table usage is different because standard tables use Azure SQL and support transactions. Elastic tables use Azure Cosmos DB, which doesn't support transactions but is able to handle large amounts of data an high levels of throughput with low latency. The following sections provide more details.
+Standard and elastic table usage is different because standard tables use Azure SQL and support transactions. Elastic tables use Azure Cosmos DB, which doesn't support transactions but is able to handle large amounts of data an high levels of throughput with low latency. The following sections provide more details and you can find more information in [Bulk operations with elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
 
 ### Number of records
 
 The number of records you should include with each request is different depending on whether you are using standard or elastic tables.
 
+> [!TIP]
+> Both standard and elastic tables have greater throughput when you use bulk operation messages in parallel. More information: [Send parallel requests](send-parallel-requests.md)
 #### Number of records with standard tables
 
 Bulk operations with standard tables are optimized to perform operations on multiple rows within a single transaction. Operations become more efficient, and therefore more performant overall, as the number of operations per request increases. This also allows for any plug-in steps registered for the bulk operation to be more efficient. Each time a plug-in is invoked for a single operation, some milliseconds are required to invoke the plug-in class containing the logic. When a plug-in is registered for a bulk operation message, the class is invoked once and can process all the operations more efficiently. More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)
@@ -56,9 +58,6 @@ This performance benefit gives you an incentive to send the largest number of re
 #### Number of records with elastic tables
 
 Because there is no transaction with elastic tables, there is no performance benefit in trying to send the largest number per request. We recommend sending 100 operations per request and sending requests in parallel to achieve maximum throughput.
-
-> [!TIP]
-> Both standard and elastic tables have greater throughput when you use bulk operation messages in parallel. More information: [Send parallel requests](send-parallel-requests.md)
 
 ### On Error behavior
 
@@ -199,9 +198,7 @@ At this time, `DeleteMultiple` is supported only for elastic tables because elas
 
 For standard tables, we recommend using the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete), that enables asynchronous deletion of records that match a query. More information: [Delete data in bulk](delete-data-bulk.md)
 
-With elastic tables, the `DeleteMultiple` message is not yet available for use with the Web API and the SDK doesn't include a `DeleteMultipleRequest` class. Until these are available, use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type.
-
-
+With elastic tables, the SDK doesn't include a `DeleteMultipleRequest` class. Until this is available, use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type. The Web API `DeleteMultiple` action is currently private, but will become public in the coming weeks. You can use this private message now.
 
 ## Message pipelines merged
 
