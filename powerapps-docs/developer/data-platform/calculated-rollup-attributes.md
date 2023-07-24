@@ -1,7 +1,7 @@
 ---
-title: "Calculated and rollup columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Formula, calculated, and rollup columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about common elements and characteristics, calculated columns, rollup columns, retrieve a calculated rollup column value immediately, and SourceTypeMasks enumeration." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/15/2022
+ms.date: 07/19/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -12,17 +12,17 @@ search.audienceType:
 contributors:
  - JimDaly
 ---
-# Calculated and rollup columns
+# Formula, calculated, and rollup columns
 
-*Calculated* and *rollup* columns free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.  
+*Formula*, *calculated*, and *rollup* columns free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also use the platform capabilities to perform these calculations rather than within their own code.  
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)] 
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
   
 <a name="BKMK_CommonElements"></a>   
 
 ## Common elements and characteristics
 
- Calculated and rollup columns share some common elements and characteristics, for example:  
+Formula, calculated, and rollup columns share some common elements and characteristics, for example:  
   
 - They're read-only.  
 - They're not specific to the user. The calculation is performed using a system user account, so the values may be based on records that the user doesn't otherwise have privileges to view, such as columns that have field-level security enabled.  
@@ -35,8 +35,10 @@ All columns that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata
 |0| Simple column. The column isn't defined as a calculated or rollup column.|
 |1|Calculated column|
 |2|Rollup column|
+|3|Formula column|
+
   
-Calculated and rollup columns are based on existing column types that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>. The following types of column have new properties:  
+Formula, calculated, and rollup columns are based on existing column types that inherit from <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>. The following types of column have new properties:  
   
 - <xref:Microsoft.Xrm.Sdk.Metadata.BooleanAttributeMetadata>  
 - <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata>  
@@ -50,18 +52,18 @@ Each of these types of column have the following properties to support calculati
   
 | Property  |Definition|
 |---------|--------|
-|`FormulaDefinition`| Contains the XAML definition of the formula used to perform the calculation or rollup. The only supported way to change this value is through the application formula editor.<br /><br /> For information about configuring the formulas for these columns see the following topics in the customization guide: [Define rollup columns](../../maker/data-platform/define-rollup-fields.md) and [Define calculated columns](../../maker/data-platform/define-calculated-fields.md).  |
-|`SourceTypeMask`| The bitmask value of this read-only property describes the types of sources used in the formula of the calculated column or if the formula of a calculated or rollup column is not valid.<br /><br /> -   0: `Undefined`. The default value for simple and rollup columns.<br />-   1: `Simple`. The calculated column refers to a column in the same record.<br />-   2: `Related`. The calculated column refers to a column in a related record.<br />-   4: `Logical`. The calculated column refers to a column in the same record which is actually stored in a different database table. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes#BKMK_LogicalAttributes)<br />-   8: `Calculated`. The calculated column refers to another calculated column.<br />-   16: `Rollup`. The calculated column refers a rollup column.<br />-   32: `Invalid`. The calculated or rollup column is invalid.<br />Typically this would be where a column refers to a column that no longer exists.<br /><br />**Note:**  One or more of these conditions may be true for any calculated or rollup column. Because this is a bitmask value, you may find it useful to use the [SourceTypeMasks enumeration](calculated-rollup-attributes.md#BKMK_SourceTypeMasks) when performing bitwise operations. |
+|`FormulaDefinition`| Contains the XAML definition of the formula used to perform the calculation or rollup. The only supported way to change this value is through the application formula editor.<br /><br /> For information about configuring the formulas for these columns see the following articles in the customization guide: [Define rollup columns](../../maker/data-platform/define-rollup-fields.md) and [Define calculated columns](../../maker/data-platform/define-calculated-fields.md).  |
+|`SourceTypeMask`| The bitmask value of this read-only property describes the types of sources used in the formula of the calculated column or if the formula of a calculated or rollup column isn't valid.<br /><br /> -   0: `Undefined`. The default value for simple and rollup columns.<br />-   1: `Simple`. The calculated column refers to a column in the same record.<br />-   2: `Related`. The calculated column refers to a column in a related record.<br />-   4: `Logical`. The calculated column refers to a column in the same record that is stored in a different database table. More information: [Logical columns](entity-attribute-metadata.md#logical-columns)<br />-   8: `Calculated`. The calculated column refers to another calculated column.<br />-   16: `Rollup`. The calculated column refers a rollup column.<br />-   32: `Invalid`. The calculated or rollup column is invalid.<br />Typically, a column is invalid when it refers to a column that no longer exists.<br /><br />**Note:**  One or more of these conditions may be true for any calculated or rollup column. Because this is a bitmask value, you may find it useful to use the [SourceTypeMasks enumeration](calculated-rollup-attributes.md#BKMK_SourceTypeMasks) when performing bitwise operations. |
 
-## Calculated columns
+## Calculated and Formula Columns
 
-Calculated columns are calculated in real-time when they are retrieved. Calculated columns can be composed using different data types. For example, an Integer calculated column may reference values from Decimal or Currency columns. More information: [Define calculated columns](../../maker/data-platform/define-calculated-fields.md).  
+Both Calculated columns and Formula Columns are calculated in real-time when they're retrieved. These columns can be composed using different data types. For example, an Integer calculated column may reference values from Decimal or Currency columns. More information: [Define calculated columns](../../maker/data-platform/define-calculated-fields.md).  
   
 Calculated column values are available in the retrieve plug-in pipeline. Post image of a table record update or create contains the calculated column value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Entity images](understand-the-data-context.md#entity-images)
   
 ### Limitations
 
-You can't use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction will be ignored and will not throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions. More information: [Logical columns](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes#BKMK_LogicalAttributes)  
+You can't use values in calculated columns on a *logical value* in the same table to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated column, the sort direction is ignored and doesn't throw an error. If the calculated column references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated column using the `SourceTypeMask` property on the column definitions. More information: [Logical columns](entity-attribute-metadata.md#logical-columns)
   
 - Only columns from an immediate parent table can be used in a calculated column.  
 - Saved queries, charts, and visualizations can have a maximum of 50 unique calculated columns.  
@@ -73,16 +75,16 @@ You can't use values in calculated columns on a *logical value* in the same tabl
 
 ## Rollup columns
 
-Because rollup columns persist in the database, they can be used for filtering or sorting just like regular columns. Any kind of process or plug-in will use the most recently calculated value of the column. Rollup column values are calculated asynchronously by scheduled system jobs. Administrators set when a job is run or pause the job. By default, each column is updated hourly. More information: [Define rollup columns](../../maker/data-platform/define-rollup-fields.md).  
+Because rollup columns persist in the database, they can be used for filtering or sorting just like regular columns. Any kind of process or plug-in uses the most recently calculated value of the column. System jobs calculate the rollup column values asynchronously. Administrators set when a job is run or pause the job. By default, each column is updated hourly. More information: [Define rollup columns](../../maker/data-platform/define-rollup-fields.md).  
   
-When a rollup column is created or updated a **Mass Calculated Rollup Fields** job is scheduled to run in 12 hours. The 12-hour delay is intended to perform this resource intensive operation during a time that will affect users the least. After the job completes, the next time it is scheduled to run will be 10 years in the future. If there is a problem with the calculation, this will be reported with the system job. Locate the system job to find any errors with rollup fields. To find the system job, see [View Rollup jobs](../../maker/data-platform/define-rollup-fields.md#view-rollup-jobs).
+When a rollup column is created or updated, a **Mass Calculated Rollup Fields** job is scheduled to run in 12 hours. The 12-hour delay is intended to perform this resource intensive operation during a time that affects users the least. After the job completes, the next time it's scheduled to run will be 10 years in the future. If there's a problem with the calculation, the problem is reported with the system job. Locate the system job to find any errors with rollup fields. To find the system job, see [View Rollup jobs](../../maker/data-platform/define-rollup-fields.md#view-rollup-jobs).
 
 > [!TIP]
 >  As a developer testing a solution in a development environment you may not want to wait for 12 hours. You can make it happen faster. In the **System Jobs** list, use the **Recurring System Jobs** view to filter the list and locate the **Mass Calculate Rollup Fields** job. With the job selected, use **More Actions** > **Postpone** and set the time to something that occurs sooner.  
 >   
 >  If you want to trigger the creation of a new **Mass Calculated Rollup Fields** job programmatically, retrieve the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> for the rollup column using <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest> and use <xref:Microsoft.Xrm.Sdk.Messages.UpdateAttributeRequest> to update the column without making any actual changes.  
   
-The **Mass Calculated Rollup Fields** job will occur immediately when a solution containing a rollup column is imported. This assumes that you are installing a solution during a time that won't adversely impact users.  
+The **Mass Calculated Rollup Fields** job occurs immediately when a solution containing a rollup column is imported. This is another reason to only install solutions during times that won't adversely impact users.  
   
 Each rollup column for a table will also include two supporting columns for the rollup column:  
   
@@ -107,14 +109,9 @@ The state of a rollup column calculation is available in the corresponding *\<at
   
 ### Retrieve a calculated rollup column value immediately  
 
- Rollup columns support a `CalculateRollupField` message that developers can use to calculate a rollup column value on demand. The request and response, along with the members, are shown in the following table.  
-  
-|Request/Response|Members|  
-|-----|-------|  
-|<xref:Microsoft.Crm.Sdk.Messages.CalculateRollupFieldRequest>|`Target`: <xref:Microsoft.Xrm.Sdk.EntityReference> for the record.<br /><br /> `FieldName`: String representing the logical name of the column.|  
-|<xref:Microsoft.Crm.Sdk.Messages.CalculateRollupFieldResponse>|`Entity`: <xref:Microsoft.Xrm.Sdk.Entity> containing the rollup column and the supporting *\<attribute SchemaName>*`_Date` and *\<attribute SchemaName>*`_State` columns.|  
-  
-This message is a synchronous operation for just the column identified in the request. If the value of that record is included as part of other rollup columns, the values of those columns won't take the possible value change caused by calling this method into consideration until the regularly scheduled asynchronous jobs that perform those calculations occur.  
+Rollup columns support a `CalculateRollupField` message that developers can use to calculate a rollup column value on demand. For the SDK, use the [CalculateRollupFieldRequest class](xref:Microsoft.Crm.Sdk.Messages.CalculateRollupFieldRequest) and for Web API use the [CalculateRollupField Function](xref:Microsoft.Dynamics.CRM.CalculateRollupField)
+
+This message is a synchronous operation for just the column identified in the request. If the value of that record is included as part of other rollup columns, the values of those columns don't take the possible value change caused by calling this method into consideration until the regularly scheduled asynchronous jobs that perform those calculations occur.  
   
 ### Limitations
 
@@ -122,7 +119,7 @@ This message is a synchronous operation for just the column identified in the re
 - The `ModifiedBy` and `ModifiedOn` columns for the table aren't updated when the rollup column is updated.  
 - A maximum of 100 rollup columns can be defined within an organization. Each table can have no more than 10 rollup column.  
 - A rollup column formula can't reference another rollup column.  
-- A rollup column formula can't reference complex calculated column. Only calculated column that reference simple columns in the same record can be used with rollups.  
+- A rollup column formula can't reference complex calculated column. Only calculated columns that reference simple columns in the same record can be used with rollups.  
 - A rollup column formula can't include records in many-to-many (N:N) relationships. It can only include records in one-to-many (1:N) relationships.  
 - Rollup column formulas can't use one-to-many (1:N) relationships with the `ActivityPointer` or `ActivityParty` table.  
   
@@ -169,9 +166,9 @@ The `SourceTypeMask` property for those columns that support calculated and roll
   
 ### See also  
 
-[Column definitions](entity-attribute-metadata.md)<br />
-[Define calculated columns](../../maker/data-platform/define-calculated-fields.md)<br />
-[Define rollup columns](../../maker/data-platform/define-rollup-fields.md)<br />
-[Sample: Rollup records related to a specific record](org-service/samples/rollup-records-related-to-specificed-record.md)
+[Column definitions](entity-attribute-metadata.md)   
+[Define calculated columns](../../maker/data-platform/define-calculated-fields.md)   
+[Define rollup columns](../../maker/data-platform/define-rollup-fields.md)   
+[Sample: Rollup records related to a specific record](org-service/samples/rollup-records-related-to-specificed-record.md)   
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
