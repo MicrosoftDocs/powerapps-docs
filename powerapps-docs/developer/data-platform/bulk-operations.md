@@ -32,7 +32,7 @@ Use the following bulk operation messages get the best performance when performi
 
 ## Examples
 
-The following code samples show how to use bulk operation messages. You can also download and run samples the following samples from [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
+The following code samples show how to use bulk operation messages. You can also download and run the following samples from [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
 
 - [Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)
 - [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](webapi/samples/create-update-multiple.md)
@@ -334,7 +334,7 @@ The number of records you should include with each request is different dependin
 
 Bulk operations with standard tables are optimized to perform operations on multiple rows within a single transaction. Operations become more efficient, and therefore more performant overall, as the number of operations per request increases. This optimization also allows for any plug-in steps registered for the bulk operation to be more efficient. Each time a plug-in is invoked for a single operation, some milliseconds are required to invoke the plug-in class containing the logic. When a plug-in is registered for a bulk operation message, the class is invoked once and can process all the operations more efficiently. More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)
 
-This performance benefit gives you an incentive to send the largest number of records you can in each request. However, as the number of records increases, the size of the request becomes larger and takes longer to process and you'll encounter limits. If you hit these limits, the entire operation fails. There's no set limit on the number of records to send. You'll need to experiment to find the best number. Generally, we expect that 1000 records per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you may encounter can usually be addressed by sending fewer records with each request. We recommend that you include the ability to configure the number of entities sent so you can adapt by sending fewer. More information: [Message size and time limits](#message-size-and-time-limits)
+This performance benefit gives you an incentive to send the largest number of records you can in each request. However, as the number of records increases, the size of the request becomes larger and takes longer to process and you'll encounter limits. If you hit these limits, the entire operation fails. There's no set limit on the number of records to send. You'll need to experiment to find the best number. Generally, we expect that 1,000 records per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you may encounter can usually be addressed by sending fewer records with each request. We recommend that you include the ability to configure the number of entities sent so you can adapt by sending fewer. More information: [Message size and time limits](#message-size-and-time-limits)
 
 #### Number of records with elastic tables
 
@@ -383,7 +383,7 @@ Bulk operation message availability is different depending on whether you're usi
 
 You can use the `CreateMultiple` and `UpdateMultiple` bulk operation messages for custom tables and most common tables.
 
-You can test whether individual standard tables support these messages today using the examples below.
+You can test whether individual standard tables support these messages today using the following examples.
 
 ##### [SDK for .NET](#tab/sdk)
 
@@ -442,7 +442,7 @@ public static bool IsMessageAvailable(
 
 ##### [Web API](#tab/webapi)
 
-Use the following `GET` request to detect whether a message is available for a table. The request below tests whether the `sample_example` table supports the `CreateMultiple` message.  Replace the `@message` and `@table` parameter values for the message and table you want to test.
+Use the following `GET` request to detect whether a message is available for a table. The request below tests whether the `sample_example` table supports the `CreateMultiple` message. Replace the `@message` and `@table` parameter values for the message and table you want to test.
 
 **Request**
 
@@ -477,9 +477,9 @@ OData-Version: 4.0
 
 At this time, `DeleteMultiple` is supported only for elastic tables because elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md). Relationship cascading behavior can result in unpredictable execution times for delete operations. If you use `DeleteMultiple` on a standard table, you get the error: `DeleteMultiple has not yet been implemented.`
 
-For standard tables, we recommend using the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete), that enables asynchronous deletion of records that match a query. More information: [Delete data in bulk](delete-data-bulk.md)
+For standard tables, we recommend using the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) that enable asynchronous deletion of records that match a query. More information: [Delete data in bulk](delete-data-bulk.md)
 
-With elastic tables, the SDK doesn't include a `DeleteMultipleRequest` class. Until this is available, use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type. The Web API `DeleteMultiple` action is currently private, but will become public in the coming weeks. You can use this private message now.
+With elastic tables, the SDK doesn't include a `DeleteMultipleRequest` class. Until this class is available, use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type. The Web API `DeleteMultiple` action is currently private, but will become public in the coming weeks. You can use this private message now.
 
 ## Message pipelines merged
 
@@ -518,7 +518,7 @@ As mentioned in [Number of records](#number-of-records), with standard tables th
 
 When you have a plug-in registered for any message, you may encounter the [Message size exceeded when sending context to Sandbox](/troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors#error-message-size-exceeded-when-sending-context-to-sandbox) error when the total size of the request exceeds 116.85 MB. With bulk operation messages, it's more likely to hit this limit as you send larger payloads.
 
-This error doesn't occur if there's no plug-in registered for the event. You can avoid this error by disabling the plugin(s) or by sending your request with the `BypassCustomPluginExecution` optional parameter. More information: [Bypass Custom Business Logic](bypass-custom-business-logic.md)
+This error doesn't occur if there's no plug-in registered for the event. You can avoid this error by disabling any plugins or by sending your request with the `BypassCustomPluginExecution` optional parameter. More information: [Bypass Custom Business Logic](bypass-custom-business-logic.md)
 
 #### Time limits
 
@@ -564,7 +564,7 @@ There are two types of API limits. The bulk operation messages don't provide any
 
 As described in [Service protection API limits](api-limits.md), limits have three facets. Two of these limits are evaluated on a 5-minute sliding window and apply when using these messages.
 
-- **Number of requests**: Each bulk operation message counts as single request that accrues to the limit of 6000 requests per user, per server, during the 5-minute window. Because these requests group individual operations, *the likelihood of hitting this limit is reduced*.
+- **Number of requests**: Each bulk operation message counts as single request that accrues to the limit of 6,000 requests per user, per server, during the 5-minute window. Because these requests group individual operations, *the likelihood of hitting this limit is reduced*.
 - **Execution time**: Because each bulk operation message typically request takes longer, and if you're sending requests in parallel, *you're more likely to hit the execution time limit* that is 20 minutes per user, per server, during the 5-minute window.
 
 #### Power Platform Request (API Entitlement) limits
