@@ -91,7 +91,9 @@ In this article, you will learn how to use an existing Azure key vault or create
   
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
+## Troubleshoot 
 
+For Troubleshooting issues, see [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues).
 
 
 ### See also
