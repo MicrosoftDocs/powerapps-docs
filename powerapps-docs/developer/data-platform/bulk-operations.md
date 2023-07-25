@@ -32,7 +32,11 @@ Use the following bulk operation messages get the best performance when performi
 
 ## Examples
 
-The following code samples show how to use bulk operation messages.
+The following code samples show how to use bulk operation messages. You can also download and run samples the following samples from [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
+
+- [Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)
+- [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](webapi/samples/create-update-multiple.md)
+- [Elastic table sample code (preview)](elastic-table-samples.md)
 
 ### CreateMultiple
 
@@ -565,7 +569,7 @@ As described in [Service protection API limits](api-limits.md), limits have thre
 
 #### Power Platform Request (API Entitlement) limits
 
-These limits are based on data changes, so each item included in the `Targets` parameter of a bulk operation request accrue to this limit. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
+These limits are based on data changes: `Create`, `Update`, and `Delete` operations. Each item included in the `Targets` parameter of a bulk operation request accrues to this limit. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
 
 
 ### See also
