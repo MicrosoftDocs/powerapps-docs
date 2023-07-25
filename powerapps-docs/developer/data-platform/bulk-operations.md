@@ -215,13 +215,93 @@ OData-Version: 4.0
 
 `DeleteMultiple` is only available for elastic tables.
 
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
-Use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type.
-# [Web API](#tab/webapi)
+> [!NOTE]
+> With the SDK you must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) class because the SDK doesn't currently have a `DeleteMultipleRequest` class. More information: [Use messages with the Organization service](org-service/use-messages.md)
 
-The `DeleteMultiple` action is currently private, but will become public in the coming weeks. You can use this private message now.
+The following `DeleteMultipleExample` static method uses `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from `contoso_SensorData` elastic table using the alternate key to include the `partitionid` to uniquely identify the rows.
 
+```csharp
+public static void DeleteMultipleExample(IOrganizationService service)
+{
+    string tableLogicalName = "contoso_sensordata";
+
+    List<EntityReference> entityReferences = new() {
+        {
+            new EntityReference(logicalName: tableLogicalName,
+               keyAttributeCollection: new KeyAttributeCollection
+               {
+                  { "contoso_sensordataid", "3f56361a-b210-4a74-8708-3c664038fa41" },
+                  { "partitionid", "deviceid-001" }
+               })
+        },
+        { new EntityReference(logicalName: tableLogicalName,
+               keyAttributeCollection: new KeyAttributeCollection
+               {
+                  { "contoso_sensordataid", "e682715b-1bba-415e-b2bc-de9327308423" },
+                  { "partitionid", "deviceid-002" }
+               })
+        }
+    };
+
+    OrganizationRequest request = new(requestName:"DeleteMultiple")
+    {
+        Parameters = {
+            {"Targets", new EntityReferenceCollection(entityReferences)}
+        }
+    };
+
+    service.Execute(request);
+}
+```
+
+#### [Web API](#tab/webapi)
+
+The following example shows how to use the `DeleteMultiple` action to delete multiple rows from `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows.
+
+> [!NOTE]
+> At the time of this writing, the Web API `DeleteMultiple` action is a private action. You won't find it in the [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) or in the Dataverse <xref:Microsoft.Dynamics.CRM.ActionIndex?displayProperty=fullName>. This action will become public in the coming weeks. You can use it while it is private.
+
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/contoso_sensordatas/Microsoft.Dynamics.CRM.DeleteMultiple
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 603
+
+{
+  "Targets": [
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_sensordataid": "6114ca58-0928-ee11-9965-6045bd5cd155",
+      "partitionid": "Device-ABC-1234"
+    },
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_sensordataid": "6214ca58-0928-ee11-9965-6045bd5cd155",
+      "partitionid": "Device-ABC-1234"
+    },
+    {
+      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+      "contoso_sensordataid": "6314ca58-0928-ee11-9965-6045bd5cd155",
+      "partitionid": "Device-ABC-1234"
+    }
+  ]
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
 
 ---
 
