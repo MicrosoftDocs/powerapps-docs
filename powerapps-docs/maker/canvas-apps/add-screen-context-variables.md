@@ -17,7 +17,7 @@ contributors:
 ---
 # Add a screen using screen layouts
 
-When you add a new screen, you can choose from a variety of screen layouts. Each screen layout automatically adjusts to fit the screen size of the device being used to run the app. 
+When you add a new screen, you can choose from various screen layouts. Each screen layout automatically adjusts to fit the screen size of the device being used to run the app. 
 
 > [!div class="mx-imgBorder"]
 > ![Screen layouts.](./media/add-screen-context-variables/screen-layouts.png)
@@ -29,12 +29,12 @@ When you add a new screen, you can choose from a variety of screen layouts. Each
 2. Create a canvas app in tablet format. 
 3. In Power Apps Studio, on the command bar, select **New screen** and then select a screen layout.
 
-When you're done, you can preview the app and see how the app displays on different devices. More information: [Preview an app](preview-app.md)
+When you're done, you can preview the app and see how the app displays on different devices. More information, see [Preview an app](preview-app.md).
 
 
 ## Reorder screens
 
-When you have more then one screen you can reorder them.
+When you have more than one screen, you can reorder them.
 
 In the left pane, hover over a screen that you want to move up or down, and then select **Move up** or **Move down**.
 
@@ -43,7 +43,7 @@ In the left pane, hover over a screen that you want to move up or down, and then
 
 ## Add navigation
 
-When you create a canvas app with multiple screens, you can add navigatation so you're users can navigate between screens.
+When you create a canvas app with multiple screens, you can add navigation so your users can navigate between screens.
 
 
 1. With the screen selected, select **Insert** and in the search box type **Next arrow** and then select it.
@@ -61,7 +61,7 @@ When you create a canvas app with multiple screens, you can add navigatation so 
     `Navigate(Target, ScreenTransition.Fade)`
 
    > [!NOTE]
-   > In the formula above where it says **Target** enter the name of the screen that you are navigating to. 
+   > In the formula above where it says **Target** enter the name of the screen that you're navigating to. 
 
 
 ## More information
