@@ -1,7 +1,7 @@
 ---
 title: "Delete data in bulk (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Deleting data in bulk helps maintain data quality and manage the consumption of system storage by deleting data that is no longer needed." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/19/2023
+ms.date: 07/25/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: mayadumesh # GitHub ID
@@ -14,6 +14,9 @@ search.audienceType:
 # Delete data in bulk
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+
+> [!NOTE]
+> For elastic tables, you can use the `DeleteMultiple` message. More information: [Use DeleteMultiple with elastic tables](use-elastic-tables.md#use-deletemultiple-with-elastic-tables)
 
 The *bulk deletion* feature helps you to maintain data quality and manage the consumption of system storage in Microsoft Dataverse by deleting data that you no longer need. For example, you can delete the following data in bulk:  
   

@@ -1,7 +1,7 @@
 ---
 title: Bulk Operation messages (preview)
 description: Learn how to use special APIs to perform operations on multiple rows of data. These APIs provide performance benefits compared to other options. 
-ms.date: 07/21/2023
+ms.date: 07/25/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -25,10 +25,206 @@ Use the following bulk operation messages get the best performance when performi
 
 |Message |Details|
 |---------|---------|
-|`CreateMultiple`|Use the SDK [CreateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest) or the Web API [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple) to create multiple records of the same type in a single request.|
-|`UpdateMultiple`|Use the SDK [UpdateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest) or the Web API [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) to update multiple records of the same type in a single request.|
+|`CreateMultiple`|Creates multiple records of the same type in a single request.|
+|`UpdateMultiple`|Updates multiple records of the same type in a single request.|
 |`UpsertMultiple`|*Coming soon*|
-|`DeleteMultiple`|For elastic tables only. Use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type. The Web API `DeleteMultiple` action is currently private, but will become public in the coming weeks. You can use this private message now.|
+|`DeleteMultiple`|For elastic tables only. Deletes multiple records of the same type in a single request.|
+
+## Examples
+
+The following code samples show how to use bulk operation messages.
+
+### CreateMultiple
+
+# [SDK for .NET](#tab/sdk)
+
+Using the [CreateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest).
+
+```csharp
+/// <summary>
+/// Demonstrates the use of the CreateMultiple Message
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance.</param>
+/// <param name="recordsToCreate">A list of records of the same table to create.</param>
+/// <returns>The Guid values of the records created.</returns>
+static Guid[] CreateMultipleExample(IOrganizationService service,
+    List<Entity> recordsToCreate)
+{
+
+    // Create an EntityCollection populated with the list of entities.
+    EntityCollection entities = new(recordsToCreate)
+    {
+        // All the records must be for the same table.
+        EntityName = recordsToCreate[0].LogicalName
+    };
+
+    // Instantiate CreateMultipleRequest
+    CreateMultipleRequest createMultipleRequest = new()
+    {
+        Targets = entities,
+    };
+
+    // Send the request
+    CreateMultipleResponse createMultipleResponse =
+                (CreateMultipleResponse)service.Execute(createMultipleRequest);
+
+    // Return the Ids of the records created.
+    return createMultipleResponse.Ids;
+}
+```
+
+# [Web API](#tab/webapi)
+
+Using the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple).
+
+> [!IMPORTANT]
+> You must set the `@odata.type` property for each item in the `Targets` parameter.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/sample_examples/Microsoft.Dynamics.CRM.CreateMultiple
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 396
+
+{
+  "Targets": [
+    {
+      "sample_name": "sample record 0000001",
+      "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
+    },
+    {
+      "sample_name": "sample record 0000002",
+      "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
+    },
+    {
+      "sample_name": "sample record 0000003",
+      "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
+    }
+  ]
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreateMultipleResponse",
+  "Ids": [
+    "8f4c3f92-312b-ee11-bdf4-000d3a993550",
+    "904c3f92-312b-ee11-bdf4-000d3a993550",
+    "914c3f92-312b-ee11-bdf4-000d3a993550"
+  ]
+}
+```
+
+---
+
+### UpdateMultiple
+
+> [!NOTE]
+> Just like when updating an individual records, the data sent with `UpdateMultiple` must only contain the values you are changing. More information:
+> 
+> - [SDK for .NET: Update records](org-service/entity-operations-update-delete.md)
+> - [Web API: Update records](webapi/update-delete-entities-using-web-api.md#basic-update)
+
+# [SDK for .NET](#tab/sdk)
+
+Using the [UpdateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest).
+
+```csharp
+/// <summary>
+/// Demonstrates the use of the UpdateMultiple message.
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance.</param>
+/// <param name="recordsToUpdate">A list of records to create.</param>
+static void UpdateMultipleExample(IOrganizationService service, List<Entity> recordsToUpdate) {
+    // Create an EntityCollection populated with the list of entities.
+    EntityCollection entities = new(recordsToUpdate)
+    {
+        // All the records must be for the same table.
+        EntityName = recordsToUpdate[0].LogicalName
+    };
+
+    // Use UpdateMultipleRequest
+    UpdateMultipleRequest updateMultipleRequest = new()
+    {
+        Targets = entities,
+    };
+
+    service.Execute(updateMultipleRequest);
+}
+```
+
+# [Web API](#tab/webapi)
+
+Using the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple).
+
+> [!IMPORTANT]
+> You must set the `@odata.type` property for each item in the `Targets` parameter.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/sample_examples/Microsoft.Dynamics.CRM.UpdateMultiple?tag=CreateUpdateMultiple
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 621
+
+{
+  "Targets": [
+    {
+      "sample_name": "sample record 0000001 Updated",
+      "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
+      "sample_exampleid": "8f4c3f92-312b-ee11-bdf4-000d3a993550"
+    },
+    {
+      "sample_name": "sample record 0000002 Updated",
+      "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
+      "sample_exampleid": "904c3f92-312b-ee11-bdf4-000d3a993550"
+    },
+    {
+      "sample_name": "sample record 0000003 Updated",
+      "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
+      "sample_exampleid": "914c3f92-312b-ee11-bdf4-000d3a993550"
+    }
+  ]
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+---
+
+### DeleteMultiple
+
+`DeleteMultiple` is only available for elastic tables.
+
+# [SDK for .NET](#tab/sdk)
+
+Use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type.
+# [Web API](#tab/webapi)
+
+The `DeleteMultiple` action is currently private, but will become public in the coming weeks. You can use this private message now.
+
+
+---
+
 
 ## Standard and Elastic table usage
 
@@ -39,7 +235,7 @@ Both standard and elastic tables see significant performance benefits when using
 |**[Number of records](#number-of-records)**|Operations are more efficient with larger number of records. There's no set limit, but there are message size and time limits.|Recommend sending 100 records at a time.|
 |**[On Error behavior](#on-error-behavior)**|All operations roll back on error.|Partial success is possible.|
 |**[Availability](#availability)**|Not all standard tables support these messages.|Messages available for all elastic tables.|
-|**[DeleteMultiple](#deletemultiple)**|Not available. Use the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) instead.|Available using SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). The Web API `DeleteMultiple` action is currently private, but will become public in the coming weeks. You can use this private message now.|
+|**[DeleteMultiple](#deletemultiple)**|Not available. Use the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) instead. More information: [Delete data in bulk](delete-data-bulk.md) |Available using SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). The Web API `DeleteMultiple` action is currently private, but will become public in the coming weeks. You can use this private message now.|
 
 Standard and elastic table usage is different because standard tables use Azure SQL and support transactions. Elastic tables use Azure Cosmos DB, which doesn't support transactions but is able to handle large amounts of data at high levels of throughput with low latency. The following sections provide more details and you can find more information in [Bulk operations with elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
 
@@ -290,6 +486,7 @@ As described in [Service protection API limits](api-limits.md), limits have thre
 #### Power Platform Request (API Entitlement) limits
 
 These limits are based on data changes, so each item included in the `Targets` parameter of a bulk operation request accrue to this limit. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
+
 
 ### See also
 
