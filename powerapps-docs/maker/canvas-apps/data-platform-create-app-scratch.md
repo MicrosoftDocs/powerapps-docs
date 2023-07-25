@@ -37,7 +37,7 @@ To create an app from scratch that uses data from Dataverse, the first step is t
 
 1. In the app authoring menu, select **Data**. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
 
-1. Select **Add data** and in the serch box enter, **Accounts** > **Connect**.
+1. Select **Add data** and in the search box enter, **Accounts** > **Connect**.
 
 1. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
