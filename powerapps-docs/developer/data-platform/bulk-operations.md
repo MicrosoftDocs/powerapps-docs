@@ -492,13 +492,15 @@ A key requirement for these bulk operation messages is that people must not be r
 - When the single operation messages are used, the respective bulk operation events occur with an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing a *single* [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance passed in the `Targets` parameter.
 
    This means you can move any existing logic that currently responds to single operation events to the more efficient bulk operation events and the logic is applied for both single and multiple operations.
+   
+   > [!NOTE]
+   > You should not migrate custom logic to the `DeleteMultiple` message until [Known issue: DeleteMultiple plug-ins not invoked for Delete](#deletemultiple-plug-ins-not-invoked-for-delete) is resolved.
 
 Before the introduction of bulk operation messages, all custom logic has been on the single operation messages. That logic must continue to be applied when client applications use the bulk operation messages.
 
 With the introduction of the bulk operation messages, for tables used with high-volume bulk operations, we recommend that you begin to move any existing synchronous logic from single message events to bulk operation events. If you're introducing new logic, use the bulk operation events rather than the single operation events.
 
-> [!NOTE]
-> You should not migrate custom logic to the `DeleteMultiple` message until [Known issue: DeleteMultiple plug-ins not invoked for Delete](#deletemultiple-plug-ins-not-invoked-for-delete) is resolved.
+
 
 > [!CAUTION]
 > With this design there is potential for duplicate logic to be applied on both the single and multiple versions of events for the operations. Dataverse does not try to prevent this because we cannot know your intent.
