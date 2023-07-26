@@ -38,8 +38,8 @@ See the README.md file in the sample for detailed instructions about how to run 
 
 ### See Also
 
-[Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../../write-plugin-multiple-operation.md)<br />
-[Use CreateMultiple and UpdateMultiple (Preview)](../use-createmultiple-updatemultiple.md)<br />
+[Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../../write-plugin-multiple-operation.md)   
+[Bulk Operation messages (preview)](../../bulk-operations.md)   
 [Sample: Use CreateMultiple and UpdateMultiple](create-update-multiple.md)
 
 
