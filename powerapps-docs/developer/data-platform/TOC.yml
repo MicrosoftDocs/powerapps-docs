@@ -33,6 +33,8 @@
       href: ./webapi/overview.md
     - name: Use Organization Service
       href: ./org-service/overview.md
+    - name: Bulk Operation messages
+      href: bulk-operations.md
     - name: Create your own messages
       href: custom-actions.md
       items:
@@ -405,8 +407,6 @@
       href: use-elastic-tables.md
     - name: Query JSON columns
       href: query-json-columns-elastic-tables.md
-    - name: Bulk operations with elastic tables
-      href: bulk-operations-elastic-tables.md    
     - name: Elastic tables sample code
       href: elastic-table-samples.md
 - name: Introduction to solutions

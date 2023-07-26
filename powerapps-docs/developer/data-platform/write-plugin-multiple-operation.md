@@ -19,7 +19,7 @@ contributors:
 # Write plug-ins for CreateMultiple and UpdateMultiple (Preview)
 
 > [!NOTE]
-> Not all tables currently support using the `CreateMultiple` and `UpdateMultiple` messages. These messages are currently being deployed and all tables that currently support `Create` and `Update` will support `CreateMultiple` and `UpdateMultiple` in the coming months. More information: [Use CreateMultiple and UpdateMultiple (Preview)](org-service/use-createmultiple-updatemultiple.md)
+> Not all tables currently support using the `CreateMultiple` and `UpdateMultiple` messages. These messages are currently being deployed and all tables that currently support `Create` and `Update` will support `CreateMultiple` and `UpdateMultiple` in the coming months. More information: [Bulk Operation messages (preview)](bulk-operations.md)
 
 You should write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages with tables where records may need to be created or updated in bulk, or when performance in creating and updating large numbers of records is important. Just about every table that stores business data may need to be created or updated in bulk.
 
@@ -27,7 +27,7 @@ If you have existing plug-ins for the `Create` and `Update` messages for tables 
 
 ## Is updating plug-ins required?
 
-There's no requirement to migrate your plug-ins to use `CreateMultiple` and `UpdateMultiple` instead of `Create` and `Update`. Your logic continues to be applied when applications use `CreateMultiple` or `UpdateMultiple`. There's no requirement to migrate your plug-ins because the Dataverse message processing pipeline merges the logic for plugins written for either the single or multiple version of the `Create` and `Update` messages. More information: [Message pipelines merged](org-service/use-createmultiple-updatemultiple.md#message-pipelines-merged)
+There's no requirement to migrate your plug-ins to use `CreateMultiple` and `UpdateMultiple` instead of `Create` and `Update`. Your logic continues to be applied when applications use `CreateMultiple` or `UpdateMultiple`. There's no requirement to migrate your plug-ins because the Dataverse message processing pipeline merges the logic for plugins written for either the single or multiple version of the `Create` and `Update` messages. More information: [Message pipelines merged](bulk-operations.md#message-pipelines-merged)
 
 However, only plug-ins written for the multiple version of these messages enable optimum performance when developers use `CreateMultiple` and `UpdateMultiple`. Over time, as more applications choose to optimize performance by using the `CreateMultiple` and `UpdateMultiple` messages, we expect writing plug-ins for multiple operations will become the standard, and plug-ins written for single operations will be the exception.
 
@@ -50,7 +50,7 @@ If you're using the `PluginBase` class that is the standard when initializing pl
 > More information:
 >
 > - [Define entity images](register-plug-in.md#define-entity-images)
-> - [Message size limits](org-service/use-createmultiple-updatemultiple.md#message-size-limits)
+> - [Message size limits](bulk-operations.md#message-size-limits)
 
 ### Attribute Filters
 
@@ -301,9 +301,9 @@ More information:
 
 ### See also
 
-[Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)<br />
-[Use CreateMultiple and UpdateMultiple (Preview)](org-service/use-createmultiple-updatemultiple.md)<br />
-[Sample: Use CreateMultiple and UpdateMultiple](org-service/samples/create-update-multiple.md)<br />
+[Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)   
+[Bulk Operation messages (preview)](bulk-operations.md)   
+[Sample: Use CreateMultiple and UpdateMultiple](org-service/samples/create-update-multiple.md)   
 [Optimize performance for Create and Update operations](optimize-performance-create-update.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
