@@ -5,7 +5,7 @@ author: mduelae
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 05/03/2023
+ms.date: 08/01/2023
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -55,7 +55,6 @@ When enabled by your system administrator, you can use the **Create a timeline r
 ![Select type of timeline row.](media\timeline-create-a-timeline-record-1f.png "Select the type of timeline row")
 
 For information on timeline row configuration, [Set up the timeline control](../maker/model-driven-apps/set-up-timeline-control.md).
- 
 
 ## Work with filters
 
@@ -93,17 +92,17 @@ The following category and sub-category options are available on the filer menu:
 |Modified date              |<li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li> |
 
 ### Save filter settings
-  
+
 You can choose to save your filter settings so that you don't have to set them again each time you work with activities in the timeline.
-  
+
 To save your filter settings, after configuring the filters you want, select the ellipses, and then select **Remember my filters**.
-  
+
 > [!Note]
 > If you have a system administrator or basic user role, Remember my filters works by default. If you don't have either of these roles, you must have Create/Read/Write privileges to be added to the msdyn_customcontrolextendedsettings entity for the setting to work.
-  
+
 ![Remember filters functionality.](media\timeline-remember-filters.png "Remember my filters functionality")
-  
-## Work with rows  
+
+## Work with rows
 
 When working with rows, you can view key information at a glance or expand rows to view more details. When you hover over a row, actions display that you can use.
 
@@ -115,7 +114,7 @@ When enabled by your system administrator, you can view timeline rows quickly in
 
 Legend
 1. The **Expand all records** ![Expand all rows.](media\timeline-expand-icon.png "Expand all rows") icon is used to expand all rows listed on the timeline.
-1. The **Modified on** timestamp displays the time the record was last updated.  
+1. The **Modified on** timestamp displays the time the record was last updated.
 1. Each row has a list of commands relevant to their row type that displays in the top right corner for ease of use. 
 1. Row backgrounds change to grey when you hover over it, and it becomes transparent again when you move the mouse away.
 1. The carats in the bottom-right corner of each row allow you to expand (^) or minimize (v) the display views.
@@ -135,11 +134,10 @@ Legend
 1. The **Remember my filters** command allows your filters to persist when you close the record so that they continue to be applied across sessions.
 1. The **Reset to default** command will revert all of the command settings you've changed back to the default settings.
 
-
 ## View email inline in timeline
 
 If preferred, you can view email messages inline on the timeline rather than open them as separate pages.
-  
+
 To view an email directly in the timeline, on the row, select **View more**. The email is displayed on the same form. When you’re finished viewing the email, you can collapse the screen and return to the previous view of the form.
 
 ![Inline view of email.](media\email-timeline-view.png "Inline view of email")
@@ -185,7 +183,7 @@ Steps:
 
 **Enable threaded email through Personal Options setting**
 
-To enable threaded email via this option, go to the command bar and select **Settings**, then **Personalization Settings**. This will display the **Set Personal Options** dialog box so you can use  the following steps to enable threaded email view on timeline.
+To enable threaded email via this option, go to the command bar and select **Settings**, then **Personalization Settings**. This will display the **Set Personal Options** dialog box so you can use the following steps to enable the threaded email view on timeline.
 
 Steps:
 1. Select the **Email** tab.
@@ -226,7 +224,7 @@ You can also enter a note and add it to a row, but you can only add one attachme
 When enabled by your system administrator, the **Note** field is displayed under the **Search** feature on timeline.
 
 ![Add a note to a row on timeline.](media\timeline-add-a-note-to-a-record.png "Add a note to a row on timeline")
-  
+
 **Post display view**
 
 When enabled by your system administrator, the **Post** field is also displayed under the **Search** feature on timeline.
@@ -235,7 +233,7 @@ When enabled by your system administrator, the **Post** field is also displayed 
 ### Add an attachment to a post
 
 You can add an attachment to a post, such an an image or a document. The supported file formats are as follows: .JPG, .PNG, and .PDF.
-  
+
 To add an attachment to a post:
 
 1. In the **Create a post** section in the timeline, select the **Attach** icon in the lower-left corner.
@@ -257,14 +255,14 @@ In edit mode:
 2. When you're finished viewing the attachment, select **Close** to return to the note or post.
 
 OR
-  
+
 In read mode:
 1. Select the attachment. The **Attachment preview** dialog opens with the attachment displayed. You can view and download the attachment from the dialog.
 2. When you're finished viewing or downloading the attachment, select **Close** to return to the note or post.
 
 > [!Note]
 > The use of the **Attachment preview** dialog to view the file can be skipped in the browser by using **Ctrl + Left click (of mouse)**. By doing so, the attachment will be directly downloaded without previewing it.
-  
+
 ### Access the command bar to perform actions
 
 When you hover your cursor on or expand an activity, post, or note, the command bar appears in the top-right corner of the row with the specific options that support that activity, such as assigning it to others, adding it to a queue, converting it to a case, liking or replying to a post, editing a note, or deleting an activity. However, not all rows can perform the same actions. 
@@ -276,7 +274,6 @@ When you hover your cursor on or expand an activity, post, or note, the command 
 Legend
 1. Only the actions associated with that row are displayed in the top-right command bar displayed in the row. 
 2. Each row displays a different set of associated actions. Not all actions work on all rows.
-
 
 The following is an overview of the command bar icons and the actions they support: 
 
@@ -328,7 +325,7 @@ Legend
 > - If you create a rich text editor note in Unified Interface and then view the note in the web client, it will display in HTML syntax.
 
 ### View whether a note has attachments and inline files in the timeline
-  
+
 If you attach a file to a note or include an inline image in the note, the timeline will show that the note has an attachment or inline files. If you attach a file or include multiple files inline, the note will show the number of files using the first two file names and a number to represent the remaining count of and the file type.
 
 ![View the number of attachments in a note on timeline.](media\timeline-attachments-notes.png "View the number of attachments in a note on timeline")
@@ -399,16 +396,16 @@ To add a reference such as links in a post to a timeline row, select the ![**Cre
 Legend
 1. Links can be added to a row by typing **#** which will display a flyout menu with a list of rows recently accessed. Type a keyword after the # tag and the display refreshes in the flyout menu via the **Quick Find** search engine that's operating in the background.
 2. Rows displayed can be of any row type, such as accounts, contacts or leads.
-3. The icons beside the row names in the flyout menu indicate the row types, which helps you determine which row to select.  
-4. **Advanced** provides more options when a row cannot be located by allowing the user to  switch to a different view or create a new row.  
+3. The icons beside the row names in the flyout menu indicate the row types, which helps you determine which row to select.
+4. **Advanced** provides more options when a row cannot be located by allowing the user to switch to a different view or create a new row.
 
 ### Look up rows in posts in timeline
 
 ![Lookup rows pane.](media\timeline-add-links-to-records-1c.png "Lookup rows pane")
 
 Legend
-1. The **Lookup Records** pane provides users with options to switch between the **Recent records** and **All records** view to find a row.  
-2. **Change View** to see rows from a different view.  
+1. The **Lookup Records** pane provides users with options to switch between the **Recent records** and **All records** view to find a row.
+2. **Change View** to see rows from a different view.
 3. **New Record** allows you to create a new row if you can't find the row you need.
 
 For more information on notes and post functionality and configuration, see:
@@ -422,7 +419,7 @@ The following table describes the different formatting features and functionalit
 
 > [!NOTE]
 > You can access your browser's context menu by selecting **Ctrl + right-click**. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.
-  
+
 |Icon | Name | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|-----------------------------|
 |![Format Painter.](media/format-painter.png "Format Painter")| Format Painter | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
@@ -459,17 +456,25 @@ The following table describes the different formatting features and functionalit
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
 
 For more information, see [Commonly used rich text editor configurations](../maker/model-driven-apps/rich-text-editor-control.md#commonly-used-rich-text-editor-configurations).
-  
-  
+
 ## View a conversation transcript
-  
+
 In the timeline, you can view the transcripts of completed chats you've had in conversation channels. To view these transcripts, you must have prvReadmsdyn_transcript permission. More information: [Roles and permissions](/dynamics365/app-profile-manager/security-roles)
 
 To view a conversation transcript, select the **View more** link in the row for which you want to view the transcript. The row expands and the entire transcript is displayed inline.
 
 ![Conversation transcript view.](media\timeline-transcript-view.png "Conversation transcript view")
-  
-  
+
+## Pin or unpin records in timeline
+
+To quickly access activities such as records, you can keep them at the top of the timeline by using the pin feature. Pinning an activity eliminates the need to scroll through every activity to find the one you need.
+
+Pin an activity by selecting the pin icon next to it. This moves it to the top of the timeline in the **Pinned** section, where it can be quickly accessed. The Pinned section also lists the number of records that are pinned.
+
+![Pin and unpin activity view.](media\timeline-pin-unpin-activity.png "Pin and unpin an activity view")
+
+To unpin an activity, select the pin icon next to it. It will move out of the **Pinned** section and back to the place it orginally appeared in the list of activities in timeline.
+
 ## See also
 
 [Set up timeline control](../maker/model-driven-apps/set-up-timeline-control.md)
