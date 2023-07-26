@@ -286,15 +286,15 @@ You can use the following scalar functions in a formula column:
 
 This section describes the known limitations with formula columns in Dataverse.
 
-- Formula columns don't support using a related table currency column in the formula, such as in the example below.
+- Formula columns don't support using a related table currency column in the formula, such as in this example.
    :::image type="content" source="media/formula-column-currency.png" alt-text="Formula column with unsupported formula of Account.Annual Revenue":::
-- Formula columns don't support text functions with a single argument of type Number. Number can be whole, decimal, currency. 
+- Formula columns don't support Text() functions with a single argument of type Number. Number can be whole, decimal, or currency.
    :::image type="content" source="media/formula-column-number.png" alt-text="Formula column with unsupported text function with a number argument":::
 - Formula columns don't support using base currency columns in the formula as these are system columns.
-- Simple formula columns. These are where the formula uses columns from the same record or uses hard coded values. For rollup columns, formula columns must be simple formula columns, such as this example rollup column.
+- A *simple formula column* is where the formula uses columns from the same record or uses hard coded values. For rollup columns, formula columns must be simple formula columns, such as this example rollup column.
    :::image type="content" source="media/formula-column-rollup1.png" alt-text="Example simple formula column for a rollup column":::
    :::image type="content" source="media/formula-column-rollup2.png" alt-text="Example rollup column configuration":::
-- Currently, these functions or operators aren't supported with formula columns: 
+- Currently, these functions and operators aren't supported with formula columns: 
   - Power
   - Sqrt
   - Exp
@@ -316,9 +316,9 @@ This section describes the known limitations with formula columns in Dataverse.
   :::image type="content" source="media/formula-column-datetime.png" alt-text="Unsupported date time configuration with a formula column":::
 - In attribute metadata contained in the customizations.xml file, `SourceType=3` indicates a formula column.
 - Maximum formula expression length in formula columns is 1000 characters.
-- Labels for two choice columns can't be changed from Yes/No.
-- Maximum depth allowed in formula columns is 10. Depth is defined as the chain of formula columns referring to other formula or rollup columns.  
-  - For example, `table - E1, F1 =  1*2, table E2, F2 - E1*2`. In this case the depth of F2 is 1.
+- The label names for choice formula columns can't be changed from Yes/No.
+- The maximum depth allowed in formula columns is 10. *Depth* is defined as the chain of formula columns referring to other formula or rollup columns.  
+  - For example, `table - E1, F1 =  1*2, table E2, F2 - E1*2`. In this example, the depth of F2 is 1.
 - Behavior of date time formula columns can only be updated when it isn't used in another formula column.
 - Formula columns don’t have values when a user with Dynamics 365 for Outlook is offline.
 - `MaxValue` and `MinValue` metadata properties can’t be set on formula attributes.
