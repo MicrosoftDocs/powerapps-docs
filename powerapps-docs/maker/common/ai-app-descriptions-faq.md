@@ -45,5 +45,9 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 
 If you get this error, **Something happened and we weren’t able to generate a description for you**, this may be due to capacity limits. We recommend you give the system some time before trying again.
+
+## See also 
+- [Generate app descriptions using AI (preview)](../canvas-apps/save-publish-app.md#generate-app-descriptions-using-ai-preview)
+
  
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
