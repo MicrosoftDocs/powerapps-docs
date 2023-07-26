@@ -282,6 +282,7 @@ You can use the following scalar functions in a formula column:
 |---------|---------|
 |Retrieve a date value.  |  `DateAdd(UTCNow(),-1,TimeUnit.Years)`   |
 
+
 ### See also
 
 [Types of columns](types-of-fields.md)  
