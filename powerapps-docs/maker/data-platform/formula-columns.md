@@ -302,12 +302,12 @@ This section describes the known limitations with formula columns in Dataverse.
   - ^ (operator)
 - Formula columns don't support using numbers in the following configurations:
   - In string functions. These are string functions placed wherever a text argument is expected: Upper, Lower, Left, Right, Concatenate, Mid, Len, StartsWith, EndsWith, TrimEnds, Trim, Substitute, and Replace.
-  - In the implicit formulas, such as 12 & "foo", or 12 & 34, or "foo" & 12. 
+  - In the implicit formulas, such as `12 & "foo"`, or `12 & 34`, or `"foo" & 12`.
 - Use numbers with the Text() function to convert numbers to text. If you have a formula `Concatenate(Text(123,"#"),"ab")` then you must write the expression as `Text(123,"#") & "foo"`.
 - The currency, choice, and choices data types aren't currently supported with formula columns.
 - Duplicate detection rules aren't triggered on formula columns.
 - Formula columns can reference other formula columns, but a formula column can’t reference itself.
-- Formula columns don't support cyclic chains, such as F1 = F2 + 10, F2 = F1 * 2.
+- Formula columns don't support cyclic chains, such as `F1 = F2 + 10, F2 = F1 * 2`.
 - For date time formula columns in a DateDiff function:
   - User local behavior column can't be compared or used  with a DateTime(TZI)/DateOnly behavior column.
   - User local behavior columns can only be compared or used with another user local behavior column.
