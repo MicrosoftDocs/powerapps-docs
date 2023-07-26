@@ -80,9 +80,16 @@ When using an async `OnSave` handler, the form waits for the promise returned by
 
 There may be scenarios where pausing the `OnSave` handler for longer than 10 seconds is needed. An example is opening a dialog and waiting for the user's input before continuing to save. To make sure the async operation waits for the promise to resolve, you can call the **disableAsyncTimeout** method:
 
-```JavaScript
-executioncontext.getEventArgs().disableAsyncTimeout();
-```
+> [!NOTE] 
+> The `disableAsyncTimeout` must be called before any await statements or async calls.
+  > ```JavaScript
+  > async function myHandler(context) {  
+  >     context.getEventArgs().disableAsyncTimeout();
+  >     // The 10000ms time out will not be disabled if the above line does not come before all async awaits, like the example below line
+  >     await Xrm.Navigation.openConfirmDialog({ text: "Are you sure you want to save?" });
+  >     // ... snip ...
+  > }
+  >```
 
 When **disableAsyncTimeout** is called, the timeout for that handler won't be applied. It continues to wait for that handler's promise to be fulfilled.
 
