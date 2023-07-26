@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 04/20/2023
+ms.date: 08/01/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -233,7 +233,7 @@ You can send and receive records with images, but they won't display when the re
 |Form designer configure view | Form designer display view|
 |---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 |![Configure “What you’ve missed” summary](media\timeline-what-you-missed-display-options-advanced-11a.png "Configure “What you’ve missed” summary")| ![Disable “What you’ve missed” summary](media\timeline-what-you-missed-display-options-advanced-11b.png "Disable “What you’ve missed” summary") |
-|The **What you’ve missed** setting displays new records you haven't seen. It's disabled by default. To enable it, select the box next to the setting. To disable it, clear the box next to the setting |Once enabled, when you view an account record, a box appears at the top of the timeline section, notifying you of updates.<BR><BR> When disabled, notifications aren't displayed when you access an account.|
+|The **What you’ve missed** setting displays new records you haven't seen. It's enabled by default. To disable it, clear the box next to the setting |When enabled, when you view an account record, a box appears at the top of the timeline section, notifying you of updates and displaying the number of activities you haven't opened.<BR><BR> When disabled, notifications aren't displayed when you access an account.|
 
 ### Record settings
 
