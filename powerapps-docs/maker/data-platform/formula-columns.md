@@ -5,7 +5,7 @@ author: matp
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 03/22/2023
+ms.date: 07/25/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -280,7 +280,7 @@ You can use the following scalar functions in a formula column:
 
 |Description  |Example  |
 |---------|---------|
-|Retrieve a date value.  |  `DateAdd(Now(), -1, TimeUnit.Year)`    |
+|Retrieve a date value.  |  `DateAdd(UTCNow(),-1,TimeUnit.Years)`   |
 
 ### See also
 
