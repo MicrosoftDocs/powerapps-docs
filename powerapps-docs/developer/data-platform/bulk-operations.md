@@ -381,9 +381,7 @@ Bulk operation message availability is different depending on whether you're usi
 
 #### Availability with standard tables
 
-You can use the `CreateMultiple` and `UpdateMultiple` bulk operation messages for custom tables and most common tables.
-
-You can test whether individual standard tables support these messages today using the following examples.
+You can use the `CreateMultiple` and `UpdateMultiple` bulk operation messages for custom standard tables and many common standard tables, but not all. You should test whether individual standard tables support these messages today using the following examples.
 
 ##### [SDK for .NET](#tab/sdk)
 
