@@ -49,7 +49,7 @@ Power Apps can also periodically save the app every 2 minutes. If you've saved t
 
 [This section is prerelease documentation and is subject to change.]
 
-If your app is in a [managed  environment](power-platform/admin/managed-environment-overview), you can use AI to help you create a description for your app.
+If your app is in a [managed  environment](/power-platform/admin/managed-environment-overview), you can use AI to help you create a description for your app.
 
 When you save and publish your app, on the **Getting ready to publishing** dialog box select, **Create descriptions using AI**.
 
@@ -57,7 +57,7 @@ You can also generate an app description by going to, **Settings** > **General**
 
 
 > [!IMPORTANT]
-> - To use this capability your app must be in a [managed  environment](power-platform/admin/managed-environment-overview).
+> - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
