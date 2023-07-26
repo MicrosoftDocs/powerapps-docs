@@ -45,7 +45,7 @@ Power Apps can also periodically save the app every 2 minutes. If you've saved t
    > - To allow users to retrieve app details faster on app startup, certain data will be locally stored on users' devices in the browser cache. Information that will be stored includes app, environment, and connection details. This data will stay stored in the browser based on each browsers’ storage limits. Users can clear stored data based on [instructions for each browser](/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues)
 
 
-## Generate app descriptions using AI (preview)
+## Create an app description with Copilot (preview)
 
 [This section is prerelease documentation and is subject to change.]
 
