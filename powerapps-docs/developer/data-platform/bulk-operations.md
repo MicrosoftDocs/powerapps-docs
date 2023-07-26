@@ -497,6 +497,9 @@ Before the introduction of bulk operation messages, all custom logic has been on
 
 With the introduction of the bulk operation messages, for tables used with high-volume bulk operations, we recommend that you begin to move any existing synchronous logic from single message events to bulk operation events. If you're introducing new logic, use the bulk operation events rather than the single operation events.
 
+> [!NOTE]
+> You should not migrate custom logic to the `DeleteMultiple` message until [Known issue: DeleteMultiple plug-ins not invoked for Delete](#deletemultiple-plug-ins-not-invoked-for-delete) is resolved.
+
 > [!CAUTION]
 > With this design there is potential for duplicate logic to be applied on both the single and multiple versions of events for the operations. Dataverse does not try to prevent this because we cannot know your intent.
 >
@@ -542,6 +545,14 @@ The following are known issues that will be addressed before this feature become
 Currently the `Default` option is always applied regardless of what you set. The behavior depends on whether [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) is set for the table.
 
 More information: [ConcurrencyBehavior Enum](xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior)
+
+### DeleteMultiple plug-ins not invoked for Delete
+
+As part of the changes to [merge message pipelines](#message-pipelines-merged), any custom logic for the multiple version of the message must also be invoked when the single version of the message is invoked.
+
+At this time, plug-in steps registered for the `DeleteMultiple` message *are not* being called when `Delete` is used. Plug-in steps registered for `Delete` *are* being invoked when `DeleteMultiple` is used.
+
+This means you should not migrate custom logic from `Delete` to `DeleteMultiple` until this is resolved. You can use `DeleteMultiple` and any logic associated with the `Delete` message will still work.
 
 ## Frequently Asked Questions (FAQ)
 
