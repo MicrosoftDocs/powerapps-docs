@@ -53,7 +53,7 @@ If your app is in a [managed  environment](/power-platform/admin/managed-environ
 
 When you save and publish your app, on the **Getting ready to publishing** dialog box select, **Create descriptions using AI**.
 
-You can also generate an app description by going to, **Settings** > **General**. Under **Description** selet, **Create descriptions using AI**.
+You can also generate an app description by going to, **Settings** > **General**. Under **Description** select, **Create descriptions using AI**.
 
 
 > [!IMPORTANT]
