@@ -63,10 +63,10 @@ You can display the following data types in a formula column:
 
 - Text
 - Decimal number
-- Yes/No (boolean)
+- Choice Yes/No (boolean)
 - Datetime
 
-The currency and date data types aren't currently supported.
+The currency and choices (formerly optionsets) data types aren't currently supported.
 
 ## Function types
 
@@ -318,9 +318,9 @@ This section describes the known limitations with formula columns in Dataverse.
 - Maximum formula expression length in formula columns is 1000 characters.
 - The label names for choice formula columns can't be changed from Yes/No.
 - The maximum depth allowed in formula columns is 10. *Depth* is defined as the chain of formula columns referring to other formula or rollup columns.  
-  - For example, `table - E1, F1 =  1*2, table E2, F2 - E1*2`. In this example, the depth of F2 is 1.
+  - For example, `table E1, F1 =  1*2, table E2, F2 - E1*2`. In this example, the depth of F2 is 1.
 - Behavior of date time formula columns can only be updated when it isn't used in another formula column.
-- Formula columns don’t have values when a user with Dynamics 365 for Outlook is offline.
+- Formula columns don’t have values when a user with Dynamics 365 for Outlook is offline. <!-- Waiting on PM for this one.-->
 - `MaxValue` and `MinValue` metadata properties can’t be set on formula attributes.
 
 ### See also
