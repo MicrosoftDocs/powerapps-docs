@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
 author: "Mattp123"
-ms.date: 04/24/2023
+ms.date: 07/25/2023
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -47,7 +47,10 @@ Enter data for the following properties.
 
 Select **Enable Attachments** to append notes and files to records for this table.
 
-Select the **Primary column** tab if you want to change the **Display Name** or **Name** of the primary column. The primary column is used by lookup fields when establishing relationships with other tables.
+Select the **Primary column** tab if you want to change the **Display name** or **Description** of the primary column. The primary column is used by lookup fields when establishing relationships with other tables.
+
+> [!IMPORTANT]
+> After you save the table, the **Primary column** display name and description can't be changed.
 
 ### Advanced options
 

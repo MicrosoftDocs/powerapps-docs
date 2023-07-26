@@ -58,7 +58,7 @@ The choice of table should be based on the specific needs of your application. A
 
 As your business data grows, elastic tables provide unlimited auto scalability based on your application workload, both for storage size and throughput, such as the number of records created, updated, or deleted in a given timeframe.
 
-If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request API's, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits. More information: [Developer guide: Bulk operations with elastic tables (Preview)](../../developer/data-platform/bulk-operations-elastic-tables.md)
+If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request API's, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits. More information: [Developer guide: Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md)
 
 ### Automatic removal of data
 
@@ -154,7 +154,7 @@ Elastic tables have different behaviors and capabilities than standard tables wh
 - [Create elastic tables using code (preview)](../../developer/data-platform/create-elastic-tables.md)
 - [Use elastic tables using code (preview)](../../developer/data-platform/use-elastic-tables.md)
 - [Query JSON columns in elastic tables (preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
-- [Bulk operations with elastic tables (Preview)](../../developer/data-platform/bulk-operations-elastic-tables.md)
+- [Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md)
 - [Elastic table sample code (preview)](../../developer/data-platform/elastic-table-samples.md)
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Create a table row using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Read how to create a POST request to send data to create a table row on Microsoft Dataverse using the Web API"
-ms.date: 06/14/2023
+ms.date: 07/22/2023
 ms.service: powerapps
 ms.topic: article
 author: divkamath
@@ -120,6 +120,16 @@ OData-Version: 4.0
 }
 
 ```
+
+## Create multiple records in a single request
+
+The fastest way to create multiple records of the same type in a single request is to use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple). At the time of this writing the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple) is a preview feature. Not all standard tables support this action, but all elastic tables do.
+
+More information:
+
+- [Bulk Operation messages (preview)](../bulk-operations.md)
+- [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](samples/create-update-multiple.md)
+- [Use CreateMultiple with elastic tables](../use-elastic-tables.md#use-createmultiple-with-elastic-tables)
 
 <a name="bkmk_CreateRelated"></a>
 
