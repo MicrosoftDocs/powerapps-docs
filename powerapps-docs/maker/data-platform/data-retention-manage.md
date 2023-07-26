@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to 
-ms.date: 05/10/2023
+ms.date: 07/25/2023
 ms.custom: template-how-to 
 ---
 # Manage data retention policies (preview)
@@ -22,8 +22,6 @@ Use the retention policies dashboard to view and manage retention policies. From
 ## View and manage retention policies
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Retention policies**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-   > [!TIP]
-   > If the **Retention policies** area isn't available, add this parameter to the end of the make.powerapps.com URL in your browser address bar: `?retentionPolicies.registration=true&retentionPolicies.leftNavigation=true`
 1. Select a retention policy from the list, and then on the command bar select **Policy details**.
 1. The following retention policy actions are available:
   - **History**. Displays the retention [policy run status](#policy-run-status), run start, run end and table. For every run, you can view  and all tables (root and child tables) and the number of rows retained in the run.
