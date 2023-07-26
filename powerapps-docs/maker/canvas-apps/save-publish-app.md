@@ -49,11 +49,11 @@ Power Apps can also periodically save the app every 2 minutes. If you've saved t
 
 [This section is prerelease documentation and is subject to change.]
 
-If your app is in a [managed  environment](power-platform/admin/managed-environment-overview) you can use AI to help create a description for your app.
+If your app is in a [managed  environment](power-platform/admin/managed-environment-overview), you can use AI to help you create a description for your app.
 
 When you save and publish your app, on the **Getting ready to publishing** dialog box select, **Create descriptions using AI**.
 
-You can also generate an app description by gong to **Settings** > **General**. Under **Description** selet, **Create descriptions using AI**.
+You can also generate an app description by going to, **Settings** > **General**. Under **Description** selet, **Create descriptions using AI**.
 
 
 > [!IMPORTANT]
@@ -63,7 +63,7 @@ You can also generate an app description by gong to **Settings** > **General**. 
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in process of rolling out, and may not be available in your region yet.
 > - This capability  may be subject to usage limits or capacity throttling.
-> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Transparency notes for Power Apps](../common/transparency-note.md)
+> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
 
 
 
