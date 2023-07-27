@@ -17,7 +17,7 @@ contributors:
 ---
 # Add a screen using screen layouts
 
-When you add a new screen, you can choose from various screen layouts and [templates](./screen-templates/calendar-screen-overview.md). Each screen layout automatically adjusts to fit the screen size of the device being used to run the app. 
+When you add a new screen, you can choose from various screen layouts and [templates](./screen-templates/calendar-screen-overview.md). When the **[Scale to fit](create-responsive-layout.md#disable-scale-to-fit)** option is turned off, the screen layout of the app adapts to the size of the device's screen it is being run on.
 
 > [!div class="mx-imgBorder"]
 > ![Screen layouts.](./media/add-screen-context-variables/screen-layouts.png)
