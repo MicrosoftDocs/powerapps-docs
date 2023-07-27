@@ -5,8 +5,12 @@ author: udaykirang
 ms.author: udag
 ms.reviewer: shujoshi
 ms.topic: how-to 
-ms.date: 07/18/2023
+ms.date: 07/28/2023
 ms.custom: bap-template 
+ms.subservice: mda-maker
+tags: 
+search.audienceType: 
+  - maker
 ---
 
 # Use Copilot in rich text editor for email (preview)
@@ -48,4 +52,5 @@ For example, Marina wants to send an email with short length and in a formal ton
 
 ### See also
 
-[Add the rich text editor control](../model-driven-apps/rich-text-editor-control.md)
+[Add the rich text editor control](../model-driven-apps/rich-text-editor-control.md)  
+[Add the Copilot control to a form](../model-driven-apps/copilot-control.md) 

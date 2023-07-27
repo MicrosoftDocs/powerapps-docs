@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 07/18/2023
+ms.date: 07/28/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -1059,6 +1059,8 @@ The following table describes the different formatting features and functionalit
 ## Use Copilot to refine text
 
 Copilot uses natural language processing (NLP) algorithms to help refine and improve written text. You can provide an initial draft or a partial piece of writing, and Copilot generates suggestions to enhance the content, grammar, clarity, or overall quality of the text. More information: [Use Copilot in rich text editor for email](../model-driven-apps/use-copilot-email-assist.md)
+
+To add the Copilot button to a rich text editor toolbar, see [Add the Copilot control to a richtext editor](../model-driven-apps/copilot-control.md)
 
 ## Accessibility shortcuts
 

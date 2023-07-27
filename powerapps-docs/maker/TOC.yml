@@ -1540,6 +1540,8 @@
             href: ./model-driven-apps/rich-text-editor-control.md
           - name: Use Copilot in rich text editor for email (preview) 
             href: ./model-driven-apps/use-copilot-email-assist.md
+          - name: Add the Copilot control to richtext editor (preview)
+            href: ./model-driven-apps/copilot-control.md  
           - name: Add the news control to a table
             href: ./model-driven-apps/stay-current-with-news-control.md
           - name: Add the form component control
