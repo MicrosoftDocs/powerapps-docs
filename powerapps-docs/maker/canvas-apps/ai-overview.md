@@ -36,6 +36,7 @@ To learn how to use the new AI features in Power Apps, see:
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in the process of rolling out, and may not be available in your region yet.
 > - This capability may be subject to usage limits or capacity throttling.
+> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Transparency notes for Power Apps](../common/transparency-note.md)
 
 ## Prerequisites for the AI features in Power Apps
 
@@ -53,15 +54,15 @@ The following are requirements to access the waitlist for this preview:
 
     1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
-    2. In the admin center, go to **Environments** &gt; *\[select an environment\]* &gt; **Settings** &gt; **Features**.
+    2. In the admin center, go to **Environments** &gt; *\[select an environment\]* &gt; **Settings** &gt; **Product** &gt; **Features**.
 
     3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
 
-## Disable Copilot
+## Disable Copilot in Power Apps
 
-For this preview, Copilot will be turn on by default. To disable it, you need to have administrator access.
+For this preview, Copilot in Power Apps will be turn on by default. To disable it, you need to have administrator access.
 
-Follow these steps to disable **Copilot** for your tenant.
+Follow these steps to disable **Copilot** in Power Apps for your tenant.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. Select **Settings** > **Tenant settings** in the left-side navigation pane.
@@ -73,3 +74,7 @@ Follow these steps to disable **Copilot** for your environment.
 2. In the left-side navigation pane **Environment**.
 3. Select the environment and on the command bar, select **Settings**.
 4. Set the toggle to **Off** for **Copilot**.
+
+## See also
+
+[Transparency notes for Power Apps](../common/transparency-note.md)

@@ -34,6 +34,8 @@ Before you can use geospatial features in your apps, your Power Platform adminis
 1. Enable geospatial features in the Power Platform admin center for the environment you intend to use. The geospatial features require their own terms of service, which your admin must review and agree to.
 2. Make sure the geospatial controls aren't blocked by the environment's data loss prevention policies.
 
+  >[!IMPORTANT]
+  > Geospatial controls are not available in [Power Apps US Government](/power-platform/admin/powerapps-us-government).
 
 ### Enable geospatial features for the environment
 

@@ -48,6 +48,8 @@
         href: ./search/statistics.md
       - name: Legacy search
         href: ./search/legacy.md
+    - name: Bulk Operation messages
+      href: bulk-operations.md
     - name: Create your own messages
       href: custom-actions.md
       items:
@@ -297,7 +299,7 @@
           href: task-fax-phone-call-letter-activity-entities.md
         - name: ActivityParty table
           href: activityparty-entity.md
-        - name: ActivityPointer (activity) table
+        - name: Activity (ActivityPointer) table
           href: activitypointer-activity-entity.md
         - name: Recurring Appointments
           items:
@@ -368,7 +370,7 @@
           href: entity-attribute-metadata-messages.md
         - name: Behavior and format of the date and time column
           href: behavior-format-date-time-attribute.md
-        - name: Calculated and rollup columns
+        - name: Formula, calculated, and rollup columns
           href: calculated-rollup-attributes.md
         - name: Create auto-number columns
           href: create-auto-number-attributes.md
@@ -420,8 +422,6 @@
       href: use-elastic-tables.md
     - name: Query JSON columns
       href: query-json-columns-elastic-tables.md
-    - name: Bulk operations with elastic tables
-      href: bulk-operations-elastic-tables.md    
     - name: Elastic tables sample code
       href: elastic-table-samples.md
 - name: Introduction to solutions

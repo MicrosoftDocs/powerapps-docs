@@ -156,8 +156,8 @@ They should ALWAYS include a link to the section of the docs where the informati
 
 ### See Also
 
-[Use elastic tables](use-elastic-tables.md)<br />
-[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)<br />
-[Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
-[Elastic table sample code (preview)](elastic-table-samples.md)<br />
+[Use elastic tables](use-elastic-tables.md)   
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)   
+[Bulk Operation messages (preview)](bulk-operations.md)   
+[Elastic table sample code (preview)](elastic-table-samples.md)   
 [Partitioning and horizontal scaling in Azure Cosmos DB](/azure/cosmos-db/partitioning-overview)

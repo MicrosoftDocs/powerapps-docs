@@ -91,6 +91,26 @@ Xrm.App.sidePanes.createPane({
 > [!div class="mx-imgBorder"] 
 > ![Screenshot showing an Active Reservations list opened to an individual record.](../media/app-side-panes-opening-record.png "Open record")
 
+### Showing a web resource
+
+This example shows how to display a webresource in the side pane. A custom html page is opened in a side pane where the default header is visible & close button is hidden.
+
+```javascript
+Xrm.App.sidePanes.createPane({
+                        title: "Registration Page",
+                        imageSrc: "WebResources/msfp_SurveyIcon_32",
+                        paneId: "RegistrationPage",
+                        canClose: false
+                    }).then((pane) => {
+                        //navigate to webresource
+                        pane.navigate({
+                            pageType: "webresource",
+                            webresourceName: "new_RegistrationPage",
+                        })
+                    });
+```
+
+
 ### Managing side panes
 
 In addition to creating side panes and showing rows or views within the side pane, you can also: 
