@@ -56,7 +56,7 @@ The default scope is searching across all search–configured entities and field
 **Type**: string<br />
 **Optional**: True
 
-Filter criteria to reduce results returned.
+Filter criteria to reduce results returned. This uses the same string values as [Query filter parameter](query.md#filter-parameter).
 
 ### `fuzzy` parameter
 
@@ -169,19 +169,21 @@ TODO: The output of the SDK Sample
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.2/searchautocomplete HTTP/1.1
+POST [Organization Uri]/api/data/v9.2/searchautocomplete
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 239
 
 {
-  { "search", "string" },
-  { "entities", "entitylist" },
-  { "filter","string" }, - need to provide an example of a string with a proper filter
-  { "fuzzy", true },
-  { "options","dictionary key(string), value(string)" }, - provide an example of a string with a proper key,value pair
-  { "propertybag","dictionary key(string), value(string)" }- provide an example of a string with a proper key,value pair
+  "options": "null",
+  "entities": "[{\"Name\":\"account\",\"SelectColumns\":[\"name\",\"createdon\"],\"SearchColumns\":[\"name\"],\"Filter\":null}]",
+  "search": "Dat",
+  "propertybag": "null",
+  "fuzzy": true,
+  "filter": null
 }
 ```
 
@@ -189,8 +191,12 @@ Accept: application/json
 
 ```http
 HTTP/1.1 200 OK
+OData-Version: 4.0
 
-{}
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchautocompleteResponse",
+  "response": "{\"Error\":null,\"Value\":\"{crmhit}datum{/crmhit}\",\"QueryContext\":null}"
+}
 ```
 
 #### [Search 2.0 endpoint](#tab/search)
@@ -201,12 +207,12 @@ HTTP/1.1 200 OK
 POST [Organization URI]/api/search/v2.0/autocomplete HTTP/1.1
 
 {
-  { "search", "string" },
-  { "entities", "entitylist" },
-  { "filter","string" },
-  { "fuzzy", true },
-  { "options","dictionary key(string), value(string)" },
-  { "propertybag","dictionary key(string), value(string)" }
+  "options": "null",
+  "entities": "[{\"Name\":\"account\",\"SelectColumns\":[\"name\",\"createdon\"],\"SearchColumns\":[\"name\"],\"Filter\":null}]",
+  "search": "Dat",
+  "propertybag": "null",
+  "fuzzy": true,
+  "filter": null
 }
 ```
 
@@ -214,8 +220,12 @@ POST [Organization URI]/api/search/v2.0/autocomplete HTTP/1.1
 
 ```http
 HTTP/1.1 200 OK
+OData-Version: 4.0
 
-{}
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.searchautocompleteResponse",
+  "response": "{\"Error\":null,\"Value\":\"{crmhit}datum{/crmhit}\",\"QueryContext\":null}"
+}
 ```
 
 ---

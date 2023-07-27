@@ -1,7 +1,7 @@
 ---
 title: "Dataverse Search statistics (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use Dataverse search statistics to get information about search usage." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 09/12/2022
+ms.date: 07/27/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: mspilde # GitHub ID
@@ -80,7 +80,7 @@ StackTrace:
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/searchstatistics HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/searchstatistics
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -91,12 +91,12 @@ Accept: application/json
 
 ```http
 HTTP/1.1 200 OK
+OData-Version: 4.0
 
 {
-  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatisticsResponse",
-  "response": "{\"value\":{\"storagesizeinbytes\":11464058,\"storagesizeinmb\":10,\"documentcount\":13155}}"
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatisticsResponse",
+  "response": "{\"value\":{\"storagesizeinbytes\":4539149,\"storagesizeinmb\":3,\"documentcount\":5515}}"
 }
-
 ```
 
 #### [Search 2.0 endpoint](#tab/search)
@@ -107,7 +107,7 @@ HTTP/1.1 200 OK
 GET [Organization URI]/api/search/v2.0/statistics HTTP/1.1
 ```
 
-The response from the search endpoint is the same as the Web API.
+The body of the response from the search endpoint is the same as the Web API.
 
 ---
 
