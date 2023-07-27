@@ -17,7 +17,7 @@ contributors:
 ---
 # Add a screen using screen layouts
 
-When you add a new screen, you can choose from various screen layouts and templates. For information, see [Calendar-screen template in canvas apps](/screen-templates/calendar-screen-overview.md) Each screen layout automatically adjusts to fit the screen size of the device being used to run the app. 
+When you add a new screen, you can choose from various screen layouts and [templates](./screen-templates/calendar-screen-overview.md). Each screen layout automatically adjusts to fit the screen size of the device being used to run the app. 
 
 > [!div class="mx-imgBorder"]
 > ![Screen layouts.](./media/add-screen-context-variables/screen-layouts.png)
