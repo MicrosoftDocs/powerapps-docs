@@ -101,7 +101,7 @@ These specialized messages optimize performance when the same operation (`Create
 
 - More information:
 
-   - [Use CreateMultiple and UpdateMultiple (Preview)](org-service/use-createmultiple-updatemultiple.md)
+   - [Bulk Operation messages (preview)](bulk-operations.md)
    - [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)
    - [Bypass Custom Business Logic](bypass-custom-business-logic.md)
 
@@ -127,7 +127,7 @@ If your application doesn't depend on the data modeling and transactional capabi
 
 ### See also
 
-[Use CreateMultiple and UpdateMultiple (Preview)](org-service/use-createmultiple-updatemultiple.md)<br />
-[Send parallel requests](send-parallel-requests.md)<br />
-[Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)<br />
+[Bulk Operation messages (preview)](bulk-operations.md)   
+[Send parallel requests](send-parallel-requests.md)   
+[Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)   
 [Elastic tables (Preview)](elastic-tables.md)
