@@ -39,7 +39,7 @@ When you have more than one screen, you can reorder them.
 In the left pane, hover over a screen that you want to move up or down, and then select **Move up** or **Move down**.
 
 > [!NOTE]
-> When the app is opened, the screen at the top of the hierarchical list of controls usually appears first. But you can specify a different screen by setting the **[OnStart](controls/control-screen.md)** property to a formula that includes the **[Navigate](functions/function-navigate.md)** function.
+> Use the **[StartScreen](/power-platform/power-fx/reference/object-app#startscreen-property)** property set which screen will be displayed first.
 
 ## Add navigation
 
