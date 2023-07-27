@@ -270,7 +270,7 @@ Status tags match the status filter that display in the timeline to help you to 
 
 |Form designer configuration view | Form designer display view|
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| :::image type="content" source="media/timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11a.png" alt-text="Show status tags on activity record types"::: |![Display status tags on activity record types](media\timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11b.png "Display status tags on activity record types")|
+| :::image type="content" source="media/timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11a.png" alt-text="Show status tags on activity record types" lightbox="media/timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11a.png"::: |![Display status tags on activity record types](media\timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11b.png "Display status tags on activity record types")|
 | To display email status tags, select Default form (pencil icon) > **Show** in the **Display option** dropdown list under **STATUS TAG**. |  When enabled, status tags such as **Active**, **Overdue**, or **Closed** appear in the timeline next to that activity record.    |
 
 #### Enable the ability to create directly from timeline
