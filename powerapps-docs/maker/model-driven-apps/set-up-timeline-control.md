@@ -264,14 +264,14 @@ When you expand the **Activities record settings** on the timeline component sec
 > [!NOTE]
 > A check mark appears to the right, next to enabled **Activity types**. Additional record type settings are disabled until they're enabled under that specific record type.
 
-#### Enable status tags on activity record types
+#### Show status tags on activity record types
 
-Status tags match the status filter that display in the timeline to help you to see at a glance if the state of an activity record is **Active**, **Overdue**, or **Closed** on an activity, such as a task, appointment, or email. The administrator can enable or disable status tags for any **Activity type** in the **Record settings**. Status tags are enabled by default. 
+Status tags match the status filter that display in the timeline to help you to see at a glance if the state of an activity record is **Active**, **Overdue**, or **Closed** on an activity, such as a task, appointment, or email. Makers enable or disable status tags for any **Activity type** in the default form configuration. Status tags are enabled by default.
 
 |Form designer configuration view | Form designer display view|
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|![Enable status tags on activity record types](media\timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11a.png "Enable status tags on activity record types")|![Display status tags on activity record types](media\timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11b.png "Display status tags on activity record types")|
-| To display email status tags, check the box next to **Enable status tag**. |  When enabled, status tags such as **Active**, **Overdue**, or **Closed** appear in the timeline next to that activity record.    |
+| :::image type="content" source="media/timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11a.png" alt-text="Show status tags on activity record types"::: |![Display status tags on activity record types](media\timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11b.png "Display status tags on activity record types")|
+| To display email status tags, select Default form (pencil icon) > **Show** in the **Display option** dropdown list under **STATUS TAG**. |  When enabled, status tags such as **Active**, **Overdue**, or **Closed** appear in the timeline next to that activity record.    |
 
 #### Enable the ability to create directly from timeline
 
