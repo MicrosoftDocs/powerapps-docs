@@ -157,7 +157,7 @@ The following category and subcategory options are available on the filer menu:
 |Record type                |<li>Notes</li>                     <li>Activities</li><li>Posts</li>                     |
 |Activity type              |<li>Appointment</li><li>Campaign Activity<sup>1<sup></li> <li>Campaign Response<sup>1<sup></li><li>Email</li><li>Fax</li><li>Case Resolution<sup>1<sup></li><li>Letter</li><li>Opportunity Case<sup>1<sup></li>   <li>Order Case<sup>1<sup></li><li>Phone Call</li><li>Quote Close<sup>1<sup></li>           <li>Recurring Appointment</li><li>Social Activity</li><li>Task</li>   <li>Project Service Approval<sup>1<sup></li><li>Booking Alert<sup>1<sup></li><li>Conversation</li><li>Session</li><li>Customer Voice survey invite<sup>1<sup></li><li>Customer Voice survey response<sup>1<sup></li><li>Custom activities (made available by imported solutions)</li>|
 |Activity status            |<li>Active</li><li>Overdue</li>       <li>Closed</li>                         |
-|Activity status reason     |Allows you to filter using specific status reasons. The values are a unique list of all of the status reasons from the activities in the timeline. The status reasons change depending on the activity. If there are multiple activities on the timeline that have the same status reason, it is reflected once, but then the number next to it indicates how many occurrences of that status reason appear in the timeline.                       |
+|Activity status reason     |Allows you to filter using specific status reasons. The values are a unique list of all of the status reasons from the activities in the timeline. The status reasons change depending on the activity. If there are multiple activities on the timeline that have the same status reason, it's reflected once, but then the number next to it indicates how many occurrences of that status reason appear in the timeline.                       |
 |Activity due date (active) |<li>Next 30 days</li><li>Next 7 days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last 7 days</li>   <li>Last 30 days</li>                   |
 |Posts by                   |<li>Auto post</li><li>Users</li>                          |
 |Modified date              |<li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li>                   |
@@ -600,7 +600,7 @@ Power platform administrators can restrict the file size of attachments users ca
 1.	Go to **Advanced Settings**, and then on the Settings menu, select System > Administration.
 1.	On the **Administration page**, select **System Settings**.
 1.	On the **System Settings** dialog, select the **Email** tab, and then scroll down to find the **Set file size limit for attachments** value.
-1.	Enter the desired size limit for attachments, and then select **Save**. 131072 KB is the maximum allowed value.
+1.	Enter the desired size limit for attachments, and then select **Save**. 131,072 KB is the maximum allowed value.
 
 ## Known issues
   
@@ -610,7 +610,7 @@ This is a configuration issue for the rich text editor control. To resolve this,
 
 ### Timeline fails to load with error `code:"0x8004430d","message":"Number of link entity: <number> exceed limit 15`
 
-There's a limit of 15 different tables that can be associated with a timeline. Either disable some of the activities associated with the timeline, or follow one of the workarounds described in this article: [Timeline does not render and shows "Records could not be loaded"](https://support.microsoft.com/topic/timeline-does-not-render-and-shows-records-could-not-be-loaded-4ce9200a-1afe-3ef4-ac11-a74b91f4f40c)
+There's a limit of 15 different tables that can be associated with a timeline. Either disable some of the activities associated with the timeline, or follow one of the workarounds described in this article: [Timeline doesn't render and shows "Records couldn't be loaded"](https://support.microsoft.com/topic/timeline-does-not-render-and-shows-records-could-not-be-loaded-4ce9200a-1afe-3ef4-ac11-a74b91f4f40c)
 
 ### See also
 
