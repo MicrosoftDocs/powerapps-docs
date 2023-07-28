@@ -21,17 +21,12 @@ contributors:
 
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
-
-A new version of the home page is being rolled out which provides a better app creation experience. If your organization has AI enabled then it also includes the new [Copilot](ai-overview.md) features. The new look is on by default. However, you can turn it off by using the toggle on the top-right corner of the home page.
+If your organization has AI enabled then it also includes the new [Copilot](ai-overview.md) features.
 
 > [!div class="mx-imgBorder"]
 > ![New look](media/intro-maker-portal/new-look-toggle.png "New look toggle")
 
 Select the appropriate tab below to know more.
-
-# [New look (preview)](#tab/home-new-look)
-
-[This article is prerelease documentation and is subject to change.]
 
 > [!div class="mx-imgBorder"]
 > ![Navigation with new look](media/intro-maker-portal/homepage-new-look.png "Home page navigation")
@@ -44,20 +39,6 @@ Legend:
 4. [Build apps](#4--build-apps)
 5. [Get help from a virtual agent](#5--ask-a-virtual-agent)
 
-# [Classic](#tab/home-classic)
-
-> [!div class="mx-imgBorder"]
-> ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
-
-Legend:
-
-1. [Left navigation pane](#1--left-navigation-pane)
-2. [Search](#2--search)
-3. [Environment information and settings](#3--environment-information-and-settings)
-4. [Build apps](#4--build-apps)
-5. [Get help from a virtual agent](#5--ask-a-virtual-agent)
-
----
 
 ## 1 – Left navigation pane
 
@@ -172,16 +153,15 @@ Start building apps, which provide rich business logic and workflow capabilities
 
 Depending upon whether you have the new look turned on, select the appropriate tab below to know more.
 
-# [New look (preview)](#tab/home-new-look)
-
-[This article is prerelease documentation and is subject to change.]
-
 If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
 
 To create an app, select from the following options:
 
-
 - **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/connection-azure-sqldatabase.md) to start building your app.
+  
+ > [!NOTE]
+ > If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
+   
 - **Choose a page template**: Select the type of app you want to create. You can also use the **Filter** option located in the top-right to narrow down templates by app type or features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md)
 - **Pick an app template**: Choose from an app template including, data-centered templates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md)
 
@@ -202,27 +182,6 @@ The table summarizes scenarios and outcome when you create apps that require Mic
 | No| Yes  | n/a | Create a developer environment | 
 | No |No | Yes | Switch to another environment using the environment picker | 
 | No|No| No | Contact your admin |
-
-# [Classic](#tab/home-classic)
-
-In Power Apps, you can create and run these types of apps:
-
-- **Canvas apps** support designing custom UI and connecting to data from various sources.
-- **Model-driven apps** have a standard UI and connect to data only in Dataverse. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
-- **Cards** (preview) are micro-apps with enterprise data and workflows and interactive, lightweight UI elements that other applications can use as content.
-
-In addition, Power Apps also allows you to create Power Pages websites. More information: [What is Power Pages?](/power-pages/introduction)
-
-If you choose an [environment that has a Dataverse database](/power-platform/admin/create-environment#create-an-environment-with-a-database), you can build canvas or model-driven apps from the same **Home** page.
-
-From the **Home** page, you can create apps, websites, chatbots, and AI models:
-
-- [Get started with canvas apps](/powerapps/maker/canvas-apps/)
-- [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
-- [Get started with chatbots](/powerapps/chatbots)
-- [Get started with AI models](/powerapps/use-ai-builder)
-
----
 
 
 
