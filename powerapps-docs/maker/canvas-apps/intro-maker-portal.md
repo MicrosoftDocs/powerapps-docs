@@ -23,9 +23,6 @@ The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkina
 
 If your organization has AI enabled then it also includes the new [Copilot](ai-overview.md) features.
 
-> [!div class="mx-imgBorder"]
-> ![New look](media/intro-maker-portal/new-look-toggle.png "New look toggle")
-
 Select the appropriate tab below to know more.
 
 > [!div class="mx-imgBorder"]
