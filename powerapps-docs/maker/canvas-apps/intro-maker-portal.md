@@ -33,7 +33,7 @@ Legend:
 1. [Left navigation pane](#1--left-navigation-pane)
 2. [Search](#2--search)
 3. [Environment information and settings](#3--environment-information-and-settings)
-4. [AI Copilot](#4--AI-Copilot)
+4. [AI Copilot](#4---ai-copilot)
 5. [Build apps](#5--build-apps)
 6. [Get help from a virtual agent](#6--ask-a-virtual-agent)
 
