@@ -1060,7 +1060,7 @@ The following table describes the different formatting features and functionalit
 
 Copilot uses natural language processing (NLP) algorithms to help refine and improve written text. You can provide an initial draft or a partial piece of writing, and Copilot generates suggestions to enhance the content, grammar, clarity, or overall quality of the text. More information: [Use Copilot in rich text editor for email](../model-driven-apps/use-copilot-email-assist.md)
 
-To add the Copilot button to a rich text editor toolbar, see [Add the Copilot control to a richtext editor](../model-driven-apps/copilot-control.md)
+To add the Copilot button to a rich text editor toolbar, see [Add the Copilot option to a rich text editor](../model-driven-apps/copilot-control.md)
 
 ## Accessibility shortcuts
 
