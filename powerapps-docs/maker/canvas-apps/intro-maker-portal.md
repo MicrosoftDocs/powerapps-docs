@@ -156,14 +156,14 @@ To create an app, select from the following options:
 
 - **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/connection-azure-sqldatabase.md) to start building your app.
   
- > [!NOTE]
- > If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
+  > [!NOTE]
+  > If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
    
 - **Choose a page template**: Select the type of app you want to create. You can also use the **Filter** option located in the top-right to narrow down templates by app type or features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md)
 - **Pick an app template**: Choose from an app template including, data-centered templates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md)
 
-> [!NOTE]
->  If you're trying to create an app using Dataverse but the option is unavailable, then review the [permissions table](#permissions-for-dataverse) below.
+ > [!NOTE]
+ >  If you're trying to create an app using Dataverse but the option is unavailable, then review the [permissions table](#permissions-for-dataverse) below.
 
 Furthermore, you can locate your top six apps under **Your apps**. You have the option to filter and sort them to quickly find the app you're searching for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
 
