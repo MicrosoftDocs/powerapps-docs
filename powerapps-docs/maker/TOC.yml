@@ -2235,7 +2235,9 @@
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
     - name: Use managed identities for Azure
-      href: ./data-platform/azure-synapse-link-msi.md        
+      href: ./data-platform/azure-synapse-link-msi.md  
+    - name: Choose finance and operations data in Azure Synapse Link for Dataverse
+      href: ./data-platform/azure-synapse-link-select-FnO-data.md
     - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml
     - name: Application Lifecycle Management
