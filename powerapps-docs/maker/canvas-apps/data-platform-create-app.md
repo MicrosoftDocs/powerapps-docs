@@ -28,37 +28,16 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
 ## Create an app
 
-Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-new-look) or [classic look](intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
-
-# [New look (preview)](#tab/home-new-look)
-
-[This article is prerelease documentation and is subject to change.]
-
-
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Depending on how you want to create your app, from the home screen, select one of the following options:
     - To create a single-page gallery app with a responsive layout, choose either:
       - **Start with data** > **Select an existing table**.
+         > [!NOTE]
+         > If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
       - **Start with a page design** > **Gallery connected to table**.
     - To create a three screen mobile app, select **Start with an app template** > **From Dataverse**.
 3. Select a table, and then select **Create app**.
 
-
-# [Classic](#tab/home-classic)
-
-Watch this short video that shows you how to create a canvas app quickly using Dataverse tables.
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YzH0]
-
-
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, [switch environments](intro-maker-portal.md#choose-an-environment).
-
-1. Under **Start from**, select **Dataverse**.
-
-1. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
-
-1. Under **Choose a table**, select your table (such as **Accounts** for this example), and then select **Connect**.
-
----
 
 ## Save and design the app
 
