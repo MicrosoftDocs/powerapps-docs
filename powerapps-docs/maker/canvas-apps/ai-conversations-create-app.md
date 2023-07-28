@@ -29,10 +29,10 @@ The AI assistant is available from the Power Apps home screen. You can tell the 
 > ![Tell the AI assistant the information you want to track in your app.](media/artificial-intelligence/create-app-using-ai-1.png)
 
 > [!IMPORTANT]
+> - If your environment is in the US region and AI is enabled in your organization
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability is in process of rolling out, and may not be available in your region yet.
 > - This capability  may be subject to usage limits or capacity throttling.
 > - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Transparency notes for Power Apps](../common/transparency-note.md)
 
