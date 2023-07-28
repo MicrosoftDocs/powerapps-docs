@@ -33,8 +33,9 @@ Legend:
 1. [Left navigation pane](#1--left-navigation-pane)
 2. [Search](#2--search)
 3. [Environment information and settings](#3--environment-information-and-settings)
-4. [Build apps](#4--build-apps)
-5. [Get help from a virtual agent](#5--ask-a-virtual-agent)
+4. [AI Copilot](#4--AI-Copilot)
+5. [Build apps](#5--build-apps)
+6. [Get help from a virtual agent](#6--ask-a-virtual-agent)
 
 
 ## 1 – Left navigation pane
@@ -144,13 +145,13 @@ In the header, select the question mark icon to find more information about eith
 
 You'll find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 
-## 4 – Build apps
-
-Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes.
-
-Depending upon whether you have the new look turned on, select the appropriate tab below to know more.
+## 4 - AI Copilot
 
 If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
+
+## 5 – Build apps
+
+Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes.
 
 To create an app, select from the following options:
 
@@ -182,6 +183,6 @@ The table summarizes scenarios and outcome when you create apps that require Mic
 
 
 
-## 5 – Ask a virtual agent
+## 6 – Ask a virtual agent
 
 Get contextual help while building your app using the Power Platform virtual agent. More information: [Get help building your app from a virtual agent](/power-apps/maker/common/virtual-agent)
