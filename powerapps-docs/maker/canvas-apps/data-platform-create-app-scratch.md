@@ -45,7 +45,7 @@ To create an app from scratch that uses data from Dataverse, the first step is t
 
 1. On the command bar, select **New screen** > **Templates** tab > **List**.
 
-1. In the formula bar, select **BrowseGallery1**, and then set the value of the **Items** property to this formula:
+1. In the left navigation bar, select **BrowseGallery1**, and then set the value of the **Items** property to this formula:
 
     `SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
@@ -79,7 +79,7 @@ To create an app from scratch that uses data from Dataverse, the first step is t
 
 1. On the **Properties** tab of the right-hand pane, select **Edit Fields** to open the **Fields** pane.
 
-1. Select **Field**, and then select the check boxes for these fields:
+1. Select **Add field**, and then select the check boxes for these fields:
 
     - **Account Name**
     - **Address 1: Street 1**
