@@ -71,11 +71,8 @@ If you create an app of a list from the SharePoint Online command bar, the app a
 
 1. In the panel that appears, type a name for your app, and then select **Create**.
 
-    ![Name the app.](./media/app-from-sharepoint/app-name.png "Name the app")
+   A new tab appears in your web browser that shows the app that you created based on your list. The app appears in [Power Apps Studio](intro-maker-portal.md), where you can customize it.
 
-    A new tab appears in your web browser that shows the app that you created based on your list. The app appears in Power Apps Studio, where you can customize it.
-
-    ![Default app.](./media/app-from-sharepoint/default-app.png "Default app")
 
 1. (optional) Refresh the browser tab for your list (by selecting it and then, for example, pressing F5), and then follow these steps to run or manage your app:
 
