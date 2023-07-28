@@ -50,7 +50,7 @@ When you create a canvas app with multiple screens, you can add navigation so yo
 
 2. (optional) Move the arrow so that it appears in the lower-right corner of the screen.
 
-3. With the arrow is selected, set the **[OnSelect](controls/properties-core.md)** property for the arrow is automatically set to a **Navigate** function.
+3. With the arrow selected, set the **[OnSelect](controls/properties-core.md)** property to the **Navigate** function.
 
     ![OnSelect property set to Navigate function.](./media/add-screen-context-variables/onselect-default.png)
 
