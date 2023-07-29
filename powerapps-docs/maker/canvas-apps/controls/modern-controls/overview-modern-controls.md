@@ -58,7 +58,7 @@ We're consistently improving and adding new capabilities for modern controls and
   
 ## Provide feedback to Microsoft
 
-If you'd like to provide feedback, offer suggestions, or report issues go to [community forum](https://go.microsoft.com/fwlink/?linkid=2229838).
+If you'd like to provide feedback, offer suggestions, or report issues, go to [community forum](https://go.microsoft.com/fwlink/?linkid=2229838).
 
 You can also provide feedback for individual controls in the Power Apps Studio from the control properties by selecting the thumbs up or down and comments option. The same feedback mechanism is available for modern themes in the Themes pane. 
 
