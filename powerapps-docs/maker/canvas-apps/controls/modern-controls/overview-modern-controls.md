@@ -41,17 +41,17 @@ With your [canvas app open for editing](../../edit-app.md):
 3. On the app authoring menu, select **Insert**.
 4. From the list of controls, select **Modern controls**.
 
-You'll see list of all the modern controls.
+   You'll see list of all the modern controls.
 
-> [!div class="mx-imgBorder"]
-> ![List of modern controls](media/modern-controls-list.png)
+   > [!div class="mx-imgBorder"]
+   > ![List of modern controls](media/modern-controls-list.png)
 
 5. On the app authoring menu, select **Themes**.
 
-You will find the set of available themes in this pane. 
+   You will find the set of available themes in this pane. 
 
-> [!div class="mx-imgBorder"]
-> ![Themes pane](media/modern-controls-list.png)
+   > [!div class="mx-imgBorder"]
+   > ![Themes pane](media/modern-themes-pane.png)
 
 ## What's next for these controls and themes?
 We're consistently improving and adding new capabilities for modern controls and themes. See our blog for [what's new](https://go.microsoft.com/fwlink/?linkid=2229189).
