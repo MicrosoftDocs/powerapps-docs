@@ -33,7 +33,7 @@ Store the Excel file in a cloud-storage account, such as Dropbox, Google Drive, 
 1. Depending on how you want to create your app, from the home screen, select one of the following options:
    - To create a single-page gallery app with a responsive layout, choose either:
      - **Start with data** > **Connect to external data** > **From Excel**.
-     - **Start with page design** > **Gallery connected to external data** > **From Excel**
+     - **Start with page design** > **Gallery connected to external data** > **From Excel**.
    - To create a three screen mobile app, select **Start with an app template** > **From Excel**.
 1. Only one connection is shown at a time. To select a different connection, select on the **...** button to switch connection or add a new connection.
 1. Enter the file location and select the table.
