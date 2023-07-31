@@ -32,8 +32,6 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 2. Depending on how you want to create your app, from the home screen, select one of the following options:
     - To create a single-page gallery app with a responsive layout, choose either:
       - **Start with data** > **Select an existing table**.
-         > [!NOTE]
-         > If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
       - **Start with a page design** > **Gallery connected to table**.
     - To create a three screen mobile app, select **Start with an app template** > **From Dataverse**.
 3. Select a table, and then select **Create app**.
