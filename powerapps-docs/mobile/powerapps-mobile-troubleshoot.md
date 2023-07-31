@@ -277,6 +277,9 @@ If you experience a failed network request when the Power Apps mobile app is run
 ## App does not appear in the app list offline 
 New and recently republished apps might not appear in the offline app list right away. To make your app appear in the app list offline, open the app on your device when it is online and keep it open for 1-2 minutes.
 
+## Not able to zoom in to input elements in the app
+Pitch to zoom is not supported on HTML input elements. More information: [HTML Input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
+
 ## Issue still not resolved?  
 If the information provided previously doesn’t resolve your issue, either [Post your issue in the Power App Community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1) or [Contact Technical Support](https://powerapps.microsoft.com/support/).
 
