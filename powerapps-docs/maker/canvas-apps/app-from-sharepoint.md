@@ -48,8 +48,6 @@ Watch this video to learn how to create a canvas app from a list:
 1. Depending on how you want to create your app, from the home screen, select one of the following options:
    - To create a single-page gallery app with a responsive layout, choose either:
       - **Start with data** > **Select external data** > **From SharePoint**.
-        > [!NOTE]
-        > If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
       - **Start with a page design** > **Gallery connected to external data** > **From SharePoint**.
    - To create a three screen mobile app, select **Start with an app template** > **From SharePoint**.
 1. If you don't have a SharePoint connection already created, you'll be prompted to. To select a different connection, select on the **...** button to switch account or create a new connection. 
