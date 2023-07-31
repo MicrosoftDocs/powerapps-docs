@@ -70,6 +70,40 @@ Data from the Owner column isn't available for search and suggest operations. Mo
 
 When using the Dataverse search API, there's a throttling limit of one request per second for each user. Additionally, there's a throttling limit of 150 requests per minute per organization.
 
+## What are the supported attribute types for indexing?
+
+- BigInt
+- Boolean
+- Customer
+- DateTime
+- Decimal
+- Double
+- EntityName
+- Integer
+- Lookup
+- Memo
+- Money
+- Owner
+- Picklist
+- State
+- Status
+- String
+- Uniqueidentifier
+- Virtual (only for MultiSelectPicklistType and FileType)
+
+## What are the eligible attribute types for facet list fields?
+
+- Lookup 
+- DateTime 
+- Money
+- Picklist
+- Integer
+- Customer
+- Decimal
+- MultiSelectPicklist
+- State
+- Status
+
 ### See also
 
 [What is Dataverse search?](relevance-search-benefits.md)<br/>
