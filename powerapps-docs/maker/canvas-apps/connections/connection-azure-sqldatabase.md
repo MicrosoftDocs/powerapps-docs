@@ -45,8 +45,6 @@ Depending upon whether you have the [new look](../intro-maker-portal.md?tabs=hom
 1. Depending on how you want to create your app, from the home screen, select one of the following options:
    - To create a single-page gallery app with a responsive layout, choose either:
      - **Start with data** > **Connect to external data** > **From SQL**.
-        > [!NOTE]
-        > If your organization has [AI enabled](../ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](../ai-conversations-create-app.md).
      - **Start with a page design** > **Gallery connected to external table** > **From SQL**.
    - To create a three screen mobile app, select **Start with an app template** > **From SQL**.
 1. Select your SQL connection and then select a table. Note, that only one connection is shown at a time. To select a different connection, select on the **...** button to switch connection or create a new SQL connection.
