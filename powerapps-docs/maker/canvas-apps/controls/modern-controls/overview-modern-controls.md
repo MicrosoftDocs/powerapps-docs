@@ -41,14 +41,14 @@ With your [canvas app open for editing](../../edit-app.md):
 3. On the app authoring menu, select **Insert**.
 4. From the list of controls, select **Modern controls**.
 
-   You'll see list of all the modern controls.
+   You see list of all the modern controls.
 
    > [!div class="mx-imgBorder"]
    > ![List of modern controls](media/modern-controls-list.png)
 
 5. On the app authoring menu, select **Themes**.
 
-   You will find the set of available themes in this pane. 
+   The set of available themes is listed.
 
    > [!div class="mx-imgBorder"]
    > ![Themes pane](media/modern-themes-pane.png)
@@ -60,7 +60,7 @@ We're consistently improving and adding new capabilities for modern controls and
 
 If you'd like to provide feedback, offer suggestions, or report issues, go to [community forum](https://go.microsoft.com/fwlink/?linkid=2229838).
 
-You can also provide feedback for individual controls in the Power Apps Studio from the control properties by selecting the thumbs up or down and comments option. The same feedback mechanism is available for modern themes in the Themes pane. 
+You can also provide feedback for individual controls in the Power Apps Studio from the control properties by selecting the thumbs up or down and comments option. The same feedback mechanism is available for modern themes in the **Themes** pane. 
 
 
 ### See also
