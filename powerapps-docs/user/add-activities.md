@@ -467,7 +467,7 @@ To view a conversation transcript, select the **View more** link in the row for 
 
 ## Pin or unpin records in timeline
 
-To quickly access activities such as records, you can keep them at the top of the timeline by using the pin feature. Pinning an activity eliminates the need to scroll through every activity to find the one you need.
+If your administrator has enabled the pin setting, you can quickly access activities such as records, by keeping them at the top of the timeline. Pinning an activity eliminates the need to scroll through every activity to find the one you need.
 
 Pin an activity by selecting the pin icon next to it. This moves it to the top of the timeline in the **Pinned** section, where it can be quickly accessed. The Pinned section also lists the number of records that are pinned.
 
