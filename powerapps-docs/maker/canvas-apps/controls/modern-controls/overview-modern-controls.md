@@ -40,7 +40,7 @@ With your [canvas app open for editing](../../edit-app.md):
    > [!div class="mx-imgBorder"]
    > ![List of modern controls](media/modern-controls-list.png)
 
-- To see modern themes, on the app authoring menu, select **Themes**.
+- To see modern themes, on the app authoring menu, select **Themes**. For information, see [Use modern themes in canvas apps](modern-theming.md).
 
    > [!div class="mx-imgBorder"]
    > ![Themes pane](media/modern-themes-pane.png)
