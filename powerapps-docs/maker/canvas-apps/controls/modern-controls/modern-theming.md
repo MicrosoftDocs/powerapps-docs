@@ -17,12 +17,15 @@ contributors:
   - mduelae
 ---
 
-# Modern themes in canvas apps (preview)
+# Use modern themes in canvas apps (preview)
 
 [This article is pre-release document and is subject to change.]
 
 Your app's appearance can be quickly changed by applying modern themes, which are predefined sets of styles that affect the user interface. Modern themes use Microsoft's Fluent design language. They modify various style elements, including color, typography, borders, and shadows, in a consistent and visually appealing manner. Modern theming simplifies the customization process, allowing makers to create a visually cohesive and consistent app with ease.
 
+> [!IMPORTANT]
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites 
 
