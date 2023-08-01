@@ -6,7 +6,7 @@ author: jasongre
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: mkaur-msft
-ms.date: 07/28/2023
+ms.date: 08/01/2023
 ms.subservice: canvas-maker
 ms.author: jasongre
 
@@ -53,7 +53,7 @@ The image below shows the slot variables inside the **Colors** collection and, a
 > [!div class="mx-imgBorder"]
 > ![Turn on modern controls](media/modern-themes-color-ramp.png)
 
-Using the theme brand ramp, you can manually style a classic control based on the current modern theme such as Button.Fill = App.Theme.Colors.Primary.
+Using the theme brand ramp, you can manually style a classic control based on the current modern theme such as **Button.Fill = App.Theme.Colors.Primary**.
 
 
 > [!NOTE]
