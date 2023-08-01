@@ -28,7 +28,7 @@ To try the sample components, you must first:
 
 ## Try the sample components
 
-Follow the steps in the [README.md](https://github.com/microsoft/PowerApps-Samples/blob/master/component-framework/README.md) to generate solutions containing the controls so you can import and try the sample components in your model-driven or canvas app:
+Follow the steps in the [README.md](https://github.com/microsoft/PowerApps-Samples/blob/master/component-framework/README.md) to generate solutions containing the controls so you can import and try the sample components in your model-driven or canvas app.
 
 
 
