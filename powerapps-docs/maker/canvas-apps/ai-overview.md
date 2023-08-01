@@ -47,8 +47,6 @@ The following are requirements to access the waitlist for this preview:
 
 - Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.  
 
-- Licensed customers will be prioritized for access.  
-
 - AI Builder must be enabled for your environment to use the AI models or controls leveraging AI models:
 
     1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
