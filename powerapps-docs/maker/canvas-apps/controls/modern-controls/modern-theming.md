@@ -28,7 +28,7 @@ Themes refer to predefined sets of styles that can be applied to the user interf
 
 
 ## Enable modern themes for your app
-To enable modern theming for you app, follow [these instructions](overview-modern-controls.md#enable-modern-controls-for-your-app).
+To enable modern theming for you app, see [Enable modern controls and themes for your app](overview-modern-controls.md#enable-modern-controls-and-themes-for-your-app).
 
 > [!NOTE]
 > When this setting is enabled, you will no longer have the ability to select classic themes from the command bar. If the classic themes are needed, you will need to disable this setting.  
