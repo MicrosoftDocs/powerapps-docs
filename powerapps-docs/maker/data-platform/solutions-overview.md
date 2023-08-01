@@ -144,8 +144,11 @@ For details about customizing the individual components in a solution, see the f
 -   For processes, see [Processes](../model-driven-apps/guide-staff-through-common-tasks-processes.md).  
   
 -   For business rules, see [Business Rules](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
- 
- 
+
+## Troubleshooting solutions
+
+For known issues and information about how to troubleshoot working with solutions, go to [Manage apps and solutions](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/unmanaged-active-layer-created-after-solution-import) in the Power Apps Troubleshooting documentation.
+
 ### Next steps
 
 [Create a solution](create-solution.md)
