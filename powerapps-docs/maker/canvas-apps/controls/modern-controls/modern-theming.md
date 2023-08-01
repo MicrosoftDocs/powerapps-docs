@@ -41,7 +41,7 @@ When a modern theme is selected, the style of the theme is automatically applied
 > [!NOTE]
 > Modern themes don't make any automatic changes to classic controls; however, these controls can be manually styled to align to the theme through Power Fx. 
 
-## Use theme information with Power Fx
+## Use themes with Power Fx
 
 Modern theme objects are available for makers to use through Power Fx. The currently active theme object can be referenced by **App.Theme**, and any theme loaded into the app can be referenced by its instance name such as **RedTheme**. It's recommended to reference the theme object using **App.Theme** to ensure that the color selections adapt to theme changes.  
 
