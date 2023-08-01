@@ -35,16 +35,12 @@ With your [canvas app open for editing](../../edit-app.md):
 1. On the command bar, select **Settings** > **Upcoming features**.
 2. From the Preview tab, set the toggle for **Modern controls and themes** to **On**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Turn on modern controls](media/settings-panel.png)
-
-3. To see list of all the modern controls, on the app authoring menu, select **Insert**.
-4. From the list of controls, select **Modern controls**.
+- To see list of all the modern controls, on the app authoring menu, select **Insert**. From the list of controls, select **Modern controls**.
 
    > [!div class="mx-imgBorder"]
    > ![List of modern controls](media/modern-controls-list.png)
 
-5. To see modern themes, on the app authoring menu, select **Themes**.
+- To see modern themes, on the app authoring menu, select **Themes**.
 
    > [!div class="mx-imgBorder"]
    > ![Themes pane](media/modern-themes-pane.png)
