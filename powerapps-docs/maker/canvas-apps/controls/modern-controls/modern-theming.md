@@ -55,9 +55,9 @@ The image below shows the slot variables inside the **Colors** collection and, a
 
 Using the theme brand ramp, you can manually style a classic control based on the current modern theme such as Button.Fill = App.Theme.Colors.Primary.
 
-## Feedback
 
-To provide feedback, see: [Provide your feedback to Microsoft](overview-modern-controls.md#provide-feedback-to-microsoft).
+> [!NOTE]
+> To provide feedback, see: [Provide your feedback to Microsoft](overview-modern-controls.md#provide-feedback-to-microsoft).
 
 ## See also
 
