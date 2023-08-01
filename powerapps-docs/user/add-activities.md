@@ -39,14 +39,14 @@ When enabled by your system administrator, you can use the icons that are displa
 - [Search row](#search-rows-on-timeline)
 - [Add attachments](#add-an-attachment-to-a-note-in-timeline)
 
-The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user will see. The signed-in user will see any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user will only see email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Set up the timeline control](/power-apps/maker/model-driven-apps/set-up-timeline-control).
+The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user sees. The signed-in user sees any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user only sees email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Set up the timeline control](/power-apps/maker/model-driven-apps/set-up-timeline-control).
 
 > [!Note]
 > The Notes feature is not available from the timeline. 
 
 ## Create a timeline row
 
-When enabled by your system administrator, you can use the **Create a timeline record** feature to quickly create appointments, tasks, send emails, as well as make notes and posts and associate them with other rows. 
+When enabled by your system administrator, you can use the **Create a timeline record** feature to quickly create appointments, tasks, send emails, and make notes and posts and associate them with other rows. 
 
 1. Select **Create a timeline record** icon.<BR><BR>
 ![Create a timeline row icon.](media\timeline-create-a-record-icon1c.png "Use the Create a timeline row feature") 
@@ -126,13 +126,13 @@ The **More commands** option contains refresh, sort, and email functionalities.
 ![More commands timeline functionality.](media\timeline-more-commands-1.png "More commands timeline functionality")
 
 Legend
-1. The **More commands** ![More commands.](media\timeline-more-commands-icon.png "More commands") icon, when expanded, provides additional functionality options.
+1. The **More commands** ![More commands.](media\timeline-more-commands-icon.png "More commands") icon, when expanded, provides more functionality options.
 1. The **Refresh timeline** command updates row details in the timeline.
 1. The **Sort newer to older** or **Sort older to newer** command is used to sort rows.
 1. The **Show email as** command is used to enable or disable threaded email views.
 1. The **Display layout** command allows you to choose from two different views: **Roomy** or **Cozy**. **Roomy** (set by default) shows you more information, such as profile details, and adds space between the rows. **Cozy** hides some of the details, such as icons, and compacts the space between rows.
 1. The **Remember my filters** command allows your filters to persist when you close the record so that they continue to be applied across sessions.
-1. The **Reset to default** command will revert all of the command settings you've changed back to the default settings.
+1. The **Reset to default** command reverts all of the command settings you've changed back to the default settings.
 
 ## View email inline in timeline
 
@@ -158,7 +158,7 @@ Legend
 ![Expanded threaded email view.](media\timeline-threaded-email-views-2a.png "Expanded threaded email view")
 
 Legend
-1. When expanded, the most recent 10 email responses in the thread will display. To display more, select **Show more** to expand the view again.
+1. When expanded, the most recent 10 email responses in the thread display. To display more, select **Show more** to expand the view again.
 2. Emails in the same thread are displayed as being linked together.
 
 ### Enable threaded email views in timeline
@@ -183,7 +183,7 @@ Steps:
 
 **Enable threaded email through Personal Options setting**
 
-To enable threaded email via this option, go to the command bar and select **Settings**, then **Personalization Settings**. This will display the **Set Personal Options** dialog box so you can use the following steps to enable the threaded email view on timeline.
+To enable threaded email via this option, go to the command bar and select **Settings**, then **Personalization Settings**. This displays the **Set Personal Options** dialog box so you can use the following steps to enable the threaded email view on timeline.
 
 Steps:
 1. Select the **Email** tab.
@@ -202,7 +202,7 @@ When enabled by your system administrator, you can easily search for rows in the
 ![Enable threaded email timeline view - option 2.](media\timeline-search-records-1a.png "Enable threaded email timeline view - option 2")
 
 Legend
-1. The **Search** bar allows you to quickly find rows using keywords or phrases that the search feature will retrieve and display below the search bar.
+1. The **Search** bar allows you to quickly find rows using keywords or phrases that the search feature retrieves and displays below the search bar.
 2. Keywords that are used are highlighted.
 
 ## Work with notes and posts
@@ -261,7 +261,7 @@ In read mode:
 2. When you're finished viewing or downloading the attachment, select **Close** to return to the note or post.
 
 > [!Note]
-> The use of the **Attachment preview** dialog to view the file can be skipped in the browser by using **Ctrl + Left click (of mouse)**. By doing so, the attachment will be directly downloaded without previewing it.
+> The use of the **Attachment preview** dialog to view the file can be skipped in the browser by using **Ctrl + Left click (of mouse)**. By doing so, the attachment is directly downloaded without previewing it.
 
 ### Access the command bar to perform actions
 
@@ -275,7 +275,7 @@ Legend
 1. Only the actions associated with that row are displayed in the top-right command bar displayed in the row. 
 2. Each row displays a different set of associated actions. Not all actions work on all rows.
 
-The following is an overview of the command bar icons and the actions they support: 
+The following table is an overview of the command bar icons and the actions they support: 
 
 | Icon | Name | Description |
 |-----|------|-------------|
@@ -290,7 +290,7 @@ The following is an overview of the command bar icons and the actions they suppo
 | ![Like a post.](media\email-like-a-post-icon.png "Like a post icon")|Like this post| Lets you like a post. **Note**: This command is only available on Posts.|
 | ![Edit.](media\email-edit-icon.png "Edit icon")|Edit this note|Lets you edit a note. **Note**: This command is only available on Notes.|
 
-The following is an overview of the default command bars for frequently used activities, notes, and posts: 
+The following table is an overview of the default command bars for frequently used activities, notes, and posts: 
 
 | Activity | Command bar icons | Notes |
 |-----|------|-------------|
@@ -376,7 +376,7 @@ When enabled by your system administrator, you can either add a post to a row or
 ![Add a mention or reference to a team member in a post on timeline.](media\timeline_at_1_legend.png "Add a mention or reference to a team member in a post on timeline")
 
 Legend
-1. Typing the @ sign in the **Post** field will display a flyout menu with a list of users that have been recently used.
+1. Typing the @ sign in the **Post** field displays a flyout menu with a list of users that have been recently used.
 2. If the user row is not displayed, typing the name after the @ sign refreshes the rows in the flyout menu using the **Quick Find** search engine that's operating in the background.
 3. Switch views using **Advanced** to display the **Lookup Records** pane. In the **Lookup Records** pane, you can switch between the **Recent records** and **All records** view to search rows.
 
@@ -394,7 +394,7 @@ To add a reference such as links in a post to a timeline row, select the ![**Cre
 ![Add a link.](media\timeline-add-link-12a.png "Add a link")
 
 Legend
-1. Links can be added to a row by typing **#** which will display a flyout menu with a list of rows recently accessed. Type a keyword after the # tag and the display refreshes in the flyout menu via the **Quick Find** search engine that's operating in the background.
+1. Links can be added to a row by typing **#** which displays a flyout menu with a list of rows recently accessed. Type a keyword after the # tag and the display refreshes in the flyout menu via the **Quick Find** search engine that's operating in the background.
 2. Rows displayed can be of any row type, such as accounts, contacts or leads.
 3. The icons beside the row names in the flyout menu indicate the row types, which helps you determine which row to select.
 4. **Advanced** provides more options when a row cannot be located by allowing the user to switch to a different view or create a new row.
@@ -473,7 +473,7 @@ Pin an activity by selecting the pin icon next to it. This moves it to the top o
 
 ![Pin and unpin activity view.](media\timeline-pin-unpin-activity.png "Pin and unpin an activity view")
 
-To unpin an activity, select the pin icon next to it. It will move out of the **Pinned** section and back to the place it orginally appeared in the list of activities in timeline.
+To unpin an activity, select the pin icon next to it. It moves out of the **Pinned** section and back to the place it orginally appeared in the list of activities in timeline.
 
 ## See also
 
