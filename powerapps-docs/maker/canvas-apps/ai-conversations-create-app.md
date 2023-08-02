@@ -73,6 +73,10 @@ Based on what you described, AI generates a table for your app. You can take the
    > [!div class="mx-imgBorder"]
    > ![Review table for your app.](media/artificial-intelligence/table-created.png)
 
+   
+   > [!IMPORTANT]
+   > If you encounter an issue while creating your app due to permission  or don't have Dataverse, a **Create app in your own environment?** dialog will appear. To proceed, confirm that the table and app can be created in your environment. If you don’t have a personal developer environment, a new developer environment is automatically created. For more information, see [Get your developer environment](maker/maker-create-environment.md).
+
 ## Step 3: Make edits
 
 If you want to make changes, use the **Copilot** panel to describe what you want to do, and it will make the change for you. Let's ask **Copilot** to add a column to track cleaning start and end time.
@@ -89,6 +93,7 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 
 
 3. You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room. When you're ready to create your app, select **Create app**.
+
 
 ### See also
 
