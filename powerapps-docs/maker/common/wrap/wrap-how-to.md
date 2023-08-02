@@ -257,7 +257,7 @@ You can automatically sign your mobile app package during wrap process in **Step
 
 
 ## See also
-
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues)
 - [Wrap overview](overview.md)
 - [Code sign for iOS](code-sign-ios.md)
 - [Code sign for Android](code-sign-android.md)
