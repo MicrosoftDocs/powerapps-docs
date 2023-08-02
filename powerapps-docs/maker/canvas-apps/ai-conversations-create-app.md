@@ -75,7 +75,7 @@ Based on what you described, AI generates a table for your app. You can take the
 
    
    > [!IMPORTANT]
-   > If you encounter an issue while creating your app due to permission  or don't have Dataverse, a **Create app in your own environment?** dialog will appear. To proceed, confirm that the table and app can be created in your environment. If you don’t have a personal developer environment, a new developer environment is automatically created. For more information, see [Get your developer environment (preview)](../maker-create-environment.md).
+   > If you encounter any issues during the app creation process related to permissions or if you don't have access to Dataverse, a dialog box will appear asking you to create the app in your own environment. You will need to confirm that the table and app can be created in your environment to proceed. In case you don't have a personal developer environment, a new one will be automatically created for you. For more information, see [Get your developer environment (preview)](../maker-create-environment.md).
 
 ## Step 3: Make edits
 
