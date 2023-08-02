@@ -36,7 +36,7 @@ To use modern themes, you need to enable it. More information, see [Enable moder
 
 ## Apply modern theme 
 
-1. On the app authoring menu, select **Themes**.
+1. On the app authoring menu, select > ![Themes icon](media/theme-icon.png) **Themes**.
 2. On the **Themes** pane, select one of the six default themes. 
 
 When a modern theme is selected, the style of the theme is automatically applied to all the modern controls in your app. This action sets the **App.Theme** property.  
