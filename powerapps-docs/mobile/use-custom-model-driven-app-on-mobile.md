@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/18/2022
+ms.date: 08/02/2023
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -20,7 +20,6 @@ search.audienceType:
 Use Power Apps mobile to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Install Power Apps mobile](run-powerapps-on-mobile.md).
 
 > [!IMPORTANT]
-> - Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
 > - To use your model-driven app in the Power Apps mobile app, your app maker must have set the **Primary mobile player** setting to **Power Apps mobile.** For more information, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md).
 
 ## Home screen 
