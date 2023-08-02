@@ -1196,18 +1196,22 @@
       href: ./canvas-apps/license-designation.md
     - name: Restore a previous version
       href: ./canvas-apps/restore-an-app.md
-  - name: Test an app with Test Studio
+  - name: Test an app
     items:
-    - name: Test Studio Overview
-      href: ./canvas-apps/test-studio.md
-    - name: Working with Test Studio
-      href: ./canvas-apps/working-with-test-studio.md
-    - name: Automate tests with Azure DevOps Pipelines
-      items:
-      - name: Configure pipeline using classic editor
-        href: ./canvas-apps/test-studio-classic-pipeline-editor.md
-      - name: Configure pipeline using YAML
-        href: ./canvas-apps/test-studio-yaml-pipeline.md
+      - name: Test an app with Test Studio
+        items:
+        - name: Test Studio Overview
+          href: ./canvas-apps/test-studio.md
+        - name: Working with Test Studio
+          href: ./canvas-apps/working-with-test-studio.md
+        - name: Automate tests with Azure DevOps Pipelines
+          items:
+          - name: Configure pipeline using classic editor
+            href: ./canvas-apps/test-studio-classic-pipeline-editor.md
+          - name: Configure pipeline using YAML
+            href: ./canvas-apps/test-studio-yaml-pipeline.md
+      - name: Test an app with Test Engine (preview)
+        href: ./canvas-apps/test-engine.md
   - name: Customize a SharePoint form
     items:
       - name: Make basic changes
