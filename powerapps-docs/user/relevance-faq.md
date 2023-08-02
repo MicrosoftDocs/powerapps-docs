@@ -2,10 +2,9 @@
 title: "FAQ for Dataverse search | MicrosoftDocs"
 description: FAQ about Dataverse search
 author: sericks
-
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 5/18/2023
+ms.date: 08/02/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -16,7 +15,8 @@ search.audienceType:
 contributors:
 - mspilde
 - manish1604
-- prdeka 
+- prdeka
+- AnikaMD 
 ---
 
 # Frequently asked questions about Dataverse search
