@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/18/2022
+ms.date: 08/02/2023
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
