@@ -2,10 +2,9 @@
 title: "FAQ for Dataverse search | MicrosoftDocs"
 description: FAQ about Dataverse search
 author: sericks
-
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 5/18/2023
+ms.date: 08/02/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -16,7 +15,8 @@ search.audienceType:
 contributors:
 - mspilde
 - manish1604
-- prdeka 
+- prdeka
+- AnikaMD 
 ---
 
 # Frequently asked questions about Dataverse search
@@ -69,6 +69,40 @@ Data from the Owner column isn't available for search and suggest operations. Mo
 ## How is the Dataverse search API throttled?
 
 When using the Dataverse search API, there's a throttling limit of one request per second for each user. Additionally, there's a throttling limit of 150 requests per minute per organization.
+
+## What are the supported attribute types for indexing?
+
+- BigInt
+- Boolean
+- Customer
+- DateTime
+- Decimal
+- Double
+- EntityName
+- Integer
+- Lookup
+- Memo
+- Money
+- Owner
+- Picklist
+- State
+- Status
+- String
+- Uniqueidentifier
+- Virtual (only for MultiSelectPicklistType and FileType)
+
+## What are the eligible attribute types for facet list fields?
+
+- Lookup 
+- DateTime 
+- Money
+- Picklist
+- Integer
+- Customer
+- Decimal
+- MultiSelectPicklist
+- State
+- Status
 
 ### See also
 
