@@ -1,12 +1,12 @@
 ---
-title: Write plug-ins for CreateMultiple and UpdateMultiple | Microsoft Docs
-description: How to write plug-ins for CreateMultiple and UpdateMultiple messages.
+title: Write plug-ins for CreateMultiple and UpdateMultiple (preview)
+description: Learn how to write plug-ins that use the bulk operation messages CreateMultiple and UpdateMultiple to operate on multiple rows of data in a Microsoft Dataverse table.
+ms.date: 08/02/2023
+ms.topic: how-to
 author: divkamath
-ms.topic: article
-ms.date: 05/26/2023
-ms.subservice: dataverse-developer
 ms.author: dikamath
 ms.reviewer: jdaly
+ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
 search.app: 
@@ -15,62 +15,56 @@ search.app:
 contributors:
   - JimDaly
   - hakhemic
+ms.custom: tap-template
 ---
-# Write plug-ins for CreateMultiple and UpdateMultiple (Preview)
+
+# Write plug-ins for CreateMultiple and UpdateMultiple (preview)
 
 > [!NOTE]
-> Not all tables currently support using the `CreateMultiple` and `UpdateMultiple` messages. These messages are currently being deployed and all tables that currently support `Create` and `Update` will support `CreateMultiple` and `UpdateMultiple` in the coming months. More information: [Bulk Operation messages (preview)](bulk-operations.md)
+> The `CreateMultiple` and `UpdateMultiple` messages are being deployed. All tables that support `Create` and `Update` will eventually support `CreateMultiple` and `UpdateMultiple`, but some tables may not support them yet.
 
-You should write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages with tables where records may need to be created or updated in bulk, or when performance in creating and updating large numbers of records is important. Just about every table that stores business data may need to be created or updated in bulk.
-
-If you have existing plug-ins for the `Create` and `Update` messages for tables like these, you should migrate them to use `CreateMultiple` and `UpdateMultiple` instead.
+When you need to create or update multiple records in a Microsoft Dataverse table, consider writing a plug-in that uses the [bulk operation messages](bulk-operations.md) `CreateMultiple` and `UpdateMultiple`. If you have plug-ins that use the single operation `Create` and `Update` messages, consider migrating them to use `CreateMultiple` and `UpdateMultiple` instead.
 
 ## Is updating plug-ins required?
 
-There's no requirement to migrate your plug-ins to use `CreateMultiple` and `UpdateMultiple` instead of `Create` and `Update`. Your logic continues to be applied when applications use `CreateMultiple` or `UpdateMultiple`. There's no requirement to migrate your plug-ins because the Dataverse message processing pipeline merges the logic for plugins written for either the single or multiple version of the `Create` and `Update` messages. More information: [Message pipelines merged](bulk-operations.md#message-pipelines-merged)
+You're not required to migrate your plug-ins to use `CreateMultiple` and `UpdateMultiple` instead of `Create` and `Update`. The Dataverse message processing pipeline [merges the logic](bulk-operations.md#message-pipelines-merged) of the single and multiple versions of the `Create` and `Update` messages. Your plug-ins still work.
 
-However, only plug-ins written for the multiple version of these messages enable optimum performance when developers use `CreateMultiple` and `UpdateMultiple`. Over time, as more applications choose to optimize performance by using the `CreateMultiple` and `UpdateMultiple` messages, we expect writing plug-ins for multiple operations will become the standard, and plug-ins written for single operations will be the exception.
+However, plug-ins that use the multiple version of these messages get a significant performance boost. Over time, as more developers choose to optimize performance by using the `CreateMultiple` and `UpdateMultiple` messages, we expect writing plug-ins for multiple operations to become the standard. Plug-ins written for single operations will be the exception.
 
-## What is different?
+## What's different?
 
-The following are some of the differences you need to manage when migrating existing plugins to the multiple version.
+The following sections describe some of the differences you need to manage when you migrate your plug-ins to the multiple version of the `Create` and `Update` messages.
 
 ### Targets instead of Target
 
-The multiple version of these messages has a `Targets` parameter that is an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) rather than a `Target` parameter that is a single [Entity](xref:Microsoft.Xrm.Sdk.Entity). Your plug-in code needs to loop through the entities in the collection and apply logic for each one.
+The multiple version of these messages has a `Targets` parameter that's an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) rather than a `Target` parameter that's a single [Entity](xref:Microsoft.Xrm.Sdk.Entity). Your plug-in code needs to loop through the entities in the collection and apply logic to each one.
 
-### Entity Images
+### Entity images
 
-Entity images configured in the step registration for your plug-ins are an array of [EntityImageCollection](xref:Microsoft.Xrm.Sdk.EntityImageCollection). These entity images are only available when you use the [IPluginExecutionContext4 Interface](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4), which provides the [PreEntityImagesCollection](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4.PreEntityImagesCollection) and [PostEntityImagesCollection](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4.PostEntityImagesCollection) properties. These arrays provide access to the same entity images in an array that is synchronized with the EntityCollection.
+Entity images that are configured in the step registration for your plug-ins are an array of [EntityImageCollection](xref:Microsoft.Xrm.Sdk.EntityImageCollection). These entity images are only available when you use the [IPluginExecutionContext4 Interface](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4), which provides the [PreEntityImagesCollection](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4.PreEntityImagesCollection) and [PostEntityImagesCollection](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4.PostEntityImagesCollection) properties. These arrays provide access to the same entity images in an array that's synchronized with the EntityCollection.
 
-If you're using the `PluginBase` class that is the standard when initializing plug-in projects using Power Platform tools, in the `PluginBase.cs` file you should replace all instances of `IPluginExecutionContext` with `IPluginExecutionContext4` so that these collections of entity images are available to your plug-in.
+If you're using the `PluginBase` class that's the standard when initializing plug-in projects using Power Platform tools, then in the `PluginBase.cs` file you should replace all instances of `IPluginExecutionContext` with `IPluginExecutionContext4` so that these collections of entity images are available to your plug-in.
 
 > [!IMPORTANT]
-> When configuring entity images for plug-in steps for `CreateMultiple` and `UpdateMultiple`, it is very important that you carefully select which column data to include in the entity image. Do not select the default option of all columns. This data is multiplied by the number of entities passed in the `Targets` parameter and contributes to the total message size that will be sent to the sandbox.
-> More information:
->
-> - [Define entity images](register-plug-in.md#define-entity-images)
-> - [Message size limits](bulk-operations.md#message-size-limits)
+> When you [configure entity images](register-plug-in.md#define-entity-images) for plug-in steps for `CreateMultiple` and `UpdateMultiple`, it's important that you carefully select which column data to include. Don't select the default option of all columns. This data is multiplied by the number of entities passed in the `Targets` parameter and contributes to the total size of the message that's sent to the sandbox. You may hit the [limit on message size](bulk-operations.md#message-size-limits).
 
-### Attribute Filters
+### Attribute filters
 
-For a plug-in registered on `Update` or `UpdateMultiple`, you can specify **Filtering Attributes** in the step registration.
+For a plug-in registered on `Update` or `UpdateMultiple`, you can [specify filtering attributes in the step registration](best-practices/business-logic/include-filtering-attributes-plugin-registration.md).
 
-- With `Update`, the plug-in only runs when any of the selected attributes are included with the `Target` entity being updated.
+- With `Update`, the plug-in runs only when any of the selected attributes are included with the `Target` entity that's being updated.
 - With `UpdateMultiple`, the plug-in runs when any of the selected attributes are included *in any* of the entities in the `Targets` parameter.
 
 > [!IMPORTANT]
-> For `UpdateMultiple` you can't assume that every entity in the `Targets` parameter contains attributes used in a filter.
+> For `UpdateMultiple`, you can't assume that every entity in the `Targets` parameter contains attributes that are used in a filter.
 
-More information: [Include filtering attributes with plug-in registration](best-practices/business-logic/include-filtering-attributes-plugin-registration.md)
+## Examples
 
-## Example
-
-The following are two examples, one with some basic logic for `Update`, and another with logic for `UpdateMultiple`. Both of these access entity images registered with the step.
+The following examples, one with some basic logic for `Update` and another with logic for `UpdateMultiple`, access entity images registered with the step.
 
 ### [Single](#tab/single)
 
-This example simply updates the `sample_description` attribute with information about whether the `sample_name` value has changed. It refers to an entity image named `example_preimage` that was registered with the step.
+This example updates the `sample_description` attribute with information about whether the `sample_name` value has changed. It refers to an entity image named `example_preimage` that was registered with the step.
 
 ```csharp
 // Verify input parameters
@@ -140,9 +134,7 @@ else
 
 ### [Multiple](#tab/multiple)
 
-This example applies the same logic as the **Single** version, except the `Entity` and the `EntityImageCollection` are synchronized using an `count` variable while using a `foreach` loop through the `EntityCollection`.
-
-This example also includes the `count` when using the `localPluginContext.Trace` method and is less verbose to only include traces when error conditions occur. The amount of data that you can write to the trace log table is limited, so you should try to avoid writing traces for each iteration.
+This example applies the same logic as the **Single** version, except the `Entity` and the `EntityImageCollection` are synchronized using a `count` variable with a `foreach` loop through the `EntityCollection`. It also includes the `count` when using the `localPluginContext.Trace` method, and is less verbose&mdash;traces are only included when error conditions occur. The amount of data that you can write to the trace log table is limited, so you should try to avoid writing traces for each iteration.
 
 ```csharp
 // Verify input parameters
@@ -224,11 +216,9 @@ else
 
 ---
 
-## Handling Exceptions
+## Handling exceptions
 
-All errors that occur within plug-ins should be returned using [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException). More information: [Use InvalidPluginExecutionException in plug-ins and workflow activities](best-practices/business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities.md)
-
-When you throw an exception for steps registered on the `CreateMultiple` and `UpdateMultiple` messages, you should specify which record caused the plug-in to fail. To capture this information, you need to use one of these constructors:
+All errors that occur in your plug-ins should be returned using [InvalidPluginExecutionException](best-practices/business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities.md). When your plug-in throws an exception for steps registered on the `CreateMultiple` and `UpdateMultiple` messages, it should identify which record caused the plug-in to fail. To capture this information, use one of the following constructors:
 
 - [InvalidPluginExecutionException(String, Dictionary<String,String>)](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String}))
 - [InvalidPluginExecutionException(OperationStatus, String, Dictionary<String,String>)](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.%23ctor(Microsoft.Xrm.Sdk.OperationStatus,System.String,System.Collections.Generic.Dictionary{System.String,System.String}))
@@ -239,7 +229,7 @@ Use the constructor's `Dictionary<String,String>` `exceptionDetails` parameter t
 
 ### Set exception details
 
-For the `UpdateMultiple` message, your code iterates through the [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) [Targets](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.Targets) property and applies logic to each [Entity](xref:Microsoft.Xrm.Sdk.Entity). When some logic fails, you can pass the [Id](xref:Microsoft.Xrm.Sdk.Entity.Id) of the record to the `InvalidPluginExecutionException` constructor in the following way:
+For the `UpdateMultiple` message, your code iterates through the [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) [Targets](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.Targets) property and applies logic to each [Entity](xref:Microsoft.Xrm.Sdk.Entity). If a failure occurs, you can pass the [Id](xref:Microsoft.Xrm.Sdk.Entity.Id) of the record to the `InvalidPluginExecutionException` constructor in the following way:
 
 ```csharp
 // in plugin code
@@ -252,17 +242,15 @@ foreach (Entity entity in Targets)
 }
 ```
 
-Add any other information relevant to the failure as string key-value pairs to the `exceptionDetails` parameter.
+Add any other information that's relevant to the failure as string key-value pairs to the `exceptionDetails` parameter.
 
 For `CreateMultiple`, we recommend that you don't set the primary key value for each record. In most cases, you should allow the system to set the primary key value for you because the values generated by the system are optimized for best performance.
 
-In cases where the primary key value isn't set, if there's no other unique identifier, you may need to return the index of the failed record in the [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) `Targets` parameter, or some combination of values that uniquely identify the record that fails.
-
-For instance, a key named `failedRecordIndex` indicating the record's place in the `EntityCollection`, or any other useful unique identifier, can be added to `exceptionDetails` to help troubleshoot the failure.
+In cases where the primary key value isn't set, if there's no other unique identifier, you may need to return the index of the failed record in the [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) `Targets` parameter, or some combination of values that uniquely identify the record that fails. For instance, a key named `failedRecordIndex` indicating the record's place in the `EntityCollection`, or any other useful unique identifier, can be added to `exceptionDetails` to help troubleshoot the failure.
 
 ### Get exception details
 
-When you have included details about the failing operation in the [InvalidPluginExecutionException.ExceptionDetails](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.ExceptionDetails) property, the client application can get these details from the [OrganizationServiceFault.ErrorDetails](xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails) property through the [FaultException&lt;OrganizationServiceFault&gt;.Detail](xref:System.ServiceModel.FaultException%601.Detail) property. The following code shows how:
+When you include details about the failing operation in the [InvalidPluginExecutionException.ExceptionDetails](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.ExceptionDetails) property, the client application can get them from the [OrganizationServiceFault.ErrorDetails](xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails) property through the [FaultException&lt;OrganizationServiceFault&gt;.Detail](xref:System.ServiceModel.FaultException%601.Detail) property. The following code shows how:
 
 ```csharp
 
@@ -277,33 +265,21 @@ catch (FaultException<OrganizationServiceFault> ex)
 
 ```
 
-If the client application is using Web API, they can get these details by setting the `Prefer: odata.include-annotations="*"` request header. More information: [Include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors).
+If the client application uses the Web API, it can [get more details about errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors) by setting the `Prefer: odata.include-annotations="*"` request header.
 
-In this way, the caller can know which record caused the failure and any other relevant details you want to include.
+## Replace single operation plug-ins in solutions
 
-## Replace Single operation plug-ins in solution
+When you deploy plug-in step registrations in solutions, there's no way to force a step registration to be disabled or deleted. That makes replacing logic from a single operation to a multiple operation plug-in a challenge.
 
-When you deploy plug-in step registrations via solutions, there's currently no way to force an existing step registration to be disabled or deleted. Replacing logic from a single operation to a multiple operation plug-in is a challenge without a way to force the existing step registration to be deleted or disabled.
+When you deploy a new plug-in step in a solution for `CreateMultiple` or `UpdateMultiple` that replaces a plug-in step for `Create` or `Update`, you want to reduce the amount of time when no logic or duplicate logic is applied. You can manually disable the steps for `Create` or `Update` before or after you install the solution. If you disable before, there's a period when no logic is applied. If you disable after, there's a period when duplicate logic is applied. In either case, the organization may require scheduled downtime to ensure logic is applied consistently.
 
-When you deploy a new plug-in step via a solution for `CreateMultiple` or `UpdateMultiple` that replaces a plug-in step for `Create` or `Update`, you want to mitigate the amount of time where no logic or duplicate logic is applied. You can manually disable the steps for `Create` or `Update` before or after installing the solution.
-
-- If you disable before, there's a period where no logic is applied.
-- If you disable after, there's a period where duplicate logic is applied.
-
-In either case, the organization may require scheduled downtime to ensure logic is applied consistently.
-
-To minimize the duration where either of the conditions above apply, we recommend you include the logic to disable any steps being replaced by deploying the new plug-ins with Package Deployer. Package Deployer provides the capability to execute custom code before, during, and after the package is imported into an environment. Use this code to disable the existing step registrations.
-
-More information:
-
-- [Create packages for the Package Deployer tool](/power-platform/alm/package-deployer-tool)
-- [Add custom code](/power-platform/alm/package-deployer-tool#add-custom-code)
+To minimize the duration of either of these conditions, we recommend you include logic to disable any steps that are being replaced by deploying the new plug-ins with [Package Deployer](/power-platform/alm/package-deployer-tool). Package Deployer provides the capability to execute [custom code](/power-platform/alm/package-deployer-tool#add-custom-code) before, during, and after the package is imported into an environment. Use this code to disable the existing step registrations.
 
 ### See also
 
-[Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)   
-[Bulk Operation messages (preview)](bulk-operations.md)   
-[Sample: Use CreateMultiple and UpdateMultiple](org-service/samples/create-update-multiple.md)   
+[Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)  
+[Bulk operation messages (preview)](bulk-operations.md)  
+[Sample: Use CreateMultiple and UpdateMultiple](org-service/samples/create-update-multiple.md)  
 [Optimize performance for Create and Update operations](optimize-performance-create-update.md)
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE [footer-include](../../includes/footer-banner.md)]
