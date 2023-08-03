@@ -27,6 +27,7 @@ You can add a badge to the side pane to indicate to the user that a change needs
 
 App side panes are only supported in web browsers and are prevented within native players.
 
+[!INCLUDE [online-only-api-note](includes/online-only-api-note.md)]
 
 ## Examples
 
