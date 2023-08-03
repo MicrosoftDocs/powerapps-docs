@@ -60,7 +60,7 @@ The following example shows a form page with the modern, refreshed look.
 ### Field controls
 Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls will be modernized using Fluent design in future updates.
 
-Field sections, which are containers for the fields on a form, have a more streamlined design. Icons have been moved to the right side of the field labels. Some redundant icons have been removed for a cleaner layout. For example, the explicit lock icon isn't shown for read-only fields, and recommended icons have been removed for simplicity. Input and error message styling has also been refreshed based on Fluent design. 
+Field sections, which are containers for the fields on a form, have a more streamlined design. Icons have been moved to the right side of the field labels. Some redundant icons have been removed for a cleaner layout. For example, recommended icons have been removed for simplicity. Input and error message styling has also been refreshed based on Fluent design. 
 
 The following example shows a set of fields with the modern, refreshed look.
 
