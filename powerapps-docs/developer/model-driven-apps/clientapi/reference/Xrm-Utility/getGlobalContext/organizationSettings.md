@@ -128,6 +128,8 @@ Returns the ID of the current organization.
 
 Returns a boolean indicating whether the organization is a trial organization.
 
+[!INCLUDE [online-only-api-note](../../../includes/online-only-api-note.md)]
+
 ### Syntax
 
 `organizationSettings.isTrialOrganization`
@@ -141,6 +143,8 @@ Returns a boolean indicating whether the organization is a trial organization.
 ## organizationExpiryDate
 
 Returns the expiry date of the current organization if it is a trial organization.
+
+[!INCLUDE [online-only-api-note](../../../includes/online-only-api-note.md)]
 
 ### Syntax
 

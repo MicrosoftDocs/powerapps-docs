@@ -103,6 +103,8 @@ Returns information whether the client state is online or offline.  Note that a 
 
 Returns information whether the network is available or not, regardless of client mode.
 
+[!INCLUDE [online-only-api-note](../../../includes/online-only-api-note.md)]
+
 ### Syntax
 
 `clientContext.isNetworkAvailable()`
