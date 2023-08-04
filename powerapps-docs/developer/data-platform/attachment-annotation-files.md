@@ -11,7 +11,7 @@ search.audienceType:
   - developer
 contributors:
  - JimDaly
- ms.custom: bap-template
+ms.custom: bap-template
 ---
 # Use file data with Attachment and Note records
 
