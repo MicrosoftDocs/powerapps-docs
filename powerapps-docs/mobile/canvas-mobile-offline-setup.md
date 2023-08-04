@@ -63,8 +63,7 @@ Tables that your offline-first app uses must have offline capability turned on. 
 1. Select **Advanced options**, and then scroll to the **Rows in this table** section.
 1. Select **Can be taken offline**.
 
-    :::image type="content" source="media/can-be-taken-offline.png" alt-text="Screenshot of the table editing options, with **Can be taken offline** highlighted.":::<!-- EDITOR'S NOTE: Please crop this screenshot IAW our screenshot guidelines, https://review.learn.microsoft.com/en-us/bacx/screenshots-for-bap?branch=main. -->
-
+    :::image type="content" source="media/can-be-taken-offline.png" alt-text="Screenshot of the table editing options, with **Can be taken offline** highlighted.":::
 1. Select **Save**.
 
 ## Turn on offline capability for your app
@@ -75,8 +74,7 @@ Tables that your offline-first app uses must have offline capability turned on. 
 1. Select **Upcoming features**, and then select the **Experimental** tab.
 1. Turn on the **Dataverse offline** option.
 
-    :::image type="content" source="media/dataverse-offline.png" alt-text="Screenshot of app settings, with the Dataverse offline option highlighted.":::<!-- EDITOR'S NOTE: Please crop this screenshot IAW our screenshot guidelines, https://review.learn.microsoft.com/en-us/bacx/screenshots-for-bap?branch=main. -->
-
+    :::image type="content" source="media/dataverse-offline.png" alt-text="Screenshot of app settings, with the Dataverse offline option highlighted.":::
 1. Select **General**.
 1. Turn on the **Can be used offline** option.
 1. Select an offline profile. You have two options:
@@ -150,7 +148,7 @@ You need to publish your new offline profile before you can select it in your ca
 
     For example, if you select **Contact \| Field name: Primary Contact**, then for every contact, the system also downloads the account that's related to it.
 
-    :::image type="content" source="media/include-account-records.png" alt-text="Screenshot of edit options for the Account table, with Include Account records related to these tables highlighted.":::<!-- EDITOR'S NOTE: Please crop this screenshot IAW our screenshot guidelines, https://review.learn.microsoft.com/en-us/bacx/screenshots-for-bap?branch=main. -->
+    :::image type="content" source="media/include-account-records.png" alt-text="Screenshot of edit options for the Account table, with Include Account records related to these tables highlighted.":::
 
 1. Select **Save**.
 
@@ -170,7 +168,7 @@ To make it easier to create or convert a canvas app for offline use, we created 
 
 A new page created from the **Offline** template is automatically inserted as soon as you turn on the offline capability in your canvas app.
 
-:::image type="content" source="media/new-page.png" alt-text="Screenshot of a page based on the Offline template shown in the Power Apps Studio canvas.":::<!-- EDITOR'S NOTE: Please crop this screenshot IAW our screenshot guidelines, https://review.learn.microsoft.com/en-us/bacx/screenshots-for-bap?branch=main. -->
+:::image type="content" source="media/new-page.png" alt-text="Screenshot of a page based on the Offline template shown in the Power Apps Studio canvas.":::
 
 You can also add a new page based on the **Offline** template the same way you add pages from any other template.
   
