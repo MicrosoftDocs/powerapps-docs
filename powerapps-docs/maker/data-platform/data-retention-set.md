@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to 
-ms.date: 06/19/2023
+ms.date: 07/25/2023
 ms.custom: template-how-to
 ---
 # Set a data retention policy for a table (preview)
@@ -63,9 +63,6 @@ Power Platform administrators setup retention policies.
 
 1. [Enable a table for long term retention](#enable-a-table-for-long-term-retention).
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Retention policies**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-   > [!TIP]
-   > If the **Retention policies** area isn't available, add this parameter to the end of the make.powerapps.com URL in your browser address bar: `?retentionPolicies.registration=true&retentionPolicies.leftNavigation=true`
-
 1. On the command bar, select **New retention policy**.
 1. Complete the following properties for the retention policy:
    - **Table**. Select the parent root table that will be used to set up a policy to retain historical cold data in long term storage.
@@ -80,6 +77,7 @@ Now you can view and manage the policy. More information: [Manage data retention
 
 > [!IMPORTANT]
 >
+> - The retention policy will not start for environments that have [administration mode](/power-platform/admin/admin-mode) enabled.
 > - The retention policy can't be set for the tables where bulk delete isn't supported. For example, Activity Pointer, Activity Party, and Attachment tables don't support bulk delete.
 > - The parent table and all related rows from child tables, of the parent, will be marked and stored in Dataverse long term storage.
 > - Logic associated with an existing delete action of any table (parent and children) will always be executed during the policy run.

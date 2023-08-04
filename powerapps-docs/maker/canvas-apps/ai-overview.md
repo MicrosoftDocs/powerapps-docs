@@ -29,8 +29,7 @@ To learn how to use the new AI features in Power Apps, see:
 - [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai)
 
 > [!IMPORTANT]
->
-> - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://go.microsoft.com/fwlink/?linkid=2227838).
+> - To use this capability your environment must be in the US region.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to the [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
@@ -47,8 +46,6 @@ The following are requirements to access the waitlist for this preview:
 - Your account must have **English (United States)** as the browser language.
 
 - Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.  
-
-- Licensed customers will be prioritized for access.  
 
 - AI Builder must be enabled for your environment to use the AI models or controls leveraging AI models:
 
