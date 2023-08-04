@@ -97,7 +97,7 @@ For example, you have a synchronous plug-in step that is registered on the `Post
 
 However, you should always apply validation rules in a plug-in that is registered for the `PreValidation` synchronous stage. Validation is the purpose of this stage. Even when you use elastic tables, the request returns an error, and the data operation won't begin. For more information, go to [Event execution pipeline](event-framework.md#event-execution-pipeline).
 
-Elastic tables also don't support grouping requests in a single database transaction that uses the SDK [ExecuteTransactionRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) or in a Web API `$batch` operation change set. Currently, these operations succeed but aren't atomic. In the future, an error will be thrown.
+Elastic tables also don't support grouping requests in a single database transaction that uses the SDK [ExecuteTransactionRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) or in a Web API `$batch` operation changeset. Currently, these operations succeed but aren't atomic. In the future, an error will be thrown.
 
 For more information, go to:
 
@@ -125,7 +125,7 @@ The following known issues with elastic tables should be addressed before this f
 
 ### No error is returned when elastic table data operations are grouped in a transaction
 
-Dataverse doesn't return an error when you group data operations by using the SDK [ExecuteTransactionRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) or a Web API `$batch` operation change set. Although these data operations are completed, no transaction is applied. Because no transaction can be applied, these operations should fail and return an error.
+Dataverse doesn't return an error when you group data operations by using the SDK [ExecuteTransactionRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) or a Web API `$batch` operation changeset. Although these data operations are completed, no transaction is applied. Because no transaction can be applied, these operations should fail and return an error.
 
 ### No x-ms-session-token value is returned for delete operations
 
