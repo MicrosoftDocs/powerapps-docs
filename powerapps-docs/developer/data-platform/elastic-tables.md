@@ -60,7 +60,7 @@ Azure Cosmos DB ensures that the rows in a table are divided into distinct subse
 
 ### Choosing a partitionid value
 
-The `partitionid` value that you should use depends on the nature of your data. A logical partition in an elastic table consists of a set of rows that have the same `partitionid` value. For example, in a table that contains data about different products, you can use the product category as the `partitionid` value for the table. In this case, groups of items that have specific values for the product category, such as `Clothing`, `Books`, `Electronic Appliances` and `Pet supplies`, form distinct logical partitions.
+The `partitionid` value that you should use depends on the nature of your data. A logical partition in an elastic table consists of a set of rows that have the same `partitionid` value. For example, in a table that contains data about different products, you can use the product category as the `partitionid` value for the table. In this case, groups of items that have specific values for the product category, such as `Clothing`, `Books`, `Electronic Appliances`, and `Pet supplies`, form distinct logical partitions.
 
 Dataverse transparently and automatically manages logical partitions that are associated with a table. There is no limit on the number of logical partitions that you can have in a table. In addition, there is no risk that a logical partition will be deleted if its underlying rows are deleted.
 
@@ -109,13 +109,13 @@ For more information, go to:
 
 Dataverse automatically creates a **Time to live** integer column. This column has the schema name `TTLInSeconds` and the logical name `ttlinseconds`.
 
-When a value is set in this column, it defines the amount of time, in seconds, before the row expires and is automatically deleted from database. If no value is set, the record persists indefinitely, just as for standard tables.
+When a value is set in this column, it defines the amount of time, in seconds, before the row expires and is automatically deleted from database. If no value is set, the record persists indefinitely, as for standard tables.
 
 ## Scenario
 
 The examples in related articles use this scenario.
 
-Contoso operates a large number of Internet of Things (IoT) devices that the company has deployed all across the world. Contoso must store and query large amounts of sensor data that is emitted from IoT devices, so that it can monitor the health of devices and gather other insights.
+Contoso operates a large number of Internet of Things (IoT) devices that the company has deployed all across the world. Contoso must store and query large amounts of sensor data that is emitted from the IoT devices so that it can monitor their health and gather other insights.
 
 To store and query the large volume of IoT data, Contoso creates an elastic table that is named `contoso_SensorData`. It uses a string column that is named `contoso_DeviceId` as the `partitionid` value for each row that corresponds to a device. Because each `contoso_DeviceId` value is unique to a device, and Contoso performs queries mostly in context of a given `contoso_DeviceId` value, it serves as a good partition strategy for the whole dataset.
 
