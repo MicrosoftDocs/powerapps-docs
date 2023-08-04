@@ -1,8 +1,8 @@
 ---
-title: "Search across table data using Dataverse search (Microsoft Dataverse)| Microsoft Docs"
-description: "Read about the various ways to find table data, including search, suggestions, and autocomplete, and even search across table types using Microsoft Dataverse."
+title: Search across table data using Dataverse search
+description: Learn about the various ways to find table data, including search, suggestions, and autocomplete, and even search across table types, using Microsoft Dataverse.
 ms.date: 10/13/2020
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - Dynamics 365 (online)
 author: mspilde
@@ -491,9 +491,9 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### See also
 
-[Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)<br />
-[Compare search options in Microsoft Dataverse](../../../user/search.md)<br />
-[Query Data using the Web API](query-data-web-api.md)<br />
+[Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)   
+[Compare search options in Microsoft Dataverse](../../../user/search.md)   
+[Query data using the Web API](query-data-web-api.md)   
 [Connect with your Dataverse environment](setup-postman-environment.md#connect-with-your-dataverse-environment)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
