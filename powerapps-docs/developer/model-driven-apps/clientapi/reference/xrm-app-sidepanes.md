@@ -15,6 +15,8 @@ contributors:
 
 Provides methods for managing side panes.
 
+[!INCLUDE [online-only-api-note](../includes/online-only-api-note.md)]
+
 ## Methods
 
 |Methods|Description|
