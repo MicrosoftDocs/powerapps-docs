@@ -116,7 +116,7 @@ The following table describes the OData query options the Dataverse Web API supp
 |`$filter `|Filter a collection of resources. |[Filter rows](#filter-rows)|
 |`$orderby`|Request resources in a particular order. |[Order rows](#order-rows)|
 |`$apply`|Aggregate and group your data. |[Aggregate data](#aggregate-data)|
-|`$top`|Specify the number of items in the queried collection to be included in the result. Don't use `$top` when you retrieve pages of data. |[Use $top query option](#use-top-query-option)|
+|`$top`|Specify the number of items in the queried collection to be included in the result. Don't use `$top` when you retrieve pages of data. |[Use the $top query option](#use-the-top-query-option)|
 |`$count`|Request a count of the matching resources included with the resources in the response. |[Count number of rows](#count-number-of-rows)|
 
 You can apply multiple options to a query. Separate query options from the resource path with a question mark (?). Separate each option after the first with an ampersand (&). Option names are case-sensitive.
@@ -1122,7 +1122,7 @@ OData-Version: 4.0
 Use the `Prefer: odata.maxpagesize` request header to control the number of records returned. If you don't specify a number, up to 5,000 records may be returned for each request. You can't request a page size larger than 5,000.
 
 > [!NOTE]
-> Dataverse doesn't support the `$skip` query option, so you can't use the the combination of `$top` and `$skip` for paging. More information: [Use $top query option](#use-top-query-option)
+> Dataverse doesn't support the `$skip` query option, so you can't use the the combination of `$top` and `$skip` for paging. More information: [Use the $top query option](#use-the-top-query-option)
 
 The following example returns just the first two contact records:
 
