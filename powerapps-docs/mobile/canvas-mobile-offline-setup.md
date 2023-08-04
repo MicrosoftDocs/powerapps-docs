@@ -73,8 +73,6 @@ Tables that your offline-first app uses must have offline capability turned on. 
 1. Select **Settings**.
 1. Select **Upcoming features**, and then select the **Experimental** tab.
 1. Turn on the **Dataverse offline** option.
-
-    :::image type="content" source="media/dataverse-offline.png" alt-text="Screenshot of app settings, with the Dataverse offline option highlighted.":::
 1. Select **General**.
 1. Turn on the **Can be used offline** option.
 1. Select an offline profile. You have two options:
