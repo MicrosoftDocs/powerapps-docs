@@ -60,4 +60,4 @@ To get a description of the sync state, select the icon.
 
 ## Known issue
 
-Key Power Fx functions that aren't yet supported include *StartsWith*, *In*, and *With*. When creating an app that has a search text field that uses a *StartsWith* formula, the search fails silently.<!-- EDITOR'S NOTE: This issue doesn't seem to belong in this article. Should it be moved to the limitations article? -->
+Key Power Fx functions that aren't yet supported include *StartsWith*, *In*, and *With*. When creating an app that has a search text field that uses a *StartsWith* formula, the search fails silently.
