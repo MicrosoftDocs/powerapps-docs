@@ -320,9 +320,9 @@ Accept: application/json
 
 ---
 
-Alternatively, you can use the `partitionid` value using alternate key style. More information: [Using Alternate Key](use-elastic-tables.md#using-alternate-key)
+Alternatively, you can use the `partitionid` value using alternate key style. More information: [Using the alternate key](use-elastic-tables.md#using-the-alternate-key)
 
-More information: [Specifying PartitionId](use-elastic-tables.md#specifying-partitionid)
+More information: [Specify PartitionId](use-elastic-tables.md#specify-partitionid)
 
 ## Bypass custom synchronous logic
 
