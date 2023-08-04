@@ -513,7 +513,7 @@ As was mentioned in [Number of records](#number-of-records), with standard table
 
 #### Message size limits
 
-When you have a plug-in registered for any message, you might encounter the [Message size exceeded when sending context to Sandbox](/troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors#error-message-size-exceeded-when-sending-context-to-sandbox) error if the total size of the request exceeds 116.85 megabytes (MB).  You're more likely to hit this limit with bulk operation messages because you send larger payloads.
+When you have a plug-in registered for any message, you might encounter the [Message size exceeded when sending context to Sandbox](/troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors#error-message-size-exceeded-when-sending-context-to-sandbox) error if the total size of the request exceeds 116.85 megabytes (MB). You're more likely to hit this limit with bulk operation messages because you send larger payloads.
 
 The error doesn't occur if no plug-in is registered for the event.
 
@@ -554,7 +554,7 @@ Currently, plug-in steps that are registered for the `DeleteMultiple` message ar
 
 ## Frequently asked questions
 
-The following frequently asked question (FAQ) are related to the introduction of these messages.
+The following frequently asked questions (FAQ) are related to the introduction of these messages.
 
 > [!NOTE]
 > If you have questions about using bulk operation messages but don't find the answers in this article, use the **This Page** button in the **Feedback** section at the bottom of the page to submit and view feedback. You must have a GitHub account to submit feedback.
@@ -572,7 +572,7 @@ There are two types of API limits. The bulk operation messages don't provide any
 As is described in [Service protection API limits](api-limits.md), limits have three facets. Two of the limits are evaluated on a five-minute sliding window and apply when these messages are used.
 
 - **Number of requests**: Each bulk operation message counts as single request that accrues to the limit of 6,000 requests per user, per server, during the five-minute window. Because these requests group individual operations, *the likelihood of hitting this limit is reduced*.
-- **Execution time**: Because each bulk operation message request typically takes longer, if you're sending requests in parallel, *you're more likely to hit the execution time limit* of 20 minutes per user, per server, during the five-minute window.
+- **Execution time**: Bulk operation message requests typically takes longer. Therefore, if you're sending requests in parallel, *you're more likely to hit the execution time limit* of 20 minutes per user, per server, during the five-minute window.
 
 #### Power Platform Request (API Entitlement) limits
 
