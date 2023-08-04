@@ -127,9 +127,9 @@ The following known issues with elastic tables should be addressed before this f
 
 Dataverse doesn't return an error when you group data operations by using the SDK [ExecuteTransactionRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) or a Web API `$batch` operation change set. Although these data operations are completed, no transaction is applied. Because no transaction can be applied, these operations should fail and return an error.
 
-### No x-ms-session-token value is returned for Delete operations
+### No x-ms-session-token value is returned for delete operations
 
-Dataverse doesn't return the `x-ms-session-token` value for `Delete` operations. For more information, go to [Consistency level](#consistency-level).
+Dataverse doesn't return the `x-ms-session-token` value for delete operations. For more information, go to [Consistency level](#consistency-level).
 
 ### The partitionId optional parameter isn't available for all messages
 
