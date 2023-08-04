@@ -19,7 +19,7 @@ contributors:
 
 By using [Power Apps](https://make.powerapps.com/), you can create elastic tables without writing code. For more information, go to [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md).
 
-However, it's sometimes useful to use code to create and update table definitions. The following examples show how to use the Dataverse software development kit (SDK) for .NET and Web API to create a new elastic table that has the schema name `contoso_SensorData`. Use the `EntityMetadata.TableType` property with a value of `Elastic` to create an elastic table through code. If you don't set `TableType`, the default value `Standard` is used, and a standard table is created.
+However, it's sometimes useful to use code to create and update table definitions. The following examples show how to use the Dataverse software development kit (SDK) for .NET and Web API to create a new elastic table that has the schema name `contoso_SensorData`. To create an elastic table through code, use the `EntityMetadata.TableType` property with a value of `Elastic`. If you don't set `TableType`, the default value `Standard` is used, and a standard table is created.
 
 #### [SDK for .NET](#tab/sdk)
 
