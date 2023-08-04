@@ -123,6 +123,8 @@ Returns a collection of lookup objects containing the GUID and display name of e
 
 Returns an array of strings that represent the GUID values of each of the security role privilege that the user is associated with or any teams that the user is associated with.
 
+[!INCLUDE [online-only-api-note](../../../includes/online-only-api-note.md)]
+
 ### Syntax
 
 `userSettings.securityRolePrivileges`

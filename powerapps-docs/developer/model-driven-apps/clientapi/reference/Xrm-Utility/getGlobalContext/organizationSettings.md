@@ -22,7 +22,7 @@ The **organizationSettings** object has the following properties.
 
 ## attributes
 
-Returns columns and their values as `key:value` pairs that are available for the organization table. Additional values will be available as columns if they are specified as column dependencies in the web resource dependency list. The `key` will be the column logical name.
+Returns columns and their values as `key:value` pairs that are available for the organization table. More values are available as columns if they're specified as column dependencies in the web resource dependency list. The `key` is the column logical name.
 
 ### Syntax
 
@@ -122,11 +122,13 @@ Returns the ID of the current organization.
 
 **Type**: String
 
-**Description**: Id of the current organization.
+**Description**: ID of the current organization.
 
 ## isTrialOrganization
 
 Returns a boolean indicating whether the organization is a trial organization.
+
+[!INCLUDE [online-only-api-note](../../../includes/online-only-api-note.md)]
 
 ### Syntax
 
@@ -140,7 +142,9 @@ Returns a boolean indicating whether the organization is a trial organization.
 
 ## organizationExpiryDate
 
-Returns the expiry date of the current organization if it is a trial organization.
+Returns the expiry date of the current organization if it's a trial organization.
+
+[!INCLUDE [online-only-api-note](../../../includes/online-only-api-note.md)]
 
 ### Syntax
 
@@ -150,7 +154,7 @@ Returns the expiry date of the current organization if it is a trial organizatio
 
 **Type**: Date
 
-**Description**: Returns a `Date` object with the organization's expiry date if it is a trial organization. Returns NULL if the organization is not a trial organization.
+**Description**: Returns a `Date` object with the organization's expiry date if it's a trial organization. Returns NULL if the organization isn't a trial organization.
 
 ## uniqueName 
 
@@ -192,7 +196,7 @@ Returns the FullNameConventionCode setting of the current organization.
 
 **Type**: Number
 
-**Description**: Returns a number denoting the full name format selected in the system settings. Below are the possible values and the corresponding format:
+**Description**: Returns a number denoting the full name format selected in the system settings. The following are the possible values and the corresponding format:
 
 0: LastName, FirstName <br/>
 1: FirstName LastName <br/>
@@ -203,7 +207,7 @@ Returns the FullNameConventionCode setting of the current organization.
 6: LastName FirstName <br/>
 7: LastNameFirstName 
 
-## Related topics
+## Related articles
 
 [Client context](client.md)
 
