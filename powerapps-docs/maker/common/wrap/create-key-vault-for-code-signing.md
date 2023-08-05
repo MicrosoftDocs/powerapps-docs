@@ -1,6 +1,6 @@
 ---
 title: Create key vault for code signing
-description:  Learn how to create Azure key vault for automated code signing of native mobile apps in wrap wizard.
+description:  Learn how to create Azure Key Vault for automated code signing of native mobile apps in wrap wizard.
 author: makolomi
 ms.topic: article
 ms.custom: canvas
@@ -13,12 +13,12 @@ search.audienceType:
 contributors:
   - mkaur-msft
 ---
-# Create Azure key vault for wrap in Power Apps
+# Create Azure Key Vault for wrap in Power Apps
 
-In order to automatically, sign your Android or iOS mobile app package during  [Step 2](wrap-how-to.md#step-2-target-platform) of the wrap wizard, it's necessary to have Azure Key Vault configured. Azure Key Vault is a cloud-based service designed to provide a secure storage solution for secrets, which can include certificates, passwords, keys, and other sensitive information. To learn more about Azure Key Vault, see [Introduction to Azure key vault](/azure/key-vault/general/overview).
+In order to automatically, sign your Android or iOS mobile app package during  [Step 2](wrap-how-to.md#step-2-target-platform) of the wrap wizard, it's necessary to have Azure Key Vault configured. Azure Key Vault is a cloud-based service designed to provide a secure storage solution for secrets, which can include certificates, passwords, keys, and other sensitive information. To learn more about Azure Key Vault, see [Introduction to Azure Key Vault](/azure/key-vault/general/overview).
 
 
-In this article, you will learn how to use an existing Azure key vault or create a new [Azure portal](https://portal.azure.com).
+In this article, you will learn how to use an existing Azure Key Vault or create a new [Azure portal](https://portal.azure.com).
 
 ## Prerequisites
   
@@ -28,7 +28,7 @@ In this article, you will learn how to use an existing Azure key vault or create
 - Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
 
    
-## Create Azure key vault and configure KeyVault URI
+## Create Azure Key Vault and configure KeyVault URI
 
 1. To create a new Azure service principal for the 1P AAD application **4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp)**, sign in to your tenant as an admin. Then, run the following script in PowerShell:
 
