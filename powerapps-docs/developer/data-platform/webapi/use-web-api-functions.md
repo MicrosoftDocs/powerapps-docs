@@ -48,7 +48,7 @@ When a parameter value is used multiple times, [parameter aliases](query-data-we
 
 ## Pass record reference to a function
 
-Certain functions will require passing a reference to an existing record. For example, the following functions have a parameter that requires a <xref:Microsoft.Dynamics.CRM.crmbaseentity> entity type:  
+Certain functions require passing a reference to an existing record. For example, the following functions have a parameter that requires a <xref:Microsoft.Dynamics.CRM.crmbaseentity> entity type:  
   
 |Functions|&nbsp;|&nbsp;|  
 |-|-|-|  
@@ -56,7 +56,7 @@ Certain functions will require passing a reference to an existing record. For ex
 |<xref:Microsoft.Dynamics.CRM.IsValidStateTransition>|<xref:Microsoft.Dynamics.CRM.RetrieveDuplicates>|<xref:Microsoft.Dynamics.CRM.RetrieveLocLabels>|  
 |<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess>|<xref:Microsoft.Dynamics.CRM.RetrieveRecordWall>|<xref:Microsoft.Dynamics.CRM.ValidateRecurrenceRule>|  
   
-When you pass a reference to an existing record, use the `@odata.id` annotation to the Uri for the record. For example if you are using the <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess> function you can use the following Uri to specify retrieving access to a specific contact record:  
+When you pass a reference to an existing record, use the `@odata.id` annotation to the Uri for the record. For example if you're using the <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess> function you can use the following Uri to specify retrieving access to a specific contact record:  
   
 ```http
 GET [Organization URI]/api/data/v9.0/systemusers(af9b3cf6-f654-4cd9-97a6-cf9526662797)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@tid)?@tid={'@odata.id':'contacts(9f3162f6-804a-e611-80d1-00155d4333fa)'}
@@ -68,7 +68,7 @@ The `@odata.id` annotation can be either the full URI or a relative URI.
  
 ## Bound and unbound functions
 
-Only those functions found in <xref:Microsoft.Dynamics.CRM.FunctionIndex>, or those created as a [custom API](../custom-api.md) may be bound. Query functions are never bound.  
+Only functions found in <xref:Microsoft.Dynamics.CRM.FunctionIndex>, or created as a [custom API](../custom-api.md) may be bound. Query functions are never bound.  
   
 <a name="bkmk_boundFunctions"></a>
 
@@ -144,7 +144,7 @@ OData-Version: 4.0
  
 ### Unbound functions
 
-The <xref:Microsoft.Dynamics.CRM.WhoAmI> function isn't bound to an entity. It is defined in the CSDL without an `IsBound` attribute.  
+The <xref:Microsoft.Dynamics.CRM.WhoAmI> function isn't bound to an entity. It's defined in the CSDL without an `IsBound` attribute.  
   
 ```xml
 <ComplexType Name="WhoAmIResponse">  
@@ -194,7 +194,7 @@ There are two ways that functions can be used to control the data returned with 
   
 ### Composable functions
 
-Some functions listed in <xref:Microsoft.Dynamics.CRM.FunctionIndex> will return a collection of entities. A subset of these functions are *composable*, which means that you can include an additional `$select` or `$filter` system query option to control which columns are returned in the results. These functions have an `IsComposable` attribute in the CSDL. Each of these functions has a companion message in the SDK that accept either a <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> or <xref:Microsoft.Xrm.Sdk.Query.QueryBase> type parameter. The OData system query options provide the same functionality so these functions do not have the same parameters as their companion messages in the SDK. The following table shows a list of those composable functions in this release.  
+Some functions listed in <xref:Microsoft.Dynamics.CRM.FunctionIndex> return a collection of entities. A subset of these functions are *composable*, which means that you can include a `$select` or `$filter` system query option to control which columns are returned in the results. These functions have an `IsComposable` attribute in the CSDL. Each of these functions has a companion message in the SDK that accept either a <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> or <xref:Microsoft.Xrm.Sdk.Query.QueryBase> type parameter. The OData system query options provide the same functionality so these functions don't have the same parameters as their companion messages in the SDK. The following table shows a list of those composable functions in this release.  
   
 |Functions|&nbsp;|&nbsp;|  
 |-|-|-|  
@@ -215,7 +215,7 @@ GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber&$filter
 
 #### Limitations of query functions
 
-One of the limitations of query functions is that you cannot use the `not` operator to negate query functions.
+One of the limitations of query functions is that you can't use the `not` operator to negate query functions.
 
 For example, the following query, which uses <xref:Microsoft.Dynamics.CRM.EqualUserId>, fails with the error: `Not operator along with the Custom Named Condition operators is not allowed`.
 
@@ -229,7 +229,7 @@ Several query functions have a companion negated query function. For example, <x
 GET [Organization URI]/api/data/v9.1/systemusers?$select=fullname,systemuserid&$filter=Microsoft.Dynamics.CRM.NotEqualUserId(PropertyName=@p1)&@p1='systemuserid'
 ```
 
-Other query functions can be negated in different ways. For example, rather than trying to negate the <xref:Microsoft.Dynamics.CRM.Last7Days> query function like this (which will fail with the same error as mentioned above):
+Other query functions can be negated in different ways. For example, rather than trying to negate the <xref:Microsoft.Dynamics.CRM.Last7Days> query function like this (which fail with the same error as mentioned previously):
 
 ```http
 GET [Organization URI]/api/data/v9.1/accounts?$select=name&$filter=not Microsoft.Dynamics.CRM.Last7Days(PropertyName=@p1)&@p1='createdon'
