@@ -63,7 +63,50 @@
       href: background-operations.md
     - name: Use optional parameters
       href: optional-parameters.md
-    - name: Use FetchXML to query data
+    - name: Use FetchXML to query data (NEW)
+      href: fetchxml/overview.md
+      items:
+        - name: Select columns
+          href: fetchxml/select-columns.md
+        - name: Join tables
+          href: fetchxml/join-tables.md
+        - name: Order rows
+          href: fetchxml/order-rows.md
+        - name: Filter rows
+          href: fetchxml/filter-rows.md
+        - name: Page results
+          href: fetchxml/page-results.md
+        - name: Aggregate data
+          href: fetchxml/aggregate-data.md
+        - name: Count rows
+          href: fetchxml/count-rows.md
+        - name: Optimize performance
+          href: fetchxml/optimize-performance.md
+        - name: FetchXml reference
+          href: fetchxml/reference/index.md
+          items:
+          - name: all-attributes element
+            href: fetchxml/reference/all-attributes.md
+          - name: attribute element
+            href: fetchxml/reference/attribute.md
+          - name: condition element
+            href: fetchxml/reference/condition.md
+            items:
+            - name: condition operators
+              href: fetchxml/reference/operators.md
+          - name: entity element
+            href: fetchxml/reference/entity.md
+          - name: fetch element
+            href: fetchxml/reference/fetch.md
+          - name: filter element
+            href: fetchxml/reference/filter.md
+          - name: link-entity element
+            href: fetchxml/reference/link-entity.md
+          - name: order element
+            href: fetchxml/reference/order.md  
+          - name: value element
+            href: fetchxml/reference/value.md         
+    - name: Use FetchXML to query data (OLD)
       href: use-fetchxml-construct-query.md
       items:
         - name: Use FetchXML aggregation
@@ -480,6 +523,8 @@
       href: /dynamics365/customer-engagement/web-api/about
     - name: Organization Service
       href: /dotnet/api/microsoft.crm.sdk
+    - name: FetchXml reference
+      href: fetchxml/reference/index.md            
     - name: XRM Tooling
       href: /dotnet/api/microsoft.xrm.tooling.connector
     - name: Workflow
