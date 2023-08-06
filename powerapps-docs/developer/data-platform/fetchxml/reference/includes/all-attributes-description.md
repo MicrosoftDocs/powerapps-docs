@@ -1,1 +1,1 @@
-Indicates that all column values for each row are returned.
+Indicates that all column values for each row are returned. We don't recommend using this element for most cases.
