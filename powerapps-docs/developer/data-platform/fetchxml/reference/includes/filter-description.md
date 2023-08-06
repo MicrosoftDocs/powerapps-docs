@@ -1,0 +1,1 @@
+Specify complex conditions for an [entity](../entity.md) or [link-entity](../link-entity.md) to apply to a query.

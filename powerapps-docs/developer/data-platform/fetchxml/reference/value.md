@@ -13,3 +13,22 @@ contributors:
  - JimDaly
 ---
 # value element
+
+[!INCLUDE [value-description](includes/value-description.md)]
+
+## Example
+
+```xml
+<filter>
+   <condition attribute="numberofemployees" operator="between">
+      <value>6</value>
+      <value>20</value>
+   </condition>
+</filter>
+```
+
+## Parent elements
+
+|Name|Description|
+|---------|---------|
+|[condition element](condition.md)|[!INCLUDE [condition-description](includes/condition-description.md)]|

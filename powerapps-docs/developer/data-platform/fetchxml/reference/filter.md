@@ -13,3 +13,34 @@ contributors:
  - JimDaly
 ---
 # filter element
+
+[!INCLUDE [filter-description](includes/filter-description.md)]
+
+## Example
+
+```xml
+TODO
+```
+
+
+## Attributes
+
+|Name|Required?|Description|
+|---------|---------|---------|
+|`type`|No|TODO|
+|`hint`|No|TODO|
+|`isquickfindfields`|No|TODO|
+
+## Parent elements
+
+|Name|Description|
+|---------|---------|
+|[entity](entity.md)|[!INCLUDE [entity-description](includes/entity-description.md)]|
+|[link-entity](link-entity.md)|[!INCLUDE [link-entity-description](includes/link-entity-description.md)]|
+
+## Child elements
+
+|Name|Occurrences|Description|
+|---------|---------|---------|
+|[condition element](condition.md)|0 to 500|[!INCLUDE [condition-description](includes/condition-description.md)]|
+|[filter element](filter.md)|0 or many|[!INCLUDE [filter-description](includes/filter-description.md)]|

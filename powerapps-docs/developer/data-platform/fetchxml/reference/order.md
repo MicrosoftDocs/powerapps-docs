@@ -13,3 +13,26 @@ contributors:
  - JimDaly
 ---
 # order element
+
+[!INCLUDE [order-description](includes/order-description.md)]
+
+## Example
+
+```xml
+TODO
+```
+
+## Attributes
+
+|Name|Required?|Description|
+|---------|---------|---------|
+|`attribute`|YesNo|TODO|
+|`alias`|No|TODO|
+|`descending`|No|TODO|
+
+## Parent elements
+
+|Name|Description|
+|---------|---------|
+|[entity](entity.md)|[!INCLUDE [entity-description](includes/entity-description.md)]|
+|[link-entity](link-entity.md)|[!INCLUDE [link-entity-description](includes/link-entity-description.md)]|

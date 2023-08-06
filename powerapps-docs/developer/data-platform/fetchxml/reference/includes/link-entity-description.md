@@ -1,0 +1,1 @@
+Joins a table related to the [entity](../entity.md) or [link-entity](../link-entity.md) to return additional columns with the result.

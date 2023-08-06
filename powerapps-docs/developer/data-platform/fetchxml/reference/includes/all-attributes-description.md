@@ -1,0 +1,1 @@
+Indicates that all column values for each row are returned.

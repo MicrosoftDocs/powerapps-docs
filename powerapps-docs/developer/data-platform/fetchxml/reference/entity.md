@@ -13,3 +13,36 @@ contributors:
  - JimDaly
 ---
 # entity element
+
+[!INCLUDE [entity-description](includes/entity-description.md)]
+
+## Example
+
+```xml
+TODO
+```
+
+## Attributes
+
+|Name|Required?|Description|
+|---------|---------|---------|
+|`name`|Yes|TODO|
+|`forceseek`|No|TODO|
+|`enableprefiltering`|No|TODO|
+|`prefilterparametername`|No|TODO|
+
+## Parent elements
+
+|Name|Description|
+|---------|---------|
+|[fetch element](fetch.md)|[!INCLUDE [fetch-description](includes/fetch-description.md)]|
+
+## Child elements
+
+|Name|Occurrences|Description|
+|---------|---------|---------|
+|[all-attributes element](all-attributes.md)|0 or 1|[!INCLUDE [all-attributes-description](includes/all-attributes-description.md)]|
+|[attribute element](attribute.md)|0 or many|[!INCLUDE [attribute-description](includes/attribute-description.md)]|
+|[order element](order.md)|0 or many|[!INCLUDE [order-description](includes/order-description.md)]|
+|[link-entity element](link-entity.md)|0 or many|[!INCLUDE [link-entity-description](includes/link-entity-description.md)]|
+|[filter element](filter.md)|0 or 1|[!INCLUDE [filter-description](includes/filter-description.md)]|

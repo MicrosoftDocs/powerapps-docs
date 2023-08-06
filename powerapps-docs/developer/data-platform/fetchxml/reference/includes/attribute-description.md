@@ -1,0 +1,1 @@
+Specifies a column from an [entity](../entity.md) or [link-entity](../link-entity.md) to return with a query.
