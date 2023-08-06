@@ -17,11 +17,9 @@ contributors:
 
 # Connect to Microsoft Dataverse
 
-## Overview
-
 You can securely store your business data in Dataverse and build rich apps in Power Apps so that users can manage that data. You can also integrate that data into solutions that include Power Automate, Power BI, and data from Dynamics 365.
 
-By default, the app connects to the current environment for Dataverse tables. If your app moves to another environment, the connector connects to data in the new environment. This behavior works well for an app using a single environment or an app that follows an ALM process for moving from Development to Test to Production.
+By default, the app connects to the current environment for Dataverse tables. If your app moves to another environment, the connector connects to data in the new environment. This behavior works well for an app using a single environment or an app that follows an application lifecycle management (ALM) process for moving from development, to test, and then to production.
 
 When you add data from Dataverse, you can change the environment, and then select one or more tables. By default, the app connects to data in the current environment.
 
@@ -63,50 +61,40 @@ Dataverse for processing (rather than processing locally within Power Apps).
 
 | **Item**                                                        | **Number [1]** | **Text [2]** | **Choice** | **DateTime [3]** | **Guid** |
 |-----------------------------------------------------------------|----------------|--------------|------------|------------------|----------|
+| \<, \<=, \>, \>=                                                | Yes            | Yes          | No         | Yes              | \-       |
+| =, \<\>                                                         | Yes            | Yes          | Yes        | Yes              | Yes      |
+| And/Or/Not                                                      | Yes            | Yes          | Yes        | Yes              | Yes      |
+| CountRows [4] [5], CountIf [6]                                  | Yes            | Yes          | Yes        | Yes              | Yes      |
 | Filter                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
+| First [7]                                                       | Yes            | Yes          | Yes        | Yes              | Yes      |
+| In (membership) (preview)                                       | Yes            | Yes          | Yes        | Yes              | Yes      |
+| In (substring)                                                  | \-             | Yes          | \-         | \-               | \-       |
+| IsBlank [8]                                                     | Yes            | Yes          | No         | Yes              | Yes      |
+| Lookup                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
+| Search                                                          | No             | Yes          | No         | No               | \-       |
 | Sort                                                            | Yes            | Yes          | Yes        | Yes              | \-       |
 | SortByColumns                                                   | Yes            | Yes          | Yes        | Yes              | \-       |
-| Search                                                          | No             | Yes          | No         | No               | \-       |
-| Lookup                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
-| =, \<\>                                                         | Yes            | Yes          | Yes        | Yes              | Yes      |
-| \<, \<=, \>, \>=                                                | Yes            | Yes          | No         | Yes              | \-       |
-| In (substring)                                                  | \-             | Yes          | \-         | \-               | \-       |
-| In (membership) (preview)                                       | Yes            | Yes          | Yes        | Yes              | Yes      |
-| And/Or/Not                                                      | Yes            | Yes          | Yes        | Yes              | Yes      |
 | StartsWith                                                      | \-             | Yes          | \-         | \-               | \-       |
-| IsBlank                                                         | Yes [4]        | Yes [4]      | No [4]     | Yes [4]          | Yes      |
-| Sum, Min, Max, Avg [5]                                          | Yes            | \-           | \-         | No               | \-       |
-| CountRows [6] [7], CountIf [5]                                  | Yes            | Yes          | Yes        | Yes              | Yes      |
+| Sum, Min, Max, Avg [6]                                          | Yes            | \-           | \-         | No               | \-       |
 
 1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable. Casting to a column to a number isn't supported. 
-
-2.  Doesn't support Trim[Ends] or Len. Does support other functions such as
-    Left, Mid, Right, Upper, Lower, Replace, Substitute, etc. Also, casting such as Text(column) isn't supported for delegation.
-
+2.  Doesn't support Trim[Ends] or Len. Does support other functions such as Left, Mid, Right, Upper, Lower, Replace, Substitute, etc. Also, casting such as Text(column) isn't supported for delegation.
 3.  DateTime is delegable except for DateTime functions Now() and
     Today().
-
-4.  Supports comparisons. For example, `Filter(TableName, MyCol = Blank())`.
-
-5.  The aggregate functions are limited to a collection of 50,000 rows. If
-    needed, use the Filter function to select 50,000 
-
-6.  CountRows on Dataverse uses a cached value. For non-cached values where the record count is expected to be under 50,000 records, use `CountIf(table, True)`.  
-
-7.  For CountRows, ensure that users have appropriate permissions to get totals for the table. 
+4.  CountRows on Dataverse uses a cached value. For non-cached values where the record count is expected to be under 50,000 records, use `CountIf(table, True)`.  
+5.  For CountRows, ensure that users have appropriate permissions to get totals for the table. 
+6.  The aggregate functions are limited to a collection of 50,000 rows. If needed, use the Filter function to select 50,000.  Aggregate functions are not supported on Views.  
+7.  FirstN is not supported.
+8.  Supports comparisons. For example, `Filter(TableName, MyCol = Blank())`.
 
 
-## Call Dataverse actions directly in Power Fx (Experimental)
+## Call Dataverse actions directly in Power Fx (preview)
 
 [This section is pre-release documentation and is subject to change.]
 
-> [!IMPORTANT]
-> - This is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+As a part of the Power Fx language, authors can now directly invoke a Dataverse action within a formula. Both unbound and bound actions are supported. A new Power Fx `Environment` language object that authors can add to their app enables access to Dataverse actions. It's available with Power Apps release version 3.23022.
 
-As a part of the Power Fx language, authors can now directly invoke a Dataverse action within a formula. A new Power Fx `Environment` language object that authors can add to their app enables access to Dataverse actions. It is available with Power Apps release version 3.23022.
-
-This feature update also allows authors to work with untyped object fields for both inputs and outputs, on the input side, for instance, many Dataverse actions require an untyped object as an argument. You can now pass these arguments in by using ParseJSON to convert a Power Fx record into an untyped object. On the output side, for actions that return untyped objects, you can simply `dot` into returned objects properties. You will need to cast specific values for use in specific contexts for use in Power Apps (such as a label.)
+This feature update also allows authors to work with untyped object fields for both inputs and outputs, on the input side, for instance, many Dataverse actions require an untyped object as an argument. You can now pass these arguments in by using ParseJSON to convert a Power Fx record into an untyped object. On the output side, for actions that return untyped objects, you can simply `dot` into returned objects properties. You'll need to cast specific values for use in specific contexts for use in Power Apps such as a label.
 
 Without this feature, it has been common for authors to use Power Automate to call Dataverse directly. However, calling Dataverse directly from Power Fx provides significant performance benefits (and ease of use) and should be preferred for direct transactional reads and updates. 
 
@@ -117,10 +105,12 @@ Working with untyped fields is not restricted to Dataverse. It works for all typ
 
 ### Enable access to Microsoft Dataverse actions
 
-To enable access to Dataverse actions, you will need to open your canvas app for editing and navigate to **Settings** > **Upcoming features** > **Experimental** > **Enable access to Microsoft Dataverse actions** and set the toggle to **On**.
+For new apps, **Enable access to Microsoft Dataverse actions** is set to **On** by default. For apps created previously you'll need to enable access to Dataverse actions. 
+
+To turn on Dataverse actions, open your canvas app for editing and navigate to **Settings** > **Upcoming features** > **Experimental** > **Enable access to Microsoft Dataverse actions** and set the toggle to **On**.
 
 > [!div class="mx-imgBorder"] 
-> ![Enable access to Microsoft Dataverse actions.](media/connection-common-data-service/common-data-service-connection-dataverse-action-switch.png)
+> ![Enable access to Microsoft Dataverse actions.](media/connection-common-data-service/common-data-service-connection-dataverse-action-switch-preview.png)
 
 ### Add the Power Fx Environment language object to your app
 
@@ -137,9 +127,9 @@ This adds the Power Fx `Environment` language object to your application.
 
 When the Power Fx `Environment` object is added to your application, you can access Dataverse actions by adding `Environment` to your formula and then dotting into the actions.
 
-![ Using the Power Fx Environment object.](media/connection-common-data-service/common-data-service-connection-using-the-Envrionment-PowerFx-object.png)
+![Using the Power Fx Environment object.](media/connection-common-data-service/common-data-service-connection-using-the-Envrionment-PowerFx-object.png)
 
-Unbound Dataverse actions are peer level to tables and need the parenting scope of the **Environment** language object. All actions in your environment will be available – both system level and custom. 
+Unbound Dataverse actions are peer level to tables and need the parenting scope of the **Environment** language object. All actions in your environment will be available – both system level and custom. Both bound and unbound actions are available. The 2-level call limit has been removed. 
 
 ![Using a Dataverse action.](media/connection-common-data-service/common-data-service-connection-hooking-up-an-action-to-a-button.png)
 

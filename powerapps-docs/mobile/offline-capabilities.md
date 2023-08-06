@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 06/05/2023
+ms.date: 07/26/2023
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -117,7 +117,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
     Any views that have linked tables (related table) that aren't available offline are also not supported.
 
-- **Advanced lookups** - The **[Advanced lookup]**(../user/lookup-field.md#advanced-lookup) functionality isn't supported in offline scenarios. When you're offline, the **Advanced lookup** button is replaced by a **Change view** dropdown list.
+- **Advanced lookups** - The [Advanced lookup](../user/lookup-field.md#advanced-lookup) functionality isn't supported in offline scenarios. When you're offline, the **Advanced lookup** button is replaced by a **Change view** dropdown list.
 
 - **Add Existing on subgrids** - The **Add Existing** functionality isn't supported for mobile offline for certain types of relationships. When you're offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command is hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command doesn't work in offline.
 

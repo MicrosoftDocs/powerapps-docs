@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/17/2023
+ms.date: 08/04/2023
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -103,7 +103,8 @@ This list identifies all services to which Power Apps communicates and their usa
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
 | api.powerplatform.com<br>\*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
-
+| ris.api.iris.microsoft.com<br>eudb.ris.api.iris.microsoft.com | https | Record user action in response to Power Apps in-app campaigns |
+| arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
 <sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>
