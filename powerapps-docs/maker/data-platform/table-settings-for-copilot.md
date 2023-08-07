@@ -24,7 +24,7 @@ To verify, select **Properties** from the table designer in make.powerappps.com,
 
 ## Configure columns
 
-To configure your columns, open the table, and then select **Views** from the table hub. In the list of views open the default quick find view for your table. In this example, contact table default quick find active contacts view is selected. When users ask questions while they're in the view from an app, Copilot includes the data from the columns configured following the steps below that in the contact table rows.
+To configure your columns, open the table, and then select **Views** from the table hub. In the list of views open the default quick find view for your table. In this example, the contact table default quick find active contacts view is selected. When users ask questions while they're in the view from an app, Copilot includes the data from the columns configured following the steps below that in the contact table rows.
 
 :::image type="content" source="media/column-settings-for-copilot.png" alt-text="Column settings for use with Copilot in Power Apps":::
 
@@ -36,10 +36,10 @@ There are two actions that you need to take:
    - To remove a column, select the column heading, and then select **Remove**.
  :::image type="content" source="media/column-settings-for-copilot2.png" alt-text="Set columns used to return answers from Copilot":::
 
+After making your edits be sure to **Save and publish** your changes. Depending on the size of the data in the table it might take between fifteen minutes and a full day before all data will be available for questions.
+
 > [!NOTE]
 > There's a limit of 1k columns per database that can be used to find data (indexed). Be aware that you may exceed that limit across all your tables.
-
-After making your edits be sure to **Save and publish** your changes. Depending on the size of the data in the table it might take between fifteen minutes and a full day before all data will be available for questions.
 
 ## Related content
 
