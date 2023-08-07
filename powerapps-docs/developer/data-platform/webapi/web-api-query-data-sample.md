@@ -29,7 +29,7 @@ This sample is divided into the following principal sections, containing Web API
 |[Section 1: Selecting specific properties](#section-1-selecting-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br /> [Formatted values](query-data-web-api.md#formatted-values)|
 |[Section 2: Using query functions](#section-2-using-query-functions)|[Filter rows](query-data-web-api.md#filter-rows)<br />[Use OData query functions](query-data-web-api.md#use-odata-query-functions)<br />[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
 |[Section 3: Ordering and aliases](#section-3-ordering-and-aliases)|[Order rows](query-data-web-api.md#order-rows)<br /> [Filter rows](query-data-web-api.md#filter-rows)<br />|
-|[Section 4: Limit and count results](#section-4-limit-and-count-results)|[Use $top query option](query-data-web-api.md#use-top-query-option)<br />[Count number of rows](query-data-web-api.md#count-number-of-rows)|
+|[Section 4: Limit and count results](#section-4-limit-and-count-results)|[Use the $top query option](query-data-web-api.md#use-the-top-query-option)<br />[Count number of rows](query-data-web-api.md#count-number-of-rows)|
 |[Section 5: Pagination](#section-5-pagination)|[Page results](query-data-web-api.md#page-results)|
 |[Section 6: Expanding results](#section-6-expanding-results)|[Join Tables](query-data-web-api.md#join-tables)|
 |[Section 7: Aggregate results](#section-7-aggregate-results)|[Aggregate data](query-data-web-api.md#aggregate-data)|
@@ -1118,7 +1118,7 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
 
 ## Section 4: Limit and count results
 
-Returning more data than you need is bad for performance. The server will return a maximum of 5000 table rows per request. You can limit the number of results returned using the `$top` query option or by adding `odata.maxpagesize` in the request header. The `$top` query option only returns the top number of rows from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of rows returned per page with an `@odata.nextLink` property to get results of the next page. For more information about `odata.maxpagesize`, see the section on [Pagination](#bkmk_filterPagination) and see also [Use $top query option](query-data-web-api.md#use-top-query-option) and [Page results](query-data-web-api.md#page-results).  
+Returning more data than you need is bad for performance. The server will return a maximum of 5000 table rows per request. You can limit the number of results returned using the `$top` query option or by adding `odata.maxpagesize` in the request header. The `$top` query option only returns the top number of rows from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of rows returned per page with an `@odata.nextLink` property to get results of the next page. For more information about `odata.maxpagesize`, see the section on [Pagination](#bkmk_filterPagination) and see also [Use the $top query option](query-data-web-api.md#use-the-top-query-option) and [Page results](query-data-web-api.md#page-results).  
   
 <a name="bkmk_topResults"></a>
  

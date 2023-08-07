@@ -47,7 +47,7 @@ You have to be aware of the following conditions and possible exceptions when us
 - If you specify a column that is not defined as a unique key, an error will be thrown indicating that use of unique key columns is required. The error message is: `The key in the request URI is not valid for resource 'Microsoft.Dynamics.CRM.<table logical name>'. Ensure that the names and number of key properties match the declared or alternate key properties for the resource 'Microsoft.Dynamics.CRM.<table logical name>'.`  
 - Alternate key values with the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?`,`+` are not currently supported.
 
-More information: [Retrieve using an alternate key](webapi/retrieve-entity-using-web-api.md#retrieve-using-an-alternate-key)
+More information: [Retrieve record using an alternate key](webapi/retrieve-entity-using-web-api.md#retrieve-record-using-an-alternate-key)
 
 # [SDK for .NET](#tab/sdk)
 

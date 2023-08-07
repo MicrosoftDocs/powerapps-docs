@@ -32,7 +32,7 @@ This sample is divided into the following principal sections, containing Web API
 |-------------------|---------------------------|
 |[Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami)|<xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function><br />[Unbound functions](use-web-api-functions.md#unbound-functions)|
 |[Section 2: Unbound Function FormatAddress](#section-2-unbound-function-formataddress)|<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function><br />[Passing parameters to a function](use-web-api-functions.md#passing-parameters-to-a-function)|
-|[Section 3: Unbound Function InitializeFrom](#section-3-unbound-function-initializefrom)|<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function><br />[Create a new record from another record](create-entity-web-api.md#create-a-new-record-from-another-record)<br />[Map table columns](../../../maker/data-platform/map-entity-fields.md)<br />[Customize table and column mappings](../customize-entity-attribute-mappings.md)|
+|[Section 3: Unbound Function InitializeFrom](#section-3-unbound-function-initializefrom)|<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function><br />[Create a record from another record](create-entity-web-api.md#create-a-record-from-another-record)<br />[Map table columns](../../../maker/data-platform/map-entity-fields.md)<br />[Customize table and column mappings](../customize-entity-attribute-mappings.md)|
 |[Section 4: Unbound Function RetrieveCurrentOrganization](#section-4-unbound-function-retrievecurrentorganization)|<xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function><br />|
 |[Section 6: Bound Function IsSystemAdmin Custom API](#section-6-bound-function-issystemadmin-custom-api)|[Bound Functions](web-api-functions.md#bound-functions)<br />[Use Bound functions](use-web-api-functions.md#bound-functions)<br />[Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md)<br />[Create and use Custom APIs](../custom-api.md)|
 |[Section 7: Unbound Action GrantAccess](#section-7-unbound-action-grantaccess)|<xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action><br />[Sharing and assigning](../security-sharing-assigning.md)<br /><xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function>|
@@ -160,7 +160,7 @@ In this example, the parameters are set using query string parameter values.
 
 More information:
 
-- [Create a new record from another record](create-entity-web-api.md#create-a-new-record-from-another-record)
+- [Create a record from another record](create-entity-web-api.md#create-a-record-from-another-record)
 - [Map table columns](../../../maker/data-platform/map-entity-fields.md)
 - [Customize table and column mappings](../customize-entity-attribute-mappings.md)
 
