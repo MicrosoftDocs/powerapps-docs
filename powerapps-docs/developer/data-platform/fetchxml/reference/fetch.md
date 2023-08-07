@@ -16,6 +16,8 @@ contributors:
 
 [!INCLUDE [fetch-description](includes/fetch-description.md)]
 
+To learn how to use this element, see [Query data using FetchXml](../overview.md).
+
 ## Example
 
 ```xml

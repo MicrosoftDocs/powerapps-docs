@@ -16,6 +16,8 @@ contributors:
 
 [!INCLUDE [condition-description](includes/condition-description.md)]
 
+To learn how to use this element, see [Filter rows using FetchXml](../filter-rows.md).
+
 ## Example
 
 ```xml

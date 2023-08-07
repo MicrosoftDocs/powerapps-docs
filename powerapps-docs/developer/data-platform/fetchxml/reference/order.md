@@ -16,6 +16,8 @@ contributors:
 
 [!INCLUDE [order-description](includes/order-description.md)]
 
+To learn how to use this element, see [Order rows using FetchXml](../order-rows.md).
+
 ## Example
 
 ```xml

@@ -16,6 +16,8 @@ contributors:
 
 [!INCLUDE [attribute-description](includes/attribute-description.md)]
 
+To learn how to use this element, see [Select columns using FetchXml](../select-columns.md).
+
 ## Example
 
 ```xml

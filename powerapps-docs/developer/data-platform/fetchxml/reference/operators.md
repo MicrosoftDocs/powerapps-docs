@@ -13,3 +13,5 @@ contributors:
  - JimDaly
 ---
 # condition operator values
+
+To learn how to use these values, see [Filter rows using FetchXml](../filter-rows.md).

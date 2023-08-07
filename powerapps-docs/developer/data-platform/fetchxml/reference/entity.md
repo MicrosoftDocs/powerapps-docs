@@ -16,6 +16,8 @@ contributors:
 
 [!INCLUDE [entity-description](includes/entity-description.md)]
 
+To learn how to use this element, see [Query data using FetchXml](../overview.md).
+
 ## Example
 
 ```xml
@@ -36,6 +38,7 @@ TODO
 |Name|Description|
 |---------|---------|
 |[fetch element](fetch.md)|[!INCLUDE [fetch-description](includes/fetch-description.md)]|
+
 
 ## Child elements
 
