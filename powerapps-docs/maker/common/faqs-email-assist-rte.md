@@ -16,15 +16,15 @@ These frequently asked questions (FAQ) describe the AI impact of the Copilot fea
 
 ## What is Copilot in rich text editor?
 
-Copilot in rich text editor empowers sellers with AI-assisted content of emails for customer engagement. Sellers can leverage advanced language models to generate tailored responses that address customer concerns effectively. 
+Copilot in rich text editor empowers users with AI-assisted content for better customer engagement. Users can leverage advanced language models to generate tailored responses that address customer concerns effectively. 
 
 ##	What can the system do? 
 
-Copilot in rich text editor is aimed at improving the seller productivity, by helping them draft and reply emails better and faster. The system generates content suggestions and the seller can review before responding to their customer. 
+Copilot in rich text editor is aimed at improving the user productivity, by helping them draft content better and faster. The system generates content suggestions and the user can review before responding to their customer. 
 
 ## What is/are system’s intended use(s)?
 
-Copilot in rich text editor lets you spend less time composing email. Select a predefined category or enter your own text, and Copilot suggests content that helps you quickly create emails to follow up, reply to inquiries, and move a deal forward. Adjust the tone and length of the message to better resonate with your customers, fostering stronger connections. You can further customize the suggested content before you send it. 
+Copilot in rich text editor lets you spend less time in curating content such as quickly create emails to follow up, reply to inquiries, and move a deal forward. Adjust the tone and length of the message to better resonate with your customers, fostering stronger connections. You can further customize the suggested content before you send it. 
 
 ##	How was Copilot in rich text editor evaluated? What metrics are used to measure performance?
 
@@ -34,13 +34,13 @@ Copilot in rich text editor lets you spend less time composing email. Select a p
 ##	What are the limitations of Copilot in rich text editor? How can users minimize the impact of Copilot in rich text editor’s limitations when using the system?
 
 -	Copilot in rich text editor only supports English language as of now. Non-English users won't be able to use the features.
--	The Copilot in rich text editor gives only suggestions to the email. 
+-	The Copilot in rich text editor gives only suggestions to the content. 
 
 ##	What operational factors and settings allow for effective and responsible use of the system?
 
 - The system doesn’t provide any setting or customization to the end user to tweak the system behavior.
 - Follow these procedures to make the most of Copilot in rich text editor:
-    -	Choose the right prompt to generate emails and choose the right tone and length for the content: Include the right keywords, use a group of words or a full sentence, keep all the key-points around the same topic.
+    -	Choose the right prompt to generate content and choose the right tone and length for the content: Include the right keywords, use a group of words or a full sentence, keep all the key-points around the same topic.
     -	Always review and edit content ideas suggestions before sending them to your customer.
 
 ## See also
