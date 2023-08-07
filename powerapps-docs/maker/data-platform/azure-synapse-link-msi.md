@@ -152,7 +152,7 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
    1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
    1. Select **Environments**, and then open your environment.
    1. In the **Details** section, copy the **Environment ID**.
-   1. To link to the Dataverse environment, run this PowerShell script: `./ NewIdentity.ps1`
+   1. To link to the Dataverse environment, run this PowerShell script: `./NewIdentity.ps1`
    1. Provide the Dataverse environment ID. 
    1. Provide the **ResourceId**. <br />
    **StatusCode = 202** indicates the link was successfully created.

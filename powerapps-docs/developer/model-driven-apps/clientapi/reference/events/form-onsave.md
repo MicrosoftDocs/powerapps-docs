@@ -3,7 +3,7 @@ title: "Form OnSave event (Client API reference) in model-driven apps| Microsoft
 description: Includes description and supported parameters for the form OnSave event.
 author: HemantGaur
 ms.author: hemantg
-ms.date: 05/24/2023
+ms.date: 07/26/2023
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -11,6 +11,7 @@ search.audienceType:
   - developer
 contributors:
   - JimDaly
+  - daryllabar
 ---
 # Form OnSave event (Client API reference) in model-driven apps
 
@@ -48,20 +49,23 @@ Consider creating a Work Order Service Task, you need to validate that the Custo
 In this scenario, since there are multiple async processes and both calls return a single promise by wrapping both in the `Promise.all()` method.
 
 > [!NOTE] 
-> The `preventDefault` can only be used synchronously. For example, in the following handler:
-   > ```JavaScript
-   > function myHandler(context) {
-  > return new Promise((resolve) => {
-  > setTimeout( () => {
-  > context.getEventArgs().preventDefault();
-  > }, 1000);
-  >  });
-  > }
-  >```
+> The `preventDefault` method can only be used synchronously.
+
+For example:
+
+```JavaScript
+ function myHandler(context) {
+    return new Promise((resolve) => {
+       setTimeout( () => {
+          context.getEventArgs().preventDefault();
+       }, 1000);
+   });
+ }
+```
 
 ### Enable Async OnSave using app setting 
 
-To use async onSave handlers you need to enable it through an app setting:
+To use async onSave handlers, you need to enable it through an app setting:
 
 1. Go to https://make.powerapps.com.
 2. Make sure select the correct environment.
@@ -76,15 +80,24 @@ To use async onSave handlers you need to enable it through an app setting:
 
 ### Async OnSave timeouts
 
-When using an async `OnSave` handler, the form waits for the promise returned by the handler to be fulfilled. To ensure that the form save completes in a timely manner, the handler will throw a timeout exception after 10 seconds to let you know to tune the async `OnSave` handler for better performance.
+When you use an async `OnSave` handler, the form waits for the promise returned by the handler to be fulfilled. To ensure that the form save completes in a timely manner, the handler will throw a timeout exception after 10 seconds to let you know to tune the async `OnSave` handler for better performance.
 
-There may be scenarios where pausing the `OnSave` handler for longer than 10 seconds is needed. An example is opening a dialog and waiting for the user's input before continuing to save. To make sure the async operation waits for the promise to resolve, you can call the **disableAsyncTimeout** method:
+There are scenarios where pausing the `OnSave` handler for longer than 10 seconds is needed. An example is opening a dialog and waiting for the user's input before continuing to save. To make sure the async operation waits for the promise to resolve, use the **disableAsyncTimeout** method.
+
+> [!NOTE]
+> You must call `disableAsyncTimeout` before any await statements or async calls.
+
+For example:
 
 ```JavaScript
-executioncontext.getEventArgs().disableAsyncTimeout();
+async function myHandler(context) {  
+     context.getEventArgs().disableAsyncTimeout();
+     // The 10000ms time out will not be disabled if the above line does not come before all async awaits
+     await Xrm.Navigation.openConfirmDialog({ text: "Are you sure you want to save?" });
+ }
 ```
 
-When **disableAsyncTimeout** is called, the timeout for that handler won't be applied. It continues to wait for that handler's promise to be fulfilled.
+When **disableAsyncTimeout** is called, the timeout for that handler isn't applied. It continues to wait for that handler's promise to be fulfilled.
 
 This pattern should be used with caution as it might affect the performance of the form save.
 

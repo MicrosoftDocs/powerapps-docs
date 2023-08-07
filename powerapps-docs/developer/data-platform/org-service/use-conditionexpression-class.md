@@ -15,7 +15,7 @@ search.audienceType:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> class to compare a table column to a value or set of values by using an operator, such as “equal to” or “greater than”. The `ConditionExpression` class lets you pass condition expressions as parameters to other classes, such as <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.  
+In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> class to compare a table column to a value or set of values by using an operator, such as "equal to" or "greater than". The `ConditionExpression` class lets you pass condition expressions as parameters to other classes, such as <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.  
   
  The following table lists the properties you can set to create a condition using the `ConditionExpression` class.  
   
@@ -25,7 +25,7 @@ In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.ConditionE
 |<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression.Operator>|Specifies the condition operator. This is set by using the <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator> enumeration.|  
 |<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression.Values>|Specifies the values of the column.|  
   
- When using the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.AddCondition(Microsoft.Xrm.Sdk.Query.ConditionExpression)> method (or the constructor for <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>), it’s important to understand whether the array is being added as multiple values or as an array.  
+ When using the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.AddCondition(Microsoft.Xrm.Sdk.Query.ConditionExpression)> method (or the constructor for <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>), it's important to understand whether the array is being added as multiple values or as an array.  
   
  The following code example shows two different outcomes depending on how the array is used.  
   
@@ -83,45 +83,55 @@ condition3.Values.Add(AccountState.Active);
   
 ```  
 
-## Column comparison using the SDK API
+## Column comparison
 
-The following example shows how to compare columns using SDK API and the Organization service:
-
-```csharp
-public ConditionExpression
-(
-  string attributeName,
-  ConditionOperator conditionOperator,
-  bool compareColumns,
-  object value
-)
-
-public ConditionExpression
-(
-  string attributeName,
-  ConditionOperator conditionOperator,
-  bool compareColumns,
-  object[] values
-)
-```
-
-By passing in `true` as the value for the `compareColumns` parameter, the `value` is treated as the
-name of the second column to compare the values in `attributeName` to. Pass in `false` to treat it
-as a literal value instead.
-
-For example:
+The following example shows how to compare columns with the `ConditionExpression` class:
 
 ```csharp
-new ConditionExpression("firstname", ConditionOperator.Equal, true, "lastname");
+public static EntityCollection ColumnComparisonExample(IOrganizationService service)
+{
+    QueryExpression query = new("contact")
+    {
+        Criteria = new FilterExpression(LogicalOperator.And)
+        {
+            Conditions = {
+                {
+                    new ConditionExpression(){
+                        AttributeName = "firstname",
+                        Operator = ConditionOperator.Equal,
+                        CompareColumns = true,
+                        Values = {
+                            {"lastname"}
+                        }
+                    }
+                }
+            }
+        }
+    };
+    return service.RetrieveMultiple(query);
+}
 ```
 
-This code creates a condition to return only records where the first and last names are the same, while
+By passing in `true` as the value for the [CompareColumns property](xref:Microsoft.Xrm.Sdk.Query.ConditionExpression.CompareColumns), the `value` is treated as the name of the second column to compare the values in `attributeName` to. The default value is false.
+
+You can also set this property using the optional `compareColumns` `ConditionExpression` constructor. The following example creates a condition to return only records where the first and last names are the same,
 
 ```csharp
-new ConditionExpression("firstname", ConditionOperator.Equal, false, "John");
+var expression = new ConditionExpression(
+    attributeName: "firstname",
+    conditionOperator: ConditionOperator.Equal,
+    compareColumns: true,
+    value: "lastname");
 ```
 
-creates a condition to return only records where the first name is John.
+Leave out the `compareColumns` parameter, to create a condition to return only records where the first name is `John`.
+
+```csharp
+var expression = new ConditionExpression(
+    attributeName: "firstname",
+    conditionOperator: ConditionOperator.Equal,
+    value: "John");
+```
 
 More information: [Use column comparison in queries](../column-comparison.md)
 

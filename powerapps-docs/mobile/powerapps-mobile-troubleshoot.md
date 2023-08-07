@@ -1,14 +1,17 @@
 ---
 title: Troubleshoot issues in the Power Apps mobile app
 description: Troubleshooting and known issues for the Power Apps mobile app 
-author: sericks007
+author: trdehove
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/21/2023
+ms.date: 08/01/2023
 ms.subservice: mobile
-ms.author: sericks
+ms.author: trdehove
+ms.reviewer: sericks
 search.audienceType: 
   - enduser
+contributors:
+- makolomi 
 ---
 
 # Troubleshoot issues in the Power Apps mobile app
@@ -73,7 +76,7 @@ Sometimes, updating and manually opening the authentication app on your device b
     > - **Background applications**
 
 2. Under **Manage automatically**, on the authenticator app set the toggle switch to **OFF**.
-3. On the **Manage manually** screen ensure that **Secondary launch / Can be launched by other apps** is enabled. To allow the Power Apps mobile app to launch the app.
+3. On the **Manage manually** screen, ensure that **Secondary launch / Can be launched by other apps** is enabled. To allow the Power Apps mobile app to launch the app.
 
 ### Vivo device
 
@@ -93,7 +96,7 @@ If you still can't sign in, then email us at pamobsup@microsoft.com and include 
 
 ## App list is empty
 
-The app list in the Power Apps mobile app may appear empty when you lose internet connection before the app list has completely downloaded. This can happen in any of the following scenarios:
+The app list in the Power Apps mobile app may appear empty when you lose internet connection before the app list has downloaded. This can happen in any of the following scenarios:
 
 - It's the first time you're signing in to the mobile app.
 - When you pull down to refresh the app list.
@@ -109,9 +112,9 @@ To resolve connection related issues, ensure you remain connected to the interne
 
 ## App resets when running it on Power Apps mobile
 
-When you run a canvas or model-driven app on Power Apps mobile, it can reset if the app is using too many resources. If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large, complex webpage and the web browser suspends the page because it is consuming too much power.
+When you run a canvas or model-driven app on Power Apps mobile, it can reset if the app is using too many resources. If the app uses more resources than are available on your device, the app resets. This is similar to when you visit a large, complex webpage and the web browser suspends the page because it is consuming too much power.
 
-On Android devices, this app restart can look like a crash because the app is completely closed and the user is taken to the home screen of the device.
+On Android devices, this app restart can look like a crash because the app is closed and the user is taken to the home screen of the device.
 
 If you experience a reset while using a canvas app, contact your app developer, and see [Prevent canvas app restarts](../mobile/power-apps-mobile-canvas-app-restarts.md).
 
@@ -127,7 +130,7 @@ The Flow action menu in Power Apps mobile doesn't support flows created in a sol
 
 When using the Dynamics 365 mobile app, you encounter the following message: **Contact your administrator for access to your organizations mobile apps**. 
 
-To check for recently-added apps, select Refresh. If you can’t find your app, change your search criteria and try again.**
+To check for recently added apps, select Refresh. If you can’t find your app, change your search criteria and try again.**
 
  For more information see, [Troubleshoot "We can’t find any apps for your role"  error message](https://support.microsoft.com/help/4486472/we-can-t-find-any-apps-for-your-role-message-in-dynamics-365-for-phone).
  
@@ -146,7 +149,7 @@ The Flow action menu in Dynamics 365 for phones and tablets app doesn't support 
  
  **Cause 2**: Your Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app version is not supported. For supported version information, see [What's supported](/dynamics365/mobile-app/support-phones-tablets). 
   
- **Cause 3**: This error can also occur if you enter an invalid URL. Make sure the same URL you have provided works to access Dynamics 365 apps in your browser on your device  
+ **Cause 3**: This error can also occur if you enter an invalid URL. Make sure the same URL you have provided works to access Dynamics 365 apps in your browser on your device.  
 
 ## Error message: You haven't been authorized to use this app. Check with your system administrator to update your settings
 
@@ -175,10 +178,10 @@ Access the **Active** users section in the admin center and verify you have a **
  `at Microsoft.Crm.Application.WebServices.ApplicationMetadataService.RetrieveUserContext(UserContextRetrieveRequest userContextRetrieveRequest)`  
  
 ## Error message: The language installed on your company’s system isn’t available on the app. Please contact your system administrator to set up a supported language
- **Cause**: This error will occur if one of the supported languages is not enabled in Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises). For more information on the supported languages, see [Supported languages for Dynamics 365 for phones and Dynamics 365 for tablets](/dynamics365/mobile-app/support-phones-tablets#supported-languages-for--and-).
+ **Cause**: This error occurs if one of the supported languages is not enabled in Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises). For more information on the supported languages, see [Supported languages for Dynamics 365 for phones and Dynamics 365 for tablets](/dynamics365/mobile-app/support-phones-tablets#supported-languages-for--and-).
 
 ## Error message: The process assigned to this record is unavailable or has been deleted 
- If you receive this message for a record which has a non-deleted process assigned to it, you should manually synchronize Dynamics 365 mobile app data with Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app data. Close the mobile app, reopen it, and then choose to download the latest customizations. This procedure forces the mobile app to check for updated customizations. Recently viewed data while you were connected is cached and synched. Record data like Accounts or Contacts are not synched.
+ If you receive this message for a record which has a nondeleted process assigned to it, you should manually synchronize Dynamics 365 mobile app data with Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app data. Close the mobile app, reopen it, and then choose to download the latest customizations. This procedure forces the mobile app to check for updated customizations. Recently viewed data while you were connected is cached and synched. Record data like Accounts or Contacts are not synched.
  
 ## Event 10001 messages appear in the Event Log when you run Dynamics 365 for mobile. 
  The following event may be recorded multiple times to the Event Log, when **Show Analytic and Debug Logs** is enabled, on the device where Dynamics 365 for mobile is running. Notice that, by default, **Show Analytic and Debug Logs** is disabled in [!INCLUDE[pn_Event_Viewer](../includes/pn-event-viewer.md)] and these messages won’t be recorded. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Enable Analytic and Debug Logs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749492(v=ws.11))  
@@ -197,7 +200,7 @@ Access the **Active** users section in the admin center and verify you have a **
  To remove the cached data, the user must sign out of mobile app, or the app must be reconfigured or uninstalled.  
     
  ## Customization changes do not appear in the mobile app
- **Cause 1**: The customizations (metadata) from Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization are cached on your device. The app checks for updated metadata after 24 hours or any time you reopen the app. For customization changes to become available immediately, you must completely close and then reopen the app. If new metadata is found, you will be prompted to download it. For more information on how to completely close an app, refer to the help for your operating system or reference one of the articles provided:  
+ **Cause 1**: The customizations (metadata) from Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization are cached on your device. The app checks for updated metadata after 24 hours or anytime you reopen the app. For customization changes to become available immediately, you must completely close and then reopen the app. If new metadata is found, you are prompted to download it. For more information on how to completely close an app, refer to the help for your operating system or reference one of the articles provided:  
   
 - **Windows 10**: [How do I close an app?](https://support.microsoft.com/help/4027154/windows-close-an-app-in-windows-10)  
   
@@ -205,7 +208,7 @@ Access the **Active** users section in the admin center and verify you have a **
   
 - **Android**: [How to force close Android apps](https://support.google.com/android/answer/9079646?hl=en#close_apps)  
   
-**Cause 2**: You may be seeing a different form than the one you customized. If you have multiple forms for an entity, you will see the first form in the form order that you have access to. This is different than the web application where you see the last form you used and have the ability to change between forms. 
+**Cause 2**: You may be seeing a different form than the one you customized. If you have multiple forms for an entity, you see the first form in the form order that you have access to. This is different than the web application where you see the last form you used and have the ability to change between forms. 
 
  ## Native Android or iOS links are not supported
 The Dynamics 365 mobile app does not support universal links on iOS and Android app links on Android.
@@ -238,7 +241,7 @@ If you're an admin, you can avoid users getting this error by making sure all mo
   
 6. Select **Publish**.  
   
-7. Have your user close and open the mobile app so your dashboard changes will download.  
+7. Have your user close and open the mobile app so your dashboard changes download.  
   
 ### End-user instructions to resolve the issue
    
@@ -263,7 +266,20 @@ If you're an admin, you can avoid users getting this error by making sure all mo
   
 5. Add the components you want on your dashboard and select **Save**.  
   
-6. In the mobile app, follow the previous procedure to select your new dashboard and set it as your home page.    
+6. In the mobile app, follow the previous procedure to select your new dashboard and set it as your home page.
+   
+
+## Network requests fail when Power Apps mobile app is running in the background
+
+When the Power Apps mobile app is running in the background and a canvas or model-driven app makes a network request, a mobile operating system could deprioritize or cancel this network request. This can cause an error message to appear in the mobile app when it returns from the background. 
+
+If you experience a failed network request when the Power Apps mobile app is running in the background, contact your app developer.
+
+## App does not appear in the app list offline 
+New and recently republished apps might not appear in the offline app list right away. To make your app appear in the app list offline, open the app on your device when it is online and keep it open for 1-2 minutes.
+
+## Not able to zoom in to input elements in the app
+Pinch to zoom is not supported by HTML input elements by deafult. More information on HTML input control default behavior: [HTML Input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
 
 ## Issue still not resolved?  
 If the information provided previously doesn’t resolve your issue, either [Post your issue in the Power App Community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1) or [Contact Technical Support](https://powerapps.microsoft.com/support/).
@@ -282,11 +298,6 @@ If the information provided previously doesn’t resolve your issue, either [Pos
 
 - What type of device are you using, such as iPad 4th Generation, Microsoft Surface. What is the version of the operating system, such as iOS 10.0 or Windows 10.
 
-## Network requests fail when Power Apps mobile app is running in the background
-
-When the Power Apps mobile app is running in the background and a canvas or model-driven app makes a network request, a mobile operating system could deprioritize or cancel this network request. This can cause an error message to appear in the mobile app when it returns from the background. 
-
-If you experience a failed network request when the Power Apps mobile app is running in the background, contact your app developer.
 
 ### See also
 [Setup overview for mobile apps](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets)
