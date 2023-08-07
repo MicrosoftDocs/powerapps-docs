@@ -1,17 +1,18 @@
 ---
-title: "Do not use the OData v2.0 endpoint | MicrosoftDocs"
-description: "Describes the requirement to upgrade code to use Web API OData v4.0 endpoint rather than the deprecated OData v2.0 endpoint."
+title: Do not use the OData v2.0 endpoint
+description: Learn about the requirement to upgrade your code to use the Web API OData v4.0 endpoint rather than the deprecated OData v2.0 endpoint.
 suite: powerapps
 author: divkamath
 ms.author: dikamath
 ms.date: 04/12/2023
 ms.reviewer: jdaly
-ms.topic: article
+ms.topic: how-to
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
 contributors: 
   - JimDaly
+ms.custom: bap-template
 ---
 # Do not use the OData v2.0 endpoint
 
@@ -21,40 +22,37 @@ contributors:
 
 ## Symptoms
 
-There are no immediate symptoms, but code using this endpoint will stop working when the deprecated endpoint is removed.
+There are no immediate symptoms, but code that uses this endpoint will stop working when the deprecated endpoint is removed.
 
-The original removal date was November 11, 2022, but this was extended to April 30, 2023. We have decided not to remove the service on April 30, 2023.
-
-We are going to defer the removal of this service to allow people more time to complete the transition of their code to use the Web API. If you have detected that you are still using this endpoint, you must prioritize transitioning this code to use Web API so you will be prepared when the final removal date is announced. More information: [OData v2.0 Service removal date announcement](https://aka.ms/DataverseODataV2EndpointRemoval). 
+The original removal date was November 11, 2022. It was extended to April 30, 2023. We decided not to remove the service on April 30, 2023, to give people more time to transition their code to use the Web API. If you're still using this endpoint, you must prioritize transitioning your code to use the Web API so that you're prepared when the final removal date is announced. More information: [OData v2.0 Service removal date announcement](https://aka.ms/DataverseODataV2EndpointRemoval).
 
 ## Guidance
 
 You should change any code that depends on the Organization Data Service (OData v2.0) to use the Dataverse Web API (OData v4.0) endpoint instead.
 
-For model-driven apps, you should use the [Xrm.WebApi (Client API reference)](../../clientapi/reference/xrm-webapi.md), which provides access to the Dataverse Web API for client-side extensions using JavaScript web resources.
+For model-driven apps, you should use the [Xrm.WebApi (client API reference)](../../clientapi/reference/xrm-webapi.md), which provides access to the Dataverse Web API for client-side extensions that use JavaScript web resources.
 
 ## Problematic patterns
 
-The Organization Data Service uses this endpoint: `/XRMServices/2011/OrganizationData.svc`. You should look for any active code using this endpoint.
+The Organization Data Service uses this endpoint: `/XRMServices/2011/OrganizationData.svc`. You should look for any active code that uses this endpoint.
 
-The Dynamics CRM SDK provided an example JavaScript library as a JavaScript Web Resource named `sample_/Scripts/SDK.REST.js`, which can be found [here](/previous-versions/dynamicscrm-2015/developers-guide/gg334427(v=crm.7)#sample_scriptssdkrestjs). The [Xrm.WebApi (Client API reference)](../../clientapi/reference/xrm-webapi.md) provides similar functions to create, update, delete, and retrieve records.
+The Dynamics CRM SDK provided an example JavaScript library as a JavaScript web resource named `sample_/Scripts/SDK.REST.js`, which can be found [here](/previous-versions/dynamicscrm-2015/developers-guide/gg334427(v=crm.7)#sample_scriptssdkrestjs). The [Xrm.WebApi (client API reference)](../../clientapi/reference/xrm-webapi.md) provides similar functions to create, update, delete, and retrieve records.
 
-The Organization Data Service endpoint is also sometimes used by PowerShell scripts using [Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest).
+PowerShell scripts that use [Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest) also sometimes use the Organization Data Service endpoint.
 
 ## Additional information
 
-Organization Data Service is an OData v2.0 endpoint introduced with Dynamics CRM 2011. It was deprecated with Dynamics 365 Customer Engagement v8.0. Also known as the *OData endpoint* or *REST endpoint* when it was released, this endpoint only provides the ability to perform create, retrieve, update, and delete operations on tables.
+The Organization Data Service is an OData v2.0 endpoint that was introduced with Dynamics CRM 2011. It was deprecated with Dynamics 365 Customer Engagement v8.0. Also known as the *OData endpoint* or *REST endpoint* when it was released, this endpoint only supports create, retrieve, update, and delete operations on tables.
 
-> [!NOTE]
-> Both are OData endpoints, but there are differences in how they are implemented. Do not expect that existing code will work with only minor changes.
+Both the Dataverse Web API and Organization Data service are OData endpoints, but there are differences in how they are implemented. Do not expect that existing code will work with only minor changes.
 
-Some of the major differences are described below.
+Some of the major differences are described in the sections that follow.
 
 ### Resource names
 
-Web API resource names for tables are based on the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EntitySetName>. Organization Data Service names had `Set` appended to the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName>. For example:
+Web API resource names for tables are based on the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EntitySetName>. Organization Data Service names had `Set` appended to the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName>.
 
-|Web API  |Organization Data Service  |
+|Web API|Organization Data Service|
 |---------|---------|
 |accounts|AccountSet|
 |contacts|ContactSet|
@@ -62,32 +60,32 @@ Web API resource names for tables are based on the <xref:Microsoft.Xrm.Sdk.Metad
 
 ### Column names
 
-Column Names in Web API are all lower case using the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>. With the Organization Data Service, column names use the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName>.
+Column names in the Web API are all lowercase and use the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>. In the Organization Data Service, column names use the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName>.
 
 ### HTTP methods
 
-Organization Data Service uses `MERGE` or `PUT` rather than `PATCH` to update a record.
+The Organization Data Service uses `MERGE` or `PUT` rather than `PATCH` to update a record.
 
 ### Data format
 
-Organization Data Service supports both JSON and ATOM. ATOM is an XML-based format usually used for RSS feeds. Web API only supports JSON.
+The Organization Data Service supports both JSON and ATOM, an XML-based format usually used for RSS feeds. The Web API only supports JSON.
 
 ### Limits on number of records returned
 
-Organization Data Service will only return 50 records at a time and doesn't provide a way to specify max page size.
+The Organization Data Service will only return 50 records at a time and doesn't provide a way to specify max page size.
 
-Web API allows to set a max page size and will return up to 5000 records. More information: [Page results](../../../data-platform/webapi/query-data-web-api.md#page-results)
+The Web API allows you to set a max page size and will return up to 5000 records. More information: [Page results](../../../data-platform/webapi/query-data-web-api.md#page-results)
 
 ### Legacy documentation
 
-Documentation describing the Organization Data Service is available here: [Microsoft Dynamics 2015 SDK: Use the OData endpoint with web resources](/previous-versions/dynamicscrm-2015/developers-guide/gg334279(v=crm.7)).
+Organization Data Service documentation: [Microsoft Dynamics 2015 SDK: Use the OData endpoint with web resources](/previous-versions/dynamicscrm-2015/developers-guide/gg334279(v=crm.7)).
 
 The following table connects related areas for the Organization Data Service and the Web API:
 
 
 |Organization Data Service|Web API|
 |---------|---------|
-|[Query Microsoft Dynamics CRM 2015 data using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg334767(v=crm.7))<br />[OData system query options using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7))|[Query data ](../../../data-platform/webapi/query-data-web-api.md)<br /> [Web API Properties](../../../data-platform/webapi/web-api-properties.md)|
+|[Query Microsoft Dynamics CRM 2015 data using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg334767(v=crm.7))<br />[OData system query options using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7))|[Query data ](../../../data-platform/webapi/query-data-web-api.md)<br />[Web API properties](../../../data-platform/webapi/web-api-properties.md)|
 |[Creating records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#creating-records)|[Create a table row](../../../data-platform/webapi/create-entity-web-api.md)|
 |[Retrieving records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#retrieving-records)|[Retrieve a table row](../../../data-platform/webapi/retrieve-entity-using-web-api.md)|
 |[Updating records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#updating-records)|[Basic update](../../../data-platform/webapi/update-delete-entities-using-web-api.md#basic-update)|
@@ -95,21 +93,21 @@ The following table connects related areas for the Organization Data Service and
 |[Using Deep insert](/previous-versions/dynamicscrm-2015/developers-guide/gg309638(v=crm.7)#using-deep-insert)|[Create related table rows in one operation](../../../data-platform/webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation)|
 |[Updating individual properties](/previous-versions/dynamicscrm-2015/developers-guide/gg309638(v=crm.7)#updating-individual-properties)|[Update a single property value](../../../data-platform/webapi/update-delete-entities-using-web-api.md#update-a-single-property-value)|
 |[Associating and disassociating records](/previous-versions/dynamicscrm-2015/developers-guide/gg309638(v=crm.7)#associating-and-disassociating-records)|[Associate and disassociate table rows](../../../data-platform/webapi/associate-disassociate-entities-using-web-api.md)|
-|[OData endpoint Http status codes](/previous-versions/dynamicscrm-2015/developers-guide/gg334391(v=crm.7))|[Identify status codes](../../../data-platform/webapi/compose-http-requests-handle-errors.md#identify-status-codes)|
+|[OData endpoint HTTP status codes](/previous-versions/dynamicscrm-2015/developers-guide/gg334391(v=crm.7))|[Identify status codes](../../../data-platform/webapi/compose-http-requests-handle-errors.md#identify-status-codes)|
 
 ## Examples
 
 This section highlights the differences between using the Organization Data Service and the Web API.
 
-The Organization Data Service is only able to perform Create, Retrieve, Update, and Delete operations on tables. These examples show the differences between the services to help migrate to the Web API.
+The Organization Data Service only supports create, retrieve, update, and delete operations on tables. The following examples illustrate the differences between the services to help you migrate to the Web API.
 
 ### Query records
 
-These examples show the differences between the Organization Data Service and the Web API when querying records.
+These examples show the differences between the Organization Data Service and the Web API when you query records.
 
 #### [Organization Data Service](#tab/odatav2)
 
-The Organization Data Service has no way to manage paging other than using `$top `and `$skip`, but the maximum page size was limited to 50 records.
+The Organization Data Service has no way to manage paging other than using `$top `and `$skip`. The maximum page size is 50 records.
 
 **Request**
 
@@ -200,7 +198,7 @@ Content-Type: application/json;charset=utf-8
 }
 ```
 
-When more than 50 records were returned, there is a `__next` property to access the next page:
+When more than 50 records are returned, use the `__next` property to access the next page.
 
 ```json
 "__next": "https://[Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet?$select=OwnershipCode,PrimaryContactId,OpenDeals_Date,Telephone1,NumberOfEmployees,Name,AccountNumber,DoNotPhone,IndustryCode&$filter=PrimaryContactId/Id ne null&$skiptoken=1,'accountid','%7B22153355-851D-ED11-B83E-000D3A572421%7D','%7B7A4814F9-B0B8-EA11-A812-000D3A122B89%7D'"
@@ -208,7 +206,7 @@ When more than 50 records were returned, there is a `__next` property to access 
 
 #### [Web API](#tab/webapi)
 
-With Web API you have explicit control over paging using the `Prefer: odata.maxpagesize` request header.
+The Web API `Prefer: odata.maxpagesize` request header gives you explicit control over paging.
 
 **Request**
 
@@ -282,14 +280,14 @@ Preference-Applied: odata.maxpagesize=2
 }
 ```
 
-A Url for the next page is available using the `@odata.nextLink` property.
+Use the `@odata.nextLink` property to get a URL for the next page.
 
 --- 
 
 
 ### Create records
 
-These examples show the differences between the Organization Data Service and the Web API when creating records. 
+These examples show the differences between the Organization Data Service and the Web API when you create records.
 
 #### [Organization Data Service](#tab/odatav2)
 
@@ -325,7 +323,7 @@ Content-Type: application/json
 
 **Response**
 
-With the Organization Data Service all properties are returned when a record is created.
+With the Organization Data Service, all properties are returned when a record is created.
 
 ```http
 HTTP/1.1 201 Created
@@ -349,7 +347,7 @@ REQ_ID: a0c614be-50be-4c1e-9413-1c7ba459c5c9
 
 #### [Web API](#tab/webapi)
 
-The Web API example in this case uses the `Prefer: return=representation` request header which defines a behavior similar to the Organization Data Service behavior of returning `201 Created` with the columns defined by the `$select` query option. Without this request header, Web API returns `201 No Content` and the id of the record created is included in the url value of the `OData-EntityId` reponse header.
+The following example uses the `Prefer: return=representation` request header. This header defines a behavior similar to the Organization Data Service behavior of returning `201 Created` with the columns defined by the `$select` query option. Without it, the Web API returns `201 No Content` and the ID of the record that's created is included in the URL value of the `OData-EntityId` response header.
 
 **Request**
 
@@ -413,7 +411,7 @@ Preference-Applied: odata.include-annotations="*"
 
 ```
 
-Or without `Prefer: return=representation`, the response will be like this:
+Without the `Prefer: return=representation` request header, the response is like this:
 
 **Response**
 
@@ -428,7 +426,7 @@ OData-EntityId: https://[Organization URI]/api/data/v9.2/accounts(b68d56a6-4739-
 
 ### Retrieve records
 
-These examples show the differences between the Organization Data Service and the Web API when retrieving records.
+These examples show the differences between the Organization Data Service and the Web API when you retrieve records.
 
 #### [Organization Data Service](#tab/odatav2)
 
@@ -535,11 +533,11 @@ Preference-Applied: odata.include-annotations="*"
 
 ### Update records
 
-These examples show the differences between the Organization Data Service and the Web API when updating records.
+These examples show the differences between the Organization Data Service and the Web API when you update records.
 
 #### [Organization Data Service](#tab/odatav2)
 
-Organization Data Service requires the `X-HTTP-Method: MERGE` request header to be applied with a `POST` request.
+The Organization Data Service requires the `X-HTTP-Method: MERGE` request header to be applied with a `POST` request.
 
 **Request**
 
@@ -613,7 +611,7 @@ OData-EntityId: https://[Organization URI]/api/data/v9.2/accounts(b68d56a6-4739-
 
 ### Delete records
 
-These examples show the differences between the Organization Data Service and the Web API when deleting records.
+These examples show the differences between the Organization Data Service and the Web API when you delete records.
 
 #### [Organization Data Service](#tab/odatav2)
 
@@ -653,6 +651,6 @@ OData-Version: 4.0
 
 ## See Also
 
-[How to use Application Insights to identify usage of the OrganizationData.svc endpoint which is planned for retirement in November 2022 (Community Forum)](https://community.dynamics.com/365/f/dynamics-365-general-forum/459370/how-to-use-application-insights-to-identify-usage-of-the-organizationdata-svc-endpoint-which-is-planned-for-retirement-in-november-2022)  
-[How to use Solution Checker to identify usage of the OrganizationData.svc endpoint which is planned for retirement in November 2022 (Community Forum)](https://community.dynamics.com/365/f/dynamics-365-general-forum/459368/how-to-use-solution-checker-to-identify-usage-of-the-organizationdata-svc-endpoint-which-is-planned-for-retirement-in-november-2022)  
+[How to use Application Insights to identify usage of the OrganizationData.svc endpoint which is planned for retirement in November 2022 (Community Forum)](https://community.dynamics.com/365/f/dynamics-365-general-forum/459370/how-to-use-application-insights-to-identify-usage-of-the-organizationdata-svc-endpoint-which-is-planned-for-retirement-in-november-2022)   
+[How to use Solution Checker to identify usage of the OrganizationData.svc endpoint which is planned for retirement in November 2022 (Community Forum)](https://community.dynamics.com/365/f/dynamics-365-general-forum/459368/how-to-use-solution-checker-to-identify-usage-of-the-organizationdata-svc-endpoint-which-is-planned-for-retirement-in-november-2022)   
 [Use the Microsoft Dataverse Web API](../../../data-platform/webapi/overview.md)
