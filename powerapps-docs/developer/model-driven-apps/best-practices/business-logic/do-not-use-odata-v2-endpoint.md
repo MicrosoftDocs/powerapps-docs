@@ -651,6 +651,6 @@ OData-Version: 4.0
 
 ## See Also
 
-[How to use Application Insights to identify usage of the OrganizationData.svc endpoint which is planned for retirement in November 2022 (Community Forum)](https://community.dynamics.com/365/f/dynamics-365-general-forum/459370/how-to-use-application-insights-to-identify-usage-of-the-organizationdata-svc-endpoint-which-is-planned-for-retirement-in-november-2022)   
-[How to use Solution Checker to identify usage of the OrganizationData.svc endpoint which is planned for retirement in November 2022 (Community Forum)](https://community.dynamics.com/365/f/dynamics-365-general-forum/459368/how-to-use-solution-checker-to-identify-usage-of-the-organizationdata-svc-endpoint-which-is-planned-for-retirement-in-november-2022)   
+[How to use Application Insights to identify usage of the OrganizationData.svc endpoint which is planned for retirement in November 2022 (Community Forum)](https://community.dynamics.com/forums/thread/details/?threadid=b43553cb-63d8-46f6-bee6-362ad0955e50)   
+[How to use Solution Checker to identify usage of the OrganizationData.svc endpoint which is planned for retirement in November 2022 (Community Forum)](https://community.dynamics.com/forums/thread/details/?threadid=1156d54f-b665-4aac-b35a-644ed27d399b)   
 [Use the Microsoft Dataverse Web API](../../../data-platform/webapi/overview.md)
