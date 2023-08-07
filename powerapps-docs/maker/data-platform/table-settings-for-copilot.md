@@ -24,18 +24,18 @@ To verify, select **Properties** from the table designer in make.powerappps.com,
 
 ## Configure columns
 
-To configure your columns, open the table, and then select **Views** from the table hub. In the list of views select the default quick find view for your table.  In the image below we are using the Contact table default quick-find view.
+To configure your columns, open the table, and then select **Views** from the table hub. In the list of views select the default quick find view for your table.  In the image below the contact table default quick find active contacts view is selected.
 
 :::image type="content" source="media/column-settings-for-copilot.png" alt-text="Column settings for use with Copilot in Power Apps":::
 
-There are two actions that you need to take.  The first is to set the list of columns that you would like to use in your index. To do this, add columns to the list in the **Find By** options in the table configuration.  This is the high-lighted section on the right.
+There are two actions that you need to take.  
+1. The first is to set the list of columns that you want to have indexed. To do this, add columns to the list in the **Find by** options in the table configuration.  This is the highlighted section in the right pane in the image below.
+1. After setting the columns for searching, you then set the columns that are used to return data. It's necessary to define the columns that are returned to your end-users in the Copilot experience when a user asks an open ended question that would return all columns. Since there's limited data that can go into a Copilot answer, it's important to ensure the question has high quality so as to receive an accurate answer. This is highlighted in the middle of the image below.
+
+   :::image type="content" source="media/column-settings-for-copilot2.png" alt-text="Set columns used to return answers from Copilot":::
 
 > [!NOTE]
 > There's a limit of 1k columns per database that can be used to find data (indexed). Be aware that you may exceed that limit across all your tables.
-
-After setting the columns for searching, you then set the columns that are used to return data. It's necessary to define the columns that are returned to your end-users in the Copilot experience when a user asks an open ended question that would return all columns. Since there's limited data that can go into a Copilot answer, it's important to ensure the question has high quality to receive an accurate answer. This is highlighted in the middle of the image below.
-
-:::image type="content" source="media/column-settings-for-copilot2.png" alt-text="Set columns used to return answers from Copilot":::
 
 After making your edits be sure to save and publish your changes. Depending on the size of the data in the table it might take between fifteen minutes and a full day before all data will be available for questions.
 
