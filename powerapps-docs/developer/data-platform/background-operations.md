@@ -30,7 +30,7 @@ When a background operation completes, you can get notified in either of two way
 
 You can retrieve the result of a background operation in either of two ways:
 
-- [Poll the `backgroundoperations` table](#poll-the-background-operation-table).
+- [Poll the background operations table](#poll-the-background-operations-table).
 - [Poll the status monitor resource](#poll-the-status-monitor-resource).
 
 To run a request in the background, the operation must be defined as a custom API. Learn how to [create and use custom APIs](custom-api.md) and [retrieve data about custom APIs](custom-api-tables.md#retrieve-data-about-custom-apis).
@@ -166,8 +166,8 @@ When you send a request to be processed in the background, the response includes
 
 - Use the ID of a row in the [`backgroundoperations` table](#background-operations-table) to retrieve or update data in the table:
 
-  - [Poll the background operation table](#poll-the-background-operation-table)
-  - [Cancel background operation by updating backgroundoperations](#cancel-background-operation-by-updating-backgroundoperations)
+  - [Poll the background operations table](#poll-the-background-operations-table)
+  - [Cancel a background operation by updating backgroundoperations](#cancel-a-background-operation-by-updating-backgroundoperations)
 
 - Use the `Location` URL, which represents the status monitor resource, to poll and cancel background operations:
 
