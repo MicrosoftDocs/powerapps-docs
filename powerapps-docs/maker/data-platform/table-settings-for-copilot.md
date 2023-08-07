@@ -18,13 +18,13 @@ This article describes the steps to enable a table and select the columns, which
 
 **Track changes** and **Appear in search results** options must be enabled. Since these are the default settings for most standard tables, these properties might already be enabled.
 
-To verify, select **Properties** from the table designer in make.powerappps.com, and then check to see if both options are selected. If not, select both in the properties pane, and then **Save** your changes. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+To verify, select **Properties** from the table designer in make.powerappps.com, and then check whether both options are selected. If not, from the properties pane select both, and then **Save** your changes. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
 :::image type="content" source="media/table-settings-for-copilot.png" alt-text="Table properties to enable to work with Copilot in Power Apps":::
 
 ## Configure columns
 
-To configure your columns, open the table, and then select **Views** from the table hub. In the list of views open the default quick find view for your table. In this example, the contact table default quick find active contacts view is selected. When users ask questions while they're in the view from an app, Copilot includes the data from the columns configured following the steps below that in the contact table rows.
+To configure your columns, open the table, and then select **Views** from the table hub. In the list of views open the default quick find view for your table. By default, the default quick find view for a table has the name **Quick Find Active *table name***, where *table name* is the name of the table. In this example, the contact table is opened and the default quick find view for the table is the **Quick Find Active Contacts** view. When users ask questions from an app, Copilot includes the data from the columns configured following the steps below that's in the contact table rows.
 
 :::image type="content" source="media/column-settings-for-copilot.png" alt-text="Column settings for use with Copilot in Power Apps":::
 
