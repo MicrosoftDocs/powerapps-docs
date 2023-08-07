@@ -35,7 +35,7 @@ This sample is divided into the following principal sections, containing Web API
 |[Section 6: Expand results](#section-6-expand-results)|[Join tables](query-data-web-api.md#join-tables)|
 |[Section 7: Aggregate results](#section-7-aggregate-results)|[Aggregate data](query-data-web-api.md#aggregate-data)|
 |[Section 8: FetchXML queries](#section-8-fetchxml-queries)|[FetchXML schema](../fetchxml-schema.md)<br /> [Use FetchXml with Web API](use-fetchxml-web-api.md)|
-|[Section 9: Using predefined queries](#section-9-using-predefined-queries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
+|[Section 9: Use predefined queries](#section-9-use-predefined-queries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
 |[Section 10: Delete sample records](#section-10-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
 
 The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output.

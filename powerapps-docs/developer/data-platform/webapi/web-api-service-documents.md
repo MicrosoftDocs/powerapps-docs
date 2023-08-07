@@ -1,6 +1,6 @@
 ---
-title: "Web API Service Documents (Microsoft Dataverse)| Microsoft Docs"
-description: "Describes OData service documents you can use to understand the Dataverse Web API capabilities available in your environment."
+title: Web API Service Documents
+description: Describes OData service documents you can use to understand the Dataverse Web API capabilities available in your environment.
 ms.date: 04/06/2022
 author: divkamath
 ms.author: dikamath
@@ -101,18 +101,18 @@ This informs you that all the items in the service are within the `Microsoft.Dyn
 Learn about entity types.
 
 > [!div class="nextstepaction"]
-> [Entity Types](web-api-entitytypes.md)<br/>
+> [Entity Types](web-api-entitytypes.md)
 
 ### See also  
 
-[Web API types and operations](web-api-types-operations.md)<br />
-[Web API EntityTypes](web-api-entitytypes.md)<br />
-[Web API Properties](web-api-properties.md)<br />
-[Web API Navigation Properties](web-api-navigation-properties.md)<br />
-[Web API Actions](web-api-actions.md)<br />
-[Web API Functions](web-api-functions.md)<br />
-[Web API Complex and Enumeration types](web-api-complex-enum-types.md)<br />
-[Use the Dataverse Web API](overview.md)<br />
+[Web API types and operations](web-api-types-operations.md)   
+[Web API Entity Types](web-api-entitytypes.md)   
+[Web API properties](web-api-properties.md)   
+[Web API navigation properties](web-api-navigation-properties.md)   
+[Web API actions](web-api-actions.md)   
+[Web API functions](web-api-functions.md)   
+[Web API complex and enumeration types](web-api-complex-enum-types.md)   
+[Use the Dataverse Web API](overview.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
