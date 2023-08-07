@@ -2557,6 +2557,8 @@
     href: ./common/responsible-ai-overview.md
   - name: FAQ for building apps through conversation
     href: ./common/faqs-build-apps-conversation.md     
+  - name: FAQ for Copilot in rich text editor
+    href: ./common/faqs-email-assist-rte.md
 - name: Resources
   items:
   - name: Blog

@@ -1,6 +1,6 @@
 ---
 title: Add the Copilot option to a form
-description: Refine content for emails with Copilot in rich text editor.
+description: Add the Copilot option to a rich text editor in a form. 
 author: udaykirang
 ms.author: udag
 ms.reviewer: shujoshi

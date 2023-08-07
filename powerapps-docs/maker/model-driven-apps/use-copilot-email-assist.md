@@ -52,5 +52,6 @@ For example, Marina wants to send an email with short length and in a formal ton
 
 ### See also
 
-[Add the rich text editor control](../model-driven-apps/rich-text-editor-control.md)  
-[Add the Copilot control to a form](../model-driven-apps/copilot-control.md) 
+- [Add the rich text editor control](../model-driven-apps/rich-text-editor-control.md)  
+- [Add the Copilot control to a form](../model-driven-apps/copilot-control.md)  
+- [FAQ for Copilot in rich text editor](../common/faqs-email-assist-rte.md)
