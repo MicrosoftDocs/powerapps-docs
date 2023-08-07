@@ -1,6 +1,6 @@
 ---
-title: "Web API Functions and Actions Sample (Microsoft Dataverse)| Microsoft Docs"
-description: "This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#."
+title: Web API Functions and Actions Sample
+description: This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#.
 ms.date: 09/02/2022
 author: divkamath
 ms.author: dikamath
@@ -20,15 +20,15 @@ This group of samples demonstrate how to perform bound and unbound functions and
 - [Functions and Actions Sample (C#)](samples/webapiservice-functions-and-actions.md)
 - [Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)
   
-This topic explains the structure and content of the sample at a higher, language-neutral level. Review the linked sample topics above for language-specific implementation details about how to perform the operations described in this topic.  
+This article explains the structure and content of the sample at a higher, language-neutral level. Review the linked sample articles above for language-specific implementation details about how to perform the operations described in this article.  
   
 <a name="bkmk_demonstrates"></a>  
  
 ## Demonstrates  
 
-This sample is divided into the following principal sections, containing Web API functions and actions operations which are discussed in greater detail in the associated conceptual topics.  
+This sample is divided into the following principal sections, containing Web API functions and actions operations that are discussed in greater detail in the associated conceptual articles.  
   
-|Topic section|Associated topic(s)|  
+|Article section|Associated article(s)|  
 |-------------------|---------------------------|
 |[Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami)|<xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function><br />[Unbound functions](use-web-api-functions.md#unbound-functions)|
 |[Section 2: Unbound Function FormatAddress](#section-2-unbound-function-formataddress)|<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function><br />[Passing parameters to a function](use-web-api-functions.md#passing-parameters-to-a-function)|
@@ -43,7 +43,7 @@ The following sections contain a brief discussion of the Dataverse Web API opera
 
 ## Section 1: Unbound Function WhoAmI
 
-<xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function> is a simple and commonly used unbound function.
+[WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI) is a simple and commonly used unbound function.
 
 **Request**
 
@@ -82,7 +82,7 @@ The `BusinessUnitId` value retrieved here will be used in [Section 8: Bound Acti
 
 ## Section 2: Unbound Function FormatAddress
 
-<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function> is an unbound function that requires parameters to be set. It returns a string that represents an address according to country/regional format specific requirements.
+[FormatAddress function](xref:Microsoft.Dynamics.CRM.FormatAddress) is an unbound function that requires parameters to be set. It returns a string that represents an address according to country/regional format specific requirements.
 
 In this example, the parameters are set using query string parameter values.
 
@@ -156,7 +156,7 @@ In this example, the parameters are set using query string parameter values.
 
 ## Section 3: Unbound Function InitializeFrom
 
-<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> is an unbound function that requires parameters. This function returns the data for a new record to create in the context of an existing record. Depending on the configuration data to control what data is copied over, the record data returned includes data copied from the original record.
+[InitializeFrom function](xref:Microsoft.Dynamics.CRM.InitializeFrom) is an unbound function that requires parameters. This function returns the data for a new record to create in the context of an existing record. Depending on the configuration data to control what data is copied over, the record data returned includes data copied from the original record.
 
 More information:
 
@@ -246,7 +246,7 @@ More information:
    > [!NOTE]
    > If there are no columns mapped for this relationship, only the minimum column values are included as shown above. In this case, only the `parentaccountid` lookup to associate the new record with the original.
 
-   If all the available columns are mapped for this relationship, the value returned will include much more data from the original record, for example:
+   If all the available columns are mapped for this relationship, the value returned includes more data from the original record, for example:
 
    ```json
    {
@@ -351,12 +351,12 @@ More information:
 
 ## Section 4: Unbound Function RetrieveCurrentOrganization
 
-<xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function> returns information about the current organizaiton. It requires an <xref:Microsoft.Dynamics.CRM.EndpointAccessType?text=EndpointAccessType EnumType> value as a parameter.
+[RetrieveCurrentOrganization function](xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization) returns information about the current organization. It requires an [EndpointAccessType enum type](xref:Microsoft.Dynamics.CRM.EndpointAccessType) value as a parameter.
 
-`RetrieveCurrentOrganization` returns a <xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganizationResponse?text=RetrieveCurrentOrganizationResponse ComplexType> which includes a `Detail` property that is an <xref:Microsoft.Dynamics.CRM.OrganizationDetail?text=OrganizationDetail ComplexType>, which has complex properties that use the <xref:Microsoft.Dynamics.CRM.EndpointCollection?text=EndpointCollection ComplexType>, <xref:Microsoft.Dynamics.CRM.EndpointType?text=EndpointType EnumType> and <xref:Microsoft.Dynamics.CRM.OrganizationState?text=OrganizationState EnumType>.
+`RetrieveCurrentOrganization` returns a [RetrieveCurrentOrganizationResponse complex type](xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganizationResponse) which includes a `Detail` property that is an [OrganizationDetail complex type](xref:Microsoft.Dynamics.CRM.OrganizationDetail), which has complex properties that use the [EndpointCollection complex type](xref:Microsoft.Dynamics.CRM.EndpointCollection), [EndpointType enum type](xref:Microsoft.Dynamics.CRM.EndpointType) and [OrganizationState enum type](xref:Microsoft.Dynamics.CRM.OrganizationState)
 
 > [!NOTE]
-> Notice how the `AccessType` <xref:Microsoft.Dynamics.CRM.EndpointAccessType?text=EndpointAccessType EnumType> parameter value is passed in the URL. The fully qualified name with the selected member name is required.
+> Notice how the `AccessType` [EndpointAccessType enum type](xref:Microsoft.Dynamics.CRM.EndpointAccessType) parameter value is passed in the URL. The fully qualified name with the selected member name is required.
 
 
 **Request**
@@ -440,7 +440,7 @@ Data returned with RetrieveCurrentOrganizationResponse:
 
 ## Section 5: Unbound Function RetrieveTotalRecordCount
 
-<xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function> returns data on the total number of records for specific entities. The data retrieved will be from a snapshot within last 24 hours, so it isn't an exact count at a given moment in time.
+[RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) returns data on the total number of records for specific entities. The data retrieved is from a snapshot within last 24 hours, so it isn't an exact count at a given moment in time.
 
 **Request**
 
@@ -485,9 +485,9 @@ The number of records for each table according to RetrieveTotalRecordCount:
 
 ## Section 6: Bound Function IsSystemAdmin Custom API
 
-To demonstrate a bound function, this sample will import a custom message defined within a solution before running this portion of the sample.
+To demonstrate a bound function, this sample imports a custom message defined within a solution before running this portion of the sample.
 
-The sample will use the `sample_IsSystemAdmin` custom message which is defined using a [Custom API](../custom-api.md). You can find details about this custom api here: [Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md).
+The sample uses the `sample_IsSystemAdmin` custom message that is defined using a [Custom API](../custom-api.md). You can find details about this custom api here: [Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md).
 
 > [!NOTE]
 > When using a bound function or action, you must include the fully qualified name, which includes `Microsoft.Dynamics.CRM.`+ &lt;function or action name&gt; in the url.
@@ -514,11 +514,11 @@ OData-Version: 4.0
 }
 ```
 
-This sample will retrieve 10 user records and test each one to determine whether each user has the System Administrator security role.
+This sample retrieves 10 user records and test each one to determine whether each user has the System Administrator security role.
 
 **Console output**
 
-The actual names will depend on the people in your environment.
+The actual names depend on the people in your environment.
 
 ```
 Top 10 users and whether they have System Administrator role.
@@ -534,17 +534,17 @@ Top 10 users and whether they have System Administrator role.
         Asha Sawant HAS the System Administrator role.
 ```
 
-For another example of a bound function, see the use of the <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> in the next example.
+For another example of a bound function, see the use of the [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) in the next example.
 
 ## Section 7: Unbound Action GrantAccess
 
-<xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action> is an unbound action allows people to share specific privileges to other users in their environment.
+[GrantAccess action](xref:Microsoft.Dynamics.CRM.GrantAccess) is an unbound action allows people to share specific privileges to other users in their environment.
 
-To demonstrate this operation, the sample code does the following:
+The sample code demonstrates the following operations:
 
 1. Create a record to share.
 1. Find an enabled user other than the current user.
-1. Use <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> to determine what access rights the user has for the record created.
+1. Use [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) to determine what access rights the user has for the record created.
 
    **Request**
 
@@ -640,9 +640,9 @@ To demonstrate this operation, the sample code does the following:
 
 ## Section 8: Bound Action AddPrivilegesRole
 
-<xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action> is an action bound to the <xref:Microsoft.Dynamics.CRM.role?text=role EntityType>. It is the way to add privileges to a security role.
+[AddPrivilegesRole action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole) is an action bound to the [role entity type](xref:Microsoft.Dynamics.CRM.role). It's the way to add privileges to a security role.
 
-To demonstrate the use of this action, the sample does the following:
+The sample code performs the following operations:
 
 1. Create a security role. The role must be associated with a business unit. The business unit id value was retrieved in [Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami).
    

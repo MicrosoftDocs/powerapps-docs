@@ -21,7 +21,7 @@ In the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-docu
 
 |Attribute  |Description  |
 |---------|---------|
-|`Name`|The name of the property. This is usually the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName> of the column and is always lower case. One exception to this rule is [Lookup properties](#lookup-properties).|
+|`Name`|The name of the property; usually the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName> of the column and is always lower case. One exception to this rule is [Lookup properties](#lookup-properties).|
 |`Type`|The primitive type of the property. See [Primitive types used by Dataverse](#primitive-types-used-by-dataverse)|
 
 When you retrieve the $metadata document with [metadata annotations](web-api-service-documents.md#metadata-annotations) you can see some `Annotation` elements that can be useful. For example, the following `name` and `openrevenue` properties:
@@ -46,8 +46,8 @@ The following table describes the annotations that are returned with [metadata a
 |Annotation term  |Description  |
 |---------|---------|
 |`Org.OData.Core.V1.Description`|A description of the property|
-|`Org.OData.Core.V1.Computed`|Whether the property is computed. This value is read-only because it is computed by Dataverse.|
-|`Org.OData.Core.V1.Permissions`|Includes the types of permissions available for the property. This is only included when permissions are limited, and it always contains the value `<EnumMember>Org.OData.Core.V1.PermissionType/Read</EnumMember>` meaning it is read-only. |
+|`Org.OData.Core.V1.Computed`|Whether the property is computed; read-only because it's computed by Dataverse.|
+|`Org.OData.Core.V1.Permissions`|Includes the types of permissions available for the property. Only included when permissions are limited, and it always contains the value `<EnumMember>Org.OData.Core.V1.PermissionType/Read</EnumMember>` meaning it's read-only. |
 
 > [!NOTE]
 > `Org.OData.Core.V1.Computed` and `Org.OData.Core.V1.Permissions` annotations are frequently found together, but not always. Either of them means the property is read-only.
@@ -69,15 +69,15 @@ Properties for entity types that are used for business data include primitive ty
 |`Edm.Int16`|Signed 16-bit integer. Used only for certain schema EntityType properties|
 |`Edm.Int32`|Signed 32-bit integer|
 |`Edm.Int64`|Signed 64-bit integer|
-|`Edm.String`|Sequence of UTF-8 characters<br />This type may include the `Unicode="false"` facet.<br /><br />When this facet exists, the string property will only contain and accept string values with characters limited to the ASCII character set.<br /><br />If no value is specified, the Unicode facet defaults to true.|
+|`Edm.String`|Sequence of UTF-8 characters<br />This type may include the `Unicode="false"` facet.<br /><br />When this facet exists, the string property will only contains and accepts string values with characters limited to the ASCII character set.<br /><br />If no value is specified, the Unicode facet defaults to true.|
 
 ## Lookup properties
 
-Some properties use the following naming convention: `_<name>_value`. These are called *lookup properties*. Lookup properties are computed, read-only properties that have an `Edm.Guid` value. You can use these lookup properties in a query filter to match all the records associated to the single record in the many-to-one relationship.
+Some properties use the following naming convention: `_<name>_value`. These properties are called *lookup properties*. Lookup properties are computed, read-only properties that have an `Edm.Guid` value. You can use these lookup properties in a query filter to match all the records associated to the single record in the many-to-one relationship.
 
 OData represents lookup columns as [Single-valued navigation properties](web-api-navigation-properties.md#single-valued-navigation-properties) rather than properties. Dataverse provides lookup properties to simplify scenarios to retrieve data using the primary key of a related record. To change the value of a lookup property, you must change the single-valued navigation property that it represents. More information: [Lookup properties](web-api-navigation-properties.md#lookup-properties)
 
-When you include lookup properties in a query, you can request annotations to be included that provide additional information about the data that is set for those underlying attributes which aren't represented by a single-valued navigation property. More information: [Lookup property data](query-data-web-api.md#lookup-property-data)
+When you include lookup properties in a query, you can request annotations to be included that provide additional information about the data that is set for those underlying attributes that aren't represented by a single-valued navigation property. More information: [Lookup property data](query-data-web-api.md#lookup-property-data)
 
 ## Next steps
 

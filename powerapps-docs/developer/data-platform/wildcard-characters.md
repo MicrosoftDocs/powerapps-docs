@@ -69,11 +69,11 @@ You can use the wildcard pattern matching characters as literal characters. To u
 
 ## Don't use trailing wild cards
 
-Using trailing wildcards is not supported.
+Using trailing wildcards isn't supported.
 
 # [FetchXml](#tab/fetchxml)
 
-Don't use trailing wild cards in expressions using `begins-with`, `not-begin-with`, `ends-with` or `not-end-with`.
+Don't use trailing wild cards in expressions using `begins-with`, `not-begin-with`, `ends-with`, or `not-end-with`.
 Here are some examples of trailing wildcards:
 
 |Bad Examples  |
@@ -85,7 +85,7 @@ Here are some examples of trailing wildcards:
 
 # [QueryExpression](#tab/queryexpression)
 
-Don't use trailing wild cards in expressions using `BeginsWith`, `DoesNotBeginWith`, `EndsWith` or `DoesNotEndWith`. 
+Don't use trailing wild cards in expressions using `BeginsWith`, `DoesNotBeginWith`, `EndsWith`, or `DoesNotEndWith`. 
 Here are some examples of trailing wildcards:
 
 |Bad Examples  |
@@ -97,7 +97,7 @@ Here are some examples of trailing wildcards:
 
 # [Web API](#tab/webapi)
 
-Don't use trailing wild cards in expressions using `startswith`, `not startswith`, `endswith` or `not endswith`. 
+Don't use trailing wild cards in expressions using `startswith`, `not startswith`, `endswith`, or `not endswith`.
 Here are some examples of trailing wildcards:
 
 
