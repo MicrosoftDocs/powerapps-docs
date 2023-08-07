@@ -1,5 +1,5 @@
 ---
-title: Configure tables to use with Copilot
+title: Configure tables to use Copilot
 description: Learn what properties are required to configure a table in Dataverse so that the table data can be used with Copilot.
 author: mspilde
 ms.author: mspilde
@@ -8,11 +8,11 @@ ms.service: powerapps
 ms.topic: how-to
 ms.date: 08/07/2023
 ---
-# Configure tables to use with Copilot
+# Configure tables to use Copilot
 
 When users ask questions about the data available in an app, Copilot uses backend natural language questions and answer capabilities that rely on the table to be enabled for searching across the data. The table configuration must also include the columns that your end-users will like to ask questions about the data in order to get responses back from Copilot in Power Apps.
 
-Here are steps to enable your table and configure your data.
+This article describes the steps to enable a table and select the columns, which determine the data that will be included with Copilot responses.
 
 ## Enable indexing
 
