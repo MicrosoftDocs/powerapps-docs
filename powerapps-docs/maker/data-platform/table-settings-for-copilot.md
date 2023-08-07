@@ -24,20 +24,22 @@ To verify, select **Properties** from the table designer in make.powerappps.com,
 
 ## Configure columns
 
-To configure your columns, open the table, and then select **Views** from the table hub. In the list of views select the default quick find view for your table.  In the image below the contact table default quick find active contacts view is selected.
+To configure your columns, open the table, and then select **Views** from the table hub. In the list of views open the default quick find view for your table. In this example, contact table default quick find active contacts view is selected. When users ask questions while they're in the view from an app, Copilot includes the data from the columns configured following the steps below that in the contact table rows.
 
 :::image type="content" source="media/column-settings-for-copilot.png" alt-text="Column settings for use with Copilot in Power Apps":::
 
-There are two actions that you need to take.  
-1. The first is to set the list of columns that you want to have indexed. To do this, add columns to the list in the **Find by** options in the table configuration.  This is the highlighted section in the right pane in the image below.
-1. After setting the columns for searching, you then set the columns that are used to return data. It's necessary to define the columns that are returned to your end-users in the Copilot experience when a user asks an open ended question that would return all columns. Since there's limited data that can go into a Copilot answer, it's important to ensure the question has high quality so as to receive an accurate answer. This is highlighted in the middle of the image below.
+There are two actions that you need to take:
 
-   :::image type="content" source="media/column-settings-for-copilot2.png" alt-text="Set columns used to return answers from Copilot":::
+1. The first is to set the list of columns that you want to have indexed. To do this, add columns to the list in the **Find by** options in the table configuration. Select **Edit find table columns** to add columns not already in the list. Remove a column by selecting **X** next to the column.
+1. After setting the columns for searching, you then set those columns so they are used to return data. It's necessary to define the columns that are returned to your end-users in the Copilot experience when a user asks an open ended question that would return all columns. You do this by adding the column to the view. Since there's limited data that can go into a Copilot answer, it's important to ensure the question has high quality so as to receive an accurate answer.
+   - To add a column to the view, select **View column**, and then select the column you want. Repeat this step until you have all the columns you want.
+   - To remove a column, select the column heading, and then select **Remove**.
+ :::image type="content" source="media/column-settings-for-copilot2.png" alt-text="Set columns used to return answers from Copilot":::
 
 > [!NOTE]
 > There's a limit of 1k columns per database that can be used to find data (indexed). Be aware that you may exceed that limit across all your tables.
 
-After making your edits be sure to save and publish your changes. Depending on the size of the data in the table it might take between fifteen minutes and a full day before all data will be available for questions.
+After making your edits be sure to **Save and publish** your changes. Depending on the size of the data in the table it might take between fifteen minutes and a full day before all data will be available for questions.
 
 ## Related content
 
