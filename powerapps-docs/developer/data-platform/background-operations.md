@@ -158,6 +158,8 @@ Preference-Applied: respond-async
 
 [Learn how to use Web API actions](webapi/use-web-api-actions.md).
 
+---
+
 ## Manage background operations
 
 When you send a request to be processed in the background, the response includes two values that represent different methods you can use to monitor or cancel background operations.
@@ -361,6 +363,8 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 }
 ```
 
+---
+
 ### Poll the status monitor resource
 
 You can poll the status monitor resource with a GET request, which returns the status of the background operation. If the operation is complete, it provides the output of the custom API. If there was an error during execution, you receive an error message and code.
@@ -502,6 +506,8 @@ location: [Organization URI]/api/backgroundoperation/<backgroundoperationid valu
 }
 ```
 
+---
+
 ### Subscribe to the OnBackgroundOperationComplete event
 
 Another way to receive a notification when a background operation completes is to register a step on the `OnBackgroundOperationComplete` message. This message is a custom API that only allows asynchronous step registrations. It's an example of the type of messages created using a custom API to represent [business events](business-events.md).
@@ -602,6 +608,8 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 ```
 
+---
+
 ### Send a DELETE request to the status monitor resource
 
 You can also cancel a background operation by sending a DELETE request to the status monitor resource.
@@ -625,4 +633,4 @@ HTTP/1.1 200 Ok
 
 ## Retries
 
-If an error occurs during execution of the request, it's retried up to three times. These retries use an [exponential backoff strategy](https://wikipedia.org/wiki/Exponential_backoff).<!-- EDITOR'S NOTE: Is there any Microsoft documentation that explains this? We really discourage linking out to external sites. -->
+If an error occurs during execution of the request, it's retried up to three times. These retries use an [exponential backoff strategy](https://wikipedia.org/wiki/Exponential_backoff).
