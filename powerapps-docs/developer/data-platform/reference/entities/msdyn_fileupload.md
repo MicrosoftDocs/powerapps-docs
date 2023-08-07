@@ -1,14 +1,15 @@
 ---
-title: "msdyn_FileUpload table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the msdyn_FileUpload table/entity."
-ms.date: 06/06/2023
-ms.service: "powerapps"
-ms.topic: "reference"
+title: msdyn_FileUpload table/entity reference
+description: Learn how to use the Microsoft Dataverse msdyn_FileUpload table/entity, including schema information and supported messages.
+ms.date: 08/07/2023
+ms.topic: conceptual
+author: phecke
+ms.author: pehecke
+ms.service: powerapps
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
 search.audienceType: 
   - developer
+ms.custom: bap-template
 ---
 
 # msdyn_FileUpload table/entity reference
@@ -16,35 +17,32 @@ search.audienceType:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-
-
 **Added by**: Smart Data Import Base Solution
-
 
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
+|Message|Web API operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH /msdyn_fileuploads(*msdyn_fileuploadid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Assign|PATCH /msdyn_fileuploads(*msdyn_fileuploadid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
 |Create|POST /msdyn_fileuploads<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /msdyn_fileuploads(*msdyn_fileuploadid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
+|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
 |Retrieve|GET /msdyn_fileuploads(*msdyn_fileuploadid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET /msdyn_fileuploads<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|SetState|PATCH /msdyn_fileuploads(*msdyn_fileuploadid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
+|SetState|PATCH /msdyn_fileuploads(*msdyn_fileuploadid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /msdyn_fileuploads(*msdyn_fileuploadid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
 
 ## Properties
 
@@ -79,12 +77,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
 |--------|-----|
-|Description|Sequence number of the import that created this record.|
+|Description|The sequence number of the import that created this record|
 |DisplayName|Import Sequence Number|
 |Format|None|
 |IsValidForForm|False|
@@ -95,7 +92,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
-
 
 ### <a name="BKMK_msdyn_FileName"></a> msdyn_FileName
 
@@ -112,27 +108,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_FileUploadId"></a> msdyn_FileUploadId
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for entity instances|
+|Description|The unique identifier for entity instances|
 |DisplayName|File Upload|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|msdyn_fileuploadid|
 |RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
+|Type|The uniqueidentifier|
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
+|Description|The date and time when the record was migrated|
 |DisplayName|Record Created On|
 |Format|DateOnly|
 |IsValidForForm|False|
@@ -141,7 +135,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|overriddencreatedon|
 |RequiredLevel|None|
 |Type|DateTime|
-
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
@@ -158,7 +151,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Targets|systemuser,team|
 |Type|Owner|
 
-
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 **Added by**: Active Solution Solution
@@ -172,7 +164,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|owneridtype|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -194,8 +185,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Active|1|Active|
 |1|Inactive|2|Inactive|
 
-
-
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
@@ -215,13 +204,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
-
-
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Time Zone Rule Version Number|
 |Format|None|
 |IsValidForForm|False|
@@ -232,12 +219,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
-
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
 |--------|-----|
-|Description|Time zone code that was in use when the record was created.|
+|Description|Time zone code that was in use when the record was created|
 |DisplayName|UTC Conversion Time Zone Code|
 |Format|None|
 |IsValidForForm|False|
@@ -278,14 +264,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the user who created the record.|
+|Description|The unique identifier of the user who created the record|
 |DisplayName|Created By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -293,7 +278,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
@@ -312,7 +296,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
 **Added by**: Active Solution Solution
@@ -330,13 +313,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
+|Description|The date and time when the record was created|
 |DisplayName|Created On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -345,14 +327,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
-
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
+|Description|The unique identifier of the delegate user who created the record|
 |DisplayName|Created By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -360,7 +341,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
@@ -379,7 +359,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -397,14 +376,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the user who modified the record.|
+|Description|The unique identifier of the user who modified the record|
 |DisplayName|Modified By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -412,7 +390,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
@@ -431,7 +408,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
 **Added by**: Active Solution Solution
@@ -449,13 +425,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
+|Description|The date and time when the record was modified|
 |DisplayName|Modified On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -464,14 +439,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
-
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
+|Description|The unique identifier of the delegate user who modified the record|
 |DisplayName|Modified By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -479,7 +453,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
@@ -498,7 +471,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -516,7 +488,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_FileContent"></a> msdyn_FileContent
 
 |Property|Value|
@@ -528,7 +499,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|msdyn_filecontent|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_FileContent_Name"></a> msdyn_FileContent_Name
 
@@ -544,7 +514,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|200|
 |RequiredLevel|None|
 |Type|String|
-
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
@@ -563,7 +532,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 **Added by**: Active Solution Solution
@@ -581,14 +549,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the business unit that owns the record|
+|Description|The unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -596,7 +563,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
-
 
 ### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
 
@@ -615,14 +581,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the team that owns the record.|
+|Description|The unique identifier for the team that owns the record|
 |DisplayName|Owning Team|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -631,14 +596,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Targets|team|
 |Type|Lookup|
 
-
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the user that owns the record.|
+|Description|The unique identifier for the user that owns the record|
 |DisplayName|Owning User|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -646,7 +610,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
@@ -666,7 +629,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 <a name="onetomany"></a>
 
-## One-To-Many Relationships
+## One-to-many relationships
 
 Listed by **SchemaName**.
 
@@ -678,7 +641,6 @@ Listed by **SchemaName**.
 - [msdyn_fileupload_ProcessSession](#BKMK_msdyn_fileupload_ProcessSession)
 - [msdyn_fileupload_BulkDeleteFailures](#BKMK_msdyn_fileupload_BulkDeleteFailures)
 - [msdyn_fileupload_PrincipalObjectAttributeAccesses](#BKMK_msdyn_fileupload_PrincipalObjectAttributeAccesses)
-
 
 ### <a name="BKMK_msdyn_fileupload_SyncErrors"></a> msdyn_fileupload_SyncErrors
 
@@ -696,7 +658,6 @@ Same as the [msdyn_fileupload_SyncErrors](syncerror.md#BKMK_msdyn_fileupload_Syn
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_fileupload_DuplicateMatchingRecord"></a> msdyn_fileupload_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
@@ -712,7 +673,6 @@ Same as the [msdyn_fileupload_DuplicateMatchingRecord](duplicaterecord.md#BKMK_m
 |ReferencedEntityNavigationPropertyName|msdyn_fileupload_DuplicateMatchingRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_msdyn_fileupload_DuplicateBaseRecord"></a> msdyn_fileupload_DuplicateBaseRecord
 
@@ -730,7 +690,6 @@ Same as the [msdyn_fileupload_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_fileupload_AsyncOperations"></a> msdyn_fileupload_AsyncOperations
 
 **Added by**: System Solution Solution
@@ -746,7 +705,6 @@ Same as the [msdyn_fileupload_AsyncOperations](asyncoperation.md#BKMK_msdyn_file
 |ReferencedEntityNavigationPropertyName|msdyn_fileupload_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_msdyn_fileupload_MailboxTrackingFolders"></a> msdyn_fileupload_MailboxTrackingFolders
 
@@ -764,7 +722,6 @@ Same as the [msdyn_fileupload_MailboxTrackingFolders](mailboxtrackingfolder.md#B
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_fileupload_ProcessSession"></a> msdyn_fileupload_ProcessSession
 
 **Added by**: System Solution Solution
@@ -781,7 +738,6 @@ Same as the [msdyn_fileupload_ProcessSession](processsession.md#BKMK_msdyn_fileu
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_fileupload_BulkDeleteFailures"></a> msdyn_fileupload_BulkDeleteFailures
 
 **Added by**: System Solution Solution
@@ -797,7 +753,6 @@ Same as the [msdyn_fileupload_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdy
 |ReferencedEntityNavigationPropertyName|msdyn_fileupload_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_msdyn_fileupload_PrincipalObjectAttributeAccesses"></a> msdyn_fileupload_PrincipalObjectAttributeAccesses
 
@@ -817,9 +772,9 @@ Same as the [msdyn_fileupload_PrincipalObjectAttributeAccesses](principalobjecta
 
 <a name="manytoone"></a>
 
-## Many-To-One Relationships
+## Many-to-one relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+Each many-to-one relationship is defined by a corresponding one-to-many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_msdyn_fileupload_createdby](#BKMK_lk_msdyn_fileupload_createdby)
 - [lk_msdyn_fileupload_createdonbehalfby](#BKMK_lk_msdyn_fileupload_createdonbehalfby)
@@ -828,7 +783,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [user_msdyn_fileupload](#BKMK_user_msdyn_fileupload)
 - [team_msdyn_fileupload](#BKMK_team_msdyn_fileupload)
 - [business_unit_msdyn_fileupload](#BKMK_business_unit_msdyn_fileupload)
-
 
 ### <a name="BKMK_lk_msdyn_fileupload_createdby"></a> lk_msdyn_fileupload_createdby
 
@@ -875,5 +829,5 @@ See the [business_unit_msdyn_fileupload](businessunit.md#BKMK_business_unit_msdy
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
+[Web API reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_fileupload?text=msdyn_fileupload EntityType" />

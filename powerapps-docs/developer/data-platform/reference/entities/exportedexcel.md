@@ -1,14 +1,15 @@
 ---
-title: "exportedexcel table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the exportedexcel table/entity."
-ms.date: 06/06/2023
-ms.service: "powerapps"
-ms.topic: "reference"
+title: exportedexcel table/entity reference
+description: Learn how to use the Microsoft Dataverse exportedexcel table/entity, including schema information and supported messages.
+ms.date: 08/07/2023
+ms.topic: conceptual
+author: phecke
+ms.author: pehecke
+ms.service: powerapps
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
 search.audienceType: 
   - developer
+ms.custom: bap-template
 ---
 
 # exportedexcel table/entity reference
@@ -20,12 +21,11 @@ A Place holder entity to save excel file for each exportretaineddata custom api 
 
 **Added by**: Data lake workspaces Solution
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
+|Message|Web API operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH /exportedexcels(*exportedexcelid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Assign|PATCH /exportedexcels(*exportedexcelid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /exportedexcels<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /exportedexcels(*exportedexcelid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -37,7 +37,7 @@ A Place holder entity to save excel file for each exportretaineddata custom api 
 |RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH /exportedexcels(*exportedexcelid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|SetState|PATCH /exportedexcels(*exportedexcelid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /exportedexcels(*exportedexcelid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
@@ -75,20 +75,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_exportedexcelId"></a> exportedexcelId
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for entity instances|
+|Description|The unique identifier for entity instances|
 |DisplayName|Exported Excel|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|exportedexcelid|
 |RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
+|Type|The uniqueidentifier|
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
@@ -96,7 +94,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Sequence number of the import that created this record.|
+|Description|The sequence number of the import that created this record|
 |DisplayName|Import Sequence Number|
 |Format|None|
 |IsValidForForm|False|
@@ -108,14 +106,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
-
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Is Customizable|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -123,12 +120,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
-
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the custom entity.|
+|Description|The name of the custom entity|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -139,13 +135,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
+|Description|The date and time when the record was migrated|
 |DisplayName|Record Created On|
 |Format|DateOnly|
 |IsValidForForm|False|
@@ -154,7 +149,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|overriddencreatedon|
 |RequiredLevel|None|
 |Type|DateTime|
-
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
@@ -171,7 +165,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Targets|systemuser,team|
 |Type|Owner|
 
-
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 **Added by**: Active Solution Solution
@@ -185,7 +178,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|owneridtype|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -207,8 +199,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Active|1|Active|
 |1|Inactive|2|Inactive|
 
-
-
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
@@ -228,13 +218,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
-
-
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Time Zone Rule Version Number|
 |Format|None|
 |IsValidForForm|False|
@@ -245,12 +233,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
-
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
 |--------|-----|
-|Description|Time zone code that was in use when the record was created.|
+|Description|Time zone code that was in use when the record was created|
 |DisplayName|UTC Conversion Time Zone Code|
 |Format|None|
 |IsValidForForm|False|
@@ -297,21 +284,19 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Row id unique|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|componentidunique|
 |RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
+|Type|The uniqueidentifier|
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
@@ -319,7 +304,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Component State|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -336,15 +321,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Deleted||
 |3|Deleted Unpublished||
 
-
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the user who created the record.|
+|Description|The unique identifier of the user who created the record|
 |DisplayName|Created By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -352,7 +335,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
@@ -371,7 +353,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
 **Added by**: Active Solution Solution
@@ -389,13 +370,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
+|Description|The date and time when the record was created|
 |DisplayName|Created On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -404,14 +384,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
-
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
+|Description|The unique identifier of the delegate user who created the record|
 |DisplayName|Created By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -419,7 +398,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
@@ -438,7 +416,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -456,7 +433,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_ExcelContent"></a> ExcelContent
 
 |Property|Value|
@@ -468,7 +444,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|excelcontent|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_ExcelContent_Name"></a> ExcelContent_Name
 
@@ -485,14 +460,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
+|Description|Whether the solution component is part of a managed solution|
 |DisplayName|Is Managed|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -509,15 +483,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 **DefaultValue**: 0
 
-
-
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the user who modified the record.|
+|Description|The unique identifier of the user who modified the record|
 |DisplayName|Modified By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -525,7 +497,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
@@ -544,7 +515,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
 **Added by**: Active Solution Solution
@@ -562,13 +532,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
+|Description|The date and time when the record was modified|
 |DisplayName|Modified On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -577,14 +546,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
-
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
+|Description|The unique identifier of the delegate user who modified the record|
 |DisplayName|Modified By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -592,7 +560,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
@@ -611,7 +578,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -629,7 +595,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 **Added by**: Basic Solution Solution
@@ -637,7 +602,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Record Overwrite Time|
 |Format|DateAndTime|
 |IsValidForForm|False|
@@ -645,7 +610,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|overwritetime|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
@@ -664,7 +628,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 **Added by**: Active Solution Solution
@@ -682,14 +645,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the business unit that owns the record|
+|Description|The unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -697,7 +659,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
-
 
 ### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
 
@@ -716,14 +677,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the team that owns the record.|
+|Description|The unique identifier for the team that owns the record|
 |DisplayName|Owning Team|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -732,14 +692,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Targets|team|
 |Type|Lookup|
 
-
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the user that owns the record.|
+|Description|The unique identifier for the user that owns the record|
 |DisplayName|Owning User|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -748,21 +707,19 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Targets|systemuser|
 |Type|Lookup|
 
-
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the associated solution.|
+|Description|The unique identifier of the associated solution|
 |DisplayName|Solution|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|solutionid|
 |RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
+|Type|The uniqueidentifier|
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
@@ -770,14 +727,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Solution|
 |IsValidForForm|False|
 |IsValidForRead|False|
 |LogicalName|supportingsolutionid|
 |RequiredLevel|None|
-|Type|Uniqueidentifier|
-
+|Type|The uniqueidentifier|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
@@ -797,7 +753,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 <a name="onetomany"></a>
 
-## One-To-Many Relationships
+## One-to-many relationships
 
 Listed by **SchemaName**.
 
@@ -809,7 +765,6 @@ Listed by **SchemaName**.
 - [exportedexcel_ProcessSession](#BKMK_exportedexcel_ProcessSession)
 - [exportedexcel_BulkDeleteFailures](#BKMK_exportedexcel_BulkDeleteFailures)
 - [exportedexcel_PrincipalObjectAttributeAccesses](#BKMK_exportedexcel_PrincipalObjectAttributeAccesses)
-
 
 ### <a name="BKMK_exportedexcel_SyncErrors"></a> exportedexcel_SyncErrors
 
@@ -827,7 +782,6 @@ Same as the [exportedexcel_SyncErrors](syncerror.md#BKMK_exportedexcel_SyncError
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_exportedexcel_DuplicateMatchingRecord"></a> exportedexcel_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
@@ -843,7 +797,6 @@ Same as the [exportedexcel_DuplicateMatchingRecord](duplicaterecord.md#BKMK_expo
 |ReferencedEntityNavigationPropertyName|exportedexcel_DuplicateMatchingRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_exportedexcel_DuplicateBaseRecord"></a> exportedexcel_DuplicateBaseRecord
 
@@ -861,7 +814,6 @@ Same as the [exportedexcel_DuplicateBaseRecord](duplicaterecord.md#BKMK_exported
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_exportedexcel_AsyncOperations"></a> exportedexcel_AsyncOperations
 
 **Added by**: System Solution Solution
@@ -877,7 +829,6 @@ Same as the [exportedexcel_AsyncOperations](asyncoperation.md#BKMK_exportedexcel
 |ReferencedEntityNavigationPropertyName|exportedexcel_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_exportedexcel_MailboxTrackingFolders"></a> exportedexcel_MailboxTrackingFolders
 
@@ -895,7 +846,6 @@ Same as the [exportedexcel_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_exportedexcel_ProcessSession"></a> exportedexcel_ProcessSession
 
 **Added by**: System Solution Solution
@@ -912,7 +862,6 @@ Same as the [exportedexcel_ProcessSession](processsession.md#BKMK_exportedexcel_
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_exportedexcel_BulkDeleteFailures"></a> exportedexcel_BulkDeleteFailures
 
 **Added by**: System Solution Solution
@@ -928,7 +877,6 @@ Same as the [exportedexcel_BulkDeleteFailures](bulkdeletefailure.md#BKMK_exporte
 |ReferencedEntityNavigationPropertyName|exportedexcel_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_exportedexcel_PrincipalObjectAttributeAccesses"></a> exportedexcel_PrincipalObjectAttributeAccesses
 
@@ -948,9 +896,9 @@ Same as the [exportedexcel_PrincipalObjectAttributeAccesses](principalobjectattr
 
 <a name="manytoone"></a>
 
-## Many-To-One Relationships
+## Many-to-one relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+Each many-to-one relationship is defined by a corresponding one-to-many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_exportedexcel_createdby](#BKMK_lk_exportedexcel_createdby)
 - [lk_exportedexcel_createdonbehalfby](#BKMK_lk_exportedexcel_createdonbehalfby)
@@ -959,7 +907,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [user_exportedexcel](#BKMK_user_exportedexcel)
 - [team_exportedexcel](#BKMK_team_exportedexcel)
 - [business_unit_exportedexcel](#BKMK_business_unit_exportedexcel)
-
 
 ### <a name="BKMK_lk_exportedexcel_createdby"></a> lk_exportedexcel_createdby
 
@@ -1006,5 +953,5 @@ See the [business_unit_exportedexcel](businessunit.md#BKMK_business_unit_exporte
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
+[Web API reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.exportedexcel?text=exportedexcel EntityType" />

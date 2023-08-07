@@ -1,37 +1,38 @@
 ---
-title: "Long-term data retention (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Dataverse long-term data retention enables customers to transfer data from their transactional database to the Dataverse managed data lake." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: 
-ms.date: 05/23/2023
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "kagoswami" # GitHub ID
+title: Long-term data retention (preview)
+description: Learn how to use retention policies to transfer data from your Microsoft Dataverse transactional database to a managed data lake for cost-efficient long-term storage.
+ms.date: 08/07/2023
+ms.topic: how-to
+author: kagoswami
+ms.author: kagoswami
+ms.reviewer: pehecke
 ms.subservice: dataverse-developer
-ms.author: "kagoswami" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
+ms.custom: bap-template
 ---
 
 # Long-term data retention (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-*Long-term retention* (LTR) is a capability that enables customers to transfer their data from a Dataverse transactional database to a managed data lake. To perform LTR operations, you are required to set up retention policies by defining criteria for a given data table. Based on the policy, retention will run at the scheduled time and retain rows matching the critiera.
-
-More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md), [Enable a table for long term retention](../../maker/data-platform/data-retention-set.md#enable-a-table-for-long-term-retention)
+[Long-term data retention](../../maker/data-platform/data-retention-overview.md) automates the transfer of data from your Microsoft Dataverse transactional database to a managed data lake for cost-efficient archival storage. Start by [configuring tables for long-term retention](../../maker/data-platform/data-retention-set.md#enable-a-table-for-long-term-retention). Then, create retention policies that define the data to archive. Scheduled retention runs transfer rows that match the criteria.
 
 > [!IMPORTANT]
+>
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - For public preview, only non-production environments are allowed for previewing the long-term data retention feature. Production and Dataverse for Teams environments can't be used with this feature.
-> - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
-> - Pricing information for long term data retention will be available at general availability.
+> - During public preview, only non-production environments may preview long-term data retention. Production and Dataverse for Teams environments can't be used with this feature.
+> - During the preview, you don't need any additional Power Platform licensing to try out long-term data retention. However, you'll need an additional license when the feature is generally available.
+> - Pricing information for long-term data retention will be released at general availability.
   
-## Retention policy setup and validation
+## Set up a retention policy
 
-Retention policy set up can be done using our APIs, the maker portal, and solution installation. The following code example demonstrates the retention APIs to create a retention policy.
+To create retention policies, use our APIs, the maker portal, or solution installation. The following code sample demonstrates the use of APIs to create a retention policy.
 
 ### [SDK for .NET](#tab/sdk)
+
+The following code uses the [Organization service](org-service/overview.md) and the [IOrganizationService.Create(Entity) method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A) to create a retention policy that retains all closed opportunities and runs yearly. Valid recurrence parameters are `DAILY`, `WEEKLY`, `MONTHLY`, and `YEARLY`. To run retention only once, set the recurrence value to empty.
 
 ```csharp
 public void CreateRetentionConfig(IOrganizationService orgService)
@@ -75,16 +76,11 @@ public void CreateRetentionConfig(IOrganizationService orgService)
 
 The output of this code is "Retention policy created with Id : c1a9e932-89f6-4f17-859c-bd2101683263".
 
-More information:
-
-- [What is the Organization service](org-service/overview.md)
-- [IOrganizationService.Create Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A)
-
 ### [Web API](#tab/webapi)
 
-The following Web API example is for retention policy set up to retain all the closed opportunities, and this policy will be run on a yearly basis. This example uses the <xref:Microsoft.Dynamics.CRM.retentionconfig?displayProperty=nameWithType>.
+The following Web API example creates a retention policy that retains all closed opportunities and runs yearly. Valid recurrence parameters are `DAILY`, `WEEKLY`, `MONTHLY`, and `YEARLY`. To run retention only once, set the recurrence value to empty. This example uses the <xref:Microsoft.Dynamics.CRM.retentionconfig?displayProperty=nameWithType> entity type.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.1/retentionconfigs
@@ -123,15 +119,11 @@ Accept: application/json
 }
 ```
 
-> [!NOTE]
-> If you want to run retention only once, set the recurrence value as empty.
-> Valid recurrence parameters are: DAILY, WEEKLY, MONTHLY, and YEARLY.
-
 ---
 
-### Custom plug-in on ValidateRetentionConfig
+## Validate your retention policy
 
-The data retention process moves data from Dataverse transactional storage to a managed data lake. Once data is moved to the data lake, you can not perform any transactional operations on that data. It is important to make sure that incorrect policies are not being set up for data retention. You can add your own validations by optionally registering a custom [plug-in](plug-ins.md) on the `ValidateRetentionConfig` message.
+The long-term retention process moves data from Dataverse transactional storage to a managed data lake. You can no longer run transactional operations on the data after it moves to the data lake. It's important to make sure your retention policies are correct. You can add your own validations by optionally registering a custom [plug-in](plug-ins.md) on the <xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType> message.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -156,30 +148,26 @@ class SampleValidateRetentionConfigPlugin : IPlugin
 
 ### [Web API](#tab/webapi)
 
-Plug-in development is not supported by the Web API.
+The Web API doesn't support the development of plug-ins.
 
 ---
 
-More information: <xref:Microsoft.Dynamics.CRM.ValidateRetentionConfig?displayProperty=nameWithType>, [Set a data retention policy for a table](../../maker/data-platform/data-retention-set.md)
-
 ## Custom logic while retention executes
 
-Long-term retention is an asynchronous process that executes whenever a retention policy is set up. Internally, the following operations are performed.
+Long-term retention is an asynchronous process that executes whenever a retention policy is set up. It performs the following operations:
 
-1. Mark rows (records) ready for retention
-1. Copy marked rows to the data lake  
-1. Purge rows from the source database
-1. Roll back the marked rows if the above purge fails
+1. Mark rows (records) ready for retention.
+1. Copy marked rows to the data lake.
+1. Purge rows from the source database.
+1. Roll back the marked rows if the purge fails.
 
-During retention execution you can optionally register custom plug-ins while rows are being marked for retention, when rows are getting purged at the source, or when marked rows for retention get rolled back.
-
-The following sections provide more information about writing custom plug-in code for invocation during the above mentioned operations. Writing plug-in code applies to SDK for .NET programming only.
+While the retention process executes, you can optionally register custom plug-ins when rows are being marked for retention, when rows are being purged at the source, or when rows marked for retention are rolled back. Writing plug-in code applies to SDK for .NET programming only. The Web API doesn't support plug-in development.
 
 ### Custom logic when row is marked for retention
 
-As part of marking rows for retention, Dataverse invokes the `BulkRetain` and `Retain` messages. You can add custom logic by optionally registering a plug-in on execution of those messages. Some examples of such logic would be having additional rows marked for retenion or performing validation before rows are being marked for retained.
+As part of marking rows for retention, Dataverse invokes the `BulkRetain` and `Retain` messages. You can add custom logic by registering a plug-in on execution of those messages. Examples of custom logic include marking more rows for retention or performing validation before rows are marked for retention.
 
-This code sample shows a custom plug-in to be executed during retention of a single table row.
+This code sample shows a custom plug-in that's executed during retention of a single table row.
 
 ```csharp
 class SampleRetainPlugin : IPlugin
@@ -203,13 +191,11 @@ class SampleRetainPlugin : IPlugin
 }
 ```
 
-> [!NOTE]
-> For a rollback retain operation, write your plug-in similar to the above example except register it on
-> the `RollbackRetain` message.
+For a rollback retain operation, write your plug-in similar to the above example, except register it on the `RollbackRetain` message.
 
 ### Custom logic on bulk retain
 
-The plug-in code shown below demonstrates custom logic on the last page execution of a `BulkRetain` message operation.
+This code sample demonstrates custom logic on the last page execution of a `BulkRetain` message operation.
 
 ```csharp
 class SampleBulkRetainPlugin : IPlugin
@@ -232,13 +218,13 @@ class SampleBulkRetainPlugin : IPlugin
 }
 ```
 
-### Custom logic while row gets deleted due to retention
+### Custom logic when row is deleted due to retention
 
-Dataverse executes the `PurgeRetainedContent` message to delete the transactional data rows which were successfully moved to the data lake. The `PurgeRetainedContent` message internally executes a `Delete` message operation to delete the retained table rows that were successfully moved.
+Dataverse executes the `PurgeRetainedContent` message to delete the transactional data rows that were successfully moved to the data lake. The `PurgeRetainedContent` message internally executes a `Delete` message operation to delete the table rows that were successfully moved.
 
-You can optionally register a custom plug-in on the `PurgeRetainedContent` message if you need any custom logic invoked during the purge operation at the table level. Optionally, you can register a custom plug-in on the `Delete` message if you need to invoke code when a row gets deleted due to retention. You can identify whether the delete happened due to retention or not by checking the plug-in's [ParentContext](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext) property. The `ParentContext` property value for the `Delete` message operation due to retention is "PurgeRetainedContent".
+You can register a custom plug-in on the `PurgeRetainedContent` message if you need custom logic during the purge operation at the table level. Optionally, you can register a custom plug-in on the `Delete` message if you need to invoke code when a row is deleted due to retention. You can determine whether the deletion happened due to retention or not by checking the plug-in's [ParentContext](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext) property. The `ParentContext` property value for the `Delete` message operation due to retention is "PurgeRetainedContent."
 
-The plug-in code shown below blocks the purge on a table whenever rows are not ready for purge.
+This code sample blocks the purge on a table when rows aren't ready for purging.
 
 ```csharp
 class SamplePurgeRetainedContentPlugin : IPlugin
@@ -272,7 +258,7 @@ class SamplePurgeRetainedContentPlugin : IPlugin
 }
 ```
 
-The example plug-in code shown below applies to the delete operation due to retention.
+This code sample applies to the delete operation due to retention.
 
 ```csharp
 class SampleDeletePlugin : IPlugin
@@ -310,11 +296,11 @@ class SampleDeletePlugin : IPlugin
 
 ## Query retention policy and execution details
 
-Retention policy details are stored in the `RetentionConfig` table. Retention execution details are stored in `RetentionOperation` and `RetentionOperationDetail` tables. You can query these tables to get the retention policy and execution details.
+Retention policy details are stored in the `RetentionConfig` table. Retention execution details are stored in the `RetentionOperation` and `RetentionOperationDetail` tables. You can query these tables to get the retention policy and execution details.
 
-Below are a few examples of FetchXML which can be used to query the retention details. FetchXML is a proprietary XML-based query language that can be used with SDK based queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string.
+The following code provides a few examples of FetchXML that can be used to query the retention policy and execution details tables. FetchXML is a proprietary XML-based query language. It can be used with SDK-based queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string.
 
-The following example shows a simple query to return all active retention policies for an email order by name.
+This code sample shows a simple query to return all active retention policies for an email order by name.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -354,13 +340,13 @@ public EntityCollection GetActivePolicies(IOrganizationService orgService)
 
 ### [Web API](#tab/webapi)
 
-More information: [Use FetchXml with Web API](./webapi/use-fetchxml-web-api.md)
+ [Learn how to use FetchXml with the Web API](./webapi/use-fetchxml-web-api.md).
 
 ---
 
-### Additional examples of FetchXML query strings
+### More examples of FetchXML query strings
 
-In the following example, the FetchXML statement retrieves all paused retention policies for an email.  
+This code sample illustrates using a FetchXML statement to retrieve all paused retention policies for an email.  
   
 ```xml  
 <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
@@ -381,7 +367,7 @@ In the following example, the FetchXML statement retrieves all paused retention 
 </fetch>
 ```  
 
-In the following example, the FetchXML statement retrieves all retention operations for a retention policy.
+This code sample shows how to use a FetchXML statement to retrieve all retention operations for a retention policy.
 
 ```xml  
 <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
@@ -402,7 +388,7 @@ In the following example, the FetchXML statement retrieves all retention operati
 </fetch>
 ```
 
-In the following example, the FetchXML statement retrieves detailed retention operation details for a retention operation.
+This code sample shows a FetchXML statement that retrieves details for a retention operation.
 
 ```xml  
 <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
@@ -423,7 +409,7 @@ In the following example, the FetchXML statement retrieves detailed retention op
 </fetch>
 ```
 
-In the following example, the FetchXML statement retrieves failure details while executing a retention operation.
+This code sample illustrates the FetchXML statement that retrieves details about a failure that occurred during a retention operation.
 
 ```xml
 <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
@@ -445,8 +431,8 @@ In the following example, the FetchXML statement retrieves failure details while
 ### See also
 
 [Manage data retention policies](../../maker/data-platform/data-retention-manage.md)  
-[View long term retained data](../../maker/data-platform/data-retention-view.md)  
+[View long-term retained data](../../maker/data-platform/data-retention-view.md)  
 [Delete data in bulk](delete-data-bulk.md)  
 [Use the Microsoft Dataverse Web API](webapi/overview.md)
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE [footer-include](../../includes/footer-banner.md)]

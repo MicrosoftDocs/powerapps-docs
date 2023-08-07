@@ -1,14 +1,15 @@
 ---
-title: "msdyn_knowledgeconfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the msdyn_knowledgeconfiguration table/entity."
-ms.date: 06/06/2023
-ms.service: "powerapps"
-ms.topic: "reference"
+title: msdyn_knowledgeconfiguration table/entity reference
+description: Learn how to use the Microsoft Dataverse msdyn_knowledgeconfiguration table/entity, including schema information and supported messages.
+ms.date:08/08/2023
+ms.topic: conceptual
+author: phecke
+ms.author: pehecke
+ms.service: powerapps
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
 search.audienceType: 
   - developer
+ms.custom: bap-template
 ---
 
 # msdyn_knowledgeconfiguration table/entity reference
@@ -20,7 +21,6 @@ Represents the possible settings used in Knowledge management
 
 **Added by**: Knowledge Management Online Features Solution
 
-
 ## Messages
 
 |Message|Web API Operation|SDK class or method|
@@ -31,7 +31,7 @@ Represents the possible settings used in Knowledge management
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |Retrieve|GET /msdyn_knowledgeconfigurations(*msdyn_knowledgeconfigurationid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET /msdyn_knowledgeconfigurations<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH /msdyn_knowledgeconfigurations(*msdyn_knowledgeconfigurationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|SetState|PATCH /msdyn_knowledgeconfigurations(*msdyn_knowledgeconfigurationid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /msdyn_knowledgeconfigurations(*msdyn_knowledgeconfigurationid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
@@ -69,12 +69,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
 |--------|-----|
-|Description|Sequence number of the import that created this record.|
+|Description|The sequence number of the import that created this record|
 |DisplayName|Import Sequence Number|
 |Format|None|
 |IsValidForForm|False|
@@ -85,7 +84,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
-
 
 ### <a name="BKMK_msdyn_datatype"></a> msdyn_datatype
 
@@ -107,8 +105,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Boolean||
 |2|String||
 
-
-
 ### <a name="BKMK_msdyn_groupname"></a> msdyn_groupname
 
 |Property|Value|
@@ -128,21 +124,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Integrated search||
 |1|Internal||
 
-
-
 ### <a name="BKMK_msdyn_knowledgeconfigurationId"></a> msdyn_knowledgeconfigurationId
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for entity instances|
+|Description|The unique identifier for entity instances|
 |DisplayName|Knowledge Configuration|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|msdyn_knowledgeconfigurationid|
 |RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
+|Type|The uniqueidentifier|
 
 ### <a name="BKMK_msdyn_settingname"></a> msdyn_settingname
 
@@ -159,7 +152,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_settingvalue"></a> msdyn_settingvalue
 
 |Property|Value|
@@ -175,13 +167,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|Memo|
 
-
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
+|Description|The date and time when the record was migrated|
 |DisplayName|Record Created On|
 |Format|DateOnly|
 |IsValidForForm|False|
@@ -190,7 +181,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|overriddencreatedon|
 |RequiredLevel|None|
 |Type|DateTime|
-
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -212,8 +202,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Active|1|Active|
 |1|Inactive|2|Inactive|
 
-
-
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
@@ -233,13 +221,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
-
-
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Time Zone Rule Version Number|
 |Format|None|
 |IsValidForForm|False|
@@ -250,12 +236,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
-
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
 |--------|-----|
-|Description|Time zone code that was in use when the record was created.|
+|Description|Time zone code that was in use when the record was created|
 |DisplayName|UTC Conversion Time Zone Code|
 |Format|None|
 |IsValidForForm|False|
@@ -290,14 +275,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OrganizationIdName](#BKMK_OrganizationIdName)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the user who created the record.|
+|Description|The unique identifier of the user who created the record|
 |DisplayName|Created By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -305,7 +289,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
@@ -324,7 +307,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
 **Added by**: Active Solution Solution
@@ -342,13 +324,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
+|Description|The date and time when the record was created|
 |DisplayName|Created On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -357,14 +338,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
-
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
+|Description|The unique identifier of the delegate user who created the record|
 |DisplayName|Created By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -372,7 +352,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
@@ -391,7 +370,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -409,14 +387,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the user who modified the record.|
+|Description|The unique identifier of the user who modified the record|
 |DisplayName|Modified By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -424,7 +401,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
@@ -443,7 +419,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
 **Added by**: Active Solution Solution
@@ -461,13 +436,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
+|Description|The date and time when the record was modified|
 |DisplayName|Modified On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -476,14 +450,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
-
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
+|Description|The unique identifier of the delegate user who modified the record|
 |DisplayName|Modified By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -491,7 +464,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
@@ -510,7 +482,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -528,14 +499,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the organization|
+|Description|The unique identifier for the organization|
 |DisplayName|Organization Id|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -543,7 +513,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|organization|
 |Type|Lookup|
-
 
 ### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
 
@@ -561,7 +530,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
 |Type|String|
-
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
@@ -581,7 +549,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 <a name="onetomany"></a>
 
-## One-To-Many Relationships
+## One-to-many relationships
 
 Listed by **SchemaName**.
 
@@ -593,7 +561,6 @@ Listed by **SchemaName**.
 - [msdyn_knowledgeconfiguration_ProcessSession](#BKMK_msdyn_knowledgeconfiguration_ProcessSession)
 - [msdyn_knowledgeconfiguration_BulkDeleteFailures](#BKMK_msdyn_knowledgeconfiguration_BulkDeleteFailures)
 - [msdyn_knowledgeconfiguration_PrincipalObjectAttributeAccesses](#BKMK_msdyn_knowledgeconfiguration_PrincipalObjectAttributeAccesses)
-
 
 ### <a name="BKMK_msdyn_knowledgeconfiguration_SyncErrors"></a> msdyn_knowledgeconfiguration_SyncErrors
 
@@ -611,7 +578,6 @@ Same as the [msdyn_knowledgeconfiguration_SyncErrors](syncerror.md#BKMK_msdyn_kn
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_knowledgeconfiguration_DuplicateMatchingRecord"></a> msdyn_knowledgeconfiguration_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
@@ -627,7 +593,6 @@ Same as the [msdyn_knowledgeconfiguration_DuplicateMatchingRecord](duplicatereco
 |ReferencedEntityNavigationPropertyName|msdyn_knowledgeconfiguration_DuplicateMatchingRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_msdyn_knowledgeconfiguration_DuplicateBaseRecord"></a> msdyn_knowledgeconfiguration_DuplicateBaseRecord
 
@@ -645,7 +610,6 @@ Same as the [msdyn_knowledgeconfiguration_DuplicateBaseRecord](duplicaterecord.m
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_knowledgeconfiguration_AsyncOperations"></a> msdyn_knowledgeconfiguration_AsyncOperations
 
 **Added by**: System Solution Solution
@@ -661,7 +625,6 @@ Same as the [msdyn_knowledgeconfiguration_AsyncOperations](asyncoperation.md#BKM
 |ReferencedEntityNavigationPropertyName|msdyn_knowledgeconfiguration_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_msdyn_knowledgeconfiguration_MailboxTrackingFolders"></a> msdyn_knowledgeconfiguration_MailboxTrackingFolders
 
@@ -679,7 +642,6 @@ Same as the [msdyn_knowledgeconfiguration_MailboxTrackingFolders](mailboxtrackin
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_knowledgeconfiguration_ProcessSession"></a> msdyn_knowledgeconfiguration_ProcessSession
 
 **Added by**: System Solution Solution
@@ -696,7 +658,6 @@ Same as the [msdyn_knowledgeconfiguration_ProcessSession](processsession.md#BKMK
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_knowledgeconfiguration_BulkDeleteFailures"></a> msdyn_knowledgeconfiguration_BulkDeleteFailures
 
 **Added by**: System Solution Solution
@@ -712,7 +673,6 @@ Same as the [msdyn_knowledgeconfiguration_BulkDeleteFailures](bulkdeletefailure.
 |ReferencedEntityNavigationPropertyName|msdyn_knowledgeconfiguration_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_msdyn_knowledgeconfiguration_PrincipalObjectAttributeAccesses"></a> msdyn_knowledgeconfiguration_PrincipalObjectAttributeAccesses
 
@@ -732,16 +692,15 @@ Same as the [msdyn_knowledgeconfiguration_PrincipalObjectAttributeAccesses](prin
 
 <a name="manytoone"></a>
 
-## Many-To-One Relationships
+## Many-to-one relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+Each many-to-one relationship is defined by a corresponding one-to-many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_msdyn_knowledgeconfiguration_createdby](#BKMK_lk_msdyn_knowledgeconfiguration_createdby)
 - [lk_msdyn_knowledgeconfiguration_createdonbehalfby](#BKMK_lk_msdyn_knowledgeconfiguration_createdonbehalfby)
 - [lk_msdyn_knowledgeconfiguration_modifiedby](#BKMK_lk_msdyn_knowledgeconfiguration_modifiedby)
 - [lk_msdyn_knowledgeconfiguration_modifiedonbehalfby](#BKMK_lk_msdyn_knowledgeconfiguration_modifiedonbehalfby)
 - [organization_msdyn_knowledgeconfiguration](#BKMK_organization_msdyn_knowledgeconfiguration)
-
 
 ### <a name="BKMK_lk_msdyn_knowledgeconfiguration_createdby"></a> lk_msdyn_knowledgeconfiguration_createdby
 
@@ -776,5 +735,5 @@ See the [organization_msdyn_knowledgeconfiguration](organization.md#BKMK_organiz
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
+[Web API reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_knowledgeconfiguration?text=msdyn_knowledgeconfiguration EntityType" />

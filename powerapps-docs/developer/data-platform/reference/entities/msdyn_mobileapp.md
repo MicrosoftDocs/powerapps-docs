@@ -1,14 +1,15 @@
 ---
-title: "msdyn_mobileapp table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the msdyn_mobileapp table/entity."
-ms.date: 06/06/2023
-ms.service: "powerapps"
-ms.topic: "reference"
+title: msdyn_mobileapp table/entity reference
+description: Learn how to use the Microsoft Dataverse msdyn_mobileapp table/entity, including schema information and supported messages.
+ms.date: 08/07/2023
+ms.topic: conceptual
+ms.service: powerapps
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "phecke"
-ms.author: "pehecke"
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
+ms.custom: bap-template
 ---
 
 # msdyn_mobileapp table/entity reference
@@ -20,31 +21,30 @@ Mobile App
 
 **Added by**: Mobile Apps Solution Solution
 
-
 ## Messages
 
-|Message|Web API Operation|SDK class or method|
+|Message|Web API operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH /msdyn_mobileapps(*msdyn_mobileappid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Assign|PATCH /msdyn_mobileapps(*msdyn_mobileappid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
 |Create|POST /msdyn_mobileapps<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /msdyn_mobileapps(*msdyn_mobileappid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
+|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
 |Retrieve|GET /msdyn_mobileapps(*msdyn_mobileappid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET /msdyn_mobileapps<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
-|SetState|PATCH /msdyn_mobileapps(*msdyn_mobileappid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
+|SetState|PATCH /msdyn_mobileapps(*msdyn_mobileappid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /msdyn_mobileapps(*msdyn_mobileappid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
-|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows||
 
 ## Properties
 
@@ -106,14 +106,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
-
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Sequence number of the import that created this record.|
+|Description|The sequence number of the import that created this record|
 |DisplayName|Import Sequence Number|
 |Format|None|
 |IsValidForForm|False|
@@ -125,14 +124,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
-
 ### <a name="BKMK_IsCustomizable"></a> IsCustomizable
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Is Customizable|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -140,12 +138,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
-
 ### <a name="BKMK_msdyn_actionButtonHighlight"></a> msdyn_actionButtonHighlight
 
 |Property|Value|
 |--------|-----|
-|Description|Color used for action button when highlighted.|
+|Description|Color used for action button when highlighted|
 |DisplayName|Action Button Highlight|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -156,12 +153,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_adalClientId"></a> msdyn_adalClientId
 
 |Property|Value|
 |--------|-----|
-|Description|Active Directory Authentication Library Id used for Wrap.|
+|Description|Active Directory Authentication Library Id used for Wrap|
 |DisplayName|Active Directory Authentication Library Id|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -172,12 +168,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_adalRedirectUri"></a> msdyn_adalRedirectUri
 
 |Property|Value|
 |--------|-----|
-|Description|Active Directory Authentication Library redirect URI used for Wrap.|
+|Description|Active Directory Authentication Library redirect URI used for Wrap|
 |DisplayName|Active Directory Authentication Library redirect URI|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -187,7 +182,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
-
 
 ### <a name="BKMK_msdyn_AndroidAppCenterAPIToken"></a> msdyn_AndroidAppCenterAPIToken
 
@@ -204,12 +198,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
-
 ### <a name="BKMK_msdyn_AndroidAppCenterAPITokenSaved"></a> msdyn_AndroidAppCenterAPITokenSaved
 
 |Property|Value|
 |--------|-----|
-|Description|Notify if the user have saved the Android token.|
+|Description|Notify if the user have saved the Android token|
 |DisplayName|AndroidAppCenterAPITokenSaved|
 |Format|Text|
 |IsLocalizable|False|
@@ -220,12 +213,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
-
 ### <a name="BKMK_msdyn_appCenterAppIdAab"></a> msdyn_appCenterAppIdAab
 
 |Property|Value|
 |--------|-----|
-|Description|Android App Center AppId aab.|
+|Description|Android App Center AppId aab|
 |DisplayName|App Center AppId Aab|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -236,12 +228,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appCenterAppIdApk"></a> msdyn_appCenterAppIdApk
 
 |Property|Value|
 |--------|-----|
-|Description|Android App Center AppId.|
+|Description|Android App Center AppId|
 |DisplayName|App Center AppId Apk|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -252,12 +243,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appCenterAppIdIpa"></a> msdyn_appCenterAppIdIpa
 
 |Property|Value|
 |--------|-----|
-|Description|IOS App center app id for ipa.|
+|Description|IOS App center app id for ipa|
 |DisplayName|IOS App Center Id|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -268,12 +258,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_buildDetails"></a> msdyn_buildDetails
 
 |Property|Value|
 |--------|-----|
-|Description|All Build details of the App.|
+|Description|All Build details of the App|
 |DisplayName|Build Details|
 |Format|Email|
 |IsLocalizable|False|
@@ -284,12 +273,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
-
 ### <a name="BKMK_msdyn_bundleIdentifier"></a> msdyn_bundleIdentifier
 
 |Property|Value|
 |--------|-----|
-|Description|The bundleIds resource represents the app's unique identifier that you can register, modify, and delete.|
+|Description|The bundleIds resource represents the app's unique identifier that you can register, modify, and delete|
 |DisplayName|Bundle Identifier for App|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -300,12 +288,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_buttonColor"></a> msdyn_buttonColor
 
 |Property|Value|
 |--------|-----|
-|Description|The Button color used in the App.|
+|Description|The Button color used in the App|
 |DisplayName|Button Color|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -316,12 +303,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_displayName"></a> msdyn_displayName
 
 |Property|Value|
 |--------|-----|
-|Description|Display name of the App.|
+|Description|Display name of the App|
 |DisplayName|Display Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -332,12 +318,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_fillColor"></a> msdyn_fillColor
 
 |Property|Value|
 |--------|-----|
-|Description|Fill color of the App.|
+|Description|Fill color of the App|
 |DisplayName|Fill Color|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -348,12 +333,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_headingTextColor"></a> msdyn_headingTextColor
 
 |Property|Value|
 |--------|-----|
-|Description|Heading Text Color in the App.|
+|Description|Heading Text Color in the App|
 |DisplayName|Heading Text Color|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -364,12 +348,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_hyperLinkColor"></a> msdyn_hyperLinkColor
 
 |Property|Value|
 |--------|-----|
-|Description|Hyper Link Color in the App.|
+|Description|Hyper Link Color in the App|
 |DisplayName|Hyper Link Color|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -379,7 +362,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|5000|
 |RequiredLevel|None|
 |Type|String|
-
 
 ### <a name="BKMK_msdyn_IOSAppCenterAPIToken"></a> msdyn_IOSAppCenterAPIToken
 
@@ -396,12 +378,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
-
 ### <a name="BKMK_msdyn_IOSAppCenterAPITokenSaved"></a> msdyn_IOSAppCenterAPITokenSaved
 
 |Property|Value|
 |--------|-----|
-|Description|Notify if the user have saved the IOS token.|
+|Description|Notify if the user have saved the IOS token|
 |DisplayName|IOSAppCenterAPITokenSaved|
 |Format|Text|
 |IsLocalizable|False|
@@ -412,12 +393,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
-
 ### <a name="BKMK_msdyn_keyVaultUri"></a> msdyn_keyVaultUri
 
 |Property|Value|
 |--------|-----|
-|Description|Key Vault Uri.|
+|Description|Key Vault Uri|
 |DisplayName|Key Vault Uri|
 |Format|Text|
 |IsLocalizable|False|
@@ -428,20 +408,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
-
 ### <a name="BKMK_msdyn_mobileappId"></a> msdyn_mobileappId
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for entity instances|
+|Description|The unique identifier for entity instances|
 |DisplayName|Mobile App Id|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|msdyn_mobileappid|
 |RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
+|Type|The uniqueidentifier|
 
 ### <a name="BKMK_msdyn_orgName"></a> msdyn_orgName
 
@@ -458,12 +436,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_platformType"></a> msdyn_platformType
 
 |Property|Value|
 |--------|-----|
-|Description|Platform Type of Phone IOS/Android.|
+|Description|Platform Type of Phone IOS/Android|
 |DisplayName|Platform Type|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -474,12 +451,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_primaryPublishedAppName"></a> msdyn_primaryPublishedAppName
 
 |Property|Value|
 |--------|-----|
-|Description|Primary Published Canvas App to used in the Wrap.|
+|Description|Primary Published Canvas App to used in the Wrap|
 |DisplayName|Primary Published Canvas App|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -488,12 +464,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Targets|canvasapp|
 |Type|Lookup|
 
-
 ### <a name="BKMK_msdyn_recentBuild"></a> msdyn_recentBuild
 
 |Property|Value|
 |--------|-----|
-|Description|Recent build details of the App.|
+|Description|Recent build details of the App|
 |DisplayName|Recent build|
 |Format|Email|
 |IsLocalizable|False|
@@ -504,12 +479,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
-
 ### <a name="BKMK_msdyn_secondaryApps"></a> msdyn_secondaryApps
 
 |Property|Value|
 |--------|-----|
-|Description|Secondary Apps used for Wrap.|
+|Description|Secondary Apps used for Wrap|
 |DisplayName|Secondary Apps used for Wrap|
 |Format|Email|
 |IsLocalizable|False|
@@ -520,12 +494,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Memo|
 
-
 ### <a name="BKMK_msdyn_secondaryPublishedAppNames"></a> msdyn_secondaryPublishedAppNames
 
 |Property|Value|
 |--------|-----|
-|Description|Secondary Published App Names to used in the Wrap.|
+|Description|Secondary Published App Names to used in the Wrap|
 |DisplayName|Secondary Published App Names|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -536,12 +509,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_statusBarContentColorMode"></a> msdyn_statusBarContentColorMode
 
 |Property|Value|
 |--------|-----|
-|Description|Status Bar Content Color Mode of the App.|
+|Description|Status Bar Content Color Mode of the App|
 |DisplayName|Status Bar Content Color Mode|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -552,13 +524,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_UniqueName"></a> msdyn_UniqueName
 
 |Property|Value|
 |--------|-----|
-|Description|Unique Name for the entity.|
-|DisplayName|Unique Name|
+|Description|The unique Name for the entity|
+|DisplayName|The unique Name|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -569,12 +540,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_name"></a> name
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the custom entity.|
+|Description|The name of the custom entity|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -585,13 +555,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
+|Description|The date and time when the record was migrated|
 |DisplayName|Record Created On|
 |Format|DateOnly|
 |IsValidForForm|False|
@@ -600,7 +569,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|overriddencreatedon|
 |RequiredLevel|None|
 |Type|DateTime|
-
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
@@ -617,7 +585,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Targets|systemuser,team|
 |Type|Owner|
 
-
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
 **Added by**: Active Solution Solution
@@ -631,7 +598,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|owneridtype|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
-
 
 ### <a name="BKMK_statecode"></a> statecode
 
@@ -653,8 +619,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|Active|1|Active|
 |1|Inactive|2|Inactive|
 
-
-
 ### <a name="BKMK_statuscode"></a> statuscode
 
 |Property|Value|
@@ -674,13 +638,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
-
-
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Time Zone Rule Version Number|
 |Format|None|
 |IsValidForForm|False|
@@ -691,12 +653,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
-
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
 |--------|-----|
-|Description|Time zone code that was in use when the record was created.|
+|Description|Time zone code that was in use when the record was created|
 |DisplayName|UTC Conversion Time Zone Code|
 |Format|None|
 |IsValidForForm|False|
@@ -772,21 +733,19 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
 
-
 ### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Row id unique|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|componentidunique|
 |RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
+|Type|The uniqueidentifier|
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
@@ -794,7 +753,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Component State|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -811,15 +770,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Deleted||
 |3|Deleted Unpublished||
 
-
-
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the user who created the record.|
+|Description|The unique identifier of the user who created the record|
 |DisplayName|Created By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -827,7 +784,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
@@ -846,7 +802,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
 **Added by**: Active Solution Solution
@@ -864,13 +819,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
+|Description|The date and time when the record was created|
 |DisplayName|Created On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -879,14 +833,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
-
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
+|Description|The unique identifier of the delegate user who created the record|
 |DisplayName|Created By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -894,7 +847,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
@@ -913,7 +865,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -931,14 +882,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether the solution component is part of a managed solution.|
+|Description|Indicates whether the solution component is part of a managed solution|
 |DisplayName|Is Managed|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -955,15 +905,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 **DefaultValue**: 0
 
-
-
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the user who modified the record.|
+|Description|The unique identifier of the user who modified the record|
 |DisplayName|Modified By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -971,7 +919,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
@@ -990,7 +937,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
 **Added by**: Active Solution Solution
@@ -1008,13 +954,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
+|Description|The date and time when the record was modified|
 |DisplayName|Modified On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -1023,14 +968,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|DateTime|
 
-
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
+|Description|The unique identifier of the delegate user who modified the record|
 |DisplayName|Modified By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -1038,7 +982,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|systemuser|
 |Type|Lookup|
-
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
@@ -1057,7 +1000,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
 **Added by**: Active Solution Solution
@@ -1075,7 +1017,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appIcon1024x1024"></a> msdyn_appIcon1024x1024
 
 |Property|Value|
@@ -1087,7 +1028,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|msdyn_appicon1024x1024|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_appIcon1024x1024_Name"></a> msdyn_appIcon1024x1024_Name
 
@@ -1104,7 +1044,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appIcon120x120"></a> msdyn_appIcon120x120
 
 |Property|Value|
@@ -1116,7 +1055,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|msdyn_appicon120x120|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_appIcon120x120_Name"></a> msdyn_appIcon120x120_Name
 
@@ -1133,7 +1071,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appIcon152x152"></a> msdyn_appIcon152x152
 
 |Property|Value|
@@ -1145,7 +1082,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|msdyn_appicon152x152|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_appIcon152x152_Name"></a> msdyn_appIcon152x152_Name
 
@@ -1162,7 +1098,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appIcon167x167"></a> msdyn_appIcon167x167
 
 |Property|Value|
@@ -1174,7 +1109,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|msdyn_appicon167x167|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_appIcon167x167_Name"></a> msdyn_appIcon167x167_Name
 
@@ -1191,7 +1125,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appIcon180x180"></a> msdyn_appIcon180x180
 
 |Property|Value|
@@ -1203,7 +1136,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|msdyn_appicon180x180|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_appIcon180x180_Name"></a> msdyn_appIcon180x180_Name
 
@@ -1220,7 +1152,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appIconHdpi"></a> msdyn_appIconHdpi
 
 |Property|Value|
@@ -1232,7 +1163,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|msdyn_appiconhdpi|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_appIconHdpi_Name"></a> msdyn_appIconHdpi_Name
 
@@ -1249,7 +1179,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appIconMdpi"></a> msdyn_appIconMdpi
 
 |Property|Value|
@@ -1261,7 +1190,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|msdyn_appiconmdpi|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_appIconMdpi_Name"></a> msdyn_appIconMdpi_Name
 
@@ -1278,7 +1206,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appIconXdpi"></a> msdyn_appIconXdpi
 
 |Property|Value|
@@ -1290,7 +1217,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|msdyn_appiconxdpi|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_appIconXdpi_Name"></a> msdyn_appIconXdpi_Name
 
@@ -1307,7 +1233,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appIconXxhdpi"></a> msdyn_appIconXxhdpi
 
 |Property|Value|
@@ -1319,7 +1244,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|msdyn_appiconxxhdpi|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_appIconXxhdpi_Name"></a> msdyn_appIconXxhdpi_Name
 
@@ -1336,7 +1260,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_appIconXxxhdpi"></a> msdyn_appIconXxxhdpi
 
 |Property|Value|
@@ -1348,7 +1271,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|msdyn_appiconxxxhdpi|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_appIconXxxhdpi_Name"></a> msdyn_appIconXxxhdpi_Name
 
@@ -1365,19 +1287,17 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_launchAppResources"></a> msdyn_launchAppResources
 
 |Property|Value|
 |--------|-----|
-|Description|Launch App Resources used to package the App.|
+|Description|Launch App Resources used to package the App|
 |DisplayName|Launch App Resources|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_launchappresources|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_launchAppResources_Name"></a> msdyn_launchAppResources_Name
 
@@ -1394,19 +1314,17 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_mobileAppDefinitionAndroid"></a> msdyn_mobileAppDefinitionAndroid
 
 |Property|Value|
 |--------|-----|
-|Description|Mobile App Definition Android to package App.|
+|Description|Mobile App Definition Android to package App|
 |DisplayName|Mobile App Definition Android|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_mobileappdefinitionandroid|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_mobileAppDefinitionAndroid_Name"></a> msdyn_mobileAppDefinitionAndroid_Name
 
@@ -1423,19 +1341,17 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_mobileAppDefinitionIOS"></a> msdyn_mobileAppDefinitionIOS
 
 |Property|Value|
 |--------|-----|
-|Description|Mobile App Definition IOS to package App.|
+|Description|Mobile App Definition IOS to package App|
 |DisplayName|Mobile App Definition IOS|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_mobileappdefinitionios|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_mobileAppDefinitionIOS_Name"></a> msdyn_mobileAppDefinitionIOS_Name
 
@@ -1452,7 +1368,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_primaryPublishedAppNameName"></a> msdyn_primaryPublishedAppNameName
 
 |Property|Value|
@@ -1468,19 +1383,17 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_tenantSplashImage"></a> msdyn_tenantSplashImage
 
 |Property|Value|
 |--------|-----|
-|Description|Tenant Splash Image in the App.|
+|Description|Tenant Splash Image in the App|
 |DisplayName|Tenant Splash Image|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_tenantsplashimage|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_tenantSplashImage_Name"></a> msdyn_tenantSplashImage_Name
 
@@ -1497,19 +1410,17 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_msdyn_tenantWelcomeImage"></a> msdyn_tenantWelcomeImage
 
 |Property|Value|
 |--------|-----|
-|Description|Tenant Welcome Image in the App.|
+|Description|Tenant Welcome Image in the App|
 |DisplayName|Tenant Welcome Image|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_tenantwelcomeimage|
 |RequiredLevel|None|
 |Type|File|
-
 
 ### <a name="BKMK_msdyn_tenantWelcomeImage_Name"></a> msdyn_tenantWelcomeImage_Name
 
@@ -1526,7 +1437,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Type|String|
 
-
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 **Added by**: Basic Solution Solution
@@ -1534,7 +1444,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Record Overwrite Time|
 |Format|DateAndTime|
 |IsValidForForm|False|
@@ -1542,7 +1452,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|overwritetime|
 |RequiredLevel|SystemRequired|
 |Type|DateTime|
-
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
@@ -1561,7 +1470,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
 **Added by**: Active Solution Solution
@@ -1579,14 +1487,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the business unit that owns the record|
+|Description|The unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -1594,7 +1501,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
-
 
 ### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
 
@@ -1613,14 +1519,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |RequiredLevel|SystemRequired|
 |Type|String|
 
-
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the team that owns the record.|
+|Description|The unique identifier for the team that owns the record|
 |DisplayName|Owning Team|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -1629,14 +1534,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Targets|team|
 |Type|Lookup|
 
-
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the user that owns the record.|
+|Description|The unique identifier for the user that owns the record|
 |DisplayName|Owning User|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -1645,21 +1549,19 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Targets|systemuser|
 |Type|Lookup|
 
-
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the associated solution.|
+|Description|The unique identifier of the associated solution|
 |DisplayName|Solution|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|solutionid|
 |RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
+|Type|The uniqueidentifier|
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
@@ -1667,14 +1569,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|For internal use only.|
+|Description|For internal use only|
 |DisplayName|Solution|
 |IsValidForForm|False|
 |IsValidForRead|False|
 |LogicalName|supportingsolutionid|
 |RequiredLevel|None|
-|Type|Uniqueidentifier|
-
+|Type|The uniqueidentifier|
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
@@ -1694,7 +1595,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 <a name="onetomany"></a>
 
-## One-To-Many Relationships
+## One-to-many relationships
 
 Listed by **SchemaName**.
 
@@ -1706,7 +1607,6 @@ Listed by **SchemaName**.
 - [msdyn_mobileapp_ProcessSession](#BKMK_msdyn_mobileapp_ProcessSession)
 - [msdyn_mobileapp_BulkDeleteFailures](#BKMK_msdyn_mobileapp_BulkDeleteFailures)
 - [msdyn_mobileapp_PrincipalObjectAttributeAccesses](#BKMK_msdyn_mobileapp_PrincipalObjectAttributeAccesses)
-
 
 ### <a name="BKMK_msdyn_mobileapp_SyncErrors"></a> msdyn_mobileapp_SyncErrors
 
@@ -1724,7 +1624,6 @@ Same as the [msdyn_mobileapp_SyncErrors](syncerror.md#BKMK_msdyn_mobileapp_SyncE
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_mobileapp_DuplicateMatchingRecord"></a> msdyn_mobileapp_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
@@ -1740,7 +1639,6 @@ Same as the [msdyn_mobileapp_DuplicateMatchingRecord](duplicaterecord.md#BKMK_ms
 |ReferencedEntityNavigationPropertyName|msdyn_mobileapp_DuplicateMatchingRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_msdyn_mobileapp_DuplicateBaseRecord"></a> msdyn_mobileapp_DuplicateBaseRecord
 
@@ -1758,7 +1656,6 @@ Same as the [msdyn_mobileapp_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_mobileapp_AsyncOperations"></a> msdyn_mobileapp_AsyncOperations
 
 **Added by**: System Solution Solution
@@ -1774,7 +1671,6 @@ Same as the [msdyn_mobileapp_AsyncOperations](asyncoperation.md#BKMK_msdyn_mobil
 |ReferencedEntityNavigationPropertyName|msdyn_mobileapp_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_msdyn_mobileapp_MailboxTrackingFolders"></a> msdyn_mobileapp_MailboxTrackingFolders
 
@@ -1792,7 +1688,6 @@ Same as the [msdyn_mobileapp_MailboxTrackingFolders](mailboxtrackingfolder.md#BK
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_mobileapp_ProcessSession"></a> msdyn_mobileapp_ProcessSession
 
 **Added by**: System Solution Solution
@@ -1809,7 +1704,6 @@ Same as the [msdyn_mobileapp_ProcessSession](processsession.md#BKMK_msdyn_mobile
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
 ### <a name="BKMK_msdyn_mobileapp_BulkDeleteFailures"></a> msdyn_mobileapp_BulkDeleteFailures
 
 **Added by**: System Solution Solution
@@ -1825,7 +1719,6 @@ Same as the [msdyn_mobileapp_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn
 |ReferencedEntityNavigationPropertyName|msdyn_mobileapp_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 
 ### <a name="BKMK_msdyn_mobileapp_PrincipalObjectAttributeAccesses"></a> msdyn_mobileapp_PrincipalObjectAttributeAccesses
 
@@ -1845,9 +1738,9 @@ Same as the [msdyn_mobileapp_PrincipalObjectAttributeAccesses](principalobjectat
 
 <a name="manytoone"></a>
 
-## Many-To-One Relationships
+## Many-to-one relationships
 
-Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
+Each many-to-one relationship is defined by a corresponding one-to-many relationship with the related table. Listed by **SchemaName**.
 
 - [lk_msdyn_mobileapp_createdby](#BKMK_lk_msdyn_mobileapp_createdby)
 - [lk_msdyn_mobileapp_createdonbehalfby](#BKMK_lk_msdyn_mobileapp_createdonbehalfby)
@@ -1857,7 +1750,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [team_msdyn_mobileapp](#BKMK_team_msdyn_mobileapp)
 - [business_unit_msdyn_mobileapp](#BKMK_business_unit_msdyn_mobileapp)
 - [canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName](#BKMK_canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName)
-
 
 ### <a name="BKMK_lk_msdyn_mobileapp_createdby"></a> lk_msdyn_mobileapp_createdby
 
@@ -1910,5 +1802,5 @@ See the [canvasapp_msdyn_mobileapp_msdyn_primaryPublishedAppName](canvasapp.md#B
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
+[Web API reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_mobileapp?text=msdyn_mobileapp EntityType" />
