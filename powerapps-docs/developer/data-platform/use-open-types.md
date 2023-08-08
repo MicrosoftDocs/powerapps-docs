@@ -20,7 +20,7 @@ ms.custom: bap-template
 
 # Use open types with custom APIs
 
-When you create a Microsoft Dataverse message using a custom API, you must specify the name and data type of each of the request parameters and response properties. The data types can be open or closed. With *closed types*, every property name and type value is known. All types that are defined in Dataverse are closed. The system knows about closed types and can validate them for you. If you use the wrong name or set the value to the wrong type you get an error. But closed types aren't dynamic. They don't allow for complex and nested properties. Normally, a rigid structure is a good thing, but sometimes your business logic requires a more flexible approach.
+When you create a Microsoft Dataverse message using a custom API, you must specify the name and data type of each of the request parameters and response properties. The data types can be open or closed. With *closed types*, every property name and type value is known. All types that are defined in Dataverse are closed. The system knows about closed types and can validate them for you. If you use the wrong name or set the value to the wrong type you get an error. But closed types aren't dynamic. They don't allow for complex and nested properties. Normally, a specific structure is a good thing, but sometimes your business logic requires a more flexible approach.
 
 Unlike closed types, *open types* can have dynamic properties. Using open types with custom APIs makes sense when:
 
@@ -48,7 +48,7 @@ The more common case is to use **Entity** as a dictionary. Use the [Entity.Attri
 
 Let's say that your application uses data that comes from or will be sent to Microsoft Graph and represents the [educationSchool resource type](/graph/api/resources/educationschool). You might use an open type as in the following examples.
 
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 To use an open type with the SDK, use the [Entity](xref:Microsoft.Xrm.Sdk.Entity) class without specifying the entity name, then set the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) collection with the keys and their values.
 
@@ -75,7 +75,7 @@ var educationSchool = new Entity() {
 };
 ```
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 To use an open type with the Web API, you must set the `@odata.type` annotation value to `Microsoft.Dynamics.CRM.expando`. This annotation tells Dataverse this is an [expando EntityType](xref:Microsoft.Dynamics.CRM.expando), which has no properties and inherits from the [crmbaseentity EntityType](xref:Microsoft.Dynamics.CRM.crmbaseentity). [Learn more about the expando EntityType](webapi/web-api-entitytypes.md#expando).
 
@@ -123,6 +123,7 @@ For example:
 ```
 
 There is a known issue that results in an [error using array data with the Web API](#error-using-array-data-with-web-api).
+
 ---
 
 ### Use Dataverse types
@@ -181,7 +182,7 @@ You can't define a custom type that Dataverse knows about. But using open types,
 
 For example, let's say that your custom API requires a parameter that tracks a course using an array of latitude and longitude coordinates. You need a `Location` class.
 
-# [SDK for .NET](#tab/sdk)
+### [SDK for .NET](#tab/sdk)
 
 You can create a `Location` class that inherits from the [Entity](xref:Microsoft.Xrm.Sdk.Entity) class and contains the properties you need. For example:
 
@@ -261,7 +262,7 @@ location.Latitude = 47.66132951804776;
 location.Longitude = -122.11446844957624;
 ```
 
-# [Web API](#tab/webapi)
+### [Web API](#tab/webapi)
 
 Because the Web API can be used with .NET and other programming languages, the specific method depends on the language and the technologies you use to work with JSON.
 
