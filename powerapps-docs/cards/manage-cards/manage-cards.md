@@ -1,6 +1,6 @@
 ---
 title: Manage cards in solutions
-description: This article will help you manage cards in solutions
+description: This article helps you manage cards in solutions
 ms.date: 08/08/2023
 ms.topic: overview
 author: cotaylor
@@ -11,13 +11,15 @@ ms.collection:
 
 ---
 
-Create a card from within a solution if, for example, you want to deploy the card to a different environment. Solutions can contain not only cards but also customized tables, choices, and other components. You can quickly customize an environment in a variety of ways by creating cards and other components from within a solution, exporting the solution, and then importing it into another environment.
+Create a card from within a solution if, for example, you want to deploy the card to a different environment. Solutions can contain not only cards but also customized tables, choices, and other components. You can quickly customize an environment in various ways by creating cards and other components from within a solution, exporting the solution, and then importing it into another environment.
 
 For more information about solutions, see [Solutions overview](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview).
 
+
 # Create a solution
 
-To package cards in a solution, you will need to start by creating a solution. You can skip this step if you already have a solution in which you want to link your card to. For more information on creating solutions, see [Create solution](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-solution).
+To package cards in a solution, you need to start by creating a solution. You can skip this step if you already have a solution in which you want to link your card to. For more information on creating solutions, see [Create solution](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-solution).
+
 
 # Create a card in a solution
 
@@ -42,15 +44,16 @@ You can create a blank card from within a solution.
 
     :::image type="content" source="../media/manage-cards/card-designer.PNG" alt-text="Screenshot of card designer.":::
 
-1. Your new card appears in the list of components for that solution. If you save any changes to your card, they will be reflected in the version that's in the solution.
-1. If your card has any dependencies, such as Dataverse tables, from the commands menu, select Advanced > Add required objects. You can repeat this anytime you add additional required objects to your card.
+1. Your new card appears in the list of components for that solution. If you save any changes to your card, they are reflected in the version that's in the solution.
+1. If your card has any dependencies, such as Dataverse tables, from the commands menu, select Advanced > Add required objects. You can repeat this step anytime you add more required objects to your card.
 
     :::image type="content" source="../media/manage-cards/add-required-objects.PNG" alt-text="Screenshot of adding required objects of card.":::
 
-1. All required objects of your card will appear in the list of components for that solution.
+1. All required objects of your card appear in the list of components for that solution.
 
 > [!NOTE]
 > If you choose to manage the required objects of your card in separate solutions, you must ensure they are imported into your target environment prior to importing the solution containing your card.
+
 
 # Add an existing card to a solution
 
@@ -69,37 +72,38 @@ You can create a blank card from within a solution.
 
     :::image type="content" source="../media/manage-cards/select-existing-card.PNG" alt-text="Screenshot of selecting existing card to add.":::
 
-1. Your existing card appears in the list of components for that solution along with any required tables of that card. If you save any changes to your card, they will be reflected in the version that's in the solution. If you add additional required tables, follow the steps above in "Create a card in a solution" to add the new required objects of your card to your solution.
+1. Your existing card appears in the list of components for that solution along with any required tables of that card. If you save any changes to your card, they are reflected in the version that's in the solution. If you add more required tables, follow the steps in "Create a card in a solution" to add the new required objects of your card to your solution.
 
 # Add a Power Automate flow with the Cards for Power Apps connector to a solution
 
 A common way to send cards is by using a Power Automate flow. For more details on creating a flow to send cards, see [Send a card automatically with a flow](https://learn.microsoft.com/en-us/power-apps/cards/send-a-card/send-card-with-flow).
 
- When creating a flow to send cards in a solution, it is important that in addition to the flow, you also include the cards and any tables the card requires in the solution as well. To accomplish this, after creating your flow in a solution and adding actions from the Cards for Power Apps connector, select the flow in the solution explorer, select the components menu, and select Advanced > Add required objects.
- 
-    :::image type="content" source="../media/manage-cards/flow-add-required-objects.PNG" alt-text="Screenshot of adding required objects for a flow.":::
+When creating a flow to send cards in a solution, it is important that in addition to the flow, you also include the cards and any tables the card requires in the solution as well. To adds any cards and tables, start by creating your flow in a solution and adding actions from the Cards for Power Apps connector. Then, select the flow in the solution explorer, select the components menu, and select Advanced > Add required objects.
 
-All of the cards used in the flow and any of the tables used in those cards will be automatically added to the solution.
+:::image type="content" source="../media/manage-cards/flow-add-required-objects.PNG" alt-text="Screenshot of adding required objects for a flow.":::
+
+All of the cards used in the flow and any of the tables used in those cards are automatically added to the solution.
 
 > [!NOTE]
 > Dependencies of cards in flows will only be automatically managed if you create your flow inside a solution. For flows created outside of Dataverse and added to solutions afterwards, you will either need to re-create the flow in a solution or manage the dependent cards youself.
+
 
 # Known Limitations
 
 ## Dependencies for cards are not displayed correctly in solution explorer
 
-When importing a solution containing a card that depends on tables not present in the same solution, the import will fail if those tables are not already present in the target environment. Similarly, removing a solution containing tables that a card depends on will fail. The dependency viewer in these scenarios is not very helpful at identifying which tables or cards is causing the operation to fail.
+When importing a solution containing a card that depends on tables not present in the same solution, the import fails if those tables are not already present in the target environment. Similarly, removing a solution containing tables that a card depends on fails. The dependency viewer in these scenarios is not helpful at identifying which tables or cards is causing the operation to fail.
 
-Instead, to identify which cards depend on which tables when resolving dependency issues, open the card designer by navigating to Cards from the sidebar, selecting the card you are interested in, and selecting Edit. Once the card designer opens, select Data from the sidebar to view the tables that card depends on.
+Instead, to identify which cards depend on which tables when resolving dependency issues, start by opening the card designer. Next, navigate to Cards from the sidebar, select the card you are interested in, and select Edit. Once the card designer opens, select Data from the sidebar to view the tables that card depends on.
 
 ## Card dependencies for flows are not displayed correctly in solution explorer
 
-When importing a solution containing a flow that depends on cards not present in the same solution, the import will fail if those cards are not already present in the target environment. Similarly, removing a solution containing cards that a flow depends on will fail. The dependency viewer in these scenarios is not very helpful at identifying which tables or cards is causing the operation to fail.
+When importing a solution containing a flow that depends on cards not present in the same solution, the import fails if those cards are not already present in the target environment. Similarly, removing a solution containing cards that a flow depends on fails. The dependency viewer in these scenarios is not helpful at identifying which tables or cards is causing the operation to fail.
 
-Instead, to identify which cards depend on which tables when resolving dependency issues, open the flow editor and find actions for the Cards for Power Apps connector. For each of these actions, identify which card is referenced.
+Instead, to identify which cards depend on which tables when resolving dependency issues, start by opening the flow editor. Next, find actions for the Cards for Power Apps connector. For each of these actions, identify which card is referenced.
 
-## Table dependencies of a card in a flow will not be added back automatically if the card is removed from the solution
+## Solutions with flows depending on cards and tables may not be importable if the card and table is removed
 
-In the scenario that you create a flow inside a solution which depends on a card which in turn depends on one or more tables in the current environment, if you update your flow to no longer depend on the card and remove that card and the required tables from the solution, you still will not be able to import the solution to any environment due to missing dependencies.
+In the scenario that you create a flow inside a solution, which depends on a card which in turn depends on one or more tables in the current environment, if you update your flow to no longer depend on the card and remove that card and the required tables from the solution, you will not be able to import the solution to any environment due to missing dependencies.
 
-To workaround this issue, you can create a new solution and add the flow directly to that solution. Exporting and importing this new solution will work.
+To workaround this issue, you can create a new solution and add the flow directly to that solution. Exporting and importing this new solution works.
