@@ -1,15 +1,15 @@
 ---
 title: Discover apps via AppSource | Microsoft Docs
 description: Discover the apps shared with your organization via AppSource
-author: mkaur
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/16/2018
 ms.subservice: end-user
-ms.author: matp
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
