@@ -49,5 +49,6 @@ After making your edits be sure to **Save and publish** your changes. Depending 
 
 ## Related content
 
+[Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md) <br />
 [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
 
