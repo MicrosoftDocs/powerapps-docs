@@ -50,6 +50,10 @@ Sending a card in Teams requires a card instance. To get a card instance, use th
 
    :::image type="content" source="../media/send-a-card/card-in-flow-example.png" alt-text="Screenshot a flow that creates a card instance when an account record is created and sends it in Teams.":::
 
+## Managing your flow in a solution
+
+For more details on managing your flow that uses the Card for Power Apps Connector, see [Manage cards in solutions](https://learn.microsoft.com/en-us/power-apps/cards/manage-cards/manage-cards-in-solutions)
+
 ## Common issues and resolutions
 
 1. If your card doesn't have any input variables, it will show an empty body parameter after selecting a card to create an instance of. You can ignore that parameter and continue building your flow.

@@ -1,6 +1,6 @@
 ---
-title: Manage cards
-description: This article will help you use security roles to manage cards and explains how to delete a record.
+title: Manage access
+description: This article will help you use security roles to manage cards.
 ms.date: 11/17/2022
 ms.topic: overview
 author: sericks007
@@ -11,7 +11,7 @@ ms.collection:
 
 ---
 
-# Manage cards
+# Manage access
 
 This article will help you use security roles to manage cards and explains how to delete a record.
 
@@ -38,26 +38,3 @@ The Cards for Power Apps service uses the security role called **Cards Role** to
    Other security roles can be modified to view, create, and use cards by changing security role access to the **Card** table in Dataverse.
 
 - **Cards Role** is used internally by the Cards for Power Apps service to communicate with Dataverse.
-
-## Manage cards with DLP policies
-
-The **Cards for Power Apps** connector is used to automatically send cards via Power Automate. [DLP policies](/power-platform/admin/wp-data-loss-prevention) enforce rules for which connectors can be used together with other connectors.
-
-Administrators can use DLP policies to determine which connectors can be used in flows that send cards, for example if both the MSN Weather connector and the Cards for Power Apps connector are classified as **Business**, then makers can send daily status cards with the weather.
-
-## Delete a card
-
-This section shows you how to delete a card.
-
-### Delete a card as the owner
-
-1. Sign in to Power Apps.
-1. Select **Cards** from the left pane.
-1. Select the card to be deleted.
-1. Select **Delete** in the command bar.
-
-   :::image type="content" source="../media/manage-cards/delete-a-card.PNG" alt-text="Screenshot of how to delete a card.":::
-
-### Delete a card as the administrator
-
-If the owner of an app is unavailable, it is currently not possible for an administrator, such as Global admin, Azure Active Directory Global admin, or Dynamics 365 admin to delete a card. We're working on enabling this capability.
