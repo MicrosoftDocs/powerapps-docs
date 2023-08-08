@@ -75,9 +75,9 @@ You can create a blank card from within a solution.
 
 A common way to send cards is by using a Power Automate flow. For more details on creating a flow to send cards, see [Send a card automatically with a flow](https://learn.microsoft.com/en-us/power-apps/cards/send-a-card/send-card-with-flow).
 
- When creating a flow to send cards in a solution, it is important that in addition to the flow, you also include the cards and any tables the card requires in the solution as well. To adds any cards and tables, start by creating your flow in a solution and adding actions from the Cards for Power Apps connector. Then, select the flow in the solution explorer, select the components menu, and select Advanced > Add required objects.
+When creating a flow to send cards in a solution, it is important that in addition to the flow, you also include the cards and any tables the card requires in the solution as well. To adds any cards and tables, start by creating your flow in a solution and adding actions from the Cards for Power Apps connector. Then, select the flow in the solution explorer, select the components menu, and select Advanced > Add required objects.
  
-    :::image type="content" source="../media/manage-cards/flow-add-required-objects.PNG" alt-text="Screenshot of adding required objects for a flow.":::
+:::image type="content" source="../media/manage-cards/flow-add-required-objects.PNG" alt-text="Screenshot of adding required objects for a flow.":::
 
 All of the cards used in the flow and any of the tables used in those cards are automatically added to the solution.
 
