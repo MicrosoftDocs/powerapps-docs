@@ -16,9 +16,9 @@ search.audienceType:
 
 # Optimize images for upload
 
-The Power Apps mobile app can optimize images before they get uploaded to Dataverse. This means reducing the file size while preserving the visual quality of the image as much as possible.
+The Power Apps mobile app can optimize images before they get uploaded to Dataverse. This means reducing the file size while preserving the visual quality of the image, as much as possible.
 
-This is very useful for performance and cost savings. When this feature is enabled, the user experience is smoother both when uploading images from Dataverse and when downloading images that were uploaded with optimization.
+This is very useful for performance and cost savings. When this feature is enabled, the user experience is smoother both when uploading images to Dataverse and when downloading images that were uploaded with optimization.
 
 > [!Important]
 > -	This feature is available on both canvas apps and model-driven apps. However, for model-driven apps, it’s only available starting with version 3.2308.1.
