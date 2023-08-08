@@ -219,7 +219,7 @@ OData-Version: 4.0
 
 You must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't have a `DeleteMultipleRequest` class. Learn how to [use messages with the Organization service](org-service/use-messages.md).
 
-The following `DeleteMultipleExample` static method uses a `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table using the alternate key to include the `partitionid` to uniquely identify the rows.
+The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table using the alternate key to include the `partitionid` to uniquely identify the rows.
 
 ```csharp
 public static void DeleteMultipleExample(IOrganizationService service)
@@ -260,7 +260,7 @@ public static void DeleteMultipleExample(IOrganizationService service)
 The following example shows how to use the `DeleteMultiple` action to delete multiple rows from the `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows.
 
 > [!NOTE]
-> The Web API `DeleteMultiple` action is a private action. You won't find it in the [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) or in the Dataverse <xref:Microsoft.Dynamics.CRM.ActionIndex?displayProperty=fullName>. This action will become public soon. You can use it while it's private.
+> At the time of this writing, the Web API `DeleteMultiple` action is a private action. You won't find it in the [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) or in the Dataverse <xref:Microsoft.Dynamics.CRM.ActionIndex?displayProperty=fullName>. This action will become public soon. You can use it while it's private.
 
 **Request:**
 
@@ -465,13 +465,10 @@ OData-Version: 4.0
 
 ---
 
-### DeleteMultiple
+#### DeleteMultiple availability
 
-`DeleteMultiple` is supported only for elastic tables. Elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md), which can result in unpredictable execution times for delete operations. If you use `DeleteMultiple` on a standard table, you get the error "DeleteMultiple has not yet been implemented."
+`DeleteMultiple` is supported only for elastic tables. Elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md), which can result in unpredictable execution times for delete operations. If you use `DeleteMultiple` on a standard table, you get the error: `DeleteMultiple has not yet been implemented.`
 
-For standard tables, we recommend using the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete), which enable asynchronous deletion of records that match a query. [Learn how to delete data in bulk](delete-data-bulk.md).
-
-With elastic tables, the SDK doesn't include a `DeleteMultipleRequest` class. Until this class is available, use the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple records of the same type. The Web API `DeleteMultiple` action is private, but you can use it now. It will become public soon.
 
 ## Message pipelines merged
 
@@ -486,7 +483,7 @@ A key requirement of the bulk operation messages is that organizations must not 
    > [!NOTE]
    > Don't migrate custom logic to the `DeleteMultiple` message until [Known issue: DeleteMultiple plug-ins not invoked for Delete](#deletemultiple-plug-ins-not-invoked-for-delete) is resolved.
 
-- Before the introduction of bulk operation messages, all custom logic was on the single operation messages. That logic must continue to be applied when client applications use the bulk operation messages. For tables used with high-volume bulk operations, we recommend that you begin to move any synchronous logic from single message events to bulk operation events. If you're introducing new logic, use the bulk operation events rather than the single operation events.
+Before the introduction of bulk operation messages, all custom logic was on the single operation messages. That logic must continue to be applied when client applications use the bulk operation messages. For tables used with high-volume bulk operations, we recommend that you begin to move any synchronous logic from single message events to bulk operation events. If you're introducing new logic, use the bulk operation events rather than the single operation events.
 
 > [!CAUTION]
 > With this design, duplicate logic can potentially be applied on both the single and multiple versions of events. Dataverse doesn't try to prevent this because we can't know your intent.
@@ -511,7 +508,9 @@ This error doesn't occur if there's no plug-in registered for the event. To avoi
 
 #### Time limits
 
-If you're using the Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), you may encounter the error "The request channel timed out attempting to send after 00:04:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout."
+If you're using the Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), you may encounter this error:
+
+> `The request channel timed out attempting to send after 00:04:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.`
 
 The default timeout set using ServiceClient is 4 minutes, which is long for any synchronous operation. You can change this value using the static [ServiceClient.MaxConnectionTimeout](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.MaxConnectionTimeout) property. The default timeout using [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) is 2 minutes.
 
@@ -520,7 +519,7 @@ The default timeout set using ServiceClient is 4 minutes, which is long for any 
 
 ### Not supported for use in plug-ins
 
-[Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md). The use of bulk operations in plug-ins isn't supported.
+At this time, we don't support using bulk operation messages in plug-ins. More information:[Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md).
 
 ## Known issues
 
@@ -528,7 +527,7 @@ The following issues will be addressed before the bulk operations feature become
 
 ### UpdateMultipleRequest.ConcurrencyBehavior not working
 
-<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.ConcurrencyBehavior> specifies the type of optimistic [concurrency behavior](xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior) that should be applied. Possible values are `AlwaysOverwrite`, `Default`, and `IfRowVersionMatches`. The `Default` option is always applied, regardless of what you set. The behavior depends on whether [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) is set for the table.
+<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.ConcurrencyBehavior> specifies the type of optimistic [concurrency behavior](xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior) that should be applied. Possible values are `AlwaysOverwrite`, `Default`, and `IfRowVersionMatches`. Currently, the `Default` option is always applied, regardless of what you set. The behavior depends on whether [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) is set for the table.
 
 ### DeleteMultiple plug-ins not invoked for Delete
 
