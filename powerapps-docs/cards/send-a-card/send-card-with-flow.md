@@ -52,7 +52,7 @@ Sending a card in Teams requires a card instance. To get a card instance, use th
 
 ## Managing your flow in a solution
 
-For more details on managing your flow that uses the Card for Power Apps Connector, see [Manage cards in solutions](https://learn.microsoft.com/en-us/power-apps/cards/manage-cards/manage-cards-in-solutions)
+For more details on managing your flow that uses the Card for Power Apps Connector, see [Manage cards in solutions](https://learn.microsoft.com/en-us/power-apps/cards/manage-cards/manage-cards)
 
 ## Common issues and resolutions
 
