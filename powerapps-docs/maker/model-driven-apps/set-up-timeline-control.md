@@ -535,6 +535,9 @@ To configure more entities, add and modify the following code to the configurati
 ```
 The "systemser" table will persist for **@** and the "account" and "contact" entities for **#** regardless of how the file is edited.
 
+> [!NOTE]
+> - The usage of mentions control does not work in CDS orgs due to limitations.
+
 <!-- 
 ## Configure dashboard timelines
 
