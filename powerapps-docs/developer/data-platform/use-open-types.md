@@ -20,7 +20,7 @@ ms.custom: bap-template
 
 # Use open types with custom APIs
 
-When you create a Microsoft Dataverse message using a custom API, you must specify the name and data type of each of the request parameters and response properties. The data types can be open or closed. With *closed types*, every property name and type value is known. All types that are defined in Dataverse are closed. The system knows about closed types and can validate them for you. If you use the wrong name or set the value to the wrong type you get an error. But closed types aren't dynamic. They don't allow for complex and nested properties. Normally, a specific structure is a good thing, but sometimes your business logic requires a more flexible approach.
+When you create a Microsoft Dataverse message using a custom API, you must specify the name and data type of each of the request parameters and response properties. The data types can be open or closed. With *closed types*, every property name and type value is known. All types that are defined in Dataverse are closed. The system knows about closed types and can validate them for you. If you use the wrong name or set the value to the wrong type, you get an error. But closed types aren't dynamic. They don't allow for complex and nested properties. Normally, a specific structure is a good thing, but sometimes your business logic requires a more flexible approach.
 
 Unlike closed types, *open types* can have dynamic properties. Using open types with custom APIs makes sense when:
 
@@ -46,7 +46,7 @@ While not actually an open type, it's worth mentioning that you can have a custo
 
 The more common case is to use **Entity** as a dictionary. Use the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) collection to specify a set of keys and values. The values can be any .NET type and can be nested. Don't use any other [Entity](xref:Microsoft.Xrm.Sdk.Entity) class properties.
 
-Let's say that your application uses data that comes from or will be sent to Microsoft Graph and represents the [educationSchool resource type](/graph/api/resources/educationschool). You might use an open type as in the following examples.
+Let's say that your application uses data that comes from or is sent to Microsoft Graph and represents the [educationSchool resource type](/graph/api/resources/educationschool). You might use an open type as in the following examples.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -77,7 +77,7 @@ var educationSchool = new Entity() {
 
 #### [Web API](#tab/webapi)
 
-To use an open type with the Web API, you must set the `@odata.type` annotation value to `Microsoft.Dynamics.CRM.expando`. This annotation tells Dataverse this is an [expando EntityType](xref:Microsoft.Dynamics.CRM.expando), which has no properties and inherits from the [crmbaseentity EntityType](xref:Microsoft.Dynamics.CRM.crmbaseentity). [Learn more about the expando EntityType](webapi/web-api-entitytypes.md#expando).
+To use an open type with the Web API, you must set the `@odata.type` annotation value to `Microsoft.Dynamics.CRM.expando`. This annotation tells Dataverse this data is an [expando EntityType](xref:Microsoft.Dynamics.CRM.expando), which has no properties and inherits from the [crmbaseentity EntityType](xref:Microsoft.Dynamics.CRM.crmbaseentity). [Learn more about the expando EntityType](webapi/web-api-entitytypes.md#expando).
 
 ```json
 {
@@ -106,7 +106,7 @@ Notice that the `id` value has an `id@odata.type` annotation. This annotation is
 
 If the value is a number, it's `Int32`. If the value is `Decimal`, `Double`, `Int16`, or `Int64`, you must specify the type using the `<property name>@odata.type` annotation.
 
-Notice also that the string values have an annotation to specify that they are strings. This is a mitigation against a [known issue in OData](https://github.com/OData/odata.net/issues/764). If the string value contains an open bracket (`[`) or single quote (`'`), the OData library returns a `Microsoft.OData.ODataException`. Unless you're certain that the values sent will never include these characters, you must include the `"<property name>@odata.type": "String"` annotation to prevent this error.
+Notice also that the string values have an annotation to specify that they're strings. These annotations are a mitigation against a [known issue in OData](https://github.com/OData/odata.net/issues/764). If the string value contains an open bracket (`[`) or single quote (`'`), the OData library returns a `Microsoft.OData.ODataException`. Unless you're certain that the values sent will never include these characters, you must include the `"<property name>@odata.type": "String"` annotation to prevent this error.
 
 If the value is an array, you must always include an annotation using this pattern: `"<property name>@odata.type": "Collection(<type>)"`
 
@@ -122,7 +122,7 @@ For example:
 }
 ```
 
-There is a known issue that results in an [error using array data with the Web API](#error-using-array-data-with-web-api).
+There's a known issue that results in an [error using array data with the Web API](#error-using-array-data-with-web-api).
 
 ---
 
@@ -132,7 +132,7 @@ In addition to basic .NET types, you can also use types known to Dataverse. The 
 
 When using the SDK, you can simply set the values.
 
-When using the Web API, you must specify the type using the Web API namespace: `Microsoft.Dynamics.CRM`. For example, the following uses these Dataverse Web API types:
+When using the Web API, you must specify the type using the Web API namespace: `Microsoft.Dynamics.CRM`. The following example uses these Dataverse Web API types:
 
 - <xref:Microsoft.Dynamics.CRM.LocalizedLabel?displayProperty=nameWithType>
 - <xref:Microsoft.Dynamics.CRM.DateTimeFormat?displayProperty=nameWithType>
@@ -175,7 +175,7 @@ Parsing a string value into an object such as [XDocument](xref:System.Xml.Linq.X
 
 With open types, callers of your custom API can use the familiar dictionary structure that the [Entity](xref:Microsoft.Xrm.Sdk.Entity) class provides. Your plug-in can interact with it in the same way you work with other Dataverse records.
 
-If you are serializing or deserializing the string data to a class, your data isn't dynamic. You should review the next section.
+If you're serializing or deserializing the string data to a class, your data isn't dynamic. You should review the next section.
 
 ## Custom closed types
 
