@@ -21,19 +21,21 @@ ms.custom: tap-template
 # Write plug-ins for CreateMultiple and UpdateMultiple (preview)
 
 > [!NOTE]
-> The `CreateMultiple` and `UpdateMultiple` messages are being deployed. All tables that support `Create` and `Update` will eventually support `CreateMultiple` and `UpdateMultiple`, but some tables may not support them yet.
+> The `CreateMultiple` and `UpdateMultiple` messages are being deployed. All tables that support `Create` and `Update` will eventually support `CreateMultiple` and `UpdateMultiple`, but some tables may not support them yet. [Learn more about bulk operation messages](bulk-operations.md)
 
-When you need to create or update multiple records in a Microsoft Dataverse table, consider writing a plug-in that uses the [bulk operation messages](bulk-operations.md) `CreateMultiple` and `UpdateMultiple`. If you have plug-ins that use the single operation `Create` and `Update` messages, consider migrating them to use `CreateMultiple` and `UpdateMultiple` instead.
+you should write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages with tables where records may need to be created or updated in bulk, or when performance in creating and updating large numbers of records is important. Just about every table that stores business data may need to be created or updated in bulk.
+
+If you have existing plug-ins for the `Create` and `Update` messages for tables like these, you should migrate them to use `CreateMultiple` and `UpdateMultiple` instead.
 
 ## Is updating plug-ins required?
 
-You're not required to migrate your plug-ins to use `CreateMultiple` and `UpdateMultiple` instead of `Create` and `Update`. The Dataverse message processing pipeline [merges the logic](bulk-operations.md#message-pipelines-merged) of the single and multiple versions of the `Create` and `Update` messages. Your plug-ins still work.
+You're not required to migrate your plug-ins to use `CreateMultiple` and `UpdateMultiple` instead of `Create` and `Update`. Your logic continues to be applied when applications use `CreateMultiple` or `UpdateMultiple`. There's no requirement to migrate your plug-ins because the Dataverse message processing pipeline [merges the logic for plugins](bulk-operations.md#message-pipelines-merged) written for either the single or multiple version of these messages.
 
-However, plug-ins that use the multiple version of these messages get a significant performance boost. Over time, as more developers choose to optimize performance by using the `CreateMultiple` and `UpdateMultiple` messages, we expect writing plug-ins for multiple operations to become the standard. Plug-ins written for single operations will be the exception.
+However, only plug-ins written for the multiple version of these messages get a significant performance boost. Over time, as more developers choose to optimize performance by using the `CreateMultiple` and `UpdateMultiple` messages, we expect writing plug-ins for multiple operations to become the standard. Plug-ins written for single operations will be the exception.
 
 ## What's different?
 
-The following sections describe some of the differences you need to manage when you migrate your plug-ins to the multiple version of the `Create` and `Update` messages.
+The following are some of the differences you need to manage when you migrate your plug-ins to the the `CreateMultiple` and `UpdateMultiple` messages.
 
 ### Targets instead of Target
 
@@ -58,7 +60,7 @@ For a plug-in registered on `Update` or `UpdateMultiple`, you can [specify filte
 > [!IMPORTANT]
 > For `UpdateMultiple`, you can't assume that every entity in the `Targets` parameter contains attributes that are used in a filter.
 
-## Examples
+## Example
 
 The following examples, one with some basic logic for `Update` and another with logic for `UpdateMultiple`, access entity images registered with the step.
 
@@ -134,7 +136,7 @@ else
 
 ### [Multiple](#tab/multiple)
 
-This example applies the same logic as the **Single** version, except the `Entity` and the `EntityImageCollection` are synchronized using a `count` variable with a `foreach` loop through the `EntityCollection`. It also includes the `count` when using the `localPluginContext.Trace` method, and is less verbose&mdash;traces are only included when error conditions occur. The amount of data that you can write to the trace log table is limited, so you should try to avoid writing traces for each iteration.
+This example applies the same logic as the **Single** version, except the `Entity` and the `EntityImageCollection` are synchronized using a `count` variable with a `foreach` loop through the `EntityCollection`. It also includes the `count` when using the `localPluginContext.Trace` method, and is less verbose. Traces are only included when error conditions occur. The amount of data that you can write to the trace log table is limited, so you should try to avoid writing traces for each iteration.
 
 ```csharp
 // Verify input parameters
@@ -277,9 +279,9 @@ To minimize the duration of either of these conditions, we recommend you include
 
 ### See also
 
-[Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)  
-[Bulk operation messages (preview)](bulk-operations.md)  
-[Sample: Use CreateMultiple and UpdateMultiple](org-service/samples/create-update-multiple.md)  
+[Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)   
+[Bulk operation messages (preview)](bulk-operations.md)   
+[Sample: Use CreateMultiple and UpdateMultiple](org-service/samples/create-update-multiple.md)   
 [Optimize performance for Create and Update operations](optimize-performance-create-update.md)
 
 [!INCLUDE [footer-include](../../includes/footer-banner.md)]

@@ -307,7 +307,7 @@ OData-Version: 4.0
 
 Both standard and elastic tables benefit from a significant performance boost when you use bulk operation messages, but you need to use them differently. The following table summarizes the differences.
 
-| Standard | Elastic |
+|Difference|Standard|Elastic|
 | --------- | --------- | --------- |
 | [Number of records](#number-of-records) | Operations are more efficient with a larger number of records. There's no limit on the number of records, but there are message size and time limits. | We recommend sending 100 records at a time. |
 | [On Error behavior](#on-error-behavior) | All operations roll back on error. | Partial success is possible. |
