@@ -44,6 +44,7 @@ If you have questions or issues with this feature, you can contact technical sup
 The following limitations apply to dependent assembly plug-ins.
 
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* aren't supported.
+- Plug-ins for virtual table data providers are not supported.
 - On-premises environments aren't supported.
 - Unmanaged code isn't supported. You can't include references to unmanaged resources.
 
