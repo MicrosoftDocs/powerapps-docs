@@ -1,14 +1,14 @@
 ---
 title: Add a report from outside Power Apps| Microsoft Docs
 description: Add a report from outside Power Apps
-author: mduelae
+author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 09/07/2022
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
