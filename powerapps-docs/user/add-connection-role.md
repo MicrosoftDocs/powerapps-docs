@@ -1,15 +1,15 @@
 ---
 title: "Add a connection role to link records to each other| MicrosoftDocs"
 description: How to add a connection role linked to records
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 8/01/2019
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
