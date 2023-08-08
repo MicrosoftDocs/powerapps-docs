@@ -1,7 +1,7 @@
 ---
-title: "Dependent Assembly plug-ins (preview)" 
-description: "Learn how to include more assemblies that your plug-in assembly can depend on."
-ms.date: 07/14/2023
+title: Dependent Assembly plug-ins (preview)
+description: Learn how to include more assemblies that your plug-in assembly can depend on.
+ms.date: 08/08/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -33,7 +33,7 @@ When you upload your NuGet package, any assemblies that contain classes that imp
 
 At runtime, Dataverse copies the contents of the NuGet package from the `PluginPackage` row and extracts it to the sandbox runtime. This way, any dependent assemblies needed for the plug-in are available.
 
-You're still be able to register plug-in assemblies individually, but using `PluginPackage` will become the recommended approach. Even if your current plug-in project doesn't require access to a dependent assembly, if you start with a project configured to support dependent assemblies you can add a dependent assembly later if you need to. There's no work planned to convert existing plug-in assembly projects to use `PluginPackage`.
+You're still able to register plug-in assemblies individually, but using `PluginPackage` will become the recommended approach. Even if your current plug-in project doesn't require access to a dependent assembly, if you start with a project configured to support dependent assemblies you can add a dependent assembly later if you need to. There's no work planned to convert existing plug-in assembly projects to use `PluginPackage`.
 
 ## Send feedback
 
@@ -44,7 +44,7 @@ If you have questions or issues with this feature, you can contact technical sup
 The following limitations apply to dependent assembly plug-ins.
 
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* aren't supported.
-- Plug-ins for virtual table data providers are not supported.
+- Plug-ins for virtual table data providers aren't supported.
 - On-premises environments aren't supported.
 - Unmanaged code isn't supported. You can't include references to unmanaged resources.
 
