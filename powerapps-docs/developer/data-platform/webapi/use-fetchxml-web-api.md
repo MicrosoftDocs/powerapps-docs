@@ -1,6 +1,7 @@
 ---
-title: "Use FetchXML with Web API (Microsoft Dataverse)| Microsoft Learn"
-description: "FetchXML provides another way to define a query you can use with Web API to retrieve table data."
+title: Use FetchXML with Web API
+description: FetchXML provides another way to define a query you can use with Web API to retrieve table data.
+ms.topic: how-to
 ms.date: 09/27/2022
 author: divkamath
 ms.author: dikamath
@@ -9,17 +10,18 @@ search.audienceType:
   - developer
 contributors: 
   - JimDaly
+ms.custom: bap-template
 ---
 # Use FetchXML with Web API
 
-FetchXML is a proprietary query language that provides capabilities to retrieve data and perform aggregation. It can be used in Web API and with the .NET SDK.  More information: [Use FetchXML to query data](../use-fetchxml-construct-query.md).
+FetchXML is a proprietary query language that can retrieve and aggregate data using the Web API and the .NET SDK. More information: [Use FetchXML to query data](../use-fetchxml-construct-query.md).
 
 > [!NOTE]
-> Unlike queries using the OData syntax, data returned from FetchXML will not return properties with `null` values. When the value is `null`, the property will not be included in the results.
+> Unlike queries that use the OData syntax, FetchXML queries don't return properties with `null` values.
 
-You can compose a FetchXML query for a specific table. Then, URL-encode the XML and pass it to the entity set using the `fetchXml` query string parameter.
+You can compose a FetchXML query for a specific table. Then, URL-encode the XML and use the `fetchXml` query string parameter to pass it to the entity set.
 
-For example, you can have the following FetchXML that has `account` as the entity.  
+For example, the following FetchXML has `account` as the entity:
 
 ```xml  
 <fetch mapping='logical'>
@@ -31,20 +33,20 @@ For example, you can have the following FetchXML that has `account` as the entit
 </fetch>
 ```
 
-The URL encoded value of this FetchXML is as shown here.
+This FetchXML has the following URL-encoded value:
 
 ```text
 %3Cfetch%20mapping%3D%27logical%27%3E%3Centity%20name%3D%27account%27%3E%3Cattribute%20name%3D%27accountid%27%2F%3E%3Cattribute%20name%3D%27name%27%2F%3E%3Cattribute%20name%3D%27accountnumber%27%2F%3E%3C%2Fentity%3E%3C%2Ffetch%3E
 ```
 
-Most programming languages include a function to URL encode a string.
+Most programming languages include a function to URL-encode a string.
 
-- In JavaScript you use the [encodeURI](https://www.ecma-international.org/ecma-262/5.1/) function.
-- In .NET you can use the [System.NET.WebUtility.UrlEncode(String) Method](/dotnet/api/system.net.webutility.urlencode)
+- In JavaScript, you use the [encodeURI](https://www.ecma-international.org/ecma-262/5.1/) function.
+- In .NET, you can use the [System.NET.WebUtility.UrlEncode(String) method](/dotnet/api/system.net.webutility.urlencode)
 
-You should URL encode any request that you send to any RESTful web service. If you paste a URL into the address bar of your browser it should URL encode the address automatically.
+You should URL-encode any request that you send to any RESTful web service. If you paste a URL into the address bar of your browser, it should URL-encode the address automatically.
 
-The following example shows a `GET` request using the FetchXML shown previously using the entity set path for `accounts`. Note that it passes the encoded XML using this parameter: `?fetchXml=`
+The following example shows a `GET` request using the previous FetchXML with the entity set path for `accounts`. It passes the encoded XML using this parameter: `?fetchXml=`
 
 **Request**
 
@@ -86,14 +88,13 @@ OData-Version: 4.0
 }  
 ```
 
-> [!NOTE]
-> Properties with null values will not be included in results returned using FetchXml. In the example above, only the first record returned has an `accountnumber` value.
+Recall that properties with null values aren't included in results returned using FetchXML. In this example, only the first record returned has an `accountnumber` value.
 
 <a name="bkmk_WebAPIFetchPaging"></a>
 
 ## Paging with FetchXML
 
-With FetchXML you can apply simple paging by setting the `page` and `count` attributes of the `fetch` element. For example, to set a query for accounts and limit the number of entities to 2 and to return just the first page, the following fetchXML:
+With FetchXML, you can apply simple paging by setting the `page` and `count` attributes of the `fetch` element. For example, the following fetchXML queries accounts, limits the number of entities to 2, and returns just the first page:
 
 ```xml
 <fetch mapping="logical"
@@ -110,11 +111,9 @@ With FetchXML you can apply simple paging by setting the `page` and `count` attr
 
 ### Paging large result sets
 
-When you are working with large result sets where the paging limits of 5000 are being hit, using paging cookies with the query helps improve performance.
+When you're working with large result sets that hit the paging limit of 5,000, using paging cookies with the query helps improve performance. Request a paging cookie as an annotation. Use the `prefer: odata.include-annotations` request header to use or include `Microsoft.Dynamics.CRM.fetchxmlpagingcookie`, and a `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation is returned with the result.
 
-A paging cookie must be requested as an annotation. Use the `prefer: odata.include-annotations` request header to use (or include) `Microsoft.Dynamics.CRM.fetchxmlpagingcookie` and a `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation will be returned with the result.
-
-The following series of requests show the use of paging cookie using this FetchXml:
+The following series of FetchXML requests show the use of paging cookies. This example uses a small `count` value (3) for brevity. Normally you wouldn't use paging cookies for such small page sizes.
 
 ```xml
 <fetch page='1'
@@ -142,12 +141,9 @@ The following series of requests show the use of paging cookie using this FetchX
 </fetch>
 ```
 
-> [!NOTE]
-> This example is using a small `count` value (3) for brevity. Normally you won't use paging cookies for such small page sizes.
-
 #### First Page
 
-Send the first page with the `page` value set to `'1'`. Using the `Prefer: odata.include-annotations="*"` request header will make sure that necessary annotations in the response are returned.
+Send the first page with the `page` value set to `'1'`. Use the `Prefer: odata.include-annotations="*"` request header to make sure necessary annotations in the response are returned.
 
 **Request**
 
@@ -204,11 +200,11 @@ Preference-Applied: odata.include-annotations="*"
 }
 ```
 
-In the response you can see that the `@Microsoft.Dynamics.CRM.morerecords` annotation value indicates that more records exist that match the criteria.
+In the response, the `@Microsoft.Dynamics.CRM.morerecords` annotation value indicates that more records exist that match the criteria.
 
-The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML document. You will need to use the `pagingcookie` attribute value of that document in the next request.
+The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML document. You need to use the `pagingcookie` attribute value of that document in the next request.
 
-The `pagingcookie` attribute value is Url-encoded *twice*. The decoded value looks like this:
+The `pagingcookie` attribute value is URL-encoded twice. The decoded value looks like this:
 
 ```xml
 <cookie page="1"><fullname last="Robert Lyon (sample)" first="Susanna Stubberod (sample)" /><contactid last="{30717E9C-643F-ED11-9DB0-002248225E95}" first="{20717E9C-643F-ED11-9DB0-002248225E95}" /></cookie>
@@ -217,16 +213,17 @@ The `pagingcookie` attribute value is Url-encoded *twice*. The decoded value loo
 
 #### Following Pages
 
-In all subsequent requests where the previous page `@Microsoft.Dynamics.CRM.morerecords` annotation value indicates that more records exist, you need to
+In all subsequent requests where the previous page `@Microsoft.Dynamics.CRM.morerecords` annotation value indicates that more records exist, you need to:
 
 1. Increment the `fetch` element `page` attribute value.
-1. URL decode the `pagingcookie` attribute value twice.
-1. XML encode the decoded `pagingcookie` attribute value and set it as the value of a `paging-cookie` attribute on the `fetch` element.
-   > [!NOTE]
-   > Whether you must explicitly XML encode the value may depend on the technology you use. In .NET this might be done for you when you set the an XML value to an attribute of another XML element.
+1. URL-decode the `pagingcookie` attribute value twice.
+1. XML-encode the decoded `pagingcookie` attribute value and set it as the value of a `paging-cookie` attribute on the `fetch` element.
+
+    Whether you must explicitly XML-encode the value may depend on the technology you use. In .NET, it might be done for you when you set the XML value to an attribute of another XML element.
+
 1. URL Encode the entire FetchXml value as you did in the first request.
 
-The FetchXml in the request below before URL encoding looks like this:
+In the following request, the FetchXML looks like this before it's URL-encoded:
 
 ```xml
 <fetch page="2" count="3" mapping="logical" output-format="xml-platform" version="1.0" distinct="false" paging-cookie="&lt;cookie page=&quot;1&quot;&gt;&lt;fullname last=&quot;Robert Lyon (sample)&quot; first=&quot;Susanna Stubberod (sample)&quot; /&gt;&lt;contactid last=&quot;{30717E9C-643F-ED11-9DB0-002248225E95}&quot; first=&quot;{20717E9C-643F-ED11-9DB0-002248225E95}&quot; /&gt;&lt;/cookie&gt;">
@@ -302,7 +299,7 @@ Preference-Applied: odata.include-annotations="*"
 
 #### Last Page
 
-In the final page the `@Microsoft.Dynamics.CRM.morerecords` and `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotations will not be included in the response.
+On the final page, the `@Microsoft.Dynamics.CRM.morerecords` and `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotations aren't included in the response.
 
 **Request**
 
@@ -353,10 +350,7 @@ Preference-Applied: odata.include-annotations="*"
 
 ## Use FetchXML within a batch request
 
-The length of a URL in a `GET` request is limited. Including FetchXML as a parameter in the URL can reach this limit.  You can execute a `$batch` operation using a `POST` request as a way to move the FetchXML out of the URL and into the body of the request where this limit will not apply. More information: [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
-
-> [!NOTE]
-> Sending a `GET` request within a `$batch` allows for URLs up to 64 KB (65,536 characters) in length. Much more than with a normal `GET` request, but it isn't unlimited.
+The length of a URL in a `GET` request is limited. Including FetchXML as a parameter in the URL can reach the limit. You can execute a `$batch` operation using a `POST` request as a way to move the FetchXML out of the URL and into the body of the request where the limit doesn't apply. Sending a `GET` request within a `$batch` allows for URLs up to 64 KB (65,536 characters) in length. More than with a normal `GET` request, but it isn't unlimited. More information: [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
 
 ### Example
 
@@ -416,8 +410,8 @@ OData-Version: 4.0
 
 ### See also
 
-[Use FetchXML to construct a query](../use-fetchxml-construct-query.md)<br />
-[Query data using the Web API](query-data-web-api.md)<br />
+[Use FetchXML to construct a query](../use-fetchxml-construct-query.md)   
+[Query data using the Web API](query-data-web-api.md)   
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)
 
 

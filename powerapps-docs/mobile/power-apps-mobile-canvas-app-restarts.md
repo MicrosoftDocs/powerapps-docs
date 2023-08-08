@@ -6,9 +6,9 @@ ms.component: pa-user
 ms.topic: conceptual
 ms.date: 01/05/2023
 ms.subservice: mobile
-ms.author: sericks
+ms.author: anuitz
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser

@@ -16,6 +16,8 @@ contributors:
 
 [!INCLUDE [removeonpostsave-description](includes/removeonpostsave-description.md)]
 
+[!INCLUDE [online-only-api-note](../../includes/online-only-api-note.md)]
+
 ## Syntax
 
 ```javascript

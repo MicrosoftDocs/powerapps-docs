@@ -38,7 +38,7 @@ The following is a selected list of community tools distributed via the XrmToolB
 |[User Settings Utility](https://www.xrmtoolbox.com/plugins/MsCrmTools.UserSettingsUtility/)|Manage users personal settings in bulk|
 |[PCF Builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/)|Easily create, build and test your custom control using Power Apps Component Framework|
 |[SQL 4 CDS](https://www.xrmtoolbox.com/plugins/MarkMpn.SQL4CDS/)|SQL 4 CDS allows you to use standard SQL syntax to query and manipulate your data and metadata in Dataverse|
-|[Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)|Create, update and get 360° View of Dataverse Custom APIs|
+|[Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)|Create, update and get 360° View of Dataverse custom APIs|
 
 ## Browser Extensions
 

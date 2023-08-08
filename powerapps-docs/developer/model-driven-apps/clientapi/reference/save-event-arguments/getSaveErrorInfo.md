@@ -16,6 +16,8 @@ contributors:
 
 Use this method to know the error details on why a table save failed.
 
+[!INCLUDE [online-only-api-note](../../includes/online-only-api-note.md)]
+
 ## Syntax
 
 `executionContext.getEventArgs().getSaveErrorInfo();`
