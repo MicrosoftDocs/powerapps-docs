@@ -229,11 +229,11 @@ items:
     href: modify-query-preoperation-stage.md
   - name: Web access from a plug-in
     href: web-access-plugin.md
-  - name: IsSystemAdmin Custom API
+  - name: IsSystemAdmin custom API
     href: issystemadmin-customapi-sample-plugin.md
   - name: CreateMultiple & UpdateMultiple plug-ins
     href: createmultiple-updatemultiple-plugin.md
-  - name: ExportDataUsingFetchXmlToAnnotation Custom API
+  - name: ExportDataUsingFetchXmlToAnnotation custom API
     href: export-data-fetchxml-annotation-custom-api-sample.md
 - name: Query Data
   items:
