@@ -3,14 +3,14 @@ title: Open an app in the Power Apps mobile app by scanning a QR code
 description: This article explains how to easily open a Power Apps app on your mobile device from scanning a QR code from your desktop computer.
 ms.custom: 
 ms.date: 01/24/2023
-ms.reviewer: 
+ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: Dynamics 365 apps
 ms.assetid: 
-ms.author: sericks
-author: sericks007
+ms.author: trdehove
+author: trdehove
 search.audienceType: 
   - admin
   - customizer
