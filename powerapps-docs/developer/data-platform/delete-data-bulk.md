@@ -32,7 +32,7 @@ And you can perform the following operations:
 - Schedule the start time of a recurring bulk delete.
 - Retrieve information about failures that occurred during a bulk deletion.
 
-To delete multiple rows in elastic tables, you can also use the [`DeleteMultiple` message](use-elastic-tables.md#use-deletemultiple-with-elastic-tables) `DeleteMultiple` deletes records in a single elastic immediately, rather than using a bulk delete job.
+To delete multiple rows in elastic tables, you can also use the [`DeleteMultiple` message](use-elastic-tables.md#use-deletemultiple-with-elastic-tables). `DeleteMultiple` deletes records in a single elastic immediately, rather than using a bulk delete job.
   
 ## Run bulk delete
 
