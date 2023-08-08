@@ -132,7 +132,10 @@ In addition to basic .NET types, you can also use types known to Dataverse. The 
 
 When using the SDK, you can simply set the values.
 
-When using the Web API, you must specify the type using the Web API namespace: `Microsoft.Dynamics.CRM`. For example:
+When using the Web API, you must specify the type using the Web API namespace: `Microsoft.Dynamics.CRM`. For example, the following uses these Dataverse Web API types:
+
+- <xref:Microsoft.Dynamics.CRM.LocalizedLabel?displayProperty=nameWithType>
+- <xref:Microsoft.Dynamics.CRM.DateTimeFormat?displayProperty=nameWithType>
 
 ```json
 {
@@ -178,7 +181,7 @@ If you are serializing or deserializing the string data to a class, your data is
 
 Open types allow for dynamic and unstructured data. But you should consider whether your API has truly dynamic parameters or whether you actually want to have a custom type.
 
-You can't define a custom type that Dataverse knows about. But using open types, you can define a closed-type class that Dataverse can process as an open type. Developers using your custom API can use your classes to have a better, more productive experience with fewer opportunities for errors.
+Currently, you can't define a custom type that Dataverse knows about. But using open types, you can define a closed-type class that Dataverse can process as an open type. Developers using your custom API can use your classes to have a better, more productive experience with fewer opportunities for errors.
 
 For example, let's say that your custom API requires a parameter that tracks a course using an array of latitude and longitude coordinates. You need a `Location` class.
 
@@ -350,5 +353,5 @@ Use the **Feedback** for **This page** button below to submit questions you have
 
 ## See also
 
-[Create and use custom APIs](custom-api.md)
+[Create and use custom APIs](custom-api.md)   
 [Odata.org advanced tutorial: Open type](https://www.odata.org/getting-started/advanced-tutorial/#openType)
