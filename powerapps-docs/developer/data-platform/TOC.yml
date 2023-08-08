@@ -29,11 +29,11 @@
 - name: Work with data using code
   href: work-with-data.md
   items:
-    - name: Use Web API
+    - name: Use the Web API
       href: ./webapi/overview.md
-    - name: Use Organization Service
+    - name: Use the Organization Service
       href: ./org-service/overview.md
-    - name: Bulk Operation messages
+    - name: Use bulk operation messages
       href: bulk-operations.md
     - name: Create your own messages
       href: custom-actions.md
