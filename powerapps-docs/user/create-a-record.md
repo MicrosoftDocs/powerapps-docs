@@ -1,15 +1,15 @@
 ---
 title: "Create a row quickly| MicrosoftDocs"
 description: How to create a row
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/10/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
