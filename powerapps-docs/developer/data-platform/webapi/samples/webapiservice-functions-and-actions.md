@@ -86,8 +86,8 @@ Operations: Send <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=Retr
 
 Operations:
 
-1. Detect if organization has the `sample_IsSystemAdmin` Custom API installed.
-1. If not, install solution in `IsSystemAdminFunction_1_0_0_0_managed.zip` containing the Custom API.
+1. Detect if organization has the `sample_IsSystemAdmin` custom API installed.
+1. If not, install solution in `IsSystemAdminFunction_1_0_0_0_managed.zip` containing the custom API.
 1. Retrieve 10 systemuser records.
 1. Loop through the records using the `sample_IsSystemAdmin` function to detect which ones have the System Administrator security role.
 
