@@ -21,7 +21,7 @@ The bulk deletion feature in Microsoft Dataverse helps you to maintain data qual
 - Stale data
 - Data that's no longer relevant to the business
 - Unneeded test or sample data
-- Data that waas incorrectly imported from other systems
+- Data that was incorrectly imported from other systems
   
 And you can perform the following operations:  
   
@@ -32,11 +32,11 @@ And you can perform the following operations:
 - Schedule the start time of a recurring bulk delete.
 - Retrieve information about failures that occurred during a bulk deletion.
 
-To delete multiple rows in elastic tables, you can also use the [`DeleteMultiple` message](use-elastic-tables.md#use-deletemultiple-with-elastic-tables).
+To delete multiple rows in elastic tables, you can also use the [`DeleteMultiple` message](use-elastic-tables.md#use-deletemultiple-with-elastic-tables) `DeleteMultiple` deletes records in a single elastic immediately, rather than using a bulk delete job.
   
 ## Run bulk delete
 
-To delete data in bulk, use a `BulkDelete` message to submit a bulk delete job. With the SDK, use the [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest). With the Web API, use the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete). Specify the query expressions that describe the records to delete in the `QuerySet` property of your request.
+To delete data in bulk, use the `BulkDelete` message to submit a bulk delete job. With the SDK, use the [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest). With the Web API, use the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete). Specify the query expressions that describe the records to delete in the `QuerySet` property of your request.
   
 A bulk delete job is represented by a record in the [`Bulk Delete Operation` (`BulkDeleteOperation`) table](reference/entities/bulkdeleteoperation.md). A bulk delete operation record includes the following information:  
   
@@ -57,13 +57,15 @@ If the delete action on a specific table type triggers a plug-in or a workflow (
  
 ## Long-term retained data (preview)
 
-Bulk deletion is also available for long-term retained data. Run a bulk delete as you normally would, but set the query's `DataSource` field to *retained*. You can use the SDK QueryExpression or FetchXML or the Web API.
+Bulk deletion is also available for long-term retained data. Run a bulk delete as you normally would, but set the query's `DataSource` field to *retained*. 
 
 ### [SDK for .NET](#tab/sdk)
 
+With the SDK you can use either <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> or the [FetchXmlToQueryExpressionRequest class](xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest) with [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) to convert FetchXml to a <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>.
+
 #### QueryExpression
 
-Use the `DataSource` field in the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to indicate the query is for retained rows only. Set `query.DataSource`= "retained" to bulk-delete retained data.
+Use the [QueryExpression.DataSource property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.DataSource) to indicate the query is for retained rows only. Set the value to `retained` to bulk-delete retained data.
 
 ```csharp
 static Guid BulkDeleteRetainedAccountsExample(IOrganizationService service)
@@ -95,7 +97,7 @@ static Guid BulkDeleteRetainedAccountsExample(IOrganizationService service)
 
 #### FetchXML
 
-Use `datasource='retained'` in a FetchXML expression to indicate the query is for retained rows only.
+Add the `datasource='retained'` attribute to the `fetch` element to indicate the query is for retained rows only.
 
 ```csharp
 static Guid BulkDeleteRetainedAccountsFetchXmlExample(IOrganizationService service) {
@@ -129,7 +131,7 @@ static Guid BulkDeleteRetainedAccountsFetchXmlExample(IOrganizationService servi
 
 ### [Web API](#tab/webapi)
 
-Use `"DataSource": "retained"` in a Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) to indicate the query is for retained rows only.
+Sent the <xref:Microsoft.Dynamics.CRM.QueryExpression> `DataSource` property to `retained` in a Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) to indicate the query is for retained rows only.
 
 **Request:**
 
