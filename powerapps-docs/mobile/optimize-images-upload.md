@@ -29,6 +29,8 @@ This is very useful for performance and cost savings. When this feature is enabl
 1. Open the Power Apps mobile app.
 1. From the **Home**, **All apps**, or **More** page, select your profile image. Your user profile page appears.
 1. Turn on the **Optimize images for upload** setting.
+
+    :::image type="content" source="media/optimize-images-setting.png" alt-text="Optimize images for upload.":::
     
 If enabled, the image optimization is applied when using:
 -	An out-of-the-box control.
