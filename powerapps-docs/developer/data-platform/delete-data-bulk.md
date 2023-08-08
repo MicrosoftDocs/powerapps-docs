@@ -131,7 +131,7 @@ static Guid BulkDeleteRetainedAccountsFetchXmlExample(IOrganizationService servi
 
 ### [Web API](#tab/webapi)
 
-Sent the <xref:Microsoft.Dynamics.CRM.QueryExpression> `DataSource` property to `retained` in a Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) to indicate the query is for retained rows only.
+Set the <xref:Microsoft.Dynamics.CRM.QueryExpression> `DataSource` property to `retained` in a Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) to indicate the query is for retained rows only.
 
 **Request:**
 
