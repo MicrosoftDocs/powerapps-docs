@@ -23,7 +23,7 @@ ms.custom: tap-template
 > [!NOTE]
 > The `CreateMultiple` and `UpdateMultiple` messages are being deployed. All tables that support `Create` and `Update` will eventually support `CreateMultiple` and `UpdateMultiple`, but some tables may not support them yet. [Learn more about bulk operation messages](bulk-operations.md)
 
-you should write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages with tables where records may need to be created or updated in bulk, or when performance in creating and updating large numbers of records is important. Just about every table that stores business data may need to be created or updated in bulk.
+You should write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages with tables where records may need to be created or updated in bulk, or when performance in creating and updating large numbers of records is important. Just about every table that stores business data may need to be created or updated in bulk.
 
 If you have existing plug-ins for the `Create` and `Update` messages for tables like these, you should migrate them to use `CreateMultiple` and `UpdateMultiple` instead.
 
