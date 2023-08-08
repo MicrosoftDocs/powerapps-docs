@@ -15,9 +15,11 @@ Create a card from within a solution if, for example, you want to deploy the car
 
 For more information about solutions, see [Solutions overview](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview).
 
+
 # Create a solution
 
 To package cards in a solution, you need to start by creating a solution. You can skip this step if you already have a solution in which you want to link your card to. For more information on creating solutions, see [Create solution](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-solution).
+
 
 # Create a card in a solution
 
@@ -52,6 +54,7 @@ You can create a blank card from within a solution.
 > [!NOTE]
 > If you choose to manage the required objects of your card in separate solutions, you must ensure they are imported into your target environment prior to importing the solution containing your card.
 
+
 # Add an existing card to a solution
 
 1. [Sign in](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps.
@@ -77,12 +80,13 @@ A common way to send cards is by using a Power Automate flow. For more details o
 
 When creating a flow to send cards in a solution, it is important that in addition to the flow, you also include the cards and any tables the card requires in the solution as well. To adds any cards and tables, start by creating your flow in a solution and adding actions from the Cards for Power Apps connector. Then, select the flow in the solution explorer, select the components menu, and select Advanced > Add required objects.
 
-:::image type="content" source="../media/manage-cards/flow-add-required-objects.PNG" alt-text="Screenshot of adding required objects for a flow.":::
+:::image type="content" source="../media/manage-cards/select-existing-card.PNG" alt-text="Screenshot of adding required objects for a flow.":::
 
 All of the cards used in the flow and any of the tables used in those cards are automatically added to the solution.
 
 > [!NOTE]
 > Dependencies of cards in flows will only be automatically managed if you create your flow inside a solution. For flows created outside of Dataverse and added to solutions afterwards, you will either need to re-create the flow in a solution or manage the dependent cards youself.
+
 
 # Known Limitations
 
