@@ -318,7 +318,7 @@ The following are known issues that should be resolved before dependent assembli
 
 ### Custom API export key changes
 
-When importing a solution that contains a Custom API that uses a plug-in package, you may encounter the following error:
+When importing a solution that contains a custom API that uses a plug-in package, you may encounter the following error:
 
 `Lookup value <plugintypeexportkey>{guid value}</plugintypeexportkey> is not resolvable.`
 
