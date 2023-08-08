@@ -34,7 +34,7 @@ This sample is divided into the following principal sections, containing Web API
 |[Section 2: Unbound Function FormatAddress](#section-2-unbound-function-formataddress)|<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function><br />[Passing parameters to a function](use-web-api-functions.md#passing-parameters-to-a-function)|
 |[Section 3: Unbound Function InitializeFrom](#section-3-unbound-function-initializefrom)|<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function><br />[Create a record from another record](create-entity-web-api.md#create-a-record-from-another-record)<br />[Map table columns](../../../maker/data-platform/map-entity-fields.md)<br />[Customize table and column mappings](../customize-entity-attribute-mappings.md)|
 |[Section 4: Unbound Function RetrieveCurrentOrganization](#section-4-unbound-function-retrievecurrentorganization)|<xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function><br />|
-|[Section 6: Bound Function IsSystemAdmin Custom API](#section-6-bound-function-issystemadmin-custom-api)|[Bound Functions](web-api-functions.md#bound-functions)<br />[Use Bound functions](use-web-api-functions.md#bound-functions)<br />[Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md)<br />[Create and use Custom APIs](../custom-api.md)|
+|[Section 6: Bound Function IsSystemAdmin custom API](#section-6-bound-function-issystemadmin-custom-api)|[Bound Functions](web-api-functions.md#bound-functions)<br />[Use Bound functions](use-web-api-functions.md#bound-functions)<br />[Sample: IsSystemAdmin custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md)<br />[Create and use custom APIs](../custom-api.md)|
 |[Section 7: Unbound Action GrantAccess](#section-7-unbound-action-grantaccess)|<xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action><br />[Sharing and assigning](../security-sharing-assigning.md)<br /><xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function>|
 |[Section 8: Bound Actions AddPrivilegesRole](#section-8-bound-action-addprivilegesrole)|[Bound actions](web-api-actions.md#bound-actions)<br />[Use Bound actions](use-web-api-actions.md#bound-actions)<br /><xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action><br />[Security Role (Role)  table/entity reference](../reference/entities/role.md)|
 |[Section 9: Delete sample records](#section-9-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
@@ -483,11 +483,11 @@ The number of records for each table according to RetrieveTotalRecordCount:
         contact:3
 ```
 
-## Section 6: Bound Function IsSystemAdmin Custom API
+## Section 6: Bound Function IsSystemAdmin custom API
 
 To demonstrate a bound function, this sample imports a custom message defined within a solution before running this portion of the sample.
 
-The sample uses the `sample_IsSystemAdmin` custom message that is defined using a [Custom API](../custom-api.md). You can find details about this custom api here: [Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md).
+The sample uses the `sample_IsSystemAdmin` custom message that is defined using a [custom API](../custom-api.md). You can find details about this custom api here: [Sample: IsSystemAdmin custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md).
 
 > [!NOTE]
 > When using a bound function or action, you must include the fully qualified name, which includes `Microsoft.Dynamics.CRM.`+ &lt;function or action name&gt; in the url.
