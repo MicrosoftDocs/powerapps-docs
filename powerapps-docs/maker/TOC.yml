@@ -1937,7 +1937,7 @@
       href: ./data-platform/create-custom-entity.md
     - name: Import or export data
       href: ./data-platform/data-platform-import-export.md
-    - name: "Configure tables to use Copilot"
+    - name: "Configure tables to use Copilot (preview)"
       href: ./data-platform/table-settings-for-copilot.md  
     - name: Long term data retention for tables (preview)
       href: ./data-platform/data-retention-overview.md

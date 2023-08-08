@@ -8,11 +8,17 @@ ms.service: powerapps
 ms.topic: how-to
 ms.date: 08/07/2023
 ---
-# Configure tables to use Copilot
+# Configure tables to use Copilot (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 When users ask questions about the data available in an app, Copilot uses backend natural language questions and answer capabilities that rely on the table to be enabled for searching across the data. The table configuration must also include the columns that your end-users will like to ask questions about the data in order to get responses back from Copilot in Power Apps.
 
 This article describes the steps to enable a table and select the columns, which determine the data that will be included with Copilot responses.
+
+> [!IMPORTANT]
+> This is a preview feature.
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Enable indexing
 
@@ -44,3 +50,4 @@ After making your edits be sure to **Save and publish** your changes. Depending 
 ## Related content
 
 [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
+
