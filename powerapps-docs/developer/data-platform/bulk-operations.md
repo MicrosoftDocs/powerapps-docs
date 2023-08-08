@@ -307,14 +307,14 @@ OData-Version: 4.0
 
 Both standard and elastic tables benefit from a significant performance boost when you use bulk operation messages, but you need to use them differently. The following table summarizes the differences.
 
-| | Standard | Elastic |
+| Standard | Elastic |
 | --------- | --------- | --------- |
 | [Number of records](#number-of-records) | Operations are more efficient with a larger number of records. There's no limit on the number of records, but there are message size and time limits. | We recommend sending 100 records at a time. |
 | [On Error behavior](#on-error-behavior) | All operations roll back on error. | Partial success is possible. |
 | [Availability](#availability) | Not all standard tables support these messages. | Messages are available for all elastic tables. |
 | [DeleteMultiple](#deletemultiple) | Not available. Use the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) instead. [Learn how to delete data in bulk](delete-data-bulk.md). | Available using the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). The Web API `DeleteMultiple` action is private, but you can use it now. It will become public soon. |
 
-Standard and elastic table usage is different because standard tables use Azure SQL and support transactions. Elastic tables use Azure Cosmos DB, which doesn't support transactions but is able to handle large amounts of data at high levels of throughput with low latency. The following sections provide more details. [Learn more about bulk operations on elastic tables](use-elastic-tables.md#bulk-operations-on-elastic-tables).
+Standard and elastic table usage is different because standard tables use Azure SQL and support transactions. Elastic tables use Azure Cosmos DB, which doesn't support transactions but is able to handle large amounts of data at high levels of throughput with low latency. The following sections provide more details. [Learn more about bulk operations on elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
 
 ### Number of records
 
