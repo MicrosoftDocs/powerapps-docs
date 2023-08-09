@@ -7,7 +7,6 @@ ms.subservice: mda-maker
 ms.author: alcerri
 ms.reviewer: matp
 ms.date: 12/02/2020
-
 ms.topic: troubleshooting
 applies_to: 
   - "powerapps"
@@ -85,7 +84,7 @@ You use security roles that contain the appropriate privileges and assign them t
 
 ## Why don't I see all the views after importing a solution?
 
-A model-driven app change that was made by selecting **All** when selecting a component, such as a view, isn't reflected after importing an update to the app in the target environment. More information: [Newly added components don't appear in the app after importing an update to the app](../data-platform/import-update-export-solutions.md#newly-added-components-dont-appear-in-the-app-after-importing-an-update-to-the-app)
+A model-driven app change that was made by selecting **All** when selecting a component, such as a view, isn't reflected after you import an update to the app. More information: [Newly added components don't appear in the app after you import an update](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/newly-added-components-dont-appear)
 
 ## What's the best way to define and manage my model-driven app?
 
@@ -99,7 +98,7 @@ More advanced users can review the solution's customization.xml file. When you i
 * Removed
 * Modified
 
-This value specifies the changes in the current layer with respect to the previous managed layer. For example, on solution import, `solutionAction="Removed"` will remove the component from the app. More information: [*Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form &lt;formid&gt;* message during solution import](../data-platform/import-update-export-solutions.md#microsoftcrmcrminvalidoperationexception-full-formxml-is-expected-to-create-a-form-formid-message-during-solution-import)
+This value specifies the changes in the current layer with respect to the previous managed layer. For example, on solution import, `solutionAction="Removed"` will remove the component from the app. More information: [*Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form &lt;formid&gt;* message during solution import](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/full-formxml-expected-to-create-form-error)
 
 ## What is an app module?
 
