@@ -536,7 +536,7 @@ To configure more entities, add and modify the following code to the configurati
 The "systemser" table will persist for **@** and the "account" and "contact" entities for **#** regardless of how the file is edited.
 
 > [!IMPORTANT]
-> The mentions feature doesn't work with Dataverse environments that were created with the **Enable Dynamics 365 apps** option set to **Yes**. For more information about this option, go to   [Create an environment](/power-platform/admin/create-environment#create-an-environment-with-a-database).
+> The mentions feature doesn't work with Power Platform environments that were created with the **Enable Dynamics 365 apps** option set to **Yes**. For more information about this option, go to [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
 
 <!-- 
 ## Configure dashboard timelines
