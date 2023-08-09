@@ -119,6 +119,13 @@ Contoso operates a large number of Internet of Things (IoT) devices that the com
 
 To store and query the large volume of IoT data, Contoso creates an elastic table that is named `contoso_SensorData`. It uses a string column that is named `contoso_DeviceId` as the `partitionid` value for each row that corresponds to a device. Because each `contoso_DeviceId` value is unique to a device, and Contoso performs queries mostly in context of a given `contoso_DeviceId` value, it serves as a good partition strategy for the whole dataset.
 
+Related articles:
+
+- [Create elastic tables using code (preview)](create-elastic-tables.md)
+- [Use elastic tables using code (preview)](use-elastic-tables.md)
+- [Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)
+- [Elastic table sample code (preview)](elastic-table-samples.md)
+
 ## Known issues
 
 The following known issues with elastic tables should be addressed before this feature becomes generally available.
