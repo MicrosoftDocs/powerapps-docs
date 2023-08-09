@@ -1,7 +1,7 @@
 ---
 title: Use elastic tables using code (preview)
 description: Learn how to perform data operations on Dataverse elastic tables using code.
-ms.topic: article
+ms.topic: how-to
 ms.date: 07/21/2023
 author: pnghub
 ms.author: gned
