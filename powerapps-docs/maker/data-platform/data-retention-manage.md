@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to 
-ms.date: 07/25/2023
+ms.date: 08/09/2023
 ms.custom: template-how-to 
 ---
 # Manage data retention policies (preview)
@@ -44,15 +44,16 @@ Use the retention policies dashboard to view and manage retention policies. From
 |Succeeded     |  Retention process completed successfully.       |
 |Failed     |  The retention process failed.     |
 
-### View details on failed records 
-Query the Dataverse table Retentionfailuredetails for error details. 
-The table has 4 columns.
+### View details on failed records
+
+Query the Dataverse table `Retentionfailuredetails` for error details.
+
 |Column name  |Description  |
 |---------|---------|
-|Operationid     |  The policy runid visible in the long term retention dashboard for a specific policy run       |
-|entitylogicalname     | Name of the table containing the record       |
-|recordid     | Unique identifier of every record in table      |
-|message     | Detailed error message        |
+|`Operationid`     |  The policy `runid` visible in the long term retention dashboard for a specific policy run.       |
+|`entitylogicalname`     | Name of the table containing the record.      |
+|`recordid`     | Unique identifier of every record in the table.    |
+|`message`     | Detailed error message.        |
 
 ### Bulk delete long term retained data
 
