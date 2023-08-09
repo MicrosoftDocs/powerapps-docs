@@ -95,7 +95,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-8
 
 ## Query Json column data
 
-This example runs a query on `contoso_SensorData` elastic table with filters all rows which has `energyconsumption.power` greater than 5
+This example runs a query on the `contoso_SensorData` elastic table with filters all rows which have `energyconsumption.power` greater than 5
 
 All table columns can be queried with a `c.props` prefix to the schema name of the columns where `"c"` is an alias or a shorthand notation for the elastic table being queried. For example, `contoso_deviceid` column in `contoso_sensordata` table can be referenced in the Cosmos SQL query using `c.props.contoso_deviceid`.
 
@@ -165,7 +165,7 @@ public class QueryResult
 
 More information:
 
-- [Use open types with Custom APIs](use-open-types.md)
+- [Use open types with custom APIs](use-open-types.md)
 - [Use messages with the Organization service](org-service/use-messages.md)
 
 #### [Web API](#tab/webapi)
@@ -218,12 +218,12 @@ OData-Version: 4.0
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br/>
+> [Elastic table sample code (preview)](elastic-table-samples.md)<br/>
 
 ### See also
 
-[Use elastic tables](elastic-tables.md)<br />
-[Create elastic tables using code](create-elastic-tables.md)<br />
-[Use elastic tables](use-elastic-tables.md)<br />
-[Bulk operations with elastic tables](bulk-operations-elastic-tables.md)<br />
+[Use elastic tables](elastic-tables.md)   
+[Create elastic tables using code](create-elastic-tables.md)   
+[Use elastic tables](use-elastic-tables.md)   
+[Bulk Operation messages (preview)](bulk-operations.md)   
 [Elastic table sample code (preview)](elastic-table-samples.md)

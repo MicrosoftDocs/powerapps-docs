@@ -4,7 +4,7 @@ description: Bulk import and export data from Excel or CSV files into tables in 
 author: sabinn-msft
 ms.topic: how-to
 ms.component: cds
-ms.date: 04/05/2023
+ms.date: 07/25/2023
 ms.subservice: dataverse-maker
 ms.author: sabinn
 search.audienceType: 
@@ -104,7 +104,7 @@ You can still use primary keys as identifiers after you specify alternate keys. 
 Export data from one or more tables. Exported data is in comma-separated value (CSV) format. When you export data from more than one table, each table is exported into its own CSV file.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-1. Select **Data** > **Export data**.
+1. Select **Export** > **Export data**.
 1. Select the tables that you want to export data from, and then select **Export data**.
 
    > [!div class="mx-imgBorder"] 

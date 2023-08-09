@@ -157,7 +157,7 @@ The following category and subcategory options are available on the filer menu:
 |Record type                |<li>Notes</li>                     <li>Activities</li><li>Posts</li>                     |
 |Activity type              |<li>Appointment</li><li>Campaign Activity<sup>1<sup></li> <li>Campaign Response<sup>1<sup></li><li>Email</li><li>Fax</li><li>Case Resolution<sup>1<sup></li><li>Letter</li><li>Opportunity Case<sup>1<sup></li>   <li>Order Case<sup>1<sup></li><li>Phone Call</li><li>Quote Close<sup>1<sup></li>           <li>Recurring Appointment</li><li>Social Activity</li><li>Task</li>   <li>Project Service Approval<sup>1<sup></li><li>Booking Alert<sup>1<sup></li><li>Conversation</li><li>Session</li><li>Customer Voice survey invite<sup>1<sup></li><li>Customer Voice survey response<sup>1<sup></li><li>Custom activities (made available by imported solutions)</li>|
 |Activity status            |<li>Active</li><li>Overdue</li>       <li>Closed</li>                         |
-|Activity status reason     |Allows you to filter using specific status reasons. The values are a unique list of all of the status reasons from the activities in the timeline. The status reasons change depending on the activity. If there are multiple activities on the timeline that have the same status reason, it is reflected once, but then the number next to it indicates how many occurrences of that status reason appear in the timeline.                       |
+|Activity status reason     |Allows you to filter using specific status reasons. The values are a unique list of all of the status reasons from the activities in the timeline. The status reasons change depending on the activity. If there are multiple activities on the timeline that have the same status reason, it's reflected once, but then the number next to it indicates how many occurrences of that status reason appear in the timeline.                       |
 |Activity due date (active) |<li>Next 30 days</li><li>Next 7 days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last 7 days</li>   <li>Last 30 days</li>                   |
 |Posts by                   |<li>Auto post</li><li>Users</li>                          |
 |Modified date              |<li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li>                   |
@@ -264,14 +264,14 @@ When you expand the **Activities record settings** on the timeline component sec
 > [!NOTE]
 > A check mark appears to the right, next to enabled **Activity types**. Additional record type settings are disabled until they're enabled under that specific record type.
 
-#### Enable status tags on activity record types
+#### Show status tags on activity record types
 
-Status tags match the status filter that display in the timeline to help you to see at a glance if the state of an activity record is **Active**, **Overdue**, or **Closed** on an activity, such as a task, appointment, or email. The administrator can enable or disable status tags for any **Activity type** in the **Record settings**. Status tags are enabled by default. 
+Status tags match the status filter that display in the timeline to help you to see at a glance if the state of an activity record is **Active**, **Overdue**, or **Closed** on an activity, such as a task, appointment, or email. Makers enable or disable status tags for any **Activity type** in the default form configuration. Status tags are enabled by default.
 
 |Form designer configuration view | Form designer display view|
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|![Enable status tags on activity record types](media\timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11a.png "Enable status tags on activity record types")|![Display status tags on activity record types](media\timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11b.png "Display status tags on activity record types")|
-| To display email status tags, check the box next to **Enable status tag**. |  When enabled, status tags such as **Active**, **Overdue**, or **Closed** appear in the timeline next to that activity record.    |
+| :::image type="content" source="media/timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11a.png" alt-text="Show status tags on activity record types" lightbox="media/timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11a.png"::: |![Display status tags on activity record types](media\timeline-enable-status-tags-on-activity-record-types-display-options-advanced-11b.png "Display status tags on activity record types")|
+| To display email status tags, select **Default form** (pencil icon) > **Show** in the **Display option** dropdown list under **STATUS TAG**. |  When enabled, status tags such as **Active**, **Overdue**, or **Closed** appear in the timeline next to that activity record.    |
 
 #### Enable the ability to create directly from timeline
 
@@ -535,6 +535,9 @@ To configure more entities, add and modify the following code to the configurati
 ```
 The "systemser" table will persist for **@** and the "account" and "contact" entities for **#** regardless of how the file is edited.
 
+> [!IMPORTANT]
+> The mentions feature doesn't work with Dataverse environments that were created with the **Enable Dynamics 365 apps** option set to **Yes**. For more information about this option, go to   [Create an environment](/power-platform/admin/create-environment#create-an-environment-with-a-database).
+
 <!-- 
 ## Configure dashboard timelines
 
@@ -600,7 +603,7 @@ Power platform administrators can restrict the file size of attachments users ca
 1.	Go to **Advanced Settings**, and then on the Settings menu, select System > Administration.
 1.	On the **Administration page**, select **System Settings**.
 1.	On the **System Settings** dialog, select the **Email** tab, and then scroll down to find the **Set file size limit for attachments** value.
-1.	Enter the desired size limit for attachments, and then select **Save**. 131072 KB is the maximum allowed value.
+1.	Enter the desired size limit for attachments, and then select **Save**. 131,072 KB is the maximum allowed value.
 
 ## Known issues
   
@@ -610,7 +613,7 @@ This is a configuration issue for the rich text editor control. To resolve this,
 
 ### Timeline fails to load with error `code:"0x8004430d","message":"Number of link entity: <number> exceed limit 15`
 
-There's a limit of 15 different tables that can be associated with a timeline. Either disable some of the activities associated with the timeline, or follow one of the workarounds described in this article: [Timeline does not render and shows "Records could not be loaded"](https://support.microsoft.com/topic/timeline-does-not-render-and-shows-records-could-not-be-loaded-4ce9200a-1afe-3ef4-ac11-a74b91f4f40c)
+There's a limit of 15 different tables that can be associated with a timeline. Either disable some of the activities associated with the timeline, or follow one of the workarounds described in this article: [Timeline doesn't render and shows "Records couldn't be loaded"](https://support.microsoft.com/topic/timeline-does-not-render-and-shows-records-could-not-be-loaded-4ce9200a-1afe-3ef4-ac11-a74b91f4f40c)
 
 ### See also
 

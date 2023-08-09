@@ -4,7 +4,7 @@ description: "Embed a model-driven app as tab app"
 author: mattp123
 ms.component: pa-user
 ms.topic: article
-ms.date: 11/16/2020
+ms.date: 08/02/2023
 ms.subservice: teams
 ms.author: matp
 ms.custom: ""
@@ -23,6 +23,7 @@ You can customize the Teams experience by adding Power Apps model-driven apps to
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - Running model-driven apps on the Microsoft Teams mobile app is currently not supported.
 
 ## Embed a model-driven app
 
