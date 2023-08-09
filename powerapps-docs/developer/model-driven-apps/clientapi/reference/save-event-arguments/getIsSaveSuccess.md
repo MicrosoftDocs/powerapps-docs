@@ -16,6 +16,8 @@ contributors:
 
 Use this method to know whether the `OnSave` operation is successful or failed.
 
+[!INCLUDE [online-only-api-note](../../includes/online-only-api-note.md)]
+
 ## Syntax
 
 `executionContext.getEventArgs().getIsSaveSuccess();`

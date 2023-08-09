@@ -87,7 +87,7 @@ An action bound to the `account` EntitySet with a single integer `Number` parame
 
 ## Overloaded Actions
 
-Usually, each action you find in the $metadata will be the only action with that name. However bound actions can have multiple definitions when bound to different types. The `AddItemCampaign` action included the marketing solution is one example. You cannot create an overloaded action using [Custom API](../custom-api.md).
+Usually, each action you find in the $metadata will be the only action with that name. However bound actions can have multiple definitions when bound to different types. The `AddItemCampaign` action included the marketing solution is one example. You cannot create an overloaded action using [custom API](../custom-api.md).
 
 More information: [Action Overload Rules](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc451407830)
 

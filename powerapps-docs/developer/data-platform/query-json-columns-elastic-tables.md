@@ -165,7 +165,7 @@ public class QueryResult
 
 More information:
 
-- [Use open types with Custom APIs](use-open-types.md)
+- [Use open types with custom APIs](use-open-types.md)
 - [Use messages with the Organization service](org-service/use-messages.md)
 
 #### [Web API](#tab/webapi)
