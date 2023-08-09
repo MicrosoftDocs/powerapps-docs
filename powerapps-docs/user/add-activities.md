@@ -1,16 +1,16 @@
 ---
 title: "Timeline Overview for Users| MicrosoftDocs"
 description: Timeline Overview for Users 
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: overview
 ms.date: 05/03/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
-ms.assetid: 
+ms.reviewer: 
+ms.assetid: sericks
 search.audienceType: 
   - enduser
 ---

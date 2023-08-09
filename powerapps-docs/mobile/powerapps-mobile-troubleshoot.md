@@ -1,12 +1,13 @@
 ---
 title: Troubleshoot issues in the Power Apps mobile app
 description: Troubleshooting and known issues for the Power Apps mobile app 
-author: sericks007
+author: trdehove
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 08/01/2023
 ms.subservice: mobile
-ms.author: sericks
+ms.author: trdehove
+ms.reviewer: sericks
 search.audienceType: 
   - enduser
 contributors:
