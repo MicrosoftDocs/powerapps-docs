@@ -44,6 +44,16 @@ Use the retention policies dashboard to view and manage retention policies. From
 |Succeeded     |  Retention process completed successfully.       |
 |Failed     |  The retention process failed.     |
 
+### View details on failed records 
+Query the Dataverse table Retentionfailuredetails for error details. 
+The table has 4 columns.
+|Column name  |Description  |
+|---------|---------|
+|Operationid     |  The policy runid visible in the long term retention dashboard for a specific policy run       |
+|entitylogicalname     | Name of the table containing the record       |
+|recordid     | Unique identifier of every record in table      |
+|message     | Detailed error message        |
+
 ### Bulk delete long term retained data
 
 Dataverse bulk delete with the Dataverse SDK supports deletion of long term retained data. [More information](/power-apps/developer/data-platform/delete-data-bulk#:~:text=Bulk%20delete%20is%20also%20available,DataSource%20field%20to%20%22retained%22). 
