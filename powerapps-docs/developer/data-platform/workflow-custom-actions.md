@@ -16,11 +16,11 @@ contributors:
 
 # Use Custom Process Actions with code
 
-Custom Process Actions, also known as simply *Custom Actions*, are one of two ways to create custom messages for the Microsoft Dataverse. The other is *Custom APIs*. More information: [Create and use Custom APIs](custom-api.md).
+Custom Process Actions, also known as simply *Custom Actions*, are one of two ways to create custom messages for the Microsoft Dataverse. The other is *custom APIs*. More information: [Create and use custom APIs](custom-api.md).
 
 Both of these capabilities allow for creating new messages that can be called from web services. Custom Process Actions will continue to provide a no-code way to declaratively define synchronous business logic. Custom process actions have always been synchronous 'real-time' workflows and therefore not suitable to be converted to use Power Automate.
 
-For a comparison of the capabilities of Custom Process Actions and Custom APIs, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-custom-process-action-and-custom-api).
+For a comparison of the capabilities of Custom Process Actions and custom APIs, see [Compare Custom Process Action and custom API](custom-actions.md#compare-custom-process-action-and-custom-api).
   
 The business logic of a custom process action is implemented using a workflow. When you create an custom process action, the associated real-time workflow is automatically registered to execute in the main operation stage of the message execution pipeline.
 
@@ -45,10 +45,10 @@ Because a Custom Process Action is a workflow, you can include re-usable custom 
 
 ### Register plug-ins steps for stages in the execution pipeline
 
-Because a Custom Process Action creates a message, you can register plug-ins steps on the `PreValidation`, `PreOperation` and `PostOperation` stages to modify the behavior of the Custom Process Action. Developers have used this to define all the logic for the message, frequently not defining any workflow logic at all. The Custom API feature simplifies this code-first pattern and provides other capabilities not possible with Custom Workflow Activities.
+Because a Custom Process Action creates a message, you can register plug-ins steps on the `PreValidation`, `PreOperation` and `PostOperation` stages to modify the behavior of the Custom Process Action. Developers have used this to define all the logic for the message, frequently not defining any workflow logic at all. The custom API feature simplifies this code-first pattern and provides other capabilities not possible with Custom Workflow Activities.
 
 > [!TIP]
-> If you have been using Custom Process Actions solely to implement logic using plug-ins, consider moving to use Custom API instead. More information: [Create and use Custom APIs](custom-api.md)
+> If you have been using Custom Process Actions solely to implement logic using plug-ins, consider moving to use custom API instead. More information: [Create and use custom APIs](custom-api.md)
 
 The message for a Custom Process Action is only available with the workflow that defines it is activated. You cannot register plug-in steps for a Custom Process Action that isn't active.
 
