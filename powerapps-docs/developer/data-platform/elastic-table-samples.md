@@ -32,8 +32,8 @@ The following sample applications on GitHub show how to use code to work with el
 
 - Create elastic tables by using code.
 - Create, retrieve, update, upsert, and delete elastic table records.
-- Use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple) to create elastic table records. <!--TODO Add link -->
-- Use the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) to set JSON data for a column.<!--TODO Add link -->
+- Use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple) to create elastic table records.
+- Use the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) to set JSON data for a column.
 - Use the [ExecuteCosmosSqlQuery function](xref:Microsoft.Dynamics.CRM.ExecuteCosmosSqlQuery) to query JSON data in columns.
 - Use the `DeleteMultiple` action to delete elastic table records in bulk.<!--TODO Add link -->
 

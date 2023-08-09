@@ -53,7 +53,7 @@ x-ms-session-token: 240:8#144100870#7=-1
 
 ### Sending the session token
 
-The way that you send the session token in a read operation depends on whether you're using the software development kit (SDK) or Web API.
+The way that you send the session token in a read operation depends on whether you're using the SDK or Web API.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -69,7 +69,7 @@ var request = new RetrieveRequest
 };
 ```
 
-For more information, go to [Use optional parameters](optional-parameters.md).
+[Learn more about using optional parameters](optional-parameters.md).
 
 
 #### [Web API](#tab/webapi)
@@ -116,7 +116,7 @@ var entity = new Entity("contoso_sensordata", keys)
 
 #### [Web API](#tab/webapi)
 
-This example shows how you can use the special syntax in Web API to refer to records by alternate key when you perform `GET`, `PATCH`, and `DELETE` operations on a single row of an elastic table. For more information, go to [Use an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi).
+This example shows how you can use the special syntax in Web API to refer to records by alternate key when you perform `GET`, `PATCH`, and `DELETE` operations on a single row of an elastic table. [Learn more about using an alternate key to reference a record](use-alternate-key-reference-record.md?tabs=webapi).
 
 `<entity set name>(<primary key name>=<primary key value>,partitionid='<partitionid value>')`
 
@@ -137,7 +137,7 @@ Currently, you can use a `partitionId` parameter to specify the value of the `pa
 #### [SDK for .NET](#tab/sdk)
 
 > [!NOTE]
-> The `partitionId` parameter doesn't work with `Create`, `Update`, or `Upsert` messages, and it will be ignored if it's sent.
+> The `partitionId` parameter doesn't work with `Create`, `Update`, or `Upsert` messages, and it is ignored if it's sent.
 
 ```csharp
 request["partitionId"] = "device-001"
@@ -146,7 +146,7 @@ request["partitionId"] = "device-001"
 #### [Web API](#tab/webapi)
 
 > [!NOTE]
-> The `partitionId` parameter doesn't work with `POST` or `PATCH` requests, and it will be ignored if it's sent.
+> The `partitionId` parameter doesn't work with `POST` or `PATCH` requests, and it is ignored if it's sent.
 
 Here is an example:
 
@@ -162,7 +162,7 @@ For `Create`, `Upsert`, or `Update` operations, you can directly specify the val
 
 #### [SDK for .NET](#tab/sdk)
 
-This example shows how you can directly specify the value of the `partitionid` column in `Entity` when you run a `Create`, `Upsert`, or `Update` operation.
+This example shows how you can directly specify the value of the `partitionid` column in `Entity` when you perform a `Create`, `Upsert`, or `Update` operation.
 
 ```csharp
 var entity = new Entity("contoso_sensordata", sensordataid)
@@ -187,7 +187,7 @@ This example shows how you can directly specify the value of the `partitionid` c
 
 ## Create a record in an elastic table
 
-This example creates a new row in the `contoso_SensorData` table, where `partitionid` is set to `deviceid`. It also sets the `ttlinseconds` column to ensure that the row expires after one day (86,400 seconds) and is automatically deleted from Dataverse.
+This example creates a row in the `contoso_SensorData` table, where `partitionid` is set to `deviceid`. It also sets the `ttlinseconds` column to ensure that the row expires after one day (86,400 seconds) and is automatically deleted from Dataverse.
 
 This example also captures the `x-ms-session-token` value that you can use when you retrieve the created record.
 
@@ -232,7 +232,7 @@ public static Guid CreateExample(
 }
 ```
 
-Use the `x-ms-session-token` value that is returned to set the `SessionToken` optional parameter when you retrieve the record that you created. For more information, go to [Sending the session token](#sending-the-session-token).
+Use the `x-ms-session-token` value that is returned to set the `SessionToken` optional parameter when you retrieve the record that you created. [Learn more about sending the session token](#sending-the-session-token).
 
 #### [Web API](#tab/webapi)
 
@@ -264,7 +264,7 @@ x-ms-session-token: 240:8#144035050#7=-1
 OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
 ```
 
-Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. For more information, go to [Sending the session token](#sending-the-session-token).
+Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. [Learn more about sending the session token](#sending-the-session-token).
 
 ---
 
@@ -274,7 +274,7 @@ This example updates the `contoso_value` and `contoso_timestamp` values of an ex
 
 If you're using a partitioning strategy, the primary key and `partitionid` columns must uniquely identify an existing elastic table row. The `partitionid` value of an existing row can't be updated and is used only to uniquely identify the row to update.
 
-This example uses the `KeyForNoSqlEntityWithPKPartitionId` alternate key to uniquely identify the record by using both the primary key and `partitionid` values. For more information, go to [Alternate keys](create-elastic-tables.md#alternate-keys).
+This example uses the `KeyForNoSqlEntityWithPKPartitionId` alternate key to uniquely identify the record by using both the primary key and `partitionid` values. [Learn more about alternate keys](create-elastic-tables.md#alternate-keys).
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -319,7 +319,7 @@ public static void UpdateExample(
 }
 ```
 
-For more information, go to [Using the Entity class](use-alternate-key-reference-record.md#using-the-entity-class).
+[Learn more about using the Entity class to set alternate keys](use-alternate-key-reference-record.md#using-the-entity-class).
 
 #### [Web API](#tab/webapi)
 
@@ -361,7 +361,7 @@ If the `partitionid` wasn't set, you can retrieve the record in the usual way, b
 
 There are two different ways to compose a request to retrieve a record by using the `partitionid` value.
 
-This example uses the [RetrieveRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest). The `Target` property is set to an [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) that is created by using the constructor that accepts a [KeyAttributeCollection](xref:Microsoft.Xrm.Sdk.KeyAttributeCollection) to use the `KeyForNoSqlEntityWithPKPartitionId` alternate key. For more information, go to [Using the EntityReference class](use-alternate-key-reference-record.md#using-the-entityreference-class).
+This example uses the [RetrieveRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest). The `Target` property is set to an [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) that is created by using the constructor that accepts a [KeyAttributeCollection](xref:Microsoft.Xrm.Sdk.KeyAttributeCollection) to use the `KeyForNoSqlEntityWithPKPartitionId` alternate key. [Learn more about using the EntityReference class with alternate keys](use-alternate-key-reference-record.md#using-the-entityreference-class).
 
 
 ```csharp
@@ -385,7 +385,7 @@ public static void RetrieveExampleAlternateKey(IOrganizationService service, Gui
 }
 ```
 
-This example uses an optional parameter that is named `partitionId` on the [RetrieveRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest). For more information, go to [Use optional parameters](optional-parameters.md).
+This example uses an optional parameter that is named `partitionId` on the [RetrieveRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest). [Learn more about using optional parameters](optional-parameters.md).
 
 ```csharp
 public static void RetrieveExampleOptionalParameter(IOrganizationService service, Guid sensorDataId, string deviceId)
@@ -524,14 +524,14 @@ OData-Version: 4.0
 
 Elastic tables don't currently support returning related rows when a query is run. If you try to return related rows, Dataverse throws an error with code `0x80048d0b` and the following message:
 
-> Link entities are not supported.
+> `Link entities are not supported`.
 
 However, elastic tables do support returning related rows when a single row is retrieved.
 
 ## Upsert a record in an elastic table
 
 > [!IMPORTANT]
-> Upsert operations with elastic tables differ from upsert operations with standard tables. Upsert operations are expected to contain the full payload and will overwrite any existing record data. They don't call the `Create` or `Update` messages. For more information, go to [Elastic table upsert](use-upsert-insert-update-record.md#elastic-table-upsert).
+> Upsert operations with elastic tables differ from upsert operations with standard tables. Upsert operations are expected to contain the full payload and will overwrite any existing record data. They don't call the `Create` or `Update` messages. [Learn more about elastic table upsert](use-upsert-insert-update-record.md#elastic-table-upsert).
 
 With elastic tables, if a record that has a given ID and `partitionid` doesn't exist, it's created. If it already exists, it's replaced.
 
@@ -673,7 +673,7 @@ You can also use the `partitionId` parameter:
 
 Often, applications must ingest a large amount of data into Dataverse in a short time. Dataverse has a group of messages that are designed to achieve high throughput. With elastic tables, the throughput can be even higher.
 
-Bulk operations are optimized for performance when multiple write operations are run on the same table by taking a batch of rows as input in a single write operation. For more information, go to [Bulk Operation messages (preview)](bulk-operations.md).
+Bulk operations are optimized for performance when multiple write operations are performed on the same table by taking a batch of rows as input in a single write operation. [Learn more about bulk Operation messages (preview)](bulk-operations.md).
 
 ### Use CreateMultiple with elastic tables
 
@@ -914,7 +914,7 @@ You can use the `DeleteMultiple` message with either the SDK for .NET or Web API
 #### [SDK for .NET](#tab/sdk)
 
 > [!NOTE]
-> With the SDK, you must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't currently have a `DeleteMultipleRequest` class. For more information, go to [Use messages with the Organization service](org-service/use-messages.md).
+> With the SDK, you must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't currently have a `DeleteMultipleRequest` class. [Learn more about using messages with the Organization service](org-service/use-messages.md).
 
 The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table. The alternate key is used to include the `partitionid` value to uniquely identify the rows.
 

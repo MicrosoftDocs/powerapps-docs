@@ -17,9 +17,9 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-By using [Power Apps](https://make.powerapps.com/), you can create elastic tables without writing code. For more information, go to [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md).
+By using [Power Apps](https://make.powerapps.com/), you can [create and edit elastic tables without writing code](../../maker/data-platform/create-edit-entities-portal.md).
 
-However, it's sometimes useful to use code to create and update table definitions. The following examples show how to use the Dataverse software development kit (SDK) for .NET and Web API to create a new elastic table that has the schema name `contoso_SensorData`. To create an elastic table through code, use the `EntityMetadata.TableType` property with a value of `Elastic`. If you don't set `TableType`, the default value `Standard` is used, and a standard table is created.
+However, it's sometimes useful to use code to create and update table definitions. The following examples show how to use the Dataverse SDK for .NET and Web API to create a new elastic table that has the schema name `contoso_SensorData`. To create an elastic table through code, use the `EntityMetadata.TableType` property with a value of `Elastic`. If you don't set `TableType`, the default value `Standard` is used, and a standard table is created.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -62,7 +62,7 @@ public static CreateEntityResponse CreateElasticTable(IOrganizationService servi
 - [AttributeId](xref:Microsoft.Xrm.Sdk.Messages.CreateEntityResponse.AttributeId): The ID of the `contoso_SensorType` primary name string column.
 - [EntityId](xref:Microsoft.Xrm.Sdk.Messages.CreateEntityResponse.EntityId): The ID of the `contoso_SensorData` table.
 
-For more information, go to [Create a custom table using code](org-service/create-custom-entity.md).
+[Learn more about creating custom tables using the SDK for .NET](org-service/create-custom-entity.md).
 
 #### [Web API](#tab/webapi)
 
@@ -177,13 +177,13 @@ OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c
 
 In this case, `417129e1-207c-e511-80d2-00155d2a68d2` is the ID of the `contoso_SensorData` table. You must make a separate request to get the ID of the `contoso_SensorType` primary name string column.
 
-For more information, go to [Create and update table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md).
+[Learn more about creating and updating table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md).
 
 ---
 
 ## Adding columns
 
-By using [Power Apps](https://make.powerapps.com/), you can create columns in elastic tables without writing code. For more information, go to [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md).
+By using [Power Apps](https://make.powerapps.com/), you can [create columns in elastic tables without writing code](../../maker/data-platform/create-edit-entities-portal.md).
 
 You can also create columns by using the SDK or Web API. However, there are limits on the types of columns that you can add. Currently, you can't add the following types of columns:
 
@@ -203,7 +203,7 @@ This example creates a `contoso_SensorValue` string column with JSON format in t
 
 #### [SDK for .NET](#tab/sdk)
 
-This function creates a new [StringAttributeMetadata](xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata) column by using the [CreateAttributeRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest).
+This function creates a [StringAttributeMetadata](xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata) column by using the [CreateAttributeRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest).
 
 ```csharp
 public static Guid CreateJsonAttribute(IOrganizationService service)
@@ -233,7 +233,7 @@ For more information, go to [Add a String column to the custom table](org-servic
 
 #### [Web API](#tab/webapi)
 
-This request creates a new [StringAttributeMetadata](xref:Microsoft.Dynamics.CRM.StringAttributeMetadata) column by posting to the Web API `EntityDefinitions` resource that refers to the `contoso_SensorData` table.
+This request creates a [StringAttributeMetadata](xref:Microsoft.Dynamics.CRM.StringAttributeMetadata) column by posting to the Web API `EntityDefinitions` resource that refers to the `contoso_SensorData` table.
 
 **Request**
 
@@ -292,7 +292,7 @@ OData-Version: 4.0
 OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)
 ```
 
-For more information, go to [Create columns](webapi/create-update-column-definitions-using-web-api.md#create-columns).
+[Learn more about creating columns using the Web API](webapi/create-update-column-definitions-using-web-api.md#create-columns).
 
 ---
 
@@ -310,7 +310,7 @@ This alternate key has the key values `<table primary key name>` and `partitioni
 
 If you must reference a record where a `partitionid` value is set, you can reference it by using this alternate key.
 
-For more information, go to [Use an alternate key to reference a record](use-alternate-key-reference-record.md).
+[Learn how to use an alternate key to reference a record](use-alternate-key-reference-record.md).
 
 ## Adding relationships
 
@@ -333,7 +333,7 @@ Elastic tables support one-to-many relationships, and related rows can be retrie
 
 ### See also
 
-[Elastic tables for developers (preview)](elastic-tables.md)  
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)  
-[Bulk operation messages (preview)](bulk-operations.md)  
+[Elastic tables for developers (preview)](elastic-tables.md)   
+[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)   
+[Use bulk operation messages (preview)](bulk-operations.md)   
 [Elastic table sample code (preview)](elastic-table-samples.md)

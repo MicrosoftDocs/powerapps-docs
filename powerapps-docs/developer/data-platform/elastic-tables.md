@@ -20,7 +20,7 @@ Dataverse elastic tables are powered by Azure Cosmos DB. They automatically scal
 This article focuses on information that developers need to know about using elastic tables. For more information about the capabilities of elastic tables and what is supported, go to [Create and edit elastic tables (preview)](../../maker/data-platform/create-edit-elastic-tables.md).
 
 > [!IMPORTANT]
-> - This feature is a preview feature.
+> - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## When to use elastic tables
@@ -51,7 +51,7 @@ For more information about differences in the modeling of elastic tables, go to:
 
 Elastic tables use Azure Cosmos DB partitioning to scale individual tables to meet the performance requirements of your application. All elastic tables contain a system-defined **Partition Id** string column. This column has the schema name `PartitionId` and the logical name `partitionid`.
 
-Azure Cosmos DB ensures that the rows in a table are divided into distinct subsets, based on the value of the `partitionid` column for each row. These subsets are known [logical partitions](/azure/cosmos-db/partitioning-overview#logical-partitions).
+Azure Cosmos DB ensures that the rows in a table are divided into distinct subsets, based on the value of the `partitionid` column for each row. These subsets are called [logical partitions](/azure/cosmos-db/partitioning-overview#logical-partitions).
 
 > [!IMPORTANT]
 > To get the best performance that is available with elastic tables, you must choose and consistently apply a partitioning strategy. If you don't set a `partitionid` value for each row, the value will remain null, and you won't be able to change it later.
@@ -82,12 +82,12 @@ Session tokens ensure that all the read operations that are performed during the
 
 The session token is available as an `x-ms-session-token` value in the response of all write operations. To retrieve the most up-to-date row, you must include this value when you retrieve data.
 
-- If you're using the software development kit (SDK), use the `SessionToken` optional parameter.
+- If you're using the SDK, use the `SessionToken` optional parameter.
 - If you're using Web API, use the `MSCRM.SessionToken` request header.
 
 If you retrieve a record without a session token, the recently applied changes might not be applied. Instead, they might be returned in subsequent requests.
 
-For more information, go to [Work with the session token](use-elastic-tables.md#work-with-the-session-token).
+[Learn more about using the session token](use-elastic-tables.md#work-with-the-session-token).
 
 ## Transactional behavior
 
@@ -95,11 +95,11 @@ Elastic tables don't support multi-record transactions. For a single request exe
 
 For example, you have a synchronous plug-in step that is registered on the `PostOperation` stage of the `Create` message on an elastic table. In this case, an error that occurs in the plug-in does **not** roll back the record that is created in Dataverse. You should always avoid intentionally canceling any operation by throwing [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException) in the `PreOperation` or `PostOperation` synchronous stage. If the error is thrown after the `Main` operation, the request returns an error, but the data operation succeeds. Any write operations that are started in the `PreOperation` stage succeed.
 
-However, you should always apply validation rules in a plug-in that is registered for the `PreValidation` synchronous stage. Validation is the purpose of this stage. Even when you use elastic tables, the request returns an error, and the data operation won't begin. For more information, go to [Event execution pipeline](event-framework.md#event-execution-pipeline).
+However, you should always apply validation rules in a plug-in that is registered for the `PreValidation` synchronous stage. Validation is the purpose of this stage. Even when you use elastic tables, the request returns an error, and the data operation won't begin. [Learn more about the event execution pipeline](event-framework.md#event-execution-pipeline).
 
 Elastic tables also don't support grouping requests in a single database transaction that uses the SDK [ExecuteTransactionRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest) or in a Web API `$batch` operation changeset. Currently, these operations succeed but aren't atomic. In the future, an error will be thrown.
 
-For more information, go to:
+To learn more about multi-record transactions, go to:
 
 - [Execute messages in a single database transaction](org-service/use-executetransaction.md)
 - [Change sets](webapi/execute-batch-operations-using-web-api.md#change-sets)
@@ -107,9 +107,9 @@ For more information, go to:
 
 ## Expire data by using Time to live
 
-Dataverse automatically creates a **Time to live** integer column. This column has the schema name `TTLInSeconds` and the logical name `ttlinseconds`.
+Dataverse automatically includes a **Time to live** integer column with elastic tables. This column has the schema name `TTLInSeconds` and the logical name `ttlinseconds`.
 
-When a value is set in this column, it defines the amount of time, in seconds, before the row expires and is automatically deleted from database. If no value is set, the record persists indefinitely, as for standard tables.
+When a value is set in this column, it defines the amount of time, in seconds, before the row expires and is automatically deleted from database. If no value is set, the record persists indefinitely, just like standard tables.
 
 ## Scenario
 
@@ -129,15 +129,15 @@ Dataverse doesn't return an error when you group data operations by using the SD
 
 ### No x-ms-session-token value is returned for delete operations
 
-Dataverse doesn't return the `x-ms-session-token` value for delete operations. For more information, go to [Consistency level](#consistency-level).
+Dataverse doesn't return the `x-ms-session-token` value for delete operations. [Learn more about how this value is used to managed data consistency](#consistency-level).
 
 ### The partitionId optional parameter isn't available for all messages
 
-Whenever a record that uses a custom `partitionid` value must be identified, such as for `Retrieve`, `Update`, or `Upsert` operations, you need a way to reference the `partitionid` value. In this case, you can use the alternate key to reference the record. If you prefer, you should also be able to use the `partitionId` optional parameter style. Currently, only `Retrieve` and `Delete` operations support using the `partitionId` optional parameter. For more information, go to [Using the partitionId parameter](use-elastic-tables.md#using-the-partitionid-parameter).
+Whenever a record that uses a custom `partitionid` value must be identified, such as for `Retrieve`, `Update`, or `Upsert` operations, you need a way to reference the `partitionid` value. In this case, you can use the alternate key to reference the record. If you prefer, you should also be able to use the `partitionId` optional parameter style. Currently, only `Retrieve` and `Delete` operations support using the `partitionId` optional parameter. [Learn more about using the partitionId parameter](use-elastic-tables.md#using-the-partitionid-parameter).
 
 ## Frequently asked questions
 
-This section includes any frequently asked questions (FAQ). If you have a question that isn't addressed in the documentation, select the **This Page** button in the **Feedback** section at the bottom of the page. You must have a GitHub account to submit questions in this way.
+This section will include any frequently asked questions (FAQ). If you have a question that isn't addressed in the documentation, select the **This Page** button in the **Feedback** section at the bottom of the page. You must have a GitHub account to submit questions in this way.
 
 <!-- 
 
@@ -153,8 +153,8 @@ They should ALWAYS include a link to the section of the docs where the informati
 
 ### See also
 
-[Use elastic tables using code (preview)](use-elastic-tables.md)  
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)  
-[Bulk operation messages (preview)](bulk-operations.md)  
-[Elastic table sample code (preview)](elastic-table-samples.md)  
+[Use elastic tables using code (preview)](use-elastic-tables.md)   
+[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)   
+[Bulk operation messages (preview)](bulk-operations.md)   
+[Elastic table sample code (preview)](elastic-table-samples.md)   
 [Partitioning and horizontal scaling in Azure Cosmos DB](/azure/cosmos-db/partitioning-overview)

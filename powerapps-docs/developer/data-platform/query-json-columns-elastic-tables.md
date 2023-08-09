@@ -98,11 +98,11 @@ This example runs a query on the `contoso_SensorData` elastic table to filter fo
 
 All table columns can be queried by using a `c.props` prefix on the schema name of the columns. In this prefix, `c` is an alias or shorthand notation for the elastic table that is being queried. For example, the `contoso_deviceid` column in the `contoso_sensordata` table can be referenced in the Cosmos SQL query by using `c.props.contoso_deviceid`.
 
-For more information, go to [Queries in Azure Cosmos DB for NoSQL](/azure/cosmos-db/nosql/query/getting-started).
+[Learn about queries in Azure Cosmos DB for NoSQL](/azure/cosmos-db/nosql/query/getting-started).
 
 #### [SDK for .NET](#tab/sdk)
 
-The software development kit (SDK) for .NET doesn't yet have request and response classes for the `ExecuteCosmosSqlQuery` message. You can use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) and the [OrganizationResponse class](xref:Microsoft.Xrm.Sdk.OrganizationResponse).
+The SDK for .NET doesn't yet have request and response classes for the `ExecuteCosmosSqlQuery` message. You can use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) and the [OrganizationResponse class](xref:Microsoft.Xrm.Sdk.OrganizationResponse).
 
 The `ExecuteCosmosSqlQuery` message has the following input parameters.
 
@@ -160,10 +160,8 @@ public class QueryResult
 
 ```
 
-For more information, go to:
-
-- [Use open types with custom APIs](use-open-types.md)
-- [Use messages with the Organization service](org-service/use-messages.md)
+- [Learn about open types in Dataverse](use-open-types.md)
+- [Learn to use messages with the Organization service](org-service/use-messages.md)
 
 #### [Web API](#tab/webapi)
 
@@ -219,8 +217,8 @@ OData-Version: 4.0
 
 ### See also
 
-[Elastic tables for developers (preview)](elastic-tables.md)  
-[Create elastic tables using code (preview)](create-elastic-tables.md)  
-[Use elastic tables using code (preview)](use-elastic-tables.md)  
-[Bulk operation messages (preview)](bulk-operations.md)  
+[Elastic tables for developers (preview)](elastic-tables.md)   
+[Create elastic tables using code (preview)](create-elastic-tables.md)   
+[Use elastic tables using code (preview)](use-elastic-tables.md)   
+[Bulk operation messages (preview)](bulk-operations.md)   
 [Elastic table sample code (preview)](elastic-table-samples.md)
