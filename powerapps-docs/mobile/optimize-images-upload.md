@@ -21,7 +21,7 @@ The Power Apps mobile app can optimize images before they get uploaded to Datave
 This is very useful for performance and cost savings. When this feature is enabled, the user experience is smoother both when uploading images to Dataverse and when downloading images that were uploaded with optimization.
 
 > [!Important]
-> -	This feature is available on both canvas apps and model-driven apps. However, for model-driven apps, it’s only available starting with version 3.2308.1.
+> -	This feature is available for both canvas apps and model-driven apps. However, for model-driven apps, it’s only available with version 3.23081.0 or higher.
 > -	This feature is not supported on Power Apps for Windows.
 
 ## Turn on the feature
