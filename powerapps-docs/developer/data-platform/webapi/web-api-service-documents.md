@@ -1,6 +1,6 @@
 ---
-title: "Web API Service Documents (Microsoft Dataverse)| Microsoft Docs"
-description: "Describes OData service documents you can use to understand the Dataverse Web API capabilities available in your environment."
+title: Web API Service Documents
+description: Describes OData service documents you can use to understand the Dataverse Web API capabilities available in your environment.
 ms.date: 04/06/2022
 author: divkamath
 ms.author: dikamath
@@ -15,13 +15,13 @@ contributors:
 ---
 # Web API Service Documents
 
-OData endpoints provide service documents that describe the capabilities of the service. Understanding these service documents will help you use the resources that are available in the environment you are working with.
+OData endpoints provide service documents that describe the capabilities of the service. Understanding these service documents help you use the resources that are available in the environment you're working with.
 
 ## Service document
 
-Simply perform a `GET` request on Web API endpoint to see the service document for your environment. If you haven't set up a Postman environment, you can just paste the Web API endpoint into your browser.
+Perform a `GET` request on Web API endpoint to see the service document for your environment. If you haven't set up a Postman environment, you can just paste the Web API endpoint into your browser.
 
-Your Web API endpoint will look something like this: `https://yourorg.api.crm.dynamics.com/api/data/v9.2/`.
+Your Web API endpoint looks something like this: `https://yourorg.api.crm.dynamics.com/api/data/v9.2/`.
 
 > [!NOTE]
 > If you are using the recommended Postman environment, simply use the `{{webapiurl}}` environment variable. More information: [Set up a Postman environment](setup-postman-environment.md).
@@ -47,7 +47,7 @@ You should see results like this:
     ...
 ```
 
-The service document provides a list of all the *EntitySets* available in your environment. An EntitySet is the name of a resource that refers to a table in Dataverse. You will use the entity set name in the URL to perform operations on the data in a specific table.
+The service document provides a list of all the *EntitySets* available in your environment. An EntitySet is the name of a resource that refers to a table in Dataverse. You'll use the entity set name in the URL to perform operations on the data in a specific table.
 
 > [!TIP]
 > Use `Ctrl+F` on the results of this to find the correct entity set name.
@@ -80,20 +80,20 @@ To get even more information from the $metadata, append `?annotations=true` to t
 
 For example: `https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata?annotations=true`
 
-This will include many different kinds of annotations that can be useful. Most annotations are not included by default because they increase the total size of the document.
+Setting this parameter includes many different kinds of annotations that can be useful. Most annotations aren't included by default because they increase the total size of the document.
 
 These annotations can also be returned by adding the `Prefer: odata.include-annotations="*"` request header. This request header also works for other types of requests. The `annotations=true` query parameter only works for the $metadata document.
 
 ## Service namespace
 
-Near the top of the $metadata you will find this XML element:
+Near the top of the $metadata you'll find this XML element:
 
 ```xml
     <edmx:DataServices>
         <Schema Namespace="Microsoft.Dynamics.CRM" Alias="mscrm" xmlns="http://docs.oasis-open.org/odata/ns/edm">
 ```
 
-This informs you that all the items in the service are within the `Microsoft.Dynamics.CRM` namespace and that `mscrm` is the alias for the namespace. In some situations, you will need to use the fully qualified name of an object, so this will require using the namespace value.
+This element informs you that all the items in the service are within the `Microsoft.Dynamics.CRM` namespace and that `mscrm` is the alias for the namespace. In some situations, you'll need to use the fully qualified name of an object, so this requires using the namespace value.
 
 
 ## Next steps
@@ -101,18 +101,18 @@ This informs you that all the items in the service are within the `Microsoft.Dyn
 Learn about entity types.
 
 > [!div class="nextstepaction"]
-> [Entity Types](web-api-entitytypes.md)<br/>
+> [Entity Types](web-api-entitytypes.md)
 
 ### See also  
 
-[Web API types and operations](web-api-types-operations.md)<br />
-[Web API EntityTypes](web-api-entitytypes.md)<br />
-[Web API Properties](web-api-properties.md)<br />
-[Web API Navigation Properties](web-api-navigation-properties.md)<br />
-[Web API Actions](web-api-actions.md)<br />
-[Web API Functions](web-api-functions.md)<br />
-[Web API Complex and Enumeration types](web-api-complex-enum-types.md)<br />
-[Use the Dataverse Web API](overview.md)<br />
+[Web API types and operations](web-api-types-operations.md)   
+[Web API Entity Types](web-api-entitytypes.md)   
+[Web API properties](web-api-properties.md)   
+[Web API navigation properties](web-api-navigation-properties.md)   
+[Web API actions](web-api-actions.md)   
+[Web API functions](web-api-functions.md)   
+[Web API complex and enumeration types](web-api-complex-enum-types.md)   
+[Use the Dataverse Web API](overview.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

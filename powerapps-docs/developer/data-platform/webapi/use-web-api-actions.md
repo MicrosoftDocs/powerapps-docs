@@ -244,7 +244,7 @@ OData-Version: 4.0
 
 ## Use a custom action
 
-A custom action may be a Custom API or Custom Process Action. Either way it's created, there's a corresponding operation that you can use. With Custom API, the operation may be a function. More information: [Create your own messages](../custom-actions.md)
+A custom action may be a custom API or Custom Process Action. Either way it's created, there's a corresponding operation that you can use. With custom API, the operation may be a function. More information: [Create your own messages](../custom-actions.md)
 
 The following example is for a custom process action.
 
