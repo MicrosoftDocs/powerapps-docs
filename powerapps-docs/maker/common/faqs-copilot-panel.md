@@ -50,7 +50,7 @@ As an AI assistant that helps people find information, Copilot provides the foll
 
 ## How was continue to edit your app with Copilot evaluated? What metrics are used to measure performance? 
 
-We evaluate the feature both qualitatively and quantitatively. To assess the quality of the feature, we'll be conducting user studies with makers to gather their feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. Additionally, we'll be monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
+We evaluate the feature both qualitatively and quantitatively. To assess the quality of the feature, we are conducting user studies with makers to gather their feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. Additionally, we are monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
 Before releasing the Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, provide feedback. Your feedback is used to enhance Microsoft's products and services. Your organization's IT admins have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
 
 ## What are the limitations of continue to edit your app with Copilot? How can users minimize the impact of the [Feature] limitations when using the system? 
@@ -70,7 +70,7 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 Here are some tips to help you get the most out of this feature:
 
 - Use simple language to explain the changes you want to make to your app, such as "add a new screen" or "insert 2 buttons".
-- If the results you get aren't what you were expecting, try being more precise. For example, you could say "add a new button to the selected container", "change the color of the selected button to red", or "display Screen 2 when Button1 is clicked".
+- If the results you get aren't what you expected, try being more precise. For example, you could say "add a new button to the selected container", "change the color of the selected button to red", or "display Screen 2 when Button1 is clicked".
 - You can also try using the default suggestions provided in the Copilot panel and then customize them to suit your needs. And if you still can't get the desired results, send us your feedback.
 
 
