@@ -1,11 +1,11 @@
 ---
-title: Optimize performance for Create and Update operations | Microsoft Docs
+title: Optimize performance to perform at Scale | Microsoft Docs
 description: Choose the best approach when creating or updating large numbers records.
-author: divkamath
+author: divkamath, apurvgh
 ms.topic: article
-ms.date: 05/24/2023
+ms.date: 08/09/2023
 ms.subservice: dataverse-developer
-ms.author: dikamath
+ms.author: dikamath, apurvgh
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -13,31 +13,24 @@ search.app:
   - PowerApps
   - D365CE
 contributors:
-  - JimDaly
+  - JimDaly, apurvgh
 ---
-# Optimize performance for Create and Update operations
+# Optimize performance to perform at Scale.
 
-Dataverse offers several options you can use to maximize total throughput when performing create and update operations with large numbers of records. Learn about the available options and choose the one that is the best for your application.
+Dataverse offers several options you can use to maximize total throughput when performing operations at scale. Using Dataverse SDK developers can adjust the performance with wide of range of options to optimize program performance. This article demostrates available options and that you can choose from  and bring the best in your application.
 
 ## Scenarios
 
-Performance is important for all applications, but it's critical for certain scenarios. In this article, we look at bulk data load and plug-ins.
+Many business applications require the insertion of records into Dataverse. For developers, it is essential to optimize their code to handle significant data volumes while ensuring that performance and reliability are maintained. Consideration should be given to several factors when inserting records, such as the number of records, record size, network latency, and data complexity.
 
-### Elastic tables
-
-Elastic tables are a preview feature at the time of this writing. Elastic tables can provide dramatically improved performance for bulk data operations, but they don't provide strong data consistency or transactions across tables. If performance for bulk operations is most important for your application, consider elastic tables.
-
-More information:
-
-- [Create and edit elastic tables (preview)](../../maker/data-platform/create-edit-elastic-tables.md)
-- [Elastic tables (Preview)](elastic-tables.md)
- 
+> ![!NOTE]
+> Elastic tables are a preview feature at the time of this writing. [Elastic tables (Preview)](elastic-tables.md) can provide dramatically improved performance for bulk data operations. [Create and edit elastic tables (preview)](../../maker/data-platform/create-edit-elastic-tables.md)
 
 ### Bulk data operations
 
-When you must create or update large numbers of records, the choice you make as a developer can save hours of time to complete a task. Applications that perform operations in bulk typically make the most extreme requests for shared resources and encounter [Service protection API limits](api-limits.md). This article provides options you may use to achieve maximum throughput for the level of resources allocated to your Dataverse environment.
+When you must create or update large numbers of records, the choice as a developer can save hours of time to complete a task. Applications that perform operations in bulk typically make the most extreme requests for shared resources and encounter [Service protection API limits](api-limits.md). This article provides options you may use to achieve maximum throughput for the level of resources allocated to your Dataverse environment. Batch inserts allow developers to insert / update multiple records in a single transaction, reducing the number of round trips to the server. Some common examples include Create Multiple, Update Multiple, Execute Multiple Request.
 
-A key point to recognize in this scenario is: Your code runs in a client application that makes individual calls to Dataverse APIs and you manage any errors that occur. You can retry when an operation fails. The situation is different with plug-ins, especially when they're registered for a synchronous step.
+A key point to recognize in this scenario is: **Your code runs in a client application that makes individual calls to Dataverse APIs and you manage any errors that occur. You can retry when an operation fails. The situation is different with plug-ins, especially when they're registered for a synchronous step**.
 
 ### Plug-ins
 
@@ -53,6 +46,8 @@ Because of the way plug-ins run, there are the following constraints.
 - You shouldn't use `ExecuteMultiple` or `ExecuteTransaction` operations within plug-ins. These operations are only intended to be used by client applications and they disrupt the transaction behavior required for plug-ins registered for synchronous steps. More information: [Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md)
 - You shouldn't try to use techniques that involve performing operations in parallel. You must develop your plug-ins knowing that the calls are performed sequentially and may need to be rolled back. More information: [Don't use parallel execution within plug-ins and workflow activities](best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins.md)
 
+> ![IMPORTANT]
+> You can skip your custom code (aka. Plugin) execution altogether by letting the SDK know to skip it. To do so, you must set [BypassCustomPluginExecution](bypass-custom-business-logic.md)
 
 ## Options
 
@@ -109,21 +104,44 @@ These specialized messages optimize performance when the same operation (`Create
 
 To optimize throughput for create and update operations, we recommend the following.
 
-### Consider elastic tables
+- ### Consider table design
+  You can choose between Relational (aka SQL) Entity vs Non-relational Table. Dataverse offers both types of tables allowing flexibility to achieve the level of throughput as per your business needs. If your application doesn't depend on the data modeling and transactional capabilities standard tables provide, consider whether elastic tables would provide a better fit. Read more about [Elastic tables (Preview)](elastic-tables.md) vs Traditional Relational Table. 
 
-If your application doesn't depend on the data modeling and transactional capabilities standard tables provide, consider whether elastic tables would provide a better fit.
+- ### Data Validation
+  Validate the data being inserted to ensure it meets the entity scheme's requirements. This can help prevent errors and reduce the number of failed inserts.
 
-### Bulk Data load scenarios
+- ### Bulk Data load 
 
-- If you're performing `Create` or `Update` operations on large numbers of records for a single table, we recommend using the `CreateMultiple` and `UpdateMultiple` messages when they become available for the tables you're using. You need to experiment to find the optimum number of items to send in each request.
-- You can enable a fall-back strategy to use `ExecuteMultiple` with continue-on-error enabled for any group of operations that fail. This way you can get the benefit of increased throughput most of the time, but still manage to complete the data load when a group of operations fail.
-- If you're able, you should send these requests in parallel, with the Azure affinity cookie disabled to minimize the impact of service protection limits.
+   - If you're performing `Create` or `Update` operations on large numbers of records for a single table, we recommend using the `CreateMultiple` and `UpdateMultiple` messages when they become available for the tables you're using. You need to experiment to find the optimum number of items to send in each request.
+   - You can enable a fall-back strategy to use `ExecuteMultiple` with continue-on-error enabled for any group of operations that fail. This way you can get the benefit of increased throughput most of the time, but still manage to complete the data load when a group of operations fail.
+   - If you're able, you should send these requests in parallel, with the Azure affinity cookie disabled to minimize the impact of service protection limits.
 
-### Plug-ins
+- ### Retrying Operation
+  Your code pattern must include retry logic.  Dataverse returns `Retry-After` in both WebAPI and Organization Service. When dataverse is throttled you will receive HTTP 409. Learn more about [service protection API limits](api-limits.md).
 
-- For tables containing data that may need to be loaded in bulk, you should transfer any synchronous business logic from the individual `Create` and `Update` operation events to the `CreateMultiple` and `UpdateMultiple` events.
-- Currently, we don't support `CreateMultiple` and `UpdateMultiple` operations for use in plug-ins. But when we do, and you have logic that creates or updates records of the same table, you can get some performance benefit by using `CreateMultiple` and `UpdateMultiple` rather than by looping through individual operations. We don't expect you'll initiate operations that create thousands of records in plug-ins. But if you're currently able to reliably create or update 10, 50, or 200 records in a loop, or by using `ExecuteMultiple`, you should see better performance by using `CreateMultiple` and `UpdateMultiple`.
+- ### Adjust Server Affinity
 
+  Upon establishing a connection to an Azure service, a cookie is generated and included in the response. Subsequent requests made by the client will attempt to route to the same server unless capacity management dictates otherwise. This feature is particularly useful for interactive client applications, especially those utilizing web browsers, as it allows for cached data to be reused. Notably, web browsers have server affinity permanently enabled, making it impossible to disable. [Learn More](https://learn.microsoft.com/en-us/dotnet/api/microsoft.powerplatform.dataverse.client.serviceclient.enableaffinitycookie?view=dataverse-sdk-latest?_blank).
+
+  **Microsoft Dataverse SDK Example**
+
+  ```cs
+       client.EnableAffinityCookie = false;
+       client.SessionTrackingId = Guid.Parse(sessionTrackingId); //Sending Request Tracking Information
+  ```
+
+- ### Adjust Degree of Parallelism
+  
+  Dataverse returns a DOP header (Ex: `x-ms-dop-hint`) via Web API Response or `RecommendedDegreesOfParallelism` property when using Microsoft Dataverse Client SDK. You can use this value to adjust your .NET TPL code. However, if you plan to use a multi-scale out app like Azure function, you must carefully select the value. Say you are using Azure Functions with two instances, and your MaxDoP is 50; you should use 25 as a value so that each application instance can use optimal performance. Otherwise, you will consume the complete capacity and will get throttled.  
+
+- ### Optimize your plug-ins
+
+   - For tables containing data that may need to be loaded in bulk, you should transfer any synchronous business logic from the individual `Create` and `Update` operation events to the `CreateMultiple` and `UpdateMultiple` events.
+   - Currently, we don't support `CreateMultiple` and `UpdateMultiple` operations for use in plug-ins. But when we do, and you have logic that creates or updates records of the same table, you can get some performance benefit by using `CreateMultiple` and `UpdateMultiple` rather than by looping through individual operations. We don't expect you'll initiate operations that create thousands of records in plug-ins. But if you're currently able to reliably create or update 10, 50, or 200 records in a loop, or by using `ExecuteMultiple`, you should see better performance by using `CreateMultiple` and `UpdateMultiple`.
+
+- ### Client Architecture
+  
+  Based on our analysis, the primary cause of performance issues with the Dataverse SDK is often related to bottlenecks in client-side code. Developers frequently fail to fully leverage the capabilities of the code, which can impact performance. It is crucial to optimize how the developer utilizes the infrastructure's cores or compute, as this can significantly impact performance. For example, when using Azure Functions, there are several steps that can be taken to optimize performance, such as implementing auto-scaling, using warm-up instances, adjusting CPU usage, utilizing multiple cores, and allowing concurrency
 
 ### See also
 
