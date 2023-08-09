@@ -2,9 +2,8 @@
 title: "Reporting overview for model-driven apps" 
 description: Learn how reporting can be applied to your model-driven app.
 ms.custom: ""
-ms.date: 10/26/2021
+ms.date: 08/09/2023
 ms.reviewer: ""
-
 ms.topic: overview
 author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
@@ -14,8 +13,6 @@ search.audienceType:
   - maker
 ---
 # Reporting overview for model-driven apps
-
-
 
 [Microsoft Dataverse](model-driven-app-glossary.md#dataverse) as a platform supports interaction with many millions of records, filtered down to the relevant security roles. Dataverse presents data in a way that permits the correct record to be found in a reliable fashion.
 
@@ -52,7 +49,7 @@ SQL Server Reporting Services (SSRS) reports allow pixel perfect paginated repor
 
 ## Power BI Reporting
 
-Power BI is a powerful and interactive reporting tool. Power BI dashboards and reports can be introduced into model-driven apps in a range of ways. Unlike some of the other techniques suggested, Power BI reports are not solution aware. So there are more tasks required to ensure that development, test, and production scenarios are maintained.
+Power BI is a powerful and interactive reporting tool. Power BI dashboards and reports can be introduced into model-driven apps in a range of ways.  You can also add Power BI reports and datasets as components in Power Apps solutions. Once you've added a Power BI report to a solution, it can be seamlessly managed as part of your application lifecycle management (ALM) process across environments and tenants.
 
 Additionally, unless direct query techniques are used, record-level security must be reconfigured into the Power BI reports.
 
