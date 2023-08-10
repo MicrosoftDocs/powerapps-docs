@@ -76,7 +76,7 @@ You may need to allow pop-ups in browser when you embed an app in your website t
 Embedding your app is now as simple as adding the iframe to the HTML code for your site (or any other service that supports iframes, such as Power BI or SharePoint):
 
 ```html
-> [!VIDEO https://apps.powerapps.com/play/[AppID]?source=website&screenColor=rgba(165,34,55,1)]
+<iframe width="[W]" height="[H]" src="https://apps.powerapps.com/play/[AppID]?source=website&screenColor=rgba(165,34,55,1)" allow="geolocation; microphone; camera"/>
 ```
 
 Specify values for the iframe width and height, and substitute the ID of your app for `[AppID]`.
