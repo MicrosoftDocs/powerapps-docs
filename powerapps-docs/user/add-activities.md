@@ -468,7 +468,7 @@ To view a conversation transcript, select the **View more** link in the row for 
 
 ## View what you've missed in timeline (preview)
 
-When you access the timeline after being away, activities that you've missed display at the top of the timeline in the **What you've missed** section, along with a number link that indicates how many activities you haven't viewed. Selecting the number link filters the unopened items in the timeline so that you can quickly open the activities or scroll past them as needed.
+When you access the timeline after being away, activities that you've missed display at the top of the timeline. You can quickly open the activities or scroll past them.
 
 ![What you've missed view.](media\timeline-what-you-missed.png "What you've missed view")
 
