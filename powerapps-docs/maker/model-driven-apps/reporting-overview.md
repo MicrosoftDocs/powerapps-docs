@@ -2,9 +2,8 @@
 title: "Reporting overview for model-driven apps" 
 description: Learn how reporting can be applied to your model-driven app.
 ms.custom: ""
-ms.date: 10/26/2021
+ms.date: 08/09/2023
 ms.reviewer: ""
-
 ms.topic: overview
 author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
@@ -15,8 +14,6 @@ search.audienceType:
 ---
 # Reporting overview for model-driven apps
 
-
-
 [Microsoft Dataverse](model-driven-app-glossary.md#dataverse) as a platform supports interaction with many millions of records, filtered down to the relevant security roles. Dataverse presents data in a way that permits the correct record to be found in a reliable fashion.
 
 Model-driven apps provide a range of reporting options to enable users to understand the data associated with their business area more easily.  
@@ -25,17 +22,17 @@ Some types of reporting are straightforward to implement, and others require mor
 
 ## Simple reporting techniques
 
-All of the techniques described below are native to Dataverse. They provide a simple method by which application lifecycle management can be applied.
+All of the techniques described here are native to Dataverse. They provide a simple method by which application lifecycle management can be applied.
 
 ### Table views
 
-At the most basic level, table [views](model-driven-app-glossary.md#view) offer a straightforward native experience in which records are presented in a tabular format. It is easy to overlook the power of views. A table can have multiple views, all of which have individual sorting and filtering applied to them, which offers a simple set of review options to the user.
+At the most basic level, table [views](model-driven-app-glossary.md#view) offer a straightforward native experience in which records are presented in a tabular format. It's easy to overlook the power of views. A table can have multiple views, all of which have individual sorting and filtering applied to them, which offers a simple set of review options to the user.
 
 ### Charts
 
-[Charts](model-driven-app-glossary.md#chart) allow app users to view the data presented in a view in a range of ways, which include bar, pie, and line charts.  Once again, a table can have multiple charts associated with it, and the charts themselves provide interactivity that enables a user to select a bar and the view will filter accordingly.
+[Charts](model-driven-app-glossary.md#chart) allow app users to view the data presented in a view in a range of ways, which include bar, pie, and line charts.  Once again, a table can have multiple charts associated with it, and the charts themselves provide interactivity that enables a user to select a bar and the view filters accordingly.
 
-The extract below shows views and charts used to create an efficient user experience.
+The extract here shows views and charts used to create an efficient user experience.
 
 :::image type="content" source="../../maker/model-driven-apps/media/reporting-charts-and-views.gif" alt-text="Solution explorer":::
 
@@ -52,7 +49,7 @@ SQL Server Reporting Services (SSRS) reports allow pixel perfect paginated repor
 
 ## Power BI Reporting
 
-Power BI is a powerful and interactive reporting tool. Power BI dashboards and reports can be introduced into model-driven apps in a range of ways. Unlike some of the other techniques suggested, Power BI reports are not solution aware. So there are more tasks required to ensure that development, test, and production scenarios are maintained.
+Power BI is a powerful and interactive reporting tool. Power BI dashboards and reports can be introduced into model-driven apps in a range of ways.  You can also add Power BI reports and datasets as components in Power Apps solutions. Once you've added a Power BI report to a solution, it can be seamlessly managed as part of your application lifecycle management (ALM) process across environments and tenants.
 
 Additionally, unless direct query techniques are used, record-level security must be reconfigured into the Power BI reports.
 
@@ -62,7 +59,7 @@ There are three techniques for adding Power BI into your model driven apps.
 |---------|--------------|------------|
 |[Embed a Power BI report in a model-driven system form](embed-powerbi-report-in-system-form.md)|This allows a Power BI report to be presented within a table form and this can be performed in the context of the current record.|Report|
 |[Create or edit a Power BI embedded system dashboard](create-edit-powerbi-embedded-page.md)|This is a technique that an administrator can use to introduce a Power BI dashboard|Dashboard|
-|[How app users can add or edit Power BI visualizations on their dashboards](../../user/add-powerbi-dashboards.md)|This allows a full Power BI dashboard to be introduced, however it is introduced by the user, not an administrator.|Dashboard|
+|[How app users can add or edit Power BI visualizations on their dashboards](../../user/add-powerbi-dashboards.md)|This allows a full Power BI dashboard to be introduced, however it's introduced by the user, not an administrator.|Dashboard|
 
 :::image type="content" source="../../maker/model-driven-apps/media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png" alt-text="Example of embedded Power BI without contextual filtering":::
 
