@@ -58,7 +58,7 @@ To provide feedback to help improve Copilot, app users can click the thumbs up o
 
 If you want to disable the ability for users to submit feedback about Copilot in model-driven apps, follow these steps.
 
-1. Go to make.powerapps.com
+1. Sign in to [Power Apps](https://make.powerapps.com/).
 1. Go to **Tables**, and then open the **Organization** table.
 1. In the **Organization columns and data** section, select **+nnn more** to display the column search box.
 1. In the search box search for the *Allow users to provide feedback for App Copilot* column.
