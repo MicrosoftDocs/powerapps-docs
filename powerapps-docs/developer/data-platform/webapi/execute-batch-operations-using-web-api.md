@@ -79,7 +79,7 @@ The following is an example of a batch request without change sets. This example
 - Creates three task records associated with an account with `accountid` equal to `00000000-0000-0000-0000-000000000001`.
 - Retrieves the task records associated with the account.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
@@ -151,7 +151,7 @@ The end of the batch response will contain a termination indicator like the foll
 
 The following is the response to the batch request example above.
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -256,7 +256,7 @@ The following example shows the use of a change set to:
 - Group the creation of three tasks associated with an account with `accountid` value `00000000-0000-0000-0000-000000000001`.
 - Retrieve the accounts created using a GET request outside of the changeset.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
@@ -318,7 +318,7 @@ GET /api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/Account_Tasks?
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -403,7 +403,7 @@ This section shows various examples on how `$parameter` can be used in the reque
 
 The below example shows how two URI references can be used in a single operation.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/$batch HTTP/1.1
@@ -456,7 +456,7 @@ Content-Type: application/json
 --batch_AAA123--
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -503,7 +503,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/accounts(4f5195a4-7a75-e911-a97
 
 The example given below shows how you can reference a URI using `$1` in the URL of a subsequent request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/$batch HTTP/1.1
@@ -544,7 +544,7 @@ Content-Type: application/json
 --batch_AAA123--
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -581,7 +581,7 @@ OData-Version: 4.0
 
 The example given below shows how to link a Contact entity record to an Account entity record. The URI of Account entity record is referenced as `$1` and URI of Contact entity record is referenced as `$2`.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/$batch HTTP/1.1
@@ -627,7 +627,7 @@ Content-Type:application/json
 --batch_AAA123--
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -672,7 +672,7 @@ OData-Version: 4.0
 
 The example given below shows how to use the Organization URI of a Contact record and link it to an Account record using the `primarycontactid` single-valued navigation property. The URI of the Account entity record is referenced as `$1` and the URI of Contact entity record is referenced as `$2` in the `PATCH` request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/$batch HTTP/1.1
@@ -721,7 +721,7 @@ Content-Type: application/json
 --changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
 --batch_AAA123--
 ```
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -805,7 +805,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/accounts(6cd81853-7b75-e911-a97
 > --batch_AAA123--
 > ```
 >
-> **Response**
+> **Response:**
 > 
 > ```http
 > HTTP 400 Bad Request
@@ -828,7 +828,7 @@ More information: [OData Specification: 8.2.8.3 Preference odata.continue-on-err
 
 The following example attempts to create three task records associated with an account with `accountid` equal to `00000000-0000-0000-0000-000000000001`, but the length of the `subject` property for the first task is too long.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
@@ -881,7 +881,7 @@ Content-Type: application/json; type=entry
 
 Without setting the `Prefer: odata.continue-on-error` request header, the batch fails on the first request in the batch. The batch error represents the error of the first failing request.
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 400 BadRequest
@@ -903,7 +903,7 @@ OData-Version: 4.0
 
 When the `Prefer: odata.continue-on-error` request header is applied to the batch request, the batch request succeeds with a status of `200 OK` and the failure of the first request is returned as part of the body.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
@@ -955,7 +955,7 @@ Content-Type: application/json; type=entry
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

@@ -113,7 +113,7 @@ This example shows the creation of a custom API action with one request paramete
 
 This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `00000000-0000-0000-0000-000000000001`.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.1/customapis HTTP/1.1
@@ -165,7 +165,7 @@ Content-Type: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content

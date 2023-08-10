@@ -91,7 +91,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 ```
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/SendAppNotification
@@ -109,7 +109,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -338,7 +338,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/SendAppNotification
@@ -360,7 +360,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content

@@ -310,7 +310,7 @@ Update
 
 Use the following `GET` request to retrieve the messages supported by a table. The request below retrieves messages for the `account` table.  Replace the `@table` alias parameter value for the table you want to retrieve message names for.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/sdkmessagefilters?$select=sdkmessagefilterid
@@ -321,7 +321,7 @@ Content-Type: application/json
 ```
 
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -537,7 +537,7 @@ usermobileofflineprofilemembership
 
 Use the following `GET` request to retrieve the tables supported by a message. The request below retrieves messages for the `RetrieveUnpublishedMultiple` message.  Replace the `@message` alias parameter value for the message you want to retrieve table names for.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/sdkmessages?$select=sdkmessageid
@@ -548,7 +548,7 @@ Content-Type: application/json
 ```
 
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

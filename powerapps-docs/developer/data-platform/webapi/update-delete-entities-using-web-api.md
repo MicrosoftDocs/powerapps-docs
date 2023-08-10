@@ -35,7 +35,7 @@ The `If-Match: *` header ensures you don't create a new record by accidentally p
 
 This example updates an existing account record with the `accountid` value of 00000000-0000-0000-0000-000000000001.  
   
- **Request**
+ **Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
@@ -54,7 +54,7 @@ If-Match: *
 }  
 ```  
   
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 204 No Content  
@@ -75,7 +75,7 @@ To control which properties are returned, append the `$select` query option to t
   
 This example updates an account entity and returns the requested data in the response.  
   
- **Request**
+ **Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name,creditonhold,address1_latitude,description,revenue,accountcategorycode,createdon HTTP/1.1  
@@ -89,7 +89,7 @@ If-Match: *
 {"name":"Updated Sample Account"}  
 ```  
   
- **Response** 
+ **Response:** 
  
 ```http
 HTTP/1.1 200 OK  
@@ -131,7 +131,7 @@ When you want to update only a single property value, use a `PUT` request with t
   
 The following example updates the `name` property of an existing `account` row with the `accountid` value of 00000000-0000-0000-0000-000000000001.  
   
- **Request**  
+ **Request:**  
 
 ```http
 PUT [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)/name HTTP/1.1  
@@ -142,7 +142,7 @@ OData-Version: 4.0
 {"value": "Updated Sample Account Name"}  
 ```  
   
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 204 No Content  
@@ -158,7 +158,7 @@ To delete the value of a single property use a `DELETE` request with the propert
   
 The following example deletes the value of the `description` property of an account entity with the `accountid` value of 00000000-0000-0000-0000-000000000001.  
   
- **Request**
+ **Request:**
 
 ```http
 DELETE [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)/description HTTP/1.1  
@@ -167,7 +167,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```  
   
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 204 No Content  
@@ -190,7 +190,7 @@ You can see any alternate keys that are defined for a table in the annotations f
 
 In the following example, there's a table with the name `sample_thing` that has an alternate key that refers to two columns: `sample_key1` and `sample_key2`, which are both defined to store integer values.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.2/sample_things(sample_key1=1,sample_key2=1) HTTP/1.1
@@ -207,7 +207,7 @@ Content-Type: application/json
 
 For both create or update operations you get the same response. Notice how the `OData-EntityId` response header uses the key values rather than the GUID primary key identifier for the record. 
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -239,7 +239,7 @@ Sometimes there are situations where you want to perform an `upsert`, but you wa
 
 A delete operation is straightforward. Use the `DELETE` verb with the URI of the entity you want to delete. This example message deletes an account entity with the primary key `accountid` value equal to 00000000-0000-0000-0000-000000000001.  
   
- **Request**
+ **Request:**
 
 ```http
 DELETE [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001) HTTP/1.1  
@@ -248,7 +248,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```  
   
- **Response**
+ **Response:**
 
  If the entity exists, you get a normal response with status 204 to indicate the delete was successful. If the entity isn't found, you get a response with status 404.  
   
