@@ -29,21 +29,21 @@ When you build an app from Dataverse, you don't need to create a connection from
 
 ## Open a blank app
 
-To create an app from scratch that uses data from Dataverse, the first step is to [create a blank app](create-blank-app.md). For this exercise, when you create the blank app, ensure you choose **Phone** layout.
+To create an app from scratch that uses data from Dataverse, the first step is to [create a blank app](create-blank-app.md). For this exercise, when you create the blank app, ensure you choose **Phone** format.
 
 ## Specify a table
 
 1. In the middle of the screen, select **connect to data**.
 
-1. In the **Data** pane, select **Microsoft Dataverse**, select the **Accounts** check box, and then select **Connect**.
+1. In the app authoring menu, select **Data**. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
+
+1. Select **Add data** and in the search box enter, **Accounts** > **Connect**.
 
 1. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
 ## Add a list screen
 
-1. On the **Home** tab, select the down arrow for **New screen**, and then select **List**.
-
-    ![Add a list screen.](./media/data-platform-create-app-scratch/list-screen.png)
+1. On the command bar, select **New screen** > **Templates** tab > **List**.
 
 1. In the left navigation bar, select **BrowseGallery1**, and then set the value of the **Items** property to this formula:
 
@@ -63,9 +63,9 @@ To create an app from scratch that uses data from Dataverse, the first step is t
 
     ![Browse screen.](./media/data-platform-create-app-scratch/final-browse.png)
 
-1. In the left navigation bar, hover over **Screen1**, select the ellipsis icon (...), and then select **Delete**.
+1. In the left app authoring pane, hover over **Screen1**, select the ellipsis icon (...), and then select **Delete**.
 
-1. In the left navigation bar, hover over **Screen2**, select the ellipsis icon (...), and then select **Rename**.
+1. In the left app authoring pane, hover over **Screen2**, select the ellipsis icon (...), and then select **Rename**.
 
 1. Type or paste **BrowseScreen**, and then rename the gallery in that screen as **BrowseGallery**.
 
@@ -76,8 +76,6 @@ To create an app from scratch that uses data from Dataverse, the first step is t
 1. Repeat the first step of the previous procedure, except add a **Form** screen instead of a **List** screen.
 
 1. Set the form's **DataSource** property to **Accounts** and its **Item** property to **BrowseGallery.Selected**, as the **Advanced** tab of the right-hand pane shows.
-
-    ![Set the form's Datasource and Item property.](./media/data-platform-create-app-scratch/form-datasource.png)
 
 1. On the **Properties** tab of the right-hand pane, select **Edit Fields** to open the **Fields** pane.
 
@@ -145,9 +143,7 @@ To create an app from scratch that uses data from Dataverse, the first step is t
 
 ## Test the app
 
-1. In the left navigation bar, select **BrowseScreen**, and then open Preview by pressing F5 (or by selecting the play icon near the upper-right corner).
-
-    ![Open Preview.](./media/data-platform-create-app-scratch/open-preview.png)
+1. On the actions menu, select ![Preview button.](media/studio/preview-button.png) **Preview the app**. More information: [ Preview an app](preview-app.md)
 
 1. Toggle the list between ascending and descending sort orders, and filter the list by one or more characters in the account name.
 

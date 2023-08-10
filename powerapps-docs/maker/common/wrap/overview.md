@@ -146,6 +146,7 @@ Optional additional canvas apps that you're wrapping in the same build for mobil
 
 ### See also
 
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues)
 - [Code sign on iOS](code-sign-ios.md)
 - [Code sign on Android](code-sign-Android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
