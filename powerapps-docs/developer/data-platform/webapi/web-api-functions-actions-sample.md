@@ -45,7 +45,7 @@ The following sections contain a brief discussion of the Dataverse Web API opera
 
 [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI) is a simple and commonly used unbound function.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/WhoAmI HTTP/1.1
@@ -55,7 +55,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -69,7 +69,7 @@ OData-Version: 4.0
 }
 ```
 
-**Console output**
+**Console output:**
 
 ```
 WhoAmI tells us:
@@ -88,7 +88,7 @@ In this example, the parameters are set using query string parameter values.
 
 1. A request for an address in the United States:
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/FormatAddress(Line1=@p1,City=@p2,StateOrProvince=@p3,PostalCode=@p4,Country=@p5)?@p1='123%20Maple%20St.'&@p2='Seattle'&@p3='WA'&@p4='98007'&@p5='USA' HTTP/1.1
@@ -98,7 +98,7 @@ In this example, the parameters are set using query string parameter values.
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -110,7 +110,7 @@ In this example, the parameters are set using query string parameter values.
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    USA Formatted Address:
@@ -121,7 +121,7 @@ In this example, the parameters are set using query string parameter values.
 
 1. A request for an address in Japan.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/FormatAddress(Line1=@p1,City=@p2,StateOrProvince=@p3,PostalCode=@p4,Country=@p5)?@p1='1-2-3%20Sakura'&@p2='Nagoya'&@p3='Aichi'&@p4='455-2345'&@p5='JAPAN' HTTP/1.1
@@ -131,7 +131,7 @@ In this example, the parameters are set using query string parameter values.
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -143,7 +143,7 @@ In this example, the parameters are set using query string parameter values.
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    JAPAN Formatted Address:
@@ -166,7 +166,7 @@ More information:
 
 1. Create a record to be the original record:
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
@@ -198,7 +198,7 @@ More information:
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -208,7 +208,7 @@ More information:
 
 1. Use `InitializeFrom` to get the data for a new record from the original record.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate' HTTP/1.1
@@ -218,7 +218,7 @@ More information:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -232,7 +232,7 @@ More information:
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    New data based on original record:
@@ -298,7 +298,7 @@ More information:
 
 1. Create a new record using the data returned with `InitializeFrom`.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
@@ -322,7 +322,7 @@ More information:
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -330,7 +330,7 @@ More information:
    OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(9ad463e4-6d29-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    New Record:
@@ -359,7 +359,7 @@ More information:
 > Notice how the `AccessType` [EndpointAccessType enum type](xref:Microsoft.Dynamics.CRM.EndpointAccessType) parameter value is passed in the URL. The fully qualified name with the selected member name is required.
 
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/RetrieveCurrentOrganization(AccessType=@p1)?@p1=Microsoft.Dynamics.CRM.EndpointAccessType'Default' HTTP/1.1
@@ -369,7 +369,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -406,7 +406,7 @@ OData-Version: 4.0
 }
 ```
 
-**Console output**
+**Console output:**
 
 ```
 Data returned with RetrieveCurrentOrganizationResponse:
@@ -442,7 +442,7 @@ Data returned with RetrieveCurrentOrganizationResponse:
 
 [RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) returns data on the total number of records for specific entities. The data retrieved is from a snapshot within last 24 hours, so it isn't an exact count at a given moment in time.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/RetrieveTotalRecordCount(EntityNames=@p1)?@p1=["account","contact"] HTTP/1.1
@@ -452,7 +452,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -475,7 +475,7 @@ OData-Version: 4.0
 }
 ```
 
-**Console output**
+**Console output:**
 
 ```
 The number of records for each table according to RetrieveTotalRecordCount:
@@ -492,7 +492,7 @@ The sample uses the `sample_IsSystemAdmin` custom message that is defined using 
 > [!NOTE]
 > When using a bound function or action, you must include the fully qualified name, which includes `Microsoft.Dynamics.CRM.`+ &lt;function or action name&gt; in the url.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.sample_IsSystemAdmin HTTP/1.1
@@ -502,7 +502,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -516,7 +516,7 @@ OData-Version: 4.0
 
 This sample retrieves 10 user records and test each one to determine whether each user has the System Administrator security role.
 
-**Console output**
+**Console output:**
 
 The actual names depend on the people in your environment.
 
@@ -546,7 +546,7 @@ The sample code demonstrates the following operations:
 1. Find an enabled user other than the current user.
 1. Use [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) to determine what access rights the user has for the record created.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(659876fd-6d29-ed11-9db1-00224804f8e2)'} HTTP/1.1
@@ -556,7 +556,7 @@ The sample code demonstrates the following operations:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -568,7 +568,7 @@ The sample code demonstrates the following operations:
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Testing user: Gediminas Matulis
@@ -577,7 +577,7 @@ The sample code demonstrates the following operations:
 
 1. If the user doesn't have <xref:Microsoft.Dynamics.CRM.AccessRights?text=AccessRights>.`DeleteAccess`, grant the user this access using the `GrantAccess` action.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/GrantAccess HTTP/1.1
@@ -601,7 +601,7 @@ The sample code demonstrates the following operations:
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -610,7 +610,7 @@ The sample code demonstrates the following operations:
 
 1. Once `DeleteAccess` has been granted, the same call to <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> shows that they now have access to delete this record:
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(659876fd-6d29-ed11-9db1-00224804f8e2)'} HTTP/1.1
@@ -620,7 +620,7 @@ The sample code demonstrates the following operations:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -632,7 +632,7 @@ The sample code demonstrates the following operations:
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Gediminas Matulis was granted DeleteAccess
@@ -646,7 +646,7 @@ The sample code performs the following operations:
 
 1. Create a security role. The role must be associated with a business unit. The business unit id value was retrieved in [Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami).
    
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/roles HTTP/1.1
@@ -661,7 +661,7 @@ The sample code performs the following operations:
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -671,7 +671,7 @@ The sample code performs the following operations:
 
 1. Retrieve the role, expanding the `roleprivileges_association` collection-valued navigation property to include the privileges included with the role.
    
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2)?$select=roleid&$expand=roleprivileges_association($select=name) HTTP/1.1
@@ -681,7 +681,7 @@ The sample code performs the following operations:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -744,7 +744,7 @@ The sample code performs the following operations:
 
 1. Show the number of privileges created by default for the new role.
    
-   **Console output**
+   **Console output:**
 
    ```
    Number of privileges in new role: 9
@@ -761,7 +761,7 @@ The sample code performs the following operations:
 
 1. Retrieve the definition of the `prvCreateAccount` and `prvReadAccount` privileges from <xref:Microsoft.Dynamics.CRM.privilege?text=privilege EntityType>.
    
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/privileges?$select=name&$filter=name eq 'prvCreateAccount' or name eq 'prvReadAccount' HTTP/1.1
@@ -771,7 +771,7 @@ The sample code performs the following operations:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -797,7 +797,7 @@ The sample code performs the following operations:
 1. Prepare a list of <xref:Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege ComplexType> instances for the `prvCreateAccount` and `prvReadAccount` privileges with the `Depth` property set to <xref:Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth>.'Basic'.
 1. Pass the list as the `AddPrivilegesRole.Privileges` parameter.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.AddPrivilegesRole HTTP/1.1
@@ -824,7 +824,7 @@ The sample code performs the following operations:
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -833,7 +833,7 @@ The sample code performs the following operations:
 
 1. Retrieve the privileges associated with the role again to confirm that they have been added.
    
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2)?$select=roleid&$expand=roleprivileges_association($select=name) HTTP/1.1
@@ -843,7 +843,7 @@ The sample code performs the following operations:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -914,7 +914,7 @@ The sample code performs the following operations:
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Number of privileges after: 11
@@ -935,7 +935,7 @@ The sample code performs the following operations:
 
 Each record created in this sample was added to a list to be deleted at the end. These records are deleted using a `$batch` request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
@@ -988,7 +988,7 @@ DELETE /api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2) HTTP/1.1
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1038,7 +1038,7 @@ OData-Version: 4.0
 
 ```
 
-**Console output**
+**Console output:**
 
 ```
 Deleting created records.

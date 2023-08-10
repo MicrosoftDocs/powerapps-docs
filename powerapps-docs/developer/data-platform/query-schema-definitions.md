@@ -212,7 +212,7 @@ The following JSON is the query.
 }
 ```
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/RetrieveMetadataChanges(Query=@p1)?@p1=%7B%22AttributeQuery%22:%7B%22Criteria%22:%7B%22Conditions%22:[%7B%22ConditionOperator%22:%22Equals%22,%22PropertyName%22:%22IsValidForCreate%22,%22Value%22:%7B%22Type%22:%22System.Boolean%22,%22Value%22:%22True%22%7D%7D],%22FilterOperator%22:%22And%22%7D,%22Properties%22:%7B%22AllProperties%22:false,%22PropertyNames%22:[%22LogicalName%22]%7D%7D,%22Criteria%22:%7B%22Conditions%22:[%7B%22ConditionOperator%22:%22Equals%22,%22PropertyName%22:%22LogicalName%22,%22Value%22:%7B%22Type%22:%22System.String%22,%22Value%22:%22account%22%7D%7D,%7B%22ConditionOperator%22:%22Equals%22,%22PropertyName%22:%22LogicalName%22,%22Value%22:%7B%22Type%22:%22System.String%22,%22Value%22:%22contact%22%7D%7D],%22FilterOperator%22:%22Or%22%7D,%22LabelQuery%22:%7B%22FilterLanguages%22:[1033],%22MissingLabelBehavior%22:0%7D,%22Properties%22:%7B%22AllProperties%22:false,%22PropertyNames%22:[%22SchemaName%22,%22Attributes%22]%7D%7D HTTP/1.1
@@ -223,7 +223,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -507,7 +507,7 @@ static int? RetrieveUserUILanguageCode(IOrganizationService service)
 
 First get the `UserId` using the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/WhoAmI HTTP/1.1
@@ -517,7 +517,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -534,7 +534,7 @@ OData-Version: 4.0
 
 Then use the `UserId` value to filter the records using the `systemuserid` from the [usersettings entity type](xref:Microsoft.Dynamics.CRM.usersettings) to return the `uilanguageid` value.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/usersettingscollection?$select=uilanguageid&$filter=systemuserid eq 4026be43-6b69-e111-8f65-78e7d1620f5e&$top=1&$count=true HTTP/1.1
@@ -544,7 +544,7 @@ If-None-Match: null
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
