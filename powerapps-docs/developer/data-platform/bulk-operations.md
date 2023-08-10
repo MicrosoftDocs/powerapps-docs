@@ -40,7 +40,7 @@ The following code samples show how to use bulk operation messages. You can down
 
 ### CreateMultiple
 
-# [SDK for .NET](#tab/sdk)
+##### [SDK for .NET](#tab/sdk)
 
 Uses the [CreateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest).
 
@@ -77,7 +77,7 @@ static Guid[] CreateMultipleExample(IOrganizationService service,
 }
 ```
 
-# [Web API](#tab/webapi)
+##### [Web API](#tab/webapi)
 
 Uses the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple).
 
@@ -96,20 +96,20 @@ Content-Type: application/json; charset=utf-8
 Content-Length: 396
 
 {
-  "Targets": [
-    {
-      "sample_name": "sample record 0000001",
-      "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-    },
-    {
-      "sample_name": "sample record 0000002",
-      "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-    },
-    {
-      "sample_name": "sample record 0000003",
-      "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
-    }
-  ]
+    "Targets": [
+        {
+            "sample_name": "sample record 0000001",
+            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
+        },
+        {
+            "sample_name": "sample record 0000002",
+            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
+        },
+        {
+            "sample_name": "sample record 0000003",
+            "@odata.type": "Microsoft.Dynamics.CRM.sample_example"
+        }
+    ]
 }
 ```
 
@@ -120,12 +120,12 @@ HTTP/1.1 200 OK
 OData-Version: 4.0
 
 {
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreateMultipleResponse",
-  "Ids": [
-    "8f4c3f92-312b-ee11-bdf4-000d3a993550",
-    "904c3f92-312b-ee11-bdf4-000d3a993550",
-    "914c3f92-312b-ee11-bdf4-000d3a993550"
-  ]
+    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreateMultipleResponse",
+    "Ids": [
+        "8f4c3f92-312b-ee11-bdf4-000d3a993550",
+        "904c3f92-312b-ee11-bdf4-000d3a993550",
+        "914c3f92-312b-ee11-bdf4-000d3a993550"
+    ]
 }
 ```
 
@@ -135,7 +135,7 @@ OData-Version: 4.0
 
 Just like when you update individual records, the data you send with `UpdateMultiple` must contain only the values you're changing. Learn how to [update records with SDK for .NET](org-service/entity-operations-update-delete.md) and [update records with the Web API](webapi/update-delete-entities-using-web-api.md#basic-update).
 
-# [SDK for .NET](#tab/sdk)
+##### [SDK for .NET](#tab/sdk)
 
 Uses the [UpdateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest).
 
@@ -163,7 +163,7 @@ static void UpdateMultipleExample(IOrganizationService service, List<Entity> rec
 }
 ```
 
-# [Web API](#tab/webapi)
+##### [Web API](#tab/webapi)
 
 Uses the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple).
 
@@ -182,23 +182,23 @@ Content-Type: application/json; charset=utf-8
 Content-Length: 621
 
 {
-  "Targets": [
-    {
-      "sample_name": "sample record 0000001 Updated",
-      "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
-      "sample_exampleid": "8f4c3f92-312b-ee11-bdf4-000d3a993550"
-    },
-    {
-      "sample_name": "sample record 0000002 Updated",
-      "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
-      "sample_exampleid": "904c3f92-312b-ee11-bdf4-000d3a993550"
-    },
-    {
-      "sample_name": "sample record 0000003 Updated",
-      "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
-      "sample_exampleid": "914c3f92-312b-ee11-bdf4-000d3a993550"
-    }
-  ]
+    "Targets": [
+        {
+            "sample_name": "sample record 0000001 Updated",
+            "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
+            "sample_exampleid": "8f4c3f92-312b-ee11-bdf4-000d3a993550"
+        },
+        {
+            "sample_name": "sample record 0000002 Updated",
+            "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
+            "sample_exampleid": "904c3f92-312b-ee11-bdf4-000d3a993550"
+        },
+        {
+            "sample_name": "sample record 0000003 Updated",
+            "@odata.type": "Microsoft.Dynamics.CRM.sample_example",
+            "sample_exampleid": "914c3f92-312b-ee11-bdf4-000d3a993550"
+        }
+    ]
 }
 ```
 
@@ -213,9 +213,9 @@ OData-Version: 4.0
 
 ### DeleteMultiple
 
-`DeleteMultiple` is only available for elastic tables.
+`DeleteMultiple` is available only for elastic tables.
 
-#### [SDK for .NET](#tab/sdk)
+##### [SDK for .NET](#tab/sdk)
 
 You must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't have a `DeleteMultipleRequest` class. Learn how to [use messages with the Organization service](org-service/use-messages.md).
 
@@ -255,7 +255,7 @@ public static void DeleteMultipleExample(IOrganizationService service)
 }
 ```
 
-#### [Web API](#tab/webapi)
+##### [Web API](#tab/webapi)
 
 The following example shows how to use the `DeleteMultiple` action to delete multiple rows from the `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows.
 
@@ -274,23 +274,23 @@ Content-Type: application/json; charset=utf-8
 Content-Length: 603
 
 {
-  "Targets": [
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
-      "contoso_sensordataid": "6114ca58-0928-ee11-9965-6045bd5cd155",
-      "partitionid": "Device-ABC-1234"
-    },
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
-      "contoso_sensordataid": "6214ca58-0928-ee11-9965-6045bd5cd155",
-      "partitionid": "Device-ABC-1234"
-    },
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
-      "contoso_sensordataid": "6314ca58-0928-ee11-9965-6045bd5cd155",
-      "partitionid": "Device-ABC-1234"
-    }
-  ]
+    "Targets": [
+        {
+            "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+            "contoso_sensordataid": "6114ca58-0928-ee11-9965-6045bd5cd155",
+            "partitionid": "Device-ABC-1234"
+        },
+        {
+            "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+            "contoso_sensordataid": "6214ca58-0928-ee11-9965-6045bd5cd155",
+            "partitionid": "Device-ABC-1234"
+        },
+        {
+            "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
+            "contoso_sensordataid": "6314ca58-0928-ee11-9965-6045bd5cd155",
+            "partitionid": "Device-ABC-1234"
+        }
+    ]
 }
 ```
 
@@ -318,7 +318,7 @@ Standard and elastic table usage is different because standard tables use Azure 
 
 ### Number of records
 
-The number of records you should include with each request is different depending on whether you're using standard or elastic tables.
+The number of records that you should include with each request depends on whether you're using standard or elastic tables.
 
 > [!TIP]
 > Both standard and elastic tables have greater throughput when you [send bulk operation messages in parallel](send-parallel-requests.md).
@@ -335,7 +335,7 @@ Because there's no transaction with elastic tables, there's no performance benef
 
 ### On Error behavior
 
-The behavior when errors occur is different depending on whether you're using standard or elastic tables.
+The behavior when errors occur depends on whether you're using standard tables or elastic tables.
 
 #### On Error behavior with standard tables
 
@@ -345,25 +345,25 @@ Any error that occurs in a bulk operation with a standard table causes the entir
 
 With elastic tables, a bulk operation may partially succeed. You can use the error details to identify which records failed.
 
-# [SDK for .NET](#tab/sdk)
+##### [SDK for .NET](#tab/sdk)
 
 When you use the SDK to perform a bulk operation on an elastic table, a [FaultException](xref:System.ServiceModel.FaultException%601) of type [OrganizationServiceFault](xref:Microsoft.Xrm.Sdk.OrganizationServiceFault) is thrown if a failure occurs. Use the following code to get the status of each record.
 
 ```csharp
 if (ex.Detail.ErrorDetails.TryGetValue("Plugin.BulkApiErrorDetails", out object errorDetails))
 {
-   List<BulkApiErrorDetail> bulkApiErrorDetails = JsonConvert.DeserializeObject<List<BulkApiErrorDetail>>(errorDetails.ToString());
+    List<BulkApiErrorDetail> bulkApiErrorDetails = JsonConvert.DeserializeObject<List<BulkApiErrorDetail>>(errorDetails.ToString());
 }
 
 public class BulkApiErrorDetail
 {
-   public int RequestIndex { get; set; }
-   public string Id { get; set; }
-   public int StatusCode { get; set; }
+    public int RequestIndex { get; set; }
+    public string Id { get; set; }
+    public int StatusCode { get; set; }
 }
 ```
 
-# [Web API](#tab/webapi)
+##### [Web API](#tab/webapi)
 
 When you use the Web API to perform a bulk operation on an elastic table, you need to pass the `Prefer` header with value `odata.include-annotations=*` or `odata.include-annotations=Microsoft.PowerApps.CDS.ErrorDetails.*`, which gives the status of each record. [Learn how to include more details with errors](webapi/compose-http-requests-handle-errors.md#include-more-details-with-errors).
 
@@ -371,7 +371,7 @@ When you use the Web API to perform a bulk operation on an elastic table, you ne
 
 ### Availability
 
-Bulk operation message availability is different depending on whether you're using standard or elastic tables. All elastic tables support the `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple` messages.
+Bulk operation message availability depends on whether you're using standard tables or elastic tables. All elastic tables support the `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple` messages.
 
 #### Availability with standard tables
 
@@ -443,7 +443,7 @@ GET [Organization Uri]/api/data/v9.2/sdkmessagefilters?$select=sdkmessagefilteri
 Content-Type: application/json
 ```
 
-When the table supports the message, an `sdkmessagefilterid` value is returned. If it isn't supported, the `value` is an empty array.
+If the table supports the message, an `sdkmessagefilterid` value is returned. Otherwise, the value is an empty array.
 
 **Response:**
 
@@ -515,7 +515,7 @@ If you're using the Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Datav
 The default timeout set using ServiceClient is 4 minutes, which is long for any synchronous operation. You can change this value using the static [ServiceClient.MaxConnectionTimeout](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.MaxConnectionTimeout) property. The default timeout using [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) is 2 minutes.
 
 > [!NOTE]
-> Before you increase the time limits, you should consider reducing the number of records passed in the `Targets` parameter.
+> Before you increase the time limits, you should consider reducing the number of records that are passed in the `Targets` parameter.
 
 ### Not supported for use in plug-ins
 
@@ -525,7 +525,7 @@ At this time, we don't support using bulk operation messages in plug-ins. More i
 
 The following issues will be addressed before the bulk operations feature becomes generally available.
 
-### UpdateMultipleRequest.ConcurrencyBehavior not working
+### UpdateMultipleRequest.ConcurrencyBehavior doesn't work
 
 <xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.ConcurrencyBehavior> specifies the type of optimistic [concurrency behavior](xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior) that should be applied. Possible values are `AlwaysOverwrite`, `Default`, and `IfRowVersionMatches`. Currently, the `Default` option is always applied, regardless of what you set. The behavior depends on whether [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) is set for the table.
 
@@ -545,9 +545,9 @@ We don't plan to change `Retrieve` and `RetrieveMultiple` message behavior. Thes
 
 ### How are API limits applied?
 
-There are two types of API limits. The bulk operation messages don't provide any way to bypass either of these limits.
+There are two types of API limits. The bulk operation messages don't provide any way to bypass either type.
 
-#### Service Protection limits
+#### Service protection limits
 
 As described in [Service protection API limits](api-limits.md), limits have three facets. Two of these limits are evaluated on a five-minute sliding window and apply when using these messages.
 
