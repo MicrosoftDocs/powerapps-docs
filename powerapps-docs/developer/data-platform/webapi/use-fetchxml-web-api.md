@@ -48,7 +48,7 @@ You should URL-encode any request that you send to any RESTful web service. If y
 
 The following example shows a `GET` request using the previous FetchXML with the entity set path for `accounts`. It passes the encoded XML using this parameter: `?fetchXml=`
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?fetchXml=%3Cfetch%20mapping%3D%27logical%27%3E%3Centity%20name%3D%27account%27%3E%3Cattribute%20name%3D%27accountid%27%2F%3E%3Cattribute%20name%3D%27name%27%2F%3E%3Cattribute%20name%3D%27accountnumber%27%2F%3E%3C%2Fentity%3E%3C%2Ffetch%3E HTTP/1.1
@@ -57,7 +57,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -145,7 +145,7 @@ The following series of FetchXML requests show the use of paging cookies. This e
 
 Send the first page with the `page` value set to `'1'`. Use the `Prefer: odata.include-annotations="*"` request header to make sure necessary annotations in the response are returned.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/contacts?fetchXml=%3Cfetch+page%3D%221%22+count%3D%223%22+mapping%3D%22logical%22+output-format%3D%22xml-platform%22+version%3D%221.0%22+distinct%3D%22false%22%3E%0D%0A++%3Centity+name%3D%22contact%22%3E%0D%0A++++%3Cattribute+name%3D%22fullname%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22jobtitle%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22annualincome%22+%2F%3E%0D%0A++++%3Corder+descending%3D%22true%22+attribute%3D%22fullname%22+%2F%3E%0D%0A++++%3Cfilter+type%3D%22and%22%3E%0D%0A++++++%3Ccondition+value%3D%22%25(sample)%25%22+attribute%3D%22fullname%22+operator%3D%22like%22+%2F%3E%0D%0A++++++%3Ccondition+value%3D%2218717e9c-643f-ed11-9db0-002248225e95%22+attribute%3D%22parentcustomerid%22+operator%3D%22eq%22+%2F%3E%0D%0A++++%3C%2Ffilter%3E%0D%0A++%3C%2Fentity%3E%0D%0A%3C%2Ffetch%3E&$count=true HTTP/1.1
@@ -156,7 +156,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -240,7 +240,7 @@ In the following request, the FetchXML looks like this before it's URL-encoded:
 </fetch>
 ```
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/contacts?fetchXml=%3Cfetch+page%3D%222%22+count%3D%223%22+mapping%3D%22logical%22+output-format%3D%22xml-platform%22+version%3D%221.0%22+distinct%3D%22false%22+paging-cookie%3D%22%26lt%3Bcookie+page%3D%26quot%3B1%26quot%3B%26gt%3B%26lt%3Bfullname+last%3D%26quot%3BRobert+Lyon+(sample)%26quot%3B+first%3D%26quot%3BSusanna+Stubberod+(sample)%26quot%3B+%2F%26gt%3B%26lt%3Bcontactid+last%3D%26quot%3B%7B30717E9C-643F-ED11-9DB0-002248225E95%7D%26quot%3B+first%3D%26quot%3B%7B20717E9C-643F-ED11-9DB0-002248225E95%7D%26quot%3B+%2F%26gt%3B%26lt%3B%2Fcookie%26gt%3B%22%3E%0D%0A++%3Centity+name%3D%22contact%22%3E%0D%0A++++%3Cattribute+name%3D%22fullname%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22jobtitle%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22annualincome%22+%2F%3E%0D%0A++++%3Corder+descending%3D%22true%22+attribute%3D%22fullname%22+%2F%3E%0D%0A++++%3Cfilter+type%3D%22and%22%3E%0D%0A++++++%3Ccondition+value%3D%22%25(sample)%25%22+attribute%3D%22fullname%22+operator%3D%22like%22+%2F%3E%0D%0A++++++%3Ccondition+value%3D%2218717e9c-643f-ed11-9db0-002248225e95%22+attribute%3D%22parentcustomerid%22+operator%3D%22eq%22+%2F%3E%0D%0A++++%3C%2Ffilter%3E%0D%0A++%3C%2Fentity%3E%0D%0A%3C%2Ffetch%3E&$count=true HTTP/1.1
@@ -251,7 +251,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -301,7 +301,7 @@ Preference-Applied: odata.include-annotations="*"
 
 On the final page, the `@Microsoft.Dynamics.CRM.morerecords` and `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotations aren't included in the response.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/contacts?fetchXml=%3Cfetch+page%3D%223%22+count%3D%223%22+mapping%3D%22logical%22+output-format%3D%22xml-platform%22+version%3D%221.0%22+distinct%3D%22false%22+paging-cookie%3D%22%26lt%3Bcookie+page%3D%26quot%3B2%26quot%3B%26gt%3B%26lt%3Bfullname+last%3D%26quot%3BNancy+Anderson+(sample)%26quot%3B+first%3D%26quot%3BRene+Valdes+(sample)%26quot%3B+%2F%26gt%3B%26lt%3Bcontactid+last%3D%26quot%3B%7B24717E9C-643F-ED11-9DB0-002248225E95%7D%26quot%3B+first%3D%26quot%3B%7B38717E9C-643F-ED11-9DB0-002248225E95%7D%26quot%3B+%2F%26gt%3B%26lt%3B%2Fcookie%26gt%3B%22%3E%0D%0A++%3Centity+name%3D%22contact%22%3E%0D%0A++++%3Cattribute+name%3D%22fullname%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22jobtitle%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22annualincome%22+%2F%3E%0D%0A++++%3Corder+descending%3D%22true%22+attribute%3D%22fullname%22+%2F%3E%0D%0A++++%3Cfilter+type%3D%22and%22%3E%0D%0A++++++%3Ccondition+value%3D%22%25(sample)%25%22+attribute%3D%22fullname%22+operator%3D%22like%22+%2F%3E%0D%0A++++++%3Ccondition+value%3D%2218717e9c-643f-ed11-9db0-002248225e95%22+attribute%3D%22parentcustomerid%22+operator%3D%22eq%22+%2F%3E%0D%0A++++%3C%2Ffilter%3E%0D%0A++%3C%2Fentity%3E%0D%0A%3C%2Ffetch%3E&$count=true HTTP/1.1
@@ -312,7 +312,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -354,7 +354,7 @@ The length of a URL in a `GET` request is limited. Including FetchXML as a param
 
 ### Example
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/$batch HTTP/1.1
@@ -375,7 +375,7 @@ OData-MaxVersion: 4.0
 --batch_AAA123--
 ```
 
-**Response**
+**Response:**
 
 ```json
 --batchresponse_cbfd44cd-a322-484e-913b-49e18af44e34

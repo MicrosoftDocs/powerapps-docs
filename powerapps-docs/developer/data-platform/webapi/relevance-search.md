@@ -177,7 +177,7 @@ In order to use any of the search operators as part of the search text, escape t
 
 The following example is a basic search request and response.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/query
@@ -192,7 +192,7 @@ POST [Organization URI]/api/search/v1.0/query
 }
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -367,7 +367,7 @@ The default is searching across all Dataverse search&ndash;configured tables.
 Filters are applied while searching data and are specified in standard OData
 syntax.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
@@ -383,7 +383,7 @@ POST [Organization URI]/api/search/v1.0/suggest
 
 The following example shows a basic suggestion search request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
@@ -392,7 +392,7 @@ POST [Organization URI]/api/search/v1.0/suggest
 }
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -454,7 +454,7 @@ and columns.
 Filters are applied while searching data and are specified in standard OData
 syntax.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
@@ -470,7 +470,7 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 The following example shows a basic autocomplete request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
@@ -479,7 +479,7 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 }
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
