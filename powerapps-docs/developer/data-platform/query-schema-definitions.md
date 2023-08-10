@@ -383,17 +383,7 @@ Use [MetadataConditionExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.Metadata
 |`PropertyName`|string|The name of the property to evaluate|
 |`Value`|object|The value (or values) to compare.|
 
-Generally, you can only use properties that represent simple data types, enumerations, [BooleanManagedProperty](xref:Microsoft.Xrm.Sdk.BooleanManagedProperty) or [AttributeRequiredLevelManagedProperty](xref:Microsoft.Xrm.Sdk.Metadata.AttributeRequiredLevelManagedProperty) in a `MetadataFilterExpression`. When a `BooleanManagedProperty` or `AttributeRequiredLevelManagedProperty` is specified, only the `Value` property is evaluated.
-
-You should be aware of the following limitations:
-
-- You cannot set conditions on any properties that are collections or labels.
-- The following simple types are not supported:
-
-   - [AttributeMetadata.SourceType property](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SourceType)
-   - `MaxSupportedValue` and `MinSupportedValue` properties found on numeric types.
-
-
+Generally, you can only use properties that represent simple data types, enumerations, [BooleanManagedProperty](xref:Microsoft.Xrm.Sdk.BooleanManagedProperty) or [AttributeRequiredLevelManagedProperty](xref:Microsoft.Xrm.Sdk.Metadata.AttributeRequiredLevelManagedProperty) in a `MetadataFilterExpression`. You cannot set conditions on any properties that are collections or labels. When a `BooleanManagedProperty` or `AttributeRequiredLevelManagedProperty` is specified, only the `Value` property is evaluated. Filtering on [AttributeMetadata.SourceType property](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SourceType) isn't supported.
 
 #### [Web API](#tab/webapi)
 
@@ -408,15 +398,7 @@ Use [MetadataConditionExpression](xref:Microsoft.Dynamics.CRM.MetadataConditionE
 |`Value`|[Object ComplexType](xref:Microsoft.Dynamics.CRM.Object)|The value (or values) to compare. |
 
 
-Generally, you can only use properties that represent simple data types, enumerations, [BooleanManagedProperty](xref:Microsoft.Dynamics.CRM.BooleanManagedProperty) or [AttributeRequiredLevelManagedProperty](xref:Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty) in a `MetadataFilterExpression`. When a `BooleanManagedProperty` or `AttributeRequiredLevelManagedProperty` is specified, only the `Value` property is evaluated.
-
-You should be aware of the following limitations:
-
-- You cannot set conditions on any properties that are collections or labels.
-- The following simple types are not supported:
-
-  - [AttributeMetadata](xref:Microsoft.Dynamics.CRM.AttributeMetadata).SourceType property
-  - `MaxSupportedValue` and `MinSupportedValue` properties found on numeric types.
+Generally, you can only use properties that represent simple data types, enumerations, [BooleanManagedProperty](xref:Microsoft.Dynamics.CRM.BooleanManagedProperty) or [AttributeRequiredLevelManagedProperty](xref:Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty) in a `MetadataFilterExpression`. You cannot set conditions on any properties that are collections or labels. When a `BooleanManagedProperty` or `AttributeRequiredLevelManagedProperty` is specified, only the `Value` property is evaluated. Filtering on [AttributeMetadata](xref:Microsoft.Dynamics.CRM.AttributeMetadata).SourceType property isn't supported.
 
 The [Object ComplexType](xref:Microsoft.Dynamics.CRM.Object) has two string properties: `Type` and `Value`. To set the `Type` you must match the .NET type for the values that you are comparing. The following table shows the `Type` values to use.
 
