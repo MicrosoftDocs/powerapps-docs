@@ -69,4 +69,5 @@ If you want to disable the ability for users to submit feedback about Copilot in
 
 ## See also
 
+[Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md) <br />
 [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
