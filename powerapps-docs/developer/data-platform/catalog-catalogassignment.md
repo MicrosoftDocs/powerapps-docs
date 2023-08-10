@@ -281,7 +281,7 @@ See the [Create a record using the Web API](webapi/create-entity-web-api.md) sec
 
 #### Create the root catalog
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/catalogs HTTP/1.1
@@ -302,7 +302,7 @@ Accept: application/json
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -312,7 +312,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/catalogs(00000000-0000-0000-000
 
 #### Create the Table Events Sub-catalog
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/catalogs HTTP/1.1
@@ -334,7 +334,7 @@ Accept: application/json
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -346,7 +346,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(00000000-000
 
 See [Get the Id of a table](#get-the-id-of-a-table) for information about the id of a table.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/catalogassignments HTTP/1.1
@@ -366,7 +366,7 @@ Accept: application/json
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content

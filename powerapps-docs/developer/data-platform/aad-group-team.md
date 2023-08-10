@@ -41,7 +41,7 @@ An AAD group team can be created in Dataverse by making an API call (programmati
 
 Citizen developers wanting to programmatically create a Microsoft Dataverse AAD group team can do so by providing the object ID of an existing AAD group as shown in the following command.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/teams
@@ -63,7 +63,7 @@ Where:
 
 An administrator can assign a security role to an AAD group team after the AAD group is created in AAD. The AAD group team is created into Dataverse automatically if it doesn't exist in Dataverse.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/teams(azureactivedirectoryobjectid=<group team ID>,membershiptype=0)/teamroles_association/$ref
@@ -78,7 +78,7 @@ Accept: application/json
 
 An administrator can assign a security role to an AAD group user.  The user is added into Dataverse automatically if the user doesn't exist in Dataverse and the role is assigned directly to the user.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/systemusers(azureactivedirectoryobjectid=<user object ID>)/systemuserroles_association/$ref
@@ -94,7 +94,7 @@ An administrator can assign a record to an AAD group.  The AAD group team is cre
 
 The example below shows the syntax for assigning an account record.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.0/accounts(<account ID>)
@@ -111,7 +111,7 @@ An administrator can assign a record to an AAD group member.  The AAD group memb
 
 The example below shows the syntax for assigning an account record.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.0/accounts(<account ID>)
@@ -127,7 +127,7 @@ Accept: application/json
 
 The example below shows the syntax for sharing an account record.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/GrantAccess
@@ -153,7 +153,7 @@ Accept: application/json
 
 The example below shows the syntax for sharing an account record.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/GrantAccess
@@ -179,7 +179,7 @@ You can retrieve a system user table row using an Azure user object identifier (
 
 The example below shows the syntax for retrieving a user row.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/SystemUser(azureactivedirectoryobjectid=<user object ID>)
@@ -189,13 +189,13 @@ GET [Organization URI]/api/data/v9.0/SystemUser(azureactivedirectoryobjectid=<us
 
 Members of an AAD group can query all the security roles that are directly and indirectly assigned to them using the following command.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/RetrieveAadUserRoles(DirectoryObjectId=<user object ID)?$select=_parentrootroleid_value,name
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -217,13 +217,13 @@ GET [Organization URI]/api/data/v9.0/RetrieveAadUserRoles(DirectoryObjectId=<use
 
 Members of an AAD group can check their security privileges without being a user of Dataverse using the following command.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/RetrieveAadUserPrivileges(DirectoryObjectId=<user object ID>)
 ```
 
-**Response**
+**Response:**
 
 ```json
 {

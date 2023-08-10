@@ -236,7 +236,7 @@ Use the `x-ms-session-token` value that is returned to set the `SessionToken` op
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/contoso_sensordatas
@@ -255,7 +255,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -323,7 +323,7 @@ public static void UpdateExample(
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=<Guid Value>,partitionId='deviceid-001')
@@ -340,7 +340,7 @@ If-Match: *
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -409,7 +409,7 @@ public static void RetrieveExampleOptionalParameter(IOrganizationService service
 
 This example uses the `partitionId` query parameter.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/sensordata(<sensordataid value>)?partitionId=deviceid-001&$select=contoso_value,contoso_timestamp
@@ -420,7 +420,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -475,7 +475,7 @@ public static EntityCollection RetrieveMultipleExample(IOrganizationService serv
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/sensordata?partitionId=deviceid-001
@@ -486,7 +486,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -583,7 +583,7 @@ This example upserts a row in the `SensorData` table with ID = `ff67610c-82ce-41
 > [!NOTE]
 > Upsert is identical to update, except the `If-Match: *` request header isn't included.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.2/sensordata(ff67610c-82ce-412c-85df-0bbc6521bb01)
@@ -602,7 +602,7 @@ OData-Version: 4.0
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -647,7 +647,7 @@ public static void DeleteExample(
 
 This example uses the alternate key style to delete a row in the `contoso_SensorData` table with `contoso_sensordataid` = `02d82842-f3f4-ed11-8848-000d3a993550` and `partitionid` = `'deviceid-001'`.
 
-**Request**
+**Request:**
 
 ```http
 DELETE [Organization URI]/api/data/v9.2/contoso_sensordatas(contoso_sensordataid=02d82842-f3f4-ed11-8848-000d3a993550,partitionid='deviceid-001')
@@ -656,7 +656,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -747,7 +747,7 @@ public static Guid CreateMultiple(IOrganizationService service)
 
 This example shows how to use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple) to create multiple rows in the `contoso_SensorData` elastic table. The `partitionid` value is included to uniquely identify the rows. These operations set the `contoso_deviceid`,`contoso_sensortype`, `partitionid`, and `ttlinseconds` properties.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/contoso_sensordatas/Microsoft.Dynamics.CRM.CreateMultiple
@@ -785,7 +785,7 @@ Content-Length: 741
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -863,7 +863,7 @@ public static Guid UpdateMultiple(IOrganizationService service)
 
 This example shows how to use the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple) to update multiple rows of the `contoso_SensorData` elastic table. The `partitionid` value is included to uniquely identify the rows. These updates set the `contoso_energyconsumption` property.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/contoso_sensordatas/Microsoft.Dynamics.CRM.UpdateMultiple
@@ -898,7 +898,7 @@ Content-Length: 954
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -959,7 +959,7 @@ This example shows how to use the `DeleteMultiple` action to delete multiple row
 > [!NOTE]
 > Currently, the Web API `DeleteMultiple` action is a private action. You won't find it in the [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) or in the Dataverse <xref:Microsoft.Dynamics.CRM.ActionIndex?displayProperty=fullName>. This action will become public in the coming weeks. You can use it while it's private.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/contoso_sensordatas/Microsoft.Dynamics.CRM.DeleteMultiple
@@ -991,7 +991,7 @@ Content-Length: 603
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent

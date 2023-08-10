@@ -190,7 +190,7 @@ You can use either the Web API or the Organization Service using the Dataverse S
 
 To use the `sample_ExportDataUsingFetchXmlToAnnotation` custom API with the Web API, send a `POST` request to the API endpoint. You can use Postman to send this request. More information: [Set up a Postman environment](../../webapi/setup-postman-environment.md)
 
- **Request**
+ **Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/sample_ExportDataUsingFetchXmlToAnnotation
@@ -209,7 +209,7 @@ Accept: application/json
 }
 ```
 
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -274,7 +274,7 @@ You can use either the Web API or the Dataverse SDK for .NET to use the `sample_
 
 To use the `sample_CleanupExportedDataAnnotations` custom API with the Web API, send a `POST` request to the API endpoint. You can use Postman to send this request. More information: [Set up a Postman environment](../../webapi/setup-postman-environment.md)
 
- **Request**
+ **Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/sample_CleanupExportedDataAnnotations
@@ -284,7 +284,7 @@ OData-Version: 4.0
 Accept: application/json
 ```
 
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 204 No Content
