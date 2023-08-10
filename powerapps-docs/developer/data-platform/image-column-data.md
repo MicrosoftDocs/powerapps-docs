@@ -97,7 +97,7 @@ More information:
 
 The following request returns the `MaxSizeInKB` value for an [ImageAttributeMetadata](xref:Microsoft.Dynamics.CRM.ImageAttributeMetadata) column with the logical name `sample_imagecolumn` in the `account` table.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='sample_imagecolumn')/Microsoft.Dynamics.CRM.ImageAttributeMetadata?$select=MaxSizeInKB HTTP/1.1
@@ -107,7 +107,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -197,7 +197,7 @@ account.sample_sampleimage
 
 This request will return the names of the table and image columns that can store full-sized images.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/attributeimageconfigs?$select=parententitylogicalname,attributelogicalname&$filter=canstorefullimage eq true HTTP/1.1
@@ -207,7 +207,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -289,7 +289,7 @@ More information: [Build queries with QueryExpression](org-service/build-queries
 
 The request below will return the table and image column names of all primary image columns.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/entityimageconfigs?$select=parententitylogicalname,primaryimageattribute HTTP/1.1
@@ -299,7 +299,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -408,7 +408,7 @@ With Web API, the property values are base 64 encoded string values representing
 
 This request returns an image column named `sample_imagecolumn` with an account record:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/accounts(<accountid>)?$select=sample_imagecolumn HTTP/1.1
@@ -418,7 +418,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -435,7 +435,7 @@ OData-Version: 4.0
 
 This request updates the `sample_imagecolumn` image column with an updated image:
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/accounts(<accountid>) HTTP/1.1
@@ -452,7 +452,7 @@ Content-Length: 5220
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -530,7 +530,7 @@ There are three different ways to delete an image column value using Web API.
 
 ### Use PATCH and set the image column value to null
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/accounts(<accountid>) HTTP/1.1
@@ -548,7 +548,7 @@ Content-Length: 90
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -560,7 +560,7 @@ More information: [Basic update](webapi/update-delete-entities-using-web-api.md#
 
 ### Use PUT and set the image column value to null
 
-**Request**
+**Request:**
 
 ```http
 PUT [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_imagecolumn HTTP/1.1
@@ -574,7 +574,7 @@ Content-Length: 15
 {"value": null}
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -586,7 +586,7 @@ More information: [Update a single property value](webapi/update-delete-entities
 
 ### Use DELETE with the resource URL referencing the image column
 
-**Request**
+**Request:**
 
 ```http
 DELETE [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_imagecolumn HTTP/1.1
@@ -596,7 +596,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent

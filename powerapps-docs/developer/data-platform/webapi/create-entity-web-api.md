@@ -28,7 +28,7 @@ Use a `POST` request to send data to create a table row (entity record). You can
 
  This example creates an new account entity record. `accounts` is the entity set name for the [account EntityType](xref:Microsoft.Dynamics.CRM.account). The response `OData-EntityId` header contains the URI of the created entity.
 
- **Request**
+ **Request:**
 
 ```http
 
@@ -48,7 +48,7 @@ Accept: application/json
 }
 ```
 
- **Response**
+ **Response:**
 
 ```http
 
@@ -74,7 +74,7 @@ When an entity is created in this way, the `OData-EntityId` header containing th
 
 This example creates a new account entity and returns the requested data in the response.
 
-**Request**
+**Request:**
 
  ```http
 
@@ -95,7 +95,7 @@ Prefer: return=representation
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 
@@ -149,7 +149,7 @@ More information:
 > [!NOTE]
 > When you create a new table row, you can't insert a non-primary image at the same time. For a non-primary image to be added, the row must already exist.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/accounts
@@ -179,7 +179,7 @@ Accept: application/json
 
 ```
 
-**Response**
+**Response:**
 
  ```http
 
@@ -199,7 +199,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(3c6e4b5f-86f6-e411-80d
 
 This request is using the `Prefer: return=representation` header so it returns the values of the created record. More information: [Create with data returned](#create-with-data-returned)
 
-**Request**
+**Request:**
 
 ```http
 
@@ -221,7 +221,7 @@ Prefer: return=representation
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 
@@ -291,7 +291,7 @@ The following example shows how to create an account record using the values of 
 
 ### Step 1: Get the data with InitializeFrom
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(00000000-0000-0000-0000-000000000001)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate'
@@ -302,7 +302,7 @@ Content-Type: application/json
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```json
 {

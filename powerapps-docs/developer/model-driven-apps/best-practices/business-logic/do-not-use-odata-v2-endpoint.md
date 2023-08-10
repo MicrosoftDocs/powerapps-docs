@@ -109,14 +109,14 @@ These examples show the differences between the Organization Data Service and th
 
 The Organization Data Service has no way to manage paging other than using `$top `and `$skip`. The maximum page size is 50 records.
 
-**Request**
+**Request:**
 
 ```http
 GET  [Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet?$select=OwnershipCode,PrimaryContactId,OpenDeals_Date,Telephone1,NumberOfEmployees,Name,AccountNumber,DoNotPhone,IndustryCode&$filter=PrimaryContactId/Id ne null&$top=2 HTTP/1.1
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -208,7 +208,7 @@ When more than 50 records are returned, use the `__next` property to access the 
 
 The Web API `Prefer: odata.maxpagesize` request header gives you explicit control over paging.
 
-**Request**
+**Request:**
 
 ```http
 GET  [Organization URI]/api/data/v9.2/accounts?$select=ownershipcode,_primarycontactid_value,opendeals_date,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode&$filter=_primarycontactid_value ne null&$count=true HTTP/1.1
@@ -220,7 +220,7 @@ OData-Version: 4.0
 If-None-Match: null
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -291,7 +291,7 @@ These examples show the differences between the Organization Data Service and th
 
 #### [Organization Data Service](#tab/odatav2)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet HTTP/1.1
@@ -321,7 +321,7 @@ Content-Type: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 With the Organization Data Service, all properties are returned when a record is created.
 
@@ -349,7 +349,7 @@ REQ_ID: a0c614be-50be-4c1e-9413-1c7ba459c5c9
 
 The following example uses the `Prefer: return=representation` request header. This header defines a behavior similar to the Organization Data Service behavior of returning `201 Created` with the columns defined by the `$select` query option. Without it, the Web API returns `201 No Content` and the ID of the record that's created is included in the URL value of the `OData-EntityId` response header.
 
-**Request**
+**Request:**
 
 ```http
 POST  [Organization URI]/api/data/v9.2/accounts?$select=ownershipcode,_primarycontactid_value,opendeals_date,customersizecode,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode HTTP/1.1
@@ -375,7 +375,7 @@ Content-Type: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 201 Created
@@ -413,7 +413,7 @@ Preference-Applied: odata.include-annotations="*"
 
 Without the `Prefer: return=representation` request header, the response is like this:
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -430,14 +430,14 @@ These examples show the differences between the Organization Data Service and th
 
 #### [Organization Data Service](#tab/odatav2)
 
-**Request**
+**Request:**
 
 ```http
 GET https://[Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet(guid'b68d56a6-4739-ed11-9db0-002248296d7e')?$select=OwnershipCode,PrimaryContactId,OpenDeals_Date,Telephone1,NumberOfEmployees,Name,AccountNumber,DoNotPhone,IndustryCode HTTP/1.1
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -482,7 +482,7 @@ HTTP/1.1 200 OK
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET https://[Organization URI]/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e)?$select=ownershipcode,_primarycontactid_value,opendeals_date,customersizecode,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode HTTP/1.1
@@ -493,7 +493,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -539,7 +539,7 @@ These examples show the differences between the Organization Data Service and th
 
 The Organization Data Service requires the `X-HTTP-Method: MERGE` request header to be applied with a `POST` request.
 
-**Request**
+**Request:**
 
 ```http
 POST https://[Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet(guid'b68d56a6-4739-ed11-9db0-002248296d7e') HTTP/1.1
@@ -566,7 +566,7 @@ Content-Type: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -575,7 +575,7 @@ HTTP/1.1 204 No Content
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 PATCH https://[Organization URI]/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e) HTTP/1.1
@@ -599,7 +599,7 @@ Content-Type: application/json
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -615,14 +615,14 @@ These examples show the differences between the Organization Data Service and th
 
 #### [Organization Data Service](#tab/odatav2)
 
-**Request**
+**Request:**
 
 ```http
 DELETE https://[Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet(guid'b68d56a6-4739-ed11-9db0-002248296d7e') HTTP/1.1
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -630,7 +630,7 @@ HTTP/1.1 204 No Content
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 DELETE https://[Organization URI]/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e) HTTP/1.1
@@ -640,7 +640,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content

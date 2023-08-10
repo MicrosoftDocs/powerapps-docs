@@ -1,7 +1,7 @@
 ---
 title: "FAQ for Dataverse search | MicrosoftDocs"
 description: FAQ about Dataverse search
-author: sericks
+author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 08/02/2023

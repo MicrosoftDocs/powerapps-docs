@@ -8,7 +8,7 @@ ms.service: powerapps
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: bap-template
-ms.reviewer:
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
