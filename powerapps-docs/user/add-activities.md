@@ -1,16 +1,16 @@
 ---
 title: "Timeline Overview for Users| MicrosoftDocs"
 description: Timeline Overview for Users 
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 07/28/2023
+ms.date: 08/01/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
-ms.assetid: 
+ms.reviewer: 
+ms.assetid: sericks
 search.audienceType: 
   - enduser
 ---
@@ -39,14 +39,14 @@ When enabled by your system administrator, you can use the icons that are displa
 - [Search row](#search-rows-on-timeline)
 - [Add attachments](#add-an-attachment-to-a-note-in-timeline)
 
-The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user will see. The signed-in user will see any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user will only see email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Set up the timeline control](/power-apps/maker/model-driven-apps/set-up-timeline-control).
+The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user sees. The signed-in user sees any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user only sees email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Set up the timeline control](/power-apps/maker/model-driven-apps/set-up-timeline-control).
 
 > [!Note]
-> The Notes feature is not available from the timeline. 
+> The Notes feature isn't available from the timeline. 
 
 ## Create a timeline row
 
-When enabled by your system administrator, you can use the **Create a timeline record** feature to quickly create appointments, tasks, send emails, as well as make notes and posts and associate them with other rows.
+When enabled by your system administrator, you can use the **Create a timeline record** feature to quickly create appointments, tasks, send emails, and make notes and posts and associate them with other rows.
 
 1. Select **Create a timeline record** icon.<BR><BR>
 ![Create a timeline row icon.](media\timeline-create-a-record-icon1c.png "Use the Create a timeline row feature") 
@@ -80,9 +80,9 @@ Filters are valuable for sorting data. You can easily filter through rows and ac
 
 ### Filter options
 
-The following category and sub-category options are available on the filer menu:
+The following category and subcategory options are available on the filer menu:
 
-| Category              | Sub-category   |
+| Category              | Subcategory   |
 |-----------------------|----------------|
 | Row type           |<li>Notes</li><li>Posts</li><li>Activities</li>|
 |Activity type         |<li>Appointment</li><li>Campaign Activity</li><li>Campaign Response</li><li>Email</li><li>Fax</li><li>Case Resolution</li><li>Letter</li><li>Opportunity Close</li><li>Order Close</li><li>Phone Call</li><li>Quote Close</li><li>Recurring Appointment</li><li>Social Activity</li><li>Task</li><li>Project Service Approval</li><li>Booking Alert</li><li>Conversation</li><li>Session</li><li>Customer Voice survey invite</li><li>Customer Voice survey response</li><li>Custom activities (as configured by your system administrator)</li> |
@@ -126,13 +126,13 @@ The **More commands** option contains refresh, sort, and email functionalities.
 ![More commands timeline functionality.](media\timeline-more-commands-1.png "More commands timeline functionality")
 
 Legend
-1. The **More commands** ![More commands.](media\timeline-more-commands-icon.png "More commands") icon, when expanded, provides additional functionality options.
+1. The **More commands** ![More commands.](media\timeline-more-commands-icon.png "More commands") icon, when expanded, provides more functionality options.
 1. The **Refresh timeline** command updates row details in the timeline.
 1. The **Sort newer to older** or **Sort older to newer** command is used to sort rows.
 1. The **Show email as** command is used to enable or disable threaded email views.
 1. The **Display layout** command allows you to choose from two different views: **Roomy** or **Cozy**. **Roomy** (set by default) shows you more information, such as profile details, and adds space between the rows. **Cozy** hides some of the details, such as icons, and compacts the space between rows.
 1. The **Remember my filters** command allows your filters to persist when you close the record so that they continue to be applied across sessions.
-1. The **Reset to default** command will revert all of the command settings you've changed back to the default settings.
+1. The **Reset to default** command reverts all of the command settings you've changed back to the default settings.
 
 ## View email inline in timeline
 
@@ -158,7 +158,7 @@ Legend
 ![Expanded threaded email view.](media\timeline-threaded-email-views-2a.png "Expanded threaded email view")
 
 Legend
-1. When expanded, the most recent 10 email responses in the thread will display. To display more, select **Show more** to expand the view again.
+1. When expanded, the most recent 10 email responses in the thread display. To display more, select **Show more** to expand the view again.
 2. Emails in the same thread are displayed as being linked together.
 
 ### Enable threaded email views in timeline
@@ -183,7 +183,7 @@ Steps:
 
 **Enable threaded email through Personal Options setting**
 
-To enable threaded email via this option, go to the command bar and select **Settings**, then **Personalization Settings**. This will display the **Set Personal Options** dialog box so you can use  the following steps to enable threaded email view on timeline.
+To enable threaded email via this option, go to the command bar and select **Settings**, then **Personalization Settings**. This displays the **Set Personal Options** dialog box so you can use the following steps to enable the threaded email view on timeline.
 
 Steps:
 1. Select the **Email** tab.
@@ -202,14 +202,14 @@ When enabled by your system administrator, you can easily search for rows in the
 ![Enable threaded email timeline view - option 2.](media\timeline-search-records-1a.png "Enable threaded email timeline view - option 2")
 
 Legend
-1. The **Search** bar allows you to quickly find rows using keywords or phrases that the search feature will retrieve and display below the search bar.
+1. The **Search** bar allows you to quickly find rows using keywords or phrases that the search feature retrieves and displays below the search bar.
 2. Keywords that are used are highlighted.
 
 ## Work with notes and posts
 
 Notes allow you to record richly formatted information and images for reference, summary, or investigation. You can easily add a mention to another user or a reference to a timeline row. The mention capability is available in timeline only when rich text notes and rich text posts are enabled. 
 
-When you type the **@** symbol, the results you see are matches with the first name, last name or email address of system users starting with your search string. When you mouse over the profile image, you can view the user's detailed profile card and online presence status. More information: [View the profile card for a contact or user](profile-cards.md)
+When you type the **@** symbol, the results you see are matches with the first name, last name, or email address of system users starting with your search string. When you mouse over the profile image, you can view the user's detailed profile card and online presence status. More information: [View the profile card for a contact or user](profile-cards.md)
 
 When you type the **#** symbol, the results you see are matches with the account and contact name table rows starting with your search string.
 
@@ -261,7 +261,7 @@ In read mode:
 2. When you're finished viewing or downloading the attachment, select **Close** to return to the note or post.
 
 > [!Note]
-> The use of the **Attachment preview** dialog to view the file can be skipped in the browser by using **Ctrl + Left click (of mouse)**. By doing so, the attachment will be directly downloaded without previewing it.
+> The use of the **Attachment preview** dialog to view the file can be skipped in the browser by using **Ctrl + Left click (of mouse)**. By doing so, the attachment is directly downloaded without previewing it.
 
 ### Access the command bar to perform actions
 
@@ -275,7 +275,7 @@ Legend
 1. Only the actions associated with that row are displayed in the top-right command bar displayed in the row. 
 2. Each row displays a different set of associated actions. Not all actions work on all rows.
 
-The following is an overview of the command bar icons and the actions they support: 
+The following table is an overview of the command bar icons and the actions they support: 
 
 | Icon | Name | Description |
 |-----|------|-------------|
@@ -290,7 +290,7 @@ The following is an overview of the command bar icons and the actions they suppo
 | ![Like a post.](media\email-like-a-post-icon.png "Like a post icon")|Like this post| Lets you like a post. **Note**: This command is only available on Posts.|
 | ![Edit.](media\email-edit-icon.png "Edit icon")|Edit this note|Lets you edit a note. **Note**: This command is only available on Notes.|
 
-The following is an overview of the default command bars for frequently used activities, notes, and posts: 
+The following table is an overview of the default command bars for frequently used activities, notes, and posts: 
 
 | Activity | Command bar icons | Notes |
 |-----|------|-------------|
@@ -322,11 +322,11 @@ Legend
 > - Only **Notes** have rich text capability, and they're only available in the timeline. 
 > - You can only format the message body of a note; not the title.
 > - The rich text editor is available only for Unified Interface.
-> - If you create a rich text editor note in Unified Interface and then view the note in the web client, it will display in HTML syntax.
+> - If you create a rich text editor note in Unified Interface and then view the note in the web client, it displays in HTML syntax.
 
 ### View whether a note has attachments and inline files in the timeline
 
-If you attach a file to a note or include an inline image in the note, the timeline will show that the note has an attachment or inline files. If you attach a file or include multiple files inline, the note will show the number of files using the first two file names and a number to represent the remaining count of and the file type.
+If you attach a file to a note or include an inline image in the note, the timeline shows that the note has an attachment or inline files. If you attach a file or include multiple files inline, the note shows the number of files using the first two file names and a number to represent the remaining count of and the file type.
 
 ![View the number of attachments in a note on timeline.](media\timeline-attachments-notes.png "View the number of attachments in a note on timeline")
 
@@ -335,8 +335,8 @@ If you attach a file to a note or include an inline image in the note, the timel
 ![Add a mention or reference to a team member in a note on timeline.](media\timeline_at_1_legend_note.png "Add a mention or reference to a team member in a note on timeline")
 
 Legend
-1. Typing the @ sign in the **Note** field will display a flyout menu with a list of users that have been recently used.
-2. If the user row is not displayed, typing the name after the @ sign refreshes the rows in the flyout menu using the **Quick Find** search engine that's operating in the background.
+1. Typing the @ sign in the **Note** field displays a flyout menu with a list of users that have been recently used.
+2. If the user row isn't displayed, typing the name after the @ sign refreshes the rows in the flyout menu using the **Quick Find** search engine that's operating in the background.
 3. Switch views using **Advanced** to display the **Lookup Records** pane. In the **Lookup Records** pane, you can switch between the **Recent records** and **All records** view to search rows.
 
 When you mouse over the profile image, you can view the user's detailed profile card and online presence status.
@@ -376,8 +376,8 @@ When enabled by your system administrator, you can either add a post to a row or
 ![Add a mention or reference to a team member in a post on timeline.](media\timeline_at_1_legend.png "Add a mention or reference to a team member in a post on timeline")
 
 Legend
-1. Typing the @ sign in the **Post** field will display a flyout menu with a list of users that have been recently used.
-2. If the user row is not displayed, typing the name after the @ sign refreshes the rows in the flyout menu using the **Quick Find** search engine that's operating in the background.
+1. Typing the @ sign in the **Post** field displays a flyout menu with a list of users that have been recently used.
+2. If the user row isn't displayed, typing the name after the @ sign refreshes the rows in the flyout menu using the **Quick Find** search engine that's operating in the background.
 3. Switch views using **Advanced** to display the **Lookup Records** pane. In the **Lookup Records** pane, you can switch between the **Recent records** and **All records** view to search rows.
 
 When you mouse over the profile image, you can view the user's detailed profile card and online presence status.
@@ -394,10 +394,10 @@ To add a reference such as links in a post to a timeline row, select the ![**Cre
 ![Add a link.](media\timeline-add-link-12a.png "Add a link")
 
 Legend
-1. Links can be added to a row by typing **#** which will display a flyout menu with a list of rows recently accessed. Type a keyword after the # tag and the display refreshes in the flyout menu via the **Quick Find** search engine that's operating in the background.
-2. Rows displayed can be of any row type, such as accounts, contacts or leads.
-3. The icons beside the row names in the flyout menu indicate the row types, which helps you determine which row to select.  
-4. **Advanced** provides more options when a row cannot be located by allowing the user to  switch to a different view or create a new row.  
+1. Links can be added to a row by typing **#** which displays a flyout menu with a list of rows recently accessed. Type a keyword after the # tag and the display refreshes in the flyout menu via the **Quick Find** search engine that's operating in the background.
+2. Rows displayed can be of any row type, such as accounts, contacts, or leads.
+3. The icons beside the row names in the flyout menu indicate the row types, which helps you determine which row to select.
+4. **Advanced** provides more options when a row cannot be located by allowing the user to switch to a different view or create a new row.
 
 ### Look up rows in posts in timeline
 
@@ -424,7 +424,7 @@ The following table describes the different formatting features and functionalit
 |----------------------|-------------------------|-----------------------------|-----------------------------|
 |![Format Painter.](media/format-painter.png "Format Painter")| Format Painter | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
 |![Font.](media/format-font.png "Font") | Font | Ctrl+Shift+F | Select a font of your choice. The default font is Segoe UI.<br /><br /> **Note**: When you select any formatted content, the font name for that content displays. If your selection contains multiple fonts, the topmost font name of your selection is displayed. |
-|![Font Size.](media/font-size.png "Font Size") | Font size | Ctrl+Shift+P | Change the size of your text. The default size is 9pt.<br /><br /> **Note**: When you select any formatted content, the font size for that content displays. If your selection contains multiple font sizes, the topmost font name of your selection is displayed.|
+|![Font Size.](media/font-size.png "Font Size") | Font size | Ctrl+Shift+P | Change the size of your text. The default size is 9 pt.<br /><br /> **Note**: When you select any formatted content, the font size for that content displays. If your selection contains multiple font sizes, the topmost font name of your selection is displayed.|
 |![Bold.](media/format-bold.png "Bold")| Bold | Ctrl+B | Make your text bold. |
 |![Italic.](media/format-italic.png "Italic")| Italic | Ctrl+I | Italicize your text. |
 |![Underline.](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
@@ -438,25 +438,24 @@ The following table describes the different formatting features and functionalit
 |![Align Left.](media/align-left.png "Align Left")| Align Left | Ctrl+L | Align your content with the left margin. (Commonly used for body text to make it easier to read.) |
 |![Align Center.](media/align-center.png "Align Center")| Align Center | Ctrl+E | Center your content on the page. (Commonly used for a formal appearance.) |
 |![Align Right.](media/align-right.png "Align Right")| Align Right | Ctrl+R | Align  content to the right on the page. (Commonly used for a formal appearance.) |
-|![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it. |
+|![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" becomes "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link opens after you select it. |
 |![Remove Link.](media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
 |![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type small letters just above the line of text. |
 |![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type small letters just below the line of text. |
 |![Strikethrough.](media/format-strikethrough.png "Strikethrough")| Strikethrough |  | Cross out text by drawing a line through it. |
-|![Insert Image.](media\insert-picture.png "Insert Image")| Insert Image|	|You can insert an image by directly copying and pasting it inline in the editor, dragging and dropping it from your desktop or local folder directly into the editor, or by typing a URL. The following formats are supported: .PNG, .JPG., or .GIF.<br /><br />To insert an image inline in your article: <br />1. Drag and drop the image or copy and paste it directly into the article. <br />2. Drag any corner of the image to resize it.<br /><br />To insert an image using a URL or navigating to the local image:<br />1. Choose Insert Image.<br />2. In the **Image** property dialog, choose from the following options:<br /><ul><li>Select **Browse** to navigate to the image on your computer.</li><li>Or specify the web address of the image, and properties to define how the image will appear in the email or article.</li><br />**Note:**<ul><li>If the image is located on the external server, use the full absolute path. </li><li>If the image is located on a local server, you can use a relative path. </li><li>If you want the image to be linked to a target, add a URL for the image.</li><li>You can also specify if you want the targeted page to open in a new window, topmost window, same window, or parent window.</li></ul>
+|![Insert Image.](media\insert-picture.png "Insert Image")| Insert Image|	|You can insert an image by directly copying and pasting it inline in the editor, dragging and dropping it from your desktop or local folder directly into the editor, or by typing a URL. The following formats are supported: .PNG, .JPG., or .GIF.<br /><br />To insert an image inline in your article: <br />1. Drag and drop the image or copy and paste it directly into the article. <br />2. Drag any corner of the image to resize it.<br /><br />To insert an image using a URL or navigating to the local image:<br />1. Choose Insert Image.<br />2. In the **Image** property dialog, choose from the following options:<br /><ul><li>Select **Browse** to navigate to the image on your computer.</li><li>Or specify the web address of the image, and properties to define how the image appears in the email or article.</li><br />**Note:**<ul><li>If the image is located on the external server, use the full absolute path. </li><li>If the image is located on a local server, you can use a relative path. </li><li>If you want the image to be linked to a target, add a URL for the image.</li><li>You can also specify if you want the targeted page to open in a new window, topmost window, same window, or parent window.</li></ul>
 |![Left to Right.](media/left-to-right.png "Left to Right")| Left to Right |  | Change the text to left-to-right for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. This is the default setting.|
 |![Right to Left.](media/right-to-left.png "Right to Left")| Right to Left |  | Change the text to right-to-left for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. The default setting is left-to-right. |
 |![Undo Typing.](media/undo-typing.png "Undo Typing")| Undo Typing |  | Undo changes you made to the content. |
 |![Redo Typing.](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
-|![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
+|![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging, and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
 |![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Appears when the toolbar is collapsed. Click to expand the toolbar and make all options visible. |
 |![Copy to Clipboard.](media/copy-clipboard.png "Copy to Clipboard")| Copy to Clipboard | | Copies entire text in a note to the clipboard so that you can paste the contents in another location.
 
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
 
 For more information, see [Commonly used rich text editor configurations](../maker/model-driven-apps/rich-text-editor-control.md#commonly-used-rich-text-editor-configurations).
-
 
 ## View a conversation transcript
 
@@ -466,11 +465,23 @@ To view a conversation transcript, select the **View more** link in the row for 
 
 ![Conversation transcript view.](media\timeline-transcript-view.png "Conversation transcript view")
 
+
 ## View what you've missed in timeline (preview)
 
 When you access the timeline after being away, activities that you've missed display at the top of the timeline. You can quickly open the activities or scroll past them.
 
 ![What you've missed view.](media\timeline-what-you-missed.png "What you've missed view")
+
+## Pin or unpin records in timeline
+
+If your administrator has enabled the pin setting, you can quickly access activities, such as records, by keeping them at the top of the timeline. Pinning an activity eliminates the need to scroll through every activity to find the one you need.
+
+Pin an activity by selecting the pin icon next to it. This moves it to the top of the timeline in the **Pinned** section, where it can be quickly accessed. The Pinned section also lists the number of records that are pinned.
+
+![Pin and unpin activity view.](media\timeline-pin-unpin-activity.png "Pin and unpin an activity view")
+
+To unpin an activity, select the pin icon next to it. It moves out of the **Pinned** section and back to the place it orginally appeared in the list of activities in timeline.
+
 
 ## See also
 
