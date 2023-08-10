@@ -137,7 +137,7 @@ The following table shows some of the examples where embedding a canvas app is a
 | A Power BI report that is added to Teams, or a SharePoint site.                                 | Web, e.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> |
 | A model-driven form that is added to Teams.                                                     | Web, e.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
 | A canvas app is embedded in a 3rd party client.                                                 | 3rd party web client that iframe's an app         | 3rd party native client via WebView            |
-|A canvas app in [Unified Service Desk](https://learn.microsoft.com/dynamics365/unified-service-desk/admin/overview-unified-service-desk) |None|Unified Service Desk Desktop app|
+|A canvas app in [Unified Service Desk](/dynamics365/unified-service-desk/admin/overview-unified-service-desk) |None|Unified Service Desk Desktop app|
 ## Proxies
 Power Apps does not support running with a proxy enabled. This can cause unpredictable behavior. If you encounter issues, disable the proxy and then try again.
 
