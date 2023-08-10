@@ -155,7 +155,7 @@ The reference panel is a great way to get work done without moving away from the
 
  Watch this video to learn more about the reference panel:
 
-<div class="embeddedvideo"><iframe src="https://www.youtube.com/embed/ruAPEKY5vNc" frameborder="0" allowfullscreen=""></iframe></div>
+> [!VIDEO https://www.youtube.com/embed/ruAPEKY5vNc]
 
 
 ## App message bar 
