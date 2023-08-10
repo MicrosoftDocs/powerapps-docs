@@ -1,5 +1,5 @@
 ---
-title: Add Copilot to a model-driven app | MicrosoftDocs
+title: Add Copilot to model-driven apps | MicrosoftDocs
 description: Learn how to add Copilot in a model-driven app to assist app users.
 author: Mattp123
 ms.service: powerapps
@@ -13,7 +13,7 @@ applies_to:
 search.audienceType: 
   - maker
 ---
-# Add Copilot to a model-driven app (preview)
+# Add Copilot to model-driven apps (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

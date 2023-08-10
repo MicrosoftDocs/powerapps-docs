@@ -1684,6 +1684,8 @@
         href: ./model-driven-apps/customize-manage-powerbi-components.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
+    - name: Add Copilot to apps
+      href: ./model-driven-apps/add-ai-copilot.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
     - name: Use themes to apply organization branding
