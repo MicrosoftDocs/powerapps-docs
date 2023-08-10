@@ -48,7 +48,7 @@ AI Copilot supports the following commands:
     - Screen
     - Horizontal and Vertical containers
     - Gallery
-    - Edit from
+    - Edit form
     - Button
     - Text label
     - Text input

@@ -68,7 +68,7 @@ public static CreateEntityResponse CreateElasticTable(IOrganizationService servi
 
 Set the [EntityMetadata](xref:Microsoft.Dynamics.CRM.EntityMetadata) `TableType` property to `Elastic`, and include a [StringAttributeMetadata](xref:Microsoft.Dynamics.CRM.StringAttributeMetadata) column where the value of the `IsPrimaryName` property is set to `true`.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/EntityDefinitions
@@ -167,7 +167,7 @@ OData-Version: 4.0
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -235,7 +235,7 @@ For more information, go to [Add a String column to the custom table](org-servic
 
 This request creates a [StringAttributeMetadata](xref:Microsoft.Dynamics.CRM.StringAttributeMetadata) column by posting to the Web API `EntityDefinitions` resource that refers to the `contoso_SensorData` table.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='contoso_sensordata')/Attributes
@@ -284,7 +284,7 @@ OData-Version: 4.0
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
