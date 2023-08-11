@@ -158,7 +158,7 @@ The following category and subcategory options are available on the filer menu:
 |Activity type              |<li>Appointment</li><li>Campaign Activity<sup>1<sup></li> <li>Campaign Response<sup>1<sup></li><li>Email</li><li>Fax</li><li>Case Resolution<sup>1<sup></li><li>Letter</li><li>Opportunity Case<sup>1<sup></li>   <li>Order Case<sup>1<sup></li><li>Phone Call</li><li>Quote Close<sup>1<sup></li>           <li>Recurring Appointment</li><li>Social Activity</li><li>Task</li>   <li>Project Service Approval<sup>1<sup></li><li>Booking Alert<sup>1<sup></li><li>Conversation</li><li>Session</li><li>Customer Voice survey invite<sup>1<sup></li><li>Customer Voice survey response<sup>1<sup></li><li>Custom activities (made available by imported solutions)</li>|
 |Activity status            |<li>Active</li><li>Overdue</li>       <li>Closed</li>                         |
 |Activity status reason     |Allows you to filter using specific status reasons. The values are a unique list of all of the status reasons from the activities in the timeline. The status reasons change depending on the activity. If there are multiple activities on the timeline that have the same status reason, it reflects once, but then the number next to it indicates how many occurrences of that status reason appear in the timeline.                       |
-|Activity due date (active) |<li>Next 30 days</li><li>Next seven days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last 7 days</li>   <li>Last 30 days</li>                   |
+|Activity due date (active) |<li>Next 30 days</li><li>Next seven days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last seven days</li>   <li>Last 30 days</li>                   |
 |Posts by                   |<li>Auto post</li><li>Users</li>                          |
 |Modified date              |<li>Last 24 hours</li><li>Last seven days</li><li>Last 30 days</li>                   |
 
@@ -226,7 +226,7 @@ You can send and receive records with images, but they don't display when the re
    This email has been blocked due to potentially harmful content. View full email content.
 3. When you select the message, the warning goes away, and the image appears.
 
-#### Enable “What you’ve missed” summary
+#### Enable "What you’ve missed" summary
 
 **What you’ve missed** helps you stay on top of updates and changes made to records by displaying updates at the top of the timeline when you access a record.
 
@@ -303,7 +303,7 @@ If you set the following form type for a specific activity, the application cons
 > These features are part of an early access release. You can opt in early to enable the features in your environment, which allows you to test them and then adopt them across your environments.
 For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
 
-Command actions allow users to assign, close, delete, open a record or add a record to a queue for activities from the timeline. You can enable or disable the command actions for a specific activity type.
+Command actions allow users to assign, close, delete, open a record, or add a record to a queue for activities from the timeline. You can enable or disable the command actions for a specific activity type.
 
 Based on the activity type, you can also enable other command actions. For example, for an email you can also enable actions such as Reply, Reply All, and Forward.
 
@@ -349,7 +349,7 @@ Legend
 
 1. **ColorStrip**: This section doesn't appear on the timeline record. The **ColorStrip** is located on the left of the card form.
 2. **Header**: This section is displayed on the timeline record; however, only the first two columns are displayed on the timeline record. For this example, only the **Subject** and **Modified On** columns are visible.
-3. **Details**: This section is displayed on timeline record; however, only the first three columns are displayed on the timeline record. For this example, only the **To**, **CC** and **Description** columns are visible on the timeline record.
+3. **Details**: This section is displayed on timeline record; however, only the first three columns are displayed on the timeline record. For this example, only the **To**, **CC**, and **Description** columns are visible on the timeline record.
 4. **Footer**: This section isn't displayed on the timeline record.
 5. **Table columns**: You can select which columns you want to add to your card form from the column options listed. You can customize your card form by dragging and dropping the columns you want to use into the sections you want that column to appear in on the timeline record.
 
