@@ -2,7 +2,7 @@
 title: Create and edit elastic tables (preview)
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 06/06/2023
+ms.date: 08/11/2023
 ms.reviewer: matp
 author: Mattp123
 ms.topic: how-to
