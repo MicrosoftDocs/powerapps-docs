@@ -46,7 +46,7 @@ The timeline dashboard displays only the entities that are configured for the si
 
 ## Create a timeline row
 
-When enabled by your system administrator, you can use the **Create a timeline record** feature to quickly create appointments, tasks, send emails, and make notes and posts and associate them with other rows. 
+When enabled by your system administrator, you can use the **Create a timeline record** feature to quickly create appointments, tasks, send emails, and make notes and posts and associate them with other rows.
 
 1. Select **Create a timeline record** icon.<BR><BR>
 ![Create a timeline row icon.](media\timeline-create-a-record-icon1c.png "Use the Create a timeline row feature") 
@@ -58,7 +58,7 @@ For information on timeline row configuration, [Set up the timeline control](../
 
 ## Work with filters
 
-When enabled by your system administrator, the timeline **Filter** further streamlines your productivity by allowing you to customize your experience and view data relevant to you. 
+When enabled by your system administrator, the timeline **Filter** further streamlines your productivity by allowing you to customize your experience and view data relevant to you.
 
 ![Timeline filter functionality.](media\timeline-filter-12b.png "Timeline filter functionality")
 
@@ -241,15 +241,15 @@ To add an attachment to a post:
 
 1. Browse to the file you want to attach to the post, and then select it.
 1. Finish the edits you want to make to your post, and then in the timeline, select **Add post**.
-  
+
 ### Preview an attachment in the timeline
-  
+
 You can view previews of attachments in the timeline if they are in the supported file format (.JPG, .PNG., or .PDF). Any attachment that is viewable inline on the timeline can be downloaded, whether or not a preview is available.
-  
+
 ![Attachment preview dialog.](media\attachment-preview-timeline.png "Attachment preview dialog")
 
 To preview an attachment in the timeline, do either of the following steps:
-  
+
 In edit mode:
 1. Right-click the attachment, and then select **Preview**. The **Attachment preview** dialog opens with the attachment displayed. You can view and download the attachment from the dialog.
 2. When you're finished viewing the attachment, select **Close** to return to the note or post.
@@ -465,6 +465,13 @@ To view a conversation transcript, select the **View more** link in the row for 
 
 ![Conversation transcript view.](media\timeline-transcript-view.png "Conversation transcript view")
 
+
+## View what you've missed in timeline (preview)
+
+When you access the timeline after being away, activities that you've missed display at the top of the timeline. You can quickly open the activities or scroll past them.
+
+![What you've missed view.](media\timeline-what-you-missed.png "What you've missed view")
+
 ## Pin or unpin records in timeline
 
 If your administrator has enabled the pin setting, you can quickly access activities, such as records, by keeping them at the top of the timeline. Pinning an activity eliminates the need to scroll through every activity to find the one you need.
@@ -474,6 +481,7 @@ Pin an activity by selecting the pin icon next to it. This moves it to the top o
 ![Pin and unpin activity view.](media\timeline-pin-unpin-activity.png "Pin and unpin an activity view")
 
 To unpin an activity, select the pin icon next to it. It moves out of the **Pinned** section and back to the place it orginally appeared in the list of activities in timeline.
+
 
 ## See also
 
