@@ -1,23 +1,18 @@
 ---
 title: "Use a screen reader in model-driven apps | MicrosoftDocs"
 description: How to use a screen reader in Power Apps
-author: mduelae
-manager: kvivek
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/16/2018
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
-  - D365CE
 ---
 # Use a screen reader 
 

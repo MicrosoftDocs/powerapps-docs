@@ -10,15 +10,14 @@ applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # formContext.ui.headerSection item (Client API reference)
 
 Provides information on how to set the visibility of header section.
+
+[!INCLUDE [online-only-api-note](../includes/online-only-api-note.md)]
 
 ## Methods
 

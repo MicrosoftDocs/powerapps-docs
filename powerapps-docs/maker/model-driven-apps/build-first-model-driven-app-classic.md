@@ -2,7 +2,7 @@
 title: Build your first model-driven app from scratch with Power Apps | Microsoft Docs
 description: Learn how to build a simple model-driven app
 documentationcenter: ''
-ms.custom: intro-internal
+ms.collection: get-started
 author: Mattp123
 
 ms.topic: get-started-article
@@ -12,9 +12,6 @@ ms.subservice: mda-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Build your first model-driven app using the classic designer

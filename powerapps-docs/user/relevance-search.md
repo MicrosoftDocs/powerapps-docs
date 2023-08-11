@@ -1,22 +1,18 @@
 ---
 title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
 description: How to use Dataverse search
-author: mduelae
-manager: kvivek
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 12/16/2021
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Search for tables and rows by using Dataverse search

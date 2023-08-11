@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: yingchin
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - yingchin
   - mduelae
@@ -116,7 +114,7 @@ The use of [non-delegable functions and inappropriate data row limits for non-de
 
 ## Use Delayed Load
 
-Turn on the [experimental feature](./working-with-experimental-preview.md) for delayed load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and are directly bound to the data source. If you build this type of app and don't enable this feature, app performance can suffer because the controls in all screens must be populated even on screens that aren't open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
+Turn on the [preview feature](./working-with-experimental-preview.md) for delayed load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and are directly bound to the data source. If you build this type of app and don't enable this feature, app performance can suffer because the controls in all screens must be populated even on screens that aren't open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
 
 ## Working with large datasets
 
@@ -166,6 +164,10 @@ You can optionally preload your app to increase performance.
     > This makes the compiled app assets accessible via unauthenticated endpoints to enable loading them before authentication. However, users can still only use your app to access data via connectors only after authentication and authorization completes. This behavior ensures that the data an app retrieves from data sources won’t be available to unauthorized users. Compiled app assets include a collection of JavaScript files containing text authored in app controls (such as PCF controls), media assets (such as images), the app name, and the environment URL the app resides in.
     > 
     > In general, apps should retrieve media and information from data sources, through connections. If media and information must be added to the app, without coming from a connection, and it is considered sensitive you may want to disable this setting. Note, disabling this setting will result in users waiting a bit longer to access an app.
+
+## App data stored on your device
+
+To allow users to retrieve app details faster when the app starts, certain data is locally stored on your device in the browser cache. Information that's stored includes app, environment, and connection details. This data will stay stored in the browser based on each browsers’ storage limits.. To clear stored data, see [instructions for each browser](/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues).
 
 
 ## Next steps

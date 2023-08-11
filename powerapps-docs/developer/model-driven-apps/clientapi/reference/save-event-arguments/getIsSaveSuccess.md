@@ -9,15 +9,14 @@ ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # getIsSaveSuccess (Client API reference)
 
 Use this method to know whether the `OnSave` operation is successful or failed.
+
+[!INCLUDE [online-only-api-note](../../includes/online-only-api-note.md)]
 
 ## Syntax
 

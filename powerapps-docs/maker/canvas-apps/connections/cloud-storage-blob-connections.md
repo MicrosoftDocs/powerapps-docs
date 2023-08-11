@@ -11,8 +11,6 @@ ms.author: lanced
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - lancedmicrosoft

@@ -15,14 +15,10 @@ applies_to:
 author: "Aneesmsft"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 
 # Add, configure, move, or delete tabs on a form

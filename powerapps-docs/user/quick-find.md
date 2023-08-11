@@ -2,7 +2,6 @@
 title: "Quick Find| MicrosoftDocs"
 description: Learn how to use quick find to search for records
 author: sericks007
-manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -10,13 +9,10 @@ ms.date: 10/27/2022
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - D365-App-msdynce_saleshub
   - D365-Entity-activity

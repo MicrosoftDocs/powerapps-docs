@@ -1,19 +1,16 @@
 ---
-title: Create a simple card (preview)
+title: Create a simple card
 description: Learn about basic elements of a card by creating a simple "Hello World" card
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
 ---
 
 # Create a simple card (preview)
-
-[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
 In this tutorial, you'll create a card that asks the user to enter their name, and then shows the name in the title of the card. You'll use the [card designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
 
@@ -25,7 +22,7 @@ In this tutorial, you'll create a card that asks the user to enter their name, a
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and select your environment.
 
-1. In the left pane, select **Cards**. If the **Cards** tab is not visible, select **More** and pin the **Cards** tab.
+1. In the left pane, select **Cards**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Select **+ Create a card**.
 

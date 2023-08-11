@@ -1,21 +1,18 @@
 ---
 title: In-app notifications in the Power Apps mobile app
 description: How notifications work in Power Apps mobile
-author: sericks007
+author: trdehove
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 04/26/2022
 ms.subservice: mobile
-ms.author: sericks
+ms.author: trdehove
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---

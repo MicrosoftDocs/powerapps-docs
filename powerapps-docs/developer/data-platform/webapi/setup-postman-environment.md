@@ -4,13 +4,10 @@ description: "Learn how to set up and configure a Postman environment that conne
 ms.date: 05/04/2022
 author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: article
 search.audienceType: 
   - developer
-search.app: 
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -18,12 +15,13 @@ contributors:
 
 # Set up a Postman environment
 
- To save you time and get you started right away, this article describes how to configure and use a Postman environment to work for your Dataverse environments without you having to register your own Azure Active Directory (Azure AD) application. For information on Postman environment and variables, see [Postman Documentation > Variables](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables).
+ To save you time and get you started right away, this article describes how to configure and use a Postman environment to work for your Dataverse environments without you having to register your own Azure Active Directory (Azure AD) application. For information on Postman environment and variables, see [Postman Documentation > Variables](https://learning.postman.com/docs/sending-requests/managing-environments).
 
 ## Prerequisites
 
 * Have a Power Apps Dataverse environment that you can connect to. 
 * Download and install the [Postman desktop application](https://www.getpostman.com/apps).
+* Have a Postman account [Postman Sign up](https://identity.getpostman.com/signup).
 
 <a name="bkmk_connectcds"></a> 
 

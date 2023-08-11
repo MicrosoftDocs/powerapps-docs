@@ -5,16 +5,12 @@ Keywords: command bar, command designer, ribbon, action bar, Power Fx command, c
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-manager: kvivek
 ms.date: 11/15/2022
 ms.subservice: mda-maker
 ms.topic: article
 search.audienceType: 
   - maker
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Scopes for modern commands
 

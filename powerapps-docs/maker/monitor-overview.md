@@ -11,8 +11,6 @@ ms.date: 11/23/2021
 ms.author: austinj
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - mattgon

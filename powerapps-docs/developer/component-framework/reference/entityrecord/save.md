@@ -3,8 +3,7 @@ title: save | Microsoft Docs
 description: Saves the record
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
-ms.date: 05/27/2022
+ms.date: 04/21/2023
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -27,6 +26,11 @@ Model-driven and canvas [experimental](../../../../maker/canvas-apps/working-wit
 ## Return Value
 
 Type: `Promise`
+
+## Remarks
+
+You can get an error saying `Invalid snapshot with id undefined` when the incorrect column name parameter was used with [setValue](setValue.md). Make sure to use the logical name of the column.
+
 
 ### Related topics
 

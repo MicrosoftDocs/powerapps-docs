@@ -9,15 +9,14 @@ ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # EventArgs.getEntityReference (Client API reference)
 
 Use this method to know information about a table being saved/updated. It returns table ID, and table name if success.
+
+[!INCLUDE [online-only-api-note](../../includes/online-only-api-note.md)]
 
 ## Syntax
 

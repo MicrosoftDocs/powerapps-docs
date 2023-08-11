@@ -1,19 +1,16 @@
 ---
-title: Create a shopping list card (preview)
+title: Create a shopping list card
 description: Learn about the basic elements of a card by creating a shopping list card.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
 ---
 
-# Create a shopping list card (preview)
-
-[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
+# Create a shopping list card
 
 In this tutorial, you'll create a card that displays a shopping list and lets you add items. You'll use the [card designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
 
@@ -29,7 +26,7 @@ At the end of the tutorial, your shopping list card should look like the followi
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and select your environment.
 
-1. In the left pane, select **Cards**. If the **Cards** tab is not visible, select **More** and pin the **Cards** tab.
+1. In the left pane, select **Cards**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Select **+ Create a card**.
 

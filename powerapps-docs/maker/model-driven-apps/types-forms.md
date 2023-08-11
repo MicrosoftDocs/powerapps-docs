@@ -1,7 +1,7 @@
 ---
 title: "Type of model-driven app forms in Power Apps | MicrosoftDocs"
 description: "Understand the different types of forms"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 06/27/2018
 ms.reviewer: ""
 
@@ -17,13 +17,9 @@ ms.assetid: 0eb1b9b7-7b76-435b-ad71-ecf33754d736
 caps.latest.revision: 33
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Type of model-driven app forms in Power Apps
 

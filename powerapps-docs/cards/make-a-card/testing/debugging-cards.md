@@ -1,19 +1,16 @@
 ---
-title: Test and debug cards (preview)
+title: Test and debug cards
 description: Learn how to test and debug your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
 ---
 
-# Test and debug cards (preview)
-
-[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
+# Test and debug cards
 
 Use the **Play** page to preview your cards before sending them out to users. The **Play** page has tools to test your card and help you debug any issues. Get to the **Play** page in the [card designer](../designer-overview.md).
 

@@ -13,13 +13,9 @@ applies_to:
   - "PowerApps"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 author: "Mattp123"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Configure connection roles
 
@@ -45,7 +41,7 @@ Anyone with write access to the **Connection Role** table can establish which co
 
 There are a number of standard connection roles already configured in Dataverse.  
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left pane, select  **Solutions**. 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left pane, select  **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. Open the unmanaged solution you want.
 3. On the command bar, select **Add existing** > **Connection Role**.
    The list of available connection roles are displayed. 
@@ -73,7 +69,7 @@ Once you add the connection role to your solution, you can edit it wherever it's
 > [!IMPORTANT]
 > If you intend to distribute a solution that includes new connection roles or changes to the existing connection roles you must add them to the solution you will distribute. Editing or adding new connection roles in the **Default Solution** will not include them in a solution you can distribute. More information [Add connection roles to a solution](#add-connection-roles-to-a-solution)
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and then on the left pane select **Solutions**. 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and then on the left pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. Open the unmanaged solution your want, and then on the command bar select **New** > **Other** > **Connection role**. 
 3. Complete the three steps on the form to [Describe the connection role](#describe-the-connection-role).
 

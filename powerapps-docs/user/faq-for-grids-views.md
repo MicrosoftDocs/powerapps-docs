@@ -2,20 +2,16 @@
 title: Frequently asked questions and known issues about grids and views
 description: Frequently asked questions and known issues about grids and views in Power Apps.
 author: sericks
-manager: tapanm-MSFT
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/09/2022
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # FAQs and known issues about grids and views

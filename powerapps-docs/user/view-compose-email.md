@@ -1,27 +1,23 @@
 ---
 title: "View, compose and respond to email | MicrosoftDocs"
 description: How to view, compose and respond to email.
-author: mduelae
-manager: kvivek
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/03/2022
+ms.date: 06/09/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # View, compose and respond to email
 
-Users can view, create, and send email faster with streamlined access that helps users compose, reply, and send emails using rich text editing and drag-and-drop attachment features and functionalities.
+Users can view, create, and send email faster with streamlined access that helps users compose, reply, and send emails using rich text editing and drag-and-drop attachment features and functionalities to embed images in emails.
 
 
 ## Access and view emails
@@ -63,7 +59,7 @@ For more information, see [Insert an email template](insert-email-template.md).
    > The **To** box must contain a recipient to select a template.
 
 7. **New Attachment**. This command is used to add a file to your email.
-8. **Attach File**.  This command uses the 'plus' ![attach file icon.](media\email-new-attachment-icon.png "attach file icon") icon functionality to drag-and-drop or copy-and-paste attachments. 
+8. **Attach File**.  This command uses the 'plus' ![attach file icon.](media\email-new-attachment-icon.png "attach file icon") icon functionality to add attachments. 
 
    > [!Note] 
    > After you save your email, you can use Attach file and New Attachments interchangeably.
@@ -117,6 +113,6 @@ You can use the following command options when working with emails in the timeli
 
    ![Respond to emails in timeline.](media\email-respond-in-timeline-1a.png "Respond to emails in timeline.") 
 
-   1. **Reply**. Use this command to reply directly the the sender of the email you received.
+   1. **Reply**. Use this command to reply directly the sender of the email you received.
    2. **Reply All**. Use this command to reply to everyone on an email you received.
    3. **Forward**. Use this command to forward the email to someone else.

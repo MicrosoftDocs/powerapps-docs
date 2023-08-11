@@ -2,7 +2,6 @@
 title: "View charts on a form page or in a row in model-driven apps| MicrosoftDocs"
 description: View charts on form page or in a row
 author: sericks007
-manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -10,13 +9,10 @@ ms.date: 9/14/2020
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # View charts on a page or in a row 
 

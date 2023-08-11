@@ -2,7 +2,7 @@
 title: "Power Apps read-only grid control | MicrosoftDocs"
 description: "A control for use with Power Apps that lets users view and open records from a view or subgrid"
 ms.custom: ""
-ms.date: 02/09/2023
+ms.date: 04/19/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +14,6 @@ ms.subservice: mda-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Power Apps read-only grid control
 
@@ -77,12 +75,26 @@ While the Power Apps read-only grid control became the default grid experience i
 
 ## Known issues and limitations
 
+### Grid rendering performance
+
+In general, grid performance can be increased by limiting the number of records fetched at once and limiting the number of columns in a view.
+
+If the page size is sufficiently large, the grid may take a long time to render. The current recommendation is to ensure the page size is not too large, ideally no more than 25 rows.
+
+### UI limitations and differences
+
+- The grid doesn't currently support any theme customizations
+- Cells with no data are blank instead of displaying three dashes **---**.
+- The owner column doesn't show online status and a people card for the user.
+- Reordering columns from the grid column headers is not supported. 
+- If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps read-only grid.
+
 ### Limitations with card form lists
 
-When a view or subgrid is narrow it changes into a card list format that is better for small screens, such as mobile devices. The Power Apps read-only grid control displays the following behavior in a card list:
+When a view or subgrid is narrow, it changes into a card list format that is better for small screens, such as mobile devices. The Power Apps read-only grid control displays the following behavior in a card list:
 
 - Sort isn't currently available in a card list view. To work around this, create views with the sort order you want.
-- Select all and Clear all aren't available in a card list view.
+- **Select all** and **Clear all** aren't available in a card list view.
 - The jump bar isn't available in a card list view. To work around this, select **Search** to filter records. Type the desired letter, and then press Enter.
 - Images on a record in the list don't display in a card list view. This includes table icons, web resource images, custom images, and conditional images. The only image displayed for a record in the list are the initials of the record.
 - There are no icons for context menu commands in a card list view.
@@ -98,12 +110,6 @@ To work around this, you can display a custom card by configuring the table to u
 
 1. Select **Configure property** (pencil icon) for the **Card Form** property, and select the custom card form from the drop-down list.
 1. Select **OK**, and then **Publish** the customization.
-
-### UI limitations and differences 
-- The grid doesn't currently support any theme customizations
-- Cells with no data are blank instead of displaying three dashes **---**.
-- The owner column doesn't show online status and a people card for the user.
-- Reordering columns from the grid column headers is not supported. 
 
 ### See also
 

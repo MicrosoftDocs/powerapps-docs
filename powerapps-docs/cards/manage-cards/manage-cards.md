@@ -5,7 +5,6 @@ ms.date: 11/17/2022
 ms.topic: overview
 author: sericks007
 ms.author: sericks
-manager: tapanm-MSFT
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -13,8 +12,6 @@ ms.collection:
 ---
 
 # Manage cards
-
-[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
 This article will help you use security roles to manage cards and explains how to delete a record.
 
@@ -36,11 +33,17 @@ The Cards for Power Apps service uses the security role called **Cards Role** to
 
 ### Cards security roles
 
-- **Cards Basic Role** can be used to grant a user access to view, create, and use cards in that environment. 
+- **Cards Basic Role** can be used to grant a user access to view, create, and use cards in that environment.
 
    Other security roles can be modified to view, create, and use cards by changing security role access to the **Card** table in Dataverse.
 
 - **Cards Role** is used internally by the Cards for Power Apps service to communicate with Dataverse.
+
+## Manage cards with DLP policies
+
+The **Cards for Power Apps** connector is used to automatically send cards via Power Automate. [DLP policies](/power-platform/admin/wp-data-loss-prevention) enforce rules for which connectors can be used together with other connectors.
+
+Administrators can use DLP policies to determine which connectors can be used in flows that send cards, for example if both the MSN Weather connector and the Cards for Power Apps connector are classified as **Business**, then makers can send daily status cards with the weather.
 
 ## Delete a card
 

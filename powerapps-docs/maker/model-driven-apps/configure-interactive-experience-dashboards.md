@@ -5,7 +5,6 @@ keywords: Interactive dashboards; Customer Service; Microsoft Dynamics 365; Inte
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.custom: ""
 ms.date: 06/01/2021
 ms.reviewer: ""
@@ -20,9 +19,6 @@ applies_to:
 ms.assetid: d1446a95-14bf-4b15-a905-72fce07f4c76
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create and configure model-driven app interactive experience dashboards

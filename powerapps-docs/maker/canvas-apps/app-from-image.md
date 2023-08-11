@@ -1,4 +1,4 @@
-﻿---
+---
 title: Create a canvas app from an image 
 description: Learn about how to use your own designs saved in image formats and create canvas apps from them.
 author: norliu
@@ -10,8 +10,6 @@ ms.author: norliu
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - norliu
   - mduelae
@@ -32,7 +30,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 ## Prerequisites
 
 - A Power Apps license. If you don't have a license for Power Apps, you can [sign-up for free](../signup-for-powerapps.md).
-- If you're using your own image, the image file extension must be .jpg or .png. Also, the image must contain a clearly legible one-page form with a light background color. For the best results, edit your image so that it has a white background and high contrast.
+- If you're using your own image, the image file extension must be .jpg or .png, file size no more than 4MB. Also, the image must contain a clearly legible one-page form with a light background color. For the best results, edit your image so that it has a white background and high contrast.
 
 ## Create an app
 
@@ -78,18 +76,18 @@ With the **Image to app** feature, you can now create an app from a visual desig
 
     After you've reviewed the tags and ensured that each component is correctly tagged, select **Next**.
 
-1. The next step is to set up data. For the best experience, we recommended that you connect your app to a data source by selecting **Create a new table in Dataverse**. If you choose this option and select **Next**, you'll be guided in the next stage to add columns based on the form fields in your image, and your app will contain a form component that is connected to your Dataverse table.
+1. The next step is to set up data. For the best experience, we recommended that you connect your app to a data source by selecting *Connect to a Dataverse table**. If you choose this option and select **Next**, you'll be guided in the next stage to either select an existing Dataverse table you have and map the fields in the image to the columns in that table or create a new table in Dataverse and add columns based on the form fields in your image, and your app will contain a form component that is connected to your Dataverse table.
 
-    If you don't want to create a new table in Dataverse, select **Skip this for now**. If you choose this option and select **Create**, your app will be created as-is, which means that the components you tagged in the previous step will be generated directly. They won't be placed into a form component, and your app won't be connected to data.
+    If you don't want to connect to Dataverse, select **Skip this for now**. If you choose this option and select **Create**, your app will be created as-is, which means that the components you tagged in the previous step will be generated directly. They won't be placed into a form component, and your app won't be connected to data.
 
-    :::image type="content" source="media/app-from-image/setup-data.png" alt-text="Choose to create a new table, or continue without creating a table now.":::
+    :::image type="content" source="media/app-from-image/setup-data.png" alt-text="Choose to connect to Dataverse, or continue without creating a table now.":::
 
-    If you choose to skip the table creation, select **Create** and the app will be created for you. Later, you can add [data connections](connections-list.md) to your app to connect the app with your data.
+    If you choose to skip connecting to Dataverse, select **Create** and the app will be created for you. Later, you can add [data connections](connections-list.md) to your app to connect the app with your data.
 
     > [!NOTE]
-    > The option to create a new table will be disabled if you don't have Dataverse in your environment, or if you don't have the required permissions to create a Dataverse table.
+    > The option to Connect to a Dataverse table will be disabled if you don't have Dataverse in your environment.
 
-1. If you chose to create a new table in Dataverse, you can now edit the table and column details. Each tag corresponds to a data column based on the form fields that were identified in your image.
+1. If you chose to connect to a Dataverse table, and selected either Create new table or an existing table, you can now edit the table and column details. Each tag corresponds to a data column based on the form fields that were identified in your image.
 
     Select a tag to modify the column properties, such as **Display Name**, **Name**, and **Data type**. To remove an existing column, select the tag and then select **Delete column**.
 

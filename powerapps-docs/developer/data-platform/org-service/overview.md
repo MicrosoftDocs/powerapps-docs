@@ -7,7 +7,6 @@ ms.author: dikamath
 ms.reviewer: pehecke
 ms.topic: overview
 ms.custom: bap-template
-ms.service: power-platform
 contributors:
  - JimDaly
  - phecke

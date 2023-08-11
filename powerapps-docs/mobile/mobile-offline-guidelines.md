@@ -1,20 +1,17 @@
 ---
 title: Offline profile guidelines
 description: Guidance for optimizing offline profiles for model-driven apps.
-author: sericks007
+author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/08/2022
+ms.date: 04/12/2023
 ms.subservice: mobile
-ms.author: sericks
+ms.author: trdehove
 ms.custom: ""
 ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Offline profile guidelines
@@ -59,7 +56,8 @@ As you develop your offline profile and test with real or representative data, k
 
 - Limit the total records synced to no more than 200,000.
 - Limit the number of tables to fewer than 100.
-- Limit the total data size to less than 4 GB. If your users use file, image, or timeline annotations, apply filters to reduce the total download size.
+- Limit the total data size to less than 1 GB. 
+- Limit the total files and images size to less than 4 GB. Apply filters to reduce the total download size.
 
 If your app's offline data exceeds these recommendations, users will see slower syncs, higher data utilization, higher battery usage, and slower app performance.
 

@@ -14,12 +14,8 @@ ms.assetid:
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Virtual table walkthrough using the OData v4 Data Provider

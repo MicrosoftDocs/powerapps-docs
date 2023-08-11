@@ -2,7 +2,6 @@
 title: Power BI content management in Power Apps solutions (preview)
 description: Learn how the Power BI/Power Apps solutions integration makes it possible to include Power BI reports and datasets in your apps and manage them in your ALM lifecycle process.
 author: paulinbar
-manager: kfollis
 ms.component: cds
 ms.topic: how-to
 ms.date: 09/16/2022
@@ -10,8 +9,6 @@ ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Power BI content management in Power Apps solutions (preview)
 

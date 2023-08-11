@@ -1,26 +1,12 @@
 ---
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
-ms.custom: ""
-ms.date: 06/09/2022
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "how-to"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
 author: "Mattp123"
-ms.assetid: fa04f99d-a5f9-48cb-8bfb-f0f50718ccee
-caps.latest.revision: 41
+ms.date: 07/25/2023
+ms.reviewer: ""
+ms.topic: "how-to"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
-search.audienceType: 
-  - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create and edit tables using Power Apps
 
@@ -28,7 +14,7 @@ search.app:
 
 ## View tables
 
-Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Data** > **Tables**.
+Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Tables** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 Filter the tables that are displayed using the following tabs:
 
@@ -61,7 +47,10 @@ Enter data for the following properties.
 
 Select **Enable Attachments** to append notes and files to records for this table.
 
-Select the **Primary column** tab if you want to change the **Display Name** or **Name** of the primary column. The primary column is used by lookup fields when establishing relationships with other tables.
+Select the **Primary column** tab if you want to change the **Display name** or **Description** of the primary column. The primary column is used by lookup fields when establishing relationships with other tables.
+
+> [!IMPORTANT]
+> After you save the table, the **Primary column** display name and description can't be changed.
 
 ### Advanced options
 
@@ -70,7 +59,7 @@ Select **Advanced options** to display additional properties that are optional f
 |Property |Description|
 |--|--|
 | **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved.  |
-|**Type**  | Select the type of table. Use standard for most tables. Activity tables are a special table that can only be owned by a user or team, but can’t be owned by an organization. Virtual tables require the table be populated with data from an external source.  |
+|**Type**  | Select the type of table. Use standard for most tables. [Activity tables](/power-apps/maker/data-platform/types-of-entities#activity-tables) are a special table that can only be owned by a user or team, but can’t be owned by an organization. [Virtual tables](create-edit-virtual-entities.md) require the table be populated with data from an external source. [Elastic tables](create-edit-elastic-tables.md) should be considered when your business scenario entails very large data volumes with high throughput, storage, and low latency requirements.  |
 |**Record ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record.|
 | **Choose a table image**  | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](types-of-fields.md#image-columns) |
 | **Color** | Set a color to be used for the table in model-driven apps.  |
@@ -143,6 +132,10 @@ View and create table record data for the table. Select the number of columns, s
 From the table hub, select **Edit** to open the table designer. The table designer lets you make extensive changes to a table including editing or adding new records and columns, editing table properties, or creating a model-driven app based on the table.
 
 :::image type="content" source="media/table-hub.gif" alt-text="Table hub video":::
+
+#### Update forms and views
+
+From the table hub, select **Update forms and views** to add selected columns to forms and views in this table without having to edit them in the form and view designers. More information: [Update forms and views using table designer](update-forms-and-views.md)
 
 ## Delete a table
 

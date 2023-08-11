@@ -9,9 +9,6 @@ ms.author: jdaly
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Microsoft Dataverse Developer Guide

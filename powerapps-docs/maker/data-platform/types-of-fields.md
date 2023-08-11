@@ -9,13 +9,9 @@ author: "Mattp123"
 ms.assetid: 734b4ffa-5543-4f88-8517-299589f433f7
 ms.subservice: dataverse-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Types of columns
 
@@ -95,7 +91,7 @@ There are three basic text column types. All values indicated below are in numbe
 
 You can customize forms (main, quick create, and quick view) and email templates by adding multi-select columns that are called **Choices**. When you add a choices column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.
 
-For example, if an organization operates in multiple areas or countries, you can include multiple locations or countries in an 'Area of operation' column. A user can then select one or more locations from the list of available values.
+For example, if an organization operates in multiple areas or countries/regeions, you can include multiple locations or countries/regions in an 'Area of operation' column. A user can then select one or more locations from the list of available values.
 
 Choices can be used with read-only grids, editable grids, and most forms. Multi-select choices can't be used with: 
 - Workflows, business process flows, actions, dialogs, business rules, charts, rollup columns, or calculated columns.

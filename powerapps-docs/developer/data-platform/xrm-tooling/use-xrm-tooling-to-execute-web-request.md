@@ -9,8 +9,6 @@ ms.author: jdaly
 author: JimDaly
 search.audienceType: 
   - developer
-search.app: 
-  - D365CE
 ---
 # Use ExecuteWebRequest to send requests to the Dataverse Web API
 

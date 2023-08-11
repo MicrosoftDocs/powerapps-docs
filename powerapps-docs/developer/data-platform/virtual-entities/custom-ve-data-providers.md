@@ -8,12 +8,8 @@ applies_to:
 author: "NHelgren" # GitHub ID
 ms.author: nhelgren
 ms.reviewer: pehecke
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly

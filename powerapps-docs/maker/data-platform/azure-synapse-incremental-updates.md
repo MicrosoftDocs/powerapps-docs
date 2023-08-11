@@ -13,12 +13,8 @@ author: "JasonHQX"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "jasonhuang"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Query and analyze the incremental updates
 
@@ -40,7 +36,7 @@ When creating an Azure Synapse Link for Dataverse, you can enable the incrementa
 
 ## Prerequisites
 
-Azure Synapse Link for Dataverse. This guide assumes that you have already met the prerequisites to create an Azure Synapse Link with a Synapse workspace.  More information: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#prerequisites)
+Azure Synapse Link for Dataverse. This guide assumes that you have already met the prerequisites to create an Azure Synapse Link. More information: [Create an Azure Synapse Link for Dataverse with Azure Data Lake](azure-synapse-link-data-lake.md#prerequisites)
 
 ## Connect Dataverse to Synapse workspace with incremental folder enabled 
 
@@ -55,10 +51,8 @@ Azure Synapse Link for Dataverse. This guide assumes that you have already met t
    :::image type="content" source="media/azure-synapse-add-tables-settings.png" alt-text="Add tables settings":::
 
 > [!NOTE]
-> Please be advised that **time interval configuration** is considered final once the setup process is completed and will be grayed out to indicate that it can't be changed. 
+> The minimum time interval is 15 minutes. That means the incremental update folder will be created every 15 minutes and contain the changes that occurred within the time interval. This setting is also configurable after the link creation via **Manage tables**
 >
-> The minimum time interval is 15 minutes. That means the incremental update folder will be created every 15 minutes and contain the changes that occurred within the time interval.
-> 
 > Ensure **Connect to your Azure Synapse workspace Azure Synapse workspace** is not checked in the first page of setup.
 
 ## View incremental folder at Microsoft Azure Storage

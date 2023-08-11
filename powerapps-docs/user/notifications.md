@@ -3,18 +3,14 @@ title: "In-app notifications in model-driven apps | MicrosoftDocs"
 description: How notification work in model-driven apps.
 ms.custom: ""
 ms.date: 04/26/2022
-ms.reviewer: ""
+ms.reviewer: sericks
 
 ms.subservice: end-user
 ms.topic: "article"
-author: "aorth"
-ms.author: "mkaur"
-manager: "kvivek"
+author: aorth
+ms.author: aorth
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 
 # In-app notifications in model-driven apps

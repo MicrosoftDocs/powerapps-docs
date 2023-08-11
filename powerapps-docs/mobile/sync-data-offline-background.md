@@ -3,22 +3,18 @@ title: Sync data in the background
 description: Sync Power Apps data offline in the background.
 ms.custom: 
 ms.date: 11/10/2022
-ms.reviewer: 
+ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: 
 caps.latest.revision: 1
-ms.author: sericks
-author: sericks007
-manager: tapanm-MSFT
+ms.author: trdehove
+author: trdehove
 search.audienceType: 
   - admin
   - customizer
   - enduser
-search.app: 
-  - D365CE
-  - D365Sales
 ---
 
 # Sync data offline in the background

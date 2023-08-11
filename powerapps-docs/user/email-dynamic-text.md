@@ -3,16 +3,13 @@ title: Personalize emails with dynamic text
 description: Personalize your customer engagement emails with dynamic text in Power Apps.
 ms.custom: ""
 author: gandhamm
-manager: shujoshi
 ms.topic: conceptual
 ms.date: 06/16/2022
 ms.subservice: end-user
 ms.author: mgandham
+ms.reviewer: sericks
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Personalize emails with dynamic text
@@ -53,7 +50,7 @@ Use the following syntax:
 | Date  | {!EntityLogicalName:FieldLogicalName/@date;} |
 | Time | {!EntityLogicalName:FieldLogicalName/@time;} |
 
-For example, let's say you want to insert a custom field, *CustomerId*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:CustomerId;}}``.
+For example, let's say you want to insert a custom field, *Customer ID*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:CustomerId;}}``.
 
 If you want to insert a custom field, *ModifiedOn*, that's linked to the record type *User*. Type the following placeholder in your template: ``{{!User:ModifiedOn/@date;}}``.
 

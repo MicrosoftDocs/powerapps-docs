@@ -1,18 +1,14 @@
 ---
 title: "Late-bound and early-bound programming using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the different programming styles available when using the .NET SDK assemblies with the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: intro-internal
+ms.collection: get-started
 ms.topic: "article"
 ms.date: 04/03/2022
 author: kkanakas
 ms.author: kartikka
-manager: pemikkel
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke

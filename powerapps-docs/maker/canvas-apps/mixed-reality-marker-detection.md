@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: altran
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - altran
   - anuitz

@@ -37,7 +37,7 @@ For example, Milestones app contains an Excel data source called **StaticLocaliz
 
 -   **OOBTextID** is the identifier of the text that is to be localized.
 
--   **LanguageTag** is the identifier of the language in which the text is to be localized. Language tag is a standard abbreviated text defining a language and the country its being used in (for example, "en-US" means "English-United States").
+-   **LanguageTag** is the identifier of the language in which the text is to be localized. Language tag is a standard abbreviated text defining a language and the country/region its being used in (for example, "en-US" means "English-United States").
 
 -   **LocalizedText** is the text in the appropriate language that needs to be displayed.
 

@@ -4,7 +4,6 @@ description: Learn how to add form navigation for related tables
 ms.custom: ""
 ms.date: 03/18/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,19 +16,15 @@ ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 caps.latest.revision: 15
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Add model-driven app form navigation for related tables
 
 When an app user selects one of these links in a row, the associated view for the table is displayed. In this article, the form navigation pane is used to add links to related tables.
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-1. Expand **Data** in the left-hand menu and select **Tables**
+1. Select **Tables** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the table you want, and then select the **Forms** area.
 1. In the list, open a form with the type of **Main** to edit it.
 1. Select **Switch to classic** to edit the form in the classic form designer.

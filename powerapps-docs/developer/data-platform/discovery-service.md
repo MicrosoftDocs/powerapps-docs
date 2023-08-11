@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: iyanni # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -137,14 +134,14 @@ The following table describes the properties of the `Instance` Entity from the $
 
 You can use these property names with the OData `$select` query parameter to retrieve just the data you need. In most cases, all you will need are the `FriendlyName` and `ApiUrl` properties. For example:
 
-**Request**
+**Request:**
 
 ```http
 GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances?$select=ApiUrl,FriendlyName HTTP/1.1
 Authorization: Bearer <truncated for brevity>
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

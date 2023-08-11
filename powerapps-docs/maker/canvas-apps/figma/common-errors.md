@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot common errors when creating app from Figma (preview)
+title: Troubleshoot common errors when creating app from Figma
 description: Learn about common errors and resolutions when creating apps from a Figma design.
 author: mduelae
 ms.topic: article
@@ -10,13 +10,11 @@ ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
 ---
 
-# Troubleshoot common errors when creating app from Figma (preview)
+# Troubleshoot common errors when creating app from Figma
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -52,6 +50,6 @@ Also ensure the components added to the page inside Figma are contained within a
 
 ### See also
 
-- [Create a canvas app from Figma (preview)](create-app-from-figma.md)
-- [Components supported by the UI Kit (preview)](supported-components.md)
+- [Create a canvas app from Figma](create-app-from-figma.md)
+- [Components supported by the UI Kit](supported-components.md)
 - [Troubleshoot common errors](common-errors.md)

@@ -7,12 +7,8 @@ ms.topic: "article"
 author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - marcelbf 
@@ -48,8 +44,7 @@ Create an asynchronous plug-in registered on the Create message of the account t
     - If you don't have a model-driven app that includes these, see [Build your first model-driven app from scratch](../../maker/model-driven-apps/build-first-model-driven-app.md) for steps to make one in just a few minutes.
 - Visual Studio 2017 (or later version)
 - Knowledge of the Visual C# programming language
-- Download the Plug-in Registration tool.
-    - Information about downloading the Plug-in registration tool is at : [Dataverse development tools](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
+- Download the Plug-in Registration tool by following the instructions here: [Dataverse development tools](download-tools-nuget.md).
 
 <a name="BKMK_create"></a>
 

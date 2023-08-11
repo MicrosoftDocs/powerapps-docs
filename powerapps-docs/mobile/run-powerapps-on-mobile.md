@@ -1,23 +1,22 @@
 ---
 title: Install the Power Apps mobile app
 description: Learn how to install and run a canvas or model-driven app on a mobile device.
-author: sericks007
+author: trdehove
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 03/02/2023
+ms.date: 03/16/2023
 ms.subservice: mobile
-ms.author: sericks
-ms.reviewer: ""
+ms.author: trdehove
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
-ms.custom: intro-internal
+ms.collection: get-started
+contributors:
+- makolomi
 ---
 
 #  Install the Power Apps mobile app
@@ -249,7 +248,7 @@ Select the site map ![Site map icon.](media/pa_mobile_sitemap_icon.png "Site map
 
 ## Other mobile apps
 
-The table below outlines which mobile app you can use to run your app.
+The table below outlines which other mobile apps you can use to run your app.
 
 | **Mobile App** | **Apps you can run** |
 |-------------------------|-------------------------|
@@ -258,6 +257,23 @@ The table below outlines which mobile app you can use to run your app.
 | [Dynamics 365 for phone and tablets](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview)</li> <b>Note</b>: Dynamics 365 for Tablets is deprecated, and won't be supported in 2023. |
 | [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
 | [Field Service Mobile](/dynamics365/field-service/mobile-power-app-overview) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
+  
+## Regional availability of Power Apps mobile app
+ 
+Power Apps mobile app is available to users in Azure global cloud and also in the following regions:
+- [US Department of Defense (US DoD)](/azure/azure-government/documentation-government-overview-dod)
+- [US Government Community Cloud (GCC) High](/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
+- [US Government Community Cloud (GCC)](/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
+- [China Sovereign Cloud](/power-platform/admin/about-microsoft-cloud-china)
+  
+Mobile users have an option to select their region on Power Apps mobile app sign in screen.
+
+:::image type="content" source="media/Select_user_region_mobile_app.jpg" alt-text="Choose a region when signing in to Power Apps mobile app":::
+ 
+ More information:
+ - [Azure Government documentation](/azure/azure-government/)
+ - [Dynamics 365 US Government](/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
+ - [Power Platform and Dynamics 365 apps in China](/power-platform/admin/about-microsoft-cloud-china)
   
 ## Privacy notice
 Power Apps mobile app for Android registers for a system event that is broadcasted when the device is finished booting. Power Apps mobile app for Android registers for this event to support push notifications sent to the app. 

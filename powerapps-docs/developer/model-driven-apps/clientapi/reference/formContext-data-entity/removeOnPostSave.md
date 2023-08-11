@@ -9,15 +9,14 @@ ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # removeOnPostSave (Client API reference)
 
 [!INCLUDE [removeonpostsave-description](includes/removeonpostsave-description.md)]
+
+[!INCLUDE [online-only-api-note](../../includes/online-only-api-note.md)]
 
 ## Syntax
 

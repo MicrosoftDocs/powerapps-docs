@@ -2,7 +2,6 @@
 title: Configure data and view dashboards in the Hospital Emergency Response app | Microsoft Docs
 description: Provides instructions for hospital IT admins to configure data and view dashboards for their organization.
 author: pankajarora-msft
-manager: annbe
 
 ms.topic: conceptual
 ms.custom: 
@@ -515,7 +514,7 @@ Before you can view the admin app in one of the supported languages, the languag
 
 ### Set the language of your choice
 
-After the required languages are enabled by your system administrator, each admin user can select the language she/he prefers to see the admin app displayed in.
+After the required languages are enabled by your system administrator, each admin user can select the language they prefer to see the admin app displayed in.
 
 1. Sign into the admin app (model-driven app) using the URL provided by your IT admin.
 

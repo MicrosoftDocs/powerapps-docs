@@ -18,9 +18,6 @@ ms.subservice: mda-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # List of controls available for model-driven apps
 
@@ -35,12 +32,11 @@ Most controls are configured for a table column, but some controls, like the gri
 To use these controls in the form designer:  
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Expand **Dataverse** in the left hand menu, and then select **Tables**.
+1. Select **Tables** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the required table and then select the **Forms** area.
 1. Select the [main form](model-driven-app-glossary.md#main-form) to be edited.
-   
 1. Select the column or section where you want to add the control.
- 
+
 1. In the right properties pane, select **+ Component** to display the available controls, and then select the control you want.  
   
     > [!NOTE]
@@ -190,19 +186,6 @@ Use the pen input control to capture written input such as signatures. The pen i
 
 The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. It can be configured with text columns. More information: [Add the rich text editor control to a model-driven app](rich-text-editor-control.md)
 
-### Star rating
-
-Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control with whole number columns. It can’t be used with decimal columns.  
-
-:::image type="content" source="media/star-rating-control-example.png" alt-text="Example of the star rating control in a model-driven app.":::
-  
-> [!NOTE]
->  Be sure to select the **Hide on web** option for this control.  
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Max|Select the maximum number of stars for the control from the dropdown list.|  
-
 ### Toggle
 
 The toggle control allows users to choose between binary values, such as on/off and yes/no, by toggling the button. It can be configured with yes/no choice columns.
@@ -307,7 +290,21 @@ The linear gauge lets your users input numerical values by dragging a slider ins
 |Min|Set the minimum value to display on the gauge.|  
 |Value|Get or set the value to display on the gauge.|  
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
+
+  ### Star rating
+
+Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control with whole number columns. It can’t be used with decimal columns.  
+
+:::image type="content" source="media/star-rating-control-example.png" alt-text="Example of the star rating control in a model-driven app.":::
+
+  > [!IMPORTANT]
+> - This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
+> - Be sure to select the **Hide on web** option for this control.  
   
+|Property|Description|  
+|--------------|-----------------|  
+|Max|Select the maximum number of stars for the control from the dropdown list.| 
+
 ### Arc knob
 
 Only available in classic.

@@ -16,12 +16,8 @@ caps.latest.revision:
 author: "matthewbolanos"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create guided help for your Unified Interface app

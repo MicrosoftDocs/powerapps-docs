@@ -8,15 +8,14 @@ ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # sidePanes (Client API reference)
 
 Provides methods for managing side panes.
+
+[!INCLUDE [online-only-api-note](../includes/online-only-api-note.md)]
 
 ## Methods
 

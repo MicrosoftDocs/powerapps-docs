@@ -1,35 +1,35 @@
 ---
 title: "FAQ for Dataverse search | MicrosoftDocs"
 description: FAQ about Dataverse search
-author: mduelae
-manager: kvivek
-
+author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/8/2020
+ms.date: 08/02/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
+contributors:
+- mspilde
+- manish1604
+- prdeka
+- AnikaMD 
 ---
 
 # Frequently asked questions about Dataverse search
 
 ## What is the scope of content searched by Dataverse search?
 
-The scope of content that's searched is defined by your administrator. An administrator can configure the tables, and specific columns in the tables, that can be searched. The specific columns that were searched for a table are indicated on the results page on each tab.
+Your administrator defines the scope of content that's searched. An administrator can configure the tables, and specific columns in the tables, that can be searched. The specific columns that were searched for a table are indicated on the results page on each tab.
 
 ![An example of search results on the Contacts tab.](media/search-faq-1.png "An example of search results on the Contacts tab") 
 
 ## Why am I not seeing search results from a table that is enabled for Dataverse search?
 
-This happens when the table is not part of the model-driven app. Use the Power Apps app designer to verify that the table is included in tha app's components. For more information see, [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
+If a table isn't part of the model-driven app, it's not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. For more information, see [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
 
 ## Can I configure quick actions to show or hide certain commands?
@@ -54,6 +54,55 @@ Currently, Dataverse search searches your data in Microsoft Dataverse only. Shar
 
 Party list fields are special fields that aren't searchable or viewable in the results page. 
 
+## How come returns don't support HTLM formatting for memo data types?
+
+Dataverse search doesn't return HTML formatting for memo types to optomize the UI experience.
+
+## Why columns aren't enabled for Dataverse search after adding to a quick find view?
+
+Columns are enabled for Dataverse search only if a quick find view is set as the default view. For more information on how to set a default view, see [Specify a default view for a table](../maker/model-driven-apps/specify-default-views.md#specify-a-default-view-for-a-table).
+
+## Why does searching on the OwnerID attribute not work when search is enabled on it?
+
+Data from the Owner column isn't available for search and suggest operations. More information: [Types of columns](../maker/data-platform/types-of-fields.md)
+
+## How is the Dataverse search API throttled?
+
+When using the Dataverse search API, there's a throttling limit of one request per second for each user. Additionally, there's a throttling limit of 150 requests per minute per organization.
+
+## What are the supported attribute types for indexing?
+
+- BigInt
+- Boolean
+- Customer
+- DateTime
+- Decimal
+- Double
+- EntityName
+- Integer
+- Lookup
+- Memo
+- Money
+- Owner
+- Picklist
+- State
+- Status
+- String
+- Uniqueidentifier
+- Virtual (only for MultiSelectPicklistType and FileType)
+
+## What are the eligible attribute types for facet list fields?
+
+- Lookup 
+- DateTime 
+- Money
+- Picklist
+- Integer
+- Customer
+- Decimal
+- MultiSelectPicklist
+- State
+- Status
 
 ### See also
 

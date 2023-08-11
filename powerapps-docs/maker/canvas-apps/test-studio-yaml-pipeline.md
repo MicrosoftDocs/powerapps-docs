@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - mattgon
