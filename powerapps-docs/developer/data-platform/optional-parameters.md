@@ -99,7 +99,7 @@ More information:
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/webresourceset HTTP/1.1
@@ -119,7 +119,7 @@ MSCRM.SolutionUniqueName: ExampleSolution
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -180,7 +180,7 @@ static void DemonstrateSuppressDuplicateDetection(IOrganizationService service)
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -196,7 +196,7 @@ MSCRM.SuppressDuplicateDetection: false
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 412 Precondition Failed
@@ -254,7 +254,7 @@ static void DemonstrateTag(IOrganizationService service)
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts?tag=A%20string%20value HTTP/1.1
@@ -307,7 +307,7 @@ private static Entity RetrieveRecord(
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/contoso_sensordatas(da9c32cc-2df8-ed11-8849-000d3a993550)?partitionId=Device-ABC-1234&$select=contoso_value
@@ -377,7 +377,7 @@ Because this setting is applied to the service, it remains set for all requests 
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -427,7 +427,7 @@ static void DemonstrateSuppressCallbackRegistrationExpanderJob(IOrganizationServ
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1

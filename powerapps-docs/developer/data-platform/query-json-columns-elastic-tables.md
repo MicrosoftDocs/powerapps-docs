@@ -62,7 +62,7 @@ public static Guid CreateWithJsonData(
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/contoso_sensordatas
@@ -81,7 +81,7 @@ OData-Version: 4.0
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -167,7 +167,7 @@ public class QueryResult
 
 This request uses the [ExecuteCosmosSqlQuery function](xref:Microsoft.Dynamics.CRM.ExecuteCosmosSqlQuery).
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/ExecuteCosmosSqlQuery(
@@ -179,7 +179,7 @@ GET [Organization URI]/api/data/v9.2/ExecuteCosmosSqlQuery(
     &@p3={'Keys':['@sensortype', '@power'],'Values':[{'Type':'System.String','Value':'Humidity'}, {'Type':'System.Int32','Value': '5'}]}
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

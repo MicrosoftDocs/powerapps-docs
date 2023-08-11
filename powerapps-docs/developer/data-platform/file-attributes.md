@@ -72,7 +72,7 @@ More information:
 
 POST a [FileAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.FileAttributeMetadata) to the `Attributes` collection for the table.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes HTTP/1.1
@@ -116,7 +116,7 @@ Content-Type: application/json; charset=utf-8
 
 Use the `FileAttributeMetadata.MaxSizeInKB` property to set the maximum size.
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
