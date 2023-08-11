@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 08/01/2023
+ms.date: 08/11/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -55,7 +55,7 @@ Note the following when you work with the timeline control in the form designer.
 
 ## Configure the timeline component
 
-The timeline component is rich in features and functionality that can be configured and tailored to support specific business needs. The timeline is comprised of features and functionality that you configure in the timeline component, which is then displayed in the table form.
+The timeline component is rich in features and functionality that can be configured and tailored to support specific business needs. The timeline is composed of features and functionality that you configure in the timeline component, which is then displayed in the table form.
 
 ### Display options
 
@@ -129,7 +129,7 @@ The following is a detailed overview of the **Advanced** configuration options, 
 
 #### Enable filter pane
 
-Using filters provides a quick option to sort and look for specific data quickly.
+Filters provide a quick option to sort and look for specific data quickly.
 
 |Form designer configuration View | Form designer display View |
 |--------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
@@ -245,7 +245,7 @@ This section describes the settings available in the Record settings area of the
 - **Notes** record type is tied to **Notes** in record settings.
 - **Posts** record type is tied to **Posts** in record settings.
 
-To enable or disable a record type, simply select or clear the checkbox. Then, that record type either displays or no longer appears in the **Record settings** section.
+To enable or disable a record type, select or clear the checkbox. Then, that record type either displays or no longer appears in the **Record settings** section.
 
 ![Display options - Advanced - Record Settings.](media\timeline-record-settings-display-options-advanced-1a.png "Display options - Advanced - Record Settings")
 
@@ -503,7 +503,7 @@ To enable mentions in notes and posts, contact [Microsoft Help + support](/power
 
 When the rich text editor is enabled, users can mention other users and entities in notes and posts using the **@** and **#** symbols. Configuration for the rich text editor is available in the maker experience in **Power Apps**: [make.powerapps.com](https://make.powerapps.com "make.powerapps.com"). The users and entities that are displayed are pulled from the configuration file provided in the **Rich text editor configuration URL** column. More information: [Use the rich text editor control in Power Apps](/powerapps/maker/model-driven-apps/rich-text-editor-control)
 
-By default, the **@** symbol returns matches with the first name, last name, or email address of system users starting with the search string.
+By default, the **@** symbol returns matches with the first name, family name, or email address of system users starting with the search string.
 
 By default, the **#** symbol returns matches with the account and contact name table records starting with the search string.
 
@@ -541,7 +541,7 @@ The "systemser" table persists for **@** and the "account" and "contact" entitie
 <!-- 
 ## Configure dashboard timelines
 
-Timelines can be configured and put on a dashboard. However, the configuration available for timeline applied to a dashboard is limited to the functionality provided by the legacy designer experience. The new form designer experience on dashboards is not available. 
+Timelines can be configured and put on a dashboard. However, the configuration available for timeline applied to a dashboard is limited to the functionality provided by the legacy designer experience. The new form designer experience on dashboards isn't available. 
 
 > [!NOTE]
 > Capabilities on a dashboard timeline are different than those in an embedded dashboard timeline.  
@@ -555,22 +555,22 @@ The following image shows the Activities tab, where you can modify the Timeline 
 
 :::image type="content" source="media/timeline-control-properties-activities.png" alt-text="Timeline control properties Activities tab":::  -->
 
-## Configure auto-post messages to display on the timeline
+## Configure autopost messages to display on the timeline
 
 > [!NOTE]
-> - The auto-post functionality is only available with environments that are configured for **Enable Dynamics 365 apps**.
-> - Dynamics 365 incudes auto-post rules for some standard tables such as account, contact, lead, and case. It is not possible to create new auto-post rules. However, you can use other options such as Power Automate or a custom plug-in to create a post record based on the desired conditions.
+> - The autopost functionality is only available with environments that are configured for **Enable Dynamics 365 apps**.
+> - Dynamics 365 incudes autopost rules for some standard tables such as account, contact, lead, and case. It is not possible to create new autopost rules. However, you can use other options such as Power Automate or a custom plug-in to create a post record based on the desired conditions.
 
-You can configure which auto-post messages appears on the timeline when a system event occurs. The auto-post configuration replaces the legacy Activity Feed Configuration and Activity Feed Configuration Rules.
+You can configure which autopost messages appear on the timeline when a system event occurs. The autopost configuration replaces the legacy Activity Feed Configuration and Activity Feed Configuration Rules.
 
-To configure the auto-post messages that should be displayed:
+To configure the autopost messages that should be displayed:
 
 1. In Customer Service Hub, go to **Service Management**, and under **Timeline settings**, select **Auto-post rules**.
-2. Select which auto-post rules to make active using the grid and **Activate** and **Deactivate** buttons at the top.
+2. Select which autopost rules to make active using the grid and **Activate** and **Deactivate** buttons at the top.
 
-When a system event corresponding to an active rule occurs, an auto-post message displays on the timeline.
+When a system event corresponding to an active rule occurs, an autopost message displays on the timeline.
 
-![Auto-post rules timeline settings.](media\timeline_auto-post_rules.png "Auto-post rules timeline settings")
+![Autopost rules timeline settings.](media\timeline_autopost_rules.png "Autopost rules timeline settings")
 
 If you're using a Dynamics 365 app other than Customer Service Hub or Customer Service workspace, you need to add your own sitemap. To add your own sitemap in your app:
 
