@@ -144,7 +144,7 @@ Whenever a record that uses a custom `partitionid` value must be identified, suc
 
 ### Records synchronized with Synapse Link for Dataverse not deleted from data lake when TTL expires
 
-When [time to live (TTL)](#expire-data-by-using-time-to-live) is used on a row, the row will get deleted from the elastic table when TTL has expired. If it's synchronized to a data lake using [Synapse Link for Dataverse ](../../maker/data-platform/export-to-data-lake.md) before TTL expiry, it won't be deleted from data lake.
+When [time to live (TTL)](#expire-data-by-using-time-to-live) is used on a row, the row will get deleted from the elastic table when TTL has expired. If it's synchronized to a data lake using [Synapse Link for Dataverse ](../../maker/data-platform/export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
 
 ## Frequently asked questions
 
