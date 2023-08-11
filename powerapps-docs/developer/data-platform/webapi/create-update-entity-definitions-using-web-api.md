@@ -54,7 +54,7 @@ To create a table definition, `POST` the JSON representation of the entity defin
   
 The following example shows the creation of a custom table with the properties set. The language is English using the locale ID (LCID) of 1033. [!INCLUDE [lcid](../../../includes/lcid.md)]  
   
- **Request**
+ **Request:**
 
 ```http 
 POST [Organization URI]/api/data/v9.2/EntityDefinitions HTTP/1.1
@@ -144,7 +144,7 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**
+ **Response:**
 
 ```http 
 HTTP/1.1 204 No Content  
@@ -175,7 +175,7 @@ Typically, you'll retrieve the JSON definition of the entity attribute and modif
 > [!NOTE]
 > Some of the examples below use the `MetadataId` primary key value. But you can also use the `LogicalName` alternate key to reference schema entities. More information: [Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)
   
- **Request**
+ **Request:**
 
 ```http 
 PUT [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) HTTP/1.1
@@ -475,7 +475,7 @@ MSCRM.MergeLabels: true
 }  
 ```  
   
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 204 No Content  

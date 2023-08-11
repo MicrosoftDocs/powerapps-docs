@@ -3,7 +3,7 @@ title: Mobile offline overview (classic)
 ms.custom: Configure mobile offline synchronization
 description: Set up mobile offline for Power Apps
 ms.date: 10/13/2022
-ms.reviewer: 
+ms.reviewer: sericks
 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -11,8 +11,8 @@ ms.topic: article
 applies_to: Dynamics 365 apps
 ms.assetid: 7f992860-8c7b-48ba-806a-63a3634d209d
 caps.latest.revision: 1
-ms.author: sericks
-author: sericks007
+ms.author: trdehove
+author: trdehove
 search.audienceType: 
   - admin
   - customizer

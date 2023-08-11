@@ -24,13 +24,13 @@ Bringing the power of AI Copilot to both app makers and their end-users in Power
 To learn how to use the new AI features in Power Apps, see:
 
 - [Build apps through conversation (preview)](ai-conversations-create-app.md)
+- [Continue editing your app with Copilot](ai-edit-app.md)
 - [Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 - [Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
 - [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai)
 
 > [!IMPORTANT]
->
-> - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://go.microsoft.com/fwlink/?linkid=2227838).
+> - To use this capability your environment must be in the US region.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to the [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
@@ -48,21 +48,19 @@ The following are requirements to access the waitlist for this preview:
 
 - Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.  
 
-- Licensed customers will be prioritized for access.  
-
 - AI Builder must be enabled for your environment to use the AI models or controls leveraging AI models:
 
     1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
-    2. In the admin center, go to **Environments** &gt; *\[select an environment\]* &gt; **Settings** &gt; **Features**.
+    2. In the admin center, go to **Environments** &gt; *\[select an environment\]* &gt; **Settings** &gt; **Product** &gt; **Features**.
 
     3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
 
-## Disable Copilot
+## Disable Copilot in Power Apps
 
-For this preview, Copilot will be turn on by default. To disable it, you need to have administrator access.
+For this preview, Copilot in Power Apps will be turn on by default. To disable it, you need to have administrator access.
 
-Follow these steps to disable **Copilot** for your tenant.
+Follow these steps to disable **Copilot** in Power Apps for your tenant.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. Select **Settings** > **Tenant settings** in the left-side navigation pane.

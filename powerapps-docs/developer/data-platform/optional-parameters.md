@@ -1,7 +1,7 @@
 ---
 title: "Use optional parameters (Microsoft Dataverse) | Microsoft Docs" 
 description: "Use optional parameters to control operation behaviors" 
-ms.date: 05/27/2023
+ms.date: 06/28/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -99,7 +99,7 @@ More information:
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/webresourceset HTTP/1.1
@@ -119,7 +119,7 @@ MSCRM.SolutionUniqueName: ExampleSolution
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -180,7 +180,7 @@ static void DemonstrateSuppressDuplicateDetection(IOrganizationService service)
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -196,7 +196,7 @@ MSCRM.SuppressDuplicateDetection: false
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 412 Precondition Failed
@@ -221,6 +221,9 @@ More information:
 ## Add a shared variable to the plugin execution context
 
 Use the `tag` parameter to include a shared variable value that is accessible within a plug-in. This extra information allows a plug-in to apply logic that depends on the client application.
+
+> [!NOTE]
+> This parameter is intended for client applications to be able to set any value they wish. No Microsoft feature should require that you set a specific value in your client application code to enable different behaviors.
 
 To access the value in a plug-in, use the [IExecutionContext.SharedVariables collection](xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables)
 
@@ -251,7 +254,7 @@ static void DemonstrateTag(IOrganizationService service)
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts?tag=A%20string%20value HTTP/1.1
@@ -304,7 +307,7 @@ private static Entity RetrieveRecord(
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/contoso_sensordatas(da9c32cc-2df8-ed11-8849-000d3a993550)?partitionId=Device-ABC-1234&$select=contoso_value
@@ -317,9 +320,10 @@ Accept: application/json
 
 ---
 
-Alternatively, you can use the `partitionid` value using alternate key style. More information: [Using Alternate Key](use-elastic-tables.md#using-alternate-key)
+Alternatively, you can use the `partitionid` value using alternate key style.
 
-More information: [Specifying PartitionId](use-elastic-tables.md#specifying-partitionid)
+- [Learn about using the alternate keys with elastic tables](use-elastic-tables.md#using-the-alternate-key)
+- [Learn about specify a partitionid](use-elastic-tables.md#specify-partitionid)
 
 ## Bypass custom synchronous logic
 
@@ -373,7 +377,7 @@ Because this setting is applied to the service, it remains set for all requests 
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -423,7 +427,7 @@ static void DemonstrateSuppressCallbackRegistrationExpanderJob(IOrganizationServ
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1

@@ -28,7 +28,7 @@ Because Microsoft Dataverse is a metadata-driven application, developers may nee
 
 You'll use the same techniques described in [Query data using the Web API](query-data-web-api.md) when you query EntityMetadata, with a few variations. Use the `EntityDefinitions` entity set path to retrieve information about the <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>. EntityMetadata entities contain a lot of data so you'll want to be careful to only retrieve the data that you need. The following example shows the data returned for just the `DisplayName`, `IsKnowledgeManagementEnabled`, and `EntitySetName` properties of the definition for the `Account` entity. The `MetadataId` property value is always returned.  
   
- **Request**
+ **Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')?$select=DisplayName,IsKnowledgeManagementEnabled,EntitySetName HTTP/1.1  
@@ -37,7 +37,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -152,7 +152,7 @@ GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')/At
 
 When you know the `MetadataId` for both the `EntityMetadata` and the `AttributeMetadata`, or the `LogicalName` value of either, you can retrieve an individual attribute and access the property values using a query like the following. This query retrieves the `LogicalName` property of the attribute as well as expanding the `OptionSet` collection-valued navigation property. You must cast the attribute as a `Microsoft.Dynamics.CRM.PicklistAttributeMetadata` to access the `OptionSet` collection-valued navigation property.  
 
- **Request**
+ **Request:**
 
  ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(5967e7cc-afbb-4c10-bf7e-e7ef430c52be)/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet HTTP/1.1  
@@ -162,7 +162,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
- **Response**
+ **Response:**
 
  ```http
 HTTP/1.1 200 OK  
@@ -262,7 +262,7 @@ Additional options removed for brevity
 
 If you don't require any properties of the attribute and only want the values of a collection-valued navigation property such as `OptionsSet`, you can include that in the URL and limit the properties with a `$select` system query option for a more efficient query. In the following example only the `Options` property of the `OptionSet` are included.  
 
- **Request**
+ **Request:**
 
  ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(5967e7cc-afbb-4c10-bf7e-e7ef430c52be)/Microsoft.Dynamics.CRM.PicklistAttributeMetadata/OptionSet?$select=Options HTTP/1.1  
@@ -272,7 +272,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
- **Response**
+ **Response:**
 
  ```http
 HTTP/1.1 200 OK  

@@ -1,12 +1,12 @@
 ---
-title: "Use change tracking to synchronize data with external systems (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The change tracking feature provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/19/2023
+title: "Use change tracking to synchronize data with external systems (Microsoft Dataverse) | Microsoft Docs"
+description: "The change tracking feature provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized."
+ms.date: 06/23/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: Peakerbl # GitHub ID
+author: paulliew
 ms.subservice: dataverse-developer
-ms.author: peakerbl # MSFT alias of Microsoft employees only
+ms.author: paulliew 
 search.audienceType:
   - developer
 contributors:
@@ -22,21 +22,27 @@ The change tracking feature in Microsoft Dataverse provides a way to keep the da
 
 Before retrieving the changes for a table, make sure that the change tracking is enabled for that table.
 
-You can check whether this feature is enabled or enable it by using [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Select **Data** > **Tables** and the specific table. Under **Advanced options** you will find the **Track changes** property.
+You can check whether this feature is enabled or enable it by using [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Select **Data** > **Tables** and the specific table. Under **Advanced options** you'll find the **Track changes** property.
 
-You can set this programmatically by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled?text=EntityMetadata.ChangeTrackingEnabled Property> to `True`.
+You can set this programmatically by setting the [EntityMetadata.ChangeTrackingEnabled Property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled) to `True`.
 
 > [!NOTE]
 > Once change tracking has been enabled for a table, it is not possible to disable it.
 
 For more information on how to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc): [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md)
 
-There are two ways to check whether change tracking is enabled for a table using Web API.
+There are two ways to check whether change tracking is enabled for a table using the Dataverse Web API.
 
-1. You can query `EntityDefinitions` with the following GET request:
+1. You can query `EntityDefinitions` with the following `GET` request:
 
    ```http
    GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName&$filter=ChangeTrackingEnabled eq true
+   ```
+
+   There are system tables with change tracking enabled, for example [Auditing (Audit)](reference/entities/audit.md). You can use the following query to see the full list:
+
+   ```http
+   GET [Organization URI]/api/data/v9.2/EntityDefinitions?$filter=ChangeTrackingEnabled eq true and IsCustomEntity eq false&$select=LogicalName
    ```
 
    More information: [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
@@ -49,7 +55,7 @@ There are two ways to check whether change tracking is enabled for a table using
    GET [Organization URI]/api/data/v9.2/$metadata?annotations=true
    ```
 
-   Those entity sets which represent tables where change tracking is enabled will have this annotation:
+   Those entity sets that represent tables where change tracking is enabled have this annotation:
 
    ```xml
    <Annotation Term="Org.OData.Capabilities.V1.ChangeTracking">
@@ -63,7 +69,7 @@ There are two ways to check whether change tracking is enabled for a table using
 
 ### Tables not eligible for change tracking
 
-Some tables cannot be enabled for change tracking. You can check if a table is eligible for change tracking by checking the  [EntityMetadata.CanChangeTrackingBeEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanChangeTrackingBeEnabled) managed property value. To see which tables cannot be enabled for change tracking, use this Web API query:
+Some tables can't be enabled for change tracking. You can check if a table is eligible for change tracking by checking the  [EntityMetadata.CanChangeTrackingBeEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanChangeTrackingBeEnabled) managed property value. To see which tables can't be enabled for change tracking, use this Web API query:
 
 ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName,ChangeTrackingEnabled&$filter=ChangeTrackingEnabled eq false and CanChangeTrackingBeEnabled/Value eq false
@@ -76,15 +82,15 @@ More information:
 
 ## Retrieve changes for a table using the Web API
 
-Changes made in tables can be tracked using Web API requests by adding the `Prefer: odata.track-changes` header. This header requests that a _delta link_ be returned which can subsequently be used to retrieve table changes.
+Changes made in tables can be tracked using Web API requests by adding the `Prefer: odata.track-changes` header. This header requests that a _delta link_ is returned which can later be used to retrieve table changes.
 
-Delta links are opaque, service-generated links that the client uses to retrieve subsequent changes to a result. They are based on a defining query that describes the set of results for which changes are being tracked. For example, the request that generated the results containing the delta link. The delta link encodes the collection of tables for which changes are being tracked, along with a starting point from which to track changes. More information: [Oasis OData Version 4.0 - Delta Links](https://docs.oasis-open.org/odata/odata/v4.0/cs01/part1-protocol/odata-v4.0-cs01-part1-protocol.html#_Toc365046305)
+Delta links are opaque, service-generated links that the client uses to retrieve subsequent changes to a result. They're based on a defining query that describes the set of results for which changes are being tracked. For example, the request that generated the results containing the delta link. The delta link encodes the collection of tables for which changes are being tracked, along with a starting point from which to track changes. More information: [Oasis OData Version 4.0 - Delta Links](https://docs.oasis-open.org/odata/odata/v4.0/cs01/part1-protocol/odata-v4.0-cs01-part1-protocol.html#_Toc365046305)
 
 ### Retrieve changes in tables using Web API example
 
 This example shows how to retrieve changes made for the account table using the Web API.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber,telephone1,fax HTTP/1.1
@@ -93,7 +99,7 @@ OData-Version: 4.0
 Content-Type: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -116,9 +122,9 @@ Preference-Applied: odata.track-changes
 }
 ```
 
-The `@odata.deltaLink` Uri returned from the above example can be used to fetch changes in tables. In this example a new account was created and an existing account deleted. The delta link returned from the previous request fetches these changes, as shown in the example below.
+The `@odata.deltaLink` Uri returned from the above example can be used to fetch changes in tables. In this example, a new account was created and an existing account deleted. The delta link returned from the previous request fetches these changes, as shown in the example below.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber,telephone1,fax&$deltatoken=919042%2108%2f22%2f2017%2008%3a10%3a44
@@ -126,7 +132,7 @@ OData-Version: 4.0
 Content-Type: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -159,7 +165,7 @@ The response for the delta link returned in the initial change tracking request 
 
 You can add `$count` to the delta link returned from the initial change tracking request, as shown in the example below, to get the number of changes made.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts/$count?$deltatoken=919042%2108%2f22%2f2017%2008%3a10%3a44
@@ -169,22 +175,22 @@ Content-Type: application/json
 
 ### Query options not supported in Change Tracking Web API request
 
-System query options `$filter`, `$orderby`, `$expand` and `$top` are not supported when using the `Prefer: odata.track-changes` header in Web API request. An error message: `The \"${filter|orderby|expand|top}\" query parameter isn't supported when Change Tracking is enabled.` will be returned when using these query options in the Web API request.
+System query options `$filter`, `$orderby`, `$expand` and `$top` aren't supported when using the `Prefer: odata.track-changes` header in a Web API request. An error message: `The \"${filter|orderby|expand|top}\" query parameter isn't supported when Change Tracking is enabled.` is returned when using these query options in the Web API request.
 
 ## Retrieve changes for a table using .NET SDK
 
-When change tracking is enabled for a table, you can use the `RetrieveEntityChanges` message with the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest?text=RetrieveEntityChangesRequest Class> to retrieve the changes for that table.
+When change tracking is enabled for a table, you can use the `RetrieveEntityChanges` message with the [RetrieveEntityChangesRequest Class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest) to retrieve the changes for that table.
 
 The first time this message is used it returns all records for the table and that data can be used to populate the external storage. The message also returns a version number that will be sent back with the next use of the `RetrieveEntityChanges` message so that only data for those changes that occurred since that version will be returned.
 
 You should be aware of the following constraints when retrieving changes for a table:
 
-- Only one table will be tracked in retrieve changes. If `RetrieveEntityChanges` is executed with no version / or token, the server will treat it as the system minimum version, returning all of the records as new. Deleted objects won't be returned.
-- Changes will be returned if the last token is within a default value of 30 days. This is controlled by the value of the [Organization table ExpireChangeTrackingInDays column](reference/entities/organization.md#BKMK_ExpireChangeTrackingInDays) and can be changed. If there are unprocessed changes older than the configured value, the system will throw an exception.
-- If a client has a set of changes for a table, say version 1, a record is created and deleted prior to the next query for changes, they will get the deleted item even if they didn't have the item to begin with.
-- Records are retrieved in the order determined by server side logic. Usually, the caller will always get all new or updated records first (sorted by version number) followed by deleted records. If there are 3000 records created or updated and 2000 records deleted, Dataverse returns a collection of 5000 records, which have the first 3000 entries comprised of new or updated records and the last 2000 entries for deleted records.
+- Only one table is tracked in retrieve changes. If `RetrieveEntityChanges` is executed with no version / or token, the server treats it as the system minimum version, returning all of the records as new. Deleted objects are not returned.
+- Changes are returned if the last token is within a default value of 30 days. This duration is controlled by the value of the [Organization table ExpireChangeTrackingInDays column](reference/entities/organization.md#BKMK_ExpireChangeTrackingInDays) and can be changed. If there are unprocessed changes older than the configured value, the system throws an exception.
+- If a client has a set of changes for a table, say version 1, a record is created and deleted before the next query for changes, they'll get the deleted item even if they didn't have the item to begin with.
+- Records are retrieved in the order determined by server side logic. Usually, the caller will get all new or updated records first (sorted by version number) followed by deleted records. If there are 3,000 records created or updated and 2,000 records deleted, Dataverse returns a collection of 5,000 records, which have the first 3,000 entries comprised of new or updated records and the last 2,000 entries for deleted records.
 - If the new or updated item collection is greater than 5000, the user can page through the collection.
-- The calling user must have organization level read access to the table. If the user has limited read access, the system will throw a privilege check error.
+- The calling user must have organization level read access to the table. If the user has limited read access, the system throws a privilege check error.
 
 ### .NET SDK Sample code
 
