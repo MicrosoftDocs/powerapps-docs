@@ -23,7 +23,7 @@ The timeline helps app users see all activity history. The timeline control is u
 
 The timeline control provides an easy way to view information related to a table, such as accounts or contacts. This immersive experience helps give users a better understanding of their customer interactions, and helps them deliver more personalized service in an efficient and effective manner.
 
-App makers can configure the information displayed on the timeline to help users access information and create new activity records, such as emails and tasks directly from the timeline quickly so they can deliver more personalized service.
+App makers can configure the information that's displayed on the timeline to help users access information and create new activity records, such as email and tasks, directly from the timeline quickly so they can deliver more personalized service.
 
 ## Add a timeline
 
@@ -95,7 +95,7 @@ There are three primary record types: Activities, notes, and posts. All record t
 |Form designer configuration view | Form designer display view  |
 |------------------------------------------------------------------------------------------------------------------------|-----------------------------|
 |![Display options for Timeline](media\timeline-record-types-shown-display-options-2b.png "Display options for Timeline")|![Display options - Record types shown](media\timeline-record-types-shown-display-options-3b.png "Display options - Record types shown")|
-|To enable **Record types shown** for **Activities**, **Notes**, and **Posts** on a form, check the box next to the record type.|1. To confirm that the record type is displaying on the form, select **Create a timeline record** ![Create a timeline record icon.](media\timeline-create-a-record-icon.png "Create a timeline record icon") in the top-right nav in the timeline, and a dropdown menu that displays the list of enabled record types will appear.<BR>2. When **Activities** are enabled, you'll see **Activity** record types for appointments, email, phone calls, and tasks.<BR> 3. When **Notes** are enabled, you'll see the note record types on the form.<BR> 4. When **Posts** are enabled, you'll also see the post record types on the form.|
+|To enable **Record types shown** for **Activities**, **Notes**, and **Posts** on a form, check the box next to the record type.|1. To confirm that the record type is displaying on the form, select **Create a timeline record** ![Create a timeline record icon.](media\timeline-create-a-record-icon.png "Create a timeline record icon") in the top-right nav in the timeline, and a dropdown menu that displays the list of enabled record types appears.<BR>2. When **Activities** are enabled, you see **Activity** record types for appointments, email, phone calls, and tasks.<BR> 3. When **Notes** are enabled, you see the note record types on the form.<BR> 4. When **Posts** are enabled, you also see the post record types on the form.|
 
 > [!Note]
 > Activities and notes are standard entities. If additional solutions have been imported into the environment, other tables may also be displayed.
@@ -114,7 +114,7 @@ Dates and timestamps always appear on each record on the bottom-right side of th
 
 This section describes the settings available in the Advanced area of the timeline control settings. The **Advanced** settings apply to all record types.
 
-When enabling and disabling **Advanced** features, you won't be able to view updates (even though it may appear that there's activity occurring on the timeline component) until you save and publish your configuration updates and refresh the table form.
+When enabling and disabling **Advanced** features, you aren't able to view updates (even though it may appear that there's activity occurring on the timeline component) until you save and publish your configuration updates and refresh the table form.
 
 **Advanced** covers common settings that span across an activity, note, or post, which are the three primary record types that appear in the timeline section.
 
@@ -125,7 +125,7 @@ The following is a detailed overview of the **Advanced** configuration options, 
 |Form designer configuration View | Form designer display View |
 |------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 |![Configure Quick entry record type and sort order default](media\timeline-quick-entry-record-type-and-sort-order-default-display-settings-advanced-2a.png "Configure Quick entry record type and sort order default")| ![Display Quick entry record type and sort order default](media\timeline-quick-entry-record-type-and-sort-order-default-display-settings-advanced-3b.png "Display Quick entry record type and sort order default")|
-|1.Select **Advanced** to expand this area in the configuration view. The **Quick entry record** type provides you with quick access to create either a **Note** or a **Post**. The default setting for this setting is set to **Notes**.<BR> 2.The **Sort order default** setting controls the order of how all data is sorted on the timeline. The default setting for this setting is set to Descending. |1. When you select **Notes**, it will display under the **Search** bar in the timeline. Also, you'll see a paperclip ![Paperclip icon.](media\timelilne-paperclip-icon.png "Paperclip icon") icon that allows you to attach files. You can only attach files to Notes.<BR>2.	If you select **Posts**, it will also display under the **Search** bar in timeline.|
+|1.Select **Advanced** to expand this area in the configuration view. The **Quick entry record** type provides you with quick access to create either a **Note** or a **Post**. The default setting for this setting is set to **Notes**.<BR> 2.The **Sort order default** setting controls the order of how all data is sorted on the timeline. The default setting for this setting is set to Descending. |1. When you select **Notes**, it displays under the **Search** bar in the timeline. Also, you see a paperclip ![Paperclip icon.](media\timelilne-paperclip-icon.png "Paperclip icon") icon that allows you to attach files. You can only attach files to Notes.<BR>2.	If you select **Posts**, it also displays under the **Search** bar in timeline.|
 
 #### Enable filter pane
 
@@ -134,7 +134,7 @@ Using filters provides a quick option to sort and look for specific data quickly
 |Form designer configuration View | Form designer display View |
 |--------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 |![Configure filter pane](media\timeline-enable-filter-pane-display-options-advanced-2a.png "Configure Enable filter pane")|![Enable filter pane](media\timeline-enable-filter-pane-display-options-advanced-3b.png "Enable filter pane")|
-|The **filter pane** setting allows you to enable or disable filter functionality on timeline. It's enabled by default.   | Enable the **filter pane** by checking the box next to the setting.  This enables the filter icon to display on the timeline.  <BR><BR> To disable the **filter pane**, clear the box next to the setting and the filter icon will no longer appear on the timeline.   |
+|The **filter pane** setting allows you to enable or disable filter functionality on timeline. It's enabled by default.   | Enable the **filter pane** by checking the box next to the setting.  This enables the filter icon to display on the timeline.  <BR><BR> To disable the **filter pane**, clear the box next to the setting and the filter icon no longer appears on the timeline.   |
 
 #### Filter records on timeline
 
@@ -144,7 +144,7 @@ When you select filters based on an activity status then those activities, notes
 
 - When the **Filter** icon is transparent ![Transparent filter icon.](media\timeline-filter-icon.png "Transparent filter icon") on the table form, it means no items have been selected, therefore the filter pane is empty.<br>
 
-- When the **Filter** icon is dark ![Dark filter icon](media\timeline-filter-applied-1.png "Dark filter icon"), it means filters have been set. To view which filters have been designated, select the ![Filter icon](media\timeline-filter-icon.png "Filter icon") **Filter** icon and the filter pane will display the filters that have been set.</li>
+- When the **Filter** icon is dark ![Dark filter icon](media\timeline-filter-applied-1.png "Dark filter icon"), it means filters have been set. To view which filters have been designated, select the ![Filter icon](media\timeline-filter-icon.png "Filter icon") **Filter** icon and the filter pane displays the filters that have been set.</li>
 
 - Choose how you want to filter data by selecting the box next to the filter.<br>
 
@@ -157,7 +157,7 @@ The following category and subcategory options are available on the filer menu:
 |Record type                |<li>Notes</li>                     <li>Activities</li><li>Posts</li>                     |
 |Activity type              |<li>Appointment</li><li>Campaign Activity<sup>1<sup></li> <li>Campaign Response<sup>1<sup></li><li>Email</li><li>Fax</li><li>Case Resolution<sup>1<sup></li><li>Letter</li><li>Opportunity Case<sup>1<sup></li>   <li>Order Case<sup>1<sup></li><li>Phone Call</li><li>Quote Close<sup>1<sup></li>           <li>Recurring Appointment</li><li>Social Activity</li><li>Task</li>   <li>Project Service Approval<sup>1<sup></li><li>Booking Alert<sup>1<sup></li><li>Conversation</li><li>Session</li><li>Customer Voice survey invite<sup>1<sup></li><li>Customer Voice survey response<sup>1<sup></li><li>Custom activities (made available by imported solutions)</li>|
 |Activity status            |<li>Active</li><li>Overdue</li>       <li>Closed</li>                         |
-|Activity status reason     |Allows you to filter using specific status reasons. The values are a unique list of all of the status reasons from the activities in the timeline. The status reasons change depending on the activity. If there are multiple activities on the timeline that have the same status reason, it's reflected once, but then the number next to it indicates how many occurrences of that status reason appear in the timeline.                       |
+|Activity status reason     |Allows you to filter using specific status reasons. The values are a unique list of all of the status reasons from the activities in the timeline. The status reasons change depending on the activity. If there are multiple activities on the timeline that have the same status reason, it reflects once, but then the number next to it indicates how many occurrences of that status reason appear in the timeline.                       |
 |Activity due date (active) |<li>Next 30 days</li><li>Next 7 days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last 7 days</li>   <li>Last 30 days</li>                   |
 |Posts by                   |<li>Auto post</li><li>Users</li>                          |
 |Modified date              |<li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li>                   |
@@ -174,7 +174,7 @@ The **Expand filter pane** setting provides quick access to sorting options with
 |Form designer configure view |Form designer display view |
 |--------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
 |![Configure filter pane ](media\timeline-expand-filter-pane-display-options-advanced-3a.PNG "Configure filter pane")|![Enable filter pane ](media\timeline-expand-filter-pane-display-options-advanced-2b.PNG "Enable filter pane")|
-| The **Expand filter pane by default** setting displays an expanded filter pane at the top of the form anytime it's opened and refreshed.  It's disabled by default.|Enable the **Expand filter pane** by checking the box next to the setting. This enables the filter pane to appear at the top of the form anytime the form is opened and refreshed.<BR><BR>To disable the **Expand filter pane**, clear the box next to the setting and the filter pane won't appear on the timeline.|
+| The **Expand filter pane by default** setting displays an expanded filter pane at the top of the form anytime it's opened and refreshed.  It's disabled by default.|Enable the **Expand filter pane** by checking the box next to the setting. This enables the filter pane to appear at the top of the form anytime the form is opened and refreshed.<BR><BR>To disable the **Expand filter pane**, clear the box next to the setting and the filter pane doesn't appear on the timeline.|
 
 #### Enable search bar
 
@@ -192,7 +192,7 @@ You can search for records in the timeline. When you search for a phrase in the 
 |Form designer configure view |  Form designer display view |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 |![Configure Expand all records in timeline](media\timeline-expand-all-records-display-options-advanced-2a.PNG "Configure Expand all records in timeline")|![Enable Expand all records in timeline](media\timeline-expand-all-records-display-options-advanced-2b.PNG "Enable Expand all records in timeline")|
-|Select **Expand all records** to set the default view to display all records in the expanded view format in the form each time the timeline is opened. **Expand all records** is disabled by default.|1. When enabled, the **Expand all records** icon is displayed in the top-right corner of the timeline nav. <BR>2. Records can be expanded or collapsed by using the **Expand all records** icon. When expanded, all records are displayed in the expanded view in the form each time it's opened. When you clear **Expand all records**, it no longer displays activities in an expanded view.<BR><BR> When disabled, the **Expand all records** icon won't display in the top-right nav of the timeline. Records will always be displayed in a collapsed view.|
+|Select **Expand all records** to set the default view to display all records in the expanded view format in the form each time the timeline is opened. **Expand all records** is disabled by default.|1. When enabled, the **Expand all records** icon is displayed in the top-right corner of the timeline nav. <BR>2. Records can be expanded or collapsed by using the **Expand all records** icon. When expanded, all records are displayed in the expanded view in the form each time it's opened. When you clear **Expand all records**, it no longer displays activities in an expanded view.<BR><BR> When disabled, the **Expand all records** icon won't display in the top-right nav of the timeline. Records are always be displayed in a collapsed view.|
   
 #### Edit filter pane
 
@@ -245,7 +245,7 @@ This section describes the settings available in the Record settings area of the
 - **Notes** record type is tied to **Notes** in record settings.
 - **Posts** record type is tied to **Posts** in record settings.
 
-To enable or disable a record type, simply select or clear the checkbox. Then, that record type will either display or no longer appear in the **Record settings** section.
+To enable or disable a record type, simply select or clear the checkbox. Then, that record type either displays or no longer appears in the **Record settings** section.
 
 ![Display options - Advanced - Record Settings.](media\timeline-record-settings-display-options-advanced-1a.png "Display options - Advanced - Record Settings")
 
@@ -300,7 +300,7 @@ If you set the following form type for a specific activity, the application cons
 #### Enable command actions on activity record types (Preview)
 
 > [!NOTE]
-> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
+> This is an early access feature. You can opt in early to enable these features in your environment, which allows you to test these features and then adopt them across your environments.
 For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
 
 Command actions allow users to assign, close, delete, open a record or add a record to a queue for activities from the timeline. You can enable or disable the command actions for a specific activity type.
@@ -311,7 +311,7 @@ Based on the activity type, you can also enable other command actions. For examp
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Configure the ability to enable command actions from timeline](media\maker-enable-commands-1.png "Enable command actions") | ![Display command actions directly from timeline](media\maker-enable-commands-2.png "Command actions directly displayed on timeline") |
 | To allow users to enable command actions for an activity directly from the timeline, check the box next to command action in  **Select and order commands**. You can only enable five command actions for an activity.<br> 
-You can also move the position of the  command actions to change the order in which they're displayed on the timeline.| When enabled, the command action will appear on the activity record in the timeline.|
+You can also move the position of the  command actions to change the order in which they're displayed on the timeline.| When enabled, the command action appears on the activity record in the timeline.|
 
 
 #### Display related records on the timeline
@@ -334,10 +334,10 @@ Records are displayed using the default setting for each activity type. However,
 |Form designer configure view |Form designer display view|
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Create and use card forms in timeline](media\timeline-create-and-use-card-forms-display-options-advanced-101a.png "Create and use card forms in timeline")|![Display the option to create and use card forms in timeline](media\timeline-create-and-use-card-forms-display-options-advanced-1111b.png "Display the option to create and use card forms in timeline") |
-|You can change the default card settings to a different card form if one has been created.  |If you create a new card form, you must go to the parent table and add the new form of card type there before it will appear in the timeline list for configuration.  If **Default** is displayed, you aren't using the card form.  You can't use the **Email card form** in a timeline unless you select and publish it first.|
+|You can change the default card settings to a different card form if one has been created.  |If you create a new card form, you must go to the parent table and add the new form of card type there before it appears in the timeline list for configuration.  If **Default** is displayed, you aren't using the card form.  You can't use the **Email card form** in a timeline unless you select and publish it first.|
 
 > [!NOTE]
-> Not all activity types allow you to create card types, so the default selection will be your only option for those records.
+> Not all activity types allow you to create card types, so the default selection is your only option for those records.
 
 #### Customize a card from within timeline
 
@@ -357,12 +357,12 @@ Each individual card form must be customized for each activity record, such as e
 
 **Header section**
 
-The card **Header** displays the title/subject in your timeline email form. You can have up to six columns in the **Header** section, but only the first two columns will be seen on the timeline record. Empty columns will be ignored by the form in all sections.
+The card **Header** displays the title/subject in your timeline email form. You can have up to six columns in the **Header** section, but only the first two columns are seen on the timeline record. Empty columns are ignored by the form in all sections.
 
 |Form designer configuration view | Form designer display view|
 |--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 |![Customize a card form in timeline - Header](media\timeline-create-and-use-card-forms-header-1a.png "Customize a card form in timeline - Header")|![Card form in timeline - Header Display](media\timeline-create-and-use-card-forms-header-display-1a.png "Card form in timeline - Header Display")|
-| **Column 1** <BR>1. Regardless of the column you choose for this section, it will appear as a bold header at the top of your timeline record. For this example, we selected **Subject** for this column. <br><BR>**Column 2** <BR>2. Again, regardless of the column you choose for this section, this column will always appear in the bottom-right corner of the timeline record. For this example, **Modified On** is selected for this column. |**Column 1**<BR>1. Column 1 from the card header is always displayed in this section of the timeline record.<BR><BR>**Column 2**<BR>2. Column 2 from the card header is always displayed in this section of the timeline record. |
+| **Column 1** <BR>1. Regardless of the column you choose for this section, it appears as a bold header at the top of your timeline record. For this example, we selected **Subject** for this column. <br><BR>**Column 2** <BR>2. Again, regardless of the column you choose for this section, this column always appears in the bottom-right corner of the timeline record. For this example, **Modified On** is selected for this column. |**Column 1**<BR>1. Column 1 from the card header is always displayed in this section of the timeline record.<BR><BR>**Column 2**<BR>2. Column 2 from the card header is always displayed in this section of the timeline record. |
 
 **Details section**
 
@@ -371,7 +371,7 @@ The card **Details** section displays in the body of your timeline email record.
 |Form designer configuration view |Form designer display view|
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 |![Customize a card form in timeline - Details section](media\timeline-create-and-use-card-forms-details-1a.png "Customize a card form in timeline - Details section") |![Display the card form in timeline - Details section](media\timeline-create-and-use-card-forms-details-display-1a.png "Display the card form in timeline - Details section")|
-|The card details will always appear below the header regardless of the column you choose.<BR><BR>**Column 1**<BR>1. In the card details Column 1 acts as a subheader on the timeline record. For this example, **To** is selected for this column.<BR><BR>**Column 2**<BR>2. This column only displays one line of text in a summary view on the timeline record.  When you expand your timeline record,  content in this column is fully displayed and formatted. For this example, **CC** is selected for this column.<BR><BR>**Column 3**<BR>3. This column follows the content of Column 2 and is part of the main body of your timeline record that is only viewable when you expand the record. For this example, **Description** is selected for this column.|**Column 1**<BR>1. This column always displays in this section and acts as a subheader on the timeline record. <BR><BR>**Column 2**<BR>2. This column always displays in this section and only displays one line of text in the summary view but when expanded, content is fully displayed. <BR><BR>**Column 3**<BR>3. This column always displays in this section and is only viewable when the record is expanded.|	
+|The card details always appears below the header regardless of the column you choose.<BR><BR>**Column 1**<BR>1. In the card details Column 1 acts as a subheader on the timeline record. For this example, **To** is selected for this column.<BR><BR>**Column 2**<BR>2. This column only displays one line of text in a summary view on the timeline record.  When you expand your timeline record,  content in this column is fully displayed and formatted. For this example, **CC** is selected for this column.<BR><BR>**Column 3**<BR>3. This column follows the content of Column 2 and is part of the main body of your timeline record that is only viewable when you expand the record. For this example, **Description** is selected for this column.|**Column 1**<BR>1. This column always displays in this section and acts as a subheader on the timeline record. <BR><BR>**Column 2**<BR>2. This column always displays in this section and only displays one line of text in the summary view but when expanded, content is fully displayed. <BR><BR>**Column 3**<BR>3. This column always displays in this section and is only viewable when the record is expanded.|	
 
 **Footer section**<br>
 This section isn't visible on the timeline record.  
@@ -427,7 +427,7 @@ Only enable the activities that you need on the form. If you select more than 10
   
 #### Configure the form for notes
 
-In the **Notes** area, under **Configure form**, select **Default form** to configure how information is displayed in notes, such as relevant users and dates, and whether or not to include labels. This enables you to increase or reduce the number of timeline records that appear onscreen.
+In the **Notes** area, under **Configure form**, select **Default form** to configure how information is displayed in notes, such as relevant users and dates, and whether or not to include labels. This setting lets you increase or reduce the number of timeline records that display.
 
 :::image type="content" source="media/timeline-configure-form-notes.png" alt-text="Configure the form for notes":::
 
@@ -451,7 +451,7 @@ In the **Notes** area, under **Configure form**, select **Default form** to conf
  #### Set the notes rollup type in timeline
   
 > [!NOTE]
-> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
+> This is an early access feature. You can opt in early to enable these features in your environment, which allows you to test these features and then adopt them across your environments.
   
 The rollup type can be configured for timelines on forms for notes. The available types of rollups are **Extended**, **Related**, and **None**. To show  those records only that are directly related to the notes in timeline, select **None**.
 
@@ -533,7 +533,7 @@ To configure more entities, add and modify the following code to the configurati
       }
 
 ```
-The "systemser" table will persist for **@** and the "account" and "contact" entities for **#** regardless of how the file is edited.
+The "systemser" table persists for **@** and the "account" and "contact" entities for **#** regardless of how the file is edited.
 
 > [!IMPORTANT]
 > The mentions feature doesn't work with Power Platform environments that were created with the **Enable Dynamics 365 apps** option set to **Yes**. For more information about this option, go to [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
@@ -545,7 +545,7 @@ Timelines can be configured and put on a dashboard. However, the configuration a
 
 > [!NOTE]
 > Capabilities on a dashboard timeline are different than those in an embedded dashboard timeline.  
-Dashboard timelines contain records related to the current user. This means each user will see a different set of information when viewing the same dashboard timeline. Notes are not available on the dashboard.
+Dashboard timelines contain records related to the current user. This means each user sees a different set of information when viewing the same dashboard timeline. Notes are not available on the dashboard.
 
 This following image shows the General tab, where you can modify the timeline control properties:
 
@@ -561,14 +561,14 @@ The following image shows the Activities tab, where you can modify the Timeline 
 > - The auto-post functionality is only available with environments that are configured for **Enable Dynamics 365 apps**.
 > - Dynamics 365 incudes auto-post rules for some standard tables such as account, contact, lead, and case. It is not possible to create new auto-post rules. However, you can use other options such as Power Automate or a custom plug-in to create a post record based on the desired conditions.
 
-You can configure which auto-post messages will appear on the timeline when a system event occurs. The auto-post configuration replaces the legacy Activity Feed Configuration and Activity Feed Configuration Rules.
+You can configure which auto-post messages appears on the timeline when a system event occurs. The auto-post configuration replaces the legacy Activity Feed Configuration and Activity Feed Configuration Rules.
 
 To configure the auto-post messages that should be displayed:
 
 1. In Customer Service Hub, go to **Service Management**, and under **Timeline settings**, select **Auto-post rules**.
 2. Select which auto-post rules to make active using the grid and **Activate** and **Deactivate** buttons at the top.
 
-When a system event corresponding to an active rule occurs, an auto-post message will display on the timeline.
+When a system event corresponding to an active rule occurs, an auto-post message displays on the timeline.
 
 ![Auto-post rules timeline settings.](media\timeline_auto-post_rules.png "Auto-post rules timeline settings")
 
