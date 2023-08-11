@@ -570,7 +570,7 @@ To configure the autopost messages that should be displayed:
 
 When a system event corresponding to an active rule occurs, an autopost message displays on the timeline.
 
-![Autopost rules timeline settings.](media\timeline_autopost_rules.png "Autopost rules timeline settings")
+![Autopost rules timeline settings.](media\timeline_auto-post_rules.png "Autopost rules timeline settings")
 
 If you're using a Dynamics 365 app other than Customer Service Hub or Customer Service workspace, you need to add your own sitemap. To add your own sitemap in your app:
 
