@@ -1,12 +1,12 @@
 ---
 title: Explore data on a grid page
 description: Explore tabular data on a grid page in model-driven apps.
-author: sericks007
+author: jasongre
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 05/15/2023
+ms.date: 08/10/2023
 ms.subservice: end-user
-ms.author: sericks
+ms.author: jasongre
 ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
@@ -74,6 +74,9 @@ Grid search enables you to filter the current view based on a keyword. When you 
 > ![Information tooltip that indicates the list of columns on which a begins-with match is applied.](media/Grid-search-tooltip-smaller.png "Information tooltip that indicates the list of columns on which a begins-with match is applied.")
 
 The search box can offer two different experiences, depending on how your administrator has configured search.
+
+> [!NOTE]
+> If your app is configured to be offline by default, the search box will utilize **Quick find** regardless of the grid search configuration in place.  
 
 ### Filter by keyword
 
