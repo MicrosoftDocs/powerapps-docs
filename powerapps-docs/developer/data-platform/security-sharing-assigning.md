@@ -83,7 +83,7 @@ static void ShareRecord(
 
 The following example shows the use of the [GrantAccess Action](xref:Microsoft.Dynamics.CRM.GrantAccess) using the [PrincipalAccess ComplexType](xref:Microsoft.Dynamics.CRM.PrincipalAccess) to specify the principal (user, team, or organization) and level of access to grant using the values in the [AccessRights EnumType](xref:Microsoft.Dynamics.CRM.AccessRights).
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/GrantAccess
@@ -109,7 +109,7 @@ Content-Length: 361
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -161,7 +161,7 @@ static void ModifyShare(
 
 The following example shows the use of the [ModifyAccess Action](xref:Microsoft.Dynamics.CRM.ModifyAccess) using the [PrincipalAccess ComplexType](xref:Microsoft.Dynamics.CRM.PrincipalAccess) to specify the principal (user, team, or organization) and level of access to modify using the values in the [AccessRights EnumType](xref:Microsoft.Dynamics.CRM.AccessRights).
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/ModifyAccess
@@ -187,7 +187,7 @@ Content-Length: 388
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -273,7 +273,7 @@ static void RevokeShare(
 
 The following example shows how to use the [RevokeAccess Action](xref:Microsoft.Dynamics.CRM.RevokeAccess) to remove sharing access for a user to a record. In this example, a user is the `Revokee`, and an account record is the `Target`.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/RevokeAccess
@@ -296,7 +296,7 @@ Content-Length: 274
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent

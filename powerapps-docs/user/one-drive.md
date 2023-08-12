@@ -1,15 +1,15 @@
 ---
 title: "Use OneDrive for Business| MicrosoftDocs"
 description: How to use OneDrive for Business
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/02/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser

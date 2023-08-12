@@ -114,7 +114,7 @@ The use of [non-delegable functions and inappropriate data row limits for non-de
 
 ## Use Delayed Load
 
-Turn on the [experimental feature](./working-with-experimental-preview.md) for delayed load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and are directly bound to the data source. If you build this type of app and don't enable this feature, app performance can suffer because the controls in all screens must be populated even on screens that aren't open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
+Turn on the [preview feature](./working-with-experimental-preview.md) for delayed load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and are directly bound to the data source. If you build this type of app and don't enable this feature, app performance can suffer because the controls in all screens must be populated even on screens that aren't open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
 
 ## Working with large datasets
 
