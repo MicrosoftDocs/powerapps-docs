@@ -35,16 +35,23 @@ Use the [link-entity element](reference/link-entity.md) to describe the data fro
 
 When you add the `link-entity` element, you must set these attribute values:
 
-- `name` is the logical name of the related table. In this case, `contact`.
-- `from` is the logical name of the column *from* the **related table** to match with the `to` attribute column. In this case, `contactid`.
-- `to` is the logical name of the column from the **parent table** *to* match with the `from` attribute column. In this case, `primarycontactid`.
+
+|Attribute|Description|
+|---------|---------|
+|`name`|[!INCLUDE [link-entity-name-description](reference/includes/link-entity-name-description.md)]<br />In this case, `contact`.|
+|`from`|[!INCLUDE [link-entity-from-description](reference/includes/link-entity-from-description.md)]<br />In this case, `contactid`.|
+|`to`|[!INCLUDE [link-entity-from-description](reference/includes/link-entity-from-description.md)]<br />In this case, `primarycontactid`.|
+
 
 ## Optional attribute values
 
 The following attribute values are set in the previous example, but they have default values.
 
-- `link-type` is set to `inner` which means only rows with matching values from both tables will be returned. `inner` is the default value. This attribute could also be set to `outer` to allow rows from the parent element that don't have matching values to be returned.
-- `alias` is set to `contact`, which controls how the names of related columns are returned. The `fullname` column from the related table is returned as `contact.fullname`. In this case, because this is a many-to-one relationship, the value defaults to `contact` when this attribute is not set. In other cases, an alias value may be auto-generated to ensure that the column name returned is unique.
+|Attribute|Description|
+|---------|---------|
+|`link-type`|[!INCLUDE [link-entity-link-type-description](reference/includes/link-entity-link-type-description.md)]|
+|`alias`|[!INCLUDE [link-entity-alias-description](reference/includes/link-entity-alias-description.md)]|
+
 
 ## Child elements
 

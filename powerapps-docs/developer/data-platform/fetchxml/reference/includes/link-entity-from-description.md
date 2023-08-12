@@ -1,0 +1,1 @@
+The logical name of the column *from* the related table that matches the column specified in the `to` attribute.

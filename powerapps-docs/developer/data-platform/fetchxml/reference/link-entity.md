@@ -28,15 +28,15 @@ TODO
 
 |Name|Required?|Description|
 |---------|---------|---------|
-|`name`|Yes|The logical name of the related table.|
-|`to`|Yes|The logical name of the column in the parent element *to* match with the related table column specified in the `from` attribute.|
-|`from`|Yes|The logical name of the column *from* the related table that matches the column specified in the `to` attribute.|
-|`alias`|No|A string to represent the name of the related table.<br />-  If not set for a many-to-one relationship, it will default the logical name of the related table.<br />- If not set for a one-to-many relationship, an alias value is generated using the pattern `{LogicalName}+{N}`, where `N` is the number of link-entities for that table.|
-|`link-type`|No|Whether to use an *inner* or *outer* join. Default behavior is *inner*.<br />- An inner join restricts results to rows with matching values in both tables.<br />- An outer join includes results from the parent element that don't have a matching value.|
-|`intersect`|No|TODO|
-|`forceseek`|No|TODO|
-|`enableprefiltering`|No|TODO|
-|`prefilterparametername`|No|TODO|
+|`name`|Yes|[!INCLUDE [link-entity-name-description](includes/link-entity-name-description.md)]|
+|`to`|Yes|[!INCLUDE [link-entity-to-description](includes/link-entity-to-description.md)]|
+|`from`|Yes|[!INCLUDE [link-entity-name-from-description](includes/link-entity-from-description.md)]|
+|`alias`|No|[!INCLUDE [link-entity-name-alias-description](includes/link-entity-alias-description.md)]|
+|`link-type`|No|[!INCLUDE [link-entity-name-link-type-description](includes/link-entity-link-type-description.md)]|
+|`intersect`|No|[!INCLUDE [link-entity-name-intersect-description](includes/link-entity-intersect-description.md)]|
+|`forceseek`|No|[!INCLUDE [link-entity-name-forceseek-description](includes/link-entity-forceseek-description.md)]|
+|`enableprefiltering`|No|[!INCLUDE [link-entity-name-enableprefiltering-description](includes/link-entity-enableprefiltering-description.md)]|
+|`prefilterparametername`|No|[!INCLUDE [link-entity-name-prefilterparametername-description](includes/link-entity-prefilterparametername-description.md)]|
 
 ## Parent elements
 

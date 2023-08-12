@@ -1,0 +1,1 @@
+A string to represent the name of the related table.<br />-  If not set for a many-to-one relationship, it will default the logical name of the related table.<br />- If not set for a one-to-many relationship, an alias value is generated using the pattern `{LogicalName}+{N}`, where `N` is the number of link-entities for that table.
