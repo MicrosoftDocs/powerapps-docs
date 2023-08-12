@@ -2,7 +2,7 @@
 title: Elastic tables for developers (preview)
 description: This article provides information to developers about Dataverse elastic tables and how to use elastic tables using code.
 ms.topic: article
-ms.date: 06/10/2023
+ms.date: 08/11/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -141,6 +141,10 @@ Dataverse doesn't return the `x-ms-session-token` value for delete operations. [
 ### The partitionId optional parameter isn't available for all messages
 
 Whenever a record that uses a custom `partitionid` value must be identified, such as for `Retrieve`, `Update`, or `Upsert` operations, you need a way to reference the `partitionid` value. In this case, you can use the alternate key to reference the record. If you prefer, you should also be able to use the `partitionId` optional parameter style. Currently, only `Retrieve` and `Delete` operations support using the `partitionId` optional parameter. [Learn more about using the partitionId parameter](use-elastic-tables.md#using-the-partitionid-parameter).
+
+### Records synchronized with Synapse Link for Dataverse not deleted from data lake when TTL expires
+
+When [time to live (TTL)](#expire-data-by-using-time-to-live) is used on a row, the row will get deleted from the elastic table when TTL has expired. If it's synchronized to a data lake using [Synapse Link for Dataverse ](../../maker/data-platform/export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
 
 ## Frequently asked questions
 
