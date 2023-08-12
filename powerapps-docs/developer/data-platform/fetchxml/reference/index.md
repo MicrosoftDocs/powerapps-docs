@@ -14,7 +14,7 @@ contributors:
 ---
 # FetchXml reference
 
-Use these elements to compose a query using FetchXml to retrieve data from Dataverse. To learn how to use these elements, see [Query data using FetchXml](../overview.md).
+Use these elements to compose a query using FetchXml to retrieve data from Dataverse. [Learn how to query data using FetchXml](../overview.md).
 
 > [!NOTE]
 > These elements are a subset of the elements described in the [FetchXml schema](../../fetchxml-schema.md). Use these elements to define queries to retrieve data in the following use cases:
@@ -37,3 +37,16 @@ Use these elements to compose a query using FetchXml to retrieve data from Datav
 |[link-entity element](link-entity.md)|[!INCLUDE [link-entity-description](includes/link-entity-description.md)]|
 |[order element](order.md)|[!INCLUDE [order-description](includes/order-description.md)]|
 |[value element](value.md)|[!INCLUDE [value-description](includes/value-description.md)]|
+
+### See also
+
+[Query data using FetchXml](../overview.md)  
+[Select columns using FetchXml](../select-columns.md)  
+[Join tables using FetchXml](../join-tables.md)  
+[Order rows using FetchXml](../order-rows.md)  
+[Filter rows using FetchXml](../filter-rows.md)  
+[Page results using FetchXml](../page-results.md)  
+[Count rows using FetchXml](../count-rows.md)  
+[Optimize performance using FetchXml](../optimize-performance.md)
+
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

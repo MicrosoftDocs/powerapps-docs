@@ -16,7 +16,7 @@ contributors:
 
 [!INCLUDE [filter-description](includes/filter-description.md)]
 
-To learn how to use this element, see [Filter rows using FetchXml](../filter-rows.md).
+[Learn how to filter rows using FetchXml](../filter-rows.md).
 
 ## Example
 
@@ -46,3 +46,5 @@ TODO
 |---------|---------|---------|
 |[condition element](condition.md)|0 to 500|[!INCLUDE [condition-description](includes/condition-description.md)]|
 |[filter element](filter.md)|0 or many|[!INCLUDE [filter-description](includes/filter-description.md)]|
+
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

@@ -16,7 +16,7 @@ contributors:
 
 [!INCLUDE [fetch-description](includes/fetch-description.md)]
 
-To learn how to use this element, see [Query data using FetchXml](../overview.md).
+[Learn how to query data using FetchXml](../overview.md).
 
 ## Example
 
@@ -50,3 +50,5 @@ TODO
 |Name|Occurrences|Description|
 |---------|---------|---------|
 |[entity element](entity.md)|1|[!INCLUDE [entity-description](includes/entity-description.md)]|
+
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

@@ -33,3 +33,5 @@ contributors:
 |---------|---------|
 |[entity](entity.md)|[!INCLUDE [entity-description](includes/entity-description.md)]|
 |[link-entity](link-entity.md)|[!INCLUDE [link-entity-description](includes/link-entity-description.md)]|
+
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

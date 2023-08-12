@@ -34,3 +34,5 @@ To learn how to use this element, see [Filter rows using FetchXml](../filter-row
 |Name|Description|
 |---------|---------|
 |[condition element](condition.md)|[!INCLUDE [condition-description](includes/condition-description.md)]|
+
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

@@ -15,3 +15,6 @@ contributors:
 # condition operator values
 
 To learn how to use these values, see [Filter rows using FetchXml](../filter-rows.md).
+
+
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

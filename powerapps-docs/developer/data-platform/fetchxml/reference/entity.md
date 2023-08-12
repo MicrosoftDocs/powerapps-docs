@@ -16,7 +16,7 @@ contributors:
 
 [!INCLUDE [entity-description](includes/entity-description.md)]
 
-To learn how to use this element, see [Query data using FetchXml](../overview.md).
+[Learn how to query data using FetchXml](../overview.md).
 
 ## Example
 
@@ -49,3 +49,5 @@ TODO
 |[order element](order.md)|0 or many|[!INCLUDE [order-description](includes/order-description.md)]|
 |[link-entity element](link-entity.md)|0 or many|[!INCLUDE [link-entity-description](includes/link-entity-description.md)]|
 |[filter element](filter.md)|0 or 1|[!INCLUDE [filter-description](includes/filter-description.md)]|
+
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

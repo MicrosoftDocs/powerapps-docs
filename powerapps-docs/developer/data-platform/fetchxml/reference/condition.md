@@ -16,7 +16,7 @@ contributors:
 
 [!INCLUDE [condition-description](includes/condition-description.md)]
 
-To learn how to use this element, see [Filter rows using FetchXml](../filter-rows.md).
+[Learn how to filter rows using FetchXml](../filter-rows.md).
 
 ## Example
 
@@ -59,3 +59,5 @@ TODO
 - Use the `value` attribute for all operators that compare to a single value. For example, `eq`.
 - Use the [value element](value.md) for operators that compare to multiple values For example: `in`.
 - Some operators require neither the `value` attribute or the [value element](value.md). For example: `null`.
+
+[!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
