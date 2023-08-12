@@ -18,10 +18,68 @@ contributors:
 
 To learn how to use this element, see [Join tables using FetchXml](../join-tables.md).
 
-## Example
+## Examples
+
+The following examples show using `link-entity` with different types of relationships.
+
+### Many-to-one relationship
+
+This query returns data from the [account](../../reference/entities/account.md) and [contact](../../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../../reference/entities/account.md#BKMK_PrimaryContactId) in the account record:
 
 ```xml
-TODO
+<fetch>
+  <entity name='account'>
+    <attribute name='name' />
+    <link-entity name='contact'
+      from='contactid'
+      to='primarycontactid'
+      link-type='inner'
+      alias='contact'>
+      <attribute name='fullname' />
+    </link-entity>
+  </entity>
+</fetch>
+```
+
+### One-to-many relationship
+
+This query returns data from the [contact](../../reference/entities/contact.md) and [account](../../reference/entities/account.md) tables based on the [Contact account_primary_contact one-to-many relationship](../../reference/entities/contact.md#BKMK_account_primary_contact).
+
+```xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <link-entity name='account' 
+     from='primarycontactid' 
+     to='contactid' 
+     alias='account'>
+      <attribute name='name' />
+    </link-entity>
+  </entity>
+</fetch>
+```
+
+### Many-to-many relationship
+
+This query returns data from the [SystemUser](../../reference/entities/systemuser.md) and [Team](../../reference/entities/team.md) tables using the [teammembership_association many-to-many relationship](../../reference/entities/team.md#BKMK_teammembership_association).
+
+```xml
+<fetch>
+  <entity name='systemuser'>
+    <attribute name='fullname' />
+    <link-entity name='teammembership'
+      from='systemuserid'
+      to='systemuserid' >
+      <link-entity name='team'
+        from='teamid'
+        to='teamid'
+        link-type='inner'
+        alias='team'>
+        <attribute name='name' />
+      </link-entity>
+    </link-entity>
+  </entity>
+</fetch>
 ```
 
 ## Attributes

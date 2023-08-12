@@ -53,14 +53,6 @@ The following attribute values are set in the previous example, but they have de
 |`alias`|[!INCLUDE [link-entity-alias-description](reference/includes/link-entity-alias-description.md)]|
 
 
-## Child elements
-
-Within the `link-entity` element you can add child elements just like on the parent element to:
-
-- [Select columns](select-columns.md) from the related table
-- [Filter rows](filter-rows.md) from the related table
-- Join another related table
-
 ## Many-to-one relationships
 
 The previous example is a many-to-one relationship where many account records can refer to a one contact record. This information is defined in the [Account account_primary_contact many-to-one relationship](../reference/entities/account.md#BKMK_account_primary_contact), which has the following values:
@@ -77,20 +69,99 @@ The previous example is a many-to-one relationship where many account records ca
 
 ### Retrieve relationship information
 
-If you use the [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/), you can see how this tool allows you to select the relationship to set the appropriate `name`, `from`, and `to` attribute values. 
+If you use the [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/), you can see how this tool allows you to select the relationship to set the appropriate `name`, `from`, and `to` attribute values.
+
+You can also use other tools and APIs to look up the appropriate `name`, `from`, and `to` attribute values to use. For more information see:
+
+- [Browse table definitions in your environment](../browse-your-metadata.md)
+- [Query schema definitions](../query-schema-definitions.md)
 
 
 ## One-to-many relationships
 
+Many-to-one and one-to-many relationships are like looking at two sides of a coin. The relationship exists between the tables, so the way you use it depends on which table is the base table for your query.
+
+You can retrieve the same data as the previous example from the contact table using the same relationship, except from the side of the contact table. Use the data from the [Contact account_primary_contact one-to-many relationship](../reference/entities/contact.md#BKMK_account_primary_contact), but adjust the values for the different view of the relationship.
+
+```xml
+<fetch>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <link-entity name='account' 
+     from='primarycontactid' 
+     to='contactid' 
+     alias='account'>
+      <attribute name='name' />
+    </link-entity>
+  </entity>
+</fetch>
+```
+
+In this example:
+
+- The `name` value is the logical name of the *referencing* table: `account`.
+- The `from` value is the name of the lookup column in the *referencing* account table: `primarycontactid`.
+- The `to` value is the primary key of the *referenced* contact table: `contactid`.
+- The `alias` attribute is recommended for the `link-entity` with a one-to-many relationship. If an alias isn't provided, a default alias is generated.
+- The `link-type` attribute isn't included. It will default to `inner`.
+
 ## Many-to-many relationships
+
+Many-to-Many relationships depend on an intersect table.  An intersect table typically has just four columns, but only two of them are important in this case. All intersect tables have two columns that match the primary key columns of the participating tables, except that there is no unique constraint.
+
+For example, the `TeamMembership` table supports the  [teammembership_association many-to-many relationship](../reference/entities/team.md#BKMK_teammembership_association) between [SystemUser](../reference/entities/systemuser.md) and [Team](../reference/entities/team.md) tables. It allows users to join multiple teams, and teams to have multiple users. `TeamMembership` has these columns: `systemuserid`, `teamid`.
+
+If you want to retrieve information about users and the teams they belong to using the `teammembership_association` many-to-many relationship, you use this fetchXML:
+
+```xml
+<fetch>
+  <entity name='systemuser'>
+    <attribute name='fullname' />
+    <link-entity name='teammembership'
+      from='systemuserid'
+      to='systemuserid' >
+      <link-entity name='team'
+        from='teamid'
+        to='teamid'
+        link-type='inner'
+        alias='team'>
+        <attribute name='name' />
+      </link-entity>
+    </link-entity>
+  </entity>
+</fetch>
+```
+
+There are two nested link-entities.
+
+- The first one connects `systemuser` to the `teammembership` intersect table where `systemuserid` = `systemuserid`.
+- The second one connects `teammembership` intersect table to team where `teamid` = `teamid`.
+
+<!-- TODO: Is the intersect='true' attribute required? What benefit does it provide? -->
 
 ## No relationship
 
-TODO: Describe how FetchXml can be used to create queries on match values where no relationship exists.
+TODO:
+
+- Describe how FetchXml can be used to create queries on match values where no relationship exists.
+- Do we support this? https://jonasr.app/my-state-contacts/ claims "not unsupported"..
+- Does this introduce other considerations?
 
 ## Limitations
 
-You can add up to 15 link-entity elements to a query. Each link-entity adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 link-entity elements to a query you will get this error: [TODO]
+You can add up to 15 `link-entity` elements to a query. Each link-entity adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 link-entity elements to a query you will get this error:
+
+> Error Code: `0x8004430D`
+> Error Number: `-2147204339`
+> Error Message: `Number of link entities in query exceeded maximum limit.`
+
+## Child elements
+
+Within the `link-entity` element you can add child elements just like on the parent element to:
+
+- [Select columns](select-columns.md) from the related table
+- [Filter rows](filter-rows.md) from the related table
+- Join another related table
 
 
 ## Next steps
