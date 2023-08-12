@@ -71,14 +71,14 @@ The following example shows the results of a query when the alias variable is se
 
 ## Limitations
 
-Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query includes more than 50,000 records you will get the following error:
+Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query includes more than 50,000 records, you get the following error:
 
 Error code: `-2147164125`<br />
 Hexadecimal error code: `8004E023`<br />
 Platform error message: `AggregateQueryRecordLimit exceeded. Cannot perform this operation.`<br />
 Client error message: The maximum record limit is exceeded. Reduce the number of records.<br />
 
-To avoid this error add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run your query multiple times and combine the results.
+To avoid this error, add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run your query multiple times and combine the results.
 
 > [!TIP]
 > If you want to get a total count of records with no filter, use the `RetrieveTotalRecordCount` message with either the Web API [RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) or with the SDK for .NET [RetrieveTotalRecordCountRequest class](xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest). The data retrieved will be from a snapshot within the last 24 hours.
@@ -111,11 +111,11 @@ foreach (var c in estimatedvalue_avg_result.Entities)
   
 ### Limitation with null values while computing average
 
-**Null** values are not considered when Dataverse computes the average of data. However, zero (0) is used.  
+**Null** values aren't considered when Dataverse computes the average of data. However, zero (0) is used.  
   
 In the following example, with the following data, the average for Account 1 (two entries) is shown as 250 whereas the average for Account 2 (two entries) is shown as 125.  
   
-|Topic|Potential Customer|Estimated value|  
+|Opportunity|Potential Customer|Estimated value|  
 |-----|------------------|---------------|  
 |Opportunity 1|Account 1|null|  
 |Opportunity 2|Account 1|250|  
@@ -184,7 +184,7 @@ foreach (var c in opportunity_colcount_result.Entities)
  
 ### Count distinct columns
 
-The following example shows how to use the `aggregate` attribute with the with `countcolumn` aggregate function and the `distinct` attribute to count distinct columns.  
+The following example shows how to use the `aggregate` attribute with the `countcolumn` aggregate function and the `distinct` attribute to count distinct columns.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -213,7 +213,7 @@ foreach (var c in opportunity_distcount_result.Entities)
 
 ## Max
 
-**Null** values are not considered when Dataverse computes the maximum of data. However, zero (0) is used.  
+**Null** values aren't considered when Dataverse computes the maximum of data. However, zero (0) is used.  
   
 The following example shows how to use the `aggregate` attribute to use the `max` aggregate function. 
   
@@ -244,7 +244,7 @@ foreach (var c in estimatedvalue_max_result.Entities)
  
 ## Min
 
-**Null** values are not considered when Dataverse computes the minimum of data. However, zero (0) is used.  
+**Null** values aren't considered when Dataverse computes the minimum of data. However, zero (0) is used.  
   
 The following example shows how to use the `aggregate` attribute to use the `min` aggregate function.  
   
@@ -338,7 +338,7 @@ foreach (var c in estimatedvalue_avg2_result.Entities)
  
 ## Group by
 
-The following example shows how to use multiple `aggregate` attribute and a linked `groupby` attribute.  
+The following example shows how to use multiple `aggregate` attributes and a linked `groupby` attribute.  
   
  ```csharp
 // *****************************************************************************************************************
