@@ -84,3 +84,13 @@ TODO: Describe how FetchXml can be used to create queries on match values where 
 ## Limitations
 
 You can add up to 15 link-entity elements to a query. Each link-entity adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 link-entity elements to a query you will get this error: [TODO]
+
+
+## Next steps
+
+Learn how to order rows.
+
+> [!div class="nextstepaction"]
+> [Order rows](order-rows.md)
+
+[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

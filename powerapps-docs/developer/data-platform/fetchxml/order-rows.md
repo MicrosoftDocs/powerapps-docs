@@ -11,3 +11,13 @@ search.audienceType:
   - developer
 ---
 # Order rows using FetchXml
+
+
+## Next steps
+
+Learn how to filter rows.
+
+> [!div class="nextstepaction"]
+> [Filter rows](filter-rows.md)
+
+[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

@@ -34,6 +34,9 @@ All queries are based on a single table. When composing a query using FetchXml, 
 
 This query returns all columns of the first 5,000 rows from the [Account table](../reference/entities/account.md), using the table `LogicalName` to set the [entity](reference/entity.md) `name` attribute.
 
+> [!NOTE]
+> We strongly discourage returning all columns in a table. Returning all columns will make your applications run slower and may cause timeout errors.
+
 After you have selected the table to start your query with, you need to refine the query to get the data you need. The following articles in this section explain how to complete your query.
 
 

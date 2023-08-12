@@ -11,3 +11,13 @@ search.audienceType:
   - developer
 ---
 # Count rows using FetchXml
+
+
+## Next steps
+
+Learn how to optimize performance.
+
+> [!div class="nextstepaction"]
+> [Optimize performance](optimize-performance.md)
+
+[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

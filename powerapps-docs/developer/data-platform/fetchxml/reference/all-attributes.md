@@ -17,7 +17,7 @@ contributors:
 [!INCLUDE [all-attributes-description](includes/all-attributes-description.md)]
 
 > [!IMPORTANT]
-> It is not recommended to request all columns for a table for performance reasons. You should always use [attribute elements](attribute.md) to specify which columns you want to return. More information: [Select columns using FetchXml](../select-columns.md)
+> We strongly discourage returning all columns in a table. Returning all columns will make your applications run slower and may cause timeout errors. You should always use [attribute elements](attribute.md) to specify which columns you want to return. More information: [Select columns using FetchXml](../select-columns.md)
 
 ## Example
 

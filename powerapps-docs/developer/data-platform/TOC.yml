@@ -63,9 +63,10 @@
       href: background-operations.md
     - name: Use optional parameters
       href: optional-parameters.md
-    - name: Use FetchXML to query data (NEW)
-      href: fetchxml/overview.md
+    - name: Query data using FetchXml (NEW)
       items:
+        - name: Overview
+          href: fetchxml/overview.md
         - name: Select columns
           href: fetchxml/select-columns.md
         - name: Join tables

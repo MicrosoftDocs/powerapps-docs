@@ -12,3 +12,11 @@ search.audienceType:
 ---
 # Aggregate data using FetchXml
 
+## Next steps
+
+Learn how to count rows.
+
+> [!div class="nextstepaction"]
+> [Count rows](count-rows.md)
+
+[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

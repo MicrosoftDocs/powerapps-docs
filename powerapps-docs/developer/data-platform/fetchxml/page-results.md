@@ -11,3 +11,13 @@ search.audienceType:
   - developer
 ---
 # Page results using FetchXml
+
+
+## Next steps
+
+Learn how to aggregate data.
+
+> [!div class="nextstepaction"]
+> [Aggregate data](aggregate-data.md)
+
+[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

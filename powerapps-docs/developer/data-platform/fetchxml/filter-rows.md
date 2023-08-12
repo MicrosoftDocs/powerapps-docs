@@ -11,3 +11,13 @@ search.audienceType:
   - developer
 ---
 # Filter rows using FetchXml
+
+
+## Next steps
+
+Learn how to page results.
+
+> [!div class="nextstepaction"]
+> [Page results](page-results.md)
+
+[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
