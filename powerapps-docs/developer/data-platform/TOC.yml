@@ -84,28 +84,30 @@
         - name: Optimize performance
           href: fetchxml/optimize-performance.md
         - name: FetchXml reference
-          href: fetchxml/reference/index.md
           items:
-          - name: all-attributes element
+          - name: Overview
+            href: fetchxml/reference/index.md
+          - name: all-attributes
             href: fetchxml/reference/all-attributes.md
-          - name: attribute element
+          - name: attribute
             href: fetchxml/reference/attribute.md
-          - name: condition element
-            href: fetchxml/reference/condition.md
+          - name: condition
             items:
-            - name: condition operators
+            - name: element
+              href: fetchxml/reference/condition.md
+            - name: operators
               href: fetchxml/reference/operators.md
-          - name: entity element
+          - name: entity
             href: fetchxml/reference/entity.md
-          - name: fetch element
+          - name: fetch
             href: fetchxml/reference/fetch.md
-          - name: filter element
+          - name: filter
             href: fetchxml/reference/filter.md
-          - name: link-entity element
+          - name: link-entity
             href: fetchxml/reference/link-entity.md
-          - name: order element
+          - name: order
             href: fetchxml/reference/order.md  
-          - name: value element
+          - name: value
             href: fetchxml/reference/value.md         
     - name: Use FetchXML to query data (OLD)
       href: use-fetchxml-construct-query.md
