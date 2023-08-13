@@ -42,6 +42,13 @@ Use the [attribute element](reference/attribute.md) to select the columns for th
 
 If you view the results of the example query above, the results look something like this:
 
+<!-- 
+TODO: SDK and Web API are different
+SDK returns OptionSetValue and EntityReference values
+Web API returns _createdby_value ? 
+
+-->
+
 |accountclassificationcode|createdby|createdon|name|
 |---|---|---|---|
 |1|4026be43-6b69-e111-8f65-78e7d1620f5e|3/25/2023 5:42 PM|Litware, Inc. (sample)|

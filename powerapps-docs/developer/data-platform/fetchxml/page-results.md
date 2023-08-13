@@ -46,9 +46,9 @@ To get the next three records, increment the `page` value and send another reque
 </fetch>
 ```
 
-Simple paging works well for small data sets, but as the size of the data set increases, performance suffers. For this reason, you can only retrieve up to 50,0000 total records using simple paging. For best performance in all cases, we recommend consistently using the *paging cookie*.
+Simple paging works well for small data sets, but as the size of the data set increases, performance suffers. For this reason, you can only retrieve up to 50,000 total records using simple paging. For best performance in all cases, we recommend consistently using the *paging cookie*.
 
-## Paging with PagingCookie
+## PagingCookie
 
 A paging cookie is additional data that is returned when you retrieve multiple records. When you request the next page of record, set the paging cookie value returned from the previous page. The paging cookie contains information about the first and last records of the previous request. This allows Dataverse to more efficiently retrieve the next page, improving performance.
 

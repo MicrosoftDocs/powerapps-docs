@@ -151,9 +151,9 @@ TODO:
 
 You can add up to 15 `link-entity` elements to a query. Each link-entity adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 link-entity elements to a query you will get this error:
 
-> Error Code: `0x8004430D`
-> Error Number: `-2147204339`
-> Error Message: `Number of link entities in query exceeded maximum limit.`
+> Error Code: `0x8004430D`  
+> Error Number: `-2147204339`  
+> Error Message: `Number of link entities in query exceeded maximum limit.`  
 
 ## Child elements
 
