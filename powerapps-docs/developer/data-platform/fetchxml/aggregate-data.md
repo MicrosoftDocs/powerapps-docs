@@ -18,9 +18,9 @@ FetchXML includes grouping and aggregation features that let you calculate sum, 
 
 Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query includes more than 50,000 records you will get the following error:
 
-> Error code: `-2147164125`
-> Hexadecimal error code: `8004E023`
-> Platform error message: `AggregateQueryRecordLimit exceeded. Cannot perform this operation.`
+> Error code: `-2147164125`  
+> Hexadecimal error code: `8004E023`  
+> Platform error message: `AggregateQueryRecordLimit exceeded. Cannot perform this operation.`  
 > Client error message: The maximum record limit is exceeded. Reduce the number of records.
 
 To avoid this error add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run your query multiple times and combine the results.
