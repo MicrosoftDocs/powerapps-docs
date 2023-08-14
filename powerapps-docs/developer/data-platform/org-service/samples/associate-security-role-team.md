@@ -17,7 +17,8 @@ contributors:
 
 This sample shows how to assign a security role to a team by using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message. Note that this example does not take into consideration that a team or user can only be assigned a role from its business unit. The role to be assigned is the first from the collection that is returned by the RetrieveMultiple method. If that record is from a business unit that is different from the requesting team, the assignment fails.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssociateSecurityRoleToTeam)
+> [!div class="nextstepaction"]
+> [SDK for .NET: Associate security role to a team sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssociateSecurityRoleToTeam)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
