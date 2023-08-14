@@ -31,6 +31,32 @@ Use the [link-entity element](reference/link-entity.md) to describe the data fro
 </fetch>
 ```
 
+The results look like this:
+
+```text
+ -----------------------------------------------------------------
+ | name                             | contact.fullname           |
+ -----------------------------------------------------------------
+ | Litware, Inc. (sample)           | Susanna Stubberod (sample) |
+ -----------------------------------------------------------------
+ | Adventure Works (sample)         | Nancy Anderson (sample)    |
+ -----------------------------------------------------------------
+ | Fabrikam, Inc. (sample)          | Maria Campbell (sample)    |
+ -----------------------------------------------------------------
+ | Blue Yonder Airlines (sample)    | Sidney Higa (sample)       |
+ -----------------------------------------------------------------
+ | City Power & Light (sample)      | Scott Konersmann (sample)  |
+ -----------------------------------------------------------------
+ | Contoso Pharmaceuticals (sample) | Robert Lyon (sample)       |
+ -----------------------------------------------------------------
+ | Alpine Ski House (sample)        | Paul Cannon (sample)       |
+ -----------------------------------------------------------------
+ | A. Datum Corporation (sample)    | Rene Valdes (sample)       |
+ -----------------------------------------------------------------
+ | Coho Winery (sample)             | Jim Glynn (sample)         |
+ -----------------------------------------------------------------
+```
+
 ## Required attribute values
 
 When you add the `link-entity` element, you must set these attribute values:
@@ -97,6 +123,32 @@ You can retrieve the same data as the previous example from the contact table us
 </fetch>
 ```
 
+The results look like this:
+
+```text
+ -----------------------------------------------------------------
+ | fullname                   | account.name                     |
+ -----------------------------------------------------------------
+ | Susanna Stubberod (sample) | Litware, Inc. (sample)           |
+ -----------------------------------------------------------------
+ | Nancy Anderson (sample)    | Adventure Works (sample)         |
+ -----------------------------------------------------------------
+ | Maria Campbell (sample)    | Fabrikam, Inc. (sample)          |
+ -----------------------------------------------------------------
+ | Sidney Higa (sample)       | Blue Yonder Airlines (sample)    |
+ -----------------------------------------------------------------
+ | Scott Konersmann (sample)  | City Power & Light (sample)      |
+ -----------------------------------------------------------------
+ | Robert Lyon (sample)       | Contoso Pharmaceuticals (sample) |
+ -----------------------------------------------------------------
+ | Paul Cannon (sample)       | Alpine Ski House (sample)        |
+ -----------------------------------------------------------------
+ | Rene Valdes (sample)       | A. Datum Corporation (sample)    |
+ -----------------------------------------------------------------
+ | Jim Glynn (sample)         | Coho Winery (sample)             |
+ -----------------------------------------------------------------
+```
+
 In this example:
 
 - The `name` value is the logical name of the *referencing* table: `account`.
@@ -119,7 +171,8 @@ If you want to retrieve information about users and the teams they belong to usi
     <attribute name='fullname' />
     <link-entity name='teammembership'
       from='systemuserid'
-      to='systemuserid' >
+      to='systemuserid'
+      intersect='true' >
       <link-entity name='team'
         from='teamid'
         to='teamid'
@@ -131,6 +184,19 @@ If you want to retrieve information about users and the teams they belong to usi
   </entity>
 </fetch>
 ```
+
+The results should look something like:
+
+```text
+ --------------------------------------
+ | fullname             | team.name   |
+ --------------------------------------
+ | FirstName LastName   | org26ed931d |
+ --------------------------------------
+ | # PpdfCDSClient      | org26ed931d |
+ --------------------------------------
+```
+
 
 There are two nested link-entities.
 

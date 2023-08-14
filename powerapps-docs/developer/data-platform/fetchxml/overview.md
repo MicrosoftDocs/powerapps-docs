@@ -60,168 +60,183 @@ The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fet
 
 ## Sample code
 
-With the SDK for .NET, you can use the following `OutputFetchRequest` static method and the methods it depends on to test FetchXml queries in a console application.
+### [SDK for .NET](#tab/sdk)
 
-This method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that every [entity](reference/entity.md) or [link-entity](reference/link-entity.md) element `attribute` elements included, which is a best practice.
+
+With the SDK for .NET, you can use the following `OutputFetchRequest` static method, and the methods it depends on, to test FetchXml queries in a console application.
+
+This method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that every [entity](reference/entity.md) or [link-entity](reference/link-entity.md) element `attribute` elements are included, which is a best practice.
 
 ```csharp
-  /// <summary>
-  /// Renders the output of a query in a table for a console application
-  /// </summary>
-  /// <param name="service">The authenticated IOrganizationService instance to use.</param>
-  /// <param name="fetchXml">The FetchXml query to use.</param>
-  static void OutputFetchRequest(IOrganizationService service, string fetchXml)
-  {
-      FetchExpression fetchExpression = new(fetchXml);
+/// <summary>
+/// Renders the output of a query in a table for a console application
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance to use.</param>
+/// <param name="fetchXml">The FetchXml query to use.</param>
+static void OutputFetchRequest(IOrganizationService service, string fetchXml)
+{
+    FetchExpression fetchExpression = new(fetchXml);
 
-      //Retrieve the data
-      EntityCollection entityCollection = service.RetrieveMultiple(query: fetchExpression);
+    //Retrieve the data
+    EntityCollection entityCollection = service.RetrieveMultiple(query: fetchExpression);
 
-      // Get column names from the FetchXml
-      List<string> columns = GetColumns(fetchXml);
+    // Get column names from the FetchXml
+    List<string> columns = GetColumns(fetchXml);
 
-      // Create the table using https://www.nuget.org/packages/ConsoleTables/2.5.0
-      var table = new ConsoleTables.ConsoleTable(columns.ToArray());
+    // Create the table using https://www.nuget.org/packages/ConsoleTables/2.5.0
+    var table = new ConsoleTables.ConsoleTable(columns.ToArray());
 
-      // Add the rows of the table
-      entityCollection.Entities.ToList().ForEach(entity =>
-      {
-          table.Rows.Add(GetRowValues(columns, entity).ToArray());
-      });
+    // Add the rows of the table
+    entityCollection.Entities.ToList().ForEach(entity =>
+    {
+        table.Rows.Add(GetRowValues(columns, entity).ToArray());
+    });
 
-      // Write the table to the console
-      table.Write();
-  }
+    // Write the table to the console
+    table.Write();
+}
 
-  /// <summary>
-  /// Get a list of column names from the FetchXml
-  /// </summary>
-  /// <param name="fetchXml">The fetchXml query</param>
-  /// <returns>The names of all the columns in the query</returns>
-  static List<string> GetColumns(string fetchXml)
-  {
-      XDocument fetchDoc = XDocument.Parse(fetchXml);
-      
-      // There can only be one entity element
-      XElement entityElement = fetchDoc.Root.Element("entity");
+/// <summary>
+/// Get a list of column names from the FetchXml
+/// </summary>
+/// <param name="fetchXml">The fetchXml query</param>
+/// <returns></returns>
+/// <exception cref="Exception"></exception>
+static List<string> GetColumns(string fetchXml)
+{
+    XDocument fetchDoc = XDocument.Parse(fetchXml);
+           
+    // There can only be one entity element
+    XElement entityElement = fetchDoc.Root.Element("entity");
 
-      // Get the columns from the entity and any related link-entity elements
-      List<string> columns = GetColumnsFromElement(entityElement);
+    // Get the columns from the entity and any related link-entity elements
+    List<string> columns = GetColumnsFromElement(entityElement);
 
-      return columns;
-  }
+    return columns;
+}
 
-  /// <summary>
-  /// Recursive function to get all column names from an entity or nested link-entity elements
-  /// </summary>
-  /// <param name="element">The entity or link-entity element</param>
-  /// <param name="alias">The alias of the link-entity element</param>
-  /// <returns>The names of the columns from the entity or nested link-entity elements</returns>
-  static List<string> GetColumnsFromElement(XElement element, string? alias = null)
-  {
-      List<string> columns = new();
+/// <summary>
+/// Recursive function to get all column names from an entity or nested link-entity elements
+/// </summary>
+/// <param name="element">The entity or link-entity element</param>
+/// <param name="alias">The alias of the link-entity element</param>
+/// <returns></returns>
+static List<string> GetColumnsFromElement(XElement element, string? alias = null)
+{
+    List<string> columns = new();
 
-      // Get the attributes from the element
-      foreach (XElement attribute in element.Elements("attribute"))
-      {
-          StringBuilder sb = new();
+    // Get the attributes from the element
+    foreach (XElement attribute in element.Elements("attribute"))
+    {
+        StringBuilder sb = new();
 
-          // Prepend the alias for link-entities
-          if (!string.IsNullOrWhiteSpace(alias))
-          {
-              sb.Append($"{alias}.");
-          }
+        // Prepend the alias for link-entities
+        if (!string.IsNullOrWhiteSpace(alias))
+        {
+            sb.Append($"{alias}.");
+        }
 
-          // Use the attribute alias if there is one
-          if (attribute.Attribute("alias") != null)
-          {
-              sb.Append(attribute.Attribute("alias")?.Value);
-          }
-          else
-          {
-              //Use the attribute name
-              sb.Append(attribute.Attribute("name")?.Value);
-          }
+        // Use the attribute alias if there is one
+        if (attribute.Attribute("alias") != null)
+        {
+            sb.Append(attribute.Attribute("alias")?.Value);
+        }
+        else
+        {
+            //Use the attribute name
+            sb.Append(attribute.Attribute("name")?.Value);
+        }
 
-          columns.Add(sb.ToString());
-      }
+        columns.Add(sb.ToString());
+    }
 
-      if (columns.Count == 0)
-      {
-          // An element with no attribute elements is technically valid,
-          // but not supported by this method.
-          throw new Exception("No attribute elements in FetchXml.");
-      }
+    // Whether the link-entity intersect attribute is true
+    bool isIntersect = (element.Attribute("intersect") != null) &&
+        (element.Attribute("intersect")?.Value == "true" ||
+        element.Attribute("intersect")?.Value == "1");
 
-      // Look for any child link-entities
-      foreach (XElement linkEntity in element.Elements("link-entity"))
-      {
-          // Use the alias if any
-          string? linkEntityName;
-          if (linkEntity.Attribute("alias") != null)
-          {
-              linkEntityName = linkEntity.Attribute("alias")?.Value;
-          }
-          else
-          {
-              linkEntityName = linkEntity.Attribute("name")?.Value;
-          }
+    // The name of the element
+    string elementName = element.Attribute("name")?.Value;
+    // The type of element: 'entity' or 'link-entity'
+    string elementType = element.Name.LocalName;
 
-          // Recursive call for nested link-entity elements
-          columns.AddRange(GetColumnsFromElement(linkEntity, linkEntityName));
-      }
+    // This method requires any non-intersect entity to have attributes
+    if (columns.Count == 0 && !isIntersect)
+    {
+        // An non-intersect element with no attribute elements is technically valid,
+        // but not supported by this method.
+        throw new Exception($"No attribute elements in {elementType} element named '{elementName}'.");
+    }
 
-      return columns;
-  }
+    // Look for any child link-entities
+    foreach (XElement linkEntity in element.Elements("link-entity"))
+    {
+        // Use the alias if any
+        string? linkEntityName;
+        if (linkEntity.Attribute("alias") != null)
+        {
+            linkEntityName = linkEntity.Attribute("alias")?.Value;
+        }
+        else
+        {
+            linkEntityName = linkEntity.Attribute("name")?.Value;
+        }
+
+        // Recursive call for nested link-entity elements
+        columns.AddRange(GetColumnsFromElement(linkEntity, linkEntityName));
+    }
+
+    return columns;
+}
 
 
-  /// <summary>
-  /// Returns the values of a row as strings
-  /// </summary>
-  /// <param name="columns">The names of the columns</param>
-  /// <param name="entity">The entity with the data</param>
-  /// <returns>The values for the table row</returns>
-  static List<string> GetRowValues(List<string> columns, Entity entity)
-  {
-      List<string> values = new();
-      columns.ForEach(column =>
-      {
-          if (entity.Attributes.ContainsKey(column))
-          {
-              // Use the formatted value if it available
-              if (entity.FormattedValues.ContainsKey(column))
-              {
-                  values.Add($"{entity.FormattedValues[column]}");
-              }
-              else
-              {
-                  // When an alias is used, the Aliased value must be converted
-                  if (entity.Attributes[column] is AliasedValue aliasedValue)
-                  {
-                      values.Add($"{aliasedValue.Value}");
-                  }
-                  else
-                  {
-                      // Use the simple attribute value
-                      values.Add($"{entity.Attributes[column]}");
-                  }
-              }
-          }
-          // Null values are not in the Attributes collection
-          else
-          {
-              values.Add("NULL");
-          }
+/// <summary>
+/// Returns the values of a row as strings
+/// </summary>
+/// <param name="columns">The names of the columns</param>
+/// <param name="entity">The entity with the data</param>
+/// <returns></returns>
+static List<string> GetRowValues(List<string> columns, Entity entity)
+{
+    List<string> values = new();
+    columns.ForEach(column =>
+    {
+        if (entity.Attributes.ContainsKey(column))
+        {
+            // Use the formatted value if it available
+            if (entity.FormattedValues.ContainsKey(column))
+            {
+                values.Add($"{entity.FormattedValues[column]}");
+            }
+            else
+            {
+                // When an alias is used, the Aliased value must be converted
+                if (entity.Attributes[column] is AliasedValue aliasedValue)
+                {
+                    values.Add($"{aliasedValue.Value}");
+                }
+                else
+                {
+                    // Use the simple attribut value
+                    values.Add($"{entity.Attributes[column]}");
+                }
+            }
+        }
+        // Null values are not in the Attributes collection
+        else
+        {
+            values.Add("NULL");
+        }
 
-      });
-      return values;
-  }
+    });
+    return values;
+}
 ```
 
 You can adapt the [Quickstart: Execute an Organization service request (C#)](../org-service/quick-start-org-service-console-app.md) sample to test FetchXml queries with the following steps:
 
 1. Add the `OutputFetchRequest`, `GetColumns`, `GetColumnsFromElement`, and `GetRowValues` methods to the `Program` class.
-1. Add a reference to the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0)
+1. Add a reference to the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) to the project in Visual Studio.
 1. Modify the `Main` method as shown below:
 
 ```csharp
@@ -255,7 +270,7 @@ static void Main(string[] args)
   }
 ```
 
-The output should look something like this:
+When you run the program, the output should look something like this:
 
 ```text
  ---------------------------------------------------------------------------------------------------------
@@ -280,6 +295,13 @@ The output should look something like this:
  | Default Value             | FirstName LastName | 3/25/2023 10:42 AM | Coho Winery (sample)             |
  ---------------------------------------------------------------------------------------------------------
 ```
+
+### [Web API](#tab/webapi)
+
+Content for Web API
+
+---
+
 
 
 ## Next steps
