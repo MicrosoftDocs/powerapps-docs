@@ -1759,6 +1759,8 @@
     href: ../mobile/scan-QR-code.md
   - name: Switch to a different directory in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
+  - name: Optimize images for upload
+    href: ../mobile/optimize-images-upload.md
   - name: Troubleshoot issues in the mobile app
     items:
     - name: Troubleshoot issues in the Power Apps mobile app

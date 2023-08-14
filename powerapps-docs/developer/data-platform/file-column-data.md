@@ -77,7 +77,7 @@ More information:
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/accounts(<accountid>)?$select=name,sample_filecolumn,sample_filecolumn_name HTTP/1.1
@@ -87,7 +87,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -182,7 +182,7 @@ More information:
 
 The request below will return information about all the file columns that contain data related to the `account` record specified using `accountid`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts(<accountid>)?$filter=sample_filecolumn ne null&$expand=account_FileAttachments($select=createdon,mimetype,filesizeinbytes,filename,regardingfieldname)&$select=accountid HTTP/1.1
@@ -192,7 +192,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 In this case, there's a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
 
@@ -361,7 +361,7 @@ More information:
 
 The following series of requests and responses show the interaction when using the Web API to set a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with the specified `accountid`.
 
-**Request**
+**Request:**
 
 The first request uses the [InitializeFileBlocksUpload Action](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksUpload).
 
@@ -384,7 +384,7 @@ Content-Length: 207
 }
 ```
 
-**Response**
+**Response:**
 
 The response is a [InitializeFileBlocksUploadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksUploadResponse) providing the `FileContinuationToken` value to use with subsequent requests.
 
@@ -409,7 +409,7 @@ You must then break up the file into blocks of 4 MB or less and send each block 
 
 [!INCLUDE [cc-generate-blockid-tip](includes/cc-generate-blockid-tip.md)]
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/UploadBlock HTTP/1.1
@@ -427,7 +427,7 @@ Content-Length: 5593368
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -444,7 +444,7 @@ After all the parts of the file have been sent using multiple requests using the
 |`FileContinuationToken`|The value of the `InitializeFileBlocksUploadResponse.FileContinuationToken`|
 
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/CommitFileBlocksUpload HTTP/1.1
@@ -471,7 +471,7 @@ Content-Length: 1213
 }
 ```
 
-**Response**
+**Response:**
 
 The [CommitFileBlocksUploadResponse ComplexType](xref:Microsoft.Dynamics.CRM.CommitFileBlocksUploadResponse) returns the `FileSizeInBytes` and the `FileId` value you can use to delete the file using the [DeleteFile Action](xref:Microsoft.Dynamics.CRM.DeleteFile).
 
@@ -496,7 +496,7 @@ If the size of the file is less than 128 MB, you can upload the file in a single
 
 The following example uploads a text file named `4094kb.txt` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn HTTP/1.1
@@ -511,7 +511,7 @@ Content-Length: 4191273
 < binary content removed for brevity>
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -524,7 +524,7 @@ To upload your file in chunks using the Web API, use the following set of reques
 
 The following example uploads a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 The first request must include this header:`x-ms-transfer-mode: chunked`
 
@@ -543,7 +543,7 @@ Accept: application/json
 > [!NOTE]
 > The file name can also be included as a `x-ms-file-name` request header, but this will not support file names outside the ASCII character set. If the header is used, it will take precedence over the `x-ms-file-name` query parameter.
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -564,7 +564,7 @@ The response includes the following headers.
 |[Accept-Ranges](https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Ranges)|Indicates the server supports partial requests from the client for file downloads. The value `bytes` indicates that the range value in subsequent requests should be in bytes.|
 |[Access-Control-Expose-Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)|Indicates that the `x-ms-chunk-size` header value should be made available to scripts running in the browser, in response to a cross-origin request.|
 
-**Request**
+**Request:**
 
 Subsequent requests should use the value of the `Location` header returned by the first request so that the `sessiontoken` value is included.
 
@@ -593,7 +593,7 @@ Content-Length: 4194304
 
 For each request that contains partial content, the response will be [206 PartialContent](https://developer.mozilla.org/docs/Web/HTTP/Status/206).
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 206 PartialContent
@@ -602,7 +602,7 @@ OData-Version: 4.0
 
 For the final request that includes the last chunk of the file, the response will be [204 NoContent](https://developer.mozilla.org/docs/Web/HTTP/Status/204).
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -676,7 +676,7 @@ More information:
 
 The following request returns the `MaxSizeInKB` value for a file column with the logical name `sample_filecolumn` in the `account` table.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='sample_filecolumn')/Microsoft.Dynamics.CRM.FileAttributeMetadata?$select=MaxSizeInKB HTTP/1.1
@@ -686,7 +686,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -816,7 +816,7 @@ More information:
 
 The following series of requests and responses show the interaction when using the Web API to download a PDF file named `25mb.pdf` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 This request uses the [InitializeFileBlocksDownload Action](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownload).
 
@@ -838,7 +838,7 @@ Content-Length: 180
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -865,7 +865,7 @@ Based on the size of the file and the size of the block you'll download, send mo
 > [!NOTE]
 > The example below is for cases when `IsChunkingSupported` is set to true. If it is false, set `BlockLength` to full file size.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/DownloadBlock HTTP/1.1
@@ -885,7 +885,7 @@ Content-Length: 921
 
 [!INCLUDE [cc-offset-blocklength-example](includes/cc-offset-blocklength-example.md)]
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -906,7 +906,7 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 The following example downloads a text file named `4094kb.txt` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn/$value HTTP/1.1
@@ -916,7 +916,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 The response includes the following headers.
 
@@ -946,7 +946,7 @@ To download your file in chunks using the Web API, use the following set of requ
 
 The following example downloads a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 Use the [Range](https://developer.mozilla.org/docs/Web/HTTP/Headers/Range) header to specify the number of bytes to return using this format:<br />
 `<unit>=<range-start>-<range-end>`<br />
@@ -965,7 +965,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 The response includes the following headers:
 
@@ -1034,7 +1034,7 @@ Content-Length: 56
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -1051,7 +1051,7 @@ With the Web API, you can delete a file by sending a `DELETE` request to the loc
 
 The following example deletes file data for a column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
-**Request**
+**Request:**
 
 ```http
 DELETE [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_filecolumn HTTP/1.1
@@ -1061,7 +1061,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent

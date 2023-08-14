@@ -43,7 +43,7 @@ To perform this operation the caller must have privileges and access rights to b
 Use a POST request to send data to merge records. 
 This example merges two account entity records while updating `accountnumber` property of the record that will remain after the merge.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/Merge HTTP/1.1
@@ -74,7 +74,7 @@ Accept: application/json
 > [!IMPORTANT]
 > Because the `Target`, `Subordinate`, and `UpdateContent` property types are not explicitly defined by the parameter, you must include the `@odata.type` annotation to specify the type.
 
-**Response** 
+**Response:** 
 
 ```http
 HTTP/1.1 204 No Content

@@ -84,7 +84,7 @@ More information:
 
 The following Web API example is for retention policy set up to retain all the closed opportunities, and this policy will be run on a yearly basis. This example uses the <xref:Microsoft.Dynamics.CRM.retentionconfig?displayProperty=nameWithType>.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.1/retentionconfigs

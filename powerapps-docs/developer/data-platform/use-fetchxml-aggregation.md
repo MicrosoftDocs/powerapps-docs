@@ -1,12 +1,12 @@
 ---
-title: "Use FetchXML aggregation (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the grouping and aggregation features of FetchXML that let you calculate sum, average min, max and count." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+title: Use FetchXML aggregation
+description: Learn about the grouping and aggregation features of FetchXML that let you calculate sum, average min, max and count.
+ms.date: 08/12/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: mayadumesh
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: mayadu
 search.audienceType: 
   - developer
 contributors:
@@ -33,9 +33,9 @@ In Microsoft Dataverse, `FetchXML` includes grouping and aggregation features th
 
 ## About aggregation
 
-To create an aggregate column (attribute), set the keyword `aggregate` to `true`, then specify a valid *entity name*, *attribute name*, and *alias* (variable name). You must also specify the type of aggregation you want to perform.  
+To return aggregate values, set the `fetch` element `aggregate` attribute to `true`. Then, within the `entity` element, set one or more `attribute` elements with the `name`, `aggregate`, and `alias` attributes. Use the `aggregate` attribute to specify the type of aggregation you want.
   
-The following example shows a simple aggregate column in `FetchXML`.  
+The following example shows a simple aggregate query in `FetchXML`.  
   
 ```xml  
 <fetch distinct='false' mapping='logical' aggregate='true'>   
@@ -45,7 +45,7 @@ The following example shows a simple aggregate column in `FetchXML`.
 </fetch>
 ```  
   
-The result of a query with an aggregate column is different from the results of a standard query. The alias value is used as the tag identifier for the aggregate result.  
+The result of a query with an aggregated column is different from the results of a standard query. The `alias` attribute value is used as the identifier for the aggregate result.  
   
 The following example shows the format of the result of an aggregate query.  
   
@@ -71,23 +71,23 @@ The following example shows the results of a query when the alias variable is se
 
 ## Limitations
 
-Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query includes more than 50,000 records you will get the following error:
+Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query includes more than 50,000 records, you get the following error:
 
 Error code: `-2147164125`<br />
 Hexadecimal error code: `8004E023`<br />
 Platform error message: `AggregateQueryRecordLimit exceeded. Cannot perform this operation.`<br />
 Client error message: The maximum record limit is exceeded. Reduce the number of records.<br />
 
-To avoid this error add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run your query multiple times and combine the results.
+To avoid this error, add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run your query multiple times and combine the results.
 
 > [!TIP]
-> If you want to get a total count of records with no filter, use the `RetrieveTotalRecordCount` message with either the Web API <xref href="Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function" /> or with the Organization service <xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest> message class. The data retrieved will be from a snapshot within the last 24 hours.
+> If you want to get a total count of records with no filter, use the `RetrieveTotalRecordCount` message with either the Web API [RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) or with the SDK for .NET [RetrieveTotalRecordCountRequest class](xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest). The data retrieved will be from a snapshot within the last 24 hours.
   
 <a name="AVG"></a>
 
 ## Avg
 
- The following example shows how to use the `avg` `aggregate` column.  
+ The following example shows how to use the `aggregate` attribute to use the `avg` aggregate function.  
   
  ```csharp
 // Fetch the average of estimatedvalue for all opportunities.  This is the equivalent of 
@@ -111,11 +111,11 @@ foreach (var c in estimatedvalue_avg_result.Entities)
   
 ### Limitation with null values while computing average
 
-**Null** values are not considered when Dataverse computes the average of data. However, zero (0) is used.  
+**Null** values aren't considered when Dataverse computes the average of data. However, zero (0) is used.  
   
 In the following example, with the following data, the average for Account 1 (two entries) is shown as 250 whereas the average for Account 2 (two entries) is shown as 125.  
   
-|Topic|Potential Customer|Estimated value|  
+|Opportunity|Potential Customer|Estimated value|  
 |-----|------------------|---------------|  
 |Opportunity 1|Account 1|null|  
 |Opportunity 2|Account 1|250|  
@@ -126,7 +126,7 @@ In the following example, with the following data, the average for Account 1 (tw
 
 ## Count
 
-The following example shows how to use the `count` `aggregate` column.  
+The following example shows how to use the `aggregate` attribute to use the `count` aggregate function.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -155,7 +155,7 @@ foreach (var c in opportunity_count_result.Entities)
 
 ### CountColumn
 
-The following example shows how to use the `countcolumn` `aggregate` column to count columns.  
+The following example shows how to use the `aggregate` attribute to use the `countcolumn` aggregate function.
   
  ```csharp
 // *****************************************************************************************************************
@@ -184,7 +184,7 @@ foreach (var c in opportunity_colcount_result.Entities)
  
 ### Count distinct columns
 
-The following example shows how to use the `countcolumn` `aggregate` column with the `distinct` column to count distinct columns.  
+The following example shows how to use the `aggregate` attribute with the `countcolumn` aggregate function and the `distinct` attribute to count distinct columns.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -213,9 +213,9 @@ foreach (var c in opportunity_distcount_result.Entities)
 
 ## Max
 
-**Null** values are not considered when Dataverse computes the maximum of data. However, zero (0) is used.  
+**Null** values aren't considered when Dataverse computes the maximum of data. However, zero (0) is used.  
   
-The following example shows how to use the `max` `aggregate` column.  
+The following example shows how to use the `aggregate` attribute to use the `max` aggregate function. 
   
  ```csharp
 // *****************************************************************************************************************
@@ -244,9 +244,9 @@ foreach (var c in estimatedvalue_max_result.Entities)
  
 ## Min
 
-**Null** values are not considered when Dataverse computes the minimum of data. However, zero (0) is used.  
+**Null** values aren't considered when Dataverse computes the minimum of data. However, zero (0) is used.  
   
-The following example shows how to use the `min``aggregate` column.  
+The following example shows how to use the `aggregate` attribute to use the `min` aggregate function.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -275,7 +275,7 @@ foreach (var c in estimatedvalue_min_result.Entities)
 
 ## Sum
 
-The following example shows how to use the `sum``aggregate` column.  
+The following example shows how to use the `aggregate` attribute to use the `sum` aggregate function.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -304,7 +304,7 @@ foreach (var c in estimatedvalue_sum_result.Entities)
  
 ## Multiple aggregates
 
-The following example shows how to use multiple `aggregate` columns to set a minimum and maximum.  
+The following example shows how to use multiple `aggregate` attributes to use the `count`, `sum`, and `avg` aggregate functions in a single request.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -338,7 +338,7 @@ foreach (var c in estimatedvalue_avg2_result.Entities)
  
 ## Group by
 
-The following example shows how to use multiple `aggregate` columns and a linked `groupby` column.  
+The following example shows how to use multiple `aggregate` attributes and a linked `groupby` attribute.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -382,7 +382,7 @@ The samples below show the following group by examples:
 
 ### Group by with linked entity
 
-The following example shows how to use the `sum``aggregate` columns to sum linked table values.  
+The following example shows how to use the `aggregate` attributes to apply the `sum` aggregate function to linked table values.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -414,7 +414,7 @@ foreach (var c in groupby2_result.Entities)
 
 ### Group by year
 
-Group By for dates uses the day, week, month, quarter, or year value. The following example shows how to use the `aggregate` column and the `groupby` column to group the results by year.  
+Group By for dates uses the day, week, month, quarter, or year value. The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by year.  
   
  ```csharp
 
@@ -456,7 +456,7 @@ foreach (var c in byyear_result.Entities)
  
 ### Group by quarter
 
-The following example shows how to use the `aggregate` column and the `groupby` column to group the results by quarter.  
+The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by quarter.  
   
  ```csharp
  // *****************************************************************************************************************
@@ -497,7 +497,7 @@ The following example shows how to use the `aggregate` column and the `groupby` 
 
 ### Group by month
 
-The following example shows how to use the `aggregate` column and the `groupby` column to group the results by month.  
+The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by month.  
   
 ```csharp
 // *****************************************************************************************************************
@@ -538,7 +538,7 @@ foreach (var c in bymonth_result.Entities)
 
 ### Group by week
 
-The following example shows how to use the `aggregate` column and the `groupby` column to group the results by week.  
+The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by week.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -579,7 +579,7 @@ foreach (var c in byweek_result.Entities)
 
 ### Group by day
 
- The following example shows how to use the `aggregate` column and the `groupby` column to group the results by day.  
+ The following example shows how to use the `aggregate` attribute and the `groupby` attribute to group the results by day.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -620,7 +620,7 @@ foreach (var c in byday_result.Entities)
  
 ### Multiple group by
 
-The following example shows how to use the `aggregate` column and multiple `groupby` clauses.  
+The following example shows how to use the `aggregate` attribute and multiple `groupby` clauses.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -664,7 +664,7 @@ foreach (var c in byyrqtr_result.Entities)
 
 ## Order by
 
-The following example shows how to use the `aggregate` column and multiple `orderby` clauses.  
+The following example shows how to use the `aggregate` attribute and multiple `orderby` clauses.  
   
  ```csharp
 // *****************************************************************************************************************
@@ -707,10 +707,10 @@ foreach (var c in byyrqtr2_result.Entities)
   
 ### See also
 
-[Page large result sets with FetchXML](org-service/page-large-result-sets-with-fetchxml.md)<br />
-[Fetch XML schema](fetchxml-schema.md)<br />
-<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*><br />
-<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest><br />
+[Page large result sets with FetchXML](org-service/page-large-result-sets-with-fetchxml.md)  
+[Fetch XML schema](fetchxml-schema.md)  
+<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>  
+<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest>  
 <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
