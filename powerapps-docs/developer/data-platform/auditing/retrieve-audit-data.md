@@ -202,7 +202,7 @@ Both of the following queries return the same response.
 
 The following query filters on the `_userid_value` property of the audit record where the value matches `<user id>`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/audits?$select=_objectid_value,objecttypecode,createdon,_userid_value&$orderby=createdon desc&$filter=operation eq 3 and objecttypecode eq 'contact' and _userid_value eq '<user id>'
@@ -216,7 +216,7 @@ Prefer: odata.include-annotations="*"
 
 The following query accesses the collection of audit records for a specific user with the `lk_audit_userid` collection-valued navigation property from the `systemuser` table, where the `systemuserid` value matches `<user id>`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(<user id>)/lk_audit_userid?$select=_objectid_value,objecttypecode,createdon,_userid_value&$orderby=createdon desc&$filter=operation eq 3 and objecttypecode eq 'contact'
@@ -228,7 +228,7 @@ If-None-Match: null
 Prefer: odata.include-annotations="*" 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -428,7 +428,7 @@ Use this message to retrieve the audit details for a single audit record.
 
 The following example shows the [AttributeAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.AttributeAuditDetail) returned when the `parentaccountid` is set on an `account` record.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/audits(12869c65-d7d3-ec11-b656-281878f0eba9)/Microsoft.Dynamics.CRM.RetrieveAuditDetails
@@ -440,7 +440,7 @@ If-None-Match: null
 Prefer: odata.include-annotations="*" 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -662,7 +662,7 @@ Changes for this message are always `AttributeAuditDetail` types.
 
 This example returns a single audited change history for the `description` column of an `account` table record.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/RetrieveAttributeChangeHistory(Target=@target,AttributeLogicalName=@attributeLogicalName,PagingInfo=@paginginfo)?
@@ -680,7 +680,7 @@ OData-Version: 4.0
 If-None-Match: null
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -804,7 +804,7 @@ This message can also be used with the `systemuser` and `role` tables to return 
 
 The following example returns just the first two of four changes to an account record.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/RetrieveRecordChangeHistory(Target=@target,PagingInfo=@paginginfo)?
@@ -820,7 +820,7 @@ OData-Version: 4.0
 If-None-Match: null
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

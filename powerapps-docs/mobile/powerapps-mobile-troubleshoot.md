@@ -1,12 +1,13 @@
 ---
 title: Troubleshoot issues in the Power Apps mobile app
 description: Troubleshooting and known issues for the Power Apps mobile app 
-author: sericks007
+author: trdehove
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 07/10/2023
+ms.date: 08/01/2023
 ms.subservice: mobile
-ms.author: sericks
+ms.author: trdehove
+ms.reviewer: sericks
 search.audienceType: 
   - enduser
 contributors:
@@ -276,6 +277,9 @@ If you experience a failed network request when the Power Apps mobile app is run
 
 ## App does not appear in the app list offline 
 New and recently republished apps might not appear in the offline app list right away. To make your app appear in the app list offline, open the app on your device when it is online and keep it open for 1-2 minutes.
+
+## Not able to zoom in to input elements in the app
+Pinch to zoom is not supported by HTML input elements by deafult. More information on HTML input control default behavior: [HTML Input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
 
 ## Issue still not resolved?  
 If the information provided previously doesn’t resolve your issue, either [Post your issue in the Power App Community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1) or [Contact Technical Support](https://powerapps.microsoft.com/support/).

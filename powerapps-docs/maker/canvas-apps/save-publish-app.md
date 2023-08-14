@@ -44,6 +44,29 @@ Power Apps can also periodically save the app every 2 minutes. If you've saved t
    > - Whenever you publish a canvas app, your app will be upgraded to run on the latest version of Power Apps – which means it will get the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
    > - To allow users to retrieve app details faster on app startup, certain data will be locally stored on users' devices in the browser cache. Information that will be stored includes app, environment, and connection details. This data will stay stored in the browser based on each browsers’ storage limits. Users can clear stored data based on [instructions for each browser](/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues)
 
+
+## Create an app description with Copilot (preview)
+
+[This section is prerelease documentation and is subject to change.]
+
+If your app is in a [managed  environment](/power-platform/admin/managed-environment-overview), you can use AI to help you create a description for your app.
+
+When you save and publish your app, on the **Getting ready to publishing** dialog box select, **Create descriptions using AI**.
+
+You can also generate an app description by going to, **Settings** > **General**. Under **Description** select, **Create descriptions using AI**.
+
+
+> [!IMPORTANT]
+> - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
+> - This capability is in process of rolling out, and may not be available in your region yet.
+> - This capability  may be subject to usage limits or capacity throttling.
+> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
+
+
+
 ## Identify the live version
 
 To see all versions of an app, go to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) > **Apps** > select your app > **Details** > **Versions**.

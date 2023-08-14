@@ -41,7 +41,7 @@ Use the `Target` parameter to specify the record. The `DeletedEntriesCount` prop
 
 The following example uses the [DeleteRecordChangeHistory Action](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistory) to delete the audited data changes for an account record.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/DeleteRecordChangeHistory HTTP/1.1
@@ -58,7 +58,7 @@ If-None-Match: null
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -118,7 +118,7 @@ Use the `BulkDelete` message to delete audit records your organization no longer
 The following example deletes audit records with an action value of 64 (User Access via Web).
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.1/BulkDelete
@@ -157,7 +157,7 @@ OData-Version: 4.0
 }
 ```
 
-**Response**
+**Response:**
 
 ```HTTP
 HTTP/1.1 200 OK

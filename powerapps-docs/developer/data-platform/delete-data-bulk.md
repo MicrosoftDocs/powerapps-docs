@@ -1,77 +1,71 @@
 ---
-title: "Delete data in bulk (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Deleting data in bulk helps maintain data quality and manage the consumption of system storage by deleting data that is no longer needed." # 115-145 characters including spaces. This abstract displays in the search result.
+title: Delete data in bulk
+description: Learn how to use the bulk deletion feature in Microsoft Dataverse to delete data you no longer need, helping to maintain data quality and manage the consumption of system storage.
 ms.date: 07/25/2023
-ms.reviewer: pehecke
-ms.topic: article
-author: mayadumesh # GitHub ID
+ms.topic: how-to
+author: mayadumesh
 ms.subservice: dataverse-developer
-ms.author: mayadu # MSFT alias of Microsoft employees only
+ms.author: mayadu
+ms.reviewer: pehecke
 search.audienceType: 
   - developer
+ms.custom: bap-template
 ---
 
 # Delete data in bulk
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+[!INCLUDE [cc-terminology](includes/cc-terminology.md)]
 
-> [!NOTE]
-> For elastic tables, you can use the `DeleteMultiple` message. More information: [Use DeleteMultiple with elastic tables](use-elastic-tables.md#use-deletemultiple-with-elastic-tables)
-
-The *bulk deletion* feature helps you to maintain data quality and manage the consumption of system storage in Microsoft Dataverse by deleting data that you no longer need. For example, you can delete the following data in bulk:  
+The bulk deletion feature in Microsoft Dataverse helps you to maintain data quality and manage the consumption of system storage by deleting data you no longer need. For example, you can delete the following data in bulk:  
   
-- Stale data.
-- Data that is irrelevant to the business.
-- Unneeded test or sample data.
-- Data that is incorrectly imported from other systems.
+- Stale data
+- Data that's no longer relevant to the business
+- Unneeded test or sample data
+- Data that was incorrectly imported from other systems
   
-With bulk deletion, you can perform the following operations:  
+And you can perform the following operations:  
   
 - Delete data across multiple tables.
-- Delete records for a specified table.
+- Delete records in a specific table.
 - Receive email notifications when a bulk deletion finishes.
 - Delete data periodically.
 - Schedule the start time of a recurring bulk delete.
-- Retrieve the information about the failures that occurred during a bulk deletion.
+- Retrieve information about failures that occurred during a bulk deletion.
 
-> [!NOTE]
-> For elastic tables, you can also use the `DeleteMultiple` message. More information: [DeleteMultiple](bulk-operations.md#deletemultiple)
+To delete multiple rows in elastic tables, you can also use the [`DeleteMultiple` message](use-elastic-tables.md#use-deletemultiple-with-elastic-tables). `DeleteMultiple` deletes records in a single elastic immediately, rather than using a bulk delete job.
   
 ## Run bulk delete
 
-To delete data in bulk, submit a bulk delete job by using the `BulkDelete` message. With the SDK use the [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) and for the Web API use the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete).
+To delete data in bulk, use the `BulkDelete` message to submit a bulk delete job. With the SDK, use the [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest). With the Web API, use the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete). Specify the query expressions that describe the records to delete in the `QuerySet` property of your request.
+  
+A bulk delete job is represented by a record in the [`Bulk Delete Operation` (`BulkDeleteOperation`) table](reference/entities/bulkdeleteoperation.md). A bulk delete operation record includes the following information:  
+  
+- The number of records the job deleted
+- The number of records the job failed to delete
+- Whether the job is set to recur
+- The start time of the job
+  
+The bulk delete job runs asynchronously without blocking other activities. It only deletes records that were created before the job starts to run. The job deletes the specified records according to cascading rules based on [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md).
 
-The bulk delete job runs asynchronously without blocking other activities. The query expressions that describe the records on which to run the bulk delete job are specified in the `QuerySet` property of this request.  
+If a bulk delete job fails or ends prematurely, any records it deleted aren't rolled back. They remain deleted. A record of failures is stored in the [`Bulk Delete Failure` (`BulkDeleteFailure`) table](reference/entities/bulkdeletefailure.md). You can retrieve information from the table about the error that caused the failure.
   
-A bulk delete job is represented by the [Bulk Delete Operation table](reference/entities/bulkdeleteoperation.md). The schema name of this table is `BulkDeleteOperation`. A bulk delete operation record includes the following information:  
-  
-- Number of records that the bulk delete job deleted.
-- Number of records that the bulk delete job failed to delete.
-- Whether the bulk delete job is a recurring job or not.
-- Start time of the bulk delete job.
-  
-A bulk delete job only deletes records that are created before the job starts to run.  
-  
-> [!NOTE]
->  If a bulk delete job fails or ends prematurely, any records that were deleted before the failure or ending of the job are not rolled back and remain deleted. The failures of the `BulkDeleteOperation` are stored in the [Bulk Delete Failure table](reference/entities/bulkdeletefailure.md). You can retrieve information from the `BulkDeleteFailure` table about the error that caused the failure.
-  
-A bulk delete job deletes the specified records according to the cascading rules. These rules are based on [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md)
-  
-To run a bulk delete job, a user must have the `BulkDelete` and `Delete` privileges for the table types being deleted. The user must also have read permissions to the table records that are specified in the `QuerySet` property. By default, a system administrator has the necessary permissions; however, other users must be granted these permissions.  
+To run a bulk delete job, you must have `BulkDelete` and `Delete` privileges on the table types being deleted. You must also have read permissions on the table records that are specified in the `QuerySet` property. A system administrator has the necessary permissions by default. Other users must be granted them.
   
 You can perform a bulk deletion on all tables that support the `Delete` message.
   
-If a plug-in or a workflow (process) is triggered by the delete action on a specific table type, it is triggered every time that a table record of this type is deleted by the bulk delete job.  
+If the delete action on a specific table type triggers a plug-in or a workflow (process), the plug-in or workflow is triggered every time the bulk delete job deletes a table record of that type.
  
 ## Long-term retained data (preview)
 
-Bulk delete is also available for long-term retained (LTR) data. To run bulk delete against LTR rows (records), run a bulk delete as you normally would against the corresponding table but set the query's `DataSource` field to "retained". There are several ways to do this:
+Bulk deletion is also available for long-term retained data. Run a bulk delete as you normally would, but set the query's `DataSource` field to *retained*. 
 
 ### [SDK for .NET](#tab/sdk)
 
+With the SDK you can use either <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> or the [FetchXmlToQueryExpressionRequest class](xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest) with [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) to convert FetchXml to a <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>.
+
 #### QueryExpression
 
-Developers can set the `DataSource` field available in the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to indicate that the query is for retained rows (records) only. This flag marks the bulk delete operation to delete retained data. Set `query.DataSource`= "retained" to bulk delete retained rows only.
+Use the [QueryExpression.DataSource property](xref:Microsoft.Xrm.Sdk.Query.QueryExpression.DataSource) to indicate the query is for retained rows only. Set the value to `retained` to bulk-delete retained data.
 
 ```csharp
 static Guid BulkDeleteRetainedAccountsExample(IOrganizationService service)
@@ -103,7 +97,7 @@ static Guid BulkDeleteRetainedAccountsExample(IOrganizationService service)
 
 #### FetchXML
 
-Developers can set the `datasource='retained'` attribute inside a FetchXML expression to indicate that the query is for retained data. This flag marks the bulk delete operation to delete retained rows (records) only.
+Add the `datasource='retained'` attribute to the `fetch` element to indicate the query is for retained rows only.
 
 ```csharp
 static Guid BulkDeleteRetainedAccountsFetchXmlExample(IOrganizationService service) {
@@ -137,9 +131,9 @@ static Guid BulkDeleteRetainedAccountsFetchXmlExample(IOrganizationService servi
 
 ### [Web API](#tab/webapi)
 
-Developers can call the [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) using the Web API.
+Set the <xref:Microsoft.Dynamics.CRM.QueryExpression> `DataSource` property to `retained` in a Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) to indicate the query is for retained rows only.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
@@ -172,7 +166,7 @@ POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -182,11 +176,10 @@ HTTP/1.1 200 OK
 }
 ```
 
-More information: [Use Web API actions](webapi/use-web-api-actions.md)
+[Learn more about Web API actions](webapi/use-web-api-actions.md).
 
 ---
 
- 
 ## Samples
 
 Look at the following Organization service samples for the bulk delete feature:
@@ -199,4 +192,4 @@ Look at the following Organization service samples for the bulk delete feature:
 [Long-term data retention](long-term-retention.md)  
 [BulkDeleteOperation Table](reference/entities/bulkdeleteoperation.md)
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE [footer-include](../../includes/footer-banner.md)]

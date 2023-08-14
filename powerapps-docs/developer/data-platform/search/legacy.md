@@ -34,12 +34,12 @@ The legacy Dataverse search has three endpoints that can be used in Power Apps (
 - **Autocomplete**: `/api/search/v1.0/autocomplete` Provides autocompletion of input as the user enters text into a
     form field.
 
-The following sections describe how to access the above mentioned search
+The following sections describe how to access the previously mentioned search
 capabilities from application code.
 
 ## Search
 
-The minimum syntax of a Dataverse search HTTP request is as shown below.
+The following example shows the minimum syntax of a Dataverse search HTTP request.
 
 ```http
 POST [Organization URI]/api/search/v1.0/query
@@ -72,8 +72,7 @@ The following properties are supported for Dataverse search using the query endp
 #### `entities:[list<string>]` (optional)
 
 The default table list searches across all Dataverse search&ndash;configured tables
-and columns. The default list is configured by your administrator when Dataverse
-search is enabled.
+and columns. The administrator configures the default list when Dataverse search is enabled.
 
 #### `facets:[list<string>]` (optional)
 
@@ -124,7 +123,7 @@ Specifies the number of search results to retrieve. The default is 50, and the m
 
 #### `orderby:[list<string>]` (optional)
 
-A list of comma-separated clauses where each clause consists of a column name followed by 'asc' (ascending, which is the default) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
+A list of comma-separated clauses where each clause consists of a column name followed by 'asc' (ascending, which is the default) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering is random.
 
 For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` property overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
@@ -155,7 +154,7 @@ The simple query syntax supports the following functionality:
 | **Functionality** | **Description** |
 |---|---|
 | Boolean operators | AND operator; denoted by +<br/>OR operator; denoted by \|<br/>NOT operator; denoted by \- |
-| Precedence operators | A search term "hotel+(wifi \| luxury)" will search for results containing the term "hotel" and either "wifi" or "luxury" (or both). |
+| Precedence operators | A search term "hotel+(wifi \| luxury)" searches for results containing the term "hotel" and either "wifi" or "luxury" (or both). |
 | Wildcards            | Trailing wildcard are supported. For example, "Alp\*" searches for "alpine". |
 | Exact matches        | A query enclosed in quotation marks " ".|
 
@@ -166,8 +165,8 @@ The Lucene query syntax supports the following functionality:
 | Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by AND, +<br/>OR operator; denoted by OR, \|\|<br/>NOT operator; denoted by NOT, !, – |
 | Precedence operators              | The same functionality as simple query syntax. |
 | Wildcards                         | In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – "alp\*"<br/>Leading wildcard - "/.\*pine/" |
-| Fuzzy search                      | Supports queries misspelled by up to two characters.<br/>"Uniersty\~" will return "University"<br/>"Blue\~1" will return "glue", "blues" |
-| Term boosting                     | Weighs specific terms in a query differently.<br/>"Rock\^2 electronic" will return results where the matches to "rock" are more important than matches to "electronic". |
+| Fuzzy search                      | Supports queries misspelled by up to two characters.<br/>"Uniersty\~" returns "University"<br/>"Blue\~1" returns "glue", "blues" |
+| Term boosting                     | Weighs specific terms in a query differently.<br/>"Rock\^2 electronic" returns results where the matches to "rock" are more important than matches to "electronic". |
 | Proximity search                  | Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, "airport hotel"\~5 returns results where "airport" and "hotel" are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
 | Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
 
@@ -178,9 +177,9 @@ In order to use any of the search operators as part of the search text, escape t
 
 ### Example: basic search
 
-Below is an example of a basic search request and response.
+The following example is a basic search request and response.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/query
@@ -195,7 +194,7 @@ POST [Organization URI]/api/search/v1.0/query
 }
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -320,7 +319,7 @@ based on a table record's primary column. This is different from a regular searc
 request because a suggestion search only searches through a record's primary column,
 while search requests search through all Dataverse search&ndash;enabled table columns.
 
-The minimum syntax of a suggestion search HTTP request is as shown below.
+The following example shows the minimum syntax of a suggestion search HTTP request.
 
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
@@ -370,7 +369,7 @@ The default is searching across all Dataverse search&ndash;configured tables.
 Filters are applied while searching data and are specified in standard OData
 syntax.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
@@ -384,9 +383,9 @@ POST [Organization URI]/api/search/v1.0/suggest
 
 ### Example: suggestion search
 
-The following is an example of a basic suggestion search request.
+The following example shows a basic suggestion search request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
@@ -395,7 +394,7 @@ POST [Organization URI]/api/search/v1.0/suggest
 }
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -456,7 +455,7 @@ and columns.
 Filters are applied while searching data and are specified in standard OData
 syntax.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
@@ -470,9 +469,9 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### Example: autocomplete search
 
-The following is an example of a basic autocomplete request.
+The following example shows a basic autocomplete request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
@@ -481,7 +480,7 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 }
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
