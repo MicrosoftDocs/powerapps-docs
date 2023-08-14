@@ -55,7 +55,7 @@ The `AccessRights` enum type is used for the `AccessMask` property of the <xref:
 
 The example below grants `ReadAccess`, `WriteAccess`, `DeleteAccess`, `AppendAccess`, and `AssignAccess` access rights to the `account` record specified by the `Target` parameter to the `systemuser` designated by the `Principal` property of the `PrincipalAccess` complex type.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/ModifyAccess
@@ -79,7 +79,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content

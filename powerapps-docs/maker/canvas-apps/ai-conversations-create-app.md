@@ -29,11 +29,10 @@ The AI assistant is available from the Power Apps home screen. You can tell the 
 > ![Tell the AI assistant the information you want to track in your app.](media/artificial-intelligence/create-app-using-ai-1.png)
 
 > [!IMPORTANT]
-> - To use this capability you must have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.
+> - To use this capability your environment must be in the US region.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability is in process of rolling out, and may not be available in your region yet.
 > - This capability  may be subject to usage limits or capacity throttling.
 > - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Transparency notes for Power Apps](../common/transparency-note.md)
 
@@ -74,6 +73,10 @@ Based on what you described, AI generates a table for your app. You can take the
    > [!div class="mx-imgBorder"]
    > ![Review table for your app.](media/artificial-intelligence/table-created.png)
 
+   
+   > [!IMPORTANT]
+   > If you encounter any issues during the app creation process related to permissions or if you don't have access to Dataverse, a dialog box will appear asking you to create the app in your own environment. You will need to confirm that the table and app can be created in your environment to proceed. In case you don't have a personal developer environment, a new one will be automatically created for you. For more information, see [Get your developer environment (preview)](../maker-create-environment.md).
+
 ## Step 3: Make edits
 
 If you want to make changes, use the **Copilot** panel to describe what you want to do, and it will make the change for you. Let's ask **Copilot** to add a column to track cleaning start and end time.
@@ -90,6 +93,7 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 
 
 3. You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room. When you're ready to create your app, select **Create app**.
+
 
 ### See also
 

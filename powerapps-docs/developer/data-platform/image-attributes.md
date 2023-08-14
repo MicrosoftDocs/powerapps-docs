@@ -61,7 +61,7 @@ More information:
 
 POST a [ImageAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.ImageAttributeMetadata) to the `Attributes` collection for the table.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes HTTP/1.1
@@ -105,7 +105,7 @@ Content-Length: 1393
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -227,7 +227,7 @@ More information: [Query schema definitions](query-schema-definitions.md)
 
 This request will return all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: [Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes/Microsoft.Dynamics.CRM.ImageAttributeMetadata?$select=SchemaName,CanStoreFullImage,MaxSizeInKB,IsPrimaryImage
@@ -237,7 +237,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

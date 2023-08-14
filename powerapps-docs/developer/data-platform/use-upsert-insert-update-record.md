@@ -109,7 +109,7 @@ The following examples show `Upsert` operations using a table with two alternate
 
 This request creates a record.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/example_records(example_key1=2,example_key2=2) HTTP/1.1
@@ -122,7 +122,7 @@ Content-Type: application/json
 { "example_name": "2:2" }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -134,7 +134,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/example_records(example_key1=2,
 
 This request updates the record created by the request above.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/example_records(example_key1=2,example_key2=2) HTTP/1.1
@@ -147,7 +147,7 @@ Content-Type: application/json
 { "example_name": "2:2 Updated" }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -164,7 +164,7 @@ When you use the `Prefer: return=representation` header, you can get a different
 
 The following request creates a new record and returns status `201 Created`.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/example_records(example_key1=3,example_key2=3)?$select=example_recordid HTTP/1.1
@@ -178,7 +178,7 @@ Content-Type: application/json
 { "example_name": "3:3" }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 201 Created
@@ -198,7 +198,7 @@ OData-Version: 4.0
 
 This request updates the record created by the request above and returns status `200 OK` to show that this was an update operation.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/example_records(example_key1=3,example_key2=3)?$select=example_recordid HTTP/1.1
@@ -212,7 +212,7 @@ Content-Type: application/json
 { "example_name": "3:3 Updated" }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
