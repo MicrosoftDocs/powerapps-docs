@@ -2,7 +2,7 @@
 title: "Create and design model-driven app forms | MicrosoftDocs"
 description: "Overview of model-driven forms in Power Apps"
 ms.collection: get-started
-ms.date: 10/21/2022
+ms.date: 08/15/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -96,39 +96,11 @@ Tables can have multiple forms.  The use of a form is controlled through the mod
 
 By default all forms are made available to users. However, through the app designer a specific form can be restricted.
 
-### Change the forms displayed in an app
+### Change the forms displayed and form order
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Select **Solutions** on the left navigation pane, and then open the solution to be updated. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-3. Edit the model-driven app in app designer.
-4. In the **Table View** area, select **Forms** next to the table.  The components tab will become visible.
+Makers change the forms displayed in an app from the app designer. More information: [Manage forms](create-add-remove-forms-views-dashboards.md#manage-forms)
 
-   :::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/select-forms-to-display-app-app-designer.png" alt-text="select forms to display in the app designer":::
-
-5. On the **Components** tab, verify the main forms that are included for the app. Verify that the form you want to display is checked. If not, select it, save, and then publish the app.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Forms included with app.](media/forms-included-in-app.png "Forms included with app")
-
-## Setting the default form for an app
-
-A form can be set as the default form through the form order configuration **or** when a user sets the default form as a personalization setting.
-
-When we set the default form order this is done at the level of the **table** and not the app.  Therefore, one form order per table.
-
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Select **Tables** on the left navigation pane, and then open the required table. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
-3. Select the **Forms** area, select the ellipses (...) and select **Form settings**
-
-   :::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-navigation.png" alt-text="select forms forms to include in app":::
-
-4. In the form settings dialogue select **form order** and then the **form set**, or form type, you would like to order.
-
-:::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-order.png" alt-text="select forms order":::
-
-5. Once in the form order area uses the handles to move the order of the forms.
-
-6. Select **Save and Publish** to save the form order changes.
+Makers can also change the form order, fallback forms, and the default form for a table from the table hub. More information:  [Set the form order](assign-form-order.md#set-the-form-order)
 
 ## Updated versus classic tables
 
