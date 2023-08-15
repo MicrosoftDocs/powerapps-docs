@@ -22,7 +22,8 @@ This sample shows how to create, retrieve, update, and delete email attachments 
 - [IOrganizationService.Update](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update)
 - [IOrganizationService.Delete](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.delete)
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDEmailAttachments).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create, retrieve, update, and delete an email attachment sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDEmailAttachments)
 
 ## How to run this sample
 
