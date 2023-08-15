@@ -75,7 +75,7 @@ More information: [Types of forms in Power Apps](types-forms.md).
 
 The fundamentals of building a model-driven app include creating a table, configuring data views, and creating and editing forms.
 
-Before you begin to build forms, it's worth determining whether you have all the columns necessary to solve your business problem. Additionally, you should have an understanding how to lay these out in terms of sections and tabs.  Broadly speaking, the complexity of your forms will be a reflection of the number of columns in your table in addition to the complexity of your business process.
+Before you begin to build forms, it's worth determining whether you have all the columns necessary to solve your business problem. Additionally, you should have an understanding how to lay these out in terms of sections and tabs.  Broadly speaking, the complexity of your forms are a reflection of the number of columns in your table in addition to the complexity of your business process.
 
 [Learn to create, edit, or configure forms using the form designer](create-and-edit-forms.md)
 
@@ -92,7 +92,7 @@ There are a couple of reasons you may not be able to delete a form.
 
 ## Controlling the display of a form within an app
 
-Tables can have multiple forms.  The use of a form is controlled through the model-driven app. This allows makers to use the same table in different ways, depending on the audience, by controlling the display.
+Tables can have multiple forms.  The use of a form is controlled through the model-driven app. This allows makers to use the same table in different ways depending on the audience, by controlling the display.
 
 By default all forms are made available to users. However, through the app designer a specific form can be restricted.
 
