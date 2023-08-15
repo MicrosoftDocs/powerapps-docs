@@ -1,15 +1,15 @@
 
 # View in Microsoft Fabric
 
-Dataverse direct integration with Microsoft Fabric enables organizations to extend their Dynamics 365 enterprise applications and business processes into Fabric. **View in Microsoft Fabric** feature built into PowerApps maker portal makes all your Dynamics 365 data available for analysis in Microsoft Fabric.
+Dataverse direct integration with Microsoft Fabric enables organizations to extend their Dynamics 365 enterprise applications and business processes into Microsoft Fabric. **View in Microsoft Fabric** feature built into PowerApps makes all your Dynamics 365 data available for analysis in Microsoft Fabric.
 
--   No need to copy data, build ETL pipelines, or use third-party integration tools.
--   You can use Dataverse provisioned storage, ie. the data lake build into Dataverse, no need to bring your own storage or Synapse compute
--   You can integrate existing Synapse Links or new links created with your own Azure storage
+-   No need to export data, build ETL pipelines, or use third-party integration tools.
+-   You can link data from Dataverse directly into Microsoft Fabric, no need to bring your own storage
+-   You can link existing Synapse Links or new links created with your own Azure storage 
 
 With just one click, you’ll get more insights from your business data stored in Dataverse. ![View in Microsoft Fabric](media/Fabric/Azure-Synapse-Link-two-experiences.png)
 
-As data gets updated, changes are reflected in Microsoft Fabric automatically. Dataverse also generates an enterprise-ready Synapse Lakehouse and SQL endpoint for your Dynamics 365 data. This makes it easier for data engineers and DB admins to combine data from multiple sources and build custom analytics with Spark, Python, or SQL.
+As data gets updated, changes are reflected in Microsoft Fabric automatically. Dataverse also generates an enterprise-ready Synapse Lakehouse and SQL endpoint for your Dynamics 365 data. This makes it easier for data engineers and database admins to combine data from multiple sources and build custom analytics with Spark, Python, or SQL.
 
 Microsoft Fabric’s lake-centric approach helps to eliminate data silos. Combine data from your applications and devices—web sites, mobile apps, sensors, and signals from your warehouse and factories—with data from your business processes in Dynamics 365—sales, cases, inventory, and orders—to predict potential delays or shortages that affect keeping your promises to customers.
 
@@ -31,13 +31,13 @@ Makers can continue to add more data and launch Microsoft Fabric from the maker 
 
 Makers can build Apps and automations with enterprise-wide data available in One Lake – the data store behind Microsoft Fabric. They can define external tables using the SQL endpoint available for Microsoft Fabric data and work with the data as if they were native Dataverse tables.
 
-# IT admins can direct link to Microsoft Fabric
+# Manage links to Microsoft Fabric
 
-Synapse Link feature in Dataverse is used by IT admins to integrate Dynamics and PowerApps data with Azure Synapse. Synapse Link helped with configuring and provisioning Azure resources in the past. IT admins had to work with Synapse query and integrate Power BI for reporting (or Azure data factory to integrate data).
+Synapse Link feature in Dataverse is used by IT admins to configure and manage Dynamics and PowerApps data with Azure Synapse. Synapse Link helped with configuring and provisioning Azure resources in the past. IT admins had to work with Synapse query and integrate Power BI for reporting (or Azure data factory to integrate data).
 
 ![View in Microsoft Fabric in Synapse Link](media/Fabric/Azure-Syunapse-Link-with-View-In-Fabric.png)
 
-Now Synapse Link enables IT admins to direct link to Microsoft Fabric and work with SQL and other workloads without provisioning Synapse and other services.
+Now Synapse Link enables IT admins to manage links to Microsoft Fabric and work with SQL and other workloads without provisioning Synapse and other services.
 
 **NOTES:**
 
@@ -55,6 +55,7 @@ Now Synapse Link enables IT admins to direct link to Microsoft Fabric and work w
 3.  This feature is only available in Power BI premium workspaces. If you don’t have Power BI premium capacity, you can sign-up for a Free Fabric trial capacity by visiting here: [Fabric (preview) trial - Microsoft Fabric \| Microsoft Learn](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial)
 4.  It is highly recommended that you create a new Power BI workspace to direct link to Dataverse. You can use this workspace to validate Synapse Link scenario.
 5.  To confirm that you can create a premium workspace. Choose **workspace settings \> premium** and ensure that you have **Trial** or **Premium capacity** selected.
+6.  The workspace you choose to link with Dataverse must be assigned to a Premium capacity in the same region as your Dataverse.
 
 ![Premium or Trial capacity assigned to a Fabric workspace](media/Fabric/Fabric-trial-capacity.png)
 
@@ -71,7 +72,7 @@ Now Synapse Link enables IT admins to direct link to Microsoft Fabric and work w
 
 1.  In the Data (preview) window, choose **+ New** option to create a new connection.
 2.  Choose **Cloud** and choose Connection type as **dataverse**
-3.  Provide **Connection name** and the **Data source path**. You can obtain the connection name from the power platform Admin center. You must enter the **Environment URL** you get from admin center into both the fields. Remember to remove https:// and the trailing /
+3.  Provide **Connection name** and the **Environment Domain**. You can obtain the connection name from the power platform Admin center. You must enter the **Environment URL** you get from admin center into both the fields. Remember to remove https:// and the trailing /
 
     ![Create a one time connection](media/Fabric/Fabric-setting-up-connection.png)
 
@@ -79,23 +80,26 @@ Now Synapse Link enables IT admins to direct link to Microsoft Fabric and work w
 5.  Choose the Edit credentials link and confirm your credentials.
 6.  Review the connection information and choose **Create**.
 
+Now you are ready to create links from your Data  
 
-# View in Microsoft Fabric experience from PowerApps
+# Launch Microsoft Fabric from PowerApps maker portal
 
-As discussed in the overview section, you can view your data in Microsoft Fabric with several gestures.
+After configuration, you can create data links from PowerApps maker portal and launch Microsoft Fabric. 
 
-## Choose tables and view in Microsoft Fabric
+## Launch Microsoft Fabric from Tables 
+You can create a Link simply by choosing tables from the PowerApps maker portal. 
 
 1.  Launch Power apps maker portal with the URL and the feature flags shown below
 
     **https://make.preview.Powerapps.com?athena.shortcuts=true&athena.mdl=true&athena.cds2=true**
 
-2.  Choose **Tables** on the left navigation and choose **Account** table.
-3.  Click on “**…”** and choose **view in Microsoft Fabric**. You can also choose view in Microsoft Fabric option in the top menu
-4.  For the first time, you will see a dialog box confirming the name of the Power BI workspace. Select OK
-5.  Synapse Lake house should launch in a separate browser window
+2.  In case you have multiple environments, choose the environment you configured  
+3.  Choose **Tables** on the left navigation and choose **Account** table.
+4.  Click on “**…”** and choose **view in Microsoft Fabric**. You can also choose view in Microsoft Fabric option in the top menu
+5.  For the first time, you will see a dialog box confirming the name of the Power BI workspace. Select OK
+6.  Synapse Lake house should launch in a separate browser window
 
-    **NOTE**: The system may take \~15 mins to update data in managed lake including conversion to Delta-parquet format. If you have selected a larger table, the initial load time make take a little longer.
+    **NOTE**: The system may take \~15 mins to update data in managed lake including conversion to Delta-parquet format. If you have selected a larger table, the initial load time make take a little longer. You may see a link with the name "Unidentified" in case data is being initialized.
 
 ## Launch Microsoft Fabric from the Synapse Link UI
 
