@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Create a connection
 
-This sample shows how to create a connection between an account and a contact table that have matching connection roles. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ConnectionEarlyBound).
+This sample shows how to create a connection between an account and a contact table that have matching connection roles.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create a connection sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ConnectionEarlyBound)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
