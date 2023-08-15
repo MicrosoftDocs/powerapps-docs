@@ -38,7 +38,7 @@
     items:
       - name: Service Protection API Limits
         href: ../api-limits.md
-      - name: Optimize performance for Create and Update operations
+      - name: Optimize performance for bulk operations
         href: ../optimize-performance-create-update.md
       - name: Manage invalid characters
         href: work-with-data/invalidcharactersinfield.md

@@ -1,11 +1,11 @@
 ---
-title: Optimize performance to perform at Scale | Microsoft Docs
+title: Optimize performance for bulk operations
 description: Choose the best approach when creating or updating large numbers records.
-author: divkamath, apurvgh
+author: apurvghai
 ms.topic: article
-ms.date: 08/09/2023
+ms.date: 08/15/2023
 ms.subservice: dataverse-developer
-ms.author: dikamath, apurvgh
+ms.author: apurvgh
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -13,11 +13,12 @@ search.app:
   - PowerApps
   - D365CE
 contributors:
-  - JimDaly, apurvgh
+  - JimDaly
+  - divkamath
 ---
-# Optimize performance to perform at Scale.
+# Optimize performance for bulk operations
 
-Dataverse offers several options you can use to maximize total throughput when performing operations at scale. Using Dataverse SDK developers can adjust the performance with wide of range of options to optimize program performance. This article demostrates available options and that you can choose from  and bring the best in your application.
+Dataverse offers several options you can use to maximize total throughput when performing operations at scale. Using Dataverse SDK developers can adjust the performance with wide of range of options to optimize program performance. This article demostrates available options and that you can choose from and bring the best in your application.
 
 ## Scenarios
 
