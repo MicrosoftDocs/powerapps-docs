@@ -65,7 +65,7 @@ If you aren't able to use bulk operation APIs, with the SDK for .NET you can [us
 
 Use these APIs to group a set of operations in a single request and achieve greater efficiency primarily due to fewer, larger requests reducing the total payload sent and received over the wire for each operation. A client application doesn't need to wait for an operation to finish before sending the next request.
 
-Each operation within the request is applied sequentially on the server, so there's no improved efficiency per operation. However, because the operations are done individually, you can get information about which operations failed, or stop the batch when an error occurs. You can send up to 1,000 requests per operation, but for best results we recommend you start with a smaller number and experiment to determine what size batch works best for your case.
+Each operation within the request is applied sequentially on the server, so there's no improved efficiency per operation. However, because the operations are done individually, you can get information about which operations failed, or stop the batch when an error occurs. You can send up to 1,000 operations per request, but for best results we recommend you start with a smaller number and experiment to determine what size batch works best for your case.
 
 > [!NOTE]
 > Both bulk operation and batch APIs see significant performance gains when used in parallel. See [Parallel requests](#parallel-requests).
