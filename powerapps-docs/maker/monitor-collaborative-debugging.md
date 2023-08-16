@@ -69,7 +69,7 @@ session.
 
 ## Connect user
 
-With **Connect user**, a maker can enable a user to open a published app and connect by using a monitoring session. You can watch the sequence of events the user generates while interacting with the app, and help with problem investigation.
+With **Connect user**, a maker can enable a user to open a published canvas or model-driven app and connect by using a monitoring session. You can watch the sequence of events the user generates while interacting with the app, and help with problem investigation.
 
 ![Connect user process flow.](media/monitor/connect-user.png "Connect user process flow")
 
