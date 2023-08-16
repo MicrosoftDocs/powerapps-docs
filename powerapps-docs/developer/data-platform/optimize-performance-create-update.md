@@ -74,7 +74,7 @@ Each operation within the request is applied sequentially on the server, so ther
 
 You can optimize the client application you build to perform bulk operations by keeping the following in mind:
 
-> Dataverse is designed as a data source to support large numbers of concurrent users.
+> Dataverse is designed as a data source to support multiple applications with large numbers of concurrent users.
 
 To optimize throughput, design your client to use Dataverse's strengths.
 
