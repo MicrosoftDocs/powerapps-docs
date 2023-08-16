@@ -3,7 +3,7 @@ title: Optimize performance for bulk operations
 description: Choose the best approach when building client applications that create or update large numbers records.
 author: apurvghai
 ms.topic: article
-ms.date: 08/15/2023
+ms.date: 08/16/2023
 ms.subservice: dataverse-developer
 ms.author: apurvgh
 ms.reviewer: jdaly
@@ -57,26 +57,22 @@ While these APIs provide the highest throughput, they have the following limitat
 - **Bulk operation APIs aren't currently available for all tables.** Any custom table should support them, but not all the core Dataverse tables support them, such as Account or Contact. You can run a query provided in the documentation to determine whether a table can use these APIs.
 - **Bulk operation APIs aren't forgiving of data errors.** You need to make sure that the data you're changing is carefully scrubbed and validated. Any error that occurs within one operation in these APIs causes the entire operation to fail.
 
-Bulk operations are available for all elastic tables and elastic tables can return information about individual operations that fail.
+Bulk operations are available for all elastic tables and elastic tables can return information about individual operations that fail. [Learn more about bulk operations with elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
 
 ### Batch APIs
 
 If you aren't able to use bulk operation APIs, with the SDK for .NET you can [use ExecuteMultiple](org-service/execute-multiple-requests.md), and with Web API you can use [OData $batch](webapi/execute-batch-operations-using-web-api.md).
 
-These APIs allow grouping a set of operations in a single request and achieve greater efficiency primarily due to fewer, larger requests reducing the total payload sent and received over the wire for each operation. A client application doesn't need to wait for an operation to finish before sending the next request.
+Use these APIs to group a set of operations in a single request and achieve greater efficiency primarily due to fewer, larger requests reducing the total payload sent and received over the wire for each operation. A client application doesn't need to wait for an operation to finish before sending the next request.
 
 Each operation within the request is applied sequentially on the server, so there's no improved efficiency per operation. However, because the operations are done individually, you can get information about which operations failed, or stop the batch when an error occurs. You can send up to 1,000 requests per operation, but for best results we recommend you start with a smaller number and experiment to determine what size batch works best for your case.
 
 > [!NOTE]
-> Both bulk operation and batch APIs see significant performance gains when used in parallel.
+> Both bulk operation and batch APIs see significant performance gains when used in parallel. See [Parallel requests](#parallel-requests).
 
 ## Client architecture
 
-You can optimize the client application you build to perform bulk operations by keeping the following in mind:
-
-> Dataverse is designed as a data source to support multiple applications with large numbers of concurrent users.
-
-To optimize throughput, design your client to use Dataverse's strengths.
+You can optimize the client application you build to perform bulk operations by keeping the following in mind: Dataverse is designed as a data source to support multiple applications with large numbers of concurrent users. To optimize throughput, design your client to use Dataverse's strengths.
 
 Bottlenecks in client-side code are the primary cause of performance issues. Developers frequently fail to fully use the capabilities of the code, which can affect performance. It's crucial to optimize how the client application utilizes the infrastructure's cores or compute, as failure to optimize can significantly affect performance. For example, when using Azure Functions, there are several steps that can be taken to optimize performance, such as implementing autoscaling, using warm-up instances, adjusting CPU usage, utilizing multiple cores, and allowing concurrency.
 
@@ -97,7 +93,7 @@ System.Net.ServicePointManager.UseNagleAlgorithm = false;
 
 To ensure consistent availability and performance for everyone, Dataverse applies some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources. Bulk operation projects always make extraordinary demands, so you need to be prepared to manage the errors that service protection limits return. If you aren't getting some service protection limit errors, you haven't maximized the capability of your application.
 
-Service protection limit errors are just another kind of transient error that your client should be prepared to handle, like a temporary loss of network connectivity. A resilient client application needs to be able to respond to the error by waiting and retrying. The only difference is that service protection limits tell you how long you need to wait before retrying.
+Service protection limit errors are just another kind of transient error that your client should be prepared to handle, like a temporary loss of network connectivity. A resilient client application must respond to the error by waiting and retrying. The only difference is that service protection limits tell you how long you need to wait before retrying.
 
 [Learn more about Dataverse service protection limits](api-limits.md)  
 [Learn more about transient fault handling](/azure/architecture/best-practices/transient-faults)
@@ -106,9 +102,9 @@ Service protection limit errors are just another kind of transient error that yo
 
 You can see a significant improvement in throughput by sending requests in parallel, but you need to understand how to send them correctly.
 
-Not every Dataverse environment has the same amount of web server resources allocated to it. Dataverse scales to the need of the environment by adding more web server resources to support it. A trial environment has the minimum number of web servers to support it. A production environment supporting thousands of active users requires more web servers.  When your environment has a lot of web servers, sending requests in parallel can make a dramatic difference in the total throughput your client application can achieve. When appropriate, you can see best results when you configure your client to use all the available web servers by removing the Azure affinity cookie that tries to associate your application to a single web server.
+Not every Dataverse environment has the same number of web server resources allocated to it. Dataverse scales to the need of the environment by adding more web server resources to support it. A trial environment has the minimum number of web servers to support it. A production environment supporting thousands of active users requires more web servers.  When your environment has a lot of web servers, sending requests in parallel can make a dramatic difference in the total throughput your client application can achieve. When appropriate, you can see best results when you configure your client to use all the available web servers by removing the Azure affinity cookie that tries to associate your application to a single web server.
 
-Dataverse returns data in a response header that tells you an recommended degree of parallelization (DOP) for your environment. If you send more parallel requests than the response header recommends, you see decreased performance. The client hardware you use to run your application may not have enough CPU cores be able to send this many requests in parallel. You may need to use more clients to get maximum throughput. In this case, you need to split recommended degree of parallelism between the clients. If your recommended DOP is 50, configure each client to use 25.
+Dataverse returns data in a response header that tells you an recommended degree of parallelization (DOP) for your environment. If you send more parallel requests than the response header recommends, performance becomes worse. The client hardware you use to run your application may not have enough CPU cores be able to send this many requests in parallel. You may need to use more clients to get maximum throughput. In this case, you need to split recommended degree of parallelism between the clients. If you have two clients and your recommended DOP is 50, configure each client to use 25.
 
 [Learn more about sending requests in parallel](send-parallel-requests.md)
 
@@ -117,7 +113,7 @@ Dataverse returns data in a response header that tells you an recommended degree
 Based on the factors previously described, follow these recommendations to optimize throughput for bulk operation projects:
 
 - Choose a table type that fits your requirements. Elastic tables have much greater capacity for bulk operations.
-- Minimize or eliminate custom business logic on the tables you're using. Configure your client application to bypass custom logic when appropriate.
+- Minimize, disable, or bypass custom business logic on the tables you're using. Configure your client application to bypass custom logic when appropriate.
 - Use Dataverse bulk operation APIs when you can, otherwise use batch APIs.
 - Design your client application to manage transient errors, including those errors returned by service protection limits.
 - Send requests in parallel. Use the response header to guide you to the recommended degree of parallelism. Disable the affinity cookie when appropriate
