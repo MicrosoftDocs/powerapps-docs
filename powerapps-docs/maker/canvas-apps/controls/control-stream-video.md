@@ -19,7 +19,7 @@ contributors:
 A video player for Microsoft Stream videos and channels.
 
 > [!IMPORTANT]
-> Due to retirement of Stream(Classic), this control is deprecatded now and will be removed soon from Power Apps Studio. Microsoft is working to release new control for Stream (based on SharePoint). You can learn more about [retirement announcement for Stream (classic)](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/control-stream-video).
+> The Stream (Classic) control is deprecated and will be removed from Power Apps Studio. Microsoft is working on releasing a new control for Stream that is based on SharePoint. For more information, see [Migration Overview - Stream (Classic) to Stream (on SharePoint)](/stream/streamnew/stream-classic-to-new-migration-overview#migration--retirement-timeline).
 
 ## Description
 The control will allow app users to play videos and browse through channels from the Microsoft Stream service. For a list of supported regions for this control, go to [Microsoft Stream FAQ](/stream/faq#which-regions-does-microsoft-stream-host-my-data-in-).
