@@ -3,7 +3,7 @@ title: "sidePanes (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the sidePanes method.
 author: adrianorth
 ms.author: aorth
-ms.date: 04/04/2022
+ms.date: 08/16/2023
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
