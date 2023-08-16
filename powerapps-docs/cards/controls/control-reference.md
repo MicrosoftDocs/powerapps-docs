@@ -124,6 +124,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Minimum value** – Hint of minimum value (may be ignored by some clients).
 
+**Mode** – The mode can be defined as "primary" or "secondary", to establish a hierarchy between card elements.
+
 **Multiline** – If true, allow multiple lines of input.
 
 **Multiple selection** – Allow multiple items to be selected.
@@ -137,6 +139,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **Placeholder** – Description of the input desired. Displayed when no selection has been made.
 
 **Poster** – URL of an image to display before playing. Supports data URI in version 1.2+
+
+**Present right-to-left** – When enabled, content in the container should be presented right to left. When disabled, content in this container should be presented left to right. When unset layout direction will inherit from parent container or column. If unset in all ancestors, the default platform behavior will apply.
 
 ### R
 
@@ -160,6 +164,8 @@ Using the Dataverse Accounts table and a text label's **Repeat for every** prope
 
 **Screen** - The screen that is shown below the current card when a user taps or clicks on a button of type 'Show Screen'.
 
+**Show grid lines** – Specifies whether grid lines should be displayed.
+
 **Show when** – Conditional layout expression.
 
 **Size** – Controls the approximate size of the image or text.
@@ -179,6 +185,8 @@ Using the Dataverse Accounts table and a text label's **Repeat for every** prope
 **Text** – Text to display. A subset of markdown is supported (https://aka.ms/ACTextFeatures).
 
 **Title** - Label for this button.
+
+**Tooltip** - Defines text that should be displayed to the end user as they hover the mouse over the action, and read when using narration software.
 
 **Type** –  What action the button should take on select - can be Show Screen, Run Power Fx, Open Url, or Toggle Visibility.
 
