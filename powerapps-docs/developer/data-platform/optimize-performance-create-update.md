@@ -1,6 +1,6 @@
 ---
 title: Optimize performance for bulk operations
-description: Choose the best approach when creating or updating large numbers records.
+description: Choose the best approach when building client applications that create or update large numbers records.
 author: apurvghai
 ms.topic: article
 ms.date: 08/15/2023
@@ -18,131 +18,110 @@ contributors:
 ---
 # Optimize performance for bulk operations
 
-Dataverse offers several options you can use to maximize total throughput when performing operations at scale. Using Dataverse SDK developers can adjust the performance with wide of range of options to optimize program performance. This article demostrates available options and that you can choose from and bring the best in your application.
+When you need to create or update thousands or millions of records in Dataverse, the choices you make can save hours of time for the bulk operation project to complete. This article describes the factors that affect performance and the options you have to build client applications that optimize performance for bulk operations. Consideration should also be given to other factors, such as the number of records, record size, network latency, and data complexity.
 
-## Scenarios
+## Table type
 
-Many business applications require the insertion of records into Dataverse. For developers, it is essential to optimize their code to handle significant data volumes while ensuring that performance and reliability are maintained. Consideration should be given to several factors when inserting records, such as the number of records, record size, network latency, and data complexity.
+The type of table you choose to store your data has the greatest impact on how much throughput you can expect with bulk operations. Dataverse offers two types of tables: *standard* and *elastic*. Elastic tables are currently a preview feature.
 
-> ![!NOTE]
-> Elastic tables are a preview feature at the time of this writing. [Elastic tables (Preview)](elastic-tables.md) can provide dramatically improved performance for bulk data operations. [Create and edit elastic tables (preview)](../../maker/data-platform/create-edit-elastic-tables.md)
+- A **standard** table stores data using Azure SQL. Standard tables provide transaction support and greater capabilities for modeling relationships.
+- An **elastic** table stores data using Azure Cosmos DB. Elastic tables automatically scale horizontally to handle large amounts of data and high levels of throughput with low latency. Elastic tables are suitable for applications that have unpredictable, spiky, or rapidly growing workloads.
 
-### Bulk data operations
+If data load times are your primary concern, elastic tables provide the best performance. [Learn about when to use elastic tables](elastic-tables.md#when-to-use-elastic-tables)
 
-When you must create or update large numbers of records, the choice as a developer can save hours of time to complete a task. Applications that perform operations in bulk typically make the most extreme requests for shared resources and encounter [Service protection API limits](api-limits.md). This article provides options you may use to achieve maximum throughput for the level of resources allocated to your Dataverse environment. Batch inserts allow developers to insert / update multiple records in a single transaction, reducing the number of round trips to the server. Some common examples include Create Multiple, Update Multiple, Execute Multiple Request.
+## Business logic
 
-A key point to recognize in this scenario is: **Your code runs in a client application that makes individual calls to Dataverse APIs and you manage any errors that occur. You can retry when an operation fails. The situation is different with plug-ins, especially when they're registered for a synchronous step**.
+Dataverse provides the capability to add extra business logic when records are created or updated by using *plug-ins*. Plug-ins can be registered to run *synchronously* before or within the transaction of a standard table operation. Elastic tables support plug-ins that can execute before an operation starts because there's no transaction. Any error that occurs in the plug-in code during a synchronous step for a standard table, or before the operation in an elastic table, cancels the operation. A plug-in developer can deliberately throw an exception to cancel the operation to ensure data validation logic is applied.
 
-### Plug-ins
+Any plug-in that is registered to run synchronously increases the time for the operation to complete. To preserve performance:
 
-Plug-ins extend the behavior of existing Dataverse messages on the server, or to implement the operations to support a custom action. All plug-ins are ultimately, sometimes indirectly, triggered by requests that originate from external calls to Dataverse APIs.
+- **Limit the number of synchronous plug-ins that are registered for the operations.** Add logic to run asynchronously using an asynchronous plug-in or Power Automate flow unless it's essential the logic be applied synchronously.
+- **Ensure the plug-ins you have are limited in the logic that they attempt to perform.** While plug-ins must complete within a generous 2-minute time limit, synchronous plug-ins that exceed two seconds to run seriously degrade performance.
+- **Ensure plug-ins only run when necessary.** Plug-ins for update operations can be filtered to run only when specific columns are updated.
+- **Make sure that plug-ins are optimized to perform logic as efficiently as possible.** For standard tables, you need to consider the impact that transactions and record locks may have on performance. [Learn about scalable customization design](scalable-customization-design/overview.md)
+- **Choose which API to register your plug-in on.** You can apply synchronous logic to run on the more efficient `CreateMultiple` and `UpdateMultiple` bulk operation APIs. [Learn how to write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
 
-Plug-ins run in a sandbox, which is a virtual computer near, but isolated from the Dataverse server. Your plug-in code is a client application that Dataverse invokes whenever an API call to Dataverse requires the logic your plug-in contains. When registered as part of a synchronous step, the time to perform the plug-in logic contributes to the total time of the operation it extends or implements. Plug-ins registered on synchronous steps can have a significant impact on the total performance of any Dataverse API used by a client application.
+[Learn more best practices for writing plug-ins](best-practices/business-logic/index.md)
+### Bypass business logic
 
-Because the synchronous step is part of the transaction, any error that occurs in your plug-in code MUST force the entire operation to roll back in order to maintain data integrity. Unlike bulk data operations from a client application, you can't manage errors except to return the error as an [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException).
+To expedite the bulk operation project, you can disable synchronous plug-ins registered for the create or update operations to improve performance. If the business logic isn't essential, or if you plan other steps to ensure eventual data consistency, you can manually disable the plug-in steps and re-enable them when the bulk operation project is complete. However, disabling plug-ins disables the logic from being applied from *any* client. Any user or other process adding data to Dataverse during this period won't have any of the business logic applied.
 
-Because of the way plug-ins run, there are the following constraints.
+As a developer of a client application performing the bulk operation, you can apply an [optional parameter](optional-parameters.md) to the requests you send to by-pass synchronous logic. Only a system administrator, or users who have been granted a specific privilege can use this header. [Learn more about how to bypass synchronous logic](bypass-custom-business-logic.md#bypass-synchronous-logic).
 
-- There's a 2-minute time limit for plug-ins to execute. This limit is generous considering the impact that a plug-in registered for a synchronous step can have on the performance of an application. Most synchronous plug-ins should complete in less than 2 seconds.
-- You shouldn't use `ExecuteMultiple` or `ExecuteTransaction` operations within plug-ins. These operations are only intended to be used by client applications and they disrupt the transaction behavior required for plug-ins registered for synchronous steps. More information: [Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md)
-- You shouldn't try to use techniques that involve performing operations in parallel. You must develop your plug-ins knowing that the calls are performed sequentially and may need to be rolled back. More information: [Don't use parallel execution within plug-ins and workflow activities](best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins.md)
+## APIs
 
-> ![IMPORTANT]
-> You can skip your custom code (aka. Plugin) execution altogether by letting the SDK know to skip it. To do so, you must set [BypassCustomPluginExecution](bypass-custom-business-logic.md)
+Dataverse provides [bulk operation APIs](bulk-operations.md) that enable the highest possible throughput for create and update operations. These APIs are currently in preview. These APIs include `CreateMultiple`, `UpdateMultiple`, and for elastic tables only: `DeleteMultiple`. `UpsertMultiple` is coming soon.
 
-## Options
+While these APIs provide the highest throughput, they have the following limitations for standard tables:
 
-The following sections summarize strategies that can be applied for bulk create and update operations
+- **Bulk operation APIs aren't currently available for all tables.** Any custom table should support them, but not all the core Dataverse tables support them, such as Account or Contact. You can run a query provided in the documentation to determine whether a table can use these APIs.
+- **Bulk operation APIs aren't forgiving of data errors.** You need to make sure that the data you're changing is carefully scrubbed and validated. Any error that occurs within one operation in these APIs causes the entire operation to fail.
 
-### Simple loop
+Bulk operations are available for all elastic tables and elastic tables can return information about individual operations that fail.
 
-- Individual requests sent on a single thread.
-- Simplest and slowest method.
-- Possible to encounter service protection limits using this approach.
-- Currently the only recommended approach for code executed in a plug-in.
+### Batch APIs
 
-### Parallel Requests
+If you aren't able to use bulk operation APIs, with the SDK for .NET you can [use ExecuteMultiple](org-service/execute-multiple-requests.md), and with Web API you can use [OData $batch](webapi/execute-batch-operations-using-web-api.md).
 
-- With .NET, Task Parallel library (TPL) facilitates sending requests in parallel using multiple threads.
-- Aligns with Dataverse strengths to support multiple concurrent requests.
-- This approach can be used together with other options and is essential to getting best total throughput possible.
-- When the Azure affinity cookie is disabled, requests are sent to all available servers. Each server manages service protection limits independently, reducing likelihood of hitting service protection limits.
-- `x-ms-dop-hint` response header value provides recommended degree of parallelism, which varies from environment to environment depending on resources allocated to it.
-- Maximum number of threads depends on the number of CPU cores available on the client.
-- Client may not have enough CPU cores for maximum throughput, or client default number of threads may send too many. Try to match the recommended degree of parallelism for best results.
-- Number of concurrent requests is one of the facets of service protection limits. Typical limit is 52 concurrent requests.
-- More information: [Send parallel requests](send-parallel-requests.md)
+These APIs allow grouping a set of operations in a single request and achieve greater efficiency primarily due to fewer, larger requests reducing the total payload sent and received over the wire for each operation. A client application doesn't need to wait for an operation to finish before sending the next request.
 
-### ExecuteMultiple and $batch
+Each operation within the request is applied sequentially on the server, so there's no improved efficiency per operation. However, because the operations are done individually, you can get information about which operations failed, or stop the batch when an error occurs. You can send up to 1,000 requests per operation, but for best results we recommend you start with a smaller number and experiment to determine what size batch works best for your case.
 
-- Both the Organization Service `ExecuteMultiple` message and Web API `$batch` operation allow you to send multiple data operation requests within a single request.
-- These grouped requests can be any kind of request except another nested `ExecuteMultiple` or `$batch` request.
-- These requests are performed sequentially in the order provided.
-- You can send up to 1000 requests at a time. Depending on the number and nature of requests, the execution time for these requests is higher, which is a facet included in service protection limits. Sending the maximum number of requests doesn't translate into optimum performance.
-- You can configure the request to stop if any errors occur, or continue and return the results of the errors for individual operations.
-- You can send these requests in parallel.
-- The primary performance benefit of using this approach is: Less total data is transferred over the wire in the body of the request compared to sending the requests individually.
+> [!NOTE]
+> Both bulk operation and batch APIs see significant performance gains when used in parallel.
 
-   - Rather than looping through each request from the client, you're sending a list of requests to the server and asking the server to loop through them instead
-   - The results of each operation don't need to be sent back to the client before the next operation can proceed.
+## Client architecture
 
-- More information:
+You can optimize the client application you build to perform bulk operations by keeping the following in mind:
 
-    - [Execute multiple requests using the Organization service](org-service/execute-multiple-requests.md)
-    - [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
+> Dataverse is designed as a data source to support large numbers of concurrent users.
 
-### CreateMultiple and UpdateMultiple (Preview)
+To optimize throughput, design your client to use Dataverse's strengths.
 
-These specialized messages optimize performance when the same operation (`Create` or `Update`) is performed on a single table. These messages can provide substantial performance gains, but also a number of constraints you need to be aware of.
+Bottlenecks in client-side code are the primary cause of performance issues. Developers frequently fail to fully use the capabilities of the code, which can affect performance. It's crucial to optimize how the client application utilizes the infrastructure's cores or compute, as failure to optimize can significantly affect performance. For example, when using Azure Functions, there are several steps that can be taken to optimize performance, such as implementing autoscaling, using warm-up instances, adjusting CPU usage, utilizing multiple cores, and allowing concurrency.
 
-- More information:
+<!-- TODO: What about this code in our samples to optimize connection?
 
-   - [Bulk Operation messages (preview)](bulk-operations.md)
-   - [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)
-   - [Bypass Custom Business Logic](bypass-custom-business-logic.md)
+ Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4 
+ThreadPool.SetMinThreads(100, 100);
+ Change max connections from .NET to a remote service default: 2
+System.Net.ServicePointManager.DefaultConnectionLimit = 65000;
+ Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server 
+System.Net.ServicePointManager.Expect100Continue = false;
+ Can decrease overall transmission overhead but can cause delay in data packet arrival
+System.Net.ServicePointManager.UseNagleAlgorithm = false; 
 
-## Guidance
+-->
 
-To optimize throughput for create and update operations, we recommend the following.
+### Service protection limits
 
-- ### Consider table design
-  You can choose between Relational (aka SQL) Entity vs Non-relational Table. Dataverse offers both types of tables allowing flexibility to achieve the level of throughput as per your business needs. If your application doesn't depend on the data modeling and transactional capabilities standard tables provide, consider whether elastic tables would provide a better fit. Read more about [Elastic tables (Preview)](elastic-tables.md) vs Traditional Relational Table. 
+To ensure consistent availability and performance for everyone, Dataverse applies some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources. Bulk operation projects always make extraordinary demands, so you need to be prepared to manage the errors that service protection limits return. If you aren't getting some service protection limit errors, you haven't maximized the capability of your application.
 
-- ### Data Validation
-  Validate the data being inserted to ensure it meets the entity scheme's requirements. This can help prevent errors and reduce the number of failed inserts.
+Service protection limit errors are just another kind of transient error that your client should be prepared to handle, like a temporary loss of network connectivity. A resilient client application needs to be able to respond to the error by waiting and retrying. The only difference is that service protection limits tell you how long you need to wait before retrying.
 
-- ### Bulk Data load 
+[Learn more about Dataverse service protection limits](api-limits.md)  
+[Learn more about transient fault handling](/architecture/best-practices/transient-faults)
 
-   - If you're performing `Create` or `Update` operations on large numbers of records for a single table, we recommend using the `CreateMultiple` and `UpdateMultiple` messages when they become available for the tables you're using. You need to experiment to find the optimum number of items to send in each request.
-   - You can enable a fall-back strategy to use `ExecuteMultiple` with continue-on-error enabled for any group of operations that fail. This way you can get the benefit of increased throughput most of the time, but still manage to complete the data load when a group of operations fail.
-   - If you're able, you should send these requests in parallel, with the Azure affinity cookie disabled to minimize the impact of service protection limits.
+### Parallel requests
 
-- ### Retrying Operation
-  Your code pattern must include retry logic.  Dataverse returns `Retry-After` in both WebAPI and Organization Service. When dataverse is throttled you will receive HTTP 409. Learn more about [service protection API limits](api-limits.md).
+You can see a significant improvement in throughput by sending request in parallel, but you need to understand how to send them correctly.
 
-- ### Adjust Server Affinity
+Not every Dataverse environment has the same amount of web server resources allocated to it. Dataverse scales to the need of the environment by adding more web server resources to support it. A trial environment has the minimum number of web servers to support it. A production environment supporting thousands of active users requires more web servers.  When your environment has a lot of web servers, sending requests in parallel can make a dramatic difference in the total throughput your client application can achieve. When appropriate, you can see best results when you configure your client to use all the available web servers by removing the Azure affinity cookie that tries to associate your application to a single web server.
 
-  Upon establishing a connection to an Azure service, a cookie is generated and included in the response. Subsequent requests made by the client will attempt to route to the same server unless capacity management dictates otherwise. This feature is particularly useful for interactive client applications, especially those utilizing web browsers, as it allows for cached data to be reused. Notably, web browsers have server affinity permanently enabled, making it impossible to disable. [Learn More](https://learn.microsoft.com/en-us/dotnet/api/microsoft.powerplatform.dataverse.client.serviceclient.enableaffinitycookie?view=dataverse-sdk-latest?_blank).
+Dataverse returns data in a response header that tells you an optimum degree of parallelization (DOP) for your environment. If you send more parallel requests than the response header recommends, you see decreased performance. The client hardware you use to run your application may not have enough CPU cores be able to send this many requests in parallel. You may need to use more clients to get maximum throughput. In this case, you need to split recommended degree of parallelism between the clients. If your recommended DOP is 50, configure each client to use 25.
 
-  **Microsoft Dataverse SDK Example**
+[Learn more about sending requests in parallel](send-parallel-requests.md)
 
-  ```cs
-       client.EnableAffinityCookie = false;
-       client.SessionTrackingId = Guid.Parse(sessionTrackingId); //Sending Request Tracking Information
-  ```
+## Recommendation summary
 
-- ### Adjust Degree of Parallelism
-  
-  Dataverse returns a DOP header (Ex: `x-ms-dop-hint`) via Web API Response or `RecommendedDegreesOfParallelism` property when using Microsoft Dataverse Client SDK. You can use this value to adjust your .NET TPL code. However, if you plan to use a multi-scale out app like Azure function, you must carefully select the value. Say you are using Azure Functions with two instances, and your MaxDoP is 50; you should use 25 as a value so that each application instance can use optimal performance. Otherwise, you will consume the complete capacity and will get throttled.  
+Based on the factors previously described, follow these recommendations to optimize throughput for bulk operation projects:
 
-- ### Optimize your plug-ins
-
-   - For tables containing data that may need to be loaded in bulk, you should transfer any synchronous business logic from the individual `Create` and `Update` operation events to the `CreateMultiple` and `UpdateMultiple` events.
-   - Currently, we don't support `CreateMultiple` and `UpdateMultiple` operations for use in plug-ins. But when we do, and you have logic that creates or updates records of the same table, you can get some performance benefit by using `CreateMultiple` and `UpdateMultiple` rather than by looping through individual operations. We don't expect you'll initiate operations that create thousands of records in plug-ins. But if you're currently able to reliably create or update 10, 50, or 200 records in a loop, or by using `ExecuteMultiple`, you should see better performance by using `CreateMultiple` and `UpdateMultiple`.
-
-- ### Client Architecture
-  
-  Based on our analysis, the primary cause of performance issues with the Dataverse SDK is often related to bottlenecks in client-side code. Developers frequently fail to fully leverage the capabilities of the code, which can impact performance. It is crucial to optimize how the developer utilizes the infrastructure's cores or compute, as this can significantly impact performance. For example, when using Azure Functions, there are several steps that can be taken to optimize performance, such as implementing auto-scaling, using warm-up instances, adjusting CPU usage, utilizing multiple cores, and allowing concurrency
+- Choose a table type that fits your requirements. Elastic tables have much greater capacity for bulk operations.
+- Minimize or eliminate custom business logic on the tables you're using. Configure your client application to bypass custom logic when appropriate.
+- Use Dataverse bulk operation APIs when you can, otherwise use batch APIs.
+- Design your client application to manage transient errors, including those errors returned by service protection limits.
+- Send requests in parallel. Use the response header to guide you to the optimum degree of parallelism. Disable the affinity cookie when appropriate
+- Validate the data being to ensure it meets the table column. This can helps prevent errors and reduces the number of failed operations.
 
 ### See also
 
