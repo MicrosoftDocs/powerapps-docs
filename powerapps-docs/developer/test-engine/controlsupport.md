@@ -174,3 +174,5 @@ Power Apps Test Engine only supports a subset of the full list control supported
 [Power Apps Test Engine overview (preview)](overview.md)   
 [Power Apps Test Engine YAML format (preview)](yaml.md)   
 [Power Apps Test Engine Power Fx functions (preview)](powerfx.md)
+
+[!INCLUDE [footer-banner](../../includes/footer-banner.md)]

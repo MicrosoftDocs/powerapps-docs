@@ -113,3 +113,5 @@ This function waits for the property of the control to equal the specified value
 [Power Apps Test Engine YAML format (preview)](yaml.md)   
 [Power Apps Test Engine control support matrix (preview)](controlsupport.md)
 
+[!INCLUDE [footer-banner](../../includes/footer-banner.md)]
+

@@ -1211,7 +1211,15 @@
           - name: Configure pipeline using YAML
             href: ./canvas-apps/test-studio-yaml-pipeline.md
       - name: Test an app with Test Engine (preview)
-        href: ./canvas-apps/test-engine.md
+        items:
+        - name: Test Engine Overview
+          href: ../developer/test-engine/overview.md
+        - name: Test Engine Yaml format
+          href: ../developer/test-engine/yaml.md
+        - name: Test Engine Power Fx functions
+          href: ../developer/test-engine/powerfx.md
+        - name: Control support matrix
+          href: ../developer/test-engine/controlsupport.md
   - name: Customize a SharePoint form
     items:
       - name: Make basic changes
