@@ -1,7 +1,7 @@
 ---
 title: "Analyze plug-in performance (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to find and analyze performance data on plug-ins execution."
-ms.date: 02/24/2023
+ms.date: 08/15/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divkamath"
@@ -10,7 +10,7 @@ ms.author: "pehecke"
 search.audienceType: 
   - developer
 contributors:
-  - PHecke
+  - phecke
 ---
 # Analyze plug-in performance
 
@@ -33,22 +33,12 @@ More information: [Best practices and guidance regarding plug-in and workflow de
 
 ## Monitor performance
 
-Run-time information about plug-ins and custom workflow extensions is captured and stored in the [PluginTypeStatistic Table](reference/entities/plugintypestatistic.md). These records are populated within 30 minutes to one hour after the custom code executes. This table provides the following data points:
+> [!IMPORTANT]
+> This feature is no longer operational or supported. Do not use.
+>
+> This section will be removed in a future article update.
 
-|**Column**|**Description**|
-|--|--|
-|AverageExecuteTimeInMilliseconds|The average execution time (in milliseconds) for the plug-in type. |
-|CrashContributionPercent|The plug-in type percentage contribution to crashes. |
-|CrashCount|Number of times the plug-in type has crashed. |
-|CrashPercent|Percentage of crashes for the plug-in type. |
-|ExecuteCount|Number of times the plug-in type has been executed. |
-|FailureCount |Number of times the plug-in type has failed. |
-|FailurePercent|Percentage of failures for the plug-in type. |
-|PluginTypeIdName|Unique identifier of the user who last modified the plug-in type statistic. |
-|TerminateCpuContributionPercent |The plug-in type percentage contribution to Worker process termination due to excessive CPU usage. |
-|TerminateHandlesContributionPercent |The plug-in type percentage contribution to Worker process termination due to excessive handle usage. |
-|TerminateMemoryContributionPercent|The plug-in type percentage contribution to Worker process termination due to excessive memory usage. |
-|TerminateOtherContributionPercent|The plug-in type percentage contribution to Worker process termination due to unknown reasons. |
+Run-time information about plug-ins and custom workflow extensions is captured and stored in the [PluginTypeStatistic Table](reference/entities/plugintypestatistic.md). These records are populated within 30 minutes to one hour after the custom code executes.
 
 ## Plug-in performance analytics
 
