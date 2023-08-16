@@ -2,7 +2,6 @@
 title: "Power Apps Test Engine control support matrix (preview)"
 description: Supported controls for the Power Apps Test Engine
 author: jt000
-ms.subservice: developer
 ms.author: jasontre
 ms.date: 08/11/2023
 ms.reviewer: jdaly
