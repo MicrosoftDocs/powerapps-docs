@@ -100,15 +100,15 @@ To ensure consistent availability and performance for everyone, Dataverse applie
 Service protection limit errors are just another kind of transient error that your client should be prepared to handle, like a temporary loss of network connectivity. A resilient client application needs to be able to respond to the error by waiting and retrying. The only difference is that service protection limits tell you how long you need to wait before retrying.
 
 [Learn more about Dataverse service protection limits](api-limits.md)  
-[Learn more about transient fault handling](/architecture/best-practices/transient-faults)
+[Learn more about transient fault handling](/azure/architecture/best-practices/transient-faults)
 
 ### Parallel requests
 
-You can see a significant improvement in throughput by sending request in parallel, but you need to understand how to send them correctly.
+You can see a significant improvement in throughput by sending requests in parallel, but you need to understand how to send them correctly.
 
 Not every Dataverse environment has the same amount of web server resources allocated to it. Dataverse scales to the need of the environment by adding more web server resources to support it. A trial environment has the minimum number of web servers to support it. A production environment supporting thousands of active users requires more web servers.  When your environment has a lot of web servers, sending requests in parallel can make a dramatic difference in the total throughput your client application can achieve. When appropriate, you can see best results when you configure your client to use all the available web servers by removing the Azure affinity cookie that tries to associate your application to a single web server.
 
-Dataverse returns data in a response header that tells you an optimum degree of parallelization (DOP) for your environment. If you send more parallel requests than the response header recommends, you see decreased performance. The client hardware you use to run your application may not have enough CPU cores be able to send this many requests in parallel. You may need to use more clients to get maximum throughput. In this case, you need to split recommended degree of parallelism between the clients. If your recommended DOP is 50, configure each client to use 25.
+Dataverse returns data in a response header that tells you an recommended degree of parallelization (DOP) for your environment. If you send more parallel requests than the response header recommends, you see decreased performance. The client hardware you use to run your application may not have enough CPU cores be able to send this many requests in parallel. You may need to use more clients to get maximum throughput. In this case, you need to split recommended degree of parallelism between the clients. If your recommended DOP is 50, configure each client to use 25.
 
 [Learn more about sending requests in parallel](send-parallel-requests.md)
 
@@ -120,8 +120,8 @@ Based on the factors previously described, follow these recommendations to optim
 - Minimize or eliminate custom business logic on the tables you're using. Configure your client application to bypass custom logic when appropriate.
 - Use Dataverse bulk operation APIs when you can, otherwise use batch APIs.
 - Design your client application to manage transient errors, including those errors returned by service protection limits.
-- Send requests in parallel. Use the response header to guide you to the optimum degree of parallelism. Disable the affinity cookie when appropriate
-- Validate the data being to ensure it meets the table column. This can helps prevent errors and reduces the number of failed operations.
+- Send requests in parallel. Use the response header to guide you to the recommended degree of parallelism. Disable the affinity cookie when appropriate
+- Validate the data to ensure it meets the table column schema. This can helps prevent errors and reduces the number of failed operations.
 
 ### See also
 
