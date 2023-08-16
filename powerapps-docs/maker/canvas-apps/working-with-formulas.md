@@ -152,9 +152,9 @@ As you type a formula in the formula bar, different syntax elements appear in di
 
 Use the Power Fx formula bar in Power Apps Studio, with better intellisense and improved error highlighting. The Power FX Formula bar allows users to write formulas more quickly and accurately. [Power FX](power-platform/power-fx/overview) is a low-code formula language that is designed to be more intuitive and easier to learn than the existing formula language. It is based on Microsoft Excel formulas, which are widely used and familiar to many users.
 
-To use the Power Fx formula bar (experimental), you need to turn it on for each app. Follow the step below to use the new formula bar:
+To use the Power Fx formula bar (experimental), you need to turn it on for each app. Follow the steps below to use the new formula bar:
 
-- From within your app, select **Settings** > **Upcoming features** >**Experimental** > set the **Power Fx formula bar** toggle to **On**.
+- From within your app, select **Settings** > **Upcoming features** > **Experimental** > set the **Power Fx formula bar** toggle to **On**.
 
 ### Use Power Fx formula bar
 
