@@ -25,23 +25,22 @@ Copilot for model-driven apps in Power Apps is a next-generation AI assistant fo
 > - To use this capability your environment must be in the US region.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
-> - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability is in process of rolling out, and may not be available in your region yet.
+> - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability  may be subject to usage limits or capacity throttling.
 
-When enabled, Copilot can be accessed through the Copilot icon in the right navigation bar when you play a model-driven app. The Copilot pane can be expanded or minimized as desired. Copilot in model-driven apps answers questions about the configured Dataverse table data in the app. Copilot can also help you navigate the app. For example, when a user enters *take me to Accounts* or *show me Contacts*.
+When enabled, Copilot can be accessed through the Copilot icon in the right navigation bar when you play a model-driven app. The Copilot pane can be opened or minimized as desired. Copilot in model-driven apps answers questions about the configured Microsoft Dataverse table data in the app. Copilot can also help you navigate the app. For example, when a user enters *take me to Online Cases* or *show me Cruise Support Tickets*.
 
 :::image type="content" source="media/model-driven-app-copilot.png" alt-text="Copilot right pane in a model-driven app" lightbox="media/model-driven-app-copilot.png":::
 
 ## Prerequisites
 
-- Power Platform administrators enable the AI-powered chat experience for canvas and model-driven apps. From the Power Platform admin center go  to **Environments** > open the environment you want > **Settings** > **Features**, under **Copilot** set **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps**.
-- Additionally, to enable Copilot for model-driven apps, the environment must have the monthly release channel enabled. From the Power Platform admin center under **Copilot** set **Requires this environment's model app refresh cadence to monthly channel** to **On**. More information: [Changing release channels for model-driven apps](channel-change.md)
+- Power Platform administrators enable the AI-powered chat experience for canvas and model-driven apps. From the Power Platform admin center, go  to **Environments** > open the environment you want > **Settings** > **Features**, under **Copilot** set **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps**.
+- Additionally, to enable Copilot for model-driven apps, the environment must have the monthly release channel enabled. From the Power Platform admin center **Settings** > **Behavior** set **Model-driven app release channel** to **Monthly channel**. More information: [Changing release channels for model-driven apps](channel-change.md) and [Manage behavior settings](/power-platform/admin/settings-behavior)
 - Choose the data you want available for answers. Copilot in a model-driven app can answer questions about all the Dataverse tables in the model-driven app, provided they have been configured for Copilot. More information: [Configure tables to use Copilot (preview)](../data-platform/table-settings-for-copilot.md)
 
 ## Give feedback
 
-To provide feedback to help improve Copilot, app users can click the thumbs up or thumbs down icons included in each Copilot response:
+To provide feedback to help improve Copilot, app users can select the thumbs up or thumbs down icons included in each Copilot response. Feedback can be submitted for each Copilot response in the pane.
 
 ### Provide positive feedback
 

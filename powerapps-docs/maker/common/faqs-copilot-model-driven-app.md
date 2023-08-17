@@ -28,7 +28,7 @@ As an AI assistant to end users, it provides answers to questions about the conf
 
 ## How was Copilot in model-driven apps evaluated? What metrics are used to measure performance?
 
-Copilot in model-driven apps underwent substantial testing before the feature was released in preview. If you encounter issues while using Copilot in model-driven apps, submit your feedback. Your feedback is used to improve Microsoft products and services. For more information, see: Data, privacy, and security for Azure OpenAI Service 
+Copilot in model-driven apps underwent substantial testing before the feature was released in preview. If you encounter issues while using Copilot in model-driven apps, submit your feedback. Your feedback is used to improve Microsoft products and services. For more information, go to: [Data, privacy, and security for Azure OpenAI Service ](/legal/cognitive-services/openai/data-privacy)
 
 ## What are the limitations of Copilot in model-driven apps? How can users minimize the impact of the Copilot in model-driven apps limitations when using the system?
 
@@ -46,7 +46,7 @@ Follow these procedures to make the most of the feature:
   - "How many high priority tickets were created last month?"
   - "How many tickets were closed in July?"
 - Clearly identify which page you want to navigate to:
-  - "Take me to *page name*, " such as "Take me to accounts."
+  - "Take me to *page name*, " such as "Take me to Accounts."
 
 ## See also
 
