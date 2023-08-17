@@ -16,7 +16,7 @@ This transparency note describes the AI impact of Power Apps model-driven apps C
 
 ## What is Copilot in model-driven apps?
 
-Copilot for model-driven Power Apps is a feature for app users to get insights about the data in their apps through conversation in natural language. Copilot helps app users boost their productivity through AI-powered insights and intuitive app navigation. This feature is available throughout the model-driven app.
+Copilot for model-driven apps in Power Apps is a feature for app users to get insights about the data in their apps through conversation in natural language. Copilot helps app users boost their productivity through AI-powered insights and intuitive app navigation. This feature is available throughout the model-driven app.
 
 ## What are the system’s capabilities?
 
@@ -32,9 +32,9 @@ Copilot in model-driven apps underwent substantial testing before the feature wa
 
 ## What are the limitations of Copilot in model-driven apps? How can users minimize the impact of the Copilot in model-driven apps limitations when using the system?
 
-To use this capability your environment must be in the US region. 
+To use this capability your environment must be in the US region.
 
-Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+Copilot in model-driven apps is a preview feature. Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 This capability may be subject to usage limits or capacity throttling.
 
@@ -47,5 +47,3 @@ Follow these procedures to make the most of the feature:
   - "How many tickets were closed in July?"
 - Clearly identify which page you want to navigate to:
   - "Take me to *page name*, " such as "Take me to accounts."
-
-
