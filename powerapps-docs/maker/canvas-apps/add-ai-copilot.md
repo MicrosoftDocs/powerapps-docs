@@ -88,6 +88,12 @@ In addition to choosing the data source, you can also configure the following pr
    > ![Configure the control.](media/copilot/updated-copilot-properties.png)
 
 
+## Provide feedback
+
+To improve Copilot control, makers can submit feedback using the **Like** (thumbs up) or **Dislike** (thumbs down) button on the Copilot control properties pane. Once you select a response, enter your feedback and then select **Submit**.
+
+App users can provide feedback by selecting **Like** (thumbs up) or **Dislike** (thumbs down) button for each response that Copilot provides. You can also enter additional feedback in the text box and then select **Submit**.
+
 ## See also
 
 [Build apps through conversation (preview)](ai-conversations-create-app.md)
