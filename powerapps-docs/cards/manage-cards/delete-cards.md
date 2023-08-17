@@ -13,12 +13,12 @@ ms.collection:
 
 # Delete a card
 
-This section shows you how to delete a card.
+You can delete a card as a owner or administrator.
 
 ## Delete a card as the owner
 
-1. Sign in to Power Apps.
-1. Select **Cards** from the left pane.
+1. Sign in to [Power Apps](https://make.powerapps.com
+1. From the left navigation, select **Cards**. 
 1. Select the card to be deleted.
 1. Select **Delete** in the command bar.
 
