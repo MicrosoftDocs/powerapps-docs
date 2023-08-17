@@ -30,15 +30,15 @@ Lookup
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes| The function that will be run just before the search to provide results for a lookup occurs. You can use this function to call one of the other lookup control functions and improve the results to be displayed in the lookup. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
+|myFunction |Function |Yes| The function that is run just before the search to provide results for a lookup occurs. You can use this function to call one of the other lookup control functions and improve the results to be displayed in the lookup. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
 ## Example
 
 <!-- Added from https://github.com/MicrosoftDocs/powerapps-docs/issues/4252 -->
 
-In the following example the `onLoad` function is set for the form onload event. It modifies the search filter for all the lookup controls associated with the `primaryid` lookup attribute because there may be more than one.
+In the following example, the `onLoad` function is set for the form onload event. It modifies the search filter for all the lookup controls associated with the `primaryid` lookup attribute because there may be more than one.
 
-It adds the `myPreSearchCallBack` function using the `addPreSearch` method. This example will require all the contact records returned to have the `firstname` value of 'Eric'.
+It adds the `myPreSearchCallBack` function using the `addPreSearch` method. This example requires all the contact records returned to have the `firstname` value of 'Eric'.
 
 ```javascript
 function onLoad(executionContext) {
@@ -54,7 +54,7 @@ function myPreSearchCallBack (executionContext){
 }
 ```
 
-### Related topics
+### Related articles
 
 [PreSearch event](../events/PreSearch.md)
 
