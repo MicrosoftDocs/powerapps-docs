@@ -17,17 +17,11 @@ contributors:
 
 ---
 
-# Modern, refreshed look for model-driven apps (preview)
+# Modern, refreshed look for model-driven apps
 
-[This article is pre-release documentation and is subject to change.]
-
-Model-driven apps have a modern, refreshed look when the **Try the new look and feel (preview)** feature has been [turned on by makers](modern-fluent-design.md#turn-on-the-new-look) of the apps.  This new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently.
+Model-driven apps have a modern, refreshed look when the **Try the new look and feel** feature has been [turned on by end users](modern-fluent-design.md#turn-on-the-new-look).  This new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently.
 
 The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future. 
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## What’s included with the new look
 Here's what you can expect in the modern, refreshed experience:
@@ -67,7 +61,7 @@ The following example shows a set of fields with the modern, refreshed look.
 ![Fields in a model-driven app that has the modern, refreshed look.](media/modern-fields.png)
 
 ## Turn on the new look
-The modern look is disabled by default. Makers can enable the new look for existing and new model-driven apps in the app designer by turning on the **Try the new look and feel (preview)** feature for each model-driven app. 
+The modern look is disabled by default. Makers can enable the new look for existing and new model-driven apps in the app designer by turning on the **Try the new look** feature for each model-driven app. 
 
 Model-driven apps that are part of the preview will automatically get incremental enhancements weekly. For more information about enabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md#upcoming).
 
@@ -84,13 +78,13 @@ The modern, refreshed look for model-driven apps has some limitations:
 ## Frequently asked questions (FAQs)
 
 ### Can I enable the new look for all model-driven apps?
-The **Try the new look and feel (preview)** feature is available for any model-driven apps that run in the cloud. We recommended that you evaluate the feature in a test environment before using it in a production environment. 
+The **Try the new look and feel** feature is available for any model-driven apps that run in the cloud. We recommended that you evaluate the feature in a test environment before using it in a production environment. 
 
 ### Can I revert to the old UI?
-Yes, you can go back to the old UI by turning off the **Try the new look and feel (preview)** setting.
+Yes, you can go back to the old UI by turning off the **Try the new look and feel** setting.
 
 ### Will any of my existing applications get the new look by default?
-During the preview period, the new look will only be seen if the **Try the new look and feel (preview)** setting is turned on by app makers.
+During the preview period, the new look will only be seen if the **Try the new look and feel** setting is turned on by app makers.
 
 ### Is the new look enabled on additional surfaces, like the Power Apps mobile app and the Outlook web app?
 The new look is not yet supported on these surfaces.
