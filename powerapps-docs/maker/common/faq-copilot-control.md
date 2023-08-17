@@ -29,7 +29,7 @@ As an AI assistant to end users, it provides answers to questions about the data
 
 ## How was Copilot control in canvas apps evaluated? What metrics are used to measure performance? 
 
-Copilot control in canvas apps underwent substantial testing before the feature was released in preview. If you encounter issues while using Copilot control in canvas apps, please submit feedback. Your feedback will be used to improve Microsoft products and services.  For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
+Copilot control in canvas apps underwent substantial testing before the feature was released in preview. If you encounter issues while using Copilot control in canvas apps, please submit feedback. Your feedback will be used to improve Microsoft products and services. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
 
 ## What are the limitations of Copilot control in canvas apps? How can users minimize the impact of the Copilot control in canvas apps limitations when using the system?
 
