@@ -53,7 +53,7 @@ As an app user, use everyday words to describe your question about the data such
 
 
 ## See also 
-- [Create an app description with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)
+- [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
 
  
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
