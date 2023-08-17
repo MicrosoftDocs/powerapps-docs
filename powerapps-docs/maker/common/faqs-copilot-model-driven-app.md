@@ -47,3 +47,8 @@ Follow these procedures to make the most of the feature:
   - "How many tickets were closed in July?"
 - Clearly identify which page you want to navigate to:
   - "Take me to *page name*, " such as "Take me to accounts."
+
+## See also
+
+[Add Copilot to model-driven apps (preview)](../model-driven-apps/add-ai-copilot.md) <br />
+[Responsible AI FAQs for Power Apps](responsible-ai-overview.md)
