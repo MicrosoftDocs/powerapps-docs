@@ -99,7 +99,7 @@ In addition to choosing the data source, you can also configure the following pr
 Admins can disable the option to provide feedback to Microsoft.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-2. On the [left navigation pane](intro-maker-portal#1--left-navigation-pane.md), select **Tables** > **Organization**.
+2. On the [left navigation pane](intro-maker-portal.md#1--left-navigation-pane), select **Tables** > **Organization**.
 3. In the **Organization columns and data** section, select the list of columns and search for **Allow users to provide feedback for App Copilot**.
 4. Set the toggle to **No**.
 
