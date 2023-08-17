@@ -2563,6 +2563,8 @@
     href: ./common/ai-app-descriptions-faq.md
   - name: FAQ for continue to edit your app with Copilot
     href: ./common/faqs-copilot-panel.md   
+  - name: FAQ for Copilot control in canvas apps
+    href: ./common/faq-copilot-control.md
 - name: Resources
   items:
   - name: Blog
