@@ -94,6 +94,16 @@ In addition to choosing the data source, you can also configure the following pr
 
 - App users can provide feedback by selecting **Like** (thumbs up) or **Dislike** (thumbs down) button for each response that Copilot provides. You can also enter additional feedback in the text box and then select **Submit**.
 
+### Disable feedback
+
+Admins can disable the option to provide feedback to Microsoft.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+2. On the [left navigation pane](intro-maker-portal#1--left-navigation-pane.md), select **Tables** > **Organization**.
+3. In the **Organization columns and data** section, select the list of columns and search for **Allow users to provide feedback for App Copilot**.
+4. Set the toggle to **No**.
+
+
 ## See also
 
 [Build apps through conversation (preview)](ai-conversations-create-app.md)
