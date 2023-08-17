@@ -35,7 +35,8 @@ When enabled, Copilot can be accessed through the Copilot icon in the right navi
 
 ## Prerequisites
 
-- To enable Copilot for your model-driven app, your environment must have the monthly release channel enabled. Power Platform administrators can enable the monthly release channel feature from the Power Platform admin center. Go to **Environments** > open the environment you want > **Settings** > **Features**, under **Copilot** set **Requires this environment's model app refresh cadence to monthly channel** to **On**.
+- Power Platform administrators enable the AI-powered chat experience for canvas and model-driven apps. From the Power Platform admin center go  to **Environments** > open the environment you want > **Settings** > **Features**, under **Copilot** set **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps**.
+- Additionally, to enable Copilot for model-driven apps, the environment must have the monthly release channel enabled. From the Power Platform admin center under **Copilot** set **Requires this environment's model app refresh cadence to monthly channel** to **On**. More information: [Changing release channels for model-driven apps](channel-change.md)
 - Choose the data you want available for answers. Copilot in a model-driven app can answer questions about all the Dataverse tables in the model-driven app, provided they have been configured for Copilot. More information: [Configure tables to use Copilot (preview)](../data-platform/table-settings-for-copilot.md)
 
 ## Give feedback
