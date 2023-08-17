@@ -1,13 +1,13 @@
 ---
 title: "Use an email signature| MicrosoftDocs"
 description: Learn how to use an email signature.
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.date: 04/10/2023
 ms.topic: how-to
-ms.author: mkaur
-ms.reviewer: ""
+ms.author: sericks
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser

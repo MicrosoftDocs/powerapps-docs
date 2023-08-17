@@ -232,7 +232,7 @@ namespace MyNamespace
 
 When this plug-in is registered on the Create message of an account entity, and the request to create an account includes the `odata.include-annotations="*"` preference, the request and response look like the following example:
 
-**Request**
+**Request:**
 
 ```http
 POST https://yourorg.api.crm.dynamics.com/api/data/v9.1/accounts HTTP/1.1
@@ -244,7 +244,7 @@ Prefer: odata.include-annotations="*"
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 400 Bad Request

@@ -17,7 +17,10 @@ contributors:
 
 <!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-convert-fax-task -->
 
-This sample shows how to convert a **Fax** to a **Task**. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ConvertFaxToTask).
+This sample shows how to convert a **Fax** to a **Task**.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Convert a fax to a task sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ConvertFaxToTask)
 
 ## How to run this sample
 

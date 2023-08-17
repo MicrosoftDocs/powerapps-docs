@@ -42,7 +42,7 @@ If you want to apply a custom navigation property name for a one-to-many relatio
   
 Once you have generated the necessary JSON to define the relationship and the lookup attribute, `POST` the JSON to the `RelationshipDefinitions` entity set. You must include the `@odata.type` property value of `Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata` to clarify the type of relationship you're creating because this same entity set is used to create many-to-many relationships. The uri for the resulting relationship is returned in the response.  
   
- **Request**  
+ **Request:**  
 ```http 
 POST [Organization URI]/api/data/v9.2/RelationshipDefinitions HTTP/1.1  
 Accept: application/json  
@@ -130,7 +130,7 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**  
+ **Response:**  
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
@@ -148,7 +148,7 @@ When you create a many-to-many relationship, you must the relationship by using 
   
  Once you have generated the necessary JSON to define the relationship, `POST` the JSON to the `RelationshipDefinitions` entity set. You must include the `@odata.type` property value of `Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata` to clarify the type of relationship you're creating because this same entity set is used to create one-to-many relationships. The URI for the resulting relationship is returned in the response.  
   
- **Request**
+ **Request:**
   
 ```http 
 POST [Organization URI]/api/data/v9.2/RelationshipDefinitions HTTP/1.1  
@@ -206,7 +206,7 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**  
+ **Response:**  
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
