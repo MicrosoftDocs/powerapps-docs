@@ -1,5 +1,5 @@
 ---
-title: AttributeMetadata | Microsoft Docs
+title: AttributeMetadata (Power Apps component framework API reference) | Microsoft Docs
 description: Provides all the information about attributes/columns definitions.
 ms.author: noazarur
 author: noazarur-microsoft
