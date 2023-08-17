@@ -8,44 +8,49 @@ ms.topic: article
 author: mduelae 
 ms.author: mkaur
 ms.reviewer:
-miti joshi
+
 ---
 
 # FAQ for Copilot control in canvas apps
 
 These frequently asked questions (FAQ) describe the AI impact of Copilot control in canvas apps.
 
-##  What is generate Copilot control in canvas apps? 
+##  What is Copilot control in canvas apps? 
 
-With the AI-generated app descriptions feature, Makers can use AI to generate descriptions for their Canvas apps. Makers can generate a description from app **Settings** or when you publish the app. By using AI to generate descriptions, Makers can focus on building their apps and allow AI to assist in summarizing the purpose of the apps for end-users. 
+ Copilot control in canvas apps is a feature for app users to get insights about their data through conversation in natural language. Copilot control helps app users boost their productivity through AI-powered insights.
 
 ## What are the system’s capabilities? 
 
-It can take the contents of your app and provide a brief description of the app for makers to share with their end-users.
+It can answer questions about the data configured for the Copilot control in a canvas app.
 
 ## What is the system’s intended use? 
 
-As an AI assistant to makers, it provides a brief description of your app that end-users can see.
+As an AI assistant to end users, it provides answers to questions about the data configured for the Copilot control in a canvas app.
 
-## How was generate app descriptions with Copilot evaluated? What metrics are used to measure performance? 
+## How was Copilot control in canvas apps evaluated? What metrics are used to measure performance? 
 
-We evaluate the feature both qualitatively and quantitatively. To assess the quality of the feature, we are conducting user studies with makers to gather their feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. Additionally, we are monitoring telemetry data to track the number of makers who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
-Before releasing the Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, provide feedback. Your feedback is used to enhance Microsoft's products and services. Your organization's IT admins have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
+Copilot control in canvas apps underwent substantial testing before the feature was released in preview. If you encounter issues while using Copilot control in canvas apps, please submit feedback. Your feedback will be used to improve Microsoft products and services.  For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
 
-## What are the limitations of generate app descriptions with Copilot? How can users minimize the impact of the generate app descriptions with Copilot limitations when using the system? 
+## What are the limitations of Copilot control in canvas apps? How can users minimize the impact of the Copilot control in canvas apps limitations when using the system?
 
-- To use this capability, you must be in a Managed Environment. 
-- Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. 
-- For more information, see [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520). 
-- This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview). 
-- This capability is in process of rolling out, and may not be available in your region yet. 
-- This capability may be subject to usage limits or capacity throttling. 
-- Your environment must be in the United States region.
-- This feature doesn’t support non-English language browsers. 
+To use this capability your environment must be in the US region.
+Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+This capability may be subject to usage limits or capacity throttling.
+Currently, the Copilot control can only answer questions for smaller datasets. The only exception to this is when the Copilot control is configured with Dataverse.
+
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
 
-If you get this error, **Something happened and we weren’t able to generate a description for you**, this may be due to capacity limits. We recommend you give the system some time before trying again.
+Follow these steps to make the most of the feature:
+
+As a maker, you can:
+ - Configure the Copilot control to the appropriate data source, keeping in mind its limitation about smaller datasets except when configured with Dataverse.
+ - Edit the Copilot control properties to clarify what the control has been connected to and what it can answer questions about
+
+As an app user, use everyday words to describe your question about the data such as:
+ - How many high priority tickets were created last month?
+ - How many tickets were closed in July?
+
 
 ## See also 
 - [Create an app description with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)
