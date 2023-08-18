@@ -1,6 +1,6 @@
 ---
 title: Manage access
-description: This article will help you use security roles to manage cards.
+description: This article helps you use security roles to manage cards.
 ms.date: 11/17/2022
 ms.topic: overview
 author: sericks007
@@ -13,25 +13,22 @@ ms.collection:
 
 # Manage access
 
-This article will help you use security roles to manage cards and explains how to delete a record.
+This article explains how to manage cards using security roles, and also provides guidance on deleting a record.
 
-## Manage cards with security roles
-
-This section shows you how to manage cards using security roles.
-
-### Change who can create cards
+## Change who can create cards
 
 Cards are stored as rows in Dataverse within the **Card** table. Administrators can use [security roles to control who can create, read, and update cards](/power-platform/admin/wp-security-cds#tablerecord-ownership).
 
-For example, if the user is only assigned to a security role that does not have permission to create rows in the **Card** table, then the user won't be able to create cards.
+For example, if a user is only assigned to a security role that doesn't have permission to create rows in the **Card** table, then the user can't create cards. 
 
-Note that a user will still be able to receive and use cards sent in Teams, regardless of the security role assigned to the user, as those cards are accessed by the Cards for Power Apps service.
+Note, regardless of the user's security role, a user can still receive and use cards sent through Teams.
 
-### Disable cards for an environment
+## Disable cards for an environment
 
-The Cards for Power Apps service uses the security role called **Cards Role** to communicate with Dataverse. By removing permissions for the **Cards Role** in an environment to create, read, or update the **Card** table, no one will be able to use cards within that environment.
+The communication between Cards for Power Apps and Dataverse relies on the **Cards Role** security role. If you remove permissions for the **Cards Role** to create, read, or update the **Card** table in the environment will result in the unavailability of cards for all users in that environment.
 
-### Cards security roles
+
+## Cards security roles
 
 - **Cards Basic Role** can be used to grant a user access to view, create, and use cards in that environment.
 
