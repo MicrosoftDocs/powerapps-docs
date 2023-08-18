@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Retrieve records from an intersect table
 
-This sample shows how to retrieve records from an intersect table. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveRecordsFromIntersectTable).
+This sample shows how to retrieve records from an intersect table.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve records from an intersect table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveRecordsFromIntersectTable)
 
 ## How to run this sample
 
