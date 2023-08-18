@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: sericks007
 ms.topic: overview
-ms.date: 04/07/2023
+ms.date: 08/18/2023
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: sericks
