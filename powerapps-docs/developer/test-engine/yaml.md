@@ -157,7 +157,6 @@ $env:user1Password = "fake password"
 
 [Power Apps Test Engine overview (preview)](overview.md)   
 [Power Apps Test Engine Power Fx functions (preview)](powerfx.md)   
-[Power Apps Test Engine control support matrix (preview)](controlsupport.md)
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]
 

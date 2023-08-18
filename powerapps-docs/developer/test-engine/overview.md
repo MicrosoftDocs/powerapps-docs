@@ -103,7 +103,6 @@ When the tests complete, you can view the results of your test in the `.trx` fil
 The following are known limitations when working with Power Apps Test Engine.
 
 - Multi-factor authentication isn't supported. Use an account that requires only a username and password to run your tests.
-- Some controls are currently unsupported in Power Apps Test Engine. See [Power Apps Test Engine Control Support Matrix (preview)](controlsupport.md) for a full list.
 - Browser locale will follow your browser's default settings
 
 ### Supported Browsers
@@ -159,6 +158,5 @@ If you move an app that is _not_ part of a solution to a new environment, you'll
 
 [Power Apps Test Engine YAML format (preview)](yaml.md)   
 [Power Apps Test Engine Power Fx functions (preview)](powerfx.md)   
-[Power Apps Test Engine control support matrix (preview)](controlsupport.md)
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]
