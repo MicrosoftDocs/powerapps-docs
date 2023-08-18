@@ -18,6 +18,9 @@ contributors:
 # Microsoft Stream video control in Power Apps
 A video player for Microsoft Stream videos and channels.
 
+> [!IMPORTANT]
+> The Stream (Classic) control is deprecated and will be removed from Power Apps Studio. Microsoft is working on releasing a new control for Stream that is based on SharePoint. For more information, see [Migration Overview - Stream (Classic) to Stream (on SharePoint)](/stream/streamnew/stream-classic-to-new-migration-overview#migration--retirement-timeline).
+
 ## Description
 The control will allow app users to play videos and browse through channels from the Microsoft Stream service. For a list of supported regions for this control, go to [Microsoft Stream FAQ](/stream/faq#which-regions-does-microsoft-stream-host-my-data-in-).
 

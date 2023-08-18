@@ -8,7 +8,7 @@ ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.date: 07/19/2022
 ms.author: chmoncay
-search.audienceType: 
+search.audienceType:
   - maker
 contributors:
   - mduelae
@@ -22,6 +22,20 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 > [!NOTE]
 > HTML text control assumes the HtmlText is relatively positioned. If you need to use an absolute position for your HTML text, wrap the text around a relatively positioned div. For example, `"<div style='position:relative'>" & varPageContent & "</div>"`
+
+> [!NOTE]
+> For some HTML elements default browser styling might be deleted. For instance, for HTML list (`<ul>`, `<ol>`) you will need to write your own inline styles to get the default styling back. For example,
+```html
+<ul style='display: block;
+           list-style-type: disc;
+           margin-block-start: 1em;
+           margin-block-end: 1em;
+           margin-inline-start: 0px;
+           margin-inline-end: 0px;
+           padding-inline-start: 40px;'>
+  ...
+</ul>
+```
 
 ## Key properties
 **[Color](properties-color-border.md)** – The color of text in a control.
@@ -87,7 +101,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 1. Add an **HTML text** control, and set its **HtmlText** property to this value:<br>
    **Source.Text**
-   
+
      The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.
 
 ## Accessibility guidelines

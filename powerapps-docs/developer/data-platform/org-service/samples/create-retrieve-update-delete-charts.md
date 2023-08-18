@@ -22,7 +22,8 @@ This sample shows how to create, retrieve, update, and delete an user-owned visu
 - [IOrganizationService.Update](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update)
 - [IOrganizationService.Delete](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.delete)
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsChart).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create, retrieve, update, and delete a chart sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsChart)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
