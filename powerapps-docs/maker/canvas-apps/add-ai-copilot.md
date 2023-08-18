@@ -27,7 +27,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability  may be subject to usage limits or capacity throttling.
-
+> - Copilot control isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 
 ## Prerequisites
 
