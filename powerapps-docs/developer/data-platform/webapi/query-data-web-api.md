@@ -40,7 +40,7 @@ Every query begins with a collection of entities. Entity collections can be:
 
 To find all the EntitySet resources available in your environment, send a `GET` request to the Web API [service document](web-api-service-documents.md#service-document):
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/
@@ -49,7 +49,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -155,7 +155,7 @@ Use the `$select` [query option](#odata-query-options) to choose which columns t
 
 The following example requests the `name` and `revenue` properties from one row of the `accounts` EntitySet resource:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=1
@@ -164,7 +164,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -225,7 +225,7 @@ For example:
 
 
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue,_primarycontactid_value,customertypecode,modifiedon
@@ -248,7 +248,7 @@ The following table describes the values and formatted values that are returned 
 |`_transactioncurrencyid_value`|`228f42f8-e646-e111-8eb7-78e7d162ced1`|`US Dollar`|
 |`accountid`|`78914942-34cb-ed11-b596-0022481d68cd`|None|
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -296,7 +296,7 @@ Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationpr
 > Or you can use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](compose-http-requests-handle-errors.md#request-annotations)
 
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,_ownerid_value&$top=2
@@ -308,7 +308,7 @@ Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationpr
 
 The following response returns two different account records. A `team` owns the first one, and a `systemuser` owns the second one. The `_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname` annotation provides this information.
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -383,7 +383,7 @@ For example, the following query:
 
 As with any query, always limit the columns returned using `$select` when you use `$expand`. For example, the following request returns the `contact.fullname` and `task.subject` values in the expanded results from the `account` entity type:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -395,7 +395,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -444,7 +444,7 @@ There is a significant difference in how paging is applied to nested $expand opt
 
 The following example demonstrates how to retrieve contact records including the primary contact and the user who created the records.
   
-**Request**  
+**Request:**  
 
 ```http 
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -456,7 +456,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```  
   
-**Response** 
+**Response:** 
  
 ```http 
 HTTP/1.1 200 OK  
@@ -508,7 +508,7 @@ However, the [User (SystemUser) table](../reference/entities/systemuser.md) has 
 
 Instead of returning data, you can also return references, or links, to the related records by expanding the single-valued navigation property with the `/$ref` option. The following example returns JSON objects with an `@odata.id` property that has a URL for each primary contact.
   
- **Request**
+ **Request:**
 
 ```http  
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -518,7 +518,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```  
   
- **Response**
+ **Response:**
  
 ```http 
 HTTP/1.1 200 OK  
@@ -569,7 +569,7 @@ You can expand single-valued navigation properties to multiple levels by nesting
 
 The following query returns `task` records and expands the related `contact`, the `account` related to the `contact`, and the `systemuser` who created the`account` record:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/tasks?$select=subject
@@ -581,7 +581,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -652,7 +652,7 @@ Because no paging is applied to the expanded records, up to 5,000 related record
 
 The following example includes a single expand of the `Account_Tasks` and `contact_customer_accounts` while retrieving account records. The `Prefer: odata.maxpagesize=1` request header ensures that only one account record is returned in the first page.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,accountid
@@ -663,7 +663,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -736,7 +736,7 @@ You can't use `$top` or `$orderby` options to limit the total number of records 
 
 The following example is based on the previous example and uses the same data. The only difference is the addition in the URL of this nested `$expand` on a single-valued navigation property to return the owning user of the contact: `;$expand=owninguser($select=fullname)`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,accountid
@@ -748,7 +748,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -896,9 +896,30 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
 Keep the following points in mind when you filter on string values:
 
 - All filters using string values are case insensitive.
+- You must URL encode special characters in filter criteria. More information: [URL encode special characters](#url-encode-special-characters)
 - You may use wildcard characters, but avoid trailing wildcards. More information: [Use wildcard characters](#use-wildcard-characters)
 - You can use OData query functions: `contains`, `startswith`, and `endswith`. More information: [Use OData query functions](#use-odata-query-functions)
 - You must manage single quotes when you use filters that accept an array of string values. More information: [Manage single quotes](#manage-single-quotes)
+
+#### URL encode special characters
+
+If the string you are using as a value in a filter function includes a special character, you need to URL encode it. For example, if you use this function: `contains(name,'+123')`, it will not work because `+` is a character that can't be included in a URL. If you URL encode the string, it will become `contains(name,'%2B123')` and you will get results where the column value contains `+123`.
+
+The following table shows the URL encoded values for common special characters.
+
+|Special<br />character|URL encoded<br />character|
+|---|---|
+|`$`|`%24`|
+|`&`|`%26`|
+|`+`|`%2B`|
+|`,`|`%2C`|
+|`/`|`%2F`|
+|`:`|`%3A`|
+|`;`|`%3B`|
+|`=`|`%3D`|
+|`?`|`%3F`|
+|`@`|`%40`|
+
 
 #### Use wildcard characters
 
@@ -968,7 +989,7 @@ You can filter based on values in single-valued navigation properties that repre
 
 The following example returns account records based on the value of the `primarycontactid/fullname` column:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$filter=primarycontactid/fullname eq 'Susanna Stubberod (sample)'
@@ -979,7 +1000,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1005,7 +1026,7 @@ You can also compare values further up the hierarchy of single-valued navigation
 
 The following example returns the first account where the contact record represents the `primarycontactid`, where 'System Administrator' created the record, using `primarycontactid/createdby/fullname` in the `$filter`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$filter=primarycontactid/createdby/fullname eq 'System Administrator'
@@ -1021,7 +1042,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1126,7 +1147,7 @@ Use the `Prefer: odata.maxpagesize` request header to control the number of reco
 
 The following example returns just the first two contact records:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
@@ -1136,7 +1157,7 @@ OData-Version: 4.0
 Prefer: odata.maxpagesize=2
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1163,7 +1184,7 @@ Preference-Applied: odata.maxpagesize=2
 
 When there are more records than requested, the `@odata.nextLink` annotation provides a URL you can use with `GET` to return the next page of data, as shown in the following example:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253ccontactid%2520last%253d%2522%257bD5026A4D-D01C-ED11-B83E-000D3A572421%257d%2522%2520first%253d%2522%257b49B0BE2E-D01C-ED11-B83E-000D3A572421%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E
@@ -1173,7 +1194,7 @@ OData-Version: 4.0
 Prefer: odata.maxpagesize=2
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1469,7 +1490,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 
 Use the `$count=true` query option to include a count of entities that match the filter criteria, up to 5,000.  
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=accountid&$count=true
@@ -1478,7 +1499,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1535,7 +1556,7 @@ If you don't include the `$count=true` query option, the total `@Microsoft.Dynam
 
 The following example shows that there are 10 accounts that match the `$filter`, but only the first three accounts are returned:
   
- **Request**
+ **Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name?
@@ -1548,7 +1569,7 @@ Prefer: odata.maxpagesize=3
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.*"
 ```  
   
- **Response** 
+ **Response:** 
  
 ```http
 HTTP/1.1 200 OK  
@@ -1586,7 +1607,7 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.*"
   
 To get just a number that represents the count of a collection, append `/$count`, as in the following example:
   
- **Request**  
+ **Request:**  
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts/$count  
@@ -1595,7 +1616,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```  
   
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 200 OK  

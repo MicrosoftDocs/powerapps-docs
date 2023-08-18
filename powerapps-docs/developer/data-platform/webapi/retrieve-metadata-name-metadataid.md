@@ -45,7 +45,7 @@ A common definition item that people want to retrieve are the options configured
 >   
 >  If the attribute used a global option set, the `GlobalOptionSet` property would contain the defined options and the `OptionSet` property would be null.  
   
- **Request**  
+ **Request:**  
 
 ```http  
 GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='accountcategorycode')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet($select=Options),GlobalOptionSet($select=Options) HTTP/1.1  
@@ -55,7 +55,7 @@ Accept: application/json
 Content-Type: application/json; charset=utf-8  
 ```  
   
- **Response**  
+ **Response:**  
 
 ```http   
 HTTP/1.1 200 OK  
@@ -148,7 +148,7 @@ Because the `MetadataId` is the primary key for definition items, retrieving ind
 
 To achieve the same result as shown in [Example: Retrieve definition items by name](#bkmk_exampleByName), you need to perform a series of query operations to get the `MetadataId` by filtering by the entity `LogicalName` and then by the attribute `LogicalName`.  
   
- **Request**
+ **Request:**
 
 ```http  
 GET [Organization URI]/api/data/v9.2/EntityDefinitions?$filter=LogicalName%20eq%20'account'&$select=MetadataId HTTP/1.1  
@@ -158,7 +158,7 @@ Accept: application/json
 Content-Type: application/json; charset=utf-8  
 ```  
   
- **Response**
+ **Response:**
 
 ```http  
 HTTP/1.1 200 OK  
@@ -174,7 +174,7 @@ OData-Version: 4.0
 }  
 ```  
   
- **Request**
+ **Request:**
 
 ```http  
 GET [Organization URI]/api/data/v9.2/EntityDefinitions(70816501-edb9-4740-a16c-6a5efbc05d84)/Attributes?$filter=LogicalName%20eq%20'accountcategorycode'&$select=MetadataId HTTP/1.1  
@@ -184,7 +184,7 @@ Accept: application/json
 Content-Type: application/json; charset=utf-8  
 ```  
   
- **Response**
+ **Response:**
 
 ```http  
 HTTP/1.1 200 OK  
@@ -201,7 +201,7 @@ OData-Version: 4.0
 }  
 ```  
   
- **Request**
+ **Request:**
 
 ```http  
 GET [Organization URI]/api/data/v9.2/EntityDefinitions(70816501-edb9-4740-a16c-6a5efbc05d84)/Attributes(118771ca-6fb9-4f60-8fd4-99b6124b63ad)/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet($select=Options),GlobalOptionSet($select=Options) HTTP/1.1  
@@ -211,7 +211,7 @@ Accept: application/json
 Content-Type: application/json; charset=utf-8  
 ```  
   
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 200 OK  
