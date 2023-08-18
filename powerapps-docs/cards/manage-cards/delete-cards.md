@@ -16,5 +16,5 @@ ms.collection:
 To delete a card, you need to be the app owner. An administrator, such as Global admin, Azure Active Directory Global admin, or Dynamics 365 admin can't delete card.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. From the [left navigation](../../maker/canvas-apps/intro-maker-portal.md#1-–-left-navigation-pane), select **Cards**.  
+1. From the [left navigation](../../maker/canvas-apps/intro-maker-portal.md#1--left-navigation-pane), select **Cards**.  
 1. Select the card that you want to delete and on the command bar select, **Delete**.
