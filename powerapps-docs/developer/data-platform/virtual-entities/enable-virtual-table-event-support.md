@@ -104,7 +104,7 @@ We also recommend that you add the Virtual Entity Metadata** record to a specifi
 
 When using Web API, the first task is to get the `MetadataId` of the virtual table. The following example returns the `MetadataId` for a virtual entity named `new_people`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.1/EntityDefinitions(LogicalName='new_people')?$select=MetadataId HTTP/1.1
@@ -114,7 +114,7 @@ Accept: application/json
 Authorization: Bearer [REDACTED]
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -129,7 +129,7 @@ Then, create the virtual entity metadata record while associating it to the `Ent
 
 Note the use of the `MSCRM.SolutionUniqueName` header set to the `Solution.UniqueName` value. This will add the virtual entity metadata record to the solution as it is created. More information: [HTTP headers](../webapi/compose-http-requests-handle-errors.md#http-headers)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.1/virtualentitymetadatas HTTP/1.1
@@ -155,7 +155,7 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content

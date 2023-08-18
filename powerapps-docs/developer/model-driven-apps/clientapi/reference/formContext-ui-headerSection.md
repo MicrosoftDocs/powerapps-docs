@@ -17,6 +17,8 @@ contributors:
 
 Provides information on how to set the visibility of header section.
 
+[!INCLUDE [online-only-api-note](../includes/online-only-api-note.md)]
+
 ## Methods
 
 |Name|Description|
