@@ -1,5 +1,5 @@
 ---
-title: ColumnInfo | Microsoft Docs
+title: ColumnInfo (Power Apps component framework API reference) | Microsoft Docs
 description: Provides column information.
 ms.author: noazarur
 author: noazarur-microsoft

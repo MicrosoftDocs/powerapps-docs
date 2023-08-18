@@ -1,5 +1,5 @@
 ---
-title: Utility | Microsoft Docs
+title: Utility (Power Apps component framework API reference) | Microsoft Docs
 description: Provides a container for useful methods.
 ms.author: noazarur
 author: noazarur-microsoft

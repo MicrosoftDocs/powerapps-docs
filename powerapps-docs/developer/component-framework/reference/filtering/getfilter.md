@@ -1,5 +1,5 @@
 ---
-title: getFilter | Microsoft Docs
+title: getFilter (Power Apps component framework API reference) | Microsoft Docs
 description: Returns the top-most filter associated with the dataset.
 ms.author: noazarur
 author: noazarur-microsoft

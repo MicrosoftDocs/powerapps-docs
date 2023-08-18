@@ -1,5 +1,5 @@
 ---
-title: Context | Microsoft Docs
+title: Context (Power Apps component framework API reference) | Microsoft Docs
 description: Provides all the properties and methods available in the Power Apps component framework
 ms.author: noazarur
 author: noazarur-microsoft

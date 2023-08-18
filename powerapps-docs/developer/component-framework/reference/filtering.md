@@ -1,5 +1,5 @@
 ---
-title: Filtering | Microsoft Docs
+title: Filtering (Power Apps component framework API reference) | Microsoft Docs
 description: Provides properties and methods for filtering in a dataset.
 ms.author: noazarur
 author: noazarur-microsoft

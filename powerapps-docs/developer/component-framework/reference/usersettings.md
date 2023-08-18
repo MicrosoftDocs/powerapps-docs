@@ -1,5 +1,5 @@
 ---
-title: UserSettings | Microsoft Docs
+title: UserSettings (Power Apps component framework API reference) | Microsoft Docs
 description: Provides information about the current user settings.
 ms.author: noazarur
 author: noazarur-microsoft

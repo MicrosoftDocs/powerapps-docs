@@ -1,5 +1,5 @@
 ---
-title: EntityRecord.getValue | Microsoft Docs
+title: EntityRecord.getValue (Power Apps component framework API reference) | Microsoft Docs
 description: Gets the value of the record's column.
 ms.author: noazarur
 author: noazarur-microsoft

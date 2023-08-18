@@ -1,5 +1,5 @@
 ---
-title: "ReactControl.updateView| MicrosoftDocs"
+title: "ReactControl.updateView (Power Apps component framework API reference)| MicrosoftDocs"
 description: This method will be called for a ReactControl when any value in the property bag has changed. 
 ms.author: noazarur
 author: noazarur-microsoft

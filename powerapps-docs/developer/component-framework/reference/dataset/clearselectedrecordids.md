@@ -1,5 +1,5 @@
 ---
-title: clearSelectedRecordIds | Microsoft Docs
+title: clearSelectedRecordIds (Power Apps component framework API reference) | Microsoft Docs
 description: Clears the selected record ids list.
 ms.author: noazarur
 author: noazarur-microsoft

@@ -1,5 +1,5 @@
 ---
-title: openWebResource | Microsoft Docs
+title: openWebResource (Power Apps component framework API reference) | Microsoft Docs
 description: Opens a HTML web resource.
 ms.author: noazarur
 author: noazarur-microsoft

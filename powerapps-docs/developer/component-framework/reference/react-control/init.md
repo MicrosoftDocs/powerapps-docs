@@ -1,5 +1,5 @@
 ---
-title: "ReactControl.init | MicrosoftDocs"
+title: "ReactControl.init (Power Apps component framework API reference) | MicrosoftDocs"
 description: Used to initialize the component instance for a ReactControl. Components can kick off remote server calls and other initialization actions.
 ms.author: noazarur
 author: noazarur-microsoft

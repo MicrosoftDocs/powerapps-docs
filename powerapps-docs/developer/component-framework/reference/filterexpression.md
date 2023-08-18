@@ -1,5 +1,5 @@
 ---
-title: FilterExpression | Microsoft Docs
+title: FilterExpression (Power Apps component framework API reference) | Microsoft Docs
 description: An expression used to represent a filter.
 ms.author: noazarur
 author: noazarur-microsoft

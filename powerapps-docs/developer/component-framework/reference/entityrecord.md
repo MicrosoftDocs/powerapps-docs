@@ -1,5 +1,5 @@
 ---
-title: EntityRecord in Microsoft Dataverse| Microsoft Docs
+title: EntityRecord (Power Apps component framework API reference)| Microsoft Docs
 description: Learn how to use different methods and properties available for EntityRecord in Power Apps component framework.
 ms.author: noazarur
 author: noazarur-microsoft

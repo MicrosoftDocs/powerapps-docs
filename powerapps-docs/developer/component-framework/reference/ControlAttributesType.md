@@ -1,5 +1,5 @@
 ---
-title: ControlAttributesType in Microsoft Dataverse| Microsoft Docs
+title: ControlAttributesType (Power Apps component framework API reference)| Microsoft Docs
 description: Enumeration of control attribute type.
 ms.author: noazarur
 author: noazarur-microsoft

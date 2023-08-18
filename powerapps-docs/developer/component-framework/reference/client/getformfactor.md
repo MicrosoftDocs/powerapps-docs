@@ -1,5 +1,5 @@
 ---
-title: getFormFactor | Microsoft Docs
+title: getFormFactor (Power Apps component framework API reference) | Microsoft Docs
 description: Returns information about the kind of device the user is using.
 ms.author: noazarur
 author: noazarur-microsoft

@@ -1,5 +1,5 @@
 ---
-title: clearFilter | Microsoft Docs
+title: clearFilter (Power Apps component framework API reference) | Microsoft Docs
 description: Clears the filter associated with the dataset.
 ms.author: noazarur
 author: noazarur-microsoft

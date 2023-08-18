@@ -1,5 +1,5 @@
 ---
-title: getNamedReference | Microsoft Docs
+title: getNamedReference (Power Apps component framework API reference) | Microsoft Docs
 description: Gets the object that encapsulates an EntityReference as a plain object.
 ms.author: noazarur
 author: noazarur-microsoft

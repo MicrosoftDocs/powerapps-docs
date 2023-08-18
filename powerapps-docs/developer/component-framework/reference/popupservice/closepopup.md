@@ -1,5 +1,5 @@
 ---
-title: closePopup | Microsoft Docs
+title: closePopup (Power Apps component framework API reference) | Microsoft Docs
 description: Closes an existing popup in the service with the given name. Does nothing if popup does not exist yet.
 ms.author: noazarur
 author: noazarur-microsoft

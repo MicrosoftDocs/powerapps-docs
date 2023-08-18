@@ -1,5 +1,5 @@
 ---
-title: getCommands | Microsoft Docs
+title: getCommands (Power Apps component framework API reference) | Microsoft Docs
 description: The commands for this dataset.
 ms.author: noazarur
 author: noazarur-microsoft

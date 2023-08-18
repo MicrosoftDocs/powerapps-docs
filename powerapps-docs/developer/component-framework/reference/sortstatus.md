@@ -1,5 +1,5 @@
 ---
-title: SortStatus | Microsoft Docs
+title: SortStatus (Power Apps component framework API reference) | Microsoft Docs
 description: Current sort status of a dataset column.
 ms.author: noazarur
 author: noazarur-microsoft

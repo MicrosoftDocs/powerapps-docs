@@ -1,5 +1,5 @@
 ---
-title: Metadata | Microsoft Docs
+title: Metadata (Power Apps component framework API reference) | Microsoft Docs
 description: Provides all the information about  column definitions.
 ms.author: noazarur
 author: noazarur-microsoft

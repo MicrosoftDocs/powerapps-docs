@@ -1,5 +1,5 @@
 ---
-title: updateRecord | Microsoft Docs
+title: updateRecord (Power Apps component framework API reference) | Microsoft Docs
 description: Updates a table record.
 ms.author: noazarur
 author: noazarur-microsoft

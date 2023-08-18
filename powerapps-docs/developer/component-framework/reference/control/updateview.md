@@ -1,5 +1,5 @@
 ---
-title: "StandardControl.updateView| MicrosoftDocs"
+title: "StandardControl.updateView (Power Apps component framework API reference) | MicrosoftDocs"
 description: This method will be called when any value in the property bag has changed. 
 ms.author: noazarur
 author: noazarur-microsoft

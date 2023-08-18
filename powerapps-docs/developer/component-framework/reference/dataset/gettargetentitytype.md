@@ -1,5 +1,5 @@
 ---
-title: getTargetEntityType | Microsoft Docs
+title: getTargetEntityType (Power Apps component framework API reference) | Microsoft Docs
 description: Returns the target table type name.
 ms.author: noazarur
 author: noazarur-microsoft

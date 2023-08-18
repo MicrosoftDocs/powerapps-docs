@@ -1,5 +1,5 @@
 ---
-title: getEntityMetadata (Component Framework) | Microsoft Docs
+title: getEntityMetadata (Power Apps component framework API reference) | Microsoft Docs
 description: Returns the table definitions for the specified table.
 ms.author: noazarur
 author: noazarur-microsoft

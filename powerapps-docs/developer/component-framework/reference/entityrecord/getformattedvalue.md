@@ -1,5 +1,5 @@
 ---
-title: getFormattedValue | Microsoft Docs
+title: getFormattedValue (Power Apps component framework API reference) | Microsoft Docs
 description: Gets the current formatted value of the record column.
 ms.author: noazarur
 author: noazarur-microsoft

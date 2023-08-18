@@ -1,5 +1,5 @@
 ---
-title: "StandardControl.init | MicrosoftDocs"
+title: "StandardControl.init (Power Apps component framework API reference) | MicrosoftDocs"
 description: Used to initialize the component instance. Components can kick off remote server calls and other initialization actions.
 ms.author: noazarur
 author: noazarur-microsoft

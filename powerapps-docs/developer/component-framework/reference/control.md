@@ -1,5 +1,5 @@
 ---
-title: StandardControl | MicrosoftDocs
+title: StandardControl (Power Apps component framework API reference) | MicrosoftDocs
 description: Provides properties and methods to initiate, update, destroy and perform various actions to build a component.
 ms.author: noazarur
 author: noazarur-microsoft

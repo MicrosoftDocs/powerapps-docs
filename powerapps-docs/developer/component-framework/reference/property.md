@@ -1,5 +1,5 @@
 ---
-title: Property | Microsoft Docs
+title: Property (Power Apps component framework API reference) | Microsoft Docs
 description: Interface for context.parameters.<property_key>
 ms.author: noazarur
 author: noazarur-microsoft

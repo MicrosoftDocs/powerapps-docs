@@ -1,5 +1,5 @@
 ---
-title: ICommand | Microsoft Docs
+title: ICommand (Power Apps component framework API reference) | Microsoft Docs
 description: A command button control types.
 ms.author: noazarur
 author: noazarur-microsoft

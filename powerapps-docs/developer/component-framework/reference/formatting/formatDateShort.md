@@ -1,5 +1,5 @@
 ---
-title: formatDateShort | Microsoft Docs
+title: formatDateShort (Power Apps component framework API reference) | Microsoft Docs
 description: Returns a string represents the datetime value after being formatted. Result pattern is based on culture. In USA it is represented as MM/DD/YYYY.
 ms.author: noazarur
 author: noazarur-microsoft

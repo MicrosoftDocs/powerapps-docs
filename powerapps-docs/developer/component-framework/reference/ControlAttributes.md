@@ -1,5 +1,5 @@
 ---
-title: ControlAttributes| Microsoft Docs
+title: ControlAttributes (Power Apps component framework API reference) | Microsoft Docs
 description: Attributes of control that necessary for formatting.
 ms.author: noazarur
 author: noazarur-microsoft

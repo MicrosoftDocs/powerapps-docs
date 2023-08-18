@@ -1,5 +1,5 @@
 ---
-title: createPopup | Microsoft Docs
+title: createPopup (Power Apps component framework API reference) | Microsoft Docs
 description: Creates a new popup element.
 ms.author: noazarur
 author: noazarur-microsoft

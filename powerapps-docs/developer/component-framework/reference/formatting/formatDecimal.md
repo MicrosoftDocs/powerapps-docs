@@ -1,5 +1,5 @@
 ---
-title: formatDecimal | Microsoft Docs
+title: formatDecimal (Power Apps component framework API reference) | Microsoft Docs
 description: Returns a formatted string that represents the decimal value after being formatted.
 ms.author: noazarur
 author: noazarur-microsoft

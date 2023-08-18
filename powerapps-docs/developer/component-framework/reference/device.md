@@ -1,5 +1,5 @@
 ---
-title: Device | Microsoft Docs
+title: Device (Power Apps component framework API reference) | Microsoft Docs
 description: Provides methods to use native device capabilities.
 ms.author: noazarur
 author: noazarur-microsoft

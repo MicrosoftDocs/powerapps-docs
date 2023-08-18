@@ -1,5 +1,5 @@
 ---
-title: Navigation | Microsoft Docs
+title: Navigation (Power Apps component framework API reference) | Microsoft Docs
 description: Provides navigation-related methods.
 ms.author: noazarur
 author: noazarur-microsoft

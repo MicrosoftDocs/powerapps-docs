@@ -1,5 +1,5 @@
 ---
-title: EntityMetadata in Microsoft Dataverse| Microsoft Docs
+title: EntityMetadata (Power Apps component framework API reference)| Microsoft Docs
 description: Information about methods and properties for table definitions.
 ms.author: noazarur
 author: noazarur-microsoft

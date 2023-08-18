@@ -1,5 +1,5 @@
 ---
-title: setFullScreen | Microsoft Docs
+title: setFullScreen (Power Apps component framework API reference) | Microsoft Docs
 description: Make the component full screen.
 ms.author: noazarur
 author: noazarur-microsoft

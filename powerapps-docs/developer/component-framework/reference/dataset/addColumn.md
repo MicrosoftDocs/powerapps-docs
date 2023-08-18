@@ -1,5 +1,5 @@
 ---
-title: addColumn | Microsoft Docs
+title: addColumn (Power Apps component framework API reference) | Microsoft Docs
 description: Adds column to the column set.
 ms.author: noazarur
 author: noazarur-microsoft

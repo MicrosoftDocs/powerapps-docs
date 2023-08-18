@@ -1,5 +1,5 @@
 ---
-title: PickFileOptions| Microsoft Docs
+title: PickFileOptions (Power Apps component framework API reference)| Microsoft Docs
 description: Provides set of options for the pickFile options parameter.
 ms.author: noazarur
 author: noazarur-microsoft

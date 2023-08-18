@@ -1,5 +1,5 @@
 ---
-title: OptionDescriptor in Microsoft Dataverse| Microsoft Docs
+title: OptionDescriptor (Power Apps component framework API reference)| Microsoft Docs
 description: Optionset object of the attribute.
 ms.author: noazarur
 author: noazarur-microsoft

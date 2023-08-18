@@ -1,5 +1,5 @@
 ---
-title: Mode | Microsoft Docs
+title: Mode (Power Apps component framework API reference) | Microsoft Docs
 description: Provides access to methods to get the information about the current state of the code component.
 ms.author: noazarur
 author: noazarur-microsoft

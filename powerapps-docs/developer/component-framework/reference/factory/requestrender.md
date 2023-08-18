@@ -1,5 +1,5 @@
 ---
-title: requestRender | Microsoft Docs
+title: requestRender (Power Apps component framework API reference) | Microsoft Docs
 description: Requests re-rendering of the component with the updated data.
 ms.author: noazarur
 author: noazarur-microsoft

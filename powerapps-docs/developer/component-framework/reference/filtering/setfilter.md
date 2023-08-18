@@ -1,5 +1,5 @@
 ---
-title: setFilter | Microsoft Docs
+title: setFilter (Power Apps component framework API reference) | Microsoft Docs
 description: Sets the top-most filter associated with the dataset.
 ms.author: noazarur
 author: noazarur-microsoft

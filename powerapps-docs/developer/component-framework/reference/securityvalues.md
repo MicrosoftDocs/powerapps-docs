@@ -1,5 +1,5 @@
 ---
-title: SecurityValues | Microsoft Docs
+title: SecurityValues (Power Apps component framework API reference) | Microsoft Docs
 description: Provides all the information about table definitions security values.
 ms.author: noazarur
 author: noazarur-microsoft

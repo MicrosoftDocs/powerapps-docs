@@ -1,5 +1,5 @@
 ---
-title: RetrieveRecord | Microsoft Docs
+title: RetrieveRecord (Power Apps component framework API reference) | Microsoft Docs
 description: Retrieves a table record.
 ms.author: noazarur
 author: noazarur-microsoft

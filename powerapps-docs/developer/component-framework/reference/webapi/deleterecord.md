@@ -1,5 +1,5 @@
 ---
-title: deleteRecord | Microsoft Docs
+title: deleteRecord (Power Apps component framework API reference) | Microsoft Docs
 description: Deletes a table record.
 ms.author: noazarur
 author: noazarur-microsoft

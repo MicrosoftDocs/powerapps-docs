@@ -1,5 +1,5 @@
 ---
-title: FormatCurrency | Microsoft Docs
+title: FormatCurrency (Power Apps component framework API reference) | Microsoft Docs
 description: Returns a formatted string that represents the currency value after being formatted.
 ms.author: noazarur
 author: noazarur-microsoft

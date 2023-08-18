@@ -1,5 +1,5 @@
 ---
-title: delete | Microsoft Docs
+title: delete (Power Apps component framework API reference) | Microsoft Docs
 description: Delete the records from data source.
 ms.author: noazarur
 author: noazarur-microsoft

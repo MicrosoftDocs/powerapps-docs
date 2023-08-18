@@ -1,5 +1,5 @@
 ---
-title: getSelectedRecordIds | Microsoft Docs
+title: getSelectedRecordIds (Power Apps component framework API reference) | Microsoft Docs
 description: Retrieves all the selected record IDs.
 ms.author: noazarur
 author: noazarur-microsoft

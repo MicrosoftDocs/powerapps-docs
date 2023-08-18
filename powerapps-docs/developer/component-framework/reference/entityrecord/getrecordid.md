@@ -1,5 +1,5 @@
 ---
-title: GetRecordId | Microsoft Docs
+title: GetRecordId (Power Apps component framework API reference) | Microsoft Docs
 description: Gets the record ID.
 ms.author: noazarur
 author: noazarur-microsoft

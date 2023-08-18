@@ -1,5 +1,5 @@
 ---
-title: formatDateYearMonth | Microsoft Docs
+title: formatDateYearMonth (Power Apps component framework API reference) | Microsoft Docs
 description: Returns a formatted string that represents a date in the year month format.
 keywords:
 ms.author: noazarur

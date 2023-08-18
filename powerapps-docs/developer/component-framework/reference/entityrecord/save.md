@@ -1,5 +1,5 @@
 ---
-title: save | Microsoft Docs
+title: save (Power Apps component framework API reference) | Microsoft Docs
 description: Saves the record
 ms.author: noazarur
 author: noazarur-microsoft

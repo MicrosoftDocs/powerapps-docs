@@ -1,5 +1,5 @@
 ---
-title: getClient | Microsoft Docs
+title: getClient (Power Apps component framework API reference) | Microsoft Docs
 description: Returns a value to indicate which client the script is executing in.
 ms.author: noazarur
 author: noazarur-microsoft

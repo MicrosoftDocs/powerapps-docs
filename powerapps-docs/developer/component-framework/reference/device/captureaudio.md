@@ -1,5 +1,5 @@
 ---
-title: CaptureAudio | Microsoft Docs
+title: CaptureAudio (Power Apps component framework API reference) | Microsoft Docs
 description: Invokes the device microphone to record audio.
 ms.author: noazarur
 author: noazarur-microsoft

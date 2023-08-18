@@ -1,5 +1,5 @@
 ---
-title: openConfirmDialog | Microsoft Docs
+title: openConfirmDialog (Power Apps component framework API reference) | Microsoft Docs
 description: Displays a confirmation dialog box containing a message and two buttons.
 ms.author: noazarur
 author: noazarur-microsoft

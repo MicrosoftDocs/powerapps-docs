@@ -1,5 +1,5 @@
 ---
-title: getBarcodeValue | Microsoft Docs
+title: getBarcodeValue (Power Apps component framework API reference) | Microsoft Docs
 description: Invokes the device camera to scan the barcode information, such as product number.
 ms.author: noazarur
 author: noazarur-microsoft

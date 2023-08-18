@@ -1,5 +1,5 @@
 ---
-title: openErrorDialog | Microsoft Docs
+title: openErrorDialog (Power Apps component framework API reference) | Microsoft Docs
 description: Displays an error dialog.
 ms.author: noazarur
 author: noazarur-microsoft

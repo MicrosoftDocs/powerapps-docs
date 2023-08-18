@@ -1,5 +1,5 @@
 ---
-title: loadNextPage | Microsoft Docs
+title: loadNextPage (Power Apps component framework API reference) | Microsoft Docs
 description: Request the next page of results to be loaded.
 ms.author: noazarur
 author: noazarur-microsoft

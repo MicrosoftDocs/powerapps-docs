@@ -1,5 +1,5 @@
 ---
-title: ConditionExpression in Microsoft Dataverse| Microsoft Docs
+title: ConditionExpression (Power Apps component framework API reference)| Microsoft Docs
 description: Learn how to use different methods and properties available for ConditionExpression in Power Apps component framework.
 ms.author: noazarur
 author: noazarur-microsoft

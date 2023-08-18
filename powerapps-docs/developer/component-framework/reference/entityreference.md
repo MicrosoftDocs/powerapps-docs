@@ -1,5 +1,5 @@
 ---
-title: EntityReference in Microsoft Dataverse| Microsoft Docs
+title: EntityReference (Power Apps component framework API reference)| Microsoft Docs
 description: Learn how to use different methods and properties available for EntityReference in Power Apps component framework.
 ms.author: noazarur
 author: noazarur-microsoft

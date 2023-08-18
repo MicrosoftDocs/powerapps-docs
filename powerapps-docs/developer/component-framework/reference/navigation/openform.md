@@ -1,5 +1,5 @@
 ---
-title: openForm | Microsoft Docs
+title: openForm (Power Apps component framework API reference) | Microsoft Docs
 description: Opens a form or a quick create form.
 ms.author: noazarur
 author: noazarur-microsoft

@@ -1,5 +1,5 @@
 ---
-title: openDatasetItem | Microsoft Docs
+title: openDatasetItem (Power Apps component framework API reference) | Microsoft Docs
 description: Open dataset item for a given EntityReference. It checks if there is a command with command button id Mscrm.OpenRecordItem.
 ms.author: noazarur
 author: noazarur-microsoft

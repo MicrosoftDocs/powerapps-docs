@@ -1,5 +1,5 @@
 ---
-title: getViewId | Microsoft Docs
+title: getViewId (Power Apps component framework API reference) | Microsoft Docs
 description: Returns the Id of view used by dataset parameter.
 ms.author: noazarur
 author: noazarur-microsoft

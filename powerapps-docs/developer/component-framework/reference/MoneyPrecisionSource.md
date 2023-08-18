@@ -1,5 +1,5 @@
 ---
-title: MoneyPrecisionSource in Microsoft Dataverse| Microsoft Docs
+title: MoneyPrecisionSource (Power Apps component framework API reference)| Microsoft Docs
 description: Enumeration for money precision source.
 ms.author: noazarur
 author: noazarur-microsoft

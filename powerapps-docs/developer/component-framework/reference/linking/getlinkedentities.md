@@ -1,5 +1,5 @@
 ---
-title: getLinkedEntities | Microsoft Docs
+title: getLinkedEntities (Power Apps component framework API reference) | Microsoft Docs
 description: Returns all the linked tables information.
 ms.author: noazarur
 author: noazarur-microsoft

@@ -1,5 +1,5 @@
 ---
-title: createRecord | Microsoft Docs
+title: createRecord (Power Apps component framework API reference) | Microsoft Docs
 description: Creates a table record.
 ms.author: noazarur
 author: noazarur-microsoft

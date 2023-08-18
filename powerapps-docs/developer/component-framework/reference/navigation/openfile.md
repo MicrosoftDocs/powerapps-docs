@@ -1,5 +1,5 @@
 ---
-title: openFile | Microsoft Docs
+title: openFile (Power Apps component framework API reference) | Microsoft Docs
 description: Opens a file.
 ms.author: noazarur
 author: noazarur-microsoft

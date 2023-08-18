@@ -1,5 +1,5 @@
 ---
-title: openUrl | Microsoft Docs
+title: openUrl (Power Apps component framework API reference) | Microsoft Docs
 description: Opens a url, including file urls.
 ms.author: noazarur
 author: noazarur-microsoft

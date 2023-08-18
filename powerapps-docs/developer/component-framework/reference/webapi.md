@@ -1,5 +1,5 @@
 ---
-title: WebAPI | Microsoft Docs
+title: WebAPI (Power Apps component framework API reference) | Microsoft Docs
 description: Provides properties and methods to use Web API to create and manage records.
 ms.author: noazarur
 author: noazarur-microsoft

@@ -1,5 +1,5 @@
 ---
-title: retrieveMultipleRecords | Microsoft Docs
+title: retrieveMultipleRecords (Power Apps component framework API reference) | Microsoft Docs
 description: Retrieves a collection of table records.
 ms.author: noazarur
 author: noazarur-microsoft

@@ -1,5 +1,5 @@
 ---
-title: formatUserDateTimeToUTC | Microsoft Docs
+title: formatUserDateTimeToUTC (Power Apps component framework API reference) | Microsoft Docs
 description: Returns a formatted string that represents the UTC datetime value after being formatted.
 ms.author: noazarur
 author: noazarur-microsoft

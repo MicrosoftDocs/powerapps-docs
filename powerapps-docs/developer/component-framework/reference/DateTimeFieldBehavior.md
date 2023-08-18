@@ -1,5 +1,5 @@
 ---
-title: DateTimeFieldBehavior in Microsoft Dataverse| Microsoft Docs
+title: DateTimeFieldBehavior (Power Apps component framework API reference)| Microsoft Docs
 description: The behavior of the datetime object to be formatted.
 ms.author: noazarur
 author: noazarur-microsoft

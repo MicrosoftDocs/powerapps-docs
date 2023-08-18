@@ -1,5 +1,5 @@
 ---
-title: Factory | Microsoft Docs
+title: Factory (Power Apps component framework API reference) | Microsoft Docs
 description: Provides properties and methods to work with Popup services.
 ms.author: noazarur
 author: noazarur-microsoft

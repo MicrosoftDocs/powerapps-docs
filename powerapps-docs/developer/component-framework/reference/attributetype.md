@@ -1,5 +1,5 @@
 ---
-title: AttributeType | Microsoft Docs
+title: AttributeType (Power Apps component framework API reference) | Microsoft Docs
 description: Provides all the information about AttributeType.
 ms.author: noazarur
 author: noazarur-microsoft

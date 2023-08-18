@@ -1,5 +1,5 @@
 ---
-title: SecurityPrivilegesMetadata | Microsoft Docs
+title: SecurityPrivilegesMetadata (Power Apps component framework API reference) | Microsoft Docs
 description: Information about table definitions security privileges.
 ms.author: noazarur
 author: noazarur-microsoft

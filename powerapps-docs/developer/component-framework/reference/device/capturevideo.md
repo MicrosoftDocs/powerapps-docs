@@ -1,5 +1,5 @@
 ---
-title: CaptureVideo | Microsoft Docs
+title: CaptureVideo (Power Apps component framework API reference) | Microsoft Docs
 description: Invokes the device camera to record video.
 ms.author: noazarur
 author: noazarur-microsoft

@@ -1,5 +1,5 @@
 ---
-title: setPageSize | Microsoft Docs
+title: setPageSize (Power Apps component framework API reference) | Microsoft Docs
 description: Sets the number of results to return per page on the next data refresh.
 ms.author: noazarur
 author: noazarur-microsoft

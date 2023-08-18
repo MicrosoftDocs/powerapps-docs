@@ -1,5 +1,5 @@
 ---
-title: getDataSetCapabilities | Microsoft Docs
+title: getDataSetCapabilities (Power Apps component framework API reference) | Microsoft Docs
 description: The capabilities for this dataset.
 ms.author: noazarur
 author: noazarur-microsoft

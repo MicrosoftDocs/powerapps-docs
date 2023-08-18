@@ -1,5 +1,5 @@
 ---
-title: refresh | Microsoft Docs
+title: refresh (Power Apps component framework API reference) | Microsoft Docs
 description: Refreshes the dataset based on filters, sorting, linking, new column.
 ms.author: noazarur
 author: noazarur-microsoft

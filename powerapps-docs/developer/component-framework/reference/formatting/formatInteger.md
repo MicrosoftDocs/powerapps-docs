@@ -1,5 +1,5 @@
 ---
-title: formatInteger | Microsoft Docs
+title: formatInteger (Power Apps component framework API reference) | Microsoft Docs
 description: Returns a formatted string represents a given integer value.
 keywords:
 ms.author: noazarur

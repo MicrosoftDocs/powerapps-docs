@@ -1,5 +1,5 @@
 ---
-title: updatedProperties | Microsoft Docs
+title: updatedProperties (Power Apps component framework API reference) | Microsoft Docs
 description: Provides updatesProperties related methods.
 ms.author: noazarur
 author: noazarur-microsoft

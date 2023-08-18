@@ -1,5 +1,5 @@
 ---
-title: Resources | Microsoft Docs
+title: Resources (Power Apps component framework API reference) | Microsoft Docs
 description: Provides access to the methods to get all the information about the resource files defined in the manifest.
 ms.author: noazarur
 author: noazarur-microsoft

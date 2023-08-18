@@ -1,5 +1,5 @@
 ---
-title: PopupService | Microsoft Docs
+title: PopupService (Power Apps component framework API reference) | Microsoft Docs
 description: Provides properties and methods to create and manage popups.
 ms.author: noazarur
 author: noazarur-microsoft

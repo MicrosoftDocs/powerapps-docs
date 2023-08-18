@@ -1,5 +1,5 @@
 ---
-title: parseDateFromInput | Microsoft Docs
+title: parseDateFromInput (Power Apps component framework API reference) | Microsoft Docs
 description: Returns parsed string as date.
 ms.author: noazarur
 author: noazarur-microsoft

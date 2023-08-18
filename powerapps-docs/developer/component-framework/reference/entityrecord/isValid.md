@@ -1,5 +1,5 @@
 ---
-title: isValid | Microsoft Docs
+title: isValid (Power Apps component framework API reference) | Microsoft Docs
 description: Whether this record is valid.
 ms.author: noazarur
 author: noazarur-microsoft

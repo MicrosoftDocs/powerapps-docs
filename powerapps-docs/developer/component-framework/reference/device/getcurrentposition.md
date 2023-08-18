@@ -1,5 +1,5 @@
 ---
-title: CaptureImageOptions | Microsoft Docs
+title: CaptureImageOptions (Power Apps component framework API reference) | Microsoft Docs
 description: Returns the current location using the device geo location capability.
 ms.author: noazarur
 author: noazarur-microsoft

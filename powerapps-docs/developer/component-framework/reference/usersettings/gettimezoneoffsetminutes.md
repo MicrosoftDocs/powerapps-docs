@@ -1,5 +1,5 @@
 ---
-title: getTimeZoneOffsetMinutes | Microsoft Docs
+title: getTimeZoneOffsetMinutes (Power Apps component framework API reference) | Microsoft Docs
 description: Gets the offset in minutes from UTC for the given date.
 ms.author: noazarur
 author: noazarur-microsoft
