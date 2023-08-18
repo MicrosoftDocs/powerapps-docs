@@ -1,5 +1,5 @@
 ---
-title: getPopupsId | Microsoft Docs
+title: getPopupsId (Power Apps component framework API reference) | Microsoft Docs
 description: Gets the currently set popup Id.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -28,7 +28,7 @@ Model-driven apps
 Type: `string`
 
 
-### Related topics
+### Related articles
 
 [Popup Service](../popupservice.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

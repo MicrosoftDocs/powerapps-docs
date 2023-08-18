@@ -1,5 +1,5 @@
 ---
-title: DataProviderCapabilities | Microsoft Docs
+title: DataProviderCapabilities (Power Apps component framework API reference) | Microsoft Docs
 description: Provides methods to use dataset capabilities.
 ms.author: noazarur
 author: noazarur-microsoft
