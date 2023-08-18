@@ -1,5 +1,5 @@
 ---
-title: GetRecordId | Microsoft Docs
+title: GetRecordId (Power Apps component framework API reference) | Microsoft Docs
 description: Gets the record ID.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -27,7 +27,7 @@ Canvas apps
 
 **Type**: `string`
 
-### Related topics
+### Related articles
 
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

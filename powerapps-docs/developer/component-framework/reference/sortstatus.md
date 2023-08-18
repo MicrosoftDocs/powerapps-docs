@@ -1,5 +1,5 @@
 ---
-title: SortStatus | Microsoft Docs
+title: SortStatus (Power Apps component framework API reference) | Microsoft Docs
 description: Current sort status of a dataset column.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -41,7 +41,7 @@ The `sortDirection` value is an enum with the following possible values.
 | 0     | Ascending  |
 | 1     | Descending |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

@@ -1,5 +1,5 @@
 ---
-title: AttributeType | Microsoft Docs
+title: AttributeType (Power Apps component framework API reference) | Microsoft Docs
 description: Provides all the information about AttributeType.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -26,7 +26,7 @@ Model-driven and canvas apps
 | Boolean             | `boolean`             |
 | Unknown             | `unknown`             |                                                                          |
 | Customer            | `customer`            |                                                                          |
-| Date                | `date`                | Date and DateTime are treated the same. Date is not a real attribute type, it is a formatting option for DateTime. |
+| Date                | `date`                | Date and DateTime are treated the same. Date isn't a real attribute type, it's a formatting option for DateTime. |
 | DateTime            | `datetime`            |                                                                          |
 | Decimal             | `decimal`             |                                                                          |
 | Double              | `double`              |                                                                          |
@@ -55,7 +55,7 @@ Model-driven and canvas apps
 | NavigationProperty  | `navigationproperty`  |                                                                          |
 | RichText            | `RichText`            |                                                                          |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

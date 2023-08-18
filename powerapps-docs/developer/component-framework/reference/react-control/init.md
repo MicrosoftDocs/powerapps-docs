@@ -1,5 +1,5 @@
 ---
-title: "ReactControl.init | MicrosoftDocs"
+title: "ReactControl.init (Power Apps component framework API reference) | MicrosoftDocs"
 description: Used to initialize the component instance for a ReactControl. Components can kick off remote server calls and other initialization actions.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -36,7 +36,7 @@ Model-driven and canvas apps
 |state|`Dictionary`|no|The component state that is saved from *setControlState* in the last session|
 
 > [!NOTE]
-> The ReactControl.init method doesn't have a `container` parameter with a `HTMLDivElement` like the [StandardControl.init](../control/init.md) method does. This is because React controls do not render the DOM directly. Instead, the [ReactControl.updateView](updateview.md) method returns an ReactElement containing a description of the virtual control DOM.
+> The ReactControl.init method doesn't have a `container` parameter with a `HTMLDivElement` like the [StandardControl.init](../control/init.md) method does. There is no container parameter because React controls do not render the DOM directly. Instead, the [ReactControl.updateView](updateview.md) method returns an ReactElement containing a description of the virtual control DOM.
 
 ## Example
 
@@ -51,7 +51,7 @@ public init(
 }
 ```
 
-### Related topics
+### Related articles
 
 [React controls & platform libraries (Preview) ](../../react-controls-platform-libraries.md)<br />
 [ReactControl](../react-control.md)<br/>
