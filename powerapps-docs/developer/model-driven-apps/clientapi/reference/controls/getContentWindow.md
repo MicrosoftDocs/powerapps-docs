@@ -67,7 +67,7 @@ Next, add the following code in the form OnLoad event handler:
 // form_onload is a handler for the form onload event.
 function form_onload(executionContext) {
     var formContext = executionContext.getFormContext();
-    var wrControl = formContext.getControl("new_myWebResource.htm");
+    var wrControl = formContext.getControl("WebResource_CustomName");
     if (wrControl) {
         wrControl.getContentWindow().then(
             function (contentWindow) {
@@ -78,7 +78,7 @@ function form_onload(executionContext) {
 }
 ```
 
-Similar initialization code should be added to a TabStateChange event handler if such initialization is necessary. Any initialization code should be idempotent if it is re-used. For performance reasons, the form may destroy and re-initialize the control during tab navigations.
+Similar initialization code should be added to a [TabStateChange event](../events/tabstatechange.md) handler if such initialization is necessary. Any initialization code should be idempotent if it is re-used. For performance reasons, the form may destroy and re-initialize the control during tab navigations.
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
