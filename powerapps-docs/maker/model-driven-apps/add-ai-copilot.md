@@ -37,6 +37,8 @@ When enabled, Copilot can be accessed through the Copilot icon in the right navi
 - Power Platform administrators enable the AI-powered chat experience for canvas and model-driven apps. From the Power Platform admin center, go  to **Environments** > open the environment you want > **Settings** > **Features**, under **Copilot** set **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps**.
 - Additionally, to enable Copilot for model-driven apps, the environment must have the monthly release channel enabled. From the Power Platform admin center **Settings** > **Behavior** set **Model-driven app release channel** to **Monthly channel**. More information: [Changing release channels for model-driven apps](channel-change.md) and [Manage behavior settings](/power-platform/admin/settings-behavior)
 - Choose the data you want available for answers. Copilot in a model-driven app can answer questions about all the Dataverse tables in the model-driven app, provided they have been configured for Copilot. More information: [Configure tables to use Copilot (preview)](../data-platform/table-settings-for-copilot.md)
+  > [!NOTE]
+  > Questions and answers for enterprise data environments that have [customer managed key](/power-platform/admin/customer-managed-key) or [Customer Lockbox](/power-platform/admin/about-lockbox) won't use your data stored in Dataverse. You might get answers from Copilot, but they won't be based on your Dataverse datatabase.
 
 ## Give feedback
 
