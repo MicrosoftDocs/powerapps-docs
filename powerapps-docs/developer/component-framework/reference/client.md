@@ -58,7 +58,7 @@ private createHTMLTableElement(): HTMLTableElement {
 }
 ```
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

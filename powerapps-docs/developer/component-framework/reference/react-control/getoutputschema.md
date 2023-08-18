@@ -23,7 +23,7 @@ so that the common content will exist in one place.
 [!INCLUDE [getoutputschema-content](../includes/getoutputschema-content.md)]
 
 
-### Related topics
+### Related articles
 
 [ReactControl (Preview)](../react-control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

@@ -37,7 +37,7 @@ Sample control: [Implementing control state API component](../../sample-controls
 
 Type: `boolean`
 
-### Related topics
+### Related articles
 
 [Mode](../mode.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

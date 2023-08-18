@@ -38,7 +38,7 @@ Type: `Promise`
 
 Canvas [experimental](../../../../maker/canvas-apps/working-with-experimental-preview.md#feature-roll-out-stages) apps do not support `Decimal Number` and `Floating Point Number` types.
 
-### Related topics
+### Related articles
 
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

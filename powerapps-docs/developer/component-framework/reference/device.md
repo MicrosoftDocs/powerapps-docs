@@ -50,7 +50,7 @@ Model-driven and canvas apps
 [Device API component](../sample-controls/device-api-control.md)  
 [Image upload component](../sample-controls/image-upload-control.md)
 
-### Related topics
+### Related articles
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
 

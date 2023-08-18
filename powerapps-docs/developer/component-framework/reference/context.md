@@ -15,7 +15,7 @@ contributors:
 
 [!INCLUDE [context-description](includes/context-description.md)]
 
-[FAQ: How can I access the record id or table name?](../faq.yml#how-can-i-access-the-record-id-or-table-name)
+[FAQ: How can I access the record ID or table name?](../faq.yml#how-can-i-access-the-record-id-or-table-name)
 
 ## Available for
 
@@ -96,7 +96,7 @@ An array of strings with values that have changed since the last time it was pas
 
 **Type**: [WebApi](webapi.md)
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

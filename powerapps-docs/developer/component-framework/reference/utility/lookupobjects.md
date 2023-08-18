@@ -34,7 +34,7 @@ Model-driven apps
 Type: Promise<LookupValue[]>
 
 
-### Related topics
+### Related articles
 
 [Utility](../utility.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

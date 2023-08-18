@@ -46,7 +46,7 @@ Any child filters that should be evaluated after evaluating this filter.
 
 **Type**: [FilterExpression](filterexpression.md)[]<br />
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

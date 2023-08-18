@@ -28,7 +28,7 @@ Model-driven apps
 | `2`   | DateOnly: Dates with time stored as midnight without conversion to UTC. |
 | `3`   | TimeZoneIndependent: Dates and time stored without conversion to UTC.    |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

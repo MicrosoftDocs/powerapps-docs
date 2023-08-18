@@ -32,7 +32,7 @@ public destroy(): void
 }
 ```
 
-### Related topics
+### Related articles
 
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

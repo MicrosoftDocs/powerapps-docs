@@ -34,7 +34,7 @@ Model-driven apps, canvas apps, & portals.
 Type: `String`
 
 
-### Related topics
+### Related articles
 
 [Resources](../resources.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

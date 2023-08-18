@@ -27,7 +27,7 @@ Model-driven and canvas apps
 | `1`   | Organization: Precision comes from the PricingDecimalPrecision column in the organization table. |
 | `2`   | Currency: Precision comes from the currency. |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

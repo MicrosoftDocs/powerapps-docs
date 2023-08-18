@@ -27,7 +27,7 @@ Model-driven apps, canvas apps, & portals.
 |[getString](resources/getstring.md)|[!INCLUDE [getstring-description](resources/includes/getstring-description.md)]|Model-driven and canvas apps|
 
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

@@ -25,7 +25,7 @@ Model-driven apps
 | ------------- |----|--------|-----------|
 |key|`String`|Yes||
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

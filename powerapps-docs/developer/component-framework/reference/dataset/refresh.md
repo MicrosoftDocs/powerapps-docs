@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 `context.parameters.dataset.refresh()`
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

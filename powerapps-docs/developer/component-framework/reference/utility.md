@@ -28,7 +28,7 @@ Model-driven apps
 |[lookupObjects](utility/lookupobjects.md)|[!INCLUDE [lookupobjects-description](utility/includes/lookupobjects-description.md)]|
 
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

@@ -33,7 +33,7 @@ Model-driven and canvas apps
 | [save](entityrecord/save.md)|[!INCLUDE [save-description](entityrecord/includes/save-description.md)]| Model-driven and canvas ([experimental](../../../maker/canvas-apps/working-with-experimental-preview.md#feature-roll-out-stages)) apps|
 | [setValue](entityrecord/setValue.md)|[!INCLUDE [setValue-description](entityrecord/includes/setValue-description.md)] | Model-driven and canvas ([experimental](../../../maker/canvas-apps/working-with-experimental-preview.md#feature-roll-out-stages)) apps|
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

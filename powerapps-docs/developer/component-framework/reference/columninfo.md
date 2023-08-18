@@ -24,7 +24,7 @@ Provides column information.
 | security     | [SecurityValues](./securityvalues.md) | Security values for the column. |
 | type         | string                                | Type of the column.             |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

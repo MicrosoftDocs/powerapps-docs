@@ -27,7 +27,7 @@ Model-driven and canvas apps
 | [getFilter](filtering/getfilter.md)     | [!INCLUDE [getfilter-description](filtering/includes/getfilter-description.md)]     |
 | [setFilter](filtering/setfilter.md)     | [!INCLUDE [setfilter-description](filtering/includes/setfilter-description.md)]     |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

@@ -72,7 +72,7 @@ The `type` value is an enum with the following possible values
 
 Should be only one `Root` Popup for each set of Popups.
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

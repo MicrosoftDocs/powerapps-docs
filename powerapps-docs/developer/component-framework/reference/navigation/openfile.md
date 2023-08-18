@@ -38,7 +38,7 @@ Type: `Promise`
 
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [FileObject](../fileobject.md)
 
-### Related topics
+### Related articles
 
 [Navigation](../navigation.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

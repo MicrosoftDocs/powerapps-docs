@@ -28,7 +28,7 @@ Model-driven and canvas apps
 Type: [FilterExpression](../filterexpression.md)
 
 
-### Related topics
+### Related articles
 
 [Filtering](../filtering.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

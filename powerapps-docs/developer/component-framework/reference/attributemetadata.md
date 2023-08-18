@@ -31,7 +31,7 @@ Model-driven and canvas apps
 | RequiredLevel | number                            | Required level of the column.                     |
 | Type          | [AttributeType](attributetype.md) | Column data type.                                 |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

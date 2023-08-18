@@ -27,13 +27,13 @@ Canvas apps
 
 | Parameter Name | Type       | Required | description                                      |
 | -------------- | ---------- | -------- | ------------------------------------------------ |
-| ids            | `string[]` | Yes      | Array of IDs for which to command should be run. |
+| IDs            | `string[]` | Yes      | Array of IDs for which to command should be run. |
 
 ## Return value
 
 Type: [ICommand](../icommand.md)
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

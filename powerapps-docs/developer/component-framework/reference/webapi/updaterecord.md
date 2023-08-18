@@ -78,7 +78,7 @@ Model-driven apps & portals.
 Type: LookupValue[]
 
 
-### Related topics
+### Related articles
 
 [Web API](../webapi.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

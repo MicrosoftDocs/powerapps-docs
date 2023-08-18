@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 Type: [PopupService](../popupservice.md)
 
-### Related topics
+### Related articles
 
 [Factory](../factory.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

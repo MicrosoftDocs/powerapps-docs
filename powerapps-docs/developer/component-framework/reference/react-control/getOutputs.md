@@ -45,7 +45,7 @@ public getOutputs(): IOutputs
 ```
 
 
-### Related topics
+### Related articles
 
 [React controls & platform libraries (Preview) ](../../react-controls-platform-libraries.md)<br />
 [ReactControl](../react-control.md)<br/>

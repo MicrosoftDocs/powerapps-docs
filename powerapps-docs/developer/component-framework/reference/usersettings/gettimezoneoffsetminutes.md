@@ -35,7 +35,7 @@ Type: `Number`
 Description: Time zone offset in minutes.
 
 
-### Related topics
+### Related articles
 
 [User Settings](../usersettings.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

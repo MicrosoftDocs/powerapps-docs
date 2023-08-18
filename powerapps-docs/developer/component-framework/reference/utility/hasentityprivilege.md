@@ -35,7 +35,7 @@ Model-driven apps
 
 **Type**: `boolean`
 
-### Related topics
+### Related articles
 
 [Utility](../utility.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

@@ -33,7 +33,7 @@ Model-driven and canvas apps
 | -------------- | -------- | -------- | ---------------------- |
 | pageNumber     | `Number` | Yes      | Pagesize to be loaded. |
 
-### Related topics
+### Related articles
 
 [Paging](../paging.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

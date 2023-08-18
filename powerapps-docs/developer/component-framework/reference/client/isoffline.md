@@ -28,7 +28,7 @@ Model-driven and canvas apps
 Type: `Boolean`
 Description: **true** if the server is offline; **false** otherwise.
 
-### Related topics
+### Related articles
 
 [Client](../client.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

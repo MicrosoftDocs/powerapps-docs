@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 `loadNextPage()`
 
-### Related topics
+### Related articles
 
 [Paging](../paging.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

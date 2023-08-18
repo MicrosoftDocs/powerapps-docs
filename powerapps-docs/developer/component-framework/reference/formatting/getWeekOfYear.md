@@ -33,7 +33,7 @@ Model-driven and canvas apps
 
 Type: Number
 
-### Related topics
+### Related articles
 
 [Formatting](../formatting.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

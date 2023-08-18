@@ -33,7 +33,7 @@ Canvas apps
 
 **Type**: [ColumnInfo](./../columninfo.md)
 
-### Related topics
+### Related articles
 
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

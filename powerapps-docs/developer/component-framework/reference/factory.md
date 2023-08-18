@@ -27,7 +27,7 @@ Model-driven and canvas apps
 |[requestRender](factory/requestrender.md)|[!INCLUDE [requestrender-description](factory/includes/requestrender-description.md)]|
 
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

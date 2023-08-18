@@ -28,7 +28,7 @@ Model-driven and canvas apps
 |[init](react-control/init.md)|[!INCLUDE [init-description](react-control/includes/init-description.md)]|
 |[updateView](react-control/updateview.md)|[!INCLUDE [updateview-description](react-control/includes/updateview-description.md)]|
 
-### Related topics
+### Related articles
 
 [React controls & platform libraries (Preview) ](../react-controls-platform-libraries.md)<br />
 [Power Apps component framework API reference](../reference/index.md)<br/>

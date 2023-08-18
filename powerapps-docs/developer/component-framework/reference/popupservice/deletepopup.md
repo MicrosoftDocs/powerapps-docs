@@ -30,7 +30,7 @@ Model-driven apps
 |name|`String`|Yes|The name of the popup to remove.|
 
 
-### Related topics
+### Related articles
 
 [Popup Service](../popupservice.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

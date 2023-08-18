@@ -28,7 +28,7 @@ Model-driven apps
 Type: [ILinkEntityExposedExpression](../ilinkentityexposedexpression.md)
 
 
-### Related topics
+### Related articles
 
 [Linking](../linking.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

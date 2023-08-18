@@ -31,7 +31,7 @@ Model-driven apps
 |newProps|[Popup](../popup.md)|No|The updated properties to give to the popup.|
 
 
-### Related topics
+### Related articles
 
 [Popup Service](../popupservice.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

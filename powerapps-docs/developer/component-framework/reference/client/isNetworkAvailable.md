@@ -28,7 +28,7 @@ Model-driven
 Type: `Boolean`
 Description: **true** if the network is available; **false** otherwise.
 
-### Related topics
+### Related articles
 
 [Client](../client.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

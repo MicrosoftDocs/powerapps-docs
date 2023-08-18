@@ -27,7 +27,7 @@ Canvas apps
 
 Type: [EntityRecord](../entityrecord.md)
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

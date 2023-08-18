@@ -45,7 +45,7 @@ public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElem
 Set the value of the field component to the raw value from the configured field.
 
 
-### Related topics
+### Related articles
 
 [React controls & platform libraries (Preview) ](../../react-controls-platform-libraries.md)<br />
 [ReactControl](../react-control.md)<br/>

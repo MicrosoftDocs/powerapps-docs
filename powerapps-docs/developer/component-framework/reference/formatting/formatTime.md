@@ -34,7 +34,7 @@ Model-driven and canvas apps
 
 Type: `string`
 
-### Related topics
+### Related articles
 
 [Formatting](../formatting.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

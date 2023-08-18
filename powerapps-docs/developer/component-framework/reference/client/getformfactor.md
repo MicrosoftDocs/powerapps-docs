@@ -35,7 +35,7 @@ Type: `Number`
 |3|Phone|
 
 
-### Related topics
+### Related articles
 
 [Client](../client.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

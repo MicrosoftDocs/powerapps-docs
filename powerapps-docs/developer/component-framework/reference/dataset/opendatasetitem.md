@@ -29,7 +29,7 @@ Model-driven and canvas apps
 | --------------- | ------------------------------------------ | -------- | ------------------------------ |
 | entityReference | [Entityreference](../entityreference.md) | Yes      | Reference that will be opened. |
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

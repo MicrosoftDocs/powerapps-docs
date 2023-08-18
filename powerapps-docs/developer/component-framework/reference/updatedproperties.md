@@ -56,7 +56,7 @@ public updateView(context: ComponentFramework.Context<IInputs>): void
 }
 ```
 
-### Related topics
+### Related articles
 
 [Dataset loading attribute](../reference/dataset.md#loading)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
