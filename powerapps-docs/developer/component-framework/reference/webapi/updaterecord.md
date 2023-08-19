@@ -1,5 +1,5 @@
 ---
-title: updateRecord | Microsoft Docs
+title: updateRecord (Power Apps component framework API reference) | Microsoft Docs
 description: Updates a table record.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -78,7 +78,7 @@ Model-driven apps & portals.
 Type: LookupValue[]
 
 
-### Related topics
+### Related articles
 
 [Web API](../webapi.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

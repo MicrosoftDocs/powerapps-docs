@@ -1122,6 +1122,7 @@ In addition to the appropriate table permissions, a user must be assigned the **
 |User can receive in-app notifications|<ul><li>Basic: Read privilege on the app notification table.</li><li>Create, Read, Write, and Append privileges on the model-driven app user setting.</li><li>Read and AppendTo privileges on setting definition.</li></ul> |
 |User can send in-app notifications to self |Basic: Create and Read privileges on the app notification table, and Send In-App Notification privilege. |
 |User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on the app notification table based on the receiving user's business unit, and Send In-App Notification privilege. |
+| User can delete in-app notifications | Global: Delete privileges on the app notification table. |
 
 
 ## Notification storage
