@@ -1,5 +1,5 @@
 ---
-title: isDirty | Microsoft Docs
+title: isDirty (Power Apps component framework API reference) | Microsoft Docs
 description: Whether this record is has changed values.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 Type: `boolean`
 
-### Related topics
+### Related articles
 
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
