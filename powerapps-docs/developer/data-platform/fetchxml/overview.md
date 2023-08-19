@@ -69,7 +69,7 @@ You can use the following `OutputFetchRequest` static method, and the methods it
 
 The `OutputFetchRequest` method demonstrates how to use the [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) and the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) to return an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing the requested data.
 
-The `OutputFetchRequest` method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that every [entity](reference/entity.md) or [link-entity](reference/link-entity.md) element `attribute` elements are included, which is a best practice.
+The `OutputFetchRequest` method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that all [entity](reference/entity.md) or [link-entity](reference/link-entity.md) element `attribute` elements are included, which is a best practice.
 
 ```csharp
 /// <summary>
@@ -105,7 +105,6 @@ static void OutputFetchRequest(IOrganizationService service, string fetchXml)
 /// </summary>
 /// <param name="fetchXml">The fetchXml query</param>
 /// <returns></returns>
-/// <exception cref="Exception"></exception>
 static List<string> GetColumns(string fetchXml)
 {
     XDocument fetchDoc = XDocument.Parse(fetchXml);
@@ -306,19 +305,18 @@ When using C#, you can use the following `OutputFetchRequest` static method, and
 
 The `GetRecords` method demonstrates how to compose an [HttpRequestMessage](xref:System.Net.Http.HttpRequestMessage) to use with an authenticated [HttpClient](xref:System.Net.Http.HttpClient) to return a [JsonArray](xref:System.Text.Json.Nodes.JsonArray) containing the requested data.
 
-The `OutputFetchRequest` method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that every [entity](reference/entity.md) or [link-entity](reference/link-entity.md) element `attribute` elements are included, which is a best practice.
+The `OutputFetchRequest` method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that all [entity](reference/entity.md) or [link-entity](reference/link-entity.md) element `attribute` elements are included, which is a best practice.
 
 ```csharp
-
 /// <summary>
 /// Renders the output of a query in a table for a console application
 /// </summary>
 /// <param name="client">The authenticated HttpClient instance to use.</param>
 /// <param name="entitySetName">The entity set name for the table.</param>
 /// <param name="fetchXml">The FetchXml query to use.</param>
-/// <returns></returns>
 private static async Task OutputFetchRequest(HttpClient client, string entitySetName, string fetchXml)
 {
+    // Retrieve the data from Dataverse
     JsonArray records = await GetRecords(client, entitySetName, fetchXml);
 
     // Get column names from the FetchXml
@@ -344,7 +342,6 @@ private static async Task OutputFetchRequest(HttpClient client, string entitySet
 /// <param name="entitySetName">The entity set name for the table.</param>
 /// <param name="fetchXml">The FetchXml query to use.</param>
 /// <returns>JsonArray of records</returns>
-/// <exception cref="Exception"></exception>
 static async Task<JsonArray> GetRecords(HttpClient client, string entitySetName, string fetchXml)
 {
     // Prepare the request
@@ -498,7 +495,7 @@ static List<string> GetRowValues(List<string> columns, JsonObject record)
             }
             else
             {
-                // Use the simple attribute value
+                // Use the simple property value
                 values.Add($"{record[column]}");
             }
         }
