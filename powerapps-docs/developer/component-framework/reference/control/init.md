@@ -1,5 +1,5 @@
 ---
-title: "StandardControl.init | MicrosoftDocs"
+title: "StandardControl.init (Power Apps component framework API reference) | MicrosoftDocs"
 description: Used to initialize the component instance. Components can kick off remote server calls and other initialization actions.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -14,7 +14,7 @@ contributors:
 
 [!INCLUDE[./includes/init-description.md](./includes/init-description.md)]
 
-[trackContainerResize](../mode/trackcontainerresize.md) should be called once preferably in the component `init` method to notify that the component needs the layout information . This indicates the framework to populate `allocatedHeight` and `allocatedWidth` methods.
+[trackContainerResize](../mode/trackcontainerresize.md) should be called once, preferably in the component `init` method to notify that the component needs the layout information. Use this method to tell the framework to populate `allocatedHeight` and `allocatedWidth` methods.
 
 > [!NOTE]
 > tractContainerResize should be called first before the `allocatedHeight` and `allocatedWidth` methods.
@@ -31,7 +31,7 @@ Model-driven apps, canvas apps, & portals.
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|context|[Context](../context.md)|yes|The *Input Properties* containing the parameters, component metadata and interface functions.|
+|context|[Context](../context.md)|yes|The *Input Properties* containing the parameters, component metadata, and interface functions.|
 |notifyOutputChanged|`function`|no|The method to notify the framework that it has new outputs|
 |state|`Dictionary`|no|The component state that is saved from *setControlState* in the last session|
 |container|[HTMLDivElement](https://developer.mozilla.org/docs/Web/API/HTMLDivElement)|no|The div element to render|
@@ -47,7 +47,7 @@ public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: (
 }
 ```
 
-### Related topics
+### Related articles
 
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

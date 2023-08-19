@@ -1,5 +1,5 @@
 ---
-title: UserSettings | Microsoft Docs
+title: UserSettings (Power Apps component framework API reference) | Microsoft Docs
 description: Provides information about the current user settings.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -47,19 +47,19 @@ Number formatting information as retrieved from the server. This property is sup
 
 ### securityRoles
 
-Current user roles. This is supported only in model-driven apps.
+Current user roles. Supported only in model-driven apps.
 
 **Type**: `string[]`
 
 ### userId
 
-The id of the current user. This is supported only in model-driven apps.
+The id of the current user. Supported only in model-driven apps.
 
 **Type**: `string`
 
 ### userName
 
-The username of the current user. This is supported only in model-driven apps.
+The username of the current user. Supported only in model-driven apps.
 
 **Type**: `string`
 
@@ -69,7 +69,7 @@ The username of the current user. This is supported only in model-driven apps.
 | ------|-------------|
 |[getTimeZoneOffsetMinutes](usersettings/gettimezoneoffsetminutes.md)|[!INCLUDE [gettimezoneoffsetminutes-description](usersettings/includes/gettimezoneoffsetminutes-description.md)]|
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

@@ -1,5 +1,5 @@
 ---
-title: NumberFormattingInfo | Microsoft Docs
+title: NumberFormattingInfo (Power Apps component framework API reference) | Microsoft Docs
 description: The interface for the Organization System Settings Number Format info exposed to a code component.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -178,7 +178,7 @@ Example: "+"
 **Type**: `string`
 
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

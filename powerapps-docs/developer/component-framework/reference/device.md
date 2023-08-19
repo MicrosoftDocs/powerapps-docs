@@ -1,5 +1,5 @@
 ---
-title: Device | Microsoft Docs
+title: Device (Power Apps component framework API reference) | Microsoft Docs
 description: Provides methods to use native device capabilities.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -50,7 +50,7 @@ Model-driven and canvas apps
 [Device API component](../sample-controls/device-api-control.md)  
 [Image upload component](../sample-controls/image-upload-control.md)
 
-### Related topics
+### Related articles
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
 
