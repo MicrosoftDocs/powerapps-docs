@@ -95,19 +95,47 @@ To ensure consistent availability and performance for everyone, Dataverse applie
 
 Service protection limit errors are just another kind of transient error that your client should be prepared to handle, like a temporary loss of network connectivity. A resilient client application must respond to the error by waiting and retrying. The only difference is that service protection limits tell you how long you need to wait before retrying.
 
-[Learn how to retry requests using the SDK or Web API](api-limits.md#how-to-re-try)
-[Learn more about Dataverse service protection limits](api-limits.md)  
-[Learn more about transient fault handling](/azure/architecture/best-practices/transient-faults)
+These articles tell you more:
+
+- [How to retry Dataverse requests](api-limits.md#how-to-re-try)
+- [Dataverse service protection limits](api-limits.md)
+- [Azure best practices: Transient fault handling](/azure/architecture/best-practices/transient-faults)
 
 ### Parallel requests
 
-You can see a significant improvement in throughput by sending requests in parallel, but you need to understand how to send them correctly.
+You can see a significant improvement in throughput by sending requests in parallel, but you need to understand how to send them correctly. [Learn more about sending requests in parallel](send-parallel-requests.md).
 
-Not every Dataverse environment has the same number of web server resources allocated to it. Dataverse scales to the need of the environment by adding more web server resources to support it. A trial environment has the minimum number of web servers to support it. A production environment supporting thousands of active users requires more web servers.  When your environment has a lot of web servers, sending requests in parallel can make a dramatic difference in the total throughput your client application can achieve. When appropriate, you can see best results when you configure your client to use all the available web servers by removing the Azure affinity cookie that tries to associate your application to a single web server.
+### Not all environments are the same
 
-Dataverse returns data in a response header that tells you an recommended degree of parallelization (DOP) for your environment. If you send more parallel requests than the response header recommends, performance becomes worse. The client hardware you use to run your application may not have enough CPU cores be able to send this many requests in parallel. You may need to use more clients to get maximum throughput. In this case, you need to split recommended degree of parallelism between the clients. If you have two clients and your recommended DOP is 50, configure each client to use 25.
+Not every Dataverse environment has the same number of web server resources allocated to it. Dataverse scales to the need of the environment by adding more web server resources to support it. A trial environment has the minimum number of web servers to support it. A production environment supporting thousands of active users requires more web servers.  When your environment has a lot of web servers, sending requests in parallel can make a dramatic difference in the total throughput your client application can achieve.
 
-[Learn more about sending requests in parallel](send-parallel-requests.md)
+### Recommended degree of parallelization (DOP)
+
+Dataverse returns data in a response header that tells you a recommended degree of parallelization (DOP) for your environment. Performance worsens if you send more parallel requests than the response header recommends. The client hardware you use to run your application may need more CPU cores to send this many requests in parallel. You may need to use more clients to get maximum throughput.
+
+Depending on your client-side architecture, you may need to split recommended degree of parallelism. Say, you have two clients (ex, scaled-out app service or Azure function), and your recommended DOP is 50; configure each client to use 25. [Learn more about determining the optimum DOP in an environment](send-parallel-requests.md#optimum-degree-of-parallelism-dop).
+
+### Disable Azure affinity
+
+When appropriate, you can see best results when you configure your client to use all the available web servers by removing the Azure affinity cookie that tries to associate your application to a single web server. Disabling Azure affinity is not appropriate for interactive applications that use cached data from the server to optimize the user experience. [Learn how to disable Azure affinity](send-parallel-requests.md#server-affinity).
+
+### Optimize your connection
+
+When using .NET and sending requests in parallel, apply configuration changes like the following so your requests are not limited by default settings:
+
+```csharp
+// Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4 
+ThreadPool.SetMinThreads(100, 100);
+// Change max connections from .NET to a remote service default: 2
+System.Net.ServicePointManager.DefaultConnectionLimit = 65000;
+// Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server 
+System.Net.ServicePointManager.Expect100Continue = false;
+// Can decrease overall transmission overhead but can cause delay in data packet arrival
+System.Net.ServicePointManager.UseNagleAlgorithm = false;
+```
+
+[Learn more about how to optimize your connection](send-parallel-requests.md#optimize-your-connection)
+
 
 ## Recommendation summary
 
