@@ -31,7 +31,7 @@ If data load times are your primary concern, elastic tables provide the best per
 
 ## Business logic
 
-Dataverse provides the capability to add extra business logic when records are created or updated by using *plug-ins*. Plug-ins can be registered to run *synchronously* before or within the transaction of a standard table operation. Elastic tables support plug-ins that can execute before an operation starts because there's no transaction. Any error that occurs in the plug-in code during a synchronous step for a standard table, or before the operation in an elastic table, cancels the operation. A plug-in developer can deliberately throw an exception to cancel the operation to ensure data validation logic is applied.
+Dataverse provides the capability to add extra business logic when records are created or updated by using *plug-ins*. [Plug-ins](plug-ins.md) can be registered to run *synchronously* before or within the transaction of a standard table operation. Elastic tables support plug-ins that can execute before an operation starts because there's no transaction. Any error that occurs in the plug-in code during a synchronous step for a standard table, or before the operation in an elastic table, cancels the operation. A plug-in developer can deliberately throw an exception to cancel the operation to ensure data validation logic is applied.
 
 Any plug-in that is registered to run synchronously increases the time for the operation to complete. To preserve performance:
 
@@ -54,14 +54,16 @@ Dataverse provides [bulk operation APIs](bulk-operations.md) that enable the hig
 
 While these APIs provide the highest throughput, they have the following limitations for standard tables:
 
-- **Bulk operation APIs aren't currently available for all tables.** Any custom table should support them, but not all the core Dataverse tables support them, such as Account or Contact. You can run a query provided in the documentation to determine whether a table can use these APIs.
-- **Bulk operation APIs aren't forgiving of data errors.** You need to make sure that the data you're changing is carefully scrubbed and validated. Any error that occurs within one operation in these APIs causes the entire operation to fail.
+- **Not currently available for all tables.** Any custom table should support them, but not all the core Dataverse tables support them, such as Account or Contact. You can run a query provided in the documentation to determine whether a table can use these APIs.
+- **Not forgiving of data errors.** You need to make sure that the data you're changing is carefully scrubbed and validated. Any error that occurs within one operation in these APIs causes the entire operation to fail.
+- **Not supported to use in plug-ins.** Currently, these API should only be used by external client applications.
+
 
 Bulk operations are available for all elastic tables and elastic tables can return information about individual operations that fail. [Learn more about bulk operations with elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
 
 ### Batch APIs
 
-If you aren't able to use bulk operation APIs, with the SDK for .NET you can [use ExecuteMultiple](org-service/execute-multiple-requests.md), and with Web API you can use [OData $batch](webapi/execute-batch-operations-using-web-api.md).
+If you aren't able to use bulk operation APIs, with the SDK for .NET you can use [ExecuteMultiple](org-service/execute-multiple-requests.md), and with Web API you can use [OData $batch](webapi/execute-batch-operations-using-web-api.md).
 
 Use these APIs to group a set of operations in a single request and achieve greater efficiency primarily due to fewer, larger requests reducing the total payload sent and received over the wire for each operation. A client application doesn't need to wait for an operation to finish before sending the next request.
 
@@ -75,27 +77,13 @@ Each operation within the request is applied sequentially on the server, so ther
 You can optimize the client application you build to perform bulk operations by keeping the following in mind: Dataverse is designed as a data source to support multiple applications with large numbers of concurrent users. To optimize throughput, design your client to use Dataverse's strengths.
 
 Bottlenecks in client-side code are the primary cause of performance issues. Developers frequently fail to fully use the capabilities of the code, which can affect performance. It's crucial to optimize how the client application utilizes the infrastructure's cores or compute, as failure to optimize can significantly affect performance. For example, when using Azure Functions, there are several steps that can be taken to optimize performance, such as implementing autoscaling, using warm-up instances, adjusting CPU usage, utilizing multiple cores, and allowing concurrency.
-
-<!-- TODO: What about this code in our samples to optimize connection?
-
- Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4 
-ThreadPool.SetMinThreads(100, 100);
- Change max connections from .NET to a remote service default: 2
-System.Net.ServicePointManager.DefaultConnectionLimit = 65000;
- Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server 
-System.Net.ServicePointManager.Expect100Continue = false;
- Can decrease overall transmission overhead but can cause delay in data packet arrival
-System.Net.ServicePointManager.UseNagleAlgorithm = false; 
-
--->
-
 ### Service protection limits
 
 To ensure consistent availability and performance for everyone, Dataverse applies some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources. Bulk operation projects always make extraordinary demands, so you need to be prepared to manage the errors that service protection limits return. If you aren't getting some service protection limit errors, you haven't maximized the capability of your application.
 
 Service protection limit errors are just another kind of transient error that your client should be prepared to handle, like a temporary loss of network connectivity. A resilient client application must respond to the error by waiting and retrying. The only difference is that service protection limits tell you how long you need to wait before retrying.
 
-These articles tell you more:
+Read these articles to learn more:
 
 - [How to retry Dataverse requests](api-limits.md#how-to-re-try)
 - [Dataverse service protection limits](api-limits.md)
@@ -111,9 +99,9 @@ Not every Dataverse environment has the same number of web server resources allo
 
 ### Recommended degree of parallelization (DOP)
 
-Dataverse returns data in a response header that tells you a recommended degree of parallelization (DOP) for your environment. Performance worsens if you send more parallel requests than the response header recommends. The client hardware you use to run your application may need more CPU cores to send this many requests in parallel. You may need to use more clients to get maximum throughput.
+Dataverse returns data in a response header that tells you a [recommended degree of parallelization (DOP) for your environment](send-parallel-requests.md#optimum-degree-of-parallelism-dop). Performance worsens if you send more parallel requests than the response header recommends. The client hardware you use to run your application may need more CPU cores to send this many requests in parallel. You may need to use more clients to get maximum throughput. For example, you may use a scaled-out app service or Azure function.
 
-Depending on your client-side architecture, you may need to split recommended degree of parallelism. Say, you have two clients (ex, scaled-out app service or Azure function), and your recommended DOP is 50; configure each client to use 25. [Learn more about determining the optimum DOP in an environment](send-parallel-requests.md#optimum-degree-of-parallelism-dop).
+Depending on your client-side architecture, you may need to split recommended degree of parallelism. For example, when you have two clients, and your recommended DOP is 50; configure each client to use 25.
 
 ### Disable Azure affinity
 
@@ -121,7 +109,7 @@ When appropriate, you can see best results when you configure your client to use
 
 ### Optimize your connection
 
-When using .NET and sending requests in parallel, apply configuration changes like the following so your requests are not limited by default settings:
+When using .NET, you should apply configuration changes like the following to optimize your connection so your requests are not limited by default settings.[Learn more about how to optimize your connection](send-parallel-requests.md#optimize-your-connection)
 
 ```csharp
 // Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4 
@@ -133,10 +121,6 @@ System.Net.ServicePointManager.Expect100Continue = false;
 // Can decrease overall transmission overhead but can cause delay in data packet arrival
 System.Net.ServicePointManager.UseNagleAlgorithm = false;
 ```
-
-[Learn more about how to optimize your connection](send-parallel-requests.md#optimize-your-connection)
-
-
 ## Recommendation summary
 
 Based on the factors previously described, follow these recommendations to optimize throughput for bulk operation projects:
@@ -145,12 +129,16 @@ Based on the factors previously described, follow these recommendations to optim
 - Minimize, disable, or bypass custom business logic on the tables you're using. Configure your client application to bypass custom logic when appropriate.
 - Use Dataverse bulk operation APIs when you can, otherwise use batch APIs.
 - Design your client application to manage transient errors, including those errors returned by service protection limits.
-- Send requests in parallel. Use the response header to guide you to the recommended degree of parallelism. Disable the affinity cookie when appropriate
+- Send requests in parallel. Use the response header to guide you to the recommended degree of parallelism (DOP). Disable the affinity cookie when appropriate.
 - Validate the data to ensure it meets the table column schema. This can helps prevent errors and reduces the number of failed operations.
 
 ### See also
 
+[Elastic tables (Preview)](elastic-tables.md)   
+[Use plug-ins to extend business processes](plug-ins.md)   
+[Bypass synchronous logic](bypass-custom-business-logic.md#bypass-synchronous-logic)   
 [Bulk Operation messages (preview)](bulk-operations.md)   
-[Send parallel requests](send-parallel-requests.md)   
 [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)   
-[Elastic tables (Preview)](elastic-tables.md)
+[Send parallel requests](send-parallel-requests.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
