@@ -1,5 +1,5 @@
 ---
-title: newRecord | Microsoft Docs
+title: newRecord (Power Apps component framework API reference) | Microsoft Docs
 description: Initialize a local record object for control to set the value. The control will need to invoke save() on the newly created record to persist the change.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -27,7 +27,7 @@ Canvas apps
 
 Type: [EntityRecord](../entityrecord.md)
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

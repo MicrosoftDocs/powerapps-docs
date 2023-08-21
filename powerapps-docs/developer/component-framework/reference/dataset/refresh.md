@@ -1,5 +1,5 @@
 ---
-title: refresh | Microsoft Docs
+title: refresh (Power Apps component framework API reference) | Microsoft Docs
 description: Refreshes the dataset based on filters, sorting, linking, new column.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 `context.parameters.dataset.refresh()`
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

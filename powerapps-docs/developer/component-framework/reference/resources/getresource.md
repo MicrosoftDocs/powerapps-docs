@@ -1,5 +1,5 @@
 ---
-title: getResource | Microsoft Docs
+title: getResource (Power Apps component framework API reference) | Microsoft Docs
 description: Provides information about the methods available for getResource.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -49,7 +49,7 @@ Model-driven apps
   }
 ```
 
-### Related topics
+### Related articles
 
 [Resources](../resources.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
