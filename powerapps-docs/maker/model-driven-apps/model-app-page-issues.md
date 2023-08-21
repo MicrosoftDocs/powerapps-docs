@@ -63,7 +63,8 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
    ![Data Loss Prevention error dialog](media/model-app-page-issues/power_apps_unified_app_dlp_error.png "Data Loss Prevention error dialog")
 
-
+* When there are multiple custom pages in an app the consent dialog will ask for data permissions for all of the connectors in all the custom pages even if they have not yet been opened.
+   
 ## See also
 
 [Model-driven app custom page overview](model-app-page-overview.md)
