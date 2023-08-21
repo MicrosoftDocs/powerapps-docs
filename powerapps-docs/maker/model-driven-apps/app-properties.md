@@ -2,17 +2,17 @@
 title: "Manage model-driven app settings in the Power Apps app designer | MicrosoftDocs"
 description: "Learn how to manage the settings for your app"
 keywords: ""
-ms.date: 08/21/2023
+ms.date: 02/08/2023
 ms.custom: 
 ms.topic: how-to
 applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-author: chmoncay 
+author: "Mattp123" 
 ms.assetid: e773e60f-0211-4c4b-a1af-663be4997629
-ms.author: chmoncay
-ms.reviewer: sericks
+ms.author: matp
+ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 caps.latest.revision: 14
