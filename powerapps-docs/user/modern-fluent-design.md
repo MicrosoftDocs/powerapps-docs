@@ -97,7 +97,7 @@ Admins can disable the **Try the new look** across all apps in an org by using t
 
 5. Click “Add” to add it to the solution
 1. Click “Try the new look” from the solution explorer
-1. Update “Setting Environment Value” to NO
+1. Update “Setting Environment Value” to No
 1. Click Save
 1. Publish All Customizations
 
