@@ -83,15 +83,15 @@ Model driven apps modern experience is generally available in Monthly Channel an
 Yes, end users can switch back to the old UI by turning off the **Try the new look** switch.  Makers can also disable the new look by updating the app setting.
 For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](https://review.learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/app-properties#features). 
 
-Admins can disable the **Try the new look** across all orgs by using the solution explorer to set **Try the new look** value to no.
+Admins can disable the **Try the new look** across all apps in an org by using the solution explorer to set **Try the new look** value to no.
 
 1. Create a new solution
-1. Click Add Existing
-1. Click More
-1. Click Setting
+1. Click **Add Existing** > **More** > **Setting**
 1. Search for “Try”
-1. Select “Try the new look”
-1. Click “Add” to add it to the solution
+1. Select “Try the new look” 
+> [!NOTE]
+> There are two settings "Try the new look" and "Try the new look and feel (preview)".
+5. Click “Add” to add it to the solution
 1. Click “Try the new look” from the solution explorer
 1. Update “Setting Environment Value” to NO
 1. Click Save
@@ -108,9 +108,6 @@ Switching themes or enabling dark mode is not yet supported.
 
 ### Is the new look available for custom pages or code components?
 No, but we are actively working on bringing the new look to these areas.
-
-### How can I validate and test the new look?
-Please review the documentation for the details on the new controls being enabled in the preview, and focus on those for validation. Execute your end user scenarios as normal. Note that some field controls and grid capabilities are updated, and the experience might be little different.
 
 ### Do Dynamics 365 applications support the new look?
 Dynamics 365 applications have extended the new look across applications based on model-driven Power Apps.
