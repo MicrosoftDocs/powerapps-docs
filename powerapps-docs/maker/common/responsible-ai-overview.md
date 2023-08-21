@@ -25,6 +25,6 @@ ms.reviewer: mduelae
 - [FAQ for Copilot control in canvas apps](faq-copilot-control.md)
 - [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
 - [FAQ for Copilot in model-driven apps](faqs-copilot-model-driven-app)
-- [Add Copilot to model-driven apps (preview)](../maker/model-driven-apps/add-ai-copilot.md)
+- [Add Copilot to model-driven apps (preview)](../model-driven-apps/add-ai-copilot.md)
 
 
