@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Validate an appointment
 
-This sample shows how to validate an appointment using the [ValidateRequest](/dotnet/api/microsoft.crm.sdk.messages.validaterequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ValidateAppointment).
+This sample shows how to validate an appointment using the [ValidateRequest](/dotnet/api/microsoft.crm.sdk.messages.validaterequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Validate an appointment sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ValidateAppointment)
 
 ## How to run this sample
 
