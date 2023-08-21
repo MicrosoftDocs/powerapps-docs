@@ -83,7 +83,7 @@ Model driven apps modern experience is generally available in Monthly Channel an
 Yes, end users can switch back to the old UI by turning off the **Try the new look** switch.  Makers can also disable the new look by updating the app setting.
 For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](https://review.learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/app-properties#features). 
 
-Admins can disable the **Try the new look** across all orgs by using the solution explorer to set **Try the new look** value to false.
+Admins can disable the **Try the new look** across all orgs by using the solution explorer to set **Try the new look** value to no.
 
 1. Create a new solution
 1. Click Add Existing
