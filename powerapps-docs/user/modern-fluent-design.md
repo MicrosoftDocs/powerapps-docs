@@ -32,7 +32,7 @@ Here's what you can expect in the modern, refreshed experience:
 - A new Power Apps grid in place of the read-only grid in view and standard dashboard pages.
 - End user switch to enable the modern experience.
 
-![Try the new look switch](media/modern-try-toggle.png)
+![Try the new look switch](media/modern-try-toggle-off.png)
 
 ### Command bar
 The "floating" command bar aligns with the Microsoft 365 experience, with consistent spacing, rounded corners, and elevation. Notice how the command bar is in a separate section at the top of the page in the following example.
