@@ -20,7 +20,7 @@ contributors:
 
 # Modern, refreshed look for model-driven apps
 
-Model-driven apps have a modern, refreshed look when the **Try the new look** feature has been [turned on by end users](modern-fluent-design.md#turn-on-the-new-look).  This new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently.
+Model-driven apps have a modern, refreshed look when the **Try the new look** feature has been [turned on by end users](modern-fluent-design.md#turn-on-the-new-look). This new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. This feature is transitioning from preview to generally available, learn more about this process [here](modern-fluent-design.md#preview-to-generally-available-rollout). 
 
 The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future. 
 
@@ -62,7 +62,7 @@ The following example shows a set of fields with the modern, refreshed look.
 ![Fields in a model-driven app that has the modern, refreshed look.](media/modern-fields.png)
 
 ## Turn on the new look
-The modern look is enabled by default. End users can enable the new look for their individual model-driven apps in the app by enabling the **Try the new look** feature when using the app. 
+End users can enable the new look for their model-driven apps in the app by enabling the **Try the new look** switch in the header of their app.
 
 ## Provide feedback on the new look
 After using the modern, refreshed look in your model-driven apps, tell us what you think about it in the [Power Apps community forum](https://go.microsoft.com/fwlink/?linkid=2221574).
@@ -76,18 +76,32 @@ The modern, refreshed look for model-driven apps has some limitations:
 
 ## Frequently asked questions (FAQs)
 
-### Can I enable the new look for all model-driven apps?
-The **Try the new look and feel** feature is available for any model-driven apps that run in the cloud. We recommended that you evaluate the feature in a test environment before using it in a production environment.
+### Preview to generally available rollout
+Model driven apps modern experience is generally available in Monthly Channel and will be generally available in Semi-annual Channel as of 2023 Release Wave 2. Once generally available end users will be presented with a toggle switch to enable the modern experience and they can switch back at anytime.
 
 ### Can I revert to the old UI?
 Yes, end users can switch back to the old UI by turning off the **Try the new look** switch.  Makers can also disable the new look by updating the app setting.
-For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](https://review.learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/app-properties#features).
+For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](https://review.learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/app-properties#features). 
+
+Admins can disable the **Try the new look** across all orgs by using the solution explorer to set **Try the new look** value to false.
+
+1. Create a new solution
+1. Click Add Existing
+1. Click More
+1. Click Setting
+1. Search for “Try”
+1. Select “Try the new look”
+1. Click “Add” to add it to the solution
+1. Click “Try the new look” from the solution explorer
+1. Update “Setting Environment Value” to NO
+1. Click Save
+1. Publish All Customizations
 
 ### Is the new look enabled on additional surfaces, like the Power Apps mobile app and the Outlook web app?
 The new look is not yet supported on these surfaces.
 
 ### Does the app designer preview display the new look?
-Yes, once enabled the app designer preview will show the new look.
+Yes, once enabled, the app designer preview will show the new look.
 
 ### Can I switch to a different theme or enable dark mode?
 Switching themes or enabling dark mode is not yet supported.
