@@ -26,16 +26,15 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability is in process of rolling out, and may not be available in your region yet.
 > - This capability  may be subject to usage limits or capacity throttling.
-
+> - Copilot control isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 
 ## Prerequisites
 
 - Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md).
 
 
-## Enable Copilot control for your app:
+## Enable Copilot control for your app
 
 With your [canvas app open for editing](edit-app.md):
 
@@ -57,17 +56,20 @@ With your [canvas app open for editing](edit-app.md):
 
 ## Choose data
 
-1. When the Copilot control is added, select a data source from the pane. Currently, the Copilot control can only answer questions for smaller datasets.
+1. When the Copilot control is added, select a data source from the pane.
+
+  > [!NOTE]
+  > Currently, the Copilot control can only answer questions for smaller datasets. The only exception to the dataset limit is when Dataverse is selected as the data source. To configure the table and its columns for use in Copilot, see [Configure tables to use Copilot](../data-platform/table-settings-for-copilot.md).
 
    > [!div class="mx-imgBorder"]
    > ![Select a data source.](media/copilot/copilot-3.png)
 
    Or, from the control **Properties** tab, select **Data source (Items)** and choose a Dataverse table for your data source.
    > [!div class="mx-imgBorder"]
-   > ![Select fields or views.](media/copilot/Copilot-choose-data-properties.png)
+   > ![Select fields or views.](media/copilot/copilot-choose-data-properties.png)
    
 
-2. Select the specific **Fields** and/or **View** that the Copilot control will answer questions for.
+3. Select the specific **Fields** and/or **View** that the Copilot control will answer questions for.
 
 
 ## Configure the control (optional)
@@ -83,7 +85,23 @@ In addition to choosing the data source, you can also configure the following pr
 - **Placeholder text**: Replaces the control's default placeholder text in the text input box **Ask a question about the data in this app, or tell me what you're looking for**. We recommend for you to provide a concise message to app users, explaining what types of questions can be addressed by the Copilot control.
 
    > [!div class="mx-imgBorder"]
-   > ![Configure the control.](media/copilot/Updated-Copilot-properties.png)
+   > ![Configure the control.](media/copilot/updated-copilot-properties.png)
+
+
+## Provide feedback
+
+- To improve Copilot control, makers can submit feedback using the **Like** (thumbs up) or **Dislike** (thumbs down) button on the Copilot control properties pane. Once you select a response, enter your feedback and then select **Submit**.
+
+- App users can provide feedback by selecting **Like** (thumbs up) or **Dislike** (thumbs down) button for each response that Copilot provides. Optionally, can also enter additional feedback in the text box and then select **Submit**.
+
+### Disable feedback
+
+Admins can disable the option to provide feedback to Microsoft.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+2. On the [left navigation pane](intro-maker-portal.md#1--left-navigation-pane), select **Tables** > **Organization**.
+3. In the **Organization columns and data** section, select the list of columns and search for **Allow users to provide feedback for App Copilot**.
+4. Set the toggle to **No**.
 
 
 ## See also
