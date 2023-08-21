@@ -65,7 +65,7 @@ The following example shows a set of fields with the modern, refreshed look.
 ![Fields in a model-driven app that has the modern, refreshed look.](media/modern-fields.png)
 
 ## Turn on the new look
-End users can enable the new look for their model-driven apps in the app by enabling the **Try the new look** switch in the header of their app.
+End users can enable the new look for their model-driven apps in the app by enabling the **Try the new look** switch in the header of their app. They can switch back at anytime.
 
 ## Provide feedback on the new look
 After using the modern, refreshed look in your model-driven apps, tell us what you think about it in the [Power Apps community forum](https://go.microsoft.com/fwlink/?linkid=2221574).
