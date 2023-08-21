@@ -27,9 +27,12 @@ The Fluent design system provides consistency, quality, and Microsoft-wide platf
 ## What’s included with the new look
 Here's what you can expect in the modern, refreshed experience:
 
-- Updated styling in forms and view pages, including the use of drop shadows and brighter background colors to create an elevated or "floating" appearance, which helps to visually seperate sections and focuses attention on primary content
-- New Fluent-based controls in forms, business process flows, and dialogs
-- A new Power Apps grid in place of the read-only grid in view pages
+- Updated styling in form, view and dashboard pages, including the use of drop shadows and brighter background colors to create an elevated or "floating" appearance, which helps to visually seperate sections and focuses attention on primary content.
+- New Fluent-based controls in forms, business process flows, and dialogs.
+- A new Power Apps grid in place of the read-only grid in view and standard dashboard pages.
+- End user switch to enable the modern experience.
+
+![Try the new look switch](media/modern-try-toggle.png)
 
 ### Command bar
 The "floating" command bar aligns with the Microsoft 365 experience, with consistent spacing, rounded corners, and elevation. Notice how the command bar is in a separate section at the top of the page in the following example.
@@ -70,8 +73,7 @@ After using the modern, refreshed look in your model-driven apps, tell us what y
 ## Known limitations
 The modern, refreshed look for model-driven apps has some limitations:
 
-- The mobile app, mail app, and embedded Teams mode don't support the modern, refreshed look and aren't part of the preview.
-- The modern, refreshed look is validated for Dynamics 365 applications.
+- The mobile app, mail app, and embedded Teams mode don't support the modern, refreshed look and aren't part of the preview or general availability.
 - With the new look, Power Apps are moving away from the classic theme customizations. This means that the app header and colors for business process flows can't be customized yet.
 
 ## Frequently asked questions (FAQs)
