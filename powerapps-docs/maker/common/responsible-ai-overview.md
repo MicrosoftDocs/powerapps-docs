@@ -24,5 +24,6 @@ ms.reviewer: mduelae
 - [Continue editing your app with Copilot (preview)](../canvas-apps/ai-edit-app.md)
 - [FAQ for Copilot control in canvas apps](faq-copilot-control.md)
 - [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
+- [FAQ for Copilot in model-driven apps](faqs-copilot-model-driven-app)
 
 
