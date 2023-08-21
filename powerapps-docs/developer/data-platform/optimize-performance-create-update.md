@@ -3,7 +3,7 @@ title: Optimize performance for bulk operations
 description: Choose the best approach when building client applications that create or update large numbers records.
 author: apurvghai
 ms.topic: article
-ms.date: 08/17/2023
+ms.date: 08/21/2023
 ms.subservice: dataverse-developer
 ms.author: apurvgh
 ms.reviewer: jdaly
@@ -95,6 +95,7 @@ To ensure consistent availability and performance for everyone, Dataverse applie
 
 Service protection limit errors are just another kind of transient error that your client should be prepared to handle, like a temporary loss of network connectivity. A resilient client application must respond to the error by waiting and retrying. The only difference is that service protection limits tell you how long you need to wait before retrying.
 
+[Learn how to retry requests using the SDK or Web API](api-limits.md#how-to-re-try)
 [Learn more about Dataverse service protection limits](api-limits.md)  
 [Learn more about transient fault handling](/azure/architecture/best-practices/transient-faults)
 
