@@ -65,7 +65,7 @@ The following example shows a set of fields with the modern, refreshed look.
 ![Fields in a model-driven app that has the modern, refreshed look.](media/modern-fields.png)
 
 ## Turn on the new look
-End users can enable the new look for their model-driven apps in the app by enabling the **Try the new look** switch in the header of their app. They can switch back at anytime.
+End users can enable the new look for their model-driven apps in the app by enabling the **Try the new look** switch in the header of their app. They can switch back at [anytime](modern-fluent-design.md#can-i-revert-to-the-old-ui).
 
 ## Provide feedback on the new look
 After using the modern, refreshed look in your model-driven apps, tell us what you think about it in the [Power Apps community forum](https://go.microsoft.com/fwlink/?linkid=2221574).
@@ -73,13 +73,13 @@ After using the modern, refreshed look in your model-driven apps, tell us what y
 ## Known limitations
 The modern, refreshed look for model-driven apps has some limitations:
 
-- The mobile app, mail app, and embedded Teams mode don't support the modern, refreshed look and aren't part of the preview or general availability.
+- The mobile app and mail app don't support the modern, refreshed look and aren't part of the preview or general availability.
 - With the new look, Power Apps are moving away from the classic theme customizations. This means that the app header and colors for business process flows can't be customized yet.
 
 ## Frequently asked questions (FAQs)
 
 ### Preview to generally available rollout
-Model driven apps modern experience is generally available in Monthly Channel and will be generally available in Semi-annual Channel as of 2023 Release Wave 2. Once generally available end users will be presented with a toggle switch to enable the modern experience and they can switch back at anytime.
+Model driven apps modern experience is generally available in Monthly Channel August 2023 and will be generally available in Semi-annual Channel as of 2023 Release Wave 2. Once generally available end users will be presented with a toggle switch to enable the modern experience and they can switch back at anytime.
 
 ### Can I revert to the old UI?
 Yes, end users can switch back to the old UI by turning off the **Try the new look** switch.  Makers can also disable the new look by updating the app setting.
