@@ -1,5 +1,5 @@
 ---
-title: "ReactControl.updateView| MicrosoftDocs"
+title: "ReactControl.updateView (Power Apps component framework API reference)| MicrosoftDocs"
 description: This method will be called for a ReactControl when any value in the property bag has changed. 
 ms.author: noazarur
 author: noazarur-microsoft
@@ -45,7 +45,7 @@ public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElem
 Set the value of the field component to the raw value from the configured field.
 
 
-### Related topics
+### Related articles
 
 [React controls & platform libraries (Preview) ](../../react-controls-platform-libraries.md)<br />
 [ReactControl](../react-control.md)<br/>

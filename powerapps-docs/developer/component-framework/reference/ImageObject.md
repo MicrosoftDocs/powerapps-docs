@@ -1,5 +1,5 @@
 ---
-title: ImageObject | Microsoft Docs
+title: ImageObject (Power Apps component framework API reference) | Microsoft Docs
 description: Provides access to all the properties of an image.
 ms.author: noazarur
 author: noazarur-microsoft

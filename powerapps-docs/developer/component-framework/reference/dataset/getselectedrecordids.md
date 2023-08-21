@@ -1,5 +1,5 @@
 ---
-title: getSelectedRecordIds | Microsoft Docs
+title: getSelectedRecordIds (Power Apps component framework API reference) | Microsoft Docs
 description: Retrieves all the selected record IDs.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 **Type**: `string[]`
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
