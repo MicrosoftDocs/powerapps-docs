@@ -2,17 +2,17 @@
 title: "Manage model-driven app settings in the Power Apps app designer | MicrosoftDocs"
 description: "Learn how to manage the settings for your app"
 keywords: ""
-ms.date: 02/08/2023
+ms.date: 08/21/2023
 ms.custom: 
 ms.topic: how-to
 applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-author: "Mattp123"
+author: chmoncay 
 ms.assetid: e773e60f-0211-4c4b-a1af-663be4997629
-ms.author: matp
-ms.reviewer: 
+ms.author: chmoncay
+ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
 caps.latest.revision: 14
@@ -60,7 +60,7 @@ Here are a few of the features available to app makers:
 - **Mobile commanding improvements**. When enabled, optimizes the command bar for phone and tablet providing easy access to contextual commands to users helping increase productivity and satisfaction. More information: [Mobile commanding improvements](../../mobile/use-custom-model-driven-app-on-mobile.md#mobile-commanding-improvements)
 - **Offline setup from the app designer**. [Enable your app for offline use (preview)](../../mobile/setup-mobile-offline.md#enable-your-app-for-offline-use-preview)
 - **Tablet optimization for command bar**. When in enabled, replaces the native command bar at the bottom of the screen with the web command bar located at the top of the screen on tablets. More information: [Tablet optimization for command bar](../../mobile/use-custom-model-driven-app-on-mobile.md#tablet-optimization-for-command-bar)
-- **Try the new look**. This feature enables the new look for existing and new model-driven apps. Enabled by default this setting will show end users a "Try the new look" switch to enable the new experience. End users can switch back at anytime. More information: [Modern, refreshed look for model-driven apps (preview)](../../user/modern-fluent-design.md)
+- **Try the new look**. This feature enables the new look for new and existing model-driven apps. Enabled by default, this feature shows end users a "Try the new look" switch to enable the new experience. End users can switch back at anytime. More information: [Modern, refreshed look for model-driven apps (preview)](../../user/modern-fluent-design.md)
 
 ## Upcoming
 
@@ -72,7 +72,7 @@ The **Upcoming** tab displays preview features currently available:
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 - **Choose the offline mode to apply to your app**. When enabled, users can continue working in the model-driven app when offline. More information: [Mobile offline overview (preview)](../../mobile/mobile-offline-overview.md)
-- **Try the new look and feel (preview)**. This is a preview feature that enables the new look for existing and new model-driven apps. This setting is disabled by default and will not affect the model-driven app until enabled. This app setting has no effect when 2023 Release Wave 2 is enabled. More information: [Modern, refreshed look for model-driven apps (preview)](../../user/modern-fluent-design.md)
+- **Try the new look and feel (preview)**. This is a preview feature that enables the new look for new and existing model-driven apps. This feature is disabled by default and does not affect a model-driven app until enabled. This app setting has no effect when 2023 Release Wave 2 is enabled. More information: [Modern, refreshed look for model-driven apps (preview)](../../user/modern-fluent-design.md)
 
 ## Known limitations
 
