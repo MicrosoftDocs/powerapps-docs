@@ -101,12 +101,6 @@ Admins can disable the **Try the new look** across all apps in an org by using t
 1. Click Save
 1. Publish All Customizations
 
-### Is the new look enabled on additional surfaces, like the Power Apps mobile app and the Outlook web app?
-The new look is not yet supported on these surfaces.
-
-### Does the app designer preview display the new look?
-Yes, once enabled, the app designer preview will show the new look.
-
 ### Can I switch to a different theme or enable dark mode?
 Switching themes or enabling dark mode is not yet supported.
 
