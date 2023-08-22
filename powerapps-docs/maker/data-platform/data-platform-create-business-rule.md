@@ -163,18 +163,18 @@ Actions or conditions that use [Composite attributes](/previous-versions/dynamic
 ### Is your business rule not firing for a form?
 
 A business rule may not execute because the field referenced in the business rule isn't included with the form. 
-1.   Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). Expand the entity that you want and then select **Forms**. 
-2.   Open the form that you want and then on the form designer ribbon select **Business Rules**. 
-3.   In the form designer, open the business rule. 
-4.   In the business rule designer, select each condition and action to verify all the fields referenced in each condition and action. 
+1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). Expand the entity that you want and then select **Forms**. 
+1. Open the form that you want and then on the form designer ribbon select **Business Rules**. 
+1. In the form designer, open the business rule. 
+1. In the business rule designer, select each condition and action to verify all the fields referenced in each condition and action. 
 
-     > [!div class="mx-imgBorder"] 
-     > ![Field referenced in business rule exists in entity.](media/data-platform-cds-create-business-rule/business-rule-field.png "Field referenced in business rule exists in entity")
+   > [!div class="mx-imgBorder"] 
+   > ![Field referenced in business rule exists in entity.](media/data-platform-cds-create-business-rule/business-rule-field.png "Field referenced in business rule exists in entity")
 
- 5.   Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
+1. Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
 
-     > [!div class="mx-imgBorder"] 
-     > ![Account name field on form.](media/data-platform-cds-create-business-rule/account-name-on-form.png "Account name field on form")
+   > [!div class="mx-imgBorder"] 
+   > ![Account name field on form.](media/data-platform-cds-create-business-rule/account-name-on-form.png "Account name field on form")
 
 ## Frequently asked questions (FAQ)
 
