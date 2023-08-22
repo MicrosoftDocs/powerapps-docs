@@ -1,12 +1,12 @@
 ---
 title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
-author: sericks007
+author: chmoncay
 ms.topic: overview
-ms.date: 08/18/2023
+ms.date: 08/22/2023
 ms.service: powerapps
 ms.subservice: end-user
-ms.author: sericks
+ms.author: chmoncay
 ms.custom: bap-template
 ms.reviewer: sericks
 ms.assetid: 
@@ -14,30 +14,29 @@ search.audienceType:
   - enduser
 contributors:
   - HemantGaur
-  - chmoncay
 
 ---
 
 # Modern, refreshed look for model-driven apps
 
-Model-driven apps have a modern, refreshed look when the **Try the new look** feature has been [turned on by end users](modern-fluent-design.md#turn-on-the-new-look). This new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. This feature is transitioning from preview to generally available, learn more about this process [here](modern-fluent-design.md#preview-to-generally-available-rollout). 
+Model-driven apps have a modern, refreshed look when the **Try the new look** feature has been [turned on by end users](modern-fluent-design.md#turn-on-the-new-look). This new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. This feature is transitioning from preview to general availability. Learn more about this process at [Preview to general availability rollout](modern-fluent-design.md#preview-to-general-availability-rollout). 
 
 The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future. 
 
 ## What’s included with the new look
 Here's what you can expect in the modern, refreshed experience:
 
-- Updated styling in form, view and dashboard pages, including the use of drop shadows and brighter background colors to create an elevated or "floating" appearance, which helps to visually seperate sections and focuses attention on primary content.
+- Updated styling in form, view, and dashboard pages, which includes the use of drop shadows and brighter background colors to create an elevated or _floating_ appearance. The floating appearance helps to visually seperate sections and focuses attention on primary content.
 - New Fluent-based controls in forms, business process flows, and dialogs.
-- A new Power Apps grid in place of the read-only grid in view and standard dashboard pages.
-- End user switch to enable the modern experience.
+- A new Power Apps grid in place of the read-only grid in view and standard, dashboard pages.
+- An end user switch to enable the modern experience.
 
-![Try the new look switch](media/modern-try-toggle-off.png)
+:::image type="content" source="media/modern-try-toggle-off.png" alt-text="The "Try the new look" switch.":::
 
 ### Command bar
-The "floating" command bar aligns with the Microsoft 365 experience, with consistent spacing, rounded corners, and elevation. Notice how the command bar is in a separate section at the top of the page in the following example.
+The _floating_ command bar aligns with the Microsoft 365 experience, with consistent spacing, rounded corners, and elevation. Notice how the command bar is in a separate section at the top of the page in the following example.
 
-![Floating command bar](media/modern-command-bar.png)
+:::image type="content" source="media/modern-command-bar.png" alt-text="Floating command bar":::
 
 ### View pages
 View pages use the new command bar and have updated grid areas that take advantage of the elevation changes to help draw the user’s attention. 
@@ -46,14 +45,14 @@ The biggest change on view pages is the switch from the read-only grid to the [P
 
 The following example shows a view page with the modern, refreshed look.
 
-![A view page with the modern, refreshed look.](media/modern-view-page.png)
+:::image type="content" source="media/modern-view-page.png" alt-text="A view page with the modern, refreshed look.":::
 
 ### Form pages
 Form pages use the new command bar and have refreshed headers, tabs, sections, and business process flows. Quick views, card forms, headers, sitemaps, and timeline controls also feature updating styling.
 
 The following example shows a form page with the modern, refreshed look.
 
-![A formm page with the modern, refreshed look.](media/modern-form-page.png)
+:::image type="content" source="media/modern-form-page.png" alt-text="A formm page with the modern, refreshed look.":::
 
 ### Field controls
 Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls will be modernized using Fluent design in future updates.
@@ -62,7 +61,7 @@ Field sections, which are containers for the fields on a form, have a more strea
 
 The following example shows a set of fields with the modern, refreshed look.
 
-![Fields in a model-driven app that has the modern, refreshed look.](media/modern-fields.png)
+:::image type="content" source="media/modern-fields.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
 
 ## Turn on the new look
 End users can enable the new look for their model-driven apps in the app by enabling the **Try the new look** switch in the header of their app. They can switch back at [anytime](modern-fluent-design.md#can-i-revert-to-the-old-ui).
@@ -78,7 +77,7 @@ The modern, refreshed look for model-driven apps has some limitations:
 
 ## Frequently asked questions (FAQs)
 
-### Preview to generally available rollout
+### Preview to general availability rollout
 Model driven apps modern experience is generally available in Monthly Channel August 2023 and will be generally available in Semi-annual Channel as of 2023 Release Wave 2. Once generally available end users will be presented with a toggle switch to enable the modern experience and they can switch back at anytime.
 
 ### Can I revert to the old UI?
