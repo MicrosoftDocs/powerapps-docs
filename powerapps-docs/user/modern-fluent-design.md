@@ -96,8 +96,8 @@ Admins can disable the **Try the new look** setting across all apps in an organi
 1. Search for **Try**.
 1. Select **Try the new look**. 
 
-  > [!NOTE]
-  > There are two settings: **Try the new look** and **Try the new look and feel (preview)**.
+    > [!NOTE]
+    > There are two settings: **Try the new look** and **Try the new look and feel (preview)**.
 
 1. Select **Add** to add it to the solution.
 1. Select **Try the new look** from the solution explorer.
