@@ -82,7 +82,7 @@ The modern, refreshed look for model-driven apps is generally available in the f
 - Monthly channel in August 2023 
 - Semi-annual Channel as of 2023 Release Wave 2
 
-Once generally available, end users will see the **Try the new look** setting to enable the modern, refreshed experience. Users can switch back to the old user interface (UI) at anytime.
+Once generally available, end users will see the **Try the new look** setting to enable the modern, refreshed experience. Users can switch back to the old user interface (UI) at any time.
 
 ### Can I revert to the old UI?
 Yes, end users can switch back to the old UI by turning off the **Try the new look** switch.  Makers can also disable the new look by updating the app setting.
