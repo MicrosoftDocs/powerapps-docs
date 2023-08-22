@@ -49,8 +49,7 @@ Depends on the type of column.
 
 
 > [!NOTE]
-> Updating a column using **setValue** will not cause the **OnChange** event handlers to run. If you want the **OnChange** event handlers to run you must use [fireOnChange](../attributes/fireOnChange.md) in addition to **setValue**. <br/><br/>
-You cannot set the value of composite columns. More information: [Write scripts for composite columns](../composite-attributes.md).
+> Updating a column using **setValue** will not cause the **OnChange** event handlers to run. If you want the **OnChange** event handlers to run you must use [fireOnChange](../attributes/fireOnChange.md) in addition to **setValue**.
 
 ### Related topic
 [getValue (Client API reference)](getValue.md)
