@@ -12,7 +12,7 @@ ms.reviewer:
 
 # FAQ for generate app descriptions with Copilot
 
-This transparency note describes the AI impact of Power Apps generate app descriptions with Copilot feature. 
+These frequently asked questions (FAQ) describe the AI impact of Power Apps generate app descriptions with Copilot feature. 
 
 ##  What is generate app descriptions with Copilot? 
 
