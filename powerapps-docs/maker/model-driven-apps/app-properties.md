@@ -9,7 +9,7 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-author: "Mattp123" 
+author: "Mattp123"
 ms.assetid: e773e60f-0211-4c4b-a1af-663be4997629
 ms.author: matp
 ms.reviewer: 
