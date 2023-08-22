@@ -24,7 +24,7 @@ View the [PowerApps-TestEngine/samples](https://github.com/microsoft/PowerApps-T
 |---|---|
 | [test](#test) | Defines one test suite, the test cases in the test suite and configuration specific to the test suite |
 | [testSettings](#testsettings) | Defines settings for the test suite that are reused across multiple test cases |
-| [Environment variables](#environment-variables)| Defines variables that could potentially change as the app is ported across different environments |
+| [environmentVariables](#environment-variables)| Defines variables that could potentially change as the app is ported across different environments |
 
 ## test
 
@@ -51,13 +51,13 @@ Used to define one test.
 |---|---|---|
 | `requestURL` | Yes | The request URL that gets mock response. Glob patterns are accepted |
 | `responseDataFile` | Yes | A text file with the mock response content. All text in this file is read as the response |
-| `Method` | No | The request's method (GET, POST, etc.) |
-| `Headers` | No | A list of header fields in the request in the format of [fieldName: fieldValue] |
+| `method` | No | The request's method (GET, POST, etc.) |
+| `headers` | No | A list of header fields in the request in the format of [fieldName: fieldValue] |
 | `requestBodyFile` | No | A text file with the request body. All text in this file is read as the request body |
 
-For optional properties, if no value is specified, the routing applies to all. For example, if `Method` is null, we send back the mock response whatever the method is as long as the other properties all match.
+For optional properties, if no value is specified, the routing applies to all. For example, if `method` is null, we send back the mock response whatever the method is as long as the other properties all match.
 
-For Sharepoint/Dataverse/Connector apps, `requestURL` and `Method` can be the same for all requests. `x-ms-request-method` and `x-ms-request-url` in  headers may need to be configured in that case to identify different requests.
+For Sharepoint/Dataverse/Connector apps, `requestURL` and `method` can be the same for all requests. `x-ms-request-method` and `x-ms-request-url` in  headers may need to be configured in that case to identify different requests.
 
 #### test TestCases
 
