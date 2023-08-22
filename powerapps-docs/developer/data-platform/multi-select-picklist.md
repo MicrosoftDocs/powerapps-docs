@@ -33,7 +33,7 @@ The following examples show how to set choices values for a column named `sample
 
 With the Web API, you set the values by passing a string containing comma separated number values:
 
-**Request**
+**Request:**
 
 ```http
 POST [organization uri]/api/data/v9.0/contacts HTTP/1.1
@@ -50,7 +50,7 @@ OData-Version: 4.0
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -150,7 +150,7 @@ The following examples show using the `ContainValues` and `DoesNotContainValues`
 This example shows the use of the <xref:Microsoft.Dynamics.CRM.ContainValues> query function to return all the contacts who like hiking. Notice how the text of the options is returned as annotations due to the `odata.include-annotations="OData.Community.Display.V1.FormattedValue"` preference applied.
 
 
-**Request**
+**Request:**
 
 ```http
 GET [organization uri]/api/data/v9.0/contacts?$select=fullname,sample_outdooractivities&$filter=Microsoft.Dynamics.CRM.ContainValues(PropertyName='sample_outdooractivities',PropertyValues=%5B'2'%5D) HTTP/1.1
@@ -161,7 +161,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -265,7 +265,7 @@ This example shows the use of the `not-contain-values` operator in the following
 </fetch>
 ```
 
-**Request**
+**Request:**
 
 ```http
 GET [organization uri]/api/data/v9.0/contacts?fetchXml=%253Cfetch%2520distinct%253D'false'%2520no-lock%253D'false'%2520mapping%253D'logical'%253E%253Centity%2520name%253D'contact'%253E%253Cattribute%2520name%253D'fullname'%2520%252F%253E%253Cattribute%2520name%253D'sample_outdooractivities'%2520%252F%253E%253Cfilter%2520type%253D'and'%253E%253Ccondition%2520attribute%253D'sample_outdooractivities'%2520operator%253D'not-contain-values'%253E%253Cvalue%253E2%253C%252Fvalue%253E%253C%252Fcondition%253E%253C%252Ffilter%253E%253C%252Fentity%253E%253C%252Ffetch%253E HTTP/1.1
@@ -276,7 +276,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

@@ -1,6 +1,6 @@
 ---
-title: "Sample: Create and retrieve table relationships  (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to create and retrieve table relationships." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Create and retrieve table relationships"
+description: This sample shows how to create and retrieve table relationships.
 ms.date: 04/03/2022
 author: NHelgren
 ms.author: nhelgren
@@ -13,7 +13,7 @@ contributors:
   - phecke
 ---
 
-# Create and retrieve table relationships
+# Sample: Create and retrieve table relationships
 
 This sample shows how to create and retrieve table relationships. The following methods are used to create and retrieve the relationships:
 
@@ -24,7 +24,8 @@ This sample shows how to create and retrieve table relationships. The following 
 - [CanManyToManyRequest](/dotnet/api/microsoft.xrm.sdk.messages.canmanytomanyrequest)
 - [RetrieveRelationshipRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieverelationshiprequest)
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateRetrieveEntityRelationships).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create and retrieve table relationships sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateRetrieveEntityRelationships)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

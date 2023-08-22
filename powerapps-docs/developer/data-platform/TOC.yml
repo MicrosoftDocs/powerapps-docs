@@ -29,33 +29,35 @@
 - name: Work with data using code
   href: work-with-data.md
   items:
-    - name: Use Web API
+    - name: Use the Web API
       href: ./webapi/overview.md
-    - name: Use Organization Service
+    - name: Use the Organization Service
       href: ./org-service/overview.md
+    - name: Use bulk operation messages
+      href: bulk-operations.md
     - name: Create your own messages
       href: custom-actions.md
       items:
-        - name: Create and use Custom APIs
+        - name: Create and use custom APIs
           href: custom-api.md
           items:
-            - name: Create a Custom API with plug-in registration tool
+            - name: Create a custom API with plug-in registration tool
               href: create-custom-api-prt.md
-            - name: Create a Custom API in Power Apps
+            - name: Create a custom API in Power Apps
               href: create-custom-api-maker-portal.md
-            - name: Create a Custom API with code
+            - name: Create a custom API with code
               href: create-custom-api-with-code.md
-            - name: Create a Custom API with solution files
+            - name: Create a custom API with solution files
               href: create-custom-api-solution.md
             - name: CustomAPI Tables
               href: custom-api-tables.md
-            - name: "Sample: IsSystemAdmin Custom API plug-in"
+            - name: "Sample: IsSystemAdmin custom API plug-in"
               href: org-service/samples/issystemadmin-customapi-sample-plugin.md
-            - Name: "Sample: ExportDataUsingFetchXmlToAnnotation Custom API plug-in"
+            - Name: "Sample: ExportDataUsingFetchXmlToAnnotation custom API plug-in"
               href: org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
-    - name: Use open types with Custom APIs 
+    - name: Use open types with custom APIs 
       href: use-open-types.md
     - name: Background operations (preview)
       href: background-operations.md
@@ -282,7 +284,7 @@
           href: task-fax-phone-call-letter-activity-entities.md
         - name: ActivityParty table
           href: activityparty-entity.md
-        - name: ActivityPointer (activity) table
+        - name: Activity (ActivityPointer) table
           href: activitypointer-activity-entity.md
         - name: Recurring Appointments
           items:
@@ -353,7 +355,7 @@
           href: entity-attribute-metadata-messages.md
         - name: Behavior and format of the date and time column
           href: behavior-format-date-time-attribute.md
-        - name: Calculated and rollup columns
+        - name: Formula, calculated, and rollup columns
           href: calculated-rollup-attributes.md
         - name: Create auto-number columns
           href: create-auto-number-attributes.md
@@ -405,8 +407,8 @@
       href: use-elastic-tables.md
     - name: Query JSON columns
       href: query-json-columns-elastic-tables.md
-    - name: Bulk operations with elastic tables
-      href: bulk-operations-elastic-tables.md                      
+    - name: Elastic tables sample code
+      href: elastic-table-samples.md
 - name: Introduction to solutions
   href: introduction-solutions.md
 - name: Create applications

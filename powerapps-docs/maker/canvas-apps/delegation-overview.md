@@ -29,7 +29,7 @@ Where this becomes complicated, and the reason this article exists, is because n
 **Working with large data sets requires using data sources and formulas that can be delegated.** It's the only way to keep your app performing well and ensure users can access all the information they need. Take heed of delegation warnings that identify places where delegation isn't possible. If you're working with small data sets (fewer than 500 records), you can use any data source and formula because the app can process data locally if the formula can't be delegated. 
 
 > [!NOTE]
-> Delegation warnings were previously flagged in Power Apps as "blue dot" suggestions, but delegation suggestions have since been re-classified as warnings. If the data in your data source exceeds 500 records and a function can't be delegated, Power Apps might not be able to retrieve all of the data, and your app may have wrong results. Delegation warnings help you manage your app so that it has correct results.
+> If the data in your data source exceeds 500 records and a function can't be delegated, Power Apps won't able to retrieve all of the data, and your app may have wrong results.Delegation warnings help you manage your app so that it has correct results.
 
 ## Delegable data sources
 Delegation is supported for certain tabular data sources only. If a data source supports delegation, its [connector documentation](/connectors/) outlines that support. For example, these tabular data sources are the most popular, and they support delegation:
@@ -47,7 +47,7 @@ The next step is to use only those formulas that can be delegated. Included here
 These lists will change over time. We're working to support more functions and operators with delegation.
 
 ### Filter functions
-**[Filter](functions/function-filter-lookup.md)**, **[Search](functions/function-filter-lookup.md)**, and **[LookUp](functions/function-filter-lookup.md)** can be delegated.  
+**[Filter](functions/function-filter-lookup.md)**, **[Search](functions/function-filter-lookup.md)**, **[First](functions/function-first-last.md)** and **[LookUp](functions/function-filter-lookup.md)** can be delegated.  
 
 Within the **Filter** and **LookUp** functions, you can use these with columns of the table to select the appropriate records:
 
@@ -82,14 +82,16 @@ The previous list doesn't include these notable items:
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
 ### Aggregate functions
-**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](#delegable-data-sources) for details.
+**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Counting functions such as **[CountRows](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)** can also be delegated. Only a limited number of data sources support these functions for delegation at this time. For more information see, [Delegation list](#delegable-data-sources).
+
+
 
 > [!NOTE]
 > If an expression is not delegated, it'll only work on the first 500 records (configurable up to 2000, see [Changing the limit](#changing-the-limit)) retrieved from the data source rather than delegating the processing of all data at the data source.
 
-Counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** can't be delegated.
-
 Other aggregate functions such as **[StdevP](functions/function-aggregates.md)** and **[VarP](functions/function-aggregates.md)** can't be delegated.
+
+**[RemoveIf](functions/function-remove-removeif.md)** and **[UpdateIf](functions/function-update-updateif.md)** delegation support is in Experimental and off by default off.
 
 ### Table shaping functions
 
@@ -111,11 +113,10 @@ If you use **AddColumns** in this manner, **LookUp** must make separate calls to
 ## Non-delegable functions
 All other functions don't support delegation, including these notable functions:
 
-* **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
+* **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
 * **[Choices](functions/function-choices.md)**
 * **[Concat](functions/function-concatenate.md)**
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
-* **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](functions/function-update-updateif.md)**
 * **[GroupBy](functions/function-groupby.md)**, **[Ungroup](functions/function-groupby.md)**
 
 ## Non-delegable limits

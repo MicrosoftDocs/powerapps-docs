@@ -42,9 +42,9 @@ If you want to apply a custom navigation property name for a one-to-many relatio
   
 Once you have generated the necessary JSON to define the relationship and the lookup attribute, `POST` the JSON to the `RelationshipDefinitions` entity set. You must include the `@odata.type` property value of `Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata` to clarify the type of relationship you're creating because this same entity set is used to create many-to-many relationships. The uri for the resulting relationship is returned in the response.  
   
- **Request**  
+ **Request:**  
 ```http 
-POST [Organization URI]/api/data/v9.0/RelationshipDefinitions HTTP/1.1  
+POST [Organization URI]/api/data/v9.2/RelationshipDefinitions HTTP/1.1  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -130,11 +130,11 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**  
+ **Response:**  
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/RelationshipDefinitions(d475020f-5d7c-e511-80d2-00155d2a68d2)  
+OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(d475020f-5d7c-e511-80d2-00155d2a68d2)  
 ```  
   
 <a name="bkmk_CreateManyToMany"></a>
@@ -148,10 +148,10 @@ When you create a many-to-many relationship, you must the relationship by using 
   
  Once you have generated the necessary JSON to define the relationship, `POST` the JSON to the `RelationshipDefinitions` entity set. You must include the `@odata.type` property value of `Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata` to clarify the type of relationship you're creating because this same entity set is used to create one-to-many relationships. The URI for the resulting relationship is returned in the response.  
   
- **Request**
+ **Request:**
   
 ```http 
-POST [Organization URI]/api/data/v9.0/RelationshipDefinitions HTTP/1.1  
+POST [Organization URI]/api/data/v9.2/RelationshipDefinitions HTTP/1.1  
 Accept: application/json  
 Content-Type: application/json; charset=utf-8  
 OData-MaxVersion: 4.0  
@@ -206,11 +206,11 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**  
+ **Response:**  
 ```http 
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/RelationshipDefinitions(420245fa-c77c-e511-80d2-00155d2a68d2)    
+OData-EntityId: [Organization URI]/api/data/v9.2/RelationshipDefinitions(420245fa-c77c-e511-80d2-00155d2a68d2)    
 ```
 
 ## Create relationships to support a multi-table lookup
@@ -237,11 +237,11 @@ To delete a relationship using the Web API, use the HTTP DELETE method with the 
   
 ### See also
 
-<!-- TODO:
-[Customize entity relationship metadata](../customize-entity-relationship-metadata.md)<br /> -->
-[Use the Web API with table definitions](use-web-api-metadata.md)<br />
-[Query table definitions using the Web API](query-metadata-web-api.md)<br />
-[Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
-[Model tables and columns using the Web API](create-update-entity-definitions-using-web-api.md)
+[Use the Web API with table definitions](use-web-api-metadata.md)  
+[Query table definitions using the Web API](query-metadata-web-api.md)  
+[Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)  
+[Model tables and columns using the Web API](create-update-entity-definitions-using-web-api.md)  
+[Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
+[Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

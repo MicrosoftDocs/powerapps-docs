@@ -1,6 +1,7 @@
 ---
-title: "Query data using the Web API"
-description: "Learn how to query Microsoft Dataverse table data using the Web API and the options that can be applied in these queries."
+title: Query data using the Web API
+description: Learn how to use the Web API to query Microsoft Dataverse tables and the query options you can apply.
+ms.topic: how-to
 ms.date: 04/13/2023
 author: divkamath
 ms.author: dikamath
@@ -9,29 +10,27 @@ search.audienceType:
   - developer
 contributors: 
   - JimDaly
+ms.custom: bap-template
 ---
 # Query data using the Web API
 
-When you create a query, you need to make the following decisions:
+When you use the Web API to create a query against a Dataverse table, you need to make the following decisions:
 
 |Decision|Description|
 |---------|---------|
-|[Select Columns](#select-columns)|Which columns of data to return|
-|[Join Tables](#join-tables)|Which related tables to include in the results|
+|[Select columns](#select-columns)|Which columns of data to return|
+|[Join tables](#join-tables)|Which related tables to include in the results|
 |[Order rows](#order-rows)|What order to return the results|
 |[Filter rows](#filter-rows)|Which rows of data to return|
 |[Page results](#page-results)|How many rows of data to return|
 |[Aggregate data](#aggregate-data)|How to group and aggregate the data returned|
 |[Count number of rows](#count-number-of-rows)|How to count the number of rows|
 
-This article provides the information you need to make these decisions when constructing a query to retrieve data using the Dataverse Web API.
+This article is about querying data found in tables. You can also use Web API to query data about *table definitions*, or *entity metadata*. The structure of the data is different, so many of the capabilities described here do not apply. More information: [Query table definitions using the Web API](query-metadata-web-api.md) and [Query schema definitions](../query-schema-definitions.md)
 
-> [!NOTE]
-> This article is about querying data found in tables. You can also use Web API to query data about *table definitions*, or entities. The structure of the data is different, so many of the capabilities described here do not apply. More information: [Query table definitions using the Web API](query-metadata-web-api.md) and [Query schema definitions](../query-schema-definitions.md)
+## Entity collections
 
-## Entity Collections
-
-Every query begins with a collection of entities. Entity collections can be either:
+Every query begins with a collection of entities. Entity collections can be:
 
 - [EntitySet resources](#entityset-resources): One of the Web API EntitySet collections.
 - [Filtered collections](#filtered-collections): A set of entities returned by a [collection-valued navigation property](web-api-navigation-properties.md#collection-valued-navigation-properties) for a specific record.
@@ -39,9 +38,9 @@ Every query begins with a collection of entities. Entity collections can be eith
 
 ### EntitySet resources
 
-To find all the EntitySet resources available in your environment, send a `GET` request to the Web API [Service document](web-api-service-documents.md#service-document):
+To find all the EntitySet resources available in your environment, send a `GET` request to the Web API [service document](web-api-service-documents.md#service-document):
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/
@@ -50,7 +49,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -81,9 +80,9 @@ OData-Version: 4.0
 ```
 
 > [!TIP]
-> These values are usually plural name of the table. But they can be different. Use this query to confirm you are using the correct EntitySet resource name.
+> These values are usually the plural name of the table, but they can be different. Use this query to confirm you're using the correct EntitySet resource name.
 
-If you want to retrieve data from the [account EntityType](xref:Microsoft.Dynamics.CRM.account), you start with the `accounts` EntitySet resource.
+To retrieve data from the [account EntityType](xref:Microsoft.Dynamics.CRM.account), you start with the `accounts` EntitySet resource.
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -93,40 +92,40 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name
 
 You can query any collection of entities represented by a collection-valued navigation property of a specified record.
 
-If you want to retrieve data from the [account EntityType](xref:Microsoft.Dynamics.CRM.account), where a specific user is the [OwningUser](../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
+If you want to retrieve data from the [account EntityType](xref:Microsoft.Dynamics.CRM.account), where a specific user is the [OwningUser](../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from the specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
 
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(<systemuserid value>)/user_accounts?$select=name
 ```
 
-To locate the name of the collection-valued navigation property
+To locate the name of the collection-valued navigation property:
 
 - For any Dataverse tables and relationships, you can check the <xref:Microsoft.Dynamics.CRM.EntityTypeIndex?displayProperty=fullName>
-- For any custom tables or relationships, look for the [Collection-valued navigation properties](web-api-navigation-properties.md#collection-valued-navigation-properties) within the [$metadata service document](web-api-service-documents.md#csdl-metadata-document)
+- For any custom tables or relationships, look for the [collection-valued navigation properties](web-api-navigation-properties.md#collection-valued-navigation-properties) within the [$metadata service document](web-api-service-documents.md#csdl-metadata-document)
 
 
 ## OData query options
 
-Dataverse Web API supports the following OData query options:
+The following table describes the OData query options the Dataverse Web API supports.
 
 
 |Option|Use to|More information|
 |---------|---------|---------|
-|`$select`|Request a specific set of properties for each entity or complex type.|[Select Columns](#select-columns)|
-|`$expand`|Specify the related resources to be included in line with retrieved resources. |[Join Tables](#join-tables)|
+|`$select`|Request a specific set of properties for each entity or complex type.|[Select columns](#select-columns)|
+|`$expand`|Specify the related resources to be included in line with retrieved resources. |[Join tables](#join-tables)|
 |`$filter `|Filter a collection of resources. |[Filter rows](#filter-rows)|
 |`$orderby`|Request resources in a particular order. |[Order rows](#order-rows)|
 |`$apply`|Aggregate and group your data. |[Aggregate data](#aggregate-data)|
-|`$top`|Specify the number of items in the queried collection to be included in the result. Don't use `$top` when you retrieving pages of data. |[Use $top query option](#use-top-query-option)|
+|`$top`|Specify the number of items in the queried collection to be included in the result. Don't use `$top` when you retrieve pages of data. |[Use the $top query option](#use-the-top-query-option)|
 |`$count`|Request a count of the matching resources included with the resources in the response. |[Count number of rows](#count-number-of-rows)|
 
-You can apply multiple options to a query. All query options must be separated from the resource path using '`?`'. After the first option, separate each option with an ampersand: '`&`'. The names of all options are case sensitive.
+You can apply multiple options to a query. Separate query options from the resource path with a question mark (?). Separate each option after the first with an ampersand (&). Option names are case-sensitive.
 
-Dataverse Web API doesn't support these [OData query options](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752356): `$skip`,`$search`,`$format`.
+The Dataverse Web API doesn't support these [OData query options](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752356): `$skip`,`$search`,`$format`.
 
 ### Use parameter aliases with query options
 
-You can use parameter aliases for `$filter` and `$orderby` query options, but not inside the `$expand` option. Parameter aliases allow for the same value to be used multiple times in a request. If the alias isn't assigned a value, it's assumed to be null.
+You can use parameter aliases for `$filter` and `$orderby` query options, but not inside the `$expand` option. Parameter aliases allow you to use the same value multiple times in a request. If the alias isn't assigned a value, it's assumed to be null.
 
 Without parameter aliases:
 
@@ -147,16 +146,16 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
 You can also use parameter aliases when using functions. More information: [Use Web API functions](use-web-api-functions.md)
 
 
-## Select Columns
+## Select columns
 
 > [!IMPORTANT]
-> When you query data, it is important to limit the amount of data returned to optimize performance. Only select the columns with data that you need.
+> When you query data, it's important to limit the amount of data returned to optimize performance. Only select the columns with data that you need.
 
-Use the `$select` [query option](#odata-query-options) to choose which columns to return with your query. If you don't include a `$select` query option, all properties are returned. In OData, every column is represented as a *property*. More information: [Web API Properties](web-api-properties.md)
+Use the `$select` [query option](#odata-query-options) to choose which columns to return with your query. In OData, every column is represented as a [*property*](web-api-properties.md). If you don't include a `$select` query option, all properties are returned.
 
-The following example requests the `name` and `revenue` properties from one row of the `accounts` EntitySet resource.
+The following example requests the `name` and `revenue` properties from one row of the `accounts` EntitySet resource:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=1
@@ -165,7 +164,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -194,7 +193,7 @@ Other property values may also be included. In this case, the `_transactioncurre
 
 All the available properties for an entity are found in the [$metadata service document](web-api-service-documents.md#csdl-metadata-document). More information: [Web API Properties](web-api-properties.md)
 
-For the entity types included with Dataverse, see <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
+The entity types included with Dataverse are described in the <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
 
 > [!TIP]
 > The easiest way to quickly discover which properties are available is to send a request using the `$top` query option with a value of `1` without using `$select`.
@@ -205,7 +204,7 @@ Formatted values are string values generated on the server that you can use in y
 
 - The localized labels for choice, choices, yes/no, status, and status reason columns
 - The primary name value for lookup and owner properties
-- Currency values with currency symbols.
+- Currency values with currency symbols
 - Formatted date values in the user's time zone
 
 To include formatted values in your results, use this request header:
@@ -222,11 +221,11 @@ The formatted value is returned with the record with an annotation that follows 
 <property name>@OData.Community.Display.V1.FormattedValue
 ```
 
-as shown in the following example. 
+For example:
 
 
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue,_primarycontactid_value,customertypecode,modifiedon
@@ -237,9 +236,9 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-The response returns the values and formatted values for the requested properties:
+The following table describes the values and formatted values that are returned for the requested properties.
 
-|Property  |Value|Formatted value|
+|Property|Value|Formatted value|
 |---------|---------|---------|
 |`name`|`Litware, Inc. (sample)`|None|
 |`revenue`|`20000.0000`|`$20,000.00`|
@@ -249,7 +248,7 @@ The response returns the values and formatted values for the requested propertie
 |`_transactioncurrencyid_value`|`228f42f8-e646-e111-8eb7-78e7d162ced1`|`US Dollar`|
 |`accountid`|`78914942-34cb-ed11-b596-0022481d68cd`|None|
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -281,11 +280,11 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 ### Lookup property data
 
-When a [lookup property](web-api-properties.md#lookup-properties) represents a multi-table (polymorphic) relationship, you need to request specific annotations to determine which table contains the related data.
+When a [lookup property](web-api-properties.md#lookup-properties) represents a multi-table, or polymorphic, relationship, you need to request specific annotations to determine which table contains the related data.
 
-For example, many tables have records that users or teams may own. This data is stored in a lookup column named `ownerid`. This column is a single-valued navigation property in OData. You could use `$expand` to create a join to get this value, but you can't use `$select`. However, you can use the corresponding `_ownerid_value` lookup property with `$select`.
+For example, many tables have records that users or teams may own. Ownership data is stored in a lookup column named `ownerid`. This column is a single-valued navigation property in OData. You could use `$expand` to create a join to get this value, but you can't use `$select`. However, you can use the corresponding `_ownerid_value` lookup property with `$select`.
 
-When you include the `_ownerid_value` lookup property with your `$select`, it returns a Guid value. This value doesn't tell you whether the owner of the record is a user or a team. You need to request annotations to get this data.
+When you include the `_ownerid_value` lookup property with your `$select`, it returns a GUID value. This value doesn't tell you whether the owner of the record is a user or a team. You need to request annotations to get this data.
 
 To include these annotations in your results, use this request header:
 
@@ -297,7 +296,7 @@ Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationpr
 > Or you can use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](compose-http-requests-handle-errors.md#request-annotations)
 
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,_ownerid_value&$top=2
@@ -307,9 +306,9 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"
 ```
 
-The following response returns two different account records. A `team` owns the first one, a `systemuser` owns the second one. The `_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname` annotation provides this information:
+The following response returns two different account records. A `team` owns the first one, and a `systemuser` owns the second one. The `_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname` annotation provides this information.
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -344,29 +343,28 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.associated
 - `<lookup property name>@Microsoft.Dynamics.CRM.associatednavigationproperty` is the name of the corresponding single-valued navigation property. You can use `$expand` using this value in another request to get more data from the related record.
 
 
-## Join Tables
+## Join tables
 
 
-Use the `$expand` [query option](#odata-query-options) with navigation properties to control what data is returned from related table records.
+To control what data is returned from related table records, use the `$expand` [query option](#odata-query-options) with navigation properties.
 
-> [!NOTE]
->  - You are limited to no more than 15 `$expand` options in a query. This is to protect performance. Each `$expand` options creates a join that can impact performance. 
-> - Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. More information: [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details.
+- You can include up to 15 `$expand` options in a query. Each `$expand` option creates a join that can affect performance.
+- Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. More information: [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details.
 
-You can apply the following [query options](#odata-query-options) within certain `$expand` options:
+The following table describes the [query options](#odata-query-options) you can apply in certain `$expand` options:
 
 
 |Option|Description|
 |---------|---------|
-|`$select`|Select which properties are returned. More information: [Select Columns](#select-columns)|
+|`$select`|Select which properties are returned. More information: [Select columns](#select-columns)|
 |`$filter`|For collection-valued navigation properties, limit the records returned. More information: [Filter rows](#filter-rows)|
 |`$orderby`|For collection-valued navigation properties, control the order of records returned. Not supported with nested `$expand`. More information: [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
 |`$top`|For collection-valued navigation properties, limit the number of records returned. Not supported with nested `$expand`. More information: [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
-|`$expand`|Expand navigation properties in the related entity set. Using `$expand` within an `$expand` is called a *nested `$expand`*. More information: [Nested expand of single-valued navigation properties](#nested-expand-of-single-valued-navigation-properties) & [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
+|`$expand`|Expand navigation properties in the related entity set. Using `$expand` in an `$expand` is called a *nested `$expand`*. More information: [Nested expand of single-valued navigation properties](#nested-expand-of-single-valued-navigation-properties) & [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
 
 These options are a subset of the query options described in the **11.2.4.2.1 Expand Options** section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html#_Toc406398299). The options `$skip`, `$count`, `$search`, and `$levels` aren't supported for the Dataverse Web API.
 
-Use these options with `$expand` by adding them in parentheses after the name of the navigation property. Separate each option with a semicolon. 
+Use these options with `$expand` by adding them in parentheses after the name of the navigation property. Separate each option with a semicolon (;).
 
 For example, the following query:
 
@@ -383,9 +381,9 @@ For example, the following query:
 
 ### Limit columns with $select
 
-As with any query, always limit the columns returned using `$select` when you use `$expand`. For example, the following request returns the `contact.fullname` and `task.subject` values in the expanded results from the `account` entity type.
+As with any query, always limit the columns returned using `$select` when you use `$expand`. For example, the following request returns the `contact.fullname` and `task.subject` values in the expanded results from the `account` entity type:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -397,7 +395,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -440,14 +438,13 @@ It's important to remember there are two types of navigation properties. More in
 
 Expanding a collection-valued navigation property can make the size of the response large in ways it's difficult to anticipate. It's important that you include limits to control how much data is returned. You can limit the number of records by using paging. More information: [Page results](#page-results)
 
-> [!NOTE]
-> There is a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. More information: [Expand collection-valued navigation properties](#expand-collection-valued-navigation-properties)
+There is a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. More information: [Expand collection-valued navigation properties](#expand-collection-valued-navigation-properties)
 
 ### Expand single-valued navigation properties
 
 The following example demonstrates how to retrieve contact records including the primary contact and the user who created the records.
   
-**Request**  
+**Request:**  
 
 ```http 
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -459,7 +456,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```  
   
-**Response** 
+**Response:** 
  
 ```http 
 HTTP/1.1 200 OK  
@@ -503,16 +500,15 @@ OData-Version: 4.0
 }
 ```  
 
-> [!NOTE]
-> The `createdby` single-valued navigation property returns an instance of the [systemuser EntityType](xref:Microsoft.Dynamics.CRM.systemuser). Both `systemuserid` and `ownerid` properties are returned. This is because `systemuser` inherits from [principal EntityType](xref:Microsoft.Dynamics.CRM.principal) and shares the `ownerid` primary key with [team EntityType](xref:Microsoft.Dynamics.CRM.team) through this inheritance.
-> 
-> However, the [User (SystemUser) table](../reference/entities/systemuser.md) has the primary key of [SystemUserId](../reference/entities/systemuser.md#BKMK_SystemUserId). Both `systemuserid` and `ownerid` properties have the same value. More information: [EntityType inheritance](web-api-entitytypes.md#entitytype-inheritance)
+The `createdby` single-valued navigation property returns an instance of the [systemuser EntityType](xref:Microsoft.Dynamics.CRM.systemuser). Both `systemuserid` and `ownerid` properties are returned. This is because `systemuser` inherits from [principal EntityType](xref:Microsoft.Dynamics.CRM.principal) and shares the `ownerid` primary key with [team EntityType](xref:Microsoft.Dynamics.CRM.team) through this inheritance.
+
+However, the [User (SystemUser) table](../reference/entities/systemuser.md) has the primary key of [SystemUserId](../reference/entities/systemuser.md#BKMK_SystemUserId). Both `systemuserid` and `ownerid` properties have the same value. More information: [EntityType inheritance](web-api-entitytypes.md#entitytype-inheritance)
 
 #### Return references
 
-Instead of returning data, you can also return references (links) to the related records by expanding the single-valued navigation property with the `/$ref` option. The following example returns JSON objects with an `@odata.id` property that has a URL for each primary contact.
+Instead of returning data, you can also return references, or links, to the related records by expanding the single-valued navigation property with the `/$ref` option. The following example returns JSON objects with an `@odata.id` property that has a URL for each primary contact.
   
- **Request**
+ **Request:**
 
 ```http  
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -522,7 +518,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```  
   
- **Response**
+ **Response:**
  
 ```http 
 HTTP/1.1 200 OK  
@@ -569,11 +565,11 @@ You can only use the `/$ref` option with single-valued navigation properties. If
 
 ### Nested expand of single-valued navigation properties
 
-You can expand single-valued navigation properties to multiple levels by nesting an `$expand` option within another `$expand` option.
+You can expand single-valued navigation properties to multiple levels by nesting an `$expand` option in another `$expand` option.
 
-The following query returns `task` records and expands the related `contact`, the `account` related to the `contact`, and finally to the `systemuser` who created the  `account` record.
+The following query returns `task` records and expands the related `contact`, the `account` related to the `contact`, and the `systemuser` who created the`account` record:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/tasks?$select=subject
@@ -585,7 +581,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -648,16 +644,15 @@ There are some important differences in the response that depend on whether you 
 
 #### Single $expand on collection-valued navigation properties
 
-If you use only single-level `$expand`, there's no paging applied to the expanded rows. If you include the `Prefer: odata.maxpagesize` request header, paging is only applied to the EntitySet resource of the query.
+If you use only single-level `$expand`, no paging is applied applied to the expanded rows. If you include the `Prefer: odata.maxpagesize` request header, paging is only applied to the EntitySet resource of the query.
 
 Each expanded collection-valued navigation property returns a `<property>@odata.nextLink` URL that includes no paging information. It's a URL that represents the [filtered collection](#filtered-collections) for the relationship with your query options appended. You can use that URL to send a separate `GET` request and it returns the same rows that were returned in your original request. You can apply paging to that request.
 
-> [!NOTE]
-> Because no paging is applied to the expanded records, up to 5000 related records can be returned for each expanded collection-valued navigation property. Depending on your data and the query, this could be a lot of data. This could impact performance and possibly cause your request to time out. Be cautious about the queries you compose. You can use `$top`, `$filter`, and `$orderby` options to control the total number of records returned.
+Because no paging is applied to the expanded records, up to 5,000 related records can be returned for each expanded collection-valued navigation property. Depending on your data and the query, it could be a lot of data. Returning that much data could affect performance and possibly cause your request to time out. Be cautious about the queries you compose. You can use `$top`, `$filter`, and `$orderby` options to control the total number of records returned.
 
-The following example includes single expand of the `Account_Tasks` and `contact_customer_accounts` while retrieving account records. The `Prefer: odata.maxpagesize=1` request header ensures that only one account record is returned in with the first page.
+The following example includes a single expand of the `Account_Tasks` and `contact_customer_accounts` while retrieving account records. The `Prefer: odata.maxpagesize=1` request header ensures that only one account record is returned in the first page.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,accountid
@@ -668,7 +663,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -719,10 +714,7 @@ OData-Version: 4.0
 }
 ```
 
-> [!NOTE]
-> Compare this response to the following example that includes a nested `$expand`.
-> 
-> You need to scroll the example response horizontally to see that only the `@odata.nextLink` URL for the account result contains paging information.
+Compare this response with the following example, which includes a nested `$expand`. Scroll the example response horizontally to see that only the `@odata.nextLink` URL for the account result contains paging information.
 
 
 #### Nested $expand on collection-valued navigation properties
@@ -742,9 +734,9 @@ You can't use `$top` or `$orderby` options to limit the total number of records 
 }
 ```
 
-This example is based on the previous example and uses the same data. The only difference in the URL is the addition of this nested `$expand` on a single-valued navigation property to return the owning user of the contact: `;$expand=owninguser($select=fullname)`.
+The following example is based on the previous example and uses the same data. The only difference is the addition in the URL of this nested `$expand` on a single-valued navigation property to return the owning user of the contact: `;$expand=owninguser($select=fullname)`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,accountid
@@ -756,7 +748,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -796,16 +788,11 @@ OData-Version: 4.0
 }
 ```
 
-> [!NOTE]
-> Compare this response to the previous example that doesn't use nested `$expand`.
-> 
-> In this response, the `Prefer: odata.maxpagesize=1` request header is applied to the `task` records returned with `Account_Tasks`. Only one task is returned instead of three. The `Account_Tasks@odata.nextLink` URL will return the next two tasks.
->
-> You need to scroll the example response horizontally to see that `Account_Tasks@odata.nextLink`, `contact_customer_accounts@odata.nextLink`, and  `@odata.nextLink` URLs contain paging information.
+Compare this response with the previous example, which doesn't use a nested `$expand`. In this response, the `Prefer: odata.maxpagesize=1` request header is applied to the `task` records returned with `Account_Tasks`. Only one task is returned instead of three. The `Account_Tasks@odata.nextLink` URL returns the next two tasks. Scroll the example response horizontally to see that `Account_Tasks@odata.nextLink`, `contact_customer_accounts@odata.nextLink`, and`@odata.nextLink` URLs contain paging information.
 
 ## Order rows
 
-Use the `$orderby` [query option](#odata-query-options) to specify the order in which items are returned. Use the `asc` or `desc` suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn't applied. The following example shows retrieving the `name` and `revenue` properties of accounts ordered by ascending `revenue` and by descending `name`.
+Use the `$orderby` [query option](#odata-query-options) to specify the order in which items are returned. Use the `asc` or `desc` suffix to specify ascending or descending order, respectively. The default is ascending. The following example retrieves the `name` and `revenue` properties of accounts, ordered by ascending `revenue` and descending `name`:
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
@@ -819,33 +806,27 @@ Use the `$filter` [query option](#odata-query-options) to filter a collection of
 
 Dataverse evaluates each resource in the collection using the expression set for `$filter`. Only records where the expression evaluates to `true` are returned in the response. Records aren't returned if the expression evaluates to `false` or `null`, or if the user doesn't have read access to the record.
 
-To compose `$filter` expressions, you can apply the following operators and functions:
+The following table describes the operators and functions you can use in `$filter` expressions.
 
 
 | |Description| More information|
 |---------|---------|---------|
 |**Comparison operators**|Use the `eq`,`ne`,`gt`,`ge`,`lt`, and `le` operators to compare a property and a value.|[ Comparison operators](#comparison-operators)|
 |**Logical operators**|Use `and`, `or`, and `not` to create more complex expressions. |[Logical operators](#logical-operators)|
-|**Grouping operators**|Use parentheses: `(` & `)`, to specify the precedence to evaluate a complex expression. |[Grouping operators](#grouping-operators)|
+|**Grouping operators**|Use parentheses: (), to specify the precedence to evaluate a complex expression. |[Grouping operators](#grouping-operators)|
 |**OData query functions**|Evaluate string values using `contains`, `endswith`, and `startswith` functions. |[Use OData query functions](#use-odata-query-functions)|
 |**Dataverse query functions**|Use more than 60 specialized functions designed for business applications. |[Dataverse query functions](#dataverse-query-functions)|
-|**Lambda Expressions**|Create expressions based on values of related collections. |[Filter using values of related collections](#filter-using-values-of-related-collections)|
+|**Lambda expressions**|Create expressions based on values of related collections. |[Filter using values of related collections](#filter-using-values-of-related-collections)|
 
-> [!TIP]
-> Remember that you can also use [Filtered collections](#filtered-collections).
->
-> If you are using a [lookup property](web-api-properties.md#lookup-properties) in a `$filter`, you could also use a filtered collection with the corresponding collection-valued navigation property.
->
-> For example, these two queries return the same results:
->
-> `accounts?$filter=_owninguser_value eq '<systemuserid value>'&$select=name`
->
-> `systemusers(<systemuserid value>)/user_accounts?$select=name`
+If you're using a [lookup property](web-api-properties.md#lookup-properties) in a `$filter`, you can also use a [filtered collection](#filtered-collections) with the corresponding collection-valued navigation property. For example, these two queries return the same results:
 
+`accounts?$filter=_owninguser_value eq '<systemuserid value>'&$select=name`
+
+`systemusers(<systemuserid value>)/user_accounts?$select=name`
 
 ### Comparison operators
 
-Use the following comparison operators to compare a property and a value.
+The following table describes the operators you can use to compare a property and a value.
 
 |Operator|Description|Example|  
 |--------------|-----------------|-------------|
@@ -858,21 +839,15 @@ Use the following comparison operators to compare a property and a value.
 
 #### Column comparison
 
-You can use comparison operators to compare property values in the same row. For example, the following query returns any contacts where the `firstname` equals `lastname`.
+You can use comparison operators to compare property values in the same row; that is, to [compare columns](../column-comparison.md). Only comparison operators can be used to compare values in the same row, and the column types must match. For example, the following query returns any contacts where `firstname` equals `lastname`:
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname&$filter=firstname eq lastname
 ```
 
-> [!NOTE]
-> - Only comparison operators can be used to compare values in the same row.
-> - The types of columns must match.
-
-More information: [Use column comparison in queries](../column-comparison.md)
-
 ### Logical operators
 
-Use the following logical operators to create more complex expressions:
+The following table describes the logical operators you can use to create more complex expressions.
 
 |Operator|Description|Example|  
 |--------------|-----------------|-------------|
@@ -882,12 +857,13 @@ Use the following logical operators to create more complex expressions:
 
 ### Grouping operators
 
-Use parentheses `(` & `)`, with logical operators to specify the precedence to evaluate a complex expression. For example:<br />
+Use parentheses () with logical operators to specify the precedence to evaluate a complex expression; for example:
+
 `$filter=(contains(name,'sample') or contains(name,'test')) and revenue gt 5000`
 
 ### Dataverse query functions
 
-Use more than 60 specialized functions designed for business applications. These functions provide special capabilities as described in the following table:
+Use more than 60 specialized functions designed for business applications. These functions provide special capabilities, as described in the following table.
 
 |Group|Functions|
 |---------|---------|
@@ -900,15 +876,15 @@ Use more than 60 specialized functions designed for business applications. These
 |**Language**|<xref:Microsoft.Dynamics.CRM.EqualUserLanguage>|
 
 > [!NOTE]
-> The [Contains Function](xref:Microsoft.Dynamics.CRM.Contains) is for use with columns that have full-text indexing. Only the Dynamics 365 KBArticle (article) table has columns that have full-text indexing. Use the OData `contains` function instead.
+> The [Contains function](xref:Microsoft.Dynamics.CRM.Contains) is for use with columns that have full-text indexing. Only the Dynamics 365 KBArticle (article) table has columns that have full-text indexing. Use the OData `contains` function instead.
 
-See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex?displayProperty=fullName> for the complete list. Each article provides a syntax example you can copy.
+The <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex?displayProperty=fullName> has the complete list. Each article provides a syntax example you can copy.
 
-You must use the *fully qualified name* of these functions. The fully qualified name means you must append the [Service namespace](web-api-service-documents.md#service-namespace) (`Microsoft.Dynamics.CRM`) to the name of the function.
+You must use the function's *fully qualified name* and append the [Service namespace](web-api-service-documents.md#service-namespace) (`Microsoft.Dynamics.CRM`) to the name of the function.
 
-Each function has a `PropertyName` parameter that specifies which property to be evaluated. The function may have more parameters such as `PropertyValue`, `PropertyValues`, or `PropertyValue1` and `PropertyValue2`. When these parameters exist, you must supply a value, or values, to compare to the `PropertyName` parameter.
+Each function has a `PropertyName` parameter that specifies the property to be evaluated. The function may have more parameters, such as `PropertyValue`, `PropertyValues`, or `PropertyValue1` and `PropertyValue2`. When these parameters exist, you must supply a value, or values, to compare to the `PropertyName` parameter.
 
-The following example shows using the [Between Function](xref:Microsoft.Dynamics.CRM.Between) to search for accounts with a number of employees between 5 and 2000.  
+The following example shows uses the [Between function](xref:Microsoft.Dynamics.CRM.Between) to search for accounts with between 5 and 2,000 employees.  
   
 ```http 
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
@@ -917,18 +893,39 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
 
 ### Filter using string values
 
-Keep the following points in mind while filtering on string values:
+Keep the following points in mind when you filter on string values:
 
 - All filters using string values are case insensitive.
+- You must URL encode special characters in filter criteria. More information: [URL encode special characters](#url-encode-special-characters)
 - You may use wildcard characters, but avoid trailing wildcards. More information: [Use wildcard characters](#use-wildcard-characters)
-- You can use OData query functions: `contains`, `startswith`, `endswith`. More information: [Use OData query functions](#use-odata-query-functions)
-- You must manage single quotes when using filters that accept an array of string values. More information: [Manage single quotes](#manage-single-quotes)
+- You can use OData query functions: `contains`, `startswith`, and `endswith`. More information: [Use OData query functions](#use-odata-query-functions)
+- You must manage single quotes when you use filters that accept an array of string values. More information: [Manage single quotes](#manage-single-quotes)
+
+#### URL encode special characters
+
+If the string you are using as a value in a filter function includes a special character, you need to URL encode it. For example, if you use this function: `contains(name,'+123')`, it will not work because `+` is a character that can't be included in a URL. If you URL encode the string, it will become `contains(name,'%2B123')` and you will get results where the column value contains `+123`.
+
+The following table shows the URL encoded values for common special characters.
+
+|Special<br />character|URL encoded<br />character|
+|---|---|
+|`$`|`%24`|
+|`&`|`%26`|
+|`+`|`%2B`|
+|`,`|`%2C`|
+|`/`|`%2F`|
+|`:`|`%3A`|
+|`;`|`%3B`|
+|`=`|`%3D`|
+|`?`|`%3F`|
+|`@`|`%40`|
+
 
 #### Use wildcard characters
 
 When composing filters using strings, you can apply the following wildcard characters:
 
-|Characters  |Description  |T-SQL Documentation and examples  |
+|Characters  |Description  |T-SQL documentation and examples  |
 |---------|---------|---------|
 |`% ` |Matches any string of zero or more characters. This wildcard character can be used as either a prefix or a suffix.|[Percent character (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql)|
 |`_`  |Use the underscore character to match any single character in a string comparison operation that involves pattern matching.|[_ (Wildcard - Match One Character) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)|
@@ -939,7 +936,7 @@ More information: [Use wildcard characters in conditions for string values](../w
 
 ##### Trailing wildcards not supported
 
-When using wildcard characters, it's important not to use trailing wild cards. They aren't supported. Queries using these anti-patterns introduce performance problems because the queries can't be optimized. Some examples of trailing wildcards:
+It's important not to use trailing wild cards because they aren't supported. Queries that use these anti-patterns introduce performance problems because the queries can't be optimized. Here are some examples of trailing wildcards:
 
 ```
 startswith(name,'%value')
@@ -948,7 +945,7 @@ endswith(name,'value%')
 
 #### Use OData query functions
 
-Use the following OData query functions to filter using string values:
+The following table describes the OData query functions you can use to filter on string values:
 
 |Function|Example|  
 |--------------|-------------|  
@@ -956,11 +953,11 @@ Use the following OData query functions to filter using string values:
 |`endswith`|`$filter=endswith(name,'Inc.')`|  
 |`startswith`|`$filter=startswith(name,'a')`|
 
-You can use these functions together with the logical operator `not` to negate the result.
+You can use these functions with the logical operator `not` to negate the result.
 
 #### Manage single quotes
 
-When specifying values for comparison in filters that accept an array of string values, such as the [In Query Function](xref:Microsoft.Dynamics.CRM.In), which contain single quote "`'`" (apostrophe) characters, such as `O'Brian` or `Men's clothes` you must use double quotes around the values. For example: 
+Some filters accept an array of string values, such as the [In Query function](xref:Microsoft.Dynamics.CRM.In). When you specify values in these filters that contain single quote, or apostrophe, characters, such as `O'Brian` or `Men's clothes`, you must use double quotes around the values; for example:
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
@@ -969,16 +966,16 @@ GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
 &@p2=["OBrian","OBryan","O'Brian","O'Bryan"]
 ```
 
-Otherwise you get the following error: `Invalid JSON. A comma character ',' was expected in scope 'Array'. Every two elements in an array and properties of an object must be separated by commas.`
+If you don't, you get the following error: `Invalid JSON. A comma character ',' was expected in scope 'Array'. Every two elements in an array and properties of an object must be separated by commas.`
 
-If the filter is for a single value, replace the single quote character with two consecutive single quote characters. For example:
+If the filter is for a single value, replace the single quote character with two consecutive single quote characters; for example:
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
 &$filter=lastname eq 'O''Bryan'
 ```
 
-Otherwise you get an error like this: `There is an unterminated literal at position 21 in 'lastname eq 'O'Bryan''.`
+If you don't, you get an error like this: `There is an unterminated literal at position 21 in 'lastname eq 'O'Bryan''.`
 
 ### Filter based on related data values
 
@@ -990,9 +987,9 @@ You can filter based on values in single-valued navigation properties that repre
 
 `<single-valued navigation property>/<property name>`
 
-The following example returns account records based on the value of the `primarycontactid/fullname` column.
+The following example returns account records based on the value of the `primarycontactid/fullname` column:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$filter=primarycontactid/fullname eq 'Susanna Stubberod (sample)'
@@ -1003,7 +1000,7 @@ OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1025,11 +1022,11 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 }
 ```
 
-You can also compare values of further up the hierarchy of single-valued navigation properties.
+You can also compare values further up the hierarchy of single-valued navigation properties.
 
-This example returns the first account where the contact record representing the `primarycontactid` where 'System Administrator' created the record, using `primarycontactid/createdby/fullname` in the `$filter`.
+The following example returns the first account where the contact record represents the `primarycontactid`, where 'System Administrator' created the record, using `primarycontactid/createdby/fullname` in the `$filter`.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$filter=primarycontactid/createdby/fullname eq 'System Administrator'
@@ -1045,7 +1042,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1080,31 +1077,25 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 #### Filter using values of related collections
 
-Use *Lambda operators*, `any` & `all`, to evaluate values in a collection to filter the results.
+Use the *Lambda operators* `any` and `all` to evaluate values in a collection to filter the results.
 
-
-|Operator|Description|
-|---------|---------|
-|`any`|Returns `true` if the expression applied is true for any member of the collection, otherwise it returns false. The `any` operator without an argument returns `true` if the collection isn't empty.|
-|`all`|Returns true if the expression applied is true for all members of the collection, otherwise it returns false.|
+- `any`: Returns `true` if the expression applied is true for any member of the collection; otherwise, it returns false. The `any` operator without an argument returns `true` if the collection isn't empty.
+- `all`: Returns true if the expression applied is true for all members of the collection; otherwise, it returns false.
 
 The syntax looks like this:
 
 `<collection>/[any | all](o:<expression to evaluate>)`
 
 In this case, `o` is the variable that represents items in the collection. The convention is to use the first letter of the type.
-Within the expression, use `o/<property or collection name>` to refer to property or collection of a given item.
+In the expression, use `o/<property or collection name>` to refer to a property or collection of a given item.
 
-You can include conditions on multiple collection-valued navigation properties and nested collections.
+You can include conditions on multiple collection-valued navigation properties and nested collections. You can't include conditions on collection-valued navigation properties that are nested in a lookup navigation property. For example, `$filter=primarycontactid/new_contact_account/any(a:a/accountid eq '{GUID}')` isn't supported.
 
 More information: [Lambda Operators at odata.org](https://www.odata.org/getting-started/basic-tutorial/#lambda)
 
-> [!NOTE]
-> You cannot include conditions on collection-valued navigation properties that are nested in a lookup navigation property. For example, `$filter=primarycontactid/new_contact_account/any(a:a/accountid eq '{GUID}')` is not supported.
-
 ##### Lambda operator examples
 
-The example given below shows how you can retrieve all account entity records that have at least one email with `sometext` in the subject.
+The following example retrieves all account entity records that have at least one email with "sometext" in the subject:
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -1114,7 +1105,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-The example given below shows how you can retrieve all account entity records that have all associated tasks closed.
+The following example retrieves all account entity records that have all associated tasks closed:
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -1124,7 +1115,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-The example given below shows how you can retrieve all account entity records that have at least one email with "sometext" in the subject and whose statecode is active.
+The following example retrieves all account entity records that have at least one email with "sometext" in the subject and whose state code is active:
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -1135,7 +1126,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-The example given below shows how you can also create a nested query using `any` and `all` operators.
+The following example creates a nested query using `any` and `all` operators:
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -1149,14 +1140,14 @@ OData-Version: 4.0
 
 ## Page results
 
-You can control the number of records returned using the `Prefer: odata.maxpagesize` request header. If you don't specify the number records to return, up to 5000 records may be returned for each request. You can't request a page size larger than 5000.
+Use the `Prefer: odata.maxpagesize` request header to control the number of records returned. If you don't specify a number, up to 5,000 records may be returned for each request. You can't request a page size larger than 5,000.
 
 > [!NOTE]
-> Dataverse doesn't support the `$skip` query option, so the combination of `$top` and `$skip` can't be used for paging. More information: [Use $top query option](#use-top-query-option)
+> Dataverse doesn't support the `$skip` query option, so you can't use the the combination of `$top` and `$skip` for paging. More information: [Use the $top query option](#use-the-top-query-option)
 
 The following example returns just the first two contact records:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
@@ -1166,7 +1157,7 @@ OData-Version: 4.0
 Prefer: odata.maxpagesize=2
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1193,7 +1184,7 @@ Preference-Applied: odata.maxpagesize=2
 
 When there are more records than requested, the `@odata.nextLink` annotation provides a URL you can use with `GET` to return the next page of data, as shown in the following example:
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/contacts?$select=fullname&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253ccontactid%2520last%253d%2522%257bD5026A4D-D01C-ED11-B83E-000D3A572421%257d%2522%2520first%253d%2522%257b49B0BE2E-D01C-ED11-B83E-000D3A572421%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E
@@ -1203,7 +1194,7 @@ OData-Version: 4.0
 Prefer: odata.maxpagesize=2
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1228,22 +1219,21 @@ Preference-Applied: odata.maxpagesize=2
 }
 ```
 
-You should cache the results returned or the `@odata.nextLink` URL value and use it to return to previous pages.
+You should cache the results returned, or the `@odata.nextLink` URL value, and use it to return to previous pages.
 
-Don't change or append any query options to the `@odata.nextLink` URL value. For every subsequent request for more pages, you should use the same `odata.maxpagesize` preference value used in the original request. You can continue paging through the data until no `@odata.nextLink` annotation is included in the results.
+Don't change the `@odata.nextLink` URL value or append any query options to it. For every subsequent request for more pages, you should use the same `odata.maxpagesize` preference value used in the original request. You can continue paging through the data until no `@odata.nextLink` annotation is included in the results.
 
-In the examples above you can see that there's encoded information set as the value of the `$skiptoken` parameter within the `@odata.nextLink` URL value. The server sets this encoded information to control paging. You shouldn't modify the encoded information or encode it further, just use the URL value provided to retrieve the next page.
+In the earlier examples, encoded information was set as the value of the `$skiptoken` parameter in the `@odata.nextLink` URL value. The server sets this encoded information to control paging. You shouldn't modify the encoded information or encode it further. Use the URL value provided to retrieve the next page.
 
-### Use $top query option
+### Use the $top query option
 
-You can limit the number of results returned by using the `$top` query option. The following example returns just the first three account rows.
+Use the `$top` query option to limit the number of results returned. Don't use `$top` with the `Prefer: odata.maxpagesize` request header. If you include both, `$top` is ignored.
+
+The following example returns just the first three account rows:
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=3
 ```
-
-> [!NOTE]
-> You shouldn't use `$top` together with the `Prefer: odata.maxpagesize` request header. If you include both, `$top` is ignored.
 
 ## Aggregate data
 
@@ -1251,7 +1241,7 @@ Use the `$apply` option to aggregate and group your data dynamically.
 
 The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Dataverse can be found here: [Use FetchXML aggregation](../use-fetchxml-aggregation.md).
 
-More details on OData data aggregation can be found here: [OData extension for data aggregation version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html). Dataverse supports only a subset of these aggregate methods.
+You can find more information about OData data aggregation here: [OData extension for data aggregation version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html). Dataverse supports only a subset of these aggregate methods.
 
 Following are some examples:
 
@@ -1498,9 +1488,9 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 
 ## Count number of rows
 
-Use the `$count=true` query option to include a count of entities that match the filter criteria up to 5000.  
+Use the `$count=true` query option to include a count of entities that match the filter criteria, up to 5,000.  
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=accountid&$count=true
@@ -1509,7 +1499,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1528,13 +1518,13 @@ OData-Version: 4.0
 }
 ```
 
-The response `@odata.count` annotation contains the number of rows, up to 5000, that matches the filter criteria irrespective of the page size requested.
+The response `@odata.count` annotation contains the number of rows, up to 5,000, that matches the filter criteria irrespective of the page size requested.
   
 > [!NOTE]
-> If you want to retrieve a snapshot within the past 24 hours of the total number of rows for a table beyond 5000, use the [RetrieveTotalRecordCount Function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount). 
+> If you want to retrieve a snapshot within the past 24 hours of the total number of rows for a table beyond 5,000, use the [RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount). 
   
 
-If the count value is 5000 and you want to know whether the count is exactly 5000 or greater than 5000, you can add the following header:
+If the count value is 5,000 and you want to know whether the count is exactly 5,000 or greater than 5,000, you can add the following header:
 
 ```
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.totalrecordcount,Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded"
@@ -1546,7 +1536,7 @@ This header adds the following annotations to the result:
 - `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`
 
 
-When used together with the `$count=true` query option, and there are more than 5000 records you see these values:
+When used with the `$count=true` query option and there are more than 5,000 records, the following values are returned:
 
 ```
 "@odata.count": 5000,
@@ -1564,9 +1554,9 @@ If there are fewer than 5000 records, the actual count is returned.
 
 If you don't include the `$count=true` query option, the total `@Microsoft.Dynamics.CRM.totalrecordcount` value is `-1`.
 
-The following example shows that there are 10 accounts that match the `$filter`, but only the first three accounts are returned.  
+The following example shows that there are 10 accounts that match the `$filter`, but only the first three accounts are returned:
   
- **Request**
+ **Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name?
@@ -1579,7 +1569,7 @@ Prefer: odata.maxpagesize=3
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.*"
 ```  
   
- **Response** 
+ **Response:** 
  
 ```http
 HTTP/1.1 200 OK  
@@ -1615,9 +1605,9 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.*"
 
 ```  
   
-To get just a number representing the count of a collection, append `/$count` to get that value.
+To get just a number that represents the count of a collection, append `/$count`, as in the following example:
   
- **Request**  
+ **Request:**  
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts/$count  
@@ -1626,7 +1616,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 ```  
   
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -1639,7 +1629,7 @@ OData-Version: 4.0
 
 [Search across table data using Dataverse search](relevance-search.md)  
 [Work with Quick Find's search item limit](../quick-find-limit.md)  
-[Web API Query Data Sample (C#)](samples/webapiservice-query-data.md)<br />
-[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
+[Web API query data sample (C#)](samples/webapiservice-query-data.md)<br />
+[Web API query data sample (client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
-[Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
+[Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)<br />

@@ -8,7 +8,7 @@ ms.service: powerapps
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: bap-template
-ms.reviewer:
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -102,10 +102,10 @@ Admins can disable the **Try the new look** across all apps in an org by using t
 1. Publish All Customizations
 
 ### Can I switch to a different theme or enable dark mode?
-Switching themes or enabling dark mode is not yet supported.
+Switching themes or enabling dark mode isn't yet supported.
 
 ### Is the new look available for custom pages or code components?
-No, but we are actively working on bringing the new look to these areas.
+No, but we're actively working on bringing the new look to these areas.
 
 ### Do Dynamics 365 applications support the new look?
 Dynamics 365 applications have extended the new look across applications based on model-driven Power Apps.

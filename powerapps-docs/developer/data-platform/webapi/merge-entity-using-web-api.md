@@ -1,7 +1,7 @@
 ---
 title: "Merge table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to use the Merge unbound action to merge two table rows"
-ms.date: 04/26/2022
+ms.date: 08/10/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -37,13 +37,13 @@ Merge is an unbound action that accepts four parameters:
 |`UpdateContent`|<xref:Microsoft.Dynamics.CRM.crmbaseentity>|Additional entity attributes to be set during the merge operation.| Yes|
 |`PerformParentingChecks`|Boolean|Indicates whether to check if the parent information is different for the two entity records.| No|
 
-Merging will move any data from the `Subordinate` record to the `Target` and then deactivate the `Subordinate` record.
+Merging will move any useful data from the `Subordinate` record to the `Target` record. Any existing data in the `Target` record will not be overwritten. Then the `Subordinate` record is deactivated.
 To perform this operation the caller must have privileges and access rights to both the records identified as the `Target` and `Subordinate`.
 
 Use a POST request to send data to merge records. 
 This example merges two account entity records while updating `accountnumber` property of the record that will remain after the merge.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/Merge HTTP/1.1
@@ -74,7 +74,7 @@ Accept: application/json
 > [!IMPORTANT]
 > Because the `Target`, `Subordinate`, and `UpdateContent` property types are not explicitly defined by the parameter, you must include the `@odata.type` annotation to specify the type.
 
-**Response** 
+**Response:** 
 
 ```http
 HTTP/1.1 204 No Content

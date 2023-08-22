@@ -347,7 +347,7 @@ If you prefer to set localized labels in code rather than using the manual proce
 
 The following example shows how to use the Web API to set the localized labels for the `displayname` property of a custom API.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.1/SetLocLabels HTTP/1.1
@@ -380,7 +380,7 @@ Content-Type: application/json
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -392,7 +392,7 @@ To retrieve the localized labels use the `RetrieveLocLabels` message using eithe
 
 The following example shows using the RetrieveLocLabels Function to retrieve the labels for the `displayname` property of a custom API with the `customapiid` of `88602189-183d-4584-ba4b-8b60f0f5b89f`
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.1/RetrieveLocLabels(EntityMoniker=@p1,AttributeName=@p2,IncludeUnpublished=@p3)?
@@ -402,7 +402,7 @@ GET [Organization URI]/api/data/v9.1/RetrieveLocLabels(EntityMoniker=@p1,Attribu
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

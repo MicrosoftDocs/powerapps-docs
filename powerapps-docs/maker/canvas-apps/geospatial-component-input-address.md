@@ -95,7 +95,7 @@ Change an address input control's behavior and appearance using properties. Some
 | Longitude | Sets the longitude coordinate of the center point used for address suggestions. Requires **Search within radius** to be on. | Floating point number from -180 to 180 | Properties; Advanced: **Longitude** |
 | Radius | Sets the radius, in meters, around **Latitude** and **Longitude** to constrain address suggestions. Requires **Search within radius** to be on. | Floating point number | Properties; Advanced: **Radius** |
 | Language | Sets the language that address suggestions are returned in. | String | Properties; Advanced: **Language** |
-| Country set | Identifies a comma-separated list of countries to constrain address suggestions to, in ISO 3166 alpha-2 format; for example, *US,CA,MX*. | String | Properties; Advanced: **CountrySet** |
+| Country set | Identifies a comma-separated list of countries/regions to constrain address suggestions to, in ISO 3166 alpha-2 format; for example, *US,CA,MX*. | String | Properties; Advanced: **CountrySet** |
 | Visible | Shows or hides the control. | Boolean | Properties; Advanced: **[Visible](./controls/properties-core.md)** |
 | Padding top | Sets the distance between the control text and the top of the control. | Floating point number | Properties; Advanced: **[PaddingTop](./controls/properties-size-location.md)** |
 | Padding bottom | Sets the distance between the control text and the bottom of the control. | Floating point number | Properties; Advanced: **[PaddingBottom](./controls/properties-size-location.md)** |
@@ -130,16 +130,16 @@ Other properties become available when a user interacts with the address input c
 | PostalCode | The postal code |
 | ExtendedPostalCode | The extended postal code |
 | CountryCode | The country code |
-| Country | The country name |
+| Country | The country/region name |
 | CountryCodeISO3 | The country code in ISO alpha-3 format |
-| CountrySubdivisionName | The country subdivision name |
+| CountrySubdivisionName | The country/region subdivision name |
 | StreetName | The street name |
 | StreetNumber | The street number |
 | Municipality | The municipality |
 | MunicipalitySubdivision | The municipality subdivision |
-| CountryTertiarySubdivision | The country tertiary subdivision |
-| CountrySecondarySubdivision | The country secondary subdivision |
-| CountrySubdivision | The country subdivision |
+| CountryTertiarySubdivision | The country/region tertiary subdivision |
+| CountrySecondarySubdivision | The country/region secondary subdivision |
+| CountrySubdivision | The country/region subdivision |
 
 ## Other geospatial controls
 

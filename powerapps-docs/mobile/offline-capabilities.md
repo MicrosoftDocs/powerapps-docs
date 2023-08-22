@@ -2,22 +2,25 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 04/27/2023
-ms.reviewer: 
+ms.date: 07/26/2023
+ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: Dynamics 365 apps
 ms.assetid: 6828238b-1645-4710-a192-0014acb03196
 caps.latest.revision: 1
-ms.author: sericks
-author: sericks007
+ms.author: trdehove
+author: trdehove
 search.audienceType: 
   - admin
   - customizer
   - enduser
 contributors:
 - joliedes 
+ms.contributors:
+- bwalters
+- trdehove
 ---
 
 # Mobile offline capabilities and limitations
@@ -54,9 +57,9 @@ These tables and corresponding commands are available in offline mode.
 
 ## Supported  capabilities 
 
-- **Business rules**: Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
+- **Business rules** - Business rules are supported in mobile offline. For more information, see [Create business rules and recommendations to apply logic in a model-driven app form](/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form).
 
-- **Business Process Flows**: You can use business process flows in offline mode if the following conditions are met:
+- **Business Process Flows** - You can use business process flows in offline mode if the following conditions are met:
 
     - The business process flow is used in an app that you can run on Power Apps mobile.
     - The Power Apps mobile app is enabled for offline use.
@@ -73,26 +76,26 @@ These tables and corresponding commands are available in offline mode.
 
 For more information, see [Run business process flows offline](/power-automate/business-process-flows-overview#run-business-process-flows-offline).
 
-- **Lookup support**: Lookups are supported for the tables that are mobile offline-enabled. All the tables participating in the lookup should also be offline-enabled.
+- **Lookup support** - Lookups are supported for the tables that are mobile offline-enabled. All the tables participating in the lookup should also be offline-enabled.
 
-- **Supported view**: Only System views and Quick view are supported in mobile offline. Personal views are not supported.
+- **Supported view** - Only System views and Quick view are supported in mobile offline. Personal views aren't supported.
 
-- **Offline search**: Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search is not supported in offline mode. On grid pages, view-based search (filter by keyword) is not supported in offline mode and grid search switches to a quick, find-based search.
+- **Offline search** - Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search isn't supported in offline mode. On grid pages, view-based search (filter by keyword) isn't supported in offline mode and grid search switches to a quick, find-based search.
 
-- **Notes on the Timeline control**: Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode.
+- **Notes on the Timeline control** - Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode.
   > [!NOTE]
-  > The **Date** field is not available for mobile offline search.
+  > The **Date** field isn't available for mobile offline search.
   
-- **Custom tables**: These commands are available on edit the form, **Mark Complete**, **Refresh**, **Convert To- Opportunity**, and **Delete**.
+- **Custom tables** - These commands are available on edit the form, **Mark Complete**, **Refresh**, **Convert To- Opportunity**, and **Delete**.
 
 
 ## Limitations 
 
-- **Qualify a lead**: When a lead created in mobile offline is qualified and when the user goes online, the business process stage will still show the  qualify stage. The user will have to manually click **Next stage** to move to the next stage.
+- **Qualify a lead** - When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the  qualify stage. The user has to manually select **Next stage** to move to the next stage.
 
-- **Grids**: Column filtering is disabled when an offline profile is set up even when there is network connectivity. The grid works with the local database and does not support custom filters.
+- **Grids** - Column filtering is disabled when an offline profile is set up even when there's network connectivity. The grid works with the local database and doesn't support custom filters.
 
-- **Views** are not supported for the following tables in offline mode: 
+- **Views** aren't supported for the following tables in offline mode: 
 
      - Email
 
@@ -112,32 +115,32 @@ For more information, see [Run business process flows offline](/power-automate/b
 
      - Socialactivity
 
-    Any views that have linked tables (related table) that are not available offline are also not supported.
+    Any views that have linked tables (related table) that aren't available offline are also not supported.
 
-- **Advanced lookups**: The **[Advanced lookup]**(../user/lookup-field.md#advanced-lookup) functionality isn't supported in offline scenarios. When you're offline, the **Advanced lookup** button is replaced by a **Change view** dropdown list.
+- **Advanced lookups** - The [Advanced lookup](../user/lookup-field.md#advanced-lookup) functionality isn't supported in offline scenarios. When you're offline, the **Advanced lookup** button is replaced by a **Change view** dropdown list.
 
-- **Add Existing on subgrids**: **Add Existing** is not supported for mobile offline for certain types of relationships. When you are offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command will be hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command will not work in offline.
+- **Add Existing on subgrids** - The **Add Existing** functionality isn't supported for mobile offline for certain types of relationships. When you're offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command is hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command doesn't work in offline.
 
-- **Web resources**: Web resources are partially supported in offline mode. Refer to the table below for more information.
+- **Web resources** - Web resources are partially supported in offline mode. Refer to the following table for more information.
 
     |Web resource configuration |Offline support on Android and Windows|Offline support on iOS|  
     |-------------|---------|--------|  
     |Web resource used on form handlers, form scripts and ribbon commands|Supported (File names should be in lower case)|Supported (file names need should be in lower case)|
-    |JavaScript files referenced within an HTML web resource|Not supported| Web resources may be available offline in some circumstances if they are retrieved while online and cached by the browser. |
-    |HTML, JS, CSS, XML web resources embedded on a model-driven app form|Not supported| Web resources may be available offline in some circumstances if they are retrieved while online and cached by the browser.|
-    |Other web resources embedded on a model-driven app form (like images, resx, etc.) <br><br>**Note**: The [Dataverse file](/power-apps/developer/data-platform/file-attributes) and [image](/power-apps/developer/data-platform/image-attributes) attributes are not webresources but regular Dataverse data. To enable them offline, see  [Configure mobile offline profiles for images and files](/power-apps/mobile/offline-file-images). |Not supported**|Not supported**|
+    |JavaScript files referenced within an HTML web resource| Supported| Not supported. Web resources may be available offline in some circumstances if they're retrieved while online and cached by the browser. |
+    |HTML, JS, CSS, XML web resources embedded on a model-driven app form| Supported| Not supported. Web resources may be available offline in some circumstances if they're retrieved while online and cached by the browser.|
+    |Other web resources embedded on a model-driven app form (like images, resx, etc.) <br><br>**Note**: The [Dataverse file](/power-apps/developer/data-platform/file-attributes) and [image](/power-apps/developer/data-platform/image-attributes) attributes aren't webresources but regular Dataverse data. To enable them offline, see  [Configure mobile offline profiles for images and files](/power-apps/mobile/offline-file-images). |Not supported**|Not supported**|
     |Webpage (HTML web resource) via a model-driven app’s sitemap|Not supported|Not supported|
     |Custom JS files that create a fetchXML dynamically |Not supported|Not supported|
 
     ** Accessing RESX web resources as a dependency through Client API from within a JS file is supported.
 
-- **Calculated and rollup fields**: Calculated and rollup fields that are part of rows synced to the client will not be re-evaluated by the client. The re-evaluation will happen on the server when the updated row is synced.
+- **Calculated and rollup fields** - Calculated and rollup fields that are part of rows synced to the client aren't reevaluated by the client. The reevaluation happens on the server when the updated row is synced.
 
-- **Mapped fields**: When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
+- **Mapped fields** - When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
 
-- **Filter operations**: Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
+- **Filter operations** - Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
 
-- **Appointments**: Appointments can be created or updated in Dataverse, but they won't be sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
+- **Appointments** - Appointments can be created or updated in Dataverse, but they're not sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
 
 ## Tips
 
@@ -147,13 +150,13 @@ For more information, see [Run business process flows offline](/power-automate/b
   
 - The time for initial metadata download is determined by the number of total tables in offline-enabled app modules. Make sure to enable only those tables and app modules for offline that are necessary to optimize the experience for end users. 
   
-- Ensure that any view that you want to work in offline doesn’t reference the tables that are not offline enabled. For example, assuming Account is in the offline profile, then an Account view that references the primary contact when Contact is not in the profile will not be available.
+- Ensure that any view that you want to work in offline doesn’t reference the tables that aren't offline enabled. For example, assuming Account is in the offline profile, then an Account view that references the primary contact when Contact isn't in the profile isn't available.
 
-- Changes to a user’s security privileges are updated during the next synchronization cycle. Until that time, users can continue to access data according to their previous security privileges, but any changes they make will be validated during the synchronization to the server. If they no longer have privileges to make changes for a row, they will receive an error and the row won’t be created, updated, or deleted.
+- Changes to a user’s security privileges are updated during the next synchronization cycle. Until that time, users can continue to access data according to their previous security privileges, but any changes they make are validated during the synchronization to the server. If they no longer have privileges to make changes for a row, they receive an error and the row won’t be created, updated, or deleted.
 
 - Any changes to a user’s privilege to view a row won’t take effect on the mobile device until the next synchronization cycle.
 
-- Mobile offline honors the mobile apps security model. It also supports the hierarchical security model. Field level security and attribute sharing are not supported for offline mode.
+- Mobile offline honors the mobile apps security model. It also supports the hierarchical security model. Field level security and attribute sharing aren't supported for offline mode.
   
 
 ### Organization data filter 
@@ -161,7 +164,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 > [!IMPORTANT]
 > Organization data filters are no longer used. Changes to filters should be edited within the mobile profile itself.
 
-It is recommended that you have at least one rule defined for all mobile offline-enabled data filters, if you are using tables across profiles. By default, this value is set to last 10 days for most of the offline-enabled tables.
+It is recommended that you have at least one rule defined for all mobile offline-enabled data filters, if you're using tables across profiles. By default, this value is set to last 10 days for most of the offline-enabled tables.
 
  > [!div class="mx-imgBorder"]
  >![Edit org data filter.](media/datafilter_1.png "Edit org data filter")
@@ -183,8 +186,8 @@ Ensure that you have configured at least one of the Profile rules for each table
   
 |Customization |Recommendation|  
 |-------------|---------|  
-|All Records|	If you are selecting this filter, you cannot define any other filter rule.|
-|Download Related Data only|If you are selecting this filter, you cannot define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
+|All Records|	If you're selecting this filter, you cannot define any other filter rule.|
+|Download Related Data only|If you're selecting this filter, you cannot define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
 |Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It is highly recommended to not have Business Unit level filter for a table unless there is a strong justification. It is recommended for a master data scenario with a small data set like Country codes. |
 |Custom Data Filter |<=3 filters can be defined in the custom data filter. |
 

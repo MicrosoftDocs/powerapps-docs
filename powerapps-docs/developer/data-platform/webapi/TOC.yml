@@ -12,10 +12,6 @@
       href: quick-start-console-app-csharp.md
     - name: 'Quick Start: Blazor Server sample (C#)'
       href: quick-start-blazor-server-app.md
-    - name: Enhanced quick start (C#)
-      href: enhanced-quick-start.md
-    - name: Start Web API project in Visual Studio
-      href: start-web-api-project-visual-studio-csharp.md
 - name: Web service authentication
   href: authenticate-web-api.md
 - name: Types and operations
@@ -82,13 +78,19 @@
   - name: Retrieve table definitions by name or MetadataId
     href: retrieve-metadata-name-metadataid.md
   - name: Create and update table definitions
-    href: create-update-entity-definitions-using-web-api.md 
+    href: create-update-entity-definitions-using-web-api.md
+  - name: Create and update column definitions
+    href: create-update-column-definitions-using-web-api.md
   - name: Create and update table relationships
     href: create-update-entity-relationships-using-web-api.md
   - name: Use multi-table lookup columns
     href: multitable-lookup.md
   - name: Work with choices (option sets)
     href: create-update-optionsets.md
+  - name: Web API Metadata Operations Sample
+    href: web-api-metadata-operations-sample.md
+  - name: Web API Metadata Operations Sample (C#)
+    href: samples/webapiservice-metadata-operations.md
 - name: Use Postman with Web API
   items:
   - name: Get started with Postman

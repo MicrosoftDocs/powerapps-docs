@@ -149,7 +149,7 @@ In this section, we'll review and if necessary, set various properties of the ad
 | Longitude            | The longitude of the center point used to geo-bias address suggestions. Requires **Search within radius** to be on. We've set it to the formula `Location.Longitude` in this example to return the latitude of the current location. |
 | Radius               | The radius, in meters, around **Latitude** and **Longitude** to constrain the address suggestions. Requires **Search within radius** to be **On**. We've set it to 100000 in this example.                                           |
 | Language             | The language the address suggestions are returned in. We've left it with the default - "English (United States)".                                                                                                              |
-| Country set          | Comma-separated list of countries to constrain the address suggestions to, in ISO 3166 alpha-2 country codes. Examples: "US", "FR", "KW". We've it as US in this example.                                                     |
+| Country set          | Comma-separated list of countries/regions to constrain the address suggestions to, in ISO 3166 alpha-2 country codes. Examples: "US", "FR", "KW". We've it as US in this example.                                                     |
 
 ### Configure output properties for the Address Input control
 
