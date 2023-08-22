@@ -1,5 +1,5 @@
 ---
-title: formatDateAsFilterStringUTC | Microsoft Docs
+title: formatDateAsFilterStringUTC (Power Apps component framework API reference) | Microsoft Docs
 description: Returns a formatted string that represents a date in YYYY-MM-DD standard UTC format. Results pattern is based on standard UTC format.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -35,7 +35,7 @@ Model-driven and canvas apps
 Type: `string`
 
 
-### Related topics
+### Related articles
 
 [Formatting](../formatting.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

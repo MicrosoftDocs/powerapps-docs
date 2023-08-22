@@ -12,7 +12,7 @@ ms.reviewer: mduelae
 
 # FAQ for continue to edit your app with Copilot 
 
-This transparency note describes the AI impact of Power Apps' continue to edit your app with Copilot feature. 
+These frequently asked questions (FAQ) describe the AI impact of Power Apps' continue to edit your app with Copilot feature. 
 
 ##  What is continue to edit your app with Copilot? 
 

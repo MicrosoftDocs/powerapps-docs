@@ -1,5 +1,5 @@
 ---
-title: retrieveMultipleRecords | Microsoft Docs
+title: retrieveMultipleRecords (Power Apps component framework API reference) | Microsoft Docs
 description: Retrieves a collection of table records.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -47,7 +47,7 @@ Model-driven apps & portals.
 <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
 <li>To specify a FetchXML query, use the <code>fetchXml</code> column to specify the query.</li>
 </ul>
-<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren't specified using <b>$select</b>, all properties will be returned.</li>
+<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. Limiting the columns you retrieve is an important performance best practice. If properties aren't specified using <b>$select</b>, all properties will be returned.</li>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple system query options by using <code>&amp;</code> to separate the query options.
 </td>
 </tr>
@@ -89,7 +89,7 @@ Description: The `RetrieveMultipleResponse` returns a promise that contains an a
 |nextLink|`string`|If the number of records being retrieved is more than the value specified in the 'maxPageSize' parameter in the request, this parameter returns the URL to return next set of records.|
 
 
-### Related topics
+### Related articles
 
 [Web API](../webapi.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
