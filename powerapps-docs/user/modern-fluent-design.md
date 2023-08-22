@@ -26,7 +26,7 @@ The Fluent design system provides consistency, quality, and Microsoft-wide platf
 ## What’s included with the new look
 Here's what you can expect in the modern, refreshed experience:
 
-- Updated styling in form, view, and dashboard pages, which includes the use of drop shadows and brighter background colors to create an elevated or _floating_ appearance. The floating appearance helps to visually seperate sections and focuses attention on primary content.
+- Updated styling in form, view, and dashboard pages, which includes the use of drop shadows and brighter background colors to create an elevated or _floating_ appearance. The floating appearance helps to visually separate sections and focuses attention on primary content.
 - New Fluent-based controls in forms, business process flows, and dialogs.
 - A new Power Apps grid in place of the read-only grid in view and standard, dashboard pages.
 - An end user setting called **Try the new look** that enables the modern, refreshed experience.
@@ -52,7 +52,7 @@ Form pages use the new command bar and have refreshed headers, tabs, sections, a
 
 The following example shows a form page with the modern, refreshed look.
 
-:::image type="content" source="media/modern-form-page.png" alt-text="A formm page with the modern, refreshed look.":::
+:::image type="content" source="media/modern-form-page.png" alt-text="A form page with the modern, refreshed look.":::
 
 ### Field controls
 Field controls such as text input, action input, lookup, and check box controls are built and designed using Fluent components. More field controls will be modernized using Fluent design in future updates.
@@ -73,7 +73,7 @@ After using the modern, refreshed look in your model-driven apps, tell us what y
 The modern, refreshed look for model-driven apps has some limitations:
 
 - The mobile app and mail app don't support the modern, refreshed look and aren't part of the preview or general availability.
-- With the new look, Power Apps are moving away from the classic theme customizations. This means that the app header and colors for business process flows can't be customized yet.
+- With the new look, Power Apps is moving away from the classic theme customizations. This means that the app header and colors for business process flows can't be customized yet.
 
 ## Frequently asked questions (FAQs)
 
