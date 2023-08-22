@@ -6,19 +6,20 @@ ms.subservice: troubleshoot
 ms.topic: troubleshooting
 ms.custom: 
 ms.reviewer: Mattp123
-ms.date: 04/04/2023
+ms.date: 08/16/2023
 ms.author: austinj
 search.audienceType: 
   - maker
 contributors:
   - mattp123
+  - eshwarne
 ---
 # Debug a model-driven app with Monitor
 
-Monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all key activities in your app as the app runs.
+Monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all key activities in your app as the app runs. You can also collaboratively debug a published model-driven app with a support engineer or debug issues of another user's session. For more information on how to collaboratively debug a published model-driven app, go to [Collaborative troubleshooting using Monitor](monitor-collaborative-debugging.md).
 
 > [!IMPORTANT]
-> Monitor is temporarily unavailable for model-driven apps. We're working to enable this again soon. Monitor is still available for canvas apps. More information: [Microsoft 365 Message center post MC530354](https://portal.office.com/adminportal/home?ref=MessageCenter/:/messages/MC530354)
+> Monitor for model-driven app requires the client version of your model-driven app to be 1.4.5973-2307.2 or later.
 
 For more information about when you should monitor an app, see [Monitor overview](monitor-overview.md). To run Monitor with a canvas app, see [Debugging canvas apps with Monitor](monitor-canvasapps.md).
 
@@ -83,7 +84,7 @@ and **type** (such as *onload*, *onchange*, *RuleEvaluation*, and *CustomContr
 
 ## Slow performance
 
-Browser developer tools can help profile slow page loads, but there is many data to filter though and it’s not clear what is important to look at. Monitor solves this problem by showing relevant events that contribute to page load performance.
+Browser developer tools can help profile slow page loads, but there's much data to filter though and it’s not clear what is important to look at. Monitor solves this problem by showing relevant events that contribute to page load performance.
 
 For example, imagine a user is experiencing slow account form loads, and the browser is
 constantly freezing up. In this case, after you reproduce the issue, you can see a performance warning telling you that a synchronous **XMLHttpRequest** was sent during the load which degraded performance.
