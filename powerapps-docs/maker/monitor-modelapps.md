@@ -84,7 +84,7 @@ and **type** (such as *onload*, *onchange*, *RuleEvaluation*, and *CustomContr
 
 ## Slow performance
 
-Browser developer tools can help profile slow page loads, but there's many data to filter though and it’s not clear what is important to look at. Monitor solves this problem by showing relevant events that contribute to page load performance.
+Browser developer tools can help profile slow page loads, but there's much data to filter though and it’s not clear what is important to look at. Monitor solves this problem by showing relevant events that contribute to page load performance.
 
 For example, imagine a user is experiencing slow account form loads, and the browser is
 constantly freezing up. In this case, after you reproduce the issue, you can see a performance warning telling you that a synchronous **XMLHttpRequest** was sent during the load which degraded performance.
