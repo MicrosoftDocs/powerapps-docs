@@ -1,5 +1,5 @@
 ---
-title: deleteRecord | Microsoft Docs
+title: deleteRecord (Power Apps component framework API reference) | Microsoft Docs
 description: Deletes a table record.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -67,7 +67,7 @@ Model-driven apps & portals.
 
 Type: LookupValue[]
 
-### Related topics
+### Related articles
 
 [Web API](../webapi.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Share a record using an access team
 
-This sample shows how to allow access to a record using an access team. All the members of the team will receive the same access to the record that is granted to the team. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ShareRecordUsingAccessTeam).
+This sample shows how to allow access to a record using an access team. All the members of the team will receive the same access to the record that is granted to the team.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Share a record using an access team sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ShareRecordUsingAccessTeam)
 
 This sample requires additional users that are not in your system. Create the required users manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. Replace `yourorg` with the organization name.
 
