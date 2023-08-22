@@ -38,10 +38,10 @@ Any plug-in that is registered to run synchronously increases the time for the o
 - **Limit the number of synchronous plug-ins that are registered for the operations.** Add logic to run asynchronously using an asynchronous plug-in or Power Automate flow unless it's essential the logic be applied synchronously.
 - **Ensure the plug-ins you have are limited in the logic that they attempt to perform.** While plug-ins must complete within a generous 2-minute time limit, synchronous plug-ins that exceed two seconds to run seriously degrade performance.
 - **Ensure plug-ins only run when necessary.** Plug-ins for update operations can be filtered to run only when specific columns are updated.
-- **Make sure that plug-ins are optimized to perform logic as efficiently as possible.** For standard tables, you need to consider the impact that transactions and record locks may have on performance. [Learn about scalable customization design](scalable-customization-design/overview.md)
+- **Make sure that plug-ins are optimized to perform logic as efficiently as possible.** For standard tables, you need to consider the impact that transactions and record locks may have on performance. [Learn about scalable customization design](scalable-customization-design/overview.md) and other [best practices for writing plug-ins](best-practices/business-logic/index.md)
 - **Choose which API to register your plug-in on.** You can apply synchronous logic to run on the more efficient `CreateMultiple` and `UpdateMultiple` bulk operation APIs. [Learn how to write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
 
-[Learn more best practices for writing plug-ins](best-practices/business-logic/index.md)
+
 ### Bypass business logic
 
 To expedite the bulk operation project, you can disable synchronous plug-ins registered for the create or update operations to improve performance. If the business logic isn't essential, or if you plan other steps to ensure eventual data consistency, you can manually disable the plug-in steps and re-enable them when the bulk operation project is complete. However, disabling plug-ins disables the logic from being applied from *any* client. Any user or other process adding data to Dataverse during this period won't have any of the business logic applied.
@@ -91,11 +91,11 @@ Read these articles to learn more:
 
 ### Parallel requests
 
-You can see a significant improvement in throughput by sending requests in parallel, but you need to understand how to send them correctly. [Learn more about sending requests in parallel](send-parallel-requests.md).
+You can see a significant improvement in throughput by [sending requests in parallel](send-parallel-requests.md), but you need to understand how to send them correctly.
 
 ### Not all environments are the same
 
-Not every Dataverse environment has the same number of web server resources allocated to it. Dataverse scales to the need of the environment by adding more web server resources to support it. A trial environment has the minimum number of web servers to support it. A production environment supporting thousands of active users requires more web servers.  When your environment has a lot of web servers, sending requests in parallel can make a dramatic difference in the total throughput your client application can achieve.
+Not every Dataverse environment has the same number of web server resources allocated to it. Dataverse scales to the need of the environment by adding more web server resources to support it. A production environment supporting thousands of active users requires more web servers than a trial environment.  When your environment has a lot of web servers, sending requests in parallel can make a dramatic difference in the total throughput your client application can achieve.
 
 ### Recommended degree of parallelization (DOP)
 
@@ -105,11 +105,11 @@ Depending on your client-side architecture, you may need to split recommended de
 
 ### Disable Azure affinity
 
-When appropriate, you can see best results when you configure your client to use all the available web servers by removing the Azure affinity cookie that tries to associate your application to a single web server. Disabling Azure affinity is not appropriate for interactive applications that use cached data from the server to optimize the user experience. [Learn how to disable Azure affinity](send-parallel-requests.md#server-affinity).
+When appropriate, you can see best results when you configure your client to use all the available web servers by [removing the Azure affinity cookie](send-parallel-requests.md#server-affinity) that tries to associate your application to a single web server. Disabling Azure affinity is not appropriate for interactive applications that use cached data from the server to optimize the user experience.
 
 ### Optimize your connection
 
-When using .NET, you should apply configuration changes like the following to optimize your connection so your requests are not limited by default settings.[Learn more about how to optimize your connection](send-parallel-requests.md#optimize-your-connection)
+When using .NET, you should [apply configuration changes like the following](send-parallel-requests.md#optimize-your-connection) to optimize your connection so your requests are not limited by default settings.
 
 ```csharp
 // Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4 
