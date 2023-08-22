@@ -82,23 +82,23 @@ Model driven apps modern experience is generally available in Monthly Channel Au
 
 ### Can I revert to the old UI?
 Yes, end users can switch back to the old UI by turning off the **Try the new look** switch.  Makers can also disable the new look by updating the app setting.
-For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties#features). 
+For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties). 
 
-Admins can disable the **Try the new look** across all apps in an org by using the solution explorer to set **Try the new look** value to no.
+Admins can disable the **Try the new look** across all apps in an organization by using the solution explorer to set **Try the new look** value to **No**.
 
-1. Create a new solution
-1. Click **Add Existing** > **More** > **Setting**
-1. Search for “Try”
-1. Select “Try the new look” 
+1. Create a new solution.
+1. Select **Add Existing** > **More** > **Setting**.
+1. Search for **Try**.
+1. Select **Try the new look**. 
 
-> [!NOTE]
-> There are two settings "Try the new look" and "Try the new look and feel (preview)".
+  > [!NOTE]
+  > There are two settings: **Try the new look** and **Try the new look and feel (preview)**.
 
-5. Click “Add” to add it to the solution
-1. Click “Try the new look” from the solution explorer
-1. Update “Setting Environment Value” to No
-1. Click Save
-1. Publish All Customizations
+1. Select **Add** to add it to the solution.
+1. Select **Try the new look** from the solution explorer.
+1. Update **Setting Environment Value** to **No**.
+1. Select **Save**.
+1. Publish all customizations.
 
 ### Can I switch to a different theme or enable dark mode?
 Switching themes or enabling dark mode isn't yet supported.
