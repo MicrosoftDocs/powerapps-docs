@@ -1,5 +1,5 @@
 ---
-title: isNetworkAvailable | Microsoft Docs
+title: isNetworkAvailable (Power Apps component framework API reference) | Microsoft Docs
 description: Returns information whether the network is available or not.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -28,7 +28,7 @@ Model-driven
 Type: `Boolean`
 Description: **true** if the network is available; **false** otherwise.
 
-### Related topics
+### Related articles
 
 [Client](../client.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

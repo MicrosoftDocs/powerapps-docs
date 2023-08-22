@@ -1,5 +1,5 @@
 ---
-title: openAlertDialog | Microsoft Docs
+title: openAlertDialog (Power Apps component framework API reference) | Microsoft Docs
 description: Displays an alert dialog containing a message and a button.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -53,7 +53,7 @@ context.navigation.openAlertDialog({text:"This is an alert.", confirmButtonLabel
    );
 ```
 
-### Related topics
+### Related articles
 
 [Navigation](../navigation.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

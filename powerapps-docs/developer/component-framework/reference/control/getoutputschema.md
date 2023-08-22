@@ -1,5 +1,5 @@
 ---
-title: "StandardControl.getOutputSchema | MicrosoftDocs"
+title: "StandardControl.getOutputSchema (Power Apps component framework API reference) | MicrosoftDocs"
 description: "Called by the framework prior to a component initialization in a standard control. Returns an object schema based on nomenclature defined in manifest, for any output property of type object."
 ms.author: noazarur
 author: noazarur-microsoft
@@ -23,7 +23,7 @@ so that the common content will exist in one place.
 [!INCLUDE [getoutputschema-content](../includes/getoutputschema-content.md)]
 
 
-### Related topics
+### Related articles
 
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

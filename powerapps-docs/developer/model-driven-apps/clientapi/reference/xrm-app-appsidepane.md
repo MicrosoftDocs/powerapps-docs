@@ -1,9 +1,9 @@
 ---
-title: "AppSidePane (Client API reference) in model-driven apps| MicrosoftDocs"
+title: AppSidePane (Client API reference) in model-driven apps
 description: Includes description and supported parameters for the AppSidePane method.
 author: adrianorth
 ms.author: aorth
-ms.date: 04/21/2022
+ms.date: 08/10/2022
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
@@ -21,11 +21,11 @@ Provides methods for managing a single side pane.
 |--------|----------|
 |close|Closes the side pane and removes it from the side bar.|
 |select|Specify whether the pane should be selected or expanded.|
-|navigate|Opens a page within the selected pane. This is similar to the [navigateTo](Xrm-Navigation/navigateTo.md) method.|
+|navigate|Opens a page within the selected pane. This method accepts the same parameters as the [navigateTo](Xrm-Navigation/navigateTo.md) method.|
 
-### Parameters
+### Properties
 
-|Parameter Name| Type| Required|Description|
+|Property Name| Type| Required|Description|
 |-------------|------|---------|------------|
 |title|string|No|The title of the pane. Used in pane header and for tooltip.|
 |paneId|string|No| The ID of the new pane. If the value is not passed, the ID value is auto-generated.|

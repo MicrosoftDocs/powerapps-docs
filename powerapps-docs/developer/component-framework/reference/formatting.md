@@ -1,5 +1,5 @@
 ---
-title: Formatting | Microsoft Docs
+title: Formatting (Power Apps component framework API reference) | Microsoft Docs
 description: Provides properties and methods to work with formatting.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -43,7 +43,7 @@ Model-driven and canvas apps
 
 To learn more about how to implement formatting methods, see [Formatting API component](../sample-controls/formatting-api-control.md)
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

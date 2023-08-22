@@ -44,7 +44,7 @@ The <xref:Microsoft.Dynamics.CRM.Merge> action corresponds to the <xref:Microsof
 
 The following example is the HTTP request and response to call the `Merge` action for two account records.
 
- **Request**
+ **Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/Merge HTTP/1.1
@@ -67,7 +67,7 @@ OData-Version: 4.0
 
 ```
 
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -119,7 +119,7 @@ An action bound to an entity must be invoked using a URI to set the first parame
 
 The following example shows using the <xref:Microsoft.Dynamics.CRM.AddToQueue> action to add a letter to a queue. Because the type of the `Target` parameter type isn't specific (`mscrm.crmbaseentity`), you must explicitly declare type of the object using the `@odata.type` property value of the full name of the entity, including the `Microsoft.Dynamics.CRM` namespace. In this case, `Microsoft.Dynamics.CRM.letter`. More information: [Specify entity parameter type](#bkmk_specifyentityparametertype)
 
- **Request**
+ **Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/queues(56ae8258-4878-e511-80d4-00155d2a68d1)/Microsoft.Dynamics.CRM.AddToQueue HTTP/1.1
@@ -136,7 +136,7 @@ OData-Version: 4.0
 }
 ```
 
- **Response**
+ **Response:**
 
 ```http
 
@@ -213,7 +213,7 @@ This entity collection bound action is equivalent to the <xref:Microsoft.Crm.Sdk
 
 The following example shows using the <xref:Microsoft.Dynamics.CRM.ExportTranslation> action, which exports a binary file containing data about localizable string values that can be updated to modify or add localizable values. Note how the entity collection bound action is after the entity set name for the solution entity: `solutions`.
 
- **Request**
+ **Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.1/solutions/Microsoft.Dynamics.CRM.ExportTranslation HTTP/1.1
@@ -227,7 +227,7 @@ OData-Version: 4.0
 }
 ```
 
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -244,7 +244,7 @@ OData-Version: 4.0
 
 ## Use a custom action
 
-A custom action may be a Custom API or Custom Process Action. Either way it's created, there's a corresponding operation that you can use. With Custom API, the operation may be a function. More information: [Create your own messages](../custom-actions.md)
+A custom action may be a custom API or Custom Process Action. Either way it's created, there's a corresponding operation that you can use. With custom API, the operation may be a function. More information: [Create your own messages](../custom-actions.md)
 
 The following example is for a custom process action.
 
@@ -299,7 +299,7 @@ Let's say that you want to create a custom action that adds a new note to a spec
 
 The following HTTP request and response shows how to call the custom action and the response it returns if successful.  
 
- **Request**
+ **Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/contacts(94d8c461-a27a-e511-80d2-00155d2a68d2)/Microsoft.Dynamics.CRM.new_AddNoteToContact HTTP/1.1
@@ -315,7 +315,7 @@ OData-Version: 4.0
 ```
 
 
- **Response**
+ **Response:**
 
 ```http
 

@@ -1,5 +1,5 @@
 ---
-title: getLinkedEntities | Microsoft Docs
+title: getLinkedEntities (Power Apps component framework API reference) | Microsoft Docs
 description: Returns all the linked tables information.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -28,7 +28,7 @@ Model-driven apps
 Type: [ILinkEntityExposedExpression](../ilinkentityexposedexpression.md)
 
 
-### Related topics
+### Related articles
 
 [Linking](../linking.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

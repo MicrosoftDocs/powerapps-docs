@@ -1,15 +1,15 @@
 ---
 title: "Open your model-driven app data in Excel Online | MicrosoftDocs"
 description: How to open your data to Excel Online in model-driven app and make  edits.
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/12/2021
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
