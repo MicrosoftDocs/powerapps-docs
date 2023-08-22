@@ -15,12 +15,12 @@ search.audienceType:
 
 # View offline sync status
 
-The offline sync icon indicates the synchronization status of the Power Apps mobile app. At a glance, you can tell:
+The offline sync icon indicates the synchronization status of the Power Apps mobile app. At a glance, you can tell whether:
 
-- Whether the app is connected to the network
-- Whether a data refresh is in progress
-- Whether updated data is waiting to sync
-- Whether the app has experienced an error or warning while syncing
+- The app is connected to the network
+- A data refresh is in progress
+- Updated data is waiting to sync
+- The app has experienced an error or warning while syncing
 
 The offline sync icon is always visible in the main app navigation on iOS and Android devices.
 
@@ -42,19 +42,19 @@ The offline sync icon changes based on the app's sync status. The following tabl
 ## Types of offline syncs
 Data is synchronized from Dataverse to your device over the lifetime of your app using several synchronization modes.
 
-- **First sync** : This sync is the initial offline sync that occurs for the Power Apps mobile app. All data in the offline profile is downloaded to the device. A user must use the Power Apps mobile app in online mode until the first sync is completed.
+- **First sync**: This sync is the initial offline sync that occurs for the Power Apps mobile app. All data in the offline profile is downloaded to the device. A user must use the Power Apps mobile app in online mode until the first sync is completed.
 
-  The first sync, which is the longest sync, is triggered when you sign-in to the Power Apps mobile app. It is also triggered after using the Reconfigure action (not recommended).
+  The first sync, which is the longest sync, is triggered when you sign in to the Power Apps mobile app. It is also triggered after using the Reconfigure action (not recommended).
 
-- **Delta sync** : This sync is the fastest sync, and occurs regularly based on the offline configuration for the organization. For example, a delta sync could occur every five minutes. Only data that has changed since the last sync occurred is downloaded to the mobile device.
+- **Delta sync**: This sync is the fastest sync and occurs regularly based on the offline configuration for the organization. For example, a delta sync could occur every five minutes. Only data that has changed since the last sync is downloaded to the mobile device.
 
-- **Full delta sync** : When you select **Refresh** on the **Device status** page, you trigger a full sync. A full sync doesn't redownload data, but it does recheck every record on the device, so it may take longer than a regular delta sync.
+- **Full delta sync**: When you select **Refresh** on the **Device status** page, you trigger a full sync. A full sync doesn't redownload data, but it does recheck every record on the device, so it may take longer than a regular delta sync.
 
-- **Grid sync** : If you select **Refresh** on a grid or calendar view, the app immediately synchronizes all tables visible in the view. When the sync is complete, the view refreshes automatically.
+- **Grid sync**: If you select **Refresh** on a grid or calendar view, the app immediately synchronizes all tables visible in the view. When the sync is complete, the view refreshes automatically.
 
 ## Offline Status page
 
-When you select the offline sync icon, the **Offline Status** page opens. The **Offline Status** page provides details such as what data was downloaded, whether there is data waiting to upload, and the amount of storage the app is using.
+When you select the offline sync icon, the **Offline Status** page opens. The **Offline Status** page provides details such as what data was downloaded, whether data is waiting to be uploaded, and the amount of storage the app uses.
 
 :::image type="content" source="media/OfflineStatusPage-NotConnected.png" alt-text="The Offline Status page of a mobile app.":::
 
