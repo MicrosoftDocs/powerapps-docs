@@ -15,12 +15,12 @@ search.audienceType:
 
 # View offline sync status
 
-The offline sync icon indicates the synchronization status of the Power Apps mobile app. At a glance, you can tell whether:
+The offline sync icon indicates the synchronization status of the Power Apps mobile app. At a glance, you can tell:
 
-- The app is connected to the network
-- A data refresh is in progress
-- Updated data is waiting to sync
-- The app has experienced an error or warning while syncing
+- Whether the app is connected to the network
+- Whether a data refresh is in progress
+- Whether updated data is waiting to sync
+- Whether the app has experienced an error or warning while syncing
 
 The offline sync icon is always visible in the main app navigation on iOS and Android devices.
 
@@ -44,7 +44,7 @@ Data is synchronized from Dataverse to your device over the lifetime of your app
 
 - **First sync**: This sync is the initial offline sync that occurs for the Power Apps mobile app. All data in the offline profile is downloaded to the device. A user must use the Power Apps mobile app in online mode until the first sync is completed.
 
-  The first sync, which is the longest sync, is triggered when you sign in to the Power Apps mobile app. It is also triggered after using the Reconfigure action (not recommended).
+  The first sync, which is the longest sync, is triggered when you sign in to the Power Apps mobile app. It's also triggered after using the Reconfigure action (not recommended).
 
 - **Delta sync**: This sync is the fastest sync and occurs regularly based on the offline configuration for the organization. For example, a delta sync could occur every five minutes. Only data that has changed since the last sync is downloaded to the mobile device.
 
