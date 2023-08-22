@@ -1,15 +1,15 @@
 ---
 title: "Use Dynamics 365 App for Outlook | MicrosoftDocs"
 description: "Use Dynamics 365 App for Outlook with Power Apps and Microsoft Dataverse."
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 5/21/2021
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser

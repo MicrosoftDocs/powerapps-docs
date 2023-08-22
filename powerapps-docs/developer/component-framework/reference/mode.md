@@ -1,5 +1,5 @@
 ---
-title: Mode | Microsoft Docs
+title: Mode (Power Apps component framework API reference) | Microsoft Docs
 description: Provides access to methods to get the information about the current state of the code component.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -59,7 +59,7 @@ The defined component label.
 |[trackContainerResize](mode/trackcontainerresize.md)|[!INCLUDE [trackcontainerresize-description](mode/includes/trackcontainerresize-description.md)]|
 
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

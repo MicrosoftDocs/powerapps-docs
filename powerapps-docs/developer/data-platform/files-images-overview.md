@@ -72,7 +72,7 @@ More information: [Build queries with QueryExpression](org-service/build-queries
 
 Use this request to return only the `blockedattachments` value of the organization record.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/organizations?$select=blockedattachments HTTP/1.1
@@ -82,7 +82,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -137,7 +137,7 @@ public static (string, string) RetrieveMimeTypes(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/organizations?$select=blockedmimetypes,allowedmimetypes HTTP/1.1
@@ -147,7 +147,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
