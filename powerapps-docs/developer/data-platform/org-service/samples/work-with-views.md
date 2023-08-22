@@ -14,7 +14,10 @@ contributors:
 
 # Sample: Work with views
 
-This sample shows how to perform various actions on views. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithViews).
+This sample shows how to perform various actions on views.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Work with views sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithViews)
 
 ## How to run this sample
 
