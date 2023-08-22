@@ -1,5 +1,5 @@
 ---
-title: delete | Microsoft Docs
+title: delete (Power Apps component framework API reference) | Microsoft Docs
 description: Delete the records from data source.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -33,7 +33,7 @@ Canvas apps
 
 Type: Promise
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
