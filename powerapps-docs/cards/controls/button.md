@@ -38,7 +38,7 @@ Buttons are added under the **actions** section of the tree view at the bottom o
 
 **[Tooltip](control-reference.md#t)** - Defines text that should be displayed to the end user as they hover the mouse over the action, and read when using narration software.
 
-**[Mode](control-reference.md#m)** – Determines whether the action should be displayed as a button ("primary") or in the overflow menu ("secondary").
+**[Mode](control-reference.md#m)** – Determines whether the action should be displayed as a primary button or in the overflow menu that's secondary.
 
 **[IconUrl](control-reference.md#i)** - Optional icon to be shown on the button beside the title. Supports data URI in version 1.2+.
 
