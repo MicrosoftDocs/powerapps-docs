@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
 author: "Mattp123"
-ms.date: 07/25/2023
+ms.date: 08/23/2023
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -30,10 +30,17 @@ You can also select a column heading from the table view, and then select **Filt
 
 ## Create a table
 
+There are several ways to create a new table: 
+- [Start with a blank table](#start-with-a-blank-table)
+- [Describe the new table](#describe-the-new-table)
+- 
+
+### Start with a blank table
+
 Watch this video for a quick overview about how to create a table:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM]
 
-While [viewing tables](#view-tables), on the menu bar select **New table**. This opens the **New table** panel.
+From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** panel.
 
 :::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
 
@@ -52,7 +59,7 @@ Select the **Primary column** tab if you want to change the **Display name** or 
 > [!IMPORTANT]
 > After you save the table, the **Primary column** display name and description can't be changed.
 
-### Advanced options
+#### Advanced options
 
 Select **Advanced options** to display additional properties that are optional for a table.
 
@@ -80,6 +87,37 @@ Select **Advanced options** to display additional properties that are optional f
 |**Can be added to a queue**| Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
 
 Select **Save** to continue, this will close the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
+
+### Describe the new table
+
+Create a table with the help of AI.
+
+1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
+1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
+1. When you're finished, select **Create**.
+
+### Add columns and data
+
+1. Create a table by starting with the data rows and columns you want.
+1. When you're finished, select **Create**.
+
+### Upload an Excel file
+
+Use an Excel file to populate a table with your data.
+
+1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
+1. Select from device or drag and drop your Excel file onto the Upload an Excel file page.
+1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
+1. When you're finished, select **Create**.
+
+More information: [Import from an Excel or CSV file](data-platform-import-export.md#import-from-an-excel-or-csv-file)
+
+### Create a virtual table
+
+A virtual table is a custom table in Microsoft Dataverse that has columns containing data from an external data source, such as Azure SQL Database or SharePoint.
+
+1. From the **Tables** area, on the command bar select **New table** > **Create a virtual table**.
+1. Follow the **New table from external data** wizard to create the virtual table. More information: [Create the virtual table](create-virtual-tables-using-connectors.md#create-the-virtual-table)
 
 ## Edit a table
 
@@ -151,6 +189,8 @@ While [viewing tables](#view-tables), select the table, and then select **Delete
 If the table has dependencies that prevent it from being deleted you'll see an error message. To identify and remove any dependencies, you'll need to use the solution explorer. More information [Identify table dependencies](create-edit-entities-solution-explorer.md#identify-table-dependencies)
 
 ### See also
+
+[Build apps through conversation (preview)](../canvas-apps/ai-conversations-create-app.md)
 
 [Create a custom table using code](../../developer/data-platform/org-service/create-custom-entity.md)
 
