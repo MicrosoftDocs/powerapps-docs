@@ -5,7 +5,7 @@ author: sch
 ms.topic: reference
 ms.custom:
 ms.reviewer:
-ms.date: 08/08/2023
+ms.date: 08/23/2023
 ms.author: aschaedle
 search.audienceType:
   - maker
@@ -30,7 +30,7 @@ Tables are the top-level container for Table Rows. For this reason, they have ma
 
 **[Show grid lines](control-reference.md#s)** – Specifies whether grid lines should be displayed.
 
-**[Visible](control-reference.md#i)** – Show or hide the table. Can be "true" or "false".
+**[Visible](control-reference.md#i)** – Show or hide the table. Can be **true** or **false**.
 
 **[Spacing](control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
 
@@ -40,7 +40,7 @@ Tables are the top-level container for Table Rows. For this reason, they have ma
 
 **[Horizontal alignment](control-reference.md#c)** – Defines how the content should be aligned horizontally for all children of the Table.
 
-**[Height](control-reference.md#m)** – Specifies whether the table should grow with the size of the data ("auto") or grow to fill the height of a container ("stretch").
+**[Height](control-reference.md#m)** – Specifies whether the table should grow with the size of the data (auto) or grow to fill the height of a container (stretch).
 
 **[Grid style](control-reference.md#s)** – Style hint for all Table Cells within the Table. Allowed values: default, emphasis, good, attention, warning, accent.
 
@@ -61,7 +61,7 @@ The number of columns are defined on the Table itself. Columns can be added and 
 
 The immediate child of a Table card element is a Table Row. It groups several Table Cells together horizontally and has some properties that apply to all items in that Row:
 
-**[Visible](control-reference.md#i)** – Show or hide an element. Can be "true" or "false".
+**[Visible](control-reference.md#i)** – Show or hide an element. Can be **true** or **false**.
 
 **[Spacing](control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
 
@@ -71,7 +71,7 @@ The immediate child of a Table card element is a Table Row. It groups several Ta
 
 **[Horizontal alignment](control-reference.md#c)** – Defines how the content should be aligned horizontally for all Cells in the Row.
 
-**[Height](control-reference.md#m)** – Specifies whether the Table Row should grow with the size of the data ("auto") or grow to fill the height of a container ("stretch").
+**[Height](control-reference.md#m)** – Specifies whether the Table Row should grow with the size of the data (auto) or grow to fill the height of a container (stretch).
 
 **[Style](control-reference.md#s)** – Style hint for all Table Cells within the Row. Allowed values: default, emphasis, good, attention, warning, accent.
 
