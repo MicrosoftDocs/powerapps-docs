@@ -55,7 +55,7 @@
     items:
     - name: Overview
       href: ../user/use-model-driven-apps.md
-    - name: Modern, refreshed look (preview)
+    - name: Modern, refreshed look
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
