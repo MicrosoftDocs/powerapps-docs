@@ -13,9 +13,9 @@ contributors:
   - sch
 ---
 
-# Table card elements and their properties
+# Table control in cards
 
-Use the Table card element to present tabular data or any structured information that is best laid out in rows and columns. Tables are made up of three separate card elements:
+Use the Table control to present tabular data or any structured information that is best laid out in rows and columns. Tables are made up of three separate card elements:
 - Tables
 - Table Rows
 - Table Cells
