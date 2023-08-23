@@ -109,7 +109,7 @@ Select **Save** to continue, this will close the **New table** panel and display
 
 ### Upload an Excel file
 
-Use an Excel file to populate a table with your data that uses AI to map the Excel data to a Dataverse table.
+Use an Excel file to populate a table with your data, which uses AI to map the Excel data to a Dataverse table.
 
 1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
 1. Select from device or drag and drop your Excel file onto the Upload an Excel file page.
