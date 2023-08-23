@@ -39,8 +39,10 @@ There are several ways to create a new table:
 
 ### Add columns and data
 
-1. Create a table by starting with the data rows and columns you want.
+1. Create a table by entering the data rows and columns you want.
 1. When you're finished, select **Create**.
+
+More information: [Table designer](#table-designer)
 
 ### Describe the new table
 
