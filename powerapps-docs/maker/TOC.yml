@@ -1745,6 +1745,8 @@
       href: ./common/performance-insights-categories.md
   - name: App ratings (preview)
     href: ./common/app-ratings.md
+  - name: Model-driven app frequently asked questions
+    href: ./model-driven-apps/model-app-faq.md
   - name: Developer zone
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
