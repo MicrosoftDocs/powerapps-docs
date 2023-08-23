@@ -16,7 +16,6 @@ contributors:
 # Table card elements and their properties
 
 Use the Table card element to present tabular data or any structured information that is best laid out in rows and columns. Tables are made up of three separate card elements:
-
 - Tables
 - Table Rows
 - Table Cells
