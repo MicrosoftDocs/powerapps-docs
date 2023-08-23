@@ -1,5 +1,5 @@
 ---
-title: hasEntityPrivilege | Microsoft Docs
+title: hasEntityPrivilege (Power Apps component framework API reference) | Microsoft Docs
 description: Returns if the user has privilege for specific table.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -35,7 +35,7 @@ Model-driven apps
 
 **Type**: `boolean`
 
-### Related topics
+### Related articles
 
 [Utility](../utility.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
