@@ -124,7 +124,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Minimum value** – Hint of minimum value (may be ignored by some clients).
 
-**Mode** – The mode can be defined as "primary" or "secondary", to establish a hierarchy between card elements.
+**Mode** – The mode can be defined as primary or secondary, to establish a hierarchy between card elements.
 
 **Multiline** – If true, allow multiple lines of input.
 
