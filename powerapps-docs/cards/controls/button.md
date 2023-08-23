@@ -40,7 +40,7 @@ Buttons are added under the **actions** section of the tree view at the bottom o
 
 **[Mode](control-reference.md#m)** – Determines whether the action should be displayed as a button ("primary") or in the overflow menu ("secondary").
 
-**[IconUrl](control-reference.md#i)** - Optional icon to be shown on the button in conjunction with the title. Supports data URI in version 1.2+.
+**[IconUrl](control-reference.md#i)** - Optional icon to be shown on the button beside the title. Supports data URI in version 1.2+.
 
 **[Associated inputs](control-reference.md#a)** - Controls which inputs are associated with the action.
 
