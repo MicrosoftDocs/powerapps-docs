@@ -147,7 +147,7 @@ You'll find links to documentation, Power Apps training on Microsoft Learn, the 
 
 ## 4 - AI Copilot
 
-If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
+If your organization has [AI enabled (preview)](ai-overview.md) then you'll see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation (preview)](ai-conversations-create-app.md).
 
 ## 5 – Build apps
 
