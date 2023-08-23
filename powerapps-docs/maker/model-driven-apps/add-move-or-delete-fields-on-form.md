@@ -92,7 +92,7 @@ The **Properties** tab displays the following properties.
 | **Components**  |  **+ Component**  | Adds a control to the column such as the canvas app control or the AI business card control.    |
 
 > [!WARNING]
-> The **Hide** and **Read-only** properties should never be used as a secure way to prevent users from viewing or editing column values. These properties only apply to a form and don't have an affect on a user's data privileges. Users can access data in other ways like viewing other forms or by making Web API calls. To secure columns, use [column-level security to control access](/power-platform/admin/field-level-security).
+> The **Hide** and **Read-only** properties should never be used as a secure way to prevent users from viewing or editing column values. These properties only apply to a form and don't have an effect on a user's data privileges. When a column is hidden on a form, users can still access data in other ways like viewing other forms or by making Web API calls. To secure columns, use [column-level security to control access](/power-platform/admin/field-level-security).
 
 > [!NOTE]
 > In Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
