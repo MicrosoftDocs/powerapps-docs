@@ -127,7 +127,11 @@ Apply changes to the following files to enable displaying Dataverse data in the 
 
 ### \wwwroot\appsettings.json
 
-Apply the changes in the following **After** tab to add configuration data for your connection to Dataverse. `22222222-2222-2222-2222-222222222222` represents your tenant ID, and `11111111-1111-1111-1111-111111111111` represents the application (client) ID value you created in your application registration. Make sure to replace `https://yourorg.api.crm.dynamics.com` with the URL you [copied earlier](#get-the-dataverse-web-api-uri).
+Apply the changes in the following **After** tab to add configuration data for your connection to Dataverse.
+
+- `22222222-2222-2222-2222-222222222222` represents your tenant ID.
+- `11111111-1111-1111-1111-111111111111` represents the application (client) ID value you created in your application registration.
+- Make sure to replace `https://yourorg.api.crm.dynamics.com` with the URL you [copied earlier](#get-the-dataverse-web-api-uri).
 
 #### [Before](#tab/before)
 
