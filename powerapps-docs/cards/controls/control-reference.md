@@ -200,6 +200,7 @@ By using the Dataverse Accounts table and a text label's **Repeat for every** pr
 
 **Value** – The initial item (or set of items) that should be selected. For multi-select, specify a comma-separated string of values.
 
+
 ### W
 
 **Weight** – Controls the weight of the text.
