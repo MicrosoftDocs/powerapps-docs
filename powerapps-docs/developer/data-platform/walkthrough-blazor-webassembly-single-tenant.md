@@ -3,9 +3,9 @@ title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly app using Microsoft 
 description: "Learn how to create an ASP.NET Core Blazor WebAssembly application that connects to Microsoft Dataverse web services and retrieves business data."
 ms.date: 08/22/2023
 ms.topic: article
-author: JimDaly # GitHub ID
+author: JimDaly
 ms.subservice: dataverse-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
+ms.author: jdaly
 ms.reviewer: pehecke
 search.audienceType:
   - developer
@@ -15,11 +15,11 @@ search.audienceType:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Use the steps in this tutorial to create a Blazor WebAssembly app that connects to the Dataverse. The focus of this topic is to understand the necessary steps to authenticate a user with a specific Dataverse instance and retrieve data.
+Use the steps in this tutorial to create a Blazor WebAssembly app that connects to the Dataverse. The focus of this article is to understand the necessary steps to authenticate a user with a specific Dataverse instance and retrieve data.
 
 Blazor WebAssembly is one of two hosting models available for ASP.NET Core Blazor, the other is Blazor Server. For a complete description of the differences, see [ASP.NET Core Blazor hosting models](/aspnet/core/blazor/hosting-models).
 
-This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic. Because Dataverse uses Azure Active Directory (Azure AD) for authentication, this tutorial will describe how to modify the basic app created using the app template provided so that it can connect to Dataverse.
+This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) article. Because Dataverse uses Azure Active Directory (Azure AD) for authentication, this tutorial will describe how to modify the basic app created using the app template provided so that it can connect to Dataverse.
 
 ## Goal
 
@@ -56,7 +56,7 @@ You will need the Instance Web API Service Root URL. This is found on the Develo
 
 Follow the instructions found in [View or download developer resources](view-download-developer-resources.md) to copy the Url.
 
-It will look something like this: `https://yourorgname.api.crm.dynamics.com/api/data/v9.1/`
+It will look something like this: `https://yourorgname.api.crm.dynamics.com/api/data/v9.2/`
 
 ### Navigate to the Azure Active Directory portal
 
@@ -69,7 +69,7 @@ It will look something like this: `https://yourorgname.api.crm.dynamics.com/api/
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-AAD-from-admin-center.png" alt-text="Navigating to the Microsoft Entra admin center.":::
 
-1. This will take you to the Microsoft Entra admin center. Expand the left navigation pane and select **App registrations**.
+1. This will take you to the Microsoft Entra admin center. Expand the **Applications** node in the left navigation pane and select **App registrations**.
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-aad-admin-center.png" alt-text="Navigating to the Microsoft Entra App registrations page.":::
 
@@ -77,65 +77,16 @@ This takes you to the starting point for Step 2.
 
 ## Step 2: Create a Blazor WebAssembly standalone app using Azure AD for authentication
 
-The [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic provides a complete set of instructions to create the app.
+The [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) article provides a complete set of instructions to create the app.
 
-These steps will describe how to create an app registration in Azure AD and run a .NET Core CLI command to generate the scaffold for the basic app with support for Azure AD authentication.
-
-> [!NOTE]
-> At this time, you must use the .NET Core CLI command to generate the app. There is no template for this specific type of app when creating a project using Visual Studio.
-
-Go to [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) and follow the instructions there to generate the basic app template.
+These steps describe how to create an app registration in Azure AD and run a .NET Core CLI command to generate the scaffold for the basic app with support for Azure AD authentication.
 
 > [!NOTE]
-> The rest of the content in this section provides supplemental information to assist in completing the steps described in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic.
->
-> You may want to review this as you complete those steps, but it is not required. When you are done, come back here and start with [Step 3 Grant API permissions](#step-3-grant-api-permissions).
+> These instructions use the .NET Core CLI command to generate the app. There is a Visual Studio project template to create a Blazor WebAssembly app, but this tutorial hasn't been verified using that template.
 
-Registering the application involves completing a form. The default value for the Redirect URI includes a placeholder for the port value. You must replace the placeholder with a number value to complete the registration, for example, just add `1111` for now. You can provide the randomly generated port value later after you open the project in Visual Studio. See [Update callback URL](#update-callback-url).
-
-:::image type="content" source="media/blazor-webassembly-walkthrough-register-application.png" alt-text="The form to register an application in Azure Active Directory.":::
-
-This will generate two ID values that you will need to include in the .NET Core CLI command. The following placeholders will be used in the content. You must use the values generated by the application registration process.
-
-- The Application (Client) Id : Placeholder: `11111111-1111-1111-1111-111111111111`
-- Directory (Tenant) Id : Placeholder: `22222222-2222-2222-2222-222222222222`
-
-The .NET Core CLI command can be formatted this way and include a parameter to specify where the project should be created. You can run the command in an ordinary command window.
-
-```dotnetcli
-dotnet new blazorwasm^
- -au SingleOrg^
- --client-id "11111111-1111-1111-1111-111111111111"^
- --tenant-id "22222222-2222-2222-2222-222222222222"^
- -o "A:\Projects\Blazor-Standalone-AAD Example"
-```
-
-After you have run the command, navigate to the output folder and open the .csproj file using Visual Studio 2022.
-
-:::image type="content" source="media/blazor-webassembly-walkthrough-application-files-folder.png" alt-text="The files generated by the template viewed in windows explorer.":::
-
-Within Visual Studio 2022 the project looks like this:
-
-:::image type="content" source="media/blazor-webassembly-walkthrough-application-solution-explorer.png" alt-text="The project generated by the template viewedin the Visual Studio solution explorer.":::
-
-The rest of the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic describes the components of the app template.
-
-<!-- ### Update callback URL
-
-The port setting used by Visual Studio is randomly generated. The callback URI in the application registration must be updated so that you can debug the app.
-
-1. In Visual Studio, open the project properties and select **Debug**.
-
-   :::image type="content" source="media/blazor-webassembly-walkthrough-project-debug-settings.png" alt-text="The Visual Studio project Debug page.":::
-
-1. Under **Web Server Settings** copy the **Enable SSL** value that includes the random port assigned for debugging
-1. Return to your app registration in Azure AD, In the **Authentication** section, change the **Redirect URI** to include this root Uri, then save your changes
-
-   :::image type="content" source="media/blazor-webassembly-walkthrough-application-redirect-uri.png" alt-text="The registered application Authentication information."::: -->
+Go to [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) and follow the instructions there to generate the basic app project.
 
 ### Verify that the app runs
-
-<!-- Now that the Redirect URI has been updated; you should be able to press F5 in Visual Studio to run the app. -->
 
 After completing the steps in [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory); you should be able to press F5 in Visual Studio to run the app.
 
@@ -168,13 +119,17 @@ To connect to Dataverse, you must configure permissions for the app to connect.
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-grant-admin-consent.png" alt-text="The button showing the optional button to grant admin consent for the registered application.":::
 
+   If you don't grant admin consent here, you will have the option when you log-in to the application next time.
+
 ## Step 4: Apply code changes
 
 Apply changes to the following files to enable displaying Dataverse data in the application.
 
 ### \wwwroot\appsettings.json
 
-You will find that this file already has configuration information generated by the template with information about the application registered in Azure AD. It will look like this:
+Apply the changes in the **After** tab below to add configuration data for your connection to Dataverse. `22222222-2222-2222-2222-222222222222` represents your tenant ID, and `11111111-1111-1111-1111-111111111111` represents the application (client) ID value you created in your application registration. Make sure to replace `https://yourorg.api.crm.dynamics.com` with the URL you [copied earlier](#get-the-dataverse-web-api-uri).
+
+#### [Before](#tab/before)
 
 ```json
 {
@@ -186,10 +141,7 @@ You will find that this file already has configuration information generated by 
 }
 ```
 
-Update the file to include a new `DataverseWebAPI` section that includes the root of the **Instance Web API Service Root URL** you copied in the [Get the Dataverse Web API URI](#get-the-dataverse-web-api-uri) step.
-
-> [!NOTE]
-> You don't need the full URL, just the root.
+#### [After](#tab/after)
 
 ```json
 {
@@ -206,6 +158,8 @@ Update the file to include a new `DataverseWebAPI` section that includes the roo
 }
 ```
 
+---
+
 ### Program.cs
 
 1. Install the `Microsoft.Extensions.Http` NuGet package.
@@ -216,7 +170,7 @@ Update the file to include a new `DataverseWebAPI` section that includes the roo
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-install-microsoft.extensions.http-nuget-package.png" alt-text="Install the required NuGet package.":::
 
-1. Replace the generated code (Before) you find in Program.cs with the following (After)
+1. Replace the generated code in the **Before** tab with the code in the **After** tab. `BlazorSample` is the name of the project you created, so it will vary.
 
 #### [Before](#tab/before)
 
