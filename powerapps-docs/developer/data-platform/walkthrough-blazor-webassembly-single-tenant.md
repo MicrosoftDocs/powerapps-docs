@@ -17,13 +17,13 @@ search.audienceType:
 
 Use the steps in this tutorial to create a Blazor WebAssembly app that connects to the Dataverse. The focus of this article is to understand the necessary steps to authenticate a user with a specific Dataverse instance and retrieve data.
 
-Blazor WebAssembly is one of two hosting models available for ASP.NET Core Blazor, the other is Blazor Server. For a complete description of the differences, see [ASP.NET Core Blazor hosting models](/aspnet/core/blazor/hosting-models).
+Blazor WebAssembly is one of two hosting models available for ASP.NET Core Blazor. The other is Blazor Server. For a complete description of the differences, see [ASP.NET Core Blazor hosting models](/aspnet/core/blazor/hosting-models).
 
-This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) article. Because Dataverse uses Azure Active Directory (Azure AD) for authentication, this tutorial will describe how to modify the basic app created using the app template provided so that it can connect to Dataverse.
+This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) article. Because Dataverse uses Azure Active Directory (Azure AD) for authentication, this tutorial describes how to modify the basic app created using the app template provided so that it can connect to Dataverse.
 
 ## Goal
 
-When you complete this tutorial, you will have a Blazor WebAssembly app that displays data from the Dataverse Account table that the authenticated user has access to.
+When you complete this tutorial, you have a Blazor WebAssembly app that displays data from the Dataverse Account table that the authenticated user has access to.
 
 :::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="Represents the goal of this tutorial.":::
 
@@ -52,28 +52,28 @@ Let's make sure that your environment is configured properly, and you understand
 
 ### Get the Dataverse Web API URI
 
-You will need the Instance Web API Service Root URL. This is found on the Developer Resources page of your Dataverse environment.
+You need the instance Web API Service Root URL. This URL is found on the Developer Resources page of your Dataverse environment.
 
 Follow the instructions found in [View or download developer resources](view-download-developer-resources.md) to copy the Url.
 
-It will look something like this: `https://yourorgname.api.crm.dynamics.com/api/data/v9.2/`
+It looks something like this: `https://yourorgname.api.crm.dynamics.com/api/data/v9.2/`
 
 ### Navigate to the Azure Active Directory portal
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. In the 'waffle' icon at the top left and select **Admin**.
+1. Select the 'waffle' icon at the top left, and select **Admin**.
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-admin-center.png" alt-text="Navigating to the Microsoft 365 admin center.":::
 
-1. This will take you to the Microsoft 365 admin center. In the left navigation, click **Show all** and select **Identity**.
+1. In the left navigation of the Microsoft 365 admin center, select **Show all** and select **Identity**.
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-AAD-from-admin-center.png" alt-text="Navigating to the Microsoft Entra admin center.":::
 
-1. This will take you to the Microsoft Entra admin center. Expand the **Applications** node in the left navigation pane and select **App registrations**.
+1. In the Microsoft Entra admin center, expand the **Applications** node in the left navigation pane and select **App registrations**.
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-aad-admin-center.png" alt-text="Navigating to the Microsoft Entra App registrations page.":::
 
-This takes you to the starting point for Step 2.
+This is where you will start step 2.
 
 ## Step 2: Create a Blazor WebAssembly standalone app using Azure AD for authentication
 
@@ -88,17 +88,17 @@ Go to [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Activ
 
 ### Verify that the app runs
 
-After completing the steps in [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory); you should be able to press F5 in Visual Studio to run the app.
+After completing the steps in [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory), you should be able to press F5 in Visual Studio to run the app.
 
 :::image type="content" source="media/blazor-webassembly-walkthrough-application-before-code-changes.png" alt-text="The default behavior of the Blazor WebAssembly app before changes are made.":::
 
-At this point, all the capabilities of the app work whether you log-in or not. Only members of the Azure AD tenant can log in.
+At this point, all the capabilities of the app work whether you log in or not. Only members of the Azure AD tenant can sign in.
 
 ## Step 3: Grant API permissions
 
 To connect to Dataverse, you must configure permissions for the app to connect.
 
-1. Return to your app registration in Azure AD, In the **API permissions** section, click **Add a permission**.
+1. Return to your app registration in Azure AD, In the **API permissions** section, select **Add a permission**.
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-add-permissions.png" alt-text="The registered application API Permissions settings page.":::
 
@@ -114,12 +114,12 @@ To connect to Dataverse, you must configure permissions for the app to connect.
    > [!NOTE]
    > **Dynamics CRM**, **Common Data Service**, and **Dataverse** refer to the same service.
 
-1. Click **Add permissions**.
-1. (Optional) For the **Configured permissions**, click **Grant Admin consent for [Your Azure Active Directory tenant name]**. In the screenshot below the tenant name is 'Default Directory'. Yours may be different.
+1. Select **Add permissions**.
+1. (Optional) For the **Configured permissions**, select **Grant Admin consent for [Your Azure Active Directory tenant name]**. In the screenshot below the tenant name is 'Default Directory'. Yours may be different.
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-grant-admin-consent.png" alt-text="The button showing the optional button to grant admin consent for the registered application.":::
 
-   If you don't grant admin consent here, you will have the option when you log-in to the application next time.
+   If you don't grant admin consent here, you have the option when you log in to the application next time.
 
 ## Step 4: Apply code changes
 
@@ -127,7 +127,7 @@ Apply changes to the following files to enable displaying Dataverse data in the 
 
 ### \wwwroot\appsettings.json
 
-Apply the changes in the **After** tab below to add configuration data for your connection to Dataverse. `22222222-2222-2222-2222-222222222222` represents your tenant ID, and `11111111-1111-1111-1111-111111111111` represents the application (client) ID value you created in your application registration. Make sure to replace `https://yourorg.api.crm.dynamics.com` with the URL you [copied earlier](#get-the-dataverse-web-api-uri).
+Apply the changes in the following **After** tab to add configuration data for your connection to Dataverse. `22222222-2222-2222-2222-222222222222` represents your tenant ID, and `11111111-1111-1111-1111-111111111111` represents the application (client) ID value you created in your application registration. Make sure to replace `https://yourorg.api.crm.dynamics.com` with the URL you [copied earlier](#get-the-dataverse-web-api-uri).
 
 #### [Before](#tab/before)
 
@@ -170,7 +170,7 @@ Apply the changes in the **After** tab below to add configuration data for your 
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-install-microsoft.extensions.http-nuget-package.png" alt-text="Install the required NuGet package.":::
 
-1. Replace the generated code in the **Before** tab with the code in the **After** tab. `BlazorSample` is the name of the project you created, so it will vary.
+1. Replace the generated code in the **Before** tab with the code in the **After** tab. `BlazorSample` is the name of the project you created, so it varies.
 
 #### [Before](#tab/before)
 
@@ -238,10 +238,10 @@ await builder.Build().RunAsync();
 
 ### Add \Pages\FetchAccounts.razor
 
-This is a new page that will display the account information.
+This is a new page that displays the account information.
 
-1. In solution explorer, right click **Pages** and select **Add** > **Razor Component…** from the context menu and name it `FetchAccounts.razor`.
-1. Replace the code in the file with the following:
+1. In solution explorer, right select **Pages** and select **Add** > **Razor Component…** from the context menu and name it `FetchAccounts.razor`.
+1. Replace the code in the file with the following code:
 
    ```cshtml
    @page "/fetchaccounts"
@@ -448,9 +448,9 @@ This is a new page that will display the account information.
 This code does the following:
 
 1. Ensures that only authenticated users can view the page with data.
-1. Defines a table to display Account data after it is retrieved.
-1. Requests an accesstoken and then uses that token with an HttpRequestMessage to retrieve data from Dataverse.
-1. Defines classes to enable strongly typed data when the JSON returned from the service is deserialized.
+1. Defines a table to display Account data after it's retrieved.
+1. Requests an accesstoken and then uses that token with a HttpRequestMessage to retrieve data from Dataverse.
+1. Defines classes to enable typed data when the JSON returned from the service is deserialized.
 
 ### \Shared\NavMenu.razor
 
@@ -471,10 +471,10 @@ Add this node where ever you like within the `<nav class="flex-column">` element
 In Visual Studio, press F5 to launch the app with the code changes.
 
 1. Before logging in, navigate to **Fetch Accounts**. You should expect to see the failure notification.
-1. Log-in as a user who has access to the Dataverse data.
+1. Sign in as a user who has access to the Dataverse data.
 
    > [!NOTE]
-   > If you did not grant admin consent in [Step 3: Grant API permissions](#step-3-grant-api-permissions), users can expect to see a dialog like this:
+   > Users can expect to see a dialog like this the first time they log in:
    >
    > :::image type="content" source="media/blazor-webassembly-walkthrough-request-consent-dialog.png" alt-text="The dialog to prompt the user to grant consent to the application.":::
    >
