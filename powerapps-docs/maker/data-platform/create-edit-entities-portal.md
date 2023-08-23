@@ -30,17 +30,34 @@ You can also select a column heading from the table view, and then select **Filt
 
 ## Create a table
 
-There are several ways to create a new table: 
-- [Start with a blank table](#start-with-a-blank-table)
+There are several ways to create a new table:
+- [Add columns and data](#add-columns-and-data)
 - [Describe the new table](#describe-the-new-table)
-- 
+- [Set advanced properties](#set-advanced-properties)
+- [Upload an Excel file](#upload-an-excel-file)
+- [Create a virtual table](#create-a-virtual-table)
 
-### Start with a blank table
+### Add columns and data
 
-Watch this video for a quick overview about how to create a table:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM]
+1. Create a table by starting with the data rows and columns you want.
+1. When you're finished, select **Create**.
 
-From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** panel.
+### Describe the new table
+
+Create a table with the help of AI.
+
+1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
+1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
+1. When you're finished, select **Create**.
+
+### Set advanced properties
+
+<!-- Watch this video for a quick overview about how to create a table:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM] -->
+
+Start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes. 
+
+From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** properties panel.
 
 :::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
 
@@ -88,22 +105,9 @@ Select **Advanced options** to display additional properties that are optional f
 
 Select **Save** to continue, this will close the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
 
-### Describe the new table
-
-Create a table with the help of AI.
-
-1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
-1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
-1. When you're finished, select **Create**.
-
-### Add columns and data
-
-1. Create a table by starting with the data rows and columns you want.
-1. When you're finished, select **Create**.
-
 ### Upload an Excel file
 
-Use an Excel file to populate a table with your data.
+Use an Excel file to populate a table with your data that uses AI to map the Excel data to a Dataverse table.
 
 1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
 1. Select from device or drag and drop your Excel file onto the Upload an Excel file page.
