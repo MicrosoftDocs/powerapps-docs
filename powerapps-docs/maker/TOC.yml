@@ -55,7 +55,7 @@
     items:
     - name: Overview
       href: ../user/use-model-driven-apps.md
-    - name: Modern, refreshed look (preview)
+    - name: Modern, refreshed look
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
@@ -1200,18 +1200,28 @@
       href: ./canvas-apps/license-designation.md
     - name: Restore a previous version
       href: ./canvas-apps/restore-an-app.md
-  - name: Test an app with Test Studio
+  - name: Test an app
     items:
-    - name: Test Studio Overview
-      href: ./canvas-apps/test-studio.md
-    - name: Working with Test Studio
-      href: ./canvas-apps/working-with-test-studio.md
-    - name: Automate tests with Azure DevOps Pipelines
-      items:
-      - name: Configure pipeline using classic editor
-        href: ./canvas-apps/test-studio-classic-pipeline-editor.md
-      - name: Configure pipeline using YAML
-        href: ./canvas-apps/test-studio-yaml-pipeline.md
+      - name: Test an app with Test Studio
+        items:
+        - name: Test Studio Overview
+          href: ./canvas-apps/test-studio.md
+        - name: Working with Test Studio
+          href: ./canvas-apps/working-with-test-studio.md
+        - name: Automate tests with Azure DevOps Pipelines
+          items:
+          - name: Configure pipeline using classic editor
+            href: ./canvas-apps/test-studio-classic-pipeline-editor.md
+          - name: Configure pipeline using YAML
+            href: ./canvas-apps/test-studio-yaml-pipeline.md
+      - name: Test an app with Test Engine (preview)
+        items:
+        - name: Test Engine Overview
+          href: ../developer/test-engine/overview.md
+        - name: Test Engine Yaml format
+          href: ../developer/test-engine/yaml.md
+        - name: Test Engine Power Fx functions
+          href: ../developer/test-engine/powerfx.md
   - name: Customize a SharePoint form
     items:
       - name: Make basic changes
@@ -1735,6 +1745,8 @@
       href: ./common/performance-insights-categories.md
   - name: App ratings (preview)
     href: ./common/app-ratings.md
+  - name: Model-driven app frequently asked questions
+    href: ./model-driven-apps/model-app-faq.md
   - name: Developer zone
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
@@ -2479,6 +2491,8 @@
               href: ../cards/controls/media.md
             - name: Number input
               href: ../cards/controls/number-input.md
+            - name: Table
+              href: ../cards/controls/table.md
             - name: Text input
               href: ../cards/controls/text-input.md
             - name: Text label
