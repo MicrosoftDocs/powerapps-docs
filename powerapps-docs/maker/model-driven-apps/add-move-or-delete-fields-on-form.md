@@ -2,7 +2,7 @@
 title: "Add, configure, move, or delete columns on a form | MicrosoftDocs"
 description: Learn how to work with columns on a form using Power Apps.
 ms.custom: ""
-ms.date: 05/10/2022
+ms.date: 08/23/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -92,7 +92,7 @@ The **Properties** tab displays the following properties.
 | **Components**  |  **+ Component**  | Adds a control to the column such as the canvas app control or the AI business card control.    |
 
 > [!WARNING]
-> **Hide** and **Read-only** should not be used as a secure way to prevent users from seeing or editing column values. These properties only apply to a form. It does not affect data permissions. Users can access data in other ways like viewing other forms or making Web API calls. To properly secure columns, use [column-level security to control access](/power-platform/admin/field-level-security).
+> The **Hide** and **Read-only** properties should never be used as a secure way to prevent users from viewing or editing column values. These properties only apply to a form and don't have an affect on a user's data privileges. Users can access data in other ways like viewing other forms or by making Web API calls. To secure columns, use [column-level security to control access](/power-platform/admin/field-level-security).
 
 > [!NOTE]
 > In Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
