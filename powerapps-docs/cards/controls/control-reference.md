@@ -46,6 +46,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Number input](../controls/number-input.md)** – A field for users to type a number.
 
+**[Table](../controls/table.md)** – Present tabular data or any structured information that is best laid out in rows and columns. 
+
 **[Text input](../controls/text-input.md)** – A field for users to type text.
 
 **[Text label](../controls/text-label.md)** – A block of text with properties to control what the text looks like.
