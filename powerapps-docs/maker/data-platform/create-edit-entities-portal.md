@@ -31,6 +31,7 @@ You can also select a column heading from the table view, and then select **Filt
 ## Create a table
 
 There are several ways to create a new table:
+
 - [Add columns and data](#add-columns-and-data)
 - [Describe the new table](#describe-the-new-table)
 - [Set advanced properties](#set-advanced-properties)
@@ -39,7 +40,9 @@ There are several ways to create a new table:
 
 ### Add columns and data
 
-1. Create a table by entering the data rows and columns you want.
+Create a table by entering the data rows and columns you want.
+
+1. From the **Tables** area, on the command bar select **New table** > **Add columns and data**.
 1. When you're finished, select **Create**.
 
 More information: [Table designer](#table-designer)
@@ -57,7 +60,7 @@ Create a table with the help of AI.
 <!-- Watch this video for a quick overview about how to create a table:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM] -->
 
-Start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes. 
+Start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes.
 
 From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** properties panel.
 
