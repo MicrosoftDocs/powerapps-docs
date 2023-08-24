@@ -26,7 +26,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Check box](../controls/check-box.md)** – An checkbox that lets users choose between two options by selecting or clearing.
 
-**[Column](../controls/column.md)** - An individual column which acts as a container for other elements.
+**[Column](../controls/column.md)** - An individual column, which acts as a container for other elements.
 
 **[Column set](../controls/column-set.md)** - A collection of columns, each column is a container.
 
@@ -46,6 +46,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Number input](../controls/number-input.md)** – A field for users to type a number.
 
+**[Table](../controls/table.md)** – Present tabular data or any structured information that is best laid out in rows and columns. 
+
 **[Text input](../controls/text-input.md)** – A field for users to type text.
 
 **[Text label](../controls/text-label.md)** – A block of text with properties to control what the text looks like.
@@ -58,11 +60,11 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Alt text** – Alternate text describing the image, audio, or video.
 
-**Associated inputes** - Controls which inputs are associated with the action.
+**Associated inputs** - Controls which inputs are associated with the action.
 
 ### B
 
-**Background color** – Applies a background to a transparent image. This property will respect the image style.
+**Background color** – Applies a background to a transparent image. This property respects the image style.
 
 **Background image** – Specifies a background image. Acceptable formats are PNG, JPEG, and GIF.
 
@@ -100,13 +102,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### I
 
-**IconUrl** - Optional icon to be shown on the button in conjunction with the title. Supports data URI in version 1.2+.
+**IconUrl** - Optional icon to be shown on the button beside the title. Supports data URI in version 1.2+.
 
-**Image size** – Controls the approximate size of each image. The physical dimensions will vary per host. Auto and stretch are not supported for image set. The size will default to medium if those values are set.
+**Image size** – Controls the approximate size of each image. The physical dimensions vary per host. Auto and stretch aren't supported for image set. The size defaults to medium if those values are set.
 
-**InlineAction** – The inline action for the input. Typically displayed to the right of the input. It is recommended to provide an icon on the action (which will be displayed instead of the title of the action).
+**InlineAction** – The inline action for the input. Typically displayed to the right of the input. It's recommended to provide an icon on the action (which is displayed instead of the title of the action).
 
-**Initially visible** – If false, this item will be removed from the visual tree.
+**Initially visible** – If false, this item is removed from the visual tree.
 
 ### L
 
@@ -124,6 +126,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Minimum value** – Hint of minimum value (may be ignored by some clients).
 
+**Mode** – The mode can be defined as primary or secondary, to establish a hierarchy between card elements.
+
 **Multiline** – If true, allow multiple lines of input.
 
 **Multiple selection** – Allow multiple items to be selected.
@@ -138,19 +142,21 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Poster** – URL of an image to display before playing. Supports data URI in version 1.2+
 
+**Present right-to-left** – When enabled, content in the container should be presented right to left. When disabled, content in this container should be presented left to right. When unset, layout direction will inherit from parent container or column. If unset in all ancestors, the default platform behavior applies.
+
 ### R
 
 **Regex** – Regular expression indicating the required format of this text input.
 
 **Repeat for every** – Repeat for every is used to display a control multiple times based on a data source. The repeat for every property is set to a collection or data source, then the relevant property can use `ThisItem` to reference specific items within the collection or data source.
 
-Using the Dataverse Accounts table and a text label's **Repeat for every** property, a maker can create a card that displays the account name of every account within the Accounts table.
+By using the Dataverse Accounts table and a text label's **Repeat for every** property, a maker can create a card that displays the account name of every account within the Accounts table.
 
 1. Add the Accounts table using the [Dataverse connection](../make-a-card/connectors/connector-intro.md).
 1. Add a text label control.
 1. Set the text label **Repeat for every** property to `Accounts`.
 1. Set the text label **Text** property to `ThisItem.'Account Name'`.
-1. Play the card, which will show a list of text labels the length of the Accounts table, each one displaying an account name.
+1. Play the card, which shows a list of text labels the length of the Accounts table, each one displaying an account name.
 
 
 **Required field** – Whether or not this input is required.
@@ -159,6 +165,8 @@ Using the Dataverse Accounts table and a text label's **Repeat for every** prope
 ### S
 
 **Screen** - The screen that is shown below the current card when a user taps or clicks on a button of type 'Show Screen'.
+
+**Show grid lines** – Specifies whether grid lines should be displayed.
 
 **Show when** – Conditional layout expression.
 
@@ -180,6 +188,8 @@ Using the Dataverse Accounts table and a text label's **Repeat for every** prope
 
 **Title** - Label for this button.
 
+**Tooltip** - Defines text that should be displayed to the end user as they hover the mouse over the action, and read when using narration software.
+
 **Type** –  What action the button should take on select - can be Show Screen, Run Power Fx, Open Url, or Toggle Visibility.
 
 ### U
@@ -189,6 +199,7 @@ Using the Dataverse Accounts table and a text label's **Repeat for every** prope
 ### V
 
 **Value** – The initial item (or set of items) that should be selected. For multi-select, specify a comma-separated string of values.
+
 
 ### W
 
