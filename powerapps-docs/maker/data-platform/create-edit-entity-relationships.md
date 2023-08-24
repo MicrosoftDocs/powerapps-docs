@@ -137,29 +137,24 @@ Because of parental relationships there are some limitations you should keep in 
 
 ### Inherited access rights cleanup
 
-Using Reparent and Share cascading behaviors are helpful when you want to provide access to rows across related tables. But there can be a change in process or design that requires a change of the cascading behavior settings.
+Using **Reparent** and **Share** cascading behaviors are helpful when you want to provide access to rows across related tables. But there can be a change in process or design that requires a change of the cascading behavior settings.
 
-When a table relationship uses Reparent or Share, and the cascading behavior is changed from **Cascade All** to **Cascade None**, the table relationship prevents any new permission changes from cascading to the related child tables. In addition, inherited permissions that were granted while the cascading behavior was active must be revoked.
+When a table relationship uses **Reparent** or **Share**, and the cascading behavior is changed to **Cascade None**, the table relationship prevents any new permission changes from cascading to the related child tables. In addition, inherited permissions that were granted while the cascading behavior was active must be revoked.
 
-Inherited access rights cleanup is a system job that cleans up the legacy inherited access rights that remain after the cascading behavior is changed from **Cascade All** to **Cascade None**. This cleanup will not affect any user that was directly granted access to a table, but will remove access from anyone who received access through inheritance only.
-
-> [!NOTE]
-> Currently, to run inherited access rights cleanup requires using the Web API. More information: [CreateAsyncJobToRevokeInheritedAccess Action](/dynamics365/customer-engagement/web-api/createasyncjobtorevokeinheritedaccess)
+Inherited access rights cleanup is a system job that cleans up the legacy inherited access rights that remain after the cascading behavior is changed to **Cascade None**. This cleanup will not affect any user that was directly granted access to a table, but will remove access from anyone who received access through inheritance only.
 
 This is how inherited access rights cleanup works:
 
 1. Identifies and collects all the tables that were in a cascading relationship with the updated parent.
+1. Identifies and collects the users that were granted access to the related tables through inherited access.
+1. Checks for users who were given direct access to a related table and removes them from the collection.
+1. Removes inherited access for the collected users on the collected tables.
 
-2. Identifies and collects the users that were granted access to the related tables through inherited access.
-
-3. Checks for users who were given direct access to a related table and removes them from the collection.
-
-4. Removes inherited access for the collected users on the collected tables.
-
-After the cleanup runs, users who were able to access related tables only because of the cascading feature can no longer access the rows, ensuring greater security.
+After the cleanup runs, users who were able to access related tables only because of the cascading feature can no longer access the rows, ensuring greater security. There are cases where the cleanup may not be not successful. [Learn more about how to clean up inherited access](/troubleshoot/power-platform/power-apps/dataverse/cleanup-inherited-access)
 
 
 ### See also
+
 [Monitor system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) <br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
 [Create Many-to-many (N:N) table relationships](create-edit-nn-relationships.md)
