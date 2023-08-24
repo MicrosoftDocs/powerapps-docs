@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
-ms.date: 06/27/2023
+ms.date: 08/24/2023
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -49,17 +49,16 @@ A single browser session can be changed by adding the URL parameter ```&channel=
 | Semi-annual | ```&channel=semiannual``` |
 | Monthly | ```&channel=monthly``` |
 
-When the channel is monthly, the monthly release can be changed using the URL parameter ```&channelrelease=<releasename>```. The release name is three letter month and four digit year like *MmmYYYY*.
+When the channel is monthly, the monthly release can be changed using the URL parameter ```&channelrelease=<releasename>```. Starting with build 23074, the release name format is the two digit year and two digit month like *YYMM*. Prior to build 23074, the release name is three letter month and four digit year like *MmmYYYY*.
 
 | Monthly Release | Release Name Parameter |
 | --- | --- |
-| May 2023 | ```&channelrelease=May2023``` |  
-| June 2023 | ```&channelrelease=Jun2023``` |  
-| July 2023 | ```&channelrelease=Jul2023``` |  
-| August 2023 | ```&channelrelease=Aug2023``` |  
+| July 2023 | ```&channelrelease=2307``` |  
+| August 2023 | ```&channelrelease=2308``` |  
+| September 2023 | ```&channelrelease=2309``` |  
 
 > [!NOTE]
-> Any valid ```MmmYYYY``` date can be entered but future dates might not have any features defined.  
+> Any valid ```YYMM``` release can be entered but future dates might not have any features defined.  
 
 ## Validating the next monthly release
 
@@ -69,7 +68,7 @@ Validation should be done for each monthly channel release before it's automatic
 
 1. Find the next monthly release short name by opening [Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
 
-1. Add the URL parameter ```&channelrelease=``` with the next release short name like *Aug2023*.
+1. Add the URL parameter ```&channelrelease=``` with the next release short name like *2308*.
 
 ## Comparing features across channels and releases
 
