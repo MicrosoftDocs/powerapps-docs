@@ -118,7 +118,7 @@ Select **Save** to continue, this will close the **New table** panel and display
 
 ### Upload an Excel file (preview)
 
-Use an Excel file to populate a table with your data, which uses AI to map the Excel data to a Dataverse table.
+Use an Excel file to populate a table with your data, which uses AI to assist with the table generation when Copilot is enabled for the environment.
 
 > [!IMPORTANT]
 > - This is a preview feature.
