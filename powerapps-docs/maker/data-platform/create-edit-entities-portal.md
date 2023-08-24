@@ -49,7 +49,7 @@ More information: [Table designer](#table-designer)
 
 ### Describe the new table
 
-Create a table with the help of AI.
+Create a table with the help of AI Copilot.
 
 1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
 1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
@@ -118,8 +118,6 @@ Use an Excel file to populate a table with your data, which uses AI to map the E
 1. Select from device or drag and drop your Excel file onto the Upload an Excel file page.
 1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
 1. When you're finished, select **Create**.
-
-More information: [Import from an Excel or CSV file](data-platform-import-export.md#import-from-an-excel-or-csv-file)
 
 ### Create a virtual table
 
