@@ -55,7 +55,7 @@
     items:
     - name: Overview
       href: ../user/use-model-driven-apps.md
-    - name: Modern, refreshed look (preview)
+    - name: Modern, refreshed look
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
@@ -2491,6 +2491,8 @@
               href: ../cards/controls/media.md
             - name: Number input
               href: ../cards/controls/number-input.md
+            - name: Table
+              href: ../cards/controls/table.md
             - name: Text input
               href: ../cards/controls/text-input.md
             - name: Text label
