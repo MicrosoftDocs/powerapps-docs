@@ -8,7 +8,9 @@ ms.topic: "how-to"
 ms.subservice: dataverse-maker
 ms.author: "matp"
 ---
-# Create and edit tables using Power Apps
+# Create and edit tables using Power Apps (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to view, create, and edit tables for Microsoft Dataverse.
 
@@ -32,15 +34,19 @@ You can also select a column heading from the table view, and then select **Filt
 
 There are several ways to create a new table:
 
-- [Add columns and data](#add-columns-and-data)
+- [Add columns and data (preview)](#add-columns-and-data-preview)
 - [Describe the new table](#describe-the-new-table)
 - [Set advanced properties](#set-advanced-properties)
-- [Upload an Excel file](#upload-an-excel-file)
+- [Upload an Excel file (preview)](#upload-an-excel-file-preview)
 - [Create a virtual table](#create-a-virtual-table)
 
-### Add columns and data
+### Add columns and data (preview)
 
 Create a table by entering the data rows and columns you want.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 1. From the **Tables** area, on the command bar select **New table** > **Add columns and data**.
 1. When you're finished, select **Create**.
@@ -110,9 +116,13 @@ Select **Advanced options** to display additional properties that are optional f
 
 Select **Save** to continue, this will close the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
 
-### Upload an Excel file
+### Upload an Excel file (preview)
 
 Use an Excel file to populate a table with your data, which uses AI to map the Excel data to a Dataverse table.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
 1. Select from device or drag and drop your Excel file onto the Upload an Excel file page.
