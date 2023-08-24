@@ -24,7 +24,12 @@ Use line charts, pie charts, and bar charts to display your data in a canvas app
 
 For example, your data should look similar to the following:
 
-![Data example][9]
+
+|Product  |Revenue2012  |Revenue2013 | Revenue2014|
+|----------|-----------|------------|------------|
+|Europa    |21000      |26000      | 28000       |
+|Ganymede    |15000      |17000      | 21000       |
+|Callisto    |14000      |19000      | 23000       |
 
 You can create and use these charts within Power Apps. Let's get started.
 
@@ -33,7 +38,7 @@ You can create and use these charts within Power Apps. Let's get started.
 * [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 * Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 * Learn how to [configure a control](add-configure-controls.md) in Power Apps.
-* Download [ChartData.zip](https://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), which contains sample data as an XML file. Follow the steps in this topic to import it directly into your app. As an alternative, decompress the .zip file, open the XML file in Excel, and save it to a [cloud-storage account](connections/cloud-storage-blob-connections.md).
+* Create your own sample data using the example above.
 
 ## Import the sample data
 In these steps, we import the sample data into a collection, named **ProductRevenue**.
