@@ -1,6 +1,26 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/composite-attributes.md",
+      "redirect_url": "/previous-versions/dynamicscrm-2016/developers-guide/dn481581(v=crm.8)",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/use-outlook-methods.md",
+      "redirect_url": "https://learn.microsoft.com/previous-versions/dynamicscrm-2016/developers-guide/gg309513(v=crm.8)",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/bulk-operations-elastic-tables.md",
+      "redirect_url": "bulk-operations",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-createmultiple-updatemultiple.md",
+      "redirect_url": "../bulk-operations",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/webapi/enhanced-quick-start.md",
       "redirect_url": "get-started-dynamics-365-web-api-csharp",
       "redirect_document_id": "false"

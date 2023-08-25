@@ -1,5 +1,5 @@
 ---
-title: DataSet in Microsoft Dataverse| Microsoft Docs
+title: DataSet (Power Apps component framework API reference) | Microsoft Docs
 description: Learn how to use different methods and properties available for DatSet in Power Apps component framework.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -23,13 +23,13 @@ Model-driven and canvas apps.
 
 ### columns
 
-The set of columns available in this dataset. This is supported in both model-driven and canvas apps.
+The set of columns available in this dataset. Supported in both model-driven and canvas apps.
 
 **Type**: [Column](column.md)[]
 
 ### error
 
-Whether an error occurred in data retrieval. This is supported in both model-driven and canvas apps.
+Whether an error occurred in data retrieval. Supported in both model-driven and canvas apps.
 
 **Type**: `boolean`
 
@@ -45,7 +45,7 @@ The error message associated with the last encountered error, if applicable.
 
 ### filtering
 
-The column filtering for the current query. This is supported in both model-driven and canvas apps. Filtering can be configured for a dataset by setting `context.parameters.[dataset_property_name].filtering.setFilter(<filterExpression>)`. Once filter is set, calling `context.parameters.[dataset_property_name].refresh()` retrieves the filtered data from the data source.
+The column filtering for the current query. Supported in both model-driven and canvas apps. Filtering can be configured for a dataset by setting `context.parameters.[dataset_property_name].filtering.setFilter(<filterExpression>)`. Once filter is set, calling `context.parameters.[dataset_property_name].refresh()` retrieves the filtered data from the data source.
 
 | Value | Conditional operator  | Model-driven apps | Canvas apps |
 | ----- | --------------------- | ----------------- | ----------- |
@@ -100,19 +100,19 @@ The column filtering for the current query. This is supported in both model-driv
 
 ### linking
 
-Defines the linked table information. This is supported only in model-driven apps.
+Defines the linked table information. Supported only in model-driven apps.
 
 **Type**: [Linking](linking.md)
 
 ### loading
 
-Indicates whether the dataset is loading or not. This is supported in both model-driven and canvas apps.
+Indicates whether the dataset is loading or not. Supported in both model-driven and canvas apps.
 
 **Type**: `boolean`
 
 ### paging
 
-Pagination status and actions. This is supported in both model-driven and canvas apps. Paging info can be accessed and configured for a dataset using `context.parameters.[dataset_property_name].paging `.
+Pagination status and actions. Supported in both model-driven and canvas apps. Paging info can be accessed and configured for a dataset using `context.parameters.[dataset_property_name].paging `.
 
 > [!NOTE]
 > Dataverse data source does not return the `totalRecordCount` in paging object for canvas apps. Instead, it uses `hasNextPage` and `hasPreviousPage` to check if there are more records to be fetched.
@@ -123,19 +123,19 @@ Dataset components can use `context.parameters.[dataset_property_name].paging.se
 
 ### records
 
-Map of IDs to the full record object. This is supported in both model-driven and canvas apps.
+Map of IDs to the full record object. Supported in both model-driven and canvas apps.
 
 **Type**: [EntityRecord](entityrecord.md)
 
 ### sortedRecordIds
 
-IDs of the records in the dataset, order by the query response result. This is supported in both model-driven and canvas apps.
+IDs of the records in the dataset, order by the query response result. Supported in both model-driven and canvas apps.
 
 **Type**: `string[]`
 
 ### sorting
 
-The sorting status for the current query. This is supported in both model-driven and canvas apps. Sorting can be configured for a dataset by setting `context.parameters.[dataset_property_name].sorting = [SortStatus]`. Once sorting is configured, calling `context.parameters.[dataset_property_name].refresh()` retrieves the sorted data from the data source.
+The sorting status for the current query. Supported in both model-driven and canvas apps. Sorting can be configured for a dataset by setting `context.parameters.[dataset_property_name].sorting = [SortStatus]`. Once sorting is configured, calling `context.parameters.[dataset_property_name].refresh()` retrieves the sorted data from the data source.
 
 > [!NOTE]
 > Sorting feature is only available to Dataverse data source.
@@ -164,13 +164,13 @@ The sorting status for the current query. This is supported in both model-driven
 
 ## Lookup columns
 
-Dataverse table's lookup columns can now be retrieved. For canvas apps if a lookup column is included in the dataset , all columns in the referred record will be retrieved. `GetFormattedValue` returns the JSON string for this column. `GetValue` method returns the JSON object directly.
+Dataverse table's lookup columns can now be retrieved. For canvas apps, if a lookup column is included in the dataset, all columns in the referred record are retrieved. `GetFormattedValue` returns the JSON string for this column. `GetValue` method returns the JSON object directly.
 
 ## Example
 
 To learn more about how to implement the dataset methods, see [DataSet Grid component](../sample-controls/data-set-grid-control.md)
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

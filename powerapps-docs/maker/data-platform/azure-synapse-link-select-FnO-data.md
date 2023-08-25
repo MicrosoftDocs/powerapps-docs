@@ -30,7 +30,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 - By default, saving in Parquet Delta Lake format is enabled for finance and operations data, so that query response times are faster.
 
 > [!NOTE]
-> This feature is a preview feature.
+> This is a preview feature.
 >
 > The Export to Data Lake feature in finance and operations apps will eventually be combined with Azure Synapse Link for Dataverse. We also plan to retire the Export to Data Lake service and transition existing customers to Azure Synapse Link for Dataverse.
 >
@@ -87,11 +87,7 @@ The preview has several limitations that will be addressed in future releases. T
 
 - You must create a new Azure Synapse Link profile. You can't add finance and operations apps tables to existing Azure Synapse Link profiles.
 - The following Microsoft-provided finance and operations apps tables aren't currently enabled in Azure Synapse Link. However, they will be enabled in a future release.
-
     - Tables that don't have a unique index on the `Rec ID` column. An example is the `REQPLAN` table.
-    - Tables that contain sensitive fields. Examples include `CUSTTABLE`, `VENDTABLE`, `CONTACTPERSON`, `VENDBANKACCOUNT`, `HCMPERSONPRIVATECITIZENSHIPDETAILS`, `HCMPERSONPRIVATEDETAILS`, `WHSWORKUSER`, `CUSTBANKACCOUNT`, `BANKACCOUNTTABLE`, `BANKSTMTISOREPORTENTRY`, and `JMGEMPLOYEE`.
-    - Tables that contain extended data type (EDT) *Array* types: `PROJTABLE`, `TSTIMESHEETLINEWEEK`, `WHSCONTAINERTABLE`, `WHSWAVETABLE`, `WHSINVENTTABLE`, and `RESOURCESETUP`.
-
     All other finance and operations apps tables that Microsoft provides are already enabled in Azure Synapse Link.
 
 - To enable custom tables, you must enable change tracking in them. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).

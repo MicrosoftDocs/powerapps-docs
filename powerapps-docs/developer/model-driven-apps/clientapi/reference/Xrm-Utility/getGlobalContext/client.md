@@ -46,7 +46,7 @@ Value |Client |
 
 ## getClientState
 
-Returns a value to indicate the state of the client.  Note that a client in offline-first mode (in preview) will always indicate it is offline.
+Returns a value to indicate the state of the client. A client in offline-first mode (in preview) always indicates it's offline.
 
 ### Syntax
 
@@ -87,7 +87,7 @@ Value |Form Factor |
 
 ## isOffline
 
-Returns information whether the client state is online or offline.  Note that a client in offline-first mode will always report it is offline.
+Returns information whether the client state is online or offline. A client in offline-first mode always reports it's offline.
 
 ### Syntax
 
@@ -103,6 +103,8 @@ Returns information whether the client state is online or offline.  Note that a 
 
 Returns information whether the network is available or not, regardless of client mode.
 
+[!INCLUDE [online-only-api-note](../../../includes/online-only-api-note.md)]
+
 ### Syntax
 
 `clientContext.isNetworkAvailable()`
@@ -113,7 +115,7 @@ Returns information whether the network is available or not, regardless of clien
 
 **Description**: **true** if the network is available; **false** otherwise.
 
-## Related topics
+## Related articles
 
 [Organization Settings](organizationSettings.md)
 

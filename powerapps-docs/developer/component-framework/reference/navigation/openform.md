@@ -1,5 +1,5 @@
 ---
-title: openForm | Microsoft Docs
+title: openForm (Power Apps component framework API reference) | Microsoft Docs
 description: Opens a form or a quick create form.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -38,7 +38,7 @@ Type: `Promise<OpenFormSuccessResponse>`. The `openFormSuccessResponse` returns 
 
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)
 
-### Related topics
+### Related articles
 
 [Navigation](../navigation.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
