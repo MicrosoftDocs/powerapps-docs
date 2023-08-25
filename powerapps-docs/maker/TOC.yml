@@ -1949,7 +1949,7 @@
       href: ./data-platform/create-edit-metadata.md
     - name: Types of tables
       href: ./data-platform/types-of-entities.md
-    - name: "Create or edit a table"
+    - name: Create or edit a table (preview)
       href: ./data-platform/create-edit-entities-portal.md
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
