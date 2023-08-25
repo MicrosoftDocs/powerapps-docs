@@ -33,12 +33,12 @@ Imagine an auditor requires access to long term data retained for the accounts t
 > - Edit filters doesn't retrieve table row attachments. To view attachment data, create a flow. More information: [Create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow)
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), play an app that includes a table that has retained data.
-1. Open the view you want. From the view select **Edit filters**.
+1. Open the view you want. From the view, select **Edit filters**.
 1. Select **Change to retained data**.
    :::image type="content" source="media/data-retention-advanced-find.png" alt-text="Select change to retained data on the edit filter pane.":::
 1. Select the tables and search filters you want, and then select **Apply**. The retained data is displayed in the read-only grid.
    :::image type="content" source="media/data-retention-advanced-find-results.png" alt-text="Advanced find query results displaying retained case records":::
-If you need to retrieve long term data from multiple related tables, such as the account table, which has an associated retained case table, first use advanced find retrieve the retained case row. Then use the **Casenumber** column and use advanced find to retrieve the account row that contains the case number.
+If you need to retrieve long term data from multiple related tables, such as the account table, which has an associated retained case table, first use advanced find retrieve the retained case row. Then use the `Casenumber` column and use advanced find to retrieve the account row that contains the case number.
 
 More information: [Advanced find in model-driven apps](../../user/advanced-find.md)
 
@@ -48,7 +48,7 @@ Create a Power Automate cloud flow to create an Excel file of the retained data 
 
 ## Limitations for retrieval of retained data
 
-This restrictions are enforced by Dataverse for each environment:
+These restrictions are enforced by Dataverse for each environment:
 
 - Up to five users can query and retrieve retained data at the same time.
 - Up to 30 queries per day are allowed for each environment.
