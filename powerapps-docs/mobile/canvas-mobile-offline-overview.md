@@ -24,16 +24,15 @@ If users of your Dataverse-based canvas app may have spotty or no access to the 
 > [!IMPORTANT]
 > The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
 >
-> - CountRows
-> - Filter or lookup on Lookup field
 > - First
-> - In
 > - IsBlank
 > - Relate
-> - Search
-> - StartsWith
 > - Sum/Min/Max/Avg
 > - Unrelate
+>
+>Filter generally works however it does not yet support parsing the following tokens as part of the filter expression: 
+>
+>>*, %  & ( ) = <whitespace>*
 
 You can also build complex offline apps using custom *offline profiles*. An offline profile is a set of filters and restrictions on the data your app loads to users' mobile devices. Offline profiles help you to optimize your app's performance by reducing the amount of data downloaded to the device. For example, while you may have access rights to millions of records in a table, your app may need only a thousand of them. If you download only a thousand records, your app performs better. If you need more than 15 tables in your offline app, you may want to consider using a custom offline profile.
 
