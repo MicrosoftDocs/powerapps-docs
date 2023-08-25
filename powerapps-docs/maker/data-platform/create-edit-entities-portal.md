@@ -8,9 +8,7 @@ ms.topic: "how-to"
 ms.subservice: dataverse-maker
 ms.author: "matp"
 ---
-# Create and edit tables using Power Apps (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create and edit tables using Power Apps
 
 [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to view, create, and edit tables for Microsoft Dataverse.
 
@@ -50,6 +48,8 @@ Create a table by entering the data rows and columns you want.
 More information: [Table designer](#table-designer)
 
 ### Describe the new table (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Create a table with the help of AI Copilot.
 
@@ -117,6 +117,8 @@ Select **Advanced options** to display additional properties that are optional f
 Select **Save** to continue, this will close the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
 
 ### Upload an Excel file (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Use an Excel file to populate a table with your data, which uses AI to assist with the table generation when Copilot is enabled for the environment.
 
