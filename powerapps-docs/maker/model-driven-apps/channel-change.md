@@ -32,9 +32,9 @@ The release channel for model-driven apps can be changed in a couple different w
 
 The environment channel can be set using the Power Platform admin center or with code.
 
-Power Platform admins can change the release channel using the environment's behavior settings. More information: [Manange behavior settings](/power-platform/admin/settings-behavior).
+Power Platform admins can change the release channel using the environment's behavior settings. More information: [Manage behavior settings](/power-platform/admin/settings-behavior).
 
-Developers can change the release channel by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/organization#BKMK_ReleaseChannel) column value for the row in the [Organization](/power-apps/developer/data-platform/reference/entities/organization) table. There is always a single row in the organization table.
+Developers can change the release channel by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/organization#BKMK_ReleaseChannel) column value for the row in the [Organization](/power-apps/developer/data-platform/reference/entities/organization) table. There's always a single row in the organization table.
 More information:
 
 * [Update a record using Web API](/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
@@ -49,7 +49,7 @@ A single browser session can be changed by adding the URL parameter ```&channel=
 | Semi-annual | ```&channel=semiannual``` |
 | Monthly | ```&channel=monthly``` |
 
-When the channel is monthly, the monthly release can be changed using the URL parameter ```&channelrelease=<releasename>```. Starting with build 23074, the release name format is the two digit year and two digit month like *YYMM*. Prior to build 23074, the release name is three letter month and four digit year like *MmmYYYY*.
+When the channel is monthly, the monthly release can be changed using the URL parameter ```&channelrelease=<releasename>```. Starting with build 23074, the release name format is the two digit year and two digit month, like *YYMM*. Prior to build 23074, the release name is a three letter month and four digit year, like *MmmYYYY*.
 
 | Monthly Release | Release Name Parameter |
 | --- | --- |
