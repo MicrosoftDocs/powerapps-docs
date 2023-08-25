@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 07/28/2023
+ms.date: 08/25/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
