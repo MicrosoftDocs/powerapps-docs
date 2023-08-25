@@ -38,37 +38,33 @@ You can create and use these charts within Power Apps. Let's get started.
 * [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 * Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 * Learn how to [configure a control](add-configure-controls.md) in Power Apps.
-* Create your own sample data using the example above.
+* Create your own [sample data](/power-platform/admin/add-remove-sample-data) using the example above and save it in Excel. Follow the steps in this topic to import it directly into your app.
 
 ## Import the sample data
 In these steps, we import the sample data into a collection, named **ProductRevenue**.
 
-1. On the **Insert** tab, select **Controls**, and then select **Import**:  
-
-    ![Insert controls][11]  
+1. On the command bar selelct, **Insert** > **Media** > **Import**.
 
 2. Set the control's **[OnSelect](controls/properties-core.md)** property to the following function:  
 
    ```Collect(ProductRevenue, Import1.Data)```
 
-3. Press F5 to open Preview mode, and then select the **Import Data** button.
+3. On the [app actions menu](/power-apps-studio.md#2--app-actions), select **Preview the app** and then select the **Import Data** button.
 
-4. In the **Open** dialog box, select ChartData.zip, select **Open**, and then press Esc.
+4. In the **Open** dialog box, select your Excel file, select **Open**, and then press Esc.
 
-5. On the **File** menu, select **Collections**.
+5. On the [app authoring menu](power-apps-studio.md#5--app-authoring-menu) select, **Variables** > **Collections**.
 
-    The ProductRevenue collection is listed with the chart data you imported:
-
-    ![File - collections][1]  
+    The ProductRevenue collection should be listed with the chart data you imported.
 
    > [!NOTE]
    > The import control is used to import Excel-like data and create the collection. The import control imports data when you are creating your app, and previewing your app. Currently, the import control does not import data when you publish your app.
-   >
+   
 
 6. Press Esc to return to the default workspace.
 
 ## Add a pie chart
-1. On the **Insert** tab, select **Charts**, and then select **Pie Chart**.
+1. On the command bar selelct, **Insert** > **Charts** > **Pie Chart**.
 
 2. Move the pie chart under the **Import data** button.
 
@@ -87,9 +83,9 @@ In these steps, we import the sample data into a collection, named **ProductReve
 ## Add a bar chart to display your data
 Now, let's use this ProductRevenue collection in a bar chart:
 
-1. On the **Home** tab, add a screen.]
+1. On the command bar, select **New screen** > **Blank**. 
 
-2. On the **Insert** tab, select **Charts**, and then select **Column Chart**.
+2.  On the command bar, select **Insert** > **Tree view** > **Column Chart**.
 
 3. Select the middle of the column chart. Set the **[Items](controls/properties-core.md)** property of the column chart to ```ProductRevenue```:
 
@@ -104,8 +100,6 @@ Now, let's use this ProductRevenue collection in a bar chart:
     ![Select center square][5]
 
 5. On the **Chart** tab, select **Number of Series**, and then enter **3** in the formula bar:
-
-    ![Select number of series and enter 3][6]  
 
     The column chart shows revenue data for each product over three years:
 
