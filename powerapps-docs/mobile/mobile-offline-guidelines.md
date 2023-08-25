@@ -34,6 +34,9 @@ In this phase, you'll add tables and apply filters to existing tables to make su
 
 ***Outcome:*** You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable.
 
+> [!IMPORTANT]
+> The metadata for the app is retrieved at app start up.  This means if you change a component in your app (e.g., FormComponent, View, ... ) then you will need to restart the app for the profile to reflect the changes.  
+
 ### Phase 2: Test with users
 
 Ask a few users to test the app with real data. Make sure the offline profile scales for different types of users and works on devices with varying storage capacities. Check the Offline Status page for each user. How many tables and files do different types of user accounts download? Adjust the filters in the offline profile to increase or decrease the amount of data that's downloaded.
