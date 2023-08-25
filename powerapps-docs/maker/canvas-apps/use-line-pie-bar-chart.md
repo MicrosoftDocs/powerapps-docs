@@ -49,7 +49,7 @@ In these steps, we import the sample data into a collection, named **ProductReve
 
    ```Collect(ProductRevenue, Import1.Data)```
 
-3. On the [app actions menu](/power-apps-studio.md#2--app-actions), select **Preview the app** and then select the **Import Data** button.
+3. On the [app actions menu](power-apps-studio.md#2--app-actions), select **Preview the app** and then select the **Import Data** button.
 
 4. In the **Open** dialog box, select your Excel file, select **Open**, and then press Esc.
 
