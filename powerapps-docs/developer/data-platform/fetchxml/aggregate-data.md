@@ -56,22 +56,22 @@ The following query returns aggregate data for the `numberofemployees` column.
 <fetch aggregate='true'>
   <entity name='account'>
     <attribute name='numberofemployees'
-      alias='average'
+      alias='Average'
       aggregate='avg' />
     <attribute name='numberofemployees'
-      alias='count'
+      alias='Count'
       aggregate='count' />
     <attribute name='numberofemployees'
-      alias='countcolumn'
+      alias='ColumnCount'
       aggregate='countcolumn' />
     <attribute name='numberofemployees'
-      alias='max'
+      alias='Maximum'
       aggregate='max' />
     <attribute name='numberofemployees'
-      alias='min'
+      alias='Minimum'
       aggregate='min' />
     <attribute name='numberofemployees'
-      alias='sum'
+      alias='Sum'
       aggregate='sum' />
   </entity>
 </fetch>
@@ -80,11 +80,11 @@ The following query returns aggregate data for the `numberofemployees` column.
 The results are a single row:
 
 ```text
- ----------------------------------------------------------
- | average | count | countcolumn | max   | min   | sum    |
- ----------------------------------------------------------
- | 3,911   | 10    | 9           | 6,200 | 1,500 | 35,200 |
- ----------------------------------------------------------
+ --------------------------------------------------------------
+ | Average | Count | ColumnCount | Maximum | Minimum | Sum    |
+ --------------------------------------------------------------
+ | 3,911   | 10    | 9           | 6,200   | 1,500   | 35,200 |
+ --------------------------------------------------------------
 ```
 
 ## Distinct column values
@@ -93,7 +93,7 @@ When using the `countcolumn` aggregate function, you can set the `distinct` attr
 
 ```xml
 <attribute name='numberofemployees' 
-   alias='countcolumn' 
+   alias='ColumnCount' 
    aggregate='countcolumn' 
    distinct='true' />
 ```
@@ -113,19 +113,19 @@ For example the following query returns the sum of employees, and count by city:
          alias='Total'
          aggregate='sum' />
       <attribute name='address1_city'
-         alias='count'
+         alias='Count'
          aggregate='count' />
       <attribute name='address1_city'
-         alias='city'
+         alias='City'
          groupby='true' />
-      <order alias='city' />
+      <order alias='City' />
    </entity>
 </fetch>
 ```
 
-The results are grouped by city value, combining the results for the three rows where city is 'Redmond'.
+The results are grouped by City value, combining the results for the three rows where city is 'Redmond'.
 
-| Total  | count | city        |
+| Total  | Count | City        |
 |--------|-------|-------------|
 | 0      | 1     | NULL        |
 | 6,000  | 1     | Dallas      |
@@ -186,7 +186,7 @@ The following query groups accounts showing number of employees by the month the
 </fetch>
 ```
 
-This is the result:
+This is the result using the data set mentioned previously:
 
 ```text
  -----------------------------------------------------------------------
