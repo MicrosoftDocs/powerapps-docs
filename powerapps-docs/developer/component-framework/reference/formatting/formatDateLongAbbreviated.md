@@ -1,5 +1,5 @@
 ---
-title: formatDateLongAbbreviated | Microsoft Docs
+title: formatDateLongAbbreviated (Power Apps component framework API reference) | Microsoft Docs
 description: Returns a formatted string that represents a date in the long form using abbreviation. Results pattern is based on culture. In USA it's "Abbreviated Day of week, Month dd, yyyy".
 ms.author: noazarur
 author: noazarur-microsoft
@@ -33,7 +33,7 @@ Model-driven and canvas apps
 Type: `string`
 
 
-### Related topics
+### Related articles
 
 [Formatting](../formatting.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

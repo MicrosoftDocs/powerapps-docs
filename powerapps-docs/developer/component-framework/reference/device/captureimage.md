@@ -1,5 +1,5 @@
 ---
-title: CaptureImage | Microsoft Docs
+title: CaptureImage (Power Apps component framework API reference) | Microsoft Docs
 description: Invokes the device camera to capture the image.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -49,7 +49,7 @@ See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global
 
 See [Web service error codes](../../../data-platform/reference/web-service-error-codes.md)
 
-### Related topics
+### Related articles
 
 [Device](../device.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

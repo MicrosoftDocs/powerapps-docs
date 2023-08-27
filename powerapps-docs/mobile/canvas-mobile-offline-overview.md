@@ -1,7 +1,7 @@
 ---
 title: Mobile offline for canvas apps (preview)
 description: Learn how to create canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 07/24/2023
+ms.date: 08/25/2023
 ms.topic: overview
 ms.component: pa-user
 ms.subservice: mobile
@@ -13,6 +13,9 @@ search.audienceType:
 searchScope:
   - "Power Apps"
 ms.custom: bap-template
+contributors:
+- lancedMicrosoft
+  
 ---
 
 # Mobile offline for canvas apps (preview)
@@ -24,16 +27,20 @@ If users of your Dataverse-based canvas app may have spotty or no access to the 
 > [!IMPORTANT]
 > The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
 >
-> - CountRows
-> - Filter or lookup on Lookup field
 > - First
-> - In
 > - IsBlank
 > - Relate
-> - Search
-> - StartsWith
 > - Sum/Min/Max/Avg
 > - Unrelate
+>   
+> Filter and search do not yet support parsing the following tokens: 
+>
+> - ,
+> - %
+> - &
+> - ( )
+> - =
+> - whitespace
 
 You can also build complex offline apps using custom *offline profiles*. An offline profile is a set of filters and restrictions on the data your app loads to users' mobile devices. Offline profiles help you to optimize your app's performance by reducing the amount of data downloaded to the device. For example, while you may have access rights to millions of records in a table, your app may need only a thousand of them. If you download only a thousand records, your app performs better. If you need more than 15 tables in your offline app, you may want to consider using a custom offline profile.
 

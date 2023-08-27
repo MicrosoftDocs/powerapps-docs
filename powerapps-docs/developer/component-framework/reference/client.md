@@ -1,5 +1,5 @@
 ---
-title: Client | Microsoft Docs
+title: Client (Power Apps component framework API reference) | Microsoft Docs
 description: Provides access to the methods to determine which client is being used, whether the client is connected to server, and what kind of device is being used.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -58,7 +58,7 @@ private createHTMLTableElement(): HTMLTableElement {
 }
 ```
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

@@ -1,5 +1,5 @@
 ---
-title: ControlAttributes| Microsoft Docs
+title: ControlAttributes (Power Apps component framework API reference) | Microsoft Docs
 description: Attributes of control that necessary for formatting.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -54,7 +54,7 @@ The behavior of the datetime column.
 The optionset/choice object of this column.
 **Type**: [OptionDescriptor](./optiondescriptor.md)
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

@@ -15,7 +15,10 @@ contributors:
 
 # Validate record state and set the state of record
 
-This sample shows how to validate a change of state of a table and set a state of a table. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ValidateAndSetRecordState).
+This sample shows how to validate a change of state of a table and set a state of a table.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Validate record state and set the state of record sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ValidateAndSetRecordState)
 
 ## How to run this sample
 
