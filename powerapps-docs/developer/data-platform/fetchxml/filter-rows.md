@@ -14,11 +14,11 @@ search.audienceType:
 
 Use the [filter element](reference/filter.md) within an [entity](reference/entity.md), [link-entity](reference/link-entity.md), or another `filter` element to set conditions on the rows of data to return.
 
-Add one or more [condition](reference/condition.md) elements to the filter to set the conditions. The containing `filter` `type` attribute determines whether all (`and`) or any (`or`) of the conditions must be met. The default is `and`. By nesting filter elements you can create complex filter criteria that combine criteria evaluated using `and` or `or`.
+Add one or more [condition elements](reference/condition.md) to the filter to set the conditions. The containing `filter.type` attribute determines whether all (`and`) or any (`or`) of the conditions must be met. The default is `and`. By nesting filter elements you can create complex filter criteria that combine criteria evaluated using `and` or `or`.
 
 Each `condition` has an `operator` attribute to evaluate a row column value. There are many [operator conditions](reference/operators.md) for you to choose from.
 
-For example, the following query returns account records where `address1_city` equals Redmond. It uses `<filter type='and'>`.
+For example, the following query returns account records where `address1_city` equals 'Redmond'. It uses `<filter type='and'>`.
 
 ```xml
 <fetch>
@@ -90,7 +90,7 @@ For example, you can use the `eq-userid` operator to evaluate any unique identif
 ### Single parameter
 
 When an operator requires a single parameter, use the `value` attribute to set the value to evaluate.
-For example, you can use the `eq` operator to evaluate the `statecode` choice column value of a record by setting the value attribute.
+For example, you can use the `eq` operator to evaluate the `statecode` choice column value of a record by setting the `value` attribute.
 
 ```xml
 <condition attribute='statecode' operator='eq' value='0' />
@@ -99,7 +99,7 @@ For example, you can use the `eq` operator to evaluate the `statecode` choice co
 ### Multiple parameters
 
 When an operator requires multiple parameters, use the [value element](reference/value.md) to specify the values to evaluate.
-For example, you can use the `between` operator to evaluate a number to determine if it is above and below a set of values.
+For example, you can use the `between` operator to evaluate a number to determine if it is between a set of values.
 
 ```xml
 <condition attribute="numberofemployees" operator="between">

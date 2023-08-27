@@ -66,7 +66,7 @@ When you add the `link-entity` element, you must set these attribute values:
 |---------|---------|
 |`name`|[!INCLUDE [link-entity-name-description](reference/includes/link-entity-name-description.md)]<br />In this case, `contact`.|
 |`from`|[!INCLUDE [link-entity-from-description](reference/includes/link-entity-from-description.md)]<br />In this case, `contactid`.|
-|`to`|[!INCLUDE [link-entity-from-description](reference/includes/link-entity-from-description.md)]<br />In this case, `primarycontactid`.|
+|`to`|[!INCLUDE [link-entity-to-description](reference/includes/link-entity-to-description.md)]<br />In this case, `primarycontactid`.|
 
 
 ## Optional attribute values
@@ -151,11 +151,11 @@ The results look like this:
 
 In this example:
 
-- The `name` value is the logical name of the *referencing* table: `account`.
-- The `from` value is the name of the lookup column in the *referencing* account table: `primarycontactid`.
-- The `to` value is the primary key of the *referenced* contact table: `contactid`.
-- The `alias` attribute is recommended for the `link-entity` with a one-to-many relationship. If an alias isn't provided, a default alias is generated.
-- The `link-type` attribute isn't included. It will default to `inner`.
+- The [link-entity](reference/link-entity.md).`name` value is the logical name of the *referencing* table: `account`.
+- The [link-entity](reference/link-entity.md).`from` value is the name of the lookup column in the *referencing* account table: `primarycontactid`.
+- The [link-entity](reference/link-entity.md).`to` value is the primary key of the *referenced* contact table: `contactid`.
+- The [link-entity](reference/link-entity.md).`alias` attribute is recommended for the `link-entity` with a one-to-many relationship. If an alias isn't provided, a default alias is generated.
+- The [link-entity](reference/link-entity.md).`link-type` attribute isn't included. It will default to `inner`.
 
 ## Many-to-many relationships
 

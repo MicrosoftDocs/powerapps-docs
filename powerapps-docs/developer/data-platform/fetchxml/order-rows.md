@@ -56,7 +56,7 @@ If you want to use *descending* order, set the `descending` attribute to `true`.
 ## Lookup and choice columns
 
 Lookup and choice column values are sorted using the display values rather than the values stored in the database.
-As mentioned in [formatted values](select-columns.md#formatted-values), the values stored in the database for lookup and choice columns is a GUID value and an integer value respectively.The property values returned are the values stored in the database.  However, when you use order on these columns, the display value is used for sorting. For lookups, it is the primary name field for the related table. For choice columns, it is the value of the option label.
+As mentioned in [formatted values](select-columns.md#formatted-values), the values stored in the database for lookup and choice columns is a GUID value and an integer value respectively. The property values returned are the values stored in the database.  However, when you use order on these columns, the display value is used for sorting. For lookups, it is the primary name field for the related table. For choice columns, it is the value of the option label.
 
 <!-- TODO: The option Label can be localized, so I expect this will impact the results returned -->
 
@@ -70,7 +70,7 @@ Can it be simplified?
 
 -->
 
-When you retrieve a limited set of data to display in an application, or if you need to return more than 5000 contiguous rows of data, you will need to page the results. The choices you make in determining the order of the results can effect whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
+When you retrieve a limited set of data to display in an application, or if you need to return more than 5000 rows of data, you will need to page the results. The choices you make in determining the order of the results can effect whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
 
 To prevent this from happening, apply the following best practices:
 
