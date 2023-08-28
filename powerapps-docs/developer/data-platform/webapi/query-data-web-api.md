@@ -896,9 +896,30 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
 Keep the following points in mind when you filter on string values:
 
 - All filters using string values are case insensitive.
+- You must URL encode special characters in filter criteria. More information: [URL encode special characters](#url-encode-special-characters)
 - You may use wildcard characters, but avoid trailing wildcards. More information: [Use wildcard characters](#use-wildcard-characters)
 - You can use OData query functions: `contains`, `startswith`, and `endswith`. More information: [Use OData query functions](#use-odata-query-functions)
 - You must manage single quotes when you use filters that accept an array of string values. More information: [Manage single quotes](#manage-single-quotes)
+
+#### URL encode special characters
+
+If the string you are using as a value in a filter function includes a special character, you need to URL encode it. For example, if you use this function: `contains(name,'+123')`, it will not work because `+` is a character that can't be included in a URL. If you URL encode the string, it will become `contains(name,'%2B123')` and you will get results where the column value contains `+123`.
+
+The following table shows the URL encoded values for common special characters.
+
+|Special<br />character|URL encoded<br />character|
+|---|---|
+|`$`|`%24`|
+|`&`|`%26`|
+|`+`|`%2B`|
+|`,`|`%2C`|
+|`/`|`%2F`|
+|`:`|`%3A`|
+|`;`|`%3B`|
+|`=`|`%3D`|
+|`?`|`%3F`|
+|`@`|`%40`|
+
 
 #### Use wildcard characters
 
