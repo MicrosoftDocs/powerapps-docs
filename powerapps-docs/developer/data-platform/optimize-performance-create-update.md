@@ -3,7 +3,7 @@ title: Optimize performance for bulk operations
 description: Choose the best approach when building client applications that create or update large numbers records.
 author: apurvghai
 ms.topic: article
-ms.date: 08/21/2023
+ms.date: 08/28/2023
 ms.subservice: dataverse-developer
 ms.author: apurvgh
 ms.reviewer: jdaly
@@ -56,7 +56,7 @@ While these APIs provide the highest throughput, they have the following limitat
 
 - **Not currently available for all tables.** Any custom table should support them, but not all the core Dataverse tables support them, such as Account or Contact. You can run a query provided in the documentation to determine whether a table can use these APIs.
 - **Not forgiving of data errors.** You need to make sure that the data you're changing is carefully scrubbed and validated. Any error that occurs within one operation in these APIs causes the entire operation to fail.
-- **Not supported to use in plug-ins.** Currently, these API should only be used by external client applications.
+- **Not supported to use in plug-ins.** Currently, these APIs should only be used by external client applications.
 
 
 Bulk operations are available for all elastic tables and elastic tables can return information about individual operations that fail. [Learn more about bulk operations with elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
@@ -74,7 +74,7 @@ Each operation within the request is applied sequentially on the server, so ther
 
 ## Client architecture
 
-You can optimize the client application you build to perform bulk operations by keeping the following in mind: Dataverse is designed as a data source to support multiple applications with large numbers of concurrent users. To optimize throughput, design your client to use Dataverse's strengths.
+Dataverse is designed as a data source to support multiple applications with large numbers of concurrent users. To optimize throughput, design your client to use Dataverse's strengths.
 
 Bottlenecks in client-side code are the primary cause of performance issues. Developers frequently fail to fully use the capabilities of the code, which can affect performance. It's crucial to optimize how the client application utilizes the infrastructure's cores or compute, as failure to optimize can significantly affect performance. For example, when using Azure Functions, there are several steps that can be taken to optimize performance, such as implementing autoscaling, using warm-up instances, adjusting CPU usage, utilizing multiple cores, and allowing concurrency.
 ### Service protection limits
@@ -95,7 +95,7 @@ You can see a significant improvement in throughput by [sending requests in para
 
 ### Not all environments are the same
 
-Not every Dataverse environment has the same number of web server resources allocated to it. Dataverse scales to the need of the environment by adding more web server resources to support it. A production environment supporting thousands of active users requires more web servers than a trial environment.  When your environment has a lot of web servers, sending requests in parallel can make a dramatic difference in the total throughput your client application can achieve.
+Not every Dataverse environment has the same number of web server resources allocated to it. Dataverse scales to the need of the environment by adding more web server resources to support it. A production environment supporting thousands of active users requires more web servers than a trial environment. When your environment has a lot of web servers, sending requests in parallel can make a dramatic difference in the total throughput your client application can achieve.
 
 ### Recommended degree of parallelization (DOP)
 
@@ -105,11 +105,11 @@ Depending on your client-side architecture, you may need to split recommended de
 
 ### Disable Azure affinity
 
-When appropriate, you can see best results when you configure your client to use all the available web servers by [removing the Azure affinity cookie](send-parallel-requests.md#server-affinity) that tries to associate your application to a single web server. Disabling Azure affinity is not appropriate for interactive applications that use cached data from the server to optimize the user experience.
+When appropriate, you can see best results when you configure your client to use all the available web servers by [removing the Azure affinity cookie](send-parallel-requests.md#server-affinity) that tries to associate your application to a single web server. Disabling Azure affinity isn't appropriate for interactive applications that use cached data from the server to optimize the user experience.
 
 ### Optimize your connection
 
-When using .NET, you should [apply configuration changes like the following](send-parallel-requests.md#optimize-your-connection) to optimize your connection so your requests are not limited by default settings.
+When using .NET, you should [apply configuration changes like the following](send-parallel-requests.md#optimize-your-connection) to optimize your connection so your requests aren't limited by default settings.
 
 ```csharp
 // Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4 
