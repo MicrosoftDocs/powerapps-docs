@@ -341,6 +341,12 @@ The timeout is 60 seconds. Generally, if no response is returned before the time
 
 These errors indicate a networking issue that might be resolved with another attempt. The WebHook service will make one more attempt only when these error codes are returned.
 
+> [!IMPORTANT]
+> After the successful execution of a webhook, the requests sent to the external endpoint are irreversible even when there is any subsequent failures in the transaction.
+> For example, when multiple plugins or workflows, including a webhook, are registered for the same entity update and the webhook executes successfully,
+> if a subsequent plugin or workflow failure triggers a transaction rollback, the requests previously dispatched to the webhook endpoint remain irreversible.
+>
+
 ### Asynchronous Webhooks
 
 If your web hook is registered to run asynchronously, you can examine the System Job for details on the error. More information: [Query failed asynchronous jobs for a given step](register-web-hook.md#query-failed-asynchronous-jobs-for-a-given-step)
