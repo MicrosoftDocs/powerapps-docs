@@ -15,7 +15,10 @@ contributors:
 
 # Assign a user-owned dashboard to another user
 
-This sample shows how to assign a user-owned visualization to another using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message. Because you can’t delete a user-owned dashboard that is assigned to another user, this sample shows how to use impersonation to delete the user-owned dashboard. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssignUserOwnedDashboardToAnother).
+This sample shows how to assign a user-owned visualization to another using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message. Because you can’t delete a user-owned dashboard that is assigned to another user, this sample shows how to use impersonation to delete the user-owned dashboard.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Assign a user-owned dashboard to another user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssignUserOwnedDashboardToAnother)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

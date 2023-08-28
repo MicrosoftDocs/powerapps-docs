@@ -1,15 +1,15 @@
 ---
 title: "Work with business processes in model-driven apps| MicrosoftDocs"
 description: Overview of business process 
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 08/21/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser

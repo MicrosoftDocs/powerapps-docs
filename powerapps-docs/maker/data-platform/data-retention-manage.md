@@ -1,11 +1,12 @@
 ---
 title: Manage data retention policies in Microsoft Dataverse
 description: This article explains how you can view and managed existing data retention policies in Microsoft Dataverse. 
-author: Mattp123
-ms.author: matp
+author: pnghub
+ms.author: gned
+ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to 
-ms.date: 07/25/2023
+ms.date: 08/09/2023
 ms.custom: template-how-to 
 ---
 # Manage data retention policies (preview)
@@ -43,6 +44,17 @@ Use the retention policies dashboard to view and manage retention policies. From
 |In progress – Delete     |  Delete of retained rows from applications.       |
 |Succeeded     |  Retention process completed successfully.       |
 |Failed     |  The retention process failed.     |
+
+### View details on failed records
+
+Query the Dataverse table `Retentionfailuredetails` for error details.
+
+|Column name  |Description  |
+|---------|---------|
+|`Operationid`     |  The policy `runid` visible in the long term retention dashboard for a specific policy run.       |
+|`entitylogicalname`     | Name of the table containing the record.      |
+|`recordid`     | Unique identifier of every record in the table.    |
+|`message`     | Detailed error message.        |
 
 ### Bulk delete long term retained data
 

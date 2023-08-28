@@ -160,7 +160,7 @@ More information:
 
 The following series of requests and responses show the interaction when you use the Web API to create an attachment record that sets the `body`, `filename`, and `mimetype` columns for a PDF file named **25mb.pdf** that's associated with an email.
 
-**Request**
+**Request:**
 
 The first request uses the [InitializeAttachmentBlocksUpload action](xref:Microsoft.Dynamics.CRM.InitializeAttachmentBlocksUpload).
 
@@ -185,7 +185,7 @@ Content-Length: 315
 }
 ```
 
-**Response**
+**Response:**
 
 The response is a [InitializeAttachmentBlocksUploadResponse complex type](xref:Microsoft.Dynamics.CRM.InitializeAttachmentBlocksUploadResponse) providing the `FileContinuationToken` value to use with subsequent requests.
 
@@ -211,7 +211,7 @@ You must then break up the file into blocks of 4 MB or less and send each block 
 
 [!INCLUDE [cc-generate-blockid-tip](includes/cc-generate-blockid-tip.md)]
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/UploadBlock HTTP/1.1
@@ -229,7 +229,7 @@ Content-Length: 5593372
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -244,7 +244,7 @@ After you have sent all the parts of the file, use the [CommitAttachmentBlocksUp
 |`BlockList`|An array of strings that represent the `BlockId` values in the previous `UploadBlock` operations. The order of these strings represents the order the server uses to combine the blocks into the original file.|
 |`FileContinuationToken`|The value of the `InitializeAttachmentBlocksUploadResponse.FileContinuationToken`|
 
-**Request**
+**Request:**
 
 In this example, the `BlockList` values represent seven previous requests that used the [UploadBlock action](xref:Microsoft.Dynamics.CRM.UploadBlock).
 
@@ -279,7 +279,7 @@ Content-Length: 1612
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -305,7 +305,7 @@ Using the Web API, you can download an attachment file in a single operation.
 
 Unlike retrieving file columns, this method doesn't provide information about file size, file name, or MIME type.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/activitymimeattachments(<activitymimeattachmentid>)/body/$value HTTP/1.1
@@ -315,7 +315,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -418,7 +418,7 @@ More information:
 
 The following series of requests and responses show the interaction when you use the Web API to download a PDF file named 25mb.pdf from the attachment with the specified `activitymimeattachmentid` value.
 
-**Request**
+**Request:**
 
 This request uses the [InitializeAttachmentBlocksDownload Action](xref:Microsoft.Dynamics.CRM.InitializeAttachmentBlocksDownload).
 
@@ -439,7 +439,7 @@ Content-Length: 165
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -461,7 +461,7 @@ The response is a [InitializeAttachmentBlocksDownloadResponse complex type](xref
 
 Based on the size of the file and the size of the block you download, send more requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown in the following example.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/DownloadBlock HTTP/1.1
@@ -481,7 +481,7 @@ Content-Length: 901
 
 [!INCLUDE [cc-offset-blocklength-example](includes/cc-offset-blocklength-example.md)]
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -633,7 +633,7 @@ More information:
 
 The following series of requests and responses show the interaction when you use the Web API to create a new annotation record, associated with an account record, that sets the `documentbody` to a PDF file named `25mb.pdf`.
 
-**Request**
+**Request:**
 
 The first request uses the [InitializeAnnotationBlocksUpload action](xref:Microsoft.Dynamics.CRM.InitializeAnnotationBlocksUpload).
 
@@ -658,7 +658,7 @@ Content-Length: 294
 }
 ```
 
-**Response**
+**Response:**
 
 The response is a [InitializeAnnotationBlocksUploadResponse complex type](xref:Microsoft.Dynamics.CRM.InitializeAnnotationBlocksUploadResponse) that provides the `FileContinuationToken` value to use with subsequent requests.
 
@@ -684,7 +684,7 @@ Break up the file into blocks of 4 MB or less and send each block using the [Upl
 
 [!INCLUDE [cc-generate-blockid-tip](includes/cc-generate-blockid-tip.md)]
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/UploadBlock HTTP/1.1
@@ -702,7 +702,7 @@ Content-Length: 5593352
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -717,7 +717,7 @@ After all the parts of the file have been sent, use the [CommitAnnotationBlocksU
 |`BlockList`|An array of strings that represent the `BlockId` values in the previous `UploadBlock` operations. The order of these strings represents the order the server uses to combine the blocks into the original file.|
 |`FileContinuationToken`|The value of the `InitializeAnnotationBlocksUploadResponse.FileContinuationToken`|
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/CommitAnnotationBlocksUpload HTTP/1.1
@@ -750,7 +750,7 @@ Content-Length: 1571
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -776,7 +776,7 @@ Using the Web API, you can download a Note file in a single operation:
 
 Unlike retrieving file columns, this method doesn't provide information about file size, file name, or MIME type.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/annotations(<annotationid>)/documentbody/$value HTTP/1.1
@@ -786,7 +786,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -887,7 +887,7 @@ More information:
 
 The following series of requests and responses show the interaction when you use the Web API to download a PDF file named 25mb.pdf from the Note with the specified `annotationid` value.
 
-**Request**
+**Request:**
 
 This request uses the [InitializeAnnotationBlocksDownload action](xref:Microsoft.Dynamics.CRM.InitializeAnnotationBlocksDownload).
 
@@ -908,7 +908,7 @@ Content-Length: 141
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -930,7 +930,7 @@ The response is a [InitializeAnnotationBlocksDownloadResponse complex type](xref
 
 Based on the size of the file and the size of the block you download, send more requests using the [DownloadBlock action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown in the following example.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/DownloadBlock HTTP/1.1
@@ -950,7 +950,7 @@ Content-Length: 901
 
 [!INCLUDE [cc-offset-blocklength-example](includes/cc-offset-blocklength-example.md)]
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1012,7 +1012,7 @@ More information:
 
 Return the single row from the [Organization entity type](xref:Microsoft.Xrm.Sdk.Organization) with the `maxuploadfilesize` property.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/organizations?$select=maxuploadfilesize HTTP/1.1
@@ -1022,7 +1022,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1088,7 +1088,7 @@ More information:
 
 The [Organization entity type](xref:Microsoft.Xrm.Sdk.Organization) contains a single row. After you retrieve it, use the `organizationid` returned to update the row. The <xref:Microsoft.Dynamics.CRM.WhoAmIResponse> also includes this value.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/organizations(<organizationid>) HTTP/1.1
@@ -1105,7 +1105,7 @@ Content-Length: 38
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
