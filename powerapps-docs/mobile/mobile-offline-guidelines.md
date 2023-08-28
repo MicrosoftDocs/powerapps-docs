@@ -37,7 +37,7 @@ In this phase, you'll add tables and apply filters to existing tables to make su
 ***Outcome:*** You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable.
 
 > [!IMPORTANT]
-> The metadata for the app is retrieved when the app starts.  This means that if you change a component in your app, such as a FormComponent or view, then you need to restart the app for the profile to reflect the changes.  
+> The metadata for the app is retrieved when the app starts.  This means that if you change a component in your app, such as a form component or view, then you need to restart the app for the profile to reflect the changes.  
 
 ### Phase 2: Test with users
 
