@@ -314,27 +314,23 @@ More information: [Shared access](/power-platform/admin/how-record-access-determ
 
 The [check access](/power-apps/user/access-checker) feature in model-driven apps provides information so that people can understand why a user has access to a record. To get this information with code, use the `RetrieveAccessOrigin` message. When passed information about a specific user and record, this message returns a sentence that describes why the user has access. The following are the possible responses when the operation succeeds:
 
-<!-- 
-TODO: Seokmin: Please replace the parameter placeholders with user-friendly values, like: <record ID>.
-I've done the first one for you 
--->
 
 ```text
 Access origin could not be determined because FCB is disabled.
 PrincipalId is object owner (<record ID>)
-PrincipalId is member of team ({ownerCheck.Item2}) who is object owner ({objectId})
-PrincipalId is member of organization ({ownerCheck.Item2}) who is object owner ({objectId})
-PrincipalId has access to ({ownerCheck.Item2}) through hierarchy security. ({ownerCheck.Item2}) is object owner ({objectId})
-PrincipalId has direct poa access to object ({objectId})
-PrincipalId is member of team ({accessCheck.Item2}) who has poa access to object ({objectId})
-PrincipalId is member of organization ({accessCheck.Item2}) who has poa access to object ({objectId})
-PrincipalId is owner of a parent entity of object ({childId})
-PrincipalId is member of team ({ownerCheck.Item2}) who is owner of a parent entity of object ({childId})
-PrincipalId is member of organization ({ownerCheck.Item2}) who is owner of a parent entity of object ({childId})
-PrincipalId has access to ({ownerCheck.Item2}) through hierarchy security. ({ownerCheck.Item2}) is owner of a parent entity of object ({childId})
-PrincipalId has poa access to object's root entity ({childId})
-PrincipalId is member of team ({accessCheck.Item2}) who has poa access to object's root entity ({childId})
-PrincipalId is member of organization ({accessCheck.Item2}) who has poa access to object's root entity ({childId})
+PrincipalId is member of team (<team ID>) who is object owner (<record ID>)
+PrincipalId is member of organization (<organization ID>) who is object owner (<record ID>)
+PrincipalId has access to (<hierarchy security principal ID>) through hierarchy security. (<hierarchy security principal ID>) is object owner (<record ID>)
+PrincipalId has direct poa access to object (<record ID>)
+PrincipalId is member of team (<team ID>) who has poa access to object (<record ID>)
+PrincipalId is member of organization (<organization ID>) who has poa access to object (<record ID>)
+PrincipalId is owner of a parent entity of object (<child record ID>)
+PrincipalId is member of team (<team ID>) who is owner of a parent entity of object (<child record ID>)
+PrincipalId is member of organization (<organization ID>) who is owner of a parent entity of object (<child record ID>)
+PrincipalId has access to (<hierarchy security principal ID>) through hierarchy security. (<hierarchy security principal ID>) is owner of a parent entity of object (<child record ID>)
+PrincipalId has poa access to object's root entity (<child record ID>)
+PrincipalId is member of team (<team ID>) who has poa access to object's root entity (<child record ID>)
+PrincipalId is member of organization (<organization ID>) who has poa access to object's root entity (<child record ID>)
 Access origin could not be found. Access does not come from POA table or object ownership.
 ```
 
