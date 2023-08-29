@@ -12,12 +12,7 @@ search.audienceType:
 ---
 # Query data using FetchXml
 
-FetchXml is a proprietary XML based query language used with Dataverse to retrieve data using either the Web API or the SDK for .NET. This article describes how to compose a query using FetchXml for both of these use cases. For more specific information, see the following articles:
-
-|Use Case|More information|
-|---------|---------|
-|SDK for .NET|- [Query data using the SDK for .NET](../org-service/entity-operations-query-data.md) <br/>- [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) <br/>- [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest) <br/>- [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) <br/>|
-|Web API|[Use FetchXml with Web API](../webapi/use-fetchxml-web-api.md)|
+FetchXml is a proprietary XML based query language used with Dataverse to retrieve data using either the SDK for .NET or Web API. With Power Automate, you can retrieve data using the Web API using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query).
 
 > [!NOTE]
 > FetchXml is also used to define views for model-driven apps and some reporting capabilities. The [FetchXml schema](../fetchxml-schema.md) includes elements and attributes for these use cases which are not discussed here. More information: [Model-driven Apps developer guide: Customize views](../../model-driven-apps/customize-entity-views.md).
@@ -57,6 +52,124 @@ The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fet
 
 > [!NOTE]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
+
+## Use FetchXml to retrieve data
+
+You can use FetchXml to retrieve data using either the SDK for .NET or Web API.
+
+### [SDK for .NET](#tab/sdk)
+
+Use the [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) to hold pass the FetchXml query as a string. `FetchExpression` is derived from the common [QueryBase class](xref:Microsoft.Xrm.Sdk.Query.QueryBase) type, so you can use it when that type is a parameter or property.
+
+You should use the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) for most cases.
+
+```csharp
+static EntityCollection RetrieveMultipleExample(IOrganizationService service, string fetchXml)
+{
+   return service.RetrieveMultiple(new FetchExpression(fetchXml));
+}
+```
+
+You can also use the [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest), but there are few scenarios where this is necessary.
+
+```csharp
+static EntityCollection RetrieveMultipleRequestExample(IOrganizationService service, string fetchXml)
+{
+   var request = new RetrieveMultipleRequest()
+   {
+         Query = new FetchExpression(fetchXml)
+   };
+
+   var response = (RetrieveMultipleResponse)service.Execute(request);
+
+   return response.EntityCollection;
+}
+```
+
+
+### [Web API](#tab/webapi)
+
+Pass your FetchXml query as a URL-coded string value to the entity set collection using the `fetchXml` query parameter.
+
+> [!NOTE]
+> Unlike queries that use the OData syntax, FetchXML queries sent using Web API don't return properties with null values.
+
+For example, if you want to retrieve data from the [account entity set](xref:Microsoft.Dynamics.CRM.account), you will compose a fetchXml query setting the [entity element](reference/entity.md) `name` parameter to the `account`.
+
+```xml
+<fetch top='5'>
+  <entity name='account'>
+    <attribute name='name' />
+  </entity>
+</fetch>
+```
+
+Then, URL-encode the value.  Most programming languages include a function to URL-encode a string.
+
+- In JavaScript, you use the [encodeURI function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
+- In .NET, you can use the [System.NET.WebUtility.UrlEncode(String) method](xref:System.Net.WebUtility.UrlEncode(System.String))
+
+> [!TIP]
+> The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/) provides an option to escape the fetchxml.
+
+The URL-encoded string for the previous query example looks like this:
+
+```text
+%3Cfetch%20top%3D%275%27%3E%0D%0A%3Centity%20name%3D%27account%27%3E%0D%0A%3Cattribute%20name%3D%27name%27%2F%3E%0D%0A%3C%2Fentity%3E%0D%0A%3C%2Ffetch%3E
+```
+
+Then send your request to the `accounts` entity set.
+
+**Request**:
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?fetchXml=%3Cfetch%20top%3D%275%27%3E%0D%0A%3Centity%20name%3D%27account%27%3E%0D%0A%3Cattribute%20name%3D%27name%27%2F%3E%0D%0A%3C%2Fentity%3E%0D%0A%3C%2Ffetch%3E
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+```
+
+**Response**:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+    "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#accounts(name,accountid)",
+    "value": [
+        {
+            "@odata.etag": "W/\"81359849\"",
+            "name": "Litware, Inc. (sample)",
+            "accountid": "78914942-34cb-ed11-b596-0022481d68cd"
+        },
+        {
+            "@odata.etag": "W/\"80649580\"",
+            "name": "Adventure Works (sample)",
+            "accountid": "7a914942-34cb-ed11-b596-0022481d68cd"
+        },
+        {
+            "@odata.etag": "W/\"84077591\"",
+            "name": "Fabrikam, Inc. (sample)",
+            "accountid": "7c914942-34cb-ed11-b596-0022481d68cd"
+        },
+        {
+            "@odata.etag": "W/\"84174320\"",
+            "name": "Blue Yonder Airlines (sample)",
+            "accountid": "7e914942-34cb-ed11-b596-0022481d68cd"
+        },
+        {
+            "@odata.etag": "W/\"80649588\"",
+            "name": "City Power & Light (sample)",
+            "accountid": "80914942-34cb-ed11-b596-0022481d68cd"
+        }
+    ]
+}
+```
+
+---
+
 
 ## Sample code
 
