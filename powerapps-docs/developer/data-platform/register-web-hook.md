@@ -1,16 +1,17 @@
 ---
-title: "Register a WebHook (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to register a WebHook using the Plug-in Registration tool." 
+title: Register a WebHook
+description: Learn how to register a WebHook using the Plug-in Registration tool.
 ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "jaredha" # GitHub ID
+ms.reviewer: pehecke
+ms.topic: article
+author: swylezol
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: swylezol
 search.audienceType: 
   - developer
 contributors:
   - PHecke
+  - JimDaly
 ---
 # Register a WebHook
 
@@ -94,7 +95,7 @@ Information about the **Step Name**, and **Description** will be auto-populated 
 
 ### Execution mode and debugging your WebHook registration
 
-Your choice in registering the WebHook changes the experience you will have when debugging if things don’t work.
+Your choice in registering the WebHook changes the experience you will have when debugging if things don't work.
 
 #### Asynchronous mode
 When you use asynchronous execution mode a System Job (asyncoperation) will be created to capture the success or failure of the operation. Choosing to delete the System Job when it succeeds will save you database space.
