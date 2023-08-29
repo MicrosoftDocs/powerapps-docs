@@ -69,13 +69,13 @@ If you chose to stage for upgrade, or if the system had an issue completing an u
 
 ## Understanding version numbers for updates
 
-A solution’s version has the following format: major.minor.build.revision. An update must have a higher major, minor, build, or revision number than the parent solution. For example, for a base solution version 3.1.5.7, a small update could be a version 3.1.5.8 or a slightly more significant update could have version 3.1.7.0. A substantially more significant update could be version 3.2.0.0.
+A solution's version has the following format: major.minor.build.revision. An update must have a higher major, minor, build, or revision number than the parent solution. For example, for a base solution version 3.1.5.7, a small update could be a version 3.1.5.8 or a slightly more significant update could have version 3.1.7.0. A substantially more significant update could be version 3.2.0.0.
 
 ## Removing a managed component from the target environment
 
 There might be occasions when you want to remove a managed component from an environment. There are two different solution actions that you can perform that will remove a managed component from an environment.
 
-- Upgrade the solution (recommended). In the development environment where the managed solution originated, update the solution so that it no longer includes the component. In other words, remove the component such as a column, chart, or form from the solution and then export it as managed. Then, when you import the managed solution into the target environment, choose the **Solution action** as **Upgrade**. This action removes the component (if there aren’t any other components that depend on it in the target environment).
+- Upgrade the solution (recommended). In the development environment where the managed solution originated, update the solution so that it no longer includes the component. In other words, remove the component such as a column, chart, or form from the solution and then export it as managed. Then, when you import the managed solution into the target environment, choose the **Solution action** as **Upgrade**. This action removes the component (if there aren't any other components that depend on it in the target environment).
 - Delete the managed solution. This action removes all components in the solution. In the environment where the managed solution was imported, delete the managed solution that includes the managed component. You can do this from the **Solutions** area of Power Apps.
    > [!WARNING]
    > Deleting a managed solution deletes ALL the components that are in the managed solution as well as any related data. Always use caution before deleting a managed solution.
@@ -83,7 +83,7 @@ There might be occasions when you want to remove a managed component from an env
 
 ## Overwrite customizations option
 
-The option to overwrite customizations is only available with the classic import experience and using the [SDK APIs](/dotnet/api/microsoft.crm.sdk.messages.importsolutionrequest.overwriteunmanagedcustomizations).
+The option to overwrite customizations is available with the classic import experience, [when using code](/power-platform/alm/solution-async#solution-import), or when using the Microsoft Power Platform CLI [pac solution import](/power-platform/developer/cli/reference/solution#--force-overwrite--f) command.
 
 > [!IMPORTANT]
 > Selecting the **Overwrite Customizations (not recommended)**  option will overwrite or remove any unmanaged customizations previously performed on components included in this solution. This option does not affect components that support merge behavior (forms, sitemap, ribbon, app modules).  Components that have other managed solutions on top of the existing solution you are replacing do also still remain on top and are not affected by this option.  
