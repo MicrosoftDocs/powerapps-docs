@@ -1,6 +1,6 @@
 ---
-title: "Sample: IsSystemAdmin Custom API plug-in (Microsoft Dataverse) | Microsoft Docs"
-description: "Learn how to write a plug-in to support a Custom API"
+title: "Sample: IsSystemAdmin custom API plug-in (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to write a plug-in to support a custom API"
 ms.date: 09/27/2022
 author: divkamath
 ms.author: dikamath
@@ -13,32 +13,35 @@ contributors:
   - phecke
 ---
 
-# Sample: IsSystemAdmin Custom API
+# Sample: IsSystemAdmin custom API
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample shows how to write a plug-in that supports a Custom API named `sample_IsSystemAdmin`. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/IsSystemAdminCustomAPI).
+This sample shows how to write a plug-in that supports a custom API named `sample_IsSystemAdmin`.
 
-This sample creates a plug-in for the main operation of the `sample_IsSystemAdmin` Custom API. This Custom API will detect whether a user has the System Administrator security role.
+> [!div class="nextstepaction"]
+> [SDK for .NET: IsSystemAdmin custom API sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/IsSystemAdminCustomAPI)
 
-Detecting whether a user has the System Administrator security role may require two separate queries depending on whether the user has been assigned the security role directly or whether they have it because of team that they belong to. This Custom API encapsulates these queries into a single API call which will return a boolean value. This makes it easier to use by delegating the operation to the Dataverse server.
+This sample creates a plug-in for the main operation of the `sample_IsSystemAdmin` custom API. This custom API will detect whether a user has the System Administrator security role.
+
+Detecting whether a user has the System Administrator security role may require two separate queries depending on whether the user has been assigned the security role directly or whether they have it because of team that they belong to. This custom API encapsulates these queries into a single API call which will return a boolean value. This makes it easier to use by delegating the operation to the Dataverse server.
 
 ## How to run this sample
 
-To run the code found in this sample, you must first create a Custom API in your organization. There are two ways to do this.
+To run the code found in this sample, you must first create a custom API in your organization. There are two ways to do this.
 
 ### Import the managed solution file
 
-The `IsSystemAdminFunction_1_0_0_0_managed.zip` in this folder contains the `sample_IsSystemAdmin` Custom API that uses this code. You can simply import this solution file to create the Custom API in your organization. See [Import solutions](../../../../maker/data-platform/import-update-export-solutions.md) for instructions.
+The `IsSystemAdminFunction_1_0_0_0_managed.zip` in this folder contains the `sample_IsSystemAdmin` custom API that uses this code. You can simply import this solution file to create the custom API in your organization. See [Import solutions](../../../../maker/data-platform/import-update-export-solutions.md) for instructions.
 
-After you are finished testing, delete the managed solution to remove the Custom API.
+After you are finished testing, delete the managed solution to remove the custom API.
 
-### Create the Custom API
+### Create the custom API
 
-You can create the Custom API yourself and set the plug-in assembly created by this code.
-There are several ways to create Custom API, and they are documented here: [Create and use Custom APIs](../../custom-api.md)
+You can create the custom API yourself and set the plug-in assembly created by this code.
+There are several ways to create custom API, and they are documented here: [Create and use custom APIs](../../custom-api.md)
 
-This Custom API is defined with the following data:
+This custom API is defined with the following data:
 
 ```
 {
@@ -72,27 +75,27 @@ This Custom API is defined with the following data:
 }
 ```
 
-You can use this data to create the Custom API using Postman and the Web API by following the example here: [Create a Custom API with code](../../create-custom-api-with-code.md).
+You can use this data to create the custom API using Postman and the Web API by following the example here: [Create a custom API with code](../../create-custom-api-with-code.md).
 
 For information about the values passed see these topics: [CustomAPI tables](../../custom-api-tables.md)
 
-This Custom API is a function bound to the [User (SystemUser) table](../../reference/entities/systemuser.md). It has a single boolean response property `HasRole` which will return `true` when the user has the System Administrator security role.
+This custom API is a function bound to the [User (SystemUser) table](../../reference/entities/systemuser.md). It has a single boolean response property `HasRole` which will return `true` when the user has the System Administrator security role.
 
-After you create the Custom API as defined above, build this .NET Class Library project to generate a plug-in assembly named `IsSystemAdminCustomAPI.dll`. This assembly will have a single plug-in type named `PowerApps.Samples.IsSystemAdmin`.
+After you create the custom API as defined above, build this .NET Class Library project to generate a plug-in assembly named `IsSystemAdminCustomAPI.dll`. This assembly will have a single plug-in type named `PowerApps.Samples.IsSystemAdmin`.
 
 You must register the plug-in assembly created by using the Plug-in registration tool as described here: [Register plug-in](../../tutorial-write-plug-in.md#register-plug-in)
 
-After the plug-in is registered, you will be able to set it as the plug-in type for the Custom API.
+After the plug-in is registered, you will be able to set it as the plug-in type for the custom API.
 
-The `sample_IsSystemAdmin` Custom API you create will be part of the unmanaged customizations in your environment. To remove it you must delete the Custom API and the Plugin Assembly.
+The `sample_IsSystemAdmin` custom API you create will be part of the unmanaged customizations in your environment. To remove it you must delete the custom API and the Plugin Assembly.
 
 ## What this sample does
 
-This `sample_IsSystemAdmin` Custom API uses this code to query the system to detect whether the user has the System Administrator security role.
+This `sample_IsSystemAdmin` custom API uses this code to query the system to detect whether the user has the System Administrator security role.
 
 ## How this sample works
 
-To use the `sample_IsSystemAdmin` Custom API, you can use either the Web API or the Organization Service using the Dataverse .NET Framework SDK assemblies.
+To use the `sample_IsSystemAdmin` custom API, you can use either the Web API or the Organization Service using the Dataverse .NET Framework SDK assemblies.
 
 ### Using Web API
 
@@ -151,7 +154,7 @@ The `HasRole` value indicates if the user has the System Administrator security 
 
    foreach (Entity user in users.Entities)
    {
-        //Test each record returned using  the Custom API
+        //Test each record returned using  the custom API
        bool isAdmin = IsSystemAdmin(svc, user.Id);
 
         //Show the results in the console
@@ -164,13 +167,13 @@ The `HasRole` value indicates if the user has the System Administrator security 
 ### Demonstrate
 
 1. How to query to detect if the user is a system administrator
-1. How to write a plug-in to support a Custom API
-1. How to invoke a Custom API function using the Web API
-1. How to invoke a Custom API using the Organization service
+1. How to write a plug-in to support a custom API
+1. How to invoke a custom API function using the Web API
+1. How to invoke a custom API using the Organization service
 
 ### See also
 
-[Create and use Custom APIs](../../custom-api.md)<br />
+[Create and use custom APIs](../../custom-api.md)<br />
 [Write a plug-in](../../write-plug-in.md)<br />
 [Register a plug-in](../../register-plug-in.md)
 

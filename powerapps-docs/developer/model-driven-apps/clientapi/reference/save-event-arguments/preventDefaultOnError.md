@@ -16,6 +16,8 @@ contributors:
 
 [!INCLUDE[./includes/preventDefaultOnError-description.md](./includes/preventDefaultOnError-description.md)]
 
+[!INCLUDE [online-only-api-note](../../includes/online-only-api-note.md)]
+
 ## Syntax
 
 `executionContext.getEventArgs().preventDefaultOnError();`

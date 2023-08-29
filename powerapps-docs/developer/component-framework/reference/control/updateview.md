@@ -1,6 +1,6 @@
 ---
-title: "StandardControl.updateView| MicrosoftDocs"
-description: This method will be called when any value in the property bag has changed. 
+title: "StandardControl.updateView (Power Apps component framework API reference) | MicrosoftDocs"
+description: This method is called when any value in the property bag has changed. 
 ms.author: noazarur
 author: noazarur-microsoft
 ms.date: 05/27/2022
@@ -26,7 +26,7 @@ Model-driven apps, canvas apps, & portals.
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|context|`context`|yes|Contains values as set up by the customizer mapped to the name defined in the manifest, as well as in the utility functions|
+|context|`context`|yes|Contains values as setup by the customizer mapped to the name defined in the manifest, and in the utility functions|
 
 ## Example
 
@@ -39,10 +39,10 @@ public updateView(context: ComponentFramework.Context<IInputs>): void
 
 ## Remarks
 
-Set the value of the field component to the raw value from the configured field
+Set the value of the field component to the raw value from the configured field.
 
 
-### Related topics
+### Related articles
 
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

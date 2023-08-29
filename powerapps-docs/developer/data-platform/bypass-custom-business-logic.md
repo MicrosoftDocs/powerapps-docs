@@ -161,7 +161,7 @@ static void AddprvBypassCustomPluginsToRole(IOrganizationService service, Guid r
 
 Associate the `prvBypassCustomPlugins` privilege to the security role using the [AddPrivilegesRole Action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole).
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.1/roles(<id of role>)/Microsoft.Dynamics.CRM.AddPrivilegesRole HTTP/1.1
@@ -182,7 +182,7 @@ OData-Version: 4.0
 
 You must set the <xref:Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege>.`Depth` property to <xref:Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth>.`Global` (`3`) because `prvBypassCustomPlugins` is a global privilege.
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content  
@@ -283,7 +283,7 @@ Waiting for Resources: 50,000
 #### [Web API](#tab/webapi)
 
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/asyncoperations?$filter=operationtype eq 79&$apply=groupby((statuscode),aggregate($count as count)) HTTP/1.1
@@ -294,7 +294,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -359,7 +359,7 @@ static void DemonstrateSuppressCallbackRegistrationExpanderJob(IOrganizationServ
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -445,7 +445,7 @@ FirstName LastName,Organization,Callback Registration Id: dabfa1a1-b794-44d0-ad3
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/callbackregistrations?$select=name,entityname,message,sdkmessagename,scope,_ownerid_value&$filter=softdeletestatus eq 0 HTTP/1.1
@@ -458,7 +458,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 
 ```
 
-**Response**
+**Response:**
 
 
 ```http

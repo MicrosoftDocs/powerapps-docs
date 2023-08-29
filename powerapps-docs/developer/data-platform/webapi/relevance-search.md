@@ -1,8 +1,8 @@
 ---
-title: "Search across table data using Dataverse search (Microsoft Dataverse)| Microsoft Docs"
-description: "Read about the various ways to find table data, including search, suggestions, and autocomplete, and even search across table types using Microsoft Dataverse."
+title: Search across table data using Dataverse search
+description: Learn about the various ways to find table data, including search, suggestions, and autocomplete, and even search across table types, using Microsoft Dataverse.
 ms.date: 10/13/2020
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - Dynamics 365 (online)
 author: mspilde
@@ -36,12 +36,12 @@ application UI:
 - **Autocomplete**: Provides autocompletion of input as the user enters text into a
     form field.
 
-The following sections describe how to access the above mentioned search
+The following sections describe how to access the previously mentioned search
 capabilities from application code.
 
 ## Search
 
-The minimum syntax of a Dataverse search HTTP request is as shown below.
+The following example shows the minimum syntax of a Dataverse search HTTP request.
 
 ```http
 POST [Organization URI]/api/search/v1.0/query
@@ -55,8 +55,7 @@ The `search` parameter value contains the term to be searched for and has a
 
 A successful search response returns an HTTP status of 200 and consists of:
 
-- value: a list of tables. By default, 50 results are returned. This also
-    includes search highlights, which indicate matches to the search parameter
+- value: a list of tables. By default, 50 results are returned. Includes search highlights, which indicate matches to the search parameter
     value contained within the `crmhit` tag of the response.
 
 - totalrecordcount: The total count of results (of type long). A value of &minus;1
@@ -75,8 +74,7 @@ The following query parameters are supported for Dataverse search.
 #### `entities=[list<string>] (optional)`
 
 The default table list searches across all Dataverse search&ndash;configured tables
-and columns. The default list is configured by your administrator when Dataverse
-search is enabled.
+and columns. The administrator configures the default list when Dataverse search is enabled.
 
 #### `facets=[list<string>] (optional)`
 
@@ -127,9 +125,9 @@ Specifies the number of search results to retrieve. The default is 50, and the m
 
 #### `orderby=[list<string>] (optional)`
 
-A list of comma-separated clauses where each clause consists of a column name followed by 'asc' (ascending, which is the default) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
+A list of comma-separated clauses where each clause consists of a column name followed by 'asc' (ascending, which is the default) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering is random.
 
-For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
+For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
 `"orderby": ["@search.score desc", "modifiedon desc"]`
 
@@ -154,7 +152,7 @@ The simple query syntax supports the following functionality:
 | **Functionality** | **Description** |
 |---|---|
 | Boolean operators | AND operator; denoted by +<br/>OR operator; denoted by \|<br/>NOT operator; denoted by \- |
-| Precedence operators | A search term "hotel+(wifi \| luxury)" will search for results containing the term "hotel" and either "wifi" or "luxury" (or both). |
+| Precedence operators | A search term "hotel+(wifi \| luxury)" searches for results containing the term "hotel" and either "wifi" or "luxury" (or both). |
 | Wildcards            | Trailing wildcard are supported. For example, "Alp\*" searches for "alpine". |
 | Exact matches        | A query enclosed in quotation marks " ".|
 
@@ -165,21 +163,21 @@ The Lucene query syntax supports the following functionality:
 | Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by AND, +<br/>OR operator; denoted by OR, \|\|<br/>NOT operator; denoted by NOT, !, – |
 | Precedence operators              | The same functionality as simple query syntax. |
 | Wildcards                         | In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – "alp\*"<br/>Leading wildcard - "/.\*pine/" |
-| Fuzzy search                      | Supports queries misspelled by up to two characters.<br/>"Uniersty\~" will return "University"<br/>"Blue\~1" will return "glue", "blues" |
-| Term boosting                     | Weighs specific terms in a query differently.<br/>"Rock\^2 electronic" will return results where the matches to "rock" are more important than matches to "electronic". |
+| Fuzzy search                      | Supports queries misspelled by up to two characters.<br/>"Uniersty\~" returns "University"<br/>"Blue\~1" returns "glue", "blues" |
+| Term boosting                     | Weighs specific terms in a query differently.<br/>"Rock\^2 electronic" returns results where the matches to "rock" are more important than matches to "electronic". |
 | Proximity search                  | Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, "airport hotel"\~5 returns results where "airport" and "hotel" are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
 | Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
 
 > [!NOTE]
 > Wildcards are used only for word completion in Dataverse search. As a rule, querying with a leading wildcard will take significantly longer than not using a wildcard, so we encourage you to explore alternative ways to find what you're looking for and only use leading wildcards sparingly, if at all.
 
-In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). Special characters that require escaping include the following: + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
+In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). You must escape the following special characters: + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
 
 ### Example: basic search
 
-Below is an example of a basic search request and response.
+The following example is a basic search request and response.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/query
@@ -194,7 +192,7 @@ POST [Organization URI]/api/search/v1.0/query
 }
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -315,11 +313,11 @@ POST [Organization URI]/api/search/v1.0/query
 ## Suggestions
 
 Suggestions provide a list of matches to the specified search parameter value,
-based on a table record's primary column. This is different from a regular search
+based on a table record's primary column. This behavior is different from a regular search
 request because a suggestion search only searches through a record's primary column,
 while search requests search through all Dataverse search&ndash;enabled table columns.
 
-The minimum syntax of a suggestion search HTTP request is as shown below.
+The following example shows the minimum syntax of a suggestion search HTTP request.
 
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
@@ -352,9 +350,9 @@ Number of suggestions to retrieve. The default is 5.
 
 #### `orderby=[List<string>] (optional)`
 
-A list of comma-separated clauses where each clause consists of an column name followed by 'asc' (ascending) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
+A list of comma-separated clauses where each clause consists of a column name followed by 'asc' (ascending) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering is random.
 
-For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
+For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
 `"orderby": ["@search.score desc", "modifiedon desc"]`
 
@@ -369,7 +367,7 @@ The default is searching across all Dataverse search&ndash;configured tables.
 Filters are applied while searching data and are specified in standard OData
 syntax.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
@@ -383,9 +381,9 @@ POST [Organization URI]/api/search/v1.0/suggest
 
 ### Example: suggestion search
 
-The following is an example of a basic suggestion search request.
+The following example shows a basic suggestion search request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
@@ -394,7 +392,7 @@ POST [Organization URI]/api/search/v1.0/suggest
 }
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -456,7 +454,7 @@ and columns.
 Filters are applied while searching data and are specified in standard OData
 syntax.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
@@ -470,9 +468,9 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### Example: autocomplete search
 
-The following is an example of a basic autocomplete request.
+The following example shows a basic autocomplete request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
@@ -481,7 +479,7 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 }
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -491,9 +489,9 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### See also
 
-[Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)<br />
-[Compare search options in Microsoft Dataverse](../../../user/search.md)<br />
-[Query Data using the Web API](query-data-web-api.md)<br />
+[Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)   
+[Compare search options in Microsoft Dataverse](../../../user/search.md)   
+[Query data using the Web API](query-data-web-api.md)   
 [Connect with your Dataverse environment](setup-postman-environment.md#connect-with-your-dataverse-environment)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

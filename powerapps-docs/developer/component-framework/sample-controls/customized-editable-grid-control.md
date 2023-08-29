@@ -16,7 +16,7 @@ contributors:
 
 # Customized editable grid
 
-This sample demonstrates how to customize the Power Apps editable grid control as described in [Customize the editable grid control (Preview)](../customize-editable-grid-control.md).
+This sample demonstrates how to customize the Power Apps editable grid control as described in [Customize the editable grid control](../customize-editable-grid-control.md).
 
 This sample changes the main grid page for a table that is configured to use this control. All text columns will use green text. Any values for the `creditlimit` column will display as blue if the value is greater than 100,000 and red otherwise.
 

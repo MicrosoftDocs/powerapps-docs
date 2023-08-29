@@ -1,5 +1,5 @@
 ---
-title: save | Microsoft Docs
+title: save (Power Apps component framework API reference) | Microsoft Docs
 description: Saves the record
 ms.author: noazarur
 author: noazarur-microsoft
@@ -32,7 +32,7 @@ Type: `Promise`
 You can get an error saying `Invalid snapshot with id undefined` when the incorrect column name parameter was used with [setValue](setValue.md). Make sure to use the logical name of the column.
 
 
-### Related topics
+### Related articles
 
 [Entityrecord](../entityrecord.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

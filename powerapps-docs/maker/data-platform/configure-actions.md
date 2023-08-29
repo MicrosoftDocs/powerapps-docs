@@ -51,7 +51,7 @@ Custom process actions also have something that real-time workflow processes don
 
 
 > [!NOTE]
-> If you intend to write a plug-in to implement your logic for a custom process action instead of using the workflow designer, you should use Custom API instead. More information: [Compare Custom Process Action and Custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
+> If you intend to write a plug-in to implement your logic for a custom process action instead of using the workflow designer, you should use custom API instead. More information: [Compare Custom Process Action and custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
   
 Like real-time workflow processes, actions have the following properties in the **Create Process** dialog box:  
   
