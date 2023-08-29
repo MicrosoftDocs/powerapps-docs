@@ -12,10 +12,10 @@ search.audienceType:
 ---
 # Query data using FetchXml
 
-FetchXml is a proprietary XML based query language used with Dataverse to retrieve data using either the SDK for .NET or Web API. With Power Automate, you can retrieve data using the Web API using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query).
+FetchXml is a proprietary XML based query language used to retrieve data from Dataverse. See [FetchXml reference](reference/index.md) for the elements used to retrieve data.
 
 > [!NOTE]
-> FetchXml is also used to define views for model-driven apps and some reporting capabilities. The [FetchXml schema](../fetchxml-schema.md) includes elements and attributes for these use cases which are not discussed here. More information: [Model-driven Apps developer guide: Customize views](../../model-driven-apps/customize-entity-views.md).
+> FetchXml is also used to define views for model-driven apps and some reporting capabilities. The [FetchXml schema](../fetchxml-schema.md) includes elements and attributes for these use cases. [Learn more about customizing model-driven app views with code](../../model-driven-apps/customize-entity-views.md).
 
 ## Compose a query
 
@@ -29,8 +29,8 @@ All queries are based on a single table. When composing a query using FetchXml, 
 
 This query returns all columns of the first 5,000 rows from the [Account table](../reference/entities/account.md), using the table `LogicalName` to set the [entity](reference/entity.md) `name` attribute.
 
-> [!NOTE]
-> We strongly discourage returning all columns in a table. Returning all columns will make your applications run slower and may cause timeout errors.
+> [!IMPORTANT]
+> We strongly discourage returning all columns in a table. Returning all columns will make your applications run slower and may cause timeout errors. You should [select which columns to return](select-columns.md).
 
 After you have selected the table to start your query with, you need to refine the query to get the data you need. The following articles in this section explain how to complete your query.
 
@@ -55,11 +55,11 @@ The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fet
 
 ## Use FetchXml to retrieve data
 
-You can use FetchXml to retrieve data using either the SDK for .NET or Web API.
+You can use FetchXml to retrieve data using either the SDK for .NET or Web API. With Power Automate, you can retrieve data using the Web API using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query).
 
 ### [SDK for .NET](#tab/sdk)
 
-Use the [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) to hold pass the FetchXml query as a string. `FetchExpression` is derived from the common [QueryBase class](xref:Microsoft.Xrm.Sdk.Query.QueryBase) type, so you can use it when that type is a parameter or property.
+Use the [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) to hold pass the FetchXml query as a string. `FetchExpression` is derived from the common [QueryBase class](xref:Microsoft.Xrm.Sdk.Query.QueryBase) type, so you can use it when that type is a method parameter or class property.
 
 You should use the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) for most cases.
 
@@ -70,7 +70,7 @@ static EntityCollection RetrieveMultipleExample(IOrganizationService service, st
 }
 ```
 
-You can also use the [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest), but there are few scenarios where this is necessary.
+You can also use the [RetrieveMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest) with the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A), but there are few scenarios where this is necessary.
 
 ```csharp
 static EntityCollection RetrieveMultipleRequestExample(IOrganizationService service, string fetchXml)
@@ -86,10 +86,11 @@ static EntityCollection RetrieveMultipleRequestExample(IOrganizationService serv
 }
 ```
 
+[Learn more about using messages with the SDK for .NET](../org-service/use-messages.md)
 
 ### [Web API](#tab/webapi)
 
-Pass your FetchXml query as a URL-coded string value to the entity set collection using the `fetchXml` query parameter.
+Pass your FetchXml query as a URL-encoded string value to the entity set collection using the `fetchXml` query parameter.
 
 > [!NOTE]
 > Unlike queries that use the OData syntax, FetchXML queries sent using Web API don't return properties with null values.
@@ -118,7 +119,7 @@ The URL-encoded string for the previous query example looks like this:
 %3Cfetch%20top%3D%275%27%3E%0D%0A%3Centity%20name%3D%27account%27%3E%0D%0A%3Cattribute%20name%3D%27name%27%2F%3E%0D%0A%3C%2Fentity%3E%0D%0A%3C%2Ffetch%3E
 ```
 
-Then send your request to the `accounts` entity set.
+Then send your request to the `accounts` entity set with the `fetchXml` parameter in the URL.
 
 **Request**:
 

@@ -27,7 +27,7 @@ Use the [attribute element](reference/attribute.md) to select the columns to ret
 </fetch>
 ```
 
-This query returns the [AccountClassificationCode](../reference/entities/account.md#BKMK_AccountClassificationCode), [CreatedBy](../reference/entities/account.md#BKMK_CreatedBy), [CreatedOn](../reference/entities/account.md#BKMK_CreatedOn), and [Name](../reference/entities/account.md#BKMK_Name) columns of the first 5,000 rows from the [Account table](../reference/entities/account.md). If you need more rows than this, [learn how to page results using FetchXml](page-results.md)
+This query returns the [AccountClassificationCode](../reference/entities/account.md#BKMK_AccountClassificationCode), [CreatedBy](../reference/entities/account.md#BKMK_CreatedBy), [CreatedOn](../reference/entities/account.md#BKMK_CreatedOn), and [Name](../reference/entities/account.md#BKMK_Name) columns of the first 5,000 rows from the [Account table](../reference/entities/account.md). If you need more rows than this, or you want to iterate through smaller sets of data, [learn how to page results using FetchXml](page-results.md)
 
 For each attribute you want returned, add an [attribute element](reference/attribute.md) and set the `name` attribute value to the `LogicalName` of the column.
 
@@ -40,7 +40,7 @@ Use the [attribute element](reference/attribute.md) to select the columns for th
 
 ## Formatted values
 
-If you view the results of the example query above, the results look something like this:
+The results of the example query above look something like this:
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -155,8 +155,8 @@ OData-Version: 4.0
 These values may not be the user-friendly values you need to display in an application.
 
 - The `accountclassificationcode` choice column returns the integer value.
+- The SDK reference to `createdby` must use the [EntityReference.Name property](xref:Microsoft.Xrm.Sdk.EntityReference.Name)
 - The Web API returns the `_createdby_value` [Lookup property](../webapi/query-data-web-api.md#lookup-property-data) that has the GUID value for the `createdby` lookup column.
-- The value of the `createdon` column represents the UTC time saved in the database rather than the time relevent to the user's time zone.
 
 To get the user-friendly values you want, you need to access *formatted values* that can be returned by Dataverse.
 
