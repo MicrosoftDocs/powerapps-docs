@@ -273,7 +273,7 @@ Some examples of the kind of notifications that your custom plug-in can provide 
 
 ## Inherited access repair
 
-After changing the cascading behavior of a table relationship for the **Reparent** or **Share** actions to **No Cascade**, the system will try to adjust user's access rights to match the current table relationship cascading behavior. [Learn more about inherited access rights cleanup](../../maker/data-platform/create-edit-entity-relationships.md#inherited-access-rights-cleanup)
+After changing the cascading behavior of a table relationship for the **Reparent** or **Share** actions to **No Cascade**, the system will try to adjust user's inherited access rights to match the current table relationship cascading behavior. [Learn more about inherited access rights cleanup](../../maker/data-platform/create-edit-entity-relationships.md#inherited-access-rights-cleanup)
 
 However, if this is not successful, is possible for users to retain access to related records that should be removed. For steps to address this, see [Clean up inherited access](/troubleshoot/power-platform/power-apps/dataverse/cleanup-inherited-access).
 
