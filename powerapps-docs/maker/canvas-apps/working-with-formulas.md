@@ -150,7 +150,13 @@ As you type a formula in the formula bar, different syntax elements appear in di
 
 ## Power Fx formula bar (experimental)
 
-Use the Power Fx formula bar in Power Apps Studio, with better intellisense and improved error highlighting. The Power FX Formula bar allows users to write formulas more quickly and accurately. [Power FX](power-platform/power-fx/overview) is a low-code formula language that is designed to be more intuitive and easier to learn than the existing formula language. It is based on Microsoft Excel formulas, which are widely used and familiar to many users.
+[This section is pre-release documentation and is subject to change.]
+
+> [!IMPORTANT]
+> - This is an experimental feature.
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+Use the Power Fx formula bar in Power Apps Studio, with better intellisense and improved error highlighting. The Power FX Formula bar allows users to write formulas more quickly and accurately. [Power FX](/power-platform/power-fx/overview) is a low-code formula language that is designed to be more intuitive and easier to learn than the existing formula language. It is based on Microsoft Excel formulas, which are widely used and familiar to many users.
 
 To use the Power Fx formula bar (experimental), you need to turn it on for each app. Follow the steps below to use the new formula bar:
 
@@ -160,12 +166,10 @@ To use the Power Fx formula bar (experimental), you need to turn it on for each 
 
 The Power FX formula bar in Power Apps Studio offers a more intuitive and efficient way to write formulas for your apps. Here's how to use it:
 
-1. Open an app for editing in Power Apps Studio. 
-2. Select on the formula bar at the top of the screen to open it.
-3. Start typing your formula in the bar. As you type, the formula bar will provide suggestions for functions and arguments that match your input.
-4. Use the arrow keys to select the suggestion you want and press **Enter** to insert it into your formula.
-5. Continue typing your formula or select suggestions until it is complete.
-
+1. Open your app for editing in Power Apps Studio. 
+2. Select the formula bar at the top of the screen to open it.
+3. Start typing your formula in the bar. As you type, the formula bar will provide suggestions for functions that match your input.
+5. Continue typing your formula or select the suggestions until you're done. 
 
 ### See also
 
