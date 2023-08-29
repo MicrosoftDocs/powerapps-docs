@@ -83,7 +83,7 @@ There might be occasions when you want to remove a managed component from an env
 
 ## Overwrite customizations option
 
-The option to overwrite customizations is only available with the classic import experience and using the SDK APIs.
+The option to overwrite customizations is only available with the classic import experience and using the [SDK APIs](/dotnet/api/microsoft.crm.sdk.messages.importsolutionrequest.overwriteunmanagedcustomizations).
 
 > [!IMPORTANT]
 > Selecting the **Overwrite Customizations (not recommended)**  option will overwrite or remove any unmanaged customizations previously performed on components included in this solution. This option does not affect components that support merge behavior (forms, sitemap, ribbon, app modules).  Components that have other managed solutions on top of the existing solution you are replacing do also still remain on top and are not affected by this option.  
