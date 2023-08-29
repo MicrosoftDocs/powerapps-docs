@@ -282,6 +282,6 @@ To minimize the duration of either of these conditions, we recommend you include
 [Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)   
 [Bulk operation messages (preview)](bulk-operations.md)   
 [Sample: Use CreateMultiple and UpdateMultiple](org-service/samples/create-update-multiple.md)   
-[Optimize performance for Create and Update operations](optimize-performance-create-update.md)
+[Optimize performance for bulk operations](optimize-performance-create-update.md)
 
 [!INCLUDE [footer-include](../../includes/footer-banner.md)]
