@@ -5,7 +5,7 @@ author: matp
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 07/25/2023
+ms.date: 08/29/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -66,7 +66,7 @@ You can display the following data types in a formula column:
 - Choice Yes/No (boolean)
 - Datetime
 
-The currency and choices (formerly optionsets) data types aren't currently supported.
+The currency, whole number, and choice (formerly optionsets) data types aren't currently supported.
 
 ## Function types
 
