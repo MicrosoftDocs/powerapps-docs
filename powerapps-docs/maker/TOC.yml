@@ -55,7 +55,7 @@
     items:
     - name: Overview
       href: ../user/use-model-driven-apps.md
-    - name: Modern, refreshed look (preview)
+    - name: Modern, refreshed look
       href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
@@ -1745,6 +1745,8 @@
       href: ./common/performance-insights-categories.md
   - name: App ratings (preview)
     href: ./common/app-ratings.md
+  - name: Model-driven app frequently asked questions
+    href: ./model-driven-apps/model-app-faq.md
   - name: Developer zone
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
@@ -1947,7 +1949,7 @@
       href: ./data-platform/create-edit-metadata.md
     - name: Types of tables
       href: ./data-platform/types-of-entities.md
-    - name: "Create or edit a table"
+    - name: Create or edit a table
       href: ./data-platform/create-edit-entities-portal.md
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
@@ -2489,6 +2491,8 @@
               href: ../cards/controls/media.md
             - name: Number input
               href: ../cards/controls/number-input.md
+            - name: Table
+              href: ../cards/controls/table.md
             - name: Text input
               href: ../cards/controls/text-input.md
             - name: Text label
