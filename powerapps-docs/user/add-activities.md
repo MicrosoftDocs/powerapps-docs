@@ -480,7 +480,7 @@ By default, you can pin notes. The activities that you can pin depend on how you
 
 Pin a record by selecting the pin icon next to it. This moves it to the top of the timeline in the **Pinned** section, where it can be quickly accessed. The Pinned section also lists the number of records that are pinned. You can pin a maximum of 15 records. Records that are pinned will stay at the top of the timeline for a year unless you unpin them.
 
-![Pin and unpin activity view.](media\timeline-pin-unpin-activity.png "Pin and unpin an activity view")
+![Pin and unpin record view.](media\timeline-pin-unpin-activity.png "Pin and unpin a record view")
 
 To unpin a record, select the pin icon next to it. Unpinning it moves it out of the **Pinned** section and back to where it orginally appeared in the list of records in the timeline.
 
