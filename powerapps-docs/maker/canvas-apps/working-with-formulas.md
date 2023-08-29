@@ -165,7 +165,7 @@ The Power FX formula bar in Power Apps Studio offers a more intuitive and effici
 3. Start typing your formula in the bar. As you type, the formula bar will provide suggestions for functions and arguments that match your input.
 4. Use the arrow keys to select the suggestion you want and press **Enter** to insert it into your formula.
 5. Continue typing your formula or select suggestions until it is complete.
-6. Select the checkmark button next to the formula bar to save and apply your formula.
+
 
 ### See also
 
