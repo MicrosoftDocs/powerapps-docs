@@ -107,7 +107,7 @@ You've created the basic app and modified the **Browse** screen to display field
 2. In the header of the **Details** screen on the middle pane, select the **Table1** label. On the right pane, on the **Properties** tab, change the **Text** property to **Part Details**.
 
     > [!NOTE] 
-    > In many cases, you can accomplish the same results by using the formula bar as the **Properties** pane. However, some properties that are only available through the **Properties** pane.
+    > In many cases, you can accomplish the same results by using the formula bar as the **Properties** pane. However, some properties are only available through the **Properties** pane.
 
     ![Change browse parts screen header.](media/image20.png)
 
