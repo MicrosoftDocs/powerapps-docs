@@ -21,15 +21,26 @@ contributors:
 ## Example
 
 ```xml
-TODO
+<fetch>
+  <entity name='account'>
+    <attribute name='name' />
+    <link-entity name='contact'
+      from='contactid'
+      to='primarycontactid'
+      link-type='inner'
+      alias='contact'>
+      <attribute name='fullname' />
+    </link-entity>
+  </entity>
+</fetch>
 ```
 
 ## Attributes
 
 |Name|Required?|Description|
 |---------|---------|---------|
-|`addedby`|No|TODO|
-|`aggregate`|No|TODO|
+|`addedby`|No|TODO?|
+|`aggregate`|No|The [aggregate function](#aggregate-functions) to apply. [Learn how to aggregate data with FetchXml](../aggregate-data.md)|
 |`alias`|No|TODO|
 |`build`|No|TODO|
 |`dategrouping`|No|TODO|
@@ -46,5 +57,12 @@ TODO
 |---------|---------|
 |[entity](entity.md)|[!INCLUDE [entity-description](includes/entity-description.md)]|
 |[link-entity](link-entity.md)|[!INCLUDE [link-entity-description](includes/link-entity-description.md)]|
+
+
+## Aggregate functions
+
+[!INCLUDE [aggregate-function-table](includes/aggregate-function-table.md)]
+
+
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

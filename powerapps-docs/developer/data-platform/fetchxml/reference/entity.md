@@ -21,17 +21,24 @@ contributors:
 ## Example
 
 ```xml
-TODO
+<fetch>
+  <entity name='account'>
+    <attribute name='accountclassificationcode' />
+    <attribute name='createdby' />
+    <attribute name='createdon' />
+    <attribute name='name' />
+  </entity>
+</fetch>
 ```
 
 ## Attributes
 
 |Name|Required?|Description|
 |---------|---------|---------|
-|`name`|Yes|TODO|
-|`forceseek`|No|TODO|
-|`enableprefiltering`|No|TODO|
-|`prefilterparametername`|No|TODO|
+|`name`|Yes|The logical name of the table that the query is based on.|
+|`forceseek`|No|TODO?|
+|`enableprefiltering`|No|TODO?|
+|`prefilterparametername`|No|TODO?|
 
 ## Parent elements
 
