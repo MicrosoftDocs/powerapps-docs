@@ -15,9 +15,9 @@ Microsoft Fabric’s lake-centric approach helps to eliminate data silos. Combin
 
 Makers can build low-code apps and automations to orchestrate business processes and react to insights found in Microsoft Fabric using connectors to over 1,000 apps. Add those insights back to Dataverse as external or virtual tables through the SQL endpoint and makers can turn them into low-code apps with Power Apps, Power Pages, or Power Automate using skills they already have.
 
-Dataverse integration with Microsoft Fabric is currently in private preview. To join the preview, visit [https://aka.ms/DataverseExtendsToFabric](https://aka.ms/DataverseExtendsToFabric  ).
+Dataverse integration with Microsoft Fabric is currently in preview. 
 
-# View in Microsoft Fabric in PowerApps maker portal
+## Launch Microsoft Fabric from PowerApps maker portal
 
 Low code makers can use PowerApps maker portal to work with their data and build new Apps and automations using PowerApps, Power Automate and other tools already available in the Power platform. 
 
@@ -27,17 +27,18 @@ Now, makers can choose one or more tables from Dataverse and launch Microsoft Fa
 
 Makers can continue to add more data and launch Microsoft Fabric from the maker portal. Default Synapse Lakehouse and the Data warehouse gets updated with new data as changes happen in Dataverse.
 
-# Build Apps and automations with data from Microsoft Fabric and One Lake
+## Build PowerApps with data from Microsoft Fabric
 
 Makers can build Apps and automations with enterprise-wide data available in One Lake – the data store behind Microsoft Fabric. They can define external tables using the SQL endpoint available for Microsoft Fabric data and work with the data as if they were native Dataverse tables.
 
-# Manage links to Microsoft Fabric
 
-Synapse Link feature in Dataverse is used by IT admins to configure and manage Dynamics and PowerApps data with Azure Synapse. Synapse Link helped with configuring and provisioning Azure resources in the past. IT admins had to work with Synapse query and integrate Power BI for reporting (or Azure data factory to integrate data).
+## Use DirectLake and other query improvements in Microsoft Fabric 
+Synapse Link enabled IT admins to simplify their data integrations by provisioning and configuring Azure resources such as Azure Data lake storage and Azure Synapse. Microsoft Fabric provides several features that further simplifies data integration efforts including DirectLake mode for Power BI reports and query engine improvements in next generation Synapse Data warehouse. Now Synapse Link enables managing Fabric links. IT admins can configure Fabric links for their existing Synapse links and benefit from the improvements without any additional efforts or copying data. They can also add or removing tables from existing links and/or creating new Fabric links within a single experience.
+Customers who use D365 Finance and Operations (F&O) can use Synapse Link to choose their data from all Dynamics with the new preview feature enabled in Synapse Link.
 
 ![View in Microsoft Fabric in Synapse Link](media/Fabric/Azure-Syunapse-Link-with-View-In-Fabric.png)
 
-Now Synapse Link enables IT admins to manage links to Microsoft Fabric and work with SQL and other workloads without provisioning Synapse and other services.
+You can also enable direct link to Fabric with Dataverse provisioned storage. When makers choose to view in Fabric from maker portal, system uses Dataverse provisioned storage such that the data does not leave the Dataverse governance boundary. IT admins can manage use of Dataverse provisioned storage as well as create new links by provisioning your own storage
 
 **NOTES:**
 
@@ -55,39 +56,40 @@ Now Synapse Link enables IT admins to manage links to Microsoft Fabric and work 
 3.  This feature is only available in Power BI premium workspaces. If you don’t have Power BI premium capacity, you can sign-up for a Free Fabric trial capacity by visiting here: [Fabric (preview) trial - Microsoft Fabric \| Microsoft Learn](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial)
 4.  It is highly recommended that you create a new Power BI workspace to direct link to Dataverse. You can use this workspace to validate Synapse Link scenario.
 5.  To confirm that you can create a premium workspace. Choose **workspace settings \> premium** and ensure that you have **Trial** or **Premium capacity** selected.
-6.  The workspace you choose to link with Dataverse must be assigned to a Premium capacity in the same region as your Dataverse.
+6.  The workspace you choose to link with Dataverse must be assigned to a Premium capacity in the same region as your Dataverse. 
 
 ![Premium or Trial capacity assigned to a Fabric workspace](media/Fabric/Fabric-trial-capacity.png)
 
-1.  Launch Power BI with Microsoft Fabric with the URL to work with Microsoft Fabric
+7. Launch Microsoft Fabric with the URL shown below
 
-    **https://app.powerbi.com?trident=1**
+    **https://fabric.microsoft.com**
 
 ## Create a connection to your PowerApps environment
+You need to perform this onetime operation in your Power BI environment for each Power Apps environment. This connection is used by Microsoft Fabric environment to connect to the Dataverse environment to access data. – this pre-requisite is temporary and may go away in the future.
 
-1.  This is a onetime operation for your Power BI tenant for your Power Apps environment – this pre-requisite is temporary and may go away in the future.
-2.  Choose Power BI settings (**Gear icon** on top right of Power BI window) and select **Manage connections and gateways**
+1.  Choose Power BI settings (**Gear icon** on top right of Power BI window) and select **Manage connections and gateways**
 
 ![](media/Fabric/Fabric-launch-connections-and-gateways.png)
 
-1.  In the Data (preview) window, choose **+ New** option to create a new connection.
-2.  Choose **Cloud** and choose Connection type as **dataverse**
-3.  Provide **Connection name** and the **Environment Domain**. You can obtain the connection name from the power platform Admin center. You must enter the **Environment URL** you get from admin center into both the fields. Remember to remove https:// and the trailing /
+2.  In the Data (preview) window, choose **+ New** option to create a new connection.
+3.  Choose **Cloud** and choose Connection type as **dataverse**
+4.  Provide **Connection name** and the **Environment Domain**. You can obtain the connection name from the power platform Admin center. You must enter the **Environment URL** you get from admin center into both the fields. Remember to remove https:// and the trailing /
 
     ![Create a one time connection](media/Fabric/Fabric-setting-up-connection.png)
 
-4.  Choose **OAth2** as the Authentical model
-5.  Choose the Edit credentials link and confirm your credentials.
-6.  Review the connection information and choose **Create**.
+5.  Choose **OAth2** as the Authentical model
+6.  Choose the Edit credentials link and confirm your credentials.
+7.  Review the connection information and choose **Create**.
 
-Now you are ready to create links from your Data  
+Now you are ready to link your Data with Fabric.  
 
-# Launch Microsoft Fabric from PowerApps maker portal
-
-After configuration, you can create data links from PowerApps maker portal and launch Microsoft Fabric. 
+# Launch Microsoft Fabric from PowerApps 
+After configuration, you can launch Microsoft Fabric from the PowerApps maker portal in 2 ways. 
+- Launching Fabric from Tables menu and let the system create a Power BI workspace and lakehouse with default settings
+- Create and Manage links from the Synapse Link menu. This option lets you choose your own workspace.
 
 ## Launch Microsoft Fabric from Tables 
-You can create a Link simply by choosing tables from the PowerApps maker portal. 
+You can create a Link simply by choosing tables from the PowerApps maker portal. System creates a Power BI workspace, a link and launches Microsoft Fabric with default settings. You can add more tables to this link later from Tables menu in PowerApps maker portal. 
 
 1.  Launch Power apps maker portal with the URL and the feature flags shown below
 
@@ -96,18 +98,25 @@ You can create a Link simply by choosing tables from the PowerApps maker portal.
 2.  In case you have multiple environments, choose the environment you configured  
 3.  Choose **Tables** on the left navigation and choose **Account** table.
 4.  Click on “**…”** and choose **view in Microsoft Fabric**. You can also choose view in Microsoft Fabric option in the top menu
-5.  For the first time, you will see a dialog box confirming the name of the Power BI workspace. Select OK
+5.  For the first time, you will see a dialog box confirming the name of the Power BI workspace. Select OK.
 6.  Synapse Lake house should launch in a separate browser window
+7.  You can choose more tables by following steps 3, 4. These tables will be added to the same workspace.
 
     **NOTE**: The system may take \~15 mins to update data in managed lake including conversion to Delta-parquet format. If you have selected a larger table, the initial load time make take a little longer. You may see a link with the name "Unidentified" in case data is being initialized.
 
-## Launch Microsoft Fabric from the Synapse Link UI
+## Manage Microsoft Fabric links 
+You can add/remove tables in the default Fabric link or create new links using the Synapse Link menu. You can also link existing Synapse Link profiles with Microsoft Fabric using this option. You need to be a system administrator in the PowerApps environment to manage Fabric links.
+
+
+### Manage the default link (aka. Managed store)
+If you or someone else launched maker portal and linked tables earlier, they are added to the default link called **Managed Store**. All tables chosen in the maker experience (ie. previous step) will be included in the Managed Store. Managed store uses Dataverse provisioned file storage. 
+
 
 1.  Launch Power apps maker portal with the URL and the feature flags shown below
 
     **https://make.preview.Powerapps.com?athena.shortcuts=true&athena.mdl=true&athena.cds2=true**
 
-2.  You will notice a default Synapse link profile called **Managed Store**. All tables chosen in the maker experience (ie. previous step) will be included in the Managed Store. You can choose **view in Microsoft Fabric** by selecting **Managed store.**
+2.  You will notice the default Synapse link profile called **Managed Store**. You can choose **view in Microsoft Fabric** by selecting **Managed store.**
 
     **NOTE**: “Managed store” is a temporary name. The name may change in the future.
 
