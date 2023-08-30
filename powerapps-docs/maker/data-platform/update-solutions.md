@@ -2,7 +2,7 @@
 title: "Update a solution | MicrosoftDocs"
 description: "Learn how to update or upgrade a solution in Power Apps"
 ms.custom: ""
-ms.date: 01/18/2022
+ms.date: 08/30/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -32,7 +32,7 @@ There are times when you need to update an existing managed solution. To update 
 
 ## Apply the upgrade or update in the target environment
 
-The procedure to import the updated solution is similar to installing a new managed solution, except you will get some different options. If you are updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
+The procedure to import the updated solution is similar to installing a new managed solution, except you'll get some different options. If you're updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the target environment you want, and then select **Solutions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
 
@@ -44,13 +44,13 @@ The procedure to import the updated solution is similar to installing a new mana
 
 5. This page displays a yellow bar indicating **This solution package contains an update for a solution that is already installed**. To upgrade the solution, select **Next**. To view additional options, expand **Advanced settings**, and then select from the following solution action options:  
    - **Upgrade**
-        This is the default option and upgrades your solution to the latest version and rolls up all previous patches in one step.  Any components associated to the previous solution version that are not in the newer solution version will be deleted. This option will ensure that your resulting configuration state is consistent with the importing solution including removal of components that are no longer part of the solution.
+        This is the default option and upgrades your solution to the latest version and rolls up all previous patches in one step.  Any components associated to the previous solution version that aren't in the newer solution version will be deleted. This option ensures that your resulting configuration state is consistent with the importing solution including removal of components that are no longer part of the solution.
         
    - **Stage for Upgrade**
-        This option upgrades your solution to the higher version, but defers the deletion of the previous version and any related patches until you apply a solution upgrade later.  This option should only be selected if you want to have both the old and new solutions installed in the system concurrently so that you can do some data migration before you complete the solution upgrade. Applying the upgrade will delete the old solution and any components that are not included in the new solution.
+        This option upgrades your solution to the higher version, but defers the deletion of the previous version and any related patches until you apply a solution upgrade later.  This option should only be selected if you want to have both the old and new solutions installed in the system concurrently so that you can do some data migration before you complete the solution upgrade. Applying the upgrade deletes the old solution and any components that aren't included in the new solution.
         
    - **Update**
-        This option replaces your solution with this version. Components that are not in the newer solution won't be deleted and will remain in the system. Be aware that the source and destination environment may differ if components were deleted in the source environment. This option has the best performance by typically finishing in less time than the upgrade methods.
+        This option replaces your solution with this version. Components that aren't in the newer solution won't be deleted and remains in the system. Be aware that the source and destination environment may differ if components were deleted in the source environment. This option has the best performance by typically finishing in less time than the upgrade methods.
         
 8. Decide whether to enable the following option for post import actions:
    - **Enable plug-in steps and flows included in the solution**  
@@ -62,10 +62,10 @@ The procedure to import the updated solution is similar to installing a new mana
 
 10. You may need to wait a few moments while the solution import completes. If it's successful, you can view the results and select **Close**.  
 
-   Managed customizations are always imported in a published state, so there is no need to publish customizations after import in this scenario.
+   Managed customizations are always imported in a published state, so there's no need to publish customizations after import in this scenario.
 
 **Completing Solution Upgrade**
-If you chose to stage for upgrade, or if the system had an issue completing an upgrade, you will see that you have the original solution still installed in your system as well as a new solution that has the same solution name as the base solution suffixed with \_Upgrade.  To complete the upgrade, select the base solution in the solution list and select **Apply Solution Upgrade**.  This will uninstall all previous patches and the base solution then rename the \_Upgrade solution to be the same name as the previous base solution.  Any components that were in the original solution and patches that are not present in the \_Upgrade solution will be deleted as part of this process.
+If you chose to stage for upgrade, or if the system had an issue completing an upgrade, you'll see that you have the original solution still installed in your system as well as a new solution that has the same solution name as the base solution suffixed with \_Upgrade.  To complete the upgrade, select the base solution in the solution list and select **Apply Solution Upgrade**.  This uninstalls all previous patches and the base solution then rename the \_Upgrade solution to be the same name as the previous base solution.  Any components that were in the original solution and patches that aren't present in the \_Upgrade solution will be deleted as part of this process.
 
 ## Understanding version numbers for updates
 
