@@ -16,7 +16,7 @@ contributors:
 
 [!INCLUDE [link-entity-description](includes/link-entity-description.md)]
 
-To learn how to use this element, see [Join tables using FetchXml](../join-tables.md).
+[Learn how to join tables using FetchXml](../join-tables.md).
 
 ## Examples
 

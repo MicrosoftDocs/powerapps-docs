@@ -21,7 +21,16 @@ contributors:
 ## Example
 
 ```xml
-TODO
+<fetch>
+  <entity name='account'>
+    <attribute name='name' />
+    <filter type='and'>
+      <condition attribute='address1_city'
+        operator='eq'
+        value='Redmond' />
+    </filter>
+  </entity>
+</fetch>
 ```
 
 
@@ -29,9 +38,9 @@ TODO
 
 |Name|Required?|Description|
 |---------|---------|---------|
-|`type`|No|TODO|
-|`hint`|No|TODO|
-|`isquickfindfields`|No|TODO|
+|`type`|No|Use `and` or `or`. Whether all (`and`) or any (`or`) [conditions](condition.md) within the filter must be met.|
+|`hint`|No|TODO?|
+|`isquickfindfields`|No|REMOVE?|
 
 ## Parent elements
 

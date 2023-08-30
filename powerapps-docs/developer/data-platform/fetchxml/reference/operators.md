@@ -16,5 +16,8 @@ contributors:
 
 To learn how to use these values, see [Filter rows using FetchXml](../filter-rows.md).
 
+TODO 
+ - List all the operators
+ - Indicate which data types they can be used with
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

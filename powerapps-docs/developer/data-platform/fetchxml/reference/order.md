@@ -16,21 +16,32 @@ contributors:
 
 [!INCLUDE [order-description](includes/order-description.md)]
 
-To learn how to use this element, see [Order rows using FetchXml](../order-rows.md).
+[Learn how to order rows using FetchXml](../order-rows.md).
 
 ## Example
 
+This example return account records in ascending order by `createdon`, `name`, and `accountnumber` values.
+
 ```xml
-TODO
+<fetch>
+  <entity name='account'>
+    <attribute name='name' />
+    <attribute name='accountnumber' />
+    <attribute name='createdon' />
+    <order attribute='createdon' />
+    <order attribute='name' />
+    <order attribute='accountnumber' />
+  </entity>
+</fetch>
 ```
 
 ## Attributes
 
 |Name|Required?|Description|
 |---------|---------|---------|
-|`attribute`|YesNo|TODO|
-|`alias`|No|TODO|
-|`descending`|No|TODO|
+|`attribute`|Yes|The name of the attribute value to sort the data by.|
+|`alias`|No|TODO?|
+|`descending`|No|Whether to sort the data in decending order.|
 
 ## Parent elements
 

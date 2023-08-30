@@ -16,9 +16,11 @@ contributors:
 
 [!INCLUDE [value-description](includes/value-description.md)]
 
-To learn how to use this element, see [Filter rows using FetchXml](../filter-rows.md).
+[Learn how to filter rows using FetchXml](../filter-rows.md).
 
 ## Example
+
+This filter will will evaluate to true when the `numberofemployees` is between 6 and 20.
 
 ```xml
 <filter>

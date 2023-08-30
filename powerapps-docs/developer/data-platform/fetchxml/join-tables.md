@@ -78,6 +78,8 @@ The following attribute values are set in the previous example, but they have de
 |`link-type`|[!INCLUDE [link-entity-link-type-description](reference/includes/link-entity-link-type-description.md)]|
 |`alias`|[!INCLUDE [link-entity-alias-description](reference/includes/link-entity-alias-description.md)]|
 
+Use the `intersect` attribute when the `link-entity` supports a many-to-many relationship.
+
 
 ## Many-to-one relationships
 
@@ -203,7 +205,10 @@ There are two nested link-entities.
 - The first one connects `systemuser` to the `teammembership` intersect table where `systemuserid` = `systemuserid`.
 - The second one connects `teammembership` intersect table to team where `teamid` = `teamid`.
 
-<!-- TODO: Is the intersect='true' attribute required? What benefit does it provide? -->
+<!-- 
+TODO: Is the intersect='true' attribute required? What benefit does it provide? 
+As far as I can see, it isn't required, but provides a flag to indicate that no attributes are expected to be included from the table.
+-->
 
 ## No relationship
 

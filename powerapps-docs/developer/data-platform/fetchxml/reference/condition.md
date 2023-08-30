@@ -20,26 +20,37 @@ contributors:
 
 ## Example
 
+This query returns account records where `address1_city` equals 'Redmond'.
+
 ```xml
-TODO
+TODO<fetch>
+  <entity name='account'>
+    <attribute name='name' />
+    <filter type='and'>
+      <condition attribute='address1_city'
+        operator='eq'
+        value='Redmond' />
+    </filter>
+  </entity>
+</fetch>
 ```
 
 ## Attributes
 
 |Name|Required?|Description|
 |---------|---------|---------|
-|`aggregate`|No|TODO|
-|`alias`|No|TODO|
-|`attribute`|No|TODO|
-|`column`|No|TODO|
-|`entityname`|No|TODO|
-|`operator`|Yes|TODO|
-|`rowaggregate`|No|TODO|
-|`uihidden`|No|TODO|
-|`uiname`|No|TODO|
-|`uitype`|No|TODO|
-|`value`|No|TODO|
-|`valueof`|No|TODO|
+|`aggregate`|No|TODO?|
+|`alias`|No|TODO?|
+|`attribute`|No|The name of the column with the value to apply the filter.|
+|`column`|No|TODO?|
+|`entityname`|No|TODO?|
+|`operator`|Yes|The [operator](operators.md) to apply with the filter.|
+|`rowaggregate`|No|TODO?|
+|`uihidden`|No|REMOVE?|
+|`uiname`|No|REMOVE?|
+|`uitype`|No|REMOVE?|
+|`value`|No|The value to test the column value with the operator.|
+|`valueof`|No|The name of the column in the same table that has the value to test the column value with the operator. [Learn more about filtering on other column values](../filter-rows.md#filter-on-column-values-in-the-same-row). |
 
 
 ## Parent elements

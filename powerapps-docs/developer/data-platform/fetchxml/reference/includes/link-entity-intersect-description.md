@@ -1,1 +1,1 @@
-TODO: What does this attribute do? Is it necessary?
+Indicates that the table supports a many-to-many relationship. These tables typically don't have any attributes to return with the result.

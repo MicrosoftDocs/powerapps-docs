@@ -14,7 +14,7 @@ search.audienceType:
 
 Use the [filter element](reference/filter.md) within an [entity](reference/entity.md), [link-entity](reference/link-entity.md), or another `filter` element to set conditions on the rows of data to return.
 
-Add one or more [condition elements](reference/condition.md) to the filter to set the conditions. The containing `filter.type` attribute determines whether all (`and`) or any (`or`) of the conditions must be met. The default is `and`. By nesting filter elements you can create complex filter criteria that combine criteria evaluated using `and` or `or`.
+Add one or more [condition elements](reference/condition.md) to the filter to set the conditions. The containing `filter` `type` attribute determines whether all (`and`) or any (`or`) of the conditions must be met. The default is `and`. By nesting filter elements you can create complex filter criteria that combine criteria evaluated using `and` or `or`.
 
 Each `condition` has an `operator` attribute to evaluate a row column value. There are many [operator conditions](reference/operators.md) for you to choose from.
 
@@ -33,7 +33,7 @@ For example, the following query returns account records where `address1_city` e
 </fetch>
 ```
 
-This query returns account records where `address1_city` equals Redmond, Seattle, or Bellevue. It uses `<filter type='or'>`.
+This query returns account records where `address1_city` equals Redmond, Seattle, or Bellevue. It uses `<filter type='or'>` with three [condition elements](reference/condition.md).
 
 ```xml
 <fetch>
@@ -118,6 +118,31 @@ When the `link-entity` `link-type` attribute value is `outer`, you may want the 
 TODO Example
 Why would you want the filter to be applied after the join?
  -->
+
+## Filter on column values in the same row
+
+You can create filters that compare columns on values in the same row using the `valueof` attribute. For example, if you want to find any contact records where the `firstname` column value matches the `lastname` column value, you can use this query:
+
+```xml
+<fetch>
+  <entity name='contact' >
+    <attribute name='firstname' />
+    <filter>
+      <condition attribute='firstname' operator='eq' valueof='lastname'/>
+    </filter>
+  </entity>
+</fetch>
+```
+
+## Limitations on column comparison filters
+
+There are limitations on these kinds of filters:
+
+- Filter can only use these [operators](reference/operators.md): `eq`, `ne`, `gt`, `ge`, `lt`, `le`.
+- Only two columns may be compared at a time
+- Extended condition operations aren't supported. For example: `valueof='amount'+ 100`
+- The columns must be the same type. For example: You can't compare a string value with an number value.
+
 
 ## Returning distinct results
 
