@@ -26,15 +26,15 @@ A control that shows a set of data in a tabular or list format.
 ## Description
 The **Table** control is a modern responsiveness control that shows a set of data in a tabular or list format. The tabular format includes column headings for each displayed field and a footer that provides details about the dataset such as the record count. The list format presents the data in a single column and has three fields for each row. As an app maker, you have full control over what fields are added to the control including the order. Although all added fields are visible in the tabular format, only the initial three fields appear in the narrower list format.
 
-Similar to the **Gallery** and **Data** table controls, the **Table** maintains a **Selected** property that points to the selected row which can be used to link the **Table** control to other controls.
+Similar to the **Gallery** and **Data** table controls, the **Table** maintains a **Selected** property that points to the selected row that can be used to link the **Table** control to other controls.
 
 ## Supported capabilities
 - Data in a **Table** control is read-only.
 - The tabular format offers a modern data browsing experience with infinite scroll, eliminating the need for paging buttons.
 - The **Table** control only supports linking to Microsoft Dataverse tables.
-- When you connect a **Table** control to a compatible connector such as Microsoft Dataverse, a predefined set of fields are displayed by default. However, you also have the option to display or hide additional fields based on your requirements.
+- When you connect a **Table** control to a compatible connector such as Microsoft Dataverse, a predefined set of fields are displayed by default. You also have the option to display or hide additional fields based on your needs.
 - The **Table** control can automatically switch between tabular and list formats. You can manually manage this behavior using the **Reflow** property.
-- When you run your app, you can adjust column width in the **Table** control. However, your changes aren't saveontrol while you run the app. Note that your changes aren't saved.
+- When you run your app, you can adjust column width in the **Table** control. However, your changes aren't saveontrol while you run the app. Your changes aren't saved.
 
 ### Unsupported capabilities
 * You can't link to other connectors.
