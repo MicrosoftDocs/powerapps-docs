@@ -30,15 +30,15 @@ Similar to the **Gallery** and **Data** table controls, the **Table** maintains 
 
 ## Supported capabilities
 - Data in a **Table** control is read-only.
-- Modern data browsing experience for the tabular format via infinite scroll (i.e. no paging buttons).
-- The **Table** control only currently supports linking to Microsoft Dataverse entities. 
-- A set of default fields appear in the **Table** control when you link it to a connector that has implemented this capability, such as the Microsoft Dataverse. You can then show or hide these fields and others as necessary.
-- Automatic responsiveness behavior of the **Table** between the tabular and list formats. Use the **Reflow** property to manually control this behavior. 
-- Adjust column widths in the **Table** control while you run the app, though your changes aren't saved.
+- The tabular format offers a modern data browsing experience with infinite scroll, eliminating the need for paging buttons.
+- The **Table** control only supports linking to Microsoft Dataverse tables.
+- When you connect a **Table** control to a compatible connector such as Microsoft Dataverse, a predefined set of fields are displayed by default. However, you also have the option to display or hide additional fields based on your requirements.
+- The **Table** control can automatically switch between tabular and list formats. You can manually manage this behavior using the **Reflow** property.
+- When you run your app, you can adjust column width in the **Table** control. However, your changes aren't saveontrol while you run the app. Note that your changes aren't saved.
 
 ### Unsupported capabilities
-* Support for linking to other connectors.
-* Customize the styling of the **Table** or individual columns.
+* You can't link to other connectors.
+* Customize the style of the **Table** or modify individual columns.
 
 ## Key properties
 **[Items](../properties-core.md)** - The source of data for the items that appear in the table. 
@@ -50,7 +50,7 @@ Similar to the **Gallery** and **Data** table controls, the **Table** maintains 
 ## Additional properties
 **Allow range selection** – Whether users can select a portion of the Table to copy its values. Default is Yes.
 
-**[Visible](../properties-core.md)** - Whether a control appears or is hidden
+**[Visible](../properties-core.md)** - Whether a control appears or is hidden.
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
