@@ -32,7 +32,7 @@ Similar to the **Gallery** and **Data** table controls, the **Table** maintains 
 - Data in a **Table** control is read-only.
 - The tabular format offers a modern data browsing experience with infinite scroll, eliminating the need for paging buttons.
 - The **Table** control only supports linking to Microsoft Dataverse tables.
-- When you connect a **Table** control to a compatible connector such as Microsoft Dataverse, a predefined set of fields are displayed by default. You also have the option to display or hide additional fields based on your needs.
+- When you connect a **Table** control to a compatible connector such as Microsoft Dataverse, a predefined set of fields are displayed by default. You can also display or hide other fields based on your needs.
 - The **Table** control can automatically switch between tabular and list formats. You can manually manage this behavior using the **Reflow** property.
 - When you run your app, you can adjust column width in the **Table** control. However, your changes aren't saveontrol while you run the app. Your changes aren't saved.
 
