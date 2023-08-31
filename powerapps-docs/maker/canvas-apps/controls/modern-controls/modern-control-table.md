@@ -17,7 +17,7 @@ contributors:
   - jasongre
   
 ---
-# Table control in Power Apps (preview)
+# Table modern control in Power Apps (preview)
 
 [This article is pre-release document and is subject to change.]
 
