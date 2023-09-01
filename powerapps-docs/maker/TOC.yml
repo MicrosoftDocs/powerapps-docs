@@ -536,6 +536,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
             - name: Spinner
               href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
+            - name: Table
+              href: ./canvas-apps/controls/modern-controls/modern-control-table.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
             - name: Text
