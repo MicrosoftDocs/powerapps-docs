@@ -37,7 +37,7 @@ Similar to the **Gallery** and **Data** table controls, the **Table** maintains 
 - When you run your app, you can adjust column width in the **Table** control. However, your changes aren't saveontrol while you run the app. Your changes aren't saved.
 
 ### Unsupported capabilities
-Although, these capitiites are currently unsupported, we're 
+Currently, the listed capabilities aren't supported. However, since the **Table** control is still evolving, check back for any updates.
 
 * You can't link to other connectors.
 * Customize the style of the **Table** or modify individual columns.
