@@ -12,6 +12,13 @@ search.audienceType:
 ---
 # Optimize performance using FetchXml
 
+<!-- There appear to be two here, but it is difficult to separate them:
+Use fetch.`LateMaterialize` as mentioned in [Improve FetchXML request performance](../fetchxml-performance.md) is not in the schema
+Using fetch.`options` to pass SQL Server hints. -->
+
+## LateMaterialize
+
+## Query Hints
 
 ### See also
 

@@ -40,9 +40,23 @@ To get the first three records:
 <fetch count='3' page='1'>
   <entity name='account'>
     <attribute name='name' />
+    <order attribute='name' />
+    <order attribute='accountid' />
   </entity>
 </fetch>
 ```
+
+The results of the query will tell you if there are more records that meet the filter criteria. These results depend on whether you use the SDK for .NET or Web API.
+
+# [SDK for .NET](#tab/sdk)
+
+The [MoreRecords property](xref:Microsoft.Xrm.Sdk.EntityCollection.MoreRecords) of the [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) object returned by the `RetrieveMultiple` operation will be `true`.
+
+# [Web API](#tab/webapi)
+
+When you include the `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.morerecords"` (or `Prefer: odata.include-annotations="*"` for all annotations) request header, the boolean `@Microsoft.Dynamics.CRM.morerecords` annotation value will be `true`.
+
+---
 
 To get the next three records, increment the `page` value and send another request.
 
@@ -50,6 +64,8 @@ To get the next three records, increment the `page` value and send another reque
 <fetch count='3' page='2'>
   <entity name='account'>
     <attribute name='name' />
+    <order attribute='name' />
+    <order attribute='accountid' />    
   </entity>
 </fetch>
 ```
@@ -69,6 +85,8 @@ TODO:
    - Parameters:
       - FetchXml
       - PageSize (optional)
+   
+   Should we have a more advanced example with a class to manage paged results with methods like GetPage(N), GetNextPage(), GetLastPage()?
 -->
 
 ### [SDK for .NET](#tab/sdk)
@@ -181,7 +199,7 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
 
 <!-- This content comes from https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/use-fetchxml-web-api#paging-with-fetchxml -->
 
-With the Web API you must request a paging cookie as an annotation. Use the `prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"` request header, or `prefer: odata.include-annotations="*"` for all annotations, and `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` and `@Microsoft.Dynamics.CRM.morerecords` annotations are returned with the result.
+With the Web API you must request a paging cookie as an annotation. Use the `prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"` request header (or `prefer: odata.include-annotations="*"` for all annotations) and `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` and `@Microsoft.Dynamics.CRM.morerecords` annotations are returned with the result.
 
 The following series of FetchXML requests show the use of paging cookies. This example uses a small `count` value (3) for brevity. Normally you wouldn't use paging cookies for such small page sizes.
 
@@ -198,7 +216,7 @@ The following series of FetchXML requests show the use of paging cookies. This e
 
 ### First Page
 
-Send the first page with the `page` value set to `'1'`. Use the `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"` request header ( or `Prefer: odata.include-annotations="*"`) to make sure the paging cookie and more records annotations in the response are returned.
+Send the first page with the `page` value set to `'1'`. Use the `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"` request header (or `Prefer: odata.include-annotations="*"` for all annotations) to make sure the paging cookie and more records annotations in the response are returned.
 
 **Request:**
 
