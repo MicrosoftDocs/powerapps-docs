@@ -57,7 +57,7 @@ The results look like this:
  -----------------------------------------------------------------
 ```
 
-## Required attribute values
+## Required link-entity attribute values
 
 When you add the `link-entity` element, you must set these attribute values:
 
@@ -69,7 +69,7 @@ When you add the `link-entity` element, you must set these attribute values:
 |`to`|[!INCLUDE [link-entity-to-description](reference/includes/link-entity-to-description.md)]<br />In this case, `primarycontactid`.|
 
 
-## Optional attribute values
+## Optional link-entity attribute values
 
 The following attribute values are set in the previous example, but they have default values.
 
@@ -99,7 +99,7 @@ The previous example is a many-to-one relationship where many account records ca
 
 If you use the [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/), you can see how this tool allows you to select the relationship to set the appropriate `name`, `from`, and `to` attribute values.
 
-You can also use other tools and APIs to look up the appropriate `name`, `from`, and `to` attribute values to use. For more information see:
+You can also use other tools and APIs to look up relationship data for the appropriate `name`, `from`, and `to` attribute values to use. For more information see:
 
 - [Browse table definitions in your environment](../browse-your-metadata.md)
 - [Query schema definitions](../query-schema-definitions.md)
@@ -124,6 +124,17 @@ You can retrieve the same data as the previous example from the contact table us
   </entity>
 </fetch>
 ```
+
+[link-entity](reference/link-entity.md) attribute values in this example:
+
+
+|Attribute|Value|Description|
+|---------|---------|---------|
+|`name`|`account`|The logical name of the *referencing* table|
+|`from`|`primarycontactid`|The name of the lookup column in the *referencing* account table|
+|`to`|`contactid`|The primary key of the *referenced* contact table|
+|`alias`|`account`|A value is recommended for the `link-entity` with a one-to-many relationship. If an alias isn't provided, a default alias is generated.|
+|`link-type`|         |When no value is set, it will default to `inner`|
 
 The results look like this:
 
@@ -151,17 +162,9 @@ The results look like this:
  -----------------------------------------------------------------
 ```
 
-In this example:
-
-- The [link-entity](reference/link-entity.md).`name` value is the logical name of the *referencing* table: `account`.
-- The [link-entity](reference/link-entity.md).`from` value is the name of the lookup column in the *referencing* account table: `primarycontactid`.
-- The [link-entity](reference/link-entity.md).`to` value is the primary key of the *referenced* contact table: `contactid`.
-- The [link-entity](reference/link-entity.md).`alias` attribute is recommended for the `link-entity` with a one-to-many relationship. If an alias isn't provided, a default alias is generated.
-- The [link-entity](reference/link-entity.md).`link-type` attribute isn't included. It will default to `inner`.
-
 ## Many-to-many relationships
 
-Many-to-Many relationships depend on an intersect table.  An intersect table typically has just four columns, but only two of them are important in this case. All intersect tables have two columns that match the primary key columns of the participating tables, except that there is no unique constraint.
+Many-to-Many relationships depend on an intersect table.  An intersect table typically has just four columns, but only two of them are important. The two important columns match the primary key columns of the participating tables.
 
 For example, the `TeamMembership` table supports the  [teammembership_association many-to-many relationship](../reference/entities/team.md#BKMK_teammembership_association) between [SystemUser](../reference/entities/systemuser.md) and [Team](../reference/entities/team.md) tables. It allows users to join multiple teams, and teams to have multiple users. `TeamMembership` has these columns: `systemuserid`, `teamid`.
 
@@ -187,6 +190,16 @@ If you want to retrieve information about users and the teams they belong to usi
 </fetch>
 ```
 
+There are two nested link-entities.
+
+- The first one connects `systemuser` to the `teammembership` intersect table where `systemuserid` = `systemuserid`.
+- The second one connects `teammembership` intersect table to team where `teamid` = `teamid`.
+
+<!-- 
+TODO: Is the intersect='true' attribute required? What benefit does it provide? 
+As far as I can see, it isn't required, but provides a flag to indicate that no attributes are expected to be included from the table.
+-->
+
 The results should look something like:
 
 ```text
@@ -198,17 +211,6 @@ The results should look something like:
  | # PpdfCDSClient      | org26ed931d |
  --------------------------------------
 ```
-
-
-There are two nested link-entities.
-
-- The first one connects `systemuser` to the `teammembership` intersect table where `systemuserid` = `systemuserid`.
-- The second one connects `teammembership` intersect table to team where `teamid` = `teamid`.
-
-<!-- 
-TODO: Is the intersect='true' attribute required? What benefit does it provide? 
-As far as I can see, it isn't required, but provides a flag to indicate that no attributes are expected to be included from the table.
--->
 
 ## No relationship
 

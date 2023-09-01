@@ -33,7 +33,7 @@ For example, the following query returns account records where `address1_city` e
 </fetch>
 ```
 
-This query returns account records where `address1_city` equals Redmond, Seattle, or Bellevue. It uses `<filter type='or'>` with three [condition elements](reference/condition.md).
+This query returns account records where `address1_city` equals 'Redmond', 'Seattle', or 'Bellevue'. It uses `<filter type='or'>` with three [condition elements](reference/condition.md).
 
 ```xml
 <fetch>
@@ -110,9 +110,9 @@ For example, you can use the `between` operator to evaluate a number to determin
 
 ## Filters on link-entity
 
-When you apply a `filter` within a `link-entity`, the filter will be applied with the join.
+When you apply a `filter` within a [link-entity](reference/link-entity.md), the filter will be applied with the join unless you configure the filter to occur *after* the join.
 
-When the `link-entity` `link-type` attribute value is `outer`, you may want the filter to be applied *after* the join. You can specify the condition in a filter on the entity while setting the `condition` `entityname` attribute. If you are using a `link-entity` `alias`, use the `alias` value to set the `entityname` attribute. Otherwise, set the `entityname` attribute value to the `link-entity` `name` attribute value.
+When the [link-entity](reference/link-entity.md) `link-type` attribute value is `outer`, you may want the filter to be applied after the join by setting the [condition](reference/condition.md) `entityname` attribute value. If you are using a [link-entity](reference/link-entity.md) `alias`, use the `alias` value to set the `entityname` attribute. Otherwise, set the `entityname` attribute value to the [link-entity](reference/link-entity.md) `name` attribute value.
 
 <!-- 
 TODO Example

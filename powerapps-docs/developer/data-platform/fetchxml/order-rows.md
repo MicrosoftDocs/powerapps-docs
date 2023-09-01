@@ -12,9 +12,9 @@ search.audienceType:
 ---
 # Order rows using FetchXml
 
-Use the [order element](reference/order.md) within [entity](reference/entity.md) or [link-entity](reference/link-entity.md) elements to specify the sort order for the rows in tables.
+Use the [order element](reference/order.md) within [entity](reference/entity.md) or [link-entity](reference/link-entity.md) elements to specify the sort order for the rows in tables. The default sort order is *ascending*.
 
-The following query will return [account](../reference/entities/account.md) records in *ascending* order by `createdon`, `name`, and `accountnumber` values.
+The following query will return [account](../reference/entities/account.md) records in ascending order by `createdon`, `name`, and `accountnumber` values.
 
 ```xml
 <fetch>
@@ -31,7 +31,7 @@ The following query will return [account](../reference/entities/account.md) reco
 
 ## Order with multiple columns
 
-The order of the elements determines the how the ordering is applied. To have ordering applied using `accountnumber`, change the elements so that the first element has attribute equal to `accountnumber`.
+The order of the elements determines the how the ordering is applied. To have ordering applied using `accountnumber`, move that element to the first position.
 
 ```xml
 <order attribute='accountnumber' />   
@@ -56,7 +56,7 @@ If you want to use *descending* order, set the `descending` attribute to `true`.
 ## Lookup and choice columns
 
 Lookup and choice column values are sorted using the display values rather than the values stored in the database.
-As mentioned in [formatted values](select-columns.md#formatted-values), the values stored in the database for lookup and choice columns is a GUID value and an integer value respectively. The property values returned are the values stored in the database.  However, when you use order on these columns, the display value is used for sorting. For lookups, it is the primary name field for the related table. For choice columns, it is the value of the option label.
+As mentioned in [formatted values](select-columns.md#formatted-values), the values stored in the database for lookup and choice columns is a GUID value and an integer value respectively. Sorting by these values is meaningless, therefore when you use order on these columns, the display value is used for sorting. For lookups, it is the primary name field for the related table. For choice columns, it is the value of the option label.
 
 <!-- TODO: The option Label can be localized, so I expect this will impact the results returned -->
 

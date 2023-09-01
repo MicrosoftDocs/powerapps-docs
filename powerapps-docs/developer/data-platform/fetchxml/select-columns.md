@@ -267,7 +267,7 @@ The behavior you see when using column aliases depends on whether you are using 
 
 This `SimpleAliasOutput` method uses aliases rather than the logical names of the columns. Because of this, the results are returned as <xref:Microsoft.Xrm.Sdk.AliasedValue>. To access the value of complex types like [OptionSetValue](xref:Microsoft.Xrm.Sdk.OptionSetValue) or [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference), you have to cast the value.
 
-The [AliasedValue class](xref:Microsoft.Xrm.Sdk.AliasedValue) has two properties that tell you the original [EntityLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.EntityLogicalName) and[AttributeLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.AttributeLogicalName)
+The [AliasedValue class](xref:Microsoft.Xrm.Sdk.AliasedValue) has two properties that tell you the original [EntityLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.EntityLogicalName) and [AttributeLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.AttributeLogicalName)
 
 ```csharp
 /// <summary>

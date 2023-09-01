@@ -14,6 +14,14 @@ search.audienceType:
 
 Dataverse will return up to 5,000 rows of data with each request. If you need to get more rows of data, you need to send additional requests for subsequent pages. If you want your application to efficiently retrieve smaller set of data, you can use paging to specify the number of records to return.
 
+Don't use the [fetch element](reference/fetch.md) `top` attribute to limit results with paging.
+
+## Set order when paging
+
+The choices you make in determining the order of the results can effect whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page. [Learn more about best practices for orders when paging data](order-rows.md#best-practices-for-orders-when-paging-data).
+
+<!-- TODO: Update examples to include ordering best practices -->
+
 ## Simple paging
 
 <!-- 
@@ -166,6 +174,9 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
 }
 ```
 
+> [!IMPORTANT]
+> This query will return ALL records that match the criteria. Make sure you include filter elements to limit the results.
+
 ### [Web API](#tab/webapi)
 
 <!-- This content comes from https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/use-fetchxml-web-api#paging-with-fetchxml -->
@@ -240,7 +251,7 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpa
 
 In the response, the `@Microsoft.Dynamics.CRM.morerecords` annotation value indicates that more records exist that match the criteria.
 
-The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML document. You need to use the `pagingcookie` attribute value of that document in the next request.
+The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML element. You need to use the `pagingcookie` attribute value of that element in the next request.
 
 The `pagingcookie` attribute value is URL-encoded twice. The decoded value looks like this:
 
@@ -521,7 +532,10 @@ string fetchXml = @"<fetch count='3' page='1'>
       </entity>
 </fetch>";
 
-List<JsonObject> records = await RetrieveAll(client: client, entitySetName: "contacts", fetchXml: fetchXml, pageSize: 3);
+List<JsonObject> records = await RetrieveAll(client: client, 
+   entitySetName: "contacts", 
+   fetchXml: fetchXml, 
+   pageSize: 3);
 
 Console.WriteLine($"Success: {records.Count}");
 

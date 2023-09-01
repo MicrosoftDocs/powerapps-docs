@@ -43,7 +43,7 @@ TODO<fetch>
 |`alias`|No|TODO?|
 |`attribute`|No|The name of the column with the value to apply the filter.|
 |`column`|No|TODO?|
-|`entityname`|No|TODO?|
+|`entityname`|No|Specify the [link-entity](link-entity.md) `name` or `alias` that the condition should be applied to after the outer join. [Learn more about filters on link-entity](../filter-rows.md#filters-on-link-entity)|
 |`operator`|Yes|The [operator](operators.md) to apply with the filter.|
 |`rowaggregate`|No|TODO?|
 |`uihidden`|No|REMOVE?|
