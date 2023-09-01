@@ -43,7 +43,7 @@ contributors:
 |`aggregate`|No|The [aggregate function](#aggregate-functions) to apply. [Learn how to aggregate data with FetchXml](../aggregate-data.md)|
 |`alias`|No|The name of the column to return. Each column must have a unique name. Usually used when retrieving aggregate values. [Learn more about column aliases](../select-columns.md#column-aliases).|
 |`build`|No|REMOVE?|
-|`dategrouping`|No|When grouping data by a datetime value, specifies the date part to use. [Learn more about grouping by parts of a date](../aggregate-data.md#grouping-by-parts-of-a-date).|
+|`dategrouping`|No|When grouping data by a datetime value, specifies the date part to use. See [Date grouping options](#date-grouping-options)|
 |`distinct`|No|When using the aggregate `countcolumn` function, specifies that only unique values for the column are returned. [Learn more about distinct column values](../aggregate-data.md#distinct-column-values).|
 |`groupby`|No|When aggregating data, specifies the column to use to group the data. [Learn more about grouping](../aggregate-data.md#grouping).|
 |`latematerialize`|No|TODO|
@@ -65,6 +65,10 @@ These are the aggregate functions you can use. [Learn how to aggregate data with
 
 [!INCLUDE [aggregate-function-table](includes/aggregate-function-table.md)]
 
+## Date grouping options
 
+[Learn more about grouping by parts of a date](../aggregate-data.md#grouping-by-parts-of-a-date)
+
+[!INCLUDE [dategrouping-table](includes/dategrouping-table.md)]
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]

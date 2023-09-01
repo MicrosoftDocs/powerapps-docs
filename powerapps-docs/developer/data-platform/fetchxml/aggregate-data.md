@@ -12,7 +12,7 @@ search.audienceType:
 ---
 # Aggregate data using FetchXml
 
-FetchXML includes grouping and aggregation features that let you calculate sum, average, min, max, and count.
+FetchXML includes grouping and aggregation features that let you calculate sum, average, min, max, and count across multiple rows of data.
 
 To return an aggregate value, you must:
 
@@ -136,13 +136,7 @@ The results are grouped by City value, combining the results for the three rows 
 
 You can select which part of the date to use when grouping by date. Set [attribute element](reference/attribute.md) `dategrouping` attribute to one of the following values:
 
-- `day`: Group by day of the month
-- `week`: Group by week of the year
-- `month`: Group by month of the year
-- `quarter`: Group by quarter of the fiscal year
-- `year`: Group by the year
-- `fiscal-period`: Group by period of the fiscal year
-- `fiscal-year`: Group by the fiscal year
+[!INCLUDE [dategrouping-table](reference/includes/dategrouping-table.md)]
 
 The following query groups accounts showing number of employees by the month they were created:
 
@@ -192,9 +186,6 @@ This is the result using the data set mentioned previously:
  | 0      | 27  | 35   | 8     | 2,023 | Quarter 3 FY2023 | FY2023     |
  -----------------------------------------------------------------------
 ```
-
-[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
-
 
 ## Limitations
 

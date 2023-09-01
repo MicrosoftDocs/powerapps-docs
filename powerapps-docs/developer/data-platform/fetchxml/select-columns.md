@@ -253,7 +253,7 @@ Learn more about formatted values:
 
 ## Column aliases
 
-Column aliases are typically used for aggregate operations, but they also work for simple select operations, so we can demonstrate them here.
+Column aliases are typically used for [aggregate operations](aggregate-data.md), but they also work for simple select operations, so we can introduce them here.
 
 You can use the [attribute](reference/attribute.md) `alias` attribute to specify any unique column name you want for the results returned.
 

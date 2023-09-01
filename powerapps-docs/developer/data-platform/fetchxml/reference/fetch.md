@@ -34,7 +34,7 @@ contributors:
 |`aggregate`|No|Boolean value to specify that the query returns aggregate values. [Learn about aggregating data](../aggregate-data.md)|
 |`aggregatelimit`|No|TODO?|
 |`count`|No|Positive integer value to specify the number of records to return in a page. [Learn about paging results](../page-results.md) |
-|`distinct`|No|Boolean value to specify that duplicate rows not be included in the results.|
+|`distinct`|No|Boolean value to specify that duplicate rows not be included in the results. [Learn more about returning distinct results](../filter-rows.md#returning-distinct-results)|
 |`mapping`|No|REMOVE?|
 |`min-active-row-version`|No|REMOVE?|
 |`no-lock`|No|Boolean value to specify that read locks not be placed on the tables in the query.|
@@ -43,7 +43,7 @@ contributors:
 |`page`|No|Positive integer value to specify the page number to return. [Learn about paging results](../page-results.md)|
 |`paging-cookie`|No|String value from a previous page of data to make retrieving the next page of data more efficient. [Learn about paging results](../page-results.md) |
 |`returntotalrecordcount`|No|Boolean value to specify whether the total number of records matching the criteria is returned. |
-|`top`|No|Positive integer value to specify the number of records to return. This value cannot exceed 5,000.|
+|`top`|No|Positive integer value to specify the number of records to return. This value cannot exceed 5,000. L[earn more about limiting the number of rows](../filter-rows.md#limit-the-number-of-rows)|
 |`utc-offset`|No|TODO?|
 |`version`|No|REMOVE?|
 
