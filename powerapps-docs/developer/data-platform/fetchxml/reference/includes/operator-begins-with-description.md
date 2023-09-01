@@ -1,0 +1,1 @@
+The string occurs at the beginning of another string.

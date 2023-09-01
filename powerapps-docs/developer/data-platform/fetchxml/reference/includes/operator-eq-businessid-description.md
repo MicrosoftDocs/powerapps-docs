@@ -1,0 +1,1 @@
+The value is equal to the specified business ID.

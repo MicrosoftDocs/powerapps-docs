@@ -1,0 +1,1 @@
+The character string is matched to the specified pattern.

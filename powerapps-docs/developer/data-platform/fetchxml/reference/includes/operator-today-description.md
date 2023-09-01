@@ -1,0 +1,1 @@
+The value equals today's date.

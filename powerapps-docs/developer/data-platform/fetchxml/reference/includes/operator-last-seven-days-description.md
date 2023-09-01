@@ -1,0 +1,1 @@
+The value is within the last seven days including today. 

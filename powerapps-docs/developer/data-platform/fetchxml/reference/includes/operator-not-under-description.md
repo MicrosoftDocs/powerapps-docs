@@ -1,0 +1,1 @@
+Returns all records not below the referenced record in the hierarchy.
