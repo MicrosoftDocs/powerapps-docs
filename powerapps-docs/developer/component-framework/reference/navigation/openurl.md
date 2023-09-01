@@ -1,5 +1,5 @@
 ---
-title: openUrl | Microsoft Docs
+title: openUrl (Power Apps component framework API reference) | Microsoft Docs
 description: Opens a url, including file urls.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -31,7 +31,7 @@ Model-driven and canvas apps
 |options|`OpenUrlOptions`|No|Options to open the URL. The OpenUrlOptions has the following parameters: <br/>- **height**: `Number`. Height of the window to display the resultant page in pixels.<br/>- **width**: `Number`. Width of the window to display the resultant page in pixels.|
 
 
-### Related topics
+### Related articles
 
 [Navigation](../navigation.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

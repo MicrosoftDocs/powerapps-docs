@@ -273,7 +273,7 @@ Some examples of the kind of notifications that your custom plug-in can provide 
 
 ## Reset cascade inherited access
 
-if a parent table row's cascading access option is changed from **Cascade All** to **Cascade None**, it is important to ensure that child rows have the appropriate access permissions. This section describes how to programmatically revoke inherited access rights granted to child rows when a parent row is changed to **Cascade None**. The ability to revoke inherited access on child rows requires Administrator or System Customizer security role.
+If a parent table row's cascading access option is changed from **Cascade All** to **Cascade None**, it is important to ensure that child rows have the appropriate access permissions. This section describes how to programmatically revoke inherited access rights granted to child rows when a parent row is changed to **Cascade None**. The ability to revoke inherited access on child rows requires Administrator or System Customizer security role.
 
 > [!NOTE]
 > When resetting inherited cascade access, custom processing through registered plug-ins or custom workkflow

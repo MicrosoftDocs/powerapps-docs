@@ -23,7 +23,8 @@ This sample shows how to share a record using the following messages:
 
 [RevokeAccessRequest](/dotnet/api/microsoft.crm.sdk.messages.revokeaccessrequest)
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/GrantModifyRevokeAccess).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Share records using GrantAccess, ModifyAccess and RevokeAccess messages sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/GrantModifyRevokeAccess)
 
 This sample requires additional users that are not in your system. Create the required users manually in **Microsoft 365** in order to run the sample without any errors. For this sample create 2 user profiles **as is** shown below. Replace `yourorg` with the organization name.
 

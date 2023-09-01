@@ -1,5 +1,5 @@
 ---
-title: openErrorDialog | Microsoft Docs
+title: openErrorDialog (Power Apps component framework API reference) | Microsoft Docs
 description: Displays an error dialog.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -37,7 +37,7 @@ Type: `Promise`
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) and [File](https://developer.mozilla.org/docs/Web/API/File)
 
 
-### Related topics
+### Related articles
 
 [Navigation](../navigation.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

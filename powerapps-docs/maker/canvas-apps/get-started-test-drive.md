@@ -26,12 +26,6 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 ## Create an app
 
-Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-new-look) or [classic look](intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
-
-# [New look (preview)](#tab/home-new-look)
-
-[This article is prerelease documentation and is subject to change.]
-
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen select, **Start with an app template**. Select a template to learn more. If you want to choose another template, select **Cancel** and then select another template.
 2. Select one of the following options:
@@ -44,28 +38,6 @@ Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-n
 5. After you select a template, you can update the app name and select the layout for your app. 
 6. When you're done, select **Next**.
 
-
-# [Classic](#tab/home-classic)
-
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Select **+ Create** from the left-pane.
-
-1. Scroll down to **Start from template** section, and choose the template of your choice for canvas apps.
-
-    :::image type="content" source="media/get-started-test-drive/start-from-template.png" alt-text="Choose a template.":::
-
-    > [!TIP]
-    > Select a template to learn more. If you want to choose another template, select **Cancel** to return.
-
-1. After you select the template you want to use, you can update the app name, and then select **Create** to open the app in Power Apps Studio. For example, the following shows creating an app using the **Power Apps Training for Office** template.
-
-    :::image type="content" source="media/get-started-test-drive/create-app.png" alt-text="Create app":::
-
-    > [!NOTE]
-    > You may be prompted to create or allow connections for connectors that the selected app is configured to use.
-
----
 
 ## Run the app
 

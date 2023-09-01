@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Retrieve field permissions
 
-This sample shows how to retrieve secured columns for a user according to the steps outlined in [Field security tables](/dynamics365/customer-engagement/developer/field-security-entities). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveFieldPermission).
+This sample shows how to retrieve secured columns for a user according to the steps outlined in [Field security tables](/dynamics365/customer-engagement/developer/field-security-entities).
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve field permissions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveFieldPermission)
 
 This sample requires additional users that are not in your system. Create the required users manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. Replace `yourorg` with the organization name.
 

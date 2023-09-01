@@ -1,15 +1,15 @@
 ---
 title: Enable and use mobile offline-first (preview) | Microsoft Docs
 description: Enable and use mobile offline-first.
-author: sericks007
+author: trdehove
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 02/01/2022
 ms.subservice: mobile
-ms.author: sericks
+ms.author: trdehove
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
