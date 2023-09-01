@@ -4,7 +4,7 @@ description: How to check user access and security role.
 author: paulliew
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/25/2023
+ms.date: 09/01/2023
 ms.subservice: end-user
 ms.author: paulliew
 ms.custom: ""
