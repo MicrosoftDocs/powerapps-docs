@@ -80,5 +80,5 @@ options='OptimizeForUnknown,DisableRowGoal,Recompile'
 |`NO_PERFORMANCE_SPOOL`|[NO_PERFORMANCE_SPOOL](/sql/t-sql/queries/hints-transact-sql-query#no_performance_spool)|
 |`ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS`|[Hint: `ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS`](/sql/t-sql/queries/hints-transact-sql-query#use_hint)|
 
-More information: [/sql/t-sql/queries/hints-transact-sql-query#force-order](/sql/t-sql/queries/hints-transact-sql-query)
+More information: [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 

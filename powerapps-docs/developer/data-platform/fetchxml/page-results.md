@@ -65,7 +65,7 @@ TODO:
 
 ### [SDK for .NET](#tab/sdk)
 
-The following `RetrieveAll` static method will return all records that match the FetchXml query, sending multiple request if the number of records exceeds the page size.
+The following `RetrieveAll` static method will return all records that match the FetchXml query, sending multiple requests if the number of records exceeds the page size.
 
 After each request, the method checks the [EntityCollection.MoreRecords property](xref:Microsoft.Xrm.Sdk.EntityCollection.MoreRecords) to determine if more records match the criteria. If there are more records, the method sets the value of the returned [EntityCollection.PagingCookie property](xref:Microsoft.Xrm.Sdk.EntityCollection.PagingCookie) to the `paging-cookie` attribute of the [fetch element](reference/fetch.md) and sends another request.
 
@@ -83,40 +83,43 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
     // The records to return
     List<Entity> entities = new();
 
-    XDocument fetchXmlDoc = XDocument.Parse(fetchXml);
-    XElement fetchNode = fetchXmlDoc.Element("fetch");
+    XElement fetchNode = XElement.Parse(fetchXml);
 
     int page = 1; //Start with page 1
 
-    //Set the page
-    SetPage(ref fetchNode, page);
+    //Set the fetch page attribute
+    SetPage(fetchNode, page);
 
-    // Set the page size
-    SetCount(ref fetchNode, pageSize);
+    // Set the fetch count attribute
+    SetCount(fetchNode, pageSize);
 
     while (true)
     {
-        // Get the page
+        // Retrieve records
         EntityCollection results = service.RetrieveMultiple(new FetchExpression(fetchNode.ToString()));
 
         entities.AddRange(results.Entities);
 
         if (!results.MoreRecords)
         {
+         // Stop sending requests
             break;
         }
 
         // Set the fetch paging-cookie attribute with the paging cookie from the previous query
-        SetPagingCookie(ref fetchNode, results);
+        SetPagingCookie(fetchNode, results);
 
         page++;
-        SetPage(ref fetchNode, page);
+
+        // Set the fetch page attribute
+        SetPage(fetchNode, page);
     }
 
-
+    // Return the records from all requests
     return new EntityCollection(entities);
 
-    static void SetPage(ref XElement fetchNode, int page)
+    // Sets the fetch page attribute value
+    void SetPage(XElement fetchNode, int page)
     {
 
         if (fetchNode.Attribute("page") != null)
@@ -130,8 +133,9 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
             fetchNode.Add(new XAttribute("page", page));
         }
     }
-
-    static void SetCount(ref XElement fetchNode, int count)
+   
+   // Sets the fetch count attribute value
+    void SetCount(XElement fetchNode, int count)
     {
         if (fetchNode.Attribute("count") != null)
         {
@@ -145,7 +149,8 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
         }
     }
 
-    static void SetPagingCookie(ref XElement fetchNode, EntityCollection results)
+    // Sets the fetch paging-cookie attribute value
+    void SetPagingCookie(XElement fetchNode, EntityCollection results)
     {
         if (fetchNode.Attribute("paging-cookie") != null)
         {
@@ -165,7 +170,7 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
 
 <!-- This content comes from https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/use-fetchxml-web-api#paging-with-fetchxml -->
 
-With the Web API you must request a paging cookie as an annotation. Use the `prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie"` request header or `prefer: odata.include-annotations="*"`, and a `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation is returned with the result.
+With the Web API you must request a paging cookie as an annotation. Use the `prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"` request header, or `prefer: odata.include-annotations="*"` for all annotations, and `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` and `@Microsoft.Dynamics.CRM.morerecords` annotations are returned with the result.
 
 The following series of FetchXML requests show the use of paging cookies. This example uses a small `count` value (3) for brevity. Normally you wouldn't use paging cookies for such small page sizes.
 
@@ -182,7 +187,7 @@ The following series of FetchXML requests show the use of paging cookies. This e
 
 ### First Page
 
-Send the first page with the `page` value set to `'1'`. Use the `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"` request header, or `Prefer: odata.include-annotations="*"`, to make sure the paging cookie and more records annotation in the response is returned.
+Send the first page with the `page` value set to `'1'`. Use the `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"` request header ( or `Prefer: odata.include-annotations="*"`) to make sure the paging cookie and more records annotations in the response are returned.
 
 **Request:**
 
@@ -315,6 +320,7 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpa
     ]
 }
 ```
+
 ### Last Page
 
 On the final page, the `@Microsoft.Dynamics.CRM.morerecords` and `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotations aren't included in the response.
@@ -349,6 +355,184 @@ OData-Version: 4.0
     ]
 }
 ```
+
+### Web API paging example
+
+When using C#, the following `RetrieveAll` static method will return all records that match the FetchXml query, sending multiple requests if the number of records exceeds the page size.
+
+```csharp
+/// <summary>
+/// Returns all records matching the criteria
+/// </summary>
+/// <param name="client">The authenticated HttpClient instance.</param>
+/// <param name="entitySetName">The EntitySetName for the table used in the fetchXml</param>
+/// <param name="fetchXml">The FetchXml query string</param>
+/// <param name="pageSize">The page size to use. Default is 5000</param>
+/// <returns>All the records that match the criteria</returns>
+/// <exception cref="Exception"></exception>
+static async Task<List<JsonObject>> RetrieveAll(HttpClient client, string entitySetName, string fetchXml, int pageSize = 5000)
+{
+
+    List<JsonObject> entities = new();
+
+    XElement fetchNode = XElement.Parse(fetchXml);
+
+    int page = 1; //Start with page 1
+
+    // Set the fetch page attribute
+    SetPage(fetchNode, page);
+
+    // Set the fetch count attribute
+    SetCount(fetchNode, pageSize);
+
+    while (true)
+    {
+        bool moreRecords;
+        string pagingCookie = null;
+
+        // Prepare the request
+        HttpRequestMessage request = new()
+        {
+            Method = HttpMethod.Get,
+            RequestUri = new Uri(
+            uriString: $"{entitySetName}?fetchXml={HttpUtility.UrlEncode(fetchNode.ToString())}",
+            uriKind: UriKind.Relative),
+        };
+        // Add annotations to return formatted values
+        request.Headers.Add("Prefer", "odata.include-annotations=\"Microsoft.Dynamics.CRM.fetchxmlpagingcookie," +
+            "Microsoft.Dynamics.CRM.morerecords\"");
+
+        // Send the request
+        var response = await client.SendAsync(request);
+               
+        if (response.IsSuccessStatusCode)
+        {
+            string jsonContent = await response.Content.ReadAsStringAsync();
+
+            // Using System.Text.Json.Nodes
+            JsonObject content = JsonNode.Parse(jsonContent)?.AsObject();
+
+            // Records are in the 'value' property
+            content.TryGetPropertyValue("value", out JsonNode records);
+
+            // Add records to the list
+            entities.AddRange(records.AsArray().Cast<JsonObject>());
+
+            // Detect if there are more records
+            moreRecords = content.TryGetPropertyValue("@Microsoft.Dynamics.CRM.morerecords", out _);
+            if (moreRecords)
+            {
+                // Get the paging cookie value
+                if (content.TryGetPropertyValue("@Microsoft.Dynamics.CRM.fetchxmlpagingcookie", out JsonNode fetchxmlpagingcookie))
+                {
+                    pagingCookie = fetchxmlpagingcookie.AsValue().ToString();
+                }
+            }
+        }
+        else
+        {
+            throw new Exception($"Web API call failed. Status Code: {response.StatusCode}");
+        }
+
+        if (!moreRecords)
+        {
+            // Stop sending requests
+            break;
+        }
+
+        // Set the fetch paging-cookie attribute with the paging cookie from the previous query
+        SetPagingCookie(fetchNode, pagingCookie);
+
+        page++;
+        // Increment the fetch page attribute value
+        SetPage(fetchNode, page);
+    }
+
+    // Return the records from all requests
+    return entities;
+
+    // Sets the fetch page attribute value
+    void SetPage(XElement fetchNode, int page)
+    {
+        if (fetchNode.Attribute("page") != null)
+        {
+            // Set the value if attribute exists
+            fetchNode.Attribute("page").SetValue(page);
+        }
+        else
+        {
+            // Add the attribute if it doesn't
+            fetchNode.Add(new XAttribute("page", page));
+        }
+    }
+
+    // Sets the fetch count attribute value
+    void SetCount(XElement fetchNode, int count)
+    {
+        if (fetchNode.Attribute("count") != null)
+        {
+            // Set the value if attribute exists
+            fetchNode.Attribute("count").SetValue(count);
+        }
+        else
+        {
+            // Add the attribute if it doesn't
+            fetchNode.Add(new XAttribute("count", count));
+        }
+    }
+
+    // Sets the fetch paging-cookie attribute value
+    void SetPagingCookie(XElement fetchNode, string fetchxmlpagingcookie)
+    {
+        XElement cookieElement = XElement.Parse(fetchxmlpagingcookie);
+        // Extract the pagingcookie attribute
+        XAttribute pagingcookieAttribute = cookieElement.Attribute("pagingcookie");
+        // Decode the pagingcookie attribute twice
+        string pagingCookie = HttpUtility.UrlDecode(HttpUtility.UrlDecode(pagingcookieAttribute.Value));
+
+        if (fetchNode.Attribute("paging-cookie") != null)
+        {
+            // Set the value if attribute exists, XML encodes value
+            fetchNode.Attribute("paging-cookie").SetValue(pagingCookie);
+        }
+        else
+        {
+            // Add the attribute if it doesn't exist, XML encodes value
+            fetchNode.Add(new XAttribute("paging-cookie", pagingCookie));
+        }
+    }
+}
+```
+
+You can adapt the [Quick Start: Web API sample (C#)](../webapi/quick-start-console-app-csharp.md) sample to test FetchXml queries with the following steps:
+
+1. Add the `RetrieveAll` static method to the `Program` class.
+1. Modify the `Main` method and replace the content of the `Web API call` region as shown below:
+
+```csharp
+#region Web API call
+
+string fetchXml = @"<fetch count='3' page='1'>
+      <entity name='contact'>
+         <attribute name='fullname'/>
+         <attribute name='jobtitle'/>
+         <attribute name='annualincome'/>
+         <order descending='true' attribute='fullname'/>
+      </entity>
+</fetch>";
+
+List<JsonObject> records = await RetrieveAll(client: client, entitySetName: "contacts", fetchXml: fetchXml, pageSize: 3);
+
+Console.WriteLine($"Success: {records.Count}");
+
+#endregion Web API call
+```
+
+> [!IMPORTANT]
+> This query will return ALL records that match the criteria. Make sure you include filter elements to limit the results.
+> 
+> The `entitySetName` parameter must be the entity set name for the same table specified in the FetchXml [entity element](reference/entity.md) `name` attribute.
+
 ---
 ## Next steps
 
