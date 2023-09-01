@@ -62,7 +62,7 @@ If you're an administrator, you can check the access another user has to a row.
   
 3.   The **Check Access** dialog box will appear and display the user's access information.
 
-## Check all users who have access to a row (preview)
+## Check all users who have access to a row
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
