@@ -270,8 +270,29 @@ Insights are not complete unless you can drive action and business processes. Yo
 9.	Choose tables from the Fabric. When complete, you can continue to work with the tables and build Apps.
 
 
-# Known limitations.
 
-1.  This feature is in preview. Preview features are not ready for production use and are provided to validate and to provide feedback to product team
-2.  Depending on the size of data, initial sync may take 15min or more. In case of very large tables, initial sync may take much longer before you can consume data in Microsoft Fabric.
-3.  After the initial sync, data changes in Dataverse will be reflected in Microsoft Fabric upto 15mins later.
+## Troubleshooting common issues
+
+
+> NOTE
+> - This feature is in preview. Preview features are not ready for production use and are provided to validate and to provide feedback to product team. You can join the preview yammer group [https://aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics) to provide feedback and stay in touch with product team
+>  - You need to have a Power BI premium capacity, Fabric premium capacity or Trial capacity in the same region as your Dataverse environment. Power BI premium per user capacity will not be sufficient. You can get a free trial capacity by visiting the link here: [Fabric (preview) trial - Microsoft Fabric \| Microsoft Learn](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial)
+>  - Depending on the size of data, initial sync may take 15min or more. In case of very large tables, initial sync may take much longer before you can consume data in Microsoft Fabric. 
+> 	- After the initial sync, data changes in Dataverse will be reflected in Microsoft Fabric upto 60 mins later.
+>
+
+If you are seeing an error message. see suggestions to resolve below 
+
+| Error message                      | How to resolve                | 
+|:-----------------------------------|:------------------------------|
+| You need to create a Dataverse connection in Fabric with the connection name < your domain URL>. | See configure data connection section  | 
+| You need to get a Power BI premium of Fabric capacity. You can also get a Fabric trial | You need a Power BI premium of a Fabric capacity. Power BI premium per user capacity will not be sufficient. You can get a free trial capacity by visiting the link here: [Fabric (preview) trial - Microsoft Fabric \| Microsoft Learn](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial)  | 
+| Creation of Fabric workspace failed. Consider creating a Fabric workspace first and linking using Synapse Link menu | See Manage Microsoft Fabric Links section for details |
+| Creation of Fabric workspace failed. You can try again, If this issue persists contact support with corelation ID | Ensure that you have admin permissions to your Power BI workspace. If the issue is not resolved after several retrys, you may contact support with the provided reference ID |
+| Creation of Fabric Lakehouse failed. You can try again, If this issue persists contact support with corelation ID | Ensure that you have admin permissions to your Power BI workspace. If the issue is not resolved after several retrys, you may contact support with the provided reference ID |
+| You need to add one or more tables before linking to Microsoft Fabric. | If you are using Managed store (ie. the default link), you can add one or more tables using the Manage tables option in Synapse Link menu and try to Link to the Fabric again |
+| Your organization does not appear to have Microsoft Fabric. You can get a Trial | You can contact your administrator or get a Trial version of Microsoft Fabric |
+|You need to get a Trial version of Fabric to get stated | You need a Power BI premium of a Fabric capacity. Power BI premium per user capacity will not be sufficient. You can get a free trial capacity by visiting the link here: [Fabric (preview) trial - Microsoft Fabric \| Microsoft Learn](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial) |
+| You need to be a System administrator to link to Fabric | You need system administrator permissions in PowerApps to perform this operation |
+
+
