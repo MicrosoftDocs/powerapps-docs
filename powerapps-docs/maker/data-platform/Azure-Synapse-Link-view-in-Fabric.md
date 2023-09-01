@@ -27,24 +27,36 @@ Now, makers can choose one or more tables from Dataverse and launch Microsoft Fa
 
 Makers can continue to add more data and launch Microsoft Fabric from the maker portal. Default Synapse Lakehouse and the Data warehouse gets updated with new data as changes happen in Dataverse.
 
+## Add more data and manage your link
+When makers choose to view in Fabric from maker portal, system creates optimized replicas of your data in Dataverse storage such that your operational workloads are not impacted. This replica is governed and secured by Dataverse while enabling Fabric workloads to operate on this data.
+IT admins can manage this replica in Synapse Link page shown as **Managed Store** or **Microsoft OneLake**. IT admins can see tables added by makers and add/ remove tables as well as migrate the link to other environments. They can also see storage consumption in Power platform admin portal.
+
+>**NOTES**
+>
+> 1.	You can’t add Dynamics Finance and Operations tables into Managed Store at this point in time. 
+> 2.	Dataverse environment life cycle operations (ELO) such as environment move operations may impact reports built using this feature. See Known limitations section for more information. 
+>
+
+## Link existing Synapse Link profiles to Microsoft Fabric 
+Synapse Link enabled IT admins to simplify their data integrations by provisioning and configuring Azure resources such as Azure Data lake storage and Azure Synapse. Now, you can enable Fabric links for your existing Synapse links and benefit from the innovations in Microsoft Fabric without any additional efforts or copying data. Microsoft Fabric integration further simplifies data integration efforts with features like Power BI DirectLake mode reports as well as query engine improvements in next generation Synapse Data warehouse. 
+
+![View in Microsoft Fabric in Synapse Link](media/Fabric/Azure-Syunapse-Link-with-View-In-Fabric.png)
+
+You can also add or removing tables from existing links and/or creating new Fabric links within a single experience. 
+Customers can also use Synapse Link to choose tables and Entities from Dynamics 365 Finance and Operations (F&O). See <…>>
+
+
+> NOTE
+> 
+> You need to create a Synapse Link profile and enable Delta/ parquet conversion for Fabric link option to be available. This option is not available for  Synapse Link profiles that use the CSV output format.
+> 
+
 ## Build PowerApps with data from Microsoft Fabric
 
 Makers can build Apps and automations with enterprise-wide data available in One Lake – the data store behind Microsoft Fabric. They can define external tables using the SQL endpoint available for Microsoft Fabric data and work with the data as if they were native Dataverse tables.
 
 
-## Use DirectLake and other query improvements in Microsoft Fabric 
-Synapse Link enabled IT admins to simplify their data integrations by provisioning and configuring Azure resources such as Azure Data lake storage and Azure Synapse. Microsoft Fabric provides several features that further simplifies data integration efforts including DirectLake mode for Power BI reports and query engine improvements in next generation Synapse Data warehouse. Now Synapse Link enables managing Fabric links. IT admins can configure Fabric links for their existing Synapse links and benefit from the improvements without any additional efforts or copying data. They can also add or removing tables from existing links and/or creating new Fabric links within a single experience.
-Customers who use D365 Finance and Operations (F&O) can use Synapse Link to choose their data from all Dynamics with the new preview feature enabled in Synapse Link.
 
-![View in Microsoft Fabric in Synapse Link](media/Fabric/Azure-Syunapse-Link-with-View-In-Fabric.png)
-
-You can also enable direct link to Fabric with Dataverse provisioned storage. When makers choose to view in Fabric from maker portal, system uses Dataverse provisioned storage such that the data does not leave the Dataverse governance boundary. IT admins can manage use of Dataverse provisioned storage as well as create new links by provisioning your own storage
-
-**NOTES:**
-
-1.  If you would like to use Dataverse provisioned storage, you can use the “Managed Store” link already available and add tables.
-2.  If you are using your own storage, you need to create a Synapse Link profile and enable Delta/ parquet conversion for this option to be available. This option is not available for Synapse Link profiles that use the CSV output format.
-3.  Dataverse environment life cycle operations (ELO) such as environment move operations may impact reports built using this feature. See Known limitations section for more information.
 
 # Configure your environment
 
