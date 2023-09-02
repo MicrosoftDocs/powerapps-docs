@@ -1,1 +1,1 @@
-The value is within the next X (specified value) days. 
+The value is within the next specified number of days. 

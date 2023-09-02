@@ -1,1 +1,1 @@
-The value is within last X days. 
+The value is within the previous specified number of days. 

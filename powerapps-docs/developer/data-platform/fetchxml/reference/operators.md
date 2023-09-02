@@ -276,7 +276,7 @@ Use the following operators in [conditions](condition.md) using unique identifie
 
 This section includes details about each of the FetchXml condition operators.
 
-<!-- We can put examples here as needed -->
+<!-- We can put examples here as needed. I added a couple... -->
 
 ### above
  
@@ -293,6 +293,15 @@ Data Type: [String](#string-data)
 ### between
  
 [!INCLUDE [operator-between-description](includes/operator-between-description.md)]
+
+This operator requires two values.
+
+```xml
+<condition attribute="numberofemployees" operator="between">
+  <value>6</value>
+  <value>20</value>
+</condition>
+```
 
 Data Types: 
 
@@ -346,6 +355,12 @@ Data Type: [Hierarchical](#hierarchical-data)
 ### eq-userid
  
 [!INCLUDE [operator-eq-userid-description](includes/operator-eq-userid-description.md)]
+
+No value is required for this operator.
+
+```xml
+<condition attribute='ownerid' operator='eq-userid' />
+```
 
 Data Type: [Unique Identifier](#unique-identifier-data)
 

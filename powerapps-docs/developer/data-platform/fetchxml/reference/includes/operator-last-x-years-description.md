@@ -1,1 +1,1 @@
-The value is within the last X years.
+The value is within the previous specified number of years.

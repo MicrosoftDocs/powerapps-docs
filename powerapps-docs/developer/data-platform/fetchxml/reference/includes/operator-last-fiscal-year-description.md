@@ -1,1 +1,1 @@
-The value is within the last fiscal year.
+The value is within the previous fiscal year.

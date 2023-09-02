@@ -70,7 +70,7 @@ Can it be simplified?
 
 -->
 
-When you retrieve a limited set of data to display in an application, or if you need to return more than 5000 rows of data, you will need to page the results. The choices you make in determining the order of the results can effect whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
+When you retrieve a limited set of data to display in an application, or if you need to return more than 5000 rows of data, you will need to [page the results](page-results.md). The choices you make in determining the order of the results can effect whether the rows in each page of data you retrieve overlaps with other pages. Without proper ordering, the same record can appear in more than one page.
 
 To prevent this from happening, apply the following best practices:
 

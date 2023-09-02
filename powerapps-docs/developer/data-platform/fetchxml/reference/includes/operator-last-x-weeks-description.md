@@ -1,1 +1,1 @@
-The value is within the last X weeks.
+The value is within the previous specified number of weeks.

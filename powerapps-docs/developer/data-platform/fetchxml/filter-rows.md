@@ -138,16 +138,16 @@ You can create filters that compare columns on values in the same row using the 
 
 There are limitations on these kinds of filters:
 
-- Filter can only use these [operators](reference/operators.md):
+- [Condition](reference/condition.md) can only use these [operators](reference/operators.md):
 
   |Operator |Description|
   |---------|---------|
-  |`eq`|[!INCLUDE [operator-eq-description](reference/includes/operator-eq-description.md)]|
-  |`ne`|[!INCLUDE [operator-ne-description](reference/includes/operator-ne-description.md)]|
-  |`gt`|[!INCLUDE [operator-gt-description](reference/includes/operator-gt-description.md)]|
-  |`ge`|[!INCLUDE [operator-ge-description](reference/includes/operator-ge-description.md)]|
-  |`lt`|[!INCLUDE [operator-lt-description](reference/includes/operator-lt-description.md)]|
-  |`le`|[!INCLUDE [operator-le-description](reference/includes/operator-le-description.md)]|
+  |`[eq](reference/operators.md#eq)`|[!INCLUDE [operator-eq-description](reference/includes/operator-eq-description.md)]|
+  |`[ne](reference/operators.md#ne)`|[!INCLUDE [operator-ne-description](reference/includes/operator-ne-description.md)]|
+  |`[gt](reference/operators.md#gt)`|[!INCLUDE [operator-gt-description](reference/includes/operator-gt-description.md)]|
+  |`[ge](reference/operators.md#ge)`|[!INCLUDE [operator-ge-description](reference/includes/operator-ge-description.md)]|
+  |`[lt](reference/operators.md#lt)`|[!INCLUDE [operator-lt-description](reference/includes/operator-lt-description.md)]|
+  |`[le](reference/operators.md#le)`|[!INCLUDE [operator-le-description](reference/includes/operator-le-description.md)]|
 
 - Only two columns may be compared at a time
 - Extended condition operations aren't supported. For example: `valueof='amount'+ 100`

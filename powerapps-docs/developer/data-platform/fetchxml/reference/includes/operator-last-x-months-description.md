@@ -1,2 +1,2 @@
    
-The value is within the last X months.
+The value is within the previous specified number of months.
