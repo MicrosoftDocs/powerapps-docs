@@ -22,15 +22,21 @@ FetchXml is a proprietary XML based query language used to retrieve data from Da
 All queries are based on a single table. When composing a query using FetchXml, the root element is [fetch](reference/fetch.md). Use the [entity element](reference/entity.md) to select the table the query will retrieve data from. The following example represents the simplest valid FetchXml query:
 
 ```xml
-<fetch>
+<fetch top='5'>
   <entity name='account' />
 </fetch>
 ```
 
-This query returns all columns of the first 5,000 rows from the [Account table](../reference/entities/account.md), using the table `LogicalName` to set the [entity](reference/entity.md) `name` attribute.
+This query returns all columns of the first 5 rows from the [Account table](../reference/entities/account.md), using the table `LogicalName` to set the [entity](reference/entity.md) `name` attribute.
 
 > [!IMPORTANT]
 > We strongly discourage returning all columns in a table. Returning all columns will make your applications run slower and may cause timeout errors. You should [select which columns to return](select-columns.md).
+
+## Limit the number of rows
+
+To limit the number of rows returned, use the [fetch element](reference/fetch.md) `top` attribute. You can set this to a value up to 5,000 because that is the maximum number of rows that can be returned with a single request.  Don't use the `top` attribute when you [request paged results](page-results.md).
+
+## Refine your query
 
 After you have selected the table to start your query with, you need to refine the query to get the data you need. The following articles in this section explain how to complete your query.
 

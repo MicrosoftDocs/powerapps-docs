@@ -16,8 +16,7 @@ Use the [fetch element](reference/fetch.md) boolean `returntotalrecordcount` att
 
 You can't apply the [fetch element](reference/fetch.md) `top` attribute together with `returntotalrecordcount`.
 
-> [!TIP]
-> If you want to get a total count of records with no filter, use the `RetrieveTotalRecordCount` message with either the Web API [RetrieveTotalRecordCount Function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) or with the SDK for .NET [RetrieveTotalRecordCountRequest class](xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest). The data retrieved will be from a snapshot within the last 24 hours.
+
 
 The behavior you can expect depends on whether you are using the SDK for .NET or Web API.
 
@@ -56,6 +55,9 @@ The `@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` value is useful when
 What people really want is a very efficient way to get the total number of records in a table in real time (not a snapshot) 
 Can this be achieved with aggregation?
 -->
+
+> [!TIP]
+> If you want to get a total count of records with no filter, use the `RetrieveTotalRecordCount` message with either the Web API [RetrieveTotalRecordCount Function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) or with the SDK for .NET [RetrieveTotalRecordCountRequest class](xref:Microsoft.Crm.Sdk.Messages.RetrieveTotalRecordCountRequest). The data retrieved will be from a snapshot within the last 24 hours.
 
 
 ## Next steps

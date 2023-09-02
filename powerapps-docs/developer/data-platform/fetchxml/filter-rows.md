@@ -138,21 +138,26 @@ You can create filters that compare columns on values in the same row using the 
 
 There are limitations on these kinds of filters:
 
-- Filter can only use these [operators](reference/operators.md): `eq`, `ne`, `gt`, `ge`, `lt`, `le`.
+- Filter can only use these [operators](reference/operators.md):
+
+  |Operator |Description|
+  |---------|---------|
+  |`eq`|[!INCLUDE [operator-eq-description](reference/includes/operator-eq-description.md)]|
+  |`ne`|[!INCLUDE [operator-ne-description](reference/includes/operator-ne-description.md)]|
+  |`gt`|[!INCLUDE [operator-gt-description](reference/includes/operator-gt-description.md)]|
+  |`ge`|[!INCLUDE [operator-ge-description](reference/includes/operator-ge-description.md)]|
+  |`lt`|[!INCLUDE [operator-lt-description](reference/includes/operator-lt-description.md)]|
+  |`le`|[!INCLUDE [operator-le-description](reference/includes/operator-le-description.md)]|
+
 - Only two columns may be compared at a time
 - Extended condition operations aren't supported. For example: `valueof='amount'+ 100`
 - The columns must be the same type. For example: You can't compare a string value with an number value.
-
 
 ## Returning distinct results
 
 Use the [fetch element](reference/fetch.md) `distinct` attribute to require the query to exclude any duplicate values in the results.
 
 If you use the `distinct` attribute, you must add at least one order element to have consistent paging.
-
-## Limit the number of rows
-
-To limit the number of rows returned, use the [fetch element](reference/fetch.md) `top` attribute. You can set this to a value up to 5,000 because that is the maximum number of rows that can be returned.  The `top` attribute isn't used to get paged results.
 
 ## Next steps
 

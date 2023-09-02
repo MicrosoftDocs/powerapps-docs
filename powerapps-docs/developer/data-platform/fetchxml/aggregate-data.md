@@ -175,7 +175,7 @@ The following query groups accounts showing number of employees by the month the
 </fetch>
 ```
 
-This is the result using the data set mentioned previously:
+This is the result using the [example](#example) data set mentioned previously:
 
 ```text
  -----------------------------------------------------------------------
@@ -197,6 +197,8 @@ Queries that return aggregate values are limited to 50,000 records. This limit h
 > Client error message: The maximum record limit is exceeded. Reduce the number of records.
 
 To avoid this error add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run your query multiple times and combine the results.
+
+<!-- TODO: This guidance is pretty vague. We should have an example function showing how to do this -->
 
 ## Next steps
 
