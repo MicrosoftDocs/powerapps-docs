@@ -192,8 +192,55 @@ static EntityCollection RetrieveAll(IOrganizationService service, string fetchXm
 }
 ```
 
+You can adapt the [Quick Start: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md)  sample to test FetchXml queries with the following steps:
+
+1. Add the `RetrieveAll` static method to the `Program` class.
+1. Modify the `Main` method as shown below:
+
+```csharp
+static void Main(string[] args)
+{
+    using (ServiceClient serviceClient = new(connectionString))
+    {
+        if (serviceClient.IsReady)
+        {
+            //WhoAmIResponse response = 
+            //    (WhoAmIResponse)serviceClient.Execute(new WhoAmIRequest());
+
+            //Console.WriteLine("User ID is {0}.", response.UserId);
+
+            string fetchQuery = @"<fetch count='3' page='1'>
+                <entity name='contact'>
+                    <attribute name='fullname'/>
+                    <attribute name='jobtitle'/>
+                    <attribute name='annualincome'/>
+                    <order descending='true' attribute='fullname'/>
+                </entity>
+        </fetch>";
+
+            EntityCollection records = RetrieveAll(service: serviceClient,
+                        fetchXml: fetchQuery,
+                        pageSize: 25);
+
+            Console.WriteLine($"Success: {records.Entities.Count}");
+        }
+        else
+        {
+            Console.WriteLine(
+                "A web service connection was not established.");
+        }
+    }
+
+    // Pause the console so it does not close.
+    Console.WriteLine("Press the <Enter> key to exit.");
+    Console.ReadLine();
+}
+```
+
 > [!IMPORTANT]
 > This query will return ALL records that match the criteria. Make sure you include filter elements to limit the results.
+
+
 
 ### [Web API](#tab/webapi)
 
@@ -279,13 +326,14 @@ The `pagingcookie` attribute value is URL-encoded twice. The decoded value looks
 
 ### Following Pages
 
-In all subsequent requests where the previous page `@Microsoft.Dynamics.CRM.morerecords` annotation value indicates that more records exist, you need to:
+In all subsequent requests where the previous page `@Microsoft.Dynamics.CRM.morerecords` annotation value is `true`, you need to:
 
 1. Increment the `fetch` element `page` attribute value.
 1. URL-decode the `pagingcookie` attribute value twice.
 1. XML-encode the decoded `pagingcookie` attribute value and set it as the value of a `paging-cookie` attribute on the `fetch` element.
 
-    Whether you must explicitly XML-encode the value may depend on the technology you use. In .NET, it might be done for you when you set the XML value to an attribute of another XML element.
+    > [!NOTE]
+    > Whether you must explicitly XML-encode the value may depend on the technology you use. In .NET, it might be done for you when you set the XML value to an attribute of another XML element.
 
 1. URL Encode the entire FetchXml value as you did in the first request.
 

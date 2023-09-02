@@ -174,7 +174,10 @@ OData-Version: 4.0
 
 ## Sample code
 
-To try using FetchXml with C#, you can adapt either the [Quick Start: Execute an Organization service request (C#)](../org-service/quick-start-org-service-console-app.md) or [Quick Start: Web API sample (C#)](../webapi/quick-start-console-app-csharp.md) with the following static methods.
+To try using FetchXml with C#, you can use the `OutputFetchRequest` static methods in this section by adapting the respective quick start samples:
+
+- [Quick Start: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md)
+- [Quick Start: Web API sample (C#)](../webapi/quick-start-console-app-csharp.md)
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -182,7 +185,7 @@ You can use the following `OutputFetchRequest` static method to test FetchXml qu
 
 The `OutputFetchRequest` method demonstrates how to use the [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) and the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) to return an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing the requested data.
 
-The `OutputFetchRequest` method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that all [entity](reference/entity.md) or [link-entity](reference/link-entity.md) element `attribute` elements are included, which is a best practice.
+The `OutputFetchRequest` method depends on the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) and requires that all [entity](reference/entity.md) or [link-entity](reference/link-entity.md) element [attribute elements](reference/attribute.md) are included, which is a best practice.
 
 ```csharp
 /// <summary>
@@ -348,6 +351,60 @@ static void OutputFetchRequest(IOrganizationService service, string fetchXml)
     }
 }
 ```
+
+#### Update SDK for .NET quick start sample
+
+You can adapt the [Quick Start: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md) sample to test queries with the following steps:
+
+1. Install the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0)
+1. Add the following using statements at the top of the `program.cs` file
+
+    ```csharp
+    using Microsoft.Xrm.Sdk;
+    using Microsoft.Xrm.Sdk.Query;
+    using System.Text;
+    using System.Xml.Linq;
+    ```
+
+1. Copy and paste the `OutputFetchRequest` method below the `Main` method.
+1. Edit the `Main` method to set your query and use the `OutputFetchRequest` method.
+
+    ```csharp
+        static void Main(string[] args)
+        {
+            using (ServiceClient serviceClient = new(connectionString))
+            {
+                if (serviceClient.IsReady)
+                {
+                    //WhoAmIResponse response = 
+                    //    (WhoAmIResponse)serviceClient.Execute(new WhoAmIRequest());
+
+                    //Console.WriteLine("User ID is {0}.", response.UserId);
+
+                    string fetchQuery = @"<fetch top='5'>
+                        <entity name='account'>
+                        <attribute name='accountclassificationcode' />
+                        <attribute name='createdby' />
+                        <attribute name='createdon' />
+                        <attribute name='name' />
+                        </entity>
+                    </fetch>";
+
+                    OutputFetchRequest(serviceClient, fetchQuery);
+                }
+                else
+                {
+                    Console.WriteLine(
+                        "A web service connection was not established.");
+                }
+            }
+
+            // Pause the console so it does not close.
+            Console.WriteLine("Press the <Enter> key to exit.");
+            Console.ReadLine();
+        }
+    ```
+
 
 ### [Web API](#tab/webapi)
 
@@ -560,16 +617,18 @@ private static async Task OutputFetchRequest(HttpClient client, string entitySet
 }
 ```
 
-You can adapt the [Quick Start: Web API sample (C#)](../webapi/quick-start-console-app-csharp.md) sample to test FetchXml queries with the following steps:
+#### Update Web API quick start sample
 
-1. Add the `OutputFetchRequest` static method to the `Program` class.
-1. Add a reference to the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0) to the project in Visual Studio.
+You can adapt the [Quick Start: Web API sample (C#)](../webapi/quick-start-console-app-csharp.md) sample to test queries with the following steps:
+
+1. Install the [ConsoleTables NuGet package](https://www.nuget.org/packages/ConsoleTables/2.5.0)
+1. Copy and paste the `OutputFetchRequest` method below the `Main` method.
 1. Modify the `Main` method and replace the content of the `Web API call` region as shown below:
 
 ```csharp
 #region Web API call
 
-string fetchXml = @"<fetch>
+string fetchXml = @"<fetch top='5'>
     <entity name='account'>
     <attribute name='accountclassificationcode' />
     <attribute name='createdby' />
@@ -603,14 +662,6 @@ When you run the program using the `OutputFetchRequest` method, the output shoul
  | Default Value             | FirstName LastName | 3/25/2023 10:42 AM | Blue Yonder Airlines (sample)    |
  ---------------------------------------------------------------------------------------------------------
  | Default Value             | FirstName LastName | 3/25/2023 10:42 AM | City Power & Light (sample)      |
- ---------------------------------------------------------------------------------------------------------
- | Default Value             | FirstName LastName | 3/25/2023 10:42 AM | Contoso Pharmaceuticals (sample) |
- ---------------------------------------------------------------------------------------------------------
- | Default Value             | FirstName LastName | 3/25/2023 10:42 AM | Alpine Ski House (sample)        |
- ---------------------------------------------------------------------------------------------------------
- | Default Value             | FirstName LastName | 3/25/2023 10:42 AM | A. Datum Corporation (sample)    |
- ---------------------------------------------------------------------------------------------------------
- | Default Value             | FirstName LastName | 3/25/2023 10:42 AM | Coho Winery (sample)             |
  ---------------------------------------------------------------------------------------------------------
 ```
 
