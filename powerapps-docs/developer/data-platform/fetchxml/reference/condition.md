@@ -23,7 +23,7 @@ contributors:
 This query returns account records where `address1_city` equals 'Redmond'.
 
 ```xml
-TODO<fetch>
+<fetch>
   <entity name='account'>
     <attribute name='name' />
     <filter type='and'>
