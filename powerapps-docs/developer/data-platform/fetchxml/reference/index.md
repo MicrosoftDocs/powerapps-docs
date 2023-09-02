@@ -39,13 +39,13 @@ This reference does not include elements defined in the [FetchXml schema](../../
 
 ### See also
 
-[Query data](../overview.md)  
-[Select columns](../select-columns.md)  
-[Join tables](../join-tables.md)  
-[Order rows](../order-rows.md)  
-[Filter rows](../filter-rows.md)  
-[Page results](../page-results.md)  
-[Count rows](../count-rows.md)  
-[Optimize performance](../optimize-performance.md)
+[Query data using FetchXml](../overview.md)  
+[Select columns using FetchXml](../select-columns.md)  
+[Join tables using FetchXml](../join-tables.md)  
+[Order rows using FetchXml](../order-rows.md)  
+[Filter rows using FetchXml](../filter-rows.md)  
+[Page results using FetchXml](../page-results.md)  
+[Count rows using FetchXml](../count-rows.md)  
+[Optimize performance using FetchXml](../optimize-performance.md)
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
