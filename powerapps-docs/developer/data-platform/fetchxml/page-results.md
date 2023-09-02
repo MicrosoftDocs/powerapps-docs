@@ -72,7 +72,7 @@ To get the next three records, increment the `page` value and send another reque
 
 Simple paging works well for small data sets, but as the size of the data set increases, performance suffers. For this reason, you can only retrieve up to 50,000 total records using simple paging. For best performance in all cases, we recommend consistently using the *paging cookie*.
 
-## PagingCookie
+## PagingCookie example
 
 A paging cookie is additional data that is returned when you retrieve multiple records. When you request the next page of record, set the paging cookie value returned from the previous page. The paging cookie contains information about the first and last records of the previous request. This allows Dataverse to more efficiently retrieve the next page, improving performance.
 
@@ -447,7 +447,10 @@ When using C#, the following `RetrieveAll` static method will return all records
 /// <param name="pageSize">The page size to use. Default is 5000</param>
 /// <returns>All the records that match the criteria</returns>
 /// <exception cref="Exception"></exception>
-static async Task<List<JsonObject>> RetrieveAll(HttpClient client, string entitySetName, string fetchXml, int pageSize = 5000)
+static async Task<List<JsonObject>> RetrieveAll(HttpClient client, 
+   string entitySetName, 
+   string fetchXml, 
+   int pageSize = 5000)
 {
 
     List<JsonObject> entities = new();
@@ -476,7 +479,8 @@ static async Task<List<JsonObject>> RetrieveAll(HttpClient client, string entity
             uriKind: UriKind.Relative),
         };
         // Add annotations to return formatted values
-        request.Headers.Add("Prefer", "odata.include-annotations=\"Microsoft.Dynamics.CRM.fetchxmlpagingcookie," +
+        request.Headers.Add("Prefer", "odata.include-annotations=" + 
+            "\"Microsoft.Dynamics.CRM.fetchxmlpagingcookie," +
             "Microsoft.Dynamics.CRM.morerecords\"");
 
         // Send the request
@@ -496,11 +500,14 @@ static async Task<List<JsonObject>> RetrieveAll(HttpClient client, string entity
             entities.AddRange(records.AsArray().Cast<JsonObject>());
 
             // Detect if there are more records
-            moreRecords = content.TryGetPropertyValue("@Microsoft.Dynamics.CRM.morerecords", out _);
+            moreRecords = content.
+               TryGetPropertyValue("@Microsoft.Dynamics.CRM.morerecords", out _);
             if (moreRecords)
             {
                 // Get the paging cookie value
-                if (content.TryGetPropertyValue("@Microsoft.Dynamics.CRM.fetchxmlpagingcookie", out JsonNode fetchxmlpagingcookie))
+                if (content.
+                     TryGetPropertyValue("@Microsoft.Dynamics.CRM.fetchxmlpagingcookie", 
+                        out JsonNode fetchxmlpagingcookie))
                 {
                     pagingCookie = fetchxmlpagingcookie.AsValue().ToString();
                 }

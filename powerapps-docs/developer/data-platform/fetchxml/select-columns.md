@@ -40,7 +40,9 @@ Use the [attribute element](reference/attribute.md) to select the columns for th
 
 ## Formatted values
 
-The results of the example query above look something like this:
+The typed data returned may not be suitable to display in your application. Formatted values are string values returned with the request that you can display in your application.
+
+For example, the results of the example query above look something like this:
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -259,7 +261,7 @@ You can use the [attribute](reference/attribute.md) `alias` attribute to specify
 
 Each column returned must have a unique name. By default, the column names returned for the entity of your query are the column `LogicalName` values. All column logical names are unique for each table, so there can't be any duplicate names within that set.
 
-When you use a [link-entity element](reference/link-entity.md), the default column names follow this naming convention: `{Linked table LogicalName}.{Column LogicalName}`.  This prevents any duplicate column names. You can override this by using a unique alias. You can also set an `alias` value for the `link-entity`.
+When you use a [link-entity element](reference/link-entity.md) to [join tables](join-tables.md), the default column names follow this naming convention: `{Linked table LogicalName}.{Column LogicalName}`.  This prevents any duplicate column names. You can override this by using a unique alias. You can also set an `alias` value for the `link-entity` representing the joined table.
 
 The behavior you see when using column aliases depends on whether you are using the SDK for .NET or Web API.
 
@@ -267,7 +269,7 @@ The behavior you see when using column aliases depends on whether you are using 
 
 This `SimpleAliasOutput` method uses aliases rather than the logical names of the columns. Because of this, the results are returned as <xref:Microsoft.Xrm.Sdk.AliasedValue>. To access the value of complex types like [OptionSetValue](xref:Microsoft.Xrm.Sdk.OptionSetValue) or [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference), you have to cast the value.
 
-The [AliasedValue class](xref:Microsoft.Xrm.Sdk.AliasedValue) has two properties that tell you the original [EntityLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.EntityLogicalName) and [AttributeLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.AttributeLogicalName)
+
 
 ```csharp
 /// <summary>
@@ -319,8 +321,10 @@ Output:
  ----------------------------------------------------------------------------------
  | 1    | FirstName LastName   | 8/13/2023 10:30:10 PM | Adventure Works (sample) |
  ----------------------------------------------------------------------------------
-
 ```
+
+> [!NOTE]
+> The [AliasedValue class](xref:Microsoft.Xrm.Sdk.AliasedValue) has two properties that tell you the original [EntityLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.EntityLogicalName) and [AttributeLogicalName](xref:Microsoft.Xrm.Sdk.AliasedValue.AttributeLogicalName) if you need them.
 
 ### [Web API](#tab/webapi)
 

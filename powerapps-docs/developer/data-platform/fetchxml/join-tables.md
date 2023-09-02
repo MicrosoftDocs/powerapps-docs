@@ -17,7 +17,7 @@ As described in [Query data using FetchXml](overview.md), start your query by se
 Use the [link-entity element](reference/link-entity.md) to describe the data from related tables to return with your query. For example, the following query returns data from the [account](../reference/entities/account.md) and [contact](../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) in the account record:
 
 ```xml
-<fetch>
+<fetch top='5'>
   <entity name='account'>
     <attribute name='name' />
     <link-entity name='contact'
@@ -46,14 +46,6 @@ The results look like this:
  | Blue Yonder Airlines (sample)    | Sidney Higa (sample)       |
  -----------------------------------------------------------------
  | City Power & Light (sample)      | Scott Konersmann (sample)  |
- -----------------------------------------------------------------
- | Contoso Pharmaceuticals (sample) | Robert Lyon (sample)       |
- -----------------------------------------------------------------
- | Alpine Ski House (sample)        | Paul Cannon (sample)       |
- -----------------------------------------------------------------
- | A. Datum Corporation (sample)    | Rene Valdes (sample)       |
- -----------------------------------------------------------------
- | Coho Winery (sample)             | Jim Glynn (sample)         |
  -----------------------------------------------------------------
 ```
 
@@ -112,7 +104,7 @@ Many-to-one and one-to-many relationships are like looking at two sides of a coi
 You can retrieve the same data as the previous example from the contact table using the same relationship, except from the side of the contact table. Use the data from the [Contact account_primary_contact one-to-many relationship](../reference/entities/contact.md#BKMK_account_primary_contact), but adjust the values for the different view of the relationship.
 
 ```xml
-<fetch>
+<fetch top='5'>
   <entity name='contact'>
     <attribute name='fullname' />
     <link-entity name='account' 
@@ -125,7 +117,7 @@ You can retrieve the same data as the previous example from the contact table us
 </fetch>
 ```
 
-[link-entity](reference/link-entity.md) attribute values in this example:
+The following table shows the [link-entity](reference/link-entity.md) attribute values in this example:
 
 
 |Attribute|Value|Description|
@@ -133,8 +125,8 @@ You can retrieve the same data as the previous example from the contact table us
 |`name`|`account`|The logical name of the *referencing* table|
 |`from`|`primarycontactid`|The name of the lookup column in the *referencing* account table|
 |`to`|`contactid`|The primary key of the *referenced* contact table|
-|`alias`|`account`|A value is recommended for the `link-entity` with a one-to-many relationship. If an alias isn't provided, a default alias is generated.|
-|`link-type`|         |When no value is set, it will default to `inner`|
+|`alias`|`account`|A value is recommended for the `link-entity` with a one-to-many relationship. If an alias isn't provided, a default alias is generated. In this example, if no alias is provided, the data is returned with a column named `account1.name`.|
+|`link-type`|Not set|When no value is set, it will default to `inner`|
 
 The results look like this:
 
@@ -152,26 +144,18 @@ The results look like this:
  -----------------------------------------------------------------
  | Scott Konersmann (sample)  | City Power & Light (sample)      |
  -----------------------------------------------------------------
- | Robert Lyon (sample)       | Contoso Pharmaceuticals (sample) |
- -----------------------------------------------------------------
- | Paul Cannon (sample)       | Alpine Ski House (sample)        |
- -----------------------------------------------------------------
- | Rene Valdes (sample)       | A. Datum Corporation (sample)    |
- -----------------------------------------------------------------
- | Jim Glynn (sample)         | Coho Winery (sample)             |
- -----------------------------------------------------------------
 ```
 
 ## Many-to-many relationships
 
-Many-to-Many relationships depend on an intersect table.  An intersect table typically has just four columns, but only two of them are important. The two important columns match the primary key columns of the participating tables.
+Many-to-many relationships depend on an *intersect table*.  An intersect table typically has just four columns, but only two of them are important. The two important columns match the primary key columns of the participating tables.
 
-For example, the `TeamMembership` table supports the  [teammembership_association many-to-many relationship](../reference/entities/team.md#BKMK_teammembership_association) between [SystemUser](../reference/entities/systemuser.md) and [Team](../reference/entities/team.md) tables. It allows users to join multiple teams, and teams to have multiple users. `TeamMembership` has these columns: `systemuserid`, `teamid`.
+For example, the `TeamMembership` intersect table supports the [teammembership_association many-to-many relationship](../reference/entities/team.md#BKMK_teammembership_association) between [SystemUser](../reference/entities/systemuser.md) and [Team](../reference/entities/team.md) tables. It allows users to join multiple teams, and teams to have multiple users. `TeamMembership` has these columns: `systemuserid`, `teamid`.
 
-If you want to retrieve information about users and the teams they belong to using the `teammembership_association` many-to-many relationship, you use this fetchXML:
+If you want to retrieve information about users and the teams they belong to using the `teammembership_association` many-to-many relationship, you can use this fetchXML query:
 
 ```xml
-<fetch>
+<fetch top='2'>
   <entity name='systemuser'>
     <attribute name='fullname' />
     <link-entity name='teammembership'

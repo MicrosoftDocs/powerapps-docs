@@ -179,6 +179,9 @@ To try using FetchXml with C#, you can use the `OutputFetchRequest` static metho
 - [Quick Start: Execute an SDK for .NET request (C#)](../org-service/quick-start-org-service-console-app.md)
 - [Quick Start: Web API sample (C#)](../webapi/quick-start-console-app-csharp.md)
 
+> [!NOTE]
+> See [PagingCookie example](page-results.md#pagingcookie-example) for sample code to retrieve data in pages.
+
 ### [SDK for .NET](#tab/sdk)
 
 You can use the following `OutputFetchRequest` static method to test FetchXml queries in a console application.
