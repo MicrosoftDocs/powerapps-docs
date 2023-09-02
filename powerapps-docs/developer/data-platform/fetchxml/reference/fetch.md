@@ -43,7 +43,7 @@ contributors:
 |`page`|No|Positive integer value to specify the page number to return. [Learn about paging results](../page-results.md)|
 |`paging-cookie`|No|String value from a previous page of data to make retrieving the next page of data more efficient. [Learn about paging results](../page-results.md) |
 |`returntotalrecordcount`|No|Boolean value to specify whether the total number of records matching the criteria is returned. [Learn how to count rows using FetchXml](../count-rows.md)|
-|`top`|No|Positive integer value to specify the number of records to return. This value cannot exceed 5,000. L[earn more about limiting the number of rows](../filter-rows.md#limit-the-number-of-rows)|
+|`top`|No|Positive integer value to specify the number of records to return. This value cannot exceed 5,000. [Learn more about limiting the number of rows](../overview.md#limit-the-number-of-rows)|
 |`utc-offset`|No|TODO?|
 |`version`|No|REMOVE?|
 
