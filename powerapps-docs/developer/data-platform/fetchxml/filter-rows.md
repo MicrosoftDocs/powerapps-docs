@@ -142,12 +142,12 @@ There are limitations on these kinds of filters:
 
   |Operator |Description|
   |---------|---------|
-  |`[eq](reference/operators.md#eq)`|[!INCLUDE [operator-eq-description](reference/includes/operator-eq-description.md)]|
-  |`[ne](reference/operators.md#ne)`|[!INCLUDE [operator-ne-description](reference/includes/operator-ne-description.md)]|
-  |`[gt](reference/operators.md#gt)`|[!INCLUDE [operator-gt-description](reference/includes/operator-gt-description.md)]|
-  |`[ge](reference/operators.md#ge)`|[!INCLUDE [operator-ge-description](reference/includes/operator-ge-description.md)]|
-  |`[lt](reference/operators.md#lt)`|[!INCLUDE [operator-lt-description](reference/includes/operator-lt-description.md)]|
-  |`[le](reference/operators.md#le)`|[!INCLUDE [operator-le-description](reference/includes/operator-le-description.md)]|
+  |[eq](reference/operators.md#eq)|[!INCLUDE [operator-eq-description](reference/includes/operator-eq-description.md)]|
+  |[ne](reference/operators.md#ne)|[!INCLUDE [operator-ne-description](reference/includes/operator-ne-description.md)]|
+  |[gt](reference/operators.md#gt)|[!INCLUDE [operator-gt-description](reference/includes/operator-gt-description.md)]|
+  |[ge](reference/operators.md#ge)|[!INCLUDE [operator-ge-description](reference/includes/operator-ge-description.md)]|
+  |[lt](reference/operators.md#lt)|[!INCLUDE [operator-lt-description](reference/includes/operator-lt-description.md)]|
+  |[le](reference/operators.md#le)|[!INCLUDE [operator-le-description](reference/includes/operator-le-description.md)]|
 
 - Only two columns may be compared at a time
 - Extended condition operations aren't supported. For example: `valueof='amount'+ 100`

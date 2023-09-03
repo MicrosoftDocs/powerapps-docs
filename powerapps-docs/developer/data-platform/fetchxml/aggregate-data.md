@@ -25,8 +25,8 @@ To return an aggregate value, you must:
 Note the following:
 
 - Null values aren't considered when calculating aggregate values.
-- You can use data from tables related using the [link-entity element](reference/link-entity.md).
-- You can apply filters to limit the results as with any query.
+- You can use data from tables joined using the [link-entity element](reference/link-entity.md).
+- You can [apply filters](filter-rows.md) to limit the results as with any query.
 
 ## Example
 
@@ -138,7 +138,7 @@ You can select which part of the date to use when grouping by date. Set [attribu
 
 [!INCLUDE [dategrouping-table](reference/includes/dategrouping-table.md)]
 
-The following query groups accounts showing number of employees by the month they were created:
+The following query groups accounts showing number of employees by when there records were created:
 
 ```xml
 <fetch aggregate='true'>
@@ -186,6 +186,21 @@ This is the result using the [example](#example) data set mentioned previously:
  | 0      | 27  | 35   | 8     | 2,023 | Quarter 3 FY2023 | FY2023     |
  -----------------------------------------------------------------------
 ```
+
+#### Fiscal period date grouping example
+
+The following example shows a FetchXML aggregation expression that sums the total amount of orders fulfilled and groups the result by fiscal semester and fiscal year.
+
+```xml
+<fetch aggregate="true">  
+ <entity name="order">  
+  <attribute name="totalamount" aggregate="sum" alias="total"/>  
+  <attribute name="datefulfilled" groupby="true" dategrouping="fiscal-period"/>  
+ </entity>  
+</fetch>
+```
+
+
 
 ## Limitations
 

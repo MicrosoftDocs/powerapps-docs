@@ -35,6 +35,7 @@ contributors:
 |`aggregatelimit`|No|TODO?|
 |`count`|No|Positive integer value to specify the number of records to return in a page. [Learn about paging results](../page-results.md) |
 |`distinct`|No|Boolean value to specify that duplicate rows not be included in the results. [Learn more about returning distinct results](../filter-rows.md#returning-distinct-results)|
+|`latematerialize`|No|Boolean value to direct the query to be broken up into smaller parts and reassemble the results before returning them. This may improve performance for some long-running queries. [Learn more about using Late Materialize query](../optimize-performance.md#late-materialize-query). |
 |`mapping`|No|REMOVE?|
 |`min-active-row-version`|No|REMOVE?|
 |`no-lock`|No|Boolean value to specify that read locks not be placed on the tables in the query.|

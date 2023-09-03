@@ -133,6 +133,11 @@ Use the following operators in [conditions](condition.md) using choice values.
 
  Use the following operators in [conditions](condition.md) using date and time values.
 
+> [!NOTE]
+> When a column is configured with `DateOnly` behavior you cannot use the operators that apply to hours and minutes. [Learn more about the behavior of date and time columns](../../behavior-format-date-time-attribute.md#specify-the-behavior-of-a-date-and-time-column).
+> 
+> The behavior of some operators depend on the fiscal year settings for the environment. [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
  |Operator|Description|
  |---|---|
  |[between](#eq)|[!INCLUDE [operator-between-description](includes/operator-between-description.md)]|
@@ -151,9 +156,9 @@ Use the following operators in [conditions](condition.md) using choice values.
  |[last-week](#last-week)|[!INCLUDE [operator-last-week-description](includes/operator-last-week-description.md)]|
  |[last-x-days](#last-x-days)|[!INCLUDE [operator-last-x-days-description](includes/operator-last-x-days-description.md)]|
  |[last-x-fiscal-periods](#last-x-fiscal-periods)|[!INCLUDE [operator-last-x-fiscal-periods-description](includes/operator-last-x-fiscal-periods-description.md)]|
- |[last-x-fiscal-periods](#last-x-fiscal-periods)|[!INCLUDE [operator-last-x-fiscal-periods-description](includes/operator-last-x-fiscal-periods-description.md)]|
+ |[last-x-fiscal-years](#last-x-fiscal-years)|[!INCLUDE [operator-last-x-fiscal-years-description](includes/operator-last-x-fiscal-years-description.md)]|
  |[last-x-hours](#last-x-hours)|[!INCLUDE [operator-last-x-hours-description](includes/operator-last-x-hours-description.md)]|
- |[last-x-hours](#last-x-hours)|[!INCLUDE [operator-last-x-hours-description](includes/operator-last-x-hours-description.md)]|
+ |[last-x-months](#last-x-months)|[!INCLUDE [operator-last-x-months-description](includes/operator-last-x-months-description.md)]|
  |[last-x-weeks](#last-x-weeks)|[!INCLUDE [operator-last-x-weeks-description](includes/operator-last-x-weeks-description.md)]|
  |[last-x-years](#last-x-years)|[!INCLUDE [operator-last-x-years-description](includes/operator-last-x-years-description.md)]|
  |[last-year](#last-year)|[!INCLUDE [operator-last-year-description](includes/operator-last-year-description.md)]|
@@ -179,7 +184,7 @@ Use the following operators in [conditions](condition.md) using choice values.
  |[olderthan-x-hours](#olderthan-x-hours)|[!INCLUDE [operator-olderthan-x-hours-description](includes/operator-olderthan-x-hours-description.md)]|
  |[olderthan-x-minutes](#olderthan-x-minutes)|[!INCLUDE [operator-olderthan-x-minutes-description](includes/operator-olderthan-x-minutes-description.md)]|
  |[olderthan-x-months](#olderthan-x-months)|[!INCLUDE [operator-olderthan-x-months-description](includes/operator-olderthan-x-months-description.md)]|
- |[olderthan-x-months](#olderthan-x-months)|[!INCLUDE [operator-olderthan-x-months-description](includes/operator-olderthan-x-months-description.md)]|
+ |[olderthan-x-weeks](#olderthan-x-weeks)|[!INCLUDE [operator-olderthan-x-weeks-description](includes/operator-olderthan-x-weeks-description.md)]|
  |[olderthan-x-years](#olderthan-x-years)|[!INCLUDE [operator-olderthan-x-years-description](includes/operator-olderthan-x-years-description.md)]|
  |[on-or-after](#on-or-after)|[!INCLUDE [operator-on-or-after-description](includes/operator-on-or-after-description.md)]|
  |[on-or-before](#on-or-before)|[!INCLUDE [operator-on-or-before-description](includes/operator-on-or-before-description.md)]|
@@ -422,11 +427,44 @@ Data Type: [Number](#number-data)
  
 [!INCLUDE [operator-in-fiscal-period-description](includes/operator-in-fiscal-period-description.md)]
 
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
+The following example shows a FetchXML query that finds all orders fulfilled in period three of any fiscal year, according to the organization's fiscal year settings. The fiscal period value is specified in the value column of the condition element. If the organization uses fiscal months, the query returns results from month three. If the organization uses fiscal quarters, the query returns results from quarter three. If the organization uses fiscal semesters, no results are returned; there are only two semesters, and the value supplied is therefore out of range.
+
+```xml
+<fetch>  
+ <entity name="order">  
+  <attribute name="name"/>  
+  <filter type="and">  
+   <condition attribute="datefulfilled" operator="in-fiscal-period" value="3"/>  
+  </filter>  
+ </entity>  
+</fetch>  
+```
+
 Data Type: [Datetime](#datetime-data)
 
 ### in-fiscal-period-and-year
  
 [!INCLUDE [operator-in-fiscal-period-and-year-description](includes/operator-in-fiscal-period-and-year-description.md)]
+
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
+The following example shows a FetchXML expression that finds all orders fulfilled in period three of fiscal year 2023, according to the organization's fiscal year settings. If the organization uses fiscal months, the query returns results from month three. If the organization uses fiscal quarters, the query returns results from quarter three. If the organization uses fiscal semesters, no results are returned; there are only two semesters, and the value supplied is therefore out-of-range
+
+```xml
+<fetch>  
+ <entity name="order">  
+  <attribute name="name"/>  
+  <filter type="and">  
+   <condition attribute="datefulfilled" operator="in-fiscal-period-and-year">  
+    <value>3</value>  
+    <value>2023</value>  
+   </condition>  
+  </filter>  
+ </entity>  
+</fetch>
+```
 
 Data Type: [Datetime](#datetime-data)
 
@@ -434,11 +472,28 @@ Data Type: [Datetime](#datetime-data)
  
 [!INCLUDE [operator-in-fiscal-year-description](includes/operator-in-fiscal-year-description.md)]
 
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
+The following example shows a FetchXML expression that finds all accounts created in fiscal year 2023.
+
+```xml
+<fetch>  
+ <entity name="account">  
+  <attribute name="name"/>  
+  <filter type="and">  
+   <condition attribute="createdon" operator="in-fiscal-year" value="2023"/>  
+  </filter>  
+ </entity>  
+</fetch>
+```
+
 Data Type: [Datetime](#datetime-data)
 
 ### in-or-after-fiscal-period-and-year
  
 [!INCLUDE [operator-in-or-after-fiscal-period-and-year-description](includes/operator-in-or-after-fiscal-period-and-year-description.md)]
+
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
 Data Type: [Datetime](#datetime-data)
 
@@ -446,17 +501,36 @@ Data Type: [Datetime](#datetime-data)
  
 [!INCLUDE [operator-in-or-before-fiscal-period-and-year-description](includes/operator-in-or-before-fiscal-period-and-year-description.md)]
 
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
 Data Type: [Datetime](#datetime-data)
 
 ### last-fiscal-period
  
 [!INCLUDE [operator-last-fiscal-period-description](includes/operator-last-fiscal-period-description.md)]
 
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
+The following example shows a FetchXML expression that finds all orders fulfilled in the last fiscal period, according to the organization's fiscal year settings. For example, if the organization uses fiscal months, the query returns orders fulfilled in the last fiscal month. If the organization uses fiscal quarters, the query returns orders fulfilled in the last fiscal quarter. If the organization uses fiscal semesters, orders fulfilled in the last fiscal semester are returned.
+
+```xml
+<fetch>  
+ <entity name="order">  
+  <attribute name="name"/>  
+  <filter type="and">  
+   <condition attribute="datefulfilled" operator="last-fiscal-period"/>  
+  </filter>  
+ </entity>  
+</fetch>
+```
+
 Data Type: [Datetime](#datetime-data)
 
 ### last-fiscal-year
  
 [!INCLUDE [operator-last-fiscal-year-description](includes/operator-last-fiscal-year-description.md)]
+
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
 Data Type: [Datetime](#datetime-data)
 
@@ -488,17 +562,24 @@ Data Type: [Datetime](#datetime-data)
  
 [!INCLUDE [operator-last-x-fiscal-periods-description](includes/operator-last-x-fiscal-periods-description.md)]
 
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
 Data Type: [Datetime](#datetime-data)
 
 ### last-x-fiscal-years
  
 [!INCLUDE [operator-last-x-fiscal-years-description](includes/operator-last-x-fiscal-years-description.md)]
 
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
 Data Type: [Datetime](#datetime-data)
 
 ### last-x-hours
  
 [!INCLUDE [operator-last-x-hours-description](includes/operator-last-x-hours-description.md)]
+
+[!INCLUDE [operator-invalid-dateonly](includes/operator-invalid-dateonly.md)]
+
 
 Data Type: [Datetime](#datetime-data)
 
@@ -586,11 +667,15 @@ Data Type: [Unique Identifier](#unique-identifier-data)
  
 [!INCLUDE [operator-next-fiscal-period-description](includes/operator-next-fiscal-period-description.md)]
 
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
 Data Type: [Datetime](#datetime-data)
 
 ### next-fiscal-year
  
 [!INCLUDE [operator-next-fiscal-year-description](includes/operator-next-fiscal-year-description.md)]
+
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
 Data Type: [Datetime](#datetime-data)
 
@@ -622,17 +707,37 @@ Data Type: [Datetime](#datetime-data)
  
 [!INCLUDE [operator-next-x-fiscal-periods-description](includes/operator-next-x-fiscal-periods-description.md)]
 
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
 Data Type: [Datetime](#datetime-data)
 
 ### next-x-fiscal-years
  
 [!INCLUDE [operator-next-x-fiscal-years-description](includes/operator-next-x-fiscal-years-description.md)]
 
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
+The following example shows a FetchXML expression that finds all opportunities with an estimated close date in the next three fiscal years, based on the organization's fiscal year settings. The value for `x` is specified in the value column of the condition element.
+
+```xml
+<fetch>  
+ <entity name="opportunity">  
+  <attribute name="name"/>  
+  <filter type="and">  
+   <condition attribute="estimatedclosedate" operator="next-x-fiscal-years" value="3"/>  
+  </filter>  
+ </entity>  
+</fetch>
+```
+
+
 Data Type: [Datetime](#datetime-data)
 
 ### next-x-hours
  
 [!INCLUDE [operator-next-x-hours-description](includes/operator-next-x-hours-description.md)]
+
+[!INCLUDE [operator-invalid-dateonly](includes/operator-invalid-dateonly.md)]
 
 Data Type: [Datetime](#datetime-data)
 
@@ -743,11 +848,31 @@ Data Type: [Datetime](#datetime-data)
  
 [!INCLUDE [operator-olderthan-x-hours-description](includes/operator-olderthan-x-hours-description.md)]
 
+[!INCLUDE [operator-invalid-dateonly](includes/operator-invalid-dateonly.md)]
+
 Data Type: [Datetime](#datetime-data)
 
 ### olderthan-x-minutes
  
 [!INCLUDE [operator-olderthan-x-minutes-description](includes/operator-olderthan-x-minutes-description.md)]
+
+[!INCLUDE [operator-invalid-dateonly](includes/operator-invalid-dateonly.md)]
+
+The following example shows a FetchXML query that returns incidents that are older than 30 minutes.
+
+```xml
+<fetch>  
+  <entity name="incident">  
+    <attribute name="title" />  
+    <attribute name="ticketnumber" />  
+    <attribute name="createdon" />  
+    <attribute name="incidentid" />  
+    <filter type="and">  
+      <condition attribute="createdon" operator="olderthan-x-minutes" value="30" />  
+    </filter>  
+  </entity>  
+</fetch>
+```
 
 Data Type: [Datetime](#datetime-data)
 
@@ -791,11 +916,15 @@ Data Type: [Datetime](#datetime-data)
  
 [!INCLUDE [operator-this-fiscal-period-description](includes/operator-this-fiscal-period-description.md)]
 
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+
 Data Type: [Datetime](#datetime-data)
 
 ### this-fiscal-year
  
 [!INCLUDE [operator-this-fiscal-year-description](includes/operator-this-fiscal-year-description.md)]
+
+[Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
 Data Type: [Datetime](#datetime-data)
 
