@@ -1,7 +1,7 @@
 ---
 title: "msdyn_schedule table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_schedule table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -18,7 +18,7 @@ search.audienceType:
 
 Generic refresh schedule
 
-**Added by**: Insights App Platform Solution
+**Added by**: Insights App Platform Base Solution
 
 
 ## Messages
@@ -28,7 +28,7 @@ Generic refresh schedule
 |Assign|PATCH /msdyn_schedules(*msdyn_scheduleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /msdyn_schedules<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /msdyn_schedules(*msdyn_scheduleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -43,7 +43,7 @@ Generic refresh schedule
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |SetState|PATCH /msdyn_schedules(*msdyn_scheduleid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /msdyn_schedules(*msdyn_scheduleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -70,8 +70,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [msdyn_callbackurl](#BKMK_msdyn_callbackurl)
 - [msdyn_isactive](#BKMK_msdyn_isactive)
 - [msdyn_nextrefreshtime](#BKMK_msdyn_nextrefreshtime)
+- [msdyn_refreshpayload](#BKMK_msdyn_refreshpayload)
 - [msdyn_refreshperiod](#BKMK_msdyn_refreshperiod)
 - [msdyn_schedule](#BKMK_msdyn_schedule)
 - [msdyn_scheduleId](#BKMK_msdyn_scheduleId)
@@ -79,6 +81,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_schedulerefreshtype](#BKMK_msdyn_schedulerefreshtype)
 - [msdyn_startdatetime](#BKMK_msdyn_startdatetime)
 - [msdyn_timebasedrefreshperiod](#BKMK_msdyn_timebasedrefreshperiod)
+- [msdyn_timezoneid](#BKMK_msdyn_timezoneid)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -122,6 +125,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|ManagedProperty|
 
 
+### <a name="BKMK_msdyn_callbackurl"></a> msdyn_callbackurl
+
+|Property|Value|
+|--------|-----|
+|Description|Callback Url|
+|DisplayName|Callback Url|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_callbackurl|
+|MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_msdyn_isactive"></a> msdyn_isactive
 
 |Property|Value|
@@ -158,6 +177,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|msdyn_nextrefreshtime|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_msdyn_refreshpayload"></a> msdyn_refreshpayload
+
+|Property|Value|
+|--------|-----|
+|Description|Refresh payload|
+|DisplayName|Refresh payload|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_refreshpayload|
+|MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_msdyn_refreshperiod"></a> msdyn_refreshperiod
@@ -211,11 +246,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |--------|-----|
 |Description|Schedule id reference for dataflows etc.|
-|DisplayName|ScheduleId reference for dataflows etc.|
+|DisplayName|ScheduleId reference|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_scheduleidref|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Targets|msdyn_dataflow|
 |Type|Lookup|
 
@@ -269,6 +304,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|msdyn_timebasedrefreshperiod|
 |MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_timezoneid"></a> msdyn_timezoneid
+
+|Property|Value|
+|--------|-----|
+|Description|Dataflow Time zone id|
+|DisplayName|TimeZoneId|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_timezoneid|
+|MaxLength|1000|
 |RequiredLevel|None|
 |Type|String|
 
