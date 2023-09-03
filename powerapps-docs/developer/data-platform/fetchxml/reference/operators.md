@@ -102,6 +102,7 @@ To learn how to use these values, see [Filter rows using FetchXml](../filter-row
 |[under](#under)|[!INCLUDE [operator-under-description](includes/operator-under-description.md)]|[Hierarchical](#hierarchical-data)|
 |[yesterday](#yesterday)|[!INCLUDE [operator-yesterday-description](includes/operator-yesterday-description.md)]|[Datetime](#datetime-data)|
 
+[Back to top](#)
 
 ## By Data type
 
@@ -248,7 +249,7 @@ Use the following operators in [conditions](condition.md) using owner values.
 
 Use the following operators in [conditions](condition.md) using string values.
 
-You can use wildcard characters for the following operators: [like](#like),[not-like](#not-like),[begins-with](#begins-with),[not-begin-with](#not-begin-with),[ends-with](#ends-with), and [not-end-with](#not-end-with). [Learn more about using wildcard characters in conditions for string values](../../wildcard-characters.md)
+You can use wildcard characters for the following operators: [like](#like), [not-like](#not-like), [begins-with](#begins-with), [not-begin-with](#not-begin-with), [ends-with](#ends-with), and [not-end-with](#not-end-with). [Learn more about using wildcard characters in conditions for string values](../../wildcard-characters.md)
 
 |Operator|Description|
 |---|---|
@@ -279,15 +280,19 @@ Use the following operators in [conditions](condition.md) using unique identifie
 |[not-null](#not-null)|[!INCLUDE [operator-not-null-description](includes/operator-not-null-description.md)]|
 |[null](#null)|[!INCLUDE [operator-null-description](includes/operator-null-description.md)]|
 
+[Back to top](#)
+
 ## Details
 
 This section includes details about each of the FetchXml condition operators.
 
-<!-- We can put examples here as needed. I added a couple... -->
+<!-- We can put examples here as needed.-->
 
 ### above
  
 [!INCLUDE [operator-above-description](includes/operator-above-description.md)]
+
+[Learn more about querying hierarchical data](../../query-hierarchical-data.md)
 
 Data Type: [Hierarchical](#hierarchical-data)
 
@@ -355,11 +360,15 @@ Data Type: [Unique Identifier](#unique-identifier-data)
  
 [!INCLUDE [operator-eq-or-above-description](includes/operator-eq-or-above-description.md)]
 
+[Learn more about querying hierarchical data](../../query-hierarchical-data.md)
+
 Data Type: [Hierarchical](#hierarchical-data)
 
 ### eq-or-under
  
 [!INCLUDE [operator-eq-or-under-description](includes/operator-eq-or-under-description.md)]
+
+[Learn more about querying hierarchical data](../../query-hierarchical-data.md)
 
 Data Type: [Hierarchical](#hierarchical-data)
 
@@ -385,11 +394,15 @@ Data Type: [Number](#number-data)
  
 [!INCLUDE [operator-eq-useroruserhierarchy-description](includes/operator-eq-useroruserhierarchy-description.md)]
 
+[Learn more about querying hierarchical data](../../query-hierarchical-data.md)
+
 Data Type: [Hierarchical](#hierarchical-data)
 
 ### eq-useroruserhierarchyandteams
  
 [!INCLUDE [operator-eq-useroruserhierarchyandteams-description](includes/operator-eq-useroruserhierarchyandteams-description.md)]
+
+[Learn more about querying hierarchical data](../../query-hierarchical-data.md)
 
 Data Type: [Hierarchical](#hierarchical-data)
 
@@ -836,6 +849,8 @@ Data Type: [String](#string-data)
  
 [!INCLUDE [operator-not-under-description](includes/operator-not-under-description.md)]
 
+[Learn more about querying hierarchical data](../../query-hierarchical-data.md)
+
 Data Type: [Hierarchical](#hierarchical-data)
 
 ### null
@@ -975,6 +990,8 @@ Data Type: [Datetime](#datetime-data)
 ### under
  
 [!INCLUDE [operator-under-description](includes/operator-under-description.md)]
+
+[Learn more about querying hierarchical data](../../query-hierarchical-data.md)
 
 Data Type: [Hierarchical](#hierarchical-data)
 

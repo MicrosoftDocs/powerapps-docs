@@ -213,7 +213,7 @@ You can use FetchXml to create a query to return records that are not in a set u
 You can perform a left outer join in FetchXML by using the `entityname` attribute as a condition operator. The `entityname` attribute is valid in conditions, filters, and nested filters. [Learn more about filters on link-entity](filter-rows.md#filters-on-link-entity).
 
 
-For example, you can find all account records with no contacts.
+For example, the following query returns all account records with no contacts.
 
 ```xml
 <fetch>

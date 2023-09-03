@@ -1,1 +1,1 @@
-The root element of a FetchXml query
+The root element of a FetchXml query.

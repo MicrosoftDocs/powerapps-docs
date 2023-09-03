@@ -19,18 +19,17 @@ FetchXml is a proprietary XML based query language used to retrieve data from Da
 
 ## Compose a query
 
-All queries are based on a single table. When composing a query using FetchXml, the root element is [fetch](reference/fetch.md). Use the [entity element](reference/entity.md) to select the table the query will retrieve data from. The following example represents the simplest valid FetchXml query:
+All queries are based on a single table. When composing a query using FetchXml, the root element is [fetch](reference/fetch.md). Use the [entity element](reference/entity.md) to select the table the query will retrieve data from. The following example represents a simple FetchXml query:
 
 ```xml
 <fetch top='5'>
-  <entity name='account' />
+  <entity name='account'>
+      <attribute name='name' />
+  </entity>
 </fetch>
 ```
 
-This query returns all columns of the first 5 rows from the [Account table](../reference/entities/account.md), using the table `LogicalName` to set the [entity](reference/entity.md) `name` attribute.
-
-> [!IMPORTANT]
-> We strongly discourage returning all columns in a table. Returning all columns will make your applications run slower and may cause timeout errors. You should [select which columns to return](select-columns.md).
+This query returns the [Name column](../reference/entities/account.md#BKMK_Name) of the first 5 rows from the [Account table](../reference/entities/account.md), using the table `LogicalName` to set the [entity](reference/entity.md) `name` attribute.
 
 ## Limit the number of rows
 
@@ -54,10 +53,12 @@ After you have selected the table to start your query with, you need to refine t
 
 ## Community tools
 
-The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/) is a free, essential tool to compose FetchXml requests.
+The [XrmToolbox](../community-tools.md#xrmtoolbox) [FetchXmlBuilder](https://fetchxmlbuilder.com/) is a free tool to compose and test FetchXml requests.
 
 > [!NOTE]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
+
+
 
 ## Use FetchXml to retrieve data
 
@@ -65,7 +66,7 @@ You can use FetchXml to retrieve data using either the SDK for .NET or Web API. 
 
 ### [SDK for .NET](#tab/sdk)
 
-Use the [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) to hold pass the FetchXml query as a string. `FetchExpression` is derived from the common [QueryBase class](xref:Microsoft.Xrm.Sdk.Query.QueryBase) type, so you can use it when that type is a method parameter or class property.
+Use the [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) to hold the FetchXml query as a string. `FetchExpression` is derived from the common [QueryBase class](xref:Microsoft.Xrm.Sdk.Query.QueryBase) type, so you can use it when that type is a method parameter or class property.
 
 You should use the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) for most cases.
 
@@ -673,6 +674,19 @@ When you run the program using the `OutputFetchRequest` method, the output shoul
  | Default Value             | FirstName LastName | 3/25/2023 10:42 AM | City Power & Light (sample)      |
  ---------------------------------------------------------------------------------------------------------
 ```
+
+## Use FetchXml as a message parameter
+
+You will also use FetchXml as a parameter for Dataverse messages such as the following:
+
+|Message Name|SDK for .NET Request class|Web API Operation|
+|---------|---------|---------|
+|`BackgroundSendEmail`|[BackgroundSendEmailRequest](xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest)|[BackgroundSendEmail action](xref:Microsoft.Dynamics.CRM.BackgroundSendEmail)|
+|`BulkDetectDuplicates`|[BulkDetectDuplicatesRequest](xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest)|[BulkDetectDuplicates action](xref:Microsoft.Dynamics.CRM.BulkDetectDuplicates)|
+|`FullTextSearchKnowledgeArticle`|[FullTextSearchKnowledgeArticleRequest](xref:Microsoft.Crm.Sdk.Messages.FullTextSearchKnowledgeArticleRequest)|[FullTextSearchKnowledgeArticle action](xref:Microsoft.Dynamics.CRM.FullTextSearchKnowledgeArticle)|
+|`QueryExpressionToFetchXml`|[QueryExpressionToFetchXmlRequest](xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest)|[QueryExpressionToFetchXml action](xref:Microsoft.Dynamics.CRM.QueryExpressionToFetchXml)|
+|`SendBulkMail`|[SendBulkMailRequest](xref:Microsoft.Crm.Sdk.Messages.SendBulkMailRequest)|[SendBulkMail action](xref:Microsoft.Dynamics.CRM.SendBulkMail)|
+|`Rollup`|[RollupRequest](xref:Microsoft.Crm.Sdk.Messages.RollupRequest)|[Rollup function](xref:Microsoft.Dynamics.CRM.Rollup)|
 
 
 

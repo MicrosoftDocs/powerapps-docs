@@ -20,9 +20,9 @@ These elements are a subset of the elements described in the [FetchXml schema](.
 
 - Using the SDK for .NET [FetchExpression](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) class with the `RetrieveMultiple` message.
 - Using the Dataverse Web API as described in [Use FetchXml with Web API](../../webapi/use-fetchxml-web-api.md).
-- Using a message that has a parameter that requires a query defined using FetchXml.
+- [Using a message that has a parameter that requires a query defined using FetchXml](../overview.md#use-fetchxml-as-a-message-parameter).
 
-This reference does not include elements defined in the [FetchXml schema](../../fetchxml-schema.md) used in defining views for model-driven application or reports that use FetchXml to define the query.
+This reference does not include elements defined in the [FetchXml schema](../../fetchxml-schema.md) used in defining views for model-driven application or reports that use FetchXml to define the query. [Learn more about customizing model-driven app views with code](../../../model-driven-apps/customize-entity-views.md).
 
 
 |Element|Description|
