@@ -41,6 +41,7 @@ contributors:
 |`type`|No|Use `and` or `or`. Whether all (`and`) or any (`or`) [conditions](condition.md) within the filter must be met.|
 |`hint`|No|TODO?|
 |`isquickfindfields`|No|REMOVE?|
+|`overridequickfindrecordlimitenabled`|No|REMOVE?|
 
 ## Parent elements
 

@@ -204,6 +204,36 @@ TODO:
 - Do we support this? https://jonasr.app/my-state-contacts/ claims "not unsupported"..
 - Does this introduce other considerations?
 
+## Find records not in a set
+
+<!-- Summarizes this article: https://learn.microsoft.com/power-apps/developer/data-platform/use-fetchxml-left-outer-join-query-records-not-in -->
+
+You can use FetchXml to create a query to return records that are not in a set using a *left outer join*. A left outer join returns each row that satisfies the join of the first input with the second input. It also returns any rows from the first input that had no matching rows in the second input. The non-matching rows in the second input are returned as null values.
+
+You can perform a left outer join in FetchXML by using the `entityname` attribute as a condition operator. The `entityname` attribute is valid in conditions, filters, and nested filters. [Learn more about filters on link-entity](filter-rows.md#filters-on-link-entity).
+
+
+For example, you can find all account records with no contacts.
+
+```xml
+<fetch>
+   <entity name='account'>
+      <attribute name='name' />
+      <order attribute='name' />
+      <link-entity name='contact'
+         from='parentcustomerid'
+         to='accountid'
+         link-type='outer'
+         alias='contact' />
+      <filter type='and'>
+         <condition entityname='contact'
+            attribute='parentcustomerid'
+            operator='null' />
+      </filter>
+   </entity>
+</fetch>
+```
+
 ## Limitations
 
 You can add up to 15 `link-entity` elements to a query. Each link-entity adds a JOIN to the query and increases the time to execute the query. This limit is to protect performance. If you add more than 15 link-entity elements to a query you will get this error:

@@ -1,0 +1,1 @@
+You can use wildcard characters with this operator. [Learn more about using wildcard characters in conditions for string values](../../../wildcard-characters.md).

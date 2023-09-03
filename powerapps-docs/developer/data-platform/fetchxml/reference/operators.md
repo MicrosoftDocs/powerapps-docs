@@ -248,6 +248,8 @@ Use the following operators in [conditions](condition.md) using owner values.
 
 Use the following operators in [conditions](condition.md) using string values.
 
+You can use wildcard characters for the following operators: [like](#like),[not-like](#not-like),[begins-with](#begins-with),[not-begin-with](#not-begin-with),[ends-with](#ends-with), and [not-end-with](#not-end-with). [Learn more about using wildcard characters in conditions for string values](../../wildcard-characters.md)
+
 |Operator|Description|
 |---|---|
 |[begins-with](#begins-with)|[!INCLUDE [operator-begins-with-description](includes/operator-begins-with-description.md)]|
@@ -293,6 +295,8 @@ Data Type: [Hierarchical](#hierarchical-data)
  
 [!INCLUDE [operator-begins-with-description](includes/operator-begins-with-description.md)]
 
+[!INCLUDE [wildcard-string-operator](includes/wildcard-string-operator.md)]
+
 Data Type: [String](#string-data)
 
 ### between
@@ -322,6 +326,8 @@ Data Type: [Choice](#choice-data)
 ### ends-with
  
 [!INCLUDE [operator-ends-with-description](includes/operator-ends-with-description.md)]
+
+[!INCLUDE [wildcard-string-operator](includes/wildcard-string-operator.md)]
 
 Data Type: [String](#string-data)
 
@@ -620,6 +626,8 @@ Data Types:
  
 [!INCLUDE [operator-like-description](includes/operator-like-description.md)]
 
+[!INCLUDE [wildcard-string-operator](includes/wildcard-string-operator.md)]
+
 Data Type: [String](#string-data)
 
 ### lt
@@ -769,6 +777,8 @@ Data Type: [Datetime](#datetime-data)
  
 [!INCLUDE [operator-not-begin-with-description](includes/operator-not-begin-with-description.md)]
 
+[!INCLUDE [wildcard-string-operator](includes/wildcard-string-operator.md)]
+
 Data Type: [String](#string-data)
 
 ### not-between
@@ -790,6 +800,8 @@ Data Type: [Choice](#choice-data)
  
 [!INCLUDE [operator-not-end-with-description](includes/operator-not-end-with-description.md)]
 
+[!INCLUDE [wildcard-string-operator](includes/wildcard-string-operator.md)]
+
 Data Type: [String](#string-data)
 
 ### not-in
@@ -801,6 +813,8 @@ Data Type: [Number](#number-data)
 ### not-like
  
 [!INCLUDE [operator-not-like-description](includes/operator-not-like-description.md)]
+
+[!INCLUDE [wildcard-string-operator](includes/wildcard-string-operator.md)]
 
 Data Type: [String](#string-data)
 
