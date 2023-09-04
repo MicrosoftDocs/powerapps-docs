@@ -1,7 +1,7 @@
 ---
 title: "retentionoperationdetail table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the retentionoperationdetail table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -16,7 +16,7 @@ search.audienceType:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Holds operation details values for entities for long term data retention.
+Table level details of retention execution.
 
 **Added by**: Retention Base Components Solution
 
@@ -26,14 +26,14 @@ Holds operation details values for entities for long term data retention.
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST /retentionoperationdetails<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /retentionoperationdetails(*retentionoperationdetailid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |Retrieve|GET /retentionoperationdetails(*retentionoperationdetailid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET /retentionoperationdetails<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |SetState|PATCH /retentionoperationdetails(*retentionoperationdetailid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /retentionoperationdetails(*retentionoperationdetailid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -76,7 +76,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Table logical name.|
 |DisplayName|EntityLogicalName|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -92,7 +92,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Total failed records.|
 |DisplayName|FailedCount|
 |Format|None|
 |IsValidForForm|True|
@@ -125,7 +125,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Is this a root table on which retention ran.|
 |DisplayName|IsRootEntity|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -148,7 +148,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the  settings.|
+|Description|The name of the retention operation detail.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -180,7 +180,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Total retained records.|
 |DisplayName|RetentionCount|
 |Format|None|
 |IsValidForForm|True|
@@ -210,7 +210,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Reference id of the retention operation.|
 |DisplayName|RetentionOperationId|
 |IsValidForForm|True|
 |IsValidForRead|True|
