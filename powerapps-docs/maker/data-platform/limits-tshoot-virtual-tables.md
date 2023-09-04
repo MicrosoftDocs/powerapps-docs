@@ -37,7 +37,7 @@ The following is a list of known limitations for virtual tables created using th
    - File and attachments
    - Image
 - Maximum length of characters allowed for a text column in a virtual table is 4000 characters. If the source table has a maximum character limit greater than this value, any create/update operation exceeding the max character limit will result in a validation error, and the operation will fail.
-- Virtual table queries are limited to return 250 records. If you've a 1:N or N custom multi-table (polymorphic) relationship with a virtual table, any query exceeding this limit will fail and provide an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
+- Virtual table queries are limited to return 1000 records. If you've a 1:N or N custom multi-table (polymorphic) relationship with a virtual table, any query exceeding this limit will fail and provide an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
 - Audit functionality isn't available for Virtual Tables, this is because Dataverse can only perform and store audit data for locally stored data.
 - Rollups and calculated fields can't be calculated for virtual tables. This is because rollups are a server side calculation in Dataverse, which requires the data to be stored locally.
 - The **AAD User** virtual table provided by Microsoft only allows read access.
