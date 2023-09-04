@@ -1,7 +1,7 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Mailbox table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -394,7 +394,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|folderhierarchy|
-|MaxLength|1048576|
+|MaxLength|1073741823|
 |RequiredLevel|None|
 |Type|Memo|
 
