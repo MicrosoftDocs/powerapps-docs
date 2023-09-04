@@ -1,7 +1,7 @@
 ---
 title: "UserSettings table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the UserSettings table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -101,6 +101,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PersonalizationSettings](#BKMK_PersonalizationSettings)
 - [PMDesignator](#BKMK_PMDesignator)
 - [PricingDecimalPrecision](#BKMK_PricingDecimalPrecision)
+- [ReleaseChannel](#BKMK_ReleaseChannel)
 - [ReportScriptErrors](#BKMK_ReportScriptErrors)
 - [ResourceBookingExchangeSyncVersion](#BKMK_ResourceBookingExchangeSyncVersion)
 - [SelectedGlobalFilterId](#BKMK_SelectedGlobalFilterId)
@@ -330,6 +331,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|Unauthorized|Not authorized to execute auto install|
 |5|No Solution|D365 auto install solution is no available|
 |6|No Graph API|Graph API is not available for auto install|
+|7|Resource Disabled|Resource to call graph api is disabled by tenant|
 
 
 
@@ -1082,6 +1084,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|ApplicationRequired|
 |Type|Integer|
+
+
+### <a name="BKMK_ReleaseChannel"></a> ReleaseChannel
+
+**Added by**: App Framework Infra Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Model app channel override|
+|DisplayName|Model app channel override|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|releasechannel|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ReleaseChannel Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Semi-annual channel override||
+|2|Monthly channel override||
+|3|Inner channel override||
+
 
 
 ### <a name="BKMK_ReportScriptErrors"></a> ReportScriptErrors
