@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -112,6 +112,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ClientFeatureSet](#BKMK_ClientFeatureSet)
 - [ContentSecurityPolicyConfiguration](#BKMK_ContentSecurityPolicyConfiguration)
 - [ContentSecurityPolicyConfigurationForCanvas](#BKMK_ContentSecurityPolicyConfigurationForCanvas)
+- [ContentSecurityPolicyOptions](#BKMK_ContentSecurityPolicyOptions)
 - [ContentSecurityPolicyReportUri](#BKMK_ContentSecurityPolicyReportUri)
 - [ContractPrefix](#BKMK_ContractPrefix)
 - [CopresenceRefreshRate](#BKMK_CopresenceRefreshRate)
@@ -155,6 +156,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnableBingMapsIntegration](#BKMK_EnableBingMapsIntegration)
 - [EnableCanvasAppsInSolutionsByDefault](#BKMK_EnableCanvasAppsInSolutionsByDefault)
 - [EnableFlowsInSolutionByDefault](#BKMK_EnableFlowsInSolutionByDefault)
+- [EnableFlowsInSolutionByDefaultGracePeriod](#BKMK_EnableFlowsInSolutionByDefaultGracePeriod)
 - [EnableImmersiveSkypeIntegration](#BKMK_EnableImmersiveSkypeIntegration)
 - [EnableIpBasedCookieBinding](#BKMK_EnableIpBasedCookieBinding)
 - [EnableIpBasedFirewallRule](#BKMK_EnableIpBasedFirewallRule)
@@ -235,6 +237,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsContentSecurityPolicyEnabledForCanvas](#BKMK_IsContentSecurityPolicyEnabledForCanvas)
 - [IsContextualEmailEnabled](#BKMK_IsContextualEmailEnabled)
 - [IsContextualHelpEnabled](#BKMK_IsContextualHelpEnabled)
+- [IsCopilotFeedbackEnabled](#BKMK_IsCopilotFeedbackEnabled)
 - [IsCustomControlsInCanvasAppsEnabled](#BKMK_IsCustomControlsInCanvasAppsEnabled)
 - [IsDefaultCountryCodeCheckEnabled](#BKMK_IsDefaultCountryCodeCheckEnabled)
 - [IsDelegateAccessEnabled](#BKMK_IsDelegateAccessEnabled)
@@ -270,6 +273,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsMSTeamsUserSyncEnabled](#BKMK_IsMSTeamsUserSyncEnabled)
 - [IsNewAddProductExperienceEnabled](#BKMK_IsNewAddProductExperienceEnabled)
 - [IsNotesAnalysisEnabled](#BKMK_IsNotesAnalysisEnabled)
+- [IsNotificationForD365InTeamsEnabled](#BKMK_IsNotificationForD365InTeamsEnabled)
 - [IsOfficeGraphEnabled](#BKMK_IsOfficeGraphEnabled)
 - [IsOneDriveEnabled](#BKMK_IsOneDriveEnabled)
 - [IsPAIEnabled](#BKMK_IsPAIEnabled)
@@ -347,6 +351,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OfficeAppsAutoDeploymentEnabled](#BKMK_OfficeAppsAutoDeploymentEnabled)
 - [OfficeGraphDelveUrl](#BKMK_OfficeGraphDelveUrl)
 - [OOBPriceCalculationEnabled](#BKMK_OOBPriceCalculationEnabled)
+- [OptOutSchemaV2EnabledByDefault](#BKMK_OptOutSchemaV2EnabledByDefault)
 - [OrderPrefix](#BKMK_OrderPrefix)
 - [OrgDbOrgSettings](#BKMK_OrgDbOrgSettings)
 - [OrgInsightsEnabled](#BKMK_OrgInsightsEnabled)
@@ -1778,6 +1783,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_ContentSecurityPolicyOptions"></a> ContentSecurityPolicyOptions
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Content Security Policy Options.|
+|DisplayName|Content Security Policy Options|
+|Format|None|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|contentsecuritypolicyoptions|
+|MaxValue|1024|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
 ### <a name="BKMK_ContentSecurityPolicyReportUri"></a> ContentSecurityPolicyReportUri
 
 **Added by**: PowerAppsUnifiedClientInfraExtensions Solution
@@ -2559,6 +2583,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 
 #### EnableFlowsInSolutionByDefault Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_EnableFlowsInSolutionByDefaultGracePeriod"></a> EnableFlowsInSolutionByDefaultGracePeriod
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Organizations with this attribute set to true will be granted a grace period and excluded from the initial world wide enablement of 'creation of flows within a solution by default' functionality. Once the grace period expires, the functionality will be enabled in your organization.|
+|DisplayName|Indicates whether the organization is opted into a grace period for auto-enablement of 'creation of flows within a solution by default' functionality.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|enableflowsinsolutionbydefaultgraceperiod|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableFlowsInSolutionByDefaultGracePeriod Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|
@@ -4091,7 +4140,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Yes||
 |0|No||
 
-**DefaultValue**: 0
+**DefaultValue**: 1
 
 
 
@@ -4225,6 +4274,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 
 #### IsContextualHelpEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsCopilotFeedbackEnabled"></a> IsCopilotFeedbackEnabled
+
+**Added by**: CopilotFeedback Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Determines whether users can provide feedback for App Copilot.|
+|DisplayName|Allow users to provide feedback for App Copilot|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|iscopilotfeedbackenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsCopilotFeedbackEnabled Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|
@@ -5046,6 +5120,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_IsNotificationForD365InTeamsEnabled"></a> IsNotificationForD365InTeamsEnabled
+
+**Added by**: Second Patch for Application Common Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|IsNotificationForD365InTeamsEnabled|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isnotificationford365inteamsenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsNotificationForD365InTeamsEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_IsOfficeGraphEnabled"></a> IsOfficeGraphEnabled
 
 |Property|Value|
@@ -5554,7 +5653,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Yes||
 |0|No||
 
-**DefaultValue**: 0
+**DefaultValue**: 1
 
 
 
@@ -6564,6 +6663,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_OptOutSchemaV2EnabledByDefault"></a> OptOutSchemaV2EnabledByDefault
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates if this organization will opt-out from automatically enabling schema v2 on the organization.|
+|DisplayName|Opt-out of schema v2 being automatically enabled for this organization.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|optoutschemav2enabledbydefault|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### OptOutSchemaV2EnabledByDefault Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_OrderPrefix"></a> OrderPrefix
 
 |Property|Value|
@@ -7224,6 +7348,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |-----|-----|--------|
 |0|Semi-annual channel||
 |1|Monthly channel||
+|2|Inner channel||
 
 
 
@@ -9659,6 +9784,7 @@ Listed by **SchemaName**.
 - [organization_relationshipattribute](#BKMK_organization_relationshipattribute)
 - [organization_catalog](#BKMK_organization_catalog)
 - [organization_catalogassignment](#BKMK_organization_catalogassignment)
+- [organization_pluginpackage](#BKMK_organization_pluginpackage)
 - [organization_entityanalyticsconfig](#BKMK_organization_entityanalyticsconfig)
 - [organization_datalakeworkspace](#BKMK_organization_datalakeworkspace)
 - [organization_datalakeworkspacepermission](#BKMK_organization_datalakeworkspacepermission)
@@ -9678,7 +9804,6 @@ Listed by **SchemaName**.
 - [organization_msdyn_federatedarticleincident](#BKMK_organization_msdyn_federatedarticleincident)
 - [organization_msdyn_knowledgeconfiguration](#BKMK_organization_msdyn_knowledgeconfiguration)
 - [organization_msdyn_kmpersonalizationsetting](#BKMK_organization_msdyn_kmpersonalizationsetting)
-- [organization_pluginpackage](#BKMK_organization_pluginpackage)
 - [organization_virtualentitymetadata](#BKMK_organization_virtualentitymetadata)
 - [organization_mobileofflineprofileextension](#BKMK_organization_mobileofflineprofileextension)
 - [organization_teammobileofflineprofilemembership](#BKMK_organization_teammobileofflineprofilemembership)
@@ -9698,10 +9823,10 @@ Listed by **SchemaName**.
 - [organization_appaction](#BKMK_organization_appaction)
 - [organization_appactionmigration](#BKMK_organization_appactionmigration)
 - [organization_appactionrule](#BKMK_organization_appactionrule)
-- [organization_searchrelationshipsettings](#BKMK_organization_searchrelationshipsettings)
 - [organization_msdyn_solutionhealthruleset](#BKMK_organization_msdyn_solutionhealthruleset)
 - [organization_searchattributesettings](#BKMK_organization_searchattributesettings)
 - [organization_searchcustomanalyzer](#BKMK_organization_searchcustomanalyzer)
+- [organization_searchrelationshipsettings](#BKMK_organization_searchrelationshipsettings)
 
 
 ### <a name="BKMK_lk_principalobjectattributeaccess_organizationid"></a> lk_principalobjectattributeaccess_organizationid
@@ -10858,6 +10983,23 @@ Same as the [organization_catalogassignment](catalogassignment.md#BKMK_organizat
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_pluginpackage"></a> organization_pluginpackage
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_pluginpackage](pluginpackage.md#BKMK_organization_pluginpackage) many-to-one relationship for the [pluginpackage](pluginpackage.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|pluginpackage|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_pluginpackage|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_entityanalyticsconfig"></a> organization_entityanalyticsconfig
 
 **Added by**: Advanced Analytics Infrastructure Solution
@@ -11177,23 +11319,6 @@ Same as the [organization_msdyn_kmpersonalizationsetting](msdyn_kmpersonalizatio
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organization_msdyn_kmpersonalizationsetting|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_organization_pluginpackage"></a> organization_pluginpackage
-
-**Added by**: Active Solution Solution
-
-Same as the [organization_pluginpackage](pluginpackage.md#BKMK_organization_pluginpackage) many-to-one relationship for the [pluginpackage](pluginpackage.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|pluginpackage|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|organization_pluginpackage|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -11521,23 +11646,6 @@ Same as the [organization_appactionrule](appactionrule.md#BKMK_organization_appa
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_organization_searchrelationshipsettings"></a> organization_searchrelationshipsettings
-
-**Added by**: Active Solution Solution
-
-Same as the [organization_searchrelationshipsettings](searchrelationshipsettings.md#BKMK_organization_searchrelationshipsettings) many-to-one relationship for the [searchrelationshipsettings](searchrelationshipsettings.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|searchrelationshipsettings|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_searchrelationshipsettings|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_organization_msdyn_solutionhealthruleset"></a> organization_msdyn_solutionhealthruleset
 
 **Added by**: Active Solution Solution
@@ -11585,6 +11693,23 @@ Same as the [organization_searchcustomanalyzer](searchcustomanalyzer.md#BKMK_org
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organization_searchcustomanalyzer|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_searchrelationshipsettings"></a> organization_searchrelationshipsettings
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_searchrelationshipsettings](searchrelationshipsettings.md#BKMK_organization_searchrelationshipsettings) many-to-one relationship for the [searchrelationshipsettings](searchrelationshipsettings.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|searchrelationshipsettings|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_searchrelationshipsettings|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

@@ -1,7 +1,7 @@
 ---
 title: "DuplicateRecord table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the DuplicateRecord table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -109,7 +109,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|baserecordid|
 |RequiredLevel|None|
-|Targets|account,activityfileattachment,applicationuser,appointment,archivecleanupinfo,archivecleanupoperation,bulkarchiveconfig,bulkarchivefailuredetail,bulkarchiveoperation,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalogassignment,channelaccessprofile,connectioninstance,connector,contact,conversationtranscript,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,desktopflowmodule,email,emailserverprofile,enablearchivalrequest,entityrecordfilter,environmentvariabledefinition,environmentvariablevalue,exportedexcel,exportsolutionupload,fax,featurecontrolsetting,feedback,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,fxexpression,goal,goalrollupquery,kbarticle,keyvaultreference,knowledgearticle,knowledgebaserecord,letter,managedidentity,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aievent,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisoverride,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_dataflow_datalakefolder,msdyn_dmsrequest,msdyn_dmsrequeststatus,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_favoriteknowledgearticle,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_fileupload,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeconfiguration,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_mobileapp,msdyn_pmanalysishistory,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocesstemplate,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_schedule,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_virtualtablecolumncandidate,mspcat_catalogsubmissionfiles,mspcat_packagestore,organizationdatasyncfnostate,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationdatasyncsubscriptionfnotable,package,phonecall,powerbidataset,powerbimashupparameter,powerbireport,powerfxrule,privilegesremovalsetting,publisher,queue,reconciliationinfo,recordfilter,recurringappointmentmaster,retaineddataexcel,retentioncleanupinfo,retentioncleanupoperation,retentionconfig,retentionfailuredetail,retentionoperation,revokeinheritedaccessrecordstracker,roleeditorlayout,searchattributesettings,searchcustomanalyzer,searchrelationshipsettings,serviceplan,serviceplanmapping,sharedlinksetting,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemuser,task,tdsmetadata,team,transactioncurrency,userrating,workqueue,workqueueitem|
+|Targets|account,activityfileattachment,applicationuser,appointment,archivecleanupinfo,archivecleanupoperation,bulkarchiveconfig,bulkarchivefailuredetail,bulkarchiveoperation,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalogassignment,channelaccessprofile,connectioninstance,connector,contact,conversationtranscript,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,desktopflowmodule,email,emailserverprofile,enablearchivalrequest,entityrecordfilter,environmentvariabledefinition,environmentvariablevalue,exportedexcel,exportsolutionupload,fax,featurecontrolsetting,feedback,flowevent,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,fxexpression,goal,goalrollupquery,kbarticle,keyvaultreference,knowledgearticle,knowledgebaserecord,letter,managedidentity,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aievent,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisoverride,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_dataflow_datalakefolder,msdyn_dmsrequest,msdyn_dmsrequeststatus,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_favoriteknowledgearticle,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_fileupload,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeconfiguration,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_mobileapp,msdyn_pmanalysishistory,msdyn_pmbusinessruleautomationconfig,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocesstemplate,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_schedule,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_virtualtablecolumncandidate,mspcat_catalogsubmissionfiles,mspcat_packagestore,organizationdatasyncfnostate,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationdatasyncsubscriptionfnotable,package,phonecall,powerbidataset,powerbidatasetapdx,powerbimashupparameter,powerbireport,powerbireportapdx,powerfxrule,privilegesremovalsetting,publisher,queue,reconciliationinfo,recordfilter,recurringappointmentmaster,retaineddataexcel,retentioncleanupinfo,retentioncleanupoperation,retentionconfig,retentionfailuredetail,retentionoperation,revokeinheritedaccessrecordstracker,roleeditorlayout,searchattributesettings,searchcustomanalyzer,searchrelationshipsettings,serviceplan,serviceplanmapping,sharedlinksetting,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemuser,task,tdsmetadata,team,transactioncurrency,userrating,workqueue,workqueueitem|
 |Type|Lookup|
 
 
@@ -183,7 +183,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|duplicaterecordid|
 |RequiredLevel|None|
-|Targets|account,activityfileattachment,applicationuser,appointment,archivecleanupinfo,archivecleanupoperation,bulkarchiveconfig,bulkarchivefailuredetail,bulkarchiveoperation,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalogassignment,channelaccessprofile,connectioninstance,connector,contact,conversationtranscript,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,desktopflowmodule,email,emailserverprofile,enablearchivalrequest,entityrecordfilter,environmentvariabledefinition,environmentvariablevalue,exportedexcel,exportsolutionupload,fax,featurecontrolsetting,feedback,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,fxexpression,goal,goalrollupquery,kbarticle,keyvaultreference,knowledgearticle,knowledgebaserecord,letter,managedidentity,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aievent,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisoverride,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_dataflow_datalakefolder,msdyn_dmsrequest,msdyn_dmsrequeststatus,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_favoriteknowledgearticle,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_fileupload,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeconfiguration,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_mobileapp,msdyn_pmanalysishistory,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocesstemplate,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_schedule,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_virtualtablecolumncandidate,mspcat_catalogsubmissionfiles,mspcat_packagestore,organizationdatasyncfnostate,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationdatasyncsubscriptionfnotable,package,phonecall,powerbidataset,powerbimashupparameter,powerbireport,powerfxrule,privilegesremovalsetting,publisher,queue,reconciliationinfo,recordfilter,recurringappointmentmaster,retaineddataexcel,retentioncleanupinfo,retentioncleanupoperation,retentionconfig,retentionfailuredetail,retentionoperation,revokeinheritedaccessrecordstracker,roleeditorlayout,searchattributesettings,searchcustomanalyzer,searchrelationshipsettings,serviceplan,serviceplanmapping,sharedlinksetting,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemuser,task,tdsmetadata,team,transactioncurrency,userrating,workqueue,workqueueitem|
+|Targets|account,activityfileattachment,applicationuser,appointment,archivecleanupinfo,archivecleanupoperation,bulkarchiveconfig,bulkarchivefailuredetail,bulkarchiveoperation,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalogassignment,channelaccessprofile,connectioninstance,connector,contact,conversationtranscript,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,desktopflowmodule,email,emailserverprofile,enablearchivalrequest,entityrecordfilter,environmentvariabledefinition,environmentvariablevalue,exportedexcel,exportsolutionupload,fax,featurecontrolsetting,feedback,flowevent,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,fxexpression,goal,goalrollupquery,kbarticle,keyvaultreference,knowledgearticle,knowledgebaserecord,letter,managedidentity,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aievent,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisoverride,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_dataflow_datalakefolder,msdyn_dmsrequest,msdyn_dmsrequeststatus,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_favoriteknowledgearticle,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_fileupload,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeconfiguration,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_mobileapp,msdyn_pmanalysishistory,msdyn_pmbusinessruleautomationconfig,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocesstemplate,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_schedule,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_virtualtablecolumncandidate,mspcat_catalogsubmissionfiles,mspcat_packagestore,organizationdatasyncfnostate,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationdatasyncsubscriptionfnotable,package,phonecall,powerbidataset,powerbidatasetapdx,powerbimashupparameter,powerbireport,powerbireportapdx,powerfxrule,privilegesremovalsetting,publisher,queue,reconciliationinfo,recordfilter,recurringappointmentmaster,retaineddataexcel,retentioncleanupinfo,retentioncleanupoperation,retentionconfig,retentionfailuredetail,retentionoperation,revokeinheritedaccessrecordstracker,roleeditorlayout,searchattributesettings,searchcustomanalyzer,searchrelationshipsettings,serviceplan,serviceplanmapping,sharedlinksetting,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemuser,task,tdsmetadata,team,transactioncurrency,userrating,workqueue,workqueueitem|
 |Type|Lookup|
 
 
@@ -478,14 +478,14 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgepersonalfilter_DuplicateBaseRecord](#BKMK_msdyn_knowledgepersonalfilter_DuplicateBaseRecord)
 - [msdyn_knowledgesearchfilter_DuplicateMatchingRecord](#BKMK_msdyn_knowledgesearchfilter_DuplicateMatchingRecord)
 - [msdyn_knowledgesearchfilter_DuplicateBaseRecord](#BKMK_msdyn_knowledgesearchfilter_DuplicateBaseRecord)
-- [fxexpression_DuplicateMatchingRecord](#BKMK_fxexpression_DuplicateMatchingRecord)
-- [fxexpression_DuplicateBaseRecord](#BKMK_fxexpression_DuplicateBaseRecord)
-- [powerfxrule_DuplicateMatchingRecord](#BKMK_powerfxrule_DuplicateMatchingRecord)
-- [powerfxrule_DuplicateBaseRecord](#BKMK_powerfxrule_DuplicateBaseRecord)
 - [keyvaultreference_DuplicateMatchingRecord](#BKMK_keyvaultreference_DuplicateMatchingRecord)
 - [keyvaultreference_DuplicateBaseRecord](#BKMK_keyvaultreference_DuplicateBaseRecord)
 - [managedidentity_DuplicateMatchingRecord](#BKMK_managedidentity_DuplicateMatchingRecord)
 - [managedidentity_DuplicateBaseRecord](#BKMK_managedidentity_DuplicateBaseRecord)
+- [fxexpression_DuplicateMatchingRecord](#BKMK_fxexpression_DuplicateMatchingRecord)
+- [fxexpression_DuplicateBaseRecord](#BKMK_fxexpression_DuplicateBaseRecord)
+- [powerfxrule_DuplicateMatchingRecord](#BKMK_powerfxrule_DuplicateMatchingRecord)
+- [powerfxrule_DuplicateBaseRecord](#BKMK_powerfxrule_DuplicateBaseRecord)
 - [organizationdatasyncsubscription_DuplicateMatchingRecord](#BKMK_organizationdatasyncsubscription_DuplicateMatchingRecord)
 - [organizationdatasyncsubscription_DuplicateBaseRecord](#BKMK_organizationdatasyncsubscription_DuplicateBaseRecord)
 - [organizationdatasyncsubscriptionentity_DuplicateMatchingRecord](#BKMK_organizationdatasyncsubscriptionentity_DuplicateMatchingRecord)
@@ -504,6 +504,14 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [retentionoperation_DuplicateBaseRecord](#BKMK_retentionoperation_DuplicateBaseRecord)
 - [msdyn_appinsightsmetadata_DuplicateMatchingRecord](#BKMK_msdyn_appinsightsmetadata_DuplicateMatchingRecord)
 - [msdyn_appinsightsmetadata_DuplicateBaseRecord](#BKMK_msdyn_appinsightsmetadata_DuplicateBaseRecord)
+- [msdyn_schedule_DuplicateMatchingRecord](#BKMK_msdyn_schedule_DuplicateMatchingRecord)
+- [msdyn_schedule_DuplicateBaseRecord](#BKMK_msdyn_schedule_DuplicateBaseRecord)
+- [msdyn_dataflow_datalakefolder_DuplicateMatchingRecord](#BKMK_msdyn_dataflow_datalakefolder_DuplicateMatchingRecord)
+- [msdyn_dataflow_datalakefolder_DuplicateBaseRecord](#BKMK_msdyn_dataflow_datalakefolder_DuplicateBaseRecord)
+- [msdyn_dmsrequest_DuplicateMatchingRecord](#BKMK_msdyn_dmsrequest_DuplicateMatchingRecord)
+- [msdyn_dmsrequest_DuplicateBaseRecord](#BKMK_msdyn_dmsrequest_DuplicateBaseRecord)
+- [msdyn_dmsrequeststatus_DuplicateMatchingRecord](#BKMK_msdyn_dmsrequeststatus_DuplicateMatchingRecord)
+- [msdyn_dmsrequeststatus_DuplicateBaseRecord](#BKMK_msdyn_dmsrequeststatus_DuplicateBaseRecord)
 - [userrating_DuplicateMatchingRecord](#BKMK_userrating_DuplicateMatchingRecord)
 - [userrating_DuplicateBaseRecord](#BKMK_userrating_DuplicateBaseRecord)
 - [msdyn_mobileapp_DuplicateMatchingRecord](#BKMK_msdyn_mobileapp_DuplicateMatchingRecord)
@@ -516,8 +524,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_entitylinkchatconfiguration_DuplicateBaseRecord](#BKMK_msdyn_entitylinkchatconfiguration_DuplicateBaseRecord)
 - [msdyn_customcontrolextendedsettings_DuplicateMatchingRecord](#BKMK_msdyn_customcontrolextendedsettings_DuplicateMatchingRecord)
 - [msdyn_customcontrolextendedsettings_DuplicateBaseRecord](#BKMK_msdyn_customcontrolextendedsettings_DuplicateBaseRecord)
-- [searchrelationshipsettings_DuplicateMatchingRecord](#BKMK_searchrelationshipsettings_DuplicateMatchingRecord)
-- [searchrelationshipsettings_DuplicateBaseRecord](#BKMK_searchrelationshipsettings_DuplicateBaseRecord)
 - [msdyn_virtualtablecolumncandidate_DuplicateMatchingRecord](#BKMK_msdyn_virtualtablecolumncandidate_DuplicateMatchingRecord)
 - [msdyn_virtualtablecolumncandidate_DuplicateBaseRecord](#BKMK_msdyn_virtualtablecolumncandidate_DuplicateBaseRecord)
 - [msdyn_aievent_DuplicateMatchingRecord](#BKMK_msdyn_aievent_DuplicateMatchingRecord)
@@ -546,6 +552,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_aibfileattacheddata_DuplicateBaseRecord](#BKMK_msdyn_aibfileattacheddata_DuplicateBaseRecord)
 - [msdyn_pmanalysishistory_DuplicateMatchingRecord](#BKMK_msdyn_pmanalysishistory_DuplicateMatchingRecord)
 - [msdyn_pmanalysishistory_DuplicateBaseRecord](#BKMK_msdyn_pmanalysishistory_DuplicateBaseRecord)
+- [msdyn_pmbusinessruleautomationconfig_DuplicateMatchingRecord](#BKMK_msdyn_pmbusinessruleautomationconfig_DuplicateMatchingRecord)
+- [msdyn_pmbusinessruleautomationconfig_DuplicateBaseRecord](#BKMK_msdyn_pmbusinessruleautomationconfig_DuplicateBaseRecord)
 - [msdyn_pmcalendar_DuplicateMatchingRecord](#BKMK_msdyn_pmcalendar_DuplicateMatchingRecord)
 - [msdyn_pmcalendar_DuplicateBaseRecord](#BKMK_msdyn_pmcalendar_DuplicateBaseRecord)
 - [msdyn_pmcalendarversion_DuplicateMatchingRecord](#BKMK_msdyn_pmcalendarversion_DuplicateMatchingRecord)
@@ -584,28 +592,28 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_solutionhealthruleset_DuplicateBaseRecord](#BKMK_msdyn_solutionhealthruleset_DuplicateBaseRecord)
 - [powerbidataset_DuplicateMatchingRecord](#BKMK_powerbidataset_DuplicateMatchingRecord)
 - [powerbidataset_DuplicateBaseRecord](#BKMK_powerbidataset_DuplicateBaseRecord)
+- [powerbidatasetapdx_DuplicateMatchingRecord](#BKMK_powerbidatasetapdx_DuplicateMatchingRecord)
+- [powerbidatasetapdx_DuplicateBaseRecord](#BKMK_powerbidatasetapdx_DuplicateBaseRecord)
 - [powerbimashupparameter_DuplicateMatchingRecord](#BKMK_powerbimashupparameter_DuplicateMatchingRecord)
 - [powerbimashupparameter_DuplicateBaseRecord](#BKMK_powerbimashupparameter_DuplicateBaseRecord)
 - [powerbireport_DuplicateMatchingRecord](#BKMK_powerbireport_DuplicateMatchingRecord)
 - [powerbireport_DuplicateBaseRecord](#BKMK_powerbireport_DuplicateBaseRecord)
+- [powerbireportapdx_DuplicateMatchingRecord](#BKMK_powerbireportapdx_DuplicateMatchingRecord)
+- [powerbireportapdx_DuplicateBaseRecord](#BKMK_powerbireportapdx_DuplicateBaseRecord)
 - [msdyn_fileupload_DuplicateMatchingRecord](#BKMK_msdyn_fileupload_DuplicateMatchingRecord)
 - [msdyn_fileupload_DuplicateBaseRecord](#BKMK_msdyn_fileupload_DuplicateBaseRecord)
-- [mspcat_catalogsubmissionfiles_DuplicateMatchingRecord](#BKMK_mspcat_catalogsubmissionfiles_DuplicateMatchingRecord)
-- [mspcat_catalogsubmissionfiles_DuplicateBaseRecord](#BKMK_mspcat_catalogsubmissionfiles_DuplicateBaseRecord)
-- [mspcat_packagestore_DuplicateMatchingRecord](#BKMK_mspcat_packagestore_DuplicateMatchingRecord)
-- [mspcat_packagestore_DuplicateBaseRecord](#BKMK_mspcat_packagestore_DuplicateBaseRecord)
-- [msdyn_schedule_DuplicateMatchingRecord](#BKMK_msdyn_schedule_DuplicateMatchingRecord)
-- [msdyn_schedule_DuplicateBaseRecord](#BKMK_msdyn_schedule_DuplicateBaseRecord)
-- [msdyn_dataflow_datalakefolder_DuplicateMatchingRecord](#BKMK_msdyn_dataflow_datalakefolder_DuplicateMatchingRecord)
-- [msdyn_dataflow_datalakefolder_DuplicateBaseRecord](#BKMK_msdyn_dataflow_datalakefolder_DuplicateBaseRecord)
-- [msdyn_dmsrequest_DuplicateMatchingRecord](#BKMK_msdyn_dmsrequest_DuplicateMatchingRecord)
-- [msdyn_dmsrequest_DuplicateBaseRecord](#BKMK_msdyn_dmsrequest_DuplicateBaseRecord)
-- [msdyn_dmsrequeststatus_DuplicateMatchingRecord](#BKMK_msdyn_dmsrequeststatus_DuplicateMatchingRecord)
-- [msdyn_dmsrequeststatus_DuplicateBaseRecord](#BKMK_msdyn_dmsrequeststatus_DuplicateBaseRecord)
 - [searchattributesettings_DuplicateMatchingRecord](#BKMK_searchattributesettings_DuplicateMatchingRecord)
 - [searchattributesettings_DuplicateBaseRecord](#BKMK_searchattributesettings_DuplicateBaseRecord)
 - [searchcustomanalyzer_DuplicateMatchingRecord](#BKMK_searchcustomanalyzer_DuplicateMatchingRecord)
 - [searchcustomanalyzer_DuplicateBaseRecord](#BKMK_searchcustomanalyzer_DuplicateBaseRecord)
+- [searchrelationshipsettings_DuplicateMatchingRecord](#BKMK_searchrelationshipsettings_DuplicateMatchingRecord)
+- [searchrelationshipsettings_DuplicateBaseRecord](#BKMK_searchrelationshipsettings_DuplicateBaseRecord)
+- [mspcat_catalogsubmissionfiles_DuplicateMatchingRecord](#BKMK_mspcat_catalogsubmissionfiles_DuplicateMatchingRecord)
+- [mspcat_catalogsubmissionfiles_DuplicateBaseRecord](#BKMK_mspcat_catalogsubmissionfiles_DuplicateBaseRecord)
+- [mspcat_packagestore_DuplicateMatchingRecord](#BKMK_mspcat_packagestore_DuplicateMatchingRecord)
+- [mspcat_packagestore_DuplicateBaseRecord](#BKMK_mspcat_packagestore_DuplicateBaseRecord)
+- [flowevent_DuplicateMatchingRecord](#BKMK_flowevent_DuplicateMatchingRecord)
+- [flowevent_DuplicateBaseRecord](#BKMK_flowevent_DuplicateBaseRecord)
 
 
 ### <a name="BKMK_knowledgearticle_DuplicateMatchingRecord"></a> knowledgearticle_DuplicateMatchingRecord
@@ -1548,30 +1556,6 @@ See the [msdyn_knowledgesearchfilter_DuplicateMatchingRecord](msdyn_knowledgesea
 
 See the [msdyn_knowledgesearchfilter_DuplicateBaseRecord](msdyn_knowledgesearchfilter.md#BKMK_msdyn_knowledgesearchfilter_DuplicateBaseRecord) one-to-many relationship for the [msdyn_knowledgesearchfilter](msdyn_knowledgesearchfilter.md) table/entity.
 
-### <a name="BKMK_fxexpression_DuplicateMatchingRecord"></a> fxexpression_DuplicateMatchingRecord
-
-**Added by**: msft_PowerfxRuleSolution Solution
-
-See the [fxexpression_DuplicateMatchingRecord](fxexpression.md#BKMK_fxexpression_DuplicateMatchingRecord) one-to-many relationship for the [fxexpression](fxexpression.md) table/entity.
-
-### <a name="BKMK_fxexpression_DuplicateBaseRecord"></a> fxexpression_DuplicateBaseRecord
-
-**Added by**: msft_PowerfxRuleSolution Solution
-
-See the [fxexpression_DuplicateBaseRecord](fxexpression.md#BKMK_fxexpression_DuplicateBaseRecord) one-to-many relationship for the [fxexpression](fxexpression.md) table/entity.
-
-### <a name="BKMK_powerfxrule_DuplicateMatchingRecord"></a> powerfxrule_DuplicateMatchingRecord
-
-**Added by**: msft_PowerfxRuleSolution Solution
-
-See the [powerfxrule_DuplicateMatchingRecord](powerfxrule.md#BKMK_powerfxrule_DuplicateMatchingRecord) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
-
-### <a name="BKMK_powerfxrule_DuplicateBaseRecord"></a> powerfxrule_DuplicateBaseRecord
-
-**Added by**: msft_PowerfxRuleSolution Solution
-
-See the [powerfxrule_DuplicateBaseRecord](powerfxrule.md#BKMK_powerfxrule_DuplicateBaseRecord) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
-
 ### <a name="BKMK_keyvaultreference_DuplicateMatchingRecord"></a> keyvaultreference_DuplicateMatchingRecord
 
 **Added by**: ManagedIdentityExtensions Solution
@@ -1595,6 +1579,30 @@ See the [managedidentity_DuplicateMatchingRecord](managedidentity.md#BKMK_manage
 **Added by**: ManagedIdentityExtensions Solution
 
 See the [managedidentity_DuplicateBaseRecord](managedidentity.md#BKMK_managedidentity_DuplicateBaseRecord) one-to-many relationship for the [managedidentity](managedidentity.md) table/entity.
+
+### <a name="BKMK_fxexpression_DuplicateMatchingRecord"></a> fxexpression_DuplicateMatchingRecord
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [fxexpression_DuplicateMatchingRecord](fxexpression.md#BKMK_fxexpression_DuplicateMatchingRecord) one-to-many relationship for the [fxexpression](fxexpression.md) table/entity.
+
+### <a name="BKMK_fxexpression_DuplicateBaseRecord"></a> fxexpression_DuplicateBaseRecord
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [fxexpression_DuplicateBaseRecord](fxexpression.md#BKMK_fxexpression_DuplicateBaseRecord) one-to-many relationship for the [fxexpression](fxexpression.md) table/entity.
+
+### <a name="BKMK_powerfxrule_DuplicateMatchingRecord"></a> powerfxrule_DuplicateMatchingRecord
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [powerfxrule_DuplicateMatchingRecord](powerfxrule.md#BKMK_powerfxrule_DuplicateMatchingRecord) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
+
+### <a name="BKMK_powerfxrule_DuplicateBaseRecord"></a> powerfxrule_DuplicateBaseRecord
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [powerfxrule_DuplicateBaseRecord](powerfxrule.md#BKMK_powerfxrule_DuplicateBaseRecord) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
 
 ### <a name="BKMK_organizationdatasyncsubscription_DuplicateMatchingRecord"></a> organizationdatasyncsubscription_DuplicateMatchingRecord
 
@@ -1694,15 +1702,63 @@ See the [retentionoperation_DuplicateBaseRecord](retentionoperation.md#BKMK_rete
 
 ### <a name="BKMK_msdyn_appinsightsmetadata_DuplicateMatchingRecord"></a> msdyn_appinsightsmetadata_DuplicateMatchingRecord
 
-**Added by**: Insights App Platform Solution
+**Added by**: Insights App Platform Base Solution
 
 See the [msdyn_appinsightsmetadata_DuplicateMatchingRecord](msdyn_appinsightsmetadata.md#BKMK_msdyn_appinsightsmetadata_DuplicateMatchingRecord) one-to-many relationship for the [msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.md) table/entity.
 
 ### <a name="BKMK_msdyn_appinsightsmetadata_DuplicateBaseRecord"></a> msdyn_appinsightsmetadata_DuplicateBaseRecord
 
-**Added by**: Insights App Platform Solution
+**Added by**: Insights App Platform Base Solution
 
 See the [msdyn_appinsightsmetadata_DuplicateBaseRecord](msdyn_appinsightsmetadata.md#BKMK_msdyn_appinsightsmetadata_DuplicateBaseRecord) one-to-many relationship for the [msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.md) table/entity.
+
+### <a name="BKMK_msdyn_schedule_DuplicateMatchingRecord"></a> msdyn_schedule_DuplicateMatchingRecord
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_schedule_DuplicateMatchingRecord](msdyn_schedule.md#BKMK_msdyn_schedule_DuplicateMatchingRecord) one-to-many relationship for the [msdyn_schedule](msdyn_schedule.md) table/entity.
+
+### <a name="BKMK_msdyn_schedule_DuplicateBaseRecord"></a> msdyn_schedule_DuplicateBaseRecord
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_schedule_DuplicateBaseRecord](msdyn_schedule.md#BKMK_msdyn_schedule_DuplicateBaseRecord) one-to-many relationship for the [msdyn_schedule](msdyn_schedule.md) table/entity.
+
+### <a name="BKMK_msdyn_dataflow_datalakefolder_DuplicateMatchingRecord"></a> msdyn_dataflow_datalakefolder_DuplicateMatchingRecord
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dataflow_datalakefolder_DuplicateMatchingRecord](msdyn_dataflow_datalakefolder.md#BKMK_msdyn_dataflow_datalakefolder_DuplicateMatchingRecord) one-to-many relationship for the [msdyn_dataflow_datalakefolder](msdyn_dataflow_datalakefolder.md) table/entity.
+
+### <a name="BKMK_msdyn_dataflow_datalakefolder_DuplicateBaseRecord"></a> msdyn_dataflow_datalakefolder_DuplicateBaseRecord
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dataflow_datalakefolder_DuplicateBaseRecord](msdyn_dataflow_datalakefolder.md#BKMK_msdyn_dataflow_datalakefolder_DuplicateBaseRecord) one-to-many relationship for the [msdyn_dataflow_datalakefolder](msdyn_dataflow_datalakefolder.md) table/entity.
+
+### <a name="BKMK_msdyn_dmsrequest_DuplicateMatchingRecord"></a> msdyn_dmsrequest_DuplicateMatchingRecord
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmsrequest_DuplicateMatchingRecord](msdyn_dmsrequest.md#BKMK_msdyn_dmsrequest_DuplicateMatchingRecord) one-to-many relationship for the [msdyn_dmsrequest](msdyn_dmsrequest.md) table/entity.
+
+### <a name="BKMK_msdyn_dmsrequest_DuplicateBaseRecord"></a> msdyn_dmsrequest_DuplicateBaseRecord
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmsrequest_DuplicateBaseRecord](msdyn_dmsrequest.md#BKMK_msdyn_dmsrequest_DuplicateBaseRecord) one-to-many relationship for the [msdyn_dmsrequest](msdyn_dmsrequest.md) table/entity.
+
+### <a name="BKMK_msdyn_dmsrequeststatus_DuplicateMatchingRecord"></a> msdyn_dmsrequeststatus_DuplicateMatchingRecord
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmsrequeststatus_DuplicateMatchingRecord](msdyn_dmsrequeststatus.md#BKMK_msdyn_dmsrequeststatus_DuplicateMatchingRecord) one-to-many relationship for the [msdyn_dmsrequeststatus](msdyn_dmsrequeststatus.md) table/entity.
+
+### <a name="BKMK_msdyn_dmsrequeststatus_DuplicateBaseRecord"></a> msdyn_dmsrequeststatus_DuplicateBaseRecord
+
+**Added by**: Insights App Platform Base Solution
+
+See the [msdyn_dmsrequeststatus_DuplicateBaseRecord](msdyn_dmsrequeststatus.md#BKMK_msdyn_dmsrequeststatus_DuplicateBaseRecord) one-to-many relationship for the [msdyn_dmsrequeststatus](msdyn_dmsrequeststatus.md) table/entity.
 
 ### <a name="BKMK_userrating_DuplicateMatchingRecord"></a> userrating_DuplicateMatchingRecord
 
@@ -1775,18 +1831,6 @@ See the [msdyn_customcontrolextendedsettings_DuplicateMatchingRecord](msdyn_cust
 **Added by**: User Experiences Extended Settings Solution
 
 See the [msdyn_customcontrolextendedsettings_DuplicateBaseRecord](msdyn_customcontrolextendedsettings.md#BKMK_msdyn_customcontrolextendedsettings_DuplicateBaseRecord) one-to-many relationship for the [msdyn_customcontrolextendedsettings](msdyn_customcontrolextendedsettings.md) table/entity.
-
-### <a name="BKMK_searchrelationshipsettings_DuplicateMatchingRecord"></a> searchrelationshipsettings_DuplicateMatchingRecord
-
-**Added by**: msdyn_RelevanceSearch Solution
-
-See the [searchrelationshipsettings_DuplicateMatchingRecord](searchrelationshipsettings.md#BKMK_searchrelationshipsettings_DuplicateMatchingRecord) one-to-many relationship for the [searchrelationshipsettings](searchrelationshipsettings.md) table/entity.
-
-### <a name="BKMK_searchrelationshipsettings_DuplicateBaseRecord"></a> searchrelationshipsettings_DuplicateBaseRecord
-
-**Added by**: msdyn_RelevanceSearch Solution
-
-See the [searchrelationshipsettings_DuplicateBaseRecord](searchrelationshipsettings.md#BKMK_searchrelationshipsettings_DuplicateBaseRecord) one-to-many relationship for the [searchrelationshipsettings](searchrelationshipsettings.md) table/entity.
 
 ### <a name="BKMK_msdyn_virtualtablecolumncandidate_DuplicateMatchingRecord"></a> msdyn_virtualtablecolumncandidate_DuplicateMatchingRecord
 
@@ -1955,6 +1999,18 @@ See the [msdyn_pmanalysishistory_DuplicateMatchingRecord](msdyn_pmanalysishistor
 **Added by**: Process Mining Solution
 
 See the [msdyn_pmanalysishistory_DuplicateBaseRecord](msdyn_pmanalysishistory.md#BKMK_msdyn_pmanalysishistory_DuplicateBaseRecord) one-to-many relationship for the [msdyn_pmanalysishistory](msdyn_pmanalysishistory.md) table/entity.
+
+### <a name="BKMK_msdyn_pmbusinessruleautomationconfig_DuplicateMatchingRecord"></a> msdyn_pmbusinessruleautomationconfig_DuplicateMatchingRecord
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmbusinessruleautomationconfig_DuplicateMatchingRecord](msdyn_pmbusinessruleautomationconfig.md#BKMK_msdyn_pmbusinessruleautomationconfig_DuplicateMatchingRecord) one-to-many relationship for the [msdyn_pmbusinessruleautomationconfig](msdyn_pmbusinessruleautomationconfig.md) table/entity.
+
+### <a name="BKMK_msdyn_pmbusinessruleautomationconfig_DuplicateBaseRecord"></a> msdyn_pmbusinessruleautomationconfig_DuplicateBaseRecord
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmbusinessruleautomationconfig_DuplicateBaseRecord](msdyn_pmbusinessruleautomationconfig.md#BKMK_msdyn_pmbusinessruleautomationconfig_DuplicateBaseRecord) one-to-many relationship for the [msdyn_pmbusinessruleautomationconfig](msdyn_pmbusinessruleautomationconfig.md) table/entity.
 
 ### <a name="BKMK_msdyn_pmcalendar_DuplicateMatchingRecord"></a> msdyn_pmcalendar_DuplicateMatchingRecord
 
@@ -2184,6 +2240,18 @@ See the [powerbidataset_DuplicateMatchingRecord](powerbidataset.md#BKMK_powerbid
 
 See the [powerbidataset_DuplicateBaseRecord](powerbidataset.md#BKMK_powerbidataset_DuplicateBaseRecord) one-to-many relationship for the [powerbidataset](powerbidataset.md) table/entity.
 
+### <a name="BKMK_powerbidatasetapdx_DuplicateMatchingRecord"></a> powerbidatasetapdx_DuplicateMatchingRecord
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbidatasetapdx_DuplicateMatchingRecord](powerbidatasetapdx.md#BKMK_powerbidatasetapdx_DuplicateMatchingRecord) one-to-many relationship for the [powerbidatasetapdx](powerbidatasetapdx.md) table/entity.
+
+### <a name="BKMK_powerbidatasetapdx_DuplicateBaseRecord"></a> powerbidatasetapdx_DuplicateBaseRecord
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbidatasetapdx_DuplicateBaseRecord](powerbidatasetapdx.md#BKMK_powerbidatasetapdx_DuplicateBaseRecord) one-to-many relationship for the [powerbidatasetapdx](powerbidatasetapdx.md) table/entity.
+
 ### <a name="BKMK_powerbimashupparameter_DuplicateMatchingRecord"></a> powerbimashupparameter_DuplicateMatchingRecord
 
 **Added by**: Power BI Entities Solution
@@ -2208,6 +2276,18 @@ See the [powerbireport_DuplicateMatchingRecord](powerbireport.md#BKMK_powerbirep
 
 See the [powerbireport_DuplicateBaseRecord](powerbireport.md#BKMK_powerbireport_DuplicateBaseRecord) one-to-many relationship for the [powerbireport](powerbireport.md) table/entity.
 
+### <a name="BKMK_powerbireportapdx_DuplicateMatchingRecord"></a> powerbireportapdx_DuplicateMatchingRecord
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbireportapdx_DuplicateMatchingRecord](powerbireportapdx.md#BKMK_powerbireportapdx_DuplicateMatchingRecord) one-to-many relationship for the [powerbireportapdx](powerbireportapdx.md) table/entity.
+
+### <a name="BKMK_powerbireportapdx_DuplicateBaseRecord"></a> powerbireportapdx_DuplicateBaseRecord
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbireportapdx_DuplicateBaseRecord](powerbireportapdx.md#BKMK_powerbireportapdx_DuplicateBaseRecord) one-to-many relationship for the [powerbireportapdx](powerbireportapdx.md) table/entity.
+
 ### <a name="BKMK_msdyn_fileupload_DuplicateMatchingRecord"></a> msdyn_fileupload_DuplicateMatchingRecord
 
 **Added by**: Smart Data Import Base Solution
@@ -2219,6 +2299,42 @@ See the [msdyn_fileupload_DuplicateMatchingRecord](msdyn_fileupload.md#BKMK_msdy
 **Added by**: Smart Data Import Base Solution
 
 See the [msdyn_fileupload_DuplicateBaseRecord](msdyn_fileupload.md#BKMK_msdyn_fileupload_DuplicateBaseRecord) one-to-many relationship for the [msdyn_fileupload](msdyn_fileupload.md) table/entity.
+
+### <a name="BKMK_searchattributesettings_DuplicateMatchingRecord"></a> searchattributesettings_DuplicateMatchingRecord
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [searchattributesettings_DuplicateMatchingRecord](searchattributesettings.md#BKMK_searchattributesettings_DuplicateMatchingRecord) one-to-many relationship for the [searchattributesettings](searchattributesettings.md) table/entity.
+
+### <a name="BKMK_searchattributesettings_DuplicateBaseRecord"></a> searchattributesettings_DuplicateBaseRecord
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [searchattributesettings_DuplicateBaseRecord](searchattributesettings.md#BKMK_searchattributesettings_DuplicateBaseRecord) one-to-many relationship for the [searchattributesettings](searchattributesettings.md) table/entity.
+
+### <a name="BKMK_searchcustomanalyzer_DuplicateMatchingRecord"></a> searchcustomanalyzer_DuplicateMatchingRecord
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [searchcustomanalyzer_DuplicateMatchingRecord](searchcustomanalyzer.md#BKMK_searchcustomanalyzer_DuplicateMatchingRecord) one-to-many relationship for the [searchcustomanalyzer](searchcustomanalyzer.md) table/entity.
+
+### <a name="BKMK_searchcustomanalyzer_DuplicateBaseRecord"></a> searchcustomanalyzer_DuplicateBaseRecord
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [searchcustomanalyzer_DuplicateBaseRecord](searchcustomanalyzer.md#BKMK_searchcustomanalyzer_DuplicateBaseRecord) one-to-many relationship for the [searchcustomanalyzer](searchcustomanalyzer.md) table/entity.
+
+### <a name="BKMK_searchrelationshipsettings_DuplicateMatchingRecord"></a> searchrelationshipsettings_DuplicateMatchingRecord
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [searchrelationshipsettings_DuplicateMatchingRecord](searchrelationshipsettings.md#BKMK_searchrelationshipsettings_DuplicateMatchingRecord) one-to-many relationship for the [searchrelationshipsettings](searchrelationshipsettings.md) table/entity.
+
+### <a name="BKMK_searchrelationshipsettings_DuplicateBaseRecord"></a> searchrelationshipsettings_DuplicateBaseRecord
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [searchrelationshipsettings_DuplicateBaseRecord](searchrelationshipsettings.md#BKMK_searchrelationshipsettings_DuplicateBaseRecord) one-to-many relationship for the [searchrelationshipsettings](searchrelationshipsettings.md) table/entity.
 
 ### <a name="BKMK_mspcat_catalogsubmissionfiles_DuplicateMatchingRecord"></a> mspcat_catalogsubmissionfiles_DuplicateMatchingRecord
 
@@ -2244,77 +2360,17 @@ See the [mspcat_packagestore_DuplicateMatchingRecord](mspcat_packagestore.md#BKM
 
 See the [mspcat_packagestore_DuplicateBaseRecord](mspcat_packagestore.md#BKMK_mspcat_packagestore_DuplicateBaseRecord) one-to-many relationship for the [mspcat_packagestore](mspcat_packagestore.md) table/entity.
 
-### <a name="BKMK_msdyn_schedule_DuplicateMatchingRecord"></a> msdyn_schedule_DuplicateMatchingRecord
+### <a name="BKMK_flowevent_DuplicateMatchingRecord"></a> flowevent_DuplicateMatchingRecord
 
-**Added by**: Insights App Platform Solution
+**Added by**: Power Automate Extensions core package Solution
 
-See the [msdyn_schedule_DuplicateMatchingRecord](msdyn_schedule.md#BKMK_msdyn_schedule_DuplicateMatchingRecord) one-to-many relationship for the [msdyn_schedule](msdyn_schedule.md) table/entity.
+See the [flowevent_DuplicateMatchingRecord](flowevent.md#BKMK_flowevent_DuplicateMatchingRecord) one-to-many relationship for the [flowevent](flowevent.md) table/entity.
 
-### <a name="BKMK_msdyn_schedule_DuplicateBaseRecord"></a> msdyn_schedule_DuplicateBaseRecord
+### <a name="BKMK_flowevent_DuplicateBaseRecord"></a> flowevent_DuplicateBaseRecord
 
-**Added by**: Insights App Platform Solution
+**Added by**: Power Automate Extensions core package Solution
 
-See the [msdyn_schedule_DuplicateBaseRecord](msdyn_schedule.md#BKMK_msdyn_schedule_DuplicateBaseRecord) one-to-many relationship for the [msdyn_schedule](msdyn_schedule.md) table/entity.
-
-### <a name="BKMK_msdyn_dataflow_datalakefolder_DuplicateMatchingRecord"></a> msdyn_dataflow_datalakefolder_DuplicateMatchingRecord
-
-**Added by**: Insights App Platform Solution
-
-See the [msdyn_dataflow_datalakefolder_DuplicateMatchingRecord](msdyn_dataflow_datalakefolder.md#BKMK_msdyn_dataflow_datalakefolder_DuplicateMatchingRecord) one-to-many relationship for the [msdyn_dataflow_datalakefolder](msdyn_dataflow_datalakefolder.md) table/entity.
-
-### <a name="BKMK_msdyn_dataflow_datalakefolder_DuplicateBaseRecord"></a> msdyn_dataflow_datalakefolder_DuplicateBaseRecord
-
-**Added by**: Insights App Platform Solution
-
-See the [msdyn_dataflow_datalakefolder_DuplicateBaseRecord](msdyn_dataflow_datalakefolder.md#BKMK_msdyn_dataflow_datalakefolder_DuplicateBaseRecord) one-to-many relationship for the [msdyn_dataflow_datalakefolder](msdyn_dataflow_datalakefolder.md) table/entity.
-
-### <a name="BKMK_msdyn_dmsrequest_DuplicateMatchingRecord"></a> msdyn_dmsrequest_DuplicateMatchingRecord
-
-**Added by**: Insights App Platform Solution
-
-See the [msdyn_dmsrequest_DuplicateMatchingRecord](msdyn_dmsrequest.md#BKMK_msdyn_dmsrequest_DuplicateMatchingRecord) one-to-many relationship for the [msdyn_dmsrequest](msdyn_dmsrequest.md) table/entity.
-
-### <a name="BKMK_msdyn_dmsrequest_DuplicateBaseRecord"></a> msdyn_dmsrequest_DuplicateBaseRecord
-
-**Added by**: Insights App Platform Solution
-
-See the [msdyn_dmsrequest_DuplicateBaseRecord](msdyn_dmsrequest.md#BKMK_msdyn_dmsrequest_DuplicateBaseRecord) one-to-many relationship for the [msdyn_dmsrequest](msdyn_dmsrequest.md) table/entity.
-
-### <a name="BKMK_msdyn_dmsrequeststatus_DuplicateMatchingRecord"></a> msdyn_dmsrequeststatus_DuplicateMatchingRecord
-
-**Added by**: Insights App Platform Solution
-
-See the [msdyn_dmsrequeststatus_DuplicateMatchingRecord](msdyn_dmsrequeststatus.md#BKMK_msdyn_dmsrequeststatus_DuplicateMatchingRecord) one-to-many relationship for the [msdyn_dmsrequeststatus](msdyn_dmsrequeststatus.md) table/entity.
-
-### <a name="BKMK_msdyn_dmsrequeststatus_DuplicateBaseRecord"></a> msdyn_dmsrequeststatus_DuplicateBaseRecord
-
-**Added by**: Insights App Platform Solution
-
-See the [msdyn_dmsrequeststatus_DuplicateBaseRecord](msdyn_dmsrequeststatus.md#BKMK_msdyn_dmsrequeststatus_DuplicateBaseRecord) one-to-many relationship for the [msdyn_dmsrequeststatus](msdyn_dmsrequeststatus.md) table/entity.
-
-### <a name="BKMK_searchattributesettings_DuplicateMatchingRecord"></a> searchattributesettings_DuplicateMatchingRecord
-
-**Added by**: msdyn_RelevanceSearch Solution
-
-See the [searchattributesettings_DuplicateMatchingRecord](searchattributesettings.md#BKMK_searchattributesettings_DuplicateMatchingRecord) one-to-many relationship for the [searchattributesettings](searchattributesettings.md) table/entity.
-
-### <a name="BKMK_searchattributesettings_DuplicateBaseRecord"></a> searchattributesettings_DuplicateBaseRecord
-
-**Added by**: msdyn_RelevanceSearch Solution
-
-See the [searchattributesettings_DuplicateBaseRecord](searchattributesettings.md#BKMK_searchattributesettings_DuplicateBaseRecord) one-to-many relationship for the [searchattributesettings](searchattributesettings.md) table/entity.
-
-### <a name="BKMK_searchcustomanalyzer_DuplicateMatchingRecord"></a> searchcustomanalyzer_DuplicateMatchingRecord
-
-**Added by**: msdyn_RelevanceSearch Solution
-
-See the [searchcustomanalyzer_DuplicateMatchingRecord](searchcustomanalyzer.md#BKMK_searchcustomanalyzer_DuplicateMatchingRecord) one-to-many relationship for the [searchcustomanalyzer](searchcustomanalyzer.md) table/entity.
-
-### <a name="BKMK_searchcustomanalyzer_DuplicateBaseRecord"></a> searchcustomanalyzer_DuplicateBaseRecord
-
-**Added by**: msdyn_RelevanceSearch Solution
-
-See the [searchcustomanalyzer_DuplicateBaseRecord](searchcustomanalyzer.md#BKMK_searchcustomanalyzer_DuplicateBaseRecord) one-to-many relationship for the [searchcustomanalyzer](searchcustomanalyzer.md) table/entity.
+See the [flowevent_DuplicateBaseRecord](flowevent.md#BKMK_flowevent_DuplicateBaseRecord) one-to-many relationship for the [flowevent](flowevent.md) table/entity.
 
 ### See also
 
