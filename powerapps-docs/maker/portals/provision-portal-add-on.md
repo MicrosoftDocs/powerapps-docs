@@ -2,7 +2,6 @@
 title: Provision a site using the older add-on
 description: Instructions to provision a portal using the older portal add-on.
 author: neerajnandwana-msft
-
 ms.topic: conceptual
 ms.collection: get-started
 ms.date: 04/21/2021
