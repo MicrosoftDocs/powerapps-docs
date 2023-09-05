@@ -28,7 +28,11 @@ If you have purchased an older site (portal) add-on, and want to provision a por
 
 ## Provision add-on portal
 
-You can provision an add-on portal as a regular site. More information: [Create a site with Power Pages](/power-pages/getting-started/create-manage)
+To provision an add-on portal:
+
+1. Create a [Power Pages website](/power-pages/getting-started/create-manage).
+1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select **Convert to Production** and choose the **Add-on** option.
+    :::image type="content" source="media/provision-portal-add-on/add-on-available.png" alt-text="A screenshot of the Convert to production options inside Power Platform admin center with teh Add-ons license option selected.":::
 
 
 The table below summarizes the features associated with each portal option:
