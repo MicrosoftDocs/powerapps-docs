@@ -9,8 +9,6 @@ ms.reviewer: mkaur-msft
 ms.date: 03/22/2023
 ms.subservice: canvas-maker
 ms.author: yogupt
-
-
 search.audienceType:
   - maker
 contributors:
@@ -43,10 +41,11 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Progress bar](modern-control-progress-bar.md)** – Displays the progress, can be configured as determinate showcasing exact progress or indeterminate for ongoing progress.
 
+**[Radio group](modern-controls-radio-group.md)** – An input control that shows multiple options, of which users can select only one at a time.
+
 **[Spinner](modern-control-spinner.md)** – Displays state in motion, for exmaple, loading a page or table.
 
-
-**[Radio group](modern-controls-radio-group.md)** – An input control that shows multiple options, of which users can select only one at a time.
+**[Table](modern-control-table.md)** – A control that shows a set of data in a tabular or list format.
 
 **[Tabs or tab list](modern-control-tabs-or-tabs-list.md)** – Select a tab to move screens or take action on app.
 
