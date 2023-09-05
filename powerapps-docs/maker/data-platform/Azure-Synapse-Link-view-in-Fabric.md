@@ -6,24 +6,26 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 09/07/2023
+ms.date: 09/05/2023
 ms.custom: template-how-to
 ---
 # View in Microsoft Fabric
 
-Dataverse direct integration with Microsoft Fabric enables organizations to extend their Dynamics 365 enterprise applications and business processes into Microsoft Fabric. **View in Microsoft Fabric** feature built into PowerApps makes all your Dynamics 365 data available for analysis in Microsoft Fabric.
+<!-- Is this feature in public preview? -->
 
--   No need to export data, build ETL pipelines, or use third-party integration tools.
--   You can link data from Dataverse directly into Microsoft Fabric, no need to bring your own storage
--   You can link existing Synapse Links or new links created with your own Azure storage 
+Microsoft Dataverse direct integration with Microsoft Fabric enables organizations to extend their Dynamics 365 enterprise applications and business processes into Microsoft Fabric. The **View in Microsoft Fabric** feature built into Power Apps makes all your Dynamics 365 data available for analysis in Microsoft Fabric. <!-- Why limit this to D365? This could also include any Dataverse data independent of D365 apps right? -->
 
-With just one click, you’ll get more insights from your business data stored in Dataverse. ![View in Microsoft Fabric](media/Fabric/Azure-Synapse-Link-two-experiences.png)
+- No need to export data, build ETL pipelines, or use third-party integration tools.
+- Link data from Dataverse directly into Microsoft Fabric, no need to bring your own storage.
+- Link existing Azure Synapse links or new links created with your own Azure storage.
 
-As data gets updated, changes are reflected in Microsoft Fabric automatically. Dataverse also generates an enterprise-ready Synapse Lakehouse and SQL endpoint for your Dynamics 365 data. This makes it easier for data engineers and database admins to combine data from multiple sources and build custom analytics with Spark, Python, or SQL.
+With just one click, you’ll get more insights from your business data stored in Dataverse. :::image type="content" source="media/fabric/azure-synapse-link-two-experiences.png" alt-text="Azure Synapse link with Dataverse data in Microsoft Fabric" lightbox="media/fabric/azure-synapse-link-two-experiences.png":::
+
+As data gets updated, changes are reflected in Microsoft Fabric automatically. Dataverse also generates an enterprise-ready Azure Synapse Analytics lakehouse and SQL endpoint for your Dynamics 365 data. This makes it easier for data engineers and database admins to combine data from multiple sources and build custom analytics with Spark, Python, or SQL.
 
 Microsoft Fabric’s lake-centric approach helps to eliminate data silos. Combine data from your applications and devices—web sites, mobile apps, sensors, and signals from your warehouse and factories—with data from your business processes in Dynamics 365—sales, cases, inventory, and orders—to predict potential delays or shortages that affect keeping your promises to customers.
 
-Makers can build low-code apps and automations to orchestrate business processes and react to insights found in Microsoft Fabric using connectors to over 1,000 apps. Add those insights back to Dataverse as external or virtual tables through the SQL endpoint and makers can turn them into low-code apps with Power Apps, Power Pages, or Power Automate using skills they already have.
+Makers can build low-code apps and automations to orchestrate business processes and react to insights found in Microsoft Fabric using connectors to over 1,000 apps. Add those insights back to Dataverse as virtual tables connected to the external source <!-- What do you mean by external here? Virtual tables always connect via an external source so I've revised --> through the SQL endpoint. Makers can turn them into low-code apps with Power Apps, Power Pages, or Power Automate using the design tools already available.
 
 Dataverse integration with Microsoft Fabric is currently in preview. 
 
