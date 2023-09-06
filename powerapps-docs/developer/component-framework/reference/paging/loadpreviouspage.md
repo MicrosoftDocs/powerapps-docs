@@ -1,5 +1,5 @@
 ---
-title: loadPreviousPage | Microsoft Docs
+title: loadPreviousPage (Power Apps component framework API reference) | Microsoft Docs
 description: Request the previous page of results to be loaded.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -27,7 +27,7 @@ Model-driven and canvas apps
 
 `loadPreviousPage()`
 
-### Related topics
+### Related articles
 
 [Paging](../paging.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

@@ -14,7 +14,10 @@ search.audienceType:
 
 # Sample: Export ribbon definitions
 
-This sample shows how to export ribbon definitions. It uses the Organization Service <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest> and <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest> classes. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportRibbonDefinitions).
+This sample shows how to export ribbon definitions. It uses the Organization Service <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest> and <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest> classes.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Export ribbon definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportRibbonDefinitions)
 
 ## How to run this sample
 

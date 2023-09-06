@@ -1,7 +1,7 @@
 ---
 title: "sharedworkspace table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the sharedworkspace table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -55,6 +55,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [DiscoveryEndpoint](#BKMK_DiscoveryEndpoint)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [LastManaged](#BKMK_LastManaged)
 - [LastUsed](#BKMK_LastUsed)
 - [Name](#BKMK_Name)
 - [OrdererEndpoint](#BKMK_OrdererEndpoint)
@@ -102,6 +103,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_LastManaged"></a> LastManaged
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|TimeZoneIndependent|
+|Description|The last time the workspace was managed.|
+|DisplayName|Last Managed|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lastmanaged|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_LastUsed"></a> LastUsed
