@@ -104,7 +104,7 @@ You need to perform this one time operation in your Power BI environment for eac
 
 ## Open Fabric
 
-After you [Create a connection to your PowerApps environment](#create-a-connection-to-your-powerapps-environment), you can open Fabric from Power Apps in two ways:
+After you [Create a connection to your PowerApps environment](#create-a-connection-to-your-dataverse-environment), you can open Fabric from Power Apps in two ways:
 
 - **Tables** area: Select a table from the **Tables** area and then select **View in Microsoft Fabric**. This is the quickest way to get started.
 - **Azure Synapse Link for Dataverse** area: From the **Azure Synapse Link for Dataverse** area you can choose your own Power BI workspace. From here you can also enable monitoring and managing options.
