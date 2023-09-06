@@ -2,20 +2,20 @@
 title: Control site creation in a tenant
 description: Instructions to control portal creation in a tenant.
 author: neerajnandwana-msft
-
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 09/06/2023
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
+    - sampatn
 ---
 
 # Control site creation in a tenant
-
 
 [!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 

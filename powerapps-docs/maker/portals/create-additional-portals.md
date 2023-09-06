@@ -2,10 +2,9 @@
 title: Create additional sites in an environment
 description: Instructions to create additional portals in an environment.
 author: neerajnandwana-msft
-
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/20/2022
+ms.date: 09/06/2023
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -13,10 +12,10 @@ contributors:
     - neerajnandwana-msft
     - nickdoelman
     - ProfessorKendrick
+    - sampatn
 ---
 
 # Create additional sites in an environment
-
 
 [!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
