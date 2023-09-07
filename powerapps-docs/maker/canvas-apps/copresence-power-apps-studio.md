@@ -27,8 +27,6 @@ Legend
 1. The command bar displays the names and icons of other makers who are working on the app and may be making changes. 
 2. The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being worked on. You receive a notification to refresh the app when the maker that's editing the app makes changes and saves that app.
 
-> [!NOTE]
-> This feature is in the process of rolling out, and might not be available in your region yet.
 
 ## How copresence works
 
@@ -40,7 +38,7 @@ Icons of copresent makers appear in both the command bar and the left navigation
 
 You may be working on the app, or you may be idle, but once someone else saves a change to the app, you receive a notification letting you know that another maker made changes. When you see this notification, consider refreshing the app to get the latest version.
 
-## Coauthor (experimental)
+## Live copresence (experimental)
 
 [This section is pre-release documentation and is subject to change.]
 
@@ -48,18 +46,18 @@ You may be working on the app, or you may be idle, but once someone else saves a
 > - This is an experimental feature.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-Coauthoring is a new experimental feature that works similarly to copresence. The user who opens the app first has the editing privileges. When another user attempts to open the app, a notification is displayed, informing them that someone else is currently editing the app and they're limited to read-only access. The benefit of coauthoring is that you can see in real-time the changes that are being made by the maker editing the app without the need to refresh the app.
+Live copresence is a new experimental feature that works similarly to copresence. The user who opens the app first has the editing privileges. When another user attempts to open the app, a notification is displayed, informing them that someone else is currently editing the app and they're limited to read-only access. The benefit of live copresence is that you can see in real-time the changes that are being made by the maker editing the app without the need to refresh the app.
 
-### Enable coauthoring
+### Enable live copresence
 
-To use coauthoring, it must be turned on for each individual app. Once coauthoring is enabled, it takes precedence over the copresence feature.
+To use live copresence, it must be turned on for each individual app. Once live copresence is enabled, it takes precedence over the copresence feature.
 
-1. To enable coauthoring, open your app for editing in Power Apps Studio.
+1. To enable live copresence, open your app for editing in Power Apps Studio.
 2. Go to **Settings** > **Upcoming features** > **Experimental**.
-3. Set the toggle for **Enable coauthoring** to **On**.
+3. Set the toggle for **Enable live copresence** to **On**.
 
 
-### Limitations of coauthoring
+### Limitations of live copresence
 
 The maker editing the app and those accessing it in read-only mode are unable to perform or have disabled access to these options:
 
