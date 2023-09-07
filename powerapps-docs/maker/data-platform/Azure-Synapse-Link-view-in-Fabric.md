@@ -57,22 +57,24 @@ IT admins can manage this replica from the Azure Synapse Link for Dataverse page
 
 > [!NOTE]
 >
-> - Currently, you can’t add Dynamics finance and operations tables into the **Managed Store** Azure Synapse Link for Dataverse link that's created with this feature. <!-- Do you mean the managed store link that's created? -->
-> - Dataverse environment life cycle operations, such as environment move operations, might impact reports built using this feature. More information: [Troubleshooting common issues](#troubleshooting-common-issues) <!-- I don't see this addressed in the troubleshooting section below. Either add it or this link will have to be removed. -->
+> - Currently, you can’t add Dynamics finance and operations tables into the **Managed Store** link that's created with this feature. <!-- Do you mean the managed store link that's created? -- uyes, repeating the whole brand is a mouthful, so I reduced to link -->
+
 
 ## Link existing Azure Synapse Link for Dataverse profiles to Fabric
 
-Azure Synapse Link for Dataverse enables IT admins to simplify their data integrations by provisioning and configuring Azure resources such as Azure datalake storage and Azure Synapse. Now, you can enable Fabric links for your existing Azure Synapse Link for Dataverse links and benefit from the innovations in Fabric without any additional efforts or copying data. Fabric integration further simplifies data integration efforts with features like Power BI Direct Lake mode reports as well as query engine improvements in next generation Azure Synapse data warehouse.
+Azure Synapse Link for Dataverse enables IT admins to simplify their data integrations by provisioning and configuring Azure resources such as Azure datalake storage and Azure Synapse. Now, you can enable Fabric links for your existing Azure Synapse Links without any additional efforts or copying data. Fabric links simplify downstream data pipelines and you can use new features like Power BI DirectLake mode reports. Fabric Lakehouse and Lakehouse SQL endpoint contain improved query engines that let you work with Spark or SQL within an integrated environment.
+
+<!-- Mirosoft OneLake, DirectLake, Fabric Lakehouse and SQL endpoint are brand names -->
 
 <!-- Removing this since it should be easily discoverable from the maker portal for users so no need to image it
 ![View in Microsoft Fabric in Synapse Link](media/Fabric/Azure-Syunapse-Link-with-View-In-Fabric.png) -->
 
-You can add or removing tables from existing Azure Synapse Link for Dataverse links and/or create new Fabric links within a single experience. You can also use Azure Synapse Link for Dataverse to choose tables and entities from Dynamics 365 Finance and Operations (F&O). See <…>> <!-- Where's the link to more information for this? -->
+You can add or removing tables from existing Azure Synapse Link for Dataverse links and/or create new Fabric links within a single experience. You can also use Azure Synapse Link for Dataverse to choose [tables and entities from Dynamics 365 Finance and Operations](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-select-fno-data) <!-- Where's the link to more information for this? -->
 
 > [!NOTE]
 > You need to create a Azure Synapse Link for Dataverse profile and enable the **Delta parquet conversion for Fabric link** option. This option isn't available for  Azure Synapse Link for Dataverse profiles that use the CSV output format.
 
-Makers can build Apps and automations with enterprise-wide data available in One Lake – the data store behind Microsoft Fabric. Makers define virtual tables <!-- "External tables"? I assume you mean virtual tables here. -->using the SQL endpoint available for Fabric data and work with the data as if they were native Dataverse tables.
+Makers can build Apps and automations with enterprise-wide data available in Microsoft OneLake – the data store behind Microsoft Fabric. Makers define virtual tables <!-- "External tables"? I assume you mean virtual tables here. YES -->using the Lakehouse SQL endpoint available for Fabric data and work with the data as if they were native Dataverse tables.
 
 ## Configure your environment
 
@@ -85,7 +87,7 @@ You can use an existing Dataverse environment or create a new developer environm
 
 Perform this one time operation in your Power BI environment for each Power Apps environment that will view Dataverse data in Fabric. This connection is used by Fabric to connect to the Dataverse environment to access data.
 
-1. Sign in to [Power BI](https://app.powerbi.com).
+1. Sign in to [Microsoft Power BI](https://app.powerbi.com).
 1. Select Power BI settings (**Gear icon** on top right), and then select **Manage connections and gateways**.
 
 <!-- common UI not necessary to have a screenshot ![](media/Fabric/Fabric-launch-connections-and-gateways.png) -->
@@ -104,7 +106,7 @@ Perform this one time operation in your Power BI environment for each Power Apps
 
 ## Open Fabric
 
-After you [Create a connection to your Dataverse environment](#create-a-connection-to-your-dataverse-environment), you can open Fabric from Power Apps in two ways:
+After you [Create a connection to your Dataverse environment](#create-a-connection-to-your-dataverse-environment), you can launch Fabric from Power Apps in two ways:
 
 - **Tables** area: Select a table from the **Tables** area and then select **View in Microsoft Fabric**. This is the quickest way to get started.
 - **Azure Synapse Link for Dataverse** area: From the **Azure Synapse Link for Dataverse** area you can choose your own Power BI workspace. From here you can also enable monitoring and managing options.
@@ -121,9 +123,9 @@ After you [Create a connection to your Dataverse environment](#create-a-connecti
 1. On the command bar, select **View in Microsoft Fabric**.
 1. If you're viewing a table in Fabric for the first time, you see a dialog box confirming the name of the Power BI workspace. Select **OK** to continue. Subsequent table selections are added to the same workspace so you aren't asked to confirm again.
 
-Azure Synapse lakehouse opens in a separate browser tab.
+Fabric lakehouse opens in a separate browser tab.
 
-It might take 15 minutes to update data in the managed lake including the conversion to Delta parquet format. If you've selected a table that contains a lot of data, the initial load time might take even longer. When you open Fabric lakehouse, you see the links as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
+During preview, It may take upto 30 minutes to update data in the managed lake including the conversion to Delta parquet format. If you've selected a table that contains a lot of data, the initial load time might take even longer. When you open Fabric lakehouse, you see the links as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
 
 ## Manage Fabric links
 
@@ -147,11 +149,11 @@ Managed store uses Dataverse provisioned file storage. When you purchase Power A
 1. You can add and remove tables linked to Fabric by selecting **Manage tables**.
 1. When you add a table, the system performs an initial sync and replicates data in Dataverse storage. When the initial sync is completed, a Dataverse shortcut to Fabric is created. You can view the status of tables added from the **Tables** area in make.powerapps.com or tables added by selecting **Manage tables**.
 1. When the sync status is **Active**, as data gets updated, your data changes are shown in reports created in Fabric.
-1. If a new column is added to a table that’s already added to Managed Lake <!-- What is Managed Lake? Do you mean Managed Store? -->(also known as a metadata change), you can use the **Refresh Fabric tables** option to update the change in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
+1. If a new column is added to a table that’s already added <!-- What is Managed Lake? Do you mean Managed Store?, yes - removed it -->(also known as a metadata change), you can use the **Refresh Fabric tables** option to update the change in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
 1. Open Fabric by selecting **View in Microsoft Fabric**. You can also **Unlink**, which removes Fabric links. When unlinking, the Fabric workspace or the lakehouse created aren't removed since you might have added your own tables and links. However, to remove go to [Azure](https://portal.azure.com) and open Fabric to remove the lakehouse and workspace.
 
 > [!NOTE]
-> Depending on the size of data, the initial copy might take more than 15 minutes to complete. For subsequent updates, it might take  about 15 minutes to update data in the managed lake including the conversion to Delta parquet format. When you launch Fabric lakehouse you'll see the links as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
+> During preview, depending on the size of data, the initial copy might take more than 30 minutes to complete. For subsequent updates, it might take  about 30 minutes to update data in the managed store including the conversion to Delta parquet format. When you launch Fabric lakehouse you'll see the links as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
 
 ## Link existing Azure Synapse Link for Dataverse links with Fabric
 
@@ -206,7 +208,7 @@ The tables you selected are added to the Azure Synapse Analytics lakehouse and d
 Note that Dataverse manages these shortcuts. You shouldn't delete or remove these shortcuts in Fabric. If you accidentally delete a link, you can go to the Azure Synapse Link for Dataverse area in Power Apps and select **Refresh Fabric links** to re-create the links.
 
 > [!NOTE]
-> During preview, it can take 15 minutes or more to reflect the tables. You might see table named as **undefined** during that time.
+> During preview, it can take 30 minutes or more to reflect the tables. You might see table named as **undefined** during that time.
 
 ### Explore data with SQL endpoint
 
@@ -273,6 +275,8 @@ If you experience an error message, here are suggestions to resolve the issue.
 |You need to get a Trial version of Fabric to get stated | You need a Power BI premium of a Fabric capacity. Power BI premium per user capacity won't be sufficient. You can get a free trial capacity by visiting: [Fabric (preview) trial](/fabric/get-started/fabric-trial) |
 | You need to be a System administrator to link to Fabric | You need the system administrator security role in Dataverse to perform this operation. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)  |
 
+> - Dataverse environment life cycle operations, such as environment move operations, might impact reports built using this feature. More information: [Troubleshooting common issues](#troubleshooting-common-issues) <!-- I don't see this addressed in the troubleshooting section below. Either add it or this link will have to be removed. -->
+> - 
 ## See also
 
 [Create virtual tables using the virtual connector provider](create-virtual-tables-using-connectors.md)
