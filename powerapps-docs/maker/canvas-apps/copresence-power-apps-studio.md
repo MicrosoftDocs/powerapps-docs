@@ -27,9 +27,6 @@ Legend
 1. The command bar displays the names and icons of other makers who are working on the app and may be making changes. 
 2. The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being worked on. You receive a notification to refresh the app when the maker that's editing the app makes changes and saves that app.
 
-> [!NOTE]
-> This feature is in the process of rolling out, and might not be available in your region yet.
-
 ## How copresence works
 
 The first time someone opens your app in Power Apps Studio while you're working on it, copresence indicators appear that shows other people are also working on the app. 
