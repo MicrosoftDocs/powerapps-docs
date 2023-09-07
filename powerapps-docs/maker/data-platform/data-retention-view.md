@@ -29,7 +29,6 @@ Imagine an auditor requires access to long term data retained for the accounts t
 ## View retained data using edit filters from a model-driven app
 
 > [!NOTE]
-> - Saving the query results of the retained data as a personal view is not supported. There is a known issue wherein the experience allows users to save the query results of the retained data as a personal view but the view not return results.
 > - You can't save or export the the view query results of the retained data for sharing with others. To share retained data, [create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow).
 > - Edit filters doesn't retrieve table row attachments. To view attachment data, create a flow. More information: [Create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow)
 
@@ -56,6 +55,12 @@ These restrictions are enforced by Dataverse for each environment:
 - Any single request from advanced find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
 - Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed.
 - Retained data includes lookup data. Lookup values in the table are denormalized with ID and name value.
+
+## Known issues
+
+### Personal views of retained data
+
+Saving the query results of the retained data as a personal view isn't supported. Although users can save the query results of the retained data as a personal view, the view doesn't return results.
 
 ## See also
 
