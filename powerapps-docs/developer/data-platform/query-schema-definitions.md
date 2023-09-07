@@ -571,7 +571,7 @@ OData-Version: 4.0
 [Cache Schema data](cache-schema-data.md)   
 [Web API Query schema definitions and detect changes Sample (C#)](webapi/samples/retrievemetadatachanges.md)   
 [SDK for .NET Query schema definitions and detect changes Sample (C#)](org-service/samples/query-metadata-changes.md)   
-[Organization Service: Table definitions in Microsoft Dataverse](entity-metadata.md)   
+[SDK for .NET: Table definitions in Microsoft Dataverse](entity-metadata.md)   
 [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

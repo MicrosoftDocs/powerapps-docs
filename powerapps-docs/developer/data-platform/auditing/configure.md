@@ -128,7 +128,7 @@ Change the column values in the organization table to change how auditing works 
 You can use Web API or Dataverse SDK for .NET to change your organization settings:
 
 - [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
-- [Update and delete table rows using the Organization Service](../org-service/entity-operations-update-delete.md)
+- [Update and delete table rows using the SDK for .NET](../org-service/entity-operations-update-delete.md)
 
 ## Configure tables and columns
 

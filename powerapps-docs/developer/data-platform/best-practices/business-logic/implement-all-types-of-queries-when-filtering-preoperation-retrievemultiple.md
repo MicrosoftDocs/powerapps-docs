@@ -76,7 +76,7 @@ The legacy web client for model-driven apps was replaced by Unified Interface. U
 ### See also
 
 [Sample: Modify query in PreOperation stage](../../org-service/samples/modify-query-preoperation-stage.md)<br />
-[Query data using the Organization service](../../org-service/entity-operations-query-data.md)<br />
+[Query data using the SDK for .NET](../../org-service/entity-operations-query-data.md)<br />
 [Use FetchXML to construct a query](../../use-fetchxml-construct-query.md)<br />
 [Build queries with QueryExpression](../../org-service/build-queries-with-queryexpression.md)<br />
 [Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages](limit-registration-plugins-retrieve-retrievemultiple.md)<br />

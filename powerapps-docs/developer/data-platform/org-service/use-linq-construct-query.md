@@ -31,7 +31,7 @@ All LINQ query expressions have a similar format. The following sections show th
 
 When using the generated service context and early binding, use the `IQueryable` table set, such as `AccountSet`, in the generated context.  
 
-When not using the generated context, the `CreateQuery` method on the Organization service context object gives you access to Dataverse table rows.  
+When not using the generated context, the `CreateQuery` method on the service context object gives you access to Dataverse table rows.  
 
 Example:  
 
