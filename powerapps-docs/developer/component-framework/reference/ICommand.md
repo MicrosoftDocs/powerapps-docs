@@ -1,5 +1,5 @@
 ---
-title: ICommand | Microsoft Docs
+title: ICommand (Power Apps component framework API reference) | Microsoft Docs
 description: A command button control types.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -27,7 +27,7 @@ Model-driven and canvas apps
 | `FlyoutControl`      | Flyout control type       |
 | `SplitButtonControl` | Split button control type |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

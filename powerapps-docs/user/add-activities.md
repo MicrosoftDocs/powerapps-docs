@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 08/01/2023
+ms.date: 08/30/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -466,21 +466,23 @@ To view a conversation transcript, select the **View more** link in the row for 
 ![Conversation transcript view.](media\timeline-transcript-view.png "Conversation transcript view")
 
 
-## View what you've missed in timeline (preview)
+## View what you've missed in timeline
 
-When you access the timeline after being away, activities that you've missed display at the top of the timeline. You can quickly open the activities or scroll past them.
+When you access the timeline after being away, activities that you've missed display at the top of the timeline, denoted with a blue vertical line next to them. You can quickly open the activities or scroll past them.
 
 ![What you've missed view.](media\timeline-what-you-missed.png "What you've missed view")
 
 ## Pin or unpin records in timeline
 
-If your administrator has enabled the pin setting, you can quickly access activities, such as records, by keeping them at the top of the timeline. Pinning an activity eliminates the need to scroll through every activity to find the one you need.
+If your administrator has enabled the pin setting and you have write/delete access, you can quickly access records, such as activities, by keeping them at the top of the timeline. Pinning a record eliminates the need to scroll through every record to find the one you need.
 
-Pin an activity by selecting the pin icon next to it. This moves it to the top of the timeline in the **Pinned** section, where it can be quickly accessed. The Pinned section also lists the number of records that are pinned.
+By default, you can pin notes. The activities that you can pin depend on how your administrator has set up the feature.
 
-![Pin and unpin activity view.](media\timeline-pin-unpin-activity.png "Pin and unpin an activity view")
+Pin a record by selecting the pin icon next to it. This moves it to the top of the timeline in the **Pinned** section, where it can be quickly accessed. The Pinned section also lists the number of records that are pinned. You can pin a maximum of 15 records. Records that are pinned will stay at the top of the timeline for a year unless you unpin them.
 
-To unpin an activity, select the pin icon next to it. It moves out of the **Pinned** section and back to the place it orginally appeared in the list of activities in timeline.
+![Pin and unpin record view.](media\timeline-pin-unpin-activity.png "Pin and unpin a record view")
+
+To unpin a record, select the pin icon next to it. Unpinning it moves it out of the **Pinned** section and back to where it orginally appeared in the list of records in the timeline.
 
 
 ## See also

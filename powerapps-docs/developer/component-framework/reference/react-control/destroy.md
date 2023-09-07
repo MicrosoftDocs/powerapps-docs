@@ -1,5 +1,5 @@
 ---
-title: "ReactControl.destroy | MicrosoftDocs"
+title: "ReactControl.destroy (Power Apps component framework API reference) | MicrosoftDocs"
 description: This method is invoked in a ReactControl when the component is to be removed from the DOM tree. Use it for the cleanup and to release any memory that the component is using.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -32,7 +32,7 @@ public destroy(): void
 }
 ```
 
-### Related topics
+### Related articles
 
 [React controls & platform libraries (Preview) ](../../react-controls-platform-libraries.md)<br />
 [ReactControl](../react-control.md)<br/>
