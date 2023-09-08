@@ -38,7 +38,7 @@ Users not having any of the above mentioned Azure roles are considered as non-ad
 When the site creation is disabled in a tenant, non-administrators will see an error&mdash;`You don't have permissions to create a site in this environment. Choose another one or contact your admin to request access.`
 
 > [!div class=mx-imgBorder]
-> ![Portal creation blocked error.](media/site-creation-blocked-error.jpg "Site creation blocked error")
+> ![Portal creation blocked error.](media/Site-creation-blocked-error.jpg "Site creation blocked error")
 
 To enable site creation in a tenant, change the settings value from `$true` to `$false`.
 
