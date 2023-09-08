@@ -42,7 +42,7 @@ To create a new environment, see [Create new environment](/power-platform/admin/
 
 ### See also
 
-[Available portal templates](portal-templates.md) <br>
-[Administer Power Apps portals](/training/paths/administer-portals/) <br>
+[Available templates](/power-pages/templates/dynamics-365-apps/overview) <br />
+[Administer Power Apps portals](/training/paths/administer-portals/) <br />
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
