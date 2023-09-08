@@ -1,7 +1,7 @@
 ---
 title: "Email table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Email table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -98,6 +98,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [FollowEmailUserPreference](#BKMK_FollowEmailUserPreference)
 - [from](#BKMK_from)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [InternetMessageHeaders](#BKMK_InternetMessageHeaders)
 - [IsBilled](#BKMK_IsBilled)
 - [IsWorkflowCreated](#BKMK_IsWorkflowCreated)
 - [LastOnHoldTime](#BKMK_LastOnHoldTime)
@@ -630,6 +631,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_InternetMessageHeaders"></a> InternetMessageHeaders
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains a set of internet headers associated to the email message in json format (for internal use only)|
+|DisplayName|Internet message headers|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|internetmessageheaders|
+|MaxLength|500|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_IsBilled"></a> IsBilled
