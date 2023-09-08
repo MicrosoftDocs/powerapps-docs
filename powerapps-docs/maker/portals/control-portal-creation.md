@@ -35,12 +35,12 @@ Administrators are the users having one of the following Azure roles:
 
 Users not having any of the above mentioned Azure roles are considered as non-administrators.
 
-When the portal creation is disabled in a tenant, non-administrators will see an error&mdash;`You don't have permission to create a portal in this tenant as it is blocked by your global administrator.`
+When the site creation is disabled in a tenant, non-administrators will see an error&mdash;`You don't have permissions to create a site in this environment. Choose another one or contact your admin to request access.`
 
 > [!div class=mx-imgBorder]
-> ![Portal creation blocked error.](media/portal-create-blocked-error.png "Portal creation blocked error")
+> ![Portal creation blocked error.](media/site-creation-blocked-error.jpg "Site creation blocked error")
 
-To enable portal creation in a tenant, change the settings value from `$true` to `$false`.
+To enable site creation in a tenant, change the settings value from `$true` to `$false`.
 
 ```
 Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $false }
