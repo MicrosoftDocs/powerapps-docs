@@ -161,7 +161,7 @@ Content-Type: application/json; charset=utf-8
 HTTP/1.1 204 No Content
 ```
 
-#### Using Organization Service
+#### Using SDK for .NET
 
 Regardless of whether you use early or late bound types, the first task is to retrieve the `MetadataId` of the table, which is retrieved in the same way for both cases. In this case for a virtual table named `new_people` using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient). Alternately, the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class can be used.
 
@@ -182,7 +182,7 @@ var entityId = retrieveEntityResponse.EntityMetadata.MetadataId;
 
 **Using early-bound types**
 
-With early-bound types you can use the `VirtualEntityMetadata` class generated using CrmSvcUtil.exe. More information: [Late-bound and Early-bound programming using the Organization service](../org-service/early-bound-programming.md)
+With early-bound types you can use the `VirtualEntityMetadata` class generated using CrmSvcUtil.exe. More information: [Late-bound and Early-bound programming using the SDK for .NET](../org-service/early-bound-programming.md)
 
 ```csharp
 var virtualEntityMetadata = new VirtualEntityMetadata
@@ -282,7 +282,7 @@ When you register a plug-in step using the plug-in registration tool, you will f
 
 ## Use the messages to notify Dataverse of changes
 
-To notify Dataverse of changes you must call the appropriate API. You can use either the Dataverse Web API or the Organization Service using the SDK assemblies.
+To notify Dataverse of changes you must call the appropriate API. You can use either the Dataverse Web API or the SDK for .NET.
 
 Before using these messages, you may want to use the procedure describe in [View the messages created to support your virtual table](#view-the-messages-created-to-support-your-virtual-table) to confirm that they exist.
 
@@ -351,9 +351,9 @@ Content-Type: application/json
 }
 ```
 
-### Using the Organization Service
+### Using the SDK for .NET
 
-When using the Organization Service, you can use either early or late binding types. More information: [Late-bound and Early-bound programming using the Organization service](../org-service/early-bound-programming.md)
+When using the SDK for .NET, you can use either early or late binding types. More information: [Late-bound and Early-bound programming using the SDK for .NET](../org-service/early-bound-programming.md)
 
 #### Early-bound types
 

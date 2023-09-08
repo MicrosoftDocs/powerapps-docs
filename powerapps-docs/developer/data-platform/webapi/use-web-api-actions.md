@@ -40,7 +40,7 @@ The following XML is the definition of the <xref:Microsoft.Dynamics.CRM.Merge> a
 </Action>
 ```
 
-The <xref:Microsoft.Dynamics.CRM.Merge> action corresponds to the <xref:Microsoft.Crm.Sdk.Messages.MergeRequest> using the organization service. Use this action to merge a pair of duplicate records. This action doesn't include a return value. If it succeeds, the operation is complete.
+The <xref:Microsoft.Dynamics.CRM.Merge> action corresponds to the <xref:Microsoft.Crm.Sdk.Messages.MergeRequest> using the SDK for .NET. Use this action to merge a pair of duplicate records. This action doesn't include a return value. If it succeeds, the operation is complete.
 
 The following example is the HTTP request and response to call the `Merge` action for two account records.
 
@@ -113,7 +113,7 @@ As an example of an action bound to an entity, the following is the definition o
 </Action>
 ```
 
-This entity bound action is equivalent to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest> used by the organization service. In the Web API, this action is bound to the <xref:Microsoft.Dynamics.CRM.queue> entity type that represents the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>.<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest.DestinationQueueId> property. This action accepts several more parameters and returns a <xref:Microsoft.Dynamics.CRM.AddToQueueResponse> complex type corresponding to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueResponse> returned by the organization service. When an action returns a complex type, the definition of the complex type appears directly above the action in the CSDL.
+This entity bound action is equivalent to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest> used by the SDK for .NET. In the Web API, this action is bound to the <xref:Microsoft.Dynamics.CRM.queue> entity type that represents the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>.<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest.DestinationQueueId> property. This action accepts several more parameters and returns a <xref:Microsoft.Dynamics.CRM.AddToQueueResponse> complex type corresponding to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueResponse> returned by the SDK for .NET. When an action returns a complex type, the definition of the complex type appears directly above the action in the CSDL.
 
 An action bound to an entity must be invoked using a URI to set the first parameter value. You can't set it as a named parameter value.
 
@@ -209,7 +209,7 @@ As an example of an action bound to an entity collection, the following is the d
 </Action>
 ```
 
-This entity collection bound action is equivalent to the <xref:Microsoft.Crm.Sdk.Messages.ExportTranslationRequest> used by the organization service. In the Web API, this action is bound to the <xref:Microsoft.Dynamics.CRM.solution> entity type. But rather than passing a value to the request, the entity collection binding simply applies the constraint that the URI of the request must include the path to the specified entity set.
+This entity collection bound action is equivalent to the <xref:Microsoft.Crm.Sdk.Messages.ExportTranslationRequest> used by the SDK for .NET. In the Web API, this action is bound to the <xref:Microsoft.Dynamics.CRM.solution> entity type. But rather than passing a value to the request, the entity collection binding simply applies the constraint that the URI of the request must include the path to the specified entity set.
 
 The following example shows using the <xref:Microsoft.Dynamics.CRM.ExportTranslation> action, which exports a binary file containing data about localizable string values that can be updated to modify or add localizable values. Note how the entity collection bound action is after the entity set name for the solution entity: `solutions`.
 

@@ -266,7 +266,7 @@ GET [Organization URI]/api/data/v9.2/catalogassignments?$select=name
 
 ## Create Catalogs and CatalogAssignments with code
 
-You can create catalogs and catalog assignment records using either the Web API or the Organization Service.
+You can create catalogs and catalog assignment records using either the Web API or the SDK for .NET.
 
 ### Using the Web API
 
@@ -375,7 +375,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/catalogassignments(00000000-000
 ```
 
 
-### Using the Organization Service
+### Using the SDK for .NET
 
 The following code shows creating a catalog hierarchy and a catalog assignment in a solution with the UniqueName: `ContosoCustomerManagement`.
 
@@ -569,8 +569,8 @@ The `catalogassignment` element includes these elements:
 [Microsoft Dataverse business events](business-events.md)<br />
 [Create an entity record using the Web API](webapi/create-entity-web-api.md)<br />
 [Retrieve an entity record using the Web API](webapi/retrieve-entity-using-web-api.md)<br />
-[Create entities using the Organization Service](org-service/entity-operations-create.md)<br />
-[Retrieve an entity using the Organization Service](org-service/entity-operations-retrieve.md)
+[Create entities using the SDK for .NET](org-service/entity-operations-create.md)<br />
+[Retrieve an entity using the SDK for .NET](org-service/entity-operations-retrieve.md)
  
 
 

@@ -95,7 +95,7 @@ This `sample_IsSystemAdmin` custom API uses this code to query the system to det
 
 ## How this sample works
 
-To use the `sample_IsSystemAdmin` custom API, you can use either the Web API or the Organization Service using the Dataverse .NET Framework SDK assemblies.
+To use the `sample_IsSystemAdmin` custom API, you can use either the Web API or the Dataverse .NET Framework SDK assemblies.
 
 ### Using Web API
 
@@ -119,9 +119,9 @@ The Web API is easiest to try because you don't need to write any code. You can 
 
 The `HasRole` value indicates if the user has the System Administrator security role.
 
-### Using Organization Service
+### Using SDK for .NET
 
-1. You can use the Organization Service Quick Start sample instructions to create a .NET Framework Console application with C#. [Quickstart: Organization service sample (C#)](../quick-start-org-service-console-app.md)
+1. You can use the SDK for .NET Quick Start sample instructions to create a .NET Framework Console application with C#. [Quickstart: SDK for .NET sample (C#)](../quick-start-org-service-console-app.md)
 1. Add the following static method to the program class. This creates a re-usable method.
 
    ```csharp
@@ -169,7 +169,7 @@ The `HasRole` value indicates if the user has the System Administrator security 
 1. How to query to detect if the user is a system administrator
 1. How to write a plug-in to support a custom API
 1. How to invoke a custom API function using the Web API
-1. How to invoke a custom API using the Organization service
+1. How to invoke a custom API using the SDK for .NET
 
 ### See also
 

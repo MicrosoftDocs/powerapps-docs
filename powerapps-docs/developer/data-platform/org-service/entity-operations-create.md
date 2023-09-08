@@ -1,6 +1,6 @@
 ---
-title: "Create table rows using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to create table rows using the Organization Service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create table rows using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to create table rows using the SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 07/22/2023
 ms.reviewer: pehecke
 ms.topic: article
@@ -13,13 +13,13 @@ contributors:
   - JimDaly
 ---
 
-# Create table rows using the Organization Service
+# Create table rows using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 This article includes examples using both late-bound and early-bound programming styles. More information: 
-- [Early-bound and late-bound programming using the Organization service](early-bound-programming.md)
-- [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)
+- [Early-bound and late-bound programming using the SDK for .NET](early-bound-programming.md)
+- [Generate early-bound classes for the SDK for .NET](generate-early-bound-classes.md)
 
 ## Basic Create
 
@@ -105,8 +105,8 @@ Guid accountid = response.id;
 ### When to use the CreateRequest class
 
 You must use the [CreateRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) if you want to pass optional parameters. There are two cases where you might need special parameters.
- - When you want duplicate detection rules to be applied. More information: [Detect duplicate data using the Organization service](detect-duplicate-data.md)
- - When you're creating a row that represents a solution component, such as a [WebResource](../reference/entities/webresource.md) and want to associate it with a specific solution. In this case, you would include the value of the [Solution.UniqueName](../reference/entities/solution.md#BKMK_UniqueName) using the `SolutionUniqueName` parameter. More information: [Use messages with the Organization service](use-messages.md)
+ - When you want duplicate detection rules to be applied. More information: [Detect duplicate data using the SDK for .NET](detect-duplicate-data.md)
+ - When you're creating a row that represents a solution component, such as a [WebResource](../reference/entities/webresource.md) and want to associate it with a specific solution. In this case, you would include the value of the [Solution.UniqueName](../reference/entities/solution.md#BKMK_UniqueName) using the `SolutionUniqueName` parameter. More information: [Use messages with the SDK for .NET](use-messages.md)
 
 
 ## Use the CreateMultipleRequest class (Preview)
@@ -234,7 +234,7 @@ More information:
 
 ## Check for duplicate records
 
-More information: [Detect duplicate data using the Organization service](detect-duplicate-data.md)
+More information: [Detect duplicate data using the SDK for .NET](detect-duplicate-data.md)
 
 ## Set default values from the primary table row
 
@@ -287,8 +287,8 @@ If you're creating large numbers of elastic table rows that contain non-relation
 
 ### See also
 
-[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)   
-[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)   
-[Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)   
+[Retrieve a table row using the SDK for .NET](entity-operations-retrieve.md)   
+[Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)   
+[Associate and disassociate table rows using the SDK for .NET](entity-operations-associate-disassociate.md)   
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
