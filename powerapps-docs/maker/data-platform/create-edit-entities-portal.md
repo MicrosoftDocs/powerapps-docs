@@ -55,8 +55,8 @@ Create a table with the help of AI Copilot.
 
 > [!IMPORTANT]
 > - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - To use this feature in a Power Platform environment that is created outside of United States and Switzerland, you’ll have to enable data movement across regions. More information: [Enable copilots and generative AI features outside United States and Switzerland](https://go.microsoft.com/fwlink/?linkid=2244595)
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE [cc-preview-features-definition](../../../shared/cross-geo-support.md)]
 
 1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
 1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
