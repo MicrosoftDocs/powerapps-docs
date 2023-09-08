@@ -19,7 +19,7 @@ contributors:
 
 [!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
-The template you choose for the new site (portal) determines your ability to create additional sites (portals). The following table explains the limits for creating additional portals in an environment.
+The template you choose for the new site determines your ability to create additional sites. The following table explains the limits for creating additional portals in an environment.
 
 | Environment type | Template | Limit | Additional information |
 | - | - | - | - |
@@ -34,9 +34,9 @@ The template you choose for the new site (portal) determines your ability to cre
 
 \*\*\* Additional languages can be enabled for individual sites, even if only one site type per environment is allowed. For more information about enabling additional languages for sites, go to [Enable multiple language support](./configure/enable-multiple-language-support.md).
 
-To enable multiple [Modern Community](/dynamics365/customer-service/community-get-started) portals, see [Create new websites in Community](/dynamics365/customer-service/community-create-websites).
+To enable multiple [Modern Community](/dynamics365/customer-service/community-get-started) sites, see [Create new websites in Community](/dynamics365/customer-service/community-create-websites).
 
-Once you've reached the maximum number of a specific site type for an environment, you'll see a message displayed indicating that the maximum number of portals has been reached.
+Once you've reached the maximum number of a specific site type for an environment, you'll see a message displayed indicating that the maximum number of sites has been reached.
 
 To create a new environment, see [Create new environment](/power-platform/admin/create-environment)
 
