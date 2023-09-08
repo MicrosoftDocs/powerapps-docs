@@ -80,6 +80,6 @@ The legacy web client for model-driven apps was replaced by Unified Interface. U
 [Use FetchXML to construct a query](../../use-fetchxml-construct-query.md)<br />
 [Build queries with QueryExpression](../../org-service/build-queries-with-queryexpression.md)<br />
 [Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages](limit-registration-plugins-retrieve-retrievemultiple.md)<br />
-[Unified Interface Community](https://community.dynamics.com/365/unified-interface/)
+[Unified Interface Community](https://community.dynamics.com/forums/thread/?discussionforumid=bc304ecc-c131-4b63-92dd-7464bba3ce3b)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
