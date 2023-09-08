@@ -65,7 +65,7 @@ Use the [FileAttributeMetadata.MaxSizeInKB](xref:Microsoft.Xrm.Sdk.Metadata.File
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*)
 
 #### [Web API](#tab/webapi)
