@@ -38,7 +38,7 @@ To enable multiple [Modern Community](/dynamics365/customer-service/community-ge
 
 Once you've reached the maximum number of a specific site type for an environment, you'll see a message displayed indicating that the maximum number of portals has been reached.
 
-See [Create new environment]([url](https://learn.microsoft.com/en-us/power-platform/admin/create-environment))
+To create a new environment, see [Create new environment](/power-platform/admin/create-environment)
 
 ### See also
 
