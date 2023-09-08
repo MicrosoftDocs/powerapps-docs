@@ -4,7 +4,7 @@ description: How to check user access and security role.
 author: paulliew
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/25/2023
+ms.date: 09/01/2023
 ms.subservice: end-user
 ms.author: paulliew
 ms.custom: ""
@@ -62,7 +62,7 @@ If you're an administrator, you can check the access another user has to a row.
   
 3.   The **Check Access** dialog box will appear and display the user's access information.
 
-## Check all users who have access to a row (preview)
+## Check all users who have access to a row
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
