@@ -148,12 +148,12 @@ The following table lists the component type, rule description, severity, and ca
 |Web Resources  | [avoid-isActivityType](./powerapps-checker/rules/web/avoid-isactivitytype.md)   | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.gettableMetadata and don't use in ribbon rules.    | Medium  | Upgrade readiness |
 |Web Resources  | [meta-avoid-silverlight](/power-platform/important-changes-coming?client=PAChecker&error=meta-avoid-silverlight&source=featuredocs)   | Silverlight web resource usage is deprecated.   | Medium | Upgrade readiness |
 | Web Resources  | [remove-debug-script](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-remove-debug-script)  | Avoid including debug script in non-development environments.  | Medium  | Usage |
-| Web Resources  | [use-strict-mode](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-mode&client=PAChecker)  | Use strict mode when possible.  | Medium   | Usage |
-| Web Resources  | [use-strict-equality-operators](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-equality-operators&client=PAChecker)  | Use strict equality operators.  | Medium  | Usage |
-| Web Resources  | [avoid-eval](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Don't use the 'eval' function or its functional equivalents.  | Critical  | Security |
-| Web Resources  | [avoid-with](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-with&client=PAChecker)  | Don't use the 'with' operator.  | High  | Performance |
-| Web Resources  | [remove-alert](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-alert&client=PAChecker)  | Don't use the 'alert' function or its functional equivalents.  | Medium  | Usage |
-| Web Resources  | [remove-console](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-console&client=PAChecker)  | Avoid using methods on console.  | Medium  | Usage |
+| Web Resources  | [use-strict-mode](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)  | Use strict mode when possible.  | Medium   | Usage |
+| Web Resources  | [use-strict-equality-operators](https://developer.mozilla.org/docs/Web/JavaScript/Equality_comparisons_and_sameness)  | Use strict equality operators.  | Medium  | Usage |
+| Web Resources  | [avoid-eval](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval)  | Don't use the 'eval' function or its functional equivalents.  | Critical  | Security |
+| Web Resources  | [avoid-with](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/with)  | Don't use the 'with' operator.  | High  | Performance |
+| Web Resources  | [remove-alert](https://eslint.org/docs/rules/no-alert)  | Don't use the 'alert' function or its functional equivalents.  | Medium  | Usage |
+| Web Resources  | [remove-console](https://eslint.org/docs/rules/no-console)  | Avoid using methods on console.  | Medium  | Usage |
 | Web Resources  | [avoid-ui-refreshribbon](./powerapps-checker/rules/web/avoid-ui-refreshribbon.md)  | Avoid using refreshRibbon in form onload and EnableRule. | Critical  | Performance |
 | Web Resources  | [use-getsecurityroleprivilegesinfo](./powerapps-checker/rules/web/use-getsecurityroleprivilegesinfo.md)  | Avoid userSettings.securityRolePrivileges. Use userSettings.getSecurityRolePrivilegesInfo instead. | High  | Performance |
 | Web Resources  | [web-sdl-no-cookies](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-cookies.md) | HTTP cookies are an old client-side storage mechanism with inherent risks and limitations. Use Web Storage, IndexedDB or other modern methods instead. | Medium | Security |
@@ -165,14 +165,14 @@ The following table lists the component type, rule description, severity, and ca
 | Web Resources  | [web-sdl-no-msapp-exec-unsafe](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-msapp-exec-unsafe.md) | Calls to MSApp.execUnsafeLocalFunction() bypass script injection validation and should be avoided. | Medium | Security |
 | Web Resources  | [web-sdl-no-postmessage-star-origin](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-postmessage-star-origin.md) | Always provide specific target origin, not * when sending data to other windows using postMessage to avoid data leakage outside of trust boundary. | Medium | Security |
 | Web Resources  | [web-sdl-no-winjs-html-unsafe](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-winjs-html-unsafe.md) | Calls to WinJS.Utilities.setInnerHTMLUnsafe() and similar methods do not perform any input validation and should be avoided. Use WinJS.Utilities.setInnerHTML() instead. | Medium | Security |
-| Canvas App  | [app-formula-issues-high](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-high&client=PAChecker)  | Refer to Power Apps formula references for additional details.  | Critical  | Design |
-| Canvas App  | [app-formula-issues-medium](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-medium&client=PAChecker)  | Refer to Power Apps formula references for additional details.  |  Medium  | Design |
-| Canvas App  | [app-formula-issues-low](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-low&client=PAChecker)  | Refer to Power Apps formula references for additional details. |  Low  | Design |
-| Canvas App  | [app-use-delayoutput-text-input](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-use-delayoutput-text-input&client=PAChecker)  | Use delayed load in some scenarios to improve performance. |  Medium  | Performance |
-| Canvas App  | [app-reduce-screen-controls](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-reduce-screen-controls&client=PAChecker)  | Limit the number of app controls for improved performance.  |  Medium  | Performance |
-| Canvas App  | [app-include-accessible-label](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-include-accessible-label&client=PAChecker)  | Use explicit labels to improve app accessibility. |  Medium  | Accessibility |
-| Canvas App  | [app-include-alternative-input](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-include-alternative-input&client=PAChecker)  | Ensure all interactive elements are accessible to alternative inputs.  |  Medium  | Accessibility |
-| Canvas App  | [app-avoid-autostart](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-avoid-autostart&client=PAChecker)  | Avoid using autostart on players within an app.  |  Medium  | Accessibility |
+| Canvas App  | [app-formula-issues-high](/powerapps/maker/canvas-apps/formula-reference)  | Refer to Power Apps formula references for additional details.  | Critical  | Design |
+| Canvas App  | [app-formula-issues-medium](/powerapps/maker/canvas-apps/formula-reference)  | Refer to Power Apps formula references for additional details.  |  Medium  | Design |
+| Canvas App  | [app-formula-issues-low](/powerapps/maker/canvas-apps/formula-reference)  | Refer to Power Apps formula references for additional details. |  Low  | Design |
+| Canvas App  | [app-use-delayoutput-text-input](/powerapps/maker/canvas-apps/performance-tips#use-delayed-load)  | Use delayed load in some scenarios to improve performance. |  Medium  | Performance |
+| Canvas App  | [app-reduce-screen-controls](/powerapps/maker/canvas-apps/performance-tips#limit-the-number-of-controls)  | Limit the number of app controls for improved performance.  |  Medium  | Performance |
+| Canvas App  | [app-include-accessible-label](https://www.w3.org/WAI/tutorials/forms/labels/)  | Use explicit labels to improve app accessibility. |  Medium  | Accessibility |
+| Canvas App  | [app-include-alternative-input](https://www.w3.org/WAI/tips/developing/#ensure-that-all-interactive-elements-are-keyboard-accessible)  | Ensure all interactive elements are accessible to alternative inputs.  |  Medium  | Accessibility |
+| Canvas App  | [app-avoid-autostart](https://digital.gov/2014/06/30/508-accessible-videos-use-a-508-compliant-video-player/)  | Avoid using autostart on players within an app.  |  Medium  | Accessibility |
 
 ### See also
 
