@@ -42,6 +42,7 @@ The following is a list of known limitations for virtual tables created using th
 - Rollups and calculated fields can't be calculated for virtual tables. This is because rollups are a server side calculation in Dataverse, which requires the data to be stored locally.
 - The **AAD User** virtual table provided by Microsoft only allows read access.
 - Dataverse virtual tables can display values in fields that exceed the normal maximum values of Dataverse. This is because the values being presented aren't stored locally. For example, the Dataverse integer maximum value is 100,000,000,000, but it could retrieve and display 9,000,000,000,000 from SharePoint. However, if the user attempts to edit the number to a size larger than the max accepted size in Dataverse an error will be provided indicating the record can't be saved because it exceeds the maximum size.
+- Import and Export functionality is not supported for Virtual Tables.
 
 
 ## For each data source
