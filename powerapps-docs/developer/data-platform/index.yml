@@ -42,7 +42,7 @@ landingContent:
             url: work-with-data.md
           - text: Types and operations (Web API)
             url: ./webapi/web-api-types-operations.md
-          - text: Entity operations (Organization service)
+          - text: Entity operations (SDK for .NET)
             url: ./org-service/entity-operations.md
           - text: Use FetchXML to query data
             url: ./use-fetchxml-construct-query.md

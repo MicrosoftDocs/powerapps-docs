@@ -146,7 +146,7 @@ public class MyPlugin : IPlugin
     IPluginExecutionContext context = (IPluginExecutionContext)
       serviceProvider.GetService(typeof(IPluginExecutionContext));
 
-    // Obtain the Organization service reference 
+    // Obtain the IOrganizationService instance 
     IOrganizationServiceFactory serviceFactory =
       (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
     IOrganizationService orgService = serviceFactory.CreateOrganizationService(context.UserId);

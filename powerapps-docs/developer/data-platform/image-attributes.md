@@ -54,7 +54,7 @@ public static void CreateImageColumn(IOrganizationService service, string entity
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*)
 
 #### [Web API](#tab/webapi)
