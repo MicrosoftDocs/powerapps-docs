@@ -24,7 +24,7 @@ The template you choose for the new site (portal) determines your ability to cre
 | Environment type | Template | Limit | Additional information |
 | - | - | - | - |
 | [Environment with Dataverse](/power-pages/templates/) | Starter layout templates, Solution templates | 50 sites\* | No limits for language. Each portal can have one or more languages enabled. \*\*\* |
-| [Environment with Dataverse](/power-pages/templates.md#blank-page-template) | Blank page templates | 50 sites\* | No limits for language. Each portal can have one or more languages enabled. \*\*\* |
+| [Environment with Dataverse](/power-pages/templates/blank)| Blank page templates | 50 sites\* | No limits for language. Each portal can have one or more languages enabled. \*\*\* |
 | [Environment with Dynamics 365 apps](/power-pages/templates/dynamics-365-apps/overview) | Community, Customer self-service, Employee self-service portals | 50 sites\*\* | No limits for language. Each site can have one or more languages enabled. \*\*\*
 | [Environment with Dynamics 365 apps](/power-pages/templates/dynamics-365-apps/overview) | Partner portal, [Modern Community](/dynamics365/customer-service/community-get-started), Field Service customer, Order Returns, [Customer portal for Dynamics 365 Supply Chain Management](/dynamics365/supply-chain/sales-marketing/customer-portal-overview) | one site for each template | Limit of one site template, but additional languages for each template can be enabled. \*\*\* |
 
