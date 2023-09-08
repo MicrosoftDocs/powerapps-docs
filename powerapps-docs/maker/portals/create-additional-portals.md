@@ -19,7 +19,7 @@ contributors:
 
 [!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
-The ability to create additional sites (portals) is determined by the template chosen for the new site (portal). The following table explains the limits for creating additional portals in an environment.
+The template you choose for the new site (portal) determines your ability to create additional sites (portals). The following table explains the limits for creating additional portals in an environment.
 
 | Environment type | Template | Limit | Additional information |
 | - | - | - | - |

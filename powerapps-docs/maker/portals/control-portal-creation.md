@@ -33,9 +33,9 @@ Administrators are the users having one of the following Azure roles:
 - [Dynamics 365 administrator](admin/portal-admin-roles.md#dynamics-365-administrator)
 - [Power Platform admin](admin/portal-admin-roles.md#power-platform-administrator)
 
-Users not having any of the above mentioned Azure roles are considered as non-administrators.
+Users without these Azure roles are considered non-administrators.
 
-When the site creation is disabled in a tenant, non-administrators will see an error&mdash;`You don't have permissions to create a site in this environment. Choose another one or contact your admin to request access.`
+When the site creation is disabled in a tenant, non-administrators see an error&mdash;`You don't have permissions to create a site in this environment. Choose another one or contact your admin to request access.`
 
 > [!div class=mx-imgBorder]
 > ![Portal creation blocked error.](media/Site-creation-blocked-error.jpg "Site creation blocked error")
