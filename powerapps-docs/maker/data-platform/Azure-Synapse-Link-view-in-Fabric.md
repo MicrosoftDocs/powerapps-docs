@@ -23,6 +23,8 @@ Microsoft Dataverse direct integration with Microsoft Fabric enables organizatio
 > - This is a preview feature.
 >
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+>
+> - Dataverse environment life cycle operations, such as environment move operations, might impact reports built using this feature. <!-- In what way could reports be impacted? Can you provide an example or more detail? -->
 
 With just one click, you get more insights from your business data stored in Dataverse. :::image type="content" source="media/fabric/azure-synapse-link-two-experiences.png" alt-text="Azure Synapse link with Dataverse data in Microsoft Fabric" lightbox="media/fabric/azure-synapse-link-two-experiences.png":::
 
@@ -60,7 +62,7 @@ IT admins can manage this replica from the Azure Synapse Link for Dataverse page
 
 Azure Synapse Link for Dataverse enables IT admins to simplify their data integrations by provisioning and configuring Azure resources such as Azure datalake storage and Azure Synapse. Now, you can enable Fabric links for your existing links in Azure Synapse Link without any additional efforts or copying data. Fabric links simplify downstream data pipelines and you can use new features like Power BI DirectLake mode reports. Fabric Lakehouse and Lakehouse SQL endpoint contain improved query engines that let you work with Spark or SQL within an integrated environment.
 
-You can add or removing tables from existing Azure Synapse Link for Dataverse links and/or create new Fabric links within a single experience. You can also use Azure Synapse Link for Dataverse to choose [tables and entities from Dynamics 365 Finance and Operations](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-select-fno-data).
+You can add or removing tables from existing Azure Synapse Link for Dataverse links and/or create new Fabric links within a single experience. You can also use Azure Synapse Link for Dataverse to choose [tables and entities from Dynamics 365 Finance and Operations](/power-apps/maker/data-platform/azure-synapse-link-select-fno-data).
 
 > [!NOTE]
 > You need to create a Azure Synapse Link for Dataverse profile and enable the **Delta parquet conversion for Fabric link** option. This option isn't available for  Azure Synapse Link for Dataverse profiles that use the CSV output format.
@@ -257,7 +259,6 @@ If you experience an error message, here are suggestions to resolve the issue.
 |You need to get a Trial version of Fabric to get stated | You need a Power BI premium of a Fabric capacity. Power BI premium per user capacity won't be sufficient. You can get a free trial capacity by visiting: [Fabric (preview) trial](/fabric/get-started/fabric-trial) |
 | You need to be a System administrator to link to Fabric | You need the system administrator security role in Dataverse to perform this operation. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)  |
 
-> - Dataverse environment life cycle operations, such as environment move operations, might impact reports built using this feature. More information: [Troubleshooting common issues](#troubleshooting-common-issues) <!-- I don't see this addressed in the troubleshooting section below. Either add it or this link will have to be removed. -->
 
 ## See also
 
