@@ -126,10 +126,9 @@ These features and areas continue to use legacy terminology to ensure that exist
 
 ### See also
 
-[Get started with Power Apps portals](/training/paths/get-started-power-apps-portals/) <br>
-[Power Apps portals lifecycle](admin/portal-lifecycle.md) <br>
-[Available portal templates](portal-templates.md) <br>
-[Portals connectivity to a Microsoft Dataverse environment](admin/connectivity.md) <br>
+[Get started with Power Apps portals](/training/paths/get-started-power-apps-portals/) <br />
+[Power Apps portals lifecycle](admin/portal-lifecycle.md) <br />
+[Portals connectivity to a Microsoft Dataverse environment](admin/connectivity.md) <br />
 [Server-side cache in portals](admin/clear-server-side-cache.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
