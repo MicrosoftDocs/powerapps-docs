@@ -239,7 +239,7 @@ Insights aren't complete unless you can drive action and business processes. Bri
 1. On the command bar, select **New table** > **Create a virtual table**.
 1. Select **SQL Server** as the connection, and then select **Next**.
 1. Paste the SQL connection string you copied earlier with [Choose data from Fabric](#choose-data-from-fabric), (1) into the **SQL Server name** field.
-1. Enter the name of the data warehouse or SQL endpoint you copied (2) above into the **SQL database name** field.
+1. Enter the name of the data warehouse or SQL endpoint you copied earlier (2) into the **SQL database name** field.
 1. Select tables from Fabric. When complete, you can continue to work with the tables and build apps.
 
 ## Troubleshooting common issues
