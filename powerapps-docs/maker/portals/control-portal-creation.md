@@ -37,7 +37,7 @@ Users without these Azure roles are considered non-administrators.
 
 When the site creation is disabled in a tenant, non-administrators see an error&mdash;`You don't have permissions to create a site in this environment. Choose another one or contact your administrator to request access.`
 
-:::image type="content" source="media/Site-creation-blocked-error.jpg" alt-text="A screenshot of Power Pages design studio displaying a message indicating that the user does not have permissions to create a site in the environment they've selected.":::
+:::image type="content" source="media/site-creation-blocked-error.jpg" alt-text="A screenshot of Power Pages design studio displaying a message indicating that the user does not have permissions to create a site in the environment they've selected.":::
 
 To enable site creation in a tenant, change the settings value from `$true` to `$false`.
 
