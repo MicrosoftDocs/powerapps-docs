@@ -4,7 +4,7 @@ description: Learn how to use Power Apps portals Studio.
 author: neerajnandwana-msft
 ms.topic: conceptual
 ms.collection: get-started
-ms.date: 09/08/2023
+ms.date: 2/23/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: kkendrick
