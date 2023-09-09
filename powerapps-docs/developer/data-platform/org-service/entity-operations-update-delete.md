@@ -1,6 +1,6 @@
 ---
-title: "Update and delete table rows using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to update and delete table rows using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Update and delete table rows using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to update and delete table rows using the SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 07/22/2023
 ms.reviewer: pehecke
 ms.topic: article
@@ -13,11 +13,11 @@ contributors:
   - JimDaly
 ---
 
-# Update and delete table rows using the Organization Service
+# Update and delete table rows using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This article includes examples using both late-bound and early-bound programming styles. More information: [Early-bound and late-bound programming using the Organization service](early-bound-programming.md)
+This article includes examples using both late-bound and early-bound programming styles. More information: [Early-bound and late-bound programming using the SDK for .NET](early-bound-programming.md)
 
 Each of the examples uses a `svc` variable that represents an instance of a class that implements the methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. For information about the classes that support this interface see [IOrganizationService Interface](iorganizationservice-interface.md).
 
@@ -118,8 +118,8 @@ svc.Execute(request);
 
 You must use the [UpdateRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest) if you want to pass optional parameters. There are two cases where you might need special parameters.
 
-- When you want duplicate detection rules to be applied. More information: [Detect duplicate data using the Organization service](detect-duplicate-data.md)
-- When you're creating a table row that represents a solution component, such as a [WebResource](../reference/entities/webresource.md) and want to associate it with a specific solution. In this case, you would include the value of the [Solution.UniqueName](../reference/entities/solution.md#BKMK_UniqueName) using the `SolutionUniqueName` parameter. More information: [Use messages with the Organization service](use-messages.md)
+- When you want duplicate detection rules to be applied. More information: [Detect duplicate data using the SDK for .NET](detect-duplicate-data.md)
+- When you're creating a table row that represents a solution component, such as a [WebResource](../reference/entities/webresource.md) and want to associate it with a specific solution. In this case, you would include the value of the [Solution.UniqueName](../reference/entities/solution.md#BKMK_UniqueName) using the `SolutionUniqueName` parameter. More information: [Use messages with the SDK for .NET](use-messages.md)
 
 You must also use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if you want to specify an optimistic concurrency behavior. More information: [Optimistic concurrency behavior](#optimistic-concurrency-behavior)
 
@@ -227,7 +227,7 @@ svc.Update(account);
 
 ## Check for duplicate records
 
-When updating a table row, you may change the values so that the row represents a duplicate of another row. More information: [Detect duplicate data using the Organization service](detect-duplicate-data.md)
+When updating a table row, you may change the values so that the row represents a duplicate of another row. More information: [Detect duplicate data using the SDK for .NET](detect-duplicate-data.md)
 
 ## Update with Alternate Key
 
@@ -407,8 +407,8 @@ More information: [Behavior of specialized update operations](../special-update-
 
 ### See also
 
-[Create table rows using the Organization Service](entity-operations-create.md)   
-[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)   
-[Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)   
+[Create table rows using the SDK for .NET](entity-operations-create.md)   
+[Retrieve a table row using the SDK for .NET](entity-operations-retrieve.md)   
+[Associate and disassociate table rows using the SDK for .NET](entity-operations-associate-disassociate.md)   
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

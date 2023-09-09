@@ -32,7 +32,7 @@ Detect and retrieve duplicates:
 ### Options:
 
 - Web API: <xref href="Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates Function" />
-- Organization Service: <xref:Microsoft.Crm.Sdk.Messages.RetrieveDuplicatesRequest>
+- SDK for .NET: <xref:Microsoft.Crm.Sdk.Messages.RetrieveDuplicatesRequest>
 
 
 ### Example: Detect duplicates for a specified record using Web API
@@ -73,7 +73,7 @@ A maximum of 5000 duplicates are returned by the duplicate detection job.
 ### Options
 
 - Web API: <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates Action" />
-- Organization Service: <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest>
+- SDK for .NET: <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest>
 
 ### Example: Detect duplicates for a table type using the Web API 
 
@@ -186,12 +186,12 @@ The GUID of the base record is stored as `baserecordid` in the `DuplicateRecord`
 
 ## Detect duplicates during Create and Update operations
 
-Duplicate detection while creating or updating records only applies when the organization has duplicate detection enabled, the table is enabled for duplicate detection, and there are active duplicate detection rules being applied. By default, duplicate detection is suppressed when you are creating or updating a record using Web API or Organization service. 
+Duplicate detection while creating or updating records only applies when the organization has duplicate detection enabled, the table is enabled for duplicate detection, and there are active duplicate detection rules being applied. By default, duplicate detection is suppressed when you are creating or updating a record using Web API or SDK for .NET. 
 
 To detect duplicate data while creating and updating records, see:
 
 - WebAPI: [Detect duplicate data using the Web API](webapi/manage-duplicate-detection-create-update.md)
-- Organization Service: [Detect duplicate data using the Organization service](org-service/detect-duplicate-data.md)
+- SDK for .NET: [Detect duplicate data using the SDK for .NET](org-service/detect-duplicate-data.md)
 
 ### See also
 

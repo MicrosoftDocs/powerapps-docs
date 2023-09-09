@@ -49,7 +49,7 @@ To impersonate a user, add a request header named `CallerObjectId` with a GUID v
 More information: [Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md).
 
 
-## Impersonate another user using the Organization service
+## Impersonate another user using the SDK for .NET
 
 To impersonate another user, set the `CallerId` property to the Guid value of the impersonated user. The following classes that implement <xref:Microsoft.Xrm.Sdk.IOrganizationService> include this property.
 

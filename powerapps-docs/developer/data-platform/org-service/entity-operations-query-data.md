@@ -1,5 +1,5 @@
 ---
-title: "Query data using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Query data using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Introduces the different ways to query data using Microsoft Dataverse SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
@@ -13,11 +13,11 @@ contributors:
   - JimDaly
 ---
 
-# Query data using the Organization service
+# Query data using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-The SDK assemblies for the Organization service provide several methods to query data. Each provides different advantages.
+The SDK for .NET provides several methods to query data. Each provides different advantages.
 
 |Method|Advantages|
 |--|--|

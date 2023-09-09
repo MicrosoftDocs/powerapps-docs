@@ -151,7 +151,7 @@ static CommitAttachmentBlocksUploadResponse UploadAttachment(
 
 More information:
 
-- [Use the Organization service](org-service/overview.md)
+- [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 [!INCLUDE [cc-trygetcontenttype-note](includes/cc-trygetcontenttype-note.md)]
@@ -411,7 +411,7 @@ static (byte[] bytes, string fileName) DownloadAttachment(
 
 More information:
 
-- [Use the Organization service](org-service/overview.md)
+- [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 #### [Web API](#tab/webapi)
@@ -624,7 +624,7 @@ static CommitAnnotationBlocksUploadResponse UploadNote(
 
 More information:
 
-- [Use the Organization service](org-service/overview.md)
+- [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 [!INCLUDE [cc-trygetcontenttype-note](includes/cc-trygetcontenttype-note.md)]
@@ -880,7 +880,7 @@ return (fileBytes.ToArray(), fileName);
 
 More information:
 
-- [Use the Organization service](org-service/overview.md)
+- [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 #### [Web API](#tab/webapi)
@@ -1003,7 +1003,7 @@ public static int GetMaxUploadFileSize(IOrganizationService service) {
 
 More information:
 
-- [Use the Organization service](org-service/overview.md)
+- [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.RetrieveMultiple Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)
 - [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
 
@@ -1079,7 +1079,7 @@ public static void SetMaxUploadFileSize(
 
 More information:
 
-- [Use the Organization service](org-service/overview.md)
+- [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.RetrieveMultiple Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)
 - [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
 - [IOrganizationService.Update Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A)

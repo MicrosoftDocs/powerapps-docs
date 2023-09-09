@@ -125,7 +125,7 @@ Guid accountId = service.Create(account);
 
 ### See Also
 
- [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)
+ [Generate early-bound classes for the SDK for .NET](generate-early-bound-classes.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
