@@ -21,7 +21,7 @@ The Web API supports working with relationship definitions (metadata). The conce
 
 ## Eligibility for relationships
 
-Before you create a table (entity) relationship you should confirm whether the table is eligible to participate in the relationship. You can use the actions listed in the following table to determine eligibility. These actions correspond to the Organization service messages described in [Table relationship eligibility](../entity-relationship-eligibility.md).  
+Before you create a table (entity) relationship you should confirm whether the table is eligible to participate in the relationship. You can use the actions listed in the following table to determine eligibility. These actions correspond to the SDK for .NET messages described in [Table relationship eligibility](../entity-relationship-eligibility.md).  
   
 |Action|Description|  
 |------------|-----------------|  

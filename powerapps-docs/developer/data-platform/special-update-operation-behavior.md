@@ -41,7 +41,7 @@ When update requests are processed that include both state/status fields plus ot
 
 ### See also
 
-[Update and Delete tables using the Organization Service](org-service/entity-operations-update-delete.md)<br />
+[Update and Delete tables using the SDK for .NET](org-service/entity-operations-update-delete.md)<br />
 [Event Framework](event-framework.md)
 
 

@@ -1,6 +1,6 @@
 - name: Work with data using code
   href: ../work-with-data.md
-- name: Use the Organization service
+- name: Use the SDK for .NET
   href: overview.md
 - name: Get started
   items:
@@ -102,9 +102,9 @@
   - name: Create a table row to send email activities
     href: create-update-entity-emailed.md
 - name: Import data
-  href: ../import-data.md #Topic is for both Web API and Organization service
+  href: ../import-data.md #Topic is for both Web API and SDK for .NET
 - name: Sample data
-  href: ../sample-data.md #Topic is for both Web API and Organization service
+  href: ../sample-data.md #Topic is for both Web API and SDK for .NET
 - name: Coding practices
   items:
   - name: Handle exceptions in your code
