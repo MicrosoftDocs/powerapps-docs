@@ -72,7 +72,7 @@ sample_filecolumn_name: 25mb.pdf
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
 
 #### [Web API](#tab/webapi)
@@ -175,7 +175,7 @@ fileattachmentid: 63a6afb7-4c52-ed11-bba1-000d3a9933c9
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [Retrieve with related rows](org-service/entity-operations-retrieve.md#retrieve-with-related-rows)
 
 #### [Web API](#tab/webapi)
@@ -352,7 +352,7 @@ static Guid UploadFile(
 
 More information:
 
-- [Use the Organization service](org-service/overview.md)
+- [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 [!INCLUDE [cc-trygetcontenttype-note](includes/cc-trygetcontenttype-note.md)]
@@ -809,7 +809,7 @@ private static byte[] DownloadFile(
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 #### [Web API](#tab/webapi)

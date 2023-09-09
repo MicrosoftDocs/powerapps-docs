@@ -15,7 +15,7 @@ contributors:
 
 # Configure table relationship cascading behavior  
 
-You can configure cascading behaviors for a one-to-many relationship to preserve data integrity and automate business processes. Both Web API and organization service support configuring cascading behavior.
+You can configure cascading behaviors for a one-to-many relationship to preserve data integrity and automate business processes. Both Web API and SDK for .NET support configuring cascading behavior.
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
@@ -25,7 +25,7 @@ When working with Web API, you can define a One-to-Many relationship using <xref
 
 More information: [Create a One-to-Many relationship using Web API](webapi/create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship).
 
-## Using Organization Service to configure cascading behavior
+## Using SDK for .NET to configure cascading behavior
 
 When you use <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRelationshipRequest>, you include an instance of a <xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata> class in the body of the request. In the <xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.CascadeConfiguration> property of that class you use the <xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class.  
 

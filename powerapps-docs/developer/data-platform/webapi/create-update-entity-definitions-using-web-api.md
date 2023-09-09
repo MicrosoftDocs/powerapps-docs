@@ -14,7 +14,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can perform all the same operations on table definitions using the Web API that you can with the Organization service. This article focuses on working with table definitions (metadata) using the Web API. To find details about the table definition properties, see [Customize table definitions](../customize-entity-metadata.md) and [EntityMetadata EntityType](xref:Microsoft.Dynamics.CRM.EntityMetadata).
+You can perform all the same operations on table definitions using the Web API that you can with the SDK for .NET. This article focuses on working with table definitions (metadata) using the Web API. To find details about the table definition properties, see [Customize table definitions](../customize-entity-metadata.md) and [EntityMetadata EntityType](xref:Microsoft.Dynamics.CRM.EntityMetadata).
 
 <a name="bkmk_createEntities"></a>
 
@@ -157,7 +157,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c
 ## Update table definitions
   
 > [!IMPORTANT]
->  You can't use the `PATCH` method to update data model entities. The table definitions have parity with the Organization service 
+>  You can't use the `PATCH` method to update data model entities. The table definitions have parity with the SDK for .NET 
 >  [UpdateEntityRequest Class](xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest) that replaces the entity definition with the one included.
 >  Therefore, you must use the `PUT` method when updating data model entities and be careful to include all the existing properties that you don't intend to change.
 >  You can't update individual properties.  
@@ -489,7 +489,7 @@ OData-Version: 4.0
 [Query table definitions using the Web API](query-metadata-web-api.md)  
 [Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)  
 [Model table relationships using the Web API](create-update-entity-relationships-using-web-api.md)  
-[Work with table definitions using the Organization service](../org-service/work-with-metadata.md)  
+[Work with table definitions using the SDK for .NET](../org-service/work-with-metadata.md)  
 [Column (attribute) definitions](../entity-attribute-metadata.md)  
 [Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
 [Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
