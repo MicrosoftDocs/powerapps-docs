@@ -1056,7 +1056,9 @@ The following table describes the different formatting features and functionalit
 > You can access your browser's context menu by selecting **Ctrl** + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.<br><br>
 > Also, an alternative to your browser's built-in spellchecker is the [Microsoft Editor browser extension](https://www.microsoft.com/microsoft-365/microsoft-editor). Microsoft Editor works seamlessly with the rich text editor control, and when enabled, provides fast and easy inline grammar and spellcheck capabilities.
 
-## Use Copilot to refine text
+## Use Copilot to refine text (Preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Copilot uses natural language processing (NLP) algorithms to help refine and improve written text. You can provide an initial draft or a partial piece of writing, and Copilot generates suggestions to enhance the content, grammar, clarity, or overall quality of the text. More information: [Use Copilot in rich text editor for email](../model-driven-apps/use-copilot-email-assist.md)
 
