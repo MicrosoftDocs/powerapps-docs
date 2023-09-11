@@ -585,9 +585,9 @@ If you're using a Dynamics 365 app other than Customer Service Hub or Customer S
 
 You can configure the ability for users to pin or unpin activities, such as notes, to the top of the timeline so that they're easily accessible. Pinning activities helps users save time by not requiring them to scroll an entire timeline to find the information they need.
 
-By default, notes are enabled for pinning. To enable other activities, on the design form for each activity you want to enable, select the **Pin / Unpin** checkbox.
+By default, notes are enabled for pinning. When you click on the activity type such as a task, appointment, and so forth, the pin and unpin option appears in the list of commands. Select the **Pin / Unpin** checkbox for each activity you want users to be able to pin or unpin.
 
-:::image type="content" source="media/pin-unpin-configuration.png" alt-text="View of the Pin / Unpin checkbox":::
+:::image type="content" source="media/set-up-pin-unpin.png" alt-text="View of the Pin / Unpin checkbox":::
 
 ## Create and add custom activities to timeline
 
