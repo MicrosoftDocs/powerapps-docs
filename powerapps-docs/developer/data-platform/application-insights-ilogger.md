@@ -20,7 +20,7 @@ contributors:
 > To use this capability you must first enable the Application Insights integration feature. More information: [Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<p/>
 > There is presently no support of `ILogger` within a plug-in profiling/debug session of the Plug-in Registration tool or the Power Platform Tools extension for Visual Studio.
 
-When you enable Application Insights for your organization, any plug-ins written using the [ILogger Interface](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) provided in the Organization Service SDK assemblies write telemetry to your Application Insights resource.
+When you enable Application Insights for your organization, any plug-ins written using the [ILogger Interface](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) provided in the SDK for .NET assemblies write telemetry to your Application Insights resource.
 
 The Dataverse platform captures the Dataverse and model-driven app telemetry data and exports it to your Application Insights resource. There's some latency between the time it was captured and when it becomes available to you in Application Insights.  Because Microsoft gathers this telemetry, you don't need to write any code to enable it.
 
@@ -49,7 +49,7 @@ If you're an ISV with a product that includes plug-ins, your customers who enabl
 
 ## Use ILogger
 
-ILogger is a common interface for capturing log information. The implementation provided with the Organization Service SDK assemblies provides common methods to support establishing a scope and different levels of logging.  There's currently no setting to control what level of logs are written. The levels can be used within Application Insights to filter which logs to view.
+ILogger is a common interface for capturing log information. The implementation provided with the SDK for .NET assemblies provides common methods to support establishing a scope and different levels of logging.  There's currently no setting to control what level of logs are written. The levels can be used within Application Insights to filter which logs to view.
 
 The following is an example of a plug-in using both ILogger and ITracingService.Trace.
 
@@ -136,7 +136,7 @@ namespace ILoggerExample
 
                     }
 
-                    // Obtain the organization service reference.
+                    // Obtain the IOrganizationService reference.
                     IOrganizationServiceFactory serviceFactory = (IOrganizationServiceFactory)serviceProvider
                     .GetService(typeof(IOrganizationServiceFactory));
 

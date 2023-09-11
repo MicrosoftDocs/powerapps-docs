@@ -536,6 +536,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
             - name: Spinner
               href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
+            - name: Table
+              href: ./canvas-apps/controls/modern-controls/modern-control-table.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
             - name: Text
@@ -1835,20 +1837,8 @@
       href: ./portals/terminology-changes.md
     - name: Create and manage sites
       items:
-        - name: Available templates
-          href: ./portals/portal-templates.md
-        - name: Starter site
-          items:
-            - name: Create a starter site
-              href: ./portals/create-portal.md
-            - name: Contact us sample
-              href: ./portals/contact-us-sample.md
-        - name: Create a site with Dynamics 365 environment
-          href: ./portals/create-dynamics-portal.md
         - name: Create a site using the older add-on
           href: ./portals/provision-portal-add-on.md
-        - name: Common problems and resolutions while creating a site
-          href: ./portals/create-common-problems.md
         - name: Create additional sites in an environment
           href: ./portals/create-additional-portals.md
         - name: Control site creation in a tenant
@@ -1953,7 +1943,7 @@
       href: ./data-platform/create-edit-metadata.md
     - name: Types of tables
       href: ./data-platform/types-of-entities.md
-    - name: Create or edit a table (preview)
+    - name: Create or edit a table
       href: ./data-platform/create-edit-entities-portal.md
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
@@ -2294,6 +2284,8 @@
         href: ./data-platform/azure-synapse-link-choices-serverless.md
       - name: Export data in Delta Lake format
         href: ./data-platform/azure-synapse-link-delta-lake.md
+      - name: View Dataverse data in Microsoft Fabric (preview)
+        href: ./data-platform/azure-synapse-link-view-in-fabric.md
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
       - name: Ingest exported data with Azure Data Factory

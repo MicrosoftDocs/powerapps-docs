@@ -16,7 +16,7 @@ contributors:
 
 # Customized editable grid
 
-This sample demonstrates how to customize the Power Apps editable grid control as described in [Customize the editable grid control (Preview)](../customize-editable-grid-control.md).
+This sample demonstrates how to customize the Power Apps editable grid control as described in [Customize the editable grid control](../customize-editable-grid-control.md).
 
 This sample changes the main grid page for a table that is configured to use this control. All text columns will use green text. Any values for the `creditlimit` column will display as blue if the value is greater than 100,000 and red otherwise.
 
@@ -48,7 +48,7 @@ export const cellRendererOverrides: CellRendererOverrides = {
     ["Currency"]: (props, col) => {
         // Only override the cell renderer for the CreditLimit column
         if (col.colDefs[col.columnIndex].name === 'creditlimit') {
-            // Render the cell value in green when the value is blue than $100,000 and red otherwise
+            // Render the cell value in blue when the value is more than $100,000 and red otherwise
             if ((props.value as number) > 100000) {
                 return <Label style={{ color: 'blue' }}>{props.formattedValue}</Label>
             }

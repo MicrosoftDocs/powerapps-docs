@@ -77,7 +77,7 @@ The output of this code is "Retention policy created with Id : c1a9e932-89f6-4f1
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Create Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A)
 
 ### [Web API](#tab/webapi)
