@@ -56,7 +56,7 @@ Examples in this article use a custom API named `sample_ExportDataUsingFetchXmlT
 
 Use the `ExecuteBackgroundOperation` message.
 
-The SDK doesn't have `ExecuteBackgroundOperation` request and response classes. Until these classes are added, use the base [OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest) and [OrganizationResponse](xref:Microsoft.Xrm.Sdk.OrganizationResponse) classes as described in [Use messages with the organization service](org-service/use-messages.md).
+The SDK doesn't have `ExecuteBackgroundOperation` request and response classes. Until these classes are added, use the base [OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest) and [OrganizationResponse](xref:Microsoft.Xrm.Sdk.OrganizationResponse) classes as described in [Use messages with the SDK for .NET](org-service/use-messages.md).
 
 The following table describes the input parameters for the `ExecuteBackgroundOperation` message.
 
@@ -117,7 +117,7 @@ BackgroundOperationId: <backgroundoperationid value>
 Location: [Organization URI]/api/backgroundoperation/<backgroundoperationid value>
 ```
 
-Learn more about the [IOrganizationService interface](xref:Microsoft.Xrm.Sdk.IOrganizationService) and how to [use messages with the organization service](org-service/use-messages.md).
+Learn more about the [IOrganizationService interface](xref:Microsoft.Xrm.Sdk.IOrganizationService) and how to [use messages with the SDK for .NET](org-service/use-messages.md).
 
 ### [Web API](#tab/webapi)
 

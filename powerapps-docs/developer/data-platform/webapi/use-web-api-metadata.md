@@ -14,7 +14,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can perform any of the table and column definition (metadata) operations with the Web API that you can perform using the Organization service. This section provides guidance about how to use the Web API with the entity types included in <xref:Microsoft.Dynamics.CRM.MetadataEntityTypeIndex>.  
+You can perform any of the table and column definition (metadata) operations with the Web API that you can perform using the SDK for .NET. This section provides guidance about how to use the Web API with the entity types included in <xref:Microsoft.Dynamics.CRM.MetadataEntityTypeIndex>.  
 
  There are four entity set paths exposed to perform operations with definition entities as described in the following table.  
   
@@ -31,7 +31,7 @@ These definition entities have some substantial differences from the tables that
   
 - The properties for definition entities use many of the complex and enum types defined in <xref:Microsoft.Dynamics.CRM.ComplexTypeIndex> and <xref:Microsoft.Dynamics.CRM.EnumTypeIndex> rather than the primitive data types used for properties in entities that inherit from <xref:Microsoft.Dynamics.CRM.crmbaseentity?text=crmbaseentity EntityType>.  
   
-- Definition entities follow a different naming convention and maintain the Pascal Case naming style used in the assemblies of the Organization service.  
+- Definition entities follow a different naming convention and maintain the Pascal Case naming style used in the assemblies of the SDK for .NET.  
   
 - Definition entities make more extensive use of inheritance, which requires that you may need to perform casts to retrieve the data that you want.  
   
@@ -44,10 +44,10 @@ You can use the Web API to query table or column definitions using a RESTful que
 Your applications can adapt to configuration changes by querying the table and column definitions. When you know one of the key properties of a definition item, you can retrieve definitions using the Web API.  
 
 [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)  
-You can create and update tables using the Web API to achieve the same results you get with the organization service <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest>.  
+You can create and update tables using the Web API to achieve the same results you get with the SDK for .NET <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest>.  
 
 [Create and update column definitions using the Web API](create-update-column-definitions-using-web-api.md)  
-You can create and update columns using the Web API to achieve the same results you get with the organization service <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest>, and <xref:Microsoft.Xrm.Sdk.Messages.UpdateAttributeRequest>.  
+You can create and update columns using the Web API to achieve the same results you get with the SDK for .NET <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest>, and <xref:Microsoft.Xrm.Sdk.Messages.UpdateAttributeRequest>.  
 
 [Create and update table relationships using the Web API](create-update-entity-relationships-using-web-api.md)  
 You can check whether tables are eligible to participate in a relationship with other tables and then create or update those relationships using the Web API.

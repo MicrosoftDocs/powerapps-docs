@@ -119,6 +119,6 @@ OData-Version: 4.0
 
 ### See Also
 
-[Detect duplicate data using the Organization service](../org-service/detect-duplicate-data.md)
+[Detect duplicate data using the SDK for .NET](../org-service/detect-duplicate-data.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

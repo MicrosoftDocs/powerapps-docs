@@ -1,6 +1,6 @@
 ---
-title: "Quickstart: Execute an Organization service request (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Demonstrates how to connect to the Organization service of Microsoft Dataverse and execute a request." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Quickstart: Execute an SDK for .NET request (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Demonstrates how to connect to the SDK for .NET of Microsoft Dataverse and execute a request." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 10/05/2022
 author: phecke
 ms.author: pehecke
@@ -13,7 +13,7 @@ contributors:
  - phecke
 ---
 
-# Quickstart: Execute an Organization service request (C#)
+# Quickstart: Execute an SDK for .NET request (C#)
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
@@ -22,7 +22,7 @@ This topic shows you how to begin using classes in the SDK for .NET assemblies t
 Your application will call the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class. The result returned from the web service is a populated <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse>.<xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId> value which is the unique identifier of your Dataverse system user account.
 
 > [!NOTE]
-> This quick start example does not include exception handling for brevity. This is a minimum code example of what you need to connect to and use the Organization service.
+> This quick start example does not include exception handling for brevity. This is a minimum code example of what you need to connect to and use the SDK for .NET.
 
 You can download the complete code sample from GitHub [quickstart-execute-request](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/GetStarted/quickstart-execute-request/).
 
@@ -124,10 +124,10 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 The console app demonstrates how to connect to the Organization web service using a connection string, execute a web service message request, and access some data in the response. Next, you may want to look at common web service data operations like create, retrieve, update, and delete.
 
 The following articles will explain how to work with business data in Dataverse tables.  
-[Entity class operations using the Organization service](entity-operations.md)  
-[Create table rows using the Organization Service](entity-operations-create.md)  
-[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)  
-[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
-[Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)
+[Entity class operations using the SDK for .NET](entity-operations.md)  
+[Create table rows using the SDK for .NET](entity-operations-create.md)  
+[Retrieve a table row using the SDK for .NET](entity-operations-retrieve.md)  
+[Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)<br />
+[Associate and disassociate table rows using the SDK for .NET](entity-operations-associate-disassociate.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

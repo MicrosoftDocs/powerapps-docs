@@ -406,7 +406,7 @@ var response = (CreateAttributeResponse)service.Execute(createAttributeRequest);
 [Query Data using the Web API](webapi/query-data-web-api.md)<br />
 [Work with column definitions](org-service/metadata-attributemetadata.md)<br />
 [Sample: Work with columns definitions](org-service/samples/work-with-attributes.md)<br />
-[Late-bound and early-bound programming using the Organization Service](org-service/early-bound-programming.md)
+[Late-bound and early-bound programming using the SDK for .NET](org-service/early-bound-programming.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
