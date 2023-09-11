@@ -28,7 +28,7 @@ The Copilot for email assist feature helps in refining content for emails specif
 
 ## Prerequisites
 
-Contact your administrator to enable the Copilot in rich text editor feature for your app. More information: [Controlling which features are enabled](../canvas-apps/working-with-experimental-preview.md#controlling-which-features-are-enabled) 
+The Copilot for email assist feature must be enabled in app settings for the model-driven app. More information: [Controlling which features are enabled](../canvas-apps/working-with-experimental-preview.md#controlling-which-features-are-enabled) 
 
 ## Refine content for emails
 
