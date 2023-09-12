@@ -1,7 +1,7 @@
 ---
 title: "File columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to create, retrieve, update and delete file columns using code." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 02/02/2023
+ms.date: 09/12/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -141,10 +141,11 @@ More information:
 - [Block files by extension](files-images-overview.md#block-files-by-extension)
 - [Block or allow certain mime types](files-images-overview.md#block-or-allow-certain-mime-types)
 
-## Restrictions with Self-managed key (BYOK) 
+## Restrictions with self-managed key (BYOK)
 
 > [!IMPORTANT]
-> Some restrictions apply when using the File and full-sized Image data-types in Dataverse. If [self-managed key (BYOK)](https://learn.microsoft.com/power-platform/admin/manage-encryption-key) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of BYOK in order to make use of these data-types.<p/>
+> Some restrictions apply when using the File and full-sized Image data-types in Dataverse. If [self-managed key (BYOK)](/power-platform/admin/manage-encryption-key) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of BYOK in order to make use of these data-types.
+>
 > All BYOK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse File and Image data-types. Files within BYOK organizations are
 > limited to a maximum size of 128MB per file. All files and images within BYOK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob storage.
 > Other limitations:
