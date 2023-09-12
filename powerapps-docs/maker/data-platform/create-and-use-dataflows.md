@@ -195,7 +195,7 @@ issues. This section provides troubleshooting tips when issues occur.
     SharePoint site, without any subfolders or documents. For example, use a link
     similar to *https://microsoft.sharepoint.com/teams/ObjectModel*.
 
--   **SharePoint connector and DLP.** If you use DLP policies to block "Web Contents"/"HTTP with Azure AD" connector then Sharepoint connector will fail. "Web Contents"/"HTTP with Azure AD" connector needs to be allowed in DLP policies for Sharepoint connector to work. 
+-   **DLP.** If you use DLP policies to block "Web Contents"/"HTTP with Azure AD" connector then Sharepoint connector and OData connector will fail. "Web Contents"/"HTTP with Azure AD" connector needs to be allowed in DLP policies for Sharepoint/OData connector to work. 
 
 -   **JSON File connector.** Currently you can connect to a JSON file using
     basic authentication only. For example, a URL similar to *https://XXXXX.blob.core.windows.net/path/file.json?sv=2019-01-01&si=something&sr=c&sig=123456abcdefg* is currently not supported.
