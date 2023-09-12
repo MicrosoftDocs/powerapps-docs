@@ -203,6 +203,9 @@ issues. This section provides troubleshooting tips when issues occur.
     Active Directory authentication for Azure Synapse Analytics. Use
     basic authentication for this scenario.
 
+> [!NOTE]
+> If you use data loss prevention (DLP) policies to block the **HTTP with Azure AD** connector then **SharePoint** and **OData** connectors will fail. The **HTTP with Azure AD** connector needs to be allowed in DLP policies for **SharePoint** and **OData** connectors to work.
+
 ## Next steps
 The following articles are useful for further information and scenarios when using dataflows:
 
