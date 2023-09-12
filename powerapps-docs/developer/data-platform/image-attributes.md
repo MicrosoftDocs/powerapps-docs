@@ -262,7 +262,7 @@ OData-Version: 4.0
 
 ## Restrictions with Customer Managed Keys (CMK)
 
-The same restrictions that apply to file columns also apply to image columns configured to store full-sized images. More information: [Restrictions with Customer Managed Keys (CMK)](file-attributes.md#restrictions-with-customer-managed-keys-cmk)
+The same restrictions that apply to file columns also apply to image columns configured to store full-sized images. More information: [Restrictions with self-managed key (BYOK)](file-attributes.md#restrictions-with-self-managed-key-byok)
 
 ### See also
 
