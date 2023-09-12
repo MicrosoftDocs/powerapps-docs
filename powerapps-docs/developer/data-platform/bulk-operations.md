@@ -217,7 +217,7 @@ OData-Version: 4.0
 
 ##### [SDK for .NET](#tab/sdk)
 
-You must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't have a `DeleteMultipleRequest` class. Learn how to [use messages with the Organization service](org-service/use-messages.md).
+You must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't have a `DeleteMultipleRequest` class. Learn how to [use messages with the SDK for .NET](org-service/use-messages.md).
 
 The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table using the alternate key to include the `partitionid` to uniquely identify the rows.
 
@@ -565,4 +565,4 @@ These limits are based on data changes: `Create`, `Update`, and `Delete` operati
 [Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)  
 [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](webapi/samples/create-update-multiple.md)  
 [Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)  
-[Use messages with the Organization service](org-service/use-messages.md)
+[Use messages with the SDK for .NET](org-service/use-messages.md)
