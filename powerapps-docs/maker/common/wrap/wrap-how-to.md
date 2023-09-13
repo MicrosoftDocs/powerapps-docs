@@ -42,7 +42,7 @@ If you're creating a mobile app package for Android platform and you plan to cod
 
 ## Add canvas app to solution
 
-Wrap for Power Apps requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. Go to **Solutions** section, select a solution and press **Edit** button. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+Wrap for Power Apps requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. Go to **Solutions** section, select a solution and press **Edit** button. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)]
 
 :::image type="content" source="media/wrap-canvas-app/select-solution.png" alt-text="Select a solution.":::
 
@@ -61,7 +61,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. Select **Wrap**, from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+2. Select **Wrap**, from the left navigation pane. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)]
 
 3. Select the app that you want to wrap, and then select **Wrap** on the command bar.
 
