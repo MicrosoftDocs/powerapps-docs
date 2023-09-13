@@ -1,6 +1,6 @@
 ---
-title: "Use messages with the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use messages with the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Understand how messages are used to invoke operations using the SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.collection: get-started
 ms.date: 04/24/2023
 author: divkamath
@@ -13,7 +13,7 @@ contributors:
  - JimDaly
  - phecke
 ---
-# Use messages with the Organization service
+# Use messages with the SDK for .NET
 
 It's important to understand that all data operations in Dataverse are defined as *messages* and the definitions of these messages are stored in Dataverse.
 
@@ -150,7 +150,7 @@ Developers can generate Request and Response classes for the messages found in t
 |Power Platform CLI<br />[pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)<br />command|Generates cross-platform .NET (Core) classes for applications that use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>.<br />Use the [--generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate Request and Response classes.|
 |CrmSvcUtil.exe|Generates .NET Framework classes to support applications that use .NET Framework, such as Dataverse plug-ins.<br />Use the `generateActions` parameter to generate Request and Response classes.|
 
-More information: [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)
+More information: [Generate early-bound classes for the SDK for .NET](generate-early-bound-classes.md)
 
 ### Passing optional parameters with a request
 
@@ -687,9 +687,9 @@ OData-Version: 4.0
 
 ### See also
 
-[Table operations using the Organization service](entity-operations.md)<br />
+[Table operations using the SDK for .NET](entity-operations.md)<br />
 [Use ExecuteAsync to execute messages asynchronously](use-executeAsync.md)<br />
 [Execute messages in a single database transaction](use-executetransaction.md)<br />
-[Execute multiple requests using the Organization service](execute-multiple-requests.md)
+[Execute multiple requests using the SDK for .NET](execute-multiple-requests.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

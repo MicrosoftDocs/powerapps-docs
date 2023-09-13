@@ -182,7 +182,7 @@ HTTP/1.1 200 OK
 
 ## Samples
 
-Look at the following Organization service samples for the bulk delete feature:
+Look at the following SDK for .NET samples for the bulk delete feature:
 
 - [Sample: Bulk delete exported records](org-service/samples/bulk-delete-exported-records.md)   
 - [Sample: Bulk delete records that match common criteria](org-service/samples/bulk-delete-records-match-common-criteria.md)

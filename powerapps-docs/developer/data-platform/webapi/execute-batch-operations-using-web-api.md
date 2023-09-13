@@ -26,7 +26,7 @@ Batch requests provide two capabilities that can be used together:
 - You can send requests for multiple operations with a single HTTP request.
 
    - Batch requests can contain up to 1000 individual requests and can't contain other batch requests.
-   - This is equivalent to the `ExecuteMultiple` message available in the SDK for .NET. More information: [Execute multiple requests using the Organization service](../org-service/execute-multiple-requests.md)
+   - This is equivalent to the `ExecuteMultiple` message available in the SDK for .NET. More information: [Execute multiple requests using the SDK for .NET](../org-service/execute-multiple-requests.md)
 
 - You can group requests for operations together so that they're included as a single transaction using [Change sets](#change-sets).
 

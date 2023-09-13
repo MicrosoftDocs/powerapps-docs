@@ -56,6 +56,12 @@ These restrictions are enforced by Dataverse for each environment:
 - Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed.
 - Retained data includes lookup data. Lookup values in the table are denormalized with ID and name value.
 
+## Known issues
+
+### Personal views of retained data
+
+Saving the query results of the retained data as a personal view isn't supported. Although users can save the query results of the retained data as a personal view, the view doesn't return results.
+
 ## See also
 
 [Dataverse long term data retention overview (preview)](data-retention-overview.md) <br />

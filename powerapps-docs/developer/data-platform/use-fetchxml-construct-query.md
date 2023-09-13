@@ -17,7 +17,7 @@ search.audienceType:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-FetchXML is a proprietary XML based query language of Microsoft Dataverse used to query data using either the **Web API** or the **Organization service**. It's based on a schema that describes the capabilities of the language. The FetchXML language supports similar query capabilities as [query expressions](org-service/build-queries-with-queryexpression.md). In addition, it's used as a serialized form of query, used to save a query as a user-owned saved view in the [UserQuery Table](reference/entities/userquery.md) and as an organization-owned saved view in the [SavedQuery Table](reference/entities/savedquery.md).
+FetchXML is a proprietary XML based query language of Microsoft Dataverse used to query data using either the **Web API** or the **SDK for .NET**. It's based on a schema that describes the capabilities of the language. The FetchXML language supports similar query capabilities as [query expressions](org-service/build-queries-with-queryexpression.md). In addition, it's used as a serialized form of query, used to save a query as a user-owned saved view in the [UserQuery Table](reference/entities/userquery.md) and as an organization-owned saved view in the [SavedQuery Table](reference/entities/savedquery.md).
 
 ## Create the FetchXML query string
   
@@ -93,13 +93,13 @@ This example shows an inner join between EntityMap and AttributeMap where the En
 
 ## Execute the FetchXML query
 
-You can execute a FetchXML query by using either the **Web API** or the **Organization service**.
+You can execute a FetchXML query by using either the **Web API** or the **SDK for .NET**.
 
 ### Using Web API
 
 You can pass a URL encoded FetchXml string to the appropriate entityset using the `fetchXml` query string parameter. More information: [Use FetchXml with Web API](webapi/use-fetchxml-web-api.md).
 
-### Using Organization service
+### Using SDK for .NET
 
 Use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method passing an <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> where the <xref:Microsoft.Xrm.Sdk.Query.FetchExpression.Query> property contains the FetchXml query.
 
