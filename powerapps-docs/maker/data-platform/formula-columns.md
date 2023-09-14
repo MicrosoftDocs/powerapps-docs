@@ -28,25 +28,27 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
 1. Select **Tables**, and then select the table where you want to add a formula column. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the **Columns** area, and then select **New column**.
 1. Enter the following information:
-
    - A **Display name** for the column.
    - Optionally, enter a **Description** of the column.
-   - # [Type or paste formula](#tab/type-or-paste)
-   1. In **Data type**, select ***fx* Formula** > **Type a formula**.
-   1. Enter the formula in the **Formula** box. More information: <type a formula link>
+1. Select ***fx* Formula** and then choose the input type.
 
-    # [Type natural language (preview)](#tab/natural language)
+# [Type or paste formula](#tab/type-or-paste)
+     a. In **Data type**, select ***fx* Formula** > **Type a formula**.
+     b. Enter the formula in the **Formula** box. More information: <type a formula link>
+
+# [Type natural language (preview)](#tab/natural language)
     [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-   1. In **Data type**, select ***fx* Formula** > **Get formula suggestions**.
-   1. Type your question in the **Formula** box. More information <>.
+     1. In **Data type**, select ***fx* Formula** > **Get formula suggestions**.
+     1. Type your question in the **Formula** box. More information <>.
 
 ---
+1. Select additional properties:
    - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
    - **Advanced options**:
-     - If the formula entered evaluates to a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
-5. Select **Save**.
+     - If the formula evaluates to a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
+1. Select **Save**.
 
-## Type a formula
+### Type a formula
 
 The following example creates a formula column called *Total price*. The *Number of units* column is a whole number data type. The *Price* column is a decimal data type.
 
@@ -60,11 +62,28 @@ The formula that you enter determines the column type. You can't change a column
 
 For example, the formula *price * discount* creates a column type of number. You can change *price * discount* to  *price * (discount + 10%)* because that doesn’t change the column type. However, you can’t change *price * discount* to  *Text(price * discount)* because that would require changing the column type to string.
 
-## Get formula suggestions (preview)
-
-Formula suggestions used natural language technology to interpret your input to a Power Fx formula.
+### Get formula suggestions (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+<!-- Need an intro from Divya about how formula suggestions works as a high level and what the benefits are, e.g. Type a sentence that represents what action you want, such as calculate the shipment arrival date by adding 5 days from the order closed date-->Formula suggestions uses natural language technology to interpret your input to a Power Fx formula.
+
+> [!IMPORTANT]
+> This is a preview feature
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+A few examples of input: 
+
+| Natural language entered  | Suggested Power Fx formula  |
+|---------|---------|
+|calculate the shipment arrival date by adding 5 days from the order closed date     |         |
+|Row2     |         |
+|Row3     |         |
+|Row4     |         |
+|Row5     |         |
+|Row6     |         |
+|Row7     |         |
+|Row8     |         |
 
 
 
