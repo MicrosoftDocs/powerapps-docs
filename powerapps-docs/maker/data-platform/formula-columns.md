@@ -5,7 +5,7 @@ author: matp
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 07/25/2023
+ms.date: 09/14/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -31,12 +31,22 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
 
    - A **Display name** for the column.
    - Optionally, enter a **Description** of the column.
-   - In **Data type**, select ***fx* Formula**.
-   - Enter the formula in the **Formula** box.
+   - # [Type or paste formula](#tab/type-or-paste)
+   1. In **Data type**, select ***fx* Formula** > **Type a formula**.
+   1. Enter the formula in the **Formula** box. More information: <type a formula link>
+
+    # [Type natural language (preview)](#tab/natural language)
+    [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+   1. In **Data type**, select ***fx* Formula** > **Get formula suggestions**.
+   1. Type your question in the **Formula** box. More information <>.
+
+---
    - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
    - **Advanced options**:
      - If the formula entered evaluates to a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
 5. Select **Save**.
+
+## Type a formula
 
 The following example creates a formula column called *Total price*. The *Number of units* column is a whole number data type. The *Price* column is a decimal data type.
 
@@ -49,6 +59,14 @@ The formula column displays the result of *Price* multiplied by *Number of units
 The formula that you enter determines the column type. You can't change a column type after the column is created. That means you can change the formula after you’ve created the column only if it doesn’t change the column type.
 
 For example, the formula *price * discount* creates a column type of number. You can change *price * discount* to  *price * (discount + 10%)* because that doesn’t change the column type. However, you can’t change *price * discount* to  *Text(price * discount)* because that would require changing the column type to string.
+
+## Get formula suggestions (preview)
+
+Formula suggestions used natural language technology to interpret your input to a Power Fx formula.
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+
 
 ## Operators
 
