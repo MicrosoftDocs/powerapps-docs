@@ -31,26 +31,26 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
    - A **Display name** for the column.
    - Optionally, enter a **Description** of the column.
 1. Select ***fx* Formula** and then [Select the input type](#select-the-input-type).
-1. Select additional properties:
-   - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
-   - **Advanced options**:
-     - If the formula evaluates to a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
-7. Select **Save**.
-
-### Select the input type
 
 # [Type a formula](#tab/type-or-paste)
 
 a. In **Data type**, select ***fx* Formula** > **Type a formula**.
-b. Enter the formula in the **Formula** box. More information: <type a formula link>
+ 
+b. Enter the formula in the **Formula** box. More information: [Type a formula](#type-a-formula)
 
 # [Get formula suggestions (preview)](#tab/natural-language)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 a. In **Data type**, select ***fx* Formula** > **Get formula suggestions**.
-b. Type your question in the **Formula** box. More information <>.
+
+b. Type your question, such as *what is the square root of 2*, in the **Formula** box. More information: [Get formula suggestions (preview)](#get-formula-suggestions-preview)
 
 ---
+1. Select additional properties:
+   - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
+   - **Advanced options**:
+     - If the formula evaluates to a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
+7. Select **Save**.
 
 ### Type a formula
 
