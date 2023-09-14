@@ -39,14 +39,16 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
 
 ### Select the input type
 
-# [Type or paste formula](#tab/type-or-paste)
-   a. In **Data type**, select ***fx* Formula** > **Type a formula**.
-   b. Enter the formula in the **Formula** box. More information: <type a formula link>
+# [Type a formula](#tab/type-or-paste)
 
-# [Type natural language (preview)](#tab/natural language)
-   [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-   a. In **Data type**, select ***fx* Formula** > **Get formula suggestions**.
-   b. Type your question in the **Formula** box. More information <>.
+a. In **Data type**, select ***fx* Formula** > **Type a formula**.
+b. Enter the formula in the **Formula** box. More information: <type a formula link>
+
+# [Get formula suggestions (preview)](#tab/natural language)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+a. In **Data type**, select ***fx* Formula** > **Get formula suggestions**.
+b. Type your question in the **Formula** box. More information <>.
 
 ---
 
