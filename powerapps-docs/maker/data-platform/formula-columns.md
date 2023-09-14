@@ -33,20 +33,20 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
 1. Select ***fx* Formula** and then choose the input type.
 
 # [Type or paste formula](#tab/type-or-paste)
-     a. In **Data type**, select ***fx* Formula** > **Type a formula**.
-     b. Enter the formula in the **Formula** box. More information: <type a formula link>
+   a. In **Data type**, select ***fx* Formula** > **Type a formula**.
+   b. Enter the formula in the **Formula** box. More information: <type a formula link>
 
 # [Type natural language (preview)](#tab/natural language)
-    [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-     1. In **Data type**, select ***fx* Formula** > **Get formula suggestions**.
-     1. Type your question in the **Formula** box. More information <>.
+   [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+   a. In **Data type**, select ***fx* Formula** > **Get formula suggestions**.
+   b. Type your question in the **Formula** box. More information <>.
 
 ---
-1. Select additional properties:
+6. Select additional properties:
    - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
    - **Advanced options**:
      - If the formula evaluates to a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
-1. Select **Save**.
+7. Select **Save**.
 
 ### Type a formula
 
