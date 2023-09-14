@@ -1,5 +1,5 @@
 ---
-title: Position | Microsoft Docs
+title: Position (Power Apps component framework API reference) | Microsoft Docs
 description: Provides access to get geographical information from context.device.getCurrentPosition method.
 ms.author: noazarur
 author: noazarur-microsoft

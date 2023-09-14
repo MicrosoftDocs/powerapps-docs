@@ -151,12 +151,12 @@ There are two custom apis in this solution. The following JSON describing these 
 
 ## How this sample works
 
-You can use either the Web API or the Organization Service using the Dataverse SDK for .NET to use the `sample_ExportDataUsingFetchXmlToAnnotation` custom API.
+You can use either the Web API or the Dataverse SDK for .NET to use the `sample_ExportDataUsingFetchXmlToAnnotation` custom API.
 
 ### [SDK for .NET](#tab/sdk)
 
 
-1. You can use the Organization Service Quick Start sample instructions to create a .NET Framework Console application with C#. See [Quickstart: Execute an Organization service request (C#)](../quick-start-org-service-console-app.md)
+1. You can use the SDK for .NET Quick Start sample instructions to create a .NET Framework Console application with C#. See [Quickstart: Execute an SDK for .NET request (C#)](../quick-start-org-service-console-app.md)
 1. Add the following static method to the program class to create a reusable method for exporting data using FetchXML to Annotation.
 
    ```csharp
@@ -190,7 +190,7 @@ You can use either the Web API or the Organization Service using the Dataverse S
 
 To use the `sample_ExportDataUsingFetchXmlToAnnotation` custom API with the Web API, send a `POST` request to the API endpoint. You can use Postman to send this request. More information: [Set up a Postman environment](../../webapi/setup-postman-environment.md)
 
- **Request**
+ **Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/sample_ExportDataUsingFetchXmlToAnnotation
@@ -209,7 +209,7 @@ Accept: application/json
 }
 ```
 
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -232,7 +232,7 @@ The `AnnotationId` value indicates the record in annotation table.
 1. How to create a csv attachment to annotation entity.
 1. How to write a plug-in to support a custom API
 1. How to use a custom API using the Web API
-1. How to use a custom API using the Organization service
+1. How to use a custom API using the SDK for .NET
 
 ## Clean Up
 
@@ -252,7 +252,7 @@ You can use either the Web API or the Dataverse SDK for .NET to use the `sample_
 ### [SDK for .NET](#tab/sdk)
 
 
-1. You can use the Organization Service Quick Start sample instructions to create a .NET Console application with C#. See [Quickstart: Execute an Organization service request (C#)](../quick-start-org-service-console-app.md)
+1. You can use the SDK for .NET Quick Start sample instructions to create a .NET Console application with C#. See [Quickstart: Execute an SDK for .NET request (C#)](../quick-start-org-service-console-app.md)
 1. Add the following static method to the program class to create a reusable method for deleting the data created using the `sample_ExportDataUsingFetchXmlToAnnotation` custom api.
 
    ```csharp
@@ -274,7 +274,7 @@ You can use either the Web API or the Dataverse SDK for .NET to use the `sample_
 
 To use the `sample_CleanupExportedDataAnnotations` custom API with the Web API, send a `POST` request to the API endpoint. You can use Postman to send this request. More information: [Set up a Postman environment](../../webapi/setup-postman-environment.md)
 
- **Request**
+ **Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/sample_CleanupExportedDataAnnotations
@@ -284,7 +284,7 @@ OData-Version: 4.0
 Accept: application/json
 ```
 
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 204 No Content

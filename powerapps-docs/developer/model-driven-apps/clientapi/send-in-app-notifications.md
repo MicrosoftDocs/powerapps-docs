@@ -1,7 +1,7 @@
 ---
 title: "Send in-app notifications within model-driven apps" 
 description: Learn how to configure notifications in model-driven apps by using a client API.
-ms.date: 05/22/2023
+ms.date: 06/23/2023
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
@@ -20,13 +20,13 @@ contributors:
 
 Developers of model-driven apps can configure notifications to be displayed to app users as a toast or within the notification center. Your model-driven app automatically polls the system for new notifications and displays them to the user. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
 
-Notifications are user-specific. Each notification is intended for a single user, identified as the recipient when the notification is sent. If a notification needs to be sent to multiple users, individual notifications must be created and sent for each recipient.
+Notifications are user-specific. Each notification is intended for a single user, identified as the recipient when the notification is sent. Sending a notification to a team isn't supported. If you need to send notifications to multiple users, you must create notifications for each individual user.
 
 This article outlines the steps for how to send in-app notifications to a specific user. To see how these notifications appear in applications, see [In-app notifications in model-driven apps](/powerapps/user/notifications).
 
 ## Enable the in-app notification feature
 
-To use the in-app notification feature, you need to enable the **In-app notifications** setting.  This setting is stored within the model-driven app.
+To use the in-app notification feature, you need to enable the **In-app notifications** setting. This setting is stored within the model-driven app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -36,7 +36,7 @@ To use the in-app notification feature, you need to enable the **In-app notifica
 
 1. Open **Settings** and switch to **Features**.
 
-1. Enable "In-app notifications".
+1. Enable **In-app notifications**.
 
     > [!div class="mx-imgBorder"]
     > ![Custom page as main page](media/send-in-app-notifications/app-designer-settings-enable-in-app-notifications.png "Custom page as main page")
@@ -52,9 +52,9 @@ Notifications can be sent using the `SendAppNotification` message.
 
 See [SendAppNotification Action](xref:Microsoft.Dynamics.CRM.SendAppNotification) for information on the message and parameters. 
 
-The `SendAppNotification` message doesn't currently have request and response classes in the Dataverse SDK for .NET. To get strongly typed classes for this message, you must generate classes or use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. More information: [Use messages with the Organization service](../../data-platform/org-service/use-messages.md).
+The `SendAppNotification` message doesn't currently have request and response classes in the Dataverse SDK for .NET. To get strongly typed classes for this message, you must generate classes or use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. More information: [Use messages with the SDK for .NET](../../data-platform/org-service/use-messages.md).
 
-The `SendAppNotification` message uses open types, enabling dynamic properties on the in-app notification. For example, a notification can have zero to many actions, and each action may have different action types. Open types enable having dynamic properties for the actions depending on the action types selected. More information: [Use open types with Custom APIs](../../data-platform/use-open-types.md)
+The `SendAppNotification` message uses open types, enabling dynamic properties on the in-app notification. For example, a notification can have zero to many actions, and each action may have different action types. Open types enable having dynamic properties for the actions depending on the action types selected. More information: [Use open types with custom APIs](../../data-platform/use-open-types.md)
 
 The following basic examples show how to use the API to send in-app notifications.
 
@@ -91,7 +91,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 ```
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/SendAppNotification
@@ -109,7 +109,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -162,7 +162,7 @@ Notifications sent using the `SendAppNotification` message are stored in the [No
 |Display Name|Schema Name|Description|
 |---|---|---|
 |**Title**|`Title`|The title of the notification.|
-|**Owner**|`OwnerId`|The user who receives the notification.|
+|**Owner**|`OwnerId`|The *user* who receives the notification. While this column can be set to either a user or team, you must only set this to a user. The notification can't be set to a team.|
 |**Body**|`Body`|Details about the notification.|
 |IconType|`IconType`|The list of predefined icons. The default value is `Info`. For more information, go to [Changing the notification icon](#changing-the-notification-icon) later in this article.|
 |**Toast Type**|`ToastType`|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this article.|
@@ -338,7 +338,7 @@ Xrm.WebApi.online.execute(SendAppNotificationRequest).then(function (response) {
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/SendAppNotification
@@ -360,7 +360,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -1119,9 +1119,10 @@ In addition to the appropriate table permissions, a user must be assigned the **
 |Usage|Required table privileges|
 |------------|----------------|
 |User has no in-app notification bell and receives no in-app notification |None: Read privilege on the app notification table. |
-|User can receive in-app notifications|<ul><li>Basic: Read privilege on the app notification table.</li><li>Create, Read, Write, and Append privileges on the model-driven app user setting.</li><li>Read and AppendTo privileges on setting definition.</li></ul> |
+|User can receive in-app notifications|<ul><li>Basic: Read privilege on the app notification table.</li><li>Create, Read, Write, and Append privileges on the model-driven app user setting.</li><li>Read privileges on setting definition.</li></ul> |
 |User can send in-app notifications to self |Basic: Create and Read privileges on the app notification table, and Send In-App Notification privilege. |
 |User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on the app notification table based on the receiving user's business unit, and Send In-App Notification privilege. |
+| User can delete in-app notifications | Global: Delete privileges on the app notification table. |
 
 
 ## Notification storage

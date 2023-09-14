@@ -32,14 +32,14 @@ Detect and retrieve duplicates:
 ### Options:
 
 - Web API: <xref href="Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates Function" />
-- Organization Service: <xref:Microsoft.Crm.Sdk.Messages.RetrieveDuplicatesRequest>
+- SDK for .NET: <xref:Microsoft.Crm.Sdk.Messages.RetrieveDuplicatesRequest>
 
 
 ### Example: Detect duplicates for a specified record using Web API
 
 The following example shows how to detect duplicates of a specified record using `RetrieveDuplicates` function.
 
-**Request**
+**Request:**
 ```http
 GET [Organization URI]/api/data/v9.0/RetrieveDuplicates(BusinessEntity=@p1,MatchingEntityName=@p2,PagingInfo=@p3)?@p1={'@odata.type':'Microsoft.Dynamics.CRM.account','accountid':'0d1156d2-1598-e711-80e8-00155db64062'}&@p2='account'&@p3={'PageNumber':1,'Count':50} HTTP/1.1
 If-None-Match: null
@@ -48,7 +48,7 @@ OData-MaxVersion: 4.0
 Content-Type: application/json
 Accept: application/json
 ```
-**Response**
+**Response:**
 ```json
 HTTP/1.1 200 OK  
 Content-Type: application/json; odata.metadata=minimal  
@@ -73,13 +73,13 @@ A maximum of 5000 duplicates are returned by the duplicate detection job.
 ### Options
 
 - Web API: <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates Action" />
-- Organization Service: <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest>
+- SDK for .NET: <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest>
 
 ### Example: Detect duplicates for a table type using the Web API 
 
 The following example shows how to detect duplicates for a table type by creating an asynchronous job using `BulkDetectDuplicates` action.
 
-**Request**
+**Request:**
 ```http
 POST [Organization URI]/api/data/v9.0/BulkDetectDuplicates HTTP/1.1
 If-None-Match: null
@@ -102,7 +102,7 @@ OData-MaxVersion: 4.0
     "RecurrenceStartTime": "2015-07-15T05:30:00Z"
 }  
 ```
-**Response**
+**Response:**
 ```json
 HTTP/1.1 200 OK  
 Content-Type: application/json; odata.metadata=minimal  
@@ -115,7 +115,7 @@ OData-Version: 4.0
 ```
 The above request creates an asynchronous duplicate detection job whose JobID is returned in the response. The JobID returned from the above request can be used to fetch duplicate records in a table type, as shown in the example below.
 
-**Request**
+**Request:**
 ```http
 GET [Organization URI]/api/data/v9.0/asyncoperations(efaff068-7598-e711-80e8-00155db64062)/AsyncOperation_DuplicateBaseRecord
 If-None-Match: null
@@ -143,7 +143,7 @@ The FetchXML equivalent of the above request is shown below.
 </fetch>
 ```
 
-**Response**
+**Response:**
 ```json
 HTTP/1.1 200 OK  
 Content-Type: application/json; odata.metadata=minimal  
@@ -186,12 +186,12 @@ The GUID of the base record is stored as `baserecordid` in the `DuplicateRecord`
 
 ## Detect duplicates during Create and Update operations
 
-Duplicate detection while creating or updating records only applies when the organization has duplicate detection enabled, the table is enabled for duplicate detection, and there are active duplicate detection rules being applied. By default, duplicate detection is suppressed when you are creating or updating a record using Web API or Organization service. 
+Duplicate detection while creating or updating records only applies when the organization has duplicate detection enabled, the table is enabled for duplicate detection, and there are active duplicate detection rules being applied. By default, duplicate detection is suppressed when you are creating or updating a record using Web API or SDK for .NET. 
 
 To detect duplicate data while creating and updating records, see:
 
 - WebAPI: [Detect duplicate data using the Web API](webapi/manage-duplicate-detection-create-update.md)
-- Organization Service: [Detect duplicate data using the Organization service](org-service/detect-duplicate-data.md)
+- SDK for .NET: [Detect duplicate data using the SDK for .NET](org-service/detect-duplicate-data.md)
 
 ### See also
 

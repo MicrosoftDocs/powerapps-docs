@@ -1,5 +1,5 @@
 ---
-title: formatUserInput | Microsoft Docs
+title: formatUserInput (Power Apps component framework API reference) | Microsoft Docs
 description: Returns formatter user input based on the passed in attribute type. If type is not recognized, returns the input itself.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -49,7 +49,7 @@ const controlAttributes = {
 context.formatter.formatUserInput("22", controlAttributes);
 ```
 
-### Related topics
+### Related articles
 
 [Formatting](../formatting.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

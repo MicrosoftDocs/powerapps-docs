@@ -1,6 +1,36 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/composite-attributes.md",
+      "redirect_url": "/previous-versions/dynamicscrm-2016/developers-guide/dn481581(v=crm.8)",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/use-outlook-methods.md",
+      "redirect_url": "https://learn.microsoft.com/previous-versions/dynamicscrm-2016/developers-guide/gg309513(v=crm.8)",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/bulk-operations-elastic-tables.md",
+      "redirect_url": "bulk-operations",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-createmultiple-updatemultiple.md",
+      "redirect_url": "../bulk-operations",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/enhanced-quick-start.md",
+      "redirect_url": "get-started-dynamics-365-web-api-csharp",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/start-web-api-project-visual-studio-csharp.md",
+      "redirect_url": "get-started-dynamics-365-web-api-csharp",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/org-service/azure-storage-partitioning-sdk.md",
       "redirect_url": "../elastic-tables",
       "redirect_document_id": "false"
@@ -8646,8 +8676,43 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/maker/common/transparency-note.md",
+      "redirect_url": "/power-apps/maker/common/responsible-ai-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/transparency-note-build-apps-conversation.md",
+      "redirect_url": "/power-apps/maker/common/faqs-build-apps-conversation",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/common/formula-repair.md",
       "redirect_url": "/power-apps/maker/canvas-apps/working-with-formulas",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/portal-templates.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-portal.md",
+      "redirect_url": "/power-pages/getting-started/create-manage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/contact-us-sample.md",
+      "redirect_url": "/power-pages/templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-dynamics-portal.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-common-problems.md",
+      "redirect_url": "/power-pages/getting-started/create-manage",
       "redirect_document_id": false
     }
   ]

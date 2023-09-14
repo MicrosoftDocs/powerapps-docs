@@ -38,7 +38,7 @@ Use the following queries to retrieve your organization settings.
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/organizations?$select=
@@ -53,7 +53,7 @@ OData-Version: 4.0
 If-None-Match: null
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -128,7 +128,7 @@ Change the column values in the organization table to change how auditing works 
 You can use Web API or Dataverse SDK for .NET to change your organization settings:
 
 - [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
-- [Update and delete table rows using the Organization Service](../org-service/entity-operations-update-delete.md)
+- [Update and delete table rows using the SDK for .NET](../org-service/entity-operations-update-delete.md)
 
 ## Configure tables and columns
 
@@ -167,7 +167,7 @@ Query the table definitions and look at the `IsAuditEnabled` property to determi
 
 This query returns the `Logicalname` for all public tables that are enabled for auditing.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=
@@ -182,7 +182,7 @@ OData-Version: 4.0
 If-None-Match: null
 ```
 
-**Response**
+**Response:**
 
 ```http
 {
@@ -281,7 +281,7 @@ Query the column definitions and look at the `IsAuditEnabled` property to determ
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes?$select=
@@ -295,7 +295,7 @@ OData-Version: 4.0
 If-None-Match: null
 ```
 
-**Response**
+**Response:**
 
 ```http
 {
@@ -423,7 +423,7 @@ To change which tables and columns support auditing, update their `IsAuditEnable
 
 |API|Property|More information|
 |---------|---------|---------|
-|Web API|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled.Value`|[Update a column](../webapi/create-update-entity-definitions-using-web-api.md#update-a-column)|
+|Web API|<xref:Microsoft.Dynamics.CRM.AttributeMetadata>.`IsAuditEnabled.Value`|[Update a column](../webapi/create-update-column-definitions-using-web-api.md#update-a-column)|
 |SDK for .NET|[AttributeMetadata.IsAuditEnabled](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsAuditEnabled).`Value`|[Update a column](../org-service/metadata-attributemetadata.md#update-a-column)|
 
 > [!IMPORTANT]
@@ -434,7 +434,7 @@ To change which tables and columns support auditing, update their `IsAuditEnable
 Use the `PublishXml` message to publish customizations for the table.
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/PublishXml HTTP/1.1
@@ -449,7 +449,7 @@ If-None-Match: null
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 OK 

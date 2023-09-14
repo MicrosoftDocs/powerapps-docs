@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/17/2023
+ms.date: 08/04/2023
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -101,9 +101,10 @@ This list identifies all services to which Power Apps communicates and their usa
 | 127.0.0.1 | http | Power Apps Mobile|
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
-| \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| api.powerplatform.com<br>\*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
-
+| ris.api.iris.microsoft.com<br>eudb.ris.api.iris.microsoft.com | https | Record user action in response to Power Apps in-app campaigns |
+| arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
 <sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>
@@ -137,7 +138,7 @@ The following table shows some of the examples where embedding a canvas app is a
 | A Power BI report that is added to Teams, or a SharePoint site.                                 | Web, e.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> |
 | A model-driven form that is added to Teams.                                                     | Web, e.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
 | A canvas app is embedded in a 3rd party client.                                                 | 3rd party web client that iframe's an app         | 3rd party native client via WebView            |
-
+|A canvas app in [Unified Service Desk](/dynamics365/unified-service-desk/admin/overview-unified-service-desk) |None|Unified Service Desk Desktop app|
 ## Proxies
 Power Apps does not support running with a proxy enabled. This can cause unpredictable behavior. If you encounter issues, disable the proxy and then try again.
 
