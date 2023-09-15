@@ -81,7 +81,7 @@ A few examples of input:
 
 | Natural language entered  | Suggested Power Fx formula  |
 |---------|---------|
-|calculate the shipment arrival date by adding 5 days from the order closed date     |         |
+| *Calculate the shipment arrival date by adding five days from the order closed date*     |         |
 |Row2     |         |
 |Row3     |         |
 |Row4     |         |
