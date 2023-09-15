@@ -32,18 +32,16 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
    - Optionally, enter a **Description** of the column.
 1. Select ***fx* Formula** and then [Select the input type](#select-the-input-type).
 
-# [Type a formula](#tab/type-or-paste)
+   # [Type a formula](#tab/type-or-paste)
 
-a. In **Data type**, select ***fx* Formula** > **Type a formula**.
- 
-b. Enter the formula in the **Formula** box. More information: [Type a formula](#type-a-formula)
+   a. In **Data type**, select ***fx* Formula** > **Type a formula**.
+   b. Enter the formula in the **Formula** box. More information: [Type a formula](#type-a-formula)
 
-# [Get formula suggestions (preview)](#tab/natural-language)
+   # [Get formula suggestions (preview)](#tab/natural-language)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-a. In **Data type**, select ***fx* Formula** > **Get formula suggestions**.
-
-b. Type your question, such as *what is the square root of 2*, in the **Formula** box. More information: [Get formula suggestions (preview)](#get-formula-suggestions-preview)
+   [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+   a. In **Data type**, select ***fx* Formula** > **Get formula suggestions**.
+   b. Type your question, such as *what is the square root of 2*, in the **Formula** box. More information: [Get formula suggestions (preview)](#get-formula-suggestions-preview)
 
 ---
 1. Select additional properties:
