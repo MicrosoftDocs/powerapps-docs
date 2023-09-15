@@ -73,8 +73,9 @@ For example, the formula *price * discount* creates a column type of number. You
 <!-- Need an intro from Divya about how formula suggestions works as a high level and what the benefits are, e.g. Type a sentence that represents what action you want, such as calculate the shipment arrival date by adding 5 days from the order closed date-->Formula suggestions uses natural language technology to interpret your input to a Power Fx formula.
 
 > [!IMPORTANT]
-> This is a preview feature
+> This is a preview feature.
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> Currently, formula suggestions that reference a single table are supported. Formula suggestions that reference a column on a related table aren't supported.
 
 A few examples of input: 
 
@@ -88,8 +89,6 @@ A few examples of input:
 |Row6     |         |
 |Row7     |         |
 |Row8     |         |
-
-
 
 ## Operators
 
