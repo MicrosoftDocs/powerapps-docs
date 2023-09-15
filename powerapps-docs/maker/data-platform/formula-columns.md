@@ -34,17 +34,18 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
 
    # [Type a formula](#tab/type-or-paste)
 
-   a. In **Data type**, select ***fx* Formula** > **Type a formula**.
+   a. In **Data type**, select ***fx* Formula** > **Type a formula**. <br />
    b. Enter the formula in the **Formula** box. More information: [Type a formula](#type-a-formula)
 
    # [Get formula suggestions (preview)](#tab/natural-language)
 
    [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-   a. In **Data type**, select ***fx* Formula** > **Get formula suggestions**.
+   a. In **Data type**, select ***fx* Formula** > **Get formula suggestions**. <br />
    b. Type your question, such as *what is the square root of 2*, in the **Formula** box. More information: [Get formula suggestions (preview)](#get-formula-suggestions-preview)
 
 ---
-1. Select additional properties:
+
+6. Select additional properties:
    - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
    - **Advanced options**:
      - If the formula evaluates to a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
@@ -68,7 +69,7 @@ For example, the formula *price * discount* creates a column type of number. You
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-<!-- Need an intro from Divya about how formula suggestions works as a high level and what the benefits are, e.g. Type a sentence that represents what action you want, such as calculate the shipment arrival date by adding 5 days from the order closed date-->Formula suggestions uses natural language technology to interpret your input to a Power Fx formula.
+Describe what you want the formula to do and get AI generated results. Formula suggestions accepts your natural language input to interpret and suggest a Power Fx formula using AI Copilot.
 
 > [!IMPORTANT]
 > This is a preview feature.
