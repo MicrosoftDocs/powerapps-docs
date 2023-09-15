@@ -69,25 +69,23 @@ For example, the formula *price * discount* creates a column type of number. You
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Describe what you want the formula to do and get AI generated results. Formula suggestions accepts your natural language input to interpret and suggest a Power Fx formula using AI Copilot.
+Describe what you want the formula to do and get AI generated results. Formula suggestions accepts your natural language input to interpret and suggest a Power Fx formula using GPT-based AI model.
 
 > [!IMPORTANT]
 > This is a preview feature.
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > Currently, formula suggestions that reference a single table are supported. Formula suggestions that reference a column on a related table aren't supported.
 
-A few examples of input: 
+A few examples of input and the suggested formula returned.
 
 | Natural language entered  | Suggested Power Fx formula  |
 |---------|---------|
-| *Calculate the shipment arrival date by adding five days from the order closed date*     |         |
-|Row2     |         |
-|Row3     |         |
-|Row4     |         |
-|Row5     |         |
-|Row6     |         |
-|Row7     |         |
-|Row8     |         |
+| *Calculate the shipment arrival date by adding five days from the order closed date.*     | `#$FieldDateTime$# + #$FieldInteger$# * #$number$#`        |
+| *What is the square root of 2?*     |  `#$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$#`       |
+| *What is the value of 2 raised to the power of 3?*     |  `#$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$#`       |
+| *Format the price columns and display as a string and concatenate with $ sign to represent as currency.*      |  `#$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$# / #$number$#`     |
+| *Calculate the surface area of the cylinder by multiplying column A and B and then divide by column C.*   |  `#$FieldDecimal$# * #$FieldDecimal$# * #$number$# / #$number$#`  |
+| *If status of task=completed in the Tasks table, then populate the task number in the Task column.*     |  `#$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$# / #$number$#`     |
 
 ## Operators
 
@@ -323,6 +321,6 @@ You can use the following scalar functions in a formula column:
 
 
 ### See also
-
-[Types of columns](types-of-fields.md)  
+[FAQ for building apps and tables through conversation](../common/faqs-build-apps-conversation.md)
+[Types of columns](types-of-fields.md)  <br />
 [Microsoft Power Fx overview](/power-platform/power-fx/overview)
