@@ -57,6 +57,25 @@ To get started with mobile offline, turn on the offline feature in your app and 
 
 When you turn on the offline capability in your app, the app always runs offline-first, with or without an Internet connection. This functionality optimizes offline performance and creates a consistent experience for users as they change locations.
 
+## Why using canvas offline over LoadData/SaveData?
+The canvas built-in offline feature is in preview and doeesn't cover yet the full spectrum of the offline requirements. However, there are already some key benefits of using it instead of LoadData/SaveData powerFx functions:  
+|Topic|LoadData / SaveData | Built-in offline |
+|---------|---------|---------|
+|Power Apps Studio support	|Custom	| Built-in|
+|Code complexity	|PowerFX code complexity scales up with data complexity	|No code|
+|Power Fx functions |	All |	Partial (see limitations)|
+|App checker rules|	None	|Flag common configuration problems|
+|Offline/Connectivity UX	| Not provided / custom only	|Automatic|
+|Sync UX / status	|Not provided / custom only |	Automatic|
+|Image and file support|	Yes, but may run into performance and memory limits	|Not yet supported|
+|Optimized delta sync|	No|	Yes|
+|Conflict resolution	|Manual	|Automatic|
+|Local data store	|Files	|Transaction database|
+|Automatically handles schema changes	|No	|Yes|
+|Fast app launch with large datasets	|No	|Yes|
+|Data size limit|	Device dependent, 30-70MB in most cases	|Device dependent, up to the storage capacity of the device|
+
+
 ### See also
 
 [Working with canvas apps offline](canvas-mobile-offline-working.md)
