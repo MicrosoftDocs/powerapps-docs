@@ -31,7 +31,7 @@ All LINQ query expressions have a similar format. The following sections show th
 
 When using the generated service context and early binding, use the `IQueryable` table set, such as `AccountSet`, in the generated context.  
 
-When not using the generated context, the `CreateQuery` method on the Organization service context object gives you access to Dataverse table rows.  
+When not using the generated context, the `CreateQuery` method on the service context object gives you access to Dataverse table rows.  
 
 Example:  
 
@@ -115,12 +115,12 @@ The LINQ query provider supports a subset of the LINQ operators. Not all conditi
 |`join`|Represents an inner or outer join. Only left outer joins are supported.|
 |`from`|Supports one `from` clause per query.|
 |`where`|The left side of the clause must be a column name and the right side of the clause must be a value. You cannot set the left side to a constant. Both the sides of the clause cannot be constants.<br /><br /> Supports the `String` functions `Contains`, `StartsWith`, `EndsWith`, and `Equals`. |
-|`groupBy`|Not supported. FetchXML supports grouping options that are not available with the LINQ query provider. More information: [Use FetchXML Aggregation](/dynamics365/customer-engagement/developer/use-fetchxml-aggregation)|
+|`groupBy`|Not supported. FetchXML supports grouping options that are not available with the LINQ query provider. More information: [Use FetchXML aggregation](../use-fetchxml-aggregation.md)|
 |`orderBy`|Supports ordering by table columns, such as `Contact.FullName`.      |
 |`select`|Supports anonymous types, constructors, and initializers.  |
 |`last`|The `last` operator is not supported.   |
 |`skip` and `take`|Supports `skip` and `take` using server-side paging. The `skip` value must be greater than or equal to the `take` value.       |
-|`aggregate`|  Not supported. FetchXML supports aggregation options that are not available with the LINQ query provider. More information: [Use FetchXML Aggregation](/dynamics365/customer-engagement/developer/use-fetchxml-aggregation)|
+|`aggregate`|  Not supported. FetchXML supports aggregation options that are not available with the LINQ query provider. More information: [Use FetchXML aggregation](../use-fetchxml-aggregation.md)|
 
 <a name="filter"></a>   
 

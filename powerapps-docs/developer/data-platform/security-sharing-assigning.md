@@ -1,14 +1,17 @@
 ---
-title: "Sharing and assigning (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the security that applies to sharing and assigning records." # 115-145 characters including spaces. This abstract displays in the search result.
+title: Sharing and assigning
+description: Learn about the security that applies to sharing and assigning records.
 ms.date: 06/06/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: paulliew # GitHub ID
+author: paulliew
 ms.subservice: dataverse-developer
-ms.author: paulliew # MSFT alias of Microsoft employees only
+ms.author: paulliew
 search.audienceType: 
   - developer
+contributors: 
+  - JimDaly
+  - SEOKK-MSFT
 ---
 # Sharing and assigning
 
@@ -306,6 +309,102 @@ OData-Version: 4.0
 ---
 
 More information: [Shared access](/power-platform/admin/how-record-access-determined#shared-access.md)
+
+## Determine why a user has access
+
+The [check access](/power-apps/user/access-checker) feature in model-driven apps provides information so that people can understand why a user has access to a record. To get this information with code, use the `RetrieveAccessOrigin` message. When passed information about a specific user and record, this message returns a sentence that describes why the user has access. The following are the possible responses when the operation succeeds:
+
+
+```text
+Access origin could not be determined because FCB is disabled.
+PrincipalId is object owner (<record ID>)
+PrincipalId is member of team (<team ID>) who is object owner (<record ID>)
+PrincipalId is member of organization (<organization ID>) who is object owner (<record ID>)
+PrincipalId has access to (<hierarchy security principal ID>) through hierarchy security. (<hierarchy security principal ID>) is object owner (<record ID>)
+PrincipalId has direct poa access to object (<record ID>)
+PrincipalId is member of team (<team ID>) who has poa access to object (<record ID>)
+PrincipalId is member of organization (<organization ID>) who has poa access to object (<record ID>)
+PrincipalId is owner of a parent entity of object (<child record ID>)
+PrincipalId is member of team (<team ID>) who is owner of a parent entity of object (<child record ID>)
+PrincipalId is member of organization (<organization ID>) who is owner of a parent entity of object (<child record ID>)
+PrincipalId has access to (<hierarchy security principal ID>) through hierarchy security. (<hierarchy security principal ID>) is owner of a parent entity of object (<child record ID>)
+PrincipalId has poa access to object's root entity (<child record ID>)
+PrincipalId is member of team (<team ID>) who has poa access to object's root entity (<child record ID>)
+PrincipalId is member of organization (<organization ID>) who has poa access to object's root entity (<child record ID>)
+Access origin could not be found. Access does not come from POA table or object ownership.
+```
+
+# [SDK for .NET](#tab/sdk)
+
+> [!NOTE]
+> There is not currently a `RetrieveAccessOriginRequest` or `RetrieveAccessOriginResponse` class in the SDK. To use this message you must use the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. [Learn more about using messages with the SDK for .NET](org-service/use-messages.md).
+
+```csharp
+/// <summary>
+/// Describes why a principal (systemuser or team) has access to a record.
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance to use.</param>
+/// <param name="objectId">The unique identifier of a record.</param>
+/// <param name="tableLogicalName">The logical name of the table for the record in the ObjectId parameter.</param>
+/// <param name="principalId">The unique identifier of the systemuser or team record.</param>
+/// <returns>A sentence explaining why the principal has access to a record.</returns>
+public static void OutputRetrieveAccessOrigin(IOrganizationService service,
+    Guid objectId,
+    string tableLogicalName,
+    Guid principalId)
+{
+ 
+    var parameters = new ParameterCollection()
+        {
+            { "ObjectId", objectId},
+            { "LogicalName", tableLogicalName},
+            { "PrincipalId", principalId}
+        };
+ 
+    var request = new OrganizationRequest()
+    {
+        RequestName = "RetrieveAccessOrigin",
+        Parameters = parameters
+    };
+ 
+    var response = service.Execute(request);
+ 
+    Console.WriteLine(response.Results["Response"]);
+}
+```
+
+Example output: `PrincipalId is object owner (e41ac31a-dcdf-ed11-a7c7-000d3a993550)`
+
+
+# [Web API](#tab/webapi)
+
+The [RetrieveAccessOrigin function](xref:Microsoft.Dynamics.CRM.RetrieveAccessOrigin) returns a [RetrieveAccessOriginResponse complex type](xref:Microsoft.Dynamics.CRM.RetrieveAccessOriginResponse). [Learn more about Dataverse Web API functions](webapi/use-web-api-functions.md).
+
+**Request**:
+
+```http
+GET [Organization URI]/api/data/v9.2/RetrieveAccessOrigin(ObjectId=@objectId,LogicalName=@logicalName,PrincipalId=@principalId)?
+@objectId=e41ac31a-dcdf-ed11-a7c7-000d3a993550
+&@logicalName='account'
+&@principalId=4026be43-6b69-e111-8f65-78e7d1620f5e
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+```
+
+**Response**:
+
+```http
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
+{  
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAccessOriginResponse",
+    "Response": "PrincipalId is object owner (e41ac31a-dcdf-ed11-a7c7-000d3a993550)"
+}
+```
+
+---
 
 ### See also
 

@@ -1,5 +1,5 @@
 ---
-title: "Execute multiple requests using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Execute multiple requests using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "ExecuteMultipleRequest message supports higher throughput bulk message passing scenarios in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 02/28/2023
 ms.reviewer: pehecke
@@ -13,7 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# Execute multiple requests using the Organization service
+# Execute multiple requests using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
@@ -145,7 +145,7 @@ catch (FaultException<OrganizationServiceFault> fault)
 
 ### See also
 
-[Use messages with the Organization service](use-messages.md)<br />
+[Use messages with the SDK for .NET](use-messages.md)<br />
 [Use ExecuteAsync](use-executeAsync.md)<br />
 [Use ExecuteTransaction](use-executetransaction.md)<br />
 

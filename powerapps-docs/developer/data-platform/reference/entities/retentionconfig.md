@@ -1,7 +1,7 @@
 ---
 title: "retentionconfig table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the retentionconfig table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -16,7 +16,7 @@ search.audienceType:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-
+Holds retention policies for a table.
 
 **Added by**: Retention Base Components Solution
 
@@ -27,7 +27,7 @@ search.audienceType:
 |-|-|-|
 |Assign|PATCH /retentionconfigs(*retentionconfigid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /retentionconfigs<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /retentionconfigs(*retentionconfigid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -39,7 +39,7 @@ search.audienceType:
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /retentionconfigs(*retentionconfigid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /retentionconfigs(*retentionconfigid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -89,7 +89,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|For internal use only. Tracks the status of Retention Policy Execution|
 |DisplayName|AsyncOperationId|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -105,7 +105,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Fetch XML format criteria to select records for retention.|
 |DisplayName|Criteria|
 |Format|Text|
 |IsLocalizable|False|
@@ -121,7 +121,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Logical name of the table on which retention policy is setup.|
 |DisplayName|EntityLogicalName|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -172,7 +172,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the custom entity.|
+|Description|The name of the retention policy.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -189,7 +189,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description||
+|Description|Date and time when retention policy will execute next. |
 |DisplayName|NextRun|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -250,7 +250,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Frequency at which retention should run.|
 |DisplayName|Recurrence|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -266,7 +266,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|For internal use only.|
 |DisplayName|ReferenceConfigId|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -282,7 +282,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for entity instances|
+|Description|Unique identifier for retention config.|
 |DisplayName|RetentionConfig|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -297,7 +297,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description||
+|Description|Date and time at when retention should execute.|
 |DisplayName|StartTime|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -311,7 +311,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|State of the RetentionConfig|
+|Description|State of the Retention Config|
 |DisplayName|State|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -373,7 +373,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Unique Name for the entity.|
+|Description|Unique Name for the retention policy.|
 |DisplayName|Unique Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -406,7 +406,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Reference view id of the criteria.|
 |DisplayName|viewid|
 |FormatName|Text|
 |IsLocalizable|False|
