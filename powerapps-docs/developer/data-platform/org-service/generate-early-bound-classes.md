@@ -1,5 +1,5 @@
 ---
-title: "Generate early-bound classes for the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Generate early-bound classes for the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about a command-line code generation tool for use with Microsoft Dataverse. This tool generates early-bound .NET Framework classes that represent the Entity Data Model used by Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 12/22/2022
 author: kkanakas
@@ -13,7 +13,7 @@ contributors:
  - phecke
 ---
 
-# Generate early-bound classes for the Organization service
+# Generate early-bound classes for the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
@@ -109,12 +109,12 @@ The following table lists the code generation tool parameters at the time when t
 |--|--|--|
 |`url`||The URL for the Organization service. Required, unless you use `interactivelogin`|
 |`out`|`o`|The file name for the generated code. Required|
-|`language`|`l`|The language to generate the code in. This can be either “CS” or “VB”. The default value is “CS”.|
+|`language`|`l`|The language to generate the code in. This can be either "CS" or "VB". The default value is "CS".|
 |`namespace`|`n`|The namespace for the generated code. The default is the global namespace.| 
 |`username`|`u`|The user name to use when you connect to the server for authentication.|  
 |`password`|`p`|The password to use when you connect to the server for authentication.|
 |`domain`|`d`|The domain to authenticate against when you connect to an on-premises server.|
-|`servicecontextname`||The name of the generated organization service context class. If no value is supplied, no service context is created.
+|`servicecontextname`||The name of the generated context class. If no value is supplied, no service context is created.
 |`help`|`?`|Show usage information.|
 |`nologo`||Suppress the banner at runtime.|
 |`generateActions`||Generate request and response classes for custom actions.|
