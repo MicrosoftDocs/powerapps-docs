@@ -26,7 +26,7 @@ contributors:
 
 ## Symptoms
 
-RetrieveMultiple calls from different application display different results.
+RetrieveMultiple calls from different applications display different results.
 
 - For example: same views in legacy applications show different results in new applications.
 
