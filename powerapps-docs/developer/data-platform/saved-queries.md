@@ -31,7 +31,7 @@ Saved queries are business tables that define the parameters and criteria of a M
 
 To know about executing user query and saved query using Web API, see [Retrieve and execute predefined queries](webapi/retrieve-and-execute-predefined-queries.md)
 
-## Use Organization service to execute saved queries
+## Use SDK for .NET to execute saved queries
 
 You can use the <xref:Microsoft.Crm.Sdk.Messages.ExecuteByIdUserQueryRequest> and <xref:Microsoft.Crm.Sdk.Messages.ExecuteByIdSavedQueryRequest> messages to execute user query and saved query respectively.
 

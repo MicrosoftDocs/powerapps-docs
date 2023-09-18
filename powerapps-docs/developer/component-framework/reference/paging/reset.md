@@ -1,5 +1,5 @@
 ---
-title: reset | Microsoft Docs
+title: reset (Power Apps component framework API reference) | Microsoft Docs
 description: Reload the results from the server, and reset to page 1.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -23,7 +23,7 @@ Model-driven and canvas apps
 
 `reset()`
 
-### Related topics
+### Related articles
 
 [Paging](../paging.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

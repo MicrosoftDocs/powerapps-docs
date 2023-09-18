@@ -1,5 +1,5 @@
 ---
-title: SecurityPrivilegesMetadata | Microsoft Docs
+title: SecurityPrivilegesMetadata (Power Apps component framework API reference) | Microsoft Docs
 description: Information about table definitions security privileges.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -33,7 +33,7 @@ Model-driven apps
 |PrivilegeType|Object|Type of privilege like create, read, write.|
 
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

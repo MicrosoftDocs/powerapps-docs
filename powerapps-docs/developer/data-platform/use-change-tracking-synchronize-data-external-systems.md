@@ -90,7 +90,7 @@ Delta links are opaque, service-generated links that the client uses to retrieve
 
 This example shows how to retrieve changes made for the account table using the Web API.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber,telephone1,fax HTTP/1.1
@@ -99,7 +99,7 @@ OData-Version: 4.0
 Content-Type: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -124,7 +124,7 @@ Preference-Applied: odata.track-changes
 
 The `@odata.deltaLink` Uri returned from the above example can be used to fetch changes in tables. In this example, a new account was created and an existing account deleted. The delta link returned from the previous request fetches these changes, as shown in the example below.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber,telephone1,fax&$deltatoken=919042%2108%2f22%2f2017%2008%3a10%3a44
@@ -132,7 +132,7 @@ OData-Version: 4.0
 Content-Type: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -165,7 +165,7 @@ The response for the delta link returned in the initial change tracking request 
 
 You can add `$count` to the delta link returned from the initial change tracking request, as shown in the example below, to get the number of changes made.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/accounts/$count?$deltatoken=919042%2108%2f22%2f2017%2008%3a10%3a44

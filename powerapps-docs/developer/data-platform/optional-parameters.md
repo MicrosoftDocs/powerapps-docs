@@ -37,7 +37,7 @@ One exception is when setting the `partitionid`, this is set as an attribute of 
 
 More information:
 
-- [Use messages with the Organization service](org-service/use-messages.md)
+- [Use messages with the SDK for .NET](org-service/use-messages.md)
 - See the examples below
 
 ### [Web API](#tab/webapi)
@@ -93,13 +93,13 @@ static void CreateWebResourceInSolution(IOrganizationService service)
 
 More information:
 
-- [Use messages with the Organization service](org-service/use-messages.md)
-- [Create table rows using the Organization Service](org-service/entity-operations-create.md)
+- [Use messages with the SDK for .NET](org-service/use-messages.md)
+- [Create table rows using the SDK for .NET](org-service/entity-operations-create.md)
 - [Import files as web resources](org-service/samples/import-files-as-web-resources.md)
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/webresourceset HTTP/1.1
@@ -119,7 +119,7 @@ MSCRM.SolutionUniqueName: ExampleSolution
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -180,7 +180,7 @@ static void DemonstrateSuppressDuplicateDetection(IOrganizationService service)
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -196,7 +196,7 @@ MSCRM.SuppressDuplicateDetection: false
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 412 Precondition Failed
@@ -215,7 +215,7 @@ OData-Version: 4.0
 
 More information:
 
-- [Detect duplicate data using the Organization service](org-service/detect-duplicate-data.md)
+- [Detect duplicate data using the SDK for .NET](org-service/detect-duplicate-data.md)
 - [Detect duplicate data using the Web API](webapi/manage-duplicate-detection-create-update.md)
 
 ## Add a shared variable to the plugin execution context
@@ -254,7 +254,7 @@ static void DemonstrateTag(IOrganizationService service)
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts?tag=A%20string%20value HTTP/1.1
@@ -307,7 +307,7 @@ private static Entity RetrieveRecord(
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/contoso_sensordatas(da9c32cc-2df8-ed11-8849-000d3a993550)?partitionId=Device-ABC-1234&$select=contoso_value
@@ -320,9 +320,10 @@ Accept: application/json
 
 ---
 
-Alternatively, you can use the `partitionid` value using alternate key style. More information: [Using Alternate Key](use-elastic-tables.md#using-alternate-key)
+Alternatively, you can use the `partitionid` value using alternate key style.
 
-More information: [Specifying PartitionId](use-elastic-tables.md#specifying-partitionid)
+- [Learn about using the alternate keys with elastic tables](use-elastic-tables.md#using-the-alternate-key)
+- [Learn about specify a partitionid](use-elastic-tables.md#specify-partitionid)
 
 ## Bypass custom synchronous logic
 
@@ -376,7 +377,7 @@ Because this setting is applied to the service, it remains set for all requests 
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -426,7 +427,7 @@ static void DemonstrateSuppressCallbackRegistrationExpanderJob(IOrganizationServ
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -448,7 +449,7 @@ More information: [Bypass Power Automate Flows](bypass-custom-business-logic.md#
 
 ### See also
 
-[Use messages with the Organization service](org-service/use-messages.md)<br />
+[Use messages with the SDK for .NET](org-service/use-messages.md)<br />
 [Web API: Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)<br />
 [Bypass Custom Business Logic](bypass-custom-business-logic.md)
 

@@ -77,14 +77,14 @@ The output of this code is "Retention policy created with Id : c1a9e932-89f6-4f1
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Create Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A)
 
 ### [Web API](#tab/webapi)
 
 The following Web API example is for retention policy set up to retain all the closed opportunities, and this policy will be run on a yearly basis. This example uses the <xref:Microsoft.Dynamics.CRM.retentionconfig?displayProperty=nameWithType>.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.1/retentionconfigs

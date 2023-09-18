@@ -1,6 +1,6 @@
 ---
-title: "StandardControl.getOutputs | MicrosoftDocs"
-description: It is called by the framework prior to a component receiving the new data. Returns an object based on nomenclature defined in manifest, expecting objects[s] for the property marked as bound.
+title: "StandardControl.getOutputs (Power Apps component framework API reference) | MicrosoftDocs"
+description: This method is called by the framework before a component receives the new data. Returns an object based on nomenclature defined in manifest, expecting objects[s] for the property marked as bound.
 ms.author: noazarur
 author: noazarur-microsoft
 ms.date: 05/27/2022
@@ -25,7 +25,7 @@ Model-driven apps, canvas apps, & portals.
 
 ## Remarks
 
-The output will contain a value for each property with a usage as `bound` in the manifest.
+The output contains a value for each property with a usage as `bound` in the manifest.
 For example, if the manifest has a property named `value` that has usage as `bound`, and you want to set that to the local variable `myvalue` then you should return:
 
 ```TypeScript
@@ -46,7 +46,7 @@ public getOutputs(): IOutputs
 ```
 
 
-### Related topics
+### Related articles
 
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

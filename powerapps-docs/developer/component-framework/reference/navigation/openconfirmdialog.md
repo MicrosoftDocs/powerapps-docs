@@ -1,5 +1,5 @@
 ---
-title: openConfirmDialog | Microsoft Docs
+title: openConfirmDialog (Power Apps component framework API reference) | Microsoft Docs
 description: Displays a confirmation dialog box containing a message and two buttons.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -41,7 +41,7 @@ Description: Returns an object with the confirmed (Boolean) attribute is passed 
 See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise) 
 
 
-### Related topics
+### Related articles
 
 [Navigation](../navigation.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

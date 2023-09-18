@@ -29,35 +29,35 @@
 - name: Work with data using code
   href: work-with-data.md
   items:
-    - name: Use Web API
+    - name: Use the Web API
       href: ./webapi/overview.md
-    - name: Use Organization Service
+    - name: Use the SDK for .NET
       href: ./org-service/overview.md
-    - name: Bulk Operation messages
+    - name: Use bulk operation messages
       href: bulk-operations.md
     - name: Create your own messages
       href: custom-actions.md
       items:
-        - name: Create and use Custom APIs
+        - name: Create and use custom APIs
           href: custom-api.md
           items:
-            - name: Create a Custom API with plug-in registration tool
+            - name: Create a custom API with plug-in registration tool
               href: create-custom-api-prt.md
-            - name: Create a Custom API in Power Apps
+            - name: Create a custom API in Power Apps
               href: create-custom-api-maker-portal.md
-            - name: Create a Custom API with code
+            - name: Create a custom API with code
               href: create-custom-api-with-code.md
-            - name: Create a Custom API with solution files
+            - name: Create a custom API with solution files
               href: create-custom-api-solution.md
             - name: CustomAPI Tables
               href: custom-api-tables.md
-            - name: "Sample: IsSystemAdmin Custom API plug-in"
+            - name: "Sample: IsSystemAdmin custom API plug-in"
               href: org-service/samples/issystemadmin-customapi-sample-plugin.md
-            - Name: "Sample: ExportDataUsingFetchXmlToAnnotation Custom API plug-in"
+            - Name: "Sample: ExportDataUsingFetchXmlToAnnotation custom API plug-in"
               href: org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
-    - name: Use open types with Custom APIs 
+    - name: Use open types with custom APIs 
       href: use-open-types.md
     - name: Background operations (preview)
       href: background-operations.md
@@ -460,7 +460,7 @@
   items:
     - name: Web API
       href: webapi/samples/toc.yml
-    - name: Organization Service
+    - name: SDK for .NET
       href: org-service/samples/toc.yml
 - name: Resources
   items:
@@ -478,7 +478,7 @@
       href: reference/entities/toc.yml
     - name: Web API Reference
       href: /dynamics365/customer-engagement/web-api/about
-    - name: Organization Service
+    - name: SDK for .NET
       href: /dotnet/api/microsoft.crm.sdk
     - name: XRM Tooling
       href: /dotnet/api/microsoft.xrm.tooling.connector

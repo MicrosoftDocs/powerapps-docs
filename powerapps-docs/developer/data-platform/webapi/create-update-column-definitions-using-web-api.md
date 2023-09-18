@@ -14,7 +14,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can perform all the same operations on column definitions using the Web API that you can with the Organization service. This article focuses on working with column definitions (metadata) using the Web API.
+You can perform all the same operations on column definitions using the Web API that you can with the SDK for .NET. This article focuses on working with column definitions (metadata) using the Web API.
 
 
 ## Create columns
@@ -51,7 +51,7 @@ The following example creates a string column using the properties and adds it t
 
 The URI for the attribute is returned in the response.
   
- **Request**
+ **Request:**
 
 ```http 
 POST [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -101,7 +101,7 @@ OData-Version: 4.0
   
 ```  
   
- **Response**
+ **Response:**
 
 ```http 
 HTTP/1.1 204 No Content  
@@ -125,7 +125,7 @@ The following example uses these properties to create a money attribute.
   
 The following example creates a money attribute using the properties and adds it to the `sample_bankaccount` table. The URI for the attribute is returned in the response.  
   
- **Request**
+ **Request:**
 
 ```http   
 POST [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -171,7 +171,7 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**
+ **Response:**
 
 ```http 
 HTTP/1.1 204 No Content  
@@ -196,7 +196,7 @@ The following example uses these properties to create a datetime attribute.
 The following example creates a datetime attribute using the properties and adds it to the `sample_bankaccount` table.
  The URI for the attribute is returned in the response.  
   
- **Request**
+ **Request:**
 
 ```http 
 POST [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -242,7 +242,7 @@ OData-Version: 4.0
 }  
 ```  
   
- **Response**
+ **Response:**
 
 ```http 
 HTTP/1.1 204 No Content  
@@ -265,7 +265,7 @@ The following example uses these properties to create a boolean column.
   
 The following example creates a boolean attribute using the properties and adds it to the entity with the `LogicalName` value of `new_bankaccount`. The URI for the attribute is returned in the response.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes HTTP/1.1
@@ -344,7 +344,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 NoContent
@@ -370,7 +370,7 @@ The parameters for this action require the definition of the lookup attribute an
   
 The example creates a customer lookup attribute, `new_CustomerId`, and adds it to the custom entity:  `new_bankaccount`. The response is a [CreateCustomerRelationshipsResponse ComplexType"](xref:Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse).  
   
- **Request**
+ **Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/CreateCustomerRelationships HTTP/1.1
@@ -427,7 +427,7 @@ Content-Type: application/json; charset=utf-8
 }  
 ```  
   
- **Response**
+ **Response:**
 
 ```http
 HTTP/1.1 200 OK  
@@ -462,7 +462,7 @@ The following example creates a decimal attribute using the properties and adds 
 
 The URI for the attribute is returned in the response.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
@@ -526,7 +526,7 @@ Content-Length: 1370
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -554,7 +554,7 @@ The following example creates an integer column using the properties and adds it
 
 The URI for the column is returned in the response.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
@@ -619,7 +619,7 @@ Content-Length: 1392
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -644,7 +644,7 @@ The following example creates a memo column using the properties and adds it to 
 
 The URI for the attribute is returned in the response.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
@@ -709,7 +709,7 @@ Content-Length: 1384
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -736,7 +736,7 @@ The URI for the attribute is returned in the response.
 > [!NOTE]
 > For an example showing how to create a choice column with a global option set, see [Create a choice column using a global option set](create-update-optionsets.md#create-a-choice-column-using-a-global-option-set)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
@@ -905,7 +905,7 @@ Content-Length: 4524
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -929,7 +929,7 @@ The following example creates a local multi-select choice column using the prope
 
 The URI for the attribute is returned in the response.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes
@@ -1058,7 +1058,7 @@ Content-Length: 3404
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -1075,7 +1075,7 @@ As mentioned in [Update table definitions](create-update-entity-definitions-usin
 
 Using the boolean attribute created in [Create a Boolean column](#create-a-boolean-column) above, we must first retrieve the entire attribute.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes(LogicalName='new_boolean')/Microsoft.Dynamics.CRM.BooleanAttributeMetadata HTTP/1.1
@@ -1085,7 +1085,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 OK
@@ -1229,7 +1229,7 @@ Then, change the properties you want to change.
 
 Now you can send the `PUT` request with the modified properties:
 
-**Request**
+**Request:**
 
 ```http
 PUT [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes(LogicalName='new_boolean') HTTP/1.1
@@ -1366,7 +1366,7 @@ Accept: application/json
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 NoContent
@@ -1381,7 +1381,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 [Query table definitions using the Web API](query-metadata-web-api.md)  
 [Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)  
 [Model table relationships using the Web API](create-update-entity-relationships-using-web-api.md)  
-[Work with table definitions using the Organization service](../org-service/work-with-metadata.md)  
+[Work with table definitions using the SDK for .NET](../org-service/work-with-metadata.md)  
 [Column (attribute) definitions](../entity-attribute-metadata.md)  
 [Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
 [Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)

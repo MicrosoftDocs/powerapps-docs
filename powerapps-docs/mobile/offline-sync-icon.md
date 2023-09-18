@@ -2,9 +2,9 @@
 title: View offline sync status
 description: Learn how to interpret the offline sync icon in the mobile app navigation bar.
 ms.date: 06/05/2023
-ms.author: sericks
-author: sericks007
-ms.reviewer: 
+ms.author: trdehove
+author: trdehove
+ms.reviewer: sericks
 ms.topic: conceptual
 ms.service: powerapps
 ms.custom: bap-template
