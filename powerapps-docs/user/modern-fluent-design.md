@@ -27,7 +27,7 @@ The Fluent design system provides consistency, quality, and Microsoft-wide platf
 Here's what you can expect in the modern, refreshed experience:
 
 - Updated styling in form, view, and dashboard pages, which includes the use of drop shadows and brighter background colors to create an elevated or _floating_ appearance. The floating appearance helps to visually separate sections and focuses attention on primary content.
-- New Fluent-based controls in forms, business process flows, and dialogs.
+- New Fluent-based controls in forms, business process flows, and dialogs. Dialogs can now auto resize it's height based on its content.
 - A new Power Apps grid in place of the read-only grid in view and standard, dashboard pages.
 - An end user setting called **Try the new look** that enables the modern, refreshed experience.
 
