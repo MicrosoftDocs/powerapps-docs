@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 08/22/2023
+ms.date: 09/18/2023
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -21,13 +21,13 @@ contributors:
 
 Model-driven apps have a modern, refreshed look when the **Try the new look** feature has been [turned on by end users](modern-fluent-design.md#turn-on-the-new-look). This new look provides updated styling including fonts, colors, borders, shadows, and more that align to the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. This feature is transitioning from preview to general availability. Learn more about this process in [Preview to general availability rollout](modern-fluent-design.md#preview-to-general-availability-rollout). 
 
-The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future. 
+The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
-## What’s included with the new look
+## What's included with the new look
 Here's what you can expect in the modern, refreshed experience:
 
 - Updated styling in form, view, and dashboard pages, which includes the use of drop shadows and brighter background colors to create an elevated or _floating_ appearance. The floating appearance helps to visually separate sections and focuses attention on primary content.
-- New Fluent-based controls in forms, business process flows, and dialogs. Dialogs can now auto resize its height based on its content.
+- New Fluent-based controls in forms, business process flows, and dialogs. Dialogs now resize height automatically based on the content.
 - A new Power Apps grid in place of the read-only grid in view and standard, dashboard pages.
 - An end user setting called **Try the new look** that enables the modern, refreshed experience.
 
@@ -39,7 +39,7 @@ The _floating_ command bar aligns with the Microsoft 365 experience, with consis
 :::image type="content" source="media/modern-command-bar.png" alt-text="Floating command bar":::
 
 ### View pages
-View pages use the new command bar and have updated grid areas that take advantage of the elevation changes to help draw the user’s attention. 
+View pages use the new command bar and have updated grid areas that take advantage of the elevation changes to help draw the user's attention. 
 
 The biggest change on view pages is the switch from the read-only grid to the [Power Apps grid control (preview)](../maker/model-driven-apps/the-power-apps-grid-control.md), which features infinite scrolling for a modern, data browsing experience. This grid also appears in subgrids and associated grids in main forms, but isn't yet supported in dashboards. The Power Apps grid control also supports inline editing using the **Enable filtering** property. Makers may manually configure their editable grids to use the Power Apps grid control. 
 
