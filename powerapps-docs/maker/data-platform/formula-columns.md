@@ -67,7 +67,7 @@ You can display the following data types in a formula column:
 - Choice Yes/No (boolean)
 - Datetime
 
-The currency, whole number, and choice (formerly optionsets) data types aren't currently supported.
+The currency, whole number, and choice (formerly option sets) data types aren't currently supported.
 
 ## Function types
 
@@ -303,7 +303,7 @@ This section describes the known limitations with formula columns in Dataverse.
 - Formula columns don't support using numbers in the following configurations:
   - In string functions. These are string functions placed wherever a text argument is expected: Upper, Lower, Left, Right, Concatenate, Mid, Len, StartsWith, EndsWith, TrimEnds, Trim, Substitute, and Replace.
   - In the implicit formulas, such as `12 & "foo"`, or `12 & 34`, or `"foo" & 12`.
-  - Internal number to text coercion isn't supported. We recommend to use `Text(Number, Format)` to convert a number to text. In the case where a `String` argument is passed in `Text` function then `Format` argument isn't supported.
+  - Internal number to text coercion isn't supported. We recommend using `Text(Number, Format)` to convert a number to text. In the case where a `String` argument is passed in `Text` function then `Format` argument isn't supported.
   - Example:
 
    ```powerappsfl
@@ -331,9 +331,9 @@ This section describes the known limitations with formula columns in Dataverse.
 - We don't recommend using calculated columns in formula columns and vice versa.
 - All internal computations should be within the accepted range for decimal type formula columns (-100000000000 to 100000000000).
 - If there's a numeric column that's null then it's considered 0 in the intermediate operation. For example, `a+b+c and If a = null, b=2, c=3` then formula column gives `0 + 2 + 3 = 5`. 
-  - This behavior is different from calculated columns in this case because calculated columns gives `null + 2 + 3 = null`.
-- Direct use of currency columns and exchange rate in the formula is currently blocked. The use of currency and exchange rate columns is achieved through the `Decimal` function, such as `Decimal(currency column)` or `Decimal(exchange rate)`. Note that the `Decimal` function makes sure the output lies within the accepted range. If the currency or exchange rate column value exceeds the accepted range then the formula returns null.
-- Base currency columns aren't supported in the formula column expressions because these are system fields used for reporting purpose. If you want a similar result you can use a currency column type along with an exchange rate column combination as `CurrencyField_Base = (CurrencyField / ExchangeRate)`.
+  - This behavior is different from calculated columns in this case because calculated columns give `null + 2 + 3 = null`.
+- Direct use of currency columns and exchange rate in the formula is currently unsupported. The use of currency and exchange rate columns is achieved through the `Decimal` function, such as `Decimal(currency column)` or `Decimal(exchange rate)`. The `Decimal` function makes sure the output is within the accepted range. If the currency or exchange rate column value exceeds the accepted range, then the formula returns null.
+- Base currency columns aren't supported in the formula column expressions because they're system fields used for reporting purpose. If you want a similar result, you can use a currency column type along with an exchange rate column combination as `CurrencyField_Base = (CurrencyField / ExchangeRate)`.
 - You can't use formula columns with these column data types:
   - Whole number
   - Choice and choices
