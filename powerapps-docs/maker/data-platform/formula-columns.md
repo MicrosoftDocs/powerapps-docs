@@ -11,6 +11,8 @@ ms.author: dikamath
 ms.reviewer: matp
 contributors:
   - mattp123
+  - sanjeevgoyalmsft
+  - JimDaly
 ---
 
 # Work with formula columns (preview)
@@ -344,4 +346,5 @@ This section describes the known limitations with formula columns in Dataverse.
 ### See also
 
 [Types of columns](types-of-fields.md)  
-[Microsoft Power Fx overview](/power-platform/power-fx/overview)
+[Microsoft Power Fx overview](/power-platform/power-fx/overview)   
+[Formula, calculated, and rollup columns using code](../../developer/data-platform/calculated-rollup-attributes.md)
