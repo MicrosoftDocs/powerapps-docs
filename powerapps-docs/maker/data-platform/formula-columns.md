@@ -303,8 +303,8 @@ This section describes the known limitations with formula columns in Dataverse.
 - Formula columns don't support using numbers in the following configurations:
   - In string functions. These are string functions placed wherever a text argument is expected: Upper, Lower, Left, Right, Concatenate, Mid, Len, StartsWith, EndsWith, TrimEnds, Trim, Substitute, and Replace.
   - In the implicit formulas, such as `12 & "foo"`, or `12 & 34`, or `"foo" & 12`.
-  - Internal number to text coercion isn't supported. We recommend using `Text(Number, Format)` to convert a number to text. In the case where a `String` argument is passed in `Text` function then `Format` argument isn't supported.
-  - Example:
+  - Internal number to text coercion isn't supported. We recommend using `Text(Number, Format)` to convert a number to text. In the case where a `String` argument is passed in a `Text` function then the `Format` argument isn't supported.
+  - Example using the `Text` function to convert a number to text and append a string to it:
 
    ```powerappsfl
    Concatenate(Text(123,"#"),"ab")
@@ -336,9 +336,9 @@ This section describes the known limitations with formula columns in Dataverse.
 - Base currency columns aren't supported in the formula column expressions because they're system fields used for reporting purpose. If you want a similar result, you can use a currency column type along with an exchange rate column combination as `CurrencyField_Base = (CurrencyField / ExchangeRate)`.
 - You can't use formula columns with these column data types:
   - Whole number
-  - Choice and choices
+  - Choices
   - Currency  
-- Hard coded literal value typed in formula bar must be within the accepted minimum and maximum value range.  
+- A hard coded literal value entered in the formula bar must be within the accepted minimum and maximum value range.  
 - The `Now` function can be used with formula columns. `Now()` has user local behavior and `UTCNow()` has time zone independent behavior.
 - You can set the precision property for decimal columns.
 
