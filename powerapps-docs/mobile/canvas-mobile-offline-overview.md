@@ -59,17 +59,17 @@ When you turn on the offline capability in your app, the app always runs offline
 
 ## Why use offline for canvas apps instead of LoadData/SaveData?
 
-Built-in offline support for canvas apps is in preview and doesn't support files and images and some Power Fx functions yet. However, there are already some key benefits of using it instead of LoadData/SaveData Power Fx functions.  
+Built-in offline support for canvas apps is in preview and doesn't support files and images and some Power Fx functions yet. However, there are some key benefits of using it instead of LoadData/SaveData Power Fx functions.  
 
-|Topic    |LoadData / SaveData | Built-in offline |
+|Topic    |LoadData/SaveData | Built-in offline |
 |---------|--------------------|------------------|
 |Power Apps Studio support	|Custom	| Built-in|
 |Code complexity	|Power Fx code complexity scales up with data complexity	|No code|
 |Power Fx functions |	All |	Partial (see limitations)|
 |App checker rules|	None	|Flag common configuration problems|
-|Offline/Connectivity UX	| Not provided / custom only	|Automatic|
-|Sync UX / status	|Not provided / custom only |	Automatic|
-|Image and file support|	Yes, but may run into performance and memory limits	|Not yet supported|
+|Offline/Connectivity UX	| Not provided/custom only	|Automatic|
+|Sync UX / status	|Not provided/custom only |	Automatic|
+|Image and file support|	Yes, but may run into performance and memory limits	|Not supported|
 |Optimized delta sync|	No|	Yes|
 |Conflict resolution	|Manual	|Automatic|
 |Local data store	|Files	|Transactional database|
