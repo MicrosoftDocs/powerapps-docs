@@ -22,5 +22,11 @@ ms.reviewer: mduelae
 - [Create an app description with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)
 - [FAQ for continue to edit your app with Copilot](faqs-copilot-panel.md)
 - [Continue editing your app with Copilot (preview)](../canvas-apps/ai-edit-app.md)
+- [FAQ for Copilot control in canvas apps](faq-copilot-control.md)
+- [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
+- [FAQ for Copilot in model-driven apps](faqs-copilot-model-driven-app.md)
+- [Add Copilot to model-driven apps (preview)](../model-driven-apps/add-ai-copilot.md)
+- [FAQ for Copilot in rich text editor](faqs-email-assist-rte.md)
+- [Use Copilot in rich text editor for email (preview)](../model-driven-apps/use-copilot-email-assist.md)
 
 

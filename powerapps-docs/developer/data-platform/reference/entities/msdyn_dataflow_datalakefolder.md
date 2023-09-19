@@ -1,7 +1,7 @@
 ---
 title: "msdyn_dataflow_datalakefolder table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_dataflow_datalakefolder table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -18,7 +18,7 @@ search.audienceType:
 
 
 
-**Added by**: Insights App Platform Solution
+**Added by**: Insights App Platform Base Solution
 
 
 ## Messages
@@ -28,7 +28,7 @@ search.audienceType:
 |Assign|PATCH /msdyn_dataflow_datalakefolders(*msdyn_dataflow_datalakefolderid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /msdyn_dataflow_datalakefolders<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /msdyn_dataflow_datalakefolders(*msdyn_dataflow_datalakefolderid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -43,7 +43,7 @@ search.audienceType:
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |SetState|PATCH /msdyn_dataflow_datalakefolders(*msdyn_dataflow_datalakefolderid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /msdyn_dataflow_datalakefolders(*msdyn_dataflow_datalakefolderid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -68,12 +68,14 @@ search.audienceType:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [dataflowid](#BKMK_dataflowid)
+- [datalakefolderid](#BKMK_datalakefolderid)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
-- [msdyn_Dataflow](#BKMK_msdyn_Dataflow)
 - [msdyn_dataflow_datalakefolder](#BKMK_msdyn_dataflow_datalakefolder)
 - [msdyn_dataflow_datalakefolderId](#BKMK_msdyn_dataflow_datalakefolderId)
 - [msdyn_DatalakeFolder](#BKMK_msdyn_DatalakeFolder)
+- [originaldataflowid](#BKMK_originaldataflowid)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -81,6 +83,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_dataflowid"></a> dataflowid
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Dataflow Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|dataflowid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_datalakefolderid"></a> datalakefolderid
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|DatalakeFolder Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|datalakefolderid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -115,20 +149,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|iscustomizable|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
-
-
-### <a name="BKMK_msdyn_Dataflow"></a> msdyn_Dataflow
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|Dataflow|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_dataflow|
-|RequiredLevel|ApplicationRequired|
-|Targets|msdyn_dataflow|
-|Type|Lookup|
 
 
 ### <a name="BKMK_msdyn_dataflow_datalakefolder"></a> msdyn_dataflow_datalakefolder
@@ -170,9 +190,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_datalakefolder|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|None|
 |Targets|datalakefolder|
 |Type|Lookup|
+
+
+### <a name="BKMK_originaldataflowid"></a> originaldataflowid
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Original Dataflow Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|originaldataflowid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -319,6 +355,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_Dataflow](#BKMK_msdyn_Dataflow)
 - [msdyn_DataflowName](#BKMK_msdyn_DataflowName)
 - [msdyn_DatalakeFolderName](#BKMK_msdyn_DatalakeFolderName)
 - [OverwriteTime](#BKMK_OverwriteTime)
@@ -634,6 +671,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_msdyn_Dataflow"></a> msdyn_Dataflow
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Dataflow|
+|IsValidForForm|True|
+|IsValidForRead|False|
+|LogicalName|msdyn_dataflow|
+|RequiredLevel|None|
+|Targets|msdyn_dataflow|
+|Type|Lookup|
 
 
 ### <a name="BKMK_msdyn_DataflowName"></a> msdyn_DataflowName

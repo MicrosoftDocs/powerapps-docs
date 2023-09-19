@@ -1,5 +1,5 @@
 ---
-title: ControlAttributesType in Microsoft Dataverse| Microsoft Docs
+title: ControlAttributesType (Power Apps component framework API reference)| Microsoft Docs
 description: Enumeration of control attribute type.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -38,7 +38,7 @@ Model-driven and canvas apps
 | 'memo'                | memo                |
 | 'multiselectpicklist' | multiselectpicklist/choices |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

@@ -1,5 +1,5 @@
 ---
-title: clearSelectedRecordIds | Microsoft Docs
+title: clearSelectedRecordIds (Power Apps component framework API reference) | Microsoft Docs
 description: Clears the selected record ids list.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -23,7 +23,7 @@ Model-driven and canvas apps
 
 `context.parameters.dataset.clearSelectedRecordIds()`
 
-### Related topics
+### Related articles
 
 [Dataset](../dataset.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

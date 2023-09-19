@@ -1,5 +1,5 @@
 ---
-title: OptionDescriptor in Microsoft Dataverse| Microsoft Docs
+title: OptionDescriptor (Power Apps component framework API reference)| Microsoft Docs
 description: Optionset object of the attribute.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -69,7 +69,7 @@ Indicates the values of the parent choice (if child) of the picklist/choice colu
 
 **Type**: `number[]`
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
