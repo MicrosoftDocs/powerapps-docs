@@ -65,7 +65,7 @@ Built-in offline support for canvas apps is in preview and doesn't support files
 |---------|--------------------|------------------|
 |Power Apps Studio support	|Custom	| Built-in|
 |Code complexity	|Power Fx code complexity scales up with data complexity	|No code|
-|Power Fx functions |	All |	Partial (see limitations)|
+|Supported Power Fx functions |	All |	Partial (see limitations)|
 |App checker rules|	None	|Flag common configuration problems|
 |Offline or connectivity user experience	| Not provided/custom only	|Automatic|
 |Sync user experience or status	|Not provided/custom only |	Automatic|
