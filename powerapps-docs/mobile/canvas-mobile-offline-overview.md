@@ -57,7 +57,7 @@ To get started with mobile offline, turn on the offline feature in your app and 
 
 When you turn on the offline capability in your app, the app always runs offline-first, with or without an Internet connection. This functionality optimizes offline performance and creates a consistent experience for users as they change locations.
 
-## Why using canvas offline over LoadData/SaveData?
+## Why use offline for canvas apps instead of LoadData/SaveData?
 
 Built-in offline support for canvas apps is in preview and doesn't support files and images and some Power Fx functions yet. However, there are already some key benefits of using it instead of LoadData/SaveData Power Fx functions.  
 
