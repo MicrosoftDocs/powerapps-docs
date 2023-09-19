@@ -59,7 +59,7 @@ When you turn on the offline capability in your app, the app always runs offline
 
 ## Why using canvas offline over LoadData/SaveData?
 
-The canvas built-in offline feature is in preview and doeesn't cover yet the full spectrum of the offline requirements. However, there are already some key benefits of using it instead of LoadData/SaveData Power Fx functions.  
+Built-in offline support for canvas apps is in preview and doesn't support files and images and some Power Fx functions yet. However, there are already some key benefits of using it instead of LoadData/SaveData Power Fx functions.  
 
 |Topic|LoadData / SaveData | Built-in offline |
 |---------|---------|---------|
@@ -72,7 +72,7 @@ The canvas built-in offline feature is in preview and doeesn't cover yet the ful
 |Image and file support|	Yes, but may run into performance and memory limits	|Not yet supported|
 |Optimized delta sync|	No|	Yes|
 |Conflict resolution	|Manual	|Automatic|
-|Local data store	|Files	|Transaction database|
+|Local data store	|Files	|Transactional database|
 |Automatically handles schema changes	|No	|Yes|
 |Fast app launch with large datasets	|No	|Yes|
 |Data size limit|	Device dependent, 30-70 MB in most cases	|Device dependent, up to the storage capacity of the device|
