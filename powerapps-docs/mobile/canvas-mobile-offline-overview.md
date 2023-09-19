@@ -61,8 +61,8 @@ When you turn on the offline capability in your app, the app always runs offline
 
 Built-in offline support for canvas apps is in preview and doesn't support files and images and some Power Fx functions yet. However, there are already some key benefits of using it instead of LoadData/SaveData Power Fx functions.  
 
-|Topic|LoadData / SaveData | Built-in offline |
-|---------|---------|---------|
+|Topic    |LoadData / SaveData | Built-in offline |
+|---------|--------------------|------------------|
 |Power Apps Studio support	|Custom	| Built-in|
 |Code complexity	|Power Fx code complexity scales up with data complexity	|No code|
 |Power Fx functions |	All |	Partial (see limitations)|
@@ -76,7 +76,6 @@ Built-in offline support for canvas apps is in preview and doesn't support files
 |Automatically handles schema changes	|No	|Yes|
 |Fast app launch with large datasets	|No	|Yes|
 |Data size limit|	Device dependent, 30-70 MB in most cases	|Device dependent, up to the storage capacity of the device|
-
 
 ### See also
 
