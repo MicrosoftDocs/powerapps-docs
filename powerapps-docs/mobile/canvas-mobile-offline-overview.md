@@ -1,7 +1,7 @@
 ---
 title: Mobile offline for canvas apps (preview)
 description: Learn how to create canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 08/25/2023
+ms.date: 09/19/2023
 ms.topic: overview
 ms.component: pa-user
 ms.subservice: mobile
@@ -58,11 +58,13 @@ To get started with mobile offline, turn on the offline feature in your app and 
 When you turn on the offline capability in your app, the app always runs offline-first, with or without an Internet connection. This functionality optimizes offline performance and creates a consistent experience for users as they change locations.
 
 ## Why using canvas offline over LoadData/SaveData?
-The canvas built-in offline feature is in preview and doeesn't cover yet the full spectrum of the offline requirements. However, there are already some key benefits of using it instead of LoadData/SaveData powerFx functions:  
+
+The canvas built-in offline feature is in preview and doeesn't cover yet the full spectrum of the offline requirements. However, there are already some key benefits of using it instead of LoadData/SaveData Power Fx functions.  
+
 |Topic|LoadData / SaveData | Built-in offline |
 |---------|---------|---------|
 |Power Apps Studio support	|Custom	| Built-in|
-|Code complexity	|PowerFX code complexity scales up with data complexity	|No code|
+|Code complexity	|Power Fx code complexity scales up with data complexity	|No code|
 |Power Fx functions |	All |	Partial (see limitations)|
 |App checker rules|	None	|Flag common configuration problems|
 |Offline/Connectivity UX	| Not provided / custom only	|Automatic|
@@ -73,7 +75,7 @@ The canvas built-in offline feature is in preview and doeesn't cover yet the ful
 |Local data store	|Files	|Transaction database|
 |Automatically handles schema changes	|No	|Yes|
 |Fast app launch with large datasets	|No	|Yes|
-|Data size limit|	Device dependent, 30-70MB in most cases	|Device dependent, up to the storage capacity of the device|
+|Data size limit|	Device dependent, 30-70 MB in most cases	|Device dependent, up to the storage capacity of the device|
 
 
 ### See also
