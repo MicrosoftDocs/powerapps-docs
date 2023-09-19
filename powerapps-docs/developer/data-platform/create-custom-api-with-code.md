@@ -19,11 +19,11 @@ contributors:
 > - [Create and use custom APIs](custom-api.md)
 > - [Create a custom API using the plug-in registration tool](create-custom-api-prt.md)
 >
-> You should also understand how to create Microsoft Dataverse records, using either the Web API or Organization Service. For more information see:
+> You should also understand how to create Microsoft Dataverse records, using either the Web API or SDK for .NET. For more information see:
 > - [Create an entity record using the Web API](webapi/create-entity-web-api.md)
-> - [Create entities using the Organization Service](org-service/entity-operations-create.md)
+> - [Create entities using the SDK for .NET](org-service/entity-operations-create.md)
 
-Because custom API data is saved in tables, you can programmatically create new APIs using either the Web API or the Organization Service.
+Because custom API data is saved in tables, you can programmatically create new APIs using either the Web API or the SDK for .NET.
 
 The tables in [Custom API tables](custom-api-tables.md) describe all the properties you can set using code.
 
@@ -32,8 +32,8 @@ The tables in [Custom API tables](custom-api-tables.md) describe all the propert
 This code uses the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> with a early-bound programming style. You can also use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient>. More information:
 
 - [Use CrmServiceClient constructors to connect to Dataverse](xrm-tooling/use-crmserviceclient-constructors-connect.md)
-- [Late-bound and Early-bound programming using the Organization service](org-service/early-bound-programming.md)
-- [Create entities using the Organization Service](org-service/entity-operations-create.md)
+- [Late-bound and Early-bound programming using the SDK for .NET](org-service/early-bound-programming.md)
+- [Create entities using the SDK for .NET](org-service/entity-operations-create.md)
 
 This example shows the creation of a custom API action with one request parameter and one response property in a single operation. More information: [Create related entities in one operation](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
 
