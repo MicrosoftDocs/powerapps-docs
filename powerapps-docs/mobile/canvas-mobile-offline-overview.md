@@ -67,8 +67,8 @@ Built-in offline support for canvas apps is in preview and doesn't support files
 |Code complexity	|Power Fx code complexity scales up with data complexity	|No code|
 |Power Fx functions |	All |	Partial (see limitations)|
 |App checker rules|	None	|Flag common configuration problems|
-|Offline/Connectivity user experience	| Not provided/custom only	|Automatic|
-|Sync user experience/status	|Not provided/custom only |	Automatic|
+|Offline or connectivity user experience	| Not provided/custom only	|Automatic|
+|Sync user experience or status	|Not provided/custom only |	Automatic|
 |Image and file support|	Yes, but may run into performance and memory limits	|Not supported|
 |Optimized delta sync|	No|	Yes|
 |Conflict resolution	|Manual	|Automatic|
