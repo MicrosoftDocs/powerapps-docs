@@ -47,9 +47,9 @@ The formula column displays the result of *Price* multiplied by *Number of units
 
 :::image type="content" source="media/record-in-app-formula-column.png" alt-text="Screenshot of a record with a formula column.":::
 
-The formula that you enter determines the column type. You can't change a column type after the column is created. That means you can change the formula after you’ve created the column only if it doesn’t change the column type.
+The formula that you enter determines the column type. You can't change a column type after the column is created. That means you can change the formula after you've created the column only if it doesn't change the column type.
 
-For example, the formula *price * discount* creates a column type of number. You can change *price * discount* to  *price * (discount + 10%)* because that doesn’t change the column type. However, you can’t change *price * discount* to  *Text(price * discount)* because that would require changing the column type to string.
+For example, the formula *price * discount* creates a column type of number. You can change *price * discount* to  *price * (discount + 10%)* because that doesn't change the column type. However, you can't change *price * discount* to  *Text(price * discount)* because that would require changing the column type to string.
 
 ## Operators
 
@@ -312,7 +312,7 @@ This section describes the known limitations with formula columns in Dataverse.
    ```
 
 - Duplicate detection rules aren't triggered on formula columns.
-- Formula columns can reference other formula columns, but a formula column can’t reference itself.
+- Formula columns can reference other formula columns, but a formula column can't reference itself.
 - Formula columns don't support cyclic chains, such as `F1 = F2 + 10, F2 = F1 * 2`.
 - For date time formula columns in a DateDiff function:
   - User local behavior column can't be compared or used  with a DateTime(TZI)/DateOnly behavior column.
@@ -320,14 +320,13 @@ This section describes the known limitations with formula columns in Dataverse.
   - DateTime(TZI) behavior columns can be compared or used in DateDiff functions with another DateTime(TZI)/DateOnly behavior column.
   - DateOnly behavior columns can be compared or used in DateDiff function with another DateTime(TZI)/DateOnly behavior column.
   :::image type="content" source="media/formula-column-datetime.png" alt-text="Unsupported date time configuration with a formula column":::
-- In attribute metadata contained in the customizations.xml file, `SourceType=3` indicates a formula column.
 - Maximum formula expression length in formula columns is 1000 characters.
 - The label names for choice formula columns can't be changed from Yes/No.
 - The maximum depth allowed in formula columns is 10. *Depth* is defined as the chain of formula columns referring to other formula or rollup columns.  
   - For example, `table E1, F1 =  1*2, table E2, F2 - E1*2`. In this example, the depth of F2 is 1.
 - Behavior of date time formula columns can only be updated when it isn't used in another formula column.
-- Formula columns don’t display values when the app is in mobile offline mode.
-- `MaxValue` and `MinValue` metadata properties can’t be set on formula attributes.
+- Formula columns don't display values when the app is in mobile offline mode.
+- You can't set the **Minimum value** or **Maximum value** properties of a formula column.
 - We don't recommend using calculated columns in formula columns and vice versa.
 - All internal computations should be within the accepted range for decimal type formula columns (-100000000000 to 100000000000).
 - If there's a numeric column that's null then it's considered 0 in the intermediate operation. For example, `a+b+c and If a = null, b=2, c=3` then formula column gives `0 + 2 + 3 = 5`. 
