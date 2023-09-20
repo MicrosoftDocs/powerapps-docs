@@ -1027,7 +1027,6 @@ The following table describes the different formatting features and functionalit
 |![Underline.](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
 |![Text Highlight Color.](media/text-highlight-color.png "Text Highlight Color")| Text Highlight Color |  | Make your text stand out by highlighting it in a bright color. |
 |![Font Color.](media/font-color.png "Font Color")| Font Color |  | Change the color of your text. |
-|![Attachment.](media/rte-attachment.png "Attachment")| Attachment |  | Attach a file. After you've uploaded a file, you can select the link to preview the file in the **Attachment Preview** dialog. |
 |![Bullets.](media/format-bullets.png "Bullets")| Bullets |  | Create a bulleted list. |
 |![Numbering.](media/format-numbering.png "Numbering")| Numbering |  | Create a numbered list. |
 |![Decrease Indent.](media/decrease-indent.png "Decrease Indent")| Decrease Indent |  | Move your paragraph closer to the margin. |
