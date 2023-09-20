@@ -246,6 +246,9 @@ If you have a non-interactive process where your service needs to check if the u
 
 More information: [Impersonate another user](impersonate-another-user.md)
 
+## Triggering an event when a team member is added/removed from the group team
+Group members are added/removed [Just-in-time](https://learn.microsoft.com/power-apps/developer/data-platform/aad-group-team#just-in-time-updates) into the Dataverse group team using the [Associate and disassociate API](https://learn.microsoft.com/power-apps/developer/data-platform/webapi/associate-disassociate-entities-using-web-api). You can use a [plugin](https://learn.microsoft.com/power-apps/developer/data-platform/plug-ins) which can be triggered by these team member additions/removals from the group team.
+
 ### See also
 
 [Manage app and resource access using Azure Active Directory groups](/azure/active-directory/fundamentals/active-directory-manage-groups)
