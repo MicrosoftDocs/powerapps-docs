@@ -34,7 +34,7 @@ This example displays custom icons in a view for the opportunity table, which is
 Custom icons in list views can display in Unified Interface, legacy web client, mobile app, and App for Outlook. 
 
 > [!NOTE]
-> Custom icons are not available offline.  
+> Custom icons aren't available when the app is in mobile offline mode.
   
 ## Add custom graphics and JavaScript as web resources  
   
