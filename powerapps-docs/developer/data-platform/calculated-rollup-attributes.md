@@ -139,7 +139,7 @@ This message is a synchronous operation for just the column identified in the re
 - The `ModifiedBy` and `ModifiedOn` columns for the table aren't updated when the rollup column is updated.  
 - A maximum of 100 rollup columns can be defined within an organization. Each table can have no more than 10 rollup column.  
 - A rollup column formula can't reference another rollup column.  
-- A rollup column formula can't reference complex calculated column. Only calculated columns that reference simple columns in the same record can be used with rollups.  
+- A rollup column formula can't reference complex calculated or formula column. Only calculated  or formula columns that reference simple columns in the same record can be used with rollups.  
 - A rollup column formula can't include records in many-to-many (N:N) relationships. It can only include records in one-to-many (1:N) relationships.  
 - Rollup column formulas can't use one-to-many (1:N) relationships with the `ActivityPointer` or `ActivityParty` table.  
   
@@ -157,27 +157,27 @@ The `SourceTypeMask` property for those columns that support calculated and roll
     /// </summary>  
     Undefined = 0,  
     /// <summary>  
-    /// Simple: 1 - The calculated column refers to a column in the same record.  
+    /// Simple: 1 - The calculated or formula column refers to a column in the same record.  
     /// </summary>  
     Simple = 1,  
     /// <summary>  
-    /// Related: 2 - The calculated column refers to a column in a related record.  
+    /// Related: 2 - The calculated or formula column refers to a column in a related record.  
     /// </summary>  
     Related = 2,  
     /// <summary>  
-    /// Logical: 4 - The calculated column refers to a logical column.  
+    /// Logical: 4 - The calculated or formula column refers to a logical column.  
     /// </summary>  
     Logical = 4,  
     /// <summary>  
-    /// Calculated: 8 - The calculated column refers to another calculated column.  
+    /// Calculated: 8 - The calculated or formula column refers to another calculated column.  
     /// </summary>  
     Calculated = 8,  
     /// <summary>  
-    /// Rollup: 16 - The calculated column refers a rollup column.   
+    /// Rollup: 16 - The calculated or formula column refers a rollup column.   
     /// </summary>  
     Rollup = 16,  
     /// <summary>  
-    /// Invalid: 32 - The calculated or rollup column is invalid.  
+    /// Invalid: 32 - The calculated,formula, or rollup column is invalid.  
     /// Typically this would be where a field refers to a column that no longer exists.   
     /// </summary>  
     Invalid = 32  
