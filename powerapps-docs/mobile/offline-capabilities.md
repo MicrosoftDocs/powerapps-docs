@@ -90,6 +90,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 
 ## Limitations 
+- **Security model** - [Field level security and field sharing](https://learn.microsoft.com/power-platform/admin/field-level-security) are not supported in Mobile offline mode.
 
 - **Qualify a lead** - When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the  qualify stage. The user has to manually select **Next stage** to move to the next stage.
 
@@ -158,7 +159,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - Any changes to a user’s privilege to view a row won’t take effect on the mobile device until the next synchronization cycle.
 
-- Mobile offline honors the mobile apps security model. It also supports the hierarchical security model. Field level security and attribute sharing aren't supported for offline mode.
+- Mobile offline honors the mobile apps security model and the hierarchical security model except the [Field level security and field sharing](https://learn.microsoft.com/power-platform/admin/field-level-security).
   
 
 ### Organization data filter 
