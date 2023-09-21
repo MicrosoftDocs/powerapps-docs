@@ -78,15 +78,7 @@ You can create a blank card from within a solution.
 
 A common way to send cards is by using a Power Automate flow. For more information, see [Send a card automatically with a flow](../send-a-card/send-card-with-flow.md).
 
-When creating a flow to send cards in a solution, it's important that in addition to the flow, you also include the cards and any tables the card requires in the solution as well. To add any cards and tables, start by creating your flow in a solution and adding actions from the Cards for Power Apps connector. Then, select the flow in the solution explorer, select the components menu, and select Advanced > Add required objects.
-
-:::image type="content" source="../media/manage-cards/flow-add-required-objects.PNG" alt-text="Screenshot of adding required objects for a flow.":::
-
-All of the cards used in the flow and any of the tables used in those cards are automatically added to the solution.
-
-> [!NOTE]
-> Dependencies of cards in flows will only be automatically managed if you create your flow inside a solution. For flows created outside of Dataverse and then added to solutions, you will either need to re-create the flow in a solution or you will need to manage the dependent cards.
-
+When creating a flow to send cards in a solution, it's important that in addition to the flow, you also include the cards and any tables the card requires in the solution as well. To add any cards and tables, start by creating your flow in a solution and adding actions from the Cards for Power Apps connector. Then, follow the instructions above for adding an existing card to add all the cards used in the flow. Any required tables will be automatically added.
 
 ## Known Limitations
 
