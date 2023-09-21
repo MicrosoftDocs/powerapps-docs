@@ -8711,6 +8711,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/maker/portals/configure/dataverse-search.md",
+      "redirect_url": "/power-pages/configure/search/overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/create-common-problems.md",
       "redirect_url": "/power-pages/getting-started/create-manage",
       "redirect_document_id": false
