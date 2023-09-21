@@ -88,14 +88,6 @@ When importing a solution containing a card that depends on tables not present i
 
 Instead, to identify which cards depend on which tables when resolving dependency issues, start by opening the card designer. Next, navigate to Cards from the sidebar, select the card you're  interested in, and select Edit. Once the card designer opens, select Data from the sidebar to view the tables that card depends on.
 
-### Card dependencies for flows aren't displayed correctly in solution explorer
+### Card dependencies for flows aren't represented in solution explorer
 
-When importing a solution containing a flow that depends on cards not present in the same solution, the import fails if those cards aren't already present in the target environment. Similarly, removing a solution containing cards that a flow depends on fails. The dependency viewer in these scenarios is not helpful at identifying which tables or cards is causing the operation to fail.
-
-Instead, to identify which cards depend on which tables when resolving dependency issues, start by opening the flow editor. Next, find actions for the Cards for Power Apps connector. For each of these actions, identify which card is referenced.
-
-### Solutions with flows depending on cards and tables may not be importable if the card and table is removed
-
-In the scenario that you create a flow inside a solution, which depends on a card, which in turn depends on one or more tables in the current environment, if you update your flow to no longer depend on the card and remove that card and the required tables from the solution, you will not be able to import the solution to any environment due to missing dependencies.
-
-To work around this issue, you can create a new solution and add the flow directly to that solution. Exporting and importing this new solution works.
+When importing a solution containing a flow that depends on cards not present in the same solution, dependencies on cards will not be enforced. The solution maker must ensure that cards used in the flow are also present in the solution or the target environment to ensure the flow works correctly in the target environment.
