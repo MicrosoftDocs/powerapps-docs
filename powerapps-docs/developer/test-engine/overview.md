@@ -87,7 +87,7 @@ $env:user1Password = "fake password"
 
 ### Run the test
 
-Use the PAC CLI [pac tests run](/power-platform/developer/cli/reference/tests#pac-tests-run) command to run your test plan. You must provide:
+Use the PAC CLI [pac test run](/power-platform/developer/cli/reference/tests#pac-test-run) command to run your test plan. You must provide:
 
 - Path to your test plan file
 - EnvironmentId
