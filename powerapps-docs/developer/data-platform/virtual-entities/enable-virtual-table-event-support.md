@@ -5,7 +5,7 @@ ms.date: 04/04/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly
-ms.topic: "get-started-article"
+ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 
