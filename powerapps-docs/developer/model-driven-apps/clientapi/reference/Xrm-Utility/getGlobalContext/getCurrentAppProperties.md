@@ -29,8 +29,8 @@ globalContext.getCurrentAppProperties().then(successCallback, errorCallback);
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|successCallback |Function |Yes |A function to call when the business app property information is returned. An object with the following attributes (app properties) is passed to the function :<br/>- **`appId`**<br/>- **`displayName`**<br/>- **`uniqueName`**<br/>- **`url`**<br/>- **`webResourceId`**<br/>- **`webResourceName`**<br/>- **`welcomePageId`**<br/>- **`welcomePageName`**|
-|errorCallback |Function |Yes |A function to call when the operation fails.  |
+|`successCallback` |Function |Yes |A function to call when the business app property information is returned. An object with the following attributes (app properties) is passed to the function :<br/>- **`appId`**<br/>- **`displayName`**<br/>- **`uniqueName`**<br/>- **`url`**<br/>- **`webResourceId`**<br/>- **`webResourceName`**<br/>- **`welcomePageId`**<br/>- **`welcomePageName`**|
+|`errorCallback` |Function |Yes |A function to call when the operation fails.  |
 
 ## Return Value
 
@@ -38,12 +38,7 @@ If this method is called in the context of a business app, returns the propertie
 
 ### Related articles
 
-[Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)
-
+[Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)   
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md) 
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

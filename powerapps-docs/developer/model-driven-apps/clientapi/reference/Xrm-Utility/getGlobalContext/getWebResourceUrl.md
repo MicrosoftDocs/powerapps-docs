@@ -26,7 +26,7 @@ globalContext.getWebResourceUrl(webResourceName);
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|webResourceName |String |Yes |Name of the web resource. |
+|`webResourceName` |String |Yes |Name of the web resource. |
 
 ## Return Value
 
@@ -55,8 +55,5 @@ This will return the web resource URL with the caching token:
 ### Related articles
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

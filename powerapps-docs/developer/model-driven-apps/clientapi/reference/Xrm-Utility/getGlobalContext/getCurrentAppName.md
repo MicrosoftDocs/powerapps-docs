@@ -14,8 +14,6 @@ contributors:
 ---
 # getCurrentAppName (Client API reference)
 
-
-
 Returns the name of the current business app in model-driven apps.
 
 ## Syntax
@@ -29,8 +27,8 @@ globalContext.getCurrentAppName().then(successCallback, errorCallback);
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|successCallback |Function |Yes |A function to call when the business app name is returned.  |
-|errorCallback |Function |Yes |A function to call when the operation fails.  |
+|`successCallback` |Function |Yes |A function to call when the business app name is returned.  |
+|`errorCallback` |Function |Yes |A function to call when the operation fails.  |
 
 ## Return Value
 
@@ -38,11 +36,7 @@ If this method is called in the context of a business app, returns the name of t
 
 ### Related articles
 
-[Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)
-
+[Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)   
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

@@ -35,8 +35,4 @@ globalContext.isOnPremises();
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

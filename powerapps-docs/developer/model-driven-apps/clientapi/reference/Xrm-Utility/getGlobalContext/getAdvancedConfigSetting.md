@@ -29,7 +29,7 @@ globalContext.getAdvancedConfigSetting(setting);
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|setting |String |Yes |Name of the configuration setting. <br/>Only the following two configuration settings are supported: **"MaxChildIncidentNumber"** and **"MaxIncidentMergeNumber"** |
+|`setting` |String |Yes |Name of the configuration setting. <br/>Only the following two configuration settings are supported: **"MaxChildIncidentNumber"** and **"MaxIncidentMergeNumber"** |
 
 ## Return Value
 
@@ -38,9 +38,5 @@ Returns the advanced configuration setting value.
 ### Related articles
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

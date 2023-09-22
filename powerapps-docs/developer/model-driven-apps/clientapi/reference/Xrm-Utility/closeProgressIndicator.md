@@ -27,13 +27,7 @@ If no progress dialog is displayed currently, this method will do nothing. You c
 
 ### Related articles
 
-[showProgressIndicator](showProgressIndicator.md)
-
+[showProgressIndicator](showProgressIndicator.md)   
 [Xrm.Utility](../xrm-utility.md)
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

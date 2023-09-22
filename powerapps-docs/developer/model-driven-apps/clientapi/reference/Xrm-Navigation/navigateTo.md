@@ -32,6 +32,7 @@ contributors:
 | `errorCallback` | Function | No | A function to execute when the operation fails. |
 
 ### pageInput parameter
+
 The object definition changes depending on the type of page to navigate to: [entity list](#entity-list), [entity record](#entity-record), [dashboard](#dashboard), [HTML web resource](#html-web-resource), or [custom page](#custom-page). 
 
 #### Entity list
@@ -40,10 +41,10 @@ The entity list object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `pageType` | String | Specify "entitylist". |
+| `pageType` | String | Specify `entitylist`. |
 | `entityName` | String | The logical name of the table to load in the list control. |
 | `viewId` | String | (Optional) The ID of the view to load. If you don't specify it, navigates to the default main view for the table. |
-| `viewType` | String | (Optional) Type of view to load. Specify "savedquery" or "userquery". |
+| `viewType` | String | (Optional) Type of view to load. Specify `savedquery` or `userquery`. |
 
 #### Entity record
 
@@ -51,7 +52,7 @@ The entity record object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `pageType` | String | Specify "entityrecord". |
+| `pageType` | String | Specify `entityrecord`. |
 | `entityName` | String | Logical name of the table to display the form for. |
 | `entityId` | String | (Optional) ID of the table record to display the form for. If you don't specify this value, the form will be opened in create mode. |
 | `createFromEntity` | Lookup | (Optional) Designates a record that will provide default values based on mapped column values. The lookup object has the following String properties: entityType, id, and name (optional). |
@@ -61,11 +62,12 @@ The entity record object contains the following values.
 | `isOfflineSyncError` | Boolean | (Optional) Indicates whether there are any offline sync errors. |
 | `processId` | String | (Optional) ID of the business process to be displayed on the form. |
 | `processInstanceId` |  String | (Optional) ID of the business process instance to be displayed on the form. |
-| [relationship](#relationship-object) | Object | (Optional) Define a relationship object to display the related records on the form. |
+| `relationship` | Object | (Optional) Define a relationship object to display the related records on the form. See [relationship](#relationship-object).|
 | `selectedStageId` | String | (Optional) ID of the selected stage in business process instance. |
 | `tabName` | String | (Optional) Sets the focus on the tab of the form. |
 
 ##### Relationship object
+
 The relationship object, used in the [Entity record](#entity-record), contains the following values.
 
 | Name | Type | Description |
@@ -82,7 +84,7 @@ The dashboard object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `pageType` | String | Specify "dashboard". |
+| `pageType` | String | Specify `dashboard`. |
 | `dashboardId` | String | The ID of the dashboard to load. If you don't specify the ID, navigates to the default dashboard. |
 
 #### HTML web resource
@@ -91,7 +93,7 @@ The HTML web resource object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `pageType` | String | Specify "webresource". |
+| `pageType` | String | Specify `webresource`. |
 | `webresourceName` | String | The name of the web resource to load. |
 | `data` | String | (Optional) The data to pass to the web resource. |
 
@@ -101,10 +103,10 @@ The Custom page object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `pageType` | String | Specify "custom". |
+| `pageType` | String | Specify `custom`. |
 | `name` | String | The logical name of the custom page to open. |
-| `entityName` | String | (Optional) The logical name of the table to be made available in the custom page via Param("entityName"). |
-| `recordId` | String | (Optional) ID of the table record to be made available in the custom page via Param("recordId"). |
+| `entityName` | String | (Optional) The logical name of the table to be made available in the custom page via `Param("entityName")`. |
+| `recordId` | String | (Optional) ID of the table record to be made available in the custom page via `Param("recordId")`. |
 
 ### navigationOptions parameter
 
@@ -112,10 +114,10 @@ The navigationOptions object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | Number | Specify 1 to open the page inline; 2 to open the page in a dialog. Also, rest of the values (width, height, and position) are valid only if you have specified 2 in this value (open page in a dialog).<p/>Note: Entity lists can only be opened inline; entity records and web resources can be opened either inline or in a dialog. |
-| `width` | Number or Object | (Optional) The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<ul><li>value: The numerical value of type Number.<li>unit: The unit of measurement of type String. Specify "%" or "px". Default value is "px".</ul> |
-| `height` | Number or Object | (Optional) The height of dialog. To specify the height in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<ul><li>value: The numerical value of type Number.<li>unit: The unit of measurement of type String. Specify "%" or "px". Default value is "px".</ul> |
-| `position` | Number | (Optional) Specify 1 to open the dialog in center; 2 to open the dialog on the far side. Default is 1 (center). |
+| `target` | Number | Specify `1` to open the page inline; `2` to open the page in a dialog.<br /> Also, rest of the values (width, height, and position) are valid only if you have specified 2 in this value (open page in a dialog).<br />**Note**: Entity lists can only be opened inline; entity records and web resources can be opened either inline or in a dialog. |
+| `width` | Number or Object | (Optional) The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- `value`: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
+| `height` | Number or Object | (Optional) The height of dialog. To specify the height in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- value: The numerical value of type Number.<br />- unit: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
+| `position` | Number | (Optional) Specify `1` to open the dialog in center; `2` to open the dialog on the far side. Default is `1` (center). |
 | `title` | String | (Optional) The dialog title on top of the center or side dialog. |
 
 ## Return Value
@@ -123,10 +125,11 @@ The navigationOptions object contains the following values.
 Returns a promise. The value passed when the promise resolves is dependent on the target:
 
 - *inline*: Promise resolves right away, and does not return any value.
-- *dialog*: Promise resolves when the dialog is closed. An object is passed only if the **pageType** = **entityRecord** and you opened the form in create mode. The object has a <b>savedEntityReference</b> array with the following properties to identify the table record created:
-    - **entityType**: The logical name of the table.
-    - **id**: A string representation of a GUID value for the record.
-    - **name**: The primary column value of the record displayed or created.
+- *dialog*: Promise resolves when the dialog is closed. An object is passed only if the `pageType` = `entityRecord` and you opened the form in create mode. The object has a `savedEntityReference` array with the following properties to identify the table record created:
+
+   - **entityType**: The logical name of the table.
+   - **id**: A string representation of a GUID value for the record.
+   - **name**: The primary column value of the record displayed or created.
 
 ## Example
 
@@ -146,6 +149,7 @@ Xrm.Navigation.navigateTo(pageInput).then(
     }
 );
 ```
+
 ### Example 2: Open an existing account record within a dialog
 
 ```javascript

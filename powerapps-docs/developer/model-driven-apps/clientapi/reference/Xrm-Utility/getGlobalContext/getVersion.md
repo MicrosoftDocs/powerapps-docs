@@ -14,8 +14,6 @@ contributors:
 ---
 # getVersion (Client API reference)
 
-
-
 Returns the version number of the model-driven apps instance.
 
 ## Syntax
@@ -24,6 +22,7 @@ Returns the version number of the model-driven apps instance.
 var globalContext = Xrm.Utility.getGlobalContext();
 globalContext.getVersion();
 ``` 
+
 ## Return Value
 
 **Type**: String

@@ -25,9 +25,8 @@ contributors:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|entityName|String|Yes|The logical name of the table.|
-|formId|String|No|The form ID of the table.|
-||||
+|`entityName`|String|Yes|The logical name of the table.|
+|`formId`|String|No|The form ID of the table.|
 
 ## Returns
 
@@ -37,15 +36,14 @@ contributors:
 
 |Parameter Name| Type| Description|
 |-------------|-------|-----------|
-|Attributes| Array of strings| List of all the columns on the main form.|
-|EntityLogicalName| String| The logical name of the specified table.|
-|Id| string| The form ID of the specified table.|
-|Label| String| The label of the specified table.|
-|Name| String| The display name of the specified table.|
-|Sections| String| The sections name of the specified table.|
-|ShowLabel| Boolean| Indicates whether to show the label of the specified table or not.|
-|Visible| Boolean| Indicates whether the form is visible or not.|
-||||
+|`Attributes`| Array of strings| List of all the columns on the main form.|
+|`EntityLogicalName`| String| The logical name of the specified table.|
+|`Id`| string| The form ID of the specified table.|
+|`Label`| String| The label of the specified table.|
+|`Name`| String| The display name of the specified table.|
+|`Sections`| String| The sections name of the specified table.|
+|`ShowLabel`| Boolean| Indicates whether to show the label of the specified table or not.|
+|`Visible`| Boolean| Indicates whether the form is visible or not.|
 
 ## Example
 

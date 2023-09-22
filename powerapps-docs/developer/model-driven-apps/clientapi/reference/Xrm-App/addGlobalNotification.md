@@ -23,17 +23,17 @@ contributors:
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`notification`|Object|Yes|The notification to add. See [notification parameter](#notification-parameter)|
+|`notification`|Object|Yes|The notification to add. See [notification parameter](#notification-property)|
 |`successCallback`|Function|No|A function to call when notification is displayed. A GUID value is passed to uniquely identify the notification. You can use the GUID value to close or dismiss the notification using the [clearGlobalNotification method](clearGlobalNotification.md).|
 |`errorCallback`|Function|No|A function to call when the operation fails.|
 
-### notification parameter
+### notification property
 
 The object contains the following properties:
 
 |Property|Type|Required|Description|
 |---|---|---|---|
-|`action`|Object|No|An object with the following properties: <br /><br />`actionLabel`(Optional) String. The label for the action in the message.<br />`eventHandler`: (Optional) Function reference. The function to execute when the action label is clicked.|
+|`action`|Object|No|An object with the following properties: <br />- `actionLabel`(Optional) String. The label for the action in the message.<br />- `eventHandler`: (Optional) Function reference. The function to execute when the action label is clicked.|
 |`level`|Number|Yes|Defines the level of notification. Valid values are:<br />1: Success<br />2: Error<br />3: Warning<br />4: Information|
 |`message`|String|Yes|The message to display in the notification.|
 |`showCloseButton`|Bool|No|Indicates whether or not the user can close or dismiss the notification. If you don't specify this parameter, users can't close or dismiss the notification by default.|

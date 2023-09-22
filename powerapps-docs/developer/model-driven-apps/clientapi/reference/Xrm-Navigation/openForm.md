@@ -13,6 +13,7 @@ contributors:
 ---
 # openForm (Client API reference)
 
+
 [!INCLUDE[./includes/openForm-description.md](./includes/openForm-description.md)]
 
 > [!NOTE]
@@ -28,7 +29,7 @@ contributors:
 |---|---|---|---|
 |`entityFormOptions`|Object|Yes|Form options for opening the form. See [entityFormOptions object](#entityformoptions-object)|
 |`formParameters`|Object|No|A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br /><br />For information about passing parameters to a form, see [Set column values using parameters passed to a form](../../../set-field-values-using-parameters-passed-form.md) and [Configure a form to accept custom querystring parameters](../../../configure-form-accept-custom-querystring-parameters.md).|
-|`successCallback`|Function|No|A function to execute when the record is saved in the quick create form.This function is passed an object as a parameter. The object has a `savedEntityReference` array with the following properties to identify the record(s) displayed or created:<br /> - `entityType`: The logical name of the table.<br /> - `id`: A string representation of a GUID value for the record.<br /> - `name`: The primary column value of the record displayed or created.<br /><br />NOTE: <br /> - The `successCallback` function is not executed when you open a form for an existing or new record.<br /> - The `successCallback` function is executed only when you save a record in a quick create form that was opened using the openForm method.|
+|`successCallback`|Function|No|A function to execute when the record is saved in the quick create form.This function is passed an object as a parameter. The object has a `savedEntityReference` array with the following properties to identify the record(s) displayed or created:<br /> - `entityType`: The logical name of the table.<br /> - `id`: A string representation of a GUID value for the record.<br /> - `name`: The primary column value of the record displayed or created.<br /><br />**NOTE**: <br /> - The `successCallback` function is not executed when you open a form for an existing or new record.<br /> - The `successCallback` function is executed only when you save a record in a quick create form that was opened using the openForm method.|
 |`errorCallback`|Function|No|A function to execute when the operation fails.|
 
 
