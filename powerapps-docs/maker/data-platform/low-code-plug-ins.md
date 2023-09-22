@@ -33,7 +33,7 @@ Defining server-side business logic offers several benefits, including:
 
 There are two types of low-code plug-ins:
 
-| Type | Trigger | Supports parameters | Supported [scope](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/custom-api#select-a-binding-type) |
+| Type | Trigger | Supports parameters | Supported [scope](https://learn.microsoft.com/power-apps/developer/data-platform/custom-api#select-a-binding-type) |
 |-|-|-|-|
 | Instant | Manually run | Yes | Global and table |
 | Automated | Dataverse table event | No | Table |
@@ -45,8 +45,8 @@ All low-code plug-ins have these common properties:
 | Display name | The human-readable name of the plug-in. Cannot be changed once created. |
 | Name | The internal name of the plug-in. It is used by the platform to identify the component in code and database operations. Cannot be changed once created. |
 | Description | Used to provide additional context about the plug-in (purpose, behavior, or other important details). |
-| Solution| Used to group components and export to other environments. Learn more about [solutions](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). |
-| Expression | This is the custom function that can be used to perform actions or calculations, defined using the Power FX expression language. Power FX is a formula language used in Power Apps canvas apps, and has been extended to be used in low-code plug-ins. See [supported functions for more details](https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/low-code-plug-ins-powerfx?branch=demora%2Fmppc23-preview-update).|
+| Solution| Used to group components and export to other environments. Learn more about [solutions](https://learn.microsoft.com/power-apps/maker/data-platform/solutions-overview). |
+| Expression | This is the custom function that can be used to perform actions or calculations, defined using the Power FX expression language. Power FX is a formula language used in Power Apps canvas apps, and has been extended to be used in low-code plug-ins. See [supported functions for more details](https://review.learn.microsoft.com/power-apps/maker/data-platform/low-code-plug-ins-powerfx?branch=demora%2Fmppc23-preview-update).|
 
 # [Instant plug-ins](#tab/instant)
 
@@ -56,7 +56,7 @@ Unique properties:
 
 | Property | Description |
 |-|-|
-| Scope | Used to associate a plug-in to a specific table. It can be set to either table (shown as entity) or global, where table (entity) scope means the plug-in will be triggered with the context of a specific table record, and global scope means the operation is not associated with a table ([learn more](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/custom-api#select-a-binding-type)). |
+| Scope | Used to associate a plug-in to a specific table. It can be set to either table (shown as entity) or global, where table (entity) scope means the plug-in will be triggered with the context of a specific table record, and global scope means the operation is not associated with a table ([learn more](https://learn.microsoft.com/power-apps/developer/data-platform/custom-api#select-a-binding-type)). |
 | Parameters | Parameters allow you to pass information between the plug-in and the context that runs it, making it easier to design business logic that can be reused in varying situations.<br><br>**Input parameters** are used to provide data to the plug-in, and allow you to control how the function behaves by passing in different values you specify in the Power FX formula.<br><br>**Output parameters** allow you to retrieve the results of a function or method for further use in your program.<br><br>Supported data types:<br><ul><li>Boolean<li>String</li><li>Float</li><li>Decimal</li><li>DateTime</li><li>Integer</li><li>Entity Reference</li></ul>|
 
 More information on how to integrate from a canvas app or in a Power Automate cloud flow: [Integrate a low-code plug-in](#integrate-a-low-code-plug-in)
@@ -117,7 +117,7 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
 1. Enter the Power FX expression in the **Expression** editor.
    - Reference input parameters in the formula by the label name.
    - Output parameters must be referenced inside of curly brackets (e.g., `{ Out: "Return value" }`)
-   - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-filter-lookup)).
+   - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](https://learn.microsoft.com/power-platform/power-fx/reference/function-filter-lookup)).
    - If the scope is set to entity, use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
    > [!TIP]
    > Note the intellisense in the **Expression** box. Underlined red is invalid. Squiggly yellow means your logic might be affected by delegation limitations. Avoid delegation issues by using [delegable functions]( /power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
@@ -139,7 +139,7 @@ Example: Calculate the sum of two integers.
    - **Table**: Choose a table to associate the plug-in to, such as *Account*.
    - **Run this plugin rule when the row is**. Specify the data event (or combination) that invokes the plug-in.
 1. Enter the Power FX expression in the **Expression** editor.
-   - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-filter-lookup)).
+   - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](https://learn.microsoft.com/power-platform/power-fx/reference/function-filter-lookup)).
    - Use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
 1. Optinally expand **advanced options** to modify the **stage** (when should this run), **solution**, and **description**.
 1. Select **Save**.
@@ -153,7 +153,7 @@ Example: Calculate the sum of two integers.
 ### Prerequisites for using connectors in low-code plug-ins
 
 - [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
-- A connection reference with an active connection. Learn more about [connection references](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-connection-reference).
+- A connection reference with an active connection. Learn more about [connection references](https://learn.microsoft.com/power-apps/maker/data-platform/create-connection-reference).
 - Either **owner** or **can use and share** permission on the connection.
 
 ### Using connector actions in low-code plug-ins
@@ -165,7 +165,7 @@ Example: Calculate the sum of two integers.
 1. Click on the display name link to list the supported connector actions
 2. If the connector you need is not listed, create a new connection reference
    1. Click '+ New' in the command bar of the pane.
-   1. Fill out the form details and click **Create** ([similar to the solutions portal experience](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-connection-reference#manually-add-a-connection-reference-to-a-solution-using-solution-explorer)).
+   1. Fill out the form details and click **Create** ([similar to the solutions portal experience](https://learn.microsoft.com/power-apps/maker/data-platform/create-connection-reference#manually-add-a-connection-reference-to-a-solution-using-solution-explorer)).
    > [!NOTE]
    > In the current release, there are limited connectors available in the in-app form. If you don’t see the connector you want, go to the maker portal and create a new connection reference in an unmanaged solution. You can click the action button that says 'Take me there' in the warning message of the form to jump there.
    1. When the connection reference is created, the list of connector actions will be displayed
@@ -223,7 +223,7 @@ Learn more about how to [call Dataverse actions directly in Power Fx](../canvas-
 4. Provide values for all of the input parameters (if any).
 
 #### Invoke an instant plug-in from the Dataverse Web API
-Follow the steps for **Unbound action** or **Function bound to table** sections in the [Invoking custom APIs from the Web API documentation](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/custom-api#invoking-custom-apis-from-the-web-api) (depending on the appropriate scope of the plug-in).
+Follow the steps for **Unbound action** or **Function bound to table** sections in the [Invoking custom APIs from the Web API documentation](https://learn.microsoft.com/power-apps/developer/data-platform/custom-api#invoking-custom-apis-from-the-web-api) (depending on the appropriate scope of the plug-in).
 
 ## Contacting Help + support
 
