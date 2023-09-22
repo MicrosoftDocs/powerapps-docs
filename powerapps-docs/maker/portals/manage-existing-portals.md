@@ -122,8 +122,6 @@ To learn about how to delete a portal completely, go to [Delete a portal](admin/
 
 Displays details such as owner of the portal, date, and time when it was created and last modified, the URL of the portal, and identity provider settings.
 
-![portal details.](media/portal-details.png "Portal details")  
-
 ## Next steps
 
 [Power Apps portals Studio](portal-designer-anatomy.md)
