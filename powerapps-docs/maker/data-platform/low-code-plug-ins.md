@@ -33,29 +33,29 @@ Defining server-side business logic offers several benefits, including:
 
 There are two types of low-code plug-ins:
 
-| Type | Trigger | Supports parameters | Supported [binding types](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/custom-api#select-a-binding-type) |
+| Type | Trigger | Supports parameters | Supported [scope](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/custom-api#select-a-binding-type) |
 |-|-|-|-|
-| Instant | Manually run | Yes | Bound and unbound |
-| Automated | Dataverse table event | No | Bound |
+| Instant | Manually run | Yes | Global and table |
+| Automated | Dataverse table event | No | Table |
 
 All low-code plug-ins have these common properties:
-|Property|Description|
+| Property | Description |
 |-|-|
-|**Display name** | The human-readable name of the plug-in. It is used to identify the component in the user interface and can be customized to make it more meaningful or descriptive. This must be unique and cannot be changed once created.|
-|**Name** | The internal name of the plug-in. It is used by the platform to identify the component in code and database operations, and cannot be changed once created.|
-|**Description** | Used to provide additional context and information about the plug-in, and can be used to document its purpose, behavior, or other important details. The description can be viewed in the user interface and can be helpful for other developers or users who need to understand the plug-in's functionality.|
-|**Solution** | Used to group plug-ins and related components together in Microsoft Dataverse, and can be exported and imported between different Power Platform environments. Learn more about [solutions](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview).|
-|**Expression** | This is the custom function that can be used to perform actions or calculations, defined using the Power FX expression language. Power FX is a formula language used in Power Apps canvas apps, and has been extended to be used in low-code plug-ins. See [supported functions for more details](https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/low-code-plug-ins-powerfx?branch=demora%2Fmppc23-preview-update).|
+| Display name | The human-readable name of the plug-in. Cannot be changed once created. |
+| Name | The internal name of the plug-in. It is used by the platform to identify the component in code and database operations. Cannot be changed once created. |
+| Description | Used to provide additional context about the plug-in (purpose, behavior, or other important details). |
+| Solution| Used to group components and export to other environments. Learn more about [solutions](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview). |
+| Expression | This is the custom function that can be used to perform actions or calculations, defined using the Power FX expression language. Power FX is a formula language used in Power Apps canvas apps, and has been extended to be used in low-code plug-ins. See [supported functions for more details](https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/low-code-plug-ins-powerfx?branch=demora%2Fmppc23-preview-update).|
 
 # [Instant plug-ins](#tab/instant)
 
 An instant low-code plug-in is custom code logic that's manually triggered by a user. Custom input and output parameters can be used.
 
 Unique properties:
-|Property|Description|
+| Property | Description |
 |-|-|
-| **Scope** | Used to associate an operation to a specific table. It can be set to either entity or global, where entity scope means the plug-in will be triggered only for a specific entity, and global scope means the operation is not associated with a specific table ([learn more](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/custom-api#select-a-binding-type)).|
-| **Parameters** | Parameters allow you to pass information between the plug-in and the context that runs it, making it easier to design business logic that can be reused in varying situations.<br><br>**Input parameters** are used to provide data to the plug-in, and allow you to control how the function behaves by passing in different values you specify in the Power FX formula.<br><br>**Output parameters** allow you to retrieve the results of a function or method for further use in your program.<br><br>Supported data types:<br><ul><li>Boolean<li>String</li><li>Float</li><li>Decimal</li><li>DateTime</li><li>Integer</li><li>Entity Reference</li></ul>|
+| Scope | Used to associate a plug-in to a specific table. It can be set to either table (shown as entity) or global, where table (entity) scope means the plug-in will be triggered with the context of a specific table record, and global scope means the operation is not associated with a table ([learn more](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/custom-api#select-a-binding-type)). |
+| Parameters | Parameters allow you to pass information between the plug-in and the context that runs it, making it easier to design business logic that can be reused in varying situations.<br><br>**Input parameters** are used to provide data to the plug-in, and allow you to control how the function behaves by passing in different values you specify in the Power FX formula.<br><br>**Output parameters** allow you to retrieve the results of a function or method for further use in your program.<br><br>Supported data types:<br><ul><li>Boolean<li>String</li><li>Float</li><li>Decimal</li><li>DateTime</li><li>Integer</li><li>Entity Reference</li></ul>|
 
 More information on how to integrate from a canvas app or in a Power Automate cloud flow: [Integrate a low-code plug-in](#integrate-a-low-code-plug-in)
 
@@ -64,10 +64,10 @@ More information on how to integrate from a canvas app or in a Power Automate cl
 An automated low-code plug-in is custom code that is executed during the processing of a specific data event.
 
 Unique properties:
-|Property|Description|
+| Property | Description |
 |-|-|
-| **Data event**<br>('Run this plug-in when the row is') | Specifies which data event triggers the plug-in. Any combination of the following events can be selected to invoke the plug-in:<br><ul><li>Create</li><li>Update</li><li>Delete</li>|
-| **Stage**<br>('When should this run') | You can design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.|
+| Data event<br>('Run this plug-in when the row is') | Specifies which data event triggers the plug-in. Any combination of the following events can be selected to invoke the plug-in:<br><ul><li>Create</li><li>Update</li><li>Delete</li>|
+| Stage<br>('When should this run') | You can design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event. |
 
 ---
 
