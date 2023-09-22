@@ -39,6 +39,7 @@ There are two types of low-code plug-ins:
 | Automated | Dataverse table event | No | Table |
 
 All low-code plug-ins have these common properties:
+
 | Property | Description |
 |-|-|
 | Display name | The human-readable name of the plug-in. Cannot be changed once created. |
@@ -52,6 +53,7 @@ All low-code plug-ins have these common properties:
 An instant low-code plug-in is custom code logic that's manually triggered by a user. Custom input and output parameters can be used.
 
 Unique properties:
+
 | Property | Description |
 |-|-|
 | Scope | Used to associate a plug-in to a specific table. It can be set to either table (shown as entity) or global, where table (entity) scope means the plug-in will be triggered with the context of a specific table record, and global scope means the operation is not associated with a table ([learn more](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/custom-api#select-a-binding-type)). |
@@ -64,6 +66,7 @@ More information on how to integrate from a canvas app or in a Power Automate cl
 An automated low-code plug-in is custom code that is executed during the processing of a specific data event.
 
 Unique properties:
+
 | Property | Description |
 |-|-|
 | Data event<br>('Run this plug-in when the row is') | Specifies which data event triggers the plug-in. Any combination of the following events can be selected to invoke the plug-in:<br><ul><li>Create</li><li>Update</li><li>Delete</li>|
