@@ -33,7 +33,7 @@ Defining server-side business logic offers several benefits, including:
 
 There are two types of low-code plug-ins:
 
-| Type | Trigger | Supports parameters | Supported [scope](https://learn.microsoft.com/power-apps/developer/data-platform/custom-api#select-a-binding-type) |
+| Type | Trigger | Supports parameters | Supported [scope](/power-apps/developer/data-platform/custom-api#select-a-binding-type) |
 |-|-|-|-|
 | Instant | Manually run | Yes | Global and table |
 | Automated | Dataverse table event | No | Table |
@@ -218,7 +218,7 @@ Learn more about how to [call Dataverse actions directly in Power Fx](../canvas-
 
 #### Invoke an instant plug-in from a Power Automate cloud flow
 1. In a cloud flow, add a new action from the Microsoft Dataverse connector.
-2. Select the action called [Perform an unbound action](https://learn.microsoft.com/connectors/commondataserviceforapps/#perform-an-unbound-action) or [Perform a bound action](https://learn.microsoft.com/connectors/commondataserviceforapps/#perform-a-bound-action).
+2. Select the action called [Perform an unbound action](/connectors/commondataserviceforapps/#perform-an-unbound-action) or [Perform a bound action](/connectors/commondataserviceforapps/#perform-a-bound-action).
 3. Select your plug-in (it will have the unique name with a prefix).
 4. Provide values for all of the input parameters (if any).
 
