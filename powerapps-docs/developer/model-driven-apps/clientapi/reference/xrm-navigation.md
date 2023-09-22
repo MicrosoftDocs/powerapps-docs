@@ -30,7 +30,7 @@ Provides navigation-related methods.
 |[openUrl](xrm-navigation/openUrl.md)|[!INCLUDE[xrm-navigation/includes/openUrl-description.md](xrm-navigation/includes/openUrl-description.md)]|
 |[openWebResource](xrm-navigation/openWebResource.md)|[!INCLUDE[xrm-navigation/includes/openWebResource-description.md](xrm-navigation/includes/openWebResource-description.md)]|
 
-### Related topics
+### Related articles
 
 [Client API Xrm object](../clientapi-xrm.md)
 

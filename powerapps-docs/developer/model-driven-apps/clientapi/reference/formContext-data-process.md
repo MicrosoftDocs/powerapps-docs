@@ -131,7 +131,7 @@ Use these methods to find information about the stages in the active path, enabl
 |[getEnabledProcesses](formContext-data-process/getEnabledProcesses.md)|[!INCLUDE[formcontext-data-process/includes/getEnabledProcesses-description.md](formcontext-data-process/includes/getEnabledProcesses-description.md)]|
 |[getSelectedStage](formContext-data-process/getSelectedStage.md)|[!INCLUDE[formcontext-data-process/includes/getSelectedStage-description.md](formcontext-data-process/includes/getSelectedStage-description.md)]|
 
-### Related topics
+### Related articles
 
 [formContext.ui.process (Client API reference)](formContext-ui-process.md)
 

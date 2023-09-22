@@ -40,7 +40,7 @@ var sectionObj = tabObj.sections.get(arg);
 |[setLabel](formContext-ui-tab-sections/setLabel.md)|[!INCLUDE[formContext-ui-tab-sections/includes/setLabel-description.md](formContext-ui-tab-sections/includes/setLabel-description.md)]|
 |[setVisible](formContext-ui-tab-sections/setVisible.md)|[!INCLUDE[formContext-ui-tab-sections/includes/setVisible-description.md](formContext-ui-tab-sections/includes/setVisible-description.md)]|
 
-### Related topics
+### Related articles
 
 [formcontext.ui.tabs](formcontext-ui-tabs.md)
 

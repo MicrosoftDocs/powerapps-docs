@@ -85,7 +85,7 @@ Xrm.WebApi.deleteRecord("account", "5531d753-95af-e711-a94e-000d3a11e605").then(
 );
 ```
  
-### Related topics
+### Related articles
 
 [Xrm.WebApi](../xrm-webapi.md)
 

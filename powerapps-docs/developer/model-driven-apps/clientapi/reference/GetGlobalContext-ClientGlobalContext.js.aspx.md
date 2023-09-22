@@ -56,7 +56,7 @@ You must include a reference to the **ClientGlobalContext.js.aspx** page located
 
 The **ClientGlobalContext.js.aspx** page will include some global event handlers. These event handlers will cancel the [onselectstart](https://developer.mozilla.org/docs/Web/Events/selectstart), [contextmenu](https://developer.mozilla.org/docs/Web/Events/contextmenu), and [ondragstart](https://developer.mozilla.org/docs/Web/Events/dragstart) events. 
 
-### Related topics
+### Related articles
 
 [Xrm.Utility.getGlobalContext](Xrm-Utility/getGlobalContext.md)
 

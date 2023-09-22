@@ -29,7 +29,8 @@ contributors:
 
 **Description**: Count of items in the collection.
 
-### Related topics
+### Related articles
+
 [Collections in Client API](../collections.md)
 
 [forEach](forEach.md)

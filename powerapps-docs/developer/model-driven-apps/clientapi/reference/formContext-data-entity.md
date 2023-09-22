@@ -43,7 +43,7 @@ Provides properties and methods to retrieve information specific to the record d
 |[removeOnSave](formContext-data-entity/removeOnSave.md)|[!INCLUDE[formContext-data-entity/includes/removeOnSave-description.md](formContext-data-entity/includes/removeOnSave-description.md)]|
 |[save](formContext-data-entity/save.md)|[!INCLUDE[formContext-data-entity/includes/save-description.md](formContext-data-entity/includes/save-description.md)]|
 
-### Related topics
+### Related articles
 
 [Understand Xrm object model](../understand-clientapi-object-model.md)
 

@@ -62,7 +62,7 @@ Use the following objects to interact with grids. These objects form a hierarchy
 |[ViewSelector](grids/viewselector.md)|Provides methods to get or set information about the view selector of the subgrid control.|Read-only grid|
 
 
-### Related topics
+### Related articles
 
 [Client API grid context](../clientapi-grid-context.md)
 

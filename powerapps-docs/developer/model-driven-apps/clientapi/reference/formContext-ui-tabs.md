@@ -47,7 +47,7 @@ var tabObj = formContext.ui.tabs.get(arg);
 |[setLabel](formcontext-ui-tabs/setLabel.md)|[!INCLUDE[formcontext-ui-tabs/includes/setLabel-description.md](formcontext-ui-tabs/includes/setLabel-description.md)]|
 |[setVisible](formcontext-ui-tabs/setVisible.md)|[!INCLUDE[formcontext-ui-tabs/includes/setVisible-description.md](formcontext-ui-tabs/includes/setVisible-description.md)]|
 
-### Related topics
+### Related articles
 
 [formcontext.ui.tabs](formcontext-ui-tabs.md)
 

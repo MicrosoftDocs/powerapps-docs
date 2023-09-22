@@ -63,7 +63,7 @@ console.log(success);},
 function(error){console.log(error);});
 ```
 
-### Related topics
+### Related articles
 
 [Xrm.Utility](../xrm-utility.md)
 

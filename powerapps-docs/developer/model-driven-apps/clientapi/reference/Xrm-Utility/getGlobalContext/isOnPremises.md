@@ -31,7 +31,7 @@ globalContext.isOnPremises();
 
 **Description**: **true** if the model-driven apps instance is on-premises; **false** otherwise.
 
-### Related topics
+### Related articles
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 

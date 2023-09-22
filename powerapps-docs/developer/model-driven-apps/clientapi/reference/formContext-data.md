@@ -42,7 +42,7 @@ Provides properties and methods to work with the data on a form.
 |[save](formContext-data/save.md)|[!INCLUDE[formContext-data/includes/save-description.md](formContext-data/includes/save-description.md)]|
 
 
-### Related topics
+### Related articles
 
 [formContext.data.entity](formContext-data-entity.md)
 

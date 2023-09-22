@@ -28,9 +28,9 @@ choice, choices
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|value |Number |Yes|The value of the option you want to remove.|
+|`value` |Number |Yes|The value of the option you want to remove.|
 
-### Related topics
+### Related articles
 
 [addOption](addOption.md)
 

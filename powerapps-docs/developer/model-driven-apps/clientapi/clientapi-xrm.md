@@ -47,7 +47,7 @@ Use the **Xrm.Utility**.[getGlobalContext](reference/xrm-utility/getGlobalContex
 
 To access the global context information in a standalone HTML Web resource, you should include a reference to **ClientGlobalContext.js.aspx** in the web resource, and then use the **GetGlobalContext** function. More information: [GetGlobalContext function and ClientGlobalContext.js.aspx](reference/GetGlobalContext-ClientGlobalContext.js.aspx.md)
 
-### Related topics
+### Related articles
 
 [Understand the Client API object model](understand-clientapi-object-model.md)<br/>
 [Deprecated client APIs](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated)

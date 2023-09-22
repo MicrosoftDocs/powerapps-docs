@@ -35,7 +35,7 @@ contributors:
 
 Returns an object with `.then()` function. The parameter to the delegate is an array of numbers representing the valid status transitions.
 
-### Related topics
+### Related articles
 
 [Xrm.Utility](../xrm-utility.md)
 

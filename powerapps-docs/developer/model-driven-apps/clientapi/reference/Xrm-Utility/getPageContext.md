@@ -51,7 +51,7 @@ The method returns an object with the `input` property. The `input` property is 
 > [!NOTE]
 > Only the `pageType` and `entityName` parameters will return values every time; all other parameters will return values only if specified by the logic that opened the page.
 
-### Related topics
+### Related articles
 
 [Xrm.Utility](../xrm-utility.md)
 

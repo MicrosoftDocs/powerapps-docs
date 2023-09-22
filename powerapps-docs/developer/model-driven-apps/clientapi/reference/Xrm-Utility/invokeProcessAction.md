@@ -38,7 +38,7 @@ For more information about actions, see [Use actions](../../../../../maker/data-
 On success, returns an object with the Web API result along with any action output.
 On failure, returns an object with error details.
 
-### Related topics
+### Related articles
 [Use actions](../../../../../maker/data-platform/actions.md)
 
 [Xrm.Utility](../xrm-utility.md)

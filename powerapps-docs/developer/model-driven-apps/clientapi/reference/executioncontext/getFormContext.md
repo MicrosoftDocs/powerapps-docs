@@ -52,7 +52,8 @@ function commonEventHandler(executionContext) {
 ```
 
 
-### Related topics
+### Related articles
+
 [Execution context](../execution-context.md)
 
 [Form context](../../clientapi-form-context.md)

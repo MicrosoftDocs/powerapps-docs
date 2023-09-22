@@ -28,7 +28,7 @@ webresource
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|string|String|Yes|The data value to pass to the Silverlight web resource.|
+|`string`|String|Yes|The data value to pass to the Silverlight web resource.|
 
 ## Related topics
 

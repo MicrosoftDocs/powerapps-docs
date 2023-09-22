@@ -39,7 +39,7 @@ globalContext.getCurrentAppUrl();
 |https://[org].crm.dynamics.com/main.aspx?appid=[GUID]|model-driven apps (online)|
 |https://[server]/[org]/main.aspx?appid=[GUID]|model-driven apps (on-premises)|
 
-### Related topics
+### Related articles
 
 [Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)
 

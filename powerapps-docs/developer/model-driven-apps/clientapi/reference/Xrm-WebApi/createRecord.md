@@ -205,7 +205,7 @@ Xrm.WebApi.offline.createRecord("account", data).then(
 );
 ```
  
-### Related topics
+### Related articles
 
 [Create a table row using the Web API](../../../../data-platform/webapi/create-entity-web-api.md)<br />
 [Xrm.WebApi](../xrm-webapi.md)

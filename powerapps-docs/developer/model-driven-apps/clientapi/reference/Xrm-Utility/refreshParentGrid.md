@@ -32,7 +32,7 @@ contributors:
 |id|String|Yes |ID of the record.|
 |name|String|No |Name of the record.|
 
-### Related topics
+### Related articles
 
 [Xrm.Utility](../xrm-utility.md)
 

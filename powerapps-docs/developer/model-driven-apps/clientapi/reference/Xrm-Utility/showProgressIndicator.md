@@ -38,7 +38,7 @@ Any subsequent call to this method will update the displayed message in the exis
 
 
 
-### Related topics
+### Related articles
 
 [closeProgressIndicator](closeProgressIndicator.md)
 

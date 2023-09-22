@@ -24,9 +24,9 @@ contributors:
 
 ## Parameters
 
-|Parameter Name        | Type           | Required  |Description  |
-| ------------- |-------------| -----|-----|
-|arg        | String           | Required  |HTML-encoded string to be decoded.  |
+|Parameter Name | Type| Required  |Description  |
+| --- |---|---|---|
+|`arg`| String | Required  |HTML-encoded string to be decoded.  |
 
 
 ## Return Value
@@ -37,9 +37,7 @@ contributors:
 
 ## Related topics
 
-[htmlEncode](htmlEncode.md)
-
+[htmlEncode](htmlEncode.md)   
 [htmlAttributeEncode](htmlAttributeEncode.md)
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

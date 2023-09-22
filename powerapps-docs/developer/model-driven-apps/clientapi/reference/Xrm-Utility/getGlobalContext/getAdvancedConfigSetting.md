@@ -35,7 +35,7 @@ globalContext.getAdvancedConfigSetting(setting);
 
 Returns the advanced configuration setting value.
 
-### Related topics
+### Related articles
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 

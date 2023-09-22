@@ -30,7 +30,7 @@ A column by this name must be added to the UI element that needs to be exposed t
 
 **Description**: DOM column expected by the Learning Path (guided help) Content Designer.
 
-### Related topics
+### Related articles
 
 [Xrm.Utility](../xrm-utility.md)
 

@@ -36,7 +36,7 @@ globalContext.getCurrentAppName().then(successCallback, errorCallback);
 
 If this method is called in the context of a business app, returns the name of the business app. Otherwise, it fails with an error.
 
-### Related topics
+### Related articles
 
 [Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)
 

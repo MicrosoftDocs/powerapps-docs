@@ -27,9 +27,9 @@ Lookup
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|Function reference|Yes|The function to be removed from the [OnLookupTagClick](../events/onlookuptagclick.md) event.|
+|`myFunction`|Function reference|Yes|The function to be removed from the [OnLookupTagClick](../events/onlookuptagclick.md) event.|
 
-### Related topics
+### Related articles
 
 [addOnLookupTagClick](addOnLookupTagClick.md)
  

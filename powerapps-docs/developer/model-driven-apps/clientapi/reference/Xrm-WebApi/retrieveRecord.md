@@ -121,7 +121,7 @@ The above example displays the following in your console; you might see other va
 `Retrieved values: Name: Adventure Works, Primary Contact ID: 49a0e5b9-88df-e311-b8e5-6c3be5a8b200, Primary Contact Name: Adrian Dumitrascu`
 
  
-### Related topics
+### Related articles
 
 [Xrm.WebApi.retrieveMultipleRecords](retrieveMultipleRecords.md)
 

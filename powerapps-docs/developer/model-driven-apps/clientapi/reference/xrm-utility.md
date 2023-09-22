@@ -50,7 +50,7 @@ The following table lists the new methods you should use instead of the deprecat
 |[openWebResource](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#BKMK_OpenWebResource)|Xrm.Navigation.[openWebResource](Xrm-Navigation/openWebResource.md)|
 
 
-### Related topics
+### Related articles
 
 [Client API execution context](../clientapi-execution-context.md)
 

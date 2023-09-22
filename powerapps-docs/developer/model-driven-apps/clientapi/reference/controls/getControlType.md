@@ -48,7 +48,7 @@ All
 |customcontrol: \<*namespace*>.\<*name*> | A custom control for Dynamics 365 mobile clients (phones and tablets)|
 |customsubgrid:\<*namespace*>.\<*name*> | A custom dataset control for Dynamics 365 mobile clients (phones and tablets)|
 
-### Related topics
+### Related articles
 
 [Controls](../controls.md)
 

@@ -36,6 +36,7 @@ contributors:
 **Description**: Encoded string.
 
 ## Related topics
+
 [xmlAttributeEncode](xmlAttributeEncode.md)
 
 

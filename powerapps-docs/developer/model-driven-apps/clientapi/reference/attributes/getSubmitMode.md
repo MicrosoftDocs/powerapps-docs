@@ -37,6 +37,7 @@ All
 - dirty
 
 ### Related topic
+
 [setSubmitMode (Client API reference)](setSubmitMode.md)
 
 

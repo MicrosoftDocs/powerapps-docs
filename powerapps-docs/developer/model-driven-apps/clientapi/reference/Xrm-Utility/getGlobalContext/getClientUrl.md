@@ -37,7 +37,7 @@ globalContext.getClientUrl();
 |http(s)://[server]/[org]|model-driven apps (on-premises)|
 |https://localhost:2525|model-driven apps for Outlook with Offline Access when offline|
 
-### Related topics
+### Related articles
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)  
 [RetrieveCurrentOrganization function](/dynamics365/customer-engagement/web-api/retrievecurrentorganization)  

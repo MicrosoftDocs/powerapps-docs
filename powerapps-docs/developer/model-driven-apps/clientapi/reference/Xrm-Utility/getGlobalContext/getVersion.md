@@ -32,7 +32,7 @@ globalContext.getVersion();
 
 `"9.0.0.1103"`
 
-### Related topics
+### Related articles
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 

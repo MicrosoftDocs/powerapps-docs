@@ -768,7 +768,7 @@ Xrm.WebApi.online.execute(manyToManyDisassociateRequest)
 });
 ```
 
-### Related topics
+### Related articles
 
 
 [Xrm.WebApi](../../xrm-webapi.md)

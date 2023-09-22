@@ -108,7 +108,7 @@ information about the methods available for collections in general, see [Collect
 
 
   
-### Related topics
+### Related articles
 
 [getFormContext method](reference/executioncontext/getFormContext.md)<br/>
 [getGlobalContext method](reference/xrm-utility/getGlobalContext.md)<br/>

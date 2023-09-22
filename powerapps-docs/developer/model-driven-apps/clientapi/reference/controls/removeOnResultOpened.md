@@ -33,9 +33,9 @@ kbSearchControl.removeOnResultOpened(myFunction);
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes|The function to remove from the **OnResultOpened** event.|
+|`myFunction` |Function |Yes|The function to remove from the **OnResultOpened** event.|
 
-### Related topics
+### Related articles
 
 [OnResultOpened event](../events/onresultopened.md)
 

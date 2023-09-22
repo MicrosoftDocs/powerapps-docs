@@ -29,7 +29,7 @@ The topics under this section are organized as follows:
 - Provides reference for properties and methods for the **formContext** and **gridContext** objects.
 - Finally provides reference for namespaces in the **Xrm** object model. 
 
-### Related topics
+### Related articles
 
 [Apply business logic using client scripting in model-driven apps](../client-scripting.md)<br/>
 [Understand the Client API object model](understand-clientapi-object-model.md)<br/>

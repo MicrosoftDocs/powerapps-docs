@@ -84,7 +84,7 @@ You can define up to 50 event handlers for each event. Each event handler is exe
 
 Use the [setSharedVariable](reference/executioncontext/setSharedVariable.md) and [getSharedVariable](reference/executioncontext/getSharedVariable.md) methods to pass a common variable between event handlers (functions). Use the execution context [getDepth](reference/executioncontext/getDepth.md) method to know the sequence that an event handler is being executed in relative to other event handlers. 
 
-### Related topics
+### Related articles
 
 [Understand the Client API object model](understand-clientapi-object-model.md)<br/>
 [Client API execution context](clientapi-execution-context.md)<br/>

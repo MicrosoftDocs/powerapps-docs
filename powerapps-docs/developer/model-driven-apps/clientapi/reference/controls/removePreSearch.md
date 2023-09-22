@@ -30,9 +30,9 @@ Lookup
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes| The function to remove. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
+|`myFunction` |Function |Yes| The function to remove. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
-### Related topics
+### Related articles
 
 [PreSearch event](../events/PreSearch.md)
 

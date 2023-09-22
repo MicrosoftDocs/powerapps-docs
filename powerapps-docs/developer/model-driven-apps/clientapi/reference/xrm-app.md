@@ -22,7 +22,7 @@ Provides app-related methods.
 |[clearGlobalNotification](xrm-app/clearGlobalNotification.md)|[!INCLUDE[xrm-app/includes/clearGlobalNotification-description.md](xrm-app/includes/clearGlobalNotification-description.md)]|
 
 
-### Related topics
+### Related articles
 
 [Client API Xrm object](../clientapi-xrm.md)
 

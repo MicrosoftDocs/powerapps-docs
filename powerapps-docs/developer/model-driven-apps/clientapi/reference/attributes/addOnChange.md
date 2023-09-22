@@ -33,10 +33,10 @@ All
 
 | Parameter Name| Type| Description  |
 | --------|-----------| -----|
-|myFunction| Function reference| Specifies the function to be executed on the column **OnChange** event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
+|`myFunction`| Function reference| Specifies the function to be executed on the column **OnChange** event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
 
-### Related topics
+### Related articles
 
 [removeOnChange](removeOnChange.md)
 

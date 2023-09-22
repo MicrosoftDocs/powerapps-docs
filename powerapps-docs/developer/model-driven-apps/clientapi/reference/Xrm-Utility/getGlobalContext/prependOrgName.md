@@ -39,7 +39,7 @@ globalContext.prependOrgName(sPath);
 
 `"/"+ orgName + sPath`
 
-### Related topics
+### Related articles
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 

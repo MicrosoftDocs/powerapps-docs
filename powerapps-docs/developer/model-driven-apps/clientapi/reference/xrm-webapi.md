@@ -40,7 +40,7 @@ With mobile offline configured, the source for these records will depend on the 
 |[execute](xrm-webapi/online/execute.md)|[!INCLUDE[xrm-webapi/online/includes/execute-description.md](xrm-webapi/online/includes/execute-description.md)]|
 |[executeMultiple](xrm-webapi/online/executeMultiple.md)|[!INCLUDE[xrm-webapi/online/includes/executeMultiple-description.md](xrm-webapi/online/includes/executeMultiple-description.md)]|
 
-### Related topics
+### Related articles
 
 [Use the Microsoft Dataverse Web API](../../../data-platform/webapi/overview.md)<br />
 [Client API Xrm object](../clientapi-xrm.md)

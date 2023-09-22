@@ -24,9 +24,9 @@ contributors:
 
 ## Parameters
 
-|Parameter Name        | Type           | Required  |Description  |
+|Parameter Name| Type| Required  |Description  |
 | ------------- |-------------| -----|-----|
-|arg        | String           | Required  |String to be encoded.  |
+|`arg`| String| Required  |String to be encoded.  |
 
 
 ## Return Value

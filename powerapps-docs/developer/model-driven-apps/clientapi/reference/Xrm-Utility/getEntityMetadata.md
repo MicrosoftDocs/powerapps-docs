@@ -331,7 +331,7 @@ An object returned with the following properties in addition to the <i>base</i> 
 </tr>
 </table>
 
-### Related topics
+### Related articles
 
 [Xrm.Utility](../xrm-utility.md)
 

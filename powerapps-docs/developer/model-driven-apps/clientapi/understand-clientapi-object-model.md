@@ -42,7 +42,7 @@ At the root of the Client API object model are the following contexts and the Xr
 |**gridContext** |Provides a reference to a grid or a subgrid on a form against which the current code executes.<br/>More information: [Client API grid context](clientapi-grid-context.md)|
 |**Xrm**| Provides a global object for performing operations that do not directly impact the data and UI in forms, grids, subgrids, controls, or columns. For example, navigate forms, create and manage records using Web API.<br/>More information: [Client API Xrm object](clientapi-xrm.md)|
 
-### Related topics
+### Related articles
 
 [Client API global context](clientapi-xrm.md#client-api-global-context)<br/>
 [Client API reference](reference.md)

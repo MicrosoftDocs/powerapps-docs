@@ -27,13 +27,14 @@ contributors:
 
 |Parameter  |Return value |Return type  |
 |---------|------|-------|
-|None  |All the objects in the collection  |Array|
-|String  |The object where the name matches the argument<br/><br/>The objects returned in the **formContext.data.process** namespace don't contain names. So, using the string parameter for this method returns no objects.  |Object|
-|Number  |The object where the index matches the number  |Object|
+|`None`  |All the objects in the collection  |Array|
+|`String`  |The object where the name matches the argument<br/><br/>The objects returned in the **formContext.data.process** namespace don't contain names. So, using the string parameter for this method returns no objects.  |Object|
+|`Number`  |The object where the index matches the number  |Object|
 |delegate function(attribute, index)  |Any objects that cause the delegate function to return **true**.  |Array|
 
 
-### Related topics
+### Related articles
+
 [Collections in Client API](../collections.md)
 
 [forEach](forEach.md)

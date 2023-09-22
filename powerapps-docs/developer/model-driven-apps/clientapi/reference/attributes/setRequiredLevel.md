@@ -30,7 +30,7 @@ All
 
 ## Parameters
 
-**Type**: String. 
+**Type**: String.
 
 **Description**: Set the level to one of the following values:
 - none
@@ -38,6 +38,7 @@ All
 - recommended
 
 ### Related topic
+
 [getRequiredLevel (Client API reference)](getRequiredLevel.md)
 
 

@@ -37,6 +37,6 @@ Provides methods for managing a single side pane.
 |keepBadgeOnSelect|Boolean|No| Prevents the badge from getting cleared when the pane becomes selected.|
 
 
-### Related topics
+### Related articles
 
 [Creating side panes using client API](../create-app-side-panes.md)

@@ -25,7 +25,7 @@ contributors:
 |--|--|--|--|
 |bool|Boolean|Yes|Specify **true** to show the form; **false** to hide the form.|
 
-### Related topics
+### Related articles
 
 [getVisible](getVisible.md)
 

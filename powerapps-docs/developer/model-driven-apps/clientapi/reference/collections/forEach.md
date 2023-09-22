@@ -28,7 +28,8 @@ contributors:
 
 Delegate function with parameters for column and index. |
 
-### Related topics
+### Related articles
+
 [Collections in Client API](../collections.md)
 
 [get](get.md)

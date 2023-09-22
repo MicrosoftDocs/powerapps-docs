@@ -30,7 +30,7 @@ The **onlineWebApi** object provides the following methods:
 - [execute](online/execute.md)
 - [executeMultiple](online/executeMultiple.md)
 
-### Related topics
+### Related articles
 
 [Xrm.WebApi.offline](offline.md)
 
