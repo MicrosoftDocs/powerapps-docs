@@ -50,7 +50,7 @@ User and team management is the area of Microsoft Dataverse where you can create
 
 To find the user who is currently logged on or who is impersonated, call the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> message.  
 
-### Delete a user (preview)
+### Delete a user
 
  In Dataverse, users can be disabled and deleted. You can delete a user from Power Platform (Dataverse) assuming you have the required access permission to the [SystemUser table](reference/entities/systemuser.md) row. There is a sequence of tasks to follow. You cannot simply delete the row in a single call. You must first delete the user registered in Microsoft Azure Active Directory (AD) and then delete the user in Dataverse. The procedure to follow is outlined below.
 
