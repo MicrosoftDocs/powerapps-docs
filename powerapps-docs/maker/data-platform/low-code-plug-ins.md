@@ -38,56 +38,45 @@ There are two types of low-code plug-ins:
 | Instant | Manually run | Yes | Bound and unbound |
 | Automated | Dataverse table event | No | Bound |
 
-All low-code plug-ins have the following properties:
-- **Display name** - The human-readable name of the plug-in. It is used to identify the component in the user interface and can be customized to make it more meaningful or descriptive. This must be unique and cannot be changed once created.
-- **Name** - The internal name of the plug-in. It is used by the platform to identify the component in code and database operations, and cannot be changed once created.
-- **Description** - Used to provide additional context and information about the plug-in, and can be used to document its purpose, behavior, or other important details. The description can be viewed in the user interface and can be helpful for other developers or users who need to understand the plug-in's functionality.
-- **Solution** - Used to group plug-ins and related components together in Microsoft Dataverse, and can be exported and imported between different Power Platform environments. Learn more about [solutions](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview).
-- **Expression** - This is the custom function that can be used to perform actions or calculations, defined using the Power FX expression language. Power FX is a formula language used in Power Apps canvas apps, and has been extended to be used in low-code plug-ins. See the supported functions and examples.
+All low-code plug-ins have these common properties:
+|Property|Description|
+|-|-|
+|**Display name** | The human-readable name of the plug-in. It is used to identify the component in the user interface and can be customized to make it more meaningful or descriptive. This must be unique and cannot be changed once created.|
+|**Name** | The internal name of the plug-in. It is used by the platform to identify the component in code and database operations, and cannot be changed once created.|
+|**Description** | Used to provide additional context and information about the plug-in, and can be used to document its purpose, behavior, or other important details. The description can be viewed in the user interface and can be helpful for other developers or users who need to understand the plug-in's functionality.|
+|**Solution** | Used to group plug-ins and related components together in Microsoft Dataverse, and can be exported and imported between different Power Platform environments. Learn more about [solutions](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solutions-overview).|
+|**Expression** | This is the custom function that can be used to perform actions or calculations, defined using the Power FX expression language. Power FX is a formula language used in Power Apps canvas apps, and has been extended to be used in low-code plug-ins. See [supported functions for more details](https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/low-code-plug-ins-powerfx?branch=demora%2Fmppc23-preview-update).|
 
 # [Instant plug-ins](#tab/instant)
 
-An instant low-code plug-in is custom code logic that's manually triggered by a user.
+An instant low-code plug-in is custom code logic that's manually triggered by a user. Custom input and output parameters can be used.
 
-Properties unique to instant plug-ins:
-- **Scope** - Used to associate an operation to a specific table. It can be set to either entity or global, where entity scope means the plug-in will be triggered only for a specific entity, and global scope means the operation is not associated with a specific table ([learn more](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/custom-api#select-a-binding-type)).
-- **Parameters** - Parameters allow you to pass information between the plug-in and the context that runs it, making it easier to design business logic that can be reused in varying situations.  
-  - **Input parameters** are used to provide data to the plug-in, and allow you to control how the function behaves by passing in different values you specify in the Power FX formula.
-  - **Output parameters** allow you to retrieve the results of a function or method for further use in your program.
- 
- Supported parameter data types:
- - Boolean
- - String
- - Float
- - Decimal
- - DateTime
- - Integer
- - Entity Reference
+Unique properties:
+|Property|Description|
+|-|-|
+| **Scope** | Used to associate an operation to a specific table. It can be set to either entity or global, where entity scope means the plug-in will be triggered only for a specific entity, and global scope means the operation is not associated with a specific table ([learn more](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/custom-api#select-a-binding-type)).|
+| **Parameters** | Parameters allow you to pass information between the plug-in and the context that runs it, making it easier to design business logic that can be reused in varying situations.<br><br>**Input parameters** are used to provide data to the plug-in, and allow you to control how the function behaves by passing in different values you specify in the Power FX formula.<br><br>**Output parameters** allow you to retrieve the results of a function or method for further use in your program.<br><br>Supported data types:<br><ul><li>Boolean<li>String</li><li>Float</li><li>Decimal</li><li>DateTime</li><li>Integer</li><li>Entity Reference</li></ul>|
 
-## Manually trigger instant low-code plug-ins
-You can call the plug-in as a Dataverse action from a canvas app or in a Power Automate cloud flow, and even directly from the Dataverse Web API. More information on how to integrate: [Integrate a low-code plug-in](#integrate-a-low-code-plug-in)
+More information on how to integrate from a canvas app or in a Power Automate cloud flow: [Integrate a low-code plug-in](#integrate-a-low-code-plug-in)
 
 
 # [Automated plug-ins](#tab/automated)
 An automated low-code plug-in is custom code that is executed during the processing of a specific data event.
 
-Properties unique to automated plug-ins:
-- **Data event ('Run this plug-in when the row is')** - Specifies which data event triggers the plug-in. Multiple events can be selected to invoke the plug-in.
-- **Stage ('When should this run')** - You can design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.
-
-Supported data events:
-- Create
-- Update
-- Delete
+Unique properties:
+|Property|Description|
+|-|-|
+| **Data event**<br>('Run this plug-in when the row is') | Specifies which data event triggers the plug-in. Any combination of the following events can be selected to invoke the plug-in:<br><ul><li>Create</li><li>Update</li><li>Delete</li>|
+| **Stage**<br>('When should this run') | You can design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.|
 
 ---
 
 ## Plug-in permissions
 
-**Design time**
+**Design time.**
 Makers who have system customizer or system administrator security role membership in the Power Platform environment can access all plug-ins in that environment.
 
-**Run time**
+**Run time.**
 When a plug-in is invoked, it accesses the table data involved in the plug-in definition (the tables that are part of the formula, or if the table is associated with the settings of an automated plug-in) in the context of the user who invoked it.
 
 If a plug-in uses a connector action, the connector permissions enforce the ability for organizational users to access and operate on the plug-in call to the connector. The connection can be shared with one user or can be shared with the entire organization. This allows users to access and operate plug-ins with connectors using a shared connection if desired. By using security roles, plug-ins with connectors access can be restricted to a specific set of users within your organization. You can even specify which roles have create, read, update, or delete privileges in this way.
@@ -126,7 +115,7 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
    - Output parameters must be returned within curly brackets (e.g., `{ out: "This is returned in an output parameter within brackets" }`
    - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-filter-lookup)).
    - Example: Calculate the sum of two integers. Create two input parameters, X and Y (boty type integer), and one output parameter, `Z` (type string). You could use the following formula: `{Z:  X + Y }`
-   - If the scope is set to entity, use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name')
+   - If the scope is set to entity, use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
    > [!TIP]
    > Note the intellisense in the **Expression** box. Underlined red is invalid. Squiggly yellow means your logic might be affected by delegation limitations. Avoid delegation issues by using [delegable functions]( /power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
    :::image type="content" source="media/low-code-plugin2.png" alt-text="Instance low-code plug-in using Power Fx to derive a sum value with two integers":::
@@ -144,7 +133,7 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
    - **Run this plugin rule when the row is**. Specify the data event (or combination) that invokes the plug-in.
 1. Enter the Power FX expression in the **Expression** editor.
    - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-filter-lookup)).
-   - Use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name')
+   - Use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
 1. Optinally expand **advanced options** to modify the stage **When should this run**:
    - **Pre-operation**. Select this option if you want to run your plug-in logic after the form validation, but before the values are inserted or changed in Dataverse.
    - **Post operation**. Select this option to run your plug-in logic after the values have been inserted or changed in Dataverse.
