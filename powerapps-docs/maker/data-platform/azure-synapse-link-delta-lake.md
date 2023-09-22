@@ -25,6 +25,12 @@ provides the following information and shows you how to perform the following ta
 > - For the Dataverse configuration, append-only is enabled by default to export CSV data in `appendonly` mode. But the delta lake table will have an in-place update structure because the delta lake conversion comes with a periodic merge process.
 > - There are no costs incurred with the creation of Spark pools. Charges are only incurred once a Spark job is executed on the target Spark pool and the Spark instance is instantiated on demand. These costs are related to the usage of Azure Synapse workspace Spark and are billed monthly. The cost of conducting Spark computing mainly depends on the time interval for incremental update and the data volumes. More information: [Azure Synapse Analytics pricing](https://azure.microsoft.com/pricing/details/synapse-analytics/)
 > - It's important to take these additional costs into consideration when deciding to use this feature as they are not optional and must be paid in order to continue using this feature.
+>
+> [!NOTE]
+> Synapse Link status in the Maker Portal UI now accurately reflects the Delta Lake conversion state:
+> 1. `Count` will show number of records in delta lake table.
+> 1. `Last synchronized on` Datetime will represent the last successful conversion timestamp
+> 1. `Sycn status` will be shown as **active** once the delta lake conversion completes
 
 ## What is Delta Lake?
 
