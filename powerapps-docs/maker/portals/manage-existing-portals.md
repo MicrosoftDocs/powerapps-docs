@@ -19,17 +19,17 @@ contributors:
 
 [!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
-Once you've created a site (portal), it's visible when you sign in to [Power Apps](https://make.powerapps.com), and then select **Apps**.
+If you created a site (portal) through Power Apps or Power Pages, it's visible when you sign in to [Power Pages](https://make.powerpages.microsoft.com), and then you would it under the **Active Sites** on the **Home**.
 
 ![recent apps.](media/recent-apps.png "Recent apps")  
 
-To manage an app, select **More Commands** (**…**) for the portal and choose an action from the context menu. Alternatively, you can also select action from the menu at the top.
+To manage an app, select **More Commands** (**…**) for the site (portal) and choose an action from the context menu. 
 
 ![portal app options.](media/portal-app-options.png "Portal app options")  
 
 ## Edit
 
-Opens the [Power Apps portals Studio](portal-designer-anatomy.md) to edit the content and components of the portal.  
+You can select **Edit** to open the Site (portal) in Opens the Power Pages Studio, however, you can also select **Edit in Power Apps portals**, if your Site (portal) is created with Power Apps Portals, to edit the content and components of the Site (portal).  
 
 ![portal maker.](media/portal-maker.png "Portal maker")  
 
