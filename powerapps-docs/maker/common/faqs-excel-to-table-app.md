@@ -1,15 +1,14 @@
 ---
-title: FAQ for Copilot in rich text editor
-description: This FAQ provides information about the AI technology that's used in Copilot for rich text editor. This FAQ also includes key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 08/11/2023
+title: FAQ for Excel to table and app
+description: This FAQ provides information about the AI technology that's used in Excel to table and app. This FAQ also includes key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
+ms.date: 09/22/2023
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
-author: udaykirang
-ms.author: udag
-ms.reviewer: shujoshi
+author: Mattp123
+ms.author: yueshu
+ms.reviewer: matp
 ---
-
 # FAQ for Excel to table and app
 
 These frequently asked questions (FAQ) describe the AI impact of the Excel to table and app feature.
