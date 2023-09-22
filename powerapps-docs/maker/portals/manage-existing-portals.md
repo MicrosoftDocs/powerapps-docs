@@ -19,19 +19,19 @@ contributors:
 
 [!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
-If you created a site (portal) through Power Apps or Power Pages, it's visible when you sign in to [Power Pages](https://make.powerpages.microsoft.com), and then you would it under the **Active Sites** on the **Home**.
+If you created a site (portal) through Power Apps or Power Pages, it's visible when you sign in to [Power Pages](https://make.powerpages.microsoft.com), and then you would it under the **Active sites** on the **Home**.
 
-![recent apps.](media/recent-apps.png "Recent apps")  
+![Active sites.](media/active-sites.png "Active sites")  
 
-To manage an app, select **More Commands** (**…**) for the site (portal) and choose an action from the context menu. 
+To manage a site, select **More Commands** (**…**) for the site (portal) and choose an action from the context menu. 
 
-![portal app options.](media/portal-app-options.png "Portal app options")  
+![Site options.](media/portal-site-options.png "Portal site options")  
 
 ## Edit
 
 You can select **Edit** to open the Site (portal) in Opens the Power Pages Studio, however, you can also select **Edit in Power Apps portals**, if your Site (portal) is created with Power Apps Portals, to edit the content and components of the Site (portal).  
 
-![portal maker.](media/portal-maker.png "Portal maker")  
+![edit site.](media/edit-in-power-apps.png "edit site")  
 
 Portals Studio requires a contact record with the email address `portaluser@powerappsportals.com` for some of its functionality to work. This contact record is automatically created when you edit the portal for the first time.
 
