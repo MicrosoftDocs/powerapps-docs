@@ -114,6 +114,15 @@ This list identifies all services to which Power Apps communicates and their usa
 > - If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
 > - If you are a US Government customer or a customer in China, there are additional service URLs that must be unblocked. More information:<br/>**US Government**: [Power Apps US Government service URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls), [Power Automate US Government service URLs](/power-automate/us-govt#power-automate-us-government-service-urls)<br/>**China**: [Power Platform and Dynamics 365 apps - operated by 21Vianet in China](/power-platform/admin/about-microsoft-cloud-china).  
 
+### Telemetry for model-driven apps
+
+The following URL must be added to the allow list to ensure communication through firewalls and other security mechanisms for model-driven apps telemetry information:
+
+| Domain(s) | Region |
+| --- | --- |
+| https://eu-mobile.events.data.microsoft.com/Collector/3.0 | Europe |
+| https://browser.pipe.aria.microsoft.com | Rest of the world |
+
 ## Deprecated endpoints
 
 This section lists endpoints that we no longer support. Instead, use the new endpoints listed below. We recommend updating any bookmarks you might have that use the deprecated endpoint to the new endpoint.
