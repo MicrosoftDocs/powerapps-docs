@@ -116,9 +116,8 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
    - Add more input and output parameters as needed.
 1. Enter the Power FX expression in the **Expression** editor.
    - Reference input parameters in the formula by the label name.
-   - Output parameters must be returned within curly brackets (e.g., `{ Out: "Return value" }`)
+   - Output parameters must be referenced inside of curly brackets (e.g., `{ Out: "Return value" }`)
    - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-filter-lookup)).
-   - Example: Calculate the sum of two integers. Create two input parameters, X and Y (boty type integer), and one output parameter, `Z` (type string). You could use the following formula: `{Z:  X + Y }`
    - If the scope is set to entity, use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
    > [!TIP]
    > Note the intellisense in the **Expression** box. Underlined red is invalid. Squiggly yellow means your logic might be affected by delegation limitations. Avoid delegation issues by using [delegable functions]( /power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
@@ -126,6 +125,10 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
 1. Optionally expand **advanced options** to modify the **solution**, **scope**, or **description**.
 1. Select **Save**.
 1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
+
+Example: Calculate the sum of two integers.
+- Create two input parameters, X and Y (boty type integer), and one output parameter, `Z` (type string).
+- You could use the following formula: `{Z:  X + Y }`
 
 ## Create an automated low-code plug-in
 
@@ -138,7 +141,7 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
 1. Enter the Power FX expression in the **Expression** editor.
    - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-filter-lookup)).
    - Use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
-1. Optinally expand **advanced options** to modify the **stage** (when should this run), solution, and description.
+1. Optinally expand **advanced options** to modify the **stage** (when should this run), **solution**, and **description**.
 1. Select **Save**.
 1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
 
