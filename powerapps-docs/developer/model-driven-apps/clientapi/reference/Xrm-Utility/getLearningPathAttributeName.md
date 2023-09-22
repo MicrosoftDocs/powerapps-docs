@@ -14,8 +14,6 @@ contributors:
 ---
 # getLearningPathAttributeName (Client API reference)
 
-
-
 [!INCLUDE[./includes/getLearningPathAttributeName-description.md](./includes/getLearningPathAttributeName-description.md)]
 
 A column by this name must be added to the UI element that needs to be exposed to Learning Path (guided help). 
@@ -33,9 +31,5 @@ A column by this name must be added to the UI element that needs to be exposed t
 ### Related articles
 
 [Xrm.Utility](../xrm-utility.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

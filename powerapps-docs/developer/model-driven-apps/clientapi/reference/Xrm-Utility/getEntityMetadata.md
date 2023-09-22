@@ -27,7 +27,7 @@ contributors:
 |Name |Type |Required |Description |
 |---|---|---|---|
 |`entityName`|String|Yes|The logical name of the table.|
-|`attributes`|array of strings|No|The columns to get definitions for.|
+|`attributes`|Array of strings|No|The columns to get definitions for.|
 |`successCallback`|function|No|A function to call when the table definitions are returned.|
 |`errorCallback`|function|No|A function to call when the operation fails.|
 
@@ -98,7 +98,7 @@ Privilege objects have the following properties to define the security privilege
 |`CanBeParentEntityReference`|Boolean|Whether the privilege for an external party can be parent access level.|
 |`Name`|String|The name of the privilege.|
 |`PrivilegeId`|String|The ID of the privilege.|
-|`PrivilegeType`|Number|The type of privilege, which is one of the following:<br />0: None<br />1: Create<br />2: Read<br />3: Write<br />4: Delete<br />5: Assign<br />6: Share<br />7: Append<br />8: AppendTo|
+|`PrivilegeType`|Number|The type of privilege, which is one of the following:<br />0 : None<br />1 : Create<br />2 : Read<br />3 : Write<br />4 : Delete<br />5 : Assign<br />6 : Share<br />7 : Append<br />8 : AppendTo|
 
 ### Attribute objects
 
@@ -121,8 +121,8 @@ Yes/No columns have these properties:
 
 |Name|Type|Description|
 |---|---|---|
-|DefaultFormValue|Boolean|Default value for a Yes/No column.|
-|OptionSet|Object|Options for the boolean column where each option is a key:value pair.|
+|`DefaultFormValue`|Boolean|Default value for a Yes/No column.|
+|`OptionSet`|Object|Options for the boolean column where each option is a key:value pair.|
 
 #### Choice (PicklistAttributeMetadata) columns
 
@@ -130,7 +130,7 @@ Choice columns have this property:
 
 |Name|Type|Description|
 |---|---|---|
-|OptionSet|Object|Options for the column where each option is a key:value pair.|
+|`OptionSet`|Object|Options for the column where each option is a key:value pair.|
 
 #### Choices (MultiSelectPicklistAttributeMetadata ) columns
 
@@ -138,34 +138,34 @@ Choices columns have these properties:
 
 |Name|Type|Description|
 |---|---|---|
-|DefaultFormValue|Boolean|Default value for the column.|
-|OptionSet|Object|Options for the boolean column where each option is a key:value pair.|
+|`DefaultFormValue`|Boolean|Default value for the column.|
+|`OptionSet`|Object|Options for the boolean column where each option is a key:value pair.|
 
 #### State (StateAttributeMetadata) columns
 
-State columns have this property
-
-|Name|Type|Description|
-|---|---|---|
-|OptionSet|Object|Options for the column where each option is a key:value pair.|
-
-State columns also have these methods:
-
-|Name|Return Type|Description|
-|---|---|---|
-|getDefaultStatus(arg)|Number|Returns the default status (number) based on the passed in state value for a table. For default state and status values for a table, see table definitions information of the table in [Dataverse table/entity reference](../../../../data-platform/reference/about-entity-reference.md).|
-|getStatusValuesForState(arg)|Array of numbers|Returns possible status values (array of numbers) for a specified state value. For state and status values for a table, see table definitions information of the table in [Dataverse table/entity reference](../../../../data-platform/reference/about-entity-reference.md).|
-
-
-#### Status (StatusAttributeMetadata) columns
-
-Status columns have this property
+State columns have this property:
 
 |Name|Type|Description|
 |---|---|---|
 |`OptionSet`|Object|Options for the column where each option is a key:value pair.|
 
-Status columns also have this method:
+State columns also have these methods that accept the value of one of the `OptionSet` option values as the `arg` parameter.
+
+|Name|Return Type|Description|
+|---|---|---|
+|`getDefaultStatus(arg)`|Number|Returns the default status (number) based on the passed in state value for a table. For default state and status values for a table, see table definitions information of the table in [Dataverse table/entity reference](../../../../data-platform/reference/about-entity-reference.md).|
+|`getStatusValuesForState(arg)`|Array of numbers|Returns possible status values (array of numbers) for a specified state value. For state and status values for a table, see table definitions information of the table in [Dataverse table/entity reference](../../../../data-platform/reference/about-entity-reference.md).|
+
+
+#### Status (StatusAttributeMetadata) columns
+
+Status columns have this property:
+
+|Name|Type|Description|
+|---|---|---|
+|`OptionSet`|Object|Options for the column where each option is a key:value pair.|
+
+Status columns also have this method that accepts the value of one of the `OptionSet` option values as the `arg` parameter.
 
 |Name|Return Type|Description|
 |---|---|---|

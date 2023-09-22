@@ -14,8 +14,6 @@ contributors:
 ---
 # Xrm.WebApi.offline (Client API reference)
 
-
-
 [!INCLUDE[./includes/offline-description.md](./includes/offline-description.md)] 
 
 For information about the mobile offline feature, see  [Configure mobile offline synchronization to allow users to work in offline mode on their mobile device](/dynamics365/customer-engagement/mobile-app/configure-mobile-offline-synchronization-dynamics-365-phones-tablets)
@@ -39,12 +37,7 @@ The **offlineWebApi** object provides the following methods. When in the offline
 
 ### Related articles
 
-[Xrm.WebApi.online](online.md)
-
+[Xrm.WebApi.online](online.md)   
 [Xrm.WebApi](../xrm-webapi.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -26,8 +26,8 @@ contributors:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|webResourceName|String|Yes|The name of the web resource.|
-|key|String|Yes|The key for the localized string.|
+|`webResourceName`|String|Yes|The name of the web resource.|
+|`key`|String|Yes|The key for the localized string.|
 
 ## Return value
 
@@ -43,12 +43,8 @@ The appropriate string value will be determined by the individual user's languag
 
 ### Related articles
 
-[Xrm.Utility](../xrm-utility.md)<br />
-[String (RESX) web resources](../../../resx-web-resources.md)<br />
+[Xrm.Utility](../xrm-utility.md)   
+[String (RESX) web resources](../../../resx-web-resources.md)   
 [Web resource dependencies](../../../web-resource-dependencies.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
