@@ -42,9 +42,9 @@ If you've one or more fields for the Contact table set as required, or any busin
 
 When you see this error message, create a contact record manually with the email address `portaluser@powerappsportals.com`.
 
-## Browse
+## Preview
 
-Opens the portal to browse the website. This option helps you to see the portal as it will look to your customers.
+Opens the portal to preview the website. This option helps you to see the portal as it will look to your customers.
 
 > [!div class=mx-imgBorder]
 > ![portal website.](media/portal-website.png "Portal website")  
