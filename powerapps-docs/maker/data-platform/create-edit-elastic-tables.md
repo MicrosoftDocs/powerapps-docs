@@ -1,13 +1,13 @@
 ---
-title: Create and edit elastic tables
+title: Create and edit elastic tables (preview)
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 06/06/2023
+ms.date: 08/11/2023
+author: pnghub
+ms.author: gned
 ms.reviewer: matp
-author: Mattp123
 ms.topic: how-to
 ms.subservice: dataverse-maker
-ms.author: matp
 ---
 # Create and edit elastic tables (preview)
 
@@ -58,7 +58,7 @@ The choice of table should be based on the specific needs of your application. A
 
 As your business data grows, elastic tables provide unlimited auto scalability based on your application workload, both for storage size and throughput, such as the number of records created, updated, or deleted in a given timeframe.
 
-If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request API's, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits. More information: [Developer guide: Bulk operations with elastic tables (Preview)](../../developer/data-platform/bulk-operations-elastic-tables.md)
+If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request API's, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits. More information: [Developer guide: Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md)
 
 ### Automatic removal of data
 
@@ -145,8 +145,22 @@ You create an elastic table just like any other new table in Dataverse.
 
 - Currently Power Apps (make.powerapps.com) allows you to set a many-to-one (N:1) relationship with an elastic table where the N table is a standard table. Standard table will have a lookup column pointing to an elastic table row. While retrieving rows for a standard table in such a relationship, the lookup column that points to an elastic table row won't have the formatted value returned when the elastic table row has the `partitionid` set. More information: [Developer Guide: Partitioning and horizontal scaling](../../developer/data-platform/elastic-tables.md#partitioning-and-horizontal-scaling)
 - Getting related rows when making a query on an elastic table currently doesn't work. However, getting related rows works when retrieving a single elastic table row.
+- When [time to live (TTL)](#automatic-removal-of-data) is used on a row, the row will get deleted from the elastic table when TTL has expired. If it's synchronized to a data lake using [Synapse Link for Dataverse](export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
+
+## For developers
+
+Elastic tables have different behaviors and capabilities than standard tables when developers use them with Dataverse APIs. The following articles for developers describe these differences:
+
+- [Elastic tables (preview)](../../developer/data-platform/elastic-tables.md)
+- [Create elastic tables using code (preview)](../../developer/data-platform/create-elastic-tables.md)
+- [Use elastic tables using code (preview)](../../developer/data-platform/use-elastic-tables.md)
+- [Query JSON columns in elastic tables (preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
+- [Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md)
+- [Elastic table sample code (preview)](../../developer/data-platform/elastic-table-samples.md)
+
+
 
 ## See also
 
-[Create and edit tables using Power Apps](create-edit-entities-portal.md)<br />
-[Developer guide: Elastic tables](../../developer/data-platform/elastic-tables.md)
+[Create and edit tables using Power Apps](create-edit-entities-portal.md)
+

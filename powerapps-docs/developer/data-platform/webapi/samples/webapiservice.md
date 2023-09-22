@@ -185,9 +185,9 @@ These classes provide reusable definitions of requests and responses that corres
 
 These classes also provide examples of specific operations that can be applied using `HttpRequestMessage` and `HttpResponseMessage` without deriving from those types.
 
-Within an application, you may also create custom messages, for example representing a Custom API in your environment, using the same pattern. These are modular classes and aren't required to be included in the `WebAPIService.Messages` folder.
+Within an application, you may also create custom messages, for example representing a custom API in your environment, using the same pattern. These are modular classes and aren't required to be included in the `WebAPIService.Messages` folder.
 
-For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a Custom API that isn't included in Dataverse until a solution containing the Custom API is installed. The definition for the corresponding classes to use this message are located in the sample application that uses it:
+For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a custom API that isn't included in Dataverse until a solution containing the custom API is installed. The definition for the corresponding classes to use this message are located in the sample application that uses it:
 
 - [FunctionsAndActions/Messages/IsSystemAdminRequest.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Messages/IsSystemAdminRequest.cs)
 - [FunctionsAndActions/Messages/IsSystemAdminResponse.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Messages/IsSystemAdminResponse.cs)
@@ -341,7 +341,7 @@ The following methods are included:
 
 Within an a sample application using WebAPIService when the operation doesn't represent an API found in Dataverse by default, the method will be defined in the application rather than in the WebAPIService.
 
-For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a Custom API that isn't included in Dataverse until a solution containing the Custom API is installed. The definition for this method is located in the sample application that uses it: [FunctionsAndActions/Methods/IsSystemAdmin.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Methods/IsSystemAdmin.cs)
+For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a custom API that isn't included in Dataverse until a solution containing the custom API is installed. The definition for this method is located in the sample application that uses it: [FunctionsAndActions/Methods/IsSystemAdmin.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Methods/IsSystemAdmin.cs)
 
 ## Types
 

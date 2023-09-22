@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.date: 05/05/2023
 ms.subservice: end-user
 ms.author: mgandham
+ms.reviewer: sericks
 search.audienceType: 
   - enduser
 ---
@@ -35,7 +36,7 @@ You can select **Go to the parent** to identify the section or column in which t
 
   :::image type="content" source="media\add-template-optns.png" alt-text="Screenshot of the email template editor page, with the go to parent call out.":::
 
-Select **HTML**to  personalize your email template. We recommend the following guidelines:
+Select **HTML** to  personalize your email template. We recommend the following guidelines:
 
 - Ensure that you don't delete the existing meta tags.
 - You can add CSS inside the style tags and HTML content inside the body tags.

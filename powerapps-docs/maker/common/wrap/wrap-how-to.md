@@ -42,7 +42,7 @@ If you're creating a mobile app package for Android platform and you plan to cod
 
 ## Add canvas app to solution
 
-Wrap for Power Apps requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. Go to **Solutions** section, select a solution and press **Edit** button.
+Wrap for Power Apps requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. From the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)] Select a solution and then select **Edit**.
 
 :::image type="content" source="media/wrap-canvas-app/select-solution.png" alt-text="Select a solution.":::
 
@@ -59,15 +59,11 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 
 ## Create native mobile apps for iOS and Android using the wizard
 
-1. Sign in to [Power Apps](https://make.powerapp.com/).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. Select **Apps**, from the left navigation pane. 
+2. Select **Wrap**, from the left navigation pane. [!INCLUDE [left-navigation-pane](../../../includes/left-navigation-pane.md)]
 
 3. Select the app that you want to wrap, and then select **Wrap** on the command bar.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Select the app to wrap.](media/how-to-v2/select-app-to-wrap.png "Select the app to wrap")
-
 
 ### Step 1: Select apps 
 
@@ -94,7 +90,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
 3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and click **Next**. 
-If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Set up Azure Key Vault for automated code signing](wrap-how-to.md#set-up-azure-key-vault-for-automated-code-signing).
+If you don't have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. More information: [Create Azure key valut for wrap for Power Apps](create-key-vault-for-code-signing.md).
 
      > [!div class="mx-imgBorder"] 
      > ![Choose the apps which you want to wrap.](media/how-to-v2/select-target-platforms.png "Select target platforms")
@@ -110,18 +106,20 @@ You can also code sign your mobile app package manually instead of using automat
 ### Step 3: Configure branding
 
 1. On the **Configure Branding Step**, set the following look and feel options for your app:
+
+     > [!NOTE]
+     > All the images must be in .png format. A default image will be used if no custom images are selected.
    
-   - **App icons**: Upload icons to use for your app. All five icons need to be selected for your wrapped mobile app.
+   - **App icons**: Upload icons to use for your app. Recommended size for iOS: 1024px by 1024px .png image or larger. Recommended image size for Android: 432px by 432px .png image or larger. 
    - **Splash screen image**: Image that's used on the splash screen of your mobile app, while it loads. Default image used when not provided.
    - **Welcome screen image**: Image that's used on the welcome (sign in) screen of your mobile app, while it loads. Default image used when not provided.
    - **Background fill color**: Hexadecimal color code used for the background of the welcome screen.
    - **Button fill color**: Hexadecimal color code used to fill the button color.
    - **Status bar text theme**: Color for the status bar text at the top of the app.
    
-     > [!NOTE]
-     > All the images must be in .png format. 
 
-2.  Select **Next**.
+
+3.  Select **Next**.
 
 ### Step 4: Register app
 
@@ -160,52 +158,7 @@ After a successful build, you'll see your mobile app in the **app center locatio
 
 For testing and distribution, see [App center test](/appcenter/test-cloud/) and [Distribute](/appcenter/distribution/).
 
-## Set up Azure Key Vault for automated code signing 
 
-You need to have [Azure Key Vault](/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in **Step 2** of wrap wizard.
-  
-**Prerequisites**
-  
-- You need to have a [Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
-- Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
-- Azure Active Directory subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
-- Admin access for your tenant.
-   
-Follow these steps to create Azure Key Vault and configure KeyVault URI:
-  
-1. Sign in to your tenent as an admin and create an Azure service principal for 1P AAD application: 4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp) by running the following script: <br>
-`Connect-AzureAD -TenantId <your tenant ID> New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
-  
-2. Add a role to the service principal listed above in the subscription where the Key Vault is going to exist. For detailed steps, see [Assign a user as an administrator of an Azure subscription](/azure/role-based-access-control/role-assignments-portal-subscription-admin). Note: In step 3, you may choose Contributor, as only a minimal role is required to access the Key vault.
-
-3. Create or access existing key vault: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal)
-4. Add access policies for the key vault.
-  
-   :::image type="content" source="media/wrap-canvas-app/wrap-keyvault.gif" alt-text="Add access policies for the key vault.":::
-  
-5. Follow one of the these options, depending on your device:
-   - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
-  
-     :::image type="content" source="media/wrap-canvas-app/wrap-1.png" alt-text="Create a cert for Android.":::
-     > [!NOTE]
-      > The name of the certificate must be present in the tag step. The password also needs match the password you entered during the store pass parameter used to create the .pfx file in step 2.
-  
-   - For iOS: 
-     1. Install the .cer into Keychain Access app by double clicking it. More information: [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate) </br> Then export the file as a .p12 file by right clicking your certificate file and the select **Export** and select the file format .p12. 
-        > [!NOTE]
-        > The .p12 password that you set in step 4 is required when uploading it to the keyvault in the next step.
-     2. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run the following command to encode it to base64:
-        - Mac: base64 `-i example.mobileprovision`
-        - Windows:  `certutil -encode data.txt tmp.b64`
-     
-     3. Get the outputted `base64` string from previous step and upload to Keyvault secret. Then, get the .p12 file and upload it to Keyvault Certificate.
-  
-        :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
-
-6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
-  
-     :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
-  
   
 ## Register your app on Azure portal manually (optional)
 You can automatically create your app registration in the wrap wizard as mentioned in [step 4](wrap-how-to.md#step-4-register-app). Or, you can manually create a new registration for your app on Azure portal. More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
@@ -300,9 +253,10 @@ You can automatically sign your mobile app package during wrap process in **Step
 
 
 ## See also
-
+- [Troubleshoot issues with the wrap feature in Power Apps](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues)
 - [Wrap overview](overview.md)
 - [Code sign for iOS](code-sign-ios.md)
 - [Code sign for Android](code-sign-android.md)
 - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
+- [Create your Azure key vault for automated code signing](create-key-vault-for-code-signing.md)
 - [Frequently asked questions for wrap](faq.yml)

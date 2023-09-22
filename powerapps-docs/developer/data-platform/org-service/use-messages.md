@@ -1,6 +1,6 @@
 ---
-title: "Use messages with the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use messages with the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Understand how messages are used to invoke operations using the SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.collection: get-started
 ms.date: 04/24/2023
 author: divkamath
@@ -13,7 +13,7 @@ contributors:
  - JimDaly
  - phecke
 ---
-# Use messages with the Organization service
+# Use messages with the SDK for .NET
 
 It's important to understand that all data operations in Dataverse are defined as *messages* and the definitions of these messages are stored in Dataverse.
 
@@ -150,7 +150,7 @@ Developers can generate Request and Response classes for the messages found in t
 |Power Platform CLI<br />[pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)<br />command|Generates cross-platform .NET (Core) classes for applications that use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>.<br />Use the [--generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate Request and Response classes.|
 |CrmSvcUtil.exe|Generates .NET Framework classes to support applications that use .NET Framework, such as Dataverse plug-ins.<br />Use the `generateActions` parameter to generate Request and Response classes.|
 
-More information: [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)
+More information: [Generate early-bound classes for the SDK for .NET](generate-early-bound-classes.md)
 
 ### Passing optional parameters with a request
 
@@ -207,18 +207,18 @@ Understanding the structure of the messages helps you understand where to find t
 More information:
 
 - [Write plug-ins to extend business processes](../plug-ins.md)
-- [Create and use Custom APIs](../custom-api.md)
+- [Create and use custom APIs](../custom-api.md)
 - [Event Framework](../event-framework.md)
 
 ## Private Messages
 
-Microsoft Dataverse contains some messages that aren't intended for third party developers to use. Microsoft added these messages enable feature functionality, but third party solutions can also add them with the Custom API feature. The [SdkMessage.IsPrivate](../reference/entities/sdkmessage.md#BKMK_IsPrivate) property tells you which messages are private.
+Microsoft Dataverse contains some messages that aren't intended for third party developers to use. Microsoft added these messages enable feature functionality, but third party solutions can also add them with the custom API feature. The [SdkMessage.IsPrivate](../reference/entities/sdkmessage.md#BKMK_IsPrivate) property tells you which messages are private.
 
 > [!CAUTION]
-> You should not use private messages unless you created them as a Custom API. By marking a message as private, the solution publisher is explicitly calling out that they do not support other apps to use the message. They may remove the message or introduce breaking changes at any time. Use of these messages by anyone other than the solution publisher are not supported.
+> You should not use private messages unless you created them as a custom API. By marking a message as private, the solution publisher is explicitly calling out that they do not support other apps to use the message. They may remove the message or introduce breaking changes at any time. Use of these messages by anyone other than the solution publisher are not supported.
 > Calling private messages from plug-ins is not supported.
 
-More information: [Create and use Custom APIs](../custom-api.md)
+More information: [Create and use custom APIs](../custom-api.md)
 
 ## Table support for messages
 
@@ -310,7 +310,7 @@ Update
 
 Use the following `GET` request to retrieve the messages supported by a table. The request below retrieves messages for the `account` table.  Replace the `@table` alias parameter value for the table you want to retrieve message names for.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/sdkmessagefilters?$select=sdkmessagefilterid
@@ -321,7 +321,7 @@ Content-Type: application/json
 ```
 
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -537,7 +537,7 @@ usermobileofflineprofilemembership
 
 Use the following `GET` request to retrieve the tables supported by a message. The request below retrieves messages for the `RetrieveUnpublishedMultiple` message.  Replace the `@message` alias parameter value for the message you want to retrieve table names for.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/sdkmessages?$select=sdkmessageid
@@ -548,7 +548,7 @@ Content-Type: application/json
 ```
 
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -687,9 +687,9 @@ OData-Version: 4.0
 
 ### See also
 
-[Table operations using the Organization service](entity-operations.md)<br />
+[Table operations using the SDK for .NET](entity-operations.md)<br />
 [Use ExecuteAsync to execute messages asynchronously](use-executeAsync.md)<br />
 [Execute messages in a single database transaction](use-executetransaction.md)<br />
-[Execute multiple requests using the Organization service](execute-multiple-requests.md)
+[Execute multiple requests using the SDK for .NET](execute-multiple-requests.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

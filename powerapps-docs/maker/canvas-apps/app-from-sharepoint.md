@@ -44,18 +44,11 @@ Watch this video to learn how to create a canvas app from a list:
 
 ## Create an app from within Power Apps
 
-Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-new-look) or [classic look](intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
-
-# [New look (preview)](#tab/home-new-look)
-
-[This article is prerelease documentation and is subject to change.]
-
-
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Depending on how you want to create your app, from the home screen, select one of the following options:
    - To create a single-page gallery app with a responsive layout, choose either:
-      - **Start with data** > **Connect to external data** > **From SharePoint**.
-      - **Start with a page design** > **Gallery connected to external table** > **From SharePoint**.
+      - **Start with data** > **Select external data** > **From SharePoint**.
+      - **Start with a page design** > **Gallery connected to external data** > **From SharePoint**.
    - To create a three screen mobile app, select **Start with an app template** > **From SharePoint**.
 1. If you don't have a SharePoint connection already created, you'll be prompted to. To select a different connection, select on the **...** button to switch account or create a new connection. 
 1. Enter the SharePoint URL and then select **Connect**. Or, select a recent site.
@@ -65,31 +58,6 @@ Your app opens in Power Apps Studio where you can design, build, and manage your
 
 You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far by selecting the save icon on the upper-right corner before you proceed. Give your app a name, and then select **Save**.
 
-# [Classic](#tab/home-classic)
-
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-1. Under **Start from**, select **SharePoint**.
-
-    :::image type="content" source="media/app-from-sharepoint/sharepoint.png" alt-text="Select SharePoint under Start from.":::
-
-1. If you don't have a SharePoint connection already created, you'll be prompted to. In that case, select **Create SharePoint Connection**.
-
-1. With the **Connect directly** option selected, select **Create**.
-
-    :::image type="content" source="media/app-from-sharepoint/create-connection.png" alt-text="Create SharePoint connection.":::
-
-1. Enter an app name.
-
-1. Select your SharePoint site, and list.
-
-1. Select **Create**.
-
-Your app opens in Power Apps Studio where you can design, build, and manage your app. More information: [Understand Power Apps Studio](power-apps-studio.md)
-
-You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far by selecting the save icon on the upper-right corner before you proceed. Give your app a name, and then select **Save**.
-  
----
 
 ## Create an app from within SharePoint Online
 
@@ -101,11 +69,8 @@ If you create an app of a list from the SharePoint Online command bar, the app a
 
 1. In the panel that appears, type a name for your app, and then select **Create**.
 
-    ![Name the app.](./media/app-from-sharepoint/app-name.png "Name the app")
+   A new tab appears in your web browser that shows the app that you created based on your list. The app appears in [Power Apps Studio](intro-maker-portal.md), where you can customize it.
 
-    A new tab appears in your web browser that shows the app that you created based on your list. The app appears in Power Apps Studio, where you can customize it.
-
-    ![Default app.](./media/app-from-sharepoint/default-app.png "Default app")
 
 1. (optional) Refresh the browser tab for your list (by selecting it and then, for example, pressing F5), and then follow these steps to run or manage your app:
 

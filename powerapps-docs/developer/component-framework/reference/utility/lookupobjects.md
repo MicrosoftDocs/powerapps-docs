@@ -1,5 +1,5 @@
 ---
-title: lookupObjects | Microsoft Docs
+title: lookupObjects (Power Apps component framework API reference) | Microsoft Docs
 description: Opens a lookup dialog allowing the user to select one or more items.
 ms.author: noazarur
 author: noazarur-microsoft
@@ -34,7 +34,7 @@ Model-driven apps
 Type: Promise<LookupValue[]>
 
 
-### Related topics
+### Related articles
 
 [Utility](../utility.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

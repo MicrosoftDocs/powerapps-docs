@@ -2,7 +2,7 @@
 title: "Get started with Power Apps| MicrosoftDocs"
 description: How to navigate the Power Apps home page. 
 ms.custom: ""
-ms.date: 11/28/2022
+ms.date: 06/15/2023
 ms.reviewer: "mkaur"
 ms.topic: overview
 author: "mkaur"
@@ -21,17 +21,9 @@ contributors:
 
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
-
-A new version of the home page is being rolled out which provides a better app creation experience. If your organization has AI enabled then it also includes the new [Copilot](ai-overview.md) features. The new look is on by default. However, you can turn it off by using the toggle on the top-right corner of the home page.
-
-> [!div class="mx-imgBorder"]
-> ![New look](media/intro-maker-portal/new-look-toggle.png "New look toggle")
+If your organization has AI enabled then it also includes the new [Copilot](ai-overview.md) features.
 
 Select the appropriate tab below to know more.
-
-# [New look (preview)](#tab/home-new-look)
-
-[This article is prerelease documentation and is subject to change.]
 
 > [!div class="mx-imgBorder"]
 > ![Navigation with new look](media/intro-maker-portal/homepage-new-look.png "Home page navigation")
@@ -41,23 +33,10 @@ Legend:
 1. [Left navigation pane](#1--left-navigation-pane)
 2. [Search](#2--search)
 3. [Environment information and settings](#3--environment-information-and-settings)
-4. [Build apps](#4--build-apps)
-5. [Get help from a virtual agent](#5--ask-a-virtual-agent)
+4. [AI Copilot](#4---ai-copilot)
+5. [Build apps](#5--build-apps)
+6. [Get help from a virtual agent](#6--ask-a-virtual-agent)
 
-# [Classic](#tab/home-classic)
-
-> [!div class="mx-imgBorder"]
-> ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
-
-Legend:
-
-1. [Left navigation pane](#1--left-navigation-pane)
-2. [Search](#2--search)
-3. [Environment information and settings](#3--environment-information-and-settings)
-4. [Build apps](#4--build-apps)
-5. [Get help from a virtual agent](#5--ask-a-virtual-agent)
-
----
 
 ## 1 – Left navigation pane
 
@@ -134,6 +113,8 @@ For best results, start by ensuring that the home page is set to the right envir
 > [!div class="mx-imgBorder"]
 > ![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
 
+Environments can be managed using [Power Platform admin center](/power-platform/admin/environments-overview#manage-environments-in-the-power-platform-admin-center).
+
 ### Notifications
 
 Select the bell icon to see notifications. Notifications are stored in the notification center until you dismiss them or when they expire.
@@ -164,27 +145,26 @@ In the header, select the question mark icon to find more information about eith
 
 You'll find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 
-## 4 – Build apps
+## 4 - AI Copilot
+
+If your organization has [AI enabled (preview)](ai-overview.md) then you'll see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation (preview)](ai-conversations-create-app.md).
+
+## 5 – Build apps
 
 Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes.
 
-Depending upon whether you have the new look turned on, select the appropriate tab below to know more.
-
-# [New look (preview)](#tab/home-new-look)
-
-[This article is prerelease documentation and is subject to change.]
-
-If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
-
 To create an app, select from the following options:
 
-
 - **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/connection-azure-sqldatabase.md) to start building your app.
+  
+  > [!NOTE]
+  > If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
+   
 - **Choose a page template**: Select the type of app you want to create. You can also use the **Filter** option located in the top-right to narrow down templates by app type or features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md)
 - **Pick an app template**: Choose from an app template including, data-centered templates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md)
 
-> [!NOTE]
->  If you're trying to create an app using Dataverse but the option is unavailable, then review the [permissions table](#permissions-for-dataverse) below.
+  > [!NOTE]
+  >  If you're trying to create an app using Dataverse but the option is unavailable, then review the [permissions table](#permissions-for-dataverse) below.
 
 Furthermore, you can locate your top six apps under **Your apps**. You have the option to filter and sort them to quickly find the app you're searching for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
 
@@ -201,29 +181,8 @@ The table summarizes scenarios and outcome when you create apps that require Mic
 | No |No | Yes | Switch to another environment using the environment picker | 
 | No|No| No | Contact your admin |
 
-# [Classic](#tab/home-classic)
-
-In Power Apps, you can create and run these types of apps:
-
-- **Canvas apps** support designing custom UI and connecting to data from various sources.
-- **Model-driven apps** have a standard UI and connect to data only in Dataverse. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
-- **Cards** (preview) are micro-apps with enterprise data and workflows and interactive, lightweight UI elements that other applications can use as content.
-
-In addition, Power Apps also allows you to create Power Pages websites. More information: [What is Power Pages?](/power-pages/introduction)
-
-If you choose an [environment that has a Dataverse database](/power-platform/admin/create-environment#create-an-environment-with-a-database), you can build canvas or model-driven apps from the same **Home** page.
-
-From the **Home** page, you can create apps, websites, chatbots, and AI models:
-
-- [Get started with canvas apps](/powerapps/maker/canvas-apps/)
-- [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
-- [Get started with chatbots](/powerapps/chatbots)
-- [Get started with AI models](/powerapps/use-ai-builder)
-
----
 
 
-
-## 5 – Ask a virtual agent
+## 6 – Ask a virtual agent
 
 Get contextual help while building your app using the Power Platform virtual agent. More information: [Get help building your app from a virtual agent](/power-apps/maker/common/virtual-agent)

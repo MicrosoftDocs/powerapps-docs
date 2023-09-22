@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Use rollup queries to track goals
 
-This sample shows how to use rollup queries to track goals. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/QueriesTrackGoals).
+This sample shows how to use rollup queries to track goals.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Use rollup queries to track goals sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/QueriesTrackGoals)
 
 This sample requires additional three users that are not in your system. Create the three required users **as is** shown below manually in **Microsoft 365**. Replace `yourorg` with the organization name.
 

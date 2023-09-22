@@ -35,7 +35,7 @@ Dataverse provides several different ways to save binary data representing files
 
 ## Block certain types of files
 
-You can block the types of files that can be uploaded by the extension or mime type.
+You can block the types of files that can be uploaded by the extension or MIME type.
 
 ### Block files by extension
 
@@ -72,7 +72,7 @@ More information: [Build queries with QueryExpression](org-service/build-queries
 
 Use this request to return only the `blockedattachments` value of the organization record.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/organizations?$select=blockedattachments HTTP/1.1
@@ -82,7 +82,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -111,9 +111,9 @@ When anyone tries to upload a file using one of the blocked types, the following
 > Number: `-2147205623`<br />
 > Message: `The attachment is either not a valid type or is too large. It cannot be uploaded or downloaded.`
 
-### Block or allow certain mime types
+### Block or allow certain MIME types
 
-You can block or allow upload of files based on mime types. More Information: [Mime Type Validation](/power-platform/admin/settings-privacy-security#mime-type-validation).
+You can block or allow upload of files based on MIME types. More Information: [Mime Type Validation](/power-platform/admin/settings-privacy-security#mime-type-validation).
 
 You can also query and modify this data programmatically. It's stored in the [Organization.BlockedMimeTypes](reference/entities/organization.md#BKMK_BlockedMimeTypes) and [Organization.AllowedMimeTypes](reference/entities/organization.md#BKMK_AllowedMimeTypes) columns. There's only one row in the organization table. You can use the SDK or Web API to query this data:
 
@@ -137,7 +137,7 @@ public static (string, string) RetrieveMimeTypes(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/organizations?$select=blockedmimetypes,allowedmimetypes HTTP/1.1
@@ -147,7 +147,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -165,15 +165,15 @@ OData-Version: 4.0
 }
 ```
 
-If `allowedmimetypes` is set, `blockedmimetypes` is ignored. Only the mime types specified in `allowedmimetypes` are allowed.
+If `allowedmimetypes` is set, `blockedmimetypes` is ignored. Only the MIME types specified in `allowedmimetypes` are allowed.
 
-If `blockedmimetypes` isn't empty and `allowedmimetypes` is empty, the following error occurs when someone tries to upload a mime type that is in blocked mime types:
+If `blockedmimetypes` isn't empty and `allowedmimetypes` is empty, the following error occurs when someone tries to upload a MIME type that is in blocked MIME types:
 
 > Name: `MimeTypeBlocked`<br />
 > Code: `0x80072522`<br />
 > Message: `Operation not allowed as mime type image/svg+xml is blocked.`
 
-If `allowedmimetypes` isn't empty, the following error occurs when someone tries to upload a mime type that isn't in `allowedmimetypes`:
+If `allowedmimetypes` isn't empty, the following error occurs when someone tries to upload a MIME type that isn't in `allowedmimetypes`:
 
 > Name: `MimeTypeNotInAllowedList`<br />
 > Code: `0x80072521`<br />

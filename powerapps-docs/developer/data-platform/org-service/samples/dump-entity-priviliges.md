@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Dump table privileges information to a file
 
-This sample shows how to write out all the column definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DumpEntityPriviliges).
+This sample shows how to write out all the column definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Dump table privileges information to a file sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DumpEntityPriviliges)
 
 The following sample creates a new file at `\DumpEntityPriviliges\bin\Debug\EntityPrivileges.xml`. You can open this file in **Office Excel** to see a tabular report.
 

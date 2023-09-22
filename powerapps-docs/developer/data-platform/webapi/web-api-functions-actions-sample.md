@@ -1,6 +1,6 @@
 ---
-title: "Web API Functions and Actions Sample (Microsoft Dataverse)| Microsoft Docs"
-description: "This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#."
+title: Web API Functions and Actions Sample
+description: This collection of code samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These samples are implemented using client-side JavaScript and C#.
 ms.date: 09/02/2022
 author: divkamath
 ms.author: dikamath
@@ -20,21 +20,21 @@ This group of samples demonstrate how to perform bound and unbound functions and
 - [Functions and Actions Sample (C#)](samples/webapiservice-functions-and-actions.md)
 - [Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)
   
-This topic explains the structure and content of the sample at a higher, language-neutral level. Review the linked sample topics above for language-specific implementation details about how to perform the operations described in this topic.  
+This article explains the structure and content of the sample at a higher, language-neutral level. Review the linked sample articles above for language-specific implementation details about how to perform the operations described in this article.  
   
 <a name="bkmk_demonstrates"></a>  
  
 ## Demonstrates  
 
-This sample is divided into the following principal sections, containing Web API functions and actions operations which are discussed in greater detail in the associated conceptual topics.  
+This sample is divided into the following principal sections, containing Web API functions and actions operations that are discussed in greater detail in the associated conceptual articles.  
   
-|Topic section|Associated topic(s)|  
+|Article section|Associated article(s)|  
 |-------------------|---------------------------|
 |[Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami)|<xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function><br />[Unbound functions](use-web-api-functions.md#unbound-functions)|
 |[Section 2: Unbound Function FormatAddress](#section-2-unbound-function-formataddress)|<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function><br />[Passing parameters to a function](use-web-api-functions.md#passing-parameters-to-a-function)|
-|[Section 3: Unbound Function InitializeFrom](#section-3-unbound-function-initializefrom)|<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function><br />[Create a new record from another record](create-entity-web-api.md#create-a-new-record-from-another-record)<br />[Map table columns](../../../maker/data-platform/map-entity-fields.md)<br />[Customize table and column mappings](../customize-entity-attribute-mappings.md)|
+|[Section 3: Unbound Function InitializeFrom](#section-3-unbound-function-initializefrom)|<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function><br />[Create a record from another record](create-entity-web-api.md#create-a-record-from-another-record)<br />[Map table columns](../../../maker/data-platform/map-entity-fields.md)<br />[Customize table and column mappings](../customize-entity-attribute-mappings.md)|
 |[Section 4: Unbound Function RetrieveCurrentOrganization](#section-4-unbound-function-retrievecurrentorganization)|<xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function><br />|
-|[Section 6: Bound Function IsSystemAdmin Custom API](#section-6-bound-function-issystemadmin-custom-api)|[Bound Functions](web-api-functions.md#bound-functions)<br />[Use Bound functions](use-web-api-functions.md#bound-functions)<br />[Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md)<br />[Create and use Custom APIs](../custom-api.md)|
+|[Section 6: Bound Function IsSystemAdmin custom API](#section-6-bound-function-issystemadmin-custom-api)|[Bound Functions](web-api-functions.md#bound-functions)<br />[Use Bound functions](use-web-api-functions.md#bound-functions)<br />[Sample: IsSystemAdmin custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md)<br />[Create and use custom APIs](../custom-api.md)|
 |[Section 7: Unbound Action GrantAccess](#section-7-unbound-action-grantaccess)|<xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action><br />[Sharing and assigning](../security-sharing-assigning.md)<br /><xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function>|
 |[Section 8: Bound Actions AddPrivilegesRole](#section-8-bound-action-addprivilegesrole)|[Bound actions](web-api-actions.md#bound-actions)<br />[Use Bound actions](use-web-api-actions.md#bound-actions)<br /><xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action><br />[Security Role (Role)  table/entity reference](../reference/entities/role.md)|
 |[Section 9: Delete sample records](#section-9-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
@@ -43,9 +43,9 @@ The following sections contain a brief discussion of the Dataverse Web API opera
 
 ## Section 1: Unbound Function WhoAmI
 
-<xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function> is a simple and commonly used unbound function.
+[WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI) is a simple and commonly used unbound function.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/WhoAmI HTTP/1.1
@@ -55,7 +55,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -69,7 +69,7 @@ OData-Version: 4.0
 }
 ```
 
-**Console output**
+**Console output:**
 
 ```
 WhoAmI tells us:
@@ -82,13 +82,13 @@ The `BusinessUnitId` value retrieved here will be used in [Section 8: Bound Acti
 
 ## Section 2: Unbound Function FormatAddress
 
-<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function> is an unbound function that requires parameters to be set. It returns a string that represents an address according to country/regional format specific requirements.
+[FormatAddress function](xref:Microsoft.Dynamics.CRM.FormatAddress) is an unbound function that requires parameters to be set. It returns a string that represents an address according to country/regional format specific requirements.
 
 In this example, the parameters are set using query string parameter values.
 
 1. A request for an address in the United States:
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/FormatAddress(Line1=@p1,City=@p2,StateOrProvince=@p3,PostalCode=@p4,Country=@p5)?@p1='123%20Maple%20St.'&@p2='Seattle'&@p3='WA'&@p4='98007'&@p5='USA' HTTP/1.1
@@ -98,7 +98,7 @@ In this example, the parameters are set using query string parameter values.
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -110,7 +110,7 @@ In this example, the parameters are set using query string parameter values.
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    USA Formatted Address:
@@ -121,7 +121,7 @@ In this example, the parameters are set using query string parameter values.
 
 1. A request for an address in Japan.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/FormatAddress(Line1=@p1,City=@p2,StateOrProvince=@p3,PostalCode=@p4,Country=@p5)?@p1='1-2-3%20Sakura'&@p2='Nagoya'&@p3='Aichi'&@p4='455-2345'&@p5='JAPAN' HTTP/1.1
@@ -131,7 +131,7 @@ In this example, the parameters are set using query string parameter values.
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -143,7 +143,7 @@ In this example, the parameters are set using query string parameter values.
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    JAPAN Formatted Address:
@@ -156,17 +156,17 @@ In this example, the parameters are set using query string parameter values.
 
 ## Section 3: Unbound Function InitializeFrom
 
-<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> is an unbound function that requires parameters. This function returns the data for a new record to create in the context of an existing record. Depending on the configuration data to control what data is copied over, the record data returned includes data copied from the original record.
+[InitializeFrom function](xref:Microsoft.Dynamics.CRM.InitializeFrom) is an unbound function that requires parameters. This function returns the data for a new record to create in the context of an existing record. Depending on the configuration data to control what data is copied over, the record data returned includes data copied from the original record.
 
 More information:
 
-- [Create a new record from another record](create-entity-web-api.md#create-a-new-record-from-another-record)
+- [Create a record from another record](create-entity-web-api.md#create-a-record-from-another-record)
 - [Map table columns](../../../maker/data-platform/map-entity-fields.md)
 - [Customize table and column mappings](../customize-entity-attribute-mappings.md)
 
 1. Create a record to be the original record:
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
@@ -198,7 +198,7 @@ More information:
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -208,7 +208,7 @@ More information:
 
 1. Use `InitializeFrom` to get the data for a new record from the original record.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate' HTTP/1.1
@@ -218,7 +218,7 @@ More information:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -232,7 +232,7 @@ More information:
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    New data based on original record:
@@ -246,7 +246,7 @@ More information:
    > [!NOTE]
    > If there are no columns mapped for this relationship, only the minimum column values are included as shown above. In this case, only the `parentaccountid` lookup to associate the new record with the original.
 
-   If all the available columns are mapped for this relationship, the value returned will include much more data from the original record, for example:
+   If all the available columns are mapped for this relationship, the value returned includes more data from the original record, for example:
 
    ```json
    {
@@ -298,7 +298,7 @@ More information:
 
 1. Create a new record using the data returned with `InitializeFrom`.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
@@ -322,7 +322,7 @@ More information:
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -330,7 +330,7 @@ More information:
    OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(9ad463e4-6d29-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    New Record:
@@ -351,15 +351,15 @@ More information:
 
 ## Section 4: Unbound Function RetrieveCurrentOrganization
 
-<xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function> returns information about the current organizaiton. It requires an <xref:Microsoft.Dynamics.CRM.EndpointAccessType?text=EndpointAccessType EnumType> value as a parameter.
+[RetrieveCurrentOrganization function](xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization) returns information about the current organization. It requires an [EndpointAccessType enum type](xref:Microsoft.Dynamics.CRM.EndpointAccessType) value as a parameter.
 
-`RetrieveCurrentOrganization` returns a <xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganizationResponse?text=RetrieveCurrentOrganizationResponse ComplexType> which includes a `Detail` property that is an <xref:Microsoft.Dynamics.CRM.OrganizationDetail?text=OrganizationDetail ComplexType>, which has complex properties that use the <xref:Microsoft.Dynamics.CRM.EndpointCollection?text=EndpointCollection ComplexType>, <xref:Microsoft.Dynamics.CRM.EndpointType?text=EndpointType EnumType> and <xref:Microsoft.Dynamics.CRM.OrganizationState?text=OrganizationState EnumType>.
+`RetrieveCurrentOrganization` returns a [RetrieveCurrentOrganizationResponse complex type](xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganizationResponse) which includes a `Detail` property that is an [OrganizationDetail complex type](xref:Microsoft.Dynamics.CRM.OrganizationDetail), which has complex properties that use the [EndpointCollection complex type](xref:Microsoft.Dynamics.CRM.EndpointCollection), [EndpointType enum type](xref:Microsoft.Dynamics.CRM.EndpointType) and [OrganizationState enum type](xref:Microsoft.Dynamics.CRM.OrganizationState)
 
 > [!NOTE]
-> Notice how the `AccessType` <xref:Microsoft.Dynamics.CRM.EndpointAccessType?text=EndpointAccessType EnumType> parameter value is passed in the URL. The fully qualified name with the selected member name is required.
+> Notice how the `AccessType` [EndpointAccessType enum type](xref:Microsoft.Dynamics.CRM.EndpointAccessType) parameter value is passed in the URL. The fully qualified name with the selected member name is required.
 
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/RetrieveCurrentOrganization(AccessType=@p1)?@p1=Microsoft.Dynamics.CRM.EndpointAccessType'Default' HTTP/1.1
@@ -369,7 +369,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -406,7 +406,7 @@ OData-Version: 4.0
 }
 ```
 
-**Console output**
+**Console output:**
 
 ```
 Data returned with RetrieveCurrentOrganizationResponse:
@@ -440,9 +440,9 @@ Data returned with RetrieveCurrentOrganizationResponse:
 
 ## Section 5: Unbound Function RetrieveTotalRecordCount
 
-<xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function> returns data on the total number of records for specific entities. The data retrieved will be from a snapshot within last 24 hours, so it isn't an exact count at a given moment in time.
+[RetrieveTotalRecordCount function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount) returns data on the total number of records for specific entities. The data retrieved is from a snapshot within last 24 hours, so it isn't an exact count at a given moment in time.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/RetrieveTotalRecordCount(EntityNames=@p1)?@p1=["account","contact"] HTTP/1.1
@@ -452,7 +452,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -475,7 +475,7 @@ OData-Version: 4.0
 }
 ```
 
-**Console output**
+**Console output:**
 
 ```
 The number of records for each table according to RetrieveTotalRecordCount:
@@ -483,16 +483,16 @@ The number of records for each table according to RetrieveTotalRecordCount:
         contact:3
 ```
 
-## Section 6: Bound Function IsSystemAdmin Custom API
+## Section 6: Bound Function IsSystemAdmin custom API
 
-To demonstrate a bound function, this sample will import a custom message defined within a solution before running this portion of the sample.
+To demonstrate a bound function, this sample imports a custom message defined within a solution before running this portion of the sample.
 
-The sample will use the `sample_IsSystemAdmin` custom message which is defined using a [Custom API](../custom-api.md). You can find details about this custom api here: [Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md).
+The sample uses the `sample_IsSystemAdmin` custom message that is defined using a [custom API](../custom-api.md). You can find details about this custom api here: [Sample: IsSystemAdmin custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md).
 
 > [!NOTE]
 > When using a bound function or action, you must include the fully qualified name, which includes `Microsoft.Dynamics.CRM.`+ &lt;function or action name&gt; in the url.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.sample_IsSystemAdmin HTTP/1.1
@@ -502,7 +502,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -514,11 +514,11 @@ OData-Version: 4.0
 }
 ```
 
-This sample will retrieve 10 user records and test each one to determine whether each user has the System Administrator security role.
+This sample retrieves 10 user records and test each one to determine whether each user has the System Administrator security role.
 
-**Console output**
+**Console output:**
 
-The actual names will depend on the people in your environment.
+The actual names depend on the people in your environment.
 
 ```
 Top 10 users and whether they have System Administrator role.
@@ -534,19 +534,19 @@ Top 10 users and whether they have System Administrator role.
         Asha Sawant HAS the System Administrator role.
 ```
 
-For another example of a bound function, see the use of the <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> in the next example.
+For another example of a bound function, see the use of the [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) in the next example.
 
 ## Section 7: Unbound Action GrantAccess
 
-<xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action> is an unbound action allows people to share specific privileges to other users in their environment.
+[GrantAccess action](xref:Microsoft.Dynamics.CRM.GrantAccess) is an unbound action allows people to share specific privileges to other users in their environment.
 
-To demonstrate this operation, the sample code does the following:
+The sample code demonstrates the following operations:
 
 1. Create a record to share.
 1. Find an enabled user other than the current user.
-1. Use <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> to determine what access rights the user has for the record created.
+1. Use [RetrievePrincipalAccess function](xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess) to determine what access rights the user has for the record created.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(659876fd-6d29-ed11-9db1-00224804f8e2)'} HTTP/1.1
@@ -556,7 +556,7 @@ To demonstrate this operation, the sample code does the following:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -568,7 +568,7 @@ To demonstrate this operation, the sample code does the following:
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Testing user: Gediminas Matulis
@@ -577,7 +577,7 @@ To demonstrate this operation, the sample code does the following:
 
 1. If the user doesn't have <xref:Microsoft.Dynamics.CRM.AccessRights?text=AccessRights>.`DeleteAccess`, grant the user this access using the `GrantAccess` action.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/GrantAccess HTTP/1.1
@@ -601,7 +601,7 @@ To demonstrate this operation, the sample code does the following:
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -610,7 +610,7 @@ To demonstrate this operation, the sample code does the following:
 
 1. Once `DeleteAccess` has been granted, the same call to <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> shows that they now have access to delete this record:
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(659876fd-6d29-ed11-9db1-00224804f8e2)'} HTTP/1.1
@@ -620,7 +620,7 @@ To demonstrate this operation, the sample code does the following:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -632,7 +632,7 @@ To demonstrate this operation, the sample code does the following:
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Gediminas Matulis was granted DeleteAccess
@@ -640,13 +640,13 @@ To demonstrate this operation, the sample code does the following:
 
 ## Section 8: Bound Action AddPrivilegesRole
 
-<xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action> is an action bound to the <xref:Microsoft.Dynamics.CRM.role?text=role EntityType>. It is the way to add privileges to a security role.
+[AddPrivilegesRole action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole) is an action bound to the [role entity type](xref:Microsoft.Dynamics.CRM.role). It's the way to add privileges to a security role.
 
-To demonstrate the use of this action, the sample does the following:
+The sample code performs the following operations:
 
 1. Create a security role. The role must be associated with a business unit. The business unit id value was retrieved in [Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami).
    
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/roles HTTP/1.1
@@ -661,7 +661,7 @@ To demonstrate the use of this action, the sample does the following:
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -671,7 +671,7 @@ To demonstrate the use of this action, the sample does the following:
 
 1. Retrieve the role, expanding the `roleprivileges_association` collection-valued navigation property to include the privileges included with the role.
    
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2)?$select=roleid&$expand=roleprivileges_association($select=name) HTTP/1.1
@@ -681,7 +681,7 @@ To demonstrate the use of this action, the sample does the following:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -744,7 +744,7 @@ To demonstrate the use of this action, the sample does the following:
 
 1. Show the number of privileges created by default for the new role.
    
-   **Console output**
+   **Console output:**
 
    ```
    Number of privileges in new role: 9
@@ -761,7 +761,7 @@ To demonstrate the use of this action, the sample does the following:
 
 1. Retrieve the definition of the `prvCreateAccount` and `prvReadAccount` privileges from <xref:Microsoft.Dynamics.CRM.privilege?text=privilege EntityType>.
    
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/privileges?$select=name&$filter=name eq 'prvCreateAccount' or name eq 'prvReadAccount' HTTP/1.1
@@ -771,7 +771,7 @@ To demonstrate the use of this action, the sample does the following:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -797,7 +797,7 @@ To demonstrate the use of this action, the sample does the following:
 1. Prepare a list of <xref:Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege ComplexType> instances for the `prvCreateAccount` and `prvReadAccount` privileges with the `Depth` property set to <xref:Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth>.'Basic'.
 1. Pass the list as the `AddPrivilegesRole.Privileges` parameter.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.AddPrivilegesRole HTTP/1.1
@@ -824,7 +824,7 @@ To demonstrate the use of this action, the sample does the following:
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -833,7 +833,7 @@ To demonstrate the use of this action, the sample does the following:
 
 1. Retrieve the privileges associated with the role again to confirm that they have been added.
    
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2)?$select=roleid&$expand=roleprivileges_association($select=name) HTTP/1.1
@@ -843,7 +843,7 @@ To demonstrate the use of this action, the sample does the following:
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -914,7 +914,7 @@ To demonstrate the use of this action, the sample does the following:
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Number of privileges after: 11
@@ -935,7 +935,7 @@ To demonstrate the use of this action, the sample does the following:
 
 Each record created in this sample was added to a list to be deleted at the end. These records are deleted using a `$batch` request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
@@ -988,7 +988,7 @@ DELETE /api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2) HTTP/1.1
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -1038,7 +1038,7 @@ OData-Version: 4.0
 
 ```
 
-**Console output**
+**Console output:**
 
 ```
 Deleting created records.

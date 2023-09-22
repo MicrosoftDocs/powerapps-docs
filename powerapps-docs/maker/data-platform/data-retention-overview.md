@@ -1,9 +1,10 @@
 ---
 title: Dataverse long term data retention overview
 description: Overview of long term retention for data in Microsoft Dataverse 
-author: Mattp123
 ms.service: powerapps
-ms.author: matp
+author: pnghub
+ms.author: gned
+ms.reviewer: matp
 ms.topic: overview
 ms.date: 05/24/2023
 ms.custom: template-overview
@@ -49,6 +50,7 @@ Application admins set up custom policies for a table with criterion to retain d
 
 > [!IMPORTANT]
 > - Once data is retained in the Dataverse long term (inactive) store it can't be moved back to the Dataverse live (active) data store.
+> - Customers using self-managed encryption key (BYOK) should be aware that long term retained data in the Azure data lake is encrypted with Microsoft managed key. Consider migrating to customer managed key. More information: [Migrate bring-your-own-key environments to customer-managed key](/power-platform/admin/cmk-migrate-from-byok)
 > - When a retention policy is run, the process makes API requests in Microsoft Power Platform. These requests are counted towards the existing API requests available with your plan. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
 
 Dataverse provides read-only access to the retained data via:
