@@ -70,7 +70,7 @@ Unique properties:
 | Property | Description |
 |-|-|
 | Data event<br>('Run this plug-in when the row is') | Specifies which data event triggers the plug-in. Any combination of the following events can be selected to invoke the plug-in:<br><ul><li>Create</li><li>Update</li><li>Delete</li>|
-| Stage<br>('When should this run') | You can design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event. |
+| Stage<br>('When should this run') | You can design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.<br><br><ul><li>**Pre-operation**. Select this option if you want to run your plug-in logic after the form validation, but before the values are inserted or changed in Dataverse.</li><li>**Post operation**. Select this option to run your plug-in logic after the values have been inserted or changed in Dataverse.</li></ul> |
 
 ---
 
@@ -82,6 +82,7 @@ Makers who have system customizer or system administrator security role membersh
 **Run time.**
 When a plug-in is invoked, it accesses the table data involved in the plug-in definition (the tables that are part of the formula, or if the table is associated with the settings of an automated plug-in) in the context of the user who invoked it.
 
+**Connections**.
 If a plug-in uses a connector action, the connector permissions enforce the ability for organizational users to access and operate on the plug-in call to the connector. The connection can be shared with one user or can be shared with the entire organization. This allows users to access and operate plug-ins with connectors using a shared connection if desired. By using security roles, plug-ins with connectors access can be restricted to a specific set of users within your organization. You can even specify which roles have create, read, update, or delete privileges in this way.
 
 ## Prerequisites for creating a low-code plug-in
@@ -115,7 +116,7 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
    - Add more input and output parameters as needed.
 1. Enter the Power FX expression in the **Expression** editor.
    - Reference input parameters in the formula by the label name.
-   - Output parameters must be returned within curly brackets (e.g., `{ out: "This is returned in an output parameter within brackets" }`
+   - Output parameters must be returned within curly brackets (e.g., `{ Out: "Return value" }`)
    - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-filter-lookup)).
    - Example: Calculate the sum of two integers. Create two input parameters, X and Y (boty type integer), and one output parameter, `Z` (type string). You could use the following formula: `{Z:  X + Y }`
    - If the scope is set to entity, use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
@@ -137,9 +138,7 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
 1. Enter the Power FX expression in the **Expression** editor.
    - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-filter-lookup)).
    - Use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
-1. Optinally expand **advanced options** to modify the stage **When should this run**:
-   - **Pre-operation**. Select this option if you want to run your plug-in logic after the form validation, but before the values are inserted or changed in Dataverse.
-   - **Post operation**. Select this option to run your plug-in logic after the values have been inserted or changed in Dataverse.
+1. Optinally expand **advanced options** to modify the **stage** (when should this run), solution, and description.
 1. Select **Save**.
 1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
 
@@ -167,9 +166,9 @@ If a plug-in uses a connector action, the connector permissions enforce the abil
    > [!NOTE]
    > In the current release, there are limited connectors available in the in-app form. If you don’t see the connector you want, go to the maker portal and create a new connection reference in an unmanaged solution. You can click the action button that says 'Take me there' in the warning message of the form to jump there.
    1. When the connection reference is created, the list of connector actions will be displayed
-1. A list of available connector actions are provided. Select a connector action, then choose an option in the command bar:
-   2. **Copy**: Copies the action formula to the clipboard. You can then paste (CRTL+V) the action into the formula editor.
-   3. **Learn**: Takes you to the documentation page of the action, which contains the description and parameters of the action.
+1. Select a connector action, then choose an option in the command bar:
+   - **Copy**: Copies the action formula to the clipboard. You can then paste (CRTL+V) the action into the formula editor.
+   - **Learn**: Takes you to the documentation page of the action, which contains the description and parameters of the action.
 1.	Once the action formula is pasted into the Power FX expression, use intellisense to provide the correct values for any input parameters (if any are required).
   	> [!TIP]
    > Pasting the action formula might not immediately display the intellisense. Delete and re-type the opening (left) parameter after the action name to trigger the intellisense window.
