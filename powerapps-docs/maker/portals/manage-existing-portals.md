@@ -53,9 +53,7 @@ Alternately, you can also open the portal to browse the website by selecting **B
 
 ## Share
 
-Share your portal with internal or external users. Follow the steps mentioned in the **Share this portal** pane.
-
-![share portal.](media/share-portal.png "Share portal")  
+Share your portal website address with users, with permissions to view it. 
 
 ### Share with internal users
 
@@ -95,11 +93,9 @@ For information on security roles and privileges, see [Security roles and privil
 
 Your portal should work anonymously and should be accessible by the external users. If you want to try advanced capabilities for managing roles and permissions for external users, see [Configure a contact for use on a portal](configure/configure-contacts.md), [Invite contacts to your portals](configure/invite-contacts.md), [Create web roles for portals](configure/create-web-roles.md), [Assign table permissions](configure/assign-entity-permissions.md).  
 
-## Settings
+## Admin center
 
 Displays the portal settings and allows you to change the name of the portal. You can also go to setup licensing for your portal as well as advanced actions such as administering the portal though the Power Apps portals admin center and working with site settings. 
-
-:::image type="content" source="media/portal-settings.png" alt-text="Portal settings.":::  
 
 ### Licensing
 
@@ -107,14 +103,6 @@ For production portals you will see **Licensing for internal users** and **Licen
 
 > [!Note]
 > **Licensing for internal users** and **Licensing for external users** sections are not visible in portal settings panel when you open it from the portal's detail page tool bar **Settings** item.
-
-### Advanced Options
-
-The advanced options section provides links to configure authentication, to the Power Apps portals center, and to configure site settings.
-
-* [Authentication settings](configure/configure-portal-authentication.md)
-* [Administration](admin/admin-overview.md)
-* [Site settings](configure/configure-site-settings.md)
 
 ## Delete
 
