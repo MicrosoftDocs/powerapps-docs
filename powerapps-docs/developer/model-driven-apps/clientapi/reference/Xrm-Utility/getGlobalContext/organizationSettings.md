@@ -209,11 +209,8 @@ Returns the FullNameConventionCode setting of the current organization.
 
 ## Related articles
 
-[Client context](client.md)
-
-[User settings](userSettings.md)
-
+[Client context](client.md)   
+[User settings](userSettings.md)   
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

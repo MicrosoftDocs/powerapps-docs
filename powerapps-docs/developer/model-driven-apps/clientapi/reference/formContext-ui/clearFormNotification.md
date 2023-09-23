@@ -26,7 +26,7 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|uniqueId|String|Yes|A unique identifier for the message to be cleared that was set using the [setFormNotification](setFormNotification.md) method.|
+|`uniqueId`|String|Yes|A unique identifier for the message to be cleared that was set using the [setFormNotification](setFormNotification.md) method.|
 
 ## Return Value
 
@@ -35,14 +35,10 @@ contributors:
 **Description**: true if the method succeeded, false otherwise. 
 
 
-### Related topics
+### Related articles
 
-[setFormNotification](setFormNotification.md)
-
-[formContext.ui](../formContext-ui.md)
-
+[setFormNotification](setFormNotification.md)   
+[formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

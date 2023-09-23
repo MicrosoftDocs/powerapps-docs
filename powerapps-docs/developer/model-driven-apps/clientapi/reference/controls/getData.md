@@ -33,7 +33,7 @@ Web resource
 **Description**: The data value passed to the Silverlight web resource.
 
 
-### Related topics
+### Related articles
 
 [setData](setData.md)
 

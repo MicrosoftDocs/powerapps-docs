@@ -28,14 +28,9 @@ contributors:
 
 **Description**: true if the item is visible; false otherwise..
 
-### Related topics
+### Related articles
 
-[setVisible](setVisible.md)
-
+[setVisible](setVisible.md)   
 [formContext.ui.navigation](../formContext-ui-navigation.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
