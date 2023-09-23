@@ -32,7 +32,7 @@ Lookup control
 
 **Description**: The logical names of the tables allowed in this control.
 
-### Related topics
+### Related articles
 
 [setEntityTypes](setEntityTypes.md)
 

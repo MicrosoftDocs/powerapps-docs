@@ -26,19 +26,15 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|status|String|Yes|The new status. The values can be **active**, **aborted**, **finished**, or **invalid**. |
-|callbackFunction|Function|No|A function to call when the operation is complete. This callback function is passed the new status as a string value.|
+|`status`|String|Yes|The new status. The values can be **active**, **aborted**, **finished**, or **invalid**. |
+|`callbackFunction`|Function|No|A function to call when the operation is complete. This callback function is passed the new status as a string value.|
 
 **Type**: String. 
 
 **Description**:Returns one of the following values: **active**, **aborted**, or **finished**. It returns **invalid** if the setStatus API fails.
 
-### Related topics
+### Related articles
 
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

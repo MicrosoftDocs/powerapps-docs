@@ -30,10 +30,9 @@ contributors:
 
 **Description**: true if any columns in the form have been changed; false otherwise.
 
-### Related topics
+### Related articles
 
-[formContext.data.getIsDirty](../formContext-data/getIsDirty.md)
-
+[formContext.data.getIsDirty](../formContext-data/getIsDirty.md)   
 [formContext](../../clientapi-form-context.md)
 
 

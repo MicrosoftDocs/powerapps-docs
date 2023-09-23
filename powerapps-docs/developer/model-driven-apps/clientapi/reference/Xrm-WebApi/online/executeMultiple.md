@@ -56,58 +56,29 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>requests</td>
-<td>Array of objects</td>
-<td>Yes</td>
-<td><p>An array of one of the following types:</p>
-<ul>
-<li>objects where each object is an action, function, or CRUD request that you want to execute against the Web API endpoint. Each object exposes a <b>getMetadata</b> method that lets you define the metadata for the action, function, or CRUD request you want to execute. This is the same object that you pass in the <code>execute</code> method. For information about the object, see <a href="execute.md">execute</a>.</li>
-<li>Change set (an array of objects), where each object in the change set is as defined above. In this case, all the request objects specified in the change set will get executed in a transaction.</li>
-</ul>
-<p>See request examples earlier in the **Syntax** section for more information.</p>
-</td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when operation is executed successfully. An array of response objects are passed to the function where each response object has the following values:</p>
-<ul>
-<li><b>json</b>: (Optional). Promise. Response body in JSON format.</li>
-<li><b>text</b>: (Optional). Promise. Response body in plaintext format. </li>
-<li><b>headers</b>: Object. Response headers.</li>
-<li><b>ok</b>: Boolean. Indicates whether the request was successful.</li>
-<li><b>status</b>: Number. Numeric value in the response status code. For example: <b>200</b></li>
-<li><b>statusText</b>: String. Description of the response status code. For example: <b>OK</b></li>
-<li><b>type</b>: String. Response type. Values are: the empty string (default), "arraybuffer", "blob", "document", "json", and "text".</b></li>
-<li><b>url</b>: String. Request URL of the action, function, or CRUD request that was sent to the Web API endpoint.</b></li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails.</td>
-</tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`requests`|Array of objects|Yes|An array of one of the following types:<br /><br />**Objects** where each object is an action, function, or CRUD request that you want to execute against the Web API endpoint. Each object exposes a [getMetadata method](execute.md#requestgetmetadata-method) that lets you define the metadata for the action, function, or CRUD request you want to execute. This is the same object that you pass in the [execute method](execute.md).<br /><br />**Change set** (an array of objects), where each object in the change set is as defined above. In this case, all the request objects specified in the change set will get executed in a transaction.<br /><br />See request examples in the [Syntax section](#syntax) for more information.|
+|`successCallback`|Function|No|A function to call when operation is executed successfully. An array of response objects are passed to the function. See [Return Value](#return-value)|
+|`errorCallback`|Function|No|A function to call when the operation fails.|
 
 ## Return Value
 
-On success, returns a promise containing an array of objects with the values specified earlier in the description of **successCallback** function.
+On success, returns a promise containing an array of objects to the `successCallback`. The objects have these properties:
 
-### See also
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`json`|Promise|No|Response body in JSON format.|
+|`text`|Promise|No|Response body in plaintext format. |
+|`headers`|Object|Yes|Response headers.|
+|`ok`|Boolean|Yes|Indicates whether the request was successful.|
+|`status`|Number|Yes|Numeric value in the response status code. For example: `200`|
+|`statusText`|String|Yes|Description of the response status code. For example: `OK`|
+|`type`|String|Yes|Response type. Values are: the empty string (default), `arraybuffer`, `blob`, `document`, `json`, and `text`.|
+|`url`|String|Yes|Request URL of the action, function, or CRUD request that was sent to the Web API endpoint.|
+
+### Related articles
 
 [Xrm.WebApi](../../xrm-webapi.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

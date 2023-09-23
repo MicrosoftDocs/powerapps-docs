@@ -52,15 +52,9 @@ function commonEventHandler(executionContext) {
 ```
 
 
-### Related topics
-[Execution context](../execution-context.md)
+### Related articles
 
+[Execution context](../execution-context.md)   
 [Form context](../../clientapi-form-context.md)
-
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
