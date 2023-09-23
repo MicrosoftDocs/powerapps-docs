@@ -28,7 +28,7 @@ Lookup
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|viewId|String|Yes|The ID of the view to be set as the default view.|
+|`viewId`|String|Yes|The ID of the view to be set as the default view.|
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
@@ -43,7 +43,7 @@ function setDefaultViewSample(executionContext) {
 }
 ```
 
-### Related topics
+### Related articles
 
 [getDefaultView](getDefaultView.md) 
 

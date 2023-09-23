@@ -28,7 +28,7 @@ contributors:
 
 **Description**: Logical name of the table associated with the stage.
 
-### Related topics
+### Related articles
  
 [formContext.data.process](../../formContext-data-process.md)
 

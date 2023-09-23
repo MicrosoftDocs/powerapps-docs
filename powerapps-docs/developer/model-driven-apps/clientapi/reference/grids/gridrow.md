@@ -14,8 +14,6 @@ contributors:
 ---
 # GridRow (Client API reference)
 
-
-
 A collection of GridRow is returned by [Grid](grid.md).[getRows](grid/getRows.md) and [Grid](grid.md).[getSelectedRows](grid/getSelectedRows.md) methods.
 
 ```JavaScript
@@ -27,7 +25,7 @@ var gridRow = myRows.get(arg);
 
 |Name|Description|Available for|
 |--|--|--|
-|data|An object containing the [GridRowData](gridrowdata.md) for the GridRow.|Read-only and editable grids|
+|`data`|An object containing the [GridRowData](gridrowdata.md) for the GridRow.|Read-only and editable grids|
 
 
 ## Methods
@@ -36,13 +34,9 @@ var gridRow = myRows.get(arg);
 |--|--|--|
 |[getData](gridrow/getData.md)|[!INCLUDE[gridrow/includes/getData-description.md](gridrow/includes/getData-description.md)]|Read-only and editable grids|
 
-### Related topics
+### Related articles
 
-[GridRowData](gridrowdata.md)
-
+[GridRowData](gridrowdata.md)   
 [Grids and subgrids in model-driven apps](../grids.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
