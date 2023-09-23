@@ -64,12 +64,9 @@ Use the following objects to interact with grids. These objects form a hierarchy
 
 ### Related articles
 
-[Client API grid context](../clientapi-grid-context.md)
-
-[Use editable grids](../../use-editable-grids.md)
-
-[Client API Reference for model-driven apps](../reference.md)
-
+[Client API grid context](../clientapi-grid-context.md)   
+[Use editable grids](../../use-editable-grids.md)   
+[Client API Reference for model-driven apps](../reference.md)   
 [Model-driven apps Developer Overview](../../overview.md)
 
 

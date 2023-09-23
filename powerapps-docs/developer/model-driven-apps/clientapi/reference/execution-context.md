@@ -30,12 +30,8 @@ The execution context object provides the following methods.
 
 ### Related articles
 
-[Client API execution context](../clientapi-execution-context.md)
-
-[Save event arguments](save-event-arguments.md)
-
+[Client API execution context](../clientapi-execution-context.md)   
+[Save event arguments](save-event-arguments.md)   
 [Understand Client API object model](../understand-clientapi-object-model.md) 
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

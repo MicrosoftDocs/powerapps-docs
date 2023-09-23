@@ -24,7 +24,7 @@ Provides properties and methods to retrieve information specific to the record d
 
 |Name|Description|
 |--|--|
-|attributes|Collection of columns for a record displayed on the form. <br/>More information: [Collections](collections.md) and [Columns](attributes.md).
+|`attributes`|Collection of columns for a record displayed on the form. <br/>More information: [Collections](collections.md) and [Columns](attributes.md).
 
 ## Methods
 
@@ -45,13 +45,7 @@ Provides properties and methods to retrieve information specific to the record d
 
 ### Related articles
 
-[Understand Xrm object model](../understand-clientapi-object-model.md)
-
+[Understand Xrm object model](../understand-clientapi-object-model.md)   
 [Controls (Client API reference)](controls.md)
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

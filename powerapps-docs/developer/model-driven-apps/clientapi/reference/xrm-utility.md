@@ -52,14 +52,10 @@ The following table lists the new methods you should use instead of the deprecat
 
 ### Related articles
 
-[Client API execution context](../clientapi-execution-context.md)
-
-[Client API Xrm object](../clientapi-xrm.md)
-
-[Client API reference](../reference.md)
-
+[Client API execution context](../clientapi-execution-context.md)   
+[Client API Xrm object](../clientapi-xrm.md)   
+[Client API reference](../reference.md)   
 [Deprecated client APIs](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated)
-
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

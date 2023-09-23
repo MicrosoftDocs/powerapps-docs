@@ -37,10 +37,8 @@ When the form [OnPostSave](events/postsave.md) event occurs, you can use the [ge
 
 ## Related topics
 
-[Client API execution context](../clientapi-execution-context.md)
-
+[Client API execution context](../clientapi-execution-context.md)   
 [Execution context methods](execution-context.md)
-
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

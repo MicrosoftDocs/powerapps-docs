@@ -38,6 +38,7 @@ You must include a reference to the **ClientGlobalContext.js.aspx** page located
       
     </head>
     ```
+
 - If you are using backslash characters in HTML web resource names to simulate a directory structure, you must reflect this in your script element. The following example is for an HTML web resource named **sdk_/Contoso.htm** and a JavaScript web resource named **sdk_/Scripts/ContosoScript.js** with a CSS web resource named **sdk_/Styles/ContosoStyles.css**.
 
     ```HTML
@@ -58,12 +59,8 @@ The **ClientGlobalContext.js.aspx** page will include some global event handlers
 
 ### Related articles
 
-[Xrm.Utility.getGlobalContext](Xrm-Utility/getGlobalContext.md)
-
-[Understand Client API object model](../understand-clientapi-object-model.md) 
-
+[Xrm.Utility.getGlobalContext](Xrm-Utility/getGlobalContext.md)   
+[Understand Client API object model](../understand-clientapi-object-model.md)   
 [Web resources for model-driven apps](../../web-resources.md)
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

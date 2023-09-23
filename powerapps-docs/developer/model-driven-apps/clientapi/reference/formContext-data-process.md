@@ -16,8 +16,6 @@ contributors:
 ---
 # formContext.data.process (Client API reference)
 
-
-
 Provides events, methods, and objects to interact with the business process flow data on a form. See [formContext.ui.process (Client API reference)](formContext-ui-process.md) for methods to interact with the business process flow control on the form.
 
 [!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
@@ -133,15 +131,9 @@ Use these methods to find information about the stages in the active path, enabl
 
 ### Related articles
 
-[formContext.ui.process (Client API reference)](formContext-ui-process.md)
-
-[Understand Xrm object model](../understand-clientapi-object-model.md)
-
+[formContext.ui.process (Client API reference)](formContext-ui-process.md)   
+[Understand Xrm object model](../understand-clientapi-object-model.md)   
 [Controls (Client API reference)](controls.md)
-
-
-
-
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
