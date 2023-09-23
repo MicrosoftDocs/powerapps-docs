@@ -152,7 +152,7 @@ Use the **Run command** (shortcut is `Windows + R`) and use the following deep l
 
 1. Click **inspect** and the DevTools will open.
 
-### See also
+### Related articles
 
 [JavaScript web resources](../script-jscript-web-resources.md)   
 [Debug a model-driven app with Monitor](../../../maker/monitor-modelapps.md)   

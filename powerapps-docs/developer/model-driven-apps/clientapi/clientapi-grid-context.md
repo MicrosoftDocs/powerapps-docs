@@ -36,7 +36,7 @@ function doSomething(executionContext) {
 }
 ```
 
-## Related topics
+## Related articles
 
 [Client API form context](clientapi-form-context.md)   
 [Client API execution context](clientapi-execution-context.md)   

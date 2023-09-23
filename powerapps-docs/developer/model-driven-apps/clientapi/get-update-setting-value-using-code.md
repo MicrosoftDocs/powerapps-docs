@@ -80,7 +80,7 @@ You can also use the following Web APIs to get or update a setting value
 - [RetrieveSetting function](xref:Microsoft.Dynamics.CRM.RetrieveSetting)
 - [SaveSettingValue action](xref:Microsoft.Dynamics.CRM.SaveSettingValue)
 
-## See also
+## Related articles
 
 [Solutions overview](../../../maker/data-platform/solutions-overview.md)
 
