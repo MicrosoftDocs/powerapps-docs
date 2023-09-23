@@ -35,7 +35,7 @@ contributors:
 
 **Description**: Decoded string.
 
-## Related topics
+## Related articles
 
 [htmlEncode](htmlEncode.md)   
 [htmlAttributeEncode](htmlAttributeEncode.md)

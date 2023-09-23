@@ -32,13 +32,8 @@ choice, choices
 
 ### Related articles
 
-[addOption](addOption.md)
-
+[addOption](addOption.md)   
 [clearOptions](clearOptions.md)
-
- 
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

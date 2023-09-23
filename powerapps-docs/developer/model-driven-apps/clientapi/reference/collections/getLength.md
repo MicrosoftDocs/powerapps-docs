@@ -31,10 +31,8 @@ contributors:
 
 ### Related articles
 
-[Collections in Client API](../collections.md)
-
-[forEach](forEach.md)
-
+[Collections in Client API](../collections.md)   
+[forEach](forEach.md)   
 [get](get.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

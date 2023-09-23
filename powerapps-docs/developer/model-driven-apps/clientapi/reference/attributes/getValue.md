@@ -46,7 +46,7 @@ All
 | string | [String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) |
 
 
-### Related topic
+### Related article
 
 [setValue (Client API reference)](setValue.md)
 

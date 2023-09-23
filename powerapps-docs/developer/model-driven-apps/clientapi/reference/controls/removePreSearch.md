@@ -14,8 +14,6 @@ contributors:
 ---
 # removePreSearch (Client API reference)
 
-
-
 Removes event handler functions that have previously been set for the [PreSearch](../events/PreSearch.md) event.
 
 ## Control types supported
@@ -34,11 +32,8 @@ Lookup
 
 ### Related articles
 
-[PreSearch event](../events/PreSearch.md)
-
+[PreSearch event](../events/PreSearch.md)   
 [addPreSearch](addPreSearch.md) 
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

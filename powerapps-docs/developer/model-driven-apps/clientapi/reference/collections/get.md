@@ -16,7 +16,6 @@ contributors:
 # get method for collections (Client API reference)
 
 
-
 [!INCLUDE[./includes/get-description.md](./includes/get-description.md)]
 
 ## Syntax
@@ -35,12 +34,9 @@ contributors:
 
 ### Related articles
 
-[Collections in Client API](../collections.md)
-
-[forEach](forEach.md)
-
+[Collections in Client API](../collections.md)   
+[forEach](forEach.md)   
 [getLength](getLength.md)
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

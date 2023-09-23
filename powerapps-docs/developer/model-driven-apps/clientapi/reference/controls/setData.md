@@ -30,7 +30,7 @@ webresource
 |--|--|--|--|
 |`string`|String|Yes|The data value to pass to the Silverlight web resource.|
 
-## Related topics
+## Related articles
 
 [getData](getData.md)
 

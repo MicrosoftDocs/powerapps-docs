@@ -31,12 +31,7 @@ Lookup
 
 ### Related articles
 
-[addOnLookupTagClick](addOnLookupTagClick.md)
- 
+[addOnLookupTagClick](addOnLookupTagClick.md)   
 [OnLookupTagClick event](../events/onlookuptagclick.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

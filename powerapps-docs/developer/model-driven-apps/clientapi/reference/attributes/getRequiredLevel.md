@@ -36,7 +36,7 @@ All
 - required
 - recommended
 
-### Related topic
+### Related article
 
 [setRequiredLevel (Client API reference)](setRequiredLevel.md)
 

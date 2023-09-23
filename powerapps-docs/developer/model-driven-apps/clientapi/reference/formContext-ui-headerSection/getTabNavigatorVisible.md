@@ -30,7 +30,7 @@ contributors:
 
 **Description**: **true** if the tab navigation is visible; **false** otherwise.
 
-## Related topics
+## Related articles
 
 [setTabNavigatorVisible](setTabNavigatorVisible.md)
 

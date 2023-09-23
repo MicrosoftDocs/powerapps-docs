@@ -37,11 +37,7 @@ kbSearchControl.removeOnResultOpened(myFunction);
 
 ### Related articles
 
-[OnResultOpened event](../events/onresultopened.md)
-
+[OnResultOpened event](../events/onresultopened.md)   
 [addOnResultOpened](addOnResultOpened.md) 
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

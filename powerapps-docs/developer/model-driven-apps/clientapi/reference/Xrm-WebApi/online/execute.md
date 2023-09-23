@@ -61,6 +61,17 @@ On success, returns a promise object to the `successCallback` with the following
 
 ## Examples
 
+Find these examples below:
+
+- [Execute an action](#execute-an-action)
+- [Execute a function](#execute-a-function)
+- [Create a record](#create-a-record)
+- [Retrieve a record](#retrieve-a-record)
+- [Update a record](#update-a-record)
+- [Delete a record](#delete-a-record)
+- [Associate a record](#associate-a-record)
+- [Disassociate a record](#disassociate-a-record)
+
 ### Execute an action
 
 The following example demonstrates how to execute the `WinOpportunity` action found in the Dynamics 365 for Sales solution. The request object is created based on the action definition here: [Unbound actions](../../../../../data-platform/webapi/use-web-api-actions.md#unbound-actions)

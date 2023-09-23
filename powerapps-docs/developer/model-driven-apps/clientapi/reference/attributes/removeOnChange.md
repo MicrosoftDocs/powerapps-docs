@@ -36,10 +36,7 @@ All
 
 ### Related articles
 
-[addOnChange](addOnChange.md)
-
+[addOnChange](addOnChange.md)   
 [Column OnChange Event](../events/attribute-onchange.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

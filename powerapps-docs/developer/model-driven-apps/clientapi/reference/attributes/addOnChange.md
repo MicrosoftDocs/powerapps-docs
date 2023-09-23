@@ -38,14 +38,7 @@ All
 
 ### Related articles
 
-[removeOnChange](removeOnChange.md)
-
+[removeOnChange](removeOnChange.md)   
 [Column OnChange Event](../events/attribute-onchange.md)
-
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

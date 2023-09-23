@@ -551,7 +551,7 @@ Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$exp
 For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md).
 
  
-### See also
+### Related articles
 
 [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md)<br />
 [Xrm.WebApi.retrieveRecord](retrieveRecord.md)<br />

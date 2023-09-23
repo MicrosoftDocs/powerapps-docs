@@ -54,12 +54,7 @@ This methods will cause the [OnStageChange](../../events/onstagechange.md) event
 
 ### Related articles
 
-[moveNext](moveNext.md)
-
+[moveNext](moveNext.md)   
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

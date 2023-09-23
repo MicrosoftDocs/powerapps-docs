@@ -14,8 +14,6 @@ contributors:
 ---
 # isAvailableOffline (Client API reference)
 
-
-
 [!INCLUDE[./includes/isAvailableOffline-description.md](./includes/isAvailableOffline-description.md)] 
 
 ## Syntax
@@ -33,6 +31,8 @@ contributors:
 **Type**: Boolean.
 
 **Description**: true if the table is present in user's profile and is currently available for use in offline mode; otherwise false.
+
+### Related articles
 
 [Xrm.WebApi.offline](offline.md)   
 [Xrm.WebApi](../xrm-webapi.md)

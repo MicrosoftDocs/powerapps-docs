@@ -59,7 +59,7 @@ Xrm.App.addGlobalNotification(notification).then(
 );
 ```
 
-### See also
+### Related articles
 
 [addGlobalNotification](addGlobalnotification.md)
 

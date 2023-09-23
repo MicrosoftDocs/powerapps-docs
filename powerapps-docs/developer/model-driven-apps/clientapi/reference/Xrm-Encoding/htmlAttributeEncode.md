@@ -35,7 +35,7 @@ contributors:
 
 **Description**: Encoded string.
 
-## Related topics
+## Related articles
 [htmEncode](htmlEncode.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

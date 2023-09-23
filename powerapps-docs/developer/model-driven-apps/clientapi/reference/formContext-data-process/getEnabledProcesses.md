@@ -95,12 +95,7 @@ id: 919e14d1-6489-4852-abd0-a63a6ecaac5d name: Lead to Opportunity Sales Process
 
 ### Related articles
 
-[setActiveProcessInstance](setActiveProcessInstance.md)
-
+[setActiveProcessInstance](setActiveProcessInstance.md)   
 [formContext.data.process](../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

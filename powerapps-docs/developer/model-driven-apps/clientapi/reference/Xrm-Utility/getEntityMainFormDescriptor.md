@@ -58,7 +58,7 @@ The following sample code shows how to get the main form descriptor for a specif
   Xrm.Utility.getEntityMainFormDescriptor(entityName, formId);
 ```
 
-## Related topics
+## Related articles
 
 [Xrm.Utility](../xrm-utility.md)
 

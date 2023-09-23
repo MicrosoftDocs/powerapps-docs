@@ -38,14 +38,7 @@ Retrieves a variable set using the [setSharedVariable](setSharedVariable.md) met
 
 ### Related articles
 
-[setSharedVariable](setSharedVariable.md)
-
+[setSharedVariable](setSharedVariable.md)   
 [Execution context](../execution-context.md)
-
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

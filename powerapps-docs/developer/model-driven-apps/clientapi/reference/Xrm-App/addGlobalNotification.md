@@ -139,7 +139,7 @@ This is how the information notification will appear in the app:
 
 ![Example information notification.](media/add-global-information.png "Example information notification")
 
-### See also
+### Related articles
 
 [clearGlobalNotification](clearGlobalnotification.md)
 

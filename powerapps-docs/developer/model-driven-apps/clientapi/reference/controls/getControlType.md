@@ -50,11 +50,7 @@ All
 
 ### Related articles
 
-[Controls](../controls.md)
-
+[Controls](../controls.md)   
 [getControl](getcontrol.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

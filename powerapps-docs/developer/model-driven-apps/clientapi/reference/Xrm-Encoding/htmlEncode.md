@@ -24,7 +24,7 @@ contributors:
 
 |Parameter Name| Type | Required  |Description  |
 | ------------- |-------------| -----|-----|
-|arg | String| Required  |String to be encoded.  |
+|`arg`|String| Required  |String to be encoded.  |
 
 
 ## Return Value
@@ -33,7 +33,7 @@ contributors:
 
 **Description**: Encoded string.
 
-## Related topics
+## Related articles
 
 [htmlAttributeEncode](htmlAttributeEncode.md)   
 [htmlDecode](htmlDecode.md)

@@ -109,12 +109,7 @@ This how the notification appears in model-driven apps:
 
 ### Related articles
 
-[clearNotification](clearNotification.md)
-
+[clearNotification](clearNotification.md)   
 [setNotification](setNotification.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -56,11 +56,7 @@ function myPreSearchCallBack (executionContext){
 
 ### Related articles
 
-[PreSearch event](../events/PreSearch.md)
-
+[PreSearch event](../events/PreSearch.md)   
 [removePreSearch](removePreSearch.md) 
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

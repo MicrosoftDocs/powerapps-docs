@@ -270,7 +270,7 @@ Returns the difference in minutes between the local time and Coordinated Univers
 
 **Description**: Time zone offset in minutes.
 
-## Related topics
+## Related articles
 
 [Client context](client.md)   
 [Organization settings](organizationSettings.md)   

@@ -30,14 +30,9 @@ Delegate function with parameters for column and index. |
 
 ### Related articles
 
-[Collections in Client API](../collections.md)
-
-[get](get.md)
-
+[Collections in Client API](../collections.md)   
+[get](get.md)   
 [getLength](getLength.md)
-
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

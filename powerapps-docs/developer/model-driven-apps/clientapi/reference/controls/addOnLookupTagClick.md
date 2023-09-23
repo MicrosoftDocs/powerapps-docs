@@ -33,12 +33,7 @@ Lookup
 
 ### Related articles
  
-[removeOnLookupTagClick](removeOnLookupTagClick.md)
-
+[removeOnLookupTagClick](removeOnLookupTagClick.md)   
 [OnLookupTagClick event](../events/onlookuptagclick.md)
- 
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

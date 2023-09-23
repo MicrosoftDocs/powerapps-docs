@@ -23,7 +23,7 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|bool|Boolean|Yes|Specify **true** to show the form; **false** to hide the form.|
+|`bool`|Boolean|Yes|Specify **true** to show the form; **false** to hide the form.|
 
 ### Related articles
 
