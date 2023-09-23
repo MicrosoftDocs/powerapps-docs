@@ -27,16 +27,11 @@ Lookup
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|Function reference|Yes|The function to be removed from the [OnLookupTagClick](../events/onlookuptagclick.md) event.|
+|`myFunction`|Function reference|Yes|The function to be removed from the [OnLookupTagClick](../events/onlookuptagclick.md) event.|
 
-### Related topics
+### Related articles
 
-[addOnLookupTagClick](addOnLookupTagClick.md)
- 
+[addOnLookupTagClick](addOnLookupTagClick.md)   
 [OnLookupTagClick event](../events/onlookuptagclick.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

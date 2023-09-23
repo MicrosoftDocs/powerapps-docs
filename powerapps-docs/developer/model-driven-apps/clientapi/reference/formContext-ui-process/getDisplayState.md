@@ -14,8 +14,6 @@ contributors:
 ---
 # process.getDisplayState (Client API reference)
 
-
-
 [!INCLUDE[./includes/getDisplayState-description.md](./includes/getDisplayState-description.md)]
 
 ## Syntax
@@ -26,16 +24,11 @@ contributors:
 
 **Type**: String.
 
-**Description**: Returns "expanded" or "collapsed" on the legacy web client; returns "expanded", "collapsed", or "floating" on Unified Interface.
+**Description**: Returns `expanded` or `collapsed` on the legacy web client; returns `expanded`, `collapsed`, or `floating` on Unified Interface.
 
-### Related topics
+### Related articles
 
-[setDisplayState](setDisplayState.md)
-
+[setDisplayState](setDisplayState.md)   
 [formContext.ui.process](../formContext-ui-process.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

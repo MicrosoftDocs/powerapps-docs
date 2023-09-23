@@ -61,12 +61,9 @@ function preventAutoSave(executionContext) {
 
 To save a record the user must select the **Save** icon at the bottom of the form or a custom **Save** command needs to be added to the command bar.
 
-### Related topics
+### Related articles
 
-[isDefaultPrevented](isDefaultPrevented.md)
-
+[isDefaultPrevented](isDefaultPrevented.md)   
 [preventDefault](preventDefault.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

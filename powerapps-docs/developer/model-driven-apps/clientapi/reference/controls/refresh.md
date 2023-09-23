@@ -24,7 +24,7 @@ timelinewall, timer
 
 `formContext.getControl(arg).refresh();`
 
-### Related topics
+### Related articles
 
 [Controls](../controls.md)
 

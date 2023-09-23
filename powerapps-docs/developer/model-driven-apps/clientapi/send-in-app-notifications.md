@@ -1138,7 +1138,7 @@ The Power Apps Notification connector is for push notifications, which are separ
 - [Power Apps Notification V2 connector](/connectors/powerappsnotificationv2/)
 - [Create push notifications for Power Apps Mobile](../../../mobile/power-apps-mobile-notification.md)
 
-### See also
+### Related articles
 
 [SendAppNotification Action](xref:Microsoft.Dynamics.CRM.SendAppNotification)<br />
 [Create a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md)<br />

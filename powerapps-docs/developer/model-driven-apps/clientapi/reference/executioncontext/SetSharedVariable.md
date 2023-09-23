@@ -24,8 +24,8 @@ Sets the value of a variable to be used by a handler after the current handler c
 
 ## Parameters
 
-- **key**: String: The name of the variable
-- **Value**: Object. The values to set
+- **`key`**: String: The name of the variable
+- **`value`**: Object. The values to set
 
 
 
@@ -35,9 +35,9 @@ Sets the value of a variable to be used by a handler after the current handler c
 
 **Description**: The specific type depends on what the value object is.
 
-### Related topics
-[getSharedVariable](getSharedVariable.md)
+### Related articles
 
+[getSharedVariable](getSharedVariable.md)   
 [Execution context](../execution-context.md)
 
 

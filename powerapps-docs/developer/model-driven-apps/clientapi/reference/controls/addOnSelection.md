@@ -32,11 +32,9 @@ kbSearchControl.addOnSelection(myFunction);
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes|The function to add to the **OnSelection** event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
+|`myFunction` |Function |Yes|The function to add to the [OnSelection event](../events/onselection.md). The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
-### Related topics
-
-[OnSelection event](../events/onselection.md)
+### Related articles
 
 [removeOnSelection](removeOnSelection.md)
 

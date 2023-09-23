@@ -14,20 +14,15 @@ contributors:
 ---
 # quickViewControl.refresh (Client API reference)
 
-
-
 [!INCLUDE[./includes/refresh-description.md](./includes/refresh-description.md)]
 
 ## Syntax
 
 `quickViewControl.refresh();`
 
-### Related topics
+### Related articles
 
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
-
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -26,16 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|label|String|Yes|The new label of the quick view control.|
+|`label`|String|Yes|The new label of the quick view control.|
 
-### Related topics
+### Related articles
 
-[getLabel](getLabel.md)
-
+[getLabel](getLabel.md)   
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

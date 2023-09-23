@@ -28,10 +28,8 @@ contributors:
 
 **Description**: Name of the process.
 
-### Related topics
+### Related articles
  
 [formContext.data.process](../../formContext-data-process.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]
