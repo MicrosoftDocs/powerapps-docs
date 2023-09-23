@@ -36,7 +36,8 @@ In this article, you'll create a canvas app that connects to Azure DevOps to ret
 
 To connect to Azure DevOps, [edit](../edit-app.md) the [blank canvas app](../create-blank-app.md), and add **Azure DevOps** data source.
 
-:::image type="content" source="media/azure-devops/add-data-source.png" alt-text="Connect to Azure DevOps.":::
+> [!div class="mx-imgBorder"]
+>![Connect to Azure DevOps.](./media/azure-devops/add-data-source.png "Connect to Azure DevOps")
 
 If you don't have an Azure DevOps connection already, select **Connect** and follow the prompts to provide your details, and then allow the app to connect.
 
@@ -49,67 +50,78 @@ In this section, we'll use the [ListQueriesInFolder](/connectors/visualstudiotea
 1. Enter the following formula for the **Items** property of the gallery, replacing the example parameter values as appropriate.
 
     ```powerapps-dot
-    AzureDevOps.ListQueriesInFolder("Sample-project","Fabrikam-Inc","Shared Queries").value
+    AzureDevOps.ListQueriesInFolder("Project","Organization","Folder").value
     ```
 
-    :::image type="content" source="media/azure-devops/list-queries-in-folder.png" alt-text="List queries in folder using formula added to Items property of the vertical gallery.":::
 
-    This formula uses the [ListQueriesInFolder](/connectors/visualstudioteamservices/#list-queries-within-folder) action with the following parameter values:
-    - **Project Name** - Name of the project in Azure DevOps. "Sample-project" in this example.
-    - **Organization Name** - Name of your organization in Azure DevOps. "Fabrikam-Inc" in this example.
-    - **Folder Path** - The folder path to look for queries. "Shared Queries" in this example.
+> [!div class="mx-imgBorder"]
+>![List queries in folder using formula added to Items property of the vertical gallery.](./media/azure-devops/list-queries-in-folder.png "List queries in folder using formula added to Items property of the vertical gallery.")
+
+
+Note that in this case, the example uses the variables "Project", "Organization", and "Folder" and the actual values are in the text boxes below the formula bar (highlighted).  You can find your Project and Organization values from the URL used to to connect to Azure Dev Ops.  The Folder will usually be "Shared Queries" or "My Queries".
+
+> [!div class="mx-imgBorder"]
+>![Locate the project and organization name for your Azure Dev Ops instance.](./media/azure-devops/find-azuredevops-project-name.png "Locate the project and organization name for your Azure Dev Ops instance.")
 
     > [!NOTE]
     > If you see the following error in the above formula, [enable third-party app access using OAuth](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy) in your Azure DevOps organization, and try again.
     > 
-    > "AzureDevOps.ListQueriesInFolder failed:{"status":401,"message":"TF400813:The user 'GUID' is not authorized to access this resource."
+    > "AzureDevOps.ListQueriesInFolder failed:{"status":401,"message":"TF400813:The user 'GUID' is not authorized to access this resource."}
 
 1. Select the **Layout** for the gallery to **Title and subtitle**.
 
-1. Choose the fields as **Name** and **Path** for the title and subtitles.
+1. Choose the fields appropriate for Azure Dev Ops as **Name** and **FolderOptions** for the title and subtitles.
 
-    :::image type="content" source="media/azure-devops/query-list-fields.png" alt-text="Gallery fields for listing queries.":::
+> [!div class="mx-imgBorder"]
+>![Gallery fields for listing queries.](./media/azure-devops/query-list-fields.png "Gallery fields for listing queries")
 
 ## Step 3. List work items
 
-Now we'll use [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-results) action for the Azure DevOps connector to list all work items for the selected query.
+Now we'll use [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-results) action for the Azure DevOps connector to list all work items for the selected query.  This will bind the gallery to the data source.
 
 1. Insert another blank vertical gallery, and place it on the right-side of the existing gallery.
 
-1. Enter the following formula for the **Items** property of the gallery, replacing the example parameter values as appropriate.
+1. Enter the following formula for the **Items** property of the gallery, replacing the example parameter values as appropriate.  Substitute your Project and Organization names as appropriate.
 
     ```powerapps-dot
-    AzureDevOps.GetQueryResultsV2("Sample-project",Gallery2.Selected.Id,"Fabrikam-Inc").value
+    AzureDevOps.GetQueryResultsV2("Project", Text(Gallery1.Selected.Id),"Organization").value
     ```
 
-    :::image type="content" source="media/azure-devops/get-query-results.png" alt-text="Get query results from existing gallery based on the query selected.":::
+> [!div class="mx-imgBorder"]
+>![Get query results from existing gallery based on the query selected..](./media/azure-devops/get-query-results.png "Get query results from existing gallery based on the query selected.")
+
     
     This formula uses the [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-results) action with the project name, query ID, and the organization name. The query ID in this example (`Gallery2.Selected.Id`) refers to the query selected from the list of queries available through the gallery added earlier. Replace the gallery name as appropriate.
 
-1. Select the **Layout** as **Title, subtitle, and body**.
 
-1. Choose the fields as **'System.Title'**, **'System.WorkItemType'**, and **'System.Description'** for the title, subtitle and body fields.
+### Adding untyped return values to your gallery
+The returned result of **GetQueryResultsV2** is dynamic. And the values are therefore untyped as well.    
 
-    :::image type="content" source="media/azure-devops/workitem-fields.png" alt-text="Show work item fields of title, work item type, and description.":::
+> [!div class="mx-imgBorder"]
+>![Show work item fields of title, work item type.](./media/azure-devops/dynamic-return-results-message.png "Get query results from existing gallery based on the query selected.")
 
-    > [!NOTE]
-    > In order to render the fields correctly, ensure the fields that you want to use in Power Apps are added to the selected Azure DevOps query through **Column options**.
+However you can access some of the values.  Azure Dev Ops returns a basic set of values for all items that are typed.  Select the data card in the gallery and insert two text label.  Set the text property of the labels as follows:
 
-## Step 4. Edit work items
+    ```powerapps-dot
+    ThisItem.Value.'System.WorkItemType'
+    ThisItem.Value.'System.Title'
+    ```
 
-So far, the app shows a list of all queries, and then the list of work items for the selected query. Now we'll add an edit form that allows changing and saving the selected fields of a work item back to Azure DevOps.
 
-For this purpose, we'll use the [UpdateWorkItem](/connectors/visualstudioteamservices/#update-a-work-item) action for the Azure DevOps connector.
+## Step 4. Display work items
 
-1. Rearrange the two galleries on screen to make room for the edit form that we'll add by moving both galleries to the left of the screen.
+So far, the app shows a list of all queries, and then the list of work items for the selected query. Now we'll add an edit form which we'll use to simply display data.
+
+1. Arrange the two galleries on screen to make room for the edit form that we'll add by moving both galleries to the left of the screen.
 
 1. Add **Edit form** to the screen, and move it to the right side of the galleries.
 
-    :::image type="content" source="media/azure-devops/add-edit-form.png" alt-text="Add edit form.":::
+> [!div class="mx-imgBorder"]
+>![Add edit form.](./media/azure-devops/add-edit-form.png "Add edit form.")
 
-1. Set the **DataSource** property of the edit form to `Gallery2.AllItems`.
 
-    This formula sets the **DataSource** property to all items from the gallery configured [earlier](#step-3-list-work-items) to list all work items.
+1. Set the **DataSource** property of the edit form to `AzureDevOps.GetQueryResultsV2("Project", Text(Gallery1.Selected.Id),"Organization").value`.  Substitute your Project and Organization names as appropriate.
+
 
 1. Set the **Item** property of the edit form to `Gallery2.Selected`.
 
@@ -117,63 +129,59 @@ For this purpose, we'll use the [UpdateWorkItem](/connectors/visualstudioteamser
 
 1. Select **Edit fields** from the properties pane on the right-side of the screen.
 
-1. Select **...** (ellipsis) > **Add custom card**.
+1. Select **...** (ellipsis) > **Add a custom card**.
 
-    :::image type="content" source="media/azure-devops/add-custom-card.png" alt-text="Add custom card.":::
+    ![Add a custom card.](./media/azure-devops/add-custom-card.png "Add a custom card")
 
-1. Rearrange the data card within the edit form at the top.
+ 
+2. Rearrange the data card within the edit form at the top.
 
     :::image type="content" source="media/azure-devops/custom-card-top.png" alt-text="Custom card moved to the top section inside the edit form.":::
 
-1. Keeping the custom card selected, insert a **Text input** control. Once selected, the control is added inside the custom card.
+3. Keeping the custom card selected, insert a **Text input** control. Once selected, the control is added inside the custom card.
 
-1. Increase the size of the text input control.
+4. Increase the size of the text input control.
 
-    :::image type="content" source="media/azure-devops/text-input-inside-custom-card.png" alt-text="Text input control inside custom card.":::
+> [!div class="mx-imgBorder"]
+>![Text input control inside custom card.](./media/azure-devops/text-input-inside-custom-card.png "Text input control inside custom card.")
 
-1. Set the **Default** property of the text input control to `ThisItem.'System.Title'`.
 
-    :::image type="content" source="media/azure-devops/title-custom-card.png" alt-text="Text input control referring to title of the work item.":::
+5. Set the **Default** property of the text input control to `Text(ThisItem.Value.'System.Title')`. The Text function 'types' the return as Text.  
+
+> [!div class="mx-imgBorder"]
+>![Text input control referring to title of the work item.](./media/azure-devops/title-custom-card.png "Text input control referring to title of the work item.")
 
     This formula sets the default text inside the text input control to the **Title** field from the selected Azure DevOps work item.
 
     > [!TIP]
-    > If your Azure DevOps project uses **Description** field with HTML or rich text, you can also use the [Rich text editor](../controls/control-richtexteditor.md) input control instead of the [Text input](../controls/control-text-input.md) control. Using the **Rich text editor** control in this case also helps resolve any issues such as the description being displayed with HTML code instead of plain or rich text.
+    > If your Azure DevOps project uses **Description** field with HTML or rich text, you can also use the [Rich text editor](../controls/control-richtexteditor.md) input control instead of the [Text input](../controls/control-text-input.md) or label controls. Using the **Rich text editor** control in this case also helps resolve any issues such as the description being displayed with HTML code instead of plain or rich text.
 
-1. Repeat the previous steps to add another custom card, with a text input control inside with the **Default** property set to `ThisItem.'System.Description'`.
+6. Repeat the previous steps to add another custom card, with a text input control inside with the **Default** property set to `Text(ThisItem.Value.'System.State')`.
 
-    This formula sets the default text inside the text input control to the **Description** field from the selected Azure DevOps work item.
+    This formula sets the default text inside the text input control to the **State** field from the selected Azure DevOps work item.
 
-1. Rearrange the data cards inside the edit form to create space where we'll add the save icon.
+7. Rearrange the data cards inside the edit form to create space where we'll add the save icon.
 
-1. Select the edit form, and then select **Insert** > **Icons** > **Save**.
+### Adding untyped and dynamic return values to your forms
+So far we have been using the Edit form which simplifies the data access story by providing a common DataSource and Item property which all of the data cards in the form can work with.  If you use the Edit form, to access the untyped values make sure you set **both** the data source and the item properties as follows: (Substituting in your values for Organization and Project.)
 
-1. Make a copy of the icon by pressing **Ctrl+C** and **Ctrl+V**.
+    ```powerapps-dot
+    AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType')
+    ```
+Note that "WorkItemType" is a text property passed in (e.g., "Feature") that allows you to pivot from items like Features and Work Items. The set of fields for these items vary from each other - which is why the return type from this call is dynamic. 
 
-1. Rearrange the save icons next to the data cards for title and description.
+To access specific values you can still access the common values the same way (e.g.,`Text(ThisItem.Value.'System.Id')` ). However, you may also access them in the more general dynamic response this way: `Text(ThisItem.fields.System_Id)`.  These dynamic values names are not generally documented.  The easiest way to see the correct names for these fields - including the non-standard fields is to open the monitor tool and look at the data response. In this case, to the `GetWorkItemDetails` call.  (See image below.)
 
-    :::image type="content" source="media/azure-devops/save-icons.png" alt-text="Save icons for saving data card text input values.":::
+If you are not using an Edit form, but rather simply a container, then you can access these values with a formula like the following: (Which accesses a custom team field.)
 
-1. Set the **OnSelect** properties for both icons to the following formulas, for title and description.
+```powerapps-dot
+Text(AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType').fields.One_custom_CustomField1)
+```
 
-    - Title:
+> [!div class="mx-imgBorder"]
+>![Text input control referring to title of the work item.](./media/azure-devops/monitor-workitem-details.png "Text input control referring to title of the work item.")
 
-        ```powerapps-dot
-        AzureDevOps.UpdateWorkItem(Gallery2.Selected.'System.Id',"Fabrikam-Inc",{project:"Sample-project",type:Gallery2.Selected.'System.WorkItemType',title:TextInput2.Text})
-        ```
 
-    - Description:
-
-        ```powerapps-dot
-        AzureDevOps.UpdateWorkItem(Gallery2.Selected.'System.Id',"Fabrikam-Inc",{project:"Sample-project",type:Gallery2.Selected.'System.WorkItemType',description:TextInput3.Text})
-        ```
-
-    The formulas for the save icon uses the [UpdateWorkItem](/connectors/visualstudioteamservices/#update-a-work-item) action. The formula uses the work item selected in the work item gallery, and updates the property of "text" or "description" with the value updated through the given text input controls. In the above example, "TextInput2" for "title" and "TextInput3" for "description".
-
-    > [!NOTE]
-    > Ensure the formula uses lower case for field names. For example, when referring to "Description" field, use `description:TextInput3.Text` instead of `Description:TextInput3.Text`. Incorrect casing might result in the error "400 Required parameter: 'workItem' missing for requested operation: 'UpdateWorkItem'".
-
-1. [Save and publish](../save-publish-app.md) the app.
 
 ## Next steps
 
