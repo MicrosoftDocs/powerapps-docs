@@ -591,7 +591,9 @@ By default, notes are enabled for pinning. When you click on the activity type s
 
 ## Bookmarks
 
-Bookmarks are a quick way for the user to set, and switch between, different sets of filters. 
+Bookmarks are a quick way for the user to set, and switch between, different sets of filters. It is **enabled by default in the October 2023 wave**, but can be disabled under the "advanced" section of timeline's maker settings.
+
+>This feature replaces, and deprecates, the "remember my filters" button. Follow the steps below to set up your user filters.
 
 ### Create a bookmark
 1. Open the filter pane, and select the filters that will be associated with the new bookmark. You may have no filters selected
