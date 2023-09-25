@@ -23,17 +23,22 @@ If you created a site (portal) through Power Apps or Power Pages, it's visible w
 
 To manage a site, select **More Commands** (**…**) for the site and choose an action from the options in the dropdown. 
 
-:::image type="content" source="media/manage-existing-portals/portal-site-options.png" alt-text="A screenshot of the Home page in Power Pages design studio with the user's active sites displayed and menu options for managing a site emphasized.":::
+:::image type="content" source="media/manage-existing-portals/portal-site-options.png" alt-text="A screenshot of the Home page in Power Pages design studio. The user's active sites are displayed and menu options for managing a site are emphasized.":::
 
 ## Edit
 
 Select **Edit** to open the site in Power Pages design studio. If your site was created with Power Apps portals (and you prefer), you can also select **Edit in Power Apps portals** to edit the content and components of the site.  
 
-:::image type="content" source="media/manage-existing-portals/edit-in-power-apps.png" alt-text="A screenshot of the Home page in Power Pages design studio with the user's active sites displayed and menu option Edit in Power Apps studio emphasized.":::
+:::image type="content" source="media/manage-existing-portals/edit-in-power-apps.png" alt-text="A screenshot of the Home page in Power Pages design studio. The user's active sites are displayed and the menu option Edit in Power Apps studio emphasized.":::
 
 Power Apps portals Studio requires a contact record with the email address `portaluser@powerappsportals.com` for some of its functionality to work. This contact record is automatically created when you edit the portal for the first time.
 
-If you have one or more fields for the Contact table set as required, or any business logic (such as synchronous plug-ins or workflows to restrict contact creation), this contact record creation may fail with the following error message:
+This contact record creation may fail in two scenarios:
+
+- If you have one or more fields for the Contact table set as required.
+- If your site has business logic (for example, synchronous plug-ins or workflows to restrict contact creation)
+
+ In either case, an error message displays:
 
 `Contact creation failed` <br/>
 `A contact with an email address portaluser@powerappsportals.com must be created before you can edit your portal. Please create this contact manually.`
@@ -44,7 +49,7 @@ When you see this error message, create a contact record manually with the email
 
 Opens the portal to preview the website. This option helps you to see the portal as it looks to your customers.
 
-:::image type="content" source="media/portal-website.png" alt-text="A screenshot of a website preview for Conteso Ltd. There is a message displayed at the bottom that states: This website uses sample data for illustration purposes. You can create pages by using the available templates."::: 
+:::image type="content" source="media/portal-website.png" alt-text="A screenshot of a website preview for Conteso Ltd. There's a message displayed at the bottom that states: This website uses sample data for illustration purposes. You can create pages by using the available templates."::: 
 
 Alternately, you can also open the portal to browse the website by selecting **Browse website** in the [Power Apps portals Studio](portal-designer-anatomy.md) to view the changes you have made to the website. The website opens in a new tab with URL of the website.
 
