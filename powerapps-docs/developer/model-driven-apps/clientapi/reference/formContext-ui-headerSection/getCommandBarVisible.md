@@ -30,7 +30,7 @@ contributors:
 
 **Description**: **true** if the command bar is visible; **false** otherwise.
 
-## Related topics
+## Related articles
 
 [setCommandBarVisible](setCommandBarVisible.md)
 

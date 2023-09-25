@@ -52,7 +52,7 @@ More information:
 
 ## Work with table definitions
 
-Developing a good working understanding of the *metadata* (data that describes data) in the system can help you understand how the Dataverse platform works. In general you will use designers to add, update, or delete table columns that will store business data. You can also define metadata that provides additional information about a table or column. For example, most tables have a "Name" column and there is metadata that describes if that column is required, when it was modified, and by whom. Both the (OData) data access point and the Organization service endpoint provide capabilities to perform common operations on the table definition and other metadata. More information: [Work with metadata using code](metadata-services.md) 
+Developing a good working understanding of the *metadata* (data that describes data) in the system can help you understand how the Dataverse platform works. In general you will use designers to add, update, or delete table columns that will store business data. You can also define metadata that provides additional information about a table or column. For example, most tables have a "Name" column and there is metadata that describes if that column is required, when it was modified, and by whom. Both the Web API and SDK for .NET provide capabilities to perform common operations on the table definition and other metadata. More information: [Work with metadata using code](metadata-services.md) 
 
 ## Use solutions to package and distribute extensions
 

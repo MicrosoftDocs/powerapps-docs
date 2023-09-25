@@ -144,6 +144,8 @@
   href: duplicaterule.md
 - name: DuplicateRuleCondition
   href: duplicaterulecondition.md
+- name: ElasticFileAttachment
+  href: elasticfileattachment.md
 - name: Email
   href: email.md
 - name: EmailServerProfile
@@ -186,6 +188,8 @@
   href: fieldsecurityprofile.md
 - name: FixedMonthlyFiscalCalendar
   href: fixedmonthlyfiscalcalendar.md
+- name: flowevent
+  href: flowevent.md
 - name: flowmachine
   href: flowmachine.md
 - name: flowmachinegroup
@@ -380,6 +384,8 @@
   href: msdyn_odatav4ds.md
 - name: msdyn_pmanalysishistory
   href: msdyn_pmanalysishistory.md
+- name: msdyn_pmbusinessruleautomationconfig
+  href: msdyn_pmbusinessruleautomationconfig.md
 - name: msdyn_pmcalendar
   href: msdyn_pmcalendar.md
 - name: msdyn_pmcalendarversion
@@ -426,6 +432,8 @@
   href: msdyn_solutionhistory.md
 - name: msdyn_solutionhistorydatasource
   href: msdyn_solutionhistorydatasource.md
+- name: msdyn_timelinepin
+  href: msdyn_timelinepin.md
 - name: msdyn_tour
   href: msdyn_tour.md
 - name: msdyn_virtualtablecolumncandidate
@@ -490,10 +498,14 @@
   href: postlike.md
 - name: powerbidataset
   href: powerbidataset.md
+- name: powerbidatasetapdx
+  href: powerbidatasetapdx.md
 - name: powerbimashupparameter
   href: powerbimashupparameter.md
 - name: powerbireport
   href: powerbireport.md
+- name: powerbireportapdx
+  href: powerbireportapdx.md
 - name: powerfxrule
   href: powerfxrule.md
 - name: PrincipalObjectAttributeAccess

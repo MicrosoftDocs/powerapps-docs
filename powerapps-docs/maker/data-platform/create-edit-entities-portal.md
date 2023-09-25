@@ -125,6 +125,7 @@ Use an Excel file to populate a table with your data, which uses AI to assist wi
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE [cross-geo-support](../../../shared/cross-geo-support.md)]
 
 1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
 1. Select from device or drag and drop your Excel file onto the Upload an Excel file page.

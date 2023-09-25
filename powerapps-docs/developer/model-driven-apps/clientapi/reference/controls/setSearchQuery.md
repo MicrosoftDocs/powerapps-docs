@@ -33,9 +33,9 @@ kbSearchControl.setSearchQuery(searchString);
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|searchString |String |Yes|The text for the search query.| 
+|`searchString` |String |Yes|The text for the search query.| 
 
-### Related topics
+### Related articles
 
 [getSearchQuery](getSearchQuery.md)
 

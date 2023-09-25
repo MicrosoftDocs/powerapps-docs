@@ -35,7 +35,7 @@ All
 
 **Description**: The name of the control.
 
-### Related topics
+### Related articles
 
 [Controls](../controls.md)
 

@@ -1,6 +1,6 @@
 ---
-title: "Late-bound and early-bound programming using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes the different programming styles available when using the .NET SDK assemblies with the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Late-bound and early-bound programming using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes the different programming styles available when using the .NET SDK assemblies with the SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.collection: get-started
 ms.topic: "article"
 ms.date: 04/03/2022
@@ -14,11 +14,11 @@ contributors:
  - phecke
 ---
 
-# Late-bound and early-bound programming using the Organization service
+# Late-bound and early-bound programming using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-When you work with the Organization service assemblies you have two programming styles you can use: *late-bound* and *early-bound*.
+When you work with the SDK for .NET assemblies you have two programming styles you can use: *late-bound* and *early-bound*.
 
 The key difference between early and late binding involves type conversion. While early binding provides compile-time checking of all types so that no implicit casts occur, late binding checks types only when the object is created or an action is performed on the type. The <xref:Microsoft.Xrm.Sdk.Entity> class requires types to be explicitly specified to prevent implicit casts.
 
@@ -74,7 +74,7 @@ Guid accountid = svc.Create(account);
 
 ## Early-bound
 
-Early-bound programming requires that you first generate a set of classes based on the table and column definitions (entity and attribute metadata) for a specific environment using the code generation tool (CrmSvcUtil.exe). More information: [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)
+Early-bound programming requires that you first generate a set of classes based on the table and column definitions (entity and attribute metadata) for a specific environment using the code generation tool (CrmSvcUtil.exe). More information: [Generate classes for early-bound programming using the SDK for .NET](generate-early-bound-classes.md)
 
 After generating early-bound classes using the code generation tool you will enjoy a better experience while you write code because classes and properties use the respective `SchemaName` property values:
 
@@ -141,7 +141,7 @@ Because all the generated classes inherit from the <xref:Microsoft.Xrm.Sdk.Entit
 The following example shows one way to mix early and late binding methods using <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext>.  
   
 ```csharp  
-// Create an organization service context object  
+// Create an context object  
 AWCServiceContext context = new AWCServiceContext(_serviceProxy);  
   
 // Instantiate an account object using the Entity class.  
@@ -151,7 +151,7 @@ Entity testaccount = new Entity("account");
 testaccount["name"] = "Fourth Coffee";  
 testaccount["emailaddress1"] = "marshd@contoso.com";  
   
-// Save the entity using the organization service context object.  
+// Save the entity using the context object.  
 context.AddToAccountSet(testaccount);  
 context.SaveChanges();  
   
@@ -186,12 +186,12 @@ new EntityCollection(new Entity[] { relatedEntity.ToEntity<Entity>() });
 
 ### See also
 
-[Entity operations using the Organization service](entity-operations.md)<br />
-[Create table rows using the Organization Service](entity-operations-create.md)<br />
-[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)<br />
-[Query data using the Organization service](entity-operations-query-data.md)<br />
-[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
-[Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)<br />
+[Entity operations using the SDK for .NET](entity-operations.md)<br />
+[Create table rows using the SDK for .NET](entity-operations-create.md)<br />
+[Retrieve a table row using the SDK for .NET](entity-operations-retrieve.md)<br />
+[Query data using the SDK for .NET](entity-operations-query-data.md)<br />
+[Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)<br />
+[Associate and disassociate table rows using the SDK for .NET](entity-operations-associate-disassociate.md)<br />
 [IOrganizationService Interface](iorganizationservice-interface.md)<br />
 [Using OrganizationServiceContext](organizationservicecontext.md)<br />
 

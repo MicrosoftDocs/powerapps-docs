@@ -28,12 +28,8 @@ contributors:
 
 **Description**:Returns one of the following values: **active**, **aborted**, or **finished**.
 
-### Related topics
+### Related articles
 
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

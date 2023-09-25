@@ -28,10 +28,9 @@ contributors:
 
 **Description**: The currently selected stage. See [Stage methods](../formContext-data-process.md#stage-methods) for the methods to access the properties of the stage returned.
 
-### Related topics
+### Related articles
 
-[getActiveStage (Client API reference)](activestage/getActiveStage.md)
-
+[getActiveStage (Client API reference)](activestage/getActiveStage.md)   
 [formContext.data.process](../formContext-data-process.md)
  
 
