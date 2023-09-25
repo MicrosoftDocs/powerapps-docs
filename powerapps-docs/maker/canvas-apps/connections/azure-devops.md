@@ -32,7 +32,7 @@ In this article, you'll create a canvas app that connects to Azure DevOps to ret
 - You'll need an [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) instance that has an organization, a project, and a shared query, and a few sample work items to edit using the app that you'll create in this article.
 - The Azure DevOps instance that you use must be enabled for **Third-party application access via OAuth**. To configure this setting, see [Manage access policies for Azure DevOps](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy).
 
-## Step 1. Add Azure DevOps data source
+## Step 1 - Add Azure DevOps data source
 
 To connect to Azure DevOps, [edit](../edit-app.md) the [blank canvas app](../create-blank-app.md), and add **Azure DevOps** data source.
 
@@ -41,7 +41,7 @@ To connect to Azure DevOps, [edit](../edit-app.md) the [blank canvas app](../cre
 
 If you don't have an Azure DevOps connection already, select **Connect** and follow the prompts to provide your details, and then allow the app to connect.
 
-## Step 2. List shared queries
+## Step 2 - List shared queries
 
 In this section, we'll use the [ListQueriesInFolder](/connectors/visualstudioteamservices/#list-queries-within-folder) action for the Azure DevOps connector to list the available queries.
 
@@ -57,16 +57,13 @@ In this section, we'll use the [ListQueriesInFolder](/connectors/visualstudiotea
 > [!div class="mx-imgBorder"]
 >![List queries in folder using formula added to Items property of the vertical gallery.](./media/azure-devops/list-queries-in-folder.png "List queries in folder using formula added to Items property of the vertical gallery.")
 
-
-Note that in this case, the example uses the variables "Project", "Organization", and "Folder" and the actual values are in the text boxes below the formula bar (highlighted).  You can find your Project and Organization values from the URL used to to connect to Azure Dev Ops.  The Folder will usually be "Shared Queries" or "My Queries".
+If the example uses the variables "Project", "Organization", and "Folder" and the actual values are in the text boxes below the formula bar (highlighted). You can find your Project and Organization values from the URL used to to connect to Azure Dev Ops.  The Folder will usually be "Shared Queries" or "My Queries".
 
 > [!div class="mx-imgBorder"]
 >![Locate the project and organization name for your Azure Dev Ops instance.](./media/azure-devops/find-azuredevops-project-name.png "Locate the project and organization name for your Azure Dev Ops instance.")
 
-    > [!NOTE]
-    > If you see the following error in the above formula, [enable third-party app access using OAuth](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy) in your Azure DevOps organization, and try again.
-    > 
-    > "AzureDevOps.ListQueriesInFolder failed:{"status":401,"message":"TF400813:The user 'GUID' is not authorized to access this resource."}
+If you get the following error in the above formula, [enable third-party app access using OAuth](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy) in your Azure DevOps organization, and try again.<br>
+"AzureDevOps.ListQueriesInFolder failed:{"status":401,"message":"TF400813:The user 'GUID' is not authorized to access this resource."}
 
 1. Select the **Layout** for the gallery to **Title and subtitle**.
 
@@ -75,7 +72,7 @@ Note that in this case, the example uses the variables "Project", "Organization"
 > [!div class="mx-imgBorder"]
 >![Gallery fields for listing queries.](./media/azure-devops/query-list-fields.png "Gallery fields for listing queries")
 
-## Step 3. List work items
+## Step 3 - List work items
 
 Now we'll use [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-results) action for the Azure DevOps connector to list all work items for the selected query.  This will bind the gallery to the data source.
 
@@ -90,8 +87,7 @@ Now we'll use [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-quer
 > [!div class="mx-imgBorder"]
 >![Get query results from existing gallery based on the query selected..](./media/azure-devops/get-query-results.png "Get query results from existing gallery based on the query selected.")
 
-    
-    This formula uses the [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-results) action with the project name, query ID, and the organization name. The query ID in this example (`Gallery2.Selected.Id`) refers to the query selected from the list of queries available through the gallery added earlier. Replace the gallery name as appropriate.
+This formula uses the [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-results) action with the project name, query ID, and the organization name. The query ID in this example (`Gallery2.Selected.Id`) refers to the query selected from the list of queries available through the gallery added earlier. Replace the gallery name as appropriate.
 
 
 ### Adding untyped return values to your gallery
@@ -107,8 +103,7 @@ However you can access some of the values.  Azure Dev Ops returns a basic set of
     ThisItem.Value.'System.Title'
     ```
 
-
-## Step 4. Display work items
+## Step 4 - Display work items
 
 So far, the app shows a list of all queries, and then the list of work items for the selected query. Now we'll add an edit form which we'll use to simply display data.
 
@@ -153,8 +148,8 @@ So far, the app shows a list of all queries, and then the list of work items for
 
     This formula sets the default text inside the text input control to the **Title** field from the selected Azure DevOps work item.
 
-    > [!TIP]
-    > If your Azure DevOps project uses **Description** field with HTML or rich text, you can also use the [Rich text editor](../controls/control-richtexteditor.md) input control instead of the [Text input](../controls/control-text-input.md) or label controls. Using the **Rich text editor** control in this case also helps resolve any issues such as the description being displayed with HTML code instead of plain or rich text.
+> [!TIP]
+> If your Azure DevOps project uses **Description** field with HTML or rich text, you can also use the [Rich text editor](../controls/control-richtexteditor.md) input control instead of the [Text input](../controls/control-text-input.md) or label controls. Using the **Rich text editor** control in this case also helps resolve any issues such as the description being displayed with HTML code instead of plain or rich text.
 
 6. Repeat the previous steps to add another custom card, with a text input control inside with the **Default** property set to `Text(ThisItem.Value.'System.State')`.
 
@@ -170,7 +165,7 @@ So far we have been using the Edit form which simplifies the data access story b
     ```
 Note that "WorkItemType" is a text property passed in (e.g., "Feature") that allows you to pivot from items like Features and Work Items. The set of fields for these items vary from each other - which is why the return type from this call is dynamic. 
 
-To access specific values you can still access the common values the same way (e.g.,`Text(ThisItem.Value.'System.Id')` ). However, you may also access them in the more general dynamic response this way: `Text(ThisItem.fields.System_Id)`.  These dynamic values names are not generally documented.  The easiest way to see the correct names for these fields - including the non-standard fields is to open the monitor tool and look at the data response. In this case, to the `GetWorkItemDetails` call.  (See image below.)
+To access specific values you can still access the common values the same way (e.g.,`Text(ThisItem.Value.'System.Id')` ). However, you may also access them in the more general dynamic response this way: `Text(ThisItem.fields.System_Id)`. These dynamic values names are not generally documented.  The easiest way to see the correct names for these fields - including the non-standard fields is to open the monitor tool and look at the data response. In this case, to the `GetWorkItemDetails` call.  (See image below.)
 
 If you are not using an Edit form, but rather simply a container, then you can access these values with a formula like the following: (Which accesses a custom team field.)
 
@@ -179,8 +174,7 @@ Text(AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organiza
 ```
 
 > [!div class="mx-imgBorder"]
->![Text input control referring to title of the work item.](./media/azure-devops/monitor-workitem-details.png "Text input control referring to title of the work item.")
-
+> ![Text input control referring to title of the work item.](./media/azure-devops/monitor-workitem-details.png "Text input control referring to title of the work item.")
 
 
 ## Next steps
