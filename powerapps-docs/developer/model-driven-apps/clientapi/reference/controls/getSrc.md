@@ -32,7 +32,7 @@ iframe, webresource
 
 **Description**: A URL representing the **src** property of the IFRAME or web resource.
 
-### Related topics
+### Related articles
 
 [setSrc](setSrc.md)
 

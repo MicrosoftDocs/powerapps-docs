@@ -30,7 +30,7 @@ iframe
 
 **Description**: The initial URL.
 
-### Related topics
+### Related articles
 
 [Controls](../controls.md)
 

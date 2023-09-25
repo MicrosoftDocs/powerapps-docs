@@ -38,11 +38,10 @@ Returns a value to indicate which client the script is executing in.
 
 Value |Client | 
 |---|---|
-|Web |Web application|
-|Web |Unified Interface|
-|Outlook |Dynamics 365 for Outlook client (COM add-in)|
-|Mobile |Mobile app |
-|||
+|`Web` |Web application|
+|`Web` |Unified Interface|
+|`Outlook` |Dynamics 365 for Outlook client (COM add-in)|
+|`Mobile` |Mobile app |
 
 ## getClientState
 
@@ -60,9 +59,8 @@ Returns a value to indicate the state of the client. A client in offline-first m
 
 Value |Client | 
 |---|---|
-|Online |Web application, Dynamics 365 for Outlook client (COM add-in), Mobile app, Unified Interface|
-|Offline |Outlook, Mobile app|
-|||
+|`Online` |Web application, Dynamics 365 for Outlook client (COM add-in), Mobile app, Unified Interface|
+|`Offline` |Outlook, Mobile app|
 
 ## getFormFactor
 
@@ -80,10 +78,10 @@ Returns information about the kind of device the user is using.
 
 Value |Form Factor | 
 |---|---|
-|0 |Unknown|
-|1 |Desktop|
-|2 |Tablet |
-|3 |Phone |
+|`0` |Unknown|
+|`1` |Desktop|
+|`2` |Tablet |
+|`3` |Phone |
 
 ## isOffline
 
@@ -117,12 +115,8 @@ Returns information whether the network is available or not, regardless of clien
 
 ## Related articles
 
-[Organization Settings](organizationSettings.md)
-
-[User Settings](userSettings.md)
-
+[Organization Settings](organizationSettings.md)   
+[User Settings](userSettings.md)   
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

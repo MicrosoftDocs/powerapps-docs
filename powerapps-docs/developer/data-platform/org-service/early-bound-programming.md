@@ -187,7 +187,7 @@ new EntityCollection(new Entity[] { relatedEntity.ToEntity<Entity>() });
 ### See also
 
 [Entity operations using the SDK for .NET](entity-operations.md)<br />
-[Create table rows using the SDK for .NET-operations-create.md)<br />
+[Create table rows using the SDK for .NET](entity-operations-create.md)<br />
 [Retrieve a table row using the SDK for .NET](entity-operations-retrieve.md)<br />
 [Query data using the SDK for .NET](entity-operations-query-data.md)<br />
 [Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)<br />

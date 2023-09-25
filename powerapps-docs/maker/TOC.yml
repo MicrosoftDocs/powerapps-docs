@@ -2512,7 +2512,15 @@
         - name: Send cards automatically with a flow (preview)
           href: ../cards/send-a-card/send-card-with-flow.md
     - name: Manage cards
-      href: ../cards/manage-cards/manage-cards.md
+      items: 
+        - name: Manage cards in solutions
+          href: ../cards/manage-cards/manage-cards.md
+        - name: Manage access
+          href: ../cards/manage-cards/manage-access.md
+        - name: Manage cards with DLP policies 
+          href: ../cards/manage-cards/data-loss-prevention.md
+        - name: Delete a card
+          href: ../cards/manage-cards/delete-cards.md
     - name: Tutorials
       items:
         - name: Create a simple card
