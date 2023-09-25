@@ -28,12 +28,9 @@ The HTML **Window.close** method is suppressed. To close a form window, you must
 
 For Microsoft Dynamics 365 for tablets, this method mimics the behavior of the back navigation button.
 
-### Related topics
+### Related articles
 
-[formContext.ui](../formContext-ui.md)
-
+[formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

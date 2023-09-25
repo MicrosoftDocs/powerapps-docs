@@ -14,8 +14,6 @@ contributors:
 ---
 # Xrm.WebApi.online (Client API reference)
 
-
-
 [!INCLUDE[./includes/online-description.md](./includes/online-description.md)] 
 
 `var onlineWebApi = Xrm.WebApi.online;`
@@ -30,15 +28,9 @@ The **onlineWebApi** object provides the following methods:
 - [execute](online/execute.md)
 - [executeMultiple](online/executeMultiple.md)
 
-### Related topics
+### Related articles
 
-[Xrm.WebApi.offline](offline.md)
-
+[Xrm.WebApi.offline](offline.md)   
 [Xrm.WebApi](../xrm-webapi.md)
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

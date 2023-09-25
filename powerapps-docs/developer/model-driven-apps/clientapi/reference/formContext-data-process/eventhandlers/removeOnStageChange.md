@@ -24,12 +24,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|Function reference|Yes|The function to be removed from the [OnStageChange](../../events/onstagechange.md) event.|
+|`myFunction`|Function reference|Yes|The function to be removed from the [OnStageChange](../../events/onstagechange.md) event.|
 
-### Related topics
+### Related articles
 
-[addOnStageChange](addOnStageChange.md)
- 
+[addOnStageChange](addOnStageChange.md)   
 [formContext.data.process](../../formContext-data-process.md)
  
 
