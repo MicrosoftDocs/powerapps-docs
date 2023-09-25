@@ -19,35 +19,32 @@ contributors:
 
 [!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
-If you created a site (portal) through Power Apps or Power Pages, it's visible when you sign in to [Power Pages](https://make.powerpages.microsoft.com), and then you would it under the **Active sites** on the **Home**.
-
-![Active sites.](media/active-sites.png "Active sites")  
+If you created a site (portal) through Power Apps or Power Pages, it's visible when you sign in to [Power Pages](https://make.powerpages.microsoft.com) under **Active sites** on the **Home** page.
 
 To manage a site, select **More Commands** (**…**) for the site (portal) and choose an action from the context menu. 
 
-![Site options.](media/portal-site-options.png "Portal site options")  
+:::image type="content" source="media/manage-existing-portals/portal-site-options.png" alt-text="A screenshot of the Home page in Power Pages design studio with the user's active sites displayed and menu options for managing a site emphasized.":::
 
 ## Edit
 
 You can select **Edit** to open the Site (portal) in Opens the Power Pages Studio, however, you can also select **Edit in Power Apps portals**, if your Site (portal) is created with Power Apps Portals, to edit the content and components of the Site (portal).  
 
-![edit site.](media/edit-in-power-apps.png "edit site")  
+:::image type="content" source="media/manage-existing-portals/edit-in-power-apps.png" alt-text="A screenshot of the Home page in Power Pages design studio with the user's active sites displayed and menu option Edit in Power Apps studio emphasized.":::
 
 Portals Studio requires a contact record with the email address `portaluser@powerappsportals.com` for some of its functionality to work. This contact record is automatically created when you edit the portal for the first time.
 
-If you've one or more fields for the Contact table set as required, or any business logic such as synchronous plug-ins or workflows to restrict contact creation, this contact record creation may fail with the following error message:
+If you have one or more fields for the Contact table set as required, or any business logic such as synchronous plug-ins or workflows to restrict contact creation, this contact record creation may fail with the following error message:
 
-`Contact creation failed` <br>
+`Contact creation failed` <br/>
 `A contact with an email address portaluser@powerappsportals.com must be created before you can edit your portal. Please create this contact manually.`
 
 When you see this error message, create a contact record manually with the email address `portaluser@powerappsportals.com`.
 
 ## Preview
 
-Opens the portal to preview the website. This option helps you to see the portal as it will look to your customers.
+Opens the portal to preview the website. This option helps you to see the portal as it looks to your customers.
 
-> [!div class=mx-imgBorder]
-> ![portal website.](media/portal-website.png "Portal website")  
+:::image type="content" source="media/portal-website.png" alt-text="A screenshot of a website preview for Conteso Ltd. There is a message displayed at the bottom that states: This website uses sample data for illustration purposes. You can create pages by using the available templates."::: 
 
 Alternately, you can also open the portal to browse the website by selecting **Browse website** in the [Power Apps portals Studio](portal-designer-anatomy.md) to view the changes you have made to the website. The website opens in a new tab with URL of the website.
 
@@ -57,7 +54,7 @@ Share your portal website address with users, with permissions to view it.
 
 ### Share with internal users
 
-To share the portal with internal users, you must first create a security role and then assign users to the security role so they can use the portal.
+To share the portal with internal users, you must first create a security role, and then assign users to the security role so they can use the portal.
 
 > [!NOTE]
 > As a user in Microsoft Dataverse, if you do not have appropriate privileges on portal tables, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. It is recommended that you are in a System Administrator security role in the corresponding Dataverse database.
@@ -95,18 +92,18 @@ Your portal should work anonymously and should be accessible by the external use
 
 ## Admin center
 
-Displays the portal settings and allows you to change the name of the portal. You can also go to setup licensing for your portal as well as advanced actions such as administering the portal though the Power Apps portals admin center and working with site settings. 
+Displays the portal settings and allows you to change the name of the portal. You can also go to set up licensing for your portal and advanced actions such as administering the portal though the Power Apps portals admin center and working with site settings. 
 
 ### Licensing
 
-For production portals you will see **Licensing for internal users** and **Licensing for external users** section in the portal's settings panel based on your environment licensing setup. Learn more about [Power Apps per app plans](/power-platform/admin/about-powerapps-perapp),  [Pay-as-you-go](/power-platform/admin/pay-as-you-go-set-up#in-power-apps).
+For production portals the **Licensing for internal users** and **Licensing for external users** section is visible in the portal's settings panel based on your environment licensing setup. Learn more about [Power Apps per app plans](/power-platform/admin/about-powerapps-perapp),  [Pay-as-you-go](/power-platform/admin/pay-as-you-go-set-up#in-power-apps).
 
 > [!Note]
 > **Licensing for internal users** and **Licensing for external users** sections are not visible in portal settings panel when you open it from the portal's detail page tool bar **Settings** item.
 
 ## Delete
 
-Deletes the portal and hosted resources. When you delete a portal, its URL becomes inaccessible. Deleting a portal doesn't affect any portal configurations or solutions present in your environment, and they'll remain as-is.
+Deletes the portal and hosted resources. When you delete a portal, its URL becomes inaccessible. Deleting a portal doesn't affect any portal configurations or solutions present in your environment, and they remain as-is.
 If you want to remove the portal configurations from your environment completely, delete the portal configurations manually. To delete, use the Portal Management app, and delete the corresponding website record for the portal.
 
 > [!NOTE]
