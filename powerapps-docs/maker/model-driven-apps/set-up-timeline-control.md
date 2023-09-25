@@ -1,4 +1,4 @@
-![ic_fluent_important_24_regular](https://github.com/MicrosoftDocs/powerapps-docs/assets/35553346/f049625b-8bbb-45a6-a8e8-dc82bf8142a8)![ic_fluent_important_24_regular](https://github.com/MicrosoftDocs/powerapps-docs/assets/35553346/d87c8bb2-e000-405a-ac3c-34dd75e5ca0f)---
+---
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
