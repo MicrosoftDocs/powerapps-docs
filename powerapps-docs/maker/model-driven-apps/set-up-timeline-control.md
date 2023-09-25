@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 08/11/2023
+ms.date: 09/11/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -580,6 +580,14 @@ If you're using a Dynamics 365 app other than Customer Service Hub or Customer S
    > [!NOTE]
    > If you don't have the Post Rule Configuration table, you're environment doesn't have the required Dynamics 365 app installed.
 1. Select **Save**, and then select **Publish**.
+
+## Let users pin and unpin activities to the top of timeline
+
+You can configure the ability for users to pin or unpin activities, such as notes, to the top of the timeline so that they're easily accessible. Pinning activities helps users save time by not requiring them to scroll an entire timeline to find the information they need.
+
+By default, notes are enabled for pinning. When you click on the activity type such as a task, appointment, and so forth, the pin and unpin option appears in the list of commands. Select the **Pin / Unpin** checkbox for each activity you want users to be able to pin or unpin.
+
+:::image type="content" source="media/set-up-pin-unpin.png" alt-text="View of the Pin / Unpin checkbox":::
 
 ## Create and add custom activities to timeline
 

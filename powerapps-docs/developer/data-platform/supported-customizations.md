@@ -108,7 +108,7 @@ The following is a list of unsupported action types that are frequently asked ab
     - Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.dll
     - Microsoft.Xrm.Tooling.WebResourceUtility.dll
 
-- The use of application programming interfaces (APIs) other than the documented APIs in the web services: SDK API, Web API, Organization service, Deployment service, Discovery service, Organization Data service.
+- The use of application programming interfaces (APIs) other than the documented APIs in the web services: Web API, SDK for .NET, Deployment service, Discovery service, Organization Data service.
 
 - Plug-in and workflow assemblies must contain all the necessary logic within the respective DLL. Plugins may reference some core .NET assemblies. However, we do not support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface. Previously, Dynamics 365 allowed for assemblies to refer to these interfaces, but to adhere to our security standards, changes to this behavior are required.
 

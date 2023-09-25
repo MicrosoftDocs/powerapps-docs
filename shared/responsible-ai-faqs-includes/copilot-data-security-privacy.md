@@ -85,7 +85,7 @@ We also provide guidance within the user experience to reinforce the responsible
 
 ## How does Copilot protect sensitive business information and data?
 
-Microsoft is uniquely positioned to deliver enterprise-ready AI. Powered by [Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/overview), Copilot features built-in responsible AI and enterprise-grade Azure security.
+Microsoft is uniquely positioned to deliver enterprise-ready AI. Powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview), Copilot features built-in responsible AI and enterprise-grade Azure security.
 
 - **Built on Microsoft’s comprehensive approach to security, compliance, and privacy**. Copilot is integrated into Microsoft services like Dynamics 365, Viva Sales, Power Platform, and Microsoft 365 and inherits these products' valuable security, compliance, and privacy policies and processes. Two-factor authentication, compliance boundaries, privacy protections, and more make Copilot the AI solution you can trust.
 

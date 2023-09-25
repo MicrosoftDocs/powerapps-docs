@@ -152,10 +152,10 @@ Use the **Run command** (shortcut is `Windows + R`) and use the following deep l
 
 1. Click **inspect** and the DevTools will open.
 
-### See also
+### Related articles
 
-[JavaScript web resources](../script-jscript-web-resources.md)<br />
-[Debug a model-driven app with Monitor](../../../maker/monitor-modelapps.md)<br />
+[JavaScript web resources](../script-jscript-web-resources.md)   
+[Debug a model-driven app with Monitor](../../../maker/monitor-modelapps.md)   
 [Troubleshoot issues in the Power Apps mobile app](../../../mobile/powerapps-mobile-troubleshoot.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

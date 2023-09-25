@@ -19,7 +19,7 @@ There are a number of developer tools that are needed for different aspects of M
 |Package Deployer (PD)|Deploy packages to Dataverse environments where the packages contain solutions, custom code, HTML files, and more|[Deploy a package](/power-platform/alm/package-deployer-tool#deploy-a-package)|
 |Plug-in Registration tool (PRT)|Registers custom code (plug-ins, custom workflow activities), service endpoints, and more|[Register a plug-in](register-plug-in.md)<br/>[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)|
 |SolutionPackager tool (SP)|A tool that can reversibly decompose a Dataverse compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system|[SolutionPackager tool](/power-platform/alm/solution-packager-tool)|
-|Code Generation tool (CG)|A command-line code generation tool that generates early-bound (strong-typed) .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse.<br/><br/>The Code Generation tool functionality is integrated into Power Platform CLI. The output of the CLI [modelbuilder](/power-platform/developer/cli/reference/modelbuilder) subcommand supports cross-platform .NET (Core) compilation.|[Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)|
+|Code Generation tool (CG)|A command-line code generation tool that generates early-bound (strong-typed) .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse.<br/><br/>The Code Generation tool functionality is integrated into Power Platform CLI. The output of the CLI [modelbuilder](/power-platform/developer/cli/reference/modelbuilder) subcommand supports cross-platform .NET (Core) compilation.|[Generate early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md)|
 
 > [!NOTE]
 > The CMT, PD, and PRT tools provide a Windows (WPF) user interface and only run on a Microsoft Windows operating system. Also, the `pac tool` command only is available on a Windows install of the CLI.
@@ -171,7 +171,7 @@ Similarly, for available options to unpack a solution, use `pac solution unpack 
 ### See Also
 
 [Power Platform developer tools](/power-platform/developer/tools)  
-[Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)  
+[Generate early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md)  
 [Create extensions for the Code Generation tool](org-service/extend-code-generation-tool.md)  
 [Browse the metadata for your organization](browse-your-metadata.md)  
 [Deploy packages using Package Deployer and Windows PowerShell](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)

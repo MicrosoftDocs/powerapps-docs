@@ -26,5 +26,7 @@ ms.reviewer: mduelae
 - [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
 - [FAQ for Copilot in model-driven apps](faqs-copilot-model-driven-app.md)
 - [Add Copilot to model-driven apps (preview)](../model-driven-apps/add-ai-copilot.md)
+- [FAQ for Copilot in rich text editor](faqs-email-assist-rte.md)
+- [Use Copilot in rich text editor for email (preview)](../model-driven-apps/use-copilot-email-assist.md)
 
 

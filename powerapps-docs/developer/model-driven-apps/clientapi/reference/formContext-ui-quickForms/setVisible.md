@@ -26,16 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|bool|Boolean|Yes|Specify **true** or **false** to display or hide the control.|
+|`bool`|Boolean|Yes|Specify **true** or **false** to display or hide the control.|
 
-### Related topics
+### Related articles
 
-[getVisible](getVisible.md)
-
+[getVisible](getVisible.md)   
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
