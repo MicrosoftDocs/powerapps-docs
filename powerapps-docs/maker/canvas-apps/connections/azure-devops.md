@@ -17,7 +17,7 @@ contributors:
 
 # Connect to Azure DevOps from Power Apps
 
-Power Apps connector for [Azure DevOps](/connectors/visualstudioteamservices/) allows you to work with Azure DevOps instance. You can view Azure DevOps queries, choose work items based on different work item types, view or edit details all from inside a canvas app that connects to Azure DevOps.
+Power Apps connector for [Azure DevOps](/connectors/visualstudioteamservices/) allows you to work with Azure DevOps instance. You can view Azure DevOps queries, select work items based on different work item types, and view, or edit details all from inside a canvas app that connects to Azure DevOps.
 
 > [!TIP]
 > For a complete list of all actions, see [Azure DevOps connector actions](/connectors/visualstudioteamservices/#actions).
@@ -26,11 +26,11 @@ In this article, you'll create a canvas app that connects to Azure DevOps to ret
 
 ## Prerequisites
 
-- You'll need a Power Apps license. If you don't have a license, use a [30-day trial](../../signup-for-powerapps.md), or sign up for a [developer plan](../../developer-plan.md) for non-production use.
+- You need a Power Apps license. If you don't have a license, use a [30-day trial](../../signup-for-powerapps.md), or sign up for a [developer plan](../../developer-plan.md) for non-production use.
 - If you're new to Power Apps, familiarize yourself with Power Apps basics by [generating an app](../get-started-test-drive.md) and then customizing that app's [controls](../add-configure-controls.md), [gallery](../add-gallery.md), [forms](../working-with-forms.md), and [cards](../working-with-cards.md).
-- You'll need a [blank canvas app](../create-blank-app.md) that we'll use to connect to Azure DevOps.
-- You'll need an [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) instance that has an organization, a project, and a shared query, and a few sample work items to edit using the app that you'll create in this article.
-- The Azure DevOps instance that you use must be enabled for **Third-party application access via OAuth**. To configure this setting, see [Manage access policies for Azure DevOps](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy).
+- You need a [blank canvas app](../create-blank-app.md) to use to connect to Azure DevOps.
+- You need an [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) instance that has an organization, a project, and a shared query that has few sample work items to edit using the app that you'll create in this article.
+- The Azure DevOps instance that must be enabled for **Third-party application access via OAuth**. To configure this setting, see [Manage access policies for Azure DevOps](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy).
 
 ## Step 1 - Add Azure DevOps data source
 
@@ -57,13 +57,13 @@ In this section, we'll use the [ListQueriesInFolder](/connectors/visualstudiotea
 > [!div class="mx-imgBorder"]
 >![List queries in folder using formula added to Items property of the vertical gallery.](./media/azure-devops/list-queries-in-folder.png "List queries in folder using formula added to Items property of the vertical gallery.")
 
-If the example uses the variables "Project", "Organization", and "Folder" and the actual values are in the text boxes below the formula bar (highlighted). You can find your Project and Organization values from the URL used to to connect to Azure Dev Ops.  The Folder will usually be "Shared Queries" or "My Queries".
+If the example uses the variables "Project", "Organization", and "Folder" and the actual values are in the text boxes below the formula bar (highlighted). You can find your Project and Organization values from the URL used to connect to Azure Dev Ops.  The Folder will usually be "Shared Queries" or "My Queries".
 
 > [!div class="mx-imgBorder"]
 >![Locate the project and organization name for your Azure Dev Ops instance.](./media/azure-devops/find-azuredevops-project-name.png "Locate the project and organization name for your Azure Dev Ops instance.")
 
 If you get the following error in the above formula, [enable third-party app access using OAuth](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy) in your Azure DevOps organization, and try again.<br>
-"AzureDevOps.ListQueriesInFolder failed:{"status":401,"message":"TF400813:The user 'GUID' is not authorized to access this resource."}
+"AzureDevOps.ListQueriesInFolder failed:{"status":401,"message":"TF400813:The user 'GUID' isn't authorized to access this resource."}
 
 1. Select the **Layout** for the gallery to **Title and subtitle**.
 
@@ -74,7 +74,7 @@ If you get the following error in the above formula, [enable third-party app acc
 
 ## Step 3 - List work items
 
-Now we'll use [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-results) action for the Azure DevOps connector to list all work items for the selected query.  This will bind the gallery to the data source.
+Now we use [GetQueryResultsV2](/connectors/visualstudioteamservices/#get-query-results) action for the Azure DevOps connector to list all work items for the selected query. This binds the gallery to the data source.
 
 1. Insert another blank vertical gallery, and place it on the right-side of the existing gallery.
 
@@ -105,9 +105,9 @@ However you can access some of the values.  Azure Dev Ops returns a basic set of
 
 ## Step 4 - Display work items
 
-So far, the app shows a list of all queries, and then the list of work items for the selected query. Now we'll add an edit form which we'll use to simply display data.
+The app shows a list of all queries, and the list of work items for the selected query. Now we can add an edit form that we'll use to simply display data.
 
-1. Arrange the two galleries on screen to make room for the edit form that we'll add by moving both galleries to the left of the screen.
+1. Arrange the two galleries on screen to make room for the edit form that we add by moving both galleries to the left of the screen.
 
 1. Add **Edit form** to the screen, and move it to the right side of the galleries.
 
@@ -165,9 +165,9 @@ So far we have been using the Edit form which simplifies the data access story b
   ```
 Note that "WorkItemType" is a text property passed in (e.g., "Feature") that allows you to pivot from items like Features and Work Items. The set of fields for these items vary from each other - which is why the return type from this call is dynamic. 
 
-To access specific values you can still access the common values the same way (e.g.,`Text(ThisItem.Value.'System.Id')` ). However, you may also access them in the more general dynamic response this way: `Text(ThisItem.fields.System_Id)`. These dynamic values names are not generally documented.  The easiest way to see the correct names for these fields - including the non-standard fields is to open the monitor tool and look at the data response. In this case, to the `GetWorkItemDetails` call.  (See image below.)
+To access specific values you can still access the common values the same way (e.g.,`Text(ThisItem.Value.'System.Id')` ). However, you may also access them in the more general dynamic response this way: `Text(ThisItem.fields.System_Id)`. These dynamic values names aren't generally documented.  The easiest way to see the correct names for these fields - including the non-standard fields is to open the monitor tool and look at the data response. In this case, to the `GetWorkItemDetails` call.  (See image below.)
 
-If you are not using an Edit form, but rather simply a container, then you can access these values with a formula like the following: (Which accesses a custom team field.)
+If you aren't using an Edit form, but rather simply a container, then you can access these values with a formula like the following: (Which accesses a custom team field.)
 
 ```powerapps-dot
 Text(AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType').fields.One_custom_CustomField1)
