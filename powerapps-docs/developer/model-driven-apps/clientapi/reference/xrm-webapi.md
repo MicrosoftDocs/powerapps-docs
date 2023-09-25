@@ -15,8 +15,6 @@ contributors:
 ---
 # Xrm.WebApi (Client API reference)
 
-
-
 Provides properties and methods to use Web API to create and manage records and execute Web API actions and functions in model-driven apps. 
 
 ## Properties
@@ -40,9 +38,9 @@ With mobile offline configured, the source for these records will depend on the 
 |[execute](xrm-webapi/online/execute.md)|[!INCLUDE[xrm-webapi/online/includes/execute-description.md](xrm-webapi/online/includes/execute-description.md)]|
 |[executeMultiple](xrm-webapi/online/executeMultiple.md)|[!INCLUDE[xrm-webapi/online/includes/executeMultiple-description.md](xrm-webapi/online/includes/executeMultiple-description.md)]|
 
-### Related topics
+### Related articles
 
-[Use the Microsoft Dataverse Web API](../../../data-platform/webapi/overview.md)<br />
+[Use the Microsoft Dataverse Web API](../../../data-platform/webapi/overview.md)   
 [Client API Xrm object](../clientapi-xrm.md)
 
 

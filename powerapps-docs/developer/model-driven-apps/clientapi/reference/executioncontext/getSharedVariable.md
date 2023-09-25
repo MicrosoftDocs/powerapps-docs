@@ -24,7 +24,7 @@ Retrieves a variable set using the [setSharedVariable](setSharedVariable.md) met
 
 ## Parameters
 
-**key**
+**`key`**
 
    **Type**: String
 
@@ -36,15 +36,9 @@ Retrieves a variable set using the [setSharedVariable](setSharedVariable.md) met
 
 **Description**: The specific type depends on what the value object is.
 
-### Related topics
-[setSharedVariable](setSharedVariable.md)
+### Related articles
 
+[setSharedVariable](setSharedVariable.md)   
 [Execution context](../execution-context.md)
-
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

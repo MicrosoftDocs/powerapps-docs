@@ -27,7 +27,7 @@ Provides methods to encode and decode strings.
 |[xmlAttributeEncode](xrm-encoding/xmlAttributeEncode.md) |[!INCLUDE[xrm-encoding/includes/xmlAttributeEncode-description.md](xrm-encoding/includes/xmlAttributeEncode-description.md)] |
 |[xmlEncode](xrm-encoding/xmlEncode.md) |[!INCLUDE[xrm-encoding/includes/xmlEncode-description.md](xrm-encoding/includes/xmlEncode-description.md)] |
 
-### Related topics
+### Related articles
 
 [Client API Xrm object](../clientapi-xrm.md)
 
