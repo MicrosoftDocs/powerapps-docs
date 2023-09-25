@@ -94,14 +94,14 @@ This formula uses the [GetQueryResultsV2](/connectors/visualstudioteamservices/#
 The returned result of **GetQueryResultsV2** is dynamic. And the values are therefore untyped as well.    
 
 > [!div class="mx-imgBorder"]
->![Show work item fields of title, work item type.](./media/azure-devops/dynamic-return-results-message.png "Get query results from existing gallery based on the query selected.")
+> ![Show work item fields of title, work item type.](./media/azure-devops/dynamic-return-results-message.png "Get query results from existing gallery based on the query selected.")
 
 However you can access some of the values.  Azure Dev Ops returns a basic set of values for all items that are typed.  Select the data card in the gallery and insert two text label.  Set the text property of the labels as follows:
 
-    ```powerapps-dot
+```powerapps-dot
     ThisItem.Value.'System.WorkItemType'
     ThisItem.Value.'System.Title'
-    ```
+```
 
 ## Step 4 - Display work items
 
@@ -111,8 +111,8 @@ So far, the app shows a list of all queries, and then the list of work items for
 
 1. Add **Edit form** to the screen, and move it to the right side of the galleries.
 
-> [!div class="mx-imgBorder"]
->![Add edit form.](./media/azure-devops/add-edit-form.png "Add edit form.")
+  > [!div class="mx-imgBorder"]
+  > ![Add edit form.](./media/azure-devops/add-edit-form.png "Add edit form.")
 
 
 1. Set the **DataSource** property of the edit form to `AzureDevOps.GetQueryResultsV2("Project", Text(Gallery1.Selected.Id),"Organization").value`.  Substitute your Project and Organization names as appropriate.
@@ -144,9 +144,9 @@ So far, the app shows a list of all queries, and then the list of work items for
 5. Set the **Default** property of the text input control to `Text(ThisItem.Value.'System.Title')`. The Text function 'types' the return as Text.  
 
 > [!div class="mx-imgBorder"]
->![Text input control referring to title of the work item.](./media/azure-devops/title-custom-card.png "Text input control referring to title of the work item.")
+> ![This is text input control referring to title of the work item.](./media/azure-devops/title-custom-card.png "Text input control referring to title of the work item.")
 
-    This formula sets the default text inside the text input control to the **Title** field from the selected Azure DevOps work item.
+  This formula sets the default text inside the text input control to the **Title** field from the selected Azure DevOps work item.
 
 > [!TIP]
 > If your Azure DevOps project uses **Description** field with HTML or rich text, you can also use the [Rich text editor](../controls/control-richtexteditor.md) input control instead of the [Text input](../controls/control-text-input.md) or label controls. Using the **Rich text editor** control in this case also helps resolve any issues such as the description being displayed with HTML code instead of plain or rich text.
@@ -160,9 +160,9 @@ So far, the app shows a list of all queries, and then the list of work items for
 ### Adding untyped and dynamic return values to your forms
 So far we have been using the Edit form which simplifies the data access story by providing a common DataSource and Item property which all of the data cards in the form can work with.  If you use the Edit form, to access the untyped values make sure you set **both** the data source and the item properties as follows: (Substituting in your values for Organization and Project.)
 
-    ```powerapps-dot
+ ```powerapps-dot
     AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType')
-    ```
+  ```
 Note that "WorkItemType" is a text property passed in (e.g., "Feature") that allows you to pivot from items like Features and Work Items. The set of fields for these items vary from each other - which is why the return type from this call is dynamic. 
 
 To access specific values you can still access the common values the same way (e.g.,`Text(ThisItem.Value.'System.Id')` ). However, you may also access them in the more general dynamic response this way: `Text(ThisItem.fields.System_Id)`. These dynamic values names are not generally documented.  The easiest way to see the correct names for these fields - including the non-standard fields is to open the monitor tool and look at the data response. In this case, to the `GetWorkItemDetails` call.  (See image below.)
@@ -174,7 +174,7 @@ Text(AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organiza
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Text input control referring to title of the work item.](./media/azure-devops/monitor-workitem-details.png "Text input control referring to title of the work item.")
+> ![Text input control that refers to title of the work item.](./media/azure-devops/monitor-workitem-details.png "Text input control referring to title of the work item.")
 
 
 ## Next steps
