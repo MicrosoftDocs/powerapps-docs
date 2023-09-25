@@ -21,24 +21,24 @@ contributors:
 
 If you created a site (portal) through Power Apps or Power Pages, it's visible when you sign in to [Power Pages](https://make.powerpages.microsoft.com) under **Active sites** on the **Home** page.
 
-To manage a site, select **More Commands** (**…**) for the site (portal) and choose an action from the context menu. 
+To manage a site, select **More Commands** (**…**) for the site and choose an action from the options in the dropdown. 
 
 :::image type="content" source="media/manage-existing-portals/portal-site-options.png" alt-text="A screenshot of the Home page in Power Pages design studio with the user's active sites displayed and menu options for managing a site emphasized.":::
 
 ## Edit
 
-You can select **Edit** to open the Site (portal) in Opens the Power Pages Studio, however, you can also select **Edit in Power Apps portals**, if your Site (portal) is created with Power Apps Portals, to edit the content and components of the Site (portal).  
+Select **Edit** to open the site in Power Pages design studio. If your site was created with Power Apps portals (and you prefer), you can also select **Edit in Power Apps portals** to edit the content and components of the site.  
 
 :::image type="content" source="media/manage-existing-portals/edit-in-power-apps.png" alt-text="A screenshot of the Home page in Power Pages design studio with the user's active sites displayed and menu option Edit in Power Apps studio emphasized.":::
 
-Portals Studio requires a contact record with the email address `portaluser@powerappsportals.com` for some of its functionality to work. This contact record is automatically created when you edit the portal for the first time.
+Power Apps portals Studio requires a contact record with the email address `portaluser@powerappsportals.com` for some of its functionality to work. This contact record is automatically created when you edit the portal for the first time.
 
-If you have one or more fields for the Contact table set as required, or any business logic such as synchronous plug-ins or workflows to restrict contact creation, this contact record creation may fail with the following error message:
+If you have one or more fields for the Contact table set as required, or any business logic (such as synchronous plug-ins or workflows to restrict contact creation), this contact record creation may fail with the following error message:
 
 `Contact creation failed` <br/>
 `A contact with an email address portaluser@powerappsportals.com must be created before you can edit your portal. Please create this contact manually.`
 
-When you see this error message, create a contact record manually with the email address `portaluser@powerappsportals.com`.
+When you see this error message, create a contact record manually with the email address `portaluser@powerappsportals.com` to resolve the error.
 
 ## Preview
 
@@ -61,30 +61,30 @@ To share the portal with internal users, you must first create a security role, 
 
 #### Step 1: Create a security role
 
-1.  In the **Share this portal** pane, under **Create a security role**, select **Security Roles**. A list of all the configured security roles is displayed.
+1. In the **Share this portal** pane, under **Create a security role**, select **Security Roles**. A list of all the configured security roles is displayed.
 
-2.  On the Actions toolbar, select **New**.
+1. On the Actions toolbar, select **New**.
 
-3.  In the **New Security Role** window, enter the role name.
+1. In the **New Security Role** window, enter the role name.
 
-4.  Set the privileges for all the tables used in your portal.
+1. Set the privileges for all the tables used in your portal.
 
-5.  When you have finished configuring the security role, on the toolbar, select **Save and Close**.
+1. When you have finished configuring the security role, on the toolbar, select **Save and Close**.
 
 For information on security roles and privileges, see [Security roles and privileges](/power-platform/admin/security-roles-privileges).
 
 #### Step 2: Assign users to the security role
 
-1.  In the **Share this portal** pane, under **Assign users to the security role**, select **Users**. A list of all users is displayed.
+1. In the **Share this portal** pane, under **Assign users to the security role**, select **Users**. A list of all users is displayed.
 
-2.  Select the user that you want to assign a security role to.
+1. Select the user that you want to assign a security role to.
 
-3.  Select **Manage Roles**.
+1. Select **Manage Roles**.
 
     > [!NOTE]
     > If you are unable to see the **Manage Roles** button on the command bar, you must change the client by setting forceUCI to 0 in the URL. For example, https://&lt;org\_url&gt;/main.aspx?pagetype=entitylist&etn=systemuser&forceUCI=0
 
-4.  In the **Manage User Roles** dialog box, select the security role that you created earlier, and then select **OK**.
+1. In the **Manage User Roles** dialog box, select the security role that you created earlier, and then select **OK**.
 
 ### Share with external users
 
@@ -107,8 +107,8 @@ Deletes the portal and hosted resources. When you delete a portal, its URL becom
 If you want to remove the portal configurations from your environment completely, delete the portal configurations manually. To delete, use the Portal Management app, and delete the corresponding website record for the portal.
 
 > [!NOTE]
-> - If you don't have sufficient privileges to delete a portal, following error is displayed. <br> `Permission denied` <br>
-`You do not have sufficient privileges to delete the portal [Name] portal.` <br> You must have the System Administrator role to delete a portal. Also, you must be the owner of the portal application in Azure Active Directory. The user who creates the portal is by default the owner and can delete a portal. For information on adding yourself as an owner, see [Add yourself as an owner of the Azure AD application](admin/admin-overview.md#add-yourself-as-an-owner-of-the-azure-ad-application).
+> - If you don't have sufficient privileges to delete a portal, following error is displayed. <br /> `Permission denied` <br />
+`You do not have sufficient privileges to delete the portal [Name] portal.` <br/> You must have the System Administrator role to delete a portal. Also, you must be the owner of the portal application in Azure Active Directory. The user who creates the portal is by default the owner and can delete a portal. For information on adding yourself as an owner, see [Add yourself as an owner of the Azure AD application](admin/admin-overview.md#add-yourself-as-an-owner-of-the-azure-ad-application).
 > - When you delete a portal, and create a new portal with a different URL, the authentication provider configuration must be configured for the new portal to work correctly. To configure the authentication provider, go to [Get started with authentication configuration](configure/use-simplified-authentication-configuration.md).
 
 ### Completely delete a portal
@@ -125,7 +125,7 @@ Displays details such as owner of the portal, date, and time when it was created
 
 ## See also
 
-[Understand how portals connects to Microsoft Dataverse environment](admin/connectivity.md) <br>
+[Understand how portals connects to Microsoft Dataverse environment](admin/connectivity.md) <br />
 [Understand and clear server-side cache in portals](admin/clear-server-side-cache.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
