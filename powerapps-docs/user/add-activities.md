@@ -484,6 +484,47 @@ Pin a record by selecting the pin icon next to it. This moves it to the top of t
 
 To unpin a record, select the pin icon next to it. Unpinning it moves it out of the **Pinned** section and back to where it orginally appeared in the list of records in the timeline.
 
+## Bookmarks
+
+Bookmarks are a quick way for the user to set, and switch between, different sets of filters. It is **enabled by default in the October 2023 wave**, but can be disabled under the "advanced" section of timeline's maker settings. See https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/set-up-timeline-control
+
+>This feature replaces, and deprecates, the "remember my filters" button. Follow the steps below to set up your user filters.
+### Create a bookmark
+1. Open the filter pane, and select the filters that will be associated with the new bookmark. You may have no filters selected
+2. Click the bookmark icon ![bookmark_icon_empty](https://github.com/MicrosoftDocs/powerapps-docs/assets/35553346/e14bfc62-f517-4797-a21a-5202418b0353) in timeline's action bar
+3. Click "Add bookmark"
+4. Give the bookmark a name, and optionally set it as a [default bookmark](#set-a-default-bookmark)
+5. Hit save
+
+Clicking the bookmark icon again will now display a flyout of your created bookmarks. You can apply a bookmark by selecting it from this list, or edit it using the "more options" button on the right side of the bookmark. 
+
+If a bookmark is selected, its filters will be applied to timeline. This is indicated by a filled bookmark icon ![bookmark_icon_filled](https://github.com/MicrosoftDocs/powerapps-docs/assets/35553346/29410bc2-a284-4cbc-8e19-7c9ac6284a3a)
+  in the action bar. Hover over the icon to see the name of the bookmark, or click on the icon. The selected bookmark will have a grey background color.
+
+> [!NOTE]
+> You can have a maximum of 15 bookmarks
+
+### Edit a bookmark
+![edit_bookmark](https://github.com/MicrosoftDocs/powerapps-docs/assets/35553346/8ce11bf2-a9ac-4981-acc6-1b4300c0b04f)
+
+Any bookmark can be renamed, updated, or deleted from the "more options" menu. **Clicking delete will not prompt a confirmation dialog** <br>
+
+Updating a bookmark will change its filters to the filters you **currently have selected**. You may also set this bookmark as a default for the current form or all forms.
+
+### Set a default bookmark
+When creating or updating a bookmark, you may select the "Set as default bookmark" checkbox, with the option to apply this change for the current form or globally.
+
+A default bookmark will have a star icon ![star_icon](https://github.com/MicrosoftDocs/powerapps-docs/assets/35553346/37812864-682f-439b-beaf-a28ad15b4a8b) next to its name, and will be **selected automatically** when Timeline loads. This will **override any admin filters** set for timeline.
+
+> [!NOTE]
+> You may set a bookmark as a form default for multiple forms; however, it cannot be a form default **and** a global default. A form-default bookmark will override a global one.
+### Reset to the default view
+![reset_to_default](https://github.com/MicrosoftDocs/powerapps-docs/assets/35553346/7c7d8e85-ce3b-4202-9ae2-96a353071615)
+
+If a non-default bookmark is selected, or if other filters are applied, a reset to default button will appear in the bookmark flyout. This will apply the **default bookmark** to timeline, if one exists, otherwise **clearing all filters**.
+
+### Bookmark filters cannot be applied
+If a bookmark's filters cannot be applied (e.g. a bookmark that filters for notes while timeline has notes disabled), then an exclamation icon ![EXCLAMATION](https://github.com/MicrosoftDocs/powerapps-docs/assets/35553346/8d3bb690-a883-4d60-ac5c-289d22aef274) will be displayed next to its name.
 
 ## See also
 
