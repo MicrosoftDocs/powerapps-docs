@@ -96,6 +96,30 @@ This query returns data from the [SystemUser](../../reference/entities/systemuse
 |`enableprefiltering`|No|[!INCLUDE [link-entity-name-enableprefiltering-description](includes/link-entity-enableprefiltering-description.md)]|
 |`prefilterparametername`|No|[!INCLUDE [link-entity-name-prefilterparametername-description](includes/link-entity-prefilterparametername-description.md)]|
 
+### link-type options
+
+Use `link-type` to apply filters on the records returned. The following table describes the valid `link-type` values
+
+|Name|Description|
+|---------|---------|
+|`inner`|Default. Restricts results to rows with matching values in both tables.|
+|`outer`|Includes results from the parent element that don't have a matching value.|
+|`Any`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
+|`NotAny`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
+|`All`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
+|`NotAll`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
+|`Exists`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
+|`In`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
+|`MatchFirstRowUsingCrossApply`|An [Extended Join Operator](#extended-join-operators) TODO Add description|
+
+#### Extended Join Operators
+
+Use extended join operators to include a filter within the join definition.
+
+TODO: Add concepts required for using extended Join operators.
+
+
+
 ## Parent elements
 
 |Name|Description|

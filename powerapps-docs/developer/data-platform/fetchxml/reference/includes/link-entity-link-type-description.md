@@ -1,1 +1,1 @@
-Whether to use an *inner* or *outer* join. Default behavior is *inner*.<br />- An `inner` join restricts results to rows with matching values in both tables.<br />- An `outer` join includes results from the parent element that don't have a matching value.
+The type of link use. Default behavior is *inner*. [Learn about link-type options](../link-entity.md#link-type-options)

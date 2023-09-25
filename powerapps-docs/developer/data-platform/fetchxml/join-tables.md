@@ -53,7 +53,6 @@ The results look like this:
 
 When you add the `link-entity` element, you must set these attribute values:
 
-
 |Attribute|Description|
 |---------|---------|
 |`name`|[!INCLUDE [link-entity-name-description](reference/includes/link-entity-name-description.md)]<br />In this case, `contact`.|
