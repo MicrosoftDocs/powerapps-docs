@@ -24,16 +24,12 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|updateUI|Boolean|No|Specify **true** to update the UI of the process control; **false** otherwise.|
-|parentStage|String|No|Specify the ID of the parent stage in the GUID format.|
-|nextStage|String|No|Specify the ID of the next stage in the GUID format.|
+|`updateUI`|Boolean|No|Specify **true** to update the UI of the process control; **false** otherwise.|
+|`parentStage`|String|No|Specify the ID of the parent stage in the GUID format.|
+|`nextStage`|String|No|Specify the ID of the next stage in the GUID format.|
 
-### Related topics
+### Related articles
 
 [formContext.ui.process](../formContext-ui-process.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

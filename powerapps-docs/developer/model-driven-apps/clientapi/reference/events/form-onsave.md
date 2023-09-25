@@ -68,13 +68,13 @@ For example:
 To use async onSave handlers, you need to enable it through an app setting:
 
 1. Go to https://make.powerapps.com.
-2. Make sure select the correct environment.
-3. Select **Apps** from the left navigation pane.
-4. Select the app and then select **...** (ellipses). Select **Edit**.
-5. Select **Settings** from the command bar.
-6. When the dialog opens, select **Features**.
-7. Turn on **Async onSave handler**.
-8. Select **Save**.
+1. Make sure select the correct environment.
+1. Select **Apps** from the left navigation pane.
+1. Select the app and then select **...** (ellipses). Select **Edit**.
+1. Select **Settings** from the command bar.
+1. When the dialog opens, select **Features**.
+1. Turn on **Async onSave handler**.
+1. Select **Save**.
 
     ![Async OnSave app setting](../../../media/async_onSave_app_settings.png "Async OnSave app setting")
 

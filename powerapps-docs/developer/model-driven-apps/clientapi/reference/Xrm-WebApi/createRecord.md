@@ -22,51 +22,23 @@ contributors:
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>entityLogicalName</td>
-<td>String</td>
-<td>Yes</td>
-<td>Logical name of the table you want to create. For example: "account".</td>
-</tr>
-<tr>
-<td>data</td>
-<td>Object</td>
-<td>Yes</td>
-<td><p>A JSON object defining the columns and values for the new table record.</p>
-<p>See examples later in this topic to see how you can define the <code>data</code> object for various create scenarios.</td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when a record is created. An object with the following properties will be passed to identify the new record:</p>
-<ul>
-<li><b>entityType</b>: String. The table logical name of the new record.</li>
-<li><b>id</b>: String. GUID of the new record.</li>
-</ul></td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails. An object with the following properties will be passed:
-<ul>
-<li><b>errorCode</b>: Number. The error code.</li>
-<li><b>message</b>: String. An error message describing the issue.</li>
-</ul></td>
-</tr>
-</table>
+
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`entityLogicalName`|String|Yes|Logical name of the table you want to create. For example: `account`.|
+|`data`|Object|Yes|A JSON object defining the columns and values for the new table record. See [Examples](#examples)|
+|`successCallback`|Function|No|A function to call when a record is created. See [Return Value](#return-value)|
+|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties will be passed:<br /> - `errorCode`: Number. The error code.<br /> - `message`: String. An error message describing the issue.|
+
 
 ## Return Value
 
-On success, returns a promise object containing the values specified earlier in the description of the **successCallback** parameter.
+On success, returns a promise object to the `successCallback` with the following properties:
+
+|Name|Type|Description|
+|---|---|---|
+|`entityType`|String|The table logical name of the new record.|
+|`id`|String|GUID of the new record.|
 
 ## Examples
 
@@ -205,7 +177,7 @@ Xrm.WebApi.offline.createRecord("account", data).then(
 );
 ```
  
-### Related topics
+### Related articles
 
 [Create a table row using the Web API](../../../../data-platform/webapi/create-entity-web-api.md)<br />
 [Xrm.WebApi](../xrm-webapi.md)

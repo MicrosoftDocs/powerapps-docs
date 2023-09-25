@@ -30,8 +30,8 @@ All
 
 |Name|Type|Required|Description|
 |----|----|------|------------|
-|bool|Boolean|Yes|Specify false to set the column value to invalid and true to set the value to valid.|
-|message|String|No|The message to display.| 
+|`bool`|Boolean|Yes|Specify false to set the column value to invalid and true to set the value to valid.|
+|`message`|String|No|The message to display.| 
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
