@@ -486,7 +486,7 @@ To unpin a record, select the pin icon next to it. Unpinning it moves it out of 
 
 ## Bookmarks
 
-Bookmarks are a quick way for the user to set, and switch between, different sets of filters. It is **enabled by default in the October 2023 wave**, but can be disabled under the "advanced" section of timeline's maker settings. See https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/set-up-timeline-control
+Bookmarks are a quick way for the user to set, and switch between, different sets of filters. It is **enabled by default in the October 2023 wave**, but can be disabled under the "advanced" section of timeline's maker settings. See [set up timeline control](../maker/model-driven-apps/set-up-timeline-control.md)
 
 >This feature replaces, and deprecates, the "remember my filters" button. Follow the steps below to set up your user filters.
 ### Create a bookmark
