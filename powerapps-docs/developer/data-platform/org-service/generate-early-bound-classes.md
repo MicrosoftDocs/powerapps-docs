@@ -88,6 +88,9 @@ Use the following steps to get started:
    }
    ```
 
+   > [!NOTE]
+   > This file is a modified version of the file you can generate using `pac modelbuilder build`` with the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf). Learn how to generate the file without comments in [Using parameters](#using-parameters).
+
 1. If you haven't already, [install Power Platform CLI](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli).
 1. If you haven't already, connect to your organization using [Power Platform CLI pac auth commands](/power-platform/developer/cli/reference/auth).
 1. Use the following command to generate early bound classes for the connected environment using the settings defined in `builderSettings.json` where `C:\projects\exampleproject\` represents the path to your project and `model` is the folder you created..
@@ -160,7 +163,7 @@ If you want to change them, delete the files in the `model` folder other than `b
 
 It isn't required to use the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter with `pac modelbuilder build`. You can invoke the command using parameters directly. You can find reference documentation and examples in the [pac modelbuilder build reference documentation](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build).
 
-If you're using the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter, you can still use the parameters in the command line to override the settings.
+If you're using the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter, you can use the parameters in the command line to override the settings.
 
 Here's an example showing how to generate files with the same settings as the example in the [Get started section](#get-started) using parameters:
 
@@ -177,7 +180,7 @@ PS C:\>pac modelbuilder build `
    --writesettingsTemplateFile
 ```
 
-If you use the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf) to generate a `builderSettings.json` file, it doesn't include the comments in the example in the [Get started section](#get-started) of this article. The example using parameters writes the following `builderSettings.json` file in the `model` folder:
+This doesn't include all the settings because it uses the default options. If you use the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf) to generate a `builderSettings.json` file, it doesn't include the comments in the example in the [Get started section](#get-started) of this article. The example using parameters writes the following `builderSettings.json` file in the `model` folder:
 
 ```json
 {
@@ -215,14 +218,14 @@ The [Early Bound Generator V2](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.Early
 
 ## For Dynamics 365 Customer Engagement on-premises
 
-The Power Platform CLI isn't available for Dynamics 365 Customer Engagement on-premises. You need to use the CrmSvcUtil.exe to generate early bound classes. [Use CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
+The Power Platform CLI isn't available for Dynamics 365 Customer Engagement on-premises. You need to use the `CrmSvcUtil.exe` code generation tool to generate early bound classes. [Learn how to use the CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
 
 
 ### Related articles
 
-[Late-bound and early-bound programming](early-bound-programming.md)  
-[Sample: Early-bound table operations](samples/early-bound-entity-operations.md)
-[Developer tools and resources](../developer-tools.md)  
+[Late-bound and early-bound programming](early-bound-programming.md)   
+[Sample: Early-bound table operations](samples/early-bound-entity-operations.md)   
+[Developer tools and resources](../developer-tools.md)   
 [Dataverse development tools](../download-tools-NuGet.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
