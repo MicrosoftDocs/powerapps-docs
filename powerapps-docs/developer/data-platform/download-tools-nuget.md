@@ -1,7 +1,7 @@
 ---
 title: "Dataverse development tools (Microsoft Dataverse) | Microsoft Docs"
 description: "Download and launch the Plug-in Registration, Package Deployment, and other Dataverse development tools."
-ms.date: 03/24/2023
+ms.date: 09/25/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: davidjenni # GitHub ID
@@ -19,7 +19,7 @@ There are a number of developer tools that are needed for different aspects of M
 |Package Deployer (PD)|Deploy packages to Dataverse environments where the packages contain solutions, custom code, HTML files, and more|[Deploy a package](/power-platform/alm/package-deployer-tool#deploy-a-package)|
 |Plug-in Registration tool (PRT)|Registers custom code (plug-ins, custom workflow activities), service endpoints, and more|[Register a plug-in](register-plug-in.md)<br/>[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)|
 |SolutionPackager tool (SP)|A tool that can reversibly decompose a Dataverse compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system|[SolutionPackager tool](/power-platform/alm/solution-packager-tool)|
-|Code Generation tool (CG)|A command-line code generation tool that generates early-bound (strong-typed) .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse.<br/><br/>The Code Generation tool functionality is integrated into Power Platform CLI. The output of the CLI [modelbuilder](/power-platform/developer/cli/reference/modelbuilder) subcommand supports cross-platform .NET (Core) compilation.|[Generate early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md)|
+|Code Generation tool (CG)|`CrmSvcUtil.exe` is a command-line code generation tool for use with Dynamics 365 for Customer Engagement (on-premises). You can use it to generate early-bound (strong-typed) .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse, but we recommend you use the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) instead. `pac modelbuilder build` is capable of generating classes that support .NET Framework and cross-platform .NET (Core) compilation. [Learn more about using pac modelbuilder build to create early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md)|[Use CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)|
 
 > [!NOTE]
 > The CMT, PD, and PRT tools provide a Windows (WPF) user interface and only run on a Microsoft Windows operating system. Also, the `pac tool` command only is available on a Windows install of the CLI.

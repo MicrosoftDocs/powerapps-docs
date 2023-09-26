@@ -182,7 +182,7 @@ var entityId = retrieveEntityResponse.EntityMetadata.MetadataId;
 
 **Using early-bound types**
 
-With early-bound types you can use the `VirtualEntityMetadata` class generated using CrmSvcUtil.exe. More information: [Late-bound and Early-bound programming using the SDK for .NET](../org-service/early-bound-programming.md)
+With early-bound types you can use the `VirtualEntityMetadata` class generated using [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build). More information: [Late-bound and Early-bound programming using the SDK for .NET](../org-service/early-bound-programming.md)
 
 ```csharp
 var virtualEntityMetadata = new VirtualEntityMetadata
