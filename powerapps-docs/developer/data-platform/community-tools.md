@@ -30,7 +30,7 @@ The following is a selected list of community tools distributed via the XrmToolB
 |Tool  |Description  |
 |---------|---------|
 |[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)|Used to rename/delete/or change the type of the column.|
-|[Early Bound Generator V1](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGeneratorV2/)|Generates Early Bound Tables/Choices/Actions. Uses the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build), and shows command line used to create the classes.|
+|[Early Bound Generator V2](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGeneratorV2/)|Generates Early Bound Tables/Choices/Actions. Uses the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build), and shows command line used to create the classes.|
 |[Export to Excel](https://www.xrmtoolbox.com/plugins/Ryr.XrmToolBox.ExportToExcel/)|Easily export records from the selected view/fetchxml to Excel.|
 |[FetchXML Builder](https://fetchxmlbuilder.com/)|Create and test FetchXml Queries|
 |[Metadata Browser](https://www.xrmtoolbox.com/plugins/MsCrmTools.MetadataBrowser/)|Browse metadata from your Dataverse environment|

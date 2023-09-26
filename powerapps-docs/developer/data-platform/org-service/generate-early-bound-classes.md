@@ -42,8 +42,8 @@ Use the following steps to get started:
    - For a client application: [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client)
    - For a Dataverse plug-in project:  [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies)
 
-1. Create a folder called 'model'.
-1. In the 'model' folder, add a `builderSettings.json` file with the following:
+1. Create a folder called `model`.
+1. In the `model` folder, add a `builderSettings.json` file with the following settings:
 
    ```json
    {
@@ -88,7 +88,7 @@ Use the following steps to get started:
    }
    ```
 
-1. If you haven't already, [install Power Platform CLI](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli)
+1. If you haven't already, [install Power Platform CLI](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli).
 1. If you haven't already, connect to your organization using [Power Platform CLI pac auth commands](/power-platform/developer/cli/reference/auth).
 1. Use the following command to generate early bound classes using the settings defined in `builderSettings.json` where `C:\projects\exampleproject\` represents the path to your project.
 
@@ -148,11 +148,13 @@ When you inspect this output, notice that it only generates classes for the tabl
 - The [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class is written to a file with the name specified by the `serviceContextName` setting.
 - All the classes are part of the namespace you set in the `namespace` setting.
 
+This is how the files and folders appear in Visual Studio:
+
 :::image type="content" source="../media/pac-modelbuilder-build-output-example-visual-studio.png" alt-text="Example output from pac modelbuilder build command in Visual Studio Explorer":::
 
 With these files written to your project, you are now ready to use early-bound classes.
 
-If you want to change them, delete the files other than `builderSettings.json`, change the settings, and generate them again.
+If you want to change them, delete the files in the `model` folder other than `builderSettings.json`, change the settings in `builderSettings.json`, and generate them again.
 
 ## Using parameters
 
@@ -161,7 +163,7 @@ It isn't required to use the `builderSettings.json` settings file and the `--set
 If you are using the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter, you can still use the parameters in the command line to override the settings.
 
 > [!NOTE]
-> If you use the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf) to generate a builderSettings.json file, it will not include the comments in the example above.
+> If you use the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf) to generate a `builderSettings.json`` file, it will not include the comments in the example in the [Get started section](#get-started) of this article.
 
 ## Community tools
 
