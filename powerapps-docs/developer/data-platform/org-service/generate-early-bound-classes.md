@@ -21,7 +21,7 @@ Creating early-bound classes for your .NET projects:
 
 - Improves code readability and maintainability.
 - Decreases the risk of errors because they provide compile time type checking.
-- Improves developer productivity because developers can discover tables, columns, and Choice options using IntelliSense.
+- Improves developer productivity because developers can discover tables, columns, and choice options using IntelliSense.
 - Provides the [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class so you can write Dataverse queries using LINQ and other capabilities work with data.
 
 Learn more:
@@ -29,9 +29,9 @@ Learn more:
 - [Late and early-bound programming](early-bound-programming.md)
 - [Use OrganizationServiceContext](organizationservicecontext.md)
 
-Use the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate early-bound code classes. Like every Power Platform CLI command, it has a number of parameters you can use to control the outcome. In this article, we will recommend that you start by using the  `--settingsTemplateFile` parameter for most use cases. Use this parameter to refer to a JSON file where all the other available settings can be controlled. This way, you don't need to compose a long list of parameters, and the configuration appropriate for your project can be updated to allow regeneration of the classes when you need them.
+Use the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate early-bound code classes. Like every Power Platform CLI command, it has many parameters you can use to control the outcome. In this article, we recommend that you start by using the  `--settingsTemplateFile` parameter for most use cases. Use this parameter to refer to a JSON file where all the other available settings can be controlled. This way, you don't need to compose a long list of parameters, and the configuration appropriate for your project can be updated to allow regeneration of the classes when you need them.
 
-You can still use the build command with parameters if you want. See [Using parameters](#using-parameters)
+You can still use the build command with parameters if you want. See [Using parameters](#using-parameters).
 
 ## Get started
 
@@ -90,7 +90,7 @@ Use the following steps to get started:
 
 1. If you haven't already, [install Power Platform CLI](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli).
 1. If you haven't already, connect to your organization using [Power Platform CLI pac auth commands](/power-platform/developer/cli/reference/auth).
-1. Use the following command to generate early bound classes using the settings defined in `builderSettings.json` where `C:\projects\exampleproject\` represents the path to your project.
+1. Use the following command to generate early bound classes for the connected environment using the settings defined in `builderSettings.json` where `C:\projects\exampleproject\` represents the path to your project and `model` is the folder you created..
 
    ```powershell
    PS C:\projects\exampleproject\model> pac modelbuilder build -o . -stf .\builderSettings.json
@@ -109,7 +109,7 @@ Use the following steps to get started:
 
 ### Understand what files are written
 
-With either command, this is the output you should expect:
+With either command, the following is the output you should expect:
 
 ```powershell
 Connected to... Your Organization
@@ -139,7 +139,7 @@ Generation Complete - 00:00:01.815
 PS C:\projects\exampleproject\model>
 ```
 
-When you inspect this output, notice that it only generates classes for the tables specified by `entityNamesFilter` and only the messages specified in the `messageNamesFilter`. You should specify which tables (entities) and messages you will use in your project. Otherwise, classes for all tables and messages will be generated.
+When you inspect the output, notice that it only generates classes for the tables specified by `entityNamesFilter` and only the messages specified in the `messageNamesFilter`. You should specify which tables (entities) and messages you use in your project. Otherwise, classes for all tables and messages are generated.
 
 `pac modelbuilder build` writes the files into folders with names you can control in the settings file:
 
@@ -152,7 +152,7 @@ This is how the files and folders appear in Visual Studio:
 
 :::image type="content" source="../media/pac-modelbuilder-build-output-example-visual-studio.png" alt-text="Example output from pac modelbuilder build command in Visual Studio Explorer":::
 
-With these files written to your project, you are now ready to use early-bound classes.
+With these files written to your project, you're now ready to use early-bound classes.
 
 If you want to change them, delete the files in the `model` folder other than `builderSettings.json`, change the settings in `builderSettings.json`, and generate them again.
 
@@ -160,10 +160,50 @@ If you want to change them, delete the files in the `model` folder other than `b
 
 It isn't required to use the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter with `pac modelbuilder build`. You can invoke the command using parameters directly. You can find reference documentation and examples in the [pac modelbuilder build reference documentation](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build).
 
-If you are using the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter, you can still use the parameters in the command line to override the settings.
+If you're using the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter, you can still use the parameters in the command line to override the settings.
 
-> [!NOTE]
-> If you use the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf) to generate a `builderSettings.json`` file, it will not include the comments in the example in the [Get started section](#get-started) of this article.
+Here's an example showing how to generate files with the same settings as the example in the [Get started section](#get-started) using parameters:
+
+```powershell
+PS C:\>pac modelbuilder build `
+   --outdirectory C:\projects\exampleproject\model `
+   --entitynamesfilter 'account;contact' `
+   --generatesdkmessages `
+   --messagenamesfilter 'searchautocomplete;searchquery' `
+   --namespace ExampleProject `
+   --serviceContextName OrgContext `
+   --suppressGeneratedCodeAttribute `
+   --suppressINotifyPattern `
+   --writesettingsTemplateFile
+```
+
+If you use the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf) to generate a `builderSettings.json` file, it doesn't include the comments in the example in the [Get started section](#get-started) of this article. The example using parameters writes the following `builderSettings.json` file in the `model` folder:
+
+```json
+{
+  "suppressINotifyPattern": true,
+  "suppressGeneratedCodeAttribute": true,
+  "language": "CS",
+  "namespace": "ExampleProject",
+  "serviceContextName": "OrgContext",
+  "generateSdkMessages": true,
+  "generateGlobalOptionSets": false,
+  "emitFieldsClasses": false,
+  "entityTypesFolder": "Entities",
+  "messagesTypesFolder": "Messages",
+  "optionSetsTypesFolder": "OptionSets",
+  "entityNamesFilter": [
+    "account",
+    "contact"
+  ],
+  "messageNamesFilter": [
+    "searchautocomplete",
+    "searchquery"
+  ],
+  "emitEntityETC": false,
+  "emitVirtualAttributes": false
+}
+```
 
 ## Community tools
 
