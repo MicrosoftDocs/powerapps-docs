@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose finance and operations data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 07/18/2023
+ms.date: 09/26/2023
 ms.reviewer: johnmichalak
 ms.topic: "how-to"
 applies_to: 
@@ -31,20 +31,17 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 > [!NOTE]
 > 
-> This feature is generally availabe with Finance and Operations application versions shown below or later. If you have not yet applied these application versions, take the latest cumulative update to use this feature
+> This feature is generally available with finance and operations application versions shown in the following list. If you have not yet applied these application versions, install the latest cumulative update to use this feature.
 > 
->>   10.0.34 (PU58) cumulative update 7.0.6931.171 or later
->>
->>   10.0.35 (PU59) cumulative update 7.0.6972.149 or later
->> 
->>   10.0.36 (PU60) cumulative update 7.0.7036.78 or later
->> 
->>   10.0.37 (PU61) cumulative update 7.0.7068.39 or later 
+> - 10.0.34 (PU58) cumulative update 7.0.6931.171 or later.
+> - 10.0.35 (PU59) cumulative update 7.0.6972.149 or later.
+> - 10.0.36 (PU60) cumulative update 7.0.7036.78 or later.
+> - 10.0.37 (PU61) cumulative update 7.0.7068.39 or later. 
 >
-> The [Export to Data Lake feature](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) in finance and operations is being combined with Azure Synapse Link for Dataverse. We will announce deprecation of Export to Data Lake service and transition existing customers to Azure Synapse Link for Dataverse. 
+> The [Export to Data Lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) in finance and operations apps is being combined with Azure Synapse Link for Dataverse. We will announce deprecation of Export to Data Lake service and transition existing customers to Azure Synapse Link for Dataverse. 
 >
 > If you're planning to adopt the Export to Data Lake feature in finance and operations apps, you should consider adopting Azure Synapse Link with finance and operations data support instead.
-> We will provide guidance and tools for existing customers to transition to Azure Synapse Link for Dataverse. If you're currently using the Export to Data Lake feature in finance and operations apps, you can continue to use both services in parallel until the transition. To stay in touch with the product team and community, you can join the [Preview Viva engage group](https::/aka.ms/SynapseLinkforDynamics) 
+> We will provide guidance and tools for existing customers to transition to Azure Synapse Link for Dataverse. If you're currently using the Export to Data Lake feature in finance and operations apps, you can continue to use both services in parallel until the transition. To stay in touch with the product team and community, you can join the [Preview Viva engage group](https://www.yammer.com/dynamicsaxfeedbackprograms/). 
 
 ## Prerequisites
 
@@ -93,14 +90,14 @@ To enable this feature during the preview, you must use the following URL to ope
 
 ### Known limitations
 
-The preview has several limitations that will be addressed in future releases. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group](https://aka.ms/SynapseLinkforDynamics).
+The preview has several limitations that will be addressed in future releases. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group](https://www.yammer.com/dynamicsaxfeedbackprograms/).
 
 - You must create a new Azure Synapse Link profile. You can't add finance and operations apps tables to existing Azure Synapse Link profiles.
-- Upto 4250 Microsoft-provided finance and operations apps tables are already enabled in Azure Synapse Link with application version 10.0.38. If you have a previous version of Finance and Operations Apps, not all required tables may be enabled by default. You can enable additional tables yourself by extending table properties and enabling change tracking feature. See [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).  
+- Up to 4,250 Microsoftprovided finance and operations apps tables are already enabled in Azure Synapse Link with application version 10.0.38. If you have a previous version of finance and operations apps, not all required tables may be enabled by default. You can enable additional tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).  
 - To enable custom tables, you must enable change tracking in them. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
 - When you work with finance and operations data, you must select Delta Lake format as the default format. To enable Delta Lake format, follow the steps in [Export Microsoft Dataverse data in Delta Lake format](azure-synapse-link-delta-lake.md).
 - The initial data export of finance and operations apps tables in Delta Lake format might take up to an hour. However, performance of the initial export will be improved in future updates.
-- You can choose a maximum of 1,000 tables in a single Azure Synapse Link profile. You can enable more tables by creating another Synapse Link profile.
+- You can choose a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Synapse Link profile.
 
 ## Enable finance and operations data entities in Azure Synapse Link
 
