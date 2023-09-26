@@ -47,6 +47,7 @@ The URL you use is made up of these parts:
 
 Protocol + Environment Name + Region + Base URL + Web API path + Version + Resource.
 
+The maximum length of URI is 32 KB (32768 characters).
 
 <a name="version_compatiblity"></a>
 
