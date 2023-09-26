@@ -86,8 +86,6 @@ Simply instantiate the class and let Visual Studio IntelliSense provide the name
 
 The classes generated for early-bound programming can also include definitions for any custom actions that are defined for the environment. This will provide you with a pair of request and response classes to use with these custom actions. More information: [Custom Actions](../custom-actions.md)
 
-There is also an option to extend the code generation tool to change the output. One extension creates enumerations for each optionset (choices) option value. This provides a better experience because you don't have to look up the integer value for each choice. More information: [Create extensions for the code generation tool](extend-code-generation-tool.md)
-
 Classes are generated using table definitions from a specific environment instance and each instance may have different tables and columns where these can change over time. You may need to write code to work for tables that are not present when you generate the strongly typed classes.
 
 > [!IMPORTANT]
