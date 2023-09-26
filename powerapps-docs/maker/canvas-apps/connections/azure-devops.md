@@ -22,15 +22,17 @@ Power Apps connector for [Azure DevOps](/connectors/visualstudioteamservices/) a
 > [!TIP]
 > For a complete list of all actions, see [Azure DevOps connector actions](/connectors/visualstudioteamservices/#actions).
 
-In this article, you'll create a canvas app that connects to Azure DevOps to retrieve the list of queries, and work with work items within the project.
+The objective of this article is to guide you in building a canvas app that can connect with Azure DevOps to gather a list of queries and interact with the work items in the project.
 
 ## Prerequisites
 
-- You need a Power Apps license. If you don't have a license, use a [30-day trial](../../signup-for-powerapps.md), or sign up for a [developer plan](../../developer-plan.md) for non-production use.
+The following requirements are necessary:
+
+- A Power Apps license. If you don't have a license, use a [30-day trial](../../signup-for-powerapps.md), or sign up for a [developer plan](../../developer-plan.md) for non-production use.
 - If you're new to Power Apps, familiarize yourself with Power Apps basics by [generating an app](../get-started-test-drive.md) and then customizing that app's [controls](../add-configure-controls.md), [gallery](../add-gallery.md), [forms](../working-with-forms.md), and [cards](../working-with-cards.md).
-- You need a [blank canvas app](../create-blank-app.md) to use to connect to Azure DevOps.
-- You need an [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) instance that has an organization, a project, and a shared query that has few sample work items to edit using the app that you'll create in this article.
-- The Azure DevOps instance that must be enabled for **Third-party application access via OAuth**. To configure this setting, see [Manage access policies for Azure DevOps](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy).
+- A [blank canvas app](../create-blank-app.md) to use to connect to Azure DevOps.
+- To create the app featured in this article, you'll require an  [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) instance that includes an organization, a project, and a shared query with a few sample work items available for editing.
+- The Azure DevOps instance must be enabled for **Third-party application access via OAuth**. For more information, see [Manage access policies for Azure DevOps](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy).
 
 ## Step 1 - Add Azure DevOps data source
 
