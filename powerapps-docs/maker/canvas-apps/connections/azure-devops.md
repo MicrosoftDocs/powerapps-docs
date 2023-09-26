@@ -175,6 +175,24 @@ Text(AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organiza
 
 > [!div class="mx-imgBorder"]
 > ![Text input control that refers to title of the work item.](./media/azure-devops/monitor-workitem-details.png "Text input control referring to title of the work item.")
+>
+> 
+## Updating values in Azure DevOps
+
+8. To update a value in Azure Dev ops use the UpdateWorkItem in the OnSelect of a button. 
+
+```powerapps-dot
+AzureDevOps.UpdateWorkItem(
+    Gallery2.Selected.Value.'System.Id', 
+    Organization, 
+    {   description: "This is a new description", 
+        dynamicFields: ParseJSON(JSON({'Custom Field 1': "This is new custom text" })) 
+    }
+);
+```
+This formula will simply add some new sample text but you can use a PowerFx expression here. 
+
+Ensure that the formula uses lower case for the *non-custom* or built-in field names. For example, when referring to "Description" field, use `description: "This is a new description"` instead of `Description:"This is a new description"`. Incorrect casing might result in the error "400 Required parameter missing for requested operation: 'UpdateWorkItem'".  For custom / dynamic values, you can use the normal casing of display field. For instance the field name for the custom field is just the display name 'Custom Field 1'.  Note that this naming convention of the return values is specific to Azure DevOps and may differ from other services.
 
 
 ## Next steps
