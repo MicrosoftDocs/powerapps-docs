@@ -29,7 +29,7 @@ In this article, you'll create a canvas app that connects to Azure DevOps to ret
 - You need a Power Apps license. If you don't have a license, use a [30-day trial](../../signup-for-powerapps.md), or sign up for a [developer plan](../../developer-plan.md) for non-production use.
 - If you're new to Power Apps, familiarize yourself with Power Apps basics by [generating an app](../get-started-test-drive.md) and then customizing that app's [controls](../add-configure-controls.md), [gallery](../add-gallery.md), [forms](../working-with-forms.md), and [cards](../working-with-cards.md).
 - You need a [blank canvas app](../create-blank-app.md) to use to connect to Azure DevOps.
-- You need an [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) instance that has an organization, a project, and a shared query that has few sample work items to edit using the app that you'll create in this article.
+- You need an [Azure DevOps](/azure/devops/user-guide/what-is-azure-devops) instance that has an organization, a project, and a shared query that has few sample work items to edit using the app that  create in this article.
 - The Azure DevOps instance that must be enabled for **Third-party application access via OAuth**. To configure this setting, see [Manage access policies for Azure DevOps](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy).
 
 ## Step 1 - Add Azure DevOps data source
@@ -43,7 +43,7 @@ If you don't have an Azure DevOps connection already, select **Connect** and fol
 
 ## Step 2 - List shared queries
 
-In this section, we'll use the [ListQueriesInFolder](/connectors/visualstudioteamservices/#list-queries-within-folder) action for the Azure DevOps connector to list the available queries.
+In this section, we use the [ListQueriesInFolder](/connectors/visualstudioteamservices/#list-queries-within-folder) action for the Azure DevOps connector to list the available queries.
 
 1. From the left pane, select **Insert** > **Layout** > **Blank vertical gallery**.
 
@@ -105,7 +105,7 @@ However you can access some of the values.  Azure Dev Ops returns a basic set of
 
 ## Step 4 - Display work items
 
-The app shows a list of all queries, and the list of work items for the selected query. Now we can add an edit form that we'll use to simply display data.
+The app shows a list of all queries, and the list of work items for the selected query. Now we can add an edit form that we use to display data.
 
 1. Arrange the two galleries on screen to make room for the edit form that we add by moving both galleries to the left of the screen.
 
@@ -163,11 +163,11 @@ So far we have been using the Edit form which simplifies the data access story b
  ```powerapps-dot
     AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType')
   ```
-Note that "WorkItemType" is a text property passed in (e.g., "Feature") that allows you to pivot from items like Features and Work Items. The set of fields for these items vary from each other - which is why the return type from this call is dynamic. 
+Note that "WorkItemType" is a text property passed in such as "Feature" that allows you to pivot from items like Features and Work Items. The set of fields for these items vary from each other - which is why the return type from this call is dynamic. 
 
-To access specific values you can still access the common values the same way (e.g.,`Text(ThisItem.Value.'System.Id')` ). However, you may also access them in the more general dynamic response this way: `Text(ThisItem.fields.System_Id)`. These dynamic values names aren't generally documented.  The easiest way to see the correct names for these fields - including the non-standard fields is to open the monitor tool and look at the data response. In this case, to the `GetWorkItemDetails` call.  (See image below.)
+To access specific values you can still access the common values the same way such as `Text(ThisItem.Value.'System.Id')`. However, you may also access them in the more general dynamic response this way: `Text(ThisItem.fields.System_Id)`. These dynamic values names aren't documented.  The easiest way to see the correct names for these fields - including the non-standard fields is to open the monitor tool and look at the data response. In this case, to the `GetWorkItemDetails` call.  (See image below.)
 
-If you aren't using an Edit form, but rather simply a container, then you can access these values with a formula like the following: (Which accesses a custom team field.)
+Accessing values in a container instead of the edit form requires a formula such as the one below, which retrieves values from a custom team field.
 
 ```powerapps-dot
 Text(AzureDevOps.GetWorkItemDetails(Gallery2.Selected.Value.'System.Id',Organization, Project, Gallery2.Selected.Value.'System.WorkItemType').fields.One_custom_CustomField1)
