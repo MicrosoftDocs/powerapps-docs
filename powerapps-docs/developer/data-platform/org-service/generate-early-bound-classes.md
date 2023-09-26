@@ -35,6 +35,11 @@ You can still use the build command with parameters if you want. See [Using para
 
 ## Get started
 
+Before you begin:
+
+1. [Install Power Platform CLI](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli).
+1. Connect to your environment using [Power Platform CLI pac auth commands](/power-platform/developer/cli/reference/auth).
+
 Use the following steps to get started:
 
 1. In your .NET project, add a NuGet package reference to either:
@@ -89,10 +94,8 @@ Use the following steps to get started:
    ```
 
    > [!NOTE]
-   > This file is a modified version of the file you can generate using `pac modelbuilder build`` with the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf). Learn how to generate the file without comments in [Using parameters](#using-parameters).
+   > This file is a modified version of the file you can generate using `pac modelbuilder build` with the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf). Learn how to generate the file without comments in [Using parameters](#using-parameters).
 
-1. If you haven't already, [install Power Platform CLI](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli).
-1. If you haven't already, connect to your organization using [Power Platform CLI pac auth commands](/power-platform/developer/cli/reference/auth).
 1. Use the following command to generate early bound classes for the connected environment using the settings defined in `builderSettings.json` where `C:\projects\exampleproject\` represents the path to your project and `model` is the folder you created..
 
    ```powershell
