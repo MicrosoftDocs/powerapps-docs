@@ -29,9 +29,11 @@ Learn more:
 - [Late and early-bound programming](early-bound-programming.md)
 - [Use OrganizationServiceContext](organizationservicecontext.md)
 
-Use the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate early-bound code classes. Like every Power Platform CLI command, it has many parameters you can use to control the outcome. In this article, we recommend that you start by using the  `--settingsTemplateFile` parameter for most use cases. Use this parameter to refer to a JSON file where all the other available settings can be controlled. This way, you don't need to compose a long list of parameters, and the configuration appropriate for your project can be updated to allow regeneration of the classes when you need them.
+Use the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate early-bound code classes. You can also use the `CrmSvcUtil.exe` code generation tool, but for Dataverse we recommend using the `pac modelbuilder build` command. [Learn how to use the CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
 
-You can still use the build command with parameters if you want. See [Using parameters](#using-parameters).
+Like many Power Platform CLI commands, `pac modelbuilder build` has many parameters you can use to control the outcome. In this article, we recommend that you start by using the  `--settingsTemplateFile` parameter for most use cases. Use this parameter to refer to a JSON file where all the other available settings can be controlled. This way, you don't need to compose a long list of parameters, and the configuration appropriate for your project can be updated to allow regeneration of the classes when you need them.
+
+Of course, you can still use the build command with parameters if you prefer. See [Using parameters](#using-parameters).
 
 ## Get started
 
@@ -229,6 +231,7 @@ The Power Platform CLI isn't available for Dynamics 365 Customer Engagement on-p
 [Late-bound and early-bound programming](early-bound-programming.md)   
 [Sample: Early-bound table operations](samples/early-bound-entity-operations.md)   
 [Developer tools and resources](../developer-tools.md)   
-[Dataverse development tools](../download-tools-NuGet.md)
+[Dataverse development tools](../download-tools-NuGet.md)   
+[Learn how to use the CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
