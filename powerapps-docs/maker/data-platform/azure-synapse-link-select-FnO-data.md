@@ -30,11 +30,16 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 - By default, saving in Parquet Delta Lake format is enabled for finance and operations data, so that query response times are faster.
 
 > [!NOTE]
-> This feature is generally availabe with Finance and Operations application versions shown below or later. If you are on these application versions, take the latest cumulative update to use this feature
->   10.0.34 (PU58) cumulative update 7.0.6931.171 or later
->   10.0.35 (PU59) cumulative update 7.0.6972.149 or later
->   10.0.36 (PU60) cumulative update 7.0.7036.78 or later
->   10.0.37 (PU61) cumulative update 7.0.7068.39 or later 
+> 
+> This feature is generally availabe with Finance and Operations application versions shown below or later. If you have not yet applied these application versions, take the latest cumulative update to use this feature
+> 
+>>   10.0.34 (PU58) cumulative update 7.0.6931.171 or later
+>>
+>>   10.0.35 (PU59) cumulative update 7.0.6972.149 or later
+>> 
+>>   10.0.36 (PU60) cumulative update 7.0.7036.78 or later
+>> 
+>>   10.0.37 (PU61) cumulative update 7.0.7068.39 or later 
 >
 > The [Export to Data Lake feature](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) in finance and operations is being combined with Azure Synapse Link for Dataverse. We will announce deprecation of Export to Data Lake service and transition existing customers to Azure Synapse Link for Dataverse. 
 >
