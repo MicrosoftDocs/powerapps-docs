@@ -27,14 +27,10 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|state|String|Yes|Specify "expanded" or "collapsed".|
+|`state`|String|Yes|Specify "expanded" or "collapsed".|
 
-### Related topics
+### Related articles
 
 [getDisplayState](getDisplayState.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
