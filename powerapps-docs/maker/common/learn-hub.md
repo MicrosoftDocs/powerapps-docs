@@ -18,10 +18,10 @@ search.audienceType:
 The Learn hub gives you easy access to resources that help you as you're learning to build Power Apps, include training material, product documentation, announcements and event notices, and help from the Power Apps community.
 
 1. To access the Learn hub, go to the [Power Apps home page](https://make.powerapps.com) and select **Learn** in the navigation pane.
-2. Select one of the tabs to access the information that you're looking for.
-3. Use the Previous and Next buttons to see more items.
+2. From the experience level selection, select the content level that best suits your needs. 
+3. Select one of the tabs to access the information that you're looking for.
 
-  :::image type="content" source="media/learn/learn-hub.png" alt-text="Screenshot of the Learn hub in Power Apps.":::
+  :::image type="content" source="media/learn/learnhub-landingpage.png" alt-text="Screenshot of the Learn hub in Power Apps.":::
 
 The Learn hub includes the following sections:
 
@@ -30,10 +30,15 @@ The Learn hub includes the following sections:
   > [!div class="mx-imgBorder"] 
   > ![Banner for the learning hub.](media/learn/learn-banner.png "Banner for learning hub") 
 
+- The **Experience level** selection provides the option to view learning content tailored to your needs. For example, if you're a developer looking to learn about extensibility points in Power Apps, you can select "Advanced" to discover appropriate resources.
+
+  > [!div class="mx-imgBorder"] 
+  > ![Experience level selection.](media/learn/learnhub-experiencelevel.png "Experience level selection") 
+
 - The **Overview** tab lists featured training paths and modules, posts from the community, help articles, and training videos on YouTube.
 
   > [!div class="mx-imgBorder"] 
-  > ![Overview tab.](media/learn/overview-tab.png "Overview tab") 
+  > ![Overview tab.](media/learn/learnhub-overviewpivot.png "Overview tab") 
 
 - The **Courses** tab provides guided training such as training paths, modules, and training events.
 - The **Articles** tab lists relevant posts in public blogs.
