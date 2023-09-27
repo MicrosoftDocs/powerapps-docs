@@ -1,18 +1,14 @@
 ---
 title: "PostSave Event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Information about PostSave event methods.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 09/15/2022
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -23,7 +19,7 @@ PostSave event occurs after the `OnSave` event is complete. This event is used t
 
 [!INCLUDE [cc_book-instead-of-save](../../../../../includes/cc_book-instead-of-save.md)]
 
-Use the [addOnPostSave](../controls/addOnPostSave.md) and [removeOnPostSave](../controls/removeOnPostSave.md) methods to manage event handlers for this event.
+Use the [addOnPostSave](../formContext-data-entity/addOnPostSave.md)  and [removeOnPostSave](../formContext-data-entity/removeOnPostSave.md) methods to manage event handlers for this event.
 
 > [!NOTE]
 > This method is supported only on Unified Interface
@@ -36,8 +32,7 @@ Use the [addOnPostSave](../controls/addOnPostSave.md) and [removeOnPostSave](../
 
 |Name|Type|Required|Description|
 |------|------|------|---------|
-|myFunction|function reference|Yes|The function to add to the PostSave event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
-|||||
+|`myFunction`|function reference|Yes|The function to add to the PostSave event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 

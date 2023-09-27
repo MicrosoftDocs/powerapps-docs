@@ -1,18 +1,14 @@
 ---
 title: "datalakefolder table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the datalakefolder table/entity."
-ms.date: 08/31/2022
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # datalakefolder table/entity reference
@@ -29,19 +25,21 @@ A folder is a place to store data in Azure Data Lake.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/datalakefolders(*datalakefolderid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/datalakefolders<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/datalakefolders(*datalakefolderid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/datalakefolders(*datalakefolderid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/datalakefolders<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/datalakefolders(*datalakefolderid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/datalakefolders(*datalakefolderid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH /datalakefolders(*datalakefolderid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /datalakefolders<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE /datalakefolders(*datalakefolderid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET /datalakefolders(*datalakefolderid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /datalakefolders<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH /datalakefolders(*datalakefolderid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /datalakefolders(*datalakefolderid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -65,11 +63,13 @@ A folder is a place to store data in Azure Data Lake.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AccessType](#BKMK_AccessType)
 - [CDMPath](#BKMK_CDMPath)
 - [containerendpoint](#BKMK_containerendpoint)
 - [ContributorSecurityGroupId](#BKMK_ContributorSecurityGroupId)
 - [datalakefolder_UniqueName](#BKMK_datalakefolder_UniqueName)
 - [datalakefolderId](#BKMK_datalakefolderId)
+- [deltaLakePath](#BKMK_deltaLakePath)
 - [extendedproperties](#BKMK_extendedproperties)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [iscustomercapacity](#BKMK_iscustomercapacity)
@@ -83,6 +83,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [owningappid](#BKMK_owningappid)
+- [parentfolderid](#BKMK_parentfolderid)
 - [path](#BKMK_path)
 - [ReaderSecurityGroupId](#BKMK_ReaderSecurityGroupId)
 - [ResourceGroup](#BKMK_ResourceGroup)
@@ -94,6 +95,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Tenant](#BKMK_Tenant)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_AccessType"></a> AccessType
+
+|Property|Value|
+|--------|-----|
+|Description|Azure Data Lake Access Type.|
+|DisplayName|Access Type|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|accesstype|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CDMPath"></a> CDMPath
@@ -170,6 +188,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|datalakefolderid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_deltaLakePath"></a> deltaLakePath
+
+|Property|Value|
+|--------|-----|
+|Description|Sub folder path to delta lake.|
+|DisplayName|deltaLakePath|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|deltaLakePath|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_extendedproperties"></a> extendedproperties
@@ -416,6 +450,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_parentfolderid"></a> parentfolderid
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the parent folder for this folder.|
+|DisplayName|Parent Folder Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|parentfolderid|
+|RequiredLevel|None|
+|Targets|datalakefolder|
+|Type|Lookup|
+
+
 ### <a name="BKMK_path"></a> path
 
 |Property|Value|
@@ -644,6 +693,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [parentfolderidName](#BKMK_parentfolderidName)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -1071,6 +1121,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Lookup|
 
 
+### <a name="BKMK_parentfolderidName"></a> parentfolderidName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|parentfolderidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
@@ -1132,9 +1198,11 @@ Listed by **SchemaName**.
 - [datalakefolder_BulkDeleteFailures](#BKMK_datalakefolder_BulkDeleteFailures)
 - [datalakefolder_PrincipalObjectAttributeAccesses](#BKMK_datalakefolder_PrincipalObjectAttributeAccesses)
 - [datalakefolder_datalakefolderpermission](#BKMK_datalakefolder_datalakefolderpermission)
+- [datalakefolder_datalakesubfolder](#BKMK_datalakefolder_datalakesubfolder)
 - [synapsedatabases](#BKMK_synapsedatabases)
 - [synapselinkexternaltablestates](#BKMK_synapselinkexternaltablestates)
 - [synapselinkprofiles](#BKMK_synapselinkprofiles)
+- [msdyn_dataflow_datalakefolder_dlfolder](#BKMK_msdyn_dataflow_datalakefolder_dlfolder)
 
 
 ### <a name="BKMK_datalakefolder_SyncErrors"></a> datalakefolder_SyncErrors
@@ -1285,6 +1353,21 @@ Same as the [datalakefolder_datalakefolderpermission](datalakefolderpermission.m
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|datalakefolder_datalakefolderpermission|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_datalakefolder_datalakesubfolder"></a> datalakefolder_datalakesubfolder
+
+Same as the [datalakefolder_datalakesubfolder](datalakefolder.md#BKMK_datalakefolder_datalakesubfolder) many-to-one relationship for the [datalakefolder](datalakefolder.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|datalakefolder|
+|ReferencingAttribute|parentfolderid|
+|IsHierarchical|True|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|datalakefolder_datalakesubfolder|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
@@ -1336,6 +1419,23 @@ Same as the [synapselinkprofiles](synapselinkprofile.md#BKMK_synapselinkprofiles
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_msdyn_dataflow_datalakefolder_dlfolder"></a> msdyn_dataflow_datalakefolder_dlfolder
+
+**Added by**: Insights App Platform Base Solution
+
+Same as the [msdyn_dataflow_datalakefolder_dlfolder](msdyn_dataflow_datalakefolder.md#BKMK_msdyn_dataflow_datalakefolder_dlfolder) many-to-one relationship for the [msdyn_dataflow_datalakefolder](msdyn_dataflow_datalakefolder.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dataflow_datalakefolder|
+|ReferencingAttribute|msdyn_datalakefolder|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_dataflow_datalakefolder_dlfolder|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -1349,6 +1449,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [user_datalakefolder](#BKMK_user_datalakefolder)
 - [team_datalakefolder](#BKMK_team_datalakefolder)
 - [business_unit_datalakefolder](#BKMK_business_unit_datalakefolder)
+- [datalakefolder_datalakesubfolder](#BKMK_datalakefolder_datalakesubfolder)
 
 
 ### <a name="BKMK_lk_datalakefolder_createdby"></a> lk_datalakefolder_createdby
@@ -1392,6 +1493,10 @@ See the [team_datalakefolder](team.md#BKMK_team_datalakefolder) one-to-many rela
 **Added by**: System Solution Solution
 
 See the [business_unit_datalakefolder](businessunit.md#BKMK_business_unit_datalakefolder) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+
+### <a name="BKMK_datalakefolder_datalakesubfolder"></a> datalakefolder_datalakesubfolder
+
+See the [datalakefolder_datalakesubfolder](datalakefolder.md#BKMK_datalakefolder_datalakesubfolder) one-to-many relationship for the [datalakefolder](datalakefolder.md) table/entity.
 
 ### See also
 

@@ -4,15 +4,11 @@ description: "The first of three tutorials that will show you how to work with p
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divka78" # GitHub ID
+author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - marcelbf 
@@ -48,8 +44,7 @@ Create an asynchronous plug-in registered on the Create message of the account t
     - If you don't have a model-driven app that includes these, see [Build your first model-driven app from scratch](../../maker/model-driven-apps/build-first-model-driven-app.md) for steps to make one in just a few minutes.
 - Visual Studio 2017 (or later version)
 - Knowledge of the Visual C# programming language
-- Download the Plug-in Registration tool.
-    - Information about downloading the Plug-in registration tool is at : [Download tools from NuGet](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
+- Download the Plug-in Registration tool by following the instructions here: [Dataverse development tools](download-tools-nuget.md).
 
 <a name="BKMK_create"></a>
 
@@ -134,7 +129,7 @@ if (context.InputParameters.Contains("Target") &&
     // Obtain the target entity from the input parameters.  
     Entity entity = (Entity)context.InputParameters["Target"];
 
-    // Obtain the organization service reference which you will need for  
+    // Obtain the IOrganizationService instance which you will need for  
     // web service calls.  
     IOrganizationServiceFactory serviceFactory =
         (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
@@ -201,8 +196,8 @@ service.Create(followup);
 
 ### About the code
 
-- This code uses the late-bound style to create a task and associate it with the account being created. More information: [Create tables using the Organization service](org-service/entity-operations-create.md)
-- Early bound classes can be used, but this requires generating the classes for the tables and including the file defining those classes with the assembly project. This is mostly a personal preference, so those steps have been left out of this tutorial for brevity. More information: [Late-bound and early-bound programming using the Organization service](org-service/early-bound-programming.md)
+- This code uses the late-bound style to create a task and associate it with the account being created. More information: [Create tables using the SDK for .NET](org-service/entity-operations-create.md)
+- Early bound classes can be used, but this requires generating the classes for the tables and including the file defining those classes with the assembly project. This is mostly a personal preference, so those steps have been left out of this tutorial for brevity. More information: [Late-bound and early-bound programming using the SDK for .NET](org-service/early-bound-programming.md)
 - The <xref:Microsoft.Xrm.Sdk.Entity.Id> of the account being created is found in the context <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> and set as the `regardingobjectid` lookup column for the task.
 
 ## Build plug-in
@@ -220,7 +215,7 @@ In Visual Studio, press **F6** to build the assembly. Verify that it compiles wi
     ![Sign the assembly.](media/tutorial-write-plug-in-sign-assembly.png)
 
 1. In the **Choose a strong name key file**: dropdown, select **<New…>**. 
-1. In the **Create Strong Name Key**dialog, enter a **key file name** and deselect the **Protect my key file with a password** checkbox.
+1. In the **Create Strong Name Key** dialog, enter a **key file name** and deselect the **Protect my key file with a password** checkbox.
 1. Click **OK** to close the **Create Strong Name Key** dialog.
 1. In the project properties **Build** tab, verify that the **Configuration** is set to **Debug**.
 1. Press **F6** to build the plug-in again.

@@ -4,14 +4,10 @@ description: "This sample shows how to import files as web resources" # 115-145 
 ms.date: 04/03/2022
 author: adrianorth
 ms.author: aorth
-manager: lwelicki
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Import files as web resources
 
-This sample shows how to import files as web resources. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ImportWebResources).
+This sample shows how to import files as web resources.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Import files as web resources sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ImportWebResources)
 
 ## How to run this sample
 

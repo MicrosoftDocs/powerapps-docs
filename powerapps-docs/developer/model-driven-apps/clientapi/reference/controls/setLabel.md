@@ -1,18 +1,14 @@
 ---
 title: "control.setLabel (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the control.setLabel method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: chmoncay
+ms.author: chmoncay
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -34,9 +30,9 @@ All
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|label|String|Yes|The new label of the control.|
+|`label`|String|Yes|The new label of the control.|
 
-### Related topics
+### Related articles
 
 [getLabel](getLabel.md)
 

@@ -1,17 +1,13 @@
 ---
 title: "Sample: Web access from a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to write a plug-in that can access resources on the World Wide Web." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/06/2022
-author: divka78
+ms.date: 04/10/2023
+author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
-manager: sunilg
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -21,11 +17,14 @@ contributors:
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample shows how to write a plug-in that can access web (network) resources like a web service or feed. It also demonstrates how to limit the time duration allowed for this call. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WebAccessPlugin).
+This sample shows how to write a plug-in that can access web (network) resources like a web service or feed. It also demonstrates how to limit the time duration allowed for this call.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Web access from a plug-in sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WebAccessPlugin)
 
 ## How to run this sample
 
-1. Download or clone the [Samples](https://github.com/Microsoft/PowerApps-Samples) repo so that you have a local copy. This sample is located under PowerApps-Samples-master\cds\orgsvc\C#\WebAccessPlugin.
+1. Download or clone the [Samples](https://github.com/Microsoft/PowerApps-Samples) repo so that you have a local copy. This sample is located under PowerApps-Samples-master\dataverse\orgsvc\C#\WebAccessPlugin.
 1. There are two different plug-in class examples:
    - WebClientPlugin uses [WebClient Class](/dotnet/api/system.net.webclient)
    - HttpClientPlugin uses [HttpClient Class](/dotnet/api/system.net.http.httpclient)

@@ -4,14 +4,10 @@ description: "This sample shows how to link a custom column between series and i
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Link custom columns between series and instances
 
-This sample shows how to link a custom column that is created for a recurring appointment series (`RecurringAppointmentMaster`) with a custom column that is created for the appointment instances (`Appointment`). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/LinkAttributes).
+This sample shows how to link a custom column that is created for a recurring appointment series (`RecurringAppointmentMaster`) with a custom column that is created for the appointment instances (`Appointment`).
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Link custom columns between series and instances sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/LinkAttributes)
 
 ## What this sample does
 

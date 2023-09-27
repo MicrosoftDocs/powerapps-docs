@@ -3,7 +3,6 @@ title: "Best practices for code components | Microsoft Docs"
 description: "Learn best practices and get guidance on how to use code components created using Power Apps component framework."
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -285,4 +284,4 @@ See the article on [Code component application lifecycle management (ALM)](code-
 - [Code components for canvas apps](component-framework-for-canvas-apps.md)
 - [Create and build a code component](create-custom-controls-using-pcf.md)
 - [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)
-- [Use code components in Power Apps portals](../../maker/portals/component-framework.md)
+- [Use code components in Power Pages](../../maker/portals/component-framework.md)

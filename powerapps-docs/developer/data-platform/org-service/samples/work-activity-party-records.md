@@ -5,13 +5,9 @@ ms.date: 04/06/2022
 author: mayadumesh
 ms.author: mayadu
 ms.reviewer: pehecke
-manager: jamesol
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Work with activity party records
 
-This sample code shows how to work with activity party records. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ActivityPartyRecords).
+This sample code shows how to work with activity party records.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Work with activity party records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ActivityPartyRecords)
 
 ## How to run this sample
 

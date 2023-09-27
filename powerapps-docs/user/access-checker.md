@@ -1,26 +1,20 @@
 ---
 title: "Check your user access and permissions| MicrosoftDocs"
 description: How to check user access and security role.
-author: mduelae
-manager: kvivek
-
+author: paulliew
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 1/15/2021
+ms.date: 09/01/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: paulliew
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Check your user access to a row
-
 
 To perform an action on a row, a user needs to have the required privilege assigned through a security role or the user must be a member of a team that has a security role with assigned privileges.
 
@@ -67,6 +61,33 @@ If you're an administrator, you can check the access another user has to a row.
    > ![Access checker showing your access level for an admin.](media/check_access_page_admin-1.png "Access checker showing your access level for an admin")
   
 3.   The **Check Access** dialog box will appear and display the user's access information.
+
+## Check all users who have access to a row
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+
+The admin, owner of the record, or users who have access to a row can share the row with other users for collaboration. 
+
+To see who has access to a row and their respective access level, complete the following steps.
+
+> [!Note]
+> There are two database settings for each environment that enable the **Who has access** feature. System adminstrators can [Install the **OrganizationSettingsEditor** tool](/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool) and set the following options to true:
+> 
+> - **IsAccessCheckerAllUsersEnabled**: This allows the admin to see who has access to the row.
+> - **IsAccessCheckerNonAdminAllUsersEnabled**: This allows the admin, owner of the record, and users who have access to the row to see who has access.
+
+1. Select a row and then select **Edit** on the command bar.
+
+    > [!div class="mx-imgBorder"]
+    > ![Select a row to edit it.](media/edit_record.png "Select a row to edit it")
+  
+2. Select **Check Access** on the command bar.
+3. In the **Check Access** window, select **Who has access**.
+
+    :::image type="content" source="media/who-has-access.png" alt-text="Select who has access":::
+
+> [!NOTE]
+> The manager list from [heirarchy and position security](/power-platform/admin/hierarchy-security#manager-hierarchy-and-position-hierarchy-security-models) is not shown under **Who has access** as this list can be long.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

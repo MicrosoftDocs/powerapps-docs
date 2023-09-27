@@ -1,9 +1,8 @@
 ---
-title: TrackContainerResize | Microsoft Docs
+title: TrackContainerResize (Power Apps component framework API reference) | Microsoft Docs
 description: Determines the container sizing if the component needs to react.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

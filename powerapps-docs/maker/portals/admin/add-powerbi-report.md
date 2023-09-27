@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/30/2022
+ms.date: 12/22/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -15,6 +15,8 @@ contributors:
 ---
 
 # Add a Power BI report or dashboard to a webpage in a portal
+
+[!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
 
 > [!TIP]
 > This article explains how to add a Power BI report or dashboard using *powerbi* Liquid tag. To add **Power BI component** on a webpage in your portal using the portals Studio, go to [Add a Power BI component to a webpage using the portals Studio](../add-powerbi.md).
@@ -79,7 +81,7 @@ Roles are contained within the Azure Analysis Services database and not in the r
     The following considerations apply when using Azure Analysis Services tiles in a dashboard:
 
     - If an Azure Analysis Services tile is used in a dashboard with other tiles that require roles, the Azure Analysis Services role must be added to the list of roles.
-    - Multiple tiles from different Azure Analysis Services sources can be used with their own roles, but the custom data must be the same for each, and multiple custom data values cannot be used in the Liquid code.  The **customdata** tag and the **customdata** parameter for the EffectiveIdentity take only a string value.
+    - Multiple tiles from different Azure Analysis Services sources can be used with their own roles, but the custom data must be the same for each, and multiple custom data values can't be used in the Liquid code.  The **customdata** tag and the **customdata** parameter for the EffectiveIdentity take only a string value.
 
 ## Get the path of a dashboard or report
 
@@ -110,12 +112,13 @@ Roles are contained within the Azure Analysis Services database and not in the r
 
 ## How to use powerbi-client JavaScript library in portals
 
-You can use [powerbi-client JavaScript library](https://github.com/microsoft/PowerBI-JavaScript#powerbi-client) while embedding Power BI reports or dashboards in your portal. For more information about powerbi-client JavaScript library, see the [Power BI JavaScript wiki](https://github.com/Microsoft/PowerBI-JavaScript/wiki).
+You can use [powerbi-client JavaScript library](https://github.com/microsoft/PowerBI-JavaScript#powerbi-client) for Power BI Embedded reports or dashboards in your portal. For more information about powerbi-client JavaScript library, see the [Power BI JavaScript wiki](https://github.com/Microsoft/PowerBI-JavaScript/wiki).
 
 Below is a sample JavaScript to update the report settings or to handle events. This sample disables filter pane, disables page navigation, and enables *dataSelected* event.
 
 > [!IMPORTANT]
-> Use powerbi-client JavaScript library to disable or enable filter pane. However, if you want to restrict access to data or configure security, use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls). Disabling filter pane doesn't restrict data access, and it can be re-enabled using JavaScript library code.
+> - Use powerbi-client JavaScript library to disable or enable filter pane. However, if you want to restrict access to data or configure security, use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls). Disabling filter pane doesn't restrict data access, and it can be re-enabled using JavaScript library code.
+> - The powerbi-client JavaScript library is only supported for **PowerBI Embedded** flow.
 
 ```javascript
 $(document).ready(function () {

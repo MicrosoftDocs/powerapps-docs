@@ -8,12 +8,8 @@ ms.reviewer: "pehecke"
 ms.topic: sample
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Detect solution dependencies
@@ -26,7 +22,10 @@ This sample shows how to detect dependencies before you delete a solution compon
 
 ## What this sample does
 
-The `RetrieveDependentComponentsRequest`, `RetrieveDependenciesForDeleteRequest` messages are intended to be used in a scenario where it contains data to detect solution dependencies. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SolutionDependencies).
+The `RetrieveDependentComponentsRequest`, `RetrieveDependenciesForDeleteRequest` messages are intended to be used in a scenario where it contains data to detect solution dependencies.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Detect solution dependencies sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SolutionDependencies)
 
 ## How this sample works
 

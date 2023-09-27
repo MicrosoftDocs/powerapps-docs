@@ -3,29 +3,25 @@ title: "Actions on dashboards (model-driven apps) | Microsoft Docs" # Intent and
 description: "Learn about performing actions such as create, retrieve, update, or delete, on organization-owned and user-owned dashboards." # 115-145 characters including spaces. This abstract displays in the search result."
 ms.date: 04/01/2022
 ms.topic: article
-author: mspilde # GitHub ID
+author: sriharibs-msft
 ms.subservice: mda-developer
-ms.author: mspilde # MSFT alias of Microsoft employees only
-manager: lwelicki # MSFT alias of manager or PM counterpart
+ms.author: srihas
 ms.reviewer:
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 
 # Actions on dashboards
 
-You can perform actions such as create, retrieve, update, or delete, on organization-owned and user-owned dashboards.
+You can perform actions such as create, retrieve, update, or delete on organization-owned and user-owned dashboards.
 
 ## Actions on an organization-owned dashboard
 
 To perform the following actions on an organization-owned dashboard (`SystemForm`), you must have the System Administrator or the System Customizer role assigned to your account in Microsoft Dataverse:
 
-- Create, retrieve, update, and delete. You can create or update an organization-owned dashboard by using the Dataverse web services or by customizing the form. For detailed information about creating a dashboard, see [Create a dashboard](create-dashboard.md).
+- Create, retrieve, update, and delete. You can create or update an organization-owned dashboard using the Dataverse web services or customizing the form. For detailed information about creating a dashboard, see [Create a dashboard](create-dashboard.md).
 - Set an organization-owned dashboard as the default dashboard for an organization by setting the `SystemForm.IsDefault` value to `true` while creating or updating the dashboard.
 
   > [!IMPORTANT]

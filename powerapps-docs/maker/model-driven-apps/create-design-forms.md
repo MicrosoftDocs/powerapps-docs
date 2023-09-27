@@ -1,8 +1,8 @@
 ---
 title: "Create and design model-driven app forms | MicrosoftDocs"
 description: "Overview of model-driven forms in Power Apps"
-ms.custom: intro-internal
-ms.date: 07/26/2022
+ms.collection: get-started
+ms.date: 08/15/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,15 +15,11 @@ ms.assetid: 99c795e0-9165-4112-85b1-6b5e1a4aa5ec
 caps.latest.revision: 33
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 author: "Mattp123"
 tags: 
   - "Links to topic not migrated"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create and design model-driven app forms 
 
@@ -33,9 +29,7 @@ With Power Apps model-driven apps, forms provide the user interface that people 
 
 In the default solution or an unmanaged solution, it's possible to create new forms or edit existing forms for all tables that allow form customization.
 
-## Model-driven app form UI enhancements (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+## Model-driven app form UI enhancements
 
 Form UI enhancements consist of multiple small changes to improve data presentation and usability of model-driven app forms:
 
@@ -81,7 +75,7 @@ More information: [Types of forms in Power Apps](types-forms.md).
 
 The fundamentals of building a model-driven app include creating a table, configuring data views, and creating and editing forms.
 
-Before you begin to build forms, it's worth determining whether you have all the columns necessary to solve your business problem. Additionally, you should have an understanding how to lay these out in terms of sections and tabs.  Broadly speaking, the complexity of your forms will be a reflection of the number of columns in your table in addition to the complexity of your business process.
+Before you begin to build forms, it's worth determining whether you have all the columns necessary to solve your business problem. Additionally, you should have an understanding how to lay these out in terms of sections and tabs.  Broadly speaking, the complexity of your forms are a reflection of the number of columns in your table in addition to the complexity of your business process.
 
 [Learn to create, edit, or configure forms using the form designer](create-and-edit-forms.md)
 
@@ -98,43 +92,15 @@ There are a couple of reasons you may not be able to delete a form.
 
 ## Controlling the display of a form within an app
 
-Tables can have multiple forms.  The use of a form is controlled through the model-driven app. This allows makers to use the same table in different ways, depending on the audience, by controlling the display.
+Tables can have multiple forms.  The use of a form is controlled through the model-driven app. This allows makers to use the same table in different ways depending on the audience, by controlling the display.
 
 By default all forms are made available to users. However, through the app designer a specific form can be restricted.
 
-### Change the forms displayed in an app
+### Change the forms displayed and form order
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Select **Solutions**, and then open the solution to be updated.
-3. Edit the model-driven app in app designer.
-4. In the **Table View** area, select **Forms** next to the table.  The components tab will become visible.
+Makers change the forms displayed in an app from the app designer. More information: [Manage forms](create-add-remove-forms-views-dashboards.md#manage-forms)
 
-   :::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/select-forms-to-display-app-app-designer.png" alt-text="select forms to display in the app designer":::
-
-5. On the **Components** tab, verify the main forms that are included for the app. Verify that the form you want to display is checked. If not, select it, save, and then publish the app.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Forms included with app.](media/forms-included-in-app.png "Forms included with app")
-
-## Setting the default form for an app
-
-A form can be set as the default form through the form order configuration **or** when a user sets the default form as a personalization setting.
-
-When we set the default form order this is done at the level of the **table** and not the app.  Therefore, one form order per table.
-
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Select **Dataverse** and navigate to the required table.
-3. Select the **Forms** area, select the ellipses (...) and select **Form settings**
-
-:::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-navigation.png" alt-text="select forms forms to include in app":::
-
-4. In the form settings dialogue select **form order** and then the **form set**, or form type, you would like to order.
-
-:::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-order.png" alt-text="select forms order":::
-
-5. Once in the form order area uses the handles to move the order of the forms.
-
-6. Select **Save and Publish** to save the form order changes.
+Makers can also change the form order, fallback forms, and the default form for a table from the table hub. More information:  [Set the form order](assign-form-order.md#set-the-form-order)
 
 ## Updated versus classic tables
 
@@ -246,6 +212,7 @@ There are still a number of tables, referred to here as classic tables, that ret
 :::row-end:::
 
 ## Main form dialogs
+
 With the client API, you can use main form dialogs so users can open a related row table on a parent or base form without navigating away from the form. More information: [Open main form in a dialog using client API](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
 
 ## Next steps

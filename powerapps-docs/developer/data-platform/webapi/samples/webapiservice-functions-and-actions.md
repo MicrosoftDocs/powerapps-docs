@@ -2,14 +2,11 @@
 title: "Web API Functions and Actions Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API and C#."
 ms.date: 09/02/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -89,8 +86,8 @@ Operations: Send <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=Retr
 
 Operations:
 
-1. Detect if organization has the `sample_IsSystemAdmin` Custom API installed.
-1. If not, install solution in `IsSystemAdminFunction_1_0_0_0_managed.zip` containing the Custom API.
+1. Detect if organization has the `sample_IsSystemAdmin` custom API installed.
+1. If not, install solution in `IsSystemAdminFunction_1_0_0_0_managed.zip` containing the custom API.
 1. Retrieve 10 systemuser records.
 1. Loop through the records using the `sample_IsSystemAdmin` function to detect which ones have the System Administrator security role.
 

@@ -1,17 +1,14 @@
 ---
 title: "Detect duplicate data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetection header and Microsoft Dataverse Web API"
-ms.date: 08/03/2022
+ms.date: 12/31/2022
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-author: divka78
+author: divkamath
 ms.author: dikamath
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -28,11 +25,7 @@ Use the `MSCRM.SuppressDuplicateDetection` request header with a `POST` request 
 - `true` – Create or update the record, if a duplicate is found.
 - `false` – Do not create or update the record, if a duplicate is found.
 
-> [!NOTE]
-> Passing of the `CalculateMatchCodeSynchronously` optional parameter is not required. The match codes used to detect duplicates are calculated synchronously regardless of the value passed in this parameter.
-
 Use preference header `MSCRM.SuppressDuplicateDetection` and set its value to `false` in the Web API request.
-
 
 > [!NOTE]
 > Make sure there are appropriate duplicate detection rules in place. Dataverse includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you'll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, see [Duplicate rule tables](../duplicaterule-entities.md) 
@@ -43,7 +36,7 @@ Use preference header `MSCRM.SuppressDuplicateDetection` and set its value to `f
 
 The following example shows how to detect duplicates during `Create` and `Update` operations using `MSCRM.SuppressDuplicateDetection` header in Web API request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/org1/api/data/v9.0/leads HTTP/1.1
@@ -63,7 +56,7 @@ MSCRM.SuppressDuplicateDetection: false
 ```
 If a lead record with the same `emailaddress1` attribute already exists, the following Response is returned.
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 500 Internal Server Error  
@@ -90,7 +83,7 @@ Set the value of `MSCRM.SuppressDuplicateDetection` header to `false` in your `P
 
 The example shown below attempts to update an existing lead entity record which includes the same value of `emailaddress1` attribute as an existing record.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.0/leads(c4567bb6-47a3-e711-811b-e0071b6ac1b1) HTTP/1.1
@@ -109,7 +102,7 @@ If-Match: *
 }
 ```  
 
-**Response**
+**Response:**
 
 ```http  
 HTTP/1.1 500 Internal Server Error  
@@ -126,6 +119,6 @@ OData-Version: 4.0
 
 ### See Also
 
-[Detect duplicate data using the Organization service](../org-service/detect-duplicate-data.md)
+[Detect duplicate data using the SDK for .NET](../org-service/detect-duplicate-data.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

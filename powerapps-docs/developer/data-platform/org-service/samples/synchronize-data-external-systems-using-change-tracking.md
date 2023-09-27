@@ -4,14 +4,10 @@ description: "This sample shows how to retrieve changes from a table and synchro
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Synchronize data with external systems using change tracking
 
-This sample code shows how to retrieve changes from a table and synchronize data with external systems by using the `RetrieveEntityChanges` message with the [RetrieveEntityChangesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesrequest) and [RetrieveEntityChangesResponse](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesresponse) classes. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Changetracking).
+This sample code shows how to retrieve changes from a table and synchronize data with external systems by using the `RetrieveEntityChanges` message with the [RetrieveEntityChangesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesrequest) and [RetrieveEntityChangesResponse](/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesresponse) classes.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Synchronize data with external systems using change tracking sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Changetracking)
 
 For more information about the feature that this sample demonstrates, see [Use change tracking to synchronize data with external systems](../../use-change-tracking-synchronize-data-external-systems.md).
 

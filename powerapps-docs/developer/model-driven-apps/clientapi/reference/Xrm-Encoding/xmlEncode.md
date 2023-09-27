@@ -1,18 +1,14 @@
 ---
 title: "xmlEncode| MicrosoftDocs"
 description: "The Client API method converts a string to an XML-encoded string."
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -30,7 +26,7 @@ contributors:
 
 |Parameter Name        | Type           | Required  |Description  |
 | ------------- |-------------| -----|-----|
-|arg        | String           | Required  |String to be encoded.  |
+|`arg`| String| Required  |String to be encoded.  |
 
 
 ## Return Value
@@ -39,7 +35,8 @@ contributors:
 
 **Description**: Encoded string.
 
-## Related topics
+## Related articles
+
 [xmlAttributeEncode](xmlAttributeEncode.md)
 
 

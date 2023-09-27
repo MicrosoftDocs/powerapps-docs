@@ -1,24 +1,18 @@
 ---
 title: "GridAttribute (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the GridAttribute method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: jasongre
+ms.author: jasongre
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # GridAttribute (Client API reference)
-
-
 
 GridAttribute is supported for both read-only and editable grids.
 
@@ -44,15 +38,10 @@ GridAttribute supports the following methods for columns of a selected grid row.
 >[!NOTE]
 >To select a row in an editable grid, use the [Grid](grid.md).[getSelectedRows](grid/getSelectedRows.md)
 
-### Related topics
+### Related articles
 
-[GridCell](gridcell.md)
-
-[Grids and subgrids in model-driven apps](../grids.md)
-
+[GridCell](gridcell.md)   
+[Grids and subgrids in model-driven apps](../grids.md)   
 [Controls collection](../attributes/controls-collection.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

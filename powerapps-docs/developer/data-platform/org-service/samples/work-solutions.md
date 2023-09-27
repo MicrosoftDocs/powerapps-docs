@@ -8,12 +8,8 @@ ms.reviewer: "pehecke"
 ms.topic: sample
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Work with solutions
@@ -32,7 +28,8 @@ This sample shows how to how to perform the following actions with solutions:
 - Install or upgrade a solution.
 - Delete a solution.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkwithSolutions).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Work with solutions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkwithSolutions)
 
 ## How to run this sample
 

@@ -1,22 +1,18 @@
 ---
 title: "Add or edit Power BI visualizations on your dashboard | MicrosoftDocs"
 description: How to edit Power BI visualizations on dashboards
-author: mduelae
-manager: kvivek
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/15/2019
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - D365-App-msdynce_saleshub
   - D365-Entity-dashboard

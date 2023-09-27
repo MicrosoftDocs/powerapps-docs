@@ -1,18 +1,14 @@
 ---
 title: "getAttributeType (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getAttributeType method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -38,6 +34,8 @@ This method will return one of the following **string** values:
 - datetime
 - decimal
 - double
+- file
+- image
 - integer
 - lookup
 - memo

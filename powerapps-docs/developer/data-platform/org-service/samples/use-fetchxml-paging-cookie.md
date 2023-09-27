@@ -2,15 +2,12 @@
 title: "Sample: Use FetchXML with a paging cookie (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to use the paging cookie in a FetchXML" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -18,7 +15,10 @@ contributors:
 
 # Sample: Use FetchXML with a paging cookie
 
-This sample shows how to use the paging cookie in a FetchXML query to retrieve successive pages of query results. It uses the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A> . You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/UseFetchXMLWithPaging).
+This sample shows how to use the paging cookie in a FetchXML query to retrieve successive pages of query results. It uses the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A>.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Use FetchXML with a paging cookie sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/UseFetchXMLWithPaging)
 
 ## How to run this sample
 

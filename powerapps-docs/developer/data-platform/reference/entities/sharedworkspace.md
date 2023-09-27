@@ -1,18 +1,14 @@
 ---
 title: "sharedworkspace table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the sharedworkspace table/entity."
-ms.date: 08/31/2022
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # sharedworkspace table/entity reference
@@ -29,13 +25,11 @@ References a container that stores real-time collaboration data.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/sharedworkspaces<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/sharedworkspaces(*sharedworkspaceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/sharedworkspaces(*sharedworkspaceid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/sharedworkspaces<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/sharedworkspaces(*sharedworkspaceid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/sharedworkspaces(*sharedworkspaceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST /sharedworkspaces<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE /sharedworkspaces(*sharedworkspaceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET /sharedworkspaces(*sharedworkspaceid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /sharedworkspaces<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH /sharedworkspaces(*sharedworkspaceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -61,6 +55,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [DiscoveryEndpoint](#BKMK_DiscoveryEndpoint)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [LastManaged](#BKMK_LastManaged)
 - [LastUsed](#BKMK_LastUsed)
 - [Name](#BKMK_Name)
 - [OrdererEndpoint](#BKMK_OrdererEndpoint)
@@ -108,6 +103,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_LastManaged"></a> LastManaged
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|TimeZoneIndependent|
+|Description|The last time the workspace was managed.|
+|DisplayName|Last Managed|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lastmanaged|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_LastUsed"></a> LastUsed
@@ -306,7 +316,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|workspaceschema|
-|MaxLength|2000|
+|MaxLength|20000|
 |RequiredLevel|None|
 |Type|Memo|
 
@@ -348,8 +358,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [OrganizationId](#BKMK_OrganizationId)
-- [OrganizationIdName](#BKMK_OrganizationIdName)
 - [VersionNumber](#BKMK_VersionNumber)
 
 
@@ -607,40 +615,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_OrganizationId"></a> OrganizationId
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier for the organization|
-|DisplayName|Organization Id|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationid|
-|RequiredLevel|None|
-|Targets|organization|
-|Type|Lookup|
-
-
-### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|organizationidname|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 **Added by**: Active Solution Solution
@@ -798,7 +772,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_sharedworkspace_createdonbehalfby](#BKMK_lk_sharedworkspace_createdonbehalfby)
 - [lk_sharedworkspace_modifiedby](#BKMK_lk_sharedworkspace_modifiedby)
 - [lk_sharedworkspace_modifiedonbehalfby](#BKMK_lk_sharedworkspace_modifiedonbehalfby)
-- [organization_sharedworkspace](#BKMK_organization_sharedworkspace)
 
 
 ### <a name="BKMK_lk_sharedworkspace_createdby"></a> lk_sharedworkspace_createdby
@@ -824,12 +797,6 @@ See the [lk_sharedworkspace_modifiedby](systemuser.md#BKMK_lk_sharedworkspace_mo
 **Added by**: System Solution Solution
 
 See the [lk_sharedworkspace_modifiedonbehalfby](systemuser.md#BKMK_lk_sharedworkspace_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_organization_sharedworkspace"></a> organization_sharedworkspace
-
-**Added by**: System Solution Solution
-
-See the [organization_sharedworkspace](organization.md#BKMK_organization_sharedworkspace) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 

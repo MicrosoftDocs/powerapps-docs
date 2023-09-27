@@ -1,18 +1,14 @@
 ---
 title: "setShowTime (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the setShowTime method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: chmoncay
+ms.author: chmoncay
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -34,13 +30,13 @@ standard control for **datetime** attributes.
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|bool|Boolean|Yes|Specify true to show the time portion of the date; false otherwise.|
+|`bool`|Boolean|Yes|Specify true to show the time portion of the date; false otherwise.|
 
 ## Remarks
 
 This method will show or hide the time component of a date control where the attribute uses the **DateAndTime** format. This method will have no effect when the **DateOnly** format is used.
 
-### Related topics
+### Related articles
 
 [getShowTime](getShowTime.md)
 

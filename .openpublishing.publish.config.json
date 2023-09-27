@@ -71,7 +71,13 @@
         "master": "master",
         "live": "master"
       }
-    }
+    },
+    {
+      "path_to_root": "shared-content",
+      "url": "https://github.com/MicrosoftDocs/powerapps-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    }   
   ],
   "branch_target_mapping": {
     "live": [

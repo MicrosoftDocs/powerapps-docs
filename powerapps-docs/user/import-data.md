@@ -2,21 +2,17 @@
 title: "Import data in model-driven apps| MicrosoftDocs"
 description: How to import data
 ms.custom: ""
-author: mduelae
-manager: kvivek
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 01/03/2022
 ms.subservice: end-user
-ms.author: mkaur
-ms.reviewer: ""
+ms.author: sericks
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # How to import data
 

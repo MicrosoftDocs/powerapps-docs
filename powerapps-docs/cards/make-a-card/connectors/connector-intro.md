@@ -1,46 +1,48 @@
 ---
-title: Connectors overview (preview)
-description: Learn about connectors and how you can use them to expand the capabilities of your cards.
-ms.date: 09/20/2022
-ms.topic: article
+title: Add connectors to a card
+description: Learn how to add connectors to your cards for Microsoft Power Apps.
+ms.date: 01/19/2023
+ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-manager: shellyha
-ms.reviewer: 
+ms.reviewer: sericks
 ms.custom: 
 ms.collection: 
 ---
 
-# Connectors (preview)
+# Add connectors to a card
 
-[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
-
-Connectors are an important part of Power Apps, allowing your card to talk to other apps, data, and devices in the cloud.
-
-For more information on Connectors in Power Platform, see [Connectors overview](/connectors/connectors).
+Connectors allow your card to connect to other apps, data sources, and devices in the cloud. Insert, modify, and remove them in the [card designer](../designer-overview.md). [Learn more about connectors in Power Platform](/connectors/connectors).
 
 ## Prerequisites
 
-- A [Power Apps](https://powerapps.microsoft.com/) account.
-- A card to add connectors to. For an example, see the [simple card tutorial](../../tutorials/hello-world-card.md).
-- Familiarity with the [Card Designer](../../make-a-card/designer-overview.md).
+- A [Power Apps](https://powerapps.microsoft.com/) account
+- [A card](../../tutorials/hello-world-card.md)
 
-## Access connectors in cards
+## Insert a connector
 
-To access connectors in card:
+1. [Open the card designer](../designer-overview.md).
+1. In the left pane of the card designer, select **Data**.
+1. Select **+ Add data**, and then select a data source from the list.
 
-1. Go to [Power Apps](https://make.test.powerapps.com/) and select **Cards (preview)**.
-1. On the left, select **Cards** and select the card you want to test add a connector to.
-1. On the left, select **Data**. Then select **+ Add data**.
+    :::image type="content" source="../../media/connector-intro/add-data-location.png" alt-text="Screenshot of a list of data sources in the card designer.":::
 
-    :::image type="content" source="../../media/connector-intro/add-data-location.png" alt-text="Screenshot of + Add data menu" border="true":::
+## Refresh a connector
 
-    You'll then be able to add a data source and see all available connectors.
+When the schema provided by your connector changes, you can refresh the connector in your card to ensure you have access to the updated properties in your [Power Fx expressions](/power-platform/power-fx/overview). An example of a schema change would be adding a column to the Dataverse table you are using in your card. After refreshing your connector, you would be able to use the new column in your PowerFx expressions.
+
+> [!IMPORTANT]
+> You should be careful not to remove properties from your data sources that existing cards depend on. Doing so could prevent your existing cards from functioning properly.
+
+1. [Open the card designer](../designer-overview.md).
+1. In the left pane of the card designer, select **Data**.
+1. Select **...** next to the connector you want to refresh.
+1. Click **Refresh**
+
+    :::image type="content" source="../../media/connector-intro/refresh-data-connector.png" alt-text="Screenshot of a refreshing data source in the card designer.":::
 
 ## Types of connectors
 
-Only connections to Dataverse are currently available. You can connect to Dataverse tables for creating, reading, updating, and deleting records.
+Only connections to Dataverse are currently available. You can connect to Dataverse tables to create, read, update, and delete records. [Learn how to create a card with data from Dataverse](../../tutorials/dataverse-card.md).
 
-Learn how to [create a card with data from Dataverse](../../tutorials/dataverse-card.md).
-
-The other connectors are available within the Card Designer, but functionality for them will be added in future updates.
+We are working on support for other connectors.

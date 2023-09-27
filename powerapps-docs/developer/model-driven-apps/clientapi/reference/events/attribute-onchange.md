@@ -1,18 +1,14 @@
 ---
 title: "Column OnChange Event in model-driven apps| MicrosoftDocs"
 description: Learn about how to set the column OnChange event.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -45,7 +41,7 @@ There are three methods you can use to work with the `OnChange` event for a colu
 - [fireOnChange](../attributes/fireOnChange.md)
 - [removeOnChange](../attributes/removeOnChange.md)
 
-### Related topics
+### Related articles
 
 [Columns (Client API reference)](../attributes.md)
  

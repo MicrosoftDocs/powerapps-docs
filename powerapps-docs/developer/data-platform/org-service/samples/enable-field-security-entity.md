@@ -4,14 +4,10 @@ description: "This sample shows how to enable field security for a table" # 115-
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew
-manager: mayadu
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -21,7 +17,10 @@ contributors:
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample shows how to enable field security for a table. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/FieldSecurity).
+This sample shows how to enable field security for a table.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Enable field security for a table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/FieldSecurity)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

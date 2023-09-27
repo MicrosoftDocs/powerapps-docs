@@ -2,16 +2,12 @@
 title: "Sample: Modify query in PreOperation stage (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to write a plug-in that modifies a query defined within the PreOperation stage of a RetrieveMultiple request." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -28,7 +24,8 @@ The approach described by this sample is different. Rather than filter tables af
 A key point demonstrated by this sample is that the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query> can be one of three different types that are derived from the <xref:Microsoft.Xrm.Sdk.Query.QueryBase>. To accommodate queries of any type, the plug-in code
 must detect the type of query and implement the appropriate type of filter.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveMultipleAccountPreOperation).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Modify query in PreOperation stage sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveMultipleAccountPreOperation)
 
 ## How to run this sample
 

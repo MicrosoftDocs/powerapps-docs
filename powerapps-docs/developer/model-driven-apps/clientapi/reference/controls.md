@@ -1,16 +1,13 @@
 ---
 title: "Controls in model-driven apps for Dynamics 365| MicrosoftDocs"
 description: A control represents an HTML element present on the form.
-ms.author: aorth
-author: adrianorth
-ms.date: 08/17/2022
+ms.author: hemantg
+author: HemantGaur
+ms.date: 01/06/2023
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -341,8 +338,11 @@ The Sliverlight web resource has these additional methods:
  >  formContext.getAttribute("name").controls.forEach(control => control.addNotification(notification));
  > ```
 
+## Form component control type
 
-### Related topics
+A form component control type has the same set of methods available as the [formContext](../clientapi-form-context.md) on a main form. See [Form component behavior > Client API](../../../../maker/model-driven-apps/form-component-control.md#client-api)
+
+### Related articles
 
 [Columns](attributes.md)
 

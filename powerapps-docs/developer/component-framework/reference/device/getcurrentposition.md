@@ -1,9 +1,8 @@
 ---
-title: CaptureImageOptions | Microsoft Docs
+title: CaptureImageOptions (Power Apps component framework API reference) | Microsoft Docs
 description: Returns the current location using the device geo location capability.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -34,7 +33,7 @@ See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global
 
 See [Web service error codes](../../../data-platform/reference/web-service-error-codes.md)
 
-### Related topics
+### Related articles
 
 [Device](../device.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

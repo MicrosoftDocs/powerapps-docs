@@ -4,14 +4,10 @@ description: "This sample shows how to create a reciprocal connection role" # 11
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Create a reciprocal connection role
 
-This sample shows how to create the reciprocal connection roles. It creates a connection role for an account and a connection role for a contact, and then makes them reciprocal by associating them with each other. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ReciprocalConnection).
+This sample shows how to create the reciprocal connection roles. It creates a connection role for an account and a connection role for a contact, and then makes them reciprocal by associating them with each other
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create a reciprocal connection role sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ReciprocalConnection)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

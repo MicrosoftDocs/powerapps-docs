@@ -3,7 +3,7 @@ title: Dataverse for Teams vs. Dataverse | Microsoft Docs
 description: Explains the differences between Dataverse for Teams and Dataverse.
 author: Mattp123
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 09/27/2022
 ms.subservice: teams
 ms.author: olegov
@@ -11,7 +11,7 @@ ms.reviewer: matp
 contributors:
   - mattp123
   - hemantgaur
-  - tapanm-msft
+  - mduelae
   - ProfessorKendrick
 ---
 # How are Dataverse for Teams and Dataverse different?
@@ -61,7 +61,7 @@ Whereas Dataverse for Teams focuses on one environment per team for up to 10,000
 |Environment lifecycle  |Dataverse for Teams  |Dataverse  |
 |---------|---------|---------|
 |Environments   | 1 per Team     | Unlimited        |
-|Maximum size     |   1 million rows or 2 GB      |  4 TB or more     |
+|Maximum size     |   1 million rows or 2 GB      |  Unlimited     |
 |Upgrade to Dataverse   |  Yes    |  N/A    |
 
 ## Security
@@ -86,6 +86,8 @@ Because Dataverse isn't specific to the Teams environment, it delivers more opti
 |Hierarchical security     |  No       |  Yes       |
 |Record sharing     |  No       |  Yes       |
 |Create Owner Teams**  | Yes      |  Yes       |
+|Create AAD Group Teams  | No      |  Yes       |
+|Record sharing to Group Teams | No      |  Yes       |
 |Assign Teams Roles to Owner Teams<sup>1</sup> | Yes     | Yes   |
 |Change record ownership** | Yes   | Yes  |
 

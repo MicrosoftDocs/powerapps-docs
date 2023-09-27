@@ -4,14 +4,13 @@ description: Explore Power Apps for free with a 30-day trial. You’ll be able t
 author: alaug
 ms.subservice: common
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.date: 07/14/2022
 ms.author: alaug
 ms.reviewer: kvivek
 contributors:
-  - tapanm-msft
+  - mduelae
   - alaug
 ---
 # Explore Power Apps for free for 30 days
@@ -29,6 +28,15 @@ If you have a Power Apps license or a license through Office 365, you already ha
 > [!NOTE]
 > - If you're an administrator, see [Purchase Power Apps for your organization](/power-platform/admin/signup-for-powerapps-admin) or [Power Apps in your organization Q&A](/power-platform/admin/signup-question-and-answer).
 > - Beginning January 2020, self-service purchase, subscription, and license management capabilities for Power Platform products (Power BI, Power Apps, and Power Automate) are available for commercial cloud customers in the United States. For more information, including steps to enable or disable self-service purchasing in your organization, see [Self-service purchase FAQ](/microsoft-365/commerce/subscriptions/self-service-purchase-faq).
+
+## Need an account?  
+If you don't have a work or school account, you can create a free account with Azure AD and you can be a low code developer with Power Apps. To continue building apps beyond the trial period, just opt-in to the free [Power Apps Developer Plan](https://powerapps.microsoft.com/developerplan/). 
+
+1. Go to [PowerApps.com](https://powerapps.microsoft.com/) and then select, **Start free**. 
+2. Enter your email. If your email isn't a work or school account, you'll be prompted to create a free Azure AD account using [this sign up experience](https://signup.microsoft.com/get-started/signup?products=83d3609a-14c1-4fc2-a18e-0f5ca7047e46). 
+
+If you want to evaluate Power Apps integrations with Microsoft 365 then you can sign up for a [Office 365 trial](https://signup.microsoft.com/get-started/signup?products=ec920d3e-7e24-492d-ba28-79763d637b79) account. 
+
 
 ## Identify your current license
 

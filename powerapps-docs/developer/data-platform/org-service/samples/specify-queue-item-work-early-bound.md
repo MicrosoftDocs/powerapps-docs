@@ -4,14 +4,10 @@ description: "This sample shows how to specify a user who will work on a queue i
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Specify a queue item to work on
 
-This sample shows how to use [PickFromQueueRequest](/dotnet/api/microsoft.crm.sdk.messages.pickfromqueuerequest) to specify a user who will work on a queue item. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SpecifyQueueItem).
+This sample shows how to use [PickFromQueueRequest](/dotnet/api/microsoft.crm.sdk.messages.pickfromqueuerequest) to specify a user who will work on a queue item.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Specify a queue item to work on sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SpecifyQueueItem)
 
 ## How to run this sample
 

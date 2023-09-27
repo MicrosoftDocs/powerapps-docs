@@ -1,17 +1,13 @@
 ---
 title: "Customize choices (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to work with global and local choices (option sets) in code." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
+ms.date: 01/09/2023
 author: NHelgren
 ms.author: nhelgren
-manager: sunilg
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: article
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -21,10 +17,10 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Typically, you use _global_ choices (option sets) to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike _local_ choices which are defined only for a specific table column, you can reuse global choices. You will also see them used in request parameters in a manner similar to an enumeration.
+Typically, you use _global_ choices (option sets) to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike _local_ choices that are defined only for a specific table column, you can reuse global choices. You'll also see them used in request parameters in a manner similar to an enumeration.
 
 > [!NOTE]
-> Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets.
+> Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets. In order to make a change to the option sets, an Upgrade must be made to the solution that added the option set. More information: [Upgrade or update a solution](../../../maker/data-platform/update-solutions.md). Users can manually delete an option in their environment if they are unable to modify the solution or contact the solution publisher, but this must be done on every environment manually.
 
 When you define a global choice by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest>,
 we recommend that you let the system assign a value. You do this by passing a **null** value when you create the
@@ -33,6 +29,7 @@ context of the publisher set for the solution that the choice is created in.
 This prefix helps reduce the chance of creating duplicate choices for a managed solution,
 and in any choices that are defined in organizations where your managed solution is installed. For more information,
 see [Merge choice options](/power-platform/alm/how-managed-solutions-merged).
+
 
 You can download the code sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithOptionSets).
 
@@ -92,7 +89,7 @@ OptionMetadata[] optionList =
 ## Create a global choice
 
 Use the <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest> message to create a new global choice. Set the
-<xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadataBase.IsGlobal> property to `true` to indicate that the choice is global. The following code example creates a global choice called “Example Option Set”:
+<xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadataBase.IsGlobal> property to `true` to indicate that the choice is global. The following code example creates a global choice called "Example Option Set":
 
 ```csharp
 // Define the request object and pass to the service.
@@ -258,7 +255,7 @@ if (retrieveAllOptionSetsResponse.OptionSetMetadata.Count() > 0)
 
 ## Delete a global choice
 
-The following code sample shows how to check whether a global choice is being used by another solution component by using `RetrieveDependentComponents` message (<xref href="Microsoft.Dynamics.CRM.RetrieveDependentComponents?text=RetrieveDependentComponents Function" /> or <xref:Microsoft.Crm.Sdk.Messages.RetrieveDependentComponentsRequest>), and then how to delete it by using `DeleteOptionSet` message (for the Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionSetRequest>):
+The following code sample shows how to check whether a global choice is being used by another solution component by using `RetrieveDependentComponents` message (<xref href="Microsoft.Dynamics.CRM.RetrieveDependentComponents?text=RetrieveDependentComponents Function" /> or <xref:Microsoft.Crm.Sdk.Messages.RetrieveDependentComponentsRequest>), and then how to delete it by using `DeleteOptionSet` message (for the SDK for .NET, use <xref:Microsoft.Xrm.Sdk.Messages.DeleteOptionSetRequest>):
 
 ```csharp
 // Create the request to see which components have a dependency on the

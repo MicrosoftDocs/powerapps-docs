@@ -1,22 +1,18 @@
 ---
 title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
 description: How to use Dataverse search
-author: mduelae
-manager: kvivek
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 12/16/2021
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Search for tables and rows by using Dataverse search
@@ -172,7 +168,7 @@ Currently there is no option to disable the feedback question prompt.
 Dataverse search has a powerful set of capabilities to help you put Microsoft Dataverse at your fingertips. Here are some pointers to help you understand what results you can expect in different scenarios.
 
 > [!NOTE]
-> - Dataverse search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric**, **Date**, and **File** aren't searched on.
+> - Dataverse search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric** and **Date** aren't searched on.
 > - Dataverse search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by Dataverse search unless you own it or it was shared with you.
 > - Dataverse search supports column level security. This means that a user with access to a restricted column can search for the column and will see it in the search results. A user that doesn't have permission to the restricted column won't be able to search or see results for the column.
 

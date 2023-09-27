@@ -2,7 +2,7 @@
 title: "List of controls available for model-driven apps | MicrosoftDocs"
 description: "A list of controls available for use with Power Apps model-driven apps for web, phones, and tablets"
 ms.custom: ""
-ms.date: 08/11/2022
+ms.date: 12/01/2022
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,27 +18,25 @@ ms.subservice: mda-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # List of controls available for model-driven apps
 
 Controls allow app users to visualize data within table columns in addition to enabling interaction with them.
 
-Controls exist to provide a more touch-friendly experience with model-driven apps. These include toggle, star rating, calendar, number input, and other controls.  
+Controls exist to provide a more touch-friendly experience with model-driven apps. These include toggle, star rating, calendar, number input, and other controls.
+
+Most controls are configured for a table column, but some controls, like the grid controls can be configured for the table.
 
 ## Using controls in the form designer
 
 To use these controls in the form designer:  
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Expand **Dataverse** in the left hand menu, and then select **Tables**.
+1. Select **Tables** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the required table and then select the **Forms** area.
 1. Select the [main form](model-driven-app-glossary.md#main-form) to be edited.
-   
 1. Select the column or section where you want to add the control.
- 
+
 1. In the right properties pane, select **+ Component** to display the available controls, and then select the control you want.  
   
     > [!NOTE]
@@ -55,7 +53,7 @@ Following are descriptions for each control you can use on forms.
 ## Grid controls
 
 Grid controls can be configured at the following levels: 
-- Table. When a grid control is configured for a table, all views for the table will use the grid control.
+- Table. When a grid control is configured for a table, all views for the table will use the grid control. More information: [Configure a grid control for a table](#configure-a-grid-control-for-a-table)
 - Form. Subgrids added to a form use a grid control to control the behavior of the subgrid.
 
 ### Subgrid
@@ -76,6 +74,13 @@ The Power Apps grid control represents the next evolution of the Power Apps grid
 > - The Power Apps grid control currently can only be configured for a table.
 
 More information: [Power Apps grid control](the-power-apps-grid-control.md)
+
+### Configure a grid control for a table
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, and then select the table you want, such as the account table.
+1. Select the **Controls** tab, and then select the grid you want for the table.
+1. Depending on the grid control, specify the values you want, **Save** and then **Publish** the customization.
 
 ## Display controls
 
@@ -181,19 +186,6 @@ Use the pen input control to capture written input such as signatures. The pen i
 
 The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. It can be configured with text columns. More information: [Add the rich text editor control to a model-driven app](rich-text-editor-control.md)
 
-### Star rating
-
-Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control with whole number columns. It can’t be used with decimal columns.  
-
-:::image type="content" source="media/star-rating-control-example.png" alt-text="Example of the star rating control in a model-driven app.":::
-  
-> [!NOTE]
->  Be sure to select the **Hide on web** option for this control.  
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Max|Select the maximum number of stars for the control from the dropdown list.|  
-
 ### Toggle
 
 The toggle control allows users to choose between binary values, such as on/off and yes/no, by toggling the button. It can be configured with yes/no choice columns.
@@ -205,6 +197,12 @@ The toggle control allows users to choose between binary values, such as on/off 
 ### Business card reader
 
 Use the AI Builder business card reader control to detect business cards and extract their information. You can take photos directly in the component or load images that you've taken. More information: [Use the business card reader component in model-driven apps](/ai-builder/business-card-reader-component-model-driven)
+
+## Power BI
+
+### Power BI report
+
+Use the Power BI report control to add a Power BI report on the form. More information: [Use the Power BI report control to add a report](powerbi-control.md)
 
 ## More components controls
 
@@ -292,7 +290,21 @@ The linear gauge lets your users input numerical values by dragging a slider ins
 |Min|Set the minimum value to display on the gauge.|  
 |Value|Get or set the value to display on the gauge.|  
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
+
+  ### Star rating
+
+Use the star rating to provide a visual representation of a rating. The maximum number of stars you can set is five. You can use this control with whole number columns. It can’t be used with decimal columns.  
+
+:::image type="content" source="media/star-rating-control-example.png" alt-text="Example of the star rating control in a model-driven app.":::
+
+  > [!IMPORTANT]
+> - This control will be deprecated in April 2021. More information: [Model-driven app controls deprecation](/power-platform/important-changes-coming#model-driven-app-controls-deprecation)
+> - Be sure to select the **Hide on web** option for this control.  
   
+|Property|Description|  
+|--------------|-----------------|  
+|Max|Select the maximum number of stars for the control from the dropdown list.| 
+
 ### Arc knob
 
 Only available in classic.

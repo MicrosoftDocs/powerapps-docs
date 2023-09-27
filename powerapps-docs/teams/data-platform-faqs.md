@@ -11,7 +11,7 @@ ms.author: kvivek
 ms.reviewer: kvivek
 contributors:
   - kvivek
-  - tapanm-msft
+  - mduelae
 ---
 # FAQs for Dataverse for Teams 
 

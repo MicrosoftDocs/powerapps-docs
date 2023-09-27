@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 06/14/2022
+ms.date: 08/25/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -10,13 +10,9 @@ ms.topic: "how-to"
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "craigm"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Add the rich text editor control to a model-driven app
 
@@ -50,7 +46,8 @@ To enable the rich text editor with default values on any new or existing text c
    > [!NOTE]
    > If you have an existing rich text field, you can use the API to change the format to `Richtext`. More information: [Data type format conversions](/powerapps/developer/data-platform/data-type-format-conversions)
 
-1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Columns** area.
+1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution that you want, open the table that you want, and then select the **Columns** area.
 1. Select **+Add** > **Column**, enter a name for your column, select a text **Data** type, and then select the **Rich text** format option.
 1. Save the column. You can now add the new column to any existing or new form for this table.
 
@@ -59,7 +56,8 @@ To enable the rich text editor with default values on any new or existing text c
 The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To enable the rich text editor with a specific configuration on a new or existing column, complete the following steps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** area.
+1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution that you want, open the table that you want, and then select the **Forms** area.
 1. Select the form, and then select **Edit form** > **Edit form in new tab**.
 1. On the form designer canvas, add or create a text column or select an existing text column, such as the custom multi-line text column used in this article.
 1. On the right column properties pane, expand the **Components** section, select **+ Component**, and then select **Rich Text Editor Control**.
@@ -77,7 +75,7 @@ To create and use advanced configuration for the rich text editor control, follo
 
 1. Create a JavaScript (.js) file that contains the JSON format text file with the `defaultSupportedProps` structure and configuration you want. More information: [More sample rich text editor configurations](#more-sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
 1. In Power Apps, create a **JavaScript (JS)** type web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
-1. Add the relative URL for the JavaScript web resource (for example */WebResources/contoso_toolbartoprte*) in the **Static value** field on the **Add rich text editor control** pane . More information: [Add or replace a text column for rich text editing](#add-or-replace-a-text-column-for-rich-text-editing)
+1. Add the relative URL for the JavaScript web resource (for example */WebResources/contoso_toolbartoprte*) in the **Static value** field on the **Add rich text editor control** pane. More information: [Add or replace a text column for rich text editing](#add-or-replace-a-text-column-for-rich-text-editing)
 
    > [!TIP]
    > - The web resource URL is located next to the **URL** field on the web resource definition you created in the previous step.
@@ -91,9 +89,11 @@ Consider the following when using the rich text editor:
 
 - The best performance is achieved when the HTML content size is 1 MB or less. When your HTML content size exceeds 1 MB, you may notice slower response times for loading and editing content. By default, image content is referenced from the content HTML but isn't stored as part of the HTML content, so in the default configuration, images don't negatively impact performance. 
 
-- Rich text fields will store HTML tags, which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
+- Rich text fields store HTML tags, which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
 
-- By default, the rich text editor will upload images to the Azure Blob storage store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64. 
+- By default, the rich text editor uploads images to the Azure Blob storage store and isn't stored as part of the field. Images are stored in the same field as base64 when the submitter doesn’t have permissions to the `msdyn_richtextfiles` entity. Base64 content is large, so you generally don't want to store images as base64.
+
+-  If you have a system administrator or basic user security role, the user personalization feature works by default. If you don't have these roles, you must have create, read, and write privileges added to the msdyn_customcontrolextendedsettings table for the plugin to work.
 
 ## How configuration is applied to the rich text editor
 
@@ -112,7 +112,7 @@ A rich text-enabled column has a limited set of configuration that can be config
 
 ## Rich text editor properties
 
-The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
+The JSON file is composed of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
 
 The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. More information: [Visualization of the rich text editor configuration file](#visualization-of-the-rich-text-editor-configuration-file). The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for more plug-ins that you add or create. More information about CKEditor plug-ins: [Plug-ins available](https://ckeditor.com/cke4/addons/plugins/all)
 
@@ -136,7 +136,7 @@ More information: [Individual configuration settings](#individual-configuration-
 
 ### defaultSupportedProps
 
-You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html). The rich text editor currently uses CKEditor version 4.17.1.
+You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described in the table. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html). The rich text editor currently uses CKEditor version 4.17.1.
 
 
 <table>
@@ -219,7 +219,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  The location of the user interface where the toolbar will be rendered. Supported values are *top* and *bottom*. The default is bottom.
+  The location of the user interface where the toolbar renders. Supported values are *top* and *bottom*. The default is bottom.
 </td>
 <td>
 
@@ -233,8 +233,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 
 <td>
-
-  A list of toolbar buttons that will be loaded.
+  A list of the loaded toolbar buttons.
 </td>
 <td>
 
@@ -281,7 +280,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  Comma-separated list of plug-ins to be used in an editor instance. The actual plug-ins that are loaded might still be affected by two other settings: *extraPlugins* and *removePlugins*. <br></br> Updating this setting might remove the plug-ins from the toolbar. If you set this property to an empty string, the editor will load without the toolbar. <br></br> If you want to add one or more plug-ins to the toolbar, we recommend that you use *extraPlugins*. If you want to remove one or more from the default list, use *removePlugins*.     
+  Comma-separated list of plug-ins to be used in an editor instance. The actual plug-ins that are loaded might still be affected by two other settings: *extraPlugins* and *removePlugins*. <br></br> Updating this setting might remove the plug-ins from the toolbar. If you set this property to an empty string, the editor loads without the toolbar. <br></br> If you want to add one or more plug-ins to the toolbar, we recommend that you use *extraPlugins*. If you want to remove one or more from the default list, use *removePlugins*.     
 </td>
 <td>
 
@@ -296,7 +295,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  A comma-separated list of other plug-ins to be loaded. This setting makes it easier to add new plug-ins without touching the plugins setting. <br></br> There are many plug-ins that are required for other plug-ins to work. For example, the dialog plug-in is required for the link plug-in. The rich text editor automatically adds those, and you can't override them by updating this property. This setting will simply append new plug-ins to the previous list. <br></br> If you want to remove any of the presets, we recommend that you use the *removePlugins* property.
+  A comma-separated list of other plug-ins to be loaded. This setting makes it easier to add new plug-ins without touching the plugins setting. <br></br> There are many plug-ins that are required for other plug-ins to work. For example, the dialog plug-in is required for the link plug-in. The rich text editor automatically adds those, and you can't override them by updating this property. This setting appends new plug-ins to the previous list. <br></br> If you want to remove any of the presets, we recommend that you use the *removePlugins* property.
 </td>
 <td>
 
@@ -343,7 +342,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 <td>
 
-  Lets you disallow elements that you do not want to have in your content. You are able to disallow entire elements or by attributes, classes, and styles. For more information about the CKEditor "disallowedContent" configuration, see [ Disallowed Content Rules](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content.html#disallowed-content-rules).
+  Lets you disallow elements that you don't want to have in your content. You're able to disallow entire elements or by attributes, classes, and styles. For more information about the CKEditor "disallowedContent" configuration, see [ Disallowed Content Rules](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content.html#disallowed-content-rules).
 </td>
 <td>
 
@@ -452,7 +451,7 @@ Default:
 </td>
 
 <td>
-  By default, content sanitization is disabled to allow successful copying and pasting of rich text content from external sources. When enabled, the content sanitization will remove some of the custom attributes or tags. This configuration applies only to edit mode. Read-only or disabled state rendering will always be sanitized.
+  By default, content sanitization is disabled to allow successful copying and pasting of rich text content from external sources. When enabled, the content sanitization removes some of the custom attributes or tags. This configuration applies only to edit mode. Read-only or disabled state rendering is always sanitized.
 
 </td>
 <td>
@@ -467,8 +466,11 @@ Default:
 </td>
 
 <td>
-
-  By default, images will be uploaded using the client API. As soon as an image is added to the editor, it will be uploaded to the platform. To process images, set this property to true.
+  By default, images are uploaded using the client API. When as an image is added to the editor, it's uploaded to the platform. To store images as base64 strings directly in the column configured to use the rich text editor control set this value to true. 
+	
+   > [!TIP]
+   > If images are viewed externally, such as through email, we recommend that you not use default image processing. Default image processing uploads images to the `attachmentEntity` defined in the configuration, and an external user might lack privileges to view the content. Instead, an alternative upload, base64 strings can be used with ```"disableDefaultImageProcessing": true```.
+	
 </td>
 <td>
 
@@ -484,7 +486,7 @@ Default:
 
 <td>
 
-  Setting this property to true will disable images. This property will have highest priority. This means that when this property is set to true, irrespective of the imageEntity property value, images will be disabled. By default, images are enabled.
+  Setting this property to true disables images. This property has highest priority. When this property is set to true, regardless of the imageEntity property value, images are disabled. By default, images are enabled.
 </td>
 <td>
 
@@ -588,7 +590,7 @@ Example:
 	
   ```
   "readOnlySettings": {
-	"height:": 500,
+	"height": 500,
 	"showFullScreenExpander": true
 }
   ```
@@ -707,7 +709,7 @@ Depends on showAsTabControl set to true.
 
 <td>
 
-  This property adds the option to preview the editor content rendered as html. Previewing lets you see how your content will display if you share and render the content as HTML outside of the editor. <br></br>
+  This property adds the option to preview the editor content rendered as html. Previewing lets you see how your content displays if you share and render the content as HTML outside of the editor. <br></br>
 
 Depends on showAsTabControl set to true.
 
@@ -736,19 +738,35 @@ Depends on showAsTabControl and showPreview set to true.
   ```"showPreviewHeaderWarning": false```
 </td>
 
+<tr>
+<td>
+  allowSameOriginSandbox
+</td>
+<td>
+  This property enables the content within the rich text editor to be treated as from the same origin as the rendering app. 
+
+  > [!CAUTION]
+  > Use this property with caution. Only use trusted external content because any untrusted external content could be allowed access to internal resources. <br></br>
+  
+  Default value is false.
+</td>
+<td>
+
+  ```"allowSameOriginSandbox": false```
+</td>
+</tr>
+
 </tr>
 </table>
-
-
 
 ## Commonly used rich text editor configurations
 
 The following are common configurations for the rich text editor. These sample configurations can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource or modify the default web resource configuration. More information: [Create and use advanced configuration for the rich text editor control](#create-and-use-advanced-configuration-for-the-rich-text-editor-control) and [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes)
 
-### Set the default font to Calibri with font-size 11pt
+### Set the default font to Calibri with font-size 11 pt
 Set your default font and size to match the Microsoft Windows defaults. This example shows which settings you use to implement this change in your experience.
 
-Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -764,9 +782,9 @@ Set these ```defaultSupportedProps``` properties in your configuration file. Eac
  ```
  
  ### Make line breaks (Enter key) create a &lt;br&gt; instead of &lt;p&gt;
- The default behavior for the enter key creates paragraph blocks with the &lt;p&gt; HTML tag (also used when interpretting pasted content). Paragraph blocks are used in HTML to group information. In some cases, when creating new or pasting information from Microsoft Word or other content editor, due to how each browser interprets the formatting for the paragraph block tag (&lt;p&gt;) slightly differently, you might want to use the &lt;br&gt; HTML tag instead of paragraph blocks. The vertical spacing for &lt;br&gt; HTML tags in certain cases can be more visually consistent across a variety of browsers and experiences. This example shows you how to change from &lt;p&gt; to &lt;br&gt;.
+ The default behavior for the enter key creates paragraph blocks with the &lt;p&gt; HTML tag (also used when interpreting pasted content). Paragraph blocks are used in HTML to group information. In some cases, when creating new or pasting information from Microsoft Word or other content editor, due to how each browser interprets the formatting for the paragraph block tag (&lt;p&gt;) slightly differently, you might want to use the &lt;br&gt; HTML tag instead of paragraph blocks. The vertical spacing for &lt;br&gt; HTML tags in certain cases can be more visually consistent across a variety of browsers and experiences. This example shows you how to change from &lt;p&gt; to &lt;br&gt;.
  
-Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -777,7 +795,7 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 ### All content pasted or created is HTML 5 compliant
 The rich text editor control works best with HTML 5 content, although HTML 4 tags and formatting can also be used successfully. In some cases, the mixture of both HTML 4 and HTML 5 tags can create usability challenges when selecting and setting fonts and sizes. Use of "allowedContent" can ensure all your content is HTML 5. This example allows all supported HTML 5 tags. Any non-compliant tags are converted to their HTML 5 equivalent. 
 
-Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -791,7 +809,7 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 
 ### Add the full screen expander
 
-Set these ```Individual configuration settings``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set these ```Individual configuration settings``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [Individual configuration settings](#visualization-of-the-rich-text-editor-configuration-file))
  ```
  
@@ -805,7 +823,7 @@ Set these ```Individual configuration settings``` properties in your configurati
 
 ### Add the HTML source view tab
 
-Set these ```Individual configuration settings``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set these ```Individual configuration settings``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [Individual configuration settings](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -819,7 +837,7 @@ Set these ```Individual configuration settings``` properties in your configurati
 
 ### Add a simple toolbar with font size, bold, italic, underline, and highlight
 
-Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -831,7 +849,7 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 
 ### Remove the toolbar to make a rich text rendering surface
 
-Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -843,7 +861,7 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 
 ### Add a new font list and set Brush Script MT as the default font with a default size of 20 px
 
-Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -866,7 +884,7 @@ Set these ```defaultSupportedProps``` properties in your configuration file. Eac
 
 ### Position the toolbar at the top of the rich text editor
 
-Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -878,7 +896,7 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 
 ### Start the editor at 30-px height and then autogrow to fit content
 
-Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -896,7 +914,7 @@ Set these ```defaultSupportedProps``` properties in your configuration file. Eac
 
 ### Fix the height of the editor at 500 px
 
-Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -911,7 +929,7 @@ Set these ```defaultSupportedProps``` properties in your configuration file. Eac
 
 ### Create a plain text surface that removes all html tags except for the "br" tag
 
-Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set these ```defaultSupportedProps``` properties in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -932,7 +950,7 @@ Set these ```defaultSupportedProps``` properties in your configuration file. Eac
  ```
  
  
-Set this ```Individual configuration settings``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set this ```Individual configuration settings``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [Individual configuration settings](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -942,11 +960,11 @@ Set this ```Individual configuration settings``` property in your configuration 
  
 :::image type="content" source="media/rte-plain-text-surface.png" alt-text="Creating a plain text surface makes the strips html.":::
 
-### Remove the context menu so right-clicking will work with the default browser's spell check
+### Remove the context menu so right-clicking works with the default browser's spell check
 
 Enabling this functionality removes the contextual right-click editing capability.
 
-Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it is the last value:
+Set this ```defaultSupportedProps``` property in your configuration file. Each value should be followed by a ```,``` (```comma```) unless it's the last value:
 (More information: [defaultSupportedProps](#visualization-of-the-rich-text-editor-configuration-file))
  ```
 
@@ -954,88 +972,25 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 
  ```
 
-:::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking will work with the default browser spell check.":::
+:::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking works with the default browser spell check.":::
 
 ## Use the default web resource for organization-wide changes
 
-The default RTE webresource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization-wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control.
+The default RTE web resource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization-wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control. 
+By default, RTEGlobalConfiguration.json is empty. Based on your business requirements, you can specify the values you want to customize in this file. Use the non-editable RTEGlobalConfiguration.json as a sample to add the parameters in the required structure format.
 
-```json
-{
-	"defaultSupportedProps": {
-		"allowedIframeDomains": [],
-		"autoGrow_onStartup": true,
-		"basicEntities": true,
-		"browserContextMenuOnCtrl": true,
-		"copyFormatting_allowRules": true,
-		"customConfig": "",
-		"dialog_backgroundCoverColor": "black",
-		"disableNativeSpellChecker": false,
-		"enterMode": 3,
-		"extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi,blockquote,button,collapser,colorbutton,colordialog,confighelper,contextmenu,copyformatting,dialog,editorplaceholder,filetools,find,floatpanel,font,iframerestrictor,indentblock,justify,panel,panelbutton,pastefromword,quicktable,selectall,stickystyles,superimage,tableresize,tableselection,tabletools",
-		"fillEmptyBlocks": true,
-		"font_defaultLabel": "Segoe UI",
-		"font_names": "Angsana New/'Angsana New', 'Leelawadee UI', Sathu, serif;Arial/Arial, Helvetica, sans-serif;Arial Black/'Arial Black', Arial, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;Calibri/Calibri, Helvetica, sans-serif;Cambria/Cambria, Georgia, serif;Candara/Candara, Optima, sans-serif;Century Gothic/'Century Gothic', sans-serif;Comic Sans MS/'Comic Sans MS';Consolas/Consolas, Courier, monospace;Constantia/Constantia, 'Hoefler Text', serif;Corbel/Corbel, Skia, sans-serif;Cordia New/'Cordia New', 'Leelawadee UI', Silom, sans-serif;Courier New/'Courier New';DaunPenh/DaunPenh, 'Leelawadee UI', 'Khmer MN', sans-serif;Franklin Gothic Book/'Franklin Gothic Book', 'Avenir Next Condensed', sans-serif;Franklin Gothic Demi/'Franklin Gothic Demi', 'Avenir Next Condensed Demi Bold', sans-serif;Franklin Gothic Medium/'Franklin Gothic Medium', 'Avenir Next Condensed Medium', sans-serif;Garamond/Garamond, Georgia, serif;Gautami/Gautami, 'Nirmala UI', 'Telugu MN', sans-serif;Georgia/Georgia, serif;Impact/Impact, Charcoal, sans-serif;Iskoola Pota/'Iskoola Pota', 'Nirmala UI', 'Sinhala MN', sans-serif;Kalinga/Kalinga, 'Nirmala UI', 'Oriya MN', sans-serif;Kartika/Kartika, 'Nirmala UI', 'Malayalam MN', sans-serif;Latha/Latha, 'Nirmala UI', 'Tamil MN', sans-serif;Leelawadee UI/'Leelawadee UI', Thonburi, sans-serif;Lucida Console/'Lucida Console', Monaco, monospace;Lucida Handwriting/'Lucida Handwriting', 'Apple Chancery', cursive;Lucida Sans Unicode/'Lucida Sans Unicode';Mangal/Mangal, 'Nirmala UI', 'Devanagari Sangam MN', sans-serif;Nirmala UI/'Nirmala UI', sans-serif;Nyala/Nyala, Kefa, sans-serif;Palatino Linotype/'Palatino Linotype', 'Book Antiqua', Palatino, serif;Raavi/Raavi, 'Nirmala UI', 'Gurmukhi MN', sans-serif;Segoe UI/'Segoe UI', 'Helvetica Neue', sans-serif;Shruti/Shruti, 'Nirmala UI', 'Gujarati Sangam MN', sans-serif;Sitka Heading/'Sitka Heading', Cochin, serif;Sitka Text/'Sitka Text', Cochin, serif;Sylfaen/Sylfaen, Mshtakan, Menlo, serif;TW Cen MT/'TW Cen MT', 'Century Gothic', sans-serif;Tahoma/Tahoma, Geneva, sans-serif;Times New Roman/'Times New Roman', Times, serif;Times/Times, 'Times New Roman', serif;Trebuchet MS/'Trebuchet MS';Tunga/Tunga, 'Nirmala UI', 'Kannada MN', sans-serif;Verdana/Verdana, Geneva, sans-serif;Vrinda/Vrinda, 'Nirmala UI', 'Bangla MN', sans-serif;メイリオ/Meiryo, メイリオ, 'Hiragino Sans', sans-serif;仿宋/FangSong, 仿宋, STFangsong, serif;微軟正黑體/'Microsoft JhengHei', 微軟正黑體, 'Apple LiGothic', sans-serif;微软雅黑/'Microsoft YaHei', 微软雅黑, STHeiti, sans-serif;新宋体/NSimSun, 新宋体, SimSun, 宋体, SimSun-ExtB, 宋体-ExtB, STSong, serif;新細明體/PMingLiU, 新細明體, PMingLiU-ExtB, 新細明體-ExtB, 'Apple LiSung', serif;楷体/KaiTi, 楷体, STKaiti, serif;標楷體/DFKai-SB, 標楷體, BiauKai, serif;游ゴシック/'Yu Gothic', 游ゴシック, YuGothic, sans-serif;游明朝/'Yu Mincho', 游明朝, YuMincho, serif;隶书/SimLi, 隶书, 'Baoli SC', serif;黑体/SimHei, 黑体, STHeiti, sans-serif;굴림/Gulim, 굴림, 'Nanum Gothic', sans-serif;궁서/Gungsuh, 궁서, GungSeo, serif;돋움/Dotum, 돋움, AppleGothic, sans-serif;맑은 고딕/'Malgun Gothic', '맑은 고딕', AppleGothic, sans-serif;바탕/Batang, 바탕, AppleMyungjo, serif;바탕체/BatangChe, 바탕체, AppleMyungjo, serif;ＭＳ Ｐゴシック/'MS PGothic', 'ＭＳ Ｐゴシック', 'MS Gothic', 'ＭＳ ゴシック', 'Hiragino Kaku Gothic ProN', sans-serif;ＭＳ Ｐ明朝/'MS PMincho', 'ＭＳ Ｐ明朝', 'MS Mincho', 'ＭＳ 明朝', 'Hiragino Mincho ProN', serif",
-		"fontSize_defaultLabel": "9",
-		"fontSize_sizes": "8/8pt;9/9pt;10/10pt;11/11pt;12/12pt;14/14pt;16/16pt;18/18pt;20/20pt;22/22pt;24/24pt;26/26pt;28/28pt;36/36pt;48/48pt;72/72pt;",
-		"height": 185,
-		"keystrokes": [],
-		"linkDefaultProtocol": "https://",
-		"listStylePosition": "inside",
-		"pasteAzureBlobImageAsBase64": false,
-		"qtCellBorderColor": "rgb(171, 171, 171)",
-		"qtCellBorderStyle": "solid",
-		"qtCellBorderWidth": "1px",
-		"qtCellPadding": "1",
-		"qtCellSpacing": "0",
-		"qtCellWith": "120px",
-		"pasteFilter": null,
-		"qtColumns": 8,
-		"qtRows": 6,
-		"qtStyle": {
-			"border-collapse": "collapse",
-			"font-size": "9pt"
-		},
-		"removeDialogTabs": "flash:Upload;link:upload",
-		"removePlugins": "a11yhelp,codemirror,magicline,scayt,showborders",
-		"skin": "superowa",
-		"stickyStyle": {
-			"font-size": "9pt",
-			"font-family": "'Segoe UI','Helvetica Neue',sans-serif"
-		},
-		"stickyStyles_defaultTag": "div",
-		"superimageImageMaxSize": 5,
-		"toolbarcollapser_enableResizer": true,
-		"toolbarLocation": "bottom",
-		"uploadRecordId": []
-	},
-	"attachmentEntity": {
-		"name": "msdyn_richtextfiles",
-		"fileAttributeName": "msdyn_fileblob"
-	},
-	"disableContentSanitization": true,
-	"disableDefaultImageProcessing": false,
-	"disableImages": false,
-	"imageEntity": {
-		"imageEntityName": "msdyn_richtextfiles",
-		"imageFileAttributeName": "msdyn_imageblob"
-	},
-	"readOnlySettings": {
-	},
-	"sanitizerAllowlist": {
-		"attributes": [],
-		"cssProperties": [],
-		"domains": [],
-		"protocols": [],
-		"tags": []
-	},
-	"showAsTabControl": false,
-	"showFullScreenExpander": false,
-	"showHtml": false,
-	"showPreview": false,
-	"showPreviewHeaderWarning": false
-}
-``` 
+An example of the custom values you can add to the RTEGlobalConfiguration.json is:
+
+  ```
+  {
+     "defaultSupportedProps": {
+             "height": 300,
+	     "toolbarLocation" : "top"
+      }
+   }   
+  ```
+
+
 ## Find the current setting for a rich text editor configuration
 
 1. In a Microsoft Edge or Google Chrome web browser, run your model-driven app and open a form that has the rich text editor control, such as an account row.
@@ -1072,7 +1027,6 @@ The following table describes the different formatting features and functionalit
 |![Underline.](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
 |![Text Highlight Color.](media/text-highlight-color.png "Text Highlight Color")| Text Highlight Color |  | Make your text stand out by highlighting it in a bright color. |
 |![Font Color.](media/font-color.png "Font Color")| Font Color |  | Change the color of your text. |
-|![Attachment.](media/rte-attachment.png "Attachment")| Attachment |  | Attach a file. After you've uploaded a file, you can select the link to preview the file in the **Attachment Preview** dialog. |
 |![Bullets.](media/format-bullets.png "Bullets")| Bullets |  | Create a bulleted list. |
 |![Numbering.](media/format-numbering.png "Numbering")| Numbering |  | Create a numbered list. |
 |![Decrease Indent.](media/decrease-indent.png "Decrease Indent")| Decrease Indent |  | Move your paragraph closer to the margin. |
@@ -1081,7 +1035,7 @@ The following table describes the different formatting features and functionalit
 |![Align Left.](media/align-left.png "Align Left")| Align Left | Ctrl+L | Align your content with the left margin. (Commonly used for body text to make it easier to read.) |
 |![Align Center.](media/align-center.png "Align Center")| Align Center | Ctrl+E | Center your content on the page. (Commonly used for a formal appearance.) |
 |![Align Right.](media/align-right.png "Align Right")| Align Right | Ctrl+R | Align your content with the right margin. (Commonly used for a formal appearance.) |
-|![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it.<br /> |
+|![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" becomes "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link opens after you select it.<br /> |
 |![Remove Link.](media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
 |![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type small letters just above the line of text. |
 |![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type small letters just below the line of text. |
@@ -1097,10 +1051,17 @@ The following table describes the different formatting features and functionalit
 |![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Select to expand the toolbar and make all options visible. |
 | | | | |
 
-
 > [!Tip]
 > You can access your browser's context menu by selecting **Ctrl** + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.<br><br>
 > Also, an alternative to your browser's built-in spellchecker is the [Microsoft Editor browser extension](https://www.microsoft.com/microsoft-365/microsoft-editor). Microsoft Editor works seamlessly with the rich text editor control, and when enabled, provides fast and easy inline grammar and spellcheck capabilities.
+
+## Use Copilot to refine text (Preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Copilot uses natural language processing (NLP) algorithms to help refine and improve written text. You can provide an initial draft or a partial piece of writing, and Copilot generates suggestions to enhance the content, grammar, clarity, or overall quality of the text. More information: [Use Copilot in rich text editor for email](../model-driven-apps/use-copilot-email-assist.md)
+
+To add the Copilot button to a rich text editor toolbar, see [Add the Copilot option to a rich text editor](../model-driven-apps/copilot-control.md)
 
 ## Accessibility shortcuts
 
@@ -1130,7 +1091,9 @@ The following table outlines a list of accessibility shortcuts available when us
 	
 ## Offline experience
 
-The rich text editor control is available when working offline with a basic configuration. The following is a list of supported plugins and formatting options when working offline. All configuration added through web resource files are not available while offline.
+The rich text editor control is available when working offline with a basic configuration. The following is a list of supported plugins and formatting options when working offline. All configuration added through web resource files aren't available while offline.
+	
+Images uploaded using the default configuration won't be available offline.
 	
 ### Plugins available for offline
 
@@ -1164,17 +1127,21 @@ The following table describes the different formatting features and functionalit
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
 | | | | |
 
-
 ## Frequently asked questions
 
 Q: Why are typed characters slow to display?
 
 A. Large content size can cause latency. More information: [Best practices for using the rich text editor](#best-practices-for-using-the-rich-text-editor). Spelling or grammar checks can also slow the typing performance.
 
+Q: Why can't I upload an image, and why does the image preview fail to load?
+
+A. If the image file name is long or contains many full-width characters, it may fail to upload or the preview might not be displayed. Try shortening the file name and then upload it again.
+
+   :::image type="content" source="media/rte-image-preview.png" alt-text="Image preview failure.":::
 
 ## Known issues
 
-- HTML markup is displayed for columns configured to use the rich text editor control that are displayed in components other than a column on a form which do not have the format set to RichText. For example, this occurs in views, subgrids, paginated reports, and portals.
+- HTML markup is displayed for columns configured to use the rich text editor control that are displayed in components other than a column on a form, which don't have the format set to RichText. For example, this occurs in views, subgrids, paginated reports, and Power Pages.
 > [!div class="mx-imgBorder"] 
 > ![HTML markup displayed in a column on a subgrid.](media/html-markup-issue.png)
 To resolve this issue, see [Simple configuration](#simple-configuration) for the steps necessary to set the **Format** option to **Rich text**.
@@ -1182,7 +1149,8 @@ To resolve this issue, see [Simple configuration](#simple-configuration) for the
 
 ### See also
 
-[Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)
+[Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)  
+[Use Copilot in rich text editor for email](../model-driven-apps/use-copilot-email-assist.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

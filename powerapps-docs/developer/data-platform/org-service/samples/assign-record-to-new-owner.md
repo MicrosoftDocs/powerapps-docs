@@ -2,16 +2,12 @@
 title: " Assign a record to a new owner (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to assign records to a new owner." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -23,7 +19,8 @@ This sample shows how to assign an account to another user by using the [IOrgani
 
 This sample uses the `IOrganization.Update` method rather than the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) because there is an effort to remove specialized messages. More information: [Perform specialized operations using update](../../special-update-operation-behavior.md)
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssignRecordToNewOwner).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Assign a record to a new owner sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssignRecordToNewOwner)
 
 ## How to run this sample
 

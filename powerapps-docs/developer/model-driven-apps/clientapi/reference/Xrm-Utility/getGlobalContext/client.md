@@ -1,18 +1,14 @@
 ---
 title: "getGlobalContext.client (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Describes the client object returned from the getGlobalContext method."
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -42,15 +38,14 @@ Returns a value to indicate which client the script is executing in.
 
 Value |Client | 
 |---|---|
-|Web |Web application|
-|Web |Unified Interface|
-|Outlook |Dynamics 365 for Outlook client (COM add-in)|
-|Mobile |Mobile app |
-|||
+|`Web` |Web application|
+|`Web` |Unified Interface|
+|`Outlook` |Dynamics 365 for Outlook client (COM add-in)|
+|`Mobile` |Mobile app |
 
 ## getClientState
 
-Returns a value to indicate the state of the client.  Note that a client in offline-first mode (in preview) will always indicate it is offline.
+Returns a value to indicate the state of the client. A client in offline-first mode (in preview) always indicates it's offline.
 
 ### Syntax
 
@@ -64,9 +59,8 @@ Returns a value to indicate the state of the client.  Note that a client in offl
 
 Value |Client | 
 |---|---|
-|Online |Web application, Dynamics 365 for Outlook client (COM add-in), Mobile app, Unified Interface|
-|Offline |Outlook, Mobile app|
-|||
+|`Online` |Web application, Dynamics 365 for Outlook client (COM add-in), Mobile app, Unified Interface|
+|`Offline` |Outlook, Mobile app|
 
 ## getFormFactor
 
@@ -84,14 +78,14 @@ Returns information about the kind of device the user is using.
 
 Value |Form Factor | 
 |---|---|
-|0 |Unknown|
-|1 |Desktop|
-|2 |Tablet |
-|3 |Phone |
+|`0` |Unknown|
+|`1` |Desktop|
+|`2` |Tablet |
+|`3` |Phone |
 
 ## isOffline
 
-Returns information whether the client state is online or offline.  Note that a client in offline-first mode will always report it is offline.
+Returns information whether the client state is online or offline. A client in offline-first mode always reports it's offline.
 
 ### Syntax
 
@@ -107,6 +101,8 @@ Returns information whether the client state is online or offline.  Note that a 
 
 Returns information whether the network is available or not, regardless of client mode.
 
+[!INCLUDE [online-only-api-note](../../../includes/online-only-api-note.md)]
+
 ### Syntax
 
 `clientContext.isNetworkAvailable()`
@@ -117,14 +113,10 @@ Returns information whether the network is available or not, regardless of clien
 
 **Description**: **true** if the network is available; **false** otherwise.
 
-## Related topics
+## Related articles
 
-[Organization Settings](organizationSettings.md)
-
-[User Settings](userSettings.md)
-
+[Organization Settings](organizationSettings.md)   
+[User Settings](userSettings.md)   
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

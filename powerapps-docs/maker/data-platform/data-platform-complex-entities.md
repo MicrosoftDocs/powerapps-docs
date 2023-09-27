@@ -10,9 +10,6 @@ ms.subservice: dataverse-maker
 ms.author: kvivek
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Complex tables and licensing

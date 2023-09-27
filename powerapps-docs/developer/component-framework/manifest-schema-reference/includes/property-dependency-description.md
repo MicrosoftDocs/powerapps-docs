@@ -1,0 +1,1 @@
+A property dependency in the property-dependencies node. Defines dependency between two properties.

@@ -13,22 +13,12 @@ applies_to:
 author: "Mattp123"
 ms.author: "emcoope"
 ms.reviewer: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
-
-# Work with model-driven app pages (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Work with model-driven app pages
 
 App designer pages are containers for one or more tables or dashboards. You can choose whether to have the page appear in the app navigation (site map) or not.
-
-> [!IMPORTANT]
-> This is a preview feature. More information: [Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
 
 ## Create a page
 
@@ -80,4 +70,4 @@ To remove a page complete the following steps:
 
 [Create or edit model-driven app dashboards](create-edit-dashboards.md)
 
-[Add a custom page to your model-driven app (preview)](add-page-to-model-app.md)
+[Add a custom page to your model-driven app](add-page-to-model-app.md)

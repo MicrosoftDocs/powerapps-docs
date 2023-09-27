@@ -2,7 +2,6 @@
 title: Overview of Regional Government Emergency Response and Monitoring solution for Power Platform (contains video) | Microsoft Docs
 description: Provides an overview of Regional Government Emergency Response and Monitoring solution for state and local governments.
 author: pankajarora-msft
-manager: annbe
 
 ms.topic: overview
 ms.custom: 

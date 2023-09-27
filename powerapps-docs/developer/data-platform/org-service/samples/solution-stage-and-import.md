@@ -7,12 +7,8 @@ ms.reviewer:
 ms.topic: sample
 author: "phecke" # GitHub ID
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Solution staging with asynchronous import
@@ -24,7 +20,8 @@ This sample shows how to perform the following actions with solutions:
 - Stage a solution and check the validation results
 - Import the staged solution using an asynchronous job and check for job completion
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SolutionStagingAndImport).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Solution staging with asynchronous import sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SolutionStagingAndImport)
 
 ## How to run this sample
 

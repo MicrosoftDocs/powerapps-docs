@@ -4,7 +4,6 @@ description: "Learn how to create many-to-many table relationships"
 ms.custom: ""
 ms.date: 04/07/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview
@@ -17,16 +16,10 @@ ms.assetid: 248cecfd-c9e8-430b-b4b0-860669866084
 caps.latest.revision: 33
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create many-to-many table relationships overview
-
-
 
 One-to-many (1:N) table relationships establish a hierarchy between rows. With Many-to-many (N:N) relationships there is no explicit hierarchy. There are no lookup columns or behaviors to configure. Rows created using Many-to-many relationships can be considered peers and the relationship is reciprocal.  
 
@@ -36,7 +29,7 @@ With Many-to-many relationships a Relationship (or Intersect) table stores the d
   
 Creating a Many-to-many relationship requires choosing the two tables that you want to participate in the relationship. For model-driven apps you can decide how you want the respective lists to be available within the navigation for each table. These are the same options used for the primary table in 1:N table relationships. More information:  [Navigation Pane Item for Primary table](create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table)
   
-Not all tables can be used with Many-to-many relationships. If the table isn't available to be chosen in the designer, you can’t create a new Many-to-many relationship with this table. More information: [Developer documentation: table relationship eligibility](/dynamics365/customer-engagement/developer/entity-relationship-eligibility)
+Not all tables can be used with Many-to-many relationships. If the table isn't available to be chosen in the designer, you can’t create a new Many-to-many relationship with this table. More information: [Developer documentation: table relationship eligibility](/power-apps/developer/data-platform/entity-relationship-eligibility)
 
 There are two designers you can use to create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships:
 
@@ -62,8 +55,5 @@ You should use the Power Apps portal to create and edit Many-to-many (N:N) table
 [Create and edit relationships between tables](create-edit-entity-relationships.md)<br />
 [Create Many-to-many table relationships in Dataverse using Power Apps portal](create-edit-nn-relationships-portal.md)<br />
 [Create N:N (many-to-many) table relationships in Dataverse using solution explorer](create-edit-nn-relationships-solution-explorer.md)<br />
-[Developer documentation: Customize table relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
-[Developer documentation: Entity relationship eligibility](/dynamics365/customer-engagement/developer/entity-relationship-eligibility)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

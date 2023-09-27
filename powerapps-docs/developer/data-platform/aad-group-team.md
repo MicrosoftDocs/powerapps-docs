@@ -2,7 +2,7 @@
 title: "Work with Azure Active Directory group teams (Dataverse)| Microsoft Docs"
 description: "Learn about working with an Azure Active Directory group team using the Web API."
 ms.custom: ""
-ms.date: 02/15/2022
+ms.date: 09/21/2023
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,13 +13,9 @@ ms.assetid: 767f39d4-6a8e-48f0-bf7d-69ea1191acef
 caps.latest.revision: 8
 author: "paulliew" # GitHub ID
 ms.author: "paulliew" # MSFT alias of Microsoft employees only
-manager: "mayadu" # MSFT alias of manager or PM counterpart
 ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Work with Azure Active Directory group teams
@@ -37,12 +33,15 @@ Just-in-time updates mean that the actions are taken at run-time to eliminate th
 
 The following sections describe how to work with AAD group teams using the Web API. 
 
+## Impersonate another user
+Your service can make calls on behalf of another system user by [impersonating the user](impersonate-another-user.md#impersonate-another-user-using-the-web-api). If the system user belongs to an AAD Security group and the AAD security group is a Dataverse group team, that user is added into Dataverse automatically (if the user doesn't already exist in Dataverse). The user is also automatically added into the Dataverse group team after being added to Dataverse or if the user already exists in Dataverse.
+
 ## Create an AAD group team
 An AAD group team can be created in Dataverse by making an API call (programmatically) or by just-in-time when a security role is assigned to the AAD group, or when a record is assigned to the AAD group. 
 
 Citizen developers wanting to programmatically create a Microsoft Dataverse AAD group team can do so by providing the object ID of an existing AAD group as shown in the following command.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/teams
@@ -64,7 +63,7 @@ Where:
 
 An administrator can assign a security role to an AAD group team after the AAD group is created in AAD. The AAD group team is created into Dataverse automatically if it doesn't exist in Dataverse.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/teams(azureactivedirectoryobjectid=<group team ID>,membershiptype=0)/teamroles_association/$ref
@@ -79,7 +78,7 @@ Accept: application/json
 
 An administrator can assign a security role to an AAD group user.  The user is added into Dataverse automatically if the user doesn't exist in Dataverse and the role is assigned directly to the user.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/systemusers(azureactivedirectoryobjectid=<user object ID>)/systemuserroles_association/$ref
@@ -95,7 +94,7 @@ An administrator can assign a record to an AAD group.  The AAD group team is cre
 
 The example below shows the syntax for assigning an account record.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.0/accounts(<account ID>)
@@ -112,7 +111,7 @@ An administrator can assign a record to an AAD group member.  The AAD group memb
 
 The example below shows the syntax for assigning an account record.
 
-**Request**
+**Request:**
 
 ```http
 PATCH [Organization URI]/api/data/v9.0/accounts(<account ID>)
@@ -128,7 +127,7 @@ Accept: application/json
 
 The example below shows the syntax for sharing an account record.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/GrantAccess
@@ -154,7 +153,7 @@ Accept: application/json
 
 The example below shows the syntax for sharing an account record.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/GrantAccess
@@ -176,11 +175,11 @@ Accept: application/json
 
 ## Retrieve a user
 
-You can retrieve a user row using an Azure user object identifier (ID). If the user doesn't exist in Dataverse, the user is added to Dataverse automatically.
+You can retrieve a system user table row using an Azure user object identifier (ID). If the system user doesn't exist in Dataverse, the user is added to Dataverse automatically and added into the Dataverse group team if the user belongs to an AAD group that exists in Dataverse. **If the user exists in Dataverse, the user is not added to the Dataverse group team.** 
 
 The example below shows the syntax for retrieving a user row.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/SystemUser(azureactivedirectoryobjectid=<user object ID>)
@@ -190,13 +189,13 @@ GET [Organization URI]/api/data/v9.0/SystemUser(azureactivedirectoryobjectid=<us
 
 Members of an AAD group can query all the security roles that are directly and indirectly assigned to them using the following command.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/RetrieveAadUserRoles(DirectoryObjectId=<user object ID)?$select=_parentrootroleid_value,name
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -218,13 +217,13 @@ GET [Organization URI]/api/data/v9.0/RetrieveAadUserRoles(DirectoryObjectId=<use
 
 Members of an AAD group can check their security privileges without being a user of Dataverse using the following command.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.0/RetrieveAadUserPrivileges(DirectoryObjectId=<user object ID>)
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -246,6 +245,10 @@ GET [Organization URI]/api/data/v9.0/RetrieveAadUserPrivileges(DirectoryObjectId
 If you have a non-interactive process where your service needs to check if the user has access rights to a record, you can make a [RetrievePrincipalAccess function](/dynamics365/customer-engagement/web-api/retrieveprincipalaccess) call on behalf of the user by specifying the `CallerID`.
 
 More information: [Impersonate another user](impersonate-another-user.md)
+
+## Triggering an event when a team member is added or removed from the group team
+
+Group members are added or removed [just-in-time](#just-in-time-updates) into the Dataverse group team using the [associate and disassociate APIs](webapi/associate-disassociate-entities-using-web-api.md). You can register a [plug-in](plug-ins.md) on the event triggered by these team member additions or removals from the group team.
 
 ### See also
 

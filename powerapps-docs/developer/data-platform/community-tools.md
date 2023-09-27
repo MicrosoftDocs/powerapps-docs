@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: "annbe" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Community tools for Microsoft Dataverse
 
@@ -42,13 +38,13 @@ The following is a selected list of community tools distributed via the XrmToolB
 |[User Settings Utility](https://www.xrmtoolbox.com/plugins/MsCrmTools.UserSettingsUtility/)|Manage users personal settings in bulk|
 |[PCF Builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/)|Easily create, build and test your custom control using Power Apps Component Framework|
 |[SQL 4 CDS](https://www.xrmtoolbox.com/plugins/MarkMpn.SQL4CDS/)|SQL 4 CDS allows you to use standard SQL syntax to query and manipulate your data and metadata in Dataverse|
-|[Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)|Create, update and get 360° View of Dataverse Custom APIs|
+|[Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)|Create, update and get 360° View of Dataverse custom APIs|
 
 ## Browser Extensions
 
-### Chromium Metadata Browser
+### Pascalcase Metadata Browser
 
-Here is another tool, [Chromium Metadata Browser](https://pascalcase.com/Home/Metadata), that lets you browse metadata such as tables, columns, relationships, choices of Dataverse environments. It works with Microsoft Edge and Google Chrome browsers. 
+Here is another tool, [Pascalcase Metadata Browser](https://pascalcase.com/Home/Metadata), that lets you browse metadata such as tables, columns, relationships, choices of Dataverse environments. It works with Microsoft Edge browser. 
 
 ### Level up for Dynamics 365/Power Apps
 

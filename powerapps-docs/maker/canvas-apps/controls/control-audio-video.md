@@ -8,13 +8,11 @@ ms.custom: canvas
 ms.date: 01/31/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Audio and Video controls in Power Apps

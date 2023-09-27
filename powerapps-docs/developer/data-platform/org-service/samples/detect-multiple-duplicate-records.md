@@ -4,14 +4,10 @@ description: "This sample shows how to detect and log multiple duplicate records
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -27,7 +23,10 @@ This sample shows how to detect and log multiple duplicate records for a specifi
 
 ## What this sample does
 
-The `BulkDetectDuplicatesRequest` message is intended to be used in a scenario that contains data that is needed to submit an asynchronous system job that detects and logs multiple duplicate records. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DetectMultipleDuplicateRecords).
+The `BulkDetectDuplicatesRequest` message is intended to be used in a scenario that contains data that is needed to submit an asynchronous system job that detects and logs multiple duplicate records.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Detect multiple duplicate records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DetectMultipleDuplicateRecords)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

@@ -1,25 +1,22 @@
 ---
-title: Use deep links with Power Apps  mobile| Microsoft Docs
+title: Use deep links with the Power Apps mobile app
 description: How to configure deep links for Power Apps mobile.
-author: mduelae
+author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 5/20/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: trdehove
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---
 
-# Use deep links with Power Apps mobile
+# Use deep links with the Power Apps mobile app
 
 Deep links let users move from one application to another on computers and mobile devices. Simple examples include a mobile app deep-linking to Facebook to sign in, an email address deep-linking to a mail app to compose a message, or a website deep-linking to an app store to download a related mobile app. 
 
@@ -40,7 +37,7 @@ Deep links for Power Apps mobile should start with the following:
 
 | **Parameter**        | **Description**                                                              |
 |----------------------|------------------------------------------------------------------------------|
-| &lt;targeted-app&gt; | <ul><li>`ms-dynamicsxrm` -> Dynamics 365 for phones</li><li> `ms-apps-fs` -> Field Service</li><li>`ms-apps-sales` -> Dynamics 365 Sales</li><li>`ms-apps` -> Power Apps                                                                     |
+| &lt;targeted-app&gt; | <ul><li>`ms-dynamicsxrm` -> Dynamics 365 for phones</li><li> `ms-apps-fs` -> Field Service</li><li>`ms-apps` -> Power Apps</li><li>`ms-mobile-apps` -> wrapped native mobile apps</li>                                                                     |
 | &lt;org-url&gt;      | Connects to the correct org URL                                              |
 | &lt;app-id&gt;       | Opens the correct app module                                                 |
 | tenantId             | Connects to the correct tenant                                               |
@@ -74,4 +71,15 @@ If the link goes to an `entitylist` view, add the following parameters:
 |----------------------|------------------------------------------------------------------------------|
 | &lt;app-id&gt;       | Opens the correct app module                                                 |
 | &lt;tenantId&gt;     | Connects to the correct tenant                                               |
+  
+
+  ## Supported Urls parameters for a wrapped native mobile app
+  
+ ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>```
+
+| **Parameter**        | **Description**                                                              |
+|----------------------|------------------------------------------------------------------------------|
+| &lt;app-id&gt;       | Opens the correct app module                                                 |
+| &lt;tenantId&gt;     | Connects to the correct tenant                                               |
+  
   

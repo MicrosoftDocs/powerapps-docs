@@ -3,16 +3,13 @@ title: "addOnOutputChange (Client API reference) in model-driven apps| Microsoft
 description: Includes description and supported parameters for the control.addOnOutputChange method.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
+
 ms.date: 08/17/2022
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -36,12 +33,11 @@ control.addOnOutputChange(myFunction);
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes|The function to add to the **OnOutputChange** event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
+|`myFunction` |Function |Yes|The function to add to the [OnOutputChange event](../events/onoutputchange.md). The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
-### Related topics
+### Related articles
 
-[OnOutputChange event](../events/onoutputchange.md)
-
-[removeOnOutputChange](removeonoutputchange.md) 
+[OnOutputChange event](../events/onoutputchange.md)   
+[removeOnOutputChange](removeonoutputchange.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -4,14 +4,10 @@ description: "This sample shows how to create a new currency and retrieve and di
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -21,7 +17,10 @@ contributors:
 
 <!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-retrieve-currency-exchange-rate -->
 
-This sample shows how to create a new currency, and how to retrieve and display the currency exchange rate relative to the organization’s base currency. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveCurrencyExchangeRate).
+This sample shows how to create a new currency, and how to retrieve and display the currency exchange rate relative to the organization’s base currency.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve currency exchange rate sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveCurrencyExchangeRate)
 
 ## How to run this sample
 

@@ -6,15 +6,13 @@ author: joel-lindstrom
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ms.topic: conceptual
 ms.custom: canvas
 ms.date: 12/15/2021
 ms.author: anuitz
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
   - anuitz
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Supported customizations for Microsoft Dataverse" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how you can customize Microsoft Dataverse using available tools." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 09/02/2022
 ms.reviewer: pehecke
 ms.topic: article
@@ -10,9 +10,6 @@ ms.subservice: dataverse-developer
 ms.author: shmcarth # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -111,7 +108,7 @@ The following is a list of unsupported action types that are frequently asked ab
     - Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.dll
     - Microsoft.Xrm.Tooling.WebResourceUtility.dll
 
-- The use of application programming interfaces (APIs) other than the documented APIs in the web services: SDK API, Web API, Organization service, Deployment service, Discovery service, Organization Data service.
+- The use of application programming interfaces (APIs) other than the documented APIs in the web services: Web API, SDK for .NET, Deployment service, Discovery service, Organization Data service.
 
 - Plug-in and workflow assemblies must contain all the necessary logic within the respective DLL. Plugins may reference some core .NET assemblies. However, we do not support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface. Previously, Dynamics 365 allowed for assemblies to refer to these interfaces, but to adhere to our security standards, changes to this behavior are required.
 

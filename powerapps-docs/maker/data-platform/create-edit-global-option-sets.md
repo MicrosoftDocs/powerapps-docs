@@ -15,13 +15,9 @@ ms.assetid: f06b8941-8dca-4601-b965-341cfb6fc3b2
 caps.latest.revision: 11
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 author: "Mattp123"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create and edit choice columns overview
 
@@ -39,7 +35,7 @@ Choice columns can be configured as either single select (choice) or multi-selec
 > [!NOTE]
 > You can also create global choices in your environment using the following:
 > - Import a solution that contains the definition of the global choices.
-> - A developer can write a program to create them. <br />More information: [Developer documentation: Choices columns](/developer/data-platform/multi-select-picklist).
+> - A developer can write a program to create them. <br />More information: [Developer documentation: Choices columns](/power-apps/developer/data-platform/multi-select-picklist).
 
 ## See also
 

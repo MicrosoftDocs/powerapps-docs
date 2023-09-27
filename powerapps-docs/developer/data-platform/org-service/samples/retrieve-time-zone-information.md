@@ -4,14 +4,10 @@ description: "This sample shows how to retrieve time zone information" # 115-145
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Retrieve time zone information
 
-This sample shows how to retrieve time zone information. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveTimeZone).
+This sample shows how to retrieve time zone information.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve time zone information sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveTimeZone)
 
 ## How to run this sample
 

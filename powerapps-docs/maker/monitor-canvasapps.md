@@ -6,15 +6,13 @@ author: mattgon
 ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 08/16/2021
 ms.author: austinj
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - mattgon
   - maustinjones
 ---
@@ -74,6 +72,15 @@ This action opens the published app in a new browser tab and connects it to your
 Monitor also displays a notification that the monitoring session that's currently open is for the published version of the app.
 
 ![Published app session.](media/monitor/published-app-session.png "Published app session")
+
+### For apps running on Power Apps mobile (preview)
+
+Follow the above steps, but select **Copy monitor link** instead of **Play published app**. Use the copied link on your device to open a monitored session for the published app. Make sure the link is opened using [Power Apps mobile](../mobile/run-powerapps-on-mobile.md), not a browser.
+
+> [!NOTE]
+> **Copy monitor link** is available in https://make.preview.powerapps.com
+
+![Copy monitor link.](media/monitor-copy-link.png "Copy monitor link")
 
 ### Setting: Debug published app
 

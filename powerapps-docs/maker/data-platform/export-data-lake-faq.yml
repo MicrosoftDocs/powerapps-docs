@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 02/10/2021
+  ms.date: 01/05/2023
   ms.author: sabinn
   ms.reviewer: 
   contributors: JasonHQX
@@ -14,10 +14,12 @@ summary: This article provides information on frequently asked questions about e
 sections:
 - name: General
   questions:
-   - question: Does adding multiple Microsoft Dataverse tables simultaneously to the lake impact performance?
+   - question: Can I create, update or delete the data file in the Azure storage manually?
      answer: |
-        Adding multiple tables to the Azure Synapse Link profile will impact performance in following scenario: 
-        - Delta sync: After the initial sync of tables are completed, any change in Dataverse for selected tables is added to a common queue in Azure Synapse Link. The queue is processed with a fixed set of parallel listeners. If you add more tables to the queue, Azure Synapse Link will process the messages, but if the number of messages are higher, it will add latency for data to sync to synapse and/or the data lake. 
+        Data files should not be modified by a customer and no customer files should be placed in the data folders.
+   - question: Can I link a Synapse workspace to an existing Synapse Link profile with data lake only?
+     answer: |
+        Yes. In your web browser's address bar, append `?athena.updateLake=true` to the web address that ends with **exporttodatalake**. When you select an existing profile from the Synapse Link homepage, you'll see a new action in the extended option **Link to Azure Synapse Analytics Workspace**.  
    - question: How can I access my table relationships?
      answer: |
         To access many-to-many relationships, the relationship will be available as a table to select from the **Add tables** page for a new link and from the **Manage tables** for a preexisting link.
@@ -35,6 +37,9 @@ sections:
         Deleting a row is handled differently based on which data write options you choose:
         - In-place update: This is the default mode and when you delete a table row in this mode, the row is also deleted from the corresponding data partition in the Azure Data Lake. In other words, data is hard deleted from the destination. 
         - Append-only: In this mode, when a Dataverse table row is deleted, it is not hard deleted from the destination. Instead, a row is added and set as isDeleted=True to the file in the corresponding data partition in Azure Data Lake.
+   - question:  Why does the Model.json file increase or change in length for the data types and doesn't keep what is defined in Dataverse?
+     answer: |
+        Model.json keeps the database length for the column's size. Dataverse has a concept of database length for each column. If you create a column with a size of 200 and later reduce it to 100, Dataverse still allows your existing data to be present in Dataverse. It does that by keeping DBLength to 200 and MaxLength to 100. What you see in Model.json is DBLength and if you use that for downstream processes you will never provision lesser space for your Dataverse columns.
    - question: What date and time formats can be expected in exported Dataverse tables?
      answer: |
         There are three date and time formats that can be expected in the exported Dataverse tables.
@@ -47,22 +52,35 @@ sections:
         
         > [!NOTE]
         > **CreatedOn** data type changed from datetime to datetimeOffset on 07/29/2022. To edit the data type format for a table created before the change, drop and re-add the table.
+        > 
+        > You can choose different column behaviors for a Date and Time column in Dataverse, which updates the data type format. More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
    - question: When should I use a yearly or monthly partition strategy?
      answer: |
         For Dataverse tables where data volume is high within a year, we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.
-   - question: When do I use Append only mode for a historical view of changes?
+   - question: What is append only mode and what is the difference between append only and in-place update mode?
+     answer: |
+        In append only mode, incremental data from Dataverse tables are appended to the corresponding file partition in the lake. For more information: [Advanced Configuration Options in Azure Synapse Link](azure-synapse-link-advanced-configuration.md)
+   - question: When do I use append only mode for a historical view of changes?
      answer: |
          Append only mode is the recommended option for writing Dataverse table data to the lake, especially when the data volumes are high within a partition with frequently changing data. Again, this is a commonly used and highly recommended option for enterprise customers. Additionally, you can choose to use this mode for scenarios where the intent is to incrementally review changes from Dataverse and process the changes for ETL, AI, and ML scenarios. Append only mode provides a history of changes, instead of the latest change or in place update, and enables several time series from AI scenarios, such as prediction or forecasting analytics based on historical values. 
+   - question: How do I retrieve the most up-to-date row of each record and exclude deleted rows when I export data in append only mode?
+     answer: |
+        In append only mode, you should identify the latest version of record with the same ID using **VersionNumber** and **SinkModifiedOn** then apply **isDeleted=0** on the latest version.
+   - question: Why do I see duplicated version numbers when I export data using append only mode?   
+     answer: |
+         For append only mode, if Azure Synapse Link for Dataverse does not get an acknowledgement from the Azure data lake that the data has been committed due to any reason such as network delays, Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using SinkModifiedOn.     
    - question: Which Dataverse tables are not supported for export?
      answer: |
         Any table that does not have change tracking enabled will not be supported in addition to following system tables:
         - Attachment
-        - Annotation
-        - String Map
         - Calendar
-   - question: Which Dataverse tables use Append only by default?
+        - Calendarrule
+   - question: Does Azure Synapse Link support calculated columns?
      answer: |
-        All tables that do not have a createdOn field will be synced using Append only mode by default. This includes relationship tables as well as the ActivityParty table.
+        Yes. In Dataverse, the calculated column keeps only the formula information and the real value depends on the base entity column so the calculated column will be updated if and only if all data (base tables) related to calculated columns are exported via Azure Synapse Link.
+   - question: Which Dataverse tables use append only mode by default?
+     answer: |
+        All tables that do not have a createdOn field will be synced using append only mode by default. This includes relationship tables as well as the ActivityParty table.
    - question: Why does Azure Synapse Link for Dataverse require all resources to be in the same region and what can I do about it?
      answer: |
         To ensure high performance and low latency in addition to preventing egress charges, Synapse Link requires all resources to be located in the same region. If you have a cross-region scenario, you can:

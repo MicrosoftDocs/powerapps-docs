@@ -5,13 +5,9 @@ ms.date: 04/06/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: pehecke
-manager: sunilg
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -40,7 +36,8 @@ Use the following message request classes with choices:
 - <xref:Microsoft.Xrm.Sdk.Messages.UpdateOptionValueRequest>
 - <xref:Microsoft.Xrm.Sdk.Messages.UpdateStateValueRequest>
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithOptionSets).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Work with choices sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithOptionSets)
 
 ## How to run this sample
 

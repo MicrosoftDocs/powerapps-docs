@@ -1,18 +1,14 @@
 ---
 title: "workflowbinary table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the workflowbinary table/entity."
-ms.date: 08/31/2022
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "margoc"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # workflowbinary table/entity reference
@@ -22,26 +18,28 @@ search.app:
 
 
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Extensions Workflow Binary package Solution
 
 
 ## Messages
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/workflowbinaries(*workflowbinaryid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/workflowbinaries<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/workflowbinaries(*workflowbinaryid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/workflowbinaries(*workflowbinaryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/workflowbinaries<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
-|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/workflowbinaries(*workflowbinaryid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/workflowbinaries(*workflowbinaryid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Assign|PATCH /workflowbinaries(*workflowbinaryid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST /workflowbinaries<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE /workflowbinaries(*workflowbinaryid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|ModifyAccess|<xref:Microsoft.Dynamics.CRM.ModifyAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET /workflowbinaries(*workflowbinaryid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /workflowbinaries<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH /workflowbinaries(*workflowbinaryid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /workflowbinaries(*workflowbinaryid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -86,6 +84,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 ### <a name="BKMK_FlowSessionId"></a> FlowSessionId
+
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -135,6 +135,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Metadata"></a> Metadata
 
+**Added by**: Power Automate Extensions core package Solution
+
 |Property|Value|
 |--------|-----|
 |Description|JSON blob containing metadata about the binary data|
@@ -150,6 +152,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 ### <a name="BKMK_MimeType"></a> MimeType
+
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -230,6 +234,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Process"></a> Process
 
+**Added by**: Power Automate Extensions core package Solution
+
 |Property|Value|
 |--------|-----|
 |Description|The ID of the workflow entity that the binary belongs to|
@@ -243,6 +249,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 ### <a name="BKMK_Reference"></a> Reference
+
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -259,6 +267,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 ### <a name="BKMK_ReferenceName"></a> ReferenceName
+
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -334,6 +344,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 ### <a name="BKMK_Type"></a> Type
+
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -578,6 +590,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_Data"></a> Data
 
+**Added by**: Power Automate Extensions core package Solution
+
 |Property|Value|
 |--------|-----|
 |Description|Azure blob storage backed file containing the binary data|
@@ -590,6 +604,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_Data_Name"></a> Data_Name
+
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -606,6 +622,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_FlowSessionIdName"></a> FlowSessionIdName
+
+**Added by**: Power Automate Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -886,6 +904,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_ProcessName"></a> ProcessName
 
+**Added by**: Power Automate Extensions core package Solution
+
 |Property|Value|
 |--------|-----|
 |Description||
@@ -1121,6 +1141,8 @@ See the [team_workflowbinary](team.md#BKMK_team_workflowbinary) one-to-many rela
 See the [business_unit_workflowbinary](businessunit.md#BKMK_business_unit_workflowbinary) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_flowsession_workflowbinary_FlowSessionId"></a> flowsession_workflowbinary_FlowSessionId
+
+**Added by**: Power Automate Extensions core package Solution
 
 See the [flowsession_workflowbinary_FlowSessionId](flowsession.md#BKMK_flowsession_workflowbinary_FlowSessionId) one-to-many relationship for the [flowsession](flowsession.md) table/entity.
 

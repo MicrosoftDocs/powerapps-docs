@@ -4,14 +4,10 @@ description: "<Description>" # 115-145 characters including spaces. This abstrac
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Promote an email message
 
-This sample shows how to create an email activity instance from the specified email message in Microsoft Dataverse by using the [DeliverPromoteEmailRequest](/dotnet/api/microsoft.crm.sdk.messages.deliverpromoteemailrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/PromoteEmail).
+This sample shows how to create an email activity instance from the specified email message in Microsoft Dataverse by using the [DeliverPromoteEmailRequest](/dotnet/api/microsoft.crm.sdk.messages.deliverpromoteemailrequest) message
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Promote an email message sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/PromoteEmail)
 
 ## How to run this sample
 

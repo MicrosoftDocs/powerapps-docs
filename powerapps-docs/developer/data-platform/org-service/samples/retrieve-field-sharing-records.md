@@ -4,14 +4,10 @@ description: "This sample shows how to retrieve the field sharing records for a 
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew
-manager: mayadu
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Retrieve field sharing records
 
-This sample shows how to retrieve the `PrincipalObjectAttributeAccess` (field sharing) records for a table. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveFieldSharing).
+This sample shows how to retrieve the `PrincipalObjectAttributeAccess` (field sharing) records for a table.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve field sharing records sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveFieldSharing)
 
 ## How to run this sample
 

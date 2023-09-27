@@ -4,7 +4,6 @@ description: "Use the Power Apps component framework to create code components t
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: overview
@@ -69,7 +68,7 @@ Power Apps component framework licensing requirements are inline with existing c
 [Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>
 [Create and build a code component](create-custom-controls-using-pcf.md)<br/>
 [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)<br/>
-[Use code components in Power Apps portals](../../maker/portals/component-framework.md)
+[Use code components in Power Pages](../../maker/portals/component-framework.md)
 
 
 

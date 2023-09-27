@@ -9,12 +9,8 @@ author: "phecke" # GitHub ID
 ms.service: powerapps
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Transition apps to Dataverse ServiceClient
@@ -44,11 +40,11 @@ The Dataverse `ServiceClient` class supports a smaller interface surface, inline
 
 Below is a quick summary of the impact to certain types of coding projects.
 
-- Plug-ins or custom workflow activities - no changes, just business as usual
+- Plug-ins or custom workflow activities - no changes
 
-- New or existing online applications - this article is definitely for you
+- New or existing online applications - this article is for you
 
-- On-premise applications - this article is not for you, yet
+- On-premises applications - this article is not for you, yet
 
 ## What do you need to do?
 

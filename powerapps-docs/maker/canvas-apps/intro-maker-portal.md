@@ -1,161 +1,189 @@
 ---
-title: Sign in to Power Apps for the first time
-description: Learn about signing in to Power Apps for the first time, choosing an environment, creating an app, playing or editing an app, and other common tasks.
-author: alaug
-ms.topic: conceptual
-ms.custom: intro-internal
-ms.reviewer: 
-ms.date: 08/11/2022
-ms.subservice: canvas-maker
-ms.author: alaug
+title: "Get started with Power Apps| MicrosoftDocs"
+description: How to navigate the Power Apps home page. 
+ms.custom: ""
+ms.date: 06/15/2023
+ms.reviewer: "mkaur"
+ms.topic: overview
+author: "mkaur"
+ms.subservice: common
+ms.author: "mkaur"
 search.audienceType: 
-  - maker
-search.app: 
-  - PowerApps
+  - maker, admin
 contributors:
-  - tapanm-msft
+  - mduelae
   - alaug
+  - Mattp123
 ---
-# Sign in to Power Apps for the first time
 
-When you sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), the site offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
-You can select options in three general areas:
+# Get started with Power Apps
 
-- The header along the top of the page
+The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
-    ![Header for environment selection.](media/intro-maker-portal/header.png)
+If your organization has AI enabled then it also includes the new [Copilot](ai-overview.md) features.
 
-- The navigation bar along the left side of the page
+Select the appropriate tab below to know more.
 
-    ![Navigation bar.](media/intro-maker-portal/nav-bar.png)
+> [!div class="mx-imgBorder"]
+> ![Navigation with new look](media/intro-maker-portal/homepage-new-look.png "Home page navigation")
 
-- The large icons that feature prominently in the middle of the page
+Legend:
 
-    :::image type="content" source="media/intro-maker-portal/center-area.png" alt-text="Center area of the home page.":::
+1. [Left navigation pane](#1--left-navigation-pane)
+2. [Search](#2--search)
+3. [Environment information and settings](#3--environment-information-and-settings)
+4. [AI Copilot](#4---ai-copilot)
+5. [Build apps](#5--build-apps)
+6. [Get help from a virtual agent](#6--ask-a-virtual-agent)
 
-For best results, start by ensuring that the home page is set to the right environment.
 
-## Choose an environment
+## 1 – Left navigation pane
 
-Whether you're creating an app, a flow, a data connection, or a table in Microsoft Dataverse, much of what you do in Power Apps is contained in a specific environment. Environments create boundaries between different types of work. For example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one. If you have the appropriate permissions, you might even be able to create your own environments.
+Find what you need with the left navigation pane. When you sign in to [Power Apps home page](https://make.powerapps.com) the left navigation pane shows the following menu items:
 
-To verify which environment you're in, find the environment switcher near the right side of the header.
+> [!div class="mx-imgBorder"]
+> ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane")
 
-![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
+Legend:
 
-If you create an app in one environment, you won't be able to see it from another environment. In addition, people who want to run your app must have access to the environment in which you created it.
+1. **Home**: Takes you to the Power Apps home page.
+2. **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
+3. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that help you to create and build Power Apps.
+4. **Apps**: If you've created an app or someone else has created one and shared it with you, you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
+5. **Your most used pages such as Tables, Connections, Flows**: When you first sign in the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
+6. **More**: Pin your most used items to the left navigation such as tables, flows, and more.
+7. **Power Platform**: Explore other Power Platform products or service.
 
-> [!IMPORTANT]
-> - To view the environment list in the environment switcher in Power Apps, you must have the Environment Maker, System Customizer, or System Administrator security role in the environment. For information about predefined security roles, see [Predefined security roles](/power-platform/admin/database-security#predefined-security-roles) in the Microsoft Power Platform admin guide.
-> - Make sure that you're in the right environment *before* you create an app, a flow, or a similar component. You can't easily move components from one environment to another.
+### Pin and unpin
 
-> [!NOTE]
-> - Every member in an organization can access [the default environment](/power-platform/admin/environments-overview#the-default-environment). Like any environment, users can see apps where they have sufficient privileges to access an app.
-> - All users with the Environment Maker security role in an environment can see all model-driven apps in that environment, including the default environment. More information: [Model-driven app privileges to view and access apps](../model-driven-apps/app-visibility-privileges.md).
+Pin your most used pages in the navigation pane so you can quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above **More**.
 
-For more information, see [Environments overview](/power-platform/admin/environments-overview).
+When you sign in, the system automatically pins your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference.
 
-## Choose an app type
+To pin or unpin a page from the left navigation pane, select **More**, and then select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin or ![Unpin button.](media/intro-maker-portal/unpin-button.png) unpin button.
 
-In Power Apps, you can create and run these types of apps:
+> [!div class="mx-imgBorder"]
+> ![Pin or unpin an item.](media/intro-maker-portal/pin-3.png "Pin an item")
 
-- **Canvas apps** support designing custom UI and connecting to data from various sources.
-- **Model-driven apps** have a standard UI and connect to data only in Dataverse. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
-- **Portals** help you create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Dataverse, or even browse content anonymously.
+You can also unpin and item by selecting the more button and then select **Unpin**.
 
-If you choose an [environment that has a Dataverse database](/power-platform/admin/create-environment#create-an-environment-with-a-database), you can build canvas or model-driven apps from the same **Home** page.
+> [!div class="mx-imgBorder"]
+> ![Unpin a page.](media/intro-maker-portal/unpin-page.png "Unpin a page")
 
-## Play or edit an app
+### Discover all
 
-If you've created an app (or someone else has created one and shared it with you), you can play or edit it from the **Home** page or the **Apps** page.
+To see all your Power Apps, from the left navigation pane, select **More** > **Discover all**.
 
-On the **Apps** page, you can filter the list of apps based on criteria such as whether you opened it recently.
+> [!div class="mx-imgBorder"]
+> ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")
 
-![list of apps.](./media/intro-maker-portal/find-apps.png)
+Select **Discover all** to see the **Discover** page on the left navigation pane. To keep in pinned, select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button.
 
-You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
+### Move up or move down
 
-## Create an app, portal, chatbot, or AI model
+When you have a few pages pinned in the navigation pane, you can start moving them up or down.
 
-From the **Home** page, you can create apps, portals, chatbots, and AI models:
+To move a page up or down, select the more button next to the page that you want to move, and then select **Move up** or **Move down**.
 
-- [Get started with canvas apps](/powerapps/maker/canvas-apps/)
-- [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
-- [Get started with portals](/powerapps/maker/portals/)
-- [Get started with chatbots](/powerapps/chatbots)
-- [Get started with AI models](/powerapps/use-ai-builder)
+> [!div class="mx-imgBorder"]
+> ![Move up or down.](media/intro-maker-portal/move-up-down-4.png "Move up or down")
 
-## Learn more
+### Power Platform
 
-You can find more information about either canvas apps or model-driven apps in two ways:
+From the left navigation pane, select **Power Platform** to access Power Platform services such as Power Platform Admin Center, Power BI, and Power Automate.
 
-- In the left navigation bar, select **Learn**.
-- In the header, select the question mark icon.
+> [!div class="mx-imgBorder"]
+> ![Access Power Platform services.](media/intro-maker-portal/power-platform-services.png "Access Power Platform service")
 
-    ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
+## 2 – Search
 
-Both options show links to this documentation set, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
+Use the **Search** to find apps, create apps, or find help documentation.
 
-## Other common tasks
+To find your app, start typing one or more characters in the search bar. When you find the app you want, select the banner icon to play or edit the app.
 
-By selecting options in the header and left navigation bar, you can do more than create and open apps, portals, chatbots, and AI models.
+## 3 – Environment information and settings
 
-### From the header
+View your environment information and settings.
 
-- Select the down arrow to download mobile and other clients in which you can run apps.
+### Choose an environment
 
-    For more information, see [Find and run apps](../../user/index.md).
+For best results, start by ensuring that the home page is set to the right environment. More information [Choose an environment](sign-in-to-power-apps.md#choose-an-environment).
 
-- Select the gear icon to perform tasks such as connecting to data sources, identifying your Power Apps license or licenses, and opening the page where you can perform administrative tasks.
+> [!div class="mx-imgBorder"]
+> ![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
 
-    For more information, see these articles:
+Environments can be managed using [Power Platform admin center](/power-platform/admin/environments-overview#manage-environments-in-the-power-platform-admin-center).
 
-  - [Overview of canvas-app connectors](connections-list.md)
-  - [Build and certify custom connectors for canvas apps](register-custom-api.md)
-  - [Manage an on-premises data gateway](gateway-management.md)
-  - [Administer Power Apps](/power-platform/admin/admin-guide)
-  - [Licensing overview](/power-platform/admin/pricing-billing-skus)
-  - [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md)
+### Notifications
 
-### From the left navigation bar
+Select the bell icon to see notifications. Notifications are stored in the notification center until you dismiss them or when they expire.
 
-Extend the functionality of your apps by performing these tasks:
+### Settings
 
-- Manage tables, choices, and data integration in [Dataverse](../data-platform/data-platform-intro.md)
-- Configure business logic in [Power Automate](/flow/getting-started)
-- Author, package, and maintain [solutions](../../developer/data-platform/introduction-solutions.md)
+Select the gear icon to perform tasks such as connecting to data sources, identify your Power Apps license or licenses, and open the page where you can perform administrative tasks.
 
-## Sign in using Azure B2B collaboration (preview)
+- **Admin center**: Opens another windows and goes to the Power Platform admin center.
+- **Plans(s)**: View your licenses. More information: [Licensing overview](/power-platform/admin/pricing-billing-skus)
+- **Advanced settings**: Manage your admin settings. More information: [Manage Microsoft Dataverse settings](/power-platform/admin/admin-settings#environment-settings-are-moving).
+- **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID and more.
+- **Developer resources**: Access developer resources.
+- **Power Apps settings**: View or update your language and time settings, notifications, or access directories.
+- **Themes**: From the list of themes, select a theme for your organization.
+- **Password**: Change your password.
+- **Contact preferences**: Update your contact information.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+  > [!div class="mx-imgBorder"]
+  > ![Power Apps settings](media/intro-maker-portal/power-apps-settings.png)
 
-> [!NOTE]
-> - A **resource tenant** is the Azure Active Directory tenant where an app is expected to exist, and where the user is expected to create and edit the app. For Azure B2B makers, this tenant is different from the tenant their account resides. 
-> - A **home tenant** is where the user's account resides and authenticates against.
-> - To create and edit apps in a resource tenant, an admin must [follow these steps](/power-platform/admin/invite-users-azure-active-directory-b2b-collaboration#power-apps-support-for-b2b-guest-maker-preview) to give Azure B2B users the prerequisite privileges to build apps. 
+### Help
 
-When a user signs into [Power Apps](https://make.powerapps.com), they sign into their **home tenant**&mdash;the Azure Active Directory (Azure AD) tenant where their credentials are provisioned. After signing in, a user can change the directory they intend to build apps in using the **Switch directory** link as shown below:
+In the header, select the question mark icon to find more information about either canvas apps or model-driven apps.
 
-:::image type="content" source="media/intro-maker-portal/intro_to_maker_portal_switch_directory_1.png" alt-text="Azure B2B Maker - switch directory option.":::
+> [!div class="mx-imgBorder"]
+> ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
 
-The switch directory link opens Power Apps settings that contain a **Directories** tab that lists all the Azure AD tenants the user exists in as a member or an Azure B2B guest. By selecting **Switch**, it will trigger [Power Apps](https://make.powerapps.com) to sign out of the current tenant and then sign into the selected tenant.
+You'll find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 
-:::image type="content" source="media/intro-maker-portal/intro_to_maker_portal_switch_directory_2.png" alt-text="Azure B2B Maker - switch tenant.":::
+## 4 - AI Copilot
 
-### Frequently Ask Questions
+If your organization has [AI enabled (preview)](ai-overview.md) then you'll see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation (preview)](ai-conversations-create-app.md).
 
-#### As an Azure B2B maker, why am I unable to share apps?
+## 5 – Build apps
 
-The Power Apps sharing experience requires users to have permissions in the tenant included when the Azure Azure Active Directory [external collaboration settings has guest user access to "(most inclusive)"](/azure/active-directory/b2b/delegate-invitations). Azure B2B makers without sufficient privileges will see the following error dialog in the sharing experience.
+Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes.
 
-:::image type="content" source="media/intro-maker-portal/intro_to_maker_portal_Azure_B2B_share_error.png" alt-text="Invalid domain name in the request url.":::
+To create an app, select from the following options:
 
-#### Can I work in [Power Apps](https://make.powerapps.com) in both my home tenant and a resource tenant?
+- **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/connection-azure-sqldatabase.md) to start building your app.
+  
+  > [!NOTE]
+  > If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant when you select **Start with data**. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
+   
+- **Start with a page design**: Select the type of app you want to create. You can also use the **Filter** option located in the top-right to narrow down templates by app type or features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md)
+- **Start with an app template**: Choose from an app template including, data-centered templates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md)
 
-- Yes, but in separate browser sessions. For example, Microsoft Edge may be open in its standard mode and a separate session may be started in a new **InPrivate** window.
-- If multiple tabs in the same browser session are open, only resources in the most recently signed in tenant are accessible.
+  > [!NOTE]
+  >  If you're trying to create an app using Dataverse but the option is unavailable, then review the [permissions table](#permissions-for-dataverse) below.
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+- **Your apps**: on the **Home** page, find your top six apps that you own or apps that are shared with you. You also have the option to filter and sort apps quickly to find the app you're looking for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
+- **My apps**: on the **Apps** page, find the apps that you own. Use the search or the filter and sort options to find the app you're looking for. Select an app and perform various actions such as edit the app, view app details, and access app setting using the commands the command bar or use the **Commands** button.
+
+
+### Permissions for Dataverse
+
+The table summarizes scenarios and outcome when you create apps that require Microsoft Dataverse.
+
+
+| **Maker has access to a developer environment** | **Maker has permission to create a developer environment** |  **Maker has access to another Dataverse environment with required permissions** | **Action** | 
+| --- | --- | --- |--- |
+| Yes| n/a  | n/a  |  Switch to the developer environment that appears first in the alphabetical list |  
+| No| Yes  | n/a | Create a developer environment | 
+| No |No | Yes | Switch to another environment using the environment picker | 
+| No|No| No | Contact your admin |
+
+
+
+## 6 – Ask a virtual agent
+
+Get contextual help while building your app using the Power Platform virtual agent. More information: [Get help building your app from a virtual agent](/power-apps/maker/common/virtual-agent)

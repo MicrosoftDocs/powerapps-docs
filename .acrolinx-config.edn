@@ -1,7 +1,14 @@
-{:allowed-branchname-matches ["^main$"]
+{:allowed-branchname-matches ["main"]
  :allowed-filename-matches ["(?i)powerapps-docs/(?:(?!developer/data-platform/reference/entities))"]
- :guidance-profile "dc59e3ef-24fd-46d7-9156-0491aaae6bef" ;; Profile ID for "BAG-specific" 
  :use-skip-label true
+ :targets
+ {
+     :scores
+     {
+         :qualityscore 80
+     }
+ } 
+ :guidance-profile "66710a49-7773-43f4-b6d8-66b63b5e431f" ;; testing March 2023 updated guidelines - BAG
  :acrolinx-check-settings
  {
   "languageId" "en"
@@ -13,4 +20,19 @@
                         ]
   "termSetNames" ["BAG" "Microsoft" "Products"]
  }
+ 
+ :template-header
+ "
+## Acrolinx score
+ 
+**A minimum total score of 80 is required. The total score is an average of the subscores.**
+Select **Total score** to review the Acrolinx scorecard for your article. Try to increase your individual scores, ex. Correctness. Your article will be clearer and more consistent with Microsoft standards.
+ 
+| Article | **Total score**<br />**Required: 80** | Word and phrases<br />(Brand, terms)<br />Preferred: 100 | Correctness<br />(Spelling, grammar)<br />Preferred: 100 | Clarity<br />(Readability)<br />Preferred: 80 |
+|---------|:------------------------------------:|:--------------------------------------------------------:|:--------------------------------------------------------:|:---------------------------------------------:|
+"
+
+ :template-change
+ "| ${s/status} ${s/file} | [${acrolinx/qualityscore}](${acrolinx/scorecard}) | ${acrolinx/scores/words_and_phrases}  | ${acrolinx/scores/correctness}  | ${acrolinx/scores/clarity}  |
+"
 }

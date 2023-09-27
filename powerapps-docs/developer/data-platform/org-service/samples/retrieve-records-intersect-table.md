@@ -2,16 +2,12 @@
 title: "Sample: Retrieve records from an intersect table(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to retrieve record from an intersect table." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Retrieve records from an intersect table
 
-This sample shows how to retrieve records from an intersect table. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveRecordsFromIntersectTable).
+This sample shows how to retrieve records from an intersect table.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Retrieve records from an intersect table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveRecordsFromIntersectTable)
 
 ## How to run this sample
 

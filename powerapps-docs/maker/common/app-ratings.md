@@ -8,11 +8,8 @@ ms.topic: overview
 author: "yogeshgupta698"
 ms.subservice: common
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker, admin
-search.app: 
-  - PowerApps
 ---
 # What are app ratings? (preview)
 

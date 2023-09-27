@@ -2,15 +2,16 @@
   href: index.md
   items: 
   - name: Apply business logic using code
-    href: business-logic/index.md
     items:
-      - name: Do not use batch request types in plug-ins and workflow activities
+      - name: Plug-in and workflow guidance summary 
+        href: business-logic/index.md
+      - name: Don't use batch request types in plug-ins and workflow activities
         href: business-logic/avoid-batch-requests-plugin.md
       - name: Develop IPlugin implementations as stateless
         href: business-logic/develop-iplugin-implementations-stateless.md
-      - name: Do not duplicate plug-in step registration
+      - name: Don't duplicate plug-in step registration
         href: business-logic/do-not-duplicate-plugin-step-registration.md
-      - name: Do not use parallel execution within plug-ins and workflow activities
+      - name: Don't use parallel execution within plug-ins and workflow activities
         href: business-logic/do-not-use-parallel-execution-in-plug-ins.md
       - name: Implement all types of queries when filtering results using PreOperation RetrieveMultiple
         href: business-logic/implement-all-types-of-queries-when-filtering-preoperation-retrievemultiple.md
@@ -37,12 +38,15 @@
     items:
       - name: Service Protection API Limits
         href: ../api-limits.md
+      - name: Optimize performance for bulk operations
+        href: ../optimize-performance-create-update.md
       - name: Manage invalid characters
         href: work-with-data/invalidcharactersinfield.md
+      - name: Retrieve specific columns for an entity via query APIs
+        href: work-with-data/retrieve-specific-columns-entity-via-query-apis.md 
   - name: Work with metadata using code
     href: work-with-metadata/index.md
     items:
       - name: Retrieve published metadata
         href: work-with-metadata/retrieve-published-metadata.md
-      - name: Retrieve specific columns for an entity via query APIs
-        href: work-with-metadata/retrieve-specific-columns-entity-via-query-apis.md  
+ 

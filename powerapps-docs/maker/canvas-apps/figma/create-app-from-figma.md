@@ -1,22 +1,20 @@
 ---
 title: Create a canvas app from Figma (preview)
 description: Learn about how to create canvas apps from Figma.
-author: tapanm-msft
+author: mduelae
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
-# Create a canvas app from Figma (preview)
+# Create a canvas app from Figma
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -35,9 +33,9 @@ In this article, you'll learn about creating canvas apps using your existing Fig
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Under **Start from**, select **Figma (preview)**.
+1. Under **Start from**, select **Figma**.
 
-    :::image type="content" source="media/maker-figma.png" alt-text="Select Figma preview from available options.":::
+    :::image type="content" source="media/maker-figma.png" alt-text="Select Figma from available options.":::
 
 1. Enter an app name.
 
@@ -63,4 +61,4 @@ In this article, you'll learn about creating canvas apps using your existing Fig
 ### See also
 
 - [Troubleshoot common errors](common-errors.md)
-- [Components supported by the UI Kit (preview)](supported-components.md)
+- [Components supported by the UI Kit](supported-components.md)

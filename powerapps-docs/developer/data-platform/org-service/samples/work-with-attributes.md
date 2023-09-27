@@ -5,13 +5,9 @@ ms.date: 04/06/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: pehecke
-manager: sunilg
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Work with columns definitions
 
-This sample shows how to perform various actions on columns. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithAttributes).
+This sample shows how to perform various actions on columns.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Work with columns definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithAttributes)
 
 ## How to run this sample
 

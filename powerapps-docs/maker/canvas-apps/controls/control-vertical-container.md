@@ -5,16 +5,14 @@ author: emcoope-msft
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 # Vertical container control in Power Apps
@@ -35,6 +33,8 @@ Vertical container control determines the position of the child components so th
 
 **[Color](properties-color-border.md)** - The color of the container control.
 
+**[Drop shadow](properties-color-border.md)** - Adds shadow effects around the control.
+
 **[Fill](properties-color-border.md)** – The background color of a control.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
@@ -48,6 +48,14 @@ Vertical container control determines the position of the child components so th
 **Gap** - Defines the space between containers child components in pixels. 
 
 **Horizontal Overflow** - Defines whether the container shows scrollbars or remove content when it is too large to fit. **Scroll** and **Hide**.
+
+**[RadiusBottomLeft](properties-size-location.md)** – The degree to which the bottom-left corner of a control is rounded.
+
+**[RadiusBottomRight](properties-size-location.md)** – The degree to which the bottom-right corner of a control is rounded.
+
+**[RadiusTopLeft](properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
+
+**[RadiusTopRight](properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
 
 **Vertical Overflow** - Defines whether the container shows scrollbars or remove content when it is too large to fit. **Scroll** and **Hide**.
 

@@ -2,7 +2,6 @@
 title: Microsoft Dataverse Developer Guide | Microsoft Docs
 description: Introducing the Developer Guide for Microsoft Dataverse.
 author: JimDaly
-manager: kvivek
 ms.topic: overview
 ms.date: 04/03/2022
 ms.subservice: dataverse-developer
@@ -10,9 +9,6 @@ ms.author: jdaly
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Microsoft Dataverse Developer Guide

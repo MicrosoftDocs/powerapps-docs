@@ -3,16 +3,13 @@ title: "Publish request schema  (model-driven apps) | Microsoft Docs" # Intent a
 description: "The following is the schema definition for the PublishXmlRequest message." # 115-145 characters including spaces. This abstract displays in the search result.
 author: caburk
 ms.author: caburk
-manager: evlew
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Publish request schema
 

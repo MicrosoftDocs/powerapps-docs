@@ -9,12 +9,8 @@ ms.subservice: mda-maker
 ms.topic: "conceptual"
 author: "aorth"
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Design a custom page for your model-driven app
 

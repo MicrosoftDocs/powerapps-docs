@@ -4,14 +4,10 @@ description: "This sample showcases how to assign a user-owned visualization to 
 ms.date: 04/03/2022
 author: mspilde
 ms.author: mspilde
-manager: lwelicki
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Assign a chart to another user
 
-This sample shows how to assign a user-owned visualization to another using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssignChartToAnotherUser).
+This sample shows how to assign a user-owned visualization to another using the [AssignRequest](/dotnet/api/microsoft.crm.sdk.messages.assignrequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Assign a chart to another user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/AssignChartToAnotherUser)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

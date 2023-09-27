@@ -1,20 +1,17 @@
 ---
 title: Use Power Apps for Windows | Microsoft Docs
 description: Use Power Apps for Windows.
-author: sericks007
+author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 09/29/2022
+ms.date: 10/13/2022
 ms.subservice: mobile
-ms.author: sericks
+ms.author: trdehove
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---
@@ -181,10 +178,17 @@ To configure your app in offline mode, see:
 
 If you are having an issue with Power Apps for Windows then send a description of your issue with a screenshot and the session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). 
 
-To see get the session ID, select the More button (...) > **Settings** and then copy the session ID. 
+To get the session ID, select the More button (...) > **Settings** and then copy the session ID. 
 
    > [!div class="mx-imgBorder"] 
    > ![See non-production apps.](media/non-prod-apps.png)
+
+## Log files
+Open the following directory on your device to find the log files related to the Windows session for Power Apps for Windows:
+
+`%LocalAppData%\Packages\MicrosoftCorporationII.PowerAppsforWindows10_8wekyb3d8bbwe\LocalState`
+
+The Power Apps support team can use the log files to investigate issues.
 
 ## Deep links
 

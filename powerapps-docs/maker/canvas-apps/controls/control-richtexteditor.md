@@ -4,16 +4,14 @@ description: Learn about the details, properties, and examples of the Rich text 
 author: chmoncay
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 07/19/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
   - tahoon-ms
 ---
@@ -35,7 +33,7 @@ Currently supported features include:
 - Hyperlinks
 - Clear formatting
 
-To use the control inside a form, select the "Edit multi-line text" card, and customize it by inserting the RTE control.
+To use the control inside a form, select the **Edit multi-line tex** card, and customize it by inserting the RTE control.
 
 ## Key properties
 **[Default](properties-core.md)** – Input property for the initial text value shown in editor.
@@ -79,5 +77,18 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 ## Limitations
 
 You can only interact with the rich text editor control in Power Apps Studio when using the preview mode.
+
+Pasting images in the rich text editor has the following limitations:
+- Cross-Origin Resource Sharing (CORS) 
+- Authentication
+- Image format support in browser
+- Type of image (inline vs URL)
+- How programs represent images differently when they are copied.
+
+> [!NOTE]
+> Browsers represent image data differently, some browsers will capture the image as raw image data while others may get a reference to a URL which may not be accessible after pasting.
+
+> [!TIP]
+>  Using a screen clipping or screen shotting tool to copy / paste images will provide the best experience.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

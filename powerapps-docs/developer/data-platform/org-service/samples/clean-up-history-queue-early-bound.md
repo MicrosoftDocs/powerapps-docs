@@ -4,14 +4,10 @@ description: "This sample shows how to clean up history for a queue" # 115-145 c
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Clean up history for a queue
 
-This sample shows how to clean up the history for the queue by using [RemoveFromQueueRequest](/dotnet/api/microsoft.crm.sdk.messages.removefromqueuerequest) with inactive items. It finds completed phone calls in the queue and removes the associated queue items. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CleanHistoryQueue).
+This sample shows how to clean up the history for the queue by using [RemoveFromQueueRequest](/dotnet/api/microsoft.crm.sdk.messages.removefromqueuerequest) with inactive items. It finds completed phone calls in the queue and removes the associated queue items.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Clean up history for a queue sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CleanHistoryQueue)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

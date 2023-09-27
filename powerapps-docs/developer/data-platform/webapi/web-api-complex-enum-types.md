@@ -2,18 +2,14 @@
 title: "Web API Complex and Enumeration types (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData Complex and Enumeration types elements defined for the Dataverse Web API."
 ms.date: 04/06/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 ms.service: powerapps
 applies_to: 
   - "Dynamics 365 (online)" 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
@@ -59,7 +55,7 @@ The `AccessRights` enum type is used for the `AccessMask` property of the <xref:
 
 The example below grants `ReadAccess`, `WriteAccess`, `DeleteAccess`, `AppendAccess`, and `AssignAccess` access rights to the `account` record specified by the `Target` parameter to the `systemuser` designated by the `Principal` property of the `PrincipalAccess` complex type.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.0/ModifyAccess
@@ -83,7 +79,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content

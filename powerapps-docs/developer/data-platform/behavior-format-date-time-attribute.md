@@ -1,24 +1,20 @@
 ---
 title: "Behavior and format of the date and time column (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The DateTimeAttributeMetadata class is used to define and manage columns of type DateTime in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/15/2022
+ms.date: 11/03/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: article
 author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
 # Behavior and format of the date and time column
 
-If you have users and offices around the world, it is important to properly represent date and time values in multiple time zones. The `DateTimeAttributeMetadata` (<xref:Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?text=DateTimeAttributeMetadata EntityType> or <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata?text=DateTimeAttributeMetadata Class> ) is used to define and manage columns of type `DateTime` in Microsoft Dataverse. Use the `DateTimeBehavior` property (For Organization Service see, <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata.DateTimeBehavior?text=DateTimeAttributeMetadata.DateTimeBehavior Property>) to define whether to store date and time values with or without time zone information, and use the <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata.Format?text=DateTimeAttributeMetadata.Format Property> to specify the display format of these columns.  
+If you have users and offices around the world, it is important to properly represent date and time values in multiple time zones. The `DateTimeAttributeMetadata` (<xref:Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?text=DateTimeAttributeMetadata EntityType> or <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata?text=DateTimeAttributeMetadata Class> ) is used to define and manage columns of type `DateTime` in Microsoft Dataverse. Use the `DateTimeBehavior` property (For SDK for .NET see, <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata.DateTimeBehavior?text=DateTimeAttributeMetadata.DateTimeBehavior Property>) to define whether to store date and time values with or without time zone information, and use the <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata.Format?text=DateTimeAttributeMetadata.Format Property> to specify the display format of these columns.  
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
@@ -26,6 +22,9 @@ You can also use the customization area in Dataverse to define the behavior and 
   
 > [!NOTE]
 >  All date and time columns in Dataverse support values as early as 1/1/1753 12:00 AM.  
+> 
+> If your Date Only or Date Time field is in a solution, you can only change the behavior of an existing managed field if you are the publisher. In order to make a change to these fields, an Upgrade must be made to the solution that added the Date Only or Date Time column. More information: [Upgrade or update a solution](../../maker/data-platform/update-solutions.md)
+
   
 <a name="SpecifyBehavior"></a>   
 
@@ -219,7 +218,7 @@ Console.WriteLine("Published customizations to the Account .\n");
 
 When you update a date and time column to change its behavior from `UserLocal` to `DateOnly` or `TimeZoneIndependent`, it does not automatically convert the existing column values in the database. The behavior change affects only those values that will be entered or updated in the column *after* the behavior has been changed. The existing date and time values in the system continue to be in UTC, and displayed by Dataverse according to the new behavior when retrieved through SDK or in the UI as explained in the previous section. For columns whose behavior has changed from `UserLocal` to `DateOnly`, you can convert the existing UTC values in the database to appropriate `DateOnly` value to avoid any data anomalies by using the `ConvertDateAndTimeBehavior` message.  
   
-The message enables you to specify a conversion rule (If working with Organization Service see, <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest.ConversionRule>) to select the time zone to use for conversion of the values from UTC to DateOnly. You can specify one of the following conversion rules:  
+The message enables you to specify a conversion rule (If working with SDK for .NET see, <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest.ConversionRule>) to select the time zone to use for conversion of the values from UTC to DateOnly. You can specify one of the following conversion rules:  
   
 - `SpecificTimeZone`: Converts UTC value to a DateOnly value as per the specified Dataverse time zone code. In this case, you also need to specify a value for the <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest.TimeZoneCode> parameter.  
 - `CreatedByTimeZone`: Converts UTC value to a DateOnly value that the user who created the record would see in the UI.
@@ -231,7 +230,7 @@ The message enables you to specify a conversion rule (If working with Organizati
 > [!NOTE]
 >  You must have the System Administrator role in your Dataverse instance to execute the <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest> message.  
   
- When you execute the `ConvertDateAndTimeBehavior` (If working with Organization Service see, <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest> message), a system job (asynchronous operation) is created to run the conversion request. The `ConvertDateAndTimeBehaviorResponse.JobId` column in the message response displays the ID of the system job that is created as a result of the conversion request. After the system job completes, check the job details (`AsyncOperation.Message`) to view conversion details or errors, if any.  
+ When you execute the `ConvertDateAndTimeBehavior` (If working with SDK for .NET see, <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest> message), a system job (asynchronous operation) is created to run the conversion request. The `ConvertDateAndTimeBehaviorResponse.JobId` column in the message response displays the ID of the system job that is created as a result of the conversion request. After the system job completes, check the job details (`AsyncOperation.Message`) to view conversion details or errors, if any.  
   
 > [!NOTE]
 >  We recommend that you group conversion of multiple columns into a single conversion job, and run a single conversion job at a time to ensure that there are no conflicts in the conversion and for optimum system performance.  

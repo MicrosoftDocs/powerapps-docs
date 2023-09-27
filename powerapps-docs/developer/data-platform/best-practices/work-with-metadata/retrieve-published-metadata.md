@@ -5,7 +5,6 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: jowells
-manager: austinj
 editor: ''
 tags: ''
 
@@ -18,9 +17,6 @@ ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Retrieve published metadata
 
@@ -156,7 +152,7 @@ Retrieving unpublished metadata not only will add overhead to processing the req
 ### See also
 
 <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest>.<xref href="Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest.RetrieveAsIfPublished?text=RetrieveAsIfPublished Property" /><br />
-[Work with metadata using the Organization service](../../org-service/work-with-metadata.md)<br />
+[Work with metadata using the SDK for .NET](../../org-service/work-with-metadata.md)<br />
 [Use the Web API with metadata](../../webapi/use-web-api-metadata.md)<br />
 [Publish customizations](../../../model-driven-apps/publish-customizations.md#retrieving-unpublished-metadata)
 

@@ -1,21 +1,18 @@
 ---
 title: Configure model-driven apps for offline (preview)| Microsoft Docs
 description: Configure model-driven apps for offline mode (preview).
-author: mduelae
+author: trdehove
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 02/01/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: trdehove
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - "Power Apps"
 ---
@@ -33,7 +30,7 @@ Note, an internet connection is required to sync data between your mobile device
 To get started with mobile offline, an app maker needs to enable and define the tables that are available for offline by using the [modern app designer](../maker/model-driven-apps/app-designer-overview.md). For more information, go to [Set up mobile offline](setup-mobile-offline.md).
 
 > [!IMPORTANT] 
-> The mobile offline experience is not available for canvas apps.
+> The mobile offline experience for canvas apps is in Preview.
 
 ## Mobile offline-first
 
@@ -46,7 +43,7 @@ After offline is configured, anyone who uses the [Power Apps mobile app](run-pow
 For more information, go to [Set up and use mobile offline-first](work-in-offline-mode.md).
 
 > [!IMPORTANT] 
-> - For information about the classic mobile offline setup, go to [Configure mobile offline synchronization](/dynamics365/mobile-app/setup-mobile-offline).
+> - For information about the mobile offline setup exerience that is generally available, go to [Mobile offline overview (classic)](mobile-offline-overview-classic.md).
 > - For more information about how to set up mobile offline for canvas apps, go to [Develop offline-capable canvas apps](../maker/canvas-apps/offline-apps.md)
 > - The offline-first experience is in general availability for Field Service mobile app. For more information, see [Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-2020-power-platform).
 

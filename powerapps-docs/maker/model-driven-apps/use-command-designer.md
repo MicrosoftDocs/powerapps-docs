@@ -5,14 +5,10 @@ Keywords: command bar, command designer
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-manager: kvivek
 ms.date: 05/26/2022
 ms.topic: conceptual
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Customize the command bar using command designer
@@ -27,10 +23,9 @@ Either [Create a new model-driven app using modern app designer](#create-a-new-m
 
 1. Sign into [Power Apps](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
 .
-1. On the left navigation pane, select **Solutions** and then open or create a solution to contain the new model-driven app.
-
+1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open or create a solution to contain the new model-driven app.
 1. Select **New** > **App** > **Model-driven app**.
-
 1. Enter a **Name** for your app, and then select **Create**. More information: [Create a model-driven app that has an account table page](create-a-model-driven-app.md)
 
    > [!div class="mx-imgBorder"]
@@ -39,9 +34,8 @@ Either [Create a new model-driven app using modern app designer](#create-a-new-m
 ### Open an existing model-driven app using modern app designer
 
 1. Sign into [Power Apps](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true)
-
-1. On the left navigation pane, select **Solutions**, and then open the solution containing the existing model-driven app.
-
+1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution containing the existing model-driven app.
 1. Select the model-driven app, and then select **...** > **Edit** to open the modern app designer.
 
 ## Create or edit modern commands
@@ -51,7 +45,7 @@ Once you are in the app designer, use the command designer to customize your com
 > [!NOTE]
 > - Currently, the command designer can only be accessed through the modern app designer or within solutions for existing commands.
 > - Currently, classic commands can't be edited within the command designer.
- 
+
 ### Edit the command bar
  
 #### Open the command designer to edit a command bar

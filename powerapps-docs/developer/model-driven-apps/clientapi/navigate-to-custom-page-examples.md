@@ -1,9 +1,9 @@
 ---
 title: "Navigating to and from a custom page in your model-driven app using client API" 
 description: "This article provides examples of navigating from a model-driven app page using the client API to a custom page."
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
+author: adrianorth
+ms.author: aorth
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.subservice: mda-developer
@@ -11,9 +11,6 @@ ms.topic: "how-to"
 search.audienceType: 
   - maker
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
@@ -194,9 +191,13 @@ A more complete example of this can be found at [Override the default open behav
 1. Customize the table ribbon **CommandDefinition** for **OpenRecordItem** to call the function above and include the **CrmParameter** with the value **SelectedControlSelectedItemReferences**.
 
     ```xml
-        <JavaScriptFunction FunctionName="run" Library="$webresource:cr62c_OpenCustomPage">
-            <CrmParameter Value="SelectedControlSelectedItemReferences" />
-        </JavaScriptFunction>
+        <CommandDefinition Id="Mscrm.OpenRecordItem">
+            <Actions>
+                <JavaScriptFunction FunctionName="run" Library="$webresource:cr62c_OpenCustomPage">
+                    <CrmParameter Value="SelectedControlSelectedItemReferences" />
+                </JavaScriptFunction>
+            </Actions>
+        </CommandDefinition>
     ```
 
 1. In the custom page, override the **App**'s **OnStart** property to use the `Param` function to get the `recordId` and lookup record.
@@ -280,9 +281,7 @@ Editable grid can be used to trigger [OnRecordSelect](reference/events/grid-onre
 
 ## Related articles
 
-[Model-driven app custom page overview](../../../maker/model-driven-apps/model-app-page-overview.md)
-
-[Add a custom page to your model-driven app](../../../maker/model-driven-apps/add-page-to-model-app.md)
-
+[Model-driven app custom page overview](../../../maker/model-driven-apps/model-app-page-overview.md)   
+[Add a custom page to your model-driven app](../../../maker/model-driven-apps/add-page-to-model-app.md)   
 [navigateTo (client API reference)](reference/xrm-navigation/navigateto.md)
 

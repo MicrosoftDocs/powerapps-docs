@@ -10,13 +10,9 @@ ms.topic: "how-to"
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # How to run a model-driven app
 
@@ -30,7 +26,7 @@ To get the direct link to an app:
 
 1. Go to make.powerapps.com.
 1. Select  the **Environment** where the app is located.
-1. On the left navigation pane, select **Apps**, or select **Solutions** and open the solution where the app is located.
+1. On the left navigation pane, select **Apps**, or select **Solutions** and open the solution where the app is located. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the **...** next to the model-driven app, and then select **Edit**. The classic app designer opens.
 1. Select the **Properties** tab, and then scroll down to **Unified Interface URL**. Copy the **Unified Interface URL**.
 
@@ -44,9 +40,8 @@ To play the app, enter the URL in a web browser.
 You may notice authentication prompts during your model-driven app session. These prompts are expected and are required for certain features. Below highlights a list of features that trigger these prompts. This list is subject to change as new features are released: 
 
 - [Custom pages](model-app-page-overview.md).
-- [Power Fx](commanding-use-powerfx.md) expressions.
+- [Power Fx](commanding-use-powerfx.md) expressions with commands.
 - Opening the Office apps launcher located on the upper left of the app header.
-- Selecting the **Add to Teams** button.
 - [Collaboration feature](../../user/collaboration.md).
 
 Additionally, some organizational or browser settings may increase the frequency of these prompts. We recommend reviewing your settings to help reduce authentication prompts during sessions.

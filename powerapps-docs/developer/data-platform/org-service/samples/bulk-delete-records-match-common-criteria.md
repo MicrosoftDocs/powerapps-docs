@@ -4,14 +4,10 @@ description: "This sample shows how to delete records in bulk that match common 
 ms.date: 04/03/2022
 author: JimDaly
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Bulk delete records that match common criteria
 
-This sample shows how to delete records, in bulk, that match common criteria. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/BulkDeleteMatchCriteria).
+This sample shows how to delete records, in bulk, that match common criteria.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Bulk delete records that match common criteria sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/BulkDeleteMatchCriteria)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

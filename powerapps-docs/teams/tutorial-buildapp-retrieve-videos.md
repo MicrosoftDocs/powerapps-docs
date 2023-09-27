@@ -8,9 +8,9 @@ ms.custom:
 ms.date: 11/16/2020
 ms.subservice: teams
 ms.author: tapanm
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Build an app to retrieve Power Platform videos for readiness
@@ -975,7 +975,7 @@ Before publishing the application to teams, it’s important to test core functi
 
 ### See also
 
-[Use sample apps from the Teams store](use-sample-apps-from-teams-store.md)
+[Use sample app templates in Microsoft Teams](use-sample-apps.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

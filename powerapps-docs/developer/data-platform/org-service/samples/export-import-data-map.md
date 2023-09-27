@@ -8,17 +8,16 @@ ms.reviewer: "pehecke"
 ms.topic: sample
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Export and import a data map
 
-This sample shows how to create an import map (data map) in Microsoft Dataverse, export it as an XML formatted data, import modified mappings, and create a new import map for Dataverse based on the imported mappings. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportImportDataMap).
+This sample shows how to create an import map (data map) in Microsoft Dataverse, export it as an XML formatted data, import modified mappings, and create a new import map for Dataverse based on the imported mappings.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Export and import a data map sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportImportDataMap)
 
 ## How to run this sample
 

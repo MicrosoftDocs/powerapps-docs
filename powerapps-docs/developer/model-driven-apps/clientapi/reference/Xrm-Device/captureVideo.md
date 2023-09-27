@@ -1,18 +1,14 @@
 ---
 title: "captureVideo| MicrosoftDocs"
 description: Includes description and supported parameters for the captureVideo method.
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType:
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -31,10 +27,10 @@ This method is supported only for the mobile clients.
 
 ## Parameters
 
-| Parameter Name  | Type     | Required | Description                                                                                                                                                                                                                                                                                                                                              |
-| --------------- | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| successCallback | Function | Yes      | A function to call when Video is returned. A base64 encoded Video object with the following values is passed to the function:<br/>- **fileContent**: Contents of the Video file. String <br/>- **fileName**: Name of the Video file. String.<br/>- **fileSize**: Size of the Video file in KB. Number.<br/>- **mimeType**: Video file MIME type. String. |
-| errorCallback   | Function | Yes      | A function to call when the operation fails.                                                                                                                                                                                                                                                                                                             |
+| Parameter Name  | Type     | Required | Description|
+| --------------- | -------- | -------- | ----|
+| `successCallback` | Function | Yes | A function to call when Video is returned. A base64 encoded Video object with the following values is passed to the function:<br/>- **`fileContent`**: Contents of the Video file. String <br/>- **`fileName`**: Name of the Video file. String.<br/>- **`fileSize`**: Size of the Video file in KB. Number.<br/>- **`mimeType`**: Video file MIME type. String. |
+| `errorCallback`   | Function | Yes | A function to call when the operation fails.|
 
 ## Return Value
 
@@ -44,7 +40,7 @@ On success, returns a base64 encoded Video object with the values specified earl
 
 See [Web service error codes](../../../../data-platform/reference/web-service-error-codes.md)
 
-### Related topics
+### Related articles
 
 [Xrm.Device](../xrm-device.md)
 

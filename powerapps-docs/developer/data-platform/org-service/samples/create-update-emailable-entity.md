@@ -4,21 +4,18 @@ description: "This sample showcases how to create and update emailable table." #
 ms.date: 04/03/2022
 author: NHelgren
 ms.author: nhelgren
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Create and update an emailable table
 
 This sample shows how to create and update a table using the [CreateEntityRequest](/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest) message.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateUpdateEmailableEntity).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create and update an emailable table sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateUpdateEmailableEntity)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

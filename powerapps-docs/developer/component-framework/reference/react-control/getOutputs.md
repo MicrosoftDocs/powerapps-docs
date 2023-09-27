@@ -1,9 +1,8 @@
 ---
-title: "ReactControl.getOutputs | MicrosoftDocs"
+title: "ReactControl.getOutputs (Power Apps component framework API reference) | MicrosoftDocs"
 description: It is called by the framework for a ReactControl prior to a component receiving the new data. Returns an object based on nomenclature defined in manifest, expecting objects[s] for the property marked as bound.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -46,7 +45,7 @@ public getOutputs(): IOutputs
 ```
 
 
-### Related topics
+### Related articles
 
 [React controls & platform libraries (Preview) ](../../react-controls-platform-libraries.md)<br />
 [ReactControl](../react-control.md)<br/>

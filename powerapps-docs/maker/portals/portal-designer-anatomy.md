@@ -2,19 +2,22 @@
 title: Power Apps portals Studio
 description: Learn how to use Power Apps portals Studio.
 author: neerajnandwana-msft
-
 ms.topic: conceptual
-ms.custom: intro-internal
-ms.date: 09/13/2022
+ms.collection: get-started
+ms.date: 2/23/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
+    - sampatn
 ---
 
 # Power Apps portals Studio
+
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 You can use Power Apps portals Studio to create and customize your website. It contains various options to add and configure webpages, components, forms, and lists.
 

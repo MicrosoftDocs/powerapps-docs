@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Describe a relationship between tables with connection roles
 
@@ -48,7 +45,7 @@ To create a connection role you must specify the following information:
   
 ## Associate and Disassociate Connection Roles
 
-To associate the roles in the connection, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate%2A> method. To disassociate the roles, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate%2A> method. For more information about the `Associate` message and the `Disassociate` message, see [Associate and disassociate table rows using the Organization Service](org-service/entity-operations-associate-disassociate.md) and [Associate and disassociate table rows using the Web API](webapi/associate-disassociate-entities-using-web-api.md).
+To associate the roles in the connection, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate%2A> method. To disassociate the roles, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate%2A> method. For more information about the `Associate` message and the `Disassociate` message, see [Associate and disassociate table rows using the SDK for .NET](org-service/entity-operations-associate-disassociate.md) and [Associate and disassociate table rows using the Web API](webapi/associate-disassociate-entities-using-web-api.md).
   
 ### See also
 

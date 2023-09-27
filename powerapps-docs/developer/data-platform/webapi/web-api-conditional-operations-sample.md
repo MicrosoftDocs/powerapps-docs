@@ -2,14 +2,11 @@
 title: "Web API Conditional Operations Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of samples demonstrate how to perform operations that are conditionally based upon the version of the table row contained on the Microsoft Dataverse server and/or currently maintained by the client."
 ms.date: 09/02/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -46,7 +43,7 @@ The following sections contain a brief discussion of the Dataverse Web API opera
 
 The sample creates the following table row before the principal code sections are executed.  
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/accounts?$select=name,revenue,telephone1,description HTTP/1.1
@@ -64,7 +61,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 201 Created
@@ -83,7 +80,7 @@ OData-Version: 4.0
 }
 ```
   
-**Console output**
+**Console output:**
 
 ```
 Created and retrieved the initial account, shown below:
@@ -107,7 +104,7 @@ This section of the program demonstrates how to perform conditional retrievals i
   
 1. Attempt to retrieve the account `Contoso Ltd.` only if it does *not* match the current version, identified by the initial ETag value that was returned when the account row was created. This condition is represented by the `If-None-Match` header.  
   
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)?$select=name,revenue,telephone1,description HTTP/1.1
@@ -117,13 +114,13 @@ This section of the program demonstrates how to perform conditional retrievals i
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 304 NotModified
    ```
    
-   **Console output**  
+   **Console output:**  
    
    ```  
    Account record retrieved using ETag: W/"72965013"
@@ -134,7 +131,7 @@ This section of the program demonstrates how to perform conditional retrievals i
   
 1. Update the account by modifying its primary telephone number property.  
   
-   **Request**
+   **Request:**
 
    ```http
    PUT [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)/telephone1 HTTP/1.1
@@ -146,14 +143,14 @@ This section of the program demonstrates how to perform conditional retrievals i
    {"value": "555-0001"}
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
    ```
    
-   **Console output**  
+   **Console output:**  
    
    ```  
    Modified account record retrieved using ETag: W/"72965013" 
@@ -161,7 +158,7 @@ This section of the program demonstrates how to perform conditional retrievals i
   
 1. Re-attempt the same conditional GET operation, again using the original ETag value. This time the operation returns the requested data because the version on the server is different (and newer) than the version identified in the request. As in all table row retrievals, the response includes an ETag header that identifies the current version.  
   
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)?$select=name,revenue,telephone1,description HTTP/1.1
@@ -171,7 +168,7 @@ This section of the program demonstrates how to perform conditional retrievals i
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -190,7 +187,7 @@ This section of the program demonstrates how to perform conditional retrievals i
    }
    ```
    
-   **Console output**  
+   **Console output:**  
    
    ```
    Modified account record retrieved using ETag: W/"72965013"
@@ -215,7 +212,7 @@ This section of the program demonstrates how to perform conditional delete and u
   
 1. Attempt to delete original account if and only if it matches the original version (ETag value).  This condition is represented by the `If-Match` header.  This operation fails because the account row was updated in the previous section, so as a result, its version was updated on the server.  
   
-   **Request**
+   **Request:**
 
    ```http
    DELETE [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
@@ -226,7 +223,7 @@ This section of the program demonstrates how to perform conditional delete and u
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 412 PreconditionFailed
@@ -240,7 +237,7 @@ This section of the program demonstrates how to perform conditional delete and u
    }
    ```
    
-   **Console output**  
+   **Console output:**  
    
    ```  
    Attempting to delete the account using the original ETag value
@@ -250,7 +247,7 @@ This section of the program demonstrates how to perform conditional delete and u
   
 1. Attempt to update the account if and only if it matches the original ETag value.  Again, this condition is represented by the `If-Match` header and the operation fails for the same reason.  
   
-   **Request**
+   **Request:**
 
    ```http
    PATCH [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
@@ -266,7 +263,7 @@ This section of the program demonstrates how to perform conditional delete and u
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 412 PreconditionFailed
@@ -280,7 +277,7 @@ This section of the program demonstrates how to perform conditional delete and u
    }
    ```
    
-   **Console output**  
+   **Console output:**  
    
    ```  
    Attempting to update the account using the original ETag value
@@ -290,7 +287,7 @@ This section of the program demonstrates how to perform conditional delete and u
   
 1. Re-attempt an update, but instead use the current ETag value obtained from the last row retrieval in the previous section.  
   
-   **Request**
+   **Request:**
 
    ```http
    PATCH [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
@@ -306,7 +303,7 @@ This section of the program demonstrates how to perform conditional delete and u
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -314,7 +311,7 @@ This section of the program demonstrates how to perform conditional delete and u
    OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)
    ```
    
-   **Console output**  
+   **Console output:**  
 
    ```
    Attempting to update the account using the current ETag value
@@ -324,7 +321,7 @@ This section of the program demonstrates how to perform conditional delete and u
   
 1. Confirm the update succeeded by retrieving and outputting the current account state.  This uses a basic `GET` request.  
   
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6)?$select=name,revenue,telephone1,description HTTP/1.1
@@ -334,7 +331,7 @@ This section of the program demonstrates how to perform conditional delete and u
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -353,7 +350,7 @@ This section of the program demonstrates how to perform conditional delete and u
    }
    ```
    
-   **Console output**  
+   **Console output:**  
    
    ```
    Below is the final state of the account
@@ -373,7 +370,7 @@ This section of the program demonstrates how to perform conditional delete and u
 
 This section simply deletes the record created in [Section 0: Create sample records](#section-0-create-sample-records). It uses a `$batch` request.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
@@ -394,7 +391,7 @@ DELETE /api/data/v9.2/accounts(59d88f5e-6629-ed11-9db1-0022482746b6) HTTP/1.1
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -412,7 +409,7 @@ OData-Version: 4.0
 
 ```
 
-**Console output**
+**Console output:**
 
 ```
 Deleting created records.

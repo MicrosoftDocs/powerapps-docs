@@ -1,3 +1,4 @@
+items:
 - name: Activities
   items:
   - name: 'Convert a fax to a task'
@@ -16,8 +17,8 @@
     href: send-email-template.md
   - name: 'Send bulk email and monitor results'
     href: send-bulk-email-monitor-results.md
-  - name: Upload, retrieve and download attachments
-    href: upload-retrieve-download-attachment.md
+  - name: File operations with Attachments and Notes
+    href: attachment-annotation-files.md
   - name: 'Work with activity party records'
     href: work-activity-party-records.md
 - name: Adminstration & security
@@ -142,7 +143,7 @@
     href: dump-global-option-set.md
   - name: Export ribbon definitions
     href: export-ribbon-definitions.md
-  - name: Query and detect metadata changes
+  - name: Query schema definitions and detect changes
     href: query-metadata-changes.md
   - name: Retrieve valid status transitions
     href: retrieve-valid-status-transitions.md
@@ -178,18 +179,16 @@
     href: merge-two-records.md
   - name: Serialize and deserialize a table
     href: serialize-deserialize-entity.md
-  - name: Set and retrieve entity images
-    href: set-retrieve-entity-images.md
   - name: Share a record using an access team
     href: share-record-using-access-team.md
   - name: Share records using GrantAccess, ModifyAccess and RevokeAccess messages
     href: share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md
   - name: Validate and set state of a table
     href: validate-record-state.md
-  - name: Upload, retrieve, and download an attachment
-    href: upload-retrieve-download-attachment.md
+  - name: File operations with Attachments and Notes
+    href: attachment-annotation-files.md
   - name: Use optimistic concurrency with update and delete operations
-    href: use-optimistic-concurrency-update-delete-operations.md 
+    href: use-optimistic-concurrency-update-delete-operations.md
 - name: Field Level Security
   items:
   - name: Enable field security for a table
@@ -198,6 +197,14 @@
     href: retrieve-field-permissions.md
   - name: Retrieve field sharing records
     href: retrieve-field-sharing-records.md
+- name: Files and images
+  items:
+  - name: File Operations
+    href: file-operations.md
+  - name: Image Operations
+    href: set-retrieve-entity-images.md
+  - name: Attachment and Annotation file operations
+    href: attachment-annotation-files.md
 - name: Goal management
   items:
   - name: Rollup goal data for a custom period against the target revenue
@@ -222,8 +229,12 @@
     href: modify-query-preoperation-stage.md
   - name: Web access from a plug-in
     href: web-access-plugin.md
-  - name: IsSystemAdmin Custom API
+  - name: IsSystemAdmin custom API
     href: issystemadmin-customapi-sample-plugin.md
+  - name: CreateMultiple & UpdateMultiple plug-ins
+    href: createmultiple-updatemultiple-plugin.md
+  - name: ExportDataUsingFetchXmlToAnnotation custom API
+    href: export-data-fetchxml-annotation-custom-api-sample.md
 - name: Query Data
   items:
   - name: Query data using LINQ
@@ -282,6 +293,8 @@
     href: retrieve-absolute-url-and-site-collection-url-of-a-location-record.md
 - name: Special Operations
   items:
+  - name: Create and Update multiple
+    href: create-update-multiple.md
   - name: Execute multiple requests
     href: execute-multiple-requests.md
   - name: Execute multiple requests in transaction

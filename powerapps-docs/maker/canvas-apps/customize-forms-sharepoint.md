@@ -1,7 +1,7 @@
 ---
 title: Customize forms in canvas apps
 description: Learn about how to specify which data to show in a canvas app form, in which order to show them, and in which controls.
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
 ms.custom: canvas
@@ -11,10 +11,8 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
 ---
 # Customize forms in canvas apps

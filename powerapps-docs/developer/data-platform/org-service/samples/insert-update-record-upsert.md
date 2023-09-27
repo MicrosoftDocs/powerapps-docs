@@ -2,16 +2,12 @@
 title: "Sample: Insert or update record using Upsert (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to insert or update records using the Upsert message." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Insert or update a record using Upsert
 
-This sample code shows how to insert or update records by using the [UpsertRequest](/dotnet/api/microsoft.xrm.sdk.messages.upsertrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/InsertRecordUsingUpsert).
+This sample code shows how to insert or update records by using the [UpsertRequest](/dotnet/api/microsoft.xrm.sdk.messages.upsertrequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Insert or update a record using Upsert sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/InsertRecordUsingUpsert)
 
 ## How to run this sample
 

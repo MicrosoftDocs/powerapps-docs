@@ -7,9 +7,9 @@ ms.custom:
 ms.date: 07/7/2022
 ms.subservice: teams
 ms.author: szlo
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
   - jessicaszelo
 ---
 

@@ -4,14 +4,11 @@ description: Bulk import and export data from Excel or CSV files into tables in 
 author: sabinn-msft
 ms.topic: how-to
 ms.component: cds
-ms.date: 02/06/2021
+ms.date: 07/25/2023
 ms.subservice: dataverse-maker
 ms.author: sabinn
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Import or export data from Dataverse
 
@@ -24,7 +21,7 @@ When you export Dataverse table data, it's exported as a CSV file.
 Use a connector to import data from a selection of many different sources, such as Microsoft Excel, Azure, SQL Server database, SharePoint, Access, OData, and more.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. On the left navigation pane expand **Data**, and then select **Tables**.  
+1. On the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Data** > **Get data** > **Get data**.
 1. From the **Data sources** list, select the connector that you want to import data from.
 
@@ -51,7 +48,7 @@ Copy data from your Excel or CSV file into the template that you created in the 
 
 #### Import the file
 
-1. On [powerapps.com](https://make.powerapps.com/), expand the **Data** section. Select **Tables** in the left navigation pane.  
+1. On [powerapps.com](https://make.powerapps.com/) select **Tables** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Data**, to the right of **Get Data** select **>**, and then select **Get data from Excel**.
 1. Select the tables where you want to import data, and then select **Next**.
 1. On the **Import data** page, select **Upload**, and choose your file. Follow the prompts to upload your file.
@@ -106,8 +103,8 @@ You can still use primary keys as identifiers after you specify alternate keys. 
 
 Export data from one or more tables. Exported data is in comma-separated value (CSV) format. When you export data from more than one table, each table is exported into its own CSV file.
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane expand **Data**, and then select **Tables**.
-1. Select **Data** > **Export data**.
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Export** > **Export data**.
 1. Select the tables that you want to export data from, and then select **Export data**.
 
    > [!div class="mx-imgBorder"] 
@@ -144,5 +141,16 @@ The following fields are system fields and are not supported for import and expo
  > [!NOTE]
  > Get Data from Excel and Export Data features are currently not included in the Power Apps Developer Plan.
 
+## Troubleshoot connection issues
+
+Users might receive an error message if the connection they are using for export requires a fix. In this case, the user receives an error message that states **Connection to Dataverse failed. Please check the link below on how to fix this issue**.
+
+To fix this issue:
+
+1. In Power Apps (make.powerapps.com), select **Connections** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+2. Locate the **Microsoft Dataverse (legacy)** connection.
+3. Select the **Fix connection** link in the **Status** column, and follow the instructions on your screen.
+
+After the fix completes, retry the export.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

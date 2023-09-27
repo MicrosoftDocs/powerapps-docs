@@ -1,24 +1,18 @@
 ---
 title: "getRelationship (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getRelationship method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: jasongre
+ms.author: jasongre
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 # getRelationship (Client API reference)
-
-
 
 [!INCLUDE[./includes/getRelationship-description.md](./includes/getRelationship-description.md)]
 
@@ -50,12 +44,8 @@ Read-only and editable grids
 
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext).
 
-### Related topics
+### Related articles
 
 [openRelatedGrid](openRelatedGrid.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

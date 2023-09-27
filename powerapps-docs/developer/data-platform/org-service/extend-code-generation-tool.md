@@ -4,14 +4,10 @@ description: "The SDK download package includes an extension to the CrmSvcUtil c
 ms.date: 04/03/2022
 author: kkanakas
 ms.author: kartikka
-manager: pemikkel
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -129,7 +125,7 @@ Guid accountId = service.Create(account);
 
 ### See Also
 
- [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)
+ [Generate early-bound classes for the SDK for .NET](generate-early-bound-classes.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

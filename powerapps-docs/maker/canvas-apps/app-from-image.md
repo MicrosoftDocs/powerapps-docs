@@ -1,5 +1,5 @@
-﻿---
-title: Create a canvas app from an image (preview)
+---
+title: Create a canvas app from an image 
 description: Learn about how to use your own designs saved in image formats and create canvas apps from them.
 author: norliu
 ms.topic: article
@@ -7,27 +7,20 @@ ms.custom: canvas
 ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: norliu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - norliu
-  - tapanm-msft
+  - mduelae
 ---
 
-# Create a canvas app from an image (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Create a canvas app from an image 
 
 The app making journey typically involve a design phase to plan out what the app should look like. Whether the design is based on an existing paper form, a whiteboard drawing, or even an image of a legacy app, it can take a considerable amount of time to build the app from scratch.
 
 With the **Image to app** feature, you can now create an app from a visual design and connect it to data through a few simple steps in the guided interface. This feature makes it easy for makers of all skill levels to jumpstart the app development process.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 > [!NOTE]
 > - The styling of the components in the app, such as fonts and colors, will be based on the **Office Blue** theme in Power Apps.
@@ -37,7 +30,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 ## Prerequisites
 
 - A Power Apps license. If you don't have a license for Power Apps, you can [sign-up for free](../signup-for-powerapps.md).
-- If you're using your own image, the image file extension must be .jpg or .png. Also, the image must contain a clearly legible one-page form with a light background color. For the best results, edit your image so that it has a white background and high contrast.
+- If you're using your own image, the image file extension must be .jpg or .png, file size no more than 4MB. Also, the image must contain a clearly legible one-page form with a light background color. For the best results, edit your image so that it has a white background and high contrast.
 
 ## Create an app
 
@@ -47,7 +40,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 
     :::image type="content" source="media/app-from-image/select-create.png" alt-text="Select Create from the left-pane":::
 
-1. Select **Image (preview)**.
+1. Select **Image**.
 
     :::image type="content" source="media/app-from-image/select-image.png" alt-text="Select Image (preview) from the available cards.":::
 
@@ -83,18 +76,18 @@ With the **Image to app** feature, you can now create an app from a visual desig
 
     After you've reviewed the tags and ensured that each component is correctly tagged, select **Next**.
 
-1. The next step is to set up data. For the best experience, we recommended that you connect your app to a data source by selecting **Create a new table in Dataverse**. If you choose this option and select **Next**, you'll be guided in the next stage to add columns based on the form fields in your image, and your app will contain a form component that is connected to your Dataverse table.
+1. The next step is to set up data. For the best experience, we recommended that you connect your app to a data source by selecting *Connect to a Dataverse table**. If you choose this option and select **Next**, you'll be guided in the next stage to either select an existing Dataverse table you have and map the fields in the image to the columns in that table or create a new table in Dataverse and add columns based on the form fields in your image, and your app will contain a form component that is connected to your Dataverse table.
 
-    If you don't want to create a new table in Dataverse, select **Skip this for now**. If you choose this option and select **Create**, your app will be created as-is, which means that the components you tagged in the previous step will be generated directly. They won't be placed into a form component, and your app won't be connected to data.
+    If you don't want to connect to Dataverse, select **Skip this for now**. If you choose this option and select **Create**, your app will be created as-is, which means that the components you tagged in the previous step will be generated directly. They won't be placed into a form component, and your app won't be connected to data.
 
-    :::image type="content" source="media/app-from-image/setup-data.png" alt-text="Choose to create a new table, or continue without creating a table now.":::
+    :::image type="content" source="media/app-from-image/setup-data.png" alt-text="Choose to connect to Dataverse, or continue without creating a table now.":::
 
-    If you choose to skip the table creation, select **Create** and the app will be created for you. Later, you can add [data connections](connections-list.md) to your app to connect the app with your data.
+    If you choose to skip connecting to Dataverse, select **Create** and the app will be created for you. Later, you can add [data connections](connections-list.md) to your app to connect the app with your data.
 
     > [!NOTE]
-    > The option to create a new table will be disabled if you don't have Dataverse in your environment, or if you don't have the required permissions to create a Dataverse table.
+    > The option to Connect to a Dataverse table will be disabled if you don't have Dataverse in your environment.
 
-1. If you chose to create a new table in Dataverse, you can now edit the table and column details. Each tag corresponds to a data column based on the form fields that were identified in your image.
+1. If you chose to connect to a Dataverse table, and selected either Create new table or an existing table, you can now edit the table and column details. Each tag corresponds to a data column based on the form fields that were identified in your image.
 
     Select a tag to modify the column properties, such as **Display Name**, **Name**, and **Data type**. To remove an existing column, select the tag and then select **Delete column**.
 

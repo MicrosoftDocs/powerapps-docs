@@ -2,16 +2,12 @@
 title: "Page large result sets with FetchXML (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can page the results of a FetchXML query by using the paging cookie" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
@@ -22,7 +18,7 @@ You can page the results of a FetchXML query by using the paging cookie. The pag
   
 FetchXML and <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> use different formats for their paging cookies. If you convert from one query format to the other by using the <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> message or the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> message, the paging cookie value is ignored. In addition, if you request nonconsecutive pages, the paging cookie value is ignored.  
   
- When you use the paging cookie with FetchXML, make sure that you use the correct encoding. The following example shows the correct encoding when using the paging cookie with FetchXML:  
+ When you use the paging cookie with FetchXML, you must XML encode the cookie value. The following example shows what the XML encoded cookie looks like when using the paging cookie with FetchXML: 
   
 ```csharp  
 strQueryXML = @"  

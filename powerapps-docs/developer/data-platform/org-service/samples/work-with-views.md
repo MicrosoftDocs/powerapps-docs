@@ -3,22 +3,21 @@ title: "Sample: Work with views (Microsoft Dataverse) | Microsoft Docs" # Intent
 description: "This sample shows how to work with views" # 115-145 characters including spaces. This abstract displays in the search result.
 author: caburk
 ms.author: caburk
-manager: evlew
 ms.date: 06/10/2022
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 
 # Sample: Work with views
 
-This sample shows how to perform various actions on views. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithViews).
+This sample shows how to perform various actions on views.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Work with views sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithViews)
 
 ## How to run this sample
 

@@ -1,29 +1,26 @@
 ---
-title: How to use a model-driven app on a mobile device | Microsoft Docs
+title: Use model-driven apps in the Power Apps mobile app
 description: Learn how to use a custom model-driven app on a mobile device.
-author: mduelae
-manager: kvivek
+author: trdehove
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 8/09/2022
+ms.date: 08/02/2023
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: trdehove
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-# Use model-driven apps on Power Apps mobile
+
+# Use model-driven apps in the Power Apps mobile app
 
 Use Power Apps mobile to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Install Power Apps mobile](run-powerapps-on-mobile.md).
 
 > [!IMPORTANT]
-> Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
+> - To use your model-driven app in the Power Apps mobile app, your app maker must have set the **Primary mobile player** setting to **Power Apps mobile.** For more information, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md).
 
 ## Home screen 
 
@@ -180,9 +177,18 @@ From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map ic
 
 [This section has pre-release documentation and is subject to change.]
 
-Your app maker can enable [Mobile commanding improvements](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. Here's a list of improvements:
+This section describes enhancements that have been made to model-driven apps on mobile devices.
 
-### Commanding improvements
+### Lock tabs at the top of forms
+Your app maker can choose to lock the tabs at the top of a form so they are always visible while users scroll through the data on the form.
+
+![Tabs are locked at the top of the form.](media/Lock-tabs.png "Tabs are locked at the top of the form.")
+
+Your app maker can turn on this feature. For more inforamtion, see [Features](../maker/model-driven-apps/app-properties.md#features).
+
+### Mobile commanding improvements
+
+Your app maker can enable [Mobile commanding improvements](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. Here's a list of improvements:
 
 - The **Delete** command on a grid page is automatically hidden when a row is not selected thus, making room for other commands. When one or more rows is selected the **Delete** command is automatically displayed.
   
@@ -192,17 +198,19 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   | :---:         |     :---:      |
   | ![Old process command.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
  
-- Commands such as **Edit columns**, **Edit filters**, and **Show Chart** have been moved from the main set of commands to overflow menu. This gives priority to other commands including custom commands. 
-
-  | Before | After |
-  | :---:         |     :---:      |
-  | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
+- Some commands have been moved from the main set of commands to an overflow menu. This gives priority to other commands, including custom commands. 
   
-### Command bar optimization for tablets
+### Tablet optimization for command bar
 
-- The command bar on Power Apps mobile for tablets was at the bottom, now the command bar is located at the top like to the web app.
+The command bar on Power Apps mobile for tablets was at the bottom, now the command bar is located at the top.
 
-    ![Command bar on tablet.](media/command-bar-tablet.png "Command bar on tablet.")
+![Command bar on tablet.](media/command-bar-tablet.png "Command bar on tablet.")
+
+Your app maker can turn on this feature. For more inforamtion, see [Features](../maker/model-driven-apps/app-properties.md#features).
+    
+
+
+
 
 
 

@@ -9,9 +9,6 @@ ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -33,7 +30,7 @@ Standard controls.
 
 **Description**: The output dictionary of the control.
 
-### Related topics
+### Related articles
 
 [OnOutputChange event](../events/onoutputchange.md)
 

@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -167,7 +164,7 @@ A FetchXML query in Microsoft Dataverse can use special fiscal date values and *
 
 ### See also
 
-[Query data using the Organization service](org-service/entity-operations-query-data.md)<br />
+[Query data using the SDK for .NET](org-service/entity-operations-query-data.md)<br />
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)<br />
 [Use a left outer join in FetchXML to query for records "not in"](use-fetchxml-left-outer-join-query-records-not-in.md)<br />
 

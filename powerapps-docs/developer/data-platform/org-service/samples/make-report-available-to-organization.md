@@ -4,14 +4,10 @@ description: "This sample shows how to make a report available or unavailable to
 ms.date: 04/03/2022
 author: JimDaly #TODO: No Owner
 ms.author: jdaly
-manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Make a report available or unavailable to organization
 
-This sample shows how to make a report available or unavailable to an organization. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/MakeReportAvailableToOrganization).
+This sample shows how to make a report available or unavailable to an organization.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Make a report available or unavailable to organization sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/MakeReportAvailableToOrganization)
 
 ## How to run this sample
 

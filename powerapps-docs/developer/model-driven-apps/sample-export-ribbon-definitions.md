@@ -3,21 +3,21 @@ title: "Sample: Export ribbon definitions  (model-driven apps) | Microsoft Docs"
 description: "The sample shows how to export Ribbon definitions. It uses the RetrieveApplicationRibbon and RetrieveEntityRibbon messages." # 115-145 characters including spaces. This abstract displays in the search result.
 author: JimDaly
 ms.author: jdaly
-manager: kvivek
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: sample
 ms.subservice: mda-developer
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Export ribbon definitions
 
-This sample shows how to export ribbon definitions. It uses the Organization Service <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest> and <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest> classes. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportRibbonDefinitions).
+This sample shows how to export ribbon definitions. It uses the SDK for .NET <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest> and <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest> classes.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Export ribbon definitions sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportRibbonDefinitions)
 
 ## How to run this sample
 

@@ -9,13 +9,9 @@ ms.topic: article
 author: phecke
 ms.subservice: dataverse-developer
 ms.author: pehecke
-manager: kvivek
 ms.reviewer: pehecke
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # View developer resources

@@ -2,21 +2,17 @@
 title: "View the profile card for a contact or user | MicrosoftDocs"
 description: View a contact's or user profile card
 ms.custom: ""
-author: mduelae
-manager: kvivek
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 09/14/2020
 ms.subservice: end-user
-ms.author: mkaur
-ms.reviewer: ""
+ms.author: sericks
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # View the profile card for a contact or user

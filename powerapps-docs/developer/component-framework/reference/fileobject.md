@@ -1,9 +1,8 @@
 ---
-title: FileObject | Microsoft Docs
+title: FileObject (Power Apps component framework API reference) | Microsoft Docs
 description: Provides access to all the properties of a file.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

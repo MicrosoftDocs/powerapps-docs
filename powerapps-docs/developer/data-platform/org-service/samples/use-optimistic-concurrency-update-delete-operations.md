@@ -2,16 +2,12 @@
 title: "Sample: Use optimistic concurrency with update and delete operations (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to use optimistic concurrency for update and delete operations." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -19,7 +15,10 @@ contributors:
 
 # Sample: Use optimistic concurrency with update and delete operations
 
-This sample shows how to use optimistic concurrency for update and delete operations. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/OptimisticConcurrency).
+This sample shows how to use optimistic concurrency for update and delete operations.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Use optimistic concurrency with update and delete operations sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/OptimisticConcurrency)
 
 ## How to run this sample
 

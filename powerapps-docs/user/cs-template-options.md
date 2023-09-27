@@ -2,23 +2,17 @@
 title: Customize an email template using the enhanced template editor
 description: Create an email template using the enhanced email template editor
 author: gandhamm
-manager: shujoshi
 
 ms.topic: conceptual
-ms.date: 05/06/2022
+ms.date: 05/05/2023
 ms.subservice: end-user
 ms.author: mgandham
+ms.reviewer: sericks
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Customize an email template using the template editor 
-
-> [!NOTE]
-> The enhanced email template editor is available only in Dynamics 365 Customer Service.
 
 Use the **Editor** tab in the **Email Template** form to create customized email templates. The **Editor** tab has three sections:
 
@@ -41,6 +35,11 @@ You have a few different ways to add items to your template.
 You can select **Go to the parent** to identify the section or column in which the element is embedded.
 
   :::image type="content" source="media\add-template-optns.png" alt-text="Screenshot of the email template editor page, with the go to parent call out.":::
+
+Select **HTML** to  personalize your email template. We recommend the following guidelines:
+
+- Ensure that you don't delete the existing meta tags.
+- You can add CSS inside the style tags and HTML content inside the body tags.
 
 ### Add a layout section to the template
 
@@ -73,8 +72,7 @@ Use the **General Styles** tab to change the layout's width, font, font size, ba
 
 ### See also
 
-[Personalize content with Insert dynamic text](email-dynamic-text.md)
-
+[Personalize content with Insert dynamic text](email-dynamic-text.md)<br>
 [How to create an email template  in model-driven apps](email-template-create.md)  
 [Enable the enhanced email template editor page](cs-email-template-builder.md)
 

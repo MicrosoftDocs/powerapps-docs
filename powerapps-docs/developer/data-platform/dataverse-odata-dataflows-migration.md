@@ -3,12 +3,10 @@ title: Migrate data between Microsoft Dataverse environments using the dataflows
 author: denisem-msft
 ms.reviewer: jdaly
 description: Migrate data between Microsoft Dataverse environments using dataflows OData connector.
-ms.date: 10/03/2022
+ms.date: 12/09/2022
 ms.topic: article
 ms.subservice: dataverse-developer
 ms.author: demora
-search.app: 
-  - PowerApps
 contributors:
  - JimDaly
 ---
@@ -197,8 +195,8 @@ You can manually initiate a dataflow by selecting **(...)** in the dataflows lis
 ## Limitations
 
 - Many-to-many relationship data imports are not supported.
-
 - Parent dataflows must be manually configured to run before child dataflows.
+- Mapping to Status and Status Reason fields is currently not supported.  For more field mapping limitations see [Field mapping considerations for standard dataflows > Known limitations](/power-query/dataflows/get-best-of-standard-dataflows#known-limitations)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

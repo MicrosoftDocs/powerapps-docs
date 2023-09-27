@@ -2,7 +2,7 @@
 title: "Create custom help pages | MicrosoftDocs"
 description: "Create custom help pages on UCI"
 ms.custom: ""
-ms.date: 03/21/2022
+ms.date: 02/03/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,12 +16,8 @@ caps.latest.revision:
 author: "matthewbolanos"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create guided help for your Unified Interface app
@@ -120,7 +116,7 @@ You can insert videos and static images into your help pane. Videos and images a
 > Remember to copy the link URL for the video or image you want so you can paste it into your help pane. 
 
 Custom help panes support the following video sources:
-- Microsoft Stream (use for private content) 
+- Microsoft Stream (Classic) (use for private content) 
 - YouTube
 - Facebook
 - Vimeo
@@ -152,12 +148,14 @@ Author needs to define the target through drag and drop capability in the proper
 All help content is stored in a help page component in Dataverse as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help rows are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.
 
 ### Moving content via solutions
+
 By default, all new help pages appear in the default solution. If you want to move your content to another environment, first add your existing help pages into an unmanaged solution before you export them. To add a help page to an unmanaged solution, follow these steps:
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. On the left navigation pane, select **Solutions** and then open the unmanaged solution you want.
-3. Select **Add Existing** on the command bar, and then select **Help Page**.
-4. Select the help pages that you want to add, and then select **Add**. More information: [Export solutions](export-solutions.md)
+1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the unmanaged solution you want.
+1. Select **Add Existing** on the command bar, and then select **Help Page**.
+1. Select the help pages that you want to add, and then select **Add**. More information: [Export solutions](export-solutions.md)
 
 ## Help page documentation automation
 
