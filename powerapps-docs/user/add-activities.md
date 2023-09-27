@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 08/30/2023
+ms.date: 09/27/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -475,6 +475,9 @@ When you access the timeline after being away, activities that you've missed dis
 ## Pin or unpin records in timeline
 
 If your administrator has enabled the pin setting and you have write/delete access, you can quickly access records, such as activities, by keeping them at the top of the timeline. Pinning a record eliminates the need to scroll through every record to find the one you need.
+
+> [!Note]
+> If you have a system administrator or basic user role, the pin and unpin settings work by default. If you don't have either of these roles, you must have Create/Read/Write privileges to be added to the msdyn_customcontrolextendedsettings entity for these settings to work.
 
 By default, you can pin notes. The activities that you can pin depend on how your administrator has set up the feature.
 
