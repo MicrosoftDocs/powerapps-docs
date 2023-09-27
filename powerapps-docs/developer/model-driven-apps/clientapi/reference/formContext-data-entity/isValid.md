@@ -14,8 +14,6 @@ contributors:
 ---
 # entity.isValid (Client API reference)
 
-
-
 [!INCLUDE[./includes/isValid-description.md](./includes/isValid-description.md)]
 
 ## Syntax
@@ -30,10 +28,8 @@ contributors:
 
 **Description**: true if all of the table data is valid; false otherwise.
 
-### Related topics
+### Related articles
 
 [formContext](../../clientapi-form-context.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

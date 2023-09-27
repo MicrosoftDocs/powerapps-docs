@@ -338,7 +338,7 @@ To test your code:
 1. Click **OK** to close the alert.
 
 
-### See also
+### Related articles
 
 [Debug JavaScript code for model-driven apps](debug-JavaScript-code.md)<br />
 [Events in forms and grids in model-driven apps](events-forms-grids.md)<br />
