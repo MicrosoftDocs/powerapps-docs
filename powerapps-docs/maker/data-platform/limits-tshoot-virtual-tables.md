@@ -5,7 +5,7 @@ author: NHelgren
 ms.author: nhelgren
 ms.service: powerapps
 ms.topic: conceptual
-ms.date: 09/18/2023
+ms.date: 09/27/2023
 ms.custom: template-how-to
 ---
 # Known limitations and troubleshooting with virtual tables
@@ -106,9 +106,9 @@ The following are limitations for each data source.
   **Solution:** Check your source table and make sure it has primary key defined.
   
 - I get one of the following errors when Power Apps (make.powerapps.com) is retrieving my table list or when I select **Finish** to create my table:
-   - "Resource not found for the segment 'msdyn_get_required_fields"
+   - "Resource not found for the segment `msdyn_get_required_fields`"
    - “Error calling... please verify that connection... exists in environment”
-   - "Sequence matches no element for "msdyn_get_required_fields""<br />
+   - "Sequence matches no element for `msdyn_get_required_fields`"<br />
   **Solution**: In some cases you might not have the most up to date solution for the virtual connector provider. To determine whether your virtual connector provider solution needs an update:
   1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   1. Select the **History** tab.
