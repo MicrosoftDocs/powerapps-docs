@@ -14,8 +14,6 @@ contributors:
 ---
 # tab.setLabel (Client API reference)
 
-
-
 [!INCLUDE[./includes/setLabel-description.md](./includes/setLabel-description.md)]
 
 ## Syntax
@@ -26,9 +24,9 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|label|String|Yes|The new label of the tab.|
+|`label`|String|Yes|The new label of the tab.|
 
-### Related topics
+### Related articles
 
 [getLabel](getLabel.md)
 

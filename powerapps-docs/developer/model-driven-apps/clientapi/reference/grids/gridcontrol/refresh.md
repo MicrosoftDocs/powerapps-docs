@@ -14,8 +14,6 @@ contributors:
 ---
 # gridContext.refresh (Client API reference)
 
-
-
 [!INCLUDE[./includes/refresh-description.md](./includes/refresh-description.md)]
 
 ## Grid types supported
@@ -29,8 +27,5 @@ Read-only and editable grids
 ## Remarks
 
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext). 
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

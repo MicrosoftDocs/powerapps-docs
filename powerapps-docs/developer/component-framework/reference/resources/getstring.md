@@ -27,7 +27,7 @@ Model-driven apps, canvas apps, & portals.
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|id|`String`|Yes|Name of the resource in the component manifest.|
+|`id`|String|Yes|Name of the resource in the component manifest.|
 
 ## Return Value
 
