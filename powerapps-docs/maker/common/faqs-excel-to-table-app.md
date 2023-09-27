@@ -15,7 +15,7 @@ These frequently asked questions (FAQ) describe the AI impact of the Excel to ta
 
 ## What is Excel to table and app?
 
-Excel to table and app allows makers to bring their own Excel file and convert that to a Dataverse table and an app along with it. The feature accepts an Excel file and produces a Dataverse table as the output. When a maker uses the feature from the home page or the **Apps** area, it can also generate an app based on the Dataverse table.  
+Excel to table and app allows makers to bring their own Excel file and convert that to a Dataverse table and an app along with it. The feature accepts an Excel file and produces a Dataverse table as the output. When a maker uses the feature from the home page or the **Apps** area, it can also generate an app based on the Dataverse table. When Copilot is enabled in the current environment, it leverages  [Azure OpenAI Service](/azure/ai-services/openai/overview) to generate the best-fitting table and column metadata based on the uploaded Excel file.
 
 ## What can Excel to table and app do?  
 
