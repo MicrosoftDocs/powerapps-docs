@@ -26,16 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|Function reference|Yes|The function to be removed from the [OnProcessStatusChange](../../events/onprocessstatuschange.md) event.|
+|`myFunction`|Function reference|Yes|The function to be removed from the [OnProcessStatusChange](../../events/onprocessstatuschange.md) event.|
 
-### Related topics
+### Related articles
 
-[addOnProcessStatusChange](addOnProcessStatusChange.md)
- 
+[addOnProcessStatusChange](addOnProcessStatusChange.md)   
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

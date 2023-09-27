@@ -14,8 +14,6 @@ contributors:
 ---
 # prependOrgName (Client API reference)
 
-
-
 Prefixes the current organization's unique name to a string, typically a URL path.
 
 ## Syntax
@@ -29,7 +27,7 @@ globalContext.prependOrgName(sPath);
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|sPath |String |Yes |A local path to a resource. |
+|`sPath` |String |Yes |A local path to a resource. |
 
 ## Return Value
 
@@ -39,11 +37,8 @@ globalContext.prependOrgName(sPath);
 
 `"/"+ orgName + sPath`
 
-### Related topics
+### Related articles
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

@@ -26,8 +26,9 @@ An execution context object is passed to event handlers for this event. You can 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 ## Methods supported for this event
+
 - **formContext.data.process**.[addOnStageChange](../formcontext-data-process/eventhandlers/addOnStageChange.md) method to add event handlers for this event.
-- **formContext.data.process**.[removeOnStageChange](../formcontext-data-process/eventhandlers/removeOnStageChange.md) method to remove event handlers for this event. 
+- **formContext.data.process**.[removeOnStageChange](../formcontext-data-process/eventhandlers/removeOnStageChange.md) method to remove event handlers for this event.
 
 
 

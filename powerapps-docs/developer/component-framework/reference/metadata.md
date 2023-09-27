@@ -1,8 +1,8 @@
 ---
 title: Metadata (Power Apps component framework API reference) | Microsoft Docs
 description: Provides all the information about  column definitions.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

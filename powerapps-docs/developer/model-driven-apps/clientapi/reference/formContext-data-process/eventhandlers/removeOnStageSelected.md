@@ -26,16 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|Function reference|Yes|The function to be removed from the [OnStageSelected](../../events/onstageselected.md) event.|
+|`myFunction`|Function reference|Yes|The function to be removed from the [OnStageSelected](../../events/onstageselected.md) event.|
 
-### Related topics
+### Related articles
 
-[addOnStageSelected](addOnStageSelected.md)
- 
+[addOnStageSelected](addOnStageSelected.md)   
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

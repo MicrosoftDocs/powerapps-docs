@@ -30,7 +30,7 @@ standard control for **datetime** columns.
 
 **Description**: true if shows the time portion of the date; false otherwise.
 
-### Related topics
+### Related articles
 
 [setShowTime](setShowTime.md)
 

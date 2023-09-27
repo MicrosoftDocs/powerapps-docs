@@ -28,7 +28,7 @@ contributors:
 
 **Description**: true if all of the form data is valid; false otherwise.
 
-### Related topics
+### Related articles
 
 [formContext](../../clientapi-form-context.md)
 

@@ -30,7 +30,7 @@ contributors:
 
 **Description**: **true** if visible; **false** otherwise.
 
-## Related topics
+## Related articles
 
 [setBodyVisible](setBodyVisible.md)
 
