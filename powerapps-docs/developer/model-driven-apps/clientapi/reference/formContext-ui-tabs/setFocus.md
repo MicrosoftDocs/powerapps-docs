@@ -14,21 +14,14 @@ contributors:
 ---
 # tab.setFocus (Client API reference)
 
-
-
 [!INCLUDE[./includes/setFocus-description.md](./includes/setFocus-description.md)]
 
 ## Syntax
 
 `tabObj.setFocus();`
 
-### Related topics
+### Related articles
 
 [formcontext.ui.tabs](../formcontext-ui-tabs.md)
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -30,14 +30,15 @@ All
 
 ## Parameters
 
-**Type**: String. 
+**Type**: String.
 
 **Description**: Set the level to one of the following values:
 - none
 - required
 - recommended
 
-### Related topic
+### Related article
+
 [getRequiredLevel (Client API reference)](getRequiredLevel.md)
 
 

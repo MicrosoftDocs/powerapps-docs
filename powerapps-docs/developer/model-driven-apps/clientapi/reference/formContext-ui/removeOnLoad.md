@@ -26,18 +26,13 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|function reference|Yes|The function to be removed from the form [OnLoad](../events/form-onload.md) event.
+|`myFunction`|function reference|Yes|The function to be removed from the form [OnLoad](../events/form-onload.md) event.
 
-### Related topics
+### Related articles
 
-[addOnLoad](addOnLoad.md)
-
-[Form data OnLoad event](../events/form-onload.md)
-
-[formContext.ui](../formContext-ui.md)
-
+[addOnLoad](addOnLoad.md)   
+[Form data OnLoad event](../events/form-onload.md)   
+[formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -27,10 +27,9 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|contentType|String|Yes| Defines the content type. It has the following parameters: <br/> - **cardSections**: The default tab behavior. <br/> - **singleComponent**: Maximizes the content of the first component in the tab. |
-||||
+|`contentType`|String|Yes| Defines the content type. It has the following parameters: <br/> - **cardSections**: The default tab behavior. <br/> - **singleComponent**: Maximizes the content of the first component in the tab. |
 
-### Related topics
+### Related articles
 
 [getContentType](getContentType.md)
 

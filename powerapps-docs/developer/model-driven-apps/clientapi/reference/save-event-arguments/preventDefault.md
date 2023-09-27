@@ -23,14 +23,9 @@ contributors:
 > [!IMPORTANT]
 > When you use `preventDefault` on a form with business process flows, the stage navigation may throw this error: **Unable to save form data due to web resource registered onSave invoking preventDefault**. Use [`OnPreStageChange`](../events/onprestagechange.md) to prevent this error. 
 
-### Related topics
+### Related articles
 
-[getSaveMode](getSaveMode.md)
-
+[getSaveMode](getSaveMode.md)   
 [isDefaultPrevented](isDefaultPrevented.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

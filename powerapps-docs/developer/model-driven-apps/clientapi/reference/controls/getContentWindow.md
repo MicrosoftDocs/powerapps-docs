@@ -34,8 +34,8 @@ formContext.getControl(arg).getContentWindow().then(successCallback, errorCallba
 
 |Name |Type|Required|Description|
 |---|---|---|---|
-|successCallback|Function|No|A function to call when operation is executed successfully. A content window instance representing the IFRAME or web resource is passed to the function.|
-|errorCallback|Function|No|A function to call when the operation fails.|
+|`successCallback`|Function|No|A function to call when operation is executed successfully. A content window instance representing the IFRAME or web resource is passed to the function.|
+|`errorCallback`|Function|No|A function to call when the operation fails.|
 
 
 ## Return Value

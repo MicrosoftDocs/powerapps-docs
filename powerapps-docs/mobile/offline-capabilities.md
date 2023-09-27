@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 07/26/2023
+ms.date: 09/20/2023
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -93,8 +93,10 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Qualify a lead** - When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the  qualify stage. The user has to manually select **Next stage** to move to the next stage.
 
-- **Grids** - Column filtering is disabled when an offline profile is set up even when there's network connectivity. The grid works with the local database and doesn't support custom filters.
-
+- **Grids**
+    - Column filtering is disabled when an offline profile is set up even when there's network connectivity. The grid works with the local database and doesn't support custom filters.
+    - Custom icons alongside values in grids aren't available for offline. For more information about this capability, go to [How to display custom icons](../maker/data-platform/display-custom-icons-instead.md).
+ 
 - **Views** aren't supported for the following tables in offline mode: 
 
      - Email

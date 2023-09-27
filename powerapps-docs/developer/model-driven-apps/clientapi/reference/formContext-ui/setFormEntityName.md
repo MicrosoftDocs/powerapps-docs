@@ -26,14 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|arg|String|Yes|Name of the table to be displayed on the form.|
+|`arg`|String|Yes|Name of the table to be displayed on the form.|
 
-### Related topics
+### Related articles
 
-[formContext.ui](../formContext-ui.md)
-
+[formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
