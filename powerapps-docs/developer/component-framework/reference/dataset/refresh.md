@@ -1,8 +1,8 @@
 ---
 title: refresh (Power Apps component framework API reference) | Microsoft Docs
 description: Refreshes the dataset based on filters, sorting, linking, new column.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

@@ -1,8 +1,8 @@
 ---
 title: Image Element | Microsoft Docs
 description: The img web resource allows you to add images for the code components.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
