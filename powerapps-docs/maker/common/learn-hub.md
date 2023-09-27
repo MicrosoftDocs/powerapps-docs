@@ -30,7 +30,7 @@ The Learn hub includes the following sections:
   > [!div class="mx-imgBorder"] 
   > ![Banner for the learning hub.](media/learn/learn-banner.png "Banner for learning hub") 
 
-- Based on the experience level you choose, the **Experience Level** menu provides learning content. For instance, if you are a developer seeking information about extensibility points in Power Apps, choose **Advanced** to find relevant help resources.
+- The **Experience Level** menu provides learning content based on the experience level you choose. For instance, if you are a developer seeking information about extensibility points in Power Apps, choose **Advanced** to find relevant help resources.
 
   > [!div class="mx-imgBorder"] 
   > ![Experience level selection.](media/learn/learnhub-experiencelevel.png "Experience level selection") 
