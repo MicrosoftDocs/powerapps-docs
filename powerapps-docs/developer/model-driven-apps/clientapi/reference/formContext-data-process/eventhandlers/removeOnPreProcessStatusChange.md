@@ -25,12 +25,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|Function reference|Yes|The function to be removed from the [OnPreProcessStatusChange](../../events/onpreprocessstatuschange.md) event.|
+|`myFunction`|Function reference|Yes|The function to be removed from the [OnPreProcessStatusChange](../../events/onpreprocessstatuschange.md) event.|
 
-### Related topics
+### Related articles
 
-[addOnProcessStatusChange](addOnProcessStatusChange.md)
- 
+[addOnProcessStatusChange](addOnProcessStatusChange.md)   
 [formContext.data.process](../../formContext-data-process.md)
  
 

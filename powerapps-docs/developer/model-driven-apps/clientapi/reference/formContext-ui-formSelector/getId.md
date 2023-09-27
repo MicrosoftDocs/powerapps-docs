@@ -29,7 +29,7 @@ contributors:
 
 **Description**: ID of the form.
 
-### Related topics
+### Related articles
 
 [formContext.ui.formSelector](../formContext-ui-formSelector.md)
 

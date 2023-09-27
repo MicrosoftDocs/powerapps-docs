@@ -68,7 +68,7 @@ Events occur in Custom Engagement forms and grids whenever a form or grid loads,
 
 - [TabStateChange](events/tabstatechange.md)
 
-### Related topics
+### Related articles
 
 [Events in forms and grids](../events-forms-grids.md)
 

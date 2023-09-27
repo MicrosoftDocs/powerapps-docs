@@ -31,7 +31,7 @@ contributors:
 |bool|Boolean|Yes|Specify **true** to show the command bar; **false** to hide the command bar.|
 |||||
 
-## Related topics
+## Related articles
 
 [formContext.ui.headerSection](../formContext-ui-headerSection.md)
 

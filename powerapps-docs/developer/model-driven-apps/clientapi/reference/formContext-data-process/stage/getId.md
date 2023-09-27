@@ -28,10 +28,8 @@ contributors:
 
 **Description**: Unique identifier of the stage in the GUID format.
 
-### Related topics
+### Related articles
  
 [formContext.data.process](../../formContext-data-process.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

@@ -26,7 +26,7 @@ All
 `formContext.getAttribute(arg).fireOnChange()`
 
 
-### Related topics
+### Related articles
 [Column OnChange Event](../events/attribute-onchange.md)
 
 

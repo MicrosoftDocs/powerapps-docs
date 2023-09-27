@@ -14,8 +14,6 @@ contributors:
 ---
 # tab.getDisplayState (Client API reference)
 
-
-
 [!INCLUDE[./includes/getDisplayState-description.md](./includes/getDisplayState-description.md)]
 
 ## Syntax
@@ -28,12 +26,8 @@ contributors:
 
 **Description**: Returns "expanded" or "collapsed".
 
-### Related topics
+### Related articles
 
 [setDisplayState](setDisplayState.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
