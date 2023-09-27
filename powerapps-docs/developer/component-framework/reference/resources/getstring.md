@@ -24,7 +24,7 @@ Model-driven apps, canvas apps, & portals.
 `context.resources.getString(id)`
 
 > [!NOTE]
-> If the `id` parameter doesn't match a given key associated with the specified resource (resx) defined in the manifest file, this method returns the `id` parameter value.
+> If the `id` parameter doesn't match a key associated with the specified resource (resx) defined in the manifest file, this method returns the `id` parameter value.
 
 ## Parameters
 
