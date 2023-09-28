@@ -1,7 +1,7 @@
 ---
 title: "Generate early-bound classes for the SDK for .NET"
 description: "Learn how to use the Power Platform CLI pac modelbuilder build command to generate early-bound classes for use with the Microsoft Dataverse SDK for .NET. This tool generates early-bound .NET classes that represent the Entity Data Model used by Dataverse."
-ms.date: 09/25/2023
+ms.date: 09/28/2023
 author: kkanakas
 ms.author: kartikka
 ms.reviewer: pehecke
@@ -63,7 +63,8 @@ Use the following steps to get started:
    "entitynamesfilter-comment": "Filters the list of entities are retrieved when reading data from Dataverse.",
    "entityNamesFilter": [
       "account",
-      "contact"
+      "contact",
+      "sample_*"
    ],
    "entitytypesfolder-comment": "Folder name that contains entities.",
    "entityTypesFolder": "Entities",
@@ -78,7 +79,8 @@ Use the following steps to get started:
    "messagenamesfilter-comment": "Filters the list of messages that are retrieved when reading data from Dataverse.",
    "messageNamesFilter": [
       "searchautocomplete",
-      "searchquery"
+      "searchquery",
+      "sample_*"
    ],
    "messagestypesfolder-comment": "Folder name that contains messages.",
    "messagesTypesFolder": "Messages",
@@ -147,7 +149,7 @@ Generation Complete - 00:00:01.815
 PS C:\projects\exampleproject\model>
 ```
 
-When you inspect the output, notice that it only generates classes for the tables specified by `entityNamesFilter` and only the messages specified in the `messageNamesFilter`. You should specify which tables (entities) and messages you use in your project. Otherwise, classes for all tables and messages are generated.
+When you inspect the output, notice that it only generates classes for the tables specified by `entityNamesFilter` and only the messages specified in the `messageNamesFilter`. You should specify which tables (entities) and messages you use in your project. Otherwise, classes for all tables and messages are generated. You can use `*` as a wildcard character in these values. This is useful when items in your solution share a common customization prefix.
 
 `pac modelbuilder build` writes the files into folders with names you can control in the settings file:
 
@@ -175,9 +177,9 @@ Here's an example showing how to generate files with the same settings as the ex
 ```powershell
 PS C:\>pac modelbuilder build `
    --outdirectory C:\projects\exampleproject\model `
-   --entitynamesfilter 'account;contact' `
+   --entitynamesfilter 'account;contact;sample_*' `
    --generatesdkmessages `
-   --messagenamesfilter 'searchautocomplete;searchquery' `
+   --messagenamesfilter 'searchautocomplete;searchquery;sample_*' `
    --namespace ExampleProject `
    --serviceContextName OrgContext `
    --suppressGeneratedCodeAttribute `
@@ -202,11 +204,13 @@ This doesn't include all the settings because it uses the default options. If yo
   "optionSetsTypesFolder": "OptionSets",
   "entityNamesFilter": [
     "account",
-    "contact"
+    "contact",
+    "sample_*"
   ],
   "messageNamesFilter": [
     "searchautocomplete",
-    "searchquery"
+    "searchquery",
+    "sample_*"
   ],
   "emitEntityETC": false,
   "emitVirtualAttributes": false
