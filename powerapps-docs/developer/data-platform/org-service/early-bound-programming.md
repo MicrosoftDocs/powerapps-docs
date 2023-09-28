@@ -18,7 +18,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-When you work with the SDK for .NET assemblies you have two programming styles you can use: *late-bound* and *early-bound*.
+When you work with the SDK for .NET assemblies, you have two programming styles you can use: *late-bound* and *early-bound*.
 
 The key difference between early and late binding involves type conversion. While early binding provides compile-time checking of all types so that no implicit casts occur, late binding checks types only when the object is created or an action is performed on the type. The <xref:Microsoft.Xrm.Sdk.Entity> class requires types to be explicitly specified to prevent implicit casts.
 
@@ -31,9 +31,9 @@ Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class where you 
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>
 
-Relationships do not have a `LogicalName` property, so the <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase>.<xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.SchemaName> property is used.
+Relationships don't have a `LogicalName` property, so the <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase>.<xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.SchemaName> property is used.
 
-The main advantage for late-bound programming is that you don't need to generate the classes or include that generated file within your projects. The generated file can be quite large.
+The main advantage for late-bound programming is that you don't need to generate the classes or include that generated file within your projects. The generated file can be large.
 
 The main disadvantages are:
 
@@ -76,7 +76,7 @@ Guid accountid = svc.Create(account);
 
 Early-bound programming requires that you first generate a set of classes based on the table and column definitions (entity and attribute metadata) for a specific environment using the code generation tool (CrmSvcUtil.exe). More information: [Generate classes for early-bound programming using the SDK for .NET](generate-early-bound-classes.md)
 
-After generating early-bound classes using the code generation tool you will enjoy a better experience while you write code because classes and properties use the respective `SchemaName` property values:
+After generating early-bound classes using the code generation tool, you'll enjoy a better experience while you write code because classes and properties use the respective `SchemaName` property values:
 
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName>
@@ -84,11 +84,9 @@ After generating early-bound classes using the code generation tool you will enj
 
 Simply instantiate the class and let Visual Studio IntelliSense provide the names of properties and relationships.
 
-The classes generated for early-bound programming can also include definitions for any custom actions that are defined for the environment. This will provide you with a pair of request and response classes to use with these custom actions. More information: [Custom Actions](../custom-actions.md)
+The classes generated for early-bound programming can also include definitions for any custom actions that are defined for the environment. This provides you with a pair of request and response classes to use with these custom actions. More information: [Custom Actions](../custom-actions.md)
 
-There is also an option to extend the code generation tool to change the output. One extension creates enumerations for each optionset (choices) option value. This provides a better experience because you don't have to look up the integer value for each choice. More information: [Create extensions for the code generation tool](extend-code-generation-tool.md)
-
-Classes are generated using table definitions from a specific environment instance and each instance may have different tables and columns where these can change over time. You may need to write code to work for tables that are not present when you generate the strongly typed classes.
+Classes are generated using table definitions from a specific environment instance and each instance may have different tables and columns where these can change over time. You may need to write code to work for tables that aren't present when you generate the strongly typed classes.
 
 > [!IMPORTANT]
 > If you are using the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> to provide the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods you will use, you must call the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.EnableProxyTypes> method to enable early bound types.
@@ -157,7 +155,7 @@ context.SaveChanges();
   
 ```  
 
-If a custom attribute was not included in the generated classes, you can still use it.
+If a custom attribute wasn't included in the generated classes, you can still use it.
 
 
 ```csharp
