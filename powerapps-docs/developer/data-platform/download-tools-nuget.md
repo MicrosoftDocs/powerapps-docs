@@ -1,7 +1,7 @@
 ---
 title: "Dataverse development tools (Microsoft Dataverse) | Microsoft Docs"
 description: "Download and launch the Plug-in Registration, Package Deployment, and other Dataverse development tools."
-ms.date: 03/24/2023
+ms.date: 09/25/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: davidjenni # GitHub ID
@@ -11,15 +11,15 @@ ms.author: davidjen
 
 # Dataverse development tools
 
-There are a number of developer tools that are needed for different aspects of Microsoft Dataverse code development. These tools are listed and described briefly below.
+There are many tools for developers you can use for different aspects of Microsoft Dataverse code development. The following table describes them briefly.
 
 |Tool|Description|Documentation|
 |-|-|-|
 |Configuration Migration tool (CMT)|Transport configuration and test data from one environment to another|[Configuration Migraton tool](/power-platform/alm/configure-and-deploy-tools)|
 |Package Deployer (PD)|Deploy packages to Dataverse environments where the packages contain solutions, custom code, HTML files, and more|[Deploy a package](/power-platform/alm/package-deployer-tool#deploy-a-package)|
 |Plug-in Registration tool (PRT)|Registers custom code (plug-ins, custom workflow activities), service endpoints, and more|[Register a plug-in](register-plug-in.md)<br/>[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)|
-|SolutionPackager tool (SP)|A tool that can reversibly decompose a Dataverse compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system|[SolutionPackager tool](/power-platform/alm/solution-packager-tool)|
-|Code Generation tool (CG)|A command-line code generation tool that generates early-bound (strong-typed) .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse.<br/><br/>The Code Generation tool functionality is integrated into Power Platform CLI. The output of the CLI [modelbuilder](/power-platform/developer/cli/reference/modelbuilder) subcommand supports cross-platform .NET (Core) compilation.|[Generate early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md)|
+|SolutionPackager tool (SP)|A tool that can reversibly decompose a Dataverse compressed solution file into multiple XML files and other files so that a source control system can manage these files|[SolutionPackager tool](/power-platform/alm/solution-packager-tool)|
+|Code Generation tool (CG)|`CrmSvcUtil.exe` is a command-line code generation tool for use with Dynamics 365 Customer Engagement (on-premises) and Dataverse. You can use it to generate early-bound (strong-typed) .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse, but we recommend you use the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) instead.<br/><br/>`pac modelbuilder build` is capable of generating classes that support .NET Framework and cross-platform .NET (Core) compilation. [Learn more about using pac modelbuilder build to create early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md)|[Use CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)|
 
 > [!NOTE]
 > The CMT, PD, and PRT tools provide a Windows (WPF) user interface and only run on a Microsoft Windows operating system. Also, the `pac tool` command only is available on a Windows install of the CLI.
@@ -63,7 +63,7 @@ PD       No        N/A     9.1.0.104 not yet installed; 'pac tool PD' will insta
 PRT      No        N/A     9.1.0.155 not yet installed; 'pac tool PRT' will install on first launch
 ```
 
-No tools are installed in the above example, but they will be installed on first launch. More information: [pac tool list](/power-platform/developer/cli/reference/tool#pac-tool-list)
+No tools are installed in the above example. They are installed on first launch. More information: [pac tool list](/power-platform/developer/cli/reference/tool#pac-tool-list)
 
 Let's download and launch PRT.
 
@@ -89,13 +89,13 @@ PD       No        N/A       9.1.0.104 not yet installed; 'pac tool PD' will ins
 PRT      Yes       9.1.0.155 9.1.0.155 ok
 ```
 
-Follow the same procedure to download and launch the CMT and PD tools. If a tool is already installed, the `pac tool <toolname>` command will simply launch the latest installed version of the tool.
+Follow the same procedure to download and launch the CMT and PD tools. If a tool is already installed, the `pac tool <toolname>` command launches the latest installed version of the tool.
 
 More information: [pac tool cmt](/power-platform/developer/cli/reference/tool#pac-tool-cmt), [pac tool pd](/power-platform/developer/cli/reference/tool#pac-tool-pd)
 
 ## Update tools using Power Platform CLI
 
-Updating the installed tools is very simple using the Power Platform CLI. Let's take a look at the tool list.
+Updating the installed tools is easier using the Power Platform CLI. Let's take a look at the tool list.
 
 ```bash
 > pac tool list
@@ -106,7 +106,7 @@ PD       No        N/A       9.1.0.104 not yet installed; 'pac tool PD' will ins
 PRT      Yes       9.1.0.155 9.1.0.155 ok
 ```
 
-If there was a tool update available, the NuGet column would have a newer version number than the Installed Version column, and the Status column would contain instructions about how to update the tool. For example, say the PRT has an update, the Status column would say "Newer version available, run 'pac tool PRT --update'".
+If there was a tool update available, the NuGet column would have a newer version number than the Installed Version column, and the Status column would contain instructions about how to update the tool. For example, say the PRT has an update. The Status column would say "Newer version available, run 'pac tool PRT --update'".
 
 We can take a look at the options available for any tool like so.
 
@@ -126,7 +126,7 @@ Usage: pac tool prt [--update] [--clear]
   --clear                     Clear tool from local file cache (alias: -c)
 ```
 
-The CLI does not delete older installed (cached) versions of the tools. That is up to you to do. You can delete those older versions, keeping the latest version, by using the --clear parameter.
+The CLI doesn't delete older installed (cached) versions of the tools. You can delete those older versions, keeping the latest version, by using the `--clear` parameter.
 
 ```bash
 > pac tool <toolname> --clear
@@ -134,7 +134,7 @@ The CLI does not delete older installed (cached) versions of the tools. That is 
 
 ## Use Solution Packager from Power Platform CLI
 
-While the Solution Packager standalone tool can be downloaded from NuGet, it is not necessary to do so. You can use the Solution Packager capability built into Power Platform CLI.
+While the Solution Packager standalone tool can be downloaded from NuGet, it isn't necessary to do so. You can use the Solution Packager capability built into Power Platform CLI.
 
 ```bash
 > pac solution pack help
@@ -172,7 +172,6 @@ Similarly, for available options to unpack a solution, use `pac solution unpack 
 
 [Power Platform developer tools](/power-platform/developer/tools)  
 [Generate early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md)  
-[Create extensions for the Code Generation tool](org-service/extend-code-generation-tool.md)  
 [Browse the metadata for your organization](browse-your-metadata.md)  
 [Deploy packages using Package Deployer and Windows PowerShell](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)
 
