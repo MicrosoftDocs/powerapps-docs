@@ -30,7 +30,7 @@ To verify these options, select **Properties** from the table designer in make.p
 
 ## Configure columns
 
-To configure your columns for Copilot, open the table, and then select **Views** from the table hub. In the list of views open the default quick find view for the table. By default, the default quick find view for a table has the name **Quick Find Active *table name***, where *table name* is the name of the table. In this example, the contact table is opened and the default quick find view for the table is the **Quick Find Active Contacts** view. When users ask questions from an app, Copilot includes the data from the columns configured following the steps below that's in the contact table rows.
+To configure your columns for Copilot, open the table, and then select **Views** from the table hub. In the list of views open the default**Quick Find View*** for the table. By default, the default quick find view for a table has the name **Quick Find Active *table name***, where *table name* is the name of the table. In this example, the contact table is opened and the default quick find view for the table is the **Quick Find Active Contacts** view. When users ask questions from an app, Copilot includes the data from the columns configured following the steps below that's in the contact table rows.
 
 :::image type="content" source="media/column-settings-for-copilot.png" alt-text="Column settings for use with Copilot in Power Apps":::
 

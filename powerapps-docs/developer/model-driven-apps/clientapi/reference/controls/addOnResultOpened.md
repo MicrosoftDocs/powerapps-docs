@@ -32,11 +32,9 @@ kbSearchControl.addOnResultOpened(myFunction);
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes|The function to add to the **OnResultOpened** event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
+|`myFunction` |Function |Yes|The function to add to the [OnResultOpened event](../events/onresultopened.md). The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
-### Related topics
-
-[OnResultOpened event](../events/onresultopened.md)
+### Related articles
 
 [removeOnResultOpened](removeOnResultOpened.md)
 

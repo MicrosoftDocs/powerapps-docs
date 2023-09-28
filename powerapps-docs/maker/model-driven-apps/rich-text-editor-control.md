@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 06/05/2023
+ms.date: 08/25/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -1027,7 +1027,6 @@ The following table describes the different formatting features and functionalit
 |![Underline.](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
 |![Text Highlight Color.](media/text-highlight-color.png "Text Highlight Color")| Text Highlight Color |  | Make your text stand out by highlighting it in a bright color. |
 |![Font Color.](media/font-color.png "Font Color")| Font Color |  | Change the color of your text. |
-|![Attachment.](media/rte-attachment.png "Attachment")| Attachment |  | Attach a file. After you've uploaded a file, you can select the link to preview the file in the **Attachment Preview** dialog. |
 |![Bullets.](media/format-bullets.png "Bullets")| Bullets |  | Create a bulleted list. |
 |![Numbering.](media/format-numbering.png "Numbering")| Numbering |  | Create a numbered list. |
 |![Decrease Indent.](media/decrease-indent.png "Decrease Indent")| Decrease Indent |  | Move your paragraph closer to the margin. |
@@ -1052,10 +1051,17 @@ The following table describes the different formatting features and functionalit
 |![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Select to expand the toolbar and make all options visible. |
 | | | | |
 
-
 > [!Tip]
 > You can access your browser's context menu by selecting **Ctrl** + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.<br><br>
 > Also, an alternative to your browser's built-in spellchecker is the [Microsoft Editor browser extension](https://www.microsoft.com/microsoft-365/microsoft-editor). Microsoft Editor works seamlessly with the rich text editor control, and when enabled, provides fast and easy inline grammar and spellcheck capabilities.
+
+## Use Copilot to refine text (Preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Copilot uses natural language processing (NLP) algorithms to help refine and improve written text. You can provide an initial draft or a partial piece of writing, and Copilot generates suggestions to enhance the content, grammar, clarity, or overall quality of the text. More information: [Use Copilot in rich text editor for email](../model-driven-apps/use-copilot-email-assist.md)
+
+To add the Copilot button to a rich text editor toolbar, see [Add the Copilot option to a rich text editor](../model-driven-apps/copilot-control.md)
 
 ## Accessibility shortcuts
 
@@ -1143,7 +1149,8 @@ To resolve this issue, see [Simple configuration](#simple-configuration) for the
 
 ### See also
 
-[Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)
+[Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)  
+[Use Copilot in rich text editor for email](../model-driven-apps/use-copilot-email-assist.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

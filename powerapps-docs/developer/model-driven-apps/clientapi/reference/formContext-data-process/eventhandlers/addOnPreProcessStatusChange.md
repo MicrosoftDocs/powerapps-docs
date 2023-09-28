@@ -25,14 +25,13 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|Function reference|Yes|The function to be executed when the business process flow status changes. The function will be added to the start of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [Execution context](../../../clientapi-execution-context.md) for more information.<br/><br/>You should use a reference to a named function rather than an anonymous function if you may later want to remove the event handler.|
+|`myFunction`|Function reference|Yes|The function to be executed when the business process flow status changes. The function will be added to the start of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [Execution context](../../../clientapi-execution-context.md) for more information.<br/><br/>You should use a reference to a named function rather than an anonymous function if you may later want to remove the event handler.|
 
 This client API is only supported on the Unified Client. The legacy web client does not support this client API.
 
-### Related topics
+### Related articles
 
-[removeOnPreProcessStatusChange](removeOnPreProcessStatusChange.md)
-
+[removeOnPreProcessStatusChange](removeOnPreProcessStatusChange.md)   
 [formContext.data.process](../../formContext-data-process.md)
 
 

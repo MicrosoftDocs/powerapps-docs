@@ -14,8 +14,6 @@ contributors:
 ---
 # xmlAttributeEncode (Client API reference)
 
-
-
 [!INCLUDE[./includes/xmlAttributeEncode-description.md](./includes/xmlAttributeEncode-description.md)] 
 
 ## Syntax
@@ -26,7 +24,7 @@ contributors:
 
 |Parameter Name        | Type           | Required  |Description  |
 | ------------- |-------------| -----|-----|
-|arg        | String           | Required  |String to be encoded.  |
+|`arg`| String| Required  |String to be encoded.  |
 
 
 ## Return Value
@@ -35,7 +33,8 @@ contributors:
 
 **Description**: Encoded string.
 
-## Related topics
+## Related articles
+
 [xmlEncode](xmlEncode.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -47,9 +47,9 @@ if (quickViewMobilePhoneControl.getAttribute().getValue() == null) {
 }
 ```
 
+### Related articles
 
-[Quick view control](../formContext-ui-quickForms.md)
-
+[Quick view control](../formContext-ui-quickForms.md)   
 [Columns](../attributes.md)
 
 

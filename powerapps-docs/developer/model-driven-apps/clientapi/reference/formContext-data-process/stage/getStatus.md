@@ -28,7 +28,7 @@ contributors:
 
 **Description**: This method will return either **active** or **inactive**.
 
-### Related topics
+### Related articles
  
 [formContext.data.process](../../formContext-data-process.md)
 

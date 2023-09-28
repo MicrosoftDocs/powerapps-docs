@@ -37,7 +37,7 @@ One exception is when setting the `partitionid`, this is set as an attribute of 
 
 More information:
 
-- [Use messages with the Organization service](org-service/use-messages.md)
+- [Use messages with the SDK for .NET](org-service/use-messages.md)
 - See the examples below
 
 ### [Web API](#tab/webapi)
@@ -93,8 +93,8 @@ static void CreateWebResourceInSolution(IOrganizationService service)
 
 More information:
 
-- [Use messages with the Organization service](org-service/use-messages.md)
-- [Create table rows using the Organization Service](org-service/entity-operations-create.md)
+- [Use messages with the SDK for .NET](org-service/use-messages.md)
+- [Create table rows using the SDK for .NET](org-service/entity-operations-create.md)
 - [Import files as web resources](org-service/samples/import-files-as-web-resources.md)
 
 ### [Web API](#tab/webapi)
@@ -215,7 +215,7 @@ OData-Version: 4.0
 
 More information:
 
-- [Detect duplicate data using the Organization service](org-service/detect-duplicate-data.md)
+- [Detect duplicate data using the SDK for .NET](org-service/detect-duplicate-data.md)
 - [Detect duplicate data using the Web API](webapi/manage-duplicate-detection-create-update.md)
 
 ## Add a shared variable to the plugin execution context
@@ -449,7 +449,7 @@ More information: [Bypass Power Automate Flows](bypass-custom-business-logic.md#
 
 ### See also
 
-[Use messages with the Organization service](org-service/use-messages.md)<br />
+[Use messages with the SDK for .NET](org-service/use-messages.md)<br />
 [Web API: Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)<br />
 [Bypass Custom Business Logic](bypass-custom-business-logic.md)
 

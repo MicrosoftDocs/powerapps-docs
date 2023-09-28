@@ -8689,6 +8689,36 @@
       "source_path": "powerapps-docs/maker/common/formula-repair.md",
       "redirect_url": "/power-apps/maker/canvas-apps/working-with-formulas",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/portal-templates.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-portal.md",
+      "redirect_url": "/power-pages/getting-started/create-manage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/contact-us-sample.md",
+      "redirect_url": "/power-pages/templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-dynamics-portal.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/dataverse-search.md",
+      "redirect_url": "/power-pages/configure/search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-common-problems.md",
+      "redirect_url": "/power-pages/getting-started/create-manage",
+      "redirect_document_id": false
     }
   ]
 }
