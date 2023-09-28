@@ -15,6 +15,8 @@ contributors:
   - lancedmicrosoft
   - alaug
   - amchern
+ms.contributors:
+- arijitba
 ---
 # System requirements, limits, and configuration values for Power Apps
 
