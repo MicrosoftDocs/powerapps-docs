@@ -4,10 +4,14 @@ description: "Learn how to add the calendar control to tables in model-driven ap
 ms.date: 09/29/2023
 
 ms.topic: how-to
-author: anuitz
+author: sriharibs-msft
 ms.subservice: mda-maker
-ms.author: anuitz
-ms.reviewer: sericks007
+ms.author: srihas
+ms.reviewer: sericks
+contributors:
+ - sericks007
+ - anuitz
+ - srihas
 ---
 
 # Add the calendar control to tables
