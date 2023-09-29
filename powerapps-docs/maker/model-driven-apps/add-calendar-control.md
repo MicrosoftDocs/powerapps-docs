@@ -58,6 +58,10 @@ The **Calendar Control V2** control displays scheduled activities and their asso
 
 1. To publish the changes, select **Publish**.
 
+### Mobile experience
+
+The Calendar Control V2 is available when working on mobile devices with a different user experience that is optimized for mobile form factors. There is a scrollable day bar for selecting which date to view. The Day/Week/Month selection dropdown is not available on mobile.
+
 ### See also
 
 [Work with rows in the new calendar view](../../user/calendar-view.md)
