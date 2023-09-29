@@ -1,8 +1,8 @@
 ---
 title: property-dependencies Element | Microsoft Docs
 description: Defines a group of property-dependencies.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 11/21/2022
 ms.reviewer: jdaly
 ms.topic: reference

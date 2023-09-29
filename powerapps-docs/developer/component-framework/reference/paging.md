@@ -1,8 +1,8 @@
 ---
 title: Paging (Power Apps component framework API reference) | Microsoft Docs
 description: Provides properties and methods to work with paging.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 06/14/2022
 ms.reviewer: jdaly
 ms.topic: reference

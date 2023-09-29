@@ -79,9 +79,6 @@
   href: detect-duplicate-data.md
 - name: Generate classes for early-bound programming
   href: generate-early-bound-classes.md
-  items:
-  - name: Create extensions for the code generation tool
-    href: extend-code-generation-tool.md
 - name: Work with table definitions (metadata)
   href: work-with-metadata.md
   items:
