@@ -7,7 +7,7 @@ ms.topic: how-to
 author: sriharibs-msft
 ms.subservice: mda-maker
 ms.author: srihas
-ms.reviewer: sericks
+ms.reviewer: matp
 contributors:
  - sericks007
  - anuitz
