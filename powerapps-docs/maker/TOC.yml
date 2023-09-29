@@ -2591,6 +2591,8 @@
     href: ./common/faq-copilot-control.md
   - name: FAQ for Copilot in rich text editor
     href: ./common/faqs-email-assist-rte.md
+  - name: FAQ for Excel to table and app
+    href: ./common/faqs-excel-to-table-app.md
 - name: Resources
   items:
   - name: Blog

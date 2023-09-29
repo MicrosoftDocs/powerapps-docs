@@ -13,7 +13,7 @@ contributors:
 
 # Execute batch operations using the Web API
 
-You can group multiple operations into a single HTTP request using a batch operation. These operations will be performed sequentially in the order they're specified. The order of the responses will match the order of the requests in the batch operation.
+You can group multiple operations into a single HTTP request using a batch operation. These operations are performed sequentially in the order they're specified. The order of the responses match the order of the requests in the batch operation.
 
 The format to send `$batch` requests is defined in this section of the OData specification: [11.7 Batch Requests](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752313). The content in this article summarizes the specification requirements and provides Dataverse specific information and examples.
   
@@ -26,20 +26,20 @@ Batch requests provide two capabilities that can be used together:
 - You can send requests for multiple operations with a single HTTP request.
 
    - Batch requests can contain up to 1000 individual requests and can't contain other batch requests.
-   - This is equivalent to the `ExecuteMultiple` message available in the SDK for .NET. More information: [Execute multiple requests using the SDK for .NET](../org-service/execute-multiple-requests.md)
+   - Web API `$batch` requests are equivalent to the `ExecuteMultiple` message available in the SDK for .NET. More information: [Execute multiple requests using the SDK for .NET](../org-service/execute-multiple-requests.md).
 
 - You can group requests for operations together so that they're included as a single transaction using [Change sets](#change-sets).
 
    - You may want to create, update, or delete a set of related records in a way that guarantees that all the operations succeed or fail as a group.
-   - This is equivalent to the `ExecuteTransaction` message available in the SDK for .NET. More information: [Execute messages in a single database transaction](../org-service/use-executetransaction.md)
+   - Web API `$batch` requests using change sets are equivalent to the `ExecuteTransaction` message available in the SDK for .NET. More information: [Execute messages in a single database transaction](../org-service/use-executetransaction.md)
    
    > [!NOTE]
    > Remember that associated entities can be created in a single operation more easily than using a batch request. More information:  [Create related table rows in one operation](create-entity-web-api.md#create-related-table-rows-in-one-operation)
 
 
-Batch requests are also sometimes used to sent `GET` requests where the length of the URL may exceed the maximum allowed URL length. This is because the URL for the request is included in the body of the message where a longer URL, up to 64 KB (65,536 characters), is allowed. Sending complex queries using FetchXml can result in long URLs. More information: [Use FetchXML within a batch request](use-fetchxml-web-api.md#use-fetchxml-within-a-batch-request)
+Batch requests are also sometimes used to sent `GET` requests where the length of the URL may exceed the [maximum allowed URL length](compose-http-requests-handle-errors.md#maximum-url-length). People use batch requests because the URL for the request is included in the body of the message where a URL up to 64 KB (65,536 characters) is allowed. Sending complex queries using FetchXml can result in long URLs. More information: [Use FetchXML within a batch request](use-fetchxml-web-api.md#use-fetchxml-within-a-batch-request).
 
-Compared to other operations that can be performed using the Web API, batch requests are more difficult to compose. The raw request and response bodies are essentially a text document that must match specific requirements. To access the data in a response, you'll need to parse the text in the response or locate a helper library to access the data in the response.  See [.NET helper methods](#net-helper-methods).
+Compared to other operations that can be performed using the Web API, batch requests are more difficult to compose. The raw request and response bodies are essentially a text document that must match specific requirements. To access the data in a response, you need to parse the text in the response or locate a helper library to access the data in the response. See [.NET helper methods](#net-helper-methods).
 
   
 <a name="bkmk_BatchRequests"></a>
@@ -75,7 +75,7 @@ The end of the batch request must contain a termination indicator like the follo
 --batch_<unique identifier>--
 ```
 
-The following is an example of a batch request without change sets. This example:
+The following example is a batch request without change sets. This example:
 - Creates three task records associated with an account with `accountid` equal to `00000000-0000-0000-0000-000000000001`.
 - Retrieves the task records associated with the account.
 
@@ -135,7 +135,7 @@ GET /api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/Account_Tasks?
 
 ## Batch responses
 
-When successful, the batch response will return HTTP Status `200 OK`, and each item in the response will be separated by a `Guid` unique identifier value that isn't the same as the batch request value.
+When successful, the batch response returns HTTP Status `200 OK`, and each item in the response is separated by a `Guid` unique identifier value that isn't the same as the batch request value.
 
 ```http
 --batchresponse_<unique identifier>
@@ -143,13 +143,13 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 ```
 
-The end of the batch response will contain a termination indicator like the following example:  
+The end of the batch response contains a termination indicator like the following example:  
   
 ```http
 --batchresponse_<unique identifier>--
 ```
 
-The following is the response to the batch request example above.
+The following example is the response to the previous batch request example.
 
 **Response:**
 
@@ -224,7 +224,7 @@ OData-Version: 4.0
 
 ## Change sets
 
-In addition to individual requests, a batch request can include change sets. When multiple operations are contained in a change set, all the operations are considered *atomic*. This means that if any one of the operations fails, any completed operations will be rolled back.
+In addition to individual requests, a batch request can include change sets. When multiple operations are contained in a change set, all the operations are considered *atomic*. An atomic operation means that if any one of the operations fails, any completed operations are rolled back.
 
 > [!NOTE]
 > `GET` request are not allowed within change sets. A `GET` operation should not change data, therefore they don't belong within a change set.
@@ -236,7 +236,7 @@ Like a batch request, change sets must have a `Content-Type` header with value s
 Content-Type: multipart/mixed; boundary="changeset_<unique identifier>"
 ```  
   
-The unique identifier doesn't need to be a GUID, but should be unique. Each item within the change set must be preceded by the change set identifier with a `Content-Type` and `Content-Transfer-Encoding` header like the following:  
+The unique identifier doesn't need to be a GUID, but should be unique. Each item within the change set must be preceded by the change set identifier with a `Content-Type` and `Content-Transfer-Encoding` header like the following example:  
   
 ```  
 --changeset_<unique identifier>
@@ -246,7 +246,7 @@ Content-Transfer-Encoding: binary
   
 Change sets can also include a `Content-ID` header with a unique value. This value, when prefixed with `$`, represents a variable that contains the Uri for any entity created in that operation. For example, when you set the value of `1`, you can refer to that entity using `$1` later in your change set. More information: [Reference URIs in an operation](#reference-uris-in-an-operation)
   
-The end of the change set must contain a termination indicator like the following:  
+The end of the change set must contain a termination indicator like the following example:  
   
 ```  
 --changeset_<unique identifier>--
@@ -579,7 +579,7 @@ OData-Version: 4.0
 
 #### Reference URIs in URL and request body using @odata.id
 
-The example given below shows how to link a Contact entity record to an Account entity record. The URI of Account entity record is referenced as `$1` and URI of Contact entity record is referenced as `$2`.
+The following example shows how to link a Contact entity record to an Account entity record. The URI of Account entity record is referenced as `$1` and URI of Contact entity record is referenced as `$2`.
 
 **Request:**
 
@@ -670,7 +670,7 @@ OData-Version: 4.0
 
 #### Reference URIs in URL and navigation properties
 
-The example given below shows how to use the Organization URI of a Contact record and link it to an Account record using the `primarycontactid` single-valued navigation property. The URI of the Account entity record is referenced as `$1` and the URI of Contact entity record is referenced as `$2` in the `PATCH` request.
+The following example shows how to use the Organization URI of a Contact record and link it to an Account record using the `primarycontactid` single-valued navigation property. The URI of the Account entity record is referenced as `$1` and the URI of Contact entity record is referenced as `$2` in the `PATCH` request.
 
 **Request:**
 
@@ -767,7 +767,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/accounts(6cd81853-7b75-e911-a97
 > [!NOTE]
 > Referencing a `Content-ID` before it has been declared in the request body will return the error **HTTP 400** Bad request.
 >
-> The example given below shows a request body that can cause this error.
+> The following example shows a request body that can cause this error.
 > 
 > **Request body**
 > 
@@ -816,9 +816,9 @@ OData-EntityId: [Organization URI]/api/data/v9.2/accounts(6cd81853-7b75-e911-a97
 
 ## Handling errors
 
-When an error occurs for a request within a batch, the error for that request will be returned for the batch request and more requests won't be processed.
+When an error occurs for a request within a batch, the error for that request is returned for the batch request, and more requests aren't processed.
 
-You can use the `Prefer: odata.continue-on-error` request header to specify that more requests be processed when errors occur. The batch request will return `200 OK` and individual response errors will be returned in the batch response body.
+You can use the `Prefer: odata.continue-on-error` request header to specify that more requests be processed when errors occur. The batch request returns `200 OK` and individual response errors are returned in the batch response body.
 
 More information: [OData Specification: 8.2.8.3 Preference odata.continue-on-error](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html#_Toc406398236)
 
@@ -1002,7 +1002,7 @@ The [WebAPIService class library (C#)](samples/webapiservice.md) is a sample hel
 > [!NOTE]
 > This sample library is a helper that is used by all the Dataverse C# Web API samples, but it is not an SDK. It is tested only to confirm that the samples that use it run successfully. This sample code is provided 'as-is' with no warranty for reuse.
 
-This library includes classes for creating batch requests and processing responses.  For example, variations on following code were used to generate many of the HTTP request and response examples in this article.
+This library includes classes for creating batch requests and processing responses. For example, variations on following code were used to generate many of the HTTP request and response examples in this article.
 
 ```csharp
 using PowerApps.Samples;
