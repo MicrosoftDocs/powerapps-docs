@@ -1,7 +1,7 @@
 ---
 title: Set up mobile offline for canvas apps (preview)
 description: Learn how to set up canvas apps for use offline on mobile devices in Microsoft Power Apps.
-ms.date: 09/01/2023
+ms.date: 09/29/2023
 ms.topic: how-to
 ms.subservice: mobile
 ms.component: pa-user
@@ -34,11 +34,11 @@ Turn on offline mode in your canvas app if users need to work without worrying a
 
 - The canvas app must use Dataverse data only.
 
-- You must have the Environment Maker, System Administrator, or System Customizer role to set up offline mode for canvas apps. These roles have create, read, write, delete, and share privileges on the `Mobile offline profile` table. [Learn about predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles).
+- You must have the Environment Maker, System Administrator, or System Customizer role to set up offline mode for canvas apps. These roles have create, read, write, delete, and share privileges on `Canvas App` and `Mobile offline profile` tables. [Learn about predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles).
 
-- Users with the Basic User role can open and use an offline application. This role has read privilege on the `Mobile offline profile` table.
+- Users with Basic User role can't open an offline application. You must create a custom security role with read privileges on `Canvas App` and `Mobile offline profile` tables.
 
-- If you have a custom security role, make sure it grants read privilege on the `Mobile offline profile` table. [Learn about miscellaneous privileges](/power-platform/admin/miscellaneous-privileges).
+- If you already have a custom security role, make sure it grants read privileges on `Canvas App` and `Mobile offline profile` tables. [Learn about miscellaneous privileges](/power-platform/admin/miscellaneous-privileges).
 
 ## Optimize your app for mobile offline
 
