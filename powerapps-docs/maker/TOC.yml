@@ -1949,7 +1949,7 @@
       href: ./data-platform/create-custom-entity.md
     - name: Import or export data
       href: ./data-platform/data-platform-import-export.md
-    - name: "Configure tables to use Copilot (preview)"
+    - name: "Configure tables to use Copilot"
       href: ./data-platform/table-settings-for-copilot.md  
     - name: Long term data retention for tables (preview)
       href: ./data-platform/data-retention-overview.md
@@ -2591,6 +2591,8 @@
     href: ./common/faq-copilot-control.md
   - name: FAQ for Copilot in rich text editor
     href: ./common/faqs-email-assist-rte.md
+  - name: FAQ for Excel to table and app
+    href: ./common/faqs-excel-to-table-app.md
 - name: Resources
   items:
   - name: Blog

@@ -1,11 +1,11 @@
 ---
-title: "Generate early-bound classes for the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about a command-line code generation tool for use with Microsoft Dataverse. This tool generates early-bound .NET Framework classes that represent the Entity Data Model used by Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 12/22/2022
+title: "Generate early-bound classes for the SDK for .NET"
+description: "Learn how to use the Power Platform CLI pac modelbuilder build command to generate early-bound classes for use with the Microsoft Dataverse SDK for .NET. This tool generates early-bound .NET classes that represent the Entity Data Model used by Dataverse."
+ms.date: 09/28/2023
 author: kkanakas
 ms.author: kartikka
 ms.reviewer: pehecke
-ms.topic: "article"
+ms.topic: article
 search.audienceType: 
   - developer
 contributors:
@@ -17,173 +17,225 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-*CrmSvcUtil* is a command-line code generation tool for use with Microsoft Dataverse. The tool generates early-bound .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse. To generate cross-platform .NET (Core) classes, use the [modelbuilder](/power-platform/developer/cli/reference/modelbuilder) argument of Power Platform CLI.
+Creating early-bound classes for your .NET projects:
 
-The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. You can download the NuGet package, rename the file's extension .nupkg to .zip, and extract the files. You may also need to unblock the file in the Properties dialog of File Explorer.
+- Improves code readability and maintainability.
+- Decreases the risk of errors because they provide compile time type checking.
+- Improves developer productivity because developers can discover tables, columns, and choice options using IntelliSense.
+- Provides the [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class so you can write Dataverse queries using LINQ and other capabilities work with data.
 
-> [!NOTE]
-> For more information about available tools, including the code generation tool, see [Dataverse development tools](../download-tools-NuGet.md).
+Learn more:
 
-## Generate Entity classes
+- [Late and early-bound programming](early-bound-programming.md)
+- [Use OrganizationServiceContext](organizationservicecontext.md)
 
-The CrmSvcUtil tool creates a Microsoft Visual C# or Visual Basic .NET output file that contains strongly-typed classes for tables in your environment. This includes custom tables and columns. This output file contains one class derived from <xref:Microsoft.Xrm.Sdk.Entity> for each table, providing early binding and IntelliSense support in Visual Studio to aid you as you write code. The generated classes are partial classes that can be extended with custom business logic in separate files. You can also write extensions for this tool to customize its functionality. For more information, see [Create extensions for the Code Generation Tool](extend-code-generation-tool.md).  
+Use the [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate early-bound code classes. You can also use the `CrmSvcUtil.exe` code generation tool, but for Dataverse we recommend using the `pac modelbuilder build` command. [Learn how to use the CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
 
-## Generate an OrganizationServiceContext class
+Like many Power Platform CLI commands, `pac modelbuilder build` has many parameters you can use to control the outcome. In this article, we recommend that you start by using the  `--settingsTemplateFile` parameter for most use cases. Use this parameter to refer to a JSON file where all the other available settings can be controlled. This way, you don't need to compose a long list of parameters, and the configuration appropriate for your project can be updated to allow regeneration of the classes when you need them.
 
-The tool can also be used to generate a class derived from the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext> class that acts as an entity container in the EDM. This service context provides the facilities for tracking changes and managing identities, concurrency, and relationships. This class also exposes a <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.SaveChanges> method that writes inserts, updates, and deletes table rows in Dataverse. For more information, see [Use OrganizationServiceContext](organizationservicecontext.md).  
+Of course, you can still use the build command with parameters if you prefer. See [Using parameters](#using-parameters).
 
-## Use generated classes
+## Get started
 
-The classes created by the code generation tool are designed to be built into a class library that can be referenced by projects that use Dataverse. After you have generated the class file(s) using the tool, you should add the file(s) to your Visual Studio project. You must also add references to several assemblies that the generated classes are dependent upon.  
+Before you begin:
 
-The following lists assemblies that must be referenced in your project when you use the generated code file.  
+1. [Install Power Platform CLI](/power-platform/developer/cli/introduction#install-microsoft-power-platform-cli).
+1. Connect to your environment using [Power Platform CLI pac auth commands](/power-platform/developer/cli/reference/auth).
 
-- `Microsoft.Crm.Sdk.Proxy.dll`  
-- `Microsoft.Xrm.Sdk.dll` 
+Use the following steps to get started:
 
-These assemblies are part of the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) or [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client) NuGet package. Use one of these NuGet packages to add the required assemblies to your Visual Studio project.
+1. In your .NET project, add a NuGet package reference to either:
 
-<a name="bkmk_RuntheCodeGenerationUtility"></a>
+   - For a client application: [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client)
+   - For a Dataverse plug-in project:  [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies)
 
-## Run the code generation tool
+1. Create a folder called `model`.
+1. In the `model` folder, add a `builderSettings.json` file with the following settings:
 
-The code generation tool takes several parameters that determine the contents of the file that is created. The parameters can be passed in from the command line when you run the tool or in a .NET-connected application configuration file. 
+   ```json
+   {
+   "emitentityetc-comment": "Generate a constants structure that contains all of the field names by entity at the time of code generation.",
+   "emitEntityETC": false,
+   "emitfieldsclasses-comment": "Generate a constants structure that contains all of the field names by entity at the time of code generation.",
+   "emitFieldsClasses": false,
+   "emitvirtualattributes-comment": "When set, includes the Virtual Attributes of entities in the generated code.",
+   "emitVirtualAttributes": false,
+   "entitynamesfilter-comment": "Filters the list of entities are retrieved when reading data from Dataverse.",
+   "entityNamesFilter": [
+      "account",
+      "contact",
+      "sample_*"
+   ],
+   "entitytypesfolder-comment": "Folder name that contains entities.",
+   "entityTypesFolder": "Entities",
+   "generateGlobalOptionSets-comment": "Emit all Global OptionSets. Note: If an entity contains a reference to a global optionset, it is emitted even if this switch is not present.",
+   "generateGlobalOptionSets": false,
+   "generatesdkmessages-comment": "When set, emits Sdk message classes as part of code generation",
+   "generateSdkMessages": true,
+   "language-comment": "The language to use for the generated proxy code. This value can be either 'CS' or 'VB'. The default language is 'CS'.",
+   "language": "CS",
+   "logLevel-comment": "Log level. The default value is 'Off'.",
+   "logLevel": "Off",
+   "messagenamesfilter-comment": "Filters the list of messages that are retrieved when reading data from Dataverse.",
+   "messageNamesFilter": [
+      "searchautocomplete",
+      "searchquery",
+      "sample_*"
+   ],
+   "messagestypesfolder-comment": "Folder name that contains messages.",
+   "messagesTypesFolder": "Messages",
+   "namespace-comment": "The namespace for the generated code.",
+   "namespace": "ExampleProject",
+   "optionsetstypesfolder-comment": "Folder name that contains option sets.",
+   "optionSetsTypesFolder": "OptionSets",
+   "serviceContextName-comment": "The name for the generated service context. If a value is passed in, it's used for the Service Context. If not, no Service Context is generated.",
+   "serviceContextName": "OrgContext",
+   "suppressGeneratedCodeAttribute-comment": "When set, this suppress all generated objects being tagged with the code generation engine and version",
+   "suppressGeneratedCodeAttribute": true,
+   "suppressINotifyPattern-comment": "When enabled, doesn't write the INotify wrappers for properties and classes.",
+   "suppressINotifyPattern": true
+   }
+   ```
 
-Run the `CrmSvcUtil.exe` application from the folder where it is installed. If you run the tool from another folder location, make sure that a copy of the `Microsoft.Xrm.Sdk.dll` assembly is in that same folder.
+   > [!NOTE]
+   > This file is a modified version of the file you can generate using `pac modelbuilder build` with the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf). Learn how to generate the file without comments in [Using parameters](#using-parameters).
 
-The following sample shows the format for running the tool from the command line with Dataverse. To use an interactive environment login, you can simply provide these options:
+1. Use the following command to generate early bound classes for the connected environment using the settings defined in `builderSettings.json` where `C:\projects\exampleproject\` represents the path to your project and `model` is the folder you created..
 
-```ms-dos
-CrmSvcUtil.exe /interactivelogin ^
-/out:<outputFilename>.cs ^
-/namespace:<outputNamespace> ^
-/serviceContextName:<serviceContextName> ^
-/generateActions
+   ```powershell
+   PS C:\projects\exampleproject\model> pac modelbuilder build -o . -stf .\builderSettings.json
+   ```
+
+   This command uses these parameters:
+
+   - `-o` shortcut for the required [`--outdirectory` parameter](/power-platform/developer/cli/reference/modelbuilder#--outdirectory--o) with a value of `.`, to indicate the current directory.
+   - `-stf` shortcut for the [`--settingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--settingstemplatefile--stf) with a value of `.\builderSettings.json`, to indicate the `builderSettings.json` current directory.
+
+   You could also use this command from the `exampleproject` directory:
+
+   ```powershell
+   PS C:\projects\exampleproject>pac modelbuilder build -o model -stf model\builderSettings.json
+   ```
+
+### Understand what files are written
+
+With either command, the following is the output you should expect:
+
+```powershell
+Connected to... Your Organization
+Connected as you@yourorganization.onmicrosoft.com
+Begin reading metadata from MetadataProviderService
+      Begin Reading Metadata from Server
+      Read 2 Entities - 00:00:00.732
+      Read 0 Global OptionSets - 00:00:00.000
+      Read 12 SDK Messages - 00:00:00.889
+      Completed Reading Metadata from Server - 00:00:01.694
+Completed reading metadata from MetadataProviderService - 00:00:01.697
+Begin Writing Code Files
+      Processing 2 Entities
+      Wrote 2 Entities - 00:00:00.0625873
+      Processing 12 Messages
+      Wrote 3 Message(s). Skipped 9 Message(s) - 00:00:00.0091589
+      Processing 0 Global OptionSets
+      Wrote 0 Global OptionSets - 00:00:00.0000045
+      Code written to C:\projects\exampleproject\model\Entities\account.cs.
+      Code written to C:\projects\exampleproject\model\Entities\contact.cs.
+      Code written to C:\projects\exampleproject\model\Messages\searchquery.cs.
+      Code written to C:\projects\exampleproject\model\Messages\searchautocomplete.cs.
+      Code written to C:\projects\exampleproject\model\OrgContext.cs.
+      Code written to C:\projects\exampleproject\model\EntityOptionSetEnum.cs.
+Completed Writing Code Files - 00:00:00.116
+Generation Complete - 00:00:01.815
+PS C:\projects\exampleproject\model>
 ```
 
-When you run the tool with the `interactivelogin` (shortcut `il`) option you will open a dialog and be able to specify your login credentials and the server you want to connect with.
+When you inspect the output, notice that it only generates classes for the tables specified by `entityNamesFilter` and only the messages specified in the `messageNamesFilter`. You should specify which tables (entities) and messages you use in your project. Otherwise, classes for all tables and messages are generated. You can use `*` as a wildcard character in these values. This is useful when items in your solution share a common customization prefix.
 
-You can also specify the parameters you want to pass directly in the command line or via a batch (.bat) file you can run to generate new classes.
+`pac modelbuilder build` writes the files into folders with names you can control in the settings file:
 
-```ms-dos
-CrmSvcUtil.exe ^
-/url:https://<organizationUrlName>.api.crm.dynamics.com/XRMServices/2011/Organization.svc ^
-/out:<outputFilename>.cs ^
-/username:<username> ^
-/password:<password> ^
-/namespace:<outputNamespace> ^
-/serviceContextName:<serviceContextName>
-```
-For example:
+- Entity classes are written to the folder specified by the `entityTypesFolder` setting.
+- Message classes are written to the folder specified by the `messagesTypesFolder` setting.
+- The [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class is written to a file with the name specified by the `serviceContextName` setting.
+- All the classes are part of the namespace you set in the `namespace` setting.
 
-```ms-dos
-CrmSvcUtil.exe ^
-/url:https://myorganization.api.crm.dynamics.com/XRMServices/2011/Organization.svc ^
-/out:MyOrganizationSdkTypes.cs ^
-/username:you@yourOrg.onmicrosoft.com ^
-/password:myp455w0rd ^
-/namespace:MyOrg ^
-/serviceContextName:MyContext
-```
+This is how the files and folders appear in Visual Studio:
 
+:::image type="content" source="../media/pac-modelbuilder-build-output-example-visual-studio.png" alt-text="Example output from pac modelbuilder build command in Visual Studio Explorer":::
 
-> [!NOTE]
-> The examples above uses the carat (`^`) character to break up the list of parameters for readability. You can compose the command parameters with arguments using notepad and then paste it into the command line.
+With these files written to your project, you're now ready to use early-bound classes.
 
-- For the `username` and `password` parameters, type the user name and password that is used to sign in to your Dataverse environment. 
-- For the `url` parameter you can look up the correct URL in Power Apps, or in the legacy web application by selecting **Settings**, navigating to **Customizations**, and then choosing **Developer Resources**. The URL is shown under **Organization Service**.  
+If you want to change them, delete the files in the `model` folder other than `builderSettings.json`, change the settings in `builderSettings.json`, and generate them again.
 
-To view the latest supported command-line parameters, use the following command.
+## Using parameters
 
-```ms-dos
-CrmSvcUtil.exe /?  
-```
+It isn't required to use the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter with `pac modelbuilder build`. You can invoke the command using parameters directly. You can find reference documentation and examples in the [pac modelbuilder build reference documentation](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build).
 
-<a name="bkmk_parameters"></a>
+If you're using the `builderSettings.json` settings file and the `--settingsTemplateFile` parameter, you can use the parameters in the command line to override the settings.
 
-## Parameters
+Here's an example showing how to generate files with the same settings as the example in the [Get started section](#get-started) using parameters:
 
-The following table lists the code generation tool parameters at the time when this topic was last updated, and provides a brief description of command parameter use.  
-  
-|Parameter|Shortcut|Description|
-|--|--|--|
-|`url`||The URL for the Organization service. Required, unless you use `interactivelogin`|
-|`out`|`o`|The file name for the generated code. Required|
-|`language`|`l`|The language to generate the code in. This can be either "CS" or "VB". The default value is "CS".|
-|`namespace`|`n`|The namespace for the generated code. The default is the global namespace.| 
-|`username`|`u`|The user name to use when you connect to the server for authentication.|  
-|`password`|`p`|The password to use when you connect to the server for authentication.|
-|`domain`|`d`|The domain to authenticate against when you connect to an on-premises server.|
-|`servicecontextname`||The name of the generated context class. If no value is supplied, no service context is created.
-|`help`|`?`|Show usage information.|
-|`nologo`||Suppress the banner at runtime.|
-|`generateActions`||Generate request and response classes for custom actions.|
-|`interactivelogin`|`il`|When used, a dialog to log into the Dataverse service is displayed. All other connection related parameters specified on the command line are ignored.| 
-|`connectionstring`|`connstr`|Contains information, provided as a single string, for connecting to a Dataverse organization. All other connection related parameters specified on the command line are ignored. For more information see [Use connection strings in XRM tooling to connect to Dataverse](../xrm-tooling/use-connection-strings-xrm-tooling-connect.md).|
-|`suppressGeneratedCodeAttribute`|`sgca`|Suppresses the GeneratedCodeAttribute on all classes|
-|`emitfieldsclasses`|`emitfc`|Generate a Fields class per entity that contains all of the field names at the time of code generation|
-|`entitynamesfilter`| |Filters the list of entities retrieved when reading data from Dataverse. Passed in as a semicolon separated list using the form \<entitylogicalname>;\<entitylogicalname>;...|
-|`messagenamesfilter`| |Filters the list of messages that are retrieved when reading data from Dataverse. Passed in as a semicolon separated list. Required messages ( Create, Update, Delete, Retrieve, RetrieveMultiple, Associate and DisAssociate) are always included. A * can be used to proceed or trail a message allowing for all messages starting with or ending with a string. The list takes the form \<messagename>;\<messagename>;...|
-|`splitfiles`| |Splits the output into files by type, organized by entity, message, and optionsets. when enabled, the `out` property is ignored and `outdirectory` is required instead|
-|`outdirectory`|`outdir`|Write entity, message and optionset files to a specified output directory. Valid only with the `splitfiles` option|
-|`entitytypesfolder`| |Folder name that will contain entities. THe default folder name is "Entities". Valid only with the `splitfiles` option.|
-|`messagestypesfolder`| |Folder name that will contain messages. The default name is "Messages". Valid only with the `splitfiles` option|
-|`optionsetstypesfolder`| |Folder name that will contain optionsets. The default name is "OptionSets". Valid only with `splitfiles` option|
-|`generateGlobalOptionSets`| |Emit all global optionsets. Note: if an entity contains a reference to a global optionset, it will be emitted even if this switch is not present|
-|`legacyMode`| |Disable emitting optionsets and many newer code features to support compatibility with older custom extensions|
-
-<a name="bkmk_sampleconfig"></a>
-
-## Use the configuration File
-
-The CrmSvcUtil.exe.config configuration file must be in the same folder as the CrmSvcUtil.exe tool. The configuration file uses the standard key/value pairs in the `appSettings` section. However, if you enter a value at the command line, that value will be used instead of the one in the configuration file. Any key/value pairs found in the application configuration file that do not match any of the expected parameters are ignored.  
-
-Do not include the `url` and `namespace` parameters in the configuration file. These must be entered from the command line when the CrmSvcUtil.exe tool is being run.  
-
-The following sample shows how to configure the output file and the domain name parameters in the application configuration file using shortcut keys.  
-
-```xml
-<appSettings>    
-    <add key="o" value="CrmProxy.cs"/>    
-    <add key="d" value="mydomain"/>
-</appSettings>  
+```powershell
+PS C:\>pac modelbuilder build `
+   --outdirectory C:\projects\exampleproject\model `
+   --entitynamesfilter 'account;contact;sample_*' `
+   --generatesdkmessages `
+   --messagenamesfilter 'searchautocomplete;searchquery;sample_*' `
+   --namespace ExampleProject `
+   --serviceContextName OrgContext `
+   --suppressGeneratedCodeAttribute `
+   --suppressINotifyPattern `
+   --writesettingsTemplateFile
 ```
 
-<a name="bkmk_enabletrace"></a>
+This doesn't include all the settings because it uses the default options. If you use the [`--writesettingsTemplateFile` parameter](/power-platform/developer/cli/reference/modelbuilder#--writesettingstemplatefile--wstf) to generate a `builderSettings.json` file, it doesn't include the comments in the example in the [Get started section](#get-started) of this article. The example using parameters writes the following `builderSettings.json` file in the `model` folder:
 
-## Enable tracing
-
- To enable tracing when you run the tool, add the following lines to the configuration file:  
-
-```xml
-<system.diagnostics>   
-   <trace autoflush="false" indentsize="4">   
-      <listeners>   
-         <add name="configConsoleListener" type="System.Diagnostics.ConsoleTraceListener">   
-            <filter type="System.Diagnostics.EventTypeFilter" initializeData="Error" />   
-         </add>   
-      </listeners>   
-   </trace>   
-</system.diagnostics>  
+```json
+{
+  "suppressINotifyPattern": true,
+  "suppressGeneratedCodeAttribute": true,
+  "language": "CS",
+  "namespace": "ExampleProject",
+  "serviceContextName": "OrgContext",
+  "generateSdkMessages": true,
+  "generateGlobalOptionSets": false,
+  "emitFieldsClasses": false,
+  "entityTypesFolder": "Entities",
+  "messagesTypesFolder": "Messages",
+  "optionSetsTypesFolder": "OptionSets",
+  "entityNamesFilter": [
+    "account",
+    "contact",
+    "sample_*"
+  ],
+  "messageNamesFilter": [
+    "searchautocomplete",
+    "searchquery",
+    "sample_*"
+  ],
+  "emitEntityETC": false,
+  "emitVirtualAttributes": false
+}
 ```
-
-For more information on supported tracing options see [Configure tracing for XRM tooling](../xrm-tooling/configure-tracing-xrm-tooling.md).  
 
 ## Community tools
 
-**Early Bound Generator** is a tool from the XrmToolbox community. Please see the [Developer tools and resources](../developer-tools.md) topic for more community developed tools.
-
+The [Early Bound Generator V2](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGeneratorV2/) is an XrmToolBox plug-in created by the community to provide a user interface and many other configurations to generating early-bound types.
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 
-> If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com). 
+> If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
-### See Also
 
-[Late-bound and early-bound programming](early-bound-programming.md)  
-[Sample: Early-bound table operations](samples/early-bound-entity-operations.md)
+## For Dynamics 365 Customer Engagement on-premises
 
-[Create extensions for the Code Generation Tool](extend-code-generation-tool.md)  
-[Developer tools and resources](../developer-tools.md)  
-[Dataverse development tools](../download-tools-NuGet.md)
+The Power Platform CLI isn't available for Dynamics 365 Customer Engagement on-premises. You need to use the `CrmSvcUtil.exe` code generation tool to generate early bound classes. [Learn how to use the CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
+
+
+### Related articles
+
+[Late-bound and early-bound programming](early-bound-programming.md)   
+[Sample: Early-bound table operations](samples/early-bound-entity-operations.md)   
+[Developer tools and resources](../developer-tools.md)   
+[Dataverse development tools](../download-tools-NuGet.md)   
+[Learn how to use the CrmSvcUtil.exe to generate early-bound classes for the SDK for .NET](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

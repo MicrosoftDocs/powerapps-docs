@@ -132,6 +132,8 @@ Use an Excel file to populate a table with your data, which uses AI to assist wi
 1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
 1. When you're finished, select **Create**.
 
+For more information about how AI is used with this feature, go to [FAQ for Excel to table and app](../common/faqs-excel-to-table-app.md).
+
 ### Create a virtual table
 
 A virtual table is a custom table in Microsoft Dataverse that has columns containing data from an external data source, such as Azure SQL Database or SharePoint.

@@ -1,19 +1,20 @@
 ---
 title: "Timeline Overview for Users| MicrosoftDocs"
 description: Timeline Overview for Users 
-author: sericks007
+author: dsierman
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 08/30/2023
+ms.date: 09/29/2023
 ms.subservice: end-user
-ms.author: sericks
+ms.author: dsierman
 ms.custom: ""
-ms.reviewer: 
+ms.reviewer: sericks
 ms.assetid: sericks
 search.audienceType: 
   - enduser
 ---
+
 # Use timeline 
 
 Timeline is a modernized and optimized control that helps provide you with at-a-glance understandability when working with your customers. You can use the timeline to view information that is connected to a row in a table and occurs over time in a single stream. Some information that can be logged into the timeline includes notes and posts, in addition to displaying activities such as emails, appointments, phone calls, and tasks.
@@ -28,7 +29,7 @@ Timeline allows you to:
 
 ## Timeline functionality
 
-The timeline section on the table form is intended to centralize access to information and streamline effort to accomplish actions. The following is an overview of how the timeline functionality works in each section on the table form. 
+The timeline section on the table form is intended to centralize access to information and streamline effort to accomplish actions. The following section is an overview of how the timeline functionality works in each section on the table form. 
 
 When enabled by your system administrator, you can use the icons that are displayed on the top-right navigation in the timeline for quick access to do the following:
 
@@ -98,7 +99,7 @@ You can choose to save your filter settings so that you don't have to set them a
 To save your filter settings, after configuring the filters you want, select the ellipses, and then select **Remember my filters**.
 
 > [!Note]
-> If you have a system administrator or basic user role, Remember my filters works by default. If you don't have either of these roles, you must have Create/Read/Write privileges to be added to the msdyn_customcontrolextendedsettings entity for the setting to work.
+> If you have a system administrator or basic user role, Remember my filters works by default. If you don't have either of these roles, you must have Create/Read/Write privileges to be added to the msdyn_customcontrolextendedsettings table for the setting to work.
 
 ![Remember filters functionality.](media\timeline-remember-filters.png "Remember my filters functionality")
 
@@ -163,7 +164,7 @@ Legend
 
 ### Enable threaded email views in timeline
 
-Enabling the threaded email view is done via the timeline configuration in Power Apps. Threaded email views must be done in this setting for the specific entity, in the specific form, for each specific timeline.
+Enabling the threaded email view is done via the timeline configuration in Power Apps. Threaded email views must be done in this setting for the specific table, in the specific form, for each specific timeline.
 
 Threaded email views can be enabled in timeline via two options:
 
@@ -174,7 +175,7 @@ You can enable the threaded email view using the **More Commands** ![More Comman
 **Enable threaded email through the More Commands option**
 
 Steps:
-1. Use the **More commands** ![More commands.](media\timeline-more-commands-icon.png "More commands") icon on timeline which displays a flyout menu.
+1. Use the **More commands** ![More commands.](media\timeline-more-commands-icon.png "More commands") icon on timeline that displays a flyout menu.
 2. Select **Always show email as conversations** to thread and group all emails in that specific timeline. 
 
 ![Enable threaded email view - option 1.](media\timeline-threaded-email-views-4a.PNG "Enable threaded email view - option 1")
@@ -217,7 +218,7 @@ When you type the **#** symbol, the results you see are matches with the account
 
 When enabled by your system administrator, you can either add a note or a post to a row on timeline. Each note and post has a maximum size limit of 100,000 characters.
 
-You can also enter a note and add it to a row, but you can only add one attachment per note. If note is not enabled by your system administrator, you can't add an attachment. 
+You can also enter a note and add it to a row, but you can only add one attachment per note. If note isn't enabled by your system administrator, you can't add an attachment. 
 
 **Note display view**
 
@@ -232,7 +233,7 @@ When enabled by your system administrator, the **Post** field is also displayed 
 
 ### Add an attachment to a post
 
-You can add an attachment to a post, such an an image or a document. The supported file formats are as follows: .JPG, .PNG, and .PDF.
+You can add an attachment to a post, such an image or a document. The supported file formats are as follows: .JPG, .PNG, and .PDF.
 
 To add an attachment to a post:
 
@@ -303,7 +304,7 @@ The following table is an overview of the default command bars for frequently us
 | Phone Call | Assign, Add to Queue, Open Row, Delete | |
 | Note | Edit, Delete | |
 | Post (user) | Like, Reply, Delete | Only the author of the post has the ability to delete it. The author always has the ability to delete regardless of user privilege. |
-| Auto-post | Like, Reply, Delete | |
+| Autopost | Like, Reply, Delete | |
 
 ## Work with notes
 
@@ -396,8 +397,8 @@ To add a reference such as links in a post to a timeline row, select the ![**Cre
 Legend
 1. Links can be added to a row by typing **#** which displays a flyout menu with a list of rows recently accessed. Type a keyword after the # tag and the display refreshes in the flyout menu via the **Quick Find** search engine that's operating in the background.
 2. Rows displayed can be of any row type, such as accounts, contacts, or leads.
-3. The icons beside the row names in the flyout menu indicate the row types, which helps you determine which row to select.
-4. **Advanced** provides more options when a row cannot be located by allowing the user to switch to a different view or create a new row.
+3. The icons beside the row names in the flyout menu indicate the row types, which help you determine which row to select.
+4. **Advanced** provides more options when a row can't be located by allowing the user to switch to a different view or create a new row.
 
 ### Look up rows in posts in timeline
 
@@ -438,7 +439,7 @@ The following table describes the different formatting features and functionalit
 |![Align Left.](media/align-left.png "Align Left")| Align Left | Ctrl+L | Align your content with the left margin. (Commonly used for body text to make it easier to read.) |
 |![Align Center.](media/align-center.png "Align Center")| Align Center | Ctrl+E | Center your content on the page. (Commonly used for a formal appearance.) |
 |![Align Right.](media/align-right.png "Align Right")| Align Right | Ctrl+R | Align  content to the right on the page. (Commonly used for a formal appearance.) |
-|![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" becomes "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link opens after you select it. |
+|![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" becomes "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type and set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link opens after you select it. |
 |![Remove Link.](media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
 |![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type small letters just above the line of text. |
 |![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type small letters just below the line of text. |
@@ -450,7 +451,7 @@ The following table describes the different formatting features and functionalit
 |![Redo Typing.](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
 |![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging, and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
-|![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Appears when the toolbar is collapsed. Click to expand the toolbar and make all options visible. |
+|![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Appears when the toolbar is collapsed. Select to expand the toolbar and make all options visible. |
 |![Copy to Clipboard.](media/copy-clipboard.png "Copy to Clipboard")| Copy to Clipboard | | Copies entire text in a note to the clipboard so that you can paste the contents in another location.
 
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
@@ -476,14 +477,74 @@ When you access the timeline after being away, activities that you've missed dis
 
 If your administrator has enabled the pin setting and you have write/delete access, you can quickly access records, such as activities, by keeping them at the top of the timeline. Pinning a record eliminates the need to scroll through every record to find the one you need.
 
+> [!Note]
+> If you have a system administrator or basic user role, the pin and unpin settings work by default. If you don't have either of these roles, you must have Create/Read/Write privileges to be added to the msdyn_customcontrolextendedsettings table for these settings to work.
+
 By default, you can pin notes. The activities that you can pin depend on how your administrator has set up the feature.
 
 Pin a record by selecting the pin icon next to it. This moves it to the top of the timeline in the **Pinned** section, where it can be quickly accessed. The Pinned section also lists the number of records that are pinned. You can pin a maximum of 15 records. Records that are pinned will stay at the top of the timeline for a year unless you unpin them.
 
 ![Pin and unpin record view.](media\timeline-pin-unpin-activity.png "Pin and unpin a record view")
 
-To unpin a record, select the pin icon next to it. Unpinning it moves it out of the **Pinned** section and back to where it orginally appeared in the list of records in the timeline.
+To unpin a record, select the pin icon next to it. Unpinning it moves it out of the **Pinned** section and back to where it originally appeared in the list of records in the timeline.
 
+## Bookmarks
+
+Bookmarks are a quick way for the user to set, and switch between, different sets of filters. Bookmarks are enabled by default. If necessary, you can disable them from the [Advanced](../maker/model-driven-apps/set-up-timeline-control.md#advanced) section.
+
+> [!NOTE]
+> Bookmarks feature replaces **Remember my filters** button. Use the steps in the following section to set up your user filters.
+
+### Create a bookmark
+
+1. Open the filter pane, and select the filters that will be associated with the new bookmark. You may have no filters selected.
+
+1. Select the bookmark icon ![Empty bookmark icon](media/add-activities/bookmark-icon.png) in timeline's action bar
+
+1. Select **Add bookmark**.
+
+1. Enter a bookmark name. Optionally, set it as a [default bookmark](#set-a-default-bookmark).
+
+1. Select **Save**.
+
+Selecting the bookmark icon again will now display a flyout of your created bookmarks. You can apply a bookmark by selecting it from this list, or edit it using the **More options** button on the right side of the bookmark.
+
+If a bookmark is selected, its filters are applied to the timeline, and is indicated by a filled bookmark icon  ![Filled bookmark icon](media/add-activities/filled-bookmark-icon.png) in the action bar. Hover over the icon to see the name of the bookmark, or select the icon. The selected bookmark has a grey background color.
+
+> [!NOTE]
+> You can have a maximum of 15 bookmarks.
+
+### Edit a bookmark
+
+Any bookmark can be renamed, updated, or deleted from the **More options** menu.
+
+> [!NOTE]
+> Selecting **Delete** directly deletes the bookmark.
+
+![Edit bookmark](media/add-activities/edit-bookmark.png)
+
+Updating a bookmark will change its filters to the currently selected filters.
+
+You may also set this bookmark as a default for the current form or all forms.
+
+### Set a default bookmark
+
+When creating or updating a bookmark, you may select the **Set as default bookmark** checkbox, with the option to apply this change for the current form or globally.
+
+A default bookmark has a star icon ![Star icon](media/add-activities/star-icon.png) next to its name, and is selected automatically when the timeline loads, overriding  any admin filters set for timeline.
+
+> [!NOTE]
+> You may set a bookmark as a form default for multiple forms; however, it can't be both a form default and a global default. A form-default bookmark will override a global one.
+
+### Reset to the default view
+
+If a nondefault bookmark is selected, or if other filters are applied, a reset to default button appears in the bookmark flyout. This applies the **default bookmark** to timeline, if one exists, otherwise **clearing all filters**.
+
+![Reset default](media/add-activities/reset-default.png)
+
+### Bookmark filters can't be applied
+
+If a bookmark's filters can't be applied (for example, a bookmark that filters for notes while timeline has notes disabled), then an exclamation mark icon is displayed next to its name.
 
 ## See also
 
