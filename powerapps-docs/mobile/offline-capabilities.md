@@ -159,7 +159,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - Any changes to a user’s privilege to view a row won’t take effect on the mobile device until the next synchronization cycle.
 
-- Mobile offline honors the mobile apps security model and the hierarchical security model except the [Field level security and field sharing](/power-platform/admin/field-level-security).
+- Mobile offline honors the mobile apps security model and the hierarchical security model except the [field level security and field sharing](/power-platform/admin/field-level-security).
   
 
 ### Organization data filter 
