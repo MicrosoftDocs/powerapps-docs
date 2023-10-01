@@ -20,7 +20,7 @@ contributors:
 
 Create a canvas app automatically based on a template for a specific scenario, such as tracking budgets and scheduling vacations, and then run the app to understand its default behavior.
 
-To create an app from a template, you need a cloud-storage account (such as DropBox, OneDrive, or Google Drive) to store the template's sample data.
+In order to utilize a template to build an app, you will require a cloud storage account like Dropbox, OneDrive, or Google Drive to store the sample data provided by the template.
 
 If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
