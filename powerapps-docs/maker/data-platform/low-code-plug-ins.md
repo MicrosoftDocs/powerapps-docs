@@ -140,7 +140,7 @@ Unique properties:
 1. [Test your instant low-code plug-in](#test-a-low-code-plug-in)
 
 **Example**: Calculate the sum of two integers.
-- Create two input parameters, X and Y (boty type integer), and one output parameter, `Z` (type string).
+- Create two input parameters, `X` and `Y` (both of type integer), and one output parameter, `Z` (type string).
 - You could use the following formula: `{Z:  X + Y }`
 
 :::image type="content" source="media/low-code-plugin-instant-newform.png" alt-text="Instant plug-in example in Dataverse Accelerator app":::
