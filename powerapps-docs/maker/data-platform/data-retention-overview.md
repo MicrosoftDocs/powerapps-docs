@@ -1,9 +1,10 @@
 ---
 title: Dataverse long term data retention overview
 description: Overview of long term retention for data in Microsoft Dataverse 
-author: Mattp123
 ms.service: powerapps
-ms.author: matp
+author: pnghub
+ms.author: gned
+ms.reviewer: matp
 ms.topic: overview
 ms.date: 05/24/2023
 ms.custom: template-overview

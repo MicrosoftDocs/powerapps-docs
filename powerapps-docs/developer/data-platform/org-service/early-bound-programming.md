@@ -1,6 +1,6 @@
 ---
-title: "Late-bound and early-bound programming using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes the different programming styles available when using the .NET SDK assemblies with the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Late-bound and early-bound programming using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes the different programming styles available when using the .NET SDK assemblies with the SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.collection: get-started
 ms.topic: "article"
 ms.date: 04/03/2022
@@ -14,11 +14,11 @@ contributors:
  - phecke
 ---
 
-# Late-bound and early-bound programming using the Organization service
+# Late-bound and early-bound programming using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-When you work with the Organization service assemblies you have two programming styles you can use: *late-bound* and *early-bound*.
+When you work with the SDK for .NET assemblies, you have two programming styles you can use: *late-bound* and *early-bound*.
 
 The key difference between early and late binding involves type conversion. While early binding provides compile-time checking of all types so that no implicit casts occur, late binding checks types only when the object is created or an action is performed on the type. The <xref:Microsoft.Xrm.Sdk.Entity> class requires types to be explicitly specified to prevent implicit casts.
 
@@ -31,9 +31,9 @@ Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class where you 
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>
 
-Relationships do not have a `LogicalName` property, so the <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase>.<xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.SchemaName> property is used.
+Relationships don't have a `LogicalName` property, so the <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase>.<xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.SchemaName> property is used.
 
-The main advantage for late-bound programming is that you don't need to generate the classes or include that generated file within your projects. The generated file can be quite large.
+The main advantage for late-bound programming is that you don't need to generate the classes or include that generated file within your projects. The generated file can be large.
 
 The main disadvantages are:
 
@@ -74,9 +74,9 @@ Guid accountid = svc.Create(account);
 
 ## Early-bound
 
-Early-bound programming requires that you first generate a set of classes based on the table and column definitions (entity and attribute metadata) for a specific environment using the code generation tool (CrmSvcUtil.exe). More information: [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)
+Early-bound programming requires that you first generate a set of classes based on the table and column definitions (entity and attribute metadata) for a specific environment using the code generation tool (CrmSvcUtil.exe). More information: [Generate classes for early-bound programming using the SDK for .NET](generate-early-bound-classes.md)
 
-After generating early-bound classes using the code generation tool you will enjoy a better experience while you write code because classes and properties use the respective `SchemaName` property values:
+After generating early-bound classes using the code generation tool, you'll enjoy a better experience while you write code because classes and properties use the respective `SchemaName` property values:
 
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName>
@@ -84,11 +84,9 @@ After generating early-bound classes using the code generation tool you will enj
 
 Simply instantiate the class and let Visual Studio IntelliSense provide the names of properties and relationships.
 
-The classes generated for early-bound programming can also include definitions for any custom actions that are defined for the environment. This will provide you with a pair of request and response classes to use with these custom actions. More information: [Custom Actions](../custom-actions.md)
+The classes generated for early-bound programming can also include definitions for any custom actions that are defined for the environment. This provides you with a pair of request and response classes to use with these custom actions. More information: [Custom Actions](../custom-actions.md)
 
-There is also an option to extend the code generation tool to change the output. One extension creates enumerations for each optionset (choices) option value. This provides a better experience because you don't have to look up the integer value for each choice. More information: [Create extensions for the code generation tool](extend-code-generation-tool.md)
-
-Classes are generated using table definitions from a specific environment instance and each instance may have different tables and columns where these can change over time. You may need to write code to work for tables that are not present when you generate the strongly typed classes.
+Classes are generated using table definitions from a specific environment instance and each instance may have different tables and columns where these can change over time. You may need to write code to work for tables that aren't present when you generate the strongly typed classes.
 
 > [!IMPORTANT]
 > If you are using the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> to provide the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods you will use, you must call the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.EnableProxyTypes> method to enable early bound types.
@@ -141,7 +139,7 @@ Because all the generated classes inherit from the <xref:Microsoft.Xrm.Sdk.Entit
 The following example shows one way to mix early and late binding methods using <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext>.  
   
 ```csharp  
-// Create an organization service context object  
+// Create an context object  
 AWCServiceContext context = new AWCServiceContext(_serviceProxy);  
   
 // Instantiate an account object using the Entity class.  
@@ -151,13 +149,13 @@ Entity testaccount = new Entity("account");
 testaccount["name"] = "Fourth Coffee";  
 testaccount["emailaddress1"] = "marshd@contoso.com";  
   
-// Save the entity using the organization service context object.  
+// Save the entity using the context object.  
 context.AddToAccountSet(testaccount);  
 context.SaveChanges();  
   
 ```  
 
-If a custom attribute was not included in the generated classes, you can still use it.
+If a custom attribute wasn't included in the generated classes, you can still use it.
 
 
 ```csharp
@@ -186,12 +184,12 @@ new EntityCollection(new Entity[] { relatedEntity.ToEntity<Entity>() });
 
 ### See also
 
-[Entity operations using the Organization service](entity-operations.md)<br />
-[Create table rows using the Organization Service](entity-operations-create.md)<br />
-[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)<br />
-[Query data using the Organization service](entity-operations-query-data.md)<br />
-[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
-[Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)<br />
+[Entity operations using the SDK for .NET](entity-operations.md)<br />
+[Create table rows using the SDK for .NET](entity-operations-create.md)<br />
+[Retrieve a table row using the SDK for .NET](entity-operations-retrieve.md)<br />
+[Query data using the SDK for .NET](entity-operations-query-data.md)<br />
+[Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)<br />
+[Associate and disassociate table rows using the SDK for .NET](entity-operations-associate-disassociate.md)<br />
 [IOrganizationService Interface](iorganizationservice-interface.md)<br />
 [Using OrganizationServiceContext](organizationservicecontext.md)<br />
 

@@ -17,7 +17,8 @@ contributors:
 
 This sample shows how to create a simple queue and set the required columns using the [IOrganizationService.Create](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create) message.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateQueue).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create a queue (early bound) sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateQueue)
 
 ## How to run this sample
 

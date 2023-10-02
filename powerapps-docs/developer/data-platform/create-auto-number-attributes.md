@@ -104,7 +104,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c
 
 #### [SDK for .NET](#tab/sdk)
 
-Using the Organization service with SDK for .NET  <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> and <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata> classes:
+Using the SDK for .NET <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> and <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata> classes:
 
 ```csharp
 string conn = $@"

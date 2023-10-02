@@ -2,24 +2,24 @@
 title: Control site creation in a tenant
 description: Instructions to control portal creation in a tenant.
 author: neerajnandwana-msft
-
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 09/06/2023
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
+    - sampatn
 ---
 
 # Control site creation in a tenant
 
-
 [!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
-As a global administrator, if you want to disable site (portal) creation in a tenant by non-administrators, you can do it by enabling the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. To run PowerShell cmdlets, you must first install the required modules. For information on installing the required PowerShell modules, see [Installation](/power-platform/admin/powerapps-powershell#installation).
+As a global administrator, if you want to disable site creation in a tenant by non-administrators, you can do it by enabling the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. To run PowerShell cmdlets, you must first install the required modules. For information on installing the required PowerShell modules, see [Installation](/power-platform/admin/powerapps-powershell#installation).
 
 After installing the modules, run the following command in a PowerShell window (run PowerShell as an administrator).
 
@@ -33,14 +33,13 @@ Administrators are the users having one of the following Azure roles:
 - [Dynamics 365 administrator](admin/portal-admin-roles.md#dynamics-365-administrator)
 - [Power Platform admin](admin/portal-admin-roles.md#power-platform-administrator)
 
-Users not having any of the above mentioned Azure roles are considered as non-administrators.
+Users without these Azure roles are considered non-administrators.
 
-When the portal creation is disabled in a tenant, non-administrators will see an error&mdash;`You don't have permission to create a portal in this tenant as it is blocked by your global administrator.`
+When the site creation is disabled in a tenant, non-administrators see an error&mdash;`You don't have permissions to create a site in this environment. Choose another one or contact your administrator to request access.`
 
-> [!div class=mx-imgBorder]
-> ![Portal creation blocked error.](media/portal-create-blocked-error.png "Portal creation blocked error")
+:::image type="content" source="media/site-creation-blocked-error.jpg" alt-text="A screenshot of Power Pages design studio displaying a message indicating that the user does not have permissions to create a site in the environment they've selected.":::
 
-To enable portal creation in a tenant, change the settings value from `$true` to `$false`.
+To enable site creation in a tenant, change the settings value from `$true` to `$false`.
 
 ```
 Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $false }

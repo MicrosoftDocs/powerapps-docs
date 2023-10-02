@@ -72,7 +72,7 @@ sample_filecolumn_name: 25mb.pdf
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
 
 #### [Web API](#tab/webapi)
@@ -175,7 +175,7 @@ fileattachmentid: 63a6afb7-4c52-ed11-bba1-000d3a9933c9
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [Retrieve with related rows](org-service/entity-operations-retrieve.md#retrieve-with-related-rows)
 
 #### [Web API](#tab/webapi)
@@ -225,7 +225,7 @@ More information: [Retrieve with related rows](org-service/entity-operations-ret
 
 ## Upload Files
 
-There at three different ways to upload files to a file column:
+There are three different ways to upload files to a file column:
 
 - Use Dataverse messages available to both the SDK and Web API
 - Upload a file in a single request using Web API
@@ -352,7 +352,7 @@ static Guid UploadFile(
 
 More information:
 
-- [Use the Organization service](org-service/overview.md)
+- [Use the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 [!INCLUDE [cc-trygetcontenttype-note](includes/cc-trygetcontenttype-note.md)]
@@ -709,7 +709,7 @@ More information:
 
 ## Download Files
 
-There at three different methods to download files from a file column:
+There are three different methods to download files from a file column:
 
 - Use Dataverse messages available to both the SDK and Web API
 - Download a file in a single request using Web API
@@ -809,7 +809,7 @@ private static byte[] DownloadFile(
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 #### [Web API](#tab/webapi)
@@ -992,7 +992,7 @@ OData-Version: 4.0
 
 ## Delete Files
 
-There at two different ways to delete files to a file column:
+There are two different ways to delete files to a file column:
 
 - Use the Dataverse `DeleteFile` message available to both the SDK and Web API
 - Send a DELETE request using Web API to the file column of the record.

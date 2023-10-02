@@ -2,7 +2,7 @@
 title: "Add, configure, move, or delete columns on a form | MicrosoftDocs"
 description: Learn how to work with columns on a form using Power Apps.
 ms.custom: ""
-ms.date: 05/10/2022
+ms.date: 08/23/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -84,12 +84,15 @@ The **Properties** tab displays the following properties.
 |**Display options** | **Hide label** | When selected, the column label is hidden. |
 |**Display options** | **Hide on phone** | The column can be hidden to render a condensed version of the form on phone screens. |
 |**Display options** | **Hide** | When selected, the column is hidden by default and can be shown using code. |
-|**Display options** | **Lock** |  Lock this column so it can't be removed. |
-|**Display options** | **Read-only** | When selected, the column value isn't editable. |
+|**Display options** | **Lock** |  Lock this column so it can't be removed from the form. |
+|**Display options** | **Read-only** | When selected, the column value isn't editable on the form. |
 |**Formatting** | **Form field width** |  When the section containing the columns has more than one column, you can set the column to occupy up to the number of columns that the section has. |
 |**Formatting** | **Form field height** |  Some columns, such as the multiline text column, let you control the height of the column by specifying the number of rows the column occupies. |
 |**Formatting** | **Use all available vertical space** |  Instead of setting the height by a number of rows, some columns, such as the multiline text column, let you set the column height to expand to all the available space on the form. |
 | **Components**  |  **+ Component**  | Adds a control to the column such as the canvas app control or the AI business card control.    |
+
+> [!WARNING]
+> The **Hide** and **Read-only** properties should never be used as a secure way to prevent users from viewing or editing column values. These properties only apply to a form and don't have an effect on a user's data privileges. When a column is hidden on a form, users can still access data in other ways like viewing other forms or by making Web API calls. To secure columns, use [column-level security to control access](/power-platform/admin/field-level-security).
 
 > [!NOTE]
 > In Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.

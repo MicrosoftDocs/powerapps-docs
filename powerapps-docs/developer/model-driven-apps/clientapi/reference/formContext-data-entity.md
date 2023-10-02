@@ -24,7 +24,7 @@ Provides properties and methods to retrieve information specific to the record d
 
 |Name|Description|
 |--|--|
-|attributes|Collection of columns for a record displayed on the form. <br/>More information: [Collections](collections.md) and [Columns](attributes.md).
+|`attributes`|Collection of columns for a record displayed on the form. <br/>More information: [Collections](collections.md) and [Columns](attributes.md).
 
 ## Methods
 
@@ -43,15 +43,9 @@ Provides properties and methods to retrieve information specific to the record d
 |[removeOnSave](formContext-data-entity/removeOnSave.md)|[!INCLUDE[formContext-data-entity/includes/removeOnSave-description.md](formContext-data-entity/includes/removeOnSave-description.md)]|
 |[save](formContext-data-entity/save.md)|[!INCLUDE[formContext-data-entity/includes/save-description.md](formContext-data-entity/includes/save-description.md)]|
 
-### Related topics
+### Related articles
 
-[Understand Xrm object model](../understand-clientapi-object-model.md)
-
+[Understand Xrm object model](../understand-clientapi-object-model.md)   
 [Controls (Client API reference)](controls.md)
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

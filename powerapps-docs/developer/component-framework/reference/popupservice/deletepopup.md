@@ -1,8 +1,8 @@
 ---
-title: deletePopup | Microsoft Docs
+title: deletePopup (Power Apps component framework API reference) | Microsoft Docs
 description: Removes the referenced popup from the popup service and unregister the service.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -30,7 +30,7 @@ Model-driven apps
 |name|`String`|Yes|The name of the popup to remove.|
 
 
-### Related topics
+### Related articles
 
 [Popup Service](../popupservice.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

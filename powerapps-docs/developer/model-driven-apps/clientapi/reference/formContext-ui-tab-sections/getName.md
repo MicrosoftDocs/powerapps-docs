@@ -14,8 +14,6 @@ contributors:
 ---
 # section.getName (Client API reference)
 
-
-
 [!INCLUDE[./includes/getName-description.md](./includes/getName-description.md)]
 
 ## Syntax
@@ -28,10 +26,9 @@ contributors:
 
 **Description**: Name of the section.
 
-### Related topics
+### Related articles
 
 [Controls](../controls.md)
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -15,12 +15,10 @@ contributors:
 ---
 # quickViewControl.getVisible (Client API reference)
 
-
-
 [!INCLUDE[./includes/getVisible-description.md](./includes/getVisible-description.md)]
 
 >[!NOTE]
->If the containing **section** or **tab** for this control isn’t visible, this method can still return **true**. To make certain that the control is actually visible; you need to also check the visibility of the containing elements.
+>If the containing **section** or **tab** for this control isn't visible, this method can still return **true**. To make certain that the control is actually visible; you need to also check the visibility of the containing elements.
 
 ## Syntax
 
@@ -32,14 +30,9 @@ contributors:
 
 **Description**: true if the control is visible; false otherwise.
 
-### Related topics
+### Related articles
 
-[setVisible](setVisible.md)
-
+[setVisible](setVisible.md)   
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

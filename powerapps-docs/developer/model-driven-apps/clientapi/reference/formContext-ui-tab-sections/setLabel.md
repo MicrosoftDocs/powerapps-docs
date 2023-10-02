@@ -14,8 +14,6 @@ contributors:
 ---
 # section.setLabel (Client API reference)
 
-
-
 [!INCLUDE[./includes/setLabel-description.md](./includes/setLabel-description.md)]
 
 ## Syntax
@@ -26,9 +24,9 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|label|String|Yes|The new label of the section.|
+|`label`|String|Yes|The new label of the section.|
 
-### Related topics
+### Related articles
 
 [getLabel](getLabel.md)
 

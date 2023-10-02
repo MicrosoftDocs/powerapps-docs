@@ -25,7 +25,7 @@ These methods are available to all the collections in the `formContext` object m
 |[get](collections/get.md)| [!INCLUDE[collections/includes/get-description.md](collections/includes/get-description.md)]|
 |[getLength](collections/getLength.md)|[!INCLUDE[collections/includes/getLength-description.md](collections/includes/getLength-description.md)]|
 
-### Related topics
+### Related articles
 
 [Client API form context](../clientapi-form-context.md)
 
