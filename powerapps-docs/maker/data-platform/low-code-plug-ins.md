@@ -113,7 +113,7 @@ Unique properties:
 > Enable [auto app updates](/power-platform/developer/isvstudio/auto-update) for the **Microsoft - Power CAT** publisher to automatically receive updates when available.
 
 > [!NOTE]
-> If you previously installed the optional Low Code Plugins for Connectors solution, it will be automatically deleted if you update after June 29, 2023. The capabilities will be available in the main solution.
+> If you previously installed the optional Low-Code Plug-ins for Connectors solution, it will be automatically deleted if you update after June 29, 2023. The capabilities will be available in the main solution.
 
 ## Create an instant low-code plug-in
 
@@ -154,7 +154,7 @@ Unique properties:
 1. Provide the following values:
    - **Name**: Enter a name for the plug-in, such as *Input validation*.
    - **Table**: Choose a table to associate the plug-in to, such as *Account*.
-   - **Run this plugin rule when the row is**. Specify the data event (or combination) that invokes the plug-in.
+   - **Run this plug-in rule when the row is**. Specify the data event (or combination) that invokes the plug-in.
 1. Enter the Power FX expression in the **Expression** editor.
    - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](/power-platform/power-fx/reference/function-filter-lookup)).
    - Use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
@@ -182,14 +182,14 @@ You can easily use [connectors]( https://learn.microsoft.com/en-us/connectors/co
 3. In the low-code plug-in Power FX expression editor, type the name of the connection reference.
 4. Intellisense will show you the available actions.
 5. Select the action you want and enter the required parameters.
-Before using a connector in a low code plug-in, make sure to review the connector's [documentation]( https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerapps-connectors) to ensure that you're passing the input and output parameters correctly.
+Before using a connector in a low-code plug-in, make sure to review the connector's [documentation]( https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerapps-connectors) to ensure that you're passing the input and output parameters correctly.
 
 ## Smart low-code plug-ins
 
-### What are smart low code plugins?
-Dataverse includes AI-powered actions which can be used to generate or extract data using Azure Open AI and the power of AI Builder. You can call these functions from both Instant and Automated low code plugins.  
+### What are smart low-code plugi-ns?
+Dataverse includes AI-powered actions which can be used to generate or extract data using Azure Open AI and the power of AI Builder. You can call these functions from both instant and automated low-code plug-ins.  
 
-**What functions are supported for smart low code plugins?**
+**What functions are supported for smart low-code plug-ins?**
 
 | Function | Description |
 | - | - |
@@ -263,9 +263,9 @@ Follow the steps for **Unbound action** or **Function bound to table** sections 
 
 ## Trace logging
 
-Trace logging is a feature in Dataverse that allows you to capture detailed information about the execution of plugins. By enabling trace logging, you can get a more complete picture of what's happening during plugin execution, which can be helpful for troubleshooting issues and identifying performance bottlenecks. When you enable trace logging for plugins, Dataverse will generate log files that include information about the plugin's input and output parameters, as well as any exceptions or errors that occur during execution.
+Trace logging is a feature in Dataverse that allows you to capture detailed information about the execution of plug-ins. By enabling trace logging, you can get a more complete picture of what's happening during plug-in execution, which can be helpful for troubleshooting issues and identifying performance bottlenecks. When you enable trace logging for plug-ins, Dataverse will generate log files that include information about the plug-in's input and output parameters, as well as any exceptions or errors that occur during execution.
 
-To enable trace logging for plugins, you'll need to [enable the trace logging feature for the environment](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/logging-tracing).
+To enable trace logging for plug-ins, you'll need to [enable the trace logging feature for the environment](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/logging-tracing).
 
 ## Contacting Help + support
 
@@ -281,7 +281,7 @@ For a few examples of how to create a low-code plug-in, go to [Example Dataverse
 ## Limitations
 
 - The environment language object needs to be readded to access new plug-ins inside existing canvas apps. For any plug-ins created after you have added the environment table data source to an existing canvas app, you'll have to remove and readd the Power Fx environment language object. Then you'll see the updated list of plug-ins as actions.
-- Intellisense requires explicit notation in automated plugins if you want to refer any tables in the formula. Use the following disambiguation syntax such as `[@Accounts]`, using square brackets and the `@` symbol (not `Accounts`).
+- Intellisense requires explicit notation in automated plug-ins if you want to refer any tables in the formula. Use the following disambiguation syntax such as `[@Accounts]`, using square brackets and the `@` symbol (not `Accounts`).
 - Nested support. Plug-ins can only call first-party actions published by Microsoft from Power Fx expressions. In the future, plug-ins will be able to call other user-defined plug-ins.
 - Some `Collect` scenarios require `Patch`. There are some scenarios where `Collect()` doesn't work. The workaround is to use `Patch()` as shown in the populating regarding column example below. If you're creating an automated plug-in, prepend @ to each table referenced in the Power Fx formula.
     ```powerapps-dot
@@ -290,7 +290,7 @@ For a few examples of how to create a low-code plug-in, go to [Example Dataverse
         { Regarding : First(Accounts) }
     )
     ```
-- When low code plugins interact with connectors and DLP is employed, the admin can block creation of connections using DLP. However, existing connection references in the Dataverse environment will continue to function. In case the admin needs to block all low code plugin interactions with any connectors, they can simply disable the organization setting `Allowconnectorsonpowerfxactions`. This setting is enabled by default and can be disabled by usual SDK means (WebAPI, SDK, Powershell, etc). Customers can disable this using a low code instant plug-in as follows:
+- When low-code plug-ins interact with connectors and DLP is employed, the admin can block creation of connections using DLP. However, existing connection references in the Dataverse environment will continue to function. In case the admin needs to block all low-code plug-in interactions with any connectors, they can simply disable the organization setting `Allowconnectorsonpowerfxactions`. This setting is enabled by default and can be disabled by usual SDK means (WebAPI, SDK, Powershell, etc). Customers can disable this using a low-code instant plug-in as follows:
    ```powerapps-dot
    Patch(Organizations, First(Organizations), { 'Enable connectors on power fx actions.': 'Enable connectors on power fx actions. (Organizations)'.No })
    ```
