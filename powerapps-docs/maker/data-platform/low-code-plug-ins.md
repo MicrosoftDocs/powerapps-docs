@@ -78,17 +78,17 @@ Unique properties:
 
 :::row:::
    :::column span="":::
-      **Design time.**
+      **Design time**
       
-      Makers who have system customizer or system administrator security role membership in the Power Platform environment can access all plug-ins in that environment.
+      Makers who have system customizer or system administrator security role membership in the Power Platform environment can access all plug-ins in that environment. Customize security roles can be used to restrict access to low-code plug-ins.
    :::column-end:::
    :::column span="":::
-      **Run time.**
+      **Run time**
       
       When a plug-in is invoked, it accesses the table data involved in the plug-in definition (the tables that are part of the formula, or if the table is associated with the settings of an automated plug-in) in the context of the user who invoked it.
    :::column-end:::
    :::column span="":::
-      **Connections**.
+      **Connections**
       
       Using [security roles](https://learn.microsoft.com/en-us/power-platform/admin/security-roles-privileges#security-roles-and-the-new-modern-ui), connector access within plug-ins can be restricted to a specific set of users within your organization. You can specify which roles have create, read, update, or delete privileges.
    :::column-end:::
