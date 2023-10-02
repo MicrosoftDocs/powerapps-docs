@@ -184,6 +184,29 @@ You can easily use [connectors]( https://learn.microsoft.com/en-us/connectors/co
 5. Select the action you want and enter the required parameters.
 Before using a connector in a low code plug-in, make sure to review the connector's [documentation]( https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerapps-connectors) to ensure that you're passing the input and output parameters correctly.
 
+## Smart low-code plug-ins
+
+### What are smart low code plugins?
+Dataverse includes AI-powered actions which can be used to generate or extract data using Azure Open AI and the power of AI Builder. You can call these functions from both Instant and Automated low code plugins.  
+
+### What functions are supported for smart low code plugins?
+AI functions supported are AISummarize, AISentiment, AIReply, AIClassify, AI Translate and AIExtract
+•	AISummarize: Summarize text
+•	AISentiment: Detect the sentiment of text as either positive, negative, or neutral
+•	AIReply: Draft a reply to text
+•	AITranslate: Translate text to English
+•	AIClassify: Classify text into one or more provided categories
+•	AIExtract: Extract specified entities such as registration numbers
+
+### Requirements
+
+> [!div class="checklist"]
+> * [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
+> * AI Builder subscription
+
+> [!TIP]
+> If you do not have an AI Builder subscription, you can use an [AI Builder trial](/ai-builder/ai-builder-trials). View the AI models page in the Power Apps maker portal to get AI Builder which will direct you to start a trial.
+
 ## Test a low-code plug-in
 
 - Manually test the instant plug-in
@@ -195,7 +218,6 @@ Before using a connector in a low code plug-in, make sure to review the connecto
   1. Provide values for any input parameters that are defined in the low-code plug-in, and then select **Run**.
   ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/af670bf6-b722-413d-b26b-ca789a68e3c3)
   :::image type="content" source="https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/af670bf6-b722-413d-b26b-ca789a68e3c3" alt-text="Test low-code plug-in":::
-
 
   Observe the response.
   
@@ -211,21 +233,22 @@ Before using a connector in a low code plug-in, make sure to review the connecto
     1. Select the instant plug-in in the list,
     1. Click the 'copy to clipboard' action in the command bar.
     2. Save the copied formula to a text editor or note pad (somewhere you can easily refer back to)
-1. In the [Power Apps maker portal](https://make.powerapps.com/), create or edit a canvas app (or custom page) in the Power Apps studio.
-1. In the left navigation, under the **Data Sources** tab, click **+ New data source** and search for the **Environment** option from the Dataverse connector.
-1. Insert the following components into the canvas:
-    1. Add input controls corresponding to appropriate data type (Text input for text or numbers, toggle for boolean)
-    2. If the plug-in scope is bound to a table, add a combobox that is associated with the same table. 
-    3. Add a button to call the plug-in. More information: [Button control in Power Apps](../canvas-apps/controls/control-button.md)
+1. In the [Power Apps maker portal](https://make.powerapps.com/):
+   1. create or edit a canvas app (or custom page) in the Power Apps studio.
+   1. In the left navigation, under the **Data Sources** tab, click **+ New data source** and search for the **Environment** option from the Dataverse connector.
+   1. Insert the following components into the canvas:
+    - Add input controls that correspond with each parameter's data type (e.g., [Text input](/power-apps/maker/canvas-apps/controls/control-text-input) for text or numbers, [toggle](/power-apps/maker/canvas-apps/controls/control-toggle) for boolean)
+    - If the plug-in scope is bound to a table, add a combobox that is associated with the same table so you can choose the input. 
+    - Add a [button](../canvas-apps/controls/control-button.md) to call the plug-in.
 1. Paste the plug-in formula you copied into the button's `OnSelect` property.
 1. Map each input parameter `Value` to reference the corresponding input controls
-    1. If the formula was originally `Environment.CalculateSum({ X: Value, Y: Value });`, it could would be re-written as: `Environment.CalculateSum({ X: TextInput1.Text, Y: TextInput2.Text });`
+    - If the formula was `Environment.new_CalculateSum({ X: Value, Y: Value });`, it could would be re-written as: `Environment.new_CalculateSum({ X: TextInput1.Text, Y: TextInput2.Text });`
+    - If the formula was bound, replace `Environment` with the table display name to access the plug-in.
 1. If an output parameter is defined for the low-code plug-in:
-    2. capture the response in a `Set()` or `UpdateContext()` formula: `Set( ActionResult, Environments.CalculateSum({ X: TextInput1.Text, Y: TextInput2.Text }) );`
-    1. Add a label control and set the text value to the response captured. For example, set the text value of the label control to the variable `ActionResult`.
+    1. Capture the response in a `Set()` or `UpdateContext()` formula: `Set( ActionResult, Environments.CalculateSum({ X: TextInput1.Text, Y: TextInput2.Text }) );`. Display the variable in a label. Alternatively use the `Notify()` formula to display data in a notification.
 1. Play the app and click the button to run the low-code plug-in.
 
-Learn more about how to [call Dataverse actions directly in Power Fx](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx-preview).
+Learn more about how you can [call Dataverse actions directly from Power FX in canvas apps](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx-preview).
 
 #### Invoke an instant plug-in from a Power Automate cloud flow
 1. In a cloud flow, add a new action from the Microsoft Dataverse connector.
@@ -238,9 +261,7 @@ Follow the steps for **Unbound action** or **Function bound to table** sections 
 
 ## Trace logging
 
-Trace logging is a feature in Dataverse that allows you to capture detailed information about the execution of plugins. By enabling trace logging, you can get a more complete picture of what's happening during plugin execution, which can be helpful for troubleshooting issues and identifying performance bottlenecks.
-
-When you enable trace logging for plugins, Dataverse will generate log files that include information about the plugin's input and output parameters, as well as any exceptions or errors that occur during execution. This information can be invaluable for diagnosing issues and identifying areas for optimization.
+Trace logging is a feature in Dataverse that allows you to capture detailed information about the execution of plugins. By enabling trace logging, you can get a more complete picture of what's happening during plugin execution, which can be helpful for troubleshooting issues and identifying performance bottlenecks. When you enable trace logging for plugins, Dataverse will generate log files that include information about the plugin's input and output parameters, as well as any exceptions or errors that occur during execution.
 
 To enable trace logging for plugins, you'll need to [enable the trace logging feature for the environment](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/logging-tracing).
 
@@ -261,13 +282,16 @@ For a few examples of how to create a low-code plug-in, go to [Example Dataverse
 - Intellisense requires explicit notation in automated plugins if you want to refer any tables in the formula. Use the following disambiguation syntax such as `[@Accounts]`, using square brackets and the `@` symbol (not `Accounts`).
 - Nested support. Plug-ins can only call first-party actions published by Microsoft from Power Fx expressions. In the future, plug-ins will be able to call other user-defined plug-ins.
 - Some `Collect` scenarios require `Patch`. There are some scenarios where `Collect()` doesn't work. The workaround is to use `Patch()` as shown in the populating regarding column example below. If you're creating an automated plug-in, prepend @ to each table referenced in the Power Fx formula.
-
     ```powerapps-dot
     Patch(Faxes,
         Collect(Faxes, { Subject : "Sub1" } ),
         { Regarding : First(Accounts) }
     )
     ```
+- When low code plugins interact with connectors and DLP is employed, the admin can block creation of connections using DLP. However, existing connection references in the Dataverse environment will continue to function. In case the admin needs to block all low code plugin interactions with any connectors, they can simply disable the organization setting `Allowconnectorsonpowerfxactions`. This setting is enabled by default and can be disabled by usual SDK means (WebAPI, SDK, Powershell, etc). Customers can disable this using a low code instant plug-in as follows:
+   ```powerapps-dot
+   Patch(Organizations, First(Organizations), { 'Enable connectors on power fx actions.': 'Enable connectors on power fx actions. (Organizations)'.No })
+   ```
 - Plug-ins that use connectors can only output results from specific fields. Due to this, you need to map specific primitive values from the connector response to output values. 
 
 ## See also
