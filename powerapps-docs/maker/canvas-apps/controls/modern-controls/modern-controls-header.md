@@ -26,9 +26,7 @@ A control that creates a modern app header.
 
 ## Description
 
-Header control is a building block control that allows you to build a common app UI pattern by setting just a few simple settings. The control let you create themes with modern theming and automatically responsive and will resize to fit the parent container or app. 
-Header supports a logo, a page title, and shows the current user picture, while allowing you to choose different style variants. 
-
+The **Header** control is a fundamental control that lets you create a common app user interface design with minimal configuration. This control lets you to generate themes that incorporate contemporary theming and dynamic responsiveness, adapting to the size of the parent container or app. The Header control supports a logo, a page title, and displays the user's current picture, while providing a range of distinct style options.
 
 
 ## Key properties
