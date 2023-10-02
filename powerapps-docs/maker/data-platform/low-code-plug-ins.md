@@ -31,14 +31,16 @@ Defining server-side business logic offers several benefits, including:
 4. **Easier maintenance and upgrades**. By centralizing business logic on the server, it becomes easier to maintain and update, as changes can be made in one place rather than having to update multiple clients.
 5. **Scalability**. Server-side logic can be scaled more easily than client-side logic, allowing for better performance and handling of larger workloads.
 
-There are two types of low-code plug-ins:
+## Low-Code Plug-ins
+
+There are two types of low-code plug-ins supported in Dataverse:
 
 | Type | Trigger | Supports parameters | Supported [scope](/power-apps/developer/data-platform/custom-api#select-a-binding-type) |
 |-|-|-|-|
 | Instant | Manually run | Yes | Global and table |
 | Automated | Dataverse table event | No | Table |
 
-All low-code plug-ins have these common properties:
+All low-code plug-ins have the following common properties:
 
 | Property | Description |
 |-|-|
@@ -60,7 +62,6 @@ Unique properties:
 | Parameters | Parameters allow you to pass information between the plug-in and the context that runs it, making it easier to design business logic that can be reused in varying situations.<br><br>**Input parameters** are used to provide data to the plug-in, and allow you to control how the function behaves by passing in different values you specify in the Power FX formula.<br><br>**Output parameters** allow you to retrieve the results of a function or method for further use in your program.<br><br>Supported data types:<br><ul><li>Boolean<li>String</li><li>Float</li><li>Decimal</li><li>DateTime</li><li>Integer</li></ul>|
 
 More information on how to integrate from a canvas app or in a Power Automate cloud flow: [Integrate a low-code plug-in](#integrate-a-low-code-plug-in)
-
 
 # [Automated plug-ins](#tab/automated)
 An automated low-code plug-in is custom code that is executed during the processing of a specific data event.
