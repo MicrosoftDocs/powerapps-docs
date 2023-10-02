@@ -214,7 +214,6 @@ Dataverse includes AI-powered actions which can be used to generate or extract d
 **Manually test instant plug-ins**
 
   1. From the **home screen**, select an instant plug-in from the list, then select **Test** on the command bar. You can also get to this screen from the instant plug-in editor in the command bar after it's been saved.
-  ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/3661b514-2fc2-491d-bcc9-604d77dbe728)
   :::image type="content" source="media/low-code-plugin-test-home.png" alt-text="Test low-code plug-in":::
 
   1. Provide values for any input parameters that are defined in the low-code plug-in, and then select **Run**.
