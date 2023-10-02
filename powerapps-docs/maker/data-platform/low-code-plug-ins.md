@@ -76,18 +76,29 @@ Unique properties:
 
 ## Plug-in permissions
 
-**Design time.**
-Makers who have system customizer or system administrator security role membership in the Power Platform environment can access all plug-ins in that environment.
-
-**Run time.**
-When a plug-in is invoked, it accesses the table data involved in the plug-in definition (the tables that are part of the formula, or if the table is associated with the settings of an automated plug-in) in the context of the user who invoked it.
-
-**Connections**.
-If a plug-in uses a connector action, the connector permissions enforce the ability for organizational users to access and operate on the plug-in call to the connector. The connection can be shared with one user or can be shared with the entire organization. This allows users to access and operate plug-ins with connectors using a shared connection if desired. By using security roles, plug-ins with connectors access can be restricted to a specific set of users within your organization. You can even specify which roles have create, read, update, or delete privileges in this way.
+:::row:::
+   :::column span="":::
+      **Design time.**
+      
+      Makers who have system customizer or system administrator security role membership in the Power Platform environment can access all plug-ins in that environment.
+   :::column-end:::
+   :::column span="":::
+      **Run time.**
+      
+      When a plug-in is invoked, it accesses the table data involved in the plug-in definition (the tables that are part of the formula, or if the table is associated with the settings of an automated plug-in) in the context of the user who invoked it.
+   :::column-end:::
+   :::column span="":::
+      **Connections**.
+      
+      The connector permissions enforce the ability for organizational users to access and operate the plug-in call to the connector. The connection can be shared with one user or can be shared with the entire organization. This allows users to access and operate plug-ins with connectors using a shared connection if desired. By using security roles, plug-ins with connectors access can be restricted to a specific set of users within your organization. You can even specify which roles have create, read, update, or delete privileges in this way.
+   :::column-end:::
+:::row-end:::
 
 ## Prerequisites for creating a low-code plug-in
-- System administrator or system customizer security role membership in the Power Platform environment.
-- Access to the Dataverse Accelerator App
+
+> [!div class="checklist"]
+> * System administrator or system customizer security role membership in the Power Platform environment.
+> * Access to the Dataverse Accelerator App
 
 > [!TIP]
 > All new environments have the Dataverse Accelerator app automatically installed as of October 1st 2023. If you already had the Dataverse Accelerator installed, you can manually update the Dataverse Accelerator.
