@@ -104,14 +104,14 @@ Unique properties:
 > [!TIP]
 > All new environments have the Dataverse Accelerator app automatically installed as of October 1st 2023. If you already had the Dataverse Accelerator installed, you can manually update the Dataverse Accelerator.
 
-### Update the Dataverse Accelerator
+**Update the Dataverse Accelerator**
 
 1. Follow the instructions to [view licensed apps in your environment](/power-platform/admin/manage-apps#environment-level-view-of-apps).
 1. If the **Dataverse Accelerator** is already installed and an update is available, it's indicated in the table next to the item.
 1. Select **Dataverse Accelerator**, and then select **Update** on the command bar.
 
 > [!TIP]
-> Enable [auto app updates](/power-platform/developer/isvstudio/auto-update) for the **Microsoft - Power CAT** publisher to automatically receive updates when available.
+> Enable [auto app updates](/power-platform/developer/isvstudio/auto-update) for the **Microsoft - Power CAT** publisher to automatically receive updates when available (not necessary for new environments created after October 1st 2023).
 
 > [!NOTE]
 > If you previously installed the optional Low-Code Plug-ins for Connectors solution, it will be automatically deleted if you update after June 29, 2023. The capabilities will be available in the main solution.
@@ -120,9 +120,7 @@ Unique properties:
 
 1. Play the Dataverse Accelerator app.
 1. Click the **New instant plug-in** card.
-
-   ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/914fd09d-c7fe-47cd-aebe-120ef9136a90)
-   <!---:::image type="content" source="media/low-code-plugin1.png" alt-text="New plug-in Dataverse Accelerator solution":::--->
+   :::image type="content" source="media/low-code-plugin-instant-create.png" alt-text="New plug-in Dataverse Accelerator solution":::
 1. Provide a **Display name**
 1. Optionally, define parameters:
    - Select **New input parameter** or **New output parameter**, then enter the label and data type.
@@ -145,13 +143,14 @@ Unique properties:
 - Create two input parameters, X and Y (boty type integer), and one output parameter, `Z` (type string).
 - You could use the following formula: `{Z:  X + Y }`
 
-![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/4cff04b4-ddd5-4e83-9ce4-8f8fc490c228)
+:::image type="content" source="media/low-code-plugin-instant-newform.png" alt-text="Instant plug-in example in Dataverse Accelerator app":::
 
 
 ## Create an automated low-code plug-in
 
 1. Play the Dataverse Accelerator app.
 1. Click the **New automated plug-in** card.
+   :::image type="content" source="media/low-code-plugin-automated-create.png" alt-text="New plug-in Dataverse Accelerator solution":::
 1. Provide the following values:
    - **Name**: Enter a name for the plug-in, such as *Input validation*.
    - **Table**: Choose a table to associate the plug-in to, such as *Account*.
@@ -216,11 +215,11 @@ Dataverse includes AI-powered actions which can be used to generate or extract d
 
   1. From the **plug-ins** page, select an instant low-code plug-in from the list, and then select **Test** on the command bar.
   ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/3661b514-2fc2-491d-bcc9-604d77dbe728)
-  :::image type="content" source="media/low-code-plugin-test.png" alt-text="Test low-code plug-in":::
+  :::image type="content" source="media/low-code-plugin-test-home.png" alt-text="Test low-code plug-in":::
 
   1. Provide values for any input parameters that are defined in the low-code plug-in, and then select **Run**.
   ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/af670bf6-b722-413d-b26b-ca789a68e3c3)
-  :::image type="content" source="https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/af670bf6-b722-413d-b26b-ca789a68e3c3" alt-text="Test low-code plug-in":::
+  :::image type="content" source="media/low-code-plugin-test.png" alt-text="Test low-code plug-in":::
 
   Observe the response.
   
@@ -236,6 +235,7 @@ Dataverse includes AI-powered actions which can be used to generate or extract d
     1. Select the instant plug-in in the list,
     1. Click the 'copy to clipboard' action in the command bar.
     2. Save the copied formula to a text editor or note pad (somewhere you can easily refer back to)
+    :::image type="content" source="media/low-code-plugin-instant-integrate.png" alt-text="Test low-code plug-in":::
 1. In the [Power Apps maker portal](https://make.powerapps.com/):
    1. create or edit a canvas app (or custom page) in the Power Apps studio.
    1. In the left navigation, under the **Data Sources** tab, click **+ New data source** and search for the **Environment** option from the Dataverse connector.
