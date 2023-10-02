@@ -18,6 +18,11 @@ Traditionally, plug-ins were created as custom classes compiled into a .NET Fram
 
 Low-code plug-ins are stored within a Dataverse database and can be seamlessly integrated into Power Apps and Power Automate. The behavior of the workflow is defined using the Power FX expression language and can directly connect with Dataverse business data and external data sources through Power Platform connectors. With low-code plug-ins, users can rapidly construct complex workflows with minimal coding expertise, resulting in a more streamlined and efficient data architecture.
 
+> [!IMPORTANT]
+> - This is a preview feature. Use this if you're an early adopter, see something useful to you, and would like to help test the feature.
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - Experimental features can radically change or completely disappear at any time. For this reason the feature is not enabled by default and you must explicitly opt in to use it.
+
 ## Benefits of server-side logic
 Defining server-side business logic offers several benefits, including:
 1. **Increased security**. Since server-side logic executes on the server, it can help prevent unauthorized access to sensitive data or processes.
@@ -25,11 +30,6 @@ Defining server-side business logic offers several benefits, including:
 3. **Consistency and reliability**. Server-side logic ensures that business rules are consistently applied across all clients, reducing the risk of errors or inconsistencies.
 4. **Easier maintenance and upgrades**. By centralizing business logic on the server, it becomes easier to maintain and update, as changes can be made in one place rather than having to update multiple clients.
 5. **Scalability**. Server-side logic can be scaled more easily than client-side logic, allowing for better performance and handling of larger workloads.
-
-> [!IMPORTANT]
-> - This is a preview feature. Use this if you're an early adopter, see something useful to you, and would like to help test the feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - Experimental features can radically change or completely disappear at any time. For this reason the feature is not enabled by default and you must explicitly opt in to use it.
 
 There are two types of low-code plug-ins:
 
