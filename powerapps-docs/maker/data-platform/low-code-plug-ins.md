@@ -217,7 +217,6 @@ Dataverse includes AI-powered actions which can be used to generate or extract d
   :::image type="content" source="media/low-code-plugin-test-home.png" alt-text="Test low-code plug-in":::
 
   1. Provide values for any input parameters that are defined in the low-code plug-in, and then select **Run**.
-  ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/af670bf6-b722-413d-b26b-ca789a68e3c3)
   :::image type="content" source="media/low-code-plugin-test.png" alt-text="Test low-code plug-in":::
 
   Observe the response.
