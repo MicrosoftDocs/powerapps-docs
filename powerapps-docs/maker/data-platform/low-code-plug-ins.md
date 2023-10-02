@@ -186,12 +186,15 @@ Before using a connector in a low code plug-in, make sure to review the connecto
 
 ## Test a low-code plug-in
 
-- Manually test the instant plug-in to verify it behaves as expected.
+- Manually test the instant plug-in
 
   1. From the **plug-ins** page, select an instant low-code plug-in from the list, and then select **Test** on the command bar.
   :::image type="content" source="media/low-code-plugin-test.png" alt-text="Test low-code plug-in":::
 
   1. Provide values for any input parameters that are defined in the low-code plug-in, and then select **Run**.
+      ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/af670bf6-b722-413d-b26b-ca789a68e3c3)
+     :::image type="content" source="https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/af670bf6-b722-413d-b26b-ca789a68e3c3" alt-text="Test low-code plug-in":::
+
 
   Observe the response.
   
