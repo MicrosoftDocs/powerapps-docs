@@ -189,11 +189,12 @@ Before using a connector in a low code plug-in, make sure to review the connecto
 - Manually test the instant plug-in
 
   1. From the **plug-ins** page, select an instant low-code plug-in from the list, and then select **Test** on the command bar.
+  ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/3661b514-2fc2-491d-bcc9-604d77dbe728)
   :::image type="content" source="media/low-code-plugin-test.png" alt-text="Test low-code plug-in":::
 
   1. Provide values for any input parameters that are defined in the low-code plug-in, and then select **Run**.
-      ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/af670bf6-b722-413d-b26b-ca789a68e3c3)
-     :::image type="content" source="https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/af670bf6-b722-413d-b26b-ca789a68e3c3" alt-text="Test low-code plug-in":::
+  ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/af670bf6-b722-413d-b26b-ca789a68e3c3)
+  :::image type="content" source="https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/af670bf6-b722-413d-b26b-ca789a68e3c3" alt-text="Test low-code plug-in":::
 
 
   Observe the response.
@@ -234,6 +235,14 @@ Learn more about how to [call Dataverse actions directly in Power Fx](../canvas-
 
 #### Invoke an instant plug-in from the Dataverse Web API
 Follow the steps for **Unbound action** or **Function bound to table** sections in the [Invoking custom APIs from the Web API documentation](/power-apps/developer/data-platform/custom-api#invoking-custom-apis-from-the-web-api) (depending on the appropriate scope of the plug-in).
+
+## Trace logging
+
+Trace logging is a feature in Dataverse that allows you to capture detailed information about the execution of plugins. By enabling trace logging, you can get a more complete picture of what's happening during plugin execution, which can be helpful for troubleshooting issues and identifying performance bottlenecks.
+
+When you enable trace logging for plugins, Dataverse will generate log files that include information about the plugin's input and output parameters, as well as any exceptions or errors that occur during execution. This information can be invaluable for diagnosing issues and identifying areas for optimization.
+
+To enable trace logging for plugins, you'll need to [enable the trace logging feature for the environment](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/logging-tracing).
 
 ## Contacting Help + support
 
