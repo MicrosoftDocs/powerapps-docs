@@ -189,14 +189,16 @@ Before using a connector in a low code plug-in, make sure to review the connecto
 ### What are smart low code plugins?
 Dataverse includes AI-powered actions which can be used to generate or extract data using Azure Open AI and the power of AI Builder. You can call these functions from both Instant and Automated low code plugins.  
 
-### What functions are supported for smart low code plugins?
-AI functions supported are AISummarize, AISentiment, AIReply, AIClassify, AI Translate and AIExtract
-•	AISummarize: Summarize text
-•	AISentiment: Detect the sentiment of text as either positive, negative, or neutral
-•	AIReply: Draft a reply to text
-•	AITranslate: Translate text to English
-•	AIClassify: Classify text into one or more provided categories
-•	AIExtract: Extract specified entities such as registration numbers
+**What functions are supported for smart low code plugins?**
+
+| Function | Description |
+| - | - |
+| **AISummarize** | Summarize text |
+| **AISentiment** | Detect the sentiment of text as either positive, negative, or neutral | 
+| **AIReply** | Draft a reply to text | 
+| **AITranslate** |  Translate text to English | 
+| **AIClassify**| Classify text into one or more provided categories | 
+| **AIExtract**| Extract specified entities such as registration numbers | 
 
 ### Requirements
 
