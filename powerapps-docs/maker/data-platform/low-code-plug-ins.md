@@ -57,7 +57,7 @@ Unique properties:
 | Property | Description |
 |-|-|
 | Scope | Used to associate a plug-in to a specific table. It can be set to either table (shown as entity) or global, where table (entity) scope means the plug-in will be triggered with the context of a specific table record, and global scope means the operation is not associated with a table ([learn more](/power-apps/developer/data-platform/custom-api#select-a-binding-type)). |
-| Parameters | Parameters allow you to pass information between the plug-in and the context that runs it, making it easier to design business logic that can be reused in varying situations.<br><br>**Input parameters** are used to provide data to the plug-in, and allow you to control how the function behaves by passing in different values you specify in the Power FX formula.<br><br>**Output parameters** allow you to retrieve the results of a function or method for further use in your program.<br><br>Supported data types:<br><ul><li>Boolean<li>String</li><li>Float</li><li>Decimal</li><li>DateTime</li><li>Integer</li><li>Entity Reference</li></ul>|
+| Parameters | Parameters allow you to pass information between the plug-in and the context that runs it, making it easier to design business logic that can be reused in varying situations.<br><br>**Input parameters** are used to provide data to the plug-in, and allow you to control how the function behaves by passing in different values you specify in the Power FX formula.<br><br>**Output parameters** allow you to retrieve the results of a function or method for further use in your program.<br><br>Supported data types:<br><ul><li>Boolean<li>String</li><li>Float</li><li>Decimal</li><li>DateTime</li><li>Integer</li></ul>|
 
 More information on how to integrate from a canvas app or in a Power Automate cloud flow: [Integrate a low-code plug-in](#integrate-a-low-code-plug-in)
 
@@ -119,11 +119,15 @@ Unique properties:
 
 1. Play the Dataverse Accelerator app.
 1. Click the **New instant plug-in** card.
-   :::image type="content" source="media/low-code-plugin1.png" alt-text="New plug-in Dataverse Accelerator solution":::
+
+   ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/914fd09d-c7fe-47cd-aebe-120ef9136a90)
+   <!---:::image type="content" source="media/low-code-plugin1.png" alt-text="New plug-in Dataverse Accelerator solution":::--->
 1. Provide a **Display name**
-2. Optionally, define your parameters:
+1. Optionally, define parameters:
    - Select **New input parameter** or **New output parameter**, then enter the label and data type.
+   <!--- Remove until post MPPC hotfix for entityRef 
    - If EntityReference data type is chosen, select a table in the additional combobox that appears.
+   --->
    - Add more input and output parameters as needed.
 1. Enter the Power FX expression in the **Expression** editor.
    - Reference input parameters in the formula by the label name.
@@ -135,11 +139,14 @@ Unique properties:
    :::image type="content" source="media/low-code-plugin2.png" alt-text="Instance low-code plug-in using Power Fx to derive a sum value with two integers":::
 1. Optionally expand **advanced options** to modify the **solution**, **scope**, or **description**.
 1. Select **Save**.
-1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
+1. [Test your instant low-code plug-in](#test-a-low-code-plug-in)
 
-Example: Calculate the sum of two integers.
+**Example**: Calculate the sum of two integers.
 - Create two input parameters, X and Y (boty type integer), and one output parameter, `Z` (type string).
 - You could use the following formula: `{Z:  X + Y }`
+
+![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/4cff04b4-ddd5-4e83-9ce4-8f8fc490c228)
+
 
 ## Create an automated low-code plug-in
 
@@ -154,7 +161,7 @@ Example: Calculate the sum of two integers.
    - Use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
 1. Optinally expand **advanced options** to modify the **stage** (when should this run), **solution**, and **description**.
 1. Select **Save**.
-1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
+1. [Test your automated low-code plug-in](#test-a-low-code-plug-in)
 
 ## Use Power Platform connectors in low-code plug-ins
 
