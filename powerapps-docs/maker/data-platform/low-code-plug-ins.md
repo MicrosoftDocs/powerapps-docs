@@ -90,7 +90,7 @@ Unique properties:
    :::column span="":::
       **Connections**.
       
-      The connector permissions enforce the ability for organizational users to access and operate the plug-in call to the connector. The connection can be shared with one user or can be shared with the entire organization. This allows users to access and operate plug-ins with connectors using a shared connection if desired. By using security roles, plug-ins with connectors access can be restricted to a specific set of users within your organization. You can even specify which roles have create, read, update, or delete privileges in this way.
+      Using [security roles](https://learn.microsoft.com/en-us/power-platform/admin/security-roles-privileges#security-roles-and-the-new-modern-ui), connector access within plug-ins can be restricted to a specific set of users within your organization. You can specify which roles have create, read, update, or delete privileges.
    :::column-end:::
 :::row-end:::
 
@@ -169,30 +169,20 @@ Unique properties:
 
 ### Prerequisites for using connectors in low-code plug-ins
 
-- [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
-- A connection reference with an active connection. Learn more about [connection references](/power-apps/maker/data-platform/create-connection-reference).
-- Either **owner** or **can use and share** permission on the connection.
+> [!div class="checklist"]
+> * [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
+> * [Connection reference](/power-apps/maker/data-platform/create-connection-reference) with an active connection. 
+<!--- Needs verification > * **Owner** or **can use and share** permission on the connection you want to use (to author the plug-in). --->
 
 ### Using connector actions in low-code plug-ins
 
-1. In both low-code plug-in editors, click the **connection references** button in the top right corner. A pane will expand on the right.
-1. A list of available connection references are displayed.
-   - Use the search box to filter the list.
-   - Only connection references with an assigned connection ID will be listed.
-1. Click on the display name link to list the supported connector actions
-2. If the connector you need is not listed, create a new connection reference
-   1. Click '+ New' in the command bar of the pane.
-   1. Fill out the form details and click **Create** ([similar to the solutions portal experience](/power-apps/maker/data-platform/create-connection-reference#manually-add-a-connection-reference-to-a-solution-using-solution-explorer)).
-   > [!NOTE]
-   > In the current release, there are limited connectors available in the in-app form. If you don’t see the connector you want, go to the maker portal and create a new connection reference in an unmanaged solution. You can click the action button that says 'Take me there' in the warning message of the form to jump there.
-   1. When the connection reference is created, the list of connector actions will be displayed
-1. Select a connector action, then choose an option in the command bar:
-   - **Copy**: Copies the action formula to the clipboard. You can then paste (CRTL+V) the action into the formula editor.
-   - **Learn**: Takes you to the documentation page of the action, which contains the description and parameters of the action.
-1.	Once the action formula is pasted into the Power FX expression, use intellisense to provide the correct values for any input parameters (if any are required).
-  	> [!TIP]
-   > Pasting the action formula might not immediately display the intellisense. Delete and re-type the opening (left) parameter after the action name to trigger the intellisense window.
-
+You can easily use [connectors]( https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerapps-connectors) and [custom connectors]( https://learn.microsoft.com/en-us/connectors/custom-connectors/) from within a low-code plug-in Power FX formula. Here's how:
+1. Create a connection to the connector you want to use.
+2. [Add a connection reference]( https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-connection-reference#manually-add-a-connection-reference-to-a-solution-using-solution-explorer) to the connection in the Dataverse environment.
+3. In the low-code plug-in Power FX expression editor, type the name of the connection reference.
+4. Intellisense will show you the available actions.
+5. Select the action you want and enter the required parameters.
+Before using a connector in a low code plug-in, make sure to review the connector's [documentation]( https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerapps-connectors) to ensure that you're passing the input and output parameters correctly.
 
 ## Test a low-code plug-in
 
