@@ -28,7 +28,7 @@ The Copilot control is available in the email form's rich text editor toolbar by
 
 ## Prerequisites
 
-[Have an advanced configuration file for the rich text editor](rich-text-editor-control.mdl#create-and-use-advanced-configuration-for-the-rich-text-editor-control) in the form where you want to add the Copilot control.
+[Have a configuration file for the rich text editor](rich-text-editor-control.md#customize-the-rich-text-editor-control) in the form where you want to add the Copilot control.
 
 ## Add the Copilot control
 
