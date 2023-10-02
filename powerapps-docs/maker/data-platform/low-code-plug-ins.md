@@ -136,7 +136,6 @@ Unique properties:
    - If the scope is set to entity, use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
    > [!TIP]
    > Note the intellisense in the **Expression** box. Underlined red is invalid. Squiggly yellow means your logic might be affected by delegation limitations. Avoid delegation issues by using [delegable functions]( /power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
-   :::image type="content" source="media/low-code-plugin2.png" alt-text="Instance low-code plug-in using Power Fx to derive a sum value with two integers":::
 1. Optionally expand **advanced options** to modify the **solution**, **scope**, or **description**.
 1. Select **Save**.
 1. [Test your instant low-code plug-in](#test-a-low-code-plug-in)
