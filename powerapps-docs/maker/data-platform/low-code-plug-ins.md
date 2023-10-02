@@ -211,9 +211,9 @@ Dataverse includes AI-powered actions which can be used to generate or extract d
 
 ## Test a low-code plug-in
 
-- Manually test the instant plug-in
+**Manually test instant plug-ins**
 
-  1. From the **plug-ins** page, select an instant low-code plug-in from the list, and then select **Test** on the command bar.
+  1. From the **home screen**, select an instant plug-in from the list, then select **Test** on the command bar. You can also get to this screen from the instant plug-in editor in the command bar after it's been saved.
   ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/43950360/3661b514-2fc2-491d-bcc9-604d77dbe728)
   :::image type="content" source="media/low-code-plugin-test-home.png" alt-text="Test low-code plug-in":::
 
@@ -226,7 +226,8 @@ Dataverse includes AI-powered actions which can be used to generate or extract d
   > [!TIP]
   > Use output parameters to help validate expected behavior and results. Otherwise, you will only see a success or failure when testing.
 
-- You can test automated plug-ins by invoking the data event. Observe if the plug-in ran successfully by validating expected changes that were defined in the formula.
+**Test automated plug-ins**
+You can test automated plug-ins by invoking the data event. Observe if the plug-in ran successfully by validating expected changes that were defined in the formula.
 
 ### Integrate a low-code plug-in
 
