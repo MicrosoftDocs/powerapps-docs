@@ -1,6 +1,6 @@
 ---
-title: Add the Copilot control to the rich text editor in any form
-description: Learn how to make the Copilot control available in the rich text editor in any form by modifying the editor configuration file.
+title: Add the Copilot control to the rich text editor
+description: Learn how to make the Copilot control available in the rich text editor by modifying the editor configuration file.
 author: udaykirang
 ms.author: udag
 ms.reviewer: shujoshi
@@ -17,7 +17,7 @@ ms.custom:
   - ai-seo-date:09/28/2023
 ---
 
-# Add the Copilot control to the rich text editor in any form (preview)
+# Add the Copilot control to the rich text editor (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
