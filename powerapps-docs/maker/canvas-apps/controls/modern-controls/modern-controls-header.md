@@ -18,15 +18,13 @@ contributors:
   - yogeshgupta698
   
 ---
-# Header modern control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Header modern control in Power Apps 
 
 A control that creates a modern app header.
 
 ## Description
 
-The **Header** control is a fundamental control that lets you create a common app user interface design with minimal configuration. This control lets you to generate themes that incorporate contemporary theming and dynamic responsiveness, adapting to the size of the parent container or app. The Header control supports a logo, a page title, and displays the user's current picture, while providing a range of distinct style options.
+The **Header** control is an essential control that lets you to design a user interface for a standard app with ease. With minimal configuration, this control allows you to create themes that embrace modern theming and dynamic responsiveness, adjusting to the size of the parent container or app. Additionally, the **Header** control supporst a logo, a page title, and displays the user picture, while providing a variety of unique style options.
 
 
 ## Key properties
@@ -41,15 +39,15 @@ The **Header** control is a fundamental control that lets you create a common ap
 
 **IsTitleVisible** – Whether the title is displayed in the header.
 
-**IsProfilePictureVisible** – Whether the user picture is displayed in the header. By default, picture of the current user using the app is shown. 
+**IsProfilePictureVisible** – Whether the user picture is displayed in the header. By default, a picture of the current user using the app is shown. 
 
 
 ## Unsupported capabilities
 
-Support for the following features is expected in the future: 
+The following featueres aren't supported:
 
 - Customization of colors 
 - App navigation 
 
-Currently the header does not automatically replicate across app screens, and needs to be manually added to each screen.
+The header doesn't automatically replicate across app screens, so it needs to be manually added to each screen.
 
