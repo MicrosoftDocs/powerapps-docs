@@ -1,57 +1,87 @@
 ---
-title: Use Copilot in rich text editor for email (preview)
-description: Refine content for emails with Copilot in rich text editor.
+title: Use Copilot in the email rich text editor (preview)
+description: Learn how to use Copilot in the rich text editor to make your customer emails clearer, shorter, and more compelling.
 author: udaykirang
 ms.author: udag
 ms.reviewer: shujoshi
-ms.topic: how-to 
+ms.topic: how-to
 ms.date: 08/25/2023
-ms.custom: bap-template 
 ms.subservice: mda-maker
-tags: 
-search.audienceType: 
+tags:
+search.audienceType:
   - maker
+ms.custom:
+  - bap-template
+  - ai-gen-docs-bap
+  - ai-gen-desc
+  - ai-seo-date:10/02/2023
 ---
 
-# Use Copilot in rich text editor for email (preview)
+# Use Copilot in the email rich text editor (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The Copilot for email assist feature helps in refining content for emails specific to customer’s needs with clarity, conciseness, and compelling content.
+When you draft customer emails in the rich text editor in a model-driven app, Copilot can offer suggestions to make them clearer, more concise, and more compelling.
 
 > [!IMPORTANT]
-> This is a preview feature
+> This is a preview feature. [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 >
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
->
-> By using Copilot features powered by Azure OpenAI, you agree that data may be stored and/or processed outside of your geographic region, compliance boundary, or national cloud instance. More information: [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy#preventing-abuse-and-harmful-content-generation)
+> By using Copilot features powered by Azure OpenAI, you agree that data may be stored and/or processed outside of your geographic region, compliance boundary, or national cloud instance. Learn more: [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy#preventing-abuse-and-harmful-content-generation)
 
 ## Prerequisites
 
-The Copilot for email assist feature must be enabled in app settings for the model-driven app. More information: [Controlling which features are enabled](../canvas-apps/working-with-experimental-preview.md#controlling-which-features-are-enabled) 
+The Copilot for email feature must be turned on in the [settings of the model-driven app](../canvas-apps/working-with-experimental-preview.md#controlling-which-features-are-enabled).
 
-## Refine content for emails
+## Refine email content with Copilot
 
-When you open an email with the rich text editor, the **Adjust with Copilot** option is displayed on the toolbar. This feature allows you to enhance and polish the content of your email with the assistance of Copilot.
+1. Compose an email in a rich text editor that has Copilot.
+1. Select the text that you want to refine.
+1. Select **Adjust with Copilot** in the editor toolbar.
+1. Refine the length and tone of the selected text:
 
-1. After you enter the content in the email, select the text that you want to refine.
-1. Select **Adjust with Copilot** and refine the content as per your requirements. The following refinement options are available:
+    - Length: Select **Short**, **Medium**, or **Long** to condense or expand on your text.
+    - Tone: Select **Friendly**, **Professional**, or **Formal** to adjust the tone of your text.
 
-    | Refinement option | Description | 
-    |------------------|-------------|
-    | Length | Use an option from Short, Medium, or Long to determine the length of the text. |
-    | Tone | Use an option from Friendly, Professional, or Formal to determine the tone of the content with which you want to communicate with customer. |
+1. Select **Update** to apply Copilot's suggested refinements.
 
-1. Select **Update** and the content is refined according to your selected options in the email.
+For example, Marina wants to send an email to a customer about a new product. Marina types a draft, selects **Adjust with Copilot**, and asks Copilot to rewrite the draft to be shorter and in a more formal tone.
 
-For example, Marina wants to send an email with short length and in a formal tone to Kenny (a customer) to inform about their CRM product.
+- Before Copilot's assistance:
 
-|Unrefined content| Refined content using Copilot email assist |
-|-----------------|--------------------------------------------|
-| Hi Kenny,<br>My name is Marina; I’m Sales executive at Contoso Inc.<br>I was recommended by Kevin to get in touch with you.<br>I noticed on your website that you don’t have CRM application.<br>I’d love to connect with you to discuss the potential of partnering up. When would you have time to chat about this?<br>If you want to learn more about the product first, here’s a quick link: www.contoso.com.<br>Kind regards,<br>Marina | Dear Mr. Kenny,<br>I am Marina, a Sales Executive at Contoso Inc. Kevin recommended that I contact you. I noticed that your website does not have a CRM application. I would like to discuss the possibility of a partnership. When would you have time to talk about this? If you would like to learn more about our product, please refer to this link: www.contoso.com.<br>Sincerely,<br>Marina |
+  ```text
+  Hi Samir,
+  
+  My name is Marina; I'm a Sales executive at Contoso Inc. I was 
+  recommended by Kevin to get in touch with you.
+  
+  I noticed on your website that you don't have CRM application. I'd 
+  love to connect with you to discuss the potential of partnering up. 
+  When would you have time to chat about this?
+  
+  If you want to learn more about the product first, here's a quick 
+  link: www.contoso.com.
+  
+  Kind regards,
+  Marina
+  ```
+
+- After Copilot's assistance:
+
+```text
+Dear Mr. Samir,
+
+I am Marina, a Sales Executive at Contoso Inc. Kevin recommended that I 
+contact you. I noticed that your website does not have a CRM application. 
+I would like to discuss the possibility of a partnership. When would you 
+have time to talk about this? If you would like to learn more about our 
+product, please refer to this link: www.contoso.com.
+
+Sincerely,
+Marina
+```
 
 ### See also
 
-- [Add the rich text editor control](../model-driven-apps/rich-text-editor-control.md)  
-- [Add the Copilot control to a form](../model-driven-apps/copilot-control.md)  
-- [FAQ for Copilot in rich text editor](../common/faqs-email-assist-rte.md)
+- [Add the rich text editor control](../model-driven-apps/rich-text-editor-control.md)
+- [Add the Copilot control to the rich text editor](../model-driven-apps/copilot-control.md)
+- [FAQ about using Copilot in the rich text editor](../common/faqs-email-assist-rte.md)
