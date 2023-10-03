@@ -188,13 +188,13 @@ Columns that display a set of options can reference a set of options defined by 
 
 ### Retrieve options data
 
-The organization service provides request classes you can use to retrieve the options used by a column.
+The SDK for .NET provides request classes you can use to retrieve the options used by a column.
 
-#### Use the organization service to retrieve options
+#### Use the SDK for .NET to retrieve options
 
 Each of the columns with options inherit from <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> include an [OptionSet Property](xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet). This property contains the <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata> that includes the options within the [Options property](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options).
 
-With the organization service you can use the following messages to retrieve information about choice:
+With the SDK for .NET you can use the following request classes to retrieve information about choice:
 
 | Request Class|Description |
 |-----|-----|

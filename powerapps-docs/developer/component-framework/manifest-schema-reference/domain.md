@@ -1,8 +1,8 @@
 ---
 title: domain element | Microsoft Docs
 description: Indicates the domain that the external-usage-element applies to.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 02/22/2023
 ms.reviewer: jdaly
 ms.topic: reference

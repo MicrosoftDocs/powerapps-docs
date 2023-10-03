@@ -31,7 +31,7 @@
   items:
     - name: Use the Web API
       href: ./webapi/overview.md
-    - name: Use the Organization Service
+    - name: Use the SDK for .NET
       href: ./org-service/overview.md
     - name: Use bulk operation messages
       href: bulk-operations.md
@@ -460,7 +460,7 @@
   items:
     - name: Web API
       href: webapi/samples/toc.yml
-    - name: Organization Service
+    - name: SDK for .NET
       href: org-service/samples/toc.yml
 - name: Resources
   items:
@@ -478,7 +478,7 @@
       href: reference/entities/toc.yml
     - name: Web API Reference
       href: /dynamics365/customer-engagement/web-api/about
-    - name: Organization Service
+    - name: SDK for .NET
       href: /dotnet/api/microsoft.crm.sdk
     - name: XRM Tooling
       href: /dotnet/api/microsoft.xrm.tooling.connector

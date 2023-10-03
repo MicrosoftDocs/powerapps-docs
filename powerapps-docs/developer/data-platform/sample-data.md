@@ -1,6 +1,6 @@
 ---
 title: "Add and remove sample data (Microsoft Dataverse) | Microsoft Learn" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to install or uninstall sample data using the Web API or Organization service." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how to install or uninstall sample data using the Web API or SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 09/28/2022
 ms.reviewer: pehecke
 ms.topic: article
@@ -45,7 +45,7 @@ static void InstallSampleData(IOrganizationService service)
 More information:
 
 - [IOrganizationService Interface](org-service/iorganizationservice-interface.md)
-- [Use messages with the Organization service](org-service/use-messages.md)
+- [Use messages with the SDK for .NET](org-service/use-messages.md)
 
 > [!NOTE]
 > The <xref:Microsoft.Crm.Sdk.Messages.InstallSampleDataResponse?text=InstallSampleDataResponse Class> returned by this operation doesn't include any properties to examine.
@@ -94,7 +94,7 @@ static void UninstallSampleData(IOrganizationService service)
 More information:
 
 - [IOrganizationService Interface](org-service/iorganizationservice-interface.md)
-- [Use messages with the Organization service](org-service/use-messages.md)
+- [Use messages with the SDK for .NET](org-service/use-messages.md)
 
 > [!NOTE]
 > The <xref:Microsoft.Crm.Sdk.Messages.UninstallSampleDataResponse?text=UninstallSampleDataResponse Class> returned by this operation doesn't include any properties to examine.

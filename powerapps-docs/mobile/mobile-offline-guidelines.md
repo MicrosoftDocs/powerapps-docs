@@ -4,12 +4,14 @@ description: Guidance for optimizing offline profiles for model-driven apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/12/2023
+ms.date: 08/28/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
 ms.reviewer: sericks
 ms.assetid: 
+contributors:
+- lancedMicrosoft 
 search.audienceType: 
   - enduser
 ---
@@ -33,6 +35,9 @@ After you've [set up an offline profile](setup-mobile-offline.md#set-up-a-mobile
 In this phase, you'll add tables and apply filters to existing tables to make sure that the right data is downloaded to the app.
 
 ***Outcome:*** You confirm that all the tables and forms work offline after the data is downloaded and that download sizes are reasonable.
+
+> [!IMPORTANT]
+> The metadata for the app is retrieved when the app starts.  This means that if you change a component in your app, such as a form component or view, then you need to restart the app for the profile to reflect the changes.  
 
 ### Phase 2: Test with users
 

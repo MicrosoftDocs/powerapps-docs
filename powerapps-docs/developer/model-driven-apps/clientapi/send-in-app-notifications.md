@@ -52,7 +52,7 @@ Notifications can be sent using the `SendAppNotification` message.
 
 See [SendAppNotification Action](xref:Microsoft.Dynamics.CRM.SendAppNotification) for information on the message and parameters. 
 
-The `SendAppNotification` message doesn't currently have request and response classes in the Dataverse SDK for .NET. To get strongly typed classes for this message, you must generate classes or use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. More information: [Use messages with the Organization service](../../data-platform/org-service/use-messages.md).
+The `SendAppNotification` message doesn't currently have request and response classes in the Dataverse SDK for .NET. To get strongly typed classes for this message, you must generate classes or use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. More information: [Use messages with the SDK for .NET](../../data-platform/org-service/use-messages.md).
 
 The `SendAppNotification` message uses open types, enabling dynamic properties on the in-app notification. For example, a notification can have zero to many actions, and each action may have different action types. Open types enable having dynamic properties for the actions depending on the action types selected. More information: [Use open types with custom APIs](../../data-platform/use-open-types.md)
 
@@ -1125,6 +1125,7 @@ In addition to the appropriate table permissions, a user must be assigned the **
 | User can delete in-app notifications | Global: Delete privileges on the app notification table. |
 
 
+
 ## Notification storage
 
 Because the app notification table uses the organization's database storage capacity, it's important to consider the volume of notifications sent and the expiration setting. More information: [Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage)
@@ -1137,7 +1138,7 @@ The Power Apps Notification connector is for push notifications, which are separ
 - [Power Apps Notification V2 connector](/connectors/powerappsnotificationv2/)
 - [Create push notifications for Power Apps Mobile](../../../mobile/power-apps-mobile-notification.md)
 
-### See also
+### Related articles
 
 [SendAppNotification Action](xref:Microsoft.Dynamics.CRM.SendAppNotification)<br />
 [Create a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md)<br />

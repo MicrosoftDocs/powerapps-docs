@@ -6,19 +6,13 @@ ms.author: mspilde
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 08/07/2023
+ms.date: 09/29/2023
 ---
-# Configure tables to use Copilot (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Configure tables to use Copilot
 
 When users ask questions about the data available in an app, Copilot uses backend natural language questions and answer capabilities that rely on the table to be enabled for searching across the data. The table configuration must also include the columns that your end-users will like to ask questions about the data in order to get responses back from Copilot in Power Apps.
 
 This article describes the steps to enable a table and select the columns, which determine the data that will be included with Copilot responses.
-
-> [!IMPORTANT]
-> This is a preview feature.
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Enable indexing
 
@@ -30,7 +24,7 @@ To verify these options, select **Properties** from the table designer in make.p
 
 ## Configure columns
 
-To configure your columns for Copilot, open the table, and then select **Views** from the table hub. In the list of views open the default quick find view for the table. By default, the default quick find view for a table has the name **Quick Find Active *table name***, where *table name* is the name of the table. In this example, the contact table is opened and the default quick find view for the table is the **Quick Find Active Contacts** view. When users ask questions from an app, Copilot includes the data from the columns configured following the steps below that's in the contact table rows.
+To configure your columns for Copilot, open the table, and then select **Views** from the table hub. In the list of views open the default**Quick Find View*** for the table. By default, the default quick find view for a table has the name **Quick Find Active *table name***, where *table name* is the name of the table. In this example, the contact table is opened and the default quick find view for the table is the **Quick Find Active Contacts** view. When users ask questions from an app, Copilot includes the data from the columns configured following the steps below that's in the contact table rows.
 
 :::image type="content" source="media/column-settings-for-copilot.png" alt-text="Column settings for use with Copilot in Power Apps":::
 
