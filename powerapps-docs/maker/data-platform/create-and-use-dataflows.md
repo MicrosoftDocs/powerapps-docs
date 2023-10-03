@@ -2,7 +2,7 @@
 title: "Create and use dataflows in Power Apps | MicrosoftDocs"
 description: "Learn how to create and use dataflows in Power Apps"
 ms.custom: ""
-ms.date: 09/12/2023
+ms.date: 10/03/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
