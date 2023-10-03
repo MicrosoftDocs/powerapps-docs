@@ -40,6 +40,10 @@ Assemblies must be signed before they can be registered with Dataverse only if y
 
 Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to your project includes the required Dataverse assembly references in your project, but it doesn't upload these assemblies along with your plug-in assembly as these assemblies already exist in the server's sandbox run-time where your code will execute.
 
+### Where to go next
+
+If you are interested in learning about or using dependent assemblies, continue reading the next section in this article. If not, proceed to [Register a plug-in](register-plug-in.md).
+
 ## Dependent assemblies
 
 The dependent assembly capability can be used to include other required .NET assemblies or resources (for example, localized strings) with your plug-in assembly in a single [NuGet](https://www.nuget.org) package that is uploaded to the Dataverse server during the registration process.
@@ -75,10 +79,10 @@ The following limitations apply when using plug-in dependent assemblies.
 
 ## Creating a plug-in package
 
-You plug-in assembly plus any required dependent assemblies can be placed together in a NuGet package and then registered and uploaded to the Dataverse server. You do not need to create a package if your plug-in project does not require any dependent assemblies at run-time, other than what ships in the `Microsoft.CrmSdk.CoreAssemblies` NuGet package.
+Your plug-in assembly plus any required dependent assemblies can be placed together in a NuGet package and then registered and uploaded to the Dataverse server. You do not need to create a package if your plug-in project does not require any dependent assemblies at run-time, other than what ships in the Microsoft.CrmSdk.CoreAssemblies NuGet package.
 
 <!-- Add correct links when available -->
-Instructions for creating a plug-in package can be found in these separate how-to's: [Use PAC CLI and PRT](/power-platform/developer/cli/introduction), [Use Power Platform Tools for Visual Studio](/power-platform/developer/devtools-vs).
+Instructions for creating a plug-in package using an interactive tool can be found in these separate how-to's: [Create a plug-in package](/power-platform/developer/cli/introduction), [Create a plug-in package](/power-platform/developer/devtools-vs).
 
 ### Don't depend on System.Text.Json
 
