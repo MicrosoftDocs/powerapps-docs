@@ -225,7 +225,7 @@ More information: [Retrieve with related rows](org-service/entity-operations-ret
 
 ## Upload Files
 
-There at three different ways to upload files to a file column:
+There are three different ways to upload files to a file column:
 
 - Use Dataverse messages available to both the SDK and Web API
 - Upload a file in a single request using Web API
@@ -709,7 +709,7 @@ More information:
 
 ## Download Files
 
-There at three different methods to download files from a file column:
+There are three different methods to download files from a file column:
 
 - Use Dataverse messages available to both the SDK and Web API
 - Download a file in a single request using Web API
@@ -992,7 +992,7 @@ OData-Version: 4.0
 
 ## Delete Files
 
-There at two different ways to delete files to a file column:
+There are two different ways to delete files to a file column:
 
 - Use the Dataverse `DeleteFile` message available to both the SDK and Web API
 - Send a DELETE request using Web API to the file column of the record.
