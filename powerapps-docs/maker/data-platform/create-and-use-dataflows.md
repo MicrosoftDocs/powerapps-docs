@@ -20,7 +20,6 @@ tags:
 search.audienceType: 
   - maker
 ---
-
 # Create and use dataflows in Power Apps
 
 With advanced data preparation available in Power Apps, you can create a
