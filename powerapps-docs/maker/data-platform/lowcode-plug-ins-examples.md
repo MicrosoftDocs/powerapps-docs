@@ -204,107 +204,27 @@ When the notify technician action is selected in the app, an in-app notification
 
 :::image type="content" source="media/low-code-plugin-ex-notification-sent.png" alt-text="Notification sent to technician who receives in app":::
 
-## Invoke SQL stored procedures using a low-code plug-in
+## Sample instant plug-in with MSN Weather connector
 
-SQL provides an action known as a stored procedure. A stored procedure is one or more transactions statements, or .Net commands, that are used to execute complex processes. These processes can accept inputs, provide statements that perform operations on the inputs, and produce an output or return value.
+This plugin will return the current weather for a specific location using [MSN Weather connector](/connectors/msnweather/).
 
-Stored procedures are used when complex processes or data needs would be better served being computed on the server rather than the client. Stored procedures often improve the performance of the calculation and provide many more complex operations than would be possible in an app.
+Prerequisites:
+> [!div class="checklist"]
+> * [Prerequisites for creating a low-code plug-in](./lowcode-plug-ins.md/#prerequisites-for-creating-a-low-code-plug-in)
+> * MSN Weather connector is allowed in the environment
 
-In most cases stored procedures are executed in SQL by IT manually or by using automated triggers. This can cause a burden on IT and a bottleneck for getting needed information. However, Dataverse can be used to directly invoke stored procedures using a low-code plug-in.
-
-Using the Data Accelerator app, low-code plug-ins for stored procedures can be easily created using a wizard. In order to create the plug-in you'll need:
-
-- Credentials and details about the SQL server and database where the stored procedure is located (or, if a connection is already present on your Dataverse environment, you need to know which one to use).
-- Which stored procedure on the SQL database you wish to use.
-- To understand what inputs and outputs are required by your procedure.
-
-### Create the low-code plug-in to invoke stored procedure
-
-1. Play the Dataverse Accelerator App.
-1. In the Dataverse Accelerator app, under **Instant plugins** select **New plugin**.
-1. Enter a **Display name** for your plug-in, you can also provide a **Description**.
-1. Select **Advanced options**, and then select **Launch the plugins wizard**.
-1. On the **Connections** screen, any SQL connections you already have configured for your environment appear here. If the connection you need is already present you can select it. Otherwise select **New connection** or **Add connection**.
-
-   If you create a new connection, you'll be asked for your SQL authentication type, credentials, and other necessary information. Complete the required fields and then select **Create**.
-
-   Connections use a connection reference to interface between Dataverse and the data source you are connecting to. The connection reference will be created for you, but if you would like to be able to provide a custom name, you can do so by selecting **Advanced options** and then select **Manually Configure Connection Reference**. This can also be used to select from existing connection references for an existing connection.
-
-1. When your connection is created, return to the wizard and select your connection from the connections list, and then select **Next**.
-1. A list of available SQL actions are provided. Currently, **Execute Stored Procedure** is available. Select the action you want, and then select **Next**.
-1. In the dropdown lists, select the values for:
-   - **Server name**: The name of the server for your connection – This can only be set to Default at this time.
-   - **Database name**: The name of the database on the server you wish to use. Currently, this can only be set to **Default**. 
-   - **Procedure name**: The name of the stored procedure you want to use.
-
-   After selecting the procedure, a list of input values are presented. The values can either be configured to use dynamic values for every invocation (and allow you to use a specific field from a row as an input), or you can enter a static value to use for every invocation.
-
-   After completing all the fields, the Power Fx formula to invoke the procedure is generated.
-
-1. Select **Next**.
-1. A review page is displayed that shows you the plug-in you are about to create for the stored procedure. If the information is correct, select **Create**.
-
-   The plug-in is created.
-1. A **Plugin** page appears, which shows you the name of the plug-in you just created. Select **Next**.
-1. A list of the inputs appear that will be sent to the stored procedure and their data types. The Power Fx formula is also displayed that will be used to invoke the stored procedure.
-
-   > [!NOTE]
-   > Currently you can't edit the parameters or formula on this page, however this will be possible in the future.
-
-Click **Test** to test your plugin. Add in static data for your inputs and validate if it was run successfully or not.
-
-### Invoke the low-code plug-in stored procedure with a button
-
-Once the low-code plug-in stored procedure is created you can then decide how to invoke it from within a canvas app. One good way to easily invoke it is by using a button on the app. Using the `OnClick` formula you can specify you want it to be executed and link the input values to existing fields.
-
-To do this, you will need to know the name of the plug-in you created, and also know the input parameters you set up. If you have forgotten you can look at your plug-in’s details to get this information before you start.
-
-To set the button to invoke the stored procedure:
-
-1. Open the canvas app you want to invoke the stored procedure plug-in from.
-1. Select the data icon on the left navigation panel.
-1. Search for *Environment* and install the **Environment** data source. This data source is used for plug-ins, actions, and other functions. It's required to use the plug-in. 
-1. Add a button control onto the the canvas app. More information: [Button control in Power Apps](../canvas-apps/controls/control-button.md)
-1. Select the **OnClick** property, and then select the formula bar.
-1. In the formula bar you'll need to input a formula to:
-   - Call the environment data source. This is used to execute the plug-ins you have created.
-   - Specify the plug-in you want to use.
-   - Identify which columns on the form you want to map to which input parameter.
-
-   If an input parameter is configured to a static value and not a variable, that parameter doesn't need to be defined.
-   
-   ```powerapps-dot 
-   Environment.<plug-in logical name>({
-   	<<input parameter 1>>: <<form field 1>>. Selected<datatype>,
-   	<<input parameter 2>>: <<form field 2>>. Selected<datatype>,
-   	…
-   });
-   ```
-   - *Environment* is the environment data source, which is used to call and execute plug-ins and actions from within canvas apps in Dataverse. After it is entered and selected enter the period "." You will then enter the logical name of your stored procedure plug-in you created.
-   - Input parameters are the individual parameters that are used as inputs to the stored procedure when invoking it. There must be one line for each input parameter. Then add the colon ":".
-   - Form field is the column on the canvas app form that contains the data you want to pass. This is what provides you the ability to execute the stored procedure with any set of data from a row.
-
-   For an example, there's a stored procedure named *cr8b8_FindBestTech*, that has an input parameter of *customerZipCode* in SQL and a canvas app form has a column named *ZipCode*, you create it as: 
-   
-   ```powerapps-dot
-   Environment.cr8b8_FindBestTech ({
-   	customerZipCode: ZipCode.text,
-   });
-   ```
-
-1. The formula to populate the plug-in is complete. Select the button in the running app. Then, it takes the input values from the columns specified, and passes them to SQL for processing. The stored procedure processes the data based on its configuration.
-
-### How to get the stored procedure results
-
-At this time, plug-ins can't pass output values back to Dataverse. So you'll be limited to stored procedures that, once run, process and handle the result entirely in SQL. You can however access the output if it's stored in a SQL table. You can do that by creating a virtual table using the SQL server connector. The virtual table allows you to view and manage the output data and integrate it with your Dataverse data and app. More information: [Create virtual tables using the virtual connector provider (preview)](create-virtual-tables-using-connectors.md) 
-
-### Stored procedure plug-ins limitations
-
-- Currently stored procedures will only output the results into SQL. Due to this, you'll need to take additional steps if you need to use the output of these procedures in Dataverse. In the future, outputs to Dataverse will be supported.
-
-- Once the formula is generated and the input parameters are configured, you can't edit them directly. Currently, instead of making changes to the existing plug-in you must create a new one.
-
-- If a stored procedure runs longer than two minutes, Dataverse and the Power Apps (make.powerapps.com) timeout and you won't receive the completion notification. However, you can still directly access the SQL table to get the results though direct connections or virtual tables.
+1. Create a connection reference for MSN Weather if not available yet in the environment:
+:::image type="content" source="media/low-code-plugin-msn-createconnectionref.png" alt-text="Create a connection reference in the app from the connection references pane on the right":::
+ 
+1. Copy snippet:
+:::image type="content" source="media/low-code-plugin-msn-actions.png" alt-text="Copy the action snippet from the connections pane":::
+ 
+1. Finish editing the formula using intellisense and consume the connector response properties as needed:
+:::image type="content" source="media/low-code-plugin-msn-definition.png" alt-text="Complete the plug-in definition in the editor":::
+ 
+1. Save
+ 
+1. [Test the plug-in](./lowcode-plug-ins.md/#test-a-low-code-plug-in)
 
 ## See also
 
