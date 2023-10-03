@@ -50,7 +50,7 @@ The following featueres aren't supported:
 - App navigation
 
 > [!NOTE]
-> This lists will change over time as we're working to support these capabilities.
+> This list will change over time as we're working to support these capabilities.
 
 The header doesn't automatically replicate across app screens, so it needs to be manually added to each screen.
 
