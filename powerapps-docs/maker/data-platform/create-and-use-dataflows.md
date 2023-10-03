@@ -83,7 +83,7 @@ it.
 
 1. On the **Choose data source** page, select the data source where the tables are stored. The selection of data sources displayed allows you to create dataflow tables. 
 
-    :::image type="content" source="media/choose-data-source.png" alt-text="Choose data source" lightbox="../canvas-apps/media/get-started-test-drive/choose-data-source.png":::
+    :::image type="content" source="media/choose-data-source.png" alt-text="Choose data source" lightbox="media/choose-data-source.png":::
 
 1. After you select a data source, you’re prompted to provide the connection
 settings, including the account to use when connecting to the data source. Select **Next**.
