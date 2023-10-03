@@ -5,7 +5,7 @@ documentationcenter: ''
 ms.collection: get-started
 author: Mattp123
 
-ms.topic: get-started-article
+ms.topic: get-started
 ms.component: model
 ms.date: 04/14/2021
 ms.subservice: mda-maker

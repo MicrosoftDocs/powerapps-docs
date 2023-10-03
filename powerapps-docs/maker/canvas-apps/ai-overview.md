@@ -58,7 +58,7 @@ The following are requirements to access the waitlist for this preview:
 
 ## Disable Copilot in Power Apps
 
-For this preview, Copilot in Power Apps will be turn on by default. To disable it, you need to have administrator access.
+For this preview, Copilot in Power Apps is enabled by default. To disable it, you need to have administrator access.
 
 Follow these steps to disable **Copilot** in Power Apps for your tenant.
 
@@ -66,12 +66,16 @@ Follow these steps to disable **Copilot** in Power Apps for your tenant.
 2. Select **Settings** > **Tenant settings** in the left-side navigation pane.
 3. Select **Copilot (preview)** > set the toggle to **Off** > **Save**.
 
+> [!NOTE]
+> Turning off Copilot for your tenant will only disable Copilot for makers. It won't disable [Copilot control for canvas apps](add-ai-copilot.md) or [Copilot for model-driven apps](../model-driven-apps/add-ai-copilot.md).
+
 Follow these steps to disable **Copilot** for your environment.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. In the left-side navigation pane **Environment**.
 3. Select the environment and on the command bar, select **Settings**.
 4. Set the toggle to **Off** for **Copilot**.
+
 
 ## See also
 

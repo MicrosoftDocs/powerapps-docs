@@ -1,8 +1,8 @@
 ---
 title: Type | Microsoft Docs
 description: The type in the type-group node defines the data type in Microsoft Dataverse.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

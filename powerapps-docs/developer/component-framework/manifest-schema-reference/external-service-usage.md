@@ -1,8 +1,8 @@
 ---
 title: external-service-usage element | Microsoft Docs
 description: Indicates whether this control is using external service or not.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 02/22/2023
 ms.reviewer: jdaly
 ms.topic: reference

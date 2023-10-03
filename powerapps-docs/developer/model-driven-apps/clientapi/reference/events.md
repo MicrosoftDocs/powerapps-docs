@@ -15,7 +15,7 @@ contributors:
 # Events (Client API reference)
 
 
-Events occur in Custom Engagement forms and grids whenever a form or grid loads, data is changed, or saved. You execute your JavaScript code by associating it an events so that it is executed when the event occurs. More information: [Events in forms and grids](../events-forms-grids.md)
+Events occur in Custom Engagement forms and grids whenever a form or grid loads, data is changed, or saved. You execute your JavaScript code by associating it with an event so that it is executed when the event occurs. More information: [Events in forms and grids](../events-forms-grids.md)
 
 ## Column event
 

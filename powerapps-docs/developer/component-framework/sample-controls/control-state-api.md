@@ -1,8 +1,8 @@
 ---
 title: Control State API  | Microsoft Docs
 description: The Power Apps component framework allows you to persist state of component across multiple renderings of the component within the same session.
-author: noazarur-microsoft
-ms.author: noazarur
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: sample
