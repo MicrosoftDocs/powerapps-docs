@@ -37,13 +37,10 @@ The execution context is passed in one of the following ways:
 The execution context object provides a number of methods to further work with the context. More information: [Execution context (Client API reference)](reference/execution-context.md)
 
 
-### Related topics
+### Related articles
 
  [Client API form context](clientapi-form-context.md)<br>
  [Client API grid context](clientapi-grid-context.md)<br>
  [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions)
-
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

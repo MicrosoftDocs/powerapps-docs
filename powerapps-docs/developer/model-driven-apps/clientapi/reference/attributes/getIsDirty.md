@@ -27,7 +27,7 @@ All
 
 ## Return Value
 
-**Type**: Boolean. 
+**Type**: Boolean
 
 **Description**: True if there are unsaved changes, otherwise false.
 

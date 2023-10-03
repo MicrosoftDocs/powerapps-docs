@@ -28,12 +28,9 @@ contributors:
 
 **Description**: The returned object has following three parameters:
 
-- **entityType**: String. Logical name of the table record. For example, "account".
-- **id**: String. GUID value of the table record.
-- **name**: (Optional) String. Name of the table record. 
-
-
-
+- **`entityType`**: String. Logical name of the table record. For example, "account".
+- **`id`**: String. GUID value of the table record.
+- **`name`**: (Optional) String. Name of the table record. 
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

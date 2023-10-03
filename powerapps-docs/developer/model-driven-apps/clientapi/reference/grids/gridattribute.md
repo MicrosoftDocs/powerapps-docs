@@ -14,8 +14,6 @@ contributors:
 ---
 # GridAttribute (Client API reference)
 
-
-
 GridAttribute is supported for both read-only and editable grids.
 
 GridAttribute represents the data in the cell of an editable grid, and contains a reference to all the cells associated with the column. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.
@@ -40,15 +38,10 @@ GridAttribute supports the following methods for columns of a selected grid row.
 >[!NOTE]
 >To select a row in an editable grid, use the [Grid](grid.md).[getSelectedRows](grid/getSelectedRows.md)
 
-### Related topics
+### Related articles
 
-[GridCell](gridcell.md)
-
-[Grids and subgrids in model-driven apps](../grids.md)
-
+[GridCell](gridcell.md)   
+[Grids and subgrids in model-driven apps](../grids.md)   
 [Controls collection](../attributes/controls-collection.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
