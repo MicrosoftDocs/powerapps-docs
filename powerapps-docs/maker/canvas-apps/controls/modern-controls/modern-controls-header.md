@@ -1,6 +1,6 @@
 ---
 title: Header modern control in Power Apps
-description: Learn about the details, properties and examples of the header modern control in Power Apps.
+description: Learn about the details, properties, and examples of the header modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -24,7 +24,7 @@ A control that creates a modern app header.
 
 ## Description
 
-The **Header** control is a fundamental control that lets you to design a user interface for a common app with ease. With minimal configuration, this control responds to themes that use modern theming and dynamic responsiveness, adjusting to the size of the parent container or app. The **Header** control supports a logo, a page title, and displays the user picture, while providing a variety of unique style options.
+The **Header** control is a fundamental control that lets you design a user interface for a common app with ease. With minimal configuration, this control responds to themes that use modern theming and dynamic responsiveness, adjusting to the size of the parent container or app. The **Header** control supports a logo, a page title, and displays the user picture, while providing a variety of unique style options.
 
 
 ## Key properties
@@ -44,7 +44,7 @@ The **Header** control is a fundamental control that lets you to design a user i
 
 ## Unsupported capabilities
 
-The following featueres aren't supported:
+The following features aren't supported:
 
 - Customization of colors 
 - App navigation
