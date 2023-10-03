@@ -1,48 +1,73 @@
 ---
-title: FAQ for Copilot in rich text editor
-description: This FAQ provides information about the AI technology that's used in Copilot for rich text editor. This FAQ also includes key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
+title: FAQ about using Copilot in the rich text editor
+description: Learn how to effectively and responsibly use Copilot in the rich text editor to generate tailored responses to your customers with AI assistance.
 ms.date: 08/11/2023
-ms.custom: 
+ms.custom:
   - responsible-ai-faqs
-ms.topic: article
+  - ai-gen-docs-bap
+  - ai-gen-desc
+  - ai-seo-date:09/26/2023
+  - bap-template
+ms.topic: faq
 author: udaykirang
 ms.author: udag
 ms.reviewer: shujoshi
 ---
 
-# FAQ for Copilot in rich text editor
+# FAQ about using Copilot in the rich text editor
 
-These frequently asked questions (FAQ) describe the AI impact of the Copilot feature in rich text editor.
+Here are some common questions and answers about using Copilot in the rich text editor.
 
-## What is Copilot in rich text editor?
+## What is Copilot in the rich text editor?
 
-Copilot in rich text editor empowers users with AI-assisted content for better customer engagement. Users can leverage advanced language models to generate tailored responses that address customer concerns effectively. 
+Copilot is a feature that uses AI to suggest content ideas based on your input. It helps you draft better content faster.
 
-##	What can the system do? 
+## How does Copilot work?
 
-Copilot in rich text editor is aimed at improving the user productivity, by helping them draft content better and faster. The system generates content suggestions and the user can review before responding to their customer. 
+Copilot uses advanced language models to generate content suggestions that match your tone, style, and purpose. You can choose from different types of content, such as emails, replies, or follow-ups. You can also adjust the tone and length of the content to suit your customers' preferences.
 
-## What is/are system’s intended use(s)?
+## What can I use Copilot for?
 
-Copilot in rich text editor lets you spend less time in curating content such as quickly create emails to follow up, reply to inquiries, and move a deal forward. Adjust the tone and length of the message to better resonate with your customers, fostering stronger connections. You can further customize the suggested content before you send it. 
+You can use Copilot for various scenarios where you need to communicate with your customers effectively. For example, you can use Copilot to:
 
-##	How was Copilot in rich text editor evaluated? What metrics are used to measure performance?
+- Quickly create emails to follow up, reply to inquiries, and move a deal forward.
+- Write engaging and personalized messages that resonate with your customers.
+- Save time and energy by using ready-made content suggestions.
 
--	The capability was evaluated on a collection of manually curated question-and-answer datasets, covering multiple industries.
--	More evaluation was performed over custom datasets for offensive and malicious prompts and responses.
+## How do I use Copilot?
 
-##	What are the limitations of Copilot in rich text editor? How can users minimize the impact of Copilot in rich text editor’s limitations when using the system?
+Using Copilot is easy and intuitive. Here are the steps to use Copilot in the rich text editor:
 
--	Copilot in rich text editor only supports English language as of now. Non-English users won't be able to use the features.
--	The Copilot in rich text editor gives only suggestions to the content. 
+- Start typing your content in the rich text editor. You can use a word, a phrase, or a sentence as your input.
+- Wait for Copilot to generate content suggestions based on your input. You can see the suggestions in a pop-up window next to your cursor.
+- Choose the suggestion that best fits your needs. You can select on it to insert it into your content, or you can copy and paste it.
+- Review and edit the content as needed. You can change the wording, add details, or delete parts of the content. Make sure the content is accurate, relevant, and appropriate for your customers.
+- Send the content to your customers when you're satisfied.
 
-##	What operational factors and settings allow for effective and responsible use of the system?
+## How did you evaluate Copilot?
 
-- The system doesn’t provide any setting or customization to the end user to tweak the system behavior.
-- Follow these procedures to make the most of Copilot in rich text editor:
-    -	Choose the right prompt to generate content and choose the right tone and length for the content: Include the right keywords, use a group of words or a full sentence, keep all the key-points around the same topic.
-    -	Always review and edit content ideas suggestions before sending them to your customer.
+We tested and evaluated Copilot on various datasets and scenarios to ensure its quality and performance. We used the following metrics to measure Copilot's performance:
+
+- Accuracy: How well the content suggestions match the input and the context
+- Relevance: How well the content suggestions address the customer's needs and expectations
+- Diversity: How well the content suggestions offer different options and perspectives
+- Readability: How easy the content suggestions are to read and understand
+
+## What are the limitations of Copilot in the rich text editor?
+
+Copilot is a powerful and helpful feature, but it isn't perfect. It has some limitations that you should be aware of and respect. These limitations include:
+
+- Language: Copilot only supports the English language for now. If you need to write in another language, you can't use Copilot.
+- Suggestions: Copilot only provides suggestions, not final content. You're responsible for reviewing and editing the content before you send it to your customers. You shouldn't rely on Copilot to write your content for you.
+- Ethics: Copilot is designed to help you create ethical and responsible content. However, Copilot may not be able to detect or prevent offensive, harmful, or misleading content. You should always use your own judgment and follow your company's policies and values when using Copilot.
+
+## Are there any settings I should change for effective and responsible use of Copilot in the rich text editor?
+
+- Copilot in the rich text editor doesn't provide a way to change its behavior.
+- Follow these suggestions to make the most of Copilot in the rich text editor:
+  - Choose the right prompt to generate content and choose the right tone and length for the content. You can enter a group of keywords or a full sentence, but keep all the keywords on the same topic.
+  - Always review and edit Copilot's suggestions before sending them to your customer.
 
 ## See also
 
-[Use Copilot in rich text editor for email (preview)](../model-driven-apps/use-copilot-email-assist.md)  
+[Use Copilot in the rich text editor for email (preview)](../model-driven-apps/use-copilot-email-assist.md)  
