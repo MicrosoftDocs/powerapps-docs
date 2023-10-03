@@ -24,7 +24,7 @@ A control that creates a modern app header.
 
 ## Description
 
-The **Header** control is an essential control that lets you to design a user interface for a standard app with ease. With minimal configuration, this control allows you to create themes that uses modern theming and dynamic responsiveness, adjusting to the size of the parent container or app. Additionally, the **Header** control supports a logo, a page title, and displays the user picture, while providing a variety of unique style options.
+The **Header** control is an essential control that lets you to design a user interface for a standard app with ease. With minimal configuration, this control lets you to create themes that use modern theming and dynamic responsiveness, adjusting to the size of the parent container or app. The **Header** control also supports a logo, a page title, and displays the user picture, while providing a variety of unique style options.
 
 
 ## Key properties
