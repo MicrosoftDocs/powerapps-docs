@@ -617,7 +617,7 @@ Power platform administrators can restrict the file size of attachments users ca
   
 ### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
 
-This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
+This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file.
 
 ### Timeline fails to load with error `code:"0x8004430d","message":"Number of link entity: <number> exceed limit 15`
 
