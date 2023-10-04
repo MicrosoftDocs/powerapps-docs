@@ -244,7 +244,7 @@ To store the summarized version of a Note's description, you can create either a
    ```powerapps-dot
    // Check if 'AI Summarized' in title to preview infinite loop
    If("AI Summarized" in Title, false,
-    // Create new notes record related to 
+    // Create new notes record related to the same Dataverse record
     Collect(Notes, {Title: "AI Summarized: " &Title, Description: AISummarize(Description), Regarding:ThisRecord.Regarding})
    )
    ```
