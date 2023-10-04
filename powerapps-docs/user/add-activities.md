@@ -480,7 +480,13 @@ If your administrator has enabled the pin setting and you have write/delete acce
 > [!Note]
 > If you have a system administrator or basic user role, the pin and unpin settings work by default. If you don't have either of these roles, you must have Create/Read/Write privileges to be added to the msdyn_customcontrolextendedsettings table for these settings to work.
 
-By default, you can pin notes. The activities that you can pin depend on how your administrator has set up the feature.
+By default, you can pin notes. The activities that you can pin depend on how your administrator has set up the feature. 
+
+In order to set it up, please follow those steps : 
+1. Go to the form you want to customize
+2. Select the TimeLine control
+3. On the right hand side, choose the activities you want to add or remove from the Pin or Unpin capacity
+4. Edit it, Save and Publish the form
 
 Pin a record by selecting the pin icon next to it. This moves it to the top of the timeline in the **Pinned** section, where it can be quickly accessed. The Pinned section also lists the number of records that are pinned. You can pin a maximum of 15 records. Records that are pinned will stay at the top of the timeline for a year unless you unpin them.
 
