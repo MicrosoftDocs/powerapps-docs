@@ -270,7 +270,7 @@ Test the plug-in by running the data event. In this case, create a new note on a
 
 ### Sample for AITranslate
 
-You can perform text translation with the **AITranslate** function. It currently supports translation to English (Example scenario: If customers report issues in different languages, you could introduce a new column to capture a version of their issue description that is translated to English).
+You can perform text translation with the **AITranslate** function. It currently supports translation to English (Example scenario: If customers report issues in different languages, you could introduce a new column to capture a version of their issue description that is translated to English). You can use this action in instant or automated low-code plug-ins. 
 
 In this demonstration we will use an instant plug-in to quickly try the function and see the result. 
 
@@ -278,9 +278,9 @@ In this demonstration we will use an instant plug-in to quickly try the function
 1. Click Create instant plug-in.
 1. For the Display name type AITranslateDemo.
 1. Click **New input parameter**.
-1. For the **Label**, type _input_. Leave the data type as string.
+1. For the **Label**, type _input_. Leave the Data type as String.
 1. Click **New out parameter**. 
-1. For the **Label** type _output_. Leave the data type as string.
+1. For the **Label** type _output_. Leave the Data type as String.
 1. Use the following as the Power FX expression:
    ```powerapps-dot
    {output: AITranslate(input)}
@@ -290,6 +290,83 @@ In this demonstration we will use an instant plug-in to quickly try the function
 1. For the input provide any text in a language other than English as input (example text in spanish: `Me encantan las nuevas funciones de IA.`)
 1. Click **Run**.
 1. Verify the Response returned the text translated to English (the sample spanish text should return as `I love the new AI features`)
+
+### Sample for AISentiment 
+Here's an example of how you can detect sentiment with the AISentiment function. You can use this action in instant or automated low-code plug-ins. 
+
+Example scenario: In a customer feedback scenario, you could introduce a new column to capture the sentiment of that feedback as either positive, negative, or neutral. 
+
+In this demonstration we will use an instant plug-in to quickly try the function and see the result. 
+
+1. Open the Dataverse Accelerator app.
+2. Click **Create instant plug-in**.
+3. For the **Display name** type _AISentimentDemo_.
+4. Click **New input parameter**.
+5. For the **Label** type input. Leave the Data type as String.
+6. Click **New out parameter**. 
+7. For the **Label** type _output_. Leave the Data type as String.
+8. Use the following in the Expression:
+   ```powerapps-dot
+   { output: AISentiment(input) }
+   ``` 
+9. **Save** the plug-in. 
+10. Click **Test**. 
+11. For the input provide the following text: `The product is amazing!`
+12.	Click Run.
+13.	Verify the Response returned shows the output value as _Positive_.
+
+### Sample for AIExtract
+
+Here's an example of how you can extract data from text with the AIExtract function. You can use this action in instant or automated low-code plug-ins. 
+
+Example scenario: If customers submit inquiries about orders, you could introduce a new column to capture the order numbers mentioned. 
+
+In this demonstration we will use an instant plug-in to quickly try the function and see the result. 
+
+1. Open the Dataverse Accelerator app.
+2. Click **Create instant plug-in**.
+3. For the **Display name** type _AIExtractDemo_.
+4. Click **New input parameter**.
+5. For the **Label** type _input_. Leave the Data type as String.
+6. Create another input parameter with the label as _entity_. Leave the Data type as String.
+7. Click **New out parameter**. 
+8. For the **Label** type _output_. Leave the Data type as String. 
+9. Use the following in the Expression. The result of the AIExtract action is a table. In this example we will use the First function to return the first value from the table.
+   ```powerapps-dot
+   { output: First( AIExtract(input, entity) ).Value }
+   ```
+11. Click **Save**. 
+12. Click **Test**. 
+13. For the input provide the following text: `Can you please provide an estimated arrival for order 52342352?`
+14. For entity type `order number`
+15. Click **Run**.
+16. Verify the response returned shows the output value as the order number.
+
+### Sample for AIClassify
+
+Here's an example of how you can classify text with the AIClassify function. You can use this action in instant or automated low-code plug-ins. 
+
+For example, if a customers submit inquiries, you could introduce a new column to capture the type of inquiry such as Problem, Billing, How To, or Licensing. 
+
+In this demonstration we will use an instant plug-in to quickly try the function and see the result. 
+
+1. Open the Dataverse Accelerator app.
+2. Click **Create instant plug-in**.
+3. For the **Display name** type _AIClassifyDemo_.
+4. Click **New input parameter**.
+5. For the **Label** type _input_. Leave the Data type as String.
+6. Create another input parameter with the **label** as _entity_. Leave the Data type as String.
+7. Click **New out parameter**. 
+8. For the Label type _output_. Leave the Data type as String.
+9. Use the following in the Expression. The second input of the AIExtract action is a table of choices the input can be classified into. In this example we will use an inline table with the options _Problem_, _Billing_, _How To_, and _Licensing_.
+   ```powerapps-dot
+   { output: AIClassify(input, ["Problem", "Billing", "How To", "Licensing"]) }
+   ```
+11. Click **Save**. 
+12. Click **Test**. 
+13. For the input provide the following text: `I am encountering an error trying to create a new record.`
+14. Click **Run**.
+15. Verify the Response returned shows the output value as _Problem_
 
 ## See also
 
