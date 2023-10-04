@@ -122,8 +122,8 @@ Unique properties:
 ## Create an instant low-code plug-in
 
 1. Play the Dataverse accelerator app.
-1. Select the **New instant plug-in** card.
-   :::image type="content" source="media/low-code-plugin-instant-create.png" alt-text="New plug-in Dataverse accelerator solution":::
+1. Select the **Create instant plug-in** card.
+   :::image type="content" source="media/low-code-plugin-instant-create.png" alt-text="Create instant plug-in card":::
 1. Provide a **Display name**.
 1. Optionally, define parameters:
    - Select **New input parameter** or **New output parameter**, then enter the label and data type.
@@ -149,8 +149,8 @@ Unique properties:
 ## Create an automated low-code plug-in
 
 1. Play the Dataverse accelerator app.
-1. Select the **New automated plug-in** card.
-   :::image type="content" source="media/low-code-plugin-automated-create.png" alt-text="New plug-in Dataverse accelerator solution":::
+1. Select the **Create automated plug-in** card.
+   :::image type="content" source="media/low-code-plugin-automated-create.png" alt-text="Create automated plug-in card":::
 1. Provide the following values:
    - **Name**: Enter a name for the plug-in, such as *Input validation*.
    - **Table**: Choose a table to associate the plug-in to, such as *Account*.
