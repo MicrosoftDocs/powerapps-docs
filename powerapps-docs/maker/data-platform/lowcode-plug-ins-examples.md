@@ -217,7 +217,7 @@ Prerequisites:
 :::image type="content" source="media/low-code-plugin-msn-createconnectionref.png" alt-text="Create a connection reference in the app from the connection references pane on the right":::
  
 1. Copy snippet:
-:::image type="content" source="media/low-code-plugin-msn-actions.png" alt-text="Copy the action snippet from the connections pane":::
+:::image type="content" source="media/low-code-plugin-msn-action.png" alt-text="Copy the action snippet from the connections pane":::
  
 1. Finish editing the formula using intellisense and consume the connector response properties as needed:
 :::image type="content" source="media/low-code-plugin-msn-definition.png" alt-text="Complete the plug-in definition in the editor":::
@@ -263,6 +263,33 @@ Test the plug-in by running the data event. In this case, create a new note on a
 1. Refresh the page. A new note will appear with a summarized version of the previous note.
 
 :::image type="content" source="media/low-code-plugin-aisummarize-notes.png" alt-text="AI Summarized notes in the timeline":::
+
+> [!NOTE]
+> - AISummarize might not work if the length of text is too short.
+> - Other languages will be accepted and summarized into English by default.
+
+### Sample for AITranslate
+
+You can perform text translation with the **AITranslate** function. It currently supports translation to English (Example scenario: If customers report issues in different languages, you could introduce a new column to capture a version of their issue description that is translated to English).
+
+In this demonstration we will use an instant plug-in to quickly try the function and see the result. 
+
+1. Open the Dataverse Accelerator app.
+1. Click Create instant plug-in.
+1. For the Display name type AITranslateDemo.
+1. Click **New input parameter**.
+1. For the **Label**, type _input_. Leave the data type as string.
+1. Click **New out parameter**. 
+1. For the **Label** type _output_. Leave the data type as string.
+1. Use the following as the Power FX expression:
+   ```powerapps-dot
+   {output: AITranslate(input)}
+   ``` 
+1. **Save** the plug-in. 
+1. Click **Test**. 
+1. For the input provide any text in a language other than English as input (example text in spanish: `Me encantan las nuevas funciones de IA.`)
+1. Click **Run**.
+1. Verify the Response returned the text translated to English (the sample spanish text should return as `I love the new AI features`)
 
 ## See also
 
