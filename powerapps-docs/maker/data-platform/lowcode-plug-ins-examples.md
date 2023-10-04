@@ -28,7 +28,7 @@ To use one of the example plug-ins for the data event the Dataverse Accelerator 
 
 ## Return a non-negative value
 
-This example uses the Abs function to return the non-negative value of its argument. If a number is negative, Abs returns the positive equivalent.
+This example uses the [Abs() function](/power-platform/power-fx/reference/function-numericals) to return the non-negative value of its argument. If a number is negative, Abs returns the positive equivalent.
 
 1. Play the Dataverse Accelerator app, on the command bar select **New action** > **Instant plugin**. 
 1. Provide a display name, such as the formula name, and description.
@@ -101,10 +101,10 @@ Go to the [Error() function](/power-platform/power-fx/reference/function-iferror
 
 ## Send email based on a data event
 
-To set this up, you need these prerequisites:
-
-- Server-side synchronization is set up for your environment. More information: [Set up server-side synchronization of email, appointments, contacts, and tasks](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)
-- An email template. 
+Prerequisites:
+> [!div class="checklist"]
+> * Server-side synchronization is set up for your environment. More information: [Set up server-side synchronization of email, appointments, contacts, and tasks](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)
+> * An email template. 
 
 ### Example email template
 
@@ -225,6 +225,44 @@ Prerequisites:
 1. Save
  
 1. [Test the plug-in](./lowcode-plug-ins.md/#test-a-low-code-plug-in)
+
+## Low-Code Plug-Ins with AI samples
+
+### Sample for AISummarize
+
+Here's an example of how you can perform text summarization of a Dataverse column.
+
+To store the summarized version of a Note's description, you can create either an instant or automated low-code plug-in that creates a new Note. For this example, let's create an automated plug-in.
+
+**Create the plug-in**
+1. Run the Dataverse Accelerator app
+1. Click the **Create automated plug-in** card.
+1. Give it the **Display name** of _Summarize Notes_.
+1. Select the table **Annotations**
+1. Keep the radio selection on **Create** for the event
+1. Enter the following as the expression:
+   ```powerapps-dot
+   // Check if 'AI Summarized' in title to preview infinite loop
+   If("AI Summarized" in Title, false,
+    // Create new notes record related to 
+    Collect(Notes, {Title: "AI Summarized: " &Title, Description: AISummarize(Description), Regarding:ThisRecord.Regarding})
+   )
+   ```
+1.  Under **advanced settings**, choose the _post-operation_ stage to run the plug-in after the data event occurs.
+1.  **Save** the plug-in
+
+:::image type="content" source="media/low-code-plugin-aisummarize-definition.png" alt-text="AI Summarized definition in the automatedplug-in editor":::
+
+Test the plug-in by running the data event. In this case, create a new note on any table. We'll check using the Accounts table below.
+
+1. In the maker portal, go to **Tables** > **Accounts**
+1. In the command bar, click **edit**
+1. Open a row in the default form by selecting an Account, then click **Edit row using form**
+   :::image type="content" source="media/low-code-plugin-aisummarize-edit-account.png" alt-text="Open the accounts form":::
+1. Save a new note in the timeline with a Title and Description.
+1. Refresh the page. A new note will appear with a summarized version of the previous note.
+
+:::image type="content" source="media/low-code-plugin-aisummarize-notes.png" alt-text="AI Summarized notes in the timeline":::
 
 ## See also
 
