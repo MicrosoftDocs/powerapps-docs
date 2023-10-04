@@ -184,7 +184,7 @@ You can easily use [connectors]( /connectors/connector-reference/connector-refer
 1. Select the action you want, and then enter the required parameters.
 Before using a connector in a low-code plug-in, review the connector's [documentation](/connectors/connector-reference/connector-reference-powerapps-connectors) to ensure that you're passing the input and output parameters correctly.
 
-See the [example](./lowcode-plug-ins-examples#sample-instant-plug-in-with-msn-weather-connector) for more details.
+More information: [example](lowcode-plug-ins-examples#sample-instant-plug-in-with-msn-weather-connector)
 
 ## Smart low-code plug-ins
 
@@ -196,12 +196,12 @@ Dataverse includes AI-powered actions, which can be used to generate or extract 
 
 | Function | Description |
 | - | - |
-| `AISummarize` | Summarize text ([See example](./lowcode-plug-ins-examples#sample-for-aisummarize)) |
-| `AISentiment` | Detect the sentiment of text as either positive, negative, or neutral ([See example](./lowcode-plug-ins-examples#sample-for-aisentiment)) | 
+| `AISummarize` | Summarize text ([Example](lowcode-plug-ins-examples#sample-for-aisummarize)) |
+| `AISentiment` | Detect the sentiment of text as either positive, negative, or neutral ([Example](lowcode-plug-ins-examples#sample-for-aisentiment)) | 
 | `AIReply` | Draft a reply to text | 
-| `AITranslate` |  Translate text to English ([See example](./lowcode-plug-ins-examples#sample-for-aitranslate)) | 
-| `AIClassify`| Classify text into one or more provided categories ([See example](./lowcode-plug-ins-examples#sample-for-aiclassify)) | 
-| `AIExtract`| Extract specified entities such as registration numbers ([See example](./lowcode-plug-ins-examples#sample-for-aiextract)) | 
+| `AITranslate` |  Translate text to English ([Example](lowcode-plug-ins-examples#sample-for-aitranslate)) | 
+| `AIClassify`| Classify text into one or more provided categories ([Example](lowcode-plug-ins-examples#sample-for-aiclassify)) | 
+| `AIExtract`| Extract specified entities such as registration numbers ([Example](lowcode-plug-ins-examples#sample-for-aiextract)) | 
 
 ### Requirements
 
@@ -271,7 +271,7 @@ Follow the steps for **Unbound action** or **Function bound to table** sections 
 
 Trace logging is a feature in Dataverse that allows you to capture detailed information about the execution of plug-ins. By enabling trace logging, you can get a more complete picture of what's happening during plug-in execution, which can be helpful for troubleshooting issues and identifying performance bottlenecks. When you enable trace logging for plug-ins, Dataverse generates log files that include information about the plug-in's input and output parameters, as well as any exceptions or errors that occur during execution.
 
-To enable trace logging for plug-ins, you need to [enable the trace logging feature for the environment](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/logging-tracing).
+To enable trace logging for plug-ins, you need to [enable the trace logging feature for the environment](/power-apps/developer/data-platform/logging-tracing).
 
 ## Contacting Help + support
 

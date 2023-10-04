@@ -209,7 +209,7 @@ This plugin returns the current weather for a specific location using [MSN Weath
 
 Prerequisites:
 > [!div class="checklist"]
-> * [Prerequisites for creating a low-code plug-in](./lowcode-plug-ins.md/#prerequisites-for-creating-a-low-code-plug-in)
+> * [Prerequisites for creating a low-code plug-in](lowcode-plug-ins.md/#prerequisites-for-creating-a-low-code-plug-in)
 > * MSN Weather connector is allowed in the environment
 
 1. Create a connection reference for MSN Weather if not available yet in the environment:
@@ -223,7 +223,7 @@ Prerequisites:
 
 1. Save
 
-1. [Test the plug-in](./lowcode-plug-ins.md/#test-a-low-code-plug-in)
+1. [Test the plug-in](lowcode-plug-ins.md/#test-a-low-code-plug-in)
 
 ## Low-code plug-ins with AI samples
 
