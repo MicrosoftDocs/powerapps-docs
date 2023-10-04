@@ -8,23 +8,22 @@ ms.topic: how-to
 ms.date: 10/04/2023
 ms.custom: template-how-to
 ---
-# Example Dataverse low-code plug-ins (experimental)
+# Example Dataverse low-code plug-ins (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 The goal of these example plug-ins is to help you get started by integrating them into your apps. You'll understand the authoring experience includes authoring Microsoft Dataverse custom APIs backed by Power Fx expressions, which can trigger actions internal or external to Dataverse.
 
 > [!IMPORTANT]
-> - This is an experimental feature. Use this if you're an early adopter, see something useful to you, and would like to help test the feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - Experimental features can radically change or completely disappear at any time. For this reason the feature is not enabled by default and you must explicitly opt in to use it.
-
-> [!NOTE]
-> Email templates are only available for certain tables. Please read the email template documentation for more information.
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisite
 
 To use one of the example plug-ins for the data event the Dataverse Accelerator app must be installed in the environment. More information: [Prerequisites for creating a low-code plug-in](low-code-plug-ins.md#prerequisites-for-creating-a-low-code-plug-in)
+
+> [!NOTE]
+> Email templates are only available for certain tables. More information: [Create templates for email](/power-platform/admin/create-templates-email)
 
 ## Return a non-negative value
 
