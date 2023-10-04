@@ -60,13 +60,14 @@ Implement server-side input validation, such as duplicate error detection, that 
 1. For **Table**, select **Contact**.
 1. For **Run this plugin when the row is**, select **Created**.
 1. In the **Formula** box, enter this formula:
+
    ```powerapps-dot
-  If( !IsBlank(LookUp([@Contacts],'Last Name'=ThisRecord.'Last Name' && 'First Name'=ThisRecord.'First Name')),
-  	Error("You have existing contacts with the same first name and last name")
+   If( !IsBlank(LookUp([@Contacts],'Last Name'=ThisRecord.'Last Name' && 'First Name'=ThisRecord.'First Name')),
+  	  Error("You have existing contacts with the same first name and last name")
   )
    ```
-
 6. Select **Save**.
+
 
 ### Test the plug-in
 
@@ -155,7 +156,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
 
 ### Create the low-code plugin that sends an in-app notification
 
-1. Play the Dataverse Accelerator app, and then select  **+New plugin** under under **Instant plugins**.
+1. Play the Dataverse accelerator app, and then select  **+New plugin** under under **Instant plugins**.
 1. Enter the following information, select **Next**: 
    - **Name**: *NotifyTechnican1*
    - **Description**: *This instant plug-in notifies the app user.*
