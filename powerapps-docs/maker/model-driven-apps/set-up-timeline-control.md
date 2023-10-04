@@ -614,18 +614,27 @@ Power platform administrators can restrict the file size of attachments users ca
 1.	Enter the desired size limit for attachments, and then select **Save**. 131,072 KB is the maximum allowed value.
 
 ## Known issues
+
+### Duplicate posts are shown when sorting records by older to newer
+
+When sorting timeline in this way, use notes instead.
+
+### Notes can only have one attachment added from the attachment button
+
+This is by design, with plans to allow more attachments in the near future. Multiple attachments can be added inline by dragging and dropping them into the note.
   
-### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
-
-This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
-
 ### Timeline fails to load with error `code:"0x8004430d","message":"Number of link entity: <number> exceed limit 15`
 
 There's a limit of 15 different tables that can be associated with a timeline. Either disable some of the activities associated with the timeline, or follow one of the workarounds described in this article: [Timeline doesn't render and shows "Records couldn't be loaded"](https://support.microsoft.com/topic/timeline-does-not-render-and-shows-records-could-not-be-loaded-4ce9200a-1afe-3ef4-ac11-a74b91f4f40c)
+
+### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
+
+This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
 
 ### See also
 
 [FAQs for timeline control](faqs-timeline-control.md) 
 
+[Use the timeline control](../../user/add-activities.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
