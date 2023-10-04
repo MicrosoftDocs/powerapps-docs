@@ -1,70 +1,58 @@
 ---
-title: Add the Copilot option to a form
-description: Add the Copilot option to a rich text editor in a form. 
+title: Add the Copilot control to the rich text editor
+description: Learn how to make the Copilot control available in the rich text editor by modifying the editor configuration file.
 author: udaykirang
 ms.author: udag
 ms.reviewer: shujoshi
-ms.topic: how-to 
+ms.topic: how-to
 ms.date: 08/25/2023
-ms.custom: bap-template 
 ms.subservice: mda-maker
-tags: 
-search.audienceType: 
+tags:
+search.audienceType:
   - maker
+ms.custom:
+  - bap-template
+  - ai-gen-docs-bap
+  - ai-gen-desc
+  - ai-seo-date:09/28/2023
 ---
 
-# Add the Copilot option to a rich text editor (preview)
+# Add the Copilot control to the rich text editor (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-By default, the Copilot option is available in the toolbox in rich text editor for emails. You can add the Copilot option to rich text editors in other forms by updating the rich text editor configuration file with extra plugins and toolbar values.  
+The Copilot control is available in the email form's rich text editor toolbar by default. You can add the Copilot control to the rich text editor in other forms by changing the editor's properties in its advanced configuration file.
 
 > [!IMPORTANT]
-> This is a preview feature
->
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> This is a preview feature. [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
-You must have a valid rich text editor configuration file for your organization.
+[Have a configuration file for the rich text editor](rich-text-editor-control.md#customize-the-rich-text-editor-control) in the form where you want to add the Copilot control.
 
-## Add the Copilot option
+## Add the Copilot control
 
-Add the Copilot option to the rich text editor toolbar by updating the extra plugins and toolbar values in the configuration file.
+To add the Copilot control to the rich text editor toolbar in a form, you need to add a value that represents it to the `extraPlugins` and `toolbar` properties in the editor's advanced configuration file.
 
-1. Open the configuration file for which you want to add the Copilot option.  
-1. Add the following values to the respective sections in the configuration file.  
+1. Open the editor's advanced configuration file.
+1. Add the following values in the [`defaultSupportedProps` section](rich-text-editor-control.md#rich-text-editor-properties) of the file:
 
-    | Section | Value |
-    |---------|-------|
-    | `extraPlugins`| `copilotrefinement` |
-    | `toolbar` | `CopilotRefinement` |    
+    - In the `extraPlugins` property, add `copilotrefinement`.
+    - In the `toolbar` property, add `CopilotRefinement`.
 
-    **Example**: 
+    It should look something like the following example, where "&hellip;" represents values that aren't shown to save space:
 
-    ```javascript
-        
+    ```text
     "defaultSupportedProps": {
-    
-    ...    
-    
-    "extraPlugins": "computedfont,contextmenuadditions,emailrestoreinlineimages,superimage,copyformatting,tableselection,tabletools,tableresize,autolink,quicktable,blockquote,collapser,stickystyles,pastefromword,copilotrefinement",
-    
-    ...
-    
-    "toolbar":[{ "items": ["CopyFormatting", "Font", "FontSize", "Bold", "Italic", "Underline", "BGColor", "TextColor", "BulletedList", "NumberedList", "Outdent", "Indent", "Blockquote", "JustifyLeft", "JustifyCenter", "JustifyRight", "Link", "Unlink", "Superscript", "Subscript", "Strike", "Image", "BidiLtr", "BidiRtl", "Undo", "Redo", "RemoveFormat", "Table", "A11yshortcuts", "UserPersonalization","CopilotRefinement"]}]
-
+        ...
+        "extraPlugins": "computedfont,...,copilotrefinement",
+        ...
+        "toolbar":[{ "items": ["CopyFormatting", ... ,"CopilotRefinement"]}]
     },
     ```
-    More information on how to update the configuration file is available in [Add the rich text editor control to a model-driven app](rich-text-editor-control.md)     
 
-1. Save and upload the configuration file to your organization and then publish the changes.  
-
-1. Add the richtext editor control to a form. For more information, see the [Advanced configuration](rich-text-editor-control.md#advanced-configuration) section. 
-
-The Copilot option is now available in the rich text editor toolbar on the form.    
+1. Save the file, and then publish the changes.
 
 ### See also
 
-[Use Copilot in rich text editor for email (preview)](../model-driven-apps/use-copilot-email-assist.md)
-
+[Use Copilot in the email rich text editor (preview)](../model-driven-apps/use-copilot-email-assist.md)
