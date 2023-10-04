@@ -179,10 +179,12 @@ Unique properties:
 You can easily use [connectors]( https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerapps-connectors) and [custom connectors]( https://learn.microsoft.com/en-us/connectors/custom-connectors/) from within a low-code plug-in Power FX formula. Here's how:
 1. Create a connection to the connector you want to use.
 2. [Add a connection reference]( https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-connection-reference#manually-add-a-connection-reference-to-a-solution-using-solution-explorer) to the connection in the Dataverse environment.
-3. In the low-code plug-in Power FX expression editor, type the name of the connection reference.
+3. In the low-code plug-in Power FX expression editor, type the name of the connection reference (the internal name with a prefix and underscore, like `new_connectorName`, not the display name ).
 4. Intellisense will show you the available actions.
 5. Select the action you want and enter the required parameters.
 Before using a connector in a low-code plug-in, make sure to review the connector's [documentation]( https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerapps-connectors) to ensure that you're passing the input and output parameters correctly.
+
+See the [example](./lowcode-plug-ins-examples#sample-instant-plug-in-with-msn-weather-connector) for more details.
 
 ## Smart low-code plug-ins
 
@@ -193,12 +195,12 @@ Dataverse includes AI-powered actions which can be used to generate or extract d
 
 | Function | Description |
 | - | - |
-| **AISummarize** | Summarize text |
-| **AISentiment** | Detect the sentiment of text as either positive, negative, or neutral | 
+| **AISummarize** | Summarize text ([See example](./lowcode-plug-ins-examples#sample-for-aisummarize)) |
+| **AISentiment** | Detect the sentiment of text as either positive, negative, or neutral ([See example](./lowcode-plug-ins-examples#sample-for-aisentiment)) | 
 | **AIReply** | Draft a reply to text | 
-| **AITranslate** |  Translate text to English | 
-| **AIClassify**| Classify text into one or more provided categories | 
-| **AIExtract**| Extract specified entities such as registration numbers | 
+| **AITranslate** |  Translate text to English ([See example](./lowcode-plug-ins-examples#sample-for-aitranslate)) | 
+| **AIClassify**| Classify text into one or more provided categories ([See example](./lowcode-plug-ins-examples#sample-for-aiclassify)) | 
+| **AIExtract**| Extract specified entities such as registration numbers ([See example](./lowcode-plug-ins-examples#sample-for-aiextract)) | 
 
 ### Requirements
 
