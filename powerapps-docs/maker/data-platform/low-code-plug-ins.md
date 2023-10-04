@@ -16,13 +16,13 @@ contributors:
 
 Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through low-code plug-ins. These plug-ins are reusable, real-time workflows that execute a specific set of commands within Dataverse, running server-side and triggered by personalized event handlers.
 
-Traditionally, plug-ins were created as custom classes compiled into a .NET Framework assembly, which were then uploaded and registered within Dataverse. However, with the introduction of low-code plug-ins, users can create these event handlers with minimal or no coding required, and without the need for manual registration.
-
-Low-code plug-ins are stored within a Dataverse database and can be seamlessly integrated into Power Apps and Power Automate. The behavior of the workflow is defined using the Power Fx expression language and can directly connect with Dataverse business data and external data sources through Power Platform connectors. With low-code plug-ins, users can rapidly construct complex workflows with minimal coding expertise, resulting in a more streamlined and efficient data architecture.
-
 > [!IMPORTANT]
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+Traditionally, plug-ins were created as custom classes compiled into a .NET Framework assembly, which were then uploaded and registered within Dataverse. However, with the introduction of low-code plug-ins, users can create these event handlers with minimal or no coding required, and without the need for manual registration.
+
+Low-code plug-ins are stored within a Dataverse database and can be seamlessly integrated into Power Apps and Power Automate. The behavior of the workflow is defined using the Power Fx expression language and can directly connect with Dataverse business data and external data sources through Power Platform connectors. With low-code plug-ins, makers can rapidly construct complex workflows with minimal coding expertise, resulting in a more streamlined and efficient data architecture.
 
 ## Benefits of server-side logic
 
@@ -34,7 +34,7 @@ Defining server-side business logic offers several benefits, including:
 - Easier maintenance and upgrades. By centralizing business logic on the server, it becomes easier to maintain and update, as changes can be made in one place rather than having to update multiple clients.
 - Scalability. Server-side logic can be scaled more easily than client-side logic, allowing for better performance and handling of larger workloads.
 
-## Low-Code plug-ins
+## Low-code plug-ins
 
 There are two types of low-code plug-ins supported in Dataverse:
 
@@ -105,7 +105,7 @@ Unique properties:
 > * Access to the Dataverse accelerator app.
 
 > [!TIP]
-> All new environments have the Dataverse accelerator app automatically installed as of October 1st 2023. If you already had the Dataverse Accelerator installed, you can manually update the Dataverse accelerator.
+> All new environments have the Dataverse accelerator app automatically installed as of October 1st 2023. If you already had the Dataverse accelerator installed, you can manually update the Dataverse accelerator.
 
 **Update the Dataverse accelerator**
 
@@ -124,7 +124,7 @@ Unique properties:
 1. Play the Dataverse accelerator app.
 1. Select the **New instant plug-in** card.
    :::image type="content" source="media/low-code-plugin-instant-create.png" alt-text="New plug-in Dataverse accelerator solution":::
-1. Provide a **Display name**
+1. Provide a **Display name**.
 1. Optionally, define parameters:
    - Select **New input parameter** or **New output parameter**, then enter the label and data type.
    - Add more input and output parameters as needed.
@@ -137,12 +137,12 @@ Unique properties:
    > Note the intellisense in the **Expression** box. Underlined red is invalid. Squiggly yellow means your logic might be affected by delegation limitations. Avoid delegation issues by using [delegable functions]( /power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
 1. Optionally expand **Advanced options** to modify the **solution**, **scope**, or **description**.
 1. Select **Save**.
-1. [Test your instant low-code plug-in](#test-a-low-code-plug-in)
+1. [Test your instant low-code plug-in](#test-a-low-code-plug-in).
 
 **Example**: Calculate the sum of two integers.
 
 - Create two input parameters, `X` and `Y` (both of type integer), and one output parameter, `Z` (type string).
-- You could use the following formula: `{Z:  X + Y }`
+- Use the following formula: `{Z:  X + Y }`
 
 :::image type="content" source="media/low-code-plugin-instant-newform.png" alt-text="Instant plug-in example in Dataverse Accelerator app":::
 
@@ -164,9 +164,6 @@ Unique properties:
 
 ## Use Power Platform connectors in low-code plug-ins
 
-> [!NOTE]
-> Not all connector actions are supported at this time.
-
 ### Prerequisites for using connectors in low-code plug-ins
 
 > [!div class="checklist"]
@@ -175,16 +172,19 @@ Unique properties:
 
 ### Using connector actions in low-code plug-ins
 
-You can easily use [connectors]( /connectors/connector-reference/connector-reference-powerapps-connectors) and [custom connectors]( /connectors/custom-connectors/) from within a low-code plug-in Power Fx formula. Here's how:
+You can easily use [connectors]( /connectors/connector-reference/connector-reference-powerapps-connectors) and [custom connectors]( /connectors/custom-connectors/) from within a low-code plug-in Power Fx formula.
+
+> [!NOTE]
+> Not all connector actions are supported at this time.
 
 1. Create a connection to the connector you want to use.
 1. [Add a connection reference](/power-apps/maker/data-platform/create-connection-reference#manually-add-a-connection-reference-to-a-solution-using-solution-explorer) to the connection in the Dataverse environment.
 1. In the low-code plug-in Power Fx expression editor, type the name of the connection reference (the internal name with a prefix and underscore, like `new_connectorName`, not the display name).
-1. Intellisense shows you the available actions.
-1. Select the action you want, and then enter the required parameters.
+1. Intellisense shows you the available actions. Select the action you want, and then enter the required parameters.
+
 Before using a connector in a low-code plug-in, review the connector's [documentation](/connectors/connector-reference/connector-reference-powerapps-connectors) to ensure that you're passing the input and output parameters correctly.
 
-More information: [example](lowcode-plug-ins-examples#sample-instant-plug-in-with-msn-weather-connector)
+More information: [example](lowcode-plug-ins-examples.md#sample-instant-plug-in-with-msn-weather-connector)
 
 ## Smart low-code plug-ins
 
@@ -192,16 +192,16 @@ More information: [example](lowcode-plug-ins-examples#sample-instant-plug-in-wit
 
 Dataverse includes AI-powered actions, which can be used to generate or extract data using Azure Open AI and the power of AI Builder. You can call these functions from both instant and automated low-code plug-ins.  
 
-**What functions are supported for smart low-code plug-ins?**
+**Functions supported for smart low-code plug-ins**
 
 | Function | Description |
 | - | - |
-| `AISummarize` | Summarize text ([Example](lowcode-plug-ins-examples#sample-for-aisummarize)) |
-| `AISentiment` | Detect the sentiment of text as either positive, negative, or neutral ([Example](lowcode-plug-ins-examples#sample-for-aisentiment)) | 
+| `AISummarize` | Summarize text ([Example](lowcode-plug-ins-examples.md#sample-for-aisummarize)) |
+| `AISentiment` | Detect the sentiment of text as either positive, negative, or neutral ([Example](lowcode-plug-ins-examples.md#sample-for-aisentiment)) | 
 | `AIReply` | Draft a reply to text | 
-| `AITranslate` |  Translate text to English ([Example](lowcode-plug-ins-examples#sample-for-aitranslate)) | 
-| `AIClassify`| Classify text into one or more provided categories ([Example](lowcode-plug-ins-examples#sample-for-aiclassify)) | 
-| `AIExtract`| Extract specified entities such as registration numbers ([Example](lowcode-plug-ins-examples#sample-for-aiextract)) | 
+| `AITranslate` |  Translate text to English ([Example](lowcode-plug-ins-examples.md#sample-for-aitranslate)) | 
+| `AIClassify`| Classify text into one or more provided categories ([Example](lowcode-plug-ins-examples.md#sample-for-aiclassify)) | 
+| `AIExtract`| Extract specified entities such as registration numbers ([Example](lowcode-plug-ins-examples.md#sample-for-aiextract)) | 
 
 ### Requirements
 
@@ -216,11 +216,11 @@ Dataverse includes AI-powered actions, which can be used to generate or extract 
 
 **Manually test instant plug-ins**
 
-  1. From the **home screen**, select an instant plug-in from the list, then select **Test** on the command bar. You can also get to this screen from the instant plug-in editor in the command bar after it's been saved.
-  :::image type="content" source="media/low-code-plugin-test-home.png" alt-text="Test low-code plug-in":::
+  1. From the **Home screen**, select an instant plug-in from the list, then select **Test** on the command bar. You can also get to this screen from the instant plug-in editor in the command bar after it's been saved.
+  :::image type="content" source="media/low-code-plugin-test-home.png" alt-text="Select Test for the low-code plug-in":::
 
   1. Provide values for any input parameters that are defined in the low-code plug-in, and then select **Run**.
-  :::image type="content" source="media/low-code-plugin-test.png" alt-text="Test low-code plug-in":::
+  :::image type="content" source="media/low-code-plugin-test.png" alt-text="Select Run to test low-code plug-in":::
 
   Observe the response.
   
@@ -228,7 +228,8 @@ Dataverse includes AI-powered actions, which can be used to generate or extract 
   > Use output parameters to help validate expected behavior and results. Otherwise, you only see a success or failure when testing.
 
 **Test automated plug-ins**
-You can test automated plug-ins by invoking the data event. Observe if the plug-in ran successfully by validating expected changes that were defined in the formula.
+
+Test automated plug-ins by invoking the data event. Observe if the plug-in ran successfully by validating expected changes that were defined in the formula.
 
 ### Integrate a low-code plug-in
 
@@ -236,9 +237,9 @@ You can test automated plug-ins by invoking the data event. Observe if the plug-
 
 1. In the **Dataverse Accelerator** app:
     1. Select the instant plug-in in the list.
-    1. Select the 'copy to clipboard' action on the command bar.
-    1. Save the copied formula to a text editor or notepad (somewhere you can easily refer back to).
-    :::image type="content" source="media/low-code-plugin-instant-integrate.png" alt-text="Test low-code plug-in":::
+    1. Select **Copy code snippet** on the command bar.
+    :::image type="content" source="media/low-code-plugin-instant-integrate.png" alt-text="Invoke an instance low-code plug-in":::
+    1. Paste and save the copied formula to a text editor or notepad (somewhere you can easily refer back to).
 1. In [Power Apps](https://make.powerapps.com/):
    1. Create or edit a canvas app (or custom page) in the Power Apps studio.
    1. In the left navigation, under the **Data Sources** tab, select **+ New data source**, and search for the **Environment** option from the Dataverse connector.

@@ -20,7 +20,7 @@ The goal of these example plug-ins is to help you get started by integrating the
 
 ## Prerequisite
 
-To use one of the example plug-ins for the data event the Dataverse Accelerator app must be installed in the environment. More information: [Prerequisites for creating a low-code plug-in](low-code-plug-ins.md#prerequisites-for-creating-a-low-code-plug-in)
+To use one of the example plug-ins for the data event the Dataverse accelerator app must be installed in the environment. More information: [Prerequisites for creating a low-code plug-in](low-code-plug-ins.md#prerequisites-for-creating-a-low-code-plug-in)
 
 > [!NOTE]
 > Email templates are only available for certain tables. More information: [Create templates for email](/power-platform/admin/create-templates-email)
@@ -52,6 +52,7 @@ This example uses the [Abs() function](/power-platform/power-fx/reference/functi
 ## Input validation and custom errors
 
 ### Duplicate detection
+
 Implement server-side input validation, such as duplicate error detection, that throws a custom error message.
 
 1. Play the Dataverse Accelerator app, on the command bar select **New action** > **Automated plugin**.
@@ -59,14 +60,13 @@ Implement server-side input validation, such as duplicate error detection, that 
 1. For **Table**, select **Contact**.
 1. For **Run this plugin when the row is**, select **Created**.
 1. In the **Formula** box, enter this formula:
-
- ```powerapps-dot
+   ```powerapps-dot
   If( !IsBlank(LookUp([@Contacts],'Last Name'=ThisRecord.'Last Name' && 'First Name'=ThisRecord.'First Name')),
   	Error("You have existing contacts with the same first name and last name")
   )
-  ```
+   ```
 
-1. Select **Save**.
+6. Select **Save**.
 
 ### Test the plug-in
 
@@ -78,6 +78,7 @@ Implement server-side input validation, such as duplicate error detection, that 
 This custom error message is displayed: **You have two contacts with the same first and last name**.
 
 ### Data validation
+
 Display specific types of errors using the _ErrorKind_ enumeration.
 
 1. Create a new automated plug-in.
@@ -209,7 +210,7 @@ This plugin returns the current weather for a specific location using [MSN Weath
 
 Prerequisites:
 > [!div class="checklist"]
-> * [Prerequisites for creating a low-code plug-in](lowcode-plug-ins.md/#prerequisites-for-creating-a-low-code-plug-in)
+> * [Prerequisites for creating a low-code plug-in](lowcode-plug-ins.md#prerequisites-for-creating-a-low-code-plug-in)
 > * MSN Weather connector is allowed in the environment
 
 1. Create a connection reference for MSN Weather if not available yet in the environment:
@@ -223,11 +224,11 @@ Prerequisites:
 
 1. Save
 
-1. [Test the plug-in](lowcode-plug-ins.md/#test-a-low-code-plug-in)
+1. [Test the plug-in](lowcode-plug-ins.md#test-a-low-code-plug-in)
 
 ## Low-code plug-ins with AI samples
 
-### Sample for AISummarize
+### Sample for `AISummarize`
 
 Here's an example of how you can perform text summarization of a Dataverse column.
 
@@ -268,7 +269,7 @@ Test the plug-in by running the data event. In this case, create a new note on a
 > - `AISummarize` might not work if the length of text is too short.
 > - Other languages will be accepted and summarized into English by default.
 
-### Sample for AITranslate
+### Sample for `AITranslate`
 
 You can perform text translation with the `AITranslate` function. It currently supports translation to English (Example scenario: If customers report issues in different languages, you could introduce a new column to capture a version of their issue description that is translated to English). You can use this action in instant or automated low-code plug-ins.
 
@@ -316,7 +317,7 @@ In this demonstration, use an instant plug-in to quickly try the function and se
 12. Select **Run**.
 13. Verify the **Response** returned shows the output value as _Positive_.
 
-### Sample for AIExtract
+### Sample for `AIExtract`
 
 Here's an example of how you can extract data from text with the `AIExtract` function. You can use this action in instant or automated low-code plug-ins.
 
@@ -331,30 +332,30 @@ In this demonstration, use an instant plug-in to quickly try the function and se
 5. For the **Label** type _input_. Leave the **Data type** as **String**.
 6. Create another input parameter with the label as _entity_. Leave the **Data type** as **String**.
 7. Select **New out parameter**. 
-8. For the **Label** type _output_. Leave the Data type as String. 
-9. Use the following in the Expression. The result of the AIExtract action is a table. In this example we will use the First function to return the first value from the table.
+8. For the **Label** type _output_. Leave the `Data type` as `String`. 
+9. Use the following in the **Expression**. The result of the `AIExtract` action is a table. In this example the first function to return the first value from the table is used.
    ```powerapps-dot
    { output: First( AIExtract(input, entity) ).Value }
    ```
-11. Click **Save**. 
-12. Click **Test**. 
+11. Select **Save**. 
+12. Select **Test**. 
 13. For the input provide the following text: `Can you please provide an estimated arrival for order 52342352?`
-14. For entity type `order number`
-15. Click **Run**.
+14. For entity type `order number`.
+15. Select **Run**.
 16. Verify the response returned shows the output value as the order number.
 
-### Sample for AIClassify
+### Sample for `AIClassify`
 
-Here's an example of how you can classify text with the AIClassify function. You can use this action in instant or automated low-code plug-ins. 
+Here's an example of how you can classify text with the `AIClassify` function. You can use this action in instant or automated low-code plug-ins. 
 
-For example, if a customers submit inquiries, you could introduce a new column to capture the type of inquiry such as Problem, Billing, How To, or Licensing. 
+For example, if a customers submit inquiries, you could introduce a new column to capture the type of inquiry such as **Problem**, **Billing**, **How To**, or **Licensing**. 
 
-In this demonstration we will use an instant plug-in to quickly try the function and see the result. 
+In this demonstration use an instant plug-in to quickly try the function and see the result.
 
-1. Open the Dataverse Accelerator app.
-2. Click **Create instant plug-in**.
+1. Open the Dataverse accelerator app.
+2. Select **Create instant plug-in**.
 3. For the **Display name** type _AIClassifyDemo_.
-4. Click **New input parameter**.
+4. Select **New input parameter**.
 5. For the **Label** type _input_. Leave the Data type as String.
 6. Create another input parameter with the **label** as _entity_. Leave the **Data type** as **String**.
 7. Select **New out parameter**. 
