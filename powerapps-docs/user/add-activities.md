@@ -455,8 +455,6 @@ The following table describes the different formatting features and functionalit
 
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
 
-For more information, see [Commonly used rich text editor configurations](../maker/model-driven-apps/rich-text-editor-control.md#commonly-used-rich-text-editor-configurations).
-
 ## View a conversation transcript
 
 In the timeline, you can view the transcripts of completed chats you've had in conversation channels. To view these transcripts, you must have prvReadmsdyn_transcript permission. More information: [Roles and permissions](/dynamics365/app-profile-manager/security-roles)
