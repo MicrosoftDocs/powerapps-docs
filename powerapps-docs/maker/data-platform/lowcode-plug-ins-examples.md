@@ -5,30 +5,29 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 03/20/2023
+ms.date: 10/04/2023
 ms.custom: template-how-to
 ---
-# Example Dataverse low-code plug-ins (experimental)
+# Example Dataverse low-code plug-ins (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 The goal of these example plug-ins is to help you get started by integrating them into your apps. You'll understand the authoring experience includes authoring Microsoft Dataverse custom APIs backed by Power Fx expressions, which can trigger actions internal or external to Dataverse.
 
 > [!IMPORTANT]
-> - This is an experimental feature. Use this if you're an early adopter, see something useful to you, and would like to help test the feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - Experimental features can radically change or completely disappear at any time. For this reason the feature is not enabled by default and you must explicitly opt in to use it.
-
-> [!NOTE]
-> Email templates are only available for certain tables. Please read the email template documentation for more information.
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisite
 
-To use one of the example plug-ins for the data event the Dataverse Accelerator app must be installed in the environment. More information: [Prerequisites for creating a low-code plug-in](low-code-plug-ins.md#prerequisites-for-creating-a-low-code-plug-in)
+To use one of the example plug-ins for the data event the Dataverse accelerator app must be installed in the environment. More information: [Prerequisites for creating a low-code plug-in](low-code-plug-ins.md#prerequisites-for-creating-a-low-code-plug-in)
+
+> [!NOTE]
+> Email templates are only available for certain tables. More information: [Create templates for email](/power-platform/admin/create-templates-email)
 
 ## Return a non-negative value
 
-This example uses the Abs function to return the non-negative value of its argument. If a number is negative, Abs returns the positive equivalent.
+This example uses the [Abs() function](/power-platform/power-fx/reference/function-numericals) to return the non-negative value of its argument. If a number is negative, Abs returns the positive equivalent.
 
 1. Play the Dataverse Accelerator app, on the command bar select **New action** > **Instant plugin**. 
 1. Provide a display name, such as the formula name, and description.
@@ -53,6 +52,7 @@ This example uses the Abs function to return the non-negative value of its argum
 ## Input validation and custom errors
 
 ### Duplicate detection
+
 Implement server-side input validation, such as duplicate error detection, that throws a custom error message.
 
 1. Play the Dataverse Accelerator app, on the command bar select **New action** > **Automated plugin**.
@@ -60,14 +60,12 @@ Implement server-side input validation, such as duplicate error detection, that 
 1. For **Table**, select **Contact**.
 1. For **Run this plugin when the row is**, select **Created**.
 1. In the **Formula** box, enter this formula:
-
- ```powerapps-dot
-  If( !IsBlank(LookUp([@Contacts],'Last Name'=ThisRecord.'Last Name' && 'First Name'=ThisRecord.'First Name')),
-  	Error("You have existing contacts with the same first name and last name")
+  ```powerapps-dot
+   If( !IsBlank(LookUp([@Contacts],'Last Name'=ThisRecord.'Last Name' && 'First Name'=ThisRecord.'First Name')),
+  	  Error("You have existing contacts with the same first name and last name")
   )
   ```
-
-1. Select **Save**.
+6. Select **Save**.
 
 ### Test the plug-in
 
@@ -79,6 +77,7 @@ Implement server-side input validation, such as duplicate error detection, that 
 This custom error message is displayed: **You have two contacts with the same first and last name**.
 
 ### Data validation
+
 Display specific types of errors using the _ErrorKind_ enumeration.
 
 1. Create a new automated plug-in.
@@ -101,10 +100,10 @@ Go to the [Error() function](/power-platform/power-fx/reference/function-iferror
 
 ## Send email based on a data event
 
-To set this up, you need these prerequisites:
-
-- Server-side synchronization is set up for your environment. More information: [Set up server-side synchronization of email, appointments, contacts, and tasks](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)
-- An email template. 
+Prerequisites:
+> [!div class="checklist"]
+> * Server-side synchronization is set up for your environment. More information: [Set up server-side synchronization of email, appointments, contacts, and tasks](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)
+> * An email template.
 
 ### Example email template
 
@@ -155,7 +154,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
 
 ### Create the low-code plugin that sends an in-app notification
 
-1. Play the Dataverse Accelerator app, and then select  **+New plugin** under under **Instant plugins**.
+1. Play the Dataverse accelerator app, and then select  **+New plugin** under under **Instant plugins**.
 1. Enter the following information, select **Next**: 
    - **Name**: *NotifyTechnican1*
    - **Description**: *This instant plug-in notifies the app user.*
@@ -204,107 +203,171 @@ When the notify technician action is selected in the app, an in-app notification
 
 :::image type="content" source="media/low-code-plugin-ex-notification-sent.png" alt-text="Notification sent to technician who receives in app":::
 
-## Invoke SQL stored procedures using a low-code plug-in
+## Sample instant plug-in with MSN Weather connector
 
-SQL provides an action known as a stored procedure. A stored procedure is one or more transactions statements, or .Net commands, that are used to execute complex processes. These processes can accept inputs, provide statements that perform operations on the inputs, and produce an output or return value.
+This plugin returns the current weather for a specific location using [MSN Weather connector](/connectors/msnweather/).
 
-Stored procedures are used when complex processes or data needs would be better served being computed on the server rather than the client. Stored procedures often improve the performance of the calculation and provide many more complex operations than would be possible in an app.
+Prerequisites:
+> [!div class="checklist"]
+> * [Prerequisites for creating a low-code plug-in](low-code-plug-ins.md#prerequisites-for-creating-a-low-code-plug-in)
+> * MSN Weather connector is allowed in the environment
 
-In most cases stored procedures are executed in SQL by IT manually or by using automated triggers. This can cause a burden on IT and a bottleneck for getting needed information. However, Dataverse can be used to directly invoke stored procedures using a low-code plug-in.
+1. Create a connection reference for MSN Weather if not available yet in the environment:
+:::image type="content" source="media/low-code-plugin-msn-createconnectionref.png" alt-text="Create a connection reference in the app from the connection references pane on the right":::
 
-Using the Data Accelerator app, low-code plug-ins for stored procedures can be easily created using a wizard. In order to create the plug-in you'll need:
+1. Copy snippet:
+:::image type="content" source="media/low-code-plugin-msn-action.png" alt-text="Copy the action snippet from the connections pane":::
 
-- Credentials and details about the SQL server and database where the stored procedure is located (or, if a connection is already present on your Dataverse environment, you need to know which one to use).
-- Which stored procedure on the SQL database you wish to use.
-- To understand what inputs and outputs are required by your procedure.
+1. Finish editing the formula using intellisense and consume the connector response properties as needed:
+:::image type="content" source="media/low-code-plugin-msn-definition.png" alt-text="Complete the plug-in definition in the editor":::
 
-### Create the low-code plug-in to invoke stored procedure
+1. Save
 
-1. Play the Dataverse Accelerator App.
-1. In the Dataverse Accelerator app, under **Instant plugins** select **New plugin**.
-1. Enter a **Display name** for your plug-in, you can also provide a **Description**.
-1. Select **Advanced options**, and then select **Launch the plugins wizard**.
-1. On the **Connections** screen, any SQL connections you already have configured for your environment appear here. If the connection you need is already present you can select it. Otherwise select **New connection** or **Add connection**.
+1. [Test the plug-in](low-code-plug-ins.md#test-a-low-code-plug-in)
 
-   If you create a new connection, you'll be asked for your SQL authentication type, credentials, and other necessary information. Complete the required fields and then select **Create**.
+## Low-code plug-ins with AI samples
 
-   Connections use a connection reference to interface between Dataverse and the data source you are connecting to. The connection reference will be created for you, but if you would like to be able to provide a custom name, you can do so by selecting **Advanced options** and then select **Manually Configure Connection Reference**. This can also be used to select from existing connection references for an existing connection.
+### Sample for `AISummarize`
 
-1. When your connection is created, return to the wizard and select your connection from the connections list, and then select **Next**.
-1. A list of available SQL actions are provided. Currently, **Execute Stored Procedure** is available. Select the action you want, and then select **Next**.
-1. In the dropdown lists, select the values for:
-   - **Server name**: The name of the server for your connection – This can only be set to Default at this time.
-   - **Database name**: The name of the database on the server you wish to use. Currently, this can only be set to **Default**. 
-   - **Procedure name**: The name of the stored procedure you want to use.
+Here's an example of how you can perform text summarization of a Dataverse column.
 
-   After selecting the procedure, a list of input values are presented. The values can either be configured to use dynamic values for every invocation (and allow you to use a specific field from a row as an input), or you can enter a static value to use for every invocation.
+To store the summarized version of a note's description, you can create either an instant or automated low-code plug-in that creates a new note. For this example, create an automated plug-in.
 
-   After completing all the fields, the Power Fx formula to invoke the procedure is generated.
+**Create the plug-in**
 
-1. Select **Next**.
-1. A review page is displayed that shows you the plug-in you are about to create for the stored procedure. If the information is correct, select **Create**.
-
-   The plug-in is created.
-1. A **Plugin** page appears, which shows you the name of the plug-in you just created. Select **Next**.
-1. A list of the inputs appear that will be sent to the stored procedure and their data types. The Power Fx formula is also displayed that will be used to invoke the stored procedure.
-
-   > [!NOTE]
-   > Currently you can't edit the parameters or formula on this page, however this will be possible in the future.
-
-Click **Test** to test your plugin. Add in static data for your inputs and validate if it was run successfully or not.
-
-### Invoke the low-code plug-in stored procedure with a button
-
-Once the low-code plug-in stored procedure is created you can then decide how to invoke it from within a canvas app. One good way to easily invoke it is by using a button on the app. Using the `OnClick` formula you can specify you want it to be executed and link the input values to existing fields.
-
-To do this, you will need to know the name of the plug-in you created, and also know the input parameters you set up. If you have forgotten you can look at your plug-in’s details to get this information before you start.
-
-To set the button to invoke the stored procedure:
-
-1. Open the canvas app you want to invoke the stored procedure plug-in from.
-1. Select the data icon on the left navigation panel.
-1. Search for *Environment* and install the **Environment** data source. This data source is used for plug-ins, actions, and other functions. It's required to use the plug-in. 
-1. Add a button control onto the the canvas app. More information: [Button control in Power Apps](../canvas-apps/controls/control-button.md)
-1. Select the **OnClick** property, and then select the formula bar.
-1. In the formula bar you'll need to input a formula to:
-   - Call the environment data source. This is used to execute the plug-ins you have created.
-   - Specify the plug-in you want to use.
-   - Identify which columns on the form you want to map to which input parameter.
-
-   If an input parameter is configured to a static value and not a variable, that parameter doesn't need to be defined.
-   
-   ```powerapps-dot 
-   Environment.<plug-in logical name>({
-   	<<input parameter 1>>: <<form field 1>>. Selected<datatype>,
-   	<<input parameter 2>>: <<form field 2>>. Selected<datatype>,
-   	…
-   });
-   ```
-   - *Environment* is the environment data source, which is used to call and execute plug-ins and actions from within canvas apps in Dataverse. After it is entered and selected enter the period "." You will then enter the logical name of your stored procedure plug-in you created.
-   - Input parameters are the individual parameters that are used as inputs to the stored procedure when invoking it. There must be one line for each input parameter. Then add the colon ":".
-   - Form field is the column on the canvas app form that contains the data you want to pass. This is what provides you the ability to execute the stored procedure with any set of data from a row.
-
-   For an example, there's a stored procedure named *cr8b8_FindBestTech*, that has an input parameter of *customerZipCode* in SQL and a canvas app form has a column named *ZipCode*, you create it as: 
-   
+1. Run the Dataverse accelerator app.
+1. Select the **Create automated plug-in** card.
+1. Give it the **Display name** of _Summarize Notes_.
+1. Select the table **Annotations**
+1. Keep the radio selection on **Create** for the event.
+1. Enter the following as the expression:
    ```powerapps-dot
-   Environment.cr8b8_FindBestTech ({
-   	customerZipCode: ZipCode.text,
-   });
+   // Check if 'AI Summarized' in title to preview infinite loop
+   If("AI Summarized" in Title, false,
+    // Create new notes record related to the same Dataverse record
+    Collect(Notes, {Title: "AI Summarized: " &Title, Description: AISummarize(Description), Regarding:ThisRecord.Regarding})
+   )
    ```
+1. Under **Advanced settings**, choose the _post-operation_ stage to run the plug-in after the data event occurs.
+1. **Save** the plug-in.
 
-1. The formula to populate the plug-in is complete. Select the button in the running app. Then, it takes the input values from the columns specified, and passes them to SQL for processing. The stored procedure processes the data based on its configuration.
+:::image type="content" source="media/low-code-plugin-aisummarize-definition.png" alt-text="AI Summarized definition in the automated plug-in editor":::
 
-### How to get the stored procedure results
+Test the plug-in by running the data event. In this case, create a new note on any table. Check using the accounts table below.
 
-At this time, plug-ins can't pass output values back to Dataverse. So you'll be limited to stored procedures that, once run, process and handle the result entirely in SQL. You can however access the output if it's stored in a SQL table. You can do that by creating a virtual table using the SQL server connector. The virtual table allows you to view and manage the output data and integrate it with your Dataverse data and app. More information: [Create virtual tables using the virtual connector provider (preview)](create-virtual-tables-using-connectors.md) 
+1. In Power Apps (make.powerapps.com), go to **Tables** > **Accounts**.
+1. On the command bar, select **Edit**.
+1. Open a row in the default form by selecting an account, then select **Edit row using form**.
+   :::image type="content" source="media/low-code-plugin-aisummarize-edit-account.png" alt-text="Open the accounts form":::
+1. Save a new note in the timeline with a **Title** and **Description**.
+1. Refresh the page. A new note appears with a summarized version of the previous note.
 
-### Stored procedure plug-ins limitations
+:::image type="content" source="media/low-code-plugin-aisummarize-notes.png" alt-text="AI Summarized notes in the timeline":::
 
-- Currently stored procedures will only output the results into SQL. Due to this, you'll need to take additional steps if you need to use the output of these procedures in Dataverse. In the future, outputs to Dataverse will be supported.
+> [!NOTE]
+> - `AISummarize` might not work if the length of text is too short.
+> - Other languages will be accepted and summarized into English by default.
 
-- Once the formula is generated and the input parameters are configured, you can't edit them directly. Currently, instead of making changes to the existing plug-in you must create a new one.
+### Sample for `AITranslate`
 
-- If a stored procedure runs longer than two minutes, Dataverse and the Power Apps (make.powerapps.com) timeout and you won't receive the completion notification. However, you can still directly access the SQL table to get the results though direct connections or virtual tables.
+You can perform text translation with the `AITranslate` function. It currently supports translation to English (Example scenario: If customers report issues in different languages, you could introduce a new column to capture a version of their issue description that is translated to English). You can use this action in instant or automated low-code plug-ins.
+
+In this demonstration, use an instant plug-in to quickly try the function and see the result.
+
+1. Open the Dataverse accelerator app.
+1. Select **Create instant plug-in**.
+1. For the **Display name** type *AITranslateDemo*.
+1. Select **New input parameter**.
+1. For the **Label**, type _input_. Leave the **Data type** as **String**.
+1. Select **New out parameter**. 
+1. For the **Label** type _output_. Leave the **Data type** as **String**.
+1. Use the following as the Power Fx expression:
+   ```powerapps-dot
+   {output: AITranslate(input)}
+   ``` 
+1. **Save** the plug-in.
+1. Select **Test**. 
+1. For the input provide any text in a language other than English as input (example text in Spanish: `Me encantan las nuevas funciones de IA`).
+1. Select **Run**.
+1. Verify the **Response** returned the text translated to English (the sample Spanish text should return as `I love the new AI features`).
+
+### Sample for `AISentiment`
+
+Here's an example of how you can detect sentiment with the `AISentiment` function. You can use this action in instant or automated low-code plug-ins.
+
+Example scenario: In a customer feedback scenario, you could introduce a new column to capture the sentiment of that feedback as either positive, negative, or neutral.
+
+In this demonstration, use an instant plug-in to quickly try the function and see the result.
+
+1. Open the Dataverse accelerator app.
+2. Select **Create instant plug-in**.
+3. For the **Display name** type _AISentimentDemo_.
+4. Select **New input parameter**.
+5. For the **Label** type _input_. Leave the **Data type** as **String**.
+6. Select **New out parameter**.
+7. For the **Label** type _output_. Leave the **Data type** as **String**.
+8. Use the following in the Expression:
+   ```powerapps-dot
+   { output: AISentiment(input) }
+   ``` 
+9. **Save** the plug-in.
+10. Select **Test**.
+11. For the input provide the following text: `The product is amazing!`
+12. Select **Run**.
+13. Verify the **Response** returned shows the output value as _Positive_.
+
+### Sample for `AIExtract`
+
+Here's an example of how you can extract data from text with the `AIExtract` function. You can use this action in instant or automated low-code plug-ins.
+
+Example scenario: If customers submit inquiries about orders, you could introduce a new column to capture the order numbers mentioned.
+
+In this demonstration, use an instant plug-in to quickly try the function and see the result.
+
+1. Open the Dataverse accelerator app.
+2. Select **Create instant plug-in**.
+3. For the **Display name** type _AIExtractDemo_.
+4. Select **New input parameter**.
+5. For the **Label** type _input_. Leave the **Data type** as **String**.
+6. Create another input parameter with the label as _entity_. Leave the **Data type** as **String**.
+7. Select **New out parameter**. 
+8. For the **Label** type _output_. Leave the `Data type` as `String`. 
+9. Use the following in the **Expression**. The result of the `AIExtract` action is a table. In this example the first function to return the first value from the table is used.
+   ```powerapps-dot
+   { output: First( AIExtract(input, entity) ).Value }
+   ```
+11. Select **Save**. 
+12. Select **Test**. 
+13. For the input provide the following text: `Can you please provide an estimated arrival for order 52342352?`
+14. For entity type `order number`.
+15. Select **Run**.
+16. Verify the response returned shows the output value as the order number.
+
+### Sample for `AIClassify`
+
+Here's an example of how you can classify text with the `AIClassify` function. You can use this action in instant or automated low-code plug-ins. 
+
+For example, if a customers submit inquiries, you could introduce a new column to capture the type of inquiry such as **Problem**, **Billing**, **How To**, or **Licensing**. 
+
+In this demonstration use an instant plug-in to quickly try the function and see the result.
+
+1. Open the Dataverse accelerator app.
+2. Select **Create instant plug-in**.
+3. For the **Display name** type _AIClassifyDemo_.
+4. Select **New input parameter**.
+5. For the **Label** type _input_. Leave the Data type as String.
+6. Create another input parameter with the **label** as _entity_. Leave the **Data type** as **String**.
+7. Select **New out parameter**. 
+8. For the Label type _output_. Leave the **Data type** as **String**.
+9. Use the following in the **Expression**. The second input of the `AIExtract` action is a table of choices the input can be classified into. In this example, an inline table with the options _Problem_, _Billing_, _How To_, and _Licensing_ is used.
+   ```powerapps-dot
+   { output: AIClassify(input, ["Problem", "Billing", "How To", "Licensing"]) }
+   ```
+11. Select **Save**. 
+12. Select **Test**. 
+13. For the input provide the following text: `I am encountering an error trying to create a new record.`
+14. Select **Run**.
+15. Verify the **Response** returned shows the output value as _Problem_.
 
 ## See also
 
