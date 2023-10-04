@@ -5,248 +5,274 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 07/27/2023
+ms.date: 10/04/2023
 ms.custom: template-how-to
+contributors:
+- denise-msft
 ---
-# Use Dataverse low-code plug-ins (experimental)
+# Use Dataverse low-code plug-ins (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Optimize your data architecture and reduce client-side load using Microsoft Dataverse low-code plug-ins. Low-code plug-ins are reusable, server-side synchronous (real-time) business logic workflows that execute a set of specific commands in Dataverse.
-
-A plug-in is a custom event handler that executes in response to a specific event raised during processing of a Microsoft Dataverse data action. Traditionally, a plug-in was created as custom class compiled into a .NET Framework assembly that is then uploaded and registered with Dataverse. With low-code plug-ins, makers can create plug-ins with no or little coding and without having to manually register the plug-in.
-
-Low-code plug-ins are defined in a Dataverse database and integrated into Power Apps. They can add business logic using the Power Fx expression language and directly integrate with Dataverse business data and external data through Power Platform connectors. With low-code plug-ins, you can quickly build rich workflows without any code.
+Microsoft Dataverse offers a powerful solution for achieving more efficient data architecture and reducing client-side workload through low-code plug-ins. These plug-ins are reusable, real-time workflows that execute a specific set of commands within Dataverse, running server-side and triggered by personalized event handlers.
 
 > [!IMPORTANT]
-> - This is an experimental feature. Use this if you're an early adopter, see something useful to you, and would like to help test the feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - Experimental features can radically change or completely disappear at any time. For this reason the feature is not enabled by default and you must explicitly opt in to use it.
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-There are two types of low-code plug-ins:
+Traditionally, plug-ins were created as custom classes compiled into a .NET Framework assembly, which were then uploaded and registered within Dataverse. However, with the introduction of low-code plug-ins, users can create these event handlers with minimal or no coding required, and without the need for manual registration.
 
-# [Instant](#tab/instant)
+Low-code plug-ins are stored within a Dataverse database and can be seamlessly integrated into Power Apps and Power Automate. The behavior of the workflow is defined using the Power Fx expression language and can directly connect with Dataverse business data and external data sources through Power Platform connectors. With low-code plug-ins, makers can rapidly construct complex workflows with minimal coding expertise, resulting in a more streamlined and efficient data architecture.
 
-An instant low-code plug-in is business logic that's manually triggered. A user must explicitly invoke an instant plug-in. This can be defined on a button click in an app, or within a Power Automate cloud flow using perform an unbound action.
+## Benefits of server-side logic
 
-You can define input and output parameters that allow certain values in the formula to change, or be variable. They also give you the ability to pass information between the plug-in and the context that runs it, so the same business logic can be designed generically and reused in varying situations.  
-- Input parameters can take information into the formula when it’s run.
-- Output parameters let you define information that is returned when the plug-in completes successfully.
+Defining server-side business logic offers several benefits, including:
 
-Supported data types for input and output parameters:
-- Boolean
-- String
-- Float
-- Decimal
-- DateTime
-- Integer
+- Increased security. Since server-side logic executes on the server, it can help prevent unauthorized access to sensitive data or processes.
+- Improved performance. By executing on the server, business logic can reduce the amount of data that needs to be transferred between the client and server, resulting in faster processing times.
+- Consistency and reliability. Server-side logic ensures that business rules are consistently applied across all clients, reducing the risk of errors or inconsistencies.
+- Easier maintenance and upgrades. By centralizing business logic on the server, it becomes easier to maintain and update, as changes can be made in one place rather than having to update multiple clients.
+- Scalability. Server-side logic can be scaled more easily than client-side logic, allowing for better performance and handling of larger workloads.
 
-## Calling instant low-code plug-ins as actions from a canvas app
+## Low-code plug-ins
 
-When an instant low-code plug-in is created, you'll can call the plug-in as a Dataverse action inside a canvas app as described in this article: [Call Dataverse actions directly in Power Fx](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx-preview). However, for any subsequent plug-ins created, you'll have to remove and readd the Power Fx environment language object. Then you'll see all the low-code plug-ins as actions.
+There are two types of low-code plug-ins supported in Dataverse:
 
-More information on how to integrate: [Integrate a low-code plug-in](#integrate-a-low-code-plug-in)
+| Type | Trigger | Supports parameters | Supported [scope](/power-apps/developer/data-platform/custom-api#select-a-binding-type) |
+|-|-|-|-|
+| Instant | Manually run | Yes | Global and table |
+| Automated | Dataverse table event | No | Table |
 
-# [Automated](#tab/automated)
+All low-code plug-ins have the following common properties:
 
-An automated low-code plug-in is business logic that runs when a data event (create, update, or delete) occurs for a specified table. You can also design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.
+| Property | Description |
+|-|-|
+| Display name | The human-readable name of the plug-in. Can't be changed once created. |
+| Name | The internal name of the plug-in. It's used by the platform to identify the component in code and database operations. Can't be changed once created. |
+| Description | Used to provide additional context about the plug-in (purpose, behavior, or other important details). |
+| Solution| Used to group components and export to other environments. Learn more about [solutions](/power-apps/maker/data-platform/solutions-overview). |
+| Expression | This is the custom function that can be used to perform actions or calculations, defined using the Power Fx expression language. Power Fx is a formula language used in Power Apps canvas apps, and has been extended to be used in low-code plug-ins. See [supported functions for more details](/power-apps/maker/data-platform/low-code-plug-ins-powerfx).|
+
+# [Instant plug-ins](#tab/instant)
+
+An instant low-code plug-in is custom code logic that's manually triggered by a user. Custom input and output parameters can be used.
+
+Unique properties:
+
+| Property | Description |
+|-|-|
+| Scope | Used to associate a plug-in to a specific table. It can be set to either table (shown as entity) or global, where table (entity) scope means the plug-in is triggered with the context of a specific table record, and global scope means the operation isn't associated with a table ([learn more](/power-apps/developer/data-platform/custom-api#select-a-binding-type)). |
+| Parameters | Parameters allow you to pass information between the plug-in and the context that runs it, making it easier to design business logic that can be reused in varying situations.<br><br>**Input parameters** are used to provide data to the plug-in, and allow you to control how the function behaves by passing in different values you specify in the Power Fx formula.<br><br>**Output parameters** allow you to retrieve the results of a function or method for further use in your program.<br><br>Supported data types:<br><ul><li>Boolean<li>String</li><li>Float</li><li>Decimal</li><li>DateTime</li><li>Integer</li></ul>|
+
+More information about how to integrate from a canvas app or in a Power Automate cloud flow: [Integrate a low-code plug-in](#integrate-a-low-code-plug-in)
+
+# [Automated plug-ins](#tab/automated)
+An automated low-code plug-in is custom code that is executed during the processing of a specific data event.
+
+Unique properties:
+
+| Property | Description |
+|-|-|
+| Data event<br>('Run this plug-in when the row is') | Specifies which data event triggers the plug-in. Any of the following events can be selected to invoke the plug-in:<br><ul><li>Create</li><li>Update</li><li>Delete</li>|
+| Stage<br>('When should this run') | You can design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.<br><br><ul><li>**Pre-operation**. Select this option if you want to run your plug-in logic after the form validation, but before the values are inserted or changed in Dataverse.</li><li>**Post operation**. Select this option to run your plug-in logic after the values have been inserted or changed in Dataverse.</li></ul> |
 
 ---
 
-For the most part, logic that can be defined for an instant plug-in can also be defined for an automated low-code plug-in.
-
-The main difference between the plug-in types is in the way the plug-in type is triggered, and whether parameters can be used. Only instant plug-ins support parameters.
-
-> [!IMPORTANT]
-> Currently, only automated plug-ins allow you to interact with a specific record when the plug-in is invoked. This is referred to as the *bound* table record. When defining logic for bound records in Power Fx, use the `ThisRecord` keyword to reference the record and use dot notation to access the column values.
-
 ## Plug-in permissions
 
-**Design time**
-Makers who have system customizer or system administrator security role membership in the Power Platform environment can access all plug-ins in that environment.
-
-**Run time**
-When a plug-in is invoked, it accesses the table data involved in the plug-in definition (the tables that are part of the formula, or if the table is associated with the settings of an automated plug-in) in the context of the user who invoked it.
-
-If a plug-in uses a connector action, the connector permissions enforce the ability for organizational users to access and operate on the plug-in call to the connector. The connection can be shared with one user or can be shared with the entire organization. This allows users to access and operate plug-ins with connectors using a shared connection if desired. By using security roles, plug-ins with connectors access can be restricted to a specific set of users within your organization. You can even specify which roles have create, read, update, or delete privileges in this way.
+:::row:::
+   :::column span="":::
+      **Design time**
+      
+      Makers who have system customizer or system administrator security role membership in the Power Platform environment can access all plug-ins in that environment. Custom security roles can be used to restrict access to low-code plug-ins.
+   :::column-end:::
+   :::column span="":::
+      **Run time**
+      
+      When a plug-in is invoked, it accesses the table data involved in the plug-in definition (the tables that are part of the formula, or if the table is associated with the settings of an automated plug-in) in the context of the user who invoked it.
+   :::column-end:::
+   :::column span="":::
+      **Connections**
+      
+      Using [security roles](/power-platform/admin/security-roles-privileges#security-roles-and-the-new-modern-ui), connector access within plug-ins can be restricted to a specific set of users within your organization. Specify which roles have create, read, update, or delete privileges.
+   :::column-end:::
+:::row-end:::
 
 ## Prerequisites for creating a low-code plug-in
 
-- System administrator or system customizer security role membership in the Power Platform environment.
-- Install the Dataverse Accelerator solution. [Download and install the Dataverse Accelerator from AppSource](https://aka.ms/dvaccelerator).
-    1. Sign in to [AppSource](https://aka.ms/dvaccelerator).
-    1. Select **Get it now**.
-    1. The **Dynamics 365 apps** page in Power Platform admin center appears.
-    1. Select the environment you want.
-    1. Review the legal terms and privacy statement to continue.
-    1. Select **Install**.
+> [!div class="checklist"]
+> * System administrator or system customizer security role membership in the Power Platform environment.
+> * Access to the Dataverse accelerator app.
 
 > [!TIP]
-> Alternatively, the Dataverse Accelerator can be [installed from the environment apps view](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view).
+> All new environments have the Dataverse accelerator app automatically installed as of October 1st 2023. If you already had the Dataverse accelerator installed, you can manually update the Dataverse accelerator.
 
-Once the solution import is completed, the status is set to **Enabled** next to **Dataverse Accelerator** in the [list of licensed applications in the environment](/power-platform/admin/manage-apps#environment-level-view-of-apps).
-
-### Update the Dataverse Accelerator
+**Update the Dataverse accelerator**
 
 1. Follow the instructions to [view licensed apps in your environment](/power-platform/admin/manage-apps#environment-level-view-of-apps).
 1. If the **Dataverse Accelerator** is already installed and an update is available, it's indicated in the table next to the item.
 1. Select **Dataverse Accelerator**, and then select **Update** on the command bar.
 
 > [!TIP]
-> Enable [auto app updates](/power-platform/developer/isvstudio/auto-update) for the **Microsoft - Power CAT** publisher to automatically receive updates when available.
+> Enable [auto app updates](/power-platform/developer/isvstudio/auto-update) for the **Microsoft - Power CAT** publisher to automatically receive updates when available (not necessary for new environments created after October 1st 2023).
 
 > [!NOTE]
-> If you previously installed the optional Low Code Plugins for Connectors solution, it will be automatically deleted if you update after June 29, 2023. The capabilities will be available in the main solution.
+> If you previously installed the optional **Low-Code Plug-ins for Connectors** solution, it will be automatically deleted when you update after June 29, 2023. The capabilities will be available in the main solution.
 
 ## Create an instant low-code plug-in
 
-1. Sign into the environment where the Dataverse Accelerator solution is installed and play the Dataverse Accelerator app.
-1. On **Instant plug-ins** card, select **New plug-in**.
-   :::image type="content" source="media/low-code-plugin1.png" alt-text="New plug-in Dataverse Accelerator solution":::
-1. On the first page of the editor, enter the following information, and then select **Next**.
-
-   - **Display name**. Enter a name for the instant plug-in, such as *Calculate sum*.
-   - **Description**. Enter a description for the instant plug-in.
-
-1. Optionally, define your parameters:
-   - Select **New input parameter**. For example, **Label:** *X* and **Data type**: *Integer*.
-   - Select **New output parameter**. For example, **Label**: *Sum* and **Data type**: *Integer*.
-1. Add more input and output parameters as necessary.
-1. Enter the Power Fx formula in the **Formula** box.
-   - You can reference any parameters you defined previously in the formula.
-   - You can reference any Dataverse table rows using the `LookUp()` function.
-   - For example, you can calculate the sum of two integers. Create two input parameters, X and Y, both type integer, and one output parameter, `Z`, of type string. You could use the following formula: `{Z:  X + Y }`
-   
+1. Play the Dataverse accelerator app.
+1. Select the **Create instant plug-in** card.
+   :::image type="content" source="media/low-code-plugin-instant-create.png" alt-text="Create instant plug-in card":::
+1. Provide a **Display name**.
+1. Optionally, define parameters:
+   - Select **New input parameter** or **New output parameter**, then enter the label and data type.
+   - Add more input and output parameters as needed.
+1. Enter the Power Fx expression in the **Expression** editor.
+   - Reference input parameters in the formula by the label name.
+   - Output parameters must be referenced inside of curly brackets, such as `{ Out: "Return value" }`.
+   - Reference Dataverse tables using data collection functions, such as [Filter() and LookUp()](/power-platform/power-fx/reference/function-filter-lookup).
+   - If the scope is set to entity, use `ThisRecord` to access column values in the table row associated with the plug-in run, such as `ThisRecord.'Account Name'`.
    > [!TIP]
-   > Note the intellisense in the **Formula** box. Underlined red is invalid. Squiggly yellow means your logic might be affected by delegation limitations. Avoid delegation issues by using [delegable functions]( /power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
-   :::image type="content" source="media/low-code-plugin2.png" alt-text="Instance low-code plug-in using Power Fx to derive a sum value with two integers":::
-1. Select **Next** to review the details.
+   > Note the intellisense in the **Expression** box. Underlined red is invalid. Squiggly yellow means your logic might be affected by delegation limitations. Avoid delegation issues by using [delegable functions]( /power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
+1. Optionally expand **Advanced options** to modify the **solution**, **scope**, or **description**.
 1. Select **Save**.
-1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
+1. [Test your instant low-code plug-in](#test-a-low-code-plug-in).
+
+**Example**: Calculate the sum of two integers.
+
+- Create two input parameters, `X` and `Y` (both of type integer), and one output parameter, `Z` (type string).
+- Use the following formula: `{Z:  X + Y }`
+
+:::image type="content" source="media/low-code-plugin-instant-newform.png" alt-text="Instant plug-in example in Dataverse Accelerator app":::
 
 ## Create an automated low-code plug-in
 
-1. Sign into the environment where the Dataverse Accelerator solution is installed and play the Dataverse Accelerator app.
-1. On the **Automated plugins** card, select **New plugin**.
+1. Play the Dataverse accelerator app.
+1. Select the **Create automated plug-in** card.
+   :::image type="content" source="media/low-code-plugin-automated-create.png" alt-text="Create automated plug-in card":::
 1. Provide the following values:
    - **Name**: Enter a name for the plug-in, such as *Input validation*.
    - **Table**: Choose a table to associate the plug-in to, such as *Account*.
-   - **Run this plugin rule when the row is**. Specify the data event used to trigger the plug-in:
-      - **Create**. Triggers the rule during a row create operation.
-      - **Update**. Triggers the rule during a row change operation.
-      - **Delete**. Triggers the rule during a row delete operation.
-1. **Formula**. Enter a Power Fx formula in the ***Formula box**.  
-   For example:
-
-   ```powerapps-dot 
-   If( IsBlank( ThisRecord.Email ), Patch([@Accounts], ThisRecord, { 'Do not allow Emails': true }))  
-   ```
-
-1. **Advanced options** > **When should this run**:
-   - **Pre-operation**. Select this option if you want to run your plug-in logic after the form validation, but before the values are inserted or changed in Dataverse.
-   - **Post operation**. Select this option to run your plug-in logic after the values have been inserted or changed in Dataverse.
+   - **Run this plug-in rule when the row is**. Specify the data event that invokes the plug-in.
+1. Enter the Power Fx expression in the **Expression** editor.
+   - Reference Dataverse tables using data collection functions, such as [Filter() and LookUp()](/power-platform/power-fx/reference/function-filter-lookup).
+   - Use `ThisRecord` to access column values in the table row associated with the plug-in run, such as `ThisRecord.'Account Name'`.
+1. Optionally, expand **Advanced options** to modify the **stage** (when this should run) and the **solution** where the plug-in is saved.
 1. Select **Save**.
-1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
+1. [Test your automated low-code plug-in](#test-a-low-code-plug-in).
 
-## Create a low-code plug-in that uses connectors
+## Use Power Platform connectors in low-code plug-ins
 
-The low-code plug-in for connectors solution is a streamlined user interface that makes creating low-code plug-ins for connector actions easier. It supports the creation of plug-ins for stored procedures, which can then be invoked in Power Apps. A wizard is installed as an additional feature of the Dataverse Accelerator, which is used for creating plug-ins with Power Fx formulas.
+### Prerequisites for using connectors in low-code plug-ins
+
+> [!div class="checklist"]
+> * [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
+> * [Connection reference](/power-apps/maker/data-platform/create-connection-reference) with an active connection.
+
+### Using connector actions in low-code plug-ins
+
+You can easily use [connectors]( /connectors/connector-reference/connector-reference-powerapps-connectors) and [custom connectors]( /connectors/custom-connectors/) from within a low-code plug-in Power Fx formula.
 
 > [!NOTE]
-> Currently, there are a limited number of connectors and actions available.
+> Not all connector actions are supported at this time.
 
-### Prerequisites for low-code plug-ins with connectors wizard
+1. Create a connection to the connector you want to use.
+1. [Add a connection reference](/power-apps/maker/data-platform/create-connection-reference#manually-add-a-connection-reference-to-a-solution-using-solution-explorer) to the connection in the Dataverse environment.
+1. In the low-code plug-in Power Fx expression editor, type the name of the connection reference (the internal name with a prefix and underscore, like `new_connectorName`, not the display name).
+1. Intellisense shows you the available actions. Select the action you want, and then enter the required parameters.
 
-- All prerequisites described earlier for creating an instant or automated plug-in. More information: [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
-- At least **can use and share** permission to a SQL Server connection (using SQL Server Authentication), or **owner** permission on a SQL Server connection using any other authentication type, such as Azure Active Directory.
+Before using a connector in a low-code plug-in, review the connector's [documentation](/connectors/connector-reference/connector-reference-powerapps-connectors) to ensure that you're passing the input and output parameters correctly.
 
-### Create a low-code plug-in that uses connectors
+More information: [example](lowcode-plug-ins-examples.md#sample-instant-plug-in-with-msn-weather-connector)
 
-#### Launch the plug-ins for connectors wizard
+## Smart low-code plug-ins
 
-1. In [Power Apps](https://make.powerapps.com) go to apps and play the Dataverse Accelerator app.
-1. In the Dataverse Accelerator app, on the **Instant Plugins** card select **New plugin**.
-1. Name your plug-in and provide a description.
-1. Open **Advanced Options**, and then select **Launch the plug-ins wizard**.
+### What are smart low-code plug-ins?
 
-#### Configure the connector action
+Dataverse includes AI-powered actions, which can be used to generate or extract data using Azure Open AI and the power of AI Builder. You can call these functions from both instant and automated low-code plug-ins.  
 
-1. In the **plug-in from external data** wizard on the **Connections** screen, you can either select an existing connection if you're already made one or choose to create a new connection:
-    - If you want to use an existing connection, select the connection you want.
-    - Otherwise, select **New connection** or **Add connection**. You're asked for your SQL authentication type, credentials, and other information. Complete the required fields, and then select **Create**.
-      When your connection is created, return to the wizard and select **Refresh**, and then select your connection.
-1. (Optional) If you select **Next** after selecting the connection, the connection reference is automatically created for the plug-in. However, if you want to provide a custom name, you can do so by expanding **Advanced options** and then select **Manually Configure Connection Reference** to create a connection reference for the plug-in.
-    - On the **Connection Reference** page, select or name your connection reference, and then select **Next**.
-1. A list of available connector actions are provided. This allows you to pick which action you want to create the plug-in for. Select the action and then select **Next**.
-1. In the provided dropdown lists, provide a value for each parameter. As you select values, the dropdown list values for the dependent fields are fetched if more are available, so you should provide values in order (from top to bottom).
-1. After providing values for the initial parameters available, a dynamic list of input values might be presented depending on the last parameter. These can either be configured to be input parameters for every invocation, or you can enter a static value to use for every invocation.
-   :::image type="content" source="media/lowcode-plug-in-from-connector.png" alt-text="Specify parameters for low-code plug-in for connectors wizard":::
+**Functions supported for smart low-code plug-ins**
 
-   If dynamic values are returned, they can be configured in two ways:
-   - Input parameters, which allow you to change the value every time the plug-in is run. Check the box below the parameter to expose it as an input parameter.
-   - Static values, which stay the same every time the plug-in is run. Provide a static value by typing in the text field or make a selection from the dropdown.
-   :::image type="content" source="media/lowcode-plug-in-input-param.png" alt-text="Specify input and static values":::
+| Function | Description |
+| - | - |
+| `AISummarize` | Summarize text ([Example](lowcode-plug-ins-examples.md#sample-for-aisummarize)) |
+| `AISentiment` | Detect the sentiment of text as either positive, negative, or neutral ([Example](lowcode-plug-ins-examples.md#sample-for-aisentiment)) | 
+| `AIReply` | Draft a reply to text | 
+| `AITranslate` |  Translate text to English ([Example](lowcode-plug-ins-examples.md#sample-for-aitranslate)) | 
+| `AIClassify`| Classify text into one or more provided categories ([Example](lowcode-plug-ins-examples.md#sample-for-aiclassify)) | 
+| `AIExtract`| Extract specified entities such as registration numbers ([Example](lowcode-plug-ins-examples.md#sample-for-aiextract)) | 
 
-   Once all parameters have values, the Power Fx formula to invoke the procedure is generated. Select **Next**.
+### Requirements
 
-1. The **Review** page shows you the plug-in that is created in Dataverse, and the external connector action you're connecting to in the formula. If everything looks correct, select **Create**.
-1. Once the plug-in is created, you're taken directly to your new plug-in where you can view the definition and begin testing it:
-   - On the **plug-in** page, the name of the plug-in you have created is displayed. Select **Next**.
-   - A list of all of the inputs that will be sent to the connector and their data types is displayed. The Power Fx formula that is used to invoke the stored procedure is also displayed. This is also the screen you'll later use to update the plug-in.
-   > [!NOTE]
-   > Currently, you can't edit the parameters or formula on this page in the plug-ins wizard.
+> [!div class="checklist"]
+> * [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
+> * AI Builder subscription
 
-1. Test your plug-in. More information: [Test a low-code plug-in](#test-a-low-code-plug-in)
-
-### Plug-ins with connectors limitations
-
-- Currently, only the SQL Server **Execute Stored Procedure (V2)** action is available.
-- Plug-ins that use connectors will only output results into the external data source. Due to this, you need to take additional steps if you want to use the output of stored procedures in Dataverse. In the future, outputs to Dataverse will be supported.
-- Once the formula is generated and the input parameters are configured, you can't edit them directly. Currently, instead of making changes to the existing plug-in you must create a new one.
-- If a stored procedure runs longer than two minutes, Dataverse and Power Apps (make.powerapps.com) timeout and you won't receive the completion notification. However, you can still directly access the SQL table to get the results though direct connections or virtual tables.
-- Currently, there's no application lifecycle management (ALM) support for stored procedure plug-ins. This means they'll have to be re-created when importing solutions between environments.
+> [!TIP]
+> If you do not have an AI Builder subscription, you can use an [AI Builder trial](/ai-builder/ai-builder-trials). View the AI models page in Power Apps (make.powerapps.com) to get AI Builder, which directs you to start a trial.
 
 ## Test a low-code plug-in
 
-- Manually test the instant plug-in to verify it behaves as expected.
+**Manually test instant plug-ins**
 
-  1. From the **plug-ins** page, select an instant low-code plug-in from the list, and then select **Test** on the command bar.
-  :::image type="content" source="media/low-code-plugin-test.png" alt-text="Test low-code plug-in":::
+  1. From the **Home screen**, select an instant plug-in from the list, then select **Test** on the command bar. You can also get to this screen from the instant plug-in editor in the command bar after it's been saved.
+  :::image type="content" source="media/low-code-plugin-test-home.png" alt-text="Select Test for the low-code plug-in":::
 
   1. Provide values for any input parameters that are defined in the low-code plug-in, and then select **Run**.
+  :::image type="content" source="media/low-code-plugin-test.png" alt-text="Select Run to test low-code plug-in":::
 
   Observe the response.
   
   > [!TIP]
-  > Use output parameters to help validate expected behavior and results. Otherwise, you will only see a success or failure when testing.
+  > Use output parameters to help validate expected behavior and results. Otherwise, you only see a success or failure when testing.
 
-- You can test automated plug-ins by invoking the data event. Observe if the plug-in ran successfully by validating expected changes that were defined in the formula.
+**Test automated plug-ins**
+
+Test automated plug-ins by invoking the data event. Observe if the plug-in ran successfully by validating expected changes that were defined in the formula.
 
 ### Integrate a low-code plug-in
 
-On the **Integrate** tab of the test page, you can learn how to invoke the instant plug-in from other contexts within Power Platform.
+#### Invoke an instant plug-in from a canvas app or custom page
 
-**Invoke an instant plug-in from a canvas app or custom page**
-1. Open a new browser tab, and then go to https://make.powerapps.com/.
-1.	In the same environment, create a new canvas app from scratch.
-1.	Add the **Environment** table from the Dataverse connector as a data source.
-1. Copy the formula from the **Integrate** tab.
-1. Insert a button and two text input controls. Set the **Format** property of the input controls to **Number**.
-   These will be used to provide input into and call the formula. More information: [Button control in Power Apps](../canvas-apps/controls/control-button.md)
-1. In the Dataverse Accelerator app, from the **Plug-ins** page, select an instant low-code plug-in from the list, and then select **Test** on the command bar. 
-1. Select the **Integrate** tab.
-1. Copy the formula from the text area by selecting the copy icon.
-1. Paste the formula into the button's `OnSelect` property.
-1. Map each input parameter `Value` to reference the app controls, such as `Environment.CalculateSum({ X: TextInput1.Text, Y: TextInput2.Text });`
-1. If an output parameter is defined for the low-code plug-in, capture the response using `Set()` or **UpdateContext()**, such as `Set( ActionResult, Environments.CalculateSum({ X: 10, Y: 200 }) );`
-1. Add a label control and set the text value to the response captured. For example, set the text value of the label control to the variable `ActionResult`.
-1. Play the app and select the button to run the low-code plug-in.
+1. In the **Dataverse Accelerator** app:
+    1. Select the instant plug-in in the list.
+    1. Select **Copy code snippet** on the command bar.
+    :::image type="content" source="media/low-code-plugin-instant-integrate.png" alt-text="Invoke an instance low-code plug-in":::
+    1. Paste and save the copied formula to a text editor or notepad (somewhere you can easily refer back to).
+1. In [Power Apps](https://make.powerapps.com/):
+   1. Create or edit a canvas app (or custom page) in the Power Apps studio.
+   1. In the left navigation, under the **Data Sources** tab, select **+ New data source**, and search for the **Environment** option from the Dataverse connector.
+   1. Insert the following components into the canvas:
+    - Add input controls that correspond with each parameter's data type, such as [Text input](/power-apps/maker/canvas-apps/controls/control-text-input) for text or numbers, [toggle](/power-apps/maker/canvas-apps/controls/control-toggle) for boolean.
+    - If the plug-in scope is bound to a table, add a combobox that is associated with the same table so you can choose the input.
+    - Add a [button](../canvas-apps/controls/control-button.md) to call the plug-in.
+1. Paste the plug-in formula you copied into the button's `OnSelect` property.
+1. Map each input parameter `Value` to reference the corresponding input controls:
+    - If the formula was `Environment.new_CalculateSum({ X: Value, Y: Value });`, it could be rewritten as: `Environment.new_CalculateSum({ X: TextInput1.Text, Y: TextInput2.Text });`
+    - If the formula was bound, replace `Environment` with the table display name to access the plug-in.
+1. If an output parameter is defined for the low-code plug-in:
+    1. Capture the response in a `Set()` or `UpdateContext()` formula: `Set( ActionResult, Environments.CalculateSum({ X: TextInput1.Text, Y: TextInput2.Text }) );`. Display the variable in a label. Alternatively use the `Notify()` formula to display data in a notification.
+1. Play the app and select the command on the command bar to run the low-code plug-in.
 
-**Invoke an instant plug-in from a Power Automate cloud flow**
-1. In a cloud flow, add an action from the Microsoft Dataverse connector.
-2. Select the action called **Perform an unbound action**.
-3. Select your plug-in (it will have the unique name with a prefix).
+Learn more about how you can [call Dataverse actions directly from Power Fx in canvas apps](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx-preview).
+
+#### Invoke an instant plug-in from a Power Automate cloud flow
+
+1. In a cloud flow, add a new action from the Microsoft Dataverse connector.
+2. Select the action called [Perform an unbound action](/connectors/commondataserviceforapps/#perform-an-unbound-action) or [Perform a bound action](/connectors/commondataserviceforapps/#perform-a-bound-action).
+3. Select your plug-in (it has the unique name with a prefix).
 4. Provide values for all of the input parameters (if any).
+
+#### Invoke an instant plug-in from the Dataverse Web API
+
+Follow the steps for **Unbound action** or **Function bound to table** sections in the [Invoking custom APIs from the Web API documentation](/power-apps/developer/data-platform/custom-api#invoking-custom-apis-from-the-web-api) (depending on the appropriate scope of the plug-in).
+
+## Trace logging
+
+Trace logging is a feature in Dataverse that allows you to capture detailed information about the execution of plug-ins. By enabling trace logging, you can get a more complete picture of what's happening during plug-in execution, which can be helpful for troubleshooting issues and identifying performance bottlenecks. When you enable trace logging for plug-ins, Dataverse generates log files that include information about the plug-in's input and output parameters, as well as any exceptions or errors that occur during execution.
+
+To enable trace logging for plug-ins, you need to [enable the trace logging feature for the environment](/power-apps/developer/data-platform/logging-tracing).
 
 ## Contacting Help + support
 
@@ -257,14 +283,13 @@ For issues with the Dataverse Accelerator solution installation or low-code plug
 
 ## Example low-code plug-ins you can create
 
-For a few examples of how to create a low-code plug-in, go to [Example Dataverse low-code plug-ins (experimental)](lowcode-plug-ins-examples.md)
+For a few examples of how to create a low-code plug-in, go to [Example Dataverse low-code plug-ins (preview)](lowcode-plug-ins-examples.md)
 
-## Known limitations
+## Limitations
 
-- The environment language object needs to be readded to access new plug-ins inside existing canvas apps. For any plug-ins created after you have added the environment table data source to an existing canvas app, you'll have to remove and readd the Power Fx environment language object. Then you'll see the updated list of plug-ins as actions.
-- Application lifecycle management (ALM) isn't currently supported for automated low-code plug-ins. When you import a solution with an automated low-code plugin, the plug-in logic won't be successfully executed in the target environment. However, ALM is supported for instant low-code plug-ins; users can manually add plug-in solution components to an unmanaged solution, and the plug-in will run successfully in the target environment.
-- Intellisense requires explicit notation in automated plugins if you want to refer any tables in the formula. Use the following disambiguation syntax such as [@Accounts] (and not Accounts).
-- Nested support. Plug-ins can only call first-party actions published by Microsoft from Power Fx expressions. In the future, plug-ins will be able to call other user-defined plug-ins.
+- The environment language object needs to be readded to access new plug-ins inside existing canvas apps. For any plug-ins created after you have added the environment table data source to an existing canvas app, you have to remove and readd the Power Fx environment language object. Then you see the updated list of plug-ins as actions.
+- Intellisense requires explicit notation in automated plug-ins if you want to refer any tables in the formula. Use the following disambiguation syntax such as `[@Accounts]`, using square brackets and the `@` symbol (not `Accounts`).
+- Nested support. Plug-ins can only call first-party actions published by Microsoft from Power Fx expressions.
 - Some `Collect` scenarios require `Patch`. There are some scenarios where `Collect()` doesn't work. The workaround is to use `Patch()` as shown in the populating regarding column example below. If you're creating an automated plug-in, prepend @ to each table referenced in the Power Fx formula.
 
     ```powerapps-dot
@@ -273,7 +298,11 @@ For a few examples of how to create a low-code plug-in, go to [Example Dataverse
         { Regarding : First(Accounts) }
     )
     ```
-- Formulas operating on tables with more than 1000 rows will fail at runtime, except if a primary ID is provided as a condition formula, such as `LookUp(Accounts, Account = GUID(AccountID))`, where `AccountID` is an input parameter of type string.
+- When low-code plug-ins interact with connectors and DLP is employed, the admin can block creation of connections using DLP. However, existing connection references in the Dataverse environment will continue to function. In case the admin needs to block all low-code plug-in interactions with any connectors, they can simply disable the organization setting `Allowconnectorsonpowerfxactions`. This setting is enabled by default and can be disabled by usual SDK methods (WebAPI, SDK, PowerShell, and so on). You can disable this using a low-code instant plug-in as follows:
+   ```powerapps-dot
+   Patch(Organizations, First(Organizations), { 'Enable connectors on power fx actions.': 'Enable connectors on power fx actions. (Organizations)'.No })
+   ```
+- Plug-ins that use connectors can only output results from specific fields. Due to this, you need to map specific primitive values from the connector response to output values.
 
 ## See also
 
