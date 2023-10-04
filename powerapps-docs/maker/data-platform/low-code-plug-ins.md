@@ -70,7 +70,7 @@ Unique properties:
 
 | Property | Description |
 |-|-|
-| Data event<br>('Run this plug-in when the row is') | Specifies which data event triggers the plug-in. Any combination of the following events can be selected to invoke the plug-in:<br><ul><li>Create</li><li>Update</li><li>Delete</li>|
+| Data event<br>('Run this plug-in when the row is') | Specifies which data event triggers the plug-in. Any of the following events can be selected to invoke the plug-in:<br><ul><li>Create</li><li>Update</li><li>Delete</li>|
 | Stage<br>('When should this run') | You can design whether the plug-in runs before or after the data event completes, which allows flexibility to access and modify values in key stages of the event.<br><br><ul><li>**Pre-operation**. Select this option if you want to run your plug-in logic after the form validation, but before the values are inserted or changed in Dataverse.</li><li>**Post operation**. Select this option to run your plug-in logic after the values have been inserted or changed in Dataverse.</li></ul> |
 
 ---
@@ -154,11 +154,11 @@ Unique properties:
 1. Provide the following values:
    - **Name**: Enter a name for the plug-in, such as *Input validation*.
    - **Table**: Choose a table to associate the plug-in to, such as *Account*.
-   - **Run this plug-in rule when the row is**. Specify the data event (or combination) that invokes the plug-in.
+   - **Run this plug-in rule when the row is**. Specify the data event that invokes the plug-in.
 1. Enter the Power FX expression in the **Expression** editor.
    - Reference Dataverse tables using data collection functions (e.g., [Filter() and LookUp()](/power-platform/power-fx/reference/function-filter-lookup)).
    - Use `ThisRecord` to access column values in the table row associated with the plug-in run (e.g., `ThisRecord.'Account Name'`)
-1. Optinally expand **advanced options** to modify the **stage** (when should this run), **solution**, and **description**.
+1. Optinally expand **advanced options** to modify the **stage** (when should this run) and the **solution** where the plug-in will be saved.
 1. Select **Save**.
 1. [Test your automated low-code plug-in](#test-a-low-code-plug-in)
 
