@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 03/20/2023
+ms.date: 10/04/2023
 ms.custom: template-how-to
 ---
 # Example Dataverse low-code plug-ins (experimental)
@@ -104,7 +104,7 @@ Go to the [Error() function](/power-platform/power-fx/reference/function-iferror
 Prerequisites:
 > [!div class="checklist"]
 > * Server-side synchronization is set up for your environment. More information: [Set up server-side synchronization of email, appointments, contacts, and tasks](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)
-> * An email template. 
+> * An email template.
 
 ### Example email template
 
@@ -206,7 +206,7 @@ When the notify technician action is selected in the app, an in-app notification
 
 ## Sample instant plug-in with MSN Weather connector
 
-This plugin will return the current weather for a specific location using [MSN Weather connector](/connectors/msnweather/).
+This plugin returns the current weather for a specific location using [MSN Weather connector](/connectors/msnweather/).
 
 Prerequisites:
 > [!div class="checklist"]
@@ -215,31 +215,32 @@ Prerequisites:
 
 1. Create a connection reference for MSN Weather if not available yet in the environment:
 :::image type="content" source="media/low-code-plugin-msn-createconnectionref.png" alt-text="Create a connection reference in the app from the connection references pane on the right":::
- 
+
 1. Copy snippet:
 :::image type="content" source="media/low-code-plugin-msn-action.png" alt-text="Copy the action snippet from the connections pane":::
- 
+
 1. Finish editing the formula using intellisense and consume the connector response properties as needed:
 :::image type="content" source="media/low-code-plugin-msn-definition.png" alt-text="Complete the plug-in definition in the editor":::
- 
+
 1. Save
- 
+
 1. [Test the plug-in](./lowcode-plug-ins.md/#test-a-low-code-plug-in)
 
-## Low-Code Plug-Ins with AI samples
+## Low-code plug-ins with AI samples
 
 ### Sample for AISummarize
 
 Here's an example of how you can perform text summarization of a Dataverse column.
 
-To store the summarized version of a Note's description, you can create either an instant or automated low-code plug-in that creates a new Note. For this example, let's create an automated plug-in.
+To store the summarized version of a note's description, you can create either an instant or automated low-code plug-in that creates a new note. For this example, create an automated plug-in.
 
 **Create the plug-in**
-1. Run the Dataverse Accelerator app
-1. Click the **Create automated plug-in** card.
+
+1. Run the Dataverse accelerator app.
+1. Select the **Create automated plug-in** card.
 1. Give it the **Display name** of _Summarize Notes_.
 1. Select the table **Annotations**
-1. Keep the radio selection on **Create** for the event
+1. Keep the radio selection on **Create** for the event.
 1. Enter the following as the expression:
    ```powerapps-dot
    // Check if 'AI Summarized' in title to preview infinite loop
@@ -248,88 +249,89 @@ To store the summarized version of a Note's description, you can create either a
     Collect(Notes, {Title: "AI Summarized: " &Title, Description: AISummarize(Description), Regarding:ThisRecord.Regarding})
    )
    ```
-1.  Under **advanced settings**, choose the _post-operation_ stage to run the plug-in after the data event occurs.
-1.  **Save** the plug-in
+1. Under **Advanced settings**, choose the _post-operation_ stage to run the plug-in after the data event occurs.
+1. **Save** the plug-in.
 
-:::image type="content" source="media/low-code-plugin-aisummarize-definition.png" alt-text="AI Summarized definition in the automatedplug-in editor":::
+:::image type="content" source="media/low-code-plugin-aisummarize-definition.png" alt-text="AI Summarized definition in the automated plug-in editor":::
 
-Test the plug-in by running the data event. In this case, create a new note on any table. We'll check using the Accounts table below.
+Test the plug-in by running the data event. In this case, create a new note on any table. Check using the accounts table below.
 
-1. In the maker portal, go to **Tables** > **Accounts**
-1. In the command bar, click **edit**
-1. Open a row in the default form by selecting an Account, then click **Edit row using form**
+1. In Power Apps (make.powerapps.com), go to **Tables** > **Accounts**.
+1. On the command bar, select **Edit**.
+1. Open a row in the default form by selecting an account, then select **Edit row using form**.
    :::image type="content" source="media/low-code-plugin-aisummarize-edit-account.png" alt-text="Open the accounts form":::
-1. Save a new note in the timeline with a Title and Description.
-1. Refresh the page. A new note will appear with a summarized version of the previous note.
+1. Save a new note in the timeline with a **Title** and **Description**.
+1. Refresh the page. A new note appears with a summarized version of the previous note.
 
 :::image type="content" source="media/low-code-plugin-aisummarize-notes.png" alt-text="AI Summarized notes in the timeline":::
 
 > [!NOTE]
-> - AISummarize might not work if the length of text is too short.
+> - `AISummarize` might not work if the length of text is too short.
 > - Other languages will be accepted and summarized into English by default.
 
 ### Sample for AITranslate
 
-You can perform text translation with the **AITranslate** function. It currently supports translation to English (Example scenario: If customers report issues in different languages, you could introduce a new column to capture a version of their issue description that is translated to English). You can use this action in instant or automated low-code plug-ins. 
+You can perform text translation with the `AITranslate` function. It currently supports translation to English (Example scenario: If customers report issues in different languages, you could introduce a new column to capture a version of their issue description that is translated to English). You can use this action in instant or automated low-code plug-ins.
 
-In this demonstration we will use an instant plug-in to quickly try the function and see the result. 
+In this demonstration, use an instant plug-in to quickly try the function and see the result.
 
-1. Open the Dataverse Accelerator app.
-1. Click Create instant plug-in.
-1. For the Display name type AITranslateDemo.
-1. Click **New input parameter**.
-1. For the **Label**, type _input_. Leave the Data type as String.
-1. Click **New out parameter**. 
-1. For the **Label** type _output_. Leave the Data type as String.
-1. Use the following as the Power FX expression:
+1. Open the Dataverse accelerator app.
+1. Select **Create instant plug-in**.
+1. For the **Display name** type *AITranslateDemo*.
+1. Select **New input parameter**.
+1. For the **Label**, type _input_. Leave the **Data type** as **String**.
+1. Select **New out parameter**. 
+1. For the **Label** type _output_. Leave the **Data type** as **String**.
+1. Use the following as the Power Fx expression:
    ```powerapps-dot
    {output: AITranslate(input)}
    ``` 
-1. **Save** the plug-in. 
-1. Click **Test**. 
-1. For the input provide any text in a language other than English as input (example text in spanish: `Me encantan las nuevas funciones de IA.`)
-1. Click **Run**.
-1. Verify the Response returned the text translated to English (the sample spanish text should return as `I love the new AI features`)
+1. **Save** the plug-in.
+1. Select **Test**. 
+1. For the input provide any text in a language other than English as input (example text in Spanish: `Me encantan las nuevas funciones de IA`).
+1. Select **Run**.
+1. Verify the **Response** returned the text translated to English (the sample Spanish text should return as `I love the new AI features`).
 
-### Sample for AISentiment 
-Here's an example of how you can detect sentiment with the AISentiment function. You can use this action in instant or automated low-code plug-ins. 
+### Sample for `AISentiment`
 
-Example scenario: In a customer feedback scenario, you could introduce a new column to capture the sentiment of that feedback as either positive, negative, or neutral. 
+Here's an example of how you can detect sentiment with the `AISentiment` function. You can use this action in instant or automated low-code plug-ins.
 
-In this demonstration we will use an instant plug-in to quickly try the function and see the result. 
+Example scenario: In a customer feedback scenario, you could introduce a new column to capture the sentiment of that feedback as either positive, negative, or neutral.
 
-1. Open the Dataverse Accelerator app.
-2. Click **Create instant plug-in**.
+In this demonstration, use an instant plug-in to quickly try the function and see the result.
+
+1. Open the Dataverse accelerator app.
+2. Select **Create instant plug-in**.
 3. For the **Display name** type _AISentimentDemo_.
-4. Click **New input parameter**.
-5. For the **Label** type input. Leave the Data type as String.
-6. Click **New out parameter**. 
-7. For the **Label** type _output_. Leave the Data type as String.
+4. Select **New input parameter**.
+5. For the **Label** type _input_. Leave the **Data type** as **String**.
+6. Select **New out parameter**.
+7. For the **Label** type _output_. Leave the **Data type** as **String**.
 8. Use the following in the Expression:
    ```powerapps-dot
    { output: AISentiment(input) }
    ``` 
-9. **Save** the plug-in. 
-10. Click **Test**. 
+9. **Save** the plug-in.
+10. Select **Test**.
 11. For the input provide the following text: `The product is amazing!`
-12.	Click Run.
-13.	Verify the Response returned shows the output value as _Positive_.
+12. Select **Run**.
+13. Verify the **Response** returned shows the output value as _Positive_.
 
 ### Sample for AIExtract
 
-Here's an example of how you can extract data from text with the AIExtract function. You can use this action in instant or automated low-code plug-ins. 
+Here's an example of how you can extract data from text with the `AIExtract` function. You can use this action in instant or automated low-code plug-ins.
 
-Example scenario: If customers submit inquiries about orders, you could introduce a new column to capture the order numbers mentioned. 
+Example scenario: If customers submit inquiries about orders, you could introduce a new column to capture the order numbers mentioned.
 
-In this demonstration we will use an instant plug-in to quickly try the function and see the result. 
+In this demonstration, use an instant plug-in to quickly try the function and see the result.
 
-1. Open the Dataverse Accelerator app.
-2. Click **Create instant plug-in**.
+1. Open the Dataverse accelerator app.
+2. Select **Create instant plug-in**.
 3. For the **Display name** type _AIExtractDemo_.
-4. Click **New input parameter**.
-5. For the **Label** type _input_. Leave the Data type as String.
-6. Create another input parameter with the label as _entity_. Leave the Data type as String.
-7. Click **New out parameter**. 
+4. Select **New input parameter**.
+5. For the **Label** type _input_. Leave the **Data type** as **String**.
+6. Create another input parameter with the label as _entity_. Leave the **Data type** as **String**.
+7. Select **New out parameter**. 
 8. For the **Label** type _output_. Leave the Data type as String. 
 9. Use the following in the Expression. The result of the AIExtract action is a table. In this example we will use the First function to return the first value from the table.
    ```powerapps-dot
@@ -355,18 +357,18 @@ In this demonstration we will use an instant plug-in to quickly try the function
 3. For the **Display name** type _AIClassifyDemo_.
 4. Click **New input parameter**.
 5. For the **Label** type _input_. Leave the Data type as String.
-6. Create another input parameter with the **label** as _entity_. Leave the Data type as String.
-7. Click **New out parameter**. 
-8. For the Label type _output_. Leave the Data type as String.
-9. Use the following in the Expression. The second input of the AIExtract action is a table of choices the input can be classified into. In this example we will use an inline table with the options _Problem_, _Billing_, _How To_, and _Licensing_.
+6. Create another input parameter with the **label** as _entity_. Leave the **Data type** as **String**.
+7. Select **New out parameter**. 
+8. For the Label type _output_. Leave the **Data type** as **String**.
+9. Use the following in the **Expression**. The second input of the `AIExtract` action is a table of choices the input can be classified into. In this example, an inline table with the options _Problem_, _Billing_, _How To_, and _Licensing_ is used.
    ```powerapps-dot
    { output: AIClassify(input, ["Problem", "Billing", "How To", "Licensing"]) }
    ```
-11. Click **Save**. 
-12. Click **Test**. 
+11. Select **Save**. 
+12. Select **Test**. 
 13. For the input provide the following text: `I am encountering an error trying to create a new record.`
-14. Click **Run**.
-15. Verify the Response returned shows the output value as _Problem_
+14. Select **Run**.
+15. Verify the **Response** returned shows the output value as _Problem_.
 
 ## See also
 
