@@ -82,7 +82,7 @@ The following limitations apply when using plug-in dependent assemblies.
 Your plug-in assembly plus any required dependent assemblies can be placed together in a NuGet package and then registered and uploaded to the Dataverse server. You do not need to create a package if your plug-in project does not require any dependent assemblies at run-time, other than what ships in the Microsoft.CrmSdk.CoreAssemblies NuGet package.
 
 <!-- Add correct links when available -->
-Instructions for creating a plug-in package using an interactive tool can be found in these separate how-to's: [Create and register a plug-in package](/power-platform/developer/cli/cli-create-package), [Create and register a plug-in package](/power-platform/developer/vs-create-package).
+Instructions for creating a plug-in package using an interactive tool can be found in these separate how-to's: [Create and register a plug-in package](/power-platform/developer/howto/cli-create-package).
 
 ### Don't depend on System.Text.Json
 
