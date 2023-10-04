@@ -41,7 +41,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 > The [Export to Data Lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) in finance and operations apps is being combined with Azure Synapse Link for Dataverse. We will announce deprecation of Export to Data Lake service and transition existing customers to Azure Synapse Link for Dataverse. 
 >
 > If you're planning to adopt the Export to Data Lake feature in finance and operations apps, you should consider adopting Azure Synapse Link with finance and operations data support instead.
-> We will provide guidance and tools for existing customers to transition to Azure Synapse Link for Dataverse. If you're currently using the Export to Data Lake feature in finance and operations apps, you can continue to use both services in parallel until the transition. To stay in touch with the product team and community, you can join the [Preview Viva engage group](https://www.yammer.com/dynamicsaxfeedbackprograms/). 
+> We will provide guidance and tools for existing customers to transition to Azure Synapse Link for Dataverse. If you're currently using the Export to Data Lake feature in finance and operations apps, you can continue to use both services in parallel until the transition. To stay in touch with the product team and community, you can join the [Viva engage group](https://www.yammer.com/dynamicsaxfeedbackprograms/). 
 
 ## Prerequisites
 
