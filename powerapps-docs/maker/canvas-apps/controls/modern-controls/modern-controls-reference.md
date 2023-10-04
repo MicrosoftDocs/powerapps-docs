@@ -35,6 +35,8 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Dropdown](modern-control-dropdown.md)** – Select a value from the list of items.
 
+**[Header](modern-controls-header.md)** – A control that creates a modern app header.
+
 **[Info button](modern-control-info-button.md)** – Use this control to provide additional information to users.
 
 **[Link](modern-control-link.md)** – Open hyperlinks in new tab.
