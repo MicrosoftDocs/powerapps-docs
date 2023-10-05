@@ -164,7 +164,7 @@ Unique properties:
 
 ## Use Power Platform connectors in low-code plug-ins
 
-Power Platform connectors can be used in low code plug-ins to easily integrate data and functionality from systems outside of Dataverse, such as SQL Server, Salesforce, and SharePoint, without the need for complex coding or custom development.
+Power Platform connectors can be used in low-code plug-ins to easily integrate data and functionality from systems outside of Dataverse, such as SQL Server, Salesforce, and SharePoint, without the need for complex coding or custom development.
 
 ### Prerequisites for using connectors in low-code plug-ins
 
@@ -174,7 +174,7 @@ Power Platform connectors can be used in low code plug-ins to easily integrate d
 
 ### Using connector actions in low-code plug-ins
 
-You can easily use [connectors]( /connectors/connector-reference/connector-reference-powerapps-connectors) and [custom connectors]( /connectors/custom-connectors/) from within a low-code plug-in Power FX formula.
+You can easily use [connectors]( /connectors/connector-reference/connector-reference-powerapps-connectors) and [custom connectors]( /connectors/custom-connectors/) from within a low-code plug-in a Power Fx formula.
 
 1. Create a connection to the connector you want to use.
 1. [Add a connection reference](/power-apps/maker/data-platform/create-connection-reference#manually-add-a-connection-reference-to-a-solution-using-solution-explorer) to the connection in the Dataverse environment.
@@ -187,7 +187,7 @@ More information: [example](lowcode-plug-ins-examples.md#sample-instant-plug-in-
 
 > [!NOTE]
 > * Not all connector actions are supported at this time.
-> * Do not use the Dataverse connector to connect to Dataverse tables from a plug-in expression. Instead, use the native Power FX functions to interact with collections: [Filter, Search, LookUp](/power-platform/power-fx/reference/function-filter-lookup), [Patch](/power-platform/power-fx/reference/function-patch), [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect), and [Set](/power-platform/power-fx/reference/function-set) [where columns are treated as global variables]).
+> * Do not use the Dataverse connector to connect to Dataverse tables from a plug-in expression. Instead, use the native Power Fx functions to interact with collections: [Filter, Search, LookUp](/power-platform/power-fx/reference/function-filter-lookup), [Patch](/power-platform/power-fx/reference/function-patch), [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect), and [Set](/power-platform/power-fx/reference/function-set), where columns are treated as global variables.
 
 ## AI functions in low-code plug-ins
 
@@ -202,7 +202,7 @@ Dataverse includes AI-powered actions, which can be used to generate or extract 
 > * AI Builder subscription
 
 > [!TIP]
-> If you do not have an AI Builder subscription, you can use an [AI Builder trial](/ai-builder/ai-builder-trials). View the AI models page in Power Apps (make.powerapps.com) to get AI Builder, which directs you to start a trial.
+> If you don't have an AI Builder subscription, you can use an [AI Builder trial](/ai-builder/ai-builder-trials). View the AI models page in Power Apps (make.powerapps.com) to get AI Builder, which directs you to start a trial.
 
 ### Supported functions
 
@@ -217,11 +217,11 @@ Dataverse includes AI-powered actions, which can be used to generate or extract 
 
 ### Using AI functions in low-code plug-ins
 
-Simply type in the AI function and provide the correct input values. Use intellisense and the linked example documentation to understand how to provide correct values to each function.
+Type in the AI function and provide the correct input values. Use intellisense and the linked example documentation to understand how to provide correct values to each function.
 
 ## Test a low-code plug-in
 
-### Test instant plug-ins
+## Test instant plug-ins
 
   1. From the **Home screen**, select an instant plug-in from the list, then select **Test** on the command bar. You can also get to this screen from the instant plug-in editor in the command bar after it's been saved.
   :::image type="content" source="media/low-code-plugin-test-home.png" alt-text="Select Test for the low-code plug-in":::
@@ -238,10 +238,10 @@ Simply type in the AI function and provide the correct input values. Use intelli
 
 Test automated plug-ins by invoking the data event. Observe if the plug-in ran successfully by validating expected changes that were defined in the formula.
 > [!TIP]
-> During development, you can conveniently invoke the associated data event using the table editor in the maker portal:
-> 1. In the [Power Apps Maker portal](https://make.powerapps.com), go to **Tables** > _Plug-in table_.
+> During the preview, you can invoke the associated data event using the table editor in Power Apps:
+> 1. Sign into [Power Apps](https://make.powerapps.com), go to **Tables** > _Plug-in table_.
 > 1. On the command bar, select **Edit**.
-> 1. You can create, update, or delete rows directly from this view. Alternatively, you could open a row in the default form by selecting a row, then selecting **Edit row using form** in the command bar.
+> 1. Create, update, or delete rows directly from this view. Alternatively, open a row in the default form by selecting a row, then select **Edit row using form** on the command bar.
 
 ### Integrate a low-code plug-in
 
@@ -304,7 +304,7 @@ For a few examples of how to create a low-code plug-in, go to [Example Dataverse
         { Regarding : First(Accounts) }
     )
     ```
-- When low-code plug-ins interact with connectors and DLP is employed, the admin can block creation of connections using DLP. However, existing connection references in the Dataverse environment will continue to function. In case the admin needs to block all low-code plug-in interactions with any connectors, they can simply disable the organization setting `Allowconnectorsonpowerfxactions`. This setting is enabled by default and can be disabled by usual SDK methods (WebAPI, SDK, PowerShell, and so on). You can disable this using a low-code instant plug-in as follows:
+- When low-code plug-ins interact with connectors and DLP is employed, the admin can block creation of connections using DLP. However, existing connection references in the Dataverse environment continue to function. In case the admin needs to block all low-code plug-in interactions with any connectors, they can disable the organization setting `Allowconnectorsonpowerfxactions`. This setting is enabled by default and can be disabled by usual SDK methods (WebAPI, SDK, PowerShell, and so on). You can disable this using a low-code instant plug-in as follows:
    ```powerapps-dot
    Patch(Organizations, First(Organizations), { 'Enable connectors on power fx actions.': 'Enable connectors on power fx actions. (Organizations)'.No })
    ```
