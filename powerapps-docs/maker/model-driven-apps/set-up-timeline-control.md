@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 09/11/2023
+ms.date: 10/05/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -617,7 +617,7 @@ Power platform administrators can restrict the file size of attachments users ca
   
 ### Duplicate posts are shown when sorting records by older to newer
 
-The API that timeline uses to fetch posts does not support sorting in this direction, so timeline recieves the wrong posts to display. When sorting timeline in this way, use notes instead.
+The API the timeline uses to fetch posts doesn't support sorting by older to newer posts. When you sort this way, the timeline receives the wrong posts to display. When sorting the timeline by older to newer, use notes instead.
 
 ### Notes can only have one attachment added from the attachment button
 
