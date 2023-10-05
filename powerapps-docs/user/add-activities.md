@@ -2,10 +2,9 @@
 title: "Timeline Overview for Users| MicrosoftDocs"
 description: Timeline Overview for Users 
 author: dsierman
-
 ms.component: pa-user
 ms.topic: overview
-ms.date: 09/29/2023
+ms.date: 10/04/2023
 ms.subservice: end-user
 ms.author: dsierman
 ms.custom: ""
@@ -31,7 +30,7 @@ Timeline allows you to:
 
 The timeline section on the table form is intended to centralize access to information and streamline effort to accomplish actions. The following section is an overview of how the timeline functionality works in each section on the table form. 
 
-When enabled by your system administrator, you can use the icons that are displayed on the top-right navigation in the timeline for quick access to do the following:
+When enabled by your system administrator, you can use the icons that are displayed on the top-right navigation in the timeline for quick access to do the following actions:
 
 - [Create a timeline row](#create-a-timeline-row)
 - [Work with Filters](#work-with-filters)
@@ -59,7 +58,7 @@ For information on timeline row configuration, [Set up the timeline control](../
 
 ## Work with filters
 
-When enabled by your system administrator, the timeline **Filter** further streamlines your productivity by allowing you to customize your experience and view data relevant to you.
+When enabled by your system administrator, the timeline **Filter** further streamlines your productivity by allowing you to customize your experience and view data that's relevant to you.
 
 ![Timeline filter functionality.](media\timeline-filter-12b.png "Timeline filter functionality")
 
@@ -88,9 +87,9 @@ The following category and subcategory options are available on the filer menu:
 | Row type           |<li>Notes</li><li>Posts</li><li>Activities</li>|
 |Activity type         |<li>Appointment</li><li>Campaign Activity</li><li>Campaign Response</li><li>Email</li><li>Fax</li><li>Case Resolution</li><li>Letter</li><li>Opportunity Close</li><li>Order Close</li><li>Phone Call</li><li>Quote Close</li><li>Recurring Appointment</li><li>Social Activity</li><li>Task</li><li>Project Service Approval</li><li>Booking Alert</li><li>Conversation</li><li>Session</li><li>Customer Voice survey invite</li><li>Customer Voice survey response</li><li>Custom activities (as configured by your system administrator)</li> |
 |Activity status            |<li>Active</li><li>Overdue</li><li>Closed</li>|               
-|Activity due date (active) |<li>Next 30 days</li><li>Next 7 days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li> |
+|Activity due date (active) |<li>Next 30 days</li><li>Next seven days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last seven days</li><li>Last 30 days</li> |
 |Posts by                   |<li>Auto post</li><li>Users</li> |
-|Modified date              |<li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li> |
+|Modified date              |<li>Last 24 hours</li><li>Last seven days</li><li>Last 30 days</li> |
 
 ### Save filter settings
 
@@ -184,7 +183,7 @@ Steps:
 
 **Enable threaded email through Personal Options setting**
 
-To enable threaded email via this option, go to the command bar and select **Settings**, then **Personalization Settings**. This displays the **Set Personal Options** dialog box so you can use the following steps to enable the threaded email view on timeline.
+To enable threaded email via this option, go to the command bar and select **Settings**, then **Personalization Settings**. The **Set Personal Options** dialog box is displayed so you can use the following steps to enable the threaded email view on timeline.
 
 Steps:
 1. Select the **Email** tab.
@@ -210,7 +209,7 @@ Legend
 
 Notes allow you to record richly formatted information and images for reference, summary, or investigation. You can easily add a mention to another user or a reference to a timeline row. The mention capability is available in timeline only when rich text notes and rich text posts are enabled. 
 
-When you type the **@** symbol, the results you see are matches with the first name, last name, or email address of system users starting with your search string. When you mouse over the profile image, you can view the user's detailed profile card and online presence status. More information: [View the profile card for a contact or user](profile-cards.md)
+When you type the **@** symbol, the results you see are matches with the first name, last name, or email address of system users starting with your search string. When you mouse over the profile image, you can view the user's detailed profile card and online presence status. More information: [View the profile card for a contact or user.](profile-cards.md)
 
 When you type the **#** symbol, the results you see are matches with the account and contact name table rows starting with your search string.
 
@@ -218,7 +217,7 @@ When you type the **#** symbol, the results you see are matches with the account
 
 When enabled by your system administrator, you can either add a note or a post to a row on timeline. Each note and post has a maximum size limit of 100,000 characters.
 
-You can also enter a note and add it to a row, but you can only add one attachment per note. If note isn't enabled by your system administrator, you can't add an attachment. 
+You can also enter a note and add it to a row, but you can only add one attachment per note. If your administrator hasn't enabled note, you can't add an attachment. 
 
 **Note display view**
 
@@ -390,7 +389,7 @@ When you mouse over the profile image, you can view the user's detailed profile 
 
 ### Add references in a post in timeline rows
 
-To add a reference such as links in a post to a timeline row, select the ![**Create a timeline row**.](media\timeline-create-a-record-icon.png "Create a timeline row") icon and select **Post**, then follow the steps below:
+To add a reference such as links in a post to a timeline row, select the ![**Create a timeline row**.](media\timeline-create-a-record-icon.png "Create a timeline row") icon, select **Post**, and then complete these steps:
 
 ![Add a link.](media\timeline-add-link-12a.png "Add a link")
 
@@ -419,7 +418,7 @@ The rich text editor toolbar provides features and functionality that allows you
 The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes.
 
 > [!NOTE]
-> You can access your browser's context menu by selecting **Ctrl + right-click**. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.
+> You can access your browser's context menu by selecting **Ctrl + right-click**. This setting is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.
 
 |Icon | Name | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|-----------------------------|
@@ -444,19 +443,17 @@ The following table describes the different formatting features and functionalit
 |![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type small letters just above the line of text. |
 |![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type small letters just below the line of text. |
 |![Strikethrough.](media/format-strikethrough.png "Strikethrough")| Strikethrough |  | Cross out text by drawing a line through it. |
-|![Insert Image.](media\insert-picture.png "Insert Image")| Insert Image|	|You can insert an image by directly copying and pasting it inline in the editor, dragging and dropping it from your desktop or local folder directly into the editor, or by typing a URL. The following formats are supported: .PNG, .JPG., or .GIF.<br /><br />To insert an image inline in your article: <br />1. Drag and drop the image or copy and paste it directly into the article. <br />2. Drag any corner of the image to resize it.<br /><br />To insert an image using a URL or navigating to the local image:<br />1. Choose Insert Image.<br />2. In the **Image** property dialog, choose from the following options:<br /><ul><li>Select **Browse** to navigate to the image on your computer.</li><li>Or specify the web address of the image, and properties to define how the image appears in the email or article.</li><br />**Note:**<ul><li>If the image is located on the external server, use the full absolute path. </li><li>If the image is located on a local server, you can use a relative path. </li><li>If you want the image to be linked to a target, add a URL for the image.</li><li>You can also specify if you want the targeted page to open in a new window, topmost window, same window, or parent window.</li></ul>
-|![Left to Right.](media/left-to-right.png "Left to Right")| Left to Right |  | Change the text to left-to-right for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. This is the default setting.|
+|![Insert Image.](media/insert-picture.png "Insert Image")| Insert Image|	|You can insert an image by directly copying and pasting it inline in the editor, dragging and dropping it from your desktop or local folder directly into the editor, or by typing a URL. The following formats are supported: .PNG, .JPG., or .GIF.<br /><br />To insert an image inline in your article: <br />1. Drag and drop the image or copy and paste it directly into the article. <br />2. Drag any corner of the image to resize it.<br /><br />To insert an image using a URL or navigating to the local image:<br />1. Choose Insert Image.<br />2. In the **Image** property dialog, choose from the following options:<br /><ul><li>Select **Browse** to navigate to the image on your computer.</li><li>Or specify the web address of the image, and properties to define how the image appears in the email or article.</li><br />**Note:**<ul><li>If the image is located on the external server, use the full absolute path. </li><li>If the image is located on a local server, you can use a relative path. </li><li>If you want the image to be linked to a target, add a URL for the image.</li><li>You can also specify if you want the targeted page to open in a new window, topmost window, same window, or parent window.</li></ul>
+|![Left to Right.](media/left-to-right.png "Left to Right")| Left to Right |  | Change the text to left-to-right for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. This setting is the default setting.|
 |![Right to Left.](media/right-to-left.png "Right to Left")| Right to Left |  | Change the text to right-to-left for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. The default setting is left-to-right. |
 |![Undo Typing.](media/undo-typing.png "Undo Typing")| Undo Typing |  | Undo changes you made to the content. |
 |![Redo Typing.](media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
-|![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging, and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
+|![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This setting supports features such as cell type, width and height, word wrapping, alignment, merging, and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
 |![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Appears when the toolbar is collapsed. Select to expand the toolbar and make all options visible. |
 |![Copy to Clipboard.](media/copy-clipboard.png "Copy to Clipboard")| Copy to Clipboard | | Copies entire text in a note to the clipboard so that you can paste the contents in another location.
 
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
-
-For more information, see [Commonly used rich text editor configurations](../maker/model-driven-apps/rich-text-editor-control.md#commonly-used-rich-text-editor-configurations).
 
 ## View a conversation transcript
 
@@ -480,9 +477,9 @@ If your administrator has enabled the pin setting and you have write/delete acce
 > [!Note]
 > If you have a system administrator or basic user role, the pin and unpin settings work by default. If you don't have either of these roles, you must have Create/Read/Write privileges to be added to the msdyn_customcontrolextendedsettings table for these settings to work.
 
-By default, you can pin notes. The activities that you can pin depend on how your administrator has set up the feature.
+By default, you can pin notes. The activities that you can pin depend on how your administrator has set up the feature. More information: [Let users pin and unpin activities to the top of timeline.](../maker/model-driven-apps/set-up-timeline-control.md#let-users-pin-and-unpin-activities-to-the-top-of-timeline)
 
-Pin a record by selecting the pin icon next to it. This moves it to the top of the timeline in the **Pinned** section, where it can be quickly accessed. The Pinned section also lists the number of records that are pinned. You can pin a maximum of 15 records. Records that are pinned will stay at the top of the timeline for a year unless you unpin them.
+Pin a record by selecting the pin icon next to it. This setting moves it to the top of the timeline in the **Pinned** section, where it can be quickly accessed. The Pinned section also lists the number of records that are pinned. You can pin a maximum of 15 records. Records that are pinned will stay at the top of the timeline for a year unless you unpin them.
 
 ![Pin and unpin record view.](media\timeline-pin-unpin-activity.png "Pin and unpin a record view")
 
@@ -499,7 +496,7 @@ Bookmarks are a quick way for the user to set, and switch between, different set
 
 1. Open the filter pane, and select the filters that will be associated with the new bookmark. You may have no filters selected.
 
-1. Select the bookmark icon ![Empty bookmark icon](media/add-activities/bookmark-icon.png) in timeline's action bar
+1. Select the bookmark icon ![Empty bookmark icon](media/add-activities/bookmark-icon.png) in timeline's action bar.
 
 1. Select **Add bookmark**.
 
