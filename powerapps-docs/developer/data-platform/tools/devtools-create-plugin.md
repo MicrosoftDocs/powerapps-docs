@@ -2,7 +2,7 @@
 title: "Quickstart: Create a plug-in using Power Platform Tools | Microsoft Docs"
 description: "Learn how to create and register a Dataverse plug-in using the Power Platform Tools extension for Visual Studio."
 ms.custom: ""
-ms.date: 03/30/2023
+ms.date: 10/05/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "phecke" # GitHub ID
@@ -25,7 +25,7 @@ This article provides information on how to create a plug-in using the Power Pla
 
 Follow these instructions to create a solution with plug-in library, connect to your Power Platform environment and register custom code assemblies, steps, and more.
 
-1. Use Power Platform Tools extension for Visual Studio to create a new solution with a plug-in library. For instructions to do this, go to the [Create a Power Platform Tools project](/power-platform/developer/devtools-vs) article in the Power Platform developer guide.
+1. Use Power Platform Tools extension for Visual Studio to create a new solution with a plug-in library. For instructions, go to the [Create a Power Platform Tools project](/power-platform/developer/devtools-vs) article in the Power Platform developer guide.
 
     If you already have an existing solution set up, follow instructions in [Add a new project to a Power Platform solution](/power-platform/developer/devtools-vs-create-project#add-a-new-project-to-a-power-platform-solution) in the Power Platform developer guide to add a Plug-in Library project to the solution using the Power Platform Tools template.
 
@@ -33,11 +33,11 @@ Follow these instructions to create a solution with plug-in library, connect to 
 
 1. Select the desired options in the dialog and select **Login**.
 
-1. Select an existing solution or the **Default** solution. This is the solution that your plug-in and workflow activity assemblies will be registered with.
+1. Select an existing solution or the **Default** solution. The solution will contain your registered plug-in and workflow activity assemblies for later distribution to other environments.
 
 1. Select **Done** when finished.
 
-The Power Platform Explorer view will be displayed or you can open that view from the **View** menu. Expand the nodes to see what kinds of environment data you can view. Right-click on nodes to see what options are available.
+The Power Platform Explorer view is displayed or you can open that view from the **View** menu. Expand the nodes to see what kinds of environment data you can view. Right-click on nodes to see what options are available.
 
 > [!NOTE]
 > The Power Platform Explorer view of the Power Platform Tools extension is capable of more than plug-in and workflow activity registration. Documentation for additional features will be provided in a future documentation release. In the meantime, feel free to explore.  
@@ -46,16 +46,16 @@ The Power Platform Explorer view will be displayed or you can open that view fro
 
 Follow these instructions to register a plug-in step (also known as an SDK message processing step). The step identifies what data table and event causes your plug-in to execute. More information: [Event framework](../event-framework.md), [Register plug-in step](../register-plug-in.md#step-registration)
 
-1. Select **View** > **Power Platform Explorer**, expand your environment node and the **Tables** sub-node.
+1. Select **View** > **Power Platform Explorer**, expand your environment node and the **Tables** subnode.
 
-1. Right-click on the table type (e.g.; "Account") that the step is to be registered on, then select **Create Plug-in**.
+1. Right-click on the table type (for example, "Account") that the step is to be registered on, then select **Create Plug-in**.
 
     :::image type="content" source="../media/tools/devtools-create-plugin.png" alt-text="Create a plug-in.":::
 
     > [!NOTE]
     > You can also create a plug-in by expanding the **Event Catalog**, right-clicking a business event, and choose **Add Plug-in**.
 
-1. Fill out the **Register New Step** dialog information and choose **Register New Step** when done. <p/>The class name that you specify when filling out the step information will be used to name your new plug-in class. The class will be placed in the plug-in project library specified by the **Handler Assembly** dialog field. If there is only one Plug-in Library project in the solution, the **Handler Assembly** field will be inactive.
+1. Fill out the **Register New Step** dialog information and choose **Register New Step** when done. <p/>The class name that you specify when filling out the step information is used to name your new plug-in class. The class is placed in the plug-in project library specified by the **Handler Assembly** dialog field. If there's only one Plug-in Library project in the solution, the **Handler Assembly** field will be inactive.
 
 A new step registration has been added to the solution. However, you will need to build and deploy your plug-in library before the plug-in assembly and step are added to the specified Dataverse environment and solution.
 
