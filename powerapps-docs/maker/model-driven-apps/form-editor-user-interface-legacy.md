@@ -20,7 +20,8 @@ search.audienceType:
 
 This article describes the [classic](model-driven-app-glossary.md#classic) form editor.
 
-We recommend that you use the modern form designer to create and edit your model-driven app forms. More information: [Overview of the model-driven form designer](form-designer-overview.md)
+> [!IMPORTANT]
+> Starting in October 2023, the Classic App, Form, and View Designer will be deprecated by default. This means that all model-driven apps, forms, and views will only open via the Modern Designers. The "Switch to Classic" option to revert back to Classic Designers from the Modern Designers will no longer be available by default. We recommend that you transition to using the Modern Form Designer to create and edit your model-driven app forms. More information: [Overview of the model-driven form designer](form-designer-overview.md)
 
 The form editor displays commands in three tabs: **File**, **Home**, and **Insert**.  
 
