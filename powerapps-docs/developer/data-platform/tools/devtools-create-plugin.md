@@ -44,7 +44,7 @@ The Power Platform Explorer view will be displayed or you can open that view fro
 
 ## Register a plug-in step with Dataverse
 
-Follow these instructions to register a plug-in step (also known as an SDK message processing step). The step identifies what data table and event causes your plug-in to execute. More information: [Event framework](../event-framework.md), [Register plug-in step](../register-plug-in.md#register-plug-in-step)
+Follow these instructions to register a plug-in step (also known as an SDK message processing step). The step identifies what data table and event causes your plug-in to execute. More information: [Event framework](../event-framework.md), [Register plug-in step](../register-plug-in.md#step-registration)
 
 1. Select **View** > **Power Platform Explorer**, expand your environment node and the **Tables** sub-node.
 

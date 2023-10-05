@@ -91,7 +91,7 @@ Some system tables will have more than one active or inactive state.The followin
 
 ## DuplicateRule Special messages
 
-[DuplicateRule](reference/entities/duplicaterule.md) is a user-owned table and normal create, retrieve, update, assign, and delete operations are allowed as well as operations to control access. More information: [DuplicateRule Messages](/reference//reference/entities/duplicaterule.md#messages).
+[DuplicateRule](reference/entities/duplicaterule.md) is a user-owned table and normal create, retrieve, update, assign, and delete operations are allowed as well as operations to control access. More information: [DuplicateRule Messages](reference/entities/duplicaterule.md#messages).
 
 The following special messages can also be used:
 
