@@ -35,6 +35,14 @@ A **Tab** is a navigation control which can help users switch between different 
 
 **Alignment** – Option for tabs to be displayed as vertical or horizontal
 
+**OnSelect** – Lets the user define actions when a tab is selected/highlighted
+
+**OnChange** – Lets the user define actions when a tab selection is changed
+
+### Example
+The below example sets a variable to true when a tab is selected, this variable can be used to set other controls visibility
+
+ ![Tabs on Select event](../../media/moderncontrol-tabs/onSelectTabs.png) 
 
 ## Additional properties
 **Accessible label** – Label for screen readers.
