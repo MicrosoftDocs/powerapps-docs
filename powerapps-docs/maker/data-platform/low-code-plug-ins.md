@@ -191,7 +191,7 @@ More information: [example](lowcode-plug-ins-examples.md#sample-instant-plug-in-
 
 ## AI functions in low-code plug-ins
 
-### What are AI functions low-code plug-ins?
+### What are AI functions in low-code plug-ins?
 
 Dataverse includes AI-powered actions, which can be used to generate or extract data using Azure Open AI and the power of AI Builder. You can call these functions from both instant and automated low-code plug-ins.  
 
