@@ -629,7 +629,7 @@ There's a limit of 15 different tables that can be associated with a timeline. E
 
 ### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
 
-This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
+This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information:  [Rich text editor properties](rich-text-editor-control.md#rich-text-editor-properties)
 
 ### See also
 
