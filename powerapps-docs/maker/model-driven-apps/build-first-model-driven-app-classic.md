@@ -16,7 +16,8 @@ search.audienceType:
 
 # Build your first model-driven app using the classic designer
 
-
+> [!IMPORTANT]
+> Starting in October 2023, the Classic App, Form, and View Designer will be deprecated. This means that all model-driven apps, forms, and views will only open via the Modern Designers. The "Switch to Classic" option to revert back to Classic Designers from the Modern Designers will no longer be available by default. We recommend that you transition to use the Modern Designers to create and edit your model-driven apps and components.
 
 In this article, you build a straightforward model-driven app that you can use to create, update, and delete account records as well as view data in one of the standard charts for the account table.
 
