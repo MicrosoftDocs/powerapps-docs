@@ -25,7 +25,8 @@ search.audienceType:
 
 # Add or edit model-driven app components in the Power Apps app designer
 
-
+> [!IMPORTANT]
+> Starting in October 2023, the Classic App, Form, and View Designer will be deprecated. This means that all model-driven apps, forms, and views will only open via the Modern Designers. The "Switch to Classic" option to revert back to Classic Designers from the Modern Designers will no longer be available by default. We recommend that you transition to use the Modern Designers to create and edit your model-driven apps and components.
 
 This tutorial describes how to add components to and remove components from a model-driven app.
 
