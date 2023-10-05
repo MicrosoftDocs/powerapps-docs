@@ -20,6 +20,9 @@ search.audienceType:
 
 # Model-driven app form properties 
 
+> [!IMPORTANT]
+> Starting in October 2023, the Classic App, Form, and View Designer will be deprecated. This means that all model-driven apps, forms, and views will only open via the Modern Designers. The "Switch to Classic" option to revert back to Classic Designers from the Modern Designers will no longer be available by default. We recommend that you transition to use the Modern Designers to create and edit your model-driven apps and components.
+
 This article describes the classic solution explorer. We recommend that you use the modern form designer to edit properties for your model-driven app forms. More information: [Configure a form](create-and-edit-forms.md#configure-a-form) and [Configure model-driven app form event handlers](configure-event-handlers-legacy.md)
 
 You can access **Form properties** in solution explorer. Under **Components**, expand **Tables**, expand the table you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then on the **Home** tab, select **Form Properties**.
