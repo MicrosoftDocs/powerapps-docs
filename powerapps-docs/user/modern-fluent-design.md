@@ -105,6 +105,9 @@ Admins can disable the **Try the new look** setting across all apps in an organi
 1. Select **Save**.
 1. Publish all customizations.
 
+    > [!NOTE]
+    > If you are in 2023 Release Wave 1 and want to turn off the new look, you will need to update the **Try the new look and feel (preview)** setting instead.
+
 ### Can I switch to a different theme or enable dark mode?
 Switching themes or enabling dark mode isn't supported at this time.
 
