@@ -1,7 +1,6 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-
 ms.date: 05/18/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
@@ -14,9 +13,12 @@ search.audienceType:
 
 # Use SQL to query data
 
-[This topic is pre-release documentation and is subject to change. Note that only the SQL data connection through SQL Server Management Studio and .NET libraries is in preview. Power BI is General Availability (GA)]
+[This topic is pre-release documentation and is subject to change.]
 
 The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access.
+
+> [!NOTE]
+>  Only the SQL data connection through SQL Server Management Studio and .NET libraries is in preview. Power BI is generally available.
 
 ## Prerequisites
 
