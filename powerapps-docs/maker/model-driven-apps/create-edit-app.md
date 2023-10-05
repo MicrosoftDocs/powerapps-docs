@@ -27,6 +27,9 @@ search.audienceType:
 
 This article describes the basics of creating and editing a model-driven app that can be shared and distributed to other environments.
 
+> [!IMPORTANT]
+> Starting in October 2023, the Classic App, Form, and View Designer will be deprecated by default. This means that all model-driven apps, forms, and views will only open via the Modern Designers. The "Switch to Classic" option to revert back to Classic Designers from the Modern Designers will no longer be available by default. 
+
 ## Prerequisites to creating model-driven apps
 
 Verify the following prerequisites before creating an app:
