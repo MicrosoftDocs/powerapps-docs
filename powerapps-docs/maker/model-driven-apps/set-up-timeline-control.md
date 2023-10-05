@@ -617,7 +617,7 @@ Power platform administrators can restrict the file size of attachments users ca
   
 ### Duplicate posts are shown when sorting records by older to newer
 
-When sorting timeline in this way, use notes instead.
+The API that timeline uses to fetch posts does not support sorting in this direction, so timeline recieves the wrong posts to display. When sorting timeline in this way, use notes instead.
 
 ### Notes can only have one attachment added from the attachment button
 
