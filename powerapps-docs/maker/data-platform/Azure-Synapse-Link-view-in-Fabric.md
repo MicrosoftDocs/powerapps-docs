@@ -13,21 +13,21 @@ ms.custom: template-how-to
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Microsoft Dataverse direct integration with Microsoft Fabric enables organizations to extend their Dynamics 365 enterprise applications and business processes into Fabric. The **View in Microsoft Fabric** feature built into Power Apps makes all your Dynamics 365 and other data from Power Apps available for analysis in Fabric.
+Microsoft Dataverse direct integration with Microsoft Fabric enables organizations to extend their Dynamics 365 enterprise applications and business processes into Fabric. The **Link to Microsoft Fabric** feature built into Power Apps makes all your Dynamics 365 and other data from Power Apps available for analysis in Fabric.
 
 - No need to export data, build ETL pipelines, or use third-party integration tools.
 - Link data from Dataverse directly into Fabric, no need to bring your own storage.
 - Link existing Azure Synapse Link for Dataverse links to Fabric.
 
 > [!IMPORTANT]
-> - This is a preview feature.
+> - This feature is in public preview.
 >
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 >
 
 With just one click, you get more insights from your business data stored in Dataverse. :::image type="content" source="media/fabric/azure-synapse-link-two-experiences.png" alt-text="Azure Synapse link with Dataverse data in Microsoft Fabric" lightbox="media/fabric/azure-synapse-link-two-experiences.png":::
 
-As data gets updated, changes are reflected in Fabric automatically. Dataverse also generates an enterprise-ready [lakehouse and SQL endpoint](/fabric/data-engineering/lakehouse-overview) for your Dynamics 365 data. This makes it easier for data engineers and database admins to combine data from multiple sources and build custom analytics with Spark, Python, or SQL.
+As data gets updated, changes are reflected in Fabric automatically. Dataverse also generates an enterprise-ready [Synapse Lakehouse and SQL endpoint](/fabric/data-engineering/lakehouse-overview) for your Dynamics 365 data. This makes it easier for data engineers and database admins to combine data from multiple sources and build custom analytics with Spark, Python, or SQL.
 
 [Microsoft OneLake](/fabric/onelake/onelake-overview), built into Fabric, helps to eliminate data silos. Combine data from your applications and devices—web sites, mobile apps, sensors, and signals from your warehouse and factories—with data from your business processes in Dynamics 365—sales, cases, inventory, and orders—to predict potential delays or shortages that affect keeping your promises to customers.
 
