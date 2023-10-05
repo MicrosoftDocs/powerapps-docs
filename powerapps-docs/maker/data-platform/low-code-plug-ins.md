@@ -221,7 +221,7 @@ Simply type in the AI function and provide the correct input values. Use intelli
 
 ## Test a low-code plug-in
 
-**Manually test instant plug-ins**
+### Test instant plug-ins
 
   1. From the **Home screen**, select an instant plug-in from the list, then select **Test** on the command bar. You can also get to this screen from the instant plug-in editor in the command bar after it's been saved.
   :::image type="content" source="media/low-code-plugin-test-home.png" alt-text="Select Test for the low-code plug-in":::
@@ -234,9 +234,14 @@ Simply type in the AI function and provide the correct input values. Use intelli
   > [!TIP]
   > Use output parameters to help validate expected behavior and results. Otherwise, you only see a success or failure when testing.
 
-**Test automated plug-ins**
+### Test automated plug-ins
 
 Test automated plug-ins by invoking the data event. Observe if the plug-in ran successfully by validating expected changes that were defined in the formula.
+> [!TIP]
+> During development, you can conveniently invoke the associated data event using the table editor in the maker portal:
+> 1. In the [Power Apps Maker portal](https://make.powerapps.com), go to **Tables** > _Plug-in table_.
+> 1. On the command bar, select **Edit**.
+> 1. You can create, update, or delete rows directly from this view. Alternatively, you could open a row in the default form by selecting a row, then selecting **Edit row using form** in the command bar.
 
 ### Integrate a low-code plug-in
 
