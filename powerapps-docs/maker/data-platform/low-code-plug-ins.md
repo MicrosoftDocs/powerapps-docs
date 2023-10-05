@@ -164,6 +164,8 @@ Unique properties:
 
 ## Use Power Platform connectors in low-code plug-ins
 
+Power Platform connectors can be used in low code plug-ins to easily integrate data and functionality from systems outside of Dataverse, such as SQL Server, Salesforce, and SharePoint, without the need for complex coding or custom development.
+
 ### Prerequisites for using connectors in low-code plug-ins
 
 > [!div class="checklist"]
@@ -172,10 +174,7 @@ Unique properties:
 
 ### Using connector actions in low-code plug-ins
 
-You can easily use [connectors]( /connectors/connector-reference/connector-reference-powerapps-connectors) and [custom connectors]( /connectors/custom-connectors/) from within a low-code plug-in Power Fx formula.
-
-> [!NOTE]
-> Not all connector actions are supported at this time.
+You can easily use [connectors]( /connectors/connector-reference/connector-reference-powerapps-connectors) and [custom connectors]( /connectors/custom-connectors/) from within a low-code plug-in Power FX formula.
 
 1. Create a connection to the connector you want to use.
 1. [Add a connection reference](/power-apps/maker/data-platform/create-connection-reference#manually-add-a-connection-reference-to-a-solution-using-solution-explorer) to the connection in the Dataverse environment.
@@ -186,13 +185,26 @@ Before using a connector in a low-code plug-in, review the connector's [document
 
 More information: [example](lowcode-plug-ins-examples.md#sample-instant-plug-in-with-msn-weather-connector)
 
-## Smart low-code plug-ins
+> [!NOTE]
+> * Not all connector actions are supported at this time.
+> * Do not use the Dataverse connector to connect to Dataverse tables from a plug-in expression. Instead, use the native Power FX functions to interact with collections: [Filter, Search, LookUp](/power-platform/power-fx/reference/function-filter-lookup), [Patch](/power-platform/power-fx/reference/function-patch), [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect), and [Set](/power-platform/power-fx/reference/function-set) [where columns are treated as global variables]).
 
-### What are smart low-code plug-ins?
+## AI functions in low-code plug-ins
+
+### What are AI functions low-code plug-ins?
 
 Dataverse includes AI-powered actions, which can be used to generate or extract data using Azure Open AI and the power of AI Builder. You can call these functions from both instant and automated low-code plug-ins.  
 
-**Functions supported for smart low-code plug-ins**
+### Prerequisites for using AI functions in low code plug-ins
+
+> [!div class="checklist"]
+> * [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
+> * AI Builder subscription
+
+> [!TIP]
+> If you do not have an AI Builder subscription, you can use an [AI Builder trial](/ai-builder/ai-builder-trials). View the AI models page in Power Apps (make.powerapps.com) to get AI Builder, which directs you to start a trial.
+
+### Supported functions
 
 | Function | Description |
 | - | - |
@@ -203,14 +215,9 @@ Dataverse includes AI-powered actions, which can be used to generate or extract 
 | `AIClassify`| Classify text into one or more provided categories ([Example](lowcode-plug-ins-examples.md#sample-for-aiclassify)) | 
 | `AIExtract`| Extract specified entities such as registration numbers ([Example](lowcode-plug-ins-examples.md#sample-for-aiextract)) | 
 
-### Requirements
+### Using AI functions in low-code plug-ins
 
-> [!div class="checklist"]
-> * [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
-> * AI Builder subscription
-
-> [!TIP]
-> If you do not have an AI Builder subscription, you can use an [AI Builder trial](/ai-builder/ai-builder-trials). View the AI models page in Power Apps (make.powerapps.com) to get AI Builder, which directs you to start a trial.
+Simply type in the AI function and provide the correct input values. Use intellisense and the linked example documentation to understand how to provide correct values to each function.
 
 ## Test a low-code plug-in
 
@@ -267,12 +274,6 @@ Learn more about how you can [call Dataverse actions directly from Power Fx in c
 #### Invoke an instant plug-in from the Dataverse Web API
 
 Follow the steps for **Unbound action** or **Function bound to table** sections in the [Invoking custom APIs from the Web API documentation](/power-apps/developer/data-platform/custom-api#invoking-custom-apis-from-the-web-api) (depending on the appropriate scope of the plug-in).
-
-## Trace logging
-
-Trace logging is a feature in Dataverse that allows you to capture detailed information about the execution of plug-ins. By enabling trace logging, you can get a more complete picture of what's happening during plug-in execution, which can be helpful for troubleshooting issues and identifying performance bottlenecks. When you enable trace logging for plug-ins, Dataverse generates log files that include information about the plug-in's input and output parameters, as well as any exceptions or errors that occur during execution.
-
-To enable trace logging for plug-ins, you need to [enable the trace logging feature for the environment](/power-apps/developer/data-platform/logging-tracing).
 
 ## Contacting Help + support
 
