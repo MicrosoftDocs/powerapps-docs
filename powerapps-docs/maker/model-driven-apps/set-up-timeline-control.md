@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 09/11/2023
+ms.date: 10/04/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -232,7 +232,7 @@ You can send and receive records with images, but they don't display when the re
 
 |Form designer configure view | Form designer display view|
 |---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-|![Configure “What you’ve missed” summary](media\timeline-what-you-missed-display-options-advanced-11a.png "Configure “What you’ve missed” summary")| ![Disable “What you’ve missed” summary](media\timeline-what-you-missed-display-options-advanced-11b.png "Disable “What you’ve missed” summary") |
+|![Configure “What you’ve missed” summary](media\timeline-what-you-missed-display-options-advanced-11a.png "Configure “What you’ve missed” summary")| ![Display view for “What you’ve missed” summary](media\timeline-what-you-missed-display-view.png "Disable “What you’ve missed” summary") |
 |The **What you’ve missed** setting displays new records you haven't seen. It's enabled by default. To disable it, clear the box next to the setting. |When enabled, when you view an account record, the newest activities appear at the top of the list.|
 
 ### Record settings
@@ -617,7 +617,7 @@ Power platform administrators can restrict the file size of attachments users ca
   
 ### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
 
-This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
+This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file.
 
 ### Timeline fails to load with error `code:"0x8004430d","message":"Number of link entity: <number> exceed limit 15`
 
