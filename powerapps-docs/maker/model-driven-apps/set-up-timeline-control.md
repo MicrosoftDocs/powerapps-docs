@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 10/04/2023
+ms.date: 10/05/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -615,17 +615,26 @@ Power platform administrators can restrict the file size of attachments users ca
 
 ## Known issues
   
-### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
+### Duplicate posts are shown when sorting records by older to newer
 
-This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file.
+The API the timeline uses to fetch posts doesn't support sorting by older to newer posts. When you sort this way, the timeline receives the wrong posts to display. When sorting the timeline by older to newer, use notes instead.
+
+### Notes can only have one attachment added from the attachment button
+
+This is by design, with plans to allow more attachments in the near future. Multiple attachments can be added inline by dragging and dropping them into the note.
 
 ### Timeline fails to load with error `code:"0x8004430d","message":"Number of link entity: <number> exceed limit 15`
 
 There's a limit of 15 different tables that can be associated with a timeline. Either disable some of the activities associated with the timeline, or follow one of the workarounds described in this article: [Timeline doesn't render and shows "Records couldn't be loaded"](https://support.microsoft.com/topic/timeline-does-not-render-and-shows-records-could-not-be-loaded-4ce9200a-1afe-3ef4-ac11-a74b91f4f40c)
 
+### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
+
+This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information:  [Rich text editor properties](rich-text-editor-control.md#rich-text-editor-properties)
+
 ### See also
 
 [FAQs for timeline control](faqs-timeline-control.md) 
 
+[Use the timeline control](../../user/add-activities.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
