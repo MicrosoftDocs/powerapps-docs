@@ -1,1 +1,1 @@
-Provides API for the platform provided Fluent theme
+Provides API for the platform provided Modern Theme

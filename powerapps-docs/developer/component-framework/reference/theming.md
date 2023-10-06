@@ -1,6 +1,6 @@
 ---
 title: Theming (Power Apps component framework API reference) | Microsoft Docs
-description: Provides API for the platform provided Fluent theme.
+description: Provides API for the platform provided Modern Theme.
 ms.author: noazarur
 author: noazarur-microsoft
 ms.date: 10/04/2023
@@ -64,7 +64,7 @@ return (
 
 ## Sample controls
 
-[Fluent Theming API control](../sample-controls/fluent-theming-api-control.md)
+[Modern Theming API control](../sample-controls/modern-theming-api-control.md)
 
 ### Related articles
 

@@ -80,7 +80,7 @@ For controls that are not using Fluent UI you can just take dependency on the di
 
 ## Sample controls
 
-You can find new control added to the samples as part of this preview, [Fluent Theming API control](./sample-controls/fluent-theming-api-control.md).
+You can find new control added to the samples as part of this preview, [Modern Theming API control](./sample-controls/modern-theming-api-control.md).
 
 ## FAQ
 

@@ -65,7 +65,7 @@ Using the theme brand ramp, you can manually style a classic control based on th
 ### Related articles
 
 [Power Apps Theming API reference](/powerapps-docs/developer/component-framework/reference/theming.md)<br />
-[Fluent Theming API control](/powerapps-docs/developer/component-framework/sample-controls/fluent-theming-api-control.md)<br />
+[Modern Theming API control](/powerapps-docs/developer/component-framework/sample-controls/modern-theming-api-control.md)<br />
 
 ## See also
 

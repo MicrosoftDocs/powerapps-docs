@@ -1,6 +1,6 @@
 ---
-title: "Fluent Theming API component | Microsoft Docs"
-description: "This sample component showcases Fluent Theming API capabilities of the Power Apps control framework."
+title: "Modern Theming API component | Microsoft Docs"
+description: "This sample component showcases Modern Theming API capabilities of the Power Apps control framework."
 author: lesyk
 ms.author: vilesyk
 ms.date: 03/12/2023
@@ -13,11 +13,11 @@ contributors:
   - JimDaly
 ---
 
-# Implementing a Fluent Theming API component
+# Implementing a Modern Theming API component
 
-This sample component showcases Fluent API Theming API capabilities of the Power Apps control framework. Out of the box after importing control it will use default PowerApps theme, in order to change it you need to [Enable modern controls and themes for your app](../../../powerapps/maker/canvas-apps/controls/modern-controls/overview-modern-controls.md#enable-modern-controls-and-themes-for-your-app), and then [Apply modern theme](../../../maker/canvas-apps/controls/modern-controls/modern-theming#apply-modern-theme).
+This sample component showcases Modern Theming API capabilities of the Power Apps control framework. Out of the box after importing control it will use default PowerApps Modern Theme, in order to change it you need to [Enable modern controls and themes for your app](../../../powerapps/maker/canvas-apps/controls/modern-controls/overview-modern-controls.md#enable-modern-controls-and-themes-for-your-app), and then [Apply modern theme](../../../maker/canvas-apps/controls/modern-controls/modern-theming#apply-modern-theme).
 
-> [!div class="mx-imgBorder"] > ![Fluent Theming API component](../media/fluent-theming-api-control.png "Fluent Theming API component")
+> [!div class="mx-imgBorder"] > ![Modern Theming API component](../media/modern-theming-api-control.png "Modern Theming API component")
 
 ## Available for
 
@@ -25,7 +25,7 @@ Canvas apps
 
 ## Code
 
-Control showcases four different examples of consuming PowerApps Fluent Theming API:
+Control showcases four different examples of consuming PowerApps Modern Theming API:
 
 - Fluent V9 out of the box inheritance of theme from the platform. [Automatic Modern theming](../../component-framework/modern-theming.md#automatic-modern-theming)<br/>
 - Fluent V9 sample of using pcf context parameters to create it's own FluentProvider (v9). [Modern theming via PCF context parameters](../../component-framework/modern-theming.md#modern-theming-via-pcf-context-parameters)<br/>
