@@ -225,13 +225,13 @@ Prerequisites:
 
 > [!TIP]
 > Use the [With()](/power-platform/power-fx/reference/function-with) function to capture the entire response from one action if you want to access different properties the response might have. In this example, assuming there's an input parameter `Location` (string) and an output parameter `Out` (string):
-   ```powerapps-dot
-   With({ /* Capture current weather response from connector */
-   	c: new_MsnWeather.CurrentWeather( Location, "Imperial" ).responses.weather.current
-   },{	/* Return concatenated weather details */
-   	Out: "Current temp: " & c.temp & " degrees. Feels like " & c.feels & " degrees. Wind speed is " & c.windSpd & " mph."
-   }) 
-   ```
+> ```powerapps-dot
+> With({ /* Capture current weather response from connector */
+> 	c: new_MsnWeather.CurrentWeather( Location, "Imperial" ).responses.weather.current
+> },{	/* Return concatenated weather details */
+> 	Out: "Current temp: " & c.temp & " degrees. Feels like " & c.feels & " degrees. Wind speed is " & c.windSpd & " mph."
+> })
+> ```
 
 ## See also
 
