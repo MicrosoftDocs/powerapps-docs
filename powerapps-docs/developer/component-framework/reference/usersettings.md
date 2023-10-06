@@ -1,8 +1,8 @@
 ---
 title: UserSettings (Power Apps component framework API reference) | Microsoft Docs
 description: Provides information about the current user settings.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -15,7 +15,7 @@ contributors:
 
 [!INCLUDE [usersettings-description](includes/usersettings-description.md)]
 
-## Available for
+## Available for 
 
 Model-driven and canvas apps
 
@@ -24,20 +24,18 @@ Model-driven and canvas apps
 ### dateFormattingInfo
 
 Date formatting information as retrieved from the server. This property is supported in both model-driven and canvas apps.
-Maker's locale is used for generating the formatting info.
 
 **Type**: [DateFormattingInfo](dateformattinginfo.md)
 
 ### isRTL
 
 Returns true if the language is right to left. This property is supported in both model-driven and canvas apps.
-Value is derived from the user's locale.
 
 **Type**: `boolean`
 
 ### languageId
 
-Maker's language ID. This property is supported in both model-driven and canvas apps.
+Current user's language ID. This property is supported in both model-driven and canvas apps.
 
 **Type**: `number`
 
@@ -67,7 +65,7 @@ The username of the current user. Supported only in model-driven apps.
 
 ## Methods
 
-|Method | Description |
+|Method | Description | 
 | ------|-------------|
 |[getTimeZoneOffsetMinutes](usersettings/gettimezoneoffsetminutes.md)|[!INCLUDE [gettimezoneoffsetminutes-description](usersettings/includes/gettimezoneoffsetminutes-description.md)]|
 
