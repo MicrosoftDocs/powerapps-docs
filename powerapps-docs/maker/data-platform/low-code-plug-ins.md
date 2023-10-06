@@ -191,7 +191,7 @@ More information: [example](lowcode-plug-ins-examples.md#sample-instant-plug-in-
 
 ## Test a low-code plug-in
 
-## Test instant plug-ins
+### Test instant plug-ins
 
   1. From the **Home screen**, select an instant plug-in from the list, then select **Test** on the command bar. You can also get to this screen from the instant plug-in editor in the command bar after it's been saved.
   :::image type="content" source="media/low-code-plugin-test-home.png" alt-text="Select Test for the low-code plug-in":::
