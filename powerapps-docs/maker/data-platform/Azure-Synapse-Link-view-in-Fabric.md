@@ -45,8 +45,10 @@ If you don’t have Power BI premium license or Fabric capacity, you can sign up
 
 ## Open Microsoft Fabric from Power Apps
 
-From Tables menu, makers can choose one or more tables,  launch Fabric by selecting **Link to Microsoft Fabric**. When you select the command for the first time, your Dataverse environment is linked to a Microsoft Fabric workspace. System also creates shortcuts to your tables in Microsoft OneLake. System also creates a Synapse Lake house, SQL endpoint and a Power BI dataset within the workspace. You will see the tables selected in Dataverse as shortcuts and you can work with dataverse data linked via shortcuts. 
+From Tables menu, makers can choose one or more tables,  launch Fabric by selecting **Link to Microsoft Fabric**. When you select the command for the first time, your Dataverse environment is linked to a Microsoft Fabric workspace. System creates a Synapse Lake house, SQL endpoint and a Power BI dataset and adds shortcuts to your tables in Microsoft OneLakewithin the workspace. You will see the tables selected in Dataverse as shortcuts and you can work with dataverse data linked via shortcuts. 
+
 Makers can continue to choose more data and open Fabric from Power Apps (make.powerapps.com) subsequently. The Lakehouse, SQL endpoint and the Power BI dataset are updated with new data as changes occur in Dataverse.
+
 
 ## Manage link to Microsoft OneLake
 
@@ -61,6 +63,7 @@ IT admins can manage tables linked to Microsoft OneLake from the Azure Synapse L
 > System may add related tables Microsoft OneLake to enable better experiences to Fabric users. Also you may see tables added by Dynamics 365 apps.
 >
 > Currently, you can’t add Dynamics 365 Finance and Operations (F&O) tables into the **Microsft OneLake** link that's created with this feature. This feature is coming soon. You can add F&O tables using Synapse Link option in the meantime.
+
 
 ## Link existing Azure Synapse Link for Dataverse profiles to Fabric
 
@@ -120,10 +123,7 @@ Fabric Lakehouse opens in a separate browser tab.
 
 During preview, it might take up to 60 minutes to update data in Microsoft OneLake including the conversion to Delta parquet format. If you've selected a table that contains a lot of data, the initial load time might take even longer. When you open Fabric Lakehouse, you see the links as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
 
-## Manage Fabric link
-You can add or remove tables linked to OneLake or create new links from the **Azure Synapse Link for Dataverse** area of Power Apps (make.powerapps.com). You can also link existing Azure Synapse Link for Dataverse profiles with Fabric using this option. You must have the system administrator security role in the environment to manage Fabric links.
-
-### Manage link to Microsoft OneLake
+## Manage link to Microsoft OneLake
 
 If you or someone else signed in to Power Apps (make.powerapps.com) and linked tables to Microsoft Fabric, they are shown under **Microsoft OneLake**.
 
@@ -145,30 +145,6 @@ If you or someone else signed in to Power Apps (make.powerapps.com) and linked t
 > [!NOTE]
 > During preview, depending on the size of data, initialization may take upto 60 minutes to complete. Subsequent updates to data may also take upto 60 minutes to update. When you open Fabric Lakehouse you'll see the links as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
 ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/28875326/e231587e-5b2d-4b05-9ea9-382cbbfc2b5f)
-
-
-
-You can add or remove tables in the default Fabric link or create new links from the **Azure Synapse Link for Dataverse** area of Power Apps (make.powerapps.com). You can also link existing Azure Synapse Link for Dataverse profiles with Fabric using this option. You must have the system administrator security role in the environment to manage Fabric links.
-
-### Manage the default link
-
-If you or someone else signed in to Power Apps (make.powerapps.com) and linked tables previously, notice a default Fabric link called **Managed Store** or **Microsoft OneLake**. All tables chosen are included in the **Managed Store** Azure Synapse Link for Dataverse link.
-
-You can add more tables or remove tables included in the default **Managed Store** link.
-
-Managed store uses Dataverse provisioned file storage. When you purchase Power Apps or Dynamics 365 licenses, you receive a storage quota for your organization. When you add more tables to the managed store, this quota is consumed depending on the size of the table. You can purchase additional storage as required to expand the quota. You can view storage consumption in the Power Platform admin center.
-
-1. Sign in to Power Apps using the below URL.
-   > [!IMPORTANT]
-   > You must use this URL to access the preview. https://make.preview.Powerapps.com?athena.shortcuts=true&athena.mdl=true&athena.cds2=true
-
-2. Select **Azure Synapse Link** from the left navigation pane.
-3. Notice the default Azure Synapse Link for Dataverse profile named **Managed store** or **Microsoft OneLake**. Select **Managed store** or **Microsoft OneLake**, and then select **View in Microsoft Fabric**.
-4. If you or a user in this environment opened make.powerapps.com and linked tables earlier, notice all tables chosen.
-5. You can add and remove tables linked to Fabric by selecting **Manage tables**.
-6. When you add a table, the system performs an initial sync and replicates data in Dataverse storage. When the initial sync is completed, a Dataverse shortcut to Fabric is created. You can view the status of tables added from the **Tables** area in make.powerapps.com or tables added by selecting **Manage tables**.
-7. When the sync status is **Active**, as data gets updated, your data changes are shown in reports created in Fabric.
-8. If a new column is added to a tab
 
 
 ## Link existing Azure Synapse Link for Dataverse links with Fabric
