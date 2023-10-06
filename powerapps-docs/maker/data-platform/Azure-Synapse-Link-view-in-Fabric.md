@@ -148,7 +148,7 @@ To enable an existing link, follow these steps:
 1. Select an existing Azure Synapse Link for Dataverse profile, and then select **Link to Microsoft Fabric**.
 1. You're prompted to choose a Power BI premium workspace to continue. A list of workspaces in the same region as your environment are displayed. If you don’t see a workspace in the drop-down list, you might need to create one, and then return to this task. More information: [Create a Fabric workspace](#create-a-fabric-workspace)
 1. Select **OK**. Validations are performed and the required artifacts are created in Fabric.  
-1. Select **View in Microsoft Fabric** open Fabric Lakehouse.
+1. Select **View in Microsoft Fabric** open Fabric lakehouse.
 1. You can add or remove tables using by selecting **Manage tables**. When you add a table, an initial sync is performed. When the initial sync is completed, select **Refresh Fabric tables** to refresh the Dataverse shortcut added to your Fabric lakehouse.
 
 > [!NOTE]
