@@ -143,10 +143,7 @@ You can link your existing Azure Synapse Link for Dataverse profiles with Fabric
 
 To enable an existing link, follow these steps:
 
-1. Sign in to Power Apps using the below URL.
-   > [!IMPORTANT]
-   > You must use this URL to access the preview. https://make.preview.Powerapps.com?athena.shortcuts=true&athena.mdl=true&athena.cds2=true
-
+1. Sign into [Power Apps](https://make.powerapps.com).
 1. Select **Azure Synapse Link** from the left navigation.
 1. Select an existing Azure Synapse Link for Dataverse profile, and then select **Link to Microsoft Fabric**.
 1. You're prompted to choose a Power BI premium workspace to continue. A list of workspaces in the same region as your environment are displayed. If you don’t see a workspace in the drop-down list, you might need to create one, and then return to this task. More information: [Create a Fabric workspace](#create-a-fabric-workspace)
