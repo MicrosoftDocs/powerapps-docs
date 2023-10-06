@@ -15,7 +15,7 @@ items:
   - name: "React controls & platform libraries (Preview)"
     href: react-controls-platform-libraries.md
   - name: "Modern Theming (Preview)"
-    href: modern-theming.md
+    href: fluent-modern-theming.md
   - name: Get tooling
     href: get-powerapps-cli.md
   - name: Limitations

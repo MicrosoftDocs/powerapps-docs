@@ -1,5 +1,5 @@
 ---
-title: Modern theming
+title: Modern Theming
 description: Learn about modern themes and how to use them in Power Apps.
 author: jasongre
 
@@ -20,7 +20,7 @@ contributors:
 
 [This article is pre-release document and is subject to change.]
 
-Your app's appearance can be quickly changed by applying modern themes, which are predefined sets of styles that affect the user interface. Modern themes use Microsoft's Fluent design language. They modify various style elements, including color, typography, borders, and shadows, in a consistent and visually appealing manner. Modern theming simplifies the customization process, allowing makers to create a visually cohesive and consistent app with ease.
+Your app's appearance can be quickly changed by applying modern themes, which are predefined sets of styles that affect the user interface. Modern themes use Microsoft's Fluent design language. They modify various style elements, including color, typography, borders, and shadows, in a consistent and visually appealing manner. Modern Theming simplifies the customization process, allowing makers to create a visually cohesive and consistent app with ease.
 
 > [!IMPORTANT]
 >
