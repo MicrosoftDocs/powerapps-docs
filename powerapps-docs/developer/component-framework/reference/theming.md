@@ -15,9 +15,6 @@ contributors:
 
 [!INCLUDE [theming-description](includes/theming-description.md)]
 
-> [!IMPORTANT]
-> If you want to use the Theming API methods, you need to [Enable modern controls and themes for your app](powerapps/maker/canvas-apps/controls/modern-controls/overview-modern-controls#enable-modern-controls-and-themes-for-your-app).
-
 ## Available for
 
 Canvas apps
@@ -71,6 +68,7 @@ return (
 
 ### Related articles
 
+[Use modern themes in canvas apps (preview)](../../../maker/canvas-apps/controls/modern-controls/modern-theming)
 [Power Apps component framework API reference](../reference/index.md)<br />
 [Power Apps component framework overview](../overview.md)
 
