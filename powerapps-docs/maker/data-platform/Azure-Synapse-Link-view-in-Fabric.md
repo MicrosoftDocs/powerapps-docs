@@ -102,7 +102,7 @@ After you [Create a connection to your Dataverse environment](#create-a-connecti
 
 - **Tables** area: Select a table from the **Tables** area and then select **Export** > **Link to Microsoft Fabric**. This is the quickest way to get started.
 
-- **Azure Synapse Link for Dataverse** area: From the **Azure Synapse Link for Dataverse** area link an existing Synapse Link profile or select **Microsoft OneLake**.
+- **Azure Synapse Link for Dataverse** area: From the Azure Synapse Link for Dataverse area link an existing Synapse Link profile or, select **Microsoft OneLake**.
 
 1. Sign into [Power Apps](https://make.powerapps.com).
    > [!NOTE]
@@ -119,7 +119,7 @@ During preview, it might take up to 60 minutes to update data in Microsoft OneLa
 
 ## Manage link to Microsoft OneLake
 
-If you or someone else signed in to Power Apps and linked tables to Fabric, they are shown under **Microsoft OneLake**.
+If you or someone else signed in to Power Apps and linked tables to Fabric, they're shown under **Microsoft OneLake**.
 
 1. Sign into [Power Apps](https://make.powerapps.com). 
    > [!NOTE]
@@ -129,7 +129,7 @@ If you or someone else signed in to Power Apps and linked tables to Fabric, they
 2. Select **Azure Synapse Link** from the left navigation pane, and the select **Microsoft OneLake**
 3. Open Fabric from here by selecting **View in Microsoft Fabric**.
 4. Add and remove tables linked to Fabric by selecting **Manage tables**.
-5. When you add a table, the system performs an initial sync and and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. You can also view the status of tables by visiting **Manage tables**.
+5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. You can also view the status of tables by visiting **Manage tables**.
 6. When the sync status is **Active**, as data gets updated, your data changes are shown in reports created in Fabric.
 7. If a new column is added to a table that’s already added (also known as a metadata change), you can use the **Refresh Fabric tables** option to update the change in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
 8. You can also **Unlink**, which removes the Fabric link to your Dataverse environment. When unlinking, the Fabric workspace or the lakehouse created aren't removed since you might have added your own tables and links.
@@ -149,7 +149,7 @@ To enable an existing link, follow these steps:
 
 1. Select **Azure Synapse Link** from the left navigation.
 1. Select an existing Azure Synapse Link for Dataverse profile, and then select **Link to Microsoft Fabric**.
-1. You're prompted to choose a Power BI premium workspace to continue. A list of workspaces in the same region as your environment are displayed. If you don’t see a workspace in the drop down list, you might need to create one, and then return to this task. More information: [Create a Fabric workspace](#create-a-fabric-workspace)
+1. You're prompted to choose a Power BI premium workspace to continue. A list of workspaces in the same region as your environment are displayed. If you don’t see a workspace in the drop-down list, you might need to create one, and then return to this task. More information: [Create a Fabric workspace](#create-a-fabric-workspace)
 1. Select **OK**. Validations are performed and the required artifacts are created in Fabric.  
 1. Select **View in Microsoft Fabric** open Fabric Lakehouse.
 1. You can add or remove tables using by selecting **Manage tables**. When you add a table, an initial sync is performed. When the initial sync is completed, select **Refresh Fabric tables** to refresh the Dataverse shortcut added to your Fabric Lakehouse.
