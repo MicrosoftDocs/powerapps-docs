@@ -209,7 +209,7 @@ More information: [example](lowcode-plug-ins-examples.md#sample-instant-plug-in-
 Test automated plug-ins by invoking the data event. Observe if the plug-in ran successfully by validating expected changes that were defined in the formula.
 > [!TIP]
 > During the preview, you can invoke the associated data event using the table editor in Power Apps:
-> 1. Sign into [Power Apps](https://make.powerapps.com), go to **Tables** and select the _**Plug-in** table.
+> 1. Sign into [Power Apps](https://make.powerapps.com), go to **Tables** and select the **Plug-in** table.
 > 1. On the command bar, select **Edit**.
 > 1. Create, update, or delete rows directly from this view. Alternatively, open a row in the default form by selecting a row, then select **Edit row using form** on the command bar.
 
