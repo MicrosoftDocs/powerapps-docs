@@ -1,48 +1,50 @@
 ---
 title: "FAQs for timeline control (section) in Power Apps | MicrosoftDocs"
-description: "FAQs for timeline control (section) in Power Apps"
-ms.date: 09/10/2021
-
+description: "FAQs for the timeline control in Power Apps"
+ms.date: 10/05/2023
 ms.topic: troubleshooting
 author: "lalexms"
-ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
 ms.subservice: mda-maker
 ms.author: "laalexan"
+contributors:
+- dsierman
 search.audienceType: 
   - maker
 ---
-
-# FAQs for timeline control
+# FAQs for the timeline control
 
 ## A command isn't working. How do I use the command checker tool for timeline?
 
-For instructions on how to enable and use the command checker, go to [Troubleshooting ribbon issues in Power Apps](../../create-and-use-apps/ribbon-issues.md)
+For instructions about how to enable and use the command checker, go to [Troubleshooting ribbon issues in Power Apps](../../create-and-use-apps/ribbon-issues.md)
 
-If you see error dialog saying "We can't compete the action you've selected" when trying to use the command action for activities on Timeline. It's likely the command action is hidden by custom rules. You can confirm by checking if the same action is hidden from Related activities.
+If you see an error dialog box that displays "We can't compete the action you've selected" when trying to use the command action for activities on a timeline, it might be that the command action is hidden by custom rules. You can confirm by checking if the same action is hidden from **Related** > **Activities**.
 
-![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/35553346/be1bfda9-a98a-4bce-8e33-b41737136d55)
+:::image type="content" source="media/related-activities.png" alt-text="Go to related activities in the timeline":::
 
-From Related activities, select the same activity that you want to perform action on, and check if you can perform the same command action from here.
+From the **Activities** tab, select the same activity that you want to perform action on, and then check if you can perform the same command action from there.
 
-![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/35553346/74c06227-1ebd-4900-8098-116242e9b46f)
+:::image type="content" source="media/select-related-activity.png" alt-text="Select the related activity that you want":::
 
-If the command action works here but not from Timeline, please contact MS support. 
-Most likely, you cannot find the command action from Related Activity grid, then you can further debug the issue with command checker and find out which custom rule hides the command. 
+If the command action works here but not from the timeline, contact [Microsoft Support](/power-platform/admin/get-help-support).
 
-To enable the Command Checker tool, you must append a &ribbondebug=true parameter to your Dynamics 365 application URL. 
-For example:
+If you can't find the command action from the related activity grid, you can further troubleshoot the issue with [command checker](https://powerapps.microsoft.com/en-us/blog/introducing-command-checker-for-model-app-ribbons/) to find out which custom rule hides the command.
 
-![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/35553346/99540524-45ed-4b96-978c-1707f9f94874)
+1. Play the model-driven app that has the timeline.
+1. From a table record that displays the timeline, select **Related** > **Activities** to go to the **Open Activity Associated View**.
+1. Enable the command checker tool by appending the `&ribbondebug=true` parameter to the app URL.
 
-You'll see a new special "Command checker"  button to open the tool (it might be listed on the More overflow flyout menu).
+   :::image type="content" source="media/command-checker-url-param.png" alt-text="Append URL parameter to add command checker":::
 
-![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/35553346/8f57d870-73b0-4f5d-86f5-629a0f74b805)
+1. Select the **Command checker** command, which now appears on the app command bar. It might be listed on the **More** overflow flyout menu.
 
-Find Group Id: Mscrm.SubGrid.activitypointer.MainTab.Actions, select the hidden command and go to Command properties to find out what custom rules to hide the command action.
+   :::image type="content" source="media/start-command-checker.png" alt-text="Start command  checker":::
 
-![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/35553346/39cabbe2-ddf4-4cad-a529-947f655d6a1f)
+1. From the command checker page that is displayed, select **Group Id: Mscrm.SubGrid.activitypointer.MainTab.Actions**, select a hidden command such as **Mark Complete (hidden)**, and then select the **Command properties** tab on the right to find out what custom rules are used to hide the command action.
 
-Please note: Timeline always displays command actions without honoring the custom rules to hide/disable the command button because of performance reason. 
+   :::image type="content" source="media/find-group-id.png" alt-text="Find group ID":::
+
+> [!NOTE]
+> The timeline always displays command actions without honoring the custom rules to hide or disable the command button for performance reasons.
 
 ## See also
 
