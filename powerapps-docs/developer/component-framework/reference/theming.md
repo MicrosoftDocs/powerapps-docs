@@ -1,0 +1,77 @@
+---
+title: Theming (Power Apps component framework API reference) | Microsoft Docs
+description: Provides API for the platform provided Fluent theme.
+ms.author: noazarur
+author: noazarur-microsoft
+ms.date: 10/04/2023
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+  - JimDaly
+---
+
+# Theming
+
+[!INCLUDE [theming-description](includes/theming-description.md)]
+
+> [!IMPORTANT]
+> If you want to use the Theming API methods, you need to [Enable modern controls and themes for your app](powerapps/maker/canvas-apps/controls/modern-controls/overview-modern-controls#enable-modern-controls-and-themes-for-your-app).
+
+## Available for
+
+Canvas apps
+
+## Syntax
+
+`context.fluentDesignLanguage`
+
+## Properties
+
+### tokenTheme
+
+Fluent v9 theme tokens provided by the platform.
+
+**Type**: [Theme](https://github.com/microsoft/fluentui/blob/401ff6d9af9536b24ab3c52c658127d19706e030/packages/tokens/src/types.ts)
+
+### typographyTokens
+
+Fluent v9 typography tokens provided by the platform.
+
+**Type**: [TypographyStyles](https://github.com/microsoft/fluentui/blob/401ff6d9af9536b24ab3c52c658127d19706e030/packages/tokens/src/global/typographyStyles.ts)
+
+### brand
+
+Fluent v9 BrandVariants based on which Fluent v9 theme was generated.
+
+**Type**: [BrandVariants](https://github.com/microsoft/fluentui/blob/401ff6d9af9536b24ab3c52c658127d19706e030/packages/tokens/src/types.ts)
+
+### isDarkTheme
+
+Indicates whether the current theme is dark or not.
+
+**Type**: `boolean`
+
+## Example
+
+```TSX
+const fluentDesignLanguage = props.context.fluentDesignLanguage;
+
+return (
+  <FluentProvider theme={props.theme}>
+    <Label weight="semibold">{"Theming provided by the control."}</Label>
+  </FluentProvider>
+);
+
+```
+
+## Sample controls
+
+[Fluent Theming API control](../sample-controls/fluent-theming-api-control.md)
+
+### Related articles
+
+[Power Apps component framework API reference](../reference/index.md)<br />
+[Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
