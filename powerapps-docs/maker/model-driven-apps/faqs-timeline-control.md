@@ -15,7 +15,7 @@ search.audienceType:
 
 ## A command isn't working. How do I use the command checker tool for timeline?
 
-For instructions about how to enable and use the command checker, go to [Troubleshooting ribbon issues in Power Apps](../../create-and-use-apps/ribbon-issues.md)
+For instructions about how to enable and use the command checker, go to  [Troubleshooting ribbon issues in Power Apps](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues)
 
 If you see an error dialog box that displays "We can't compete the action you've selected" when trying to use the command action for activities on a timeline, it might be that the command action is hidden by custom rules. You can confirm by checking if the same action is hidden from **Related** > **Activities**.
 
