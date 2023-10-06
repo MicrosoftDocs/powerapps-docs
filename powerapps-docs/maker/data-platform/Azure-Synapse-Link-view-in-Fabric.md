@@ -13,11 +13,13 @@ ms.custom: template-how-to
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Microsoft Dataverse direct link with Fabric enables organizations to extend their Dynamics 365 enterprise applications and business processes into Fabric. The **Link to Microsoft Fabric** feature built into Power Apps makes all your Dynamics 365 and Power Apps data available in Microsoft OneLake.
+Microsoft Dataverse direct link with Fabric enables organizations to extend their PowerApps, Dynamics 365 enterprise applications and business processes into Fabric. The **Link to Microsoft Fabric** feature built into Power Apps makes all your Dynamics 365 and Power Apps data available in Microsoft OneLake.
 
 - No need to export data, build ETL pipelines, or use third-party integration tools.
 - With shortcuts from Dataverse directly into Microsoft OneLake, your data stays in Dataverse while authorized users get to work with data in Fabric.
 - Link existing Azure Synapse Link for Dataverse links to Fabric.
+- Link data from all Dynamics 365 apps, including Dynamics 365 Finance and Operations apps  
+
 
 > [!IMPORTANT]
 > - This feature is in public preview.
@@ -25,13 +27,15 @@ Microsoft Dataverse direct link with Fabric enables organizations to extend thei
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 >
 
-With just one click, you get more insights from your business data stored in Dataverse. :::image type="content" source="media/fabric/azure-synapse-link-two-experiences.png" alt-text="Azure Synapse link with Dataverse data in Microsoft Fabric" lightbox="media/fabric/azure-synapse-link-two-experiences.png":::
+With a few clicks, you can link your dataverse environment with Microsoft Fabric. Your tables in Dataverse appear in Microsoft OneLake. Your data remains within Dataverse Governance boundary while authorized Fabric users get to work with your data using Power BI, SQL, Spark and many other tools. 
 
-Dataverse also generates an enterprise-ready [Synapse Lakehouse and SQL endpoint](/fabric/data-engineering/lakehouse-overview) and a Power BI dataset for your Dynamics 365 data. This makes it easier for Data analysts, Data engineers and Database admins to combine Business data with data already present in OneLake using Spark, Python, or SQL. As data gets updated, changes are reflected in Lakehouse automatically. 
+:::image type="content" source="media/fabric/azure-synapse-link-two-experiences.png" alt-text="Azure Synapse link with Dataverse data in Microsoft Fabric" lightbox="media/fabric/azure-synapse-link-two-experiences.png":::
 
-[Microsoft OneLake](/fabric/onelake/onelake-overview), built into Fabric, helps to eliminate data silos. Combine data from your applications and devices—web sites, mobile apps, sensors, and signals from your warehouse and factories—with data from your business processes in Dynamics 365—sales, cases, inventory, and orders—to predict potential delays or shortages that affect keeping your promises to customers.
+[Microsoft OneLake](/fabric/onelake/onelake-overview), a Data lake built into Fabric, helps to eliminate data silos. Combine data from your applications and devices—web sites, mobile apps, sensors, and signals from your warehouse and factories—with data from your business processes in Dynamics 365—sales, cases, inventory, and orders—to predict potential delays or shortages that affect keeping your promises to customers. OneLake shortcuts enable you to work with data without making multiple copies.
 
-Makers can build low-code apps and automations to orchestrate business processes and react to insights found in Fabric. Add those insights back to Dataverse as virtual tables connected to OneLake. Makers can turn them into low-code apps with Power Apps, Power Pages, or Power Automate using the design tools already available. Using connectors to over 1,000 apps, makers can create business processes that span Dynamics 365 as well as many other enterprise applications.
+Dataverse also generates an enterprise-ready [Synapse Lakehouse and SQL endpoint](/fabric/data-engineering/lakehouse-overview) and a Power BI dataset for your PowerApps and Dynamics 365 data. This makes it easier for Data analysts, Data engineers and Database admins to combine Business data with data already present in OneLake using Spark, Python, or SQL. As data gets updated, changes are reflected in Lakehouse automatically. 
+
+Low code makers can build apps and automations to orchestrate business processes and react to insights found in Fabric. By adding those insights back to Dataverse as virtual tables connected to OneLake, Makers can build low-code apps with Power Apps, Power Pages, or Power Automate using the design tools already available. Using connectors to over 1,000 apps, makers can create business processes that span Dynamics 365 as well as many other enterprise applications.
 
 ## Prerequisites
 
@@ -41,15 +45,12 @@ If you don’t have Power BI premium license or Fabric capacity, you can sign up
 
 ## Open Microsoft Fabric from Power Apps
 
-Low code makers can use make.powerapps.com to work with their data and build new apps and automations using Power Apps, Power Automate and other tools already available in the Power Platform.
+Low code makers can use make.powerapps.com to work with their data and build new apps and automations using Power Apps, Power Automate and other tools already available in the Power Platform. From Tables menu, makers can choose one or more tables,  launch Fabric by selecting **Link to Microsoft Fabric**. When you select the command for the first time, a Workspace, Synapse Lake house, SQL endpoint and a Power BI dataset are created in your Power BI subscription with shortcuts to Dataverse tables. 
+Makers can continue to choose more data and open Fabric from Power Apps (make.powerapps.com). The Lakehouse, SQL endpoint and the Power BI dataset are updated with new data as changes occur in Dataverse.
 
-Makers choose one or more tables from Dataverse and launch Fabric by selecting **Link to Microsoft Fabric**. When you select the command for the first time, a workspace is created in your Power BI subscription with shortcuts in Fabric to Dataverse tables. A Fabric Lakehouse and a default data warehouse are also created, enabling makers to explore data with SQL, Spark, or other Fabric tools.
+## Manage link to Microsoft OneLake
 
-Makers can continue to add more data and open Fabric from Power Apps (make.powerapps.com). The default Fabric Lakehouse and the data warehouse are updated with new data as changes occur in Dataverse.
-
-## Add more data and manage your link
-
-When makers choose to view in Fabric from Power Apps, optimized replicas of your data are created in Dataverse storage such that your operational workloads aren't impacted. This replica is governed and secured by Dataverse while enabling Fabric workloads to operate on this data.
+When you link to Fabric from Power Apps, system creates an optimized index of your data in Dataverse storage such that your operational workloads aren't impacted. This replica is governed and secured by Dataverse while enabling Fabric workloads to operate on this data.
 
 IT admins can manage this replica from the Azure Synapse Link for Dataverse page shown as **Managed Store** or **Microsoft OneLake**. IT admins can view tables added by makers, add or remove tables, and migrate the link to other environments. Admins can also see storage consumption in the Power platform admin center.
 
