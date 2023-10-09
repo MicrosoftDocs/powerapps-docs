@@ -54,7 +54,7 @@ In the example, since the `labelid` property is defined, the object ID is *67722
 
 Now that you have the object ID, you can follow the steps to export the translations file. Open the file, to locate the object ID to make your localized text updates for the tab, section, or column. More information: [Translate customized table, form, and column text into other languages](export-customized-entity-field-text-translation.md)
 
-### What if you’re unable to find the asset in customizations XML
+### What if you can't find the asset in customizations XML?
 
 When you export a model-driven form, only the diff between the active layer and last managed layer is exported. If you haven’t made any changes to the tab, section, or column, the asset won’t appear in the customizations.xml.
 
