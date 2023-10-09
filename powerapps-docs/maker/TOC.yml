@@ -2154,6 +2154,8 @@
             href: ./data-platform/export-customized-entity-field-text-translation.md
           - name: Import translated component text
             href: ./data-platform/import-translated-entity-field-text.md
+          - name: Update localized label text
+            href: ./data-platform/update-translated-text.md
       - name: Diagnose solutions and solution objects
         href: ./data-platform/diagnose-solutions.md
         items:
