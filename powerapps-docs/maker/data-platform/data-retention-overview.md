@@ -23,7 +23,7 @@ Microsoft Dataverse supports custom retention policies to securely retain unlimi
 > - When the feature is generally available (GA), note the following requirements to use all long term data retention features:
 >   - Dynamics 365 customer engagement app customer.
 >   - Power Apps customer with a [managed environment](/power-platform/admin/managed-environment-overview). 
->   - Customers who don't meet either requirement can continue to create a data retention policy, but the policy is disabled. These customer must meet the requirement to enable the policy to run.
+>   - Customers who don't meet either requirement can continue to create a data retention policy, but the policy is disabled. You must meet one of the requirements to enable the policy to run.
 > - Pricing information for long term data retention will be available at general availability.
 
 Watch this video to learn about Dataverse long term data retention.
