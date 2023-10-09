@@ -27,15 +27,17 @@ When you create a new model-driven app form and add columns to the form, the for
 
 To update localized labels for forms through the export translations Excel file, you need to correctly identify the object ID corresponding to each tab, section, or column. The following sections explain how to do this.
 
+
+
 ## Identify the object ID for form labels
 
 1. Create a solution and add the form as part of this new solution. 
 1. Export the solution as managed. 
 1. Unzip the solution file and open the customizations.xml file with an XML or text editor.
 1. Find the tab, section, or column of the form that has the localized label you want to update.  
-1. Once you find the tab, section, or column, check if there's `labelid` property defined. If yes, then the value of `labelid` attribute is the object ID for localized label. If not, then the value of the ID attribute is the object ID for localized label.
+1. Once you find the tab, section, or column, check if there's `labelid` property defined. If yes, then the value of `labelid` attribute is the object ID for the localized label. If not, then the value of the ID attribute is the object ID for localized label.
 
-For example, say you want to find the object ID for attribute `websiteurl`. Search for that attribute in the Customizations.xml file in the `formxml` section.
+For example, say you want to find the object ID for attribute `websiteurl`. Search for that attribute in the customizations.xml file in the `formxml` section.
 
 ```xml
 <row> 
@@ -49,6 +51,8 @@ For example, say you want to find the object ID for attribute `websiteurl`. Sear
 ```
 
 In the example, since the `labelid` property is defined, the object ID is *67722747-e8af-40cf-a72a-2d8794c7c330*.
+
+Now that you have the object ID, you can follow the steps to export the translations file. Open the file, to locate the object ID to make your localized text updates for the tab, section, or column. More information: [Translate customized table, form, and column text into other languages](export-customized-entity-field-text-translation.md)
 
 ### What if you’re unable to find the asset in customizations XML
 
