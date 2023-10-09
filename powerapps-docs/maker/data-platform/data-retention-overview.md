@@ -19,7 +19,8 @@ Microsoft Dataverse supports custom retention policies to securely retain unlimi
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - For public preview, only non-production environments are allowed for previewing the long-term data retention feature. Production and Dataverse for Teams environments can't be used with this feature.
-> - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
+> - No additional Power Platform licensing requirement is required to experience this feature during the preview.
+> - In GA, all Dynamics customers will be able to use this feature, as also Power Apps customers with a managed environment(https://learn.microsoft.com/en-us/power-platform/admin/managed-environment-overview). Customers can still create a policy outside these environment types but the policy will be disabled, with a requirement to upgrade to enable the policy to run. 
 > - Pricing information for long term data retention will be available at general availability.
 
 Watch this video to learn about Dataverse long term data retention.
@@ -61,12 +62,12 @@ Dataverse provides read-only access to the retained data via:
 
 ## Types of data retained long term
 
-Dataverse standard (except system) tables, custom tables, along with attachments, can be retained in Dataverse long term storage.
+Dataverse standard (except system) tables, custom tables, along with attachments and images, can be retained in Dataverse long term storage.
 
 > [!NOTE]
-> Currently, audit, elastic tables, and images aren't supported for long term retention.
+> Currently, audit tables and elastic tables are not supported for long term retention.
 
-Admins set retention policies on tables when the application maker has enabled long term retention for the table. When a maker enables retention on a parent root table, it also enables retention for all child tables.
+Admins set retention policies on tables when the application maker has enabled long term retention for the table. When a maker enables retention on a parent root table, it also enables retention for all child tables and associated attachments and images.
 
 ### Long term data retention and existing delete action and plugins
 
