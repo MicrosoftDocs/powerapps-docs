@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 09/18/2023
+ms.date: 10/09/2023
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -104,6 +104,9 @@ Admins can disable the **Try the new look** setting across all apps in an organi
 1. Update **Setting Environment Value** to **No**.
 1. Select **Save**.
 1. Publish all customizations.
+
+    > [!NOTE]
+    > If you are using 2023 release wave 1 and want to turn off the new look, update the **Try the new look and feel (preview)** setting.
 
 ### Can I switch to a different theme or enable dark mode?
 Switching themes or enabling dark mode isn't supported at this time.
