@@ -17,7 +17,7 @@ ms.author: "matp"
 search.audienceType: 
   - maker
 ---
-# Update localized labels with Power Apps
+# Update localized labels for forms
 
 This article describes how to update existing localized labels that were created following the steps in the article [Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md).
 
