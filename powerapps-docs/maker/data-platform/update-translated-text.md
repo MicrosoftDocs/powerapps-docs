@@ -60,7 +60,7 @@ You can modify the label or any other property of the asset using the form desig
 
 There are two alternative ways to find the object ID for a localized label:
 
-- Find the full form XML of the form by checking the solution layers of the model-driven app form. More information: [Solution layers](solution-layers.md)
-- You can also make an OData call to retrieve the form xml if you know the form ID. 
+- Find the full form XML of the form by viewing the **Properties** page for the solution layers of the model-driven app form. More information: [View the solution layers for a component](solution-layers.md#view-the-solution-layers-for-a-component)
+- You can also make an OData call to retrieve the form xml if you know the form ID.
   - `[environmentURL]/api/data/v9.0/systemforms(b0742891-2411-494b-bfe7-93bc20356399)?$select=formxml`
 
