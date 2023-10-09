@@ -23,7 +23,7 @@ This article describes how to update existing localized labels that were created
 
 ## Updating localized labels overview
 
-When you create a new model-driven app form and add columns to the form, the form creates a copy of the localized labels for those columns in the base language. Once a form is created, changing the localized label text for a column in the base language will not update the localized label on the form. However, you can update the localized labels for a form using the form designer. More information:  https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-move-or-delete-fields-on-form#configure-column-properties-on-a-form 
+When you create a new model-driven app form and add columns to the form, the form creates a copy of the localized labels for those columns in the base language. Once a form is created, changing the localized label text for a column in the base language won't update the localized label on the form. However, you can change the column, tab, and section labels that can be localized for a form using the form designer. More information: [Configure column properties on a form](../model-driven-apps/add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form)
 
 To update localized labels for forms through the export translations Excel file, you need to correctly identify the object ID corresponding to each tab, section, or column. The following sections explain how to do this.
 
@@ -33,7 +33,7 @@ To update localized labels for forms through the export translations Excel file,
 1. Export the solution as managed. 
 1. Unzip the solution file and open the customizations.xml file with an XML or text editor.
 1. Find the tab, section, or column of the form that has the localized label you want to update.  
-1. Once you find the tab, section, or column, check if there is `labelid` property defined. If yes, then the value of `labelid` attribute is the object ID for localized label. If not, then the value of the id attribute is the object id for localized label.
+1. Once you find the tab, section, or column, check if there's `labelid` property defined. If yes, then the value of `labelid` attribute is the object ID for localized label. If not, then the value of the ID attribute is the object ID for localized label.
 
 For example, say you want to find the object ID for attribute `websiteurl`. Search for that attribute in the Customizations.xml file in the `formxml` section.
 
@@ -52,9 +52,9 @@ In the example, since the `labelid` property is defined, the object ID is *67722
 
 ### What if you’re unable to find the asset in customizations XML
 
-When you export a model-driven form, only the diff between active layer and last managed layer are exported. If you haven’t made any changes to the tab, section, or column, the asset won’t appear in the customizations.xml.
+When you export a model-driven form, only the diff between the active layer and last managed layer is exported. If you haven’t made any changes to the tab, section, or column, the asset won’t appear in the customizations.xml.
 
-You can modify the label or any other property of the asset using the form designer, and then export the changes to find the object id.
+You can modify the label or any other property of the asset using the form designer, and then export the changes to find the object ID.
 
 ## Alternate way to find the object ID of a localized label
 
