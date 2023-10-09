@@ -50,6 +50,8 @@ The dependent assembly capability can be used to include other required .NET ass
 
 > [!IMPORTANT]
 > The dependent assembly capability is so important to plug-in development that you should consider using it from the start even if you do not have an immediate need to do so. Adding support for dependent assemblies to your plug-in project is much more difficult later on in the development cycle.
+>
+> We do not supported use of ILMerge. This dependent assemblies feature provides a solution we can support with the same functionality as ILMerge and more.
 
 This NuGet package file is stored in the [PluginPackage](reference/entities/pluginpackage.md) table. The contents of the NuGet package is stored in file storage rather than the SQL database.
 
