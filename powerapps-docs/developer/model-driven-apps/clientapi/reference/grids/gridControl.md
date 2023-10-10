@@ -14,8 +14,6 @@ contributors:
 ---
 # GridControl (Client API reference)
 
-
-
 GridControl or the gridContext is the instance of grid or subgrid on a form against which you want to execute your script. Use the form context to get GridControl [(gridContext)](../grids.md#bkmk_gridcontext) on a form.
 
 ## Methods for grids
@@ -50,13 +48,9 @@ Along with the methods mentioned above, subgrid also have the following methods:
 |[setFocus](../controls/setFocus.md)|Sets the focus on the control.|Read-only and editable grids|
 |[setVisible](../controls/setVisible.md)|Sets a value that indicates whether the control is visible.|Read-only and editable grids|
 
-### Related topics
+### Related articles
 
-[Grid](grid.md)
-
+[Grid](grid.md)   
 [Grids and subgrids in model-driven apps](../grids.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

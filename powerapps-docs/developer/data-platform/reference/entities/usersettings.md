@@ -1,7 +1,7 @@
 ---
 title: "UserSettings table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the UserSettings table/entity."
-ms.date: 03/07/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -23,9 +23,9 @@ User's preferred settings.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.2/usersettingscollection(*systemuserid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/usersettingscollection<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.2/usersettingscollection(*systemuserid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Retrieve|GET /usersettingscollection(*systemuserid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /usersettingscollection<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH /usersettingscollection(*systemuserid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -59,6 +59,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CurrencyDecimalPrecision](#BKMK_CurrencyDecimalPrecision)
 - [CurrencyFormatCode](#BKMK_CurrencyFormatCode)
 - [CurrencySymbol](#BKMK_CurrencySymbol)
+- [D365AutoInstallAttemptStatus](#BKMK_D365AutoInstallAttemptStatus)
 - [DataValidationModeForExportToExcel](#BKMK_DataValidationModeForExportToExcel)
 - [DateFormatCode](#BKMK_DateFormatCode)
 - [DateFormatString](#BKMK_DateFormatString)
@@ -100,6 +101,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PersonalizationSettings](#BKMK_PersonalizationSettings)
 - [PMDesignator](#BKMK_PMDesignator)
 - [PricingDecimalPrecision](#BKMK_PricingDecimalPrecision)
+- [ReleaseChannel](#BKMK_ReleaseChannel)
 - [ReportScriptErrors](#BKMK_ReportScriptErrors)
 - [ResourceBookingExchangeSyncVersion](#BKMK_ResourceBookingExchangeSyncVersion)
 - [SelectedGlobalFilterId](#BKMK_SelectedGlobalFilterId)
@@ -132,6 +134,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneStandardYear](#BKMK_TimeZoneStandardYear)
 - [TrackingTokenId](#BKMK_TrackingTokenId)
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
+- [TryToggleSets](#BKMK_TryToggleSets)
 - [TryToggleStatus](#BKMK_TryToggleStatus)
 - [UILanguageId](#BKMK_UILanguageId)
 - [UseCrmFormForAppointment](#BKMK_UseCrmFormForAppointment)
@@ -300,6 +303,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|13|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_D365AutoInstallAttemptStatus"></a> D365AutoInstallAttemptStatus
+
+**Added by**: Microsoft D365 Auto Install Plugin Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Determines the status of auto install of Dynamics 365 to Teams attempt has been completed|
+|DisplayName|d365autoinstallattemptstatus|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|d365autoinstallattemptstatus|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### D365AutoInstallAttemptStatus Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not attempted||
+|1|Auto installed|Dynamics 365 App installed successfully|
+|2|Already installed|Dynamics 365 app is already installed in Teams|
+|3|Teams admin blocked|Teams admin blocked installing Dynamics 365 app|
+|4|Unauthorized|Not authorized to execute auto install|
+|5|No Solution|D365 auto install solution is no available|
+|6|No Graph API|Graph API is not available for auto install|
+|7|Resource Disabled|Resource to call graph api is disabled by tenant|
+
 
 
 ### <a name="BKMK_DataValidationModeForExportToExcel"></a> DataValidationModeForExportToExcel
@@ -1053,6 +1086,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_ReleaseChannel"></a> ReleaseChannel
+
+**Added by**: App Framework Infra Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Model app channel override|
+|DisplayName|Model app channel override|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|releasechannel|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ReleaseChannel Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Semi-annual channel override||
+|2|Monthly channel override||
+|3|Inner channel override||
+
+
+
 ### <a name="BKMK_ReportScriptErrors"></a> ReportScriptErrors
 
 |Property|Value|
@@ -1588,6 +1646,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Targets|transactioncurrency|
 |Type|Lookup|
+
+
+### <a name="BKMK_TryToggleSets"></a> TryToggleSets
+
+**Added by**: App Framework Infra Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The list of app modules with try toggle sets|
+|DisplayName|TryToggleSets|
+|Format|TextArea|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|trytogglesets|
+|MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_TryToggleStatus"></a> TryToggleStatus

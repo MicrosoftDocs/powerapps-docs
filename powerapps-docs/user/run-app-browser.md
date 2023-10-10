@@ -5,14 +5,16 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/10/2023
+ms.date: 07/21/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
+contributors:
+- brsova
 ---
 
 # Run an app in a web browser
@@ -38,19 +40,22 @@ The Home page may show several types of business apps.
 
 ![Busines Apps.](media/bussinessapps.png)
 
-The apps that meet the following criteria will be shown in the list of **Office** apps:
+The list of Office apps is a limited, curated list based on the following criteria:
 
 - Apps that you launched in the last week.
 - Apps that you created. 
 - Apps your admin marked as **Featured** in your tenant.
 - First-party, model-driven apps such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access and are hosted in production or default environments.
 
-### Known limitations
-- When a new app is shared with users, the app needs to meet the criteria listed above. Be aware that it can take up to 24 hours for the app to appear in the list of **Office** apps.
-- Some model-driven apps are not recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true). Note that featured apps will only appear to users who have access to the apps. Featured apps do not appear to all users.
-- It's possible that users will be able to see model-driven apps that they used to be able to access, but can no longer. There's also a chance that users will not be able to see model-driven apps that they have access to.    
+> [!NOTE]
+> Marking an app as **Featured** is the only way to guarantee inclusion in the list.
 
-### What if I cannot find an app?
+### Known limitations
+- When a new app is shared with users, the app needs to meet the criteria listed above. It can take up to 24 hours for the app to appear in the list of **Office** apps.
+- Some model-driven apps aren't recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true). Featured apps only appear to users who have access to the apps. Featured apps don't appear to all users.
+- It's possible that users will be able to see model-driven apps that they used to be able to access, but can no longer. There's also a chance that users won't be able to see model-driven apps that they have access to.    
+
+### What if I can't find an app?
 
 Apps that haven't been used in the last week won't appear in the list of **Office** apps. If you can't find an app, then you need to use the web link to open the app directly in your browser.
 

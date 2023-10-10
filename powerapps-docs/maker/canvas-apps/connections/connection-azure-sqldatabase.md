@@ -16,7 +16,6 @@ contributors:
   - lancedmicrosoft
 ---
 # Connect to SQL Server from Power Apps
-![SQL Server icon.](./media/connection-azure-sqldatabase/sqlicon.png)
 
 Connect to SQL Server, in either Azure or an on-premises database, so that you can manage your data with create, read, update, and delete operations.
 
@@ -37,72 +36,22 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 * For an on-premises database, identify a [data gateway](../gateway-management.md) that was shared with you (or create one).
 
 ## Generate an app automatically
-1. In Power Apps Studio, click or tap **New** on the **File** menu (along the left edge).
-   
-    ![New option on the File menu.](./media/connection-azure-sqldatabase/file-new.png)
-2. Under **Start with your data**, click or tap the right arrow at the end of the row of connectors.
-3. If you already have a connection to the database that you want to use, click or tap it, and then skip to step 7 in this procedure.
-4. Click or tap **New connection**, and then click or tap **SQL Server**.
-   
-    ![Add SQL Server connection.](./media/connection-azure-sqldatabase/add-sql-connection.png)
-5. Perform either of these steps:
-   
-   * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
-     
-       ![Server details.](./media/connection-azure-sqldatabase/connect-azure.png "Server details")
-   * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
-     
-       ![Connect to an on-premises database.](./media/connection-azure-sqldatabase/connect-onprem.png)
-     
-       > [!NOTE]
-     > If you don't have a gateway, [install one](../gateway-reference.md), and then click or tap **Refresh gateway list**.
-6. Click or tap **Connect**.
-7. Click or tap an option under **Choose a dataset**, click or tap an option under **Choose a table**, and then click or tap **Connect**.
-   
-    Power Apps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
-8. Customize the app by using techniques that are similar to those that [Create an app from Excel](../get-started-create-from-data.md) describes, starting with changing the app layout.
 
-## Build an app from scratch
-1. Sign in to [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with the same account that you used to sign up for Power Apps.
-2. In the left navigation bar, click or tap **Connections**:  
-   
-    ![Manage connections.](./media/connection-azure-sqldatabase/manage-connections.png)
-3. In the upper-right corner, click or tap **New connection**, and then click or tap **SQL Server**.
-4. Perform either of these steps:
-   
-   * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
-     
-       ![Connect directly (cloud services).](./media/connection-azure-sqldatabase/connect-azure-portal.png "Connect directly (cloud services)")
-   * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
-     
-       ![Connect using on-premises data gateway.](./media/connection-azure-sqldatabase/connect-onprem-portal.png "Connect using on-premises data gateway")
-     
-       > [!NOTE]
-     > If you don't have a gateway, [install one](../gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
-5. Click or tap **Create** to create the connection.
-6. Create an app by using techniques that are similar to those that [Create an app from scratch](../get-started-create-from-blank.md) describes.
 
-## Update an existing app
-1. In Power Apps Studio, open the app that you want to update.
-2. Click or tap **Data sources** on the **View** tab of the ribbon.
-3. In the right-hand pane, click or tap **Add a data source**.
-   
-    ![Add data source.](./media/connection-azure-sqldatabase/add-data-source.png)
-4. Click or tap **New connection**, click or tap **SQL Server**, and then click or tap **Connect**.
-5. Perform either of these steps:
-   
-   * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
-     
-       ![Connect to a database in Azure - cloud services.](./media/connection-azure-sqldatabase/connect-azure-fromblank.png "Connect to a database in Azure - cloud services")
-   * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
-     
-       ![Connect to a database in Azure.](./media/connection-azure-sqldatabase/connect-onprem-fromblank.png)
-     
-       > [!NOTE]
-     > If you don't have a gateway, [install one](../gateway-reference.md), and then click or tap the circular icon to refresh the list.
-6. Click or tap **Connect**.
-7. Under **Choose a dataset**, click or tap an option.
-8. Under **Choose a table**, select one or more checkboxes, and then click or tap **Connect**.
+Depending upon whether you have the [new look](../intro-maker-portal.md?tabs=home-new-look) or [classic look](../intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
+
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Depending on how you want to create your app, from the home screen, select one of the following options:
+   - To create a single-page gallery app with a responsive layout, choose either:
+     - **Start with data** > **Connect to external data** > **From SQL**.
+     - **Start with a page design** > **Gallery connected to external table** > **From SQL**.
+   - To create a three screen mobile app, select **Start with an app template** > **From SQL**.
+1. Select your SQL connection and then select a table. Note, that only one connection is shown at a time. To select a different connection, select on the **...** button to switch connection or create a new SQL connection.
+1. When you're done, select **Create app**.
+
+
+
 
 ## Next steps
 * Learn how to [show data from a data source](../add-gallery.md).

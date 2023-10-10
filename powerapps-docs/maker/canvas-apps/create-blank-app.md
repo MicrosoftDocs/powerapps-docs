@@ -4,9 +4,8 @@ description: Create an app from scratch and then add your data.
 author: franklanmsft
 
 ms.topic: quickstart
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
@@ -20,7 +19,7 @@ contributors:
 
 # Create a blank canvas app from scratch
 
-In Power Apps, create a blank canvas app that you can then use to customize further with data from additional data sources, or by using collections.
+In Power Apps, create a blank canvas app that you can then use to customize further with data from another data source, or by using collections.
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
@@ -35,27 +34,17 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and, if necessary, [switch environments](intro-maker-portal.md#choose-an-environment).
 
-1. Select **Blank app**.
-
-    :::image type="content" source="media/create-blank-app/select-blank-app.png" alt-text="Select + Blank app to create an app from blank.":::
+1. on left navigation pane select **Create** > **Blank app**.
 
 1. From the available options, select **Create** under **Blank canvas app**.
 
-    :::image type="content" source="media/create-blank-app/select-create.png" alt-text="Select Create to create a blank canvas app.":::
-
 1. Enter an app name.
 
-1. (Optional) Choose a different layout for the app.
+1. (Optional) Choose a different format for the app.
 
 1. Select **Create** to create the blank canvas app.
 
-    :::image type="content" source="media/create-blank-app/enter-name-create.png" alt-text="Select Create after entering name and choosing the layout for the blank canvas app..":::
-
-Once created, the app opens in Power Apps Studio for you to start configuring the app functionality.
-
-:::image type="content" source="media/create-blank-app/power-apps-studio.png" alt-text="Configure app functionality using Power Apps Studio..":::
-
-Choose **Create a form** to start configuring the app with a form, or **Create a gallery** to add a gallery. Otherwise, select **Skip** to close the help, and start configuring app using Power Apps Studio.
+Once created, the app opens in [Power Apps Studio](power-apps-studio.md) for you to start building the app.
 
 ## Next steps
 

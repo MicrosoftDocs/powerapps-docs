@@ -43,6 +43,8 @@ Predefined templates for showing images and text in a gallery are available, and
     - [Scrollable screen (Fluid grid)](../add-scrolling-screen.md)
     - [Web barcode scanner](control-barcodescanner.md)
 - You can only add one gallery inside another gallery.
+- The minimum **TemplateSize** is one. This can cause controls in the **Gallery** to drift from their expected **X** or **Y** values, when you don't account for the template size.
+
 
 ## Key properties
 
@@ -57,6 +59,8 @@ Predefined templates for showing images and text in a gallery are available, and
 [AccessibleLabel](properties-accessibility.md) – Label of the gallery (not the items it contains) for screen readers. Should describe what the list of items are.
 
 **AllItems** – Items that are loaded in the gallery. This may be less than the actual number of **Items** of the data source. More items may be loaded when the gallery is scrolled. **AllItems** also contains controls that are used in each gallery item.
+
+**AllItemsCount** - Count of items that are loaded in the gallery. This may be less than the actual number of **Items** of the data source. More items may be loaded when the gallery is scrolled.
 
 [BorderColor](properties-color-border.md) – The color of a control's border.
 
@@ -90,7 +94,7 @@ Predefined templates for showing images and text in a gallery are available, and
 
 **TemplatePadding** – The distance between items in a gallery.
 
-**TemplateSize** – The height of the template for a gallery in vertical/portrait orientation. Or the width of the template for a gallery in horizontal/landscape orientation.
+**TemplateSize** – The height of the template for a gallery in vertical/portrait orientation. Or the width of the template for a gallery in horizontal/landscape orientation. The minimum size is one.
 
 **Transition** – The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.
 

@@ -1,3 +1,4 @@
+items:
 - name: Activities
   items:
   - name: 'Convert a fax to a task'
@@ -228,8 +229,12 @@
     href: modify-query-preoperation-stage.md
   - name: Web access from a plug-in
     href: web-access-plugin.md
-  - name: IsSystemAdmin Custom API
+  - name: IsSystemAdmin custom API
     href: issystemadmin-customapi-sample-plugin.md
+  - name: CreateMultiple & UpdateMultiple plug-ins
+    href: createmultiple-updatemultiple-plugin.md
+  - name: ExportDataUsingFetchXmlToAnnotation custom API
+    href: export-data-fetchxml-annotation-custom-api-sample.md
 - name: Query Data
   items:
   - name: Query data using LINQ
@@ -288,6 +293,8 @@
     href: retrieve-absolute-url-and-site-collection-url-of-a-location-record.md
 - name: Special Operations
   items:
+  - name: Create and Update multiple
+    href: create-update-multiple.md
   - name: Execute multiple requests
     href: execute-multiple-requests.md
   - name: Execute multiple requests in transaction

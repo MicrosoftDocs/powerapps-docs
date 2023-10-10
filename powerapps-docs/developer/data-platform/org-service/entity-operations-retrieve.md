@@ -1,12 +1,11 @@
 ---
-title: "Retrieve a table row using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Retrieve a table row using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes options available when retrieving a row programmatically." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "divkamath" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.date: 05/18/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: divkamath # GitHub ID
+ms.author: dikamath # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
@@ -14,7 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# Retrieve a table row using the Organization Service
+# Retrieve a table row using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
@@ -122,7 +121,7 @@ Tasks:
 Primary Contact Fullname: Scott Konersmann (sample)
 ```
 
-More information: [Query data using the Organization service](entity-operations-query-data.md)
+More information: [Query data using the SDK for .NET](entity-operations-query-data.md)
 
 
 ## Retrieve with an alternate key
@@ -164,9 +163,9 @@ Console.WriteLine(entity["name"]);
 > [!NOTE]
 > Alternate keys are usually used only for data integration scenarios
 
-## Retrieve documents in storage partitions
+## Retrieve records from elastic tables
 
-If you are retrieving table data stored in partitions be sure to specify the partition key when retrieving that data. More information: [Improve performance when accessing table data using storage partitions](azure-storage-partitioning-sdk.md)
+If you are retrieving elastic table data stored in partitions be sure to specify the partition key when retrieving that data. More information: [Retrieve a record in an elastic table](../use-elastic-tables.md#retrieve-a-record-in-an-elastic-table)
 
 ## Access Formatted values
 
@@ -176,9 +175,9 @@ The method to access formatted values on a retrieve operation is the same you wi
 
 ### See also
 
-[Create table rows using the Organization Service](entity-operations-create.md)<br />
-[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
-[Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)<br />
+[Create table rows using the SDK for .NET](entity-operations-create.md)<br />
+[Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)<br />
+[Associate and disassociate table rows using the SDK for .NET](entity-operations-associate-disassociate.md)<br />
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

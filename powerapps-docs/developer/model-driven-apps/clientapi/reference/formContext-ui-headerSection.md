@@ -17,6 +17,8 @@ contributors:
 
 Provides information on how to set the visibility of header section.
 
+[!INCLUDE [online-only-api-note](../includes/online-only-api-note.md)]
+
 ## Methods
 
 |Name|Description|
@@ -29,7 +31,7 @@ Provides information on how to set the visibility of header section.
 |[setTabNavigatorVisible](formContext-ui-headerSection/setTabNavigatorVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/setTabNavigatorVisible-description.md](formContext-ui-headerSection/includes/setTabNavigatorVisible-description.md)]|
 |||
 
-### Related topics
+### Related articles
 
 [Client API Xrm object](../clientapi-xrm.md)
 

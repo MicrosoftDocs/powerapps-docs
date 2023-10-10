@@ -3,7 +3,7 @@ title: Work offline on your mobile device (classic)
 description: How to work on your mobile device in offline mode
 ms.custom: 
 ms.date: 10/13/2022
-ms.reviewer: 
+ms.reviewer: sericks
 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -11,8 +11,8 @@ ms.topic: article
 applies_to: Dynamics 365 apps
 ms.assetid: 6828238b-1645-4710-a192-0014acb03196
 caps.latest.revision: 97
-ms.author: sericks
-author: sericks007
+ms.author: trdehove
+author: trdehove
 search.audienceType: 
   - admin
   - customizer

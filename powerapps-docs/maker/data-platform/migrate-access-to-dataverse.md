@@ -3,9 +3,8 @@ title: Migrate Microsoft Access data to Microsoft Dataverse (contains video) | M
 description: You can migrate your Microsoft Access data to Microsoft Dataverse or Microsoft Dataverse for Teams
 author: NHelgren
 ms.topic: overview
-ms.custom: 
-  - model
-  - intro-internal
+ms.custom: model
+ms.collection: get-started
 ms.reviewer: matp
 ms.date: 01/09/2023
 ms.subservice: dataverse-maker
@@ -107,7 +106,7 @@ Unlike Access, Dataverse and Dataverse for Teams are data sources. The user inte
 
 To enable application lifecycle management (ALM), Dataverse uses solutions to allow for the management, and distribution of content including apps, tables, and more. A solution is a package of components such as tables, relationships, or other items that can be distributed across multiple Dataverse environments through solution export and import.
 
-The Access migration tool allows users to choose if they wish to export their Access databases directly into a solution. Access datavases in solutions are exported as an unmanaged solution. A solution must exist or be created in Dataverse prior to the migration to be used for the migration process. To learn more about solutions, go to: [Solution Concepts](/power-platform/alm/solution-concepts-alm)
+The Access migration tool allows users to choose if they wish to export their Access databases directly into a solution. Access databases in solutions are exported as an unmanaged solution. A solution must exist or be created in Dataverse prior to the migration to be used for the migration process. To learn more about solutions, go to: [Solution Concepts](/power-platform/alm/solution-concepts-alm)
 
 ### See also
 

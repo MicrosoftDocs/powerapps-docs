@@ -6,7 +6,7 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 04/20/2023
+ms.date: 07/13/2023
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -15,7 +15,7 @@ contributors:
 ---
 # Environment variables overview
 
-Environment variables enable the basic application lifecycle management (ALM) scenario of moving an applications between Power Platform environments. In this scenario, the applications stay exactly the same except for a few key external application references (such as tables, connections, and keys) that are different between the source environment and the destination environment. The applications requires the structure of the tables or connections to be exactly the same between the source and the destination environments, with some differences. Environment variables allow you to specify which of these different external references should be updated as the application is moved across environments.
+Environment variables enable the basic application lifecycle management (ALM) scenario of moving an application between Power Platform environments. In this scenario, the application stays exactly the same except for a few key external application references (such as tables, connections, and keys) that are different between the source environment and the destination environment. The application requires the structure of the tables or connections to be exactly the same between the source and the destination environments, with some differences. Environment variables allow you to specify which of these different external references should be updated as the application is moved across environments.
 
 Environment variables store the parameter keys and values, which then serve as input to various other application objects. Separating the parameters from the consuming objects allows you to change the values within the same environment or when you migrate solutions to other environments. The alternative is leaving hard-coded parameter values within the components that use them. This is often problematic; especially when the values need to be changed during ALM operations. Because environment variables are solution components, you can transport the references (keys) and change the values when solutions are migrated to other environments.
 
@@ -126,18 +126,13 @@ Ensure environment variable names are unique so they can be referenced accuratel
 The names **$authentication** and **$connection** are specially reserved parameters for flows and should be avoided. Flow save will be blocked if environment variables with those names are used.
 If an environment variable is used in a flow and the display name of the environment variable is changed, then the designer will show both the old and new display name tokens to help with identification. When updating the flow, it's recommended to remove the environment variable reference and add it again.
 
-## Use Azure Key Vault secrets (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+## Use Azure Key Vault secrets
 
 Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use within Power Automate flows and custom connectors. Notice that the secrets aren't available for use in other customizations or generally via the API.
 
 The actual secrets are stored in Azure Key Vault and the environment variable references the key vault secret location. Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference.
 
 Environment variables referencing secrets aren't currently available from the dynamic content selector for use in flows.
-
-> [!IMPORTANT]
-> This is a preview feature. More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
 
 ### Configure Azure Key Vault
 
@@ -149,16 +144,22 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
 
    :::image type="content" source="media/env-var-secret1.png" alt-text="Register the Power Platform provider in Azure":::
 
-1. Create an Azure Key Vault vault. Consider using a separate vault for every Power Platform environment to minimize the threat in case of a breach. Go to [Best practices for using Azure Key Vault](/azure/key-vault/general/best-practices#use-separate-key-vaults) for more information. For more information about how to create a key vault, go to [Quickstart - Create an Azure Key Vault with the Azure portal](/azure/key-vault/general/quick-create-portal)
-1.	The user who creates the environment variable must have read permission on the specific vault. You can verify permission using **View my access** on the **Access Control** > **Check access** tab of the Azure Key Vault on the Azure portal. If the user doesn't have access to the vault, grant access to this resource via the Key Vault Reader or other appropriate role.
+1. Create an Azure Key Vault vault. Consider using a separate vault for every Power Platform environment to minimize the threat in case of a breach. Consider configuring your key vault to use **Azure role-based access control** for the **Permission model**. Go to [Best practices for using Azure Key Vault](/azure/key-vault/general/best-practices#use-separate-key-vaults) for more information. For more information about how to create a key vault, go to [Quickstart - Create an Azure Key Vault with the Azure portal](/azure/key-vault/general/quick-create-portal)
+1.	Users who create or use environment variables of type secret must have permission to retrieve the secret contents. To grant a new user the ability to use the secret, select the **Access control (IAM)** area, select **Add**, and then select **Add role assignment** from the dropdown. More information: [Provide access to Key Vault keys, certificates, and secrets with an Azure role-based access control](/azure/key-vault/general/rbac-guide?tabs=azure-cli)
 
       :::image type="content" source="media/env-var-secret2.png" alt-text="View my access in Azure":::
 
-1. Azure Key Vault must have **Get** secret access policy set for the Dataverse service principal. If it doesn't exist for this vault, add a new access policy.  Select **Add Access Policy** and then select **Get** as the access policy. Next to **Select principal**, select **None selected** and then search for **Dataverse**. Select the Dataverse service principal with the **00000007-0000-0000-c000-000000000000** identity and then select **Add**. Once added, the access policy should look like this.
+1. On the **Add role assignment** wizard, leave the default assignment type as **Job function roles** and continue to the **Role** tab. Locate the **Key Vault Secrets User role** and select it. Continue to the members tab and select the **Select members** link and locate the user in the side panel. When you have the user selected and shown on the members section, continue to the review and assign tab and complete the wizard.
 
-      :::image type="content" source="media/env-var-secret3.png" alt-text="Get access policy for Dataverse security principal in Azure":::
+1. Azure Key Vault must have the **Key Vault Secrets User** role granted to the Dataverse service principal. If it doesn't exist for this vault, add a new access policy using the same method you previously used for the end user permission, only using the Dataverse application identity instead of the user. If you have multiple Dataverse service principals in your tenant, then we recommend that you select them all and save the role assignment. Once the role is assigned, review each Dataverse item listed in the role assignments list and select the Dataverse name to view the details. If the **Application ID** isn't **00000007-0000-0000-c000-000000000000** then select the identity and then select **Remove** to remove it from the list.
 
 1. If you haven't done so already, add a secret to your new vault. More information: [Azure Quickstart - Set and retrieve a secret from Key Vault using Azure portal](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
+
+> [!NOTE]
+> We have recently changed the security role that we use to assert access permissions within Azure Key Vault. Previous instructions included assigning the Key Vault Reader role. If you have set up your key vault previously with the Key Vault Reader role, make sure that you add the Key Vault Secrets User role to ensure that your users and Dataverse will have sufficient permissions to retrieve the secrets.
+
+> [!TIP]
+> We recognize that our service is using the Azure role-based access control APIs to assess security role assignment even if you still have your key vault configured to use the vault access policy permission model. To simplify your configuration, we recommended that you switch your vault permission model to Azure role-based access control. You can do this in the Access configuration tab.
 
 ### Create a new environment variable for the Key Vault secret
 
@@ -270,7 +271,7 @@ No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use 
 
 ### Is there a limit to the number of environment variables I can have?
 
-No. However, the max size of a solution is 32 MB. See [Create a solution](/power-apps/maker/data-platform/create-solution)
+No. However, the max size of a solution is 120 MB. See [Create a solution](/power-apps/maker/data-platform/create-solution)
 
 ### Can environment variable display names and descriptions be localized?
 

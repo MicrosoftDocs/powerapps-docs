@@ -1,7 +1,7 @@
 ---
 title: "Use optional parameters (Microsoft Dataverse) | Microsoft Docs" 
 description: "Use optional parameters to control operation behaviors" 
-ms.date: 03/08/2023
+ms.date: 06/28/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -37,7 +37,7 @@ One exception is when setting the `partitionid`, this is set as an attribute of 
 
 More information:
 
-- [Use messages with the Organization service](org-service/use-messages.md)
+- [Use messages with the SDK for .NET](org-service/use-messages.md)
 - See the examples below
 
 ### [Web API](#tab/webapi)
@@ -93,13 +93,13 @@ static void CreateWebResourceInSolution(IOrganizationService service)
 
 More information:
 
-- [Use messages with the Organization service](org-service/use-messages.md)
-- [Create table rows using the Organization Service](org-service/entity-operations-create.md)
+- [Use messages with the SDK for .NET](org-service/use-messages.md)
+- [Create table rows using the SDK for .NET](org-service/entity-operations-create.md)
 - [Import files as web resources](org-service/samples/import-files-as-web-resources.md)
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/webresourceset HTTP/1.1
@@ -119,7 +119,7 @@ MSCRM.SolutionUniqueName: ExampleSolution
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 No Content
@@ -180,7 +180,7 @@ static void DemonstrateSuppressDuplicateDetection(IOrganizationService service)
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -196,7 +196,7 @@ MSCRM.SuppressDuplicateDetection: false
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 412 Precondition Failed
@@ -215,12 +215,15 @@ OData-Version: 4.0
 
 More information:
 
-- [Detect duplicate data using the Organization service](org-service/detect-duplicate-data.md)
+- [Detect duplicate data using the SDK for .NET](org-service/detect-duplicate-data.md)
 - [Detect duplicate data using the Web API](webapi/manage-duplicate-detection-create-update.md)
 
 ## Add a shared variable to the plugin execution context
 
 Use the `tag` parameter to include a shared variable value that is accessible within a plug-in. This extra information allows a plug-in to apply logic that depends on the client application.
+
+> [!NOTE]
+> This parameter is intended for client applications to be able to set any value they wish. No Microsoft feature should require that you set a specific value in your client application code to enable different behaviors.
 
 To access the value in a plug-in, use the [IExecutionContext.SharedVariables collection](xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables)
 
@@ -251,7 +254,7 @@ static void DemonstrateTag(IOrganizationService service)
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts?tag=A%20string%20value HTTP/1.1
@@ -274,49 +277,53 @@ More information: [Shared variables](understand-the-data-context.md#shared-varia
 
 ## Perform a data operation with specified partition
 
-When using NoSQL tables, you can pass a unique string value with the `partitionid` parameter to access non-relational table data within a storage partition. Use this method to improve performance when accessing table data in Azure heterogenous storage.
+When using elastic tables with a partitioning strategy, you can pass a unique string value with the `partitionid` parameter to access non-relational table data within a storage partition.
 
-The following examples set the `partitionid` value of `CustomerPartition` when creating a `new_msdyn_customer` record. You can use this `partitionid` value later to retrieve the record more efficiently.
+The following examples use the `partitionid` value of `deviceId` when retrieving a `contoso_sensordata` record.
 
 ### [SDK for .NET](#tab/sdk)
 
 ```csharp
-static void DemonstratePartition(IOrganizationService service)
+private static Entity RetrieveRecord(
+    IOrganizationService service,
+    Guid contosoSensorDataId,
+    string deviceId,
+    string sessionToken)
 {
-    Entity entity = new("new_msdyn_customer");
-    entity["new_firstname"] = "Monica";
-    entity["new_lastname"] = "Thompson";
-    entity["partitionid"] = "CustomerPartition";
+    EntityReference entityReference = new("contoso_sensordata", contosoSensorDataId);
 
-    service.Create(entity);
+    RetrieveRequest request = new()
+    {
+        ColumnSet = new ColumnSet("contoso_value"),
+        Target = entityReference,
+        ["partitionId"] = deviceId, //To identify the record
+        ["SessionToken"] = sessionToken //Pass the session token for strong consistency
+    };
+    var response = (RetrieveResponse)service.Execute(request);
+    return response.Entity;
+
 }
 ```
-
-More information: [Improve performance using storage partitions when accessing entity data](org-service/azure-storage-partitioning-sdk.md)
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
-POST [Organization URI]/api/data/v9.2/new_msdyn_customers?partitionid=CustomerPartition HTTP/1.1
-If-None-Match: null
-OData-Version: 4.0
+GET [Organization Uri]/api/data/v9.2/contoso_sensordatas(da9c32cc-2df8-ed11-8849-000d3a993550)?partitionId=Device-ABC-1234&$select=contoso_value
+MSCRM.SessionToken: 207:8#142792105#7=-1
 OData-MaxVersion: 4.0
-Content-Type: application/json
+OData-Version: 4.0
+If-None-Match: null
 Accept: application/json
-
-{
-  "new_firstname": "Monica",
-  "new_lastname": "Thompson",
-}
 ```
 
-The response shouldn't be affected by sending the tag unless the plug-in contains logic to change it.
-
-More information: [Access entity data faster using storage partitions](webapi/azure-storage-partitioning.md)
-
 ---
+
+Alternatively, you can use the `partitionid` value using alternate key style.
+
+- [Learn about using the alternate keys with elastic tables](use-elastic-tables.md#using-the-alternate-key)
+- [Learn about specify a partitionid](use-elastic-tables.md#specify-partitionid)
 
 ## Bypass custom synchronous logic
 
@@ -370,7 +377,7 @@ Because this setting is applied to the service, it remains set for all requests 
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -420,7 +427,7 @@ static void DemonstrateSuppressCallbackRegistrationExpanderJob(IOrganizationServ
 
 ### [Web API](#tab/webapi)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -442,7 +449,7 @@ More information: [Bypass Power Automate Flows](bypass-custom-business-logic.md#
 
 ### See also
 
-[Use messages with the Organization service](org-service/use-messages.md)<br />
+[Use messages with the SDK for .NET](org-service/use-messages.md)<br />
 [Web API: Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)<br />
 [Bypass Custom Business Logic](bypass-custom-business-logic.md)
 

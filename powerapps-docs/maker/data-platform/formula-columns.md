@@ -5,7 +5,7 @@ author: matp
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 03/22/2023
+ms.date: 07/25/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -53,7 +53,7 @@ For example, the formula *price * discount* creates a column type of number. You
 ## Operators
 
 You can use the following operators in a formula column:  
-+, -, \*, /, %, ^, in, exactin, &
++, -, \*, /, %, in, exactin, &
 
 For more information, go to [Operators in Power Apps](../canvas-apps/functions/operators.md).
 
@@ -124,7 +124,7 @@ You can use the following scalar functions in a formula column:
       [EndsWith](../canvas-apps/functions/function-startswith.md)
    :::column-end:::
    :::column span="":::
-      [Exp](../canvas-apps/functions/function-numericals.md)
+      [Value](../canvas-apps/functions/function-value.md) \*
    :::column-end:::
    :::column span="":::
       [Hour](../canvas-apps/functions/function-datetime-parts.md)
@@ -165,7 +165,7 @@ You can use the following scalar functions in a formula column:
 :::row-end:::
 :::row:::
    :::column span="":::
-      [Ln](../canvas-apps/functions/function-numericals.md)
+      [Year](../canvas-apps/functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
       [Lower](../canvas-apps/functions/function-lower-upper-proper.md)
@@ -201,7 +201,7 @@ You can use the following scalar functions in a formula column:
       [Or](../canvas-apps/functions/function-logicals.md)
    :::column-end:::
    :::column span="":::
-      [Power](../canvas-apps/functions/function-numericals.md)
+      [WeekNum](../canvas-apps/functions/function-weeknum.md)
    :::column-end:::
    :::column span="":::
       [Replace](../canvas-apps/functions/function-replace-substitute.md)
@@ -226,7 +226,7 @@ You can use the following scalar functions in a formula column:
       [Second](../canvas-apps/functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
-      [Sqrt](../canvas-apps/functions/function-numericals.md)
+      [Weekday](../canvas-apps/functions/function-datetime-parts.md)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -270,18 +270,7 @@ You can use the following scalar functions in a formula column:
       [UTCToday](../canvas-apps/functions/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
-      [Value](../canvas-apps/functions/function-value.md) \*
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      [Weekday](../canvas-apps/functions/function-datetime-parts.md)
-   :::column-end:::
-   :::column span="":::
-      [WeekNum](../canvas-apps/functions/function-weeknum.md)
-   :::column-end:::
-   :::column span="":::
-      [Year](../canvas-apps/functions/function-datetime-parts.md)
+
    :::column-end:::
 :::row-end:::
 
@@ -291,7 +280,8 @@ You can use the following scalar functions in a formula column:
 
 |Description  |Example  |
 |---------|---------|
-|Retrieve a date value.  |  `DateAdd(Now(), -1, TimeUnit.Year)`    |
+|Retrieve a date value.  |  `DateAdd(UTCNow(),-1,TimeUnit.Years)`   |
+
 
 ### See also
 

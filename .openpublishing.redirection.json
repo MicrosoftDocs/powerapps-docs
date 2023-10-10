@@ -1,6 +1,51 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/extend-code-generation-tool.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/developer/org-service/extend-code-generation-tool",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/composite-attributes.md",
+      "redirect_url": "/previous-versions/dynamicscrm-2016/developers-guide/dn481581(v=crm.8)",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/use-outlook-methods.md",
+      "redirect_url": "https://learn.microsoft.com/previous-versions/dynamicscrm-2016/developers-guide/gg309513(v=crm.8)",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/bulk-operations-elastic-tables.md",
+      "redirect_url": "bulk-operations",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/use-createmultiple-updatemultiple.md",
+      "redirect_url": "../bulk-operations",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/enhanced-quick-start.md",
+      "redirect_url": "get-started-dynamics-365-web-api-csharp",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/start-web-api-project-visual-studio-csharp.md",
+      "redirect_url": "get-started-dynamics-365-web-api-csharp",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/azure-storage-partitioning-sdk.md",
+      "redirect_url": "../elastic-tables",
+      "redirect_document_id": "false"
+   },
+   {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/azure-storage-partitioning.md",
+      "redirect_url": "../elastic-tables",
+      "redirect_document_id": "false"
+    },   
+   {
       "source_path": "powerapps-docs/developer/data-platform/webapi/retrieve-related-entities-query.md",
       "redirect_url": "query-data-web-api#join-tables",
       "redirect_document_id": "false"
@@ -8288,6 +8333,396 @@
     {
       "source_path": "powerapps-docs/maker/portals/admin/clear-server-side-cache.md",
       "redirect_url": "/power-pages/admin/clear-server-side-cache",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/configure-knowledge-categories-articles.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/configure-knowledge-categories-articles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/manage-knowledge-articles-content-levels.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/manage-knowledge-articles-content-levels",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/display-file-attachments-knowledge-article.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/display-file-attachments-knowledge-article",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/create-edit-and-distribute-opportunities-in-dynamics-365.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/create-edit-and-distribute-opportunities-in-dynamics-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/engage-with-communities.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/engage-with-communities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/setup-manage-forums.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/setup-manage-forums",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/manage-forum-threads.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/manage-forum-threads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/create-forum-posts.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/create-forum-posts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/moderate-forums.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/moderate-forums",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/forum-access-permission.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/forum-access-permission",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/subscribe-alerts.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/subscribe-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/manage-blogs.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/manage-blogs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/crowdsource-ideas.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/crowdsource-ideas",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/enable-idea-content-moderation.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/enable-idea-content-moderation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/case-management.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/case-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/configure-web-roles-partner-portal.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/configure-web-roles-partner-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/integrate-project-service-automation.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/integrate-project-service-automation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/customer-engagement-apps/integrate-field-service.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/integrate-field-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-portal.md",
+      "redirect_url": "/power-pages/configure/portal-management-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-site-settings.md",
+      "redirect_url": "/power-pages/configure/configure-site-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/entity-lists.md",
+      "redirect_url": "/power-pages/configure/lists",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/list-attributes-relationionships.md",
+      "redirect_url": "/power-pages/configure/list-attributes-relationships",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/sort-lists.md",
+      "redirect_url": "/power-pages/configure/sort-lists",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/add-custom-javascript-list.md",
+      "redirect_url": "/power-pages/configure/add-custom-javascript-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/list-configuration.md",
+      "redirect_url": "/power-pages/configure/list-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/securing-lists.md",
+      "redirect_url": "/power-pages/configure/securing-lists",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/list-view-details.md",
+      "redirect_url": "/power-pages/configure/list-view-details",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/list-filter-configuration.md",
+      "redirect_url": "/power-pages/configure/list-filter-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/list-map-view.md",
+      "redirect_url": "/power-pages/configure/list-map-view",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/list-calendar-view.md",
+      "redirect_url": "/power-pages/configure/list-calendar-view",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/list-enhanced-view-filter.md",
+      "redirect_url": "/power-pages/configure/list-enhanced-view-filter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/entity-forms.md",
+      "redirect_url": "/power-pages/configure/basic-forms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-basic-form-metadata.md",
+      "redirect_url": "/power-pages/configure/configure-basic-form-metadata",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-basic-form-subgrid.md",
+      "redirect_url": "/power-pages/configure/configure-basic-form-subgrid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/web-form-properties.md",
+      "redirect_url": "/power-pages/configure/multistep-form-properties",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/web-form-steps.md",
+      "redirect_url": "/power-pages/configure/multistep-form-steps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/load-form-step.md",
+      "redirect_url": "/power-pages/configure/load-form-step",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/add-redirect-step.md",
+      "redirect_url": "/power-pages/configure/add-redirect-step",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/add-conditional-step.md",
+      "redirect_url": "/power-pages/configure/add-conditional-step",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/add-custom-javascript.md",
+      "redirect_url": "/power-pages/configure/add-custom-javascript",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-web-form-metadata.md",
+      "redirect_url": "/power-pages/configure/configure-multistep-form-metadata",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-web-form-subgrid.md",
+      "redirect_url": "/power-pages/configure/configure-multistep-form-subgrid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/add-geolocation.md",
+      "redirect_url": "/power-pages/configure/add-geolocation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/walkthrough-get-data-on-portal.md",
+      "redirect_url": "/power-pages/getting-started/tutorial-dataverse-website",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/add-chart.md",
+      "redirect_url": "/power-pages/configure/add-chart",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/add-fixed-layouts.md",
+      "redirect_url": "/power-pages/getting-started/tutorial-add-custom-page-layout",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/enable-multiple-language-support.md",
+      "redirect_url": "/power-pages/configure/enable-multiple-language-support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/behavior-format-date-time-field.md",
+      "redirect_url": "/power-pages/configure/behavior-format-date-time-field",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/cors-support.md",
+      "redirect_url": "/power-pages/configure/cors-support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/create-run-advertisement.md",
+      "redirect_url": "/power-pages/configure/create-run-advertisement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/choices-column.md",
+      "redirect_url": "/power-pages/configure/choices-column",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/customize-content-snippets.md",
+      "redirect_url": "/power-pages/configure/customize-content-snippets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/file-column.md",
+      "redirect_url": "/power-pages/configure/file-column",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/enable-header-footer-output-caching.md",
+      "redirect_url": "/power-pages/configure/enable-header-footer-output-caching",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/image-column.md",
+      "redirect_url": "/power-pages/configure/image-column",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/page-templates.md",
+      "redirect_url": "/power-pages/configure/page-templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/gather-feedback-poll.md",
+      "redirect_url": "/power-pages/configure/gather-feedback-poll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/publishing-states.md",
+      "redirect_url": "/power-pages/configure/publishing-states",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/place-child-nodes.md",
+      "redirect_url": "/power-pages/configure/place-child-nodes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/add-redirect-url.md",
+      "redirect_url": "/power-pages/configure/add-redirect-url",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/rate-webpage.md",
+      "redirect_url": "/power-pages/configure/rate-webpage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/web-files.md",
+      "redirect_url": "/power-pages/configure/web-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/manage-web-links.md",
+      "redirect_url": "/power-pages/configure/manage-web-links",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/web-page.md",
+      "redirect_url": "/power-pages/configure/web-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/websites.md",
+      "redirect_url": "/power-pages/configure/websites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/website-bindings.md",
+      "redirect_url": "/power-pages/configure/website-bindings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/index.yml",
+      "redirect_url": "/power-pages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/view-all-activities-in-portal-timeline.md",
+      "redirect_url": "/power-pages/configure/view-all-activities-in-portal-timeline",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/wrap/how-to.md",
+      "redirect_url": "/power-apps/maker/common/wrap/wrap-how-to",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/transparency-note.md",
+      "redirect_url": "/power-apps/maker/common/responsible-ai-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/transparency-note-build-apps-conversation.md",
+      "redirect_url": "/power-apps/maker/common/faqs-build-apps-conversation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common/formula-repair.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/working-with-formulas",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/portal-templates.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-portal.md",
+      "redirect_url": "/power-pages/getting-started/create-manage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/contact-us-sample.md",
+      "redirect_url": "/power-pages/templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-dynamics-portal.md",
+      "redirect_url": "/power-pages/templates/dynamics-365-apps/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/dataverse-search.md",
+      "redirect_url": "/power-pages/configure/search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/create-common-problems.md",
+      "redirect_url": "/power-pages/getting-started/create-manage",
       "redirect_document_id": false
     }
   ]

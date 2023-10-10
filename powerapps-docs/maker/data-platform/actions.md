@@ -1,7 +1,7 @@
 ---
 title: "Use custom process actions | MicrosoftDocs"
 description: "With custom process actions, you can perform operations, such as Create, Update, Delete, Assign, or Perform Action. Internally, an custom process action creates a custom message."
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 04/28/2021
 ms.reviewer: ""
 
@@ -30,13 +30,13 @@ Custom process actions provide the ability to define a single verb (or message) 
 
 Once an action is defined and activated, a developer can use that message like any of the other messages provided by the platform. However, a significant difference is that now someone who is not a developer can apply changes to what should be done when that message is used. You can configure the action to modify steps as your business processes change. Any custom code that uses that message does not need to be changed as long as the process arguments do not change.  
   
-Workflow processes and plug-ins continue to provide similar capabilities for defining automation. Workflow processes still provide the capability for a non-developer to apply changes. But the difference is in how the business processes are composed and how a developer can write their code. An custom process action is a message that operates on the same level as any of the messages provided by the platform. Developers can register plug-ins for actions.  
+Workflow processes and plug-ins continue to provide similar capabilities for defining automation. Workflow processes still provide the capability for a non-developer to apply changes. But the difference is in how the business processes are composed and how a developer can write their code. A custom process action is a message that operates on the same level as any of the messages provided by the platform. Developers can register plug-ins for actions.  
 
 > [!NOTE]
-> Custom API is a newer way to define custom messages with many advantages for developers. If you do not intend to use the no-code capabilities that custom process actions provide to configure business logic, Custom API provides better capabilities for developers to create their own messages. More information: 
+> Custom API is a newer way to define custom messages with many advantages for developers. If you do not intend to use the no-code capabilities that custom process actions provide to configure business logic, custom API provides better capabilities for developers to create their own messages. More information: 
 >
-> - [Compare Custom Process Action and Custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
-> - [Create and use Custom APIs](../../developer/data-platform/custom-api.md)
+> - [Compare Custom Process Action and custom API](../../developer/data-platform/custom-actions.md#compare-custom-process-action-and-custom-api)
+> - [Create and use custom APIs](../../developer/data-platform/custom-api.md)
   
 <a name="BKMK_GlobalMessages"></a>
 

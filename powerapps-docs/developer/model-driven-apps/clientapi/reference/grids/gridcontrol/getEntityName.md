@@ -14,8 +14,6 @@ contributors:
 ---
 # gridContext.getEntityName (Client API reference)
 
-
-
 [!INCLUDE[./includes/getEntityName-description.md](./includes/getEntityName-description.md)]
 
 ## Grid types supported
@@ -35,8 +33,5 @@ Read-only and editable grids
 ## Remarks
 
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext). 
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

@@ -3,9 +3,8 @@ title: Get started with formulas in canvas apps
 description: Learn about how to use formulas to customize a canvas app.
 author: gregli-msft
 
-ms.custom: 
-- "intro-internal"
-- "canvas"
+ms.custom: canvas
+ms.collection: get-started
 ms.topic: conceptual
 ms.reviewer: mkaur
 ms.date: 01/27/2022
@@ -19,10 +18,6 @@ contributors:
 ---
 # Get started with formulas in canvas apps
 
-> [!NOTE]
-> Have you checked out [Microsoft Power Fx](/power-platform/power-fx/overview)? 
->
-> Try the new experimental Power Fx formula bar in Power Apps Studio, with better intellisense and improved error highlighting. To learn more about turning this feature on, see [Controlling which features are enabled](working-with-experimental-preview.md#controlling-which-features-are-enabled).
 
 Configure your canvas app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 
@@ -91,13 +86,13 @@ In Power Apps, you can achieve a similar result by adding controls to a screen a
 
 Regardless of what numbers you type in the text-input controls, the label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula:
 
-`TextInput1 + TextInput2`
+`TextInput1.Text + TextInput2.Text`
 
 ![Animation of Power Apps recalculating the sum of two numbers.](./media/working-with-formulas/recalc2.gif)
 
 In Excel, you can use conditional-formatting formulas to show, for example, negative values in red. In Power Apps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label automatically shows negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
 
-`If( Value(Label1.Text) < 0, Red, Black )`
+`If( Value(Label1.Text) < 0, Color.Red, Color.Black )`
 
 ![Animation of conditional formatting.](media/working-with-variables/recalc-color.gif)
 
@@ -152,6 +147,29 @@ Initially, this view shows the most important properties.  To reveal all the pro
 As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here is the color code list in Power Apps.
 
 ![syntax highlighting.](./media/working-with-formulas/syntax-highlighting.png)
+
+## Power Fx formula bar (experimental)
+
+[This section is pre-release documentation and is subject to change.]
+
+> [!IMPORTANT]
+> - This is an experimental feature.
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+Use the Power Fx formula bar in Power Apps Studio, with better intellisense and improved error highlighting. The Power FX Formula bar allows users to write formulas more quickly and accurately. [Power FX](/power-platform/power-fx/overview) is a low-code formula language that is designed to be more intuitive and easier to learn than the existing formula language. It is based on Microsoft Excel formulas, which are widely used and familiar to many users.
+
+To use the Power Fx formula bar (experimental), you need to turn it on for each app. Follow the steps below to use the new formula bar:
+
+- From within your app, select **Settings** > **Upcoming features** > **Experimental** > set the **Power Fx formula bar** toggle to **On**.
+
+### Use Power Fx formula bar
+
+The Power FX formula bar in Power Apps Studio offers a more intuitive and efficient way to write formulas for your apps. Here's how to use it:
+
+1. Open your app for editing in Power Apps Studio. 
+2. Select the formula bar at the top of the screen to open it.
+3. Start typing your formula in the bar. As you type, the formula bar will provide suggestions for functions that match your input.
+5. Continue typing your formula or select the suggestions until you're done. 
 
 ### See also
 

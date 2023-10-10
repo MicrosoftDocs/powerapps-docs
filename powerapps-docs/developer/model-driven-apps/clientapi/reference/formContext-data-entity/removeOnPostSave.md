@@ -16,6 +16,8 @@ contributors:
 
 [!INCLUDE [removeonpostsave-description](includes/removeonpostsave-description.md)]
 
+[!INCLUDE [online-only-api-note](../../includes/online-only-api-note.md)]
+
 ## Syntax
 
 ```javascript
@@ -26,11 +28,10 @@ formContext.data.entity.removeOnPostSave(myFunction);
 
 |Name|Type|Required|Description|
 |------|-----|------|----------|
-|myFunction|function reference|Yes|The function to be removed from the `PostSave` event.|
+|`myFunction`|function reference|Yes|The function to be removed from the `PostSave` event.|
 
-### See also
+### Related articles
 
 [PostSave event](../events/postsave.md)
-
 [addOnPostSave](addOnPostSave.md) 
 

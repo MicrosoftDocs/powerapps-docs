@@ -15,7 +15,10 @@ contributors:
 
 # Sample: Reschedule and cancel a recurring appointment
 
-This sample demonstrates how to reschedule and cancel appointment instances in a recurring appointment series using the [RescheduleRequest](/dotnet/api/microsoft.crm.sdk.messages.reschedulerequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RecurringAppointment).
+This sample demonstrates how to reschedule and cancel appointment instances in a recurring appointment series using the [RescheduleRequest](/dotnet/api/microsoft.crm.sdk.messages.reschedulerequest) message.
+
+> [!div class="nextstepaction"]
+> [SDK for .NET: Reschedule and cancel a recurring appointment sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RecurringAppointment)
 
 ## How to run this sample
 

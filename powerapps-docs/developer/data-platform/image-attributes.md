@@ -54,14 +54,14 @@ public static void CreateImageColumn(IOrganizationService service, string entity
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*)
 
 #### [Web API](#tab/webapi)
 
 POST a [ImageAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.ImageAttributeMetadata) to the `Attributes` collection for the table.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes HTTP/1.1
@@ -105,7 +105,7 @@ Content-Length: 1393
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -135,7 +135,8 @@ In addition to the properties inherited from the [AttributeMetadata class](xref:
 > The `MaxHeight` and `MaxWidth` values are always 144 and cannot be changed. These define the size of the thumbnail-sized images that are created for every image column value.
 
 More information:
-- [Update a column using Web API](webapi/create-update-entity-definitions-using-web-api.md#update-a-column)
+
+- [Update a column using Web API](webapi/create-update-column-definitions-using-web-api.md#update-a-column)
 - [Update a column using SDK](org-service/metadata-attributemetadata.md#update-a-column)
 
 ## Retrieve image column definitions
@@ -226,7 +227,7 @@ More information: [Query schema definitions](query-schema-definitions.md)
 
 This request will return all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: [Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes/Microsoft.Dynamics.CRM.ImageAttributeMetadata?$select=SchemaName,CanStoreFullImage,MaxSizeInKB,IsPrimaryImage
@@ -236,7 +237,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -261,7 +262,7 @@ OData-Version: 4.0
 
 ## Restrictions with Customer Managed Keys (CMK)
 
-The same restrictions that apply to file columns also apply to image columns configured to store full-sized images. More information: [Restrictions with Customer Managed Keys (CMK)](file-attributes.md#restrictions-with-customer-managed-keys-cmk)
+The same restrictions that apply to file columns also apply to image columns configured to store full-sized images. More information: [Restrictions with self-managed key (BYOK)](file-attributes.md#restrictions-with-self-managed-key-byok)
 
 ### See also
 

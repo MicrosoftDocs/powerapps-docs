@@ -1,10 +1,8 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/02/2023
+ms.date: 05/18/2023
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "RichdiMSFT" # GitHub ID
 ms.subservice: dataverse-developer
@@ -15,9 +13,12 @@ search.audienceType:
 
 # Use SQL to query data
 
-[This topic is pre-release documentation and is subject to change. Note that only the SQL data connection through SQL Server Management Studio and .NET libraries is in preview. Power BI is General Availability (GA)]
+[This topic is pre-release documentation and is subject to change.]
 
 The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access.
+
+> [!NOTE]
+>  Only the SQL data connection through SQL Server Management Studio and .NET libraries is in preview. Power BI is generally available.
 
 ## Prerequisites
 
@@ -136,6 +137,8 @@ Querying data using SQL does not trigger any plug-ins registered on the <xref:Mi
 
 Queries using the TDS endpoint execute under the service protection API limits.
 
+The TDS endpoint can't be used with elastic tables. More information: [Elastic tables (Preview)](elastic-tables.md)
+
 ## Troubleshooting connection problems
 
 Below are some know error conditions and how to resolve them.
@@ -149,21 +152,21 @@ Only Azure Active Directory authentication is supported on the Dataverse endpoin
 
 - Error returned when using **Azure Active Directory – Integrated** authentication.
 
-“Login failed: The HTTP request was forbidden with client authentication scheme 'Anonymous'.
+"Login failed: The HTTP request was forbidden with client authentication scheme 'Anonymous'.
 RequestId: TDS;81d8a4f7-0d49-4d21-8f50-04364bddd370;2
-Time: 2020-12-17T01:10:59.8628578Z (.Net SqlClient Data Provider)”
+Time: 2020-12-17T01:10:59.8628578Z (.Net SqlClient Data Provider)"
 
 - Error returned when using **SQL Server** authentication.
 
-“Login failed: Request is not authenticated.
+"Login failed: Request is not authenticated.
 RequestId: TDS;918aa372-ccc4-438a-813e-91b086355343;1
-Time: 2020-12-17T01:13:14.4986739Z (.Net SqlClient Data Provider)”
+Time: 2020-12-17T01:13:14.4986739Z (.Net SqlClient Data Provider)"
 
 - Error returned when using **Windows** authentication.
 
-“Login failed: Request is not authenticated.
+"Login failed: Request is not authenticated.
 RequestId: TDS;fda17c60-93f7-4d5a-ad79-7ddfbb917979;1
-Time: 2020-12-17T01:15:01.0497703Z (.Net SqlClient Data Provider)”
+Time: 2020-12-17T01:15:01.0497703Z (.Net SqlClient Data Provider)"
 
 ### Blocked ports
 
@@ -200,7 +203,7 @@ This should return "TcpTestSucceeded : True"
 
 If the connection is successful, you will be in an active telnet session. If unsuccessful, you will receive the error:
 
-“Connecting to \<environmentname>.crm.dynamics.com… Could not open connection to the host, on port 1433: connect failed”. 
+"Connecting to \<environmentname>.crm.dynamics.com… Could not open connection to the host, on port 1433: connect failed". 
 
 This means the port has been blocked at the client.
 

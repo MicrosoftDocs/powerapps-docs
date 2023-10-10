@@ -1,7 +1,7 @@
 ---
 title: "Write a custom Azure-aware plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write plug-in code that can post a message or the execution context of the current database transaction to the Azure Service Bus."
-ms.date: 04/03/2022
+ms.date: 06/19/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
@@ -132,10 +132,11 @@ For a plug-in registered to execute asynchronously, the <xref:Microsoft.Xrm.Sdk.
   
 ### See also
 
-[Azure extensions for Dynamics 365](azure-integration.md)<br />
-[Send Dynamics 365 data over the Microsoft Azure Service Bus](work-data-azure-solution.md)<br />
-[Write a plug-In](write-plug-in.md)<br />
-[Event execution pipeline](event-framework.md)<br />
+[Azure extensions for Dynamics 365](azure-integration.md)  
+[Send Dynamics 365 data over the Microsoft Azure Service Bus](work-data-azure-solution.md)  
+[Sample: Azure aware custom plug-in](org-service/samples/azure-aware-custom-plugin.md)  
+[Write a plug-In](write-plug-in.md)  
+[Event execution pipeline](event-framework.md)  
 [Register and deploy plug-Ins](register-plug-in.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

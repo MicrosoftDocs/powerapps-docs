@@ -1,7 +1,7 @@
 ---
-title: "Web API EntityTypes (Microsoft Dataverse)| Microsoft Docs"
-description: "Describes OData EntityTypes which are named structured types with a key. EntityTypes describe the data types available in Dataverse Web API."
-ms.date: 04/06/2022
+title: Web API EntityTypes
+description: Learn about OData EntityTypes, which are named structured types with a key. EntityTypes describe the data types available in Dataverse Web API.
+ms.date: 05/18/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -15,16 +15,16 @@ contributors:
 ---
 # Web API EntityTypes
 
-Within the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document), immediately below the [Service namespace](web-api-service-documents.md#service-namespace) you will find a list of *EntityTypes*. An entity type is a named structured type with a key. It defines the named properties and relationships of a table.
+Within the [CSDL $metadata document](web-api-service-documents.md#csdl-metadata-document), immediately below the [Service namespace](web-api-service-documents.md#service-namespace) there's a list of *EntityTypes*. An entity type is a named structured type with a key. It defines the named properties and relationships of a table.
 
 `EntityType` elements usually have the following attributes:
 
 |Attribute  |Description  |
 |---------|---------|
-|`Name`     |The name of the type. This is the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> for the table.|
+|`Name`     |The name of the type; the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> for the table.|
 |`BaseType` |The EntityType that the type inherits from.|
 
-For example, this is the `EntityType` element for the `account` entity, excluding properties and navigation properties.
+For example, this XML element is the `EntityType` for the `account` entity, excluding properties and navigation properties.
 
 ```xml
 <EntityType Name="account" BaseType="mscrm.crmbaseentity">  
@@ -36,7 +36,7 @@ For example, this is the `EntityType` element for the `account` entity, excludin
 </EntityType>  
 ```
 
-Except for three exceptions, all entity types will have the following child elements:
+Except for three exceptions, all entity types have the following child elements:
 
 |Element  |Description  |
 |---------|---------|
@@ -46,15 +46,15 @@ Except for three exceptions, all entity types will have the following child elem
 
 ## Special entity types
 
-There are three entity types which do not have `Key`, `Property` or `NavigationProperty` elements.
+There are three entity types that don't have `Key`, `Property`, or `NavigationProperty` elements.
 
 ### crmbaseentity
 
-This element defines a common abstract type for any table that contain business data.
+This element defines a common abstract type for any table that contains business data.
 
 `<EntityType Name="crmbaseentity" Abstract="true" />`
 
-Because all entity types that contain business data inherit from `crmbaseentity`, you will find `crmbaseentity` referenced when a value isn't specific to one table.
+Because all entity types that contain business data inherit from `crmbaseentity`, `crmbaseentity` is referenced when a value isn't specific to one table.
 
 ### expando
 
@@ -62,30 +62,32 @@ This element defines an entity type that inherits from `crmbaseentity` but is al
 
 `<EntityType Name="expando" BaseType="mscrm.crmbaseentity" OpenType="true" />`
 
-An expando entity type can be used as a parameter to an action or function. 
+An expando entity type can be used as a parameter to an action, or as a response property from a function or action.
+
+More information: [Use open types with custom APIs](../use-open-types.md)
 
 ### crmmodelbaseentity
 
-Near the bottom of the $metadata document, you will find this element:
+This element exists near the bottom of the $metadata document:
 
 `<EntityType Name="crmmodelbaseentity" Abstract="true" />`
 
-This element defines a common abstract type for any schema definitions. It is the base type for another abstract base class used for table definitions. Unless you want to create and modify tables, columns, and relationships using Web API you won't need to use entity types that inherit from this type. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
+This element defines a common abstract type for any schema definitions. It's the base type for another abstract base class used for table definitions. Unless you want to create and modify tables, columns, and relationships using Web API you don't need to use entity types that inherit from this type. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
 
 ## EntityType inheritance
 
-For business data you will find two more abstract entity types that inherit from `crmbaseentity`:
+For business data, there are two more abstract entity types that inherit from `crmbaseentity`:
 
 |EntityType  |Description  |
 |---------|---------|
-|`principal`|`systemuser` and `team` entity types inherit from the `principal` entity type. Principal provides only the `ownerid` property, which every user-owned table has. This is what allows for user-owned records to be assigned to either a user or a team. <br /><br />  The `ownerid` property is the primary key for both `systemuser` and `team` EntityTypes.|
-|`activitypointer`|Any table that is configured as an activity will inherit from the `activitypointer` entity type. This type provides common properties found in entity types such as: `appointment`, `email`, `fax`, `letter`, `phonecall`, and `task`. You can also create a custom table that represents an activity. These common properties make it possible to retrieve a list of activities of different types using these common properties<br /> <br /> The `activityid` property is the primary key for all entity types that inherit from `activitypointer`.|
+|`principal`|`systemuser` and `team` entity types inherit from the `principal` entity type. Principal provides only the `ownerid` property, which every user-owned table has. This inheritance is what allows for user-owned records to be assigned to either a user or a team. <br /><br />  The `ownerid` property is the primary key for both `systemuser` and `team` EntityTypes.|
+|`activitypointer`|Any table that is configured as an activity inherits from the `activitypointer` entity type. This type provides common properties found in entity types such as: `appointment`, `email`, `fax`, `letter`, `phonecall`, and `task`. You can also create a custom table that represents an activity. These common properties make it possible to retrieve a list of activities of different types using these common properties<br /> <br /> The `activityid` property is the primary key for all entity types that inherit from `activitypointer`.|
 
 When working with table definitions, there another hierarchy of inheritance. <xref:Microsoft.Dynamics.CRM.MetadataBase> entity type inherits from the abstract `crmmodelbaseentity` to provide common `MetadataId` and `HasChanged` properties. More information: [Use the Web API with table definitions](use-web-api-metadata.md).
 
 ## Alternate Keys
 
-When an entity type has any alternate keys defined, you will find an `Annotation` that describes the properties that are involved in the alternate key definition.
+When an entity type has any alternate keys defined, there's an `Annotation` that describes the properties that are involved in the alternate key definition.
 
 The following example shows the annotation when the `account` entity has been configured to enable the `accountnumber` property as an alternate key.
 
@@ -106,7 +108,7 @@ The following example shows the annotation when the `account` entity has been co
 </Annotation>
 ```
 
-More information: [Retrieve using an alternate key](retrieve-entity-using-web-api.md#retrieve-using-an-alternate-key)
+More information: [Retrieve record using an alternate key](retrieve-entity-using-web-api.md#retrieve-record-using-an-alternate-key)
 
 ## Next steps
 

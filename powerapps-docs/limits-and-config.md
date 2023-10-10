@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/17/2023
+ms.date: 09/28/2023
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -15,6 +15,8 @@ contributors:
   - lancedmicrosoft
   - alaug
   - amchern
+ms.contributors:
+- arijitba
 ---
 # System requirements, limits, and configuration values for Power Apps
 
@@ -84,7 +86,7 @@ This list identifies all services to which Power Apps communicates and their usa
 
 | Domain(s) | Protocols | Uses |
 | --- | --- | --- |
-| api.bap.microsoft.com | https | Environment permissions management|
+| api.bap.microsoft.com<br>\*.api.bap.microsoft.com | https | Environment permissions management |
 | management.azure.com |https |Power Apps Management Service |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com<br>*.odc.officeapps.live.com |https |Microsoft Authentication Library |
@@ -96,14 +98,16 @@ This list identifies all services to which Power Apps communicates and their usa
 | \*.blob.core.windows.net |https | Blob storage <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You may [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.blob.core.windows.net. However, this list is subject to change.</br> |
 | \*.flow.microsoft.com<br/>\*.powerautomate.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com | http and https | Required for environments access. Includes integration and static Content Delivery Network (CDN) content endpoints. <br /><br />Replace # in http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com with your region's number: <ul><li>Asia/Pacific: 5</li><li>Canada: 3 </li><li>Europe, Africa, and Middle East: 15 and 4</li><li>France: 12</li><li>Germany: 16</li><li>India: 8</li><li>Japan: 7</li><li>North America: no number</li><li>Oceania: 6</li><li>Singapore: 20</li><li>South Africa: 14</li><li>South America: 2</li><li>Switzerland: 17</li><li>UAE: 15</li><li>United Kingdom: 11</li><li>Dynamics 365 US Government: 9</li> |
-| vortex.data.microsoft.com |https |Telemetry |
-| localhost | https | Power Apps Mobile|
-| 127.0.0.1 | http | Power Apps Mobile|
+| eu-mobile.events.data.microsoft.com/Collector/3.0| https | European region telemetry endpoint for model-driven apps |
+| browser.pipe.aria.microsoft.com | https | Rest of the World telemetry endpoint for model-driven apps |
+| localhost | http | Power Apps Mobile|
+| 127.0.0.1 | http <br><br>You may need to explicitly list the port (5040 and up) for localhost/127.0.0.1.| Power Apps Mobile|
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
-| \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| api.powerplatform.com<br>\*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
-
+| ris.api.iris.microsoft.com<br>eudb.ris.api.iris.microsoft.com | https | Record user action in response to Power Apps in-app campaigns |
+| arc.msn.com<br>arc-emea.msn.com | https | Record user viewing of Power Apps in-app campaigns |
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
 <sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>
@@ -111,7 +115,7 @@ This list identifies all services to which Power Apps communicates and their usa
 
 > [!IMPORTANT]
 > - If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
-> - If you are a US Government customer or a customer in China, there are additional service URLs that must be unblocked. More information:<br/>**US Government**: [Power Apps US Government service URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls), [Power Automate US Government service URLs](/power-automate/us-govt#power-automate-us-government-service-urls)<br/>**China**: [Power Platform and Dynamics 365 apps - operated by 21Vianet in China](/power-platform/admin/about-microsoft-cloud-china).  
+> - If you are a US Government customer or a customer in China, there are additional service URLs that must be unblocked. More information:<br/>**US Government**: [Power Apps US Government service URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls), [Power Automate US Government service URLs](/power-automate/us-govt#power-automate-us-government-service-urls)<br/>**China**: [Power Platform and Dynamics 365 apps - operated by 21Vianet in China](/power-platform/admin/about-microsoft-cloud-china).
 
 ## Deprecated endpoints
 
@@ -126,15 +130,18 @@ This section lists endpoints that we no longer support. Instead, use the new end
 
 Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile, or other non-browser clients.
 
-The following table shows some of the examples where embedding a canvas app isn't supported:
-
-| Canvas apps embedded to | Unsupported client |
-| - | - |
-| A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
-| A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
-| A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
-| A SharePoint page | <ul> <li> SharePoint mobile </li></ul> |
-
+The following table shows some of the examples where embedding a canvas app is and isn't supported:
+  
+| Power Apps embedding scenario                                                                   | Supported clients                                 | Unsupported clients                            |
+|-------------------------------------------------------------------------------------------------|---------------------------------------------------|------------------------------------------------|
+| A canvas app embedded in a SharePoint page.                                                     | Web, e.g.   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
+| A canvas app embedded in a SharePoint page that is added as a tab in a Microsoft Teams channel. | Web, e.g.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
+| A canvas app used as a custom form in the SharePoint page.                                      | Web, e.g.   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
+| A canvas app used as a custom form in the SharePoint page that is added to a Teams team.        | Web, e.g.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> </ul> |
+| A Power BI report that is added to Teams, or a SharePoint site.                                 | Web, e.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> |
+| A model-driven form that is added to Teams.                                                     | Web, e.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
+| A canvas app is embedded in a 3rd party client.                                                 | 3rd party web client that iframe's an app         | 3rd party native client via WebView            |
+|A canvas app in [Unified Service Desk](/dynamics365/unified-service-desk/admin/overview-unified-service-desk) |None|Unified Service Desk Desktop app|
 ## Proxies
 Power Apps does not support running with a proxy enabled. This can cause unpredictable behavior. If you encounter issues, disable the proxy and then try again.
 

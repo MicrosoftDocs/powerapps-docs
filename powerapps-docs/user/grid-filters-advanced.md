@@ -1,13 +1,13 @@
 ---
 title: Create and manage personal views on a grid page
 description: Create and manage personal views on a grid page in model-driven Power Apps.
-author: sericks007
+author: jasongre
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/01/2022
+ms.date: 05/18/2023
 ms.subservice: end-user
-ms.author: sericks
-ms.reviewer: ""
+ms.author: jasongre
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -86,7 +86,7 @@ The following options are available when you add conditions in the filter editor
 
     :::image type="content" source="./media/filter-editor-add-condition-row.png" alt-text="A screenshot of the view filter editor, showing an added row.":::
     
-    If you're adding a condition to a column with lookups, you can look up the record in the **Value** field. If your administrator has enabled [Show advanced lookup in lookup fields within Edit filters](/power-platform/admin/settings-features), you can choose **Advanced lookup** to see more fields and search for records within a specific view.
+    If you're adding a condition to a column with lookups, you can look up the record in the **Value** field. In the lookup drop-down menu, you can choose **Advanced lookup** to see more fields and search for records within a specific view.
     
     ![Advanced lookup option.](media/AdvLookupInEditFilters.png)
     

@@ -21,12 +21,12 @@ sections:
       - question: |
           Can single tenant customers use wrap with Power Apps? 
         answer: |
-          Yes. Both single tenant and multitenant customers can use wrap. However, it is important to assign a correct account type for your app on Azure portal during new app registration. See [App registration](how-to.md#app-registration) for directions on how to select a correct account type to prepare your app for wrap.
+          Yes. Both single tenant and multitenant customers can use wrap. However, it's important to assign a correct account type for your app on Azure portal if you're creating a new app registration manually. See [App registration](wrap-how-to.md#aegistering your app on Azure portal manually) for directions on how to select a correct account type to prepare your app for wrap.
 
       - question: |
           Does the wrap feature in Power Apps support Customer Managed Keys (CMK) or Lockbox capabilities?
         answer: |
-          No. The wrap feature in Power Apps does not support Customer Managed Keys (CMK) or Lockbox capabilities. Wrap for Power Apps uses Azure DevOps build pipelines to build mobile apps. Customer assets may be exposed in the build pipeline to Microsoft service operators. 
+          No. The wrap feature in Power Apps doesn't  support Customer Managed Keys (CMK) or Lockbox capabilities. Wrap for Power Apps uses Azure DevOps build pipelines to build mobile apps. Customer assets may be exposed in the build pipeline to Microsoft service operators. 
 
       - question: |
           Can I create mobile apps with Power Apps?
@@ -36,17 +36,17 @@ sections:
       - question: |
           If I create a mobile app with Power Apps, does Microsoft release it for me?
         answer: |
-          No. Microsoft will wrap your Power Apps app in a native mobile app shell for you to digitally sign and distribute.
+          No. Microsoft wraps your app in a native mobile app shell for you to digitally sign and distribute.
 
       - question: |
           How do I digitally sign my mobile app?
         answer: |
-          Signing instructions are provided for [Android](code-sign-android.md) and [iOS](code-sign-ios.md).
+          You can automatically sign your mobile app package in **Step 2: Target Platforms** step in wrap wizard. You will need to [create and prepare your Azure key vault](create-key-vault-for-code-signing.md) to take advantage of automatic mobile app signing feature in wrap wizard. For information on how to code sign your app manually, see instructions here: [Android](code-sign-android.md), [iOS](code-sign-ios.md) and [Google Play Store](https://developer.android.com/studio/publish/app-signing).
           
       - question: |
           Can I use Xcode to digitally sign my mobile apps for iOS?
         answer: |
-          No. Signing your mobile app with Xcode is not supported in wrap. To digitally sign your wrapped mobile app package for iOS, see [Code sign for iOS](code-sign-ios.md).
+          No. Signing your mobile app with Xcode isn't supported in wrap. To digitally sign your wrapped mobile app package for iOS, see [Code sign for iOS](code-sign-ios.md).
 
       - question: |
           How do I distribute my mobile app?
@@ -56,7 +56,7 @@ sections:
       - question: |
           How do I configure my mobile app for distribution through Microsoft Intune?
         answer: |
-          To enable your wrapped app package for distribution using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), you need to grant all the canvas app(s) that you intend to wrap *Mobile Application Management* API permission during the [App Registration](how-to.md#app-registration) step. More information: [Configure API permissions](how-to.md#configure-api-permissions).
+          Wrap wizard automatically configures your app for distribution with [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). To troubleshoot, you can manually grant all the canvas app(s) that you intend to wrap *Microsoft Mobile Application Management* API permission manually. More information:    [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional).
 
       - question: |
           Do I need to rewrap and redistribute my mobile app frequently?
@@ -71,7 +71,7 @@ sections:
       - question: |
          How do I update the icons and colors in my mobile app?
         answer: |
-         You can update icons and colors in your mobile app by rewraping your apps with new icons and colors and redistributing the updated mobile app pacakge.
+         You can update icons and colors in your mobile app by rewraping your apps with new icons and colors and redistributing the updated mobile app package.
          
       - question: |
          How do I add or remove canvas apps in my wrapped mobile app?
@@ -86,14 +86,13 @@ sections:
       - question: |
           What are the advantages of including Secondary apps in the bundle, if I can still Launch() them without doing so?
         answer: |
-          Including Secondary apps in the bundle provides a better Launch time performance when opening them for the first time. Howver, it is entirely optional to bundle Secondary apps with the Primary app. If you have many Secondary apps, you may choose to not bundle them to reduce the total size of the app bundle.
+          Including Secondary apps in the bundle provides a better Launch time performance when opening them for the first time. However, it's entirely optional to bundle Secondary apps with the Primary app. If you have many Secondary apps, you may choose to not bundle them to reduce the total size of the app bundle.
 
       - question: |
           Can I add apps that use Power BI data to wrap?
         answer: |
-          Yes. However, you need to grant *Power BI* API permission to all your apps that use Power BI data during the [App Registration](how-to.md#app-registration) step. More information: [Configure API permissions](how-to.md#configure-api-permissions).
+          Yes. Wrap wizard automatically configures your mobile app to be able to use Power BI. To troubleshoot, you can manually grant *Power BI* API permission to all your apps that use Power BI data. More information: [Configure the API permissions for your app manually](wrap-how-to.md#configure-the-api-permissions-for-your-app-manually-optional)
         
-
       - question: |
           Can I deep link into a wrapped mobile app?
         answer: |
@@ -102,7 +101,7 @@ sections:
       - question: |
           Why do I see this error message when I try to open my wrapped native app on a mobile device: You can't get there from here error message 
         answer: |
-         You organization might have **Require Approved Client App** conditional access policy that restricts access to mobile apps. To fix this issue see, [Edit your conditional access policy](/azure/active-directory/conditional-access/migrate-approved-client-app#edit-an-existing-conditional-access-policy).
+         Your organization might have **Require Approved Client App** conditional access policy that restricts access to mobile apps. To fix this issue see, [Edit your conditional access policy](/azure/active-directory/conditional-access/migrate-approved-client-app#edit-an-existing-conditional-access-policy).
                 
       - question: |
           Can I create B2C mobile apps with Power Apps?
