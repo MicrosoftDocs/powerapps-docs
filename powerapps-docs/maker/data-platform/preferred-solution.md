@@ -45,7 +45,12 @@ Once your preferred solution is set, notice the **preferred solution** indicator
 
 ## Deleting a preferred solution
 
-You can delete your preferred solution or a preferred solution shared with you. Notice you receive a warning when you delete an active solution. Delete an active solution only when you're sure it won't impact your work or the work of other makers.
+You can delete your preferred solution or a preferred solution that other makers have also set as their preferred solution.
+
+> [!WARNING]
+> Notice when you delete a preferred solution, you receive a warning that includes the fallback default solution and the number of other makers who are using the same solution. Delete an active solution only when you're sure it won't impact your work or the work of other makers.
+> 
+> :::image type="content" source="media/delete-preferred-solution.png" alt-text="Delete a preferred solution warning":::
 
 ## See also
 
