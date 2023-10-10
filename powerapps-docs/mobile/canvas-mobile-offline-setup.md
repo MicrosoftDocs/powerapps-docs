@@ -208,6 +208,6 @@ Switch(Connection.Sync,
 
 - Canvas apps that are in offline mode don't support files or images. If your app uses a Dataverse table that has an image in it, users may experience unanticipated errors. If you use a gallery, make sure the template and the layout don't include images.
 
-- [Wrapped apps](../maker/common/wrap/overview.md) aren't supported in offline mode.
+- Many-to-many relationship is not supported in offline.
 
 - [Learn about other mobile offline capabilities and limitations](offline-capabilities.md).
