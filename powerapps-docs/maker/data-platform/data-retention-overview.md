@@ -6,7 +6,7 @@ author: pnghub
 ms.author: gned
 ms.reviewer: matp
 ms.topic: overview
-ms.date: 05/24/2023
+ms.date: 10/09/2023
 ms.custom: template-overview
 ---
 # Dataverse long term data retention overview (preview)
@@ -19,7 +19,11 @@ Microsoft Dataverse supports custom retention policies to securely retain unlimi
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - For public preview, only non-production environments are allowed for previewing the long-term data retention feature. Production and Dataverse for Teams environments can't be used with this feature.
-> - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
+> - No additional Power Platform licensing requirement is required to experience this feature during the preview.
+> - When the feature is generally available (GA), you must meet one of the following two requirements to use all long term data retention features:
+>   - Be a licensed Dynamics 365 customer engagement app customer.
+>   - Be a licensed Power Apps customer with a [managed environment](/power-platform/admin/managed-environment-overview). 
+>   - Customers who don't meet either requirement can continue to create data retention policies, but the policies are disabled. You must meet one of the requirements to enable the policies to run.
 > - Pricing information for long term data retention will be available at general availability.
 
 Watch this video to learn about Dataverse long term data retention.
@@ -61,12 +65,12 @@ Dataverse provides read-only access to the retained data via:
 
 ## Types of data retained long term
 
-Dataverse standard (except system) tables, custom tables, along with attachments, can be retained in Dataverse long term storage.
+Dataverse standard (except system) tables, custom tables, along with attachments and images, can be retained in Dataverse long term storage.
 
 > [!NOTE]
-> Currently, audit, elastic tables, and images aren't supported for long term retention.
+> Currently, audit tables and elastic tables aren't supported for long term retention.
 
-Admins set retention policies on tables when the application maker has enabled long term retention for the table. When a maker enables retention on a parent root table, it also enables retention for all child tables.
+Admins set retention policies on tables when the application maker has enabled long term retention for the table. When a maker enables retention on a parent root table, it also enables retention for all child tables and associated attachments and images.
 
 ### Long term data retention and existing delete action and plugins
 
