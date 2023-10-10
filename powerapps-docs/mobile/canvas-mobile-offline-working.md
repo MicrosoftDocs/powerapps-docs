@@ -58,6 +58,3 @@ The following table describes the icons and their meanings.
 
 To get a description of the sync state, select the icon.
 
-## Known issue
-
-Key Power Fx functions that aren't yet supported include *StartsWith*, *In*, and *With*. When creating an app that has a search text field that uses a *StartsWith* formula, the search fails silently.
