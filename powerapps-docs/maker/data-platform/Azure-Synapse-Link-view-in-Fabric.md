@@ -29,7 +29,6 @@ Microsoft Dataverse direct link with Microsoft Fabric enables organizations to e
 
 With a few clicks, you can link your Dataverse environment with Fabric. Your tables in Dataverse appear in OneLake. Your data remains within the Dataverse governance boundary while authorized Fabric users get to work with your data using Power BI, SQL, Spark, and many other tools.
 
-:::image type="content" source="media/fabric/azure-synapse-link-two-experiences.png" alt-text="Azure Synapse link with Dataverse data in Microsoft Fabric" lightbox="media/fabric/azure-synapse-link-two-experiences.png":::
 
 [OneLake](/fabric/onelake/onelake-overview), a data lake built into Fabric, helps eliminate data silos. Combine data from your applications and devices—web sites, mobile apps, sensors, and signals from your warehouse and factories—with data from your business processes in Dynamics 365—sales, cases, inventory, and orders—to predict potential delays or shortages that affect keeping your promises to customers. Dataverse creates shortcuts to OneLake, which enables you to work with data without making multiple copies.
 
