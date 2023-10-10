@@ -94,7 +94,7 @@ Perform this one time operation in your Power BI environment for each Power Apps
    - Select **Edit credentials**, and then confirm your credentials.
 1. Review the connection information, and then select **Create**.
 
-## Link to Fabric
+## Link to Microsoft Fabric
 
 After you [Create a connection to your Dataverse environment](#create-a-connection-to-your-dataverse-environment), you can link Fabric from Power Apps in two ways:
 
@@ -115,7 +115,7 @@ Fabric lakehouse opens in a separate browser tab.
 
 During preview, it might take up to 60 minutes to update data in OneLake including the conversion to delta parquet format. If you've selected a table that contains a lot of data, the initial load time might take even longer. When you open Fabric lakehouse, you see the links as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
 
-## Manage link to OneLake
+## Manage link to Microsoft OneLake
 
 If you or someone else signed into Power Apps and linked tables to Fabric, they're shown under **Microsoft OneLake**.
 
@@ -183,8 +183,6 @@ The tables you selected are added to the Azure Synapse Analytics lakehouse and d
 
 Note that Dataverse manages these shortcuts. You shouldn't delete or remove these shortcuts in Fabric. If you accidentally delete a link, you can go to the **Azure Synapse Link for Dataverse** area in Power Apps and select **Refresh Fabric links** to re-create the links.
 
-> [!NOTE]
-> During preview, it can take 30 minutes or more to reflect the tables. You might see tables named as **undefined** during that time.
 
 ### Explore data with SQL endpoint
 
