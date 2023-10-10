@@ -25,7 +25,7 @@ contributors:
 If users of your Dataverse-based canvas app may have spotty or no access to the Internet, you can easily provide [offline-first](#mobile-offline-first) access with simple switches and a canvas control. Basic offline-first apps are easy to make. Just build your app with normal [Power Fx formulas](/power-platform/power-fx/formula-reference), and Power Apps offline features handle everything else.
 
 > [!IMPORTANT]
-> The offline-first feature works with Dataverse tables only and doesn't support the following Power Fx functions:
+> The offline-first feature works with Dataverse tables only and do not yet support the following Power Fx functions:
 >
 > - First
 > - IsBlank
@@ -33,7 +33,7 @@ If users of your Dataverse-based canvas app may have spotty or no access to the 
 > - Sum/Min/Max/Avg
 > - Unrelate
 >   
-> Filter and search do not yet support parsing the following tokens: 
+> Additionally, Filter and Search do not yet support parsing the following tokens: 
 >
 > - ,
 > - %
@@ -41,6 +41,8 @@ If users of your Dataverse-based canvas app may have spotty or no access to the 
 > - ( )
 > - =
 > - whitespace
+
+These retrictions are temporary.  These functions and tokens are all planned for support.
 
 You can also build complex offline apps using custom *offline profiles*. An offline profile is a set of filters and restrictions on the data your app loads to users' mobile devices. Offline profiles help you to optimize your app's performance by reducing the amount of data downloaded to the device. For example, while you may have access rights to millions of records in a table, your app may need only a thousand of them. If you download only a thousand records, your app performs better. If you need more than 15 tables in your offline app, you may want to consider using a custom offline profile.
 
