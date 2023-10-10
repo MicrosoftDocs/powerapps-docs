@@ -8724,6 +8724,11 @@
       "source_path": "powerapps-docs/maker/portals/create-common-problems.md",
       "redirect_url": "/power-pages/getting-started/create-manage",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/working-with-dynamic-schema.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/untyped-and-dynamic-objects#converting-formulas-that-return-untyped-objects-that-previously-returned-boolean",
+      "redirect_document_id": false
     }
   ]
 }
