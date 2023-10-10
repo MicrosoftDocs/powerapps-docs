@@ -22,6 +22,7 @@ Using preferred solutions is a way to set which solution will support each maker
 >
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - You can't set or view the preferred solution in the classic solution explorer.
 
 ## Prerequisites
 
@@ -41,6 +42,10 @@ Alternatively, Power Platform admins can use Dataverse APIs, so that a maker’s
 Once your preferred solution is set, notice the **preferred solution** indicator, which can be viewed from the **Solutions** area or when you hover over the **Environment** switcher.
 
 :::image type="content" source="media/preferred-solution-status.png" alt-text="Preferred solution status displayed in Solutions area":::
+
+## Deleting a preferred solution
+
+You can delete your preferred solution or a preferred solution shared with you. Notice you receive a warning when you delete an active solution. Delete an active solution only when you're sure it won't impact your work or the work of other makers.
 
 ## See also
 
