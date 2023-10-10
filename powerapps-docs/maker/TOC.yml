@@ -2126,7 +2126,7 @@
         href: ./data-platform/export-solutions.md
       - name: Import solutions
         href: ./data-platform/import-update-export-solutions.md
-      - name: Set the preferred solution
+      - name: Set the preferred solution (preview)
         href: ./data-platform/preferred-solution.md
       - name: Use pipelines to simplify solution deployment
         href: ./data-platform/use-pipelines.md

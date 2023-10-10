@@ -14,7 +14,7 @@ search.audienceType:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-By default, unless already in the context of an unmanaged solution, all solution components are stored in the solution named Common Data Services Default Solution. Because there's no separation of components between makers and the Common Data Services Default solution can't be exported for import to other environments, this typically isn't the best model.
+By default, unless already in the context of an unmanaged solution, all solution components are stored in the solution named Common Data Services Default Solution. Because there's no separation of components between makers and the Common Data Services Default Solution can't be exported for import to other environments, this typically isn't the best model.
 
 Using preferred solutions is a way to set which solution will support each maker's edits that happen anywhere in Power Apps. It enables makers to view and update which solution they are using. After you set your preferred solution, you can create components in the solution you specify and those components will automatically be in that solution so that you control the components within the solution. Then, you can export your preferred solution and import the solution to other Microsoft Dataverse environments.
 
@@ -48,7 +48,7 @@ Once your preferred solution is set, notice the **preferred solution** indicator
 You can delete your preferred solution or a preferred solution that other makers have also set as their preferred solution.
 
 > [!WARNING]
-> Notice when you delete a preferred solution, you receive a warning that includes the fallback default solution and the number of other makers who are using the same solution. Delete an active solution only when you're sure it won't impact your work or the work of other makers.
+> When you delete a preferred solution you receive a warning that includes the fallback default solution and the number of other makers who are using the same solution. Delete an active solution only when you're sure it won't impact your work or the work of other makers.
 > 
 > :::image type="content" source="media/delete-preferred-solution.png" alt-text="Delete a preferred solution warning":::
 
