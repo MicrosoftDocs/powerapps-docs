@@ -125,11 +125,14 @@ Use an Excel file to populate a table with your data, which uses AI to assist wi
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE [cross-geo-support](../../../shared/cross-geo-support.md)]
 
 1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
 1. Select from device or drag and drop your Excel file onto the Upload an Excel file page.
 1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
 1. When you're finished, select **Create**.
+
+For more information about how AI is used with this feature, go to [FAQ for Excel to table and app](../common/faqs-excel-to-table-app.md).
 
 ### Create a virtual table
 

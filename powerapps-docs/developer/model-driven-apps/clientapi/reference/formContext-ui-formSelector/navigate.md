@@ -24,7 +24,7 @@ When you use the navigate method while unsaved changes exist, the user is prompt
 
 `formItem.navigate();`
 
-### Related topics
+### Related articles
 
 [formContext.ui.formSelector](../formContext-ui-formSelector.md)
 

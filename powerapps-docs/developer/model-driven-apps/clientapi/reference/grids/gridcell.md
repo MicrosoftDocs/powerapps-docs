@@ -14,8 +14,6 @@ contributors:
 ---
 # GridCell (Client API reference)
 
-
-
 GridCell is only supported for editable grids.
 
 GridCell of a selected grid row is analogous to a control on a form that is tied to a column in an editable grid. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.
@@ -33,13 +31,9 @@ GridCell supports the following methods.
 |[getLabel](../controls/getLabel.md)|Returns the label of the column that contains the cell.|
 
 
-### Related topics
+### Related articles
 
-[Grids and subgrids in model-driven apps](../grids.md)
-
+[Grids and subgrids in model-driven apps](../grids.md)   
 [Controls](../controls.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
