@@ -29,7 +29,7 @@ All queries are based on a single table. When composing a query using FetchXml, 
 </fetch>
 ```
 
-This query returns the [Name column](../reference/entities/account.md#BKMK_Name) of the first 5 rows from the [Account table](../reference/entities/account.md), using the table `LogicalName` to set the [entity](reference/entity.md) `name` attribute.
+This query returns the [Name column](../reference/entities/account.md#BKMK_Name) of the first 5 rows from the [Account table](../reference/entities/account.md), using the `LogicalName` of the table to set the [entity](reference/entity.md) `name` attribute.
 
 ## Limit the number of rows
 
