@@ -210,6 +210,8 @@ Switch(Connection.Sync,
 
 - [Wrapped apps](../maker/common/wrap/overview.md) aren't supported in offline mode.
 
+- Many-to-many relationships aren't supported in offline mode.
+
 - [Learn about Power Fx language capabilities and limitations](canvas-mobile-offline-overview.md).
 
 - [Learn about other mobile offline capabilities and limitations](offline-capabilities.md).
