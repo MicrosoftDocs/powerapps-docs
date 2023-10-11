@@ -380,8 +380,6 @@
           href: ./canvas-apps/working-with-tables.md
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
-        - name: Working with dynamic schema (experimental)
-          href: ./canvas-apps/working-with-dynamic-schema.md
       - name: Design the interface
         items:
           - name: Understand Power Apps Studio
@@ -2154,6 +2152,8 @@
             href: ./data-platform/export-customized-entity-field-text-translation.md
           - name: Import translated component text
             href: ./data-platform/import-translated-entity-field-text.md
+          - name: Update localized label text
+            href: ./data-platform/update-translated-text.md
       - name: Diagnose solutions and solution objects
         href: ./data-platform/diagnose-solutions.md
         items:
