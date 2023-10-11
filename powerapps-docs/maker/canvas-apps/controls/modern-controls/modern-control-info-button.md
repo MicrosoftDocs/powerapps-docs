@@ -32,6 +32,8 @@ Use **Info button** control to provide additional information to users.
 
 **Icon size** - Whether the information icon be small, medium or large.
 
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
+
 **Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 
