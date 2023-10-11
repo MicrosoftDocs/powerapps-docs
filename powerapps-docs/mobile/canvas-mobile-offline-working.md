@@ -1,7 +1,7 @@
 ---
 title: Work with canvas apps offline (preview)
 description: Learn how to work with canvas apps in offline mode on your mobile device.
-ms.date: 07/24/2023
+ms.date: 10/10/2023
 ms.topic: how-to
 ms.component: pa-user
 ms.subservice: mobile
