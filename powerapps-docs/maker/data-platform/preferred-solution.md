@@ -1,14 +1,18 @@
 ---
 title: "Set a preferred solution | MicrosoftDocs"
-description: "Learn how to set a preferred solution for an environment"
+description: "Set your preferred solution in Power Apps."
 ms.date: 10/10/2023
 ms.topic: conceptual
 author: Mattp123
 ms.subservice: dataverse-maker
 ms.author: matp
-ms.reviewer: 
-search.audienceType: 
+ms.reviewer:
+search.audienceType:
   - maker
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-gen-desc
+  - ai-seo-date:10/11/2023
 ---
 # Set the preferred solution (preview)
 
