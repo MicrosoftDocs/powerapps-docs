@@ -41,7 +41,7 @@ Similar to the **Gallery** and **Data** table controls, the **Table** maintains 
 Currently, the listed capabilities aren't supported. However, since the **Table** control is still evolving, check back for any updates.
 
 * Linking the Table to other data connectors.
-* Customize the style of the **Table** (other than color palette) or modify individual columns.
+* Customize the style of the **Table** other than color palette or modify individual columns.
 
 
 ## Key properties
