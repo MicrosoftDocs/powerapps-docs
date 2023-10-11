@@ -36,7 +36,7 @@ The progress bar can be configured to show various states of progress in the app
 
 **Color** – The color prop can be used to indicate a "brand" state (default), "error" state (red), "warning" state (orange), or "success" state (green).
 
-**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  Note this property is on in effect if the **Color** property has a value of **None**.  
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. This property is on in effect if the **Color** property has a value of **None**.  
 
 **Value** – A decimal number between 0 and 'max', which specifies how much of the task has been completed. Only applicable for determinate state.
 
