@@ -30,7 +30,7 @@ To open Power Apps portals Studio:
 
 1. Go to **Active Sites** tab on [Power Pages](https://make.powerpages.microsoft.com).
 
-1. On your site, select **More Commands**(...) for the site and select **Edit in Power Apps Sutdio** 
+1. On your site, select **More Commands**(...) for the site, then choose **Edit in Power Apps Sutdio** 
 
     ![Select Edit in Power Apps Studio to open the site in Power Apps Portals Studio.](media/manage-existing-portals/edit-in-power-apps.png "Select Edit in Power Apps Studio to open the site in Studio")
 
