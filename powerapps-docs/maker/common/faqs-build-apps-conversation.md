@@ -80,7 +80,7 @@ Follow these procedures to make the most of the feature:
 
 ## See also
 
-- [Build apps through conversation (preview)](../canvas-apps/ai-conversations-create-app.md)
+- [Build apps through conversation](../canvas-apps/ai-conversations-create-app.md)
 
  
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
