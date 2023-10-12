@@ -31,8 +31,15 @@ Model-driven and canvas apps
 |of-type-group |Name of the type-group as defined in manifest| string |Optional |Model-driven apps|
 |description-key |Used in the customization screens as localized strings that describes the description of the property. |string |Optional |Model-driven and canvas apps|
 |default-value |The default configuration value provided to the component. In model-driven apps, this property is only allowed on inputs since the bound parameters expect to have a column associated. |string |Optional |Model-driven apps|
+|pfx-default-value |A PFX expression that can replace the static default configuration value. This can reference variables, functions, connectors, and other types supported in PFX. See [Remarks](#remarks) |string |Optional |Canvas apps|
 
 ### Remarks
+
+If the `pfx-default-value` property value includes quotation marks or other special characters, it is best to wrap the value in single quotes, i.e.,
+`pfx-default-value='"Test"'`
+
+If the `pfx-default-value` property value includes enum values, the enum must be wrapped in these special characters:
+`pfx-default-value='%MyEnumType.RESERVED%.MyEnumValue'`
 
 The `of-type` property value must be one of the following:
 
