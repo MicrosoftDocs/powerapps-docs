@@ -1,7 +1,7 @@
 ---
 title: "Set a preferred solution | MicrosoftDocs"
 description: "Set your preferred solution in Power Apps."
-ms.date: 10/10/2023
+ms.date: 10/12/2023
 ms.topic: conceptual
 author: Mattp123
 ms.subservice: dataverse-maker
@@ -30,12 +30,12 @@ Using preferred solutions is a way to set which solution will support each maker
 
 ## Prerequisites
 
-Power Platform admins enable the ability for makers to set their preferred solution by setting **Preferred solution** to **On** for the environment settings in the Power Platform admin center. <!-- Link to PPAC environment settings -->
+Power Platform admins enable the ability for makers to set their preferred solution by setting **Preferred solution** to **On** for the environment settings in the Power Platform admin center. More information: [Preferred solution](/power-platform/admin/settings-features#preferred-solution)
 
-Alternatively, Power Platform admins can use Dataverse APIs, so that a maker’s solution components are organized. <!-- Where is this developer documentation? -->
+<!-- Alternatively, Power Platform admins can use Dataverse APIs, so that a maker’s solution components are organized. -->
 
 > [!IMPORTANT]
-> We recommend that admins also enable the **Cloud flows** environment setting in Power Platform. Enabling this feature ensures cloud flows are also stored in Dataverse and that they're added to the maker's preferred solution. <!-- Link to PPAC environment settings -->
+> We recommend that admins also enable the **Cloud flows** environment setting in Power Platform. Enabling this feature ensures cloud flows are also stored in Dataverse and that they're added to the maker's preferred solution. More information: [Create new canvas apps and cloud flows in a Dataverse solution](/power-platform/admin/settings-features#create-new-canvas-apps-and-cloud-flows-in-a-dataverse-solutions-preview)
 
 ## Set your preferred solution
 
