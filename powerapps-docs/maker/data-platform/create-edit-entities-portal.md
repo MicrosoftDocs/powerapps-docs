@@ -33,7 +33,7 @@ You can also select a column heading from the table view, and then select **Filt
 There are several ways to create a new table:
 
 - [Add columns and data](#add-columns-and-data)
-- [Describe the new table (preview)](#describe-the-new-table-preview)
+- [Describe the new table](#describe-the-new-table)
 - [Set advanced properties](#set-advanced-properties)
 - [Upload an Excel file (preview)](#upload-an-excel-file-preview)
 - [Create a virtual table](#create-a-virtual-table)
