@@ -1,7 +1,7 @@
 ---
 title: Dependent Assembly plug-ins (preview)
 description: Learn how to include more assemblies that your plug-in assembly can depend on.
-ms.date: 08/08/2023
+ms.date: 10/12/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -44,7 +44,7 @@ If you have questions or issues with this feature, you can contact technical sup
 The following limitations apply to dependent assembly plug-ins.
 
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* aren't supported.
-- Plug-ins for virtual table data providers aren't supported.
+- Plug-ins for virtual table data providers aren't supported. Importing a solution into an environment will fail if the solution contains plug-ins (with dependent assemblies) that are registered on virtual entities.
 - On-premises environments aren't supported.
 - Unmanaged code isn't supported. You can't include references to unmanaged resources.
 
