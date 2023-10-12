@@ -188,4 +188,15 @@ Offline-first is the default mode when you enable an app for offline use. If you
 
 1.  Select **Save** and then publish the app.
 
+## Define sync settings on mobile 
+You can enable the users to control the automatic sync intervals or the connection type to synchronize the data.
+
+1. On the command bar, select **Settings**.
+
+2. Select the **Upcoming** tab:
+
+    - set the **Allow users to adjust sync frequency** toggle to **On** to Adjust the sync interval to sync more or less frequently depending on individual needs. Users can also choose to not automatically sync at any interval, if they only want to sync on demand.
+    - set the **Allow users to adjust sync frequency** toggle to **On** to Lets users choose if their automatic sync happens on cellular networks and Wi-Fi connections or only when connected to a Wi-Fi network.
+ 
+
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
