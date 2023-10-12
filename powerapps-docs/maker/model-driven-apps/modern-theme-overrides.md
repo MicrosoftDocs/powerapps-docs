@@ -23,6 +23,9 @@ Model-driven apps with the [modern, refreshed look](../../user/model-fluent.desi
 ## Modify the app header colors 
 With the modern, refreshed look enabled, you can modify the colors used by the app header to align with your personal or organizational branding. To accomplish this, you will  encapsulate your desired colors into an XML resource, use an app setting to point to this web resource, and then verify the color changes match your expectation.  
 
+  > [!NOTE]
+  > This functionality is available in build 9.4.23094 and later.
+
 ### Create an XML resource with your app header colors
 The first step to modifying the app header styling is to create an XML file with your various color selections and add it as a web resource. 
 
