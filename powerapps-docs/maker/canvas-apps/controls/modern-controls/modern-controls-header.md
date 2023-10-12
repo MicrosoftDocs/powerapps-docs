@@ -31,6 +31,8 @@ The **Header** control is a fundamental control that lets you design a user inte
 
 **ThemeStyle** – Header color variant, based on theme colors.
 
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. This property has no effect if the **ThemeStyle** property is set to **Neutral**.    
+
 **Logo** – The image displayed in the header. 
 
 **IsLogoVisible** – Whether the logo image is displayed. 
