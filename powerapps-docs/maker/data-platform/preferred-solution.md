@@ -35,7 +35,7 @@ Power Platform admins enable the ability for makers to set their preferred solut
 <!-- Alternatively, Power Platform admins can use Dataverse APIs, so that a maker’s solution components are organized. -->
 
 > [!IMPORTANT]
-> We recommend that admins also enable the **Cloud flows** environment setting in Power Platform. Enabling this feature ensures cloud flows are also stored in Dataverse and that they're added to the maker's preferred solution. More information: [Create new canvas apps and cloud flows in a Dataverse solution](/power-platform/admin/settings-features#create-new-canvas-apps-and-cloud-flows-in-a-dataverse-solutions)
+> We recommend that admins also enable the **Cloud flows** environment setting in Power Platform. Enabling this feature ensures cloud flows are also stored in Dataverse and that they're added to the maker's preferred solution. More information: [Create new canvas apps and cloud flows in a Dataverse solution](/power-platform/admin/settings-features#create-new-canvas-apps-and-cloud-flows-in-a-dataverse-solution)
 
 ## Set your preferred solution
 
