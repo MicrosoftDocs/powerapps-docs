@@ -47,15 +47,9 @@ Create a table by entering the data rows and columns you want.
 
 More information: [Table designer](#table-designer)
 
-### Describe the new table (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+### Describe the new table
 
 Create a table with the help of AI Copilot.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
 1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
