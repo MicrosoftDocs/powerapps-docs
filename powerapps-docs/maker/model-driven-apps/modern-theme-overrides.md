@@ -16,7 +16,7 @@ search.audienceType:
   - maker
 ---
 
-# Modern theme overrides
+# [Modern refreshed look] Theme overrides
 
 Model-driven apps with the [modern, refreshed look](../../user/model-fluent.design.md) provide updated styling aligned to the Microsoft Fluent 2 design system. Because this modern refreshed look comes with a new theming system, [classic theming](create-themes-organization-branding.md) is not honored. In this article, you will learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.  
 
@@ -83,6 +83,9 @@ With the example colors above, the header should look like this after  refreshin
 ### Verifying new app header colors
 After publishing your new app header colors, you will want to validate the app header visuals, including all the button states, to ensure everything appears as you expect and there are sufficient contrast ratios for accessibility. You should verify the following: 
 -  The desired colors are shown for the app header at rest and for each button interaction state. 
--  There is a minimum of a 4.5:1 contrast ratio between foreground and background colors for the rest state and each button interaction state. 
+-  There is a minimum of a 4.5:1 contrast ratio between foreground and background colors for the rest state and each button interaction state.
+
+## Related links
+[Modern refreshed look](../../user/model-fluent.design.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
