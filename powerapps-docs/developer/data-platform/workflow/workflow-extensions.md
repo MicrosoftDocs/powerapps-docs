@@ -90,8 +90,8 @@ These are general steps used to create a custom workflow activity using Visual S
 
     More information:
 
-    - [Late-bound and Early-bound programming using the Organization service](../org-service/early-bound-programming.md)
-    - [Generate early-bound classes for the Organization service](../org-service/generate-early-bound-classes.md)
+    - [Late-bound and Early-bound programming using the SDK for .NET](../org-service/early-bound-programming.md)
+    - [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md)
 
 1. Add a public class. The name of the class should correspond with the action to be performed by the activity.
 1. Add the following using directives
@@ -259,9 +259,9 @@ protected override void Execute(CodeActivityContext context)
 > [!IMPORTANT]
 > You should not include any logic dependencies based on the context information. When your custom workflow activity is used in a workflow, all the relevant input parameters should be set within the designer. The output value or behavior of the custom activity should always be determined solely by the input parameters so that there are no hidden factors that change the behavior. When someone uses the custom activity in the designer, the behavior should always be predictable.
 
-### Use the Organization service
+### Use the SDK for .NET
 
-When you need to perform data operations using the Organization service, you can access this using the [CodeActivityContext.GetExtension\<T>](/dotnet/api/system.activities.activitycontext.getextension) method with the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory> interface. From there you can use the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> method to access an instance of the service proxy that you can use to perform data operations. The <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> can be used to determine the user context to use if you want the operation to be performed in the same context as the calling process.
+When you need to perform data operations using the SDK for .NET, you can access this using the [CodeActivityContext.GetExtension\<T>](/dotnet/api/system.activities.activitycontext.getextension) method with the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory> interface. From there you can use the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> method to access an instance of the service proxy that you can use to perform data operations. The <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> can be used to determine the user context to use if you want the operation to be performed in the same context as the calling process.
 Use the following code in your `Execute` function to get access to the Organization service:
 
 ```csharp

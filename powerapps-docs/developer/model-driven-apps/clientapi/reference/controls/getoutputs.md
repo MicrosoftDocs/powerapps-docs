@@ -30,7 +30,7 @@ Standard controls.
 
 **Description**: The output dictionary of the control.
 
-### Related topics
+### Related articles
 
 [OnOutputChange event](../events/onoutputchange.md)
 

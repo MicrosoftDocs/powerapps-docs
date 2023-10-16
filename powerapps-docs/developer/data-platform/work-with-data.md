@@ -21,7 +21,7 @@ Dataverse has [tables](entities.md) that are used to model and manage business d
 
 ## Use web services to work with data
 
-Dataverse provides two web services that you can use to interact with data: data service, and Organization service. Choose the one that best matches the requirement and your skills. Use the Web API when coding for the data service and the SDK API when coding for the Organization service.
+Dataverse provides two ways to work with data: Web API & SDK for .NET. Choose the one that best matches the requirement and your skills.
 
 <!--![Flow diagram to choose web service.](media/whentousewebapi.png)-->
 
@@ -31,14 +31,14 @@ The Web API is an OData v4 RESTful endpoint. Use the Web API for any programming
 
 More information: [Use the Dataverse Web API](webapi/overview.md)
 
-### Organization service
+### SDK for .NET
 
-Use classes provided in the Dataverse SDK for .NET assemblies to access the Organization web service from custom apps, or for extending Dataverse operations using custom plug-ins and workflow activities. The Dataverse SDK for .NET supports build targets for both .NET Framework and .NET 6+. However, plug-in and custom workflow activities must be coded using .NET Framework.
+Use classes provided in the Dataverse SDK for .NET assemblies for custom apps, or for extending Dataverse operations using custom plug-ins and workflow activities. The Dataverse SDK for .NET supports build targets for both .NET Framework and .NET 6+. However, plug-in and custom workflow activities must be coded using .NET Framework.
 
-More information: [Use the Dataverse Organization service](org-service/overview.md)
+More information: [Use the Dataverse SDK for .NET](org-service/overview.md)
 
 > [!NOTE]
-> Use the Xrm.Tooling assemblies if you want to access the Organization service using our PowerShell module or are creating a Windows client application and you want to use our custom login control. More information: [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md)
+> Use the Xrm.Tooling assemblies if you want to use the SDK for .NET using our PowerShell module or are creating a Windows client application and you want to use our custom login control. More information: [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md)
 
 ## Limitations
 

@@ -1,6 +1,6 @@
 ---
-title: "Associate and disassociate table rows using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to associate and disassociate table rows using the Organization Service" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Associate and disassociate table rows using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to associate and disassociate table rows using the SDK for .NET" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
@@ -13,7 +13,7 @@ contributors:
   - JimDaly
 ---
 
-# Associate and disassociate table rows using the Organization Service
+# Associate and disassociate table rows using the SDK for .NET
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
@@ -147,8 +147,8 @@ svc.Execute(request);
 
 ### See also
 
-[Create table rows using the Organization Service](entity-operations-create.md)<br />
-[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)<br />
-[Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
+[Create table rows using the SDK for .NET](entity-operations-create.md)<br />
+[Retrieve a table row using the SDK for .NET](entity-operations-retrieve.md)<br />
+[Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)<br />
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

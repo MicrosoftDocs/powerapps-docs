@@ -14,8 +14,6 @@ contributors:
 ---
 # tab.getLabel (Client API reference)
 
-
-
 [!INCLUDE[./includes/getLabel-description.md](./includes/getLabel-description.md)] 
 
 ## Syntax
@@ -28,10 +26,8 @@ contributors:
 
 **Description**: The label of the tab.
 
-### Related topics
+### Related articles
 
 [setLabel](setLabel.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

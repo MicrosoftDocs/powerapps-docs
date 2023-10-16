@@ -1,7 +1,7 @@
 ---
 title: "CustomAPI table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomAPI table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ Entity that defines a custom API
 |-|-|-|
 |Assign|PATCH /customapis(*customapiid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /customapis<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /customapis(*customapiid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -39,7 +39,7 @@ Entity that defines a custom API
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /customapis(*customapiid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /customapis(*customapiid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -1125,6 +1125,8 @@ Listed by **SchemaName**.
 - [customapi_customapirequestparameter](#BKMK_customapi_customapirequestparameter)
 - [customapi_customapiresponseproperty](#BKMK_customapi_customapiresponseproperty)
 - [catalogassignment_customapi](#BKMK_catalogassignment_customapi)
+- [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid](#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid)
+- [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId](#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId)
 
 
 ### <a name="BKMK_customapi_SyncErrors"></a> customapi_SyncErrors
@@ -1241,7 +1243,7 @@ Same as the [customapi_customapirequestparameter](customapirequestparameter.md#B
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|CustomAPIRequestParameters|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_customapi_customapiresponseproperty"></a> customapi_customapiresponseproperty
@@ -1274,6 +1276,40 @@ Same as the [catalogassignment_customapi](catalogassignment.md#BKMK_catalogassig
 |ReferencedEntityNavigationPropertyName|CatalogAssignments|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid"></a> msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid
+
+**Added by**: Process Mining Solution
+
+Same as the [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid](msdyn_pmbusinessruleautomationconfig.md#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid) many-to-one relationship for the [msdyn_pmbusinessruleautomationconfig](msdyn_pmbusinessruleautomationconfig.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_pmbusinessruleautomationconfig|
+|ReferencingAttribute|msdyn_customapiid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId"></a> msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId
+
+**Added by**: Process Mining Solution
+
+Same as the [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId](msdyn_pmbusinessruleautomationconfig.md#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId) many-to-one relationship for the [msdyn_pmbusinessruleautomationconfig](msdyn_pmbusinessruleautomationconfig.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_pmbusinessruleautomationconfig|
+|ReferencingAttribute|customapiid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 

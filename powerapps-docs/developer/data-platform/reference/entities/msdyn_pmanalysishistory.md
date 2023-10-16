@@ -1,7 +1,7 @@
 ---
 title: "msdyn_pmanalysishistory table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_pmanalysishistory table/entity."
-ms.date: 06/06/2023
+ms.date: 09/01/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -28,7 +28,7 @@ search.audienceType:
 |Assign|PATCH /msdyn_pmanalysishistories(*msdyn_pmanalysishistoryid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |Create|POST /msdyn_pmanalysishistories<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /msdyn_pmanalysishistories(*msdyn_pmanalysishistoryid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -43,7 +43,7 @@ search.audienceType:
 |RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 |SetState|PATCH /msdyn_pmanalysishistories(*msdyn_pmanalysishistoryid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /msdyn_pmanalysishistories(*msdyn_pmanalysishistoryid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 |ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
@@ -68,10 +68,13 @@ search.audienceType:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [ActionableInsightsGenerationStatus](#BKMK_ActionableInsightsGenerationStatus)
+- [ActionableInsightsLastPublishedOn](#BKMK_ActionableInsightsLastPublishedOn)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [msdyn_analysisresult](#BKMK_msdyn_analysisresult)
 - [msdyn_analysistype](#BKMK_msdyn_analysistype)
+- [msdyn_iterationid](#BKMK_msdyn_iterationid)
 - [msdyn_lasterrors](#BKMK_msdyn_lasterrors)
 - [msdyn_name](#BKMK_msdyn_name)
 - [msdyn_parenttask](#BKMK_msdyn_parenttask)
@@ -84,6 +87,37 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_ActionableInsightsGenerationStatus"></a> ActionableInsightsGenerationStatus
+
+|Property|Value|
+|--------|-----|
+|Description|Actionable insights gerenation state management for completed analysis.|
+|DisplayName|Actionable Insights Generation Status|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|actionableinsightsgenerationstatus|
+|MaxLength|50|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ActionableInsightsLastPublishedOn"></a> ActionableInsightsLastPublishedOn
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time that the actionable insight last published on(to ensure to pick the last published one).|
+|DisplayName|Actionable Insights Last Published On|
+|Format|DateOnly|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|actionableinsightslastpublishedon|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -160,6 +194,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|OnDemand||
 |1|Scheduled||
 
+
+
+### <a name="BKMK_msdyn_iterationid"></a> msdyn_iterationid
+
+|Property|Value|
+|--------|-----|
+|Description|Iteration identifier of analysis.|
+|DisplayName|Iteration Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|msdyn_iterationid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_msdyn_lasterrors"></a> msdyn_lasterrors

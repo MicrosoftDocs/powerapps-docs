@@ -14,8 +14,6 @@ contributors:
 ---
 # isDefaultPrevented (Client API reference)
 
-
-
 [!INCLUDE[./includes/isDefaultPrevented-description.md](./includes/isDefaultPrevented-description.md)]
 
 ## Syntax
@@ -29,12 +27,9 @@ contributors:
 **Description**: **true** if the save event has been canceled because the preventDefault method was used; **false** otherwise.
 
 
-### Related topics
+### Related articles
 
-[getSaveMode](getSaveMode.md)
-
+[getSaveMode](getSaveMode.md)   
 [preventDefault](preventDefault.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
