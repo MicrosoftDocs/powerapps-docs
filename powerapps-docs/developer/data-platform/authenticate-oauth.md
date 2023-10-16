@@ -88,6 +88,9 @@ Dataverse SDK for .NET includes client classes [CrmServiceClient](xref:Microsoft
 The point of using the authentication libraries is to get an access token that you can include with your requests.
 This only requires a few lines of code, and just a few more lines to configure an [HttpClient](xref:System.Net.Http.HttpClient) to execute a request.
 
+> [!IMPORTANT]
+> As demonstrated in the sample code of this article, use a "/user-impersonation" scope for a public client. For a confidential client, use a scope of "/.default".
+
 ### Simple example
 
 The following is the minimum amount of code needed to execute a single Web API request, but it is not the recommended approach. Note that this code uses the MSAL library and is taken from the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart) sample.
@@ -102,7 +105,7 @@ var authBuilder = PublicClientApplicationBuilder.Create(clientId)
     .WithAuthority(AadAuthorityAudience.AzureAdMultipleOrgs)
     .WithRedirectUri(redirectUri)
     .Build();
-var scope = resource + "/.default";
+var scope = resource + "/user_impersonation";
 string[] scopes = { scope };
 
 AuthenticationResult token =
@@ -148,7 +151,7 @@ class OAuthMessageHandler : DelegatingHandler
                         .WithAuthority(AadAuthorityAudience.AzureAdMultipleOrgs)
                         .WithRedirectUri(redirectUrl)
                         .Build();
-        var scope = serviceUrl + "//.default";
+        var scope = serviceUrl + "/user_impersonation";
         string[] scopes = { scope };
         // First try to get an authentication token from the cache using a hint.
         AuthenticationResult authBuilderResult=null;

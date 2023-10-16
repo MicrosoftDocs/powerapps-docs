@@ -117,7 +117,7 @@ var authBuilder = PublicClientApplicationBuilder.Create(AppId)
     .WithAuthority(AadAuthorityAudience.AzureAdMultipleOrgs)
     .WithRedirectUri(redirectUri)
     .Build();
-var scope = resource + "/.default";
+var scope = resource + "/user_impersonation";
 string[] scopes = { scope };
 
 // Use interactive username and password prompt
