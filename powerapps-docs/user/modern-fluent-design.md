@@ -29,7 +29,7 @@ Here's what you can expect in the modern, refreshed experience:
 - Updated styling in form, view, and dashboard pages, which includes the use of drop shadows and brighter background colors to create an elevated or _floating_ appearance. The floating appearance helps to visually separate sections and focuses attention on primary content.
 - New Fluent-based controls in forms, business process flows, and dialogs. Dialogs now resize height automatically based on the content.
 - A new Power Apps grid in place of the read-only grid in view and standard, dashboard pages.
-- A new mechanism for customizing the app header colors to match your personal or organizational branding. See [modern theme overrides](../maker/model-driven-apps/modern-theme-overrides.md) for more details.
+- A new mechanism for customizing the app header colors to match your personal or organizational branding. More information: [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md)
 - An end user setting called **Try the new look** that enables the modern, refreshed experience.
 
 :::image type="content" source="media/modern-try-toggle-off.png" alt-text="The 'Try the new look' setting.":::
@@ -74,11 +74,12 @@ After using the modern, refreshed look in your model-driven apps, tell us what y
 The modern, refreshed look for model-driven apps has some limitations:
 
 - The mobile app and mail app don't support the modern, refreshed look and aren't part of the preview or general availability.
-- With the new look, Power Apps is moving away from classic theme customizations. While the colors for the app header can now be customized to match your personal or organization branding (see [modern theme overrides](../maker/model-driven-apps/modern-theme-overrides.md) for more details), other theme customization options are not yet available.  
+- With the new look, Power Apps is moving away from [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). While the colors for the app header can now be customized to match your personal or organization branding, other theme customization options aren't yet available. More information: [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md)
 
 ## Frequently asked questions (FAQs)
 
 ### Preview to general availability rollout
+
 The modern, refreshed look for model-driven apps is generally available in the following release channels:
 - Monthly channel in August 2023 
 - Semi-annual Channel as of 2023 Release Wave 2
