@@ -32,9 +32,11 @@ Displays state in motion such as loading a page or table.
 
 **Appearance** – The appearance of the Spinner. Primary or Inverted. 
 
-**Label Position** – Where the label is positioned relative to the Spinner
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
 
-**Spinner Size** – The size of the spinner.
+**Label position** – Where the label is positioned relative to the Spinner
+
+**Spinner size** – The size of the spinner.
 
 **Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
