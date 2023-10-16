@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 10/09/2023
+ms.date: 10/16/2023
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -64,10 +64,9 @@ The following example shows a set of fields with the modern, refreshed look.
 :::image type="content" source="media/modern-fields.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
 
 ### Dashboard page
-The system dashboard page with independent subgrids and charts has been updated to use he new command bar and has section styling similar to the Form and View pages. When modern experience is enabled or when using monthly channel, the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md).
+The system dashboard page with independent subgrids and charts has been updated to use he new command bar and has section styling similar to the Form and View pages. When modern experience is enabled or when using monthly channel, the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid is not otherwise enabled by default.
 
-
-
+:::image type="content" source="media/modern-system-dashboard.png" alt-text="System dashboard page with the modern, refreshed look.":::
 
 ## Turn on the new look
 End users can enable the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#can-i-revert-to-the-old-ui).
@@ -95,7 +94,7 @@ Yes, end users can switch back to the old UI by turning off the **Try the new lo
 
 For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md). 
 
-Admins can disable the **Try the new look** setting across all apps in an organization by using the solution explorer to set the **Try the new look** value to **No**.
+Admins can disable the **Try the new look** setting across all apps in an organization by using the solution explorer to set the **Try the new look** value to **No**. This will hide the **Try the new look** toggle and prevent new look from taking effect.
 
 1. Create a new solution.
 1. Select **Add Existing** > **More** > **Setting**.
@@ -103,7 +102,7 @@ Admins can disable the **Try the new look** setting across all apps in an organi
 1. Select **Try the new look**. 
 
     > [!NOTE]
-    > There are two settings: **Try the new look** and **Try the new look and feel (preview)**.
+    > There are two settings: **Try the new look** and **Try the new look and feel (preview)**. The first is defaulted to enabled and can be override to prevent the new look toggle. The second was used in the public preview phase to allow users to have the new look but it did not show a toggle.
 
 1. Select **Add** to add it to the solution.
 1. Select **Try the new look** from the solution explorer.
