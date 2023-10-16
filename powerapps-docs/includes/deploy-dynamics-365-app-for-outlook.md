@@ -6,7 +6,7 @@ ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 09736e14-e744-48ca-a755-1b05bb55340e

@@ -129,7 +129,7 @@ if (context.InputParameters.Contains("Target") &&
     // Obtain the target entity from the input parameters.  
     Entity entity = (Entity)context.InputParameters["Target"];
 
-    // Obtain the organization service reference which you will need for  
+    // Obtain the IOrganizationService instance which you will need for  
     // web service calls.  
     IOrganizationServiceFactory serviceFactory =
         (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
@@ -196,8 +196,8 @@ service.Create(followup);
 
 ### About the code
 
-- This code uses the late-bound style to create a task and associate it with the account being created. More information: [Create tables using the Organization service](org-service/entity-operations-create.md)
-- Early bound classes can be used, but this requires generating the classes for the tables and including the file defining those classes with the assembly project. This is mostly a personal preference, so those steps have been left out of this tutorial for brevity. More information: [Late-bound and early-bound programming using the Organization service](org-service/early-bound-programming.md)
+- This code uses the late-bound style to create a task and associate it with the account being created. More information: [Create tables using the SDK for .NET](org-service/entity-operations-create.md)
+- Early bound classes can be used, but this requires generating the classes for the tables and including the file defining those classes with the assembly project. This is mostly a personal preference, so those steps have been left out of this tutorial for brevity. More information: [Late-bound and early-bound programming using the SDK for .NET](org-service/early-bound-programming.md)
 - The <xref:Microsoft.Xrm.Sdk.Entity.Id> of the account being created is found in the context <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> and set as the `regardingobjectid` lookup column for the task.
 
 ## Build plug-in

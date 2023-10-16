@@ -14,8 +14,6 @@ contributors:
 ---
 # isLoaded (Client API reference)
 
-
-
 [!INCLUDE[./includes/isLoaded-description.md](./includes/isLoaded-description.md)]
 
 ## Syntax
@@ -64,7 +62,7 @@ function getAttributeValue(executionContext) {
 }
 ```
 
-### Related topics
+### Related articles
 
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
 

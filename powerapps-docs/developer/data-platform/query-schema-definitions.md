@@ -37,7 +37,7 @@ The following table summarizes other ways you can retrieve schema definitions, b
 |`RetrieveAllEntities`|Retrieves data for all tables, including all columns, privileges, and relationships if you wish.<br />See: <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest?text=RetrieveAllEntitiesRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesResponse?text=RetrieveAllEntitiesResponse> classes.<br /><br />**Limitations**: While you can use the `EntityFilters` parameter to exclude some parts, it's a very expensive operation.|
 |`RetrieveEntity`|You can retrieve definition of any single table including all columns, privileges, and relationships if you wish.<br />See: [Retrieve and update a table](org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)<br /><br />**Limitations**:  While you can use the `EntityFilters` parameter to exclude some data, you can't select which specific properties you want, it's still an expensive operation.|
 |`RetrieveAttribute`|You can retrieve the complete definition of any single attribute.<br />See: [Retrieve a column](org-service/metadata-attributemetadata.md#retrieve-a-column)<br /><br />**Limitations**: You can't select which specific properties you want.|
-|`RetrieveRelationship`|You can retrieve the complete definition of any single relationship.<br />See: [Retrieve table row relationships](org-service/metadata-relationshipmetadata.md#retrieve-table-row-relationships)<br /><br />**Limitations**: You can't select which specific properties you want.|
+|`RetrieveRelationship`|You can retrieve the complete definition of any single relationship.<br />See: [Retrieve table relationships](org-service/metadata-relationshipmetadata.md#retrieve-table-relationships) <br /><br />**Limitations**: You can't select which specific properties you want.|
 |`RetrieveAllOptionSets`|You can retrieve information about all the global choices defined in the organization.<br />See: [Insert, update, delete, and order global choices](org-service/metadata-global-option-set-options.md)<br /><br />**Limitations**: Choices that are only defined locally within a column aren't included.|
 |`RetrieveEntityKey`|You can retrieve the definition for any alternate keys for a specific table. <br />See:[Retrieve and delete alternate keys](define-alternate-keys-entity.md#retrieve-and-delete-alternate-keys)|
 
@@ -571,7 +571,7 @@ OData-Version: 4.0
 [Cache Schema data](cache-schema-data.md)   
 [Web API Query schema definitions and detect changes Sample (C#)](webapi/samples/retrievemetadatachanges.md)   
 [SDK for .NET Query schema definitions and detect changes Sample (C#)](org-service/samples/query-metadata-changes.md)   
-[Organization Service: Table definitions in Microsoft Dataverse](entity-metadata.md)   
+[SDK for .NET: Table definitions in Microsoft Dataverse](entity-metadata.md)   
 [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

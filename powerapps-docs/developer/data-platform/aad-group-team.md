@@ -2,7 +2,7 @@
 title: "Work with Azure Active Directory group teams (Dataverse)| Microsoft Docs"
 description: "Learn about working with an Azure Active Directory group team using the Web API."
 ms.custom: ""
-ms.date: 02/15/2022
+ms.date: 09/21/2023
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -245,6 +245,10 @@ GET [Organization URI]/api/data/v9.0/RetrieveAadUserPrivileges(DirectoryObjectId
 If you have a non-interactive process where your service needs to check if the user has access rights to a record, you can make a [RetrievePrincipalAccess function](/dynamics365/customer-engagement/web-api/retrieveprincipalaccess) call on behalf of the user by specifying the `CallerID`.
 
 More information: [Impersonate another user](impersonate-another-user.md)
+
+## Triggering an event when a team member is added or removed from the group team
+
+Group members are added or removed [just-in-time](#just-in-time-updates) into the Dataverse group team using the [associate and disassociate APIs](webapi/associate-disassociate-entities-using-web-api.md). You can register a [plug-in](plug-ins.md) on the event triggered by these team member additions or removals from the group team.
 
 ### See also
 

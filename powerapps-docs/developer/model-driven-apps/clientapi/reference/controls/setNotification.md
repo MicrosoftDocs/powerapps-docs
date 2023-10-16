@@ -33,8 +33,8 @@ Standard, lookup, choices and choice control types.
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|message |String |Yes|The message to display.|
-|uniqueId |String |No|The ID to use to clear this message when using the **clearNotification** method.
+|`message` |String |Yes|The message to display.|
+|`uniqueId` |String |No|The ID to use to clear this message when using the **clearNotification** method.
 
 ## Return Value
 
@@ -46,7 +46,7 @@ Standard, lookup, choices and choice control types.
 
 Setting an error notification on a control will block the form from saving.
 
-### Related topics
+### Related articles
 
 [addNotification](addNotification.md)<br />
 [clearNotification](clearNotification.md)

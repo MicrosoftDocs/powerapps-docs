@@ -22,57 +22,23 @@ contributors:
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>entityLogicalName</td>
-<td>String</td>
-<td>Yes</td>
-<td>The table logical name of the record you want to update. For example: "account".</td>
-</tr>
-<tr>
-<td>id</td>
-<td>String</td>
-<td>Yes</td>
-<td>GUID of the table record you want to update.</td>
-</tr>
-<tr>
-<td>data</td>
-<td>Object</td>
-<td>Yes</td>
-<td><p>A JSON object containing <code>key: value</code> pairs, where `key` is the property of the table and <code>value</code> is the value of the property you want to update.</p>
-<p>See examples later in this topic to see how you can define the <code>data</code> object for various update scenarios.</td>
-</tr>
-<tr>
-<td>successCallback</td>
-<td>Function</td>
-<td>No</td>
-<td><p>A function to call when a record is updated. An object with the following properties will be passed to identify the updated record:</p>
-<ul>
-<li><b>entityType</b>: String. The table type of the updated record.</li>
-<li><b>id</b>: String. GUID of the updated record.</li>
-</ul></td>
-</tr>
-<tr>
-<td>errorCallback</td>
-<td>Function</td>
-<td>No</td>
-<td>A function to call when the operation fails. An object with the following properties will be passed:
-<ul>
-<li><b>errorCode</b>: Number. The error code.</li>
-<li><b>message</b>: String. An error message describing the issue.</li>
-</ul></td>
-</tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`entityLogicalName`|String|Yes|The table logical name of the record you want to update. For example: `account`.|
+|`id`|String|Yes|GUID of the table record you want to update.|
+|`data`|Object|Yes|A JSON object containing `key: value` pairs, where `key` is the property of the table and `value` is the value of the property you want to update.<br />See [Examples](#examples) to see how you can define the `data` object for various update scenarios.|
+|`successCallback`|Function|No|A function to call when a record is updated. See [Return Value](#return-value)|
+|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties will be passed:<br />- `errorCode` : Number. The error code.<br />- `message` : String. An error message describing the issue.|
+
 
 ## Return Value
 
-On success, returns a promise object containing the values specified earlier in the description of the **successCallback** parameter.
+On success, returns a promise object to the `successCallback` with the following properties:
+
+|Name|Type|Description|
+|---|---|---|
+|`entityType`|String|The table logical name of the record.|
+|`id`|String|GUID of the record.|
 
 ## Examples
 
@@ -213,7 +179,7 @@ Xrm.WebApi.updateRecord("task", "5531d753-95af-e711-a94e-000d3a11e605", data).th
 
 The [Xrm.WebApi.online.execute](online/execute.md) API can be used to associate and disassociate collection-valued navigation properties. This is **NOT** supported for mobile offline scenarios.
 
-### Related topics
+### Related articles
 
 [Xrm.WebApi](../xrm-webapi.md)
 

@@ -20,7 +20,7 @@ This event occurs just before the lookup control launches a dialog to search for
 
 Use this event with other lookup control methods to change the results displayed in a lookup based on the form data just before the lookup control shows search results for a user to choose from. 
 
-## Related topics
+## Related articles
 
 [addCustomFilter](../controls/addCustomFilter.md)
 
