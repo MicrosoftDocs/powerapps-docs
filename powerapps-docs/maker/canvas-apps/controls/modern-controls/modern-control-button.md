@@ -32,6 +32,8 @@ With the modern button you can set a button to be primary or secondary. Configur
 
 **[Text](../properties-core.md)** – Text that appears on a component.
 
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
+
 **Type** – Primary and Secondary. Primary emphasizes the button as a primary action. Secondary gives emphasis to the button in such a way that it indicates a secondary action.
 
 **Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).

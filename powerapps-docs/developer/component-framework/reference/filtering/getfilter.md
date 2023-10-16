@@ -1,8 +1,8 @@
 ---
-title: getFilter | Microsoft Docs
+title: getFilter (Power Apps component framework API reference) | Microsoft Docs
 description: Returns the top-most filter associated with the dataset.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -28,7 +28,7 @@ Model-driven and canvas apps
 Type: [FilterExpression](../filterexpression.md)
 
 
-### Related topics
+### Related articles
 
 [Filtering](../filtering.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>

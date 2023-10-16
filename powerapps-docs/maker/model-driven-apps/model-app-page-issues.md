@@ -2,7 +2,7 @@
 title: "Known issues with custom pages in a model-driven app"
 description: "Find the known issue that might occur when you create a custom page" 
 ms.custom: ""
-ms.date: 07/10/2023
+ms.date: 08/22/2023
 ms.reviewer: ""
 ms.subservice: mda-maker
 ms.topic: "article"
@@ -63,6 +63,7 @@ The custom page is a new page type within model-driven apps. Custom pages bring 
 
    ![Data Loss Prevention error dialog](media/model-app-page-issues/power_apps_unified_app_dlp_error.png "Data Loss Prevention error dialog")
 
+* When there are multiple custom pages in an app, the consent dialog asks for data permissions for all of the connectors in all the custom pages even if they haven't yet been opened.
 
 ## See also
 

@@ -2,7 +2,7 @@
 title: Query data using the Web API
 description: Learn how to use the Web API to query Microsoft Dataverse tables and the query options you can apply.
 ms.topic: how-to
-ms.date: 04/13/2023
+ms.date: 09/12/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -896,9 +896,30 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
 Keep the following points in mind when you filter on string values:
 
 - All filters using string values are case insensitive.
+- You must URL encode special characters in filter criteria. More information: [URL encode special characters](#url-encode-special-characters)
 - You may use wildcard characters, but avoid trailing wildcards. More information: [Use wildcard characters](#use-wildcard-characters)
 - You can use OData query functions: `contains`, `startswith`, and `endswith`. More information: [Use OData query functions](#use-odata-query-functions)
 - You must manage single quotes when you use filters that accept an array of string values. More information: [Manage single quotes](#manage-single-quotes)
+
+#### URL encode special characters
+
+If the string you are using as a value in a filter function includes a special character, you need to URL encode it. For example, if you use this function: `contains(name,'+123')`, it will not work because `+` is a character that can't be included in a URL. If you URL encode the string, it will become `contains(name,'%2B123')` and you will get results where the column value contains `+123`.
+
+The following table shows the URL encoded values for common special characters.
+
+|Special<br />character|URL encoded<br />character|
+|---|---|
+|`$`|`%24`|
+|`&`|`%26`|
+|`+`|`%2B`|
+|`,`|`%2C`|
+|`/`|`%2F`|
+|`:`|`%3A`|
+|`;`|`%3B`|
+|`=`|`%3D`|
+|`?`|`%3F`|
+|`@`|`%40`|
+
 
 #### Use wildcard characters
 
@@ -1221,6 +1242,9 @@ Use the `$apply` option to aggregate and group your data dynamically.
 The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Dataverse can be found here: [Use FetchXML aggregation](../use-fetchxml-aggregation.md).
 
 You can find more information about OData data aggregation here: [OData extension for data aggregation version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html). Dataverse supports only a subset of these aggregate methods.
+
+> [!NOTE]
+> `groupby` with datetime values is not supported.
 
 Following are some examples:
 

@@ -1,8 +1,8 @@
 ---
-title: AttributeMetadata | Microsoft Docs
+title: AttributeMetadata (Power Apps component framework API reference) | Microsoft Docs
 description: Provides all the information about attributes/columns definitions.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 07/20/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -31,7 +31,7 @@ Model-driven and canvas apps
 | RequiredLevel | number                            | Required level of the column.                     |
 | Type          | [AttributeType](attributetype.md) | Column data type.                                 |
 
-### Related topics
+### Related articles
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)

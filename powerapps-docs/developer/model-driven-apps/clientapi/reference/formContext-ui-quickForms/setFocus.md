@@ -14,20 +14,14 @@ contributors:
 ---
 # quickViewControl.setFocus (Client API reference)
 
-
-
 [!INCLUDE[./includes/setFocus-description.md](./includes/setFocus-description.md)]
 
 ## Syntax
 
 `quickViewControl.setFocus();`
 
-### Related topics
+### Related articles
 
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

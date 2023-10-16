@@ -1,8 +1,8 @@
 ---
 title: "Flip component| Microsoft Docs" 
 description: "This sample shows how to use third-party libraries to create components in Power Apps component framework.  The flip sample component is implemented based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap." 
-author: noazarur-microsoft
-ms.author: noazarur
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: sample

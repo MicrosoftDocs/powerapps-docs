@@ -181,8 +181,6 @@
       items:
       - name: controls collection
         href: clientapi/reference/attributes/controls-collection.md
-      - name: Composite attributes
-        href: clientapi/reference/composite-attributes.md
       - name: addOnChange
         href: clientapi/reference/attributes/addOnChange.md
       - name: fireOnChange

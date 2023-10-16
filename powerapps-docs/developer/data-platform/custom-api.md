@@ -136,7 +136,7 @@ You can leave **Is Private** set to false in your development environment so you
 
 More information: 
 - [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document)
-- [Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)
+- [Generate early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md)
 - [Private Messages](org-service/use-messages.md#private-messages)
 
 ## Secure your custom API with a privilege
@@ -228,7 +228,7 @@ More information:
 - [Use Web API actions](webapi/use-web-api-actions.md)
 - [Use Web API functions](webapi/use-web-api-functions.md)
 
-### Invoking custom APIs from the Organization Service
+### Invoking custom APIs from the SDK for .NET
 
 You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](./org-service/generate-early-bound-classes.md) tool to generate helper request and response classes to expose the request parameters and response properties of your custom API.
 
@@ -252,7 +252,7 @@ var resp = svc.Execute(req);
 var newOwner = (EntityReference) resp["AssignedTo"];
 ```
 
-More information: [Use messages with the Organization service](org-service/use-messages.md).
+More information: [Use messages with the SDK for .NET](org-service/use-messages.md).
 
 ### Invoke custom API as a background operation
 
@@ -343,7 +343,7 @@ The following example shows editing the Excel worksheet to add Japanese translat
 
 ### Setting localized values
 
-If you prefer to set localized labels in code rather than using the manual process described above, you can use the `SetLocLabels` message using either the Web API [SetLocLabels Action](/dynamics365/customer-engagement/web-api/setloclabels) or the Organization Service <xref:Microsoft.Crm.Sdk.Messages.SetLocLabelsRequest>.
+If you prefer to set localized labels in code rather than using the manual process described above, you can use the `SetLocLabels` message using either the Web API [SetLocLabels Action](/dynamics365/customer-engagement/web-api/setloclabels) or the SDK for .NET <xref:Microsoft.Crm.Sdk.Messages.SetLocLabelsRequest>.
 
 The following example shows how to use the Web API to set the localized labels for the `displayname` property of a custom API.
 
@@ -388,7 +388,7 @@ HTTP/1.1 204 No Content
 
 ### Retrieving localized values
 
-To retrieve the localized labels use the `RetrieveLocLabels` message using either the Web API [RetrieveLocLabels Function](/dynamics365/customer-engagement/web-api/retrieveloclabels) or the Organization Service <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>.
+To retrieve the localized labels use the `RetrieveLocLabels` message using either the Web API [RetrieveLocLabels Function](/dynamics365/customer-engagement/web-api/retrieveloclabels) or the SDK for .NET <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>.
 
 The following example shows using the RetrieveLocLabels Function to retrieve the labels for the `displayname` property of a custom API with the `customapiid` of `88602189-183d-4584-ba4b-8b60f0f5b89f`
 

@@ -19,7 +19,7 @@ Returns a collection containing all active panes.
 
 `Xrm.App.sidePanes.getAllPanes();`
 
-### Related topics
+### Related articles
 
 [sidePanes](../../xrm-app-sidepanes.md)
 

@@ -13,7 +13,7 @@ contributors:
 ---
 # getPane (Client API reference)
 
-Returns the side pane corresponding to the input ID. If the side pane does not exist, undefined is returned.
+Returns the side pane corresponding to the input ID. Returns null if the side pane does not exist.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ Returns the side pane corresponding to the input ID. If the side pane does not e
 
 Returns the [AppSidePane](../../xrm-app-appsidepane.md) object.
 
-### Related topics
+### Related articles
 
 [sidePanes](../../xrm-app-sidepanes.md)
 

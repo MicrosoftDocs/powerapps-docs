@@ -24,7 +24,8 @@ This sample shows how to create and retrieve table relationships. The following 
 - [CanManyToManyRequest](/dotnet/api/microsoft.xrm.sdk.messages.canmanytomanyrequest)
 - [RetrieveRelationshipRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieverelationshiprequest)
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateRetrieveEntityRelationships).
+> [!div class="nextstepaction"]
+> [SDK for .NET: Create and retrieve table relationships sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateRetrieveEntityRelationships)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
