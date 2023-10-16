@@ -30,7 +30,7 @@ With the [modern, refreshed look enabled](../../user/modern-fluent-design.md#tur
 
 ### Overview of the XML resource to use for app header colors
 
-The first step to modifying the app header styling is to create an XML file with your various color selections and add it as a web resource.
+The first step to modifying the app header styling is to create an XML file with your various color selections. Later, you'll create a web resource using the XML file.
 
 The following styling options for the app header are available:
 
@@ -99,7 +99,7 @@ After you’ve selected your colors and created the XML resource, follow these s
 1. Select **Publish all customizations** on the command bar. (This command appears when no components in the solution are selected).
 
 With the example colors above, the app header should look like this after refreshing or playing the app.  
-:::image type="content" source="media/greenappppheader-oct2023.png" alt-text="Green app header in a model-driven app" lightbox="media/greenappheader-oct2023.png":::
+:::image type="content" source="media/greenappheader-oct2023.png" alt-text="Green app header in a model-driven app" lightbox="media/greenappheader-oct2023.png":::
 
 ### Verifying new app header colors
 
