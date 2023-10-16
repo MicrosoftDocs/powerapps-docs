@@ -27,9 +27,8 @@ In addition to a search term, the results returned can be influenced by passing 
 |`entities`|string|The default is searching across all search–configured entities.|[`entities` parameter](#entities-parameter)|
 |`filter`|string|Filter criteria to reduce results returned.|[`filter` parameter](#filter-parameter)|
 |`fuzzy`|bool|Use fuzzy search to aid with misspellings. The default is false.|[`fuzzy` parameter](#fuzzy-parameter)|
-|`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`. TODO: I think `advanced` maybe the only valid parameter here.|[`options` parameter](#options-parameter)|
+|`options`|string|Options are settings configured to search a search term. Eg. `"{ 'advancedsuggestenabled': 'true' }"`.|[`options` parameter](#options-parameter)|
 |`orderby`|string|   List of comma-separated clauses where each clause is an attribute name followed by `asc` or `desc`.|[`orderby` parameter](#orderby-parameter)|
-|`propertybag`|string|A collection of additional properties for search request. Eg. appid, correlationid.|[`propertybag` parameter](#propertybag-parameter)|
 |`top`|int|Number of suggestions to retrieve. The default is 5.|[`top` parameter](#top-parameter)|
 
 ## Parameters
@@ -42,62 +41,47 @@ Details for the parameters in the table above can be found below.
 **Type**: string<br />
 **Optional**: false
 
-Search term.
+Search term must be at least three characters long and has a 100 character limit
 
 ### `entities` parameter
 
 **Type**: string<br />
-**Optional**: false
+**Optional**: true
 
 The default is searching across all search–configured entities.
 
 ### `filter` parameter
 
 **Type**: string<br />
-**Optional**: false
+**Optional**: true
 
 Filter criteria to reduce results returned.
 
 ### `fuzzy` parameter
 
 **Type**: bool<br />
-**Optional**: false
+**Optional**: true
 
 Use fuzzy search to aid with misspellings. The default is false.
 
 ### `options` parameter
 
 **Type**: string<br />
-**Optional**: false
+**Optional**: true
 
-Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.
-
-TODO: Internal docs say `advanced` is the only option for suggest, and the reason to choose it is:
-
-> Use 'advanced' if your suggest request needs to route through advanced suggest algorithm.
-
-What does this mean?
-
-- Are the other options mentioned valid here?
+Options are settings configured to search a search term. Valid options for suggest query is `"{ 'advancedsuggestenabled': 'true' }"`.
 
 ### `orderby` parameter
 
 **Type**: string<br />
-**Optional**: false
+**Optional**: true
 
 List of comma-separated clauses where each clause is an attribute name followed by `asc` or `desc`.
-
-### `propertybag` parameter
-
-**Type**: string<br />
-**Optional**: false
-
-A collection of additional properties for search request. Eg. appid, correlationid.
 
 ### `top` parameter
 
 **Type**: int<br />
-**Optional**: false
+**Optional**: true
 
 Number of suggestions to retrieve. The default is 5.
 

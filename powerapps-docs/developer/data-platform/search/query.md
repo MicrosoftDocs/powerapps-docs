@@ -28,9 +28,8 @@ In addition to a search term, the results returned can be influenced by passing 
 |`entities`|string|Limits the scope of search to a sub-set of tables. |[entities parameter](#entities-parameter)|
 |`facets`|string|Facets support the ability to drill down into data results after they've been retrieved. | [facets parameter](#facets-parameter)|
 |`filter`|string|Limits the scope of the search results returned. |[filter parameter](#filter-parameter)|
-|`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.|[`options` parameter](#options-parameter)|
+|`options`|string|Options are settings configured to search a search term.|[`options` parameter](#options-parameter)|
 |`orderby`|string|Specifies how to order the results in order of precedence. |[orderby parameter](#orderby-parameter)|
-|`propertybag`|string|A collection of the additional properties for search request. Eg. appid, correlationid.|[`propertybag` parameter](#propertybag-parameter)|
 |`skip`|int|Specifies the number of search results to skip. |[skip and top parameters](#skip-and-top-parameters)|
 |`top`|int|Specifies the number of search results to retrieve. |[skip and top parameters](#skip-and-top-parameters)|
 
@@ -43,7 +42,7 @@ Details for the parameters in the table above can be found below.
 **Type**: string<br />
 **Optional**: false
 
-The search parameter contains the text to search. It is the only required parameter. Search term must be at least three characters long and has a 100 character limit.
+The search parameter contains the text to search. It is the only required parameter. Search term must be at least one characters long and has a 100 character limit.
 
 #### Simple Search syntax
 
@@ -177,27 +176,27 @@ More information:
 **Type**: string<br />
 **Optional**: true
 
-Filters limit the scope of the search results returned. Use filters to exclude unwanted results.
+Filters limit the scope of the search results returned. Use filters to exclude unwanted results. This is a top level filter which helps filter common columns accross multiple entities like `createdon` or `modifiedon` etc.
 
-Apply filters using this syntax: `<table logical name>: <filter>` where the table logical name specifies the entity the filter should be applied to.
+Apply filters using this syntax: `<attribute logical name> <filter>` where the table logical name specifies the entity the filter should be applied to.
 
 Filters use the following query operators:
 
 |Operator|Description|Example|
 |--------|-----------|-------|
 |**Comparison Operators**|&nbsp;|&nbsp;|
-|`eq`|Equal|`account:revenue eq 100000`|
-|`ne`|Not Equal|`account:revenue ne 100000`|
-|`gt`|Greater than|`account:revenue gt 100000`|
-|`ge`|Greater than or equal|`account:revenue ge 100000`|
-|`lt`|Less than|`account:revenue lt 100000`|
-|`le`|Less than or equal|`account:revenue le 100000`|
+|`eq`|Equal|`revenue eq 100000`|
+|`ne`|Not Equal|`revenue ne 100000`|
+|`gt`|Greater than|`revenue gt 100000`|
+|`ge`|Greater than or equal|`revenue ge 100000`|
+|`lt`|Less than|`revenue lt 100000`|
+|`le`|Less than or equal|`revenue le 100000`|
 |**Logical Operators**|&nbsp;|&nbsp;|
-|`and`|Logical and|`account:revenue lt 100000 and revenue gt 2000`|
-|`or`|Logical or|`account:name eq 'sample' or name eq 'test'`|
-|`not`|Logical negation|`account:not name eq 'sample'`|
+|`and`|Logical and|`revenue lt 100000 and revenue gt 2000`|
+|`or`|Logical or|`name eq 'sample' or name eq 'test'`|
+|`not`|Logical negation|`not name eq 'sample'`|
 |**Grouping Operators**|&nbsp;|&nbsp;|
-|`( )`|Precedence grouping|`account:(name eq 'sample') or name eq 'test') and revenue gt 5000`|
+|`( )`|Precedence grouping|`(name eq 'sample') or name eq 'test') and revenue gt 5000`|
 
 
 ### `options` parameter
@@ -205,16 +204,16 @@ Filters use the following query operators:
 **Type**: string<br />
 **Optional**: true
 
-Options are settings configured to search a search term. Set the `options` value to a serialized array of these options, such as `["lucene","besteffortsearch","groupranking","searchmodelall"]`.
+Options are settings configured to search a search term. Set the `options` value to a serialized `Dictionary<string, string>` of these options, such as `"{'querytype': 'lucene', 'searchmode': 'all', 'besteffortsearchenabled': 'true', 'grouprankingenabled': 'true'}"`.
 
 These are the options:
 
 |Option|Description  |
 |---------|---------|
-|`lucene`|Enables [Lucerne Query Syntax](#lucerne-query-syntax)|
-|`besteffortsearch`|Enables intelligent query workflow to return probable set of results if no good matches are found for the search request terms.|
+|`querytype`| Values can be `simple` or `lucene` [Lucerne Query Syntax](#lucerne-query-syntax)|
+|`besteffortsearchenabled`|Enables intelligent query workflow to return probable set of results if no good matches are found for the search request terms.|
 |`groupranking`|Enable ranking of results in the response optimized for display in search results pages where results are grouped by table.|
-|`searchmodelall`|Specifiy whether all the search terms must be matched in order to consider the document as a match. Not specifying this flag will default to matching any word in the search term.|
+|`searchmode`|When specified as `all` the search terms must be matched in order to consider the document as a match. Setting its value to `any` will default to matching any word in the search term.|
 
 #### Lucerne Query Syntax
 
@@ -234,7 +233,7 @@ The Lucene query syntax supports the following functionality:
 **Type**: string<br />
 **Optional**: true
 
-Use the `orderby` parameter to override the default ordering. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
+Use the `orderby` parameter to override the default ordering. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random. You can only use this parameter when query type is lucene with wildcard characters in the query string.
 
 Use a list of comma-separated clauses where each clause consists of a column name followed by `asc` (*ascending*, which is the default) or `desc` (descending).
 
@@ -243,13 +242,6 @@ For a set of results that contain multiple table types, the list of clauses for 
 `"orderby": ["@search.score desc", "modifiedon desc"]`
 
 If the query request includes a filter for a specific table type, `orderby` can optionally specify table-specific columns.
-
-### `propertybag` parameter
-
-**Type**: string<br />
-**Optional**: true
-
-A collection of the additional properties for search request. Eg. `appid`, `correlationid`.
 
 ### `skip` and `top` parameters
 
@@ -416,9 +408,9 @@ HTTP/1.1 200 OK
           field_name: [ subset of text, ... ], 
           ... 
         },         
-        “Id”: “object_id”, 
-        “entityname”: “entity_logical_name”, 
-        “objecttypecode”: object_type_code, 
+        "Id": "object_id", 
+        "entityname": "entity_logical_name", 
+        "objecttypecode": object_type_code, 
         "attributes": { 
           field_name: field_value (retrievable fields or specified projection), 
           ... 
@@ -479,9 +471,9 @@ HTTP/1.1 200 OK
           field_name: [ subset of text, ... ], 
           ... 
         },         
-        “Id”: “object_id”, 
-        “entityname”: “entity_logical_name”, 
-        “objecttypecode”: object_type_code, 
+        "Id": "object_id", 
+        "entityname": "entity_logical_name", 
+        "objecttypecode": object_type_code, 
         "attributes": { 
           field_name: field_value (retrievable fields or specified projection), 
           ... 

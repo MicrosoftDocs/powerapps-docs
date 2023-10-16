@@ -30,8 +30,6 @@ In addition to a search term, the results returned can be influenced by passing 
 |`entities`|string|The default scope is searching across all search–configured entities and fields.|[`entities` parameter](#entities-parameter)|
 |`filter`|string|Filter criteria to reduce results returned.|[`filter` parameter](#filter-parameter)|
 |`fuzzy`|bool|Fuzzy search to aid with misspellings. The default is false.|[`fuzzy` parameter](#fuzzy-parameter)|
-|`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`. TODO: I think `advanced` maybe the only valid parameter here, and it may be a no-op.|[`options` parameter](#options-parameter)|
-|`propertybag`|string|A collection of the additional properties for search request. Eg. appid, correlationid.|[`propertybag` parameter](#propertybag-parameter)|
 
 ## Parameters
 
@@ -42,7 +40,7 @@ Details for the parameters in the table above can be found below.
 **Type**: string<br />
 **Optional**: false
 
-Search Term
+Search term must be at least one characters long and has a 100 character limit.
 
 ### `entities` parameter
 
@@ -66,29 +64,6 @@ Filter criteria to reduce results returned. This uses the same string values as 
 Fuzzy search to aid with misspellings. The default is false.
 
 When set to true, this API finds suggestions even if there is a substituted or missing character in the search text. The edit distance is 1 per query string. If the query string is multiple terms, there can only be one missing, extra, substituted, or transposed character in the entire string. Enabling fuzzy match can be a better experience in some scenarios, it does come at a performance cost, as fuzzy suggestion searches are slower and consume more resources.
-
-### `options` parameter
-
-**Type**: string<br />
-**Optional**: True
-
-Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.
-
-TODO: Same as with suggest. Internal docs say `advanced` is the only option for suggest, and the reason to choose it is:
-
-> Use 'advanced' if your autocomplete request needs to route through advanced algorithm. This is a no-op at this point of time.
-
-What does this mean? Mark as **Internal use only**?
-
-- Are the other options mentioned valid here?
-
-
-### `propertybag` parameter
-
-**Type**: string<br />
-**Optional**: True
-
-A collection of the additional properties for search request. Eg. appid, correlationid.
 
 ## Response
 
