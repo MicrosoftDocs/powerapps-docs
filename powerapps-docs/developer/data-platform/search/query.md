@@ -264,7 +264,7 @@ The unescaped response contains JSON using the following properties.
 |`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
 |`Value`|[`QueryResult`](#queryresult)`[]`|A collection of matching records.|
 |`Facets`|`Dictionary<string,` [FacetResult](#facetresult)`[]>`|If facets were requested in the query, a dictionary of facet values.|
-|`QueryContext` |[QueryContext](#querycontext)|TODO: find out. It is always null. Why is it included?|
+|`QueryContext` |[QueryContext](#querycontext)|The query context returned as part of response.|
 |`Count`|long| If `"Count": true` is included in the body of the request, the count of all documents that match the search, ignoring top and skip|
 
 ### Types
@@ -273,8 +273,7 @@ The following types are returned by the Query Response.
 
 #### ErrorDetail
 
-TODO: Why is this included? Why doesn't the service just return an error?
-GUESS: This will be a Cognitive Search error
+The Azure Cognitive search error returned as part of the response.
 
 |Name|Type|Description|
 |---------|---------|---------|
@@ -297,6 +296,8 @@ Each `QueryResult` item returned in the response `Value` property represents a r
 
 #### FacetResult
 
+A facet query result that reports the number of documents with a field falling within a particular range or having a particular value or interval.
+
 |Name|Type|Description|
 |---------|---------|---------|
 |`Count`|long?|The count of documents falling within the bucket described by this facet.|
@@ -309,6 +310,8 @@ Each `QueryResult` item returned in the response `Value` property represents a r
 
 #### QueryContext
 
+The query context returned as part of response.
+
 |Name|Type|Description|
 |---------|---------|---------|
 |`OriginalQuery`|string|The query string as specified in the request.|
@@ -320,65 +323,409 @@ Each `QueryResult` item returned in the response `Value` property represents a r
 
 The following example shows how to use the query operation.
 
-You want to find a specific product or opportunity that contains the text "bread" in the name where the record was modified on specific dates and times.
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub. The static `OutputSearchQuery` method performs a search operation on the account and contact tables `name` and `fullname` columns respectively, for records created later than August 15, 2022 and orders the results by the `createdon` field, descending.
 
-#### [SDK for .NET](#tab/sdk)
+### [SDK for .NET](#tab/sdk)
 
 ```csharp
-static void SDKExampleMethod(IOrganizationService service){
-   OrganizationRequest query = new OrganizationRequest("searchquery")
-   {
-      Parameters = new ParameterCollection
-      {
-         { "search", "bread" },
-         { "count", true },
-         { "entities", "product", "opportunity" },
-         { "facets","product:name,count:100","opportunity,name:100",
-             "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00","createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00",
-         },
-         { "filter","string" },
-         { "options","fuzzymatching", "groupranking" },
-         { "orderby","@search.score desc","id", "product.name" },
-         { "skip", 3 },
-         { "top", 1 }
-      }
-   };
+/// <summary>
+/// Demonstrate query API
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance to use.</param>
+/// <param name="searchTerm">The term to search for</param>
+/// <returns></returns>
+static void OutputSearchQuery(IOrganizationService service, string searchTerm)
+{
+    Console.WriteLine("OutputSearchQuery START\n");
 
-   var searchQueryResponse = service.Execute(query);
-   string responseString = searchQueryResponse.Results["response"];
-   
-   //TODO: Parse the string to get the objects. (need more info)
+    searchqueryRequest request = new() { 
+        search = searchTerm,
+        count = true,
+        top = 7,
+        entities = JsonConvert.SerializeObject(new List<SearchEntity>()
+        {
+            new SearchEntity()
+            {
+                Name = "account",
+                SelectColumns = new List<string>() { "name", "createdon" },
+                SearchColumns = new List<string>() { "name" },
+                Filter = "statecode eq 0"
+            },
+            new SearchEntity()
+            {
+                Name = "contact",
+                SelectColumns = new List<string>() { "fullname", "createdon" },
+                SearchColumns = new List<string>() { "fullname" },
+                Filter = "statecode eq 0"
+            }
+        }),
+        orderby = JsonConvert.SerializeObject(new List<string>() { "createdon desc" }),
+        filter = "createdon gt 2022-08-15"
+
+    };
+    
+    var searchqueryResponse = (searchqueryResponse)service.Execute(request);
+
+    var queryResults = JsonConvert.DeserializeObject<SearchQueryResults>(searchqueryResponse.response);
+  
+
+    Console.WriteLine($"\tCount:{queryResults.Count}");
+    Console.WriteLine("\tValue:");
+    queryResults.Value.ForEach(result =>
+    {
+
+        Console.WriteLine($"\t\tId:{result.Id}");
+        Console.WriteLine($"\t\tEntityName:{result.EntityName}");
+        Console.WriteLine($"\t\tObjectTypeCode:{result.ObjectTypeCode}");
+        Console.WriteLine("\t\tAttributes:");
+        foreach (string key in result.Attributes.Keys)
+        {
+            Console.WriteLine($"\t\t\t{key}:{result.Attributes[key]}");
+        }
+        Console.WriteLine("\t\tHighlights:");
+        foreach (string key in result.Highlights.Keys)
+        {
+            Console.WriteLine($"\t\t\t{key}:");
+
+            foreach (string value in result.Highlights[key])
+            {
+                Console.WriteLine($"\t\t\t\t{value}:");
+            }
+        }
+        Console.WriteLine($"\t\tScore:{result.Score}\n");
+
+    });
+    Console.WriteLine("OutputSearchQuery END\n");
 }
 ```
 
+This method depends on the following supporting classes to send the request and process the result:
+
+#### searchqueryRequest and searchqueryResponse
+
+These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)
+
+#### SearchEntity
+
+The entity schema to scope the search request.
+
+```csharp
+public sealed class SearchEntity
+{
+    /// <summary>
+    /// Gets or sets the logical name of the table. Specifies scope of the query.
+    /// </summary>
+    [DataMember(Name = "name", IsRequired = true)]
+    public string Name { get; set; }
+
+    /// <summary>
+    /// Gets or sets the list of columns that needs to be projected when table documents are returned in response. 
+    /// If empty, only PrimaryName will be returned.
+    /// </summary>
+    [DataMember(Name = "selectcolumns")]
+    public List<string> SelectColumns { get; set; }
+
+    /// <summary>
+    /// Gets or sets the list of columns to scope the query on.
+    /// If empty, only PrimaryName will be searched on. 
+    /// </summary>
+    [DataMember(Name = "searchcolumns")]
+    public List<string> SearchColumns { get; set; }
+
+    /// <summary>
+    /// Gets or sets the filters applied on the entity.
+    /// </summary>
+    [DataMember(Name = "filter")]
+    public string Filter { get; set; }
+}
+```
+
+#### SearchQueryResults
+
+Used to deserialize JSON data from the `searchqueryResponse.response` string property.
+
+```csharp
+public sealed class SearchQueryResults
+{
+    /// <summary>
+    /// Provides error information from Azure Cognitive search.
+    /// </summary>
+    public ErrorDetail? Error { get; set; }
+
+    /// <summary>
+    /// A collection of matching records.
+    /// </summary>
+    public List<QueryResult>? Value { get; set; }
+
+    /// <summary>
+    /// If facets were requested in the query, a dictionary of facet values.
+    /// </summary>
+    public Dictionary<string, IList<FacetResult>>? Facets { get; set; }
+
+    /// <summary>
+    /// The query context returned as part of response.
+    /// </summary>
+    public QueryContext? QueryContext { get; set; }
+
+    /// <summary>
+    /// If `"Count": true` is included in the body of the request, the count of all documents that match the search, ignoring top and skip.
+    /// </summary>
+    public long Count { get; set; }
+}
+```
+
+#### ErrorDetail
+
+The error detail returned as part of response.
+
+```csharp
+public sealed class ErrorDetail
+{
+    /// <summary>
+    /// Gets or sets the error code.
+    /// </summary>
+    [DataMember(Name = "code")]
+    public string Code { get; set; }
+
+    /// <summary>
+    /// Gets or sets the error message.
+    /// </summary>
+    [DataMember(Name = "message")]
+    public string Message { get; set; }
+
+    /// <summary>
+    /// Gets or sets additional error information.
+    /// </summary>
+    [DataMember(Name = "propertybag")]
+    public Dictionary<string, object> PropertyBag { get; set; }
+}
+```
+
+#### QueryResult
+
+Contains data about a matching record found from the query API.
+
+```csharp
+public sealed class QueryResult
+{
+    /// <summary>
+    /// Gets or sets the identifier of the record
+    /// </summary>
+    public string Id { get; set; }
+
+    /// <summary>
+    /// Gets or sets the logical name of the table
+    /// </summary>
+    public string EntityName { get; set; }
+
+    /// <summary>
+    /// Gets or sets the object type code
+    /// </summary>
+    public int ObjectTypeCode { get; set; }
+
+    /// <summary>
+    /// Gets or sets the record attributes
+    /// </summary>
+    public Dictionary<string, object> Attributes { get; set; }
+
+    /// <summary>
+    /// Gets or sets the highlights
+    /// </summary>
+    public Dictionary<string, string[]> Highlights { get; set; }
+
+    // Gets or sets the document score
+    public double Score { get; set; }
+}
+```
+
+#### FacetResult
+
+A facet query result that reports the number of documents with a field falling within a particular range or having a particular value or interval.
+
+```csharp
+public sealed class FacetResult
+{
+    /// <summary>
+    /// Gets or sets the count of documents falling within the bucket described by this facet.
+    /// </summary>
+    [DataMember(Name = "count")]
+    public long? Count { get; set; }
+
+    /// <summary>
+    /// Gets or sets value indicating the inclusive lower bound of the facet's range, or null to indicate that there is no lower bound.
+    /// </summary>
+    [DataMember(Name = "from")]
+    public object From { get; set; }
+
+    /// <summary>
+    /// Gets or sets value indicating the exclusive upper bound of the facet's range, or null to indicate that there is no upper bound.
+    /// </summary>
+    [DataMember(Name = "to")]
+    public object To { get; set; }
+
+    /// <summary>
+    /// Gets or sets type of the facet - Value or Range.
+    /// </summary>
+    [DataMember(Name = "type")]
+    public FacetType Type { get; set; }
+
+    /// <summary>
+    /// Gets or sets value of the facet, or the inclusive lower bound if it's an interval facet.
+    /// </summary>
+    [DataMember(Name = "value")]
+    public object Value { get; set; }
+
+    /// <summary>
+    /// Gets or sets additional/ Optional value of the facet, will be populated while faceting on lookups.
+    /// </summary>
+    [DataMember(Name = "optionalvalue")]
+    public object OptionalValue { get; set; }
+}
+```
+
+#### FacetType
+
+Specifies the type of a facet query result.
+
+```csharp
+public enum FacetType
+{
+    /// <summary>
+    /// The facet counts documents with a particular field value.
+    /// </summary>
+    [EnumMember(Value = "value")]
+    Value = 0,
+
+    /// <summary>
+    /// The facet counts documents with a field value in a particular range.
+    /// </summary>
+    [EnumMember(Value = "range")]
+    Range = 1,
+}
+```
+
+#### QueryContext
+
+The query context returned as part of response.
+
+```csharp
+public sealed class QueryContext
+{
+    /// <summary>
+    /// Gets or sets the query string as specified in the request.
+    /// </summary>
+    [DataMember(Name = "originalquery")]
+    public string OriginalQuery { get; set; }
+
+    /// <summary>
+    /// Gets or sets the query string that Dataverse search used to perform the query. 
+    /// Dataverse search uses the altered query string if the original query string contained spelling mistakes or did not yield optimal results.
+    /// </summary>
+    [DataMember(Name = "alteredquery")]
+    public string AlteredQuery { get; set; }
+
+    /// <summary>
+    /// Gets or sets the reason behind query alter decision by Dataverse search.
+    /// </summary>
+    [DataMember(Name = "reason")]
+    public List<string> Reason { get; set; }
+
+    /// <summary>
+    /// Gets or sets the spell suggestion that are the likely words that represent user's intent. 
+    /// This will be populated only when the query was altered by Dataverse search due to spell check.
+    /// </summary>
+    [DataMember(Name = "spellsuggestions")]
+    public List<string> SpellSuggestions { get; set; }
+}
+```
+
+
+
 **Output**
 
-```
-TODO: The Console Writeline output of the SDK Sample (we don't have, will need to work to get this, remove for now)
+When invoked with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class with the `searchTerm` set to "Contoso":
+
+```csharp
+OutputSearchQuery(service: serviceClient, searchTerm: "Contoso");
 ```
 
-#### [Web API](#tab/webapi)
+The output will look something like the following:
+
+```console
+OutputSearchQuery START
+
+        Count:1
+        Value:
+                Id:8b35eda1-ef69-ee11-9ae7-000d3a88a4a2
+                EntityName:account
+                ObjectTypeCode:0
+                Attributes:
+                        @search.objecttypecode:1
+                        name:Contoso Pharmaceuticals (sample)
+                        createdon:10/13/2023 5:41:21 PM
+                        createdon@OData.Community.Display.V1.FormattedValue:10/13/2023 5:41 PM
+                Highlights:
+                        name:
+                                {crmhit}Contoso{/crmhit} Pharmaceuticals (sample):
+                Score:4.986711
+
+OutputSearchQuery END
+```
+
+### [Web API](#tab/webapi)
+
+This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub. This demonstrates a search operation on the account and contact tables `name` and `fullname` columns respectively, for records created later than August 15, 2022 and orders the results by the `createdon` field, descending.
+
+The formatted JSON passed to the string `entity` parameter looks like this:
+
+```json
+[
+  {
+    "Name": "account",
+    "SelectColumns": [
+      "name",
+      "createdon"
+    ],
+    "SearchColumns": [
+      "name"
+    ],
+    "Filter": "statecode eq 0"
+  },
+  {
+    "Name": "contact",
+    "SelectColumns": [
+      "fullname",
+      "createdon"
+    ],
+    "SearchColumns": [
+      "fullname"
+    ],
+    "Filter": "statecode eq 0"
+  }
+]
+```
 
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.2/searchquery HTTP/1.1
+POST [Organization Uri]/api/data/v9.2/searchquery
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 471
 
 {
- "search": "bread", 
-"entities": ["product", "opportunity"],      
-"facets": [ "product:name,count:100","opportunity,name:100",
-             "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00","createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00"],   
-"count": true,   
-"orderby": ["@search.score desc","id", "product.name"],   
-"options": ["fuzzymatching", "groupranking"],
-"propertybag": "dictionary (key/value pairs)" - NEED EXAMPLE      
-"skip": # (3),   
-"top": # (1)
+  "top": 7,
+  "search": "Contoso",
+  "skip": 0,
+  "entities": "[{\"Name\":\"account\",\"SelectColumns\":[\"name\",\"createdon\"],\"SearchColumns\":[\"name\"],\"Filter\":\"statecode eq 0\"},{\"Name\":\"contact\",\"SelectColumns\":[\"fullname\",\"createdon\"],\"SearchColumns\":[\"fullname\"],\"Filter\":\"statecode eq 0\"}]",
+  "orderby": "[\"createdon desc\"]",
+  "filter": "createdon gt 2022-08-15",
+  "count": true,
+  "options": "null",
+  "facets": "null"
 }
 ```
 
@@ -386,62 +733,95 @@ Accept: application/json
 
 ```http
 HTTP/1.1 200 OK
+OData-Version: 4.0
 
-{ 
-    "count": # (if $count=true was provided in the query. -1 if false), 
-    "querycontext": { QueryContext }, 
-    "facets": { (if faceting was specified in the query) 
-      "facet_field": [ 
-        { 
-          "value": facet_entry_value (for non-range facets), 
-          "from": facet_entry_value (for range facets), 
-          "to": facet_entry_value (for range facets), 
-          "count": number_of_documents 
-        } 
-      ], 
-      ... 
-    }, 
-    "value": [ 
-      { 
-        "score": document_score, 
-        "highlights": { 
-          field_name: [ subset of text, ... ], 
-          ... 
-        },         
-        "Id": "object_id", 
-        "entityname": "entity_logical_name", 
-        "objecttypecode": object_type_code, 
-        "attributes": { 
-          field_name: field_value (retrievable fields or specified projection), 
-          ... 
-        }, 
-        ... 
-      }, 
-      ... 
-    ], 
-}  
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchqueryResponse",
+  "response": "{\"Error\":null,\"Value\":[{\"Id\":\"8b35eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"EntityName\":\"account\",\"ObjectTypeCode\":0,\"Attributes\":{\"@search.objecttypecode\":1,\"name\":\"Contoso Pharmaceuticals (sample)\",\"createdon\":\"2023-10-13T17:41:21Z\",\"createdon@OData.Community.Display.V1.FormattedValue\":\"10/13/2023 5:41 PM\"},\"Highlights\":{\"name\":[\"{crmhit}Contoso{/crmhit} Pharmaceuticals (sample)\"]},\"Score\":4.95567}],\"Facets\":{},\"QueryContext\":null,\"Count\":1}"
+}
+```
+
+The formatted JSON value for the string response property looks like this:
+
+```json
+{
+  "Error": null,
+  "Value": [
+    {
+      "Id": "8b35eda1-ef69-ee11-9ae7-000d3a88a4a2",
+      "EntityName": "account",
+      "ObjectTypeCode": 0,
+      "Attributes": {
+        "@search.objecttypecode": 1,
+        "name": "Contoso Pharmaceuticals (sample)",
+        "createdon": "2023-10-13T17:41:21Z",
+        "createdon@OData.Community.Display.V1.FormattedValue": "10/13/2023 5:41 PM"
+      },
+      "Highlights": {
+        "name": [
+          "{crmhit}Contoso{/crmhit} Pharmaceuticals (sample)"
+        ]
+      },
+      "Score": 4.95567
+    }
+  ],
+  "Facets": {},
+  "QueryContext": null,
+  "Count": 1
+}
 ```
 
 #### [Search 2.0 endpoint](#tab/search)
 
 The parameters and response value using the search 2.0 endpoint are identical to the Web API.
 
+The formatted JSON passed to the string `entity` parameter looks like this:
+
+```json
+[
+  {
+    "Name": "account",
+    "SelectColumns": [
+      "name",
+      "createdon"
+    ],
+    "SearchColumns": [
+      "name"
+    ],
+    "Filter": "statecode eq 0"
+  },
+  {
+    "Name": "contact",
+    "SelectColumns": [
+      "fullname",
+      "createdon"
+    ],
+    "SearchColumns": [
+      "fullname"
+    ],
+    "Filter": "statecode eq 0"
+  }
+]
+```
+
 **Request**
 
 ```http
-POST [Organization URI]/api/search/v2.0/query HTTP/1.1
+POST [Organization Uri]/api/search/v2.0/query
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 471
 
 {
- "search": "bread", 
-"entities": ["product", "opportunity"],      
-"facets": [ "product:name,count:100","opportunity,name:100",
-             "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00","createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00"],   
-"count": true,   
-"orderby": "@search.score desc","id", "product.name",   
-"options": ["fuzzymatching", "groupranking"],
-"propertybag": "dictionary (key/value pairs)" - NEED EXAMPLE      
-"skip": # (3),   
-"top": # (1)
+  "top": 7,
+  "search": "Contoso",
+  "skip": 0,
+  "entities": "[{\"Name\":\"account\",\"SelectColumns\":[\"name\",\"createdon\"],\"SearchColumns\":[\"name\"],\"Filter\":\"statecode eq 0\"},{\"Name\":\"contact\",\"SelectColumns\":[\"fullname\",\"createdon\"],\"SearchColumns\":[\"fullname\"],\"Filter\":\"statecode eq 0\"}]",
+  "orderby": "[\"createdon desc\"]",
+  "filter": "createdon gt 2022-08-15",
+  "count": true,
+  "options": "null",
+  "facets": "null"
 }
 ```
 
@@ -449,50 +829,56 @@ POST [Organization URI]/api/search/v2.0/query HTTP/1.1
 
 ```http
 HTTP/1.1 200 OK
+OData-Version: 4.0
 
-{ 
-    "count": # (if $count=true was provided in the query. -1 if false), 
-    "querycontext": { QueryContext }, 
-    "facets": { (if faceting was specified in the query) 
-      "facet_field": [ 
-        { 
-          "value": facet_entry_value (for non-range facets), 
-          "from": facet_entry_value (for range facets), 
-          "to": facet_entry_value (for range facets), 
-          "count": number_of_documents 
-        } 
-      ], 
-      ... 
-    }, 
-    "value": [ 
-      { 
-        "score": document_score, 
-        "highlights": { 
-          field_name: [ subset of text, ... ], 
-          ... 
-        },         
-        "Id": "object_id", 
-        "entityname": "entity_logical_name", 
-        "objecttypecode": object_type_code, 
-        "attributes": { 
-          field_name: field_value (retrievable fields or specified projection), 
-          ... 
-        }, 
-        ... 
-      }, 
-      ... 
-    ], 
-} 
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchqueryResponse",
+  "response": "{\"Error\":null,\"Value\":[{\"Id\":\"8b35eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"EntityName\":\"account\",\"ObjectTypeCode\":0,\"Attributes\":{\"@search.objecttypecode\":1,\"name\":\"Contoso Pharmaceuticals (sample)\",\"createdon\":\"2023-10-13T17:41:21Z\",\"createdon@OData.Community.Display.V1.FormattedValue\":\"10/13/2023 5:41 PM\"},\"Highlights\":{\"name\":[\"{crmhit}Contoso{/crmhit} Pharmaceuticals (sample)\"]},\"Score\":4.95567}],\"Facets\":{},\"QueryContext\":null,\"Count\":1}"
+}
+```
+
+> [!NOTE]
+> Despite the information returned in the `@odata.context` property using the native search 2.0 endpoint, it is not an OData service.
+
+The formatted JSON value for the string response property looks like this:
+
+```json
+{
+  "Error": null,
+  "Value": [
+    {
+      "Id": "8b35eda1-ef69-ee11-9ae7-000d3a88a4a2",
+      "EntityName": "account",
+      "ObjectTypeCode": 0,
+      "Attributes": {
+        "@search.objecttypecode": 1,
+        "name": "Contoso Pharmaceuticals (sample)",
+        "createdon": "2023-10-13T17:41:21Z",
+        "createdon@OData.Community.Display.V1.FormattedValue": "10/13/2023 5:41 PM"
+      },
+      "Highlights": {
+        "name": [
+          "{crmhit}Contoso{/crmhit} Pharmaceuticals (sample)"
+        ]
+      },
+      "Score": 4.95567
+    }
+  ],
+  "Facets": {},
+  "QueryContext": null,
+  "Count": 1
+}
 ```
 
 ---
+
 ### See also
 
-[Search for Dataverse records](overview.md)<br />
-[Dataverse Search suggest](suggest.md)<br />
-[Dataverse Search autocomplete](autocomplete.md)<br />
-[Dataverse Search status](status.md)<br />
-[Dataverse Search statistics](statistics.md)<br />
+[Search for Dataverse records](overview.md)   
+[Dataverse Search suggest](suggest.md)   
+[Dataverse Search autocomplete](autocomplete.md)   
+[Dataverse Search status](status.md)   
+[Dataverse Search statistics](statistics.md)   
 [Dataverse legacy search](legacy.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

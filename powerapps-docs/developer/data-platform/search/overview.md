@@ -36,7 +36,7 @@ Developers can use the search APIs three different ways:
 
 ### SDK for .NET
 
-Search operations are defined as Dataverse messages using [Custom APIs](../custom-api.md). For .NET projects they can also be used with the SDK for .NET.
+Search operations are defined as Dataverse messages using [Custom APIs](../custom-api.md). For .NET projects you can use the SDK for .NET.
 
 There are currently no classes included in the SDK to use these operations. For .NET Framework projects you can use the Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate `*Request` and `*Response` classes for these messages just as you would for any custom action.
 
@@ -264,7 +264,7 @@ SyncToExternalSearchIndex: True
 
 More information:
 
-- [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
+- [Query schema definitions](../query-schema-definitions.md)
 - [Retrieve, update, and delete tables](../org-service/metadata-retrieve-update-delete-entities.md)
 
 
@@ -302,6 +302,7 @@ OData-Version: 4.0
 More information:
 
 - [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
+- [Query schema definitions](../query-schema-definitions.md)
 - [Create and update table definitions using the Web API](../webapi/create-update-entity-definitions-using-web-api.md)
 
 #### [Search 2.0 endpoint](#tab/search)
@@ -333,11 +334,11 @@ Dataverse search allows a user to send 1 request per second. If this is exceeded
 
 ### See also
 
-[Dataverse Search query](query.md)<br />
-[Dataverse Search suggest](suggest.md)<br />
-[Dataverse Search autocomplete](autocomplete.md)<br />
-[Dataverse Search status](status.md)<br />
-[Dataverse Search statistics](statistics.md)<br />
+[Dataverse Search query](query.md)   
+[Dataverse Search suggest](suggest.md)   
+[Dataverse Search autocomplete](autocomplete.md)   
+[Dataverse Search status](status.md)   
+[Dataverse Search statistics](statistics.md)   
 [Dataverse legacy search](legacy.md)
 
 
