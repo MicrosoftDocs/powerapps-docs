@@ -1,11 +1,11 @@
 ---
-title: "Dataverse Search query (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Use Dataverse search query to return search results across multiple tables." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Dataverse Search query (Microsoft Dataverse) | Microsoft Docs"
+description: "Use Dataverse search query to return search results across multiple tables."
 ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: mspilde # GitHub ID
-ms.author: mspilde # MSFT alias of Microsoft employees only
+author: mspilde
+ms.author: mspilde
 search.audienceType: 
   - developer
 search.app: 
@@ -233,7 +233,7 @@ The Lucene query syntax supports the following functionality:
 **Type**: string<br />
 **Optional**: true
 
-Use the `orderby` parameter to override the default ordering. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random. You can only use this parameter when query type is lucene with wildcard characters in the query string.
+Use the `orderby` parameter to override the default ordering. By default, results are listed in descending order of relevance score (`@search.score`). For results with identical scores, the ordering will be random. You can only use this parameter when query type is lucene with wildcard characters in the query string.
 
 Use a list of comma-separated clauses where each clause consists of a column name followed by `asc` (*ascending*, which is the default) or `desc` (descending).
 
@@ -321,11 +321,11 @@ The query context returned as part of response.
 
 ## Examples
 
-The following example shows how to use the query operation.
-
-This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub. The static `OutputSearchQuery` method performs a search operation on the account and contact tables `name` and `fullname` columns respectively, for records created later than August 15, 2022 and orders the results by the `createdon` field, descending.
+The following examples shows how to use the query operation. These examples perform a search operation on the account and contact tables `name` and `fullname` columns respectively, for records created later than August 15, 2022 and orders the top seven results by the `createdon` field, descending.
 
 ### [SDK for .NET](#tab/sdk)
+
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub.  The static `OutputSearchQuery` method accepts a value for the [search parameter](#search-parameter).
 
 ```csharp
 /// <summary>
@@ -399,15 +399,48 @@ static void OutputSearchQuery(IOrganizationService service, string searchTerm)
 }
 ```
 
-This method depends on the following supporting classes to send the request and process the result:
+#### Output
 
-#### searchqueryRequest and searchqueryResponse classes
+When you invoke the `OutputSearchQuery` method with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class with the `searchTerm` set to "Contoso":
+
+```csharp
+OutputSearchQuery(service: serviceClient, searchTerm: "Contoso");
+```
+
+The output will look something like the following:
+
+```console
+OutputSearchQuery START
+
+        Count:1
+        Value:
+                Id:8b35eda1-ef69-ee11-9ae7-000d3a88a4a2
+                EntityName:account
+                ObjectTypeCode:0
+                Attributes:
+                        @search.objecttypecode:1
+                        name:Contoso Pharmaceuticals (sample)
+                        createdon:10/13/2023 5:41:21 PM
+                        createdon@OData.Community.Display.V1.FormattedValue:10/13/2023 5:41 PM
+                Highlights:
+                        name:
+                                {crmhit}Contoso{/crmhit} Pharmaceuticals (sample):
+                Score:4.986711
+
+OutputSearchQuery END
+```
+
+#### Supporting classes
+
+The `OutputSearchQuery` method depends on the following supporting classes to send the request and process the result:
+
+##### searchqueryRequest and searchqueryResponse classes
 
 These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
 
-#### SearchEntity class
+##### SearchEntity class
 
-The entity schema to scope the search request. The [`entities` parameter](#entities-parameter) require a string containing a serialized array of these types.
+The entity schema to scope the search request. The [`entities` parameter](#entities-parameter) require a string containing a serialized JSON array of these types.
 
 ```csharp
 public sealed class SearchEntity
@@ -440,7 +473,7 @@ public sealed class SearchEntity
 }
 ```
 
-#### SearchQueryResults class
+##### SearchQueryResults class
 
 Used to deserialize JSON data from the `searchqueryResponse.response` string property.
 
@@ -474,7 +507,7 @@ public sealed class SearchQueryResults
 }
 ```
 
-#### ErrorDetail class
+##### ErrorDetail class
 
 The Azure Cognitive error detail returned as part of response.
 
@@ -501,7 +534,7 @@ public sealed class ErrorDetail
 }
 ```
 
-#### QueryResult class
+##### QueryResult class
 
 Each `QueryResult` item returned in the response `Value` property represents a record in Dataverse.
 
@@ -538,7 +571,7 @@ public sealed class QueryResult
 }
 ```
 
-#### FacetResult class
+##### FacetResult class
 
 A facet query result that reports the number of documents with a field falling within a particular range or having a particular value or interval.
 
@@ -583,7 +616,7 @@ public sealed class FacetResult
 }
 ```
 
-#### FacetType class
+##### FacetType class
 
 Specifies the type of a facet query result.
 
@@ -604,7 +637,7 @@ public enum FacetType
 }
 ```
 
-#### QueryContext class
+##### QueryContext class
 
 The query context returned as part of response.
 
@@ -639,42 +672,9 @@ public sealed class QueryContext
 }
 ```
 
-
-
-#### Output
-
-When invoked with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class with the `searchTerm` set to "Contoso":
-
-```csharp
-OutputSearchQuery(service: serviceClient, searchTerm: "Contoso");
-```
-
-The output will look something like the following:
-
-```console
-OutputSearchQuery START
-
-        Count:1
-        Value:
-                Id:8b35eda1-ef69-ee11-9ae7-000d3a88a4a2
-                EntityName:account
-                ObjectTypeCode:0
-                Attributes:
-                        @search.objecttypecode:1
-                        name:Contoso Pharmaceuticals (sample)
-                        createdon:10/13/2023 5:41:21 PM
-                        createdon@OData.Community.Display.V1.FormattedValue:10/13/2023 5:41 PM
-                Highlights:
-                        name:
-                                {crmhit}Contoso{/crmhit} Pharmaceuticals (sample):
-                Score:4.986711
-
-OutputSearchQuery END
-```
-
 ### [Web API](#tab/webapi)
 
-This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub. This demonstrates a search operation on the account and contact tables `name` and `fullname` columns respectively, for records created later than August 15, 2022 and orders the results by the `createdon` field, descending.
+This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub.
 
 The formatted JSON passed to the string `entity` parameter looks like this:
 
@@ -773,7 +773,7 @@ The formatted JSON value for the string `response` property looks like this:
 
 #### [Search 2.0 endpoint](#tab/search)
 
-The parameters and response value using the search 2.0 endpoint are identical to the Web API.
+The parameters and response value using the search 2.0 endpoint are identical to the Web API, only the URL is different.
 
 The formatted JSON passed to the string `entity` parameter looks like this:
 

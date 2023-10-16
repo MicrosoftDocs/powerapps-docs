@@ -1,11 +1,11 @@
 ---
-title: "Dataverse Search suggest (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Use Dataverse search suggest to provide suggestions as the user enters text into a form field." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Dataverse Search suggest (Microsoft Dataverse) | Microsoft Docs"
+description: "Use Dataverse search suggest to provide suggestions as the user enters text into a form field."This abstract displays in the search result.
 ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: mspilde # GitHub ID
-ms.author: mspilde # MSFT alias of Microsoft employees only
+author: mspilde
+ms.author: mspilde
 search.audienceType: 
   - developer
 search.app: 
@@ -178,70 +178,9 @@ static void OutputSearchSuggest(IOrganizationService service, string searchTerm)
 }
 ```
 
-This method depends on the following supporting classes to send the request and process the result.
-
-#### searchsuggestRequest and searchsuggestResponse classes
-
-These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
-
-#### ErrorDetail class
-
-This is the same `ErrorDetail` class used for the [query example](query.md#errordetail-class).
-
-#### SuggestResults class
-
-Used to deserialize the data from the `searchsuggestResponse.response` property
-
-```csharp
-class SearchSuggestResults
-{
-   /// <summary>
-   /// Provides error information from Azure Cognitive search.
-   /// </summary>
-   [JsonProperty(PropertyName = "Error")]
-   public ErrorDetail? Error { get; set; }
-
-   /// <summary>
-   /// A collection of matching records.
-   /// </summary>
-   public List<SuggestResult>? Value { get; set; }
-
-   /// <summary>
-   /// The query context returned as part of response.
-   /// </summary>
-   public QueryContext? QueryContext { get; set; }
-}
-```
-
-#### SuggestResult class
-
-Result object for suggest results.
-
-```csharp
-public sealed class SuggestResult
-{
-   /// <summary>
-   /// Gets or sets the text.
-   /// </summary>
-   [JsonProperty(PropertyName = "text")]
-   public string Text { get; set; }
-
-   /// <summary>
-   /// Gets or sets document.
-   /// </summary>
-   [JsonProperty(PropertyName = "document")]
-   public Dictionary<string, object> Document { get; set; }
-}
-```
-
-
-#### QueryContext class
-
-This is the same `QueryContext` class used for the [query example](query.md#querycontext-class).
-
 #### Output
 
-When invoked with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class with the `searchTerm` set to "Cont":
+When you invoke the `OutputSearchSuggest` method with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class with the `searchTerm` set to "Cont":
 
 ```csharp
 OutputSearchSuggest(service: serviceClient, searchTerm: "Cont");
@@ -275,6 +214,69 @@ OutputSearchSuggest START
 
 OutputSearchSuggest END
 ```
+#### Supporting classes
+
+The `OutputSearchSuggest` method depends on the following supporting classes to send the request and process the result.
+
+##### searchsuggestRequest and searchsuggestResponse classes
+
+These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
+
+##### ErrorDetail class
+
+This is the same `ErrorDetail` class used for the [query example](query.md#errordetail-class).
+
+##### SuggestResults class
+
+Used to deserialize the data from the `searchsuggestResponse.response` property
+
+```csharp
+class SearchSuggestResults
+{
+   /// <summary>
+   /// Provides error information from Azure Cognitive search.
+   /// </summary>
+   [JsonProperty(PropertyName = "Error")]
+   public ErrorDetail? Error { get; set; }
+
+   /// <summary>
+   /// A collection of matching records.
+   /// </summary>
+   public List<SuggestResult>? Value { get; set; }
+
+   /// <summary>
+   /// The query context returned as part of response.
+   /// </summary>
+   public QueryContext? QueryContext { get; set; }
+}
+```
+
+##### SuggestResult class
+
+Result object for suggest results.
+
+```csharp
+public sealed class SuggestResult
+{
+   /// <summary>
+   /// Gets or sets the text.
+   /// </summary>
+   [JsonProperty(PropertyName = "text")]
+   public string Text { get; set; }
+
+   /// <summary>
+   /// Gets or sets document.
+   /// </summary>
+   [JsonProperty(PropertyName = "document")]
+   public Dictionary<string, object> Document { get; set; }
+}
+```
+
+
+##### QueryContext class
+
+This is the same `QueryContext` class used for the [query example](query.md#querycontext-class).
+
 
 ### [Web API](#tab/webapi)
 
@@ -315,7 +317,7 @@ OData-Version: 4.0
 }
 ```
 
-The JSON data in the response property looks like this:
+The unescaped JSON data in the response property looks like this:
 
 ```json
 {
@@ -355,7 +357,7 @@ The JSON data in the response property looks like this:
 
 ### [Search 2.0 endpoint](#tab/search)
 
-The parameters and response value using the search 2.0 endpoint are identical to the Web API.
+The parameters and response value using the search 2.0 endpoint are identical to the Web API, only the URL is different.
 
 **Request**
 
@@ -392,7 +394,7 @@ OData-Version: 4.0
 > [!NOTE]
 > Despite the information returned in the `@odata.context` property using the native search 2.0 endpoint, it is not an OData service.
 
-The JSON data in the response property looks like this:
+The unescaped JSON data in the response property looks like this:
 
 ```json
 {

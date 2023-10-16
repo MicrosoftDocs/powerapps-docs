@@ -1,11 +1,11 @@
 ---
-title: "Search for Dataverse records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Use Dataverse search to return search results across multiple tables and provide suggestions and autocompletion experiences in apps." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Search for Dataverse records (Microsoft Dataverse) | Microsoft Docs"
+description: "Use Dataverse search to return search results across multiple tables and provide suggestions and autocompletion experiences in apps." 
 ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: mspilde # GitHub ID
-ms.author: mspilde # MSFT alias of Microsoft employees only
+author: mspilde
+ms.author: mspilde
 search.audienceType: 
   - developer
 search.app: 
@@ -129,7 +129,8 @@ If you use the query, suggest, or autocomplete operations when the environment i
 
 #### [SDK for .NET](#tab/sdk)
 
-//TODO We don't have any example at this time - will need to add this later, we should remove it for now.
+> ErrorCode: `-2147185397`
+> Message: `Dataverse Search feature is disabled for this organization.`
 
 #### [Web API](#tab/webapi)
 
