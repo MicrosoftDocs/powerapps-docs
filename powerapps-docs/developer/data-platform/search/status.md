@@ -1,7 +1,7 @@
 ---
 title: "Dataverse Search status (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use Dataverse search status to check the status of Dataverse search." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/27/2023
+ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: mspilde # GitHub ID

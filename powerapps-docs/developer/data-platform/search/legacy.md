@@ -1,7 +1,7 @@
 ---
 title: "Dataverse search (legacy) (Microsoft Dataverse)| Microsoft Docs"
 description: "Dataverse legacy search remains available but we recommend you use Dataverse Search 2.0."
-ms.date: 09/22/2022
+ms.date: 10/20/2023
 ms.topic: article
 author: mspilde
 ms.author: mspilde
