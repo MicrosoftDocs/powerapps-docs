@@ -401,11 +401,11 @@ static void OutputSearchQuery(IOrganizationService service, string searchTerm)
 
 This method depends on the following supporting classes to send the request and process the result:
 
-#### searchqueryRequest and searchqueryResponse
+#### searchqueryRequest and searchqueryResponse classes
 
 These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
 
-#### SearchEntity
+#### SearchEntity class
 
 The entity schema to scope the search request. The [`entities` parameter](#entities-parameter) require a string containing a serialized array of these types.
 
@@ -440,7 +440,7 @@ public sealed class SearchEntity
 }
 ```
 
-#### SearchQueryResults
+#### SearchQueryResults class
 
 Used to deserialize JSON data from the `searchqueryResponse.response` string property.
 
@@ -474,7 +474,7 @@ public sealed class SearchQueryResults
 }
 ```
 
-#### ErrorDetail
+#### ErrorDetail class
 
 The Azure Cognitive error detail returned as part of response.
 
@@ -501,7 +501,7 @@ public sealed class ErrorDetail
 }
 ```
 
-#### QueryResult
+#### QueryResult class
 
 Each `QueryResult` item returned in the response `Value` property represents a record in Dataverse.
 
@@ -538,7 +538,7 @@ public sealed class QueryResult
 }
 ```
 
-#### FacetResult
+#### FacetResult class
 
 A facet query result that reports the number of documents with a field falling within a particular range or having a particular value or interval.
 
@@ -583,7 +583,7 @@ public sealed class FacetResult
 }
 ```
 
-#### FacetType
+#### FacetType class
 
 Specifies the type of a facet query result.
 
@@ -604,7 +604,7 @@ public enum FacetType
 }
 ```
 
-#### QueryContext
+#### QueryContext class
 
 The query context returned as part of response.
 

@@ -69,7 +69,9 @@ Use fuzzy search to aid with misspellings. The default is false.
 **Type**: string<br />
 **Optional**: true
 
-Options are settings configured to search a search term. Valid options for suggest query is `"{ 'advancedsuggestenabled': 'true' }"`.
+Options are settings configured to search a search term. Valid options for suggest query is:
+
+`"{ 'advancedsuggestenabled': 'true' }"`.
 
 ### `orderby` parameter
 
@@ -178,15 +180,15 @@ static void OutputSearchSuggest(IOrganizationService service, string searchTerm)
 
 This method depends on the following supporting classes to send the request and process the result.
 
-#### searchsuggestRequest and searchsuggestResponse
+#### searchsuggestRequest and searchsuggestResponse classes
 
 These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
 
-#### ErrorDetail
+#### ErrorDetail class
 
-This is the same `ErrorDetail` class used for the [query example](query.md#errordetail).
+This is the same `ErrorDetail` class used for the [query example](query.md#errordetail-class).
 
-#### SuggestResults
+#### SuggestResults class
 
 Used to deserialize the data from the `searchsuggestResponse.response` property
 
@@ -211,7 +213,7 @@ class SearchSuggestResults
 }
 ```
 
-#### SuggestResult
+#### SuggestResult class
 
 Result object for suggest results.
 
@@ -233,9 +235,9 @@ public sealed class SuggestResult
 ```
 
 
-#### QueryContext
+#### QueryContext class
 
-This is the same `QueryContext` class used for the [query example](query.md#querycontext).
+This is the same `QueryContext` class used for the [query example](query.md#querycontext-class).
 
 #### Output
 
@@ -353,15 +355,12 @@ The JSON data in the response property looks like this:
 
 ### [Search 2.0 endpoint](#tab/search)
 
-
+The parameters and response value using the search 2.0 endpoint are identical to the Web API.
 
 **Request**
 
 ```http
 POST [Organization Uri]/api/search/v2.0/suggest HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
 Accept: application/json
 Content-Type: application/json; charset=utf-8
 Content-Length: 142
@@ -435,11 +434,11 @@ The JSON data in the response property looks like this:
 
 ### See also
 
-[Search for Dataverse records](overview.md)<br />
-[Dataverse Search query](query.md)<br />
-[Dataverse Search autocomplete](autocomplete.md)<br />
-[Dataverse Search status](status.md)<br />
-[Dataverse Search statistics](statistics.md)<br />
+[Search for Dataverse records](overview.md)   
+[Dataverse Search query](query.md)   
+[Dataverse Search autocomplete](autocomplete.md)   
+[Dataverse Search status](status.md)   
+[Dataverse Search statistics](statistics.md)   
 [Dataverse legacy search](legacy.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
