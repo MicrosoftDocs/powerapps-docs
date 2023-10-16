@@ -41,7 +41,7 @@ The _floating_ command bar aligns with the Microsoft 365 experience, with consis
 ### View pages
 View pages use the new command bar and have updated grid areas that take advantage of the elevation changes to help draw the user's attention. 
 
-The biggest change on view pages is the switch from the read-only grid to the [Power Apps grid control (preview)](../maker/model-driven-apps/the-power-apps-grid-control.md), which features infinite scrolling for a modern, data browsing experience. This grid also appears in subgrids and associated grids in main forms, but isn't yet supported in dashboards. The Power Apps grid control also supports inline editing using the **Enable filtering** property. Makers may manually configure their editable grids to use the Power Apps grid control. 
+The biggest change on view pages is the switch from the read-only grid to the [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md), which features infinite scrolling for a modern, data browsing experience. This grid also appears in subgrids and associated grids in main forms and dashboards. The Power Apps grid control also supports inline editing using the **Enable filtering** property. Makers may manually configure their editable grids to use the Power Apps grid control. 
 
 The following example shows a view page with the modern, refreshed look.
 
@@ -62,6 +62,12 @@ Field sections, which are containers for the fields on a form, have a more strea
 The following example shows a set of fields with the modern, refreshed look.
 
 :::image type="content" source="media/modern-fields.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
+
+### Dashboard page
+The system dashboard page with independent subgrids and charts has been updated to use he new command bar and has section styling similar to the Form and View pages. When modern experience is enabled or when using monthly channel, the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md).
+
+
+
 
 ## Turn on the new look
 End users can enable the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#can-i-revert-to-the-old-ui).
