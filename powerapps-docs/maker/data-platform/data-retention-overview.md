@@ -108,6 +108,17 @@ Imagine a non-production scenario where all the live data for the case and conta
 
 For more information about capacity reports, go to [New Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage).
 
+### Understanding long term retention pricing
+DV long term retention requires no additional storage purchases and it does not involved any new SKU's. Every GB moved to Dataverse long term retention (DV managed data lake) will  consume, on average, 50% less Database capacity than the live(active) DB data in DV managed SQL.
+
+For example:
+- Say 100GB DB SQL is moved to DV long term retention. The long term retained data will be compressed by 50% on average. So the retained data size will be 50GB on average.
+- The cost incurred will be  50GB x Database price/GB instead of 100GB x Database price/GB. A saving of 50%, in this case, with long term retention compared to the live database. 
+
+Note:
+- Dataverse managed data lake compresses the DB data and this saving is passed onto the customer. The compression depends on the kind of data in DV managed SQL. With some data (indeterministic), you might notice more than 50% savings while in others you might notice less than 50% savings.
+- For file attachments (File Capacity), DV long term retention will not reduce capacity consumed. In rare cases depending on the file, you could see negligible file capacity savings.
+
 ## Solution aware retention policies
 
 Dataverse retention policies are solution aware. Dataverse retention policies added to a solution are known as solution-aware retention policies. You can add multiple retention policies to a single solution. Retention policies are added to an unmanaged solution. This helps makers follow application lifecycle management (ALM) best practices when working with Dataverse retention policies.
