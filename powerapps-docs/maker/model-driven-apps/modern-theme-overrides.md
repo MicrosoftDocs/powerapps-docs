@@ -16,7 +16,10 @@ search.audienceType:
 
 # Use modern themes
 
-Model-driven apps with the [modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md) provide updated styling aligned to the Microsoft Fluent 2 design system. As part of the updated styling, makers can modify the colors used by the app header. Because this modern refreshed look comes with a new theming system, [classic theming](create-themes-organization-branding.md) isn't honored. In this article, you learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.  
+Model-driven apps with the [modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md) provide updated styling aligned to the Microsoft Fluent 2 design system. As part of the updated styling, makers can modify the colors used by the app header. Because this modern refreshed look comes with a new theming system, [classic theming](create-themes-organization-branding.md) isn't honored. In this article, you learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.
+
+> [!NOTE]
+> Modern themes currently only support customizing the app header.
 
 ## Modify the app header colors
 
