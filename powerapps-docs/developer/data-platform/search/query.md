@@ -403,11 +403,11 @@ This method depends on the following supporting classes to send the request and 
 
 #### searchqueryRequest and searchqueryResponse
 
-These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)
+These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
 
 #### SearchEntity
 
-The entity schema to scope the search request.
+The entity schema to scope the search request. The [`entities` parameter](#entities-parameter) require a string containing a serialized array of these types.
 
 ```csharp
 public sealed class SearchEntity
@@ -476,7 +476,7 @@ public sealed class SearchQueryResults
 
 #### ErrorDetail
 
-The error detail returned as part of response.
+The Azure Cognitive error detail returned as part of response.
 
 ```csharp
 public sealed class ErrorDetail
@@ -503,7 +503,7 @@ public sealed class ErrorDetail
 
 #### QueryResult
 
-Contains data about a matching record found from the query API.
+Each `QueryResult` item returned in the response `Value` property represents a record in Dataverse.
 
 ```csharp
 public sealed class QueryResult
@@ -641,7 +641,7 @@ public sealed class QueryContext
 
 
 
-**Output**
+#### Output
 
 When invoked with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class with the `searchTerm` set to "Contoso":
 
@@ -741,7 +741,7 @@ OData-Version: 4.0
 }
 ```
 
-The formatted JSON value for the string response property looks like this:
+The formatted JSON value for the string `response` property looks like this:
 
 ```json
 {

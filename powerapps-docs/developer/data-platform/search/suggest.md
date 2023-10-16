@@ -41,21 +41,21 @@ Details for the parameters in the table above can be found below.
 **Type**: string<br />
 **Optional**: false
 
-Search term must be at least three characters long and has a 100 character limit
+The text to search with. Search term must be at least three characters long and has a 100 character limit
 
 ### `entities` parameter
 
 **Type**: string<br />
 **Optional**: true
 
-The default is searching across all search–configured entities.
+The default is searching across all search–configured entities. Use this property to narrow the results.
 
 ### `filter` parameter
 
 **Type**: string<br />
 **Optional**: true
 
-Filter criteria to reduce results returned.
+Filter criteria to reduce results returned based on records that match the filter criteria.
 
 ### `fuzzy` parameter
 
@@ -96,7 +96,7 @@ The unescaped response contains JSON using the following properties.
 |---------|---------|---------|
 |`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
 |`Value`|[`SuggestResult`](#suggestresult)`[]`|A collection of matching records.|
-|`QueryContext` |[QueryContext](#querycontext)|TODO: find out. It is always null. Why is it included?|
+|`QueryContext` |[QueryContext](#querycontext)|The query context returned as part of response.|
 
 ### Types
 
@@ -104,8 +104,7 @@ The following types are returned by the Query Response.
 
 #### ErrorDetail
 
-TODO: Why is this included? Why doesn't the service just return an error?
-GUESS: This will be a Cognitive Search error
+The Azure Cognitive search error returned as part of the response.
 
 |Name|Type|Description|
 |---------|---------|---------|
@@ -122,9 +121,9 @@ Provides the suggested text.
 |`Text`|string|Provides the suggested text.|
 |`Document`|`Dictionary<string, object>`|The document.|
 
-TODO: Explain what to do with the document.
-
 #### QueryContext
+
+The query context returned as part of response.
 
 |Name|Type|Description|
 |---------|---------|---------|
@@ -135,93 +134,246 @@ TODO: Explain what to do with the document.
 
 ## Examples
 
-The following examples show how to use the suggest operation.
-### Example: TODO: Some specific scenario
+The following examples show how to use the suggest operation. Each of these examples pass the value "Cont" as the [search parameter](#search-parameter) and request the top three suggestions.
 
-This is a template for an example
+### [SDK for .NET](#tab/sdk)
 
-#### [SDK for .NET](#tab/sdk)
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub. The static `OutputSearchSuggest` method will return the top three suggestions for any search term.
 
 ```csharp
-static void SDKExampleMethod(IOrganizationService service){
-    OrganizationRequest suggest = new OrganizationRequest("searchsuggest")
-   {
-      Parameters = new ParameterCollection
-      {
-         { "search", "TODO" },
-         { "entities", "TODO" },
-         { "filter","TODO" },
-         { "fuzzy", true },
-         { "options","TODO" },
-         { "orderby","TODO" },
-         { "propertybag","TODO" },
-         { "top",1 }
-      }
-   };
+/// <summary>
+/// Demonstrate suggest API
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance to use.</param>
+/// <param name="searchTerm">The term to use</param>
+/// <returns></returns>
+static void OutputSearchSuggest(IOrganizationService service, string searchTerm)
+{
+    Console.WriteLine("OutputSearchSuggest START\n");
 
-   var searchSuggestResponse = service.Execute(suggest);
-   string responseString = searchSuggestResponse.Results["response"];
-   
-   //TODO: Parse the string to get the objects. 
+    searchsuggestRequest request = new()
+    {
+        search = searchTerm,
+        top = 3
+    };
+
+    var searchsuggestResponse = (searchsuggestResponse)service.Execute(request);
+
+    SearchSuggestResults results = JsonConvert.DeserializeObject<SearchSuggestResults>(searchsuggestResponse.response);
+
+    results.Value?.ForEach(suggestion =>
+    {
+        Console.WriteLine($"\tText:{suggestion.Text}");
+        Console.WriteLine("\tDocument: ");
+        foreach (string key in suggestion.Document.Keys)
+        {
+            Console.WriteLine($"\t\t{key}: {suggestion.Document[key]}");
+        }
+        Console.WriteLine();
+    });
+
+    Console.WriteLine("OutputSearchSuggest END\n");
 }
 ```
 
-**Output**
+This method depends on the following supporting classes to send the request and process the result.
+
+#### searchsuggestRequest and searchsuggestResponse
+
+These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
+
+#### ErrorDetail
+
+This is the same `ErrorDetail` class used for the [query example](query.md#errordetail).
+
+#### SuggestResults
+
+Used to deserialize the data from the `searchsuggestResponse.response` property
+
+```csharp
+class SearchSuggestResults
+{
+   /// <summary>
+   /// Provides error information from Azure Cognitive search.
+   /// </summary>
+   [JsonProperty(PropertyName = "Error")]
+   public ErrorDetail? Error { get; set; }
+
+   /// <summary>
+   /// A collection of matching records.
+   /// </summary>
+   public List<SuggestResult>? Value { get; set; }
+
+   /// <summary>
+   /// The query context returned as part of response.
+   /// </summary>
+   public QueryContext? QueryContext { get; set; }
+}
+```
+
+#### SuggestResult
+
+Result object for suggest results.
+
+```csharp
+public sealed class SuggestResult
+{
+   /// <summary>
+   /// Gets or sets the text.
+   /// </summary>
+   [JsonProperty(PropertyName = "text")]
+   public string Text { get; set; }
+
+   /// <summary>
+   /// Gets or sets document.
+   /// </summary>
+   [JsonProperty(PropertyName = "document")]
+   public Dictionary<string, object> Document { get; set; }
+}
+```
+
+
+#### QueryContext
+
+This is the same `QueryContext` class used for the [query example](query.md#querycontext).
+
+#### Output
+
+When invoked with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class with the `searchTerm` set to "Cont":
+
+```csharp
+OutputSearchSuggest(service: serviceClient, searchTerm: "Cont");
+```
+
+The output will look something like the following:
 
 ```
-TODO: The output of the SDK Sample
+OutputSearchSuggest START
+
+        Text:{crmhit}cont{/crmhit}act
+        Document:
+                @search.objectid: 9335eda1-ef69-ee11-9ae7-000d3a88a4a2
+                @search.entityname: contact
+                @search.objecttypecode: 2
+                fullname: Yvonne McKay (sample)
+
+        Text:{crmhit}cont{/crmhit}act
+        Document:
+                @search.objectid: 9535eda1-ef69-ee11-9ae7-000d3a88a4a2
+                @search.entityname: contact
+                @search.objecttypecode: 2
+                fullname: Susanna Stubberod (sample)
+
+        Text:{crmhit}cont{/crmhit}act
+        Document:
+                @search.objectid: 9735eda1-ef69-ee11-9ae7-000d3a88a4a2
+                @search.entityname: contact
+                @search.objecttypecode: 2
+                fullname: Nancy Anderson (sample)
+
+OutputSearchSuggest END
 ```
 
-#### [Web API](#tab/webapi)
+### [Web API](#tab/webapi)
+
+This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub.
 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/searchquery HTTP/1.1
+POST [Organization Uri]/api/data/v9.2/searchsuggest
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 142
 
 {
- "search": "TODO",
- "entities": "TODO",
- "filter": "TODO",
- "fuzzy": true,
- "options": "TODO",
- "orderby": "TODO",
- "propertybag": "TODO",
- "top": 1
+  "orderby": "null",
+  "options": "null",
+  "fuzzy": false,
+  "search": "Cont",
+  "filter": null,
+  "entities": "null",
+  "top": 3
 }
-
 ```
 
 **Response**
 
 ```http
 HTTP/1.1 200 OK
+CRM.ServiceId: framework
+OData-Version: 4.0
 
 {
-    "response": "TODO"
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchsuggestResponse",
+  "response": "{\"Error\":null,\"Value\":[{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9335eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Yvonne McKay (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9535eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Susanna Stubberod (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9735eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Nancy Anderson (sample)\"}}],\"QueryContext\":null}"
 }
 ```
 
-#### [Search 2.0 endpoint](#tab/search)
+The JSON data in the response property looks like this:
+
+```json
+{
+  "Error": null,
+  "Value": [
+    {
+      "Text": "{crmhit}cont{/crmhit}act",
+      "Document": {
+        "@search.objectid": "9335eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.entityname": "contact",
+        "@search.objecttypecode": 2,
+        "fullname": "Yvonne McKay (sample)"
+      }
+    },
+    {
+      "Text": "{crmhit}cont{/crmhit}act",
+      "Document": {
+        "@search.objectid": "9535eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.entityname": "contact",
+        "@search.objecttypecode": 2,
+        "fullname": "Susanna Stubberod (sample)"
+      }
+    },
+    {
+      "Text": "{crmhit}cont{/crmhit}act",
+      "Document": {
+        "@search.objectid": "9735eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.entityname": "contact",
+        "@search.objecttypecode": 2,
+        "fullname": "Nancy Anderson (sample)"
+      }
+    }
+  ],
+  "QueryContext": null
+}
+```
+
+### [Search 2.0 endpoint](#tab/search)
+
+
 
 **Request**
 
 ```http
-POST [Organization URI]/api/search/v2.0/status HTTP/1.1
+POST [Organization Uri]/api/search/v2.0/suggest HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 142
 
 {
- "search": "TODO",
- "entities": "TODO",
- "filter": "TODO",
- "fuzzy": true,
- "options": "TODO",
- "orderby": "TODO",
- "propertybag": "TODO",
- "top": 1
+  "orderby": "null",
+  "options": "null",
+  "fuzzy": false,
+  "search": "Cont",
+  "filter": null,
+  "entities": "null",
+  "top": 3
 }
 ```
 
@@ -229,9 +381,53 @@ POST [Organization URI]/api/search/v2.0/status HTTP/1.1
 
 ```http
 HTTP/1.1 200 OK
+CRM.ServiceId: framework
+OData-Version: 4.0
 
 {
-    "response": "TODO"
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchsuggestResponse",
+  "response": "{\"Error\":null,\"Value\":[{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9335eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Yvonne McKay (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9535eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Susanna Stubberod (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9735eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Nancy Anderson (sample)\"}}],\"QueryContext\":null}"
+}
+```
+
+> [!NOTE]
+> Despite the information returned in the `@odata.context` property using the native search 2.0 endpoint, it is not an OData service.
+
+The JSON data in the response property looks like this:
+
+```json
+{
+  "Error": null,
+  "Value": [
+    {
+      "Text": "{crmhit}cont{/crmhit}act",
+      "Document": {
+        "@search.objectid": "9335eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.entityname": "contact",
+        "@search.objecttypecode": 2,
+        "fullname": "Yvonne McKay (sample)"
+      }
+    },
+    {
+      "Text": "{crmhit}cont{/crmhit}act",
+      "Document": {
+        "@search.objectid": "9535eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.entityname": "contact",
+        "@search.objecttypecode": 2,
+        "fullname": "Susanna Stubberod (sample)"
+      }
+    },
+    {
+      "Text": "{crmhit}cont{/crmhit}act",
+      "Document": {
+        "@search.objectid": "9735eda1-ef69-ee11-9ae7-000d3a88a4a2",
+        "@search.entityname": "contact",
+        "@search.objecttypecode": 2,
+        "fullname": "Nancy Anderson (sample)"
+      }
+    }
+  ],
+  "QueryContext": null
 }
 ```
 
