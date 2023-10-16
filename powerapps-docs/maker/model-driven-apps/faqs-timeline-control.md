@@ -39,12 +39,28 @@ If you can't find the command action from the related activity grid, you can fur
 
    :::image type="content" source="media/start-command-checker.png" alt-text="Start command  checker":::
 
-1. From the command checker page that is displayed, select **Group Id: Mscrm.SubGrid.activitypointer.MainTab.Actions**, select a hidden command such as **Mark Complete (hidden)**, and then select the **Command properties** tab on the right to find out what custom rules are used to hide the command action.
+1. From the command checker page that is displayed, select **Group Id: Mscrm.SubGrid.activitypointer.MainTab.Actions**, then select the command that isn't working. The command will be marked as hidden, such as **Reply All (hidden)**. Select the **Command properties** tab on the right to find out which "enable" rules are used to hide the command action.
 
    :::image type="content" source="media/find-group-id.png" alt-text="Find group ID":::
 
+1. Follow the steps listed [here](../../create-and-use-apps/ribbon-issues-button-not-working-correctly.md) to change or disable these rules.
+
 > [!NOTE]
 > The timeline always displays command actions without honoring the custom rules to hide or disable the command button for performance reasons.
+
+## Why do the "Modified On" fields of my records get changed when no changes are made to them?
+This can be caused by cascading behavior with the parent record. For example, when a case is assigned to another user. Refer to [Table Relationships](../data-platform/create-edit-entity-relationships.md) to configure this behaviour.
+
+## What permissions does timeline need to run?
+* To see attachments, you need read access to the "Activity file attachment" entity
+* For personal settings and bookmarks, you need read/write/create access to the "Custom Control Extended Setting" entity
+
+## How do I configure timeline for mobile offline?
+For general guidance on enabling mobile offline for your app, see [Set Up Mobile Online](../mobile/setup-mobile-offline.md) 
+The offline profile must have the **Note** and **User** tables in order for timeline to function.
+
+> [!NOTE]
+> Only notes are available when offline
 
 ## See also
 
