@@ -2,7 +2,7 @@
 title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
-ms.date: 09/12/2022
+ms.date: 10/16/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: ritesp # GitHub ID
@@ -16,11 +16,11 @@ contributors:
 
 # Use OAuth authentication with Microsoft Dataverse
 
-[OAuth 2.0](https://oauth.net/2/) is the industry-standard protocol for authorization. After application users provide credentials to authenticate, OAuth determines whether they are authorized to access the resources.
+[OAuth 2.0](https://oauth.net/2/) is the industry-standard protocol for authorization. After application users provide credentials to authenticate, OAuth determines whether they're authorized to access the resources.
 
 Client applications must support the use of OAuth to access data using the Web API. OAuth enables two-factor authentication (2FA) or certificate-based authentication for server-to-server application scenarios.
 
-OAuth requires an identity provider for authentication. For Dataverse, the identity provider is Azure Active Directory (AAD). To authenticate with AAD using a Microsoft work or school account, use the [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview#languages-and-frameworks) (MSAL).
+OAuth requires an identity provider for authentication. For Dataverse, the identity provider is Azure Active Directory (AD). To authenticate with AD using a Microsoft work or school account, use the [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview#languages-and-frameworks) (MSAL).
 
 > [!NOTE]
 > This topic will introduce common concepts related to connecting to Dataverse using OAuth with authentication libraries. This content will focus on how a developer can connect to Dataverse but not on the inner workings of OAuth or the libraries. For complete information related to authentication see the Azure Active Directory documentation. [What is authentication?](/azure/active-directory/develop/authentication-scenarios) is a good place to start.
@@ -29,38 +29,38 @@ OAuth requires an identity provider for authentication. For Dataverse, the ident
 
 ## App Registration
 
-When you connect using OAuth you must first register an application in your Azure AD tenant. How you should register your app depends on the type of app you want to make.
+When you connect using OAuth, you must first register an application in your Azure AD tenant. How you should register your app depends on the type of app you want to make.
 
-In all cases, start with basic steps to register an app described in the AAD topic: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). For Dataverse specific instructions see [Walkthrough: Register an app with Azure Active Directory > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
+In all cases, start with basic steps to register an app described in the AD article: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). For Dataverse specific instructions see [Walkthrough: Register an app with Azure Active Directory > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
 
-The decisions you will need to make in this step mostly depend on the Application Type choice (see below).
+The decisions you need to make in this step mostly depend on the Application Type choice (see below).
 
 ### Types of app registration
 
-When you register an app with Azure AD one of the decisions you must make is the application type. There are two types of applications you can register:
+When you register an app with Azure AD one of the decisions, you must make is the application type. There are two types of applications you can register:
 
 | Application type | Description|
 |------------------|------------|
 | Web app /API | **Web client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that executes all code on a web server.<br /><br />**User-agent-based client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that downloads code from a web server and executes within a user-agent (for instance, a web browser), such as a Single Page Application (SPA). |
 |Native|A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that is installed natively on a device. |
 
-When you select **Web app /API** you must provide a **Sign-On URL** which is the URL where Azure AD will send the authentication response, including a token if authentication was successful. While you develop an app, this is usually set to `https://localhost/appname:[port]` so you can develop and debug your app locally. When you publish your app, you need to change this value to the published URL of the app.
+When you select **Web app /API** you must provide a **Sign-On URL** which is the URL where Azure AD sends the authentication response, including a token if authentication was successful. While you develop an app, this URL is usually set to `https://localhost/appname:[port]` so you can develop and debug your app locally. When you publish your app, you need to change this value to the published URL of the app.
 
-When you select **Native**, you must provide a Redirect URI. This is a unique identifier to which Azure AD will redirect the user-agent in an OAuth 2.0 request. This is typically a value formatted like so: `app://<guid>`.
+When you select **Native**, you must provide a Redirect URI. This URL is a unique identifier to which Azure AD will redirect the user-agent in an OAuth 2.0 request. This URL is typically a value formatted like so: `app://<guid>`.
 
 ### Giving access to Dataverse
 
-If your app will be a client which allows the authenticated user to perform operations, you must configure the application to have the Access Dynamics 365 as organization users delegated permission.
+If your app is a client that allows the authenticated user to perform operations, you must configure the application to have the Access Dynamics 365 as organization users delegated permission.
 
-For specific steps to do this, see [Walkthrough: Register an app with Azure Active Directory > Apply Permissions](walkthrough-register-app-azure-active-directory.md).
+For specific steps to set permissions, see [Walkthrough: Register an app with Azure Active Directory > Apply Permissions](walkthrough-register-app-azure-active-directory.md).
 
 <!-- TODO Verify this -->
 
-If your app will use Server-to-Server (S2S) authentication, this step is not required. That configuration requires a specific system user and the operations will be performed by that user account rather than any user that must be authenticated.
+If your app uses Server-to-Server (S2S) authentication, this step isn't required. That configuration requires a specific system user and the operations are performed by that user account rather than any user that must be authenticated.
 
 ### Use Client Secrets & Certificates
 
-For server to server scenarios there will not be an interactive user account to authenticate. In these cases, you need to provide some means to confirm that the application is trusted. This is done using client secrets or certificates.
+For server-to-server scenarios there won't be an interactive user account to authenticate. In these cases, you need to provide some means to confirm that the application is trusted. This is done using client secrets or certificates.
 
 For apps that are registered with the **Web app /API** application type, you can configure secrets. These are set using the **Keys** area under **API Access** in the **Settings** for the app registration.
 
@@ -85,15 +85,14 @@ Dataverse SDK for .NET includes client classes [CrmServiceClient](xref:Microsoft
 
 ## Use the AccessToken with your requests
 
-The point of using the authentication libraries is to get an access token that you can include with your requests.
-This only requires a few lines of code, and just a few more lines to configure an [HttpClient](xref:System.Net.Http.HttpClient) to execute a request.
+The point of using the authentication libraries is to get an access token that you can include with your requests. Getting the token only requires a few lines of code, and just a few more lines to configure an [HttpClient](xref:System.Net.Http.HttpClient) to execute a request.
 
 > [!IMPORTANT]
 > As demonstrated in the sample code of this article, use a "/user-impersonation" scope for a public client. For a confidential client, use a scope of "/.default".
 
 ### Simple example
 
-The following is the minimum amount of code needed to execute a single Web API request, but it is not the recommended approach. Note that this code uses the MSAL library and is taken from the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart) sample.
+The following is the minimum amount of code needed to execute a single Web API request, but it isn't the recommended approach. Note that this code uses the MSAL library and is taken from the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart) sample.
 
 ```csharp
 string resource = "https://contoso.api.crm.dynamics.com";
