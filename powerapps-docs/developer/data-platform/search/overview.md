@@ -38,14 +38,14 @@ Developers can use the search APIs three different ways:
 
 Search operations are defined as Dataverse messages using [Custom APIs](../custom-api.md). For .NET projects they can also be used with the SDK for .NET.
 
-There are currently no classes included in the SDK to use these operations. For .NET Framework projects you can use the `CrmSvcUtil` command line code generation tool with the `/generateactions` parameter to generate `*Request` and `*Response` classes for these messages just as you would for any custom action.
+There are currently no classes included in the SDK to use these operations. For .NET Framework projects you can use the Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate `*Request` and `*Response` classes for these messages just as you would for any custom action.
 
-You can also use the <xref:Microsoft.Xrm.Sdk.OrganizationRequest?text=OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse?text=OrganizationResponse> classes.
+You can also use the [OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest) and [OrganizationResponse](xref:Microsoft.Xrm.Sdk.OrganizationResponse) classes.
 
 More information:
 
-- [Generate early-bound classes for the Organization service](../org-service/generate-early-bound-classes.md)
-- [Use messages with the Organization service](../org-service/use-messages.md)
+- [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md)
+- [Use messages with the SDK for .NET](../org-service/use-messages.md)
 - [Invoking Custom APIs](../custom-api.md#invoking-custom-apis)
 
 ### Web API
@@ -69,22 +69,22 @@ Search provides three operations to support a user interface that enables search
 
 |SDK Message Name<br />Web API Action<br />Search 2.0 Endpoint|Description|
 |---------|---------|
-|`searchquery`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`/api/search/v2.0/query`| Returns a search results page. <br /> See [Dataverse Search query](query.md)|
-|`searchsuggest`<br /><xref:Microsoft.Dynamics.CRM.searchsuggest?text=searchsuggest Action><br />`/api/search/v2.0/suggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
-|`searchautocomplete`<br /><xref:Microsoft.Dynamics.CRM.searchautocomplete?text=searchautocomplete Action><br />`/api/search/v2.0/autocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
+|`searchquery`<br />[searchquery Action](xref:Microsoft.Dynamics.CRM.searchquery)<br />`/api/search/v2.0/query`| Returns a search results page. <br /> See [Dataverse Search query](query.md)|
+|`searchsuggest`<br />[searchsuggest Action](xref:Microsoft.Dynamics.CRM.searchsuggest)<br />`/api/search/v2.0/suggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
+|`searchautocomplete`<br />[searchautocomplete Action](xref:Microsoft.Dynamics.CRM.searchautocomplete)<br />`/api/search/v2.0/autocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
 
 There are also two operations you can use to understand whether search is enabled and how it is configured.
 
 |SDK Message Name<br />Web API Function<br />Search 2.0 Endpoint|Description|
 |---------|---------|
-|`searchstatus`<br /><xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`/api/search/v2.0/status`|Search status of an Organization.<br /> See [Dataverse Search status](status.md)|
-|`searchstatistics`<br /><xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`/api/search/v2.0/statistics`|Provides organization storage size and document count.<br /> See [Dataverse Search statistics](statistics.md)|
+|`searchstatus`<br />[searchstatus Function](xref:Microsoft.Dynamics.CRM.searchstatus)<br />`/api/search/v2.0/status`|Search status of an Organization.<br /> See [Dataverse Search status](status.md)|
+|`searchstatistics`<br />[searchstatistics Function](xref:Microsoft.Dynamics.CRM.searchstatistics)<br />`/api/search/v2.0/statistics`|Provides organization storage size and document count.<br /> See [Dataverse Search statistics](statistics.md)|
 
 ## Use Postman with Dataverse search
 
 If you have used Postman with Dataverse Web API you know how useful it is to try using the APIs. We have some instructions about setting up a Postman environment to authenticate with the Dataverse Web API here: [Set up a Postman environment](../webapi/setup-postman-environment.md).
 
-You can use the same instructions with the search operations using Web API functions and actions. If you want to use the native search 2.0 endpoint, simply change these two environment variables:
+You can use the same instructions with the search operations using Web API functions and actions. If you want to use the native search 2.0 endpoint, change these two environment variables:
 
 |Variable|Web API Value|Search 2.0 Endpoint value|
 |---------|---------|---------|
@@ -148,6 +148,7 @@ HTTP/1.1 400 Bad Request
 HTTP/1.1 400 Bad Request
 {"error":{"code":"0x80048d0b","message":"Dataverse Search feature is disabled for this organization."}}
 ```
+
 ---
 
 You can detect whether the search service is enabled by checking the settings in the organization table or by using the [Dataverse Search status](status.md) operation.
@@ -261,7 +262,10 @@ CanEnableSyncToExternalSearchIndex: True
 SyncToExternalSearchIndex: True
 ```
 
-More information: [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
+More information:
+
+- [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
+- [Retrieve, update, and delete tables](../org-service/metadata-retrieve-update-delete-entities.md)
 
 
 #### [Web API](#tab/webapi)
@@ -295,7 +299,10 @@ OData-Version: 4.0
 }
 ```
 
-More information: [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
+More information:
+
+- [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
+- [Create and update table definitions using the Web API](../webapi/create-update-entity-definitions-using-web-api.md)
 
 #### [Search 2.0 endpoint](#tab/search)
 
