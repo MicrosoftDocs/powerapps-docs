@@ -196,7 +196,7 @@ You can enable users to control the automatic sync intervals or the connection t
 2. Select the **Upcoming** tab:
 
     - Set the **Allow users to adjust sync frequency** option to **On** to adjust the sync interval to sync more or less frequently depending on individual needs. Users can also choose to not automatically sync at any interval, if they only want to sync on demand.
-    - Set the **Allow users to adjust sync frequency** option to **On** to let users choose if their automatic sync happens on cellular networks and Wi-Fi connections or only when connected to a Wi-Fi network.
+    - Set the **Allow users to sync on Wi-Fi only** option to **On** to let users choose if their automatic sync happens on cellular networks and Wi-Fi connections or only when connected to a Wi-Fi network.
  
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
