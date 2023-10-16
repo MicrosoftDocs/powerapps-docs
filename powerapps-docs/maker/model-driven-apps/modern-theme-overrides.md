@@ -25,7 +25,7 @@ With the [modern, refreshed look enabled](../../user/modern-fluent-design.md#tur
   > [!NOTE]
   > This functionality is available in build 9.4.23094 or later version.
 
-### Create an XML resource with your app header colors
+### Overview of the XML resource to use for app header colors
 
 The first step to modifying the app header styling is to create an XML file with your various color selections and add it as a web resource.
 
@@ -78,25 +78,25 @@ As an example, this XML specifies a green background color for the app header wi
 1. Select **Solutions** on the left navigation pane, and then create a **New solution**.
 1. Select **New** > **More** > **Web resource**.
 1. In the New web resource property pane, enter the following values:
-  - **Display name**: Enter a display name, such as *XML for modern theming*.
-  - **Name**. Enter the unique name for the web resource.
-  - Type: **Data (XML)**
+   - **Display name**: Enter a display name, such as *XML for modern theming*.
+   - **Name**. Enter the unique name for the web resource.
+   - Type: **Data (XML)**
 1. Select **Choose file**, browse to and select the XML file you created earlier with the theme.
 1. Select **Save**.
 
-### Apply custom app header colors to apps in your environment 
+### Apply custom app header colors to apps in your environment
 
 After you’ve selected your colors and created the XML resource, follow these steps to enable this app header styling for all the apps in your environment that have the “New look” enabled.
 
 1. In the solution you used to [create the web resource](#create-the-web-resource), select **Add existing** > **More** > **Setting**.
 1. Type *Override* in the **Search** box, select **Override app header color**, select **Next**, and then select **Add**.
 1. In the solution, select **Override app header color**, and then select **Edit** on the command bar.
-1. On the right **Edit Override ap header color** properties pane, update **Setting environment value** to the unique name of your web resource you created earlier. 
+1. On the right **Edit Override ap header color** properties pane, select **Setting environment value** and enter the unique name of your web resource you created earlier.
 1. Select **Save**.
 1. Select **Publish all customizations** on the command bar. (This command appears when no components in the solution are selected).
 
-With the example colors above, the header should look like this after  refreshing or playing the app.  
-:::image type="content" source="media/greenAppHeader-Oct2023.png" alt-text="Green app header in a model-driven app" lightbox="media/greenAppHeader-Oct2023.png"::: <!-- This media file is missing -->
+With the example colors above, the app header should look like this after refreshing or playing the app.  
+:::image type="content" source="media/greenappppheader-oct2023.png" alt-text="Green app header in a model-driven app" lightbox="media/greenappheader-oct2023.png":::
 
 ### Verifying new app header colors
 
@@ -107,6 +107,6 @@ After publishing your new app header colors, you'll want to validate the app hea
 
 ## See also
 
-[Modern refreshed look](../../user/model-fluent.design.md)
+[Modern refreshed look](../../user/modern-fluent-design.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
