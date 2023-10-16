@@ -31,6 +31,8 @@ A **Tab** is a navigation control which can help users switch between different 
 
 **Items** – List of items to be shown in tabs. This can be array (select value in field) or this can be a data column from a table.
 
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
+
 **Render size** – Choose tabs to be shown as small, medium or large
 
 **Alignment** – Option for tabs to be displayed as vertical or horizontal

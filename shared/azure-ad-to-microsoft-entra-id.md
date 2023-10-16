@@ -7,4 +7,4 @@ ms.prod: azure
 ---
 
 > [!NOTE]
-> Azure Active Directory is now Microsoft Entra ID. [Learn more](https://learn.microsoft.com/azure/active-directory/fundamentals/new-name)
+> Azure Active Directory is now Microsoft Entra ID. [Learn more](/azure/active-directory/fundamentals/new-name)

@@ -380,8 +380,6 @@
           href: ./canvas-apps/working-with-tables.md
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
-        - name: Working with dynamic schema (experimental)
-          href: ./canvas-apps/working-with-dynamic-schema.md
       - name: Design the interface
         items:
           - name: Understand Power Apps Studio
@@ -526,6 +524,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
             - name: Dropdown
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
+            - name: Header
+              href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
             - name: Info button
               href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Link
@@ -2096,7 +2096,7 @@
           href: ./data-platform/monitor-manage-processes.md
         - name: Best practices for real-time workflow processes
           href: ./data-platform/best-practices-workflow-processes.md
-      - name: Use Dataverse low-code plug-ins (experiemental)
+      - name: Use Dataverse low-code plug-ins (preview)
         items:
         - name: Create low-code plug-ins
           href: ./data-platform/low-code-plug-ins.md
@@ -2126,6 +2126,8 @@
         href: ./data-platform/export-solutions.md
       - name: Import solutions
         href: ./data-platform/import-update-export-solutions.md
+      - name: Set the preferred solution (preview)
+        href: ./data-platform/preferred-solution.md
       - name: Use pipelines to simplify solution deployment
         href: ./data-platform/use-pipelines.md
       - name: Update or upgrade solutions
@@ -2152,6 +2154,8 @@
             href: ./data-platform/export-customized-entity-field-text-translation.md
           - name: Import translated component text
             href: ./data-platform/import-translated-entity-field-text.md
+          - name: Update localized label text
+            href: ./data-platform/update-translated-text.md
       - name: Diagnose solutions and solution objects
         href: ./data-platform/diagnose-solutions.md
         items:
