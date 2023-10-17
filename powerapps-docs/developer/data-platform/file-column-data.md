@@ -718,7 +718,7 @@ There are three different methods to download files from a file column:
 > [!NOTE]
 > These methods can also be used to download image columns, but there are some differences. More information: [Download images](image-column-data.md#download-images)
 > 
-> For on-premises environments or when an environment uses Customer Managed Keys, the file is not in file storage. When a file is not in file storage, downloading in multiple chunks is not supported. The [InitializeFileBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse) and [InitializeFileBlocksDownloadResponse Class](xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadResponse) have an `IsChunkingSupported`property that indicates if the file can be downloaded in multiple chunks or not. If chunking is not supported, then set `BlockLength` to the file size.
+> For on-premises environments or when an environment uses the [Self-managed key (BYOK)](https://learn.microsoft.com/power-platform/admin/manage-encryption-key), the file is not in file storage. When a file is not in file storage, downloading in multiple chunks is not supported. The [InitializeFileBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse) and [InitializeFileBlocksDownloadResponse Class](xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadResponse) have an `IsChunkingSupported`property that indicates if the file can be downloaded in multiple chunks or not. If chunking is not supported, then set `BlockLength` to the file size.
 > 
 > Trying to download partial chunk when IsChunkingSupported is set to false will result in this error:<br />
 > 
