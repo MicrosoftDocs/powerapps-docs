@@ -46,7 +46,6 @@ More information:
 
 - [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md)
 - [Use messages with the SDK for .NET](../org-service/use-messages.md)
-- [Invoking Custom APIs](../custom-api.md#invoking-custom-apis)
 
 ### Web API
 
@@ -77,8 +76,8 @@ There are also two operations you can use to understand whether search is enable
 
 |SDK Message Name<br />Web API Function<br />Search 2.0 Endpoint|Description|
 |---------|---------|
-|`searchstatus`<br />[searchstatus Function](xref:Microsoft.Dynamics.CRM.searchstatus)<br />`/api/search/v2.0/status`|Search status of an Organization.<br /> See [Dataverse Search status](status.md)|
-|`searchstatistics`<br />[searchstatistics Function](xref:Microsoft.Dynamics.CRM.searchstatistics)<br />`/api/search/v2.0/statistics`|Provides organization storage size and document count.<br /> See [Dataverse Search statistics](statistics.md)|
+|`searchstatistics`<br />[searchstatistics Function](xref:Microsoft.Dynamics.CRM.searchstatistics)<br />`/api/search/v2.0/statistics`|Provides organization storage size and document count.<br /> See [Dataverse Search statistics](statistics-status.md#statistics)|
+|`searchstatus`<br />[searchstatus Function](xref:Microsoft.Dynamics.CRM.searchstatus)<br />`/api/search/v2.0/status`|Search status of an Organization.<br /> See [Dataverse Search Status](statistics-status.md#status) |
 
 ## Use Postman with Dataverse search
 
@@ -338,8 +337,7 @@ Dataverse search allows a user to send 1 request per second. If this is exceeded
 [Dataverse Search query](query.md)   
 [Dataverse Search suggest](suggest.md)   
 [Dataverse Search autocomplete](autocomplete.md)   
-[Dataverse Search status](status.md)   
-[Dataverse Search statistics](statistics.md)   
+[Dataverse Search statistics and status](statistics-status.md)   
 [Dataverse legacy search](legacy.md)
 
 

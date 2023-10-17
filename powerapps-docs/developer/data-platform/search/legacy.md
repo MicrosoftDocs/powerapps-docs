@@ -490,11 +490,10 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### See also
 
-[Search for Dataverse records](overview.md)<br />
-[Dataverse Search query](query.md)<br />
-[Dataverse Search suggest](suggest.md)<br />
-[Dataverse Search autocomplete](autocomplete.md)<br />
-[Dataverse Search status](status.md)<br />
-[Dataverse Search statistics](statistics.md)
+[Search for Dataverse records](overview.md)   
+[Dataverse Search query](query.md)   
+[Dataverse Search suggest](suggest.md)   
+[Dataverse Search autocomplete](autocomplete.md)   
+[Dataverse Search statistics and status](statistics-status.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

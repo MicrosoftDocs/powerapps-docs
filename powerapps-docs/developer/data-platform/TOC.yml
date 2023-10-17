@@ -42,10 +42,8 @@
         href: ./search/suggest.md
       - name: Autocomplete
         href: ./search/autocomplete.md
-      - name: Status
-        href: ./search/status.md
-      - name: Statistics
-        href: ./search/statistics.md
+      - name: Statistics and Status
+        href: ./search/statistics-status.md
       - name: Legacy search
         href: ./search/legacy.md
     - name: Bulk Operation messages

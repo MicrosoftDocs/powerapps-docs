@@ -330,11 +330,10 @@ The unescaped, formatted JSON `response` property value looks like this:
 
 ### See also
 
-[Search for Dataverse records](overview.md)<br />
-[Dataverse Search query](query.md)<br />
-[Dataverse Search suggest](suggest.md)<br />
-[Dataverse Search status](status.md)<br />
-[Dataverse Search statistics](statistics.md)<br />
+[Search for Dataverse records](overview.md)   
+[Dataverse Search query](query.md)   
+[Dataverse Search suggest](suggest.md)   
+[Dataverse Search statistics and status](statistics-status.md)   
 [Dataverse legacy search](legacy.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

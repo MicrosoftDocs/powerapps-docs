@@ -877,8 +877,7 @@ The formatted JSON value for the string response property looks like this:
 [Search for Dataverse records](overview.md)   
 [Dataverse Search suggest](suggest.md)   
 [Dataverse Search autocomplete](autocomplete.md)   
-[Dataverse Search status](status.md)   
-[Dataverse Search statistics](statistics.md)   
+[Dataverse Search statistics and status](statistics-status.md)   
 [Dataverse legacy search](legacy.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
