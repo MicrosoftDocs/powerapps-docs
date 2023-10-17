@@ -264,7 +264,7 @@ The unescaped response contains JSON using the following properties.
 |`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
 |`Value`|[`QueryResult`](#queryresult)`[]`|A collection of matching records.|
 |`Facets`|`Dictionary<string,` [FacetResult](#facetresult)`[]>`|If facets were requested in the query, a dictionary of facet values.|
-|`QueryContext` |[QueryContext](#querycontext)|The query context returned as part of response.|
+|`QueryContext` |[QueryContext](#querycontext)|This property is used for backend search, this is included for future feature releases, it is not currently used.|
 |`Count`|long| If `"Count": true` is included in the body of the request, the count of all documents that match the search, ignoring top and skip|
 
 ### Types
@@ -475,7 +475,7 @@ public sealed class SearchEntity
 
 ##### SearchQueryResults class
 
-Used to deserialize JSON data from the `searchqueryResponse.response` string property.
+Use to deserialize JSON data from the `searchqueryResponse.response` string property.
 
 ```csharp
 public sealed class SearchQueryResults
@@ -496,7 +496,7 @@ public sealed class SearchQueryResults
     public Dictionary<string, IList<FacetResult>>? Facets { get; set; }
 
     /// <summary>
-    /// The query context returned as part of response.
+    /// The query context returned as part of response. This property is used for backend search, this is included for future feature releases, it is not currently used.
     /// </summary>
     public QueryContext? QueryContext { get; set; }
 
@@ -639,7 +639,7 @@ public enum FacetType
 
 ##### QueryContext class
 
-The query context returned as part of response.
+The query context returned as part of response. This property is used for backend search, this is included for future feature releases, it is not currently used.
 
 ```csharp
 public sealed class QueryContext
@@ -676,7 +676,7 @@ public sealed class QueryContext
 
 This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub.
 
-The formatted JSON passed to the string `entity` parameter looks like this:
+The formatted JSON passed to the string `entities` parameter looks like this:
 
 ```json
 [
@@ -775,7 +775,7 @@ The formatted JSON value for the string `response` property looks like this:
 
 The parameters and response value using the search 2.0 endpoint are identical to the Web API, only the URL is different.
 
-The formatted JSON passed to the string `entity` parameter looks like this:
+The unescaped, formatted JSON passed to the string `entity` parameter looks like this:
 
 ```json
 [

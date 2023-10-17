@@ -1,11 +1,11 @@
 ---
-title: "Dataverse Search autocomplete (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Use Dataverse search autocomplete to provide autocompletion of input as the user enters text into a form field." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Dataverse Search autocomplete (Microsoft Dataverse) | Microsoft Docs"
+description: "Use Dataverse search autocomplete to provide autocompletion of input as the user enters text into a form field."
 ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: mspilde # GitHub ID
-ms.author: mspilde # MSFT alias of Microsoft employees only
+author: mspilde
+ms.author: mspilde
 search.audienceType: 
   - developer
 search.app: 
@@ -76,13 +76,14 @@ The unescaped response contains JSON using the following properties.
 |---------|---------|---------|
 |`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
 |`Value`|string|The text|
-|`QueryContext` |[QueryContext](#querycontext)|This request is used for backend search, this is included for future feature releases, it is not currently used.
+|`QueryContext` |[QueryContext](#querycontext)|This property is used for backend search, this is included for future feature releases, it is not currently used.
 
 ### Types
 
 The following types are returned by the Query Response.
 
 #### ErrorDetail
+
 Will include error details and needed information if a query errors for any condition or reason.
 
 |Name|Type|Description|
@@ -102,44 +103,131 @@ Will include error details and needed information if a query errors for any cond
 
 ## Examples
 
-The following examples show how to use the autocomplete operation.
-
-### Example: TODO specific scenario
-
-This is a template for an example about how to achieve a specific scenario.
-TODO - Manish will send us an example
-
+The following examples show how to use the autocomplete operation. These examples return autocomplete results for the account table `name` field.
 
 #### [SDK for .NET](#tab/sdk)
 
-```csharp
-static void SDKExampleMethod(IOrganizationService service){
-    OrganizationRequest autocompleteRequest = new OrganizationRequest("searchautocomplete")
-   {
-      Parameters = new ParameterCollection
-      {
-         { "search", "string" },
-         { "entities", "common seperated string" },
-         { "filter","string" },
-         { "fuzzy", true },
-         { "options","dictionary key(string), value(string)" },
-         { "propertybag","dictionary key(string), value(string)" }
-      }
-   };
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub.  The static `OutputAutoComplete` method accepts a value for the [search parameter](#search-parameter).
 
-   OrganizationResponse searchAutoCompleteResponse = service.Execute(autocompleteRequest);
-   string responseString = searchAutoCompleteResponse.Results["response"];
-   
-   //TODO: Parse the string to get the objects.
+```csharp
+/// <summary>
+/// Demonstrate autocomplete API
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance to use.</param>
+/// <param name="searchTerm">The term to use</param>
+/// <returns></returns>
+static void OutputAutoComplete(IOrganizationService service, string searchTerm)
+{
+    Console.WriteLine("OutputAutoComplete START\n");
+
+    searchautocompleteRequest request = new()
+    {
+        search = searchTerm,
+        filter = null,
+        fuzzy = true,
+        entities = JsonConvert.SerializeObject(new List<SearchEntity>()
+            {
+                new SearchEntity()
+                {
+                    Name = "account",
+                    SelectColumns = new List<string>() { "name", "createdon" },
+                    SearchColumns = new List<string>() { "name" },
+                }
+            }
+        )
+    };
+
+    var searchautocompleteResponse = (searchautocompleteResponse)service.Execute(request);
+
+    SearchAutoCompleteResults results = JsonConvert.DeserializeObject<SearchAutoCompleteResults>(searchautocompleteResponse.response);
+
+    Console.WriteLine($"\tSearch: {request.search}");
+    Console.WriteLine($"\tValue: {results.Value}");
+
+    Console.WriteLine("\nOutputAutoComplete END\n");
 }
 ```
-**Output**
+
+#### Output
+
+When you invoke the `OutputAutoComplete` method with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class with the `searchTerm` set to "Con":
+
+```csharp
+OutputAutoComplete(service: serviceClient, searchTerm: "Con");
+```
+
+The output will look something like the following:
 
 ```
-TODO: The output of the SDK Sample
+OutputAutoComplete START
+
+        Search: Con
+        Value: {crmhit}contoso{/crmhit}
+
+OutputAutoComplete END
 ```
+
+#### Supporting classes
+
+The `OutputAutoComplete` method depends on the following supporting classes to send the request and process the result:
+
+##### searchautocompleteRequest and searchautocompleteResponse classes
+
+These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
+
+##### SearchEntity class
+
+This is the same `SearchEntity` class used for the [query example](query.md#searchentity-class). In this case, you use it to set the `searchautocompleteRequest.entities` property.
+
+##### SearchAutoCompleteResults class
+
+Use to deserialize JSON data from the `searchautocompleteResponse.response` string property.
+
+```csharp
+class SearchAutoCompleteResults
+{
+   /// <summary>
+   /// The Azure Cognitive error detail returned as part of response.
+   /// </summary>
+   public ErrorDetail? Error {  get; set; }
+
+   /// <summary>
+   /// The text
+   /// </summary>
+   public string? Value { get; set; }
+
+   /// <summary>
+   /// This request is used for backend search, this is included for future feature releases, it is not currently used.
+   /// </summary>
+   public QueryContext? QueryContext { get; set; }
+}
+```
+
+##### ErrorDetail class
+
+This is the same `ErrorDetail` class used for the [query example](query.md#errordetail-class).
+
+##### QueryContext class
+
+This is the same `QueryContext` class used for the [query example](query.md#querycontext-class).
+
 
 #### [Web API](#tab/webapi)
+
+This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub.
+
+The unescaped, formatted JSON passed to the string `entities` parameter looks like this:
+
+```json
+[
+  {
+    "Name": "account",
+    "SelectColumns": ["name", "createdon"],
+    "SearchColumns": ["name"],
+    "Filter": null
+  }
+]
+```
 
 **Request**
 
@@ -150,13 +238,11 @@ OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
 Content-Type: application/json; charset=utf-8
-Content-Length: 239
+Content-Length: 191
 
 {
-  "options": "null",
   "entities": "[{\"Name\":\"account\",\"SelectColumns\":[\"name\",\"createdon\"],\"SearchColumns\":[\"name\"],\"Filter\":null}]",
-  "search": "Dat",
-  "propertybag": "null",
+  "search": "Con",
   "fuzzy": true,
   "filter": null
 }
@@ -166,26 +252,53 @@ Content-Length: 239
 
 ```http
 HTTP/1.1 200 OK
+CRM.ServiceId: framework
 OData-Version: 4.0
 
 {
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchautocompleteResponse",
-  "response": "{\"Error\":null,\"Value\":\"{crmhit}datum{/crmhit}\",\"QueryContext\":null}"
+  "response": "{\"Error\":null,\"Value\":\"{crmhit}contoso{/crmhit}\",\"QueryContext\":null}"
+}
+```
+
+The unescaped, formatted JSON `response` property value looks like this:
+
+```json
+{
+  "Error": null,
+  "Value": "{crmhit}contoso{/crmhit}",
+  "QueryContext": null
 }
 ```
 
 #### [Search 2.0 endpoint](#tab/search)
 
+The parameters and response value using the search 2.0 endpoint are identical to the Web API, only the URL is different.
+
+The unescaped, formatted JSON passed to the string `entities` parameter looks like this:
+
+```json
+[
+  {
+    "Name": "account",
+    "SelectColumns": ["name", "createdon"],
+    "SearchColumns": ["name"],
+    "Filter": null
+  }
+]
+```
+
 **Request**
 
 ```http
-POST [Organization URI]/api/search/v2.0/autocomplete HTTP/1.1
+POST [Organization Uri]/api/search/v2.0/autocomplete
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 191
 
 {
-  "options": "null",
   "entities": "[{\"Name\":\"account\",\"SelectColumns\":[\"name\",\"createdon\"],\"SearchColumns\":[\"name\"],\"Filter\":null}]",
-  "search": "Dat",
-  "propertybag": "null",
+  "search": "Con",
   "fuzzy": true,
   "filter": null
 }
@@ -195,11 +308,21 @@ POST [Organization URI]/api/search/v2.0/autocomplete HTTP/1.1
 
 ```http
 HTTP/1.1 200 OK
+CRM.ServiceId: framework
 OData-Version: 4.0
 
 {
-  "@odata.context": "[Organization Uri]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.searchautocompleteResponse",
-  "response": "{\"Error\":null,\"Value\":\"{crmhit}datum{/crmhit}\",\"QueryContext\":null}"
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchautocompleteResponse",
+  "response": "{\"Error\":null,\"Value\":\"{crmhit}contoso{/crmhit}\",\"QueryContext\":null}"
+}
+```
+The unescaped, formatted JSON `response` property value looks like this:
+
+```json
+{
+  "Error": null,
+  "Value": "{crmhit}contoso{/crmhit}",
+  "QueryContext": null
 }
 ```
 

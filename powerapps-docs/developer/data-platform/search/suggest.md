@@ -98,7 +98,7 @@ The unescaped response contains JSON using the following properties.
 |---------|---------|---------|
 |`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
 |`Value`|[`SuggestResult`](#suggestresult)`[]`|A collection of matching records.|
-|`QueryContext` |[QueryContext](#querycontext)|The query context returned as part of response.|
+|`QueryContext` |[QueryContext](#querycontext)|The query context returned as part of response. This property is used for backend search, this is included for future feature releases, it is not currently used.|
 
 ### Types
 
@@ -125,7 +125,7 @@ Provides the suggested text.
 
 #### QueryContext
 
-The query context returned as part of response.
+The query context returned as part of response. This property is used for backend search, this is included for future feature releases, it is not currently used.
 
 |Name|Type|Description|
 |---------|---------|---------|
@@ -245,7 +245,7 @@ class SearchSuggestResults
    public List<SuggestResult>? Value { get; set; }
 
    /// <summary>
-   /// The query context returned as part of response.
+   /// The query context returned as part of response. This property is used for backend search, this is included for future feature releases, it is not currently used.
    /// </summary>
    public QueryContext? QueryContext { get; set; }
 }
