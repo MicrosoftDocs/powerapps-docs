@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: 
-ms.date: 3/13/2022
+ms.date: 10/17/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
