@@ -78,7 +78,7 @@ By default all the tables enabled for search will be searched unless you specify
 
 When you set an entity, you can also specify which columns you want to return and which columns to search. You can also include filter criteria for the table.
 
-To get a list of tables enabled for the environment use the [Search status](status.md) API and look for the tables listed by  `entitylogicalname` within `entitystatusresults`.
+To get a list of tables enabled for the environment use the [Search Status](statistics-status.md#status) API and look for the tables listed by  `entitylogicalname` within `entitystatusresults`.
 
 The following table shows the schema of an entity:
 

@@ -151,7 +151,7 @@ HTTP/1.1 400 Bad Request
 
 ---
 
-You can detect whether the search service is enabled by checking the settings in the organization table or by using the [Dataverse Search status](status.md) operation.
+You can detect whether the search service is enabled by checking the settings in the organization table or by using the [Dataverse Search Status](statistics-status.md#status) operation.
 
 ### Check Organization table
 

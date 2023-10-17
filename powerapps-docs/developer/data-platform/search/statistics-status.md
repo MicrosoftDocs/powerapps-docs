@@ -20,47 +20,56 @@ Dataverse search provides two operations you can use to retrieve data about data
 
 ## Statistics
 
+You may need to know the size of the data structure being returned to help you better optimize your query or query results and help you manage the size of your Database to manage cost.
+
 Search statistics provides information about:
 
 - Storage size in bytes
 - Storage size in megabytes
 - Number of documents
 
-In many cases you may need to know the size of the data structure being returned to help you better optimize your query or query results and help you manage the size of your Database to manage cost.
+
+### Statistics examples
+
+The following examples show how to use the `statistics` API.
 
 #### [SDK for .NET](#tab/sdk)
 
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub.  The static `OutputSearchStatistics` method doesn't have any parameters.
+
 ```csharp
-
-static void CheckSearchStatistics(IOrganizationService service)
+/// <summary>
+/// Demonstrate statistics API
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance to use.</param>
+/// <returns></returns>
+static void OutputSearchStatistics(IOrganizationService service)
 {
-   try
-   {
+   Console.WriteLine("OutputSearchStatistics START\n");
 
-      OrganizationResponse searchstatisticsResponse = service.Execute(new OrganizationRequest("searchstatistics"));
-  
-      string responseString = searchstatisticsResponse.Results["response"];
+   var searchstatisticsResponse = (searchstatisticsResponse)service.Execute(new searchstatisticsRequest());
 
-      Console.WriteLine(responseString);
+   JObject ResponseObj = (JObject)JsonConvert.DeserializeObject(value: searchstatisticsResponse.response);
 
-   }
-   catch (FaultException<OrganizationServiceFault> osf)
-   {
-      
-      Console.WriteLine($"OrganizationServiceFault:{osf.Detail}");
-      Console.WriteLine($"StackTrace:{osf.Detail.TraceText}");
+   SearchStatisticsResult results = ResponseObj["value"].ToObject<SearchStatisticsResult>();
 
-   }
-   catch (Exception ex)
-   {
+   Console.WriteLine($"\tStorageSizeInBytes: {results.StorageSizeInByte}");
+   Console.WriteLine($"\tStorageSizeInMb: {results.StorageSizeInMb}");
+   Console.WriteLine($"\tDocumentCount: {results.DocumentCount}");
 
-      Console.WriteLine($"Exception:{ex.Message}");
-   }            
+   Console.WriteLine("\nOutputSearchStatistics END");
 }
-
 ```
 
-**Output**
+#### Output
+
+When you invoke the `OutputSearchStatistics` method with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class:
+
+```csharp
+OutputSearchStatistics(service: serviceClient);
+```
+
+The output will look something like the following:
 
 ```
 OutputSearchStatistics START
@@ -70,6 +79,43 @@ OutputSearchStatistics START
         DocumentCount: 1309
 
 OutputSearchStatistics END
+```
+
+#### Supporting classes
+
+The `OutputSearchStatistics` method depends on the following supporting classes to send the request and process the result:
+
+##### searchstatisticsRequest and searchstatisticsResponse classes
+
+These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
+
+#### SearchStatisticsResult
+
+Used to deserialize the `searchstatisticsResponse.response.value` property.
+
+```csharp
+class SearchStatisticsResult
+{
+
+   /// <summary>
+   /// The storage size in Bytes
+   /// </summary>
+   [JsonProperty(PropertyName = "storagesizeinbytes")]
+   public long StorageSizeInByte { get; set; }
+
+
+   /// <summary>
+   /// The storage size in Megabytes
+   /// </summary>
+   [JsonProperty(PropertyName = "storagesizeinmb")]
+   public long StorageSizeInMb { get; set; }
+
+   /// <summary>
+   /// The document count
+   /// </summary>
+   [JsonProperty(PropertyName = "documentcount")]
+   public long DocumentCount { get; set; }
+}
 ```
 
 #### [Web API](#tab/webapi)
@@ -118,32 +164,7 @@ Use search status to know:
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
-static void CheckSearchStatus(IOrganizationService service) {
-   try
-   {     
-      OrganizationResponse searchStatusResponse = service.Execute(new OrganizationRequest("searchstatus"));
-  
-      string responseString = searchStatusResponse.Results["response"];
 
-      Console.WriteLine(responseString);
-      //Expect that this value is an escaped string containing JSON that must be parsed
-   }
-   catch (FaultException<OrganizationServiceFault> osf)
-   {
-      Console.WriteLine($"OrganizationServiceFault:{osf.Message}");
-      // Fails here, Due to plug-in in Custom API?
-
-      /*
-      ErrorCode: 0x80048D0A IsvAbortedInternalServerError
-      Message: Object reference not set to an instance of an object.
-      
-      */
-   }
-   catch (Exception ex) {
-
-      Console.WriteLine($"Exception:{ex.Message}");
-   }      
-}
 ```
 
 **Output**
