@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 10/16/2023
+ms.date: 10/17/2023
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -14,6 +14,7 @@ search.audienceType:
   - enduser
 contributors:
   - HemantGaur
+  - adrianorth 
 
 ---
 
@@ -64,7 +65,7 @@ The following example shows a set of fields with the modern, refreshed look.
 :::image type="content" source="media/modern-fields.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
 
 ### Dashboard page
-The system dashboard page with independent subgrids and charts has been updated to use the new command bar and has section styling similar to the Form and View pages. When the modern experience is enabled or when using monthly channel, the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid is not otherwise enabled by default.
+The system dashboard page, with independent subgrids and charts, has been updated to use the new command bar(#Command-bar) and has styling similar to the sections in form and view pages. When the modern experience is enabled, or when using the [monthly channel](../maker/model-driven-apps/channel-overview), the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid is not enabled by default.
 
 :::image type="content" source="media/modern-system-dashboard.png" alt-text="System dashboard page with the modern, refreshed look.":::
 
