@@ -95,7 +95,7 @@ Yes, end users can switch back to the old UI by turning off the **Try the new lo
 
 For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md). 
 
-Admins can disable the **Try the new look** setting across all apps in an organization by using the solution explorer to set the **Try the new look** value to **No**. This will hide the **Try the new look** toggle and prevent new look from taking effect.
+Admins can disable the **Try the new look** setting across all apps in an organization by using the solution explorer to set the **Try the new look** value to **No**. This hides the **Try the new look** toggle and prevents the new look from taking effect.
 
 1. Create a new solution.
 1. Select **Add Existing** > **More** > **Setting**.
@@ -103,7 +103,7 @@ Admins can disable the **Try the new look** setting across all apps in an organi
 1. Select **Try the new look**. 
 
     > [!NOTE]
-    > There are two settings: **Try the new look** and **Try the new look and feel (preview)**. The first is defaulted to enabled and can be override to prevent the new look toggle. The second was used in the public preview phase to allow users to have the new look but it did not show a toggle.
+    > There are two settings: **Try the new look** and **Try the new look and feel (preview)**. The first setting is turned on by default, but it can be overriden. The second setting was used in the public preview phase to allow users to have the new look, but it did not show as a toggle.
 
 1. Select **Add** to add it to the solution.
 1. Select **Try the new look** from the solution explorer.
