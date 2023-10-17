@@ -103,7 +103,7 @@ With the example colors above, the app header should look like this after refres
 
 ### Verifying new app header colors
 
-After publishing your new app header colors, you'll want to validate the app header visuals, including all the button states, to ensure everything appears as you expect and there are sufficient contrast ratios for accessibility. You should verify the following:
+After publishing your new app header colors, you'll want to validate the app header visuals, including all the button states, to ensure everything appears as you expect and there are sufficient contrast ratios for accessibility. You should verify the following color choices:
 
 - The desired colors are shown for the app header at rest and for each button interaction state.
 - There's a minimum of a 4.5:1 contrast ratio between foreground and background colors for the rest state and each button interaction state.
