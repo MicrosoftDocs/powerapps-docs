@@ -27,7 +27,7 @@ search.audienceType:
 This article describes the basics of creating and editing a model-driven app that can be shared and distributed to other environments.
 
 > [!IMPORTANT]
-> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views will only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer will no longer be available. More information: [](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated)
+> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views will only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer will no longer be available. More information: [Classic app, form, and view designers are deprecated](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated)
 
 ## Prerequisites to creating model-driven apps
 
