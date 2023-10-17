@@ -1,6 +1,6 @@
 ---
 title: "Dataverse Search suggest (Microsoft Dataverse) | Microsoft Docs"
-description: "Use Dataverse search suggest to provide suggestions as the user enters text into a form field."This abstract displays in the search result.
+description: "Use Dataverse search suggest to provide suggestions as the user enters text into a form field."
 ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article

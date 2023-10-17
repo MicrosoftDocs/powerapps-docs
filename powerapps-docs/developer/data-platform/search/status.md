@@ -55,7 +55,484 @@ static void CheckSearchStatus(IOrganizationService service) {
 **Output**
 
 ```
-//TODO: Should be the same as the Web API.
+OutputSearchStatus START
+
+        Status: Provisioned
+        LockboxStatus: Disabled
+        CMKStatus: Disabled
+        Entity Status Results:
+
+                entitylogicalname: account
+                objecttypecode: 1
+                primarynamefield: name
+                lastdatasynctimestamp: 1555508!10/16/2023 02:21:59
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:00
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        accountid        indexfieldname:a_0
+                        accountnumber    indexfieldname:a0w
+                        address1_city    indexfieldname:a0x
+                        createdon        indexfieldname:i_0
+                        emailaddress1    indexfieldname:a0y
+                        entityimage_url  indexfieldname:h_0
+                        modifiedon       indexfieldname:j_0
+                        name     indexfieldname:d_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        primarycontactid         indexfieldname:a0z
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        telephone1       indexfieldname:a12
+                        telephone2       indexfieldname:a13
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: activitymimeattachment
+                objecttypecode: 1001
+                primarynamefield: filename
+                lastdatasynctimestamp: 1555512!10/16/2023 02:32:21
+                lastprincipalobjectaccesssynctimestamp:
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        activitymimeattachmentid         indexfieldname:a_0
+                        activitysubject  indexfieldname:a14
+                        body     indexfieldname:l_0
+                        filename         indexfieldname:d_0
+                        mimetype         indexfieldname:a15
+                        objectid         indexfieldname:a16
+                        objecttypecode   indexfieldname:a19
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: annotation
+                objecttypecode: 5
+                primarynamefield: subject
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:02
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:02
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        annotationid     indexfieldname:a_0
+                        createdon        indexfieldname:i_0
+                        documentbody     indexfieldname:k_0
+                        filename         indexfieldname:a00
+                        isdocument       indexfieldname:a01
+                        mimetype         indexfieldname:a03
+                        modifiedon       indexfieldname:j_0
+                        notetext         indexfieldname:a04
+                        objectid         indexfieldname:a05
+                        objecttypecode   indexfieldname:a08
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        subject  indexfieldname:d_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: appointment
+                objecttypecode: 4201
+                primarynamefield: subject
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:01
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:01
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        activityid       indexfieldname:a_0
+                        createdon        indexfieldname:i_0
+                        formattedscheduledend    indexfieldname:a1a
+                        formattedscheduledstart  indexfieldname:a1b
+                        instancetypecode         indexfieldname:a1c
+                        location         indexfieldname:a1e
+                        modifiedon       indexfieldname:j_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        regardingobjecttypecode  indexfieldname:a1f
+                        scheduledend     indexfieldname:a1g
+                        scheduledstart   indexfieldname:a1h
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        subject  indexfieldname:d_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: botcomponent
+                objecttypecode: 10089
+                primarynamefield: name
+                lastdatasynctimestamp: 1555499!10/16/2023 02:08:10
+                lastprincipalobjectaccesssynctimestamp: 1504570!10/16/2023 02:08:10
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        botcomponentid   indexfieldname:a_0
+                        createdon        indexfieldname:i_0
+                        filedata         indexfieldname:a09
+                        modifiedon       indexfieldname:j_0
+                        name     indexfieldname:d_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: contact
+                objecttypecode: 2
+                primarynamefield: fullname
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:01
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:01
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        address1_city    indexfieldname:a0a
+                        address1_telephone1      indexfieldname:a0b
+                        contactid        indexfieldname:a_0
+                        createdon        indexfieldname:i_0
+                        emailaddress1    indexfieldname:a0c
+                        entityimage_url  indexfieldname:h_0
+                        firstname        indexfieldname:a0d
+                        fullname         indexfieldname:d_0
+                        lastname         indexfieldname:a0e
+                        middlename       indexfieldname:a0f
+                        mobilephone      indexfieldname:a0g
+                        modifiedon       indexfieldname:j_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        parentcustomerid         indexfieldname:a0h
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        telephone1       indexfieldname:a0k
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: email
+                objecttypecode: 4202
+                primarynamefield: subject
+                lastdatasynctimestamp: 1555512!10/16/2023 02:32:20
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:32:21
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        acceptingentityid        indexfieldname:a0l
+                        activityid       indexfieldname:a_0
+                        attachmentopencount      indexfieldname:a0o
+                        createdon        indexfieldname:i_0
+                        linksclickedcount        indexfieldname:a0p
+                        modifiedon       indexfieldname:j_0
+                        opencount        indexfieldname:a0q
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        regardingobjectid        indexfieldname:a0r
+                        regardingobjecttypecode  indexfieldname:a0u
+                        replycount       indexfieldname:a0v
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        subject  indexfieldname:d_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: fax
+                objecttypecode: 4204
+                primarynamefield: subject
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:02
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:02
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        activityid       indexfieldname:a_0
+                        createdby        indexfieldname:a1w
+                        createdon        indexfieldname:i_0
+                        modifiedon       indexfieldname:j_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        prioritycode     indexfieldname:a1z
+                        regardingobjectid        indexfieldname:a21
+                        regardingobjecttypecode  indexfieldname:a24
+                        scheduledend     indexfieldname:a25
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        subject  indexfieldname:d_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: goal
+                objecttypecode: 9600
+                primarynamefield: title
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:03
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:03
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        actualstring     indexfieldname:a26
+                        createdon        indexfieldname:i_0
+                        entityimage_url  indexfieldname:h_0
+                        fiscalperiod     indexfieldname:a27
+                        fiscalyear       indexfieldname:a29
+                        goalenddate      indexfieldname:a2b
+                        goalid   indexfieldname:a_0
+                        goalownerid      indexfieldname:a2c
+                        goalstartdate    indexfieldname:a2f
+                        inprogressstring         indexfieldname:a2g
+                        metricid         indexfieldname:a2h
+                        modifiedon       indexfieldname:j_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        parentgoalid     indexfieldname:a2k
+                        percentage       indexfieldname:a2n
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        targetstring     indexfieldname:a2o
+                        title    indexfieldname:d_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: knowledgearticle
+                objecttypecode: 9953
+                primarynamefield: title
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:03
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:03
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        articlepublicnumber      indexfieldname:a3w
+                        content  indexfieldname:a3x
+                        createdby        indexfieldname:a3y
+                        createdon        indexfieldname:i_0
+                        createdonbehalfby        indexfieldname:a41
+                        description      indexfieldname:a44
+                        isinternal       indexfieldname:a45
+                        islatestversion  indexfieldname:a47
+                        isprimary        indexfieldname:a49
+                        isrootarticle    indexfieldname:a4b
+                        keywords         indexfieldname:a4d
+                        knowledgearticleid       indexfieldname:a_0
+                        knowledgearticleviews    indexfieldname:a4e
+                        languagelocaleid         indexfieldname:a4f
+                        majorversionnumber       indexfieldname:a4i
+                        minorversionnumber       indexfieldname:a4j
+                        modifiedby       indexfieldname:a4k
+                        modifiedon       indexfieldname:j_0
+                        msdyn_contentstore       indexfieldname:a4n
+                        msdyn_externalreferenceid        indexfieldname:a4o
+                        msdyn_ingestedarticleurl         indexfieldname:a4p
+                        msdyn_integratedsearchproviderid         indexfieldname:a4q
+                        msdyn_isingestedarticle  indexfieldname:a4t
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        owningteam       indexfieldname:a4v
+                        owninguser       indexfieldname:a4y
+                        parentarticlecontentid   indexfieldname:a51
+                        previousarticlecontentid         indexfieldname:a54
+                        rating   indexfieldname:a57
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        subjectid        indexfieldname:a58
+                        title    indexfieldname:d_0
+                        transactioncurrencyid    indexfieldname:a5b
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: letter
+                objecttypecode: 4207
+                primarynamefield: subject
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:02
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:02
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        activityid       indexfieldname:a_0
+                        createdby        indexfieldname:a3m
+                        createdon        indexfieldname:i_0
+                        modifiedon       indexfieldname:j_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        prioritycode     indexfieldname:a3p
+                        regardingobjectid        indexfieldname:a3r
+                        regardingobjecttypecode  indexfieldname:a3u
+                        scheduledend     indexfieldname:a3v
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        subject  indexfieldname:d_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: metric
+                objecttypecode: 9603
+                primarynamefield: name
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:01
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:01
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        amountdatatype   indexfieldname:a3h
+                        createdon        indexfieldname:i_0
+                        isamount         indexfieldname:a3j
+                        metricid         indexfieldname:a_0
+                        modifiedon       indexfieldname:j_0
+                        name     indexfieldname:d_0
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: msdyn_kbattachment
+                objecttypecode: 10113
+                primarynamefield: msdyn_filename
+                lastdatasynctimestamp: 1555512!10/16/2023 02:32:21
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:32:21
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        createdon        indexfieldname:i_0
+                        modifiedon       indexfieldname:j_0
+                        msdyn_fileattachment     indexfieldname:a1i
+                        msdyn_filename   indexfieldname:d_0
+                        msdyn_kbattachmentid     indexfieldname:a_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: mspcat_catalogsubmissionfiles
+                objecttypecode: 10293
+                primarynamefield: mspcat_name
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:02
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:02
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        createdon        indexfieldname:i_0
+                        modifiedon       indexfieldname:j_0
+                        mspcat_catalogsubmissionfilesid  indexfieldname:a_0
+                        mspcat_name      indexfieldname:d_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: phonecall
+                objecttypecode: 4210
+                primarynamefield: subject
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:01
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:01
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        activityid       indexfieldname:a_0
+                        createdby        indexfieldname:a2z
+                        createdon        indexfieldname:i_0
+                        modifiedon       indexfieldname:j_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        prioritycode     indexfieldname:a32
+                        regardingobjectid        indexfieldname:a34
+                        regardingobjecttypecode  indexfieldname:a37
+                        scheduledend     indexfieldname:a38
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        subject  indexfieldname:d_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: powerpagecomponent
+                objecttypecode: 10239
+                primarynamefield: name
+                lastdatasynctimestamp: 1555512!10/16/2023 02:32:20
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:32:20
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        createdon        indexfieldname:i_0
+                        modifiedon       indexfieldname:j_0
+                        name     indexfieldname:d_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        powerpagecomponentid     indexfieldname:a_0
+                        searchcontent    indexfieldname:a1v
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: recurringappointmentmaster
+                objecttypecode: 4251
+                primarynamefield: subject
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:05
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:05
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        activityid       indexfieldname:a_0
+                        createdon        indexfieldname:i_0
+                        modifiedon       indexfieldname:j_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        regardingobjecttypecode  indexfieldname:a3l
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        subject  indexfieldname:d_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: socialactivity
+                objecttypecode: 4216
+                primarynamefield: subject
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:04
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:05
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        activityid       indexfieldname:a_0
+                        community        indexfieldname:a1j
+                        createdon        indexfieldname:i_0
+                        modifiedon       indexfieldname:j_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        postfromprofileid        indexfieldname:a1l
+                        prioritycode     indexfieldname:a1o
+                        regardingobjectid        indexfieldname:a1q
+                        regardingobjecttypecode  indexfieldname:a1t
+                        sentimentvalue   indexfieldname:a1u
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        subject  indexfieldname:d_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: socialprofile
+                objecttypecode: 99
+                primarynamefield: profilename
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:04
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:04
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        blocked  indexfieldname:a39
+                        community        indexfieldname:a3b
+                        createdon        indexfieldname:i_0
+                        customerid       indexfieldname:a3d
+                        modifiedon       indexfieldname:j_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        profilefullname  indexfieldname:a3g
+                        profilename      indexfieldname:d_0
+                        socialprofileid  indexfieldname:a_0
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        versionnumber    indexfieldname:e_0
+
+
+                entitylogicalname: task
+                objecttypecode: 4212
+                primarynamefield: subject
+                lastdatasynctimestamp: 1555508!10/16/2023 02:22:04
+                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:04
+                entitystatus: EntitySyncComplete
+                searchableindexedfieldinfomap:
+                        activityid       indexfieldname:a_0
+                        createdby        indexfieldname:a2p
+                        createdon        indexfieldname:i_0
+                        modifiedon       indexfieldname:j_0
+                        ownerid  indexfieldname:b_0
+                        owningbusinessunit       indexfieldname:c_0
+                        prioritycode     indexfieldname:a2s
+                        regardingobjectid        indexfieldname:a2u
+                        regardingobjecttypecode  indexfieldname:a2x
+                        scheduledend     indexfieldname:a2y
+                        statecode        indexfieldname:f_0
+                        statuscode       indexfieldname:g_0
+                        subject  indexfieldname:d_0
+                        versionnumber    indexfieldname:e_0
+
+
+OutputSearchStatus END
 ```
 
 #### [Web API](#tab/webapi)

@@ -59,20 +59,13 @@ static void CheckSearchStatistics(IOrganizationService service)
 **Output**
 
 ```
-OrganizationServiceFault:Exception details:
-ErrorCode: 0x80048D0A
-Message: Object reference not set to an instance of an object.
-TimeStamp: 2022-09-13T19:14:06.9534141Z
---
-Exception details:
-ErrorCode: 0x80048D0A
-Message: Object reference not set to an instance of an object.
-TimeStamp: 2022-09-13T19:14:06.9534141Z
---
+OutputSearchStatistics START
 
-StackTrace:
-[Microsoft.CDS.RelevanceSearch.Plugins: Microsoft.CDS.RelevanceSearch.Plugins.StatisticsPlugin]
-[1dc24ad0-fe44-ec11-8c60-002248208fac: CustomApi 'searchstatistics' implementation]
+        StorageSizeInBytes: 1341090
+        StorageSizeInMb: 1
+        DocumentCount: 1309
+
+OutputSearchStatistics END
 ```
 
 #### [Web API](#tab/webapi)
