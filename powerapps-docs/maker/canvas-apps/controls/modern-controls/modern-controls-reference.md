@@ -23,7 +23,7 @@ contributors:
 Configure the behavior of a modern control by setting one of its properties. Each type of control has a different set of properties.
 
 
-## Modern Controls
+## Modern controls
 
 **[Badge](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 
