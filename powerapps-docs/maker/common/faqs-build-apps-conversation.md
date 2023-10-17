@@ -45,7 +45,7 @@ The following are requirements to access this feature:
 
 - Your environment must be in the United States region. 
 
-- Your account must have English (United States) as the browser language. 
+- Your account must have English (United States) as the browser language. 
 
 - Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment. 
 
