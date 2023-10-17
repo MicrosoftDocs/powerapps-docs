@@ -100,7 +100,7 @@ Follow these next steps to add code for the main program.
                               .WithAuthority(AadAuthorityAudience.AzureAdMultipleOrgs)
                               .WithRedirectUri(redirectUri)
                               .Build();
-               var scope = resource + "/.default";
+               var scope = resource + "/user_impersonation";
                string[] scopes = { scope };
 
                AuthenticationResult token =

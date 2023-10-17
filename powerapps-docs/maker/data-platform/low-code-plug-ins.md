@@ -189,39 +189,9 @@ More information: [example](lowcode-plug-ins-examples.md#sample-instant-plug-in-
 > * Not all connector actions are supported at this time.
 > * Do not use the Dataverse connector to connect to Dataverse tables from a plug-in expression. Instead, use the native Power Fx functions to interact with collections: [Filter, Search, LookUp](/power-platform/power-fx/reference/function-filter-lookup), [Patch](/power-platform/power-fx/reference/function-patch), [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect), and [Set](/power-platform/power-fx/reference/function-set), where columns are treated as global variables.
 
-## AI functions in low-code plug-ins
-
-### What are AI functions in low-code plug-ins?
-
-Dataverse includes AI-powered actions, which can be used to generate or extract data using Azure Open AI and the power of AI Builder. You can call these functions from both instant and automated low-code plug-ins.  
-
-### Prerequisites for using AI functions in low code plug-ins
-
-> [!div class="checklist"]
-> * [Prerequisites for creating a low-code plug-in](#prerequisites-for-creating-a-low-code-plug-in)
-> * AI Builder subscription
-
-> [!TIP]
-> If you don't have an AI Builder subscription, you can use an [AI Builder trial](/ai-builder/ai-builder-trials). View the AI models page in Power Apps (make.powerapps.com) to get AI Builder, which directs you to start a trial.
-
-### Supported functions
-
-| Function | Description |
-| - | - |
-| `AISummarize` | Summarize text ([Example](lowcode-plug-ins-examples.md#sample-for-aisummarize)) |
-| `AISentiment` | Detect the sentiment of text as either positive, negative, or neutral ([Example](lowcode-plug-ins-examples.md#sample-for-aisentiment)) | 
-| `AIReply` | Draft a reply to text | 
-| `AITranslate` |  Translate text to English ([Example](lowcode-plug-ins-examples.md#sample-for-aitranslate)) | 
-| `AIClassify`| Classify text into one or more provided categories ([Example](lowcode-plug-ins-examples.md#sample-for-aiclassify)) | 
-| `AIExtract`| Extract specified entities such as registration numbers ([Example](lowcode-plug-ins-examples.md#sample-for-aiextract)) | 
-
-### Using AI functions in low-code plug-ins
-
-Type in the AI function and provide the correct input values. Use intellisense and the linked example documentation to understand how to provide correct values to each function.
-
 ## Test a low-code plug-in
 
-## Test instant plug-ins
+### Test instant plug-ins
 
   1. From the **Home screen**, select an instant plug-in from the list, then select **Test** on the command bar. You can also get to this screen from the instant plug-in editor in the command bar after it's been saved.
   :::image type="content" source="media/low-code-plugin-test-home.png" alt-text="Select Test for the low-code plug-in":::
@@ -239,7 +209,7 @@ Type in the AI function and provide the correct input values. Use intellisense a
 Test automated plug-ins by invoking the data event. Observe if the plug-in ran successfully by validating expected changes that were defined in the formula.
 > [!TIP]
 > During the preview, you can invoke the associated data event using the table editor in Power Apps:
-> 1. Sign into [Power Apps](https://make.powerapps.com), go to **Tables** > _Plug-in table_.
+> 1. Sign into [Power Apps](https://make.powerapps.com), go to **Tables** and select the **Plug-in** table.
 > 1. On the command bar, select **Edit**.
 > 1. Create, update, or delete rows directly from this view. Alternatively, open a row in the default form by selecting a row, then select **Edit row using form** on the command bar.
 
