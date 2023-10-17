@@ -88,7 +88,7 @@ Dataverse SDK for .NET includes client classes [CrmServiceClient](xref:Microsoft
 The point of using the authentication libraries is to get an access token that you can include with your requests. Getting the token only requires a few lines of code, and just a few more lines to configure an [HttpClient](xref:System.Net.Http.HttpClient) to execute a request.
 
 > [!IMPORTANT]
-> As demonstrated in the sample code of this article, use a "/user-impersonation" scope for a public client. For a confidential client, use a scope of "/.default".
+> As demonstrated in the sample code of this article, use a "\<environment-url>/user_impersonation" scope for a public client. For a confidential client, use a scope of "\<environment-url>/.default".
 
 ### Simple example
 
