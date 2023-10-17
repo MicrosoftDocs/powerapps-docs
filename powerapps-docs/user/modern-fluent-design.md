@@ -103,7 +103,7 @@ Admins can disable the **Try the new look** setting across all apps in an organi
 1. Select **Try the new look**. 
 
     > [!NOTE]
-    > There are two settings: **Try the new look** and **Try the new look and feel (preview)**. The first setting is turned on by default, but it can be overriden. The second setting was used in the public preview phase to allow users to have the new look, but it did not show as a toggle.
+    > There are two settings: **Try the new look** and **Try the new look and feel (preview)**. The first setting is turned on by default, but it can be overriden as described in this section. The second setting was used in the public preview phase to allow users to have the new look, although the setting did not appear as a toggle.
 
 1. Select **Add** to add it to the solution.
 1. Select **Try the new look** from the solution explorer.
