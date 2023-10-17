@@ -47,7 +47,7 @@ Search term must be at least one characters long and has a 100 character limit.
 **Type**: string<br />
 **Optional**: True
 
-The default scope is searching across all search–configured entities and fields.
+The default scope is searching across all search–configured entities and fields. This uses the same [Query SearchEntity type](query.md#searchentity-type) used by the query API.
 
 ### `filter` parameter
 
@@ -78,28 +78,17 @@ The unescaped response contains JSON using the following properties.
 |`Value`|string|The text|
 |`QueryContext` |[QueryContext](#querycontext)|This property is used for backend search, this is included for future feature releases, it is not currently used.
 
-### Types
+### Response types
 
 The following types are returned by the Query Response.
 
 #### ErrorDetail
 
-Will include error details and needed information if a query errors for any condition or reason.
-
-|Name|Type|Description|
-|---------|---------|---------|
-|`Code`|string|The error code.|
-|`Message`|string|The error message.|
-|`PropertyBag`|`Dictionary<string, object>`|Additional error information.|
+This is the same [ErrorDetail](query.md#errordetail) returned by the query API.
 
 #### QueryContext
 
-|Name|Type|Description|
-|---------|---------|---------|
-|`OriginalQuery`|string|The query string as specified in the request.|
-|`AlteredQuery`|string|The query string that Dataverse search used to perform the query. Dataverse search uses the altered query string if the original query string contained spelling mistakes or did not yield optimal results.|
-|`Reason`|string[]|The reason behind query alter decision by Dataverse search.|
-|`SpellSuggestions`|string[]|The spell suggestion that are the likely words that represent user's intent. This will be populated only when the query was altered by Dataverse search due to spell check.|
+This is the same [QueryContext](query.md#querycontext) returned by the query API.
 
 ## Examples
 

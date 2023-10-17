@@ -106,13 +106,7 @@ The following types are returned by the response.
 
 #### ErrorDetail
 
-The Azure Cognitive search error returned as part of the response.
-
-|Name|Type|Description|
-|---------|---------|---------|
-|`Code`|string|The error code.|
-|`Message`|string|The error message.|
-|`PropertyBag`|`Dictionary<string, object>`|Additional error information.|
+This is the same [ErrorDetail](query.md#errordetail) returned by the query API.
 
 #### SuggestResult
 
@@ -125,14 +119,7 @@ Provides the suggested text.
 
 #### QueryContext
 
-The query context returned as part of response. This property is used for backend search, this is included for future feature releases, it is not currently used.
-
-|Name|Type|Description|
-|---------|---------|---------|
-|`OriginalQuery`|string|The query string as specified in the request.|
-|`AlteredQuery`|string|The query string that Dataverse search used to perform the query. Dataverse search uses the altered query string if the original query string contained spelling mistakes or did not yield optimal results.|
-|`Reason`|string[]|The reason behind query alter decision by Dataverse search.|
-|`SpellSuggestions`|string[]|The spell suggestion that are the likely words that represent user's intent. This will be populated only when the query was altered by Dataverse search due to spell check.|
+This is the same [QueryContext](query.md#querycontext) returned by the query API.
 
 ## Examples
 

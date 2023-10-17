@@ -80,7 +80,9 @@ When you set an entity, you can also specify which columns you want to return an
 
 To get a list of tables enabled for the environment use the [Search Status](statistics-status.md#status) API and look for the tables listed by  `entitylogicalname` within `entitystatusresults`.
 
-The following table shows the schema of an entity:
+### SearchEntity type
+
+Use this type to compose the array of tables to pass to the `entities` parameter.
 
 |Field Name|Type  |Description  |
 |---------|---------|---------|
@@ -267,7 +269,7 @@ The unescaped response contains JSON using the following properties.
 |`QueryContext` |[QueryContext](#querycontext)|This property is used for backend search, this is included for future feature releases, it is not currently used.|
 |`Count`|long| If `"Count": true` is included in the body of the request, the count of all documents that match the search, ignoring top and skip|
 
-### Types
+### Response Types
 
 The following types are returned by the Query Response.
 
@@ -277,9 +279,9 @@ The Azure Cognitive search error returned as part of the response.
 
 |Name|Type|Description|
 |---------|---------|---------|
-|`Code`|string|The error code.|
-|`Message`|string|The error message.|
-|`PropertyBag`|`Dictionary<string, object>`|Additional error information.|
+|`code`|string|The error code.|
+|`message`|string|The error message.|
+|`propertybag`|`Dictionary<string, object>`|Additional error information.|
 
 #### QueryResult
 
@@ -300,12 +302,12 @@ A facet query result that reports the number of documents with a field falling w
 
 |Name|Type|Description|
 |---------|---------|---------|
-|`Count`|long?|The count of documents falling within the bucket described by this facet.|
-|`From`|object|Value indicating the inclusive lower bound of the facet's range, or null to indicate that there is no lower bound.|
-|`To`|object|Value indicating the exclusive upper bound of the facet's range, or null to indicate that there is no upper bound.|
-|`Type`|`Value` \| `Range`|Type of the facet.|
-|`Value`|object|Value of the facet, or the inclusive lower bound if it's an interval facet.|
-|`OptionalValue`|object|Additional or optional value of the facet, will be populated while faceting on lookups.|
+|`count`|long?|The count of documents falling within the bucket described by this facet.|
+|`from`|object|Value indicating the inclusive lower bound of the facet's range, or null to indicate that there is no lower bound.|
+|`to`|object|Value indicating the exclusive upper bound of the facet's range, or null to indicate that there is no upper bound.|
+|`type`|`Value` \| `Range`|Type of the facet.|
+|`value`|object|Value of the facet, or the inclusive lower bound if it's an interval facet.|
+|`optionalvalue`|object|Additional or optional value of the facet, will be populated while faceting on lookups.|
 
 
 #### QueryContext
@@ -314,10 +316,10 @@ The query context returned as part of response.
 
 |Name|Type|Description|
 |---------|---------|---------|
-|`OriginalQuery`|string|The query string as specified in the request.|
-|`AlteredQuery`|string|The query string that Dataverse search used to perform the query. Dataverse search uses the altered query string if the original query string contained spelling mistakes or did not yield optimal results.|
-|`Reason`|string[]|The reason behind query alter decision by Dataverse search.|
-|`SpellSuggestions`|string[]|The spell suggestion that are the likely words that represent user's intent. This will be populated only when the query was altered by Dataverse search due to spell check.|
+|`originalquery`|string|The query string as specified in the request.|
+|`alteredquery`|string|The query string that Dataverse search used to perform the query. Dataverse search uses the altered query string if the original query string contained spelling mistakes or did not yield optimal results.|
+|`reason`|string[]|The reason behind query alter decision by Dataverse search.|
+|`spellsuggestions`|string[]|The spell suggestion that are the likely words that represent user's intent. This will be populated only when the query was altered by Dataverse search due to spell check.|
 
 ## Examples
 
@@ -440,7 +442,7 @@ These classes are generated using Power Platform CLI [pac modelbuilder build](/p
 
 ##### SearchEntity class
 
-The entity schema to scope the search request. The [`entities` parameter](#entities-parameter) require a string containing a serialized JSON array of these types.
+Used to compose [SearchEntity type](#searchentity-type) data.
 
 ```csharp
 public sealed class SearchEntity
@@ -509,7 +511,7 @@ public sealed class SearchQueryResults
 
 ##### ErrorDetail class
 
-The Azure Cognitive error detail returned as part of response.
+Used to deserialize the [ErrorDetail](#errordetail) data.
 
 ```csharp
 public sealed class ErrorDetail
@@ -536,7 +538,7 @@ public sealed class ErrorDetail
 
 ##### QueryResult class
 
-Each `QueryResult` item returned in the response `Value` property represents a record in Dataverse.
+Used to deserialize the [QueryResult](#queryresult) data.
 
 ```csharp
 public sealed class QueryResult
@@ -573,7 +575,7 @@ public sealed class QueryResult
 
 ##### FacetResult class
 
-A facet query result that reports the number of documents with a field falling within a particular range or having a particular value or interval.
+Used to deserialize the [FacetResult](#facetresult) data.
 
 ```csharp
 public sealed class FacetResult
