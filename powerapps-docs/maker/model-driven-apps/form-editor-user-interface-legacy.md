@@ -19,7 +19,7 @@ search.audienceType:
 This article describes the [classic](model-driven-app-glossary.md#classic) form editor.
 
 > [!IMPORTANT]
-> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views will only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer will no longer be available. More information: [](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated) 
+> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views will only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer will no longer be available. More information: [Classic app, form, and view designers are deprecated](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated) 
 >
 > We recommend that you transition to using the modern form designer to create and edit your model-driven app forms. More information: [Overview of the model-driven form designer](form-designer-overview.md)
 
