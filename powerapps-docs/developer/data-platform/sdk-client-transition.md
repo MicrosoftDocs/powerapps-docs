@@ -30,7 +30,7 @@ The new Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.
 
 ### MSAL authentication
 
-Microsoft Azure Active Directory Authentication Library (ADAL) support ends soon. Microsoft Authentication Library (MSAL) is the recommended authentication API going forward. Our new [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) API uses MSAL while our older [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) API uses ADAL.
+Azure Active Directory Authentication Library (ADAL) support ends soon. Microsoft Authentication Library (MSAL) is the recommended authentication API going forward. Our new [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) API uses MSAL while our older [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) API uses ADAL.
 
 ### Performance and functional benefits
 
