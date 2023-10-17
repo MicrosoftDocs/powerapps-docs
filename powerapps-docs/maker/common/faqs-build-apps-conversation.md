@@ -38,7 +38,9 @@ For more information, see: [Data, privacy, and security for Azure OpenAI Service
 ## What are the limitations of build apps and tables through conversation? How can users minimize the impact of the build apps through conversation limitations when using the system? 
 
 This capability is in the process of rolling out, and may not be available in your region yet.
+
 This capability may be subject to usage limits or capacity throttling.
+
 The following are requirements to access this feature:
 
 - Your environment must be in the United States region. 
