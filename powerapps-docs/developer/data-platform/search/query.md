@@ -674,6 +674,8 @@ public sealed class QueryContext
 
 ### [Web API](#tab/webapi)
 
+Use the [searchquery action](xref:Microsoft.Dynamics.CRM.searchquery) to receive a [searchqueryResponse complex type](xref:Microsoft.Dynamics.CRM.searchqueryResponse).
+
 This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub.
 
 The formatted JSON passed to the string `entities` parameter looks like this:
@@ -773,101 +775,12 @@ The formatted JSON value for the string `response` property looks like this:
 
 #### [Search 2.0 endpoint](#tab/search)
 
-The parameters and response value using the search 2.0 endpoint are identical to the Web API, only the URL is different.
+The request parameters and the response from the `search/v2.0/query` endpoint is the same as the Web API. Only the URL is different.
 
-The unescaped, formatted JSON passed to the string `entity` parameter looks like this:
-
-```json
-[
-  {
-    "Name": "account",
-    "SelectColumns": [
-      "name",
-      "createdon"
-    ],
-    "SearchColumns": [
-      "name"
-    ],
-    "Filter": "statecode eq 0"
-  },
-  {
-    "Name": "contact",
-    "SelectColumns": [
-      "fullname",
-      "createdon"
-    ],
-    "SearchColumns": [
-      "fullname"
-    ],
-    "Filter": "statecode eq 0"
-  }
-]
-```
-
-**Request**
+**Request URL**
 
 ```http
 POST [Organization Uri]/api/search/v2.0/query
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Content-Length: 471
-
-{
-  "top": 7,
-  "search": "Contoso",
-  "skip": 0,
-  "entities": "[{\"Name\":\"account\",\"SelectColumns\":[\"name\",\"createdon\"],\"SearchColumns\":[\"name\"],\"Filter\":\"statecode eq 0\"},{\"Name\":\"contact\",\"SelectColumns\":[\"fullname\",\"createdon\"],\"SearchColumns\":[\"fullname\"],\"Filter\":\"statecode eq 0\"}]",
-  "orderby": "[\"createdon desc\"]",
-  "filter": "createdon gt 2022-08-15",
-  "count": true,
-  "options": "null",
-  "facets": "null"
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchqueryResponse",
-  "response": "{\"Error\":null,\"Value\":[{\"Id\":\"8b35eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"EntityName\":\"account\",\"ObjectTypeCode\":0,\"Attributes\":{\"@search.objecttypecode\":1,\"name\":\"Contoso Pharmaceuticals (sample)\",\"createdon\":\"2023-10-13T17:41:21Z\",\"createdon@OData.Community.Display.V1.FormattedValue\":\"10/13/2023 5:41 PM\"},\"Highlights\":{\"name\":[\"{crmhit}Contoso{/crmhit} Pharmaceuticals (sample)\"]},\"Score\":4.95567}],\"Facets\":{},\"QueryContext\":null,\"Count\":1}"
-}
-```
-
-> [!NOTE]
-> Despite the information returned in the `@odata.context` property using the native search 2.0 endpoint, it is not an OData service.
-
-The formatted JSON value for the string response property looks like this:
-
-```json
-{
-  "Error": null,
-  "Value": [
-    {
-      "Id": "8b35eda1-ef69-ee11-9ae7-000d3a88a4a2",
-      "EntityName": "account",
-      "ObjectTypeCode": 0,
-      "Attributes": {
-        "@search.objecttypecode": 1,
-        "name": "Contoso Pharmaceuticals (sample)",
-        "createdon": "2023-10-13T17:41:21Z",
-        "createdon@OData.Community.Display.V1.FormattedValue": "10/13/2023 5:41 PM"
-      },
-      "Highlights": {
-        "name": [
-          "{crmhit}Contoso{/crmhit} Pharmaceuticals (sample)"
-        ]
-      },
-      "Score": 4.95567
-    }
-  ],
-  "Facets": {},
-  "QueryContext": null,
-  "Count": 1
-}
 ```
 
 ---

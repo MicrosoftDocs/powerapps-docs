@@ -214,6 +214,8 @@ This is the same `QueryContext` class used for the [query example](query.md#quer
 
 #### [Web API](#tab/webapi)
 
+Use the [searchautocomplete action](xref:Microsoft.Dynamics.CRM.searchautocomplete) to receive a [searchautocompleteResponse complex type](xref:Microsoft.Dynamics.CRM.searchautocompleteResponse).
+
 This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub.
 
 The unescaped, formatted JSON passed to the string `entities` parameter looks like this:
@@ -273,57 +275,12 @@ The unescaped, formatted JSON `response` property value looks like this:
 
 #### [Search 2.0 endpoint](#tab/search)
 
-The parameters and response value using the search 2.0 endpoint are identical to the Web API, only the URL is different.
+The request parameters and the response from the `search/v2.0/autocomplete` endpoint is the same as the Web API. Only the URL is different.
 
-The unescaped, formatted JSON passed to the string `entities` parameter looks like this:
-
-```json
-[
-  {
-    "Name": "account",
-    "SelectColumns": ["name", "createdon"],
-    "SearchColumns": ["name"],
-    "Filter": null
-  }
-]
-```
-
-**Request**
+**Request URL**
 
 ```http
 POST [Organization Uri]/api/search/v2.0/autocomplete
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Content-Length: 191
-
-{
-  "entities": "[{\"Name\":\"account\",\"SelectColumns\":[\"name\",\"createdon\"],\"SearchColumns\":[\"name\"],\"Filter\":null}]",
-  "search": "Con",
-  "fuzzy": true,
-  "filter": null
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-CRM.ServiceId: framework
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchautocompleteResponse",
-  "response": "{\"Error\":null,\"Value\":\"{crmhit}contoso{/crmhit}\",\"QueryContext\":null}"
-}
-```
-The unescaped, formatted JSON `response` property value looks like this:
-
-```json
-{
-  "Error": null,
-  "Value": "{crmhit}contoso{/crmhit}",
-  "QueryContext": null
-}
 ```
 
 ---

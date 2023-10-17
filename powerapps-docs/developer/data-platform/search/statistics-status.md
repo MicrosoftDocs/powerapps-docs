@@ -89,7 +89,7 @@ The `OutputSearchStatistics` method depends on the following supporting classes 
 
 These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
 
-##### SearchStatisticsResult
+##### SearchStatisticsResult class
 
 Used to deserialize the `searchstatisticsResponse.response.value` property.
 
@@ -120,6 +120,8 @@ class SearchStatisticsResult
 
 #### [Web API](#tab/webapi)
 
+Use the [searchstatistics function](xref:Microsoft.Dynamics.CRM.searchstatistics) to receive a [searchstatisticsResponse complex type](xref:Microsoft.Dynamics.CRM.searchstatisticsResponse).
+
 **Request**
 
 ```http
@@ -142,7 +144,7 @@ OData-Version: 4.0
 }
 ```
 
-The unescaped response value looks like this:
+The unescaped `response` JSON looks like this:
 
 ```json
 {
@@ -156,13 +158,13 @@ The unescaped response value looks like this:
 
 #### [Search 2.0 endpoint](#tab/search)
 
+The response from the `search/v2.0/statistics` endpoint is the same as the Web API. Only the URL is different.
+
 **Request URL**
 
 ```http
 GET [Organization URI]/api/search/v2.0/statistics
 ```
-
-The body of the response from the search endpoint is the same as the Web API.
 
 ---
 
@@ -689,7 +691,7 @@ public sealed class ManyToManyRelationshipSyncStatus
 
 #### [Web API](#tab/webapi)
 
-Use the [searchstatus function](xref:Microsoft.Dynamics.CRM.searchstatus) to recieve a [searchstatusResponse complex type](xref:Microsoft.Dynamics.CRM.searchstatusResponse).
+Use the [searchstatus function](xref:Microsoft.Dynamics.CRM.searchstatus) to receive a [searchstatusResponse complex type](xref:Microsoft.Dynamics.CRM.searchstatusResponse).
 
 **Request**
 
@@ -778,13 +780,13 @@ When unescaped, the JSON of the `response.value` property looks like this:
 
 #### [Search 2.0 endpoint](#tab/search)
 
+The response from the `search/v2.0/status` endpoint is the same as the Web API. Only the URL is different.
+
 **Request URL**
 
 ```http
 GET [Organization URI]/api/search/v2.0/status
 ```
-
-The response from the `search/v2.0/status` endpoint is the same as the Web API.
 
 ---
 

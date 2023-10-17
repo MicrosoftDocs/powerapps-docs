@@ -100,9 +100,9 @@ The unescaped response contains JSON using the following properties.
 |`Value`|[`SuggestResult`](#suggestresult)`[]`|A collection of matching records.|
 |`QueryContext` |[QueryContext](#querycontext)|The query context returned as part of response. This property is used for backend search, this is included for future feature releases, it is not currently used.|
 
-### Types
+### Response Types
 
-The following types are returned by the Query Response.
+The following types are returned by the response.
 
 #### ErrorDetail
 
@@ -280,6 +280,8 @@ This is the same `QueryContext` class used for the [query example](query.md#quer
 
 ### [Web API](#tab/webapi)
 
+Use the [searchsuggest action](xref:Microsoft.Dynamics.CRM.searchsuggest) to receive a [searchsuggestResponse complex type](xref:Microsoft.Dynamics.CRM.searchsuggestResponse).
+
 This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/Search) on GitHub.
 
 **Request**
@@ -362,74 +364,7 @@ The parameters and response value using the search 2.0 endpoint are identical to
 **Request**
 
 ```http
-POST [Organization Uri]/api/search/v2.0/suggest HTTP/1.1
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Content-Length: 142
-
-{
-  "orderby": "null",
-  "options": "null",
-  "fuzzy": false,
-  "search": "Cont",
-  "filter": null,
-  "entities": "null",
-  "top": 3
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-CRM.ServiceId: framework
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchsuggestResponse",
-  "response": "{\"Error\":null,\"Value\":[{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9335eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Yvonne McKay (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9535eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Susanna Stubberod (sample)\"}},{\"Text\":\"{crmhit}cont{/crmhit}act\",\"Document\":{\"@search.objectid\":\"9735eda1-ef69-ee11-9ae7-000d3a88a4a2\",\"@search.entityname\":\"contact\",\"@search.objecttypecode\":2,\"fullname\":\"Nancy Anderson (sample)\"}}],\"QueryContext\":null}"
-}
-```
-
-> [!NOTE]
-> Despite the information returned in the `@odata.context` property using the native search 2.0 endpoint, it is not an OData service.
-
-The unescaped JSON data in the response property looks like this:
-
-```json
-{
-  "Error": null,
-  "Value": [
-    {
-      "Text": "{crmhit}cont{/crmhit}act",
-      "Document": {
-        "@search.objectid": "9335eda1-ef69-ee11-9ae7-000d3a88a4a2",
-        "@search.entityname": "contact",
-        "@search.objecttypecode": 2,
-        "fullname": "Yvonne McKay (sample)"
-      }
-    },
-    {
-      "Text": "{crmhit}cont{/crmhit}act",
-      "Document": {
-        "@search.objectid": "9535eda1-ef69-ee11-9ae7-000d3a88a4a2",
-        "@search.entityname": "contact",
-        "@search.objecttypecode": 2,
-        "fullname": "Susanna Stubberod (sample)"
-      }
-    },
-    {
-      "Text": "{crmhit}cont{/crmhit}act",
-      "Document": {
-        "@search.objectid": "9735eda1-ef69-ee11-9ae7-000d3a88a4a2",
-        "@search.entityname": "contact",
-        "@search.objecttypecode": 2,
-        "fullname": "Nancy Anderson (sample)"
-      }
-    }
-  ],
-  "QueryContext": null
-}
+POST [Organization Uri]/api/search/v2.0/suggest
 ```
 
 ---
