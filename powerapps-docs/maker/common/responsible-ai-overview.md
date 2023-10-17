@@ -23,7 +23,7 @@ ms.reviewer: mduelae
 - [Build apps through conversation](../canvas-apps/ai-conversations-create-app.md)
 - [FAQ about building apps through conversation](faqs-build-apps-conversation.md)
 - [Create an app description with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)
-- [FAQ about generating app descriptions with Copilot](ai-app-descriptions-faq.md)
+- [FAQ about generating app descriptions with Copilot (preview)](ai-app-descriptions-faq.md)
 - [Edit your app with Copilot (preview)](../canvas-apps/ai-edit-app.md)
 - [FAQ about editing your app with Copilot](faqs-copilot-panel.md)
 - [Add the Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
