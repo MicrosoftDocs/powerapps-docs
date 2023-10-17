@@ -35,7 +35,7 @@ The following examples show how to use the `statistics` API.
 
 #### [SDK for .NET](#tab/sdk)
 
-This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub.  The static `OutputSearchStatistics` method doesn't have any parameters.
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub.
 
 ```csharp
 /// <summary>
@@ -89,7 +89,7 @@ The `OutputSearchStatistics` method depends on the following supporting classes 
 
 These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
 
-#### SearchStatisticsResult
+##### SearchStatisticsResult
 
 Used to deserialize the `searchstatisticsResponse.response.value` property.
 
@@ -142,12 +142,24 @@ OData-Version: 4.0
 }
 ```
 
+The unescaped response value looks like this:
+
+```json
+{
+  "value": {
+    "storagesizeinbytes": 4539149,
+    "storagesizeinmb": 3,
+    "documentcount": 5515
+  }
+}
+```
+
 #### [Search 2.0 endpoint](#tab/search)
 
-**Request**
+**Request URL**
 
 ```http
-GET [Organization URI]/api/search/v2.0/statistics HTTP/1.1
+GET [Organization URI]/api/search/v2.0/statistics
 ```
 
 The body of the response from the search endpoint is the same as the Web API.
@@ -161,13 +173,164 @@ Use search status to know:
 - Whether search is enabled.
 - Which tables and columns are enabled for search.
 
+### Status response types
+
+The status operation returns data using the following types:
+
+#### searchstatusResponse.response.value
+
+The [searchstatusResponse](xref:Microsoft.Dynamics.CRM.searchstatusResponse)`.response` property has a `value` property with the following properties:
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`entitystatusresults`|[EntityStatusInfo](#entitystatusinfo)[]|[!INCLUDE [entitystatusinfo.description](includes/entitystatusinfo.description.md)]|
+|`manytomanyrelationshipsyncstatus`|[ManyToManyRelationshipSyncStatus](#manytomanyrelationshipsyncstatus)[]|[!INCLUDE [manytomanyrelationshipsyncstatus.description](includes/manytomanyrelationshipsyncstatus.description.md)]|
+|`status`|[Status](#status)|[!INCLUDE [status.description](includes/status.description.md)]|
+|`lockboxstatus`|[LockBoxStatus](#lockboxstatus)|[!INCLUDE [lockboxstatus.description](includes/lockboxstatus.description.md)]|
+|`cmkstatus`|[CMKStatus](#cmkstatus)|[!INCLUDE [cmkstatus.description](includes/cmkstatus.description.md)]|
+
+#### EntityStatusInfo
+
+[!INCLUDE [entitystatusinfo.description](includes/entitystatusinfo.description.md)]
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`entitylogicalname`|string|The logical name of the table|
+|`objecttypecode`|string|The object type code of the table.|
+|`primarynamefield`|string|The primary column of the table.|
+|`lastdatasynctimestamp`|string|The last data sync time.|
+|`lastprincipalobjectaccesssynctimestamp`|string|The last principal object access sync time.|
+|`entitystatus`|string|The entity level status.|
+|`searchableindexedfieldinfomap`|Dictionary<string,[FieldStatusInfo](#fieldstatusinfo)>|The dictionary of indexed column names and details.|
+
+#### FieldStatusInfo
+
+Details for the indexed fields of a table.
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`indexfieldname`|string|The index field name.|
+
+#### Status
+
+[!INCLUDE [status.description](includes/status.description.md)]
+
+|Name|Value|Description|
+|---------|---------|---------|
+|`notprovisioned`|0|Organization is not provisioned for search.|
+|`provisioninginprogress`|1|Organization provisioning in progress|
+|`provisioned`|2|Organization provisioned for search.|
+
+#### CMKStatus
+
+[!INCLUDE [cmkstatus.description](includes/cmkstatus.description.md)]
+
+More information: [Manage the encryption key](/power-platform/admin/manage-encryption-key)
+
+|Name|Value|Description|
+|---------|---------|---------|
+|`Unknown`|0|Dataverse search is not provisioned.|
+|`Disabled`|1|Customer managed key is disabled.|
+|`Enabled`|2|Customer managed key is enabled.|
+|`DisablingInProgress`|3|Customer managed key is in the process of being disabled.|
+|`EnablingInProgress`|4|Customer managed key is in the process of being enabled.|
+
+#### LockBoxStatus
+
+[!INCLUDE [lockboxstatus.description](includes/lockboxstatus.description.md)]
+
+More information: [Securely access customer data using Customer Lockbox in Power Platform (preview)](/power-platform/admin/about-lockbox)
+
+|Name|Value|Description|
+|---------|---------|---------|
+|`Unknown`|0|Dataverse search is not provisioned.|
+|`Disabled`|1|Lockbox is disabled.|
+|`Enabled`|2|Lockbox is enabled.|
+|`DisablingInProgress`|3|Lockbox is in the process of being disabled.|
+|`EnablingInProgress`|4|Lockbox is in the process of being enabled.|
+
+#### ManyToManyRelationshipSyncStatus
+
+[!INCLUDE [manytomanyrelationshipsyncstatus.description](includes/manytomanyrelationshipsyncstatus.description.md)]
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`relationshipName`|string|The name of the relationship.|
+|`relationshipMetadataId`|unique identifier|The ID of the relationship.|
+|`searchEntity`|string|The name of the search table.|
+|`relatedEntity`|string|The name of the related table.|
+|`searchEntityIdAttribute`|string|The name of the primary key of the search table.|
+|`relatedEntityIdAttribute`|string|The name of the primary key of the related table.|
+|`intersectEntity`|string|The name of the intersect table that supports the many-to-many relationship.|
+|`searchEntityObjectTypeCode`|int|The search table object type code.|
+|`lastSyncedVersion`|string|The last synchronized version.|
+
+### Status examples
+
+The following samples show the output of the status API.
+
 #### [SDK for .NET](#tab/sdk)
 
-```csharp
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub.
 
+```csharp
+/// <summary>
+/// Demonstrate status API
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance to use.</param>
+/// <returns></returns>
+static void OutputSearchStatus(IOrganizationService service)
+{
+    Console.WriteLine("OutputSearchStatus START\n");
+
+    var searchStatusResponse = (searchstatusResponse)service.Execute(new searchstatusRequest());
+
+    JObject ResponseObj = (JObject)JsonConvert.DeserializeObject(searchStatusResponse.response);
+
+    SearchStatusResult results = ResponseObj["value"].ToObject<SearchStatusResult>();
+
+    Console.WriteLine($"\tStatus: {results.Status}");
+    Console.WriteLine($"\tLockboxStatus: {results.LockboxStatus}");
+    Console.WriteLine($"\tCMKStatus: {results.CMKStatus}");
+
+    if (results.Status == SearchStatus.Provisioned)
+    {
+        // There will be no results if status is notprovisioned
+        if (results.EntityStatusInfo?.Count > 0)
+        {
+            Console.WriteLine("\tEntity Status Results:\n");
+            results.EntityStatusInfo.ForEach(result =>
+            {
+                Console.WriteLine($"\t\tentitylogicalname: {result.EntityLogicalName}");
+                Console.WriteLine($"\t\tobjecttypecode: {result.ObjectTypeCode}");
+                Console.WriteLine($"\t\tprimarynamefield: {result.PrimaryNameField}");
+                Console.WriteLine($"\t\tlastdatasynctimestamp: {result.LastDataSyncTimeStamp}");
+                Console.WriteLine($"\t\tlastprincipalobjectaccesssynctimestamp: {result.LastPrincipalObjectAccessSyncTimeStamp}");
+                Console.WriteLine($"\t\tentitystatus: {result.EntityStatus}");
+
+                Console.WriteLine($"\t\tsearchableindexedfieldinfomap:");
+                result.SearchableIndexedFieldInfoMap.ToList().ForEach(searchableindexedfield =>
+                {
+                    Console.WriteLine($"\t\t\t{searchableindexedfield.Key}\t indexfieldname:{searchableindexedfield.Value.IndexFieldName}");
+                });
+                Console.WriteLine("\n");
+            });
+        }
+    }
+
+    Console.WriteLine("OutputSearchStatus END\n");
+}
 ```
 
-**Output**
+#### Output
+
+When you invoke the `OutputSearchStatus` method with an authenticated instance of the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class:
+
+```csharp
+OutputSearchStatus(service: serviceClient);
+```
+
+The output will look something like the following:
 
 ```
 OutputSearchStatus START
@@ -202,455 +365,331 @@ OutputSearchStatus START
                         versionnumber    indexfieldname:e_0
 
 
-                entitylogicalname: activitymimeattachment
-                objecttypecode: 1001
-                primarynamefield: filename
-                lastdatasynctimestamp: 1555512!10/16/2023 02:32:21
-                lastprincipalobjectaccesssynctimestamp:
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        activitymimeattachmentid         indexfieldname:a_0
-                        activitysubject  indexfieldname:a14
-                        body     indexfieldname:l_0
-                        filename         indexfieldname:d_0
-                        mimetype         indexfieldname:a15
-                        objectid         indexfieldname:a16
-                        objecttypecode   indexfieldname:a19
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: annotation
-                objecttypecode: 5
-                primarynamefield: subject
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:02
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:02
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        annotationid     indexfieldname:a_0
-                        createdon        indexfieldname:i_0
-                        documentbody     indexfieldname:k_0
-                        filename         indexfieldname:a00
-                        isdocument       indexfieldname:a01
-                        mimetype         indexfieldname:a03
-                        modifiedon       indexfieldname:j_0
-                        notetext         indexfieldname:a04
-                        objectid         indexfieldname:a05
-                        objecttypecode   indexfieldname:a08
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        subject  indexfieldname:d_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: appointment
-                objecttypecode: 4201
-                primarynamefield: subject
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:01
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:01
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        activityid       indexfieldname:a_0
-                        createdon        indexfieldname:i_0
-                        formattedscheduledend    indexfieldname:a1a
-                        formattedscheduledstart  indexfieldname:a1b
-                        instancetypecode         indexfieldname:a1c
-                        location         indexfieldname:a1e
-                        modifiedon       indexfieldname:j_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        regardingobjecttypecode  indexfieldname:a1f
-                        scheduledend     indexfieldname:a1g
-                        scheduledstart   indexfieldname:a1h
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        subject  indexfieldname:d_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: botcomponent
-                objecttypecode: 10089
-                primarynamefield: name
-                lastdatasynctimestamp: 1555499!10/16/2023 02:08:10
-                lastprincipalobjectaccesssynctimestamp: 1504570!10/16/2023 02:08:10
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        botcomponentid   indexfieldname:a_0
-                        createdon        indexfieldname:i_0
-                        filedata         indexfieldname:a09
-                        modifiedon       indexfieldname:j_0
-                        name     indexfieldname:d_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: contact
-                objecttypecode: 2
-                primarynamefield: fullname
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:01
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:01
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        address1_city    indexfieldname:a0a
-                        address1_telephone1      indexfieldname:a0b
-                        contactid        indexfieldname:a_0
-                        createdon        indexfieldname:i_0
-                        emailaddress1    indexfieldname:a0c
-                        entityimage_url  indexfieldname:h_0
-                        firstname        indexfieldname:a0d
-                        fullname         indexfieldname:d_0
-                        lastname         indexfieldname:a0e
-                        middlename       indexfieldname:a0f
-                        mobilephone      indexfieldname:a0g
-                        modifiedon       indexfieldname:j_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        parentcustomerid         indexfieldname:a0h
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        telephone1       indexfieldname:a0k
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: email
-                objecttypecode: 4202
-                primarynamefield: subject
-                lastdatasynctimestamp: 1555512!10/16/2023 02:32:20
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:32:21
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        acceptingentityid        indexfieldname:a0l
-                        activityid       indexfieldname:a_0
-                        attachmentopencount      indexfieldname:a0o
-                        createdon        indexfieldname:i_0
-                        linksclickedcount        indexfieldname:a0p
-                        modifiedon       indexfieldname:j_0
-                        opencount        indexfieldname:a0q
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        regardingobjectid        indexfieldname:a0r
-                        regardingobjecttypecode  indexfieldname:a0u
-                        replycount       indexfieldname:a0v
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        subject  indexfieldname:d_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: fax
-                objecttypecode: 4204
-                primarynamefield: subject
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:02
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:02
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        activityid       indexfieldname:a_0
-                        createdby        indexfieldname:a1w
-                        createdon        indexfieldname:i_0
-                        modifiedon       indexfieldname:j_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        prioritycode     indexfieldname:a1z
-                        regardingobjectid        indexfieldname:a21
-                        regardingobjecttypecode  indexfieldname:a24
-                        scheduledend     indexfieldname:a25
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        subject  indexfieldname:d_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: goal
-                objecttypecode: 9600
-                primarynamefield: title
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:03
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:03
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        actualstring     indexfieldname:a26
-                        createdon        indexfieldname:i_0
-                        entityimage_url  indexfieldname:h_0
-                        fiscalperiod     indexfieldname:a27
-                        fiscalyear       indexfieldname:a29
-                        goalenddate      indexfieldname:a2b
-                        goalid   indexfieldname:a_0
-                        goalownerid      indexfieldname:a2c
-                        goalstartdate    indexfieldname:a2f
-                        inprogressstring         indexfieldname:a2g
-                        metricid         indexfieldname:a2h
-                        modifiedon       indexfieldname:j_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        parentgoalid     indexfieldname:a2k
-                        percentage       indexfieldname:a2n
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        targetstring     indexfieldname:a2o
-                        title    indexfieldname:d_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: knowledgearticle
-                objecttypecode: 9953
-                primarynamefield: title
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:03
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:03
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        articlepublicnumber      indexfieldname:a3w
-                        content  indexfieldname:a3x
-                        createdby        indexfieldname:a3y
-                        createdon        indexfieldname:i_0
-                        createdonbehalfby        indexfieldname:a41
-                        description      indexfieldname:a44
-                        isinternal       indexfieldname:a45
-                        islatestversion  indexfieldname:a47
-                        isprimary        indexfieldname:a49
-                        isrootarticle    indexfieldname:a4b
-                        keywords         indexfieldname:a4d
-                        knowledgearticleid       indexfieldname:a_0
-                        knowledgearticleviews    indexfieldname:a4e
-                        languagelocaleid         indexfieldname:a4f
-                        majorversionnumber       indexfieldname:a4i
-                        minorversionnumber       indexfieldname:a4j
-                        modifiedby       indexfieldname:a4k
-                        modifiedon       indexfieldname:j_0
-                        msdyn_contentstore       indexfieldname:a4n
-                        msdyn_externalreferenceid        indexfieldname:a4o
-                        msdyn_ingestedarticleurl         indexfieldname:a4p
-                        msdyn_integratedsearchproviderid         indexfieldname:a4q
-                        msdyn_isingestedarticle  indexfieldname:a4t
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        owningteam       indexfieldname:a4v
-                        owninguser       indexfieldname:a4y
-                        parentarticlecontentid   indexfieldname:a51
-                        previousarticlecontentid         indexfieldname:a54
-                        rating   indexfieldname:a57
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        subjectid        indexfieldname:a58
-                        title    indexfieldname:d_0
-                        transactioncurrencyid    indexfieldname:a5b
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: letter
-                objecttypecode: 4207
-                primarynamefield: subject
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:02
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:02
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        activityid       indexfieldname:a_0
-                        createdby        indexfieldname:a3m
-                        createdon        indexfieldname:i_0
-                        modifiedon       indexfieldname:j_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        prioritycode     indexfieldname:a3p
-                        regardingobjectid        indexfieldname:a3r
-                        regardingobjecttypecode  indexfieldname:a3u
-                        scheduledend     indexfieldname:a3v
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        subject  indexfieldname:d_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: metric
-                objecttypecode: 9603
-                primarynamefield: name
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:01
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:01
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        amountdatatype   indexfieldname:a3h
-                        createdon        indexfieldname:i_0
-                        isamount         indexfieldname:a3j
-                        metricid         indexfieldname:a_0
-                        modifiedon       indexfieldname:j_0
-                        name     indexfieldname:d_0
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: msdyn_kbattachment
-                objecttypecode: 10113
-                primarynamefield: msdyn_filename
-                lastdatasynctimestamp: 1555512!10/16/2023 02:32:21
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:32:21
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        createdon        indexfieldname:i_0
-                        modifiedon       indexfieldname:j_0
-                        msdyn_fileattachment     indexfieldname:a1i
-                        msdyn_filename   indexfieldname:d_0
-                        msdyn_kbattachmentid     indexfieldname:a_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: mspcat_catalogsubmissionfiles
-                objecttypecode: 10293
-                primarynamefield: mspcat_name
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:02
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:02
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        createdon        indexfieldname:i_0
-                        modifiedon       indexfieldname:j_0
-                        mspcat_catalogsubmissionfilesid  indexfieldname:a_0
-                        mspcat_name      indexfieldname:d_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: phonecall
-                objecttypecode: 4210
-                primarynamefield: subject
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:01
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:01
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        activityid       indexfieldname:a_0
-                        createdby        indexfieldname:a2z
-                        createdon        indexfieldname:i_0
-                        modifiedon       indexfieldname:j_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        prioritycode     indexfieldname:a32
-                        regardingobjectid        indexfieldname:a34
-                        regardingobjecttypecode  indexfieldname:a37
-                        scheduledend     indexfieldname:a38
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        subject  indexfieldname:d_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: powerpagecomponent
-                objecttypecode: 10239
-                primarynamefield: name
-                lastdatasynctimestamp: 1555512!10/16/2023 02:32:20
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:32:20
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        createdon        indexfieldname:i_0
-                        modifiedon       indexfieldname:j_0
-                        name     indexfieldname:d_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        powerpagecomponentid     indexfieldname:a_0
-                        searchcontent    indexfieldname:a1v
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: recurringappointmentmaster
-                objecttypecode: 4251
-                primarynamefield: subject
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:05
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:05
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        activityid       indexfieldname:a_0
-                        createdon        indexfieldname:i_0
-                        modifiedon       indexfieldname:j_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        regardingobjecttypecode  indexfieldname:a3l
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        subject  indexfieldname:d_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: socialactivity
-                objecttypecode: 4216
-                primarynamefield: subject
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:04
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:05
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        activityid       indexfieldname:a_0
-                        community        indexfieldname:a1j
-                        createdon        indexfieldname:i_0
-                        modifiedon       indexfieldname:j_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        postfromprofileid        indexfieldname:a1l
-                        prioritycode     indexfieldname:a1o
-                        regardingobjectid        indexfieldname:a1q
-                        regardingobjecttypecode  indexfieldname:a1t
-                        sentimentvalue   indexfieldname:a1u
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        subject  indexfieldname:d_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: socialprofile
-                objecttypecode: 99
-                primarynamefield: profilename
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:04
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:04
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        blocked  indexfieldname:a39
-                        community        indexfieldname:a3b
-                        createdon        indexfieldname:i_0
-                        customerid       indexfieldname:a3d
-                        modifiedon       indexfieldname:j_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        profilefullname  indexfieldname:a3g
-                        profilename      indexfieldname:d_0
-                        socialprofileid  indexfieldname:a_0
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        versionnumber    indexfieldname:e_0
-
-
-                entitylogicalname: task
-                objecttypecode: 4212
-                primarynamefield: subject
-                lastdatasynctimestamp: 1555508!10/16/2023 02:22:04
-                lastprincipalobjectaccesssynctimestamp: 0!10/16/2023 02:22:04
-                entitystatus: EntitySyncComplete
-                searchableindexedfieldinfomap:
-                        activityid       indexfieldname:a_0
-                        createdby        indexfieldname:a2p
-                        createdon        indexfieldname:i_0
-                        modifiedon       indexfieldname:j_0
-                        ownerid  indexfieldname:b_0
-                        owningbusinessunit       indexfieldname:c_0
-                        prioritycode     indexfieldname:a2s
-                        regardingobjectid        indexfieldname:a2u
-                        regardingobjecttypecode  indexfieldname:a2x
-                        scheduledend     indexfieldname:a2y
-                        statecode        indexfieldname:f_0
-                        statuscode       indexfieldname:g_0
-                        subject  indexfieldname:d_0
-                        versionnumber    indexfieldname:e_0
+                <Additional tables removed for brevity>
 
 
 OutputSearchStatus END
 ```
 
+
+#### Supporting classes
+
+The `OutputSearchStatus` method depends on the following supporting classes to send the request and process the result:
+
+##### searchstatusRequest and searchstatusResponse classes
+
+These classes are generated using Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command as described in [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md).
+
+##### SearchStatusResult class
+
+Used to deserialize the [searchstatusResponse.response.value](#searchstatusresponseresponsevalue) data.
+
+```csharp
+class SearchStatusResult
+{
+   /// <summary>
+   /// The current search status
+   /// </summary>
+   [JsonProperty("status")]
+   public SearchStatus Status { get; set; }
+
+   /// <summary>
+   /// The current lockbox status
+   /// </summary>
+   [JsonProperty("lockboxstatus")]
+   public LockboxStatus LockboxStatus { get; set; }
+
+   /// <summary>
+   /// The current customer managed key status
+   /// </summary>
+   [JsonProperty("cmkstatus")]
+   public CMKStatus CMKStatus { get; set; }
+
+   /// <summary>
+   /// Information on enabled tables
+   /// </summary>
+   [JsonProperty("entitystatusresults")]
+   public List<EntityStatusInfo>? EntityStatusInfo { get; set; }
+
+   /// <summary>
+   /// Information about th status of synchronized many-to-many relationships
+   /// </summary>
+   [JsonProperty("manytomanyrelationshipsyncstatus")]
+   public List<ManyToManyRelationshipSyncStatus>? ManyToManyRelationshipSyncStatus { get; set; }
+}
+```
+
+##### SearchStatus enum
+
+Used to deserialize the [Status](#status) data.
+
+```csharp
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;
+
+[DataContract]
+[JsonConverter(typeof(StringEnumConverter))]
+public enum SearchStatus
+{
+    /// <summary>
+    /// Organization is not provisioned for search.
+    /// </summary>
+    [EnumMember(Value = "notprovisioned")]
+    NotProvisioned = 0,
+
+    /// <summary>
+    /// Organization provisioning in progress.
+    /// </summary>
+    [EnumMember(Value = "provisioninginprogress")]
+    ProvisioningInProgress = 1,
+
+    /// <summary>
+    /// Organization provisioned for search.
+    /// </summary>
+    [EnumMember(Value = "provisioned")]
+    Provisioned = 2,
+}
+```
+
+##### LockboxStatus enum
+
+Used to deserialize the [LockBoxStatus](#lockboxstatus) data.
+
+```csharp
+using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+
+/// <summary>
+/// Indicates the status of the lockbox.
+/// </summary>
+[DataContract]
+[JsonConverter(typeof(StringEnumConverter))]
+public enum LockboxStatus
+{
+    /// <summary>
+    /// Indicates dataverse search is not provisioned.
+    /// </summary>
+    [EnumMember]
+    Unknown = 0,
+
+    /// <summary>
+    /// Indicates lockbox is disabled.
+    /// </summary>
+    [EnumMember]
+    Disabled = 1,
+
+    /// <summary>
+    /// Indicates lockbox is enabled.
+    /// </summary>
+    [EnumMember]
+    Enabled = 2,
+
+    /// <summary>
+    /// Indicates lockbox is disabling in progress.
+    /// </summary>
+    [EnumMember]
+    DisablingInProgress = 3,
+
+    /// <summary>
+    /// Indicates lockbox is enabling in progress.
+    /// </summary>
+    [EnumMember]
+    EnablingInProgress = 4,
+}
+```
+
+##### CMKStatus enum
+
+Used to deserialize the [CMKStatus](#cmkstatus) data.
+
+```csharp
+using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+
+/// <summary>
+/// Indicates the status of the customer managed key.
+/// </summary>
+[DataContract]
+[JsonConverter(typeof(StringEnumConverter))]
+public enum CMKStatus
+{
+    /// <summary>
+    /// Indicates dataverse search is not provisioned.
+    /// </summary>
+    [EnumMember]
+    Unknown = 0,
+
+    /// <summary>
+    /// Indicates customer managed key is disabled.
+    /// </summary>
+    [EnumMember]
+    Disabled = 1,
+
+    /// <summary>
+    /// Indicates customer managed key is enabled.
+    /// </summary>
+    [EnumMember]
+    Enabled = 2,
+
+    /// <summary>
+    /// Indicates customer managed key is disabling in progress.
+    /// </summary>
+    [EnumMember]
+    DisablingInProgress = 3,
+
+    /// <summary>
+    /// Indicates customer managed key is enabling in progress.
+    /// </summary>
+    [EnumMember]
+    EnablingInProgress = 4,
+}
+```
+
+##### EntityStatusInfo class
+
+Used to deserialize the [EntityStatusInfo](#entitystatusinfo) data.
+
+```csharp
+using Newtonsoft.Json;
+
+public sealed class EntityStatusInfo
+{
+    /// <summary>
+    /// Gets or sets the entity logical name.
+    /// </summary>
+    [JsonProperty(PropertyName = "entitylogicalname")]
+    public string EntityLogicalName { get; set; }
+
+    /// <summary>
+    /// Gets or sets the object type code.
+    /// </summary>
+    [JsonProperty(PropertyName = "objecttypecode")]
+    public int ObjectTypeCode { get; set; }
+
+    /// <summary>
+    /// Gets or sets the primary field name.
+    /// </summary>
+    [JsonProperty(PropertyName = "primarynamefield")]
+    public string PrimaryNameField { get; set; }
+
+    /// <summary>
+    /// Gets or sets the last data sync time.
+    /// </summary>
+    [JsonProperty(PropertyName = "lastdatasynctimestamp")]
+    public string LastDataSyncTimeStamp { get; set; }
+
+    /// <summary>
+    /// Gets or sets the last principal object access sync time.
+    /// </summary>
+    [JsonProperty(PropertyName = "lastprincipalobjectaccesssynctimestamp")]
+    public string LastPrincipalObjectAccessSyncTimeStamp { get; set; }
+
+    /// <summary>
+    /// Gets or sets entity level status.
+    /// </summary>
+    [JsonProperty(PropertyName = "entitystatus")]
+    public string EntityStatus { get; set; }
+
+    /// <summary>
+    /// Gets or sets the dictionary of attribute name and details.
+    /// </summary>
+    [JsonProperty(PropertyName = "searchableindexedfieldinfomap")]
+    public IDictionary<string, FieldStatusInfo> SearchableIndexedFieldInfoMap { get; set; }
+}
+```
+
+##### FieldStatusInfo class
+
+Used to deserialize the [FieldStatusInfo](#fieldstatusinfo) data.
+
+```csharp
+using Newtonsoft.Json;
+using System.Diagnostics.CodeAnalysis;
+
+namespace PowerApps.Samples.Search.Types;
+
+[ExcludeFromCodeCoverage]
+public sealed class FieldStatusInfo
+{
+    /// <summary>
+    /// Gets or sets index field name.
+    /// </summary>
+    [JsonProperty(PropertyName = "indexfieldname")]
+    public string IndexFieldName { get; set; }
+}
+```
+
+##### ManyToManyRelationshipSyncStatus class
+
+Used to deserialize the [ManyToManyRelationshipSyncStatus](#manytomanyrelationshipsyncstatus) data.
+
+```csharp
+using Newtonsoft.Json;
+
+public sealed class ManyToManyRelationshipSyncStatus
+{   
+    /// <summary>
+    /// Gets the relationship name.
+    /// </summary>
+    [JsonProperty("relationshipName")]
+    public string? RelationshipName { get; }
+
+    /// <summary>
+    /// Gets the relationship metadata id.
+    /// </summary>
+    [JsonProperty("relationshipMetadataId")]
+    public Guid RelationshipMetadataId { get; }
+
+    /// <summary>
+    /// Gets the search entity name.
+    /// </summary>
+    [JsonProperty("searchEntity")]
+    public string? SearchEntity { get; }
+
+    /// <summary>
+    /// Gets the second entity name.
+    /// </summary>
+    [JsonProperty("relatedEntity")]
+    public string? RelatedEntity { get; }
+
+    /// <summary>
+    /// Gets the search entity Id attribute.
+    /// </summary>
+    [JsonProperty("searchEntityIdAttribute")]
+    public string? SearchEntityIdAttribute { get; }
+
+    /// <summary>
+    /// Gets the related entity Id attribute.
+    /// </summary>
+    [JsonProperty("relatedEntityIdAttribute")]
+    public string? RelatedEntityIdAttribute { get; }
+
+    /// <summary>
+    /// Gets the intersect entity name.
+    /// </summary>
+    [JsonProperty("intersectEntity")]
+    public string? IntersectEntity { get; }
+
+    /// <summary>
+    /// Gets the search entity object type code.
+    /// </summary>
+    [JsonProperty("searchEntityObjectTypeCode")]
+    public int SearchEntityObjectTypeCode { get; }
+
+    /// <summary>
+    /// Gets the synced version.
+    /// </summary>
+    [JsonProperty("lastSyncedVersion")]
+    public string? LastSyncedDataVersion { get; }
+}
+```
+
 #### [Web API](#tab/webapi)
+
+Use the [searchstatus function](xref:Microsoft.Dynamics.CRM.searchstatus) to recieve a [searchstatusResponse complex type](xref:Microsoft.Dynamics.CRM.searchstatusResponse).
 
 **Request**
 
@@ -662,8 +701,6 @@ If-None-Match: null
 Accept: application/json
 
 ```
-
-The `response` property returned by <xref:Microsoft.Dynamics.CRM.searchstatusResponse?text=searchstatusResponse ComplexType> is an escaped string containing JSON data. The `status` property value can be either: `notprovisioned`, `provisioninginprogress`, or `provisioned`.
 
 When not provisioned, you should get a response like this:
 
@@ -678,7 +715,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-When search is enabled, there is more data that describes the search status for the org.
+When search is enabled, there is more data that describes the search status for the org. See [Status response types](#status-response-types) for details.
 
 **Response**
 
@@ -695,7 +732,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-When unescaped, the JSON of the `response` property looks like this:
+When unescaped, the JSON of the `response.value` property looks like this:
 
 ```json
 {
@@ -729,7 +766,7 @@ When unescaped, the JSON of the `response` property looks like this:
         }
       },
 
-  <Information on other tables removed for brevity> 
+      <Information on other tables removed for brevity> 
 
     ],
     "status": "provisioned",
@@ -739,18 +776,12 @@ When unescaped, the JSON of the `response` property looks like this:
 }
 ```
 
-The `entitystatusresults` contains information about each table configured for search. For each table, the `searchableindexedfieldinfomap` tells you which columns are included in search for that table. The `indexfieldname` property is for internal use only.
-
-- `lockboxstatus` refers to the Power Platform Customer Lockbox. More information: [Securely access customer data using Customer Lockbox in Power Platform (preview)](/power-platform/admin/about-lockbox)
-- `cmkstatus` refers to whether the environment has a customer managed key. More information: [Manage the encryption key](/power-platform/admin/manage-encryption-key)
-
-
 #### [Search 2.0 endpoint](#tab/search)
 
-**Request**
+**Request URL**
 
 ```http
-GET [Organization URI]/api/search/v2.0/status HTTP/1.1
+GET [Organization URI]/api/search/v2.0/status
 ```
 
 The response from the `search/v2.0/status` endpoint is the same as the Web API.
