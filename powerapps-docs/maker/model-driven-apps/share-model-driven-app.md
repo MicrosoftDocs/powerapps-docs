@@ -1,43 +1,44 @@
 ---
-title: Share a model-driven app using Power Apps | Microsoft Docs
-description: Learn how to share a model-driven app
+title: Sharing a model-driven app - assigning security roles and privileges
+description: Share a model-driven app with users or teams by assigning them security roles with privileges to access the app's data.
 documentationcenter: ''
 author: Mattp123
 editor: ''
 tags: ''
-
 ms.devlang: na
 ms.topic: how-to
 ms.component: model
-ms.date: 05/08/2023
+ms.date: 10/18/2023
 ms.subservice: mda-maker
 ms.author: matp
-search.audienceType: 
+search.audienceType:
   - maker
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-gen-title
+  - ai-seo-date:10/18/2023
+  - ai-gen-desc
 ---
 
-# Share a model-driven app using Power Apps
+# Share a model-driven app
+
+Share a model-driven app to make it available to other users to use it. Sharing includes the following steps:
+
+1. Create a security role. Power Platform admins create security roles in the Power Platform admin center. 
+1. Add users to the security role.
+1. Add the security role to your app.
+
+<!-- Insert screenshot of sharing UI-->
+
+If your app contains only out-of-the box tables, such as account or contact, you can use an existing [predefined security role](#about-predefined-security-roles).
+
+## Model-driven app sharing basics
 
 Model-driven apps use role-based security for sharing. The fundamental concept in role-based security is that a security role contains privileges that define a set of actions that can be performed on tables within the app. This approach means that while two people are able to use the app, one user might only be able to read records, or records that they themselves created. The other user might be able to see all records and have the rights to delete those records.
 
 All app users must be assigned one or more predefined or custom security roles. Or, security roles can be assigned to teams. When a user or team is assigned to one of these roles, the person or team members are granted the set of privileges associated with that role.
 
 The process for sharing a model-driven app is different from sharing a canvas app. Model-driven app sharing depends on how the Microsoft Dataverse data table privileges are assigned for the tables that are in the app.
-
-## App sharing privilege and licensing requirements
-
-There are a few key environment and licensing prerequisites required when sharing a model-driven app with a user.
-
-- A Microsoft 365 user with Power Platform administrator rights or global admin rights must exist within the organization. [Learn how to assign Power Platform Administrator rights](/power-platform/admin/use-service-admin-role-manage-tenant).  This provides the user with administrator rights over all environments.
-- The app sharer must have admin privileges to the specific environment (or be a Power Platform administrator). The app sharer must have a [security role](/power-platform/admin/security-roles-privileges) with equal or greater privileges than the security role they're assigning to the app and to other users. Usually, this takes the form of the app sharer having the Dataverse **System Administrator** or **System Customizer** security role.  These roles can be assigned by Power Platform administrators (who have rights over all Dataverse environments). The system administrator and system customizer security roles are standard roles that exist within all Dataverse environments.
-- The user must exist as a user within the environment. It isn't enough to only be a Microsoft 365 user. This is because all users in an environment are accounted for and described within tables in the environment. [Learn how to add a user to an environment](/power-platform/admin/add-users-to-environment)
-- Users must have the correct [license](/power-platform/admin/pricing-billing-skus) to be able to use the app. Users can [request a license themselves](../../user/request-license.md), or a [maker can request licenses for their app users](../common/request-licenses-for-users.md). Also, the license must be assigned in the tenant hosting the app. The exception to this prerequisite is when an app is hosted in a Microsoft Dataverse for Teams environment.
-
-## Model-driven app sharing basics
-
-Before you share an app, it's helpful to understand the following model-driven app sharing basics:
-- The app must have at least one security role associated with it, such as **Basic User**. However, if your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create or edit a security role for your app](#create-or-edit-a-security-role-for-your-app)
-- App users must be assigned a security role from the available roles. Alternatively, a team can be assigned a security role, and users can be made members of the team. A team can be an Owner, Access, Azure AD security group, or Microsoft 365 group. [Learn to manage a Dataverse team](/power-platform/admin/database-security).
 
 ## Assign security roles or people to a model-driven app
 
@@ -188,6 +189,15 @@ To get the direct link to an app:
     !["Acquiring the link for a model-driven app"](media/share-model-driven-app/app-designer-copy-web-url-process.gif "Acquiring the link for a model-driven app")
 
 1. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or sending via email.
+
+## App sharing privilege and licensing requirements
+
+There are a few key environment and licensing prerequisites required when sharing a model-driven app with a user.
+
+- A Microsoft 365 user with Power Platform administrator rights or global admin rights must exist within the organization. [Learn how to assign Power Platform Administrator rights](/power-platform/admin/use-service-admin-role-manage-tenant).  This provides the user with administrator rights over all environments.
+- The app sharer must have admin privileges to the specific environment (or be a Power Platform administrator). The app sharer must have a [security role](/power-platform/admin/security-roles-privileges) with equal or greater privileges than the security role they're assigning to the app and to other users. Usually, this takes the form of the app sharer having the Dataverse **System Administrator** or **System Customizer** security role.  These roles can be assigned by Power Platform administrators (who have rights over all Dataverse environments). The system administrator and system customizer security roles are standard roles that exist within all Dataverse environments.
+- The user must exist as a user within the environment. It isn't enough to only be a Microsoft 365 user. This is because all users in an environment are accounted for and described within tables in the environment. [Learn how to add a user to an environment](/power-platform/admin/add-users-to-environment)
+- Users must have the correct [license](/power-platform/admin/pricing-billing-skus) to be able to use the app. Users can [request a license themselves](../../user/request-license.md), or a [maker can request licenses for their app users](../common/request-licenses-for-users.md). Also, the license must be assigned in the tenant hosting the app. The exception to this prerequisite is when an app is hosted in a Microsoft Dataverse for Teams environment.
 
 ## About predefined security roles
 
