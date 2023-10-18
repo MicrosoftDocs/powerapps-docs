@@ -74,7 +74,7 @@ Guid accountid = svc.Create(account);
 
 ## Early-bound
 
-Early-bound programming requires that you first generate a set of classes based on the table and column definitions (entity and attribute metadata) for a specific environment using the code generation tool (CrmSvcUtil.exe). More information: [Generate classes for early-bound programming using the SDK for .NET](generate-early-bound-classes.md)
+Early-bound programming requires that you first generate a set of classes based on the table and column definitions (entity and attribute metadata) for a specific environment using the code generation tool [Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build). More information: [Generate classes for early-bound programming using the SDK for .NET](generate-early-bound-classes.md)
 
 After generating early-bound classes using the code generation tool, you'll enjoy a better experience while you write code because classes and properties use the respective `SchemaName` property values:
 

@@ -3,7 +3,7 @@ title: "Create and use custom APIs (Microsoft Dataverse) | Microsoft Docs" # Int
 description: "custom API is a code-first way to define custom messages for Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 author: divkamath
 ms.author: dikamath
-ms.date: 04/28/2023
+ms.date: 10/18/2023
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: dataverse-developer
@@ -230,7 +230,7 @@ More information:
 
 ### Invoking custom APIs from the SDK for .NET
 
-You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](./org-service/generate-early-bound-classes.md) tool to generate helper request and response classes to expose the request parameters and response properties of your custom API.
+You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) tool to generate helper request and response classes to expose the request parameters and response properties of your custom API. [Learn more about generating early-bound classes for the SDK for .NET](org-service/generate-early-bound-classes.md).
 
 For late-bound code, or for a custom API that you have marked as private, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
 
