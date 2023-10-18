@@ -220,14 +220,14 @@ Members of an Entra ID group can check their security privileges without being a
 **Request:**
 
 ```http
-GET [Organization URI]/api/data/v9.0/RetrieveEntra IDUserPrivileges(DirectoryObjectId=<user object ID>)
+GET [Organization URI]/api/data/v9.0/RetrieveAadUserPrivileges(DirectoryObjectId=<user object ID>)
 ```
 
 **Response:**
 
 ```json
 {
-  "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.RetrieveEntra IDUserPrivilegesResponse",
+  "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.RetrieveAadUserPrivilegesResponse",
   "RolePrivileges": [
     {
       "Depth": "Global",
