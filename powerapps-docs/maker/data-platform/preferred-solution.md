@@ -12,7 +12,7 @@ search.audienceType:
 ms.custom:
   - ai-gen-docs-bap
   - ai-gen-desc
-  - ai-seo-date:10/11/2023
+  - ai-seo-date:10/17/2023
 ---
 # Set the preferred solution (preview)
 
@@ -27,6 +27,7 @@ Using preferred solutions is a way to set which solution will support each maker
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - You can't set or view the preferred solution in the classic solution explorer.
+> - Components that are created in the classic solution explorer won't go into the preferred solution.
 
 ## Prerequisites
 
