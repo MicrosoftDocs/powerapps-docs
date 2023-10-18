@@ -70,7 +70,7 @@ Content-Transfer-Encoding: binary
 ```  
 
 > [!NOTE]
-> Only payload items with a batch identifer matching the batch identifer sent in the `Content-Type` header will be executed. If no payload item use the `Content-Type` batch identifer, the $batch request will be successful without executing any payload item.
+> Only payload items with a batch identifer matching the batch identifer sent in the `Content-Type` header will be executed. If no payload item uses the `Content-Type` batch identifer, the $batch request will be successful without executing any payload item.
 
 The end of the batch request must contain a termination indicator like the following example:  
   
