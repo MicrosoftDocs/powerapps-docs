@@ -36,9 +36,9 @@ Developers can use the search APIs three different ways:
 
 ### SDK for .NET
 
-Search operations are defined as Dataverse messages using [Custom APIs](../custom-api.md). For .NET projects you can use the SDK for .NET.
+Search operations are defined as Dataverse messages using [Custom APIs](../custom-api.md). For .NET projects, you can use the SDK for .NET.
 
-There are currently no classes included in the SDK to use these operations. For .NET Framework projects you can use the Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate `*Request` and `*Response` classes for these messages just as you would for any custom action.
+There are currently no classes included in the SDK to use these operations. For .NET Framework projects, you can use the Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate `*Request` and `*Response` classes for these messages just as you would for any custom action.
 
 You can also use the [OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest) and [OrganizationResponse](xref:Microsoft.Xrm.Sdk.OrganizationResponse) classes.
 
@@ -49,7 +49,7 @@ More information:
 
 ### Web API
 
-Search operations exposed with Web API are OData actions or functions described in the [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document). You can use these in the same way you use other Web API operations.
+Search operations exposed with Web API are OData actions or functions described in the [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document).
 
 More information:
 
@@ -58,9 +58,9 @@ More information:
 
 ### Native search 2.0
 
-The native search 2.0 endpoint is not an OData service and has no service document. The native search 2.0 endpoint accepts the same parameters and returns the same responses as the corresponding Web API Actions and functions.
+The native search 2.0 endpoint isn't an OData service and has no service document. The native search 2.0 endpoint accepts the same parameters and returns the same responses as the corresponding Web API Actions and functions.
 
-The [Dataverse legacy search](legacy.md) has not been deprecated and continues to be supported.
+The [Dataverse legacy search](legacy.md) hasn't been deprecated and continues to be supported.
 
 ## Search operations
 
@@ -72,7 +72,7 @@ Search provides three operations to support a user interface that enables search
 |`searchsuggest`<br />[searchsuggest Action](xref:Microsoft.Dynamics.CRM.searchsuggest)<br />`/api/search/v2.0/suggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
 |`searchautocomplete`<br />[searchautocomplete Action](xref:Microsoft.Dynamics.CRM.searchautocomplete)<br />`/api/search/v2.0/autocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
 
-There are also two operations you can use to understand whether search is enabled and how it is configured.
+There are also two operations you can use to understand whether search is enabled and how it's configured.
 
 |SDK Message Name<br />Web API Function<br />Search 2.0 Endpoint|Description|
 |---------|---------|
@@ -81,7 +81,7 @@ There are also two operations you can use to understand whether search is enable
 
 ## Use Postman with Dataverse search
 
-If you have used Postman with Dataverse Web API you know how useful it is to try using the APIs. We have some instructions about setting up a Postman environment to authenticate with the Dataverse Web API here: [Set up a Postman environment](../webapi/setup-postman-environment.md).
+If you have used Postman with Dataverse Web API, you know how useful it's to try using the APIs. We have some instructions about setting up a Postman environment to authenticate with the Dataverse Web API here: [Set up a Postman environment](../webapi/setup-postman-environment.md).
 
 You can use the same instructions with the search operations using Web API functions and actions. If you want to use the native search 2.0 endpoint, change these two environment variables:
 
@@ -92,7 +92,7 @@ You can use the same instructions with the search operations using Web API funct
 
 ### Extract response JSON with Postman
 
-Each of the search operations returns JSON that has a `response` property. The `response` property is an escaped string that contains JSON data. It is difficult to read this string value, but you can use the Postman Visualize feature to transform this string value into readable JSON.
+Each of the search operations returns JSON that has a `response` property. The `response` property is an escaped string that contains JSON data. It's difficult to read this string value, but you can use the Postman Visualize feature to transform this string value into readable JSON.
 
 1. In your Postman request select the **Tests** tab and enter the following script:
 
@@ -120,11 +120,11 @@ More information:
 
 ## Detect if search is enabled
 
-Dataverse search is enabled by default for production environments, but it is an opt-out feature so it could be turned off even in a production environment. If you are using an environment other than a production environment, an administrator must enable it.
+Dataverse search is enabled by default for production environments, but it's an opt-out feature so it could be turned off even in a production environment. If you're using an environment other than a production environment, an administrator must enable it.
 
 ### Error when search not enabled
 
-If you use the query, suggest, or autocomplete operations when the environment is not enabled you will get these errors:
+If you use the query, suggest, or autocomplete operations when the environment isn't enabled you'll get these errors:
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -159,7 +159,7 @@ The [Organization table](../reference/entities/organization.md) contains a singl
 
 #### [SDK for .NET](#tab/sdk)
 
-This function will return the `IsExternalSearchIndexEnabled` property value for the organization.
+This function returns the `IsExternalSearchIndexEnabled` property value for the organization.
 
 ```csharp
 static bool IsExternalSearchIndexEnabled(IOrganizationService service) {
@@ -177,7 +177,7 @@ More information: [Build queries with QueryExpression](../org-service/build-quer
 
 #### [Web API](#tab/webapi)
 
-This Web API query will return the `IsExternalSearchIndexEnabled` property value for the organization.
+This Web API query returns the `IsExternalSearchIndexEnabled` property value for the organization.
 
 **Request**
 
@@ -218,15 +218,15 @@ You must use the SDK for .NET or Web API to check this setting.
 
 ## Enable tables and columns for search
 
-Which tables and columns are enabled for search is driven by data in Dataverse.
+Which tables and columns are enabled for search is controlled by data in Dataverse.
 
 ### Enable Tables
 
-Only those tables where the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanEnableSyncToExternalSearchIndex?text=EntityMetadata.CanEnableSyncToExternalSearchIndex>`.Value` property is true can be enabled for Dataverse search. If the `CanEnableSyncToExternalSearchIndex.CanBeChanged` value is false, you cannot change the value. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
+Only those tables where the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanEnableSyncToExternalSearchIndex?text=EntityMetadata.CanEnableSyncToExternalSearchIndex>`.Value` property is true can be enabled for Dataverse search. If the `CanEnableSyncToExternalSearchIndex.CanBeChanged` value is false, you can't change the value. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
 
 To enable a table for Dataverse Search, set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SyncToExternalSearchIndex?text=EntityMetadata.SyncToExternalSearchIndex> boolean property to true.
 
-You can check the values for a table with the SDK or Web API using the table logical name. Replace `account` in the queries below with the logical name of the table you want to check.
+You can check the values for a table with the SDK or Web API using the table logical name. Replace `account` in the following queries  with the logical name of the table you want to check.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -318,7 +318,7 @@ More information:
 
 ### Enable Columns
 
-The columns that are searchable for the table are determined by whether they are included in the Quick Find view for each table. You can query the definition of the view in the [View (SavedQuery) table](../reference/entities/savedquery.md) and update it programmatically.
+The columns that are searchable for the table are determined by whether they're included in the Quick Find view for each table. You can query the definition of the view in the [View (SavedQuery) table](../reference/entities/savedquery.md) and update it programmatically.
 
 More information:
 
@@ -327,9 +327,9 @@ More information:
 
 ## Service Protection Limits
 
-When using either Web API and Dataverse SDK for .NET the common [Service protection API limits](../api-limits.md) will never be approached because Dataverse search applies a lower limit.
+When using either Web API and Dataverse SDK for .NET, the common [Service protection API limits](../api-limits.md) will never be approached because Dataverse search applies a lower limit.
 
-Dataverse search allows a user to send 1 request per second. If this is exceeded, a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error will be returned. If a `429` error is returned, you should wait until the period defined in the `Retry-After` response header value has passed before sending additional requests. The value represents the number of seconds to wait.
+Dataverse search allows a user to send one request per second. If you exceed this limit, a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error is returned. If a `429` error is returned, you should wait until the period defined in the `Retry-After` response header value has passed before sending more requests. The value represents the number of seconds to wait.
 
 
 ### See also

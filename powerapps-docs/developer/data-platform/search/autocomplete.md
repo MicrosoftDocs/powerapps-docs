@@ -33,28 +33,28 @@ In addition to a search term, the results returned can be influenced by passing 
 
 ## Parameters
 
-Details for the parameters in the table above can be found below.
+This section contains details about the parameters in the table above.
 
 ### `search` parameter
 
 **Type**: string<br />
 **Optional**: false
 
-Search term must be at least one characters long and has a 100 character limit.
+Search term must be at least one character long and has a 100 character limit.
 
 ### `entities` parameter
 
 **Type**: string<br />
 **Optional**: True
 
-The default scope is searching across all search–configured entities and fields. This uses the same [Query SearchEntity type](query.md#searchentity-type) used by the query API.
+The default scope is searching across all search–configured entities and fields. This parameter uses the same [Query SearchEntity type](query.md#searchentity-type) used by the query API.
 
 ### `filter` parameter
 
 **Type**: string<br />
 **Optional**: True
 
-Filter criteria to reduce results returned. This uses the same string values as [Query filter parameter](query.md#filter-parameter).
+Filter criteria to reduce results returned. This parameter uses the same string values as [Query filter parameter](query.md#filter-parameter).
 
 ### `fuzzy` parameter
 
@@ -63,7 +63,7 @@ Filter criteria to reduce results returned. This uses the same string values as 
 
 Fuzzy search to aid with misspellings. The default is false.
 
-When set to true, this API finds suggestions even if there is a substituted or missing character in the search text. The edit distance is 1 per query string. If the query string is multiple terms, there can only be one missing, extra, substituted, or transposed character in the entire string. Enabling fuzzy match can be a better experience in some scenarios, it does come at a performance cost, as fuzzy suggestion searches are slower and consume more resources.
+When set to true, this API finds suggestions even if there's a substituted or missing character in the search text. The edit distance is 1 per query string. If the query string is multiple terms, there can only be one missing, extra, substituted, or transposed character in the entire string. Enabling fuzzy match can be a better experience in some scenarios, it does come at a performance cost, as fuzzy suggestion searches are slower and consume more resources.
 
 ## Response
 
@@ -75,20 +75,20 @@ The unescaped response contains JSON using the following properties.
 |Name|Type|Description|
 |---------|---------|---------|
 |`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
-|`Value`|string|The text|
-|`QueryContext` |[QueryContext](#querycontext)|This property is used for backend search, this is included for future feature releases, it is not currently used.
+|`Value`|string|The text.|
+|`QueryContext` |[QueryContext](#querycontext)|This property is used for backend search. It's included for future feature releases and is currently not used.
 
 ### Response types
 
-The following types are returned by the Query Response.
+The response returns the following types:
 
 #### ErrorDetail
 
-This is the same [ErrorDetail](query.md#errordetail) returned by the query API.
+This type is the same [ErrorDetail](query.md#errordetail) returned by the query API.
 
 #### QueryContext
 
-This is the same [QueryContext](query.md#querycontext) returned by the query API.
+This type is the same [QueryContext](query.md#querycontext) returned by the query API.
 
 ## Examples
 
@@ -96,7 +96,7 @@ The following examples show how to use the autocomplete operation. These example
 
 #### [SDK for .NET](#tab/sdk)
 
-This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub.  The static `OutputAutoComplete` method accepts a value for the [search parameter](#search-parameter).
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub. The static `OutputAutoComplete` method accepts a value for the [search parameter](#search-parameter).
 
 ```csharp
 /// <summary>
@@ -145,7 +145,7 @@ When you invoke the `OutputAutoComplete` method with an authenticated instance o
 OutputAutoComplete(service: serviceClient, searchTerm: "Con");
 ```
 
-The output will look something like the following:
+The output looks something like the following:
 
 ```
 OutputAutoComplete START
@@ -166,7 +166,7 @@ These classes are generated using Power Platform CLI [pac modelbuilder build](/p
 
 ##### SearchEntity class
 
-This is the same `SearchEntity` class used for the [query example](query.md#searchentity-class). In this case, you use it to set the `searchautocompleteRequest.entities` property.
+This class is the same `SearchEntity` class used for the [query example](query.md#searchentity-class). In this case, you use it to set the `searchautocompleteRequest.entities` property.
 
 ##### SearchAutoCompleteResults class
 
@@ -194,11 +194,11 @@ class SearchAutoCompleteResults
 
 ##### ErrorDetail class
 
-This is the same `ErrorDetail` class used for the [query example](query.md#errordetail-class).
+This class is the same `ErrorDetail` class used for the [query example](query.md#errordetail-class).
 
 ##### QueryContext class
 
-This is the same `QueryContext` class used for the [query example](query.md#querycontext-class).
+This class is the same `QueryContext` class used for the [query example](query.md#querycontext-class).
 
 
 #### [Web API](#tab/webapi)

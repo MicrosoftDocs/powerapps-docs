@@ -20,7 +20,7 @@ Dataverse search provides two operations you can use to retrieve data about data
 
 ## Statistics
 
-You may need to know the size of the data structure being returned to help you better optimize your query or query results and help you manage the size of your Database to manage cost.
+You might need to know the size of the data structure being returned to help you better optimize your query or query results and help you manage the size of your Database to manage cost.
 
 Search statistics provides information about:
 
@@ -69,7 +69,7 @@ When you invoke the `OutputSearchStatistics` method with an authenticated instan
 OutputSearchStatistics(service: serviceClient);
 ```
 
-The output will look something like the following:
+The output looks something like the following:
 
 ```
 OutputSearchStatistics START
@@ -219,7 +219,7 @@ Details for the indexed fields of a table.
 
 |Name|Value|Description|
 |---------|---------|---------|
-|`notprovisioned`|0|Organization is not provisioned for search.|
+|`notprovisioned`|0|Organization isn't provisioned for search.|
 |`provisioninginprogress`|1|Organization provisioning in progress|
 |`provisioned`|2|Organization provisioned for search.|
 
@@ -231,7 +231,7 @@ More information: [Manage the encryption key](/power-platform/admin/manage-encry
 
 |Name|Value|Description|
 |---------|---------|---------|
-|`Unknown`|0|Dataverse search is not provisioned.|
+|`Unknown`|0|Dataverse search isn't provisioned.|
 |`Disabled`|1|Customer managed key is disabled.|
 |`Enabled`|2|Customer managed key is enabled.|
 |`DisablingInProgress`|3|Customer managed key is in the process of being disabled.|
@@ -245,7 +245,7 @@ More information: [Securely access customer data using Customer Lockbox in Power
 
 |Name|Value|Description|
 |---------|---------|---------|
-|`Unknown`|0|Dataverse search is not provisioned.|
+|`Unknown`|0|Dataverse search isn't provisioned.|
 |`Disabled`|1|Lockbox is disabled.|
 |`Enabled`|2|Lockbox is enabled.|
 |`DisablingInProgress`|3|Lockbox is in the process of being disabled.|
@@ -332,7 +332,7 @@ When you invoke the `OutputSearchStatus` method with an authenticated instance o
 OutputSearchStatus(service: serviceClient);
 ```
 
-The output will look something like the following:
+The output looks something like the following:
 
 ```
 OutputSearchStatus START
@@ -717,7 +717,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-When search is enabled, there is more data that describes the search status for the org. See [Status response types](#status-response-types) for details.
+When search is enabled, there's more data that describes the search status for the org. See [Status response types](#status-response-types) for details.
 
 **Response**
 

@@ -1,6 +1,6 @@
 ---
 title: "Dataverse Search suggest (Microsoft Dataverse) | Microsoft Docs"
-description: "Use Dataverse search suggest to provide suggestions as the user enters text into a form field."
+description: "Use Dataverse search suggest to provide suggestions as users enter text into a form field."
 ms.date: 10/20/2023
 ms.reviewer: jdaly
 ms.topic: article
@@ -27,13 +27,13 @@ In addition to a search term, the results returned can be influenced by passing 
 |`entities`|string|The default is searching across all search–configured entities.|[`entities` parameter](#entities-parameter)|
 |`filter`|string|Filter criteria to reduce results returned.|[`filter` parameter](#filter-parameter)|
 |`fuzzy`|bool|Use fuzzy search to aid with misspellings. The default is false.|[`fuzzy` parameter](#fuzzy-parameter)|
-|`options`|string|Options are settings configured to search a search term. Eg. `"{ 'advancedsuggestenabled': 'true' }"`.|[`options` parameter](#options-parameter)|
+|`options`|string|Options are settings configured to search a search term. For example `"{ 'advancedsuggestenabled': 'true' }"`.|[`options` parameter](#options-parameter)|
 |`orderby`|string|   List of comma-separated clauses where each clause is an attribute name followed by `asc` or `desc`.|[`orderby` parameter](#orderby-parameter)|
 |`top`|int|Number of suggestions to retrieve. The default is 5.|[`top` parameter](#top-parameter)|
 
 ## Parameters
 
-Details for the parameters in the table above can be found below.
+This section contains details about the parameters introduced by the table above.
 
 
 ### `search` parameter
@@ -41,7 +41,7 @@ Details for the parameters in the table above can be found below.
 **Type**: string<br />
 **Optional**: false
 
-The text to search with. Search term must be at least three characters long and has a 100 character limit
+The text to search with. Search term must be at least three characters long and has a 100 character limit.
 
 ### `entities` parameter
 
@@ -98,11 +98,11 @@ The unescaped response contains JSON using the following properties.
 |---------|---------|---------|
 |`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
 |`Value`|[`SuggestResult`](#suggestresult)`[]`|A collection of matching records.|
-|`QueryContext` |[QueryContext](#querycontext)|The query context returned as part of response. This property is used for backend search, this is included for future feature releases, it is not currently used.|
+|`QueryContext` |[QueryContext](#querycontext)|The query context returned as part of response. This property is used for backend search. It's included for future feature releases and isn't currently used.|
 
 ### Response Types
 
-The following types are returned by the response.
+The response returns the following types:
 
 #### ErrorDetail
 
@@ -127,7 +127,7 @@ The following examples show how to use the suggest operation. Each of these exam
 
 ### [SDK for .NET](#tab/sdk)
 
-This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub. The static `OutputSearchSuggest` method will return the top three suggestions for any search term.
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub. The static `OutputSearchSuggest` method returns the top three suggestions for any search term.
 
 ```csharp
 /// <summary>
@@ -173,7 +173,7 @@ When you invoke the `OutputSearchSuggest` method with an authenticated instance 
 OutputSearchSuggest(service: serviceClient, searchTerm: "Cont");
 ```
 
-The output will look something like the following:
+The output looks something like the following:
 
 ```
 OutputSearchSuggest START
@@ -211,7 +211,7 @@ These classes are generated using Power Platform CLI [pac modelbuilder build](/p
 
 ##### ErrorDetail class
 
-This is the same `ErrorDetail` class used for the [query example](query.md#errordetail-class).
+This class is the same `ErrorDetail` class used for the [query example](query.md#errordetail-class).
 
 ##### SuggestResults class
 
@@ -262,7 +262,7 @@ public sealed class SuggestResult
 
 ##### QueryContext class
 
-This is the same `QueryContext` class used for the [query example](query.md#querycontext-class).
+This class is the same `QueryContext` class used for the [query example](query.md#querycontext-class).
 
 
 ### [Web API](#tab/webapi)

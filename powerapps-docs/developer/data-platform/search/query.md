@@ -25,7 +25,7 @@ In addition to a search term, the results returned can be influenced by passing 
 |---------|---------|---------|---------|
 |`search`|string|**Required**. The text to search with. |[search parameter](#search-parameter)|
 |`count`|bool|Whether to return the total record count.|[`count` parameter](#count-parameter) |
-|`entities`|string|Limits the scope of search to a sub-set of tables. |[entities parameter](#entities-parameter)|
+|`entities`|string|Limits the scope of search to a subset of tables. |[entities parameter](#entities-parameter)|
 |`facets`|string|Facets support the ability to drill down into data results after they've been retrieved. | [facets parameter](#facets-parameter)|
 |`filter`|string|Limits the scope of the search results returned. |[filter parameter](#filter-parameter)|
 |`options`|string|Options are settings configured to search a search term.|[`options` parameter](#options-parameter)|
@@ -35,23 +35,23 @@ In addition to a search term, the results returned can be influenced by passing 
 
 ## Parameters
 
-Details for the parameters in the table above can be found below.
+This section includes details about the parameters introduced in the table above.
 
 ### `search` parameter
 
 **Type**: string<br />
 **Optional**: false
 
-The search parameter contains the text to search. It is the only required parameter. Search term must be at least one characters long and has a 100 character limit.
+The search parameter contains the text to search. It's the only required parameter. Search term must be at least one character long and has a 100 character limit.
 
 #### Simple Search syntax
 
-By default, the search parameter supports simple search syntax as described in the table below:
+By default, the search parameter supports simple search syntax as described in the following table:
 
 | **Functionality** | **Description** |
 |---|---|
 | Boolean operators | AND operator; denoted by `+`<br/>OR operator; denoted by `|`<br/>NOT operator; denoted by `-` |
-| Precedence operators | A search term `hotel+(wifi | luxury)` will search for results containing the term `hotel` and either `wifi` or `luxury` (or both). |
+| Precedence operators | A search term `hotel+(wifi | luxury)` searches for results containing the term `hotel` and either `wifi` or `luxury` (or both). |
 | Wildcards            | Trailing wildcard are supported. For example, `Alp*` searches for "alpine". |
 | Exact matches        | A query enclosed in quotation marks `" "`.|
 
@@ -60,25 +60,25 @@ By default, the search parameter supports simple search syntax as described in t
 
 For example, an escaped phone number might look like this: `\+1\(800\)555\-1234`.
 
-Using the [`options` parameter](#options-parameter), you can enable [Lucerne Query Syntax](#lucerne-query-syntax) which enables different operators.
+Using the [`options` parameter](#options-parameter), you can enable [Lucerne Query Syntax](#lucerne-query-syntax) that enables different operators.
 
 ### `count` parameter
 
 **Type**: bool<br />
 **Optional**: true
 
-Whether to return the total record count. If this is not set the `Count` response property will be `-1`.
+Whether to return the total record count. If you don't set this parameter, the `Count` response property is `-1`.
 
 ### `entities` parameter
 
 **Type**: string<br />
 **Optional**: true
 
-By default all the tables enabled for search will be searched unless you specify a sub-set using the `entities` parameter. 
+By default all the tables enabled for search are searched unless you specify a subset using the `entities` parameter. 
 
 When you set an entity, you can also specify which columns you want to return and which columns to search. You can also include filter criteria for the table.
 
-To get a list of tables enabled for the environment use the [Search Status](statistics-status.md#status) API and look for the tables listed by  `entitylogicalname` within `entitystatusresults`.
+To get a list of tables enabled for the environment, use the [Search Status](statistics-status.md#status) API and look for the tables listed by  `entitylogicalname` within `entitystatusresults`.
 
 ### SearchEntity type
 
@@ -87,13 +87,13 @@ Use this type to compose the array of tables to pass to the `entities` parameter
 |Field Name|Type  |Description  |
 |---------|---------|---------|
 |`name`|string|Required. Logical name of the table. Specifies scope of the query.|
-|`selectColumns`|string[]|Optional. List of columns that needs to be projected when table documents are returned in response. If empty, only the table primary name will be returned.  |
-|`searchColumns`|string[]|Optional. List of columns to scope the query on.  If empty, only the table primary name will be searched on.|
+|`selectColumns`|string[]|Optional. List of columns that needs to be projected when table documents are returned in response. If empty, only the table primary name is returned.  |
+|`searchColumns`|string[]|Optional. List of columns to scope the query on.  If empty, only the table primary name is searched on.|
 |`filter`|string|Optional. Filters applied on the entity. |
 
 #### Example
 
-This is an example of some JSON data that uses the schema described above.
+The following is an example of some JSON data that uses the schema described above.
 
 ```json
 [
@@ -112,7 +112,7 @@ This is an example of some JSON data that uses the schema described above.
 ]
 ```
 
-To use this data you must escape the string and pass it as the value of the `entities` parameter in the body of the request:
+To use this data, you must escape the string and pass it as the value of the `entities` parameter in the body of the request:
 
 ```json
 {
@@ -127,7 +127,7 @@ To use this data you must escape the string and pass it as the value of the `ent
 **Type**: string<br />
 **Optional**: true
 
-The facet parameter is optional.  The string may contain parameters to customize the faceting, expressed as comma-separated name-value pairs. Use facets to group your search results.
+The facet parameter is optional.  The string might contain parameters to customize the faceting, expressed as comma-separated name-value pairs. Use facets to group your search results.
 
 
 #### Facet definition
@@ -149,11 +149,11 @@ Each item in the array represents a different way to group the data returned by 
 
 |Facet Type|Description|
 |---------|---------|
-|`count`|The maximum number of facet terms. The default is 10. There is no upper limit|
+|`count`|The maximum number of facet terms. The default is 10. There's no upper limit|
 |`sort` |Can be set to `count`, `-count`, `value`, `-value`. Use `count` to sort descending by `count`. Use `-count` to sort ascending by `count`. Use `value` to sort ascending by `value`. Use `-value` to sort descending by `value`.|
-|`values`|Set to pipe-delimited numeric or Edm.DateTimeOffset values specifying a dynamic set of facet entry values.The values must be listed in sequential, ascending order to get the expected results.|
-|`interval`|An integer interval greater than 0 for numbers, or minute, hour, day, week, month, quarter, year for date time values.|
-|`timeoffset`|Set to (`[+-]hh:mm`, `[+-]hhmm`, or `[+-]hh`). If used, the timeoffset parameter must be combined with the interval option, and only when applied to a field of type `Edm.DateTimeOffset`. The value specifies the UTC time offset to account for in setting time boundaries.|
+|`values`|Set to pipe-delimited numeric or `Edm.DateTimeOffset` values specifying a dynamic set of facet entry values. The values must be listed in sequential, ascending order to get the expected results.|
+|`interval`|An integer interval greater than zero for numbers, or minute, hour, day, week, month, quarter, year for date time values.|
+|`timeoffset`|Set to (`[+-]hh:mm`, `[+-]hhmm`, or `[+-]hh`). If used, the `timeoffset` parameter must be combined with the interval option, and only when applied to a field of type `Edm.DateTimeOffset`. The value specifies the UTC time offset to account for in setting time boundaries.|
 
 
 > [!NOTE]
@@ -178,7 +178,7 @@ More information:
 **Type**: string<br />
 **Optional**: true
 
-Filters limit the scope of the search results returned. Use filters to exclude unwanted results. This is a top level filter which helps filter common columns accross multiple entities like `createdon` or `modifiedon` etc.
+Filters limit the scope of the search results returned. Use filters to exclude unwanted results. This is a top level filter that helps filter common columns across multiple entities like `createdon` or `modifiedon` etc.
 
 Apply filters using this syntax: `<attribute logical name> <filter>` where the table logical name specifies the entity the filter should be applied to.
 
@@ -208,14 +208,14 @@ Filters use the following query operators:
 
 Options are settings configured to search a search term. Set the `options` value to a serialized `Dictionary<string, string>` of these options, such as `"{'querytype': 'lucene', 'searchmode': 'all', 'besteffortsearchenabled': 'true', 'grouprankingenabled': 'true'}"`.
 
-These are the options:
+The following table lists the options:
 
 |Option|Description  |
 |---------|---------|
 |`querytype`| Values can be `simple` or `lucene` [Lucerne Query Syntax](#lucerne-query-syntax)|
 |`besteffortsearchenabled`|Enables intelligent query workflow to return probable set of results if no good matches are found for the search request terms.|
 |`groupranking`|Enable ranking of results in the response optimized for display in search results pages where results are grouped by table.|
-|`searchmode`|When specified as `all` the search terms must be matched in order to consider the document as a match. Setting its value to `any` will default to matching any word in the search term.|
+|`searchmode`|When specified as `all` the search terms must be matched in order to consider the document as a match. Setting its value to `any` defaults to matching any word in the search term.|
 
 #### Lucerne Query Syntax
 
@@ -225,8 +225,8 @@ The Lucene query syntax supports the following functionality:
 |---|---|
 | Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by `AND`, `&&`, `+`<br/>OR operator; denoted by `OR`, `||`<br/>NOT operator; denoted by `NOT`, `!`, `–` |
 | Wildcards| In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – `alp*`<br/>Leading wildcard - `/.*pine/` |
-| Fuzzy search| Supports queries misspelled by up to two characters.<br/>`Uniersty~` will return `University`<br/>`Blue~1` will return `glue`, `blues` |
-| Term boosting| Weighs specific terms in a query differently.<br/>`Rock^2 electronic` will return results where the matches to `rock` are more important than matches to `electronic`. |
+| Fuzzy search| Supports queries misspelled by up to two characters.<br/>`Uniersty~` returns `University`<br/>`Blue~1` returns `glue`, `blues` |
+| Term boosting| Weighs specific terms in a query differently.<br/>`Rock^2 electronic` returns results where the matches to `rock` are more important than matches to `electronic`. |
 | Proximity search| Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, `"airport hotel"~5` returns results where `airport` and `hotel` are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
 | Regular expression (regex) search | For example, `/[mh]otel/`  matches `motel` or `hotel`. |
 
@@ -235,11 +235,11 @@ The Lucene query syntax supports the following functionality:
 **Type**: string<br />
 **Optional**: true
 
-Use the `orderby` parameter to override the default ordering. By default, results are listed in descending order of relevance score (`@search.score`). For results with identical scores, the ordering will be random. You can only use this parameter when query type is lucene with wildcard characters in the query string.
+Use the `orderby` parameter to override the default ordering. By default, results are listed in descending order of relevance score (`@search.score`). For results with identical scores, the ordering is random. You can only use this parameter when query type is lucene with wildcard characters in the query string.
 
 Use a list of comma-separated clauses where each clause consists of a column name followed by `asc` (*ascending*, which is the default) or `desc` (descending).
 
-For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, `modifiedon`, `createdon`, `@search.score`).  For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
+For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, `modifiedon`, `createdon`, `@search.score`). For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
 `"orderby": ["@search.score desc", "modifiedon desc"]`
 
@@ -252,7 +252,7 @@ If the query request includes a filter for a specific table type, `orderby` can 
 
 You can use these parameters together with the [count parameter](#count-parameter) to create a paged experience.
 
-By default, up to 50 results will be returned at a time. You can use `top` to raise it as high as 100, but more commonly you will use `top` to specify a smaller result set, such as 10, and then use `skip` to bypass previously returned results when the user moves to the next page.
+By default, up to 50 results are returned at a time. You can use `top` to raise it as high as 100, but more commonly you'll use `top` to specify a smaller result set, such as 10, and then use `skip` to bypass previously returned results when the user moves to the next page.
 
 ## Response
 
@@ -266,12 +266,12 @@ The unescaped response contains JSON using the following properties.
 |`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
 |`Value`|[`QueryResult`](#queryresult)`[]`|A collection of matching records.|
 |`Facets`|`Dictionary<string,` [FacetResult](#facetresult)`[]>`|If facets were requested in the query, a dictionary of facet values.|
-|`QueryContext` |[QueryContext](#querycontext)|This property is used for backend search, this is included for future feature releases, it is not currently used.|
+|`QueryContext` |[QueryContext](#querycontext)|This property is used for backend search. It's included for future feature releases and isn't currently used.|
 |`Count`|long| If `"Count": true` is included in the body of the request, the count of all documents that match the search, ignoring top and skip|
 
 ### Response Types
 
-The following types are returned by the Query Response.
+This section describes the types returned with the response.
 
 #### ErrorDetail
 
@@ -281,7 +281,7 @@ The Azure Cognitive search error returned as part of the response.
 |---------|---------|---------|
 |`code`|string|The error code.|
 |`message`|string|The error message.|
-|`propertybag`|`Dictionary<string, object>`|Additional error information.|
+|`propertybag`|`Dictionary<string, object>`|More error information.|
 
 #### QueryResult
 
@@ -303,31 +303,31 @@ A facet query result that reports the number of documents with a field falling w
 |Name|Type|Description|
 |---------|---------|---------|
 |`count`|long?|The count of documents falling within the bucket described by this facet.|
-|`from`|object|Value indicating the inclusive lower bound of the facet's range, or null to indicate that there is no lower bound.|
-|`to`|object|Value indicating the exclusive upper bound of the facet's range, or null to indicate that there is no upper bound.|
+|`from`|object|Value indicating the inclusive lower bound of the facet's range, or null to indicate that there's no lower bound.|
+|`to`|object|Value indicating the exclusive upper bound of the facet's range, or null to indicate that there's no upper bound.|
 |`type`|`Value` \| `Range`|Type of the facet.|
 |`value`|object|Value of the facet, or the inclusive lower bound if it's an interval facet.|
-|`optionalvalue`|object|Additional or optional value of the facet, will be populated while faceting on lookups.|
+|`optionalvalue`|object|Another or optional value of the facet, populated while faceting on lookups.|
 
 
 #### QueryContext
 
-The query context returned as part of response.
+The query context returned as part of response. This property is used for backend search. It's included for future feature releases and isn't currently used.
 
 |Name|Type|Description|
 |---------|---------|---------|
 |`originalquery`|string|The query string as specified in the request.|
-|`alteredquery`|string|The query string that Dataverse search used to perform the query. Dataverse search uses the altered query string if the original query string contained spelling mistakes or did not yield optimal results.|
-|`reason`|string[]|The reason behind query alter decision by Dataverse search.|
-|`spellsuggestions`|string[]|The spell suggestion that are the likely words that represent user's intent. This will be populated only when the query was altered by Dataverse search due to spell check.|
+|`alteredquery`|string|The query string that Dataverse search used to perform the query. Dataverse search uses the altered query string if the original query string contained spelling mistakes or didn't yield optimal results.|
+|`reason`|string[]|The reasons behind query alter decision by Dataverse search.|
+|`spellsuggestions`|string[]|The spell suggestion that is the likely words that represent user's intent. Populated only when Dataverse alters the query search due to spell check.|
 
 ## Examples
 
-The following examples shows how to use the query operation. These examples perform a search operation on the account and contact tables `name` and `fullname` columns respectively, for records created later than August 15, 2022 and orders the top seven results by the `createdon` field, descending.
+The following examples show how to use the query operation. These examples perform a search operation on the account and contact tables `name` and `fullname` columns respectively, for records created later than August 15, 2022 and orders the top seven results by the `createdon` field, descending.
 
 ### [SDK for .NET](#tab/sdk)
 
-This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub.  The static `OutputSearchQuery` method accepts a value for the [search parameter](#search-parameter).
+This example is from the [SDK for .NET search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Search) on GitHub. The static `OutputSearchQuery` method accepts a value for the [search parameter](#search-parameter).
 
 ```csharp
 /// <summary>
@@ -409,7 +409,7 @@ When you invoke the `OutputSearchQuery` method with an authenticated instance of
 OutputSearchQuery(service: serviceClient, searchTerm: "Contoso");
 ```
 
-The output will look something like the following:
+The output looks something like the following:
 
 ```console
 OutputSearchQuery START
@@ -498,7 +498,7 @@ public sealed class SearchQueryResults
     public Dictionary<string, IList<FacetResult>>? Facets { get; set; }
 
     /// <summary>
-    /// The query context returned as part of response. This property is used for backend search, this is included for future feature releases, it is not currently used.
+    /// The query context returned as part of response. This property is used for backend search. It is included for future feature releases and is not currently used.
     /// </summary>
     public QueryContext? QueryContext { get; set; }
 
@@ -641,7 +641,7 @@ public enum FacetType
 
 ##### QueryContext class
 
-The query context returned as part of response. This property is used for backend search, this is included for future feature releases, it is not currently used.
+Used to deserialize the [QueryContext](#querycontext) data.
 
 ```csharp
 public sealed class QueryContext

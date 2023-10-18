@@ -53,7 +53,7 @@ The `search` property value contains the term to be searched for and has a
 
 A successful search response returns an HTTP status of 200 and consists of:
 
-- `value`: a list of tables. By default, 50 results are returned. This also
+- `value`: a list of tables. By default, 50 results are returned. This property also
     includes search highlights, which indicate matches to the `search` property
     value contained within the `crmhit` tag of the response.
 
