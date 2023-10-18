@@ -79,7 +79,7 @@ The end of the batch request must contain a termination indicator like the follo
 ```
 
 > [!NOTE]
-> The HTTP protocol requires all line endings in $batch request payloads must be [CRLF](https://developer.mozilla.org/docs/Glossary/CRLF).
+> The HTTP protocol requires all line endings in $batch request payloads be [CRLF](https://developer.mozilla.org/docs/Glossary/CRLF).
 > Other line endings may cause deserialization errors. For example: `System.ArgumentException: Stream was not readable.`. If you cannot use CRLF, you can add two non-CRLF line endings at the end of the request payload to resolve most deserialization errors.
 
 The following example is a batch request without change sets. This example:
