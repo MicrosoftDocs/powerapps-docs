@@ -15,7 +15,7 @@ contributors:
   - mduelae
 ---
 
-# AI Copilot overview (preview)
+# AI Copilot overview
 
 [This article is prerelease documentation and is subject to change.]
 
@@ -30,7 +30,6 @@ To learn how to use the new AI features in Power Apps, see:
 - [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai)
 
 > [!IMPORTANT]
-> - To use this capability your environment must be in the US region.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to the [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
