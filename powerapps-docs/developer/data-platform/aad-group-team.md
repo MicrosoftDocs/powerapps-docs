@@ -192,7 +192,7 @@ Members of an Entra ID group can query all the security roles that are directly 
 **Request:**
 
 ```http
-GET [Organization URI]/api/data/v9.0/RetrieveEntra IDUserRoles(DirectoryObjectId=<user object ID)?$select=_parentrootroleid_value,name
+GET [Organization URI]/api/data/v9.0/RetrieveAadUserRoles(DirectoryObjectId=<user object ID)?$select=_parentrootroleid_value,name
 ```
 
 **Response:**
