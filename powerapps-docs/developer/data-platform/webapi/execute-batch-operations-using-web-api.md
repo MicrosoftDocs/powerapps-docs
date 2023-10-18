@@ -68,12 +68,19 @@ Each item within the batch must be preceded by the batch identifier with a `Cont
 Content-Type: application/http
 Content-Transfer-Encoding: binary
 ```  
-  
+
+> [!NOTE]
+> Only payload items with a batch identifer matching the batch identifer sent in the Content-Type header will be executed. If no payload item use the Content-Type batch identifer, the $batch request will be successful without executing any payload item.
+
 The end of the batch request must contain a termination indicator like the following example:  
   
 ```  
 --batch_<unique identifier>--
 ```
+
+> [!NOTE]
+> Per the HTTP protocol, all line endings in $bacth request payloads must be CRLF — Carriage Return (ASCII 13, \r) Line Feed (ASCII 10, \n).
+> Other line endings may cause deserialization errors (ex.: `System.ArgumentException: Stream was not readable.`). If you must send non-CRLF line endings, adding 2 non-CRLF line endings at the end of the $batch request payload will resolve deserialization errors.
 
 The following example is a batch request without change sets. This example:
 - Creates three task records associated with an account with `accountid` equal to `00000000-0000-0000-0000-000000000001`.
