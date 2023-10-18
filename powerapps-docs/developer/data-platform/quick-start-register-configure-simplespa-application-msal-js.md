@@ -54,7 +54,7 @@ Use the instructions in [View developer resources](view-download-developer-resou
 
 ## Register your application
 
-1. From [Power Platform admin center](https://admin.powerplatform.microsoft.com) in the left navigation expand **Admin centers** and select **AMicrosoft Entra ID**.
+1. From [Power Platform admin center](https://admin.powerplatform.microsoft.com) in the left navigation expand **Admin centers** and select **Microsoft Entra ID**.
 
    :::image type="content" source="media/azure-active-directory-from-ppac.png" alt-text="Entra ID from Power Platform Admin Center":::
 
