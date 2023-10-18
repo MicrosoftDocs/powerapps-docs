@@ -23,7 +23,7 @@ Bringing the power of AI Copilot to both app makers and their end-users in Power
 
 To learn how to use the new AI features in Power Apps, see:
 
-- [Build apps through conversation (preview)](ai-conversations-create-app.md)
+- [Build apps through conversation](ai-conversations-create-app.md)
 - [Continue editing your app with Copilot (preview)](ai-edit-app.md)
 - [Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 - [Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
@@ -36,7 +36,7 @@ To learn how to use the new AI features in Power Apps, see:
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in the process of rolling out, and may not be available in your region yet.
 > - This capability may be subject to usage limits or capacity throttling.
-> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Transparency notes for Power Apps](../common/transparency-note.md)
+> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md)
 
 ## Prerequisites for the AI features in Power Apps
 
