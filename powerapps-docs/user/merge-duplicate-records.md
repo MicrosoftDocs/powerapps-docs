@@ -76,6 +76,7 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 >   - The column is `Choice` or `MultiSelectPickList` and it has either a parent choice or child choice column.
 >   - The column is `parentaccountid` on the Account table; this is a system setting and cannot be changed. 
 >   - The column is `parentcustomerid` on the  Contact Table; this is a system setting and cannot be changed
+>   - The column is of type `Owner` (example: `ownerid`)
 
 
 
