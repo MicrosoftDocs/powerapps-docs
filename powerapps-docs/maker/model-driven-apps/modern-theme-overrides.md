@@ -16,10 +16,10 @@ search.audienceType:
 
 # Use modern themes
 
-Users of model-driven apps with the [modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md) enabled will see updated styling aligned to the Microsoft Fluent 2 design system. Because this modern refreshed look comes with a new theming system, [classic theming](create-themes-organization-branding.md) isn't honored; however, makers can modify the colors used by the app header for users who have enabled the modern, refreshed look. In this article, you learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.
+Users of model-driven apps with the [modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md) enabled experience updated styling aligned to the Microsoft Fluent 2 design system. Because this modern refreshed look comes with a new theming system, [classic theming](create-themes-organization-branding.md) isn't honored; however, makers can modify the colors used by the app header for users who have enabled the modern, refreshed look. In this article, you learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.
 
 > [!NOTE]
-> Modern themes currently only support customizing the app header. Other customizations like customizing the Business Process Flow control are not available.
+> Modern themes currently only support customizing the app header. Other customizations like customizing the business process flow control aren't available.
 
 ## Modify the app header colors
 
@@ -30,7 +30,7 @@ With the [modern, refreshed look enabled](../../user/modern-fluent-design.md#tur
 
 ### Overview of the XML resource to use for app header colors
 
-The first step to modifying the app header styling is to create an XML file with your various color selections. Later, you'll create a XML web resource with one or more of the following attributes defined inside an AppHeaderColors tag.
+The first step to modifying the app header styling is to create an XML file with your various color selections. Later, you'll create an XML web resource with one or more of the following attributes defined inside an `AppHeaderColors` tag.
 
 - `Background` – The background color of the app header. This element must be defined for any changes to take effect.
 - `Foreground` – The text color of the app header. If this isn't specified, the system attempts to calculate an appropriate color that has sufficient contrast to the provided background color.
@@ -69,7 +69,7 @@ As an example, this XML specifies a green background color for the app header wi
    - **Name**. Enter the unique name for the web resource.
    - Type: **Data (XML)**
 1. Select **Choose file**, browse to and select the XML file you created earlier with the theme.
-1. Select **Save**. You will publish this customization with the steps in the next section. 
+1. Select **Save**. You publish this customization with the steps in the next section.
 
 ### Apply custom app header colors to apps in your environment
 
