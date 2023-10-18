@@ -80,7 +80,7 @@ The end of the batch request must contain a termination indicator like the follo
 
 > [!NOTE]
 > Per the HTTP protocol, all line endings in $batch request payloads must be CRLF — _Carriage Return_ (ASCII 13, \r) _Line Feed_ (ASCII 10, \n).
-> Other line endings may cause deserialization errors (ex.: `System.ArgumentException: Stream was not readable.`). If you cannot use CRLF, adding 2 non-CRLF line endings at the end of the $batch request payload will resolve most deserialization errors.
+> Other line endings may cause deserialization errors (ex.: `System.ArgumentException: Stream was not readable.`). If you cannot use CRLF, adding 2 non-CRLF line endings at the end of the request payload will resolve most deserialization errors.
 
 The following example is a batch request without change sets. This example:
 - Creates three task records associated with an account with `accountid` equal to `00000000-0000-0000-0000-000000000001`.
