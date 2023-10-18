@@ -20,39 +20,39 @@ contributors:
 
 Client applications must support the use of OAuth to access data using the Web API. OAuth enables two-factor authentication (2FA) or certificate-based authentication for server-to-server application scenarios.
 
-OAuth requires an identity provider for authentication. For Dataverse, the identity provider is Azure Active Directory (AD). To authenticate with AD using a Microsoft work or school account, use the [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview#languages-and-frameworks) (MSAL).
+OAuth requires an identity provider for authentication. For Dataverse, the identity provider is Entra ID. To authenticate using a Microsoft work or school account, use the [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview#languages-and-frameworks) (MSAL).
 
 > [!NOTE]
-> This topic will introduce common concepts related to connecting to Dataverse using OAuth with authentication libraries. This content will focus on how a developer can connect to Dataverse but not on the inner workings of OAuth or the libraries. For complete information related to authentication see the Azure Active Directory documentation. [What is authentication?](/azure/active-directory/develop/authentication-scenarios) is a good place to start.
+> This topic will introduce common concepts related to connecting to Dataverse using OAuth with authentication libraries. This content will focus on how a developer can connect to Dataverse but not on the inner workings of OAuth or the libraries. For complete information related to authentication see the Entra ID documentation. [What is authentication?](/azure/active-directory/develop/authentication-scenarios) is a good place to start.
 >
 > Samples we provide are pre-configured with appropriate registration values so that you can run them without generating your own app registration. When you publish your own apps, you must use your own registration values.
 
 ## App Registration
 
-When you connect using OAuth, you must first register an application in your Azure AD tenant. How you should register your app depends on the type of app you want to make.
+When you connect using OAuth, you must first register an application in your Entra ID tenant. How you should register your app depends on the type of app you want to make.
 
-In all cases, start with basic steps to register an app described in the AD article: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). For Dataverse specific instructions see [Walkthrough: Register an app with Azure Active Directory > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
+In all cases, start with basic steps to register an app described in the article: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). For Dataverse specific instructions see [Walkthrough: Register an app with Entra ID > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
 
 The decisions you need to make in this step mostly depend on the Application Type choice (see below).
 
 ### Types of app registration
 
-When you register an app with Azure AD one of the decisions, you must make is the application type. There are two types of applications you can register:
+When you register an app with Entra ID one of the decisions, you must make is the application type. There are two types of applications you can register:
 
 | Application type | Description|
 |------------------|------------|
 | Web app /API | **Web client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that executes all code on a web server.<br /><br />**User-agent-based client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that downloads code from a web server and executes within a user-agent (for instance, a web browser), such as a Single Page Application (SPA). |
 |Native|A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that is installed natively on a device. |
 
-When you select **Web app /API** you must provide a **Sign-On URL** which is the URL where Azure AD sends the authentication response, including a token if authentication was successful. While you develop an app, this URL is usually set to `https://localhost/appname:[port]` so you can develop and debug your app locally. When you publish your app, you need to change this value to the published URL of the app.
+When you select **Web app /API** you must provide a **Sign-On URL** which is the URL where Entra ID sends the authentication response, including a token if authentication was successful. While you develop an app, this URL is usually set to `https://localhost/appname:[port]` so you can develop and debug your app locally. When you publish your app, you need to change this value to the published URL of the app.
 
-When you select **Native**, you must provide a Redirect URI. This URL is a unique identifier to which Azure AD will redirect the user-agent in an OAuth 2.0 request. This URL is typically a value formatted like so: `app://<guid>`.
+When you select **Native**, you must provide a Redirect URI. This URL is a unique identifier to which Entra ID will redirect the user-agent in an OAuth 2.0 request. This URL is typically a value formatted like so: `app://<guid>`.
 
 ### Giving access to Dataverse
 
 If your app is a client that allows the authenticated user to perform operations, you must configure the application to have the Access Dynamics 365 as organization users delegated permission.
 
-For specific steps to set permissions, see [Walkthrough: Register an app with Azure Active Directory > Apply Permissions](walkthrough-register-app-azure-active-directory.md).
+For specific steps to set permissions, see [Walkthrough: Register an app with Entra ID > Apply Permissions](walkthrough-register-app-azure-active-directory.md).
 
 <!-- TODO Verify this -->
 
@@ -70,7 +70,7 @@ More information: [Connect as an app](#connect-as-an-app)
 
 ## Use authentication libraries to connect
 
-Use one of the Microsoft-supported Azure Active Directory authentication client libraries to connect to Dataverse such as [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/reference-v2-libraries). That library is available for various platforms as described in the provided links.
+Use one of the Microsoft-supported Entra ID authentication client libraries to connect to Dataverse such as [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/reference-v2-libraries). That library is available for various platforms as described in the provided links.
 
 > [!NOTE]
 > Azure Active Directory Authentication Library (ADAL) is no longer actively receiving updates and is scheduled to be supported only until June, 2022. MSAL is the recommended authentication library to use for projects.
@@ -186,7 +186,7 @@ class OAuthMessageHandler : DelegatingHandler
                 throw;
             }
         }
-        //Note that an Azure AD access token has finite lifetime, default expiration is 60 minutes.
+        //Note that an Entra ID access token has finite lifetime, default expiration is 60 minutes.
         authHeader = new AuthenticationHeaderValue("Bearer", authBuilderResult.AccessToken);
     }
 
@@ -282,7 +282,7 @@ Some apps you will create are not intended to be run interactively by a user. Fo
 
 While you could achieve these scenarios using credentials for an ordinary user, that user account would need to use a paid license. This isn't the recommended approach.
 
-In these cases you can create a special application user which is bound to an Azure Active Directory registered application and use either a key secret configured for the app or upload a [X.509](https://www.itu.int/rec/T-REC-X.509/en) certificate. Another benefit of this approach is that it doesn't consume a paid license.
+In these cases you can create a special application user which is bound to an Entra ID registered application and use either a key secret configured for the app or upload a [X.509](https://www.itu.int/rec/T-REC-X.509/en) certificate. Another benefit of this approach is that it doesn't consume a paid license.
 
 ### Requirements to connect as an app
 
@@ -294,7 +294,7 @@ To connect as an app you will need:
 
 #### Register your app
 
-When registering an app you follow many of the same steps described in [Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md), with the following exceptions:
+When registering an app you follow many of the same steps described in [Walkthrough: Register an app with Entra ID](walkthrough-register-app-azure-active-directory.md), with the following exceptions:
 
 - You do not need to grant the **Access Dynamics 365 as organization users** permission.
 
@@ -344,13 +344,13 @@ The procedure to create this user is different from creating a licensed user. Us
    | Field              | Value                                                                  |
    | ------------------ | ---------------------------------------------------------------------- |
    | **User Name**      | A name for the user                                                    |
-   | **Application ID** | The Application ID value for the application registered with Azure AD. |
+   | **Application ID** | The Application ID value for the application registered with Entra ID. |
    | **Full Name**      | The name of your application.                                          |
    | **Primary Email**  | The email address for the user.                                        |
 
    The **Application ID URI** and **Azure AD Object ID** fields are locked and you cannot set values for these fields.
 
-   When you create this user the values for these fields will be retrieved from Azure AD based on the **Application ID** value when you save the user.
+   When you create this user the values for these fields will be retrieved from Entra ID based on the **Application ID** value when you save the user.
 
 5. Associate the application user with the custom security role you created.
 
