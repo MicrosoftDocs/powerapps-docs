@@ -1,7 +1,7 @@
 ---
 title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
-ms.date: 01/14/2023
+ms.date: 10/18/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -69,8 +69,8 @@ Content-Type: application/http
 Content-Transfer-Encoding: binary
 ```  
 
-> [!NOTE]
-> Only payload items with a batch identifer matching the batch identifer sent in the `Content-Type` header will be executed. If no payload item uses the `Content-Type` batch identifer, the batch request will be successful without executing any payload item.
+> [!IMPORTANT]
+> Only payload items with a batch identifier matching the batch identifier sent in the `Content-Type` header will be executed. If no payload item uses the `Content-Type` batch identifier, the batch request will succeed without executing any payload item.
 
 The end of the batch request must contain a termination indicator like the following example:  
   
@@ -79,8 +79,8 @@ The end of the batch request must contain a termination indicator like the follo
 ```
 
 > [!NOTE]
-> Per the HTTP protocol, all line endings in $batch request payloads must be CRLF — _Carriage Return_ (ASCII 13, \r) _Line Feed_ (ASCII 10, \n).
-> Other line endings may cause deserialization errors (ex.: `System.ArgumentException: Stream was not readable.`). If you cannot use CRLF (ex.: using Postman), adding 2 non-CRLF line endings at the end of the request payload will resolve most deserialization errors.
+> The HTTP protocol requires all line endings in $batch request payloads must be [CRLF](https://developer.mozilla.org/docs/Glossary/CRLF).
+> Other line endings may cause deserialization errors. For example: `System.ArgumentException: Stream was not readable.`. If you cannot use CRLF, you can add two non-CRLF line endings at the end of the request payload to resolve most deserialization errors.
 
 The following example is a batch request without change sets. This example:
 - Creates three task records associated with an account with `accountid` equal to `00000000-0000-0000-0000-000000000001`.
