@@ -20,7 +20,7 @@ contributors:
 
 Client applications must support the use of OAuth to access data using the Web API. OAuth enables two-factor authentication (2FA) or certificate-based authentication for server-to-server application scenarios.
 
-OAuth requires an identity provider for authentication. For Dataverse, the identity provider is Entra ID. To authenticate with AD using a Microsoft work or school account, use the [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview#languages-and-frameworks) (MSAL).
+OAuth requires an identity provider for authentication. For Dataverse, the identity provider is Entra ID. To authenticate using a Microsoft work or school account, use the [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview#languages-and-frameworks) (MSAL).
 
 > [!NOTE]
 > This topic will introduce common concepts related to connecting to Dataverse using OAuth with authentication libraries. This content will focus on how a developer can connect to Dataverse but not on the inner workings of OAuth or the libraries. For complete information related to authentication see the Entra ID documentation. [What is authentication?](/azure/active-directory/develop/authentication-scenarios) is a good place to start.
@@ -31,7 +31,7 @@ OAuth requires an identity provider for authentication. For Dataverse, the ident
 
 When you connect using OAuth, you must first register an application in your Entra ID tenant. How you should register your app depends on the type of app you want to make.
 
-In all cases, start with basic steps to register an app described in the AD article: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). For Dataverse specific instructions see [Walkthrough: Register an app with Entra ID > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
+In all cases, start with basic steps to register an app described in the article: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). For Dataverse specific instructions see [Walkthrough: Register an app with Entra ID > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
 
 The decisions you need to make in this step mostly depend on the Application Type choice (see below).
 
