@@ -19,7 +19,7 @@ ms.author: "matp"
 search.audienceType: 
   - maker
 ---
-# Behavior and format of the Date and Time column
+# Behavior and format of the Date and time column
 
 In Microsoft Dataverse, you can specify how date and time values are shown to users and how they are adjusted for time zones.
 
@@ -39,7 +39,7 @@ The user's time zone is set in [personal options](../../user/set-personal-option
 
 ## Format
 
-All datetime columns have a time portion unless its behavior is **Date Only**. **Format** determines whether to display the time portion of the value.
+All date and time columns have a time portion unless its behavior is **Date Only**. **Format** determines whether to display the time portion of the value.
 
 - **Date and time**: Displays the date and time of the value.
 - **Date only**: Displays the date portion of the value only.
@@ -47,7 +47,7 @@ All datetime columns have a time portion unless its behavior is **Date Only**. *
 > [!NOTE]
 > Users can still change the time portion if the **Format** is **Date Only**. For example, with Web API calls or by using a control that has the time portion. This is different from **Date only** **Behavior**, where the time portion is not stored at all.
 
-### Usage guidelines
+## Usage guidelines
 
 Use **Time zone independent** behavior when time zone information isn't required, such as hotel check-in times. With this selection, users in all time zones see the same date and time value.
 
