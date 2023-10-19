@@ -52,7 +52,7 @@ When you share a model-driven app, you can share it with all members of one or m
    :::image type="content" source="media/share-model-driven-app/share-model-driven-app.png" alt-text="Assign security roles to app":::
 
    > [!IMPORTANT]
-   > If your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create or edit a security role for your app](#create-or-edit-a-security-role-for-your-app)
+   > If your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create or edit a security role for your app](#create-or-edit-a-security-role-for-the-app)
    - To assign an individual user or team, select the user name or team from the **People** list.
    :::image type="content" source="media/share-model-driven-app/share-user.png" alt-text="Assign specific users to a model-driven app":::
    
