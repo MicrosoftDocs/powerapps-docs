@@ -24,7 +24,7 @@ search.audienceType:
 In Microsoft Dataverse, you can specify how date and time values are shown to users and how they are adjusted for time zones.
 
 Two options are available for date and time columns.
-1. **Behavior**: Determines whether to adjust values for time zones.
+1. **Behavior**: Whether to adjust values for time zones.
 2. **Format**: Whether to display the time portion of the value.
 
 ## Behavior
@@ -133,7 +133,7 @@ JavaScript Date values always have a time component. That's why **Date only** be
 | -------- | ------ | --------------------------------- |
 | Date only | - | 2023-10-15 00:00 (browser time zone) |
 
-> [!WARNING]
+> [!NOTE]
 > JavaScript Date values are affected by the browser's time zone, which comes from OS settings.
 > For **User local** behavior, the Client API result should be interpreted as a UTC value. Use `Date.getUTCDate()`, `Date.getUTCHours()`, etc. to work with it. To get what the user sees, apply [getTimeZoneOffsetMinutes](../component-framework/reference/usersettings/gettimezoneoffsetminutes.md). Do not use `Date.getDate()`, `Date.getHours()`, etc. because these will show the value in the browser's time zone.
 > For **Time zone independent** and **Date only** behavior, the Client API result should be interpreted as a value in the browser's time zone. Use `Date.getDate()`, `Date.getHours()`, etc. to work with it. Do not use `Date.getUTCDate()`, `Date.getUTCHours()`, etc. because you don't have to adjust for any time zones.
