@@ -20,7 +20,7 @@ ms.reviewer: mduelae
 
 [!INCLUDE [responsible-ai-features](../../includes/responsible-ai-features.md)]
 
-- [Build apps through conversation (preview)](../canvas-apps/ai-conversations-create-app.md)
+- [Build apps through conversation](../canvas-apps/ai-conversations-create-app.md)
 - [FAQ about building apps through conversation](faqs-build-apps-conversation.md)
 - [Create an app description with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)
 - [FAQ about generating app descriptions with Copilot](ai-app-descriptions-faq.md)
