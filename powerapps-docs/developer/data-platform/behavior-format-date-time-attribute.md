@@ -291,7 +291,7 @@ In Unified Client, time zone conversion is done on the client side. If a user in
 
 To account for this difference, you can:
 
-- Get the user's time zone offset with [getTimeZoneOffsetMinutes](../component-framework/reference/usersettings/gettimezoneoffsetminutes.md) and modify your scripts to account for it.
+- Get the user's time zone offset with [Component Framework UserSettings.getTimeZoneOffsetMinutes method](../component-framework/reference/usersettings/gettimezoneoffsetminutes.md) or [Xrm.Utility.getGlobalContext().userSettings.getTimeZoneOffsetMinutes method](../model-driven-apps/clientapi/reference/Xrm-Utility/getGlobalContext/userSettings.md#gettimezoneoffsetminutes-method) and modify your scripts to account for it.
 - Change the column behavior from `UserLocal` to `TimeZoneIndependent` so that entered times aren't adjusted. This is only possible if time zones aren't applicable for the column.
 
 
