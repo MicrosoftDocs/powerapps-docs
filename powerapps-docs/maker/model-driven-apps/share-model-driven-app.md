@@ -26,7 +26,7 @@ Share a model-driven app to make it available so other users can play it. Sharin
 
 1. [Identify the security roles to use for the app](#model-driven-app-sharing-basics)
 1. [Assign security roles or people to a model-driven app](#assign-security-roles-or-people-to-a-model-driven-app)
-1. [Share the link to your app](#share-the-link-to-your-app)
+1. [Share the link to the app](#share-the-link-to-the-app)
 
 :::image type="content" source="media/share-model-driven-app/share-model-driven-app.png" alt-text="Share a model-driven app in Power Apps" lightbox="media/share-model-driven-app/share-model-driven-app.png":::
 
@@ -134,8 +134,7 @@ To add a security role to your solution, follow these steps:
 
 This will ensure that the solution now contains the security role for import into other environments. -->
 
-
-## Share the link to your app
+## Share the link to the app
 
 Unlike sharing canvas apps, sharing model-driven apps doesn't currently send an email with a link to the app.
 
@@ -162,7 +161,7 @@ There are a few key environment and licensing prerequisites required when sharin
 
 ## About predefined security roles
 
-There are several predefined roles available with Dataverse. To run apps that use only out-of-the-box tables, there's the Basic User security role, which can run an app within the environment and perform common tasks for the records that they own. More information: [Predefined security roles](/power-platform/admin/database-security#predefined-security-roles)
+There are several predefined roles available with Dataverse. To run apps that use only out-of-the-box tables, there's the Basic User security role, where members can play the app within the environment and perform common tasks for the records that they own. More information: [Predefined security roles](/power-platform/admin/database-security#predefined-security-roles)
 
 <!-- >
 |Security role  |Privileges<sup>1</sup>  |Description |
@@ -179,7 +178,7 @@ There are several predefined roles available with Dataverse. To run apps that us
 
 Administrators can use their organization’s Azure Active Directory (Azure AD) groups to manage access rights for licensed Dataverse users. Both types of Azure AD groups—Microsoft 365 and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams#about-group-teams)
 
-### Next steps
+### See also
 
 [Discover more about creating users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles)
 
