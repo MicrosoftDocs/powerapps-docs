@@ -30,7 +30,7 @@ Share a model-driven app to make it available so other users can play it. Sharin
 
 :::image type="content" source="media/share-model-driven-app/share-model-driven-app.png" alt-text="Share a model-driven app in Power Apps" lightbox="media/share-model-driven-app/share-model-driven-app.png":::
 
-If your app contains only out-of-the box tables, such as account or contact, you can use an existing [predefined security role](#about-predefined-security-roles).
+If your app contains only out-of-the-box tables, such as account or contact, you can use an existing [predefined security role](#about-predefined-security-roles).
 
 ## Model-driven app sharing basics
 
