@@ -117,7 +117,7 @@ landingContent:
             url: xrm-tooling/build-windows-client-applications-xrm-tools.md
        - linkListType: tutorial
          links:  
-          - text: Register an app with Entra ID
+          - text: Register an app with Microsoft Entra ID
             url: walkthrough-register-app-azure-active-directory.md
 
   # Card

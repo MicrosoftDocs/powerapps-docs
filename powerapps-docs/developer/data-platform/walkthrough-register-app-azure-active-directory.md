@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Register an app with Entra ID (Microsoft Dataverse) | Microsoft Docs"
-description: "Describes how to register an application with Entra ID for authentication with Microsoft Dataverse web services."
+title: "Tutorial: Register an app with Microsoft Entra ID (Microsoft Dataverse) | Microsoft Docs"
+description: "Describes how to register an application with Microsoft Entra ID for authentication with Microsoft Dataverse web services."
 keywords: ""
 ms.date: 01/19/2023
 ms.topic: article
@@ -13,14 +13,14 @@ search.audienceType:
   - developer
 ---
 
-# Tutorial: Register an app with Entra ID
+# Tutorial: Register an app with Microsoft Entra ID
 
-This tutorial describes how to register an application with Entra ID, which enables a user with Power Apps user account to connect to their Microsoft Dataverse environment from external client applications using OAuth authentication.
+This tutorial describes how to register an application with Microsoft Entra ID, which enables a user with Power Apps user account to connect to their Microsoft Dataverse environment from external client applications using OAuth authentication.
 
 > [!IMPORTANT]
 > Power Apps also provides you with Server-to-Server (S2S) authentication option to connect to Dataverse environment from external applications and services using the special application user account. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the data of their subscribers. More information: [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md).
 
-App registration in Entra ID is typically done by ISVs who want to develop external client applications to read and write data in Dataverse. Registering an app in Entra ID provides you with **Application ID** and **Redirect URI** values that ISVs can use in their client application's authentication code. When end users use the ISV's application for the *first time* to connect to their Dataverse environment by providing their Dataverse credentials, a consent form is presented to the end user. After consenting to use their Dataverse account with the ISV's application, end users can connect to Dataverse environment from external application. The consent form is not displayed again to other users after the first user who has already consented to use the ISV's app. Apps registered in Entra ID are multi-tenant, which implies that other Dataverse users from other tenant can connect to their environment using the ISV's app.
+App registration in Microsoft Entra ID is typically done by ISVs who want to develop external client applications to read and write data in Dataverse. Registering an app in Microsoft Entra ID provides you with **Application ID** and **Redirect URI** values that ISVs can use in their client application's authentication code. When end users use the ISV's application for the *first time* to connect to their Dataverse environment by providing their Dataverse credentials, a consent form is presented to the end user. After consenting to use their Dataverse account with the ISV's application, end users can connect to Dataverse environment from external application. The consent form is not displayed again to other users after the first user who has already consented to use the ISV's app. Apps registered in Microsoft Entra ID are multi-tenant, which implies that other Dataverse users from other tenant can connect to their environment using the ISV's app.
 
 App registration can also be done by an application developer or individual user who is building a client application to connect to and read/write data in Dataverse. Use the **Application ID** and **Redirect URI** values from your registered app in your client application's authentication code to be able to connect to Dataverse environment from your client application, and perform the required operations. Note that if the app is registered in the same tenant as your Dataverse environment, you won't be presented with a consent form when connecting from your client application to your Dataverse environment.
 
@@ -33,7 +33,7 @@ App registration can also be done by an application developer or individual user
 1. Sign in to the [Azure portal](https://go.microsoft.com/fwlink/?linkid=2083908) using an account with administrator permission. You must use an account in the same Microsoft 365 subscription (tenant) as you intend to register the app with. You can also access the Azure portal through the Microsoft 365 [Admin center](https://admin.microsoft.com/adminportal) by expanding the **Admin centers** item in the left navigation pane, and selecting **Microsoft Entra ID**.  
   
    > [!NOTE]
-   > If you don't have an Azure tenant (account) or you do have one but your Microsoft 365 subscription with Dataverse is not available in your Azure subscription, following the instructions in the topic [Set up Entra ID access for your Developer Site](/office/developer-program/microsoft-365-developer-program) to associate the two accounts.<br><br> If you don't have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won't be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Entra ID Pricing Details](https://azure.microsoft.com/pricing/details/active-directory/)  
+   > If you don't have an Azure tenant (account) or you do have one but your Microsoft 365 subscription with Dataverse is not available in your Azure subscription, following the instructions in the topic [Set up Microsoft Entra ID access for your Developer Site](/office/developer-program/microsoft-365-developer-program) to associate the two accounts.<br><br> If you don't have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won't be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Microsoft Entra ID Pricing Details](https://azure.microsoft.com/pricing/details/active-directory/)  
   
 2. In the Azure portal, select **Microsoft Entra ID** in the left pane and select **App registrations** and click on **New registration**.
     
@@ -73,7 +73,7 @@ App registration can also be done by an application developer or individual user
     > [!NOTE]
     > A future revision of the form in step #8 will replace the Dynamics CRM logo and icon with Dataverse.
 
-This completes the registration of your application in Entra ID.
+This completes the registration of your application in Microsoft Entra ID.
 
 ## Additional configuration options
 
@@ -81,7 +81,7 @@ If your application will support server-to-server connections, see [Use Multi-Te
   
 ### See also
 
-[Application registration in Entra ID](/azure/active-directory/develop/active-directory-integrating-applications)<br />
+[Application registration in Microsoft Entra ID](/azure/active-directory/develop/active-directory-integrating-applications)<br />
 [Authenticate Users with Dataverse Web Services](authentication.md)
 
 
