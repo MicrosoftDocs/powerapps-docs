@@ -58,6 +58,6 @@ Anyone can use the **Visualize this view** feature to explore the data in a vie
 
 - The first time you visualize the data in a view, creating the dataset and report can take some time. We're working to improve this performance experience.
 
-- This feature isn't supported for the **Activities** table due to a limitation in generating useful charts.
+- This feature isn't supported for the **Activities** table due to a limitation in generating charts.
 
 - This feature isn't supported for guest users in a tenant.
