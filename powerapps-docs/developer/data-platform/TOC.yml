@@ -24,7 +24,7 @@
       href: security-access-coding.md
     - name: Security roles and templates
       href: security-roles.md
-    - name: Entra ID group teams
+    - name: Microsoft Entra ID group teams
       href: aad-group-team.md
 - name: Work with data using code
   href: work-with-data.md
@@ -446,7 +446,7 @@
       href: sample-discovery-service-crmserviceclient.md
     - name: Tutorials
       items:
-        - name: "Tutorial: Register an app with Entra ID"
+        - name: "Tutorial: Register an app with Microsoft Entra ID"
           href: walkthrough-register-app-azure-active-directory.md
         - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
           href: walkthrough-blazor-webassembly-single-tenant.md
