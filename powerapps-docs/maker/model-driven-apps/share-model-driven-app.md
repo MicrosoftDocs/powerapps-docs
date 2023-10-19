@@ -22,13 +22,13 @@ ms.custom:
 
 # Share a model-driven app
 
-Share a model-driven app to make it available to other users to use it. Sharing includes the following steps:
+Share a model-driven app to make it available so other users can play it. Sharing includes the following steps:
 
 1. [Identify the security roles to use for the app](#model-driven-app-sharing-basics)
 1. [Assign security roles or people to a model-driven app](#assign-security-roles-or-people-to-a-model-driven-app)
 1. [Share the link to your app](#share-the-link-to-your-app)
 
-:::image type="content" source="media/share-model-driven-app/share-model-driven-app.png" alt-text="Share a model-driven app in Power Apps":::
+:::image type="content" source="media/share-model-driven-app/share-model-driven-app.png" alt-text="Share a model-driven app in Power Apps" lightbox="media/share-model-driven-app/share-model-driven-app.png":::
 
 If your app contains only out-of-the box tables, such as account or contact, you can use an existing [predefined security role](#about-predefined-security-roles).
 
