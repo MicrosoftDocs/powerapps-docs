@@ -14,8 +14,6 @@ search.audienceType:
 
 # Long-term data retention
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 *Long-term retention* (LTR) is a capability that enables customers to transfer their data from a Dataverse transactional database to a managed data lake. To perform LTR operations, you are required to set up retention policies by defining criteria for a given data table. Based on the policy, retention will run at the scheduled time and retain rows matching the critiera.
 
 More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md), [Enable a table for long term retention](../../maker/data-platform/data-retention-set.md#enable-a-table-for-long-term-retention)
