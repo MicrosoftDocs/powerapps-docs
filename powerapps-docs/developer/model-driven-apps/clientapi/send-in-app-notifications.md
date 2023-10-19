@@ -894,7 +894,7 @@ var SendAppNotificationRequest = new Example.SendAppNotificationRequest(title = 
                     "@odata.type": "#Microsoft.Dynamics.CRM.expando",
                     "type": "teamsChat",
                     "memberIds@odata.type": "#Collection(String)",
-                    "memberIds": ["<Entra ID User ID 1>", "<Entra ID User ID 2>"],
+                    "memberIds": ["<Microsoft Entra ID User ID 1>", "<Microsoft Entra ID User ID 2>"],
                     "entityContext": {
                         "@odata.type": "#Microsoft.Dynamics.CRM.expando",
                         "entityName": "account",
@@ -946,7 +946,7 @@ Accept: application/json
                 "@odata.type":"#Microsoft.Dynamics.CRM.expando",
                 "type": "teamsChat",
                 "memberIds@odata.type": "#Collection(String)",
-                "memberIds": ["<Entra ID user ID 1>","<Entra ID user ID 2>"],
+                "memberIds": ["<Microsoft Entra ID user ID 1>","<Microsoft Entra ID user ID 2>"],
                 "entityContext": {
                   "@odata.type": "#Microsoft.Dynamics.CRM.expando",
                   "entityName": "account",

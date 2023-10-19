@@ -25,7 +25,7 @@ You can try this sample online here: [https://blazorcds.mohsinonxrm.com/](https:
 ## How to run this sample
 
 1. Download or clone the [Samples](https://github.com/microsoft/PowerApps-Samples) repo so that you have a local copy.
-1. Follow the instructions in [Setup](#setup) to create an Entra ID app registration and run the sample.
+1. Follow the instructions in [Setup](#setup) to create an Microsoft Entra ID app registration and run the sample.
 
 ## What this sample does
 
@@ -41,7 +41,7 @@ Access to the account records is provided by `Pages/FetchAccounts.razor` with an
 
 ### Setup
 
-To run this sample you must first configure an Entra ID application on your tenant and update the `BlazorCDS\wwwroot\appsettings.json` file to replace the placeholder `ClientId` value with the application (client) Id. Use the following steps:
+To run this sample you must first configure an Microsoft Entra ID application on your tenant and update the `BlazorCDS\wwwroot\appsettings.json` file to replace the placeholder `ClientId` value with the application (client) Id. Use the following steps:
 
 #### Create an app registration
 
