@@ -12,7 +12,7 @@ search.audienceType:
   - developer
 ---
 
-# Long-term data retention (preview)
+# Long-term data retention
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -21,11 +21,11 @@ search.audienceType:
 More information: [Dataverse long term data retention overview](../../maker/data-platform/data-retention-overview.md), [Enable a table for long term retention](../../maker/data-platform/data-retention-set.md#enable-a-table-for-long-term-retention)
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - For public preview, only non-production environments are allowed for previewing the long-term data retention feature. Production and Dataverse for Teams environments can't be used with this feature.
-> - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
-> - Pricing information for long term data retention will be available at general availability.
+> You must meet one of the following two requirements to use all long term data retention features:
+> - Be a licensed Dynamics 365 customer engagement app customer.
+> - Be a licensed Power Apps customer with a managed environment.
+>
+> Customers who don't meet either requirement can continue to create data retention policies, but the policies are disabled. You must meet one of the requirements to enable the policies to run.
   
 ## Retention policy setup and validation
 
