@@ -32,6 +32,8 @@ Use **Link** control to provide links that can be defined with accessibility com
 
 **URL** - URL for the users to navigate through the link.
 
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
+
 **Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 
