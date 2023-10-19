@@ -16,7 +16,7 @@ search.audienceType:
 
 The single-tenant server-to-server (S2S) scenario typically applies for enterprise organizations that have multiple Microsoft Dataverse environments using Active Directory Federation Services (AD FS) for authentication. However, it can also be applied by environments when the application won't be distributed to other environments.
 
-An enterprise can create a web application or service to connect to any Dataverse environments associated with a single Entra ID tenant.
+An enterprise can create a web application or service to connect to any Dataverse environments associated with a single Microsoft Entra ID tenant.
 
 ## Differences from multi-tenant scenario
 
@@ -34,15 +34,15 @@ In the [See also](#bkmk_seealso) section at the end of this article, there are l
 
 To create and test a single-tenant application that uses server-to-server authentication you will need:
 
-- An Entra ID tenant to use when registering the provided sample application.
-- A Dataverse subscription that is associated with the Entra ID tenant.
-- Administrator privileges in the Entra ID tenant and Dataverse environment.
+- An Microsoft Entra ID tenant to use when registering the provided sample application.
+- A Dataverse subscription that is associated with the Microsoft Entra ID tenant.
+- Administrator privileges in the Microsoft Entra ID tenant and Dataverse environment.
 
 <a name="bkmk_registration"></a>
 
 ## Azure application registration
 
-To create an application registration in Entra ID, follow these steps.
+To create an application registration in Microsoft Entra ID, follow these steps.
 
 1. Navigate to https://admin.microsoft.com and sign in.
 1. Select **Admin centers** > **Microsoft Entra ID**.
@@ -75,7 +75,7 @@ For instructions on creating an application user see [Create an application user
 For instructions on managing security roles for an application user see [Manage roles for an application user](/power-platform/admin/manage-application-users#manage-roles-for-an-application-user)
 
 > [!NOTE]
-> In an environment, only one application user for each Entra ID registered application is supported. You will not be able to change the primary email address or username once the application user is created.<p/>
+> In an environment, only one application user for each Microsoft Entra ID registered application is supported. You will not be able to change the primary email address or username once the application user is created.<p/>
 > When developing a real-world application using S2S, you should use a custom security role which can be stored in a solution and distributed along with your application.
 
 ## Enable or disable application users
@@ -132,6 +132,6 @@ Shown below is example console output obtained from an organization that only ha
 
 [Use Multi-Tenant server-to-server authentication](use-multi-tenant-server-server-authentication.md)  
 [Build web applications using server-to-server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)  
-[How to: Sign in an Entra ID user using the multi-tenant application pattern](/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant)
+[How to: Sign in an Microsoft Entra ID user using the multi-tenant application pattern](/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
