@@ -24,11 +24,11 @@ ms.custom:
 
 Share a model-driven app to make it available to other users to use it. Sharing includes the following steps:
 
-1. Create a security role. Power Platform admins create security roles in the Power Platform admin center. 
-1. Add users to the security role.
-1. Add the security role to your app.
+1. [Identify the security roles to use for the app](#model-driven-app-sharing-basics)
+1. [Assign security roles or people to a model-driven app](#assign-security-roles-or-people-to-a-model-driven-app)
+1. [Share the link to your app](#share-the-link-to-your-app)
 
-<!-- Insert screenshot of sharing UI-->
+:::image type="content" source="media/share-model-driven-app/share-model-driven-app.png" alt-text="Share a model-driven app in Power Apps":::
 
 If your app contains only out-of-the box tables, such as account or contact, you can use an existing [predefined security role](#about-predefined-security-roles).
 
@@ -38,7 +38,9 @@ Model-driven apps use role-based security for sharing. The fundamental concept i
 
 All app users must be assigned one or more predefined or custom security roles. Or, security roles can be assigned to teams. When a user or team is assigned to one of these roles, the person or team members are granted the set of privileges associated with that role.
 
-The process for sharing a model-driven app is different from sharing a canvas app. Model-driven app sharing depends on how the Microsoft Dataverse data table privileges are assigned for the tables that are in the app.
+The process for sharing a model-driven app is different from sharing a canvas app. Model-driven app sharing depends on how the Microsoft Dataverse data table privileges are assigned for the tables that are in the app. If security roles aren't already defined for your app, contact your Power Platform administrator to create them for you. 
+
+More information: [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role)
 
 ## Assign security roles or people to a model-driven app
 
@@ -46,8 +48,8 @@ When you share a model-driven app, you can share it with all members of one or m
 
 1. Sign in to  the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane select **Apps**, next to the app you want to share select **…**, and  then select **Share**.
 1. From the **Share** *app name* pane, choose from the following options: 
-   - Select the app, and then select the drop-down list to display all available security roles. Select the security roles you want from the security role dropdown list.
-   :::image type="content" source="media/share-model-driven-app/assign-security-role-to-app.png" alt-text="Assign security roles to app":::
+   - Select the app, and then select the drop-down list in the right pane to display all available security roles. Select the security roles you want from the security role dropdown list.
+   :::image type="content" source="media/share-model-driven-app/share-model-driven-app.png" alt-text="Assign security roles to app":::
 
    > [!IMPORTANT]
    > If your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create or edit a security role for your app](#create-or-edit-a-security-role-for-your-app)
@@ -63,7 +65,7 @@ When you share a model-driven app, you can share it with all members of one or m
 
 1. Select **Share**.
 
-## Create or edit a security role for your app
+<!-- ## Create or edit a security role for your app
 
 Model-driven apps often contain custom tables and other custom configuration. It's important to first create a security role with the required level of privilege for all the components used in your app.
 
@@ -130,49 +132,8 @@ To add a security role to your solution, follow these steps:
 1. Select the newly created security role from the list provided.
 1. Select **Add**.
 
-This will ensure that the solution now contains the security role for import into other environments.
+This will ensure that the solution now contains the security role for import into other environments. -->
 
-<!-- 
-1. From the **Share Model-driven app** pane, under **Assign users to the security role** select **Security Users**.
-1. In the list that is displayed, select the users who are pet groomers, and then on the command bar select **Manage Roles**.
-
-1. Select **Manage security roles.**
-    > [!div class="mx-imgBorder"]
-    > ![Manage roles.](media/share-model-driven-app/manage-roles.png "Manage roles")
-
-1. On the **All Roles** page, select **Microsoft Dataverse user** then select **Actions** then **Copy Role.**
-
-   > [!TIP]
-   > You can also create a new blank role instead of copying an existing role.
-
-6. In the Role Name box, provide a descriptive role such as *My custom app access*. Select **Ok.**
-
-7. From the security role designer, you select the actions, such as read, write, or delete, and the [access levels](/power-platform/admin/security-roles-privileges#security-roles). Access levels determine how deep or high within the environments hierarchy the user can perform a particular action. 
-
-8. Select the **Custom Tables** tab, and then locate the custom table used in your app.
-
-9.  On the row for your custom table, set access levels for each privilege.  
-
-10. Repeat for other tables used in your app.
-
-11. Select the **Customization** tab, and ensure **Read** privilege is set for **Model-driven App** so that organization access level ![Organization global scope.](media/share-model-driven-app/organizational-scope-privilege.png) is selected.
-
-    > [!IMPORTANT]
-    > Users granted **Read**, **Create**, and **Write** to the **Model-driven App** privilege have access to all apps in the environment, even when they're not part of any role that has access to the app.
-    > ![Create and Write with Model-driven App privilege.](media/app-access-cds.png)
-
-12. Select **Save and Close**.   -->
-
-<!--
-1. Go to https://make.powerapps.com.
-2. Select a model-driven app, and then select **Share**.
-3. Select the app, and then choose a security role from the list. [Learn how to assign a security role to an app](#assign-a-security-role-to-a-model-driven-app)
-    > [!div class="mx-imgBorder"]
-    > ![Assign a role to the app.](media/share-model-driven-app/share-app.png "Assign a role to the app")
-4. Search for and select the user or team. Then select a security role from the list.
-    > [!div class="mx-imgBorder"]
-    > !["Assign a role to the user.](media/share-model-driven-app/share-user.png "Assign a role to the user")
-6. Select **Share**. -->
 
 ## Share the link to your app
 
@@ -188,7 +149,7 @@ To get the direct link to an app:
 
     !["Acquiring the link for a model-driven app"](media/share-model-driven-app/app-designer-copy-web-url-process.gif "Acquiring the link for a model-driven app")
 
-1. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or sending via email.
+1. Paste the app URL in a location so that your users can access it, such as by posting it on a Teams channel, SharePoint site, or sending via email.
 
 ## App sharing privilege and licensing requirements
 
@@ -201,8 +162,9 @@ There are a few key environment and licensing prerequisites required when sharin
 
 ## About predefined security roles
 
-These predefined roles are available with Dataverse.
+There are several predefined roles available with Dataverse. To run apps that use only out-of-the-box tables, there's the Basic User security role, which can run an app within the environment and perform common tasks for the records that they own. More information: [Predefined security roles](/power-platform/admin/database-security#predefined-security-roles)
 
+<!-- >
 |Security role  |Privileges<sup>1</sup>  |Description |
 |---------|---------|---------|
 |Environment Maker     |  None       | Can create new resources associated with an environment including apps, connections, custom APIs, gateways, and flows using Power Automate. However, does not have any privileges to access data within an environment. More information: [Environments overview](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
@@ -211,7 +173,7 @@ These predefined roles are available with Dataverse.
 |Basic User     |  Read, Create (self), write (self), delete (self)       | Can run an app within the environment and perform common tasks for the records that they own.        |
 |Delegate     | Act on behalf of another user        | Allows code to run as another user or impersonate.  Typically used with another security role to allow access to records. More information: [Impersonate another user](/powerapps/developer/data-platform/impersonate-another-user)        |
 
-<sup>1</sup>Privilege is global scope unless specified otherwise.
+<sup>1</sup>Privilege is global scope unless specified otherwise. -->
 
 ## Use Azure Active Directory groups to manage access
 
@@ -221,7 +183,7 @@ Administrators can use their organization’s Azure Active Directory (Azure AD) 
 
 [Discover more about creating users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles)
 
-[Run a model-driven app in a browser](../model-driven-apps/run-model-driven-app.md)
+[Minimum privileges for common tasks](/power-platform/admin/create-edit-security-role#minimum-privileges-for-common-tasks)
 
 [Run a model-driven app on a mobile device](/dynamics365/customerengagement/on-premises/basics/dynamics-365-phones-tablets-users-guide-onprem)
 
