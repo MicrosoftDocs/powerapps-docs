@@ -51,7 +51,7 @@ Create a Power Automate cloud flow to create an Excel file of the retained data 
 These restrictions are enforced by Dataverse for each environment:
 
 - Up to five users can query and retrieve retained data at the same time.
-- Up to 30 queries per day are allowed for each environment.
+- Up to 100 queries per day are allowed for each environment.
 - Any single request from advanced find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
 - Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed.
 - Retained data includes lookup data. Lookup values in the table are denormalized with ID and name value.

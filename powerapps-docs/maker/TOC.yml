@@ -280,13 +280,13 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Create an app using AI Copilot (preview)
+    - name: Create an app using AI Copilot 
       items:
       - name: Overview
         href: ./canvas-apps/ai-overview.md
       - name: Create an app from conversations
         href: ./canvas-apps/ai-conversations-create-app.md
-      - name: Continue editing your app with Copilot
+      - name: Continue editing your app with Copilot (preview)
         href: ./canvas-apps/ai-edit-app.md
     - name: Create an app using data
       items:
@@ -382,8 +382,6 @@
           href: ./canvas-apps/working-with-tables.md
         - name: Understand record references
           href: ./canvas-apps/working-with-references.md
-        - name: Working with dynamic schema (experimental)
-          href: ./canvas-apps/working-with-dynamic-schema.md
       - name: Design the interface
         items:
           - name: Understand Power Apps Studio
@@ -1708,7 +1706,9 @@
       href: ./model-driven-apps/add-ai-copilot.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
-    - name: Use themes to apply organization branding
+    - name: Use modern themes
+      href: ./model-driven-apps/modern-theme-overrides.md    
+    - name: Use themes to apply organization branding (classic)
       href: ./model-driven-apps/create-themes-organization-branding.md
     - name: Create guided help for your app
       href: ./data-platform/create-custom-help-pages.md
@@ -2130,6 +2130,8 @@
         href: ./data-platform/export-solutions.md
       - name: Import solutions
         href: ./data-platform/import-update-export-solutions.md
+      - name: Set the preferred solution (preview)
+        href: ./data-platform/preferred-solution.md
       - name: Use pipelines to simplify solution deployment
         href: ./data-platform/use-pipelines.md
       - name: Update or upgrade solutions
@@ -2156,6 +2158,8 @@
             href: ./data-platform/export-customized-entity-field-text-translation.md
           - name: Import translated component text
             href: ./data-platform/import-translated-entity-field-text.md
+          - name: Update localized label text
+            href: ./data-platform/update-translated-text.md
       - name: Diagnose solutions and solution objects
         href: ./data-platform/diagnose-solutions.md
         items:
