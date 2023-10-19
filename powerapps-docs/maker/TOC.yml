@@ -171,6 +171,8 @@
         href: ../user/onenote.md
       - name: Collaborate using SharePoint
         href: ../user/collaborate-using-sharepoint.md
+      - name: Use @mention for collaborating
+        href: ../user/use-@mentions.md
     - name: Search records
       items:
       - name: Compare search options
