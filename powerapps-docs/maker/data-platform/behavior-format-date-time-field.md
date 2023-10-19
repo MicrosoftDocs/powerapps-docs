@@ -35,7 +35,7 @@ Dataverse stores all date and time values in UTC time zone. When displaying valu
 - **Time zone independent**: No time zone conversion.
 - **Date only**: No time zone conversion. Unlike **Time zone independent**, the time portion is not stored.
 
-The user's time zone is set in [personal options](../../user/set-personal-options#general-tab-options), not the system time zone in Windows, Android, iOS, or macOS. However, the [system time zone may affect client scripts that work with JavaScript Dates](#get-values-with-client-api).
+The user's time zone is set in [personal options](../../user/set-personal-options.md#general-tab-options), not the system time zone in Windows, Android, iOS, or macOS. However, the [system time zone may affect client scripts that work with JavaScript Dates](#get-values-with-client-api).
 
 ## Format
 
@@ -60,7 +60,7 @@ Use **Date only** behavior when information about the time of the day and the ti
 
 ### Display values
 
-Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in the time zone UTC-8 will see these in the model-driven app or with a [Web API request for the formatted value](../../developer/data-platform/webapi/query-data-web-api#formatted-values):
+Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in the time zone UTC-8 will see these in the model-driven app or with a [Web API request for the formatted value](../../developer/data-platform/webapi/query-data-web-api.md#formatted-values):
 
 | Behavior | Format | Display value |
 | -------- | ------ | ------------- |
@@ -101,7 +101,7 @@ Different clients have different ways to handle invalid input. For example, in P
 
 ### Get raw values with Web API
 
-Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in all time zones will get these with a [Web API request for the value](../../developer/data-platform/webapi/query-data-web-api#select-columns):
+Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in all time zones will get these with a [Web API request for the value](../../developer/data-platform/webapi/query-data-web-api.md#select-columns):
 
 | Behavior | Format | Raw value |
 | -------- | ------ | --------- |
@@ -135,7 +135,7 @@ JavaScript Date values always have a time component. That's why **Date only** be
 
 > [!NOTE]
 > JavaScript Date values are affected by the browser's time zone, which comes from OS settings.
-> For **User local** behavior, the Client API result should be interpreted as a UTC value. Use `Date.getUTCDate()`, `Date.getUTCHours()`, etc. to work with it. To get what the user sees, apply [getTimeZoneOffsetMinutes](../component-framework/reference/usersettings/gettimezoneoffsetminutes.md). Do not use `Date.getDate()`, `Date.getHours()`, etc. because these will show the value in the browser's time zone.
+> For **User local** behavior, the Client API result should be interpreted as a UTC value. Use `Date.getUTCDate()`, `Date.getUTCHours()`, etc. to work with it. To get what the user sees, apply [getTimeZoneOffsetMinutes](../../developer/component-framework/reference/usersettings/gettimezoneoffsetminutes.md). Do not use `Date.getDate()`, `Date.getHours()`, etc. because these will show the value in the browser's time zone.
 > For **Time zone independent** and **Date only** behavior, the Client API result should be interpreted as a value in the browser's time zone. Use `Date.getDate()`, `Date.getHours()`, etc. to work with it. Do not use `Date.getUTCDate()`, `Date.getUTCHours()`, etc. because you don't have to adjust for any time zones.
 
 
@@ -143,7 +143,7 @@ JavaScript Date values always have a time component. That's why **Date only** be
 
 Unless the publisher of a managed solution prevents this, you can change the behavior of existing custom Date columns from  **User local** to **Date only** or **Time zone independent**. This is a one-time change.
 
-Changing the column behavior affects the column values that are added or modified after the column behavior was changed. The existing column values remain in the database in the UTC time zone format. To change the behavior of the existing column values from UTC to **Date only**, you may need a help of a developer to [convert behavior of existing date and time values in the database](../../developer/behavior-format-date-time-attribute#convert-behavior-of-existing-date-and-time-values-in-the-database). 
+Changing the column behavior affects the column values that are added or modified after the column behavior was changed. The existing column values remain in the database in the UTC time zone format. To change the behavior of the existing column values from UTC to **Date only**, you may need a help of a developer to [convert behavior of existing date and time values in the database](../../developer/behavior-format-date-time-attribute.md#convert-behavior-of-existing-date-and-time-values-in-the-database). 
 
 > [!WARNING]
 > Before changing the behavior of an existing date and time column, you should review all the dependencies of the column, such as business rules, workflows, calculated columns, or rollup columns, to ensure that there are no issues as a result of changing the behavior. After changing the behavior of a date and time column, you should open each business rule, workflow, calculated column, and rollup column dependent on the column that you changed, review the information, and save it, to ensure that the latest date and time column's behavior and value are used. 
