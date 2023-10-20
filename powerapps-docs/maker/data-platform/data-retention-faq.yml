@@ -4,13 +4,12 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 10/17/2023
+  ms.date: 10/20/2023
   ms.author: matp
   ms.reviewer: 
-  contributors:
-  - gned
+  contributors: gned
   ms.topic: faq
-title: Dataverse long term data retention FAQ (preview)
+title: Dataverse long term data retention FAQ
 summary: This article provides information on frequently asked questions about long term data retention with Microsoft Dataverse.
 sections:
 - name: General

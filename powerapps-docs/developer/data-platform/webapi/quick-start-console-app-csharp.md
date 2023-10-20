@@ -31,7 +31,7 @@ You can find the complete Visual Studio solution for this .NET 6 project in the 
 - Basic understanding of the C# language
 
 > [!NOTE]
-> To authenticate you must have an app registered in Azure Active Directory (AD). This quick start example provides an app registration `clientid` value you can use for the purpose of running sample code published by Microsoft. However, for your own custom applications you must register your apps with AD. More information: [Walkthrough: Register an app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
+> To authenticate you must have an app registered in Microsoft Entra ID. This quick start example provides an app registration `clientid` value you can use for the purpose of running sample code published by Microsoft. However, for your own custom applications you must register your apps with AD. More information: [Walkthrough: Register an app with Microsoft Entra ID](../walkthrough-register-app-azure-active-directory.md)
 
 ## Create Visual Studio project
 
@@ -87,11 +87,11 @@ Follow these next steps to add code for the main program.
                // See https://learn.microsoft.com/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#web-api-url-and-versions
                string resource = "https://<env-name>.api.<region>.dynamics.com";
 
-               // Azure Active Directory app registration shared by all Power App samples.
+               // Microsoft Entra ID app registration shared by all Power App samples.
                var clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
                var redirectUri = "http://localhost"; // Loopback for the interactive login.
 
-               // For your custom apps, you will need to register them with Azure AD yourself.
+               // For your custom apps, you will need to register them with Microsoft Entra ID yourself.
                // See https://docs.microsoft.com/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory
 
                #region Authentication
