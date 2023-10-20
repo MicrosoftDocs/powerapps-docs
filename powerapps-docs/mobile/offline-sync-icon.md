@@ -58,6 +58,9 @@ When you select the offline sync icon, the **Offline Status** page opens. The **
 
 :::image type="content" source="media/OfflineStatusPage-NotConnected.png" alt-text="The Offline Status page of a mobile app.":::
 
+## Offline sync settings 
+
+:::image type="content" source="media/mobile-offline-sync-settings.png" alt-text="The Offline Status page of a mobile app showing the sync settings.":::
 ## Notifications
 
 On iOS and Android devices, app sync notifications are consistent across the different sync states.
