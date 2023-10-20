@@ -29,7 +29,7 @@ If your client application uses the .NET Framework, you have two authentication 
 OAuth is the preferred means to authenticate because it provides access to all web services.
 
 OAuth is also required to support:
- - Azure Active Directory configurations for conditional access, such as Two-factor Authentication (2FA)
+ - Microsoft Entra ID configurations for conditional access, such as Two-factor Authentication (2FA)
  - Use of client secrets to enable server-to-server authentication scenarios.
  - Cross-Origin Resource Sharing (CORS) to connect a Single-page Application (SPA)
 
