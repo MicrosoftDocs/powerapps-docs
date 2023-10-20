@@ -102,9 +102,9 @@ Imagine a nonproduction scenario where all the live data for the case and contac
 
 For more information about capacity reports, go to [New Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage).
 
-### Understanding long term retention storage costs
+## Understanding long term retention storage costs
 
-Dataverse long term retention requires no additional storage purchases and it doesn't require you to purchase the feature as a separate service. Every Dataverse managed SQL GB moved to Dataverse long term retention (the Dataverse managed data lake), will consume, on average, atleast 50% less database capacity than when the data was in the Dataverse managed SQL. This is because the data from DV managed SQL is compressed in the Dataverse managed data lake.
+Dataverse long term retention requires no additional storage purchases and it doesn't require you to purchase the feature as a separate service. Every Dataverse managed SQL GB moved to Dataverse long term retention (the Dataverse managed data lake), will consume, on average, at least 50% less database capacity than when the data was in the Dataverse managed SQL. This is because the data from DV managed SQL is compressed in the Dataverse managed data lake.
 
 For example:
 
