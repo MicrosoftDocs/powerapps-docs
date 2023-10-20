@@ -35,6 +35,8 @@ Dataverse also generates an enterprise-ready [Synapse lakehouse and SQL endpoint
 
 Low-code makers can build apps and automations to orchestrate business processes and react to insights found in Fabric. By adding those insights back to Dataverse as virtual tables connected to OneLake, makers can build low-code apps with Power Apps, Power Pages, or Power Automate using the design tools already available. Using connectors to over 1,000 apps, makers can create business processes that span Dynamics 365 as well as many other enterprise applications.
 
+See overview video here: > [!VIDEO https://www.microsoft.com/videoplayer/embed/RW1dP9v]
+
 ## Prerequisites
 
 A Power BI premium license or Fabric capacity. 
