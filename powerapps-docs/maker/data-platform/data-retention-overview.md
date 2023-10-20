@@ -39,7 +39,7 @@ Dataverse delivers native platform support for long term retention of data. It a
 
 - Securely retain the historical application data long term for audit, legal, and regulatory requirements.
 - Access the read-only data for limited inquiry purposes.
-- Reduce database capacity consumed.
+- Reduce database capacity consumed and save money on inactive data.
 - Avoid IT investments required to build and maintain custom solutions for long term retention of historical application data.
 
 ## How it works
@@ -68,7 +68,7 @@ Admins set retention policies on tables when the application maker has enabled l
 
 ### Long term data retention and existing delete action and plugins
 
-All the existing delete action cascade relationships and plugins for tables are executed when a data retention policy is run on the table.
+All the existing delete action cascade relationships and plugins for tables are executed when a data retention policy is run on the table. In addition, the retain action can be used to trigger custom behavior. Application makers can write custom plugins for the retain action.
 
 More information: [Long-term data retention](../../developer/data-platform/long-term-retention.md)
 
