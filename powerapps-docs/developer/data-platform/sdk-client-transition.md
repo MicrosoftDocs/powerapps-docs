@@ -2,7 +2,7 @@
 title: "Transition client applications to Dataverse ServiceClient | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the benefits of and the changes needed to transitions your client application to use Dataverse ServiceClient class for web service connections." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/11/2022
+ms.date: 10/17/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "phecke" # GitHub ID
@@ -15,10 +15,10 @@ search.audienceType:
 
 # Transition apps to Dataverse ServiceClient
 
-We are transitioning from [Microsoft Dataverse SDK for .NET](developer-tools.md#dataverse-sdk-for-net) to include a new web service client that uses MSAL for authentication. This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
+We are transitioning from [Microsoft Dataverse SDK for .NET](developer-tools.md#dataverse-sdk-for-net) to include a new web service client that uses Microsoft Authentication Library (MSAL) for authentication. This article contains the information you need to understand why we are making these changes, what is impacted, and how to update your client applications so they continue to function as expected.
 
 > [!NOTE]
-> All our existing developer documentation and sample code use the Dataverse SDK APIs found in the [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package. Only this article that you are reading describes the newer [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package and the changes required to make use of it. More documentation and sample code updates are coming.
+> Some of our existing developer documentation and sample code uses the Dataverse SDK APIs found in the [CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package. This article describes the newer and recommended [Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package and the changes required to make use of it. Updates to documentation and sample code is happening over time.
 
 ## Why the change?
 
@@ -30,11 +30,11 @@ The new Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.
 
 ### MSAL authentication
 
-Microsoft Azure Active Directory Authentication Library (ADAL) support ends soon. Microsoft Authentication Library (MSAL) is the recommended authentication API going forward. Our new [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) API uses MSAL while our older [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) API uses ADAL.
+Microsoft Azure Active Directory Authentication Library (ADAL.NET) is no longer receiving support. Microsoft Authentication Library (MSAL.NET) is the recommended authentication API going forward. Our new [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) API uses MSAL while our older [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) API uses ADAL.
 
 ### Performance and functional benefits
 
-The Dataverse `ServiceClient` class supports a smaller interface surface, inline authentication by instance, and `ILogger`. As for inline authentication, you can pass a custom authentication handler function to the `ServiceClient` constructor. In this way you can have one authentication handler per web service connection instead of just one per process.
+The Dataverse `ServiceClient` class supports a smaller interface surface, inline authentication by instance, and <xref:Microsoft.Extensions.Logging.ILogger?displayProperty=fullName>. As for inline authentication, you can pass a custom authentication handler function to the `ServiceClient` constructor. In this way you can have one authentication handler per web service connection instead of just one per process.
 
 ## What is impacted?
 

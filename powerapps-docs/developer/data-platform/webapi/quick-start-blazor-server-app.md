@@ -31,7 +31,7 @@ You authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` reque
 
 
 > [!NOTE]
-> To authenticate you must have an app registered in Azure Active Directory. The registration will happen automatically as part of the template creation, but will require additional updates in the Azure portal.
+> To authenticate you must have an app registered in Microsoft Entra ID. The registration will happen automatically as part of the template creation, but will require additional updates in the Azure portal.
 
 ## Create a Visual Studio project
 
@@ -63,7 +63,7 @@ You authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` reque
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-4.png" alt-text="Required components":::
 
-1. In the **Microsoft identity platform** dialog, make sure that the selected Azure account has permissions to manage applications in Azure AD and the selected tenant is the one associated with your Power Platform environment.
+1. In the **Microsoft identity platform** dialog, make sure that the selected Azure account has permissions to manage applications in Microsoft Entra ID and the selected tenant is the one associated with your Power Platform environment.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-5.png" alt-text="Microsoft identity platform dialog":::
 
@@ -95,13 +95,13 @@ You authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` reque
 
 1. Select **Close** to close the dialog.
 
-## Configure the application in Active Directory
+## Configure the application in Microsoft Entra ID
 
 The Visual Studio template created a registered application using the information you provided. Connecting to Dataverse requires more permissions.
 
-1. From the [Power Platform admin center](https://admin.powerplatform.microsoft.com/home), select the **Azure Active Directory** admin center.
+1. From the [Power Platform admin center](https://admin.powerplatform.microsoft.com/home), select **Admin Centers** > **Microsoft Entra ID**.
 
-   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-8.png" alt-text="Azure Active Directory admin center from the Power Platform admin center":::
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-8.png" alt-text="Microsoft Entra ID admin center from the Power Platform admin center":::
 
 1. In the **Microsoft Entra admin center**, search for the application created by name within **App Registrations**.
 
