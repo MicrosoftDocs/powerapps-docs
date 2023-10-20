@@ -171,6 +171,8 @@
         href: ../user/onenote.md
       - name: Collaborate using SharePoint
         href: ../user/collaborate-using-sharepoint.md
+      - name: Use @mention for collaborating
+        href: ../user/use-@mentions.md
     - name: Search records
       items:
       - name: Compare search options
@@ -278,13 +280,13 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Create an app using AI Copilot (preview)
+    - name: Create an app using AI Copilot 
       items:
       - name: Overview
         href: ./canvas-apps/ai-overview.md
       - name: Create an app from conversations
         href: ./canvas-apps/ai-conversations-create-app.md
-      - name: Continue editing your app with Copilot
+      - name: Continue editing your app with Copilot (preview)
         href: ./canvas-apps/ai-edit-app.md
     - name: Create an app using data
       items:

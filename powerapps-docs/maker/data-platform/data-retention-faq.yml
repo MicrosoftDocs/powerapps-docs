@@ -4,10 +4,11 @@ metadata:
   description: Get answers to frequently asked questions about long term retention with Dataverse.
   author: Mattp123
   ms.search.keywords: 
-  ms.date: 03/31/2023
+  ms.date: 10/17/2023
   ms.author: matp
   ms.reviewer: 
   contributors:
+  - gned
   ms.topic: faq
 title: Dataverse long term data retention FAQ (preview)
 summary: This article provides information on frequently asked questions about long term data retention with Microsoft Dataverse.
@@ -54,7 +55,7 @@ sections:
 
    - question: In which regions is Dataverse long term retention available? 
      answer: | 
-       The feature is currently available only in public cloud regions.  
+       The feature is currently available in public cloud regions. The planned target date for GCC cloud is Q1 calendar year 2024.  
 
    - question: Can data be moved from Dataverse long term store to my own data lake?
      answer: |
@@ -66,7 +67,7 @@ sections:
 
    - question: Can the one Dataverse connector be used with Power BI for reporting long term retained data?
      answer: |
-        This isn't currently supported.
+        This isn't supported.
 
    - question: Can I move data from Dataverse long term store back to the Dataverse live (active) store?
      answer: |
@@ -76,8 +77,6 @@ sections:
      answer: |
         Yes. When a retention policy runs, the process makes API requests to Microsoft Power Platform. These requests are counted towards your available API request limits.
 
-   - question: What is the cost of long term storage? 
-     answer: |
-        Pricing details will be available by general availability (GA). 
+
 
                               
