@@ -104,14 +104,14 @@ For more information about capacity reports, go to [New Microsoft Dataverse stor
 
 ## Understanding long term retention storage costs
 
-Dataverse long term retention requires no additional storage purchases and it doesn't require you to purchase the feature as a separate service. Every Dataverse managed SQL GB moved to Dataverse long term retention (the Dataverse managed data lake), will consume, on average, at least 50% less database capacity than when the data was in the Dataverse managed SQL. This is because the data from DV managed SQL is compressed in the Dataverse managed data lake.
+Dataverse long term retention requires no additional storage purchases and it doesn't require you to purchase the feature as a separate service. Every GB moved from Dataverse managed SQL database to Dataverse long term retention (Dataverse managed data lake), will consume, on an average, 50% less database capacity. This is because the data is compressed in the Dataverse managed data lake.
 
 For example:
 
-- Assume the DB capacity consumed by Contoso is 1000GB today. Now lets say Contoso's scheduled long term retention policy was run and moves 200GB of data into the Dataverse managed data lake. 
-- With an average compression of atlease 50%, the retained data size of the long term retained data 100 GB, a saving of 50% compared to when the data was in the active state in the Dataverse managed SQL.
+- Assume the DB capacity consumed by Contoso is 1000GB today. Now lets say Contoso's scheduled long term retention policy was run and retains 200GB of data in the Dataverse managed data lake. 
+- With an average compression of atlease 50%, the retained data size is 100 GB, a saving of 50% compared to when the data was in the active state in the Dataverse managed SQL database.
 - This implies Contoso now has 800-GB of active data and 100-GB of inactive data in Dataverse.
-- The capacity reports as described in the earlier section of this document will display the sum of the Database usage as 900-GB.
+- The capacity reports as described in the earlier section of this document will display the Database usage as 900-GB (800GBb + 100GB).
 
 
 > [!NOTE]
