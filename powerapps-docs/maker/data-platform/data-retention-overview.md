@@ -102,18 +102,18 @@ Imagine a nonproduction scenario where all the live data for the case and contac
 
 For more information about capacity reports, go to [New Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage).
 
-### Understanding long term retention pricing
+### Understanding long term retention storage costs
 
-Dataverse long term retention requires no additional storage purchases and it doesn't require you to purchase the feature as a separate service. Every GB moved to Dataverse long term retention (the Dataverse managed data lake)  consumes, on average, 50% less Database capacity than the live (active) data in Dataverse.
+Dataverse long term retention requires no additional storage purchases and it doesn't require you to purchase the feature as a separate service. Because the data is compressed, every GB moved to Dataverse long term retention (the Dataverse managed data lake) consumes, on average, 50% less database capacity than the live (active) data in Dataverse.
 
 For example:
 
-- If 100-GB data is moved to Dataverse  long term retention, the long term retained data is compressed is typically 50%. So the retained data size is 50 GB on average.
-- The cost incurred is 50-GB times the database price per GB instead of 100-GB times the database price per GB. In this case, a savings of 50% with long term retention compared to the live database.
+- For example, if 100-GB data is moved to Dataverse long term retention, the long term retained data that's compressed is typically 50% that of the original uncompressed data size. So the retained data size of the long term retained data is 50 GB in this example.
+- The cost incurred is 50-GB times the database price per GB instead of 100-GB times the database price per GB. In this case, a savings of 50% with long term retention is realized as compared to the live database.
 
 > [!NOTE]
 >
-> - Dataverse managed data lake compresses the database data and this saving is passed onto the customer. The compression depends on the kind of data in Dataverse. With some data (indeterministic), you might notice a more than 50% savings while in others you might notice less than 50%.
+> - Dataverse managed data lake compresses the database data and this saving is passed onto the customer. The amount of compression depends on the kind of data in Dataverse. With some data (indeterministic), you might notice a more than 50% savings while in others you might notice less than 50%.
 > - For file attachments, Dataverse long term retention doesn't reduce capacity consumed. In rare cases, depending on the file, you might experience negligible file capacity savings.
 
 ## Solution aware retention policies
