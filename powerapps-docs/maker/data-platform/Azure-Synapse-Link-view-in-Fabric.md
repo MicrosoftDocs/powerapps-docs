@@ -68,7 +68,7 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 ## Link existing Azure Synapse Link for Dataverse profiles to Fabric
 
-Azure Synapse Link for Dataverse enables admins to simplify their data integrations by provisioning and configuring Azure resources such as Azure datalake storage and Azure Synapse. Azure Synapse Link simplifies exporting data to your own storage and enabling you to build your own integration pipelines. Link to Fabric feature uses Dataverse storage and enables direct connectivity between your data in Dataverse with Microsoft Fabric. The table below provides a quick comparison between the options.
+Azure Synapse Link for Dataverse enables provisioning, configuring Azure resources as well as automating data exports to your own storage and enabling you to build your own integration pipelines. Link to Fabric feature uses Dataverse storage and enables direct connectivity between your data in Dataverse with Microsoft Fabric. The table below provides a quick comparison between the options.
 
 | Link to Fabric                      | Synapse Link                | 
 |:-----------------------------------|:------------------------------|
@@ -76,9 +76,7 @@ Azure Synapse Link for Dataverse enables admins to simplify their data integrati
 | Data stays in Dataverse - secure access in Microsoft Fabric | Data stays in your own storage. You will manage access |
 | Consumes additional Dataverse storage  | Consumes your own storage as well as other compute and integration tools | 
 
-Now, you can also connect your existing Azure Synapse Links with Microsoft Fabric and benefit from improvements like Power BI DirectLake mode reports. Fabric lakehouse and lakehouse SQL endpoint contain improved query engines that let you work with Spark or SQL within an integrated environment.
-
-You can add or remove tables from existing Azure Synapse Link for Dataverse links and create new Fabric links within a single experience. You can also use Azure Synapse Link for Dataverse to choose [tables and entities from Dynamics 365 Finance and Operations](/power-apps/maker/data-platform/azure-synapse-link-select-fno-data).
+Now, you can also connect your existing Azure Synapse Links with Microsoft Fabric and benefit from Fabric innovations like Power BI DirectLake mode reports and integrated Spark and Data pipelines. You can add or remove tables from existing Azure Synapse Link for Dataverse links and create new Fabric links within a single experience. You can also use Azure Synapse Link for Dataverse to choose [tables and entities from Dynamics 365 Finance and Operations](/power-apps/maker/data-platform/azure-synapse-link-select-fno-data).
 
 > [!NOTE]
 > You need to create a Azure Synapse Link for Dataverse profile and enable the **Delta parquet conversion for Fabric link** option. This option isn't available for  Azure Synapse Link for Dataverse profiles that use the CSV output format.
