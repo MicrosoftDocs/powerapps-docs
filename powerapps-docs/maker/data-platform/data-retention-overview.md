@@ -6,25 +6,19 @@ author: pnghub
 ms.author: gned
 ms.reviewer: matp
 ms.topic: overview
-ms.date: 10/09/2023
+ms.date: 10/20/2023
 ms.custom: template-overview
 ---
-# Dataverse long term data retention overview (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Dataverse long term data retention overview
 
 Microsoft Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. While Dataverse can support your business growth with no limit on active data, you might want to consider moving inactive data to the Dataverse long term retention store.
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - For public preview, only non-production environments are allowed for previewing the long-term data retention feature. Production and Dataverse for Teams environments can't be used with this feature.
-> - No additional Power Platform licensing requirement is required to experience this feature during the preview.
-> - When the feature is generally available (GA), you must meet one of the following two requirements to use all long term data retention features:
->   - Be a licensed Dynamics 365 customer engagement app customer.
->   - Be a licensed Power Apps customer with a [managed environment](/power-platform/admin/managed-environment-overview). 
->   - Customers who don't meet either requirement can continue to create data retention policies, but the policies are disabled. You must meet one of the requirements to enable the policies to run.
-> - Pricing information for long term data retention will be available at general availability.
+> You must meet one of the following two requirements to use all long term data retention features:
+> - Be a licensed Dynamics 365 customer engagement app customer.
+> - Be a licensed Power Apps customer with a [managed environment](/power-platform/admin/managed-environment-overview).
+>
+> Customers who don't meet either requirement can continue to create data retention policies, but the policies are disabled. You must meet one of the requirements to enable the policies to run.
 
 Watch this video to learn about Dataverse long term data retention.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAf]
