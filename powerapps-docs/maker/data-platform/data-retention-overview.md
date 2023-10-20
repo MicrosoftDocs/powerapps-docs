@@ -103,10 +103,12 @@ Imagine a non-production scenario where all the live data for the case and conta
 For more information about capacity reports, go to [New Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage).
 
 ### Understanding long term retention pricing
-DV long term retention requires no additional storage purchases and it does not involved any new SKU's. Every GB moved to Dataverse long term retention (DV managed data lake) will  consume, on average, 50% less Database capacity than the live(active) DB data in DV managed SQL.
+
+Dataverse long term retention requires no additional storage purchases and it doesn't require you to purchase the feature as a separate service. Every GB moved to Dataverse long term retention (the Dataverse managed data lake)  consumes, on average, 50% less Database capacity than the live (active) data in Dataverse.
 
 For example:
-- Say 100GB DB SQL is moved to DV long term retention. The long term retained data will be compressed by 50% on average. So the retained data size will be 50GB on average.
+
+- If 100 GB data is moved to DV long term retention. The long term retained data will be compressed by 50% on average. So the retained data size will be 50GB on average. <!-- Start reviewing here-->
 - The cost incurred will be  50GB x Database price/GB instead of 100GB x Database price/GB. A saving of 50%, in this case, with long term retention compared to the live database. 
 
 Note:
