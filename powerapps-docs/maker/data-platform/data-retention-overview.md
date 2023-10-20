@@ -78,7 +78,7 @@ With Dataverse long term retention, data is never moved out of Dataverse. The re
 
 - Database capacity details reported:
   - Database capacity reported is the sum of the live and retained data. The overall database capacity consumed is reduced depending on the proportion of the data rows retained during a policy run.  
-- Notice that the policy run will take 72 to 96 hours to complete and there will be an additional 24 hours afterward for the database capacity reports to appear.
+- Notice that the policy run takes 72 to 96 hours to complete and there's an additional 24 hours afterward for the database capacity reports to appear.
 - When available, the reports display two entries for a table that has been enabled for long term retention:
    - *Table*, such as **Case**<sup>1</sup> or **Contact**.
    - *Table-Retained*, such as **Case-Retained** and **Contact-Retained**.
@@ -92,7 +92,7 @@ Log capacity reports aren't currently available.
 
 ### Viewing the capacity reports
 
-Imagine a non-production scenario where all the live data for the case and contacts tables are retained with Dataverse long term retention. After the long term retention policy is successfully completed, there are entries for **Case-Retained** and **Contact-Retained** in the report. The reduction in database capacity consumed depends on the number of rows and column data types involved in the retention process.
+Imagine a nonproduction scenario where all the live data for the case and contacts tables are retained with Dataverse long term retention. After the long term retention policy is successfully completed, there are entries for **Case-Retained** and **Contact-Retained** in the report. The reduction in database capacity consumed depends on the number of rows and column data types involved in the retention process.
 
 :::image type="content" source="media/data-retention-storage-capacity-report.png" alt-text="Storage capacity report that includes retained table data" lightbox="media/data-retention-storage-capacity-report.png":::
 
@@ -108,18 +108,19 @@ Dataverse long term retention requires no additional storage purchases and it do
 
 For example:
 
-- If 100 GB data is moved to DV long term retention. The long term retained data will be compressed by 50% on average. So the retained data size will be 50GB on average. <!-- Start reviewing here-->
-- The cost incurred will be  50GB x Database price/GB instead of 100GB x Database price/GB. A saving of 50%, in this case, with long term retention compared to the live database. 
+- If 100-GB data is moved to Dataverse  long term retention, the long term retained data is compressed is typically 50%. So the retained data size is 50 GB on average.
+- The cost incurred is 50-GB times the database price per GB instead of 100-GB times the database price per GB. In this case, a savings of 50% with long term retention compared to the live database.
 
-Note:
-- Dataverse managed data lake compresses the DB data and this saving is passed onto the customer. The compression depends on the kind of data in DV managed SQL. With some data (indeterministic), you might notice more than 50% savings while in others you might notice less than 50% savings.
-- For file attachments (File Capacity), DV long term retention will not reduce capacity consumed. In rare cases depending on the file, you could see negligible file capacity savings.
+> [!NOTE]
+>
+> - Dataverse managed data lake compresses the database data and this saving is passed onto the customer. The compression depends on the kind of data in Dataverse. With some data (indeterministic), you might notice a more than 50% savings while in others you might notice less than 50%.
+> - For file attachments, Dataverse long term retention doesn't reduce capacity consumed. In rare cases, depending on the file, you might experience negligible file capacity savings.
 
 ## Solution aware retention policies
 
 Dataverse retention policies are solution aware. Dataverse retention policies added to a solution are known as solution-aware retention policies. You can add multiple retention policies to a single solution. Retention policies are added to an unmanaged solution. This helps makers follow application lifecycle management (ALM) best practices when working with Dataverse retention policies.
 
-When you include your retention policies in a solution, their definitions become portable, making it easier to move them from one environment to another, saving time required to create the retention policy. For example, you first develop a solution containing a retention policy in a development or sandbox environment. You then move that retention policy to a pre-production environment to test and validate that the solution works well and is ready for production. After testing is completed, the admin imports the solution into the production environment.
+When you include your retention policies in a solution, their definitions become portable, making it easier to move them from one environment to another, saving time required to create the retention policy. For example, you first develop a solution containing a retention policy in a development or sandbox environment. You then move that retention policy to a preproduction environment to test and validate that the solution works well and is ready for production. After testing is completed, the admin imports the solution into the production environment.
 
 > [!NOTE]
 > - The data retained by retention policies isn't portable as part of solutions, only the retention policy definitions are. You must run the retention policy in an environment to retain the data in Dataverse long term storage.
