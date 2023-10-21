@@ -2,8 +2,7 @@
 title: "Create or edit a model-driven app using the app designer in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit apps using the app designer"
 keywords: ""
-ms.date: 03/05/2020
-
+ms.date: 10/17/2023
 ms.custom: 
 ms.topic: get-started
 applies_to: 
@@ -27,6 +26,9 @@ search.audienceType:
 
 This article describes the basics of creating and editing a model-driven app that can be shared and distributed to other environments.
 
+> [!IMPORTANT]
+> Starting in October 2023, the classic app, form, and view designers are deprecated and all model-driven apps, forms, and views will only open in the modern designers. By default, the **Switch to classic** command to revert back to the classic designer from the modern designer will no longer be available. More information: [Classic app, form, and view designers are deprecated](/power-platform/important-changes-coming#classic-app-form-and-view-designers-are-deprecated)
+
 ## Prerequisites to creating model-driven apps
 
 Verify the following prerequisites before creating an app:
@@ -47,7 +49,7 @@ Verify the following prerequisites before creating an app:
 
     - **Name**: Enter a name for the app.  
   
-    - **Unique Name**: The unique name is automatically populated based on the app name that is specified. It is prefixed with a publisher prefix. It is possible to change the part of the unique name that's editable. The unique name can only contain English characters and numbers.  
+    - **Unique Name**: The unique name is automatically populated based on the app name that is specified. It's prefixed with a publisher prefix. It's possible to change the part of the unique name that's editable. The unique name can only contain English characters and numbers.  
   
         > [!NOTE]
         >  The publisher prefix is the text that's added to any table or column created for a solution that has this publisher.
@@ -57,7 +59,7 @@ Verify the following prerequisites before creating an app:
       > [!div class="mx-imgBorder"]
       > ![Create a new app.](media/create-new-app.png "Create a new app")
 
-     - **Icon**: By default, the **Use Default Image**check box is checked. To select a different web resource as an icon for the app, clear the check box, and then select an icon from the drop-down list. This icon will be displayed on the preview tile of the app. For more information about how to create a web resource, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
+     - **Icon**: By default, the **Use Default Image** check box is checked. To select a different web resource as an icon for the app, clear the check box, and then select an icon from the drop-down list. This icon is displayed on the preview tile of the app. For more information about how to create a web resource, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
   
     - **Use existing solution to create the App (Optional)**: Select this option to create the app from a list of installed solutions. When this option is selected, **Done** switches to **Next** on the header. If **Next** is selected, the **Create app from existing solution** page opens. From the **Select Solution** drop-down list, select a solution. If any site map is available for the selected solution, the **Select Sitemap** drop-down list will appear. Select the site map, and then select **Done**.
 
@@ -110,7 +112,7 @@ The site map describes the components that make up a model driven app.
 
 ## Finalizing the app
 
-By default, all the account table's forms, views, charts, and dashboards are enabled for the app. From the app designer **Components** tab on the right pane, components can be cleared so that they aren't available in the app at runtime. It is also possible to create new components, such as a custom form. For this app, leave all components enabled.
+By default, all the account table's forms, views, charts, and dashboards are enabled for the app. From the app designer **Components** tab on the right pane, components can be cleared so that they aren't available in the app at runtime. It's also possible to create new components, such as a custom form. For this app, leave all components enabled.
 
 :::image type="content" source="media/app-designer-form-component-properties.png" alt-text="Model-driven App designer in draft stage":::
 
