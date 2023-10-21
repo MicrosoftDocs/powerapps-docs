@@ -1955,7 +1955,7 @@
       href: ./data-platform/data-platform-import-export.md
     - name: "Configure tables to use Copilot"
       href: ./data-platform/table-settings-for-copilot.md  
-    - name: Long term data retention for tables (preview)
+    - name: Long term data retention for tables
       href: ./data-platform/data-retention-overview.md
       items:
       - name: Set a data retention policy
