@@ -156,7 +156,7 @@ The following table lists the component type, rule description, severity, and ca
 | Web Resources  | [remove-console](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-console&client=PAChecker)  | Avoid using methods on console.  | Medium  |
 | Web Resources  | [avoid-ui-refreshribbon](./powerapps-checker/rules/web/avoid-ui-refreshribbon.md)  | Avoid using refreshRibbon in form onload and EnableRule. | Critical  |
 | Web Resources  | [use-getsecurityroleprivilegesinfo](./powerapps-checker/rules/web/use-getsecurityroleprivilegesinfo.md)  | Avoid userSettings.securityRolePrivileges. Use userSettings.getSecurityRolePrivilegesInfo instead. | High  |
-| Web Resources  | [use-appsidepane-api](./powerapps-checker/rules/web/use-appsidepane-api.md)  | Use Xrm.App.sidePanes.createPane instead of Xrm.Panels.loadPanel. | Medium  |
+| Web Resources  | [use-appsidepane-api](./powerapps-checker/rules/web/use-appsidepane-api.md)  | Use `Xrm.App.sidePanes.createPane` instead of `Xrm.Panels.loadPanel`. | Medium  |
 | Canvas App  | [app-formula-issues-high](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-high&client=PAChecker)  | Refer to Power Apps formula references for additional details.  | Critical  |
 | Canvas App  | [app-formula-issues-medium](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-medium&client=PAChecker)  | Refer to Power Apps formula references for additional details.  |  Medium  |
 | Canvas App  | [app-formula-issues-low](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-low&client=PAChecker)  | Refer to Power Apps formula references for additional details. |  Low  |
