@@ -25,23 +25,23 @@ With offline-first, during the initial offline sync, you'll get a notification s
 
 
 > [!div class="mx-imgBorder"]
-> ![Offline status screen.](media/offline-first-1.png)
+> ![Offline status screen.](media/mobile-offline-first-notification-1.png)
 
-You can also select the **Offline status** button to see more information about sync progress.
+You can also select the **Device status** button to see more information about sync progress.
 
 > [!div class="mx-imgBorder"]
-> ![See more information about the sync process.](media/offline-first-2.png)
+> ![See more information about the sync process.](media/mobile-offline-device-status-page.png)
 
 When the initial sync is complete, you can start using the app in offline mode.
 
 > [!div class="mx-imgBorder"]
-> ![Offline status completed.](media/offline-first-3.png)
+> ![Offline status completed.](media/mobile-offline-first-notification-2.png)
 
 
 When you refresh your data on a grid view, you'll get notification stating, **Refreshing your data**.
 
 > [!div class="mx-imgBorder"]
-> ![Refreshing offline status.](media/offline-first-4.png)
+> ![Refreshing offline status.](media/mobile-offline-first-update-notification.png)
 
 ### See also
 
