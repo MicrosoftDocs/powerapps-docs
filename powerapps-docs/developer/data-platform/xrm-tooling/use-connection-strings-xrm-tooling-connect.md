@@ -65,9 +65,9 @@ ServiceClient svc = new ServiceClient(ConnectionString);
 |`HomeRealmUri` or `Home Realm Uri`|Specifies the Home Realm Uri.|  
 |`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Dataverse environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`. However,  only `OAuth`, `Certificate`, `ClientSecret` and `Office365` are permitted values for Dataverse environments.<br/><br/>**NOTE**: `Office365` authentication type is deprecated, and we recommend to use `OAuth` as the preferred authentication type. More information: [What should I do to fix my application code if affected?](/powerapps/developer/data-platform/authenticate-office365-deprecation#what-should-i-do-to-fix-my-application-code-if-affected)|  
 |`RequireNewInstance`|Specifies whether to reuse an existing connection if recalled while the connection is still active. If set to `true`, will force the system to create a unique connection. If set to `false` the existing connection can be reused.|  
-|`ClientId`, `AppId` or `ApplicationId`|Specifies the `ClientID` assigned when you registered your application in Azure Active Directory or Active Directory Federation Services (AD FS).|
+|`ClientId`, `AppId` or `ApplicationId`|Specifies the `ClientID` assigned when you registered your application in Microsoft Entra ID or Active Directory Federation Services (AD FS).|
 |`ClientSecret` or `Secret` |Required when Auth Type is set to `ClientSecret`. Client Secret string to use for authentication.|
-|`RedirectUri` or `ReplyUrl`|Specifies the redirect URI of the application you registered in Azure Active Directory or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
+|`RedirectUri` or `ReplyUrl`|Specifies the redirect URI of the application you registered in Microsoft Entra ID or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
 |`TokenCacheStorePath`|Specifies the full path to the location where the user token cache should be stored. The running process should have access to the specified path. It is the processes responsibility to set and configure this path.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
 |`LoginPrompt`|Specifies whether the user is prompted for credentials if the credentials are not supplied. Valid values are:<br /><br /> -   `Always`: Always prompts the user to specify credentials.<br />-   `Auto`: Allows the user to select in the login control interface whether to display the prompt or not.<br />-   `Never`: Does not prompt the user to specify credentials. If using a connection method does not have a user interface, you should use this value.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
 |`StoreName` or `CertificateStoreName`|Specifies the store name where the certificate identified by thumbprint can be found. When set, Thumbprint is required.|
@@ -108,7 +108,7 @@ Create a new connection to Dataverse using a UserName or Password via Office365.
 Create a new connection to Dataverse using a UserID or Password via OAuth.
 
 > [!NOTE]
-> OAuth is the preferred auth type for connecting to Dataverse when using an interactive flow.  This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
+> OAuth is the preferred auth type for connecting to Dataverse when using an interactive flow.  This auth type fully supports the features of Microsoft Entra ID Conditional Access and Multi-Factor authentication.
 
 ```xml
 <add name="MyCDSServer"
@@ -128,7 +128,7 @@ Create a new connection to Dataverse using a UserID or Password via OAuth.
 Create a new connection to Dataverse using the current logged in user via OAuth.
 
 > [!NOTE]
-> OAuth is the preferred auth type for connecting to Dataverse when using a interactive flow. This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
+> OAuth is the preferred auth type for connecting to Dataverse when using a interactive flow. This auth type fully supports the features of Microsoft Entra ID Conditional Access and Multi-Factor authentication.
 
 ```xml
 <add name="MyCDSServer"
