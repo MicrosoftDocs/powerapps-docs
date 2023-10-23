@@ -27,7 +27,7 @@ This sample is a Visual Studio .NET 6.0 solution that contains five different pr
 See the README.md file in each sample for detailed instructions about how to run the sample and what it does.
 
 > [!div class="nextstepaction"]
-> [SDK for .NET Create and Update Multiple Sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/xMultipleSamples/README.md)
+> [SDK for .NET Create and Update Multiple Sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/BulkOperations/README.md)
 
 ### See Also
 

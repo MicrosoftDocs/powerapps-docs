@@ -55,7 +55,7 @@ You can perform a bulk deletion on all tables that support the `Delete` message.
   
 If the delete action on a specific table type triggers a plug-in or a workflow (process), the plug-in or workflow is triggered every time the bulk delete job deletes a table record of that type.
  
-## Long-term retained data (preview)
+## Long-term retained data
 
 Bulk deletion is also available for long-term retained data. Run a bulk delete as you normally would, but set the query's `DataSource` field to *retained*. 
 
