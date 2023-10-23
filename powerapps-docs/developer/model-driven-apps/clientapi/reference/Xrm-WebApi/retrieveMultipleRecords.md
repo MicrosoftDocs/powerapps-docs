@@ -23,84 +23,54 @@ contributors:
 
 ## Parameters
 
-<table>
- <tr>
-  <th>Name</th>
-  <th>Type</th>
-  <th>Required</th>
-  <th>Description</th>
- </tr>
- <tr>
-  <td>entityLogicalName</td>
-  <td>String</td>
-  <td>Yes</td>
-  <td>The table logical name of the records you want to retrieve. For example: "account".</td>
- </tr>
- <tr>
-  <td>options</td>
-  <td>String</td>
-  <td>No</td>
-  <td>
-   <p>OData system query options or FetchXML query to retrieve your data. </p>
-   <ul>
-    <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
-    <li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you'll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties. Note that for offline we only support nested <b>$select</b> option inside the  <b>$expand</b>.</li>
-    <li>To specify a FetchXML query, use the `fetchXml` column to specify the query.</li>
-   </ul>
-   <p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren't specified using <b>$select</b>, all properties will be returned.</li>
-   <p>You specify the query options starting with `?`. You can also specify multiple system query options by using `&` to separate the query options.
-   <p>When you specify an OData query string for the `options` parameter, the query <b>should be encoded</b> for special characters.
-   <p>When you specify a FetchXML query for the `options` parameter, the query <b>should not be encoded</b>.
-   <p>See examples later in this article to see how you can define the `options` parameter for various retrieve multiple scenarios.
-  </td>
- </tr>
- <tr>
-  <td>maxPageSize</td>
-  <td>Number</td>
-  <td>No</td>
-  <td>
-   <p>Specify a positive number that indicates the number of table records to be returned per page. If you don't specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p>
-   <p>If the number of records being retrieved is more than the specified `maxPageSize` value or 5000 records, `nextLink` column in the returned promise object will contain a link to retrieve records.
-  </td>
- </tr>
- <tr>
-  <td>successCallback</td>
-  <td>Function</td>
-  <td>No</td>
-  <td>
-   <p>A function to call when table records are retrieved. An object with the following values is passed to the function:</p>
-   <ul>
-    <li><b>entities</b>: An array of JSON objects, where each object represents the retrieved table record containing columns and their values as `key: value` pairs. The ID of the table record is retrieved by default.</li>
-    <li><b>nextLink</b>: (optional) String. If the number of records being retrieved is more than the value specified in the `maxPageSize` parameter in the request, this returns the URL to return the next page of records.</li>
-    <li><b>fetchXmlPagingCookie</b>: (optional) String. For a fetchXml-based retrieveMultipleRecords operation with paging where the total record count is greater than the paging value, this attribute returns the paging cookie that can be used for a subsequent fetchXml operation to retrieve the next page of records.</li>
-   </ul>
-  </td>
- </tr>
- <tr>
-  <td>errorCallback</td>
-  <td>Function</td>
-  <td>No</td>
-  <td>A function to call when the operation fails.</td>
- </tr>
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`entityLogicalName`|String|Yes|The table logical name of the records you want to retrieve. For example: `account`.|
+|`options`|String|No|OData system query options or FetchXML query to retrieve your data. See [Options](#options)|
+|`maxPageSize`|Number|No|Specify a positive number that indicates the number of table records to be returned per page. If you don't specify this parameter, the value is defaulted to the maximum limit of 5000 records.<br /><br />If the number of records being retrieved is more than the specified `maxPageSize` value or 5000 records, `nextLink` column in the returned promise object will contain a link to retrieve records.|
+|`successCallback`|Function|No|A function to call when table records are retrieved. See [Return Value](#return-value)|
+|`errorCallback`|Function|No|A function to call when the operation fails.|
 
+### Options
+
+The following system query options are supported: `$select`, `$top`, `$filter`, `$expand`, and `$orderby`.
+
+Use the `$expand` system query option to control what data from related tables is returned. If you just include the name of the navigation property, you'll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both *single-valued* and *collection-valued* navigation properties. Note that for offline we only support nested `$select` option inside the `$expand`.
+
+To specify a FetchXML query, use the `fetchXml` column to specify the query.
+
+> [!NOTE]
+> You must always use the `$select`system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren't specified using `$select`, all properties will be returned.
+
+You specify the query options starting with `?`. You can also specify multiple system query options by using `&` to separate the query options.
+  
+When you specify an OData query string for the `options` parameter, the query **should be encoded** for special characters.
+
+When you specify a FetchXML query for the `options` parameter, the query **should not be encoded**.
+
+See [Examples](#examples) to see how you can define the `options` parameter for various retrieve multiple scenarios.
+ 
 ## Return Value
 
-For a successful OData query retrieveMultipleRecords operation, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved table records and the **nextLink** attribute (optional) with the URL pointing to next page of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value.
+On success, returns a promise object to the `successCallback` with the following properties:
 
-For successful FetchXML-based retrieveMultipleRecords operations, the promise response will contain a **fetchXmlPagingCookie** (optional) attribute when the operation returns more records than the paging value. This attribute will contain the paging cookie string that can be included in a subsequent fetchXml request to fetch the next page of records.
+|Name|Type|Description|
+|---|---|---|
+|`entities`|Array of JSON objects|Each object represents the retrieved table record containing columns and their values as `key: value` pairs. The ID of the table record is retrieved by default|
+|`nextLink`|String|(optional) If the number of records being retrieved is more than the value specified in the `maxPageSize` parameter in the request, this returns the URL to return the next page of records.|
+|`fetchXmlPagingCookie`||(optional) For a fetchXml-based `retrieveMultipleRecords` operation with paging where the total record count is greater than the paging value, this attribute returns the paging cookie that can be used for a subsequent fetchXml operation to retrieve the next page of records.|
 
 ## Unsupported Attribute Types for OData query options in Mobile Offline
 
 The following [Column types](../../../../data-platform/entity-attribute-metadata.md#column-types) aren't supported when doing a `Xrm.WebApi.retrieveMultipleRecords` operation with OData query string options (for example, `$select` and `$filter`) in mobile offline mode. You should use FetchXML if the attribute type you need to work with is in this list of unsupported attribute types.
 
-- MultiSelectPicklist
-- File
-- Image
-- ManagedProperty
-- CalendarRules
-- PartyList
-- Virtual
+- `MultiSelectPicklist`
+- `File`
+- `Image`
+- `ManagedProperty`
+- `CalendarRules`
+- `PartyList`
+- `Virtual`
 
 ## Unsupported features in Mobile Offline
 
@@ -581,7 +551,7 @@ Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$exp
 For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md).
 
  
-### See also
+### Related articles
 
 [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md)<br />
 [Xrm.WebApi.retrieveRecord](retrieveRecord.md)<br />

@@ -22,7 +22,7 @@ contributors:
 
 [This article is pre-release document and is subject to change.]
 
-Modern controls in canvas apps are a new set of controls that are based on the Microsoft Fluent design system. These controls are quicker and simpler for makers to configure, and they also provide a more cohesive experience for end-users. Modern controls are designed with a focus on accessibility, usability, and performance that makes them visually appealing, highly functional, and intuitive to use. Bundled with the modern controls is a new modern theming system, also rooted in the Fluent design system, that allows an app's look and feel to be modified from a central place.  
+Modern controls in canvas apps are a new set of controls that are based on the Microsoft Fluent 2 design system. These controls are quicker and simpler for makers to configure, and they also provide a more cohesive experience for end-users. Modern controls are designed with a focus on accessibility, usability, and performance that makes them visually appealing, highly functional, and intuitive to use. Bundled with the modern controls is a new modern theming system, based on the Fluent 2 design system, that allows an app's look and feel to be modified from a central place.  
 
 
 > [!IMPORTANT]

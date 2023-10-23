@@ -31,9 +31,9 @@ Money, decimal, double, and integer
 
  Parameter Name| Type| Description  |
 | --------|-----------| -----|
-|value| Number| Number of digits allowed to the right of the decimal point.|
+|`value`| Number| Number of digits allowed to the right of the decimal point.|
 
-### Related topics
+### Related articles
 
 [getPrecision](getPrecision.md)
 

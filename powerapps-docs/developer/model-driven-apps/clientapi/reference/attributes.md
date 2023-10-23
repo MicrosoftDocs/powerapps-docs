@@ -115,7 +115,7 @@ In addition to the methods available for all column types as explained earlier, 
 - [getMaxLength](attributes/getMaxLength.md)
 
 
-### Related topics
+### Related articles
 
 [Understand Xrm object model](../understand-clientapi-object-model.md)<br/>
 [Controls (Client API reference)](controls.md)

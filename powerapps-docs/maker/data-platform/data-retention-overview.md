@@ -6,21 +6,19 @@ author: pnghub
 ms.author: gned
 ms.reviewer: matp
 ms.topic: overview
-ms.date: 05/24/2023
+ms.date: 10/20/2023
 ms.custom: template-overview
 ---
-# Dataverse long term data retention overview (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Dataverse long term data retention overview
 
 Microsoft Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. While Dataverse can support your business growth with no limit on active data, you might want to consider moving inactive data to the Dataverse long term retention store.
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - For public preview, only non-production environments are allowed for previewing the long-term data retention feature. Production and Dataverse for Teams environments can't be used with this feature.
-> - No additional Power Platform licensing requirement is required to experience this feature during the preview. However, there will be a licensing requirement once the feature is generally available.
-> - Pricing information for long term data retention will be available at general availability.
+> You must meet one of the following two requirements to use all long term data retention features:
+> - Be a licensed Dynamics 365 customer engagement app customer.
+> - Be a licensed Power Apps customer with a [managed environment](/power-platform/admin/managed-environment-overview).
+>
+> Customers who don't meet either requirement can continue to create data retention policies, but the policies are disabled. You must meet one of the requirements to enable the policies to run.
 
 Watch this video to learn about Dataverse long term data retention.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAf]
@@ -41,7 +39,7 @@ Dataverse delivers native platform support for long term retention of data. It a
 
 - Securely retain the historical application data long term for audit, legal, and regulatory requirements.
 - Access the read-only data for limited inquiry purposes.
-- Reduce database capacity consumed.
+- Reduce database capacity consumed and save money on inactive data.
 - Avoid IT investments required to build and maintain custom solutions for long term retention of historical application data.
 
 ## How it works
@@ -61,16 +59,16 @@ Dataverse provides read-only access to the retained data via:
 
 ## Types of data retained long term
 
-Dataverse standard (except system) tables, custom tables, along with attachments, can be retained in Dataverse long term storage.
+Dataverse standard (except system) tables, custom tables, along with attachments and images, can be retained in Dataverse long term storage.
 
 > [!NOTE]
-> Currently, audit, elastic tables, and images aren't supported for long term retention.
+> Currently, audit tables and elastic tables aren't supported for long term retention.
 
-Admins set retention policies on tables when the application maker has enabled long term retention for the table. When a maker enables retention on a parent root table, it also enables retention for all child tables.
+Admins set retention policies on tables when the application maker has enabled long term retention for the table. When a maker enables retention on a parent root table, it also enables retention for all child tables and associated attachments and images.
 
 ### Long term data retention and existing delete action and plugins
 
-All the existing delete action cascade relationships and plugins for tables are executed when a data retention policy is run on the table.
+All the existing delete action cascade relationships and plugins for tables are executed when a data retention policy is run on the table. In addition, the retain action can be used to trigger custom behavior. Application makers can write custom plugins for the retain action.
 
 More information: [Long-term data retention](../../developer/data-platform/long-term-retention.md)
 
@@ -80,7 +78,7 @@ With Dataverse long term retention, data is never moved out of Dataverse. The re
 
 - Database capacity details reported:
   - Database capacity reported is the sum of the live and retained data. The overall database capacity consumed is reduced depending on the proportion of the data rows retained during a policy run.  
-- Notice that the policy run will take 72 to 96 hours to complete and there will be an additional 24 hours afterward for the database capacity reports to appear.
+- Notice that the policy run takes 72 to 96 hours to complete and there's an additional 24 hours afterward for the database capacity reports to appear.
 - When available, the reports display two entries for a table that has been enabled for long term retention:
    - *Table*, such as **Case**<sup>1</sup> or **Contact**.
    - *Table-Retained*, such as **Case-Retained** and **Contact-Retained**.
@@ -94,7 +92,7 @@ Log capacity reports aren't currently available.
 
 ### Viewing the capacity reports
 
-Imagine a non-production scenario where all the live data for the case and contacts tables are retained with Dataverse long term retention. After the long term retention policy is successfully completed, there are entries for **Case-Retained** and **Contact-Retained** in the report. The reduction in database capacity consumed depends on the number of rows and column data types involved in the retention process.
+Imagine a nonproduction scenario where all the live data for the case and contacts tables are retained with Dataverse long term retention. After the long term retention policy is successfully completed, there are entries for **Case-Retained** and **Contact-Retained** in the report. The reduction in database capacity consumed depends on the number of rows and column data types involved in the retention process.
 
 :::image type="content" source="media/data-retention-storage-capacity-report.png" alt-text="Storage capacity report that includes retained table data" lightbox="media/data-retention-storage-capacity-report.png":::
 
@@ -104,11 +102,27 @@ Imagine a non-production scenario where all the live data for the case and conta
 
 For more information about capacity reports, go to [New Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage).
 
+## Understanding long term retention storage costs
+
+Dataverse long term retention requires no additional storage purchases and it doesn't require you to purchase the feature as a separate service. Every GB moved from Dataverse managed SQL database to Dataverse long term retention (Dataverse managed data lake), will consume, on average, 50% less database capacity. This is because the data is compressed in the Dataverse managed data lake.
+
+For example:
+
+- Suppose the database capacity consumed by Contoso is 1000 GB today and Contoso's scheduled long term retention policy was run and retains 200 GB of data in the Dataverse managed data lake.
+- With an average compression of at lease 50%, the retained data size is 100 GB, a savings of 50% compared to when the data was in the active state in the Dataverse managed SQL database.
+- This implies Contoso now has 800 GB of active data and 100 GB of inactive data in Dataverse.
+- In this scenario, the [storage capacity reports](#storage-capacity-reports) display the database usage as 900 GB (800 GB + 100 GB).
+
+> [!NOTE]
+>
+> - Dataverse managed data lake compresses the database data and this saving is passed onto the customer. The amount of compression depends on the kind of data in Dataverse. With some data (indeterministic), you might notice more than 50% savings while in others you might notice less than 50%.
+> - For file and image attachments, Dataverse long term retention doesn't reduce capacity consumed. In rare cases, depending on the file or image, you might experience negligible file capacity savings.
+
 ## Solution aware retention policies
 
 Dataverse retention policies are solution aware. Dataverse retention policies added to a solution are known as solution-aware retention policies. You can add multiple retention policies to a single solution. Retention policies are added to an unmanaged solution. This helps makers follow application lifecycle management (ALM) best practices when working with Dataverse retention policies.
 
-When you include your retention policies in a solution, their definitions become portable, making it easier to move them from one environment to another, saving time required to create the retention policy. For example, you first develop a solution containing a retention policy in a development or sandbox environment. You then move that retention policy to a pre-production environment to test and validate that the solution works well and is ready for production. After testing is completed, the admin imports the solution into the production environment.
+When you include your retention policies in a solution, their definitions become portable, making it easier to move them from one environment to another, saving time required to create the retention policy. For example, you first develop a solution containing a retention policy in a development or sandbox environment. You then move that retention policy to a preproduction environment to test and validate that the solution works well and is ready for production. After testing is completed, the admin imports the solution into the production environment.
 
 > [!NOTE]
 > - The data retained by retention policies isn't portable as part of solutions, only the retention policy definitions are. You must run the retention policy in an environment to retain the data in Dataverse long term storage.

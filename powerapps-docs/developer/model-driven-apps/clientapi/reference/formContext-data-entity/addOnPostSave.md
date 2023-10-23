@@ -28,11 +28,10 @@ formContext.data.entity.addOnPostSave(myFunction);
 
 |Name|Type|Required|Description|
 |------|-----|------|----------|
-|myFunction|function reference|Yes|The function to be added to the `PostSave` event after the record is saved with success or failure.|
+|`myFunction`|function reference|Yes|The function to be added to the `PostSave` event after the record is saved with success or failure.|
 
-### See also
+### Related articles
 
-[PostSave event](../events/postsave.md)
-
+[PostSave event](../events/postsave.md)   
 [removeOnPostSave](removeOnPostSave.md) 
 
