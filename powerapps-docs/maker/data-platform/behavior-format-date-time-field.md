@@ -92,12 +92,12 @@ If the user enters just the date `October 14th, 2023`, the time portion is assum
 
 ### Enter invalid values in an app
 
-Different clients have different ways to handle invalid input. For example, in Pacific time zone, daylight savings started on March 12th, 2023 at 2:00 AM, moving the time forward 1 hour to 3:00 AM. The time between 2:00 AM and 3:00 AM on that day doesn't exist. When users enter a value in that time range, apps may do one of the following:
+Different clients have different ways to handle invalid input. For example, in Pacific time zone, daylight savings started on March 12th, 2023 at 2:00 AM, moving the time forward 1 hour to 3:00 AM. The time between 2:00 AM and 3:00 AM on that day doesn't exist. When users try to enter a value in that time range, apps may do one of the following:
 
 * Change to the previous or next valid time.
 * Revert to the last known value.
 * Show an error message.
-* Don't show times between 2:00 AM and 3:00 AM in the time picker, so that users won't select them in the first place.
+* Don't show times between 2:00 AM and 3:00 AM in the time picker, so that users can't select them in the first place.
 
 ### Get raw values with Web API
 
@@ -124,8 +124,8 @@ For **Time zone independent** behavior, the JavaScript Date value will be in the
 
 | Behavior | Format | JavaScript `dateValue.toString()` |
 | -------- | ------ | --------------------------------- |
-| Time zone Independent | Date and time | 2023-10-15 23:30 (browser time zone) |
-| Time zone Independent | Date only | 2023-10-15 23:30 (browser time zone) |
+| Time zone Independent | Date and time | 2023-10-14 23:30 (browser time zone) |
+| Time zone Independent | Date only | 2023-10-14 23:30 (browser time zone) |
 
 JavaScript Date values always have a time component. That's why **Date only** behavior has a time component of 12:00 AM:
 
@@ -135,7 +135,9 @@ JavaScript Date values always have a time component. That's why **Date only** be
 
 > [!NOTE]
 > JavaScript Date values are affected by the browser's time zone, which comes from OS settings.
+>
 > For **User local** behavior, the Client API result should be interpreted as a UTC value. Use `Date.getUTCDate()`, `Date.getUTCHours()`, etc. to work with it. To get what the user sees, apply [getTimeZoneOffsetMinutes](../../developer/component-framework/reference/usersettings/gettimezoneoffsetminutes.md). Do not use `Date.getDate()`, `Date.getHours()`, etc. because these will show the value in the browser's time zone.
+>
 > For **Time zone independent** and **Date only** behavior, the Client API result should be interpreted as a value in the browser's time zone. Use `Date.getDate()`, `Date.getHours()`, etc. to work with it. Do not use `Date.getUTCDate()`, `Date.getUTCHours()`, etc. because you don't have to adjust for any time zones.
 
 
