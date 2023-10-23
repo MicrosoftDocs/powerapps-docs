@@ -1,4 +1,4 @@
----
+![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/29776190/28683373-3081-4b45-b614-8a8d072f0c7f)---
 title: View long term retained data in Microsoft Dataverse
 description: Learn how to access ready only data that is in long term storage. 
 author: pnghub
@@ -48,6 +48,19 @@ These restrictions are enforced by Dataverse for each environment:
 - Any single request from advanced find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
 - Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed.
 - Retained data includes lookup data. Lookup values in the table are denormalized with ID and name value.
+
+## Fabric to view retained data with no limitations (Preview) 
+
+You can view the active (live) and in-active (long term retained) application data in Dataverse using Fabric. 
+Ensure that you link your Dataverse environment to Microsoft Fabric (https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-view-in-fabric).
+
+When your long term retention policy is run successfully, you can access the active and in-active Dataverse data. The limitations applied to retrieval of retained data do not apply to this mode of access.
+
+You can explore the data with SQL endpoint and query Dataverse data with SQL and generate views in Fabric. You can also create PowerBI reports. Learn more (https://learn.microsoft.com/en-us/power-apps/maker/data-platform/azure-synapse-link-view-in-fabric)
+
+The column msft_datastate can be used to filter out the data with the SQL WHERE clause.
+- In-active application data: WHERE msft_datastate=1
+- Active (live) application data: WHERE msft_datastate=0
 
 ## Known issues
 
