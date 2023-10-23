@@ -15,19 +15,20 @@ contributors:
 
 # Set up a Postman environment
 
- To save you time and get you started right away, this article describes how to configure and use a Postman environment to work for your Dataverse environments without you having to register your own Azure Active Directory (Azure AD) application. For information on Postman environment and variables, see [Postman Documentation > Variables](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables).
+ To save you time and get you started right away, this article describes how to configure and use a Postman environment to work for your Dataverse environments without you having to register your own Microsoft Entra ID application. For information on Postman environment and variables, see [Postman Documentation > Variables](https://learning.postman.com/docs/sending-requests/managing-environments).
 
 ## Prerequisites
 
 * Have a Power Apps Dataverse environment that you can connect to. 
 * Download and install the [Postman desktop application](https://www.getpostman.com/apps).
+* Have a Postman account [Postman Sign up](https://identity.getpostman.com/signup).
 
 <a name="bkmk_connectcds"></a> 
 
 ## Connect with your Dataverse environment
 
 > [!IMPORTANT]
-> To save you time and get you started right away, we have provided a Client ID for an application that is registered for all Dataverse environments, so you don't have to register your own Azure Active Directory (Azure AD) application to connect with Dataverse API.
+> To save you time and get you started right away, we have provided a Client ID for an application that is registered for all Dataverse environments, so you don't have to register your own Microsoft Entra ID application to connect with Dataverse API.
 
 1. Launch the Postman desktop application. 
 1. To create a new environment, select **Environments** on the left and click <b>+</b>.
@@ -99,7 +100,7 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
     
 1. Click **Get New Access Token**. 
    
-   Once you click **Get New Access Token**, an Azure Active Directory sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
+   Once you click **Get New Access Token**, an Microsoft Entra ID sign-in dialog box appears. Enter your username and password, and then click **Sign In**. Once authentication completes, the following dialogue appears.
 
     :::image type="content" source="media/setup-postman-authentication-completes.png" alt-text="Authentication completes":::
 
@@ -134,6 +135,6 @@ Learn about using Postman to perform operations with the Web API.
 ## See also
 
 [Use Postman to perform operations](use-postman-perform-operations.md)<br/>
-[Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
+[Walkthrough: Register a Dataverse app with Microsoft Entra ID](../walkthrough-register-app-azure-active-directory.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

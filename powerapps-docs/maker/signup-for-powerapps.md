@@ -4,9 +4,8 @@ description: Explore Power Apps for free with a 30-day trial. You’ll be able t
 author: alaug
 ms.subservice: common
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.date: 07/14/2022
 ms.author: alaug
 ms.reviewer: kvivek

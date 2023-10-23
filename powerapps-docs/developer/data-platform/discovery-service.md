@@ -63,7 +63,7 @@ If the calling user has access to no instances, the response simply returns an e
 
 ## Authentication
 
-The calling user must aquire an OAuth 2.0 token from Azure Active Directory (AD), and then add that token in the Authorization header of the API calls. More information: [Use OAuth authentication with Microsoft Dataverse](authenticate-oauth.md).
+The calling user must aquire an OAuth 2.0 token from Microsoft Entra ID, and then add that token in the Authorization header of the API calls. More information: [Use OAuth authentication with Microsoft Dataverse](authenticate-oauth.md).
 
 ### CORS support
 
@@ -134,14 +134,14 @@ The following table describes the properties of the `Instance` Entity from the $
 
 You can use these property names with the OData `$select` query parameter to retrieve just the data you need. In most cases, all you will need are the `FriendlyName` and `ApiUrl` properties. For example:
 
-**Request**
+**Request:**
 
 ```http
 GET https://globaldisco.crm.dynamics.com/api/discovery/v2.0/Instances?$select=ApiUrl,FriendlyName HTTP/1.1
 Authorization: Bearer <truncated for brevity>
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK

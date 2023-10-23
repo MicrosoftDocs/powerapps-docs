@@ -3,7 +3,7 @@ title: "Comparing Microsoft Lists, Dataverse for Teams, and Dataverse | Microsof
 description: Quickly understand and apply the key considerations that will help you pick the correct data source for your app between one Microsoft Lists, Dataverse for Teams, and Dataverse.
 author: Mattp123
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 05/06/2021
 ms.subservice: teams
 ms.author: kvivek

@@ -1,18 +1,19 @@
 ---
-title: "What is Dataverse search and its benefits| MicrosoftDocs"
-description: Benefits of Dataverse search
-author: mduelae
-
+title: What is Dataverse search?
+description: Dataverse search for model-driven apps helps you quickly find what you're looking for. 
+author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/8/2021
+ms.date: 06/21/2023
 ms.subservice: end-user
-ms.author: mkaur
-ms.custom: ""
-ms.reviewer: ""
+ms.author: sericks
+ms.custom: 
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
+ms.contributors:
+- mspilde 
 ---
 
 # What is Dataverse search?
@@ -27,7 +28,7 @@ Dataverse search for model-driven apps helps you quickly find what you're lookin
 
 - **Smart**: Finds matches that include inflectional words such as **stream**, **streaming**, or **streamed**. 
 
-- **Search across documents in Microsoft Dataverse**: Includes search results for text in documents that are stored in Dataverse such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON file formats. It also searches text in notes and attachments. 
+- **Search activities**: Search includeds notes and attachements in activities. 
 
 - **Understanding of underlying data**: Understands data types like **Choice** and **Lookup**, so it can effectively interpret a search query that includes multiple search terms.
 

@@ -8,7 +8,7 @@ ms.topic: quickstart
 ms.date: 09/15/2020
 ms.subservice: teams
 ms.author: mkaur
-ms.custom: intro-internal
+ms.collection: get-started
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 

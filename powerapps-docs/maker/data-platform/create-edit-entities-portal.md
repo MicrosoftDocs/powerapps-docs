@@ -1,22 +1,12 @@
 ---
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
-ms.custom: ""
-ms.date: 06/09/2022
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "how-to"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
 author: "Mattp123"
-ms.assetid: fa04f99d-a5f9-48cb-8bfb-f0f50718ccee
-caps.latest.revision: 41
+ms.date: 08/23/2023
+ms.reviewer: ""
+ms.topic: "how-to"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-search.audienceType: 
-  - maker
 ---
 # Create and edit tables using Power Apps
 
@@ -40,10 +30,39 @@ You can also select a column heading from the table view, and then select **Filt
 
 ## Create a table
 
-Watch this video for a quick overview about how to create a table:
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM]
+There are several ways to create a new table:
 
-While [viewing tables](#view-tables), on the menu bar select **New table**. This opens the **New table** panel.
+- [Add columns and data](#add-columns-and-data)
+- [Describe the new table](#describe-the-new-table)
+- [Set advanced properties](#set-advanced-properties)
+- [Upload an Excel file (preview)](#upload-an-excel-file-preview)
+- [Create a virtual table](#create-a-virtual-table)
+
+### Add columns and data
+
+Create a table by entering the data rows and columns you want.
+
+1. From the **Tables** area, on the command bar select **New table** > **Add columns and data**.
+1. When you're finished, select **Create**.
+
+More information: [Table designer](#table-designer)
+
+### Describe the new table
+
+Create a table with the help of AI Copilot.
+
+1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
+1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
+1. When you're finished, select **Create**.
+
+### Set advanced properties
+
+<!-- Watch this video for a quick overview about how to create a table:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM] -->
+
+Start with a blank table and enter the table properties, such as name, and description. Expand **Advanced options** to set more properties, such as track changes and audit changes.
+
+From the **Tables** area, on the command bar select **New table** > **Set advanced properties**. This opens the **New table** properties panel.
 
 :::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
 
@@ -57,16 +76,19 @@ Enter data for the following properties.
 
 Select **Enable Attachments** to append notes and files to records for this table.
 
-Select the **Primary column** tab if you want to change the **Display Name** or **Name** of the primary column. The primary column is used by lookup fields when establishing relationships with other tables.
+Select the **Primary column** tab if you want to change the **Display name** or **Description** of the primary column. The primary column is used by lookup fields when establishing relationships with other tables.
 
-### Advanced options
+> [!IMPORTANT]
+> After you save the table, the **Primary column** display name and description can't be changed.
+
+#### Advanced options
 
 Select **Advanced options** to display additional properties that are optional for a table.
 
 |Property |Description|
 |--|--|
 | **Schema name**  | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved.  |
-|**Type**  | Select the type of table. Use standard for most tables. Activity tables are a special table that can only be owned by a user or team, but can’t be owned by an organization. Virtual tables require the table be populated with data from an external source.  |
+|**Type**  | Select the type of table. Use standard for most tables. [Activity tables](/power-apps/maker/data-platform/types-of-entities#activity-tables) are a special table that can only be owned by a user or team, but can’t be owned by an organization. [Virtual tables](create-edit-virtual-entities.md) require the table be populated with data from an external source. [Elastic tables](create-edit-elastic-tables.md) should be considered when your business scenario entails very large data volumes with high throughput, storage, and low latency requirements.  |
 |**Record ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record.|
 | **Choose a table image**  | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](types-of-fields.md#image-columns) |
 | **Color** | Set a color to be used for the table in model-driven apps.  |
@@ -87,6 +109,31 @@ Select **Advanced options** to display additional properties that are optional f
 |**Can be added to a queue**| Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
 
 Select **Save** to continue, this will close the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
+
+### Upload an Excel file (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Use an Excel file to populate a table with your data, which uses AI to assist with the table generation when Copilot is enabled for the environment.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE [cross-geo-support](../../../shared/cross-geo-support.md)]
+
+1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
+1. Select from device or drag and drop your Excel file onto the Upload an Excel file page.
+1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
+1. When you're finished, select **Create**.
+
+For more information about how AI is used with this feature, go to [FAQ for Excel to table and app](../common/faqs-excel-to-table-app.md).
+
+### Create a virtual table
+
+A virtual table is a custom table in Microsoft Dataverse that has columns containing data from an external data source, such as Azure SQL Database or SharePoint.
+
+1. From the **Tables** area, on the command bar select **New table** > **Create a virtual table**.
+1. Follow the **New table from external data** wizard to create the virtual table. More information: [Create the virtual table](create-virtual-tables-using-connectors.md#create-the-virtual-table)
 
 ## Edit a table
 
@@ -158,6 +205,8 @@ While [viewing tables](#view-tables), select the table, and then select **Delete
 If the table has dependencies that prevent it from being deleted you'll see an error message. To identify and remove any dependencies, you'll need to use the solution explorer. More information [Identify table dependencies](create-edit-entities-solution-explorer.md#identify-table-dependencies)
 
 ### See also
+
+[Build apps through conversation (preview)](../canvas-apps/ai-conversations-create-app.md)
 
 [Create a custom table using code](../../developer/data-platform/org-service/create-custom-entity.md)
 

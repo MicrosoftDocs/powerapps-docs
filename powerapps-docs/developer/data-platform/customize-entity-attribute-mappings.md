@@ -41,7 +41,7 @@ The response received from InitializeFrom request consists of values of mapped c
 
 For more information see [Create a new record from another record](webapi/create-entity-web-api.md#bkmk_initializefrom).
 
-### Using Organization Service
+### Using SDK for .NET
 
  When creating new records in the context of an existing record where a mapping exists between the tables, you can use the 
  <xref:Microsoft.Crm.Sdk.Messages.InitializeFromRequest> message to define a new record that contains the values specified in the mapping. You can then use the 

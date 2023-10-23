@@ -4,9 +4,8 @@ description: Describes how to create canvas app from your data in Azure SQL Data
 author: mduelae
 
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 10/21/2021
 ms.subservice: canvas-maker

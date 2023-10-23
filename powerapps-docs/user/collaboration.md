@@ -1,35 +1,33 @@
 ---
 title: "Collaborate with others in model-driven apps| MicrosoftDocs"
 description: Collaborate with others in model-driven apps
-author: fikaradz 
-
+author: sriharibs-msft
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/07/2023
+ms.date: 06/29/2023
 ms.subservice: end-user
-ms.author: fikaradz
+ms.author: srihas
 ms.custom: ""
 ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
+ms.contributors:
+- DanaMartens
 ---
 # Collaborate with others in model-driven apps 
 
 Collaborate with colleagues and share links in model-driven Power Apps the same way do you as in Microsoft Office.
 
-### Multiplayer apps (preview)
-[This section is pre-release documentation and is subject to change.]
-
-> [!IMPORTANT]
-> This feature is rolling out gradually, slower than the standard, weekly deployments and will be enabled by default for all customers through April and May 2023. If you have enabled this capability before 2023 Release Wave 1, you may not see other users working on the same record intermittently. This will be addressed as part of the gradual rollout through April and May 2023.
-
+### Multiplayer apps
 When you're working on a record, you can also see other users who are working on the same record.
 
-You can also select a user's picture to see their online status, send them an email, or start a Teams chat.
+You can also select a user's picture to see their online status, send them an email, or start a Teams chat. 
 
 > [!div class="mx-imgBorder"]
 > ![View a user's online status.](media/collob-1.png "View a user's online status")
+
+This feature uses the Azure Fluid Relay service, which must be available in your region. For more information, see [Azure Fluid Relay service availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=fluid-relay). Because this feature uses the [Azure Fluid Relay](/azure/azure-fluid-relay/overview/overview) service, users must be able to access fluidrelay.azure.com. 
 
 ### View a user's status and picture
 

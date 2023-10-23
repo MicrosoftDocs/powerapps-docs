@@ -17,14 +17,14 @@ contributors:
 
 # Code sign for Android 
 
-In this article, you'll learn about how to code sign for Android (APK). You'll need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
+In this article, you'll learn about how to code sign for Android (APK). You need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](wrap-how-to.md#create-native-mobile-apps-for-ios-and-android-using-the-wizard).
 
 > [!IMPORTANT]
 > If you'd like to sign an AAB app for Google Play distribution instead, refer to [Sign your app](https://developer.android.com/studio/publish/app-signing).
 
 ## Prepare your PC
 
-You'll need the following information to get started:
+You need the following information to get started:
 
 - Install [Android Studio](https://developer.android.com/studio)
 - Install [OpenSSL](https://www.openssl.org/)
@@ -32,7 +32,7 @@ You'll need the following information to get started:
 ## Generate keys
 
 > [!NOTE]
-> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](how-to.md#app-registration).
+> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-4-register-app).
 
 We'll use **keytool.exe** (available after installing Android Studio, from the folder location "Drive:\Program Files\Android\Android Studio\jre\bin\keytool.exe") to create a certificate to sign the application package. Keytool is used to manage a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates.
 
@@ -44,7 +44,7 @@ To generate a key, open a command prompt and run the following command:
 Parameters:
 
 - **genkey** - command to generate a key.
-- **alias** - indicates the alias to be used in the future to refer to the keystore entry containing the keys that will be generated.
+- **alias** - indicates the alias to be used in the future to refer to the keystore entry containing the keys that are generated.
 - **keyalg** - key algorithm name.
 - **keystore** - the name of the keystore you're using.
 - **keysize** - the size of each key to be generated.
@@ -68,9 +68,9 @@ Example:
 ## Generate signature hash
 
 > [!NOTE]
-> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](how-to.md#app-registration).
+> Skip to [sign the APK package](#sign-the-apk-package) if you've already generated keys and signature hash while creating the [app registration](wrap-how-to.md#step-4-register-app).
 
-After generating the key, we'll use the **exportcert** command in **keytool** to export the keystore certificate.
+After generating the key, the **exportcert** command is used in **keytool** to export the keystore certificate.
 
 `keytool -exportcert -alias SIGNATURE_ALIAS -keystore PATH_TO_KEYSTORE | openssl sha1 -binary | openssl base64`
 
@@ -81,11 +81,11 @@ Parameters:
 - **keystore** - the name of the keystore you're using.
 - **openssl** - generates SHA1 key for Android.
 
-Add the generated signature hash in the **Redirect URI** while [registering the app](how-to.md#app-registration).
+Add the generated signature hash in the **Redirect URI** while [registering the app](wrap-how-to.md#step-4-register-app).
 
 ### Convert SHA1 hex to Base64-encoded signature hash manually
 
-You might see the following error if your signature hash is not correctly encoded or unacceptable in the Azure portal:
+You might see the following error if your signature hash isn't correctly encoded or unacceptable in the Azure portal:
 
 "The signature hash must be base64-encoded SHA1."
 
@@ -96,11 +96,11 @@ When this error appears, try to generate the signature hash using the following 
     <br> For example: `EF:11:45:3D:F1:72:D9:8C:43:32:CD:0A:49:C2:E4:75:2D:B3:2D:9F`
 1. Use any available "Hexadecimal to Base64" converter to convert the copied certificate fingerprint hexadecimal value into Base64 encoded value.
     <br> Example of the Base64 encoded value: `8CPPeLaz9etdqQyaQubcqsy2Tw=`
-1. Copy the generated Base64 encoded value as the **Signature hash** in the Azure portal while [registering the app](how-to.md#app-registration).
+1. Copy the generated Base64 encoded value as the **Signature hash** in the Azure portal while [registering the app](wrap-how-to.md#step-4-register-app).
 
 ## Sign the APK package
 
-To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature will be verified successfully on all Android platforms supported by the APKs.
+To sign the APK package, we'll use the [apksigner tool](https://developer.android.com/studio/command-line/apksigner). This tool allows you to sign APKs and ensure that the APK package signature are verified successfully on all Android platforms supported by the APKs.
 
 ### Find your apksigner
 
@@ -128,7 +128,7 @@ More information: [Android Studio command line tools: **apksigner**](https://dev
 
 ## Distribute the app
 
-You can now host the package on a distribution service such as [App Center](how-to.md#test-and-distribute-mobile-app-package). To distribute using Microsoft Intune, see [Add an Android line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-android). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
+You can host the package on a distribution service such as [App Center](wrap-how-to.md#create-an-app-center-location-for-your-mobile-app-manually-optional). To distribute using Microsoft Intune, see [Add an Android line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-android). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
 
 
 ### See also

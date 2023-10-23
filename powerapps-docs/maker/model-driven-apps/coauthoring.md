@@ -6,17 +6,16 @@ ms.author: matp
 ms.service: powerapps
 ms.subservice: mda-maker
 ms.topic: how-to 
-ms.date: 01/23/2023
+ms.date: 06/23/2023
 ms.custom: template-how-to
 ---
-# Coauthoring in model-driven apps (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Coauthoring in model-driven apps
 
 Coauthoring allows multiple makers—whether pro or citizen developers—to make changes to the app at the same time and see those changes in real time. As a result, teams can innovate together and build stronger connections between professional developers and business domain experts, a critical ingredient to maximizing low-code development. 
 
 > [!IMPORTANT]
-> This is a preview feature. More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
+> - This feature is being gradually rolled out across regions and might not be available yet in your region.
+> - This feature isn't currently available in Germany, China, and Government Cloud regions. Regions where coauthoring isn't available have copresence. More information: [Discover who's working on an app](copresence.md)
 
 ## What you can coauthor in an app
 
@@ -33,7 +32,7 @@ Here's what multiple makers can do at the same time in the app while seeing each
 
 ## How to know you're coauthoring
 
-First, once there are other makers editing the app together with you, you’ll see their presence in the top navigation bar and the left menu. You can see what components other makers are working on or what pages they have open. You'll also see them move through the components on the left navigation bar in real-time.
+First, once there are other makers editing the app together with you, you see their presence in the top navigation bar and the left menu. You can see what components other makers are working on or what pages they have open. You'll also see them move through the components on the left navigation bar in real-time.
 
 :::image type="content" source="media/coauthoring1.png" alt-text="App makers working in the app are displayed":::
 When someone is adding or removing a page, all other makers will see it appearing on the left navigation bar with a sparkle graphic indicator. The sparkle remains displayed until you select that page. You won’t see a sparkle for the components and pages that you’ve added.
@@ -42,22 +41,12 @@ When someone is adding or removing a page, all other makers will see it appearin
 
 Once someone removes the page, it disappears for other makers in real-time.
 
-## Disable coauthoring
-
-1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments/), and select an environment.
-1. Select **Settings** > **Product** > **Features**. 
-1. Under **Coauthoring**, set the option, which lets people simultaneously edit model-driven apps together, to **Off**.
-1. Select **Save**.
-
 ## Limitations
 
-- Currently, there's no auto-save functionality, so you need to select the **Save** button to save changes. However, any maker that has access to the app can save the changes for others, as their changes are synced. Unsaved changes will be removed from the app in 24 hours.
+- Currently, there's no auto-save functionality, so you need to select the **Save** button to save changes. However, any maker that has access to the app can save the changes for others, as their changes are synced. Unsaved changes will be removed from the app in eight hours.
 - Under **Settings**, changes to the **Features** and **Upcoming** sections must be saved from the settings dialog in order to be set. Users that don't see the changes immediately can close and open the settings dialog to see the most up-to-date settings.
 - Changes made in other designers, such as the view and form designers, won't be synchronized in real-time in the modern app designer.
 
-
 ## See also
-
-[Discover who's working on an app](copresence.md)
 
 [Add comments](comments.md)

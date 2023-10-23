@@ -14,8 +14,6 @@ contributors:
 ---
 # GridEntity (Client API reference)
 
-
-
 GridEntity is returned by the [GridRowData](gridrowdata.md).[getEntity](gridrowdata/getEntity.md) method or by directly accessing the [GridRowData](gridrowdata.md).**entity** object. Use the GridEntity methods to access data about the specific records in the rows.
 
 ```JavaScript
@@ -35,15 +33,10 @@ GridEntity also supports the **columns** collection that provides methods of wor
 |[getId](gridentity/getId.md)|[!INCLUDE[gridentity/includes/getId-description.md](gridentity/includes/getId-description.md)]|Read-only and editable grids|
 |[getPrimaryAttributeValue](gridentity/getPrimaryAttributeValue.md)|[!INCLUDE[gridentity/includes/getPrimaryAttributeValue-description.md](gridentity/includes/getPrimaryAttributeValue-description.md)]|Read-only grid|
 
-### Related topics
+### Related articles
 
-[GridAttribute](gridattribute.md)
-
-[Grids and subgrids in model-driven apps](../grids.md)
-
+[GridAttribute](gridattribute.md)   
+[Grids and subgrids in model-driven apps](../grids.md)   
 [Columns](../attributes.md)
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

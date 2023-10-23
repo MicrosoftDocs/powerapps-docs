@@ -26,8 +26,8 @@ contributors:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|webResourceName|String|Yes|The name of the web resource.|
-|key|String|Yes|The key for the localized string.|
+|`webResourceName`|String|Yes|The name of the web resource.|
+|`key`|String|Yes|The key for the localized string.|
 
 ## Return value
 
@@ -41,14 +41,10 @@ For example `Xrm.Utility.getResourceString("new_/strings/MyAppResources","hello"
 
 The appropriate string value will be determined by the individual user's language preference and the languages available in the organization. If a localized string is not found that matches the user's language preference, the localized string will automatically fallback to the base language for the organization. If no matching localized string is found for the organizations base language, a null value will be returned. If no matching RESX web resource is found for user's LCID, an exception `{webResourceName} does not exist.` will be thrown.
 
-### Related topics
+### Related articles
 
-[Xrm.Utility](../xrm-utility.md)<br />
-[String (RESX) web resources](../../../resx-web-resources.md)<br />
+[Xrm.Utility](../xrm-utility.md)   
+[String (RESX) web resources](../../../resx-web-resources.md)   
 [Web resource dependencies](../../../web-resource-dependencies.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

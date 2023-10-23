@@ -14,8 +14,6 @@ contributors:
 ---
 # isAvailableOffline (Client API reference)
 
-
-
 [!INCLUDE[./includes/isAvailableOffline-description.md](./includes/isAvailableOffline-description.md)] 
 
 ## Syntax
@@ -24,21 +22,9 @@ contributors:
 
 ## Parameters
 
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>entityLogicalName</td>
-<td>String</td>
-<td>Yes</td>
-<td>Logical name of the table. For example: "account".</td>
-</tr>
-
-</table>
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`entityLogicalName`|String|Yes|Logical name of the table. For example: `account`.|
 
 ## Return Value
 
@@ -46,13 +32,10 @@ contributors:
 
 **Description**: true if the table is present in user's profile and is currently available for use in offline mode; otherwise false.
 
-[Xrm.WebApi.offline](offline.md)
+### Related articles
 
+[Xrm.WebApi.offline](offline.md)   
 [Xrm.WebApi](../xrm-webapi.md)
-
-
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

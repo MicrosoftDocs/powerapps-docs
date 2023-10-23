@@ -1,7 +1,7 @@
 ---
 title: "File columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to create, retrieve, update and delete file columns using code." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 02/02/2023
+ms.date: 09/12/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -24,7 +24,7 @@ The recommended way to create file columns is to use [Power Apps](https://make.p
 > A key consideration when creating file columns is the **Maximum file size** stored in the `MaxSizeInKB` property. The default setting for this is `32768`, or 32 MB. The maximum value is `10485760` KB (10 GB). While the API can handle files up to 10 GB in size, Power Apps client controls currently only support files up to 128 MB. Exceeding the 128 MB value when using these controls will result in errors uploading or downloading files.
 >
 > The `MaxSizeInKB` value cannot be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the file column.
-> You can use the API to update the `MaxSizeInKB` property. More information: [Update a column using Web API](webapi/create-update-entity-definitions-using-web-api.md#update-a-column) and [Update a column using SDK](org-service/metadata-attributemetadata.md#update-a-column)
+> You can use the API to update the `MaxSizeInKB` property. More information: [Update a column using Web API](webapi/create-update-column-definitions-using-web-api.md#update-a-column) and [Update a column using SDK](org-service/metadata-attributemetadata.md#update-a-column)
 
 You can also create file columns using the Dataverse SDK for .NET or using the Web API. The following examples show how:
 
@@ -65,14 +65,14 @@ Use the [FileAttributeMetadata.MaxSizeInKB](xref:Microsoft.Xrm.Sdk.Metadata.File
 
 More information:
 
-- [What is the Organization service](org-service/overview.md)
+- [What is the SDK for .NET](org-service/overview.md)
 - [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*)
 
 #### [Web API](#tab/webapi)
 
 POST a [FileAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.FileAttributeMetadata) to the `Attributes` collection for the table.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes HTTP/1.1
@@ -116,7 +116,7 @@ Content-Type: application/json; charset=utf-8
 
 Use the `FileAttributeMetadata.MaxSizeInKB` property to set the maximum size.
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -134,14 +134,20 @@ More information:
 
 ## Blocked file types
 
-You can control which types of files aren't allowed to be saved in file columns. More information: [Block certain types of files](files-images-overview.md#block-certain-types-of-files)
+You can control which types of files aren't allowed to be saved in file columns based on the file extension and mime type.
 
-## Restrictions with Customer Managed Keys (CMK)
+More information:
+
+- [Block files by extension](files-images-overview.md#block-files-by-extension)
+- [Block or allow certain mime types](files-images-overview.md#block-or-allow-certain-mime-types)
+
+## Restrictions with self-managed key (BYOK)
 
 > [!IMPORTANT]
-> Some restrictions apply when using the File and full-sized Image data-types in Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
-> All CMK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse File and Image data-types. Files within CMK organizations are
-> limited to a maximum size of 128MB per file. All files and images within CMK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob storage.
+> Some restrictions apply when using the File and full-sized Image data-types in Dataverse. If [self-managed key (BYOK)](/power-platform/admin/manage-encryption-key) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of BYOK in order to make use of these data-types.
+>
+> All BYOK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse File and Image data-types. Files within BYOK organizations are
+> limited to a maximum size of 128MB per file. All files and images within BYOK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob storage.
 > Other limitations:
 >  - User Delegation SAS Downloads are not supported
 >  - Chunking uploads and downloads are limited to a single chunk

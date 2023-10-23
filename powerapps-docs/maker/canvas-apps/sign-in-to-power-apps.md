@@ -3,7 +3,7 @@ title: Sign in to Power Apps
 description: Learn about signing in to Power Apps for the first time, choosing an environment, creating an app, playing or editing an app, and other common tasks.
 author: alaug
 ms.topic: conceptual
-ms.custom: intro-internal
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 11/30/2022
 ms.subservice: canvas-maker
@@ -17,15 +17,9 @@ contributors:
 ---
 # Sign in to Power Apps 
 
-To create, edit, or play an app, sign in to Power Apps at [make.powerapps.com](https://make.powerapps.com). 
+To create, edit, or play an app, sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com). To create canvas apps a user must have the [Environment maker predefined security role](/power-platform/admin/database-security#predefined-security-roles). 
 
-> [!NOTE]
-> To create canvas apps a user must have the [Environment maker predefined security role](/power-platform/admin/database-security#predefined-security-roles). 
-
-For information on getting started, see [Get started with Power Apps](intro-maker-portal.md).
-
-> [!div class="mx-imgBorder"] 
-> ![Power Apps sign in.](media/intro-maker-portal/power-apps-signin.png)
+To learn more about the [Power Apps](https://make.powerapps.com) home page, see [Get started with Power Apps](intro-maker-portal.md).
 
 ## Choose an environment
 
@@ -114,7 +108,7 @@ The Dynamics 365 Sales free trial includes Power Apps use rights, along with oth
 ### How do I create model driven apps and use Dataverse? 
 Select or create an environment with Dataverse. You can create Developer environments with Dataverse for free.
 
-1. Sign in to [Power Apps](http://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 2. Select the Environment picker. 
 3. In the **Need your own environment?** prompt, select **Try it now** to create an environment with Dataverse. 
 

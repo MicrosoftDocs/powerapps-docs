@@ -13,7 +13,7 @@ contributors:
   - jorisdg
   - mduelae
   - gregli-msft
-ms.custom: intro-internal
+ms.collection: get-started
 ---
 
 # Canvas component overview
@@ -51,6 +51,9 @@ Components available inside the app are listed under the **Custom** category in 
 ## Custom properties
 
 A component can receive input values and emit data if you create one or more custom properties. These scenarios are advanced and require you to understand [formulas](formula-reference.md) and binding contracts.
+
+> [!NOTE]
+> An experimental feature for enhanced component properties provides even more options for properties, including functions and behavior functions. For more information, see [Canvas component properties (experimental)](./component-properties.md)
 
 **Input property** is how a component receives data to be used in the component. Input properties appear in the **Properties** tab of the right-hand pane if an instance of the component is selected. You can configure input properties with expressions or formulas, just as you configure standard properties in other controls. Other controls have input properties, such as the **Default** property of a **Text input** control.
 

@@ -17,7 +17,8 @@ contributors:
 
 This sample shows how to disable and enable a system user account in an online or on-premise/IFD environment.
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DisableOrEnableUser)
+> [!div class="nextstepaction"]
+> [SDK for .NET: Disable or enable a user sample code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DisableOrEnableUser)
 
 ## How to run this sample
 
@@ -49,6 +50,6 @@ To view the summary of the specified system user in Customer Engagement, navigat
 
 Displays an option to enable the user account that was disabled in the `Main()` method.
 
-Answering "yes" is optional in case you want to examine the disabled user account in Customer Engagement. You can manually enable the user account in Active Directory or Microsoft 365 to achieve the same result.
+Answering "yes" is optional in case you want to examine the disabled user account in Customer Engagement. You can manually enable the user account in Microsoft Entra ID or Microsoft 365 to achieve the same result.
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Install the Power Apps mobile app
 description: Learn how to install and run a canvas or model-driven app on a mobile device.
-author: sericks007
+author: trdehove
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 03/16/2023
 ms.subservice: mobile
-ms.author: sericks
-ms.reviewer: ""
+ms.author: trdehove
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
 searchScope:
   - "Power Apps"
-ms.custom: intro-internal
+ms.collection: get-started
 contributors:
 - makolomi
 ---

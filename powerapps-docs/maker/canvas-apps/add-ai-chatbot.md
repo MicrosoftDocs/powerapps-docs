@@ -3,9 +3,8 @@ title: Add Chatbot control to your canvas app
 description: A control that enables embedding of any published Power Virtual Agent (PVA) bot into Power Apps for end-user.
 author: mduelae
 ms.topic: conceptual
-ms.custom: 
-  - canvas
-  - intro-internal
+ms.custom: canvas
+ms.collection: get-started
 ms.reviewer: 
 ms.date: 3/13/2023
 ms.subservice: canvas-maker
@@ -22,64 +21,47 @@ contributors:
 
 Add Chatbot control to your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
+The Chabot control is also available in [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md). The control also supports authenticated Power Virtual Agents bots. A bot picker lists all bots that are in the same environment as your app.
+
 You can use an AI bot or AI boosted conversations bot:
 
-- With AI chatbots, you can create an extended tree of answers to support your users. More information: [Power Virtual Agents preview quickstart (preview)](/power-virtual-agents/preview/quickstart)
+- With AI chatbots, you can create an extended tree of answers to support your users. More information: [Power Virtual Agents quickstart](/power-virtual-agents/quickstart-preview)
 
-- With AI boosted conversations Power Virtual Agents bot your bot can have a higher ability to respond to the user by using a number of prompts or generating a response based on provided "fallback" website which you set. The "fallback" website can include internal documents or publicly available websites. More information: [AI-based boosted conversations overview (preview)](/power-virtual-agents/nlu-gpt-overview)
+- With AI boosted conversations Power Virtual Agents bot your bot can have a higher ability to respond to the user by using a number of prompts or generating a response based on provided "fallback" website, which you set. The "fallback" website can include internal documents or publicly available websites. More information: [AI-based boosted conversations overview (preview)](/power-virtual-agents/nlu-gpt-overview)
 
 
 You can design the Chabot control by giving it a name, change the size of the control window, and position it anywhere on the screen.
+
 
 > [!div class="mx-imgBorder"]
 > ![Sample Chabot control in a canvas app.](media/chatbot-control/ai-chatbot-control-1.png)
 
 
 > [!IMPORTANT]
-> - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://go.microsoft.com/fwlink/?linkid=2227838).
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability is in process of rolling out, and may not be available in your region yet.
 > - This capability  may be subject to usage limits or capacity throttling.
 
 
 ## Prerequisites 
 
-- Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
-- To add the Chatbot control, you need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal).  You can create any bot such as an AI bot or a new generative AI enriched Power Virtual Agents bot.
+Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
+- To add the Chatbot control, you need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal). You can create any bot such as an AI bot or a new generative AI enriched Power Virtual Agents bot.
+- You can see all your Power Virtual Agents bots (published and unpublished) in the list of Chatbot control when you pick the bot to connect to. However, you can only add a published bot to the control. Unpublished bots are grayed out.
 
-
-## Bot schema name 
-
-You need the bot schema name to add it to the Chatbot control properties in Power Apps Studio. Following these steps to get the schema name.
-
-1. In Power Virtual Agents, open the bot you want to use. 
-2. In the navigation menu, go to **Settings** > **Details**. 
-3. Select the **Advanced** tab and note the **Schema name**.
-
-
-## Turn on the Chatbot control
-
-With your [canvas app open for editing](edit-app.md):
-
-1. On the command bar, select **Settings** > **Upcoming features**.
-2. From the **Preview** tab, set the toggle for **Chatbot component** to **On**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Turn on Chatbot control.](media/chatbot-control/ai-chatbot-control-2.png)
 
 ## Add a control with a bot
 
 With your [canvas app open for editing](edit-app.md):
 
 1. On the app authoring menu, select **Insert**.
-2. Expand the **Input** menu and then select **Chatbot (preview)**). Place the chatbot control where you want to add it on the screen. 
+2. Expand the **Input** menu and then select **Chatbot (preview)**). Place the Chatbot control where you want to add it on the screen. 
 
    > [!div class="mx-imgBorder"]
    > ![Add the Chatbot control.](media/chatbot-control/ai-chatbot-control-3.png)
 
-2. In the Chatbot properties pane, enter the Power Virtual Agents bot schema name in the **Schema Name** field.
+3. Choose the bot you want to connect from one of your published Power Virtual Agents bots, or select **New chatbot** to create a new one.
 
     You can change the name, the position, and size of the control.
 
@@ -87,26 +69,42 @@ With your [canvas app open for editing](edit-app.md):
 
 The following are the main properties for Chatbot control: 
 
-- **Schema name**:  The schema name property must be entered to connect your published Power Virtual Agents bot to your canvas app. For more information on how to get the Schema name, see [Prerequisites](add-ai-chatbot.md#prerequisites) section in this article.
+- **Header label**: This is the name of the bot that your end-user sees. If you don't enter a header label, then the name is **Chatbot**.
 
-- **Header label**: This is the name of the bot that your end-user will see. If don't enter a header label, it will be **Chatbot**.
+- **Schema name**: This property refers to the Power Virtual Agents bot that you connect to. The property automatically populates once a bot is selected. To choose a bot, for **Schema name** property select, **Select bot**.
+
+- **Visible**: Choose if you want the bot be visible or not.
+  
+- **Position** and **Size**: Determines how your bot looks on the screen. Use the other properties or move the control on the screen to set position and size of the control on the screen.
+
+  Once you select the bot and set the properties, the properties pane looks like this:
 
   > [!div class="mx-imgBorder"]
   > ![Add schema name.](media/chatbot-control/ai-chatbot-control-4.png)
 
-Use the other properties or move the control on the screen to set position and size of the control on the screen. 
 
 ## Limitations
 
-- You can only embed a bot with no user authentication.
+1. Chatbot control isn't supported on the Power Apps mobile app.
+2. Chatbot control isn't available in [Power Apps US Government](/power-platform/admin/powerapps-us-government) or Mooncake.
 
 ## See also
+
+[AI Copilot overview (preview)](ai-overview.md)
 
 [Power Virtual Agents preview quickstart (preview)](/power-virtual-agents/preview/quickstart)
 
 [AI-based boosted conversations overview (preview)](/power-virtual-agents/nlu-gpt-overview)
 
 [Use the Copilot control](add-ai-copilot.md)
+
+[Build apps through conversation (preview)](ai-conversations-create-app.md)
+
+
+
+
+
+ 
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

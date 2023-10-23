@@ -50,7 +50,7 @@ Returns a reference to the object that the event occurred on.
 |[PreSearch](../events/presearch.md)|[Lookup](../controls.md#lookup-control-type) control|
 
 
-### Related topics
+### Related articles
 
 [Execution context](../execution-context.md)
 

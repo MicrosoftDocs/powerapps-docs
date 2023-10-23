@@ -4,7 +4,7 @@ description: Learn how to update your forms and views without manually editing t
 author: travshu77
 manager:
 ms.topic: how-to
-ms.date: 04/05/2023
+ms.date: 08/25/2023
 ms.subservice: dataverse-maker
 ms.author: yueshu
 ms.reviewer: matp
@@ -15,14 +15,9 @@ search.app:
   - D365CE
 ---
 
-# Update forms and views using table designer (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Update forms and views using table designer
 
 Create columns directly in the table hub or table designer, which will then be added to your forms and views. In this walkthrough, you'll learn how to simply add the columns you created to forms and views of this table without manually doing so in the form or view designer.
-
-> [!IMPORTANT]
-> This is a preview feature.
 
 ## Using table hub and table designer
 

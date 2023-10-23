@@ -84,7 +84,7 @@ The same table can be included in multiple catalogs. For example, if your soluti
 
 ## Custom Events
 
-Use Dataverse Custom API to create custom events. Each custom API will create a new Dataverse message and provide the web service endpoint to call the custom API. More information: [Create and use Custom APIs](custom-api.md).
+Use Dataverse custom API to create custom events. Each custom API will create a new Dataverse message and provide the web service endpoint to call the custom API. More information: [Create and use Custom APIs](custom-api.md).
 
 Custom business events can only send notifications when an event is completed. Dataverse event framework provides capabilities to include synchronous logic which can cancel an operation or change the output so that you can extend the behavior of the system. Many of the same messages exposed with business events may be extended using synchronous logic in the Dataverse event framework, but business event notifications only occur when these operations complete successfully.
 
@@ -108,20 +108,20 @@ When you consider custom apis to catalog as business events in your solution use
 
 ### Custom Process Actions
 
-The concept of *Custom Action* includes both [Custom API](custom-api.md) and [Custom Process actions](workflow-custom-actions.md). They both create a new API, but how they do it is different. For custom business events, we recommend Custom API.
+The concept of *Custom Action* includes both [custom API](custom-api.md) and [Custom Process actions](workflow-custom-actions.md). They both create a new API, but how they do it is different. For custom business events, we recommend custom API.
 
-Custom process actions can also be cataloged as business events. This is for backward compatibility if your solution already uses custom process actions to encapsulate some business logic which would represent a business event. You are not required to migrate this custom action to use Custom API.
+Custom process actions can also be cataloged as business events. This is for backward compatibility if your solution already uses custom process actions to encapsulate some business logic which would represent a business event. You are not required to migrate this custom action to use custom API.
 
 However, custom process actions have the following limitations:
 
 - Like any workflow, they can be disabled in the UI. You may not know when someone disables your custom process action until it suddenly stops working.
-- Until recently, there was no way to prevent synchronous plug-in steps to be registered on custom process actions, which means anyone could register synchronous steps that could change the behavior of the custom process action or even cancel it. There is now a [IsCustomProcessingStepAllowedForOtherPublishers](reference/entities/workflow.md#BKMK_IsCustomProcessingStepAllowedForOtherPublishers) managed property that allows a custom process action to block this. But if you are going to update your custom process action to set this property, you should consider converting it to use Custom API instead.
+- Until recently, there was no way to prevent synchronous plug-in steps to be registered on custom process actions, which means anyone could register synchronous steps that could change the behavior of the custom process action or even cancel it. There is now a [IsCustomProcessingStepAllowedForOtherPublishers](reference/entities/workflow.md#BKMK_IsCustomProcessingStepAllowedForOtherPublishers) managed property that allows a custom process action to block this. But if you are going to update your custom process action to set this property, you should consider converting it to use custom API instead.
 
-For more information about how they are different, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-custom-process-action-and-custom-api)
+For more information about how they are different, see [Compare Custom Process Action and custom API](custom-actions.md#compare-custom-process-action-and-custom-api)
 
 If your custom process action doesn’t contain any logic within the workflow designer and relies only on plug-ins to perform operations, you can probably migrate the custom process action to be a custom api to mitigate these issues. 
 
-The Power Platform community has already created tooling to help with this. See the [Custom Action to Custom API Converter](https://www.xrmtoolbox.com/plugins/MarkMpn.CustomActionToApiConverter/) XrmToolBox plugin.
+The Power Platform community has already created tooling to help with this. See the [Custom Action to custom API Converter](https://www.xrmtoolbox.com/plugins/MarkMpn.CustomActionToApiConverter/) XrmToolBox plugin.
 
 > [!NOTE]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
@@ -147,7 +147,7 @@ Let’s compare two external event examples:
 
 ##### Scenario A: OnCustomerPurchase
 
-You have a point-of-sale application and a customer purchase is an important event you want to capture. Perhaps you want to send them an email thanking them for their purchase, and you want to store information on the total amount the customer has spent in Dataverse. You can define a `OnCustomerPurchase` Custom API within Dataverse. Your point-of-sale application can send information about this event to Dataverse. In Dataverse you want to update a record with the total. Then you want to use Power Automate to send an email thanking them for their purchase.
+You have a point-of-sale application and a customer purchase is an important event you want to capture. Perhaps you want to send them an email thanking them for their purchase, and you want to store information on the total amount the customer has spent in Dataverse. You can define a `OnCustomerPurchase` custom API within Dataverse. Your point-of-sale application can send information about this event to Dataverse. In Dataverse you want to update a record with the total. Then you want to use Power Automate to send an email thanking them for their purchase.
 
 It may seem to be most efficient to implement the logic to calculate the total and update the record in a main operation of the custom API. But introduction of synchronous logic in this way introduces possibility that the logic could fail and return an error to the point-of-sale application calling it. Because the event has already occurred, there is no need to perform any synchronous logic which might cause the Dataverse call to fail. Instead, depend on Power Automate to include all the logic or include another asynchronous plug-in step on the `OnCustomerPurchase` event to update the record in Dataverse.
 
@@ -157,7 +157,7 @@ You have an ERP application has a `OnVendorPaymentPosted` event and you simply w
 
 This example expects nothing to be done in Dataverse except enable asynchronous logic to be to be registered for the event.
 
-#### Invoking Custom API from external applications
+#### Invoking custom API from external applications
 
 The key requirement to use custom API to send business events is that your application must have the ability to make authorized HTTP requests to Dataverse. For authorization, requests originating from other applications will typically use a special Application User account that must be created in the Dataverse environment. Licensed and authenticated Dataverse users can also use applications to send these requests.
 

@@ -1,18 +1,20 @@
 ---
 title: "Visualize your data in a view quickly with Power BI service| MicrosoftDocs"
 description: Visualize your data in a view quickly with Power BI service.
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/15/2021
+ms.date: 10/19/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
+contributors:
+- RichdiMSFT 
 ---
 
 # Visualize data in a view with Power BI service
@@ -54,8 +56,8 @@ Anyone can use the **Visualize this view** feature to explore the data in a vie
 
 ## Known issues and limitations
 
-1. The first time you visualize the data in a view, creating the dataset and report can take some time. We're working to improve this performance experience.
+- The first time you visualize the data in a view, creating the dataset and report can take some time. We're working to improve this performance experience.
 
-2. Columns are indicated by their logical names rather than the display name. We're working on updating this experience, so the columns' display names are in the Power BI report.
+- This feature isn't supported for the **Activities** table due to a limitation in generating charts.
 
-3. This feature isn't supported for guest users in a tenant.
+- This feature isn't supported for guest users in a tenant.

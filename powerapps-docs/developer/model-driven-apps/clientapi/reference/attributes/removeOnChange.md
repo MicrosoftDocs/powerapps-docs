@@ -31,15 +31,12 @@ All
 
 | Parameter Name| Type| Description  |
 | --------|-----------| -----|
-|myFunction| Function reference| Specifies the function to be removed from the **OnChange** event.|
+|`myFunction`| Function reference| Specifies the function to be removed from the **OnChange** event.|
 
 
-### Related topics
+### Related articles
 
-[addOnChange](addOnChange.md)
-
+[addOnChange](addOnChange.md)   
 [Column OnChange Event](../events/attribute-onchange.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

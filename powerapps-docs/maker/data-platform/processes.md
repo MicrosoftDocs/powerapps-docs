@@ -1,13 +1,13 @@
 ---
 title: "Apply business logic in Microsoft Dataverse | MicrosoftDocs"
 description: "Learn about the different types of business logic you can use in your app"
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 12/20/2019
 ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

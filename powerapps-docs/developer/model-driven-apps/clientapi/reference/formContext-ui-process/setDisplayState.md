@@ -26,16 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|state|String|Yes|Specify "expanded", "collapsed", or "floating". The value "floating" is not supported on the web client.|
+|`state`|String|Yes|Specify "expanded", "collapsed", or "floating". The value "floating" is not supported on the web client.|
 
-### Related topics
+### Related articles
 
-[getDisplayState](getDisplayState.md)
-
+[getDisplayState](getDisplayState.md)   
 [formContext.ui.process](../formContext-ui-process.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

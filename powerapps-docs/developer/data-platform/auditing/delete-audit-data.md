@@ -1,52 +1,47 @@
 ---
-title: "Delete audit data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Explains how to configure programatically delete audit data." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/03/2022
+title: Delete audit data
+description: Learn how to programmatically delete audit data stored in Microsoft Dataverse.
+ms.date: 06/03/2023
 ms.reviewer: jdaly
-ms.topic: overview
-author: paulliew # GitHub ID
+ms.topic: how-to
+ms.author: paulliew
+author: paulliew
 ms.subservice: dataverse-developer
-ms.author: paulliew # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 contributors:
  - JimDaly
  - phecke
+ms.custom: bap-template
 ---
 
 # Delete audit data
 
-You may need to delete audit data because:
-
-- You need to comply with a request from a customer to delete their history.
-- You want to use less log capacity space.
-
-Dataverse provides the following messages to delete audit history data:
+You may need to delete audit data to comply with a customer's request to delete their history or to free up log capacity space. You can't directly delete records in the [Auditing (Audit) table](../reference/entities/audit.md). Instead, Dataverse provides the following messages to delete audit history data:
 
 |Message|Description|
 |---------|---------|
 |`DeleteRecordChangeHistory`|Deletes all the audit change history records for a particular record.|
-|`BulkDelete`|Asynchronously deletes records identified by a query. This message can be used to delete large numbers of audit records without blocking other activities.|
-|`DeleteAuditData`|For customers using customer managed encryption keys this message deletes all audit data records up until a specified end date.|
+|`BulkDelete`|Asynchronously deletes records identified by a query. Use this message to delete large numbers of audit records without blocking other activities.|
+|`DeleteAuditData`|For customers using customer-managed encryption keys, deletes all audit data records up to a specified end date.|
 
-> [!NOTE]
-> You cannot directly delete records in the [Auditing (Audit) table](../reference/entities/audit.md)
+[!INCLUDE [gdpr-dsr-delete-note](~/../shared-content/shared/privacy-includes/gdpr-dsr-delete-note.md)]
 
 ## Delete the change history for a record
 
-Use the `DeleteRecordChangeHistoryRequest` message to delete all the audit change history records for a particular record. This lets you delete the audit change history for a record instead of deleting all the audit records for a date range. 
+Use the `DeleteRecordChangeHistoryRequest` message to delete all the audit change history records for a particular record rather than all the audit records for a date range.
 
-To delete the audit change history for a record, you must have the System Administrator security role or a security role with the `prvDeleteRecordChangeHistory` privilege. More information: [Example: Check whether a user has a privilege](../security-access-coding.md#example-check-whether-a-user-has-a-privilege)
+To delete the audit change history for a record, [make sure you have](../security-access-coding.md#example-check-whether-a-user-has-a-privilege) the System Administrator security role or a security role with the `prvDeleteRecordChangeHistory` privilege.
 
-### DeleteRecordChangeHistoryRequest Message
+### DeleteRecordChangeHistoryRequest message
 
-Specify the record using the `Target` parameter. The `DeletedEntriesCount` property of the response tells you how many audit records were deleted.
+Use the `Target` parameter to specify the record. The `DeletedEntriesCount` property of the response tells you how many audit records were deleted.
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
-The following example uses the <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=DeleteRecordChangeHistoryRequest Action> to delete the audited data changes for an account record.
+The following example uses the [DeleteRecordChangeHistory Action](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistory) to delete the audited data changes for an account record.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization URI]/api/data/v9.2/DeleteRecordChangeHistory HTTP/1.1
@@ -63,7 +58,7 @@ If-None-Match: null
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -75,14 +70,13 @@ OData-Version: 4.0
 }
 ```
 
-More information:
+Learn more about:
 
- - [Use Web API actions](../webapi/use-web-api-actions.md)
- - <xref:Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=DeleteRecordChangeHistoryRequest Action>
- - <xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistoryResponse?text=DeleteRecordChangeHistoryResponse ComplexType>
+- [Using Web API actions](../webapi/use-web-api-actions.md).
+- [DeleteRecordChangeHistory Action](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistory)
+- [DeleteRecordChangeHistoryResponse ComplexType](xref:Microsoft.Dynamics.CRM.DeleteRecordChangeHistoryResponse)
 
-
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -107,28 +101,27 @@ EntityReference target)
 
 ```
 
-More information:
+Learn more about:
 
-- <xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest?text=DeleteRecordChangeHistoryRequest Class>
-- <xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryResponse?text=DeleteRecordChangeHistoryResponse Class>
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
+- [DeleteRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest)
+- [DeleteRecordChangeHistoryResponse Class](xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryResponse)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 ---
 
 ## Use BulkDelete to delete audit data
 
-You can delete audit records your organization no longer needs to retain to comply with internal and external auditing requirements using the `BulkDelete` message. Deleting audit data using bulk delete will run in the background and allows you to define recurrence patterns, start time, and other parameters that help you to manage your bulk deletion jobs.
+Use the `BulkDelete` message to delete audit records your organization no longer needs to retain to comply with internal and external auditing requirements. The bulk delete operation runs in the background and allows you to define recurrence patterns, start time, and other parameters.
 
-### BulkDelete Message
+### BulkDelete message
 
-# [Web API](#tab/webapi)
+The following example deletes audit records with an action value of 64 (User Access via Web).
+#### [Web API](#tab/webapi)
 
-The following example deletes audit records with an action value of 64 (User Access via Web) from the audit log. You can modify your bulk delete job according to your needs.
-
-**Request**
+**Request:**
 
 ```http
-POST [Organization URI]/api/data/v9.1/BulkDelete HTTP/1.1  
+POST [Organization URI]/api/data/v9.1/BulkDelete
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -164,7 +157,7 @@ OData-Version: 4.0
 }
 ```
 
-**Response**
+**Response:**
 
 ```HTTP
 HTTP/1.1 200 OK
@@ -177,14 +170,13 @@ OData-Version: 4.0
 }
 ```
 
-More information:
+Learn more about:
 
-- <xref:Microsoft.Dynamics.CRM.BulkDelete?text=BulkDelete Action>
-- <xref:Microsoft.Dynamics.CRM.BulkDeleteResponse?text=BulkDeleteResponse ComplexType>
-- <xref:Microsoft.Dynamics.CRM.QueryExpression?text=QueryExpression ComplexType>
+- [BulkDelete Action](xref:Microsoft.Dynamics.CRM.BulkDelete)
+- [BulkDeleteResponse ComplexType](xref:Microsoft.Dynamics.CRM.BulkDeleteResponse)
+- [QueryExpression ComplexType](xref:Microsoft.Dynamics.CRM.QueryExpression)
 
-
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
@@ -238,31 +230,31 @@ static void BulkDeleteAuditHistoryByAction(IOrganizationService svc, int actionV
 }
 ```
 
-More information:
+Learn more about:
 
-- <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest?text=BulkDeleteRequest Class>
-- <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteResponse?text=BulkDeleteResponse Class>
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*?text=IOrganizationService.Execute Method>
-- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*?text=IOrganizationService.Retrieve Method>
+- [BulkDeleteRequest Class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest)
+- [BulkDeleteResponse Class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteResponse)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+- [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
 
 ---
 
 ## Delete the change history for a date range
 
-If you use customer managed encryption keys you can delete `audit` records for a date range using the `DeleteAuditData` message. Audit data records are deleted sequentially from the oldest to the newest.
+If you use customer-managed encryption keys, you can use the `DeleteAuditData` message to delete audit records for a date range. Audit data records are deleted sequentially from oldest to newest.
 
 > [!NOTE]
-> Even if you are using customer managed encryption keys you should consider using Bulk Delete rather than `DeleteAuditData` message. See [Use BulkDelete to delete audit data](#use-bulkdelete-to-delete-audit-data)
+> Even if you're using customer-managed encryption keys, you should consider using [Bulk Delete](#use-bulkdelete-to-delete-audit-data) rather than the `DeleteAuditData` message.
 
-The `DeleteAuditData` message will delete all audit data in those partitions where the end date is before the date specified in the `EndDate` property. Any empty partitions are also deleted. However, neither the current (active) partition nor the `audit` records in that active partition can be deleted by using this request or any other request.
+The `DeleteAuditData` message deletes all audit data in partitions where the end date is before the date specified in the `EndDate` property. Any empty partitions are also deleted. The current (active) partition and the audit records in it can't be deleted using this request or any other.
 
-New partitions are automatically created by the Dataverse platform on a quarterly basis each year. This functionality is non-configurable and cannot be changed. You can obtain the list of partitions using the `RetrieveAuditPartitionList` message. If the end date of any partition is later than the current date, you cannot delete that partition or any `audit` records in it.
+Dataverse automatically creates partitions every quarter. You can't change or stop this behavior. You can use the `RetrieveAuditPartitionList` message to obtain the list of partitions. If the end date of any partition is later than the current date, you can't delete that partition or any audit records in it.
 
 ### See also
 
-[Auditing overview](overview.md)<br />
-[Configure auditing](configure.md)<br />
-[Retrieve the history of audited data changes](retrieve-audit-data.md)<br />
-[Administrators Guide: Recover database space by deleting audit logs](/power-platform/admin/recover-database-space-deleting-audit-logs)
+[Auditing overview](overview.md)  
+[Configure auditing](configure.md)  
+[Retrieve the history of audited data changes](retrieve-audit-data.md)  
+[Administrator's Guide: Recover database space by deleting audit logs](/power-platform/admin/recover-database-space-deleting-audit-logs)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

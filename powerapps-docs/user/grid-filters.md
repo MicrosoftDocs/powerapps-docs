@@ -1,20 +1,18 @@
 ---
 title: Explore data on a grid page
 description: Explore tabular data on a grid page in model-driven apps.
-author: sericks007
+author: jasongre
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/04/2022
+ms.date: 08/10/2023
 ms.subservice: end-user
-ms.author: sericks
-ms.reviewer: ""
+ms.author: jasongre
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
 ---
-
-# Explore data on a grid page 
-
+# Explore data on a grid page
 
 In model-driven apps, the default control that's used to show data in tabular form is the read-only grid. When a subarea contains a table, the subarea's default layout in the app sitemap is called the grid page.
 
@@ -39,7 +37,7 @@ If a record is in a hierarchy relationship, select the hierarchy icon to open th
 
 :::image type="content" source="./media/grid-page-hierarchy-view.png" alt-text="A screenshot of a record hierarchy view.":::
 
- If you navigate away from the grid page and come back, the view retains your filters, sort order, and the state the page was in.
+ If you navigate away from the grid page and come back, the view retains your filters, sort order, and the state the page was in, including the grid control you had last chosen from the **Show as** menu.
 
 ## View selector
   
@@ -76,6 +74,9 @@ Grid search enables you to filter the current view based on a keyword. When you 
 > ![Information tooltip that indicates the list of columns on which a begins-with match is applied.](media/Grid-search-tooltip-smaller.png "Information tooltip that indicates the list of columns on which a begins-with match is applied.")
 
 The search box can offer two different experiences, depending on how your administrator has configured search.
+
+> [!NOTE]
+> If your app is configured to be offline by default, the search box will utilize **Quick find** regardless of the grid search configuration in place.  
 
 ### Filter by keyword
 
@@ -125,5 +126,11 @@ The jump bar acts on the first sorted column. If the sort order hasn't changed, 
 :::image type="content" source="./media/jumpbar-filter-on-sorted-column.png" alt-text="A screenshot of the jump bar that's used to filter records by letter.":::
 
 <!-- I don't see the jump bar in my demo environment. I did some Binging and found that the jump bar was removed in the latest wave. You can bring it back, but it involves using the classic settings and seems kind of involved. Would it be better to remove the section on the jump bar instead? -->
+
+## Show as
+
+While the default read-only grid is initially used to show data, if multiple dataset controls are configured for the table view, you can switch between these controls using the **Show as** menu in the command bar, which is typically found under the **More commands** action. Once you've switched to a different display of the data, that control is remembered for future sessions on that device.
+
+:::image type="content" source="./media/show-as-navigation.png" alt-text="A screenshot of the Show as button in the command bar.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

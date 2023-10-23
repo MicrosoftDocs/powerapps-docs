@@ -1,7 +1,7 @@
 ---
 title: "IOrganizationService Interface (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the common web service methods exposed to perform data operations in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: intro-internal
+ms.collection: get-started
 ms.date: 09/30/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
@@ -50,13 +50,13 @@ Each of the classes which implement the <xref:Microsoft.Xrm.Sdk.IOrganizationSer
 |<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|Change the column values of a table row.|
 
 > [!NOTE]
-> The Organization service exposes only the `Execute` method. The other methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface are simply wrappers around the `Execute` method. These other methods are provided for convenience. You can perform all operations using only the `Execute` method. More information: [Use messages with the Organization service](use-messages.md)
+> The Organization service exposes only the `Execute` method. The other methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface are simply wrappers around the `Execute` method. These other methods are provided for convenience. You can perform all operations using only the `Execute` method. More information: [Use messages with the SDK for .NET](use-messages.md)
 
 ## See also
 
-[Use messages with the Organization service](use-messages.md)<br />
+[Use messages with the SDK for .NET](use-messages.md)<br />
 [Write a plug-in](../write-plug-in.md)<br />
-[Entity class operations using the Organization service](entity-operations.md)
+[Entity class operations using the SDK for .NET](entity-operations.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

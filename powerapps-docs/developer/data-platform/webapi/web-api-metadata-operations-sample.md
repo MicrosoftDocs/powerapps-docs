@@ -15,23 +15,21 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This collection of http requests and responses demonstrate how to perform selected operations that modify the Dataverse schema, or metadata, using the Microsoft Dataverse Web API.  
+This collection of http requests and responses demonstrate how to perform selected operations that modify the Dataverse schema, or metadata, using the [Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
   
-- [Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)
-  
-This topic describes a common set of operations implemented by each sample in this group. This topic describes the HTTP requests and responses and text output that each sample will perform without the language specific details. See the language specific descriptions and the individual samples for details about how these operations are performed.  
+This article describes a common set of operations implemented by each sample in this group. This article describes the HTTP requests and responses and text output that each sample performs without the language specific details. See the language specific descriptions and the individual samples for details about how these operations are performed.  
   
 <a name="bkmk_demonstrates"></a>  
 
 ## Demonstrates  
 
-This sample is divided into the following sections, containing Dataverse Web API operations which are discussed in greater detail in the specified associated conceptual topics.  
+This sample is divided into the following sections, containing Dataverse Web API operations that are discussed in greater detail in the specified associated conceptual articles.  
   
-|Code section|Associated conceptual and reference topics|  
+|Code section|Associated conceptual and reference articles|  
 |------------------|----------------------------------|  
 |[Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution)|[Create a table row](create-entity-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.publisher?text=publisher EntityType><br /><xref:Microsoft.Dynamics.CRM.solution?text=soluion EntityType>|
 |[Section 1: Create, Retrieve and Update Table](#section-1-create-retrieve-and-update-table)|[Create and update table definitions](create-update-entity-definitions-using-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>|
-|[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)<br />- [Boolean Column](#boolean-column)<br />&nbsp;&nbsp;&nbsp;- [Update Option Values](#update-option-values)<br />- [DateTime Column](#datetime-column)<br />- [Decimal Column](#decimal-column)<br />- [Integer Column](#integer-column)<br />- [Memo Column](#memo-column)<br />- [Money Column](#money-column)<br />- [Picklist Column](#picklist-column)<br />&nbsp;&nbsp;&nbsp;- [Add an option to the local optionset](#add-an-option-to-the-local-optionset)<br />&nbsp;&nbsp;&nbsp;- [Re-order choice column options](#re-order-choice-column-options)<br />&nbsp;&nbsp;&nbsp;- [Delete local option value](#delete-local-option-value)<br />- [Multi-Select Picklist Column](#multi-select-picklist-column)<br />- [Insert Status Value](#insert-status-value)|[Create columns](create-update-entity-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)<br /><xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action><br /><xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action><br /><xref:Microsoft.Dynamics.CRM.DeleteOptionValue?text=DeleteOptionValue Action><br /><xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action>|
+|[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)<br />- [Boolean Column](#boolean-column)<br />&nbsp;&nbsp;&nbsp;- [Update Option Values](#update-option-values)<br />- [DateTime Column](#datetime-column)<br />- [Decimal Column](#decimal-column)<br />- [Integer Column](#integer-column)<br />- [Memo Column](#memo-column)<br />- [Money Column](#money-column)<br />- [Picklist Column](#picklist-column)<br />&nbsp;&nbsp;&nbsp;- [Add an option to the local optionset](#add-an-option-to-the-local-optionset)<br />&nbsp;&nbsp;&nbsp;- [Re-order choice column options](#re-order-choice-column-options)<br />&nbsp;&nbsp;&nbsp;- [Delete local option value](#delete-local-option-value)<br />- [Multi-Select Picklist Column](#multi-select-picklist-column)<br />- [Insert Status Value](#insert-status-value)|[Create columns](create-update-column-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)<br />[InsertOptionValue Action](xref:Microsoft.Dynamics.CRM.InsertOptionValue)<br />[OrderOption Action](xref:Microsoft.Dynamics.CRM.OrderOption)<br />[DeleteOptionValue Action](xref:Microsoft.Dynamics.CRM.DeleteOptionValue)<br />[InsertStatusValue Action](xref:Microsoft.Dynamics.CRM.InsertStatusValue)|
 |[Section 3: Create and use Global OptionSet](#section-3-create-and-use-global-optionset)|[Create and update choices (option sets)](create-update-optionsets.md)|
 |[Section 4: Create Customer Relationship](#section-4-create-customer-relationship)|<xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action>|
 |[Section 5: Create and retrieve a one-to-many relationship](#section-5-create-and-retrieve-a-one-to-many-relationship)|[Eligibility for relationships](create-update-entity-relationships-using-web-api.md#eligibility-for-relationships)<br /> [Create a one-to-many relationship](create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship)<br />[Querying relationship metadata](query-metadata-web-api.md#querying-relationship-metadata)|
@@ -46,9 +44,9 @@ This sample is divided into the following sections, containing Dataverse Web API
 
 ## Section 0: Create Publisher and Solution
 
-1. Create the publisher first since the solution must be related to it. All the items created or modified in this sample will use the publisher `customizationprefix` and `customizationoptionvalueprefix` values.
+1. Create the publisher first since the solution must be related to it. All the items created or modified in this sample uses the publisher `customizationprefix` and `customizationoptionvalueprefix` values.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/publishers HTTP/1.1
@@ -66,7 +64,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -74,7 +72,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    OData-EntityId: [Organization Uri]/api/data/v9.2/publishers(a78ab7fc-102a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Created publisher Example Publisher
@@ -85,7 +83,7 @@ This sample is divided into the following sections, containing Dataverse Web API
     > [!NOTE]
     > Many of the items created or updated in is sample will use the `uniquename` value of this solution with the `MSCRM.SolutionUniqueName` request header so that the changes are included as part of this solution. Some actions have a `SolutionUniqueName` parameter that does the same thing. At the end of this sample this solution will be exported and contain the definitions of all the items created and changed in this sample.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/solutions HTTP/1.1
@@ -103,7 +101,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -111,7 +109,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    OData-EntityId: [Organization Uri]/api/data/v9.2/solutions(5472b902-112a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Created solution Example Solution
@@ -129,7 +127,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    > The `MSCRM.SolutionUniqueName: examplesolution` request header associates this table to the solution.
    > The `SchemaName` value (`sample_BankAccount`) includes the customization prefix from the publisher.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions HTTP/1.1
@@ -251,7 +249,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -259,7 +257,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(5872b902-112a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Sending request to create the sample_BankAccount table...
@@ -268,13 +266,13 @@ This sample is divided into the following sections, containing Dataverse Web API
 
 1. Retrieve the `sample_BankAccount` table definition.
 
-   - This retrieve doesn't include any `$select` to filter the properties returned because this data will be modified and sent back to update the table definition using `PUT`, which overwrites the existing value.
-   - This query also doesn't include an `$expand` to include related data, such as attributes, because those must be updated separately.
+   - This retrieve operation doesn't include any `$select` to filter the properties returned because this data is modified and sent back to update the table definition using `PUT`, which overwrites the existing value.
+   - This query also doesn't include an `$expand` to include related data, such as attributes, because related data must be updated separately.
 
    > [!NOTE]
    > This request and others in this sample use the `Consistency: Strong` header. Use this header when you retrieve metadata definition changes right after you apply them. Metadata changes are cached for performance reasons and a request for a newly created item may return a 404 because it hasn't been cached yet. Caching may take 30 seconds. This header will force the server to read the latest version including your changes. By using this header, you negate the performance gain that caching provides, so you should only use it when in scenarios like this sample where you are retrieving changes you have just made. More information: [HTTP headers > Other headers](compose-http-requests-handle-errors.md#other-headers).
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount') HTTP/1.1
@@ -285,7 +283,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -639,14 +637,14 @@ This sample is divided into the following sections, containing Dataverse Web API
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    The sample displays the JSON retrieved from the server.
 
 
 1. Update the `sample_BankAccount` table. The only values that are changed are `HasActivities` and `Description`, but you must send the entire definition with `PUT`.
 
-   **Request**
+   **Request:**
 
    ```http
    PUT [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount') HTTP/1.1
@@ -1015,7 +1013,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -1023,7 +1021,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Sending request to update the sample_BankAccount table...
@@ -1032,13 +1030,13 @@ This sample is divided into the following sections, containing Dataverse Web API
 
 ## Section 2: Create, Retrieve and Update Columns
 
-This section will create and retrieve a selected group of column definitions. Each of these types are derived from <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType> so they share most of the same common properties. However, each derived type has a few special properties.
+This section creates and retrieves a selected group of column definitions. Each of these types are derived from <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType> so they share most of the same common properties. However, each derived type has a few special properties.
 
 ### Boolean Column
 
 1. Create a Boolean column using <xref:Microsoft.Dynamics.CRM.BooleanAttributeMetadata?text=BooleanAttributeMetadata EntityType>. Despite the name, boolean columns have an `OptionSet` property just like choice columns. However, they always have only two options: `TrueOption` with value 1 and `FalseOption` with value 0.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -1142,7 +1140,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -1155,7 +1153,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    > [!NOTE]
    > The URL for this request includes `/Microsoft.Dynamics.CRM.BooleanAttributeMetadata` which performs a cast operation that is required to return any property that is not defined within the <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType>. Without this, the `OptionSet` expansion is not possible.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean')/Microsoft.Dynamics.CRM.BooleanAttributeMetadata?$expand=OptionSet HTTP/1.1
@@ -1166,7 +1164,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -1411,7 +1409,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Original Option Labels:
@@ -1424,7 +1422,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    > [!NOTE]
    > Even though the `OptionSet` property is included in this payload, any changes to the options would not be applied because they are not considered part of the column definition. They must be updated separately and this sample will show you how in following steps.
 
-   **Request**
+   **Request:**
 
    ```http
    PUT [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean') HTTP/1.1
@@ -1674,7 +1672,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -1682,7 +1680,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean')
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Updated Boolean Column properties
@@ -1697,7 +1695,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Change the `TrueOption` value label to 'Up'.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/UpdateOptionValue HTTP/1.1
@@ -1731,7 +1729,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -1740,7 +1738,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Change the `FalseOption` value label to 'Down'.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/UpdateOptionValue HTTP/1.1
@@ -1774,14 +1772,14 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Updated option labels
@@ -1789,7 +1787,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Retrieve the modified option values for the Boolean column using the same query as before:
 
-   **Console output**
+   **Console output:**
 
    ```
    Updated Option Labels:
@@ -1801,7 +1799,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Create a DateTime column using <xref:Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?text=DateTimeAttributeMetadata EntityType>.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -1865,7 +1863,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -1873,7 +1871,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f1db3d43-112a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Created DateTime column with id:f1db3d43-112a-ed11-9db1-00224804f8e2
@@ -1882,7 +1880,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 1. Retrieve selected values of the DateTime column.
 
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_datetime')/Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?$select=SchemaName,Format,DateTimeBehavior HTTP/1.1
@@ -1893,7 +1891,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -1910,7 +1908,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Retrieved Datetime column properties:
@@ -1922,7 +1920,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Create a Decimal Column using <xref:Microsoft.Dynamics.CRM.DecimalAttributeMetadata?text=DecimalAttributeMetadata EntityType>.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -1984,7 +1982,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -1992,7 +1990,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f2db3d43-112a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Created Decimal column with id:f2db3d43-112a-ed11-9db1-00224804f8e2
@@ -2000,7 +1998,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Retrieve selected values of the Decimal column.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_decimal')/Microsoft.Dynamics.CRM.DecimalAttributeMetadata?$select=SchemaName,MaxValue,MinValue,Precision HTTP/1.1
@@ -2011,7 +2009,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -2027,7 +2025,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Retrieved Decimal column properties:
@@ -2040,7 +2038,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Create an Integer column using <xref:Microsoft.Dynamics.CRM.IntegerAttributeMetadata?text=IntegerAttributeMetadata EntityType>.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -2103,7 +2101,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -2111,7 +2109,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f5db3d43-112a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Created Integer column with id:f5db3d43-112a-ed11-9db1-00224804f8e2
@@ -2119,7 +2117,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Retrieve selected values of the Integer column.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_integer')/Microsoft.Dynamics.CRM.IntegerAttributeMetadata?$select=SchemaName,MaxValue,MinValue,Format HTTP/1.1
@@ -2130,7 +2128,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -2146,7 +2144,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Retrieved Integer column properties:
@@ -2159,7 +2157,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Create a Memo Column using <xref:Microsoft.Dynamics.CRM.MemoAttributeMetadata?text=MemoAttributeMetadata EntityType>.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -2222,7 +2220,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -2230,7 +2228,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f6db3d43-112a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Created Memo column with id:f6db3d43-112a-ed11-9db1-00224804f8e2
@@ -2238,7 +2236,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Retrieve selected values of the Memo Column.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_memo')/Microsoft.Dynamics.CRM.MemoAttributeMetadata?$select=SchemaName,Format,ImeMode,MaxLength HTTP/1.1
@@ -2249,7 +2247,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -2265,7 +2263,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Retrieved Memo column properties:
@@ -2278,7 +2276,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Create a Money Column using <xref:Microsoft.Dynamics.CRM.MoneyAttributeMetadata?text=MoneyAttributeMetadata EntityType>.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -2344,7 +2342,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -2352,7 +2350,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(fddb3d43-112a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Created Money column with id:fddb3d43-112a-ed11-9db1-00224804f8e2
@@ -2360,7 +2358,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Retrieve selected values of the Money Column.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_money')/Microsoft.Dynamics.CRM.MoneyAttributeMetadata?$select=SchemaName,MaxValue,MinValue,Precision,PrecisionSource,ImeMode HTTP/1.1
@@ -2371,7 +2369,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -2389,7 +2387,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Retrieved Money column properties:
@@ -2404,7 +2402,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Create a Choice (Picklist) Column using <xref:Microsoft.Dynamics.CRM.PicklistAttributeMetadata?text=PicklistAttributeMetadata EntityType> with a local option set.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -2571,7 +2569,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -2579,7 +2577,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(4a154e49-112a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Created Choice column with id:4a154e49-112a-ed11-9db1-00224804f8e2
@@ -2587,7 +2585,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Retrieve options of the choice column using `$select=SchemaName&$expand=OptionSet`.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_choice')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
@@ -2598,7 +2596,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -2820,7 +2818,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    }
    ```
-   **Console output**
+   **Console output:**
 
    ```
    Retrieved Choice column options:
@@ -2838,7 +2836,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    > [!NOTE]
    > `InsertOptionValue` and the following actions to work with options has a `SolutionUniqueName` parameter for you to set the solution unique name rather than by using the `MSCRM.SolutionUniqueName` request header.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/InsertOptionValue HTTP/1.1
@@ -2872,7 +2870,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -2884,7 +2882,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Added new option with label 'Echo'
@@ -2892,7 +2890,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Retrieve the choice column options again using the same query as before:
 
-   **Console output**
+   **Console output:**
 
    ```
    The option values for the picklist:
@@ -2908,7 +2906,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Re-order the Choice column options using the <xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action>.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/OrderOption HTTP/1.1
@@ -2932,14 +2930,14 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Options re-ordered.
@@ -2947,7 +2945,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Retrieve the Choice column options again using the same query as before to see the options in the new order.
 
-   **Console output**
+   **Console output:**
 
    ```
    The option values for the picklist in the new order:
@@ -2963,7 +2961,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Delete an option using <xref:Microsoft.Dynamics.CRM.DeleteOptionValue?text=DeleteOptionValue Action>.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/DeleteOptionValue HTTP/1.1
@@ -2979,14 +2977,14 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Deleting a local option value...
@@ -2997,7 +2995,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Create a multi-select choice column using <xref:Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?text=MultiSelectPicklistAttributeMetadata EntityType>.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -3124,7 +3122,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -3132,7 +3130,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(2c1c3050-112a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Creating a MultiSelect Choice column...
@@ -3141,7 +3139,7 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 1. Retrieve the multi-select choice column options using `GET EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_multiselectchoice')/Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet`
 
-   **Console output**
+   **Console output:**
 
    ```
    The option values for the multi-select choice column:
@@ -3152,12 +3150,12 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 ### Insert Status Value
 
-Use <xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action> to add a new option to a `statuscode` column. You must specify which `StateCode` it is valid for.
+Use <xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action> to add a new option to a `statuscode` column. You must specify which `StateCode` it's valid for.
 
 > [!NOTE]
 > Notice that the value returned applies the publisher `customizationoptionvalueprefix` value (72700) automatically.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/InsertStatusValue HTTP/1.1
@@ -3191,7 +3189,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -3204,7 +3202,7 @@ OData-Version: 4.0
 ```
 
 
-**Console output**
+**Console output:**
 
 ```
 Created new Status value:727000000
@@ -3217,7 +3215,7 @@ Created new Status value:727000000
    > [!NOTE]
    > The request specifies the option values using the publisher `customizationoptionvalueprefix`.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions HTTP/1.1
@@ -3330,7 +3328,7 @@ Created new Status value:727000000
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -3338,7 +3336,7 @@ Created new Status value:727000000
    OData-EntityId: [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Created a new global option set with id:7cfd8c56-112a-ed11-9db1-00224804f8e2
@@ -3346,7 +3344,7 @@ Created new Status value:727000000
 
 1. Retrieve the global choice options.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OptionSetMetadata HTTP/1.1
@@ -3357,7 +3355,7 @@ Created new Status value:727000000
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -3514,7 +3512,7 @@ Created new Status value:727000000
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    List the retrieved options for the colors global option set:
@@ -3525,7 +3523,7 @@ Created new Status value:727000000
 
 1. Create a choice column that uses the global optionset. Associate the column definition to the global optionset using: `"GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)"`.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -3586,7 +3584,7 @@ Created new Status value:727000000
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
@@ -3594,7 +3592,7 @@ Created new Status value:727000000
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(81fd8c56-112a-ed11-9db1-00224804f8e2)
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Created Choice column with id:81fd8c56-112a-ed11-9db1-00224804f8e2 using colors global optionset.
@@ -3602,11 +3600,11 @@ Created new Status value:727000000
 
 ## Section 4: Create Customer Relationship
 
-1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action> to create a customer relationship. This will add a lookup column for the `sample_BankAccount` table that allows for either an `account` or `contact` record to be set.
+1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action> to create a customer relationship. This action adds a lookup column for the `sample_BankAccount` table that allows for either an `account` or `contact` record to be set.
 
    `CreateCustomerRelationships` has a `Lookup` <xref:Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata?text=ComplexLookupAttributeMetadata ComplexType> parameter and a `OneToManyRelationships` parameter containing a pair of relationships defined using <xref:Microsoft.Dynamics.CRM.ComplexOneToManyRelationshipMetadata?text=ComplexOneToManyRelationshipMetadata ComplexType>.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/CreateCustomerRelationships HTTP/1.1
@@ -3694,7 +3692,7 @@ Created new Status value:727000000
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -3712,7 +3710,7 @@ Created new Status value:727000000
 
 1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse>.`AttributeId` value to retrieve the lookup column `Targets` property for the customer relationship.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_customerid')/Microsoft.Dynamics.CRM.LookupAttributeMetadata?$select=Targets HTTP/1.1
@@ -3723,7 +3721,7 @@ Created new Status value:727000000
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -3739,7 +3737,7 @@ Created new Status value:727000000
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    The Target values of the Lookup column created:
@@ -3751,7 +3749,7 @@ Created new Status value:727000000
 
    First for the relationship to `account`:
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(84fd8c56-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
@@ -3762,7 +3760,7 @@ Created new Status value:727000000
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -3827,7 +3825,7 @@ Created new Status value:727000000
 
    Then for the relationship to `contact`:
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(8dfd8c56-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
@@ -3838,7 +3836,7 @@ Created new Status value:727000000
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -3901,7 +3899,7 @@ Created new Status value:727000000
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    The Schema Names of the relationships created:
@@ -3911,13 +3909,13 @@ Created new Status value:727000000
 
 ## Section 5: Create and retrieve a one-to-many relationship
 
-Before you create a relationship using code you should confirm that the relationship is valid. The designers in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) use special functions to show you which combinations are valid. You can use the same functions in your code to detect whether a particular relationship can be created or not.
+Before you create a relationship using code, you should confirm that the relationship is valid. The designers in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) use special functions to show you which combinations are valid. You can use the same functions in your code to detect whether a particular relationship can be created or not.
 
 ### Validate 1:N relationship eligibility
 
 1. <xref:Microsoft.Dynamics.CRM.CanBeReferenced?text=CanBeReferenced Function> tells you whether a table the primary table (one) in a one-to-many relationship.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/CanBeReferenced HTTP/1.1
@@ -3931,7 +3929,7 @@ Before you create a relationship using code you should confirm that the relation
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -3943,15 +3941,15 @@ Before you create a relationship using code you should confirm that the relation
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    The sample_BankAccount table is eligible to be a primary table in a one-to-many relationship.
    ```
 
-1. <xref:Microsoft.Dynamics.CRM.CanBeReferencing?text=CanBeReferencing Function> tells you whether a table can be the referencing table in a one-to-many relationship. This is the table that will have a Lookup column added to it to be the 'many' in the one-to-many relationship.
+1. <xref:Microsoft.Dynamics.CRM.CanBeReferencing?text=CanBeReferencing Function> tells you whether a table can be the referencing table in a one-to-many relationship. The referencing table is the table that has a Lookup column added to it to be the 'many' in the one-to-many relationship.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/CanBeReferencing HTTP/1.1
@@ -3965,7 +3963,7 @@ Before you create a relationship using code you should confirm that the relation
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -3977,7 +3975,7 @@ Before you create a relationship using code you should confirm that the relation
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    The contact table is eligible to be a related table in a one-to-many relationship.
@@ -3987,7 +3985,7 @@ Before you create a relationship using code you should confirm that the relation
 
 In the context of a specific table that can be the parmary table in a one-to-many relationship, use the <xref:Microsoft.Dynamics.CRM.GetValidReferencingEntities?text=GetValidReferencingEntities Function> to identify what other tables can be the related to it.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/GetValidReferencingEntities(ReferencedEntityName='sample_bankaccount') HTTP/1.1
@@ -3997,7 +3995,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -4108,7 +4106,7 @@ OData-Version: 4.0
 }
 ```
 
-**Console output**
+**Console output:**
 
 ```
 The contact table is in the list of potential referencing entities for sample_BankAccount.
@@ -4116,9 +4114,9 @@ The contact table is in the list of potential referencing entities for sample_Ba
 
 ### Create 1:N relationship
 
-The following request will create a one-to-many relationship between `sample_BankAccount` and contact tables with a lookup column added to the `contact` table.
+The following request creates a one-to-many relationship between `sample_BankAccount` and contact tables with a lookup column added to the `contact` table.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/RelationshipDefinitions HTTP/1.1
@@ -4218,7 +4216,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -4228,7 +4226,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(991efd5
 
 
 
-**Console output**
+**Console output:**
 
 ```
 Creating a one-to-many relationship...
@@ -4237,13 +4235,13 @@ Created one-to-many relationship: RelationshipDefinitions(991efd5f-112a-ed11-9db
 
 ### Retrieve 1:N relationship
 
-The following request will retrieve the relationship created by the previous request.
+The following request retrieves the relationship created by the previous request.
 
 > [!NOTE]
 > Because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve: `/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata`.
 > Otherwise, the value returned will be the <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType> and will not include the properties specific to the <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType>.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(991efd5f-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
@@ -4254,7 +4252,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -4331,7 +4329,7 @@ OData-Version: 4.0
 }
 ```
 
-**Console output**
+**Console output:**
 
 ```
 Retrieved relationship: sample_BankAccount_Contacts
@@ -4339,11 +4337,11 @@ Retrieved relationship: sample_BankAccount_Contacts
 
 ## Section 6: Create and retrieve a many-to-one relationship
 
-A many-to-one relationship is a one-to-many relationship viewed from the other direction. The following examples will create a lookup column named `sample_relatedaccountid` on the `sample_BankAccount` table referencing a row in the `account` table.
+A many-to-one relationship is a one-to-many relationship viewed from the other direction. The following examples create a lookup column named `sample_relatedaccountid` on the `sample_BankAccount` table referencing a row in the `account` table.
 
 ### Create N:1 relationship
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/RelationshipDefinitions HTTP/1.1
@@ -4443,7 +4441,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -4451,7 +4449,7 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(0901c466-112a-ed11-9db1-00224804f8e2)
 ```
 
-**Console output**
+**Console output:**
 
 ```
 Created many-to-one relationship: RelationshipDefinitions(0901c466-112a-ed11-9db1-00224804f8e2)
@@ -4459,7 +4457,7 @@ Created many-to-one relationship: RelationshipDefinitions(0901c466-112a-ed11-9db
 
 ### Retrieve N:1 relationship
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(0901c466-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
@@ -4470,7 +4468,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -4547,7 +4545,7 @@ OData-Version: 4.0
 }
 ```
 
-**Console output**
+**Console output:**
 
 ```
 Retrieved relationship: sample_Account_BankAccounts
@@ -4555,12 +4553,12 @@ Retrieved relationship: sample_Account_BankAccounts
 
 ## Section 7: Create and retrieve a many-to-many relationship
 
-Like one-to-many relationships, there are special functions used by the designers in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) prevent invalid combinations when createing many-to-many relationships.
+Like one-to-many relationships, there are special functions used by the designers in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) prevent invalid combinations when creating many-to-many relationships.
 ### Validate N:N relationship eligibility
 
-1. <xref:Microsoft.Dynamics.CRM.CanManyToMany?text=CanManyToMany Function> tells you whether a table can participate in a many-to-many relationship. So this request will test the `contact` table.
+1. <xref:Microsoft.Dynamics.CRM.CanManyToMany?text=CanManyToMany Function> tells you whether a table can participate in a many-to-many relationship. So this request tests the `contact` table.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/CanManyToMany HTTP/1.1
@@ -4574,7 +4572,7 @@ Like one-to-many relationships, there are special functions used by the designer
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -4586,15 +4584,15 @@ Like one-to-many relationships, there are special functions used by the designer
    }
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    The contact table can participate in many-to-many relationships.
    ```
 
-1. This request will perform the same test on the `sample_bankaccount` table.
+1. This request performs the same test on the `sample_bankaccount` table.
 
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/CanManyToMany HTTP/1.1
@@ -4608,7 +4606,7 @@ Like one-to-many relationships, there are special functions used by the designer
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -4621,7 +4619,7 @@ Like one-to-many relationships, there are special functions used by the designer
    ```
 
 
-   **Console output**
+   **Console output:**
 
    ```
    The sample_bankaccount table can participate in many-to-many relationships.
@@ -4629,9 +4627,9 @@ Like one-to-many relationships, there are special functions used by the designer
 
 ### Identify Potential Entities for N:N relationships
 
-Use the <xref:Microsoft.Dynamics.CRM.GetValidManyToMany?text=GetValidManyToMany Function> to get a list of tables that can particpate in many-to-many relationships.
+Use the <xref:Microsoft.Dynamics.CRM.GetValidManyToMany?text=GetValidManyToMany Function> to get a list of tables that can participate in many-to-many relationships.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/GetValidManyToMany HTTP/1.1
@@ -4641,7 +4639,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -4791,7 +4789,7 @@ OData-Version: 4.0
 }
 ```
 
-**Console output**
+**Console output:**
 
 ```
 Contact is in the list of potential tables for N:N.
@@ -4800,9 +4798,9 @@ sample_BankAccount is in the list of potential tables for N:N.
 
 ### Create N:N relationship
 
-This request will create a many-to-many relationship between `sample_BankAccount` and `Contact` tables.
+This request creates a many-to-many relationship between `sample_BankAccount` and `Contact` tables.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/RelationshipDefinitions HTTP/1.1
@@ -4872,7 +4870,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -4880,7 +4878,7 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(55c9f86c-112a-ed11-9db1-00224804f8e2)
 ```
 
-**Console output**
+**Console output:**
 
 ```
 Created Many-to-Many relationship at: RelationshipDefinitions(55c9f86c-112a-ed11-9db1-00224804f8e2)
@@ -4888,13 +4886,13 @@ Created Many-to-Many relationship at: RelationshipDefinitions(55c9f86c-112a-ed11
 
 ### Retrieve N:N relationship
 
-This request will retrieve the many-to-many relationship created by the previous request.
+This request retrieves the many-to-many relationship created by the previous request.
 
 > [!NOTE]
 > As mentioned above, because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve: `/Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata`.
 > Otherwise, the value returned will be the <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType> and will not include the properties specific to the <xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata?text=ManyToManyRelationshipMetadata EntityType>.
 
-**Request**
+**Request:**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(55c9f86c-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata HTTP/1.1
@@ -4905,7 +4903,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -4995,7 +4993,7 @@ OData-Version: 4.0
 }
 ```
 
-**Console output**
+**Console output:**
 
 ```
 Retrieved Many-to-Many relationship:sample_sample_BankAccounts_Contacts
@@ -5005,7 +5003,7 @@ Retrieved Many-to-Many relationship:sample_sample_BankAccounts_Contacts
 
 Use the <xref:Microsoft.Dynamics.CRM.ExportSolution?text=ExportSolution Action> to export the solution as a managed solution. This action includes many switches you can use to include additional information as part of the solution, but in this case, all those options are turned off. More information: [Work with solutions](/power-platform/alm/solution-api)
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/ExportSolution HTTP/1.1
@@ -5031,7 +5029,7 @@ Accept: application/json
 }
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -5044,7 +5042,7 @@ OData-Version: 4.0
 ```
 
 
-**Console output**
+**Console output:**
 
 ```
 Solution Exported to E:\GitHub\PowerApps-Samples\dataverse\webapi\C#-NETx\MetadataOperations\bin\Debug\net6.0\examplesolution.zip
@@ -5054,7 +5052,7 @@ Solution Exported to E:\GitHub\PowerApps-Samples\dataverse\webapi\C#-NETx\Metada
 
 References to all of the records created in this sample have been added to a list. In this section, all the records created are deleted using a `$batch` operation.
 
-**Request**
+**Request:**
 
 ```http
 POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
@@ -5107,7 +5105,7 @@ DELETE /api/data/v9.2/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-0022480
 
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 200 OK
@@ -5159,7 +5157,7 @@ OData-Version: 4.0
 
 
 
-**Console output**
+**Console output:**
 
 ```
 Deleting created records...
@@ -5167,9 +5165,9 @@ Deleting created records...
 
 ## Section 10: Import and Delete managed solution
 
-1. This step will import managed solution exported in [Section 8: Export managed solution](#section-8-export-managed-solution) using the <xref:Microsoft.Dynamics.CRM.ImportSolution?text=ImportSolution Action>.
+1. This step imports managed solution exported in [Section 8: Export managed solution](#section-8-export-managed-solution) using the <xref:Microsoft.Dynamics.CRM.ImportSolution?text=ImportSolution Action>.
    
-   **Request**
+   **Request:**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/ImportSolution HTTP/1.1
@@ -5186,14 +5184,14 @@ Deleting created records...
    }
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 204 NoContent
    OData-Version: 4.0
    ```
 
-   **Console output**
+   **Console output:**
 
    ```
    Sending request to import the examplesolution solution...
@@ -5203,7 +5201,7 @@ Deleting created records...
 
 1. Get the `solutionid` of the managed solution by `uniquename` so you can delete it.
 
-   **Request**
+   **Request:**
 
    ```http
    GET [Organization Uri]/api/data/v9.2/solutions?$select=solutionid&$filter=uniquename%20eq%20'examplesolution' HTTP/1.1
@@ -5213,7 +5211,7 @@ Deleting created records...
    Accept: application/json
    ```
 
-   **Response**
+   **Response:**
 
    ```http
    HTTP/1.1 200 OK
@@ -5232,9 +5230,9 @@ Deleting created records...
 
 ### Delete managed solution
 
-This final step will delete the managed solution imported to return the system to the original state.
+This final step deletes the managed solution imported to return the system to the original state.
 
-**Request**
+**Request:**
 
 ```http
 DELETE [Organization Uri]/api/data/v9.2/solutions(07439497-6992-4e30-81e0-628a91984af5) HTTP/1.1
@@ -5244,7 +5242,7 @@ If-None-Match: null
 Accept: application/json
 ```
 
-**Response**
+**Response:**
 
 ```http
 HTTP/1.1 204 NoContent
@@ -5253,7 +5251,7 @@ OData-Version: 4.0
 
 
 
-**Console output**
+**Console output:**
 
 ```
 Sending request to delete the examplesolution solution...
