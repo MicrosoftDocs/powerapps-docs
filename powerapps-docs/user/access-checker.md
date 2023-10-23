@@ -62,6 +62,9 @@ If you're an administrator, you can check the access another user has to a row.
   
 3.   The **Check Access** dialog box will appear and display the user's access information.
 
+**Check Access results:**
+The user's record [privileges](https://learn.microsoft.com/power-platform/admin/how-record-access-determined#privilege-check) are displayed. The user's privileges are either 'yes' or 'no'. For the 'yes' privileges, you can click on them   to see whether the privileges were granted from a security role or from the record being shared with the user. The result shows a blank page when the user doesn't have the "Read" privilege.
+
 ## Check all users who have access to a row
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
