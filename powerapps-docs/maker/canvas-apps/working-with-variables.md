@@ -187,6 +187,22 @@ Then you can simply use **Radius** anywhere that you can use a number, and it wi
 
 If you give a context variable the same name as a global variable or a collection, the context variable takes precedence. However, you can still reference the global variable or collection if you use the [disambiguation operator](functions/operators.md#disambiguation-operator) **[@Radius]**.
 
+### Reserved variable names
+Avoid using any of the following variable names. These are the names of App output properties and using the name can cause a variable-name collisions and result in unexpected app behavior. 
+- ActiveScreen
+- DesignHeight
+- DesignWidth
+- Height
+- MinScreenHeight
+- MinScreenWidth
+- SizeBreakpoints
+- StudioVersion
+- TestCaseId
+- Testing
+- TestSuiteId
+- Theme
+- Width
+
 ## Use a context variable
 
 Let's look at how our adding machine would be created using a context variable instead of a global variable.
