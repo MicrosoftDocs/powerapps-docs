@@ -279,7 +279,7 @@ Once you launch form checker, you'll be able to see more details in the `Composi
 Follow up with the corresponding owner of the business rule or custom script to change the control suggested by the form checker.
 
 
-## Item doesn't appear in Related menu tab
+## Related menu item doesn't appear in Related tab
 
 ### Issue
 
@@ -325,9 +325,7 @@ If a form is not showing in the form selector,
 
 1. Check the affected user's security roles.
 1. Check if the form has been added to the app module.
-1. [Disable custom scripts](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-model-app-issues#client-scripts).
-
-You can also [use Form checker to find out why a form is available or not available to the user](#use-form-checker-for-form-selection-issues).
+2. [Disable custom scripts](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-model-app-issues#client-scripts).
 
 ## Why is a particular form shown by default?
 
@@ -349,19 +347,6 @@ A form is available to the user when:
 
 1. [User has permission to access the form](../../maker/model-driven-apps/control-access-forms.md).
 1. [Form has been added to the app module](../../maker/model-driven-apps/add-edit-app-components.md#add-table-assets).
-
-You can also use Form checker to find out why a form is shown to the user by default.
-
-### Use Form checker for form selection issues
-
-1. [Launch Monitor](../../maker/model-driven-apps/monitor-form-checker.md#step-1-create-a-monitor-session)
-1. In the app that's connected to Monitor, append `&flags=FCB.FormGCMCacheResponse=true,FCB.ODataGCMResponseCache=true` to the URL.
-1. Navigate to the affected form.
-1. Go to Monitor and search for the `FormSelector` operation. If you don't see it, try refreshing the form page.
-1. Expand the `data` field of the `FormSelector` operation. It shows which forms are available and explains why others are not. It also explains why this user is shown a particular form by default.
-
-> [!div class="mx-imgBorder"]
-> ![Form checker explains the form selection process](media/form-checker-form-selector.png "Form checker explains the form selection process")
 
 ## Why a control is disabled/enabled or visible/hidden
 
