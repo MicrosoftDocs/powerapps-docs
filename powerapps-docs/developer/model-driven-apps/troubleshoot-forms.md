@@ -283,23 +283,70 @@ Follow up with the corresponding owner of the business rule or custom script to 
 
 ### Issue
 
-There are many reasons why a related menu item doesn't appear on the **Related** tab or has an incorrect label.
+Most forms have a **Related** tab. It opens the **Related menu** with **Related menu items**.
+
+> [!div class="mx-imgBorder"]
+> ![Related tab in a form, expanded](media/form-related-tab.png "Related tab in a form, expanded")
+
+A **Related menu item** might not appear as expected.
 
 ### How to troubleshoot
 
-In the following example, a related table `role` (security role) doesn't appear in the `team` form because the `role` table isn't available in Unified Interface.
+The following might cause a related menu item to not appear:
+
+#### Relationship between the main and related table is not configured correctly
+
+There should be a 1:N or N:N relationship between the main table and the related table. A form shows a row from the main table. The related table is the one that should appear in the Related menu of the form. If these relationships do not exist, the related menu item will not appear.
+
+To verify, go to the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Tables**, and select the table that has the relationships you want to view.
+
+#### Relationship between the main and related table is created by the system and isn't customizable
+
+The Related menu won't show related tables from certain relationships created by the system. These relationships are marked as non-customizable.
+
+A property of the relationship, `AssociatedMenuConfiguration.IsCustomizable`, indicates whether the relationship can be customized. The easiest way to check this is with a [Web API query](../data-platform/webapi/query-data-web-api.md).
+
+Suppose you want to check whether the relationship between the **Business Unit** table and **Goal** table is customizable. The logical name of this relationship is [business_unit_goal](../data-platform/reference/entities/businessunit.md#BKMK_business_unit_goal). Enter this URL in your browser:
+
+```http
+[Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='businessunit')/OneToManyRelationships(SchemaName='business_unit_goal') 
+```
+
+The response might look like this:
 
 > [!div class="mx-imgBorder"]
-> ![Related menu](media/related-menu-error.png "Related menu")
+> ![JSON response from Web API call, showing IsCustomizable of the relationship is false](media/form-related-menu-non-customizable-relationship.png "JSON response from Web API call, showing IsCustomizable of the relationship is false")
 
-In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md), the `RelatedMenu` operation provides all the details that are causing the issue.
+Note that `IsCustomizable` is `false`. Therefore, the relationship is not customizable and **Goal** won't appear in the Related menu.
 
-There are also a few sources where a record can be included as an option for the **Related** menu tab. The following example contains details that indicate that the label `Activities` in the **Related** menu on an account form comes from the plural display name of the related table.
+#### Related table is not enabled for Unified Client
+
+If the table was created in Web Client ([deprecated since 2019](/power-platform/important-changes-coming#legacy-web-client-is-deprecated)), one possible reason why it may not appear is that it's disabled for Unified Client.
+
+To verify, go to [Solution explorer](../../maker/model-driven-apps/advanced-navigation.md#solution-explorer) and select the table (entity). Ensure that **Enable for Unified Client** is checked.
 
 > [!div class="mx-imgBorder"]
-> ![Related menu details](media/related-menu-error-details.png "Related menu details")
+> ![Related tab in a form, expanded](media/form-related-menu-not-enabled-uci.png "Related tab in a form, expanded")
 
-Follow up with the corresponding owner of the related menu item.
+Tables created with the modern designer will not have this issue. They're always enabled for Unified Client.
+
+> [!NOTE]
+> Certain system tables can't be enabled for Unified Client. For example, **Process Session** can't be used in model-driven apps.
+
+
+## Audit History doesn't appear in Related tab
+
+### Issue
+
+**Audit History** is not in the Related menu.
+
+### How to troubleshoot
+
+Audit history is not supported in these cases:
+- Some tables created by the system might not support Audit History. You can find a list of these tables in [Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing).
+- Mobile apps
+- Offline mode
+- Dynamics for Outlook
 
 ## Why is a form showing/not showing in the form selector?
 
