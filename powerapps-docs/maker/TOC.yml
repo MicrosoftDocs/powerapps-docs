@@ -1955,7 +1955,7 @@
       href: ./data-platform/data-platform-import-export.md
     - name: "Configure tables to use Copilot"
       href: ./data-platform/table-settings-for-copilot.md  
-    - name: Long term data retention for tables (preview)
+    - name: Long term data retention for tables
       href: ./data-platform/data-retention-overview.md
       items:
       - name: Set a data retention policy
@@ -2200,6 +2200,8 @@
                 href: "./data-platform/powerapps-checker/rules/web/avoid-window-top.md"
               - name: "do-not-make-parent-assumption"
                 href: "./data-platform/powerapps-checker/rules/web/do-not-make-parent-assumption.md"
+              - name: "use-appsidepane-api"
+                href: "./data-platform/powerapps-checker/rules/web/use-appsidepane-api.md"
               - name: "use-async"
                 href: "./data-platform/powerapps-checker/rules/web/use-async.md"
               - name: "use-cached-webresource"
