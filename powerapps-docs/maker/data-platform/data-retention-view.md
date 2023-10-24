@@ -57,13 +57,13 @@ You can view the active (live) and inactive (long term retained) application dat
 To do this, link your Dataverse environment to Fabric. More information: [Link your Dataverse environment to Microsoft Fabric and unlock deep insights](azure-synapse-link-view-in-fabric.md).
 
 > [!IMPORTANT]
-> This is a preview feature.
+> Linking your Dataverse environment to Microsoft Fabric is a preview feature.
 >
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-When your long term retention policy is run successfully, you can access the active and inactive Dataverse data. The limitations applied to retrieval of retained data don't apply to this mode of access. <!-- What limitations? Do you mean you don't need a Power BI premium license or Fabric capacity? -->
+When your long term retention policy is run successfully, you can access the active and inactive Dataverse data. The [limitations applied to retrieval of retained data](#limitations-for-retrieval-of-retained-data) don't apply to this mode of access.
 
-You can explore the data with SQL endpoint and query Dataverse data with SQL <!-- Do you mean with Power BI and the SQL endpoint only or also with SQL Server management studio? https://learn.microsoft.com/en-us/power-apps/developer/data-platform/dataverse-sql-query --> and generate views in Fabric. You can also create Power BI reports. More information: [Work with Dataverse data and generate Power BI reports](azure-synapse-link-view-in-fabric.md#work-with-dataverse-data-and-generate-power-bi-reports)
+You can explore the data with SQL endpoint and query Dataverse data with SQL and generate views in Fabric. You can also create Power BI reports. More information: [Work with Dataverse data and generate Power BI reports](azure-synapse-link-view-in-fabric.md#work-with-dataverse-data-and-generate-power-bi-reports)
 
 The Dataverse table column `msft_datastate` can be used to filter the data with the SQL `WHERE` clause:
 
