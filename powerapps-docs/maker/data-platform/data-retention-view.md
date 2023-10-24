@@ -65,7 +65,7 @@ When your long term retention policy is run successfully, you can access the act
 
 You can explore the data with SQL endpoint and query Dataverse data with SQL <!-- Do you mean with Power BI and the SQL endpoint only or also with SQL Server management studio? https://learn.microsoft.com/en-us/power-apps/developer/data-platform/dataverse-sql-query --> and generate views in Fabric. You can also create Power BI reports. More information: [Work with Dataverse data and generate Power BI reports](azure-synapse-link-view-in-fabric.md#work-with-dataverse-data-and-generate-power-bi-reports)
 
-The column `msft_datastate` can be used to filter out the data with the SQL `WHERE` clause:
+The Dataverse table column `msft_datastate` can be used to filter the data with the SQL `WHERE` clause:
 
 - Inactive application data: `WHERE msft_datastate=1`
 - Active (live) application data: `WHERE msft_datastate=0`
