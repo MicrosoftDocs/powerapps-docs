@@ -1,18 +1,18 @@
 ---
-title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about how to resolve the common issues on model-driven apps forms." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Microsoft Docs"
+description: "Learn about how to resolve the common issues on model-driven apps forms."
 author: HemantGaur
 ms.author: hemantg
-
-ms.date: 04/01/2022
+ms.date: 10/24/2023
 ms.reviewer: jdaly
 ms.subservice: troubleshoot
-ms.topic: "article"
+ms.topic: article
 search.audienceType: 
   - developer
 contributors: 
   - JimDaly
   - caburk
+  - tahoon-ms
 ---
 
 # Troubleshoot form issues in model-driven apps
@@ -285,8 +285,7 @@ Follow up with the corresponding owner of the business rule or custom script to 
 
 Most forms have a **Related** tab. It opens the **Related menu** with **Related menu items**.
 
-> [!div class="mx-imgBorder"]
-> ![Related tab in a form, expanded](media/form-related-tab.png "Related tab in a form, expanded")
+:::image type="content" source="media/form-related-tab.png" alt-text="Related tab in a form, expanded":::
 
 A **Related menu item** might not appear as expected.
 
@@ -296,28 +295,54 @@ A related menu item might not appear because:
 
 #### Relationship between the main and related table isn't configured correctly
 
-There should be a 1:N or N:N relationship between the main table and the related table. A form shows a row from the main table. The related table is the one that should appear in the Related menu of the form. If these relationships do not exist, the related menu item won't appear.
+There should be a one-to-many or many-to-many relationship between the main table and the related table. A form shows a row from the main table. The related table is the one that should appear in the **Related** menu of the form. If these relationships do not exist, the related menu item won't appear.
 
 To verify, go to the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Tables**, and select the table that has the relationships you want to view.
 
-#### Relationship between the main and related table is created by the system and isn't customizable
+#### Relationship between the main and related table is created by Dataverse and isn't customizable
 
-The Related menu won't show related tables from certain relationships created by the system. These relationships are marked as non-customizable.
+The **Related** menu won't show related tables from certain relationships created by Dataverse. These relationships are marked as non-customizable.
 
-A property of the relationship, `AssociatedMenuConfiguration.IsCustomizable`, indicates whether the relationship can be customized. The easiest way to check is with a [Web API query](../data-platform/webapi/query-data-web-api.md).
+The [AssociatedMenuConfiguration.IsCustomizable property](xref:Microsoft.Xrm.Sdk.Metadata.AssociatedMenuConfiguration.IsCustomizable), indicates whether the relationship can be customized. The easiest way to check is by [querying the relationship using Web API](../data-platform/webapi/query-metadata-web-api.md#querying-relationship-metadata) to view the [AssociatedMenuConfiguration complex type](xref:Microsoft.Dynamics.CRM.AssociatedMenuConfiguration) data.
 
-Suppose you want to check whether the relationship between the **Business Unit** table and **Goal** table is customizable. The logical name of this relationship is [business_unit_goal](../data-platform/reference/entities/businessunit.md#BKMK_business_unit_goal). Enter this URL in your browser:
+For example, if you want to check whether the relationship between the [Business Unit](../data-platform/reference/entities/businessunit.md) and [Goal](../data-platform/reference/entities/goal.md) tables is customizable. The `SchemaName` of this relationship is [business_unit_goal](../data-platform/reference/entities/businessunit.md#BKMK_business_unit_goal). Enter this URL in your browser:
+
 
 ```http
-[Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='businessunit')/OneToManyRelationships(SchemaName='business_unit_goal') 
+GET [Organization URI]/api/data/v9.2/RelationshipDefinitions(SchemaName='business_unit_goal')/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?$select=AssociatedMenuConfiguration
 ```
 
-The response might look like this:
+You can also get the same data by [querying the table definition](../data-platform/webapi/query-metadata-web-api.md):
 
-> [!div class="mx-imgBorder"]
-> ![JSON response from Web API call, showing IsCustomizable of the relationship is false](media/form-related-menu-non-customizable-relationship.png "JSON response from Web API call, showing IsCustomizable of the relationship is false")
+```http
+GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='businessunit')/OneToManyRelationships(SchemaName='business_unit_goal')/AssociatedMenuConfiguration
+```
 
-Observe that `IsCustomizable` is `false`. Therefore, the relationship isn't customizable and **Goal** won't appear in the Related menu.
+The response for either request might look like this:
+
+```json
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#RelationshipDefinitions/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata(AssociatedMenuConfiguration)/$entity",
+    "MetadataId": "2124b4bd-f013-df11-a16e-00155d7aa40d",
+    "AssociatedMenuConfiguration": {
+        "Behavior": "UseCollectionName",
+        "Group": "Details",
+        "Order": null,
+        "IsCustomizable": false,
+        "Icon": null,
+        "ViewId": "00000000-0000-0000-0000-000000000000",
+        "AvailableOffline": true,
+        "MenuId": null,
+        "QueryApi": null,
+        "Label": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+        }
+    }
+}
+```
+
+Observe that `IsCustomizable` is `false`. Therefore, the relationship isn't customizable and **Goal** won't appear in the **Related** menu.
 
 #### Related table isn't enabled for Unified Client
 
@@ -325,8 +350,7 @@ If the table was created in Web Client ([deprecated since 2019](/power-platform/
 
 To verify, go to [Solution explorer](../../maker/model-driven-apps/advanced-navigation.md#solution-explorer) and select the table (entity). Ensure that **Enable for Unified Client** is checked.
 
-> [!div class="mx-imgBorder"]
-> ![Solution explorer shows that an entity isn't enabled for Unified Client](media/form-related-menu-not-enabled-uci.png "Solution explorer shows that an entity isn't enabled for Unified Client")
+:::image type="content" source="media/form-related-menu-not-enabled-uci.png" alt-text="Solution explorer shows that an entity isn't enabled for Unified Client":::
 
 Tables created with the modern designer do not have this issue. They're always enabled for Unified Client.
 
