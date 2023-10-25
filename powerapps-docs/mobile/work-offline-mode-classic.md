@@ -24,12 +24,6 @@ Work with your data in offline mode even when you don't have internet access. Th
 
 If you're working on a record and lose network connection, any updates made to the record are saved in offline mode and will be synchronized to the app after you're back online. When the record is synchronized with the app, it follows the filter rule for availability in offline mode.
 
-> [!IMPORTANT]
-> - There is a new experience to setup and use mobile offline for model-driven apps. For more information:
->   - [Set up mobile offline (preview)](setup-mobile-offline.md)
->   - [Enable and use mobile offline-first (preview)](work-in-offline-mode.md)
-
-
 ## Download updates to work in offline mode
 
 After you've installed the mobile app and your admin has [enabled mobile offline classic mode](setup-mobile-offline.md#enable-mobile-offline-classic), the next time you access the mobile app you'll be prompted to download offline updates. After you download the updates, you can start using the mobile app in offline mode.
