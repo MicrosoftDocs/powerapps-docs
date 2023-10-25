@@ -273,7 +273,7 @@ You can use the following scalar functions in a formula column:
       [UTCToday](../canvas-apps/functions/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
-
+      [Now](../canvas-apps/functions/function-now-today-istoday.md)
    :::column-end:::
 :::row-end:::
 
