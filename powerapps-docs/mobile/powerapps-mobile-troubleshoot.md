@@ -4,7 +4,7 @@ description: Troubleshooting and known issues for the Power Apps mobile app
 author: trdehove
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/01/2023
+ms.date: 10/25/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
