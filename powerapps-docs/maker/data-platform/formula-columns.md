@@ -1,16 +1,18 @@
 ---
 title: Work with Dataverse formula columns
 description: Learn how to create and use formula columns in Microsoft Dataverse.
-author: matp
+author: sanjeevgoyalmsft
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 07/25/2023
+ms.date: 10/25/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
 contributors:
   - mattp123
+  - sanjeevgoyalmsft
+  - JimDaly
 ---
 
 # Work with formula columns (preview)
@@ -19,8 +21,10 @@ contributors:
 
 Formula columns are columns that display a calculated value in a Microsoft Dataverse table. Formulas use [Power Fx](/power-platform/power-fx/overview), a powerful but human-friendly programming language. Build a formula in a Dataverse formula column the same way you would build a formula in Microsoft Excel. As you type, Intellisense suggests functions and syntax, and even helps you fix errors.
 
-> [!NOTE]
-> Formula columns can be added as a calculated field. Currently, formula columns can't be used in roll-up fields or with plugins.
+> [!IMPORTANT]
+> - This is a preview feature.
+>
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Add a formula column
 
@@ -46,9 +50,9 @@ The formula column displays the result of *Price* multiplied by *Number of units
 
 :::image type="content" source="media/record-in-app-formula-column.png" alt-text="Screenshot of a record with a formula column.":::
 
-The formula that you enter determines the column type. You can't change a column type after the column is created. That means you can change the formula after you’ve created the column only if it doesn’t change the column type.
+The formula that you enter determines the column type. You can't change a column type after the column is created. That means you can change the formula after you've created the column only if it doesn't change the column type.
 
-For example, the formula *price * discount* creates a column type of number. You can change *price * discount* to  *price * (discount + 10%)* because that doesn’t change the column type. However, you can’t change *price * discount* to  *Text(price * discount)* because that would require changing the column type to string.
+For example, the formula *price * discount* creates a column type of number. You can change *price * discount* to  *price * (discount + 10%)* because that doesn't change the column type. However, you can't change *price * discount* to  *Text(price * discount)* because that would require changing the column type to string.
 
 ## Operators
 
@@ -63,10 +67,10 @@ You can display the following data types in a formula column:
 
 - Text
 - Decimal number
-- Yes/No (boolean)
+- Choice Yes/No (boolean)
 - Datetime
 
-The currency and date data types aren't currently supported.
+The currency, whole number, and choice (formerly option sets) data types aren't currently supported.
 
 ## Function types
 
@@ -270,7 +274,17 @@ You can use the following scalar functions in a formula column:
       [UTCToday](../canvas-apps/functions/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
-
+      [Now](../canvas-apps/functions/function-now-today-istoday.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [Error](../canvas-apps/functions/function-iferror.md)
+   :::column-end:::
+   :::column span="":::
+     [Decimal](../canvas-apps/functions/function-value.md) \*
+   :::column-end:::
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 
@@ -282,8 +296,87 @@ You can use the following scalar functions in a formula column:
 |---------|---------|
 |Retrieve a date value.  |  `DateAdd(UTCNow(),-1,TimeUnit.Years)`   |
 
+## Guidelines and limitations
 
-### See also
+This section describes guidelines and the known limitations with formula columns in Dataverse.
+
+### Currency fields usage validations
+
+- Formula columns don't support using a related table currency column in the formula, such as in this example.
+   :::image type="content" source="media/formula-column-currency.png" alt-text="Formula column with unsupported formula of Account.Annual Revenue":::
+- Direct use of currency columns and exchange rate in the formula is currently unsupported. The use of currency and exchange rate columns is achieved through the `Decimal` function, such as `Decimal(currency column)` or `Decimal(exchange rate)`. The `Decimal` function makes sure the output is within the accepted range. If the currency or exchange rate column value exceeds the accepted range, then the formula returns null.
+- Base currency columns aren't supported in the formula column expressions because they're system columns used for reporting purpose. If you want a similar result, you can use a currency column type along with an exchange rate column combination as `CurrencyField_Base = (CurrencyField / ExchangeRate)`.
+
+### Date time columns usage validations
+
+- Behavior of date time formula columns can only be updated when it isn't used in another formula column.
+- For date time formula columns, while using the `DateDiff` function, make sure that:
+  - User local behavior column can't be compared or used  with a `DateTime(TZI)/DateOnly` behavior column.
+  - User local behavior columns can only be compared or used with another user local behavior column.
+  - `DateTime(TZI)` behavior columns can be compared or used in `DateDiff` functions with another `DateTime(TZI)/DateOnly` behavior column.
+  - `DateOnly` behavior columns can be compared or used in DateDiff function with another `DateTime(TZI)/DateOnly` behavior column.
+  :::image type="content" source="media/formula-column-datetime.png" alt-text="Unsupported date time configuration with a formula column":::
+
+### Formula column usage in rollup fields
+
+- A *simple formula column* is where the formula uses columns from the same record or uses hard coded values. For rollup columns, formula columns must be simple formula columns, such as this example rollup column.
+   :::image type="content" source="media/formula-column-rollup1.png" alt-text="Example simple formula column for a rollup column":::
+   :::image type="content" source="media/formula-column-rollup2.png" alt-text="Example rollup column configuration":::
+
+### Power Fx text function recommendations
+
+- Formula columns don't support `Text()` functions with a single argument of type Number. Number can be whole, decimal, or currency.
+   :::image type="content" source="media/formula-column-number.png" alt-text="Formula column with unsupported text function with a number argument":::  
+- Formula columns don't support using numbers in the following configurations:
+  - In string functions. These are string functions placed wherever a text argument is expected: Upper, Lower, Left, Right, Concatenate, Mid, Len, StartsWith, EndsWith, TrimEnds, Trim, Substitute, and Replace.
+  - In the implicit formulas, such as `12 & "foo"`, or `12 & 34`, or `"foo" & 12`.
+  - Internal number to text coercion isn't supported. We recommend using `Text(Number, Format)` to convert a number to text. In the case where a `String` argument is passed in a `Text` function then the `Format` argument isn't supported.
+  - Here's an example using the `Text` function to convert a number to text and append a string to it:
+
+   ```powerappsfl
+   Concatenate(Text(123,"#"),"ab")
+   Text(123,"#") & "foo"
+   ```
+
+### Range validations on formula columns
+
+- You can't set the **Minimum value** or **Maximum value** properties of a formula column.
+- All internal computations should lie within the Dataverse range for decimal type formula columns (-100000000000 to 100000000000).
+- A hard coded literal value entered in the formula bar should lie within the Dataverse range.  
+- If there's a numeric column that's null then it's considered 0 in the intermediate operation. For example, `a+b+c and If a = null, b=2, c=3` then formula column gives `0 + 2 + 3 = 5`.
+  - This behavior is different from calculated columns in this case because calculated columns give `null + 2 + 3 = null`.
+
+### General validations on formula columns
+
+- Formula columns can reference other formula columns, but a formula column can't reference itself.
+- Formula columns don't support cyclic chains, such as `F1 = F2 + 10, F2 = F1 * 2`.
+- Maximum formula expression length in formula columns is 1000 characters.
+- The maximum depth allowed in formula columns is 10. *Depth* is defined as the chain of formula columns referring to other formula or rollup columns.  
+  - For example, `table E1, F1 =  1*2, table E2, F2 - E1*2`. In this example, the depth of F2 is 1.
+- Formula columns don't display values when the app is in mobile offline mode.
+- We don't recommend using calculated columns in formula columns and vice versa.
+- Duplicate detection rules aren't triggered on formula columns.
+- The `Now` function can be used with formula columns. `Now()` has user local behavior and `UTCNow()` has time zone independent behavior.
+- You can set the precision property for decimal columns.
+
+### Power Fx functions not currently supported
+
+- Power
+- Sqrt
+- Exp
+- Ln
+- ^ (operator)
+
+### Formula columns of data types that can't be produced
+
+- Whole Number
+- Choices (except Yes/No choice)
+- Currency
+
+## See also
 
 [Types of columns](types-of-fields.md)  
+
 [Microsoft Power Fx overview](/power-platform/power-fx/overview)
+
+[Formula, calculated, and rollup columns using code](../../developer/data-platform/calculated-rollup-attributes.md)
