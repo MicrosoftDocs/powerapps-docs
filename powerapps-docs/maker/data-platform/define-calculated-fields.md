@@ -17,7 +17,7 @@ search.audienceType:
 
 Use calculated columns to automate otherwise manual calculations used in your business processes.
 
-For example, a salesperson may want to know the weighted revenue for an opportunity, which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated column can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
+For example, a salesperson might want to know the weighted revenue for an opportunity, which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated column can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
   
 ## Capabilities
   
@@ -87,7 +87,7 @@ Let's take a look at calculated column examples in more detail.
   
 ### Weighted revenue of opportunity
 
-In this example, we are using the columns of the opportunity table to calculate the weighted revenue based on the opportunity's probability. In the column editor for an opportunity table, we create a column called **Weighted Revenue** and specify the column type as **Calculated** and the data type is **Currency**.
+In this example, we're using the columns of the opportunity table to calculate the weighted revenue based on the opportunity's probability. In the column editor for an opportunity table, we create a column called **Weighted Revenue** and specify the column type as **Calculated** and the data type is **Currency**.
 
 In the calculated column definition editor, in the **Condition** section, we specify the opportunity with the Status = Open. In the **ACTION**, the formula calculates the weighted revenue based on the opportunity estimated revenue multiplied by the probability of the opportunity.  The following screenshots show step by step how to define the **Weighted Revenue** calculated column.  
   
@@ -105,7 +105,7 @@ In the calculated column definition editor, in the **Condition** section, we spe
   
 ### Follow up date of opportunity 
  
-In this example, we are using the columns of the originated lead of an opportunity to calculate the appropriate date when to follow up on the opportunity. 
+In this example, we're using the columns of the originated lead of an opportunity to calculate the appropriate date when to follow up on the opportunity. 
 
 In the column editor for an opportunity table, we create a column called **Follow-up date** and specify the type as **Calculated** and the data type is **Date and Time**.  
 
@@ -113,7 +113,7 @@ In the calculated column definition editor, in the **Condition** section, we spe
 
 In the **ACTION**, we provide two formulas:
  - To follow up in one week on the immediate opportunity
- - To follow up in one month if the opportunity is not likely to happen right away. 
+ - To follow up in one month if the opportunity isn't likely to happen right away. 
 
 The following screenshots show step by step how to define the **Follow-up date** calculated column.  
   
@@ -137,7 +137,7 @@ The following screenshots show step by step how to define the **Follow-up date**
   
 ### Days from a row creation 
  
-In this example, we are using the **DIFFINDAYS** function, to compute the difference in days from the time when a row was created to the current date. 
+In this example, we're using the **DIFFINDAYS** function, to compute the difference in days from the time when a row was created to the current date. 
 
 Create a new Whole Number column called **Calculated difference in days**.
   
@@ -200,11 +200,11 @@ The following examples show how to use the **TRIMLEFT** and **TRIMRIGHT** functi
 You should be aware of certain conditions and limitations when working with calculated columns:  
   
 - [Saved queries](../../developer/data-platform/saved-queries.md), charts, and visualizations can have a maximum of 50 unique calculated columns.  
-- The calculated column values are not displayed in the Outlook Client Offline mode in the tile views or on table main forms.  
+- The calculated column values aren't displayed in the Outlook Client Offline mode in the tile views or on table main forms.  
 - A maximum number of chained calculated columns is 5.  
 - A calculated column can't refer to itself or have cyclic chains.  
 - If you change one of the condition operators in a multiple condition clause, all of the condition operators will update to that condition. For example, in the clause `IF (x > 50) OR (y ==10) OR (z < 5)`, if you change the `OR` operator to the `AND` operator, then all `OR` operators in the clause will become `AND` operators.  
-- You can access parental columns via the Lookup column to the parent table, such as *`<LookupFieldName>.<FieldName>`*. This is not possible with multi-table lookup columns like Customer which can be Account or Contact. However, some tables have individual Lookup columns for a specific table, such as  `ParentAccountid.`*`<FieldName>`* or `ParentContactid.`*`<FieldName>`*.  
+- You can access parental columns via the Lookup column to the parent table, such as *`<LookupFieldName>.<FieldName>`*. This isn't possible with multi-table lookup columns like Customer, which can be Account or Contact. However, some tables have individual Lookup columns for a specific table, such as  `ParentAccountid.`*`<FieldName>`* or `ParentContactid.`*`<FieldName>`*.  
 - Sorting is disabled on:  
   - A calculated column that contains a column of a parent row.  
   - A calculated column that contains a logical column (for example, address column)
@@ -214,8 +214,8 @@ You should be aware of certain conditions and limitations when working with calc
   - A calculated column can't contain a calculated column from another table that also contains another column from a different table (spanning three tables):   
     (Current table) Calculated Column &larr; (Parent Row) Calculated Column 1 &larr; (Parent Row) Calculated Column 2.  
 - You can't trigger workflows or plug-ins on calculated columns.  
-- You can't change an existing simple column to a calculated column. If your current application is using JavaScript or plug-ins to calculate a column, you would not be able to use the calculated columns feature without creating a new column.  
-- Duplicate detection rules are not triggered on calculated columns.  
+- You can't change an existing simple column to a calculated column. If your current application is using JavaScript or plug-ins to calculate a column, you wouldn't be able to use the calculated columns feature without creating a new column.  
+- Duplicate detection rules aren't triggered on calculated columns.  
 - A rollup can't reference a calculated column that uses another calculated column, even if all the columns of the other calculated column are on the current table.  
   
 ### See also

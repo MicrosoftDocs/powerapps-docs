@@ -1,11 +1,11 @@
 ---
 title: Work with Dataverse formula columns
 description: Learn how to create and use formula columns in Microsoft Dataverse.
-author: matp
+author: mattp123
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 09/19/2023
+ms.date: 10/25/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -23,6 +23,7 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
 
 > [!IMPORTANT]
 > - This is a preview feature.
+>
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Add a formula column
