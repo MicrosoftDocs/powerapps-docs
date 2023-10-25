@@ -56,6 +56,10 @@ Data is synchronized from Dataverse to your device over the lifetime of your app
 
 When you select the offline sync icon, the **Device Status** page opens. The **Device Status** page provides details such as what data was downloaded, whether data is waiting to be uploaded, and the amount of storage the app uses.
 
+The **Sync Status** tracks the offline status of the whole app and also the status of each individual entity. When the status appears as **Available**, offline mode is available and data has been synced successfully.
+   > [!NOTE]
+   > The status here can be **Not Available** due to an error or if you missed downloading offline updates. If the status is **Not Available** due to missing the latest offline updates, try downloading the updates again.
+
 You can use the **Device Status** page to see the number of files and images to be downloaded and the current progress.
 
 - The number of images is listed for the **Image Descriptor** table.
