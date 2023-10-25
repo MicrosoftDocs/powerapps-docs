@@ -276,6 +276,17 @@ You can use the following scalar functions in a formula column:
       [Now](../canvas-apps/functions/function-now-today-istoday.md)
    :::column-end:::
 :::row-end:::
+:::row:::
+   :::column span="":::
+      [Error](../canvas-apps/functions/function-iferror.md)
+   :::column-end:::
+   :::column span="":::
+      
+   :::column-end:::
+   :::column span="":::
+      
+   :::column-end:::
+:::row-end:::
 
 \* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved. The decimal separator varies across locales. Since formula columns are evaluated without locale knowledge, there's no way to properly interpret or generate the decimal separator.
 
