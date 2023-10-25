@@ -190,7 +190,7 @@ Offline-first is the default mode when you enable an app for offline use. If you
 
 ## Sync conflict resolution
 
-Conflict errors are resolved in a way that the data your users upload from your client device "wins" and there will be no sync errors.
+Conflict errors are resolved in a way that the data your users upload from the client device "wins" and there will be no sync errors.
 
 ## Define sync settings on mobile 
 You can enable users to control the automatic sync intervals or the connection type to synchronize the data.
