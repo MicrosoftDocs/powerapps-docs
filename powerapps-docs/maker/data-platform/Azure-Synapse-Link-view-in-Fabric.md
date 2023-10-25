@@ -6,7 +6,7 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 10/09/2023
+ms.date: 10/24/2023
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights (preview)
@@ -190,6 +190,9 @@ You can open SQL endpoint and query Dataverse data with SQL and generate views i
 In Power BI, select **SQL endpoint** from the top right context menu. The data is displayed in a SQL friendly experience where you can create SQL queries and views.
 
 ![SQL endpoint with Dataverse generated shortcuts](media/fabric/fabric-sql-endpoint-shortcuts-shown.png)
+
+> [!TIP]
+> You can also view Dataverse long term retained data in Fabric. More information: [View retained data with Microsoft Fabric (preview)](data-retention-view.md#view-retained-data-with-microsoft-fabric-preview)
 
 ### Auto-create a Power BI report
 
