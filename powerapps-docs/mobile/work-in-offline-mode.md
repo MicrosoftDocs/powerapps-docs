@@ -38,7 +38,7 @@ When the initial sync is complete, you can start using the app in offline mode.
 > ![Offline status completed.](media/mobile-offline-first-notification-2.png)
 
 
-When you refresh your data on a grid view, you'll get notification stating, **Updating data ...**.
+When you refresh your data on a grid view, you'll get notification stating, **Updating data...**.
 
 > [!div class="mx-imgBorder"]
 > ![Refreshing offline status.](media/mobile-offline-first-update-notification.png)
