@@ -31,6 +31,8 @@ A Radio group control is best used with only a few, mutually exclusive options.
 
 **Items** – List of items to be shown in radio group. This can be array (select value in field) or this can be a data column from a table.
 
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
+
 **Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 ## Additional properties

@@ -525,10 +525,6 @@ At this time, we don't support using bulk operation messages in plug-ins. More i
 
 The following issues will be addressed before the bulk operations feature becomes generally available.
 
-### UpdateMultipleRequest.ConcurrencyBehavior doesn't work
-
-<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.ConcurrencyBehavior> specifies the type of optimistic [concurrency behavior](xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior) that should be applied. Possible values are `AlwaysOverwrite`, `Default`, and `IfRowVersionMatches`. Currently, the `Default` option is always applied, regardless of what you set. The behavior depends on whether [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) is set for the table.
-
 ### DeleteMultiple plug-ins not invoked for Delete
 
 As part of the changes we made to [merge message pipelines](#message-pipelines-merged), any custom logic for the multiple version of the message must also be invoked when the single version of the message is invoked. At this time, plug-in steps registered for the `DeleteMultiple` message *are not* being called when `Delete` is used. Plug-in steps registered for `Delete` *are* being invoked when `DeleteMultiple` is used.
