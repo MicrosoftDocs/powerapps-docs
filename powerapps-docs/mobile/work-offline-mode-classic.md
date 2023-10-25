@@ -32,53 +32,31 @@ If you're working on a record and lose network connection, any updates made to t
 
 ## Download updates to work in offline mode
 
-After you've installed the mobile app and your admin has [enabled mobile offline mode](setup-mobile-offline-classic.md), the next time you access the mobile app you'll be prompted to download offline updates. After you download the updates, you can start using the mobile app in offline mode.
+After you've installed the mobile app and your admin has [enabled mobile offline classic mode](setup-mobile-offline.md#enable-mobile-offline-classic), the next time you access the mobile app you'll be prompted to download offline updates. After you download the updates, you can start using the mobile app in offline mode.
 
 - When you see the dialog box that asks you to download updates to work offline, select **Download**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Download updates on your mobile device for mobile offline.](media/DownloadUpdates.png "Download updates on your mobile device for mobile offline")  
+   > ![Download updates on your mobile device for mobile offline.](media/mobile-offline-classic-prompt.png "Download updates on your mobile device for mobile offline")  
 
-Offline data starts downloading as you continue to use the app. On iOS, data is only downloaded while the app is active, so keep your phone unlocked with the app visible until the initial download is complete.
+Offline data starts downloading as you continue to use the app. Data is downloaded while the app is active, so keep your phone unlocked with the app visible until the initial download is complete. The Data can be [downloaded in the background](sync-data-offline-background.md) depending on the platform you use.  
 
 ## Download offline data later
 
 If you didn't want to download offline data and selected **Skip for now**, you won't be able to use the app in offline mode until you manually download the updates:
 
-1. On the home screen, select the site map ![Site map](media/d365_mobile_sitemap_icon.png "Site map"), and then select **Offline** ![Offline](media/offline_button.png "Offline").
+1. On the screen, select the **Globe** icon.
 
-2. On the **Offline Status** screen, select **Download offline updates**.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Start offline download.](media/start-offline-download.png "Start offline download")
+2. On the **Device Status** screen, select **Download offline updates**.
 
 3. The download will start, and the status will change to **Initializing**.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Start downloading updates.](media/mobile_offline_download_updates_complete.png "Start downloading updates")
-
 4. When the download of offline data is complete, you'll get a notification that you can start working in offline mode.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Download updates complete.](media/mobile_offline_download_updates_complete_updated.png "Download updates complete")
 
 ## See whether offline mode is available
 
-When offline updates are complete, you can check to see whether mobile offline mode is available. 
-
-- On the home screen, select the site map ![Site map](media/d365_mobile_sitemap_icon.png "Site map"), and then select **Offline** ![Offline](media/offline_button.png "Offline").
+When offline updates are complete, you can check to see whether mobile offline mode is available. On the home screen, select the **Globe** icon and check on the [Device Status screen](offline-sync-icon.md)
   
-    > [!div class="mx-imgBorder"] 
-    > ![Mobile offline status.](media/OfflineStatus.png "Mobile offline status")
-
-Legend:
-
-1. **Status**: Tracks the offline status of the whole app and also the status of each individual entity. When the status appears as **Available**, offline mode is available and data has been synced successfully.
-   > [!NOTE]
-   > The status here can be **Not Available** due to an error or if you missed downloading offline updates. If the status is **Not Available** due to missing the latest offline updates, try downloading the updates again.
-2. **Entity**: Provides the offline status of each entity individually. For the available entities, you can also track the last time the entity was synced. Data is synced periodically in the background to ensure that you have access to the latest data whenever you go offline.
-3. **Last Sync Date**: Indicates the last time your data was synced with the server.
-
 ## Work in offline mode
 
 After the offline download is complete, you can use the mobile app in offline mode.
@@ -89,20 +67,9 @@ When you have intermittent connectivity, we recommend that you switch to offline
 
 **To work in offline mode**
 
-1. On the home screen, select the site map ![Site map icon](media/d365_mobile_sitemap_icon.png "Site map icon"), and then select **Offline** ![Offline](media/offline_button.png "Offline").
+1. On the screen, select the **Globe** icon.
 
 2. Turn on the **Work in offline mode** toggle.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Turn on the Work in offline mode toggle.](media/set_offline_toggle.png "Turn on the Work in offline mode toggle") 
-
-## Sync conflict resolution
-
-Conflict errors can be resolved based on the settings set by your admin:
-
-- If conflict resolution has been set to **No**, the data you upload from your client device "wins" and there will be no sync errors.
-
-- If conflict resolution has been set to **Yes**, the data on the server wins. While syncing changes to the server, you might notice that some errors have been automatically resolved. Client changes are overwritten by server values.
 
 ## Mobile offline capabilities and limitations
 
