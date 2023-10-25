@@ -281,6 +281,7 @@ You can use the following scalar functions in a formula column:
       [Error](../canvas-apps/functions/function-iferror.md)
    :::column-end:::
    :::column span="":::
+     [Decimal](../canvas-apps/functions/function-value.md) \*
    :::column-end:::
    :::column span="":::
    :::column-end:::
