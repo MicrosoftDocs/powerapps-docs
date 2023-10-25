@@ -281,10 +281,8 @@ You can use the following scalar functions in a formula column:
       [Error](../canvas-apps/functions/function-iferror.md)
    :::column-end:::
    :::column span="":::
-      
    :::column-end:::
    :::column span="":::
-      
    :::column-end:::
 :::row-end:::
 
