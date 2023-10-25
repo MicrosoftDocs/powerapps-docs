@@ -287,7 +287,7 @@ You can use the following scalar functions in a formula column:
 
 ## Limitations and guidelines
 
-This section describes the known limitations with formula columns in Dataverse.
+This section describes the known limitations and guidelines with formula columns in Dataverse -
 
 ## Currency Fields Usage Validations
 
