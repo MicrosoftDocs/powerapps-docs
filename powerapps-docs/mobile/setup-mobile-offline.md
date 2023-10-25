@@ -188,9 +188,12 @@ Offline-first is the default mode when you enable an app for offline use. If you
 
 1.  Select **Save** and then publish the app.
 
-## Sync conflict resolution
+## Sync conflict 
 
-Conflict errors are resolved in a way that the data your users upload from the client device "wins" and there will be no sync errors.
+When a user makes changes to data in an offline app, updates to each column are pushed back to Dataverse as soon as the network is available. The last update to each column "wins" and is stored in Dataverse, so this sync will not fail due to conflicting changes. 
+ 
+Server-side plug-ins and validation can invalidate changes. Those changes will be reverted locally, and an error will be written to the Dataverse table Sync Errors.
+has context menu
 
 ## Define sync settings on mobile 
 You can enable users to control the automatic sync intervals or the connection type to synchronize the data.
