@@ -107,13 +107,3 @@ It is required to add the **FileAttachment** tables to your mobile offline profi
 
  11. Select **Save**. 
    
-  
-## Offline status of files and images
-
-You can use the **Offline Status** page to see the number of files and images to be downloaded and the current progress.
-
-- The number of images is listed for the **Image Descriptor** table.
-- The number of files are listed for each table with file attachments (that is, as shown in the screenshot below for the **DemoTable2** table).
-
-  > [!div class="mx-imgBorder"]
-  >![Offline status of files and images.](media/offline-status.png "Offline status of files and images.")
