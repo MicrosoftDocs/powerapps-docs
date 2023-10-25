@@ -23,7 +23,7 @@ contributors:
 Configure the behavior of a modern control by setting one of its properties. Each type of control has a different set of properties.
 
 
-## Modern Controls
+## Modern controls
 
 **[Badge](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 
@@ -34,6 +34,8 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 **[Date picker](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
 
 **[Dropdown](modern-control-dropdown.md)** – Select a value from the list of items.
+
+**[Header](modern-controls-header.md)** – A control that creates a modern app header.
 
 **[Info button](modern-control-info-button.md)** – Use this control to provide additional information to users.
 

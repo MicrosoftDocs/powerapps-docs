@@ -32,6 +32,8 @@ Badge can be used to display content in a visually better way.
 
 **Appearance** – A Badge can be filled, outline, ghost, inverted.
 
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. This property is on in effect if the **Color** property has a value of **Brand**.  
+
 
 ## Additional properties
 

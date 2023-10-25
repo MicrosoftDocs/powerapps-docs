@@ -104,6 +104,7 @@ The following are known limitations when working with Power Apps Test Engine.
 
 - Multi-factor authentication isn't supported. Use an account that requires only a username and password to run your tests.
 - Browser locale will follow your browser's default settings
+- [Modern Controls (preview)](../../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md) are currently not supported
 
 ### Supported Browsers
 
