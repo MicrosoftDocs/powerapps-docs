@@ -296,18 +296,18 @@ You can use the following scalar functions in a formula column:
 |---------|---------|
 |Retrieve a date value.  |  `DateAdd(UTCNow(),-1,TimeUnit.Years)`   |
 
-## Limitations and guidelines
+## Guidelines and limitations
 
-This section describes the known limitations and guidelines with formula columns in Dataverse.
+This section describes guidelines and the known limitations with formula columns in Dataverse.
 
-## Currency fields usage validations
+### Currency fields usage validations
 
 - Formula columns don't support using a related table currency column in the formula, such as in this example.
    :::image type="content" source="media/formula-column-currency.png" alt-text="Formula column with unsupported formula of Account.Annual Revenue":::
 - Direct use of currency columns and exchange rate in the formula is currently unsupported. The use of currency and exchange rate columns is achieved through the `Decimal` function, such as `Decimal(currency column)` or `Decimal(exchange rate)`. The `Decimal` function makes sure the output is within the accepted range. If the currency or exchange rate column value exceeds the accepted range, then the formula returns null.
 - Base currency columns aren't supported in the formula column expressions because they're system columns used for reporting purpose. If you want a similar result, you can use a currency column type along with an exchange rate column combination as `CurrencyField_Base = (CurrencyField / ExchangeRate)`.
 
-## Date time columns usage validations
+### Date time columns usage validations
 
 - Behavior of date time formula columns can only be updated when it isn't used in another formula column.
 - For date time formula columns, while using the `DateDiff` function, make sure that:
@@ -317,13 +317,13 @@ This section describes the known limitations and guidelines with formula columns
   - `DateOnly` behavior columns can be compared or used in DateDiff function with another `DateTime(TZI)/DateOnly` behavior column.
   :::image type="content" source="media/formula-column-datetime.png" alt-text="Unsupported date time configuration with a formula column":::
 
-## Formula column usage in rollup fields
+### Formula column usage in rollup fields
 
 - A *simple formula column* is where the formula uses columns from the same record or uses hard coded values. For rollup columns, formula columns must be simple formula columns, such as this example rollup column.
    :::image type="content" source="media/formula-column-rollup1.png" alt-text="Example simple formula column for a rollup column":::
    :::image type="content" source="media/formula-column-rollup2.png" alt-text="Example rollup column configuration":::
 
-## Power Fx text function recommendations
+### Power Fx text function recommendations
 
 - Formula columns don't support `Text()` functions with a single argument of type Number. Number can be whole, decimal, or currency.
    :::image type="content" source="media/formula-column-number.png" alt-text="Formula column with unsupported text function with a number argument":::  
@@ -338,7 +338,7 @@ This section describes the known limitations and guidelines with formula columns
    Text(123,"#") & "foo"
    ```
 
-## Range Validations On Formula Columns
+### Range validations on formula columns
 
 - You can't set the **Minimum value** or **Maximum value** properties of a formula column.
 - All internal computations should lie within the Dataverse range for decimal type formula columns (-100000000000 to 100000000000).
@@ -346,7 +346,7 @@ This section describes the known limitations and guidelines with formula columns
 - If there's a numeric column that's null then it's considered 0 in the intermediate operation. For example, `a+b+c and If a = null, b=2, c=3` then formula column gives `0 + 2 + 3 = 5`.
   - This behavior is different from calculated columns in this case because calculated columns give `null + 2 + 3 = null`.
 
-## General Validations on Formula Columns
+### General validations on formula columns
 
 - Formula columns can reference other formula columns, but a formula column can't reference itself.
 - Formula columns don't support cyclic chains, such as `F1 = F2 + 10, F2 = F1 * 2`.
@@ -359,7 +359,7 @@ This section describes the known limitations and guidelines with formula columns
 - The `Now` function can be used with formula columns. `Now()` has user local behavior and `UTCNow()` has time zone independent behavior.
 - You can set the precision property for decimal columns.
 
-## Power Fx functions not currently supported
+### Power Fx functions not currently supported
 
 - Power
 - Sqrt
@@ -367,13 +367,13 @@ This section describes the known limitations and guidelines with formula columns
 - Ln
 - ^ (operator)
 
-## Formula columns of data types that can't be produced
+### Formula columns of data types that can't be produced
 
 - Whole Number
 - Choices (except Yes/No choice)
 - Currency
 
-### See also
+## See also
 
 [Types of columns](types-of-fields.md)  
 
