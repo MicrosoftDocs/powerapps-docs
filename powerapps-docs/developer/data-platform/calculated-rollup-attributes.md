@@ -77,9 +77,9 @@ Formula and calculated columns have the following limitations:
 #### Formula columns
 
 - Formula columns don't have values when a user with mobile client is offline.  
-- `MaxValue` and `MinValue` column definitions properties can't be set on formula columns
+- `MaxValue` and `MinValue` column definitions properties can't be set on formula columns. More information: 
+[Guidelines and limitations](../../maker/data-platform/formula-columns.md#guidelines-and-limitations)
 
-[Learn more about formula column limitations and guidelines](../../maker/data-platform/formula-columns.md#limitations-and-guidelines)
 
 #### Calculated columns
 
