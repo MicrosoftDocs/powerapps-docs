@@ -4,7 +4,7 @@ description: Configure mobile offline profiles for files and images.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/08/2023
+ms.date: 10/26/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
