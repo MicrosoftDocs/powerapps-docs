@@ -45,7 +45,7 @@ When you refresh your data on a grid view, you'll get notification stating, **Up
 
 ### See also
 
-[View Offline sync status](mobile-sync-icon.md)
+[View offline sync status](offline-sync-icon.md)
 
 
 
