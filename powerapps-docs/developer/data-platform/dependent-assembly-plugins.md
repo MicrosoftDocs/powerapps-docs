@@ -316,7 +316,7 @@ Including any of these assemblies in the plug-in package results in the followin
 
    "PluginPackage can not contain assemblies included in the Microsoft.CrmSdk.CoreAssemblies or Microsoft.CrmSdk.Workflow nuget packages."
 
-You can correct this situation by following the information in this article, [Controlling dependency assets](/nuget/consume-packages/package-references-in-project-files#controlling-dependency-assets), so that these dependency assets are not included in your package. You'll need to mark the assembly reference using the <PrivateAssets> tag in the project configuration file (.csprog).
+You can correct this situation by following the information in this article, [Controlling dependency assets](/nuget/consume-packages/package-references-in-project-files#controlling-dependency-assets), so that these dependency assets are not included in your package. You'll need to mark the assembly reference using the \<PrivateAssets> tag in the project configuration file (.csprog).
 
 ## Using System.Text.Json
 
