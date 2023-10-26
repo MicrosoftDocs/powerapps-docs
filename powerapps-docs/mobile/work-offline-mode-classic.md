@@ -48,7 +48,7 @@ If you didn't want to download offline data and selected **Skip for now**, you w
 
 ## See whether offline mode is available
 
-When offline updates are complete, you can check to see whether mobile offline mode is available. On the home screen, select the **Globe** icon and check on the [Device Status page](offline-sync-icon.md)
+When offline updates are complete, you can check to see whether mobile offline mode is available. On the home screen, select the **Globe** icon and check on the [Device Status page](offline-sync-icon.md).
   
 ## Work in offline mode
 
@@ -58,7 +58,7 @@ When you have no connectivity, you'll automatically have access to the downloade
 
 When you have intermittent connectivity, we recommend that you switch to offline mode. As long as offline mode is turned on, the updates that you make on your device won't be synced with the server and you can continue to work with the local data on your device. To push the changes you've made to the server and refresh your local data, turn off the **Work in offline mode** toggle.
 
-**To work in offline mode**
+To work in offline mode, complete the following steps.
 
 1. On the screen, select the **Globe** icon.
 
