@@ -25,13 +25,11 @@ During the initial offline sync, you'll get a notification stating that your app
 
 :::image type="content" source="media/mobile-offline-first-notification-1.png" alt-text="Offline status screen.":::
 
-You can also select the **Device status** button to see more information about sync progress.
+You can also select the [offline sync icon](offline-sync-icon.md) to see more information about sync progress.
 
 :::image type="content" source="media/mobile-offline-device-status-page.png" alt-text="See more information about the sync process.":::
 
 When the initial sync is complete, you can start using the app in offline mode.
-
-:::image type="content" source="media/mobile-offline-first-notification-2.png" alt-text="Offline status completed."::
 
 When you refresh your data on a grid view, you'll get notification stating, **Updating data...**.
 
