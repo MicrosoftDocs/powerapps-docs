@@ -4,7 +4,7 @@ description: Set up and configure mobile offline for model-driven apps made with
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/13/2023
+ms.date: 10/26/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -22,11 +22,11 @@ Use the [modern app designer](../maker/model-driven-apps/app-designer-overview.m
 
 Verify the following prerequisites before you enable mobile offline: 
 
-- Environment maker, system administrator, or system customizer role is needed to configure offline mode for model-driven apps. These roles have Create, Read, Write, Delete and Share privileges on the **mobile offline profile** table. More information: [About predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
+- Environment maker, system administrator, or system customizer role is needed to configure offline mode for model-driven apps. These roles have Create, Read, Write, Delete, and Share privileges on the **Mobile offline profile** table. More information: [About predefined security roles](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
 
-- Users with the **basic user** role can open and use an offline application. This role has the Read privilege for the **mobile offline profile** table.
+- Users with the basic user role can open and use an offline application. This role has the Read privilege for the **Mobile offline profile** table.
 
-   If you have a custom security role, make sure you have the Read privilege for **Mobile Offline profile**. For more information, go to [Miscellaneous privileges - Core Records tab](/power-platform/admin/miscellaneous-privileges).
+   If you have a custom security role, make sure you have the Read privilege for the **Mobile offline profile** table. More information: [Miscellaneous privileges](/power-platform/admin/miscellaneous-privileges)
 
 ## Optimize your app for mobile offline 
 
@@ -37,7 +37,7 @@ If you have desktop and remote mobile users, optimize the user experience by cre
 Follow these best practices when building an app for mobile offline use:
 
 - Identify the on-the-go scenarios that are functionally related, such as tasks that are performed by users who work in the field.
-- Reduce the complexity of your app by limiting the amount of app metadata that needs to be downloaded on a user's device. Only add the tables and views that are needed for your mobile users. For more information, go to [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app.md#add-pages-to-your-app).
+- Reduce the complexity of your app by limiting the amount of app metadata that needs to be downloaded on a user's device. Only add the tables and views that are needed for your mobile users. More information: [Add pages to your app](../maker/model-driven-apps/create-a-model-driven-app.md#add-pages-to-your-app)
 - Only keep views that are necessary, and remove any that aren't needed on a day-to-day basis. For example, keep the **My active accounts** view and remove the **All accounts** view. Keep your forms lightweight for a smooth and intuitive experience on small-screen devices. The following are possible optimizations for forms on mobile:
 
   - Build dedicated forms for mobile use.
@@ -49,7 +49,7 @@ Follow these best practices when building an app for mobile offline use:
 
 ## Enable your app for offline use
 
-1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. On the left pane, select **Apps**, and then select the model-driven app that you want to enable for offline.
 
@@ -59,19 +59,16 @@ Follow these best practices when building an app for mobile offline use:
 
 1. On the **General** tab, set the **Can be used offline** toggle to **On**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Turn on the Can be used offline toggle.](media/mobile-offline-image6.png)
-
 1. Select the type of offline profile: **Default** or **Advanced**.
 
-    - If you select **Default**, the app is enabled for offline for all users. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
+    - If you select **Default**, the app is enabled for offline use for all users. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
 
-   	- If you select **Advanced**, the app is enabled for offline only for a selected list of users. Select one or multiple offline profiles, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
+   	- If you select **Advanced**, the app is enabled for offline use only for a selected list of users. Select one or multiple offline profiles, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
   
     > [!Note]
     > You must have admin privileges to assign users to an offline profile.
     
-1. Close the **Settings** dialog, and then save and publish your app. When you're done, the app will be set up for offline use.
+1. Close the **Settings** page, and then save and publish your app. When you're done, the app will be set up for offline use.
 
 ## Set up a mobile offline profile
 
@@ -80,7 +77,7 @@ The mobile offline profile represents the dataset that's synced on a user's devi
 > [!Note]
 > If the offline profile is in advanced mode, it is required to add users to the offline profile. If you don't add a user to the offline profile, the user can't use the app in offline mode.
 
-### Prerequisite: Enable a table for offline
+### Enable a table for offline
 
 A table needs to be enabled for offline to add it to a offline profile. Some tables are enabled for offline by default. Follow these steps to verify whether a table is enabled for offline.
 
