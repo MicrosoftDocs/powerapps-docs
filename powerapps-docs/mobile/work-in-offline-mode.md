@@ -35,9 +35,6 @@ When you refresh your data on a grid view, you'll get notification stating, **Up
 
 :::image type="content" source="media/mobile-offline-first-update-notification.png" alt-text="Refreshing offline status.":::
 
-### See also
-
-[View offline sync status](offline-sync-icon.md)
 
 
 
