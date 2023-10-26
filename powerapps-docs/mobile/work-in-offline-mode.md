@@ -5,7 +5,7 @@ description: Work in offline-first mode on your device.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/19/2023
+ms.date: 10/26/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
