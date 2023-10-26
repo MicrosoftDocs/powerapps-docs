@@ -1,7 +1,7 @@
 ---
 title: "Create a model-driven app using the account page"
 description: "Learn how to create a model-driven app that has the account table added to it."
-ms.date: 12/15/2022
+ms.date: 10/26/2023
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
@@ -81,16 +81,9 @@ Next, you add a new page to the model-driven app.
 
 After publishing the app, it's ready for you to run or share with others.
 
-## Create an app description with Copilot (preview)
+### Create an app description with Copilot (preview)
 
 [This section is prerelease documentation and is subject to change.]
-
-If your app is in a [managed  environment](/power-platform/admin/managed-environment-overview), you can use AI to help you create a description for your app.
-
-When you save and publish your app, on the **Publish** dialog box select, **Create descriptions using AI** if you want to replace your current description or, if you do not have a description, Copilot will generate one for you.
-
-You can also generate an app description by going to, **Settings** > **General**. Under **Description** select, **Create descriptions using AI**.
-
 
 > [!IMPORTANT]
 > - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
@@ -101,6 +94,11 @@ You can also generate an app description by going to, **Settings** > **General**
 > - This capability  may be subject to usage limits or capacity throttling.
 > - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, see [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
 
+If your app is in a [managed  environment](/power-platform/admin/managed-environment-overview), you can use AI to help you create a description for your app.
+
+When you save and publish your app, on the **Publish** dialog box select, **Create descriptions using AI** if you want to replace your current description or, if you do not have a description, Copilot will generate one for you.
+
+You can also generate an app description by going to, **Settings** > **General**. Under **Description** select, **Create descriptions using AI**.
 
 ## Run your app on a desktop computer
 
