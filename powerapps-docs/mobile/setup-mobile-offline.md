@@ -81,18 +81,17 @@ The mobile offline profile represents the dataset that's synced on a user's devi
 
 A table needs to be enabled for offline to add it to a offline profile. Some tables are enabled for offline by default. Follow these steps to verify whether a table is enabled for offline.
 
-1. Sign in to [Power Apps (preview)](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) 
+1. Sign in to [Power Apps](https://make.powerapps.com). 
 
-1. On the left pane, select **Data** > **Tables**. 
-1. Select the table that you want to add to an offline profile, and then on the command bar, select **Settings**
+1. In the left pane, select **Data** > **Tables**. 
+1. Select the table that you want to add to an offline profile, and then, on the command bar, select **Settings**.
     
 1. In the **Edit table** settings, select **Advanced options**, and in the **Rows in this table** section, select **Can be taken offline**.
 
    > [!NOTE]
-   > An app can only be linked to one profile, but a profile can be shared between multiple apps. This can be useful when different apps share the same dataset, which then only needs to be downloaded once on the device and between the apps.
+   > An app can only be linked to one profile. However, a profile can be shared between multiple apps. This can be useful when different apps share the same dataset, which then only needs to be downloaded once on the device and is shared between the apps.
    
-    > [!div class="mx-imgBorder"]
-    > ![Enable a table for offline use.](media/mobile-offline-image8.png)
+    :::image type="content" source="media/mobile-offline-image8.png" alt-text="Enable a table for offline use.":::
 
 ### Generate a default profile
 
@@ -103,13 +102,11 @@ The modern app designer can generate a default offline profile that's based on h
 
 1. Select **New profile with current app data**. 
 
-    > [!div class="mx-imgBorder"]
-    > ![Create a new profile.](media/mobile-offline-image7-1.png)
+    :::image type="content" source="media/mobile-offline-image7-1.png" alt-text="Create a new profile.":::
 
-1. Review the proposed filters for each table. Make sure that the data downloaded on the users' devices is limited to only what's necessary. Focus on the most-often-used tables in your app, which in most cases have the **Organization rows** filter set.
+1. Review the proposed filters for each table. Make sure that the data downloaded on users' devices is limited to only what's necessary. Focus on the most-often-used tables in your app, which in most cases have the **Organization rows** filter set.
 
-    > [!div class="mx-imgBorder"]
-    > ![Default auto-generated profile.](media/mobile-offline-image9.png)
+    :::image type="content" source="media/mobile-offline-image9.png" alt-text="Default auto-generated profile.":::
 
   The tables that are added to the profile also have the **Related rows only** filter. These are tables that are used in some views and need to have related information available, so you might not need to modify them based on your organization's needs.
 
@@ -117,33 +114,24 @@ The modern app designer can generate a default offline profile that's based on h
 
 Applying an appropriate filter for each of the tables configured in the offline profile is critical to limit the amount of data that's downloaded on users' devices.
 
-Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. These are distinct checks that might not add up.
-The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it will increase the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
-
+Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. These are distinct checks that might not add up. The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it will increase the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
 
 1. Select **Add table**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Add a table.](media/mobile-offline-image9-2.png)
+   
+    :::image type="content" source="media/mobile-offline-image9-2.png" alt-text="Add a table.":::
 
 1. Choose a table, and then define the filters. 
  
-    > [!div class="mx-imgBorder"]
-    > ![Choose a table.](media/mobile-offline-image10.png)
-
 1. Set the following filters:
 
    1. Choose the row that you want to make available offline. For the **Custom** option, use the [expression builder](../maker/model-driven-apps/create-edit-view-filters.md) to set up advanced conditions.
-   1. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship will ensure that related rows following that relationship will be downloaded and made available offline.
+   1. **Relationships** lists the different relationships available between the current table and other tables added in the offline profile. Selecting a relationship will ensure that related rows following that relationship are downloaded and made available offline.
    1. **Files** and **Images** define which columns for a file or image need to be downloaded offline. For files, you can choose to download every column or none at all. For images, you can select each column you want to download granularly.
-   1. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently—like a catalog or a product table—you might want to focus on only syncing data when necessary, for example refreshing only once a day.
+   1. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently, like a catalog or a product table, you might want to focus on only syncing data when necessary, such as refreshing only once a day.
    
      > [!NOTE]
      > You can only have up to 15 related tables in a profile. If you exceed the limit, then you will get an error and won't be able to publish the offline profile.
       
-      > [!div class="mx-imgBorder"]
-      >![Screenshot showing the filters available for an offline table.](media/mobile-offline-image11.png)
-
 1. Select **Add + save** to add your table and filters to the profile.
 
 1. When all tables are properly configured for the profile, select **Done** > **Publish your application**.
@@ -154,7 +142,7 @@ When the app is published, the app will be enabled for offline use.
 
 If you selected the **Default** offline profile mode, there is nothing to do. All your users who have access to the app can also use it in offline mode.
 
-However, if you selected **Advanced** you have to manually add users (requires admin privileges) to the offline profile. The app will be enabled for offline use only for those configured users.
+However, if you selected **Advanced**, you have to manually add users (requires admin privileges) to the offline profile. The app will be enabled for offline use only for those configured users.
 
 1.  Select Add users (requires admin privileges).
 
@@ -173,7 +161,7 @@ However, if you selected **Advanced** you have to manually add users (requires a
 
 Offline-first is the default mode when you enable an app for offline use. If you want to switch to the [offline classic mode](mobile-offline-overview.md#offline-first-vs-classic-offline), you need to enable it for each of your model-driven apps. It's a separate app setting for each app.
 
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+1.  Sign in to [Power Apps](https://make.powerapps.com).
 
 1.  On the left pane, select **Apps**, and then select the model-driven app that you want to enable for offline.
 
@@ -187,10 +175,9 @@ Offline-first is the default mode when you enable an app for offline use. If you
 
 ## Sync conflict 
 
-When a user makes changes to data in an offline app, updates to each column are pushed back to Dataverse as soon as the network is available. The last update to each column "wins" and is stored in Dataverse, so this sync will not fail due to conflicting changes. 
+When a user makes changes to data in an offline app, updates to each column are pushed back to Dataverse as soon as the network is available. The last update to each column is stored in Dataverse, so this sync won't fail due to conflicting changes. 
  
-Server-side plug-ins and validation can invalidate changes. Those changes will be reverted locally, and an error will be written to the Dataverse table Sync Errors.
-has context menu
+Server-side plug-ins and validation can invalidate changes. Those changes are reverted locally, and an error is written to the **Sync Errors** Dataverse table.
 
 ## Define sync settings on mobile 
 You can enable users to control the automatic sync intervals or the connection type to synchronize the data.
@@ -199,7 +186,7 @@ You can enable users to control the automatic sync intervals or the connection t
 
 2. Select the **Upcoming** tab:
 
-    - Set the **Allow users to adjust sync frequency** option to **On** to adjust the sync interval to sync more or less frequently depending on individual needs. Users can also choose to not automatically sync at any interval, if they only want to sync on demand.
+    - Set the **Allow users to adjust sync frequency** option to **On** to adjust the sync interval to sync more or less frequently depending on individual needs. Users can choose to not automatically sync, if they only want to sync on demand.
     - Set the **Allow users to sync on Wi-Fi only** option to **On** to let users choose if their automatic sync happens on cellular networks and Wi-Fi connections or only when connected to a Wi-Fi network.
  
 
