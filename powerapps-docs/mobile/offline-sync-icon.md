@@ -56,9 +56,12 @@ Data is synchronized from Dataverse to your device over the lifetime of your app
 
 When you select the offline sync icon, the **Device Status** page opens. The **Device Status** page provides details such as what data was downloaded, whether data is waiting to be uploaded, and the amount of storage the app uses.
 
-The **Sync Status** tracks the offline status of the whole app and also the status of each individual entity. When the status appears as **Available**, offline mode is available and data has been synced successfully.
-   > [!NOTE]
-   > The status here can be **Not Available** due to an error or if you missed downloading offline updates. If the status is **Not Available** due to missing the latest offline updates, try downloading the updates again.
+:::image type="content" source="media/mobile-offline-sync-settings.png" alt-text="The Offline Status page of a mobile app showing the sync settings.":::
+
+The **Sync Status** tracks the offline status of the whole app and the status of each individual entity. When the status appears as **Available**, offline mode is available and data has been synced successfully.
+
+> [!NOTE]
+> The status can be **Not Available** due to an error or if you missed downloading offline updates. If the status is **Not Available** due to missing the latest offline updates, try downloading the updates again.
 
 You can use the **Device Status** page to see the number of files and images to be downloaded and the current progress.
 
@@ -70,7 +73,6 @@ If your admin [enabled sync settings](setup-mobile-offline.md#define-sync-settin
   - Set the **Wi-Fi** setting to **On** to sync your data only when the device is connected to a Wi-Fi network. Enable this setting when you need to save your data plan or your battery, especially if you are in a low network area.
   - Change the sync interval value from the **Auto sync** setting if you want to sync less frequently. You can keep the default value by selecting **"Auto"**, or you can pick a longer interval that meets your needs. If you choose **"Manual"**, the sync only happens when you clik on the **Check for updates** button in the** Device Status** page. This setting only applies to changes coming from the server - when you change data in the app, it is immediately synchronized as soon as you have network.  
  
-:::image type="content" source="media/mobile-offline-sync-settings.png" alt-text="The Offline Status page of a mobile app showing the sync settings.":::
 ## Notifications
 
 On iOS and Android devices, app sync notifications are consistent across the different sync states.
