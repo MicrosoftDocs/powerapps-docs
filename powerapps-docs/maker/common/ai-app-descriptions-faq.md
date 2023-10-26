@@ -16,7 +16,7 @@ These frequently asked questions (FAQ) describe the AI impact of Power Apps gene
 
 ##  What is generate app descriptions with Copilot? 
 
-With the AI-generated app descriptions feature, Makers can use AI to generate descriptions for their Canvas apps. Makers can generate a description from app **Settings** or when you publish the app. By using AI to generate descriptions, Makers can focus on building their apps and allow AI to assist in summarizing the purpose of the apps for end-users. 
+With the AI-generated app descriptions feature, Makers can use AI to generate descriptions for their Canvas and Model-driven apps. Makers can generate a description from app **Settings** or when you publish the app. By using AI to generate descriptions, Makers can focus on building their apps and allow AI to assist in summarizing the purpose of the apps for end-users. 
 
 ## What are the system’s capabilities? 
 
@@ -47,7 +47,8 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 If you get this error, **Something happened and we weren’t able to generate a description for you**, this may be due to capacity limits. We recommend you give the system some time before trying again.
 
 ## See also 
-- [Create an app description with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)
+- [Create a Canvas App description with Copilot (preview)](../canvas-apps/save-publish-app.md#create-an-app-description-with-copilot-preview)
+- [Create a Model-Driven App description with Copilot (preview)](../model-driven-apps/create-a-model-driven-app.md#create-an-app-description-with-copilot-preview)
 
  
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
