@@ -65,8 +65,4 @@ When you have intermittent connectivity, we recommend that you switch to offline
 
 2. Turn on the **Work in offline mode** toggle.
 
-## Mobile offline capabilities and limitations
-
-For information about the capabilities and limitations of mobile offline, go to [Mobile offline capabilities and limitations](offline-capabilities.md).
-
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
