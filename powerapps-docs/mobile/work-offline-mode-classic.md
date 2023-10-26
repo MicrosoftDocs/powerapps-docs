@@ -2,7 +2,7 @@
 title: Work offline on your mobile device (classic mode)
 description: How to work on your mobile device in offline mode
 ms.custom: 
-ms.date: 07/19/2023
+ms.date: 10/26/2023
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -20,36 +20,35 @@ search.audienceType:
 
 # Work offline on your mobile device (classic mode)
 
-Work with your data in offline mode even when you don't have internet access. The mobile app provides a rich offline experience that lets you work with commands like create, read, update, and delete—along with some special commands—so you always stay productive. After you're back online, changes you've made are synchronized with your apps in the Microsoft Dataverse environment.
+You can work with your data in offline mode even when you don't have internet access. The mobile app provides a rich offline experience that lets you work with commands like create, read, update, and delete, along with some special commands, so you always stay productive. After you're back online, changes you've made are synchronized with your apps in the Microsoft Dataverse environment.
 
-If you're working on a record and lose network connection, any updates made to the record are saved in offline mode and will be synchronized to the app after you're back online. When the record is synchronized with the app, it follows the filter rule for availability in offline mode.
+If you're working on a record and lose your network connection, any updates made to the record are saved in offline mode and will be synchronized to the app after you're back online. When the record is synchronized with the app, it follows the filter rule for availability in offline mode.
 
 ## Download updates to work in offline mode
 
-After you've installed the mobile app and your admin has [enabled mobile offline classic mode](setup-mobile-offline.md#enable-mobile-offline-classic), the next time you access the mobile app you'll be prompted to download offline updates. After you download the updates, you can start using the mobile app in offline mode.
+After you've installed the mobile app and your admin has [enabled mobile offline classic mode](setup-mobile-offline.md#enable-mobile-offline-classic), the next time you access the mobile app, you'll be prompted to download offline updates. After you download the updates, you can start using the mobile app in offline mode.
 
-- When you see the dialog box that asks you to download updates to work offline, select **Download**. 
+When you see the dialog box that asks you to download updates to work offline, select **Download**. 
 
-   > [!div class="mx-imgBorder"] 
-   > ![Download updates on your mobile device for mobile offline.](media/mobile-offline-classic-prompt.png "Download updates on your mobile device for mobile offline")  
+:::image type="content" source="media/mobile-offline-classic-prompt.png" alt-text="Download updates on your mobile device for mobile offline.":::
 
-Offline data starts downloading as you continue to use the app. Data is downloaded while the app is active, so keep your phone unlocked with the app visible until the initial download is complete. The Data can be [downloaded in the background](sync-data-offline-background.md) depending on the platform you use.  
+Offline data starts downloading as you continue to use the app. Data is downloaded while the app is active, so keep your phone unlocked with the app visible until the initial download is complete. The data can be [downloaded in the background](sync-data-offline-background.md) depending on the platform you use.  
 
 ## Download offline data later
 
-If you didn't want to download offline data and selected **Skip for now**, you won't be able to use the app in offline mode until you manually download the updates:
+If you didn't want to download offline data and selected **Skip for now**, you won't be able to use the app in offline mode until you manually download the updates.
 
 1. On the screen, select the **Globe** icon.
 
-2. On the **Device Status** screen, select **Download offline updates**.
+1. On the **Device Status** page, select **Download offline updates**.
 
-3. The download will start, and the status will change to **Initializing**.
+1. The download will start, and the status will change to **Initializing**.
 
-4. When the download of offline data is complete, you'll get a notification that you can start working in offline mode.
+1. When the download of offline data is complete, you'll get a notification that you can start working in offline mode.
 
 ## See whether offline mode is available
 
-When offline updates are complete, you can check to see whether mobile offline mode is available. On the home screen, select the **Globe** icon and check on the [Device Status screen](offline-sync-icon.md)
+When offline updates are complete, you can check to see whether mobile offline mode is available. On the home screen, select the **Globe** icon and check on the [Device Status page](offline-sync-icon.md)
   
 ## Work in offline mode
 
