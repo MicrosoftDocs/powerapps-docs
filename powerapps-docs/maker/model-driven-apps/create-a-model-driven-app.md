@@ -77,7 +77,7 @@ Next, you add a new page to the model-driven app.
 
 ## Publish your app
 
-1. On the app designer command bar, select **Publish**.
+On the app designer command bar, select **Publish**.
 
 After publishing the app, it's ready for you to run or share with others.
 
