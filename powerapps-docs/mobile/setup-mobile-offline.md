@@ -4,7 +4,7 @@ description: Set up and configure mobile offline for model-driven apps made with
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/26/2023
+ms.date: 10/27/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -140,17 +140,17 @@ When the app is published, the app will be enabled for offline use.
 
 ### Add users to an offline profile
 
-If you selected the **Default** offline profile mode, there is nothing to do. All your users who have access to the app can also use it in offline mode.
+If you selected the **Default** offline profile mode, all your users who have access to the app can also use it in offline mode.
 
 However, if you selected **Restricted to selected users**, you have to manually add users (requires admin privileges) to the offline profile. The app will be enabled for offline use only for those configured users.
 
-:::image type="content" source="media/advanced-mobile-offline-profile.png" alt-text="Restricted to selected users auto-generated profile.":::
-
 1.  Select **Add users (requires admin privileges)**.
 
-1.  Sign in to the Admin Portal.
+    :::image type="content" source="media/advanced-mobile-offline-profile.png" alt-text="Restricted to selected users auto-generated profile.":::
 
-1.  In the Users with offline access area, select Add users.
+1.  Sign in to the Power Platform admin center.
+
+1.  In the **Users with offline access** area, select **Add users**.
 
 1.  Choose the users that you want to add to the mobile offline profile. The actual users added based on teams are displayed under each team. User's that are added individually are displayed under individual users.
 
