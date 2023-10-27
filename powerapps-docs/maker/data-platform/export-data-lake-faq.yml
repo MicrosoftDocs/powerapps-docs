@@ -93,6 +93,9 @@ sections:
    - question: Why do I see the error message - cannot bulk load because the file is incomplete or could not be read?
      answer: |
         Dataverse data can continuously change through creating, updating, and deleting transactions. This error is caused by the underlying file being changed when you are reading data from it. So, for tables with continuous changes, you should change your consumption pipeline to use snapshot data (partitioned tables) to consume. More information: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#access-near-real-time-data-and-read-only-snapshot-data)
+   - question: Why are values of columns in Dataverse records referring to lookup field names not updated if the primary field value of the related Dataverse record has been updated?
+     answer: |
+        This is a change which is not tracked as a change to the Dataverse record itself. The change is only tracked on the related record but the related records are not touched. You would need to include the table of related lookup records in Azure Synapse Link and join these records to reflect the most current values of primary fields.
 additionalContent: |
 
   ## See also
