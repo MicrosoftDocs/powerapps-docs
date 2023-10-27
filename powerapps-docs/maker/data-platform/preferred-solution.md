@@ -59,7 +59,7 @@ You can delete your preferred solution or a preferred solution that other makers
 
 - You can't set or view the preferred solution in the classic solution explorer.
 - Components that are created in the classic solution explorer won't go into the preferred solution.
-- Preferred solution doesn't work with cards, dataflows, AI Builder, chatbots, flows, connections, gateways, custom connectors, Power Pages websites, and canvas apps created from image or a figma design.
+- Preferred solution currently doesn't work with cards, dataflows, AI Builder, chatbots, flows, connections, gateways, custom connectors, Power Pages websites, and canvas apps created from image or a figma design.
 
 ### See also
 
