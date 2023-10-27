@@ -63,7 +63,7 @@ Follow these best practices when building an app for mobile offline use:
 
     - If you select **Default**, the app is enabled for offline use for all users. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
 
-   	- If you select **Advanced**, the app is enabled for offline use only for a selected list of users. Select one or multiple offline profiles, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
+   	- If you select **Restricted to selected users**, the app is enabled for offline use only for a selected list of users. Select one or multiple offline profiles, or select **New profile with current app data**. To set up a new offline profile, see [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
   
     > [!Note]
     > You must have admin privileges to assign users to an offline profile.
@@ -142,9 +142,11 @@ When the app is published, the app will be enabled for offline use.
 
 If you selected the **Default** offline profile mode, there is nothing to do. All your users who have access to the app can also use it in offline mode.
 
-However, if you selected **Advanced**, you have to manually add users (requires admin privileges) to the offline profile. The app will be enabled for offline use only for those configured users.
+However, if you selected **Restricted to selected users**, you have to manually add users (requires admin privileges) to the offline profile. The app will be enabled for offline use only for those configured users.
 
-1.  Select Add users (requires admin privileges).
+:::image type="content" source="media/advanced-mobile-offline-profile.png" alt-text="Restricted to selected users auto-generated profile.":::
+
+1.  Select **Add users (requires admin privileges)**.
 
 1.  Sign in to the Admin Portal.
 
