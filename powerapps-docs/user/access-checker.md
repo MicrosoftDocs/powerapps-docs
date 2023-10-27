@@ -4,7 +4,7 @@ description: How to check user access and security role.
 author: paulliew
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/24/2023
+ms.date: 10/27/2023
 ms.subservice: end-user
 ms.author: paulliew
 ms.custom: ""
@@ -67,7 +67,7 @@ The user's record [privileges](/power-platform/admin/how-record-access-determine
 
 :::image type="content" source="media/access-check-record-privileges.png" alt-text="Check access results.":::
 
-For the **Yes** privileges, you can select them to see whether the privileges were granted from a security role or from the record being shared with the user. You can see the privilege's [Access level](https://learn.microsoft.com/power-platform/admin/security-roles-privileges#access-levels) of the assigned security role. 
+For the **Yes** privileges, you can select them to see whether the privileges were granted from a security role or from the record being shared with the user. You can see the privilege's [Access level](/power-platform/admin/security-roles-privileges#access-levels) of the assigned security role. 
 
 ::: add image here:::
 
