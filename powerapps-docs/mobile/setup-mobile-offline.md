@@ -152,12 +152,12 @@ However, if you selected **Restricted to selected users**, you have to manually 
 
 1.  In the **Users with offline access** area, select **Add users**.
 
-1.  Choose the users that you want to add to the mobile offline profile. The actual users added based on teams are displayed under each team. User's that are added individually are displayed under individual users.
+1.  Select the users that you want to add to the mobile offline profile. The users that are added, based on teams, are listed under each team. User's that are added individually are listed as individual users.
 
 1.  When you're done adding people, select **Save**.
 
 > [!Note]
-> If you made any changes to an Azure Active Directory (Azure AD) group team, you must remove and add the team back to the mobile offline profile for the changes to take effect.
+> If you made any changes to a Microsoft Entra ID group team, you must remove and add the team back to the mobile offline profile for the changes to take effect.
 
 ## Enable mobile offline classic
 
