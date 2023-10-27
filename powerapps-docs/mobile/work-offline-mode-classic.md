@@ -2,7 +2,7 @@
 title: Work offline on your mobile device (classic mode)
 description: How to work on your mobile device in offline mode
 ms.custom: 
-ms.date: 10/26/2023
+ms.date: 10/27/2023
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,7 +22,7 @@ search.audienceType:
 
 You can work with your data in offline mode even when you don't have internet access. The mobile app provides a rich offline experience that lets you work with commands like create, read, update, and delete, along with some special commands, so you always stay productive. After you're back online, changes you've made are synchronized with your apps in the Microsoft Dataverse environment.
 
-If you're working on a record and lose your network connection, any updates made to the record are saved in offline mode and will be synchronized to the app after you're back online. When the record is synchronized with the app, it follows the filter rule for availability in offline mode.
+If you're working on a record and lose your network connection, any updates made to the record are saved in offline mode and will be synchronized to the app after you're back online. When the record is synchronized with the app, it uses the filters, added on the table in the offline profile, for availability in offline mode.
 
 ## Download updates to work in offline mode
 
