@@ -152,6 +152,8 @@ However, if you selected **Restricted to selected users**, you have to manually 
 
 1.  In the **Users with offline access** area, select **Add users**.
 
+    :::image type="content" source="media/users-with-offline-access.png" alt-text="Select the Add users button.":::
+
 1.  Choose the users that you want to add to the mobile offline profile. The actual users added based on teams are displayed under each team. User's that are added individually are displayed under individual users.
 
 1.  When you're done adding people, select **Save**.
