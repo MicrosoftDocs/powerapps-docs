@@ -1783,42 +1783,30 @@
     href: ../mobile/scan-QR-code.md
   - name: Switch to a different directory in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
-  - name: Optimize images for upload
-    href: ../mobile/optimize-images-upload.md
-  - name: Troubleshoot issues in the mobile app
-    items:
-    - name: Troubleshoot issues in the Power Apps mobile app
-      href: ../mobile/powerapps-mobile-troubleshoot.md
-    - name: Prevent canvas app restarts in the Power Apps mobile app
-      href: ../mobile/power-apps-mobile-canvas-app-restarts.md
   - name: Mobile offline for model-driven apps
     items:
-    - name: Set up mobile offline (classic)
+    - name: Mobile offline overview
+      href: ../mobile/mobile-offline-overview.md
+    - name: Set up guide
       items:
-      - name: Mobile offline overview (classic)
-        href: ../mobile/mobile-offline-overview-classic.md
-      - name: Set up mobile offline (classic)
-        href: ../mobile/setup-mobile-offline-classic.md
-      - name: Work offline on your mobile device (classic)
-        href: ../mobile/work-offline-mode-classic.md
-    - name: Set up mobile offline (preview)
+      - name: Set up mobile offline
+        href: ../mobile/setup-mobile-offline.md 
+      - name: Configure mobile offline profiles for images and files
+        href: ../mobile/offline-file-images.md
+      - name: Offline profile guidelines
+        href: ../mobile/mobile-offline-guidelines.md  
+      - name: Mobile offline capabilities and limitations
+        href: ../mobile/offline-capabilities.md
+    - name: User guide
       items:
-      - name: Mobile offline overview (preview)
-        href: ../mobile/mobile-offline-overview.md
-      - name: Set up mobile offline (preview)
-        href: ../mobile/setup-mobile-offline.md
-      - name: Enable and use offline-first (preview)
-        href: ../mobile/work-in-offline-mode.md
-    - name: View offline sync status
-      href: ../mobile/offline-sync-icon.md
-    - name: Sync data in the background
-      href: ../mobile/sync-data-offline-background.md
-    - name: Configure mobile offline profiles for images and files
-      href: ../mobile/offline-file-images.md
-    - name: Offline profile guidelines
-      href: ../mobile/mobile-offline-guidelines.md
-    - name: Mobile offline capabilities and limitations
-      href: ../mobile/offline-capabilities.md
+      - name: Work offline on your mobile device (offline-first mode)
+        href: ../mobile/work-in-offline-mode.md 
+      - name: Work offline on your mobile device (classic mode)
+        href: ../mobile/work-offline-mode-classic.md 
+      - name: View offline sync status
+        href: ../mobile/offline-sync-icon.md
+      - name: Sync data in the background
+        href: ../mobile/sync-data-offline-background.md
   - name: Mobile offline for canvas apps (preview)
     items:
     - name: Mobile offline for canvas apps overview (preview)
@@ -1827,7 +1815,13 @@
       href: ../mobile/canvas-mobile-offline-setup.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
-  - name: Power Apps for Windows
+  - name: Troubleshoot issues in the mobile app
+    items:
+    - name: Troubleshoot issues in the Power Apps mobile app
+      href: ../mobile/powerapps-mobile-troubleshoot.md
+    - name: Prevent canvas app restarts in the Power Apps mobile app
+      href: ../mobile/power-apps-mobile-canvas-app-restarts.md
+  - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows
       href: ../mobile/windows-app-install.md
