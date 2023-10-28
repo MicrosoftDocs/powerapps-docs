@@ -1,7 +1,7 @@
 ---
 title: "card table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the card table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1151,6 +1151,42 @@ See the [team_card](team.md#BKMK_team_card) one-to-many relationship for the [te
 **Added by**: System Solution Solution
 
 See the [business_unit_card](businessunit.md#BKMK_business_unit_card) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the card table is the first table in the relationship. Listed by **SchemaName**.
+
+- [card_entity_connections](#BKMK_card_entity_connections)
+- [workflow_card_connections](#BKMK_workflow_card_connections)
+
+
+### <a name="BKMK_card_entity_connections"></a> card_entity_connections
+
+IntersectEntityName: cardentityconnections<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|cardid|
+|IsCustomizable|False|
+|LogicalName|card|
+|NavigationPropertyName|card_entity_connections|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|entity|
+|IntersectAttribute|entityid|
+|NavigationPropertyName|card_entity_connections|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+
+### <a name="BKMK_workflow_card_connections"></a> workflow_card_connections
+
+See the [workflow_card_connections](workflow.md#BKMK_workflow_card_connections) many-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### See also
 

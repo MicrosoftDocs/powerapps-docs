@@ -1,7 +1,7 @@
 ---
-title: "usermobileofflineprofilemembership table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the usermobileofflineprofilemembership table/entity."
-ms.date: 09/01/2023
+title: "External Identity (adx_externalidentity)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the External Identity (adx_externalidentity)  table/entity."
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -11,38 +11,50 @@ search.audienceType:
   - developer
 ---
 
-# usermobileofflineprofilemembership table/entity reference
+# External Identity (adx_externalidentity)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 
 
-**Added by**: MobileOfflineMembership Solution
+**Added by**: Power Pages Runtime Core Solution
 
 
 ## Messages
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
+|BulkRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Create|POST /adx_externalidentities<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE /adx_externalidentities(*adx_externalidentityid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
+|PurgeRetainedContent|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Retain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|Retrieve|GET /adx_externalidentities(*adx_externalidentityid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET /adx_externalidentities<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RollbackRetain|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
+|SetState|PATCH /adx_externalidentities(*adx_externalidentityid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH /adx_externalidentities(*adx_externalidentityid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|ValidateRetentionConfig|This message is to be executed only by Dataverse to trigger registered plug-ins and flows.||
 
 ## Properties
 
 |Property|Value|
 |--------|-----|
-|CollectionSchemaName|usermobileofflineprofilememberships|
-|DisplayCollectionName|UserMobileOfflineProfileMemberships|
-|DisplayName|UserMobileOfflineProfileMembership|
-|EntitySetName|usermobileofflineprofilememberships|
+|CollectionSchemaName|adx_externalidentities|
+|DisplayCollectionName|External Identities|
+|DisplayName|External Identity|
+|EntitySetName|adx_externalidentities|
 |IsBPFEntity|False|
-|LogicalCollectionName|usermobileofflineprofilememberships|
-|LogicalName|usermobileofflineprofilemembership|
+|LogicalCollectionName|adx_externalidentities|
+|LogicalName|adx_externalidentity|
 |OwnershipType|OrganizationOwned|
-|PrimaryIdAttribute|usermobileofflineprofilemembershipid|
-|PrimaryNameAttribute|name|
-|SchemaName|usermobileofflineprofilemembership|
+|PrimaryIdAttribute|adx_externalidentityid|
+|PrimaryNameAttribute|adx_username|
+|SchemaName|adx_externalidentity|
 
 <a name="writable-attributes"></a>
 
@@ -50,47 +62,83 @@ search.audienceType:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [HasMobileOfflineProfileIdConflict](#BKMK_HasMobileOfflineProfileIdConflict)
+- [adx_contactid](#BKMK_adx_contactid)
+- [adx_externalidentityId](#BKMK_adx_externalidentityId)
+- [adx_identityprovidername](#BKMK_adx_identityprovidername)
+- [adx_username](#BKMK_adx_username)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [MobileOfflineProfileId](#BKMK_MobileOfflineProfileId)
-- [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
-- [SystemUserId](#BKMK_SystemUserId)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
-- [usermobileofflineprofilemembershipId](#BKMK_usermobileofflineprofilemembershipId)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
-### <a name="BKMK_HasMobileOfflineProfileIdConflict"></a> HasMobileOfflineProfileIdConflict
+### <a name="BKMK_adx_contactid"></a> adx_contactid
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for Contact associated with External Identity.|
+|DisplayName|Contact|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_contactid|
+|RequiredLevel|ApplicationRequired|
+|Targets|contact|
+|Type|Lookup|
+
+
+### <a name="BKMK_adx_externalidentityId"></a> adx_externalidentityId
+
+|Property|Value|
+|--------|-----|
+|Description|Shows the entity instances.|
+|DisplayName|External Identity|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|adx_externalidentityid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_adx_identityprovidername"></a> adx_identityprovidername
 
 |Property|Value|
 |--------|-----|
 |Description||
-|DisplayName|HasMobileOfflineProfileIdConflict|
+|DisplayName|Identity Provider|
+|FormatName|Text|
+|IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|hasmobileofflineprofileidconflict|
-|RequiredLevel|None|
-|Type|Boolean|
+|LogicalName|adx_identityprovidername|
+|MaxLength|400|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
 
-#### HasMobileOfflineProfileIdConflict Choices/Options
 
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
+### <a name="BKMK_adx_username"></a> adx_username
 
-**DefaultValue**: 0
-
+|Property|Value|
+|--------|-----|
+|Description|Shows the name of the custom entity.|
+|DisplayName|User Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_username|
+|MaxLength|100|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
 |--------|-----|
-|Description|Sequence number of the import that created this record.|
+|Description|Shows the sequence number of the import that created this record.|
 |DisplayName|Import Sequence Number|
 |Format|None|
 |IsValidForForm|False|
@@ -103,42 +151,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
-### <a name="BKMK_MobileOfflineProfileId"></a> MobileOfflineProfileId
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|MobileOfflineProfileId|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|mobileofflineprofileid|
-|RequiredLevel|None|
-|Targets|mobileofflineprofile|
-|Type|Lookup|
-
-
-### <a name="BKMK_name"></a> name
-
-|Property|Value|
-|--------|-----|
-|Description|The name of the custom entity.|
-|DisplayName|Name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|name|
-|MaxLength|100|
-|RequiredLevel|ApplicationRequired|
-|Type|String|
-
-
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
 
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time that the record was migrated.|
+|Description|Shows the date and time that the record was migrated.|
 |DisplayName|Record Created On|
 |Format|DateOnly|
 |IsValidForForm|False|
@@ -153,7 +171,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the UserMobileOfflineProfileMembership|
+|Description|Shows whether the external identity is active or inactive. Inactive records are read-only and can't be edited unless they are reactivated.|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -175,7 +193,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the UserMobileOfflineProfileMembership|
+|Description|Select the external identity's status.|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -190,20 +208,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Active|0|
 |2|Inactive|1|
 
-
-
-### <a name="BKMK_SystemUserId"></a> SystemUserId
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|SystemUserId|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|systemuserid|
-|RequiredLevel|None|
-|Targets|systemuser|
-|Type|Lookup|
 
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
@@ -222,25 +226,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
-### <a name="BKMK_usermobileofflineprofilemembershipId"></a> usermobileofflineprofilemembershipId
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|UserMobileOfflineProfileMembership|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|usermobileofflineprofilemembershipid|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
 |--------|-----|
-|Description|Time zone code that was in use when the record was created.|
+|Description|Shows the time zone code that was in use when the record was created.|
 |DisplayName|UTC Conversion Time Zone Code|
 |Format|None|
 |IsValidForForm|False|
@@ -257,6 +247,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [adx_contactidName](#BKMK_adx_contactidName)
+- [adx_contactidYomiName](#BKMK_adx_contactidYomiName)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
 - [CreatedByYomiName](#BKMK_CreatedByYomiName)
@@ -264,7 +256,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [MobileOfflineProfileIdName](#BKMK_MobileOfflineProfileIdName)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -274,9 +265,39 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [OrganizationId](#BKMK_OrganizationId)
 - [OrganizationIdName](#BKMK_OrganizationIdName)
-- [SystemUserIdName](#BKMK_SystemUserIdName)
-- [SystemUserIdYomiName](#BKMK_SystemUserIdYomiName)
 - [VersionNumber](#BKMK_VersionNumber)
+
+
+### <a name="BKMK_adx_contactidName"></a> adx_contactidName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|adx_contactidname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_adx_contactidYomiName"></a> adx_contactidYomiName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|adx_contactidyominame|
+|MaxLength|450|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -285,7 +306,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the user who created the record.|
+|Description|Shows the user who created the record.|
 |DisplayName|Created By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -336,7 +357,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was created.|
+|Description|Shows the date and time when the record was created.|
 |DisplayName|Created On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -352,7 +373,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the delegate user who created the record.|
+|Description|Shows the delegate user who created the record.|
 |DisplayName|Created By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -398,29 +419,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_MobileOfflineProfileIdName"></a> MobileOfflineProfileIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|mobileofflineprofileidname|
-|MaxLength|255|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the user who modified the record.|
+|Description|Shows the user who modified the record.|
 |DisplayName|Modified By|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -471,7 +476,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the record was modified.|
+|Description|Shows the date and time when the record was modified.|
 |DisplayName|Modified On|
 |Format|DateAndTime|
 |IsValidForForm|True|
@@ -487,7 +492,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of the delegate user who modified the record.|
+|Description|Shows the delegate user who modified the record.|
 |DisplayName|Modified By (Delegate)|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -539,8 +544,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier for the organization|
-|DisplayName|Organization Id|
+|Description|Shows the organization.|
+|DisplayName|Organization ID|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|organizationid|
@@ -567,45 +572,13 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_SystemUserIdName"></a> SystemUserIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|systemuseridname|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_SystemUserIdYomiName"></a> SystemUserIdYomiName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|systemuseridyominame|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 **Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|Version number of UserMobileOfflineProfileMembership.|
+|Description|Version Number|
 |DisplayName|Version Number|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -621,19 +594,19 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [usermobileofflineprofilemembership_SyncErrors](#BKMK_usermobileofflineprofilemembership_SyncErrors)
-- [usermobileofflineprofilemembership_AsyncOperations](#BKMK_usermobileofflineprofilemembership_AsyncOperations)
-- [usermobileofflineprofilemembership_MailboxTrackingFolders](#BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders)
-- [usermobileofflineprofilemembership_ProcessSession](#BKMK_usermobileofflineprofilemembership_ProcessSession)
-- [usermobileofflineprofilemembership_BulkDeleteFailures](#BKMK_usermobileofflineprofilemembership_BulkDeleteFailures)
-- [usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses](#BKMK_usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses)
+- [adx_externalidentity_SyncErrors](#BKMK_adx_externalidentity_SyncErrors)
+- [adx_externalidentity_AsyncOperations](#BKMK_adx_externalidentity_AsyncOperations)
+- [adx_externalidentity_MailboxTrackingFolders](#BKMK_adx_externalidentity_MailboxTrackingFolders)
+- [adx_externalidentity_ProcessSession](#BKMK_adx_externalidentity_ProcessSession)
+- [adx_externalidentity_BulkDeleteFailures](#BKMK_adx_externalidentity_BulkDeleteFailures)
+- [adx_externalidentity_PrincipalObjectAttributeAccesses](#BKMK_adx_externalidentity_PrincipalObjectAttributeAccesses)
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_SyncErrors"></a> usermobileofflineprofilemembership_SyncErrors
+### <a name="BKMK_adx_externalidentity_SyncErrors"></a> adx_externalidentity_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as the [usermobileofflineprofilemembership_SyncErrors](syncerror.md#BKMK_usermobileofflineprofilemembership_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
+Same as the [adx_externalidentity_SyncErrors](syncerror.md#BKMK_adx_externalidentity_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -641,16 +614,16 @@ Same as the [usermobileofflineprofilemembership_SyncErrors](syncerror.md#BKMK_us
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_SyncErrors|
+|ReferencedEntityNavigationPropertyName|adx_externalidentity_SyncErrors|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_AsyncOperations"></a> usermobileofflineprofilemembership_AsyncOperations
+### <a name="BKMK_adx_externalidentity_AsyncOperations"></a> adx_externalidentity_AsyncOperations
 
 **Added by**: System Solution Solution
 
-Same as the [usermobileofflineprofilemembership_AsyncOperations](asyncoperation.md#BKMK_usermobileofflineprofilemembership_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
+Same as the [adx_externalidentity_AsyncOperations](asyncoperation.md#BKMK_adx_externalidentity_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -658,16 +631,16 @@ Same as the [usermobileofflineprofilemembership_AsyncOperations](asyncoperation.
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_AsyncOperations|
+|ReferencedEntityNavigationPropertyName|adx_externalidentity_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders"></a> usermobileofflineprofilemembership_MailboxTrackingFolders
+### <a name="BKMK_adx_externalidentity_MailboxTrackingFolders"></a> adx_externalidentity_MailboxTrackingFolders
 
 **Added by**: System Solution Solution
 
-Same as the [usermobileofflineprofilemembership_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
+Same as the [adx_externalidentity_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_adx_externalidentity_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -675,16 +648,16 @@ Same as the [usermobileofflineprofilemembership_MailboxTrackingFolders](mailboxt
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_MailboxTrackingFolders|
+|ReferencedEntityNavigationPropertyName|adx_externalidentity_MailboxTrackingFolders|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_ProcessSession"></a> usermobileofflineprofilemembership_ProcessSession
+### <a name="BKMK_adx_externalidentity_ProcessSession"></a> adx_externalidentity_ProcessSession
 
 **Added by**: System Solution Solution
 
-Same as the [usermobileofflineprofilemembership_ProcessSession](processsession.md#BKMK_usermobileofflineprofilemembership_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
+Same as the [adx_externalidentity_ProcessSession](processsession.md#BKMK_adx_externalidentity_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -692,16 +665,16 @@ Same as the [usermobileofflineprofilemembership_ProcessSession](processsession.m
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_ProcessSession|
+|ReferencedEntityNavigationPropertyName|adx_externalidentity_ProcessSession|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_BulkDeleteFailures"></a> usermobileofflineprofilemembership_BulkDeleteFailures
+### <a name="BKMK_adx_externalidentity_BulkDeleteFailures"></a> adx_externalidentity_BulkDeleteFailures
 
 **Added by**: System Solution Solution
 
-Same as the [usermobileofflineprofilemembership_BulkDeleteFailures](bulkdeletefailure.md#BKMK_usermobileofflineprofilemembership_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
+Same as the [adx_externalidentity_BulkDeleteFailures](bulkdeletefailure.md#BKMK_adx_externalidentity_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -709,16 +682,16 @@ Same as the [usermobileofflineprofilemembership_BulkDeleteFailures](bulkdeletefa
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_BulkDeleteFailures|
+|ReferencedEntityNavigationPropertyName|adx_externalidentity_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses"></a> usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses
+### <a name="BKMK_adx_externalidentity_PrincipalObjectAttributeAccesses"></a> adx_externalidentity_PrincipalObjectAttributeAccesses
 
 **Added by**: System Solution Solution
 
-Same as the [usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
+Same as the [adx_externalidentity_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_adx_externalidentity_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -726,7 +699,7 @@ Same as the [usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses
 |ReferencingAttribute|objectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses|
+|ReferencedEntityNavigationPropertyName|adx_externalidentity_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -736,59 +709,52 @@ Same as the [usermobileofflineprofilemembership_PrincipalObjectAttributeAccesses
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
-- [lk_usermobileofflineprofilemembership_createdby](#BKMK_lk_usermobileofflineprofilemembership_createdby)
-- [lk_usermobileofflineprofilemembership_createdonbehalfby](#BKMK_lk_usermobileofflineprofilemembership_createdonbehalfby)
-- [lk_usermobileofflineprofilemembership_modifiedby](#BKMK_lk_usermobileofflineprofilemembership_modifiedby)
-- [lk_usermobileofflineprofilemembership_modifiedonbehalfby](#BKMK_lk_usermobileofflineprofilemembership_modifiedonbehalfby)
-- [organization_usermobileofflineprofilemembership](#BKMK_organization_usermobileofflineprofilemembership)
-- [mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId](#BKMK_mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId)
-- [systemuser_usermobileofflineprofilemembership_SystemUserId](#BKMK_systemuser_usermobileofflineprofilemembership_SystemUserId)
+- [lk_adx_externalidentity_createdby](#BKMK_lk_adx_externalidentity_createdby)
+- [lk_adx_externalidentity_createdonbehalfby](#BKMK_lk_adx_externalidentity_createdonbehalfby)
+- [lk_adx_externalidentity_modifiedby](#BKMK_lk_adx_externalidentity_modifiedby)
+- [lk_adx_externalidentity_modifiedonbehalfby](#BKMK_lk_adx_externalidentity_modifiedonbehalfby)
+- [organization_adx_externalidentity](#BKMK_organization_adx_externalidentity)
+- [adx_contact_externalidentity](#BKMK_adx_contact_externalidentity)
 
 
-### <a name="BKMK_lk_usermobileofflineprofilemembership_createdby"></a> lk_usermobileofflineprofilemembership_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_usermobileofflineprofilemembership_createdby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_usermobileofflineprofilemembership_createdonbehalfby"></a> lk_usermobileofflineprofilemembership_createdonbehalfby
+### <a name="BKMK_lk_adx_externalidentity_createdby"></a> lk_adx_externalidentity_createdby
 
 **Added by**: System Solution Solution
 
-See the [lk_usermobileofflineprofilemembership_createdonbehalfby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_adx_externalidentity_createdby](systemuser.md#BKMK_lk_adx_externalidentity_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_lk_usermobileofflineprofilemembership_modifiedby"></a> lk_usermobileofflineprofilemembership_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_usermobileofflineprofilemembership_modifiedby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_usermobileofflineprofilemembership_modifiedonbehalfby"></a> lk_usermobileofflineprofilemembership_modifiedonbehalfby
+### <a name="BKMK_lk_adx_externalidentity_createdonbehalfby"></a> lk_adx_externalidentity_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See the [lk_usermobileofflineprofilemembership_modifiedonbehalfby](systemuser.md#BKMK_lk_usermobileofflineprofilemembership_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_adx_externalidentity_createdonbehalfby](systemuser.md#BKMK_lk_adx_externalidentity_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_organization_usermobileofflineprofilemembership"></a> organization_usermobileofflineprofilemembership
-
-**Added by**: System Solution Solution
-
-See the [organization_usermobileofflineprofilemembership](organization.md#BKMK_organization_usermobileofflineprofilemembership) one-to-many relationship for the [organization](organization.md) table/entity.
-
-### <a name="BKMK_mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId"></a> mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId
+### <a name="BKMK_lk_adx_externalidentity_modifiedby"></a> lk_adx_externalidentity_modifiedby
 
 **Added by**: System Solution Solution
 
-See the [mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId](mobileofflineprofile.md#BKMK_mobileofflineprofile_usermobileofflineprofilemembership_MobileOfflineProfileId) one-to-many relationship for the [mobileofflineprofile](mobileofflineprofile.md) table/entity.
+See the [lk_adx_externalidentity_modifiedby](systemuser.md#BKMK_lk_adx_externalidentity_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_systemuser_usermobileofflineprofilemembership_SystemUserId"></a> systemuser_usermobileofflineprofilemembership_SystemUserId
+### <a name="BKMK_lk_adx_externalidentity_modifiedonbehalfby"></a> lk_adx_externalidentity_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See the [systemuser_usermobileofflineprofilemembership_SystemUserId](systemuser.md#BKMK_systemuser_usermobileofflineprofilemembership_SystemUserId) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_adx_externalidentity_modifiedonbehalfby](systemuser.md#BKMK_lk_adx_externalidentity_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_organization_adx_externalidentity"></a> organization_adx_externalidentity
+
+**Added by**: System Solution Solution
+
+See the [organization_adx_externalidentity](organization.md#BKMK_organization_adx_externalidentity) one-to-many relationship for the [organization](organization.md) table/entity.
+
+### <a name="BKMK_adx_contact_externalidentity"></a> adx_contact_externalidentity
+
+**Added by**: System Solution Solution
+
+See the [adx_contact_externalidentity](contact.md#BKMK_adx_contact_externalidentity) one-to-many relationship for the [contact](contact.md) table/entity.
 
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.usermobileofflineprofilemembership?text=usermobileofflineprofilemembership EntityType" />
+<xref href="Microsoft.Dynamics.CRM.adx_externalidentity?text=adx_externalidentity EntityType" />
