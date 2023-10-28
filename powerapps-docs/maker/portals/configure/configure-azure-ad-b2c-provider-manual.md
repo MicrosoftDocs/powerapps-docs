@@ -1,6 +1,6 @@
 ---
-title: Configure the Azure Active Directory B2C provider manually
-description: Learn how to configure the Azure Active Directory B2C identity provider manually for Power Apps portals.
+title: Configure the Microsoft Entra B2C provider manually
+description: Learn how to configure the Microsoft Entra B2C identity provider manually for Power Apps portals.
 author: sandhangitmsft
 
 ms.topic: conceptual
@@ -15,22 +15,22 @@ contributors:
     - dileepsinghmicrosoft
 ---
 
-# Configure the Azure Active Directory B2C provider manually
+# Configure the Microsoft Entra B2C provider manually
 
 
 [!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
 
-This article describes how to configure Azure Active Directory B2C (Azure AD B2C) as the identity provider manually. Use these steps to manually create a new Azure AD B2C tenant, register the application, and configure user flows.
+This article describes how to configure Microsoft Entra ID B2C (Microsoft Entra ID B2C) as the identity provider manually. Use these steps to manually create a new Microsoft Entra B2C tenant, register the application, and configure user flows.
 
 > [!NOTE]
-> - If you want to configure the Azure AD B2C provider automatically by using Power Apps portals, go to [Configure Azure AD B2C provider](configure-azure-ad-b2c-provider.md).
+> - If you want to configure the Microsoft Entra B2C provider automatically by using Power Apps portals, go to [Configure Microsoft Entra B2C provider](configure-azure-ad-b2c-provider.md).
 > - Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. If you want the changes to be reflected immediately, restart the portal by using [portal actions](../admin/admin-overview.md).
 <!--markdownlint-disable MD036-->
-**To configure Azure AD B2C as the OpenID Connect provider manually**
+**To configure Microsoft Entra ID B2C as the OpenID Connect provider manually**
 
-1. Select **Configure** for **Azure Active Directory B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
+1. Select **Configure** for **Microsoft Entra ID B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
 
-    ![Azure AD B2C provider name.](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
+    ![Microsoft Entra B2C provider name.](media/authentication/azure-ad-b2c-name.png "Microsoft Entra B2C provider name")
 
 1. If necessary, update the name.
 
@@ -39,19 +39,19 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
     ![Skip to manual configuration.](media/authentication/skip-to-manual.png "Skip to manual configuration")
 
     > [!NOTE]
-    > Selecting **Next** instead of **Skip to manual configuration** takes you to configure the [Azure AD B2C authentication by using the Power Apps portals interface](configure-azure-ad-b2c-provider.md).
+    > Selecting **Next** instead of **Skip to manual configuration** takes you to configure the [Microsoft Entra B2C authentication by using the Power Apps portals interface](configure-azure-ad-b2c-provider.md).
 
 1. In this step, you create the application and configure the settings with your identity provider.
 
-    ![Configure the Azure AD B2C app.](media/use-simplified-authentication-configuration/configure-ad-b2c-step1.png "Configure the Azure AD B2C app")
+    ![Configure the Microsoft Entra B2C app.](media/use-simplified-authentication-configuration/configure-ad-b2c-step1.png "Configure the Microsoft Entra B2C app")
 
     1. Sign in to your [Azure portal](https://portal.azure.com/).
 
-    1. [Create an Azure AD B2C tenant](/azure/active-directory-b2c/tutorial-create-tenant).
+    1. [Create a Microsoft Entra B2C tenant](/azure/active-directory-b2c/tutorial-create-tenant).
 
     1. [Register an application](/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant.
 
-        1. Search for and select **Azure AD B2C**.
+        1. Search for and select **Microsoft Entra ID B2C**.
 
         1. Under **Manage**, select **App registrations**.
 
@@ -66,7 +66,7 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
         1. In the **Redirect URI** text box, enter the **Reply URL** for your portal. <br> Example: `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`
 
             > [!NOTE]
-            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure B2C tenant in Azure** section on the **Configure identity provider** screen (step 4 above). If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the Azure AD B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, you must use it as-is for the Azure AD B2C configuration in portals.
+            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure B2C tenant in Azure** section on the **Configure identity provider** screen (step 4 above). If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the Microsoft Entra B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, you must use it as-is for the Microsoft Entra B2C configuration in portals.
 
             ![Register application.](media/authentication/register-application-b2c.png "Register application")
 
@@ -95,7 +95,7 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
         - **Authority**: Enter the issuer URL defined in the metadata of the sign-up and sign-in policy user flow.​
         <br>**To get the issuer URL**
 
-           1. Open the sign-up and sign-in user flow you created earlier. For this step, you need to go to the Azure AD B2C tenant on the [Azure portal](https://portal.azure.com).
+           1. Open the sign-up and sign-in user flow you created earlier. For this step, you need to go to the Microsoft Entra B2C tenant on the [Azure portal](https://portal.azure.com).
 
               ![Select the user flow.](media/use-simplified-authentication-configuration/user-flow.png "Select the user flow")
 
@@ -118,7 +118,7 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
                 > [!TIP]
                 > Ensure that the **Issuer (iss) claim** URL includes **tfp**.
 
-        - **Client ID​**: Enter the **Application ID** of the Azure AD B2C application you created earlier.
+        - **Client ID​**: Enter the **Application ID** of the Microsoft Entra B2C application you created earlier.
 
         - **Redirect URI**: Enter the portal URL. <br> You only need to change the redirect URI if you're using a custom domain name.
 
@@ -131,14 +131,14 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
         - **Valid issuers**: Enter a comma-delimited list of issuer URLs for the sign-up and sign-in user flow, and password reset user flow, you created earlier. 
         <br> To get the issuer URLs for the sign-up and sign-in user flow, and the password reset user flow, open each flow and then follow the steps under **Authority**, in step 5a earlier in this article.
 
-1. In this step, you have the option of configuring additional settings for the Azure AD B2C identity provider.
+1. In this step, you have the option of configuring additional settings for the Microsoft Entra B2C identity provider.
 
     ![Configure additional settings.](media/use-simplified-authentication-configuration/configure-ad-b2c-step3.png "Configure additional settings")
 
-    - **Registration claims mapping​**: Not required if using *email*, *first name*, or *last name* attributes. For additional attributes, enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C (created during sign-up) to attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name`, where `field_logical_name` is the logical name of the field in portals and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
+    - **Registration claims mapping​**: Not required if using *email*, *first name*, or *last name* attributes. For additional attributes, enter a list of logical name/claim pairs to be used to map claim values returned from Microsoft Entra ID B2C (created during sign-up) to attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name`, where `field_logical_name` is the logical name of the field in portals and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
      For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow, and you want to update the corresponding Contact table fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
 
-    - **Login claims mapping**: Not required if using *email*, *first name*, or *last name* attributes. For additional attributes, enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C after sign-in to the attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
+    - **Login claims mapping**: Not required if using *email*, *first name*, or *last name* attributes. For additional attributes, enter a list of logical name/claim pairs to be used to map claim values returned from Microsoft Entra B2C after sign-in to the attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
      For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **Application Claims** in your user flow, and you want to update the corresponding Contact table fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
 
     - **External logout**: Choose whether to enable or disable federated sign-out:
@@ -153,7 +153,7 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
 
 ### See also
 
-[Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
+[Migrate identity providers to Microsoft Entra ID B2C](migrate-identity-providers.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

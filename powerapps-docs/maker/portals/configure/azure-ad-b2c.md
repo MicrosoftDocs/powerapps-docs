@@ -1,6 +1,6 @@
 ---
-title: Customize the Azure AD B2C user interface for portals
-description: Learn how to customize the Azure AD B2C user interface for portals.
+title: Customize the Microsoft Entra B2C user interface for portals
+description: Learn how to customize the Microsoft Entra B2C user interface for portals.
 author: sandhangitmsft
 
 ms.topic: conceptual
@@ -15,19 +15,19 @@ contributors:
     - dileepsinghmicrosoft
 ---
 
-# Customize the Azure AD B2C user interface for portals
+# Customize the Microsoft Entra B2C user interface for portals
 
 
 [!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
 
-Azure Active Directory B2C (Azure AD B2C) supports user interface customization for sign-up and sign-in experience. With this feature, you can configure Azure AD B2C tenant with a custom sign-up and sign-in page created inside your portal. In this article, you'll learn about how to create, and configure a custom sign-up/sign-in web page with sample HTML in portals for use with Azure AD B2C authentication.
+Microsoft Entra ID B2C (Microsoft Entra B2C) supports user interface customization for sign-up and sign-in experience. With this feature, you can configure Microsoft Entra B2C tenant with a custom sign-up and sign-in page created inside your portal. In this article, you'll learn about how to create, and configure a custom sign-up/sign-in web page with sample HTML in portals for use with Microsoft Entra B2C authentication.
 
 > [!NOTE]
-> These instructions also let you configure the Azure AD B2C user interface for Power Pages sites. More information: [What is Power Pages](/power-pages/introduction).
+> These instructions also let you configure the Microsoft Entra B2C user interface for Power Pages sites. More information: [What is Power Pages](/power-pages/introduction).
 
 ## Prerequisites
 
-Before you begin, ensure you've configured Azure AD B2C authentication for your portal with [automatic](configure-azure-ad-b2c-provider.md), or [manual](configure-azure-ad-b2c-provider-manual.md) steps. You'll need to use this Azure AD B2C configuration to customize the user interface for portals while following below steps.
+Before you begin, ensure you've configured Microsoft Entra B2C authentication for your portal with [automatic](configure-azure-ad-b2c-provider.md), or [manual](configure-azure-ad-b2c-provider-manual.md) steps. You'll need to use this Microsoft Entra B2C configuration to customize the user interface for portals while following below steps.
 
 ## Step 1: Create a web template
 
@@ -37,7 +37,7 @@ Before you begin, ensure you've configured Azure AD B2C authentication for your 
 
 1. Select **New**.
 
-1. Enter **Name**, such as *Azure AD B2C Custom Page*.
+1. Enter **Name**, such as *Microsoft Entra B2C Custom Page*.
 
 1. For **Website**, select your portal website.
 
@@ -355,7 +355,7 @@ Before you begin, ensure you've configured Azure AD B2C authentication for your 
 
 1. Select **New**.
 
-1. Enter **Name**, such as *Azure AD B2C Custom Page*.
+1. Enter **Name**, such as *Microsoft Entra B2C Custom Page*.
 
 1. For **Website**, select your portal website.
 
@@ -424,7 +424,7 @@ For a complete list of other CORS settings, see [CORS protocol support](../add-w
 
 1. If not already, select **Overview** from the left pane. 
 
-1. From the right middle section of the screen, select **Azure AD B2C Settings** for the B2C tenant. <br> This action opens B2C tenant in a separate browser tab.
+1. From the right middle section of the screen, select **Microsoft Entra B2C Settings** for the B2C tenant. <br> This action opens B2C tenant in a separate browser tab.
 
 1. In the B2C tenant browser tab, under **Policies** in the left pane, select **User flows**.
 
@@ -436,12 +436,12 @@ For a complete list of other CORS settings, see [CORS protocol support](../add-w
 
 1. For **Custom page URI**, enter the complete URL of your portal's custom webpage that you created in [step 3](#step-3-create-a-webpage). <br> For example, for the page named `azure-ad-b2c-sign-in` in portal `https://contoso.powerappsportals.com`, use the custom page URI as `https://contoso.powerappsportals.com/azure-ad-b2c-sign-in`.
 
-Your Azure AD B2C tenant is now configured to use the custom page for sign-up and sign-in experience.
+Your Microsoft Entra B2C tenant is now configured to use the custom page for sign-up and sign-in experience.
 
 ### See also
 
-[Configure the Azure Active Directory B2C provider (preview)](configure-azure-ad-b2c-provider.md) <br>
-[Configure the Azure Active Directory B2C provider manually](configure-azure-ad-b2c-provider-manual.md) <br>
-[Customize the user interface with HTML templates in Azure Active Directory B2C](/azure/active-directory-b2c/customize-ui-with-html)
+[Configure the Microsoft Entra B2C provider (preview)](configure-azure-ad-b2c-provider.md) <br>
+[Configure the Microsoft Entra B2C provider manually](configure-azure-ad-b2c-provider-manual.md) <br>
+[Customize the user interface with HTML templates in Microsoft Entra ID B2C](/azure/active-directory-b2c/customize-ui-with-html)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
