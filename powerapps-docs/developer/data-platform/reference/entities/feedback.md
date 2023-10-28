@@ -1,7 +1,7 @@
 ---
 title: "Feedback table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Feedback table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -16,7 +16,7 @@ search.audienceType:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Container for feedback and ratings for knowledge articles.
+Feedback and rating.
 
 
 ## Messages
@@ -58,6 +58,11 @@ Container for feedback and ratings for knowledge articles.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [adx_approved](#BKMK_adx_approved)
+- [adx_authorurl](#BKMK_adx_authorurl)
+- [Adx_ContactEmail](#BKMK_Adx_ContactEmail)
+- [Adx_ContactUsername](#BKMK_Adx_ContactUsername)
+- [Adx_CreatedByContact](#BKMK_Adx_CreatedByContact)
 - [Comments](#BKMK_Comments)
 - [CreatedByContact](#BKMK_CreatedByContact)
 - [CreatedOnBehalfByContact](#BKMK_CreatedOnBehalfByContact)
@@ -78,6 +83,103 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [StatusCode](#BKMK_StatusCode)
 - [Title](#BKMK_Title)
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
+
+
+### <a name="BKMK_adx_approved"></a> adx_approved
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Shows whether the feedback is approved for display.|
+|DisplayName|Published To Web|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_approved|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### adx_approved Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_adx_authorurl"></a> adx_authorurl
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The URL of the author’s home page/blog.|
+|DisplayName|Author URL|
+|FormatName|Url|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_authorurl|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_Adx_ContactEmail"></a> Adx_ContactEmail
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Email of the contact who created the record.|
+|DisplayName|Email|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_contactemail|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_Adx_ContactUsername"></a> Adx_ContactUsername
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Username of the contact who created the record.|
+|DisplayName|Username|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_contactusername|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_Adx_CreatedByContact"></a> Adx_CreatedByContact
+
+**Added by**: Power Pages Runtime Core Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Name of the contact who created the record.|
+|DisplayName|Created By Name (Contact)|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|adx_createdbycontact|
+|MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Comments"></a> Comments
@@ -287,7 +389,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|contact,feedback,knowledgearticle|
+|Targets|contact,feedback,knowledgearticle,msfp_alert,msfp_surveyinvite,msfp_surveyresponse|
 |Type|Lookup|
 
 
@@ -1091,6 +1193,9 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_contact_feedback_createdby](#BKMK_lk_contact_feedback_createdby)
 - [lk_feedback_createdby](#BKMK_lk_feedback_createdby)
 - [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
+- [msfp_alert_Feedback](#BKMK_msfp_alert_Feedback)
+- [msfp_surveyinvite_Feedback](#BKMK_msfp_surveyinvite_Feedback)
+- [msfp_surveyresponse_Feedback](#BKMK_msfp_surveyresponse_Feedback)
 
 
 ### <a name="BKMK_lk_feedback_modifiedby"></a> lk_feedback_modifiedby
@@ -1144,6 +1249,24 @@ See the [lk_feedback_createdby](systemuser.md#BKMK_lk_feedback_createdby) one-to
 ### <a name="BKMK_msdyn_knowledgearticle_feedback_context"></a> msdyn_knowledgearticle_feedback_context
 
 See the [msdyn_knowledgearticle_feedback_context](knowledgearticle.md#BKMK_msdyn_knowledgearticle_feedback_context) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
+
+### <a name="BKMK_msfp_alert_Feedback"></a> msfp_alert_Feedback
+
+**Added by**: Active Solution Solution
+
+See the [msfp_alert_Feedback](msfp_alert.md#BKMK_msfp_alert_Feedback) one-to-many relationship for the [msfp_alert](msfp_alert.md) table/entity.
+
+### <a name="BKMK_msfp_surveyinvite_Feedback"></a> msfp_surveyinvite_Feedback
+
+**Added by**: Active Solution Solution
+
+See the [msfp_surveyinvite_Feedback](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_Feedback) one-to-many relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
+
+### <a name="BKMK_msfp_surveyresponse_Feedback"></a> msfp_surveyresponse_Feedback
+
+**Added by**: Active Solution Solution
+
+See the [msfp_surveyresponse_Feedback](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_Feedback) one-to-many relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
 
 ### See also
 
