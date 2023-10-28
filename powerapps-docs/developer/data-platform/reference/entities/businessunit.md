@@ -1,7 +1,7 @@
 ---
 title: "BusinessUnit table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the BusinessUnit table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1603,6 +1603,8 @@ Listed by **SchemaName**.
 - [business_unit_stagesolutionupload](#BKMK_business_unit_stagesolutionupload)
 - [business_unit_exportsolutionupload](#BKMK_business_unit_exportsolutionupload)
 - [business_unit_featurecontrolsetting](#BKMK_business_unit_featurecontrolsetting)
+- [business_unit_keyvaultreference](#BKMK_business_unit_keyvaultreference)
+- [business_unit_managedidentity](#BKMK_business_unit_managedidentity)
 - [business_unit_customapi](#BKMK_business_unit_customapi)
 - [business_unit_datalakefolder](#BKMK_business_unit_datalakefolder)
 - [business_unit_exportedexcel](#BKMK_business_unit_exportedexcel)
@@ -1617,6 +1619,7 @@ Listed by **SchemaName**.
 - [business_unit_environmentvariablevalue](#BKMK_business_unit_environmentvariablevalue)
 - [business_unit_workflowbinary](#BKMK_business_unit_workflowbinary)
 - [business_unit_desktopflowmodule](#BKMK_business_unit_desktopflowmodule)
+- [business_unit_flowevent](#BKMK_business_unit_flowevent)
 - [business_unit_flowmachine](#BKMK_business_unit_flowmachine)
 - [business_unit_flowmachinegroup](#BKMK_business_unit_flowmachinegroup)
 - [business_unit_flowmachineimage](#BKMK_business_unit_flowmachineimage)
@@ -1650,8 +1653,6 @@ Listed by **SchemaName**.
 - [business_unit_msdyn_knowledgearticletemplate](#BKMK_business_unit_msdyn_knowledgearticletemplate)
 - [business_unit_msdyn_knowledgepersonalfilter](#BKMK_business_unit_msdyn_knowledgepersonalfilter)
 - [business_unit_msdyn_knowledgesearchfilter](#BKMK_business_unit_msdyn_knowledgesearchfilter)
-- [business_unit_keyvaultreference](#BKMK_business_unit_keyvaultreference)
-- [business_unit_managedidentity](#BKMK_business_unit_managedidentity)
 - [business_unit_fxexpression](#BKMK_business_unit_fxexpression)
 - [business_unit_powerfxrule](#BKMK_business_unit_powerfxrule)
 - [business_unit_retentionconfig](#BKMK_business_unit_retentionconfig)
@@ -1664,6 +1665,19 @@ Listed by **SchemaName**.
 - [business_unit_msdyn_dmsrequeststatus](#BKMK_business_unit_msdyn_dmsrequeststatus)
 - [business_unit_appnotification](#BKMK_business_unit_appnotification)
 - [business_unit_msdyn_mobileapp](#BKMK_business_unit_msdyn_mobileapp)
+- [business_unit_dvfilesearch](#BKMK_business_unit_dvfilesearch)
+- [business_unit_dvfilesearchattribute](#BKMK_business_unit_dvfilesearchattribute)
+- [business_unit_dvfilesearchentity](#BKMK_business_unit_dvfilesearchentity)
+- [business_unit_dvtablesearch](#BKMK_business_unit_dvtablesearch)
+- [business_unit_dvtablesearchattribute](#BKMK_business_unit_dvtablesearchattribute)
+- [business_unit_dvtablesearchentity](#BKMK_business_unit_dvtablesearchentity)
+- [business_unit_aiplugin](#BKMK_business_unit_aiplugin)
+- [business_unit_aipluginexternalschema](#BKMK_business_unit_aipluginexternalschema)
+- [business_unit_aipluginexternalschemaproperty](#BKMK_business_unit_aipluginexternalschemaproperty)
+- [business_unit_aiplugininstance](#BKMK_business_unit_aiplugininstance)
+- [business_unit_aipluginoperation](#BKMK_business_unit_aipluginoperation)
+- [business_unit_aipluginoperationparameter](#BKMK_business_unit_aipluginoperationparameter)
+- [business_unit_aipluginusersetting](#BKMK_business_unit_aipluginusersetting)
 - [business_unit_card](#BKMK_business_unit_card)
 - [business_unit_msdyn_entitylinkchatconfiguration](#BKMK_business_unit_msdyn_entitylinkchatconfiguration)
 - [business_unit_msdyn_richtextfile](#BKMK_business_unit_msdyn_richtextfile)
@@ -1709,10 +1723,32 @@ Listed by **SchemaName**.
 - [business_unit_powerbireport](#BKMK_business_unit_powerbireport)
 - [business_unit_powerbireportapdx](#BKMK_business_unit_powerbireportapdx)
 - [business_unit_msdyn_fileupload](#BKMK_business_unit_msdyn_fileupload)
+- [business_unit_nlsqregistration](#BKMK_business_unit_nlsqregistration)
 - [business_unit_recentlyused](#BKMK_business_unit_recentlyused)
+- [business_unit_powerpagecomponent](#BKMK_business_unit_powerpagecomponent)
+- [business_unit_powerpagesite](#BKMK_business_unit_powerpagesite)
+- [business_unit_powerpagesitelanguage](#BKMK_business_unit_powerpagesitelanguage)
+- [business_unit_powerpagesitepublished](#BKMK_business_unit_powerpagesitepublished)
+- [business_unit_adx_invitation](#BKMK_business_unit_adx_invitation)
+- [adx_inviteredemption_businessunit_owningbusinessunit](#BKMK_adx_inviteredemption_businessunit_owningbusinessunit)
+- [adx_portalcomment_businessunit_owningbusinessunit](#BKMK_adx_portalcomment_businessunit_owningbusinessunit)
+- [business_unit_adx_setting](#BKMK_business_unit_adx_setting)
 - [business_unit_mspcat_catalogsubmissionfiles](#BKMK_business_unit_mspcat_catalogsubmissionfiles)
 - [business_unit_mspcat_packagestore](#BKMK_business_unit_mspcat_packagestore)
-- [business_unit_flowevent](#BKMK_business_unit_flowevent)
+- [business_unit_msfp_alertrule](#BKMK_business_unit_msfp_alertrule)
+- [business_unit_msfp_question](#BKMK_business_unit_msfp_question)
+- [business_unit_msfp_satisfactionmetric](#BKMK_business_unit_msfp_satisfactionmetric)
+- [business_unit_msfp_questionresponse](#BKMK_business_unit_msfp_questionresponse)
+- [business_unit_msfp_project](#BKMK_business_unit_msfp_project)
+- [business_unit_msfp_surveyreminder](#BKMK_business_unit_msfp_surveyreminder)
+- [business_unit_msfp_unsubscribedrecipient](#BKMK_business_unit_msfp_unsubscribedrecipient)
+- [business_unit_msfp_emailtemplate](#BKMK_business_unit_msfp_emailtemplate)
+- [business_unit_msfp_fileresponse](#BKMK_business_unit_msfp_fileresponse)
+- [business_unit_msfp_localizedemailtemplate](#BKMK_business_unit_msfp_localizedemailtemplate)
+- [business_unit_msfp_survey](#BKMK_business_unit_msfp_survey)
+- [msfp_alert_businessunit_owningbusinessunit](#BKMK_msfp_alert_businessunit_owningbusinessunit)
+- [msfp_surveyinvite_businessunit_owningbusinessunit](#BKMK_msfp_surveyinvite_businessunit_owningbusinessunit)
+- [msfp_surveyresponse_businessunit_owningbusinessunit](#BKMK_msfp_surveyresponse_businessunit_owningbusinessunit)
 
 
 ### <a name="BKMK_business_unit_exchangesyncidmapping"></a> business_unit_exchangesyncidmapping
@@ -2743,6 +2779,40 @@ Same as the [business_unit_featurecontrolsetting](featurecontrolsetting.md#BKMK_
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_business_unit_keyvaultreference"></a> business_unit_keyvaultreference
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_keyvaultreference](keyvaultreference.md#BKMK_business_unit_keyvaultreference) many-to-one relationship for the [keyvaultreference](keyvaultreference.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|keyvaultreference|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_keyvaultreference|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_managedidentity"></a> business_unit_managedidentity
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_managedidentity](managedidentity.md#BKMK_business_unit_managedidentity) many-to-one relationship for the [managedidentity](managedidentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|managedidentity|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_managedidentity|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_business_unit_customapi"></a> business_unit_customapi
 
 **Added by**: Active Solution Solution
@@ -2977,6 +3047,23 @@ Same as the [business_unit_desktopflowmodule](desktopflowmodule.md#BKMK_business
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_desktopflowmodule|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_flowevent"></a> business_unit_flowevent
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_flowevent](flowevent.md#BKMK_business_unit_flowevent) many-to-one relationship for the [flowevent](flowevent.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowevent|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_flowevent|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -3542,40 +3629,6 @@ Same as the [business_unit_msdyn_knowledgesearchfilter](msdyn_knowledgesearchfil
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_business_unit_keyvaultreference"></a> business_unit_keyvaultreference
-
-**Added by**: Active Solution Solution
-
-Same as the [business_unit_keyvaultreference](keyvaultreference.md#BKMK_business_unit_keyvaultreference) many-to-one relationship for the [keyvaultreference](keyvaultreference.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|keyvaultreference|
-|ReferencingAttribute|owningbusinessunit|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_keyvaultreference|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_business_unit_managedidentity"></a> business_unit_managedidentity
-
-**Added by**: Active Solution Solution
-
-Same as the [business_unit_managedidentity](managedidentity.md#BKMK_business_unit_managedidentity) many-to-one relationship for the [managedidentity](managedidentity.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|managedidentity|
-|ReferencingAttribute|owningbusinessunit|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_managedidentity|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_business_unit_fxexpression"></a> business_unit_fxexpression
 
 **Added by**: Active Solution Solution
@@ -3776,6 +3829,227 @@ Same as the [business_unit_msdyn_mobileapp](msdyn_mobileapp.md#BKMK_business_uni
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_msdyn_mobileapp|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_dvfilesearch"></a> business_unit_dvfilesearch
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_dvfilesearch](dvfilesearch.md#BKMK_business_unit_dvfilesearch) many-to-one relationship for the [dvfilesearch](dvfilesearch.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvfilesearch|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_dvfilesearch|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_dvfilesearchattribute"></a> business_unit_dvfilesearchattribute
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_dvfilesearchattribute](dvfilesearchattribute.md#BKMK_business_unit_dvfilesearchattribute) many-to-one relationship for the [dvfilesearchattribute](dvfilesearchattribute.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvfilesearchattribute|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_dvfilesearchattribute|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_dvfilesearchentity"></a> business_unit_dvfilesearchentity
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_dvfilesearchentity](dvfilesearchentity.md#BKMK_business_unit_dvfilesearchentity) many-to-one relationship for the [dvfilesearchentity](dvfilesearchentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvfilesearchentity|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_dvfilesearchentity|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_dvtablesearch"></a> business_unit_dvtablesearch
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_dvtablesearch](dvtablesearch.md#BKMK_business_unit_dvtablesearch) many-to-one relationship for the [dvtablesearch](dvtablesearch.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvtablesearch|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_dvtablesearch|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_dvtablesearchattribute"></a> business_unit_dvtablesearchattribute
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_dvtablesearchattribute](dvtablesearchattribute.md#BKMK_business_unit_dvtablesearchattribute) many-to-one relationship for the [dvtablesearchattribute](dvtablesearchattribute.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvtablesearchattribute|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_dvtablesearchattribute|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_dvtablesearchentity"></a> business_unit_dvtablesearchentity
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_dvtablesearchentity](dvtablesearchentity.md#BKMK_business_unit_dvtablesearchentity) many-to-one relationship for the [dvtablesearchentity](dvtablesearchentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvtablesearchentity|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_dvtablesearchentity|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_aiplugin"></a> business_unit_aiplugin
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_aiplugin](aiplugin.md#BKMK_business_unit_aiplugin) many-to-one relationship for the [aiplugin](aiplugin.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aiplugin|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_aiplugin|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_aipluginexternalschema"></a> business_unit_aipluginexternalschema
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_aipluginexternalschema](aipluginexternalschema.md#BKMK_business_unit_aipluginexternalschema) many-to-one relationship for the [aipluginexternalschema](aipluginexternalschema.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aipluginexternalschema|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_aipluginexternalschema|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_aipluginexternalschemaproperty"></a> business_unit_aipluginexternalschemaproperty
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_aipluginexternalschemaproperty](aipluginexternalschemaproperty.md#BKMK_business_unit_aipluginexternalschemaproperty) many-to-one relationship for the [aipluginexternalschemaproperty](aipluginexternalschemaproperty.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aipluginexternalschemaproperty|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_aipluginexternalschemaproperty|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_aiplugininstance"></a> business_unit_aiplugininstance
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_aiplugininstance](aiplugininstance.md#BKMK_business_unit_aiplugininstance) many-to-one relationship for the [aiplugininstance](aiplugininstance.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aiplugininstance|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_aiplugininstance|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_aipluginoperation"></a> business_unit_aipluginoperation
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_aipluginoperation](aipluginoperation.md#BKMK_business_unit_aipluginoperation) many-to-one relationship for the [aipluginoperation](aipluginoperation.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aipluginoperation|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_aipluginoperation|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_aipluginoperationparameter"></a> business_unit_aipluginoperationparameter
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_aipluginoperationparameter](aipluginoperationparameter.md#BKMK_business_unit_aipluginoperationparameter) many-to-one relationship for the [aipluginoperationparameter](aipluginoperationparameter.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aipluginoperationparameter|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_aipluginoperationparameter|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_aipluginusersetting"></a> business_unit_aipluginusersetting
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_aipluginusersetting](aipluginusersetting.md#BKMK_business_unit_aipluginusersetting) many-to-one relationship for the [aipluginusersetting](aipluginusersetting.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aipluginusersetting|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_aipluginusersetting|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -4545,6 +4819,23 @@ Same as the [business_unit_msdyn_fileupload](msdyn_fileupload.md#BKMK_business_u
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_business_unit_nlsqregistration"></a> business_unit_nlsqregistration
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_nlsqregistration](nlsqregistration.md#BKMK_business_unit_nlsqregistration) many-to-one relationship for the [nlsqregistration](nlsqregistration.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|nlsqregistration|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_nlsqregistration|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_business_unit_recentlyused"></a> business_unit_recentlyused
 
 **Added by**: Active Solution Solution
@@ -4558,6 +4849,142 @@ Same as the [business_unit_recentlyused](recentlyused.md#BKMK_business_unit_rece
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|business_unit_recentlyused|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_powerpagecomponent"></a> business_unit_powerpagecomponent
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_powerpagecomponent](powerpagecomponent.md#BKMK_business_unit_powerpagecomponent) many-to-one relationship for the [powerpagecomponent](powerpagecomponent.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|powerpagecomponent|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_powerpagecomponent|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_powerpagesite"></a> business_unit_powerpagesite
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_powerpagesite](powerpagesite.md#BKMK_business_unit_powerpagesite) many-to-one relationship for the [powerpagesite](powerpagesite.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|powerpagesite|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_powerpagesite|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_powerpagesitelanguage"></a> business_unit_powerpagesitelanguage
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_powerpagesitelanguage](powerpagesitelanguage.md#BKMK_business_unit_powerpagesitelanguage) many-to-one relationship for the [powerpagesitelanguage](powerpagesitelanguage.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|powerpagesitelanguage|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_powerpagesitelanguage|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_powerpagesitepublished"></a> business_unit_powerpagesitepublished
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_powerpagesitepublished](powerpagesitepublished.md#BKMK_business_unit_powerpagesitepublished) many-to-one relationship for the [powerpagesitepublished](powerpagesitepublished.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|powerpagesitepublished|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_powerpagesitepublished|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_adx_invitation"></a> business_unit_adx_invitation
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_adx_invitation](adx_invitation.md#BKMK_business_unit_adx_invitation) many-to-one relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_invitation|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_adx_invitation|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_adx_inviteredemption_businessunit_owningbusinessunit"></a> adx_inviteredemption_businessunit_owningbusinessunit
+
+**Added by**: Active Solution Solution
+
+Same as the [adx_inviteredemption_businessunit_owningbusinessunit](adx_inviteredemption.md#BKMK_adx_inviteredemption_businessunit_owningbusinessunit) many-to-one relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_inviteredemption|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|adx_inviteredemption_businessunit_owningbusinessunit|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_adx_portalcomment_businessunit_owningbusinessunit"></a> adx_portalcomment_businessunit_owningbusinessunit
+
+**Added by**: Active Solution Solution
+
+Same as the [adx_portalcomment_businessunit_owningbusinessunit](adx_portalcomment.md#BKMK_adx_portalcomment_businessunit_owningbusinessunit) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|adx_portalcomment_businessunit_owningbusinessunit|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_adx_setting"></a> business_unit_adx_setting
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_adx_setting](adx_setting.md#BKMK_business_unit_adx_setting) many-to-one relationship for the [adx_setting](adx_setting.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_setting|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_adx_setting|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -4596,19 +5023,240 @@ Same as the [business_unit_mspcat_packagestore](mspcat_packagestore.md#BKMK_busi
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_business_unit_flowevent"></a> business_unit_flowevent
+### <a name="BKMK_business_unit_msfp_alertrule"></a> business_unit_msfp_alertrule
 
 **Added by**: Active Solution Solution
 
-Same as the [business_unit_flowevent](flowevent.md#BKMK_business_unit_flowevent) many-to-one relationship for the [flowevent](flowevent.md) table/entity.
+Same as the [business_unit_msfp_alertrule](msfp_alertrule.md#BKMK_business_unit_msfp_alertrule) many-to-one relationship for the [msfp_alertrule](msfp_alertrule.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|flowevent|
+|ReferencingEntity|msfp_alertrule|
 |ReferencingAttribute|owningbusinessunit|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|business_unit_flowevent|
+|ReferencedEntityNavigationPropertyName|business_unit_msfp_alertrule|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msfp_question"></a> business_unit_msfp_question
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msfp_question](msfp_question.md#BKMK_business_unit_msfp_question) many-to-one relationship for the [msfp_question](msfp_question.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_question|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msfp_question|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msfp_satisfactionmetric"></a> business_unit_msfp_satisfactionmetric
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msfp_satisfactionmetric](msfp_satisfactionmetric.md#BKMK_business_unit_msfp_satisfactionmetric) many-to-one relationship for the [msfp_satisfactionmetric](msfp_satisfactionmetric.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_satisfactionmetric|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msfp_satisfactionmetric|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msfp_questionresponse"></a> business_unit_msfp_questionresponse
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msfp_questionresponse](msfp_questionresponse.md#BKMK_business_unit_msfp_questionresponse) many-to-one relationship for the [msfp_questionresponse](msfp_questionresponse.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_questionresponse|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msfp_questionresponse|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msfp_project"></a> business_unit_msfp_project
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msfp_project](msfp_project.md#BKMK_business_unit_msfp_project) many-to-one relationship for the [msfp_project](msfp_project.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_project|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msfp_project|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msfp_surveyreminder"></a> business_unit_msfp_surveyreminder
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msfp_surveyreminder](msfp_surveyreminder.md#BKMK_business_unit_msfp_surveyreminder) many-to-one relationship for the [msfp_surveyreminder](msfp_surveyreminder.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyreminder|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msfp_surveyreminder|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msfp_unsubscribedrecipient"></a> business_unit_msfp_unsubscribedrecipient
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msfp_unsubscribedrecipient](msfp_unsubscribedrecipient.md#BKMK_business_unit_msfp_unsubscribedrecipient) many-to-one relationship for the [msfp_unsubscribedrecipient](msfp_unsubscribedrecipient.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_unsubscribedrecipient|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msfp_unsubscribedrecipient|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msfp_emailtemplate"></a> business_unit_msfp_emailtemplate
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msfp_emailtemplate](msfp_emailtemplate.md#BKMK_business_unit_msfp_emailtemplate) many-to-one relationship for the [msfp_emailtemplate](msfp_emailtemplate.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_emailtemplate|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msfp_emailtemplate|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msfp_fileresponse"></a> business_unit_msfp_fileresponse
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msfp_fileresponse](msfp_fileresponse.md#BKMK_business_unit_msfp_fileresponse) many-to-one relationship for the [msfp_fileresponse](msfp_fileresponse.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_fileresponse|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msfp_fileresponse|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msfp_localizedemailtemplate"></a> business_unit_msfp_localizedemailtemplate
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msfp_localizedemailtemplate](msfp_localizedemailtemplate.md#BKMK_business_unit_msfp_localizedemailtemplate) many-to-one relationship for the [msfp_localizedemailtemplate](msfp_localizedemailtemplate.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_localizedemailtemplate|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msfp_localizedemailtemplate|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_business_unit_msfp_survey"></a> business_unit_msfp_survey
+
+**Added by**: Active Solution Solution
+
+Same as the [business_unit_msfp_survey](msfp_survey.md#BKMK_business_unit_msfp_survey) many-to-one relationship for the [msfp_survey](msfp_survey.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_survey|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|business_unit_msfp_survey|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_alert_businessunit_owningbusinessunit"></a> msfp_alert_businessunit_owningbusinessunit
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_alert_businessunit_owningbusinessunit](msfp_alert.md#BKMK_msfp_alert_businessunit_owningbusinessunit) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_alert|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_alert_businessunit_owningbusinessunit|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_surveyinvite_businessunit_owningbusinessunit"></a> msfp_surveyinvite_businessunit_owningbusinessunit
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_surveyinvite_businessunit_owningbusinessunit](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_businessunit_owningbusinessunit) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyinvite|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_surveyinvite_businessunit_owningbusinessunit|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_surveyresponse_businessunit_owningbusinessunit"></a> msfp_surveyresponse_businessunit_owningbusinessunit
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_surveyresponse_businessunit_owningbusinessunit](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_businessunit_owningbusinessunit) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyresponse|
+|ReferencingAttribute|owningbusinessunit|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_surveyresponse_businessunit_owningbusinessunit|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

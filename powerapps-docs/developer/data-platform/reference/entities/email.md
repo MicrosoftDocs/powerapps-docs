@@ -1,7 +1,7 @@
 ---
 title: "Email table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Email table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -84,6 +84,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [cc](#BKMK_cc)
 - [ConversationTrackingId](#BKMK_ConversationTrackingId)
 - [CorrelatedActivityId](#BKMK_CorrelatedActivityId)
+- [correlatedsubjectchanged](#BKMK_correlatedsubjectchanged)
 - [DelayedEmailSendTime](#BKMK_DelayedEmailSendTime)
 - [DeliveryAttempts](#BKMK_DeliveryAttempts)
 - [DeliveryPriorityCode](#BKMK_DeliveryPriorityCode)
@@ -119,6 +120,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ReceivingMailboxId](#BKMK_ReceivingMailboxId)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
+- [related](#BKMK_related)
 - [ReminderActionCardId](#BKMK_ReminderActionCardId)
 - [ReservedForInternalUse](#BKMK_ReservedForInternalUse)
 - [ScheduledEnd](#BKMK_ScheduledEnd)
@@ -377,6 +379,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Targets|email|
 |Type|Lookup|
+
+
+### <a name="BKMK_correlatedsubjectchanged"></a> correlatedsubjectchanged
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates if the subject changed compared to the subject of the correlated email|
+|DisplayName|Correlated subject changed|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|correlatedsubjectchanged|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### correlatedsubjectchanged Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_DelayedEmailSendTime"></a> DelayedEmailSendTime
@@ -639,7 +666,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Contains a set of internet headers associated to the email message in json format (for internal use only)|
+|Description|Contains a set of internet headers associated to the email message in json format|
 |DisplayName|Internet message headers|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -971,7 +998,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,asyncoperation,contact,knowledgearticle,knowledgebaserecord|
+|Targets|account,adx_invitation,asyncoperation,contact,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
 
 
@@ -986,6 +1013,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|regardingobjecttypecode|
 |RequiredLevel|None|
 |Type|EntityName|
+
+
+### <a name="BKMK_related"></a> related
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enter the related records for the email.|
+|DisplayName|Related|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|related|
+|RequiredLevel|None|
+|Targets|account,contact,knowledgearticle,queue,systemuser,unresolvedaddress|
+|Type|PartyList|
 
 
 ### <a name="BKMK_ReminderActionCardId"></a> ReminderActionCardId
@@ -1373,6 +1416,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [IsEmailFollowed](#BKMK_IsEmailFollowed)
 - [IsEmailReminderSet](#BKMK_IsEmailReminderSet)
 - [IsRegularActivity](#BKMK_IsRegularActivity)
+- [IsSafeDescriptionTruncated](#BKMK_IsSafeDescriptionTruncated)
 - [IsUnsafe](#BKMK_IsUnsafe)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -1828,6 +1872,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 **DefaultValue**: 0
 
+
+
+### <a name="BKMK_IsSafeDescriptionTruncated"></a> IsSafeDescriptionTruncated
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|IsSafeDescriptionTruncated|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|issafedescriptiontruncated|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_IsUnsafe"></a> IsUnsafe
@@ -2684,6 +2746,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [mailbox_email_ReceivingMailboxId](#BKMK_mailbox_email_ReceivingMailboxId)
 - [email_acceptingentity_queue](#BKMK_email_acceptingentity_queue)
 - [email_acceptingentity_systemuser](#BKMK_email_acceptingentity_systemuser)
+- [adx_invitation_Emails](#BKMK_adx_invitation_Emails)
+- [mspp_adplacement_Emails](#BKMK_mspp_adplacement_Emails)
+- [mspp_pollplacement_Emails](#BKMK_mspp_pollplacement_Emails)
+- [mspp_publishingstatetransitionrule_Emails](#BKMK_mspp_publishingstatetransitionrule_Emails)
+- [mspp_redirect_Emails](#BKMK_mspp_redirect_Emails)
+- [mspp_shortcut_Emails](#BKMK_mspp_shortcut_Emails)
+- [mspp_website_Emails](#BKMK_mspp_website_Emails)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_Emails"></a> KnowledgeBaseRecord_Emails
@@ -2801,6 +2870,48 @@ See the [email_acceptingentity_queue](queue.md#BKMK_email_acceptingentity_queue)
 ### <a name="BKMK_email_acceptingentity_systemuser"></a> email_acceptingentity_systemuser
 
 See the [email_acceptingentity_systemuser](systemuser.md#BKMK_email_acceptingentity_systemuser) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_adx_invitation_Emails"></a> adx_invitation_Emails
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_Emails](adx_invitation.md#BKMK_adx_invitation_Emails) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_mspp_adplacement_Emails"></a> mspp_adplacement_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_adplacement_Emails](mspp_adplacement.md#BKMK_mspp_adplacement_Emails) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+
+### <a name="BKMK_mspp_pollplacement_Emails"></a> mspp_pollplacement_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_pollplacement_Emails](mspp_pollplacement.md#BKMK_mspp_pollplacement_Emails) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_Emails"></a> mspp_publishingstatetransitionrule_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_Emails](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_Emails) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_redirect_Emails"></a> mspp_redirect_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_redirect_Emails](mspp_redirect.md#BKMK_mspp_redirect_Emails) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_Emails"></a> mspp_shortcut_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_Emails](mspp_shortcut.md#BKMK_mspp_shortcut_Emails) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_Emails"></a> mspp_website_Emails
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_Emails](mspp_website.md#BKMK_mspp_website_Emails) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
 
 ### See also
 
