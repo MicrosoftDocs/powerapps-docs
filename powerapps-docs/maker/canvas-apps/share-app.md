@@ -17,7 +17,7 @@ contributors:
 ---
 # Share a canvas app with your organization
 
-After you build a canvas app that addresses a business need, specify which users in your organization can run the app and who can modify and even re-share it. Specify each user by name, or specify a security group in Azure Active Directory (Azure AD). If everyone would benefit from your app, specify that your entire organization can run it.
+After you build a canvas app that addresses a business need, specify which users in your organization can run the app and who can modify and even re-share it. Specify each user by name, or specify a security group in Microsoft Entra ID. If everyone would benefit from your app, specify that your entire organization can run it.
 
 > [!IMPORTANT]
 > For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Microsoft Dataverse](#dataverse) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
@@ -52,7 +52,7 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
     ![Share an app.](./media/share-app/share-app.png "Share an app")
 
-1. Specify by name or alias the users or security groups in Azure AD with whom you want to share the app.
+1. Specify by name or alias the users or security groups in Microsoft Entra ID with whom you want to share the app.
 
     - To allow your entire organization to run the app (but not modify or share it), enter **Everyone** in the sharing panel. Users will be able to find this app by setting the apps list filter to "Org apps".
 
@@ -159,11 +159,11 @@ You can share an app with [Microsoft 365 groups](/microsoft-365/admin/create-gro
 
 **To check whether a Microsoft 365 group has security enabled**
 
-1. Ensure that you have access to the [Azure AD cmdlets](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
+1. Ensure that you have access to the [Microsoft Entra ID cmdlets](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
 
-1. Go to [Azure portal](https://portal.azure.com/) \> **Azure Active Directory** \> **Groups**, select the appropriate group, and then copy the **Object Id**.
+1. Go to [Azure portal](https://portal.azure.com/) \> **Microsoft Entra** \> **Groups**, select the appropriate group, and then copy the **Object Id**.
 
-1. [Connect to Azure AD](/powershell/module/azuread/connect-azuread) by using the `Connect-AzureAD` PowerShell cmdlet.
+1. [Connect to Microsoft Entra ID](/powershell/module/azuread/connect-azuread) by using the `Connect-AzureAD` PowerShell cmdlet.
 
     ![Connect-AzureAD.](media/share-app/azure_cmdlet_connect.png "Connect-AzureAD")
 
@@ -181,7 +181,7 @@ If the group isn't security-enabled, you can use the PowerShell cmdlet [Set-Azur
 
 > [!NOTE]
 > You must be the owner of the Microsoft 365 group to enable security.
-> Setting the **SecurityEnabled** property to **True** doesn't affect how Power Apps and Microsoft 365 features work. This command is required because the **SecurityEnabled** property is set to **False** by default when Microsoft 365 groups are created outside of Azure AD.
+> Setting the **SecurityEnabled** property to **True** doesn't affect how Power Apps and Microsoft 365 features work. This command is required because the **SecurityEnabled** property is set to **False** by default when Microsoft 365 groups are created outside of Microsoft Entra ID.
 
 After a few minutes, you can discover this group in the Power Apps sharing panel and share apps with this group.
 <a name="manage-table-permissions"></a>
@@ -192,18 +192,18 @@ After a few minutes, you can discover this group in the Power Apps sharing panel
 If you create an app based on Dataverse, you must also ensure that the users you share the app with have the appropriate permissions for the table or tables used by the app. Particularly, those users must belong to a security role that can do tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign the role to each user as appropriate.
 
 > [!NOTE]
-> - You can assign security roles to individual users and security groups in Azure AD, but not to Microsoft 365 groups.
+> - You can assign security roles to individual users and security groups in Microsoft Entra ID, but not to Microsoft 365 groups.
 > - If a user isn't in the Dataverse root business unit, you can share the app without providing a security role, and then set the security role directly.
 
 ### Prerequisite
 
 To assign a role, you must have **System administrator** permissions for a Dataverse database.
 
-**To assign a security group in Azure AD to a role**
+**To assign a security group in Microsoft Entra to a role**
 
 1. In the sharing panel under **Data permissions**, select **Assign a security role**.
 
-1. Select the Dataverse roles that you want to apply to the selected Azure AD users or groups.
+1. Select the Dataverse roles that you want to apply to the selected Microsoft Entra users or groups.
 
      ![Security role list.](media/share-app/cds-assign-security-role-list.png "Security role list")
 
