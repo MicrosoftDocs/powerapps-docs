@@ -1,7 +1,7 @@
 ---
 title: "ServicePlan table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ServicePlan table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -832,6 +832,9 @@ See the [lk_serviceplan_modifiedonbehalfby](systemuser.md#BKMK_lk_serviceplan_mo
 
 Relationship details provided where the ServicePlan table is the first table in the relationship. Listed by **SchemaName**.
 
+- [serviceplan_appmodule](#BKMK_serviceplan_appmodule)
+- [serviceplan_customcontrol](#BKMK_serviceplan_customcontrol)
+
 
 ### <a name="BKMK_serviceplan_appmodule"></a> serviceplan_appmodule
 
@@ -853,6 +856,29 @@ IntersectEntityName: serviceplanappmodules<br />
 |LogicalName|appmodule|
 |IntersectAttribute|appmoduleid|
 |NavigationPropertyName|serviceplan_appmodule_association|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+
+
+### <a name="BKMK_serviceplan_customcontrol"></a> serviceplan_customcontrol
+
+IntersectEntityName: serviceplancustomcontrol<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|serviceplanid|
+|IsCustomizable|False|
+|LogicalName|serviceplan|
+|NavigationPropertyName|serviceplan_customcontrol_association|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|customcontrol|
+|IntersectAttribute|customcontrolid|
+|NavigationPropertyName|serviceplan_customcontrol_association|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 
 

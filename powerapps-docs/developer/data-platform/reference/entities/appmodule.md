@@ -1,7 +1,7 @@
 ---
 title: "Model-driven App (AppModule)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Model-driven App (AppModule)  table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -57,6 +57,9 @@ A role-based, modular business app that provides task-based functionality for a 
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [aiappdescription](#BKMK_aiappdescription)
+- [aidescriptiongeneratedon](#BKMK_aidescriptiongeneratedon)
+- [appgraph](#BKMK_appgraph)
 - [AppModuleId](#BKMK_AppModuleId)
 - [AppModuleIdUnique](#BKMK_AppModuleIdUnique)
 - [AppModuleVersion](#BKMK_AppModuleVersion)
@@ -82,6 +85,59 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [URL](#BKMK_URL)
 - [WebResourceId](#BKMK_WebResourceId)
 - [WelcomePageId](#BKMK_WelcomePageId)
+
+
+### <a name="BKMK_aiappdescription"></a> aiappdescription
+
+**Added by**: App Module Metadata Solution
+
+|Property|Value|
+|--------|-----|
+|Description|This field is used to store AI generated Description for Model-driven App|
+|DisplayName|AI App Description|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|aiappdescription|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_aidescriptiongeneratedon"></a> aidescriptiongeneratedon
+
+**Added by**: App Module Metadata Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|This field stores the Time when last AI App Description was generated.|
+|DisplayName|AI Description Generated On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|aidescriptiongeneratedon|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_appgraph"></a> appgraph
+
+**Added by**: App Module Metadata Solution
+
+|Property|Value|
+|--------|-----|
+|Description|This field is used to store App Graph for Model-driven App|
+|DisplayName|App Graph|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|appgraph|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_AppModuleId"></a> AppModuleId
