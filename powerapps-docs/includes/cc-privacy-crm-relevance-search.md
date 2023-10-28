@@ -46,7 +46,7 @@ Service Fabric was born from years of experience at Microsoft delivering mission
   
 Changes to customer data are stored for up to 2 days in [!INCLUDE[pn_azure_blob_storage](pn_azure_blob_storage.md)].  These blobs are encrypted by leveraging the latest feature in the [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage SDK, which provides symmetric and asymmetric encryption support and integration with [!INCLUDE[pn_azure_key_vault](pn-azure-key-vault.md)]. With the [!INCLUDE[pn_crm_8_2_0_online_subsequent](pn-crm-8-2-0-online-subsequent.md)], the documents found in Notes and Attachments on email messages and appointments are also synced to the blob storage.  
   
-[Azure Active Directory Service](https://azure.microsoft.com/services/active-directory/)  
+[Microsoft Entra Service](https://azure.microsoft.com/services/active-directory/)  
   
 [!INCLUDE[pn_azure_active_directory](pn-azure-active-directory.md)] is used to authenticate between the [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)] and [!INCLUDE[pn_Windows_Azure](pn-windows-azure.md)] services.  
   
