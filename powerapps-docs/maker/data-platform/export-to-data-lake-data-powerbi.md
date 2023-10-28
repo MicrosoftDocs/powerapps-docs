@@ -62,7 +62,7 @@ This section describes the prerequisites necessary to consume Dataverse data wit
 
 1. Select **CDM Folder View (Beta)**, and then select **OK**.
 
-1. If prompted to sign in, you can sign in with your Azure Active Directory account or with the **Account key**. To sign in with an **Account key**, select the option from the left side bar.
+1. If prompted to sign in, you can sign in with your Microsoft Entra account or with the **Account key**. To sign in with an **Account key**, select the option from the left side bar.
 
 1. Find the account key by going back to the storage account settings and selecting **Access keys** from the left pane. Copy the first key and paste it in Power BI. Select **OK**.
 

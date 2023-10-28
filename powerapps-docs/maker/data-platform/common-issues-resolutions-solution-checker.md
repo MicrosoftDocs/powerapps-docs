@@ -181,17 +181,17 @@ Solution checker may fail due to the errors "ISV code aborted the operation" or 
 
 Common operations invoked by solution checker include Create and Update. These operations can occur on the following tables: Analysis Job, Analysis Component, or Analysis Result.
 
-## Solution checker fails due to disabled first-party application in Azure Active Directory
+## Solution checker fails due to disabled first-party application in Microsoft Entra ID
 
-The first-party enterprise application identity used by solution checker (PowerApps-Advisor) shouldn't be disabled in Azure Active Directory (Azure AD). If disabled, the identity can't authenticate when requesting bearer tokens for Dataverse and other required resource providers on-behalf of the requesting user.
+The first-party enterprise application identity used by solution checker (PowerApps-Advisor) shouldn't be disabled in Microsoft Entra ID. If disabled, the identity can't authenticate when requesting bearer tokens for Dataverse and other required resource providers on-behalf of the requesting user.
 
-Follow the below steps to verify that the application identity hasn't been disabled in Azure AD and if necessary enable the application.
+Follow the below steps to verify that the application identity hasn't been disabled in Microsoft Entra and if necessary enable the application.
 
 ### How to verify and/or modify application enabled status
 
 To verify and/or modify the enabled status of the PowerApps-Advisor enterprise application identity
 
-1. Access your tenant in the [Azure Active Directory (Azure AD) Portal](https://aad.portal.azure.com/).
+1. Access your tenant in the [Microsoft Entra Portal](https://aad.portal.azure.com/).
 2. Navigate to **Enterprise Applications**.
 3. Select **All Application** and search for **'PowerApps-Advisor'**.
 
@@ -211,7 +211,7 @@ To verify and/or modify the enabled status of the PowerApps-Advisor enterprise a
 9. Run solution checker again.
 
 > [!IMPORTANT]
-> You must have administrator privileges in Azure Active Directory (AAD) in order to edit enterprise applications.
+> You must have administrator privileges in Microsoft Entra ID (Microsoft Entra ID) in order to edit enterprise applications.
 
 ## Solution checker fails to export solutions with draft business process flow components
 
