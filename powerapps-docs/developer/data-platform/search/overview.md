@@ -120,7 +120,7 @@ More information:
 
 ## Detect if search is enabled
 
-Dataverse search is enabled by default for production environments, but it's an opt-out feature so it could be turned off even in a production environment. If you're using an environment other than a production environment, an administrator must enable it.
+Dataverse search is enabled by default for production environments, but it's an opt-out feature so it could be turned off even in a production environment. If you're using an environment other than a production environment, an administrator must enable it. [Learn how to enable search in the admin center](/power-platform/admin/configure-relevance-search-organization#enable-dataverse-search).
 
 ### Error when search not enabled
 
@@ -338,7 +338,8 @@ Dataverse search allows a user to send one request per second. If you exceed thi
 [Dataverse Search suggest](suggest.md)   
 [Dataverse Search autocomplete](autocomplete.md)   
 [Dataverse Search statistics and status](statistics-status.md)   
-[Dataverse legacy search](legacy.md)
+[Dataverse legacy search](legacy.md)   
+[Configure Dataverse search for your environment](/power-platform/admin/configure-relevance-search-organization)
 
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
