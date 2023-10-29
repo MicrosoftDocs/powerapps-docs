@@ -34,10 +34,10 @@ User account (A) needs the `prvActOnBehalfOfAnotherUser` privilege, which is inc
 
 There are two ways you can impersonate a user, both of which are made possible by passing in a header with the corresponding user id.
 
-1. **Preferred:** Impersonate a user based on their Azure Active Directory (AAD) object id by passing that value along with the header `CallerObjectId`.
+1. **Preferred:** Impersonate a user based on their Microsoft Entra ID object id by passing that value along with the header `CallerObjectId`.
 1. **Legacy:** To impersonate a user based on their systemuserid you can leverage `MSCRMCallerID` with the corresponding guid value.
 
- In this example, a new account entity is created on behalf of the user with an Azure Active Directory object id `e39c5d16-675b-48d1-8e67-667427e9c084`.
+ In this example, a new account entity is created on behalf of the user with an Microsoft Entra ID object id `e39c5d16-675b-48d1-8e67-667427e9c084`.
   
  **Request:**
 
