@@ -35,7 +35,26 @@ This will allow the comparison of a column against a specific value and return a
 
 Dataverse column comparison has the following limitations:
 
-- You can only compare columns within a single table.
+<del>- You can only compare columns within a single table.</del>
+You can now compare between tables. Example FetchXML:
+
+```xml
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true" no-lock="true">
+  <entity name="quote">
+    <attribute name="quoteid" />
+    <attribute name="ownerid" />
+    <filter>
+      <condition attribute="ownerid" operator="neq" valueof="s.ownerid" />
+    </filter>
+    <link-entity name="salesorder" from="quoteid" to="quoteid" link-type="outer" alias="s">
+      <attribute name="ownerid" />
+      <attribute name="salesorderid" />
+    </link-entity>
+  </entity>
+</fetch>
+
+```
+
 - Only two columns may be compared at a time.
 - Multi-value condition operators aren't supported (that is, "in").
 - Extended condition operators aren't supported (that is, "creditlimit \> spends+1000").
