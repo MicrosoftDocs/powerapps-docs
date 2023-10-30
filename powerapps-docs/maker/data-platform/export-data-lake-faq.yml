@@ -77,6 +77,10 @@ sections:
         - Attachment
         - Calendar
         - Calendarrule
+
+> [!NOTE]
+> You can now add Audit table for an export using Azure Synapse Link for Dataverse feature however, it is important to note that the export of Audit table is only supported with [Delta Lake Profiles](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-delta-lake)
+
    - question: Does Azure Synapse Link support calculated columns?
      answer: |
         Calculated columns are only supported when the lookup field is located within the same table.
