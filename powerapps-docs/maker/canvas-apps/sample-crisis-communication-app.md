@@ -539,7 +539,7 @@ Complete all the fields as shown in the following table, and then select **Save*
 1. Search for and select your distribution group.
 1. Copy the **Object Id** field.
 
-    ![Getting the Microsoft Entra ID.](media/sample-crisis-communication-app/11-Microsoft Entra ID-Group-ID.png)
+    ![Getting the Microsoft Entra ID.](media/sample-crisis-communication-app/11-AAD-Group-ID.png)
 
 1. Paste the ID into the **Microsoft Entra group ID** field in the admin app.
 
