@@ -1,7 +1,7 @@
 ---
 title: "CustomControl table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomControl table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -167,6 +167,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|name|
 |MaxLength|200|
 |RequiredLevel|SystemRequired|
@@ -648,6 +649,16 @@ See the [lk_customcontrol_modifiedonbehalfby](systemuser.md#BKMK_lk_customcontro
 ### <a name="BKMK_lk_customcontrol_modifiedby"></a> lk_customcontrol_modifiedby
 
 See the [lk_customcontrol_modifiedby](systemuser.md#BKMK_lk_customcontrol_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the CustomControl table is the first table in the relationship. Listed by **SchemaName**.
+
+
+### <a name="BKMK_serviceplan_customcontrol"></a> serviceplan_customcontrol
+
+See the [serviceplan_customcontrol](serviceplan.md#BKMK_serviceplan_customcontrol) many-to-many relationship for the [serviceplan](serviceplan.md) table/entity.
 
 ### See also
 
