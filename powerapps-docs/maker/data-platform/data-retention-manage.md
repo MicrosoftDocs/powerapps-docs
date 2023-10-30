@@ -6,19 +6,12 @@ ms.author: gned
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to 
-ms.date: 08/09/2023
+ms.date: 10/20/2023
 ms.custom: template-how-to 
 ---
-# Manage data retention policies (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Manage data retention policies
 
 Use the retention policies dashboard to view and manage retention policies. From the dashboard, view the policy run history, update policy details, deactivate, and delete a policy.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - For public preview, only non-production environments are allowed for previewing the long-term data retention feature.
 
 ## View and manage retention policies
 
@@ -62,5 +55,5 @@ Dataverse bulk delete with the Dataverse SDK supports deletion of long term reta
 
 ## See also
 
-[View long term retained data (preview)](data-retention-view.md) <br />
+[View long term retained data](data-retention-view.md) <br />
 [Share your ideas](https://experience.dynamics.com/ideas/categories/list/?category=55f731de-11f3-ed11-8848-00224827ed7b&forum=eef9aef6-0ff3-ed11-8848-00224827e88b)

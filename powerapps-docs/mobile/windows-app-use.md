@@ -4,7 +4,7 @@ description: Use Power Apps for Windows.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/13/2022
+ms.date: 10/25/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -175,8 +175,6 @@ To configure your app in offline mode, see:
 
 
 ## Session ID
-
-If you are having an issue with Power Apps for Windows then send a description of your issue with a screenshot and the session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). 
 
 To get the session ID, select the More button (...) > **Settings** and then copy the session ID. 
 
