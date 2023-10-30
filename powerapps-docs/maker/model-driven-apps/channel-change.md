@@ -22,6 +22,8 @@ The release channel affects the features that are shown to a user. When the mont
 The release channel for model-driven apps can be changed in a couple different ways.
 
 - Environment channel
+- App channel (starting with build 23111)
+- User channel override (starting with build 23111)
 - Browser session channel
 
 > [!NOTE]
@@ -49,13 +51,14 @@ A single browser session can be changed by adding the URL parameter ```&channel=
 | Semi-annual | ```&channel=semiannual``` |
 | Monthly | ```&channel=monthly``` |
 
-When the channel is monthly, the monthly release can be changed using the URL parameter ```&channelrelease=<releasename>```. Starting with build 23074, the release name format is the two digit year and two digit month, like *YYMM*. Prior to build 23074, the release name is a three letter month and four digit year, like *MmmYYYY*.
+When the channel is monthly, the monthly release can be changed using the URL parameter ```&channelrelease=<releasename>```. The release name format is the two digit year and two digit month, like *YYMM*. Additionally the next monthly release can be set using ```&channelrelease=next```.
 
 | Monthly Release | Release Name Parameter |
 | --- | --- |
-| July 2023 | ```&channelrelease=2307``` |  
-| August 2023 | ```&channelrelease=2308``` |  
-| September 2023 | ```&channelrelease=2309``` |  
+| October 2023 | ```&channelrelease=2310``` |  
+| November 2023 | ```&channelrelease=2311``` |  
+| December 2023 | ```&channelrelease=2312``` |  
+| January 2024 | ```&channelrelease=2401``` |  
 
 > [!NOTE]
 > Any valid ```YYMM``` release can be entered but future dates might not have any features defined.  
@@ -68,14 +71,14 @@ Validation should be done for each monthly channel release before it's automatic
 
 1. Find the next monthly release short name by opening [Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
 
-1. Add the URL parameter ```&channelrelease=``` with the next release short name like *2308*.
+1. Add the URL parameter ```&channelrelease=next```. Alternative a specific release can be set with the URL parameter ```&channelrelease=`` with the next release short name like *2308*.
 
 ## Comparing features across channels and releases
 
 When a user running the monthly channel report observes unexpected behavior, the following steps can help investigate where the behavior occurred.
 
 - Check if the unexpected behavior exists in the semi-annual channel by using the URL parameter ```&channel=semiannual```. If the behavior also exists in the semi-annual channel, it's unrelated to the monthly channel and should follow normal support processes.
-- Check if the unexpected behavior exists in the previous monthly release by using the URL parameter ```&channelrelease=``` with the prior release short name like *Jun2023*. If the two monthly releases behave the same, then it's likely unrelated to a specific monthly channel release and should follow normal support processes.
+- Check if the unexpected behavior exists in the previous monthly release by using the URL parameter ```&channelrelease=``` with the prior release short name like *2308*. If the two monthly releases behave the same, then it's likely unrelated to a specific monthly channel release and should follow normal support processes.
 - When a change is noticed between monthly releases, review the changed features in [Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases) to learn more.
 
 ## See also
