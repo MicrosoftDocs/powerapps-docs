@@ -1,7 +1,7 @@
 ---
 title: "workqueueitem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the workqueueitem table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -75,11 +75,17 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [priority](#BKMK_priority)
+- [processingduration](#BKMK_processingduration)
 - [processingresult](#BKMK_processingresult)
+- [processingstarttime](#BKMK_processingstarttime)
+- [processinguser](#BKMK_processinguser)
+- [processorid](#BKMK_processorid)
+- [processortype](#BKMK_processortype)
 - [requeuecount](#BKMK_requeuecount)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [uniqueidbyqueue](#BKMK_uniqueidbyqueue)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [workqueueid](#BKMK_workqueueid)
 - [workqueueitemId](#BKMK_workqueueitemId)
@@ -275,6 +281,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_processingduration"></a> processingduration
+
+|Property|Value|
+|--------|-----|
+|Description|The duration of the processing in seconds.|
+|DisplayName|Processing Duration|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|processingduration|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
+
+
 ### <a name="BKMK_processingresult"></a> processingresult
 
 |Property|Value|
@@ -289,6 +311,73 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|1048576|
 |RequiredLevel|None|
 |Type|Memo|
+
+
+### <a name="BKMK_processingstarttime"></a> processingstarttime
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|The date and time when the processing has started.|
+|DisplayName|Processing Start Time|
+|Format|DateOnly|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|processingstarttime|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_processinguser"></a> processinguser
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for the user that processed the item.|
+|DisplayName|Processing User|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|processinguser|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
+
+
+### <a name="BKMK_processorid"></a> processorid
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for the processor (workflow, flowmachine, etc.) that processed the item.|
+|DisplayName|Processor id|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|processorid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_processortype"></a> processortype
+
+|Property|Value|
+|--------|-----|
+|Description|The processor type allows to display if the item was processed through a cloud flow, a flow machine or another processor type.|
+|DisplayName|Processor Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|processortype|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### processortype Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None||
+|1|Cloud Flow||
+|2|Flow Machine||
+
 
 
 ### <a name="BKMK_requeuecount"></a> requeuecount
@@ -375,6 +464,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_uniqueidbyqueue"></a> uniqueidbyqueue
+
+|Property|Value|
+|--------|-----|
+|Description|An identifier of the work queue item used to uniquely identify a work queue item inside a work queue.|
+|DisplayName|Unique Id By Queue|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|uniqueidbyqueue|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
 
 |Property|Value|
@@ -448,6 +553,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [processinguserName](#BKMK_processinguserName)
+- [processinguserYomiName](#BKMK_processinguserYomiName)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -876,6 +983,38 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Lookup|
 
 
+### <a name="BKMK_processinguserName"></a> processinguserName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|processingusername|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_processinguserYomiName"></a> processinguserYomiName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|processinguseryominame|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
@@ -1102,6 +1241,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [user_workqueueitem](#BKMK_user_workqueueitem)
 - [team_workqueueitem](#BKMK_team_workqueueitem)
 - [business_unit_workqueueitem](#BKMK_business_unit_workqueueitem)
+- [workqueueitem_processinguser](#BKMK_workqueueitem_processinguser)
 - [workqueue_workqueueitem](#BKMK_workqueue_workqueueitem)
 
 
@@ -1146,6 +1286,12 @@ See the [team_workqueueitem](team.md#BKMK_team_workqueueitem) one-to-many relati
 **Added by**: System Solution Solution
 
 See the [business_unit_workqueueitem](businessunit.md#BKMK_business_unit_workqueueitem) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+
+### <a name="BKMK_workqueueitem_processinguser"></a> workqueueitem_processinguser
+
+**Added by**: System Solution Solution
+
+See the [workqueueitem_processinguser](systemuser.md#BKMK_workqueueitem_processinguser) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_workqueue_workqueueitem"></a> workqueue_workqueueitem
 

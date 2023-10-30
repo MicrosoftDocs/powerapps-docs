@@ -18,6 +18,32 @@
   href: activityparty.md
 - name: ActivityPointer
   href: activitypointer.md
+- name: adx_externalidentity
+  href: adx_externalidentity.md
+- name: adx_invitation
+  href: adx_invitation.md
+- name: adx_inviteredemption
+  href: adx_inviteredemption.md
+- name: adx_portalcomment
+  href: adx_portalcomment.md
+- name: adx_setting
+  href: adx_setting.md
+- name: adx_webformsession
+  href: adx_webformsession.md
+- name: AIPlugin
+  href: aiplugin.md
+- name: AIPluginExternalSchema
+  href: aipluginexternalschema.md
+- name: AIPluginExternalSchemaProperty
+  href: aipluginexternalschemaproperty.md
+- name: AIPluginInstance
+  href: aiplugininstance.md
+- name: AIPluginOperation
+  href: aipluginoperation.md
+- name: AIPluginOperationParameter
+  href: aipluginoperationparameter.md
+- name: AIPluginUserSetting
+  href: aipluginusersetting.md
 - name: Annotation
   href: annotation.md
 - name: AnnualFiscalCalendar
@@ -144,6 +170,18 @@
   href: duplicaterule.md
 - name: DuplicateRuleCondition
   href: duplicaterulecondition.md
+- name: DVFileSearch
+  href: dvfilesearch.md
+- name: DVFileSearchAttribute
+  href: dvfilesearchattribute.md
+- name: DVFileSearchEntity
+  href: dvfilesearchentity.md
+- name: DVTableSearch
+  href: dvtablesearch.md
+- name: DVTableSearchAttribute
+  href: dvtablesearchattribute.md
+- name: DVTableSearchEntity
+  href: dvtablesearchentity.md
 - name: ElasticFileAttachment
   href: elasticfileattachment.md
 - name: Email
@@ -250,6 +288,10 @@
   href: mailboxtrackingfolder.md
 - name: MailMergeTemplate
   href: mailmergetemplate.md
+- name: mainfewshot
+  href: mainfewshot.md
+- name: makerfewshot
+  href: makerfewshot.md
 - name: ManagedIdentity
   href: managedidentity.md
 - name: MetadataForArchival
@@ -442,16 +484,106 @@
   href: msdyn_workflowactionstatus.md
 - name: msdynce_botcontent
   href: msdynce_botcontent.md
+- name: msfp_alert
+  href: msfp_alert.md
+- name: msfp_alertrule
+  href: msfp_alertrule.md
+- name: msfp_emailtemplate
+  href: msfp_emailtemplate.md
+- name: msfp_fileresponse
+  href: msfp_fileresponse.md
+- name: msfp_localizedemailtemplate
+  href: msfp_localizedemailtemplate.md
+- name: msfp_project
+  href: msfp_project.md
+- name: msfp_question
+  href: msfp_question.md
+- name: msfp_questionresponse
+  href: msfp_questionresponse.md
+- name: msfp_satisfactionmetric
+  href: msfp_satisfactionmetric.md
+- name: msfp_survey
+  href: msfp_survey.md
+- name: msfp_surveyinvite
+  href: msfp_surveyinvite.md
+- name: msfp_surveyreminder
+  href: msfp_surveyreminder.md
+- name: msfp_surveyresponse
+  href: msfp_surveyresponse.md
+- name: msfp_unsubscribedrecipient
+  href: msfp_unsubscribedrecipient.md
 - name: MsGraphResourceToSubscription
   href: msgraphresourcetosubscription.md
 - name: mspcat_CatalogSubmissionFiles
   href: mspcat_catalogsubmissionfiles.md
 - name: mspcat_PackageStore
   href: mspcat_packagestore.md
+- name: mspp_adplacement
+  href: mspp_adplacement.md
+- name: mspp_columnpermission
+  href: mspp_columnpermission.md
+- name: mspp_columnpermissionprofile
+  href: mspp_columnpermissionprofile.md
+- name: mspp_contentsnippet
+  href: mspp_contentsnippet.md
+- name: mspp_entityform
+  href: mspp_entityform.md
+- name: mspp_entityformmetadata
+  href: mspp_entityformmetadata.md
+- name: mspp_entitylist
+  href: mspp_entitylist.md
+- name: mspp_entitypermission
+  href: mspp_entitypermission.md
+- name: mspp_pagetemplate
+  href: mspp_pagetemplate.md
+- name: mspp_pollplacement
+  href: mspp_pollplacement.md
+- name: mspp_powerpagescoreentityds
+  href: mspp_powerpagescoreentityds.md
+- name: mspp_publishingstate
+  href: mspp_publishingstate.md
+- name: mspp_publishingstatetransitionrule
+  href: mspp_publishingstatetransitionrule.md
+- name: mspp_redirect
+  href: mspp_redirect.md
+- name: mspp_shortcut
+  href: mspp_shortcut.md
+- name: mspp_sitemarker
+  href: mspp_sitemarker.md
+- name: mspp_sitesetting
+  href: mspp_sitesetting.md
+- name: mspp_webfile
+  href: mspp_webfile.md
+- name: mspp_webform
+  href: mspp_webform.md
+- name: mspp_webformmetadata
+  href: mspp_webformmetadata.md
+- name: mspp_webformstep
+  href: mspp_webformstep.md
+- name: mspp_weblink
+  href: mspp_weblink.md
+- name: mspp_weblinkset
+  href: mspp_weblinkset.md
+- name: mspp_webpage
+  href: mspp_webpage.md
+- name: mspp_webpageaccesscontrolrule
+  href: mspp_webpageaccesscontrolrule.md
+- name: mspp_webrole
+  href: mspp_webrole.md
+- name: mspp_website
+  href: mspp_website.md
+- name: mspp_websiteaccess
+  href: mspp_websiteaccess.md
+- name: mspp_websitelanguage
+  href: mspp_websitelanguage.md
+- name: mspp_webtemplate
+  href: mspp_webtemplate.md
 - name: NavigationSetting
   href: navigationsetting.md
 - name: NewProcess
   href: newprocess.md
+- name: nlsqregistration
+  href: nlsqregistration.md
 - name: OfficeGraphDocument
   href: officegraphdocument.md
 - name: Organization
@@ -508,6 +640,14 @@
   href: powerbireportapdx.md
 - name: powerfxrule
   href: powerfxrule.md
+- name: powerpagecomponent
+  href: powerpagecomponent.md
+- name: powerpagesite
+  href: powerpagesite.md
+- name: powerpagesitelanguage
+  href: powerpagesitelanguage.md
+- name: powerpagesitepublished
+  href: powerpagesitepublished.md
 - name: PrincipalObjectAttributeAccess
   href: principalobjectattributeaccess.md
 - name: Privilege
@@ -640,6 +780,8 @@
   href: stagedentity.md
 - name: StagedEntityAttribute
   href: stagedentityattribute.md
+- name: StagedMetadataAsyncOperation
+  href: stagedmetadataasyncoperation.md
 - name: StageSolutionUpload
   href: stagesolutionupload.md
 - name: Subject
@@ -666,8 +808,6 @@
   href: task.md
 - name: Team
   href: team.md
-- name: teammobileofflineprofilemembership
-  href: teammobileofflineprofilemembership.md
 - name: TeamTemplate
   href: teamtemplate.md
 - name: Template
@@ -696,8 +836,6 @@
   href: userform.md
 - name: UserMapping
   href: usermapping.md
-- name: usermobileofflineprofilemembership
-  href: usermobileofflineprofilemembership.md
 - name: UserQuery
   href: userquery.md
 - name: UserQueryVisualization

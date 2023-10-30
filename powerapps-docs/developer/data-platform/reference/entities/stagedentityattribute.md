@@ -1,7 +1,7 @@
 ---
 title: "StagedEntityAttribute table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the StagedEntityAttribute table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -57,12 +57,15 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AttributeTypeId](#BKMK_AttributeTypeId)
 - [ComponentState](#BKMK_ComponentState)
 - [EntityId](#BKMK_EntityId)
+- [ExternalName](#BKMK_ExternalName)
 - [HasMultipleLabels](#BKMK_HasMultipleLabels)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsLogical](#BKMK_IsLogical)
 - [IsPKAttribute](#BKMK_IsPKAttribute)
 - [LogicalName](#BKMK_LogicalName)
 - [Name](#BKMK_Name)
+- [OriginalLocalizedDescription](#BKMK_OriginalLocalizedDescription)
+- [OriginalLocalizedName](#BKMK_OriginalLocalizedName)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [PhysicalName](#BKMK_PhysicalName)
 - [SolutionId](#BKMK_SolutionId)
@@ -131,6 +134,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|entityid|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_ExternalName"></a> ExternalName
+
+|Property|Value|
+|--------|-----|
+|Description|The external name of the staged attribute for virtual entity.|
+|DisplayName|External Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|externalname|
+|MaxLength|128|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_HasMultipleLabels"></a> HasMultipleLabels
@@ -231,6 +250,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|name|
+|MaxLength|128|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_OriginalLocalizedDescription"></a> OriginalLocalizedDescription
+
+|Property|Value|
+|--------|-----|
+|Description|The localized description of the attribute.|
+|DisplayName|OriginalLocalizedDescription|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|originallocalizedescription|
+|MaxLength|8000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_OriginalLocalizedName"></a> OriginalLocalizedName
+
+|Property|Value|
+|--------|-----|
+|Description|The original localized name of the staged attribute.|
+|DisplayName|Original Localized Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|originallocalizedname|
 |MaxLength|128|
 |RequiredLevel|None|
 |Type|String|
