@@ -16,7 +16,10 @@ search.audienceType:
 
 An (HTML) web resource page can only accept a single custom parameter called `data`. To pass more than one value in the data parameter, you need to encode the parameters and decode the parameters in your page.  
   
- The page here represents a technique to pass the additional values within a single parameter and then process them within your web resource. 
+ The page here represents a technique to pass the additional values within a single parameter and then process them within your web resource.
+ 
+> [!NOTE]
+>  Only alphanumeric characters are supported as parameters to web resources.
   
 ## Sample HTML web resource
 
