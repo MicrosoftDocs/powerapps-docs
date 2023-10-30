@@ -104,6 +104,14 @@ A: There are two ways how you can do it:
 </IdPrefixProvider>
 ```
 
+### Q: Some of my Fluent v9 controls are not getting styles
+
+A: Fluent v9 controls that rely on the React Portal will need to be rewrapped in theme provider, otherwise, styling might not be properly applied. You can use `FluentProvider`.
+
+### Q: How can I check if theming feature is enabled
+
+A: You can check it in settings: `context.appSettings.getIsFluentThemingEnabled()` or check if tokens are available: `context.fluentDesignLanguage?.tokenTheme`.
+
 ## Related topics
 
 [Theming (Power Apps component framework API reference)](../component-framework/reference/theming.md)<br />
