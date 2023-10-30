@@ -191,7 +191,7 @@ Follow the below steps to verify that the application identity hasn't been disab
 
 To verify and/or modify the enabled status of the PowerApps-Advisor enterprise application identity
 
-1. Access your tenant in the [Microsoft Entra Portal](https://aad.portal.azure.com/).
+1. Access your tenant in the [Microsoft Entra Portal](https://entra.microsoft.com).
 2. Navigate to **Enterprise Applications**.
 3. Select **All Application** and search for **'PowerApps-Advisor'**.
 
