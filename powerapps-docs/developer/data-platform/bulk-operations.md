@@ -563,4 +563,3 @@ These limits are based on data changes: `Create`, `Update`, and `Delete` operati
 [Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)  
 [Use messages with the SDK for .NET](org-service/use-messages.md)  
 [Optimize performance for bulk operations](optimize-performance-create-update.md)
-
