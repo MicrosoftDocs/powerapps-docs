@@ -64,12 +64,6 @@ A maker can use App Designer to explicitly set the Release Channel for an app wh
 1. Use **App release channel** to change the app release value
 1. Save and publish the app
 
-| Release Channel Name | Behavior |
-| -- | -- |
-| Auto | App default value currently resolves to **Semi-annual** but will later change to **Monthly** at a future release wave |
-| Monthly | App explicitly set to Monthly Channel |
-| Semi-annual | App explicitly set to Semi-Annual Channel |
-
 ### Change app channel in Solution Explorer
 
 A maker can use Solution Explorer to explicitly set the Release Channel for multiple apps or all apps within the environment.
