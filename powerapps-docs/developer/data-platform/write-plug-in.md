@@ -52,7 +52,7 @@ More information: [Services you can use in your code](#services-you-can-use-in-y
 
 There are some exceptions to the statement about adding properties or methods in the note above. For example, you can have a property that represents a constant and you can have methods that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These values change with every invocation and you don't want that data to be cached and applied to subsequent invocations.
 
-More information: [Develop IPlugin implementations as stateless](/dynamics365/customer-engagement/guidance/server/develop-iplugin-implementations-stateless)
+More information: [Develop IPlugin implementations as stateless](best-practices/business-logic/develop-iplugin-implementations-stateless.md)
 
 ### Pass configuration data to your plug-in
 
@@ -210,7 +210,7 @@ Plug-in and custom workflow activity assembly projects must target .NET Framewor
 
 The assembly may include multiple plug-in classes (or types), but can be no larger than 16 MB in size. It's recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB.
 
-Best practice information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
+Best practice information: [Optimize assembly development](best-practices/business-logic/optimize-assembly-development.md)
 
 ### Assemblies must be signed
 
