@@ -21,8 +21,8 @@ The release channel affects the features that are shown to a user. When the mont
 
 The release channel for model-driven apps can be changed in a couple different ways.
 
-- Environment channel
 - App channel (starting with build 23111)
+- Environment channel
 - User channel override (starting with build 23111)
 - Browser session channel
 
@@ -36,11 +36,21 @@ The environment channel can be set using the Power Platform admin center or with
 
 Power Platform admins can change the release channel using the environment's behavior settings. More information: [Manage behavior settings](/power-platform/admin/settings-behavior).
 
-Developers can change the release channel by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/organization#BKMK_ReleaseChannel) column value for the row in the [Organization](/power-apps/developer/data-platform/reference/entities/organization) table. There's always a single row in the organization table.
+Developers can change the environment channel by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/organization#BKMK_ReleaseChannel) column value for the row in the [Organization](/power-apps/developer/data-platform/reference/entities/organization) table. There's always a single row in the organization table.
 More information:
 
 * [Update a record using Web API](/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
 * [Update a record using the SDK for .NET](/power-apps/developer/data-platform/org-service/entity-operations-update-delete?tabs=late#basic-update)
+
+## Changing the app channel
+
+## Chaning the user channel
+
+The user channel can be used to override both the environment channel and the app channel using the Power Platform admin center or with code.
+
+Power Platform admins can change the release channel using the settings in the environment's user list. More information: [Manage user channel override](https://review.learn.microsoft.com/en-us/power-platform/admin/user-channel-override?branch=pr-en-us-7152).
+
+Developers can change the user release channel by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/usersettings#BKMK_ReleaseChannel) column value for the row in the [UserSettings](/power-apps/developer/data-platform/reference/entities/usersettings) table. The user channel can be programmatically updates with the same approach as the org channel.
 
 ## Changing the browser session channel
 
