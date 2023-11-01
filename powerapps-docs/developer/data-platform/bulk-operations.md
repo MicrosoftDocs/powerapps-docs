@@ -539,23 +539,23 @@ The most frequent client errors encountered when using xMultiple are detailed be
 
 #### Principal user [...], is missing ____ privilege [...] on OTC=____ for entity '____'
 
-Consider adding missed privilege to one of the principal (user/team) roles.
+This authorization error is due to missing privileges. Consider adding the missing privilege to one of the principal (user/team) roles. See [this article](https://learn.microsoft.com/en-us/power-platform/admin/how-record-access-determined#privilege-check) for more details.
 
 #### Principal with id <guid> does not have CreateAccess right(s) for record with id <guid> of entity ____.
 
-Lorem ipsum.
+This authorization error indicates that a privilege access check has passed, but the subsequent access check has failed. See [this article](https://learn.microsoft.com/en-us/power-platform/admin/how-record-access-determined#access-check) for more information on access checks.
 
 #### Cannot insert duplicate key.
 
-Lorem ipsum.
+This SQL error occurs when a request violates a key constraint in the database. Please ensure the records in your payload follow any existing key constraints (ex.: do not send a `CreateMultiple` request where one of the records in the payload uses a primary key value that is already used by an existing record).
 
 #### Contact With Ids = <guid> Do Not Exist
 
-Lorem ipsum.
+This error occurs when attempting to update records that do not exist, likely because a record identifier in the payload has no counterpart in the database. Please review the key values indentifying the records in your payload to ensure they match the key values of existing records.
 
 #### CrmCheckPrivilege failed. Returned hr = -2147220839 on UserId: <guid> and Privilege: ____
 
-Lorem ipsum.
+This authorization error is due to a failing privilege check. See [this article](https://learn.microsoft.com/en-us/power-platform/admin/how-record-access-determined#privilege-check) for more information on privilege checks.
 
 ### System errors
 
