@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
-ms.date: 08/24/2023
+ms.date: 11/01/2023
 ms.topic: how-to
 applies_to: 
   - "powerapps"
@@ -15,7 +15,7 @@ search.audienceType:
 ---
 # Changing release channels for model-driven apps
 
-The release channel affects the features that are shown to a user. When the monthly channel is enabled for an environment, makers need to validate that their customizations work with each monthly release. This article describes different approaches for a maker to change channels and validate an upcoming release..
+The release channel affects the end user impacting features that are shown to a user. When the monthly channel is enabled for an environment, makers need to validate that their customizations work with each monthly release. This article describes different approaches for a maker to change channels and validate an upcoming release..
 
 ## Flexible channel configuration
 
@@ -31,7 +31,6 @@ In addition, the release channel can be overriden with either of these options.
 
 > [!NOTE]
 > - When the release channel is changed on the environment level, a user must refresh the browser tab twice to update the release channel information. The first refresh triggers a background update of feature configuration to a local cache. The second refresh uses the feature configuration local cache.
-> - The browser session channel can be applied using a URL parameter, which is a temporary override.
 
 ## Changing the environment channel
 
@@ -49,7 +48,7 @@ More information:
 
 The app channel can be used to override the release channel for a model-driven app using Power Apps App Designer or Solution Explorer.
 
-| Release Channel Name | Channel Value | Behavior |
+| App release channel | App setting value | Behavior |
 | -- | -- | -- |
 | Auto | 0 | App default value currently resolves to **Semi-annual** but will later change to **Monthly** at a future release wave |
 | Monthly | 1 | App explicitly set to Monthly Channel |
@@ -74,7 +73,7 @@ A maker can use Solution Explorer to explicitly set the Release Channel for mult
 1. Open https://make.powerapps.com/
 1. Under **Solutions** open an existing solution with one or more model-driven apps
 1. Add the existing app setting "Allow new app channel default" into the solution
-   1. Click Add existing > More > Setting
+   1. Click **Add existing** > **More** > **Setting**
    1. Search for "app channel"
    1. Select the item "App channel"
    1. Click "Add"
@@ -118,7 +117,7 @@ Developers can change the user release channel by updating the [ReleaseChannel](
 
 ## Changing the browser session channel
 
-A single browser session can be changed by adding the URL parameter ```&channel=<channelname>```. This URL parameter is used for all navigation within the browser tab. It might not be copied to a new browser tab.
+A single browser session can be changed by adding the URL parameter ```&channel=<channelname>``` as a temporary override. This URL parameter is used for all navigation within the browser tab. It might not be copied to a new browser tab.
 
 | Channel | URL parameter |
 | --- | --- |
@@ -141,11 +140,21 @@ When the channel is monthly, the monthly release can be changed using the URL pa
 
 Validation should be done for each monthly channel release before it's automatically enabled for users. Users can test when the validation build version has reached the environment.
 
+The easiest way to validate is by appending ```&channelrelease=next``` which automatically sets the release channel to the next upcoming monthly release.
+
 1. Find the current monthly release a model-driven app by selecting **Settings** > **About**. The release version follows **Channel: Monthly** and is a date like *July 2023*.
 
-1. Find the next monthly release short name by opening [Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
+1. Append ```&channelrelease=next``` to the URL
 
-1. Add the URL parameter ```&channelrelease=next```. Alternative a specific release can be set with the URL parameter ```&channelrelease=`` with the next release short name like *2308*.
+1. Repeat the first step to observe an updated release version.
+
+To validate against a specific monthly release, the following steps can be used.
+
+1. Find the current monthly release a model-driven app by selecting **Settings** > **About**. The release version follows **Channel: Monthly** and is a date like *July 2023*.
+
+1. Find the a monthly release short name by opening [Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
+
+1. A specific release can be set with the URL parameter ```&channelrelease=`` with the next release short name like *2308*.
 
 ## Comparing features across channels and releases
 
@@ -159,4 +168,5 @@ When a user running the monthly channel report observes unexpected behavior, the
 
 [Release channel overview](channel-overview.md) <br />
 [User About dialog - channel](../../user/about-dialog.md) <br />
-[Power Platform admin center - Manage behavior settings](/power-platform/admin/settings-behavior)
+[Power Platform admin center - Manage behavior settings](/power-platform/admin/settings-behavior) <br />
+[Power Platform admin center - Manage user channel override](https://review.learn.microsoft.com/en-us/power-platform/admin/user-channel-override?branch=pr-en-us-7152).
