@@ -90,6 +90,24 @@ A maker can use Solution Explorer to explicitly set the Release Channel for mult
    1. Click "Save"
 1. After changing an app setting for a specific app(s), the app(s) must be republished to take affect
 
+### Prevent new app defaulting to Monthly Channel
+
+As part of the gradual migration to default all apps to use Monthly Channel, newly created model-driven apps will gradually start seeing the app channel defaulted. Admins or makers can control the release channel default for new apps using an app setting. The app setting "Allow new app channel default" defaults to **Yes** which means a newly created app will be set to **Monthly**. If the app setting is switched to **No**, new apps will be created with release channel **Auto**.
+
+The following steps will change the default for all new apps within an environment. This app setting override can also be put into a solution which is migrated to all environments to prevent new apps from having a default set.
+
+1. Open Solution Explorer to an existing or new solution
+1. Add the existing app setting "Allow new app channel default" into the solution
+   1. Click **Add existing** > **More** > **Setting**
+   1. Search for "app channel default"
+   1. Select the item "Allow new app channel default"
+   1. Click "Add"
+1. Edit the setting "Allow new app channel default"
+   1. Click on "Allow new app channel default" in solution explorer
+   1. Click **New environment value**
+   1. Change environment value to **No**
+   1. Click "Save"
+
 ## Changing the user channel
 
 The user channel can be used to override both the environment channel and the app channel using the Power Platform admin center or with code.
