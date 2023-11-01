@@ -531,6 +531,52 @@ As part of the changes we made to [merge message pipelines](#message-pipelines-m
 
 You shouldn't migrate custom logic from `Delete` to `DeleteMultiple` until this issue is resolved. You can use `DeleteMultiple` and any logic that's associated with the `Delete` message still works.
 
+## Troubleshooting common errors
+
+### Client errors
+
+The most frequent client errors encountered when using xMultiple are detailed below, along with steps to take to resolve them.
+
+#### Principal user [...], is missing ____ privilege [...] on OTC=____ for entity '____'
+
+Consider adding missed privilege to one of the principal (user/team) roles.
+
+#### Principal with id <guid> does not have CreateAccess right(s) for record with id <guid> of entity ____.
+
+Lorem ipsum.
+
+#### Cannot insert duplicate key.
+
+Lorem ipsum.
+
+##### Contact With Ids = <guid> Do Not Exist
+
+Lorem ipsum.
+
+##### CrmCheckPrivilege failed. Returned hr = -2147220839 on UserId: <guid> and Privilege: ____
+
+Lorem ipsum.
+
+### System errors
+
+The most frequent system errors encountered when using xMultiple are detailed below. Despite being system errors, certain actions can be taken to avoid them.
+
+##### Sql error: Generic SQL error. CRM ErrorCode: -2147204784 Sql ErrorCode: -2146232060 Sql Number: 1205
+
+Lorem ipsum.
+
+##### Sql error: SQL timeout expired. CRM ErrorCode: -2147204783 Sql ErrorCode: -2146232060 Sql Number: -2
+
+Lorem ipsum.
+
+##### The transaction of the SQL command has already been rolled back or committed; this is usually caused by a swallowed SQL deadlock exception.
+
+Lorem ipsum.
+
+##### There is no active transaction. This error is usually caused by custom plug-ins that ignore errors from service calls and continue processing.
+
+Lorem ipsum.
+
 ## Frequently asked questions (FAQ)
 
 If you don't find an answer in this article to questions you have about using bulk operation messages, use the button at the bottom of the page to **Submit and view feedback for This Page**. You need a GitHub account to submit feedback.
