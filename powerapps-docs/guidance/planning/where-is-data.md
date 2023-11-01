@@ -88,7 +88,7 @@ needs:
     data connector.
 
 - **Copied data**: Our expense reports also include some data that we looked up from
-    Azure Active Directory, such as the employee ID, manager, and department. We
+    Microsoft Entra ID, such as the employee ID, manager, and department. We
     don't want to change that data in the original system, but we do need to
     keep a copy of it. We want to record the employee's manager and department at
     the time they created the report, not at some point in the future when we

@@ -1,7 +1,7 @@
 ---
 title: "Plug-in Type (PluginType)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Plug-in Type (PluginType)  table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -129,7 +129,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Uniquely identifies the plug-in type associated with a plugin package when exporting a solution.|
 |DisplayName|Plugin Type export key|
 |FormatName|Text|
 |IsLocalizable|False|
