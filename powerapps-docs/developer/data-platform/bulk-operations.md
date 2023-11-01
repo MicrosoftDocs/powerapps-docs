@@ -535,7 +535,7 @@ You shouldn't migrate custom logic from `Delete` to `DeleteMultiple` until this 
 
 ### Client errors
 
-The most frequent client errors encountered when using xMultiple are detailed below, along with steps to take to resolve them.
+The most frequent client errors encountered when using bulk operation messages are detailed below, along with steps to take to resolve them.
 
 #### Principal user [...], is missing ____ privilege [...] on OTC=____ for entity '____'
 
@@ -559,7 +559,7 @@ This authorization error is due to a failing privilege check. See [this article]
 
 ### System errors
 
-The most frequent system errors encountered when using xMultiple are detailed below. Despite being system errors, certain actions can be taken to avoid them.
+The most frequent system errors encountered when using bulk operation messages are detailed below. Despite being system errors, certain actions can be taken to avoid them.
 
 #### Sql error: Generic SQL error. CRM ErrorCode: -2147204784 Sql ErrorCode: -2146232060 Sql Number: 1205
 
