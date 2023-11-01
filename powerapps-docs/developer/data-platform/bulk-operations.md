@@ -549,11 +549,11 @@ Lorem ipsum.
 
 Lorem ipsum.
 
-##### Contact With Ids = <guid> Do Not Exist
+#### Contact With Ids = <guid> Do Not Exist
 
 Lorem ipsum.
 
-##### CrmCheckPrivilege failed. Returned hr = -2147220839 on UserId: <guid> and Privilege: ____
+#### CrmCheckPrivilege failed. Returned hr = -2147220839 on UserId: <guid> and Privilege: ____
 
 Lorem ipsum.
 
@@ -561,19 +561,19 @@ Lorem ipsum.
 
 The most frequent system errors encountered when using xMultiple are detailed below. Despite being system errors, certain actions can be taken to avoid them.
 
-##### Sql error: Generic SQL error. CRM ErrorCode: -2147204784 Sql ErrorCode: -2146232060 Sql Number: 1205
+#### Sql error: Generic SQL error. CRM ErrorCode: -2147204784 Sql ErrorCode: -2146232060 Sql Number: 1205
 
 Lorem ipsum.
 
-##### Sql error: SQL timeout expired. CRM ErrorCode: -2147204783 Sql ErrorCode: -2146232060 Sql Number: -2
+#### Sql error: SQL timeout expired. CRM ErrorCode: -2147204783 Sql ErrorCode: -2146232060 Sql Number: -2
 
 Lorem ipsum.
 
-##### The transaction of the SQL command has already been rolled back or committed; this is usually caused by a swallowed SQL deadlock exception.
+#### The transaction of the SQL command has already been rolled back or committed; this is usually caused by a swallowed SQL deadlock exception.
 
 Lorem ipsum.
 
-##### There is no active transaction. This error is usually caused by custom plug-ins that ignore errors from service calls and continue processing.
+#### There is no active transaction. This error is usually caused by custom plug-ins that ignore errors from service calls and continue processing.
 
 Lorem ipsum.
 
