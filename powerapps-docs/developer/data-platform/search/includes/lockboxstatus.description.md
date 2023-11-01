@@ -1,0 +1,1 @@
+Indicates the status of the lockbox.
