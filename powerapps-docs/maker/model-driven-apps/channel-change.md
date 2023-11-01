@@ -44,7 +44,54 @@ More information:
 
 ## Changing the app channel
 
-## Chaning the user channel
+The app channel can be used to override the release channel for a model-driven app using Power Apps App Designer or Solution Explorer.
+
+| Release Channel Name | Behavior |
+| -- | -- |
+| Auto | App default value currently resolves to **Semi-annual** but will later change to **Monthly** at a future release wave |
+| Monthly | App explicitly set to Monthly Channel |
+| Semi-annual | App explicitly set to Semi-Annual Channel |
+
+### Change app channel in App Designer
+
+A maker can use App Designer to explicitly set the Release Channel for an app which overrides the environment channel.
+
+1. Open https://make.powerapps.com/
+1. Under Solutions open an existing solution containing the model-driven app
+1. Open the app in the App Designer
+1. Open **Settings** dialog
+1. Under **General** tab expand **Advanced settings**
+1. Use **App release channel** to change the app release value
+1. Save and publish the app
+
+| Release Channel Name | Behavior |
+| -- | -- |
+| Auto | App default value currently resolves to **Semi-annual** but will later change to **Monthly** at a future release wave |
+| Monthly | App explicitly set to Monthly Channel |
+| Semi-annual | App explicitly set to Semi-Annual Channel |
+
+### Change app channel in Solution Explorer
+
+A maker can use Solution Explorer to explicitly set the Release Channel for multiple apps or all apps within the environment.
+
+1. Open https://make.powerapps.com/
+1. Under Solutions open an existing solution with one or more model-driven apps
+1. Add the existing app setting "Allow new app channel default" into the solution
+   1. Click Add existing > More > Setting
+   1. Search for "app channel"
+   1. Select the item "App channel"
+   1. Click "Add"
+1. Edit the setting "App channel"
+   1. Click on the setting in solution explorer
+   1. Find the app under Setting app values
+   1. Change value to an integer 0, 1, or 3
+      1. 0 - Auto
+      1. 1 - Monthly
+      1. 3 - Semi-Annual
+   1. Click "Save"
+1. After changing an app setting for a specific app, the app must be republished to take affect
+
+## Changing the user channel
 
 The user channel can be used to override both the environment channel and the app channel using the Power Platform admin center or with code.
 
