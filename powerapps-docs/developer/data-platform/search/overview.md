@@ -34,7 +34,7 @@ Developers can use the search APIs three different ways:
 - The Web API `/api/data/v9.x` endpoint
 - The native search `/api/search/v2.0/` endpoint
 
-### SDK for .NET
+### [SDK for .NET](#tab/sdk)
 
 Search operations are defined as Dataverse messages using [Custom APIs](../custom-api.md). For .NET projects, you can use the SDK for .NET.
 
@@ -47,7 +47,7 @@ More information:
 - [Generate early-bound classes for the SDK for .NET](../org-service/generate-early-bound-classes.md)
 - [Use messages with the SDK for .NET](../org-service/use-messages.md)
 
-### Web API
+### [Web API](#tab/webapi)
 
 Search operations exposed with Web API are OData actions or functions described in the [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document).
 
@@ -56,11 +56,14 @@ More information:
 - [Use Web API actions](../webapi/use-web-api-actions.md)
 - [Use Web API functions](../webapi/use-web-api-functions.md)
 
-### Native search 2.0
+### [Search 2.0 endpoint](#tab/search)
 
 The native search 2.0 endpoint isn't an OData service and has no service document. The native search 2.0 endpoint accepts the same parameters and returns the same responses as the corresponding Web API Actions and functions.
 
-The [Dataverse legacy search](legacy.md) hasn't been deprecated and continues to be supported.
+The [Dataverse legacy search](legacy.md) using `/api/search/v1.0/` hasn't been deprecated and continues to be supported.
+
+---
+
 
 ## Search operations
 
@@ -92,7 +95,7 @@ You can use the same instructions with the search operations using Web API funct
 
 ### Extract response JSON with Postman
 
-Each of the search operations returns JSON that has a `response` property. The `response` property is an escaped string that contains JSON data. It's difficult to read this string value, but you can use the Postman Visualize feature to transform this string value into readable JSON.
+Each of the search operations returns JSON that has a `response` property. The `response` property is an escaped string that contains JSON data. It's difficult to read this string value, but you can use the [Postman Visualize feature](https://learning.postman.com/docs/sending-requests/visualizer/) to transform this string value into readable JSON.
 
 1. In your Postman request select the **Tests** tab and enter the following script:
 
