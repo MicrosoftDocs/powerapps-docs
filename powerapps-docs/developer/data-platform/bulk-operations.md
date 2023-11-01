@@ -563,19 +563,19 @@ The most frequent system errors encountered when using xMultiple are detailed be
 
 #### Sql error: Generic SQL error. CRM ErrorCode: -2147204784 Sql ErrorCode: -2146232060 Sql Number: 1205
 
-Lorem ipsum.
+This error occurs when attempting to update the same record concurrently. Please ensure you do not attempt concurrent requests on the same records.
 
 #### Sql error: SQL timeout expired. CRM ErrorCode: -2147204783 Sql ErrorCode: -2146232060 Sql Number: -2
 
-Lorem ipsum.
+This error is likely to occur if the batch size of your request is too large, causing the underlying stored procedure to take time to complete. Please reduce the batch size of your request to avoid encountering any SQL timeout.
 
 #### The transaction of the SQL command has already been rolled back or committed; this is usually caused by a swallowed SQL deadlock exception.
 
-Lorem ipsum.
+This error and its underlying deadlock exception are likely to occur when attempting to update the same record concurrently. Please ensure you do not attempt concurrent requests on the same records to avoid deadlocks.
 
 #### There is no active transaction. This error is usually caused by custom plug-ins that ignore errors from service calls and continue processing.
 
-Lorem ipsum.
+This error is not related to the use of bulk operations. Please review any custom plug-ins that may be executed as part of your CreateMultiple/UpdateMultiple request.
 
 ## Frequently asked questions (FAQ)
 
