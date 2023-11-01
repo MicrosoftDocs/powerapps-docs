@@ -1,7 +1,7 @@
 ---
-title: Dependent Assembly plug-ins (preview)
+title: Dependent Assembly plug-ins
 description: Learn how to include more assemblies that your plug-in assembly can depend on.
-ms.date: 10/25/2023
+ms.date: 10/01/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -13,21 +13,13 @@ contributors:
   - PHecke
   - JimDaly
 ---
-# Dependent Assembly plug-ins (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Dependent Assembly plug-ins
 
 It's frequently valuable to include another assembly or a resource file within a plug-in. For example, you may want to use Newtonsoft.Json.dll or another assembly. You may want to access a list of localized strings.  
 
 Without dependent assemblies, all plug-ins are registered as individual .NET Framework assemblies. The only way to include another assembly is to combine it into one using [ILMerge](https://github.com/dotnet/ILMerge). While ILMerge worked for many, Dataverse never supported it, and it didn't always work. ILMerge is no longer being maintained.
 
 With dependent assemblies, rather than register an individual .NET assembly, you upload a NuGet Package that contains your plug-in assembly AND any dependent assemblies. This NuGet package file is stored in a new table called [PluginPackage](reference/entities/pluginpackage.md). The contents of the NuGet package is stored in file storage rather than SQL.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
->
-> This document previously described a process to include additional files with the plug-in package that would be available in the assembly run-time. This capability will not be supported. We cannot guarantee that the runtime will allow access to these files.
 
 When you upload your NuGet package, any assemblies that contain classes that implement the [IPlugin Interface](xref:Microsoft.Xrm.Sdk.IPlugin) are registered in [PluginAssembly](reference/entities/pluginassembly.md) table and associated with the `PluginPackage`. As you develop and maintain your project, you continue to update the `PluginPackage` and changes to the related plugin assemblies are managed on the server.
 

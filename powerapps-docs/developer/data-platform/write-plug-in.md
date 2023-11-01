@@ -228,14 +228,12 @@ Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to your project inclu
 
 Because the [Microsoft.CrmSdk.CoreAssemblies NuGet package has a dependency on System.Text.Json](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies#dependencies-body-tab), you're able to refer to [System.Text.Json](xref:System.Text.Json) types at design time. However, the System.Text.Json.dll file in the sandbox run-time can't be guaranteed to be the same version that you reference in your project. If you need to use `System.Text.Json`, you should use the dependent assembly feature and explicitly include it in your NuGet package.
 
-The dependent assembly capability, currently in a Preview release, can be used to include other .NET compiled assemblies with your plug-in assembly in a single package to upload.
+You can use dependent assemblies to include other .NET compiled assemblies with your plug-in assembly in a single package to upload.
 
 More information: [Dependent Assembly plug-ins](dependent-assembly-plugins.md).
 
 > [!IMPORTANT]
 > The dependent assembly capability is so important to plug-in development that you should consider using it from the start even if you do not have an immediate need to do so. Adding support for dependent assemblies to your plug-in project is much more difficult later on in the development cycle.
->
-> Since this feature is a Preview release, do not use this feature for production work.
 
 ## Next steps
 
