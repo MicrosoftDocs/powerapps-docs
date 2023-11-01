@@ -1,7 +1,7 @@
 ---
 title: "ActivityParty table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ActivityParty table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -163,6 +163,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |10|Resource||
 |11|Customer||
 |12|Chat Participant||
+|13|Related||
 
 
 
@@ -543,6 +544,11 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [fax_activity_parties](#BKMK_fax_activity_parties)
 - [activitypointer_activity_parties](#BKMK_activitypointer_activity_parties)
 - [chat_activity_parties](#BKMK_chat_activity_parties)
+- [adx_inviteredemption_activity_parties](#BKMK_adx_inviteredemption_activity_parties)
+- [adx_portalcomment_activity_parties](#BKMK_adx_portalcomment_activity_parties)
+- [msfp_alert_activity_parties](#BKMK_msfp_alert_activity_parties)
+- [msfp_surveyinvite_activity_parties](#BKMK_msfp_surveyinvite_activity_parties)
+- [msfp_surveyresponse_activity_parties](#BKMK_msfp_surveyresponse_activity_parties)
 
 
 ### <a name="BKMK_account_activity_parties"></a> account_activity_parties
@@ -606,6 +612,36 @@ See the [activitypointer_activity_parties](activitypointer.md#BKMK_activitypoint
 **Added by**: Activities Patch Solution
 
 See the [chat_activity_parties](chat.md#BKMK_chat_activity_parties) one-to-many relationship for the [chat](chat.md) table/entity.
+
+### <a name="BKMK_adx_inviteredemption_activity_parties"></a> adx_inviteredemption_activity_parties
+
+**Added by**: Active Solution Solution
+
+See the [adx_inviteredemption_activity_parties](adx_inviteredemption.md#BKMK_adx_inviteredemption_activity_parties) one-to-many relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+### <a name="BKMK_adx_portalcomment_activity_parties"></a> adx_portalcomment_activity_parties
+
+**Added by**: Active Solution Solution
+
+See the [adx_portalcomment_activity_parties](adx_portalcomment.md#BKMK_adx_portalcomment_activity_parties) one-to-many relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+### <a name="BKMK_msfp_alert_activity_parties"></a> msfp_alert_activity_parties
+
+**Added by**: Active Solution Solution
+
+See the [msfp_alert_activity_parties](msfp_alert.md#BKMK_msfp_alert_activity_parties) one-to-many relationship for the [msfp_alert](msfp_alert.md) table/entity.
+
+### <a name="BKMK_msfp_surveyinvite_activity_parties"></a> msfp_surveyinvite_activity_parties
+
+**Added by**: Active Solution Solution
+
+See the [msfp_surveyinvite_activity_parties](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_activity_parties) one-to-many relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
+
+### <a name="BKMK_msfp_surveyresponse_activity_parties"></a> msfp_surveyresponse_activity_parties
+
+**Added by**: Active Solution Solution
+
+See the [msfp_surveyresponse_activity_parties](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_activity_parties) one-to-many relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
 
 ### See also
 
