@@ -1,18 +1,15 @@
 ---
-title: "Scalable Customization Design: Transaction design patterns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The fourth in a series of topics. " # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 11/18/2018
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "rogergilchrist" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+title: "Scalable Customization Design: Transaction design patterns"
+description: "The fourth in a series of topics. "
+ms.date: 11/01/2013
+ms.reviewer: pehecke
+ms.topic: article
+author: rogergilchrist
+ms.author: jdaly
 search.audienceType: 
   - developer
 ---
 # Scalable Customization Design: Transaction design patterns
-
 
 
 > [!NOTE]
@@ -20,7 +17,7 @@ search.audienceType:
 
 This section describes design patterns to avoid or minimize and their implications. Each design pattern needs to be considered in the context of the business problem being solved and can be useful as options to investigate.
 
-## Don’t avoid locking
+## Don't avoid locking
 
 Locking is a very important component of SQL Server and Dataverse, and is essential to healthy operation and consistency of the system. For this reason it is important to understand its implications on design, particularly at scale.
 
@@ -32,13 +29,13 @@ Views use this approach because there is no direct link between the act of launc
 
 Because a query across a large data set means that it potentially affects others trying to interact with any of that data, being able to specify that no lock is required can have a significant benefit on system scalability. 
 
-When making a query of the platform through the SDK it can be valuable to specify that nolock can be used. It indicates that you recognize this query doesn’t need to take a read lock in the database. It’s especially useful for queries where:
+When making a query of the platform through the SDK it can be valuable to specify that nolock can be used. It indicates that you recognize this query doesn't need to take a read lock in the database. It's especially useful for queries where:
 
-- There’s a broad scope of data
+- There's a broad scope of data
 - Highly contested resources are queried
-- Serialization isn’t important
+- Serialization isn't important
 
-Nolock shouldn’t be used if a later action depends on no change to the results, such as in the auto number locking example earlier. 
+Nolock shouldn't be used if a later action depends on no change to the results, such as in the auto number locking example earlier. 
 
 An example scenario where it can be useful is determining if an email is related to an existing case. Blocking other users from creating new cases to ensure there is no possibility of a case being generated that the email could link to would not be a beneficial level of consistency control. 
 
@@ -69,7 +66,7 @@ In more complex and efficient scenarios, it may be that you lock least commonly 
 
 ## Hold contentious locks for shortest period
 
-There are scenarios, such as the auto numbering approach, where there is no way around the fact that there is a heavily contested resource that needs to be locked. In that case, the blocking problem can’t be completely avoided, but can be minimized.
+There are scenarios, such as the auto numbering approach, where there is no way around the fact that there is a heavily contested resource that needs to be locked. In that case, the blocking problem can't be completely avoided, but can be minimized.
 
 When you have heavily contested resources, a good design is to not include the interaction with that resource at the functionally logical point in the process, but move the interaction with it to as close to the end of the transaction as possible. 
 
@@ -102,16 +99,16 @@ Review each query you make to determine whether:
 - Your query only asks for what it needs, for example, columns, records, or entity types.
   - This maximizes the chance that an index can be used to efficiently service the query
   - It reduces the number of tables and resources that need to be accessed, reducing the overhead on other resources in the database server and reducing the query time
-  - It avoids potential blocking on resources that you don’t need, particularly where a join to another table is asked for but could be avoided or is unnecessary
+  - It avoids potential blocking on resources that you don't need, particularly where a join to another table is asked for but could be avoided or is unnecessary
 - An index is in place to assist the query, you are querying in an efficient way, and an index seek rather than scan is taking place
 
-  It’s worth noting that introducing an index doesn’t avoid locking on create/update of records in the underlying table. The entries in the indexes are also locked when the related record is updated as the index itself is subject to change. The existence of indexes doesn’t avoid this problem completely.
+  It's worth noting that introducing an index doesn't avoid locking on create/update of records in the underlying table. The entries in the indexes are also locked when the related record is updated as the index itself is subject to change. The existence of indexes doesn't avoid this problem completely.
 
-In the following example, the retrieval of related cases isn’t optimized and adds to the overall transaction length, introducing blocking between threads.
+In the following example, the retrieval of related cases isn't optimized and adds to the overall transaction length, introducing blocking between threads.
 
 ![Retrieval of related cases not optimized.](media/optimize-requests-1.png)
 
-By optimizing the query, there’s less time spent performing it, and the chance of collision is lower, thereby reducing blocking.
+By optimizing the query, there's less time spent performing it, and the chance of collision is lower, thereby reducing blocking.
 
 ![Retrieval of related cases optimized.](media/optimize-requests-2.png)
 
@@ -166,7 +163,7 @@ This is a pattern that should be carefully considered or avoided as it is very e
 
 ## When to use different types of customization
 
-Each type of customization has different implications for use. The following table highlights some common patterns, when each should be considered and used, and when it isn’t appropriate for use.
+Each type of customization has different implications for use. The following table highlights some common patterns, when each should be considered and used, and when it isn't appropriate for use.
 
 Often a compromise between different behaviors may need to be considered so this gives guidance of some of the common characteristics and scenarios to consider but each scenario needs to be evaluated and the right approach chosen based on all the relevant factors.
 
@@ -175,12 +172,12 @@ Often a compromise between different behaviors may need to be considered so this
 |Pre Validation|Sync|Plug-in|Short term validation of input values|Long running actions.<br /><br />When creating related items that should be rolled back if later steps fail.|
 |Pre Operation|Sync|Workflow/Plug-in|Short term validation of input values.<br /><br />When creating related items that should be rolled back as part of platform step failure.|Long running actions.<br /><br />When creating an item and the resulting GUID will need to be stored against the item the platform step will create/update.|
 |Post Operation |Sync|Workflow/ Plug-in|Short running actions that naturally follow the platform step and need to be rolled back if later steps fail, for example, creation of a task for the owner of a newly created account.<br /><br />Creation of related items that need the GUID of the created item and that should roll back the platform step in the event of failure|Long running actions.<br /><br />Where failure should not affect the completion of the platform pipeline step.|
-|Not in event pipeline|Async|Workflow/ Plug-in|Medium length actions that would impact on the user experience.<br /><br />Actions that cannot be rolled back anyway in the event of failure.<br /><br />Actions that should not force the rollback of the platform step in the event of failure.|Very long running actions.<br /><br />These shouldn’t be managed in Dataverse.<br /><br />Very low cost actions. The overhead of generating async behavior for very low cost actions may be prohibitive; where possible do these synchronously and avoid the overhead of async processing.|
+|Not in event pipeline|Async|Workflow/ Plug-in|Medium length actions that would impact on the user experience.<br /><br />Actions that cannot be rolled back anyway in the event of failure.<br /><br />Actions that should not force the rollback of the platform step in the event of failure.|Very long running actions.<br /><br />These shouldn't be managed in Dataverse.<br /><br />Very low cost actions. The overhead of generating async behavior for very low cost actions may be prohibitive; where possible do these synchronously and avoid the overhead of async processing.|
 |N/A<br />Takes context of where it is called from||Custom Actions|Combinations of actions launched from an external source, for example, from a web resource|When always triggered in response to a platform event, use plug-in/workflow in those cases.|
 
-## Plug-ins/workflows aren’t batch processing mechanisms
+## Plug-ins/workflows aren't batch processing mechanisms
 
-Long running or volume actions aren’t intended to be run from plug-ins or workflows. Dataverse isn’t intended to be a compute platform and especially isn’t intended as the controller to drive big groups of unrelated updates.
+Long running or volume actions aren't intended to be run from plug-ins or workflows. Dataverse isn't intended to be a compute platform and especially isn't intended as the controller to drive big groups of unrelated updates.
 
 If you have a need to do that, offload and run from a separate service, such as an Azure worker role. 
 
@@ -195,8 +192,8 @@ A very common escalation area is scalability of setting up security. This is a c
 
 ### Owner v. access teams
 
-- If users' teams change regularly, be careful about using owner teams heavily; every time they change they invalidate the user’s cache in the web server
-- Ideally make changes when the user isn’t working, reduce impact, such as overnight
+- If users' teams change regularly, be careful about using owner teams heavily; every time they change they invalidate the user's cache in the web server
+- Ideally make changes when the user isn't working, reduce impact, such as overnight
 
 ### Lots of team memberships/ BUs
 
@@ -208,22 +205,22 @@ A very common escalation area is scalability of setting up security. This is a c
 
 ### Careful updating  of user records
 
-- Don’t regularly update system user records unless something fundamental has changed as this forces the user cache to be reloaded and the security privileges to be recalculated, an expensive activity
-- Don’t use system user to record how many open activities the user has, for example
+- Don't regularly update system user records unless something fundamental has changed as this forces the user cache to be reloaded and the security privileges to be recalculated, an expensive activity
+- Don't use system user to record how many open activities the user has, for example
 
 ## Diagram related actions
 
-An activity that is very beneficial as a preventative measure, as well as a tool for diagnosing blocking problems, is to diagram related actions triggered in the Dataverse platform. When doing this it helps to highlight both intentional and unintentional dependencies and triggers in the system. If you aren’t able to do this for your solution, you might not have a clear picture of what your implementation actually does. Creating such a diagram can expose unintended consequences and is good practice at any time in an implementation. 
+An activity that is very beneficial as a preventative measure, as well as a tool for diagnosing blocking problems, is to diagram related actions triggered in the Dataverse platform. When doing this it helps to highlight both intentional and unintentional dependencies and triggers in the system. If you aren't able to do this for your solution, you might not have a clear picture of what your implementation actually does. Creating such a diagram can expose unintended consequences and is good practice at any time in an implementation. 
 
 The following example highlights how initially two processes work perfectly well together but in ongoing maintenance the addition of a new step to create a task can create an unintended loop. Using this documentation technique can highlight this at the design stage and avoid this affecting the system.
 
 ![Diagram related actions.](media/diagram-related-actions.png)
 
-<!-- NOTE: Excluding content on isolation modes and transaction diagnosis as it is for on-premises only. -->
+## Review telemetry and traces
 
-## Review system captured statistics
+You can set up an Application Insights environment to receive telemetry on diagnostics and performance captured by the Dataverse platform. [Learn how to analyze Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)
 
-There are a number of ways to determine what is happening if the problem occurs outside of the database layer. The first is analysis of plug-in performance. The [PluginTypeStatistic Entity](../reference/entities/plugintypestatistic.md) can be queried to give an indication of how often the plug-in is running, and statistics on how long it typically takes to run.
+After you have an Application Insights environment, you can use the [Microsoft.Xrm.Sdk.PluginTelemetry.ILogger interface](xref:Microsoft.Xrm.Sdk.PluginTelemetry.ILogger) in your plug-in code to write telemetry to Application insights. [Learn how to write Telemetry to your Application Insights resource using ILogger](../application-insights-ilogger.md)
 
 When certain errors are occurring, using the server trace files to understand where related problems may be occurring in the platform can also be useful. More information: [Use Tracing](../debug-plug-in.md#use-tracing)
 
@@ -242,7 +239,7 @@ Some key things to remember include the following:
 
 - Platform constraints often exhibit in the form of errors
 - But rarely is the constraint the cause of the problem
-- They’re there to protect the platform and other activity from being affected
+- They're there to protect the platform and other activity from being affected
 
 ### Design for transaction use
 
