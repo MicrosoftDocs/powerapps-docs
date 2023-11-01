@@ -1,7 +1,7 @@
 ---
 title: Dependent Assembly plug-ins
 description: Learn how to include more assemblies that your plug-in assembly can depend on.
-ms.date: 10/01/2023
+ms.date: 11/01/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath

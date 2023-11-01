@@ -1,16 +1,17 @@
 ---
-title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to write custom code to be executed in response to data processing events." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/31/2023
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divkamath" # GitHub ID
+title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to write custom code to be executed in response to data processing events."
+ms.date: 11/01/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: divkamath
 ms.subservice: dataverse-developer
-ms.author: "dikamath" # MSFT alias of Microsoft employees only
+ms.author: dikamath
 search.audienceType: 
   - developer
 contributors:
   - phecke
+  - JimDaly
 ---
 
 # Write a plug-in
