@@ -222,9 +222,9 @@ Which tables and columns are enabled for search is controlled by data in Dataver
 
 ### Enable Tables
 
-Only those tables where the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanEnableSyncToExternalSearchIndex?text=EntityMetadata.CanEnableSyncToExternalSearchIndex>`.Value` property is true can be enabled for Dataverse search. If the `CanEnableSyncToExternalSearchIndex.CanBeChanged` value is false, you can't change the value. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
+Only those tables where the [EntityMetadata.CanEnableSyncToExternalSearchIndex.Value property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanEnableSyncToExternalSearchIndex) and [EntityMetadata.ChangeTrackingEnabled property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled) are true can be enabled for Dataverse search. If the `CanEnableSyncToExternalSearchIndex.CanBeChanged` value is false, you can't change the value. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
 
-To enable a table for Dataverse Search, set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SyncToExternalSearchIndex?text=EntityMetadata.SyncToExternalSearchIndex> boolean property to true.
+To enable a table for Dataverse Search, set the [EntityMetadata.SyncToExternalSearchIndex property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SyncToExternalSearchIndex) to `true`.
 
 You can check the values for a table with the SDK or Web API using the table logical name. Replace `account` in the following queries  with the logical name of the table you want to check.
 
@@ -327,9 +327,9 @@ More information:
 
 ## Service Protection Limits
 
-When using either Web API and Dataverse SDK for .NET, the common [Service protection API limits](../api-limits.md) will never be approached because Dataverse search applies a lower limit.
+The common Dataverse [Service protection API limits](../api-limits.md) will never be approached because Dataverse search applies a lower limit. The way you manage them is the same.
 
-Dataverse search allows a user to send one request per second. If you exceed this limit, a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error is returned. If a `429` error is returned, you should wait until the period defined in the `Retry-After` response header value has passed before sending more requests. The value represents the number of seconds to wait.
+Dataverse search allows a user to send one request per second, and each organization is limited to 150 requests per minute. If you exceed this limit, a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error is returned. If a `429` error is returned, you should wait until the period defined in the `Retry-After` response header value has passed before sending more requests. The value represents the number of seconds to wait.
 
 
 ### See also
