@@ -19,10 +19,13 @@ The release channel affects the features that are shown to a user. When the mont
 
 ## Flexible channel configuration
 
-The release channel for model-driven apps can be changed in a couple different ways.
+The release channel for model-driven apps can be changed in two primary ways.
 
 - App channel (starting with build 23111)
 - Environment channel
+
+In addition, the release channel can be overriden with either of these options.
+
 - User channel override (starting with build 23111)
 - Browser session channel
 
@@ -46,18 +49,18 @@ More information:
 
 The app channel can be used to override the release channel for a model-driven app using Power Apps App Designer or Solution Explorer.
 
-| Release Channel Name | Behavior |
-| -- | -- |
-| Auto | App default value currently resolves to **Semi-annual** but will later change to **Monthly** at a future release wave |
-| Monthly | App explicitly set to Monthly Channel |
-| Semi-annual | App explicitly set to Semi-Annual Channel |
+| Release Channel Name | Channel Value | Behavior |
+| -- | -- | -- |
+| Auto | 0 | App default value currently resolves to **Semi-annual** but will later change to **Monthly** at a future release wave |
+| Monthly | 1 | App explicitly set to Monthly Channel |
+| Semi-annual | 2 | App explicitly set to Semi-Annual Channel |
 
 ### Change app channel in App Designer
 
 A maker can use App Designer to explicitly set the Release Channel for an app which overrides the environment channel.
 
 1. Open https://make.powerapps.com/
-1. Under Solutions open an existing solution containing the model-driven app
+1. Under **Solutions** open an existing solution containing the model-driven app
 1. Open the app in the App Designer
 1. Open **Settings** dialog
 1. Under **General** tab expand **Advanced settings**
@@ -69,21 +72,23 @@ A maker can use App Designer to explicitly set the Release Channel for an app wh
 A maker can use Solution Explorer to explicitly set the Release Channel for multiple apps or all apps within the environment.
 
 1. Open https://make.powerapps.com/
-1. Under Solutions open an existing solution with one or more model-driven apps
+1. Under **Solutions** open an existing solution with one or more model-driven apps
 1. Add the existing app setting "Allow new app channel default" into the solution
    1. Click Add existing > More > Setting
    1. Search for "app channel"
    1. Select the item "App channel"
    1. Click "Add"
-1. Edit the setting "App channel"
-   1. Click on the setting in solution explorer
-   1. Find the app under Setting app values
-   1. Change value to an integer 0, 1, or 3
-      1. 0 - Auto
-      1. 1 - Monthly
-      1. 3 - Semi-Annual
+1. To change the app channel for multiple apps
+   1. Edit the setting "App channel"
+   1. Find the app(s) under the section **Setting app values**
+   1. Click **New app value** and enter the integer for the channel
    1. Click "Save"
-1. After changing an app setting for a specific app, the app must be republished to take affect
+1. To change the app channel for all apps in the environment
+   1. Edit the setting "App channel"
+   1. Find the app(s) under the section **Setting environment values**
+   1. Click **New environment value** and enter the integer for the channel
+   1. Click "Save"
+1. After changing an app setting for a specific app(s), the app(s) must be republished to take affect
 
 ## Changing the user channel
 
