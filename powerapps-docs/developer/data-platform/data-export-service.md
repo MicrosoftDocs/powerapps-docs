@@ -103,7 +103,7 @@ For the reader's convenience, these interfaces are summarized in the following t
   
 ### Gain Access
 
-Because only Dataverse System Administrators are authorized to perform data export operations, these APIs enforce caller authorization through the use of Azure Active Directory ([AAD](https://azure.microsoft.com/services/active-directory/)) [security tokens](/azure/active-directory/develop/security-tokens). The following code snippet demonstrates generating such a token for a web application. You must replace the `resource` and `AppId` values with those values appropriate to your service. This approach can be used for development and testing, but more secure means should be used for production, such as the use of Azure Key Vault.
+Because only Dataverse System Administrators are authorized to perform data export operations, these APIs enforce caller authorization through the use of Microsoft Entra ID [security tokens](/azure/active-directory/develop/security-tokens). The following code snippet demonstrates generating such a token for a web application. You must replace the `resource` and `AppId` values with those values appropriate to your service. This approach can be used for development and testing, but more secure means should be used for production, such as the use of Azure Key Vault.
 
 ```csharp
 using Microsoft.Identity.Client;
@@ -117,7 +117,7 @@ var authBuilder = PublicClientApplicationBuilder.Create(AppId)
     .WithAuthority(AadAuthorityAudience.AzureAdMultipleOrgs)
     .WithRedirectUri(redirectUri)
     .Build();
-var scope = resource + "/.default";
+var scope = resource + "/user_impersonation";
 string[] scopes = { scope };
 
 // Use interactive username and password prompt
@@ -126,7 +126,7 @@ AuthenticationResult token =
 string accessToken = token.AccessToken;
 ```  
   
-For instructions on how to obtain a `AppId` see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/v2-oauth2-auth-code-flow). For more information about Azure user security, see [Authentication Scenarios for Azure AD](/azure/active-directory/develop/authentication-vs-authorization).  
+For instructions on how to obtain a `AppId` see [Authorize access to web applications using OAuth 2.0 and Microsoft Entra ID](/azure/active-directory/develop/v2-oauth2-auth-code-flow). For more information about Azure user security, see [Authentication Scenarios for Microsoft Entra ID](/azure/active-directory/develop/authentication-vs-authorization).  
   
 ### Error handling and failure processing
 

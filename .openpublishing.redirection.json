@@ -476,6 +476,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/developer/data-platform/search/index.md",
+      "redirect_url": "/powerapps/developer/data-platform/search/overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/relevance-search.md",
+      "redirect_url": "../search/overview.md",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/admin/portal-checker-analysis.md",
       "redirect_url": "/power-apps/maker/portals/admin/portal-checker#next-steps",
       "redirect_document_id": false
@@ -8723,6 +8733,11 @@
     {
       "source_path": "powerapps-docs/maker/portals/create-common-problems.md",
       "redirect_url": "/power-pages/getting-started/create-manage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/working-with-dynamic-schema.md",
+      "redirect_url": "/power-apps/maker/canvas-apps/untyped-and-dynamic-objects#converting-formulas-that-return-untyped-objects-that-previously-returned-boolean",
       "redirect_document_id": false
     }
   ]

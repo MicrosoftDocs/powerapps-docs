@@ -1,7 +1,7 @@
 ---
-title: Dependent Assembly plug-ins (preview)
+title: Dependent Assembly plug-ins
 description: Learn how to include more assemblies that your plug-in assembly can depend on.
-ms.date: 08/08/2023
+ms.date: 11/01/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -13,21 +13,13 @@ contributors:
   - PHecke
   - JimDaly
 ---
-# Dependent Assembly plug-ins (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Dependent Assembly plug-ins
 
 It's frequently valuable to include another assembly or a resource file within a plug-in. For example, you may want to use Newtonsoft.Json.dll or another assembly. You may want to access a list of localized strings.  
 
 Without dependent assemblies, all plug-ins are registered as individual .NET Framework assemblies. The only way to include another assembly is to combine it into one using [ILMerge](https://github.com/dotnet/ILMerge). While ILMerge worked for many, Dataverse never supported it, and it didn't always work. ILMerge is no longer being maintained.
 
 With dependent assemblies, rather than register an individual .NET assembly, you upload a NuGet Package that contains your plug-in assembly AND any dependent assemblies. This NuGet package file is stored in a new table called [PluginPackage](reference/entities/pluginpackage.md). The contents of the NuGet package is stored in file storage rather than SQL.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
->
-> This document previously described a process to include additional files with the plug-in package that would be available in the assembly run-time. This capability will not be supported. We cannot guarantee that the runtime will allow access to these files.
 
 When you upload your NuGet package, any assemblies that contain classes that implement the [IPlugin Interface](xref:Microsoft.Xrm.Sdk.IPlugin) are registered in [PluginAssembly](reference/entities/pluginassembly.md) table and associated with the `PluginPackage`. As you develop and maintain your project, you continue to update the `PluginPackage` and changes to the related plugin assemblies are managed on the server.
 
@@ -44,7 +36,7 @@ If you have questions or issues with this feature, you can contact technical sup
 The following limitations apply to dependent assembly plug-ins.
 
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* aren't supported.
-- Plug-ins for virtual table data providers aren't supported.
+- Plug-ins for virtual table data providers aren't supported. Importing a solution into an environment will fail if the solution contains plug-ins (with dependent assemblies) that are registered on virtual entities.
 - On-premises environments aren't supported.
 - Unmanaged code isn't supported. You can't include references to unmanaged resources.
 
@@ -286,6 +278,10 @@ This command opens a dialog so you can select a NuGet package to update the plug
 
 ## Design notes
 
+Here a a few things to consider when creating plug-in packages.
+
+### Generating the NuGet package
+
 The Visual Studio project created using [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init) uses Visual Studio capabilities that enable generating NuGet Packages. This method uses the [SDK-style](/nuget/resources/check-project-format) project format. Power Platform Tools for Visual Studio uses the [Non-SDK-style](/nuget/resources/check-project-format) project format.
 
 You aren't required to use these tools to generate a NuGet package with your plug-ins. You can use whatever capabilities you choose to generate a NuGet package, but you must use the tooling available to upload the package to Dataverse.
@@ -295,6 +291,24 @@ More information:
 - [Create a NuGet package using MSBuild](/nuget/create-packages/creating-a-package-msbuild)
 - [NuGet pack and restore as MSBuild targets](/nuget/reference/msbuild-targets)
 
+### What not to include in your package
+
+You may experience an issue when creating and registering plug-in packages where standard Dataverse assemblies are included in your package resulting in an error at package registration time.
+
+> [!IMPORTANT]
+> Do not include the following Dataverse assemblies in your package. Doing so will result in an error when registering the package.
+>
+>  Microsoft.Crm.Sdk.Proxy.dll  
+>  Microsoft.Xrm.Sdk.dll  
+>  Microsoft.Xrm.Sdk.Workflow.dll  
+>  Microsoft.Xrm.Sdk.Data.dll  
+>  Microsoft.Crm.Sdk.dll
+
+Including any of these assemblies in the plug-in package results in the following error message when registering the plug-in package with Dataverse:
+
+   "PluginPackage can not contain assemblies included in the Microsoft.CrmSdk.CoreAssemblies or Microsoft.CrmSdk.Workflow nuget packages."
+
+You can correct this situation by following the information in this article, [Controlling dependency assets](/nuget/consume-packages/package-references-in-project-files#controlling-dependency-assets), so that these dependency assets are not included in your package. You'll need to mark the assembly reference using the \<PrivateAssets> tag in the project configuration file (.csprog).
 
 ## Using System.Text.Json
 

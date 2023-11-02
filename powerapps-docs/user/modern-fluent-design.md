@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: chmoncay
 ms.topic: overview
-ms.date: 09/18/2023
+ms.date: 10/17/2023
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: chmoncay
@@ -14,6 +14,7 @@ search.audienceType:
   - enduser
 contributors:
   - HemantGaur
+  - adrianorth 
 
 ---
 
@@ -29,6 +30,7 @@ Here's what you can expect in the modern, refreshed experience:
 - Updated styling in form, view, and dashboard pages, which includes the use of drop shadows and brighter background colors to create an elevated or _floating_ appearance. The floating appearance helps to visually separate sections and focuses attention on primary content.
 - New Fluent-based controls in forms, business process flows, and dialogs. Dialogs now resize height automatically based on the content.
 - A new Power Apps grid in place of the read-only grid in view and standard, dashboard pages.
+- A new mechanism for customizing the app header colors to match your personal or organizational branding. More information: [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md)
 - An end user setting called **Try the new look** that enables the modern, refreshed experience.
 
 :::image type="content" source="media/modern-try-toggle-off.png" alt-text="The 'Try the new look' setting.":::
@@ -41,7 +43,7 @@ The _floating_ command bar aligns with the Microsoft 365 experience, with consis
 ### View pages
 View pages use the new command bar and have updated grid areas that take advantage of the elevation changes to help draw the user's attention. 
 
-The biggest change on view pages is the switch from the read-only grid to the [Power Apps grid control (preview)](../maker/model-driven-apps/the-power-apps-grid-control.md), which features infinite scrolling for a modern, data browsing experience. This grid also appears in subgrids and associated grids in main forms, but isn't yet supported in dashboards. The Power Apps grid control also supports inline editing using the **Enable filtering** property. Makers may manually configure their editable grids to use the Power Apps grid control. 
+The biggest change on view pages is the switch from the read-only grid to the [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md), which features infinite scrolling for a modern, data browsing experience. This grid also appears in subgrids and associated grids in main forms and dashboards. The Power Apps grid control also supports inline editing using the **Enable filtering** property. Makers may manually configure their editable grids to use the Power Apps grid control. 
 
 The following example shows a view page with the modern, refreshed look.
 
@@ -63,6 +65,11 @@ The following example shows a set of fields with the modern, refreshed look.
 
 :::image type="content" source="media/modern-fields.png" alt-text="Fields in a model-driven app that has the modern, refreshed look.":::
 
+### Dashboard page
+The system dashboard page, with independent subgrids and charts, has been updated to use the new [command bar](#command-bar) and has styling similar to the sections in form and view pages. When the modern experience is enabled, or when using the [monthly channel](../maker/model-driven-apps/channel-overview.md), the system dashboard grids use the new [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). The new grid is not enabled by default.
+
+:::image type="content" source="media/modern-system-dashboard.png" alt-text="System dashboard page with the modern, refreshed look.":::
+
 ## Turn on the new look
 End users can enable the modern, refreshed look for their model-driven apps in the app by enabling the **Try the new look** setting in the header of their app. They can switch back at [anytime](modern-fluent-design.md#can-i-revert-to-the-old-ui).
 
@@ -73,11 +80,12 @@ After using the modern, refreshed look in your model-driven apps, tell us what y
 The modern, refreshed look for model-driven apps has some limitations:
 
 - The mobile app and mail app don't support the modern, refreshed look and aren't part of the preview or general availability.
-- With the new look, Power Apps is moving away from the classic theme customizations. This means that the app header and colors for business process flows can't be customized yet.
+- With the new look, Power Apps is moving away from [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). While the colors for the app header can now be customized to match your personal or organization branding, other theme customization options aren't yet available. More information: [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md)
 
 ## Frequently asked questions (FAQs)
 
 ### Preview to general availability rollout
+
 The modern, refreshed look for model-driven apps is generally available in the following release channels:
 - Monthly channel in August 2023 
 - Semi-annual Channel as of 2023 Release Wave 2
@@ -89,7 +97,7 @@ Yes, end users can switch back to the old UI by turning off the **Try the new lo
 
 For more information about disabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md). 
 
-Admins can disable the **Try the new look** setting across all apps in an organization by using the solution explorer to set the **Try the new look** value to **No**.
+Admins can disable the **Try the new look** setting across all apps in an organization by using the solution explorer to set the **Try the new look** value to **No**. This hides the **Try the new look** toggle and prevents the new look from taking effect.
 
 1. Create a new solution.
 1. Select **Add Existing** > **More** > **Setting**.
@@ -97,13 +105,16 @@ Admins can disable the **Try the new look** setting across all apps in an organi
 1. Select **Try the new look**. 
 
     > [!NOTE]
-    > There are two settings: **Try the new look** and **Try the new look and feel (preview)**.
+    > There are two settings: **Try the new look** and **Try the new look and feel (preview)**. The first setting is turned on by default, but it can be overriden as described in this section. The second setting was used in the public preview phase to allow users to have the new look, but the setting did not appear as a toggle.
 
 1. Select **Add** to add it to the solution.
 1. Select **Try the new look** from the solution explorer.
 1. Update **Setting Environment Value** to **No**.
 1. Select **Save**.
 1. Publish all customizations.
+
+    > [!NOTE]
+    > If you are using 2023 release wave 1 and want to turn off the new look, update the **Try the new look and feel (preview)** setting.
 
 ### Can I switch to a different theme or enable dark mode?
 Switching themes or enabling dark mode isn't supported at this time.

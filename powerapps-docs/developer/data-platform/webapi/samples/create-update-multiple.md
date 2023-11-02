@@ -26,7 +26,7 @@ This sample is a Visual Studio .NET 6.0 solution that contains two projects that
 See the README.md file in each sample for detailed instructions about how to run the sample and what it does.
 
 > [!div class="nextstepaction"]
-> [Web API Create and Update Multiple Sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/xMultipleSamples/README.md)
+> [Web API Create and Update Multiple Sample](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/BulkOperations/README.md)
 
 ### See Also
 

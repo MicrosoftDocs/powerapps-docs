@@ -19,6 +19,8 @@ contributors:
 
 Dataverse has [tables](entities.md) that are used to model and manage business data. You can use the stock provided tables or define your own custom tables to store data.
 
+Dataverse also has APIs known as *messages*. Messages define a set of input parameters and output properties to encapsulate logic that executes on the server. Each message has a name. If you come from a SQL database background, you can think of these like SQL stored procedures. You can use messages that Dataverse provides or you can create your own messages.
+
 ## Use web services to work with data
 
 Dataverse provides two ways to work with data: Web API & SDK for .NET. Choose the one that best matches the requirement and your skills.
@@ -46,5 +48,12 @@ There's a 1-GB size limitation on the size of a response that Dataverse returns.
 
 The deprecated SOAP endpoint returns serialized XML data that is much more verbose than the serialized JSON data returned by the Web API. If you're using the deprecated SOAP endpoint, you should use the Web API equivalent operation. More information: [About the legacy SOAP endpoint](org-service/overview.md#about-the-legacy-soap-endpoint)
 
+### Search
+
+Dataverse search delivers fast and comprehensive search results across multiple tables, in a single list, sorted by relevance. It also provides capabilities to support suggestions and autocompletion experiences in apps.
+
+Search has a native endpoint and there are Dataverse messages that you can use from the Web API or Organization service.
+
+More information: [Search for Dataverse records](search/overview.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
