@@ -186,7 +186,7 @@
           href: /troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors
         - name: Access external web resources
           href: access-web-services.md
-        - name: Dependent Assemblies (preview)
+        - name: Dependent Assemblies
           href: dependent-assembly-plugins.md
         - name: Write plug-ins for CreateMultiple and UpdateMultiple (Preview)
           href: write-plugin-multiple-operation.md
