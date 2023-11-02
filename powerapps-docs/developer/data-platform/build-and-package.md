@@ -1,7 +1,7 @@
 ---
 title: Build and package plug-in code
 description: Learn about building plug-in code into assemblies and packages for later registration and upload to the Microsoft Dataverse service.
-ms.date: 10/02/2023
+ms.date: 11/02/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath
@@ -29,8 +29,6 @@ Plug-in and custom workflow activity assembly projects must target .NET Framewor
 ### Optimize assembly development
 
 Your assembly may include multiple plug-in classes (or types) and even custom workflow activities, but can be no larger than 16 MB in size. It's recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB.
-
-Best practice information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
 
 ### Signed assemblies are required
 
