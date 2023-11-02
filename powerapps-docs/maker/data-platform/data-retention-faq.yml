@@ -40,6 +40,11 @@ sections:
         Answer
         No. Data retention jobs are a background process with secondary priority to your apps.
 
+   - question: Are there any limits on how many records can be retained in a single policy?
+     answer: |
+        Answer
+        No. While running a policy one-time is an option, we recommend you set up policies that run on recurring basis to ensure historical data is efficiently managed. 
+        
    - question: How long will a policy run take to complete?
      answer: |
         A policy run takes about 72 - 96 hours irrespective of the data volume. Data retention policies are given a low priority by the application. Dataverse runs the process in the background typically during off hours to avoid impacting active applications and processes.
@@ -66,7 +71,7 @@ sections:
 
    - question: Can the one Dataverse connector be used with Power BI for reporting long term retained data?
      answer: |
-        This isn't supported.
+        This isn't supported. However you can access live and retained data with Microsoft Fabric <link to this section> and build PowerBI reports.
 
    - question: Can I move data from Dataverse long term store back to the Dataverse live (active) store?
      answer: |
