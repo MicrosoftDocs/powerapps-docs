@@ -24,7 +24,7 @@
       href: security-access-coding.md
     - name: Security roles and templates
       href: security-roles.md
-    - name: Active Directory group teams
+    - name: Microsoft Entra ID group teams
       href: aad-group-team.md
 - name: Work with data using code
   href: work-with-data.md
@@ -33,7 +33,20 @@
       href: ./webapi/overview.md
     - name: Use the SDK for .NET
       href: ./org-service/overview.md
-    - name: Use bulk operation messages
+    - name: Search for records
+      href: ./search/overview.md
+      items:
+      - name: Query
+        href: ./search/query.md
+      - name: Suggest
+        href: ./search/suggest.md
+      - name: Autocomplete
+        href: ./search/autocomplete.md
+      - name: Statistics and Status
+        href: ./search/statistics-status.md
+      - name: Legacy search
+        href: ./search/legacy.md
+    - name: Bulk Operation messages
       href: bulk-operations.md
     - name: Create your own messages
       href: custom-actions.md
@@ -446,7 +459,7 @@
       href: sample-discovery-service-crmserviceclient.md
     - name: Tutorials
       items:
-        - name: "Tutorial: Register an app with Azure Active Directory"
+        - name: "Tutorial: Register an app with Microsoft Entra ID"
           href: walkthrough-register-app-azure-active-directory.md
         - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
           href: walkthrough-blazor-webassembly-single-tenant.md

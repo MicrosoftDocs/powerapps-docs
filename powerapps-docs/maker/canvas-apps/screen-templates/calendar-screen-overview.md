@@ -180,7 +180,7 @@ In many offices, team members send meeting requests to notify each other when th
     CountRows(
         Filter(
             MyCalendarEvents,
-            DateValue( Text(Start) ) = DateAdd( _firstDayInView, ThisItem.Value, Days ),
+            DateValue( Text(Start) ) = DateAdd( _firstDayInView, ThisItem.Value, TimeUnit.Days ),
             ShowAs <> "Free"
         )
     ) > 0 && !Subcircle1.Visible && Title2.Visible

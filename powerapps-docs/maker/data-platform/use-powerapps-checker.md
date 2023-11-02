@@ -114,7 +114,7 @@ You can run solution checker rules in your development environment to detect iss
 The following table lists the component type, rule description, severity, and category. Critical violations are blocked or warned when configured for solution checker enforcement with managed environments. More information: [Use solution checker in Managed Environments (preview)](/power-platform/admin/managed-environment-solution-checker)
 
 > [!IMPORTANT]
-> Solution checker enforcement with managed environments is a preview feature.
+> Solution import validation with managed environments is a preview feature.
 
 |Solution component  |Rule name  |Rule description  | Severity  | Category |
 |---------|---------|---------|---------|---------|
@@ -156,6 +156,7 @@ The following table lists the component type, rule description, severity, and ca
 | Web Resources  | [remove-console](https://eslint.org/docs/rules/no-console)  | Avoid using methods on console.  | Medium  | Usage |
 | Web Resources  | [avoid-ui-refreshribbon](./powerapps-checker/rules/web/avoid-ui-refreshribbon.md)  | Avoid using refreshRibbon in form onload and EnableRule. | Critical  | Performance |
 | Web Resources  | [use-getsecurityroleprivilegesinfo](./powerapps-checker/rules/web/use-getsecurityroleprivilegesinfo.md)  | Avoid userSettings.securityRolePrivileges. Use userSettings.getSecurityRolePrivilegesInfo instead. | High  | Performance |
+| Web Resources | [use-appsidepane-api](./powerapps-checker/rules/web/use-appsidepane-api.md) | Use Xrm.App.sidePanes.createPane instead of Xrm.Panels.loadPanel. | Medium | Upgrade readiness |
 | Web Resources  | [web-sdl-no-cookies](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-cookies.md) | HTTP cookies are an old client-side storage mechanism with inherent risks and limitations. Use Web Storage, IndexedDB or other modern methods instead. | Medium | Security |
 | Web Resources  | [web-sdl-no-document-domain](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-document-domain.md) | Writes to document.domain property must be reviewed to avoid bypass of same-origin checks. Usage of top level domains such as azurewebsites.net is strictly prohibited. | Medium | Security |
 | Web Resources  | [web-sdl-no-document-write](https://github.com/microsoft/eslint-plugin-sdl/blob/main/docs/rules/no-document-write.md) | Calls to document.write or document.writeln manipulate DOM directly without any sanitization and should be avoided. Use document.createElement() or similar methods instead. | Medium | Security |
