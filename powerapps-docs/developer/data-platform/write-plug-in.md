@@ -1,16 +1,17 @@
 ---
-title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to write custom code to be executed in response to data processing events." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/31/2023
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divkamath" # GitHub ID
+title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to write custom code to be executed in response to data processing events."
+ms.date: 11/01/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: divkamath
 ms.subservice: dataverse-developer
-ms.author: "dikamath" # MSFT alias of Microsoft employees only
+ms.author: dikamath
 search.audienceType: 
   - developer
 contributors:
   - phecke
+  - JimDaly
 ---
 
 # Write a plug-in
@@ -52,7 +53,7 @@ More information: [Services you can use in your code](#services-you-can-use-in-y
 
 There are some exceptions to the statement about adding properties or methods in the note above. For example, you can have a property that represents a constant and you can have methods that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These values change with every invocation and you don't want that data to be cached and applied to subsequent invocations.
 
-More information: [Develop IPlugin implementations as stateless](/dynamics365/customer-engagement/guidance/server/develop-iplugin-implementations-stateless)
+More information: [Develop IPlugin implementations as stateless](best-practices/business-logic/develop-iplugin-implementations-stateless.md)
 
 ### Pass configuration data to your plug-in
 
@@ -210,7 +211,7 @@ Plug-in and custom workflow activity assembly projects must target .NET Framewor
 
 The assembly may include multiple plug-in classes (or types), but can be no larger than 16 MB in size. It's recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB.
 
-Best practice information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
+Best practice information: [Optimize assembly development](best-practices/business-logic/optimize-assembly-development.md)
 
 ### Assemblies must be signed
 
@@ -228,14 +229,12 @@ Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to your project inclu
 
 Because the [Microsoft.CrmSdk.CoreAssemblies NuGet package has a dependency on System.Text.Json](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies#dependencies-body-tab), you're able to refer to [System.Text.Json](xref:System.Text.Json) types at design time. However, the System.Text.Json.dll file in the sandbox run-time can't be guaranteed to be the same version that you reference in your project. If you need to use `System.Text.Json`, you should use the dependent assembly feature and explicitly include it in your NuGet package.
 
-The dependent assembly capability, currently in a Preview release, can be used to include other .NET compiled assemblies with your plug-in assembly in a single package to upload.
+You can use dependent assemblies to include other .NET compiled assemblies with your plug-in assembly in a single package to upload.
 
 More information: [Dependent Assembly plug-ins](dependent-assembly-plugins.md).
 
 > [!IMPORTANT]
 > The dependent assembly capability is so important to plug-in development that you should consider using it from the start even if you do not have an immediate need to do so. Adding support for dependent assemblies to your plug-in project is much more difficult later on in the development cycle.
->
-> Since this feature is a Preview release, do not use this feature for production work.
 
 ## Next steps
 
