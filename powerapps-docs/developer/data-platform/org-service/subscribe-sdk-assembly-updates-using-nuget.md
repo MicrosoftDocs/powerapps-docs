@@ -61,6 +61,6 @@ Contains the Plug-in Registration tool used for registering plug-in assemblies, 
 ### See also
 
 [NuGet Documentation](/nuget/)  
-[Install NuGet client tools](https://learn.microsoft.com/nuget/install-nuget-client-tools)
+[Install NuGet client tools](/nuget/install-nuget-client-tools)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
