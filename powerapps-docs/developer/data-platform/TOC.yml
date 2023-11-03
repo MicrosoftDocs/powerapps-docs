@@ -170,8 +170,8 @@
           href: write-plug-in.md
         - name: Handle exceptions
           href: handle-exceptions.md
-        - name: Impersonate a user
-          href: impersonate-a-user.md
+        - name: Build and package
+          href: build-and-package.md
         - name: Register a plug-in
           href: register-plug-in.md
         - name: Debug a plug-in
@@ -180,14 +180,14 @@
           href: logging-tracing.md
         - name: Application Insights with ILogger
           href: application-insights-ilogger.md
+        - name: Impersonate a user
+          href: impersonate-a-user.md
         - name: Analyze performance
           href: analyze-performance.md
         - name: Troubleshoot plug-ins
           href: /troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors
         - name: Access external web resources
           href: access-web-services.md
-        - name: Dependent Assemblies
-          href: dependent-assembly-plugins.md
         - name: Write plug-ins for CreateMultiple and UpdateMultiple (Preview)
           href: write-plugin-multiple-operation.md
         - name: Quickstarts
