@@ -3,7 +3,7 @@ title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Micr
 description: "Learn about how to resolve the common issues on model-driven apps forms."
 author: HemantGaur
 ms.author: hemantg
-ms.date: 10/24/2023
+ms.date: 11/06/2023
 ms.reviewer: jdaly
 ms.subservice: troubleshoot
 ms.topic: article
@@ -22,7 +22,7 @@ Troubleshooting issues in Unified Interface is essential when you're working wit
 This article helps you fix some of the common issues you might encounter while working with model-driven app forms.
 
 > [!IMPORTANT]
-> - The tools described in this article are designed for troubleshooting purposes; they aren't meant to be used in day-to-day production scenarios, even though you can use them for troubleshooting issues in production environments. 
+> - The tools described in this article are designed for troubleshooting purposes; they aren't meant to be used in day-to-day production scenarios, even though you can use them for troubleshooting issues in production environments.
 > - These troubleshooting tools only affect the current user session unless otherwise noted (for example, when a browser tab accesses the model-driven app). They don't change system customizations or affect any other users or sessions. After the current session is closed, the effect is no longer applied.
 > - Most of the tools are available in all the production environments. Some of them mentioned in the article might not have been deployed to your organization yet; new tools are added periodically.
 > - Tools listed in this article are written in a scenario-driven way. You can use them independently to troubleshoot different types of issues. 
@@ -144,14 +144,10 @@ You'll need the `eventIndex` and `libraryIndex` parameter values when using the 
 
 ## Unexpected behaviors when loading a form
 
-### Issue  
-
 Some common issues that can cause unexpected behavior when a model-driven app form is loaded are:
 
 - Columns or controls don't have the values you expect.
-
 - Controls aren't disabled or aren't enabled.
-
 - Controls aren't shown or aren't hidden.
 
 ### How to troubleshoot
@@ -161,8 +157,6 @@ There are multiple reasons why unexpected behaviors occur when a form opens. One
 If the unexpected behavior stops occurring after you disabled the form handler, it is a strong indication that the specific form handler is causing this behavior. If you have identified the problematic script that's causing this behavior, follow up with the script owner to further troubleshoot this issue.  
 
 ## Saving in progress error message
-
-### Issue
 
 Sometimes when you save a form, you see a **Saving in Progress** error message. 
 
@@ -180,9 +174,7 @@ In [Monitor](../../maker/model-driven-apps/monitor-form-checker.md) the `FormEve
 
 Follow up with the script owner to further troubleshoot the issue.
 
-## Intermittent form errors 
-
-### Issue
+## Intermittent form errors
 
 The most common cause of intermittent or random form errors is using unsupported [client API](./clientapi/reference.md) methods. These errors have the following characteristics:
 
@@ -219,8 +211,6 @@ Follow up with the script owner to further troubleshoot the issue.
 
 ## The form or record isn't saved when you try to save the form
 
-### Issue
-
 A common cause is an [OnSave](./clientapi/reference/events/form-onsave.md) event handler that calls the [executionContext.getEventArgs().preventDefault()](./clientapi/reference/save-event-arguments/preventDefault.md) method to cancel the save operation.
 
 ### How to troubleshoot
@@ -234,20 +224,13 @@ Follow up with the script owner to further troubleshoot the issue.
 
 ## Form freezes, loads slowly, or throws unexplained errors
 
-### Issue
-
 There are many possible reasons for a form to freeze, load slowly, or throw a "Web resource method does not exist" script error or an error that isn't a common script error. Some of the possible reasons include:
 
 - Bad `OnLoad` scripts.
-
 - Web resource controls.
-
 - Ribbon button scripts and rules.
-
 - Synchronous network requests.
-
 - Custom plug-ins.
-
 - Business process flow errors.
 
 ### How to troubleshoot
@@ -261,8 +244,6 @@ Determine if the issue reproduces without involving forms. If it does, then ther
 
 
 ## A business rule or custom script isn't working
-
-### Issue
 
 This issue occurs if a business rule or custom script that used to work in the legacy web client stopped working in Unified Interface. One of the main reasons for this error to occur is when a business rule or script in Unified Interface references a control that isn't available in Unified Interface.
 
@@ -280,8 +261,6 @@ Follow up with the corresponding owner of the business rule or custom script to 
 
 
 ## Related menu item doesn't appear in Related tab
-
-### Issue
 
 Most forms have a **Related** tab. It opens the **Related menu** with **Related menu items**.
 
@@ -360,13 +339,12 @@ Tables created with the modern designer do not have this issue. They're always e
 
 ## Audit History doesn't appear in Related tab
 
-### Issue
-
 **Audit History** isn't in the Related menu.
 
 ### How to troubleshoot
 
 Audit history isn't supported in these cases:
+
 - Tables that are not enabled for auditing. [Check the table's IsAuditEnabled property](../data-platform/auditing/configure.md?tabs=webapi#detect-which-tables-are-enabled-for-auditing) to confirm.
 - [System tables that do not support Audit History](/power-platform/admin/manage-dataverse-auditing)
 - Mobile apps
@@ -374,8 +352,6 @@ Audit history isn't supported in these cases:
 - Dynamics for Outlook
 
 ## Why is a form showing/not showing in the form selector?
-
-### Issue
 
 The form selector is a dropdown that allows users to switch between different forms for a particular table.
 
@@ -401,8 +377,6 @@ If a form isn't showing in the form selector,
 
 ## Why is a particular form shown by default?
 
-### Issue
-
 When there are multiple forms for a table, the desired one isn't used as the default.
 
 ### How to troubleshoot
@@ -421,8 +395,6 @@ A form is available to the user when:
 1. [Form has been added to the app module](../../maker/model-driven-apps/add-edit-app-components.md#add-table-assets).
 
 ## Why a control is disabled/enabled or visible/hidden
-
-### Issue
 
 There are many possible reasons why a control might be disabled or hidden when the form is loaded. 
 
@@ -462,7 +434,6 @@ Finally, if the control passes all the above checks, the record state determines
 
 ## Why a control has a certain value on form load
 
-### Issue
 A control may or may not have a specific value on form load as the user expected. 
 
 ### How to troubleshoot
@@ -494,7 +465,6 @@ Verify where the value is coming from and take action based on the below table:
 
 ## Why a tab or section is visible or hidden
 
-### Issue
 There are many possible reasons why a tab or section might be hidden or visible.
 
 ### How to troubleshoot
@@ -508,8 +478,6 @@ Follow up according to the suggestion in the state reason or the owner of the we
 
 
 ## Unexpected dialogs or navigation
-
-### Issue
 
 There are many possible reasons why a dialog appears, or navigation happens unexpectedly. One of the common causes is the [Xrm.Navigation](./clientapi/reference/xrm-navigation.md) API methods are called to open a record or a form by a custom script. For example, when you open a form, an alert appears, as shown in the following image.
 
@@ -527,7 +495,6 @@ Follow up with the owner of the web resource to change or fix the behavior.
 
 ## Opening another form instead of a quick create form
 
-### Issue
 When opening a quick create form from a lookup or a grid, another form may open (edit or main form) instead of a quick create form. There are few reasons why this can happen:
 
 - The main form dialog force flag is being set.
@@ -544,8 +511,6 @@ You'll need to follow up with the table owner who has disabled quick create thro
 
 
 ## Table doesn't appear in the quick create menu flyout
-
-### Issue
 
 When opening the global quick create menu flyout, not all tables are available. There are few reasons why the tables are filtered in this list:
 
@@ -575,7 +540,6 @@ See the examples below to understand the reasons for filtering. Based on the exp
 
 ## Unexpected unsaved changes message
 
-### Issue
 When working on forms, you get the *unsaved changes* message on the form footer when you navigate from the current form or save the form without any changes. 
 
 ### How to troubleshoot
@@ -597,7 +561,6 @@ Verify where the change is coming from and if it's expected behavior or not. If 
 
 ## Business required column validation does not behave as expected
 
-### Issue
 Business required columns by default block the form save operation if the value is empty. However, in many by-design scenarios, a business-required column may not block the save operation when the value is empty or block the save when you don't believe it should.
 
 ### How to troubleshoot
@@ -622,8 +585,6 @@ This may lead to another troubleshooting scenario such as [Why a control is disa
 
 
 ## Some columns are not displayed on the merge dialog
-
-### Issue
 
 The merge dialog uses the default main form definition for the table and selectively renders most, but not all the columns in the dialog. This Form Checker operation explains why some of the columns are not displayed on the merge dialog, even that they may be displayed on the main form.
 
