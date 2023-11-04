@@ -343,6 +343,7 @@ Tables created with the modern designer do not have this issue. They're always e
 ### How to troubleshoot
 
 Audit history isn't supported in these cases:
+- Tables that are not enabled for auditing. [Check the table's IsAuditEnabled property](../data-platform/auditing/configure.md?tabs=webapi#detect-which-tables-are-enabled-for-auditing) to confirm.
 - [System tables that do not support Audit History](/power-platform/admin/manage-dataverse-auditing)
 - Mobile apps
 - Offline mode
