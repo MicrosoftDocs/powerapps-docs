@@ -375,13 +375,13 @@ If a form isn't showing in the form selector,
 1. Check if the form has been added to the app module.
 1. [Disable custom scripts](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-model-app-issues#client-scripts).
 
-## Why is a particular form shown by default?
+## Why an expected default form is not shown by default?
 
 When there are multiple forms for a table, the desired one isn't used as the default.
 
 ### How to troubleshoot
 
-The first form shown to the user is determined as follows:
+The following criteria detemines the first form shown to the user:
 
 1. If a formId is provided when opening a form, then that form is shown. A formId can be provided through Client API functions like [openForm](./clientapi/reference/xrm-navigation/openform.md) or in a URL.
 1. Otherwise, the most recent form that the user picked is shown. The system remembers the latest selection from the form selector.
