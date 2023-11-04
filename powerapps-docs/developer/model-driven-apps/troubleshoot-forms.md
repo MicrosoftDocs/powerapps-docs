@@ -186,7 +186,7 @@ The most common cause of intermittent or random form errors is using unsupported
 
 There are many ways to write unsupported client API methods, and they all share a common pattern: they cause a race condition in the form load pipeline. Because they introduce a race condition, the issue only occurs when the custom script executes before the form is fully ready to be accessed via the client API. Many factors can cause a race condition:
 
-- In the JavaScript web resource, code is put into a global scope executed immediately when the web resource file is loaded, without waiting for the form to be accessible. Make sure the code is executed inside a valid form handler, such as an [OnLoad](./clientapi/reference/events/form-onload.md) handler.  
+- In the JavaScript web resource, code is put into a global scope executes immediately when the web resource file is loaded, without waiting for the form to be accessible. Make sure the code is executed inside a valid form handler, such as an [OnLoad](./clientapi/reference/events/form-onload.md) handler.  
 
   > [!div class="mx-imgBorder"]  
   > ![Unsupported Client API method](media/unsupported-clientapi-globalcode.png "Unsupported Client API method")  
@@ -250,7 +250,7 @@ This issue occurs if a business rule or custom script that used to work in the l
 One of the reasons that the business rule or script isn't working in Unified Interface is that the controls that are part of them don't exist in Unified Interface.
 Composite controls exist in the web client, but in Unified Interface composite control is broken down into parts and is stored differently. For example, if the column `fullname` is part of the business rule or custom script, columns `firstname`, `middlename`, or `lastname` should be used instead.
 
-Once you launch form checker, are able to see more details in the `CompositeControl` operation including the composite control that is causing the problem, the columns that can be used in the business rule or custom script instead and a full call stack (the call stack is modified for demonstration purposes).
+Once you launch form checker, you are able to see more details in the `CompositeControl` operation including the composite control that is causing the problem, the columns that can be used in the business rule or custom script instead and a full call stack (the call stack is modified for demonstration purposes).
 
 > [!div class="mx-imgBorder"]
 > ![Custom script not working](media/custom-script-error.png "Custom script not working")
