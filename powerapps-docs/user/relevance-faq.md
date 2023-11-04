@@ -4,7 +4,7 @@ description: FAQ about Dataverse search
 author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/02/2023
+ms.date: 11/01/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -16,7 +16,8 @@ contributors:
 - mspilde
 - manish1604
 - prdeka
-- AnikaMD 
+- AnikaMD
+- JimDaly
 ---
 
 # Frequently asked questions about Dataverse search
@@ -103,6 +104,10 @@ When using the Dataverse search API, there's a throttling limit of one request p
 - MultiSelectPicklist
 - State
 - Status
+
+## How can I use the search API?
+
+[Developer's guide: Search for Dataverse records using the API](../developer/data-platform/search/overview.md)
 
 ### See also
 

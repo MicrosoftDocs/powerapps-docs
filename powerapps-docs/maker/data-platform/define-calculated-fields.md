@@ -1,19 +1,13 @@
 ---
 title: "Define calculated columns in Power Apps | MicrosoftDocs"
 description: "Learn how to define calculated columns"
-ms.custom: ""
 ms.date: 01/19/2023
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "how-to"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
-ms.assetid: 6d58a297-2ddf-4236-be3a-47249b49d5fa
-caps.latest.revision: 67
 ms.subservice: dataverse-maker
 ms.author: "matp"
 search.audienceType: 
@@ -23,7 +17,7 @@ search.audienceType:
 
 Use calculated columns to automate otherwise manual calculations used in your business processes.
 
-For example, a salesperson may want to know the weighted revenue for an opportunity, which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated column can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
+For example, a salesperson might want to know the weighted revenue for an opportunity, which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated column can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
   
 ## Capabilities
   
@@ -45,7 +39,7 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 - **Follow Up By**: Follow up on an activity by a specified number of days based on priority  
   
 > [!IMPORTANT]
->  To create a calculated column you must have the Write privilege on the [Field Security Profile table](../../developer/data-platform/reference/entities/fieldsecurityprofile.md). If the calculated column uses the secured columns in a calculation, you should consider securing the calculated column as well, to prevent users from accessing data for which they don’t have sufficient permissions. The calculated column editor gives you a warning if you are creating a calculated column that uses secured columns in a calculation, suggesting you secure the calculated column. More information:  [Column level security to control access](/power-platform/admin/field-level-security).  
+>  To create a calculated column you must have the Write privilege on the [Field Security Profile table](../../developer/data-platform/reference/entities/fieldsecurityprofile.md). If the calculated column uses the secured columns in a calculation, you should consider securing the calculated column as well, to prevent users from accessing data for which they don't have sufficient permissions. The calculated column editor gives you a warning if you are creating a calculated column that uses secured columns in a calculation, suggesting you secure the calculated column. More information:  [Column level security to control access](/power-platform/admin/field-level-security).  
 
 ## Column types that support calculations
 
@@ -89,11 +83,11 @@ For example, a salesperson may want to know the weighted revenue for an opportun
   
 ## Examples  
 
-Let’s take a look at calculated column examples in more detail. 
+Let's take a look at calculated column examples in more detail. 
   
 ### Weighted revenue of opportunity
 
-In this example, we are using the columns of the opportunity table to calculate the weighted revenue based on the opportunity’s probability. In the column editor for an opportunity table, we create a column called **Weighted Revenue** and specify the column type as **Calculated** and the data type is **Currency**.
+In this example, we're using the columns of the opportunity table to calculate the weighted revenue based on the opportunity's probability. In the column editor for an opportunity table, we create a column called **Weighted Revenue** and specify the column type as **Calculated** and the data type is **Currency**.
 
 In the calculated column definition editor, in the **Condition** section, we specify the opportunity with the Status = Open. In the **ACTION**, the formula calculates the weighted revenue based on the opportunity estimated revenue multiplied by the probability of the opportunity.  The following screenshots show step by step how to define the **Weighted Revenue** calculated column.  
   
@@ -111,7 +105,7 @@ In the calculated column definition editor, in the **Condition** section, we spe
   
 ### Follow up date of opportunity 
  
-In this example, we are using the columns of the originated lead of an opportunity to calculate the appropriate date when to follow up on the opportunity. 
+In this example, we're using the columns of the originated lead of an opportunity to calculate the appropriate date when to follow up on the opportunity. 
 
 In the column editor for an opportunity table, we create a column called **Follow-up date** and specify the type as **Calculated** and the data type is **Date and Time**.  
 
@@ -119,7 +113,7 @@ In the calculated column definition editor, in the **Condition** section, we spe
 
 In the **ACTION**, we provide two formulas:
  - To follow up in one week on the immediate opportunity
- - To follow up in one month if the opportunity is not likely to happen right away. 
+ - To follow up in one month if the opportunity isn't likely to happen right away. 
 
 The following screenshots show step by step how to define the **Follow-up date** calculated column.  
   
@@ -143,7 +137,7 @@ The following screenshots show step by step how to define the **Follow-up date**
   
 ### Days from a row creation 
  
-In this example, we are using the **DIFFINDAYS** function, to compute the difference in days from the time when a row was created to the current date. 
+In this example, we're using the **DIFFINDAYS** function, to compute the difference in days from the time when a row was created to the current date. 
 
 Create a new Whole Number column called **Calculated difference in days**.
   
@@ -187,12 +181,12 @@ The following table contains information about the syntax for the functions prov
 |**TRIMRIGHT** (single line of text, whole number)|Returns a string that contains a copy of a specified string without the last N-characters.|String|  
   
 > [!NOTE]
->  All DIFF functions require that the first **Date and Time** column and the second **Date and Time** column have the same behavior: **User Local**, **Date Only** or **Time-Zone Independent**. If the behavior of the second column doesn’t match the behavior of the first column, the error message is shown, indicating that the second column can’t be used in the current function. More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md).  
+>  All DIFF functions require that the first **Date and Time** column and the second **Date and Time** column have the same behavior: **User Local**, **Date Only** or **Time-Zone Independent**. If the behavior of the second column doesn't match the behavior of the first column, the error message is shown, indicating that the second column can't be used in the current function. More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md).  
   
 > [!NOTE]
 >  You cannot enter a date, such as 01/01/2015, as the Date value in a calculated column. Date and DateTime values can only be set or compared using other DateTime columns.  
   
-In the **CONCAT** function, you can use literal strings as single lines of text, table columns that contain a single line of text, or a combination of both. For example: **CONCAT** (FirstName, LastName, "is a manager."). If a literal string contains quotation marks, precede each mark with the backslash (\\) escape character, like this: `This string contains the \"quotation marks.\"` This ensures that the quotation marks inside the string aren’t treated as special characters that separate the strings.  
+In the **CONCAT** function, you can use literal strings as single lines of text, table columns that contain a single line of text, or a combination of both. For example: **CONCAT** (FirstName, LastName, "is a manager."). If a literal string contains quotation marks, precede each mark with the backslash (\\) escape character, like this: `This string contains the \"quotation marks.\"` This ensures that the quotation marks inside the string aren't treated as special characters that separate the strings.  
   
 The following examples show how to use the **TRIMLEFT** and **TRIMRIGHT** functions. They contain the initial strings and the resulting strings, returned by the **TRIMLEFT** and **TRIMRIGHT** functions:  
   
@@ -206,29 +200,30 @@ The following examples show how to use the **TRIMLEFT** and **TRIMRIGHT** functi
 You should be aware of certain conditions and limitations when working with calculated columns:  
   
 - [Saved queries](../../developer/data-platform/saved-queries.md), charts, and visualizations can have a maximum of 50 unique calculated columns.  
-- The calculated column values are not displayed in the Outlook Client Offline mode in the tile views or on table main forms.  
+- The calculated column values aren't displayed in the Outlook Client Offline mode in the tile views or on table main forms.  
 - A maximum number of chained calculated columns is 5.  
-- A calculated column can’t refer to itself or have cyclic chains.  
+- A calculated column can't refer to itself or have cyclic chains.  
 - If you change one of the condition operators in a multiple condition clause, all of the condition operators will update to that condition. For example, in the clause `IF (x > 50) OR (y ==10) OR (z < 5)`, if you change the `OR` operator to the `AND` operator, then all `OR` operators in the clause will become `AND` operators.  
-- You can access parental columns via the Lookup column to the parent table, such as *`<LookupFieldName>.<FieldName>`*. This is not possible with multi-table lookup columns like Customer which can be Account or Contact. However, some tables have individual Lookup columns for a specific table, such as  `ParentAccountid.`*`<FieldName>`* or `ParentContactid.`*`<FieldName>`*.  
+- You can access parental columns via the Lookup column to the parent table, such as *`<LookupFieldName>.<FieldName>`*. This isn't possible with multi-table lookup columns like Customer, which can be Account or Contact. However, some tables have individual Lookup columns for a specific table, such as  `ParentAccountid.`*`<FieldName>`* or `ParentContactid.`*`<FieldName>`*.  
 - Sorting is disabled on:  
   - A calculated column that contains a column of a parent row.  
   - A calculated column that contains a logical column (for example, address column)
   - A calculated column that contains another calculated column.  
 - Calculated columns can span two tables only.  
   - A calculated column can contain a column from another table (spanning two tables – current table and parent row).  
-  - A calculated column can’t contain a calculated column from another table that also contains another column from a different table (spanning three tables):   
+  - A calculated column can't contain a calculated column from another table that also contains another column from a different table (spanning three tables):   
     (Current table) Calculated Column &larr; (Parent Row) Calculated Column 1 &larr; (Parent Row) Calculated Column 2.  
-- You can’t trigger workflows or plug-ins on calculated columns.  
-- You can’t change an existing simple column to a calculated column. If your current application is using JavaScript or plug-ins to calculate a column, you would not be able to use the calculated columns feature without creating a new column.  
-- Duplicate detection rules are not triggered on calculated columns.  
+- You can't trigger workflows or plug-ins on calculated columns.  
+- You can't change an existing simple column to a calculated column. If your current application is using JavaScript or plug-ins to calculate a column, you wouldn't be able to use the calculated columns feature without creating a new column.  
+- Duplicate detection rules aren't triggered on calculated columns.  
 - A rollup can't reference a calculated column that uses another calculated column, even if all the columns of the other calculated column are on the current table.  
   
 ### See also
  
-[Create and edit columns](create-edit-fields.md)<br />
-[Define rollup columns that aggregate values](define-rollup-fields.md)<br />
-[Video: Rollup and calculated columns](https://go.microsoft.com/fwlink/p/?LinkId=517727)
+[Create and edit columns](create-edit-fields.md)   
+[Define rollup columns that aggregate values](define-rollup-fields.md)   
+[Video: Rollup and calculated columns](https://go.microsoft.com/fwlink/p/?LinkId=517727)   
+[Formula, calculated, and rollup columns using code](../../developer/data-platform/calculated-rollup-attributes.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
