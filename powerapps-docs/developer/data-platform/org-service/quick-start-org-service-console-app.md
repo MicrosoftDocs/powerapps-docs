@@ -112,12 +112,12 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 
 ## Run the program
 
-1. Press F5 to run the program. The output should look something like this:
+Press **F5** to run the program. The output should look something like this:
 
-    ```console
-    User ID is 969effb0-98ae-478c-b547-53a2968c2e75
-    Press any key to exit.
-    ```
+```console
+User ID is 969effb0-98ae-478c-b547-53a2968c2e75
+Press any key to exit.
+```
 
 ## Use the IOrganizationService interface methods
 
@@ -173,6 +173,8 @@ To see and understand the `IOrganizationService` interface a little better, try 
    Press any key to exit.
    ```
 
+This demonstrates how the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) implements the [IOrganizationService Interface](iorganizationservice-interface.md) and you can use it as a variable of that type.
+
 ## Next Steps
 
 Now that you have a simple console program that connects to Dataverse, use this project to try other methods and messages. You can use this Quick Start console application project to do ad-hoc testing.
@@ -211,6 +213,6 @@ The following articles explain how to work with business data in Dataverse table
 
 ### Explore our code samples
 
-You can find SDK for .NET sample code in our GitHub repository at [PowerApps-Samples/dataverse/orgsvc](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc)
+You can find SDK for .NET sample code in our GitHub repository at [PowerApps-Samples/dataverse/orgsvc](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
