@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Execute an SDK for .NET request (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Demonstrates how to connect to the SDK for .NET of Microsoft Dataverse and execute a request." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/05/2022
+ms.date: 11/05/2023
 author: phecke
 ms.author: pehecke
 ms.reviewer: jdaly
@@ -19,7 +19,7 @@ contributors:
 
 This topic shows you how to begin using classes in the SDK for .NET assemblies to work with Microsoft Dataverse business data. You will create a minimal console application to connect to your environment's Organization service using the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class and execute a web service operation.
 
-Your application will call the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class. The result returned from the web service is a populated <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse>.<xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId> value which is the unique identifier of your Dataverse system user account.
+Your application will call the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class. The result returned from the web service is a populated [WhoAmIResponse.UserId](xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId) value which is the unique identifier of your Dataverse system user account.
 
 > [!NOTE]
 > This quick start example does not include exception handling for brevity. This is a minimum code example of what you need to connect to and use the SDK for .NET.
@@ -28,11 +28,11 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 
 ## Prerequisites
 
- - Visual Studio (2019 or later)
- - Internet connection
- - Logon credentials of a Dataverse system user account for the target environment
- - URL address of the Dataverse environment you want to connect with
- - Basic understanding of the Visual C# language
+- Visual Studio (2022 or later)
+- Internet connection
+- Logon credentials of a Dataverse system user account for the target environment
+- URL address of the Dataverse environment you want to connect with
+- Basic understanding of the Visual C# language
 
 ## Create Visual Studio project
 
@@ -44,7 +44,7 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 
     ![Add NuGet package.](../media/quick-start-org-service-console-app-2.png)
 
-1. Browse for the latest version of the  `Microsoft.PowerPlatform.Dataverse.Client` NuGet package and install it.
+1. **Browse** for the latest version of the  `Microsoft.PowerPlatform.Dataverse.Client` NuGet package and install it.
 
     ![Install Microsoft.PowerPlatform.Dataverse.Client NuGet package.](../media/quick-start-org-service-console-app-3.png)
 
@@ -103,7 +103,7 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
     }
     ```
 
-1. Change the values for the environment URL, username, and password as indicated by the TODO code comment.
+1. Change the values for the `url`, `userName`, and `password` as indicated by the `// TODO` code comment.
 
     > [!NOTE]
     > You can find supported values for *AuthType* listed in [Connection string parameters](../xrm-tooling/use-connection-strings-xrm-tooling-connect.md#connection-string-parameters). You can find your environment URL in the legacy web application under **Settings > Customization > Developer Resources** or in Power Apps **Settings** (gear icon) > **Developer Resources**.
@@ -114,20 +114,103 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 
 1. Press F5 to run the program. The output should look something like this:
 
-    ```bash
+    ```console
     User ID is 969effb0-98ae-478c-b547-53a2968c2e75
     Press any key to exit.
     ```
 
+## Use the IOrganizationService interface methods
+
+> [!IMPORTANT]
+> Understand that the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) this program uses is just one way to connect to the Dataverse Organization service.
+> 
+> In this  program, you can use the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) because it implements the [IOrganizationService Interface](iorganizationservice-interface.md) which includes the [Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
+
+To see and understand the `IOrganizationService` interface a little better, try this:
+
+1. Go to the reference article for the [WhoAmIRequest class](xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest).
+1. Copy the example method from that article. It looks like this:
+
+   ```csharp
+   /// <summary>
+   /// Outputs the data returned from the WhoAmI message
+   /// </summary>
+   /// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+   static void WhoAmIExample(IOrganizationService service) {
+
+      var response = (WhoAmIResponse)service.Execute(new WhoAmIRequest());
+
+      Console.WriteLine($"OrganizationId:{response.OrganizationId}");
+      Console.WriteLine($"BusinessUnitId:{response.BusinessUnitId}");
+      Console.WriteLine($"UserId:{response.UserId}");
+
+   }
+   ```
+
+   Notice that it accepts an `IOrganizationService` service instance as the parameter.
+
+1. Paste this `WhoAmIExample` method below the `Main` method in your program
+1. Replace the `Main` method in your program with this:
+
+   ```csharp
+   static void Main()
+   {
+      using (ServiceClient serviceClient = new(connectionString))
+
+      WhoAmIExample(service: serviceClient);
+
+      Pause the console so it does not close.
+      Console.ReadLine();
+   }
+   ```
+
+1. Run the sample again and you should see:
+
+   ```console
+   OrganizationId:883278f5-07af-45eb-a0bc-3fea67caa544
+   BusinessUnitId:38e0dbe4-131b-e111-ba7e-78e7d1620f5e
+   UserId:4026be43-6b69-e111-8f65-78e7d1620f5e
+   Press any key to exit.
+   ```
+
 ## Next Steps
 
-The console app demonstrates how to connect to the Organization web service using a connection string, execute a web service message request, and access some data in the response. Next, you may want to look at common web service data operations like create, retrieve, update, and delete.
+Now that you have a simple console program that connects to Dataverse, use this project to try other methods and messages. You can use this Quick Start console application project to do ad-hoc testing.
 
-The following articles will explain how to work with business data in Dataverse tables.  
-[Entity class operations using the SDK for .NET](entity-operations.md)  
-[Create table rows using the SDK for .NET](entity-operations-create.md)  
-[Retrieve a table row using the SDK for .NET](entity-operations-retrieve.md)  
-[Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)<br />
-[Associate and disassociate table rows using the SDK for .NET](entity-operations-associate-disassociate.md)
+### Try other IOrganizationService interface methods
+
+> [!TIP]
+> In our documentation you can find many example methods like this `WhoAmIExample` which accept an `IOrganizationService service` parameter.
+
+Try the examples for these [IOrganizationService methods](xref:Microsoft.Xrm.Sdk.IOrganizationService) methods:
+
+- [Create](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A)
+- [Retrieve](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
+- [Update](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A)
+- [Delete](xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete%2A)
+- [RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)
+- [Associate](xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate%2A)
+- [Disassociate](xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate%2A)
+
+### Try other messages
+
+You can find other messages that you can invoke using the [Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) in these name spaces:
+
+- [Microsoft.Xrm.Sdk.Messages Namespace](xref:Microsoft.Xrm.Sdk.Messages)
+- [Microsoft.Crm.Sdk.Messages Namespace](xref:Microsoft.Crm.Sdk.Messages)
+
+### Learn to work with record data
+
+The following articles explain how to work with business data in Dataverse tables:
+  
+- [Entity class operations using the SDK for .NET](entity-operations.md)
+- [Create table rows using the SDK for .NET](entity-operations-create.md)
+- [Retrieve a table row using the SDK for .NET](entity-operations-retrieve.md)
+- [Update and delete table rows using the SDK for .NET](entity-operations-update-delete.md)
+- [Associate and disassociate table rows using the SDK for .NET](entity-operations-associate-disassociate.md)
+
+### Explore our code samples
+
+You can find SDK for .NET sample code in our GitHub repository at [PowerApps-Samples/dataverse/orgsvc](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
