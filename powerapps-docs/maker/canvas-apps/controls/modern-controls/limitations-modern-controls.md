@@ -43,6 +43,8 @@ In this article, learn about the general limitations of the modern controls used
   
 5. All app checker rules such as accessibility and formulas, currently don’t run on modern controls. We'll try to offer support as the feature develops.
 
+6. Test Studio and Test engine compatiblity with modern controls is under development and modern controls are not fully supported on these tools.
+
 
 
 ### See also
