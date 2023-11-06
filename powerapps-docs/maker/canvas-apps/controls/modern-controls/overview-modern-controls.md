@@ -46,7 +46,7 @@ With your [canvas app open for editing](../../edit-app.md):
    > ![Themes pane](media/modern-themes-pane.png)
 
 ## What's next for these controls and themes?
-We're consistently improving and adding new capabilities for modern controls and themes. See our blog for [what's new](https://go.microsoft.com/fwlink/?linkid=2229189).
+We're consistently improving and adding new capabilities for modern controls and themes. We publish updates to [Power Apps blog](https://powerapps.microsoft.com/en-us/blog/) every month on the progres made for modern controls.
   
 ## Provide feedback to Microsoft
 
