@@ -520,14 +520,14 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
             - name: Link
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
-            - name: Badge (preview)
-              href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Progress bar 
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
             - name: Slider
               href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
+            - name: Badge (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Checkbox (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
             - name: Date picker (preview)
