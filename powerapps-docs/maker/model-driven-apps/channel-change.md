@@ -17,7 +17,7 @@ contributors:
 ---
 # Changing release channels for model-driven apps
 
-The release channel affects the features that impact users. When the monthly channel is enabled for an environment, makers need to validate that their customizations work with each monthly release. This article describes different approaches for a maker to change channels and validate an upcoming release..
+The release channel affects the features that impact users. When the monthly channel is enabled for an environment, makers need to validate that their customizations work with each monthly release. This article describes different approaches for a maker to change channels and validate an upcoming release.
 
 ## Flexible channel configuration
 
@@ -26,7 +26,7 @@ The release channel for model-driven apps can be changed in two primary ways.
 - App channel (starting with build 23111)
 - Environment channel
 
-In addition, the release channel can be overriden with either of these options.
+In addition, the release channel can be overridden with either of these options.
 
 - [User channel override](/power-platform/admin/user-channel-override) (starting with build 23111)
 - Browser session channel
@@ -48,74 +48,74 @@ More information:
 
 ## Change the app channel
 
-The app channel can be used to override the release channel for a model-driven app using Power Apps [app designer](model-driven-app-glossary.md#app-designer) or [solution explorer](model-driven-app-glossary.md#solution-explorer).
+The app channel can be used to override the release channel for a model-driven app using Power Apps [app designer](model-driven-app-glossary.md#app-designer) or solutions area.
 
 | App release channel | App setting value | Behavior |
-| -- | -- | -- |
+|--|--|--|
 | Auto | 0 | App default value is **Semi-annual**, but will later change to **Monthly** in a future release wave. |
 | Monthly | 1 | App explicitly set to **Monthly Channel**. |
 | Semi-annual | 2 | App explicitly set to **Semi-Annual Channel**. |
 
-### Change app channel in App Designer
+### Change app channel in app designer
 
-A maker can use the app designer to explicitly set the release channel for an app which overrides the environment channel.
+A maker can use the app designer to explicitly set the release channel for an app, which overrides the environment channel.
 
 1. Open https://make.powerapps.com/.
 1. Under **Solutions** open an existing solution containing a model-driven app.
 1. Open the app in the app designer.
 1. Open **Settings** dialog.
-1. Under **General** tab expand **Advanced settings**
-1. Use **App release channel** to change the app release value
-1. Save and publish the app
+1. Under the General tab, expand **Advanced settings**.
+1. Use **App release channel** to change the app release value.
+1. Save and publish the app.
 
-### Change app channel in Solution Explorer
+### Change app channel in the solutions area
 
-A maker can use Solution Explorer to explicitly set the Release Channel for multiple apps or all apps within the environment.
+A maker can use the **Solutions** area to explicitly set the release channel for multiple apps or all apps within the environment.
 
 1. Open https://make.powerapps.com/
-1. Under **Solutions** open an existing solution with one or more model-driven apps
-1. Add the existing app setting "Allow new app channel default" into the solution
-   1. Click **Add existing** > **More** > **Setting**
-   1. Search for "app channel"
-   1. Select the item "App channel"
-   1. Click "Add"
-1. To change the app channel for multiple apps
-   1. Edit the setting "App channel"
-   1. Find the app(s) under the section **Setting app values**
-   1. Click **New app value** and enter the integer for the channel
-   1. Click "Save"
-1. To change the app channel for all apps in the environment
-   1. Edit the setting "App channel"
-   1. Find the app(s) under the section **Setting environment values**
-   1. Click **New environment value** and enter the integer for the channel
-   1. Click "Save"
-1. After changing an app setting for a specific app(s), the app(s) must be republished to take affect
+1. Under **Solutions** open an existing solution with one or more model-driven apps:
+1. Add the existing app setting **Allow new app channel default** into the solution:
+   1. Select **Add existing** > **More** > **Setting**.
+   1. Search for *app channel*.
+   1. Select the item **App channel**.
+   1. Select **Add**.
+1. To change the app channel for multiple apps:
+   1. Edit the setting **App channel**.
+   1. Find the app(s) under the section **Setting app values**.
+   1. Select **New app value** and then enter the integer for the channel.
+   1. Select **Save**.
+1. To change the app channel for all apps in the environment:
+   1. Edit the setting **App channel**.
+   1. Find the app(s) under the section **Setting environment values**.
+   1. Select **New environment value** and then enter the integer for the channel.
+   1. Select **Save**.
+1. After changing an app setting for specific app(s), the app(s) must be republished for the change to take effect.
 
-### Prevent new app defaulting to Monthly Channel
+### Prevent new app defaulting to monthly channel
 
-As part of the gradual migration to default all apps to use Monthly Channel, newly created model-driven apps will gradually start seeing the app channel defaulted. Admins or makers can control the release channel default for new apps using an app setting. The app setting "Allow new app channel default" defaults to **Yes** which means a newly created app will be set to **Monthly**. If the app setting is switched to **No**, new apps will be created with release channel **Auto**.
+As part of the gradual migration to default all apps to use monthly channel, newly created model-driven apps will gradually start seeing the app channel defaulted. Admins or makers can control the release channel default for new apps using an app setting. The app setting **Allow new app channel default** defaults to **Yes**, which means a newly created app is set to **Monthly**. If the app setting is switched to **No**, new apps are created with release channel **Auto**.
 
-The following steps will change the default for all new apps within an environment. This app setting override can also be put into a solution which is migrated to all environments to prevent new apps from having a default set.
+The following steps change the default for all new apps within an environment. This app setting override can also be put into a solution that's migrated to all environments to prevent new apps from having a default set.
 
-1. Open Solution Explorer to an existing or new solution
-1. Add the existing app setting "Allow new app channel default" into the solution
-   1. Click **Add existing** > **More** > **Setting**
-   1. Search for "app channel default"
-   1. Select the item "Allow new app channel default"
-   1. Click "Add"
-1. Edit the setting "Allow new app channel default"
-   1. Click on "Allow new app channel default" in solution explorer
-   1. Click **New environment value**
-   1. Change environment value to **No**
-   1. Click "Save"
+1. Go to **Solutions** and open an existing or create a new solution.
+1. Add the existing app setting **Allow new app channel default** into the solution:
+   1. Select **Add existing** > **More** > **Setting**.
+   1. Search for *app channel default*.
+   1. Select the item **Allow new app channel default**.
+   1. Select **Add**.
+1. Edit the setting **Allow new app channel default**:
+   1. Select **Allow new app channel default**.
+   1. Select **New environment value**.
+   1. Change the environment value to **No**.
+   1. Select **Save**.
 
 ## Changing the user channel
 
 The user channel can be used to override both the environment channel and the app channel using the Power Platform admin center or with code.
 
-Power Platform admins can change the release channel using the settings in the environment's user list. More information: [Manage user channel override](https://review.learn.microsoft.com/en-us/power-platform/admin/user-channel-override?branch=pr-en-us-7152).
+Power Platform admins can change the release channel using the settings in the environment's user list. More information: [Manage user channel override](/power-platform/admin/user-channel-override).
 
-Developers can change the user release channel by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/usersettings#BKMK_ReleaseChannel) column value for the row in the [UserSettings](/power-apps/developer/data-platform/reference/entities/usersettings) table. The user channel can be programmatically updates with the same approach as the org channel.
+Developers can change the user release channel by updating the [ReleaseChannel](/power-apps/developer/data-platform/reference/entities/usersettings#BKMK_ReleaseChannel) column value for the row in the [UserSettings](/power-apps/developer/data-platform/reference/entities/usersettings) table. The user channel can be programmatically updated with the same approach as the environment channel.
 
 ## Changing the browser session channel
 
@@ -140,21 +140,21 @@ When the channel is monthly, the monthly release can be changed using the URL pa
 
 ## Validating the next monthly release
 
-Validation should be done for each monthly channel release before it's automatically enabled for users. Users can test when the validation build version has reached the environment.
+Validation should be done for each monthly channel release before it's automatically enabled for users. Users can test when the validation build version reaches the environment.
 
-The easiest way to validate is by appending ```&channelrelease=next``` which automatically sets the release channel to the next upcoming monthly release.
+The easiest way to validate is by appending ```&channelrelease=next``` that automatically sets the release channel to the next upcoming monthly release.
 
 1. Find the current monthly release a model-driven app by selecting **Settings** > **About**. The release version follows **Channel: Monthly** and is a date like *July 2023*.
 
-1. Append ```&channelrelease=next``` to the URL
+1. Append ```&channelrelease=next``` to the URL.
 
 1. Repeat the first step to observe an updated release version.
 
-To validate against a specific monthly release, the following steps can be used.
+To validate against a specific monthly release, the following steps can be used:
 
 1. Find the current monthly release a model-driven app by selecting **Settings** > **About**. The release version follows **Channel: Monthly** and is a date like *July 2023*.
 
-1. Find the a monthly release short name by opening [Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
+1. Find the monthly release short name by opening [Unified Interface monthly channel releases](/power-platform/released-versions/common-data-service/unified-interface-monthly-releases)
 
 1. A specific release can be set with the URL parameter ```&channelrelease=`` with the next release short name like *2308*.
 
@@ -171,4 +171,4 @@ When a user running the monthly channel report observes unexpected behavior, the
 [Release channel overview](channel-overview.md) <br />
 [User About dialog - channel](../../user/about-dialog.md) <br />
 [Power Platform admin center - Manage behavior settings](/power-platform/admin/settings-behavior) <br />
-[Power Platform admin center - Manage user channel override](https://review.learn.microsoft.com/en-us/power-platform/admin/user-channel-override?branch=pr-en-us-7152).
+[Power Platform admin center - Manage user channel override](/power-platform/admin/user-channel-override).
