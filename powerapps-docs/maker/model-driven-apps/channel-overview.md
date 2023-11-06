@@ -65,5 +65,5 @@ The monthly release is the first weekly release of each month. The release match
 
 [Changing release channels](channel-change.md) <br />
 [User about dialog - channel](../../user/about-dialog.md) <br />
-[Power Platform admin center - Environment behavior settings](/power-platform/admin/settings-behavior)
+[Power Platform admin center - Environment behavior settings](/power-platform/admin/settings-behavior) <br />
 [Power Platform admin center - User settings](/power-platform/admin/users-settings)
