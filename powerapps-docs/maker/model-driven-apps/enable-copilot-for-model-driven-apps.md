@@ -20,6 +20,12 @@ search.audienceType:
 
 Copilot for app users in model-driven apps is a next-generation AI assistant that provides data insights on Dataverse tables through natural language conversation. Copilot helps app users boost productivity through AI-powered insights and intuitive app navigation. More information:([Copilot for app users in model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot).
 
-# Enbale Copilot for end users in model driven apps
+# Enable Copilot for end users in model driven apps
+Makers who are Environmental Administators can enable Copilot in model-driven apps for all the users in their enviroments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+
+1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com as an admin (Dynamics 365 admin, Global admin, or Microsoft Power Platform admin).
+
+2. In the navigation pane, go to **Environments** and select the enviornment where you want to enable Copilot for app users in model-driven apps in.
+3. 
 
 
