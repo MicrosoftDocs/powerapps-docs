@@ -1,7 +1,7 @@
 ---
 title: "Mailbox Auto Tracking Folder (MailboxTrackingFolder)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Mailbox Auto Tracking Folder (MailboxTrackingFolder)  table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -161,7 +161,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,activityfileattachment,appaction,appactionmigration,appactionrule,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appsetting,appusersetting,archivecleanupinfo,archivecleanupoperation,asyncoperation,attributeimageconfig,bot,botcomponent,bulkarchiveconfig,bulkarchivefailuredetail,bulkarchiveoperation,bulkarchiveoperationdetail,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,chat,comment,connectioninstance,connectionreference,connector,contact,conversationtranscript,customapi,customapirequestparameter,customapiresponseproperty,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,delegatedauthorization,desktopflowbinary,desktopflowmodule,enablearchivalrequest,entityanalyticsconfig,entityimageconfig,entityindex,entityrecordfilter,environmentvariabledefinition,environmentvariablevalue,exportedexcel,exportsolutionupload,featurecontrolsetting,flowevent,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,flowsession,fxexpression,holidaywrapper,indexattributes,internalcatalogassignment,keyvaultreference,managedidentity,metadataforarchival,mobileofflineprofileextension,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aievent,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisoverride,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_dataflowtemplate,msdyn_dataflow_datalakefolder,msdyn_dmsrequest,msdyn_dmsrequeststatus,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_favoriteknowledgearticle,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_fileupload,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeconfiguration,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_mobileapp,msdyn_pmanalysishistory,msdyn_pmbusinessruleautomationconfig,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocesstemplate,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_richtextfile,msdyn_schedule,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msdyn_virtualtablecolumncandidate,msdyn_workflowactionstatus,msgraphresourcetosubscription,mspcat_catalogsubmissionfiles,mspcat_packagestore,organizationdatasyncfnostate,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationdatasyncsubscriptionfnotable,organizationsetting,package,pdfsetting,pluginpackage,powerbidataset,powerbidatasetapdx,powerbimashupparameter,powerbireport,powerbireportapdx,powerfxrule,privilegesremovalsetting,processstageparameter,provisionlanguageforuser,reconciliationentityinfo,reconciliationinfo,recordfilter,relationshipattribute,retaineddataexcel,retentioncleanupinfo,retentioncleanupoperation,retentionconfig,retentionfailuredetail,retentionoperation,retentionoperationdetail,revokeinheritedaccessrecordstracker,roleeditorlayout,searchattributesettings,searchcustomanalyzer,searchrelationshipsettings,serviceplan,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharedworkspacepool,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagedentity,stagedentityattribute,stagesolutionupload,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemuserauthorizationchangetracker,tdsmetadata,teammobileofflineprofilemembership,territory,usermobileofflineprofilemembership,userrating,virtualentitymetadata,workflowbinary,workqueue,workqueueitem|
+|Targets|account,activityfileattachment,adx_externalidentity,adx_invitation,adx_inviteredemption,adx_portalcomment,adx_setting,adx_webformsession,aiplugin,aipluginexternalschema,aipluginexternalschemaproperty,aiplugininstance,aipluginoperation,aipluginoperationparameter,aipluginusersetting,appaction,appactionmigration,appactionrule,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appsetting,appusersetting,archivecleanupinfo,archivecleanupoperation,asyncoperation,attributeimageconfig,bot,botcomponent,bulkarchiveconfig,bulkarchivefailuredetail,bulkarchiveoperation,bulkarchiveoperationdetail,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,chat,comment,connectioninstance,connectionreference,connector,contact,conversationtranscript,customapi,customapirequestparameter,customapiresponseproperty,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,delegatedauthorization,desktopflowbinary,desktopflowmodule,dvfilesearch,dvfilesearchattribute,dvfilesearchentity,dvtablesearch,dvtablesearchattribute,dvtablesearchentity,enablearchivalrequest,entityanalyticsconfig,entityimageconfig,entityindex,entityrecordfilter,environmentvariabledefinition,environmentvariablevalue,exportedexcel,exportsolutionupload,featurecontrolsetting,flowevent,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,flowsession,fxexpression,holidaywrapper,indexattributes,internalcatalogassignment,keyvaultreference,mainfewshot,makerfewshot,managedidentity,metadataforarchival,mobileofflineprofileextension,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aievent,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisoverride,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_dataflowtemplate,msdyn_dataflow_datalakefolder,msdyn_dmsrequest,msdyn_dmsrequeststatus,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_favoriteknowledgearticle,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_fileupload,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeconfiguration,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_mobileapp,msdyn_pmanalysishistory,msdyn_pmbusinessruleautomationconfig,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocesstemplate,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_richtextfile,msdyn_schedule,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msdyn_virtualtablecolumncandidate,msdyn_workflowactionstatus,msfp_alert,msfp_alertrule,msfp_emailtemplate,msfp_fileresponse,msfp_localizedemailtemplate,msfp_project,msfp_question,msfp_questionresponse,msfp_satisfactionmetric,msfp_survey,msfp_surveyinvite,msfp_surveyreminder,msfp_surveyresponse,msfp_unsubscribedrecipient,msgraphresourcetosubscription,mspcat_catalogsubmissionfiles,mspcat_packagestore,organizationdatasyncfnostate,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationdatasyncsubscriptionfnotable,organizationsetting,package,pdfsetting,pluginpackage,powerbidataset,powerbidatasetapdx,powerbimashupparameter,powerbireport,powerbireportapdx,powerfxrule,powerpagecomponent,powerpagesite,powerpagesitelanguage,powerpagesitepublished,privilegesremovalsetting,processstageparameter,provisionlanguageforuser,reconciliationentityinfo,reconciliationentitystepinfo,reconciliationinfo,recordfilter,relationshipattribute,retaineddataexcel,retentioncleanupinfo,retentioncleanupoperation,retentionconfig,retentionfailuredetail,retentionoperation,retentionoperationdetail,revokeinheritedaccessrecordstracker,roleeditorlayout,searchattributesettings,searchcustomanalyzer,searchrelationshipsettings,serviceplan,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharedworkspacepool,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagedentity,stagedentityattribute,stagedmetadataasyncoperation,stagesolutionupload,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemuserauthorizationchangetracker,tdsmetadata,teammobileofflineprofilemembership,territory,usermobileofflineprofilemembership,userrating,virtualentitymetadata,workflowbinary,workqueue,workqueueitem|
 |Type|Lookup|
 
 
@@ -565,6 +565,9 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [relationshipattribute_MailboxTrackingFolders](#BKMK_relationshipattribute_MailboxTrackingFolders)
 - [stagedentity_MailboxTrackingFolders](#BKMK_stagedentity_MailboxTrackingFolders)
 - [stagedentityattribute_MailboxTrackingFolders](#BKMK_stagedentityattribute_MailboxTrackingFolders)
+- [stagedmetadataasyncoperation_MailboxTrackingFolders](#BKMK_stagedmetadataasyncoperation_MailboxTrackingFolders)
+- [keyvaultreference_MailboxTrackingFolders](#BKMK_keyvaultreference_MailboxTrackingFolders)
+- [managedidentity_MailboxTrackingFolders](#BKMK_managedidentity_MailboxTrackingFolders)
 - [catalog_MailboxTrackingFolders](#BKMK_catalog_MailboxTrackingFolders)
 - [catalogassignment_MailboxTrackingFolders](#BKMK_catalogassignment_MailboxTrackingFolders)
 - [customapi_MailboxTrackingFolders](#BKMK_customapi_MailboxTrackingFolders)
@@ -604,6 +607,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [environmentvariablevalue_MailboxTrackingFolders](#BKMK_environmentvariablevalue_MailboxTrackingFolders)
 - [workflowbinary_MailboxTrackingFolders](#BKMK_workflowbinary_MailboxTrackingFolders)
 - [desktopflowmodule_MailboxTrackingFolders](#BKMK_desktopflowmodule_MailboxTrackingFolders)
+- [flowevent_MailboxTrackingFolders](#BKMK_flowevent_MailboxTrackingFolders)
 - [flowmachine_MailboxTrackingFolders](#BKMK_flowmachine_MailboxTrackingFolders)
 - [flowmachinegroup_MailboxTrackingFolders](#BKMK_flowmachinegroup_MailboxTrackingFolders)
 - [flowmachineimage_MailboxTrackingFolders](#BKMK_flowmachineimage_MailboxTrackingFolders)
@@ -643,15 +647,11 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgearticletemplate_MailboxTrackingFolders](#BKMK_msdyn_knowledgearticletemplate_MailboxTrackingFolders)
 - [msdyn_knowledgepersonalfilter_MailboxTrackingFolders](#BKMK_msdyn_knowledgepersonalfilter_MailboxTrackingFolders)
 - [msdyn_knowledgesearchfilter_MailboxTrackingFolders](#BKMK_msdyn_knowledgesearchfilter_MailboxTrackingFolders)
-- [keyvaultreference_MailboxTrackingFolders](#BKMK_keyvaultreference_MailboxTrackingFolders)
-- [managedidentity_MailboxTrackingFolders](#BKMK_managedidentity_MailboxTrackingFolders)
 - [fxexpression_MailboxTrackingFolders](#BKMK_fxexpression_MailboxTrackingFolders)
 - [powerfxrule_MailboxTrackingFolders](#BKMK_powerfxrule_MailboxTrackingFolders)
 - [msgraphresourcetosubscription_MailboxTrackingFolders](#BKMK_msgraphresourcetosubscription_MailboxTrackingFolders)
 - [virtualentitymetadata_MailboxTrackingFolders](#BKMK_virtualentitymetadata_MailboxTrackingFolders)
 - [mobileofflineprofileextension_MailboxTrackingFolders](#BKMK_mobileofflineprofileextension_MailboxTrackingFolders)
-- [teammobileofflineprofilemembership_MailboxTrackingFolders](#BKMK_teammobileofflineprofilemembership_MailboxTrackingFolders)
-- [usermobileofflineprofilemembership_MailboxTrackingFolders](#BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders)
 - [organizationdatasyncsubscription_MailboxTrackingFolders](#BKMK_organizationdatasyncsubscription_MailboxTrackingFolders)
 - [organizationdatasyncsubscriptionentity_MailboxTrackingFolders](#BKMK_organizationdatasyncsubscriptionentity_MailboxTrackingFolders)
 - [organizationdatasyncsubscriptionfnotable_MailboxTrackingFolders](#BKMK_organizationdatasyncsubscriptionfnotable_MailboxTrackingFolders)
@@ -673,6 +673,19 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_mobileapp_MailboxTrackingFolders](#BKMK_msdyn_mobileapp_MailboxTrackingFolders)
 - [msdyn_insightsstorevirtualentity_MailboxTrackingFolders](#BKMK_msdyn_insightsstorevirtualentity_MailboxTrackingFolders)
 - [roleeditorlayout_MailboxTrackingFolders](#BKMK_roleeditorlayout_MailboxTrackingFolders)
+- [dvfilesearch_MailboxTrackingFolders](#BKMK_dvfilesearch_MailboxTrackingFolders)
+- [dvfilesearchattribute_MailboxTrackingFolders](#BKMK_dvfilesearchattribute_MailboxTrackingFolders)
+- [dvfilesearchentity_MailboxTrackingFolders](#BKMK_dvfilesearchentity_MailboxTrackingFolders)
+- [dvtablesearch_MailboxTrackingFolders](#BKMK_dvtablesearch_MailboxTrackingFolders)
+- [dvtablesearchattribute_MailboxTrackingFolders](#BKMK_dvtablesearchattribute_MailboxTrackingFolders)
+- [dvtablesearchentity_MailboxTrackingFolders](#BKMK_dvtablesearchentity_MailboxTrackingFolders)
+- [aiplugin_MailboxTrackingFolders](#BKMK_aiplugin_MailboxTrackingFolders)
+- [aipluginexternalschema_MailboxTrackingFolders](#BKMK_aipluginexternalschema_MailboxTrackingFolders)
+- [aipluginexternalschemaproperty_MailboxTrackingFolders](#BKMK_aipluginexternalschemaproperty_MailboxTrackingFolders)
+- [aiplugininstance_MailboxTrackingFolders](#BKMK_aiplugininstance_MailboxTrackingFolders)
+- [aipluginoperation_MailboxTrackingFolders](#BKMK_aipluginoperation_MailboxTrackingFolders)
+- [aipluginoperationparameter_MailboxTrackingFolders](#BKMK_aipluginoperationparameter_MailboxTrackingFolders)
+- [aipluginusersetting_MailboxTrackingFolders](#BKMK_aipluginusersetting_MailboxTrackingFolders)
 - [appaction_MailboxTrackingFolders](#BKMK_appaction_MailboxTrackingFolders)
 - [appactionmigration_MailboxTrackingFolders](#BKMK_appactionmigration_MailboxTrackingFolders)
 - [appactionrule_MailboxTrackingFolders](#BKMK_appactionrule_MailboxTrackingFolders)
@@ -723,12 +736,37 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [powerbireport_MailboxTrackingFolders](#BKMK_powerbireport_MailboxTrackingFolders)
 - [powerbireportapdx_MailboxTrackingFolders](#BKMK_powerbireportapdx_MailboxTrackingFolders)
 - [msdyn_fileupload_MailboxTrackingFolders](#BKMK_msdyn_fileupload_MailboxTrackingFolders)
+- [mainfewshot_MailboxTrackingFolders](#BKMK_mainfewshot_MailboxTrackingFolders)
+- [makerfewshot_MailboxTrackingFolders](#BKMK_makerfewshot_MailboxTrackingFolders)
 - [searchattributesettings_MailboxTrackingFolders](#BKMK_searchattributesettings_MailboxTrackingFolders)
 - [searchcustomanalyzer_MailboxTrackingFolders](#BKMK_searchcustomanalyzer_MailboxTrackingFolders)
 - [searchrelationshipsettings_MailboxTrackingFolders](#BKMK_searchrelationshipsettings_MailboxTrackingFolders)
+- [powerpagecomponent_MailboxTrackingFolders](#BKMK_powerpagecomponent_MailboxTrackingFolders)
+- [powerpagesite_MailboxTrackingFolders](#BKMK_powerpagesite_MailboxTrackingFolders)
+- [powerpagesitelanguage_MailboxTrackingFolders](#BKMK_powerpagesitelanguage_MailboxTrackingFolders)
+- [powerpagesitepublished_MailboxTrackingFolders](#BKMK_powerpagesitepublished_MailboxTrackingFolders)
+- [adx_externalidentity_MailboxTrackingFolders](#BKMK_adx_externalidentity_MailboxTrackingFolders)
+- [adx_invitation_MailboxTrackingFolders](#BKMK_adx_invitation_MailboxTrackingFolders)
+- [adx_inviteredemption_MailboxTrackingFolders](#BKMK_adx_inviteredemption_MailboxTrackingFolders)
+- [adx_portalcomment_MailboxTrackingFolders](#BKMK_adx_portalcomment_MailboxTrackingFolders)
+- [adx_setting_MailboxTrackingFolders](#BKMK_adx_setting_MailboxTrackingFolders)
+- [adx_webformsession_MailboxTrackingFolders](#BKMK_adx_webformsession_MailboxTrackingFolders)
 - [mspcat_catalogsubmissionfiles_MailboxTrackingFolders](#BKMK_mspcat_catalogsubmissionfiles_MailboxTrackingFolders)
 - [mspcat_packagestore_MailboxTrackingFolders](#BKMK_mspcat_packagestore_MailboxTrackingFolders)
-- [flowevent_MailboxTrackingFolders](#BKMK_flowevent_MailboxTrackingFolders)
+- [msfp_alertrule_MailboxTrackingFolders](#BKMK_msfp_alertrule_MailboxTrackingFolders)
+- [msfp_question_MailboxTrackingFolders](#BKMK_msfp_question_MailboxTrackingFolders)
+- [msfp_satisfactionmetric_MailboxTrackingFolders](#BKMK_msfp_satisfactionmetric_MailboxTrackingFolders)
+- [msfp_questionresponse_MailboxTrackingFolders](#BKMK_msfp_questionresponse_MailboxTrackingFolders)
+- [msfp_project_MailboxTrackingFolders](#BKMK_msfp_project_MailboxTrackingFolders)
+- [msfp_surveyreminder_MailboxTrackingFolders](#BKMK_msfp_surveyreminder_MailboxTrackingFolders)
+- [msfp_unsubscribedrecipient_MailboxTrackingFolders](#BKMK_msfp_unsubscribedrecipient_MailboxTrackingFolders)
+- [msfp_emailtemplate_MailboxTrackingFolders](#BKMK_msfp_emailtemplate_MailboxTrackingFolders)
+- [msfp_fileresponse_MailboxTrackingFolders](#BKMK_msfp_fileresponse_MailboxTrackingFolders)
+- [msfp_localizedemailtemplate_MailboxTrackingFolders](#BKMK_msfp_localizedemailtemplate_MailboxTrackingFolders)
+- [msfp_survey_MailboxTrackingFolders](#BKMK_msfp_survey_MailboxTrackingFolders)
+- [msfp_alert_MailboxTrackingFolders](#BKMK_msfp_alert_MailboxTrackingFolders)
+- [msfp_surveyinvite_MailboxTrackingFolders](#BKMK_msfp_surveyinvite_MailboxTrackingFolders)
+- [msfp_surveyresponse_MailboxTrackingFolders](#BKMK_msfp_surveyresponse_MailboxTrackingFolders)
 
 
 ### <a name="BKMK_lk_mailboxtrackingfolder_modifiedby"></a> lk_mailboxtrackingfolder_modifiedby
@@ -852,6 +890,24 @@ See the [stagedentity_MailboxTrackingFolders](stagedentity.md#BKMK_stagedentity_
 **Added by**: Metadata Extension Solution
 
 See the [stagedentityattribute_MailboxTrackingFolders](stagedentityattribute.md#BKMK_stagedentityattribute_MailboxTrackingFolders) one-to-many relationship for the [stagedentityattribute](stagedentityattribute.md) table/entity.
+
+### <a name="BKMK_stagedmetadataasyncoperation_MailboxTrackingFolders"></a> stagedmetadataasyncoperation_MailboxTrackingFolders
+
+**Added by**: Metadata Extension Solution
+
+See the [stagedmetadataasyncoperation_MailboxTrackingFolders](stagedmetadataasyncoperation.md#BKMK_stagedmetadataasyncoperation_MailboxTrackingFolders) one-to-many relationship for the [stagedmetadataasyncoperation](stagedmetadataasyncoperation.md) table/entity.
+
+### <a name="BKMK_keyvaultreference_MailboxTrackingFolders"></a> keyvaultreference_MailboxTrackingFolders
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See the [keyvaultreference_MailboxTrackingFolders](keyvaultreference.md#BKMK_keyvaultreference_MailboxTrackingFolders) one-to-many relationship for the [keyvaultreference](keyvaultreference.md) table/entity.
+
+### <a name="BKMK_managedidentity_MailboxTrackingFolders"></a> managedidentity_MailboxTrackingFolders
+
+**Added by**: ManagedIdentityExtensions Solution
+
+See the [managedidentity_MailboxTrackingFolders](managedidentity.md#BKMK_managedidentity_MailboxTrackingFolders) one-to-many relationship for the [managedidentity](managedidentity.md) table/entity.
 
 ### <a name="BKMK_catalog_MailboxTrackingFolders"></a> catalog_MailboxTrackingFolders
 
@@ -1087,6 +1143,12 @@ See the [workflowbinary_MailboxTrackingFolders](workflowbinary.md#BKMK_workflowb
 
 See the [desktopflowmodule_MailboxTrackingFolders](desktopflowmodule.md#BKMK_desktopflowmodule_MailboxTrackingFolders) one-to-many relationship for the [desktopflowmodule](desktopflowmodule.md) table/entity.
 
+### <a name="BKMK_flowevent_MailboxTrackingFolders"></a> flowevent_MailboxTrackingFolders
+
+**Added by**: Power Automate Extensions core package Solution
+
+See the [flowevent_MailboxTrackingFolders](flowevent.md#BKMK_flowevent_MailboxTrackingFolders) one-to-many relationship for the [flowevent](flowevent.md) table/entity.
+
 ### <a name="BKMK_flowmachine_MailboxTrackingFolders"></a> flowmachine_MailboxTrackingFolders
 
 **Added by**: Power Automate Extensions core package Solution
@@ -1321,18 +1383,6 @@ See the [msdyn_knowledgepersonalfilter_MailboxTrackingFolders](msdyn_knowledgepe
 
 See the [msdyn_knowledgesearchfilter_MailboxTrackingFolders](msdyn_knowledgesearchfilter.md#BKMK_msdyn_knowledgesearchfilter_MailboxTrackingFolders) one-to-many relationship for the [msdyn_knowledgesearchfilter](msdyn_knowledgesearchfilter.md) table/entity.
 
-### <a name="BKMK_keyvaultreference_MailboxTrackingFolders"></a> keyvaultreference_MailboxTrackingFolders
-
-**Added by**: ManagedIdentityExtensions Solution
-
-See the [keyvaultreference_MailboxTrackingFolders](keyvaultreference.md#BKMK_keyvaultreference_MailboxTrackingFolders) one-to-many relationship for the [keyvaultreference](keyvaultreference.md) table/entity.
-
-### <a name="BKMK_managedidentity_MailboxTrackingFolders"></a> managedidentity_MailboxTrackingFolders
-
-**Added by**: ManagedIdentityExtensions Solution
-
-See the [managedidentity_MailboxTrackingFolders](managedidentity.md#BKMK_managedidentity_MailboxTrackingFolders) one-to-many relationship for the [managedidentity](managedidentity.md) table/entity.
-
 ### <a name="BKMK_fxexpression_MailboxTrackingFolders"></a> fxexpression_MailboxTrackingFolders
 
 **Added by**: msft_PowerfxRuleSolution Solution
@@ -1362,18 +1412,6 @@ See the [virtualentitymetadata_MailboxTrackingFolders](virtualentitymetadata.md#
 **Added by**: MobileOfflineProfileExtensionSolution Solution
 
 See the [mobileofflineprofileextension_MailboxTrackingFolders](mobileofflineprofileextension.md#BKMK_mobileofflineprofileextension_MailboxTrackingFolders) one-to-many relationship for the [mobileofflineprofileextension](mobileofflineprofileextension.md) table/entity.
-
-### <a name="BKMK_teammobileofflineprofilemembership_MailboxTrackingFolders"></a> teammobileofflineprofilemembership_MailboxTrackingFolders
-
-**Added by**: MobileOfflineMembership Solution
-
-See the [teammobileofflineprofilemembership_MailboxTrackingFolders](teammobileofflineprofilemembership.md#BKMK_teammobileofflineprofilemembership_MailboxTrackingFolders) one-to-many relationship for the [teammobileofflineprofilemembership](teammobileofflineprofilemembership.md) table/entity.
-
-### <a name="BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders"></a> usermobileofflineprofilemembership_MailboxTrackingFolders
-
-**Added by**: MobileOfflineMembership Solution
-
-See the [usermobileofflineprofilemembership_MailboxTrackingFolders](usermobileofflineprofilemembership.md#BKMK_usermobileofflineprofilemembership_MailboxTrackingFolders) one-to-many relationship for the [usermobileofflineprofilemembership](usermobileofflineprofilemembership.md) table/entity.
 
 ### <a name="BKMK_organizationdatasyncsubscription_MailboxTrackingFolders"></a> organizationdatasyncsubscription_MailboxTrackingFolders
 
@@ -1500,6 +1538,84 @@ See the [msdyn_insightsstorevirtualentity_MailboxTrackingFolders](msdyn_insights
 **Added by**: Role Editor Solution
 
 See the [roleeditorlayout_MailboxTrackingFolders](roleeditorlayout.md#BKMK_roleeditorlayout_MailboxTrackingFolders) one-to-many relationship for the [roleeditorlayout](roleeditorlayout.md) table/entity.
+
+### <a name="BKMK_dvfilesearch_MailboxTrackingFolders"></a> dvfilesearch_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvfilesearch_MailboxTrackingFolders](dvfilesearch.md#BKMK_dvfilesearch_MailboxTrackingFolders) one-to-many relationship for the [dvfilesearch](dvfilesearch.md) table/entity.
+
+### <a name="BKMK_dvfilesearchattribute_MailboxTrackingFolders"></a> dvfilesearchattribute_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvfilesearchattribute_MailboxTrackingFolders](dvfilesearchattribute.md#BKMK_dvfilesearchattribute_MailboxTrackingFolders) one-to-many relationship for the [dvfilesearchattribute](dvfilesearchattribute.md) table/entity.
+
+### <a name="BKMK_dvfilesearchentity_MailboxTrackingFolders"></a> dvfilesearchentity_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvfilesearchentity_MailboxTrackingFolders](dvfilesearchentity.md#BKMK_dvfilesearchentity_MailboxTrackingFolders) one-to-many relationship for the [dvfilesearchentity](dvfilesearchentity.md) table/entity.
+
+### <a name="BKMK_dvtablesearch_MailboxTrackingFolders"></a> dvtablesearch_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvtablesearch_MailboxTrackingFolders](dvtablesearch.md#BKMK_dvtablesearch_MailboxTrackingFolders) one-to-many relationship for the [dvtablesearch](dvtablesearch.md) table/entity.
+
+### <a name="BKMK_dvtablesearchattribute_MailboxTrackingFolders"></a> dvtablesearchattribute_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvtablesearchattribute_MailboxTrackingFolders](dvtablesearchattribute.md#BKMK_dvtablesearchattribute_MailboxTrackingFolders) one-to-many relationship for the [dvtablesearchattribute](dvtablesearchattribute.md) table/entity.
+
+### <a name="BKMK_dvtablesearchentity_MailboxTrackingFolders"></a> dvtablesearchentity_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+See the [dvtablesearchentity_MailboxTrackingFolders](dvtablesearchentity.md#BKMK_dvtablesearchentity_MailboxTrackingFolders) one-to-many relationship for the [dvtablesearchentity](dvtablesearchentity.md) table/entity.
+
+### <a name="BKMK_aiplugin_MailboxTrackingFolders"></a> aiplugin_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aiplugin_MailboxTrackingFolders](aiplugin.md#BKMK_aiplugin_MailboxTrackingFolders) one-to-many relationship for the [aiplugin](aiplugin.md) table/entity.
+
+### <a name="BKMK_aipluginexternalschema_MailboxTrackingFolders"></a> aipluginexternalschema_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginexternalschema_MailboxTrackingFolders](aipluginexternalschema.md#BKMK_aipluginexternalschema_MailboxTrackingFolders) one-to-many relationship for the [aipluginexternalschema](aipluginexternalschema.md) table/entity.
+
+### <a name="BKMK_aipluginexternalschemaproperty_MailboxTrackingFolders"></a> aipluginexternalschemaproperty_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginexternalschemaproperty_MailboxTrackingFolders](aipluginexternalschemaproperty.md#BKMK_aipluginexternalschemaproperty_MailboxTrackingFolders) one-to-many relationship for the [aipluginexternalschemaproperty](aipluginexternalschemaproperty.md) table/entity.
+
+### <a name="BKMK_aiplugininstance_MailboxTrackingFolders"></a> aiplugininstance_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aiplugininstance_MailboxTrackingFolders](aiplugininstance.md#BKMK_aiplugininstance_MailboxTrackingFolders) one-to-many relationship for the [aiplugininstance](aiplugininstance.md) table/entity.
+
+### <a name="BKMK_aipluginoperation_MailboxTrackingFolders"></a> aipluginoperation_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginoperation_MailboxTrackingFolders](aipluginoperation.md#BKMK_aipluginoperation_MailboxTrackingFolders) one-to-many relationship for the [aipluginoperation](aipluginoperation.md) table/entity.
+
+### <a name="BKMK_aipluginoperationparameter_MailboxTrackingFolders"></a> aipluginoperationparameter_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginoperationparameter_MailboxTrackingFolders](aipluginoperationparameter.md#BKMK_aipluginoperationparameter_MailboxTrackingFolders) one-to-many relationship for the [aipluginoperationparameter](aipluginoperationparameter.md) table/entity.
+
+### <a name="BKMK_aipluginusersetting_MailboxTrackingFolders"></a> aipluginusersetting_MailboxTrackingFolders
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+See the [aipluginusersetting_MailboxTrackingFolders](aipluginusersetting.md#BKMK_aipluginusersetting_MailboxTrackingFolders) one-to-many relationship for the [aipluginusersetting](aipluginusersetting.md) table/entity.
 
 ### <a name="BKMK_appaction_MailboxTrackingFolders"></a> appaction_MailboxTrackingFolders
 
@@ -1801,6 +1917,18 @@ See the [powerbireportapdx_MailboxTrackingFolders](powerbireportapdx.md#BKMK_pow
 
 See the [msdyn_fileupload_MailboxTrackingFolders](msdyn_fileupload.md#BKMK_msdyn_fileupload_MailboxTrackingFolders) one-to-many relationship for the [msdyn_fileupload](msdyn_fileupload.md) table/entity.
 
+### <a name="BKMK_mainfewshot_MailboxTrackingFolders"></a> mainfewshot_MailboxTrackingFolders
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [mainfewshot_MailboxTrackingFolders](mainfewshot.md#BKMK_mainfewshot_MailboxTrackingFolders) one-to-many relationship for the [mainfewshot](mainfewshot.md) table/entity.
+
+### <a name="BKMK_makerfewshot_MailboxTrackingFolders"></a> makerfewshot_MailboxTrackingFolders
+
+**Added by**: msdyn_RelevanceSearch Solution
+
+See the [makerfewshot_MailboxTrackingFolders](makerfewshot.md#BKMK_makerfewshot_MailboxTrackingFolders) one-to-many relationship for the [makerfewshot](makerfewshot.md) table/entity.
+
 ### <a name="BKMK_searchattributesettings_MailboxTrackingFolders"></a> searchattributesettings_MailboxTrackingFolders
 
 **Added by**: msdyn_RelevanceSearch Solution
@@ -1819,6 +1947,66 @@ See the [searchcustomanalyzer_MailboxTrackingFolders](searchcustomanalyzer.md#BK
 
 See the [searchrelationshipsettings_MailboxTrackingFolders](searchrelationshipsettings.md#BKMK_searchrelationshipsettings_MailboxTrackingFolders) one-to-many relationship for the [searchrelationshipsettings](searchrelationshipsettings.md) table/entity.
 
+### <a name="BKMK_powerpagecomponent_MailboxTrackingFolders"></a> powerpagecomponent_MailboxTrackingFolders
+
+**Added by**: Power Pages Core Base Solution
+
+See the [powerpagecomponent_MailboxTrackingFolders](powerpagecomponent.md#BKMK_powerpagecomponent_MailboxTrackingFolders) one-to-many relationship for the [powerpagecomponent](powerpagecomponent.md) table/entity.
+
+### <a name="BKMK_powerpagesite_MailboxTrackingFolders"></a> powerpagesite_MailboxTrackingFolders
+
+**Added by**: Power Pages Core Base Solution
+
+See the [powerpagesite_MailboxTrackingFolders](powerpagesite.md#BKMK_powerpagesite_MailboxTrackingFolders) one-to-many relationship for the [powerpagesite](powerpagesite.md) table/entity.
+
+### <a name="BKMK_powerpagesitelanguage_MailboxTrackingFolders"></a> powerpagesitelanguage_MailboxTrackingFolders
+
+**Added by**: Power Pages Core Base Solution
+
+See the [powerpagesitelanguage_MailboxTrackingFolders](powerpagesitelanguage.md#BKMK_powerpagesitelanguage_MailboxTrackingFolders) one-to-many relationship for the [powerpagesitelanguage](powerpagesitelanguage.md) table/entity.
+
+### <a name="BKMK_powerpagesitepublished_MailboxTrackingFolders"></a> powerpagesitepublished_MailboxTrackingFolders
+
+**Added by**: Power Pages Core Base Solution
+
+See the [powerpagesitepublished_MailboxTrackingFolders](powerpagesitepublished.md#BKMK_powerpagesitepublished_MailboxTrackingFolders) one-to-many relationship for the [powerpagesitepublished](powerpagesitepublished.md) table/entity.
+
+### <a name="BKMK_adx_externalidentity_MailboxTrackingFolders"></a> adx_externalidentity_MailboxTrackingFolders
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_externalidentity_MailboxTrackingFolders](adx_externalidentity.md#BKMK_adx_externalidentity_MailboxTrackingFolders) one-to-many relationship for the [adx_externalidentity](adx_externalidentity.md) table/entity.
+
+### <a name="BKMK_adx_invitation_MailboxTrackingFolders"></a> adx_invitation_MailboxTrackingFolders
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_MailboxTrackingFolders](adx_invitation.md#BKMK_adx_invitation_MailboxTrackingFolders) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_adx_inviteredemption_MailboxTrackingFolders"></a> adx_inviteredemption_MailboxTrackingFolders
+
+**Added by**: Active Solution Solution
+
+See the [adx_inviteredemption_MailboxTrackingFolders](adx_inviteredemption.md#BKMK_adx_inviteredemption_MailboxTrackingFolders) one-to-many relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+### <a name="BKMK_adx_portalcomment_MailboxTrackingFolders"></a> adx_portalcomment_MailboxTrackingFolders
+
+**Added by**: Active Solution Solution
+
+See the [adx_portalcomment_MailboxTrackingFolders](adx_portalcomment.md#BKMK_adx_portalcomment_MailboxTrackingFolders) one-to-many relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+### <a name="BKMK_adx_setting_MailboxTrackingFolders"></a> adx_setting_MailboxTrackingFolders
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_setting_MailboxTrackingFolders](adx_setting.md#BKMK_adx_setting_MailboxTrackingFolders) one-to-many relationship for the [adx_setting](adx_setting.md) table/entity.
+
+### <a name="BKMK_adx_webformsession_MailboxTrackingFolders"></a> adx_webformsession_MailboxTrackingFolders
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_webformsession_MailboxTrackingFolders](adx_webformsession.md#BKMK_adx_webformsession_MailboxTrackingFolders) one-to-many relationship for the [adx_webformsession](adx_webformsession.md) table/entity.
+
 ### <a name="BKMK_mspcat_catalogsubmissionfiles_MailboxTrackingFolders"></a> mspcat_catalogsubmissionfiles_MailboxTrackingFolders
 
 **Added by**: Power Platform Catalog Client Packaging Solution
@@ -1831,11 +2019,89 @@ See the [mspcat_catalogsubmissionfiles_MailboxTrackingFolders](mspcat_catalogsub
 
 See the [mspcat_packagestore_MailboxTrackingFolders](mspcat_packagestore.md#BKMK_mspcat_packagestore_MailboxTrackingFolders) one-to-many relationship for the [mspcat_packagestore](mspcat_packagestore.md) table/entity.
 
-### <a name="BKMK_flowevent_MailboxTrackingFolders"></a> flowevent_MailboxTrackingFolders
+### <a name="BKMK_msfp_alertrule_MailboxTrackingFolders"></a> msfp_alertrule_MailboxTrackingFolders
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Dynamics 365 Customer Voice Solution
 
-See the [flowevent_MailboxTrackingFolders](flowevent.md#BKMK_flowevent_MailboxTrackingFolders) one-to-many relationship for the [flowevent](flowevent.md) table/entity.
+See the [msfp_alertrule_MailboxTrackingFolders](msfp_alertrule.md#BKMK_msfp_alertrule_MailboxTrackingFolders) one-to-many relationship for the [msfp_alertrule](msfp_alertrule.md) table/entity.
+
+### <a name="BKMK_msfp_question_MailboxTrackingFolders"></a> msfp_question_MailboxTrackingFolders
+
+**Added by**: Dynamics 365 Customer Voice Solution
+
+See the [msfp_question_MailboxTrackingFolders](msfp_question.md#BKMK_msfp_question_MailboxTrackingFolders) one-to-many relationship for the [msfp_question](msfp_question.md) table/entity.
+
+### <a name="BKMK_msfp_satisfactionmetric_MailboxTrackingFolders"></a> msfp_satisfactionmetric_MailboxTrackingFolders
+
+**Added by**: Dynamics 365 Customer Voice Solution
+
+See the [msfp_satisfactionmetric_MailboxTrackingFolders](msfp_satisfactionmetric.md#BKMK_msfp_satisfactionmetric_MailboxTrackingFolders) one-to-many relationship for the [msfp_satisfactionmetric](msfp_satisfactionmetric.md) table/entity.
+
+### <a name="BKMK_msfp_questionresponse_MailboxTrackingFolders"></a> msfp_questionresponse_MailboxTrackingFolders
+
+**Added by**: Dynamics 365 Customer Voice Solution
+
+See the [msfp_questionresponse_MailboxTrackingFolders](msfp_questionresponse.md#BKMK_msfp_questionresponse_MailboxTrackingFolders) one-to-many relationship for the [msfp_questionresponse](msfp_questionresponse.md) table/entity.
+
+### <a name="BKMK_msfp_project_MailboxTrackingFolders"></a> msfp_project_MailboxTrackingFolders
+
+**Added by**: Dynamics 365 Customer Voice Solution
+
+See the [msfp_project_MailboxTrackingFolders](msfp_project.md#BKMK_msfp_project_MailboxTrackingFolders) one-to-many relationship for the [msfp_project](msfp_project.md) table/entity.
+
+### <a name="BKMK_msfp_surveyreminder_MailboxTrackingFolders"></a> msfp_surveyreminder_MailboxTrackingFolders
+
+**Added by**: Dynamics 365 Customer Voice Solution
+
+See the [msfp_surveyreminder_MailboxTrackingFolders](msfp_surveyreminder.md#BKMK_msfp_surveyreminder_MailboxTrackingFolders) one-to-many relationship for the [msfp_surveyreminder](msfp_surveyreminder.md) table/entity.
+
+### <a name="BKMK_msfp_unsubscribedrecipient_MailboxTrackingFolders"></a> msfp_unsubscribedrecipient_MailboxTrackingFolders
+
+**Added by**: Dynamics 365 Customer Voice Solution
+
+See the [msfp_unsubscribedrecipient_MailboxTrackingFolders](msfp_unsubscribedrecipient.md#BKMK_msfp_unsubscribedrecipient_MailboxTrackingFolders) one-to-many relationship for the [msfp_unsubscribedrecipient](msfp_unsubscribedrecipient.md) table/entity.
+
+### <a name="BKMK_msfp_emailtemplate_MailboxTrackingFolders"></a> msfp_emailtemplate_MailboxTrackingFolders
+
+**Added by**: Dynamics 365 Customer Voice Solution
+
+See the [msfp_emailtemplate_MailboxTrackingFolders](msfp_emailtemplate.md#BKMK_msfp_emailtemplate_MailboxTrackingFolders) one-to-many relationship for the [msfp_emailtemplate](msfp_emailtemplate.md) table/entity.
+
+### <a name="BKMK_msfp_fileresponse_MailboxTrackingFolders"></a> msfp_fileresponse_MailboxTrackingFolders
+
+**Added by**: Dynamics 365 Customer Voice Solution
+
+See the [msfp_fileresponse_MailboxTrackingFolders](msfp_fileresponse.md#BKMK_msfp_fileresponse_MailboxTrackingFolders) one-to-many relationship for the [msfp_fileresponse](msfp_fileresponse.md) table/entity.
+
+### <a name="BKMK_msfp_localizedemailtemplate_MailboxTrackingFolders"></a> msfp_localizedemailtemplate_MailboxTrackingFolders
+
+**Added by**: Dynamics 365 Customer Voice Solution
+
+See the [msfp_localizedemailtemplate_MailboxTrackingFolders](msfp_localizedemailtemplate.md#BKMK_msfp_localizedemailtemplate_MailboxTrackingFolders) one-to-many relationship for the [msfp_localizedemailtemplate](msfp_localizedemailtemplate.md) table/entity.
+
+### <a name="BKMK_msfp_survey_MailboxTrackingFolders"></a> msfp_survey_MailboxTrackingFolders
+
+**Added by**: Dynamics 365 Customer Voice Solution
+
+See the [msfp_survey_MailboxTrackingFolders](msfp_survey.md#BKMK_msfp_survey_MailboxTrackingFolders) one-to-many relationship for the [msfp_survey](msfp_survey.md) table/entity.
+
+### <a name="BKMK_msfp_alert_MailboxTrackingFolders"></a> msfp_alert_MailboxTrackingFolders
+
+**Added by**: Active Solution Solution
+
+See the [msfp_alert_MailboxTrackingFolders](msfp_alert.md#BKMK_msfp_alert_MailboxTrackingFolders) one-to-many relationship for the [msfp_alert](msfp_alert.md) table/entity.
+
+### <a name="BKMK_msfp_surveyinvite_MailboxTrackingFolders"></a> msfp_surveyinvite_MailboxTrackingFolders
+
+**Added by**: Active Solution Solution
+
+See the [msfp_surveyinvite_MailboxTrackingFolders](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_MailboxTrackingFolders) one-to-many relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
+
+### <a name="BKMK_msfp_surveyresponse_MailboxTrackingFolders"></a> msfp_surveyresponse_MailboxTrackingFolders
+
+**Added by**: Active Solution Solution
+
+See the [msfp_surveyresponse_MailboxTrackingFolders](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_MailboxTrackingFolders) one-to-many relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
 
 ### See also
 
