@@ -508,7 +508,7 @@
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
           - name: Use modern themes (preview)
             href: ./canvas-apps/controls/modern-controls/modern-theming.md
-          - name: Modern control reference (preview)
+          - name: Modern control reference
             items:
             - name: Overview
               href: ./canvas-apps/controls/modern-controls/overview-modern-controls.md
