@@ -141,11 +141,18 @@ You create an elastic table just like any other new table in Dataverse.
 1. Select **Elastic** as the table **Type**.
 1. Select the properties you want, and then select **Save**. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
+![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/29776190/332ae1c1-0beb-4d8d-ac79-25abbd8cfbd3)
+
+
 ## Known issues
 
 - Currently Power Apps (make.powerapps.com) allows you to set a many-to-one (N:1) relationship with an elastic table where the N table is a standard table. Standard table will have a lookup column pointing to an elastic table row. While retrieving rows for a standard table in such a relationship, the lookup column that points to an elastic table row won't have the formatted value returned when the elastic table row has the `partitionid` set. More information: [Developer Guide: Partitioning and horizontal scaling](../../developer/data-platform/elastic-tables.md#partitioning-and-horizontal-scaling)
 - Getting related rows when making a query on an elastic table currently doesn't work. However, getting related rows works when retrieving a single elastic table row.
 - When [time to live (TTL)](#automatic-removal-of-data) is used on a row, the row will get deleted from the elastic table when TTL has expired. If it's synchronized to a data lake using [Synapse Link for Dataverse](export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
+
+## Import data into Elastic tables
+
+To import data, use Bulk API (https://learn.microsoft.com/en-us/power-apps/developer/data-platform/bulk-operations-elastic-tables). It allows you to achieve 10X throughput with the same Dataverse API throttling limits. 
 
 ## For developers
 
@@ -157,7 +164,8 @@ Elastic tables have different behaviors and capabilities than standard tables wh
 - [Query JSON columns in elastic tables (preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
 - [Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md)
 - [Elastic table sample code (preview)](../../developer/data-platform/elastic-table-samples.md)
-
+- [Optimizing performance for bulk operations](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/send-parallel-requests?tabs=sdk)
+- [Service protection limits](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/api-limits?tabs=sdk)
 
 
 ## See also
