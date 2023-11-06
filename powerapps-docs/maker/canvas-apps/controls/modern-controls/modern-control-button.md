@@ -30,7 +30,7 @@ With the modern button you can set a button to be primary or secondary. Configur
 
 **[Text](../properties-core.md)** – Text that appears on a component.
 
-**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. If the value is null or zero, then the color is driven by selected Fluent theme.
+**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. If the value is null or zero, then the color is driven by selected Fluent theme.
 
 **Appearance** – A button can have its content and borders styled for greater emphasis or to be subtle. Below are the options available:
 * Primary: Emphasizes the button as a primary action.
@@ -39,12 +39,12 @@ With the modern button you can set a button to be primary or secondary. Configur
 * Subtle: Minimizes emphasis to blend into the background until hovered or focused.
 * Transparent: Removes background and border styling.
 
-**Font Size** - The font size of the text that appears on a control. If the value is null or zero, then the font size is driven by selected Fluent theme.
+**FontSize** - The font size of the text that appears on a control. If the value is null or zero, then the font size is driven by selected Fluent theme.
 
 ## Additional properties
-**Accessible label** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers.
 
-**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 **Visible** - Whether a control appears or is hidden.
 
