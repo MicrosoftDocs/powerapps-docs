@@ -27,7 +27,6 @@ Makers who are Environmental Administators can enable Copilot in model-driven ap
 
 2. In the navigation pane, go to **Environments** and select the enviornment where you want to enable Copilot for app users in model-driven apps in. Click on "**Settinngs** for this environment in the top menu.
 
-
   > [!div class="mx-imgBorder"]
   > ![Select environment Settings.](media/Environment_settings.png)
  
@@ -41,6 +40,15 @@ Makers who are Environmental Administators can enable Copilot in model-driven ap
   > [!div class="mx-imgBorder"]
   > ![Set Copilot feature ON for the envrironment](media/Copilot_for_apps_users_ON.png)
 
+ 
+5. Go back to **Product** section and select **Behavior** option.  Set **Release channel** for model-driven apps to **Monthly channel** in the dropdown control. More information: [Behavior settings](/power-platform/admin/settings-behavior#settings) and [Changing release channels for model-driven apps](channel-change.md).
+   
+  > [!div class="mx-imgBorder"]
+  > ![Set Release channel to Monthly channel for model driven apps](media/Behavior_release_channel.png)
    
 
+## See also
 
+[FAQ for Copilot in model-driven apps](../common/faqs-copilot-model-driven-app.md) <br />
+[Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md) <br />
+[Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
