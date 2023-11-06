@@ -33,7 +33,7 @@ With your [canvas app open for editing](../../edit-app.md):
 2. From the Preview tab, set the toggle for **Modern controls and themes** to **On**.
 
 > [!IMPORTANT]
-> - The modern controls opt-in experience will move to **General** section instead of **Upcoming features** in settings starting December 2023.
+> - The modern controls opt-in experience will move to **General** section instead of **Upcoming features** in settings during December 2023.
 
 - To see list of all the modern controls, on the app authoring menu, select **Insert**. From the list of controls, select **Modern controls**.
 
