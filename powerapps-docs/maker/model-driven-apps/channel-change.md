@@ -6,16 +6,18 @@ ms.service: powerapps
 ms.subservice: mda-maker
 ms.author: aorth
 ms.reviewer: matp
-ms.date: 11/01/2023
+ms.date: 11/06/2023
 ms.topic: how-to
 applies_to: 
   - "powerapps"
 search.audienceType: 
   - maker
+contributors:
+- sericks007
 ---
 # Changing release channels for model-driven apps
 
-The release channel affects the end user impacting features that are shown to a user. When the monthly channel is enabled for an environment, makers need to validate that their customizations work with each monthly release. This article describes different approaches for a maker to change channels and validate an upcoming release..
+The release channel affects the features that impact users. When the monthly channel is enabled for an environment, makers need to validate that their customizations work with each monthly release. This article describes different approaches for a maker to change channels and validate an upcoming release..
 
 ## Flexible channel configuration
 
@@ -26,7 +28,7 @@ The release channel for model-driven apps can be changed in two primary ways.
 
 In addition, the release channel can be overriden with either of these options.
 
-- User channel override (starting with build 23111)
+- [User channel override](/power-platform/admin/user-channel-override) (starting with build 23111)
 - Browser session channel
 
 > [!NOTE]
@@ -44,24 +46,24 @@ More information:
 * [Update a record using Web API](/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
 * [Update a record using the SDK for .NET](/power-apps/developer/data-platform/org-service/entity-operations-update-delete?tabs=late#basic-update)
 
-## Changing the app channel
+## Change the app channel
 
-The app channel can be used to override the release channel for a model-driven app using Power Apps App Designer or Solution Explorer.
+The app channel can be used to override the release channel for a model-driven app using Power Apps [app designer](model-driven-app-glossary.md#app-designer) or [solution explorer](model-driven-app-glossary.md#solution-explorer).
 
 | App release channel | App setting value | Behavior |
 | -- | -- | -- |
-| Auto | 0 | App default value currently resolves to **Semi-annual** but will later change to **Monthly** at a future release wave |
-| Monthly | 1 | App explicitly set to Monthly Channel |
-| Semi-annual | 2 | App explicitly set to Semi-Annual Channel |
+| Auto | 0 | App default value is **Semi-annual**, but will later change to **Monthly** in a future release wave. |
+| Monthly | 1 | App explicitly set to **Monthly Channel**. |
+| Semi-annual | 2 | App explicitly set to **Semi-Annual Channel**. |
 
 ### Change app channel in App Designer
 
-A maker can use App Designer to explicitly set the Release Channel for an app which overrides the environment channel.
+A maker can use the app designer to explicitly set the release channel for an app which overrides the environment channel.
 
-1. Open https://make.powerapps.com/
-1. Under **Solutions** open an existing solution containing the model-driven app
-1. Open the app in the App Designer
-1. Open **Settings** dialog
+1. Open https://make.powerapps.com/.
+1. Under **Solutions** open an existing solution containing a model-driven app.
+1. Open the app in the app designer.
+1. Open **Settings** dialog.
 1. Under **General** tab expand **Advanced settings**
 1. Use **App release channel** to change the app release value
 1. Save and publish the app
