@@ -159,7 +159,8 @@ To see and understand the `IOrganizationService` interface a little better, try 
 
       WhoAmIExample(service: serviceClient);
 
-      Pause the console so it does not close.
+      // Pause the console so it does not close.
+      Console.WriteLine("Press any key to exit.");
       Console.ReadLine();
    }
    ```
