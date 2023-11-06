@@ -30,7 +30,7 @@ Makers who are Environmental Administators can enable Copilot in model-driven ap
  :::image type="content" source="media/Environment_settings.png" alt-text="Select environment Settings" lightbox="media/Environment_settings.png":::
 
   > [!div class="mx-imgBorder"]
-  > ![Select environment Settings.](media/Environment_settings.png.png)
+  > ![Select environment Settings.](media/Environment_settings.png)
  
 3. In **Settings** for the seleceted environment, navigate to **Product** section and select **Features** option.
     :::image type="content" source="media/Environment_features.png" alt-text="Select features for the environment" lightbox="media/Environment_features.png":::
