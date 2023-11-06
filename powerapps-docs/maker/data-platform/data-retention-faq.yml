@@ -37,13 +37,11 @@ sections:
 
    - question: Will running data retention jobs impact the performance of my business applications?
      answer: |
-        Answer
         No. Data retention jobs are a background process with secondary priority to your apps.
 
    - question: Are there any limits on how many records can be retained in a single policy?
      answer: |
-        Answer
-        No. While running a policy one-time is an option, we recommend you set up policies that run on recurring basis to ensure historical data is efficiently managed. 
+        No. While running a policy one-time is an option, we recommend you set up policies that run on a recurring basis to ensure historical data is efficiently managed. 
         
    - question: How long will a policy run take to complete?
      answer: |
