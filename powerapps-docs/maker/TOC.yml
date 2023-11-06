@@ -516,35 +516,35 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-reference.md
             - name: Limitations of modern controls
               href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
-            - name: Badge
+            - name: Badge (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
-            - name: Checkbox
+            - name: Checkbox (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
-            - name: Date picker
+            - name: Date picker (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
-            - name: Dropdown
+            - name: Dropdown (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
-            - name: Header
+            - name: Header (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
-            - name: Info button
+            - name: Info button (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Link
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
-            - name: Progress bar
+            - name: Progress bar 
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
-            - name: Radio group
+            - name: Radio group (preview)
               href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
-            - name: Spinner
+            - name: Spinner (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
-            - name: Table
+            - name: Table (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-table.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
-            - name: Text
+            - name: Text (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-text.md
-            - name: Text input
+            - name: Text input (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
           - name: Control reference
             items:
