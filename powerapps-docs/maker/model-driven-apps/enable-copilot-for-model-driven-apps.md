@@ -46,8 +46,12 @@ Makers who are Environmental Administators can enable Copilot in model-driven ap
   > [!div class="mx-imgBorder"]
   > ![Set Release channel to Monthly channel for model driven apps](media/Behavior_release_channel.png)
    
-6. Configure Dataverse tables that you want Copilot to use for the reponses. You must select both the tables and the columns of importance for Copilot to search accross to produce data inisghts.
-   
+6. Configure Dataverse tables that you want Copilot to use for the reponses. You must select both the tables and the columns of importance for Copilot to search accross to produce quality data inisghts. More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot)
+
+- Enable **Track Changes** and **Appear in search results** setting for Dataverse tables to be used by Copilot. Note that most standard Dataverse tables have these settings enabled by default, but custom tables require them to be set manually. More information: [Enable table indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing)
+- 
+
+
 ## See also
 
 [FAQ for Copilot in model-driven apps](../common/faqs-copilot-model-driven-app.md) <br />
