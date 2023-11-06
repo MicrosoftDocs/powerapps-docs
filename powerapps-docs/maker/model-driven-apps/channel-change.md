@@ -86,7 +86,7 @@ A maker can use the **Solutions** area to explicitly set the release channel for
    1. Select **Save**.
 1. To change the app channel for all apps in the environment:
    1. Edit the setting **App channel**.
-   1. Find the app(s) under the section **Setting environment values**.
+   1. Find the section **Setting environment values**.
    1. Select **New environment value** and then enter the integer for the channel.
    1. Select **Save**.
 1. After changing an app setting for specific app(s), the app(s) must be republished for the change to take effect.
@@ -160,7 +160,7 @@ To validate against a specific monthly release, the following steps can be used:
 
 ## Comparing features across channels and releases
 
-When a user running the monthly channel report observes unexpected behavior, the following steps can help investigate where the behavior occurred.
+When a user running the monthly channel observes unexpected behavior, the following steps can help investigate where the behavior occurred.
 
 - Check if the unexpected behavior exists in the semi-annual channel by using the URL parameter ```&channel=semiannual```. If the behavior also exists in the semi-annual channel, it's unrelated to the monthly channel and should follow normal support processes.
 - Check if the unexpected behavior exists in the previous monthly release by using the URL parameter ```&channelrelease=``` with the prior release short name like *2308*. If the two monthly releases behave the same, then it's likely unrelated to a specific monthly channel release and should follow normal support processes.
