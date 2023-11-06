@@ -46,7 +46,8 @@ Makers who are Environmental Administators can enable Copilot in model-driven ap
   > [!div class="mx-imgBorder"]
   > ![Set Release channel to Monthly channel for model driven apps](media/Behavior_release_channel.png)
    
-
+6. Configure Dataverse tables that you want Copilot to use for the reponses. You must select both the tables and the columns of importance for Copilot to search accross to produce data inisghts.
+   
 ## See also
 
 [FAQ for Copilot in model-driven apps](../common/faqs-copilot-model-driven-app.md) <br />
