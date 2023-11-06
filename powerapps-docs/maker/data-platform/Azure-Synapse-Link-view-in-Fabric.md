@@ -56,22 +56,20 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 > [!NOTE]
 >
-> In the future Dataverse may add all tables to OneLake to enable better experiences for Fabric users. Also you may also see tables added by Dynamics 365 apps. By disabling apps selected by tables, you may impact proper functioning of Apps.
+> Currently, you can’t add Dynamics 365 Finance and Operations (F&O) tables into the **Microsoft OneLake** link that's created with this feature. You can add Finance and Operations tables using the Synapse Link feature. More information: [Choose finance and operations data in Azure Synapse Link for Dataverse](azure-synapse-link-select-FnO-data.md)
 >
-> Currently, you can’t add Dynamics 365 Finance and Operations (F&O) tables into the **Microsoft OneLake** link that's created with this feature. You can add F&O tables using the Synapse Link feature. More information: [Choose finance and operations data in Azure Synapse Link for Dataverse](azure-synapse-link-select-FnO-data.md)
->
-> Enabling this feature may result in an increase in Dataverse storage consumption. During Public preview, increase in storage is shown in Power Platform admin center as file storage. Pricing of additional storage consumed by this features at Public preview is subject to change.
+> Enabling this feature might result in an increase in Dataverse storage consumption. During preview, increase in storage is shown in Power Platform admin center as file storage. Pricing of additional storage consumed by this features during preview is subject to change.
 >
 
 ## Link existing Azure Synapse Link for Dataverse profiles to Fabric
 
-Azure Synapse Link for Dataverse enables provisioning, configuring Azure resources as well as automating data exports to your own storage and enabling you to build your own integration pipelines. Link to Fabric feature enables direct connectivity between your data in Dataverse with Microsoft Fabric without data export. The table below provides a quick comparison between the options.
+Azure Synapse Link for Dataverse enables provisioning, configuring Azure resources as well as automating data exports to your own storage and enabling you to build your own integration pipelines. Link to Fabric feature enables direct connectivity between your data in Dataverse with Microsoft Fabric without data export. This table provides a quick comparison between the options.
 
-| Link to Fabric                      | Synapse Link                | 
+| Link to Fabric                      | Azure Synapse Link                | 
 |:-----------------------------------|:------------------------------|
-| No copy, no ETL direct integration with Microsoft Fabric   |  Export data to your own storage account and integrate with Synapse, Microsoft Fabric and other tools |
-| Data stays in Dataverse - secure access in Microsoft Fabric | Data stays in your own storage. You will manage access |
-| Consumes additional Dataverse storage  | Consumes your own storage as well as other compute and integration tools | 
+| No copy, no ETL direct integration with Microsoft Fabric.  |  Export data to your own storage account and integrate with Synapse, Microsoft Fabric, and other tools. |
+| Data stays in Dataverse - secure access in Microsoft Fabric. | Data stays in your own storage. You manage access. |
+| Consumes additional Dataverse storage.  | Consumes your own storage as well as other compute and integration tools. | 
 
 We have also made it possible to connect existing Azure Synapse Links with Microsoft Fabric and benefit from Fabric innovations like Power BI DirectLake mode reports and integrated Spark and Data pipelines. You can add or remove tables from existing Azure Synapse Link for Dataverse links and create new Fabric links within a single experience. You can also use Azure Synapse Link for Dataverse to choose [tables and entities from Dynamics 365 Finance and Operations](/power-apps/maker/data-platform/azure-synapse-link-select-fno-data).
 
@@ -111,7 +109,7 @@ After you [Create a connection to your Dataverse environment](#create-a-connecti
 
 - **Tables** area: Select a table from the **Tables** area and then select **Export** > **Link to Microsoft Fabric**. This is the quickest way to get started.
 
-- **Azure Synapse Link for Dataverse** area: From the Azure Synapse Link for Dataverse area link an existing Synapse Link profile or, select **Microsoft OneLake**.
+- **Azure Synapse Link for Dataverse** area: From the Azure Synapse Link for Dataverse area link an existing Azure Synapse Link profile or, select **Microsoft OneLake**.
 
 1. Sign into [Power Apps](https://make.powerapps.com).
    > [!NOTE]
@@ -202,7 +200,7 @@ In Power BI, select **SQL endpoint** from the top right context menu. The data i
 
 ![SQL endpoint with Dataverse generated shortcuts](media/fabric/fabric-sql-endpoint-shortcuts-shown.png)
 
-### Auto-create a Power BI report
+### Autocreate a Power BI report
 
 Choose the default dataset generated by Dataverse, and then select **Auto-create report**. A Power BI report with the data you have selected is created.
 
@@ -250,7 +248,7 @@ If you experience an error message, here are suggestions to resolve the issue.
 | You need to get a Power BI premium of Fabric capacity. You can also get a Fabric trial. | You need a Power BI premium of a Fabric capacity. Power BI premium per user capacity won't be sufficient. You can get a free trial capacity by visiting the link here: [Fabric (preview) trial](/fabric/get-started/fabric-trial)  | 
 | Creation of Fabric workspace failed. Consider creating a Fabric workspace first and linking using the **Azure Synapse Link for Dataverse** area. | Go to [Manage link to Microsoft OneLake](#manage-link-to-microsoft-onelake) |
 | Creation of Fabric workspace failed. You can try again. If this issue persists contact Microsoft Customer Support with the corelation ID. | Ensure that you have admin permissions to your Power BI workspace. If the issue isn't resolved after several retries, contact Microsoft Customer Support with the provided reference ID |
-| Creation of Fabric lakehouse failed. You can try again. If this issue persists contact Microsoft Customer Support with the corelation ID. | Ensure that you have admin permissions to your Power BI workspace. If the issue isn't resolved after several retries, you may contact Microsoft Customer Support with the provided reference ID |
+| Creation of Fabric lakehouse failed. You can try again. If this issue persists contact Microsoft Customer Support with the corelation ID. | Ensure that you have admin permissions to your Power BI workspace. If the issue isn't resolved after several retries, you can contact Microsoft Customer Support with the provided reference ID. |
 | You need to add one or more tables before linking to Microsoft Fabric. | If you're using Managed store (the default link), add one or more tables using **Manage tables** in the **Azure Synapse Link for Dataverse** area in Power Apps (make.powerapps.com) and try to link to Fabric again.  |
 | Your organization doesn't appear to have Microsoft Fabric. You can get a Trial | Contact your administrator or get a Trial version of Microsoft Fabric. |
 |You need to get a Trial version of Fabric to get started. | You need a Power BI premium of a Fabric capacity. Power BI premium per user capacity won't be sufficient. You can get a free trial capacity by visiting: [Fabric (preview) trial](/fabric/get-started/fabric-trial) |
