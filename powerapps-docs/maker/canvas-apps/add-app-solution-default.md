@@ -68,7 +68,7 @@ The following table summarizes the methods that allow you to create cloud flows 
 | [Create a cloud flow from the Excel add-in](/business-applications-release-notes/april18/microsoft-flow/build-run-flows-excel) | Yes |
 | [Create a cloud flow from the Power Automate mobile app](/power-automate/mobile/mobile-create-flow) | Yes |
 | [Create a cloud flow from SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-a9c3e03b-0654-46af-a254-20252e580d01) | Yes |
-| Create a cloud flow from Project Roadmap | No, ETA September |
+| Create a cloud flow from Project Roadmap | No, ETA November |
 
 > [!IMPORTANT]
 > Unsupported entry points will fail to create any cloud flow until that support is added to create a solution cloud flow with that entry point. You must first create a cloud flow in a solution using a supported method.
