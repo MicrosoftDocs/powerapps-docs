@@ -16,7 +16,7 @@ search.audienceType:
 
 Microsoft provides new (and updated) features for your model-driven apps, on a regular basis. You can control how often the users in your organization get these new features by specifying the release channel. The concept of multiple release channels originated from [Microsoft 365 channels](/deployoffice/updates/overview-update-channels) and provides Power Platform admins with a choice of how often end user impacting features are released.
 
-The existing cadence of twice-yearly release waves is called the *Semi-annual channel* and is currently the default for all existing apps and orgs. The new *monthly channel* option enables GA-ready features to be turned on each month with a four week preview notification period to allow customer validation with existing customizations.
+The existing cadence of twice-yearly release waves is called the *Semi-annual channel* and is currently the default for all existing apps and environments. The new *monthly channel* option enables GA-ready features to be turned on each month with a four week preview notification period to allow customer validation with existing customizations.
 
 The following table provides a comparison of monthly channel and semi-annual channel.
 
@@ -27,23 +27,23 @@ The following table provides a comparison of monthly channel and semi-annual cha
 
 Security and non-end user impacting changes continue to be delivered with the weekly releases and changes outlined in [Microsoft Unified Interface versions](/power-platform/released-versions/powerapps#all--microsoft-unified-interface-versions).
 
-The key idea is that GA-ready end user impacting features release monthly instead of waiting for the twice-yearly release cadence. The same number of features are delivered in twelve smaller releases instead of two larger releases.
+The key idea is that GA-ready end user impacting features release monthly instead of waiting for the twice-yearly release cadence. The same number of features are delivered in 12 smaller releases instead of two larger releases.
 
-Microsoft 365 products have seen a consistently higher user satisfaction for monthly channel compared to the semi-annual channel. Currently, we observe a user satisfaction drop with the twice-yearly releases, and we'rae looking to improve this experience by following the Microsoft 365 channel approach.
+Microsoft 365 products have seen a consistently higher user satisfaction for monthly channel compared to the semi-annual channel. Currently, we observe a user satisfaction drop with the twice-yearly releases, and we're looking to improve this experience by following the Microsoft 365 channel approach.
 
 ## Configuring release channel
 
-Release channel can be configured on the environment, app, or user level. The release channel is primarily managed on the environment or app. The user level is an override which can used for gradual rollout or to revert specific users.
+Release channel can be configured on the environment, app, or user level. The release channel is primarily managed on the environment or app. The user level is an override, which can be used for gradual rollout or to revert specific users.
 
-Environment admins use the Power Platform admin center to select the channel for the environment. Makers use App Designer or Solution Explorer to select the channel for one or more apps. 
+Environment admins use the Power Platform admin center to select the channel for the environment. Makers use app designer or the solutions area to select the channel for one or more apps.
 
-To allow gradually switching the default from semi-annual channel to monthly channel, the default value will be renamed to "Auto" and there will be explicit choices for semi-annual and monthly. The "Auto" value will start as semi-annual but will switch to monthly with a future release wave. Admins and makers can explicitly select semi-annual if they have a need for the slower cadence.
+To allow gradually switching the default from semi-annual channel to monthly channel, the default value will be renamed to **Auto** and there will be explicit choices for semi-annual and monthly. The **Auto** value starts as semi-annual, but switches to monthly with a future release wave. Admins and makers can explicitly select semi-annual if they have a need for the slower cadence.
 
-New apps will soon start defaulting to the explicit monthly value and will be followed with new org defaulting. See [Changing release channels](channel-change.md) for more details.
+New apps will soon start defaulting to the explicit monthly value and will be followed with new environment default. More information: [Changing release channels](channel-change.md)
 
 ## Monthly release schedule
 
-Model-driven apps release updates every week, which are gradually rolled out to groups of regions over several weeks. Below are the region groups with each group happening in successive weekend updates.
+Model-driven apps release updates every week, which is gradually rolled out to groups of regions over several weeks. Below are the region groups with each group happening in successive weekend updates.
 
 1. First release environment (FRE)
 1. Canada, South America, India, France, South Africa, Germany, Switzerland, Norway, Korea, Singapore
