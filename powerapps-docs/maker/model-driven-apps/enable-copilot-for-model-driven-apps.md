@@ -32,11 +32,11 @@ search.audienceType:
 Copilot for app users in model-driven apps is a next-generation AI assistant that provides data insights on Dataverse tables through natural language conversation. Copilot helps app users boost productivity through AI-powered insights and intuitive app navigation. More information: [Copilot for app users in model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot).
 
 ## Turn on Copilot feature for your environment
-Makers who are Environmental Administators can enable Copilot feature in model-driven apps for all the users in their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+Environment administrators can enable Copilot feature in model-driven apps for all the users in their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
 1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com.
 
-2. In the navigation pane, go to **Environments** and select the enviornment where you want to enable Copilot for app users in model-driven apps in. Click on "**Settinngs** for this environment in the top menu.
+2. In the navigation pane, go to **Environments** and select the enviornment where you want to enable Copilot for app users in model-driven apps in. Click on **Settings** for this environment in the top menu.
 
   > [!div class="mx-imgBorder"]
   > ![Select environment Settings.](media/Environment_settings.png)
@@ -52,34 +52,37 @@ Makers who are Environmental Administators can enable Copilot feature in model-d
   > ![Set Copilot feature ON for the envrironment](media/Copilot_for_apps_users_ON.png)
 
  
-## Enable you environment to receive monthly updates for model-driven apps
-Makers must set their environment to receive monthly model-driven apps updates as a prerequisite for enbaling Copilot for end users in model-driven apps.
+## Enable your environment to receive monthly updates for model-driven apps
+Makers must set their environment to receive monthly model-driven apps updates as a prerequisite for having Copilot for end users in model-driven apps.
 1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com.
-2. In the navigation pane, go to **Environments** and select the enviornment where you want to enable Copilot for app users in model-driven apps in. Click on "**Settinngs** for this environment in the top menu.
-3.  Go to **Product** section and select **Behavior** option.  Set **Release channel** for model-driven apps to **Monthly channel** in the dropdown control. More information: [Behavior settings](/power-platform/admin/settings-behavior#settings) and [Changing release channels for model-driven apps](channel-change.md).
+2. In the navigation pane, go to **Environments** and select the enviornment where you want to enable Copilot for app users in model-driven apps in. Click on **Settings** for this environment in the top menu.
+3.  Go to **Product** section and select **Behavior** option.  Set **Release channel** for model-driven apps to **Monthly channel** in the dropdown control.
    
   > [!div class="mx-imgBorder"]
   > ![Set Release channel to Monthly channel for model driven apps](media/Behavior_release_channel.png)
 
-## Index Dataverse tables and columns for better Copilot insights
+ More information: [Behavior settings](/power-platform/admin/settings-behavior#settings) and [Changing release channels for model-driven apps](channel-change.md).
+ 
+## Configure Dataverse tables and columns for better Copilot insights
    
-6. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Tables** to configure Dataverse tables that you want Copilot to use for the responses. You must choose both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts. More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
+Environment administators must configure which Dataverse tables Copilot is to use for the responses. You must choose both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts.
 
-For every Dataverse table to be used by Copilot, open do these 2 Steps in Power Apps to index your tables and columns for Copilot use:
+More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
 
-* Select a Dataverse table and go to table **Properties > Advanced options** in top menu and enable **Track Changes** and **Appear in search results** settings for the table and **Save**. More information: [Enable table indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing).
-  > [!NOTE]
-  > Most standard Dataverse tables already have **Track Changes** and **Appear in search results** settings enables, but they must be manualy enabled for custom tables.
+For every Dataverse table to be used by Copilot, do these 2 Steps in **Tables** pane at [Power Apps](https://make.powerapps.com/) to index your tables and columns for Copilot use:
+
+* Select a Dataverse table and go to its **Properties > Advanced options** option in the top menu. Enable **Track Changes** and **Appear in search results** settings for the table and **Save**. More information: [Enable table indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing).
+ 
 
 * Open this table and select **Views** option from **Data experiences** section and open **Quick Find [table name]** view. Then select **Edit find table columns** option at the bottom of the right hand pane. Select the columns of importance and click **Apply** to add them to the list. Next, **Save and publish** your changes. 
 
   > [!div class="mx-imgBorder"]
   > ![Add table colummns to quick find view](media/Index_columns.png)
 
-More information: [Enable column indexing]([https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#configure-columns).
+More information: [Enable column indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#configure-columns).
 
 ## See also
-[Copilot for app users in model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot)
+[Copilot for app users in model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot) <br />
 [FAQ for Copilot in model-driven apps](../common/faqs-copilot-model-driven-app.md) <br />
 [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md) <br />
 [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
