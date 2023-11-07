@@ -71,11 +71,12 @@ For every Dataverse table to be used by Copilot, open do these 2 Steps in Power 
   > [!NOTE]
   > Most standard Dataverse tables already have **Track Changes** and **Appear in search results** settings enables, but they must be manualy enabled for custom tables.
 
-* Open this table and select **Views** option from **Data experiences** section and open **Quick Find [table name]** view. Select **Edit find table columns** option at the bottom of the right hand pane. Select the columns of importance and click **Apply** to add them to the list. Next, **Save and publish** your changes. More information: [Enable column indexing]([https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#configure-columns).
+* Open this table and select **Views** option from **Data experiences** section and open **Quick Find [table name]** view. Then select **Edit find table columns** option at the bottom of the right hand pane. Select the columns of importance and click **Apply** to add them to the list. Next, **Save and publish** your changes. 
 
   > [!div class="mx-imgBorder"]
-  > ![Add table columns to quick find view](media/Index_columns.png)
+  > ![Add table colummns to quick find view](media/Index_columns.png)
 
+More information: [Enable column indexing]([https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#configure-columns).
 
 ## See also
 [Copilot for app users in model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot)
