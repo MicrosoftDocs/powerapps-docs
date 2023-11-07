@@ -24,4 +24,6 @@ With AI plugins, makers can build capabilities enabling Copilot to answer questi
 Use [Power Apps](https://make.powerapps.com/) to create AI plugins. You can also go to [MCS/PVA content link here](tbd) to create AI plugins for use across Power Platform.
 
 > [!NOTE]
-> This article introduces you to the AI plugin experience available in Power Apps interface. The experience creating AI plugins in Power Apps is same in MCS/PVA. For detailed step-by-step instructions creating AI plugins using Power Apps or MCS/PVA interface, see <link to MCS/PVA content>Types of AI plugins
+> This article introduces you to the AI plugin experience available in Power Apps interface. The experience creating AI plugins in Power Apps is same in MCS/PVA. For detailed step-by-step instructions creating AI plugins using Power Apps or MCS/PVA interface, see [MCS/PVA content link here](tbd) Types of AI plugins.
+
+You can create the following different types of AI plugins using Power Apps experience.
