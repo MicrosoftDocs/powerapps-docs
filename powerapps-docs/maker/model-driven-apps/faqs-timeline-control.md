@@ -46,50 +46,51 @@ If you can't find the command action from the related activity grid, you can fur
 > [!NOTE]
 > The timeline always displays command actions without honoring the custom rules to hide or disable the command button for performance reasons.
 
-## Why aren't posts appearing in timeline? Or, why can't I create a new post?
+## Why aren't posts appearing in timeline and why can't I create a new post?
 
-Check the following criteria:
-1. Posts do not work in CDS orgs. They only work for CRM organizations.
+Posts in the timeline are only available for Dynamics 365 app enabled Dataverse environments and posts are disabled with timelines by default for new environments. To enable, follow these steps:
 
-2. User posts are disabled on timeline by default for new organizations. To re-enable them, please go to Customer Service admin center -> Miscellaneous -> New and upcoming features -> check Timeline User Posts
-![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/35553346/b352e76f-0c57-4710-b729-97a800e211a0)
+1. Go to the Dynamics 365 Customer Service admin center > **Miscellaneous** > **New and upcoming features**, and then select **Timeline User Posts**.
 
-3. Check if the current entity has its post configuration activated. Go to Settings > Activity Feeds configurations -> post configurations. In the example below, you can see that it is active for cases.
-![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/35553346/e3a9b8d5-e957-428b-88c5-740e05c10092)
+   :::image type="content" source="media/faqs-timeline-control/enable-posts-csac.png" alt-text="Enable post from Customer Service admin center":::
 
-If you don’t see your entity listed here, try to look for it in the “inactive post configurations” view. If it's still not listed, hitting the refresh button will make it appear.
+1. Check if the current table has the post configuration property activated. Go to **Settings** > **Activity Feeds configurations** > **post configurations**. In the example below, it's active for cases.
 
-![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/35553346/f973470c-1c4e-41fc-898c-820139280f19)
+   :::image type="content" source="media/faqs-timeline-control/post-configurations-enabled.png" alt-text="Enabled post configuration for tables":::
 
-4. Make sure posts are enabled from timeline configuration on the current form.
-   
-![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/35553346/01dab0d5-97ec-4494-aa18-63927ed611d8)
+If the table isn't listed, look for it in the **Inactive Post Configurations** view. If the table you want isn't listed, select **Refresh** on the command bar. Select the table, and then select **Activate**.
 
-5. Verify the "Enable User Posts" setting is enabled on the current form. There is a known issue where this checkbox appears checked, but it is not. This issue is affecting you if the "Enable post attachments" setting is greyed out. Try unchecking, and re-checking the box, then saving and publishing changes.
-    
-![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/35553346/cd4a3473-6050-482c-8103-6051baedfc3c)
+1. Make sure posts are enabled from timeline configuration on the current form. More information: [Record types to show](set-up-timeline-control.md#record-types-to-show)
 
-> [!NOTE]
-> We are deprecating user posts in the future. Please use notes as an alternative.
+1. Verify the **Enable user posts** setting is enabled on the current form. If the checkbox is selected, clear it and select it again. Save and publish the changes from the form designer.
 
-## Why do the "Modified On" fields of my records get changed when no changes are made to them?
-This can be caused by cascading behavior with the parent record. For example, when a case is assigned to another user. Refer to [Table Relationships](../data-platform/create-edit-entity-relationships.md) to configure this behaviour.
+   :::image type="content" source="media/faqs-timeline-control/enable-user-posts-property.png" alt-text="Enable user post property":::
 
-Alternatively, you can configure timeline to sort notes by their "created on" date. See [Notes on timeline](set-up-timeline-control.md#notes-on-timeline)
+## Why do the "Modified On" columns of my records get changed when no changes are made to them?
 
-## What permissions does timeline need to run?
-* To see attachments, you need read access to the "Activity file attachment" entity
-* For personal settings and bookmarks, you need read/write/create access to the "Custom Control Extended Setting" entity
+This can be caused by the cascading behavior with the parent record. For example, when a case is assigned to another user. Go to [Table Relationships](../data-platform/create-edit-entity-relationships.md) for information about how to configure this behavior.
+
+Alternatively, you can configure timeline to sort notes by their **Created on** date. More information: [Notes on timeline](set-up-timeline-control.md#notes-on-timeline)
+
+## What privileges do I need to use timeline?
+
+* To open attachments, you need read privilege for the **Activity file attachment** table.
+* For personal settings and bookmarks, you need read, write, and create privileges on the **Custom Control Extended Setting** table.
+
+Power Platform admins can assign users these privileges. More information [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
 ## How do I configure timeline for mobile offline?
-For general guidance on enabling mobile offline for your app, see [Set Up Mobile Online](../mobile/setup-mobile-offline.md) 
-The offline profile must have the **Note** and **User** tables in order for timeline to function.
+
+For general guidance on enabling mobile offline for your app, go to [Set Up Mobile Online](../mobile/setup-mobile-offline.md).
 
 > [!NOTE]
-> Only notes are available when offline
+>
+> * The offline profile must have the **Note** and **User** tables in order for the timeline to work.
+> * Only notes are available when offline.
 
-## Issues regarding email tracking/auto capture
-Refer to [Auto Capture in Dynamics 365 sales](https://learn.microsoft.com/en-us/dynamics365/sales/free-auto-capture#what-is-auto-capture) for general information, or refer to the [auto capture FAQ](https://learn.microsoft.com/en-us/dynamics365/sales/faqs-sales-insights#auto-capture).
+## Issues regarding email tracking and auto capture
+
+Go to [Auto Capture in Dynamics 365 sales](/dynamics365/sales/free-auto-capture#what-is-auto-capture) for general information or go to the [auto capture FAQ](/dynamics365/sales/faqs-sales-insights#auto-capture).
 
 ## See also
 
