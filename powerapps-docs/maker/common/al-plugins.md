@@ -27,3 +27,23 @@ Use [Power Apps](https://make.powerapps.com/) to create AI plugins. You can also
 > This article introduces you to the AI plugin experience available in Power Apps interface. The experience creating AI plugins in Power Apps is same in MCS/PVA. For detailed step-by-step instructions creating AI plugins using Power Apps or MCS/PVA interface, see [MCS/PVA content link here](tbd) Types of AI plugins.
 
 You can create the following different types of AI plugins using Power Apps experience.
+
+
+|ColumPlugin type  |Description  |
+|---------|---------|
+|Prompts plugins     | Prompts allow generating content using natural language which includes summarizing, classifying, extracting entities, translating, assessing sentiment and much more. [Learn more](AIB prompts doc page)   |
+|Custom connector plugins     | Custom connectors allow retrieving and updating data from external sources accessed through APIs. [Lean more](/connectors/custom-connectors)         |
+|Open AI plugins       | Open AI plugins provide access to data sources, allowing specific data to be surfaced through AI experiences that would not normally be available through general models.
+[Learn more](https://platform.openai.com/docs/plugins/introduction) |
+|Power Automate flow plugins     | Power Automate flows allow defining custom automations. These kinds of plugins are appropriate when a Maker wants to perform several actions which are not only about accessing data or generating content. [Learn more](/power-automate) |
+
+## Create AI plugins
+
+To create AI pluguins, go to Power Apps and choose AI plugin from the left-pane. And then, follow the guided walkthroughs as described in [MCS/PVA content link here](tbd).
+
+## Use AI plugins
+AI plugins enable adding new behaviors to Copilots across products such as MCS/PVA and Microsoft 365 Chat. To learn about how to use AI plugins, see [link to MCS/PVA](use section).
+
+### See also
+
+- [Building  AI plugins for discovery by copilots](https://microsoft.sharepoint.com/:w:/t/PowerAppsContentTeam/EUImE8FnPIZAt4lZjqfdUDwBUJXkDXdhMkZoQn-QUNsdig?e=NVZgDq)
