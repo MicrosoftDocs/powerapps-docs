@@ -81,7 +81,7 @@ Power Platform admins can assign users these privileges. More information [Secur
 
 ## How do I configure timeline for mobile offline?
 
-For general guidance on enabling mobile offline for your app, go to [Set Up Mobile Online](../mobile/setup-mobile-offline.md).
+For general guidance on enabling mobile offline for your app, go to [Set up mobile offline](../../mobile/setup-mobile-offline.md).
 
 > [!NOTE]
 >
