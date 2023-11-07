@@ -48,7 +48,7 @@ Makers who are Environmental Administators can enable Copilot in model-driven ap
    
 6. Configure Dataverse tables that you want Copilot to use for the reponses. You must select both the tables and the columns of importance for Copilot to search accross to produce quality data inisghts. More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot)
 
-- Enable **Track Changes** and **Appear in search results** settings in table **Properties > Advanced options** for Dataverse tables to be used by Copilot. Note that most standard Dataverse tables have these settings enabled by default, but custom tables require them to be set manually. More information: [Enable table indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing)
+- Go to  table **Properties > Advanced options** and enable **Track Changes** and **Appear in search results** settings for Dataverse tables to be used by Copilot. Note that most standard Dataverse tables have these settings enabled by default, but custom tables require them to be set manually. More information: [Enable table indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing)
 - Select which columns from these tables  to be
 
 
