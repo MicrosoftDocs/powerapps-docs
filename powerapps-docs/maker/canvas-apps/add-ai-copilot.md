@@ -19,7 +19,7 @@ contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-The Copilot control is a next-generation AI assistant that makers can add to their apps for end-users. This is an AI-powered experience for app users to get insights about the data in their apps through conversation in natural language. Makers can add this control to any app and choose what data it can answer questions about.
+The Copilot control is a next-generation AI assistant that makers can add to their canvas apps for end-users. This is an AI-powered experience for app users to get insights about the data in their apps through conversation in natural language. Makers can add this control to any canvas app and choose what data it can answer questions about.
 
 > [!IMPORTANT]
 > - To use this capability your environment must be in the US region.
@@ -53,12 +53,10 @@ With your [canvas app open for editing](edit-app.md):
    > [!div class="mx-imgBorder"]
    > ![Add the copilot control.](media/copilot/Copilot-Insert-menu.png)
 
-## Choose data
+## Choose data for Copilot
 
-1. When the Copilot control is added, select a data source from the pane.
+1. When the Copilot control is added to the canvas app, select a data source from the pane. Currenly, Copilot for end users in canvas apps is able to provide data inisghts on Dataverse tables only. To configure the tables and their columns for use in Copilot, see [Configure tables to use Copilot](../data-platform/table-settings-for-copilot.md).
 
-  > [!NOTE]
-  > Currently, the Copilot control can only answer questions for smaller datasets. The only exception to the dataset limit is when Dataverse is selected as the data source. To configure the table and its columns for use in Copilot, see [Configure tables to use Copilot](../data-platform/table-settings-for-copilot.md).
 
    > [!div class="mx-imgBorder"]
    > ![Select a data source.](media/copilot/copilot-3.png)
@@ -68,12 +66,15 @@ With your [canvas app open for editing](edit-app.md):
    > ![Select fields or views.](media/copilot/copilot-choose-data-properties.png)
    
 
-3. Select the specific **Fields** and/or **View** that the Copilot control will answer questions for.
+2. Select the specific **Fields** and/or **View** that the Copilot control will answer questions for (optonal).
+
+  > [!NOTE]
+  > Currently, the Copilot for apps can only answer questions for smaller datasets in a canvas app. The only exception to the dataset limit is when Dataverse is selected as the data source. 
 
 
-## Configure the control (optional)
+## Configure the Copilot control (optional)
 
-In addition to choosing the data source, you can also configure the following properties:
+In addition to choosing the data source for Copilot, you can also configure the following Copilot properties in a canvas app:
 
 - **Title**: Replaces the control's default title of **Have a question about this app? Ask Copilot**, and can be replaced with a more appropriate title that reflects the assistance that the Copilot control can provide to app users.
 
@@ -89,13 +90,11 @@ In addition to choosing the data source, you can also configure the following pr
 
 ## Provide feedback
 
-- To improve Copilot control, makers can submit feedback using the **Like** (thumbs up) or **Dislike** (thumbs down) button on the Copilot control properties pane. Once you select a response, enter your feedback and then select **Submit**.
+- App users can provide feedback by selecting **Like** (thumbs up) or **Dislike** (thumbs down) button for each response that Copilot provides. Optionally, app users can also enter additional feedback in the text box and then select **Submit**.
 
-- App users can provide feedback by selecting **Like** (thumbs up) or **Dislike** (thumbs down) button for each response that Copilot provides. Optionally, can also enter additional feedback in the text box and then select **Submit**.
+### Disable feedback option for app users
 
-### Disable feedback
-
-Admins can disable the option to provide feedback to Microsoft.
+Admins can disable the option for apps users to provide feedback to Microsoft in Copilot in canvas apps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 2. On the [left navigation pane](intro-maker-portal.md#1--left-navigation-pane), select **Tables** > **Organization**.
