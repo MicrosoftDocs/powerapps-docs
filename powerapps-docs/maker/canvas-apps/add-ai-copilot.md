@@ -48,8 +48,7 @@ With your [canvas app open for editing](edit-app.md):
 
 With your [canvas app open for editing](edit-app.md):
 
-1. On the app authoring menu, select **Insert**.
-2. Expand the **Input** menu and select **Copilot (preview)** to add this control.
+1. On the app authoring menu, select **Insert** and select **Copilot (preview)** to add this control.
 
    > [!div class="mx-imgBorder"]
    > ![Add the copilot control.](media/copilot/Copilot-Insert-menu.png)
