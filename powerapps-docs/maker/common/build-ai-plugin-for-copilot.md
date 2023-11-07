@@ -21,7 +21,7 @@ Microsoft Dataverse supports three types of AI plugins – Dataverse custom APIs
 
 While additional AI plugin types might be added as supported by Dataverse, the steps to define plugin remains the same. AI pluginAI pluginAI plugincustom API
 
-All components within an AI plugin are solution-aware, and can follow the standard application lifecycle management principles. AI pluginIn general, there are two main steps in defining an AI pluginAI plugin: 
+All components within an AI plugin are solution-aware, and can follow the standard application lifecycle management principles. AI plugins general, there are two main steps in defining an AI pluginAI plugin: 
 
 1. Define the core functionality that you want to expose as an AI plugin. <br>
    This is a pre-requisite and an existing step in Dataverse about defining a custom API or a custom connector. This means that you can define an AI plugin for your existing custom APIs or custom connectors without any major changes.
@@ -29,7 +29,7 @@ All components within an AI plugin are solution-aware, and can follow the standa
 This is a new step allowing you to define the metadata for your AI plugin that can be used by the Copilots to discover and invoke this plugin. This process includes the following three main components:
     1. **AI plugin definition**: This is the metadata of your plugin. For example, “SalesAIPlugin”/
     1. **AI plugin operation**: This is a list of operations supported by your plugin. For example, "GetOpportunities", “CreateOpportunity”/
-    1. **AI plugin instance**: This controls the state of your plugin, which are:  Enable or Disable.
+    1. **AI plugin instance**: This controls the state of your plugin, which are: **Enable** or **Disable**.
 
 Let’s get started and define our first AI plugin. In this example, we will define an AI plugin of type custom API. 
 
