@@ -77,7 +77,7 @@ The previous list doesn't include these notable items:
 * [Collections](working-with-variables.md)
 
 ### Expression evaluation - property of entity must be on left side 'LHS' of equality operator
-It's important to place the property of an entity to be compared in an expression on the left hand side 'LHS' of an equation.  To illustrate, in the example below the entity property **'Business unit ID'.Name** is a property value and it must be placed on the LHS of the expression to be evaluated.  The following expression will succeed:
+It's important to place the property of an entity to be compared in an expression on the left hand side 'LHS' of an equation. To illustrate, in the example below the entity property **'Business unit ID'.Name** is a property value and it must be placed on the LHS of the expression to be evaluated. The following expression will succeed:
 
 ```powerapps-dot
 Filter(
