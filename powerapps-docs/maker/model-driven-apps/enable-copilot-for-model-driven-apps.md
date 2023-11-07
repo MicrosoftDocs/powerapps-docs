@@ -18,8 +18,6 @@ search.audienceType:
 ---
 [This topic is pre-release documentation and is subject to change.]
 
-Copilot for app users in model-driven apps is a next-generation AI assistant that provides data insights on Dataverse tables through natural language conversation. Copilot helps app users boost productivity through AI-powered insights and intuitive app navigation. More information:[Copilot for app users in model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot).
-
 > [!IMPORTANT]
 >
 > - This is a preview feature.
@@ -30,7 +28,11 @@ Copilot for app users in model-driven apps is a next-generation AI assistant tha
 > - This capability  may be subject to usage limits or capacity throttling.
 
 # Enable Copilot for end users in model driven apps
-Makers who are Environmental Administators can enable Copilot in model-driven apps for all the users in their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+
+Copilot for app users in model-driven apps is a next-generation AI assistant that provides data insights on Dataverse tables through natural language conversation. Copilot helps app users boost productivity through AI-powered insights and intuitive app navigation. More information:[Copilot for app users in model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot).
+
+## Turn on Copilot feature for your environment
+Makers who are Environmental Administators can enable Copilot feature in model-driven apps for all the users in their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
 1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com.
 
@@ -50,10 +52,16 @@ Makers who are Environmental Administators can enable Copilot in model-driven ap
   > ![Set Copilot feature ON for the envrironment](media/Copilot_for_apps_users_ON.png)
 
  
-5. Go back to **Product** section and select **Behavior** option.  Set **Release channel** for model-driven apps to **Monthly channel** in the dropdown control. More information: [Behavior settings](/power-platform/admin/settings-behavior#settings) and [Changing release channels for model-driven apps](channel-change.md).
+## Enable you environment to receive monthly updates for model-driven apps
+Makers must set their environment to receive monthly model-driven apps updates as a prerequisite for enbaling Copilot for end users in model-driven apps.
+1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com.
+2. In the navigation pane, go to **Environments** and select the enviornment where you want to enable Copilot for app users in model-driven apps in. Click on "**Settinngs** for this environment in the top menu.
+3.  Go to **Product** section and select **Behavior** option.  Set **Release channel** for model-driven apps to **Monthly channel** in the dropdown control. More information: [Behavior settings](/power-platform/admin/settings-behavior#settings) and [Changing release channels for model-driven apps](channel-change.md).
    
   > [!div class="mx-imgBorder"]
   > ![Set Release channel to Monthly channel for model driven apps](media/Behavior_release_channel.png)
+
+## Index Dataverse tables and columns for better Copilot insights
    
 6. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Tables** to configure Dataverse tables that you want Copilot to use for the responses. You must choose both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts. More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
 
