@@ -32,9 +32,8 @@ You can create the following different types of AI plugins using Power Apps expe
 |ColumPlugin type  |Description  |
 |---------|---------|
 |Prompts plugins     | Prompts allow generating content using natural language which includes summarizing, classifying, extracting entities, translating, assessing sentiment and much more. [Learn more](AIB prompts doc page)   |
-|Custom connector plugins     | Custom connectors allow retrieving and updating data from external sources accessed through APIs. [Lean more](/connectors/custom-connectors)         |
-|Open AI plugins       | Open AI plugins provide access to data sources, allowing specific data to be surfaced through AI experiences that would not normally be available through general models.
-[Learn more](https://platform.openai.com/docs/plugins/introduction) |
+|Custom connector plugins     | Custom connectors allow retrieving and updating data from external sources accessed through APIs. [Lean more](/connectors/custom-connectors)  |
+|Open AI plugins       | Open AI plugins provide access to data sources, allowing specific data to be surfaced through AI experiences that would not normally be available through general models. [Learn more](https://platform.openai.com/docs/plugins/introduction) |
 |Power Automate flow plugins     | Power Automate flows allow defining custom automations. These kinds of plugins are appropriate when a Maker wants to perform several actions which are not only about accessing data or generating content. [Learn more](/power-automate) |
 
 ## Create AI plugins
