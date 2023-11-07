@@ -44,7 +44,7 @@ Dataverse delivers native platform support for long term retention of data. It a
 
 ## How it works
 
-Application admins set up custom policies for a table with criterion to retain data long term. The retained data is never moved out of Dataverse, it's stored in a Dataverse managed data lake. The data is always secured with Dataverse security backed by Azure Active Directory.  
+Application admins set up custom policies for a table with criterion to retain data long term. The retained data is never moved out of Dataverse, it's stored in a Dataverse managed data lake. The data is always secured with Dataverse security backed by Microsoft Entra ID.  
 
 > [!IMPORTANT]
 > - Once data is retained in the Dataverse long term (inactive) store it can't be moved back to the Dataverse live (active) data store.
