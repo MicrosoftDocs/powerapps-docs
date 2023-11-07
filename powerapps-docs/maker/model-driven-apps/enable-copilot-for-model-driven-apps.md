@@ -79,7 +79,7 @@ For every Dataverse table to be used by Copilot, do these 2 Steps in **Tables** 
   > [!div class="mx-imgBorder"]
   > ![Add table colummns to quick find view](media/Index_columns.png)
 
-More information: [Enable column indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#configure-columns).
+More information: [Enable column indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#configure-columns).
 
 ## See also
 [Copilot for app users in model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot) <br />
