@@ -2,7 +2,7 @@
 title: "Behavior and format of the Date and Time column in Microsoft Dataverse | MicrosoftDocs"
 description: Understand the format of date and time columns. 
 ms.custom: ""
-ms.date: 11/11/2022
+ms.date: 11/07/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,12 +12,12 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
-ms.assetid: 73d691c7-344e-4c96-8979-c661c290bf81
-caps.latest.revision: 47
 ms.subservice: dataverse-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
+contributors:
+  - tahoon-ms
 ---
 # Behavior and format of the date and time column
 
@@ -92,14 +92,14 @@ If the user enters just the date `October 14th, 2023`, the time portion is assum
 
 ### Enter invalid values in an app
 
-Different clients have different ways to handle invalid input. For example, in Pacific time zone, daylight saving started on March 12th, 2023 at 2:00 AM, moving the time forward 1 hour to 3:00 AM. The time between 2:00 AM and 3:00 AM on that day doesn't exist. When users try to enter a value in that time range, apps might do one of the following:
+Different clients have different ways to handle invalid input. For example, in Pacific time zone, daylight saving started on March 12th, 2023 at 2:00 AM, moving the time forward one hour to 3:00 AM. The time between 2:00 AM and 3:00 AM on that day doesn't exist. When users try to enter a value in that time range, apps might do one of the following:
 
 * Change to the previous or next valid time.
 * Revert to the last known value.
 * Show an error message.
 * Don't show times between 2:00 AM and 3:00 AM in the time picker, so that users can't select them in the first place.
 
-Similarly, different clients have different ways to handle repeated time ranges. For example, in Pacific time zone, daylight saving ended on November 5th, 2023 at 2:00 AM, moving the time backward 1 hour to 1:00 AM. The time between 1:00 AM and 2:00 AM on that day is repeated twice. A time like 1:30 AM could refer to either time zones. If you need to unambiguously show or enter times in that range, it's best to temporarily switch to a time zone that does not use daylight saving.
+Similarly, different clients have different ways to handle repeated time ranges. For example, in Pacific time zone, daylight saving ended on November 5th, 2023 at 2:00 AM, moving the time backward one hour to 1:00 AM. The time between 1:00 AM and 2:00 AM on that day is repeated twice. A time like 1:30 AM could refer to either time zones. If you need to unambiguously show or enter times in that range, it's best to temporarily switch to a time zone that doesn't use daylight saving.
 
 ### Get raw values with Web API
 
