@@ -1,6 +1,6 @@
 ---
 title: Progress bar modern control in Power Apps
-description: Learn about the details, properties and examples of the progress bar modern control in Power Apps.
+description: Learn about the details, properties, and examples of the progress bar modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -29,9 +29,9 @@ The progress bar can be configured to show various states of progress in the app
 
 **[OnChange](../properties-core.md)** – Actions to perform when the value of control gets updated.
 
-**Value** – Number between 0 and 'max', which specifies how much of the task has been completed. Only applicable for determinate state.
+**Value** – Number between 0 and 'max', which specifies how much of the task is completed. Only applicable for determinate state.
 
-**Max** - The maximum value, which indicates the task is complete. The ProgressBar bar will be full when value equals max. This is useful for instances where you want to show capacity, or how much of a total has been uploaded/downloaded.
+**Max** - The maximum value, which indicates the task is complete. The ProgressBar bar is full when value equals max. This is useful for instances where you want to show capacity, or how much of a total has been uploaded or downloaded.
 
 **Thickness** – The thickness of the progress bar. Current options are only medium and large.
 
