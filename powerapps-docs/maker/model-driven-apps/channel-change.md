@@ -46,7 +46,7 @@ More information:
 * [Update a record using Web API](/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
 * [Update a record using the SDK for .NET](/power-apps/developer/data-platform/org-service/entity-operations-update-delete?tabs=late#basic-update)
 
-## Change the app channel
+## Changing the app channel
 
 The app channel can be used to override the release channel for a model-driven app using Power Apps [app designer](model-driven-app-glossary.md#app-designer) or solutions area.
 
@@ -91,9 +91,13 @@ A maker can use the **Solutions** area to explicitly set the release channel for
    1. Select **Save**.
 1. After changing an app setting for specific app(s), the app(s) must be republished for the change to take effect.
 
+### Defaulting new apps to monthly channel
+
+As part of the gradual migration to default all apps to use monthly channel, newly created model-driven apps will gradually start seeing the app channel defaulted. Admins or makers can control the release channel default for new apps using an app setting. The app setting **Allow new app channel default** defaults to **Yes**, which means a newly created app is set to **Monthly**.
+
 ### Prevent new app defaulting to monthly channel
 
-As part of the gradual migration to default all apps to use monthly channel, newly created model-driven apps will gradually start seeing the app channel defaulted. Admins or makers can control the release channel default for new apps using an app setting. The app setting **Allow new app channel default** defaults to **Yes**, which means a newly created app is set to **Monthly**. If the app setting is switched to **No**, new apps are created with release channel **Auto**.
+The new app defaulting can be prevented by switching **Allow new app channel default** to **No**. This causes the new app to be created with release channel **Auto** value.
 
 The following steps change the default for all new apps within an environment. This app setting override can also be put into a solution that's migrated to all environments to prevent new apps from having a default set.
 
