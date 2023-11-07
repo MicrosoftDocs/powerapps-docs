@@ -17,9 +17,7 @@ search.audienceType:
 
 [This article is prerelease documentation and is subject to change.]
 
-The Power Platform plugin builder enables Makers to view AI plugins available in their environment or guide them to creating new ones. 
-
-The AI plugins leverage Power Platform components like flows, connectors or prompts to define a specific business behavior which can be added to a Copilot. The Copilot will use the appropriate plugin able to address the questions of an end user in the application.
+The AI plugins leverage Power Platform components like flows, connectors or prompts to define a specific business behavior which can be added to a Copilot. The Copilot will use the appropriate plugin able to address the questions of an end user in the application. You can use [Power Apps](https://make.powerapps.com) to view and create AI plugins for use across Power Platform and Microsoft 365. 
 
 With AI plugins, makers can build capabilities enabling Copilot to answer questions they wouldn’t be able to tackle by default or to enhance out-of-the-box answers.
 
