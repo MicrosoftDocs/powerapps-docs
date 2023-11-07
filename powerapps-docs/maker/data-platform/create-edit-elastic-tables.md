@@ -162,7 +162,7 @@ Elastic tables have different behaviors and capabilities than standard tables wh
 - [Query JSON columns in elastic tables (preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
 - [Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md)
 - [Elastic table sample code (preview)](../../developer/data-platform/elastic-table-samples.md)
-- [Send parallel requests](../../developer/data-platform/send-parallel-requests.md)  [
+- [Send parallel requests](../../developer/data-platform/send-parallel-requests.md)
 - [Service protection API limits](../../developer/data-platform/api-limits.md)
 
 ## See also
