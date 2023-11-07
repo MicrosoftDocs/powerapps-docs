@@ -20,6 +20,15 @@ search.audienceType:
 
 Copilot for app users in model-driven apps is a next-generation AI assistant that provides data insights on Dataverse tables through natural language conversation. Copilot helps app users boost productivity through AI-powered insights and intuitive app navigation. More information:[Copilot for app users in model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot).
 
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - To use this capability your environment must be in the US region.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
+> - This capability  may be subject to usage limits or capacity throttling.
+
 # Enable Copilot for end users in model driven apps
 Makers who are Environmental Administators can enable Copilot in model-driven apps for all the users in their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
@@ -46,11 +55,14 @@ Makers who are Environmental Administators can enable Copilot in model-driven ap
   > [!div class="mx-imgBorder"]
   > ![Set Release channel to Monthly channel for model driven apps](media/Behavior_release_channel.png)
    
-6. Configure Dataverse tables that you want Copilot to use for the responses. You must choose both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts. More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
+6. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Tables** to configure Dataverse tables that you want Copilot to use for the responses. You must choose both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts. More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
 
-For every Dataverse table to be used by Copilot, do these 2 Steps in Power Apps to index your tables and columns for Copilot:
+For every Dataverse table to be used by Copilot, open do these 2 Steps in Power Apps to index your tables and columns for Copilot use:
 
 * Select a Dataverse table and go to table **Properties > Advanced options** in top menu and enable **Track Changes** and **Appear in search results** settings for the table and **Save**. More information: [Enable table indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing).
+  > [!NOTE]
+  > Most standard Dataverse tables already have **Track Changes** and **Appear in search results** settings enables, but they must be manualy enabled for custom tables.
+
 * Open this table and select **Views** option from **Data experiences** section and open **Quick Find [table name]** view. Select **Edit find table columns** option at the bottom of the right hand pane. Select the columns of importance and click **Apply** to add them to the list. Next, **Save and publish** your changes. More information: [Enable column indexing]([https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#configure-columns).
 
   > [!div class="mx-imgBorder"]
@@ -58,7 +70,7 @@ For every Dataverse table to be used by Copilot, do these 2 Steps in Power Apps 
 
 
 ## See also
-
+[Copilot for app users in model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot)
 [FAQ for Copilot in model-driven apps](../common/faqs-copilot-model-driven-app.md) <br />
 [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md) <br />
 [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
