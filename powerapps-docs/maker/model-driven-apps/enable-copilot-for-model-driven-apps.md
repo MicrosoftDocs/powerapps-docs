@@ -69,7 +69,7 @@ Environment administators must configure the Dataverse tables Copilot will using
 
 More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
 
-For every Dataverse table to be used by Copilot, do these 2 Steps in **Tables** pane at [Power Apps](https://make.powerapps.com/) to index your tables and columns for Copilot use:
+For every Dataverse table to be used by Copilot, do these 2 Steps in **Tables** pane at [Power Apps](https://make.powerapps.com/) to configure your tables and columns for Copilot use:
 
 * Select a Dataverse table and go to its **Properties > Advanced options** option in the top menu. Enable **Track Changes** and **Appear in search results** settings for the table and **Save**. More information: [Enable table indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing).
  
