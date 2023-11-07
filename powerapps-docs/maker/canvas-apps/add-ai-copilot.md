@@ -1,6 +1,6 @@
 ---
-title: Add Copilot control to a canvas app
-description: Add copilot AI control to your canvas app.
+title: Add Copilot control for canvas app users
+description: Add Copilot AI control for apps users to your canvas app.
 author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
@@ -15,7 +15,7 @@ contributors:
   - mduelae
 ---
 
-# Add Copilot control to a canvas app (preview)
+# Copilot for app users in a canvas app (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
@@ -34,7 +34,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 - Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md).
 
 
-## Enable Copilot control for your canvas app
+## Enable Copilot control for your canvas app in App Studio
 
 With your [canvas app open for editing](edit-app.md):
 
@@ -44,7 +44,7 @@ With your [canvas app open for editing](edit-app.md):
    > [!div class="mx-imgBorder"]
    > ![Turn on Copilot control.](media/copilot/copilot-1.png)
 
-## Add the Copilot control to a canvas app
+## Add the Copilot control for app users to a canvas app
 
 With your [canvas app open for editing](edit-app.md):
 
