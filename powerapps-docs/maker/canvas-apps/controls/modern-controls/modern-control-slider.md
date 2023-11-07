@@ -1,15 +1,12 @@
 ---
 title: Slider modern control in Power Apps
-description: Learn about the details, properties and examples of the slider modern control in Power Apps.
+description: Learn about the details, properties, and examples of the slider modern control in Power Apps.
 author: yogeshgupta698
-
 ms.topic: reference
 ms.component: canvas
 ms.date: 11/6/2023
 ms.subservice: canvas-maker
 ms.author: yogupt
-
-
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
@@ -26,7 +23,8 @@ A control with which the user can specify a value by dragging a handle.
 The user can indicate a value, between a minimum and a maximum value that you specify, by dragging the handle of a slider left-right or up-down, depending on the direction that you choose.
 
 ## Key properties
-**[OnChange](../properties-core.md)** – Actions to perform when the user changes the value of a control (for example, by adjusting a slider).
+
+**[OnChange](../properties-core.md)** – Actions to perform when the user changes the value of a control such as by adjusting a slider.
 
 **Value** – The default and current value of slider control. Many modern controls use single property to manage default and the output updated by users.
 
