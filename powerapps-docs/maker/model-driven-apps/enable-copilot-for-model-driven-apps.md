@@ -46,7 +46,7 @@ Makers who are Environmental Administators can enable Copilot in model-driven ap
   > [!div class="mx-imgBorder"]
   > ![Set Release channel to Monthly channel for model driven apps](media/Behavior_release_channel.png)
    
-6. Configure Dataverse tables that you want Copilot to use for the reponses. You must select both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts. More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
+6. Configure Dataverse tables that you want Copilot to use for the responses. You must choose both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts. More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
 
 For every Dataverse table to be used by Copilot, do these 2 Steps in Power Apps to index your tables and columns for Copilot:
 
