@@ -54,7 +54,7 @@ Posts in the timeline are only available for Dynamics 365 app enabled Dataverse 
 
    :::image type="content" source="media/faqs-timeline-control/enable-posts-csac.png" alt-text="Enable post from Customer Service admin center":::
 
-1. Check if the current table has the post configuration property activated. Go to **Settings** > **Activity Feeds configurations** > **post configurations**. In the example below, it's active for cases.
+1. Check if the current table has the post configuration property activated. Go to **Settings** > **Activity Feeds configurations** > **Post Configurations**. In the example below, it's active for cases.
 
    :::image type="content" source="media/faqs-timeline-control/post-configurations-enabled.png" alt-text="Enabled post configuration for tables":::
 
@@ -88,7 +88,7 @@ For general guidance on enabling mobile offline for your app, go to [Set up mobi
 > * The offline profile must have the **Note** and **User** tables in order for the timeline to work.
 > * Only notes are available when offline.
 
-## Issues regarding email tracking and auto capture
+## How can I resolve issues with email tracking or auto capture?
 
 Go to [Auto Capture in Dynamics 365 sales](/dynamics365/sales/free-auto-capture#what-is-auto-capture) for general information or go to the [auto capture FAQ](/dynamics365/sales/faqs-sales-insights#auto-capture).
 
