@@ -34,7 +34,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 - Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md).
 
 
-## Enable Copilot control for your app
+## Enable Copilot control for your canvas app
 
 With your [canvas app open for editing](edit-app.md):
 
@@ -44,7 +44,7 @@ With your [canvas app open for editing](edit-app.md):
    > [!div class="mx-imgBorder"]
    > ![Turn on Copilot control.](media/copilot/copilot-1.png)
 
-## Add the Copilot control
+## Add the Copilot control to the canvas app
 
 With your [canvas app open for editing](edit-app.md):
 
@@ -66,8 +66,8 @@ With your [canvas app open for editing](edit-app.md):
    > ![Select fields or views.](media/copilot/copilot-choose-data-properties.png)
    
  > [!TIP]
-  > You can select any Data
-> 
+  >Any Dataverse tabeles in your environment that are not added to you canvas app can be selected as a datasource for Copilot control.
+
 2. Select the specific **Fields** and/or **View** that the Copilot control will answer questions for (optonal).
 
   > [!NOTE]
@@ -92,7 +92,7 @@ In addition to choosing the data source for Copilot, you can also configure the 
 
 ## Provide feedback
 
-- App users can provide feedback by selecting **Like** (thumbs up) or **Dislike** (thumbs down) button for each response that Copilot provides. Optionally, app users can also enter additional feedback in the text box and then select **Submit**.
+- App users and makers can provide feedback by selecting **Like** (thumbs up) or **Dislike** (thumbs down) button for each response that Copilot provides. Optionally, app users can also enter additional feedback in the text box and then select **Submit**.
 
 ### Disable feedback option for app users
 
