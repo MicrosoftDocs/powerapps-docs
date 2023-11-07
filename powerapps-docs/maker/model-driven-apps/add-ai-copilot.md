@@ -32,11 +32,14 @@ When enabled, Copilot can be accessed through the Copilot icon in the right navi
 
 :::image type="content" source="media/model-driven-app-copilot.png" alt-text="Copilot right pane in a model-driven app" lightbox="media/model-driven-app-copilot.png":::
 
-## Prerequisites
+## Enable Copilot for end users in model-driven apps
 
-- Power Platform administrators enable the AI-powered chat experience for canvas and model-driven apps. From the Power Platform admin center, go  to **Environments** > open the environment you want > **Settings** > **Features**, under **Copilot** set **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps**.
-- Additionally, to enable Copilot for model-driven apps, the environment must have the release channel set to **Monthly channel**. More information: [Behavior settings](/power-platform/admin/settings-behavior#settings) and [Changing release channels for model-driven apps](channel-change.md).
-- Choose the data you want available for answers. Copilot in a model-driven app can answer questions about all the Dataverse tables in the model-driven app, provided they have been configured for Copilot. More information: [Configure tables to use Copilot (preview)](../data-platform/table-settings-for-copilot.md)
+Environment administrators must enable Copilot end-user chat experience for model-driven apps in their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com). More information: [Enable Copilot for app users in model driven apps](../enable-copilot-for-model-driven-apps.md)
+
+Addiotnally,environment administrators must choose the data that should be available for Coplilot inisghts. Copilot in a model-driven app can answer questions about all the Dataverse tables in the model-driven app, provided they have been configured for Copilot. More information: [Enable Copilot for app users in model driven apps](../enable-copilot-for-model-driven-apps.md#configure-dataverse-tables-and-columns-for-copilot.md) and [Configure tables to use Copilot (preview)](../data-platform/table-settings-for-copilot.md)
+
+
+
   > [!NOTE]
   > Questions and answers for enterprise data environments that have [customer managed key](/power-platform/admin/customer-managed-key) or [Customer Lockbox](/power-platform/admin/about-lockbox) won't use your data stored in Dataverse. You might get answers from Copilot, but they won't be based on your Dataverse database.
 
@@ -71,6 +74,7 @@ If you want to disable the ability for users to submit feedback about Copilot in
 
 ## See also
 
+[Enable Copilot for app users in model driven apps](../enable-copilot-for-model-driven-apps.md) <br />
 [FAQ for Copilot in model-driven apps](../common/faqs-copilot-model-driven-app.md) <br />
 [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md) <br />
 [Add Copilot control to a canvas app (preview)](../canvas-apps/add-ai-copilot.md)
