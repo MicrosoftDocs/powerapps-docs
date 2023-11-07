@@ -81,6 +81,9 @@ For every Dataverse table to be used by Copilot, do these 2 Steps in **Tables** 
 
 Next, **Save and publish** your table changes. More information: [Enable column indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#configure-columns).
 
+  > [!NOTE]
+  > Questions and answers for enterprise data environments that have [customer managed key](/power-platform/admin/customer-managed-key) or [Customer Lockbox](/power-platform/admin/about-lockbox) won't use your data stored in Dataverse. You might get answers from Copilot, but they won't be based on your Dataverse database.
+
 ## See also
 [Copilot for app users in model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-ai-copilot) <br />
 [FAQ for Copilot in model-driven apps](../common/faqs-copilot-model-driven-app.md) <br />
