@@ -46,12 +46,15 @@ Makers who are Environmental Administators can enable Copilot in model-driven ap
   > [!div class="mx-imgBorder"]
   > ![Set Release channel to Monthly channel for model driven apps](media/Behavior_release_channel.png)
    
-6. Configure Dataverse tables that you want Copilot to use for the reponses. You must select both the tables and the columns of importance for Copilot to search accross to produce quality data inisghts. More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
+6. Configure Dataverse tables that you want Copilot to use for the reponses. You must select both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts. More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
 
-For every Dataverse table to be used by Copilot, perforn these 2 Steps in Power Apps to index you tables and columns for Copilot:
+For every Dataverse table to be used by Copilot, do these 2 Steps in Power Apps to index your tables and columns for Copilot:
 
-- Select a Dataverse table and go to table **Properties > Advanced options** in top menu and enable **Track Changes** and **Appear in search results** settings for the table and **Save**. More information: [Enable table indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing).
-- Open this table and select **Views** option from **Data experiences** section and open **Quick Find [table name]** view. Select **Edit find table columns** option at the bottom of the right hand pane. Select the columns of importance and click **Apply** to add them to the list. Next, **Save and publish** your changes. More information: [Enable column indexing]([https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#configure-columns).
+* Select a Dataverse table and go to table **Properties > Advanced options** in top menu and enable **Track Changes** and **Appear in search results** settings for the table and **Save**. More information: [Enable table indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing).
+* Open this table and select **Views** option from **Data experiences** section and open **Quick Find [table name]** view. Select **Edit find table columns** option at the bottom of the right hand pane. Select the columns of importance and click **Apply** to add them to the list. Next, **Save and publish** your changes. More information: [Enable column indexing]([https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#enable-indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#configure-columns).
+
+  > [!div class="mx-imgBorder"]
+  > ![Add table columns to quick find view](media/Index_columns.png)
 
 
 ## See also
