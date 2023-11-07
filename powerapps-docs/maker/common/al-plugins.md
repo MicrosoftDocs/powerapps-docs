@@ -23,6 +23,8 @@ With AI plugins, makers can build capabilities enabling Copilot to answer questi
 
 Use [Power Apps](https://make.powerapps.com/) to create AI plugins. You can also go to [MCS/PVA content link here](tbd) to create AI plugins for use across Power Platform.
 
+
+
 > [!NOTE]
 > This article introduces you to the AI plugin experience available in Power Apps interface. The experience creating AI plugins in Power Apps is same in MCS/PVA. For detailed step-by-step instructions creating AI plugins using Power Apps or MCS/PVA interface, see [MCS/PVA content link here](tbd) Types of AI plugins.
 
@@ -33,8 +35,7 @@ You can create the following different types of AI plugins using Power Apps expe
 |---------|---------|
 |Prompts plugins     | Prompts allow generating content using natural language which includes summarizing, classifying, extracting entities, translating, assessing sentiment and much more. [Learn more](AIB prompts doc page)   |
 |Custom connector plugins     | Custom connectors allow retrieving and updating data from external sources accessed through APIs. [Lean more](/connectors/custom-connectors)         |
-|Open AI plugins       | Open AI plugins provide access to data sources, allowing specific data to be surfaced through AI experiences that would not normally be available through general models.
-[Learn more](https://platform.openai.com/docs/plugins/introduction) |
+|Open AI plugins       | Open AI plugins provide access to data sources, allowing specific data to be surfaced through AI experiences that would not normally be available through general models. [Learn more](https://platform.openai.com/docs/plugins/introduction) |
 |Power Automate flow plugins     | Power Automate flows allow defining custom automations. These kinds of plugins are appropriate when a Maker wants to perform several actions which are not only about accessing data or generating content. [Learn more](/power-automate) |
 
 ## Create AI plugins
