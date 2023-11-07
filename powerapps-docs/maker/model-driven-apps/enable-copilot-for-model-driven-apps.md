@@ -63,9 +63,9 @@ Makers must set their environment to receive monthly model-driven apps updates a
 
  More information: [Behavior settings](/power-platform/admin/settings-behavior#settings) and [Changing release channels for model-driven apps](channel-change.md).
  
-## Configure Dataverse tables and columns for better Copilot insights
+## Configure Dataverse tables and columns for Copilot 
    
-Environment administators must configure which Dataverse tables Copilot is to use for the responses. You must choose both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts.
+Environment administators must configure the Dataverse tables Copilot will using for the responses. You must choose both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts.
 
 More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
 
