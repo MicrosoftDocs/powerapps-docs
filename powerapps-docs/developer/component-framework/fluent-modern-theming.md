@@ -21,7 +21,7 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Professional developers need to be able to style their components so they look like the rest of the application they are included in. This is particularly true when modern theming is in effort for either a canvas app (via the [Modern controls and themes](../../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md) feature) or model app (through the [new refreshed look](../../user/modern-fluent-design.md)). Utilizing modern theming, which is based on [Fluent UI React v9](https://react.fluentui.dev/), to style your component is the recommended way to get the best performance and theming experience for your component.
+Professional developers need to be able to style their components so they look like the rest of the application they are included in. This is particularly true when modern theming is in effect for either a canvas app (via the [Modern controls and themes](../../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md) feature) or model app (through the [new refreshed look](../../user/modern-fluent-design.md)). Utilizing modern theming, which is based on [Fluent UI React v9](https://react.fluentui.dev/), to style your component is the recommended way to get the best performance and theming experience for your component.
 
 In this article, we will describe 4 different ways to apply modern theming to your component.  
 -  Fluent v9 controls
