@@ -43,7 +43,7 @@ Environment administrators must determine and configure what data is available f
   > [!NOTE]
   > Questions and answers for enterprise data environments that have [customer managed key](/power-platform/admin/customer-managed-key) or [Customer Lockbox](/power-platform/admin/about-lockbox) won't use your data stored in Dataverse. You might get answers from Copilot, but they won't be based on your Dataverse database.
 
-## Give feedback
+## Provide feedback in Copilot
 
 To provide feedback to help improve Copilot, app users can select the thumbs up or thumbs down icons included in each Copilot response. Feedback can be submitted for each Copilot response in the pane.
 
