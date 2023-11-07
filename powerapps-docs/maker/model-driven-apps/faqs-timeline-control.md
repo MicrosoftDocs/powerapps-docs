@@ -58,7 +58,7 @@ Posts in the timeline are only available for Dynamics 365 app enabled Dataverse 
 
    :::image type="content" source="media/faqs-timeline-control/post-configurations-enabled.png" alt-text="Enabled post configuration for tables":::
 
-If the table isn't listed, look for it in the **Inactive Post Configurations** view. If the table you want isn't listed, select **Refresh** on the command bar. Select the table, and then select **Activate**.
+   If the table isn't listed, look for it in the **Inactive Post Configurations** view. If the table you want isn't listed, select **Refresh** on the command bar. Select the table, and then select **Activate**.
 
 1. Make sure posts are enabled from timeline configuration on the current form. More information: [Record types to show](set-up-timeline-control.md#record-types-to-show)
 
