@@ -36,7 +36,7 @@ When enabled, Copilot can be accessed through the Copilot icon in the right navi
 
 Environment administrators must enable Copilot end-user chat experience for model-driven apps in their environments. More information: [Enable Copilot for app users in model driven apps](../enable-copilot-for-model-driven-apps.md)
 
-Environment administrators must determine and configure what data is available for Coplilot inisghts. Copilot in a model-driven app can answer questions about all the Dataverse tables in the model-driven app, provided they have been configured for Copilot. More information: [Enable Copilot for app users in model driven apps](../enable-copilot-for-model-driven-apps.md#configure-dataverse-tables-and-columns-for-copilot.md) and [Configure tables to use Copilot (preview)](../data-platform/table-settings-for-copilot.md)
+Environment administrators must determine and configure what data is available for Coplilot inisghts. Copilot in a model-driven app can answer questions about all the Dataverse tables in the model-driven app, provided they have been configured for Copilot. More information: [Configure Dataverse tables and columns for Copilot](../enable-copilot-for-model-driven-apps.md#configure-dataverse-tables-and-columns-for-copilot.md) and [Configure tables to use Copilot (preview)](../data-platform/table-settings-for-copilot.md)
 
 
 
