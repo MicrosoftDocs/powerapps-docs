@@ -55,7 +55,7 @@ With your [canvas app open for editing](edit-app.md):
 
 ## Choose data for Copilot
 
-1. When the Copilot control is added to the canvas app, select a data source from the pane. Currenly, Copilot for end users in canvas apps is able to provide data inisghts on Dataverse tables only. To configure the tables and their columns for use in Copilot, see [Configure tables to use Copilot](../data-platform/table-settings-for-copilot.md).
+1. When the Copilot control is added to the canvas app, select a data source from the pane. Currenly, Copilot for end users in canvas apps is able to provide data inisghts on a single Dataverse tables only. To configure the selected table and its columns for use in Copilot, see [Configure tables to use Copilot](../data-platform/table-settings-for-copilot.md).
 
 
    > [!div class="mx-imgBorder"]
@@ -65,11 +65,13 @@ With your [canvas app open for editing](edit-app.md):
    > [!div class="mx-imgBorder"]
    > ![Select fields or views.](media/copilot/copilot-choose-data-properties.png)
    
-
+ > [!TIP]
+  > You can select any Data
+> 
 2. Select the specific **Fields** and/or **View** that the Copilot control will answer questions for (optonal).
 
   > [!NOTE]
-  > Currently, the Copilot for apps can only answer questions for smaller datasets in a canvas app. The only exception to the dataset limit is when Dataverse is selected as the data source. 
+  > Currently, the Copilot for apps can only answer questions for smaller datasets in a canvas app. The only exception to the dataset limit is when a Dataverse table is selected as the data source. 
 
 
 ## Configure the Copilot control (optional)
