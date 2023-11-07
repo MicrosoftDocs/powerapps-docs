@@ -13,7 +13,9 @@ search.audienceType:
   - maker, admin
 ---
 
-# AI plugins in Power Platform
+# AI plugins in Power Platform (preview)
+
+[This article is prerelease documentation and is subject to change.]
 
 The Power Platform plugin builder enables Makers to view AI plugins available in their environment or guide them to creating new ones. 
 
