@@ -29,7 +29,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 > - This capability  may be subject to usage limits or capacity throttling.
 > - Copilot control isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 
-## Prerequisites
+## Enable Copilot for canvas app users feature for your enviornment
 
 - Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md).
 
@@ -44,7 +44,7 @@ With your [canvas app open for editing](edit-app.md):
    > [!div class="mx-imgBorder"]
    > ![Turn on Copilot control.](media/copilot/copilot-1.png)
 
-## Add the Copilot control to the canvas app
+## Add the Copilot control to a canvas app
 
 With your [canvas app open for editing](edit-app.md):
 
