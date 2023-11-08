@@ -31,7 +31,28 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 ## Enable Copilot for canvas app users feature for your enviornment
 
-- Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md).
+Environment administrators can enable access to Copilot control (preview) for app makers in their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com). Once Copilot fetaure is enabled for the environment, makers will be able to add Copilot chat for end  users in their canvas apps in App Studio.
+
+  > [!IMPORTANT]
+  > Copilot for app users in model-driven apps fetaure is not enabled by default. Administrators must manually enable this feature for their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+
+1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com.
+
+2. In the navigation pane, go to **Environments** and select the enviornment where you want to enable Copilot for app users in model-driven apps in. Click on **Settings** for this environment in the top menu.
+
+  > [!div class="mx-imgBorder"]
+  > ![Select environment Settings.](media/Environment_settings.png)
+ 
+3. In **Settings** for the seleceted environment, navigate to **Product** section and select **Features** option.
+
+  > [!div class="mx-imgBorder"]
+  > ![Select Copilot feature for the environment.](media/Environment_features.png)
+
+4. In **Features** section, set the value for **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** to **On** in the dropdown control and **Save** your changes.
+   
+  > [!div class="mx-imgBorder"]
+  > ![Set Copilot feature ON for the envrironment](media/Copilot_for_apps_users_ON.png)
+
 
 
 ## Enable Copilot control for your canvas app in App Studio
