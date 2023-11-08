@@ -25,7 +25,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 > - To use this capability your environment must be in the US region.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
-> - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
+> - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability  may be subject to usage limits or capacity throttling.
 > - Copilot control isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 
@@ -41,17 +41,17 @@ Environment administrators can enable access to Copilot control (preview) for ap
 2. In the navigation pane, go to **Environments** and select the enviornment where you want to enable Copilot for app users in model-driven apps in. Click on **Settings** for this environment in the top menu.
 
   > [!div class="mx-imgBorder"]
-  > ![Select environment Settings.](media/Environment_settings.png)
+  > ![Select environment Settings.](media/copilot/Environment_settings.png)
  
 3. In **Settings** for the seleceted environment, navigate to **Product** section and select **Features** option.
 
   > [!div class="mx-imgBorder"]
-  > ![Select Copilot feature for the environment.](media/Environment_features.png)
+  > ![Select Copilot feature for the environment.](media/copilot/Environment_features.png)
 
 4. In **Features** section, set the value for **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** to **On** in the dropdown control and **Save** your changes.
    
   > [!div class="mx-imgBorder"]
-  > ![Set Copilot feature ON for the envrironment](media/Copilot_for_apps_users_ON.png)
+  > ![Set Copilot feature ON for the envrironment](media/copilot/Copilot_for_apps_users_ON.png)
 
 
 
