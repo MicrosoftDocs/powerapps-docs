@@ -13,7 +13,7 @@ applies_to:
 search.audienceType: 
   - maker
 ---
-# Add Copilot to model-driven apps (preview)
+# Add Copilot for app users to model-driven apps (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
