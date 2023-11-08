@@ -128,7 +128,7 @@ Admins can disable the option for apps users to provide feedback to Microsoft in
 
 
 ## See also
-[Add Copilot for app users in model-driven apps](model-driven-apps/add-ai-copilot.md)
+[Add Copilot for app users in model-driven apps](/model-driven-apps/add-ai-copilot.md)
 
 [Build apps through conversation (preview)](ai-conversations-create-app.md)
 
