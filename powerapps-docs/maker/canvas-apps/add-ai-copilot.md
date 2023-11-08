@@ -15,7 +15,7 @@ contributors:
   - mduelae
 ---
 
-# Add Copilot Contorl to a canvas app (preview)
+# Add Copilot Control to a canvas app (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
@@ -29,7 +29,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 > - This capability  may be subject to usage limits or capacity throttling.
 > - Copilot control isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 
-## Step 1 - Enable Copilot for your enviornment
+## Step 1 - Enable Copilot for your environment
 
 In order for end users to use the Copilot chat experience in a canvas app, an admin must first turn on the feature, **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps (preview)** in their environment. For more information, see [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
 
@@ -71,7 +71,7 @@ With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
    > [!TIP]
    > Any Dataverse table in your environment that's not added to your canvas app can be added as a datasource for Copilot control.
 
-2. Select the specific **Fields** and/or **View** that the Copilot control will answer questions for.
+2. Select the specific **Fields** and/or **View** that the Copilot control answers questions for.
    
 3. To configure the selected table and its columns for use in Copilot, see [Configure tables to use Copilot](../data-platform/table-settings-for-copilot.md).
 
@@ -87,9 +87,9 @@ In addition to choosing the data source for Copilot, you can also configure the 
 
 - **Introductory message**: Replaces the control's default introductory message of **Copilot can answer questions about the data in this app, and help you navigate. It's always learning from your feedback**. The current description of the Copilot control can be enhanced to provide a more specific explanation of how it benefits app users.
 
-- **Data summary**: Helps Copilot control give better responses to questions from app users. We recommend a brief 2-3 lines describing what the app is and what sort of questions this Copilot control will answer. This property doesn't impact the control's UI.
+- **Data summary**: Helps Copilot control give better responses to questions from app users. We recommend a brief 2-3 lines that describe what the app is and which types questions the Copilot control will answer. This property doesn't impact the control's UI.
 
-- **Placeholder text**: Replaces the control's default placeholder text in the text input box **Ask a question about the data in this app, or tell me what you're looking for**. We recommend for you to provide a concise message to app users, explaining what types of questions can be addressed by the Copilot control.
+- **Placeholder text**: Replaces the control's default placeholder text in the text input box **Ask a question about the data in this app, or tell me what you're looking for**. We recommend that you provide a concise message to app users, explaining what types of questions the Copilot control can address.
 
    > [!div class="mx-imgBorder"]
    > ![Configure the control.](media/copilot/updated-copilot-properties.png)
@@ -110,7 +110,6 @@ Admins can disable the option for apps users to provide feedback to Microsoft in
 
 
 ## See also
-[Add Copilot for app users in model-driven apps (preview)](/model-driven-apps/add-ai-copilot.md)
 
 [Build apps through conversation (preview)](ai-conversations-create-app.md)
 
