@@ -15,7 +15,7 @@ contributors:
   - mduelae
 ---
 
-# Copilot for app users in a canvas app (preview)
+# Add Copilot for app users in a canvas app (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
