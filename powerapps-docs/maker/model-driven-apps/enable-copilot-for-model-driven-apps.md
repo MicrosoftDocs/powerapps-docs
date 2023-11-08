@@ -1,5 +1,5 @@
 ---
-title: Enable Copilot for app users in model driven apps
+title: Add Copilot for app users in model driven apps
 description: Learn how to enable Power Apps Copilot in model driven apps for end users
 Keywords: Power Apps, model driven apps, Copilot
 author: makolomi
