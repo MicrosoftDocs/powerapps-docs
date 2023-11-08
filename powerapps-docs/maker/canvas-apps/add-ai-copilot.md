@@ -29,7 +29,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 > - This capability  may be subject to usage limits or capacity throttling.
 > - Copilot control isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
 
-## Enable Copilot for canvas app users in App Studio for your enviornment
+## Enable Copilot for canvas app users feature for your enviornment
 
 Environment administrators can enable access to Copilot control (preview) for app makers in their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com). Once Copilot fetaure is enabled for the environment, makers will be able to add Copilot chat control for end  users in their canvas apps in App Studio.
 
