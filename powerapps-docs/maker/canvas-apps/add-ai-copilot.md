@@ -31,10 +31,10 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 ## Enable Copilot for canvas app users feature for your enviornment
 
-Environment administrators can enable access to Copilot control (preview) for app makers in their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com). Once Copilot fetaure is enabled for the environment, makers will be able to add Copilot chat for end  users in their canvas apps in App Studio.
+Environment administrators can enable access to Copilot control (preview) for app makers in their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com). Once Copilot fetaure is enabled for the environment, makers will be able to add Copilot chat control for end  users in their canvas apps in App Studio.
 
   > [!IMPORTANT]
-  > Copilot for app users in model-driven apps fetaure is not enabled by default. Administrators must manually enable this feature for their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+  > Copilot for app users cpontrol fetaure for canvas apps is not enabled by default. Administrators must manually enable this feature for their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
 1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com.
 
