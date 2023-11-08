@@ -93,17 +93,17 @@ Next, **Save and publish** your table changes. More information: [Enable column 
   > [!NOTE]
   > Questions and answers for enterprise data environments that have [customer managed key](/power-platform/admin/customer-managed-key) or [Customer Lockbox](/power-platform/admin/about-lockbox) won't use your data stored in Dataverse. You might get answers from Copilot, but they won't be based on your Dataverse database.
 
-## Provide feedback in Copilot
+# Provide feedback in Copilot
 
 To provide feedback to help improve Copilot, app users can select the thumbs up or thumbs down icons included in each Copilot response. Feedback can be submitted for each Copilot response in the pane.
 
-### Provide positive feedback
+## Provide positive feedback
 
 1. On the right navigation bar, select the “thumbs up” icon.
 1. Optionally, provide feedback in your own words about what you liked.
 1. Select **Submit** after you're done entering your feedback.
 
-### Provide feedback for improvement
+## Provide feedback for improvement
 
 1. On the right navigation bar, select the “thumbs down” icon.
 1. Optionally, provide feedback, such as feedback about the content of Copilot’s response, or a description in your own words about what went wrong, or how you would like Copilot to improve.
