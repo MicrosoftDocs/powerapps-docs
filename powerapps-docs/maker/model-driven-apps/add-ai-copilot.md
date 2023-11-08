@@ -28,12 +28,17 @@ Copilot for model-driven apps in Power Apps is a next-generation AI assistant fo
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability  may be subject to usage limits or capacity throttling.
 
-When enabled, Copilot can be accessed through the Copilot icon in the right navigation bar in a model-driven app. The Copilot pane can be opened or minimized as desired. Copilot in model-driven apps answers questions about the configured Microsoft Dataverse table data in the app. Copilot can also help you navigate the app. For example, when a user enters *take me to Online Cases* or *show me Cruise Support Tickets*.
+When enabled, Copilot can be accessed through the Copilot icon in the right navigation bar in a model-driven app. The Copilot pane can be opened or minimized as desired. 
+
+Copilot in model-driven apps can answer questions about the configured Microsoft Dataverse table data in the environmnt. Copilot can also help you navigate the model driven app. For example, when a user enters *take me to Online Cases* or *show me Cruise Support Tickets*, the Copilot in model driven apps will automatically open the relevant apps screens.
 
 :::image type="content" source="media/model-driven-app-copilot.png" alt-text="Copilot right pane in a model-driven app" lightbox="media/model-driven-app-copilot.png":::
 
 ## Enable Copilot for model-driven apps feature for your environment
 Environment administrators can enable Copilot feature in model-driven apps for all the users in their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+
+  > [!IMPORTANT]
+  > Copilot for app users in model-driven apps fetaure is not enabled by default. Administrators must manually enable this feature for their environments in [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
 1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com.
 
@@ -47,7 +52,7 @@ Environment administrators can enable Copilot feature in model-driven apps for a
   > [!div class="mx-imgBorder"]
   > ![Select Copilot feature for the environment.](media/Environment_features.png)
 
-4. In **Features** section, set the value for **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** to **On** in the dropdown control.
+4. In **Features** section, set the value for **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps** to **On** in the dropdown control and **Save** your changes.
    
   > [!div class="mx-imgBorder"]
   > ![Set Copilot feature ON for the envrironment](media/Copilot_for_apps_users_ON.png)
@@ -57,7 +62,7 @@ Environment administrators can enable Copilot feature in model-driven apps for a
 Makers must set their environment to receive monthly model-driven apps updates as a prerequisite for having Copilot for end users in model-driven apps.
 1. Sign in to the Power Platform admin center at https://admin.powerplatform.microsoft.com.
 2. In the navigation pane, go to **Environments** and select the enviornment where you want to enable Copilot for app users in model-driven apps in. Click on **Settings** for this environment in the top menu.
-3.  Go to **Product** section and select **Behavior** option.  Set **Release channel** for model-driven apps to **Monthly channel** in the dropdown control.
+3.  Go to **Product** section and select **Behavior** option.  Set **Release channel** for model-driven apps to **Monthly channel** in the dropdown control and and **Save** your changes.
    
   > [!div class="mx-imgBorder"]
   > ![Set Release channel to Monthly channel for model driven apps](media/Behavior_release_channel.png)
@@ -66,7 +71,7 @@ Makers must set their environment to receive monthly model-driven apps updates a
  
 ## Configure Dataverse tables and columns for Copilot 
    
-Environment administators must configure the Dataverse tables Copilot will using for the responses. You must choose both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts.
+Administators must configure the Dataverse tables that Copilot will using for the responses. You must choose both the tables and the columns of importance for Copilot to search accross to produce relevant, high quality data inisghts.
 
 More information: [Configure tables to use Copilot](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot).
 
@@ -82,6 +87,9 @@ For every Dataverse table to be used by Copilot, do these 2 Steps in **Tables** 
 
 Next, **Save and publish** your table changes. More information: [Enable column indexing](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/table-settings-for-copilot#configure-columns).
 
+  > [!IMPORTANT]
+  > Not confeguring standard and custom Dataverse tables for Copilot may result in poor quality of Copilot inisghts. Configure your Dataverse tables and columns of importantance to receive relevant, accurate Coplilot responses in model-driven apps.
+> 
   > [!NOTE]
   > Questions and answers for enterprise data environments that have [customer managed key](/power-platform/admin/customer-managed-key) or [Customer Lockbox](/power-platform/admin/about-lockbox) won't use your data stored in Dataverse. You might get answers from Copilot, but they won't be based on your Dataverse database.
 
@@ -101,7 +109,7 @@ To provide feedback to help improve Copilot, app users can select the thumbs up 
 1. Optionally, provide feedback, such as feedback about the content of Copilot’s response, or a description in your own words about what went wrong, or how you would like Copilot to improve.
 1. Select **Submit** after you're done entering your feedback.
 
-## Disable feedback
+## Disable feedback for app users 
 
 If you want to disable the ability for users to submit feedback about Copilot in model-driven apps, follow these steps.
 
