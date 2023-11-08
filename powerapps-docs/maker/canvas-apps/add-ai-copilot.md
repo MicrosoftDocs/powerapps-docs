@@ -101,7 +101,7 @@ App users and makers can provide feedback by selecting **Like** (thumbs up) or *
 
 ### Disable feedback for app users
 
-Admins can disable the option for apps users to provide feedback to Microsoft in the Copilot chat experience.
+Admins can disable the option for apps users to provide feedback to Microsoft from the Copilot chat experience.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 2. On the [left navigation pane](intro-maker-portal.md#1--left-navigation-pane), select **Tables** > **Organization**.
