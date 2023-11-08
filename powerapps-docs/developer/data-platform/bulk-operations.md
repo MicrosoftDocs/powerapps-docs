@@ -1,7 +1,7 @@
 ---
 title: Use bulk operation messages (preview)
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 08/02/2023
+ms.date: 11/08/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -27,7 +27,7 @@ To get the best performance when you run operations on multiple rows of a Micros
 
 - [`CreateMultiple`](#createmultiple): Creates multiple records of the same type in a single request.
 - [`UpdateMultiple`](#updatemultiple): Updates multiple records of the same type in a single request.
-- `UpsertMultiple`: *Coming soon*
+- [`UpsertMultiple`](#upsertmultiple): Currently supported using SDK for .NET only. Creates or updates multiple records of the same type in a single request.
 - [`DeleteMultiple`](#deletemultiple): For elastic tables only. Deletes multiple records of the same type in a single request.
 
 ## Examples
@@ -35,10 +35,15 @@ To get the best performance when you run operations on multiple rows of a Micros
 The following code samples show how to use bulk operation messages. You can download the samples from [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
 
 - [Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)
+
+   This sample includes `UpsertMultiple` and `DeleteMultiple` examples as well
+
 - [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](webapi/samples/create-update-multiple.md)
 - [Elastic table sample code (preview)](elastic-table-samples.md)
 
 ### CreateMultiple
+
+Creates multiple records of the same type in a single request.
 
 ##### [SDK for .NET](#tab/sdk)
 
@@ -208,6 +213,90 @@ Content-Length: 621
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
+
+---
+
+### UpsertMultiple
+
+Use `Upsert` to integrate data with external sources when you don't know whether the table exists in Dataverse or not.
+Upsert operations frequently depend on alternate keys to identify records. Use `UpsertMultiple` to perform `Upsert` operations in bulk.
+
+##### [SDK for .NET](#tab/sdk)
+
+Uses the [UpsertMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.UpsertMultipleRequest).
+
+This static `UpsertMultipleExample` method depends on a `samples_bankaccount`table that has a string column named 
+`samples_accountname` configured as an alternate key. It also has a string column named `samples_description`. This code uses the [Entity constructor that sets the keyName and keyValue](use-alternate-key-reference-record.md#using-the-entity-class) to specify the alternate key value.
+
+```csharp
+/// <summary>
+/// Demonstrates using UpsertMultiple with alternate key values
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance</param>
+static void UpsertMultipleExample(IOrganizationService service)
+{
+    var tableLogicalName = "samples_bankaccount";
+    // samples_accountname string column is configued as an alternate key
+    // for the samples_bankaccount table
+    var altKeyColumnLogicalName = "samples_accountname";
+
+    // Create one record to update with upsert
+    service.Create(new Entity(tableLogicalName)
+    {
+        Attributes =
+        {
+            {altKeyColumnLogicalName, "Record For Update"},
+            {"samples_description","A record to update using Upsert" }
+        }
+    });
+
+    // Using the Entity constructor to specify alternate key
+    Entity toUpdate = new(
+            entityName: tableLogicalName,
+            keyName: altKeyColumnLogicalName,
+            // Same alternate key value as created record.
+            keyValue: "Record For Update");
+    toUpdate["samples_description"] = "Updated using Upsert";
+
+    Entity toCreate = new(
+        entityName: tableLogicalName,
+        keyName: altKeyColumnLogicalName,
+        keyValue: "Record For Create");
+    toCreate["samples_description"] = "A record to create using Upsert";
+
+    // Add the records to a collection
+    EntityCollection records = new()
+    {
+        EntityName = tableLogicalName,
+        Entities = { toUpdate, toCreate }
+    };
+
+    // Send the request
+    UpsertMultipleRequest request = new()
+    {
+        Targets = records
+    };
+
+    var response = (UpsertMultipleResponse)service.Execute(request);
+
+    // Process the responses:
+    foreach (UpsertResponse item in response.Results)
+    {
+        Console.WriteLine($"Record {(item.RecordCreated ? "Created" : "Updated")}");
+    }
+}
+```
+
+**Output:**
+
+```
+Record Updated
+Record Created
+```
+
+##### [Web API](#tab/webapi)
+
+`UpsertMultiple` is currently available only using the SDK for .NET.
 
 ---
 
