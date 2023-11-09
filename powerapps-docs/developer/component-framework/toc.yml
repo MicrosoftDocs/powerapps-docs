@@ -14,7 +14,7 @@ items:
     href: ../../maker/portals/component-framework.md
   - name: "React controls & platform libraries (Preview)"
     href: react-controls-platform-libraries.md
-  - name: "Modern Theming (Preview)"
+  - name: "Style components with modern theming (preview)"
     href: fluent-modern-theming.md
   - name: Get tooling
     href: get-powerapps-cli.md
@@ -78,7 +78,7 @@ items:
       href: sample-controls/data-set-grid-control.md
     - name: Device API component
       href: sample-controls/device-api-control.md
-    - name: Modern Theming API control
+    - name: Modern theming API component
       href: sample-controls/modern-theming-api-control.md
     - name: Formatting API component
       href: sample-controls/formatting-api-control.md
