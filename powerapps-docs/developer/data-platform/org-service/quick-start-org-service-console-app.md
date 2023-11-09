@@ -55,7 +55,7 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 
 1. In **Solution Explorer**, double-click Program.cs to edit that file. Replace the file's contents with the code shown below.
 
-   :::code language="csharp" source="~/dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs":::
+   :::code language="csharp" source="~/../dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs":::
 
 1. Change the values for the `url`, `userName`, and `password` as indicated by the `// TODO` code comment.
 
