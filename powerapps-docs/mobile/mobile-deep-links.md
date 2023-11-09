@@ -20,7 +20,6 @@ searchScope:
 
 Deep links let users move from one application to another on computers and mobile devices. Simple examples include a mobile app deep-linking to Facebook to sign in, an email address deep-linking to a mail app to compose a message, or a website deep-linking to an app store to download a related mobile app. 
 
-
 ## Supported deep links in the Power Apps mobile app
 
 You can open an `entityrecord` or an `entitylist` view in Power Apps mobile by using deep-link URLs from other apps. When you follow the link from an external app, the target element opens in Power Apps mobile
@@ -62,24 +61,28 @@ If the link goes to an `entitylist` view, add the following parameters:
 | viewid=&lt;view-id&gt;                                       | Designates which view to open                                       |
 | Viewtype= &lt;1039 if system view, 4230 if personal view&gt; | Designates whether we're going to a system view or a personal view |
 
-
 ## Supported Urls parameters for a canvas app
   
-```ms-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>```
+```ms-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>&restartApp=true```
 
-| **Parameter**        | **Description**                                                              |
-|----------------------|------------------------------------------------------------------------------|
-| &lt;app-id&gt;       | Opens the correct app module                                                 |
-| &lt;tenantId&gt;     | Connects to the correct tenant                                               |
+| **Parameter**        | **Description**                                                                              |
+|----------------------|----------------------------------------------------------------------------------------------|
+| &lt;app-id&gt;       | Opens the correct app module                                                                 |
+| &lt;tenantId&gt;     | Connects to the correct tenant                                                               |
+| restartApp=true      | Restarts the canvas app, needed to ensure parameters are passed when the app is already open |
   
-
   ## Supported Urls parameters for a wrapped native mobile app
   
- ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>```
+ ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>&restartApp=true```
 
-| **Parameter**        | **Description**                                                              |
-|----------------------|------------------------------------------------------------------------------|
-| &lt;app-id&gt;       | Opens the correct app module                                                 |
-| &lt;tenantId&gt;     | Connects to the correct tenant                                               |
+| **Parameter**        | **Description**                                                                              |
+|----------------------|----------------------------------------------------------------------------------------------|
+| &lt;app-id&gt;       | Opens the correct app module                                                                 |
+| &lt;tenantId&gt;     | Connects to the correct tenant                                                               |
+| restartApp=true      | Restarts the canvas app, needed to ensure parameters are passed when the app is already open |
   
-  
+## Troubleshooting
+
+Deeplinks may open in browser depending on the company's organizational policies and the user's device settings. Mobile device management (MDM) tools and device operating systems have different options and settings that impact how deeplinks are handled. If deeplinks are opening in browser instead of directly in Power Apps mobile, ensure your MDM policies and device settings are appropriately configured. 
+
+As an example, on some Android devices, one setting that can be changed to make deeplinks open directly in Power Apps mobile is in Settings > Apps > Power Apps > Open by default and add apps.powerapps.com.
