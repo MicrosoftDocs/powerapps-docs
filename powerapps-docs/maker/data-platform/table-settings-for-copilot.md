@@ -18,7 +18,7 @@ This article describes the steps to enable a table and select the columns, which
 
 The **Track changes** and **Appear in search results** table options must be enabled. Note that these are the default settings for most standard tables, but aren't enabled by default for custom tables.
 
-To verify these options, select **Properties** from the table designer in make.powerappps.com, and then check whether both **Track changes** and **Appear in search results** options are selected. If not, from the properties pane select both, and then **Save** your changes. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+To verify these options, select **Properties** from the table designer in make.powerappps.com, and then check whether both **Track changes** and **Appear in search results** options are selected. If not, from the properties pane select both, and then **Save** and **Publish** your changes. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
 :::image type="content" source="media/table-settings-for-copilot.png" alt-text="Table properties to enable to work with Copilot in Power Apps":::
 
