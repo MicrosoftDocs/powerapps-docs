@@ -99,7 +99,8 @@ For more information about disabling the modern, refreshed look, see [Manage mod
 
 Admins can disable the **Try the new look** setting across all apps in an organization by using the solution explorer to set the **Try the new look** value to **No**. This hides the **Try the new look** toggle and prevents the new look from taking effect.
 
-1. Create a new solution.
+1. Open https://make.powerapps.com/
+1. Under Solutions open an existing solution with one or more model-driven apps:
 1. Select **Add Existing** > **More** > **Setting**.
 1. Search for **Try**.
 1. Select **Try the new look**. 
