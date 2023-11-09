@@ -17,7 +17,7 @@ contributors:
 
 ## Available for
 
-Canvas apps
+Model-driven and canvas apps
 
 ## Syntax
 
