@@ -63,6 +63,8 @@ Should the following work? Error in build:
  The code snippet "~/../PowerApps-Samples/dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs" could not be found.
 -->
 
+   :::code language="csharp" source="~/PowerApps-Samples/dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs":::
+
    ```csharp
    using Microsoft.Crm.Sdk.Messages;
    using Microsoft.PowerPlatform.Dataverse.Client;
