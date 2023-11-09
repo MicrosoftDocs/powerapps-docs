@@ -57,7 +57,7 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 
 <!-- The following should work but doesn't. It doesn't error either -->
 
-   :::code language="csharp" source="~/../dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs":::
+   :::code language="csharp" source="~/../PowerApps-Samples/dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs":::
 
    ```csharp
    using Microsoft.Crm.Sdk.Messages;
