@@ -1,7 +1,7 @@
 ---
 title: Use bulk operation messages (preview)
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 08/02/2023
+ms.date: 11/09/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -492,6 +492,10 @@ Before the introduction of bulk operation messages, all custom logic was on the 
 
 [Learn how to write plug-ins for CreateMultiple and UpdateMultiple (preview)](write-plugin-multiple-operation.md).
 
+## Duplicate records in the payload
+
+Multiple records with the same primary key value in the payload are not supported. When more than one record in the `Targets` parameter has the same unique identifier, the operation is performed on the first record only. Any subsequent records with the same unique identifier in the payload are ignored.
+
 ## Limitations
 
 Keep the following limitations in mind when you use bulk operation messages.
@@ -530,10 +534,6 @@ The following issues will be addressed before the bulk operations feature become
 As part of the changes we made to [merge message pipelines](#message-pipelines-merged), any custom logic for the multiple version of the message must also be invoked when the single version of the message is invoked. At this time, plug-in steps registered for the `DeleteMultiple` message *are not* being called when `Delete` is used. Plug-in steps registered for `Delete` *are* being invoked when `DeleteMultiple` is used.
 
 You shouldn't migrate custom logic from `Delete` to `DeleteMultiple` until this issue is resolved. You can use `DeleteMultiple` and any logic that's associated with the `Delete` message still works.
-
-### Duplicate records in the payload
-
-Duplicate records in the payload of bulk operations are not supported. In cases where there are 2 duplicate records in a bulk operation payload, the current behavior is to disregard the second record, perform the operation _using the first record's information_ and return a success response.
 
 ## Troubleshooting common errors
 
