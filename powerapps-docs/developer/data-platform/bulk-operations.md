@@ -537,7 +537,9 @@ Duplicate records in the payload of bulk operations are not supported. In cases 
 
 ## Troubleshooting common errors
 
-// TODO: Link to [new Support Article](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/blob/2de55a8b166bc62fa0707275a90c6a583ec436d1/support/power-platform/power-apps/dataverse/bulk-operation-errors) being added in [this PR](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/pull/5176/files).
+If you encounter errors while using bulk operations, please refer to the following articles:
+- [Troubleshoot Dataverse bulk operation errors](/troubleshoot/power-platform/power-apps/dataverse/bulk-operation-errors)
+- [Troubleshoot Dataverse client errors](/troubleshoot/power-platform/power-apps/dataverse/client-errors)
 
 ## Frequently asked questions (FAQ)
 
