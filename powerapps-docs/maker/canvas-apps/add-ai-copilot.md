@@ -33,7 +33,12 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 In order for end users to use the Copilot chat experience in a canvas app, an admin must first turn on the feature, **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps (preview)** in their environment. For more information, see [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
 
+> [!div class="mx-imgBorder"]
+> ![Set Copilot feature ON for the envrironment](media/copilot/Copilot_for_apps_users_ON.png)
+
 When the feature setting is turned on, a maker can then enable **Copilot component** from the app settings in Power Apps Studio and then add the Copilot control to the app, allowing end users to use the AI-powered chat experience.
+
+
 
 ## Step 2 - Enable Copilot component for a canvas app 
 
@@ -64,12 +69,9 @@ With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
    > ![Select a data source.](media/copilot/copilot-3.png)
 
    Or, from the control **Properties** tab, select **Data source (Items)** and choose a Dataverse table for your data source.
-   
-   > [!div class="mx-imgBorder"]
-   > ![Select fields or views.](media/copilot/copilot-choose-data-properties.png)
-   
+
    > [!TIP]
-   > Any Dataverse table in your environment that's not added to your canvas app can be added as a datasource for Copilot control.
+   > You can connect any Dataverse table in your environment as a data source for Copilot, regardless of whether the table is added to your canvas app or not.
 
 2. Select the specific **Fields** and/or **View** that the Copilot control answers questions for.
    
