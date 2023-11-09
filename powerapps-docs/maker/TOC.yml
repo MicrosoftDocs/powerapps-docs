@@ -1952,8 +1952,9 @@
     - name: "Configure tables to use Copilot"
       href: ./data-platform/table-settings-for-copilot.md  
     - name: Long term data retention for tables (preview)
-      href: ./data-platform/data-retention-overview.md
       items:
+      - name: Long term data retention overview
+        href: ./data-platform/data-retention-overview.md
       - name: Set a data retention policy
         href: ./data-platform/data-retention-set.md
       - name: Manage data retention policies
