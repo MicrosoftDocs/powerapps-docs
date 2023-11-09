@@ -11,7 +11,7 @@ ms.custom: template-how-to
 ---
 # View long term retained data (preview)
 
-b[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can view retained data from an advanced find query or by creating a Power Automate flow. 
 
