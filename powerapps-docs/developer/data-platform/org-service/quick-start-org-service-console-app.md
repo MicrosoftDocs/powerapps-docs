@@ -55,22 +55,26 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 
 1. In **Solution Explorer**, double-click Program.cs to edit that file. Replace the file's contents with the code shown below.
 
-<!-- The following should work but doesn't. It doesn't error either -->
+<!-- 
+Should the following work? Error in build: 
 
    :::code language="csharp" source="~/../PowerApps-Samples/dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs":::
+
+ The code snippet "~/../PowerApps-Samples/dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs" could not be found.
+-->
 
    ```csharp
    using Microsoft.Crm.Sdk.Messages;
    using Microsoft.PowerPlatform.Dataverse.Client;
    using Microsoft.Xrm.Sdk;
-
+   
    class Program
    {
       // TODO Enter your Dataverse environment's URL and logon info.
       static string url = "https://yourorg.crm.dynamics.com";
       static string userName = "you@yourorg.onmicrosoft.com";
       static string password = "yourPassword";
-
+   
       // This service connection string uses the info provided above.
       // The AppId and RedirectUri are provided for sample code testing.
       static string connectionString = $@"
@@ -82,17 +86,17 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
       RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97;
       LoginPrompt=Auto;
       RequireNewInstance = True";
-
+   
       static void Main()
       {
          //ServiceClient implements IOrganizationService interface
          IOrganizationService service = new ServiceClient(connectionString);
-
+   
          var response = (WhoAmIResponse)service.Execute(new WhoAmIRequest());
-
+   
          Console.WriteLine($"User ID is {response.UserId}.");
-
-
+   
+   
          // Pause the console so it does not close.
          Console.WriteLine("Press the <Enter> key to exit.");
          Console.ReadLine();
