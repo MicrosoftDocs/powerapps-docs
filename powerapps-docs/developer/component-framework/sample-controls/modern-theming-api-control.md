@@ -23,7 +23,7 @@ This sample component showcases a variety of use cases for utilizing the modern 
 
 ## Available for
 
-Canvas apps
+Model-driven and canvas apps
 
 ## Code
 

@@ -23,11 +23,12 @@ contributors:
 
 Professional developers need to be able to style their components so they look like the rest of the application they are included in. This is particularly true when modern theming is in effect for either a canvas app (via the [Modern controls and themes](../../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md) feature) or model app (through the [new refreshed look](../../user/modern-fluent-design.md)). Utilizing modern theming, which is based on [Fluent UI React v9](https://react.fluentui.dev/), to style your component is the recommended way to get the best performance and theming experience for your component.
 
-In this article, we will describe 4 different ways to apply modern theming to your component.  
--  Fluent v9 controls
--  Fluent v8 controls
--  Non-Fluent controls
--  Custom theme providers
+In this article, we will describe 4 different ways to apply modern theming to your component.
+
+- Fluent v9 controls
+- Fluent v8 controls
+- Non-Fluent controls
+- Custom theme providers
 
 ## Fluent UI v9 controls
 
@@ -56,7 +57,7 @@ return <ThemeProvider theme={theme}></ThemeProvider>;
 
 ### Non-Fluent UI controls
 
-Components that are not using Fluent UI can take a dependency directly on the v9 theme tokens available through the `fluentDesignLanguage` context parameter. This parameter provides access to all [theme](../reference/theming.md) tokens, allowing a component to reference any aspect of the theme to  style itself. 
+Components that are not using Fluent UI can take a dependency directly on the v9 theme tokens available through the `fluentDesignLanguage` context parameter. This parameter provides access to all [theme](../reference/theming.md) tokens, allowing a component to reference any aspect of the theme to style itself.
 
 ```tsx
 <span style={{ fontSize: context.fluentDesignLanguage.theme.fontSizeBase300 }}>
@@ -64,9 +65,9 @@ Components that are not using Fluent UI can take a dependency directly on the v9
 </span>
 ```
 
-## Custom theme providers 
+## Custom theme providers
 
-For components that require styling that is partially or completely different from the current theme of the app, developers can create your own `FluentProvider` and pass your own set of theme tokens to be uptaken by your component.  
+For components that require styling that is partially or completely different from the current theme of the app, developers can create your own `FluentProvider` and pass your own set of theme tokens to be uptaken by your component.
 
 ```tsx
 <FluentProvider theme={context.fluentDesignLanguage.tokenTheme}>
@@ -106,7 +107,7 @@ A: Fluent v9 controls that rely on the React Portal will need to be rewrapped in
 
 ### Q: How can I check if modern theming is enabled
 
-A: You can check it in app settings: `context.appSettings.getIsFluentThemingEnabled()` or check if tokens are available: `context.fluentDesignLanguage?.tokenTheme`.
+A: You can check if tokens are available: `context.fluentDesignLanguage?.tokenTheme`. Or in model-driven applications you can check app settings: `context.appSettings.getIsFluentThemingEnabled()`.
 
 ## Related topics
 
