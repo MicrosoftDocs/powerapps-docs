@@ -34,10 +34,10 @@ User account (A) needs the `prvActOnBehalfOfAnotherUser` privilege, which is inc
 
 There are two ways you can impersonate a user, both of which are made possible by passing in a header with the corresponding user id.
 
-1. **Preferred:** Impersonate a user based on their Azure Active Directory (AAD) object id by passing that value along with the header `CallerObjectId`.
+1. **Preferred:** Impersonate a user based on their Microsoft Entra ID object id by passing that value along with the header `CallerObjectId`.
 1. **Legacy:** To impersonate a user based on their systemuserid you can leverage `MSCRMCallerID` with the corresponding guid value.
 
- In this example, a new account entity is created on behalf of the user with an Azure Active Directory object id `e39c5d16-675b-48d1-8e67-667427e9c084`.
+ In this example, a new account entity is created on behalf of the user with an Microsoft Entra ID object id `e39c5d16-675b-48d1-8e67-667427e9c084`.
   
  **Request:**
 
@@ -114,7 +114,7 @@ ETag: W/"506868"
 ### See also
 
 [Impersonate another user](../impersonate-another-user.md)<br />
-[Impersonate another user using the Organization service](../impersonate-another-user.md#impersonate-another-user-using-the-organization-service)<br />
+[Impersonate another user using the SDK for .NET](../impersonate-another-user.md#impersonate-another-user-using-the-sdk-for-net)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />

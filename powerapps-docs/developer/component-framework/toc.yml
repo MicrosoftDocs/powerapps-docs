@@ -10,8 +10,8 @@ items:
     href: code-components-model-driven-apps.md
   - name: For canvas apps
     href: component-framework-for-canvas-apps.md
-  - name: For portals
-    href: ../../maker/portals/component-framework.md
+  - name: For Power Pages
+    href: /power-pages/configure/component-framework
   - name: "React controls & platform libraries (Preview)"
     href: react-controls-platform-libraries.md
   - name: "Style components with modern theming (preview)"

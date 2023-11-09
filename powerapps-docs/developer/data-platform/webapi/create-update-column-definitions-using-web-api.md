@@ -14,7 +14,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can perform all the same operations on column definitions using the Web API that you can with the Organization service. This article focuses on working with column definitions (metadata) using the Web API.
+You can perform all the same operations on column definitions using the Web API that you can with the SDK for .NET. This article focuses on working with column definitions (metadata) using the Web API.
 
 
 ## Create columns
@@ -1381,7 +1381,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 [Query table definitions using the Web API](query-metadata-web-api.md)  
 [Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)  
 [Model table relationships using the Web API](create-update-entity-relationships-using-web-api.md)  
-[Work with table definitions using the Organization service](../org-service/work-with-metadata.md)  
+[Work with table definitions using the SDK for .NET](../org-service/work-with-metadata.md)  
 [Column (attribute) definitions](../entity-attribute-metadata.md)  
 [Web API Metadata Operations Sample](web-api-metadata-operations-sample.md)  
 [Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)

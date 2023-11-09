@@ -161,7 +161,7 @@ public class QueryResult
 ```
 
 - [Learn about open types in Dataverse](use-open-types.md)
-- [Learn to use messages with the Organization service](org-service/use-messages.md)
+- [Learn to use messages with the SDK for .NET](org-service/use-messages.md)
 
 #### [Web API](#tab/webapi)
 

@@ -14,8 +14,6 @@ contributors:
 ---
 # quickViewControl.getParent (Client API reference)
 
-
-
 [!INCLUDE[./includes/getParent-description.md](./includes/getParent-description.md)]
 
 ## Syntax
@@ -26,12 +24,8 @@ contributors:
 
 **Type**: [formContext.ui.section](../formContext-ui-tab-sections.md)
 
-### Related topics
+### Related articles
 
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

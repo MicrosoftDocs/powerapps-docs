@@ -1,7 +1,7 @@
 ---
 title: "msdyn_pmbusinessruleautomationconfig table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_pmbusinessruleautomationconfig table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -72,14 +72,12 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [msdyn_BusinessRuleId](#BKMK_msdyn_BusinessRuleId)
-- [msdyn_CustomApiId](#BKMK_msdyn_CustomApiId)
 - [msdyn_IsEnabled](#BKMK_msdyn_IsEnabled)
 - [msdyn_name](#BKMK_msdyn_name)
 - [msdyn_pmbusinessruleautomationconfigId](#BKMK_msdyn_pmbusinessruleautomationconfigId)
 - [msdyn_PmInferredTaskId](#BKMK_msdyn_PmInferredTaskId)
 - [msdyn_SelectedCustomAttributes](#BKMK_msdyn_SelectedCustomAttributes)
 - [msdyn_shouldincludeallemitsinnextrun](#BKMK_msdyn_shouldincludeallemitsinnextrun)
-- [msdyn_SlectedCustomAttributes](#BKMK_msdyn_SlectedCustomAttributes)
 - [msdyn_UniqueName](#BKMK_msdyn_UniqueName)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -154,22 +152,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
-### <a name="BKMK_msdyn_CustomApiId"></a> msdyn_CustomApiId
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier for Custom API|
-|DisplayName|Custom Api Id|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_customapiid|
-|MaxLength|50|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_msdyn_IsEnabled"></a> msdyn_IsEnabled
 
 |Property|Value|
@@ -179,7 +161,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_isenabled|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|Boolean|
 
 #### msdyn_IsEnabled Choices/Options
@@ -262,7 +244,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_shouldincludeallemitsinnextrun|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|SystemRequired|
 |Type|Boolean|
 
 #### msdyn_shouldincludeallemitsinnextrun Choices/Options
@@ -274,22 +256,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 1
 
-
-
-### <a name="BKMK_msdyn_SlectedCustomAttributes"></a> msdyn_SlectedCustomAttributes
-
-|Property|Value|
-|--------|-----|
-|Description|The JSON blob text represents a set of selected attributes, excluding the caseId field, which is automatically provided.|
-|DisplayName|Slected Custom Attributes|
-|Format|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_slectedcustomattributes|
-|MaxLength|25000|
-|RequiredLevel|None|
-|Type|Memo|
 
 
 ### <a name="BKMK_msdyn_UniqueName"></a> msdyn_UniqueName
@@ -454,7 +420,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [msdyn_CustomApiIdName](#BKMK_msdyn_CustomApiIdName)
 - [msdyn_PMInferredTaskIdName](#BKMK_msdyn_PMInferredTaskIdName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
@@ -784,22 +749,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|modifiedonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_CustomApiIdName"></a> msdyn_CustomApiIdName
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|msdyn_customapiidname|
-|MaxLength|100|
-|RequiredLevel|None|
 |Type|String|
 
 
@@ -1149,7 +1098,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [team_msdyn_pmbusinessruleautomationconfig](#BKMK_team_msdyn_pmbusinessruleautomationconfig)
 - [business_unit_msdyn_pmbusinessruleautomationconfig](#BKMK_business_unit_msdyn_pmbusinessruleautomationconfig)
 - [msdyn_msdyn_pminferredtask_msdyn_pmbusinessruleautomationconfig_PMInferredTaskId](#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmbusinessruleautomationconfig_PMInferredTaskId)
-- [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid](#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid)
 - [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId](#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId)
 
 
@@ -1198,12 +1146,6 @@ See the [business_unit_msdyn_pmbusinessruleautomationconfig](businessunit.md#BKM
 ### <a name="BKMK_msdyn_msdyn_pminferredtask_msdyn_pmbusinessruleautomationconfig_PMInferredTaskId"></a> msdyn_msdyn_pminferredtask_msdyn_pmbusinessruleautomationconfig_PMInferredTaskId
 
 See the [msdyn_msdyn_pminferredtask_msdyn_pmbusinessruleautomationconfig_PMInferredTaskId](msdyn_pminferredtask.md#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmbusinessruleautomationconfig_PMInferredTaskId) one-to-many relationship for the [msdyn_pminferredtask](msdyn_pminferredtask.md) table/entity.
-
-### <a name="BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid"></a> msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid
-
-**Added by**: Custom API Framework Solution
-
-See the [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid](customapi.md#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid) one-to-many relationship for the [customapi](customapi.md) table/entity.
 
 ### <a name="BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId"></a> msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId
 

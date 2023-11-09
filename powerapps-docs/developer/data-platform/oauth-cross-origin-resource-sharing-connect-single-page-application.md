@@ -27,17 +27,17 @@ SPAs depend on extensive use of client-side JavaScript to create a single dynami
 
 ## Use CORS with Dataverse
 
-The [CORS protocol](https://fetch.spec.whatwg.org/#http-cors-protocol) provides a detailed description of how to implement and use CORS. It explains all about the various headers and preflight requests that you need to apply to make CORS work. The good news is that you don't need to become an expert in CORS to use it with Dataverse. The server-side part has been done for you and all you need is to know how to consume it.  You don't need to understand all the inner workings of CORS to use it with Dataverse. Instead you can use the [Microsoft Authentication Library for JavaScript (MSAL.js) 2.0 for Browser-Based Single-Page Applications](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-browser) and it will take care of much of the CORS complexity for you. Since Dataverse users are authenticated using Azure Active Directory, MSAL.js is the supported way to authenticate SPA users.
+The [CORS protocol](https://fetch.spec.whatwg.org/#http-cors-protocol) provides a detailed description of how to implement and use CORS. It explains all about the various headers and preflight requests that you need to apply to make CORS work. The good news is that you don't need to become an expert in CORS to use it with Dataverse. The server-side part has been done for you and all you need is to know how to consume it.  You don't need to understand all the inner workings of CORS to use it with Dataverse. Instead you can use the [Microsoft Authentication Library for JavaScript (MSAL.js) 2.0 for Browser-Based Single-Page Applications](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-browser) and it will take care of much of the CORS complexity for you. Since Dataverse users are authenticated using Microsoft Entra ID, MSAL.js is the supported way to authenticate SPA users.
 
 ## Preparing to use MSAL.js with a SPA
 
 In order to configure your SPA to work with msal.js you will need to:
 
-1. Register your application with the Azure Active Directory tenant.
+1. Register your application with the Microsoft Entra ID tenant.
 1. Set configuration variables in your SPA with information from that registration.  
    You will need to include the following: 
    - The URL to your Dataverse organization.
-   - The Id of the Active Directory tenant your organization uses to authenticate.
+   - The Id of the Microsoft Entra ID tenant your organization uses to authenticate.
    - The client ID you get when you register your application.
    - The URL to where the SPA will be deployed or debugged during development.
 

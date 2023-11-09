@@ -26,7 +26,7 @@ contributors:
 
 **Description**: true if the form is visible; false otherwise.
 
-### Related topics
+### Related articles
 
 [setVisible](setVisible.md)
 

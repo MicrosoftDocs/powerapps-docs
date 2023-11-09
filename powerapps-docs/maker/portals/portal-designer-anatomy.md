@@ -2,10 +2,9 @@
 title: Power Apps portals Studio
 description: Learn how to use Power Apps portals Studio.
 author: neerajnandwana-msft
-
 ms.topic: conceptual
 ms.collection: get-started
-ms.date: 12/01/2022
+ms.date: 2/23/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: kkendrick
@@ -13,6 +12,7 @@ contributors:
     - neerajnandwana-msft
     - nickdoelman
     - ProfessorKendrick
+    - sampatn
 ---
 
 # Power Apps portals Studio
@@ -28,17 +28,11 @@ You can use Power Apps portals Studio to create and customize your website. It c
 
 To open Power Apps portals Studio:
 
-1. Go to [Power Apps](https://make.powerapps.com).
+1. Go to **Active Sites** tab on [Power Pages](https://make.powerpages.microsoft.com).
 
-1. Select **Apps** from the left pane.
+1. On your site, select **More Commands**(...) for the site, then choose **Edit in Power Apps Sutdio** 
 
-    ![Select Apps from left pane.](media/studio-apps.png "Select Apps from left pane")
-
-1. Select your portal.
-
-1. Select **Edit**.
-
-    ![Select Edit to open the portal in Studio.](media/edit-portal.png "Select Edit to open the portal in Studio")
+    ![Select Edit in Power Apps Studio to open the site in Power Apps Portals Studio.](media/manage-existing-portals/edit-in-power-apps.png "Select Edit in Power Apps Studio to open the site in Studio")
 
 ## Understand portals Studio
 

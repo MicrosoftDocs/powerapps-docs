@@ -53,7 +53,7 @@ Model-driven apps provides you a rich set of **client APIs** to interact with fo
 [Client API reference](clientapi/reference.md)
 
 
-### Related topics
+### Related articles
 
 [Web resources for model-driven apps](web-resources.md)<br/>
 [Customize commands and the ribbon](customize-commands-ribbon.md)<br/>
