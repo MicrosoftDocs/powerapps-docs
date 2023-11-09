@@ -1,6 +1,6 @@
 ---
-title: "Quickstart: Execute an SDK for .NET request (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Demonstrates how to connect to the SDK for .NET of Microsoft Dataverse and execute a request." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Quickstart: Execute an SDK for .NET request (C#) (Microsoft Dataverse) | Microsoft Docs"
+description: "Demonstrates how to connect to the SDK for .NET of Microsoft Dataverse and execute a request."
 ms.date: 11/05/2023
 author: phecke
 ms.author: pehecke
@@ -36,7 +36,7 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 
 ## Create Visual Studio project
 
-1. Create a new .NET console app project. For this project we are using Visual Studio 2022 and targeting .NET 6, but .NET Framework will also work.
+1. Create a new .NET console app project. For this project we are using Visual Studio 2022 and targeting .NET 6.
 
     ![Start a console app project.](../media/quick-start-org-service-console-app-1.png)
 
@@ -55,53 +55,7 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 
 1. In **Solution Explorer**, double-click Program.cs to edit that file. Replace the file's contents with the code shown below.
 
-    ```csharp
-    using Microsoft.Crm.Sdk.Messages;
-    using Microsoft.PowerPlatform.Dataverse.Client;
-
-    class Program
-    {
-        // TODO Enter your Dataverse environment's URL and logon info.
-        static string url = "https://yourorg.crm.dynamics.com";
-        static string userName = "someone@myorg.onmicrosoft.com";
-        static string password = "password";
-
-        // This service connection string uses the info provided above.
-        // The AppId and RedirectUri are provided for sample code testing.
-        static string connectionString = $@"
-        AuthType = OAuth;
-        Url = {url};
-        UserName = {userName};
-        Password = {password};
-        AppId = 51f81489-12ee-4a9e-aaae-a2591f45987d;
-        RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97;
-        LoginPrompt=Auto;
-        RequireNewInstance = True";
-
-        static void Main(string[] args)
-        {
-            using (ServiceClient serviceClient = new(connectionString))
-            {
-                if (serviceClient.IsReady)
-                {
-                    WhoAmIResponse response = 
-                        (WhoAmIResponse)serviceClient.Execute(new WhoAmIRequest());
-
-                    Console.WriteLine("User ID is {0}.", response.UserId);
-                }
-                else
-                {
-                    Console.WriteLine(
-                        "A web service connection was not established.");
-                }
-            }
-
-            // Pause the console so it does not close.
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadLine();
-        }
-    }
-    ```
+   :::code language="csharp" source="~/dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs":::
 
 1. Change the values for the `url`, `userName`, and `password` as indicated by the `// TODO` code comment.
 
@@ -121,10 +75,7 @@ Press any key to exit.
 
 ## Use the IOrganizationService interface methods
 
-> [!IMPORTANT]
-> Understand that the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) this program uses is just one way to connect to the Dataverse Organization service.
-> 
-> In this  program, you can use the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) because it implements the [IOrganizationService Interface](iorganizationservice-interface.md) which includes the [Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
+Notice that the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) this program uses implements the [IOrganizationService Interface](iorganizationservice-interface.md) which includes the [Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
 
 To see and understand the `IOrganizationService` interface a little better, try this:
 
@@ -153,28 +104,27 @@ To see and understand the `IOrganizationService` interface a little better, try 
 1. Replace the `Main` method in your program with this:
 
    ```csharp
-   static void Main()
-   {
-      using (ServiceClient serviceClient = new(connectionString))
+       static void Main()
+    {
+        //ServiceClient implements IOrganizationService interface
+        IOrganizationService service = new ServiceClient(connectionString);
 
-      WhoAmIExample(service: serviceClient);
+        WhoAmIExample(service: serviceClient);
 
-      // Pause the console so it does not close.
-      Console.WriteLine("Press any key to exit.");
-      Console.ReadLine();
-   }
+        // Pause the console so it does not close.
+        Console.WriteLine("Press the <Enter> key to exit.");
+        Console.ReadLine();
+    }
    ```
 
-1. Run the sample again and you should see:
+1. Run the sample again and you should see something like:
 
    ```console
    OrganizationId:883278f5-07af-45eb-a0bc-3fea67caa544
    BusinessUnitId:38e0dbe4-131b-e111-ba7e-78e7d1620f5e
    UserId:4026be43-6b69-e111-8f65-78e7d1620f5e
-   Press any key to exit.
+   Press the <Enter> key to exit.
    ```
-
-This demonstrates how the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) implements the [IOrganizationService Interface](iorganizationservice-interface.md) and you can use it as a variable of that type.
 
 ## Next Steps
 
