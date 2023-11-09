@@ -1,5 +1,5 @@
 ---
-title: "Search for tables and rows by using Dataverse search| MicrosoftDocs"
+title: "Search for records by using Dataverse search| MicrosoftDocs"
 description: How to use Dataverse search
 author: sericks007
 
@@ -15,7 +15,7 @@ search.audienceType:
   - enduser
 ---
 
-# Search for tables and rows by using Dataverse search
+# Search for records by using Dataverse search
 
 
 

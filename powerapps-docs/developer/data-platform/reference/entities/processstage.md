@@ -1,7 +1,7 @@
 ---
 title: "ProcessStage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ProcessStage table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -528,6 +528,7 @@ Listed by **SchemaName**.
 - [lk_expiredprocess_activestageid](#BKMK_lk_expiredprocess_activestageid)
 - [processstage_processstageparameter](#BKMK_processstage_processstageparameter)
 - [processstage_parentprocessstage](#BKMK_processstage_parentprocessstage)
+- [processstage_adx_portalcomment](#BKMK_processstage_adx_portalcomment)
 
 
 ### <a name="BKMK_processstage_knowledgearticle"></a> processstage_knowledgearticle
@@ -802,6 +803,23 @@ Same as the [processstage_parentprocessstage](processstage.md#BKMK_processstage_
 |ReferencedEntityNavigationPropertyName|processstage_parentprocessstage|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_processstage_adx_portalcomment"></a> processstage_adx_portalcomment
+
+**Added by**: Active Solution Solution
+
+Same as the [processstage_adx_portalcomment](adx_portalcomment.md#BKMK_processstage_adx_portalcomment) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|stageid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|processstage_adx_portalcomment|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
