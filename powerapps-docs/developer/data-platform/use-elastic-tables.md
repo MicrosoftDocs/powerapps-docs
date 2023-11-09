@@ -914,7 +914,7 @@ You can use the `DeleteMultiple` message with either the SDK for .NET or Web API
 #### [SDK for .NET](#tab/sdk)
 
 > [!NOTE]
-> With the SDK, you must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't currently have a `DeleteMultipleRequest` class. [Learn more about using messages with the Organization service](org-service/use-messages.md).
+> With the SDK, you must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't currently have a `DeleteMultipleRequest` class. [Learn more about using messages with the SDK for .NET](org-service/use-messages.md).
 
 The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table. The alternate key is used to include the `partitionid` value to uniquely identify the rows.
 
@@ -1011,6 +1011,6 @@ Learn how to use code to create and query JavaScript Object Notation (JSON) data
 
 [Elastic tables for developers (preview)](elastic-tables.md)  
 [Create elastic tables using code (preview)](create-elastic-tables.md)  
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md) 
+[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)  
 [Elastic table sample code (preview)](elastic-table-samples.md)  
 [Bulk operation messages (preview)](bulk-operations.md)

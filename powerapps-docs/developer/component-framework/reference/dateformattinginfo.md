@@ -1,8 +1,8 @@
 ---
 title: DateFormattingInfo (Power Apps component framework API reference) | Microsoft Docs
 description: Provides the date formatting information for the current user.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

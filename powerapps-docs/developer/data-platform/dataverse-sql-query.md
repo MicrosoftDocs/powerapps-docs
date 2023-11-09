@@ -1,7 +1,6 @@
 ---
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
-
 ms.date: 05/18/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
@@ -14,9 +13,12 @@ search.audienceType:
 
 # Use SQL to query data
 
-[This topic is pre-release documentation and is subject to change. Note that only the SQL data connection through SQL Server Management Studio and .NET libraries is in preview. Power BI is General Availability (GA)]
+[This topic is pre-release documentation and is subject to change.]
 
 The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access.
+
+> [!NOTE]
+>  Only the SQL data connection through SQL Server Management Studio and .NET libraries is in preview. Power BI is generally available.
 
 ## Prerequisites
 
@@ -38,7 +40,7 @@ You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-ma
 
 #### Security and authentication
 
-Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL. 
+Only Microsoft Entra ID authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL. 
 
 ![Connec dialog.](media/ssms-connect-dialog.PNG)
 
@@ -146,9 +148,9 @@ Below are some know error conditions and how to resolve them.
 
 ### Authentication
 
-Only Azure Active Directory authentication is supported on the Dataverse endpoint SQL connection. The preferred authentication mechanism is "Azure Active Directory – Universal" with multi-factor authentication (MFA). However, "Azure Active Directory – Password" will work if MFA is not configured. If you try to use other forms of authentication, you will see errors like the following.
+Only Microsoft Entra ID authentication is supported on the Dataverse endpoint SQL connection. The preferred authentication mechanism is "Microsoft Entra ID – Universal" with multi-factor authentication (MFA). However, "Microsoft Entra ID – Password" will work if MFA is not configured. If you try to use other forms of authentication, you will see errors like the following.
 
-- Error returned when using **Azure Active Directory – Integrated** authentication.
+- Error returned when using **Microsoft Entra ID – Integrated** authentication.
 
 "Login failed: The HTTP request was forbidden with client authentication scheme 'Anonymous'.
 RequestId: TDS;81d8a4f7-0d49-4d21-8f50-04364bddd370;2

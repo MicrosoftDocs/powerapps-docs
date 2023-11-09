@@ -1,16 +1,17 @@
 ---
-title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to write custom code to be executed in response to data processing events." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 05/31/2023
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "divkamath" # GitHub ID
+title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn how to write custom code to be executed in response to data processing events."
+ms.date: 11/01/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: divkamath
 ms.subservice: dataverse-developer
-ms.author: "dikamath" # MSFT alias of Microsoft employees only
+ms.author: dikamath
 search.audienceType: 
   - developer
 contributors:
   - phecke
+  - JimDaly
 ---
 
 # Write a plug-in
@@ -52,7 +53,7 @@ More information: [Services you can use in your code](#services-you-can-use-in-y
 
 There are some exceptions to the statement about adding properties or methods in the note above. For example, you can have a property that represents a constant and you can have methods that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These values change with every invocation and you don't want that data to be cached and applied to subsequent invocations.
 
-More information: [Develop IPlugin implementations as stateless](/dynamics365/customer-engagement/guidance/server/develop-iplugin-implementations-stateless)
+More information: [Develop IPlugin implementations as stateless](best-practices/business-logic/develop-iplugin-implementations-stateless.md)
 
 ### Pass configuration data to your plug-in
 
@@ -111,7 +112,6 @@ Use the tracing service to write messages to the [PluginTraceLog Table](referenc
 
 To write to the tracelog, you need to get an instance of the Tracing service. The following code shows how to get an instance of the Tracing service using the <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method.
 
-
 ```csharp
 ITracingService tracingService =
     (ITracingService)serviceProvider.GetService(typeof(ITracingService));
@@ -146,7 +146,7 @@ public class MyPlugin : IPlugin
     IPluginExecutionContext context = (IPluginExecutionContext)
       serviceProvider.GetService(typeof(IPluginExecutionContext));
 
-    // Obtain the Organization service reference 
+    // Obtain the IOrganizationService instance 
     IOrganizationServiceFactory serviceFactory =
       (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
     IOrganizationService orgService = serviceFactory.CreateOrganizationService(context.UserId);
@@ -184,7 +184,7 @@ When writing your plug-in, it's critical that it must execute efficiently and qu
 
 ## Using early-bound types in plug-in code
 
-You can optionally use [early-bound](org-service/early-bound-programming.md) types within plug-in code. Include the generated types file in your plug-in project. All table types provided in the execution context's [InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) collection are late-bound types. You would need to convert those late-bound types to early-bound types.
+You can optionally use [early-bound](org-service/early-bound-programming.md) types within plug-in code. Include the generated types file in your plug-in project. All table types provided in the execution context's <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> collection are late-bound types. You would need to convert those late-bound types to early-bound types.
 
 For example, you can do the following when you know the `Target` parameter represents an account table. In this example, "Account" is an early-bound type.
 
@@ -197,45 +197,6 @@ But you should never try to set the value using an early-bound type. Doing so ca
 ```csharp
 context.InputParameters["Target"] = new Account() { Name = "MyAccount" }; // WRONG: Do not do this. 
 ```
-
-## Building the plug-in assembly
-
-When building a plug-in project, keep the following output assembly constraints in mind.
-
-### Use .NET Framework 4.6.2
-
-Plug-in and custom workflow activity assembly projects must target .NET Framework 4.6.2. While assemblies built using later versions of the Framework should generally work, if the plug-in code uses any features introduced after 4.6.2, an error will occur.
-
-### Optimize assembly development
-
-The assembly may include multiple plug-in classes (or types), but can be no larger than 16 MB in size. It's recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB.
-
-Best practice information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
-
-### Assemblies must be signed
-
-All assemblies must be signed before they can be registered. You can use the Visual Studio **Signing** tab on the project or by using [Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool).
-
-### Don't depend on .NET assemblies that interact with low-level Windows APIs
-
-Plug-in assemblies must contain all the necessary logic within the respective DLL. Plug-ins may reference some core .NET assemblies. However, we don't support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface.
-
-### Dependency on any other (non-Dataverse) assemblies
-
-Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to your project includes the necessary Dataverse assembly references in your project, but it doesn't upload these assemblies along with your plug-in assembly as these Dataverse assemblies already exist in the server's sandbox run-time.
-
-#### Don't depend on System.Text.Json
-
-Because the [Microsoft.CrmSdk.CoreAssemblies NuGet package has a dependency on System.Text.Json](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies#dependencies-body-tab), you're able to refer to [System.Text.Json](xref:System.Text.Json) types at design time. However, the System.Text.Json.dll file in the sandbox run-time can't be guaranteed to be the same version that you reference in your project. If you need to use `System.Text.Json`, you should use the dependent assembly feature and explicitly include it in your NuGet package.
-
-The dependent assembly capability, currently in a Preview release, can be used to include other .NET compiled assemblies with your plug-in assembly in a single package to upload.
-
-More information: [Dependent Assembly plug-ins](dependent-assembly-plugins.md).
-
-> [!IMPORTANT]
-> The dependent assembly capability is so important to plug-in development that you should consider using it from the start even if you do not have an immediate need to do so. Adding support for dependent assemblies to your plug-in project is much more difficult later on in the development cycle.
->
-> Since this feature is a Preview release, do not use this feature for production work.
 
 ## Next steps
 

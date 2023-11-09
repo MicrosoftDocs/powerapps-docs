@@ -1,4 +1,4 @@
-﻿By enabling Learning Path Authoring for a [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] organization, Learning Path content (published or draft) created by users (with the right security privileges) will be stored in [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)]. In addition, enabling the feature allows [!INCLUDE[pn_azure_cloud_services](pn-azure-cloud-services.md)] to capture the following data associated with a [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] organization:  
+By enabling Learning Path Authoring for a [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] organization, Learning Path content (published or draft) created by users (with the right security privileges) will be stored in [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)]. In addition, enabling the feature allows [!INCLUDE[pn_azure_cloud_services](pn-azure-cloud-services.md)] to capture the following data associated with a [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] organization:  
   
 -   List of organizations in the Tenant  
   
@@ -36,7 +36,7 @@
   
 -   Configuration-related Learning Path Authoring.  
   
- [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)  
+ [Microsoft Entra ID](https://azure.microsoft.com/services/active-directory/)  
   
  Learning Path uses [!INCLUDE[pn_azure_active_directory](pn-azure-active-directory.md)] to authenticate Web Service.  
   

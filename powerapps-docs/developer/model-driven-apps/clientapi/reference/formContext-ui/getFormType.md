@@ -41,12 +41,9 @@ contributors:
 >Quick Create forms return 1.
 
 
-### Related topics
+### Related articles
 
-[formContext.ui](../formContext-ui.md)
-
+[formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

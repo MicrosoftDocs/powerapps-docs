@@ -6,21 +6,14 @@ ms.author: gned
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 05/05/2023
+ms.date: 10/20/2023
 ms.custom: template-how-to 
 ---
-# View long term retained data (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# View long term retained data
 
 You can view retained data from an advanced find query or by creating a Power Automate flow. 
 
 To view retained data in an environment requires the system administrator security role or other security role membership that includes organization scope read privileges to the table.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - For public preview, only non-production environments are allowed for previewing the long-term data retention feature.
 
 ## Grant privileges to view retained data
 
@@ -51,12 +44,39 @@ Create a Power Automate cloud flow to create an Excel file of the retained data 
 These restrictions are enforced by Dataverse for each environment:
 
 - Up to five users can query and retrieve retained data at the same time.
-- Up to 30 queries per day are allowed for each environment.
+- Up to 100 queries per day are allowed for each environment.
 - Any single request from advanced find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
 - Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed.
 - Retained data includes lookup data. Lookup values in the table are denormalized with ID and name value.
 
+## View retained data with Microsoft Fabric (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+You can view the active (live) and inactive (long term retained) application data in Dataverse using Microsoft Fabric.
+To do this, link your Dataverse environment to Fabric. More information: [Link your Dataverse environment to Microsoft Fabric and unlock deep insights](azure-synapse-link-view-in-fabric.md).
+
+> [!IMPORTANT]
+> Linking your Dataverse environment to Microsoft Fabric is a preview feature.
+>
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
+When your long term retention policy is run successfully, you can access the active and inactive Dataverse data. The [limitations applied to retrieval of retained data](#limitations-for-retrieval-of-retained-data) don't apply to this mode of access.
+
+You can explore the data with SQL endpoint and query Dataverse data with SQL and generate views in Fabric. You can also create Power BI reports. More information: [Work with Dataverse data and generate Power BI reports](azure-synapse-link-view-in-fabric.md#work-with-dataverse-data-and-generate-power-bi-reports)
+
+The Dataverse table column `msft_datastate` can be used to filter the data with the SQL `WHERE` clause:
+
+- Inactive application data: `WHERE msft_datastate=1`
+- Active (live) application data: `WHERE msft_datastate=0`
+
+## Known issues
+
+### Personal views of retained data
+
+Saving the query results of the retained data as a personal view isn't supported. Although users can save the query results of the retained data as a personal view, the view doesn't return results.
+
 ## See also
 
-[Dataverse long term data retention overview (preview)](data-retention-overview.md) <br />
+[Dataverse long term data retention overview](data-retention-overview.md) <br />
 [Share your ideas](https://experience.dynamics.com/ideas/categories/list/?category=55f731de-11f3-ed11-8848-00224827ed7b&forum=eef9aef6-0ff3-ed11-8848-00224827e88b)

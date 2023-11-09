@@ -26,7 +26,7 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|refreshAll|Boolean|No|Indicates whether all the ribbon command bars on the current page are refreshed. If you specify **false**, only the page-level ribbon command bar is refreshed. If you do not specify this parameter, by default **false** is passed.|
+|`refreshAll`|Boolean|No|Indicates whether all the ribbon command bars on the current page are refreshed. If you specify **false**, only the page-level ribbon command bar is refreshed. If you do not specify this parameter, by default **false** is passed.|
 
 ## Remarks
 
@@ -37,11 +37,9 @@ This function is used when a ribbon action `JavaScriptFunction` (RibbonDiffXml) 
 For optimal performance of your form loads, you should not use this function in `EnableRule` (RibbonDiffXml) or `onLoad` (FormXml). The form load itself triggers rules evaluation of all the ribbon actions. In case, if you want to control the visibility of a ribbon action, use promises and asynchronous pattern in `EnableRule`.
 
 
-### Related topics
+### Related articles
 
-[formContext.ui](../formContext-ui.md)      
+[formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md)
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

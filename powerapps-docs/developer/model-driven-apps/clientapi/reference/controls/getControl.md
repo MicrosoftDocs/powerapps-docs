@@ -48,7 +48,7 @@ For example, to add notification to each control bound to the `name` column, you
 > ```
 
 
-### Related topics
+### Related articles
 
 [formContext](../../clientapi-form-Context.md)
 

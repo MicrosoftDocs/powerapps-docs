@@ -2,7 +2,7 @@
 title: Query data using the Web API
 description: Learn how to use the Web API to query Microsoft Dataverse tables and the query options you can apply.
 ms.topic: how-to
-ms.date: 04/13/2023
+ms.date: 09/12/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -1243,6 +1243,9 @@ The aggregate functions are limited to a collection of 50,000 records.  Further 
 
 You can find more information about OData data aggregation here: [OData extension for data aggregation version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html). Dataverse supports only a subset of these aggregate methods.
 
+> [!NOTE]
+> `groupby` with datetime values is not supported.
+
 Following are some examples:
 
 - [List of unique statuses in the query](#list-of-unique-statuses-in-the-query)
@@ -1627,9 +1630,9 @@ OData-Version: 4.0
 ```
 ### See also
 
-[Search across table data using Dataverse search](relevance-search.md)  
-[Work with Quick Find's search item limit](../quick-find-limit.md)  
-[Web API query data sample (C#)](samples/webapiservice-query-data.md)<br />
-[Web API query data sample (client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
+[Search for Dataverse records](../search/overview.md)<br />
+[Work with Quick Find's search item limit](../quick-find-limit.md)<br />
+[Web API Query Data Sample (C#)](samples/webapiservice-query-data.md)<br />
+[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)<br />

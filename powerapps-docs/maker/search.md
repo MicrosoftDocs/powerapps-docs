@@ -2,6 +2,7 @@
 title: Find it with unified search
 description: Use unified search to find apps, flows, templates, and web content.
 author: Mattp123
+ms.reviewer: angieandrews
 ms.subservice: common
 ms.topic: conceptual
 ms.date: 05/25/2023
@@ -11,7 +12,8 @@ search.audienceType:
 contributors:
   - mattp123
   - v-aangie
-ms.reviewer: angieandrews
+ms.contributors:
+  - saperlmu
 ---
 
 # Find it with unified search
@@ -26,7 +28,6 @@ Unified search helps you quickly discover apps in Power Apps, flows in Power Aut
 |Documentation and learn content    |  External web     |
 |Community content     |  External web       |
 |Blog posts     | External web        |
-| Video tutorials  | External web  |
 
 > [!NOTE]
 > To open the Power Automate documentation, go to the [Power Automate Overview](/power-automate/getting-started).
@@ -61,7 +62,6 @@ By default, all search providers are enabled, except for the docs search provide
 |---------|---------|---------|
 |`PowerPlatform.Search.disableDocsSearch`  |True |  Setting the provider namespace to True disables search for the provider. When this provider is disabled, users in the environment will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.  <br /><br /> When the provider is enabled, users' keywords might be sent outside their company, region, or cloud. Make sure keywords don't contain sensitive or confidential information. |
 |`PowerPlatform.Search.disableCommunitySearch`     |False | Setting the provider namespace to True disables search for the provider. When this provider is disabled, users in the environment will see a message that Community and Blog search categories have been turned off by the administrator in the search results page.   |
-| `PowerPlatform.Search.disableBingVideoSearch`    |False |Setting the provider namespace to True disables search for the provider. When this provider is disabled, users in the environment will see a message that Video search categories have been turned off by the administrator in the search results page.   |
 
 To return the current settings including which search providers are enabled or disabled, run this cmdlet:
 `Get-TenantSettings`

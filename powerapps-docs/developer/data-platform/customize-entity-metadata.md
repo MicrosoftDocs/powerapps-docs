@@ -20,9 +20,9 @@ More information: [Browse table definitions for your environment](browse-your-me
   
 This topic is about how to work with tables programmatically. To work with tables in [Power Apps](https://make.powerapps.com) See [Tables in Dataverse](../../maker/data-platform/entity-overview.md).
 
-Tables can be created using either the organization service or the Web API. The following information can be applied to both.
+Tables can be created using either the SDK for .NET or the Web API. The following information can be applied to both.
 
-- With the organization service you will use the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> class. More information: [Create a custom table using code](org-service/create-custom-entity.md) and [Retrieve, update, and delete tables](org-service/metadata-retrieve-update-delete-entities.md)
+- With the SDK for .NET you will use the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> class. More information: [Create a custom table using code](org-service/create-custom-entity.md) and [Retrieve, update, and delete tables](org-service/metadata-retrieve-update-delete-entities.md)
 - With the Web API you will use the <xref:Microsoft.Dynamics.CRM.EntityMetadata> EntityType. More information : [Create and update table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md).
  
 ## Table definitions operations
@@ -33,7 +33,7 @@ Since the Web API is a RESTful endpoint, it uses a different way to create, retr
 
 One exception to this is the <xref:Microsoft.Dynamics.CRM.RetrieveMetadataChanges?text=RetrieveMetadataChanges Function> provides a way to compose table definitions query and track changes over time.
 
-If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> class. This class contains the data that is needed to retrieve a collection of table definitions records that satisfy the specified criteria. The <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse> returns a timestamp value that can be used with this request at a later time to return information about how table definitions has changed since the last request.
+If working with SDK for .NET, use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> class. This class contains the data that is needed to retrieve a collection of table definitions records that satisfy the specified criteria. The <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse> returns a timestamp value that can be used with this request at a later time to return information about how table definitions has changed since the last request.
    
 
 |Message|Web API|SDK Assembly|
@@ -52,10 +52,10 @@ If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.Retri
 
 |Option|Description|  
 |------------|-----------------|  
-|**Create as custom activity**|You can create a table that is an activity by setting the `IsActivity` property when using the organization service or Web API respectively. For more information, see [Custom Activities in Dynamics 365](custom-activities.md).|  
+|**Create as custom activity**|You can create a table that is an activity by setting the `IsActivity` property when using the SDK for .NET or Web API respectively. For more information, see [Custom Activities in Dynamics 365](custom-activities.md).|  
 |**Table Names**|There are two types of names, and both must have a customization prefix:<br /><br /> `LogicalName`: Name that is the version of the table name that is set in all lowercase letters.<br /><br /> `SchemaName`: Name that will be used to create the database tables. This name can be mixed case. The casing that you use sets the name of the object generated for programming with strong types or when you use the REST endpoint.<br /><br /> **Note**: If the logical name differs from the schema name, the schema name will override the value that you set for the logical name.<br /><br /> When a table is created in the application in the context of a specific solution, the customization prefix used is the one set for the `Publisher` of the solution. When a table is created programmatically, you can set the customization prefix to a string that is between two and eight characters in length, all alphanumeric characters and it must start with a letter. It cannot start with “mscrm”. The best practice is to use the customization prefix defined by the publisher that the solution is associated with, but this is not a requirement. An underscore character must be included between the customization prefix and the logical or schema name.|  
 |**Ownership**|Use the `OwnershipType` property to set this. Use the <xref:Microsoft.Xrm.Sdk.Metadata.OwnershipTypes> enumeration or <xref:Microsoft.Dynamics.CRM.OwnershipTypes> EnumType to set the type of table ownership. The only valid values for custom tables are `OrgOwned` or `UserOwned`. For more information, see [Table Ownership](/dynamics365/customer-engagement/developer/introduction-entities#EntityOwnership).|  
-|**Primary Column**|With the Organization service, use <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>.<xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest.PrimaryAttribute> property to set this.<br /><br />With the Web API the JSON defining the table must include one <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata> with the `IsPrimaryName` property set to true.<br /><br /> In both cases string column must be formatted as `Text`. The value of this column is what is shown in a lookup for any related tables. Therefore, the value of the column should represent a name for the record.|  
+|**Primary Column**|With the SDK for .NET, use <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>.<xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest.PrimaryAttribute> property to set this.<br /><br />With the Web API the JSON defining the table must include one <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata> with the `IsPrimaryName` property set to true.<br /><br /> In both cases string column must be formatted as `Text`. The value of this column is what is shown in a lookup for any related tables. Therefore, the value of the column should represent a name for the record.|  
 
 ## Enable table capabilities  
 
@@ -64,8 +64,8 @@ If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.Retri
 |Capability|Description|  
 |----------|-----------|  
 |**Business Process flows**|Set `IsBusinessProcessEnabled` to true in order to enable the table for business process flows.|  
-|**Notes**| To create a relationship with the `Annotation` table and enable the inclusion of a **Notes** area in the form. By including **Notes**, you can also add attachments to records. <br /><br />With the Organization service, use the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> `HasNotes` property <br /><br />With the Web API set the <xref:Microsoft.Dynamics.CRM.EntityMetadata>.`HasNotes` property.|  
-|**Activities**|To create a relationship with the `ActivityPointer` table so that all the activity type tables can be associated with this table.<br /><br /> With the Organization service  use the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> `HasActivities` property. <br /><br /> With the Web API, set the  <xref:Microsoft.Dynamics.CRM.EntityMetadata>.`HasActivities` property.| 
+|**Notes**| To create a relationship with the `Annotation` table and enable the inclusion of a **Notes** area in the form. By including **Notes**, you can also add attachments to records. <br /><br />With the SDK for .NET, use the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> `HasNotes` property <br /><br />With the Web API set the <xref:Microsoft.Dynamics.CRM.EntityMetadata>.`HasNotes` property.|  
+|**Activities**|To create a relationship with the `ActivityPointer` table so that all the activity type tables can be associated with this table.<br /><br /> With the SDK for .NET  use the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> `HasActivities` property. <br /><br /> With the Web API, set the  <xref:Microsoft.Dynamics.CRM.EntityMetadata>.`HasActivities` property.| 
 |**Connections**|To enable creating connection records to associate this table with other connection tables set the `IsConnectionsEnabled.Value` property value to true.|  
 |**Queues**|Use the `IsValidForQueue` property to add support for queues. When you enable this option, you can also set the `AutoRouteToOwnerQueue` property to automatically move records to the owner’s default queue when a record of this type is created or assigned.|  
 |**E-mail**|Set the `IsActivityParty` property so that you can send e-mail to an e-mail address in this type of record.|  
@@ -105,7 +105,7 @@ Custom tables support the same base messages as system tables. The set of messag
 ### See also
   
 [Use the Web API with table definitions](webapi/use-web-api-metadata.md)<br />
-[Work with table definitions using the Organization service](org-service/work-with-metadata.md)
+[Work with table definitions using the SDK for .NET](org-service/work-with-metadata.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

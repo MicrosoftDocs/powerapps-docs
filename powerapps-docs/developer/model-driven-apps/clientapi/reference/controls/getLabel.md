@@ -30,7 +30,7 @@ All
 
 **Description**: The label of the control.
 
-### Related topics
+### Related articles
 
 [setLabel](setLabel.md)
 

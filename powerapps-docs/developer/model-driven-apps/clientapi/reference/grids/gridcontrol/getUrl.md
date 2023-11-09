@@ -30,7 +30,7 @@ Read-only and editable grids
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|client|Number|No|Indicates the client type. You can specify one of the following values:<br/>0: Browser<br/>1: MobileApplication|
+|`client`|Number|No|Indicates the client type. You can specify one of the following values:<br/>0: Browser<br/>1: MobileApplication|
 
 ## Return Value
 
@@ -41,9 +41,5 @@ Read-only and editable grids
 ## Remarks
 
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext).
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

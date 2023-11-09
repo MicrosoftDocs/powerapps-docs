@@ -26,7 +26,7 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|callbackFunction|Function|Yes|The callback function must accept a parameter that contains an object with dictionary properties where the name of the property is the Id of the business process flow and the value of the property is the name of the business process flow.<br/><br/>The enabled processes are filtered according to the user’s privileges. The list of enabled processes is the same ones a user can see in the UI if they want to change the process manually.|
+|`callbackFunction`|Function|Yes|The callback function must accept a parameter that contains an object with dictionary properties where the name of the property is the Id of the business process flow and the value of the property is the name of the business process flow.<br/><br/>The enabled processes are filtered according to the user's privileges. The list of enabled processes is the same ones a user can see in the UI if they want to change the process manually.|
 
 ## Example
 
@@ -35,7 +35,7 @@ The **Sdk.formOnLoad** function in the example uses the **formContext.data.proce
 The information about enabled business process flow is provided as a dictionary object where the Id of the process is the name of the property and the name of the business process flow is the value of the property. The sample code processes this information and sets the values in a global **Sdk.enabledProcesses** array to be accessed by logic that executes later. The sample also loops through the values in the **Sdk.enabledProcesses** array, and uses the **Sdk.writeToConsole** function to write information about the retrieved business process flows to the console.
 
 >[!NOTE]
->The **Sdk.formOnLoad** function in the sample JavaScript library must be set as the **OnLoad** event handler for a form, and the **Pass execution context as the first parameter** check box must be selected in the **Handler Properties** dialog.<br/>Also, this sample just illustrates the use of some of the methods in the **formContext.data.process** API. It doesn’t represent using this API to meet a business requirement; it’s only intended to demonstrate how the key property values can be accessed in code.
+>The **Sdk.formOnLoad** function in the sample JavaScript library must be set as the **OnLoad** event handler for a form, and the **Pass execution context as the first parameter** check box must be selected in the **Handler Properties** dialog.<br/>Also, this sample just illustrates the use of some of the methods in the **formContext.data.process** API. It doesn't represent using this API to meet a business requirement; it's only intended to demonstrate how the key property values can be accessed in code.
 
 ```JavaScript
 //A namespace defined for SDK sample code
@@ -93,14 +93,9 @@ id: 7994be68-899e-4a40-8d18-f5c3b6940188 name: Sample Lead Process
 id: 919e14d1-6489-4852-abd0-a63a6ecaac5d name: Lead to Opportunity Sales Process
 ```
 
-### Related topics
+### Related articles
 
-[setActiveProcessInstance](setActiveProcessInstance.md)
-
+[setActiveProcessInstance](setActiveProcessInstance.md)   
 [formContext.data.process](../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

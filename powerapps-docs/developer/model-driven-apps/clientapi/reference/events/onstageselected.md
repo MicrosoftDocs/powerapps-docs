@@ -26,10 +26,7 @@ You can use the [getEventArgs](../executioncontext/getEventArgs.md) method to re
 ## Methods supported for this event
 
 - **formContext.data.process**.[addOnStageSelected](../formcontext-data-process/eventhandlers/addOnStageSelected.md) method to add event handlers for this event.
-- **formContext.data.process**.[removeOnStageSelected](../formcontext-data-process/eventhandlers/addOnStageSelected.md) method to remove event handlers for this event. 
-
-
-
+- **formContext.data.process**.[removeOnStageSelected](../formcontext-data-process/eventhandlers/addOnStageSelected.md) method to remove event handlers for this event.
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

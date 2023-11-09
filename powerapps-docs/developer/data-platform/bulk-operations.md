@@ -217,7 +217,7 @@ OData-Version: 4.0
 
 ##### [SDK for .NET](#tab/sdk)
 
-You must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't have a `DeleteMultipleRequest` class. Learn how to [use messages with the Organization service](org-service/use-messages.md).
+You must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't have a `DeleteMultipleRequest` class. Learn how to [use messages with the SDK for .NET](org-service/use-messages.md).
 
 The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table using the alternate key to include the `partitionid` to uniquely identify the rows.
 
@@ -525,10 +525,6 @@ At this time, we don't support using bulk operation messages in plug-ins. More i
 
 The following issues will be addressed before the bulk operations feature becomes generally available.
 
-### UpdateMultipleRequest.ConcurrencyBehavior doesn't work
-
-<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.ConcurrencyBehavior> specifies the type of optimistic [concurrency behavior](xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior) that should be applied. Possible values are `AlwaysOverwrite`, `Default`, and `IfRowVersionMatches`. Currently, the `Default` option is always applied, regardless of what you set. The behavior depends on whether [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) is set for the table.
-
 ### DeleteMultiple plug-ins not invoked for Delete
 
 As part of the changes we made to [merge message pipelines](#message-pipelines-merged), any custom logic for the multiple version of the message must also be invoked when the single version of the message is invoked. At this time, plug-in steps registered for the `DeleteMultiple` message *are not* being called when `Delete` is used. Plug-in steps registered for `Delete` *are* being invoked when `DeleteMultiple` is used.
@@ -565,4 +561,5 @@ These limits are based on data changes: `Create`, `Update`, and `Delete` operati
 [Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)  
 [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](webapi/samples/create-update-multiple.md)  
 [Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)  
-[Use messages with the Organization service](org-service/use-messages.md)
+[Use messages with the SDK for .NET](org-service/use-messages.md)  
+[Optimize performance for bulk operations](optimize-performance-create-update.md)
