@@ -55,7 +55,7 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 
 1. In **Solution Explorer**, double-click Program.cs to edit that file. Replace the file's contents with the code shown below.
    
-   :::code language="csharp" source="~/PowerApps-Samples/dataverse/orgsvc/C%23-NETCore/GetStarted/quickstart-execute-request/Program.cs":::
+   :::code language="csharp" source="~/../PowerApps-Samples/dataverse/orgsvc/C%23-NETCore/GetStarted/quickstart-execute-request/Program.cs":::
    
    ```csharp
    using Microsoft.Crm.Sdk.Messages;
@@ -210,8 +210,8 @@ The following articles explain how to work with business data in Dataverse table
 You can find SDK for .NET sample code in our GitHub repository at [PowerApps-Samples/dataverse/orgsvc](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc).
 
 
-### User ServiceClient extensions
+### Use ServiceClient extensions
 
-In addition to implementing the [IOrganizationService interface](xref:Microsoft.Xrm.Sdk.IOrganizationService), [ServiceClient)](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) offers extension methods and beyond the core methods defined by `IOrganizationService`. [Learn more about using ServiceClient](../sdk-client-transition.md)
+In addition to implementing the [IOrganizationService interface](xref:Microsoft.Xrm.Sdk.IOrganizationService), [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) offers extension methods beyond the core methods defined by `IOrganizationService` and the capability to enable logging with [ILogger](xref:Microsoft.Extensions.Logging.ILogger). [Learn more about using ServiceClient](../sdk-client-transition.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
