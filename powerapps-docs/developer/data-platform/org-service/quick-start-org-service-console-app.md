@@ -54,17 +54,7 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 ## Add application code
 
 1. In **Solution Explorer**, double-click Program.cs to edit that file. Replace the file's contents with the code shown below.
-
-<!-- 
-Should the following work? Error in build: 
-
-   :::code language="csharp" source="~/../PowerApps-Samples/dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs":::
-
- The code snippet "~/../PowerApps-Samples/dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs" could not be found.
--->
-
-   :::code language="csharp" source="~/PowerApps-Samples/dataverse/orgsvc/C#-NETCore/GetStarted/quickstart-execute-request/Program.cs":::
-
+   
    ```csharp
    using Microsoft.Crm.Sdk.Messages;
    using Microsoft.PowerPlatform.Dataverse.Client;
@@ -105,7 +95,7 @@ Should the following work? Error in build:
       }
    }
    ```
-
+   
 1. Change the values for the `url`, `userName`, and `password` as indicated by the `// TODO` code comment.
 
     > [!NOTE]
