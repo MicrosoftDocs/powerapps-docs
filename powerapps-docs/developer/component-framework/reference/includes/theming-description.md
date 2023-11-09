@@ -1,1 +1,1 @@
-Provides API for the platform provided Modern Theme
+Provides API for the platform-provided modern theming
