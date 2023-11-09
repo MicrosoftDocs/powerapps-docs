@@ -81,8 +81,9 @@ Although elastic tables are great for handling large volume of requests at scale
 - Create, retrieve, update, delete (CRUD) operations including API multiple operations (for high throughput), bulk deletion, and requests from plug-ins.
 - Relationships: 
    - One-to-many
-   - Many-to-one 
+   - Many-to-one when the N table is a standard table
 - Record ownership, change tracking, auditing, mobile offline, and Dataverse search.
+- File column with file type attribute 
 
 ### Security features support
 
@@ -102,7 +103,6 @@ Table features currently not supported with elastic tables:
 - Business process flows
 - One Dataverse connector for Power BI
 - Many-to-many (N:N) relationships to standard tables
-- Many-to-one (N:1) relationships when the N table is a standard table (lookup)
 - Alternate key
 - Duplicate detection
 - Calculated and rollup columns
@@ -126,7 +126,6 @@ Table features currently not supported with elastic tables:
 Column data types currently not available with elastic tables:
 
 - Currency
-- File
 - Formula
 - Whole number format other than None (Duration, Language code, and Time zone)
 - Lookup based on the Customer option
@@ -144,13 +143,11 @@ You create an elastic table just like any other new table in Dataverse.
 
 ## Known issues
 
-- Currently Power Apps (make.powerapps.com) allows you to set a many-to-one (N:1) relationship with an elastic table where the N table is a standard table. Standard table will have a lookup column pointing to an elastic table row. While retrieving rows for a standard table in such a relationship, the lookup column that points to an elastic table row won't have the formatted value returned when the elastic table row has the `partitionid` set. More information: [Developer Guide: Partitioning and horizontal scaling](../../developer/data-platform/elastic-tables.md#partitioning-and-horizontal-scaling)
-- Getting related rows when making a query on an elastic table currently doesn't work. However, getting related rows works when retrieving a single elastic table row.
 - When [time to live (TTL)](#automatic-removal-of-data) is used on a row, the row will get deleted from the elastic table when TTL has expired. If it's synchronized to a data lake using [Azure Synapse Link for Dataverse](export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
 
 ## Import data into elastic tables
 
-To import data, use the bulk API (../../developer/data-platform/bulk-operations-elastic-tables). This allows you to achieve 10 times the throughput with the same Dataverse API throttling limits.
+To import data, use the Dataverse [Bulk API](../../developer/data-platform/bulk-operations.md). This allows you to achieve 10 times the throughput with the same Dataverse API throttling limits. Developers can reference more links provided in below section.
 
 ## For developers
 
