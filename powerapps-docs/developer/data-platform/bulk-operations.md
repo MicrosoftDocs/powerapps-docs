@@ -211,6 +211,10 @@ OData-Version: 4.0
 
 ---
 
+#### Duplicate records in the payload
+
+Multiple records with the same primary key or alternate key values in the payload are not supported with UpdateMultiple. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, the operation is performed on the first record only. Any subsequent records with the same key value(s) in the payload are ignored.
+
 ### DeleteMultiple
 
 `DeleteMultiple` is available only for elastic tables.
@@ -492,9 +496,7 @@ Before the introduction of bulk operation messages, all custom logic was on the 
 
 [Learn how to write plug-ins for CreateMultiple and UpdateMultiple (preview)](write-plugin-multiple-operation.md).
 
-## Duplicate records in the payload
 
-Multiple records with the same primary key value in the payload are not supported. When more than one record in the `Targets` parameter has the same unique identifier, the operation is performed on the first record only. Any subsequent records with the same unique identifier in the payload are ignored.
 
 ## Limitations
 
