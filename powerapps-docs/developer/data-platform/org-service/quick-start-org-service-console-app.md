@@ -101,9 +101,11 @@ You can download the complete code sample from GitHub [quickstart-execute-reques
 1. Change the values for the `url`, `userName`, and `password` as indicated by the `// TODO` code comment.
 
     > [!NOTE]
-    > You can find supported values for *AuthType* listed in [Connection string parameters](../xrm-tooling/use-connection-strings-xrm-tooling-connect.md#connection-string-parameters). You can find your environment URL in the legacy web application under **Settings > Customization > Developer Resources** or in Power Apps **Settings** (gear icon) > **Developer Resources**.
+    > You can find your environment URL in the legacy web application under **Settings > Customization > Developer Resources** or in Power Apps **Settings** (gear icon) > **Developer Resources**.
     >
     > While this code sample places the username/password information in the code for simplicity, other code samples will use the more recommended approach of prompting for that information or storing it in a separate App.config or appsettings.json file.
+    >
+    > You can find supported values for *AuthType* listed in [Connection string parameters](../xrm-tooling/use-connection-strings-xrm-tooling-connect.md#connection-string-parameters).
 
 ## Run the program
 
@@ -206,5 +208,10 @@ The following articles explain how to work with business data in Dataverse table
 ### Explore our code samples
 
 You can find SDK for .NET sample code in our GitHub repository at [PowerApps-Samples/dataverse/orgsvc](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc).
+
+
+### User ServiceClient extensions
+
+In addition to implementing the [IOrganizationService interface](xref:Microsoft.Xrm.Sdk.IOrganizationService), [ServiceClient)](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) offers extension methods and beyond the core methods defined by `IOrganizationService`. [Learn more about using ServiceClient](../sdk-client-transition.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
