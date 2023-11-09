@@ -17,7 +17,9 @@ contributors:
 
 This sample component showcases a variety of use cases for utilizing the modern theming API capabilities to style your component based on the current theme used in your app. The imported components will adhere to the default Power Apps modern theme initially, until the you have [enabled modern controls and themes for your app](../../../powerapps/maker/canvas-apps/controls/modern-controls/overview-modern-controls.md#enable-modern-controls-and-themes-for-your-app) and [applied a modern theme](../../../maker/canvas-apps/controls/modern-controls/modern-theming#apply-modern-theme).
 
-> [!div class="mx-imgBorder"] > ![Modern Theming API component](../media/modern-theming-api-control.png "Modern Theming API component")
+> [!div class="mx-imgBorder"] > ![Modern Theming API component](../media/modern-theming-api-control-blue.png "Modern Theming API component blue theme")
+> [!div class="mx-imgBorder"] > ![Modern Theming API component](../media/modern-theming-api-control-red.png "Modern Theming API component red theme")
+> [!div class="mx-imgBorder"] > ![Modern Theming API component](../media/modern-theming-api-control-green.png "Modern Theming API component gree theme")
 
 ## Available for
 
