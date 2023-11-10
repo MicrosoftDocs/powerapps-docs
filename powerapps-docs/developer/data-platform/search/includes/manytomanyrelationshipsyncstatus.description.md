@@ -1,0 +1,1 @@
+Contains information about the synchronization status of many-to-many relationships.

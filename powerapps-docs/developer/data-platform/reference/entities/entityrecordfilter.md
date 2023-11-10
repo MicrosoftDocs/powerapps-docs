@@ -1,7 +1,7 @@
 ---
 title: "EntityRecordFilter table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the EntityRecordFilter table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -327,8 +327,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier of the user who created the record.|
@@ -342,8 +340,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -360,8 +356,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -394,8 +388,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier of the delegate user who created the record.|
@@ -409,8 +401,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -427,8 +417,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -471,8 +459,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier of the user who modified the record.|
@@ -486,8 +472,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -504,8 +488,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -538,8 +520,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier of the delegate user who modified the record.|
@@ -553,8 +533,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -572,8 +550,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description||
@@ -590,8 +566,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
-**Added by**: Active Solution Solution
-
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier for the organization|
@@ -605,8 +579,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -686,8 +658,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
-
-**Added by**: Active Solution Solution
 
 |Property|Value|
 |--------|-----|
