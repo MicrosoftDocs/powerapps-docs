@@ -1,8 +1,8 @@
 ---
-title: "Solutions in Power Apps | MicrosoftDocs"
-description: "Provides an overview of solutions in Power Apps"
+title: Solutions in Power Apps
+description: Provides an overview of solutions in Power Apps
 ms.date: 05/04/2023
-ms.reviewer: ""
+ms.reviewer: angieandrews
 ms.topic: overview
 author: "Mattp123"
 ms.assetid: ece68f5f-ad40-4bfa-975a-3e5bafb854aa
@@ -20,7 +20,7 @@ Solutions are used to transport apps and components from one environment to anot
 Solutions are the mechanism for implementing application lifecycle management (ALM) in Power Apps and other Power Platform products, such as Power Automate. 
 
 > [!NOTE]
-> For detailed information about the solution concepts and how solutions are used for application lifecycle management, see [Overview of ALM with Microsoft Power Platform](/power-platform/alm/overview-alm) in the Power Platform ALM guide.
+> To learn more about the solution concepts and how solutions are used for application lifecycle management, go to [Overview of ALM with Microsoft Power Platform](/power-platform/alm/overview-alm) in the Power Platform ALM guide.
 
 This section will focus on the **manual** tasks that app makers need to perform while working with solutions in Power Apps.
 
@@ -33,11 +33,11 @@ Before you work with solutions, it's important that you get acquainted with the 
 - Solution publisher
 - Solution and solution component dependencies
 
-For detailed information, see [Solution concepts](/power-platform/alm/solution-concepts-alm) in the Power Platform ALM guide.
+To learn more, go to [Solution concepts](/power-platform/alm/solution-concepts-alm) in the Power Platform ALM guide.
 
 ## Default solutions
 
-Power Apps provides you the following default [unmanaged](/power-platform/alm/solution-concepts-alm) solutions:
+Power Apps provides you with the following default [unmanaged](/power-platform/alm/solution-concepts-alm) solutions:
 
 - **Common Data Service Default Solution**. This solution is available for makers to use by default for their customizations in an environment. The Common Data Service Default Solution is useful when you want to evaluate or learn Power Apps. However, we recommend that app makers work in their own unmanaged solutions. 
 - **Default Solution**. This is a special solution that contains all components in the system. The default solution is useful for discovering all the components and configurations in your system.
@@ -68,7 +68,7 @@ From the **Solutions** area, select a solution to view all of its components.
 > [!div class="mx-imgBorder"]  
 > ![Demo solution with all components.](media/solution-all-items-list.PNG "Demo solution with all components")   
  
- You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
+ You can browse through all the components in a solution by scrolling through the items. If there are more than 100 items in the list you can select **Load the next 100 items** to see more.
  
 > [!div class="mx-imgBorder"]  
 > ![Load more components.](media/load-more.PNG "Load more components")  
@@ -83,24 +83,23 @@ From the **Solutions** area, select a solution to view all of its components.
   
 > [!div class="mx-imgBorder"]  
 > ![Filter component by type.](media/solution-filter.PNG "Filter component by type")  
- 
 
  ## Contextual commands
 
  As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
- 
+
 > [!div class="mx-imgBorder"]  
 > ![Component specific commands.](media/component-commands.png "Component specific commands")  
- 
+
  When you don't select any component, the command bar will show actions applied to the solution itself. 
  
 > [!div class="mx-imgBorder"]  
 > ![Solution specific commands.](media/solution-commands.PNG "Solution specific commands")  
- 
+
 With solutions that are unmanaged or the default one, you can use the **New** or **Add Existing** command to create or add different types of components. More information: [Add solution components](create-solution.md#add-solution-components)
- 
+
 > [!NOTE]
-> You can't add components to a managed solution. When you try to, you’ll see the following message:<br/>
+> You can't add components to a managed solution. When you try to, you’ll get the following message:<br/>
 `"You cannot directly edit the components within a managed solution. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable."`
 
 ## Additional privileges required
@@ -109,7 +108,7 @@ Some components may require certain Dataverse privileges for users to run the co
 
 ### Flows
 
-To use or run a flow from a canvas app that is included in a solution, you must have permissions to that flow through someone sharing ownership or run permissions. When an app in a solution is shared with a set of users, the flows must also be explictly shared.
+To use or run a flow from a canvas app that is included in a solution, you must have permissions to that flow through someone sharing ownership or run permissions. When an app in a solution is shared with a set of users, the flows must also be explicitly shared.
 
 More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
@@ -119,37 +118,24 @@ Easily deploy solutions to test and production environments using pipelines in P
 
 ## Known limitations
 
-The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
+The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions.
 
--	If you encounter a canvas app publishing error: **the app has connections to flows that are no longer in the environment**, remove any deleted flows from the app. Then save and publish the app.  
-- Canvas apps shared with 'Everyone' that go through environment backup and environment restore operations aren't shared with 'Everyone' in the restored environment. Notice that, the canvas app can be shared with a security group and the app in the restored environment will be shared with that security group.  
-- Canvas app instant flows must be created from an app already in a solution since adding this type of flow from outside solutions is blocked. 
-   - Workaround for this limitation: Remove the trigger, replace with another trigger like recurrence, save the flow, add it into a solution, and then change the trigger as needed.
-- Instant flows (flows that use a manual trigger) can't be added to a solution after the flow has been created. To include an instant flow in a solution, it must be created from the solution. To do this, from the solution select **New** > **Automation** > **Cloud flow** > **Instant**.
-- The [Power Automate mobile app](/power-automate/mobile-manage-flows) does not currently support flows created in a solution. 
-- The Flow action menu in [Power Apps Mobile](/powerapps/mobile/run-powerapps-on-mobile) and [Dynamics 365 for phones and tablets](/dynamics365/mobile-app/overview) does not currently support flows created in a solution. 
-- Flows in solutions don't support delegated authorization. For example, access to a flow cannot be automatically granted based on having access to the SharePoint list the flow was created from. 
-- Flows using [connectors](/connectors/connector-reference/) that are 'indexed' cannot be added into solutions. Indexing isn't supported for solution cloud flows yet. Indexing enables the quick retrieval of those flows to display in a menu or list. Indexed connectors include Power Automate instant (button) flows, Power Apps, Teams, SharePoint, Dynamics 365 Customer Voice, Microsoft Forms, legacy Dataverse connector, Dynamics 365, Excel Online, Microsoft Project, Azure IOT Central V2, and Project Online. 
-   - Workarounds for this limitation: 
-      - Edit the flow to remove the indexed connector triggers/actions, add it into a solution, and then change it back.
-      - Create a new flow in a solution. 
-- Flows triggered from Microsoft 365 applications such as Excel cannot see/show cloud flows in solutions since they use indexing.
-      
-For details about customizing the individual components in a solution, see the following topics:  
+- If you encounter a canvas app publishing error: **the app has connections to flows that are no longer in the environment**, remove any deleted flows from the app. Then save and publish the app.  
+- Canvas apps shared with **Everyone** that go through environment backup and environment restore operations aren't shared with **Everyone** in the restored environment. Notice that the canvas app can be shared with a security group, and the app in the restored environment is shared with that security group.  
+- Solution cloud flows using the [Project Roadmap](/connectors/projectroadmap/) connector or using delegated authorization can't be added into solutions yet. The workaround for this limitation is to edit the flow to remove the Project Roadmap connector usage and/or delegated authorization, add the flow into a solution, and then change the flow back as needed.
   
--   For table, table relationships, column and message customizations, see [Metadata](create-edit-metadata.md).  
+To learn more about customizing the individual components in a solution, go to the following topics:  
   
--   For table forms, see [Forms](../model-driven-apps/create-design-forms.md).  
-  
--   For processes, see [Processes](../model-driven-apps/guide-staff-through-common-tasks-processes.md).  
-  
--   For business rules, see [Business Rules](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
+- For table, table relationships, column and message customizations, go to [Metadata](create-edit-metadata.md).  
+- For table forms, go to [Forms](../model-driven-apps/create-design-forms.md).  
+- For processes, go to [Processes](../model-driven-apps/guide-staff-through-common-tasks-processes.md).  
+- For business rules, go to [Business Rules](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
 
 ## Troubleshooting solutions
 
 For known issues and information about how to troubleshoot working with solutions, go to [Manage apps and solutions](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/unmanaged-active-layer-created-after-solution-import) in the Power Apps Troubleshooting documentation.
 
-### Next steps
+## Next step
 
 [Create a solution](create-solution.md)
 

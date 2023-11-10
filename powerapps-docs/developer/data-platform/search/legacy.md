@@ -1,39 +1,37 @@
 ---
-title: Search across table data using Dataverse search
-description: Learn about the various ways to find table data, including search, suggestions, and autocomplete, and even search across table types, using Microsoft Dataverse.
-ms.date: 10/13/2020
-ms.topic: how-to
-applies_to: 
-  - Dynamics 365 (online)
+title: "Dataverse search (legacy) (Microsoft Dataverse)| Microsoft Docs"
+description: "Dataverse legacy search remains available but we recommend you use Dataverse Search 2.0."
+ms.date: 10/20/2023
+ms.topic: article
 author: mspilde
 ms.author: mspilde
-ms.reviewer: pehecke
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
+contributors:
+ - JimDaly
 ---
 
-# Search across table data using Dataverse search
+# Dataverse search (legacy)
 
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
+> [!IMPORTANT]
+> This documentation is for the legacy Dataverse search endpoint. We recommend that you use the latest Dataverse search endpoint. More information: [Search for Dataverse records](overview.md)
 
-Dataverse search delivers fast and comprehensive search results across multiple
-tables, in a single list, sorted by relevance. Dataverse search must be
-enabled in your target environment by an administrator before you can use the
-feature. More information: [Using Dataverse search to search for records](../../../user/relevance-search.md)
-
-To begin using Dataverse search, your application simply issues an HTTP POST
-request (presently Web API only) to start a Dataverse search. When searching
-data, specify optional query parameters to set criteria for how the environment
+To begin using the legacy Dataverse search (version 1.0), your application issues an HTTP POST
+request to start a Dataverse search. When searching
+data, specify optional properties in the request body to set criteria for how the environment
 data is to be searched.
 
-There are three Dataverse search methods that can be used in the Power Apps web
-application UI:
+The legacy Dataverse search has three endpoints that can be used in Power Apps ([make.powerapps.com](https://make.powerapps.com)):
 
-- **Search**: Provides a search results page.
+- **Search**: `/api/search/v1.0/query` Provides a search results page.
 
-- **Suggestions**: Provides suggestions as the user enters text into a form field.
+- **Suggestions**: `/api/search/v1.0/suggest` Provides suggestions as the user enters text into a form field.
 
-- **Autocomplete**: Provides autocompletion of input as the user enters text into a
+- **Autocomplete**: `/api/search/v1.0/autocomplete` Provides autocompletion of input as the user enters text into a
     form field.
 
 The following sections describe how to access the previously mentioned search
@@ -50,33 +48,33 @@ POST [Organization URI]/api/search/v1.0/query
 }
 ```
 
-The `search` parameter value contains the term to be searched for and has a
+The `search` property value contains the term to be searched for and has a
 100-character limit.
 
 A successful search response returns an HTTP status of 200 and consists of:
 
-- value: a list of tables. By default, 50 results are returned. Includes search highlights, which indicate matches to the search parameter
+- `value`: a list of tables. By default, 50 results are returned. This property also
+    includes search highlights, which indicate matches to the `search` property
     value contained within the `crmhit` tag of the response.
 
-- totalrecordcount: The total count of results (of type long). A value of &minus;1
+- `totalrecordcount`: The total count of results (of type long). A value of &minus;1
     is returned if `returntotalrecordcount` is set to **false** (default).
 
-- facets: The facet results.
+- `facets`: The facet results.
 
-In addition, you can add one or more query parameters to customize how the
-search is to be done and which results are returned. The supported query
-parameters are indicated in the following section.
+In addition, you can add one or more properties to the payload to customize how the
+search is to be done and which results are returned. The supported properties are indicated in the following section.
 
-### Query parameters
+### Query properties
 
-The following query parameters are supported for Dataverse search.
+The following properties are supported for Dataverse search using the query endpoint.
 
-#### `entities=[list<string>] (optional)`
+#### `entities:[list<string>]` (optional)
 
 The default table list searches across all Dataverse search&ndash;configured tables
 and columns. The administrator configures the default list when Dataverse search is enabled.
 
-#### `facets=[list<string>] (optional)`
+#### `facets:[list<string>]` (optional)
 
 Facets support the ability to drill down into data results after they've been
 retrieved.
@@ -94,9 +92,9 @@ POST [Organization URI]/api/search/v1.0/query
 }
 ```
 
-#### `filter=[string] (optional)`
+#### `filter:[string]` (optional)
 
-Filters are applied while searching data and are specified in standard OData
+Filters are applied while searching data and are specified in an OData-style
 syntax.
 
 ```http
@@ -110,42 +108,46 @@ POST [Organization URI]/api/search/v1.0/query
 }
 ```
 
-#### `returntotalrecordcount = true | false (optional)`
+#### `returntotalrecordcount: true | false` (optional)
 
 Specify **true** to return the total record count; otherwise **false**. The default
 is **false**.
 
-#### `skip=[int] (optional)`
+#### `skip:[int]` (optional)
 
 Specifies the number of search results to skip.
 
-#### `top=[int] (optional)`
+#### `top:[int]` (optional)
 
 Specifies the number of search results to retrieve. The default is 50, and the maximum value is 100.
 
-#### `orderby=[list<string>] (optional)`
+#### `orderby:[list<string>]` (optional)
 
 A list of comma-separated clauses where each clause consists of a column name followed by 'asc' (ascending, which is the default) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering is random.
 
-For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
+For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` property overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
 `"orderby": ["@search.score desc", "modifiedon desc"]`
 
 If the query request includes a filter for a specific table type, `orderby` can optionally specify table-specific columns.
 
-#### `searchmode= any | all (optional)`
+#### `searchmode:any | all` (optional)
 
-Specifies whether any or all the search terms must be matched to count the
-document as a match. The default is 'any'.
+Specifies whether `any` or `all` the search terms must be matched to count the
+document as a match. The default is `any`.
 
 > [!NOTE]
-> The `searchMode` parameter on a query request controls whether a term with the NOT operator is AND'ed or OR'ed with other terms in the query (assuming there is no + or | operator on the other terms).<p/> Using `searchMode=any` increases the recall of queries by including more results, and by default will be interpreted as "OR NOT". For example, "wifi -luxury" will match documents that either contain the term "wifi" or those that don't contain the term "luxury".<p/>Using `searchMode=all` increases the precision of queries by including fewer results, and by default will be interpreted as "AND NOT". For example, "wifi -luxury" will match documents that contain the term "wifi" and don't contain the term "luxury".
+> The `searchMode` property on a query request body controls whether a term with the NOT operator is AND'ed or OR'ed with other terms in the query (assuming there is no + or | operator on the other terms).
+>
+> Using `"searchMode": "any"` increases the recall of queries by including more results, and by default will be interpreted as "OR NOT". For example, "wifi -luxury" will match documents that either contain the term "wifi" or those that don't contain the term "luxury".
+>
+> Using `"searchMode": "all"` increases the precision of queries by including fewer results, and by default will be interpreted as "AND NOT". For example, "wifi -luxury" will match documents that contain the term "wifi" and don't contain the term "luxury".
 
-#### `searchtype= simple | full (optional)`
+#### `searchtype:simple | full` (optional)
 
-The search type specifies the syntax of a search query. Using 'simple' selects
-simple query syntax and 'full' selects Lucene query syntax. The default is
-'simple'.
+The search type specifies the syntax of a search query. Using `simple` selects
+simple query syntax and `full` selects Lucene query syntax. The default is
+`simple`.
 
 The simple query syntax supports the following functionality:
 
@@ -171,7 +173,7 @@ The Lucene query syntax supports the following functionality:
 > [!NOTE]
 > Wildcards are used only for word completion in Dataverse search. As a rule, querying with a leading wildcard will take significantly longer than not using a wildcard, so we encourage you to explore alternative ways to find what you're looking for and only use leading wildcards sparingly, if at all.
 
-In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). You must escape the following special characters: + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
+In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). Special characters that require escaping include the following: `+ - & | ! ( ) { } [ ] ^ " ~ * ? : \ /`
 
 ### Example: basic search
 
@@ -312,8 +314,8 @@ POST [Organization URI]/api/search/v1.0/query
 
 ## Suggestions
 
-Suggestions provide a list of matches to the specified search parameter value,
-based on a table record's primary column. This behavior is different from a regular search
+Suggestions provide a list of matches to the specified search property value,
+based on a table record's primary column. This is different from a regular search
 request because a suggestion search only searches through a record's primary column,
 while search requests search through all Dataverse search&ndash;enabled table columns.
 
@@ -326,43 +328,43 @@ POST [Organization URI]/api/search/v1.0/suggest
 }
 ```
 
-The search parameter value provides a text string for the search to match and
+The search property value provides a text string for the search to match and
 has a three-character minimum length.
 
 A successful search response returns an HTTP status of 200 and contains "value",
 which is a list consisting of text or a document where the text is the
 suggestion with highlights, and the document is a dictionary \<string,object\>
-of the suggestion result. By default, five results are returned. Suggestion highlights indicate matches to the search parameter value and are contained within the `crmhit` tag in the response.
+of the suggestion result. By default, five results are returned. Suggestion highlights indicate matches to the search property value and are contained within the `crmhit` tag in the response.
 
-In addition, you can add one or more query parameters to customize how the
+In addition, you can add one or more properties to the body of the request to customize how the
 suggestion search is to be done and which results are returned. The supported
-query parameters are indicated in the following section.
+properties are indicated in the following section.
 
-### Query parameters
+### Suggest properties
 
-#### `usefuzzy=true | false (optional)`
+#### `usefuzzy:true | false` (optional)
 
 Use fuzzy search to aid with misspellings. The default is **false**.
 
-#### `top=[int] (optional)`
+#### `top:[int]` (optional)
 
 Number of suggestions to retrieve. The default is 5.
 
-#### `orderby=[List<string>] (optional)`
+#### `orderby:[List<string>]` (optional)
 
-A list of comma-separated clauses where each clause consists of a column name followed by 'asc' (ascending) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering is random.
+A list of comma-separated clauses where each clause consists of an column name followed by `asc` (ascending) or `desc` (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
 
-For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
+For a set of results that contain multiple table types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` property overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
 `"orderby": ["@search.score desc", "modifiedon desc"]`
 
 If the query request includes a filter for a specific table type, `orderby` can optionally specify table-specific columns.
 
-#### `entities=[list<string>] (optional)`
+#### `entities:[list<string>]` (optional)
 
 The default is searching across all Dataverse search&ndash;configured tables.
 
-#### `filter=[string] (optional)`
+#### `filter:[string]` (optional)
 
 Filters are applied while searching data and are specified in standard OData
 syntax.
@@ -434,22 +436,21 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 A successful search response returns an HTTP status of 200 and consists of
 "value", which is a string.
 
-In addition, you can add one or more query parameters to customize how the
-search is to be done and which results are returned. The supported query
-parameters are indicated in the following section.
+In addition, you can add one or more properties to the request body to customize how the
+search is to be done and which results are returned. The supported properties are indicated in the following section.
 
-### Query parameters
+### Autocomplete properties
 
-#### `usefuzzy=true | false (optional)`
+#### `usefuzzy: true | false` (optional)
 
 Fuzzy search to aid with misspellings. The default is **false**.
 
-#### `entities=[list<string>] (optional)`
+#### `entities: [list<string>]` (optional)
 
 The default scope is searching across all Dataverse search&ndash;configured tables
 and columns.
 
-#### `filter=[string] (optional)`
+#### `filter: [string]` (optional)
 
 Filters are applied while searching data and are specified in standard OData
 syntax.
@@ -489,9 +490,10 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### See also
 
-[Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)   
-[Compare search options in Microsoft Dataverse](../../../user/search.md)   
-[Query data using the Web API](query-data-web-api.md)   
-[Connect with your Dataverse environment](setup-postman-environment.md#connect-with-your-dataverse-environment)
+[Search for Dataverse records](overview.md)   
+[Dataverse Search query](query.md)   
+[Dataverse Search suggest](suggest.md)   
+[Dataverse Search autocomplete](autocomplete.md)   
+[Dataverse Search statistics and status](statistics-status.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
