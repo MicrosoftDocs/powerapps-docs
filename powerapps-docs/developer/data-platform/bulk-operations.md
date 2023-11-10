@@ -1,7 +1,7 @@
 ---
 title: Use bulk operation messages (preview)
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 08/02/2023
+ms.date: 11/09/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -210,6 +210,10 @@ OData-Version: 4.0
 ```
 
 ---
+
+#### Duplicate records in the payload
+
+Multiple records with the same primary key or alternate key values in the payload are not supported with UpdateMultiple. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, the operation is performed on the first record only. Any subsequent records with the same key value(s) in the payload are ignored.
 
 ### DeleteMultiple
 
@@ -492,6 +496,8 @@ Before the introduction of bulk operation messages, all custom logic was on the 
 
 [Learn how to write plug-ins for CreateMultiple and UpdateMultiple (preview)](write-plugin-multiple-operation.md).
 
+
+
 ## Limitations
 
 Keep the following limitations in mind when you use bulk operation messages.
@@ -531,6 +537,12 @@ As part of the changes we made to [merge message pipelines](#message-pipelines-m
 
 You shouldn't migrate custom logic from `Delete` to `DeleteMultiple` until this issue is resolved. You can use `DeleteMultiple` and any logic that's associated with the `Delete` message still works.
 
+## Troubleshooting common errors
+
+If you encounter errors while using bulk operations, please refer to the following articles:
+- [Troubleshoot Dataverse bulk operation errors](/troubleshoot/power-platform/power-apps/dataverse/bulk-operation-errors)
+- [Troubleshoot Dataverse client errors](/troubleshoot/power-platform/power-apps/dataverse/client-errors)
+
 ## Frequently asked questions (FAQ)
 
 If you don't find an answer in this article to questions you have about using bulk operation messages, use the button at the bottom of the page to **Submit and view feedback for This Page**. You need a GitHub account to submit feedback.
@@ -561,4 +573,5 @@ These limits are based on data changes: `Create`, `Update`, and `Delete` operati
 [Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)  
 [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](webapi/samples/create-update-multiple.md)  
 [Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)  
-[Use messages with the SDK for .NET](org-service/use-messages.md)
+[Use messages with the SDK for .NET](org-service/use-messages.md)  
+[Optimize performance for bulk operations](optimize-performance-create-update.md)

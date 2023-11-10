@@ -1,7 +1,7 @@
 ---
 title: "msdyn_schedule table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_schedule table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -73,11 +73,13 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_callbackurl](#BKMK_msdyn_callbackurl)
 - [msdyn_isactive](#BKMK_msdyn_isactive)
 - [msdyn_nextrefreshtime](#BKMK_msdyn_nextrefreshtime)
+- [msdyn_refentityname](#BKMK_msdyn_refentityname)
+- [msdyn_referenceid](#BKMK_msdyn_referenceid)
 - [msdyn_refreshpayload](#BKMK_msdyn_refreshpayload)
 - [msdyn_refreshperiod](#BKMK_msdyn_refreshperiod)
 - [msdyn_schedule](#BKMK_msdyn_schedule)
+- [msdyn_scheduledisabledreason](#BKMK_msdyn_scheduledisabledreason)
 - [msdyn_scheduleId](#BKMK_msdyn_scheduleId)
-- [msdyn_scheduleidref](#BKMK_msdyn_scheduleidref)
 - [msdyn_schedulerefreshtype](#BKMK_msdyn_schedulerefreshtype)
 - [msdyn_startdatetime](#BKMK_msdyn_startdatetime)
 - [msdyn_timebasedrefreshperiod](#BKMK_msdyn_timebasedrefreshperiod)
@@ -168,7 +170,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|DateTimeBehavior|UserLocal|
+|DateTimeBehavior|TimeZoneIndependent|
 |Description|Next expected refresh time|
 |DisplayName|NextRefreshTime|
 |Format|DateAndTime|
@@ -177,6 +179,35 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|msdyn_nextrefreshtime|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_msdyn_refentityname"></a> msdyn_refentityname
+
+|Property|Value|
+|--------|-----|
+|Description|Reference name of consuming entity|
+|DisplayName|Reference Entity Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_refentityname|
+|MaxLength|200|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_referenceid"></a> msdyn_referenceid
+
+|Property|Value|
+|--------|-----|
+|Description|Reference id of consuming entity|
+|DisplayName|Reference Entity Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_referenceid|
+|RequiredLevel|ApplicationRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_msdyn_refreshpayload"></a> msdyn_refreshpayload
@@ -227,6 +258,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_msdyn_scheduledisabledreason"></a> msdyn_scheduledisabledreason
+
+|Property|Value|
+|--------|-----|
+|Description|Schedule Refresh disabled reason if any|
+|DisplayName|Schedule disabled reason|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_scheduledisabledreason|
+|MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_msdyn_scheduleId"></a> msdyn_scheduleId
 
 |Property|Value|
@@ -239,20 +286,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|msdyn_scheduleid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
-
-### <a name="BKMK_msdyn_scheduleidref"></a> msdyn_scheduleidref
-
-|Property|Value|
-|--------|-----|
-|Description|Schedule id reference for dataflows etc.|
-|DisplayName|ScheduleId reference|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_scheduleidref|
-|RequiredLevel|SystemRequired|
-|Targets|msdyn_dataflow|
-|Type|Lookup|
 
 
 ### <a name="BKMK_msdyn_schedulerefreshtype"></a> msdyn_schedulerefreshtype
@@ -281,7 +314,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|DateTimeBehavior|UserLocal|
+|DateTimeBehavior|TimeZoneIndependent|
 |Description|Initial start date time|
 |DisplayName|StartDateTime|
 |Format|DateAndTime|
@@ -468,6 +501,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_scheduleidref](#BKMK_msdyn_scheduleidref)
 - [msdyn_scheduleidrefName](#BKMK_msdyn_scheduleidrefName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
@@ -782,6 +816,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_msdyn_scheduleidref"></a> msdyn_scheduleidref
+
+|Property|Value|
+|--------|-----|
+|Description|(Deprecated) Schedule id reference for dataflows etc.|
+|DisplayName|(Deprecated) ScheduleId reference|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|msdyn_scheduleidref|
+|RequiredLevel|None|
+|Targets|msdyn_dataflow|
+|Type|Lookup|
 
 
 ### <a name="BKMK_msdyn_scheduleidrefName"></a> msdyn_scheduleidrefName

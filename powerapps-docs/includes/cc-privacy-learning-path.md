@@ -1,4 +1,4 @@
-﻿By enabling the Learning Path feature, static html, you enable images and scripts to be stored on [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Content Delivery Network (CDN). In addition, all dynamic content that is displayed will be stored in [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Redis Cache, which is used to pre-cache from the [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] SQL database.  
+By enabling the Learning Path feature, static html, you enable images and scripts to be stored on [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Content Delivery Network (CDN). In addition, all dynamic content that is displayed will be stored in [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Redis Cache, which is used to pre-cache from the [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] SQL database.  
   
  An administrator can enable and disable use of the Learning Path feature within a [!INCLUDE[pn_crm_online_shortest](pn-crm-online-shortest.md)] instance by using the Enable Guided Help setting in the [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)] organization.  
   
@@ -35,7 +35,7 @@
   
  Learning Path uses [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Content Delivery Network to serve static content to the survey runtime, such as HTML, images, [!INCLUDE[pn_JavaScript](pn-javascript.md)], and CSS.  
   
- [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)  
+ [Microsoft Entra ID](https://azure.microsoft.com/services/active-directory/)  
   
  Learning Path uses [!INCLUDE[pn_azure_active_directory](pn-azure-active-directory.md)] Service to authenticate web services specifically for the designer. Currently the designer is not exposed to customers and partners. And hence the authentication is within only the [!INCLUDE[cc_Microsoft](cc-microsoft.md)] domain.  
   

@@ -1,7 +1,7 @@
 ---
 title: "Fax table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Fax table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -461,7 +461,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,contact,knowledgearticle,knowledgebaserecord|
+|Targets|account,adx_invitation,contact,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
 
 
@@ -1523,6 +1523,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_fax_modifiedby](#BKMK_lk_fax_modifiedby)
 - [Contact_Faxes](#BKMK_Contact_Faxes)
 - [lk_fax_modifiedonbehalfby](#BKMK_lk_fax_modifiedonbehalfby)
+- [adx_invitation_Faxes](#BKMK_adx_invitation_Faxes)
+- [mspp_adplacement_Faxes](#BKMK_mspp_adplacement_Faxes)
+- [mspp_pollplacement_Faxes](#BKMK_mspp_pollplacement_Faxes)
+- [mspp_publishingstatetransitionrule_Faxes](#BKMK_mspp_publishingstatetransitionrule_Faxes)
+- [mspp_redirect_Faxes](#BKMK_mspp_redirect_Faxes)
+- [mspp_shortcut_Faxes](#BKMK_mspp_shortcut_Faxes)
+- [mspp_website_Faxes](#BKMK_mspp_website_Faxes)
 
 
 ### <a name="BKMK_business_unit_fax_activities"></a> business_unit_fax_activities
@@ -1588,6 +1595,48 @@ See the [Contact_Faxes](contact.md#BKMK_Contact_Faxes) one-to-many relationship 
 ### <a name="BKMK_lk_fax_modifiedonbehalfby"></a> lk_fax_modifiedonbehalfby
 
 See the [lk_fax_modifiedonbehalfby](systemuser.md#BKMK_lk_fax_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_adx_invitation_Faxes"></a> adx_invitation_Faxes
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_Faxes](adx_invitation.md#BKMK_adx_invitation_Faxes) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_mspp_adplacement_Faxes"></a> mspp_adplacement_Faxes
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_adplacement_Faxes](mspp_adplacement.md#BKMK_mspp_adplacement_Faxes) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+
+### <a name="BKMK_mspp_pollplacement_Faxes"></a> mspp_pollplacement_Faxes
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_pollplacement_Faxes](mspp_pollplacement.md#BKMK_mspp_pollplacement_Faxes) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_Faxes"></a> mspp_publishingstatetransitionrule_Faxes
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_Faxes](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_Faxes) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_redirect_Faxes"></a> mspp_redirect_Faxes
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_redirect_Faxes](mspp_redirect.md#BKMK_mspp_redirect_Faxes) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_Faxes"></a> mspp_shortcut_Faxes
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_Faxes](mspp_shortcut.md#BKMK_mspp_shortcut_Faxes) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_Faxes"></a> mspp_website_Faxes
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_Faxes](mspp_website.md#BKMK_mspp_website_Faxes) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
 
 ### See also
 

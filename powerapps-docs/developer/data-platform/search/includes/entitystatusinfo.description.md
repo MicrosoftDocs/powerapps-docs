@@ -1,0 +1,1 @@
+Contains information about the status of tables enabled for search.
