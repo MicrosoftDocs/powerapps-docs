@@ -27,7 +27,7 @@ To use one of the example plug-ins for the data event the Dataverse accelerator 
 
 ## Return a non-negative value
 
-This example uses the [Abs() function](/power-platform/power-fx/reference/function-numericals) to return the non-negative value of its argument. If a number is negative, Abs returns the positive equivalent.
+This example uses the [Abs() function](/power-platform/power-fx/reference/function-numericals) to return the non-negative value of its argument. If a number is negative, `Abs` returns the positive equivalent.
 
 1. Play the Dataverse Accelerator app, on the command bar select **New action** > **Instant plugin**. 
 1. Provide a display name, such as the formula name, and description.
@@ -39,7 +39,7 @@ This example uses the [Abs() function](/power-platform/power-fx/reference/functi
    ```
 
 1. Enter an expression that tests the formula: 
-   - Validate that intellisense accepts the formula (text will turn light blue).
+   - Validate that intellisense accepts the formula (text turns light blue).
    - Implement an expression that provides an output to help validate the result, for example.
 
    ```powerapps-dot
@@ -53,10 +53,10 @@ This example uses the [Abs() function](/power-platform/power-fx/reference/functi
 
 ### Duplicate detection
 
-Implement server-side input validation, such as duplicate error detection, that throws a custom error message.
+Implement server-side input validation, such as duplicate error detection that throws a custom error message.
 
 1. Play the Dataverse Accelerator app, on the command bar select **New action** > **Automated plugin**.
-1. In the **Name** box enter *Duplicate check*.
+1. In the Name box, enter *Duplicate check*.
 1. For **Table**, select **Contact**.
 1. For **Run this plugin when the row is**, select **Created**.
 1. In the **Formula** box, enter this formula:
@@ -134,7 +134,7 @@ Here's an email template example that you can create for the SenMail based data 
    - **Name**: *SendEmailUponCreate*
    - **Table**: Select the logical table name of the sales orders, which is **SalesOrder**. This event is based off of Sales Orders table.
    - **Run this plugin with the row is**: **Created**
-   - **Formula**: Paste the code below into the **Formula** box. For more information abut the SendEmailFromTemplate function, to to [SendEmailFromTemplate Action](/power-apps/developer/data-platform/webapi/reference/sendemailfromtemplate?view=dataverse-latest&preserve-view=true ).
+   - **Formula**: Paste the code below into the **Formula** box. For more information abut the SendEmailFromTemplate function, to [SendEmailFromTemplate Action](/power-apps/developer/data-platform/webapi/reference/sendemailfromtemplate?view=dataverse-latest&preserve-view=true ).
    
      ```powerapps-dot
      XSendEmailFromTemplate(
@@ -154,7 +154,7 @@ In-app notifications enable makers to configure contextual, actionable notificat
 
 ### Create the low-code plugin that sends an in-app notification
 
-1. Play the Dataverse accelerator app, and then select  **+New plugin** under under **Instant plugins**.
+1. Play the Dataverse accelerator app, and then select  **+New plugin** under **Instant plugins**.
 1. Enter the following information, select **Next**: 
    - **Name**: *NotifyTechnican1*
    - **Description**: *This instant plug-in notifies the app user.*
@@ -241,7 +241,7 @@ Out: "Current temp: " & c.temp & " degrees. Feels like " & c.feels & " degrees. 
 
 Don't write a patch statement on an automated plugin upon 'Update' event, where the patch is happening on the same table as the plugin. This leads to infinite loops and plugin execution failures.
 
-Problematic pattern: Using `Patch()` formula will trigger another update.
+Problematic pattern: Using `Patch()` formula triggers another update.
 !["Problematic formula in automated plugins"](media/automated-plugin-infinite-incorrect.svg)
 
 Recommended pattern: Use the `Set()` formula instead to avoid this issue.
