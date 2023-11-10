@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 10/04/2023
+ms.date: 11/10/2023
 ms.custom: template-how-to
 ---
 # Example Dataverse low-code plug-ins (preview)
@@ -237,15 +237,15 @@ Out: "Current temp: " & c.temp & " degrees. Feels like " & c.feels & " degrees. 
 
 ## Best practices
 
-### Handling infinite loop errors in automated low code plugins
+### Handling infinite loop errors in automated low-code plugins
 
-If you want to write a patch statement on an automated plugin upon 'Update' event, where the patch is happening on the same table as the plugin, this will lead to infinite loops, leading to plugin execution failures.
+Don't write a patch statement on an automated plugin upon 'Update' event, where the patch is happening on the same table as the plugin. This leads to infinite loops and plugin execution failures.
 
-Problematic pattern: Using Patch() formula will trigger another update.
-!["Problematic formula in autoamted plugins"](media/automated-plugin-infinite-incorrect.svg)
+Problematic pattern: Using `Patch()` formula will trigger another update.
+!["Problematic formula in automated plugins"](media/automated-plugin-infinite-incorrect.svg)
 
-Recommended pattern: Our recommendation is to use Set() formula instead to avoid this issue.
-!["Problematic formula in autoamted plugins"](media/automated-plugin-infinite-correct.svg)
+Recommended pattern: Use the `Set()` formula instead to avoid this issue.
+!["Recommended formula in automated plugins"](media/automated-plugin-infinite-correct.svg)
 
 ## See also
 
