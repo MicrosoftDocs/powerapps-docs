@@ -47,7 +47,7 @@ In this article, you'll use data in your Azure SQL Database to create an app wit
 1. Enter a SQL authentication password and if necessary, change the autofilled username.
     
     > [!NOTE]
-    > If you want to use Azure AD Integrated authentication instead of SQL authentication with Azure SQL database, create an app from [Power Apps](https://make.powerapps.com) instead, and use [SQL Server connector](./connections/connection-azure-sqldatabase.md).
+    > If you want to use Microsoft Entra Integrated authentication instead of SQL authentication with Azure SQL database, create an app from [Power Apps](https://make.powerapps.com) instead, and use [SQL Server connector](./connections/connection-azure-sqldatabase.md).
 
 1. Select a table from the dropdown list that you want to use to create the app.
 
