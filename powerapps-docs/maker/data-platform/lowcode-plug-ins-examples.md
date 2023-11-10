@@ -235,6 +235,18 @@ Out: "Current temp: " & c.temp & " degrees. Feels like " & c.feels & " degrees. 
 })
 ```
 
+## Best practices
+
+### Handling infinite loop errors in automated low code plugins
+
+If you want to write a patch statement on an automated plugin upon 'Update' event, where the patch is happening on the same table as the plugin, this will lead to infinite loops, leading to plugin execution failures.
+
+Problematic pattern: Using Patch() formula will trigger another update.
+!["Problematic formula in autoamted plugins"](media/automated-plugin-infinite-incorrect.svg)
+
+Recommended pattern: Our recommendation is to use Set() formula instead to avoid this issue.
+!["Problematic formula in autoamted plugins"](media/automated-plugin-infinite-correct.svg)
+
 ## See also
 
 [Low-code plug-ins Power Fx (preview)](low-code-plug-ins-powerfx.md)
