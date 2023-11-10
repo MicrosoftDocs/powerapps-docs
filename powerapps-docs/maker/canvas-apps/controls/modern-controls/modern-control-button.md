@@ -18,9 +18,7 @@ contributors:
   - yogeshgupta698
   
 ---
-# Button modern control in Power Apps (preview)
-
-[This article is pre-release document and is subject to change.]
+# Button modern control in Power Apps
 
 A control that the user can select to interact with the app.
 
@@ -32,20 +30,31 @@ With the modern button you can set a button to be primary or secondary. Configur
 
 **[Text](../properties-core.md)** – Text that appears on a component.
 
-**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
+**BasePaletteColor** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color. If the value is null or zero, then the color is driven by selected Fluent theme.
 
-**Type** – Primary and Secondary. Primary emphasizes the button as a primary action. Secondary gives emphasis to the button in such a way that it indicates a secondary action.
+**Appearance** – A button can have its content and borders styled for greater emphasis or to be subtle. Below are the options available:
+* Primary: Emphasizes the button as a primary action.
+* Secondary: Gives emphasis to the button in such a way that it indicates a secondary action.
+* Outline: Removes background styling.
+* Subtle: Minimizes emphasis to blend into the background until hovered or focused.
+* Transparent: Removes background and border styling.
 
-**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+**FontSize** - The font size of the text that appears on a control. If the value is null or zero, then the font size is driven by selected Fluent theme.
 
 ## Additional properties
-**Accessible label** – Label for screen readers.
+**AccessibleLabel** – Label for screen readers.
+
+**DisplayMode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+
+**Visible** - Whether a control appears or is hidden.
 
 **[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
 **[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-**[Size](../properties-text.md)** – The size of the control on the canvas.
+**[Size](../properties-text.md)** – The size of the control on the canvas
+
+
 
 
 

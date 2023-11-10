@@ -1,7 +1,7 @@
 ---
 title: "UserSettings table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the UserSettings table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -100,6 +100,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PagingLimit](#BKMK_PagingLimit)
 - [PersonalizationSettings](#BKMK_PersonalizationSettings)
 - [PMDesignator](#BKMK_PMDesignator)
+- [PreferredSolution](#BKMK_PreferredSolution)
 - [PricingDecimalPrecision](#BKMK_PricingDecimalPrecision)
 - [ReleaseChannel](#BKMK_ReleaseChannel)
 - [ReportScriptErrors](#BKMK_ReportScriptErrors)
@@ -1070,6 +1071,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_PreferredSolution"></a> PreferredSolution
+
+**Added by**: Solutions Framework Metadata Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Preferred Solution when create a component without under a solution in this organization|
+|DisplayName|Preferred Solution|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|preferredsolution|
+|RequiredLevel|None|
+|Targets|solution|
+|Type|Lookup|
+
+
 ### <a name="BKMK_PricingDecimalPrecision"></a> PricingDecimalPrecision
 
 |Property|Value|
@@ -1914,6 +1931,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [preferredsolutionName](#BKMK_preferredsolutionName)
 - [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
 
@@ -2203,6 +2221,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_preferredsolutionName"></a> preferredsolutionName
+
+**Added by**: Solutions Framework Metadata Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|preferredsolutionname|
+|MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_TransactionCurrencyIdName"></a> TransactionCurrencyIdName
 
 |Property|Value|
@@ -2245,6 +2281,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_usersettingsbase_modifiedby](#BKMK_lk_usersettingsbase_modifiedby)
 - [lk_usersettings_modifiedonbehalfby](#BKMK_lk_usersettings_modifiedonbehalfby)
 - [business_unit_user_settings](#BKMK_business_unit_user_settings)
+- [user_settings_preferred_solution](#BKMK_user_settings_preferred_solution)
 - [user_settings](#BKMK_user_settings)
 
 
@@ -2271,6 +2308,10 @@ See the [lk_usersettings_modifiedonbehalfby](systemuser.md#BKMK_lk_usersettings_
 ### <a name="BKMK_business_unit_user_settings"></a> business_unit_user_settings
 
 See the [business_unit_user_settings](businessunit.md#BKMK_business_unit_user_settings) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+
+### <a name="BKMK_user_settings_preferred_solution"></a> user_settings_preferred_solution
+
+See the [user_settings_preferred_solution](solution.md#BKMK_user_settings_preferred_solution) one-to-many relationship for the [solution](solution.md) table/entity.
 
 ### <a name="BKMK_user_settings"></a> user_settings
 
