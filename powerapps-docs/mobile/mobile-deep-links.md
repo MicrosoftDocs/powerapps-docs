@@ -81,10 +81,10 @@ If the link goes to an `entitylist` view, add the following parameters:
 |----------------------|----------------------------------------------------------------------------------------------|
 | &lt;app-id&gt;       | Opens the correct app module                                                                 |
 | &lt;tenantId&gt;     | Connects to the correct tenant                                                               |
-| restartApp=true      | Restarts the canvas app, needed to ensure parameters are passed when the app is already open |
+| restartApp=true      | Restarts the canvas app to ensure parameters are passed when the app is already open. |
   
 ## Troubleshooting
 
-Deeplinks may open in browser depending on the company's organizational policies and the user's device settings. Mobile device management (MDM) tools and device operating systems have different options and settings that impact how deeplinks are handled. If deeplinks are opening in browser instead of directly in Power Apps mobile, ensure your MDM policies and device settings are appropriately configured. 
+Deeplinks may open in your browser depending on the company's organizational policies and the user's device settings. Mobile Device Management (MDM) tools and device operating systems have different options and settings that impact how deeplinks are handled. If deeplinks are opening in a browser instead of directly in Power Apps mobile, make sure your MDM policies and device settings are appropriately configured. 
 
-As an example, on some Android devices, one setting that can be changed to make deeplinks open directly in Power Apps mobile is in Settings > Apps > Power Apps > Open by default and add apps.powerapps.com.
+As an example, on some Android devices, go to **Settings** > **Apps** > **Power Apps** > **Open by default** and add **apps.powerapps.com** to make deeplinks open directly in Power Apps mobile.
