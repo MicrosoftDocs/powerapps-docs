@@ -4,7 +4,7 @@ description: How to configure deep links for Power Apps mobile.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 5/20/2022
+ms.date: 11/10/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -14,6 +14,8 @@ search.audienceType:
   - enduser
 searchScope:
   - "Power Apps"
+contributors:
+- anuitz 
 ---
 
 # Use deep links with the Power Apps mobile app
