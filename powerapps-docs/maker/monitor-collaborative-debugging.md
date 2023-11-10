@@ -48,7 +48,7 @@ including any data.
 
     ![Invite on the Monitor command bar.](media/monitor/invite.png "Invite on the Monitor command bar")
 
-1. Enter the Azure Active Directory user name or alias of the user whom you want
+1. Enter the Microsoft Entra user name or alias of the user whom you want
     to invite to the Monitor session.
 
     ![Invite user.](media/monitor/invite-user-search.png "Invite user")
