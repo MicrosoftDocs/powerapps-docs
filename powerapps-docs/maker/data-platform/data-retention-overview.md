@@ -9,12 +9,16 @@ ms.topic: overview
 ms.date: 10/20/2023
 ms.custom: template-overview
 ---
-# Dataverse long term data retention overview
+# Dataverse long term data retention overview (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Microsoft Dataverse supports custom retention policies to securely retain unlimited data long term in a cost-efficient way. While Dataverse can support your business growth with no limit on active data, you might want to consider moving inactive data to the Dataverse long term retention store.
 
 > [!IMPORTANT]
 > You must meet one of the following two requirements to use all long term data retention features:
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - Be a licensed Dynamics 365 customer engagement app customer.
 > - Be a licensed Power Apps customer with a [managed environment](/power-platform/admin/managed-environment-overview).
 >
