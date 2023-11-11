@@ -18,7 +18,7 @@ The *account* and *contact* tables in Microsoft Dataverse are essential for iden
  
 The account table is one of the tables in Dataverse to which most other tables are attached or parented. In Dataverse, an account represents a company with which the business unit has a relationship. Information that is included in an account is all relevant contact information, company information, category, relationship type, and address information. Other information that applies includes the following items:  
   
-- An account can be a parent to most other table types, including another account.  
+- An account can be a parent to most table types, including another account.  
   
 - An account can be a standalone table.  
   
