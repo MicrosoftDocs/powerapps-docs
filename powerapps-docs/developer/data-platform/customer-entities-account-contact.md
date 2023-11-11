@@ -1,7 +1,7 @@
 ---
 title: "Customer tables (account, contact, customeraddress) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The account and contact tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A customer address table is used to store address and shipping information for a customer." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/13/2023
+ms.date: 11/10/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: mayadumesh # GitHub ID
@@ -18,7 +18,7 @@ The *account* and *contact* tables in Microsoft Dataverse are essential for iden
  
 The account table is one of the tables in Dataverse to which most other tables are attached or parented. In Dataverse, an account represents a company with which the business unit has a relationship. Information that is included in an account is all relevant contact information, company information, category, relationship type, and address information. Other information that applies includes the following items:  
   
-- An account can be a parent to almost any other table. This includes another account.  
+- An account can be a parent to most table types, including another account.  
   
 - An account can be a standalone table.  
   
