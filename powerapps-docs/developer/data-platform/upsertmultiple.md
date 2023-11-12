@@ -115,3 +115,11 @@ The following code samples show how to use bulk operation messages. You can down
 
 [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)
 
+> [!NOTE]
+> Look for the [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/BulkOperations/UpsertMultiple/README.md)
+
+### See also
+
+[Use bulk operation messages](bulk-operations.md)   
+[Elastic tables (preview)](elastic-tables.md)  
+[Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)   
