@@ -120,7 +120,7 @@ The fastest way to update multiple records of the same type in a single request 
 More information:
 
 - [Bulk Operation messages (preview)](../bulk-operations.md)
-- [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](samples/create-update-multiple.md)
+- [Sample: Web API Use bulk operations](samples/create-update-multiple.md)
 - [Use UpdateMultiple with elastic tables](../use-elastic-tables.md#use-updatemultiple-with-elastic-tables)
   
 <a name="bkmk_updateSingleProperty"></a> 

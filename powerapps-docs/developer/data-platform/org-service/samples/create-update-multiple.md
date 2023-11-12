@@ -1,6 +1,6 @@
 ---
-title: "Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to perform bulk create and update operations using several different approaches including the use of CreateMultipleRequest and UpdateMultipleRequest classes. The messages for these request classes are optimized to provide the most performant way to create or update records with Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: SDK for .NET Use bulk operations (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample shows how to perform bulk create and update operations using several different approaches including the use of CreateMultipleRequest and UpdateMultipleRequest classes. The messages for these request classes are optimized to provide the most performant way to create or update records with Dataverse."
 ms.date: 06/01/2023
 author: divkamath
 ms.author: dikamath
@@ -16,9 +16,7 @@ contributors:
   - phecke
 ---
 
-# Sample: Use CreateMultiple and UpdateMultiple (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
+# Sample: SDK for .NET Use bulk operations
 
 These sample applications on GitHub show how to perform bulk create and update operations using several different approaches including the use of [CreateMultipleRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest) and [UpdateMultipleRequest](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest) classes. The messages for these request classes are optimized to provide the most performant way to create or update records with Dataverse.
 
@@ -31,8 +29,8 @@ See the README.md file in each sample for detailed instructions about how to run
 
 ### See Also
 
-[Bulk Operation messages (preview)](../../bulk-operations.md)   
-[Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../../write-plugin-multiple-operation.md)   
+[Bulk Operation messages](../../bulk-operations.md)   
+[Write plug-ins for CreateMultiple and UpdateMultiple](../../write-plugin-multiple-operation.md)   
 [Sample: CreateMultiple and UpdateMultiple plug-ins](createmultiple-updatemultiple-plugin.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

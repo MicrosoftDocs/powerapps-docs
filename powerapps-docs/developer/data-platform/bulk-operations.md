@@ -1,7 +1,7 @@
 ---
-title: Use bulk operation messages (preview)
+title: Use bulk operation messages
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 11/09/2023
+ms.date: 11/11/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -14,28 +14,21 @@ contributors:
 ms.custom: bap-template
 ---
 
-# Use bulk operation messages (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-> [!IMPORTANT]
-> This is a preview feature.
->
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+# Use bulk operation messages
 
 To get the best performance when you run operations on multiple rows of a Microsoft Dataverse table, use one of the following bulk operation messages:
 
 - [`CreateMultiple`](#createmultiple): Creates multiple records of the same type in a single request.
 - [`UpdateMultiple`](#updatemultiple): Updates multiple records of the same type in a single request.
-- `UpsertMultiple`: *Coming soon*
+- [`UpsertMultiple` (preview)](upsertmultiple.md): Creates or updates multiple records of the same type in a single request.
 - [`DeleteMultiple`](#deletemultiple): For elastic tables only. Deletes multiple records of the same type in a single request.
 
 ## Examples
 
 The following code samples show how to use bulk operation messages. You can download the samples from [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
 
-- [Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)
-- [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](webapi/samples/create-update-multiple.md)
+- [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)
+- [Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md)
 - [Elastic table sample code (preview)](elastic-table-samples.md)
 
 ### CreateMultiple
@@ -569,9 +562,9 @@ These limits are based on data changes: `Create`, `Update`, and `Delete` operati
 ### See also
 
 [Elastic tables (preview)](elastic-tables.md)  
-[Write plug-ins for CreateMultiple and UpdateMultiple (preview)](write-plugin-multiple-operation.md)  
-[Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)  
-[Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](webapi/samples/create-update-multiple.md)  
+[Write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md)  
+[Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)  
+[Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md)  
 [Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)  
 [Use messages with the SDK for .NET](org-service/use-messages.md)  
 [Optimize performance for bulk operations](optimize-performance-create-update.md)

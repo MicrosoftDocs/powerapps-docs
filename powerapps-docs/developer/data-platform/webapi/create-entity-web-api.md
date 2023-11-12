@@ -126,8 +126,8 @@ The fastest way to create multiple records of the same type in a single request 
 
 More information:
 
-- [Bulk Operation messages (preview)](../bulk-operations.md)
-- [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](samples/create-update-multiple.md)
+- [Bulk Operation messages](../bulk-operations.md)
+- [Sample: SDK for .NET Use bulk operations](samples/create-update-multiple.md)
 - [Use CreateMultiple with elastic tables](../use-elastic-tables.md#use-createmultiple-with-elastic-tables)
 
 <a name="bkmk_CreateRelated"></a>
