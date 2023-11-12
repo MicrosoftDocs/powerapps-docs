@@ -1,7 +1,7 @@
 ---
 title: Use bulk operation messages (preview)
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 11/08/2023
+ms.date: 11/09/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -216,6 +216,10 @@ OData-Version: 4.0
 
 ---
 
+#### Duplicate records in the payload
+
+Multiple records with the same primary key or alternate key values in the payload are not supported with UpdateMultiple. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, the operation is performed on the first record only. Any subsequent records with the same key value(s) in the payload are ignored.
+
 ### UpsertMultiple
 
 Use `Upsert` to integrate data with external sources when you don't know whether the table exists in Dataverse or not.
@@ -299,6 +303,7 @@ Record Created
 `UpsertMultiple` is currently available only using the SDK for .NET.
 
 ---
+
 
 ### DeleteMultiple
 
@@ -581,6 +586,8 @@ Before the introduction of bulk operation messages, all custom logic was on the 
 
 [Learn how to write plug-ins for CreateMultiple and UpdateMultiple (preview)](write-plugin-multiple-operation.md).
 
+
+
 ## Limitations
 
 Keep the following limitations in mind when you use bulk operation messages.
@@ -619,6 +626,12 @@ The following issues will be addressed before the bulk operations feature become
 As part of the changes we made to [merge message pipelines](#message-pipelines-merged), any custom logic for the multiple version of the message must also be invoked when the single version of the message is invoked. At this time, plug-in steps registered for the `DeleteMultiple` message *are not* being called when `Delete` is used. Plug-in steps registered for `Delete` *are* being invoked when `DeleteMultiple` is used.
 
 You shouldn't migrate custom logic from `Delete` to `DeleteMultiple` until this issue is resolved. You can use `DeleteMultiple` and any logic that's associated with the `Delete` message still works.
+
+## Troubleshooting common errors
+
+If you encounter errors while using bulk operations, please refer to the following articles:
+- [Troubleshoot Dataverse bulk operation errors](/troubleshoot/power-platform/power-apps/dataverse/bulk-operation-errors)
+- [Troubleshoot Dataverse client errors](/troubleshoot/power-platform/power-apps/dataverse/client-errors)
 
 ## Frequently asked questions (FAQ)
 
