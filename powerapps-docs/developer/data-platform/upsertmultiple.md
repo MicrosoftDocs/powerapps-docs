@@ -107,16 +107,13 @@ Record Created
 
 ## Availability
 
-Upsert multiple is available for tables that support `CreateMultiple` and `UpdateMultiple`. This includes all elastic tables. The queries found in [Availability with standard tables](bulk-operations.md#availability-with-standard-tables) will not return results for `UpsertMultiple`.
+`UpsertMultiple` is available for tables that support `CreateMultiple` and `UpdateMultiple`. This includes all elastic tables. The queries found in [Availability with standard tables](bulk-operations.md#availability-with-standard-tables) will not return results for `UpsertMultiple`.
 
 ## Examples
 
-The following code samples show how to use bulk operation messages. You can download the samples from [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
+You can find sample code on GitHub in [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
 
-[Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)
-
-> [!NOTE]
-> Look for the [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/BulkOperations/UpsertMultiple/README.md)
+Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md), look for the [UpsertMultiple project](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/BulkOperations/UpsertMultiple/README.md)
 
 ### See also
 
