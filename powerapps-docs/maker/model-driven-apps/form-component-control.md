@@ -119,7 +119,9 @@ Note the following limitations when you add the form component control to a tabl
 
 - Forms with a business process flow aren’t currently supported in either the main table form or the related table form. If you have a form with a business process flow, you may encounter unexpected behavior.  We recommend that you don't use a form component with a form that uses a business process flow.
 
-- The form component control doesn't support embedded form component controls, such as adding a form component control to a form that is used by a form component control. 
+- The form component control doesn't support embedded form component controls, such as adding a form component control to a form that is used by a form component control.
+
+- The form component control doesn't support [embedded canvas apps](embed-canvas-app-in-form). You may encounter unexpected behavior with these canvas apps.
 
 - The form component control will only display the first tab of the form it uses if multiple tabs are included in that form.  
 
