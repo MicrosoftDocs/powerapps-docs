@@ -121,7 +121,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - The form component control doesn't support embedded form component controls, such as adding a form component control to a form that is used by a form component control.
 
-- The form component control doesn't support [embedded canvas apps](embed-canvas-app-in-form). You may encounter unexpected behavior with these canvas apps.
+- The form component control doesn't support [embedded canvas apps](embed-canvas-app-in-form.md). You may encounter unexpected behavior with these canvas apps.
 
 - The form component control will only display the first tab of the form it uses if multiple tabs are included in that form.  
 
