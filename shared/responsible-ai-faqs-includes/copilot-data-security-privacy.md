@@ -93,12 +93,12 @@ Microsoft is uniquely positioned to deliver enterprise-ready AI. Powered by [Azu
 
 - **Designed to learn new skills**. Copilot’s foundation skills are a game changer for productivity and business processes. The capabilities allow you to create, summarize, analyze, collaborate, and automate using your specific business content and context. In addition, Copilot recommends actions for you (for example, "create a time and expense application to enable employees to submit their time and expense reports"). Copilot is designed to learn new skills. For example, with Viva Sales, Copilot can learn how to connect to CRM systems of record to pull customer data, like interaction and order histories, into communications. As Copilot learns about new domains and processes, it will be able to perform even more sophisticated tasks and queries.
 
+- **We implement multiple forms of protection to safeguard organizational data**. Service-side technologies are utilized to encrypt customer content both at rest and in transit, ensuring robust security measures. For comprehensive information on encryption protocols, see [Encryption in the Microsoft Cloud](https://learn.microsoft.com/en-us/purview/office-365-encryption-in-the-microsoft-cloud-overview). Connections are safeguarded using Transport Layer Security (TLS), specifically TLS 1.2. The transmission of data from D365 to Azure OpenAI is facilitated through the MS Backbone, ensuring the reliability and safety of the transfer.
+
 ## Will Copilot meet requirements for regulatory compliance mandates?
 
 Microsoft is offering Copilot within the Dynamics 365 and Power Platform ecosystem. For details on the regulatory certifications for a Microsoft service, go to [Service Trust Portal](https://servicetrust.microsoft.com). Additionally, Copilot adheres to our commitment to responsible AI, which is described in our [responsible AI principles](https://www.microsoft.com/ai/responsible-ai).
 
 As regulation in the AI space evolves, Microsoft will continue to adapt and respond to fulfill future regulatory requirements in this space.
 
-## How does Copilot protect sensitive business information and data?
 
-We implement multiple forms of protection to safeguard organizational data. Service-side technologies are utilized to encrypt customer content both at rest and in transit, ensuring robust security measures. For comprehensive information on encryption protocols, see [Encryption in the Microsoft Cloud] (https://learn.microsoft.com/en-us/purview/office-365-encryption-in-the-microsoft-cloud-overview). Connections are safeguarded using Transport Layer Security (TLS), specifically TLS 1.2. The transmission of data from D365 to Azure OpenAI is facilitated through the MS Backbone, ensuring the reliability and safety of the transfer.
