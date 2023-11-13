@@ -2536,10 +2536,8 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
-- name: AI plug-ins (preview)
-  items:  
-  - name: Building AI plugins for discovery by Copilot
-    href: common/build-ai-plugin-for-copilot.md     
+- name: Building AI plugins for discovery by Copilot (preview)
+  href: common/build-ai-plugin-for-copilot.md     
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
