@@ -106,4 +106,4 @@ sections:
       - question: |
           Can I create B2C mobile apps with Power Apps?
         answer: |
-          No. Power Apps is a platform for creating business applications and uses Azure Active Directory authentication. The wrap feature wraps existing canvas apps for the same set of end users.
+          No. Power Apps is a platform for creating business applications and uses Microsoft Entra authentication. The wrap feature wraps existing canvas apps for the same set of end users.
