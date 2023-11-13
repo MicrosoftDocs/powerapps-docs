@@ -145,9 +145,9 @@ You create an elastic table just like any other new table in Dataverse.
 
 - When [time to live (TTL)](#automatic-removal-of-data) is used on a row, the row will get deleted from the elastic table when TTL has expired. If it's synchronized to a data lake using [Azure Synapse Link for Dataverse](export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
 
-## Import data into elastic tables
+## High volume elastic tables and managing Dataverse API throttling limits
 
-To import data, use the Dataverse [Bulk API](../../developer/data-platform/bulk-operations.md). This allows you to achieve 10 times the throughput with the same Dataverse API throttling limits. Developers can reference more links provided in below section.
+Use the [Dataverse Bulk API](../../developer/data-platform/bulk-operations.md). This allows you to achieve 10 times the throughput with the same Dataverse API throttling limits. Developers can reference more links provided in below section.
 
 ## For developers
 
