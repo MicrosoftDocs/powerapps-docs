@@ -1,7 +1,7 @@
 ---
 title: "Use OrganizationServiceContext (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The OrganizationServiceContext class lets you track changes, manage identities and relationships, and gives you access to the LINQ provider." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
+ms.date: 11/10/2023
 author: kkanakas
 ms.author: kartikka
 ms.reviewer: pehecke
@@ -30,9 +30,12 @@ To instantiate the context class, you must pass the class constructor an object 
 The following code example shows how to create a new instance of the context class. In this example, the context class was named `AdventureWorksCycleServiceContext` by specifying that name using the `--serviceContextName` parameter when running the `pac modelbuilder build` command:  
   
 ```csharp  
-//For early bound types to work correctly, they have to be enabled on the proxy.  
-_serviceProxy.EnableProxyTypes();  
-AdventureWorksCycleServiceContext context = new AdventureWorksCycleServiceContext(_service);  
+// For early bound types to work correctly, they have to be enabled on the
+// client connection. Here, _service is a reference to a ServiceClient or
+// CrmServiceClient object. Those types implement IOrganizationService.
+_service.EnableProxyTypes();
+AdventureWorksCycleServiceContext context = new   
+    AdventureWorksCycleServiceContext(_service);  
 ```  
  
 After you create the context instance, you can begin to track creating, modifying, or deleting table rows (entity records).

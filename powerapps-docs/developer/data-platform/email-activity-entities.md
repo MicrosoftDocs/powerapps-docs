@@ -1,7 +1,7 @@
 ---
 title: "Email activity tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The email activity in lets you track and manage email communications with customers." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/23/2023
+ms.date: 11/10/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: DanaMartens # GitHub ID
@@ -138,7 +138,7 @@ Filtering on email descriptions is not supported. Some specific points to consid
 
 #### Searching
 
-You can enable [Dataverse search](webapi/relevance-search.md) on email descriptions to search email descriptions.
+You can enable [Dataverse search](search/overview.md) on email descriptions to search email descriptions.
   
 ### See also
 
