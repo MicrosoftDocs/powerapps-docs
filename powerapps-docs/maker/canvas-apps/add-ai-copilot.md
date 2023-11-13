@@ -31,7 +31,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 ## Step 1 - Enable Copilot for your environment
 
-In order for end users to use the Copilot chat experience in a canvas app, an admin must first turn on the feature, **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps (preview)** in their environment. For more information, see [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
+In order for end users to use the Copilot chat experience in a canvas app, an admin must first turn on the feature, **Allow users to analyze data using an AI-powered chat experience in canvas and model-driven apps (preview)** in their [environment](https://admin.powerplatform.microsoft.com). For more information, see [Manage feature settings](/power-platform/admin/settings-features#copilot-preview).
 
 > [!div class="mx-imgBorder"]
 > ![Set Copilot feature ON for the envrironment](media/copilot/Copilot_for_apps_users_ON.png)
@@ -102,6 +102,8 @@ Admins can disable the option for apps users to provide feedback to Microsoft fr
 [Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 
 [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai) 
+
+[Add Copilot for app users in model-driven apps (preview)](../model-driven-apps/add-ai-copilot.md)
 
 
 
