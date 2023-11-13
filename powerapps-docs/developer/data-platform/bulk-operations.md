@@ -169,7 +169,7 @@ Uses the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple).
 > [!IMPORTANT]
 > You must set the `@odata.type` property for each item in the `Targets` parameter.
 > 
-> Using alternate keys Web API and UpdateMultiple is not supported.
+> Using alternate keys with Web API and UpdateMultiple is not supported.
 
 This example is for a table with the logical name `sample_example` and the entity set name `sample_examples`.
 
