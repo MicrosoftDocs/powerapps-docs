@@ -51,6 +51,8 @@
       items:
       - name: Use UpsertMultiple (preview)
         href: upsertmultiple.md
+      - name: Use DeleteMultiple (preview)
+        href: deletemultiple.md
     - name: Create your own messages
       href: custom-actions.md
       items:
