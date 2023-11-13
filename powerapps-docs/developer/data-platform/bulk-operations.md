@@ -406,7 +406,7 @@ Before the introduction of bulk operation messages, all custom logic was on the 
 >
 > It's your responsibility to make sure that the same logic applied for the single version of events is migrated to the multiple version of the event *and removed* from the single version of the event. Otherwise, the logic will be applied twice.
 
-[Learn how to write plug-ins for CreateMultiple and UpdateMultiple (preview)](write-plugin-multiple-operation.md).
+[Learn how to write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
 
 ## Limitations
 
