@@ -2538,8 +2538,6 @@
           href: ../cards/tutorials/dataverse-card.md
 - name: AI plug-ins (preview)
   items:  
-  - name: AI plugins in Power Platform
-    href: common/ai-plugins.md 
   - name: Building AI plugins for discovery by Copilot
     href: common/build-ai-plugin-for-copilot.md     
 - name: AI Builder
