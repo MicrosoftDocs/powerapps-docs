@@ -1,7 +1,7 @@
 ---
 title: Use bulk operation messages
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 11/11/2023
+ms.date: 11/13/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -78,6 +78,8 @@ Uses the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple).
 
 > [!IMPORTANT]
 > You must set the `@odata.type` property for each item in the `Targets` parameter.
+
+This example is for a table with the logical name `sample_example` and the entity set name `sample_examples`.
 
 **Request:**
 
@@ -166,11 +168,15 @@ Uses the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple).
 
 > [!IMPORTANT]
 > You must set the `@odata.type` property for each item in the `Targets` parameter.
+> 
+> Using alternate keys Web API and UpdateMultiple is not supported.
+
+This example is for a table with the logical name `sample_example` and the entity set name `sample_examples`.
 
 **Request:**
 
 ```http
-POST [Organization Uri]/api/data/v9.2/sample_examples/Microsoft.Dynamics.CRM.UpdateMultiple?tag=CreateUpdateMultiple
+POST [Organization Uri]/api/data/v9.2/sample_examples/Microsoft.Dynamics.CRM.UpdateMultiple
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -281,7 +287,12 @@ When you use the Web API to perform a bulk operation on an elastic table, you ne
 
 ### Availability
 
-Bulk operation message availability depends on whether you're using standard tables or elastic tables. All elastic tables support the `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple` messages.
+Bulk operation message availability depends on whether you're using standard tables or elastic tables. All elastic tables support the `CreateMultiple`, `UpdateMultiple`, `UpsertMultiple`, and `DeleteMultiple` messages.
+
+See also:
+
+- [UpsertMultiple Availability](upsertmultiple.md#availability)
+- [DeleteMultiple Availability](deletemultiple.md#availability)
 
 #### Availability with standard tables
 
@@ -415,7 +426,11 @@ This error doesn't occur if there's no plug-in registered for the event. To avoi
 
 If you're using the Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), you may encounter this error:
 
-> `The request channel timed out attempting to send after 00:04:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.`
+```
+The request channel timed out attempting to send after 00:04:00. 
+Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. 
+The time allotted to this operation may have been a portion of a longer timeout.
+```
 
 The default timeout set using ServiceClient is 4 minutes, which is long for any synchronous operation. You can change this value using the static [ServiceClient.MaxConnectionTimeout](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.MaxConnectionTimeout) property. The default timeout using [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) is 2 minutes.
 
@@ -424,11 +439,12 @@ The default timeout set using ServiceClient is 4 minutes, which is long for any 
 
 ### Not supported for use in plug-ins
 
-At this time, we don't support using bulk operation messages in plug-ins. More information:[Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md).
+At this time, we don't support using bulk operation messages in plug-ins. More information: [Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md).
 
 ## Troubleshooting common errors
 
 If you encounter errors while using bulk operations, please refer to the following articles:
+
 - [Troubleshoot Dataverse bulk operation errors](/troubleshoot/power-platform/power-apps/dataverse/bulk-operation-errors)
 - [Troubleshoot Dataverse client errors](/troubleshoot/power-platform/power-apps/dataverse/client-errors)
 

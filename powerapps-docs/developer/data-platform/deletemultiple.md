@@ -26,11 +26,11 @@ ms.custom: bap-template
 
 ### DeleteMultiple
 
-`DeleteMultiple` is available only for elastic tables.
+Delete multiple rows of data in elastic tables with a single request.
 
 ##### [SDK for .NET](#tab/sdk)
 
-You must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't have a `DeleteMultipleRequest` class. Learn how to [use messages with the SDK for .NET](org-service/use-messages.md).
+You must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the [SDK for .NET](org-service/overview.md) doesn't have a `DeleteMultipleRequest` class. Learn how to [use messages with the SDK for .NET](org-service/use-messages.md).
 
 The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table using the alternate key to include the `partitionid` to uniquely identify the rows.
 
