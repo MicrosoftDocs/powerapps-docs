@@ -147,7 +147,7 @@ You create an elastic table just like any other new table in Dataverse.
 
 ## High volume elastic tables and managing Dataverse API throttling limits
 
-Use the [Dataverse Bulk API](../../developer/data-platform/bulk-operations.md). This allows you to achieve 10 times the throughput with the same Dataverse API throttling limits. Developers can reference more links provided in the below section.
+Use [bulk operation messages](../../developer/data-platform/bulk-operations.md). This allows you to achieve 10 times the throughput with the same Dataverse API throttling limits. Developers can reference more links provided in the below section.
 
 ## For developers
 
