@@ -1143,7 +1143,7 @@ OData-Version: 4.0
 Use the `Prefer: odata.maxpagesize` request header to control the number of records returned. If you don't specify a number, up to 5,000 records may be returned for each request. You can't request a page size larger than 5,000.
 
 > [!NOTE]
-> Dataverse doesn't support the `$skip` query option, so you can't use the the combination of `$top` and `$skip` for paging. More information: [Use the $top query option](#use-the-top-query-option)
+> Dataverse doesn't support the `$skip` query option, so you can't use the combination of `$top` and `$skip` for paging. More information: [Use the $top query option](#use-the-top-query-option)
 
 The following example returns just the first two contact records:
 
@@ -1450,7 +1450,7 @@ GET accounts?$apply=filter(address1_stateorprovince eq 'WA')/groupby((primarycon
 ### Last created record date and time
 
 ```http
-GET accounts??$apply=aggregate(createdon with max as lastCreate)
+GET accounts?$apply=aggregate(createdon with max as lastCreate)
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
