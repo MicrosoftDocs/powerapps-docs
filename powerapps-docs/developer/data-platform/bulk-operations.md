@@ -355,7 +355,7 @@ public static bool IsMessageAvailable(
 
 ##### [Web API](#tab/webapi)
 
-Use the following `GET` request to detect whether a message is available for a table. The request tests whether the `sample_example` table supports the `CreateMultiple` message. Replace the `@message` and `@table` parameter values for the message and table you want to test.
+Use the following `GET` request to detect whether `CreateMultiple` or `UpdateMultiple` is available for a table. The request tests whether the `sample_example` table supports the `CreateMultiple` message. Replace the `@message` and `@table` parameter values for the message and table you want to test.
 
 **Request:**
 
