@@ -300,7 +300,7 @@ You can use the `CreateMultiple` and `UpdateMultiple` bulk operation messages wi
 
 ##### [SDK for .NET](#tab/sdk)
 
-Use this static method to detect whether a given table supports a specific named message, including `CreateMultiple` or `UpdateMultiple`.
+Use this static method to detect whether a given table supports `CreateMultiple` or `UpdateMultiple`.
 
 ```csharp
 /// <summary>

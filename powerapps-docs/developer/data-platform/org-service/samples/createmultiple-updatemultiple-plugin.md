@@ -1,6 +1,6 @@
 ---
-title: "Sample: CreateMultiple and UpdateMultiple plug-ins (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to write plug-ins for the CreateMultiple and UpdateMultiple messages" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: CreateMultiple and UpdateMultiple plug-ins (Microsoft Dataverse) | Microsoft Docs"
+description: "This sample shows how to write plug-ins for the CreateMultiple and UpdateMultiple messages"
 ms.date: 06/01/2023
 author: divkamath
 ms.author: dikamath
@@ -38,8 +38,8 @@ See the README.md file in the sample for detailed instructions about how to run 
 
 ### See Also
 
-[Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../../write-plugin-multiple-operation.md)   
-[Bulk Operation messages (preview)](../../bulk-operations.md)   
+[Write plug-ins for CreateMultiple and UpdateMultiple](../../write-plugin-multiple-operation.md)   
+[Bulk Operation messages](../../bulk-operations.md)   
 [Sample: SDK for .NET Use bulk operations](create-update-multiple.md)
 
 
