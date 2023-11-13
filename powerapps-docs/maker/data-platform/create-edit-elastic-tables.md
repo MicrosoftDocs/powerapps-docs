@@ -2,7 +2,7 @@
 title: Create and edit elastic tables (preview)
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 08/11/2023
+ms.date: 11/11/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: matp
@@ -147,7 +147,7 @@ You create an elastic table just like any other new table in Dataverse.
 
 ## High volume elastic tables and managing Dataverse API throttling limits
 
-Use the [Dataverse Bulk API](../../developer/data-platform/bulk-operations.md). This allows you to achieve 10 times the throughput with the same Dataverse API throttling limits. Developers can reference more links provided in below section.
+Use the [Dataverse Bulk API](../../developer/data-platform/bulk-operations.md). This allows you to achieve 10 times the throughput with the same Dataverse API throttling limits. Developers can reference more links provided in the below section.
 
 ## For developers
 
