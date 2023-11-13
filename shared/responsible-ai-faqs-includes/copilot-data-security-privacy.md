@@ -89,9 +89,11 @@ Microsoft is uniquely positioned to deliver enterprise-ready AI. Powered by [Azu
 
 - **Built on Microsoft’s comprehensive approach to security, compliance, and privacy**. Copilot is integrated into Microsoft services like Dynamics 365, Viva Sales, Power Platform, and Microsoft 365 and inherits these products' valuable security, compliance, and privacy policies and processes. Two-factor authentication, compliance boundaries, privacy protections, and more make Copilot the AI solution you can trust.
 
-- **Architected to protect tenant, group, and individual data**. We know data leakage is a concern for customers. LLMs are not further trained on, or learn from, your tenant data or your prompts. Within your tenant, our time-tested permissions model provides safeguards and enterprise grade security as seen in our Azure offerings. On an individual level, Copilot presents data that only you can access using the same technology that we’ve been using for years to secure customer data.  xxxx
+- **Architected to protect tenant, group, and individual data**. We know data leakage is a concern for customers. LLMs are not further trained on, or learn from, your tenant data or your prompts. Within your tenant, our time-tested permissions model provides safeguards and enterprise grade security as seen in our Azure offerings. On an individual level, Copilot presents data that only you can access using the same technology that we’ve been using for years to secure customer data.
 
 - **Designed to learn new skills**. Copilot’s foundation skills are a game changer for productivity and business processes. The capabilities allow you to create, summarize, analyze, collaborate, and automate using your specific business content and context. In addition, Copilot recommends actions for you (for example, "create a time and expense application to enable employees to submit their time and expense reports"). Copilot is designed to learn new skills. For example, with Viva Sales, Copilot can learn how to connect to CRM systems of record to pull customer data, like interaction and order histories, into communications. As Copilot learns about new domains and processes, it will be able to perform even more sophisticated tasks and queries.
+
+- **Multiple forms of protection to safeguard organizational data**. Service-side technologies are utilized to encrypt customer content both at rest and in transit, ensuring robust security measures. For comprehensive information on encryption protocols, go to [Encryption in the Microsoft Cloud](/purview/office-365-encryption-in-the-microsoft-cloud-overview). Connections are safeguarded using Transport Layer Security (TLS), specifically TLS 1.2. The transmission of data from Dynamics 365 and Power Platform to Azure OpenAI Service is facilitated through the Microsoft backbone network to ensure the reliability and safety of the transfer.
 
 ## Will Copilot meet requirements for regulatory compliance mandates?
 
@@ -99,6 +101,4 @@ Microsoft is offering Copilot within the Dynamics 365 and Power Platform ecosyst
 
 As regulation in the AI space evolves, Microsoft will continue to adapt and respond to fulfill future regulatory requirements in this space.
 
-## How does Copilot protect sensitive business information and data?
 
-We implement multiple forms of protection to safeguard organizational data. Service-side technologies are utilized to encrypt customer content both at rest and in transit, ensuring robust security measures. For comprehensive information on encryption protocols, see [Encryption in the Microsoft Cloud] (https://learn.microsoft.com/en-us/purview/office-365-encryption-in-the-microsoft-cloud-overview). Connections are safeguarded using Transport Layer Security (TLS), specifically TLS 1.2. The transmission of data from D365 to Azure OpenAI is facilitated through the MS Backbone, ensuring the reliability and safety of the transfer.
