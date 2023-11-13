@@ -81,22 +81,6 @@ With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
   > Copilot can only answer questions for smaller datasets in a canvas app. The only exception to the dataset limit is when a Dataverse table is selected as the data source. 
 
 
-### Configure the Copilot control (optional)
-
-In addition to choosing the data source for Copilot, you can also configure the following Copilot properties in a canvas app:
-
-- **Title**: Replaces the control's default title of **Have a question about this app? Ask Copilot**, and can be replaced with a more appropriate title that reflects the assistance that the Copilot control can provide to app users.
-
-- **Introductory message**: Replaces the control's default introductory message of **Copilot can answer questions about the data in this app, and help you navigate. It's always learning from your feedback**. The current description of the Copilot control can be enhanced to provide a more specific explanation of how it benefits app users.
-
-- **Data summary**: Helps Copilot control give better responses to questions from app users. We recommend a brief 2-3 lines that describe what the app is and which types questions the Copilot control will answer. This property doesn't impact the control's UI.
-
-- **Placeholder text**: Replaces the control's default placeholder text in the text input box **Ask a question about the data in this app, or tell me what you're looking for**. We recommend that you provide a concise message to app users, explaining what types of questions the Copilot control can address.
-
-   > [!div class="mx-imgBorder"]
-   > ![Configure the control.](media/copilot/updated-copilot-properties.png)
-
-
 ## Provide feedback
 
 App users and makers can provide feedback by selecting **Like** (thumbs up) or **Dislike** (thumbs down) button for each response that Copilot provides. Optionally, app users can also enter additional feedback in the text box and then select **Submit**.
