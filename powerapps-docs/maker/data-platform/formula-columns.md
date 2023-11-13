@@ -72,20 +72,55 @@ For example, the formula *price * discount* creates a column type of number. You
 Describe what you want the formula to do and get AI generated results. Formula suggestions accepts your natural language input to interpret and suggest a Power Fx formula using GPT-based AI model.
 
 > [!IMPORTANT]
-> This is a preview feature.
+> This is a preview feature available only in US regions only . Pls use make.preview.powerapps.com to use this feature.
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > Currently, formula suggestions that reference a single table are supported. Formula suggestions that reference a column on a related table aren't supported.
 
 A few examples of input and the suggested formula returned.
 
-| Natural language entered  | Suggested Power Fx formula  |
-|---------|---------|
-| *Calculate the shipment arrival date by adding five days from the order closed date.*     | `#$FieldDateTime$# + #$FieldInteger$# * #$number$#`        |
-| *What is the square root of 2?*     |  `#$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$#`       |
-| *What is the value of 2 raised to the power of 3?*     |  `#$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$#`       |
-| *Format the price columns and display as a string and concatenate with $ sign to represent as currency.*      |  `#$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$# / #$number$#`     |
-| *Calculate the surface area of the cylinder by multiplying column A and B and then divide by column C.*   |  `#$FieldDecimal$# * #$FieldDecimal$# * #$number$# / #$number$#`  |
-| *If status of task=completed in the Tasks table, then populate the task number in the Task column.*     |  `#$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$# * #$FieldDecimal$# / #$number$#`     |
+| How can you access this feature? |
+1.	Sign in to Power Apps at https://make.preview.powerapps.com.
+2.	Select Tables, and then select the table where you want to add a formula column. If the item isn’t in the left navigation pane, select …More and then select the item you want.
+3.	Select the Columns area, and then select New column.
+4.	Enter the following information:
+•	A Display name for the column.
+•	Optionally, enter a Description of the column.
+•	In Data type, select fx Formula.
+•	Enter the formula in the Formula box.
+5.Click on the drop down button on ‘Type a formula’ label
+![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/12705385/5528713e-d0ac-40a6-8c85-ad49d657dce8)
+
+5.Let’s say there is a Customer rating column that shows their rating by account
+ ![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/12705385/e6639f7b-df5e-469a-ae43-9899f5008198)
+
+Express the formula in Natural language as an example ‘If the rating on the rating column is equal or greater than 5 then indicate as Good and if less than 5 indicate as Average and if value is blank or zero then display as Bad’ and click the Enter button 
+6.Copy the formula generated
+![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/12705385/a3d126f3-e945-4b62-9bfd-9e1c211d847b)
+
+7.Paste into the Formula expression bar and click ‘Save’
+Switch(
+    ThisRecord.'Customer Rating',
+    Blank(), "Bad",
+    0, "Bad",
+    1, "Average",
+    2, "Average",
+    3, "Average",
+    4, "Average",
+    5, "Good",
+    6, "Good",
+    7, "Good",
+    8, "Good",
+    9, "Good",
+    10, "Good"
+)
+![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/12705385/04734013-ab8d-40af-9239-7eba70c2ef10)
+
+ 8. Check the computed ‘Rating Description’ formula column
+ 
+	![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/12705385/85facd9d-02e9-4c06-9561-83235c1c2a74)
+
+
+
 
 ## Operators
 
