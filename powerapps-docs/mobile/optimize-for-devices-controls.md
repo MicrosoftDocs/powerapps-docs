@@ -1,5 +1,5 @@
 ---
-title: Optimize for devices controls
+title: Optimize for devices controls (preview)
 description: Learn which controls and properties are supported for device-optimized screens.
 author: anuitz
 ms.topic: conceptual
@@ -15,12 +15,16 @@ contributors:
   - anuitz
 ---
 
-# Optimize for devices controls
+# Optimize for devices controls (preview)
+[This article is prerelease documentation and is subject to change.]
 
 For a screen to be optimized for devices, it must use controls that are supported natively. You can filter the control **Insert** pane to only show device-optimized controls. 
 
 :::image type="content" source="media/optimized-for-devices-control-filter.png" alt-text="The Insert pane is filtered to only show controls that are device-optimized.":::
 
+> [!Important]
+> - This is a preview feature.
+> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## Device-optimized controls
 The following controls are available for screens that are optimized for devices. All other controls are currently unsupported.
