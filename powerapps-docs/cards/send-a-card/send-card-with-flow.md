@@ -44,7 +44,7 @@ Sending a card in Teams froma  flow requires a card instance. To crearte a card 
 
 1. Create or modify an existing flow,  or use **Send > Send from a flow** on cards for Power Apps **Play** page to start with a template.
 1. Make sure the flow has a trigger. In the screenshot below, the trigger is when a new account record is created.
-1. Create or get the card instance you want to send using the **Cards for Power Apps** connector. In the screenshot, we created a card instance of the `Account Card` and setting the `Body` input variable to the `Account Name` of the newly created account record.
+1. Create a card instance you want to send using the **Cards for Power Apps** connector's **Create card instance** action. In the screenshot, we created a card instance of the `Account Card` and setting the `Body` input variable to the `Account Name` of the newly created account record.
 1. Add an action to **Post card in a chat or channel** using the **Teams** connector.
 1. On the action, set **Post as** to `Power Apps`.
 1. On the action, set **Post in**, **Team** & **Channel**, or **Group chat** to the conversation you want to send the card in. In the example screenshot, this is to the `Cards for Power Apps (Customer Channel)` Teams in the `General` channel.
@@ -57,9 +57,14 @@ You can send a card to a specific Teams user. In a Power Automate flow, use the 
 
 1. Create or modify an existing flow, or use **Send > Send from a flow** on cards for Power Apps **Play** page to start with a template.
 1. Make sure the flow has a trigger. In the screenshot below, the trigger is when a new account record is created.
-1. Create or get the card instance you want to send using the **Cards for Power Apps** connector. In the screenshot, we created a card instance of the `Account Card` and setting the `Body` input variable to the `Account Name` of the newly created account record.
+1. Create a card instance you want to send using the **Cards for Power Apps** connector's **Create card instance** action. In the screenshot, we created a card instance of the `Account Card` and setting the `Body` input variable to the `Account Name` of the newly created account record.
 1. Add an action to **Post card in a chat or channel** using the **Teams** connector.
 1. On the action, set **Post as** to `Power Apps`.
+1. On the action, set **Post in** to **Chat with Power Apps**.
+1. On the action, enter the name or email address of the Teams user you want to post the card to.
+1. On the action, set **Card** to the `Card` dynamic content from the **Cards for Power Apps** connector action you added earlier.
+
+    :::image type="content" source="../media/send-a-card/Send_card_to_a_Teams_user.png" alt-text="Screenshot a flow that creates a card instance when an account record is created and sends it to a specific Teams user.":::
 
 ## Managing your flow in a solution
 
