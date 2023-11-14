@@ -38,7 +38,7 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
    [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
    a.  Select the up and down arrows, and then select **Get formula suggestions**.<br />
        :::image type="content" source="media/formula-suggestions-selector.png" alt-text="Select the formula suggestions selector":::
-   b. Type your question, such as *what is the square root of 2*, in the **Formula** box. More information: [Get formula suggestions (preview)](#get-formula-suggestions-preview-1)
+   b. Type your question, such as *what is the Price times Quantity*, in the **Formula** box. More information: [Get formula suggestions (preview)](#get-formula-suggestions-preview-1)
 
 ---
 
@@ -111,6 +111,12 @@ Switch(
 Check the computed **Rating Description** formula column, which appears like this.
  
 :::image type="content" source="media/formula-suggestions-results.png" alt-text="Check the results for the formula column":::
+
+#### Responsible AI
+
+For information about responsible AI, go to these resources:
+- [FAQ for building apps and tables through conversation](../common/faqs-build-apps-conversation.md)
+- [FAQ about using AI responsibly in Power Apps](../common/responsible-ai-overview.md)
 
 ## Operators
 
@@ -432,8 +438,6 @@ This section describes guidelines and the known limitations with formula columns
 - Currency
 
 ## See also
-
-[FAQ for building apps and tables through conversation](../common/faqs-build-apps-conversation.md)
 
 [Types of columns](types-of-fields.md)  <br />
 
