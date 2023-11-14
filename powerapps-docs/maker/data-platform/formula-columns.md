@@ -42,11 +42,11 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
 
 ---
 
-6. Select additional properties:
+7. Select additional properties:
    - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
    - **Advanced options**:
      - If the formula evaluates to a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
-7. Select **Save**.
+8. Select **Save**.
 
 ### Type a formula
 
