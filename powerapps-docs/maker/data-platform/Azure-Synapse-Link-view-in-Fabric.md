@@ -49,7 +49,9 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 > [!NOTE]
 >
-> By selecting Link to Microsoft Fabric feature, the system adds all non-system Dataverse Tables that have the "Track changes" property enabled. 
+> By selecting Link to Microsoft Fabric feature, the system adds all non-system Dataverse Tables that have the "Track changes" property enabled.
+> 
+> If you used this feature during Public preview, you can continue to use tables selected earlier. If you choose Link to Fabric option in new environments (or unlink and re-link existing environments), all tables will be added.  
 >  
 > System administrators can add Dynamics 365 Finance and Operations (F&O) tables into the **Microsoft OneLake** link that's created with this feature by visiting the Synapse Link menu. They are not automatically added at this point in time.
 >
@@ -88,7 +90,8 @@ You can link to Microsoft Fabric from Power Apps **Tables** area: Select **Analy
    > This feature is enabled by default on all environments. Admins can disable this feature in the Power Platform admin center in the environment feature settings.
    > 
    > This option has moved from the **Export** menu since Public preview. You can no longer select this option from the context menu for specific Tables since this option applies to all tables.
-   >    
+   >
+
 
 2. Select the environment you want, select **Tables** on the left navigation pane and select **Analyze > Link to Microsoft Fabric** from the command bar
 3. If you're Linking to Fabric for the first time, a wizard appears. You can launch Fabric with the same option in subsequent runs.
@@ -101,7 +104,9 @@ It might take up to 60 minutes to update data in OneLake including the conversio
 
 The workspace you choose to link with Dataverse must be assigned to a premium capacity in the same region as your Dataverse environment. If you choose to create a new workspace, system requires that you have access to a Power BI / Fabric premium capacity within the same region as your Dataverse environment. Wizard may detect missing pre-requisites includng missing capacity at the begining. 
 
-To confirm whether you have access to premium capacity, Go to [Power BI](https://app.powerbi.com), open the workspace, select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected. 
+At this point in time, the system supports following Premium capacity SKUs. "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1"
+
+To confirm whether you have access to required premium capacity, Go to [Power BI](https://app.powerbi.com), open the workspace, select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected. 
 
 :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
 
