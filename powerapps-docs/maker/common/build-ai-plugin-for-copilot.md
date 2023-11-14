@@ -74,7 +74,7 @@ Select **Save and close**. If you have additional operations, you can add those 
 
 :::image type="content" source="media/plugin-define-ai-operation.png" alt-text="Defile AI operations":::
 
-### Step 5 – Package as a solution
+### Step 4 – Package as a solution
 
 Once you have added all the required plugin metadata to your solution, make sure that you add your custom API to the same solution as well. This can be done in your solution, select **Add Existing** > **More** > **Other** > **CustomAPI** from the drop-down and select the custom API you created in Step 1.
 
