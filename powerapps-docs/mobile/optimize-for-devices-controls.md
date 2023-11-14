@@ -25,7 +25,7 @@ For a screen to be optimized for devices, it must use controls that are supporte
 ## Device-optimized controls
 The following controls are available for screens that are optimized for devices. All other controls are currently unsupported.
 
-[**Modern controls**](../maker/canvas-apps/controls/modern-controls/modern-controls-reference)
+[**Modern controls**](../maker/canvas-apps/controls/modern-controls/modern-controls-reference.md)
  - Button
  - Checkbox
  - Date picker
