@@ -43,12 +43,13 @@ What this means is that each [control needs a device-optimized](./optimize-for-d
 There are two steps to enabling a screen to be optimized for devices.
 
 1. The **Optimize for devices** experimental app setting must be turned on.
+
+    The setting can be found in **Settings** > **Upcoming features** > **Experimental** tab. Turning on the **Optimize for devices** app setting shows the **Optimize for devices** property on screens.
+
+    :::image type="content" source="media/optimized-for-devices-app-setting.png" alt-text="Shows the app setting that enables Optimize for devices.":::
+
 2. On each screen, the **Optimize for devices** property must be set to **On**.
 
-For step 1, the setting can be found in **Settings** > **Upcoming features** > **Experimental** tab. Turning on the **Optimize for devices** app setting shows the **Optimize for devices** property on screens. 
+    A maker can open the tree view in the left-hand pane and select a screen where the **Optimize for devices** property will be. By setting this property to **On**, the screen will be rendered natively when running on Power Apps mobile in iOS and Android devices. 
 
-:::image type="content" source="media/optimized-for-devices-app-setting.png" alt-text="Shows the app setting that enables Optimize for devices.":::
-
-For step 2, the maker can open the tree view in the left-hand pane and select a screen where the **Optimize for devices** property will be. By setting this property to **On**, the screen will be rendered natively when running on Power Apps mobile in iOS and Android devices. 
-
-:::image type="content" source="media/optimized-for-devices-screen-setting.png" alt-text="Shows the screen setting that sets that screen to display natively.":::
+    :::image type="content" source="media/optimized-for-devices-screen-setting.png" alt-text="Shows the screen setting that sets that screen to display natively.":::
