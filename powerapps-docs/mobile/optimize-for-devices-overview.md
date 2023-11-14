@@ -18,13 +18,13 @@ contributors:
 # Optimize for devices overview (preview)
 [This article is prerelease documentation and is subject to change.]
 
-_Optimize for devices_ is a feature that changes the way canvas app screens are loaded and displayed for Android and iOS devices to use native UI. This lets makers build stunning native apps for mobile users with device-optimized screens that use native UI elements instead of rendering inside of web view. This feature provides the following beneifits:
+_Optimize for devices_ is a feature that changes the way canvas app screens are loaded and displayed for Android and iOS devices to use native UI. This lets makers build stunning native apps for mobile users with device-optimized screens that use native UI elements instead of rendering inside of web view. This feature provides the following benefits:
 
  - Brings modern mobile user experiences and interaction patterns
  - Improves performance and reliability
  - Integrates device capabilities with maker defined UI
 
-There is no need to rebuild apps as makers can use all the familiar app building elements to create device-optimized experiences, though there are some limitations around which [controls are supported natively today](./optimize-for-devices-controls.md). Apps that are optimized for device work with other mobile features like [offline](./canvas-mobile-offline-overview.md), [push notifications](./power-apps-mobile-notification.md), and [wrap](../maker/common/wrap/overview.md).
+There's no need to rebuild apps as makers can use all the familiar app building elements to create device-optimized experiences, though there are some limitations around which [controls are supported natively today](./optimize-for-devices-controls.md). Apps that are optimized for device work with other mobile features like [offline](./canvas-mobile-offline-overview.md), [push notifications](./power-apps-mobile-notification.md), and [wrap](../maker/common/wrap/overview.md).
 
 > [!Important]
 > - This is a preview feature.
@@ -34,7 +34,7 @@ There is no need to rebuild apps as makers can use all the familiar app building
 
 For a canvas app running on Power Apps mobile, there are UI elements, their current state, and the related business logic. For example, on screen you might have a button that is currently at position 0, with a width and height of 200 and 40 respectively, and is fill color blue on top of having business logic defined on select with Power Fx that navigates the user to a different screen.
 
-If optimize for devices is off for that screen, the screen loads and the displays in a web view, running similarly to how it would in a desktop's web browser. When optimized for devices is on, each element's current state is passed over to the device where it renders that same element, but using native UI. So now we have a natively-rendered, long blue button in the top-left corner. Business logic modifies state or takes actions, which run the same way it did before, meaning when that now natively-rendered button is clicked on, the device runs the Power Fx and the user is navigated to the specified screen.
+If optimize for devices is off for that screen, the screen loads and the displays in a web view, running similarly to how it would in a desktop's web browser. When optimized for devices is on, each element's current state is passed over to the device where it renders that same element, but using native UI. So now we have a natively rendered, long blue button in the top-left corner. Business logic modifies state or takes actions, which run the same way it did before, meaning when that now natively rendered button is clicked on, the device runs the Power Fx and the user is navigated to the specified screen.
 
 What this means is that each [control needs a device-optimized](./optimize-for-devices-controls.md), native equivalent that supports the same properties so it can render the way a maker expects. During preview, there are some [limitations](optimize-for-devices-controls.md#known-limitations) to which controls and properties are supported. This is independent of whether a control is classic or modern, but rather a filter on the list of controls to ones that are device-optimized. 
 
