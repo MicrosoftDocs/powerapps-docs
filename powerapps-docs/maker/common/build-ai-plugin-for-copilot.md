@@ -19,9 +19,9 @@ search.audienceType:
 
 Microsoft Dataverse supports three types of AI plugins – Dataverse custom APIs, Dataverse Table Search, and Dataverse File Search. Before you start building AI plugins for discoverability by Copilots across Microsoft 365, you’ll need to decide which one of the supported AI plugin types to create.
 
-While additional AI plugin types might be added as supported by Dataverse, the steps to define plugin remains the same. AI pluginAI pluginAI plugincustom API
+While additional AI plugin types might be added as supported by Dataverse, the steps to define plugin are the same. 
 
-All components within an AI plugin are solution-aware, and can follow the standard application lifecycle management principles. AI plugins general, there are two main steps in defining an AI pluginAI plugin: 
+All components within an AI plugins are solution-aware, and follow the standard application lifecycle management principles. In general there's two main steps in defining AI plugins.
 
 1. Define the core functionality that you want to expose as an AI plugin. <br>
    This is a pre-requisite and an existing step in Dataverse about defining a custom API or a custom connector. This means that you can define an AI plugin for your existing custom APIs or custom connectors without any major changes.
@@ -55,8 +55,6 @@ Once you have defined the custom API, you can define the AI plugin using Power A
     1. **PluginType**: Dataverse
 1. HumanName, HumanDescription, ModelName, Model Description fields control how your plugin will be discovered by the LLM. So, provide meaningful values for those for your plugins. The remaining fields you can leave blank for now.
 1. Select **Save**.
-
-:::image type="content" source="media/ai-plugins.png" alt-text="Define AI plugin":::
 
 ### Step 3 – Define AI operations
 
