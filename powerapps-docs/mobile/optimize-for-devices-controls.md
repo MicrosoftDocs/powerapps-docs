@@ -54,7 +54,7 @@ The following controls are available for screens that are optimized for devices.
 
 ## Unsupported controls
 
-If a screen is set to be optimized for devices, but has unsupported controls, these will show as an error message in a box. 
+If a screen is set to be optimized for devices, but has an unsupported control, an error message in a box is displayed. 
 
 :::image type="content" source="media/optimized-for-devices-control-error.png" alt-text="The error that shows when an unsupported control is on a screen set to optimize for devices.":::
 
