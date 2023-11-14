@@ -80,7 +80,5 @@ Once you have added all the required plugin metadata to your solution, make sure
 
 Go to **Solutions** section in Power apps and select your solution. Then, select **Export** from the menu > select **Managed**. You can download the exported zip file and import into another test environment and test your changes.
 
-### Step 6 – E2E Testing
 
-At this point you should be able to test your plugin from BizChat.
 
