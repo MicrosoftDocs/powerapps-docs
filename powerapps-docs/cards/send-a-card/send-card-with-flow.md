@@ -55,7 +55,7 @@ Sending a card in Teams froma  flow requires a card instance. To crearte a card 
 ## Send a card for Power Apps to a Teams user
 You can send a card to a specific Teams user. In a Power Automate flow, use the **Create card instance** action in **Cards for Power Apps** connector actions to create a card instance as `Card`  dynamic content. You can use the resulting `Card` dynamic content with the **Teams** connector **Post card in a chat or channel** action to send a card to a specific Teams user.
 
-1. Create or modify an existing flow, or use **Send > Send from a flow** on cards for Power Apps **Play** page to start with a template.
+1. Create or modify an existing flow, or use **Send** > **Send from a flow** on cards for Power Apps **Play** page to start with a template.
 1. Make sure the flow has a trigger. In the screenshot below, the trigger is when a new account record is created.
 1. Create a card instance you want to send using the **Cards for Power Apps** connector's **Create card instance** action. In the screenshot, we created a card instance of the `Account Card` and setting the `Body` input variable to the `Account Name` of the newly created account record.
 1. Add an action to **Post card in a chat or channel** using the **Teams** connector.
