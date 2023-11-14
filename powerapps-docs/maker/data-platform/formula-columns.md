@@ -118,7 +118,7 @@ Switch(
 
 Check the computed **Rating Description** formula column.
  
-:::image type="content" source="media/formula-suggestions-results.png" alt-text="":::
+:::image type="content" source="media/formula-suggestions-results.png" alt-text="Check the results for the formula column":::
 
 ## Operators
 
@@ -364,11 +364,6 @@ You can use the following scalar functions in a formula column:
 
 ## Guidelines and limitations
 
-<<<<<<< HEAD
-### See also
-[FAQ for building apps and tables through conversation](../common/faqs-build-apps-conversation.md)
-[Types of columns](types-of-fields.md)  <br />
-=======
 This section describes guidelines and the known limitations with formula columns in Dataverse.
 
 ### Currency fields usage validations
@@ -446,9 +441,10 @@ This section describes guidelines and the known limitations with formula columns
 
 ## See also
 
-[Types of columns](types-of-fields.md)  
+[FAQ for building apps and tables through conversation](../common/faqs-build-apps-conversation.md)
 
->>>>>>> origin/main
+[Types of columns](types-of-fields.md)  <br />
+
 [Microsoft Power Fx overview](/power-platform/power-fx/overview)
 
 [Formula, calculated, and rollup columns using code](../../developer/data-platform/calculated-rollup-attributes.md)
