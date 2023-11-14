@@ -36,7 +36,6 @@ Let’s get started and define our first AI plugin. In this example, we will def
 > [!Note]
 > A basic understanding and knowledge of application lifecycle management (ALM) in Dataverse is required to follow this example. See [Solution concepts](/power-platform/alm/solution-concepts-alm) in Power Platform ALM to learn more.
 
-The plugin infrastructure currently supports only custom APIs with ‘IsFunction=False’ and ‘IsPrivate=False’. Hence, ensure that your custom API is not a function or private API. At this point, you can test your custom API using a Postman client.
 
 ## Defining a Dataverse custom API as an AI plugin 
 
@@ -61,7 +60,7 @@ Once you have defined the custom API, you can define the AI plugin using Power A
 
 ### Step 3 – Define AI operations
 
-Once you have defined an AI plugin, the next step is to add the operations you want the plugin to expose. This can be done by selecting “+ New AIPluginOperation” from the top menu bar.
+Once you have defined an AI plugin, the next step is to add the operations you want the plugin to expose. This can be done by selecting **+ New AIPluginOperation** from the top menu bar.
 
 Enter the following fields in this form:
 
