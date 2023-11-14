@@ -293,7 +293,7 @@ items:
     href: retrieve-absolute-url-and-site-collection-url-of-a-location-record.md
 - name: Special Operations
   items:
-  - name: Create and Update multiple
+  - name: Bulk operations
     href: create-update-multiple.md
   - name: Execute multiple requests
     href: execute-multiple-requests.md
