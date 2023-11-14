@@ -43,8 +43,8 @@ There are two steps to enabling a screen to be optimized for device:
 
 For step 1, the setting can be found in Settings > Upcoming features > Experimental tab. Turning on the **Optimize for devices** app setting shows the **Optimize for devices** property on screens. 
 
-![Shows the setting.](media/optimized-for-devices-app-setting.png)
+![Shows the app setting that enables Optimize for devices.](media/optimized-for-devices-app-setting.png)
 
 For step 2, the maker can open the tree view in the left-hand pane and select a screen where the **Optimize for devices** property will be. By setting this property to **On**, the screen will be rendered natively when running on Power Apps mobile in iOS and Android devices. 
 
-![Shows the scanning speed from bringing the barcode reading device capability inline with a product lookup gallery.](media/optimized-for-devices-screen-setting.png)
+![Shows the screen setting that sets that screen to display natively.](media/optimized-for-devices-screen-setting.png)

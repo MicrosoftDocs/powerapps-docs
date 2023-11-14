@@ -19,7 +19,7 @@ contributors:
 
 For a screen to be optimized for devices, it must use controls that are supported natively. The control insert pane can be filtered to only show device-optimized controls. 
 
-![The error that shows when an unsupported control is on a screen set to optimize for devices.](media/optimized-for-devices-control-filter.png)
+![Shows the insert pane, filtered to only show controls that are device-optimized.](media/optimized-for-devices-control-filter.png)
 
 
 ## Device-optimized controls

@@ -1788,9 +1788,9 @@
   - name: Optimize canvas app screens for devices
     items:
     - name: Optimize for devices overview
-    - href: ../mobile/optimize-for-devices-overview.md
+      href: ../mobile/optimize-for-devices-overview.md
     - name: Optimize for devices controls
-    - href: ../mobile/optimize-for-devices-controls.md
+      href: ../mobile/optimize-for-devices-controls.md
   - name: Mobile offline for model-driven apps
     items:
     - name: Mobile offline overview
