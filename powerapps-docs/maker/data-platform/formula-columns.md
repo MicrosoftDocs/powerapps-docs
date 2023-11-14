@@ -14,17 +14,9 @@ contributors:
   - sanjeevgoyalmsft
   - JimDaly
 ---
-
-# Work with formula columns (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Work with formula columns
 
 Formula columns are columns that display a calculated value in a Microsoft Dataverse table. Formulas use [Power Fx](/power-platform/power-fx/overview), a powerful but human-friendly programming language. Build a formula in a Dataverse formula column the same way you would build a formula in Microsoft Excel. As you type, Intellisense suggests functions and syntax, and even helps you fix errors.
-
-> [!IMPORTANT]
-> - This is a preview feature.
->
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Add a formula column
 
