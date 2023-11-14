@@ -1787,9 +1787,9 @@
     href: ../mobile/tenant-switcher.md
   - name: Optimize canvas app screens for devices
     items:
-    - name: Optimize for devices overview
+    - name: Optimize for devices overview (preview)
       href: ../mobile/optimize-for-devices-overview.md
-    - name: Optimize for devices controls
+    - name: Optimize for devices controls (preview)
       href: ../mobile/optimize-for-devices-controls.md
   - name: Mobile offline for model-driven apps
     items:
