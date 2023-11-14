@@ -38,7 +38,7 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
    [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
    a.  Select the up and down arrows, and then select **Get formula suggestions**.<br />
        :::image type="content" source="media/formula-suggestions-selector.png" alt-text="Select the formula suggestions selector":::
-   b. Type your question, such as *what is the Price times Quantity*, in the **Formula** box. More information: [Get formula suggestions (preview)](#get-formula-suggestions-preview-1)
+   b. Type your question, such as *what is the Price times Quantity*, in the **Get formula suggestions** box. More information: [Get formula suggestions (preview)](#get-formula-suggestions-preview-1)
 
 ---
 
