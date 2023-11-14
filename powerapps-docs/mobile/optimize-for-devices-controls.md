@@ -64,9 +64,7 @@ If a screen is set to be optimized for devices, but has an unsupported control, 
 
 ## Device-optimized properties
 
-For device capabilities to be brought inline requires specific configuration. 
-
-For the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control, the maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating the control only works on mobile devices. On the device, in a screen optimized for devices, the control displays a camera feed to enable barcode scanning.
+Some properties must be specifically configured to be optimized for devices. For example, consider the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control. The maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating the control only works on mobile devices. On a device, in a screen optimized for devices, the control displays a camera feed to enable barcode scanning.
 
 ## Known limitations
 
