@@ -1,5 +1,5 @@
 ---
-title: Building AI plugins for discovery by Copilot  (preview)
+title: Building AI plugins for discovery by Copilot (preview)
 description: Building AI plugins for discovery by Copilot .
 ms.date: 11/07/2023
 author: mduelae
@@ -27,7 +27,7 @@ All components within an AI plugin are solution-aware, and can follow the standa
    This is a pre-requisite and an existing step in Dataverse about defining a custom API or a custom connector. This means that you can define an AI plugin for your existing custom APIs or custom connectors without any major changes.
 1. Define the metadata of the AI plugin that can be discovered by a Copilot.
 This is a new step allowing you to define the metadata for your AI plugin that can be used by the Copilots to discover and invoke this plugin. This process includes the following three main components:
-    1. **AI plugin definition**: This is the metadata of your plugin. For example, “SalesAIPlugin”/
+    1. **AI plugin definition**: This is the metadata of your plugin. For example, "SalesAIPlugin"/
     1. **AI plugin operation**: This is a list of operations supported by your plugin. For example, "GetOpportunities", “CreateOpportunity”/
     1. **AI plugin instance**: This controls the state of your plugin, which are: **Enable** or **Disable**.
 
