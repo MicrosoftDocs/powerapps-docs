@@ -19,7 +19,7 @@ contributors:
 
 Use Power Automate to send cards. By setting up a flow that is triggered by an event, you can automate the process of sending cards. For instance, you can create a flow that requests the assigned individual to approve or reject an expense when a new record is added to Dataverse. Alternatively, you can create a flow that sends a daily status update every morning.
 
-Once you have a card for Power Apps created, you can create a flow to post your card in Teams chat or channel or send it to a specific user in Teams by selecting **Send from a flow** option in **Send** menu on card's **Play** page:
+Once you have a card for Power Apps created, you can create a flow to post your card in Teams chat or channel or send it to a specific user in Teams by selecting **Send from a flow** option in **Send** menu on the card's **Play** page:
 
 ## Prerequisites
 
