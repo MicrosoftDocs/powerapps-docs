@@ -1,8 +1,8 @@
 ---
 title: setValue (Power Apps component framework API reference) | Microsoft Docs
 description: Set value for the column.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 04/21/2023
 ms.reviewer: jdaly
 ms.topic: reference

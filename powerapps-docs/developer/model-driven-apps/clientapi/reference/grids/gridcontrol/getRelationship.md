@@ -14,8 +14,6 @@ contributors:
 ---
 # getRelationship (Client API reference)
 
-
-
 [!INCLUDE[./includes/getRelationship-description.md](./includes/getRelationship-description.md)]
 
 ## Grid types supported
@@ -46,12 +44,8 @@ Read-only and editable grids
 
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext).
 
-### Related topics
+### Related articles
 
 [openRelatedGrid](openRelatedGrid.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

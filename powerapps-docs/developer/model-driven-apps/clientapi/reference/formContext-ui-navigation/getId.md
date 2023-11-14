@@ -28,12 +28,8 @@ contributors:
 
 **Description**: Name of the item.
 
-### Related topics
+### Related articles
 
 [formContext.ui.navigation](../formContext-ui-navigation.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

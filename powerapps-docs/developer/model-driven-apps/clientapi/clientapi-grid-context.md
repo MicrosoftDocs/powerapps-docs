@@ -36,11 +36,11 @@ function doSomething(executionContext) {
 }
 ```
 
-## Related topics
+## Related articles
 
-[Client API form context](clientapi-form-context.md)<br/>
-[Client API execution context](clientapi-execution-context.md)<br/>
-[Understand the Client API object model](understand-clientapi-object-model.md)<br/>
+[Client API form context](clientapi-form-context.md)   
+[Client API execution context](clientapi-execution-context.md)   
+[Understand the Client API object model](understand-clientapi-object-model.md)  
 [Grids and subgrids](reference/grids.md)
 
 

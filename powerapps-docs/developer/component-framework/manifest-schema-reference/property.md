@@ -1,8 +1,8 @@
 ---
 title: Property Element | Microsoft Docs
 description: The property node defines a specific, configurable piece of data that the component expects from the Microsoft Dataverse.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

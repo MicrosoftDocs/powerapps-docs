@@ -28,5 +28,4 @@ Provides methods to interact with the business process flow control on a form.
 |[setVisible](formContext-ui-process/setVisible.md)|[!INCLUDE[formContext-ui-process/includes/setVisible-description.md](formContext-ui-process/includes/setVisible-description.md)]|
 
 
-
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

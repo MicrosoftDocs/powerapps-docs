@@ -33,11 +33,9 @@ kbSearchControl.addOnPostSearch(myFunction);
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|myFunction |Function |Yes|The function to add to the **PostSearch** event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.| 
+|`myFunction` |Function |Yes|The function to add to the [PostSearch event](../events/postsearch.md). The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
-### Related topics
-
-[PostSearch event](../events/postsearch.md)
+### Related articles
 
 [removeOnPostSearch](removeOnPostSearch.md)
 

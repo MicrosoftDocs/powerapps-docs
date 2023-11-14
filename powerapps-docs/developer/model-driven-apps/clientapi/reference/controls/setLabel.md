@@ -30,9 +30,9 @@ All
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|label|String|Yes|The new label of the control.|
+|`label`|String|Yes|The new label of the control.|
 
-### Related topics
+### Related articles
 
 [getLabel](getLabel.md)
 

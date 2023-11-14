@@ -35,12 +35,10 @@ When the form [OnPostSave](events/postsave.md) event occurs, you can use the [ge
 |[getIsSaveSuccess](save-event-arguments/getIsSaveSuccess.md)|Use this method to know whether the save operation was successful or failed.|
 |[getSaveErrorInfo](save-event-arguments/getSaveErrorInfo.md)|Use this method to know the error details on why save failed.|
 
-## Related topics
+## Related articles
 
-[Client API execution context](../clientapi-execution-context.md)
-
+[Client API execution context](../clientapi-execution-context.md)   
 [Execution context methods](execution-context.md)
-
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

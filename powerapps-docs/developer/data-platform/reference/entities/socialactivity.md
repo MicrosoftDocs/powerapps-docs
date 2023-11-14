@@ -1,7 +1,7 @@
 ---
 title: "SocialActivity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SocialActivity table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -596,7 +596,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,asyncoperation,contact,knowledgearticle,knowledgebaserecord|
+|Targets|account,adx_invitation,asyncoperation,contact,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
 
 
@@ -1679,6 +1679,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_socialactivitybase_createdonbehalfby](#BKMK_lk_socialactivitybase_createdonbehalfby)
 - [lk_socialactivitybase_modifiedonbehalfby](#BKMK_lk_socialactivitybase_modifiedonbehalfby)
 - [Contact_SocialActivities](#BKMK_Contact_SocialActivities)
+- [adx_invitation_SocialActivities](#BKMK_adx_invitation_SocialActivities)
+- [mspp_adplacement_SocialActivities](#BKMK_mspp_adplacement_SocialActivities)
+- [mspp_pollplacement_SocialActivities](#BKMK_mspp_pollplacement_SocialActivities)
+- [mspp_publishingstatetransitionrule_SocialActivities](#BKMK_mspp_publishingstatetransitionrule_SocialActivities)
+- [mspp_redirect_SocialActivities](#BKMK_mspp_redirect_SocialActivities)
+- [mspp_shortcut_SocialActivities](#BKMK_mspp_shortcut_SocialActivities)
+- [mspp_website_SocialActivities](#BKMK_mspp_website_SocialActivities)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_SocialActivities"></a> KnowledgeBaseRecord_SocialActivities
@@ -1764,6 +1771,48 @@ See the [lk_socialactivitybase_modifiedonbehalfby](systemuser.md#BKMK_lk_sociala
 ### <a name="BKMK_Contact_SocialActivities"></a> Contact_SocialActivities
 
 See the [Contact_SocialActivities](contact.md#BKMK_Contact_SocialActivities) one-to-many relationship for the [contact](contact.md) table/entity.
+
+### <a name="BKMK_adx_invitation_SocialActivities"></a> adx_invitation_SocialActivities
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_SocialActivities](adx_invitation.md#BKMK_adx_invitation_SocialActivities) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_mspp_adplacement_SocialActivities"></a> mspp_adplacement_SocialActivities
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_adplacement_SocialActivities](mspp_adplacement.md#BKMK_mspp_adplacement_SocialActivities) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+
+### <a name="BKMK_mspp_pollplacement_SocialActivities"></a> mspp_pollplacement_SocialActivities
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_pollplacement_SocialActivities](mspp_pollplacement.md#BKMK_mspp_pollplacement_SocialActivities) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_SocialActivities"></a> mspp_publishingstatetransitionrule_SocialActivities
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_SocialActivities](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_SocialActivities) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_redirect_SocialActivities"></a> mspp_redirect_SocialActivities
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_redirect_SocialActivities](mspp_redirect.md#BKMK_mspp_redirect_SocialActivities) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_SocialActivities"></a> mspp_shortcut_SocialActivities
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_SocialActivities](mspp_shortcut.md#BKMK_mspp_shortcut_SocialActivities) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_SocialActivities"></a> mspp_website_SocialActivities
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_SocialActivities](mspp_website.md#BKMK_mspp_website_SocialActivities) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
 
 ### See also
 

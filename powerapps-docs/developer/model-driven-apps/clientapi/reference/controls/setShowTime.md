@@ -30,13 +30,13 @@ standard control for **datetime** attributes.
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|bool|Boolean|Yes|Specify true to show the time portion of the date; false otherwise.|
+|`bool`|Boolean|Yes|Specify true to show the time portion of the date; false otherwise.|
 
 ## Remarks
 
 This method will show or hide the time component of a date control where the attribute uses the **DateAndTime** format. This method will have no effect when the **DateOnly** format is used.
 
-### Related topics
+### Related articles
 
 [getShowTime](getShowTime.md)
 

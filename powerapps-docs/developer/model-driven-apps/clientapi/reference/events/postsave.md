@@ -32,8 +32,7 @@ Use the [addOnPostSave](../formContext-data-entity/addOnPostSave.md)  and [remov
 
 |Name|Type|Required|Description|
 |------|------|------|---------|
-|myFunction|function reference|Yes|The function to add to the PostSave event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
-|||||
+|`myFunction`|function reference|Yes|The function to add to the PostSave event. The [execution context](../../clientapi-execution-context.md) is automatically passed as the first parameter to this function.|
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 

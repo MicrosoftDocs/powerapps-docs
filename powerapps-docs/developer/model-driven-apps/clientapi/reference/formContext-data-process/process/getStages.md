@@ -28,12 +28,8 @@ contributors:
 
 **Description**: See [Stage methods](../../formContext-data-process.md#stage-methods) for the methods to access the properties of the stages returned.
 
-### Related topics
+### Related articles
 
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

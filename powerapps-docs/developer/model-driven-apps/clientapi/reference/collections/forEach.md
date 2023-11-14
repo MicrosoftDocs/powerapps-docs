@@ -28,15 +28,11 @@ contributors:
 
 Delegate function with parameters for column and index. |
 
-### Related topics
-[Collections in Client API](../collections.md)
+### Related articles
 
-[get](get.md)
-
+[Collections in Client API](../collections.md)   
+[get](get.md)   
 [getLength](getLength.md)
-
-
-
 
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

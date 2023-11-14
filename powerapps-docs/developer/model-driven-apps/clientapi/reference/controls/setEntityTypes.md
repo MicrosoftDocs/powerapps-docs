@@ -30,11 +30,11 @@ Lookup control
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|entityLogicalNames|Array of String|Yes|Specify the logical name of the tables allowed in the lookup control.|
+|`entityLogicalNames`|Array of String|Yes|Specify the logical name of the tables allowed in the lookup control.|
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
-### Related topics
+### Related articles
 
 [getEntityTypes](getEntityTypes.md)
 

@@ -27,9 +27,9 @@ Read-only and editable grids
 
 ## Parameter
 
-| Name       | Type               | Required | Description                                                                                                                                                                                                                                                                                              |
-| ---------- | ------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| myFunction | function reference | Yes      | The function to be executed when the subgrid loads. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [execution context](../../../clientapi-execution-context.md) for more information. |
+|Name|Type|Required|Description|
+|---|---|---|---|
+|`myFunction`| function reference | Yes| The function to be executed when the subgrid loads. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [execution context](../../../clientapi-execution-context.md) for more information. |
 
 ## Remarks
 
@@ -48,7 +48,7 @@ function myFunction(executionContext) {
 }
 ```
 
-### Related topics
+### Related articles
 
 [removeOnLoad](removeOnLoad.md)
 

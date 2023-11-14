@@ -30,8 +30,4 @@ contributors:
 
 **Description**: The GUID value for the record.
 
-
-
-
-
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

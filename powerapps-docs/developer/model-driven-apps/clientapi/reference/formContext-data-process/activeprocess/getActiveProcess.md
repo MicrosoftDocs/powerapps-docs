@@ -28,14 +28,9 @@ contributors:
 
 **Description**: The currently active process or null if there is no active process. See [Process methods](../../formContext-data-process.md#process-methods) for the methods to access the properties of the process returned.
 
-### Related topics
+### Related articles
 
-[setActiveProcess](setActiveProcess.md)
-
+[setActiveProcess](setActiveProcess.md)   
 [formContext.data.process](../../formContext-data-process.md)
  
-
-
-
-
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

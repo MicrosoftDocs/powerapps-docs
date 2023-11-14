@@ -14,8 +14,6 @@ contributors:
 ---
 # getViewSelector (Client API reference)
 
-
-
 [!INCLUDE[./includes/getViewSelector-description.md](./includes/getViewSelector-description.md)]
 
 ## Grid types supported
@@ -35,10 +33,5 @@ Read-only grid
 ## Remarks
 
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext).
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

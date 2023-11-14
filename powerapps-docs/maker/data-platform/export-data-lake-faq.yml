@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 01/05/2023
+  ms.date: 09/27/2023
   ms.author: sabinn
   ms.reviewer: 
   contributors: JasonHQX
@@ -14,9 +14,11 @@ summary: This article provides information on frequently asked questions about e
 sections:
 - name: General
   questions:
-   - question: Can I create, update or delete the data file in the Azure storage manually?
+   - question: Can I manually perform tasks such as creating, updating, deleting, or setting retention policies for data files in the connected Azure storage?
      answer: |
         Data files should not be modified by a customer and no customer files should be placed in the data folders.
+        > [!NOTE]
+        > To drop stale and stagnant data in the data lake without breaking the Synapse Link, you should consider using the feature [Query and analyze the incremental updates](azure-synapse-link-incremental.md)
    - question: Can I link a Synapse workspace to an existing Synapse Link profile with data lake only?
      answer: |
         Yes. In your web browser's address bar, append `?athena.updateLake=true` to the web address that ends with **exporttodatalake**. When you select an existing profile from the Synapse Link homepage, you'll see a new action in the extended option **Link to Azure Synapse Analytics Workspace**.  
@@ -77,7 +79,7 @@ sections:
         - Calendarrule
    - question: Does Azure Synapse Link support calculated columns?
      answer: |
-        Yes. In Dataverse, the calculated column keeps only the formula information and the real value depends on the base entity column so the calculated column will be updated if and only if all data (base tables) related to calculated columns are exported via Azure Synapse Link.
+        Calculated columns are only supported when the lookup field is located within the same table.
    - question: Which Dataverse tables use append only mode by default?
      answer: |
         All tables that do not have a createdOn field will be synced using append only mode by default. This includes relationship tables as well as the ActivityParty table.

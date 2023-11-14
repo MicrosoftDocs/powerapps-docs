@@ -28,7 +28,7 @@ contributors:
 
 **Description**: true if the step is marked as required in the Business Process Flow editor; false otherwise.
 
-### Related topics
+### Related articles
  
 [formContext.data.process](../../formContext-data-process.md)
 

@@ -14,8 +14,6 @@ contributors:
 ---
 # gridContext.removeOnLoad (Client API reference)
 
-
-
 [!INCLUDE[./includes/removeOnLoad-description.md](./includes/removeOnLoad-description.md)]
 
 ## Grid types supported
@@ -30,17 +28,14 @@ Read-only grids
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|function reference|Yes|The function to be removed from the **OnLoad** event.
+|`myFunction`|function reference|Yes|The function to be removed from the **OnLoad** event.
 
 ## Remarks
 
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext).
 
-### Related topics
+### Related articles
 
 [addOnLoad](addOnLoad.md) 
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

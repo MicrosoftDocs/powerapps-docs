@@ -1,8 +1,8 @@
 ---
 title: ReactControl (Power Apps component framework API reference) | MicrosoftDocs
 description: Provides properties and methods to initiate, update, destroy and perform various actions to build a component using a ReactControl.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

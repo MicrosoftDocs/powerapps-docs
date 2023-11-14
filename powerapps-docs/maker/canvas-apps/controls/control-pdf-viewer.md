@@ -98,6 +98,13 @@ App users can work around these limitations by opening PDF documents in an exter
 
 **Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
 
+## Keyboard shortcuts
+
+- **J** - Page down
+- **K** - Page up
+- **N** - Page down
+- **R** - Rotate all pages 90° clockwise
+
 ## Example
 
 Add a **PDF viewer** control, and set its **Document** property to the URL, enclosed in double quotation marks, of a PDF file as in this example:

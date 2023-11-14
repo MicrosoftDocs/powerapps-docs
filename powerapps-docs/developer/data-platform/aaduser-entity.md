@@ -14,6 +14,9 @@ search.audienceType:
 ---
 # Azure Active Directory user table
 
+> [!NOTE]
+> Azure Active Directory is now Microsoft Entra ID. [Learn more](/azure/active-directory/fundamentals/new-name)
+
 Microsoft Dataverse includes a virtual table named AAD user (aaduser). This virtual table provides a connection to Azure Active Directory (AAD) and returns data about users within your AAD organization. No virtual table configuration is required to use the functionality. This is an online only feature.
 
 > [!NOTE]

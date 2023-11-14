@@ -36,6 +36,7 @@ An activity party represents a person or group associated with an activity. An a
 |Resource|10|Specifies a resource.|  
 |Customer|11|Specifies a customer.|  
 |ChatParticipant|12|Specifies a participant in a Teams chat.|  
+|Related|13|Specifies one or more related records.|  
   
 <a name="SupportedActivityPartyTypes"></a>   
 
@@ -53,7 +54,7 @@ Not all activity party types are available for each activity in Dataverse, excep
 |CampaignActivity|Sender|CampaignActivity.Partners<br />CampaignActivity.From|  
 |CampaignResponse|Customer|CampaignResponse.Customer<br />CampaignResponse.Partner<br />CampaignResponse.From|  
 |Chat|ChatParticipant|None|  
-|Email|BccRecipient<br />CcRecipient<br />Sender<br />ToRecipient|Email.Bcc<br />Email.Cc<br />Email.From<br />Email.To|  
+|Email|BccRecipient<br />CcRecipient<br />Related<br />Sender<br />ToRecipient|Email.Bcc<br />Email.Cc<br />Email.Related<br />Email.From<br />Email.To|  
 |Fax|Sender<br />ToRecipient|Fax.From<br />Fax.To|  
 |Letter|BccRecipient<br />Sender<br />ToRecipient|Letter.Bcc<br />Letter.From<br />Letter.To|  
 |PhoneCall|Sender<br />ToRecipient|PhoneCall.From<br />PhoneCall.To|  

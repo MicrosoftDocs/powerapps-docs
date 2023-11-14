@@ -19,12 +19,7 @@ ms.contributors:
 
 Collaborate with colleagues and share links in model-driven Power Apps the same way do you as in Microsoft Office.
 
-### Multiplayer apps (preview)
-[This section is pre-release documentation and is subject to change.]
-
-> [!IMPORTANT]
-> This feature is rolling out gradually, slower than the standard, weekly deployments and will be enabled by default for all customers through April and August 2023. If you have enabled this capability before 2023 release wave 1, you may not see other users working on the same record intermittently. This will be addressed as part of the gradual rollout through April and August 2023.
-
+### Multiplayer apps
 When you're working on a record, you can also see other users who are working on the same record.
 
 You can also select a user's picture to see their online status, send them an email, or start a Teams chat. 

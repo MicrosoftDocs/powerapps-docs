@@ -14,8 +14,6 @@ contributors:
 ---
 # tab.getName (Client API reference)
 
-
-
 [!INCLUDE[./includes/getName-description.md](./includes/getName-description.md)]
 
 ## Syntax
@@ -27,9 +25,5 @@ contributors:
 **Type**: String
 
 **Description**: Name of the tab.
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -2,7 +2,7 @@
 title: Compose HTTP requests and handle errors
 description: Learn about the HTTP methods and headers that form a part of HTTP requests for the Web API and how to identify and handle errors returned in the response.
 ms.topic: how-to
-ms.date: 04/19/2023
+ms.date: 09/26/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -47,6 +47,9 @@ The URL you use is made up of these parts:
 
 Protocol + Environment Name + Region + Base URL + Web API path + Version + Resource.
 
+### Maximum URL length
+
+The maximum length of URL accepted by is 32 KB (32768 characters). This should be adequate for most kinds of request except certain `GET` operations which require very long string query parameters, such as queries using FetchXml. If you send requests inside the body of a `$batch` request, you can send requests with URLs up to 64 KB (65,536 characters). [Learn more about sending FetchXml within a $batch request](use-fetchxml-web-api.md#use-fetchxml-within-a-batch-request).
 
 <a name="version_compatiblity"></a>
 
@@ -145,7 +148,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Mic
 
 |Header|Value|Description|
 |---------|---------|---------|
-|`CallerObjectId`|User Azure Active Directory Object ID|Use this header to impersonate another user when the caller has the privileges to do so. Set the value to the Azure Active Directory Object ID of the user to impersonate. This data is in the [User (SystemUser) table/entity](../reference/entities/systemuser.md) [AzureActiveDirectoryObjectId](../reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information: [Impersonate another user using the Web API](impersonate-another-user-web-api.md)|
+|`CallerObjectId`|User Microsoft Entra ID Object ID|Use this header to impersonate another user when the caller has the privileges to do so. Set the value to the Microsoft Entra ID Object ID of the user to impersonate. This data is in the [User (SystemUser) table/entity](../reference/entities/systemuser.md) [AzureActiveDirectoryObjectId](../reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information: [Impersonate another user using the Web API](impersonate-another-user-web-api.md)|
 |`If-Match`|`Etag` value<br /> or `*`|Use this header to apply optimistic concurrency to ensure that you don't overwrite changes that someone else applied on the server since you retrieved a record. More information: [Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency) and [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1)<br /> You can also use this header with `*` to prevent a `PATCH` operation from creating a record. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert)|
 |`If-None-Match`|`null`<br /> or `*`|This header should be used in all requests with a value of `null` as described in [HTTP headers](#http-headers), but it can also be used to prevent a `POST` operation from performing an update. More information: [Prevent update in upsert](perform-conditional-operations-using-web-api.md#prevent-update-in-upsert) and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2)|
 |`MSCRM.SolutionUniqueName`|solution unique name|Use this header when you want to create a solution component and have it associated with an unmanaged solution. More information: [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)|

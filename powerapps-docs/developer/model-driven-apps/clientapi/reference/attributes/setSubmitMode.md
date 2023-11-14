@@ -46,7 +46,8 @@ Use this method to control when data for a column is submitted when a record is 
 
 Columns that do not get updated after the initial save of the record, such as `createdby`, are set so that they will not be submitted on save. To force a column value to be submitted whether it has changed or not, use this method with the `mode` parameter set to `always`.
 
-### See also
+### Related articles
+
 [getSubmitMode (Client API reference)](getSubmitMode.md)
 
 

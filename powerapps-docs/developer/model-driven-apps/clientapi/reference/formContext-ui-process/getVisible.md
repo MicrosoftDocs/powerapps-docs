@@ -28,14 +28,9 @@ contributors:
 
 **Description**: true if the control is visible; false otherwise.
 
-### Related topics
+### Related articles
 
-[setVisible](setVisible.md)
-
+[setVisible](setVisible.md)   
 [formContext.ui.process](../formContext-ui-process.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

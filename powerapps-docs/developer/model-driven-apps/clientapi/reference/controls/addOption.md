@@ -30,13 +30,12 @@ Choice, Choices
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|option |Object |Yes|The option to add. The object contains the following:<br/>**- text**: String. The label for the option.<br/>**- value**: Number. The value for the option.|
-|index |Number |No|The index position to place the new option in. If not provided, the option will be added to the end.|
+|`option` |Object |Yes|The option to add. The object contains the following:<br/>**- `text`**: String. The label for the option.<br/>**- `value`**: Number. The value for the option.|
+|`index` |Number |No|The index position to place the new option in. If not provided, the option will be added to the end.|
 
-### Related topics
+### Related articles
 
-[clearOptions](clearOptions.md)
-
+[clearOptions](clearOptions.md)   
 [removeOption](removeOption.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

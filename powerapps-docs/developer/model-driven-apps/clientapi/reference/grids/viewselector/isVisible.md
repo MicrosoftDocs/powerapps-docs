@@ -14,8 +14,6 @@ contributors:
 ---
 # isVisible (Client API reference)
 
-
-
 [!INCLUDE[./includes/isVisible-description.md](./includes/isVisible-description.md)]
 
 ## Grid types supported
@@ -37,9 +35,5 @@ Read-only grid
 If the subgrid control is not configured to display the view selector, calling this method on the **ViewSelector** returned by the GridControl.getViewSelector method will throw an error.
 
 To get the `viewSelector` object, see [ViewSelector](../viewselector.md).
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]
