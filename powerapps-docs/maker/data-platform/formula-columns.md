@@ -88,12 +88,12 @@ Describe what you want the formula to do and get AI generated results. Formula s
 Imagine there's a **Customer rating** column that shows their rating by account.
 :::image type="content" source="media/customer-rating-column.png" alt-text="Example customer rating column":::
 
-In the **Get formula suggestions** box, enter the formula in natural language as an example *If the rating on the rating column is equal or greater than 5 then indicate as Good and if less than 5 indicate as Average and if value is blank or zero then display as Bad*, and then select the arrow button (enter).
+In the **Get formula suggestions** box enter the formula in natural language, such as *If the rating on the rating column is equal or greater than 5 then indicate as Good and if less than 5 indicate as Average and if value is blank or zero then display as Bad*, and then select the arrow button (enter).
 
-Copy the **Suggested Formula**.
+Then copy the **Suggested Formula**.
 :::image type="content" source="media/suggested-formula.png" alt-text="Suggested formula":::
 
-Paste into the **Type a formula** box, and then select **Save**.
+And paste it into the **Type a formula** box. Select **Save**.
 :::image type="content" source="media/paste-formula.png" alt-text="Paste formula into Type a formula box.":::
 
 Here's how the formula appears when pasted.
@@ -116,7 +116,7 @@ Switch(
 )
 ```
 
-Check the computed **Rating Description** formula column.
+Check the computed **Rating Description** formula column, which appears like this.
  
 :::image type="content" source="media/formula-suggestions-results.png" alt-text="Check the results for the formula column":::
 
