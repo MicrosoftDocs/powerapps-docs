@@ -6,7 +6,7 @@ ms.author: Milindav
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 10/09/2023
+ms.date: 11/14/2023
 ms.custom: template-how-to
 ---
 # Link your Dataverse environment to Microsoft Fabric and unlock deep insights 
@@ -49,64 +49,61 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 > [!NOTE]
 >
-> By selecting Link to Microsoft Fabric feature, the system adds all non-system Dataverse Tables that have the "Track changes" property enabled.
-> 
-> If you used this feature during Public preview, you can continue to use tables selected earlier. If you choose Link to Fabric option in new environments (or unlink and re-link existing environments), all tables will be added.  
->  
-> System administrators can add Dynamics 365 Finance and Operations (F&O) tables into the **Microsoft OneLake** link that's created with this feature by visiting the Synapse Link menu. They are not automatically added at this point in time.
+> By selecting **Link to Microsoft Fabric**, the system adds all non-system Dataverse tables that have the **Track changes** property enabled.
 >
-> Enabling this feature may result in an increase in Dataverse storage consumption. You can see additional storage consumption in Power platform amin center.
+> If you used this feature during public preview, you can continue to use the tables selected earlier. If you choose the **Link to Fabric** option in new environments (or unlink and re-link existing environments), all tables will be added.  
+>  
+> System administrators can add Dynamics 365 finance and operations tables into the **Microsoft OneLake** link that's created with this feature by selecting **Synapse Link**. These tables aren't automatically added at this time.
+>
+> Enabling this feature might result in an increase in Dataverse storage consumption. View additional storage consumption in Power Platform admin center.
 >
 
 ## Link existing Azure Synapse Link for Dataverse profiles to Fabric
 
-Azure Synapse Link for Dataverse enables IT admins with provisioning, configuring Azure resources as well as automating data exports to your own storage and enabling you to build your own integration pipelines. Link to Fabric feature enables direct connectivity between your data in Dataverse with Microsoft Fabric without data export enabling your Low code makers to easily work with their data. This table provides a quick comparison between the options.
+Azure Synapse Link for Dataverse enables IT admins with provisioning, configuring Azure resources as well as automating data exports to your own storage and enabling you to build your own integration pipelines. Link to Fabric feature enables direct connectivity between your data in Dataverse with Microsoft Fabric without data export enabling low code makers to easily work with their data. This table provides a quick comparison between the options.
 
 | Link to Fabric                      | Azure Synapse Link                | 
 |:-----------------------------------|:------------------------------|
 | No copy, no ETL direct integration with Microsoft Fabric.  |  Export data to your own storage account and integrate with Synapse, Microsoft Fabric, and other tools. |
 | Data stays in Dataverse - secure access in Microsoft Fabric. | Data stays in your own storage. You manage access. |
-| All tables chosen by default (see NOTE)  | System admin can choose required tables |
+| All tables chosen by default.<sup>1</sup>  | System administrators can choose required tables. |
 | Consumes additional Dataverse storage.  | Consumes your own storage as well as other compute and integration tools. | 
 
-We have also made it possible to connect existing Azure Synapse Links with Microsoft Fabric and benefit from Fabric innovations like Power BI DirectLake mode reports and integrated Spark and Data pipelines. You can add or remove tables from existing Azure Synapse Link for Dataverse links and create new Fabric links within a single experience. You can also use Azure Synapse Link for Dataverse to choose [tables and entities from Dynamics 365 Finance and Operations](/power-apps/maker/data-platform/azure-synapse-link-select-fno-data).
+<sup>1</sup>You must create an Azure Synapse Link for Dataverse profile and enable the **Delta parquet conversion for Fabric link** option. This option isn't available for  Azure Synapse Link for Dataverse profiles that use the CSV output format.
 
-> [!NOTE]
-> You need to create a Azure Synapse Link for Dataverse profile and enable the **Delta parquet conversion for Fabric link** option. This option isn't available for  Azure Synapse Link for Dataverse profiles that use the CSV output format.
-> 
+We have also made it possible to connect existing Azure Synapse Links with Microsoft Fabric and benefit from Fabric innovations like Power BI DirectLake mode reports and integrated Spark and Data pipelines. You can add or remove tables from existing Azure Synapse Link for Dataverse links and create new Fabric links within a single experience. You can also use Azure Synapse Link for Dataverse to choose [tables and entities from Dynamics 365 Finance and Operations](/power-apps/maker/data-platform/azure-synapse-link-select-fno-data).
 
 ## Configure your environment
 
 You can use an existing Dataverse environment or create a new developer environment if you want to try this feature. More information: [Create a developer environment](/power-platform/developer/create-developer-environment)
 
-
 ## Link to Microsoft Fabric
 
-You can link to Microsoft Fabric from Power Apps **Tables** area: Select **Analyze** > **Link to Microsoft Fabric** from the command bar. 
+Link to Microsoft Fabric from the Power Apps **Tables** area: Select **Analyze** > **Link to Microsoft Fabric** on the command bar. 
 
 1. Sign into [Power Apps](https://make.powerapps.com).
    > [!NOTE]
    >
    > This feature is enabled by default on all environments. Admins can disable this feature in the Power Platform admin center in the environment feature settings.
    > 
-   > This option has moved from the **Export** menu since Public preview. You can no longer select this option from the context menu for specific Tables since this option applies to all tables.
+   > This option has moved from the **Export** menu since public preview. You can no longer select this option from the context menu for specific tables because this option applies to all tables.
    >
 
+2. Select the environment you want, select **Tables** on the left navigation pane, and then select **Analyze** > **Link to Microsoft Fabric** on the command bar
+3. If you're linking to Fabric for the first time, a wizard appears. You can launch Fabric with the same option in subsequent runs.
+4. The wizard validates your Fabric subscription settings the first time. If needed, the wizard asks you to create a one time connection to Microsoft Fabric within the same step.
+5. The wizard asks you to select an existing Fabric workspace or to create a new one. You can expect to see shortcuts to all your tables within this workspace.
+6. When done, select **Create** in the wizard to create the workspace, create shortcuts, and to perform the initialization for the first time.
 
-2. Select the environment you want, select **Tables** on the left navigation pane and select **Analyze > Link to Microsoft Fabric** from the command bar
-3. If you're Linking to Fabric for the first time, a wizard appears. You can launch Fabric with the same option in subsequent runs.
-4. The wizard will validate your Fabric subscription settings the first time, if needed, theziward will ask you to create a one time connection to Microsoft Fabric within the same step.
-5. Wizard will ask you to select an Existing Fabric workspace or to create a new one. You can expect to see shortcuts to all your tables within this workspace.
-6. When done, you can select **Create** button in the wizard to create the workspace, create shortcuts and to perform the initialization for the first time.
-7. When complete, Fabric lakehouse opens in a separate browser tab.
+When complete, Fabric lakehouse opens in a separate browser tab.
 
-It might take up to 60 minutes to update data in OneLake including the conversion to delta parquet format. If you've selected a table that contains a lot of data, the initial load time might take even longer. When you open Fabric lakehouse, you see the links as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
+It might take up to 60 minutes to update data in OneLake including the conversion to delta parquet format. If you selected a table that contains a lot of data, the initial load time might take longer. When you open Fabric lakehouse, the links appear as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
 
-The workspace you choose to link with Dataverse must be assigned to a premium capacity in the same region as your Dataverse environment. If you choose to create a new workspace, system requires that you have access to a Power BI / Fabric premium capacity within the same region as your Dataverse environment. Wizard may detect missing pre-requisites includng missing capacity at the begining. 
+The workspace you choose to link with Dataverse must be assigned to a premium capacity in the same region as your Dataverse environment. If you choose to create a new workspace, the system requires that you have access to a Power BI / Fabric premium capacity within the same region as your Dataverse environment. The wizard might detect missing prerequisites including insufficient capacity at the beginning.
 
-At this point in time, the system supports following Premium capacity SKUs. "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1"
+Currently, the system supports these premium capacity SKUs: "P1", "P2", "P3", "P4", "P5", "F2", "F4", "F8", "F16", "F32", "F64", "F128", "F256", "F512", "F512", "F1024", "F2048", "DCT1", "FT1"
 
-To confirm whether you have access to required premium capacity, Go to [Power BI](https://app.powerbi.com), open the workspace, select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected. 
+To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
 
 :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
 
@@ -121,11 +118,11 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 1. Sign into [Power Apps](https://make.powerapps.com). 
    > [!NOTE]
    >
-   > This feature is enabled by default on all environments. Admins can disable this feature in the Power Platform admin center in the environment feature settings.
+   > This feature is enabled by default on all environments. Power Platform admins can disable this feature in the Power Platform admin center in the environment feature settings.
 
 2. Select **Azure Synapse Link** from the left navigation pane, and the select **Microsoft OneLake**.
-3. You can launch Fabric from here by selecting **View in Microsoft Fabric**.
-4. You can add/ link more tables to Fabric by selecting **Manage tables**.
+3. Open Fabric by selecting **View in Microsoft Fabric**.
+4. Add more table links to Fabric by selecting **Manage tables**.
 5. When you add a table, the system performs an initial sync and indexes the data. When the initial sync is completed, a shortcut to OneLake is created. View the status of tables by selecting **Manage tables**.
 6. When the sync status is **Active**, as data gets updated, your data changes are shown in reports created in Fabric.
 7. If a new column is added to a table that’s already added (also known as a metadata change), you can use the **Refresh Fabric tables** option to update the change in Fabric. You might need to review the report and downstream data flows to see that they aren't impacted by the change.
@@ -133,11 +130,11 @@ Admins can manage tables linked to OneLake from the **Azure Synapse Link for Dat
 
 > [!NOTE]
 > 
-> Depending on the size of data, initialization may take up to 60 minutes to complete. Subsequent updates to data may also take up to 60 minutes to update. When you open Fabric lakehouse you'll see the links as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
+> Depending on the size of data, initialization might take up to 60 minutes to complete. Subsequent updates to data might also take up to 60 minutes to update. When you open Fabric lakehouse you'll see the links as **unidentified** until the initial sync is completed. More information: [Troubleshooting common issues](#troubleshooting-common-issues)
 >
-> If you have installed Dynamics 365 apps such as Customer Insights, tables required for the App are also included in **Microsoft OneLake** link.
+> If you've installed Dynamics 365 apps such as Customer Insights, the tables required for the app are also included in the **Microsoft OneLake** link.
 > 
-> Removing already added tables has been disabled since it may impact already built reports.
+> Removing already added tables has been disabled since it might impact already built reports.
 
 ## Link existing Azure Synapse Link for Dataverse links with Fabric
 
@@ -148,7 +145,7 @@ To enable an existing link, follow these steps:
 1. Sign into [Power Apps](https://make.powerapps.com).
 1. Select **Azure Synapse Link** from the left navigation.
 1. Select an existing Azure Synapse Link for Dataverse profile, and then select **Link to Microsoft Fabric**.
-1. You're prompted to choose a Power BI premium workspace to continue. A list of workspaces in the same region as your environment are displayed. If you don’t see a workspace in the drop-down list, you might need to create one, and then return to this task. More information: [Create a Fabric workspace](#create-a-fabric-workspace)
+1. You're prompted to choose a Power BI premium workspace to continue. A list of workspaces in the same region as your environment are displayed. If you don’t see a workspace in the drop-down list, you might need to create one, and then return to this task. More information [Link to Microsoft Fabric](#link-to-microsoft-fabric)
 1. Select **OK**. Validations are performed and the required artifacts are created in Fabric.  
 1. Select **View in Microsoft Fabric** open Fabric lakehouse.
 1. You can add or remove tables using by selecting **Manage tables**. When you add a table, an initial sync is performed. When the initial sync is completed, select **Refresh Fabric tables** to refresh the Dataverse shortcut added to your Fabric lakehouse.
