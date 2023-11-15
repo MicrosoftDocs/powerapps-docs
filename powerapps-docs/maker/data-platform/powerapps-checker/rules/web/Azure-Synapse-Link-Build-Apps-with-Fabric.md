@@ -24,6 +24,15 @@ Insights aren't complete unless you can drive action and business processes. Now
 With Dataverse virtual tables over Microsoft Fabric, your low code App builders can connect to data in Microsoft OneLake and build Power Apps and drive business actions. 
 Additionally, with Power Pages, low code makers can build external facing websites and drive action from OneLake insights with partners, suppliers, and customers
 
+## Pre requisites
+You can use an existing Dataverse environment or create a new developer environment. More information: [Create a developer environment](https://learn.microsoft.com/en-us/power-platform/developer/create-developer-environment)
+
+You need to have contrinutor or administrator access to a Microsoft Fabric workspace with data. 
+- If you don’t have Power BI premium license or Fabric capacity, you can sign up for a Free [Fabric trial capacity](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial)
+- If you do not have a workspace with data, you can easily create a workspace with sample data using the [lakehouse tutorial here](https://learn.microsoft.com/en-us/fabric/data-engineering/tutorial-build-lakehouse)
+
+## Create a virtual table with Microsoft Fabric data
+
 
 
 
