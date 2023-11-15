@@ -32,14 +32,16 @@ You need to have contrinutor or administrator access to a Microsoft Fabric works
 - If you do not have a workspace with data, you can easily create a workspace with sample data using the [lakehouse tutorial here](https://learn.microsoft.com/en-us/fabric/data-engineering/tutorial-build-lakehouse)
 
 ## Create a virtual table with Microsoft Fabric data
-You can follow the process below to create a Virtual table using Microsoft Fabric data
-
-1. Sign into [Power Apps](https://make.powerapps.com)
+You can follow the process below to create a Virtual table using Microsoft Fabric data.
 
 >[Note]
 > 
 > This feature is enabled by default on all environments. Admins can disable this feature in the Power Platform admin center in the environment feature settings.
-> 
+>
+
+1. Sign into [Power Apps](https://make.powerapps.com) and then select **Tables** on the left navigation pane
+2. On the command bar, select **New table > Create a virtual table** or select the **Create Virtual table** tile.
+3. Select SQL Server as the connection, and then select Next.
 
 
 
