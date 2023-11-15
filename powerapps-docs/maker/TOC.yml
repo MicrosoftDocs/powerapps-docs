@@ -428,6 +428,8 @@
               href: ./canvas-apps/add-gallery.md
             - name: Add a variable-height gallery
               href: ./canvas-apps/gallery-dynamic-sizing.md
+            - name: Avoid gallery pitfalls
+              href: ./canvas-apps/gallery-pitfalls.md
           - name: Add and configure a form
             items:
             - name: Add a form
