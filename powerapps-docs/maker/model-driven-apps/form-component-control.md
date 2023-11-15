@@ -2,7 +2,7 @@
 title: "Edit table records directly from another table’s main form | MicrosoftDocs"
 description: Learn how to design a main form that can be used to edit a related table record.
 ms.custom: ""
-ms.date: 02/28/2023
+ms.date: 11/14/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -31,7 +31,7 @@ For example, here's the form component on an **existing tab** on the main accoun
 
 ## Add the form component to a table main form
 
-1. On the left navigation pane select **Components**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the left navigation pane, select **Components**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Expand either **Input** or **Display**, and then select **Form**.
 On the form component control configuration page, select the properties for the control:  
    - Select the **Lookup column** for the form.
@@ -121,7 +121,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - The form component control doesn't support embedded form component controls, such as adding a form component control to a form that is used by a form component control.
 
-- The form component control doesn't support [embedded canvas apps](embed-canvas-app-in-form.md). You may encounter unexpected behavior with these canvas apps.
+- The form component control doesn't support [embedded canvas apps](embed-canvas-app-in-form.md). You might encounter unexpected behavior with these canvas apps.
 
 - The form component control will only display the first tab of the form it uses if multiple tabs are included in that form.  
 
@@ -131,7 +131,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - Form component controls have certain limitations when rendered in multi-session apps. If the client API is used to modify the form component control, or if data is entered on the form, the changes might not be persisted when switching multi-session tabs.
 
-- You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
+- You might notice that the timeline wall might not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
 
 - On mobile, the timeline control doesn't currently appear in the form component control.
 
