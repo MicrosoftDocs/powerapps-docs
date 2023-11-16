@@ -41,7 +41,17 @@ You can follow the process below to create a Virtual table using Microsoft Fabri
 
 1. Sign into [Power Apps](https://make.powerapps.com) and then select **Tables** on the left navigation pane
 2. On the command bar, select **New table > Create a virtual table** or select the **Create Virtual table** tile.
-3. Select SQL Server as the connection, and then select Next.
+3. Select **Microsoft Fabric** as the connection, and then select Next.
+4. You can choose a **Microsoft Fabric workspace** from the available list of workspaces. All workspace where you have access will be available in the drop down
+5. You can also choose a **Microsoft Fabric Lakehouse** from the drop down list. All Lakehouses and Data warehouses within the workspace selected above will be available to choose.
+6. In the Data page, you can select a table from the list of tables shown from the Lakehouse. You can select the **Configure table and column names that will be used in Dataverse** checkbox if you want to rename any of the fields or tables in Dataverse or to specify additional properties available for you in Dataverse. Select Next to continue.
+7. If you selected the **Configure table and column names that will be used in Dataverse** checkbox, you will be shown the table and column properties and you can modify them here. Select Next to continue
+8. Review the information shown on screeen and select **Finish**
+9. You will see a new Dataverse virtual table created with data form Microsoft Fabric
+
+ 
+
+
 
 
 
