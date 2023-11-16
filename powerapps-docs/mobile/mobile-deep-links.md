@@ -25,15 +25,15 @@ Deep links let users move from one application to another on computers and mobil
 
 ## Supported deep links in the Power Apps mobile app
 
-You can open an `entityrecord` or an `entitylist` view in Power Apps mobile by using deep-link URLs from other apps. When you follow the link from an external app, the target element opens in Power Apps mobile
+You can open an `entityrecord` or an `entitylist` view in the Power Apps mobile app by using deep-link URLs from other apps. When you follow the link from an external app, the target element opens in Power Apps mobile
 
-If you're already signed in to your instance in the app, the target record is displayed when you follow the link from an external app. Otherwise, you're prompted to sign in to your instance in the mobile app; after you're signed in, the target element is displayed. You must have Power Apps mobile installed on your mobile device to use this feature.
+If you're already signed in to your instance in the app, the target record is displayed when you follow the link from an external app. Otherwise, you're prompted to sign in to your instance in the mobile app; after you're signed in, the target element is displayed. You must have the Power Apps mobile app installed on your mobile device to use this feature.
 
 ## Supported Urls parameters for a model-driven app
 
 Use the following application handler and query string parameters to compose the URL.
 
-Deep links for Power Apps mobile should start with the following:
+Deep links for the Power Apps mobile app should start with the following:
 
 ```ms-apps://<org-url>_<app-id>?tenantId=<tenant-id>&isShortcut=true&appType=AppModule&openApp=true&restartApp=true&forceOfflineDataSync=true```
 
