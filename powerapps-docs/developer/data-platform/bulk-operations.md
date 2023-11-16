@@ -396,9 +396,6 @@ A key requirement of the bulk operation messages is that organizations must not 
 
 - When a single operation message is used, the respective bulk operation event occurs with an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing a *single* [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance passed in the `Targets` parameter.  You can move any logic that responds to single operation events to the more efficient bulk operation events and the logic is applied for both individual and multiple operations.
 
-   > [!NOTE]
-   > Don't migrate custom logic to the `DeleteMultiple` message until [Known issue: DeleteMultiple plug-ins not invoked for Delete](deletemultiple.md#deletemultiple-plug-ins-not-invoked-for-delete) is resolved.
-
 Before the introduction of bulk operation messages, all custom logic was on the single operation messages. That logic must continue to be applied when client applications use the bulk operation messages. For tables used with high-volume bulk operations, we recommend that you begin to move any synchronous logic from single message events to bulk operation events. If you're introducing new logic, use the bulk operation events rather than the single operation events.
 
 > [!CAUTION]
