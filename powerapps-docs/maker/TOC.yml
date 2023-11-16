@@ -1785,6 +1785,12 @@
     href: ../mobile/scan-QR-code.md
   - name: Switch to a different directory in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
+  - name: Optimize canvas app screens for devices
+    items:
+    - name: Optimize for devices overview (preview)
+      href: ../mobile/optimize-for-devices-overview.md
+    - name: Optimize for devices controls (preview)
+      href: ../mobile/optimize-for-devices-controls.md
   - name: Mobile offline for model-driven apps
     items:
     - name: Mobile offline overview
@@ -1909,7 +1915,7 @@
            href: ./portals/use-content-editor.md
     - name: Update domain name
       href: ./portals/admin/update-portal-domain.md
-    - name: Customize the Azure AD B2C user interface
+    - name: Customize the Microsoft Entra B2C user interface
       href: ./portals/configure/azure-ad-b2c.md
     - name: Integrate Power BI
       items:
@@ -2291,7 +2297,7 @@
         href: ./data-platform/azure-synapse-link-choices-serverless.md
       - name: Export data in Delta Lake format
         href: ./data-platform/azure-synapse-link-delta-lake.md
-      - name: View Dataverse data in Microsoft Fabric (preview)
+      - name: View Dataverse data in Microsoft Fabric
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
@@ -2399,7 +2405,7 @@
           href: ../teams/add-app-notifications.md
         - name: Integrate with Planner
           href: ../teams/integrate-planner.md
-        - name: Integrate with Azure Active Directory
+        - name: Integrate with Microsoft Entra ID
           href: ../teams/integrate-azure-ad.md
         - name: Integrate with calls and meetings
           href: ../teams/integrate-calls-and-meetings.md
@@ -2536,6 +2542,8 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
+- name: Building AI plugins for discovery by Copilot (preview)
+  href: common/build-ai-plugin-for-copilot.md     
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions

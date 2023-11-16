@@ -1,7 +1,7 @@
 ---
-title: Use bulk operation messages (preview)
+title: Use bulk operation messages
 description: Learn how to use special APIs to perform operations on multiple rows of data in a Microsoft Dataverse table. 
-ms.date: 11/09/2023
+ms.date: 11/13/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -14,31 +14,26 @@ contributors:
 ms.custom: bap-template
 ---
 
-# Use bulk operation messages (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-> [!IMPORTANT]
-> This is a preview feature.
->
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+# Use bulk operation messages
 
 To get the best performance when you run operations on multiple rows of a Microsoft Dataverse table, use one of the following bulk operation messages:
 
 - [`CreateMultiple`](#createmultiple): Creates multiple records of the same type in a single request.
 - [`UpdateMultiple`](#updatemultiple): Updates multiple records of the same type in a single request.
-- `UpsertMultiple`: *Coming soon*
-- [`DeleteMultiple`](#deletemultiple): For elastic tables only. Deletes multiple records of the same type in a single request.
+- [`UpsertMultiple` (preview)](upsertmultiple.md): Creates or updates multiple records of the same type in a single request.
+- [`DeleteMultiple` (preview)](deletemultiple.md): For elastic tables only. Deletes multiple records of the same type in a single request.
 
 ## Examples
 
 The following code samples show how to use bulk operation messages. You can download the samples from [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
 
-- [Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)
-- [Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](webapi/samples/create-update-multiple.md)
+- [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)
+- [Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md)
 - [Elastic table sample code (preview)](elastic-table-samples.md)
 
 ### CreateMultiple
+
+Creates multiple records of the same type in a single request.
 
 ##### [SDK for .NET](#tab/sdk)
 
@@ -83,6 +78,8 @@ Uses the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple).
 
 > [!IMPORTANT]
 > You must set the `@odata.type` property for each item in the `Targets` parameter.
+
+This example is for a table with the logical name `sample_example` and the entity set name `sample_examples`.
 
 **Request:**
 
@@ -133,6 +130,8 @@ OData-Version: 4.0
 
 ### UpdateMultiple
 
+Updates multiple records of the same type in a single request.
+
 Just like when you update individual records, the data you send with `UpdateMultiple` must contain only the values you're changing. Learn how to [update records with SDK for .NET](org-service/entity-operations-update-delete.md) and [update records with the Web API](webapi/update-delete-entities-using-web-api.md#basic-update).
 
 ##### [SDK for .NET](#tab/sdk)
@@ -169,11 +168,15 @@ Uses the [UpdateMultiple action](xref:Microsoft.Dynamics.CRM.UpdateMultiple).
 
 > [!IMPORTANT]
 > You must set the `@odata.type` property for each item in the `Targets` parameter.
+> 
+> Using alternate keys with Web API and UpdateMultiple is not supported.
+
+This example is for a table with the logical name `sample_example` and the entity set name `sample_examples`.
 
 **Request:**
 
 ```http
-POST [Organization Uri]/api/data/v9.2/sample_examples/Microsoft.Dynamics.CRM.UpdateMultiple?tag=CreateUpdateMultiple
+POST [Organization Uri]/api/data/v9.2/sample_examples/Microsoft.Dynamics.CRM.UpdateMultiple
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -213,99 +216,8 @@ OData-Version: 4.0
 
 #### Duplicate records in the payload
 
-Multiple records with the same primary key or alternate key values in the payload are not supported with UpdateMultiple. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, the operation is performed on the first record only. Any subsequent records with the same key value(s) in the payload are ignored.
+Multiple records with the same primary key or alternate key values in the payload are not supported with `UpdateMultiple`. When more than one record in the `Targets` parameter is uniquely identified by a primary or alternate key, the operation is performed on the first record only. Any subsequent records with the same key value(s) in the payload are ignored.
 
-### DeleteMultiple
-
-`DeleteMultiple` is available only for elastic tables.
-
-##### [SDK for .NET](#tab/sdk)
-
-You must use the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) because the SDK doesn't have a `DeleteMultipleRequest` class. Learn how to [use messages with the SDK for .NET](org-service/use-messages.md).
-
-The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table using the alternate key to include the `partitionid` to uniquely identify the rows.
-
-```csharp
-public static void DeleteMultipleExample(IOrganizationService service)
-{
-    string tableLogicalName = "contoso_sensordata";
-
-    List<EntityReference> entityReferences = new() {
-        {
-            new EntityReference(logicalName: tableLogicalName,
-               keyAttributeCollection: new KeyAttributeCollection
-               {
-                  { "contoso_sensordataid", "3f56361a-b210-4a74-8708-3c664038fa41" },
-                  { "partitionid", "deviceid-001" }
-               })
-        },
-        { new EntityReference(logicalName: tableLogicalName,
-               keyAttributeCollection: new KeyAttributeCollection
-               {
-                  { "contoso_sensordataid", "e682715b-1bba-415e-b2bc-de9327308423" },
-                  { "partitionid", "deviceid-002" }
-               })
-        }
-    };
-
-    OrganizationRequest request = new(requestName:"DeleteMultiple")
-    {
-        Parameters = {
-            {"Targets", new EntityReferenceCollection(entityReferences)}
-        }
-    };
-
-    service.Execute(request);
-}
-```
-
-##### [Web API](#tab/webapi)
-
-The following example shows how to use the `DeleteMultiple` action to delete multiple rows from the `contoso_SensorData` elastic table including the `partitionid` to uniquely identify the rows.
-
-> [!NOTE]
-> At the time of this writing, the Web API `DeleteMultiple` action is a private action. You won't find it in the [CSDL $metadata document](webapi/web-api-service-documents.md#csdl-metadata-document) or in the Dataverse <xref:Microsoft.Dynamics.CRM.ActionIndex?displayProperty=fullName>. This action will become public soon. You can use it while it's private.
-
-**Request:**
-
-```http
-POST [Organization Uri]/api/data/v9.2/contoso_sensordatas/Microsoft.Dynamics.CRM.DeleteMultiple
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Content-Length: 603
-
-{
-    "Targets": [
-        {
-            "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
-            "contoso_sensordataid": "6114ca58-0928-ee11-9965-6045bd5cd155",
-            "partitionid": "Device-ABC-1234"
-        },
-        {
-            "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
-            "contoso_sensordataid": "6214ca58-0928-ee11-9965-6045bd5cd155",
-            "partitionid": "Device-ABC-1234"
-        },
-        {
-            "@odata.type": "Microsoft.Dynamics.CRM.contoso_sensordata",
-            "contoso_sensordataid": "6314ca58-0928-ee11-9965-6045bd5cd155",
-            "partitionid": "Device-ABC-1234"
-        }
-    ]
-}
-```
-
-**Response:**
-
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-```
-
----
 
 ## Standard and elastic table usage
 
@@ -313,10 +225,10 @@ Both standard and elastic tables benefit from a significant performance boost wh
 
 |Difference|Standard|Elastic|
 | --------- | --------- | --------- |
-| [Number of records](#number-of-records) | Operations are more efficient with a larger number of records. There's no limit on the number of records, but there are message size and time limits. | We recommend sending 100 records at a time. |
+| [Number of records](#number-of-records) | Operations are more efficient with a larger number of records. There's no limit on the number of records, but there are message size and time limits. We recommend sending 100 - 1000 records at a time.| We recommend sending 100 records at a time. |
 | [On Error behavior](#on-error-behavior) | All operations roll back on error. | Partial success is possible. |
 | [Availability](#availability) | Not all standard tables support these messages. | Messages are available for all elastic tables. |
-| [DeleteMultiple](#deletemultiple) | Not available. Use the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) instead. [Learn how to delete data in bulk](delete-data-bulk.md). | Available using the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). The Web API `DeleteMultiple` action is private, but you can use it now. It will become public soon. |
+| [DeleteMultiple](deletemultiple.md) | Not available. Use the SDK [BulkDeleteRequest class](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) or the Web API [BulkDelete action](xref:Microsoft.Dynamics.CRM.BulkDelete) instead. [Learn how to delete data in bulk](delete-data-bulk.md). | Available using the SDK [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). The Web API `DeleteMultiple` action is private, but you can use it now. It will become public soon. |
 
 Standard and elastic table usage is different because standard tables use Azure SQL and support transactions. Elastic tables use Azure Cosmos DB, which doesn't support transactions but is able to handle large amounts of data at high levels of throughput with low latency. The following sections provide more details. [Learn more about bulk operations on elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
 
@@ -331,7 +243,7 @@ The number of records that you should include with each request depends on wheth
 
 Bulk operations on standard tables are optimized to perform on multiple rows in a single transaction. Operations become more efficient, and performance increases overall, as the number of operations per request increases. This optimization also allows for any plug-in steps that are registered for the bulk operation to be more efficient. Each time a plug-in is invoked for a single operation, some milliseconds are required to invoke the plug-in class containing the logic. When a plug-in is registered for a bulk operation message, the class is invoked once and can process all the operations more efficiently. [Learn how to write plug-ins for CreateMultiple and UpdateMultiple (preview)](write-plugin-multiple-operation.md).
 
-This performance benefit gives you an incentive to send the largest number of records you can in each request. However, as the number of records increases, the size of the request increases, too, and the request takes longer to process. Eventually, you'll encounter [message size and time limits](#message-size-and-time-limits). If you hit these limits, the entire operation fails. There's no set limit on the number of records you can send. You may need to experiment to find the best number. Generally, we expect that 1,000 records per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you may encounter can usually be addressed by sending fewer records with each request. We recommend that you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
+This performance benefit gives you an incentive to send the largest number of records you can in each request. However, as the number of records increases, the size of the request increases, too, and the request takes longer to process. Eventually, you'll encounter [message size and time limits](#message-size-and-time-limits). If you hit these limits, the entire operation fails. There's no set limit on the number of records you can send. You may need to experiment to find the best number. Generally, we expect that 100 - 1,000 records per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you may encounter can usually be addressed by sending fewer records with each request. We recommend that you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
 
 #### Number of records with elastic tables
 
@@ -375,7 +287,12 @@ When you use the Web API to perform a bulk operation on an elastic table, you ne
 
 ### Availability
 
-Bulk operation message availability depends on whether you're using standard tables or elastic tables. All elastic tables support the `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple` messages.
+Bulk operation message availability depends on whether you're using standard tables or elastic tables. All elastic tables support the `CreateMultiple`, `UpdateMultiple`, `UpsertMultiple`, and `DeleteMultiple` messages.
+
+See also:
+
+- [UpsertMultiple Availability](upsertmultiple.md#availability)
+- [DeleteMultiple Availability](deletemultiple.md#availability)
 
 #### Availability with standard tables
 
@@ -383,7 +300,7 @@ You can use the `CreateMultiple` and `UpdateMultiple` bulk operation messages wi
 
 ##### [SDK for .NET](#tab/sdk)
 
-Use this static method to detect whether a given table supports any specific named message, including `CreateMultiple` or `UpdateMultiple`.
+Use this static method to detect whether a given table supports `CreateMultiple` or `UpdateMultiple`.
 
 ```csharp
 /// <summary>
@@ -438,7 +355,7 @@ public static bool IsMessageAvailable(
 
 ##### [Web API](#tab/webapi)
 
-Use the following `GET` request to detect whether a message is available for a table. The request tests whether the `sample_example` table supports the `CreateMultiple` message. Replace the `@message` and `@table` parameter values for the message and table you want to test.
+Use the following `GET` request to detect whether `CreateMultiple` or `UpdateMultiple` is available for a table. The request tests whether the `sample_example` table supports the `CreateMultiple` message. Replace the `@message` and `@table` parameter values for the message and table you want to test.
 
 **Request:**
 
@@ -469,14 +386,9 @@ OData-Version: 4.0
 
 ---
 
-#### DeleteMultiple availability
-
-`DeleteMultiple` is supported only for elastic tables. Elastic tables don't support [table relationship cascading behavior](configure-entity-relationship-cascading-behavior.md), which can result in unpredictable execution times for delete operations. If you use `DeleteMultiple` on a standard table, you get the error: `DeleteMultiple has not yet been implemented.`
-
-
 ## Message pipelines merged
 
-Each of the bulk operation messages has a corresponding message that operates on individual rows: `Create`, `Update`, `Upsert`, and `Delete`. These messages have existed for a long time, and many organizations have customized logic that depends on the events that occur when these messages are used.
+Each of the bulk operation messages has a corresponding message that operates on individual rows: `Create`, `Update` and `Delete`. These messages have existed for a long time, and many organizations have customized logic that depends on the events that occur when these messages are used.
 
 A key requirement of the bulk operation messages is that organizations must not be required to maintain custom logic in two places. To have the same custom logic and maintain it in one place, we've *merged* the message processing pipelines for these messages. What does this mean?
 
@@ -485,7 +397,7 @@ A key requirement of the bulk operation messages is that organizations must not 
 - When a single operation message is used, the respective bulk operation event occurs with an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing a *single* [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance passed in the `Targets` parameter.  You can move any logic that responds to single operation events to the more efficient bulk operation events and the logic is applied for both individual and multiple operations.
 
    > [!NOTE]
-   > Don't migrate custom logic to the `DeleteMultiple` message until [Known issue: DeleteMultiple plug-ins not invoked for Delete](#deletemultiple-plug-ins-not-invoked-for-delete) is resolved.
+   > Don't migrate custom logic to the `DeleteMultiple` message until [Known issue: DeleteMultiple plug-ins not invoked for Delete](deletemultiple.md#deletemultiple-plug-ins-not-invoked-for-delete) is resolved.
 
 Before the introduction of bulk operation messages, all custom logic was on the single operation messages. That logic must continue to be applied when client applications use the bulk operation messages. For tables used with high-volume bulk operations, we recommend that you begin to move any synchronous logic from single message events to bulk operation events. If you're introducing new logic, use the bulk operation events rather than the single operation events.
 
@@ -494,9 +406,7 @@ Before the introduction of bulk operation messages, all custom logic was on the 
 >
 > It's your responsibility to make sure that the same logic applied for the single version of events is migrated to the multiple version of the event *and removed* from the single version of the event. Otherwise, the logic will be applied twice.
 
-[Learn how to write plug-ins for CreateMultiple and UpdateMultiple (preview)](write-plugin-multiple-operation.md).
-
-
+[Learn how to write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
 
 ## Limitations
 
@@ -516,7 +426,11 @@ This error doesn't occur if there's no plug-in registered for the event. To avoi
 
 If you're using the Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), you may encounter this error:
 
-> `The request channel timed out attempting to send after 00:04:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.`
+```
+The request channel timed out attempting to send after 00:04:00. 
+Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. 
+The time allotted to this operation may have been a portion of a longer timeout.
+```
 
 The default timeout set using ServiceClient is 4 minutes, which is long for any synchronous operation. You can change this value using the static [ServiceClient.MaxConnectionTimeout](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.MaxConnectionTimeout) property. The default timeout using [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) is 2 minutes.
 
@@ -525,21 +439,12 @@ The default timeout set using ServiceClient is 4 minutes, which is long for any 
 
 ### Not supported for use in plug-ins
 
-At this time, we don't support using bulk operation messages in plug-ins. More information:[Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md).
-
-## Known issues
-
-The following issues will be addressed before the bulk operations feature becomes generally available.
-
-### DeleteMultiple plug-ins not invoked for Delete
-
-As part of the changes we made to [merge message pipelines](#message-pipelines-merged), any custom logic for the multiple version of the message must also be invoked when the single version of the message is invoked. At this time, plug-in steps registered for the `DeleteMultiple` message *are not* being called when `Delete` is used. Plug-in steps registered for `Delete` *are* being invoked when `DeleteMultiple` is used.
-
-You shouldn't migrate custom logic from `Delete` to `DeleteMultiple` until this issue is resolved. You can use `DeleteMultiple` and any logic that's associated with the `Delete` message still works.
+At this time, we don't support using bulk operation messages in plug-ins. More information: [Don't use batch request types in plug-ins and workflow activities](best-practices/business-logic/avoid-batch-requests-plugin.md).
 
 ## Troubleshooting common errors
 
 If you encounter errors while using bulk operations, please refer to the following articles:
+
 - [Troubleshoot Dataverse bulk operation errors](/troubleshoot/power-platform/power-apps/dataverse/bulk-operation-errors)
 - [Troubleshoot Dataverse client errors](/troubleshoot/power-platform/power-apps/dataverse/client-errors)
 
@@ -568,10 +473,12 @@ These limits are based on data changes: `Create`, `Update`, and `Delete` operati
 
 ### See also
 
+[Use UpsertMultiple (preview)](upsertmultiple.md)   
+[Use DeleteMultiple (preview)](deletemultiple.md)   
 [Elastic tables (preview)](elastic-tables.md)  
-[Write plug-ins for CreateMultiple and UpdateMultiple (preview)](write-plugin-multiple-operation.md)  
-[Sample: SDK for .NET Use CreateMultiple and UpdateMultiple (preview)](org-service/samples/create-update-multiple.md)  
-[Sample: Web API Use CreateMultiple and UpdateMultiple (preview)](webapi/samples/create-update-multiple.md)  
+[Write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md)  
+[Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)  
+[Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md)  
 [Sample: CreateMultiple and UpdateMultiple plug-ins](org-service/samples/createmultiple-updatemultiple-plugin.md)  
 [Use messages with the SDK for .NET](org-service/use-messages.md)  
 [Optimize performance for bulk operations](optimize-performance-create-update.md)

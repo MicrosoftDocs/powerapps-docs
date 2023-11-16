@@ -63,15 +63,15 @@ For more information, see [Environments overview](/power-platform/admin/environm
 ## Sign in using Azure B2B collaboration
 
 > [!NOTE]
-> - A **resource tenant** is the Azure Active Directory tenant where an app is expected to exist, and where the user is expected to create and edit the app. For Azure B2B makers, this tenant is different from the tenant their account resides. 
+> - A **resource tenant** is the Microsoft Entra tenant where an app is expected to exist, and where the user is expected to create and edit the app. For Azure B2B makers, this tenant is different from the tenant their account resides. 
 > - A **home tenant** is where the user's account resides and authenticates against.
 > - To create and edit apps in a resource tenant, an admin must [follow these steps](/power-platform/admin/invite-users-azure-active-directory-b2b-collaboration#power-apps-support-for-b2b-guest-maker-preview) to give Azure B2B users the prerequisite privileges to build apps. 
 
-When a user signs into [Power Apps](https://make.powerapps.com), they sign into their **home tenant**&mdash;the Azure Active Directory (Azure AD) tenant where their credentials are provisioned. After signing in, a user can change the directory they intend to build apps in using the **Switch directory** link as shown below:
+When a user signs into [Power Apps](https://make.powerapps.com), they sign into their **home tenant**&mdash;the Microsoft Entra tenant where their credentials are provisioned. After signing in, a user can change the directory they intend to build apps in using the **Switch directory** link as shown below:
 
 :::image type="content" source="media/intro-maker-portal/intro_to_maker_portal_switch_directory_1.png" alt-text="Azure B2B Maker - switch directory option.":::
 
-The switch directory link opens Power Apps settings that contain a **Directories** tab that lists all the Azure AD tenants the user exists in as a member or an Azure B2B guest. By selecting **Switch**, it will trigger [Power Apps](https://make.powerapps.com) to sign out of the current tenant and then sign into the selected tenant.
+The switch directory link opens Power Apps settings that contain a **Directories** tab that lists all the Microsoft Entra tenants the user exists in as a member or an Azure B2B guest. By selecting **Switch**, it will trigger [Power Apps](https://make.powerapps.com) to sign out of the current tenant and then sign into the selected tenant.
 
 :::image type="content" source="media/intro-maker-portal/intro_to_maker_portal_switch_directory_2.png" alt-text="Azure B2B Maker - switch tenant.":::
 
@@ -79,7 +79,7 @@ The switch directory link opens Power Apps settings that contain a **Directories
 
 #### As an Azure B2B maker, why am I unable to share apps?
 
-The Power Apps sharing experience requires users to have permissions in the tenant included when the Azure Azure Active Directory [external collaboration settings has guest user access to "(most inclusive)"](/azure/active-directory/b2b/delegate-invitations). Azure B2B makers without sufficient privileges will see the following error dialog in the sharing experience.
+The Power Apps sharing experience requires users to have permissions in the tenant included when the Azure Microsoft Entra ID [external collaboration settings has guest user access to "(most inclusive)"](/azure/active-directory/b2b/delegate-invitations). Azure B2B makers without sufficient privileges will see the following error dialog in the sharing experience.
 
 :::image type="content" source="media/intro-maker-portal/intro_to_maker_portal_Azure_B2B_share_error.png" alt-text="Invalid domain name in the request url.":::
 
@@ -91,7 +91,7 @@ The Power Apps sharing experience requires users to have permissions in the tena
 ## Sign in using Microsoft Account (preview) 
 Anyone can build Power Apps, even if you don't have a work or school account. Simply sign-up for a Dynamics 365 Sales trial using a [Microsoft Account](https://account.microsoft.com/) and then use that account to sign into [Power Apps](https://make.powerapps.com). 
 
-During the 30 day trial period, you can make and play with as many apps as you like. You can also build with apps with Dataverse or other premium connectors. However, if you plan to run these apps beyond the trial period or share them with others, then you need to create a (free) Azure AD account. 
+During the 30 day trial period, you can make and play with as many apps as you like. You can also build with apps with Dataverse or other premium connectors. However, if you plan to run these apps beyond the trial period or share them with others, then you need to create a (free) Microsoft Entra account. 
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -113,39 +113,39 @@ Select or create an environment with Dataverse. You can create Developer environ
 3. In the **Need your own environment?** prompt, select **Try it now** to create an environment with Dataverse. 
 
 ### How do I access Power Platform Admin Center? 
-Power Platform Admin Center (https://admin.powerplatform.microsoft.com) doesn’t support Microsoft account sign-in. However, your Microsoft Account is associated with an Azure Active Directory tenant and you may provision an Azure Active Directory based identity to use in the Power Platform Admin Center. 
+Power Platform Admin Center (https://admin.powerplatform.microsoft.com) doesn’t support Microsoft account sign-in. However, your Microsoft Account is associated with an Microsoft Entra tenant and you may provision a Microsoft Entra based identity to use in the Power Platform Admin Center. 
 
-1.	Follow the steps under **How do I create an Azure Active Directory identity with the same administrative privileges as my Microsoft Account?**
-2.	Using the newly created Azure Active Directory identity, sign in to [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com). 
+1.	Follow the steps under **How do I create a Microsoft Entra identity with the same administrative privileges as my Microsoft Account?**
+2.	Using the newly created Microsoft Entra identity, sign in to [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com). 
 
-### How do I create an Azure AD identity with the same administrative privileges as my Microsoft Account? 
+### How do I create a Microsoft Entra identity with the same administrative privileges as my Microsoft Account? 
 1.	Sign in to [https://portal.azure.com](https://portal.azure.com). 
-2.	Search for **Azure Active Directory**.
+2.	Search for **Microsoft Entra ID**.
 3.	[Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-user). 
-4.	[Assign an Azure Active directory role](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal#assign-roles). For administrative purposes you need to assign the same global administrator role your Microsoft Account has in Azure Active Directory.
+4.	[Assign an Azure Active directory role](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal#assign-roles). For administrative purposes you need to assign the same global administrator role your Microsoft Account has in Microsoft Entra ID.
 
 ### The free license assigned to my Microsoft Account expired, how can I access Power Apps? 
-If your Microsoft Account is associated with an Azure Active Directory (Azure AD) tenant, you’ll be able to sign in to [Power Apps](https://make.powerapps.com) and edit your apps. However, without an active license you won’t be able to play the apps. 
+If your Microsoft Account is associated with an Microsoft Entra tenant, you’ll be able to sign in to [Power Apps](https://make.powerapps.com) and edit your apps. However, without an active license you won’t be able to play the apps. 
 
 Today, Microsoft Accounts are bound to limited trial periods, you can't sign-up for the same free license twice with the same account. Also, Microsoft Accounts can't  [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/).
 
-You may proceed with building and running apps by creating an Azure AD identity in the same Azure AD tenant your Microsoft Account is associated and sign-up for a [Power Apps Developer plan](https://powerapps.microsoft.com/developerplan/) with that identity. With your Microsoft Account you’ll need to [share your apps](share-app.md) with your Azure AD identity to proceed with editing and playing them. 
+You may proceed with building and running apps by creating a Microsoft Entra identity in the same Microsoft Entra tenant your Microsoft Account is associated and sign-up for a [Power Apps Developer plan](https://powerapps.microsoft.com/developerplan/) with that identity. With your Microsoft Account you’ll need to [share your apps](share-app.md) with your Microsoft Entra identity to proceed with editing and playing them. 
 
-To create an Azure AD identity with administrative rights. Please follow the steps under “How do I create an Azure Active Directory identity with the same administrative privileges as my Microsoft Account?”.
+To create a Microsoft Entra identity with administrative rights. Please follow the steps under “How do I create a Microsoft Entra identity with the same administrative privileges as my Microsoft Account?”.
 
 ### Can I use my Microsoft Account with the Power Platform PowerShell cmdlets? 
-No. In the meantime, you can follow the steps called out in questions above where you add a new Azure Active Directory identity to the Azure AD tenant associated with your Microsoft Account to use the [Power Platform PowerShell cmdlets](/power-platform/admin/powerapps-powershell). 
+No. In the meantime, you can follow the steps called out in questions above where you add a new Microsoft Entra identity to the Microsoft Entra tenant associated with your Microsoft Account to use the [Power Platform PowerShell cmdlets](/power-platform/admin/powerapps-powershell). 
 
 ### Can I share my apps with other users?
-Yes, however, you'll need to add users to the Azure AD tenant associated with your Microsoft Account, you'll need assign a license to these users and, finally, share your app with these users. As an admin, you may assign free licenses to users but these will expire. 
+Yes, however, you'll need to add users to the Microsoft Entra tenant associated with your Microsoft Account, you'll need assign a license to these users and, finally, share your app with these users. As an admin, you may assign free licenses to users but these will expire. 
 
-1. Create an Azure AD identity with administrative rights. Please follow the steps under **How do I create an Azure AD identity with the same administrative privileges as my Microsoft Account?**.
-2. For each user you’d like to share an app, add their identity to Azure AD. 
+1. Create a Microsoft Entra identity with administrative rights. Please follow the steps under **How do I create a Microsoft Entra identity with the same administrative privileges as my Microsoft Account?**.
+2. For each user you’d like to share an app, add their identity to Microsoft Entra ID. 
    1. Sign in to [https://portal.azure.com)](https://portal.azure.com). 
-   2. Search for **Azure Active Directory**.
-   3. [Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-user) or [Add a guest user](/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-guest-user). You can add users that have either a Microsoft Account or Azure AD identity. 
-3. With your Azure AD admin identity, either [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/) or sign-up for [Power Apps trial](https://businessstore.microsoft.com/create-account/signup?products=83d3609a-14c1-4fc2-a18e-0f5ca7047e46). As an admin, you’ll receive 25 Power Apps per user trials. All of these trials expire. 
-4. With your Azure AD admin identity, assign licenses to the users you added to your Azure AD tenant. With your Azure AD admin identity, [assign licenses to the users](/azure/active-directory/fundamentals/license-users-groups#assign-licenses-to-users-or-groups) you added to your Azure AD tenant. 
+   2. Search for **Microsoft Entra ID**.
+   3. [Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-user) or [Add a guest user](/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-guest-user). You can add users that have either a Microsoft Account or Microsoft Entra identity. 
+3. With your Microsoft Entra admin identity, either [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/) or sign-up for [Power Apps trial](https://businessstore.microsoft.com/create-account/signup?products=83d3609a-14c1-4fc2-a18e-0f5ca7047e46). As an admin, you’ll receive 25 Power Apps per user trials. All of these trials expire. 
+4. With your Microsoft Entra admin identity, assign licenses to the users you added to your Microsoft Entra tenant. With your Microsoft Entra admin identity, [assign licenses to the users](/azure/active-directory/fundamentals/license-users-groups#assign-licenses-to-users-or-groups) you added to your Microsoft Entra tenant. 
 5. Sign in to [Power Apps](https://make.powerapps.com) to proceed with [sharing your apps to users](share-app-guests.md). 
 
 ### Can I run my apps in Power Apps mobile? 
