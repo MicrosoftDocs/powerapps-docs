@@ -55,7 +55,7 @@ const theme = createV8Theme(
 return <ThemeProvider theme={theme}></ThemeProvider>;
 ```
 
-### Non-Fluent UI controls
+## Non-Fluent UI controls
 
 If your component doesn't use Fluent UI, you can take a dependency directly on the v9 theme tokens available through the `fluentDesignLanguage` context parameter. Use this parameter to get access to all [theme](reference/theming.md) tokens so it can reference any aspect of the theme to style itself.
 
