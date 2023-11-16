@@ -73,7 +73,7 @@ If the link goes to an `entitylist` view, add the following parameters:
 | &lt;app-id&gt;       | Opens the correct app module.                                                                 |
 | &lt;tenantId&gt;     | Connects to the correct tenant.                                                               |
 | restartApp=true      | Restarts the canvas app, needed to ensure parameters are passed when the app is already open. |
-| autoLoginUpn=&lt;e-mail&gt;      | Auto populates e-mail and triggers sign-in. | 
+| autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. | 
 
   ## Supported Urls parameters for a wrapped native mobile app
   
@@ -84,7 +84,7 @@ If the link goes to an `entitylist` view, add the following parameters:
 | &lt;app-id&gt;       | Opens the correct app module.                                                                 |
 | &lt;tenantId&gt;     | Connects to the correct tenant.                                                              |
 | restartApp=true      | Restarts the canvas app to ensure parameters are passed when the app is already open. |
-| autoLoginUpn=&lt;e-mail&gt;      | Auto populates e-mail and triggers sign-in. |  
+| autoLoginUpn=&lt;e-mail&gt;      | Autopopulates e-mail and triggers sign-in. |  
 
 ## Troubleshooting
 
