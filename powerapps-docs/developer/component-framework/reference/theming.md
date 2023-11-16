@@ -1,9 +1,9 @@
 ---
 title: Theming (Power Apps component framework API reference) | Microsoft Docs
-description: Provides API for the platform provided Modern Theme.
-ms.author: noazarur
-author: noazarur-microsoft
-ms.date: 10/04/2023
+description: Provides the API for platform-provided modern theming.
+ms.author: lesyk
+author: vilesyk
+ms.date: 11/15/2023
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -29,19 +29,19 @@ Model-driven and canvas apps
 
 Fluent v9 theme tokens provided by the platform.
 
-**Type**: [Theme](https://github.com/microsoft/fluentui/blob/401ff6d9af9536b24ab3c52c658127d19706e030/packages/tokens/src/types.ts)
+**Type**: [Theme](https://github.com/microsoft/fluentui/blob/master/packages/tokens/src/types.ts)
 
 ### typographyTokens
 
 Fluent v9 typography tokens provided by the platform.
 
-**Type**: [TypographyStyles](https://github.com/microsoft/fluentui/blob/401ff6d9af9536b24ab3c52c658127d19706e030/packages/tokens/src/global/typographyStyles.ts)
+**Type**: [TypographyStyles](https://github.com/microsoft/fluentui/blob/master/packages/tokens/src/global/typographyStyles.ts)
 
 ### brand
 
 Fluent v9 BrandVariants based on which Fluent v9 theme was generated.
 
-**Type**: [BrandVariants](https://github.com/microsoft/fluentui/blob/401ff6d9af9536b24ab3c52c658127d19706e030/packages/tokens/src/types.ts)
+**Type**: [BrandVariants](https://github.com/microsoft/fluentui/blob/master/packages/tokens/src/types.ts)
 
 ### isDarkTheme
 
@@ -51,7 +51,7 @@ Indicates whether the current theme is dark or not.
 
 ## Example
 
-```TSX
+```tsx
 const fluentDesignLanguage = props.context.fluentDesignLanguage;
 
 return (
@@ -68,8 +68,8 @@ return (
 
 ### Related articles
 
-[Use modern themes in canvas apps (preview)](../../../maker/canvas-apps/controls/modern-controls/modern-theming)
-[Power Apps component framework API reference](../reference/index.md)<br />
+[Use modern themes in canvas apps (preview)](../../../maker/canvas-apps/controls/modern-controls/modern-theming)   
+[Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

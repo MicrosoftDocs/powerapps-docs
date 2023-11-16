@@ -4,7 +4,7 @@ description: You can style your components based on the modern theme used in the
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: hemantg
 author: HemantGaur
-ms.date: 10/06/2023
+ms.date: 11/15/2023
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
@@ -21,18 +21,17 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Professional developers need to be able to style their components so they look like the rest of the application they are included in. This is particularly true when modern theming is in effect for either a canvas app (via the [Modern controls and themes](../../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md) feature) or model app (through the [new refreshed look](../../user/modern-fluent-design.md)). Utilizing modern theming, which is based on [Fluent UI React v9](https://react.fluentui.dev/), to style your component is the recommended way to get the best performance and theming experience for your component.
+Developers need to be able to style their components so they look like the rest of the application they're included in. They can do this when modern theming is in effect for either a canvas app (via the [Modern controls and themes](../../maker/canvas-apps/controls/modern-controls/overview-modern-controls.md) feature) or model-driven app (through the [new refreshed look](../../user/modern-fluent-design.md)). Use modern theming, which is based on [Fluent UI React v9](https://react.fluentui.dev/), to style your component. This approach is recommended to get the best performance and theming experience for your component.
 
-In this article, we will describe 4 different ways to apply modern theming to your component.
+There are four different ways to apply modern theming to your component.
 
 - Fluent v9 controls
 - Fluent v8 controls
 - Non-Fluent controls
 - Custom theme providers
 
-## Fluent UI v9 controls
 
-Wrapping Fluent UI v9 controls as a component is the easiest way to utilize modern theming as the modern theme will be automatically applied to these controls. The only prerequisite is to ensure your component adds a dependency on the [React controls & platform libraries (Preview)](../../component-framework/react-controls-platform-libraries.md) as shown below. This allows your component to use the same React and Fluent libraries as the platform and therefore share the same React context through which the theme tokens are passed down to the component.
+Wrapping Fluent UI v9 controls as a component is the easiest way to utilize modern theming because the modern theme is automatically applied to these controls. The only prerequisite is to ensure your component adds a dependency on the [React controls & platform libraries (Preview)](../../component-framework/react-controls-platform-libraries.md) as shown below. This approach allows your component to use the same React and Fluent libraries as the platform, and therefore share the same React context that passes the theme tokens down to the component.
 
 ```xml
 <resources>
@@ -45,7 +44,7 @@ Wrapping Fluent UI v9 controls as a component is the easiest way to utilize mode
 
 ## Fluent UI v8 controls
 
-When using Fluent UI v8 controls in your component, Fluent provides a migration path for applying v9 theme constructs. In particular, you can create a v8 theme based on v9 theme tokens using the `createV8Theme` function included in the [Fluent's v8 to v9 migration package](https://www.npmjs.com/package/@fluentui/react-migration-v8-v9) using the code pattern below.
+Fluent provides a migration path for applying v9 theme constructs when you use Fluent UI v8 controls in your component. Use the `createV8Theme` function included in the [Fluent's v8 to v9 migration package](https://www.npmjs.com/package/@fluentui/react-migration-v8-v9) to create a v8 theme based on v9 theme tokens, as shown in the following example:
 
 ```tsx
 const theme = createV8Theme(
@@ -57,7 +56,7 @@ return <ThemeProvider theme={theme}></ThemeProvider>;
 
 ### Non-Fluent UI controls
 
-Components that are not using Fluent UI can take a dependency directly on the v9 theme tokens available through the `fluentDesignLanguage` context parameter. This parameter provides access to all [theme](../reference/theming.md) tokens, allowing a component to reference any aspect of the theme to style itself.
+If your component doesn't use Fluent UI, you can take a dependency directly on the v9 theme tokens available through the `fluentDesignLanguage` context parameter. Use this parameter to get access to all [theme](reference/theming.md) tokens so it can reference any aspect of the theme to style itself.
 
 ```tsx
 <span style={{ fontSize: context.fluentDesignLanguage.theme.fontSizeBase300 }}>
@@ -67,7 +66,7 @@ Components that are not using Fluent UI can take a dependency directly on the v9
 
 ## Custom theme providers
 
-For components that require styling that is partially or completely different from the current theme of the app, developers can create your own `FluentProvider` and pass your own set of theme tokens to be uptaken by your component.
+When your component requires styling that is different from the current theme of the app, create your own `FluentProvider` and pass your own set of theme tokens to be used by your component.
 
 ```tsx
 <FluentProvider theme={context.fluentDesignLanguage.tokenTheme}>
@@ -81,38 +80,40 @@ Examples for each of these use cases are available at [Modern Theming API contro
 
 ## FAQ
 
-### Q: My control uses Fluent UI v9 and has a dependency on the platform libraries, but I do not want to utilize modern theming. How can I disable it for my component?
+This section contains frequently asked questions. If you have a question about this feature, use the **Feedback** for **This page** button at the bottom of this page to create a GitHub issue.
 
-A: There are two ways to accomplish this:
+### Q: My control uses Fluent UI v9 and has a dependency on the platform libraries, but I don't want to utilize modern theming. How can I disable it for my component?
+
+**A**: You can do this two different ways:
 
 1. You can create your own component-level `FluentProvider`
 
-```tsx
-<FluentProvider theme={customFluentV9Theme}>
-  {/* your control */}
-</FluentProvider>
-```
+   ```tsx
+   <FluentProvider theme={customFluentV9Theme}>
+     {/* your control */}
+   </FluentProvider>
+   ```
 
-2. You can wrap your control inside `IdPrefixContext.Provider` and set your own `idPrefix` value. This will prevent your component from getting theme tokens from the platform.
+1. You can wrap your control inside `IdPrefixContext.Provider` and set your own `idPrefix` value. This prevents your component from getting theme tokens from the platform.
 
-```tsx
-<IdPrefixProvider value="custom-control-prefix">
-  <Label weight="semibold">This label is not getting Modern Theming</Label>
-</IdPrefixProvider>
-```
+   ```tsx
+   <IdPrefixProvider value="custom-control-prefix">
+     <Label weight="semibold">This label is not getting Modern Theming</Label>
+   </IdPrefixProvider>
+   ```
 
-### Q: Some of my Fluent UI v9 controls are not getting styles
+### Q: Some of my Fluent UI v9 controls aren't getting styles
 
-A: Fluent v9 controls that rely on the React Portal will need to be rewrapped in the theme provider to ensure styling is properly applied. You can use `FluentProvider`.
+**A**: Fluent v9 controls that rely on the React Portal need to be rewrapped in the theme provider to ensure styling is properly applied. You can use `FluentProvider`.
 
 ### Q: How can I check if modern theming is enabled
 
-A: You can check if tokens are available: `context.fluentDesignLanguage?.tokenTheme`. Or in model-driven applications you can check app settings: `context.appSettings.getIsFluentThemingEnabled()`.
+**A**: You can check if tokens are available: `context.fluentDesignLanguage?.tokenTheme`. Or in model-driven applications you can check app settings: `context.appSettings.getIsFluentThemingEnabled()`.
 
-## Related topics
+## Related articles
 
-[Theming (Power Apps component framework API reference)](../component-framework/reference/theming.md)<br />
-[Modern Theming API control](./sample-controls/modern-theming-api-control.md)
-[Use modern themes in canvas apps (preview)](../../../maker/canvas-apps/controls/modern-controls/modern-theming)
+[Theming (Power Apps component framework API reference)](../component-framework/reference/theming.md)   
+[Modern Theming API control](./sample-controls/modern-theming-api-control.md)   
+[Use modern themes in canvas apps (preview)](../../maker/canvas-apps/controls/modern-controls/modern-theming.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
