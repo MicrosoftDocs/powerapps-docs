@@ -150,7 +150,7 @@ To see and understand the `IOrganizationService` interface a little better, try 
         //ServiceClient implements IOrganizationService interface
         IOrganizationService service = new ServiceClient(connectionString);
 
-        WhoAmIExample(service: serviceClient);
+        WhoAmIExample(service: service);
 
         // Pause the console so it does not close.
         Console.WriteLine("Press the <Enter> key to exit.");
