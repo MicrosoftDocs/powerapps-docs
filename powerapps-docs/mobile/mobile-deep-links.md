@@ -4,7 +4,7 @@ description: How to configure deep links for Power Apps mobile.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/10/2023
+ms.date: 11/16/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -15,7 +15,8 @@ search.audienceType:
 searchScope:
   - "Power Apps"
 contributors:
-- anuitz 
+- anuitz
+- sitarampemmaraju
 ---
 
 # Use deep links with the Power Apps mobile app
@@ -39,29 +40,29 @@ Deep links for Power Apps mobile should start with the following:
 | **Parameter**        | **Description**                                                              |
 |----------------------|------------------------------------------------------------------------------|
 | &lt;targeted-app&gt; | <ul><li>`ms-dynamicsxrm` -> Dynamics 365 for phones</li><li> `ms-apps-fs` -> Field Service</li><li>`ms-apps` -> Power Apps</li><li>`ms-mobile-apps` -> wrapped native mobile apps</li>                                                                     |
-| &lt;org-url&gt;      | Connects to the correct org URL                                              |
-| &lt;app-id&gt;       | Opens the correct app module                                                 |
-| tenantId             | Connects to the correct tenant                                               |
-| forceOfflineDataSync | Ensures that data sync is triggered so that all the latest data is available |
+| &lt;org-url&gt;      | Connects to the correct org URL.                                              |
+| &lt;app-id&gt;       | Opens the correct app module.                                                 |
+| tenantId             | Connects to the correct tenant.                                               |
+| forceOfflineDataSync | Ensures that data sync is triggered so that all the latest data is available. |
 
 
 If opening an `entityrecord` form or creating a new `entityrecord`, use the following parameters:
 
 | **Parameter**                       | **Description**                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------|
-| etn=&lt;entity-logical-name&gt; | Designates which table to go to                                                                 |
-| pagetype=entityrecord           | Indicates that the target is a form    |
-| extraqs=&lt;form-id&gt;         | Designates which form to open for the `entityrecord`; if not specified, the default form will open. The `extraqs` parameter can also be used to default field values.        |
-| id=&lt;record-id&gt;            | Designates which specific record to go to; if left blank, the create form for the table will open |
+| etn=&lt;entity-logical-name&gt; | Designates which table to go to.                                                                 |
+| pagetype=entityrecord           | Indicates that the target is a form.    |
+| extraqs=&lt;form-id&gt;         | Designates which form to open for the `entityrecord`; if not specified, the default form opens. The `extraqs` parameter can also be used to default field values.        |
+| id=&lt;record-id&gt;            | Designates which specific record to go to; if left blank, the create form for the table opens. |
 
 If the link goes to an `entitylist` view, add the following parameters:
 
 | **Parameter**                                                | **Description**                                                     |
 |--------------------------------------------------------------|---------------------------------------------------------------------|
-| etn=&lt;entity-logical-name&gt;                              | Designates which table to go to                              |
-| pagetype=entitylist                                          | Indicates that we're going to a view                               |
-| viewid=&lt;view-id&gt;                                       | Designates which view to open                                       |
-| Viewtype= &lt;1039 if system view, 4230 if personal view&gt; | Designates whether we're going to a system view or a personal view |
+| etn=&lt;entity-logical-name&gt;                              | Designates which table to go to.                              |
+| pagetype=entitylist                                          | Indicates that we're going to a view.                               |
+| viewid=&lt;view-id&gt;                                       | Designates which view to open.                                       |
+| Viewtype= &lt;1039 if system view, 4230 if personal view&gt; | Designates whether we're going to a system view or a personal view. |
 
 ## Supported Urls parameters for a canvas app
   
@@ -69,20 +70,21 @@ If the link goes to an `entitylist` view, add the following parameters:
 
 | **Parameter**        | **Description**                                                                              |
 |----------------------|----------------------------------------------------------------------------------------------|
-| &lt;app-id&gt;       | Opens the correct app module                                                                 |
-| &lt;tenantId&gt;     | Connects to the correct tenant                                                               |
-| restartApp=true      | Restarts the canvas app, needed to ensure parameters are passed when the app is already open |
-| autoLoginUpn=&lt;e-mail&gt;      | Auto populates e-mail and triggers sign-in |  
+| &lt;app-id&gt;       | Opens the correct app module.                                                                 |
+| &lt;tenantId&gt;     | Connects to the correct tenant.                                                               |
+| restartApp=true      | Restarts the canvas app, needed to ensure parameters are passed when the app is already open. |
+| autoLoginUpn=&lt;e-mail&gt;      | Auto-populates e-mail and triggers sign-in. | 
+
   ## Supported Urls parameters for a wrapped native mobile app
   
  ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>&restartApp=true```
 
 | **Parameter**        | **Description**                                                                              |
 |----------------------|----------------------------------------------------------------------------------------------|
-| &lt;app-id&gt;       | Opens the correct app module                                                                 |
-| &lt;tenantId&gt;     | Connects to the correct tenant                                                               |
+| &lt;app-id&gt;       | Opens the correct app module.                                                                 |
+| &lt;tenantId&gt;     | Connects to the correct tenant.                                                              |
 | restartApp=true      | Restarts the canvas app to ensure parameters are passed when the app is already open. |
-| autoLoginUpn=&lt;e-mail&gt;      | Auto populates e-mail and triggers sign-in |  
+| autoLoginUpn=&lt;e-mail&gt;      | Auto-populates e-mail and triggers sign-in. |  
 
 ## Troubleshooting
 
