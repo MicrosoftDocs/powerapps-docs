@@ -25,13 +25,14 @@ Developers need to be able to style their components so they look like the rest 
 
 There are four different ways to apply modern theming to your component.
 
-- Fluent v9 controls
-- Fluent v8 controls
-- Non-Fluent controls
-- Custom theme providers
+- [Fluent UI v9 controls](#fluent-ui-v9-controls)
+- [Fluent UI v8 controls](#fluent-ui-v8-controls)
+- [Non-Fluent UI controls](#non-fluent-ui-controls)
+- [Custom theme providers](#custom-theme-providers)
 
+## Fluent UI v9 controls
 
-Wrapping Fluent UI v9 controls as a component is the easiest way to utilize modern theming because the modern theme is automatically applied to these controls. The only prerequisite is to ensure your component adds a dependency on the [React controls & platform libraries (Preview)](../../component-framework/react-controls-platform-libraries.md) as shown below. This approach allows your component to use the same React and Fluent libraries as the platform, and therefore share the same React context that passes the theme tokens down to the component.
+Wrapping Fluent UI v9 controls as a component is the easiest way to utilize modern theming because the modern theme is automatically applied to these controls. The only prerequisite is to ensure your component adds a dependency on the [React controls & platform libraries (preview)](react-controls-platform-libraries.md) as shown below. This approach allows your component to use the same React and Fluent libraries as the platform, and therefore share the same React context that passes the theme tokens down to the component.
 
 ```xml
 <resources>

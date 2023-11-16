@@ -1,8 +1,8 @@
 ---
 title: Theming (Power Apps component framework API reference) | Microsoft Docs
 description: Provides the API for platform-provided modern theming.
-ms.author: lesyk
-author: vilesyk
+ms.author: vilesyk
+author: lesyk
 ms.date: 11/15/2023
 ms.reviewer: jdaly
 ms.topic: reference
@@ -68,7 +68,7 @@ return (
 
 ### Related articles
 
-[Use modern themes in canvas apps (preview)](../../../maker/canvas-apps/controls/modern-controls/modern-theming)   
+[Use modern themes in canvas apps (preview)](../../../maker/canvas-apps/controls/modern-controls/modern-theming.md)   
 [Power Apps component framework API reference](../reference/index.md)   
 [Power Apps component framework overview](../overview.md)
 
