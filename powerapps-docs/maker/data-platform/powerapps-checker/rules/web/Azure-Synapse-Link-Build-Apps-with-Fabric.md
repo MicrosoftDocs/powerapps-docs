@@ -51,6 +51,9 @@ You can follow the process below to create a Virtual table using Microsoft Fabri
 8. Review the information shown on screeen and select **Finish**
 9. You will see a new Dataverse virtual table created with data form Microsoft Fabric
 
+## Building Apps and taking action with insights 
+You can easily build Apps with Tables in PowerApps maker portal by selecting the **Create an App** option from the Tables menu. 
+
  
 
 
