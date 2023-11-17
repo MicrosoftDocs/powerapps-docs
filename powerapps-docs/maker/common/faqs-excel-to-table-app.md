@@ -53,4 +53,4 @@ To do this, turn on data movement across regions. More information: [Enable copi
 
 ## See also
 
-[Upload an Excel file](../data-platform/create-edit-entities-portal.md#upload-an-excel-file-preview)
+[Upload an Excel file](../data-platform/create-edit-entities-portal.md#upload-an-excel-file)
