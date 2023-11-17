@@ -1,7 +1,7 @@
 ---
 title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
-ms.date: 10/18/2023
+ms.date: 11/17/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -71,6 +71,8 @@ Content-Transfer-Encoding: binary
 
 > [!IMPORTANT]
 > Only payload items with a batch identifier matching the batch identifier sent in the `Content-Type` header will be executed. If no payload item uses the `Content-Type` batch identifier, the batch request will succeed without executing any payload item.
+> 
+> You must include any other [HTTP headers](compose-http-requests-handle-errors.md#http-headers) for each item in the batch to control the behavior for that request. Headers applied to the `$batch` operation will not be applied to each item. For example, if you include a `GET` request and want to [request annotations](compose-http-requests-handle-errors.md#request-annotations), you must add the appropriate `Prefer: odata.include-annotations="*"` header to each item.
 
 The end of the batch request must contain a termination indicator like the following example:  
   
