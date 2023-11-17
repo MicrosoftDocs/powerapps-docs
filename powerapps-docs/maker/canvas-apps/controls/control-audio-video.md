@@ -23,6 +23,9 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 
 A **Video** control plays a video clip from a file or from YouTube or Azure Media Services.  Closed captions can optionally be shown when specified.
 
+> [!NOTE]
+> Closed captions may not be available from certain videos hosted on Azure Media Services.  
+
 ## Key properties
 **Loop** – Whether an audio or video clip automatically starts over as soon as it finishes playing.
 
@@ -141,6 +144,5 @@ Provide closed captions and/or transcript if the video content has color contras
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 * **AutoStart** should be false because it can be difficult for keyboard users to stop playback quickly.
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

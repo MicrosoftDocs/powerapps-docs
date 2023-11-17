@@ -171,6 +171,8 @@
         href: ../user/onenote.md
       - name: Collaborate using SharePoint
         href: ../user/collaborate-using-sharepoint.md
+      - name: Use @mention for collaborating
+        href: ../user/use-@mentions.md
     - name: Search records
       items:
       - name: Compare search options
@@ -278,13 +280,13 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Create an app using AI Copilot (preview)
+    - name: Create an app using AI Copilot 
       items:
       - name: Overview
         href: ./canvas-apps/ai-overview.md
       - name: Create an app from conversations
         href: ./canvas-apps/ai-conversations-create-app.md
-      - name: Continue editing your app with Copilot
+      - name: Continue editing your app with Copilot (preview)
         href: ./canvas-apps/ai-edit-app.md
     - name: Create an app using data
       items:
@@ -506,7 +508,7 @@
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
           - name: Use modern themes (preview)
             href: ./canvas-apps/controls/modern-controls/modern-theming.md
-          - name: Modern control reference (preview)
+          - name: Modern control reference
             items:
             - name: Overview
               href: ./canvas-apps/controls/modern-controls/overview-modern-controls.md
@@ -514,35 +516,37 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-reference.md
             - name: Limitations of modern controls
               href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
-            - name: Badge
-              href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
-            - name: Checkbox
-              href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
-            - name: Date picker
-              href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
-            - name: Dropdown
-              href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
-            - name: Header
-              href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
-            - name: Info button
-              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Link
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
-            - name: Progress bar
+            - name: Progress bar 
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
-            - name: Radio group
-              href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
-            - name: Spinner
-              href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
-            - name: Table
-              href: ./canvas-apps/controls/modern-controls/modern-control-table.md
+            - name: Slider
+              href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
-            - name: Text
+            - name: Badge (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
+            - name: Checkbox (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
+            - name: Date picker (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
+            - name: Dropdown (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
+            - name: Header (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
+            - name: Info button (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
+            - name: Radio group (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
+            - name: Spinner (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
+            - name: Table (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-table.md
+            - name: Text (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-text.md
-            - name: Text input
+            - name: Text input (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
           - name: Control reference
             items:
@@ -1704,7 +1708,9 @@
       href: ./model-driven-apps/add-ai-copilot.md
     - name: Use Excel and Word templates
       href: ./model-driven-apps/templates-overview.md
-    - name: Use themes to apply organization branding
+    - name: Use modern themes
+      href: ./model-driven-apps/modern-theme-overrides.md    
+    - name: Use themes to apply organization branding (classic)
       href: ./model-driven-apps/create-themes-organization-branding.md
     - name: Create guided help for your app
       href: ./data-platform/create-custom-help-pages.md
@@ -1779,42 +1785,36 @@
     href: ../mobile/scan-QR-code.md
   - name: Switch to a different directory in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
-  - name: Optimize images for upload
-    href: ../mobile/optimize-images-upload.md
-  - name: Troubleshoot issues in the mobile app
+  - name: Optimize canvas app screens for devices
     items:
-    - name: Troubleshoot issues in the Power Apps mobile app
-      href: ../mobile/powerapps-mobile-troubleshoot.md
-    - name: Prevent canvas app restarts in the Power Apps mobile app
-      href: ../mobile/power-apps-mobile-canvas-app-restarts.md
+    - name: Optimize for devices overview (preview)
+      href: ../mobile/optimize-for-devices-overview.md
+    - name: Optimize for devices controls (preview)
+      href: ../mobile/optimize-for-devices-controls.md
   - name: Mobile offline for model-driven apps
     items:
-    - name: Set up mobile offline (classic)
+    - name: Mobile offline overview
+      href: ../mobile/mobile-offline-overview.md
+    - name: Set up guide
       items:
-      - name: Mobile offline overview (classic)
-        href: ../mobile/mobile-offline-overview-classic.md
-      - name: Set up mobile offline (classic)
-        href: ../mobile/setup-mobile-offline-classic.md
-      - name: Work offline on your mobile device (classic)
-        href: ../mobile/work-offline-mode-classic.md
-    - name: Set up mobile offline (preview)
+      - name: Set up mobile offline
+        href: ../mobile/setup-mobile-offline.md 
+      - name: Configure mobile offline profiles for images and files
+        href: ../mobile/offline-file-images.md
+      - name: Offline profile guidelines
+        href: ../mobile/mobile-offline-guidelines.md  
+      - name: Mobile offline capabilities and limitations
+        href: ../mobile/offline-capabilities.md
+    - name: User guide
       items:
-      - name: Mobile offline overview (preview)
-        href: ../mobile/mobile-offline-overview.md
-      - name: Set up mobile offline (preview)
-        href: ../mobile/setup-mobile-offline.md
-      - name: Enable and use offline-first (preview)
-        href: ../mobile/work-in-offline-mode.md
-    - name: View offline sync status
-      href: ../mobile/offline-sync-icon.md
-    - name: Sync data in the background
-      href: ../mobile/sync-data-offline-background.md
-    - name: Configure mobile offline profiles for images and files
-      href: ../mobile/offline-file-images.md
-    - name: Offline profile guidelines
-      href: ../mobile/mobile-offline-guidelines.md
-    - name: Mobile offline capabilities and limitations
-      href: ../mobile/offline-capabilities.md
+      - name: Work offline on your mobile device (offline-first mode)
+        href: ../mobile/work-in-offline-mode.md 
+      - name: Work offline on your mobile device (classic mode)
+        href: ../mobile/work-offline-mode-classic.md 
+      - name: View offline sync status
+        href: ../mobile/offline-sync-icon.md
+      - name: Sync data in the background
+        href: ../mobile/sync-data-offline-background.md
   - name: Mobile offline for canvas apps (preview)
     items:
     - name: Mobile offline for canvas apps overview (preview)
@@ -1823,7 +1823,13 @@
       href: ../mobile/canvas-mobile-offline-setup.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
-  - name: Power Apps for Windows
+  - name: Troubleshoot issues in the mobile app
+    items:
+    - name: Troubleshoot issues in the Power Apps mobile app
+      href: ../mobile/powerapps-mobile-troubleshoot.md
+    - name: Prevent canvas app restarts in the Power Apps mobile app
+      href: ../mobile/power-apps-mobile-canvas-app-restarts.md
+  - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows
       href: ../mobile/windows-app-install.md
@@ -1909,7 +1915,7 @@
            href: ./portals/use-content-editor.md
     - name: Update domain name
       href: ./portals/admin/update-portal-domain.md
-    - name: Customize the Azure AD B2C user interface
+    - name: Customize the Microsoft Entra B2C user interface
       href: ./portals/configure/azure-ad-b2c.md
     - name: Integrate Power BI
       items:
@@ -1952,8 +1958,9 @@
     - name: "Configure tables to use Copilot"
       href: ./data-platform/table-settings-for-copilot.md  
     - name: Long term data retention for tables (preview)
-      href: ./data-platform/data-retention-overview.md
       items:
+      - name: Long term data retention overview
+        href: ./data-platform/data-retention-overview.md
       - name: Set a data retention policy
         href: ./data-platform/data-retention-set.md
       - name: Manage data retention policies
@@ -2053,7 +2060,7 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
-    - name: Fx formula columns
+    - name: Fx formula columns (preview)
       href: ./data-platform/formula-columns.md
     - name: Set managed properties for columns
       href: ./data-platform/set-managed-properties-for-field.md
@@ -2126,6 +2133,8 @@
         href: ./data-platform/export-solutions.md
       - name: Import solutions
         href: ./data-platform/import-update-export-solutions.md
+      - name: Set the preferred solution (preview)
+        href: ./data-platform/preferred-solution.md
       - name: Use pipelines to simplify solution deployment
         href: ./data-platform/use-pipelines.md
       - name: Update or upgrade solutions
@@ -2194,6 +2203,8 @@
                 href: "./data-platform/powerapps-checker/rules/web/avoid-window-top.md"
               - name: "do-not-make-parent-assumption"
                 href: "./data-platform/powerapps-checker/rules/web/do-not-make-parent-assumption.md"
+              - name: "use-appsidepane-api"
+                href: "./data-platform/powerapps-checker/rules/web/use-appsidepane-api.md"
               - name: "use-async"
                 href: "./data-platform/powerapps-checker/rules/web/use-async.md"
               - name: "use-cached-webresource"
@@ -2286,7 +2297,7 @@
         href: ./data-platform/azure-synapse-link-choices-serverless.md
       - name: Export data in Delta Lake format
         href: ./data-platform/azure-synapse-link-delta-lake.md
-      - name: View Dataverse data in Microsoft Fabric (preview)
+      - name: View Dataverse data in Microsoft Fabric
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
@@ -2394,7 +2405,7 @@
           href: ../teams/add-app-notifications.md
         - name: Integrate with Planner
           href: ../teams/integrate-planner.md
-        - name: Integrate with Azure Active Directory
+        - name: Integrate with Microsoft Entra ID
           href: ../teams/integrate-azure-ad.md
         - name: Integrate with calls and meetings
           href: ../teams/integrate-calls-and-meetings.md
@@ -2531,6 +2542,8 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
+- name: Building AI plugins for discovery by Copilot (preview)
+  href: common/build-ai-plugin-for-copilot.md     
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions

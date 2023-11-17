@@ -21,7 +21,7 @@ This topic describes the process of registering and configuring the simplest Sin
   
 - Access to a Dataverse environment.
 - An Azure account with an active subscription.
-- The Azure account must have permission to manage applications in Azure Active Directory (Azure AD). Any of the following Azure AD roles include the required permissions:
+- The Azure account must have permission to manage applications in Microsoft Entra ID. Any of the following Microsoft Entra ID roles include the required permissions:
 
    - [Application administrator](/azure/active-directory/roles/permissions-reference#application-administrator)
    - [Application developer](/azure/active-directory/roles/permissions-reference#application-developer)
@@ -54,9 +54,9 @@ Use the instructions in [View developer resources](view-download-developer-resou
 
 ## Register your application
 
-1. From [Power Platform admin center](https://admin.powerplatform.microsoft.com) in the left navigation expand **Admin centers** and select **Azure Active Directory**.
+1. From [Power Platform admin center](https://admin.powerplatform.microsoft.com) in the left navigation expand **Admin centers** and select **Microsoft Entra ID**.
 
-   :::image type="content" source="media/azure-active-directory-from-ppac.png" alt-text="Azure Active Directory from Power Platform Admin Center":::
+   :::image type="content" source="media/azure-active-directory-from-ppac.png" alt-text="Microsoft Entra ID from Power Platform Admin Center":::
 
    This will open the **Microsoft Entra admin center**
 

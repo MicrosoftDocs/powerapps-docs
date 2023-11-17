@@ -1,7 +1,7 @@
 ---
 title: "Generate early-bound classes for the SDK for .NET"
 description: "Learn how to use the Power Platform CLI pac modelbuilder build command to generate early-bound classes for use with the Microsoft Dataverse SDK for .NET. This tool generates early-bound .NET classes that represent the Entity Data Model used by Dataverse."
-ms.date: 09/28/2023
+ms.date: 10/18/2023
 author: kkanakas
 ms.author: kartikka
 ms.reviewer: pehecke
@@ -158,6 +158,9 @@ When you inspect the output, notice that it only generates classes for the table
 - The [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class is written to a file with the name specified by the `serviceContextName` setting.
 - All the classes are part of the namespace you set in the `namespace` setting.
 
+> [!NOTE]
+> If you are generating message classes, you should always include a name for the `serviceContextName` setting. See [Include `serviceContextName` when generating message classes](#include-servicecontextname-when-generating-message-classes)
+
 This is how the files and folders appear in Visual Studio:
 
 :::image type="content" source="../media/pac-modelbuilder-build-output-example-visual-studio.png" alt-text="Example output from pac modelbuilder build command in Visual Studio Explorer":::
@@ -216,6 +219,21 @@ This doesn't include all the settings because it uses the default options. If yo
   "emitVirtualAttributes": false
 }
 ```
+
+## Include `serviceContextName` when generating message classes
+
+If you are generating message classes, should always include a name for the `serviceContextName` parameter so that an [OrganizationServiceContext](xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext) class will be generated with your code.
+This class includes an important property to enable use of generated message classes. If you don't include an `OrganizationServiceContext`, you will get the following error when you try to use the generated message classes.
+
+```
+The formatter threw an exception while trying to deserialize the message: 
+There was an error while trying to deserialize parameter http://schemas.microsoft.com/xrm/2011/Contracts/Services:request. 
+The InnerException message was 'Error in line 1 position 700. Element 'http://schemas.microsoft.com/xrm/2011/Contracts/Services:request' contains data from a type that maps to the name 'http://schemas.microsoft.com/xrm/2011/new/:<your generated class name>'. 
+The deserializer has no knowledge of any type that maps to this name. 
+Consider changing the implementation of the ResolveName method on your DataContractResolver to return a non-null value for name '<your generated class name>' and namespace 'http://schemas.microsoft.com/xrm/2011/new/'.'.  
+Please see InnerException for more details.
+```
+
 
 ## Community tools
 

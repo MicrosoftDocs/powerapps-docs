@@ -32,6 +32,8 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **Label** – The Checkbox's label.
 
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
+
 **Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 

@@ -63,7 +63,7 @@ If the calling user has access to no instances, the response simply returns an e
 
 ## Authentication
 
-The calling user must aquire an OAuth 2.0 token from Azure Active Directory (AD), and then add that token in the Authorization header of the API calls. More information: [Use OAuth authentication with Microsoft Dataverse](authenticate-oauth.md).
+The calling user must aquire an OAuth 2.0 token from Microsoft Entra ID, and then add that token in the Authorization header of the API calls. More information: [Use OAuth authentication with Microsoft Dataverse](authenticate-oauth.md).
 
 ### CORS support
 

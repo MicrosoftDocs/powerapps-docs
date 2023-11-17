@@ -77,7 +77,7 @@ Dataverse for processing (rather than processing locally within Power Apps).
 | StartsWith                                                      | \-             | Yes          | \-         | \-               | \-       |
 | Sum, Min, Max, Avg [6]                                          | Yes            | \-           | \-         | No               | \-       |
 
-1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable. Casting to a column to a number isn't supported. 
+1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable. Casting to a column to a number isn't supported. When a value appears as a number in Power Apps but the back-end data source isn't a simple number such as currency then it won't be delegated.
 2.  Doesn't support Trim[Ends] or Len. Does support other functions such as Left, Mid, Right, Upper, Lower, Replace, Substitute, etc. Also, casting such as Text(column) isn't supported for delegation.
 3.  DateTime is delegable except for DateTime functions Now() and
     Today().

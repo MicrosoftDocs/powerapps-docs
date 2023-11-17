@@ -1,7 +1,7 @@
 ---
 title: "retentionoperation table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the retentionoperation table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -67,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AsyncOperationId](#BKMK_AsyncOperationId)
 - [Criteria](#BKMK_Criteria)
 - [EndTime](#BKMK_EndTime)
+- [FailedCount](#BKMK_FailedCount)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [LastMarkedVersionNumber](#BKMK_LastMarkedVersionNumber)
 - [Name](#BKMK_Name)
@@ -147,6 +148,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|endtime|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_FailedCount"></a> FailedCount
+
+|Property|Value|
+|--------|-----|
+|Description|Total failed records.|
+|DisplayName|FailedCount|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|failedcount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
