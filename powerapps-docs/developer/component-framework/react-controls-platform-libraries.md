@@ -4,7 +4,7 @@ description: "You can achieve significant performance gains using React and plat
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: hemantg
 author: HemantGaur
-ms.date: 02/20/2022
+ms.date: 11/16/2023
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
@@ -124,9 +124,9 @@ Platform libraries are made available both at the build and runtime to the contr
 
 A: No. You must create a new control using the new template and then update the manifest and index.ts methods. For reference, compare the standard and react samples described above.
 
-### Q: Can I use React controls & platform libraries with portals?
+### Q: Can I use React controls & platform libraries with Power Pages?
 
-A: No. React controls & platform libraries are currently only available for canvas and model-driven apps.
+A: No. React controls & platform libraries are currently only supported for canvas and model-driven apps. In Power Pages, React controls don't update based on changes in other fields.
 
 ## Related articles
 
