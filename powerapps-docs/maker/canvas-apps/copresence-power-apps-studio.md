@@ -24,8 +24,9 @@ Use copresence to identify individuals working on the same app as you in Power A
 
 Legend
 
+1. The command bar is disabled because you're in ready-only mode
 1. The command bar displays the names and icons of other makers who are working on the app and may be making changes. 
-2. The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being worked on. You receive a notification to refresh the app when the maker that's editing the app makes changes and saves that app.
+1. The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being worked on. You receive a notification to refresh the app when the maker that's editing the app makes changes and saves that app.
 
 ## How copresence works
 
