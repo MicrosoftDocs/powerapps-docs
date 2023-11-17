@@ -35,7 +35,7 @@ There are several ways to create a new table:
 - [Add columns and data](#add-columns-and-data)
 - [Describe the new table](#describe-the-new-table)
 - [Set advanced properties](#set-advanced-properties)
-- [Upload an Excel file (preview)](#upload-an-excel-file-preview)
+- [Upload an Excel file (preview)](#upload-an-excel-file)
 - [Create a virtual table](#create-a-virtual-table)
 
 ### Add columns and data
