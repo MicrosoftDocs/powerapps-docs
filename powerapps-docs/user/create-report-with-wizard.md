@@ -5,13 +5,15 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 06/27/2019
+ms.date: 11/17/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
+contributors:
+- markha52 
 ---
 # Create a report using the Report Wizard
 
@@ -88,8 +90,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. Al
 > - Disable the rich-text editor. For more information, see [Rich text editor control in Power Apps](../maker/canvas-apps/controls/control-richtexteditor.md). When you disable the rich-text editor, new notes that are created will not then have the HTML tags. The existing notes that were created when the rich-text editor was enabled will still show in HTML-formatted text.
 > - Update the report definition to support formatted text. For more information, see [Importing HTML into a Report](/sql/reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs).
 >
-> [Multi-select picklist fields](../developer/data-platform/multi-select-picklist.md) are not fully supported in the Report Wizard.
-> - Multi-select picklist fields cannot be added as a Grouping or a Column to the report.
+> Note that [multi-select picklist fields](../developer/data-platform/multi-select-picklist.md) are not fully supported in the Report Wizard. Multi-select picklist fields can't be added as a grouping or a column to the report.
     
 
 ### See Also
