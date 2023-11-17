@@ -29,6 +29,8 @@ If you add a Date Picker control instead of a Text input control, you help ensur
 
 ## Key properties
 
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
+
 **Required** – You can mandate the date picker as required field in a context.
 
 **Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).

@@ -33,7 +33,7 @@ You can also select a column heading from the table view, and then select **Filt
 There are several ways to create a new table:
 
 - [Add columns and data](#add-columns-and-data)
-- [Describe the new table (preview)](#describe-the-new-table-preview)
+- [Describe the new table](#describe-the-new-table)
 - [Set advanced properties](#set-advanced-properties)
 - [Upload an Excel file (preview)](#upload-an-excel-file-preview)
 - [Create a virtual table](#create-a-virtual-table)
@@ -47,15 +47,9 @@ Create a table by entering the data rows and columns you want.
 
 More information: [Table designer](#table-designer)
 
-### Describe the new table (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+### Describe the new table
 
 Create a table with the help of AI Copilot.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
 1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)

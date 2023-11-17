@@ -31,16 +31,17 @@ Similar to the **Gallery** and **Data** table controls, the **Table** maintains 
 ## Supported capabilities
 - Data in a **Table** control is read-only.
 - The tabular format offers a modern data browsing experience with infinite scroll, eliminating the need for paging buttons.
-- The **Table** control only supports linking to Microsoft Dataverse tables.
+- The **Table** control supports linking to Microsoft Dataverse tables and collections.
 - When you connect a **Table** control to a compatible connector such as Microsoft Dataverse, a predefined set of fields are displayed by default. You can also display or hide other fields based on your needs.
 - The **Table** control can automatically switch between tabular and list formats. You can manually manage this behavior using the **Reflow** property.
 - When you run your app, you can adjust column width in the **Table** control. However, your changes aren't saveontrol while you run the app. Your changes aren't saved.
+- Change the color palette for the **Table** via the Base palette color property. 
 
 ### Unsupported capabilities
 Currently, the listed capabilities aren't supported. However, since the **Table** control is still evolving, check back for any updates.
 
-* You can't link to other connectors.
-* Customize the style of the **Table** or modify individual columns.
+* Linking the Table to other data connectors.
+* Customize the style of the **Table** other than color palette or modify individual columns.
 
 
 ## Key properties
@@ -49,6 +50,8 @@ Currently, the listed capabilities aren't supported. However, since the **Table*
 **Reflow behavior** - The default responsive behavior of the table. **Reflow** means the table displays in tabular form when the control is 480 or more pixels wide and transitions to a list format in narrower conditions. **GridOnly** (or **ListOnly**) means the table always displays in a tabular (or list) format regardless of the control width, and you can use Power Fx formulas to create your own breakpoints for defining the responsive behavior of the table.
 
 **Selected** – The selected row in the **Table** control.
+
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
 
 ## Additional properties
 **Allow range selection** – Whether users can select a portion of the table to copy its values. Default is Yes.

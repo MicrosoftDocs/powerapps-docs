@@ -1,7 +1,7 @@
 ---
 title: Work with canvas apps offline (preview)
 description: Learn how to work with canvas apps in offline mode on your mobile device.
-ms.date: 07/24/2023
+ms.date: 10/11/2023
 ms.topic: how-to
 ms.component: pa-user
 ms.subservice: mobile
@@ -58,6 +58,3 @@ The following table describes the icons and their meanings.
 
 To get a description of the sync state, select the icon.
 
-## Known issue
-
-Key Power Fx functions that aren't yet supported include *StartsWith*, *In*, and *With*. When creating an app that has a search text field that uses a *StartsWith* formula, the search fails silently.

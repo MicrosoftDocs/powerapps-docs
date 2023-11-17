@@ -205,7 +205,7 @@ issues. This section provides troubleshooting tips when issues occur.
     basic authentication for this scenario.
 
 > [!NOTE]
-> If you use data loss prevention (DLP) policies to block the **HTTP with Azure AD** connector then **SharePoint** and **OData** connectors will fail. The **HTTP with Azure AD** connector needs to be allowed in DLP policies for **SharePoint** and **OData** connectors to work.
+> If you use data loss prevention (DLP) policies to block the **HTTP with Microsoft Entra** connector then **SharePoint** and **OData** connectors will fail. The **HTTP with Microsoft Entra** connector needs to be allowed in DLP policies for **SharePoint** and **OData** connectors to work.
 
 ## Next steps
 

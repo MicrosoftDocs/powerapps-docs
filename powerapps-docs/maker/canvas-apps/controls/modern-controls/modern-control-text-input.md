@@ -33,7 +33,9 @@ The user can specify data by typing into a **Text input** control. Depending on 
 
 **Mode** – The control is in SingleLine or MultiLine mode.
 
-**Required** – must fill in field or not.
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
+
+**Required** – Must fill in field or not.
 
 **Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 

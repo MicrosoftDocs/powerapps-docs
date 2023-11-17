@@ -1,7 +1,7 @@
 ---
 title: "Plug-in Assembly (PluginAssembly)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Plug-in Assembly (PluginAssembly)  table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -886,8 +886,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [organization_pluginassembly](#BKMK_organization_pluginassembly)
 - [lk_pluginassembly_modifiedonbehalfby](#BKMK_lk_pluginassembly_modifiedonbehalfby)
 - [lk_pluginassembly_createdonbehalfby](#BKMK_lk_pluginassembly_createdonbehalfby)
-- [pluginpackage_pluginassembly](#BKMK_pluginpackage_pluginassembly)
 - [managedidentity_PluginAssembly](#BKMK_managedidentity_PluginAssembly)
+- [pluginpackage_pluginassembly](#BKMK_pluginpackage_pluginassembly)
 
 
 ### <a name="BKMK_modifiedby_pluginassembly"></a> modifiedby_pluginassembly
@@ -910,17 +910,17 @@ See the [lk_pluginassembly_modifiedonbehalfby](systemuser.md#BKMK_lk_pluginassem
 
 See the [lk_pluginassembly_createdonbehalfby](systemuser.md#BKMK_lk_pluginassembly_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_pluginpackage_pluginassembly"></a> pluginpackage_pluginassembly
-
-**Added by**: Plugin Infrastructure Extension Solution
-
-See the [pluginpackage_pluginassembly](pluginpackage.md#BKMK_pluginpackage_pluginassembly) one-to-many relationship for the [pluginpackage](pluginpackage.md) table/entity.
-
 ### <a name="BKMK_managedidentity_PluginAssembly"></a> managedidentity_PluginAssembly
 
 **Added by**: ManagedIdentityExtensions Solution
 
 See the [managedidentity_PluginAssembly](managedidentity.md#BKMK_managedidentity_PluginAssembly) one-to-many relationship for the [managedidentity](managedidentity.md) table/entity.
+
+### <a name="BKMK_pluginpackage_pluginassembly"></a> pluginpackage_pluginassembly
+
+**Added by**: Plugin Infrastructure Extension Solution
+
+See the [pluginpackage_pluginassembly](pluginpackage.md#BKMK_pluginpackage_pluginassembly) one-to-many relationship for the [pluginpackage](pluginpackage.md) table/entity.
 
 ### See also
 

@@ -1,6 +1,6 @@
 ---
-title: "Work with Azure Active Directory group teams (Dataverse)| Microsoft Docs"
-description: "Learn about working with an Azure Active Directory group team using the Web API."
+title: "Work with Microsoft Entra ID group teams (Dataverse)| Microsoft Docs"
+description: "Learn about working with an Microsoft Entra ID group team using the Web API."
 ms.custom: ""
 ms.date: 09/21/2023
 
@@ -18,28 +18,28 @@ search.audienceType:
   - developer
 ---
 
-# Work with Azure Active Directory group teams
+# Work with Microsoft Entra ID group teams
 
-An Azure Active Directory (AAD) group team, similar to an owner team, can own records and can have security roles assigned to the team. To read more about AAD group teams see [Manage group teams](/power-platform/admin/manage-group-teams).
+An Microsoft Entra ID group team, similar to an owner team, can own records and can have security roles assigned to the team. To read more about Microsoft Entra ID group teams see [Manage group teams](/power-platform/admin/manage-group-teams).
 
 ## Just-in-time updates
-Just-in-time updates mean that the actions are taken at run-time to eliminate the need for syncing data from Azure Active Directory and Microsoft Dataverse. These actions include creating AAD group teams, adding/removing AAD group members from AAD group teams, and adding users into Dataverse.
+Just-in-time updates mean that the actions are taken at run-time to eliminate the need for syncing data from Microsoft Entra ID and Microsoft Dataverse. These actions include creating Microsoft Entra ID group teams, adding/removing Microsoft Entra ID group members from Microsoft Entra ID group teams, and adding users into Dataverse.
 
-1. If the AAD group team doesn't exist and a security role is assigned or a record is assigned to the AAD group, the AAD group team is created just-in-time.
+1. If the Microsoft Entra ID group team doesn't exist and a security role is assigned or a record is assigned to the Microsoft Entra ID group, the Microsoft Entra ID group team is created just-in-time.
 
-2. When an AAD group member accesses Dataverse interactively or through a non-interactive process makes a call on behalf of the user, the group member is added into the AAD group team at run-time. Similarly, when a member who was removed from the AAD group accesses Dataverse interactively or by a non-interactive process call, the group member is removed from the AAD group team.
+2. When an Microsoft Entra ID group member accesses Dataverse interactively or through a non-interactive process makes a call on behalf of the user, the group member is added into the Microsoft Entra ID group team at run-time. Similarly, when a member who was removed from the Microsoft Entra ID group accesses Dataverse interactively or by a non-interactive process call, the group member is removed from the Microsoft Entra ID group team.
 
-3. When an AAD group member accesses Dataverse interactively or through a non-interactive process makes a call on behalf of the user, and the user doesn't exist in Dataverse, the user is added in Dataverse just-in-time.
+3. When an Microsoft Entra ID group member accesses Dataverse interactively or through a non-interactive process makes a call on behalf of the user, and the user doesn't exist in Dataverse, the user is added in Dataverse just-in-time.
 
-The following sections describe how to work with AAD group teams using the Web API. 
+The following sections describe how to work with Microsoft Entra ID group teams using the Web API. 
 
 ## Impersonate another user
-Your service can make calls on behalf of another system user by [impersonating the user](impersonate-another-user.md#impersonate-another-user-using-the-web-api). If the system user belongs to an AAD Security group and the AAD security group is a Dataverse group team, that user is added into Dataverse automatically (if the user doesn't already exist in Dataverse). The user is also automatically added into the Dataverse group team after being added to Dataverse or if the user already exists in Dataverse.
+Your service can make calls on behalf of another system user by [impersonating the user](impersonate-another-user.md#impersonate-another-user-using-the-web-api). If the system user belongs to an Microsoft Entra ID Security group and the Microsoft Entra ID security group is a Dataverse group team, that user is added into Dataverse automatically (if the user doesn't already exist in Dataverse). The user is also automatically added into the Dataverse group team after being added to Dataverse or if the user already exists in Dataverse.
 
-## Create an AAD group team
-An AAD group team can be created in Dataverse by making an API call (programmatically) or by just-in-time when a security role is assigned to the AAD group, or when a record is assigned to the AAD group. 
+## Create an Microsoft Entra ID group team
+An Microsoft Entra ID group team can be created in Dataverse by making an API call (programmatically) or by just-in-time when a security role is assigned to the Microsoft Entra ID group, or when a record is assigned to the Microsoft Entra ID group. 
 
-Citizen developers wanting to programmatically create a Microsoft Dataverse AAD group team can do so by providing the object ID of an existing AAD group as shown in the following command.
+Citizen developers wanting to programmatically create a Microsoft Dataverse Microsoft Entra ID group team can do so by providing the object ID of an existing Microsoft Entra ID group as shown in the following command.
 
 **Request:**
 
@@ -56,12 +56,12 @@ Accept: application/json
 Where:
 
 - Membership type is defined in the [team property](/dynamics365/customer-engagement/web-api/team#properties) `membershiptype`
-- Name of the team is the name of the AAD group
-- Team type is based on the AAD group type - for example "Security" or "Microsoft 365"
+- Name of the team is the name of the Microsoft Entra ID group
+- Team type is based on the Microsoft Entra ID group type - for example "Security" or "Microsoft 365"
 
-## Assign a security role to an AAD group team
+## Assign a security role to an Microsoft Entra ID group team
 
-An administrator can assign a security role to an AAD group team after the AAD group is created in AAD. The AAD group team is created into Dataverse automatically if it doesn't exist in Dataverse.
+An administrator can assign a security role to an Microsoft Entra ID group team after the Microsoft Entra ID group is created in Microsoft Entra ID. The Microsoft Entra ID group team is created into Dataverse automatically if it doesn't exist in Dataverse.
 
 **Request:**
 
@@ -76,7 +76,7 @@ Accept: application/json
 
 ## Assign a security role to a user
 
-An administrator can assign a security role to an AAD group user.  The user is added into Dataverse automatically if the user doesn't exist in Dataverse and the role is assigned directly to the user.
+An administrator can assign a security role to an Microsoft Entra ID group user.  The user is added into Dataverse automatically if the user doesn't exist in Dataverse and the role is assigned directly to the user.
 
 **Request:**
 
@@ -88,9 +88,9 @@ Accept: application/json
   "@odata.id":"[Organization URI]/api/data/v9.0/roles(<role ID>)"
 }
 ```
-## Assign a record to an AAD group
+## Assign a record to an Microsoft Entra ID group
 
-An administrator can assign a record to an AAD group.  The AAD group team is created into Dataverse automatically if it doesn't exist in Dataverse.
+An administrator can assign a record to an Microsoft Entra ID group.  The Microsoft Entra ID group team is created into Dataverse automatically if it doesn't exist in Dataverse.
 
 The example below shows the syntax for assigning an account record.
 
@@ -105,9 +105,9 @@ Accept: application/json
 }
 ```
 
-## Assign a record to an AAD group member
+## Assign a record to an Microsoft Entra ID group member
 
-An administrator can assign a record to an AAD group member.  The AAD group member is added into Dataverse automatically if the user doesn't exist in Dataverse.
+An administrator can assign a record to an Microsoft Entra ID group member.  The Microsoft Entra ID group member is added into Dataverse automatically if the user doesn't exist in Dataverse.
 
 The example below shows the syntax for assigning an account record.
 
@@ -121,9 +121,9 @@ Accept: application/json
   "ownerid@odata.bind": "[Organization URI]/api/data/v9.0/systemusers(azureactivedirectoryobjectid=<user object ID>)"
 }
 ```
-<!-- ## Share a record to an AAD group 
+<!-- ## Share a record to an Microsoft Entra ID group 
 
-"An administrator or a record owner can share a record to an AAD group. The AAD group team is created into Dataverse automatically if it doesn't exist in Dataverse.
+"An administrator or a record owner can share a record to an Microsoft Entra ID group. The Microsoft Entra ID group team is created into Dataverse automatically if it doesn't exist in Dataverse.
 
 The example below shows the syntax for sharing an account record.
 
@@ -147,9 +147,9 @@ Accept: application/json
 }
 ``` -->
 
-<!-- ## Share a record to an AAD group member
+<!-- ## Share a record to an Microsoft Entra ID group member
 
-"An administrator or a record owner can share a record to an AAD group member. The AAD group member is added into Dataverse automatically if the user doesn't exist in Dataverse.
+"An administrator or a record owner can share a record to an Microsoft Entra ID group member. The Microsoft Entra ID group member is added into Dataverse automatically if the user doesn't exist in Dataverse.
 
 The example below shows the syntax for sharing an account record.
 
@@ -175,7 +175,7 @@ Accept: application/json
 
 ## Retrieve a user
 
-You can retrieve a system user table row using an Azure user object identifier (ID). If the system user doesn't exist in Dataverse, the user is added to Dataverse automatically and added into the Dataverse group team if the user belongs to an AAD group that exists in Dataverse. **If the user exists in Dataverse, the user is not added to the Dataverse group team.** 
+You can retrieve a system user table row using an Azure user object identifier (ID). If the system user doesn't exist in Dataverse, the user is added to Dataverse automatically and added into the Dataverse group team if the user belongs to an Microsoft Entra ID group that exists in Dataverse. **If the user exists in Dataverse, the user is not added to the Dataverse group team.** 
 
 The example below shows the syntax for retrieving a user row.
 
@@ -187,7 +187,7 @@ GET [Organization URI]/api/data/v9.0/SystemUser(azureactivedirectoryobjectid=<us
 
 ## Security roles and privileges
 
-Members of an AAD group can query all the security roles that are directly and indirectly assigned to them using the following command.
+Members of an Microsoft Entra ID group can query all the security roles that are directly and indirectly assigned to them using the following command.
 
 **Request:**
 
@@ -215,7 +215,7 @@ GET [Organization URI]/api/data/v9.0/RetrieveAadUserRoles(DirectoryObjectId=<use
 }
 ```
 
-Members of an AAD group can check their security privileges without being a user of Dataverse using the following command.
+Members of an Microsoft Entra ID group can check their security privileges without being a user of Dataverse using the following command.
 
 **Request:**
 

@@ -23,7 +23,7 @@ contributors:
 Configure the behavior of a modern control by setting one of its properties. Each type of control has a different set of properties.
 
 
-## Modern Controls
+## Modern controls
 
 **[Badge](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 
@@ -46,6 +46,8 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 **[Radio group](modern-controls-radio-group.md)** – An input control that shows multiple options, of which users can select only one at a time.
 
 **[Spinner](modern-control-spinner.md)** – Displays state in motion, for exmaple, loading a page or table.
+
+**[Slider](modern-control-slider.md)** - A control with which the user can specify a value by dragging a handle.
 
 **[Table](modern-control-table.md)** – A control that shows a set of data in a tabular or list format.
 

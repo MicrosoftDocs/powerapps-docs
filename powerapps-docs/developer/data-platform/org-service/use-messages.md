@@ -1,8 +1,8 @@
 ---
-title: "Use messages with the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Understand how messages are used to invoke operations using the SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use messages with the SDK for .NET (Microsoft Dataverse) | Microsoft Docs"
+description: "Understand how messages are used to invoke operations using the SDK for .NET."
 ms.collection: get-started
-ms.date: 04/24/2023
+ms.date: 10/18/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
@@ -148,7 +148,7 @@ Developers can generate Request and Response classes for the messages found in t
 |Tool|Description|
 |---------|---------|
 |Power Platform CLI<br />[pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)<br />command|Generates cross-platform .NET (Core) classes for applications that use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>.<br />Use the [--generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate Request and Response classes.|
-|CrmSvcUtil.exe|Generates .NET Framework classes to support applications that use .NET Framework, such as Dataverse plug-ins.<br />Use the `generateActions` parameter to generate Request and Response classes.|
+|[Power Platform CLI pac modelbuilder build command](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)|Generates .NET Framework classes to support applications that use .NET Framework, such as Dataverse plug-ins.|
 
 More information: [Generate early-bound classes for the SDK for .NET](generate-early-bound-classes.md)
 
