@@ -17,7 +17,9 @@ contributors:
 
 # Find out who's working on the same app
 
-Use copresence to identify individuals working on the same app as you in Power Apps Studio. When you're in ready-only mode the command bar, add new screen, and edit control properties are disabled. 
+Use copresence to identify individuals working on the same app as you in Power Apps Studio.
+
+When you're in ready-only mode the command bar, add new screen, and edit control properties are disabled. 
 
 > [!div class="mx-imgBorder"] 
 > ![Copresence in Power Apps Studio.](media/copresence/canvas-copresence.png)
