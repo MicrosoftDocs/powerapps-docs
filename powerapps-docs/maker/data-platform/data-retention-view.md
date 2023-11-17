@@ -6,7 +6,7 @@ ms.author: gned
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 10/20/2023
+ms.date: 11/16/2023
 ms.custom: template-how-to 
 ---
 # View long term retained data (preview)
@@ -52,7 +52,7 @@ These restrictions are enforced by Dataverse for each environment:
 - Up to five users can query and retrieve retained data at the same time.
 - Up to 100 queries per day are allowed for each environment.
 - Any single request from advanced find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
-- Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed.
+- Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed. Consider options with Microsoft Fabric for complex queries and Power BI options. More information: [View retained data with Microsoft Fabric (preview)](#view-retained-data-with-microsoft-fabric-preview)
 - Retained data includes lookup data. Lookup values in the table are denormalized with ID and name value.
 
 ## View retained data with Microsoft Fabric (preview)
