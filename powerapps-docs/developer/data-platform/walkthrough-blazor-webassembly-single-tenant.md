@@ -19,7 +19,7 @@ Use the steps in this tutorial to create a Blazor WebAssembly app that connects 
 
 Blazor WebAssembly is one of two hosting models available for ASP.NET Core Blazor. The other is Blazor Server. For a complete description of the differences, see [ASP.NET Core Blazor hosting models](/aspnet/core/blazor/hosting-models).
 
-This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) article. Because Dataverse uses Azure Active Directory (Azure AD) for authentication, this tutorial describes how to modify the basic app created using the app template provided so that it can connect to Dataverse.
+This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Entra ID](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) article. Because Dataverse uses Microsoft Entra ID for authentication, this tutorial describes how to modify the basic app created using the app template provided so that it can connect to Dataverse.
 
 ## Goal
 
@@ -58,7 +58,7 @@ Follow the instructions found in [View or download developer resources](view-dow
 
 It looks something like this: `https://yourorgname.api.crm.dynamics.com/api/data/v9.2/`
 
-### Navigate to the Azure Active Directory portal
+### Navigate to the Microsoft Entra ID portal
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select the 'waffle' icon at the top left, and select **Admin**.
@@ -75,30 +75,30 @@ It looks something like this: `https://yourorgname.api.crm.dynamics.com/api/data
 
 This is where you will start step 2.
 
-## Step 2: Create a Blazor WebAssembly standalone app using Azure AD for authentication
+## Step 2: Create a Blazor WebAssembly standalone app using Microsoft Entra ID for authentication
 
-The [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) article provides a complete set of instructions to create the app.
+The [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Entra ID](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) article provides a complete set of instructions to create the app.
 
-These steps describe how to create an app registration in Azure AD and run a .NET Core CLI command to generate the scaffold for the basic app with support for Azure AD authentication.
+These steps describe how to create an app registration in Microsoft Entra ID and run a .NET Core CLI command to generate the scaffold for the basic app with support for Microsoft Entra ID authentication.
 
 > [!NOTE]
 > These instructions use the .NET Core CLI command to generate the app. There is a Visual Studio project template to create a Blazor WebAssembly app, but this tutorial hasn't been verified using that template.
 
-Go to [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) and follow the instructions there to generate the basic app project.
+Go to [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Entra ID](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) and follow the instructions there to generate the basic app project.
 
 ### Verify that the app runs
 
-After completing the steps in [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory), you should be able to press F5 in Visual Studio to run the app.
+After completing the steps in [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Entra ID](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory), you should be able to press F5 in Visual Studio to run the app.
 
 :::image type="content" source="media/blazor-webassembly-walkthrough-application-before-code-changes.png" alt-text="The default behavior of the Blazor WebAssembly app before changes are made.":::
 
-At this point, all the capabilities of the app work whether you log in or not. Only members of the Azure AD tenant can sign in.
+At this point, all the capabilities of the app work whether you log in or not. Only members of the Microsoft Entra ID tenant can sign in.
 
 ## Step 3: Grant API permissions
 
 To connect to Dataverse, you must configure permissions for the app to connect.
 
-1. Return to your app registration in Azure AD, In the **API permissions** section, select **Add a permission**.
+1. Return to your app registration in Microsoft Entra ID, In the **API permissions** section, select **Add a permission**.
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-add-permissions.png" alt-text="The registered application API Permissions settings page.":::
 
@@ -115,7 +115,7 @@ To connect to Dataverse, you must configure permissions for the app to connect.
    > **Dynamics CRM**, **Common Data Service**, and **Dataverse** refer to the same service.
 
 1. Select **Add permissions**.
-1. (Optional) For the **Configured permissions**, select **Grant Admin consent for [Your Azure Active Directory tenant name]**. In the screenshot below the tenant name is 'Default Directory'. Yours may be different.
+1. (Optional) For the **Configured permissions**, select **Grant Admin consent for [Your Microsoft Entra ID tenant name]**. In the screenshot below the tenant name is 'Default Directory'. Yours may be different.
 
    :::image type="content" source="media/blazor-webassembly-walkthrough-grant-admin-consent.png" alt-text="The button showing the optional button to grant admin consent for the registered application.":::
 
@@ -492,8 +492,8 @@ In Visual Studio, press F5 to launch the app with the code changes.
 
 [Use the global Discovery service from a Blazor WebAssembly](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/BlazorCDS)  
 [Quickstart: Blazor Server Web API sample (C#)](./webapi/quick-start-blazor-server-app.md)  
-[Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory)<br />
-[Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md)<br />
+[Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Entra ID](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory)<br />
+[Walkthrough: Register an app with Microsoft Entra ID](walkthrough-register-app-azure-active-directory.md)<br />
 [Use OAuth with Dataverse](authenticate-oauth.md)<br />
 [Use the Dataverse Web API](webapi/overview.md)
 

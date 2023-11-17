@@ -6,6 +6,11 @@
       "redirect_document_id": "false"
    },
    {
+    "source_path": "powerapps-docs/developer/data-platform/dependent-assembly-plugins.md",
+    "redirect_url": "build-and-package",
+    "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/composite-attributes.md",
       "redirect_url": "/previous-versions/dynamicscrm-2016/developers-guide/dn481581(v=crm.8)",
       "redirect_document_id": "false"
@@ -473,6 +478,16 @@
     {
       "source_path": "powerapps-docs/maker/portals/azure-front-door.md",
       "redirect_url": "/power-pages/configure/azure-front-door",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/search/index.md",
+      "redirect_url": "/powerapps/developer/data-platform/search/overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/relevance-search.md",
+      "redirect_url": "../search/overview.md",
       "redirect_document_id": false
     },
     {
