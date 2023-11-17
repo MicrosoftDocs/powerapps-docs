@@ -243,7 +243,7 @@ Test automated plug-ins by invoking the data event. Observe if the plug-in ran s
     1. Capture the response in a `Set()` or `UpdateContext()` formula: `Set( ActionResult, Environments.CalculateSum({ X: TextInput1.Text, Y: TextInput2.Text }) );`. Display the variable in a label. Alternatively use the `Notify()` formula to display data in a notification.
 1. Play the app and select the command on the command bar to run the low-code plug-in.
 
-Learn more about how you can [call Dataverse actions directly from Power Fx in canvas apps](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx-preview).
+Learn more about how you can [call Dataverse actions directly from Power Fx in canvas apps](../canvas-apps/connections/connection-common-data-service.md#call-dataverse-actions-directly-in-power-fx).
 
 #### Invoke an instant plug-in from a Power Automate cloud flow
 
