@@ -1,19 +1,13 @@
 ---
 title: "Define rollup columns with Power Apps | MicrosoftDocs"
 description: "Learn how to define rollup columns"
-ms.custom: ""
 ms.date: 06/21/2022
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 author: "Mattp123"
-ms.assetid: ff0504a1-01bd-4f9b-b884-7f84911d86c3
-caps.latest.revision: 58
 ms.subservice: dataverse-maker
 ms.author: "matp"
 search.audienceType: 
@@ -83,7 +77,7 @@ Mass Calculate Rollup Field is a recurring job, created for each rollup column. 
 
 We recommend that an administrator adjusts the start time of a Mass Calculate Rollup Field job after the rollup column is created or modified, in such a way that it runs during non-operational hours. For example, midnight would be a good time to run the job to assure efficient processing of the rollup columns.
 
-Notice that, when the situation occurs where the rollup column is never updated, the Mass Calculate Rollup Field job won’t run again for that column until after 10 years have passed. This behavior is by design. When there aren’t any updates in the underlying columns associated with the rollup field, there isn’t any reason to run the job more frequently.
+Notice that, when the situation occurs where the rollup column is never updated, the Mass Calculate Rollup Field job won't run again for that column until after 10 years have passed. This behavior is by design. When there aren't any updates in the underlying columns associated with the rollup field, there isn't any reason to run the job more frequently.
 
 
 ### Calculate Rollup Column 
@@ -99,14 +93,14 @@ The rollup column on the form displays a calculator image, rollup value, and the
 
 There are a few considerations you should keep in mind when using the online recalculation option (manual refresh on the form):  
   
-- You must have Write privileges on the table and Write access rights on the source row on which you are requesting the Refresh. For example, if you are calculating the estimated revenue from the open opportunities of an account, you don’t have to have Write privileges on the opportunity table, only on the account table.  
-- This option is only available in the online mode. You can’t use it while working offline.  
-- The maximum number of rows during the rollup refresh is limited to 50,000 rows. In case of the hierarchical rollup, this applies to the related rows across the hierarchy. If the limit is exceeded, you see an error message: *Calculations can’t be performed online because the calculation limit of 50,000 related rows has been reached.* This limit does not apply when the rollup is automatically recalculated by the system jobs.  
-- The maximum hierarchy depth is limited to 10 for the source row. If the limit is exceeded, you see an error message: *Calculations can’t be performed online because the hierarchy depth limit of 10 for the source row has been reached.* This limit does not apply when the rollup is automatically recalculated by the system jobs.  
+- You must have Write privileges on the table and Write access rights on the source row on which you are requesting the Refresh. For example, if you are calculating the estimated revenue from the open opportunities of an account, you don't have to have Write privileges on the opportunity table, only on the account table.  
+- This option is only available in the online mode. You can't use it while working offline.  
+- The maximum number of rows during the rollup refresh is limited to 50,000 rows. In case of the hierarchical rollup, this applies to the related rows across the hierarchy. If the limit is exceeded, you see an error message: *Calculations can't be performed online because the calculation limit of 50,000 related rows has been reached.* This limit does not apply when the rollup is automatically recalculated by the system jobs.  
+- The maximum hierarchy depth is limited to 10 for the source row. If the limit is exceeded, you see an error message: *Calculations can't be performed online because the hierarchy depth limit of 10 for the source row has been reached.* This limit does not apply when the rollup is automatically recalculated by the system jobs.  
 
 ## Modify rollup job recurrence
 
-As a system administrator, you can modify the rollup job recurrence pattern, postpone, pause, or resume the rollup job. However, you can’t cancel or delete a rollup job. 
+As a system administrator, you can modify the rollup job recurrence pattern, postpone, pause, or resume the rollup job. However, you can't cancel or delete a rollup job. 
 
 To pause, postpone, resume, or modify the recurrence pattern, you must view the system jobs. More information [View Rollup jobs](#view-rollup-jobs) 
 
@@ -120,7 +114,7 @@ For the **Calculate Rollup Field** job, the available selections are: **Modify R
  
 ## Examples 
 
-Let’s take a look at several rollup column examples. We’ll aggregate data for a row from the related rows with and without using a hierarchy. We’ll also aggregate data for a row from related activities and activities indirectly related to a row via the ActivityParty table. In each example, we define the rollup column by using the Column Editor. To open the Column Editor, open solution explorer and expand **Components** > **Tables**. Select the table you want and select **Columns**. Choose **New**. In the editor, provide the required information for the column, including the **Column Type** and **Data Type**. In the **Column Type**, select **Rollup**, after you have selected the data type. The data types include decimal or whole numbers, currency, and date/time. Choose the **Edit** button next to the **Column Type**. This takes you to the rollup column definition editor. The rollup column definition consists of three sections: **Source table**, **Related table** and **Aggregation**.  
+Let's take a look at several rollup column examples. We'll aggregate data for a row from the related rows with and without using a hierarchy. We'll also aggregate data for a row from related activities and activities indirectly related to a row via the ActivityParty table. In each example, we define the rollup column by using the Column Editor. To open the Column Editor, open solution explorer and expand **Components** > **Tables**. Select the table you want and select **Columns**. Choose **New**. In the editor, provide the required information for the column, including the **Column Type** and **Data Type**. In the **Column Type**, select **Rollup**, after you have selected the data type. The data types include decimal or whole numbers, currency, and date/time. Choose the **Edit** button next to the **Column Type**. This takes you to the rollup column definition editor. The rollup column definition consists of three sections: **Source table**, **Related table** and **Aggregation**.  
   
 -   In the **Source table** section, you specify the table for which the rollup column is defined and whether or not you aggregate over a hierarchy. You can add filters with multiple conditions to specify the rows in the hierarchy you want to use for rollup.  
   
@@ -156,7 +150,7 @@ In earlier releases, you could define a rollup column for an individual activity
   
 ### Aggregate data for a row from all related activities and activities indirectly related via the Activity Party table  
 
-In this example, we count the total number of emails sent to an account, where the account is listed on the email’s “To Recipient” line or “Cc Recipient line. This is done by specifying the **Participation Type** in **FILTERS** for the Activity Party table in the rollup column definition. If you don’t use filtering, then all available participation types for an activity are used in the calculation. 
+In this example, we count the total number of emails sent to an account, where the account is listed on the email's "To Recipient" line or "Cc Recipient line. This is done by specifying the **Participation Type** in **FILTERS** for the Activity Party table in the rollup column definition. If you don't use filtering, then all available participation types for an activity are used in the calculation. 
  
 For more information about the Activity Party table and participation types available for a particular activity, see [ActivityParty table](/dynamics365/customer-engagement/developer/activityparty-entity).
 
@@ -180,19 +174,19 @@ The following example shows how to calculate an average estimated revenue from r
 You should be aware of certain conditions and restrictions when working with rollup columns:  
   
 - You can define a maximum of 100 rollup columns for the organization and up to 10 rollup columns per table.  
-- A workflow can’t be triggered by the rollup column updates.  
+- A workflow can't be triggered by the rollup column updates.  
 - A workflow wait condition cannot use a rollup column.  
 - A rollup over the rollup column is not supported.  
 - A rollup can't reference a calculated column that uses another calculated column, even if all the columns of the other calculated column are on the current table.  
 - The rollup can only apply filters to the source table or related tables, simple columns or non-complex calculated columns.  
-- A rollup can be done only over related tables with the 1:N relationship. A rollup can’t be done over the N:N relationships.  
-- A rollup can’t be done over the 1:N relationship for the Activity table or the Activity Party table.  
+- A rollup can be done only over related tables with the 1:N relationship. A rollup can't be done over the N:N relationships.  
+- A rollup can't be done over the 1:N relationship for the Activity table or the Activity Party table.  
 - The business rules, workflows or calculated columns always use the last calculated value of the rollup column.  
 - A rollup column is aggregated under the system user context. All users are able to see the same rollup column value. You can control the rollup column visibility with the column level security (FLS), by restricting who can access the rollup column. More information  [Column level security to control access](/dynamics365/customer-engagement/admin/field-level-security). 
 
 ### Precision rounding
  
-If the precision of the aggregated column is greater than the precision of the rollup column, the aggregated column precision is rounded down to the precision of the rollup column, before the aggregation is performed. To illustrate this behavior, let’s look at a specific example. Let’s say that the rollup column on the account table, for calculating the total estimated revenue of the related opportunities, has a precision of two decimal points. The Est. Revenue column on the opportunity table is the aggregated column with the precision of four decimal points. In our example, the account has two related opportunities. The aggregated sum of the estimated revenue is calculated as follows:  
+If the precision of the aggregated column is greater than the precision of the rollup column, the aggregated column precision is rounded down to the precision of the rollup column, before the aggregation is performed. To illustrate this behavior, let's look at a specific example. Let's say that the rollup column on the account table, for calculating the total estimated revenue of the related opportunities, has a precision of two decimal points. The Est. Revenue column on the opportunity table is the aggregated column with the precision of four decimal points. In our example, the account has two related opportunities. The aggregated sum of the estimated revenue is calculated as follows:  
   
 1. Est. Revenue for the first opportunity: $1000.0041  
 1. Est. Revenue for the second opportunity: $2000.0044  
@@ -202,19 +196,21 @@ As you can see, the precision rounding to two decimal points on the aggregated c
   
 ### Different behavior from Associated grids
  
-Certain table  forms, such as Account or Contact, out-of-the-box, contain the associated grids. For example, an Account form includes Contacts, Cases, Opportunities and other grids. Some of the rows shown in the Account form grids are directly related to the account row; others, indirectly, through the relationships with other rows. In comparison, the rollup column aggregation uses only direct relationships explicitly defined in the rollup column definition. No other relationships are considered. To illustrate the difference in behavior, let’s look at the following example.  
+Certain table  forms, such as Account or Contact, out-of-the-box, contain the associated grids. For example, an Account form includes Contacts, Cases, Opportunities and other grids. Some of the rows shown in the Account form grids are directly related to the account row; others, indirectly, through the relationships with other rows. In comparison, the rollup column aggregation uses only direct relationships explicitly defined in the rollup column definition. No other relationships are considered. To illustrate the difference in behavior, let's look at the following example.  
   
 1. The account A1 has a primary contact, P1. The case C1 is associated  with the account  A1 (C1.Customer column  =  A1) and the case C2 is associated with the contact P1 (C2.Customer column = P1).  
 1. The **Cases** grid on the **Account** form for the A1 row, shows two cases, C1 and C2.  
 1. The rollup column on the account table, called Total Number of Cases, is used to count the cases associated with the account.  
-1. In the account rollup column definition, we specify the cases that have the Customer relationship with the account. After aggregation, the Total Number of Cases is equal to 1 (case C1). The case C2 is not included in the total, as it is directly related to the contact, not to the account, and can’t be explicitly defined in the account rollup column definition. As a result, the total number of cases returned by rollup operation doesn’t match the number of cases shown in the **Cases** grid.  
+1. In the account rollup column definition, we specify the cases that have the Customer relationship with the account. After aggregation, the Total Number of Cases is equal to 1 (case C1). The case C2 is not included in the total, as it is directly related to the contact, not to the account, and can't be explicitly defined in the account rollup column definition. As a result, the total number of cases returned by rollup operation doesn't match the number of cases shown in the **Cases** grid.  
   
 ### See also  
 
-[Create and edit columns](create-edit-fields.md)<br />
-[Define calculated columns](define-calculated-fields.md)<br />
-[Behavior and format of the Date and Time column](behavior-format-date-time-field.md)<br />
-[Define and query hierarchically related data](define-query-hierarchical-data.md)<br />
+[Create and edit columns](create-edit-fields.md)   
+[Define calculated columns](define-calculated-fields.md)   
+[Formula, calculated, and rollup columns using code](../../developer/data-platform/calculated-rollup-attributes.md)   
+[Behavior and format of the Date and Time column](behavior-format-date-time-field.md)   
+[Define and query hierarchically related data](define-query-hierarchical-data.md)
+
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

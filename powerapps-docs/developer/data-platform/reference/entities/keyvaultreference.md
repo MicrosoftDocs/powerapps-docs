@@ -1,7 +1,7 @@
 ---
 title: "KeyVaultReference table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the KeyVaultReference table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,6 @@ Contains data that refers to an Azure Key Vault containing credentials used to c
 |-|-|-|
 |Assign|PATCH /keyvaultreferences(*keyvaultreferenceid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST /keyvaultreferences<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|CreateMultiple|<xref:Microsoft.Dynamics.CRM.CreateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE /keyvaultreferences(*keyvaultreferenceid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref:Microsoft.Dynamics.CRM.GrantAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -39,7 +38,6 @@ Contains data that refers to an Azure Key Vault containing credentials used to c
 |RevokeAccess|<xref:Microsoft.Dynamics.CRM.RevokeAccess?displayProperty=nameWithType />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH /keyvaultreferences(*keyvaultreferenceid*)<br />[Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH /keyvaultreferences(*keyvaultreferenceid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
-|UpdateMultiple|<xref:Microsoft.Dynamics.CRM.UpdateMultiple?displayProperty=nameWithType />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -897,8 +895,8 @@ Listed by **SchemaName**.
 - [keyvaultreference_ProcessSession](#BKMK_keyvaultreference_ProcessSession)
 - [keyvaultreference_BulkDeleteFailures](#BKMK_keyvaultreference_BulkDeleteFailures)
 - [keyvaultreference_PrincipalObjectAttributeAccesses](#BKMK_keyvaultreference_PrincipalObjectAttributeAccesses)
-- [keyvaultreference_ServiceEndpoint](#BKMK_keyvaultreference_ServiceEndpoint)
 - [keyvaultreference_ManagedIdentity](#BKMK_keyvaultreference_ManagedIdentity)
+- [keyvaultreference_ServiceEndpoint](#BKMK_keyvaultreference_ServiceEndpoint)
 - [keyvaultreference_emailserverprofile_keyvaultreferenceid](#BKMK_keyvaultreference_emailserverprofile_keyvaultreferenceid)
 
 
@@ -1038,21 +1036,6 @@ Same as the [keyvaultreference_PrincipalObjectAttributeAccesses](principalobject
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_keyvaultreference_ServiceEndpoint"></a> keyvaultreference_ServiceEndpoint
-
-Same as the [keyvaultreference_ServiceEndpoint](serviceendpoint.md#BKMK_keyvaultreference_ServiceEndpoint) many-to-one relationship for the [serviceendpoint](serviceendpoint.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|serviceendpoint|
-|ReferencingAttribute|keyvaultreferenceid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|keyvaultreference_ServiceEndpoint|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_keyvaultreference_ManagedIdentity"></a> keyvaultreference_ManagedIdentity
 
 Same as the [keyvaultreference_ManagedIdentity](managedidentity.md#BKMK_keyvaultreference_ManagedIdentity) many-to-one relationship for the [managedidentity](managedidentity.md) table/entity.
@@ -1064,6 +1047,23 @@ Same as the [keyvaultreference_ManagedIdentity](managedidentity.md#BKMK_keyvault
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|keyvaultreference_ManagedIdentity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_keyvaultreference_ServiceEndpoint"></a> keyvaultreference_ServiceEndpoint
+
+**Added by**: msft_ServiceEndpointExtensions Solution
+
+Same as the [keyvaultreference_ServiceEndpoint](serviceendpoint.md#BKMK_keyvaultreference_ServiceEndpoint) many-to-one relationship for the [serviceendpoint](serviceendpoint.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|serviceendpoint|
+|ReferencingAttribute|keyvaultreferenceid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|keyvaultreference_ServiceEndpoint|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

@@ -1,7 +1,7 @@
 ---
 title: "Appointment table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Appointment table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -656,7 +656,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,contact,knowledgearticle,knowledgebaserecord|
+|Targets|account,adx_invitation,contact,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
 
 
@@ -1895,6 +1895,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [recurringappointmentmaster_appointment](#BKMK_recurringappointmentmaster_appointment)
 - [processstage_appointments](#BKMK_processstage_appointments)
 - [activity_pointer_appointment](#BKMK_activity_pointer_appointment)
+- [adx_invitation_Appointments](#BKMK_adx_invitation_Appointments)
+- [mspp_adplacement_Appointments](#BKMK_mspp_adplacement_Appointments)
+- [mspp_pollplacement_Appointments](#BKMK_mspp_pollplacement_Appointments)
+- [mspp_publishingstatetransitionrule_Appointments](#BKMK_mspp_publishingstatetransitionrule_Appointments)
+- [mspp_redirect_Appointments](#BKMK_mspp_redirect_Appointments)
+- [mspp_shortcut_Appointments](#BKMK_mspp_shortcut_Appointments)
+- [mspp_website_Appointments](#BKMK_mspp_website_Appointments)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_Appointments"></a> KnowledgeBaseRecord_Appointments
@@ -1964,6 +1971,48 @@ See the [processstage_appointments](processstage.md#BKMK_processstage_appointmen
 ### <a name="BKMK_activity_pointer_appointment"></a> activity_pointer_appointment
 
 See the [activity_pointer_appointment](activitypointer.md#BKMK_activity_pointer_appointment) one-to-many relationship for the [activitypointer](activitypointer.md) table/entity.
+
+### <a name="BKMK_adx_invitation_Appointments"></a> adx_invitation_Appointments
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_Appointments](adx_invitation.md#BKMK_adx_invitation_Appointments) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_mspp_adplacement_Appointments"></a> mspp_adplacement_Appointments
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_adplacement_Appointments](mspp_adplacement.md#BKMK_mspp_adplacement_Appointments) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+
+### <a name="BKMK_mspp_pollplacement_Appointments"></a> mspp_pollplacement_Appointments
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_pollplacement_Appointments](mspp_pollplacement.md#BKMK_mspp_pollplacement_Appointments) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_Appointments"></a> mspp_publishingstatetransitionrule_Appointments
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_Appointments](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_Appointments) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_redirect_Appointments"></a> mspp_redirect_Appointments
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_redirect_Appointments](mspp_redirect.md#BKMK_mspp_redirect_Appointments) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_Appointments"></a> mspp_shortcut_Appointments
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_Appointments](mspp_shortcut.md#BKMK_mspp_shortcut_Appointments) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_Appointments"></a> mspp_website_Appointments
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_Appointments](mspp_website.md#BKMK_mspp_website_Appointments) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
 
 ### See also
 

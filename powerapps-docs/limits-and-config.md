@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 09/28/2023
+ms.date: 11/08/2023
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -17,6 +17,7 @@ contributors:
   - amchern
 ms.contributors:
 - arijitba
+- norliu
 ---
 # System requirements, limits, and configuration values for Power Apps
 
@@ -103,7 +104,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | localhost | http | Power Apps Mobile|
 | 127.0.0.1 | http <br><br>You may need to explicitly list the port (5040 and up) for localhost/127.0.0.1.| Power Apps Mobile|
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
-| augloop.office.com<br>\*.augloop.office.com | ws | Power Apps Studio Copilot |
+| augloop.office.com<br>\*.augloop.office.com | WSS | Power Apps Studio Copilot |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
 | api.powerplatform.com<br>\*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
 | *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |

@@ -1,0 +1,1 @@
+Indicates the status of a table and/or the index as a whole.
