@@ -85,6 +85,12 @@ In the list of connections, find the connection that you want to update or delet
 * To delete the connection, select delete.
 * Select the information icon to see the connection details.
 
+## Consent dialog fine-grained permssions
+
+The consent dialog presents **fine-grained** permissions to end users. Istead of asking the user to give permissions to all actions a connector can perform, the consent dialog lists the specific permissions that the app uses. The operations that an app uses are captured and stored in the app metadata when app is saved. For example, if an app is published with the specific Read action, then it will initially just request permission for the Read action. If then the author subsequently adds **Create**, **Update**, and **Delete** record actions then the consent dialog will be presented to the user again for the aggregated permissions of **Read**, **Create**, **Update**, and **Delete**. If the author subsequently removes the **Delete** records action, then the consent dialog isn't presented again. The permissions continue with the fullest set that has been used in the app to that point. If you wish to publish an app that only shows reduced permissions, the app must be republished under a different name. 
+
+The exception to this rule is for actions used in a Power Automate Flow that is embedded in a Power App. In this case **all** the actions are always shown for the actions used by a Power Automate flow.
+
 ## Manage the consent dialog appearance for custom connectors using Microsoft Entra ID OAuth
 
 By default, when end-users launch Power Apps apps they’re presented a connection consent dialog before they’re able to access the app experience for the first time. It’s possible for admins to suppress this consent dialog for select connectors: Microsoft First Party connectors (like SharePoint, Office 365 Users) and custom connectors using Microsoft Entra ID OAuth.
