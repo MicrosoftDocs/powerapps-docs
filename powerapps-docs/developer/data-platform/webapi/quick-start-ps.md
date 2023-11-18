@@ -19,37 +19,63 @@ This script uses an access token generated using the Azure CLI [az account get-a
 
 ## Prerequisites
 
-- PowerShell 6.x or higher
+- PowerShell 6.x or higher. See [Install PowerShell on Windows, Linux, and macOS](/powershell/scripting/install/installing-powershell)
+- Azure CLI installed. See [How to install the Azure CLI](/cli/azure/install-azure-cli)
 - Internet connection
 - Valid user account for a Dataverse environment
 - Url to the Dataverse environment you want to connect with
 - Basic understanding of the PowerShell scripting language.
 
-## Try it
+## Try WhoAmI
 
-In this interactive snippet you need to edit the `$environmentUrl` variable to match the Dataverse environment you want to connect with.
+1. Copy this snippet in to Notepad, or the text editor of your choice
 
-```azurepowershell-interactive
-$environmentUrl = "https://yourorg.crm.dynamics.com/"
-az login | Out-Null
-$token = (az account get-access-token --resource=$environmentUrl --query accessToken --output tsv)
-function Get-WhoAmI {
-    param (
-        [Parameter(Mandatory)] [String] $token
-    )
-$headers = @{
-   "Authorization" = "Bearer $token" 
-   "OData-MaxVersion" = "4.0"
-   "OData-Version" = "4.0"
-}
-$WhoAmIRequest = @{
-   Uri = "${environmentUrl}"+"api/data/v9.2/WhoAmI"
-   Method = 'GET'
-   Headers = $headers
-}
-return Invoke-RestMethod @WhoAmIRequest
-}
-```
+   ```powershell
+   $environmentUrl = "https://yourorg.crm.dynamics.com/"
+   $userName = you@yourorg.onmicrosoft.com
+   $password = password
+   az login -u  $userName-p $password | Out-Null
+   $token = (az account get-access-token --resource=$environmentUrl --query accessToken --output tsv)
+   function Get-WhoAmI {
+      param (
+         [Parameter(Mandatory)] [String] $token
+      )
+   $headers = @{
+      "Authorization" = "Bearer $token"
+      "OData-MaxVersion" = "4.0"
+      "OData-Version" = "4.0"
+      }
+   $WhoAmIRequest = @{
+      Uri = "${environmentUrl}"+"api/data/v9.2/WhoAmI"
+      Method = 'GET'
+      Headers = $headers
+      }
+   return Invoke-RestMethod @WhoAmIRequest
+   }
+   ```
+
+1. Edit the `$environmentUrl`, `$userName` and `$password` variables to match the Dataverse environment you want to connect with and the credentials to use.
+1. Open a PowerShell terminal window. You may want to use a Visual Studio Code terminal window.
+1. Paste the edited code snippet into the terminal window and press enter.
+1. Type `Get-WhoAmI $token | ConvertTo-Json` to invoke the `Get-WhoAmI` function, passing in the `$token` and converting the response to JSON.
+1. Press enter.
+
+   You can expect the following output like the following:
+
+   ```powershell
+   PS C:\Users\you.Domain> Get-WhoAmI $token | ConvertTo-Json
+   {
+      "@odata.context":  "https://yourorg.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
+      "BusinessUnitId":  "38e0dbe4-131b-e111-ba7e-78e7d1620f5e",
+      "UserId":  "4026be43-6b69-e111-8f65-78e7d1620f5e",
+      "OrganizationId":  "883278f5-07af-45eb-a0bc-3fea67caa544"
+   }
+   PS C:\Users\you.Domain>
+   ```
+
+## Try create a record
+
+
 
 
 ## Next steps
