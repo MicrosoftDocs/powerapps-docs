@@ -88,29 +88,26 @@ Dataverse for processing (rather than processing locally within Power Apps).
 8.  Supports comparisons. For example, `Filter(TableName, MyCol = Blank())`.
 
 
-## Call Dataverse actions directly in Power Fx (preview)
+## Call Dataverse actions directly in Power Fx
 
-[This section is pre-release documentation and is subject to change.]
+As a part of the Power Fx language, authors can now directly invoke a Dataverse action within a formula. Both unbound and bound actions are supported. Authors can add a Power Fx `Environment` language object to their app and access Dataverse actions.
 
-As a part of the Power Fx language, authors can now directly invoke a Dataverse action within a formula. Both unbound and bound actions are supported. A new Power Fx `Environment` language object that authors can add to their app enables access to Dataverse actions. It's available with Power Apps release version 3.23022.
+Authors can work with untyped object fields for both inputs and outputs. On the input side, for instance, many Dataverse actions require an untyped object as an argument. Authors can now pass these arguments in by using ParseJSON to convert a Power Fx record into an untyped object. On the output side, for actions that return untyped objects, you can simply `dot` into returned objects properties. You'll need to cast specific values for use in specific contexts for use in Power Apps such as a label.
 
-This feature update also allows authors to work with untyped object fields for both inputs and outputs, on the input side, for instance, many Dataverse actions require an untyped object as an argument. You can now pass these arguments in by using ParseJSON to convert a Power Fx record into an untyped object. On the output side, for actions that return untyped objects, you can simply `dot` into returned objects properties. You'll need to cast specific values for use in specific contexts for use in Power Apps such as a label.
-
-Without this feature, it has been common for authors to use Power Automate to call Dataverse directly. However, calling Dataverse directly from Power Fx provides significant performance benefits (and ease of use) and should be preferred for direct transactional reads and updates. 
+Without this feature, it has been common for authors to use Power Automate to call Dataverse directly. However, calling Dataverse directly from Power Fx provides significant performance benefits (and ease of use) and should be preferred for direct transactional reads and updates. If you have an app that uses Power Automate to call Dataverse actions you will see a banner suggesting you use this direct action approach instead.  
 
 Working with untyped fields is not restricted to Dataverse. It works for all types of connectors and provides basic ad-hoc dynamic schema support.
 
 > [!NOTE]
-> If you encounter an error while executing a Dataverse action, it could be because of a temporary misconfiguration. To fix this issue, remove the environment data source and add it again.
+> 1. We do not fully support DV actions in PFX commanding (specific to any actions call with parameters.) 
+> 2. We do not support Entity and Entity collections reference in canvas directly. 
+> 3. For parameters of object type that are nested (2 or more levels deep), the second level attributes are treated required in PowerApps.
 
 ### Enable access to Microsoft Dataverse actions
 
-For new apps, **Enable access to Microsoft Dataverse actions** is set to **On** by default. For apps created previously you'll need to enable access to Dataverse actions. 
+For new apps, this feature is automatically enabled. For apps created previously you'll need to enable access to Dataverse actions. 
 
-To turn on Dataverse actions, open your canvas app for editing and navigate to **Settings** > **Upcoming features** > **Experimental** > **Enable access to Microsoft Dataverse actions** and set the toggle to **On**.
-
-> [!div class="mx-imgBorder"] 
-> ![Enable access to Microsoft Dataverse actions.](media/connection-common-data-service/common-data-service-connection-dataverse-action-switch-preview.png)
+For older apps, open your canvas app for editing and navigate to **Settings** > **Upcoming features** > **Retired** and enable Dataverse actions.
 
 ### Add the Power Fx Environment language object to your app
 
@@ -136,3 +133,7 @@ Unbound Dataverse actions are peer level to tables and need the parenting scope 
 For more details on how to use Dataverse actions in your formulas, see [Working with untyped and dynamic objects](../untyped-and-dynamic-objects.md).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+
+### Rename, refresh, and actions in other environments
+
+You can rename an Environment by choosing the elipses and selecting "Rename".  If you add a new Dataverse action in Dataverse and need Power Apps to see it, you can choose "Refresh".  And, if you need to use an action in a different environment you first need to change the environment and then once there, search for 'Environment', select and add it to your application.  
