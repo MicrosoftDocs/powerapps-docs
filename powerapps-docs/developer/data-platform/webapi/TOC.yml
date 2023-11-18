@@ -12,6 +12,8 @@
       href: quick-start-console-app-csharp.md
     - name: 'Quick Start: Blazor Server sample (C#)'
       href: quick-start-blazor-server-app.md
+- name: Get started using PowerShell
+  href: quick-start-ps.md
 - name: Web service authentication
   href: authenticate-web-api.md
 - name: Types and operations
