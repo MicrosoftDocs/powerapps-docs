@@ -31,11 +31,14 @@ This script uses an access token generated using the Azure CLI [az account get-a
 1. Copy this snippet in to Notepad, or the text editor of your choice
 
    ```powershell
-   $environmentUrl = "https://yourorg.crm.dynamics.com/"
-   $userName = you@yourorg.onmicrosoft.com
-   $password = password
-   az login -u  $userName-p $password | Out-Null
+   $environmentUrl = "https://yourorg.crm.dynamics.com/" # change this
+   $userName = "you@yourorg.onmicrosoft.com"             # change this
+   $password = "password"                                # change this
+   # Login to Azure
+   az login -u $userName -p $password | Out-Null
+   # Get an access token
    $token = (az account get-access-token --resource=$environmentUrl --query accessToken --output tsv)
+   # Define a function to call the WhoAmI message
    function Get-WhoAmI {
       param (
          [Parameter(Mandatory)] [String] $token
@@ -52,15 +55,15 @@ This script uses an access token generated using the Azure CLI [az account get-a
       }
    return Invoke-RestMethod @WhoAmIRequest
    }
+   # Invoke the GetWhoAmI function
+   Get-WhoAmI $token | ConvertTo-Json
    ```
 
 1. Edit the `$environmentUrl`, `$userName` and `$password` variables to match the Dataverse environment you want to connect with and the credentials to use.
-1. Open a PowerShell terminal window. You may want to use a Visual Studio Code terminal window.
+1. Open a PowerShell 7 terminal window. You may want to use a Visual Studio Code terminal window.
 1. Paste the edited code snippet into the terminal window and press enter.
-1. Type `Get-WhoAmI $token | ConvertTo-Json` to invoke the `Get-WhoAmI` function, passing in the `$token` and converting the response to JSON.
-1. Press enter.
 
-   You can expect the following output like the following:
+   You can expect output like the following:
 
    ```powershell
    PS C:\Users\you.Domain> Get-WhoAmI $token | ConvertTo-Json
