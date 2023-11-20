@@ -34,6 +34,12 @@ Model-driven apps, canvas apps, & portals.
 
 **Type**: [Device](device.md)
 
+### events
+
+[!INCLUDE [events-description](includes/events-description.md)]
+
+**Type**: [Events](events.md)
+
 ### factory
 
 [!INCLUDE [factory-description](includes/factory-description.md)]
