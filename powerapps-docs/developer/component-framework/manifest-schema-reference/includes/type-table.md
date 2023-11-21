@@ -23,21 +23,21 @@
 > [!WARNING]
 > If the `manifest.xml` file contains at least one dataset, then properties of type `Lookup.Simple` should be also wrapped into the [data-set](./../data-set.md) element.
 
-## Value elements that are not supported
+#### Value elements that are not supported
 
 Following `of-type` property values are not supported currently:
 
 |Value|Description|
 |-----|-----|
-|Whole.Duration|This format option can be used to display a list of duration options. But the data stored in the database is always a number of minutes. The column looks like a drop-down list and provides suggested options like 1 minute, 15 minutes, 30 minutes all the way up to 3 days. People can choose these options. However, people can also just type in a number of minutes and it resolves to that period of time.|
-|Whole.TimeZone|This option displays a select list of time zones such as (GMT-12:00) International Date Line West and (GMT-08:00) Pacific Time (US & Canada). Each of these zones is stored as a number. For example, for the time zone (GMT-08:00) Pacific Time (US & Canada), the TimeZoneCode is 4.|
-|Whole.Language|This option displays a list of the languages provisioned for your organization. The values are displayed as a drop-down list of language names, but the data is stored as a number using LCID codes. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](/previous-versions/windows/embedded/ms912047(v=winembedded.10)).|
 |Lookup.Customer|Allows for a single reference to either an account or a contact record. These lookups are available for the Opportunity, Case, Quote, Order, and Invoice tables. These tables also have separate Account and Contact lookups that you can use if your customers are always one type. Or you can include both instead of using the Customer lookup.|
 |Lookup.Owner|Allows for a single reference to either a team or a user record. All team or user-owned tables have one of these.|
 |Lookup.PartyList|Allows for multiple references to multiple tables. These lookups are found on the Email table **To** and **Cc** columns. They're also used in the Phone and Appointment tables.|
 |Lookup.Regarding|Allows for a single reference to multiple tables. These lookups are found in the regarding column used in activities.|
-|Status|A system column that has options that generally correspond to active and inactive status. Some system columns have additional options, but all custom columns have only Active and Inactive status options.|
 |Status Reason|A system column that has options that provide additional detail about the Status column. Each option is associated with one of the available Status options. You can add and edit the options.|
+|Status|A system column that has options that generally correspond to active and inactive status. Some system columns have additional options, but all custom columns have only Active and Inactive status options.|
+|Whole.Duration|This format option can be used to display a list of duration options. But the data stored in the database is always a number of minutes. The column looks like a drop-down list and provides suggested options like 1 minute, 15 minutes, 30 minutes all the way up to 3 days. People can choose these options. However, people can also just type in a number of minutes and it resolves to that period of time.|
+|Whole.Language|This option displays a list of the languages provisioned for your organization. The values are displayed as a drop-down list of language names, but the data is stored as a number using LCID codes. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](/previous-versions/windows/embedded/ms912047(v=winembedded.10)).|
+|Whole.TimeZone|This option displays a select list of time zones such as (GMT-12:00) International Date Line West and (GMT-08:00) Pacific Time (US & Canada). Each of these zones is stored as a number. For example, for the time zone (GMT-08:00) Pacific Time (US & Canada), the TimeZoneCode is 4.|
 
 > [!NOTE]
 > At this time File columns are not supported. More information: [File columns](../../../../maker/data-platform/types-of-fields.md#file-columns)
