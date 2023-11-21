@@ -1,4 +1,4 @@
-Use the `pfx-default-value` property value to evaluate events and properties instead of static default values using Power Fx expressions. You can use this to:
+Use the `pfx-default-value` property value to evaluate events and properties using Power Fx expressions instead of static default values. You can use this to:
 
 - Responsively size the control
 - Access connectors
