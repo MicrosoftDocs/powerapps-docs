@@ -120,7 +120,8 @@ Admins can disable the **Try the new look** setting across all apps in an organi
 Switching themes or enabling dark mode isn't supported at this time.
 
 ### Is the new look available for custom pages or code components?
-The modern theme currently in effect is passed to PCF components allowing you to [style your components with modern theming](../developer/component-framework/fluent-modern-theming).  
+-  Code components: The modern theme in use is passed to PCF components allowing you to [style your components with modern theming](../developer/component-framework/fluent-modern-theming).
+-  Custom pages: The new look is not available for custom pages.  
 
 ### Do Dynamics 365 applications support the new look?
 Dynamics 365 applications have extended the new look across applications based on model-driven Power Apps.
