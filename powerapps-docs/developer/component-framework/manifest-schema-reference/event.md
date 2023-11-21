@@ -22,14 +22,14 @@ Canvas apps
 
 |Name |Description |Type |Required | Available for|
 |------|------|------|-------|------------|
-|name |Name of the event |string |Yes |Canvas apps|
-|display-name-key |Used in the customization screens as localized strings that describes the name of the event. |string |Yes |Canvas apps|
-|description-key |Used in the customization screens as localized strings that describes the description of the event. |string |Optional |Canvas apps|
-|pfx-default-value |The default PFX expression value provided to the component. |See [Remarks](#remarks) |Optional |Canvas apps|
+|`name` |Name of the event |`string` |Yes |Canvas apps|
+|`display-name-key` |Used in the customization screens as localized strings that describes the name of the event. |`string` |Yes |Canvas apps|
+|`description-key` |Used in the customization screens as localized strings that describes the description of the event. |`string` |Optional |Canvas apps|
+|`pfx-default-value` |The default PFX expression value provided to the component. |See [Remarks](#remarks) |Optional |Canvas apps|
 
 ### Remarks
 
-[!INCLUDE [pfx-default-value-description](pfx-default-value-description)]
+[!INCLUDE [pfx-default-value-description](includes/pfx-default-value-description.md)]
 
 ## Parent Elements
 

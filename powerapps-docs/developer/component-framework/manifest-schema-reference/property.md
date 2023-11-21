@@ -39,7 +39,7 @@ The `of-type` property value must be one of the following:
 
 [!INCLUDE [type-table](includes/type-table.md)]
 
-[!INCLUDE [pfx-default-value-description](pfx-default-value-description)]
+[!INCLUDE [pfx-default-value-description](includes/pfx-default-value-description.md)]
 
 ## Parent Elements
 

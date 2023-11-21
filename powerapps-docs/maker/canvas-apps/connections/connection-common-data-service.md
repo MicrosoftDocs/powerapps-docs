@@ -99,7 +99,7 @@ Without this feature, it has been common for authors to use Power Automate to ca
 Working with untyped fields is not restricted to Dataverse. It works for all types of connectors and provides basic ad-hoc dynamic schema support.
 
 > [!NOTE]
-> 1. We do not fully support DV actions in PFX commanding (specific to any actions call with parameters.) 
+> 1. We do not fully support DV actions in  Power Fx commanding (specific to any actions call with parameters.) 
 > 2. We do not support Entity and Entity collections reference in canvas directly. 
 > 3. For parameters of object type that are nested (2 or more levels deep), the second level attributes are treated required in PowerApps.
 
