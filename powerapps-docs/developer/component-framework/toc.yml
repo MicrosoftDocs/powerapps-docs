@@ -229,6 +229,8 @@ items:
         href: reference/entitymetadata.md
       - name: EntityReference
         href: reference/entityreference.md
+      - name: Events
+        href: reference/events.md
       - name: Factory
         href: reference/factory.md
         items:
@@ -452,6 +454,8 @@ items:
         href: manifest-schema-reference/domain.md
       - name: external-service-usage
         href: manifest-schema-reference/external-service-usage.md
+      - name: event
+        href: manifest-schema-reference/event.md
       - name: feature-usage
         href: manifest-schema-reference/feature-usage.md
       - name: img
