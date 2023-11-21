@@ -229,6 +229,8 @@ items:
         href: reference/entitymetadata.md
       - name: EntityReference
         href: reference/entityreference.md
+      - name: Events
+        href: reference/events.md
       - name: Factory
         href: reference/factory.md
         items:

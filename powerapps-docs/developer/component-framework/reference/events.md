@@ -1,6 +1,6 @@
 ---
 title: Events (Power Apps component framework API reference) | Microsoft Docs
-description: Provides methods to calling maker-defined PFX events that are configured in Power Apps Studio.
+description: Provides methods to call maker-defined Power Fx events that are configured in Power Apps Studio.
 ms.author: olidum
 author: OliverDumrique
 ms.date: 11/20/2023
