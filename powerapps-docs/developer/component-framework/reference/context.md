@@ -80,7 +80,7 @@ The resource interface of `context.resources`
 
 ### updatedProperties
 
-An array of strings with values that have changed since the last time it was passed and [parameters](#parameters). More information: [updatedProperties](updatedproperties.md)
+An array of strings with values that changed since the last time it was passed and [parameters](#parameters). More information: [updatedProperties](updatedproperties.md)
 
 **Type**: `string[]`
 
