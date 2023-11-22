@@ -37,6 +37,7 @@ This section contains reference documentation for creating code components using
 |[EntityFormOptions](entityformoptions.md)|[!INCLUDE [entityformoptions-description](includes/entityformoptions-description.md)]|Model-driven apps|
 |[EntityRecord](entityrecord.md)|[!INCLUDE [entityrecord-description](includes/entityrecord-description.md)]|Model-driven and canvas apps|
 |[EntityReference](entityreference.md)|[!INCLUDE [entityreference-description](includes/entityreference-description.md)]|Model-driven apps|
+|[Events](events.md)|[!INCLUDE [events-description](includes/events-description.md)]|Canvas apps|
 |[Factory](factory.md)|[!INCLUDE [factory-description](includes/factory-description.md)]|Model-driven and canvas apps|
 |[FileObject](fileobject.md)|[!INCLUDE [fileobject-description](includes/fileobject-description.md)]|Model-driven apps|
 |[FilterExpression](filterexpression.md)|[!INCLUDE [filterexpression-description](includes/filterexpression-description.md)]|Model-driven apps|
