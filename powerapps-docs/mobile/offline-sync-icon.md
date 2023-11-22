@@ -52,11 +52,28 @@ Data is synchronized from Dataverse to your device over the lifetime of your app
 
 - **Grid sync**: If you select **Refresh** on a grid or calendar view, the app immediately synchronizes all tables visible in the view. When the sync is complete, the view refreshes automatically.
 
-## Offline Status page
+## Device Status page
 
-When you select the offline sync icon, the **Offline Status** page opens. The **Offline Status** page provides details such as what data was downloaded, whether data is waiting to be uploaded, and the amount of storage the app uses.
+When you select the offline sync icon, the **Device Status** page opens. The **Device Status** page provides details such as what data was downloaded, whether data is waiting to be uploaded, and the amount of storage the app uses.
 
-:::image type="content" source="media/OfflineStatusPage-NotConnected.png" alt-text="The Offline Status page of a mobile app.":::
+:::image type="content" source="media/mobile-offline-sync-settings.png" alt-text="The Offline Status page of a mobile app showing the sync settings.":::
+
+### Sync status setting
+The **Sync status** area of the page tracks the offline status of the whole app and the status of each individual entity. When the status appears as **Available**, offline mode is available and data has been synced successfully.
+
+> [!NOTE]
+> The status can be **Not Available** due to an error or if you missed downloading offline updates. If the status is **Not Available** due to missing the latest offline updates, try downloading the updates again.
+
+You can use the **Device Status** page to see the number of files and images to be downloaded and the current progress.
+
+- The number of images is listed for the **Image Descriptor** table.
+- The number of files are listed for each table in the **files available** section.
+
+### Offline sync settings 
+If your admin has [enabled sync settings](setup-mobile-offline.md#define-sync-settings-on-mobile) for the app, you can control when offline synchronizations are triggered. 
+
+  - Set the **Wifi only** setting to **On** to sync your data only when the device is connected to a Wi-Fi network. Enable this setting when you need to save your data plan or your battery, especially if you are in a low network area.
+  - Change the sync interval value from the **Auto sync** setting if you want to sync less frequently. You can keep the default value by selecting **Auto**, or you can pick a longer interval that meets your needs. If you choose **Manual**, the sync only happens when you select the **Check for updates** button in the **Device Status** page. The **Check for updates** button only applies to changes coming from the server. When you change data in the app, it is immediately synchronized as soon as you have a network connection.  
 
 ## Notifications
 

@@ -9,9 +9,15 @@ ms.topic: how-to
 ms.date: 10/20/2023
 ms.custom: template-how-to 
 ---
-# Manage data retention policies
+# Manage data retention policies (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Use the retention policies dashboard to view and manage retention policies. From the dashboard, view the policy run history, update policy details, deactivate, and delete a policy.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## View and manage retention policies
 

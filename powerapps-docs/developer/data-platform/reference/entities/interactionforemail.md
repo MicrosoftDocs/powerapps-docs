@@ -1,7 +1,7 @@
 ---
 title: "InteractionForEmail table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the InteractionForEmail table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -830,6 +830,11 @@ Listed by **SchemaName**.
 - [interactionforemail_ActivityPointers](#BKMK_interactionforemail_ActivityPointers)
 - [interactionforemail_AsyncOperations](#BKMK_interactionforemail_AsyncOperations)
 - [interactionforemail_chats](#BKMK_interactionforemail_chats)
+- [interactionforemail_adx_inviteredemptions](#BKMK_interactionforemail_adx_inviteredemptions)
+- [interactionforemail_adx_portalcomments](#BKMK_interactionforemail_adx_portalcomments)
+- [interactionforemail_msfp_alerts](#BKMK_interactionforemail_msfp_alerts)
+- [interactionforemail_msfp_surveyinvites](#BKMK_interactionforemail_msfp_surveyinvites)
+- [interactionforemail_msfp_surveyresponses](#BKMK_interactionforemail_msfp_surveyresponses)
 
 
 ### <a name="BKMK_interactionforemail_ActivityPointers"></a> interactionforemail_ActivityPointers
@@ -875,6 +880,91 @@ Same as the [interactionforemail_chats](chat.md#BKMK_interactionforemail_chats) 
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|interactionforemail_chats|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_interactionforemail_adx_inviteredemptions"></a> interactionforemail_adx_inviteredemptions
+
+**Added by**: Active Solution Solution
+
+Same as the [interactionforemail_adx_inviteredemptions](adx_inviteredemption.md#BKMK_interactionforemail_adx_inviteredemptions) many-to-one relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_inviteredemption|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|interactionforemail_adx_inviteredemptions|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_interactionforemail_adx_portalcomments"></a> interactionforemail_adx_portalcomments
+
+**Added by**: Active Solution Solution
+
+Same as the [interactionforemail_adx_portalcomments](adx_portalcomment.md#BKMK_interactionforemail_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|interactionforemail_adx_portalcomments|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_interactionforemail_msfp_alerts"></a> interactionforemail_msfp_alerts
+
+**Added by**: Active Solution Solution
+
+Same as the [interactionforemail_msfp_alerts](msfp_alert.md#BKMK_interactionforemail_msfp_alerts) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_alert|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|interactionforemail_msfp_alerts|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_interactionforemail_msfp_surveyinvites"></a> interactionforemail_msfp_surveyinvites
+
+**Added by**: Active Solution Solution
+
+Same as the [interactionforemail_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_interactionforemail_msfp_surveyinvites) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyinvite|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|interactionforemail_msfp_surveyinvites|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_interactionforemail_msfp_surveyresponses"></a> interactionforemail_msfp_surveyresponses
+
+**Added by**: Active Solution Solution
+
+Same as the [interactionforemail_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_interactionforemail_msfp_surveyresponses) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyresponse|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|interactionforemail_msfp_surveyresponses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 

@@ -174,9 +174,9 @@ There are several predefined roles available with Dataverse. To run apps that us
 
 <sup>1</sup>Privilege is global scope unless specified otherwise. -->
 
-## Use Azure Active Directory groups to manage access
+## Use Microsoft Entra groups to manage access
 
-Administrators can use their organization’s Azure Active Directory (Azure AD) groups to manage access rights for licensed Dataverse users. Both types of Azure AD groups—Microsoft 365 and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams#about-group-teams)
+Administrators can use their organization’s Microsoft Entra groups to manage access rights for licensed Dataverse users. Both types of Microsoft Entra groups—Microsoft 365 and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams#about-group-teams)
 
 ### See also
 

@@ -34,6 +34,12 @@ Model-driven apps, canvas apps, & portals.
 
 **Type**: [Device](device.md)
 
+### events
+
+[!INCLUDE [events-description](includes/events-description.md)]
+
+**Type**: [Events](events.md)
+
 ### factory
 
 [!INCLUDE [factory-description](includes/factory-description.md)]
@@ -74,7 +80,7 @@ The resource interface of `context.resources`
 
 ### updatedProperties
 
-An array of strings with values that have changed since the last time it was passed and [parameters](#parameters). More information: [updatedProperties](updatedproperties.md)
+An array of strings with values that changed since the last time it was passed and [parameters](#parameters). More information: [updatedProperties](updatedproperties.md)
 
 **Type**: `string[]`
 

@@ -17,7 +17,7 @@ contributors:
 
 ## Syntax
 
-`Xrm.Navigation.openAlertDialog(alertStrings,alertOptions).then(closeCallback,errorCallback);`
+`Xrm.Navigation.openAlertDialog(alertStrings,alertOptions).then(successCallback,errorCallback);`
 
 ## Parameters
 

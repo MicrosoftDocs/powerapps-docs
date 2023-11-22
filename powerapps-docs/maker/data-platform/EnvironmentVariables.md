@@ -153,6 +153,8 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
 
 1. Azure Key Vault must have the **Key Vault Secrets User** role granted to the Dataverse service principal. If it doesn't exist for this vault, add a new access policy using the same method you previously used for the end user permission, only using the Dataverse application identity instead of the user. If you have multiple Dataverse service principals in your tenant, then we recommend that you select them all and save the role assignment. Once the role is assigned, review each Dataverse item listed in the role assignments list and select the Dataverse name to view the details. If the **Application ID** isn't **00000007-0000-0000-c000-000000000000** then select the identity and then select **Remove** to remove it from the list.
 
+1. If you have enabled [Azure Key Vault Firewall](/azure/key-vault/general/network-security) you will have to allow Power Platform IP addresses access to your key vault.  Note that Power Platform is not included in the "Trusted Services Only" option, so please reference [Power Platform URLs and IP address ranges](/power-platform/admin/online-requirements#ip-addresses-required) for current IP addresses used in the service.
+   
 1. If you haven't done so already, add a secret to your new vault. More information: [Azure Quickstart - Set and retrieve a secret from Key Vault using Azure portal](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
 
 > [!NOTE]
@@ -251,7 +253,7 @@ No. Although they're related. A connection represents a credential or authentica
 
 Generally no. Shared connections with SQL Server store the parameters required to connect to data within the connection. For example, the Server and Database name are provided when creating the connection and therefore are always derived from the connection.
 
-Data source environment variables are used for connectors that rely on user based authentication such as Azure Active Directory because the parameters can't be derived from the connection. For these reasons authentication with SQL Server, which is a shared connection, won't use data source environment variables. 
+Data source environment variables are used for connectors that rely on user based authentication such as Microsoft Entra ID because the parameters can't be derived from the connection. For these reasons authentication with SQL Server, which is a shared connection, won't use data source environment variables. 
 
 ### Can my automated ALM pipeline use different values files for different environments?
 
@@ -304,5 +306,4 @@ Yes. [Environment variable support in custom connectors](/connectors/custom-conn
 [Environment variable support in custom connectors](/connectors/custom-connectors/environment-variables)</BR>
 
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)] 
-
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

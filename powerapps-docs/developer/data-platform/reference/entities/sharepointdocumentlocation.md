@@ -1,7 +1,7 @@
 ---
 title: "Document Location (SharePointDocumentLocation)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Document Location (SharePointDocumentLocation)  table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -249,7 +249,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,kbarticle,knowledgearticle,msdyn_knowledgearticletemplate|
+|Targets|account,adx_portalcomment,kbarticle,knowledgearticle,msdyn_knowledgearticletemplate,mspp_website|
 |Type|Lookup|
 
 
@@ -1004,6 +1004,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [KbArticle_SharepointDocumentLocation](#BKMK_KbArticle_SharepointDocumentLocation)
 - [sharepointdocumentlocation_parent_sharepointsite](#BKMK_sharepointdocumentlocation_parent_sharepointsite)
 - [msdyn_knowledgearticletemplate_SharePointDocumentLocations](#BKMK_msdyn_knowledgearticletemplate_SharePointDocumentLocations)
+- [adx_portalcomment_SharePointDocumentLocations](#BKMK_adx_portalcomment_SharePointDocumentLocations)
+- [mspp_website_SharePointDocumentLocations](#BKMK_mspp_website_SharePointDocumentLocations)
 
 
 ### <a name="BKMK_knowledgearticle_SharePointDocumentLocations"></a> knowledgearticle_SharePointDocumentLocations
@@ -1063,6 +1065,18 @@ See the [sharepointdocumentlocation_parent_sharepointsite](sharepointsite.md#BKM
 **Added by**: Knowledge Management Features Solution
 
 See the [msdyn_knowledgearticletemplate_SharePointDocumentLocations](msdyn_knowledgearticletemplate.md#BKMK_msdyn_knowledgearticletemplate_SharePointDocumentLocations) one-to-many relationship for the [msdyn_knowledgearticletemplate](msdyn_knowledgearticletemplate.md) table/entity.
+
+### <a name="BKMK_adx_portalcomment_SharePointDocumentLocations"></a> adx_portalcomment_SharePointDocumentLocations
+
+**Added by**: Active Solution Solution
+
+See the [adx_portalcomment_SharePointDocumentLocations](adx_portalcomment.md#BKMK_adx_portalcomment_SharePointDocumentLocations) one-to-many relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+### <a name="BKMK_mspp_website_SharePointDocumentLocations"></a> mspp_website_SharePointDocumentLocations
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_SharePointDocumentLocations](mspp_website.md#BKMK_mspp_website_SharePointDocumentLocations) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
 
 ### See also
 

@@ -22,7 +22,7 @@ In this article, you will learn how to use an existing Azure key vault or create
 
 ## Prerequisites
   
-- Azure Active Directory subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
+- Microsoft Entra subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
 - Admin access for your tenant.
 - You need to have a [Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
 - Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
@@ -30,7 +30,7 @@ In this article, you will learn how to use an existing Azure key vault or create
    
 ## Create Azure key vault and configure KeyVault URI
 
-1. To create a new Azure service principal for the 1P AAD application **4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp)**, sign in to your tenant as an admin. Then, run the following script in PowerShell:
+1. To create a new Azure service principal for the 1P Microsoft Entra application **4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp)**, sign in to your tenant as an admin. Then, run the following script in PowerShell:
 
     `Connect-AzureAD -TenantId <your tenant ID>`<br>
    `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`

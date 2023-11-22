@@ -1011,6 +1011,6 @@ Learn how to use code to create and query JavaScript Object Notation (JSON) data
 
 [Elastic tables for developers (preview)](elastic-tables.md)  
 [Create elastic tables using code (preview)](create-elastic-tables.md)  
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md) 
+[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)  
 [Elastic table sample code (preview)](elastic-table-samples.md)  
 [Bulk operation messages (preview)](bulk-operations.md)
