@@ -28,7 +28,7 @@ This script uses an access token generated using the Azure CLI [az account get-a
 
 ## Try WhoAmI
 
-1. Copy this snippet in to Notepad, or the text editor of your choice
+1. Copy this snippet in to VS Code, or the text editor of your choice
 
    ```powershell
    $environmentUrl = "https://yourorg.crm.dynamics.com/" # change this
@@ -38,6 +38,7 @@ This script uses an access token generated using the Azure CLI [az account get-a
    az login -u $userName -p $password | Out-Null
    # Get an access token
    $token = (az account get-access-token --resource=$environmentUrl --query accessToken --output tsv)
+   
    # Define a function to call the WhoAmI message
    function Get-WhoAmI {
       param (
@@ -55,17 +56,18 @@ This script uses an access token generated using the Azure CLI [az account get-a
       }
    return Invoke-RestMethod @WhoAmIRequest
    }
+   
    # Invoke the GetWhoAmI function
    Get-WhoAmI $token | ConvertTo-Json
    ```
 
 1. Edit the `$environmentUrl`, `$userName` and `$password` variables to match the Dataverse environment you want to connect with and the credentials to use.
-1. Open a PowerShell 7 terminal window. You may want to use a Visual Studio Code terminal window.
+1. Open a PowerShell 7 terminal window. You may want to use the Visual Studio Code terminal window.
 1. Paste the edited code snippet into the terminal window and press enter.
 
    You can expect output like the following:
 
-   ```powershell
+   ```
    PS C:\Users\you.Domain> Get-WhoAmI $token | ConvertTo-Json
    {
       "@odata.context":  "https://yourorg.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
@@ -76,7 +78,88 @@ This script uses an access token generated using the Azure CLI [az account get-a
    PS C:\Users\you.Domain>
    ```
 
-## Try create a record
+## Create a record
+
+```powershell
+function New-Record {
+   param (
+      [Parameter(Mandatory)] [String] $token,
+      [Parameter(Mandatory)] [String] $setName,
+      [Parameter(Mandatory)] $body
+   )
+   $headers = @{
+      "Authorization"    = "Bearer $token"
+      "OData-MaxVersion" = "4.0"
+      "OData-Version"    = "4.0"
+      "Content-Type"     = "application/json"
+   }
+   $CreateRequest = @{
+      Uri     = "${environmentUrl}" + "api/data/v9.2/" + $setName
+      Method  = 'POST'
+      Headers = $headers
+      Body    = ConvertTo-Json $body
+   }
+   Invoke-RestMethod @CreateRequest  -ResponseHeadersVariable rh
+   $url = $rh["OData-EntityId"]
+   $selectedString = Select-String -InputObject $url -Pattern "(?<=\().*?(?=\))"
+   return $selectedString.Matches.Value.ToString()
+}
+```
+
+## Retrieve a record
+
+```powershell
+function Get-Record {
+   param (
+      [Parameter(Mandatory)] [String] $token,
+      [Parameter(Mandatory)] [String] $setName,
+      [Parameter(Mandatory)] [String] $id,
+      [String] $query
+   )
+   $headers = @{
+      "Authorization"    = "Bearer $token"
+      "OData-MaxVersion" = "4.0"
+      "OData-Version"    = "4.0"
+   }
+   $RetrieveRequest = @{
+      Uri     = "${environmentUrl}" + "api/data/v9.2/" + $setName + "(" + $id + ")" + $query
+      Method  = 'GET'
+      Headers = $headers
+   }
+   Invoke-RestMethod @RetrieveRequest 
+}
+```
+
+## Update a record
+
+```powershell
+function Update-Record {
+   param (
+      [Parameter(Mandatory)] [String] $token,
+      [Parameter(Mandatory)] [String] $setName,
+      [Parameter(Mandatory)] [guid] $id,
+      [Parameter(Mandatory)] $body
+   )
+   $headers = @{
+      "Authorization"    = "Bearer $token"
+      "OData-MaxVersion" = "4.0"
+      "OData-Version"    = "4.0"
+      "Content-Type"     = "application/json"
+      "If-Match"         = "*" # Prevent Create
+   }
+   $UpdateRequest = @{
+      Uri     = "${environmentUrl}" + "api/data/v9.2/" + $setName
+      Method  = 'PATCH'
+      Headers = $headers
+      Body    = ConvertTo-Json $body
+   }
+   Invoke-RestMethod @UpdateRequest 
+}
+```
+
+## Delete a record
+
+
 
 
 
