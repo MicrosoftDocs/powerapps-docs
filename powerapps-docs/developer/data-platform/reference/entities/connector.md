@@ -1,7 +1,7 @@
 ---
 title: "connector table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the connector table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1058,6 +1058,7 @@ Listed by **SchemaName**.
 - [connector_PrincipalObjectAttributeAccesses](#BKMK_connector_PrincipalObjectAttributeAccesses)
 - [connector_connectionreference](#BKMK_connector_connectionreference)
 - [lk_connectioninstance_connectorid](#BKMK_lk_connectioninstance_connectorid)
+- [AIPluginOperation_connector_connector](#BKMK_AIPluginOperation_connector_connector)
 
 
 ### <a name="BKMK_connector_SyncErrors"></a> connector_SyncErrors
@@ -1226,6 +1227,23 @@ Same as the [lk_connectioninstance_connectorid](connectioninstance.md#BKMK_lk_co
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|ConnectionInstance_connectorid_con|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_AIPluginOperation_connector_connector"></a> AIPluginOperation_connector_connector
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+Same as the [AIPluginOperation_connector_connector](aipluginoperation.md#BKMK_AIPluginOperation_connector_connector) many-to-one relationship for the [aipluginoperation](aipluginoperation.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aipluginoperation|
+|ReferencingAttribute|connector|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|AIPluginOperation_connector_connector|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

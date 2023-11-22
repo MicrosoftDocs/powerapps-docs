@@ -1,7 +1,7 @@
 ---
 title: "EmailServerProfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the EmailServerProfile table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -104,6 +104,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ProcessEmailsReceivedAfter](#BKMK_ProcessEmailsReceivedAfter)
 - [SendEmailAlert](#BKMK_SendEmailAlert)
+- [ServerAuthority](#BKMK_ServerAuthority)
 - [ServerType](#BKMK_ServerType)
 - [StateCode](#BKMK_StateCode)
 - [StatusCode](#BKMK_StatusCode)
@@ -953,6 +954,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|No||
 
 **DefaultValue**: 0
+
+
+
+### <a name="BKMK_ServerAuthority"></a> ServerAuthority
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Select the authority for the email server.|
+|DisplayName|Email server authority|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|serverauthority|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ServerAuthority Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Public (+GCC) (https://login.microsoftonline.com)||
+|1|US Government (GCC High and DoD) (https://login.microsoftonline.us)||
+|2|China (21Vianet) (https://login.chinacloudapi.cn)||
+|3|Automatic (determined by Dynamics 365 cloud)||
 
 
 

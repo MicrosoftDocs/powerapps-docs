@@ -1,7 +1,7 @@
 ---
 title: "Attribute table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Attribute table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -323,6 +323,8 @@ Listed by **SchemaName**.
 - [attribute_solutioncomponentattrconfig](#BKMK_attribute_solutioncomponentattrconfig)
 - [referencingattribute_relationshipattribute](#BKMK_referencingattribute_relationshipattribute)
 - [referencedattribute_relationshipattribute](#BKMK_referencedattribute_relationshipattribute)
+- [attribute_dvfilesearchattribute](#BKMK_attribute_dvfilesearchattribute)
+- [attribute_dvtablesearchattribute](#BKMK_attribute_dvtablesearchattribute)
 
 
 ### <a name="BKMK_attribute_solutioncomponentattrconfig"></a> attribute_solutioncomponentattrconfig
@@ -374,6 +376,40 @@ Same as the [referencedattribute_relationshipattribute](relationshipattribute.md
 |ReferencedEntityNavigationPropertyName|referencedattribute_relationshipattribute|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_attribute_dvfilesearchattribute"></a> attribute_dvfilesearchattribute
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+Same as the [attribute_dvfilesearchattribute](dvfilesearchattribute.md#BKMK_attribute_dvfilesearchattribute) many-to-one relationship for the [dvfilesearchattribute](dvfilesearchattribute.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvfilesearchattribute|
+|ReferencingAttribute|attribute|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|attribute_dvfilesearchattribute|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_attribute_dvtablesearchattribute"></a> attribute_dvtablesearchattribute
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+Same as the [attribute_dvtablesearchattribute](dvtablesearchattribute.md#BKMK_attribute_dvtablesearchattribute) many-to-one relationship for the [dvtablesearchattribute](dvtablesearchattribute.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvtablesearchattribute|
+|ReferencingAttribute|attribute|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|attribute_dvtablesearchattribute|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### See also

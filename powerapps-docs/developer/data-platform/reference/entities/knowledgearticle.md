@@ -1,7 +1,7 @@
 ---
 title: "KnowledgeArticle table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the KnowledgeArticle table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1740,6 +1740,11 @@ Listed by **SchemaName**.
 - [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
 - [msdyn_knowledgearticleimage_parentknowledgearticleid](#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
 - [msdyn_knowledgearticle_favoriteknowledgearticle](#BKMK_msdyn_knowledgearticle_favoriteknowledgearticle)
+- [knowledgearticle_adx_inviteredemptions](#BKMK_knowledgearticle_adx_inviteredemptions)
+- [knowledgearticle_adx_portalcomments](#BKMK_knowledgearticle_adx_portalcomments)
+- [knowledgearticle_msfp_alerts](#BKMK_knowledgearticle_msfp_alerts)
+- [knowledgearticle_msfp_surveyinvites](#BKMK_knowledgearticle_msfp_surveyinvites)
+- [knowledgearticle_msfp_surveyresponses](#BKMK_knowledgearticle_msfp_surveyresponses)
 
 
 ### <a name="BKMK_knowledgearticle_connections1"></a> knowledgearticle_connections1
@@ -2288,6 +2293,91 @@ Same as the [msdyn_knowledgearticle_favoriteknowledgearticle](msdyn_favoriteknow
 |ReferencedEntityNavigationPropertyName|msdyn_knowledgearticle_favoriteknowledgearticle|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: Id of Knowledge Article<br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_knowledgearticle_adx_inviteredemptions"></a> knowledgearticle_adx_inviteredemptions
+
+**Added by**: Active Solution Solution
+
+Same as the [knowledgearticle_adx_inviteredemptions](adx_inviteredemption.md#BKMK_knowledgearticle_adx_inviteredemptions) many-to-one relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_inviteredemption|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|knowledgearticle_adx_inviteredemptions|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_knowledgearticle_adx_portalcomments"></a> knowledgearticle_adx_portalcomments
+
+**Added by**: Active Solution Solution
+
+Same as the [knowledgearticle_adx_portalcomments](adx_portalcomment.md#BKMK_knowledgearticle_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|knowledgearticle_adx_portalcomments|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_knowledgearticle_msfp_alerts"></a> knowledgearticle_msfp_alerts
+
+**Added by**: Active Solution Solution
+
+Same as the [knowledgearticle_msfp_alerts](msfp_alert.md#BKMK_knowledgearticle_msfp_alerts) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_alert|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|knowledgearticle_msfp_alerts|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_knowledgearticle_msfp_surveyinvites"></a> knowledgearticle_msfp_surveyinvites
+
+**Added by**: Active Solution Solution
+
+Same as the [knowledgearticle_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_knowledgearticle_msfp_surveyinvites) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyinvite|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|knowledgearticle_msfp_surveyinvites|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_knowledgearticle_msfp_surveyresponses"></a> knowledgearticle_msfp_surveyresponses
+
+**Added by**: Active Solution Solution
+
+Same as the [knowledgearticle_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_knowledgearticle_msfp_surveyresponses) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyresponse|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|knowledgearticle_msfp_surveyresponses|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 

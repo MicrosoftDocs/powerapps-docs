@@ -1,7 +1,7 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Mailbox table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -2242,6 +2242,11 @@ Listed by **SchemaName**.
 - [email_sendermailboxid_mailbox](#BKMK_email_sendermailboxid_mailbox)
 - [mailbox_email_ReceivingMailboxId](#BKMK_mailbox_email_ReceivingMailboxId)
 - [chat_mailbox_sendermailboxid](#BKMK_chat_mailbox_sendermailboxid)
+- [adx_inviteredemption_mailbox_sendermailboxid](#BKMK_adx_inviteredemption_mailbox_sendermailboxid)
+- [adx_portalcomment_mailbox_sendermailboxid](#BKMK_adx_portalcomment_mailbox_sendermailboxid)
+- [msfp_alert_mailbox_sendermailboxid](#BKMK_msfp_alert_mailbox_sendermailboxid)
+- [msfp_surveyinvite_mailbox_sendermailboxid](#BKMK_msfp_surveyinvite_mailbox_sendermailboxid)
+- [msfp_surveyresponse_mailbox_sendermailboxid](#BKMK_msfp_surveyresponse_mailbox_sendermailboxid)
 
 
 ### <a name="BKMK_systemuser_defaultmailbox_mailbox"></a> systemuser_defaultmailbox_mailbox
@@ -2424,6 +2429,91 @@ Same as the [chat_mailbox_sendermailboxid](chat.md#BKMK_chat_mailbox_sendermailb
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|chat_mailbox_sendermailboxid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_adx_inviteredemption_mailbox_sendermailboxid"></a> adx_inviteredemption_mailbox_sendermailboxid
+
+**Added by**: Active Solution Solution
+
+Same as the [adx_inviteredemption_mailbox_sendermailboxid](adx_inviteredemption.md#BKMK_adx_inviteredemption_mailbox_sendermailboxid) many-to-one relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_inviteredemption|
+|ReferencingAttribute|sendermailboxid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|adx_inviteredemption_mailbox_sendermailboxid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_adx_portalcomment_mailbox_sendermailboxid"></a> adx_portalcomment_mailbox_sendermailboxid
+
+**Added by**: Active Solution Solution
+
+Same as the [adx_portalcomment_mailbox_sendermailboxid](adx_portalcomment.md#BKMK_adx_portalcomment_mailbox_sendermailboxid) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|sendermailboxid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|adx_portalcomment_mailbox_sendermailboxid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_alert_mailbox_sendermailboxid"></a> msfp_alert_mailbox_sendermailboxid
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_alert_mailbox_sendermailboxid](msfp_alert.md#BKMK_msfp_alert_mailbox_sendermailboxid) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_alert|
+|ReferencingAttribute|sendermailboxid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_alert_mailbox_sendermailboxid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_surveyinvite_mailbox_sendermailboxid"></a> msfp_surveyinvite_mailbox_sendermailboxid
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_surveyinvite_mailbox_sendermailboxid](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_mailbox_sendermailboxid) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyinvite|
+|ReferencingAttribute|sendermailboxid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_surveyinvite_mailbox_sendermailboxid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_surveyresponse_mailbox_sendermailboxid"></a> msfp_surveyresponse_mailbox_sendermailboxid
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_surveyresponse_mailbox_sendermailboxid](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_mailbox_sendermailboxid) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyresponse|
+|ReferencingAttribute|sendermailboxid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_surveyresponse_mailbox_sendermailboxid|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
