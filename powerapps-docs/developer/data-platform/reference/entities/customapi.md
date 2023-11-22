@@ -1,7 +1,7 @@
 ---
 title: "CustomAPI table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomAPI table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1125,7 +1125,7 @@ Listed by **SchemaName**.
 - [customapi_customapirequestparameter](#BKMK_customapi_customapirequestparameter)
 - [customapi_customapiresponseproperty](#BKMK_customapi_customapiresponseproperty)
 - [catalogassignment_customapi](#BKMK_catalogassignment_customapi)
-- [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid](#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid)
+- [AIPluginOperation_CustomAPI_CustomAPI](#BKMK_AIPluginOperation_CustomAPI_CustomAPI)
 - [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId](#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId)
 
 
@@ -1278,21 +1278,21 @@ Same as the [catalogassignment_customapi](catalogassignment.md#BKMK_catalogassig
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid"></a> msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid
+### <a name="BKMK_AIPluginOperation_CustomAPI_CustomAPI"></a> AIPluginOperation_CustomAPI_CustomAPI
 
-**Added by**: Process Mining Solution
+**Added by**: AIPlatformExtensionsCore Solution Solution
 
-Same as the [msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid](msdyn_pmbusinessruleautomationconfig.md#BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid) many-to-one relationship for the [msdyn_pmbusinessruleautomationconfig](msdyn_pmbusinessruleautomationconfig.md) table/entity.
+Same as the [AIPluginOperation_CustomAPI_CustomAPI](aipluginoperation.md#BKMK_AIPluginOperation_CustomAPI_CustomAPI) many-to-one relationship for the [aipluginoperation](aipluginoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|msdyn_pmbusinessruleautomationconfig|
-|ReferencingAttribute|msdyn_customapiid|
+|ReferencingEntity|aipluginoperation|
+|ReferencingAttribute|customapi|
 |IsHierarchical|False|
 |IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|msdyn_customapi_msdyn_pmbusinessruleautomationconfig_msdyn_customapiid|
+|ReferencedEntityNavigationPropertyName|AIPluginOperation_CustomAPI_CustomAPI|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId"></a> msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId

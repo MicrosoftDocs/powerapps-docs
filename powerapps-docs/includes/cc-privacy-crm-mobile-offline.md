@@ -34,7 +34,7 @@ When you enable Dynamics 365 mobile offline, Dynamics 365 (online) data is downl
   
  **Active Directory Service**  
   
- Mobile Offline uses the Azure Active Directory Service to authenticate with other services such as Dynamics 365 or SW API or Azure Management APIs.  
+ Mobile Offline uses the Microsoft Entra Service to authenticate with other services such as Dynamics 365 or SW API or Azure Management APIs.  
   
  **Azure DNS**  
   

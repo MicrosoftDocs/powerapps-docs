@@ -1,7 +1,7 @@
 ---
 title: "Set a preferred solution | MicrosoftDocs"
 description: "Set your preferred solution in Power Apps."
-ms.date: 10/12/2023
+ms.date: 10/26/2023
 ms.topic: conceptual
 author: Mattp123
 ms.subservice: dataverse-maker
@@ -26,8 +26,6 @@ Using preferred solutions is a way to set which solution will support each maker
 >
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - You can't set or view the preferred solution in the classic solution explorer.
-> - Components that are created in the classic solution explorer won't go into the preferred solution.
 
 ## Prerequisites
 
@@ -57,6 +55,12 @@ You can delete your preferred solution or a preferred solution that other makers
 > 
 > :::image type="content" source="media/delete-preferred-solution.png" alt-text="Delete a preferred solution warning":::
 
-## See also
+## Limitations
+
+- You can't set or view the preferred solution in the classic solution explorer.
+- Components that are created in the classic solution explorer won't go into the preferred solution.
+- Preferred solution currently doesn't work with cards, dataflows, AI Builder, chatbots, flows, connections, gateways, custom connectors, and canvas apps created from image or a figma design.
+
+### See also
 
 [Solutions overview](solutions-overview.md)

@@ -1,7 +1,7 @@
 ---
 title: "ServiceEndpoint table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ServiceEndpoint table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -219,7 +219,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_KeyVaultReferenceId"></a> KeyVaultReferenceId
 
-**Added by**: ManagedIdentityExtensions Solution
+**Added by**: msft_ServiceEndpointExtensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -484,7 +484,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_UseKeyVaultConfiguration"></a> UseKeyVaultConfiguration
 
-**Added by**: ManagedIdentityExtensions Solution
+**Added by**: msft_ServiceEndpointExtensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -749,7 +749,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_keyvaultreferenceidName"></a> keyvaultreferenceidName
 
-**Added by**: ManagedIdentityExtensions Solution
+**Added by**: msft_ServiceEndpointExtensions Solution
 
 |Property|Value|
 |--------|-----|

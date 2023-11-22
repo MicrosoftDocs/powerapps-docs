@@ -1,7 +1,7 @@
 ---
 title: "Recurring Appointment (RecurringAppointmentMaster)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Recurring Appointment (RecurringAppointmentMaster)  table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -908,7 +908,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,contact,knowledgearticle,knowledgebaserecord|
+|Targets|account,adx_invitation,contact,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
 
 
@@ -2074,6 +2074,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_recurringappointmentmaster_modifiedonbehalfby](#BKMK_lk_recurringappointmentmaster_modifiedonbehalfby)
 - [user_recurringappointmentmaster](#BKMK_user_recurringappointmentmaster)
 - [KnowledgeArticle_RecurringAppointmentMasters](#BKMK_KnowledgeArticle_RecurringAppointmentMasters)
+- [adx_invitation_RecurringAppointmentMasters](#BKMK_adx_invitation_RecurringAppointmentMasters)
+- [mspp_adplacement_RecurringAppointmentMasters](#BKMK_mspp_adplacement_RecurringAppointmentMasters)
+- [mspp_pollplacement_RecurringAppointmentMasters](#BKMK_mspp_pollplacement_RecurringAppointmentMasters)
+- [mspp_publishingstatetransitionrule_RecurringAppointmentMasters](#BKMK_mspp_publishingstatetransitionrule_RecurringAppointmentMasters)
+- [mspp_redirect_RecurringAppointmentMasters](#BKMK_mspp_redirect_RecurringAppointmentMasters)
+- [mspp_shortcut_RecurringAppointmentMasters](#BKMK_mspp_shortcut_RecurringAppointmentMasters)
+- [mspp_website_RecurringAppointmentMasters](#BKMK_mspp_website_RecurringAppointmentMasters)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_RecurringAppointmentMasters"></a> KnowledgeBaseRecord_RecurringAppointmentMasters
@@ -2135,6 +2142,48 @@ See the [user_recurringappointmentmaster](systemuser.md#BKMK_user_recurringappoi
 ### <a name="BKMK_KnowledgeArticle_RecurringAppointmentMasters"></a> KnowledgeArticle_RecurringAppointmentMasters
 
 See the [KnowledgeArticle_RecurringAppointmentMasters](knowledgearticle.md#BKMK_KnowledgeArticle_RecurringAppointmentMasters) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
+
+### <a name="BKMK_adx_invitation_RecurringAppointmentMasters"></a> adx_invitation_RecurringAppointmentMasters
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_RecurringAppointmentMasters](adx_invitation.md#BKMK_adx_invitation_RecurringAppointmentMasters) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_mspp_adplacement_RecurringAppointmentMasters"></a> mspp_adplacement_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_adplacement_RecurringAppointmentMasters](mspp_adplacement.md#BKMK_mspp_adplacement_RecurringAppointmentMasters) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+
+### <a name="BKMK_mspp_pollplacement_RecurringAppointmentMasters"></a> mspp_pollplacement_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_pollplacement_RecurringAppointmentMasters](mspp_pollplacement.md#BKMK_mspp_pollplacement_RecurringAppointmentMasters) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_RecurringAppointmentMasters"></a> mspp_publishingstatetransitionrule_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_RecurringAppointmentMasters](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_RecurringAppointmentMasters) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_redirect_RecurringAppointmentMasters"></a> mspp_redirect_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_redirect_RecurringAppointmentMasters](mspp_redirect.md#BKMK_mspp_redirect_RecurringAppointmentMasters) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_RecurringAppointmentMasters"></a> mspp_shortcut_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_RecurringAppointmentMasters](mspp_shortcut.md#BKMK_mspp_shortcut_RecurringAppointmentMasters) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_RecurringAppointmentMasters"></a> mspp_website_RecurringAppointmentMasters
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_RecurringAppointmentMasters](mspp_website.md#BKMK_mspp_website_RecurringAppointmentMasters) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
 
 ### See also
 
