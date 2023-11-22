@@ -33,6 +33,13 @@ A Power BI premium license or Fabric capacity.
 
 If you don’t have Power BI premium license or Fabric capacity, you can sign up for a Free Fabric trial capacity. More information: [Fabric (preview) trial](/fabric/get-started/fabric-trial)
 
+ > [!NOTE]
+   >
+   > The workspace you choose to link with Dataverse must be assigned to a premium capacity in the **same region** as your Dataverse environment.
+   > 
+   > If you choose to create a new workspace, the system requires that you have access to a Power BI / Fabric premium capacity within the same region as your Dataverse environment. The wizard might detect missing prerequisites including insufficient capacity at the beginning.
+   >
+
 ## Link to Fabric from Power Apps
 
 From the **Tables** area in Power Apps (make.powerapps.com), makers can link to Fabric by selecting **Analyze** > **Link to Microsoft Fabric** on the command bar. When you select the command for the first time, your Dataverse environment is linked to a Fabric workspace. A Synapse lakehouse, SQL endpoint, a Power BI dataset are created and Dataverse tables are linked to the lakehouse via shortcuts. Authorized users can work with Dataverse data with all Fabric workloads linked via shortcuts. The lakehouse, SQL endpoint, and the Power BI dataset are updated with new data as changes occur in Dataverse.
