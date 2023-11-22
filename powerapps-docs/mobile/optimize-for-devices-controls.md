@@ -33,7 +33,6 @@ The following controls are available for screens that are optimized for devices.
  - Button
  - Checkbox
  - Date picker
- - Form
  - Text
  - Text input
  - Toggle
@@ -46,7 +45,6 @@ The following controls are available for screens that are optimized for devices.
  - Check box
  - Circle
  - Container (horizontal and vertical included)
- - Form (edit and display)
  - Gallery (vertical, horizontal, flexible height)
  - Icon (all icons supported)
  - Image
