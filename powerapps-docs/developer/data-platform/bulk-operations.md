@@ -23,6 +23,9 @@ To get the best performance when you run operations on multiple rows of a Micros
 - [`UpsertMultiple` (preview)](upsertmultiple.md): Creates or updates multiple records of the same type in a single request.
 - [`DeleteMultiple` (preview)](deletemultiple.md): For elastic tables only. Deletes multiple records of the same type in a single request.
 
+> [!NOTE]
+> For guidance about options when performing bulk operations, such when to use these APIs compared to batch APIs like `ExecuteMultiple`, see [Optimize performance for bulk operations](optimize-performance-create-update.md).
+
 ## Examples
 
 The following code samples show how to use bulk operation messages. You can download the samples from [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
