@@ -19,7 +19,10 @@ search.audienceType:
 
 
 
-Change your display settings in an app to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to the app. You can also personalize many other options such as language, currency, and time zone.  
+Change your display settings in an app to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to the app. You can also personalize many other options such as language, currency, and time zone. 
+
+> [!NOTE]
+> You may need to refresh your app twice for some changed settings to take effect.
     
 ## To set personal options  
   
