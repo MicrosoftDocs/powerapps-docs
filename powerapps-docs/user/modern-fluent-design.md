@@ -119,6 +119,9 @@ Admins can disable the **Try the new look** setting across all apps in an organi
 ### Can I switch to a different theme or enable dark mode?
 Switching themes or enabling dark mode isn't supported at this time.
 
+### How do I change the app header colors with the new look? 
+You can override the colors for the app header to match your organization branding. See [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md) for more details. Other theme customization options aren't yet available.  
+
 ### Is the new look available for custom pages or code components?
 -  Code components: The modern theme in use is passed to PCF components allowing you to [style your components with modern theming](../developer/component-framework/fluent-modern-theming).
 -  Custom pages: The new look is not available for custom pages.  
