@@ -2,7 +2,7 @@
 title: "Tutorial: Register an app with Microsoft Entra ID (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to register an application with Microsoft Entra ID for authentication with Microsoft Dataverse web services."
 keywords: ""
-ms.date: 01/19/2023
+ms.date: 11/22/2023
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
@@ -30,26 +30,26 @@ App registration can also be done by an application developer or individual user
   
 ## Create an application registration
   
-1. Sign in to the [Azure portal](https://go.microsoft.com/fwlink/?linkid=2083908) using an account with administrator permission. You must use an account in the same Microsoft 365 subscription (tenant) as you intend to register the app with. You can also access the Azure portal through the Microsoft 365 [Admin center](https://admin.microsoft.com/adminportal) by expanding the **Admin centers** item in the left navigation pane, and selecting **Microsoft Entra ID**.  
+1. Sign in to [Microsoft Azure portal](https://portal.azure.com/#home) using an account with administrator permission. You must use an account in the same Microsoft 365 subscription (tenant) as you intend to register the app with. On the **Home** page of the portal under **Azure services** select **Microsoft Entra ID**.
+
+    You can also access the Azure portal through the Microsoft 365 [Admin center](https://admin.microsoft.com/adminportal) by choosing the **All admin centers** item in the left navigation pane, select **Microsoft Entra**, and then select **Go to Microsoft Entra ID**. Next, in the left navigation pane of the Microsoft Entra admin center, expand the  **Applications** node.
   
    > [!NOTE]
-   > If you don't have an Azure tenant (account) or you do have one but your Microsoft 365 subscription with Dataverse is not available in your Azure subscription, following the instructions in the topic [Set up Microsoft Entra ID access for your Developer Site](/office/developer-program/microsoft-365-developer-program) to associate the two accounts.<br><br> If you don't have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won't be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Microsoft Entra ID Pricing Details](https://azure.microsoft.com/pricing/details/active-directory/)  
+   > If you don't have an Azure tenant (account) or you do have one but your Microsoft 365 subscription with Dataverse is not available in your Azure subscription, following the instructions in the topic [Set up Microsoft Entra ID access for your Developer Site](/office/developer-program/microsoft-365-developer-program) to associate the two accounts.
+   >
+   > If you don't have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won't be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Microsoft Entra ID Pricing Details](https://azure.microsoft.com/pricing/details/active-directory/)  
   
-2. In the Azure portal, select **Microsoft Entra ID** in the left pane and select **App registrations** and click on **New registration**.
-    
-    ![Azure App Registration.](media/azure-app-registrations-page.png "Azure app registration")  
+2. In the left navigation pane select **App registrations** and then select **+ New registration** on the **App registrations** page.
 
-3. In the **Register an application page**, enter your application's registration information:
-   - In the **Name** section, enter a meaningful application name that will be displayed to the users.
-   - Select **Accounts in any organizational directory** option from **Supported account types** section.
-   - Set the **Redirect URI**.
-   - Click on **Register** to create the application.
+3. On the **App registration** page, enter your application's registration information:
+   - In the **Name** field, enter a meaningful application name that will be displayed to users.
+   - Select the **Accounts in any organizational directory** option within the **Supported account types** section.
+   - Set the **Redirect URI** value. This field is not optional for basic username/password authentication unless you intend to add a client secret or certificate to the registration. The redirect value must be a valid URI, however the specified URI is not required to exist.
+   - Select **Register** to create the application registration. The app registration summary page is shown. Remain on that page.
 
-      ![New App registration page.](media/new-app-registration-page.png "New App registration page")
+4. Set the **Application ID URI** value by selecting **Add an Application ID URI**. On the **Expose an API** page, set the URI value to your target environment (organization) base address (for example: https://firstcoffee.crm.dynamics.com).
 
-4. On the app **Overview** page, set the **Application ID URI** value by selecting **Add an Application ID URI** and then **+ Add a scope**. Set the URI value to your target environment (organization) base address.
-
-5. On the app **Overview** page, hover over **Application (client) ID** value, and select the **Copy to clipboard** icon to copy the value as you'll need to specify this in your application's authentication code or app.config file where appropriate.
+5. On the **Overview** page of your newly created app, hover the cursor over the **Application (client) ID** value, and select the copy to clipboard icon to copy the value. You'll need to specify this value later in your application's authentication code or app.config file where appropriate. Record the value somewhere.
 
     ![Copy application ID.](media/app-registration-overview-page.png "Copy application ID")
   
