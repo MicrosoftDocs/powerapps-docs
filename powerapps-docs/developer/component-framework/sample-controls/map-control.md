@@ -2,7 +2,7 @@
 title: " Map component| Microsoft Docs" 
 description: "This sample component changes the user experience of interacting with address fields on the form." 
 ms.author: jdaly
-author: noazarur-microsoft
+author: HemantGaur
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: "article"

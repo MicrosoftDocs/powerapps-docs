@@ -1,7 +1,7 @@
 ---
 title: "Activity (ActivityPointer)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Activity (ActivityPointer)  table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -437,7 +437,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,contact,interactionforemail,knowledgearticle,knowledgebaserecord|
+|Targets|account,adx_invitation,contact,interactionforemail,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
 
 
@@ -1412,6 +1412,11 @@ Listed by **SchemaName**.
 - [ActivityPointer_BulkDeleteFailures](#BKMK_ActivityPointer_BulkDeleteFailures)
 - [activity_pointer_recurringappointmentmaster](#BKMK_activity_pointer_recurringappointmentmaster)
 - [activity_pointer_chat](#BKMK_activity_pointer_chat)
+- [activity_pointer_adx_inviteredemption](#BKMK_activity_pointer_adx_inviteredemption)
+- [activity_pointer_adx_portalcomment](#BKMK_activity_pointer_adx_portalcomment)
+- [activity_pointer_msfp_alert](#BKMK_activity_pointer_msfp_alert)
+- [activity_pointer_msfp_surveyinvite](#BKMK_activity_pointer_msfp_surveyinvite)
+- [activity_pointer_msfp_surveyresponse](#BKMK_activity_pointer_msfp_surveyresponse)
 
 
 ### <a name="BKMK_activity_pointer_fax"></a> activity_pointer_fax
@@ -1685,6 +1690,91 @@ Same as the [activity_pointer_chat](chat.md#BKMK_activity_pointer_chat) many-to-
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_activity_pointer_adx_inviteredemption"></a> activity_pointer_adx_inviteredemption
+
+**Added by**: Active Solution Solution
+
+Same as the [activity_pointer_adx_inviteredemption](adx_inviteredemption.md#BKMK_activity_pointer_adx_inviteredemption) many-to-one relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_inviteredemption|
+|ReferencingAttribute|activityid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|activity_pointer_adx_inviteredemption|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_activity_pointer_adx_portalcomment"></a> activity_pointer_adx_portalcomment
+
+**Added by**: Active Solution Solution
+
+Same as the [activity_pointer_adx_portalcomment](adx_portalcomment.md#BKMK_activity_pointer_adx_portalcomment) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|activityid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|activity_pointer_adx_portalcomment|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_activity_pointer_msfp_alert"></a> activity_pointer_msfp_alert
+
+**Added by**: Active Solution Solution
+
+Same as the [activity_pointer_msfp_alert](msfp_alert.md#BKMK_activity_pointer_msfp_alert) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_alert|
+|ReferencingAttribute|activityid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|activity_pointer_msfp_alert|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_activity_pointer_msfp_surveyinvite"></a> activity_pointer_msfp_surveyinvite
+
+**Added by**: Active Solution Solution
+
+Same as the [activity_pointer_msfp_surveyinvite](msfp_surveyinvite.md#BKMK_activity_pointer_msfp_surveyinvite) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyinvite|
+|ReferencingAttribute|activityid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|activity_pointer_msfp_surveyinvite|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_activity_pointer_msfp_surveyresponse"></a> activity_pointer_msfp_surveyresponse
+
+**Added by**: Active Solution Solution
+
+Same as the [activity_pointer_msfp_surveyresponse](msfp_surveyresponse.md#BKMK_activity_pointer_msfp_surveyresponse) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyresponse|
+|ReferencingAttribute|activityid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|activity_pointer_msfp_surveyresponse|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -1707,6 +1797,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_activitypointer_modifiedby](#BKMK_lk_activitypointer_modifiedby)
 - [lk_activitypointer_createdby](#BKMK_lk_activitypointer_createdby)
 - [user_activity](#BKMK_user_activity)
+- [adx_invitation_ActivityPointers](#BKMK_adx_invitation_ActivityPointers)
+- [mspp_adplacement_ActivityPointers](#BKMK_mspp_adplacement_ActivityPointers)
+- [mspp_pollplacement_ActivityPointers](#BKMK_mspp_pollplacement_ActivityPointers)
+- [mspp_publishingstatetransitionrule_ActivityPointers](#BKMK_mspp_publishingstatetransitionrule_ActivityPointers)
+- [mspp_redirect_ActivityPointers](#BKMK_mspp_redirect_ActivityPointers)
+- [mspp_shortcut_ActivityPointers](#BKMK_mspp_shortcut_ActivityPointers)
+- [mspp_website_ActivityPointers](#BKMK_mspp_website_ActivityPointers)
 
 
 ### <a name="BKMK_interactionforemail_ActivityPointers"></a> interactionforemail_ActivityPointers
@@ -1772,6 +1869,48 @@ See the [lk_activitypointer_createdby](systemuser.md#BKMK_lk_activitypointer_cre
 ### <a name="BKMK_user_activity"></a> user_activity
 
 See the [user_activity](systemuser.md#BKMK_user_activity) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_adx_invitation_ActivityPointers"></a> adx_invitation_ActivityPointers
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_ActivityPointers](adx_invitation.md#BKMK_adx_invitation_ActivityPointers) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_mspp_adplacement_ActivityPointers"></a> mspp_adplacement_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_adplacement_ActivityPointers](mspp_adplacement.md#BKMK_mspp_adplacement_ActivityPointers) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+
+### <a name="BKMK_mspp_pollplacement_ActivityPointers"></a> mspp_pollplacement_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_pollplacement_ActivityPointers](mspp_pollplacement.md#BKMK_mspp_pollplacement_ActivityPointers) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_ActivityPointers"></a> mspp_publishingstatetransitionrule_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_ActivityPointers](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_ActivityPointers) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_redirect_ActivityPointers"></a> mspp_redirect_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_redirect_ActivityPointers](mspp_redirect.md#BKMK_mspp_redirect_ActivityPointers) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_ActivityPointers"></a> mspp_shortcut_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_ActivityPointers](mspp_shortcut.md#BKMK_mspp_shortcut_ActivityPointers) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_ActivityPointers"></a> mspp_website_ActivityPointers
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_ActivityPointers](mspp_website.md#BKMK_mspp_website_ActivityPointers) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
 
 ### See also
 

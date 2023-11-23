@@ -5,7 +5,7 @@ ms.date: 01/30/2023
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-ms.topic: get-started-article
+ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 

@@ -14,8 +14,6 @@ contributors:
 ---
 # htmlEncode (Client API reference)
 
-
-
 [!INCLUDE[./includes/htmlEncode-description.md](./includes/htmlEncode-description.md)] 
 
 ## Syntax
@@ -24,9 +22,9 @@ contributors:
 
 ## Parameters
 
-|Parameter Name        | Type           | Required  |Description  |
+|Parameter Name| Type | Required  |Description  |
 | ------------- |-------------| -----|-----|
-|arg        | String           | Required  |String to be encoded.  |
+|`arg`|String| Required  |String to be encoded.  |
 
 
 ## Return Value
@@ -35,9 +33,9 @@ contributors:
 
 **Description**: Encoded string.
 
-## Related topics
-[htmlAttributeEncode](htmlAttributeEncode.md)
+## Related articles
 
+[htmlAttributeEncode](htmlAttributeEncode.md)   
 [htmlDecode](htmlDecode.md)
 
 

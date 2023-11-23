@@ -30,9 +30,9 @@ Provides methods for managing side panes.
 
 |Parameter Name|Description|
 |--------------|-----------|
-|state|Returns whether the selected pane is collapsed or expanded.|
+|`state`|Returns whether the selected pane is collapsed or expanded.|
 
-### Related topics
+### Related articles
 
 [Creating side panes using client API](../create-app-side-panes.md)
 

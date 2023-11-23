@@ -1,7 +1,7 @@
 ---
 title: "datalakefolder table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the datalakefolder table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -87,6 +87,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [path](#BKMK_path)
 - [ReaderSecurityGroupId](#BKMK_ReaderSecurityGroupId)
 - [ResourceGroup](#BKMK_ResourceGroup)
+- [sharedforreadaccess](#BKMK_sharedforreadaccess)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [Subscription](#BKMK_Subscription)
@@ -107,7 +108,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
 |LogicalName|accesstype|
 |MaxLength|200|
 |RequiredLevel|None|
@@ -508,6 +508,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_sharedforreadaccess"></a> sharedforreadaccess
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates if folder is shared for readaccess for other FPAs.|
+|DisplayName|Is Shared for Read Access|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|sharedforreadaccess|
+|RequiredLevel|ApplicationRequired|
+|Type|Boolean|
+
+#### sharedforreadaccess Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_statecode"></a> statecode

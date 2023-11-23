@@ -33,7 +33,7 @@ All
 
 **Description**: true if the control is visible; false otherwise.
 
-### Related topics
+### Related articles
 
 [setVisible](setVisible.md)
 

@@ -24,9 +24,9 @@ Provides properties and methods to work with the data on a form.
 
 |Name|Description|
 |--|--|
-|attributes|Collection of non-table data on the form. Items in this collection are of the same type as the columns collection, but they are not columns of the form table. <br/>More information: [Collections](collections.md)|
-|entity|Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included on the form. Column data is limited to columns represented on the form. <br/>More information: [formContext.data.entity](formContext-data-entity.md)|
-|process|Provides objects and methods to interact with the business process flow data on a form.<br/>More information: [formContext.data.process](formContext-data-process.md)|
+|`attributes`|Collection of non-table data on the form. Items in this collection are of the same type as the columns collection, but they are not columns of the form table. <br/>More information: [Collections](collections.md)|
+|`entity`|Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the columns included on the form. Column data is limited to columns represented on the form. <br/>More information: [formContext.data.entity](formContext-data-entity.md)|
+|`process`|Provides objects and methods to interact with the business process flow data on a form.<br/>More information: [formContext.data.process](formContext-data-process.md)|
 
 [!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
@@ -42,15 +42,9 @@ Provides properties and methods to work with the data on a form.
 |[save](formContext-data/save.md)|[!INCLUDE[formContext-data/includes/save-description.md](formContext-data/includes/save-description.md)]|
 
 
-### Related topics
+### Related articles
 
-[formContext.data.entity](formContext-data-entity.md)
-
+[formContext.data.entity](formContext-data-entity.md)   
 [formContext.data.process](formContext-data-process.md)
-
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

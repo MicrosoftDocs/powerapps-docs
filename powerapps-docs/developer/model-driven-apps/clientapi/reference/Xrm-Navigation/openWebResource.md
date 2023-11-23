@@ -25,9 +25,9 @@ contributors:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|webResourceName|String|Yes|Name of the HTML web resource to open.|
-|windowOptions|Object|No|Window options for opening the web resource. The object contains the following values:<br/>- **height**: (Optional) Number. Height of the window to open in pixels.<br/>- **width**: (Optional) Number. Width of the window to open in pixels.|
-|data|String|No|Data to be passed into the data parameter.|
+|`webResourceName`|String|Yes|Name of the HTML web resource to open.|
+|`windowOptions`|Object|No|Window options for opening the web resource. The object contains the following values:<br/>- **`height`**: (Optional) Number. Height of the window to open in pixels.<br/>- **`width`**: (Optional) Number. Width of the window to open in pixels.|
+|`data`|String|No|Data to be passed into the data parameter.|
 
 ## Remarks
 
@@ -57,7 +57,7 @@ An HTML web resource can accept the parameter values described in [Pass paramete
 
   `Xrm.Navigation.openWebResource("new_webResource.htm",null,"dataItemValue");`
 
- ### Related topics
+ ### Related articles
 
 [Xrm.Navigation](../xrm-navigation.md)
 

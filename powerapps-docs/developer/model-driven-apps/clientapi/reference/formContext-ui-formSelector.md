@@ -28,7 +28,7 @@ The **formContext.ui.formSelector** property lets you work with form items where
 
 Form Items are available through any of the following:
 
-- **formselector.items** collection: A collection of all the form items accessible to the current user. Only those forms that share an association with one of the user’s security roles are available in this collection. Example:
+- **formselector.items** collection: A collection of all the form items accessible to the current user. Only those forms that share an association with one of the user's security roles are available in this collection. Example:
  
     `formItem = formContext.ui.formSelector.items.get(arg);`
 
@@ -52,8 +52,6 @@ After retrieving a form item using one of the above ways, use the following meth
 |[getVisible](formcontext-ui-formselector/getVisible.md)|[!INCLUDE[formcontext-ui-formselector/includes/getVisible-description.md](formcontext-ui-formselector/includes/getVisible-description.md)]|
 |[navigate](formcontext-ui-formselector/navigate.md)|[!INCLUDE[formcontext-ui-formselector/includes/navigate-description.md](formcontext-ui-formselector/includes/navigate-description.md)]|
 |[setVisible](formcontext-ui-formselector/setVisible.md)|[!INCLUDE[formcontext-ui-formselector/includes/setVisible-description.md](formcontext-ui-formselector/includes/setVisible-description.md)]|
-
-
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

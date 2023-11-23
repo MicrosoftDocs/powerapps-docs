@@ -1,8 +1,8 @@
 ---
 title: setPopupsId (Power Apps component framework API reference) | Microsoft Docs
 description: Sets the ID (on the DOM and in the system) for the root popup element.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

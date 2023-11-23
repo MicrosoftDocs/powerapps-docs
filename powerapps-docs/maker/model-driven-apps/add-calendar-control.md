@@ -1,13 +1,17 @@
 ---
 title: "Add the calendar control to tables in model-driven apps | MicrosoftDocs"
 description: "Learn how to add the calendar control to tables in model-driven apps."
-ms.date: 06/15/2021
+ms.date: 09/29/2023
 
 ms.topic: how-to
-author: sbmjais
+author: sriharibs-msft
 ms.subservice: mda-maker
-ms.author: shjais
+ms.author: srihas
 ms.reviewer: matp
+contributors:
+ - sericks007
+ - anuitz
+ - srihas
 ---
 
 # Add the calendar control to tables
@@ -57,6 +61,10 @@ The **Calendar Control V2** control displays scheduled activities and their asso
 1. Select **Save** to save changes.
 
 1. To publish the changes, select **Publish**.
+
+### Mobile experience
+
+The **Calendar Control V2** control is available when working on mobile devices with a different user experience that is optimized for mobile form factors. There is a scrollable day bar for selecting which date to view. The Day/Week/Month selection dropdown is not available on mobile devices.
 
 ### See also
 

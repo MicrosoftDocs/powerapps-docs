@@ -1,8 +1,8 @@
 ---
 title: EntityRecord (Power Apps component framework API reference)| Microsoft Docs
 description: Learn how to use different methods and properties available for EntityRecord in Power Apps component framework.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 08/18/2023
 ms.reviewer: jdaly
 ms.topic: reference

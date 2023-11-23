@@ -5,19 +5,18 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 05/18/2023
+ms.date: 10/04/2023
 ms.custom: template-how-to
 ---
-# Low-code plug-ins Power Fx (experimental)
+# Low-code plug-ins Power Fx (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Low-code plug-ins can add business logic to your apps using the Power Fx expression language and directly integrate with Dataverse business data and external data through Power Platform connectors. With low-code plug-ins, you can quickly build rich workflows without any code.
 
 > [!IMPORTANT]
-> - This is an experimental feature. Use this if you're an early adopter, see something useful to you, and would like to help test the feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - Experimental features can radically change or completely disappear at any time. For this reason the feature is not enabled by default and you must explicitly opt in to use it.
+> - This is an preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 Low-code plug-ins support many of the Power Fx operators, variables, and formulas. For more information about Power Fx, go to these articles:
 
@@ -185,4 +184,4 @@ The following table lists the Power Fx formulas that work but have limitations o
 
 ## See also
 
-[Use Dataverse low-code plug-ins (experimental)](low-code-plug-ins.md)
+[Use Dataverse low-code plug-ins (preview)](low-code-plug-ins.md)

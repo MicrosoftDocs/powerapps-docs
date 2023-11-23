@@ -23,8 +23,7 @@ contributors:
 `executionContext.getEventArgs().preventDefaultOnError();`
 
 
-### Related topics
+### Related articles
 
-[getSaveMode](getSaveMode.md)
-
+[getSaveMode](getSaveMode.md)   
 [isDefaultPrevented](isDefaultPrevented.md)

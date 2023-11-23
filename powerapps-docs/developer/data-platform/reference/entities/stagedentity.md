@@ -1,7 +1,7 @@
 ---
 title: "StagedEntity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the StagedEntity table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -54,13 +54,18 @@ Stores staged entity metadata to be processed before fully created.
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [CollectionName](#BKMK_CollectionName)
+- [DataproviderId](#BKMK_DataproviderId)
+- [DatasourceId](#BKMK_DatasourceId)
 - [EntityDescription](#BKMK_EntityDescription)
 - [EntitySetName](#BKMK_EntitySetName)
+- [ExternalCollectionName](#BKMK_ExternalCollectionName)
+- [ExternalName](#BKMK_ExternalName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [LogicalCollectionName](#BKMK_LogicalCollectionName)
 - [LogicalName](#BKMK_LogicalName)
 - [Name](#BKMK_Name)
 - [OriginalLocalizedCollectionName](#BKMK_OriginalLocalizedCollectionName)
+- [OriginalLocalizedDescription](#BKMK_OriginalLocalizedDescription)
 - [OriginalLocalizedName](#BKMK_OriginalLocalizedName)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [PhysicalName](#BKMK_PhysicalName)
@@ -85,6 +90,32 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|128|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_DataproviderId"></a> DataproviderId
+
+|Property|Value|
+|--------|-----|
+|Description|The ID of the data provider for virtual entity.|
+|DisplayName|Dataprovider ID|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|dataproviderid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_DatasourceId"></a> DatasourceId
+
+|Property|Value|
+|--------|-----|
+|Description|The ID of the data source for virtual entity.|
+|DisplayName|Datasource ID|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|datasourceid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_EntityDescription"></a> EntityDescription
@@ -114,6 +145,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|entitysetname|
+|MaxLength|128|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ExternalCollectionName"></a> ExternalCollectionName
+
+|Property|Value|
+|--------|-----|
+|Description|The external collection name of the staged entity for VT scenario.|
+|DisplayName|External Collection Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|externalcollectionname|
+|MaxLength|128|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ExternalName"></a> ExternalName
+
+|Property|Value|
+|--------|-----|
+|Description|The external name for virtual entity.|
+|DisplayName|ExternalName|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|externalname|
 |MaxLength|128|
 |RequiredLevel|None|
 |Type|String|
@@ -198,6 +261,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|128|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_OriginalLocalizedDescription"></a> OriginalLocalizedDescription
+
+|Property|Value|
+|--------|-----|
+|Description|The localized description of the entity.|
+|DisplayName|OriginalLocalizedDescription|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|originallocalizedescription|
+|MaxLength|8000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_OriginalLocalizedName"></a> OriginalLocalizedName

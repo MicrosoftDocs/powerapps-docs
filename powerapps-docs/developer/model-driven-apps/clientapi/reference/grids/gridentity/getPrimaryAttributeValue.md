@@ -14,8 +14,6 @@ contributors:
 ---
 # gridEntity.getPrimaryAttributeValue (Client API reference)
 
-
-
 [!INCLUDE[./includes/getPrimaryAttributeValue-description.md](./includes/getPrimaryAttributeValue-description.md)]
 
 ## Grid types supported
@@ -35,7 +33,5 @@ Read-only grid
 ## Remarks
 
 To get the `gridEntity` object, see [GridEntity](../gridentity.md). 
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

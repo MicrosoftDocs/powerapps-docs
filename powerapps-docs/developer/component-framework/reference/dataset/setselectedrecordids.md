@@ -1,8 +1,8 @@
 ---
 title: setSelectedRecordIds (Power Apps component framework API reference) | Microsoft Docs
 description: Set the ids of the selected records.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

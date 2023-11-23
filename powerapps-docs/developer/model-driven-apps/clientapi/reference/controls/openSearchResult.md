@@ -31,8 +31,8 @@ var openResultStatus = kbSearchControl.openSearchResult(resultNumber, mode);
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|resultNumber|Number|Yes|Numerical value specifying the result number to be opened. Result number starts from 1.|
-|mode|String|No|Specify "Inline" or "Popout". If you do not specify a value for the argument, the default ("Inline") option is used.<br/><br/>The "Inline" mode opens the result inline either in the reading pane of the control or in a reference panel tab in case of reference panel. The "Popout" mode opens the result in a pop-out window.|
+|`resultNumber`|Number|Yes|Numerical value specifying the result number to be opened. Result number starts from 1.|
+|`mode`|String|No|Specify "Inline" or "Popout". If you do not specify a value for the argument, the default ("Inline") option is used.<br/><br/>The "Inline" mode opens the result inline either in the reading pane of the control or in a reference panel tab in case of reference panel. The "Popout" mode opens the result in a pop-out window.|
 
 ## Return Value
 

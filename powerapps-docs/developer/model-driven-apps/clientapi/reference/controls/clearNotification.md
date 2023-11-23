@@ -30,7 +30,7 @@ All
 
 |Name | Type | Required | Description|
 |--|--|--|--|
-|uniqueId |String |No|The ID to use to clear a specific message that was set using **setNotification** or **addNotification**. If the **uniqueId** parameter isn't specified, the currently displayed notification will be cleared.| 
+|`uniqueId` |String |No|The ID to use to clear a specific message that was set using [setNotification](setNotification.md) or [addNotification](addNotification.md). If the `uniqueId` parameter isn't specified, the currently displayed notification will be cleared.|
 
 
 ## Return Value
@@ -39,10 +39,6 @@ All
 
 **Description**: Indicates whether the method succeeded. 
 
-### Related topics
 
-[addNotification](addNotification.md)
-
-[setNotification](setNotification.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

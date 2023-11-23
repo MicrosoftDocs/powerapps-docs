@@ -7,7 +7,7 @@ ms.reviewer: ""
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: get-started
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"

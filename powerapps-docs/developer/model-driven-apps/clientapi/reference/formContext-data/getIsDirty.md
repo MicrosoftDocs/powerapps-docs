@@ -28,10 +28,9 @@ contributors:
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
-### Related topics
+### Related articles
 
-[formContext.data.entity.getIsDirty](../formContext-data-entity/getIsDirty.md)
-
+[formContext.data.entity.getIsDirty](../formContext-data-entity/getIsDirty.md)   
 [formContext](../../clientapi-form-context.md)
 
 

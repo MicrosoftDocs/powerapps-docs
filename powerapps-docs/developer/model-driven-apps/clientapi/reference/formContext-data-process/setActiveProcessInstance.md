@@ -26,13 +26,12 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|processInstanceId|String|Yes|The Id of the process instance to set as the active instance.|
-|callbackFunction|Function|No|A function to call when the operation is complete. This callback function is passed one of the following string values to indicate whether the operation succeeded:<br/>- **success**: The operation succeeded.<br/>- **invalid**: The processInstanceId isn’t valid or the process isn’t enabled.|
+|`processInstanceId`|String|Yes|The Id of the process instance to set as the active instance.|
+|`callbackFunction`|Function|No|A function to call when the operation is complete. This callback function is passed one of the following string values to indicate whether the operation succeeded:<br/>- **`success`**: The operation succeeded.<br/>- **`invalid`**: The processInstanceId isn't valid or the process isn't enabled.|
 
-### Related topics
+### Related articles
 
-[getProcessInstances](getProcessInstances.md)
-
+[getProcessInstances](getProcessInstances.md)   
 [formContext.data.process](../formContext-data-process.md)
  
 

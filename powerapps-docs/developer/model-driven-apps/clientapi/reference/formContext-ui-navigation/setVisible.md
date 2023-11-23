@@ -26,16 +26,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|bool|Boolean|Yes|Specify **true** or **false** to indicate whether the item is visible or not.|
+|`bool`|Boolean|Yes|Specify **true** or **false** to indicate whether the item is visible or not.|
 
-### Related topics
+### Related articles
 
-[getVisible](getVisible.md)
-
+[getVisible](getVisible.md)   
 [formContext.ui.navigation](../formContext-ui-navigation.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -6,25 +6,19 @@ ms.author: mspilde
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 08/07/2023
+ms.date: 09/29/2023
 ---
-# Configure tables to use Copilot (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Configure tables to use Copilot
 
 When users ask questions about the data available in an app, Copilot uses backend natural language questions and answer capabilities that rely on the table to be enabled for searching across the data. The table configuration must also include the columns that your end-users will like to ask questions about the data in order to get responses back from Copilot in Power Apps.
 
 This article describes the steps to enable a table and select the columns, which determine the data that will be included with Copilot responses.
 
-> [!IMPORTANT]
-> This is a preview feature.
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-
 ## Enable indexing
 
 The **Track changes** and **Appear in search results** table options must be enabled. Note that these are the default settings for most standard tables, but aren't enabled by default for custom tables.
 
-To verify these options, select **Properties** from the table designer in make.powerappps.com, and then check whether both **Track changes** and **Appear in search results** options are selected. If not, from the properties pane select both, and then **Save** your changes. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+To verify these options, select **Properties** from the table designer in make.powerappps.com, and then check whether both **Track changes** and **Appear in search results** options are selected. If not, from the properties pane select both, and then **Save** and **Publish** your changes. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
 :::image type="content" source="media/table-settings-for-copilot.png" alt-text="Table properties to enable to work with Copilot in Power Apps":::
 

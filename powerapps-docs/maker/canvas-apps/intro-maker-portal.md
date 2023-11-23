@@ -166,8 +166,8 @@ To create an app, select from the following options:
   > [!NOTE]
   >  If you're trying to create an app using Dataverse but the option is unavailable, then review the [permissions table](#permissions-for-dataverse) below.
 
-- **Your apps**: on the **Home** page, find your top six apps that you own or apps that are shared with you. You also have the option to filter and sort apps quickly to find the app you're looking for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
-- **My apps**: on the **Apps** page, find the apps that you own. Use the search or the filter and sort options to find the app you're looking for. Select an app and perform various actions such as edit the app, view app details, and access app setting using the commands the command bar or use the **Commands** button.
+- **Your apps**: On the **Home** page, find your top six apps that you own or apps that are shared with you. You also have the option to filter and sort apps quickly to find the app you're looking for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
+- **My apps**: On the **Apps** page, find the apps that you own. Use the search or the filter and sort options to find the app you're looking for. Select an app and perform various actions such as edit the app, view app details, and access app setting using the commands on the command bar or use the **Commands** button.
 
 
 ### Permissions for Dataverse

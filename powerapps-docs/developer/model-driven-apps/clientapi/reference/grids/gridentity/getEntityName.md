@@ -14,8 +14,6 @@ contributors:
 ---
 # gridEntity.getEntityName (Client API reference)
 
-
-
 [!INCLUDE[./includes/getEntityName-description.md](./includes/getEntityName-description.md)]
 
 ## Grid types supported
@@ -35,7 +33,5 @@ Read-only and editable grids
 ## Remarks
 
 To get the `gridEntity` object, see [GridEntity](../gridentity.md). 
-
-
 
 [!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

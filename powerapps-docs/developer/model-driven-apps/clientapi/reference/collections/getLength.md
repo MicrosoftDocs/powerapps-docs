@@ -29,11 +29,10 @@ contributors:
 
 **Description**: Count of items in the collection.
 
-### Related topics
-[Collections in Client API](../collections.md)
+### Related articles
 
-[forEach](forEach.md)
-
+[Collections in Client API](../collections.md)   
+[forEach](forEach.md)   
 [get](get.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

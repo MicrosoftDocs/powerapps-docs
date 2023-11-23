@@ -29,7 +29,7 @@ contributors:
 
 **Description**: Returns "cardSections" or "singleComponent".
 
-### Related topics
+### Related articles
 
 [formContext.ui.tabs](../formContext-ui-tabs.md)
 

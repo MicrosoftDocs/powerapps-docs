@@ -14,8 +14,6 @@ contributors:
 ---
 # refreshParentGrid (Client API reference)
 
-
-
 [!INCLUDE[./includes/refreshParentGrid-description.md](./includes/refreshParentGrid-description.md)] 
 
 ## Syntax
@@ -28,16 +26,12 @@ contributors:
 
 |Property Name |Type |Required  |Description |
 |---|---|---|---|
-|entityType|String|Yes |Table type of the record.|
-|id|String|Yes |ID of the record.|
-|name|String|No |Name of the record.|
+|`entityType`|String|Yes |Table type of the record.|
+|`id`|String|Yes |ID of the record.|
+|`name`|String|No |Name of the record.|
 
-### Related topics
+### Related articles
 
 [Xrm.Utility](../xrm-utility.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

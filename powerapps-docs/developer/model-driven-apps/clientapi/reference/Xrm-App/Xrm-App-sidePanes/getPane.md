@@ -23,7 +23,7 @@ Returns the side pane corresponding to the input ID. Returns null if the side pa
 
 Returns the [AppSidePane](../../xrm-app-appsidepane.md) object.
 
-### Related topics
+### Related articles
 
 [sidePanes](../../xrm-app-sidepanes.md)
 

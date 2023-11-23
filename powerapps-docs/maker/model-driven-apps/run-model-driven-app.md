@@ -20,7 +20,7 @@ search.audienceType:
 
 To run a model-driven app in a web browser, the user must have a [security role](../model-driven-apps/model-driven-app-glossary.md#security-role) assigned in addition to having the URL for the app.
 
-Learn how to create a [security role from a copy](../model-driven-apps/share-model-driven-app.md#copy-a-security-role-to-create-a-new-one)
+Learn how to create a [security role from a copy](/power-platform/admin/copy-security-role)
 
 To get the direct link to an app:
 
@@ -47,7 +47,7 @@ You may notice authentication prompts during your model-driven app session. Thes
 Additionally, some organizational or browser settings may increase the frequency of these prompts. We recommend reviewing your settings to help reduce authentication prompts during sessions.
 
 - **Third party cookies blocked in browser.** This will cause an authentication prompt to trigger each time you open a model-driven app. Note that opening the app in incognito mode or in the Safari web browser via ITP settings will usually block third-party cookies by default. [Enable third party cookies](../../troubleshooting-startup-issues.md) to reduce these prompts.
-- **Azure Active Directory conditional access or multi-factor authentication policies**. Policies specifically on Power Apps or Microsoft Graph will trigger additional authentication prompts. Contact your admin to review  your organization's conditional access or MFA policies.
+- **Microsoft Entra conditional access or multi-factor authentication policies**. Policies specifically on Power Apps or Microsoft Graph will trigger additional authentication prompts. Contact your admin to review  your organization's conditional access or MFA policies.
 
 ## Run an app on a tablet or phone
 

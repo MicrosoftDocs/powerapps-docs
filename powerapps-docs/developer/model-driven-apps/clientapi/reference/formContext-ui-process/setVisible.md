@@ -14,8 +14,6 @@ contributors:
 ---
 # process.setVisible (Client API reference)
 
-
-
 [!INCLUDE[./includes/setVisible-description.md](./includes/setVisible-description.md)]
 
 ## Syntax
@@ -26,16 +24,11 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|bool|Boolean|Yes|Specify **true** to show the control; **false** to hide the control.|
+|`bool`|Boolean|Yes|Specify **true** to show the control; **false** to hide the control.|
 
-### Related topics
+### Related articles
 
-[getVisible](getVisible.md)
-
+[getVisible](getVisible.md)   
 [formContext.ui.process](../formContext-ui-process.md)
-
-
-
-
 
 [!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

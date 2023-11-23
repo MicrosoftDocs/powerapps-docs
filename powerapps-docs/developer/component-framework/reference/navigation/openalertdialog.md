@@ -1,8 +1,8 @@
 ---
 title: openAlertDialog (Power Apps component framework API reference) | Microsoft Docs
 description: Displays an alert dialog containing a message and a button.
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

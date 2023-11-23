@@ -5,7 +5,7 @@ ms.date: 04/01/2022
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-ms.topic: get-started-article
+ms.topic: get-started
 search.audienceType: 
   - developer
 contributors: 

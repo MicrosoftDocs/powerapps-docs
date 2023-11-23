@@ -31,12 +31,10 @@ The viewport is the area of the page containing form data. It corresponds to the
 **Description**: The viewport height in pixels. 
 
 
-### Related topics
+### Related articles
 
-[getViewPortWidth](getViewPortWidth.md)
-
-[formContext.ui](../formContext-ui.md)
-
+[getViewPortWidth](getViewPortWidth.md)   
+[formContext.ui](../formContext-ui.md)   
 [formContext](../../clientapi-form-context.md)
 
 

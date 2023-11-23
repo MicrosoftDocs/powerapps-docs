@@ -1,8 +1,8 @@
 ---
 title: Context (Power Apps component framework API reference) | Microsoft Docs
 description: Provides all the properties and methods available in the Power Apps component framework
-ms.author: noazarur
-author: noazarur-microsoft
+ms.author: hemantg
+author: HemantGaur
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -33,6 +33,12 @@ Model-driven apps, canvas apps, & portals.
 [!INCLUDE [device-description](includes/device-description.md)]
 
 **Type**: [Device](device.md)
+
+### events
+
+[!INCLUDE [events-description](includes/events-description.md)]
+
+**Type**: [Events](events.md)
 
 ### factory
 
@@ -74,7 +80,7 @@ The resource interface of `context.resources`
 
 ### updatedProperties
 
-An array of strings with values that have changed since the last time it was passed and [parameters](#parameters). More information: [updatedProperties](updatedproperties.md)
+An array of strings with values that changed since the last time it was passed and [parameters](#parameters). More information: [updatedProperties](updatedproperties.md)
 
 **Type**: `string[]`
 

@@ -34,11 +34,11 @@ Any subsequent call to this method will update the displayed message in the exis
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|message|String|Yes|The message to be displayed in the progress dialog.|
+|`message`|String|Yes|The message to be displayed in the progress dialog.|
 
 
 
-### Related topics
+### Related articles
 
 [closeProgressIndicator](closeProgressIndicator.md)
 

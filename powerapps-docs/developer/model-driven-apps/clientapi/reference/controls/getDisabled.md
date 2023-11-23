@@ -26,7 +26,7 @@ Returns whether the control is disabled.
 
 **Description**: true if disabled; false otherwise. 
 
-### Related topics
+### Related articles
 
 [setDisabled](setDisabled.md)
 
