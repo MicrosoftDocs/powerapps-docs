@@ -53,13 +53,13 @@ Follow these steps to create a virtual table using Fabric data.
 2. On the command bar, select **New table** > **Create a virtual table**.
 3. Select **Microsoft Fabric** as the connection, and then select **Next**.
 4. Select a **Microsoft Fabric workspace** from the available list of workspaces. All workspace where you have access are available in the list.
-5. You can also choose a **Microsoft Fabric Lakehouse** from the drop-down list. All Lakehouses and data warehouses within the workspace selected previously are available to choose. <!-- Is this an option or is the selection required? -->
+5. You can also choose a **Microsoft Fabric Lakehouse** from the drop-down list. All Lakehouses and data warehouses within the workspace selected previously are available to choose. <!-- Is this an option, or is it an alternative to selecting a workspace, or is the selection required in addition to the workspace? -->
 6. On the **Data** page, select a table from the list of tables shown from the Lakehouse. Select the **Configure table and column names that will be used in Dataverse** checkbox if you want to rename any of the fields or tables in Dataverse or to specify additional properties available for you in Dataverse. Select **Next**.
 7. If you selected the **Configure table and column names that will be used in Dataverse** checkbox, you are shown the table and column properties and you can modify them here. When you're done modifying them select **Next**.
 8. Review the information shown, and then select **Finish**.
 
 A new Dataverse virtual table is created with data from Fabric.
 
-## Building Apps and taking action with insights
+## Building apps and taking action with insights
 
 Build apps with the virtual table sourced with Fabric data in Power Apps (make.powerapps.com) by selecting the **Create an app** option from the **Tables** area. Select the virtual table that contains data from Fabric to get started. <!-- There is no Create an app option from the Tables area in the maker portal. Did you mean select the virtual table you created from the Tables area ? -->
