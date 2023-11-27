@@ -23,7 +23,7 @@ The option to attach files to an email is a useful feature when you need to shar
 
   > [!Important] 
   > - The default file size limit for an email file attachment is 5 MB. The size limitations on email file attachments can be increased by your system administrators.
-  > - You can't attach files to sent email messages after they have been attempted for delivery through Server Side Synchronization.
+  > - You can't attach files to sent email messages after they have been attempted for delivery through server-side synchronization.
 
 ## Work with attachments
 
