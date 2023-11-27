@@ -1,13 +1,15 @@
 ---
 title: Power Apps Test Engine overview (preview)
 description: Learn about how you can automate tests of standalone canvas apps using the Power Apps Test Engine within Power Platform CLI.
-author: jt000
-ms.author: jasontre
+author: pvillads
+ms.author: pvillads
 ms.date: 08/16/2023
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
  - JimDaly
+ - jt000
+ - FrankDahl
 ---
 
 
