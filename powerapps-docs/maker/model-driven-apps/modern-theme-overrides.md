@@ -16,23 +16,21 @@ search.audienceType:
 
 # Use modern themes
 
-Model-driven apps with the [modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md) provide updated styling aligned to the Microsoft Fluent 2 design system. As part of the updated styling, makers can modify the colors used by the app header. Because this modern refreshed look comes with a new theming system, [classic theming](create-themes-organization-branding.md) isn't honored. In this article, you learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.
+Users of model-driven apps with the [modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md) enabled experience updated styling aligned to the Microsoft Fluent 2 design system. Because this modern refreshed look comes with a new theming system, [classic theming](create-themes-organization-branding.md) isn't honored; however, makers can modify the colors used by the app header for users who have enabled the modern, refreshed look. In this article, you learn about the styling overrides available with the modern, refreshed look and how to implement them for your organization.
 
 > [!NOTE]
-> Modern themes currently only support customizing the app header.
+> Modern themes currently only support customizing the app header. Other customizations like customizing the business process flow control aren't available.
 
 ## Modify the app header colors
 
-With the [modern, refreshed look enabled](../../user/modern-fluent-design.md#turn-on-the-new-look) in the app, makers can modify the colors used by the app header to align with their personal or organizational branding. To accomplish this, you encapsulate the desired colors into an XML resource, use an app setting to point to this web resource, and then verify the color changes match expectation.  
+With the [modern, refreshed look enabled](../../user/modern-fluent-design.md#turn-on-the-new-look) in the app, makers can modify the colors used by the app header to align with their organizational branding. To accomplish this, you encapsulate the desired colors into an XML resource, use an app setting to point to this web resource, and then verify the color changes match expectation.  
 
   > [!NOTE]
-  > This functionality is available in build 9.4.23094 or later version.
+  > This functionality is available in build 9.2.23094 or later version.
 
 ### Overview of the XML resource to use for app header colors
 
-The first step to modifying the app header styling is to create an XML file with your various color selections. Later, you'll create a web resource using the XML file.
-
-The following styling options for the app header are available:
+The first step to modifying the app header styling is to create an XML file with your various color selections. Later, you'll create an XML web resource with one or more of the following attributes defined inside an `AppHeaderColors` tag.
 
 - `Background` – The background color of the app header. This element must be defined for any changes to take effect.
 - `Foreground` – The text color of the app header. If this isn't specified, the system attempts to calculate an appropriate color that has sufficient contrast to the provided background color.
@@ -43,41 +41,27 @@ The following styling options for the app header are available:
 - `BackgroundSelected` – The background color of buttons on the app header when they're selected.  The defaulting logic is the same as backgroundHover.
 - `ForegroundSelected` – The text color of buttons on the app header when they're selected.  The defaulting logic is the same as backgroundHover.
 
-Your XML file should be formatted as follows:
-
-```xml
-<AppHeaderColors
-// Required color
-background=”000000”
-
-// Optional colors
-/>
-```
-
 ### Example XML for a modern theme
 
 As an example, this XML specifies a green background color for the app header with white text, with darker background colors for the various button interaction states. For optimal usability, we recommend specifying different color values for each state.  
 
 ```xml
 <AppHeaderColors 
-//Required color
   background="#12783F"
-  
- //Optional colors
- foreground="#FFFFFF" 
- backgroundHover="#165A31" 
- foregroundHover="#FFFFFF"
- backgroundPressed=”#0F1C12”
- foregroundPressed="#FFFFFF"
- backgroundSelected="#153D23" 
- foregroundSelected="#FFFFFF"
+  foreground="#FFFFFF" 
+  backgroundHover="#165A31" 
+  foregroundHover="#FFFFFF"
+  backgroundPressed="#0F1C12"
+  foregroundPressed="#FFFFFF"
+  backgroundSelected="#153D23" 
+  foregroundSelected="#FFFFFF"
 />
 ```
 
 ### Create the web resource
 
 1. Using a text or XML editor, save the XML that is used to create the web resource. [Example XML for a modern theme](#example-xml-for-a-modern-theme)
-1. Sign into [Power Apps](https://make.powerapps.com/), select **Solutions** on the left navigation pane, and then create a **New solution**.
+1. Sign into [Power Apps](https://make.powerapps.com/).
 1. Select **Solutions** on the left navigation pane, and then create a **New solution**.
 1. Select **New** > **More** > **Web resource**.
 1. In the New web resource property pane, enter the following values:
@@ -85,11 +69,11 @@ As an example, this XML specifies a green background color for the app header wi
    - **Name**. Enter the unique name for the web resource.
    - Type: **Data (XML)**
 1. Select **Choose file**, browse to and select the XML file you created earlier with the theme.
-1. Select **Save**.
+1. Select **Save**. You publish this customization with the steps in the next section.
 
 ### Apply custom app header colors to apps in your environment
 
-After you’ve selected your colors and created the XML resource, follow these steps to enable this app header styling for all the apps in your environment that have the “New look” enabled.
+After you’ve selected your colors and created the web resource, follow these steps to enable this app header styling for all the apps in your environment that have the “New look” enabled.
 
 1. In the solution you used to [create the web resource](#create-the-web-resource), select **Add existing** > **More** > **Setting**.
 1. Type *Override* in the **Search** box, select **Override app header color**, select **Next**, and then select **Add**.

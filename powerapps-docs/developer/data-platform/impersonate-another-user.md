@@ -44,7 +44,7 @@ More information: [Build web applications using Server-to-Server (S2S) authentic
 
 ## Impersonate another user using the Web API
 
-To impersonate a user, add a request header named `CallerObjectId` with a GUID value equal to the impersonated user's Azure Active Directory (AAD) object id before sending the request to the web service. The user's AAD object id is included in the [SystemUser.AzureActiveDirectoryObjectId](reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId).
+To impersonate a user, add a request header named `CallerObjectId` with a GUID value equal to the impersonated user's Microsoft Entra ID object id before sending the request to the web service. The user's Microsoft Entra ID object id is included in the [SystemUser.AzureActiveDirectoryObjectId](reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId).
 
 More information: [Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md).
 

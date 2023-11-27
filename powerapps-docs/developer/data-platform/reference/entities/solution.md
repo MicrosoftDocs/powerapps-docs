@@ -1,7 +1,7 @@
 ---
 title: "Solution table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Solution table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -840,6 +840,7 @@ Listed by **SchemaName**.
 - [solution_fieldsecurityprofile](#BKMK_solution_fieldsecurityprofile)
 - [solution_privilege](#BKMK_solution_privilege)
 - [solution_role](#BKMK_solution_role)
+- [user_settings_preferred_solution](#BKMK_user_settings_preferred_solution)
 
 
 ### <a name="BKMK_solution_solutioncomponent"></a> solution_solutioncomponent
@@ -960,6 +961,23 @@ Same as the [solution_role](role.md#BKMK_solution_role) many-to-one relationship
 |ReferencedEntityNavigationPropertyName|solution_role|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_settings_preferred_solution"></a> user_settings_preferred_solution
+
+**Added by**: Solutions Framework Metadata Solution
+
+Same as the [user_settings_preferred_solution](usersettings.md#BKMK_user_settings_preferred_solution) many-to-one relationship for the [usersettings](usersettings.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|usersettings|
+|ReferencingAttribute|preferredsolution|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|user_settings_preferred_solution|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

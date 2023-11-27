@@ -1,1 +1,1 @@
-Azure Active Directory
+Microsoft Entra ID

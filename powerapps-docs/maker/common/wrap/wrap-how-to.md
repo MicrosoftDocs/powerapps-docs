@@ -123,7 +123,7 @@ You can also code sign your mobile app package manually instead of using automat
 
 ### Step 4: Register app
 
-On the **Register your app** screen, register your application in Azure to establish a trust relationship between your app and the Microsoft identity platform. Your app must be registered in Azure Active Directory so that your app users can sign in. 
+On the **Register your app** screen, register your application in Azure to establish a trust relationship between your app and the Microsoft identity platform. Your app must be registered in Microsoft Entra so that your app users can sign in. 
 
 #### New app registration
 
@@ -166,9 +166,9 @@ You can automatically create your app registration in the wrap wizard as mention
 > [!NOTE]
 > Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.
 
-Whether you're a single or multitenant maker, you must select any of the options containing **Any Azure AD directory - Multitenant** when choosing the supported account type for your app to enable it for wrap. Choose one of the following account types:
- - Accounts in any organizational directory (Any Azure AD directory - Multitenant)
- - Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts such as Skype or Xbox.
+Whether you're a single or multitenant maker, you must select any of the options containing **Any Microsoft Entra directory - Multitenant** when choosing the supported account type for your app to enable it for wrap. Choose one of the following account types:
+ - Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)
+ - Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts such as Skype or Xbox.
 
 :::image type="content" source="media/wrap-intro/AppResgistration_AccountTypes.png" alt-text="App registration - supported account types for wrap.":::
 

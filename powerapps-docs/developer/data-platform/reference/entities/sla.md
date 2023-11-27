@@ -1,7 +1,7 @@
 ---
 title: "SLA table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SLA table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1001,6 +1001,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4811|Time Zone Rule|Definition for time conversion between local time and Coordinated Universal Time (UTC) for a particular time zone at a particular time period.|
 |4812|Time Zone Localized Name|Localized name of the time zone.|
 |5000|Recently Used|Most recently used data table.|
+|5004|NL2SQ Registration Information|Org registration status, AllowedEntity list, and registration error message.|
 |7000|System Application Metadata|For internal use only.|
 |7001|User Application Metadata|For internal use only.|
 |7100|Solution|A solution which contains CRM customizations.|
@@ -1109,7 +1110,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
 |9955|Knowledge Article Views|No of times an article is viewed per day|
 |9957|Language|Language|
-|9958|Feedback|Container for feedback and ratings for knowledge articles.|
+|9958|Feedback|Feedback and rating.|
 |9959|Category|Entity for categorizing records to make it easier for your customers to find them on portals and through search.|
 |9960|Knowledge Article Category|Category for a Knowledge Article.|
 |9961|DelveActionHub|Delve Action Hubs Description|
@@ -1140,193 +1141,264 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10017|AAD User|Virtual entity that represents AAD user|
 |10018|Staged Entity|Stores staged entity metadata to be processed before fully created.|
 |10019|Staged Entity Attribute|Stores staged entity attribute metadata to be processed in async.|
-|10020|Catalog|Entity for cataloging records to make it easier for your customers to find them on portals and through search.|
-|10021|Catalog Assignment|Entity for assigning records to a specific catalog |
-|10022|Internal Catalog Assignment||
-|10023|Custom API|Entity that defines a custom API|
-|10024|Custom API Request Parameter|Entity that defines a request parameter for a custom API|
-|10025|Custom API Response Property|Entity that defines a response property for a custom API |
-|10026|Plugin Package||
-|10027|NonRelational Data Source||
-|10028|ProvisionLanguageForUser||
-|10029|Shared Object|A record that is being shared in a real time collaboration session.|
-|10030|Shared Workspace|References a container that stores real-time collaboration data.|
-|10031|Shared Workspace Pool|Contains metadata about a container used to store real-time collaboration data. Once claimed, a sharedworkspace record would be created with copied metadata.|
-|10032|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
-|10033|Data Lake Folder Permission||
-|10034|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
-|10035|Data Lake Workspace Permission||
-|10036|Data Processing configuration||
-|10037|Exported Excel|A Place holder entity to save excel file for each exportretaineddata custom api requests.|
-|10038|RetainedData Excel|A Place holder entity to save excel file for each exportretaineddata custom api requests.|
-|10039|Synapse Database|This entity represents an external Synapse database and its associated datalake folder link.|
-|10040|Synapse Link External Table State|Synapse Link external table states|
-|10041|Synapse Link Profile|Synapse Link Profile|
-|10042|Synapse Link Profile Entity|Entities associated with the Synapse Link profile|
-|10043|Synapse Link Profile Entity State|Runtime state of the Synapse Link entity|
-|10044|Synapse Link Schedule|Synapse link schedules|
-|10045|DataflowRefreshHistory||
-|10046|EntityRefreshHistory||
-|10047|Shared Link Setting|Shared Link Setting|
-|10048|DelegatedAuthorization|Context for delegated authorization.|
-|10049|CascadeGrantRevokeAccessRecordsTracker||
-|10050|CascadeGrantRevokeAccessVersionTracker||
-|10051|RevokeInheritedAccessRecordsTracker||
-|10052|TdsMetadata||
-|10053|Model-Driven App Element|Associates a model-driven app with its components.|
-|10054|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
-|10055|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
-|10056|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
-|10057|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
-|10058|Organization Setting|Holds the value for the associated Organization Setting Definition.|
-|10059|Setting Definition|Contains Setting Definitions|
-|10060|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
-|10061|Service Plan Mapping|Service Plan Mapping|
-|10063|ApplicationUser|Application User that has non-interactive access to the CDS system|
-|10066|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
-|10067|Workflow Binary||
-|10068|Desktop Flow Module||
-|10069|Flow Machine||
-|10070|Flow Machine Group||
-|10071|Flow Machine Image||
-|10072|Flow Machine Image Version||
-|10073|Flow Machine Network||
-|10074|ProcessStageParameter||
-|10075|Work Queue||
-|10076|Work Queue Item||
-|10077|Desktop Flow Binary||
-|10078|Connection Reference||
-|10079|Help Page||
-|10080|Tour||
-|10081|BotContent||
-|10082|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
-|10083|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
-|10084|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
-|10091|Comment|A collaborative comment on a maker artifact|
-|10092|PDF Setting|PDF Settings to save enabled pdf entities|
-|10093|Activity File Attachment|Attachment entity with data stored in file type attribute|
-|10094|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
-|10095|Service Configuration||
-|10096|SLA KPI||
-|10097|Knowledge Management Setting|Setup knowledge management for your organization.|
-|10098|Knowledge Federated Article||
-|10099|Knowledge Federated Article Incident||
-|10100|Integrated search provider|Ingest and search files, documents, or articles from data sources outside of your current Dynamics 365 organization with a unified ranking.|
-|10101|Search provider||
-|10102|Knowledge Article Image||
-|10103|Knowledge Configuration|Represents the possible settings used in Knowledge management|
-|10104|Knowledge Interaction Insight|Knowledge Interaction Insight|
-|10105|Knowledge Search Insight|Knowledge Search Insight|
-|10106|Favorite knowledge article|Entity for favorite knowledge articles|
-|10107|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
-|10108|Knowledge Article Attachment||
-|10109|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
-|10110|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
-|10111|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
-|10112|Knowledge search filter|Allows you to configure and manage filter settings.|
-|10114|SupportUserTable||
-|10115|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
-|10116|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
-|10117|FxExpression||
-|10118|PowerfxRule||
-|10119|Ms Graph Resource To Subscription|For internal use only. The mapping between Ms Graph Resources and Subscriptions.|
-|10120|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
-|10121|Background Operation||
-|10122|MobileOfflineProfileExtension||
-|10123|MobileOfflineProfileItemFilter||
-|10124|TeamMobileOfflineProfileMembership||
-|10125|UserMobileOfflineProfileMembership||
-|10126|OrganizationDataSyncSubscription||
-|10127|OrganizationDataSyncSubscriptionEntity||
-|10128|OrganizationDataSyncSubscriptionFnoTable||
-|10129|OrganizationDataSyncFnoState|Information regarding data synchronization state|
-|10130|OrganizationDataSyncState|Information regarding data synchronization state|
-|10131|ArchiveCleanupInfo|This is Deprecated Entity.|
-|10132|ArchiveCleanupOperation|This is Deprecated Entity.|
-|10133|BulkArchiveConfig|This is Deprecated Entity.|
-|10134|BulkArchiveFailureDetail|This is Deprecated Entity.|
-|10135|BulkArchiveOperation|This is Deprecated Entity.|
-|10136|BulkArchiveOperationDetail|This is Deprecated Entity.|
-|10137|EnableArchivalRequest|For internal use only.|
-|10138|MetadataForArchival|Holds  metadata values of tables for retention|
-|10139|ReconciliationEntityInfo|Table level details of the data lake reconciliation process. For internal use only.|
-|10140|ReconciliationInfo|Information about data lake reconciliation operation. For internal use only.|
-|10141|RetentionCleanupInfo|Holds watermark information about retention cleanup operations. For internal use only.|
-|10142|RetentionCleanupOperation|Holds data of cleanup operations such as reconcile and purge.  For internal use only.|
-|10143|RetentionConfig|Holds retention policies for a table.|
-|10144|RetentionFailureDetail|Retention failure details.|
-|10145|RetentionOperation|Retention policy execution details.|
-|10146|RetentionOperationDetail|Table level details of retention execution.|
-|10147|App Insights Metadata|Metadata for App Insights Platform components|
-|10148|Schedule|Generic refresh schedule|
-|10149|Dataflow Template|An entity to store information about dataflow templates|
-|10150|Dataflow DatalakeFolder||
-|10151|Data Movement Service Request|Table for Data Movement Service Requests|
-|10152|Data Movement Service Request Status|Table for Data Movement Service Request Status|
-|10153|Workflow Action Status|PA Workflows action processing status|
-|10154|Notification|Notification to be provided to a user.|
-|10155|User Rating||
-|10156|Mobile App|Mobile App|
-|10157|Insights Store Data Source||
-|10158|Insights Store Virtual Entity|Insights Store Virtual Entity|
-|10159|RoleEditorLayout||
-|10160|App Action|Contains Modern Command Information|
-|10161|App Action Migration||
-|10162|App Action Rule||
-|10165|Card|Card|
-|10166|Card State Item||
-|10167|Entity link chat configuration||
-|10168|Rich Text Attachment|Image or file attached to a rich text field|
-|10169|Custom Control Extended Setting||
-|10170|Timeline Pin|Timeline Pin Record|
-|10171|Virtual Connector Data Source||
-|10172|Virtual Table Column Candidate||
-|10173|AI Event||
-|10174|AI Builder Feedback Loop||
-|10175|AI Form Processing Document||
-|10176|AI Object Detection Image||
-|10177|AI Object Detection Label||
-|10178|AI Object Detection Bounding Box||
-|10179|AI Object Detection Image Mapping||
-|10181|AI Builder Dataset||
-|10182|AI Builder Dataset File||
-|10183|AI Builder Dataset Record||
-|10184|AI Builder Datasets Container||
-|10185|AI Builder File||
-|10186|AI Builder File Attached Data||
-|10187|PM Analysis History||
-|10188|PM Business Rule Automation Config||
-|10189|PM Calendar||
-|10190|PM Calendar Version||
-|10191|PM Inferred Task||
-|10192|PM Process Extended Metadata Version||
-|10193|PM Process Template||
-|10194|PM Process User Settings||
-|10195|PM Process Version||
-|10196|PM Recording||
-|10197|PM Template||
-|10198|PM View||
-|10199|Analysis Component||
-|10200|Analysis Job||
-|10201|Analysis Override||
-|10202|Analysis Result||
-|10203|Analysis Result Detail||
-|10204|Solution Health Rule||
-|10205|Solution Health Rule Argument||
-|10206|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
-|10207|Power BI Dataset||
-|10208|powerbidatasetapdx|PowerBI Dataset appendix entity - for unmanaged technical attributes|
-|10209|Power BI Mashup Parameter||
-|10210|Power BI Report||
-|10211|powerbireportapdx|PowerBI Report appendix entity for unmanaged technical attributes|
-|10212|File Upload||
-|10213|SearchAttributeSettings||
-|10214|SearchCustomAnalyzer||
-|10215|SearchRelationshipSettings||
-|10216|Search Telemetry|Entity to log telemetry that used to improve search quality|
-|10217|Catalog Submission Files|Files associated with the package that will be used as part of the submission to the catalog system.|
-|10218|Package Submission Store|Manages submissions to Power Catalog and provisioning|
-|10380|Flow Event|Entity to store the events that happen during usage of Power Automate.|
+|10020|Staged Metadata Async Operation|Stores staged entity metadata to be processed before fully created.|
+|10021|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
+|10022|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
+|10023|Catalog|Entity for cataloging records to make it easier for your customers to find them on portals and through search.|
+|10024|Catalog Assignment|Entity for assigning records to a specific catalog |
+|10025|Internal Catalog Assignment||
+|10026|Custom API|Entity that defines a custom API|
+|10027|Custom API Request Parameter|Entity that defines a request parameter for a custom API|
+|10028|Custom API Response Property|Entity that defines a response property for a custom API |
+|10029|Plugin Package||
+|10030|NonRelational Data Source||
+|10031|ProvisionLanguageForUser||
+|10032|Shared Object|A record that is being shared in a real time collaboration session.|
+|10033|Shared Workspace|References a container that stores real-time collaboration data.|
+|10034|Shared Workspace Pool|Contains metadata about a container used to store real-time collaboration data. Once claimed, a sharedworkspace record would be created with copied metadata.|
+|10035|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
+|10036|Data Lake Folder Permission||
+|10037|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
+|10038|Data Lake Workspace Permission||
+|10039|Data Processing configuration||
+|10040|Exported Excel|A Place holder entity to save excel file for each exportretaineddata custom api requests.|
+|10041|RetainedData Excel|A Place holder entity to save excel file for each exportretaineddata custom api requests.|
+|10042|Synapse Database|This entity represents an external Synapse database and its associated datalake folder link.|
+|10043|Synapse Link External Table State|Synapse Link external table states|
+|10044|Synapse Link Profile|Synapse Link Profile|
+|10045|Synapse Link Profile Entity|Entities associated with the Synapse Link profile|
+|10046|Synapse Link Profile Entity State|Runtime state of the Synapse Link entity|
+|10047|Synapse Link Schedule|Synapse link schedules|
+|10048|DataflowRefreshHistory||
+|10049|EntityRefreshHistory||
+|10050|Shared Link Setting|Shared Link Setting|
+|10051|DelegatedAuthorization|Context for delegated authorization.|
+|10052|CascadeGrantRevokeAccessRecordsTracker||
+|10053|CascadeGrantRevokeAccessVersionTracker||
+|10054|RevokeInheritedAccessRecordsTracker||
+|10055|TdsMetadata||
+|10056|Model-Driven App Element|Associates a model-driven app with its components.|
+|10057|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
+|10058|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
+|10059|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
+|10060|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
+|10061|Organization Setting|Holds the value for the associated Organization Setting Definition.|
+|10062|Setting Definition|Contains Setting Definitions|
+|10063|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
+|10064|Service Plan Mapping|Service Plan Mapping|
+|10067|ApplicationUser|Application User that has non-interactive access to the CDS system|
+|10070|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
+|10071|Workflow Binary||
+|10072|Desktop Flow Module||
+|10073|Flow Event|Entity to store the events that happen during usage of Power Automate.|
+|10074|Flow Machine||
+|10075|Flow Machine Group||
+|10076|Flow Machine Image||
+|10077|Flow Machine Image Version||
+|10078|Flow Machine Network||
+|10079|ProcessStageParameter||
+|10080|Work Queue||
+|10081|Work Queue Item||
+|10082|Desktop Flow Binary||
+|10083|Connection Reference||
+|10084|Help Page||
+|10085|Tour||
+|10086|BotContent||
+|10087|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
+|10088|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
+|10089|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
+|10096|Comment|A collaborative comment on a maker artifact|
+|10097|PDF Setting|PDF Settings to save enabled pdf entities|
+|10098|Activity File Attachment|Attachment entity with data stored in file type attribute|
+|10099|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10100|Service Configuration||
+|10101|SLA KPI||
+|10102|Knowledge Management Setting|Setup knowledge management for your organization.|
+|10103|Knowledge Federated Article||
+|10104|Knowledge Federated Article Incident||
+|10105|Integrated search provider|Ingest and search files, documents, or articles from data sources outside of your current Dynamics 365 organization with a unified ranking.|
+|10106|Search provider||
+|10107|Knowledge Article Image||
+|10108|Knowledge Configuration|Represents the possible settings used in Knowledge management|
+|10109|Knowledge Interaction Insight|Knowledge Interaction Insight|
+|10110|Knowledge Search Insight|Knowledge Search Insight|
+|10111|Favorite knowledge article|Entity for favorite knowledge articles|
+|10112|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
+|10113|Knowledge Article Attachment||
+|10114|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
+|10115|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10116|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
+|10117|Knowledge search filter|Allows you to configure and manage filter settings.|
+|10119|SupportUserTable||
+|10120|FxExpression||
+|10121|PowerfxRule||
+|10122|Ms Graph Resource To Subscription|For internal use only. The mapping between Ms Graph Resources and Subscriptions.|
+|10123|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
+|10124|Background Operation||
+|10125|MobileOfflineProfileExtension||
+|10126|MobileOfflineProfileItemFilter||
+|10127|TeamMobileOfflineProfileMembership||
+|10128|UserMobileOfflineProfileMembership||
+|10129|OrganizationDataSyncSubscription||
+|10130|OrganizationDataSyncSubscriptionEntity||
+|10131|OrganizationDataSyncSubscriptionFnoTable||
+|10132|OrganizationDataSyncFnoState|Information regarding data synchronization state|
+|10133|OrganizationDataSyncState|Information regarding data synchronization state|
+|10134|ArchiveCleanupInfo|This is Deprecated Entity.|
+|10135|ArchiveCleanupOperation|This is Deprecated Entity.|
+|10136|BulkArchiveConfig|This is Deprecated Entity.|
+|10137|BulkArchiveFailureDetail|This is Deprecated Entity.|
+|10138|BulkArchiveOperation|This is Deprecated Entity.|
+|10139|BulkArchiveOperationDetail|This is Deprecated Entity.|
+|10140|EnableArchivalRequest|For internal use only.|
+|10141|MetadataForArchival|Holds  metadata values of tables for retention|
+|10142|ReconciliationEntityInfo|Table level details of the data lake reconciliation process. For internal use only.|
+|10143|ReconciliationEntityStepInfo|Step level details of the data lake reconciliation process. For internal use only.|
+|10144|ReconciliationInfo|Information about data lake reconciliation operation. For internal use only.|
+|10145|RetentionCleanupInfo|Holds watermark information about retention cleanup operations. For internal use only.|
+|10146|RetentionCleanupOperation|Holds data of cleanup operations such as reconcile and purge.  For internal use only.|
+|10147|RetentionConfig|Holds retention policies for a table.|
+|10148|RetentionFailureDetail|Retention failure details.|
+|10149|RetentionOperation|Retention policy execution details.|
+|10150|RetentionOperationDetail|Table level details of retention execution.|
+|10151|App Insights Metadata|Metadata for App Insights Platform components|
+|10152|Schedule|Generic refresh schedule|
+|10153|Dataflow Template|An entity to store information about dataflow templates|
+|10154|Dataflow DatalakeFolder||
+|10155|Data Movement Service Request|Table for Data Movement Service Requests|
+|10156|Data Movement Service Request Status|Table for Data Movement Service Request Status|
+|10157|Workflow Action Status|PA Workflows action processing status|
+|10158|Notification|Notification to be provided to a user.|
+|10159|User Rating||
+|10160|Mobile App|Mobile App|
+|10161|Insights Store Data Source||
+|10162|Insights Store Virtual Entity|Insights Store Virtual Entity|
+|10163|RoleEditorLayout||
+|10164|DVFileSearch|DVFileSearches Component|
+|10165|DVFileSearchAttribute||
+|10166|DVFileSearchEntity|DVFileSearchEntities component.|
+|10167|DVTableSearch|DVTableSearches component|
+|10168|DVTableSearchAttribute|DVTableSearchAttribute component|
+|10169|DVTableSearchEntity|DVTableSearchEntities component|
+|10170|AIPlugin|AIPlugins component|
+|10171|AIPluginExternalSchema|AIPluginExternalSchemas component|
+|10172|AIPluginExternalSchemaProperty|AIPluginExternalSchemaProperties component|
+|10173|AIPluginInstance|AI Plugin Instances Component|
+|10174|AIPluginOperation|AIPluginOperations component|
+|10175|AIPluginOperationParameter|Parameter overrides for AI Operation|
+|10176|AIPluginUserSetting||
+|10177|App Action|Contains Modern Command Information|
+|10178|App Action Migration||
+|10179|App Action Rule||
+|10182|Card|Card|
+|10183|Card State Item||
+|10186|Entity link chat configuration||
+|10187|Rich Text Attachment|Image or file attached to a rich text field|
+|10188|Custom Control Extended Setting||
+|10189|Timeline Pin|Timeline Pin Record|
+|10190|Virtual Connector Data Source||
+|10191|Virtual Table Column Candidate||
+|10192|AI Event||
+|10193|AI Builder Feedback Loop||
+|10194|AI Form Processing Document||
+|10195|AI Object Detection Image||
+|10196|AI Object Detection Label||
+|10197|AI Object Detection Bounding Box||
+|10198|AI Object Detection Image Mapping||
+|10200|AI Builder Dataset||
+|10201|AI Builder Dataset File||
+|10202|AI Builder Dataset Record||
+|10203|AI Builder Datasets Container||
+|10204|AI Builder File||
+|10205|AI Builder File Attached Data||
+|10206|PM Analysis History||
+|10207|PM Business Rule Automation Config||
+|10208|PM Calendar||
+|10209|PM Calendar Version||
+|10210|PM Inferred Task||
+|10211|PM Process Extended Metadata Version||
+|10212|PM Process Template||
+|10213|PM Process User Settings||
+|10214|PM Process Version||
+|10215|PM Recording||
+|10216|PM Template||
+|10217|PM View||
+|10218|Analysis Component||
+|10219|Analysis Job||
+|10220|Analysis Override||
+|10221|Analysis Result||
+|10222|Analysis Result Detail||
+|10223|Solution Health Rule||
+|10224|Solution Health Rule Argument||
+|10225|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
+|10226|Power BI Dataset||
+|10227|powerbidatasetapdx|PowerBI Dataset appendix entity - for unmanaged technical attributes|
+|10228|Power BI Mashup Parameter||
+|10229|Power BI Report||
+|10230|powerbireportapdx|PowerBI Report appendix entity for unmanaged technical attributes|
+|10231|File Upload||
+|10232|MainFewShot|This fewshot entity will only be updated during solution installation.|
+|10233|MakerFewShot|This fewshot is updated by maker for testing the queries and by the NL2SQ with the results|
+|10234|SearchAttributeSettings||
+|10235|SearchCustomAnalyzer||
+|10236|SearchRelationshipSettings||
+|10237|Search Telemetry|Entity to log telemetry that used to improve search quality|
+|10238|Site Component||
+|10239|Site||
+|10240|Site Language||
+|10241|Power Pages Site Published||
+|10244|External Identity||
+|10245|Invitation|Send invitations to existing contacts or email addresses and assign them to web roles upon redemption.|
+|10246|Invite Redemption|Holds information about the redemption of an invite.|
+|10247|Portal Comment|An activity which is used to share information between the user and the customer on the portal.|
+|10248|Setting||
+|10249|Multistep Form Session|Serves as a mechanism to log the occurrence of an incomplete multistep form entry for a given user so they can return and complete it later.|
+|10253|Ad Placement||
+|10254|Column Permission||
+|10255|Column Permission Profile||
+|10256|Content Snippet|Content snippets are inserted in page templates so that any label, text string or image in the template can be content-managed.|
+|10257|Basic Form|Defines the form to render for a given entity type.|
+|10258|Basic Form Metadata|Defines the additional behavior modification logic to augment or override the functionality of form components that is not possible with Dynamics 365 entity and form metadata.|
+|10259|List||
+|10260|Table Permission||
+|10261|Page Template|URL of the .aspx page used to create new webpages.|
+|10262|Poll Placement||
+|10263|Power Pages Core Entity DS||
+|10264|Publishing State||
+|10265|Publishing State Transition Rule||
+|10266|Redirect||
+|10267|Shortcut||
+|10268|Site Marker|Used by web page templates to locate a specific page of content.|
+|10269|Site Setting|Site specific settings or variables refferenced by the web site code files.|
+|10270|Web File|Storage of files used in the web Portals.|
+|10271|Multistep Form|Defines the necessary properties and relationships to the other key entities in order to control the initialization of the form within a web portal.|
+|10272|Multistep Form Metadata|Defines the additional behavior modification logic to augment or override the functionality of form fields that is not possible with Dynamics 365 entity and form metadata.|
+|10273|Form Step|Defines the flow logic of the form's user experience such as steps and conditional branching.|
+|10274|Web Link|A textual or imaged based link to an interal or external URL.|
+|10275|Web Link Set|A grouping of web links.|
+|10276|Web Page|Web Page|
+|10277|Web Page Access Control Rule||
+|10278|Web Role|Sets the user's role for the Portal.|
+|10279|Website|Web Portal|
+|10280|Website Access||
+|10281|Website Language|Languages supported and publishing status for the portal|
+|10282|Web Template||
+|10292|Catalog Submission Files|Files associated with the package that will be used as part of the submission to the catalog system.|
+|10293|Package Submission Store|Manages submissions to Power Catalog and provisioning|
+|10397|Customer Voice alert rule||
+|10398|Customer Voice survey question|Question in a survey to collect feedback.|
+|10400|Customer Voice satisfaction metric|Satisfaction metric defined for a project.|
+|10401|Customer Voice survey question response|Response to a question in a survey.|
+|10402|Customer Voice project|Set of surveys to collect feedback.|
+|10403|Customer Voice survey reminder|Email reminders for surveys created in Customer Voice.|
+|10404|Customer Voice unsubscribed recipient|Email address of an unsubscribed respondent.|
+|10405|Customer Voice survey email template|Template for an email message that contains the survey invitation link.|
+|10406|Customer Voice file response|Response to a file upload question.|
+|10407|Customer Voice localized survey email template|Stores localized data for email templates.|
+|10408|Customer Voice survey|Set of questions to collect feedback.|
+|10409|Customer Voice alert||
+|10410|Customer Voice survey invite|Activity that tracks a survey invitation sent to a person.|
+|10411|Customer Voice survey response|Response to a survey.|
 
 
 
@@ -1510,6 +1582,16 @@ Listed by **SchemaName**.
 - [manualsla_email](#BKMK_manualsla_email)
 - [chat_sla_slaid](#BKMK_chat_sla_slaid)
 - [chat_sla_slainvokedid](#BKMK_chat_sla_slainvokedid)
+- [adx_inviteredemption_sla_slaid](#BKMK_adx_inviteredemption_sla_slaid)
+- [adx_inviteredemption_sla_slainvokedid](#BKMK_adx_inviteredemption_sla_slainvokedid)
+- [adx_portalcomment_sla_slaid](#BKMK_adx_portalcomment_sla_slaid)
+- [adx_portalcomment_sla_slainvokedid](#BKMK_adx_portalcomment_sla_slainvokedid)
+- [msfp_alert_sla_slaid](#BKMK_msfp_alert_sla_slaid)
+- [msfp_alert_sla_slainvokedid](#BKMK_msfp_alert_sla_slainvokedid)
+- [msfp_surveyinvite_sla_slaid](#BKMK_msfp_surveyinvite_sla_slaid)
+- [msfp_surveyinvite_sla_slainvokedid](#BKMK_msfp_surveyinvite_sla_slainvokedid)
+- [msfp_surveyresponse_sla_slaid](#BKMK_msfp_surveyresponse_sla_slaid)
+- [msfp_surveyresponse_sla_slainvokedid](#BKMK_msfp_surveyresponse_sla_slainvokedid)
 
 
 ### <a name="BKMK_sla_socialactivity"></a> sla_socialactivity
@@ -1932,6 +2014,176 @@ Same as the [chat_sla_slainvokedid](chat.md#BKMK_chat_sla_slainvokedid) many-to-
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|chat_sla_slainvokedid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_adx_inviteredemption_sla_slaid"></a> adx_inviteredemption_sla_slaid
+
+**Added by**: Active Solution Solution
+
+Same as the [adx_inviteredemption_sla_slaid](adx_inviteredemption.md#BKMK_adx_inviteredemption_sla_slaid) many-to-one relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_inviteredemption|
+|ReferencingAttribute|slaid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|adx_inviteredemption_sla_slaid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10001|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_adx_inviteredemption_sla_slainvokedid"></a> adx_inviteredemption_sla_slainvokedid
+
+**Added by**: Active Solution Solution
+
+Same as the [adx_inviteredemption_sla_slainvokedid](adx_inviteredemption.md#BKMK_adx_inviteredemption_sla_slainvokedid) many-to-one relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_inviteredemption|
+|ReferencingAttribute|slainvokedid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|adx_inviteredemption_sla_slainvokedid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_adx_portalcomment_sla_slaid"></a> adx_portalcomment_sla_slaid
+
+**Added by**: Active Solution Solution
+
+Same as the [adx_portalcomment_sla_slaid](adx_portalcomment.md#BKMK_adx_portalcomment_sla_slaid) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|slaid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|adx_portalcomment_sla_slaid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10001|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_adx_portalcomment_sla_slainvokedid"></a> adx_portalcomment_sla_slainvokedid
+
+**Added by**: Active Solution Solution
+
+Same as the [adx_portalcomment_sla_slainvokedid](adx_portalcomment.md#BKMK_adx_portalcomment_sla_slainvokedid) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|slainvokedid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|adx_portalcomment_sla_slainvokedid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_alert_sla_slaid"></a> msfp_alert_sla_slaid
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_alert_sla_slaid](msfp_alert.md#BKMK_msfp_alert_sla_slaid) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_alert|
+|ReferencingAttribute|slaid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_alert_sla_slaid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10001|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_alert_sla_slainvokedid"></a> msfp_alert_sla_slainvokedid
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_alert_sla_slainvokedid](msfp_alert.md#BKMK_msfp_alert_sla_slainvokedid) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_alert|
+|ReferencingAttribute|slainvokedid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_alert_sla_slainvokedid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_surveyinvite_sla_slaid"></a> msfp_surveyinvite_sla_slaid
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_surveyinvite_sla_slaid](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_sla_slaid) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyinvite|
+|ReferencingAttribute|slaid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_surveyinvite_sla_slaid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10001|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_surveyinvite_sla_slainvokedid"></a> msfp_surveyinvite_sla_slainvokedid
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_surveyinvite_sla_slainvokedid](msfp_surveyinvite.md#BKMK_msfp_surveyinvite_sla_slainvokedid) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyinvite|
+|ReferencingAttribute|slainvokedid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_surveyinvite_sla_slainvokedid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_surveyresponse_sla_slaid"></a> msfp_surveyresponse_sla_slaid
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_surveyresponse_sla_slaid](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_sla_slaid) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyresponse|
+|ReferencingAttribute|slaid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_surveyresponse_sla_slaid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10001|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msfp_surveyresponse_sla_slainvokedid"></a> msfp_surveyresponse_sla_slainvokedid
+
+**Added by**: Active Solution Solution
+
+Same as the [msfp_surveyresponse_sla_slainvokedid](msfp_surveyresponse.md#BKMK_msfp_surveyresponse_sla_slainvokedid) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msfp_surveyresponse|
+|ReferencingAttribute|slainvokedid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msfp_surveyresponse_sla_slainvokedid|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

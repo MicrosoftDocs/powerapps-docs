@@ -1,6 +1,6 @@
 ---
 title: Migrate data between Microsoft Dataverse environments using the dataflows OData connector
-author: denisem-msft
+author: denise-msft
 ms.reviewer: jdaly
 description: Migrate data between Microsoft Dataverse environments using dataflows OData connector.
 ms.date: 12/09/2022
@@ -106,7 +106,7 @@ In the **target** environment, create a new dataflow with the OData connector.
     | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service.                                               |
     | Authentication kind      | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |
    > [!IMPORTANT] 
-    > Disable pop-up and cookies blockers in your browser in order to configure the Azure AD authentication. This is similar to the fact that you are using the Dataverse OData endpoint or any other OAuth-based authentication data source. 
+    > Disable pop-up and cookies blockers in your browser in order to configure the Microsoft Entra ID authentication. This is similar to the fact that you are using the Dataverse OData endpoint or any other OAuth-based authentication data source. 
     
 1. Select **Next** in the lower right.
 
