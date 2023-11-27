@@ -1,6 +1,6 @@
 ---
-title: Pitfalls when working with galleries in canvas apps
-description: Avoid common pitfalls when working with galleries in canvas apps.
+title:  Best practices and recommendations when working with gallery in canvas apps
+description: Best practices and recommendations when working with gallery in canvas apps.
 author: tahoon-ms
 
 ms.topic: conceptual
@@ -11,17 +11,17 @@ ms.author: tahoon
 search.audienceType: 
   - maker
 ---
-# Avoid gallery pitfalls
+# Best practices and recommendations when working with gallery
 
-The **[Gallery](controls/control-gallery.md)** is the only control that can create other controls. It has its own [scope](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues#try-a-different-app-structure). These advanced features can lead to unexpected behavior if the **Gallery** isn't configured correctly. Here are some things to watch out for when working with **Galleries**.
+The **[Gallery](controls/control-gallery.md)** is the only control that can create other controls. It has its own [scope](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues#try-a-different-app-structure). These advanced features can lead to unexpected behavior if the **Gallery** isn't configured correctly. This topic covers sest practices and recommendations when you work with **Galleries**.
 
 ## Prefer not to change gallery items from within the gallery
 
-It's easy to create unstable behavior if `OnChange` or `OnSelect` of child controls modifies the **Items** of the parent gallery. For example, a **Text input** in a gallery could have its `OnChange` property set to:
+It's easy to create unstable behavior if `OnChange` or `OnSelect` of child controls modifies the **Items** of the parent gallery. For example, a **Text input** in a gallery can have its `OnChange` property set to:
 
 ```powerapps-dot
 Patch(GalleryData, ThisItem, {Name: TextInput.Text})
-```
+``` 
 
 This is usually fine. Most controls will only trigger `OnChange` when users change their value directly. However, these controls can cause issues because they also trigger OnChange when the system changes their value:
 
@@ -66,9 +66,9 @@ Set(CurrentItem, Self.Selected)
 
 You can then use `CurrentItem` in other parts of the app to refer to the most recent item selected by the user rather than by the system.
 
-## Avoid using Gallery.Selected in a child control's event
+## Don't use Gallery.Selected in a child control's event
 
-The **Selected** property of the **Gallery** changes when users click or tap an item. However, this event is not related to events of child controls. Referring to `Gallery.Selected` in a child control's events can lead to unexpected results.
+The **Selected** property of the **Gallery** changes when users selects an item. However, this event isn't related to events of child controls. Referring to `Gallery.Selected` in a child control's events can lead to unexpected results.
 
 For example, when a user clicks a **Checkbox** in a **Gallery**, the following events occur:
 
