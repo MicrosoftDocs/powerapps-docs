@@ -47,7 +47,7 @@ App registration can also be done by an application developer or individual user
    - Set the **Redirect URI** value. This field is not optional for basic username/password authentication unless you intend to add a client secret or certificate to the registration. The redirect value must be a valid URI, however the specified URI is not required to exist.
    - Select **Register** to create the application registration. The app registration summary page is shown. Remain on that page.
 
-4. Set the **Application ID URI** value by selecting **Add an Application ID URI**. On the **Expose an API** page, set the URI value to your target environment (organization) base address (for example: https://firstcoffee.crm.dynamics.com).
+4. Set the **Application ID URI** value by first selecting **Add an Application ID URI** and then **+ Add a scope**. Set the URI value to your target environment (organization) base address.
 
 5. On the **Overview** page of your newly created app, hover the cursor over the **Application (client) ID** value, and select the copy to clipboard icon to copy the value. You'll need to specify this value later in your application's authentication code or app.config file where appropriate. Record the value somewhere.
 
