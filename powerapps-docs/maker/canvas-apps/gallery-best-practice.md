@@ -15,7 +15,7 @@ search.audienceType:
 
 The **[Gallery](controls/control-gallery.md)** is the only control that can create other controls. It has its own [scope](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues#try-a-different-app-structure). These advanced features can lead to unexpected behavior if the **Gallery** isn't configured correctly. This article covers best practices and recommendations when you're work with **Galleries**.
 
-## Prefer not to change gallery items from within the gallery
+## Don't change gallery items from within the gallery
 
 It's easy to create unstable behavior if `OnChange` or `OnSelect` of child controls modifies the **Items** of the parent gallery. For example, a **Text input** in a gallery can have its `OnChange` property set to:
 
