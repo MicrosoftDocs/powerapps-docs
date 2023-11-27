@@ -1143,7 +1143,7 @@ OData-Version: 4.0
 Use the `Prefer: odata.maxpagesize` request header to control the number of records returned. If you don't specify a number, up to 5,000 records may be returned for each request. You can't request a page size larger than 5,000.
 
 > [!NOTE]
-> Dataverse doesn't support the `$skip` query option, so you can't use the the combination of `$top` and `$skip` for paging. More information: [Use the $top query option](#use-the-top-query-option)
+> Dataverse doesn't support the `$skip` query option, so you can't use the combination of `$top` and `$skip` for paging. More information: [Use the $top query option](#use-the-top-query-option)
 
 The following example returns just the first two contact records:
 
@@ -1450,7 +1450,7 @@ GET accounts?$apply=filter(address1_stateorprovince eq 'WA')/groupby((primarycon
 ### Last created record date and time
 
 ```http
-GET accounts??$apply=aggregate(createdon with max as lastCreate)
+GET accounts?$apply=aggregate(createdon with max as lastCreate)
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
@@ -1630,9 +1630,9 @@ OData-Version: 4.0
 ```
 ### See also
 
-[Search across table data using Dataverse search](relevance-search.md)  
-[Work with Quick Find's search item limit](../quick-find-limit.md)  
-[Web API query data sample (C#)](samples/webapiservice-query-data.md)<br />
-[Web API query data sample (client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
+[Search for Dataverse records](../search/overview.md)<br />
+[Work with Quick Find's search item limit](../quick-find-limit.md)<br />
+[Web API Query Data Sample (C#)](samples/webapiservice-query-data.md)<br />
+[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)<br />

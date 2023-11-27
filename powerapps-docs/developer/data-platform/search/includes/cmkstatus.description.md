@@ -1,0 +1,1 @@
+Indicates the status of the customer managed key.
