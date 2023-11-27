@@ -13,7 +13,7 @@ search.audienceType:
 ---
 # Best practices and recommendations
 
-The **[Gallery](controls/control-gallery.md)** is the only control that can create other controls. It has its own [scope](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues#try-a-different-app-structure). These advanced features can lead to unexpected behavior if the **Gallery** isn't configured correctly. This article covers best practices and recommendations when you work with **Galleries**.
+The **[Gallery](controls/control-gallery.md)** is the only control that can create other controls. It has its own [scope](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues#try-a-different-app-structure). These advanced features can lead to unexpected behavior if the **Gallery** isn't configured correctly. This article covers best practices and recommendations when you're work with **Galleries**.
 
 ## Prefer not to change gallery items from within the gallery
 
