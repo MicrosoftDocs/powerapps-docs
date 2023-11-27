@@ -2300,7 +2300,7 @@
       - name: View Dataverse data in Microsoft Fabric
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
       - name: Build apps using Fabric data
-        href: ./data-platform/azure-synapse-link-builde-apps-with-fabric.md
+        href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
       - name: Ingest exported data with Azure Data Factory
