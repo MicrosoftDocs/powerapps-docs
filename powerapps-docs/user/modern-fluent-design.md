@@ -124,7 +124,7 @@ Switching themes or enabling dark mode isn't supported at this time.
 With the new look, Power Apps is no longer honoring [classic theme customizations](../maker/model-driven-apps/create-themes-organization-branding.md). You can, however, override the colors for the app header to match your organization branding with the new look. See [Use modern themes](../maker/model-driven-apps/modern-theme-overrides.md) for more details. Other theme customization options for the new look aren't available yet.  
 
 ### Is the new look available for custom pages or code components?
--  Code components: The modern theme in use is passed to PCF components allowing you to [style your components with modern theming](../developer/component-framework/fluent-modern-theming.md).
+-  Code components: The modern theme in use is passed to [Power Apps component framework](../developer/component-framework/overview.md) components allowing you to [style your components with modern theming](../developer/component-framework/fluent-modern-theming.md).
 -  Custom pages: The new look is not available for custom pages.  
 
 ### Do Dynamics 365 applications support the new look?
