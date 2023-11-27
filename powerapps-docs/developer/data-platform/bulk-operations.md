@@ -23,6 +23,9 @@ To get the best performance when you run operations on multiple rows of a Micros
 - [`UpsertMultiple` (preview)](upsertmultiple.md): Creates or updates multiple records of the same type in a single request.
 - [`DeleteMultiple` (preview)](deletemultiple.md): For elastic tables only. Deletes multiple records of the same type in a single request.
 
+> [!NOTE]
+> For guidance about options when performing bulk operations, such when to use these APIs compared to batch APIs like `ExecuteMultiple`, see [Optimize performance for bulk operations](optimize-performance-create-update.md).
+
 ## Examples
 
 The following code samples show how to use bulk operation messages. You can download the samples from [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
@@ -395,9 +398,6 @@ A key requirement of the bulk operation messages is that organizations must not 
 - When a bulk operation message is used, the respective `Create` and `Update` event occurs for each [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance in the `Targets` parameter. Any plug-ins or other event handlers for the corresponding individual events continue to work as they always have. You don't need to write new plug-ins to manage events raised by these messages.
 
 - When a single operation message is used, the respective bulk operation event occurs with an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing a *single* [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance passed in the `Targets` parameter.  You can move any logic that responds to single operation events to the more efficient bulk operation events and the logic is applied for both individual and multiple operations.
-
-   > [!NOTE]
-   > Don't migrate custom logic to the `DeleteMultiple` message until [Known issue: DeleteMultiple plug-ins not invoked for Delete](deletemultiple.md#deletemultiple-plug-ins-not-invoked-for-delete) is resolved.
 
 Before the introduction of bulk operation messages, all custom logic was on the single operation messages. That logic must continue to be applied when client applications use the bulk operation messages. For tables used with high-volume bulk operations, we recommend that you begin to move any synchronous logic from single message events to bulk operation events. If you're introducing new logic, use the bulk operation events rather than the single operation events.
 

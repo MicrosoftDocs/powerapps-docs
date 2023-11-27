@@ -81,5 +81,8 @@ In this quickstart, you created a sample that uses fictitious data. For more hel
 > [!div class="nextstepaction"]
 > [Generate an app](data-platform-create-app.md)
 
+### See also
+
+[Enterprise templates for Power Platform](/power-platform/solution-templates/overview)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

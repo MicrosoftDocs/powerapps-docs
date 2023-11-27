@@ -39,8 +39,6 @@ To learn how to use the new AI features in Power Apps, see:
 
 ## Prerequisites for the AI features in Power Apps
 
-The following are requirements to access the waitlist for this preview:
-
 - Your environment must be in the United States region.
 
 - Your account must have **English (United States)** as the browser language.
