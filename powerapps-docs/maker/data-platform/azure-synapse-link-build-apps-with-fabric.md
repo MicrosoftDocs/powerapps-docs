@@ -13,7 +13,7 @@ ms.custom: template-how-to
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Link to Microsoft Fabric feature in Dataverse enables extending your data and insights in Dynamics 365 and Power Apps in Microsoft Fabric. Bring your own data into Fabric and combine, reshape, and aggregate data with data from Dataverse. Use Fabric tools such as SQL, Spark, and dataflows to work with your data within Fabric. For example:
+Link to Microsoft Fabric feature in Microsoft Dataverse enables extending your data and insights in Dynamics 365 and Power Apps in Fabric. Bring your own data into Fabric and combine, reshape, and aggregate data with data from Dataverse. Use Fabric tools such as SQL, Spark, and dataflows to work with your data within Fabric. For example:
 
 - Combine financial data from Dynamics 365 with financial data from other systems to derive consolidated insights.
 - Merge historical data ingested into OneLake from legacy systems with current business data from Dynamics 365 and Dataverse.
@@ -38,7 +38,7 @@ With Dataverse virtual tables sourced with Fabric, your low-code app builders co
 
 If you don’t have Power BI premium license or Fabric capacity, you can sign up for a free [Fabric trial capacity](/fabric/get-started/fabric-trial)
 
-If you don't have a workspace with data, create a workspace with sample data using the [lakehouse tutorial here](/fabric/data-engineering/tutorial-build-lakehouse)
+If you don't have a workspace with data, create a workspace with sample data using the [lakehouse tutorial](/fabric/data-engineering/tutorial-build-lakehouse)
 
 ## Create a virtual table with Fabric data
 
@@ -52,13 +52,17 @@ Follow these steps to create a virtual table using Fabric data.
 2. On the command bar, select **New table** > **Create a virtual table**.
 3. Select **Microsoft Fabric** as the connection, and then select **Next**.
 4. Select a **Microsoft Fabric workspace** from the available list of workspaces. All workspace where you have access are available in the list.
-5. Choose a **Microsoft Fabric Lakehouse** from the drop-down list. All Lakehouses and data warehouses within the workspace selected previously are available to choose. 
-6. On the **Data** page, select a table from the list of tables shown from the Lakehouse. Select the **Configure table and column names that will be used in Dataverse** checkbox if you want to rename any of the fields or tables in Dataverse or to specify additional properties available for you in Dataverse. Select **Next**.
-7. If you selected the **Configure table and column names that will be used in Dataverse** checkbox, you are shown the table and column properties and you can modify them here. When you're done modifying them select **Next**.
+5. Choose a **Microsoft Fabric Lakehouse** from the drop-down list. All lakehouses and data warehouses within the workspace selected previously are available to choose.
+6. On the **Data** page, select a table from the list of tables shown from the lakehouse. Select **Configure table and column names that will be used in Dataverse** if you want to rename any of the fields or tables in Dataverse or to specify additional properties available for you in Dataverse. Select **Next**.
+7. If you selected the **Configure table and column names that will be used in Dataverse** checkbox, you're shown the table and column properties and you can modify them here. When you're done modifying them select **Next**.
 8. Review the information shown, and then select **Finish**.
 
 A new Dataverse virtual table is created with data from Fabric.
 
 ## Building apps and taking action with insights
-You can build a Power App with the virtual table sourced with Fabric data in Power Apps maker portal (make.powerapps.com). You can select the virtual table created above. when you are in the Tables menu, 
-select the **Create an app** option from the tool bar. You can provide a name for your app and build the app by following the wizard.
+
+You can build an app with the virtual table sourced with Fabric data in Power Apps (make.powerapps.com). From the Home page, select **Start with data** > **Select an existing table**, select the virtual table created earlier, and then select **Create app**. Provide a name for your app and build the app by following the wizard.
+
+## See also
+
+[Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
