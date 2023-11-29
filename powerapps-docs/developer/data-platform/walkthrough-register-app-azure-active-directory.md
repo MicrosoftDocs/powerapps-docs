@@ -57,36 +57,34 @@ App registration can also be done by an application developer or individual user
 
 6. On the **Overview** page of your newly created app, hover the cursor over the **Application (client) ID** value, and select the copy to clipboard icon to copy the ID value. Record the value somewhere. You'll need to specify this value later in your application's authentication code or app.config file where appropriate.
   
-6. Select **Manifest** tab, in the manifest editor, set the *allowPublicClient** property to **true** and click on **Save**.
-   
-    ![App registration Manifest.](media/app-registration-manifest-page.png "App registration Manifest")
+7. Select **Manifest** in the left navigation panel. In the manifest editor, set the `allowPublicClient` property to `true` and select **Save**.
 
-7. Select **API permissions** tab, click on **Add a permission**. 
+```JSON
+{
+    "id": "219db142-b8e2-4645-9434-44a4516b8968",
+    "acceptMappedClaims": null,
+    "accessTokenAcceptedVersion": null,
+    "addIns": [],
+    "allowPublicClient": true,
+    "appId": "4bfce595-7819-423c-b0bd-a053ff97fb99",
+    "appRoles": [],
+    "oauth2AllowUrlPathMatching": false,
+```
 
-    ![Add app permission.](media/azure-api-permissions-page.png "Add app permission")
+8. In the left navigation panel, select **API permissions** and then select **Add a permission**.
 
-8. Search for and choose **Dataverse** under the **APIs my organization uses** tab. If "Dataverse" is not found, then search for "Common Data Service".
+9. Select the **APIs my organization uses** tab, and then in the search field, enter "Dataverse" to search for the Dataverse entry. Select the Dataverse item in the search results list.
     
-    ![Select API.](media/app-registration-select-api-page.png "Select API")    
-    > [!TIP]
-    > If you are presented with more than one **Common Data Service** item in the search list, choose any one of them. In the next step the service name and URL will be shown. At that point you can go back to the API search and choose a different Dataverse list item if needed.
-    
-9.  Click on **Delegated permissions** and check the options and click on **Add permissions**. 
-    
-    ![Delegate Permissions.](media/app-registration-delegate-permissions-page.png "Delegate Permission")
+10. On the **Request API permissions** page,  select **Delegated permissions**. Next, select (check) the **user_impersonation** option, and then select **Add permissions**.
+
     > [!NOTE]
-    > A future revision of the form in step #8 will replace the Dynamics CRM logo and icon with Dataverse.
+    > For a server-to-server (S2S) scenario, you do not need to check the user_impersonation option. More information: [Use multi-tenant server-to-server authentication](use-multi-tenant-server-server-authentication.md)
 
 This completes the registration of your application in Microsoft Entra ID.
-
-## Additional configuration options
-
-If your application will support server-to-server connections, see [Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md)
   
 ### See also
 
-[Application registration in Microsoft Entra ID](/azure/active-directory/develop/active-directory-integrating-applications)<br />
+[Application registration in Microsoft Entra ID](/azure/active-directory/develop/active-directory-integrating-applications)  
 [Authenticate Users with Dataverse Web Services](authentication.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
