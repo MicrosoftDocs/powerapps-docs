@@ -51,7 +51,7 @@ App registration can also be done by an application developer or individual user
 
 4. Select **Register** to create the application registration. The app registration overview page is shown. Remain on that page.
 
-    :::image type="content" source="media/app-registration-overview-page.png" alt-text="App registration overview.":::
+    :::image type="content" source="media/app-registration-overview-page.png" alt-text="App registration overview." lightbox="media/app-registration-overview-page.png":::
 
 5. Set the **Application ID URI** value by first selecting **Add an Application ID URI** and then **+ Add a scope**. Set the URI value to your target environment (organization) base address.
 
