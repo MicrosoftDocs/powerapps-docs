@@ -86,6 +86,19 @@ If you create an app of a list from the SharePoint Online command bar, the app a
 > [!NOTE]
 > Apps created from the list currently do not show in the Power Apps Mobile.
 
+## Use Sharepoint or SQL on-premises
+
+ Follow these steps if you're using an external on-premises data source such as SharePoint or SQL on-premises to create an app.
+ 
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+2. On the left navigation, select **Create**.
+3. Depending on the type of data source that you're connecting to, select **SharePoint** or **SQL**.
+4. Select **New connection** and then select **SharePoint** or **SQL**. 
+5. Select **Connect using on-premises data gateway** and enter the required information and then select **Create**. <br> When your connection is ready, select it and then you'll see a list of tables available for the database connection.
+6. Select a table and then select **Connect**.
+
+ 
+
 ## Next steps
 In this topic, you created an app to manage data in a list. As a next step, create an app from a more complex list, and then customize the app (starting with the browse screen) to better suit your needs.
 
