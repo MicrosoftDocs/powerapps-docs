@@ -35,7 +35,7 @@ For this tutorial you need install the following components:
 
 1. [Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) (Ensure the Add to PATH option is select)
 1. [node.js](https://nodejs.org/en/download/) (LTS version is recommended)
-1. [Microsoft Power Platform CLI](/powerapps/developer/data-platform/powerapps-cli#install-power-apps-cli) (Use either Power Platform Tools for Visual Studio Code or Power Platform CLI for Windows)
+1. [Microsoft Power Platform CLI](//developer/data-platform/-cli#install-power-apps-cli) (Use either Power Platform Tools for Visual Studio Code or Power Platform CLI for Windows)
 1. .NET Build tools by installing one of the following: (At minimum select the workload `.NET build tools`.)
    - Visual Studio 2022
       - [Visual Studio 2022 for Windows & Mac](https://visualstudio.microsoft.com/downloads/). 
@@ -955,7 +955,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    > Re build the solution file using the command `msbuild/property:configuration=Release` and reimport the solution into Dataverse and run the solution checker. More information:  [Debug code components](debugging-custom-controls.md).
 
 1. The generated solution zip file is located in the `Solution\bin\debug` folder.
-1. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+1. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 > [!NOTE]
 > Manually publish the customizations if you are importing unmanaged solution.
