@@ -49,6 +49,8 @@ Watch this video to learn how to create a canvas app from a list:
    - To create a single-page gallery app with a responsive layout, choose either:
       - **Start with data** > **Select external data** > **From SharePoint**.
       - **Start with a page design** > **Gallery connected to external data** > **From SharePoint**.
+     > [!NOTE]
+     > If you're using an external data source on SharePoint or SQL, on-premises connections aren't supported..
    - To create a three screen mobile app, select **Start with an app template** > **From SharePoint**.
 1. If you don't have a SharePoint connection already created, you'll be prompted to. To select a different connection, select on the **...** button to switch account or create a new connection. 
 1. Enter the SharePoint URL and then select **Connect**. Or, select a recent site.
