@@ -16,7 +16,7 @@ search.audienceType:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Virtual entity that represents AAD user
+Virtual entity that represents Microsoft Entra ID
 
 **Added by**: Metadata Extension Solution
 
@@ -37,8 +37,8 @@ Virtual entity that represents AAD user
 |Property|Value|
 |--------|-----|
 |CollectionSchemaName|aadusers|
-|DisplayCollectionName|AAD Users|
-|DisplayName|AAD User|
+|DisplayCollectionName|Microsoft Entra IDs|
+|DisplayName|Microsoft Entra ID|
 |EntitySetName|aadusers|
 |IsBPFEntity|False|
 |LogicalCollectionName|aadusers|
@@ -54,33 +54,41 @@ Virtual entity that represents AAD user
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [aaduserId](#BKMK_aaduserId)
-- [AccountEnabled](#BKMK_AccountEnabled)
-- [BusinessPhones](#BKMK_BusinessPhones)
-- [City](#BKMK_City)
-- [CompanyName](#BKMK_CompanyName)
-- [DisplayName](#BKMK_DisplayName)
-- [GivenName](#BKMK_GivenName)
-- [id](#BKMK_id)
-- [ImAddresses](#BKMK_ImAddresses)
-- [JobTitle](#BKMK_JobTitle)
-- [Mail](#BKMK_Mail)
-- [MobilePhone](#BKMK_MobilePhone)
-- [OfficeLocation](#BKMK_OfficeLocation)
-- [PostalCode](#BKMK_PostalCode)
-- [PreferredLanguage](#BKMK_PreferredLanguage)
-- [StreetAddress](#BKMK_StreetAddress)
-- [surname](#BKMK_surname)
-- [UserPrincipalName](#BKMK_UserPrincipalName)
-- [UserType](#BKMK_UserType)
+- [aaduser table/entity reference](#aaduser-tableentity-reference)
+  - [Messages](#messages)
+  - [Properties](#properties)
+  - [Writable columns/attributes](#writable-columnsattributes)
+    - [ aaduserId](#-aaduserid)
+    - [ AccountEnabled](#-accountenabled)
+      - [AccountEnabled Choices/Options](#accountenabled-choicesoptions)
+    - [ BusinessPhones](#-businessphones)
+    - [ City](#-city)
+    - [ CompanyName](#-companyname)
+    - [ DisplayName](#-displayname)
+    - [ GivenName](#-givenname)
+    - [ id](#-id)
+    - [ ImAddresses](#-imaddresses)
+    - [ JobTitle](#-jobtitle)
+    - [ Mail](#-mail)
+    - [ MobilePhone](#-mobilephone)
+    - [ OfficeLocation](#-officelocation)
+    - [ PostalCode](#-postalcode)
+    - [ PreferredLanguage](#-preferredlanguage)
+    - [ StreetAddress](#-streetaddress)
+    - [ surname](#-surname)
+    - [ UserPrincipalName](#-userprincipalname)
+    - [ UserType](#-usertype)
+  - [Read-only columns/attributes](#read-only-columnsattributes)
+    - [ CreatedDateTime](#-createddatetime)
+    - [See also](#see-also)
 
 
 ### <a name="BKMK_aaduserId"></a> aaduserId
 
 |Property|Value|
 |--------|-----|
-|Description|Unique identifier of an aad user.|
-|DisplayName|AAD user id|
+|Description|Unique identifier of a Microsoft Entra ID.|
+|DisplayName|Id|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -93,8 +101,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates if the Account of an AAD User is enabled.|
-|DisplayName|AAD User Account Enabled|
+|Description|Indicates if the Account of an Microsoft Entra ID is enabled.|
+|DisplayName|Microsoft Entra ID Account Enabled|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|accountenabled|
@@ -196,8 +204,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|A unique identifer for AAD User|
-|DisplayName|A unique identifer for AAD User|
+|Description|A unique identifer for Microsoft Entra ID|
+|DisplayName|A unique identifer for Microsoft Entra ID|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -393,7 +401,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Property|Value|
 |--------|-----|
 |DateTimeBehavior|UserLocal|
-|Description|Date and time when the AAD user was created.|
+|Description|Date and time when the Microsoft Entra ID was created.|
 |DisplayName|Created Date Time|
 |Format|DateAndTime|
 |IsValidForForm|True|
