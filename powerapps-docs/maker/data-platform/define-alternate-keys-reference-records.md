@@ -79,6 +79,8 @@ Only these kinds of columns can be used to create alternate keys:
 > [!NOTE]
 > Columns that have the **Enable column security** property enabled can’t be used as an alternate key. More information: [Field security tables]( /power-apps/developer/data-platform/field-security-entities)
 
+When NULL values are used in alternate key columns, uniqueness will not be enforced. To avoid duplicate records, do not use null values in the columns defined in the unique constraint of the alternate key.
+
 ### Number of keys
 
 You can define up to ten different keys for a table.
