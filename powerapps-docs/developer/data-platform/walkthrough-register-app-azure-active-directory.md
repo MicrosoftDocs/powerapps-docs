@@ -26,18 +26,20 @@ App registration can also be done by an application developer or individual user
 
 ## Prerequisites  
 
-- An Microsoft Entra subscription for application registration. A trial account will also work.  
+- A Microsoft Entra subscription for application registration. A trial account will also work.
+
+> [!NOTE]
+> If you don't have an Azure tenant (account) or you do have one but your Microsoft 365 subscription with Dataverse is not available in your Azure subscription, follow the instructions in the topic [Set up Microsoft Entra ID access for your Developer Site](/office/developer-program/microsoft-365-developer-program) to associate the two accounts.
+>
+> If you don't have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won't be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Microsoft Entra ID Pricing Details](https://azure.microsoft.com/pricing/details/active-directory/)  
   
 ## Create an application registration
+
+To create an application registration, follow these steps.
   
 1. Sign in to the Microsoft Azure [portal](https://portal.azure.com/#home) using an account with administrator permission. You must use an account in the same Microsoft 365 subscription (tenant) as you intend to register an app with. On the **Home** page of the portal under **Azure services** select **Microsoft Entra ID**.
 
-    Alternately, you can also access the Azure portal through the Microsoft 365 [Admin center](https://admin.microsoft.com/adminportal) by first choosing the **All admin centers** item in the left navigation pane, select **Microsoft Entra**, and then select **Go to Microsoft Entra ID**. Next, in the left navigation pane of the Microsoft Entra admin center, expand the  **Applications** node.
-  
-   > [!NOTE]
-   > If you don't have an Azure tenant (account) or you do have one but your Microsoft 365 subscription with Dataverse is not available in your Azure subscription, following the instructions in the topic [Set up Microsoft Entra ID access for your Developer Site](/office/developer-program/microsoft-365-developer-program) to associate the two accounts.
-   >
-   > If you don't have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won't be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Microsoft Entra ID Pricing Details](https://azure.microsoft.com/pricing/details/active-directory/)  
+    Alternately, you can also access the Azure portal through the Microsoft 365 [Admin center](https://admin.microsoft.com/adminportal) by first choosing the **All admin centers** item in the left navigation pane, select **Microsoft Entra**, and then select **Go to Microsoft Entra ID**. Next, in the left navigation pane of the Microsoft Entra admin center, expand the  **Applications** node. 
   
 2. In the left navigation pane select **App registrations** and then select **+ New registration** on the **App registrations** page.
 
@@ -59,8 +61,8 @@ App registration can also be done by an application developer or individual user
   
 7. Select **Manifest** in the left navigation panel. In the manifest editor, set the `allowPublicClient` property to `true` and select **Save**.
 
-```JSON
-{
+    ```JSON
+    {
     "id": "219db142-b8e2-4645-9434-44a4516b8968",
     "acceptMappedClaims": null,
     "accessTokenAcceptedVersion": null,
@@ -69,12 +71,12 @@ App registration can also be done by an application developer or individual user
     "appId": "4bfce595-7819-423c-b0bd-a053ff97fb99",
     "appRoles": [],
     "oauth2AllowUrlPathMatching": false,
-```
+    ```
 
 8. In the left navigation panel, select **API permissions** and then select **Add a permission**.
 
 9. Select the **APIs my organization uses** tab, and then in the search field, enter "Dataverse" to search for the Dataverse entry. Select the Dataverse item in the search results list.
-    
+
 10. On the **Request API permissions** page,  select **Delegated permissions**. Next, select (check) the **user_impersonation** option, and then select **Add permissions**.
 
     > [!NOTE]
