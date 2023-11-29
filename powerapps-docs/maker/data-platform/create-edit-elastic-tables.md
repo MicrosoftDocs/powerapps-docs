@@ -139,7 +139,11 @@ You create an elastic table just like any other new table in Dataverse.
 1. On the right properties pane, expand **Advanced options**.
 1. Select **Elastic** as the table **Type**.
    :::image type="content" source="media/elastic-table-type.png" alt-text="Select Elastic as the table Type":::
-1. Select the properties you want, and then select **Save**. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+1. Select the properties you want, and then select **Save**.
+  
+The time to live column is automatically created for an elastic table. You can add the time-period value in seconds, as required. The data will be auto removed post the specified time-period.
+
+More information about Tables: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
 ## Known issues
 
