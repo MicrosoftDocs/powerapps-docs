@@ -29,7 +29,9 @@ The AI assistant is available from the Power Apps home screen. You can tell the 
 
 ## Prerequisites
 
-Prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
+- Prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
+- This feature is available in English only accross regions. To turn data movement across regions, see [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
+
 
 
 ## Step 1: Create an app with the help of AI
