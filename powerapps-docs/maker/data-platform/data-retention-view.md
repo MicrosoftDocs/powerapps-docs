@@ -23,7 +23,11 @@ To view retained data in an environment requires the system administrator securi
 
 ## Grant privileges to view retained data
 
-Imagine an auditor requires access to long term data retained for the accounts table. To provide the auditor access, a Power Platform admin creates a new role, for example a role named *LTRAccounts Access Role* and grants organization scope read privilege to the accounts table. Then add the auditor's Power Platform user account to the security role. When the auditor's job is complete, it's a best practice to remove the auditor from the security role. For more information about creating and editing Dataverse security roles, go to [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
+Imagine an auditor requires access to long term data retained for the accounts table. To provide the auditor access, a Power Platform admin creates a new role, for example a role named *LTRAccounts Access Role* and grants organization scope read privilege to the accounts table. Then add the auditor's Power Platform user account to the security role. When the auditor's job is complete, it's a best practice to remove the auditor from the security role. 
+![image](https://github.com/MicrosoftDocs/powerapps-docs-pr/assets/29776190/ad47d0c4-9968-4dd9-87e7-d31b631e478e)
+
+For more information about creating and editing Dataverse security roles, go to [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role).
+
 
 ## View retained data using edit filters from a model-driven app
 
