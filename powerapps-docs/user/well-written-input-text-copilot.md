@@ -36,7 +36,7 @@ When a user is trying to quickly input text into text boxes in an app, the user 
 
 - To use this feature, you must be a premium user. 
 - This capability may be subject to usage limits or capacity throttling. 
-- Your environment must be in the United States region or the cross-geo flag must be enabled.
+- Your environment must be in the United States region or the [**Move data across regions**](/power-platform/admin/geographical-availability-copilot) checkbox must be selected in Power Platform admin center.
 - This feature doesn’t support non-English language input. 
 
 ## Known issue
