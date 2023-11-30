@@ -41,7 +41,7 @@ When a user is trying to quickly input text into text boxes in an app, the user 
 
 ## Known issue
 
-If you get this error: **There was a problem using this description. Try again.**
+**Error**: There was a problem using this description. Try again.
 
 **Resolution**: This may be due to capacity limits. We recommend that you give the system some time before trying again. It may also be that you have not given the system enough information to properly generate output.  Add more details to try again.
 
