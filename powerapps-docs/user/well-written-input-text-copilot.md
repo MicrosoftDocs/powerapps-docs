@@ -19,7 +19,7 @@ search.audienceType:
 
 [This article is prerelease documentation and is subject to change.]
 
-End users can use Copilot to quickly generate well-written text that can be used as input text in text boxes in apps made with Power Apps. This saves time for end users as they won’t have to worry about creating well-written text themselves that meets grammar rules. This is especially helpful for end users who are using apps that aren’t in their native language. 
+End users can use Copilot to quickly generate well-written text that can be used as input text in text boxes in apps made with Power Apps. Using Copilot saves time for end users as they won’t have to worry about creating well-written text themselves that meets grammar rules. Copilot is especially helpful for end users who are using apps that aren’t in their native language. 
 
 > {!Important]
 > - This is a preview feature.
@@ -28,7 +28,7 @@ End users can use Copilot to quickly generate well-written text that can be used
 
 ## How this feature works
 
-When a user is trying to quickly input text into text boxes in an app, the user might worry about forming complete sentences and having grammatically-correct text. With the assistance of Copilot, a user can quickly jot down their ideas in a text box without worrying about format and grammar. Copilot corrects grammar errors and eloquently refines the user's ideas. The user can also change the tone and length of the output to fit their scenario.
+When a user is trying to quickly input text into text boxes in an app, the user might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, a user can quickly jot down their ideas in a text box without worrying about format and grammar. Copilot corrects grammar errors and eloquently refines the user's ideas. The user can also change the tone and length of the output to fit their scenario.
 
 ## How to use this feature
 
@@ -43,6 +43,6 @@ When a user is trying to quickly input text into text boxes in an app, the user 
 
 **Error**: There was a problem using this description. Try again.
 
-**Resolution**: This may be due to capacity limits. We recommend that you give the system some time before trying again. It may also be that you have not given the system enough information to properly generate output.  Add more details to try again.
+**Resolution**: This error may be due to capacity limits. We recommend that you give the system some time before trying again. It may also be that you have not given the system enough information to properly generate output.  Add more details to try again.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
