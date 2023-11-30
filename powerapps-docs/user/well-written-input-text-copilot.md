@@ -15,9 +15,9 @@ search.audienceType:
 
 ---
 
-# FAQ about using Draft with Copilot in the Web Player
+# Enter well-written, input text in Power Apps using Copilot
 
-These frequently asked questions (FAQ) describe the AI impact of Power Apps Draft with Copilot feature. 
+End users can use Copilot to quickly generate well-written text that can be used as input text in text boxes in apps made with Power Apps. This saves time for end users as they won’t have to worry about creating well-written text themselves that meets grammar rules. This is especially helpful for end users who are using apps that aren’t in their native language. 
 
 ##  What is Draft with Copilot? 
 
@@ -52,4 +52,4 @@ Before releasing the Copilot feature in preview, we conducted extensive testing 
 If you get this error, **There was a problem using this description. Try again.**, this may be due to capacity limits. We recommend you give the system some time before trying again. It may also be that you have not given the system enough information to properly generate output.  Add more details to try again.
 
  
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
