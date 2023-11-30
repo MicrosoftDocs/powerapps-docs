@@ -1,5 +1,5 @@
 ---
-title: Enter well-written, input text in Power Apps using Copilot
+title: Enter well-written, input text in Power Apps using Copilot (preveiw)
 description: Learn how users can use Copilot to quickly generate well-written text that can be used as input text in text boxes in apps made with Power Apps.
 ms.date: 12/01/2023
 ms.custom: 
@@ -15,26 +15,23 @@ search.audienceType:
 
 ---
 
-# Enter well-written, input text in Power Apps using Copilot
+# Enter well-written, input text in Power Apps using Copilot (preview)
+
+[This article is prerelease documentation and is subject to change.]
 
 End users can use Copilot to quickly generate well-written text that can be used as input text in text boxes in apps made with Power Apps. This saves time for end users as they won’t have to worry about creating well-written text themselves that meets grammar rules. This is especially helpful for end users who are using apps that aren’t in their native language. 
 
-##  What is Draft with Copilot? 
+> {!Important]
+> - This is a preview feature.
+> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-Draft with Copilot is a feature for end users of Power Apps who want to create well-written input while saving time. It surfaces in multiline text input boxes and rich text editors.
+## How this feature works
 
-## What are the system’s capabilities? 
+When a user is trying to quickly input text into text boxes in an app, the user might worry about forming complete sentences and having grammatically-correct text. With the assistance of Copilot, a user can quickly jot down their ideas in a text box without worrying about format and grammar. Copilot corrects grammar errors and eloquently refines the user's ideas. The user can also change the tone and length of the output to fit their scenario.
 
-It takes the users input and uses advanced language models to generate content suggestions, correcting grammar errors and eloquently refining the users' ideas. The user can also change the tone and length of the output to fit their scenario.
+## How to use this feature
 
-## What is the system’s intended use? 
-
-As an AI assistant to end users, it provides content suggestions and refined text based on the users' input.
-
-## How was Draft with Copilot evaluated? What metrics are used to measure performance? 
-
-We evaluate the feature both qualitatively and quantitatively. To assess the quality of the feature, we are conducting user studies with end users to gather their feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. Additionally, we are monitoring telemetry data to track the number of end users who tried the feature, the success rate of the feature, and the ratio of positive to negative feedback.
-Before releasing the Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, provide feedback. Your feedback is used to enhance Microsoft's products and services. Your organization's IT admins have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
+## Limitations
 
 ## What are the limitations of Draft with Copilot? How can users minimize the impact of the Draft with Copilot limitations when using the system? 
 
