@@ -1,13 +1,18 @@
 ---
-title: FAQ for Draft with Copilot in the Web Player
-description: FAQ that discusses using Draft with Copilot and the key considerations for making use of this technology responsibly.
-ms.date: 11/28/2023
+title: Enter well-written, input text in Power Apps using Copilot
+description: Learn how users can use Copilot to quickly generate well-written text that can be used as input text in text boxes in apps made with Power Apps.
+ms.date: 12/01/2023
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
+ms.component: pa-user
+ms.subservice: end-user
 author: jordanchodak
 ms.author: jordanchodak
-ms.reviewer: 
+ms.reviewer: sericks
+search.audienceType: 
+  - enduser
+
 ---
 
 # FAQ about using Draft with Copilot in the Web Player
