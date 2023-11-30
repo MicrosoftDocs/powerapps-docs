@@ -46,12 +46,10 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
     :::image type="content" source="media/working-with-formulas/formula-bar.png" alt-text="Formula bar.":::
 
     1. *Property list*:  Each control and screen has a [set of properties](reference-properties.md).  Use this list to select a specific property.  
-    1. *Formula*:  The formula to be calculated for this property, made up of [values, operators, and functions](formula-reference.md).
+    1. *Formula*:  The formula to be calculated for this property, made up of [values, operators, and functions](formula-reference.md). As you type, Intellisense helps you with recommendations for formula, syntax, and errors.
     1. *Selected control*: In the formula bar, you can see and edit properties for the selected control or for the screen if no controls are selected.
 
 1. Add a **[Label](controls/control-text-box.md)** control to the screen.
-
-    :::image type="content" source="media/working-with-formulas/add-a-label.png" alt-text="Added a TextBox control.":::
 
     When you add a label, the property list automatically shows the **[Text](controls/properties-core.md)** property, which drives what the control shows. By default, the value of this property is **"Text"**.  
 
