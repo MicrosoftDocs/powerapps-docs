@@ -2,7 +2,7 @@
 title: "Tutorial: Register an app with Microsoft Entra ID (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to register an application with Microsoft Entra ID for authentication with Microsoft Dataverse web services."
 keywords: ""
-ms.date: 11/28/2023
+ms.date: 12/01/2023
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
@@ -55,11 +55,9 @@ To create an application registration, follow these steps.
 
     :::image type="content" source="media/app-registration-overview-page.png" alt-text="App registration overview." lightbox="media/app-registration-overview-page.png":::
 
-5. Set the **Application ID URI** value by first selecting **Add an Application ID URI** and then **+ Add a scope**. Set the URI value to your target environment (organization) base address.
-
-6. On the **Overview** page of your newly created app, hover the cursor over the **Application (client) ID** value, and select the copy to clipboard icon to copy the ID value. Record the value somewhere. You'll need to specify this value later in your application's authentication code or app.config file where appropriate.
+5. On the **Overview** page of your newly created app, hover the cursor over the **Application (client) ID** value, and select the copy to clipboard icon to copy the ID value. Record the value somewhere. You'll need to specify this value later in your application's authentication code or app.config file where appropriate.
   
-7. Select **Manifest** in the left navigation panel. In the manifest editor, set the `allowPublicClient` property to `true` and select **Save**.
+6. Select **Manifest** in the left navigation panel. In the manifest editor, set the `allowPublicClient` property to `true` and select **Save**.
 
     ```JSON
     {
@@ -73,11 +71,11 @@ To create an application registration, follow these steps.
     "oauth2AllowUrlPathMatching": false,
     ```
 
-8. In the left navigation panel, select **API permissions** and then select **Add a permission**.
+7. In the left navigation panel, select **API permissions** and then select **Add a permission**.
 
-9. Select the **APIs my organization uses** tab, and then in the search field, enter "Dataverse" to search for the Dataverse entry. Select the Dataverse item in the search results list.
+8. Select the **APIs my organization uses** tab, and then in the search field, enter "Dataverse" to search for the Dataverse entry. Select the Dataverse item in the search results list.
 
-10. On the **Request API permissions** page,  select **Delegated permissions**. Next, select (check) the **user_impersonation** option, and then select **Add permissions**.
+9. On the **Request API permissions** page,  select **Delegated permissions**. Next, select (check) the **user_impersonation** option, and then select **Add permissions**.
 
     > [!NOTE]
     > For a server-to-server (S2S) scenario, you do not need to check the user_impersonation option. More information: [Use multi-tenant server-to-server authentication](use-multi-tenant-server-server-authentication.md)
