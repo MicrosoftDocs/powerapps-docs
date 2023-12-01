@@ -1321,7 +1321,7 @@
   - name: Performance and optimization
     items:
     - name: Overview
-      href: ./canvas/create/performant-apps-overview.md
+      href: ./canvas/create/create-performant-apps-overview.md
     - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
     - name: Small data payload
