@@ -17,6 +17,6 @@ searchScope:
   - "Power Apps"
 ---
 
-# Mobile offline overview
+# Work with files and images in offline canvas apps
 
 Add content here.
