@@ -6,7 +6,7 @@ author: TashasEv
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 12/13/2021
+ms.date: 12/1/2023
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
@@ -30,30 +30,12 @@ With **Find and Replace** capability, you can search for combinations of letters
 
 ## Launch Find and Replace
 
-You can launch the **Find and Replace** control in the formula bar using the **Find and replace** button, or shortcut keys. You can also pre-populate text in the search input.
+You can launch the **Find and Replace** control in the formula bar using the Find and replace shortcut keys, **Ctrl+H**. You can also pre-populate text in the search input.
 
 To get started, [create a new app](get-started-test-drive.md), or [edit an existing app](edit-app.md) in Power Apps Studio. Once open, use any of the following methods to launch the **Find and Replace** control.
 
-### Method 1: Use the Find and Replace button
 
-1. Select the control or property that you want to edit.
-
-1. Select the drop-down on the right-side of the formula bar to show the **Find and Replace** control.
-
-    :::image type="content" source="media/formula-bar-find-replace/expand-button.png" alt-text="The expand button on the right hand side of the formula bar":::
-
-    > [!TIP]
-    > You can also drag the formula bar down to expand the formula bar making it easier to read complex expressions.
-
-1. Select **Find and replace** from the bottom of the formula bar.
-
-    :::image type="content" source="media/formula-bar-find-replace/find-replace-button.png" alt-text="The Find and Replace button underneath the formula bar":::
-
-    **Find and Replace** control appears on the upper-right hand side of the formula bar.
-
-    :::image type="content" source="media/formula-bar-find-replace/find-replace-formula-bar.png" alt-text="The Find and Replace control appears inside the formula bar":::
-
-### Method 2: Use shortcut keys
+### Method 1: Use shortcut keys
 
 1. Select the control or property that you want to edit.
 
@@ -61,7 +43,10 @@ To get started, [create a new app](get-started-test-drive.md), or [edit an exist
 
     :::image type="content" source="media/formula-bar-find-replace/shortcut-keys.gif" alt-text="An animation showing the Find and Replace control launching by pressing Ctrl + F to launch Find and pressing Ctrl + H to launch Find and Replace":::
 
-### Method 3: Launch Find and Replace with text already selected
+    > [!TIP]
+    > You can also drag the formula bar down to expand the formula bar making it easier to read complex expressions.
+
+### Method 2: Launch Find and Replace with text already selected
 
 You can also launch the control pre-populated with text from your formula that you wish to search for.
 
