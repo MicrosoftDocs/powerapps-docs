@@ -1330,7 +1330,7 @@
       href: ./canvas-apps/optimized-query-data-patterns.md 
     - name: Conservative use of collections   
       href: ./canvas-apps/conservative-use-of-collections.md
-    - name: Speed up app or page load.
+    - name: Speed up app or page load
       href: ./canvas-apps/fast-app-page-load.md
     - name: Efficient calculations
       href: ./canvas-apps/efficient-calculations.md
