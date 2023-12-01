@@ -30,7 +30,7 @@ With **Find and Replace** capability, you can search for combinations of letters
 
 ## Launch Find and Replace
 
-You can launch the **Find and Replace** control in the formula bar using the Find and replace shortcut keys, **Ctrl+H**. You can also pre-populate text in the search input.
+You can launch the **Find and Replace** control in the formula bar using the find and replace shortcut keys, **Ctrl+H**. You can also pre-populate text in the search input.
 
 To get started, [create a new app](get-started-test-drive.md), or [edit an existing app](edit-app.md) in Power Apps Studio. Once open, use any of the following methods to launch the **Find and Replace** control.
 
