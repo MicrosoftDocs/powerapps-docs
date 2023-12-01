@@ -21,7 +21,8 @@ In this quick start you will learn:
 - How to write and run a script using the functions you created.
 
 > [!NOTE]
-> This should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
+> - This should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
+> - You can find the files representing the result of this article in [Sample: PowerShell functions using Dataverse Web API](samples/powershell-web-api-samples.md)
 
 ## Prerequisites
 
@@ -51,11 +52,13 @@ You can use an access token generated using the Azure CLI [az account get-access
    ```
 
    > [!NOTE]
-   > This example uses the device code flow as a security best practice. We don't recommend setting the user name and password. Using user name and password will not work when your organization requires multi-factor authentication. More information: [Username and Password flow](/entra/identity-platform/scenario-desktop-acquire-token-username-password)
-   >
+   > This example uses the device code flow as a security best practice. We don't recommend setting the user name and password as shown below:
+   > 
    > ```powershell
    > az login -u you@yourorg.com -p yourPassword | Out-Null
    > ```
+   >
+   > Using user name and password will not work when your organization requires multi-factor authentication. More information: [Username and Password flow](/entra/identity-platform/scenario-desktop-acquire-token-username-password)
 
 1. Press <kbd>Enter</kbd> to run the command. The `az login` command is configured to use a device code and to not require an Azure subscription. You need to login using a web browser. You will see output like the following:
 
@@ -650,157 +653,6 @@ Edit your functions file to add this `Get-Error-Message` function.
 
 TODO: Using Try/Catch and parsing errors
 
-## Function Definitions file
-
-This is the complete file with all the logic you have by following the steps in this article. You can add additional functions and re-use these function definitions to work with the Dataverse Web API using PowerShell.
-
-```powershell
-$environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
-
-## login if not already logged in
-if($null -eq (az account tenant list --only-show-errors))
-{
-   az login --allow-no-subscriptions --use-device-code | Out-Null
-}
-# get token
-$token = az account get-access-token --resource=$environmentUrl --output json
-$tokenObj = $token | ConvertFrom-Json
-# get minutes to token expiration
-$minutesToTokenExpire =  (New-TimeSpan -End ([DateTime]$tokenObj.expiresOn)).Minutes
-Write-Host "Token will expire in $minutesToTokenExpire minutes."
-# get accessToken
-$accessToken = $tokenObj.accessToken
-
-Write-Host "Connected to $environmentUrl"
-
-# Define common set of headers
-$baseHeaders = @{
-   'Authorization'    = "Bearer $accessToken"
-   'OData-MaxVersion' = '4.0'
-   'OData-Version'    = '4.0'
-}
-# Header for POST operations
-$postHeaders = $baseHeaders.Clone()
-$postHeaders.Add('Content-Type', 'application/json')
-
-# Header for GET operations that have annotations
-$getHeaders = $baseHeaders.Clone()
-$getHeaders.Add('If-None-Match', $null)
-$getHeaders.Add('Prefer', 'odata.include-annotations="*"')
-
-# WhoAmI message
-function Get-WhoAmI {
-   $WhoAmIRequest = @{
-      Uri     = $environmentUrl + 'api/data/v9.2/WhoAmI'
-      Method  = 'Get'
-      Headers = $baseHeaders
-   }
-   return Invoke-RestMethod @WhoAmIRequest
-}
-
-# Retrieve records that match a query
-function Get-Records {
-   param (
-      [Parameter(Mandatory)] [String] $setName,
-      [Parameter(Mandatory)] [String] $query
-   )
-   $uri = $environmentUrl + 'api/data/v9.2/' + $setName + $query
-
-   $RetrieveMultipleRequest = @{
-      Uri     = $uri
-      Method  = 'Get'
-      Headers = $getHeaders
-   }
-   Invoke-RestMethod @RetrieveMultipleRequest
-}
-
-# Create a record
-function New-Record {
-   param (
-      [Parameter(Mandatory)] [String] $setName,
-      [Parameter(Mandatory)] $body
-   )
-
-   $postHeaders = $baseHeaders.Clone()
-   $postHeaders.Add('Content-Type', 'application/json')
-
-   $CreateRequest = @{
-      Uri     = $environmentUrl + 'api/data/v9.2/' + $setName
-      Method  = 'Post'
-      Headers = $postHeaders
-      Body    = ConvertTo-Json $body
-   }
-   Invoke-RestMethod @CreateRequest  -ResponseHeadersVariable rh
-   $url = $rh['OData-EntityId']
-   $selectedString = Select-String -InputObject $url -Pattern '(?<=\().*?(?=\))'
-   return [System.Guid]::New($selectedString.Matches.Value.ToString())
-}
-
-# Retrieve a record using the primary key
-function Get-Record {
-   param (
-      [Parameter(Mandatory)] [String] $setName,
-      [Parameter(Mandatory)] [Guid] $id,
-      [String] $query
-   )
-
-   $uri = $environmentUrl + 'api/data/v9.2/' + $setName
-   $uri = $uri + '(' + $id.Guid + ')' + $query
-
-   $getHeaders = $baseHeaders.Clone()
-   $getHeaders.Add('If-None-Match', $null)
-   $getHeaders.Add('Prefer', 'odata.include-annotations="*"')
-
-   $RetrieveRequest = @{
-      Uri     = $uri
-      Method  = 'Get'
-      Headers = $getHeaders
-   }
-   Invoke-RestMethod @RetrieveRequest
-}
-
-# Update a record
-function Update-Record {
-   param (
-      [Parameter(Mandatory)] [String] $setName,
-      [Parameter(Mandatory)] [Guid] $id,
-      [Parameter(Mandatory)] $body
-   )
-   $uri = $environmentUrl + 'api/data/v9.2/' + $setName
-   $uri = $uri + '(' + $id.Guid + ')'
-
-   # Header for Update operations
-   $updateHeaders = $baseHeaders.Clone()
-   $updateHeaders.Add('Content-Type', 'application/json')
-   $updateHeaders.Add('If-Match', '*') # Prevent Create
-
-   $UpdateRequest = @{
-      Uri     = $uri
-      Method  = 'Patch'
-      Headers = $updateHeaders
-      Body    = ConvertTo-Json $body
-   }
-   Invoke-RestMethod @UpdateRequest
-}
-
-# Delete a record
-function Remove-Record {
-   param (
-      [Parameter(Mandatory)] [String] $setName,
-      [Parameter(Mandatory)] [Guid] $id
-   )
-   $uri = $environmentUrl + 'api/data/v9.2/' + $setName
-   $uri = $uri + '(' + $id.Guid + ')'
-
-   $DeleteRequest = @{
-      Uri     = $uri
-      Method  = 'Delete'
-      Headers = $baseHeaders
-   }
-   Invoke-RestMethod @DeleteRequest
-}
-```
-
 ## Troubleshooting
 
 This section contains some guidance for issues you might encounter.
@@ -813,5 +665,9 @@ Learn more about Dataverse Web API capabilities by understanding the service doc
 
 > [!div class="nextstepaction"]
 > [Web API types and operations](web-api-types-operations.md)
+
+### Related articles
+
+[Sample: PowerShell functions using Dataverse Web API](samples/powershell-web-api-samples.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
