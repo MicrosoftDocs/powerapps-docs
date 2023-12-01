@@ -2,7 +2,7 @@
 title: Create and edit elastic tables (preview)
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 11/11/2023
+ms.date: 12/01/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: matp
@@ -74,7 +74,7 @@ Although elastic tables are great for handling large volume of requests at scale
 
 - Elastic tables don't support multi-record transactions. This means that multiple write operations happening as part of a single request execution aren't transactional with each other. For example, if you have a synchronous plug-in step registered on the `PostOperation` stage for `Create message` on an elastic table, any error in your plug-in won't roll back the created record in Dataverse. Validations in preplug-ins will still work as expected since they run before the main stage.
 - Elastic tables support strong consistency only within a logical session. Outside session context, you might not see changes to a row immediately. More information: [Developer guide: Consistency level](../../developer/data-platform/elastic-tables.md#consistency-level)
-- Elastic tables don't support filters on related tables when creating views, advanced find, or any query in general using API. If you frequently need to filter on related table columns, we recommend that you denormalize columns from related tables, which need filtering into the main table itself. Consider a retailer with two elastic tables: customer and address. One customer has many addresses. You want to return query results for all customers from the customer table whose city value in the address table is New York. In this example, when querying customer table, you want to apply a filter on the city column of the related address table. This isn't supported for elastic tables. One way to make this work is to denormalize the city column into the Customer table so that all customers city values are present in the customer table itself.
+- Elastic tables don't support filters on related tables when creating views, advanced find, or any query in general using API. If you frequently need to filter on related table columns, we recommend that you denormalize columns from related tables, which need to filter into the main table itself. Consider a retailer with two elastic tables: customer and address. One customer has many addresses. You want to return query results for all customers from the customer table whose city value in the address table is New York. In this example, when querying customer table, you want to apply a filter on the city column of the related address table. This isn't supported for elastic tables. One way to make this work is to denormalize the city column into the Customer table so that all customers city values are present in the customer table itself.
 
 ## Elastic tables feature support
 
@@ -139,11 +139,15 @@ You create an elastic table just like any other new table in Dataverse.
 1. On the right properties pane, expand **Advanced options**.
 1. Select **Elastic** as the table **Type**.
    :::image type="content" source="media/elastic-table-type.png" alt-text="Select Elastic as the table Type":::
-1. Select the properties you want, and then select **Save**. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+1. Select the properties you want, and then select **Save**.
+  
+The time to live column is automatically created for an elastic table. You can add the time-period value in seconds, as required. The data is auto removed after the specified time-period.
+
+More information about Tables: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
 ## Known issues
 
-- When [time to live (TTL)](#automatic-removal-of-data) is used on a row, the row will get deleted from the elastic table when TTL has expired. If it's synchronized to a data lake using [Azure Synapse Link for Dataverse](export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
+- When [time to live (TTL)](#automatic-removal-of-data) is used on a row, the row gets deleted from the elastic table when TTL expires. If it's synchronized to a data lake using [Azure Synapse Link for Dataverse](export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
 
 ## High volume elastic tables and managing Dataverse API throttling limits
 
