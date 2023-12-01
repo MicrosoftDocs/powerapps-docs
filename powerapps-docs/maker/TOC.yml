@@ -1823,6 +1823,8 @@
       href: ../mobile/canvas-mobile-offline-setup.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
+    - name: Work with files and images in offline canvas apps
+      href: ../mobile/files-images-offline-canvas-apps.md
   - name: Troubleshoot issues in the mobile app
     items:
     - name: Troubleshoot issues in the Power Apps mobile app
