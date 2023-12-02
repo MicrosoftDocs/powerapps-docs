@@ -24,7 +24,7 @@ Your application will call the [IOrganizationService.Execute method](xref:Micros
 > [!NOTE]
 > This quick start example does not include exception handling for brevity. This is a minimum code example of what you need to connect to and use the SDK for .NET.
 
-You can download the complete code sample from GitHub [quickstart-execute-request](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/GetStarted/quickstart-execute-request/).
+You can obtain the complete code sample from GitHub [GetStarted](https://github.com/microsoft/PowerApps-Samples/blob/phecke-auth-updates/dataverse/orgsvc/C%23-NETCore/GetStarted/ConsoleApp%20(public)/Program.cs). Consult the program's README for more details.
 
 ## Prerequisites
 
