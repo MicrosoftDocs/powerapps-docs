@@ -16,13 +16,13 @@ contributors:
 In this quick start, you'll learn how to:
 
 - Authenticate to Dataverse using PowerShell without registering your own application.
-- Compose requests to the Dataverse Web API using [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
+- Compose requests to the Dataverse Web API using the PowerShell [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 - Create reusable functions that you can save in a .ps1 file.
 - Write and run a script using the functions you created.
 
 > [!NOTE]
 > - This should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
-> - If you want to skip the step-by-step instructions and explanations, you can find the files representing the completed steps for this quick start in [Sample: PowerShell functions using Dataverse Web API](samples/powershell-web-api-samples.md).
+> - If you want to skip the step-by-step instructions and explanations, you can find the scripts representing the completed steps for this quick start in [Sample: PowerShell functions using Dataverse Web API](samples/powershell-web-api-samples.md).
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ In this quick start, you'll learn how to:
 
 The first step is to authenticate and get an access token you need to send with your requests.
 
-You can use an access token generated using the Azure CLI [az account get-access-token command](/cli/azure/account#az-account-get-access-token) based on the Azure account credentials you use with the [az login command](/cli/azure/reference-index#az-login). This access token has the necessary delegated permissions to connect to Dataverse. You don't need to register an application to use the Web API with PowerShell.
+You can use an access token generated using the Azure CLI [az account get-access-token command](/cli/azure/account#az-account-get-access-token) based on the Azure account credentials you use with the [az login command](/cli/azure/reference-index#az-login). This access token has the necessary delegated permissions to connect to Dataverse. You don't need to register an application to use the Dataverse Web API with PowerShell.
 
 1. Open Visual Studio Code.
 1. In the menu, select **Terminal** > **New Terminal**. Or use the <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>`</kbd> keyboard shortcut.
@@ -70,7 +70,7 @@ You can use an access token generated using the Azure CLI [az account get-access
 
 1. Copy the code value, in this example `A57834N7J`, and then select the [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) link to open the page.
 
-   The page displays a series of dialogs to capture the information necessary to authenticate. You have options to sign in different ways. Your organization might require multifactor authentication, which makes your experience different.
+   The page displays a series of dialogs to capture the information necessary to authenticate. You have options to sign in different ways. For example, your organization might require multifactor authentication.
 
 1. At the final page, you can close the window
 
@@ -108,9 +108,9 @@ To avoid completing the device sign-in process every time you debug your script,
    Write-Host "Connected to $environmentUrl"
    ```
 
-   This code uses the [az account tenant list](/cli/azure/account/tenant#az-account-tenant-list) to get a list of tenants associated with the signed-in user. If it returns null, you need to sign in.
+   This code uses the [az account tenant list](/cli/azure/account/tenant#az-account-tenant-list) Azure CLI extension to get a list of tenants associated with the signed-in user. If it returns null, you need to sign in. [If nothing happens, you need to install the extension](#the-login-script-hangs).
    
-   This code also adds logic to extract the `expiresOn` property of the token to get an estimate for when the current token expires.
+   This code also adds logic to extract the `expiresOn` property of the token to get an estimate for when the current token expires. If the token expires and you get `401 Unauthorized` error, try running this script again.
 
 1. Save the file with the extension `.ps1`. In this example, we'll save it to: `C:\test\myDVWebAPICommands.ps1`.
 1. Press <kbd>F5</kbd> to run the script, or select the **Run** button. There are two possible results:
@@ -119,7 +119,7 @@ To avoid completing the device sign-in process every time you debug your script,
 
       ```powershell
       PS C:\Users\you.Domain> . 'C:\test\myDVWebAPICommands.ps1'
-      Token will expire in 29 minutes.
+      Token will expire in 49 minutes.
       Connected to https://yourorg.crm.dynamics.com/
       ```
 
@@ -137,9 +137,9 @@ To avoid completing the device sign-in process every time you debug your script,
 
 ## Try WhoAmI
 
-Now that you're logged in and have an access token, let's try a simple Web API function. The [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) requires no input parameters and returns data in the form of a [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse)
+Now that you're logged in and have an access token, let's try a simple Web API function. The [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) requires no input parameters and returns data in the form of a [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse).
 
-1. Edit your functions file to add this `Get-WhoAmI` function.
+1. Edit your functions file to add this `Get-WhoAmI` function below the line `Write-Host "Connected to $environmentUrl"`.
 
    ```powershell
    # Define common set of headers
@@ -171,7 +171,7 @@ Now that you're logged in and have an access token, let's try a simple Web API f
 
    ```powershell
    PS C:\Users\you.DOMAIN> . 'C:\test\myDVWebAPICommands.ps1'
-   Token will expire in 17 minutes.
+   Token will expire in 40 minutes.
    Connected to https://yourorg.crm.dynamics.com/
    PS C:\Users\you.DOMAIN>
    ```
@@ -223,7 +223,7 @@ Now that you're logged in and have an access token, let's try a simple Web API f
 
 Let's start working with business data. We'll add a function to let you query Dataverse tables.
 
-1. Edit your functions file to add this `Get-Records` function.
+1. Edit your functions file to add this `Get-Records` function below the `Get-WhoAmI` function.
 
    ```powershell
    # Retrieve records that match a query
@@ -325,9 +325,9 @@ Let's start working with business data. We'll add a function to let you query Da
 
 ## Create a record
 
-Now, let's create some records.
+Now, let's create a record.
 
-1. Edit your functions file to add this `New-Record` function.
+1. Edit your functions file to add this `New-Record` function below the `Get-Records` function.
 
    ```powershell
    # Create a record
@@ -351,13 +351,12 @@ Now, let's create some records.
    }
    ```
 
-1. Press <kbd>F5</kbd> to save and run the script.
-
    The `New-Record` function breaks the rule of returning the raw values to the user. Dataverse Web API returns the full URL of the created record in the `OData-EntityId` response header, along with many other response headers. The only value that is useful is the ID of the created record, which is a [System.Guid](xref:System.Guid). For simplicity, this function parses out that ID and returns it as a `Guid` value. [Learn more about creating records using Dataverse Web API](create-entity-web-api.md)
 
    The `New-Record` function requires the [table entity set name](web-api-service-documents.md#entity-set-name) and data about the record to create. Pass this data using a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables).
 
-1. Enter the following command into the terminal:
+1. Press <kbd>F5</kbd> to save and run the script.
+1. To create an account record, enter the following command into the terminal:
 
    ```powershell
    New-Record accounts @{name='Example Account'; accountcategorycode=1}
@@ -390,6 +389,8 @@ Now, let's create some records.
    ```powershell
    $newAccountID = New-Record accounts @{name='Example Account'; accountcategorycode=1}
    ```
+   
+   This command creates an account record and assignes the ID value to the `$newAccountID` variable. Later steps will use this variable.
 
    > [!NOTE]
    >You can find information about the [account entity type](xref:Microsoft.Dynamics.CRM.account) in our reference documentation. For tables not included by default in Dataverse, the definitive information is found in the service documents. [Learn about Dataverse Web API entity types](web-api-entitytypes.md).
@@ -433,7 +434,7 @@ Now, let's create some records.
 
 Now let's retrieve the account record you created.
 
-1. Edit your functions file to add this `Get-Record` function.
+1. Edit your functions file to add this `Get-Record` function below the `New-Record` function
 
    ```powershell
    # Retrieve a record using the primary key
@@ -519,7 +520,7 @@ Now let's retrieve the account record you created.
 
 Now let's update the record you created.
 
-1. Edit your functions file to add this `Update-Record` function.
+1. Edit your functions file to add this `Update-Record` function below the `Get-Record` function.
 
    ```powershell
    # Update a record
@@ -547,10 +548,13 @@ Now let's update the record you created.
    }
    ```
 
-   Like the `New-Record` function, this request needs to include the `Content-Type:application/json` request header. The `If-Match: *` header makes sure this function doesn't create a new record if the record you intended to update doesn't exist. The `Patch` method is also used for *upsert* operations. [Learn more about updating and upserting table rows](update-delete-entities-using-web-api.md)
+   Like the `New-Record` function, this request needs to include the `Content-Type:application/json` request header because it includes data in the body of the request. The `If-Match: *` header makes sure this function doesn't create a new record if the record you intended to update doesn't exist. The `Patch` method is also used for *upsert* operations. [Learn more about updating and upserting table rows](update-delete-entities-using-web-api.md)
 
 1. With the functions file open, press <kbd>F5</kbd> to debug and save your file.
-1. The `Update-Record` returns the response properties from the request, but there isn't anything interesting returned as long as the operation succeeds. In your script file, add the following code using `Update-Record` above the code that is using `Get-Record` currently there. The query demonstrates that the data changed because you updated it.
+
+   The `Update-Record` function returns the response properties from the request, but there isn't anything interesting returned as long as the operation succeeds. We will explain handing errors in [Parsing errors](#parsing-errors).
+
+1. In your script file, add the following code using `Update-Record` above the code that is using `Get-Record` currently there. The query demonstrates that the data changed because you updated it.
 
    ```powershell
    $updateAccountData = @{
@@ -596,7 +600,7 @@ Now let's update the record you created.
 
 Let's delete the record you created.
 
-1. Edit your functions file to add this `Remove-Record` function.
+1. Edit your functions file to add this `Remove-Record` function below the `Update-Record` function.
 
    ```powershell
    # Delete a record
@@ -648,10 +652,10 @@ Let's delete the record you created.
 
 ## Parsing errors
 
-Errors occur and your PowerShell script can handle them using [Try/Catch pattern](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). What we need is a function that enables extracting important information about the error.
+Errors occur and your PowerShell script can handle them using [Try/Catch pattern](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). What we need is a function that enables extracting important information about the error from Dataverse.
 
 
-1. Edit your functions file to add this `Get-Error-Details` function.
+1. Edit your functions file to add this `Get-Error-Details` function below the `Remove-Record` function.
 
    ```powershell
    # Captures relevant Dataverse Web API error information
@@ -708,7 +712,7 @@ Errors occur and your PowerShell script can handle them using [Try/Catch pattern
    message    : The query parameter [REDACTED] is not supported
    ```
 
-   This error refers to the use of `?$invalidParameter` as the query parameter to the `Get-Records`. The specific parameter value is `[REDACTED]` because the string could potentially include personal data that can't be stored in error logs.
+   This error refers to the use of `?$invalidParameter` as the query parameter to the `Get-Records` function. The specific parameter value is `[REDACTED]` because the string could potentially include personal data that can't be stored in error logs.
 
 1. Remove the line: `Get-Records accounts '?$invalidParameter'` and press <kbd>F5</kbd> to debug your script again.
 
@@ -743,22 +747,31 @@ Replace the contents of your script file with the following script:
 
    ```powershell
    try {
+      # Try WhoAmI
       Write-Output 'Call WhoAmI:'
       Get-WhoAmI | Format-List -Property BusinessUnitId, UserId, OrganizationId
+
+      # Retrieve Records
       Write-Output 'Retrieve first three account records:'
       (Get-Records -setName accounts -query '?$select=name&$top=3').value | Format-Table -Property name, accountid
+
+      # Create a record
       Write-Output 'Create an account record:'
       $newAccountID = New-Record -setName accounts -body @{
          name                = 'Example Account'; 
          accountcategorycode = 1 # Preferred
       }
       Write-Output "Account with ID $newAccountID created"
+
+      # Retrieve a record
       Write-Output 'Retrieve the created record:'
       Get-Record -setName  accounts -id $newAccountID.Guid '?$select=name,accountcategorycode' |
       Format-List -Property name,
       accountid,
       accountcategorycode,
       accountcategorycode@OData.Community.Display.V1.FormattedValue
+
+      # Update a record
       Write-Output 'Update the record'
       $updateAccountData = @{
          name                = 'Updated Example account';
@@ -771,6 +784,8 @@ Replace the contents of your script file with the following script:
       accountid,
       accountcategorycode,
       accountcategorycode@OData.Community.Display.V1.FormattedValue
+
+      # Delete a record
       Write-Output 'Delete the record:'
       Remove-Record -setName accounts -id $newAccountID.Guid
       Write-Output "The account with ID $newAccountID was deleted"
@@ -834,11 +849,11 @@ This section contains some guidance for issues you might encounter.
 
 ### Error: "az : The term 'az' is not recognized as the name of a cmdlet, function, script file, or operable program."
 
-You need to install the [Azure CLI](/cli/azure/install-azure-cli)
+You need to install the [Azure CLI](/cli/azure/install-azure-cli).
 
-### Nothing happens when I press <kbd>F5</kbd> to run the script
+### Nothing happens when I press <kbd>F5</kbd> to debug the script
 
-Press the <kbd>F Lock</kbd> key to toggle function on your keyboard
+Press the <kbd>F Lock</kbd> key to toggle function on your keyboard.
 
 ### The login script hangs
 
@@ -848,7 +863,7 @@ This will happen if you haven't installed the Azure CLI `account` extension.
    
 In a PowerShell terminal, run `az extension add --name account`, then try again.
 
-Or, in the terminal enter `az account tenant list`. This will prompt you to install the extension. [Learn more about dynamic installation of Azure CLI extensions](/cli/azure/azure-cli-extensions-overview#install-extensions-automatically)
+Or, in the terminal enter `az account tenant list`. This will prompt you to consent to install the extension. [Learn more about dynamic installation of Azure CLI extensions](/cli/azure/azure-cli-extensions-overview#install-extensions-automatically)
 
 ### Error: Invoke-RestMethod : Object reference not set to an instance of an object.
 
@@ -865,7 +880,7 @@ At C:\test\myDVWebAPICommands.ps1:54 char:4
     + FullyQualifiedErrorId : System.NullReferenceException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
 ```
 
-This is because earlier versions of PowerShell didn't support splatting parameters to the Invoke-RestMethod command. To resolve this, [install PowerShell 7.4 or higher](/powershell/scripting/install/installing-powershell)
+This is because earlier versions of PowerShell didn't support [splatting](/powershell/module/microsoft.powershell.core/about/about_splatting) parameters to the `Invoke-RestMethod` command. To resolve this, [install PowerShell 7.4 or higher](/powershell/scripting/install/installing-powershell)
 
 ### Error: Get-Record: Cannot process argument transformation on parameter 'id'. Cannot convert null to type "System.Guid".
 
@@ -875,11 +890,11 @@ You can get this error during the section [Retrieve a record](#retrieve-a-record
 Get-Record accounts $newAccountID.Guid '?$select=name,accountcategorycode'
 ```
 
-This will only work while the `$newAccountID` variable has a value, which was set in the previous [Create a record](#create-a-record) section. If you stepped away and closed your session, the `$newAccountID` variable will be null if you start at this point.
+This will only work while the `$newAccountID` variable has a value, which was set in the previous [Create a record](#create-a-record) section. If you closed your session, the `$newAccountID` variable will be null if you start at this point. Repeat the steps in the [Create a record](#create-a-record) section to continue.
 
 ### Error dialog: connect ENOENT\\\\.\\pipe\\&lt;RANDOM_text&gt; with Open 'launch.json' button
 
-This error might occur at times when debugging using Visual Studio code. To resolve, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, type `restart` and select `Powershell: Restart session`. See [Issue 4332](https://github.com/PowerShell/vscode-powershell/issues/4332) for more information.
+This error might occur at times when debugging using Visual Studio code. To resolve, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, type `restart` and select `Powershell: Restart session`. See [PowerShell/vscode-powershell GitHub Issue 4332](https://github.com/PowerShell/vscode-powershell/issues/4332) for more information.
 
 
 ## Next steps

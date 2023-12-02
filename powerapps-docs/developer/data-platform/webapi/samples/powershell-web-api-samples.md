@@ -193,22 +193,31 @@ The following PowerShell script demonstrates using the functions defined in [Fun
 
 ```powershell
 try {
+   # Try WhoAmI
    Write-Output 'Call WhoAmI:'
    Get-WhoAmI | Format-List -Property BusinessUnitId, UserId, OrganizationId
+
+   # Retrieve Records
    Write-Output 'Retrieve first three account records:'
    (Get-Records -setName accounts -query '?$select=name&$top=3').value | Format-Table -Property name, accountid
+
+   # Create a record
    Write-Output 'Create an account record:'
    $newAccountID = New-Record -setName accounts -body @{
       name                = 'Example Account'; 
       accountcategorycode = 1 # Preferred
    }
    Write-Output "Account with ID $newAccountID created"
+
+   # Retrieve a record
    Write-Output 'Retrieve the created record:'
    Get-Record -setName  accounts -id $newAccountID.Guid '?$select=name,accountcategorycode' |
    Format-List -Property name,
    accountid,
    accountcategorycode,
    accountcategorycode@OData.Community.Display.V1.FormattedValue
+
+   # Update a record
    Write-Output 'Update the record'
    $updateAccountData = @{
       name                = 'Updated Example account';
@@ -221,6 +230,8 @@ try {
    accountid,
    accountcategorycode,
    accountcategorycode@OData.Community.Display.V1.FormattedValue
+
+   # Delete a record
    Write-Output 'Delete the record:'
    Remove-Record -setName accounts -id $newAccountID.Guid
    Write-Output "The account with ID $newAccountID was deleted"
