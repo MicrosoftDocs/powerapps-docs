@@ -22,7 +22,7 @@ In this quick start, you'll learn:
 
 > [!NOTE]
 > - This should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
-> - You can find the files representing the result of this article in [Sample: PowerShell functions using Dataverse Web API](samples/powershell-web-api-samples.md)
+> - If you want to skip the step-by-step instructions and explanations, you can find the files representing the completed steps for this article in [Sample: PowerShell functions using Dataverse Web API](samples/powershell-web-api-samples.md)
 
 ## Prerequisites
 
@@ -179,7 +179,7 @@ Now that you're logged in and have an access token, let's try a simple Web API f
 
    This script passes the `Uri`, `Method`, and `Headers` parameters to the [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod) with a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables) using a technique known as [splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
-   PowerShell has specific requirements about the names of functions. That is why this function is named `Get-WhoAmI` rather than simply `WhoAmI`. [Learn more about approved verbs for PowerShell commands](approved-verbs-for-windows-powershell-commands)
+   PowerShell has specific requirements about the names of functions. That is why this function is named `Get-WhoAmI` rather than simply `WhoAmI`. [Learn more about approved verbs for PowerShell commands](/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands)
 
 1. Save the file and press <kbd>F5</kbd> to run the script. You can expect the following output:
 
@@ -261,7 +261,7 @@ Let's start working with business data. We'll add a function to let you query Da
 
    Now you can use the `Get-Records` function from the terminal. You need to specify the [table entity set name](web-api-service-documents.md#entity-set-name) and provide a query to filter the results. [Learn more about querying data using Dataverse Web API](query-data-web-api.md)
 
-1. Enter the following into the terminal. This query retrieves the name property for the first three [account](xref:Microsoft.Dynamics.CRM.account) records in Dataverse.
+1. Enter the following into the terminal. This query retrieves the `name` property for the first three [account](xref:Microsoft.Dynamics.CRM.account) records in Dataverse.
 
    ```powershell
    Get-Records accounts '?$select=name&$top=3'
@@ -379,13 +379,16 @@ Now, let's create some records.
    Generally, you want to capture and use the ID values of the records you create. It's difficult to continue to do this using only the terminal. Let's create a *script file* that uses the functions you create in your *functions file*.
 
    > [!NOTE]
-   > Going forward, we will have two documents open in Visual Studio code. The *functions file* just for function definitions, the *script file* for testing out the scripts.
+   > Going forward, we will have two documents open in Visual Studio Code. The *functions file* just for function definitions, the *script file* for testing out the scripts.
 
 ### Create a script file
 
 1. In the Visual Studio Code menu, select **File** > **New Text File**, or use the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>N</kbd>.
-1. By default, this file is **Plain Text** file. Select the **Select a Language** prompt to select a language, or use the **Language Mode Selector** on the right hand of the **Status Bar** to select **PowerShell (powershell)**.
-1. Enter the following into the file:
+
+   By default, this file is **Plain Text** file.
+
+1. Select the **Select a Language** prompt to select a language, or use the **Language Mode Selector** on the right hand of the **Status Bar** to select **PowerShell (powershell)**.
+1. Copy and paste the following line into the file:
 
    ```powershell
    $newAccountID = New-Record accounts @{name='Example Account'; accountcategorycode=1}
@@ -467,7 +470,7 @@ Now let's retrieve the account record you created.
 
 
 1. With your *functions file* open, press <kbd>F5</kbd> to debug and save your file.
-1. In your *script file*, add the following lines:
+1. In your *script file*, add the following line:
 
    ```powershell
    Get-Record accounts $newAccountID.Guid '?$select=name,accountcategorycode'
@@ -502,7 +505,7 @@ Now let's retrieve the account record you created.
       accountcategorycode@OData.Community.Display.V1.FormattedValue
    ```
 
-1. Press <kbd>F5</kbd> to debug your script file. Now the response looks like this:
+1. Press <kbd>F5</kbd> to debug your script file. Now the terminal has the following output:
 
    ```powershell
    PS C:\Users\you.DOMAIN>
@@ -572,7 +575,7 @@ Now let's update the record you created.
    > [!NOTE]
    > The `$newAccountID` variable is still in memory so you can continue to access it
 
-1. Press <kbd>F5</kbd> to debug your script. Now the response looks like this:
+1. Press <kbd>F5</kbd> to debug your script. Now the terminal has the following output:
 
    ```powershell
    PS C:\Users\you.DOMAIN>
@@ -628,14 +631,14 @@ Let's delete the record you created.
    Remove-Record accounts $newAccountID.Guid
    ```
 
-1. Press <kbd>F5</kbd> to debug your script. Now the response looks like this:
+1. Press <kbd>F5</kbd> to debug your script. Now the terminal has the following output:
 
    ```powershell
    PS C:\Users\you.DOMAIN>
    PS C:\Users\you.DOMAIN> . $args[0] Remove-Record accounts $newAccountID.Guid
    ```
 
-1. To verify that the account record was deleted, try deleting it again. Press <kbd>F5</kbd> to debug your script again. Now the response looks like this:
+1. To verify that the account record was deleted, try deleting it again. Press <kbd>F5</kbd> to debug your script again. Now the terminal has the following output:
 
    ```powershell
    PS C:\Users\you.DOMAIN>
@@ -701,7 +704,7 @@ Errors occur and your PowerShell script can handle them using [Try/Catch pattern
 
    This introduces a Try/Catch pattern to capture relevant Dataverse Web API error details from the server. The first `catch` block only responds to [HttpResponseException](xref:Microsoft.PowerShell.Commands.HttpResponseException) errors. The second catch block manages any other kinds of script errors.
 
-1. Press <kbd>F5</kbd> to debug your script. Now the response looks like this:
+1. Press <kbd>F5</kbd> to debug your script. Now the terminal has the following output:
 
    ```powershell
    PS C:\test> . 'C:\test\test3.ps1'
@@ -738,6 +741,8 @@ Errors occur and your PowerShell script can handle them using [Try/Catch pattern
    ```
 
 ## Bring it all together
+
+In this section we will perform multiple data operations in a single script. This section also shows using the function parameter names, like `-setName`, `-query` and `-body` that will make your script easier to read.
 
 Replace the contents of your script file with the following script:
 

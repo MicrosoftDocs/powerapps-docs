@@ -27,8 +27,10 @@ The following PowerShell script contains the functions defined in [Quick Start: 
 
 ## Functions
 
+This file contains a set of reusable functions you can use in your scripts to perform data operations using Dataverse Web API.
+
 ```powershell
-$environmentUrl = 'https://crmue.crm.dynamics.com/' # change this
+$environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
 
 ## login if not already logged in
 if ($null -eq (az account tenant list --only-show-errors)) {
