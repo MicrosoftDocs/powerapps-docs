@@ -726,7 +726,7 @@ Errors occur and your PowerShell script can handle them using [Try/Catch pattern
    message    : Entity 'account' With Id = 51c8091c-df8f-ee11-8179-000d3a9933c9 Does Not Exist
    ```
 
-   Otherwise, if the `$newAccountID` variable doesn't contain a value or isn't in scope, you get this error, which is due to an error in the script:
+   Otherwise, if the `$newAccountID` variable doesn't contain a value you get this error, which is due to an error in the script:
 
    ```powershell
    An error occurred in the script:
