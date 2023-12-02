@@ -18,11 +18,24 @@ The following PowerShell script contains the functions defined in [Quick Start: 
 
 ## Prereqisites
 
-- PowerShell 7.4 or higher. See [Install PowerShell on Windows, Linux, and macOS](/powershell/scripting/install/installing-powershell)
-- Azure CLI version 2.54.0 or higher. See [How to install the Azure CLI](/cli/azure/install-azure-cli)
+- Install PowerShell 7.4 or higher. See [Install PowerShell on Windows, Linux, and macOS](/powershell/scripting/install/installing-powershell)
+   
+   - In a PowerShell terminal, run `$PSVersionTable.PSVersion` to check.
+
+- Install Azure CLI version 2.54.0 or higher. See [How to install the Azure CLI](/cli/azure/install-azure-cli)
+   
+   - In a PowerShell terminal, run `az version` to check.
+
+- The Azure CLI `account` extension.
+   
+   - In a PowerShell terminal, run `az extension add --name account`
+   - [Learn more about Azure CLI extensions](/cli/azure/azure-cli-extensions-overview)
+
+- Install Visual Studio Code. See [Download Visual Studio Code](https://code.visualstudio.com/download)
+- Install the PowerShell extension for Visual Studio Code. See [PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 - Internet connection
 - Valid user account for a Dataverse environment
-- Url to the Dataverse environment you want to connect to. [View developer resources](../../view-download-developer-resources.md)
+- Url to the Dataverse environment you want to connect to. See [View developer resources](../../view-download-developer-resources.md)
 - Basic understanding of the PowerShell scripting language
 
 ## Functions
