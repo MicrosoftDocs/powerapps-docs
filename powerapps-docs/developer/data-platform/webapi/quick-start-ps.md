@@ -33,7 +33,12 @@ In this quick start, you'll learn how to:
 - Install Azure CLI version 2.54.0 or higher. See [How to install the Azure CLI](/cli/azure/install-azure-cli)
    
    - In a PowerShell terminal, run `az version` to check.
+
+- The Azure CLI `account` extension.
    
+   - In a PowerShell terminal, run `az extension add --name account`
+   - [Learn more about Azure CLI extensions](/cli/azure/azure-cli-extensions-overview)
+
 - Install Visual Studio Code. See [Download Visual Studio Code](https://code.visualstudio.com/download)
 - Install the PowerShell extension for Visual Studio Code. See [PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 - Internet connection
@@ -48,11 +53,11 @@ The first step is to authenticate and get an access token you need to send with 
 You can use an access token generated using the Azure CLI [az account get-access-token command](/cli/azure/account#az-account-get-access-token) based on the Azure account credentials you use with the [az login command](/cli/azure/reference-index#az-login). This access token has the necessary delegated permissions to connect to Dataverse. You don't need to register an application to use the Web API with PowerShell.
 
 1. Open Visual Studio Code.
-1. In the menu, select the ellipses (...) and then select **Terminal** > **New Terminal**. Or use the <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>`</kbd> keyboard shortcut.
-1. Copy the following and paste it in the terminal, replacing `https://your.crm.dynamics.com/` with the url to the Dataverse environment you want to connect to.
+1. In the menu, select **Terminal** > **New Terminal**. Or use the <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>`</kbd> keyboard shortcut.
+1. Copy the following and paste it in the terminal, replacing `https://yourorg.crm.dynamics.com/` with the url to the Dataverse environment you want to connect to.
 
    ```powershell
-   $environmentUrl = 'https://your.crm.dynamics.com/' # change this
+   $environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
    az login --use-device-code --allow-no-subscriptions  | Out-Null
    $token = (az account get-access-token --resource=$environmentUrl --query accessToken --output tsv)
    ```
@@ -81,10 +86,10 @@ To avoid completing the device sign-in process every time you debug your script,
 > This is the first step in creating a file containing reusable functions. We will use this *functions file* through the rest of this article.
 
 1. In Visual Studio Code menu, select **File** > **New Text File**, or use the <kbd>Ctrl</kbd>+<kbd>N</kbd> keyboard shortcut.
-1. Copy and paste the following script into the new file, replacing `https://your.crm.dynamics.com/` with the Url to the Dataverse environment you want to connect to.
+1. Copy and paste the following script into the new file, replacing `https://yourorg.crm.dynamics.com/` with the Url to the Dataverse environment you want to connect to.
 
    ```powershell
-   $environmentUrl = 'https://your.crm.dynamics.com/' # change this
+   $environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
 
    ## login if not already logged in
    if($null -eq (az account tenant list --only-show-errors))
@@ -115,7 +120,7 @@ To avoid completing the device sign-in process every time you debug your script,
       ```powershell
       PS C:\Users\you.Domain> . 'C:\test\myDVWebAPICommands.ps1'
       Token will expire in 29 minutes.
-      Connected to https://your.crm.dynamics.com/
+      Connected to https://yourorg.crm.dynamics.com/
       ```
 
    - Otherwise, you are prompted to sign in again with the device code dialogs.
@@ -180,7 +185,7 @@ Now that you're logged in and have an access token, let's try a simple Web API f
 
    @odata.context                                                                               BusinessUnitId
    --------------                                                                               --------------
-   https://your.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse 38e0dbe4-131b-e111-ba7e-…
+   https://yourorg.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse 38e0dbe4-131b-e111-ba7e-…
    ```
 
    Unfortunately, only the `@odata.context` property is fully visible. This property is the least useful property returned. You can generally ignore it.
@@ -229,6 +234,11 @@ Let's start working with business data. We'll add a function to let you query Da
       )
       $uri = $environmentUrl + 'api/data/v9.2/' + $setName + $query
 
+      # Header for GET operations that have annotations
+      $getHeaders = $baseHeaders.Clone()
+      $getHeaders.Add('If-None-Match', $null)
+      $getHeaders.Add('Prefer', 'odata.include-annotations="*"')
+
       $RetrieveMultipleRequest = @{
          Uri     = $uri
          Method  = 'Get'
@@ -237,6 +247,12 @@ Let's start working with business data. We'll add a function to let you query Da
       Invoke-RestMethod @RetrieveMultipleRequest
    }
    ```
+   ### Retrieve headers
+
+   This function adds two more headers to the base headers:
+
+   - `If-None-Match : null` is to make sure that related record collections you might include using `$expand` are retrieved from the server and don't use cached data in the browser that doesn't reflect recent changes.
+   - `Prefer : odata.include-annotations="*"` requests all available annotations that can be returned. You can also choose to retrieve specific types of annotations. [Learn how to request annotations](compose-http-requests-handle-errors.md#request-annotations)
 
 1. Press <kbd>F5</kbd> to save and run the script.
 
@@ -337,9 +353,9 @@ Now, let's create some records.
 
 1. Press <kbd>F5</kbd> to save and run the script.
 
-   The **New-Record** function breaks the rule of returning the raw values to the user. Dataverse Web API returns the full URL of the created record in the `OData-EntityId` response header, along with many other response headers. The only value that is useful is the ID of the created record, which is a [System.Guid](xref:System.Guid). For simplicity, this function parses out that ID and returns it as a `Guid` value. [Learn more about creating records using Dataverse Web API](create-entity-web-api.md)
+   The `New-Record` function breaks the rule of returning the raw values to the user. Dataverse Web API returns the full URL of the created record in the `OData-EntityId` response header, along with many other response headers. The only value that is useful is the ID of the created record, which is a [System.Guid](xref:System.Guid). For simplicity, this function parses out that ID and returns it as a `Guid` value. [Learn more about creating records using Dataverse Web API](create-entity-web-api.md)
 
-   The **New-Record** function requires the [table entity set name](web-api-service-documents.md#entity-set-name) and data about the record to create. Pass this data using a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables).
+   The `New-Record` function requires the [table entity set name](web-api-service-documents.md#entity-set-name) and data about the record to create. Pass this data using a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables).
 
 1. Enter the following command into the terminal:
 
@@ -444,11 +460,7 @@ Now let's retrieve the account record you created.
    }
    ```
    
-   This function sets the ID of the record to retrieve and adds two request headers:
-
-   - `If-None-Match : null` is to make sure that related record collections you might include using `$expand` are retrieved from the server and don't use cached data in the browser that doesn't reflect recent changes.
-   - `Prefer : odata.include-annotations="*"` requests all available annotations that can be returned. You can also choose to retrieve specific types of annotations. [Learn how to request annotations](compose-http-requests-handle-errors.md#request-annotations)
-
+   This function sets the ID of the record to retrieve and adds the same two request [retrieve headers](#retrieve-headers) found in the `Get-Records` function.
 
 1. With your *functions file* open, press <kbd>F5</kbd> to debug and save your file.
 1. In your *script file*, add the following line:
@@ -554,7 +566,7 @@ Now let's update the record you created.
    ```
 
    > [!NOTE]
-   > The `$newAccountID` variable is still in memory so you can continue to access it
+   > If the `$newAccountID` variable is still in memory so you can continue to access it. Otherwise, [you will get an error like this](#error-get-record-cannot-process-argument-transformation-on-parameter-id-cannot-convert-null-to-type-systemguid). Repeat the steps in [Create a record](#create-a-record) to set it.
 
 1. Press <kbd>F5</kbd> to debug your script. Now the terminal has the following output:
 
@@ -720,6 +732,8 @@ Errors occur and your PowerShell script can handle them using [Try/Catch pattern
       |                            ~~~~~~~~~~~~~~~~~~
       | Cannot process argument transformation on parameter 'id'. Cannot convert null to type "System.Guid".
    ```
+   
+   See [Error: Get-Record: Cannot process argument transformation on parameter 'id'. Cannot convert null to type "System.Guid".](#error-get-record-cannot-process-argument-transformation-on-parameter-id-cannot-convert-null-to-type-systemguid).
 
 ## Bring it all together
 
@@ -818,7 +832,55 @@ Replace the contents of your script file with the following script:
 
 This section contains some guidance for issues you might encounter.
 
-TBD Add issues found during testing
+### Error: "az : The term 'az' is not recognized as the name of a cmdlet, function, script file, or operable program."
+
+You need to install the [Azure CLI](/cli/azure/install-azure-cli)
+
+### Nothing happens when I press <kbd>F5</kbd> to run the script
+
+Press the <kbd>F Lock</kbd> key to toggle function on your keyboard
+
+### The login script hangs
+
+The script in [Simplifying Sign in](#simplifying-sign-in) doesn't respond. There is no error.
+
+This will happen if you haven't installed the Azure CLI `account` extension.
+   
+In a PowerShell terminal, run `az extension add --name account`, then try again.
+
+Or, in the terminal enter `az account tenant list`. This will prompt you to install the extension. [Learn more about dynamic installation of Azure CLI extensions](/cli/azure/azure-cli-extensions-overview#install-extensions-automatically)
+
+### Error: Invoke-RestMethod : Object reference not set to an instance of an object.
+
+In the [Retrieve Records](#retrieve-records) section you may encounter this error:
+
+```powershell
+PS C:\Users\you.Domain> Get-Records accounts '?$select=name&$top=3'
+PS C:\Users\you.Domain> 
+Invoke-RestMethod : Object reference not set to an instance of an object.
+At C:\test\myDVWebAPICommands.ps1:54 char:4
++    Invoke-RestMethod @RetrieveMultipleRequest
++    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Invoke-RestMethod], NullReferenceException
+    + FullyQualifiedErrorId : System.NullReferenceException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+```
+
+This is because earlier versions of PowerShell didn't support splatting parameters to the Invoke-RestMethod command. To resolve this, [install PowerShell 7.4 or higher](/powershell/scripting/install/installing-powershell)
+
+### Error: Get-Record: Cannot process argument transformation on parameter 'id'. Cannot convert null to type "System.Guid".
+
+You can get this error during the section [Retrieve a record](#retrieve-a-record). The instructions are to run the following command to retrieve a record:
+
+```powershell
+Get-Record accounts $newAccountID.Guid '?$select=name,accountcategorycode'
+```
+
+This will only work while the `$newAccountID` variable has a value, which was set in the previous [Create a record](#create-a-record) section. If you stepped away and closed your session, the `$newAccountID` variable will be null if you start at this point.
+
+### Error dialog: connect ENOENT\\\\.\\pipe\\&lt;RANDOM_text&gt; with Open 'launch.json' button
+
+This error might occur at times when debugging using Visual Studio code. To resolve, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, type `restart` and select `Powershell: Restart session`. See [Issue 4332](https://github.com/PowerShell/vscode-powershell/issues/4332) for more information.
+
 
 ## Next steps
 
@@ -829,6 +891,7 @@ Learn more about Dataverse Web API capabilities by understanding the service doc
 
 ### Related articles
 
-[Sample: PowerShell functions using Dataverse Web API](samples/powershell-web-api-samples.md)
+[Sample: PowerShell functions using Dataverse Web API](samples/powershell-web-api-samples.md)   
+[PowerShell in Visual Studio Code](https://code.visualstudio.com/docs/languages/powershell)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

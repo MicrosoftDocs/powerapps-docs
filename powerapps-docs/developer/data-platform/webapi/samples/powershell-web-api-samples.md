@@ -33,7 +33,7 @@ This file contains a set of reusable functions you can use in your scripts to pe
 $environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
 
 ## login if not already logged in
-if ($null -eq (az account tenant list --only-show-errors)) {
+if ($null -eq (az account tenant list  --only-show-errors)) {
    az login --allow-no-subscriptions --use-device-code | Out-Null
 }
 # get token
@@ -54,14 +54,6 @@ $baseHeaders = @{
    'OData-MaxVersion' = '4.0'
    'OData-Version'    = '4.0'
 }
-# Header for POST operations
-$postHeaders = $baseHeaders.Clone()
-$postHeaders.Add('Content-Type', 'application/json')
-
-# Header for GET operations that have annotations
-$getHeaders = $baseHeaders.Clone()
-$getHeaders.Add('If-None-Match', $null)
-$getHeaders.Add('Prefer', 'odata.include-annotations="*"')
 
 # WhoAmI message
 function Get-WhoAmI {
@@ -70,7 +62,7 @@ function Get-WhoAmI {
       Method  = 'Get'
       Headers = $baseHeaders
    }
-   return Invoke-RestMethod @WhoAmIRequest
+   Invoke-RestMethod @WhoAmIRequest
 }
 
 # Retrieve records that match a query
@@ -80,6 +72,11 @@ function Get-Records {
       [Parameter(Mandatory)] [String] $query
    )
    $uri = $environmentUrl + 'api/data/v9.2/' + $setName + $query
+
+   # Header for GET operations that have annotations
+   $getHeaders = $baseHeaders.Clone()
+   $getHeaders.Add('If-None-Match', $null)
+   $getHeaders.Add('Prefer', 'odata.include-annotations="*"')
 
    $RetrieveMultipleRequest = @{
       Uri     = $uri
@@ -95,10 +92,8 @@ function New-Record {
       [Parameter(Mandatory)] [String] $setName,
       [Parameter(Mandatory)] $body
    )
-
    $postHeaders = $baseHeaders.Clone()
    $postHeaders.Add('Content-Type', 'application/json')
-
    $CreateRequest = @{
       Uri     = $environmentUrl + 'api/data/v9.2/' + $setName
       Method  = 'Post'
@@ -176,7 +171,6 @@ function Remove-Record {
 }
 
 # Captures relevant Dataverse Web API error information
-
 function Get-Error-Details {
    try {
       $statuscode = $_.Exception.StatusCode
@@ -244,7 +238,7 @@ catch {
 }
 ```
 
-The output to the terminal for this script is:
+The expected output to the terminal for this script is something like this:
 
 ```powershell
 Call WhoAmI:
@@ -287,4 +281,5 @@ The account with ID 3a1cb908-af90-ee11-8179-000d3a993550 was deleted
 ### Related articles
 
 [Quick Start: Web API with PowerShell](../quick-start-ps.md)   
-[Perform operations using the Web API](../perform-operations-web-api.md)
+[Perform operations using the Web API](../perform-operations-web-api.md)   
+[PowerShell in Visual Studio Code](https://code.visualstudio.com/docs/languages/powershell)
