@@ -1,7 +1,7 @@
 ---
 title: Quick Start Web API with PowerShell
 description: Describes how to use the Dataverse Web API from PowerShell
-ms.date: 11/17/2023
+ms.date: 12/05/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -13,23 +13,29 @@ contributors:
 
 # Quick Start: Web API with PowerShell
 
-In this quick start, you'll learn:
+In this quick start, you'll learn how to:
 
-- How to authenticate to Dataverse using PowerShell without registering your own application.
-- How to compose requests to the Dataverse Web API using [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
-- How to create reusable functions that you can save in a .ps1 file.
-- How to write and run a script using the functions you created.
+- Authenticate to Dataverse using PowerShell without registering your own application.
+- Compose requests to the Dataverse Web API using [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
+- Create reusable functions that you can save in a .ps1 file.
+- Write and run a script using the functions you created.
 
 > [!NOTE]
 > - This should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
-> - If you want to skip the step-by-step instructions and explanations, you can find the files representing the completed steps for this article in [Sample: PowerShell functions using Dataverse Web API](samples/powershell-web-api-samples.md)
+> - If you want to skip the step-by-step instructions and explanations, you can find the files representing the completed steps for this quick start in [Sample: PowerShell functions using Dataverse Web API](samples/powershell-web-api-samples.md).
 
 ## Prerequisites
 
-- PowerShell 7.4 or higher. See [Install PowerShell on Windows, Linux, and macOS](/powershell/scripting/install/installing-powershell)
-- Azure CLI version 2.54.0 or higher. See [How to install the Azure CLI](/cli/azure/install-azure-cli)
-- Visual Studio Code. See [Download Visual Studio Code](https://code.visualstudio.com/download)
-- PowerShell extension for Visual Studio Code. See [PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
+- Install PowerShell 7.4 or higher. See [Install PowerShell on Windows, Linux, and macOS](/powershell/scripting/install/installing-powershell)
+   
+   - In a PowerShell terminal, run `$PSVersionTable.PSVersion` to check.
+
+- Install Azure CLI version 2.54.0 or higher. See [How to install the Azure CLI](/cli/azure/install-azure-cli)
+   
+   - In a PowerShell terminal, run `az version` to check.
+   
+- Install Visual Studio Code. See [Download Visual Studio Code](https://code.visualstudio.com/download)
+- Install the PowerShell extension for Visual Studio Code. See [PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 - Internet connection
 - Valid user account for a Dataverse environment
 - Url to the Dataverse environment you want to connect to. See [View developer resources](../view-download-developer-resources.md)
@@ -50,16 +56,7 @@ You can use an access token generated using the Azure CLI [az account get-access
    az login --use-device-code --allow-no-subscriptions  | Out-Null
    $token = (az account get-access-token --resource=$environmentUrl --query accessToken --output tsv)
    ```
-
-   > [!NOTE]
-   > This example uses the device code flow as a security best practice. We don't recommend setting the user name and password as shown below:
-   > 
-   > ```powershell
-   > az login -u you@yourorg.com -p yourPassword | Out-Null
-   > ```
-   >
-   > Using user name and password will not work when your organization requires multi-factor authentication. More information: [Username and Password flow](/entra/identity-platform/scenario-desktop-acquire-token-username-password)
-
+   
 1. Press <kbd>Enter</kbd> to run the command. The `az login` command is configured to use a device code and to not require an Azure subscription. You need to sign in using a web browser. You see output like the following:
 
    ```powershell
@@ -68,29 +65,13 @@ You can use an access token generated using the Azure CLI [az account get-access
 
 1. Copy the code value, in this example `A57834N7J`, and then select the [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) link to open the page.
 
-   The page displays a series of dialogs to capture the information necessary to authenticate. This example uses a password, but you have options to sign in different ways. Your organization might require multifactor authentication, which makes your experience different.
+   The page displays a series of dialogs to capture the information necessary to authenticate. You have options to sign in different ways. Your organization might require multifactor authentication, which makes your experience different.
 
-   1. Paste the code into the **Enter code** dialog.
-
-      :::image type="content" source="media/web-api-ps-enter-code-1.png" alt-text="Dialog to enter the device code":::
-
-   1. Enter the account you want to use to connect in the **Sign in** dialog.
-
-      :::image type="content" source="media/web-api-ps-sign-in-2.png" alt-text="Dialog to Sign-in":::
-
-   1. Enter your password in the **Enter password** dialog.
-
-      :::image type="content" source="media/web-api-ps-enter-password-3.png" alt-text="Dialog to enter password":::
-
-   1. Select **Continue** in the **Are you trying to sign in to Microsoft Azure CLI?** dialog
-
-      :::image type="content" source="media/web-api-ps-continue-4.png" alt-text="Confirm you are trying to sign in dialog":::
-
-   1. At the final page, you can close the window
+1. At the final page, you can close the window
 
    :::image type="content" source="media/web-api-ps-final-5.png" alt-text="Sign-in complete page":::
 
-At this point, you can type `Write-Host $token` in the terminal to see the access token value.
+At this point, you can enter `Write-Host $token` in the terminal to see the access token value.
 
 ### Simplifying Sign in
 
