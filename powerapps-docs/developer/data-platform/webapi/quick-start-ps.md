@@ -1,5 +1,5 @@
 ---
-title: Quick Start Web API with PowerShell
+title: Quick Start Web API with PowerShell Option 1
 description: Describes how to use the Dataverse Web API from PowerShell
 ms.date: 12/05/2023
 author: divkamath
@@ -11,7 +11,7 @@ contributors:
   - JimDaly
 ---
 
-# Quick Start: Web API with PowerShell
+# Quick Start: Web API with PowerShell Option 1
 
 In this quick start, you'll learn how to:
 

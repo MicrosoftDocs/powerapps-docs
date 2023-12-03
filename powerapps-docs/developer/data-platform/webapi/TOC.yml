@@ -14,8 +14,10 @@
       href: quick-start-blazor-server-app.md
   - name: (PowerShell)
     items:
-    - name: Get started using PowerShell
+    - name: Get started using PowerShell Option 1
       href: quick-start-ps.md
+    - name: Get started using PowerShell Option 2
+      href: quick-start-ps-2.md
 - name: Web service authentication
   href: authenticate-web-api.md
 - name: Types and operations
