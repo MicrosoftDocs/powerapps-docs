@@ -17,7 +17,6 @@ searchScope:
   - "Power Apps"
 ---
 
-
 # Configure files and images in offline canvas apps (preview)
 [This article is prerelease documentation and is subject to change.]
 
@@ -26,6 +25,19 @@ The support of files and images is currently in preview. To enable it, the canva
 > {!Important]
 > - This is a preview feature.
 > - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+## Prerequisite: View column properties for a file or image 
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+2. In the left navigation, select **Tables**. [!include [left nav](../includes/left-navigation-pane.md)] 
+  
+3. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
+
+4. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
+
+   > [!div class="mx-imgBorder"]
+   >![Maximum size for files and images.](media/offline-file-images-1.png "Maximum file and image size")
 
 ## Turn on support for file/image column in Dataverse offline feature
 1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
