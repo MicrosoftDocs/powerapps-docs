@@ -43,14 +43,21 @@ Follow the steps in this topic, for a mobile offline profile that has a table wi
 It is required to add both the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile to make images available in offline mode.
 
 1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
+
 1. Select your model-driven app, and then select **Edit**.
+
 1. Select **Settings**.
+
 1. Select **General**.
+
 1. Make sure **Can be used offline** toggle is On.
+
 1. In the **Select offline mode and profile** section, Select **Edit selected profile** from the "..."
+
 1. Select the Table that contains the file or image column to enable for offline
-1. In the **Include hese files and images** section, select the column that contains the file or the image
-2. Note that the columns are grouped by **Files** or **Images** type
+   
+1. In the **Include these files and images** section, select the column that contains the file or the image (Note that the columns are grouped by **Files** or **Images** type)
+
 1. Select **Save**.
 1. Save and Publish the app.    
 
