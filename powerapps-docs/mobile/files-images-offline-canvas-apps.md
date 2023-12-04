@@ -1,11 +1,11 @@
 ---
 
-title: Work with files and images in offline canvas apps
-description: Learn how to work with files and images in offline canvas apps.
+title: Configure files and images in offline canvas apps
+description: Learn how to configure files and images in offline canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: article
-ms.date: 12/01/2023
+ms.date: 12/04/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -18,7 +18,7 @@ searchScope:
 ---
 
 
-# Set up files and images to work offline for canvas apps
+# Configure files and images in offline canvas apps
 The support of files and images is currently in preview. To enable it, the canvas app must be enabled for offline and you must activate the feature.
 
 ## Enable support for file/image column in Dataverse offline feature
