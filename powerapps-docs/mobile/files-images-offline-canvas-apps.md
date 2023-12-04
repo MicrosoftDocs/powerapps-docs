@@ -62,7 +62,7 @@ It is required to add both the **Image Descriptor** and **FileAttachment** table
 
 5. Select a mobile offline profile to edit it.
 
-6. In the **Data available offline** section, select **Add table**.
+6. In **Data available offline** select **Add table**.
 
 7. Select **Image Descriptor** and then select **Next**.
 
