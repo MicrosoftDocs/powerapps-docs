@@ -40,7 +40,7 @@ Follow the steps in this topic, for a mobile offline profile that has a table wi
 
 ## Add file or image columns to mobile offline 
 
-It is required to add the column where **Data Type** is set to **File** or **Imahe** to your mobile offline profile to make files and images available in offline mode.
+It is required to add the column where **Data Type** is set to **File** or **Image** to your mobile offline profile to make files and images available in offline mode.
 
 1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
 
@@ -54,10 +54,11 @@ It is required to add the column where **Data Type** is set to **File** or **Ima
 
 1. In the **Select offline mode and profile** section, Select **Edit selected profile** from the "..."
 
-1. Select the Table that contains the file or image column to enable for offline
+1. Select the Table that contains the file or image column to enable for offline and select **Edit** from the **More actions** button
    
-1. In the **Include these files and images** section, select the column that contains the file or the image (Note that the columns are grouped by **Files** or **Images** type)
+1. In the **Include these files and images** section, select the column where **Data Type** is set to **File** or **Image**  (Note that the columns are grouped by **Files** or **Images**)
 
 1. Select **Save**.
+   
 1. Save and Publish the app.    
 
