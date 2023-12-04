@@ -77,7 +77,7 @@ It is required to add both the **Image Descriptor** and **FileAttachment** table
 
 11. In the **Data available offline** section, select **Add table**.
 
-12.  In the Add pane panel, select **FileAttachment** and tehn select **Next**. 
+12.  In the **Add table** panel, select **FileAttachment** and then select **Next**. 
 
 14. Expand **Relationships** and select **Image Descriptor, Column name: FileId**. Don't select **Image Descriptor, Column name: Regarding**.
 
