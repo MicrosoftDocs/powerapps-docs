@@ -15,14 +15,14 @@ contributors:
 
 In this quick start, you'll learn how to:
 
-- Use PowerShell and Visual Studio Code to use reusable functions for ad-hoc testing of Web API operations.
+- Use Visual Studio Code with PowerShell to use reusable functions for ad-hoc testing of Web API operations.
 - Authenticate to Dataverse using PowerShell without registering your own application.
 - Compose requests to the Dataverse Web API using the PowerShell [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
-- Create reusable functions that you can save in a .ps1 file.
+- Create reusable functions.
 - Write and run a script using the functions you created.
 
 > [!NOTE]
-> - This should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
+> This should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
 
 ## Prerequisites
 
@@ -43,10 +43,10 @@ In this quick start, you'll learn how to:
 - Install the PowerShell extension for Visual Studio Code. See [PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 - Internet connection
 - Valid user account for a Dataverse environment
-- Url to the Dataverse environment you want to connect to. See [View developer resources](../view-download-developer-resources.md)
+- Url to the Dataverse environment you want to connect to. See [View developer resources](../view-download-developer-resources.md) to learn how to find it.
 - Basic understanding of the PowerShell scripting language
 
-## Creating reusable functions
+## Reusable functions
 
 The following script contains definitions of re-usable PowerShell functions that you can use with Dataverse Web API.
 
@@ -56,31 +56,31 @@ The following script contains definitions of re-usable PowerShell functions that
    Connects to a Dataverse environment using the device code authentication.
 
    .DESCRIPTION
-   The Connect-Device-Code function uses the Azure CLI to obtain an access token for the specified Dataverse environment. 
-   It sets the global variables $environmentUrl and $accessToken with the values of the uri parameter and the token respectively. 
-   It also displays the expiration time of the token.
+   The Connect function uses the Azure CLI to obtain an access token for the specified 
+   Dataverse environment. It sets the global variables $environmentUrl and $accessToken with the 
+   values of the uri parameter and the token respectively. It also displays the expiration time 
+   of the token.
 
    .PARAMETER uri 
    The url for the Dataverse environment you want to connect to. 
    For example, 'https://contoso.crm.dynamics.com'.
 
    .EXAMPLE
-   PS> Connect-Device-Code -uri 'https://yourorg.crm.dynamics.com/'
+   PS> Connect -uri 'https://yourorg.crm.dynamics.com/'
    ERROR: Please run 'az login' to setup account.
-   To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code FVF55NNWF to authenticate.
+   WARNING: A web browser has been opened at https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize. Please continue the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow with `az login --use-device-code`.
    Connected to https://yourorg.crm.dynamics.com/
    Token will expire in 30 minutes.
 
    .EXAMPLE
-   PS> Connect-Device-Code -uri 'https://yourorg.crm.dynamics.com/'
+   PS> Connect -uri 'https://yourorg.crm.dynamics.com/'
    Connected to https://yourorg.crm.dynamics.com/
    Token will expire in 30 minutes.
-    #>
-function Connect-Device-Code {
+#>
+function Connect {
    param (
       [Parameter(Mandatory)] 
       [String] 
-      # Specifies the url for the environment you want to connect to
       $uri
    )
 
@@ -117,17 +117,22 @@ $baseHeaders = @{
 
    .DESCRIPTION
    The Get-WhoAmI function uses the Invoke-RestMethod cmdlet to send a GET request to the Dataverse Web API. 
-   It retrieves the information about the current user, organization, and business unit from the WhoAmI function. 
+   It retrieves the information about the current user, organization, and business unit with the 
+   WhoAmI function. 
    It returns the user ID, business unit ID, and organization ID as properties.
 
-   .PARAMETER 
-   None This function does not take any parameters.
+   .PARAMETER None 
+   This function does not take any parameters.
 
    .OUTPUTS
    Microsoft.Dynamics.CRM.WhoAmIResponse ComplexType 
 
    .EXAMPLE
    PS> Get-WhoAmI | Format-List -Property BusinessUnitId,UserId,OrganizationId
+
+   BusinessUnitId : 6d8b5aa9-2845-4bd7-ae9b-947ecbeba47c
+   UserId         : a7436a58-33af-4e54-8fbe-d73b4050646b
+   OrganizationId : e702c361-9c7f-4f26-bc79-5619f2809b17
 #>
 function Get-WhoAmI {
    $WhoAmIRequest = @{
@@ -143,11 +148,12 @@ function Get-WhoAmI {
    Returns a collection of records from a table that match a query
 
    .DESCRIPTION
-   The Get-Records function returns a collection of records from the table with the matching -setName parameter
-   filtered by the -query parameter
+   The Get-Records function returns a collection of records from the table with the 
+   matching -setName parameter filtered by the -query parameter
 
    .PARAMETER setName 
-   The table set name (EntityMetadata.EntitySetName property) of the records to retrieve. For example, 'accounts' or 'contacts'.
+   The table set name (EntityMetadata.EntitySetName property) of the records to retrieve. 
+   For example, 'accounts' or 'contacts'.
 
    .PARAMETER query 
    The ODATA query to select properties, expand navigation properties, and filter results. 
@@ -195,11 +201,9 @@ function Get-Records {
    param (
       [Parameter(Mandatory)] 
       [String] 
-      # The table set name (EntityMetadata.EntitySetName property)
       $setName,
       [Parameter(Mandatory)] 
       [String] 
-      # The ODATA query to select properties, expand navigation properties, and filter results
       $query
    )
    $uri = $environmentUrl + 'api/data/v9.2/' + $setName + $query
@@ -218,37 +222,35 @@ function Get-Records {
 }
 
 <# 
-.SYNOPSIS 
-Creates a record in a table.
+   .SYNOPSIS 
+   Creates a record in a table.
 
-.DESCRIPTION 
-The New-Record function uses the Invoke-RestMethod cmdlet to send a POST request to the Dataverse Web API. 
-It creates a new record in the specified table set with the properties and values provided in the body parameter. 
-It returns the GUID of the created record.
+   .DESCRIPTION 
+   The New-Record function uses the Invoke-RestMethod cmdlet to send a POST request to the Dataverse Web API. 
+   It creates a new record in the specified table set with the properties and values provided in the body parameter. 
+   It returns the GUID of the created record.
 
-.PARAMETER 
-setName The table set name (EntityMetadata.EntitySetName property) of the record to create. 
-For example, 'accounts' or 'contacts'.
+   .PARAMETER setName 
+   The table set name (EntityMetadata.EntitySetName property) of the record to create. 
+   For example, 'accounts' or 'contacts'.
 
-.PARAMETER 
-body 
-A hashtable that contains the properties and values of the record to create. 
-For example, @{name = 'Contoso'; address1_city = 'Seattle'}.
+   .PARAMETER body 
+   A hashtable that contains the properties and values of the record to create. 
+   For example, @{name = 'Contoso'; address1_city = 'Seattle'}.
 
-.EXAMPLE 
-New-Record -setName 'accounts' -body @{name = 'Contoso'; address1_city = 'Seattle'}
+   .EXAMPLE 
+   New-Record -setName 'accounts' -body @{name = 'Contoso'; address1_city = 'Seattle'}
 
-This example creates a new account record with the name 'Contoso' and the city 'Seattle'. It returns the GUID of the created record. 
+   This example creates a new account record with the name 'Contoso' and the city 'Seattle'. 
+   It returns the GUID of the created record. 
 #>
 function New-Record {
    param (
       [Parameter(Mandatory)] 
       [String] 
-      # The table set name (EntityMetadata.EntitySetName property)
       $setName,
       [Parameter(Mandatory)] 
       [hashtable]
-      # Contains the properties and values of the record to change.
       $body
    )
    $postHeaders = $baseHeaders.Clone()
@@ -266,68 +268,64 @@ function New-Record {
 }
 
 <# 
-.SYNOPSIS 
-Retrieves a record from a table set using the primary key.
+   .SYNOPSIS 
+   Retrieves a record from a table set using the primary key.
 
-.DESCRIPTION 
-The Get-Record function uses the Invoke-RestMethod cmdlet to send a GET request to the Dataverse Web API. 
-It retrieves a record from the specified table set using the GUID primary key value provided in the id parameter. 
-It optionally accepts an ODATA query parameter to select properties, filter results and expand navigation properties. 
-It returns the record as a PowerShell object.
+   .DESCRIPTION 
+   The Get-Record function uses the Invoke-RestMethod cmdlet to send a GET request to the Dataverse Web API. 
+   It retrieves a record from the specified table set using the GUID primary key value provided in the id parameter. 
+   It optionally accepts an ODATA query parameter to select properties, filter results and expand navigation properties. 
+   It returns the record as a PowerShell object.
 
-.PARAMETER 
-setName 
-The table set name (EntityMetadata.EntitySetName property) of the record to retrieve. For example, 'accounts' or 'contacts'.
+   .PARAMETER setName 
+   The table set name (EntityMetadata.EntitySetName property) of the record to retrieve. 
+   For example, 'accounts' or 'contacts'.
 
-.PARAMETER 
-id 
-The GUID primary key value of the record to retrieve. For example, '00000000-0000-0000-0000-000000000000'.
+   .PARAMETER id 
+   The GUID primary key value of the record to retrieve. 
+   For example, '00000000-0000-0000-0000-000000000000'.
 
-.PARAMETER 
-query 
-The ODATA query to select properties, filter results and expand navigation properties. 
-For example, '?$select=name,address1_city&$expand=primarycontactid($select=fullname)'.
+   .PARAMETER query 
+   The ODATA query to select properties, filter results and expand navigation properties. 
+   For example, '?$select=name,address1_city&$expand=primarycontactid($select=fullname)'.
 
-.EXAMPLE 
-Get-Record -setName 'accounts' -id '00000000-0000-0000-0000-000000000000'
+   .EXAMPLE 
+   Get-Record -setName 'accounts' -id '00000000-0000-0000-0000-000000000000'
 
-This example retrieves the account record with the specified GUID and returns all the properties.
+   This example retrieves the account record with the specified GUID and returns all the properties.
 
-.EXAMPLE 
-Get-Record -setName 'accounts' -id '00000000-0000-0000-0000-000000000000' -query '?$select=name,address1_city&$expand=primarycontactid($select=fullname)'
+   .EXAMPLE 
+   Get-Record -setName 'accounts' -id '00000000-0000-0000-0000-000000000000' -query '?$select=name,address1_city&$expand=primarycontactid($select=fullname)'
 
-This example retrieves the account record with the specified GUID and returns only the name and city properties, as well as the full name of the primary contact. 
+   This example retrieves the account record with the specified GUID and returns only the name and city properties, as well as the full name of the primary contact. 
 
-.EXAMPLE
-Get-Record `
--setName  accounts `
--id $newAccountID.Guid '?$select=name,accountcategorycode' |
-Format-List -Property name,
-accountid,
-accountcategorycode,
-accountcategorycode@OData.Community.Display.V1.FormattedValue
+   .EXAMPLE
+   Get-Record `
+   -setName  accounts `
+   -id $newAccountID.Guid '?$select=name,accountcategorycode' |
+   Format-List -Property name,
+   accountid,
+   accountcategorycode,
+   accountcategorycode@OData.Community.Display.V1.FormattedValue
 
-This example retrieves the account record with the specified GUID and returns only the name, 
-accountid, accountcategorycode, and the formatted value for the account category code.
+   This example retrieves the account record with the specified GUID and returns only the name, 
+   accountid, accountcategorycode, and the formatted value for the account category code.
 
-name                                                          : Example Account
-accountid                                                     : f20412c1-1592-ee11-be37-000d3a993550
-accountcategorycode                                           : 1
-accountcategorycode@OData.Community.Display.V1.FormattedValue : Preferred Customer
+   name                                                          : Example Account
+   accountid                                                     : f20412c1-1592-ee11-be37-000d3a993550
+   accountcategorycode                                           : 1
+   accountcategorycode@OData.Community.Display.V1.FormattedValue : Preferred Customer
 
 #>
 function Get-Record {
    param (
       [Parameter(Mandatory)] 
       [String] 
-      # The table set name (EntityMetadata.EntitySetName property)
       $setName,
       [Parameter(Mandatory)] 
       [Guid] 
-      # The GUID primary key value of the record to retrieve
       $id,
       [String] 
-      # The ODATA query to select properties, filter results and expand navigation properties
       $query
    )
 
@@ -346,54 +344,52 @@ function Get-Record {
    Invoke-RestMethod @RetrieveRequest
 }
 
-<# .SYNOPSIS 
-Updates a record in a table using the primary key.
+<# 
+   .SYNOPSIS 
+   Updates a record in a table using the primary key.
 
-.DESCRIPTION 
-The Update-Record function uses the Invoke-RestMethod cmdlet to send a PATCH request to the Dataverse Web API. 
-It updates an existing record in the specified table using the GUID primary key value provided in the id parameter. 
-It accepts a hashtable that contains the values to update in the body parameter.
+   .DESCRIPTION 
+   The Update-Record function uses the Invoke-RestMethod cmdlet to send a PATCH request to the Dataverse Web API. 
+   It updates an existing record in the specified table using the GUID primary key value provided in the id parameter. 
+   It accepts a hashtable that contains the values to update in the body parameter.
 
-.PARAMETER 
-setName The table set name (EntityMetadata.EntitySetName property) of the record to update. For example, 'accounts' or 'contacts'.
+   .PARAMETER setName 
+   The table set name (EntityMetadata.EntitySetName property) of the record to update. For example, 'accounts' or 'contacts'.
 
-.PARAMETER 
-id The GUID primary key value of the record to update. For example, '00000000-0000-0000-0000-000000000000'.
+   .PARAMETER id 
+   The GUID primary key value of the record to update. For example, '00000000-0000-0000-0000-000000000000'.
 
-.PARAMETER 
-body A hashtable that contains the values to update in the record. For example, @{name = 'Contoso'; address1_city = 'Seattle'}.
+   .PARAMETER body 
+   A hashtable that contains the values to update in the record. For example, @{name = 'Contoso'; address1_city = 'Seattle'}.
 
-.EXAMPLE 
-Update-Record -setName 'accounts' -id '00000000-0000-0000-0000-000000000000' -body @{name = 'Contoso'; address1_city = 'Seattle'}
+   .EXAMPLE 
+   Update-Record -setName 'accounts' -id '00000000-0000-0000-0000-000000000000' -body @{name = 'Contoso'; address1_city = 'Seattle'}
 
-This example updates the account record with the specified GUID and changes the name to 'Contoso' and the city to 'Seattle'. 
+   This example updates the account record with the specified GUID and changes the name to 'Contoso' and the city to 'Seattle'. 
 
-.EXAMPLE
-$updateAccountData = @{
-   name                = 'Contoso';
-   accountcategorycode = 2; #Standard
-}
-Update-Record `
--setName accounts `
--id $newAccountID.Guid `
--body $updateAccountData
+   .EXAMPLE
+   $updateAccountData = @{
+      name                = 'Contoso';
+      accountcategorycode = 2; #Standard
+   }
+   Update-Record `
+   -setName accounts `
+   -id $newAccountID.Guid `
+   -body $updateAccountData
 
-This example updates the account record with the specified GUID and changes the name to 'Contoso' and the accountcategorycode to 2 (Standard). 
+   This example updates the account record with the specified GUID and changes the name to 'Contoso' and the accountcategorycode to 2 (Standard). 
 
 #>
 function Update-Record {
    param (
       [Parameter(Mandatory)] 
       [String] 
-      # The table set name (EntityMetadata.EntitySetName property)
       $setName,
       [Parameter(Mandatory)] 
       [Guid] 
-      # The GUID primary key value of the record to update
       $id,
       [Parameter(Mandatory)] 
       [hashtable]
-      # A hashtable containing the values to update
       $body
    )
    $uri = $environmentUrl + 'api/data/v9.2/' + $setName
@@ -415,34 +411,32 @@ function Update-Record {
 
 <# 
 
-.SYNOPSIS 
-Deletes a record from a table using the primary key.
+   .SYNOPSIS 
+   Deletes a record from a table using the primary key.
 
-.DESCRIPTION 
-The Remove-Record function uses the Invoke-RestMethod cmdlet to send a DELETE request to the Dataverse Web API. 
-It deletes an existing record from the specified table using the GUID primary key value provided in the id parameter.
+   .DESCRIPTION 
+   The Remove-Record function uses the Invoke-RestMethod cmdlet to send a DELETE request to the Dataverse Web API. 
+   It deletes an existing record from the specified table using the GUID primary key value provided in the id parameter.
 
-.PARAMETER 
-setName The table set name (EntityMetadata.EntitySetName property) of the record to delete. For example, 'accounts' or 'contacts'.
+   .PARAMETER setName 
+   The table set name (EntityMetadata.EntitySetName property) of the record to delete. For example, 'accounts' or 'contacts'.
 
-.PARAMETER 
-id The GUID primary key value of the record to delete. For example, '00000000-0000-0000-0000-000000000000'.
+   .PARAMETER id 
+   The GUID primary key value of the record to delete. For example, '00000000-0000-0000-0000-000000000000'.
 
-.EXAMPLE 
-Remove-Record -setName 'accounts' -id '00000000-0000-0000-0000-000000000000'
+   .EXAMPLE 
+   Remove-Record -setName 'accounts' -id '00000000-0000-0000-0000-000000000000'
 
-This example deletes the account record with the specified GUID. 
+   This example deletes the account record with the specified GUID. 
 
 #>
 function Remove-Record {
    param (
       [Parameter(Mandatory)] 
       [String]
-      # The table set name (EntityMetadata.EntitySetName property)
       $setName,
       [Parameter(Mandatory)] 
       [Guid] 
-      # The GUID primary key value of the record to delete
       $id
    )
    $uri = $environmentUrl + 'api/data/v9.2/' + $setName
@@ -457,36 +451,36 @@ function Remove-Record {
 }
 
 <# 
-.SYNOPSIS 
-Gets the error details from a Dataverse Web API HTTP response exception.
+   .SYNOPSIS 
+   Gets the error details from a Dataverse Web API HTTP response exception.
 
-.DESCRIPTION 
-The Get-Error-Details function takes an exception object from the pipeline and extracts the status code, error code, and error message from it. 
-It assumes that the exception object is of type Microsoft.PowerShell.Commands.HttpResponseException and that the error details are in JSON format. 
-It returns a custom object with the status code, error code, and error message as properties.
+   .DESCRIPTION 
+   The Get-Error-Details function takes an exception object from the pipeline and extracts the status code, error code, and error message from it. 
+   It assumes that the exception object is of type Microsoft.PowerShell.Commands.HttpResponseException and that the error details are in JSON format. 
+   It returns a custom object with the status code, error code, and error message as properties.
 
-.PARAMETER 
-Exception The exception object from the pipeline. 
-It should be of type Microsoft.PowerShell.Commands.HttpResponseException and have the ErrorDetails property populated with a JSON string.
+   .PARAMETER Exception 
+   The exception object from the pipeline. 
+   It should be of type Microsoft.PowerShell.Commands.HttpResponseException and have the ErrorDetails property populated with a JSON string.
 
-.EXAMPLE 
-Connect-Device-Code -uri 'https://yourorg.crm.dynamics.com/'
-try {
-   (Get-Records `
-   -setName accounts `
-   -query '?$select=names&$top=3').value | 
-Format-Table -Property name, accountid
-}
-catch [Microsoft.PowerShell.Commands.HttpResponseException] {
-   Get-Error-Details | Format-List 
-} 
+   .EXAMPLE 
+   Connect -uri 'https://yourorg.crm.dynamics.com/'
+   try {
+      (Get-Records `
+      -setName accounts `
+      -query '?$select=names&$top=3').value | 
+      Format-Table -Property name, accountid
+   }
+   catch [Microsoft.PowerShell.Commands.HttpResponseException] {
+      Get-Error-Details | Format-List 
+   } 
 
-Connected to https://yourorg.crm.dynamics.com/
-Token will expire in 30 minutes.
-                                                                                                                        
-statuscode : BadRequest
-code       : 0x0
-message    : Could not find a property named 'names' on type 'Microsoft.Dynamics.CRM.account'.
+   Connected to https://yourorg.crm.dynamics.com/
+   Token will expire in 30 minutes.
+                                                                                                                           
+   statuscode : BadRequest
+   code       : 0x0
+   message    : Could not find a property named 'names' on type 'Microsoft.Dynamics.CRM.account'.
 #>
 function Get-Error-Details {
    try {
@@ -510,9 +504,12 @@ function Get-Error-Details {
 }
 ```
 
-1. Copy this script into a file named `myDVWebAPIFunctions.ps1` and save it.
-1. Open the `myDVWebAPIFunctions.ps1` file using Visual Studio Code.
-1. Press <kbd>F5</kbd> to save and run the script.
+1. In the Visual Studio Code menu, select **File** > **New Text File**, or use the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>N</kbd>.
+1. Copy this script into the file.
+
+   Visual Studio Code will detect it is a PowerShell script
+
+1. Press <kbd>F5</kbd> to run the script.
 
 ## Create a script file for testing
 
@@ -524,7 +521,7 @@ function Get-Error-Details {
 1. Copy the following script and paste it into the new file.
 
    ```powershell
-   Connect-Device-Code -uri 'https://yourorg.crm.dynamics.com/'
+   Connect -uri 'https://yourorg.crm.dynamics.com/'
    try {
       # Try WhoAmI
       Write-Host 'Call WhoAmI:'
@@ -599,25 +596,16 @@ function Get-Error-Details {
 
 ## Run the script
 
-1. Change the first line to use the URL for your environment instead of 'https://yourorg.crm.dynamics.com/'.
+1. Change the first line to use the URL for your environment instead of `https://yourorg.crm.dynamics.com/`.
 1. Press <kbd>F5</kbd> to debug your script file.
-
-   > [!NOTE]
-   > This will not save your script. It isn't necessary to save this file to use it for ad-hoc testing.
-
 1. The first time you run the script, you need to sign in using a web browser. You see output like the following:
 
    ```powershell
-   To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code A57834N7J to authenticate.
+   ERROR: Please run 'az login' to setup account.
+   WARNING: A web browser has been opened at https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize. Please continue the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow with `az login --use-device-code`.
    ```
 
-1. Copy the code value, in this example `A57834N7J`, and then select the [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) link to open the page.
-
-   The page displays a series of dialogs to capture the information necessary to authenticate. You have options to sign in different ways. For example, your organization might require multifactor authentication.
-
-1. At the final page, you can close the window
-
-   :::image type="content" source="media/web-api-ps-final-5.png" alt-text="Sign-in complete page":::
+1. In the browser that opened, enter the credentials you need to authenticate.
 
 1. After you authenticate, the script will complete. You should see output like the following:
 
@@ -665,7 +653,135 @@ function Get-Error-Details {
 
 ## How does it work?
 
-TODO: Explain how it works
+The first script contains the definitions for reusable PowerShell functions. When you debug the script, these functions are available in the session for the terminal window. The second script can now use the functions in the session.
+
+All the operations in the script are performed within a `try` block with `two` catch blocks that separate errors from Dataverse from other errors that may occur within the script.
+
+The following sections describe the details for each part.
+
+### Authentication
+
+The first line of the second script calls the `Connect` function. This function:
+
+- Detects whether you are already signed in to Azure using the [az account tenant list](/cli/azure/account/tenant#az-account-tenant-list) Azure CLI extension to get a list of tenants associated with the signed-in user. If it returns null, you need to sign in.
+- If you need to sign in, it uses the [az login](/cli/azure/reference-index#az-login) command. This access token it returns has the necessary delegated permissions to connect to Dataverse. You don't need to register an application to use the Dataverse Web API with PowerShell. The `--allow-no-subscriptions` parameter means you don't need to have an azure Subscription You can use `az login` for several other kinds of authentication flows. [Learn about other ways to sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
+- It sets the global variables `$environmentUrl` and `$accessToken` so that other functions in the session can use them.
+
+### Calling WhoAmI function
+
+The [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) is a very simple request to demonstrate the pattern used to invoke other Dataverse Web API operations. The `Get-WhoAmI` function demonstrates using it.
+
+```powershell
+# Define common set of headers
+$baseHeaders = @{
+   'Authorization'    = "Bearer $accessToken"
+   'Accept'           = 'application/json'
+   'OData-MaxVersion' = '4.0'
+   'OData-Version'    = '4.0'
+}
+
+# WhoAmI message
+function Get-WhoAmI {
+   $WhoAmIRequest = @{
+      Uri     = $environmentUrl + 'api/data/v9.2/WhoAmI'
+      Method  = 'Get'
+      Headers = $baseHeaders
+   }
+   return Invoke-RestMethod @WhoAmIRequest
+}
+```
+
+The `$baseHeaders` variable includes the `$accessToken` value in the `Authorization` header, together with other headers you should always use with Web API. [Learn more about headers to use with Dataverse Web API](compose-http-requests-handle-errors.md#http-headers)
+
+This script passes the `Uri`, `Method`, and `Headers` parameters to the [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod) with a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables) using a technique known as [splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
+PowerShell has specific requirements about the names of functions. That is why this function is named `Get-WhoAmI` rather than simply `WhoAmI`. [Learn more about approved verbs for PowerShell commands](/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands)
+
+This function returns the entire body of the HTTP response, so it includes the `@odata.context` property as well as the properties in the [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The example code pipes the response to [Format-List](/powershell/module/microsoft.powershell.utility/format-list)
+
+> [!div class="nextstepaction"]
+> [Learn more about using Dataverse Web API functions](use-web-api-functions.md)
+
+### Retrieve records
+
+To retrieve business data, you need to send a `GET` request to the table resource identified by the entity set name. Use an ODATA query to select properties, expand navigation properties, and filter results. The `Get-Records` function enables this.
+
+This function adds two more headers to the base headers:
+
+- `If-None-Match : null` is to make sure that related record collections you might include using `$expand` are retrieved from the server and don't use cached data in the browser that doesn't reflect recent changes.
+- `Prefer : odata.include-annotations="*"` requests all available annotations that can be returned. You can also choose to retrieve specific types of annotations. [Learn how to request annotations](compose-http-requests-handle-errors.md#request-annotations)
+
+This function returns the entire HTTP response and the records themselves are in the `value` property. These other properties are useful for scenarios where you need to retrieving [paged results](query-data-web-api.md#page-results), so they aren't filtered out here. As shown in the sample, you can filter and format the results to see the data you are most interested in. The sample script uses this:
+
+```powershell
+(Get-Records accounts '?$select=name&$top=3').value | Format-Table -Property name,accountid
+```
+
+> [!div class="nextstepaction"]
+> [Learn more about querying data using Dataverse Web API](query-data-web-api.md)
+
+### Create records
+
+To create records you need to `POST` valid data to the table resource identified by the entity set name. The `New-Record` function demonstrates this. Use the `setName` parameter to specify the table, then send the data as a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables) with the `body` parameter.
+
+This function adds the `Content-Type: application/json` request header because it sends data in the body of the request.
+
+Unlike other functions, `New-Record` doesn't return the raw HTTP response. The only useful data returned is the value of the `OData-EntityId` response header, and this function parses the GUID ID value from that string so it can be more easily used by other functions. 
+
+> [!div class="nextstepaction"]
+> [Learn more about creating records using Dataverse Web API](create-entity-web-api.md)
+
+### Retrieve a record
+
+To retrieve a single record, you need to send a `GET` request to the table resource identified by the entity set name together with a unique key, or [alternate keys](/power-apps/developer/data-platform/use-alternate-key-reference-record?tabs=webapi). Use an ODATA query to select properties and expand navigation properties. The `Get-Record` function enables retrieving a single record using the primary key.
+
+This function uses the same modified headers as the `Get-Records` function. Because it returns the entire body of the HTTP response, filter and format properties using [Format-List](/powershell/module/microsoft.powershell.utility/format-list)
+
+> [!div class="nextstepaction"]
+> [Learn more about retrieving a record using the Web API](retrieve-entity-using-web-api.md)
+
+### Update a record
+
+To create records you need to `PATCH` valid data to the table resource identified by the entity set name together with a unique key, or [alternate keys](/power-apps/developer/data-platform/use-alternate-key-reference-record?tabs=webapi). The `Update-Record` function enables retrieving a single record using the primary key.
+
+Like the `New-Record` function, this request needs to include the `Content-Type:application/json` request header because it includes data in the body of the request. The `If-Match: *` header makes sure this function doesn't create a new record if the record you intended to update doesn't exist. The `Patch` method is also used for *upsert* operations. 
+
+> [!div class="nextstepaction"]
+> [Learn more about updating and upserting table rows](update-delete-entities-using-web-api.md)
+
+### Delete a record
+
+To create records you need to send a `DELETE` request to a table resource identified by the entity set name together with a unique key, or [alternate keys](/power-apps/developer/data-platform/use-alternate-key-reference-record?tabs=webapi). The `Remove-Record` function enables deleting a single record using the primary key.
+
+> [!div class="nextstepaction"]
+> [Learn more about deleting table rows](update-delete-entities-using-web-api.md#basic-delete)
+
+## Parsing errors
+
+In the script, all data operations are performed in a `try` block with the [Try/Catch pattern](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). When any of the Dataverse functions fail on the server, the [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod) will return a <xref:Microsoft.PowerShell.Commands.HttpResponseException?displayProperty=fullName>. The first `catch` block will handle these errors and send the exception to the `Get-Error-Details` function.
+
+```powershell
+Connect -uri 'https://yourorg.crm.dynamics.com/'
+   try {
+      # All Data operations performed here
+   }
+   catch [Microsoft.PowerShell.Commands.HttpResponseException] {
+
+      Write-Host "An error occurred calling Dataverse:" -ForegroundColor Red
+      Get-Error-Details | Format-List 
+
+   }
+   catch {
+      
+      Write-Host "An error occurred in the script:" -ForegroundColor Red
+      Write-Host $_
+   }
+```
+
+The `Get-Error-Details` function parses out the basic errors returned by Dataverse Web API. It is possible to for more information to be included with errors.
+
+> [!div class="nextstepaction"]
+> [Learn more about parsing errors from the response](compose-http-requests-handle-errors.md#parse-errors-from-the-response)
 
 ## Troubleshooting
 

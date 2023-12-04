@@ -58,23 +58,17 @@ You can use an access token generated using the Azure CLI [az account get-access
 
    ```powershell
    $environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
-   az login --use-device-code --allow-no-subscriptions  | Out-Null
+   az login --allow-no-subscriptions  | Out-Null
    $token = (az account get-access-token --resource=$environmentUrl --query accessToken --output tsv)
    ```
    
-1. Press <kbd>Enter</kbd> to run the command. The `az login` command is configured to use a device code and to not require an Azure subscription. You need to sign in using a web browser. You see output like the following:
+1. Press <kbd>Enter</kbd> to run the command.
 
    ```powershell
-   To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code A57834N7J to authenticate.
+      WARNING: A web browser has been opened at https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize. Please continue the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow with `az login --use-device-code`.
    ```
 
-1. Copy the code value, in this example `A57834N7J`, and then select the [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) link to open the page.
-
-   The page displays a series of dialogs to capture the information necessary to authenticate. You have options to sign in different ways. For example, your organization might require multifactor authentication.
-
-1. At the final page, you can close the window
-
-   :::image type="content" source="media/web-api-ps-final-5.png" alt-text="Sign-in complete page":::
+1. In the browser that opened, enter the credentials you need to authenticate.
 
 At this point, you can enter `Write-Host $token` in the terminal to see the access token value.
 
@@ -94,7 +88,7 @@ To avoid completing the device sign-in process every time you debug your script,
    ## login if not already logged in
    if($null -eq (az account tenant list --only-show-errors))
    {
-      az login --allow-no-subscriptions --use-device-code | Out-Null
+      az login --allow-no-subscriptions | Out-Null
    }
    # get token
    $token = az account get-access-token --resource=$environmentUrl --output json
@@ -127,11 +121,11 @@ To avoid completing the device sign-in process every time you debug your script,
 
       ```powershell
       PS C:\Users\you.Domain> . 'C:\test\myDVWebAPICommands.ps1'
-      ERROR: No subscription found. Run 'az account set' to select a subscription.
-      To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code F6NDGHEM7 to authenticate.
+      ERROR: Please run 'az login' to setup account.
+      WARNING: A web browser has been opened at https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize. Please continue the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow with `az login --use-device-code`.
       ```
 
-      You can ignore the `No subscription found` error. That error is an expected as part of checking whether you're already signed in or not.
+      You can ignore the `No subscription found` error. That error is an expected as part of checking whether you're already signed in or not. In the browser that opened, enter the credentials you need to authenticate.
 
    When you're signed in, you can confirm the access token by entering `Write-Host $accessToken` in the terminal.
 
