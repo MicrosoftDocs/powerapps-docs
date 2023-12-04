@@ -1,25 +1,19 @@
 ---
-title: Create and edit elastic tables (preview)
+title: Create and edit elastic tables
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 12/01/2023
+ms.date: 12/04/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: matp
 ms.topic: how-to
 ms.subservice: dataverse-maker
 ---
-# Create and edit elastic tables (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create and edit elastic tables
 
 An elastic table is a table managed by Microsoft Dataverse. Elastic tables come with the same familiar user experience and API that are offered with standard tables. They share many aspects and options with standard tables, but come with their own unique features and capabilities that are powered by Azure Cosmos DB.
 
 As with standard tables, elastic tables are included with your Dataverse database capacity use.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Watch this video that to learn about elastic tables.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAi ]
@@ -66,7 +60,7 @@ Time to live (TTL) policies ensure that you're always working with the most up-t
 
 ### Flexible schema with JSON columns
 
-Elastic tables enable you to store and query data with varying structures, without the need for predefined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. More information: [Developer guide: Query JSON columns in elastic tables (Preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
+Elastic tables enable you to store and query data with varying structures, without the need for predefined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. More information: [Developer guide: Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
 
 ## Considerations when you use elastic tables  
 
@@ -157,12 +151,12 @@ Use [bulk operation messages](../../developer/data-platform/bulk-operations.md).
 
 Elastic tables have different behaviors and capabilities than standard tables when developers use them with Dataverse APIs. The following articles for developers describe these differences:
 
-- [For developers: Elastic tables (preview)](../../developer/data-platform/elastic-tables.md)
-- [Create elastic tables using code (preview)](../../developer/data-platform/create-elastic-tables.md)
-- [Use elastic tables using code (preview)](../../developer/data-platform/use-elastic-tables.md)
-- [Query JSON columns in elastic tables (preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
+- [For developers: Elastic tables](../../developer/data-platform/elastic-tables.md)
+- [Create elastic tables using code](../../developer/data-platform/create-elastic-tables.md)
+- [Use elastic tables using code](../../developer/data-platform/use-elastic-tables.md)
+- [Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
 - [Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md)
-- [Elastic table sample code (preview)](../../developer/data-platform/elastic-table-samples.md)
+- [Elastic table sample code](../../developer/data-platform/elastic-table-samples.md)
 - [Send parallel requests](../../developer/data-platform/send-parallel-requests.md)
 - [Service protection API limits](../../developer/data-platform/api-limits.md)
 
