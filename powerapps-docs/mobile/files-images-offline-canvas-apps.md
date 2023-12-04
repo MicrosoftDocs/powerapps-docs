@@ -66,15 +66,12 @@ It is required to add both the **Image Descriptor** and **FileAttachment** table
 
 7. Select **Image Descriptor** and then select **Next**.
 
-    > [!div class="mx-imgBorder"]
-    >![Select image descriptor.](media/offline-file-images.png "Select image descriptor")
-
-8. Under **Choose the records that you want to make available offline**, select **Related records only**.
+8. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
 
 9. Expand **Relationships** and select **Column name:** for each applicable column where **Data type** is set to **Image** (that is, as shown in the screenshot below for the **DemoTable1** and **DemoTable3** tables).
 
-   > [!div class="mx-imgBorder"]
-    >![Add image descriptor.](media/offline-file-images-2.png "Add image descriptor")
+    > [!div class="mx-imgBorder"]
+    > ![Add image descriptor.](media/offline-file-images-2.png "Add image descriptor")
   
 10. Select **Save**.
 
