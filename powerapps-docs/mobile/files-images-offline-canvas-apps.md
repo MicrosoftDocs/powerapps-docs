@@ -30,11 +30,11 @@ The support of files and images is currently in preview. To enable it, the canva
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. In the left navigation, select **Tables**. [!include [left nav](../includes/left-navigation-pane.md)] 
+1. In the left navigation, select **Tables**. [!include [left nav](../includes/left-navigation-pane.md)] 
   
-3. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
+1. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
-4. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
+1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
 
    > [!div class="mx-imgBorder"]
    >![Maximum size for files and images.](media/offline-file-images-1.png "Maximum file and image size")
@@ -66,37 +66,37 @@ It is required to add both the **Image Descriptor** and **FileAttachment** table
 
 1. Go to Power Platform admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
-2. In the navigation panel, select **Environments**.
+1. In the navigation panel, select **Environments**.
  
-3. Choose an environment and then select **Settings**.
+1. Choose an environment and then select **Settings**.
  
-4. Expand **Users + permissions**, and then select **Mobile configuration**.
+1. Expand **Users + permissions**, and then select **Mobile configuration**.
 
-5. Select a mobile offline profile to edit it.
+1. Select a mobile offline profile to edit it.
 
-6. In the **Data available offline** section, select **Add table**.
+1. In the **Data available offline** section, select **Add table**.
 
-7. Select **Image Descriptor** and then select **Next**.
+1. Select **Image Descriptor** and then select **Next**.
 
-8. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
+1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
 
-9. Expand **Relationships** and select **Column name:** for each applicable column where **Data type** is set to **Image** (that is, as shown in the screenshot below for the **DemoTable1** and **DemoTable3** tables).
+1. Expand **Relationships** and select **Column name:** for each applicable column where **Data type** is set to **Image** (that is, as shown in the screenshot below for the **DemoTable1** and **DemoTable3** tables).
 
     > [!div class="mx-imgBorder"]
     > ![Add image descriptor.](media/offline-file-images-2.png "Add image descriptor")
   
-10. Select **Save**.
+1. Select **Save**.
 
-11. In the **Data available offline** section, select **Add table**.
+1. In the **Data available offline** section, select **Add table**.
 
-12.  In the **Add table** panel, select **FileAttachment** and then select **Next**. 
+1.  In the **Add table** panel, select **FileAttachment** and then select **Next**. 
 
-14. Expand **Relationships** and select **Image Descriptor, Column name: FileId**. Don't select **Image Descriptor, Column name: Regarding**.
+1. Expand **Relationships** and select **Image Descriptor, Column name: FileId**. Don't select **Image Descriptor, Column name: Regarding**.
 
     > [!div class="mx-imgBorder"]
     > ![Add FileAttachment table.](media/mobile-offline-edit-image.png "Add FileAttachment table")
 
-15. Select **Save**.
+1. Select **Save**.
 
 
 ### Add file columns to mobile offline 
@@ -105,24 +105,24 @@ It is required to add the **FileAttachment** tables to your mobile offline profi
 
 1. Go to Power Platform Admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
-2. On the right, select **Environments**.
+1. On the right, select **Environments**.
  
-3. Choose an environment and then select **Settings**.
+1. Choose an environment and then select **Settings**.
  
-4. Expand **Users + permissions**,  and then select **Mobile configuration**.
+1. Expand **Users + permissions**,  and then select **Mobile configuration**.
 
-5. Select a mobile offline profile to edit it.
+1. Select a mobile offline profile to edit it.
 
-6. In the **Data available offline** section, select **Add table**.
+1. In the **Data available offline** section, select **Add table**.
 
-7. Select **FileAttachment**  and then select **Next**.
+1. Select **FileAttachment**  and then select **Next**.
 
    > [!div class="mx-imgBorder"]
     >![Select FileAttachment.](media/offline-file-images-4.png "Select FileAttachment")
 
-8. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
+1. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
 
-9. Expand **Relationships** and select **Column name: Display name** for each applicable column where **Data type** is set to **File** (that is, as shown in the screenshot below for the **DemoTable3** table).
+1. Expand **Relationships** and select **Column name: Display name** for each applicable column where **Data type** is set to **File** (that is, as shown in the screenshot below for the **DemoTable3** table).
 
    > ![Note] Don't select **Column name: Regarding.**.
 
@@ -130,4 +130,4 @@ It is required to add the **FileAttachment** tables to your mobile offline profi
     >![Edit FileAttachment table.](media/offline-file-images-9.png "Edit FileAttachment table.")
    
 
- 11. Select **Save**. 
+ 1. Select **Save**. 
