@@ -89,7 +89,7 @@ This completes the basic app registration in Microsoft Entra ID.
 
  If you want to add a certificate or client secret to your app registration, simply select **Certificates & secrets** in the left navigation panel and add those items.
 
-More information: [Add a certificate](/entra/identity-platform/quickstart-register-app#add-a-certificate), [Add a secret](/entra/identity-platform/quickstart-register-app#add-a-secret)
+More information: [Add a certificate](/entra/identity-platform/quickstart-register-app#add-a-certificate), [Add a secret](/entra/identity-platform/quickstart-register-app#add-a-client-secret)
 
 ## Use app registration in code
 
