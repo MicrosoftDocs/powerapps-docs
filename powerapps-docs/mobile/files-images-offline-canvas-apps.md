@@ -21,10 +21,15 @@ searchScope:
 # Set up files and images to work offline for canvas apps
 The support of files and images is currently in preview. To enable it, the canvas app must be enabled for offline and you must activate the feature:
 
+## Enable support for file/image column in Dataverse offline feature
 1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
+
 1. Select your canvas app, and then select **Edit**.
+
 1. Select **Settings**.
+
 1. Select **Upcoming features**, and then select the **Preview** tab.
+
 1. Turn on the **Enable support for file/image column in Dataverse offline** option.
 
 In an offline enabled canvas app, you can either enable the files and images to be downloaded  "on view" (default) or "on sync". 
@@ -61,13 +66,16 @@ It is required to add both the **Image Descriptor** and **FileAttachment** table
     >![Select image descriptor.](media/offline-file-images.png "Select image descriptor")
 
 8. Under **Choose the records that you want to make available offline**, select **Related records only**.
+
 9. Expand **Relationships** and select **Column name:** for each applicable column where **Data type** is set to **Image** (that is, as shown in the screenshot below for the **DemoTable1** and **DemoTable3** tables).
 
    > [!div class="mx-imgBorder"]
     >![Add image descriptor.](media/offline-file-images-2.png "Add image descriptor")
   
 10. Select **Save**.
+
 11. In **Data available offline** select **Add table** > **FileAttachment** > **Next**. 
+
 12. Expand **Relationships** and select **Image Descriptor, Column name: FileId**. Don't select **Image Descriptor, Column name: Regarding**.
 
     > [!div class="mx-imgBorder"]
@@ -98,6 +106,7 @@ It is required to add the **FileAttachment** tables to your mobile offline profi
     >![Select FileAttachment.](media/offline-file-images-4.png "Select FileAttachment")
 
 8. Under **Choose the records that you want to make available offline**, select **Related records only**.
+
 9. Expand **Relationships** and select **Column name: Display name** for each applicable column where **Data type** is set to **File** (that is, as shown in the screenshot below for the **DemoTable3** table).
 
    > ![Note] Don't select **Column name: Regarding.**.
