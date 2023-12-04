@@ -1823,7 +1823,7 @@
       href: ../mobile/canvas-mobile-offline-setup.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
-    - name: Configure files and images in offline canvas apps
+    - name: Configure files and images in offline canvas apps (preview)
       href: ../mobile/files-images-offline-canvas-apps.md
   - name: Troubleshoot issues in the mobile app
     items:
