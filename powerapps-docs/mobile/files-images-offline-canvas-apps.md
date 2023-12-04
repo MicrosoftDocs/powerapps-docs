@@ -19,7 +19,7 @@ searchScope:
 
 
 # Set up files and images to work offline for canvas apps
-The support of files and images is currently in preview. To enable it, the canvas app must be enabled for offline and you must activate the feature:
+The support of files and images is currently in preview. To enable it, the canvas app must be enabled for offline and you must activate the feature.
 
 ## Enable support for file/image column in Dataverse offline feature
 1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
