@@ -26,11 +26,11 @@ Follow the steps in this topic, for a mobile offline profile that has a table wi
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. In the left navigation, select **Tables**. [!include [left nav](../includes/left-navigation-pane.md)] 
+1. In the left navigation, select **Tables**. [!include [left nav](../includes/left-navigation-pane.md)] 
   
-3. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
+1. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
-4. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
+1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
 
    > [!div class="mx-imgBorder"]
    >![Maximum size for files and images.](media/offline-file-images-1.png "Maximum file and image size")
