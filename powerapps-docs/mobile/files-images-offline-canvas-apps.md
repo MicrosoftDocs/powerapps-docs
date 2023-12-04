@@ -30,8 +30,8 @@ The support of files and images is currently in preview. To enable it, the canva
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. In the left navigation, select **Tables**. [!include [left nav](../includes/left-navigation-pane.md)] 
-  
+1. In the left side panel, select **Tables**.
+   
 1. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
 1. The column properties show the **Data type**. Expand **Advanced options** to view the maximum size for a file or image.
@@ -39,7 +39,7 @@ The support of files and images is currently in preview. To enable it, the canva
    > [!div class="mx-imgBorder"]
    >![Maximum size for files and images.](media/offline-file-images-1.png "Maximum file and image size")
 
-## Turn on support for file/image column in Dataverse offline feature
+## Turn on support for file and image columns in Dataverse offline feature
 1. In [Power Apps studio](../maker/canvas-apps/power-apps-studio.md), in the left side panel, select **Apps**.
 
 1. Select your canvas app, and then select **Edit**.
@@ -64,13 +64,13 @@ When files and images are configured to be downloaded **on sync**, files and ima
 
 It is required to add both the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile to make images available in offline mode.
 
-1. Go to Power Platform admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
+1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
-1. In the navigation panel, select **Environments**.
+1. In the left side panel, select **Environments**.
  
 1. Choose an environment and then select **Settings**.
  
-1. Expand **Users + permissions**, and then select **Mobile configuration**.
+1. Expand **Users + permissions** and then select **Mobile configuration**.
 
 1. Select a mobile offline profile to edit it.
 
@@ -89,7 +89,7 @@ It is required to add both the **Image Descriptor** and **FileAttachment** table
 
 1. In the **Data available offline** section, select **Add table**.
 
-1.  In the **Add table** panel, select **FileAttachment** and then select **Next**. 
+1.  Select **FileAttachment** and then select **Next**. 
 
 1. Expand **Relationships** and select **Image Descriptor, Column name: FileId**. Don't select **Image Descriptor, Column name: Regarding**.
 
@@ -98,24 +98,23 @@ It is required to add both the **Image Descriptor** and **FileAttachment** table
 
 1. Select **Save**.
 
-
 ### Add file columns to mobile offline 
 
 It is required to add the **FileAttachment** tables to your mobile offline profile to make files available in offline mode.
 
-1. Go to Power Platform Admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
+1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
-1. On the right, select **Environments**.
+1. In the left side panel, select **Environments**.
  
 1. Choose an environment and then select **Settings**.
  
-1. Expand **Users + permissions**,  and then select **Mobile configuration**.
+1. Expand **Users + permissions**  and then select **Mobile configuration**.
 
 1. Select a mobile offline profile to edit it.
 
 1. In the **Data available offline** section, select **Add table**.
 
-1. Select **FileAttachment**  and then select **Next**.
+1. Select **FileAttachment** and then select **Next**.
 
    > [!div class="mx-imgBorder"]
     >![Select FileAttachment.](media/offline-file-images-4.png "Select FileAttachment")
