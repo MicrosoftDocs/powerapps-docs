@@ -33,7 +33,7 @@ With *owner* teams or *access* teams, you can easily share business objects and 
   
 ### When to use owner teams  
   
-- Owning records by tables other than users is required by your company’s business policies.  
+- Owning records by teams other than users is required by your company’s business policies.  
   
 - The number of teams is known at the design time of your Dataverse system.  
   
