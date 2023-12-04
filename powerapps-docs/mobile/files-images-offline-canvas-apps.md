@@ -22,7 +22,7 @@ searchScope:
 
 The support of files and images is currently in preview. To enable it, the canvas app must be enabled for offline and you must activate the feature.
 
-> {!Important]
+> [!Important]
 > - This is a preview feature.
 > - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
