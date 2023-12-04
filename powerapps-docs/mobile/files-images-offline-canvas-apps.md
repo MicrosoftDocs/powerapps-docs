@@ -99,14 +99,14 @@ It is required to add the **FileAttachment** tables to your mobile offline profi
 
 5. Select a mobile offline profile to edit it.
 
-6. In the **Data available offline** select **Add table**.
+6. In the **Data available offline** section, select **Add table**.
 
 7. Select **FileAttachment**  and then select **Next**.
 
    > [!div class="mx-imgBorder"]
     >![Select FileAttachment.](media/offline-file-images-4.png "Select FileAttachment")
 
-8. Under **Choose the records that you want to make available offline**, select **Related records only**.
+8. Under **Choose the rows that you want to make available offline**, select **Related rows only**.
 
 9. Expand **Relationships** and select **Column name: Display name** for each applicable column where **Data type** is set to **File** (that is, as shown in the screenshot below for the **DemoTable3** table).
 
