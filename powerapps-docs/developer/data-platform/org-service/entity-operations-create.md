@@ -1,7 +1,7 @@
 ---
 title: "Create table rows using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to create table rows using the SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/22/2023
+ms.date: 12/04/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath # GitHub ID
@@ -115,7 +115,7 @@ When you need to create multiple records of the same type, the [CreateMultipleRe
 
 ## Create related entities in one operation
 
-When you create a new table row, you can also create related rows in the same operation.
+For standard tables, when you create a new table row, you can also create related rows in the same operation. This is called *deep insert*.
 
 The following late-bound and early-bound examples create an [Account](../reference/entities/account.md) and a [Contact](../reference/entities/contact.md) related to that account using the [contact account_primary_contact](../reference/entities/contact.md#BKMK_account_primary_contact) one-to-many relationship where the [account primarycontactid](../reference/entities/account.md#BKMK_PrimaryContactId) lookup is the `ReferencingAttribute`.
 
