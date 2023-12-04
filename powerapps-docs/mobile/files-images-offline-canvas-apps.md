@@ -17,13 +17,28 @@ searchScope:
   - "Power Apps"
 ---
 
+
 # Set up files and images to work offline for canvas apps
-In an offline enabled canvas app, you can either enable the files and images to be downloaded "on view" (default) or "on sync". We recommend to download files and images on sync only if you don't except to download too many files and images.
+The support of files and images is currently in preview. To enable it, the canvas app must be enabled for offline and you must activate the feature:
+
+Sign in to Power Apps.
+
+On the left pane, select Apps, and then select the model-driven app that you want to enable for offline.
+
+Select More (...) > Edit to open the modern app designer.
+
+On the command bar, select Settings.
+
+On the General tab, set the Can be used offline toggle to On.
+
+In an offline enabled canvas app, you can either enable the files and images to be downloaded  "on view" (default) or "on sync". 
+We recommend to download files and images "on sync" only if you don't except to download a large volume of files or images.
+
 
 ## Download files and images on View 
 When files and images are configured to be downloaded "on view", the content is downloaded on the device only when the user explicitely opens the files or when the image are presented to the user. The files and images are downloaded when the device is connected to the network and can be used afterward without connectivity.
 
-This mode is enabled by default without any extra configuration. 
+This mode is enabled by default without any specific configuration. 
 
 ## Download files and images on sync
 When files and images are configured to be downloaded "on sync", the files and images are downloaded during the offline sync when the device is connected. The user can access the content without connectivity and is notified in the application when the download is completed. 
@@ -96,4 +111,3 @@ It is required to add the **FileAttachment** tables to your mobile offline profi
    
 
  11. Select **Save**. 
-   
