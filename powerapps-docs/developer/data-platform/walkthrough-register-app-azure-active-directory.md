@@ -83,7 +83,13 @@ To create an application registration, follow these steps.
     > [!NOTE]
     > For a server-to-server (S2S) scenario, you do not need to check the user_impersonation option. More information: [Use multi-tenant server-to-server authentication](use-multi-tenant-server-server-authentication.md)
 
-This completes the basic app registration in Microsoft Entra ID. If you want to add a certificate or client secret to your app registration, simply select **Certificates & secrets** in the left navigation panel and add those items.
+This completes the basic app registration in Microsoft Entra ID.
+
+### Add a certificate or secret
+
+ If you want to add a certificate or client secret to your app registration, simply select **Certificates & secrets** in the left navigation panel and add those items.
+
+More information: [Add a certificate](/entra/identity-platform/quickstart-register-app#add-a-certificate), [Add a secret](/entra/identity-platform/quickstart-register-app#add-a-secret)
 
 ## Use app registration in code
 
