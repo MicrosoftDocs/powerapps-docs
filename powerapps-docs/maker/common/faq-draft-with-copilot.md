@@ -16,7 +16,7 @@ These frequently asked questions (FAQ) describe the AI impact of drafting well-w
 
 ##  What is Draft with Copilot? 
 
-**Draft with Copilot** is a feature for end users of Power Apps who want to create well-written input while saving time. It surfaces in multiline text boxes and rich text editors.
+Draft with Copilot is a feature for end users of Power Apps who want to create well-written, input text while saving time. It surfaces in multi-line text boxes and rich text editors.
 
 ## What are the system’s capabilities? 
 
@@ -30,7 +30,7 @@ As an AI assistant to end users, it provides content suggestions and refined tex
 
 We evaluate the feature both qualitatively and quantitatively. To assess the quality of the feature, we are conducting studies with end users to gather feedback on their experiences, thoughts about the feature's quality, and suggestions for improvement. We are also monitoring telemetry data to track the number of users who tried the feature, the success rate of the feature, and the ratio of positive feedback to negative feedback.
 
-Before releasing the **Draft with Copilot** feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, provide feedback. Your feedback is used to enhance Microsoft's products and services. Your organization's IT admins have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
+Before releasing the Draft with Copilot feature in preview, we conducted extensive testing to ensure its functionality. If you encounter any issues with the content generated, provide feedback. Your feedback is used to enhance Microsoft's products and services. Your organization's IT admins have access to your feedback data for management purposes. For more information, read the [Privacy Statement](https://go.microsoft.com/fwlink/?linkid=2182930%22%20\t%20%22_blank).
 
 ## What are the limitations of Draft with Copilot? How can users minimize the impact of the Draft with Copilot limitations when using the system? 
 
