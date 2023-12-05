@@ -35,19 +35,16 @@ When a user is trying to quickly input text into multi-line text boxes or rich t
 1. Insert your cursor into a multi-line text box or rich text editor in Power Apps.
 1. Select the **Draft with Copilot** icon, and then select the **Draft with Copilot** option.
 2. Insert text into the text box. For example, you can quickly jot down an idea.
-3. Select the **Send** icon.
-4. Copilot generates well-written text for you. Review the text. The following options are available:
+
+     > [!Note]
+     > You must enter the text in English. This feature only supports the English language at this time.
+     
+4. Select the **Send** icon.
+5. Copilot generates well-written text for you. Review the text. The following options are available:
     - If you want Copilot to suggest text that is shorter or longer, select **Length** and then select the appropriate length.
     - If you want Copilot to suggest text that has a different tone, select **Tone** and then select the appropriate tone for the text.
     - If you want Copilot to suggest different text, select **Rewrite**.
     - If you are satisfied with the text that Copilot suggested, select **Add** to enter the text in the text box.
-
-## Limitations
-
-- To use this feature, you must be a premium user. 
-- This capability may be subject to usage limits or capacity throttling. 
-- Your environment must be in the United States region or the [**Move data across regions**](/power-platform/admin/geographical-availability-copilot) checkbox must be selected in Power Platform admin center.
-- This feature doesn’t support non-English language input. 
 
 ## Known issue
 
