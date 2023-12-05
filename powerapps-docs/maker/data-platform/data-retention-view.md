@@ -49,6 +49,11 @@ More information: [Advanced find in model-driven apps](../../user/advanced-find.
 
 Create a Power Automate cloud flow to create an Excel file of the retained data from a FetchXML query and send as an email attachment. More information: [Create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow)
 
+> [!NOTE]
+If the retained data includes attachments from Annotation table, the returned value will be a base64 representation of the file. Large files may result in the Cloud Flow action to [time-out](https://learn.microsoft.com/power-automate/limits-and-config#timeout) or to exceed its output [message size limit](https://learn.microsoft.com/power-automate/limits-and-config#message-size).
+As a workaround, use Web API to perform the export action [ExportRetainedData](https://learn.microsoft.com/power-apps/developer/data-platform/webapi/reference/exportretaineddata?view=dataverse-latest) using Azure Functions or other custom development options.
+
+
 ## Limitations for retrieval of retained data
 
 These restrictions are enforced by Dataverse for each environment:
