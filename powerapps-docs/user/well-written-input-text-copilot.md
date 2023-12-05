@@ -1,5 +1,5 @@
 ---
-title: Enter well-written, input text in Power Apps using Copilot (preveiw)
+title: Draft well-written, input text with Copilot (preveiw)
 description: Learn how users can use Copilot to quickly generate well-written text that can be used as input text in text boxes in apps made with Power Apps.
 ms.date: 12/01/2023
 ms.custom: 
@@ -15,7 +15,7 @@ search.audienceType:
 
 ---
 
-# Enter well-written, input text in Power Apps using Copilot (preview)
+# Draft well-written, input text with Copilot (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
@@ -28,9 +28,19 @@ End users can use Copilot to quickly generate well-written text that can be used
 
 ## How this feature works
 
-When a user is trying to quickly input text into text boxes in an app, the user might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, a user can quickly jot down their ideas in a text box without worrying about format and grammar. Copilot corrects grammar errors and eloquently refines the user's ideas. The user can also change the tone and length of the output to fit their scenario.
+When a user is trying to quickly input text into multi-line text boxes or rich text editors in an app, the user might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, a user can quickly jot down their ideas in a text box without worrying about format and grammar. Copilot corrects grammar errors and eloquently refines the user's ideas. The user can also change the tone and length of the output to fit the scenario.
 
 ## How to use this feature
+
+1. Insert your cursor into a multi-line text box or rich text editor in Power Apps.
+1. Select the **Draft with Copilot** icon, and then select the **Draft with Copilot** option.
+2. Insert text into the text box. For example, you can quickly jot down an idea.
+3. Select the **Send** icon.
+4. Copilot generates well-written text for you. Review the text. The following options are available:
+    - If you want Copilot to suggest text that is shorter or longer, select **Length** and then select the appropriate length.
+    - If you want Copilot to suggest text that has a different tone, select **Tone** and then select the appropriate tone for the text.
+    - If you want Copilot to suggest different text, select **Rewrite**.
+    - If you are satisfied with the text that Copilot suggested, select **Add** to enter the text in the text box.
 
 ## Limitations
 
