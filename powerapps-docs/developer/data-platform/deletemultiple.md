@@ -125,13 +125,13 @@ OData-Version: 4.0
 
 You can find sample code on GitHub in [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
 
-- [Elastic table sample code (preview)](elastic-table-samples.md)
+- [Elastic table sample code](elastic-table-samples.md)
 - Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md) or [Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md), change the `Settings.cs` config file and choose the `UseElastic` option.
 
 ### See also
 
 [Use bulk operation messages](bulk-operations.md)   
-[Elastic tables (preview)](elastic-tables.md)  
-[Elastic table sample code (preview)](elastic-table-samples.md)   
+[Elastic tables](elastic-tables.md)  
+[Elastic table sample code](elastic-table-samples.md)   
 [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)   
 [Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md)   
