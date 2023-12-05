@@ -20,7 +20,7 @@ searchScope:
 # Configure files and images in offline canvas apps (preview)
 [This article is prerelease documentation and is subject to change.]
 
-The support of files and images is currently in preview. To enable it, the canvas app must be enabled for offline and you must activate the feature.
+This article explains how to configure files and images in offline canvas apps.
 
 > [!Important]
 > - This is a preview feature.
