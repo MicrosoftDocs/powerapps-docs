@@ -1,5 +1,5 @@
 ---
-title: Elastic tables for developers (preview)
+title: Elastic tables for developers
 description: This article provides information to developers about Dataverse elastic tables and how to use elastic tables using code.
 ms.topic: article
 ms.date: 12/04/2023
@@ -11,17 +11,11 @@ contributors:
  - JimDaly
 ---
 
-# Elastic tables for developers (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Elastic tables for developers
 
 Dataverse elastic tables are powered by Azure Cosmos DB. They automatically scale horizontally to handle large amounts of data and high levels of throughput with low latency. Elastic tables are suitable for applications that have unpredictable, spiky, or rapidly growing workloads.
 
-This article focuses on information that developers need to know about using elastic tables. For more information about the capabilities of elastic tables and what is supported, go to [Create and edit elastic tables (preview)](../../maker/data-platform/create-edit-elastic-tables.md).
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+This article focuses on information that developers need to know about using elastic tables. For more information about the capabilities of elastic tables and what is supported, go to [Create and edit elastic tables](../../maker/data-platform/create-edit-elastic-tables.md).
 
 ## When to use elastic tables
 
@@ -125,10 +119,10 @@ To store and query the large volume of IoT data, Contoso creates an elastic tabl
 
 Related articles:
 
-- [Create elastic tables using code (preview)](create-elastic-tables.md)
-- [Use elastic tables using code (preview)](use-elastic-tables.md)
-- [Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)
-- [Elastic table sample code (preview)](elastic-table-samples.md)
+- [Create elastic tables using code](create-elastic-tables.md)
+- [Use elastic tables using code](use-elastic-tables.md)
+- [Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)
+- [Elastic table sample code](elastic-table-samples.md)
 
 ## Known issues
 
@@ -168,8 +162,8 @@ They should ALWAYS include a link to the section of the docs where the informati
 
 ### See also
 
-[Use elastic tables using code (preview)](use-elastic-tables.md)   
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)   
-[Bulk operation messages (preview)](bulk-operations.md)   
-[Elastic table sample code (preview)](elastic-table-samples.md)   
+[Use elastic tables using code](use-elastic-tables.md)   
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)   
+[Bulk operation messages](bulk-operations.md)   
+[Elastic table sample code](elastic-table-samples.md)   
 [Partitioning and horizontal scaling in Azure Cosmos DB](/azure/cosmos-db/partitioning-overview)
