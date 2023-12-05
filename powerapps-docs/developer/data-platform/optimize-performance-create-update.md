@@ -22,7 +22,7 @@ When you need to create or update thousands or millions of records in Dataverse,
 
 ## Table type
 
-The type of table you choose to store your data has the greatest impact on how much throughput you can expect with bulk operations. Dataverse offers two types of tables: *standard* and *elastic*. Elastic tables are currently a preview feature.
+The type of table you choose to store your data has the greatest impact on how much throughput you can expect with bulk operations. Dataverse offers two types of tables: *standard* and *elastic*. 
 
 - A **standard** table stores data using Azure SQL. Standard tables provide transaction support and greater capabilities for modeling relationships.
 - An **elastic** table stores data using Azure Cosmos DB. Elastic tables automatically scale horizontally to handle large amounts of data and high levels of throughput with low latency. Elastic tables are suitable for applications that have unpredictable, spiky, or rapidly growing workloads.
@@ -134,7 +134,7 @@ Based on the factors previously described, follow these recommendations to optim
 
 ### See also
 
-[Elastic tables (Preview)](elastic-tables.md)   
+[Elastic tables](elastic-tables.md)   
 [Use plug-ins to extend business processes](plug-ins.md)   
 [Bypass synchronous logic](bypass-custom-business-logic.md#bypass-synchronous-logic)   
 [Bulk Operation messages](bulk-operations.md)   
