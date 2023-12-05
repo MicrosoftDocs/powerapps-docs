@@ -1,5 +1,5 @@
 ---
-title: Use elastic tables using code (preview)
+title: Use elastic tables using code
 description: Learn how to perform data operations on Dataverse elastic tables using code.
 ms.topic: how-to
 ms.date: 12/04/2023
@@ -13,9 +13,7 @@ contributors:
  - JimDaly
 ---
 
-# Use elastic tables using code (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Use elastic tables using code
 
 This article describes how to use code to perform data operations on elastic tables.
 
@@ -1015,8 +1013,8 @@ Learn how to use code to create and query JavaScript Object Notation (JSON) data
 
 ### See also
 
-[Elastic tables for developers (preview)](elastic-tables.md)  
-[Create elastic tables using code (preview)](create-elastic-tables.md)  
-[Query JSON columns in elastic tables (preview)](query-json-columns-elastic-tables.md)  
-[Elastic table sample code (preview)](elastic-table-samples.md)  
+[Elastic tables for developers](elastic-tables.md)  
+[Create elastic tables using code](create-elastic-tables.md)  
+[Query JSON columns in elastic tables](query-json-columns-elastic-tables.md)  
+[Elastic table sample code](elastic-table-samples.md)  
 [Bulk operation messages (preview)](bulk-operations.md)

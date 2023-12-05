@@ -109,9 +109,9 @@ You must use the [CreateRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateReq
  - When you're creating a row that represents a solution component, such as a [WebResource](../reference/entities/webresource.md) and want to associate it with a specific solution. In this case, you would include the value of the [Solution.UniqueName](../reference/entities/solution.md#BKMK_UniqueName) using the `SolutionUniqueName` parameter. More information: [Use messages with the SDK for .NET](use-messages.md)
 
 
-## Use the CreateMultipleRequest class (Preview)
+## Use the CreateMultipleRequest class
 
-When you need to create multiple records of the same type, the [CreateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest) is the most performant way. More information: [Bulk Operation messages (preview)](../bulk-operations.md)
+When you need to create multiple records of the same type, the [CreateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest) is the most performant way. More information: [Bulk Operation messages](../bulk-operations.md)
 
 ## Create related entities in one operation
 
