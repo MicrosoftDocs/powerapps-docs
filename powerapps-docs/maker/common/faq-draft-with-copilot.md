@@ -40,7 +40,7 @@ Before releasing the **Draft with Copilot** feature in preview, we conducted ext
 - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview). 
 - This capability is in process of rolling out, and may not be available in your region yet. 
 - This capability may be subject to usage limits or capacity throttling. 
-- Your environment must be in the United States region or the cross-geo flag must be enabled.
+- Your environment must be in the United States region or the [**Move data across regions**](/power-platform/admin/geographical-availability-copilot) checkbox must be selected in Power Platform admin center.
 - This feature doesn’t support non-English language input. 
 
 ## What operational factors and settings allow for effective and responsible use of the system? 
