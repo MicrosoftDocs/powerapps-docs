@@ -1,7 +1,7 @@
 ---
-title: FAQ for Draft with Copilot
+title: FAQ about Draft with Copilot
 description: This FAQ provides information about the AI technology used in Draft with Copilot, along with key considerations and details about how AI is used, how it was tested and evaluated, and any specific limitations.
-ms.date: 12/04/2023
+ms.date: 12/05/2023
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
@@ -10,7 +10,7 @@ ms.author: jordanchodak
 ms.reviewer: sericks
 ---
 
-# FAQ for Draft with Copilot
+# FAQ about Draft with Copilot
 
 These frequently asked questions (FAQ) describe the AI impact of Draft with Copilot feature in Power Apps.
 
