@@ -21,14 +21,12 @@ search.audienceType:
 
 End users can use Copilot to quickly generate well-written text that can be used as input text in text boxes in apps made with Power Apps. Using Copilot saves time for end users as they won’t have to worry about creating well-written text themselves that meets grammar rules. Copilot is especially helpful for end users who are using apps that aren’t in their native language. 
 
+When a user is trying to quickly input text into multi-line text boxes or rich text editors in an app, the user might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, a user can quickly jot down their ideas in a text box without worrying about format and grammar. Copilot corrects grammar errors and eloquently refines the user's ideas. The user can also change the tone and length of the output to fit the scenario.
+
 > {!Important]
 > - This is a preview feature.
 > - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - This feature is in process of rolling out, and may not be available in your region yet. 
-
-## How this feature works
-
-When a user is trying to quickly input text into multi-line text boxes or rich text editors in an app, the user might worry about forming complete sentences and having grammatically correct text. With the assistance of Copilot, a user can quickly jot down their ideas in a text box without worrying about format and grammar. Copilot corrects grammar errors and eloquently refines the user's ideas. The user can also change the tone and length of the output to fit the scenario.
 
 ## How to use this feature
 
