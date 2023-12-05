@@ -193,7 +193,7 @@
           href: /troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors
         - name: Access external web resources
           href: access-web-services.md
-        - name: Write plug-ins for CreateMultiple and UpdateMultiple (Preview)
+        - name: Write plug-ins for CreateMultiple and UpdateMultiple
           href: write-plugin-multiple-operation.md
         - name: Quickstarts
           items:
@@ -415,7 +415,7 @@
       href: customize-labels-support-multiple-languages.md
     - name: Best Practices
       href: best-practices/work-with-metadata/index.md
-- name: Work with elastic tables using code (preview)  
+- name: Work with elastic tables using code  
   items:
     - name: Overview of elastic tables
       href: elastic-tables.md
