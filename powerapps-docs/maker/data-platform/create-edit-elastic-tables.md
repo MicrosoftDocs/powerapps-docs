@@ -1,6 +1,7 @@
 ---
 title: Create and edit elastic tables
 description: Learn how to create an elastic Microsoft Dataverse table.
+ms.custom: ""
 ms.date: 12/04/2023
 author: pnghub
 ms.author: gned
@@ -59,6 +60,7 @@ Time to live (TTL) policies ensure that you're always working with the most up-t
 
 ### Flexible schema with JSON columns
 
+Elastic tables enable you to store and query data with varying structures, without the need for predefined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. More information: [Developer guide: Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
 Elastic tables enable you to store and query data with varying structures, without the need for predefined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. More information: [Developer guide: Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
 
 ## Considerations when you use elastic tables  
@@ -154,7 +156,12 @@ Elastic tables have different behaviors and capabilities than standard tables wh
 - [Create elastic tables using code](../../developer/data-platform/create-elastic-tables.md)
 - [Use elastic tables using code](../../developer/data-platform/use-elastic-tables.md)
 - [Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
+- [For developers: Elastic tables](../../developer/data-platform/elastic-tables.md)
+- [Create elastic tables using code](../../developer/data-platform/create-elastic-tables.md)
+- [Use elastic tables using code](../../developer/data-platform/use-elastic-tables.md)
+- [Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
 - [Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md)
+- [Elastic table sample code](../../developer/data-platform/elastic-table-samples.md)
 - [Elastic table sample code](../../developer/data-platform/elastic-table-samples.md)
 - [Send parallel requests](../../developer/data-platform/send-parallel-requests.md)
 - [Service protection API limits](../../developer/data-platform/api-limits.md)
