@@ -5,8 +5,9 @@ Keywords: environment variables, variables, model-driven app, configuration data
 author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
+ms.author: asheehi1
 ms.reviewer: matp
-ms.date: 07/13/2023
+ms.date: 12/06/2023
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -109,8 +110,13 @@ To use an environment variable in a solution cloud flow:
 
 The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` table.
 
+With an update on 12/7/2023, all environment variable values are visible when importing solutions (or [using Pipelines to deploy](/power-platform/alm/run-pipeline)). Environment variables without a default value or value will be prompted for a value, but those otherwise will be pre-filled with a label beneath the textarea denoting the value's source: solution value, target environment value, or default value.
+
+  >[!NOTE]
+  >In some cases, for specific data source environment variable values, an **Access denied** warning may appear if the importing maker does not have access to the connection or source used for the environment variable. This is a non-blocking warning, but something to take note of depending on how you plan to use the environment variable in the target environment.  
+
    >[!NOTE]
-   > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but will not get exported in the solution. This approach allows a new value to be provided while importing the solution into other environments. You will **not** be prompted for new values during solution import if the environment variables already have either a default value or value present; whether values are part of your solution or are already present in the target environment. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
+   > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but will not get exported in the solution. This approach allows a new value to be provided while importing the solution into other environments. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
 
 ## Notifications
 
@@ -153,6 +159,8 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
 
 1. Azure Key Vault must have the **Key Vault Secrets User** role granted to the Dataverse service principal. If it doesn't exist for this vault, add a new access policy using the same method you previously used for the end user permission, only using the Dataverse application identity instead of the user. If you have multiple Dataverse service principals in your tenant, then we recommend that you select them all and save the role assignment. Once the role is assigned, review each Dataverse item listed in the role assignments list and select the Dataverse name to view the details. If the **Application ID** isn't **00000007-0000-0000-c000-000000000000** then select the identity and then select **Remove** to remove it from the list.
 
+1. If you have enabled [Azure Key Vault Firewall](/azure/key-vault/general/network-security) you will have to allow Power Platform IP addresses access to your key vault.  Note that Power Platform is not included in the "Trusted Services Only" option, so please reference [Power Platform URLs and IP address ranges](/power-platform/admin/online-requirements#ip-addresses-required) for current IP addresses used in the service.
+   
 1. If you haven't done so already, add a secret to your new vault. More information: [Azure Quickstart - Set and retrieve a secret from Key Vault using Azure portal](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
 
 > [!NOTE]
@@ -238,6 +246,10 @@ Using the run history of the flow, the outputs can be verified.
 - Environment variables referencing Azure Key Vault secrets are currently limited for use with Power Automate flows and custom connectors.
 
 ## Frequently asked questions
+
+### Why can't I see the value for my environment variable?
+
+If the environment variable is in a managed solution, you will not be able to see the value unless you look inside of the **Default solution**. This behavior is by design, since the environment variable value is an unmanaged customization.
 
 ### How can I view where environment variables are being used?
 
