@@ -34,7 +34,7 @@ Tables appear in Power Apps as one of these different types:
 
 An activity can be thought of as any action for which an entry can be made on a calendar. An activity has time dimensions (start time, stop time, due date, and duration) that help determine when the action occurred or will occur. Activities also contain data that helps determine what action the activity represents, for example, subject and description. An activity can be opened, canceled, or completed. The completed status of an activity will have several sub-status values associated with it to clarify the way that the activity was completed.  
   
-Activity tables are a special kind of table that can only be owned by a user or team, but can’t be owned by an organization. When you create a table, you can specify it as a standard or activity table.
+Activity tables are a special kind of table that can only be owned by a user or team, but can't be owned by an organization. When you create a table, you can specify it as a standard or activity table.
   
 The following table lists activity tables that are available in a default environment.
   
@@ -48,9 +48,9 @@ The following table lists activity tables that are available in a default enviro
 |**Recurring Appointment**|The master appointment of a recurring appointment series.|Yes|[RecurringAppointmentMaster](../../developer/data-platform/reference/entities/recurringappointmentmaster.md)|
 |**Task**|Generic activity representing work needed to be done.|Yes|[Task](../../developer/data-platform/reference/entities/task.md)|
   
-When you can create a new custom activity table, you might create it to read instant message communications. Creating an activity table is different from creating a non-activity table because you don’t specify a primary column. All activity tables have a **Primary Field** set to **Subject** and other common columns that are defined by the Activity table. This allows all types of activities to be shown in a view where just the common columns are displayed.  
+When you can create a new custom activity table, you might create it to read instant message communications. Creating an activity table is different from creating a non-activity table because you don't specify a primary column. All activity tables have a **Primary Field** set to **Subject** and other common columns that are defined by the Activity table. This allows all types of activities to be shown in a view where just the common columns are displayed.  
 
-To create a custom activity table, open the **Advanced options** section in the **New table** panel, select the **Activity** option from the **Type** drop-down list. After you select this, you’ll see that **Display in Activity menus** is selected. This setting allows people to create this type of activity in the activity menus. This isn’t selected for activities that are typically associated with specific events and created behind using code or by a workflow. After you save the table, you can’t change these settings.  
+To create a custom activity table, open the **Advanced options** section in the **New table** panel, select the **Activity** option from the **Type** drop-down list. After you select this, you'll see that **Display in Activity menus** is selected. This setting allows people to create this type of activity in the activity menus. This isn't selected for activities that are typically associated with specific events and created behind using code or by a workflow. After you save the table, you can't change these settings.  
 
 ### Enable activities for a table
 
@@ -78,11 +78,11 @@ There are two different types of standard and custom table ownership. When you c
 |**User or team**|Data belongs to a user or a team. Actions that can be performed on these rows can be controlled on a user level.|  
 
 Notice that there are a few Dataverse  system tables that are similar to standard tables but have a different type of ownership from organization and user or team ownership:
-- **None**. Some system tables don’t have an owner, such as the Privilege table.
+- **None**. Some system tables don't have an owner, such as the Privilege table.
 - **Business Unit**. A few system tables are business-owned. These include Business Unit, Calendar, Team, and Security Role tables.
 
 > [!IMPORTANT]
->  After a custom table is created, you can’t change the ownership. Before you create a table, make sure that you choose the correct type of ownership. If you later determine that your custom table must be of a different type, you have to delete it and create a new one.
+>  After a custom table is created, you can't change the ownership. Before you create a table, make sure that you choose the correct type of ownership. If you later determine that your custom table must be of a different type, you have to delete it and create a new one.
 
 ## Virtual tables
 
@@ -90,7 +90,7 @@ A virtual table is a custom table in Dataverse that has columns containing data 
 
 ## Elastic tables
 
-Elastic tables offer performance benefits over standard tables when the table contains a very large dataset. Elastic tables are powered by Azure Cosmos DB. More information: [Create and edit elastic tables (preview)](create-edit-elastic-tables.md)
+Elastic tables offer performance benefits over standard tables when the table contains a very large dataset. Elastic tables are powered by Azure Cosmos DB. More information: [Create and edit elastic tables](create-edit-elastic-tables.md)
 
 ### See also
 
