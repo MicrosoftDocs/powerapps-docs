@@ -118,5 +118,5 @@ Within [Sample: SDK for .NET Use bulk operations](org-service/samples/create-upd
 ### See also
 
 [Use bulk operation messages](bulk-operations.md)   
-[Elastic tables (preview)](elastic-tables.md)  
+[Elastic tables](elastic-tables.md)   
 [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)   
