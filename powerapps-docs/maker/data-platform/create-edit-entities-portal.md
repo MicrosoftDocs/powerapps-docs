@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
 author: "Mattp123"
-ms.date: 08/23/2023
+ms.date: 12/06/2023
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -50,6 +50,12 @@ More information: [Table designer](#table-designer)
 ### Describe the new table
 
 Create a table with the help of AI Copilot.
+
+> [!NOTE]
+> To use this feature, note the following requirements:
+>
+> - Prerequisites for AI features: [AI Copilot overview](../canvas-apps/ai-overview.md)
+> - This feature is available in English only across regions. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions)
 
 1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
 1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
