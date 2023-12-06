@@ -60,6 +60,8 @@ This mode is enabled by default without any specific configuration.
 ## Download files and images on sync
 When files and images are configured to be downloaded **on sync**, files and images are downloaded during the offline sync when the device is connected. The user can access the content without connectivity and is notified in the application when the download of the files and images is completed. 
 
+To configure automatic download of files and images on sync, you need to create a mobile offline profile in the Power Platform Admin Center edit it to include files and images. See [Set up mobile offline for canvas apps (preview) - Power Apps | Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/mobile/canvas-mobile-offline-setup#create-a-mobile-offline-profile) to learn how to create a new mobile offline profile and select it from your app.
+
 ### Add image columns to mobile offline 
 
 It is required to add both the **Image Descriptor** and **FileAttachment** tables to your mobile offline profile to make images available in offline mode.
