@@ -1,7 +1,7 @@
 ---
-title: "File columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about how to create, retrieve, update and delete file columns using code." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 09/12/2023
+title: "File columns (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about how to create, retrieve, update and delete file columns using code."
+ms.date: 12/05/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -21,7 +21,7 @@ Use file columns to store file data up to a specified maximum size. A custom or 
 The recommended way to create file columns is to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and define your columns using the designer. More information: [File columns](../../maker/data-platform/types-of-fields.md#file-columns).
 
 > [!NOTE]
-> A key consideration when creating file columns is the **Maximum file size** stored in the `MaxSizeInKB` property. The default setting for this is `32768`, or 32 MB. The maximum value is `10485760` KB (10 GB). While the API can handle files up to 10 GB in size, Power Apps client controls currently only support files up to 128 MB. Exceeding the 128 MB value when using these controls will result in errors uploading or downloading files.
+> A key consideration when creating file columns is the **Maximum file size** stored in the `MaxSizeInKB` property. The default setting for this is `32768`, or 32 MB. The maximum value is `10485760` KB (10 GB). While the API can handle files up to 10 GB in size, the requests must be 'chunked'. The size limit to send a single request is 128 MB. When a client application attempts to send a file larger than 128 MB in a single request, an error will be thrown. [Learn to upload files](file-column-data.md#upload-files).
 >
 > The `MaxSizeInKB` value cannot be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the file column.
 > You can use the API to update the `MaxSizeInKB` property. More information: [Update a column using Web API](webapi/create-update-column-definitions-using-web-api.md#update-a-column) and [Update a column using SDK](org-service/metadata-attributemetadata.md#update-a-column)

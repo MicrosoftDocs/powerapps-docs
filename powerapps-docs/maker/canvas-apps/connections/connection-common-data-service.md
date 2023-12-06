@@ -36,7 +36,7 @@ The name of the selected environment appears under the tables list.
 
 ## Visibility and access
 
-When you select **Change environment**, you're presented with a list of environments. Though you might see an environment in the list, the security role(s) in the environment govern what you can do in that environment. For example, if you don't have read privileges, you won't be able to see the tables and records in the environment.
+When you select **Change environment**, you're presented with a list of environments. Though you might see an environment in the list, the security role(s) in the environment govern what you can do in that environment. For example, if you don't have read privileges, you aren't able to see the tables and records in the environment.
 
 > [!NOTE]
 > Connections listed in the app details pane outside of the app designer show connections that require user consent. Since native Dataverse connections used in the app don't require that additional consent, a native connection won't be in that list.
@@ -56,7 +56,7 @@ The Microsoft Dataverse connector is more robust than the Dynamics 365 connector
 
 ## Power Apps delegable functions and operations for Dataverse
 
-These Power Apps operations, for a given data type, may be delegated to
+These Power Apps operations, for a given data type, might be delegated to
 Dataverse for processing (rather than processing locally within Power Apps).
 
 | **Item**                                                        | **Number [1]** | **Text [2]** | **Choice** | **DateTime [3]** | **Guid** |
@@ -83,8 +83,8 @@ Dataverse for processing (rather than processing locally within Power Apps).
     Today().
 4.  CountRows on Dataverse uses a cached value. For non-cached values where the record count is expected to be under 50,000 records, use `CountIf(table, True)`.  
 5.  For CountRows, ensure that users have appropriate permissions to get totals for the table. 
-6.  The aggregate functions are limited to a collection of 50,000 rows. If needed, use the Filter function to select 50,000.  Aggregate functions are not supported on Views.  
-7.  FirstN is not supported.
+6.  The aggregate functions are limited to a collection of 50,000 rows. If needed, use the Filter function to select 50,000.  Aggregate functions aren't supported on Views.  
+7.  FirstN isn't supported.
 8.  Supports comparisons. For example, `Filter(TableName, MyCol = Blank())`.
 
 
@@ -92,20 +92,20 @@ Dataverse for processing (rather than processing locally within Power Apps).
 
 As a part of the Power Fx language, authors can now directly invoke a Dataverse action within a formula. Both unbound and bound actions are supported. Authors can add a Power Fx `Environment` language object to their app and access Dataverse actions.
 
-Authors can work with untyped object fields for both inputs and outputs. On the input side, for instance, many Dataverse actions require an untyped object as an argument. Authors can now pass these arguments in by using ParseJSON to convert a Power Fx record into an untyped object. On the output side, for actions that return untyped objects, you can simply `dot` into returned objects properties. You'll need to cast specific values for use in specific contexts for use in Power Apps such as a label.
+Authors can work with untyped object fields for both inputs and outputs. On the input side, for instance, many Dataverse actions require an untyped object as an argument. Authors can now pass these arguments in by using ParseJSON to convert a Power Fx record into an untyped object. On the output side, for actions that return untyped objects, you can simply `dot` into returned objects properties. You need to cast specific values for use in specific contexts for use in Power Apps such as a label.
 
-Without this feature, it has been common for authors to use Power Automate to call Dataverse directly. However, calling Dataverse directly from Power Fx provides significant performance benefits (and ease of use) and should be preferred for direct transactional reads and updates. If you have an app that uses Power Automate to call Dataverse actions you will see a banner suggesting you use this direct action approach instead.  
+Without this feature, it was common for authors to use Power Automate to call Dataverse directly. However, calling Dataverse directly from Power Fx provides significant performance benefits (and ease of use) and should be preferred for direct transactional reads and updates. If you have an app that uses Power Automate to call Dataverse actions you'll see a banner suggesting you use this direct action approach instead.  
 
-Working with untyped fields is not restricted to Dataverse. It works for all types of connectors and provides basic ad-hoc dynamic schema support.
+Working with untyped fields isn't restricted to Dataverse. It works for all types of connectors and provides basic ad-hoc dynamic schema support.
 
 > [!NOTE]
-> 1. We do not fully support DV actions in PFX commanding (specific to any actions call with parameters.) 
+> 1. We do not fully support DV actions in  Power Fx commanding (specific to any actions call with parameters.) 
 > 2. We do not support Entity and Entity collections reference in canvas directly. 
 > 3. For parameters of object type that are nested (2 or more levels deep), the second level attributes are treated required in PowerApps.
 
 ### Enable access to Microsoft Dataverse actions
 
-For new apps, this feature is automatically enabled. For apps created previously you'll need to enable access to Dataverse actions. 
+For new apps, this feature is automatically enabled. For apps created previously, you need to enable access to Dataverse actions. 
 
 For older apps, open your canvas app for editing and navigate to **Settings** > **Upcoming features** > **Retired** and enable Dataverse actions.
 
@@ -126,7 +126,7 @@ When the Power Fx `Environment` object is added to your application, you can acc
 
 ![Using the Power Fx Environment object.](media/connection-common-data-service/common-data-service-connection-using-the-Envrionment-PowerFx-object.png)
 
-Unbound Dataverse actions are peer level to tables and need the parenting scope of the **Environment** language object. All actions in your environment will be available – both system level and custom. Both bound and unbound actions are available. The 2-level call limit has been removed. 
+Unbound Dataverse actions are peer level to tables and need the parenting scope of the **Environment** language object. All actions in your environment are available – both system level and custom. Both bound and unbound actions are available. The 2-level call limit has been removed. 
 
 ![Using a Dataverse action.](media/connection-common-data-service/common-data-service-connection-hooking-up-an-action-to-a-button.png)
 
@@ -136,4 +136,4 @@ For more details on how to use Dataverse actions in your formulas, see [Working 
 
 ### Rename, refresh, and actions in other environments
 
-You can rename an Environment by choosing the elipses and selecting "Rename".  If you add a new Dataverse action in Dataverse and need Power Apps to see it, you can choose "Refresh".  And, if you need to use an action in a different environment you first need to change the environment and then once there, search for 'Environment', select and add it to your application.  
+You can rename an Environment by choosing the ellipses and selecting "Rename".  If you add a new Dataverse action in Dataverse and need Power Apps to see it, you can choose "Refresh".  And, if you need to use an action in a different environment you first need to change the environment and then once there, search for 'Environment', select and add it to your application.  
