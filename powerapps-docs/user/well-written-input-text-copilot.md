@@ -30,7 +30,7 @@ When a user is trying to quickly input text into multi-line text boxes or rich t
 
 ## How to use this feature
 
-1. Insert your cursor into a multi-line text box or rich text editor in Power Apps.
+1. Insert your cursor into a multi-line text box or rich text editor in a canvas app.
 1. Select the **Draft with Copilot** icon, and then select the **Draft with Copilot** option.
 2. Insert text into the text box. For example, you can quickly jot down an idea.
 
