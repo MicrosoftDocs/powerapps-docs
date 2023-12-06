@@ -1,7 +1,7 @@
 ---
 title: Create a table row using the Web API
 description: Learn how to use the Web API to send a POST request to create a table row in Microsoft Dataverse.
-ms.date: 07/22/2023
+ms.date: 12/04/2023
 ms.service: powerapps
 ms.topic: how-to
 author: divkamath
@@ -122,7 +122,7 @@ OData-Version: 4.0
 
 ## Create multiple records in a single request
 
-The fastest way to create multiple records of the same type in a single request is to use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple). At the time of this writing the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple) is a preview feature. Not all standard tables support this action, but all elastic tables do.
+The fastest way to create multiple records of the same type in a single request is to use the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple). At the time of this writing the [CreateMultiple action](xref:Microsoft.Dynamics.CRM.CreateMultiple). Not all standard tables support this action, but all elastic tables do.
 
 More information:
 
@@ -134,7 +134,7 @@ More information:
 
 ## Create related table rows in one operation
 
- You can create entities related to each other by defining them as navigation properties values. This pattern is known as *deep insert*. This approach has two advantages. It's more efficient, because it replaces replacing multiple simpler creation and association operations with one combined *atomic* operation. An atomic operation succeeds or fails entirely.
+ With standard tables, you can create entities related to each other by defining them as navigation properties values. This pattern is known as *deep insert*. This approach has two advantages. It's more efficient, because it replaces replacing multiple simpler creation and association operations with one combined *atomic* operation. An atomic operation succeeds or fails entirely.
 
  As with a basic create, the response `OData-EntityId` header contains the URI of the created entity. The URIs for the related entities created aren't returned. You can get the primary key values of the records if you use the `Prefer: return=representation` header so it returns the values of the created record. More information: [Create with data returned](#create-with-data-returned)
 
