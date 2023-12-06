@@ -54,7 +54,7 @@ Create a table with the help of AI Copilot.
 > [!NOTE]
 > To use this feature, note the following requirements:
 >
-> - Prerequisites for AI features: [AI Copilot overview](../canvas-apps/ai-overview.md)
+> - Copilot must be enabled for the environment. By default, Copilot is enabled. More information:  [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
 > - This feature is available in English only across regions. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions)
 
 1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
