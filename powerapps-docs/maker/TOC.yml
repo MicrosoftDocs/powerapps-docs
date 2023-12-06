@@ -51,6 +51,8 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
+  - name: Draft well-written, input text with Copilot (preview)
+    href: ../user/well-written-input-text-copilot.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
