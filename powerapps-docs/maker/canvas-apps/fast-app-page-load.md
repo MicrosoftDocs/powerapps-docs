@@ -37,7 +37,7 @@ Some authors use ClearCollect() and SaveData() to store data for general purpose
 Efficient calculations is a performance goal in its own right and has its own section : [Efficient calculations](efficient-calculations.md).  However there are some common anti-patterns that can affect app load as well and so we discuss them here.  Below is a list of  optimizations you should consider that may affect app launch or page navigation.
 
 ### App.Formulas
-Historically many authors have put a large number of calculations in OnStart. When you place an expression in OnStart it forces Power Apps to run that expression precisely when the app starts and before everything else. However, with the introduction of App.Formulas you can let Power Apps decide when to run an expression.  PowerApps can run the formula 'Just-in-time' before it is needed. See: [App.Formulas](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/object-app#formulas-property) Use App.Formulas to split up your formula into pieces that Power Apps can arrange more effciently for execution. 
+Historically many authors have put a large number of calculations in OnStart. When you place an expression in OnStart it forces Power Apps to run that expression precisely when the app starts and before everything else. However, with the introduction of App.Formulas you can let Power Apps decide when to run an expression.  PowerApps can run the formula 'Just-in-time' before it is needed. For more information, see [App formulas](/power-platform/power-fx/reference/object-app#formulas-property). Use App.Formulas to split up your formula into pieces that Power Apps can arrange more effciently for execution. 
 
 ### Concurrent
 Use the Concurrent function to allow formulas to be executed at the same time. It is common to use this function to populate collections as it allows for parallel execution. While this can provide some modest speed ups, adding many data sources can cause timing and throttling issues.  
@@ -63,14 +63,14 @@ If your app is very large, consider partitioning it into smaller apps. If the fu
 
 
 ## Suggestions
-To achieve the goal of a fast app and page start, consider the following questions / suggestions:
+To achieve the goal of a fast app and page start, consider the following questions and suggestions:
 
-1.  Are you loading a lot of data in a first screen?  Can you use a different first screen? 
-2.  Are you running many commands / Power Fx expressions at the beginning of the app load.  Can you defer these commands / expressions to a later point in the application? Only get the data you actually need to start the app. 
-1.	Can you convert expressions in App.OnStart to named formulas with App.Formulas?  This will allow Power Fx to decide when to actually execute the formula rather than forcing it to happen on load or navigate events. 
-2.  Can you use a separate Power Automate flow to create a temporary table in a local data store (such as Dataverse) that combines data from different sources? And then access that data in your Power App? 
-3.  For business process kick offs, can you use Server triggered actions rather than calling a Power Automate Flow?
-4.  Can you create a view on the server that joins the data for you?
-5.  If you want to use offline data in your app, can you use the Power Apps offline feature that works with Dataverse? If your data is not in Dataverse, can you move it there?
+1. Are you loading a lot of data in a first screen?  Can you use a different first screen? 
+1. Are you running many commands / Power Fx expressions at the beginning of the app load. Can you defer these commands and expressions to a later point in the application? Only get the data you actually need to start the app. 
+1 Can you convert expressions in App.OnStart to named formulas with App.Formulas?  This will allow Power Fx to decide when to actually execute the formula rather than forcing it to happen on load or navigate events. 
+1. Can you use a separate Power Automate flow to create a temporary table in a local data store (such as Dataverse) that combines data from different sources? And then access that data in your Power App? 
+1. For business process kick offs, can you use Server triggered actions rather than calling a Power Automate Flow?
+1. Can you create a view on the server that joins the data for you?
+1. If you want to use offline data in your app, can you use the Power Apps offline feature that works with Dataverse? If your data is not in Dataverse, can you move it there?
 
  
