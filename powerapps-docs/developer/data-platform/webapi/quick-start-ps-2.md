@@ -53,7 +53,7 @@ The following script contains definitions of re-usable PowerShell functions that
 ```powershell
 <#
    .SYNOPSIS
-   Connects to a Dataverse environment using the device code authentication.
+   Connects to a Dataverse environment
 
    .DESCRIPTION
    The Connect function uses the Azure CLI to obtain an access token for the specified 
@@ -89,7 +89,7 @@ function Connect {
 
    ## Login if not already logged in
    if ($null -eq (az account tenant list  --only-show-errors)) {
-      az login --allow-no-subscriptions --use-device-code | Out-Null
+      az login --allow-no-subscriptions | Out-Null
    }
    # Get token
    $token = az account get-access-token --resource=$environmentUrl --output json
@@ -455,7 +455,7 @@ function Remove-Record {
    Gets the error details from a Dataverse Web API HTTP response exception.
 
    .DESCRIPTION 
-   The Get-Error-Details function takes an exception object from the pipeline and extracts the status code, error code, and error message from it. 
+   The Get-ErrorDetails function takes an exception object from the pipeline and extracts the status code, error code, and error message from it. 
    It assumes that the exception object is of type Microsoft.PowerShell.Commands.HttpResponseException and that the error details are in JSON format. 
    It returns a custom object with the status code, error code, and error message as properties.
 
@@ -472,7 +472,7 @@ function Remove-Record {
       Format-Table -Property name, accountid
    }
    catch [Microsoft.PowerShell.Commands.HttpResponseException] {
-      Get-Error-Details | Format-List 
+      Get-ErrorDetails | Format-List 
    } 
 
    Connected to https://yourorg.crm.dynamics.com/
@@ -482,7 +482,7 @@ function Remove-Record {
    code       : 0x0
    message    : Could not find a property named 'names' on type 'Microsoft.Dynamics.CRM.account'.
 #>
-function Get-Error-Details {
+function Get-ErrorDetails {
    try {
       $statuscode = $_.Exception.StatusCode
       $code = $null
@@ -502,97 +502,140 @@ function Get-Error-Details {
       throw $_
    }
 }
-```
 
-1. In the Visual Studio Code menu, select **File** > **New Text File**, or use the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>N</kbd>.
-1. Copy this script into the file.
 
-   Visual Studio Code will detect it is a PowerShell script
+<#
+.SYNOPSIS
+Invokes a set of commands that may include Dataverse functions in this file.
 
-1. Press <kbd>F5</kbd> to run the script.
+.DESCRIPTION
+The Invoke-DataverseCommands function takes a mandatory parameter $commands, 
+which is a script block that contains one or more commands that may include the Dataverse functions in this file. 
+The function uses the Invoke-Command cmdlet to execute the commands remotely on the Dataverse server. 
+If the execution succeeds, the function returns the output of the commands. 
+If the execution fails, the function handles the error and displays the error details.
 
-## Create a script file for testing
+.PARAMETER commands
+A script block that contains one or more commands 
+The commands can use the other functions defined in this file.
 
-1. In the Visual Studio Code menu, select **File** > **New Text File**, or use the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>N</kbd>.
+.EXAMPLE
+Connect -uri 'https://your org.crm.dynamics.com/'
 
-   By default, this file is **Plain Text** file.
+Invoke-DataverseCommands {
 
-1. Select the **Select a Language** prompt to select a language, or use the **Language Mode Selector** on the right hand of the **Status Bar** to select **PowerShell (powershell)**.
-1. Copy the following script and paste it into the new file.
+   Get-WhoAmI | Format-List
+   # Retrieve Records
+   (Get-Records `
+      -setName connectors `
+      -query '?$top=1').value
 
-   ```powershell
-   Connect -uri 'https://yourorg.crm.dynamics.com/'
+}
+#>
+function Invoke-DataverseCommands{
+   param (
+      [Parameter(Mandatory)] 
+      $commands
+   )
+
    try {
-      # Try WhoAmI
-      Write-Host 'Call WhoAmI:'
-      Get-WhoAmI | Format-List -Property BusinessUnitId, UserId, OrganizationId
 
-      # Retrieve Records
-      Write-Host 'Retrieve first three account records:'
-      (Get-Records `
-         -setName accounts `
-         -query '?$select=name&$top=3').value | 
-      Format-Table -Property name, accountid
-
-      # Create a record
-      Write-Host 'Create an account record:'
-      $newAccountID = New-Record `
-      -setName accounts `
-      -body @{
-         name                = 'Example Account'; 
-         accountcategorycode = 1 # Preferred
-      }
-      Write-Host "Account with ID $newAccountID created"
-
-      # Retrieve a record
-      Write-Host 'Retrieve the created record:'
-      Get-Record `
-      -setName  accounts `
-      -id $newAccountID.Guid '?$select=name,accountcategorycode' |
-      Format-List -Property name,
-      accountid,
-      accountcategorycode,
-      accountcategorycode@OData.Community.Display.V1.FormattedValue
-
-      # Update a record
-      Write-Host 'Update the record'
-      $updateAccountData = @{
-         name                = 'Updated Example account';
-         accountcategorycode = 2; #Standard
-      }
-      Update-Record `
-      -setName accounts `
-      -id $newAccountID.Guid `
-      -body $updateAccountData
-      Write-Host 'Retrieve the updated the record:'
-      Get-Record `
-      -setName accounts `
-      -id  $newAccountID.Guid `
-      -query '?$select=name,accountcategorycode' |
-      Format-List -Property name,
-      accountid,
-      accountcategorycode,
-      accountcategorycode@OData.Community.Display.V1.FormattedValue
-
-      # Delete a record
-      Write-Host 'Delete the record:'
-      Remove-Record `
-      -setName accounts `
-      -id $newAccountID.Guid
-      Write-Host "The account with ID $newAccountID was deleted"
+      Invoke-Command $commands
+   
    }
    catch [Microsoft.PowerShell.Commands.HttpResponseException] {
-
+   
       Write-Host "An error occurred calling Dataverse:" -ForegroundColor Red
-      Get-Error-Details | Format-List 
-
+      Get-ErrorDetails | Format-List 
+   
    }
    catch {
-      
+   
       Write-Host "An error occurred in the script:" -ForegroundColor Red
       Write-Host $_
    }
-   ```
+}
+```
+
+1. Copy the script above.
+
+1. Save the script into a folder in your computer with the name `DataverseFunctions.ps1`.
+
+## Create a script file for testing
+
+The following script depends on the `DataverseFunctions.ps1` script:
+
+```powershell
+. $PSScriptRoot\DataverseFunctions.ps1
+
+Connect -uri 'https://yourorg.crm.dynamics.com/'
+
+Invoke-DataverseCommands {
+
+ # Try WhoAmI
+ Write-Host 'Call WhoAmI:'
+ Get-WhoAmI | Format-List -Property BusinessUnitId, UserId, OrganizationId
+
+ # Retrieve Records
+ Write-Host 'Retrieve first three account records:'
+ (Get-Records `
+    -setName accounts `
+    -query '?$select=name&$top=3').value | 
+ Format-Table -Property name, accountid
+
+ # Create a record
+ Write-Host 'Create an account record:'
+ $newAccountID = New-Record `
+ -setName accounts `
+ -body @{
+    name                = 'Example Account'; 
+    accountcategorycode = 1 # Preferred
+ }
+ Write-Host "Account with ID $newAccountID created"
+
+ # Retrieve a record
+ Write-Host 'Retrieve the created record:'
+ Get-Record `
+ -setName  accounts `
+ -id $newAccountID.Guid '?$select=name,accountcategorycode' |
+ Format-List -Property name,
+ accountid,
+ accountcategorycode,
+ accountcategorycode@OData.Community.Display.V1.FormattedValue
+
+ # Update a record
+ Write-Host 'Update the record'
+ $updateAccountData = @{
+    name                = 'Updated Example account';
+    accountcategorycode = 2; #Standard
+ }
+ Update-Record `
+ -setName accounts `
+ -id $newAccountID.Guid `
+ -body $updateAccountData
+ Write-Host 'Retrieve the updated the record:'
+ Get-Record `
+ -setName accounts `
+ -id  $newAccountID.Guid `
+ -query '?$select=name,accountcategorycode' |
+ Format-List -Property name,
+ accountid,
+ accountcategorycode,
+ accountcategorycode@OData.Community.Display.V1.FormattedValue
+
+ # Delete a record
+ Write-Host 'Delete the record:'
+ Remove-Record `
+ -setName accounts `
+ -id $newAccountID.Guid
+ Write-Host "The account with ID $newAccountID was deleted"
+
+}
+
+```
+
+1. Copy this script and save it as a file named `Example.ps1` in the same folder as the `DataverseFunctions.ps1` file.
+2. Open the `Example.ps1` file with Visual Studio Code.
 
 ## Run the script
 
@@ -610,11 +653,15 @@ function Get-Error-Details {
 1. After you authenticate, the script will complete. You should see output like the following:
 
    ```powershell
+   PS C:\test> 
+   PS C:\test> . 'C:\test\Example.ps1'
+   Connected to https://yourorg.crm.dynamics.com/
+   Token will expire in 21 minutes.
    Call WhoAmI:
 
-   BusinessUnitId : 946986fe-ae36-4b86-a17e-b7815e3c881b
-   UserId         : 2979a124-067d-4e7e-ada2-e7df09549908
-   OrganizationId : 9e43d5ea-a042-41c0-bb44-a630fb0dd021
+   BusinessUnitId : 38e0dbe4-131b-e111-ba7e-78e7d1620f5e
+   UserId         : 4026be43-6b69-e111-8f65-78e7d1620f5e
+   OrganizationId : 883278f5-07af-45eb-a0bc-3fea67caa544
 
    Retrieve first three account records:
 
@@ -625,11 +672,11 @@ function Get-Error-Details {
    Alpine Ski House       2eda33e7-ef8b-ee11-8179-000d3a9933c9
 
    Create an account record:
-   Account with ID  3a1cb908-af90-ee11-8179-000d3a993550 created
+   Account with ID  8beb8935-9d94-ee11-be37-000d3a993550 created
    Retrieve the created record:
 
    name                                                          : Example Account
-   accountid                                                     : 3a1cb908-af90-ee11-8179-000d3a993550
+   accountid                                                     : 8beb8935-9d94-ee11-be37-000d3a993550
    accountcategorycode                                           : 1
    accountcategorycode@OData.Community.Display.V1.FormattedValue : Preferred Customer
 
@@ -638,13 +685,14 @@ function Get-Error-Details {
    Retrieve the updated the record:
 
    name                                                          : Updated Example account
-   accountid                                                     : 3a1cb908-af90-ee11-8179-000d3a993550
+   accountid                                                     : 8beb8935-9d94-ee11-be37-000d3a993550
    accountcategorycode                                           : 2
    accountcategorycode@OData.Community.Display.V1.FormattedValue : Standard
 
    Delete the record:
 
-   The account with ID 3a1cb908-af90-ee11-8179-000d3a993550 was deleted
+   The account with ID  8beb8935-9d94-ee11-be37-000d3a993550 was deleted
+   PS C:\test>
    ```
 
 1. Press <kbd>F5</kbd> to debug your script file again.
@@ -756,26 +804,34 @@ To create records you need to send a `DELETE` request to a table resource identi
 > [!div class="nextstepaction"]
 > [Learn more about deleting table rows](update-delete-entities-using-web-api.md#basic-delete)
 
-## Parsing errors
+### Parsing errors
 
-In the script, all data operations are performed in a `try` block with the [Try/Catch pattern](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). When any of the Dataverse functions fail on the server, the [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod) will return a <xref:Microsoft.PowerShell.Commands.HttpResponseException?displayProperty=fullName>. The first `catch` block will handle these errors and send the exception to the `Get-Error-Details` function.
+In the `Invoke-DataverseCommands` function, all data operations are performed as a script block in a `try` block with the [Try/Catch pattern](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). When any of the Dataverse functions fail on the server, the [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod) will return a <xref:Microsoft.PowerShell.Commands.HttpResponseException?displayProperty=fullName>. The first `catch` block will handle these errors and send the exception to the `Get-Error-Details` function.
 
 ```powershell
-Connect -uri 'https://yourorg.crm.dynamics.com/'
+function Invoke-DataverseCommands{
+   param (
+      [Parameter(Mandatory)] 
+      $commands
+   )
+
    try {
-      # All Data operations performed here
+
+      Invoke-Command $commands
+   
    }
    catch [Microsoft.PowerShell.Commands.HttpResponseException] {
-
+   
       Write-Host "An error occurred calling Dataverse:" -ForegroundColor Red
-      Get-Error-Details | Format-List 
-
+      Get-ErrorDetails | Format-List 
+   
    }
    catch {
-      
+   
       Write-Host "An error occurred in the script:" -ForegroundColor Red
       Write-Host $_
    }
+}
 ```
 
 The `Get-Error-Details` function parses out the basic errors returned by Dataverse Web API. It is possible to for more information to be included with errors.
@@ -786,6 +842,29 @@ The `Get-Error-Details` function parses out the basic errors returned by Dataver
 ## Troubleshooting
 
 This section contains some guidance for issues you might encounter.
+
+### statuscode : Unauthorized
+
+You might see this error even though you have logged in.
+
+```powershell
+An error occurred calling Dataverse:
+
+statuscode : Unauthorized
+code       : 
+message    : 
+```
+
+Press <kbd>F5</kbd> to debug your script file again. Sometimes it takes a second try.
+
+If that doesn't work, make sure you have edited this line in the `Example.ps1` script:
+
+```powershell
+Connect -uri 'https://yourorg.crm.dynamics.com/'
+```
+
+If that doesn't work, use the `az logout` command to log out of Azure. Then run the script again and make sure you sign in using an account that has access to the `Connect -uri` parameter URL.
+
 
 ### Error: "az : The term 'az' is not recognized as the name of a cmdlet, function, script file, or operable program."
 
@@ -832,6 +911,9 @@ This error might occur at times when debugging using Visual Studio code. To reso
 
 
 ## Next steps
+
+- Replace the example scripts with your own data operations.
+- Create your own PowerShell functions in the `DataverseFunctions.ps1` file and test them.
 
 Learn more about Dataverse Web API capabilities by understanding the service documents.
 
