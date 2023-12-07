@@ -23,13 +23,16 @@ To get the best performance when you run operations on multiple rows of a Micros
 - [`UpsertMultiple` (preview)](upsertmultiple.md): Creates or updates multiple records of the same type in a single request.
 - [`DeleteMultiple` (preview)](deletemultiple.md): For elastic tables only. Deletes multiple records of the same type in a single request.
 
+> [!NOTE]
+> For guidance about options when performing bulk operations, such when to use these APIs compared to batch APIs like `ExecuteMultiple`, see [Optimize performance for bulk operations](optimize-performance-create-update.md).
+
 ## Examples
 
 The following code samples show how to use bulk operation messages. You can download the samples from [github.com/microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples):
 
 - [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)
 - [Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md)
-- [Elastic table sample code (preview)](elastic-table-samples.md)
+- [Elastic table sample code](elastic-table-samples.md)
 
 ### CreateMultiple
 
@@ -241,7 +244,7 @@ The number of records that you should include with each request depends on wheth
 
 #### Number of records with standard tables
 
-Bulk operations on standard tables are optimized to perform on multiple rows in a single transaction. Operations become more efficient, and performance increases overall, as the number of operations per request increases. This optimization also allows for any plug-in steps that are registered for the bulk operation to be more efficient. Each time a plug-in is invoked for a single operation, some milliseconds are required to invoke the plug-in class containing the logic. When a plug-in is registered for a bulk operation message, the class is invoked once and can process all the operations more efficiently. [Learn how to write plug-ins for CreateMultiple and UpdateMultiple (preview)](write-plugin-multiple-operation.md).
+Bulk operations on standard tables are optimized to perform on multiple rows in a single transaction. Operations become more efficient, and performance increases overall, as the number of operations per request increases. This optimization also allows for any plug-in steps that are registered for the bulk operation to be more efficient. Each time a plug-in is invoked for a single operation, some milliseconds are required to invoke the plug-in class containing the logic. When a plug-in is registered for a bulk operation message, the class is invoked once and can process all the operations more efficiently. [Learn how to write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md).
 
 This performance benefit gives you an incentive to send the largest number of records you can in each request. However, as the number of records increases, the size of the request increases, too, and the request takes longer to process. Eventually, you'll encounter [message size and time limits](#message-size-and-time-limits). If you hit these limits, the entire operation fails. There's no set limit on the number of records you can send. You may need to experiment to find the best number. Generally, we expect that 100 - 1,000 records per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you may encounter can usually be addressed by sending fewer records with each request. We recommend that you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
 
@@ -472,7 +475,7 @@ These limits are based on data changes: `Create`, `Update`, and `Delete` operati
 
 [Use UpsertMultiple (preview)](upsertmultiple.md)   
 [Use DeleteMultiple (preview)](deletemultiple.md)   
-[Elastic tables (preview)](elastic-tables.md)  
+[Elastic tables](elastic-tables.md)  
 [Write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md)  
 [Sample: SDK for .NET Use bulk operations](org-service/samples/create-update-multiple.md)  
 [Sample: Web API Use bulk operations](webapi/samples/create-update-multiple.md)  

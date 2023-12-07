@@ -1,25 +1,19 @@
 ---
-title: Create and edit elastic tables (preview)
+title: Create and edit elastic tables
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 11/11/2023
+ms.date: 12/07/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: matp
 ms.topic: how-to
 ms.subservice: dataverse-maker
 ---
-# Create and edit elastic tables (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create and edit elastic tables
 
 An elastic table is a table managed by Microsoft Dataverse. Elastic tables come with the same familiar user experience and API that are offered with standard tables. They share many aspects and options with standard tables, but come with their own unique features and capabilities that are powered by Azure Cosmos DB.
 
 As with standard tables, elastic tables are included with your Dataverse database capacity use.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Watch this video that to learn about elastic tables.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAi ]
@@ -58,7 +52,7 @@ The choice of table should be based on the specific needs of your application. A
 
 As your business data grows, elastic tables provide unlimited auto scalability based on your application workload, both for storage size and throughput, such as the number of records created, updated, or deleted in a given timeframe.
 
-If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request APIs, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits. More information: [Developer guide: Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md) and [Optimize performance for bulk operations](/power-apps/developer/data-platform/optimize-performance-create-update)
+If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request APIs, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits. More information: [Developer guide: Bulk Operation messages](../../developer/data-platform/bulk-operations.md) and [Optimize performance for bulk operations](/power-apps/developer/data-platform/optimize-performance-create-update)
 
 ### Automatic removal of data
 
@@ -66,7 +60,8 @@ Time to live (TTL) policies ensure that you're always working with the most up-t
 
 ### Flexible schema with JSON columns
 
-Elastic tables enable you to store and query data with varying structures, without the need for predefined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. More information: [Developer guide: Query JSON columns in elastic tables (Preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
+Elastic tables enable you to store and query data with varying structures, without the need for predefined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. More information: [Developer guide: Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
+Elastic tables enable you to store and query data with varying structures, without the need for predefined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. More information: [Developer guide: Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
 
 ## Considerations when you use elastic tables  
 
@@ -74,7 +69,7 @@ Although elastic tables are great for handling large volume of requests at scale
 
 - Elastic tables don't support multi-record transactions. This means that multiple write operations happening as part of a single request execution aren't transactional with each other. For example, if you have a synchronous plug-in step registered on the `PostOperation` stage for `Create message` on an elastic table, any error in your plug-in won't roll back the created record in Dataverse. Validations in preplug-ins will still work as expected since they run before the main stage.
 - Elastic tables support strong consistency only within a logical session. Outside session context, you might not see changes to a row immediately. More information: [Developer guide: Consistency level](../../developer/data-platform/elastic-tables.md#consistency-level)
-- Elastic tables don't support filters on related tables when creating views, advanced find, or any query in general using API. If you frequently need to filter on related table columns, we recommend that you denormalize columns from related tables, which need filtering into the main table itself. Consider a retailer with two elastic tables: customer and address. One customer has many addresses. You want to return query results for all customers from the customer table whose city value in the address table is New York. In this example, when querying customer table, you want to apply a filter on the city column of the related address table. This isn't supported for elastic tables. One way to make this work is to denormalize the city column into the Customer table so that all customers city values are present in the customer table itself.
+- Elastic tables don't support filters on related tables when creating views, advanced find, or any query in general using API. If you frequently need to filter on related table columns, we recommend that you denormalize columns from related tables, which need to filter into the main table itself. Consider a retailer with two elastic tables: customer and address. One customer has many addresses. You want to return query results for all customers from the customer table whose city value in the address table is New York. In this example, when querying customer table, you want to apply a filter on the city column of the related address table. This isn't supported for elastic tables. One way to make this work is to denormalize the city column into the Customer table so that all customers city values are present in the customer table itself.
 
 ## Elastic tables feature support
 
@@ -139,11 +134,17 @@ You create an elastic table just like any other new table in Dataverse.
 1. On the right properties pane, expand **Advanced options**.
 1. Select **Elastic** as the table **Type**.
    :::image type="content" source="media/elastic-table-type.png" alt-text="Select Elastic as the table Type":::
-1. Select the properties you want, and then select **Save**. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+1. Select the properties you want, and then select **Save**.
+  
+The time to live column is automatically created for an elastic table. You can add the time-period value in seconds, as required. The data is auto removed after the specified time-period.
+
+More information about Tables: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
 ## Known issues
 
-- When [time to live (TTL)](#automatic-removal-of-data) is used on a row, the row will get deleted from the elastic table when TTL has expired. If it's synchronized to a data lake using [Azure Synapse Link for Dataverse](export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
+- When [time to live (TTL)](#automatic-removal-of-data) is used on a row, the row gets deleted from the elastic table when TTL expires. If it's synchronized to a data lake using [Azure Synapse Link for Dataverse](export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
+- Point in time restore doesn't restore “updated” records as updates aren't backed up. Only created and deleted records are restored.
+- If a specific column in an elastic table is deleted, the columns value isn't removed from the table rows if it has data. Before deleting a specific column, delete the data from all rows for the column.
 
 ## High volume elastic tables and managing Dataverse API throttling limits
 
@@ -153,12 +154,12 @@ Use [bulk operation messages](../../developer/data-platform/bulk-operations.md).
 
 Elastic tables have different behaviors and capabilities than standard tables when developers use them with Dataverse APIs. The following articles for developers describe these differences:
 
-- [For developers: Elastic tables (preview)](../../developer/data-platform/elastic-tables.md)
-- [Create elastic tables using code (preview)](../../developer/data-platform/create-elastic-tables.md)
-- [Use elastic tables using code (preview)](../../developer/data-platform/use-elastic-tables.md)
-- [Query JSON columns in elastic tables (preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
+- [Elastic tables](../../developer/data-platform/elastic-tables.md)
+- [Create elastic tables using code](../../developer/data-platform/create-elastic-tables.md)
+- [Use elastic tables using code](../../developer/data-platform/use-elastic-tables.md)
+- [Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
 - [Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md)
-- [Elastic table sample code (preview)](../../developer/data-platform/elastic-table-samples.md)
+- [Elastic table sample code](../../developer/data-platform/elastic-table-samples.md)
 - [Send parallel requests](../../developer/data-platform/send-parallel-requests.md)
 - [Service protection API limits](../../developer/data-platform/api-limits.md)
 
