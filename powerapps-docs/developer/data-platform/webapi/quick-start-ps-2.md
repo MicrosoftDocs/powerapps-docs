@@ -13,7 +13,7 @@ contributors:
 
 # Quick Start: Web API with PowerShell
 
-In this quick start, you'll learn how to:
+In this quick start, learn how to:
 
 - Use Visual Studio Code with PowerShell to use reusable functions for ad-hoc testing of Web API operations.
 - Authenticate to Dataverse using PowerShell without registering your own application.
@@ -48,7 +48,7 @@ In this quick start, you'll learn how to:
 
 ## Reusable functions
 
-The following script contains definitions of re-usable PowerShell functions that you can use with Dataverse Web API.
+The following script contains definitions of reusable PowerShell functions that you can use with Dataverse Web API.
 
 1. Copy this script:
 
@@ -644,7 +644,7 @@ The following script depends on the `DataverseFunctions.ps1` script.
 
 1. Press <kbd>F5</kbd> to debug your script file.
 
-   If you don't get the following results, check the [Troubleshooting](#troubleshooting) section below.
+   If you don't get the following results, check the [Troubleshooting](#troubleshooting) section.
 
 1. The first time you run the script, you need to sign in using a web browser. You see output like the following in the terminal window:
 
@@ -718,19 +718,19 @@ The following sections describe the details for each part.
 
 ### Authentication
 
-The first line of the second script calls the `Connect` function. This function:
+The second line of the `Example.ps1` script calls the `Connect` function. This function:
 
-- Detects whether you are already signed in to Azure using the [az account tenant list](/cli/azure/account/tenant#az-account-tenant-list) Azure CLI extension to get a list of tenants associated with the signed-in user. If it returns null, you need to sign in.
-- If you need to sign in, it uses the [az login](/cli/azure/reference-index#az-login) command. This access token it returns has the necessary delegated permissions to connect to Dataverse. You don't need to register an application to use the Dataverse Web API with PowerShell. The `--allow-no-subscriptions` parameter means you don't need to have an azure Subscription You can use `az login` for several other kinds of authentication flows. [Learn about other ways to sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
+- Detects whether you're already signed in to Azure using the [az account tenant list](/cli/azure/account/tenant#az-account-tenant-list) Azure CLI extension to get a list of tenants associated with the signed-in user. If it returns null, you need to sign in.
+- If you need to sign in, it uses the [az login](/cli/azure/reference-index#az-login) command. This access token it returns has the necessary delegated permissions to connect to Dataverse. You don't need to register an application to use the Dataverse Web API with PowerShell. The `--allow-no-subscriptions` parameter means you don't need to have an Azure subscription. You can use `az login` for several other kinds of authentication flows. [Learn about other ways to sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
 - It sets the global variables `$environmentUrl` and `$accessToken` so that other functions in the session can use them.
 
 ### Invoke-DataverseCommands
 
-The `Invoke-DataverseCommands` function manages how errors from Dataverse Web API are parsed. You can include any type of PowerShell command as a block for this function. If your script uses `Invoke-RestMethod` and returns an error that matches how Dataverse Web API sends errors, the `Invoke-DataverseCommands` function will return details for that error. See [Parsing errors](#parsing-errors) for more information.
+The `Invoke-DataverseCommands` function manages how errors from Dataverse Web API are parsed. You can include any type of PowerShell command as a block for this function. If your script uses `Invoke-RestMethod` and returns an error that matches how Dataverse Web API sends errors, the `Invoke-DataverseCommands` function returns details for that error. See [Parsing errors](#parsing-errors) for more information.
 
 ### Calling WhoAmI function
 
-The [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) is a very simple request to demonstrate the pattern used to invoke other Dataverse Web API operations. The `Get-WhoAmI` function demonstrates using it.
+The [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) is a simple request to demonstrate the pattern used to invoke other Dataverse Web API operations. The `Get-WhoAmI` function demonstrates using it.
 
 ```powershell
 # Define common set of headers
@@ -756,23 +756,23 @@ The `$baseHeaders` variable includes the `$accessToken` value in the `Authorizat
 
 This script passes the `Uri`, `Method`, and `Headers` parameters to the [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod) with a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables) using a technique known as [splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
-PowerShell has specific requirements about the names of functions. That is why this function is named `Get-WhoAmI` rather than simply `WhoAmI`. [Learn more about approved verbs for PowerShell commands](/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands)
+PowerShell has specific requirements about the names of functions. These requirements are why this function is named `Get-WhoAmI` rather than simply `WhoAmI`. [Learn more about approved verbs for PowerShell commands](/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands)
 
-This function returns the entire body of the HTTP response, so it includes the `@odata.context` property as well as the properties in the [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The example code pipes the response to [Format-List](/powershell/module/microsoft.powershell.utility/format-list) to make it easier to see the important properties.
+This function returns the entire body of the HTTP response, so it includes the `@odata.context` property and the properties in the [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The example code pipes the response to [Format-List](/powershell/module/microsoft.powershell.utility/format-list) to make it easier to see the important properties.
 
 > [!div class="nextstepaction"]
 > [Learn more about using Dataverse Web API functions](use-web-api-functions.md)
 
 ### Retrieve records
 
-To retrieve business data, you need to send a `GET` request to the table resource identified by the entity set name. Use an ODATA query to select properties, expand navigation properties, and filter results. The `Get-Records` function enables this.
+To retrieve business data, you need to send a `GET` request to the table resource identified by the entity set name. Use an ODATA query to select properties, expand navigation properties, and filter results. The `Get-Records` function enables retrieving business data.
 
 This function adds two more headers to the base headers:
 
 - `If-None-Match : null` is to make sure that related record collections you might include using `$expand` are retrieved from the server and don't use cached data in the browser that doesn't reflect recent changes.
 - `Prefer : odata.include-annotations="*"` requests all available annotations that can be returned. You can also choose to retrieve specific types of annotations. [Learn how to request annotations](compose-http-requests-handle-errors.md#request-annotations)
 
-This function returns the entire HTTP response and the records themselves are in the `value` property. These other properties are useful for scenarios where you need to retrieving [paged results](query-data-web-api.md#page-results), so they aren't filtered out here. As shown in the sample, you can filter and format the results to see the data you are most interested in. The sample script uses this:
+This function returns the entire HTTP response and the records themselves are in the `value` property. These other properties are useful for scenarios where you need to retrieve [paged results](query-data-web-api.md#page-results), so they aren't filtered out here. As shown in the sample, you can filter and format the results to see the data you're most interested in. The sample script uses the following:
 
 ```powershell
 (Get-Records accounts '?$select=name&$top=3').value | Format-Table -Property name,accountid
@@ -783,7 +783,7 @@ This function returns the entire HTTP response and the records themselves are in
 
 ### Create records
 
-To create records you need to `POST` valid data to the table resource identified by the entity set name. The `New-Record` function demonstrates this. Use the `setName` parameter to specify the table, then send the data as a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables) with the `body` parameter.
+To create records, you need to `POST` valid data to the table resource identified by the entity set name. The `New-Record` function demonstrates how to create records. Use the `setName` parameter to specify the table, then send the data as a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables) with the `body` parameter.
 
 This function adds the `Content-Type: application/json` request header because it sends data in the body of the request.
 
@@ -803,7 +803,7 @@ This function uses the same modified headers as the `Get-Records` function. Beca
 
 ### Update a record
 
-To create records you need to `PATCH` valid data to the table resource identified by the entity set name together with a unique key, or [alternate keys](/power-apps/developer/data-platform/use-alternate-key-reference-record?tabs=webapi). The `Update-Record` function enables retrieving a single record using the primary key.
+To update records, you need to `PATCH` valid data to the table resource identified by the entity set name together with a unique key, or [alternate keys](/power-apps/developer/data-platform/use-alternate-key-reference-record?tabs=webapi). The `Update-Record` function enables retrieving a single record using the primary key.
 
 Like the `New-Record` function, this request needs to include the `Content-Type:application/json` request header because it includes data in the body of the request. The `If-Match: *` header makes sure this function doesn't create a new record if the record you intended to update doesn't exist. The `Patch` method is also used for *upsert* operations. 
 
@@ -812,14 +812,14 @@ Like the `New-Record` function, this request needs to include the `Content-Type:
 
 ### Delete a record
 
-To create records you need to send a `DELETE` request to a table resource identified by the entity set name together with a unique key, or [alternate keys](/power-apps/developer/data-platform/use-alternate-key-reference-record?tabs=webapi). The `Remove-Record` function enables deleting a single record using the primary key.
+To delete records, you need to send a `DELETE` request to a table resource identified by the entity set name together with a unique key, or [alternate keys](/power-apps/developer/data-platform/use-alternate-key-reference-record?tabs=webapi). The `Remove-Record` function enables deleting a single record using the primary key.
 
 > [!div class="nextstepaction"]
 > [Learn more about deleting table rows](update-delete-entities-using-web-api.md#basic-delete)
 
 ### Parsing errors
 
-In the `Invoke-DataverseCommands` function, all data operations are performed as a script block in a `try` block with the [Try/Catch pattern](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). When any of the Dataverse functions fail on the server, the [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod) will return a <xref:Microsoft.PowerShell.Commands.HttpResponseException?displayProperty=fullName>. The first `catch` block will handle these errors and send the exception to the `Get-Error-Details` function.
+In the `Invoke-DataverseCommands` function, all data operations are performed as a script block in a `try` block with the [Try/Catch pattern](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). When any of the Dataverse functions fail on the server, the [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod) returns a <xref:Microsoft.PowerShell.Commands.HttpResponseException?displayProperty=fullName>. The first `catch` block handles these errors and send the exception to the `Get-Error-Details` function.
 
 ```powershell
 function Invoke-DataverseCommands{
@@ -847,7 +847,7 @@ function Invoke-DataverseCommands{
 }
 ```
 
-The `Get-Error-Details` function parses out the basic errors returned by Dataverse Web API. It is possible to for more information to be included with errors.
+The `Get-Error-Details` function parses out the basic errors returned by Dataverse Web API. It's possible to for more information to be included with errors.
 
 > [!div class="nextstepaction"]
 > [Learn more about parsing errors from the response](compose-http-requests-handle-errors.md#parse-errors-from-the-response)
@@ -865,7 +865,7 @@ An error occurred in the script:
 No such host is known.
 ```
 
-Make sure you edit the first line in the Example.ps1 script to change `'https://yourorg.crm.dynamics.com/'` to the URL for your environment.
+Make sure you edit the second line in the `Example.ps1` script to change `'https://yourorg.crm.dynamics.com/'` to the URL for your environment.
 
 ### statuscode : Unauthorized
 
@@ -881,7 +881,7 @@ message    :
 
 Press <kbd>F5</kbd> to debug your script file again. Sometimes it takes a second try.
 
-If that doesn't work, use the `az logout` command to log out of Azure. Then run the script again and make sure you sign in using an account that has access to the `Connect -uri` parameter URL.
+If that doesn't work, use the `az logout` command to sign out of Azure. Then run the script again and make sure you sign in using an account that has access to the `Connect -uri` parameter URL.
 
 
 ### Error: "az : The term 'az' is not recognized as the name of a cmdlet, function, script file, or operable program."
@@ -894,17 +894,17 @@ Press the <kbd>F Lock</kbd> key to toggle function on your keyboard.
 
 ### The login script hangs
 
-The script in [Run the script](#run-the-script) doesn't respond. There is no error.
+The script in [Run the script](#run-the-script) doesn't respond. There's no error.
 
-This will happen if you haven't installed the Azure CLI `account` extension.
+This happens if you haven't installed the Azure CLI `account` extension.
    
 In a PowerShell terminal, run `az extension add --name account`, then try again.
 
-Or, in the terminal enter `az account tenant list`. This will prompt you to consent to install the extension. [Learn more about dynamic installation of Azure CLI extensions](/cli/azure/azure-cli-extensions-overview#install-extensions-automatically)
+Or, in the terminal enter `az account tenant list`. This prompts you to consent to install the extension. [Learn more about dynamic installation of Azure CLI extensions](/cli/azure/azure-cli-extensions-overview#install-extensions-automatically)
 
 ### Error: Invoke-RestMethod : Object reference not set to an instance of an object.
 
-In the [Retrieve Records](#retrieve-records) section you may encounter this error:
+In the [Retrieve Records](#retrieve-records) section, you might encounter this error:
 
 ```powershell
 PS C:\Users\you.Domain> Get-Records accounts '?$select=name&$top=3'
@@ -917,7 +917,7 @@ At C:\test\myDVWebAPICommands.ps1:54 char:4
     + FullyQualifiedErrorId : System.NullReferenceException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
 ```
 
-This is because earlier versions of PowerShell didn't support [splatting](/powershell/module/microsoft.powershell.core/about/about_splatting) parameters to the `Invoke-RestMethod` command. To resolve this, [install PowerShell 7.4 or higher](/powershell/scripting/install/installing-powershell)
+This error occurs because earlier versions of PowerShell didn't support [splatting](/powershell/module/microsoft.powershell.core/about/about_splatting) parameters to the `Invoke-RestMethod` command. To resolve this, [install PowerShell 7.4 or higher](/powershell/scripting/install/installing-powershell)
 
 ### Error: Get-Record: Cannot process argument transformation on parameter 'id'. Cannot convert null to type "System.Guid".
 
@@ -925,7 +925,7 @@ You can get this error for the functions that accept an `id` parameter when the 
 
 ### Error dialog: connect ENOENT\\\\.\\pipe\\&lt;RANDOM_text&gt; with Open 'launch.json' button
 
-This error might occur at times when debugging using Visual Studio code. To resolve, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, type `restart` and select `Powershell: Restart session`. See [PowerShell/vscode-powershell GitHub Issue 4332](https://github.com/PowerShell/vscode-powershell/issues/4332) for more information.
+This error might occur at times when debugging using Visual Studio Code. To resolve, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, type `restart` and select `Powershell: Restart session`. See [PowerShell/vscode-powershell GitHub Issue 4332](https://github.com/PowerShell/vscode-powershell/issues/4332) for more information.
 
 
 ## Next steps
