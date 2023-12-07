@@ -2,7 +2,7 @@
 title: Create and edit elastic tables
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 12/04/2023
+ms.date: 12/07/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: matp
@@ -143,8 +143,8 @@ More information about Tables: [Advanced options](create-edit-entities-portal.md
 ## Known issues
 
 - When [time to live (TTL)](#automatic-removal-of-data) is used on a row, the row gets deleted from the elastic table when TTL expires. If it's synchronized to a data lake using [Azure Synapse Link for Dataverse](export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
-- Point in time restore will not be able to restore “updated” records as updates are not backed up. Only created and deleted records will be restored.
-- If a specific column in an Elastic table is deleted, the columns value is not removed from the table rows if it has data.Before deleting a specific column, delete the data from all rows for the column.
+- Point in time restore doesn't restore “updated” records as updates aren't backed up. Only created and deleted records are restored.
+- If a specific column in an elastic table is deleted, the columns value isn't removed from the table rows if it has data. Before deleting a specific column, delete the data from all rows for the column.
 
 ## High volume elastic tables and managing Dataverse API throttling limits
 
@@ -154,10 +154,6 @@ Use [bulk operation messages](../../developer/data-platform/bulk-operations.md).
 
 Elastic tables have different behaviors and capabilities than standard tables when developers use them with Dataverse APIs. The following articles for developers describe these differences:
 
-- [For developers: Elastic tables](../../developer/data-platform/elastic-tables.md)
-- [Create elastic tables using code](../../developer/data-platform/create-elastic-tables.md)
-- [Use elastic tables using code](../../developer/data-platform/use-elastic-tables.md)
-- [Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
 - [For developers: Elastic tables](../../developer/data-platform/elastic-tables.md)
 - [Create elastic tables using code](../../developer/data-platform/create-elastic-tables.md)
 - [Use elastic tables using code](../../developer/data-platform/use-elastic-tables.md)
