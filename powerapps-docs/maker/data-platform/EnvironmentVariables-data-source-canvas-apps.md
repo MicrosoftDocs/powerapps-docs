@@ -18,7 +18,7 @@ contributors:
 ## Use pre-existing data source environment variables
 
 Environment variables can be reused across other apps and even different types of resources like cloud flows. You may wish to first create them within your solution and later use them while authoring canvas apps and cloud flows.
-1. Follow the steps to [Create an environment variable in a solution](/EnvironmentVariables.md#create-an-environment-variable-in-a-solution).
+1. Follow the steps to [Create an environment variable in a solution](EnvironmentVariables.md#create-an-environment-variable-in-a-solution).
 1. Edit or create a canvas app from your solution.
 1. Add a **new** data source for SharePoint online.
 1. Select the **Advanced** tab. You'll see a filtered list of environment variables that you have access to and that match the parameter being set. For example, when you select the SharePoint site, you'll see a list of all data source environment variables with **Connector** = **SharePoint** and **Parameter type** = **Site**. The same is true when selecting SharePoint lists for a given site. 
@@ -46,7 +46,7 @@ This option provides simplicity and ensures environment variables will always be
 
 ### See also
 [Create Canvas app from scratch using Dataverse.](/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
-[Environment variables overview.](/EnvironmentVariables.md) </BR>
+[Environment variables overview.](EnvironmentVariables.md) </BR>
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
