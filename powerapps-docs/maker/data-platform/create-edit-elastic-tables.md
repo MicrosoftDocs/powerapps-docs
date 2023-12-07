@@ -154,12 +154,11 @@ Use [bulk operation messages](../../developer/data-platform/bulk-operations.md).
 
 Elastic tables have different behaviors and capabilities than standard tables when developers use them with Dataverse APIs. The following articles for developers describe these differences:
 
-- [For developers: Elastic tables](../../developer/data-platform/elastic-tables.md)
+- [Elastic tables](../../developer/data-platform/elastic-tables.md)
 - [Create elastic tables using code](../../developer/data-platform/create-elastic-tables.md)
 - [Use elastic tables using code](../../developer/data-platform/use-elastic-tables.md)
 - [Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
 - [Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md)
-- [Elastic table sample code](../../developer/data-platform/elastic-table-samples.md)
 - [Elastic table sample code](../../developer/data-platform/elastic-table-samples.md)
 - [Send parallel requests](../../developer/data-platform/send-parallel-requests.md)
 - [Service protection API limits](../../developer/data-platform/api-limits.md)
