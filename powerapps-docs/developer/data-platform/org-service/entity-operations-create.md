@@ -1,7 +1,7 @@
 ---
 title: "Create table rows using the SDK for .NET (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to create table rows using the SDK for .NET." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/22/2023
+ms.date: 12/04/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath # GitHub ID
@@ -109,13 +109,13 @@ You must use the [CreateRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateReq
  - When you're creating a row that represents a solution component, such as a [WebResource](../reference/entities/webresource.md) and want to associate it with a specific solution. In this case, you would include the value of the [Solution.UniqueName](../reference/entities/solution.md#BKMK_UniqueName) using the `SolutionUniqueName` parameter. More information: [Use messages with the SDK for .NET](use-messages.md)
 
 
-## Use the CreateMultipleRequest class (Preview)
+## Use the CreateMultipleRequest class
 
-When you need to create multiple records of the same type, the [CreateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest) is the most performant way. More information: [Bulk Operation messages (preview)](../bulk-operations.md)
+When you need to create multiple records of the same type, the [CreateMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest) is the most performant way. More information: [Bulk Operation messages](../bulk-operations.md)
 
 ## Create related entities in one operation
 
-When you create a new table row, you can also create related rows in the same operation.
+For standard tables, when you create a new table row, you can also create related rows in the same operation. This is called *deep insert*.
 
 The following late-bound and early-bound examples create an [Account](../reference/entities/account.md) and a [Contact](../reference/entities/contact.md) related to that account using the [contact account_primary_contact](../reference/entities/contact.md#BKMK_account_primary_contact) one-to-many relationship where the [account primarycontactid](../reference/entities/account.md#BKMK_PrimaryContactId) lookup is the `ReferencingAttribute`.
 
