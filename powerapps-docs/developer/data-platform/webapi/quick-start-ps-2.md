@@ -637,12 +637,15 @@ The following script depends on the `DataverseFunctions.ps1` script.
    ```
 
 1. Save this script as a file named `Example.ps1` in the same folder as the `DataverseFunctions.ps1` file.
-1. Change the first line to use the URL for your environment instead of `https://yourorg.crm.dynamics.com/`.
+1. Change the second line to use the URL for your environment instead of `https://yourorg.crm.dynamics.com/`.
 1. Open the `Example.ps1` file with Visual Studio Code.
 
 ## Run the script
 
 1. Press <kbd>F5</kbd> to debug your script file.
+
+   If you don't get the following results, check the [Troubleshooting](#troubleshooting) section below.
+
 1. The first time you run the script, you need to sign in using a web browser. You see output like the following in the terminal window:
 
    ```powershell
