@@ -18,11 +18,11 @@ ms.custom: canvas
 ms.collection: get-started
 ---
 
-# Understand canvas app execution phases and data call flow
+# Understand canvas app execution phases, data call flow, and performance monitoring
 
 When a user opens a canvas app, the app goes through several phases of execution before showing any user interface. While the app loads, it connects to different [data sources](./connections-list.md#popular-connectors)&mdash;such as SharePoint, Microsoft Dataverse, SQL Server (on-premises), Azure SQL Database (online), Excel, and Oracle.
 
-In this article, you'll learn about these different phases of execution and how an app connects to data sources.
+In this article, you'll learn about these different phases of execution and how an app connects to data sources.  You will also learn about tools you can use to monitor performance.
 
 ## Execution phases in canvas apps
 
@@ -74,16 +74,31 @@ When you use Microsoft Dataverse as the data source, data requests go to the env
 
 With the understanding of this high-level concept of how data calls travel, you can get into the details of reviewing the performance of your app. In summary, performance overhead can happen at any of the layers&mdash;from client, API Management, connector, on-premises data gateway, or back-end data sources.
 
-## Next steps
+## Measuring performance
 
-[Common sources of slow performance for a canvas app](slow-performance-sources.md)
+### Power Apps Monitoring tool
+While you can use the browser's developer tools to see performance, Power Apps subsets the set of calls in the Monitoring tool to just those that are Power Apps. 
+
+The Power Apps monitoring tool can help you track what is actually sent to the data source and timestamps for when requests are sent and responses come from the server. 
+
+You can learn more about the monitoring tool in this article: [Debugging canvas apps with Monitor](optimized-query-data-patterns.md) . 
+
+![Monitoring tool.](./media/execution-phases-data-flow/monitoring-screen.png)
+
+### Measuring memory pressure on the client
+
+To see memory consumption graphically you can use the developer tools for your browser to profile memory. It helps you visualize heap size, documents, nodes, and listeners. Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/landing/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/memory-problems/)
+
+ ![Memory usage graph.](./media/execution-phases-data-flow/memorygraph.png)
+
+
+## Next steps
+[Small data payloads](small-data-payloads.md)
+
 
 ### See also
 
-[Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md) <br>
-[Tips and best practices to improve canvas app performance](performance-tips.md) <br>
-[Common issues and resolutions for Power Apps](/troubleshoot/power-platform/power-apps/common-issues-and-resolutions) <br>
-[Troubleshooting startup issues for Power Apps](/troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues)
+[Troubleshooting issues for Power Apps](/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/common-issues-and-resolutions)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
