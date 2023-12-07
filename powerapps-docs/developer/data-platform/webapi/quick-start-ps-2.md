@@ -705,7 +705,7 @@ The following script depends on the `DataverseFunctions.ps1` script.
 
 The first script contains the definitions for reusable PowerShell functions. When you debug the script, these functions are available in the session for the terminal window. The second script can now use the functions in the session.
 
-All the operations in the script are performed within a `try` block with `two` catch blocks that separate errors from Dataverse from other errors that may occur within the script.
+All the operations in the script are performed within a `try` block with two `catch` blocks that separate errors from Dataverse from other errors that may occur within the script.
 
 The following sections describe the details for each part.
 
@@ -915,6 +915,7 @@ This error might occur at times when debugging using Visual Studio code. To reso
 ## Next steps
 
 - Replace the example scripts with your own data operations.
+- Create new scripts that use the functions in `DataverseFunctions.ps1`.
 - Create your own PowerShell functions in the `DataverseFunctions.ps1` file and test them.
 
 Learn more about Dataverse Web API capabilities by understanding the service documents.
