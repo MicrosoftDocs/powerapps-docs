@@ -703,9 +703,13 @@ The following script depends on the `DataverseFunctions.ps1` script.
 
 ## How does it work?
 
-The first script contains the definitions for reusable PowerShell functions. When you debug the script, these functions are available in the session for the terminal window. The second script can now use the functions in the session.
+The `DataverseFunctions.ps1` file contains the definitions for reusable PowerShell functions. The `Example.ps1` script includes a reference to that file:
 
-All the operations in the script are performed within a `try` block with two `catch` blocks that separate errors from Dataverse from other errors that may occur within the script.
+```powershell
+. $PSScriptRoot\DataverseFunctions.ps1
+```
+
+You can use all the functions in `DataverseFunctions.ps1` without opening the file, as long as the `Example.ps1` file is in the same folder.
 
 The following sections describe the details for each part.
 
@@ -716,6 +720,10 @@ The first line of the second script calls the `Connect` function. This function:
 - Detects whether you are already signed in to Azure using the [az account tenant list](/cli/azure/account/tenant#az-account-tenant-list) Azure CLI extension to get a list of tenants associated with the signed-in user. If it returns null, you need to sign in.
 - If you need to sign in, it uses the [az login](/cli/azure/reference-index#az-login) command. This access token it returns has the necessary delegated permissions to connect to Dataverse. You don't need to register an application to use the Dataverse Web API with PowerShell. The `--allow-no-subscriptions` parameter means you don't need to have an azure Subscription You can use `az login` for several other kinds of authentication flows. [Learn about other ways to sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
 - It sets the global variables `$environmentUrl` and `$accessToken` so that other functions in the session can use them.
+
+### Invoke-DataverseCommands
+
+The `Invoke-DataverseCommands` function manages how errors from Dataverse Web API are parsed. You can include any type of PowerShell command as a block for this function. If your script uses `Invoke-RestMethod` and returns an error that matches how Dataverse Web API sends errors, the `Invoke-DataverseCommands` function will return details for that error. See [Parsing errors](#parsing-errors) for more information.
 
 ### Calling WhoAmI function
 
@@ -747,7 +755,7 @@ This script passes the `Uri`, `Method`, and `Headers` parameters to the [Invoke-
 
 PowerShell has specific requirements about the names of functions. That is why this function is named `Get-WhoAmI` rather than simply `WhoAmI`. [Learn more about approved verbs for PowerShell commands](/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands)
 
-This function returns the entire body of the HTTP response, so it includes the `@odata.context` property as well as the properties in the [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The example code pipes the response to [Format-List](/powershell/module/microsoft.powershell.utility/format-list)
+This function returns the entire body of the HTTP response, so it includes the `@odata.context` property as well as the properties in the [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The example code pipes the response to [Format-List](/powershell/module/microsoft.powershell.utility/format-list) to make it easier to see the important properties.
 
 > [!div class="nextstepaction"]
 > [Learn more about using Dataverse Web API functions](use-web-api-functions.md)
@@ -845,9 +853,20 @@ The `Get-Error-Details` function parses out the basic errors returned by Dataver
 
 This section contains some guidance for issues you might encounter.
 
+### No such host is known
+
+If you get this error:
+
+```powershell
+An error occurred in the script:
+No such host is known.
+```
+
+Make sure you edit the first line in the Example.ps1 script to change `'https://yourorg.crm.dynamics.com/'` to the URL for your environment.
+
 ### statuscode : Unauthorized
 
-You might see this error even though you have logged in.
+You might see this error even though you have already logged in.
 
 ```powershell
 An error occurred calling Dataverse:
@@ -858,12 +877,6 @@ message    :
 ```
 
 Press <kbd>F5</kbd> to debug your script file again. Sometimes it takes a second try.
-
-If that doesn't work, make sure you have edited this line in the `Example.ps1` script:
-
-```powershell
-Connect -uri 'https://yourorg.crm.dynamics.com/'
-```
 
 If that doesn't work, use the `az logout` command to log out of Azure. Then run the script again and make sure you sign in using an account that has access to the `Connect -uri` parameter URL.
 
