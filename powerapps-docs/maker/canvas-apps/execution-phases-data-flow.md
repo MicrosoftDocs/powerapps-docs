@@ -22,7 +22,7 @@ ms.collection: get-started
 
 When a user opens a canvas app, the app goes through several phases of execution before showing any user interface. While the app loads, it connects to different [data sources](./connections-list.md#popular-connectors)&mdash;such as SharePoint, Microsoft Dataverse, SQL Server (on-premises), Azure SQL Database (online), Excel, and Oracle.
 
-In this article, you'll learn about these different phases of execution and how an app connects to data sources.  You will also learn about tools you can use to monitor performance.
+In this article, you'll learn about these different phases of execution and how an app connects to data sources and about tools you can use to monitor performance.
 
 ## Execution phases in canvas apps
 
@@ -34,7 +34,7 @@ A canvas app goes through the following phases of execution before showing the i
 
 1. **Initialize the app**: Performs any tasks specified in the [OnStart](functions/object-app.md#onstart-property) property.
 
-1. **Render the screens**: Renders the first screen with controls that the app has populated with data. If the user opens other screens, the app renders them by using the same process.  
+1. **Render the screens**: Renders the first screen with controls that the app populates with data. If the user opens other screens, the app renders them by using the same process.  
 
 ## Data call flow in canvas apps
 
@@ -68,7 +68,7 @@ If the app uses a data source on-premises, the location and the specification of
 
 ### Data call flow with Microsoft Dataverse
 
-When you use Microsoft Dataverse as the data source, data requests go to the environment instance directly&mdash;without passing through Azure API Management. Because of this, the performance of data calls is much faster compared to the rest of the data sources. The app is by default connected to Microsoft Dataverse when you create a new canvas app.
+When you use Microsoft Dataverse as the data source, data requests go to the environment instance directly&mdash;without passing through Azure API Management. Because of this, the performance of data calls is faster compared to the rest of the data sources. The app is by default connected to Microsoft Dataverse when you create a new canvas app.
 
 ![Data call flow with Microsoft Dataverse.](media\execution-phases-data-flow\dataverse-connector.png "Data call flow with Microsoft Dataverse")
 
@@ -87,7 +87,7 @@ You can learn more about the monitoring tool in this article: [Debugging canvas 
 
 ### Measuring memory pressure on the client
 
-To see memory consumption graphically you can use the developer tools for your browser to profile memory. It helps you visualize heap size, documents, nodes, and listeners. Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/landing/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/memory-problems/)
+To see memory consumption graphically, you can use the developer tools for your browser to profile memory. It helps you visualize heap size, documents, nodes, and listeners. Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](/microsoft-edge/devtools-guide-chromium/landing/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](/microsoft-edge/devtools-guide-chromium/memory-problems/)
 
  ![Memory usage graph.](./media/execution-phases-data-flow/memorygraph.png)
 
