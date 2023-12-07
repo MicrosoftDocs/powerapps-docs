@@ -2142,6 +2142,13 @@
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
           href: ./data-platform/EnvironmentVariables.md
+          items:
+          - name: Use data source environment variables in Canvas apps
+            href: ./data-platform/EnvironmentVariables-data-source-canvas-apps.md
+          - name: Use environment variables in Power Automate solution cloud flows
+            href: ./data-platform/EnvironmentVariables-power-automate.md
+          - name: Use Azure Key Vault secrets
+            href: ./data-platform/EnvironmentVariables-azure-key-vault-secrets.md
         - name: Use settings
           href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
