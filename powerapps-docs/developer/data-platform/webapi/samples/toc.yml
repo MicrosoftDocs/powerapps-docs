@@ -55,5 +55,3 @@ items:
     href: functions-actions-client-side-javascript.md
   - name: Query Data
     href: query-data-client-side-javascript.md
-- name: (PowerShell) samples
-  href: powershell-web-api-samples.md
