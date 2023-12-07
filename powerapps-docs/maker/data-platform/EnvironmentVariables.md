@@ -113,7 +113,7 @@ The modern solution import interface includes the ability to enter values for en
 With an update on 12/7/2023, all environment variable values are visible when importing solutions (or [using Pipelines to deploy](/power-platform/alm/run-pipeline)). Environment variables without a default value or value will be prompted for a value, but those otherwise will be pre-filled with a label beneath the textarea denoting the value's source: solution value, target environment value, or default value.
 
   > [!div class="mx-imgBorder"] 
-  > ![Environment variable visibility during solution import.](media/solution-import-environment-variable.png)
+  > ![Environment variable visibility during solution import.](media/solution-import-environment-variables.png)
 
   >[!NOTE]
   >In some cases, for specific data source environment variable values, an **Access denied** warning may appear if the importing maker does not have access to the connection or source used for the environment variable. This is a non-blocking warning, but something to take note of depending on how you plan to use the environment variable in the target environment.  
