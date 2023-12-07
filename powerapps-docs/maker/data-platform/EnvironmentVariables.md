@@ -110,7 +110,7 @@ To use an environment variable in a solution cloud flow:
 
 The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` table.
 
-With an update on 12/7/2023, all environment variable values are visible when importing solutions (or [using Pipelines to deploy](/power-platform/alm/run-pipeline)). Environment variables without a default value or value will be prompted for a value, but those otherwise will be pre-filled with a label beneath the textarea denoting the value's source: solution value, target environment value, or default value.
+With an update on 12/7/2023, all environment variable values are visible when importing solutions (or when [using Pipelines to deploy](/power-platform/alm/run-pipeline)). Environment variables without a default value or value will be prompted for a value, but those otherwise will be pre-filled with a label beneath the textarea denoting the value's source: solution value, target environment value, or default value.
 
   > [!div class="mx-imgBorder"] 
   > ![Environment variable visibility during solution import.](media/solution-import-environment-variables.png)
