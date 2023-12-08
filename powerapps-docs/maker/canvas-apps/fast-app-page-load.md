@@ -15,7 +15,8 @@ contributors:
   
 ---
 # Optimize app or page load for peak performance
-The speed at which an application opens and is ready for use is one of the primary factors that influence a user’s impression of the app. You should make this goal a priority to have a performant app. There are three major areas to look at:
+
+One of the key factors that shape a user's perception of an app is how quickly it opens and becomes functional. Therefore, prioritizing this goal is crucial in building a performant app. To achieve this, there are three main areas that require attention:
 
 1. Load data fast
 2. Efficient calculations
@@ -24,6 +25,9 @@ The speed at which an application opens and is ready for use is one of the prima
 Each of these areas has several common anti-patterns.
 
 ## Load data fast
+
+Follow the guidelines below to achieve fast data loading apps.
+
 ### Populating a collection instead of direct access as a data source
 Sometimes authors use ClearCollect() to copy data from a server to a collection in their app. They do this to work around delegation limitations in the source or because they plan to use collections in the app for other purposes. This can make the app faster when they use the collection later. But you should use ClearCollect() carefully. Using ClearCollect this way makes your app slower at the beginning or when you change pages. ClearCollect() must finish before you can see the data in a gallery or a table. This can take a long time if there's lots of data or if you use this approach for too many data sources. If the amount of data is small and if there's only one or two data sources, it might meet your performance needs.  
 
