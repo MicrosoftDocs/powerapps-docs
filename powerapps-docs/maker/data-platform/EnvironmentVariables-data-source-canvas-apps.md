@@ -1,11 +1,10 @@
 ---
-title: "Use environment variables in solutions | MicrosoftDocs"
-description: "Use environment variables to migrate application configuration data in solutions."
-Keywords: environment variables, variables, model-driven app, configuration data
+title: "Use data source environment variables in canvas apps | MicrosoftDocs"
+description: "Use environment variables to store data sources in canvas apps."
+Keywords: environment variables, variables, canvas app, app, configuration data
 author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
-ms.author: asheehi1
 ms.reviewer: matp
 ms.date: 12/06/2023
 ms.topic: overview
@@ -13,6 +12,7 @@ search.audienceType:
   - maker
 contributors:
   - shmcarth
+  - asheehi1
 ---
 # Use data source environment variables in canvas apps
 ## Use pre-existing data source environment variables
