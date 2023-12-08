@@ -17,7 +17,7 @@ contributors:
 
 # Add sections
 
-[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-deprecation](../../includes/cc-portals-studio-deprecation.md)]
 
 Sections allow you to define a structure for your page and arrange portal components. Once you add sections to your page, you can add portal components inside the sections as per the requirement.
 
