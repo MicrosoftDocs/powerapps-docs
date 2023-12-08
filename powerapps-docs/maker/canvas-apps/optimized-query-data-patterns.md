@@ -18,7 +18,7 @@ contributors:
 # Optimized query data patterns
 The simplest and fastest data query pattern is: 
 
-1. A single table / view 
+1. A single table or view 
 2. Pre-filtered on the server to what you need 
 3. Columns are indexed correctly for the expected queries
  
@@ -37,8 +37,8 @@ A gallery can display many records from a data source. But sometimes, you need t
 
 However, expanding the table can be very slow if you have many records and many lookups. For each record in the gallery, the app needs to run a separate query to the other data source and get the lookup value. This means that the app may need to run many queries for each record, which can take a long time and affect the app performance. This anti-pattern is sometimes known as “N squared, (n^2)" or an "N+1" problem.
 
-## StartsWith / Filter
-Power Fx provides several ways to search data.  In general, use an expression that leverages an index like **StartsWith** or **Filter** instead of one that reads the entire table like **In**. The In operator is fine for in-memory collections or if the external data source table is very small. 
+## StartsWith or Filter
+Power Fx provides several ways to search data. In general, use an expression that leverages an index like **StartsWith** or **Filter** instead of one that reads the entire table like **In**. The In operator is fine for in-memory collections or if the external data source table is very small. 
 
 ## Duplicating data 
 Sometimes data is slow to access in a query because it is stored in a different location or format. To make the query faster, you can copy the slow data and store it locally in a table that is fast and easy to query. However, this means that the local data may not be the most updated version of the original data. You will need to run another process to update the local data periodically. This process can be a Power Automate flow, a plugin, a stored procedure, or any other method that can move data from one place to another.
@@ -49,14 +49,13 @@ This is a common type of technique in enterprise-grade applications to ensure go
 
 ## Suggestions
 
-To achieve this goal, consider the following questions / suggestions:
+To achieve this goal, consider the following questions and suggestions:
 
-1.	How important is it for a customer to see the data value in a gallery / data grid? Would it be acceptable to first select a record and then show the data in a form?
-2.	Can a view do the pre-work necessary to see data in the right format?
+1. How important is it for a customer to see the data value in a gallery or data grid? Would it be acceptable to first select a record and then show the data in a form?
+2. Can a view do the pre-work necessary to see data in the right format?
 3. Are you using an "IN" operator where a "StartsWith" will work? 
-4. How "current" does your data need to be?  Is there a data duplication strategy you can use to get your query to work over a single table by default?
+4. How current does your data need to be? Is there a data duplication strategy you can use to get your query to work over a single table by default?
 
 
-## Special topics
 
 
