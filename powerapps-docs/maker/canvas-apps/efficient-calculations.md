@@ -29,7 +29,7 @@ Use Dataverse thumbnail versions of images for galleries and tables. Dataverse t
 ## Calculations
 
 ### Split up formulas with App.formula
-The use of App.formulas and named formulas can help with the speed of app load and page navigation because it allows Power Fx to decide when to evaluate a formula. That means it doesn't have to necessarily evaluate it in OnStart.  In addition, named formulas can generally help speed as well. In particular if you have a long script, breaking it up into named formulas allow for more efficient calculations as Power Fx can schedule the work and it enables reuse. For more information, see [App formulas](/power-platform/power-fx/reference/object-app.md#formulas-property).
+The use of App.formulas and named formulas can help with the speed of app load and page navigation because it allows Power Fx to decide when to evaluate a formula. That means it doesn't have to necessarily evaluate it in OnStart.  In addition, named formulas can generally help speed as well. In particular if you have a long script, breaking it up into named formulas allow for more efficient calculations as Power Fx can schedule the work and it enables reuse. For more information, see [App formulas](/power-platform/power-fx/reference/object-app.md).
 
 ### Concurrent
 Use the Concurrent function to allow formulas to be executed at the same time. Carefully choose where concurrent is used. It can provide some modest speed  ups but if you're running items that depend on each other it can cause timing and throttling issues.  
