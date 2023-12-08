@@ -34,7 +34,7 @@ Sometimes authors use ClearCollect() to copy data from a server to a collection 
 ### Populating a collection with Power Automate
 This is a slight variation of the previous article. Sometimes authors also use Power Automate to populate their collection in Power Apps. There's approximately a 0.6-seconds performance cost to instantiate Power Automate. Power Automate must be independently launched each time it's called. It must allocate memory, get situated with the right components, and be ready to run.  As with the above advice, one or two calls to Power Automate might not be an issue (depending on your app) but poor performing apps use this approach for all their data sources. The performance cost adds up and can quickly ruin the performance of your app. 
 
-### SaveData / Load data as a full offline scenario
+### SaveData and Load data as a full offline scenario
 Some authors use ClearCollect() and SaveData() to store data for general purpose offline use. You can use SaveData() to save the collection to your device, and LoadData() to load it when you're offline. However, this approach isn't recommended for instances where there's a large amount of data or if the data is complex. It makes your app slower because it has to wait for ClearCollect() to finish before it can show the data. You should only use SaveData() and LoadData() for small and simple data scenarios such as preferences and short lists. A better way to work with large amounts of offline data is to use the Power Apps offline feature that works with Dataverse. This feature can handle larger and more complex data more efficiently. 
 
 ## Efficient calculations
