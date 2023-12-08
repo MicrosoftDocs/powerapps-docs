@@ -1829,6 +1829,8 @@
       href: ../mobile/canvas-mobile-offline-overview.md
     - name: Set up mobile offline for canvas apps (preview)
       href: ../mobile/canvas-mobile-offline-setup.md
+    - name: Configure files and images in offline canvas apps (preview)
+      href: ../mobile/files-images-offline-canvas-apps.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
   - name: Troubleshoot issues in the mobile app
@@ -1988,7 +1990,7 @@
         href: ./data-platform/setup-virtual-table-relationships.md
       - name: Virtual tables known issues and troubleshooting
         href: ./data-platform/limits-tshoot-virtual-tables.md
-    - name: Create and edit elastic tables (preview)
+    - name: Create and edit elastic tables
       href: ./data-platform/create-edit-elastic-tables.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md

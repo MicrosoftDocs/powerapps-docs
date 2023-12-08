@@ -1,8 +1,8 @@
 ---
 title: "Xrm.WebApi.online.executeMultiple (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the Xrm.WebApi.online.executeMultiple method.
-author: adrianorth
-ms.author: aorth
+author: lancedMicrosoft
+ms.author: lanced
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -35,7 +35,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 **Execute multiple requests in a transaction:**
 
-In this case, `req1`, `req2`, and `req3` will be executed in transaction.
+In this case, `req1`, `req2`, and `req3` are executed in a transaction.
 
 ```JavaScript
 var changeSet = [req1, req2, req3];
@@ -46,7 +46,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 **Execute a mix of individual requests and multiple requests in a transaction:**
 
-In this case, `req1`, `req2`, and `req3` will be executed in transaction, but `req4` and `req5` will be executed individually.
+In this case, `req1`, `req2`, and `req3` are executed in transaction, but `req4` and `req5` are executed individually.
 
 ```JavaScript
 var changeSet = [req1, req2, req3];
@@ -58,8 +58,8 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`requests`|Array of objects|Yes|An array of one of the following types:<br /><br />**Objects** where each object is an action, function, or CRUD request that you want to execute against the Web API endpoint. Each object exposes a [getMetadata method](execute.md#requestgetmetadata-method) that lets you define the metadata for the action, function, or CRUD request you want to execute. This is the same object that you pass in the [execute method](execute.md).<br /><br />**Change set** (an array of objects), where each object in the change set is as defined above. In this case, all the request objects specified in the change set will get executed in a transaction.<br /><br />See request examples in the [Syntax section](#syntax) for more information.|
-|`successCallback`|Function|No|A function to call when operation is executed successfully. An array of response objects are passed to the function. See [Return Value](#return-value)|
+|`requests`|Array of objects|Yes|An array of one of the following types:<br /><br />**Objects** where each object is an action, function, or CRUD request that you want to execute against the Web API endpoint. Each object exposes a [getMetadata method](execute.md#requestgetmetadata-method) that lets you define the metadata for the action, function, or CRUD request you want to execute. The [execute method](execute.md) accepts this type of parameter.<br /><br />**Change set** (an array of objects), where each object in the change set is as defined above. In this case, all the request objects specified in the change set are executed in a transaction.<br /><br />See request examples in the [Syntax section](#syntax) for more information.|
+|`successCallback`|Function|No|A function to call when operation is executed successfully. An array of response objects is passed to the function. See [Return Value](#return-value)|
 |`errorCallback`|Function|No|A function to call when the operation fails.|
 
 ## Return Value
