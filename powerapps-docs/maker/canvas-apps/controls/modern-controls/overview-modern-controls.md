@@ -33,7 +33,7 @@ With your [canvas app open for editing](../../edit-app.md):
 2. From the Preview tab, set the toggle for **Modern controls and themes** to **On**.
 
   > [!IMPORTANT]
-  > Comming soon - the setting to enable modern contorls will move to the **General** section instead of **Upcoming features**.
+  > Coming soon - the setting to enable modern contorls will move to the **General** section instead of **Upcoming features**.
 
 - To see list of all the modern controls, on the app authoring menu, select **Insert**. From the list of controls, select **Modern controls**.
 

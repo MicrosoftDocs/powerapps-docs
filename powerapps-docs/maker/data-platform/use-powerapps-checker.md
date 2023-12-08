@@ -4,7 +4,7 @@ description: Use the solution checker to validate your solution.
 author: Mattp123
 ms.component: cds
 ms.topic: article
-ms.date: 05/16/2023
+ms.date: 11/17/2023
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -111,10 +111,7 @@ You can run solution checker rules in your development environment to detect iss
 
 ## Best practice rules used by solution checker
 
-The following table lists the component type, rule description, severity, and category. Critical violations are blocked or warned when configured for solution checker enforcement with managed environments. More information: [Use solution checker in Managed Environments (preview)](/power-platform/admin/managed-environment-solution-checker)
-
-> [!IMPORTANT]
-> Solution import validation with managed environments is a preview feature.
+The following table lists the component type, rule description, severity, and category. Critical violations are blocked or warned when configured for solution checker enforcement with managed environments. More information: [Use solution checker in Managed Environments](/power-platform/admin/managed-environment-solution-checker)
 
 |Solution component  |Rule name  |Rule description  | Severity  | Category |
 |---------|---------|---------|---------|---------|
@@ -124,6 +121,9 @@ The following table lists the component type, rule description, severity, and ca
 |Plug-in or workflow activity   | [meta-remove-inactive](../../developer/model-driven-apps/best-practices/business-logic/remove-deactivated-disabled-configurations.md?client=PAChecker&error=meta-remove-inactive&source=featuredocs)    | Remove inactive configurations in Dataverse.    | Low | Maintainability |
 |Plug-in or workflow activity   | [meta-avoid-crm4-event](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=meta-avoid-crm4-event&source=featuredocs) | Don't use Microsoft Dynamics CRM 4.0 plug-in registration stage.    | Medium | Upgrade readiness |
 |Plug-in or workflow activity  | [meta-avoid-retrievemultiple-annotation](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=meta-avoid-retrievemultiple-annotation)  | Avoid registering a plugin on RetrieveMultiple of annotation.  | High  | Usage |
+|Plug-in or workflow activity  | [meta-license-sales-sdkmessages](/dynamics365/sales/license-checker-rules#meta-license-sales-sdkmessages)  |  Solution contains SDK messages and operations that require a valid Dynamics 365 license.   | Low | Licensing |
+|Model-driven app  | [meta-license-sales-customcontrols](/dynamics365/sales/license-checker-rules##meta-license-sales-customcontrols)  |  Solution contains custom controls that require a valid Dynamics 365 Sales license.   | Low | Licensing |
+|Model-driven app  | [meta-license-sales-entity-operations](/dynamics365/sales/license-checker-rules#meta-license-sales-entity-operations)  |  Solution contains entities with restricted SDK messages and operations that require a valid Dynamics 365 license.   | Low | Licensing |
 |Web Resources  | [use-async](./powerapps-checker/rules/web/use-async.md)  |  Interact with HTTP and HTTPS resources asynchronously.   | Critical | Performance |
 |Web Resources  | [avoid-modals](./powerapps-checker/rules/web/avoid-modals.md)  | Avoid using modal dialogs.   | High  | Supportability |
 |Web Resources  | [avoid-dom-form](./powerapps-checker/rules/web/avoid-dom-form.md)  | | High  | Supportability |
@@ -183,3 +183,4 @@ The following table lists the component type, rule description, severity, and ca
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+

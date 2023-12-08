@@ -1785,6 +1785,12 @@
     href: ../mobile/scan-QR-code.md
   - name: Switch to a different directory in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
+  - name: Optimize canvas app screens for devices
+    items:
+    - name: Optimize for devices overview (preview)
+      href: ../mobile/optimize-for-devices-overview.md
+    - name: Optimize for devices controls (preview)
+      href: ../mobile/optimize-for-devices-controls.md
   - name: Mobile offline for model-driven apps
     items:
     - name: Mobile offline overview
@@ -1815,6 +1821,8 @@
       href: ../mobile/canvas-mobile-offline-overview.md
     - name: Set up mobile offline for canvas apps (preview)
       href: ../mobile/canvas-mobile-offline-setup.md
+    - name: Configure files and images in offline canvas apps (preview)
+      href: ../mobile/files-images-offline-canvas-apps.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
   - name: Troubleshoot issues in the mobile app
@@ -1909,7 +1917,7 @@
            href: ./portals/use-content-editor.md
     - name: Update domain name
       href: ./portals/admin/update-portal-domain.md
-    - name: Customize the Azure AD B2C user interface
+    - name: Customize the Microsoft Entra B2C user interface
       href: ./portals/configure/azure-ad-b2c.md
     - name: Integrate Power BI
       items:
@@ -1951,9 +1959,10 @@
       href: ./data-platform/data-platform-import-export.md
     - name: "Configure tables to use Copilot"
       href: ./data-platform/table-settings-for-copilot.md  
-    - name: Long term data retention for tables
-      href: ./data-platform/data-retention-overview.md
+    - name: Long term data retention for tables (preview)
       items:
+      - name: Long term data retention overview
+        href: ./data-platform/data-retention-overview.md
       - name: Set a data retention policy
         href: ./data-platform/data-retention-set.md
       - name: Manage data retention policies
@@ -1973,7 +1982,7 @@
         href: ./data-platform/setup-virtual-table-relationships.md
       - name: Virtual tables known issues and troubleshooting
         href: ./data-platform/limits-tshoot-virtual-tables.md
-    - name: Create and edit elastic tables (preview)
+    - name: Create and edit elastic tables
       href: ./data-platform/create-edit-elastic-tables.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
@@ -2053,7 +2062,7 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
-    - name: Fx formula columns (preview)
+    - name: Fx formula columns
       href: ./data-platform/formula-columns.md
     - name: Set managed properties for columns
       href: ./data-platform/set-managed-properties-for-field.md
@@ -2298,8 +2307,10 @@
         href: ./data-platform/azure-synapse-link-choices-serverless.md
       - name: Export data in Delta Lake format
         href: ./data-platform/azure-synapse-link-delta-lake.md
-      - name: View Dataverse data in Microsoft Fabric (preview)
+      - name: View Dataverse data in Microsoft Fabric
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
+      - name: Build apps using Fabric data (preview)
+        href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
       - name: Ingest exported data with Azure Data Factory
@@ -2406,7 +2417,7 @@
           href: ../teams/add-app-notifications.md
         - name: Integrate with Planner
           href: ../teams/integrate-planner.md
-        - name: Integrate with Azure Active Directory
+        - name: Integrate with Microsoft Entra ID
           href: ../teams/integrate-azure-ad.md
         - name: Integrate with calls and meetings
           href: ../teams/integrate-calls-and-meetings.md
@@ -2543,6 +2554,8 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
+- name: Building AI plugins for discovery by Copilot (preview)
+  href: common/build-ai-plugin-for-copilot.md     
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
