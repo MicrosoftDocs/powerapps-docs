@@ -5,7 +5,6 @@ Keywords: environment variables, variables, model-driven app, configuration data
 author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
-ms.author: asheehi1
 ms.reviewer: matp
 ms.date: 12/06/2023
 ms.topic: overview
@@ -13,6 +12,7 @@ search.audienceType:
   - maker
 contributors:
   - shmcarth
+  - asheehi1
 ---
 # Environment variables overview
 
