@@ -16,7 +16,7 @@ contributors:
 ---
 # Optimize app or page load for peak performance
 
-One of the key factors that shape a user's perception of an app is how quickly it opens and becomes functional. Therefore, prioritizing this goal is crucial in building a performant app. To achieve this, there are three main areas that require attention:
+One of the key factors that shape a user's perception of an app is how quickly it opens and becomes functional. Therefore, prioritizing this goal is crucial in building a performant app. To achieve optimal app performance, there's three main areas that require attention:
 
 1. Load data fast
 2. Efficient calculations
@@ -26,21 +26,21 @@ Each of these areas has several common anti-patterns.
 
 ## Load data fast
 
-Follow the guidelines below to achieve fast data loading apps.
+Follow these guidelines to achieve fast data loading apps.
 
 ### Populating a collection instead of direct access as a data source
-Sometimes authors use ClearCollect() to copy data from a server to a collection in their app. They do this to work around delegation limitations in the source or because they plan to use collections in the app for other purposes. This can make the app faster when they use the collection later. But you should use ClearCollect() carefully. Using ClearCollect this way makes your app slower at the beginning or when you change pages. ClearCollect() must finish before you can see the data in a gallery or a table. This can take a long time if there's lots of data or if you use this approach for too many data sources. If the amount of data is small and if there's only one or two data sources, it might meet your performance needs.  
+Sometimes authors use ClearCollect() to copy data from a server to a collection in their app. This is done to work around delegation limitations in the source or because they plan to use collections in the app for other purposes. Although, using ClearCollect() can potentially increase the speed of the app when the collection is later utilized, it's important to exercise caution while implementing it. Using ClearCollect in this manner can lead to slower app loading times at the start or when navigating between pages. ClearCollect() must finish before you can see the data in a gallery or a table. It can take a long time if there's lots of data or if you use this approach for too many data sources. If the amount of data is small and if there's only one or two data sources, it might meet your performance needs.  
 
 ### Populating a collection with Power Automate
-This is a slight variation of the previous article. Sometimes authors also use Power Automate to populate their collection in Power Apps. There's approximately a .6s performance cost to instantiate Power Automate. Power Automate must be independently launched for each time it's called. It must allocate memory, get situated with the right components, and be ready to run.  As with the above advice, one or two calls to Power Automate might not be an issue (depending on your app) but poor performing apps will use this approach for all their data sources. The performance cost adds up and can quickly ruin the performance of your app. 
+This is a slight variation of the previous article. Sometimes authors also use Power Automate to populate their collection in Power Apps. There's approximately a 0.6-seconds performance cost to instantiate Power Automate. Power Automate must be independently launched each time it's called. It must allocate memory, get situated with the right components, and be ready to run.  As with the above advice, one or two calls to Power Automate might not be an issue (depending on your app) but poor performing apps use this approach for all their data sources. The performance cost adds up and can quickly ruin the performance of your app. 
 
 ### SaveData / Load data as a full offline scenario
-Some authors use ClearCollect() and SaveData() to store data for general purpose offline use. You can use SaveData() to save the collection to your device, and LoadData() to load it when you're offline. But this isn't a good practice if you have lots of data or complex data. It makes your app slower because it has to wait for ClearCollect() to finish before it can show the data. You should only use SaveData() and LoadData() for small and simple data scenarios such as preferences and short lists. A better way to work with large amounts of offline data is to use the Power Apps offline feature that works with Dataverse. This feature can handle larger and more complex data more efficiently. 
+Some authors use ClearCollect() and SaveData() to store data for general purpose offline use. You can use SaveData() to save the collection to your device, and LoadData() to load it when you're offline. However, this approach isn't recommended for instances where there's a large amount of data or if the data is complex. It makes your app slower because it has to wait for ClearCollect() to finish before it can show the data. You should only use SaveData() and LoadData() for small and simple data scenarios such as preferences and short lists. A better way to work with large amounts of offline data is to use the Power Apps offline feature that works with Dataverse. This feature can handle larger and more complex data more efficiently. 
 
 ## Efficient calculations
-Efficient calculations are a performance goal in its own right. For more information, see [Efficient calculations](efficient-calculations.md). However there are some common anti-patterns that can affect app load as well and so we discuss them here.  Below is a list of  optimizations you should consider that may affect app launch or page navigation.
+Efficient calculations are a performance goal in its own right. For more information, see [Efficient calculations](efficient-calculations.md). However there are some common anti-patterns that can affect app load as well and so we discuss them here. Below is a list of  optimizations you should consider that might affect app launch or page navigation.
 
-### App.Formulas
+### App Formulas
 Historically many authors have put a large number of calculations in OnStart. When you place an expression in OnStart, it forces Power Apps to run that expression precisely when the app starts and before everything else. However, with the introduction of App.Formulas you can let Power Apps decide when to run an expression.  PowerApps can run the formula 'Just-in-time' before it's needed. For more information, see [App formulas](/power-platform/power-fx/reference/object-app). Use App.Formulas to split up your formula into pieces that Power Apps can arrange more efficiently for execution. 
 
 ### Concurrent
@@ -62,7 +62,7 @@ Cross page references force the load of additional pages via references (for exa
 If you use App.StartScreen, ensure the first screen is a blank screen.  Due to current packaging of the app, the first logical screen is always bundled with the app init logic and will get initialized, regardless of whether we ever navigate to it.
 
 ### Split up the app
-If your app is large, consider partitioning it into smaller apps. If the functionality is separate enough in different parts of your app, this approach may work. In this scenario, you create an actual separate app that you launch with parameters that include context from the first / parent app.  
+If your app is large, consider partitioning it into smaller apps. If the functionality is separate enough in different parts of your app, this approach might work. In this scenario, you create an actual separate app that you launch with parameters that include context from the first / parent app.  
 
 
 
