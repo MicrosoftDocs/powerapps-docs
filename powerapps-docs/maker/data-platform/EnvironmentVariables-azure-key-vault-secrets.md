@@ -1,11 +1,10 @@
 ---
-title: "Use environment variables in solutions | MicrosoftDocs"
-description: "Use environment variables to migrate application configuration data in solutions."
-Keywords: environment variables, variables, model-driven app, configuration data
+title: "Use environment variables for Azure Key Vault secrets | MicrosoftDocs"
+description: "Use environment variables to reference Azure Key Vault secrets."
+Keywords: environment variables, variables, Azure Key Vault, secrets, model-driven app, configuration data
 author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
-ms.author: asheehi1
 ms.reviewer: matp
 ms.date: 12/06/2023
 ms.topic: overview
@@ -13,6 +12,7 @@ search.audienceType:
   - maker
 contributors:
   - shmcarth
+  - asheehi1
 ---
 # Use Azure Key Vault secrets
 
