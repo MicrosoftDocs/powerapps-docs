@@ -28,7 +28,25 @@ For example, you build a formula to determine how your app responds when users s
 
 You can use formulas for a wide variety of scenarios. For example, you can use your device's GPS, a map control, and a formula that uses **Location.Latitude** and **Location.Longitude** to display your current location. As you move, the map automatically tracks your location.
 
-This topic provides only an overview of working with formulas. Browse the [formula reference](formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use.
+This topic provides only an overview of working with formulas. Browse the [formula reference](formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use. 
+
+> [!IMPORTANT]
+> 
+> We're transitioning towards making the previously experimental Power Fx formula bar the default formula bar experience.  The updated formula bar has better intellisense and improved error highlighting and will allows you to write formulas more  quickly and accurately.
+>
+> The updated formula bar is now on by default for most new apps. For existing apps, you'll need to turn the Power Fx Formula Bar on manually. Follow the steps below to use the new formula bar:
+> - From within your app, select **Settings** > **Upcoming features** > **Experimental** > set the **Power Fx formula bar** toggle to **On**.
+>
+> Your feedback is critical as we make this updated formula bar the default experience for all apps. 
+
+### Use Power Fx formula bar
+
+The Power FX formula bar in Power Apps Studio offers a more intuitive and efficient way to write formulas for your apps. Here's how to use it:
+
+1. Open your app for editing in Power Apps Studio. 
+2. Select the formula bar at the top of the screen to open it.
+3. Start typing your formula in the bar. As you type, the formula bar will provide suggestions for functions that match your input.
+5. Continue typing your formula or select the suggestions until you're done. 
 
 ## Prerequisites
 
@@ -145,29 +163,6 @@ Initially, this view shows the most important properties.  To reveal all the pro
 As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here is the color code list in Power Apps.
 
 ![syntax highlighting.](./media/working-with-formulas/syntax-highlighting.png)
-
-## Power Fx formula bar (experimental)
-
-[This section is pre-release documentation and is subject to change.]
-
-> [!IMPORTANT]
-> - This is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
-Use the Power Fx formula bar in Power Apps Studio, with better intellisense and improved error highlighting. The Power FX Formula bar allows users to write formulas more quickly and accurately. [Power FX](/power-platform/power-fx/overview) is a low-code formula language that is designed to be more intuitive and easier to learn than the existing formula language. It is based on Microsoft Excel formulas, which are widely used and familiar to many users.
-
-To use the Power Fx formula bar (experimental), you need to turn it on for each app. Follow the steps below to use the new formula bar:
-
-- From within your app, select **Settings** > **Upcoming features** > **Experimental** > set the **Power Fx formula bar** toggle to **On**.
-
-### Use Power Fx formula bar
-
-The Power FX formula bar in Power Apps Studio offers a more intuitive and efficient way to write formulas for your apps. Here's how to use it:
-
-1. Open your app for editing in Power Apps Studio. 
-2. Select the formula bar at the top of the screen to open it.
-3. Start typing your formula in the bar. As you type, the formula bar will provide suggestions for functions that match your input.
-5. Continue typing your formula or select the suggestions until you're done. 
 
 ### See also
 
