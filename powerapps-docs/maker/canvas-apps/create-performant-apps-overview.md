@@ -14,7 +14,7 @@ contributors:
   - mduelae
   
 ---
-# Create performant apps - overview
+# Overview of creating performant apps
 
 ## How and why to use performant patterns and avoiding anti-patterns.
 ### App patterns and the Power App productivity gain. 
