@@ -1320,18 +1320,24 @@
           href: ./canvas-apps/component-properties.md
   - name: Performance and optimization
     items:
+    - name: Overview
+      href: ./canvas-apps/create-performant-apps-overview.md
     - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
-    - name: Common sources of slow performance
-      href: ./canvas-apps/slow-performance-sources.md
-    - name: Common performance issues and resolutions
-      href: ./canvas-apps/common-performance-issue-resolutions.md
-    - name: Performance tips and best practices
-      href: ./canvas-apps/performance-tips.md
-    - name: Canvas apps coding standards and guidelines
-      href: https://aka.ms/powerappscanvasguidelines
+    - name: Small data payload
+      href: ./canvas-apps/small-data-payloads.md
+    - name: Optimized query data patterns 
+      href: ./canvas-apps/optimized-query-data-patterns.md 
+    - name: Speed up app or page load
+      href: ./canvas-apps/fast-app-page-load.md
+    - name: Efficient calculations
+      href: ./canvas-apps/efficient-calculations.md
+    - name: Other performance considerations
+      href: ./canvas-apps/app-performance-considerations.md
     - name: Build large and complex apps
       href: ./canvas-apps/working-with-large-apps.md
+    - name: Canvas apps coding standards and guidelines
+      href: https://aka.ms/powerappscanvasguidelines
   - name: Important changes and deprecations
     href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
