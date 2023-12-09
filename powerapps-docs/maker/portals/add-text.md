@@ -16,7 +16,7 @@ contributors:
 
 # Add text box
 
-[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-deprecation](../../includes/cc-portals-studio-deprecation.md)]
 
 A text box component allows you to add text inside your portal page.
 
