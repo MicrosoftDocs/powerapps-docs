@@ -17,7 +17,7 @@ contributors:
 
 # Add form
 
-[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-deprecation](../../includes/cc-portals-studio-deprecation.md)]
 
 Form is a data-driven configuration that collects data in the portal without the need for a developer to surface the form in the portal. 
 
