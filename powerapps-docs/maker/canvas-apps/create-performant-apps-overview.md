@@ -16,12 +16,12 @@ contributors:
 ---
 # Overview of creating performant apps
 
-## How and why to use performant patterns and avoiding anti-patterns
+## How and why to use performant patterns and avoid anti-patterns
 
 Performant patterns should be used to enhance the efficiency of an app, while anti-patterns should be avoided as they can decrease the effectiveness of an app. It's important to understand how and why to use performant patterns and avoid anti-patterns in order to optimize the performance of your app.
 
 
-### App patterns and the Power App productivity gain
+### App patterns and Power Apps productivity gain
 
 Power Apps simplifies the development of enterprise-grade apps by utilizing established app patterns. These patterns outline the usage of Power Apps elements, such as data sources, collections, controls, Power Automate, and pages. Key performant capabilities are built into Power Apps, enabling low-code developers to quickly create functional enterprise-grade apps. Additionally, deployment and Power Apps administration tasks are straightforward. With Power Apps, you and your development team can be more productive, as there are many elements that no longer require your attention.
 
@@ -41,7 +41,7 @@ Each of the principles below links to a page with greater detail on the subject.
 1. [Optimize page loads](fast-app-page-load.md): Optimize your apps for app and page load speed. Minimize, delay, or eliminate actions that prevent fast app or page load.
 2. [Small data payloads](small-data-payloads.md): Keep the amount of data that is bulk retrieved small.
 3. [Optimize query data patterns](optimized-query-data-patterns.md): Do data mashups on the server, not in your Power Apps app.  
-4. [Efficient calculations.](efficient-calculations.md): Work with Power Fx - not against it.
+4. [Efficient calculations.](efficient-calculations.md): Work with Power Fx, not against it.
 
 These principles should cover most of what is necessary to make your app fast.  
 
