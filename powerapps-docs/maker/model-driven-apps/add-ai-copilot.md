@@ -84,6 +84,10 @@ Administrators must configure the Dataverse tables that Copilot will using for t
 > [!NOTE]
 > Questions and answers for enterprise data environments that have [customer managed key](/power-platform/admin/customer-managed-key) or [Customer Lockbox](/power-platform/admin/about-lockbox) won't use your data stored in Dataverse. You might get answers from Copilot, but they won't be based on your Dataverse database.
 
+## Disable Copilot in a model driven app
+Makers can can disable Copilot for their model drven app. In Studio, to to **Settings** and choose **Upcoming** section and set **Copilot Control** to **OFF**.
+
+
 ## Provide feedback in Copilot
 
 To provide feedback to help improve Copilot, app users can select the thumbs up or thumbs down icons included in each Copilot response. Feedback can be submitted for each Copilot response in the pane.
