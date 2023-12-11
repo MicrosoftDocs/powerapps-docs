@@ -76,12 +76,10 @@ More information: [Behavior settings](/power-platform/admin/settings-behavior#se
 
 ## Configure Dataverse tables and columns for Copilot
 
-Administrators must configure the Dataverse tables that Copilot will using for the responses. You must choose both the tables and the columns of importance for Copilot to search across to produce relevant, high quality data insights.
+Administrators must configure the Dataverse tables that Copilot will using for the responses. You must choose both the tables and the columns of importance for Copilot to search across to produce relevant, high quality data insights. More information: [Configure tables to use Copilot](../data-platform/table-settings-for-copilot.md)
 
 > [!IMPORTANT]
 > Not configuring standard and custom Dataverse tables for Copilot might result in poor quality of Copilot insights. Configure your Dataverse tables and columns of importantance to receive relevant, accurate Coplilot responses in model-driven apps.
-
-More information: [Configure tables to use Copilot](../data-platform/table-settings-for-copilot.md)
 
 > [!NOTE]
 > Questions and answers for enterprise data environments that have [customer managed key](/power-platform/admin/customer-managed-key) or [Customer Lockbox](/power-platform/admin/about-lockbox) won't use your data stored in Dataverse. You might get answers from Copilot, but they won't be based on your Dataverse database.
