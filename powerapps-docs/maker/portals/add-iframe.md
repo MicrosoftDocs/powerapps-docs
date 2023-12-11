@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/01/2022
+ms.date: 12/08/2023
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: kkendrick
@@ -17,7 +17,7 @@ contributors:
 
 # Add IFrame
 
-[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-deprecation](../../includes/cc-portals-studio-deprecation.md)]
 
 Add IFrame component to your portal page to embed a webpage from any other website. 
 
