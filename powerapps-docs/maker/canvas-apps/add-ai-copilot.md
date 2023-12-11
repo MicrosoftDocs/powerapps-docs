@@ -23,6 +23,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 > [!IMPORTANT]
 > - To use this capability your environment must be in the US region.
+> - You must allow data movement across regions for Generative AI features as a prerequisite for running Copilots in Power Apps. This step is especially important if your organization and your environment are in differnt regions. More information: [Enable copilots and generative AI features](https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
@@ -54,6 +55,9 @@ Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 Add the **Copilot (preview)** control to your canvas app enabling end users to gain insights about the data in their apps through the chat experience.
 
+> [!IMPORTANT]
+>  Make sure your browser language is set to US English (en-US) when you are in Power Apps Studio.
+
 With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 1. On the app authoring menu, select **Insert** and select **Copilot (preview)** to add this control.
@@ -69,9 +73,6 @@ With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
    > ![Select a data source.](media/copilot/copilot-3.png)
 
    Or, from the control **Properties** tab, select **Data source (Items)** and choose a Dataverse table for your data source.
-
-   > [!TIP]
-   > You can connect any Dataverse table in your environment as a data source for Copilot, regardless of whether the table is added to your canvas app or not.
 
 2. Select the specific **Fields** and/or **View** that the Copilot control answers questions for.
    
@@ -104,6 +105,8 @@ Admins can disable the option for apps users to provide feedback to Microsoft fr
 [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai) 
 
 [Add Copilot for app users in model-driven apps (preview)](../model-driven-apps/add-ai-copilot.md)
+
+[Enable copilots and generative AI features in Power Apps](https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions)
 
 
 
