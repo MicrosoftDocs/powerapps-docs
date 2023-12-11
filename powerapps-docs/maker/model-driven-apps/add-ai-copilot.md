@@ -84,8 +84,8 @@ Administrators must configure the Dataverse tables that Copilot will using for t
 > [!NOTE]
 > Questions and answers for enterprise data environments that have [customer managed key](/power-platform/admin/customer-managed-key) or [Customer Lockbox](/power-platform/admin/about-lockbox) won't use your data stored in Dataverse. You might get answers from Copilot, but they won't be based on your Dataverse database.
 
-## Disable Copilot in a model driven app
-Makers can can disable Copilot for their model drven app. In Studio, to to **Settings** and choose **Upcoming** section and set **Copilot Control** to **OFF**.
+## Disable Copilot for a model driven app
+Makers can can disable Copilot for their model drven app. In Studio, open your model app for **Edot** and click on **Settings** option in top menu. Choose **Upcoming** section in **Settings** screen, then set **Copilot Control** to **OFF** and **Save**.
 
    > [!div class="mx-imgBorder"]
    > ![Set Copilot control OFF in your model app](media/Turnoff_Copilot_model_apps.png)
