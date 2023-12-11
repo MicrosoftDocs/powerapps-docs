@@ -38,9 +38,9 @@ A canvas app goes through the following phases of execution before showing the i
 
 ## Data call flow in canvas apps
 
-Data calls from canvas apps send data sources by using connectors over the OData protocol. OData requests flow to back-end layers to reach out to the target data source and retrieve data for the client, or commit data to the data source.
+Data calls from canvas apps send data to tabular data sources by using connectors over the OData protocol.OData requests flow to back-end layers to reach out to the target data source and retrieve data for the client, or commit data to the data source. Action based connectors that enable APIs work in the same way. 
 
-Understanding how OData requests travel in canvas apps can help you to optimize your canvas app performance and your back-end data sources.
+Understanding how OData and API requests travel in canvas apps can help you to optimize your canvas app performance and your back-end data sources.
 
 In this section, you'll learn about how the data call flows in canvas apps with different data source types.
 
