@@ -28,30 +28,32 @@ For example, you build a formula to determine how your app responds when users s
 
 You can use formulas for a wide variety of scenarios. For example, you can use your device's GPS, a map control, and a formula that uses **Location.Latitude** and **Location.Longitude** to display your current location. As you move, the map automatically tracks your location.
 
-This topic provides only an overview of working with formulas. Browse the [formula reference](formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use. 
+This article provides only an overview of working with formulas. Browse the [formula reference](formula-reference.md) for more details and the complete list of functions, operators, and other building blocks you can use. 
 
 > [!IMPORTANT]
 > 
-> We're transitioning towards making the previously experimental Power Fx formula bar the default formula bar experience.  The updated formula bar has better intellisense and improved error highlighting and will allows you to write formulas more  quickly and accurately.
+> We're transitioning towards making the previously experimental Power Fx formula bar the default formula bar experience. The updated formula bar has better intellisense and improved error highlighting and lets you to write formulas quickly and accurately.
 >
-> The updated formula bar is now on by default for most new apps. For existing apps, you'll need to turn the Power Fx Formula Bar on manually. Follow the steps below to use the new formula bar:
-> - From within your app, select **Settings** > **Upcoming features** > **Experimental** > set the **Power Fx formula bar** toggle to **On**.
+> The updated formula bar is **ON** by default for new apps. For existing apps follow these steps to turn on the Power FX formula bar:
+> - Open our app in Power Apps Studio, select **Settings** > **Upcoming features** > **Experimental** > set the **Power Fx formula bar** toggle to **ON**.
 >
 > Your feedback is critical as we make this updated formula bar the default experience for all apps. 
 
-### Use Power Fx formula bar
 
-The Power FX formula bar in Power Apps Studio offers a more intuitive and efficient way to write formulas for your apps. Here's how to use it:
+## Prerequisites
+
+- [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
+- Learn how to [configure a control](add-configure-controls.md) in Power Apps.
+  
+## Use Power Fx formula bar
+
+The Power FX formula bar offers a more intuitive and efficient way to write formulas for your apps. Follow these steps to use the formula bar:
 
 1. Open your app for editing in Power Apps Studio. 
 2. Select the formula bar at the top of the screen to open it.
 3. Start typing your formula in the bar. As you type, the formula bar will provide suggestions for functions that match your input.
 5. Continue typing your formula or select the suggestions until you're done. 
 
-## Prerequisites
-
-* [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
-* Learn how to [configure a control](add-configure-controls.md) in Power Apps.
 
 ## Show a simple value
 
