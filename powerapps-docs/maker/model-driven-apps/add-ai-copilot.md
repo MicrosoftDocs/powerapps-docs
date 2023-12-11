@@ -24,8 +24,8 @@ Copilot for model-driven apps in Power Apps is a next-generation AI assistant fo
 > [!IMPORTANT]
 >
 > - This is a preview feature.
-> - To use this capability your environment must be in the US region and have it's languge set to en-US.
-> - Admins must enable data movement across regions for Generative AI features as a prerequisite for running Copilots in Power Apps. This step is especially important if your organization and your environment are in differnt regions. More information: [Enable copilots and generative AI features](https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions)
+> - To use this capability, your environment must be in the US region and have its language set to en-US.
+> - You must allow data movement across regions for Generative AI features as a prerequisite for running Copilots in Power Apps. This step is especially important if your organization and your environment are in differnt regions. More information: [Enable copilots and generative AI features](https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions)
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
