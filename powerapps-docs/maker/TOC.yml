@@ -1330,7 +1330,7 @@
       href: ./canvas-apps/optimized-query-data-patterns.md 
     - name: Speed up app or page load
       href: ./canvas-apps/fast-app-page-load.md
-    - name: Efficient calculations
+    - name: Fast calculations
       href: ./canvas-apps/efficient-calculations.md
     - name: Other performance considerations
       href: ./canvas-apps/app-performance-considerations.md
