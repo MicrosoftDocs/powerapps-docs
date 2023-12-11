@@ -1,6 +1,6 @@
 ---
 title: Efficient calculations in Power Apps  
-description: Efficient calculations in Power Apps  
+description: Efficient or fast calculations in Power Apps  
 author: lancedMicrosoft
 ms.subservice: canvas-developer
 ms.topic: article
@@ -14,7 +14,7 @@ contributors:
   - mduelae
   
 ---
-# Fast (efficient) calculations
+# Fast calculations
 
 Power Fx expressions are powerful and do many background calculations for you automatically. While Power Fx automates many things for you, it's possible to fine-tune your calculations so there as fast as possible. 
 
@@ -32,7 +32,7 @@ Use Dataverse thumbnail versions of images for galleries and tables. Dataverse t
 The use of App.formulas and named formulas can help with the speed of app load and page navigation because it allows Power Fx to decide when to evaluate a formula. That means it doesn't have to necessarily evaluate it in OnStart. In addition, named formulas can generally help speed as well. In particular if you have a long script, breaking it up into named formulas allow for more efficient calculations as Power Fx can schedule the work and it enables reuse. For more information, see [App formulas](/power-platform/power-fx/reference/object-app).
 
 ### Use Concurrent
-Use the [Concurrent](https://learn.microsoft.com/power-platform/power-fx/reference/function-concurrent.md) function to allow formulas to be executed at the same time. Carefully choose where concurrent is used. It can provide some modest speed  ups but if you're running items that depend on each other it can cause timing and throttling issues.  
+Use the [Concurrent](/power-platform/power-fx/reference/function-concurrent.md) function to allow formulas to be executed at the same time. Carefully choose where concurrent is used. It can provide some modest speed  ups but if you're running items that depend on each other it can cause timing and throttling issues.  
 
 ### Place ForAll calcs appropriately
 If you have an expression with ForAll and collect that looks like this:
