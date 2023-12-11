@@ -25,7 +25,7 @@ Copilot for model-driven apps in Power Apps is a next-generation AI assistant fo
 >
 > - This is a preview feature.
 > - To use this capability, your environment must be in the US region and have its language set to en-US.
-> - You must allow data movement across regions for Generative AI features as a prerequisite for running Copilots in Power Apps. This step is especially important if your organization and your environment are in differnt regions. More information: [Enable copilots and generative AI features](https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions)
+> - You must allow data movement across regions for Generative AI features as a prerequisite for running Copilots in Power Apps. This step is especially important if your organization and your environment are in differnt regions. More information: [Enable copilots and generative AI features](https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
@@ -76,7 +76,7 @@ More information: [Behavior settings](/power-platform/admin/settings-behavior#se
 
 ## Configure Dataverse tables and columns for Copilot
 
-Administrators must configure the Dataverse tables that Copilot will using for the responses. You must choose both the tables and the columns of importance for Copilot to search across to produce relevant, high quality data insights. More information: [Configure tables to use Copilot](../data-platform/table-settings-for-copilot.md)
+Administrators must configure the Dataverse tables that Copilot will using for the responses. You must choose both the tables and the columns of importance for Copilot to search across to produce relevant, high quality data insights. More information: [Configure tables to use Copilot](../data-platform/table-settings-for-copilot.md).
 
 > [!IMPORTANT]
 > Not configuring standard and custom Dataverse tables for Copilot might result in poor quality of Copilot insights. Configure your Dataverse tables and columns of importantance to receive relevant, accurate Coplilot responses in model-driven apps.
