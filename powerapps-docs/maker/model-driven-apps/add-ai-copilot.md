@@ -87,6 +87,8 @@ Administrators must configure the Dataverse tables that Copilot will using for t
 ## Disable Copilot in a model driven app
 Makers can can disable Copilot for their model drven app. In Studio, to to **Settings** and choose **Upcoming** section and set **Copilot Control** to **OFF**.
 
+   > [!div class="mx-imgBorder"]
+   > ![Set Copilot control OFF in your model app](media/Turnoff_Copilot_model_apps.png)
 
 ## Provide feedback in Copilot
 
