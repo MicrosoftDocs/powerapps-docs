@@ -17,7 +17,7 @@ contributors:
 
 # Use code editor
 
-[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-deprecation](../../includes/cc-portals-studio-deprecation.md)]
 
 To view the source of a component on the canvas, select the component, and then select the source code editor icon **&lt;/&gt;** in the footer.
 

@@ -1,8 +1,8 @@
 ---
 title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the retrieveMultipleRecords method.
-author: adrianorth
-ms.author: aorth
+author: lancedMicrosoft
+ms.author: lanced
 ms.date: 01/11/2023
 ms.reviewer: jdaly
 ms.topic: reference
