@@ -23,7 +23,7 @@ Performant patterns should be used to enhance the efficiency of an app, while an
 
 ### App patterns and Power Apps productivity gain
 
-Power Apps simplifies the development of enterprise-grade apps by utilizing established app patterns. These patterns outline the usage of Power Apps elements, such as data sources, collections, controls, Power Automate, and pages. Key performant capabilities are built into Power Apps, enabling low-code developers to quickly create functional enterprise-grade apps. Additionally, deployment and Power Apps administration tasks are straightforward. With Power Apps, you and your development team can be more productive, as there are many elements that no longer require your attention.
+Power Apps simplifies the development of enterprise-grade apps by utilizing established app patterns. Patterns are collections of Power Apps elements that work cohesively together.  These Power Apps elements include data sources, collections, controls, Power Automate, and pages. Key performant patterns are built into Power Apps as defaults, enabling low-code developers to quickly create functional enterprise-grade apps. Additionally, deployment and Power Apps administration tasks are straightforward. With Power Apps, you and your development team can be more productive, as there are many elements that no longer require your attention.
 
 ### Power Apps steers towards performant patterns
 
@@ -31,10 +31,10 @@ The default Power Apps behavior guides you towards well known performant pattern
 
 ### Falling into anti-patterns
 
-When you create an app on any development platform, there's a risk of creating an app that performs poorly due to anti-patterns. These patterns can cause slow loading times, slow transitions between pages, and difficulty updating, and retrieving data. Some common examples of anti-patterns include loading excessive amounts of data, transforming everything into collections, and overloading OnStart. These patterns are often adopted when attempting to work around perceived or real limitations in Power Apps. While we try to guide you towards the best patterns, it's still possible to unintentionally use a bad pattern, resulting in an app that performs poorly.
+When you create an app on any development platform, there's a risk of creating an app that performs poorly due to anti-patterns. These patterns can cause slow loading times, slow transitions between pages, and difficulty updating and retrieving data. Some common examples of anti-patterns include loading excessive amounts of data, transforming everything into collections, and overloading OnStart. These patterns are often adopted when attempting to work around perceived or real limitations in Power Apps. While we try to guide you towards the best patterns, it's still possible to unintentionally use a bad pattern, resulting in an app that performs poorly.
 
 ## Four key performance design principles
-Below are four key performance principles to consider while building your app. These principles aren't independent of each other so you'll find some performance suggestions repeated in different sections. To best understand these articles, it also is useful to understand the [Execution phases of a Power App](execution-phases-data-flow.md) article. If you have an existing app that doesn't perform well, use the principles below to examine your app.  
+Below are four key performance principles to consider while building your app. These principles aren't fully independent of each other and therefore you'll find some performance suggestions repeated in different sections. To best understand these articles, it also is useful to understand the [Execution phases of a Power App](execution-phases-data-flow.md) article. If you have an existing app that doesn't perform well, use the principles below to examine your app.  
 
 Each of the principles below links to a page with greater detail on the subject.
 

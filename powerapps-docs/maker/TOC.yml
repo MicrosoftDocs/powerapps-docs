@@ -1330,7 +1330,7 @@
       href: ./canvas-apps/optimized-query-data-patterns.md 
     - name: Speed up app or page load
       href: ./canvas-apps/fast-app-page-load.md
-    - name: Efficient calculations
+    - name: Fast calculations
       href: ./canvas-apps/efficient-calculations.md
     - name: Other performance considerations
       href: ./canvas-apps/app-performance-considerations.md
@@ -2156,7 +2156,15 @@
         - name: View component dependencies
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
-          href: ./data-platform/EnvironmentVariables.md
+          items:
+          - name: Environment variables overview
+            href: ./data-platform/EnvironmentVariables.md
+          - name: Use data source environment variables in canvas apps
+            href: ./data-platform/EnvironmentVariables-data-source-canvas-apps.md
+          - name: Use environment variables in Power Automate solution cloud flows
+            href: ./data-platform/EnvironmentVariables-power-automate.md
+          - name: Use Azure Key Vault secrets
+            href: ./data-platform/EnvironmentVariables-azure-key-vault-secrets.md
         - name: Use settings
           href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
