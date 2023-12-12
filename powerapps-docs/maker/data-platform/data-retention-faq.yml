@@ -69,7 +69,7 @@ sections:
 
    - question: Can the one Dataverse connector be used with Power BI for reporting long term retained data?
      answer: |
-        This isn't supported. However you can access live and retained data with Microsoft Fabric <link to this section> and build Power BI reports.
+        This isn't supported. However you can access live and retained data with Microsoft Fabric and build Power BI reports.
 
    - question: Can I move data from Dataverse long term store back to the Dataverse live (active) store?
      answer: |
