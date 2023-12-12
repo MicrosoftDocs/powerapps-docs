@@ -57,7 +57,7 @@ To get started with mobile offline, turn on the offline feature in your app and 
 
 *Offline-first* means that all the data users need when they're offline is copied to their mobile device. It requires network access to download the data initially, but after that, users work exclusively with the data stored locally on their device, even when they're online. Moving on and off the network doesn't affect the performance of the app because it's using local data. Power Apps monitors your app's network access. When it detects a connection, it automatically syncs any local changes to the server and downloads any updates from the server. The offline features handle conflict detection and minimize the use of system resources.
 
-When you turn on the offline capability in your app, the app always runs offline first, with or without an Internet connection. This functionality optimizes offline performance and creates a consistent experience for users as they change locations.
+When you turn on the offline capability in your app, the app always runs offline-first, with or without an Internet connection. This functionality optimizes offline performance and creates a consistent experience for users as they change locations.
 
 ## Why use offline for canvas apps instead of LoadData/SaveData?
 
