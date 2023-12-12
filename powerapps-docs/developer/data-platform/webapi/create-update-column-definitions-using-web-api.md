@@ -1071,7 +1071,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='
 
 The following example uses these properties to create an big integer column. 
   
-|[IntegerAttributeMetadata](xref:Microsoft.Dynamics.CRM.BigIntAttributeMetadata) properties|Values|  
+|[BigIntAttributeMetadata](xref:Microsoft.Dynamics.CRM.BigIntAttributeMetadata) properties|Values|  
 |---------------------------------|------------|  
 |`SchemaName`|`sample_BigInt`|  
 |`DisplayName`|Sample BigInt|  
