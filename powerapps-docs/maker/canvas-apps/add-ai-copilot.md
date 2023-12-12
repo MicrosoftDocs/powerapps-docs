@@ -23,7 +23,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 > [!IMPORTANT]
 > - To use this capability your environment must be in the US region.
-> - You need to allow data movement across regions for generative AI features as a prerequisite to use copilots in Power Apps. This step is important if your organization and your environment are in differnt regions. More information: [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
+> - You need to allow data movement across regions for generative AI features as a prerequisite to use copilots in Power Apps. This step is important if your organization and your environment are in different regions. More information: [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
@@ -47,16 +47,18 @@ Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 1. On the command bar, select **Settings** > **Upcoming features**.
 2. From the **Preview** tab, set the toggle for **Copilot component** to **On**.
-
+  
    > [!div class="mx-imgBorder"]
    > ![Turn on Copilot control.](media/copilot/copilot-1.png)
+
+   
+> [!IMPORTANT]
+>  Your browser language must be set to **English (United States)**.
 
 ## Step 3 - Add Copilot control to your canvas app
 
 Add the **Copilot (preview)** control to your canvas app enabling end users to gain insights about the data in their apps through the chat experience.
 
-> [!IMPORTANT]
->  Your browser language must be set to **English (United States)**.
 
 With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
