@@ -32,7 +32,16 @@ Use Dataverse thumbnail versions of images for galleries and tables. Dataverse t
 The use of App.formulas and named formulas can help with the speed of app load and page navigation because it allows Power Fx to decide when to evaluate a formula. That means it doesn't have to necessarily evaluate it in OnStart. In addition, named formulas can generally help speed as well. In particular if you have a long script, breaking it up into named formulas allow for more efficient calculations as Power Fx can schedule the work and it enables reuse. For more information, see [App formulas](/power-platform/power-fx/reference/object-app).
 
 ### Use Concurrent
-Use the [Concurrent](/power-platform/power-fx/reference/function-concurrent) function to allow formulas to be executed at the same time. Carefully choose where concurrent is used. It can provide some modest speed  ups but if you're running items that depend on each other it can cause timing and throttling issues.  
+Use the [Concurrent](functions/function-concurrent.md) function to allow formulas to be executed at the same time. Carefully choose where concurrent is used. It can provide some modest speed  ups but if you're running items that depend on each other it can cause timing and throttling issues.  
+
+### Defer big updates to a non-blocking UI step
+Large updates to a data source may take a while to complete. But users expect the UI to return control to them quickly.   Tasks may be either sequential (the update must finish before the user can take additional actions) or asynchronous (the update can finish separate of user actions.) 
+
+An example of a time-consuming synchronous task is confirming a seat at a concert.  For most time-consuming synchronous tasks like this, it’s common to put up a progress bar. This UI actually blocks the user but ensures that the task is complete before other UI elements are updated.  This approach may not work for your application.  Businesses normally handle longer sequential steps as an explicit business step.  You are approved to go the next step via a business process signal.  An example is an approval.  An approval may come quickly or may be delayed.  In the UI you can signal that the process is complete by enabling a button, show a message, send e-mail, or enable a part of the UI (e.g., a menu item / pivot ).  
+
+An example of an asynchronous task is the completion of an order.  A customer may update an order basket, work though their order and then place the order. But several updates have to happen before the customer may be given a confirmed ship date.  In this example, the Ship Date may not be something you can easily provide right away.  In the UI you can defer this part of the update to an e-mail that is sent to the customer later. 
+
+For synchronous tasks you will typically use the code in Power Apps for UI blocking tasks. For instance, the code waits until it gets a return value and then releases the progress bar. It is best to minimize these types of situations. But for tasks which use an explicit business step or asynchronous tasks it is common to use an external service to complete the task such as a Dataverse action, stored procedure, or a Power Automate flow.
 
 ### Place ForAll calcs appropriately
 If you have an expression with ForAll and collect that looks like this:
