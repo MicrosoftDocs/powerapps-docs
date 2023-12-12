@@ -47,16 +47,18 @@ Open your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
 1. On the command bar, select **Settings** > **Upcoming features**.
 2. From the **Preview** tab, set the toggle for **Copilot component** to **On**.
-
+  
    > [!div class="mx-imgBorder"]
    > ![Turn on Copilot control.](media/copilot/copilot-1.png)
+
+   
+> [!IMPORTANT]
+>  Your browser language must be set to **English (United States)**.
 
 ## Step 3 - Add Copilot control to your canvas app
 
 Add the **Copilot (preview)** control to your canvas app enabling end users to gain insights about the data in their apps through the chat experience.
 
-> [!IMPORTANT]
->  Your browser language must be set to **English (United States)**.
 
 With your [canvas app open for editing](edit-app.md) in Power Apps Studio:
 
