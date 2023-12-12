@@ -37,16 +37,18 @@ Environment variables can be reused across other apps and even different types o
 
 This option provides simplicity and ensures environment variables will always be used for data sources, such as SharePoint Online. However, some customers prefer to provide their own schema names and therefore should create them from solutions.
 
+> [!NOTE]
+> Pre-existing canvas apps will not automatically use data source environment variables. Remove the data source from the app and add them back using the above steps to upgrade these apps to use environment variables. 
+
 1. Edit or create a canvas app from your solution.
 1. Select **Settings** > **General** and enable the setting to **Automatically create environment variables when adding data sources**.
 1. Add a **New** data source for SharePoint online.
 1. Select a SharePoint **site**, one or more **lists**, and then **Connect**.
+
     > [!NOTE]
     > To prevent creation of duplicate environment variables, you'll be prompted to use the existing environment variable when duplicates are identified. You can clear the option to use the existing environment variable if creation of a duplicate is desired. 
-1. Select **Save**. 
 
-> [!NOTE]
-> Pre-existing canvas apps will not automatically use data source environment variables. Remove the data source from the app and add them back using the above steps to upgrade these apps to use environment variables. 
+1. Select **Save**. 
 
 ### See also
 
