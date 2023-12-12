@@ -35,7 +35,7 @@ This article provides only an overview of working with formulas. Browse the [for
 > We're transitioning towards making the previously experimental Power Fx formula bar the default formula bar experience. The updated formula bar has better intellisense and improved error highlighting and lets you to write formulas quickly and accurately.
 >
 > The updated formula bar is **ON** by default for new apps. For existing apps follow these steps to turn on the Power FX formula bar:
-> - Open our app in Power Apps Studio, select **Settings** > **Upcoming features** > **Experimental** > set the **Power Fx formula bar** toggle to **ON**.
+> - Open our app in Power Apps Studio, select **Settings** > **Upcoming features** > **Preview** > set the **Power Fx formula bar** toggle to **ON**.
 >
 > Your feedback is critical as we make this updated formula bar the default experience for all apps. 
 
