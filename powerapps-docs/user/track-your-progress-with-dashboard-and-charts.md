@@ -43,7 +43,7 @@ Legend:
 2. **System Dashboards**: Created by your administrator. By default, these dashboards are visible to all users.
 
 > [!NOTE]
-> When a personal dashboard is shared, the owner of the personal dashboard need to explicitly share any contained personal charts or personal views because the have separate permissions. 
+> When a personal dashboard is shared, the owner of the personal dashboard needs to explicitly share any contained personal charts or personal views because they have separate permissions. 
 
 ## Expand, refresh, and view rows
 
