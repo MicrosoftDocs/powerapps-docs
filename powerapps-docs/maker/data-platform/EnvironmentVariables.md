@@ -151,7 +151,8 @@ To remove the value, follow these steps:
 
 1. In the solution where the environment variable is located select the environment variable to display the properties.
 1. Under **Current Value**, select **...** > **Remove from this solution**.
-   :::image type="content" source="media/remove-value-env-var.png" alt-text="Remove the value from an environment variable":::
+
+    :::image type="content" source="media/remove-value-env-var.png" alt-text="Remove the value from an environment variable":::
 
 ### Can I use environment variables in custom connectors?
 
