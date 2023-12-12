@@ -30,7 +30,7 @@ To use an environment variable in a solution cloud flow:
 
 1. Select the desired environment variable.
 
-## Current limitations
+## Limitations
 
 - When environment variable values are changed directly within an environment instead of through an ALM operation like solution import, flows will continue using the previous value until the flow is either saved or turned off and turned on again.
 - When editing a cloud flow, the environment variables shown in the dynamic content selector are unfiltered, but will be filtered by data type in the future. 

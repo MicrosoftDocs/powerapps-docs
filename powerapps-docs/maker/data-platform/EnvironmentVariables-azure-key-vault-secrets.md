@@ -27,7 +27,9 @@ Environment variables referencing secrets aren't currently available from the dy
 
 To use Azure Key Vault secrets with Power Platform, the Azure subscription that has the vault must have the `PowerPlatform` resource provider registered and the user who creates the environment variable must have appropriate permissions to the Azure Key Vault resource.
 
-### Prerequisites
+> [!NOTE]
+> - We have recently changed the security role that we use to assert access permissions within Azure Key Vault. Previous instructions included assigning the Key Vault Reader role. If you have set up your key vault previously with the Key Vault Reader role, make sure that you add the Key Vault Secrets User role to ensure that your users and Dataverse will have sufficient permissions to retrieve the secrets.
+> - We recognize that our service is using the Azure role-based access control APIs to assess security role assignment even if you still have your key vault configured to use the vault access policy permission model. To simplify your configuration, we recommended that you switch your vault permission model to Azure role-based access control. You can do this in the Access configuration tab.
 
 1. Register the `Microsoft.PowerPlatform` resource provider in your Azure subscription.  Follow these steps to verify and configure: [Resource providers and resource types](/azure/azure-resource-manager/management/resource-providers-and-types)
 
@@ -47,15 +49,14 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
 
 1. If you haven't done so already, add a secret to your new vault. More information: [Azure Quickstart - Set and retrieve a secret from Key Vault using Azure portal](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
 
-> [!NOTE]
-> We have recently changed the security role that we use to assert access permissions within Azure Key Vault. Previous instructions included assigning the Key Vault Reader role. If you have set up your key vault previously with the Key Vault Reader role, make sure that you add the Key Vault Secrets User role to ensure that your users and Dataverse will have sufficient permissions to retrieve the secrets.
-
-> [!TIP]
-> We recognize that our service is using the Azure role-based access control APIs to assess security role assignment even if you still have your key vault configured to use the vault access policy permission model. To simplify your configuration, we recommended that you switch your vault permission model to Azure role-based access control. You can do this in the Access configuration tab.
-
 ## Create a new environment variable for the Key Vault secret
 
 Once Azure Key Vault is configured and you have a secret registered in your vault, you can now reference it within Power Apps using an environment variable.
+
+> [!NOTE]
+> - User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed: "This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'."
+> - Currently, Azure Key Vault is the only secret store that is supported with environment variables.
+> - The Azure Key Vault must be in the same tenant as your Power Platform subscription.
 
 1.	Sign on to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and in the **Solutions** area, open the unmanaged solution you're using for development.
 1. Select **New** > **More** > **Environment variable**.
@@ -70,15 +71,10 @@ Once Azure Key Vault is configured and you have a secret registered in your vaul
    - **Azure Key Vault Name**: The name of the key vault that contains the secret.
    - **Secret Name**: The name of the secret located in Azure Key Vault.
 
-   > [!TIP]
-   > The subscription ID, resource group name, and key vault name can be found on the Azure portal **Overview** page of the key vault. The secret name can be found on the key vault page in the Azure portal by selecting **Secrets** under **Settings**.
+        > [!TIP]
+        > The subscription ID, resource group name, and key vault name can be found on the Azure portal **Overview** page of the key vault. The secret name can be found on the key vault page in the Azure portal by selecting **Secrets** under **Settings**.
 
 1. Select **Save**.
-
-> [!NOTE]
-> - User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed: "This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'."
-> - Currently, Azure Key Vault is the only secret store that is supported with environment variables.
-> - The Azure Key Vault must be in the same tenant as your Power Platform subscription.
 
 ## Create a Power Automate flow to test the environment variable secret
 
@@ -114,9 +110,9 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 1. Select **Save** to create the flow.
 1. Manually run the flow to test it.
 
-Using the run history of the flow, the outputs can be verified.
+    Using the run history of the flow, the outputs can be verified.
 
-:::image type="content" source="media/env-var-secret7.png" alt-text="Flow output":::
+    :::image type="content" source="media/env-var-secret7.png" alt-text="Flow output":::
 
 ## Limitations
 
