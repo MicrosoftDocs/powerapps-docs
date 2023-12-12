@@ -6,7 +6,7 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 12/06/2023
+ms.date: 12/11/2023
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -29,13 +29,13 @@ Benefits of using environment variables:
 - Package and transport your customization and configuration together and manage them in a single location.
 - Package and transport secrets, such as credentials used by different components, separately from the components that use them.
 - One environment variable can be used across many different solution components - whether they're the same type of component or different. For example, a canvas app and a flow can use the same environment variable. When the value of the environment variable needs to change, you only need to change one value. 
-- Additionally, if you need to retire a data source in production environments, you can simply update the environment variable values with information for the new data source. The apps and flows don't require modification and will start using the new data source.
+- Additionally, if you need to retire a data source in production environments, you can update the environment variable values with information for the new data source. The apps and flows don't require modification and will start using the new data source.
 - Supported by [SolutionPackager](/power-platform/alm/solution-packager-tool) and [DevOps](/power-platform/alm/devops-build-tools) tools enable continuous integration and continuous delivery (CI/CD).
 - The environment variables can be unpacked and stored in source control. You may also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to.
 
 ## How do they work?
 
-Environment variables can be created and modified within the modern solution interface, automatically created when connecting to certain data sources in canvas apps, or by [using code](/powerapps/developer/data-platform/work-with-data). They can also be imported to an environment via solutions. Once environment variables are present in an environment, they can be used as inputs when authoring canvas apps, Power Automate flows, when developing plug-ins, as well as many other places such as adding a Power BI dashboard to a model-driven app. When these types of objects use environment variables, the values are then derived from the environment variables, and can be changed when solutions are imported to other environments. 
+Environment variables can be created and modified within the modern solution interface, automatically created when connecting to certain data sources in canvas apps, or by [using code](/powerapps/developer/data-platform/work-with-data). They can also be imported to an environment via solutions. Once environment variables are present in an environment, they can be used as inputs when authoring canvas apps, Power Automate flows, when developing plug-ins, and many other places such as adding a Power BI dashboard to a model-driven app. When these types of objects use environment variables, the values are then derived from the environment variables, and can be changed when solutions are imported to other environments. 
 
 ### Create an environment variable in a solution
 
@@ -49,13 +49,12 @@ Environment variables can be created and modified within the modern solution int
      >[!NOTE]
      > 
      > - If **Data source** is the selected type, you'll also need to select the **connector**, a valid **connection** for the selected connector, and the **parameter type**. However, the connection is not stored as part of the environment variable. The connection is only used for retrieving available parameter values such as the SharePoint sites you have access to, or the lists associated with a site. For certain parameters such as SharePoint lists, you'll also need to select a parent data source environment variable such as the SharePoint site. Once saved, these will be related in the database.
-     >
      > - If **Secret** is the selected type, additional information to set up and configure Azure Key Vault is needed to allow Power Platform to access the secret.
-   - **Current Value**. Also known as the value. This property is optional and is a part of the environment variable value table. When a value is present it will be used, even if a default value is also present. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into separate JSON files within the exported solution.zip file and can be edited offline. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
-   - **Default Value**. This column is part of the environment variable definition table and is not required. The default value is used if there's no current value. 
+   - **Current Value**. Also known as the value. This property is optional and is a part of the environment variable value table. When a value is present, it is used, even if a default value is also present. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into separate JSON files within the exported solution.zip file and can be edited offline. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
+   - **Default Value**. This column is part of the environment variable definition table and isn't required. The default value is used if there's no current value. 
   
 
-      Separation of default value and current value allows you to service the definition and the default value separately from the value. For example, an application publisher may list their offer on AppSource with a default value. Then optionally, the customer can provide a new value. When the application publisher publishes updates to the application, the value set by the customer won't be overwritten. 
+      Separation of default value and current value allows you to service the definition and the default value separately from the value. For example, an application publisher might list their offer on AppSource with a default value. Then optionally, the customer can provide a new value. When the application publisher publishes updates to the application, the value set by the customer isn't overwritten.
 
       > [!div class="mx-imgBorder"] 
       > ![New environment variable.](media/new-environment-variable.png)
@@ -67,16 +66,14 @@ Environment variables can be created and modified within the modern solution int
 
 The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` table.
 
-With an update on 12/7/2023, all environment variable values are visible when importing solutions (or when [using Pipelines to deploy](/power-platform/alm/run-pipeline)). Environment variables without a default value or value will be prompted for a value, but those otherwise will be pre-filled with a label beneath the textarea denoting the value's source: solution value, target environment value, or default value.
+Starting with an update on December 7th, 2023, all environment variable values are visible when importing solutions (or when [using Pipelines to deploy](/power-platform/alm/run-pipeline)). Environment variables without a default value or value will be prompted for a value, but those otherwise are pre-filled with a label beneath the text area denoting the value's source: solution value, target environment value, or default value.
 
   > [!div class="mx-imgBorder"] 
   > ![Environment variable visibility during solution import.](media/solution-import-environment-variables.png)
 
-  >[!NOTE]
-  >In some cases, for specific data source environment variable values, an **Access denied** warning may appear if the importing maker does not have access to the connection or source used for the environment variable. This is a non-blocking warning, but something to take note of depending on how you plan to use the environment variable in the target environment.  
-
-   >[!NOTE]
-   > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but will not get exported in the solution. This approach allows a new value to be provided while importing the solution into other environments. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
+> [!NOTE]
+> - In some cases, for specific data source environment variable values, an **Access denied** warning may appear if the importing maker does not have access to the connection or source used for the environment variable. This is a non-blocking warning, but something to take note of depending on how you plan to use the environment variable in the target environment.  
+> - You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but will not get exported in the solution. This approach allows a new value to be provided while importing the solution into other environments. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
 
 ## Notifications
 
@@ -89,20 +86,20 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 ## Naming
 
 Ensure environment variable names are unique so they can be referenced accurately. Duplicate environment variable display names make environment variables difficult to differentiate and use. Ensure environment variable names are unique so they can be referenced accurately.
-The names **$authentication** and **$connection** are specially reserved parameters for flows and should be avoided. Flow save will be blocked if environment variables with those names are used.
-If an environment variable is used in a flow and the display name of the environment variable is changed, then the designer will show both the old and new display name tokens to help with identification. When updating the flow, it's recommended to remove the environment variable reference and add it again.
+The names **$authentication** and **$connection** are specially reserved parameters for flows and should be avoided. Flow save is blocked if environment variables with those names are used.
+If an environment variable is used in a flow and the display name of the environment variable is changed, then the designer shows both the old and new display name tokens to help with identification. When updating the flow, we recommend to remove the environment variable reference and add it again.
 
 ## Current limitations
 
 - Validation of environment variable values happens within the user interfaces and within the components that use them, but not within Dataverse. Therefore ensure proper values are set if they're being modified through code. 
 - [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks) aren't yet available for managing data source environment variables. However, this doesn't block their usage within Microsoft provided tooling and within source control systems.
-- Interacting with environment variables via custom code requires an API call to fetch the values; there isn't a cache exposed for third party code to leverage. 
+- Interacting with environment variables via custom code requires an API call to fetch the values; there isn't a cache exposed for third party code to use. 
 
 ## Frequently asked questions
 
 ### Why can't I see the value for my environment variable?
 
-If the environment variable is in a managed solution, you will not be able to see the value unless you look inside of the **Default solution**. This behavior is by design, since the environment variable value is an unmanaged customization.
+If the environment variable is in a managed solution, you won't be able to see the value unless you look inside of the **Default solution**. This behavior is by design, since the environment variable value is an unmanaged customization.
 
 ### How can I view where environment variables are being used?
 
@@ -110,7 +107,7 @@ Either through selecting **Show dependencies** in the solution interface, while 
 
 ### Are data source environment variables the same as connections?
 
-No. Although they're related. A connection represents a credential or authentication required to interact with the connector. Data source environment variables store parameters that are required by one or more actions in the connector and these parameters often vary depending on the action. For example, a SharePoint Online connection doesn't store any information about sites, lists, or document libraries. Therefore calling the connector requires both a valid connection as well as some additional parameters. 
+No. Although they're related. A connection represents a credential or authentication required to interact with the connector. Data source environment variables store parameters that are required by one or more actions in the connector and these parameters often vary depending on the action. For example, a SharePoint Online connection doesn't store any information about sites, lists, or document libraries. Therefore calling the connector requires both a valid connection and some additional parameters. 
 
 ### Can data source environment variables be used with shared connections such as SQL Server with SQL authentication?
 
@@ -124,7 +121,7 @@ Yes. Solution packager accepts file name as input parameters so your pipeline ca
 
 ### What if someone inadvertently deletes a value?
 
-If not already prevented by dependency system, runtime will use the last known value as a fallback.
+If not already prevented by dependency system, runtime uses the last known value as a fallback.
 
 ### If a value is changed, when does the new value get used in canvas apps and cloud flows?
 
@@ -148,7 +145,7 @@ Yes if your configuration data isn't relational. Environment variables should be
 
 ### How do I remove a value from an environment variable?
 
-You might want to remove the value of an environment variable from your solution before exporting the solution. Then, the existing value will remain in your development environment, but won't be exported in the solution. This approach allows a new value to be provided while importing the solution into another environment.
+You might want to remove the value of an environment variable from your solution before exporting the solution. Then, the existing value remains in your development environment, but isn't exported in the solution. This approach allows a new value to be provided while importing the solution into another environment.
 
 To remove the value, follow these steps:
 
@@ -161,13 +158,16 @@ To remove the value, follow these steps:
 Yes. [Environment variable support in custom connectors](/connectors/custom-connectors/environment-variables)
 
 ### See also
-[Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) </BR>
+
+[Use data source environment variables in canvas apps](environmentvariables-data-source-canvas-apps.md) <br>
+[Use environment variables in Power Automate solution cloud flows](environmentvariables-power-automate.md) <br>
 [EnvironmentVariableDefinition table/entity reference](/powerapps/developer/data-platform/reference/entities/environmentvariabledefinition) </BR>
 [Web API samples](/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
 [Use data source environment variables in Canvas apps](EnvironmentVariables-data-source-canvas-apps.md)</BR>
 [Use environment variables in Power Automate solution cloud flows](EnvironmentVariables-power-automate.md)</BR>
 [Use Azure Key Vault secrets](EnvironmentVariables-azure-key-vault-secrets.md)</BR>
 [Environment variable support in custom connectors](/connectors/custom-connectors/environment-variables)</BR>
+[Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) 
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -2159,7 +2159,7 @@
           items:
           - name: Environment variables overview
             href: ./data-platform/EnvironmentVariables.md
-          - name: Use data source environment variables in Canvas apps
+          - name: Use data source environment variables in canvas apps
             href: ./data-platform/EnvironmentVariables-data-source-canvas-apps.md
           - name: Use environment variables in Power Automate solution cloud flows
             href: ./data-platform/EnvironmentVariables-power-automate.md

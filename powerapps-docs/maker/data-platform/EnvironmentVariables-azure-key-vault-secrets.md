@@ -6,7 +6,7 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 12/06/2023
+ms.date: 12/11/2023
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -14,7 +14,8 @@ contributors:
   - shmcarth
   - asheehi1
 ---
-# Use Azure Key Vault secrets
+
+# Use environment variables for Azure Key Vault secrets
 
 Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use within Power Automate flows and custom connectors. Notice that the secrets aren't available for use in other customizations or generally via the API.
 
@@ -32,17 +33,18 @@ To use Azure Key Vault secrets with Power Platform, the Azure subscription that 
 
    :::image type="content" source="media/env-var-secret1.png" alt-text="Register the Power Platform provider in Azure":::
 
-1. Create an Azure Key Vault vault. Consider using a separate vault for every Power Platform environment to minimize the threat in case of a breach. Consider configuring your key vault to use **Azure role-based access control** for the **Permission model**. Go to [Best practices for using Azure Key Vault](/azure/key-vault/general/best-practices#use-separate-key-vaults) for more information. For more information about how to create a key vault, go to [Quickstart - Create an Azure Key Vault with the Azure portal](/azure/key-vault/general/quick-create-portal)
+1. Create an Azure Key Vault vault. Consider using a separate vault for every Power Platform environment to minimize the threat in case of a breach. Consider configuring your key vault to use **Azure role-based access control** for the **Permission model**. More information: [Best practices for using Azure Key Vault](/azure/key-vault/general/best-practices#use-separate-key-vaults), [Quickstart - Create an Azure Key Vault with the Azure portal](/azure/key-vault/general/quick-create-portal)
+
 1.	Users who create or use environment variables of type secret must have permission to retrieve the secret contents. To grant a new user the ability to use the secret, select the **Access control (IAM)** area, select **Add**, and then select **Add role assignment** from the dropdown. More information: [Provide access to Key Vault keys, certificates, and secrets with an Azure role-based access control](/azure/key-vault/general/rbac-guide?tabs=azure-cli)
 
       :::image type="content" source="media/env-var-secret2.png" alt-text="View my access in Azure":::
 
 1. On the **Add role assignment** wizard, leave the default assignment type as **Job function roles** and continue to the **Role** tab. Locate the **Key Vault Secrets User role** and select it. Continue to the members tab and select the **Select members** link and locate the user in the side panel. When you have the user selected and shown on the members section, continue to the review and assign tab and complete the wizard.
 
-1. Azure Key Vault must have the **Key Vault Secrets User** role granted to the Dataverse service principal. If it doesn't exist for this vault, add a new access policy using the same method you previously used for the end user permission, only using the Dataverse application identity instead of the user. If you have multiple Dataverse service principals in your tenant, then we recommend that you select them all and save the role assignment. Once the role is assigned, review each Dataverse item listed in the role assignments list and select the Dataverse name to view the details. If the **Application ID** isn't **00000007-0000-0000-c000-000000000000** then select the identity and then select **Remove** to remove it from the list.
+1. Azure Key Vault must have the **Key Vault Secrets User** role granted to the Dataverse service principal. If it doesn't exist for this vault, add a new access policy using the same method you previously used for the end user permission, only using the Dataverse application identity instead of the user. If you have multiple Dataverse service principals in your tenant, then we recommend that you select them all and save the role assignment. Once the role is assigned, review each Dataverse item listed in the role assignments list and select the Dataverse name to view the details. If the **Application ID** isn't **00000007-0000-0000-c000-000000000000** then select the identity, and then select **Remove** to remove it from the list.
 
-1. If you have enabled [Azure Key Vault Firewall](/azure/key-vault/general/network-security) you will have to allow Power Platform IP addresses access to your key vault.  Note that Power Platform is not included in the "Trusted Services Only" option, so please reference [Power Platform URLs and IP address ranges](/power-platform/admin/online-requirements#ip-addresses-required) for current IP addresses used in the service.
-   
+1. If you have enabled [Azure Key Vault Firewall](/azure/key-vault/general/network-security) you'll have to allow Power Platform IP addresses access to your key vault.  Power Platform isn't included in the "Trusted Services Only" option. Hence, refer to [Power Platform URLs and IP address ranges](/power-platform/admin/online-requirements#ip-addresses-required) article for the current IP addresses used in the service.
+
 1. If you haven't done so already, add a secret to your new vault. More information: [Azure Quickstart - Set and retrieve a secret from Key Vault using Azure portal](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault)
 
 > [!NOTE]
@@ -74,10 +76,8 @@ Once Azure Key Vault is configured and you have a secret registered in your vaul
 1. Select **Save**.
 
 > [!NOTE]
-> - User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed: **This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'.**
-> 
+> - User access validation for the secret is performed in the background. If the user doesn’t have at least read permission, this validation error is displayed: "This variable didn't save properly. User is not authorized to read secrets from 'Azure Key Vault path'."
 > - Currently, Azure Key Vault is the only secret store that is supported with environment variables.
->
 > - The Azure Key Vault must be in the same tenant as your Power Platform subscription.
 
 ## Create a Power Automate flow to test the environment variable secret
@@ -96,16 +96,19 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 1. Select **...** > **Rename** to rename the action so that it can be more easily referenced in the next action. In the below screenshot, it has been renamed to **GetSecret**.
 
    :::image type="content" source="media/env-var-secret4.png" alt-text="Instant flow configuration for testing an environment variable secret":::
+
 1. Select **...** > **Settings** to display the **GetSecret** action settings.
 1. Enable the **Secure Outputs** option in the settings, and then select **Done**. This is to prevent the output of the action getting exposed in the flow run history.
 
    :::image type="content" source="media/env-var-secret5.png" alt-text="Enable secure outputs setting for the action":::
+
 1. Select **New step**, search and select the **HTTP** connector.
 1. Select the **Method** as **GET** and enter the **URI** for the web service. In this example, the fictitious web service *httpbin.org* is used.
 1. Select **Show advanced options**, select the **Authentication** as **Basic**, and then enter the **Username**.
 1. Select the **Password** field, and then on the **Dynamic content** tab under the flow step name above (*GetSecret* in this example) select **RetrieveEnvironmentVariableSecretValueResponse EnvironmentVariableSecretValue**, which is then added as an expression `outputs('GetSecretTest')?['body/EnvironmentVariableSecretValue']` or `body('GetSecretTest')['EnvironmentVariableSecretValue']`.
 
    :::image type="content" source="media/env-var-secret6.png" alt-text="Create a new step using the HTTP connector":::
+
 1. Select **...** > **Settings** to display the **HTTP** action settings.
 1. Enable the **Secure Inputs** and **Secure Outputs** options in the settings, and then select **Done**. Enabling these options prevents the input and outputs of the action getting exposed in the flow run history.
 1. Select **Save** to create the flow.
@@ -115,12 +118,14 @@ Using the run history of the flow, the outputs can be verified.
 
 :::image type="content" source="media/env-var-secret7.png" alt-text="Flow output":::
 
-## Current limitations
+## Limitations
 
 - Environment variables referencing Azure Key Vault secrets are currently limited for use with Power Automate flows and custom connectors.
 
 ### See also
-[Environment variables overview.](EnvironmentVariables.md)</BR>
 
+[Use data source environment variables in canvas apps](environmentvariables-data-source-canvas-apps.md) <br>
+[Use environment variables in Power Automate solution cloud flows](environmentvariables-power-automate.md) <br>
+[Environment variables overview.](EnvironmentVariables.md)</BR>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
