@@ -45,7 +45,8 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 >
 > - The storage account and Synapse workspace must be created in the same Microsoft Entra tenant as your Power Apps tenant.
 > - The storage account and Synapse workspace must be created in the same region as the Power Apps environment you will use the feature in and the same resource group.
-> - By default, you must enable **public network access** for Azure resources for both initial setup and delta sync. To set **Enabled from selected virtual networks and IP addresses** for linked storage account and workspace to grant access only from selected virtual networks and IP addresses or to use private endpoints, you must create a Synapse Link with managed identities.[Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md)
+> - To set **Enabled from selected virtual networks and IP addresses** for linked storage account and workspace to grant access only from selected virtual networks and IP addresses or to use private endpoints, you must create a Synapse Link with managed identities.[Use managed identities for Azure with your Azure data lake storage](./azure-synapse-link-msi.md) (without managed identities setup, you must enable **public network access** for Azure resources for both initial setup and delta sync.)
+> - Synapse workspaces featuring managed private endpoints, data exfiltration protection, or managed virtual networks will not be supported.
 > - You must have **Reader** role access to the resource group with the storage account and Synapse workspace.  
 > - When you add multiple users to the synapse workspace, they must have the **Synapse Administrator** role access within the Synapse Studio and the **Storage Blob Data Contributor** role on the Azure Data Lake Storage Gen2 account.
 > - The creation of Synapse Link profiles under a single DV environment is limited to a maximum of 10.
