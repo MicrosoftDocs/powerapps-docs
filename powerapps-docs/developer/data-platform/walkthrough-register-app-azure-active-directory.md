@@ -105,9 +105,9 @@ App registration is much simpler for the confidential client compared to the pub
 
 4. Select **Register** to create the application registration. The app registration overview page is shown.
 
-Next, add a client secret or certificate by selecting the **Certificates & secrets** link in the left navigation pane. After adding a client secret, save a copy of the secret value for later use. Do not navigate away from the client secret page until after you have copied the secret value (not the ID) as you'll not have access to the secret value again.
+5. Add a client secret by selecting the **Certificates & secrets** link in the left navigation pane. More information: [Add a client secret](/entra/identity-platform/quickstart-register-app#add-a-client-secret)
 
-More information: [Add a client secret](/entra/identity-platform/quickstart-register-app#add-a-client-secret)
+    After adding a client secret, save a copy of the secret value for later use. Do not navigate away from the client secret page until after you have copied the secret value (not the ID) as you'll not have access to the secret value again.
 
 ### Create a new app user
 
