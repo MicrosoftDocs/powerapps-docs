@@ -27,7 +27,7 @@ For an app to authenticate with Dataverse and gain access to business data, you 
 
 ### Public and confidential clients
 
-There are two types of clients that you can use to authenticate with Dataverse: public and confidential. These clients are represented by the <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder?displayProperty=nameWithType> and <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder?displayProperty=nameWithType> classes. You can instance these classes in your app directly, for example if your app is using the Dataverse Web API, or you can use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class. The `ServiceClient` class handles instantiation of these clients internally based on the configuration values in the passed [connection string](xrm-tooling/use-connection-strings-xrm-tooling-connect#connection-string-parameters).
+There are two types of clients that you can use to authenticate with Dataverse: public and confidential. These clients are represented by the <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder?displayProperty=nameWithType> and <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder?displayProperty=nameWithType> classes. You can instance these classes in your app directly, for example if your app is using the Dataverse Web API, or you can use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class. The `ServiceClient` class handles instantiation of these clients internally based on the configuration values in the passed [Connection string parameters](xrm-tooling/use-connection-strings-xrm-tooling-connect.md#connection-string-parameters).
 
 The confidential client is used with a client secret or certificate and is often referred to as Service Principle, Application User, or server-to-server (S2S) authentication.
 
@@ -52,7 +52,7 @@ To create an app registration for a username/password authentication flow, and f
     | Form input element | Description |
     | --- | --- |
     | Name | Enter a meaningful application name that is displayed to users. |
-    | Supported account types | Select the **Accounts in \<any|this> organizational directory** option. |
+    | Supported account types | Select the **Accounts in \<any or this> organizational directory** option. |
 
 4. Select **Register** to create the application registration. The app registration overview page is shown. Remain on that page.
 
@@ -84,9 +84,50 @@ You've completed the public client app registration in Microsoft Entra ID.
 
 ## Confidential client app registration
 
-To create an app registration for a client secret authentication flow, and for use with a confidential client or `ServiceClient` connection string, follow these steps.
+To create an app registration for a client secret or certificate authentication flow, and for use with a confidential client or `ServiceClient` connection string, follow the steps in the next two sections. You'll be creating an app registration and an app user in the Power Platform admin center.
+
+### Create the app registration
+
+App registration is much simpler for the confidential client compared to the public client. You need only provide an app registration name and set the tenant (account type) scope.
+
+1. Sign in to the Microsoft Azure [portal](https://portal.azure.com/#home) using an account with administrator permission. You must use an account in the same Microsoft 365 subscription (tenant) as you intend to register an app with. On the **Home** page of the portal under **Azure services**, select **Microsoft Entra ID**.
+
+    Alternately, you can also access the Azure portal through the Microsoft 365 [admin center](https://admin.microsoft.com/adminportal) by first choosing the **All admin centers** item in the left navigation pane, select **Microsoft Entra**, and then select **Go to Microsoft Entra ID**. Next, in the left navigation pane of the Microsoft Entra admin center, expand the  **Applications** node.
+  
+2. In the left navigation pane, select **App registrations** and then select **+ New registration** on the **App registrations** page.
+
+3. On the **App registrations** page, enter your application's registration information as described in the table.
+
+    | Form input element | Description |
+    | --- | --- |
+    | Name | Enter a meaningful application name that is displayed to users. |
+    | Supported account types | Select the **Accounts in \<any or this> organizational directory** option. |
+
+4. Select **Register** to create the application registration. The app registration overview page is shown.
+
+Next, add a client secret or certificate by selecting the **Certificates & secrets** link in the left navigation pane. After adding a client secret, save a copy of the secret value for later use. Do not navigate away from the client secret page until after you have copied the secret value (not the ID) as you'll not have access to the secret value again.
 
 More information: [Add a client secret](/entra/identity-platform/quickstart-register-app#add-a-client-secret)
+
+### Create a new app user
+
+Follow these steps to create an app user and bind it to your app registration.
+
+1. Log into the [Power Platform admin center](https://admin.powerplatform.microsoft.com) using an account in the same tenant as your app registration.
+
+2. Select **Environments** in the left navigation pane, and then select the target environment in the list to display the environment information.
+
+3. Select the **S2S** link on the right side of the page.
+
+4. Select **New app user**.
+
+5. On the **Create a new app user** slide-out, select **+ Add app**.
+
+6. Start typing the name of your app registration in the search field, and then select (check) it within the results list. Next, select **Add**.
+
+7. Back on the **Create a new app user** slide-out, select the target **Business unit** from the drop-down and add a security role for the app user (also known as a service principle).
+
+8. Select **Save** and then **Create**. You should see your new application user in the displayed list of application users.
 
 ## Use an app registration in code
 
