@@ -27,7 +27,7 @@ For an app to authenticate with Dataverse and gain access to business data, you 
 
 ### Public and confidential clients
 
-There are two types of clients that you can use to authenticate with Dataverse: public and confidential. These clients are represented by the <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder?displayProperty=nameWithType> and <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder?displayProperty=nameWithType> classes. You can instance these classes in your app directly, for example if your app is using the Dataverse Web API, or you can use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class. The `ServiceClient` class handles instantiation of these clients internally based on the configuration values in the passed [Connection string parameters](xrm-tooling/use-connection-strings-xrm-tooling-connect.md#connection-string-parameters).
+There are two types of clients that you can use to authenticate with Dataverse: public and confidential. These clients are represented by the <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder?displayProperty=nameWithType> and <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder?displayProperty=nameWithType> classes. You can instance these classes in your app directly, for example if your app is using the Dataverse Web API, or you can use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class. The `ServiceClient` class handles instantiation of these clients internally based on the configuration values in the passed [connection string parameters](xrm-tooling/use-connection-strings-xrm-tooling-connect.md#connection-string-parameters).
 
 The confidential client is used with a client secret or certificate and is often referred to as Service Principle, Application User, or server-to-server (S2S) authentication.
 
@@ -84,7 +84,7 @@ You've completed the public client app registration in Microsoft Entra ID.
 
 ## Confidential client app registration
 
-To create an app registration for a client secret or certificate authentication flow, and for use with a confidential client or `ServiceClient` connection string, follow the steps in the next two sections. You'll be creating an app registration and an app user in the Power Platform admin center.
+To create an app registration for a client secret or certificate authentication flow, and for use with a confidential client or `ServiceClient` connection string, follow the steps in the next two sections. You'll be creating a Microsoft Entra ID app registration and a new app user in the Power Platform admin center.
 
 ### Create the app registration
 
