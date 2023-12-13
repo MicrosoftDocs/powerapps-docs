@@ -110,7 +110,7 @@ bar.
 ### Prerequisites
 
 1. You must have an existing Azure Synapse Link for Dataverse delta lake profile running with a Synapse Spark version 3.1.
-2. You must create a new Synapse Spark pool with Spark version 3.3, using the same or higher nodes hardware configuration within the same Synapse workspace. For information about how to create a Spark Pool, go to [Create new Apache Spark pool](https://learn.microsoft.com/en-us/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool). This Spark pool should be created independent of the current 3.1 pool.
+2. You must create a new Synapse Spark pool with Spark version 3.3, using the same or higher nodes hardware configuration within the same Synapse workspace. For information about how to create a Spark Pool, go to [Create new Apache Spark pool](/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal#create-new-apache-spark-pool). This Spark pool should be created independent of the current 3.1 pool.
 
 ### In-place upgrade to Spark 3.3:
 
