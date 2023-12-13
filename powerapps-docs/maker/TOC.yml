@@ -2165,6 +2165,8 @@
             href: ./data-platform/EnvironmentVariables-power-automate.md
           - name: Use Azure Key Vault secrets
             href: ./data-platform/EnvironmentVariables-azure-key-vault-secrets.md
+          - name: Environment variables FAQ
+            href: ./data-platform/environment-variables-faq.md
         - name: Use settings
           href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
