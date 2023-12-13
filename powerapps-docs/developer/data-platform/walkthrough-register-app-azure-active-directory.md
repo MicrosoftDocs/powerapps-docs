@@ -27,7 +27,7 @@ For an app to authenticate with Dataverse and gain access to business data, you 
 
 ### Public and confidential clients
 
-There are two types of clients that you can use to authenticate with Dataverse: public and confidential. These clients are represented by the <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder?displayProperty=nameWithType> and <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder?displayProperty=nameWithType> classes. You can instance these classes in your app directly, for example if your app is using the Dataverse Web API, or you can use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class. The `ServiceClient` class handles instantiation of these clients internally based on the configuration values in the passed [connection string parameters](xrm-tooling/use-connection-strings-xrm-tooling-connect.md#connection-string-parameters).
+There are two types of clients that you can use to authenticate with Dataverse: public and confidential. These clients are represented by the <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder> and <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder> classes. You can instance these classes in your app directly, for example if your app is using the Dataverse Web API, or you can use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class. The `ServiceClient` class handles instantiation of these clients internally based on the configuration values in the passed [connection string parameters](xrm-tooling/use-connection-strings-xrm-tooling-connect.md#connection-string-parameters).
 
 The confidential client is used with a client secret or certificate and is often referred to as Service Principle, Application User, or server-to-server (S2S) authentication.
 
@@ -113,7 +113,7 @@ App registration is much simpler for the confidential client compared to the pub
 
 Follow these steps to create an app user and bind it to your app registration.
 
-1. Log into the [Power Platform admin center](https://admin.powerplatform.microsoft.com) using an account in the same tenant as your app registration.
+1. Log into the Power Platform [admin center](https://admin.powerplatform.microsoft.com) using an account in the same tenant as your app registration.
 
 2. Select **Environments** in the left navigation pane, and then select the target environment in the list to display the environment information.
 
@@ -132,6 +132,8 @@ Follow these steps to create an app user and bind it to your app registration.
 ## Use an app registration in code
 
 To view code that uses an app registration, see the [Get Started](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/GetStarted#get-started-using-the-dataverse-sdk-for-net) SDK samples, and the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/QuickStart) Web API sample.
+
+The sample code contains example public and confidential client connection strings for use with the `ServiceClient` class.
 
 ### See also
 
