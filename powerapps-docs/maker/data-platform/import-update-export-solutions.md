@@ -2,7 +2,7 @@
 title: "Import solutions | MicrosoftDocs"
 description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
-ms.date: 07/21/2023
+ms.date: 12/14/2023
 ms.reviewer: ""
 ms.topic: "article"
 author: "Mattp123"
@@ -63,6 +63,13 @@ When you download the log file, you'll find an XML file that you can open using 
 ## Troubleshooting solution import
 
 For known issues and information about how to troubleshoot working with solutions, go to [Manage apps and solutions](/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/unmanaged-active-layer-created-after-solution-import) in the Power Apps Troubleshooting documentation.
+
+## Importing apps that use an on-premises data gateway ID
+
+Power Apps apps that use an on-premises data gateway ID have the following requirements:
+
+- The connection to the gateway must be a shared connection.
+- The connections must be removed and then added back with the correct gateway ID after solution import into the target environment.
 
 ### See also
 
