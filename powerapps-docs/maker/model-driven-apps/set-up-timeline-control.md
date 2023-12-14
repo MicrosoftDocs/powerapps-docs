@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 10/05/2023
+ms.date: 12/14/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -494,7 +494,7 @@ Go to your timeline configuration in [make.powerapps.com](https://make.powerapps
 
 ## Configure mentions in notes and posts on timeline
 
-To enable mentions in Notes and Posts, please follow the instructions provided in the following documentation: [Use @mention for collaborating with your team using Notes - Power Apps | Microsoft Learn](/power-apps/user/use-@mentions)
+To enable mentions in notes and posts, follow the instructions provided in this article: [Use @mention for collaborating with your team using notes](/power-apps/user/use-@mentions)
 
 > [!IMPORTANT]
 > The mentions feature doesn't work with Power Platform environments that were created with the **Enable Dynamics 365 apps** option set to **No**. For more information about this option, go to [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
