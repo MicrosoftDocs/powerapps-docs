@@ -66,7 +66,7 @@ For known issues and information about how to troubleshoot working with solution
 
 ## Importing apps that use an on-premises data gateway ID
 
-Power Apps apps that use an on-premises data gateway ID have the following requirements:
+When you import a Power Apps app that uses an on-premises data gateway ID, note the following requirements:
 
 - The connection to the gateway must be a shared connection.
 - The connections must be removed and then added back with the correct gateway ID after solution import into the target environment.
