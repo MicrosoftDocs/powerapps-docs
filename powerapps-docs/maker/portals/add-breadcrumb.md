@@ -17,7 +17,7 @@ contributors:
 
 # Add breadcrumb
 
-[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-deprecation](../../includes/cc-portals-studio-deprecation.md)]
 
 Breadcrumb shows the links to pages in the hierarchy of the current page. This hierarchy allows users to follow through the trail up to the root page.
 
