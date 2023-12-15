@@ -2,7 +2,7 @@
 title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
-ms.date: 10/16/2023
+ms.date: 12/12/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: ritesp # GitHub ID
@@ -31,7 +31,7 @@ OAuth requires an identity provider for authentication. For Dataverse, the ident
 
 When you connect using OAuth, you must first register an application in your Microsoft Entra ID tenant. How you should register your app depends on the type of app you want to make.
 
-In all cases, start with basic steps to register an app described in the article: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). For Dataverse specific instructions see [Walkthrough: Register an app with Microsoft Entra ID > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
+In all cases, start with basic steps to register an app described in the article: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). For Dataverse specific instructions see [Walkthrough: Register an app with Microsoft Entra ID](walkthrough-register-app-azure-active-directory.md).
 
 The decisions you need to make in this step mostly depend on the Application Type choice (see below).
 
@@ -52,9 +52,7 @@ When you select **Native**, you must provide a Redirect URI. This URL is a uniqu
 
 If your app is a client that allows the authenticated user to perform operations, you must configure the application to have the Access Dynamics 365 as organization users delegated permission.
 
-For specific steps to set permissions, see [Walkthrough: Register an app with Microsoft Entra ID > Apply Permissions](walkthrough-register-app-azure-active-directory.md).
-
-<!-- TODO Verify this -->
+For specific steps to set permissions, see [Register an app with Microsoft Entra ID](walkthrough-register-app-azure-active-directory.md).
 
 If your app uses Server-to-Server (S2S) authentication, this step isn't required. That configuration requires a specific system user and the operations are performed by that user account rather than any user that must be authenticated.
 
