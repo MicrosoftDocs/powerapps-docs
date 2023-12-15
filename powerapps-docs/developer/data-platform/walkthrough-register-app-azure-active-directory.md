@@ -2,7 +2,7 @@
 title: "Tutorial: Register an app with Microsoft Entra ID (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to register an application with Microsoft Entra ID for authentication with Microsoft Dataverse web services."
 keywords: ""
-ms.date: 12/05/2023
+ms.date: 12/15/2023
 ms.topic: article
 ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
@@ -29,7 +29,8 @@ For an app to authenticate with Dataverse and gain access to business data, you 
 
 There are two types of clients that you can use to authenticate with Dataverse: public and confidential. These clients are represented by the <xref:Microsoft.Identity.Client.PublicClientApplicationBuilder> and <xref:Microsoft.Identity.Client.ConfidentialClientApplicationBuilder> classes. You can instance these classes in your app directly, for example if your app is using the Dataverse Web API, or you can use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class. The `ServiceClient` class handles instantiation of these clients internally based on the configuration values in the passed [connection string parameters](xrm-tooling/use-connection-strings-xrm-tooling-connect.md#connection-string-parameters).
 
-The confidential client is used with a client secret or certificate and is often referred to as Service Principle, Application User, or server-to-server (S2S) authentication.
+> [!NOTE]
+> The confidential client is used with a client secret or certificate and is often referred to as Service Principle, Application User, or server-to-server (S2S) authentication.
 
 ## Prerequisites  
 
@@ -107,7 +108,8 @@ App registration is much simpler for the confidential client compared to the pub
 
 5. Add a client secret by selecting the **Certificates & secrets** link in the left navigation pane. More information: [Add a client secret](/entra/identity-platform/quickstart-register-app#add-a-client-secret)
 
-    After adding a client secret, save a copy of the secret value for later use. Do not navigate away from the client secret page until after you have copied the secret value (not the ID) as you'll not have access to the secret value again.
+> [!IMPORTANT]
+> After adding a client secret, save a copy of the secret value for later use. Do not navigate away from the client secret page until after you have copied the secret value (not the ID) as you'll not have access to the secret value again.
 
 ### Create a new app user
 
