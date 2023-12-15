@@ -1,25 +1,19 @@
 ---
-title: Create and edit elastic tables (preview)
+title: Create and edit elastic tables
 description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
-ms.date: 12/01/2023
+ms.date: 12/07/2023
 author: pnghub
 ms.author: gned
 ms.reviewer: matp
 ms.topic: how-to
 ms.subservice: dataverse-maker
 ---
-# Create and edit elastic tables (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create and edit elastic tables
 
 An elastic table is a table managed by Microsoft Dataverse. Elastic tables come with the same familiar user experience and API that are offered with standard tables. They share many aspects and options with standard tables, but come with their own unique features and capabilities that are powered by Azure Cosmos DB.
 
 As with standard tables, elastic tables are included with your Dataverse database capacity use.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Watch this video that to learn about elastic tables.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15oAi ]
@@ -58,7 +52,7 @@ The choice of table should be based on the specific needs of your application. A
 
 As your business data grows, elastic tables provide unlimited auto scalability based on your application workload, both for storage size and throughput, such as the number of records created, updated, or deleted in a given timeframe.
 
-If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request APIs, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits. More information: [Developer guide: Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md) and [Optimize performance for bulk operations](/power-apps/developer/data-platform/optimize-performance-create-update)
+If your business scenario requires very large volume of data writes, application makers can make use of Dataverse multiple request APIs, such as `CreateMultiple`, `UpdateMultiple`, and `DeleteMultiple`, to achieve more throughput within Dataverse throttling limits. More information: [Developer guide: Bulk Operation messages](../../developer/data-platform/bulk-operations.md) and [Optimize performance for bulk operations](/power-apps/developer/data-platform/optimize-performance-create-update)
 
 ### Automatic removal of data
 
@@ -66,7 +60,8 @@ Time to live (TTL) policies ensure that you're always working with the most up-t
 
 ### Flexible schema with JSON columns
 
-Elastic tables enable you to store and query data with varying structures, without the need for predefined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. More information: [Developer guide: Query JSON columns in elastic tables (Preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
+Elastic tables enable you to store and query data with varying structures, without the need for predefined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. More information: [Developer guide: Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
+Elastic tables enable you to store and query data with varying structures, without the need for predefined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. More information: [Developer guide: Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
 
 ## Considerations when you use elastic tables  
 
@@ -148,6 +143,8 @@ More information about Tables: [Advanced options](create-edit-entities-portal.md
 ## Known issues
 
 - When [time to live (TTL)](#automatic-removal-of-data) is used on a row, the row gets deleted from the elastic table when TTL expires. If it's synchronized to a data lake using [Azure Synapse Link for Dataverse](export-to-data-lake.md) before TTL expiry, it won't be deleted from the data lake.
+- Point in time restore doesn't restore “updated” records as updates aren't backed up. Only created and deleted records are restored.
+- If a specific column in an elastic table is deleted, the columns value isn't removed from the table rows if it has data. Before deleting a specific column, delete the data from all rows for the column.
 
 ## High volume elastic tables and managing Dataverse API throttling limits
 
@@ -157,12 +154,12 @@ Use [bulk operation messages](../../developer/data-platform/bulk-operations.md).
 
 Elastic tables have different behaviors and capabilities than standard tables when developers use them with Dataverse APIs. The following articles for developers describe these differences:
 
-- [For developers: Elastic tables (preview)](../../developer/data-platform/elastic-tables.md)
-- [Create elastic tables using code (preview)](../../developer/data-platform/create-elastic-tables.md)
-- [Use elastic tables using code (preview)](../../developer/data-platform/use-elastic-tables.md)
-- [Query JSON columns in elastic tables (preview)](../../developer/data-platform/query-json-columns-elastic-tables.md)
+- [Elastic tables](../../developer/data-platform/elastic-tables.md)
+- [Create elastic tables using code](../../developer/data-platform/create-elastic-tables.md)
+- [Use elastic tables using code](../../developer/data-platform/use-elastic-tables.md)
+- [Query JSON columns in elastic tables](../../developer/data-platform/query-json-columns-elastic-tables.md)
 - [Bulk Operation messages (preview)](../../developer/data-platform/bulk-operations.md)
-- [Elastic table sample code (preview)](../../developer/data-platform/elastic-table-samples.md)
+- [Elastic table sample code](../../developer/data-platform/elastic-table-samples.md)
 - [Send parallel requests](../../developer/data-platform/send-parallel-requests.md)
 - [Service protection API limits](../../developer/data-platform/api-limits.md)
 
