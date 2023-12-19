@@ -82,6 +82,9 @@ Part of the name of any web resource you create is the solution publisher prefix
 
 1. Select the web resource from the list and then select **Add**. Alternatively, select **New web resource** to create the web resource you want. More information: [Web resource properties for model-driven app forms](web-resource-properties-legacy.md)
 
+> [!NOTE]
+> You can’t add a web resource to a form header or footer.
+
 ## Add a web resource to an app (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
