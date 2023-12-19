@@ -44,8 +44,6 @@ You can preview component library components using the screens inside the librar
 
 You can create a new component library or edit an existing component library from the same interface. Go to [Power Apps](https://make.powerapps.com) > select **More** from left navigation > select **Discover all** > select **Component libraries** from the **App enhancements** section. You can also pin **Component libraries** option to your Power Apps interface. More information: [Left navigation in Power Apps](intro-maker-portal.md#1--left-navigation-pane)
 
-![Create or edit component library.](./media/component-library/create-edit-component-library.png "Create or edit component library")
-
 ## Create an example component library
 
 The steps to create components inside a component library are the same as creating components inside an app. You'll create a component library and then reuse the steps for creating components from [components overview example](create-component.md#create-an-example-component). Then you'll use the component library to provide the reusable components in a new app.
