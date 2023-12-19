@@ -38,16 +38,17 @@ As the volume of data held in the app's database continues to grow it becomes mo
 
 ## Reporting infrastructure
 
-In an environment, the reporting infrastructure is shared and separate from the database. In this architecture, although customers share the resources required to run the report, each report runs against the customers’ individual database instance. Additionally, users can run as many reports as they need whenever they want to run them to meet business goals. 
+In an environment, the reporting infrastructure is shared and separate from the database. In this architecture, although customers share the resources required to run the report, each report runs against the customers’ individual database instance. 
   
 The reporting capabilities built in to Microsoft Dataverse are designed to let users run reports on datasets that span shorter periods of time. Considering this, note the following fixed settings:  
   
-- Reports and queries can execute for up to five minutes. When the maximum period is reached, the report will time out and a message is returned to the user. Within the five-minute duration, reports and queries are allowed to span large datasets that are beyond 50,000 rows, which provide significant flexibility to satisfy most operational reporting needs.  
+- Reports and queries can execute for up to five minutes. When the maximum period is reached, the report will time out and a message is returned to the user. Within the five-minute duration, reports and queries are allowed to span large datasets that are beyond 50,000 rows, which provide significant flexibility to satisfy most operational reporting needs. 
   
-- To improve query response, we recommend that detailed reports minimize the display of large numbers of rows. To do this, apply suitable filtering to reduce the number of rows that are returned. When you create aggregated or summarized reports, queries should push the aggregation to the query rather than fetch detailed rows to perform aggregation in the report.  This can be done by using Fetch XML aggregation. <!-- More information: [Use FetchXML aggregation](../developer/use-fetchxml-aggregation.md)  -->
+- To improve query response, we recommend that detailed reports minimize the display of large numbers of rows. To do this, apply suitable filtering to reduce the number of rows that are returned. When you create aggregated or summarized reports, queries should push the aggregation to the query rather than fetch detailed rows to perform aggregation in the report.  For more information see: [Fetch XML aggregation](../../developer/data-platform/use-fetchxml-aggregation.md) and [report pre-filtering](/dynamics365/customerengagement/on-premises/analytics/improve-report-performance-by-using-filters).
+
+- The Report Viewer page is subject to the platform [API Limits](../../developer/data-platform/api-limits.md). Multiple executions of a long-running report may result in an error, and the user can wait few minutes and try again. This is a per user limit and should not affect the normal usage of reports by multiple users.
   
-- For charts and grids displayed in dashboards, your apps allow users to run queries that have a dataset that has fewer than 50,000 rows. Should a user run a dashboard query that spans a dataset of 50,000 or more rows, the message "The maximum row limit is exceeded. Reduce the number of rows" is returned.  The dataset practical setting helps to ensure optimal performance of the app.  
- 
+- For charts and grids displayed in dashboards, your apps allow users to run queries that have a dataset that has fewer than 50,000 rows. Should a user run a dashboard query that spans a dataset of 50,000 or more rows, the message "The maximum row limit is exceeded. Reduce the number of rows" is returned.  The dataset practical setting helps to ensure optimal performance of the app. 
   
 <a name="BKMK_ReportTips"></a>   
 ## Tips and solutions for reporting  
