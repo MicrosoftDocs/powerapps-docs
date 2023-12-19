@@ -4,7 +4,7 @@ description: Learn about working with a library of reusable components for canva
 author: jorisde
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 10/10/2022
+ms.date: 12/19/2023
 ms.author: jorisde
 ms.reviewer: mkaur
 search.audienceType:
@@ -42,7 +42,7 @@ You can preview component library components using the screens inside the librar
 
 ## Working with component library
 
-You can create a new component library or edit an existing component library from the same interface. Go to [Power Apps](https://make.powerapps.com), select **Apps**, and then select **Component Libraries**:
+You can create a new component library or edit an existing component library from the same interface. Go to [Power Apps](https://make.powerapps.com) > select **More** from left navigation > select **Discover all** > select **Component libraries** from the **App enhancements** section. You can also pin **Component libraries** option to your Power Apps interface. More information: [Left navigation in Power Apps](intro-maker-portal.md#1--left-navigation-pane)
 
 ![Create or edit component library.](./media/component-library/create-edit-component-library.png "Create or edit component library")
 
@@ -52,7 +52,8 @@ The steps to create components inside a component library are the same as creati
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** in the left navigation, select **Component Libraries**, and then select **New component library**.
+1. Select **Component libraries** in the left navigation, and then select **New component library**.
+   Alternatively, select **More** from left navigation > select **Discover all** > select **Component libraries** from the **App enhancements** section.
 
 1. Name the component library as *Menu components*; you can also provide a different name of your choice.
 
