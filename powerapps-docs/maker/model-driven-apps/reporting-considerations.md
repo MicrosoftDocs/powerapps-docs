@@ -2,7 +2,7 @@
 title: "Reporting considerations | MicrosoftDocs"
 description: Learn about what the considerations are when you use reporting in model-driven apps
 ms.custom: 
-ms.date: 09/27/2019
+ms.date: 12/20/2023
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -44,15 +44,15 @@ The reporting capabilities built in to Microsoft Dataverse are designed to let u
   
 - Reports and queries can execute for up to five minutes. When the maximum period is reached, the report will time out and a message is returned to the user. Within the five-minute duration, reports and queries are allowed to span large datasets that are beyond 50,000 rows, which provide significant flexibility to satisfy most operational reporting needs. 
   
-- To improve query response, we recommend that detailed reports minimize the display of large numbers of rows. To do this, apply suitable filtering to reduce the number of rows that are returned. When you create aggregated or summarized reports, queries should push the aggregation to the query rather than fetch detailed rows to perform aggregation in the report.  For more information see: [Fetch XML aggregation](../../developer/data-platform/use-fetchxml-aggregation.md) and [report pre-filtering](/dynamics365/customerengagement/on-premises/analytics/improve-report-performance-by-using-filters).
+- To improve query response, we recommend that detailed reports minimize the display of large numbers of rows. To do this, apply suitable filtering to reduce the number of rows that are returned. When you create aggregated or summarized reports, queries should push the aggregation to the query rather than fetch detailed rows to perform aggregation in the report. More information: [Fetch XML aggregation](../../developer/data-platform/use-fetchxml-aggregation.md) and [report prefiltering](/dynamics365/customerengagement/on-premises/analytics/improve-report-performance-by-using-filters).
 
-- The Report Viewer page is subject to the platform [API Limits](../../developer/data-platform/api-limits.md). Multiple executions of a long-running report may result in an error, and the user can wait few minutes and try again. This is a per user limit and should not affect the normal usage of reports by multiple users.
+- The Report Viewer page is subject to the platform [API limits](../../developer/data-platform/api-limits.md). Multiple executions of a long-running report might result in an error, and the user can wait few minutes and try again. This is a per user limit and shouldn't affect the normal usage of reports by multiple users.
   
 - For charts and grids displayed in dashboards, your apps allow users to run queries that have a dataset that has fewer than 50,000 rows. Should a user run a dashboard query that spans a dataset of 50,000 or more rows, the message "The maximum row limit is exceeded. Reduce the number of rows" is returned.  The dataset practical setting helps to ensure optimal performance of the app. 
   
 <a name="BKMK_ReportTips"></a>   
 ## Tips and solutions for reporting  
- Typically, for most organizations' reporting needs, these settings are adequate. To make sure that your users do not exceed these settings and to improve report querying performance in general, consider the following best practices.  
+ Typically, for most organizations' reporting needs, these settings are adequate. To make sure that your users don't exceed these settings and to improve report querying performance in general, consider the following best practices.  
   
 - When creating custom reports or dashboards, design them to query smaller datasets over shorter periods of time by adding a time-based filter in the report, such as the current month or quarter, to limit the results.  
   
@@ -62,13 +62,13 @@ The reporting capabilities built in to Microsoft Dataverse are designed to let u
   
 - For aggregated or summarized reports, queries must be used to push the aggregation to the database and not fetch detailed rows and perform aggregation in the SQL Server Reporting Services report.  
   
-- When appropriate for your business, users should run the default (out-of-the-box) reports and dashboards. These reports and dashboards are typically designed to query per user datasets, so in most cases will not exceed the dataset limit.  
+- When appropriate for your business, users should run the default (out-of-the-box) reports and dashboards. These reports and dashboards are typically designed to query per user datasets, so in most cases won't exceed the dataset limit.  
   
 If users must run reports that exceed these settings, we recommend that you review the following options for assistance with complex reporting needs. Both options effectively offload reporting workloads from Dataverse to another datastore by using a data integration solution.  
   
 - [Adapters](reporting-considerations.md#BKMK_ThirdPartyAdapt) are used in conjunction with SQL Server Integration Services (SSIS) to extend the capabilities for integration with your apps data.  
   
-- Extract transform load [(ETL) tools](reporting-considerations.md#BKMK_ETL) provide a new tool set for creating analysis of data by combining multiple data sources or extracting data to the data warehouse solution if SSIS is not in use. ETL tools provide comprehensive solutions for connecting with Dataverse to move data.  
+- Extract transform load [(ETL) tools](reporting-considerations.md#BKMK_ETL) provide a new tool set for creating analysis of data by combining multiple data sources or extracting data to the data warehouse solution if SSIS isn't in use. ETL tools provide comprehensive solutions for connecting with Dataverse to move data.  
   
 > [!IMPORTANT]
 >  When you use these tools, we recommend that moving or synchronizing data takes place during nonbusiness hours.  
