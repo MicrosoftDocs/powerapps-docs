@@ -33,5 +33,5 @@ ms.reviewer: mduelae
 - [FAQ about using Copilot in model-driven apps](faqs-copilot-model-driven-app.md)
 - [Use Copilot in the rich text editor for email (preview)](../model-driven-apps/use-copilot-email-assist.md)
 - [FAQ about using Copilot in the rich text editor](faqs-email-assist-rte.md)
-- [Draft well-written, input text with Copilot](../user/well-written-input-text-copilot.md)
+- [Draft well-written, input text with Copilot](../../user/well-written-input-text-copilot.md)
 - [FAQ for drafting well-written, input text with Copilot](faq-draft-with-copilot.md)
