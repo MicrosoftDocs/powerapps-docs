@@ -6,7 +6,7 @@ ms.custom:
   - responsible-ai-faqs
   - ai-gen-docs-bap
   - ai-gen-desc
-  - ai-seo-date:10/26/2023
+  - ai-seo-date:12/21/2023
   - bap-template
 ms.topic: overview
 author: mduelae
