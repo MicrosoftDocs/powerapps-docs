@@ -1,7 +1,7 @@
 ---
 title: Draft well-written, input text with Copilot (preveiw)
 description: Learn how users can use Copilot to quickly generate well-written text that can be used as input text in text boxes in apps made with Power Apps.
-ms.date: 12/01/2023
+ms.date: 12/21/2023
 ms.custom: 
   - responsible-ai-faqs
 ms.topic: article
