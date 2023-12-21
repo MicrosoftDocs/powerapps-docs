@@ -15,7 +15,7 @@ contributors:
     - dileepsinghmicrosoft
 ---
 
-# Configure the Azure AD B2C provider manually
+# Configure the Azure Active Directory B2C provider manually
 
 
 [!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
@@ -26,9 +26,9 @@ This article describes how to configure Azure AD B2C as the identity provider ma
 > - If you want to configure the Azure AD B2C provider automatically by using Power Apps portals, go to [Configure Azure AD B2C provider](configure-azure-ad-b2c-provider.md).
 > - Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. If you want the changes to be reflected immediately, restart the portal by using [portal actions](../admin/admin-overview.md).
 <!--markdownlint-disable MD036-->
-**To configure Azure AD B2C as the OpenID Connect provider manually**
+**To configure Azure Active Directory B2C as the OpenID Connect provider manually**
 
-1. Select **Configure** for **Azure AD B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
+1. Select **Configure** for **Azure Active Directory B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
 
     ![Azure AD B2C provider name.](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
 
@@ -51,7 +51,7 @@ This article describes how to configure Azure AD B2C as the identity provider ma
 
     1. [Register an application](/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant.
 
-        1. Search for and select **Azure AD B2C**.
+        1. Search for and select **Azure Active Directory B2C**.
 
         1. Under **Manage**, select **App registrations**.
 

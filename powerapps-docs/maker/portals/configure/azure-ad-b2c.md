@@ -424,7 +424,7 @@ For a complete list of other CORS settings, see [CORS protocol support](../add-w
 
 1. If not already, select **Overview** from the left pane. 
 
-1. From the right middle section of the screen, select **Azure AD B2C Settings** for the B2C tenant. <br> This action opens B2C tenant in a separate browser tab.
+1. From the right middle section of the screen, select **Azure Active Directory B2C Settings** for the B2C tenant. <br /> This action opens B2C tenant in a separate browser tab.
 
 1. In the B2C tenant browser tab, under **Policies** in the left pane, select **User flows**.
 
