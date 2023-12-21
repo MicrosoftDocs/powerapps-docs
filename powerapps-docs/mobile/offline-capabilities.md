@@ -90,6 +90,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 
 ## Limitations 
+- **Number of records synced** - The total number of records synced is limited to 3,000,000. Attempts to sync a larger number of records will fail. This number also includes hidden tables used for offline capabilities.
 - **Security model** - [Field level security and field sharing](/power-platform/admin/field-level-security) are not supported in Mobile offline mode.
 
 - **Qualify a lead** - When a lead created in mobile offline is qualified and when the user goes online, the business process stage shows the  qualify stage. The user has to manually select **Next stage** to move to the next stage.
