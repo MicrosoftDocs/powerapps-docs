@@ -56,7 +56,7 @@ Examples:
 - `customdata: {{ object.attribute }}`
 - `customdata: {{ object[attribute] }}`
 
-As the **customdata** tag returns a string, it may be necessary to convert this string to an integer in the [DAX query](/dax/dax-queries).
+As the **customdata** tag returns a string, it might be necessary to convert this string to an integer in the [DAX query](/dax/dax-queries).
 
 > [!IMPORTANT]
 > - Portals doesn't support Power BI dashboard or report connecting to Azure Analysis Services that uses a [data gateway to connect to an on-premises data source](/azure/analysis-services/analysis-services-gateway).
@@ -66,7 +66,7 @@ As the **customdata** tag returns a string, it may be necessary to convert this 
 
 The **roles** tag is optional for Azure Analysis Services based reports and dashboards. When not used, role defaults to the role the app is assigned to in Azure Analysis Services.
 
-However, this tag may become necessary to specify a certain role (or roles) among several available roles, and might still be required when using Row-Level security.
+However, this tag might become necessary to specify a certain role (or roles) among several available roles, and might still be required when using Row-Level security.
 
 Roles are contained within the Azure Analysis Services database and not in the report itself, unlike other Power BI report types.
 
@@ -76,7 +76,7 @@ Roles are contained within the Azure Analysis Services database and not in the r
 
 - Providing roles in the Liquid code.
 
-    Azure Analysis Services roles can be provided in the Liquid code, similar to RLS roles. Using these roles may be required when multiple roles are available, but you want to use specific roles for the page. When using any roles in the connection string, specifying Azure Analysis Services role is a must. For example, multi-tile dashboards that use Azure Analysis Services tiles with RLS tiles.
+    Azure Analysis Services roles can be provided in the Liquid code, similar to RLS roles. Using these roles might be required when multiple roles are available, but you want to use specific roles for the page. When using any roles in the connection string, specifying Azure Analysis Services role is a must. For example, multi-tile dashboards that use Azure Analysis Services tiles with RLS tiles.
 
     The following considerations apply when using Azure Analysis Services tiles in a dashboard:
 
