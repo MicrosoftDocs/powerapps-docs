@@ -59,7 +59,7 @@ Each user may have access to a different set of data. It's important to think ab
 
 As you develop your offline profile and test with real or representative data, keep these best practices in mind:
 
-- Limit the total records synced to no more than 200,000.
+- Limit the number of records to no more than 200,000 for better performance. Do not exceed 3,000,000 records as this is not supported by the offline sync.
 - Limit the number of tables to fewer than 100.
 - Limit the total data size to less than 1 GB. 
 - Limit the total files and images size to less than 4 GB. Apply filters to reduce the total download size.
