@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 09/29/2023
+ms.date: 12/21/2023
 ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
