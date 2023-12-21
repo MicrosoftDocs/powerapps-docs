@@ -117,6 +117,7 @@ Table features currently not supported with elastic tables:
 - Table connections
 - Access teams
 - Queues
+- [Attachment](../../developer/data-platform/attachment-annotation-files.md)
 
 Column data types currently not available with elastic tables:
 
