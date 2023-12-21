@@ -1,6 +1,6 @@
 ---
-title: Configure the Azure Active Directory B2C provider manually
-description: Learn how to configure the Azure Active Directory B2C identity provider manually for Power Apps portals.
+title: Configure the Azure AD B2C provider manually
+description: Learn how to configure the Azure AD B2C identity provider manually for Power Apps portals.
 author: sandhangitmsft
 
 ms.topic: conceptual
@@ -20,13 +20,13 @@ contributors:
 
 [!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
 
-This article describes how to configure Azure Active Directory B2C (Azure AD B2C) as the identity provider manually. Use these steps to manually create a new Azure AD B2C tenant, register the application, and configure user flows.
+This article describes how to configure Azure AD B2C as the identity provider manually. Use these steps to manually create a new Azure AD B2C tenant, register the application, and configure user flows.
 
 > [!NOTE]
 > - If you want to configure the Azure AD B2C provider automatically by using Power Apps portals, go to [Configure Azure AD B2C provider](configure-azure-ad-b2c-provider.md).
 > - Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. If you want the changes to be reflected immediately, restart the portal by using [portal actions](../admin/admin-overview.md).
 <!--markdownlint-disable MD036-->
-**To configure Azure AD B2C as the OpenID Connect provider manually**
+**To configure Azure Active Directory B2C as the OpenID Connect provider manually**
 
 1. Select **Configure** for **Azure Active Directory B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
 
@@ -47,11 +47,11 @@ This article describes how to configure Azure Active Directory B2C (Azure AD B2C
 
     1. Sign in to your [Azure portal](https://portal.azure.com/).
 
-    1. [Create an Azure AD B2C tenant](/azure/active-directory-b2c/tutorial-create-tenant).
+    1. [Create a Azure AD B2C tenant](/azure/active-directory-b2c/tutorial-create-tenant).
 
     1. [Register an application](/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant.
 
-        1. Search for and select **Azure AD B2C**.
+        1. Search for and select **Azure Active Directory B2C**.
 
         1. Under **Manage**, select **App registrations**.
 
