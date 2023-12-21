@@ -1,7 +1,7 @@
 ---
 title: "Task table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Task table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -397,7 +397,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,contact,knowledgearticle,knowledgebaserecord|
+|Targets|account,adx_invitation,contact,knowledgearticle,knowledgebaserecord,mspp_adplacement,mspp_pollplacement,mspp_publishingstatetransitionrule,mspp_redirect,mspp_shortcut,mspp_website|
 |Type|Lookup|
 
 
@@ -1446,6 +1446,13 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [sla_task](#BKMK_sla_task)
 - [manualsla_task](#BKMK_manualsla_task)
 - [lk_task_modifiedonbehalfby](#BKMK_lk_task_modifiedonbehalfby)
+- [adx_invitation_Tasks](#BKMK_adx_invitation_Tasks)
+- [mspp_adplacement_Tasks](#BKMK_mspp_adplacement_Tasks)
+- [mspp_pollplacement_Tasks](#BKMK_mspp_pollplacement_Tasks)
+- [mspp_publishingstatetransitionrule_Tasks](#BKMK_mspp_publishingstatetransitionrule_Tasks)
+- [mspp_redirect_Tasks](#BKMK_mspp_redirect_Tasks)
+- [mspp_shortcut_Tasks](#BKMK_mspp_shortcut_Tasks)
+- [mspp_website_Tasks](#BKMK_mspp_website_Tasks)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_Tasks"></a> KnowledgeBaseRecord_Tasks
@@ -1511,6 +1518,48 @@ See the [manualsla_task](sla.md#BKMK_manualsla_task) one-to-many relationship fo
 ### <a name="BKMK_lk_task_modifiedonbehalfby"></a> lk_task_modifiedonbehalfby
 
 See the [lk_task_modifiedonbehalfby](systemuser.md#BKMK_lk_task_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_adx_invitation_Tasks"></a> adx_invitation_Tasks
+
+**Added by**: Power Pages Runtime Core Solution
+
+See the [adx_invitation_Tasks](adx_invitation.md#BKMK_adx_invitation_Tasks) one-to-many relationship for the [adx_invitation](adx_invitation.md) table/entity.
+
+### <a name="BKMK_mspp_adplacement_Tasks"></a> mspp_adplacement_Tasks
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_adplacement_Tasks](mspp_adplacement.md#BKMK_mspp_adplacement_Tasks) one-to-many relationship for the [mspp_adplacement](mspp_adplacement.md) table/entity.
+
+### <a name="BKMK_mspp_pollplacement_Tasks"></a> mspp_pollplacement_Tasks
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_pollplacement_Tasks](mspp_pollplacement.md#BKMK_mspp_pollplacement_Tasks) one-to-many relationship for the [mspp_pollplacement](mspp_pollplacement.md) table/entity.
+
+### <a name="BKMK_mspp_publishingstatetransitionrule_Tasks"></a> mspp_publishingstatetransitionrule_Tasks
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_publishingstatetransitionrule_Tasks](mspp_publishingstatetransitionrule.md#BKMK_mspp_publishingstatetransitionrule_Tasks) one-to-many relationship for the [mspp_publishingstatetransitionrule](mspp_publishingstatetransitionrule.md) table/entity.
+
+### <a name="BKMK_mspp_redirect_Tasks"></a> mspp_redirect_Tasks
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_redirect_Tasks](mspp_redirect.md#BKMK_mspp_redirect_Tasks) one-to-many relationship for the [mspp_redirect](mspp_redirect.md) table/entity.
+
+### <a name="BKMK_mspp_shortcut_Tasks"></a> mspp_shortcut_Tasks
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_shortcut_Tasks](mspp_shortcut.md#BKMK_mspp_shortcut_Tasks) one-to-many relationship for the [mspp_shortcut](mspp_shortcut.md) table/entity.
+
+### <a name="BKMK_mspp_website_Tasks"></a> mspp_website_Tasks
+
+**Added by**: Power Pages Apps Solution
+
+See the [mspp_website_Tasks](mspp_website.md#BKMK_mspp_website_Tasks) one-to-many relationship for the [mspp_website](mspp_website.md) table/entity.
 
 ### See also
 

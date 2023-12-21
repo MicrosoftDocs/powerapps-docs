@@ -1,7 +1,7 @@
 ---
 title: "msdyn_dataflow table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_dataflow table/entity."
-ms.date: 09/01/2023
+ms.date: 10/27/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1099,10 +1099,10 @@ Same as the [msdyn_dataflow_dataflowschedule](msdyn_schedule.md#BKMK_msdyn_dataf
 |ReferencingEntity|msdyn_schedule|
 |ReferencingAttribute|msdyn_scheduleidref|
 |IsHierarchical|False|
-|IsCustomizable|True|
+|IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|msdyn_dataflow_dataflowschedule|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_msdyn_dataflow_datalakefolder_dataflow"></a> msdyn_dataflow_datalakefolder_dataflow
@@ -1116,7 +1116,7 @@ Same as the [msdyn_dataflow_datalakefolder_dataflow](msdyn_dataflow_datalakefold
 |ReferencingEntity|msdyn_dataflow_datalakefolder|
 |ReferencingAttribute|msdyn_dataflow|
 |IsHierarchical|False|
-|IsCustomizable|True|
+|IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|msdyn_dataflow_datalakefolder_dataflow|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|

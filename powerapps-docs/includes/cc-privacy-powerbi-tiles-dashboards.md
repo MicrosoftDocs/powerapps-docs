@@ -6,6 +6,6 @@ By enabling the embedding of Power BI tiles and dashboards, when a user embeds a
   
  [!INCLUDE[cc_privacy_note_azure_trust_center](cc-privacy-note-azure-trust-center.md)]  
   
- [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)  
+ [Microsoft Entra ID](https://azure.microsoft.com/services/active-directory/)  
   
  This service provides the authentication token exchanged with Power BI service for API and UI authentication.

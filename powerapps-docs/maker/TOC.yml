@@ -51,6 +51,8 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
+  - name: Draft well-written, input text with Copilot (preview)
+    href: ../user/well-written-input-text-copilot.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -508,7 +510,7 @@
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
           - name: Use modern themes (preview)
             href: ./canvas-apps/controls/modern-controls/modern-theming.md
-          - name: Modern control reference (preview)
+          - name: Modern control reference
             items:
             - name: Overview
               href: ./canvas-apps/controls/modern-controls/overview-modern-controls.md
@@ -516,35 +518,37 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-reference.md
             - name: Limitations of modern controls
               href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
-            - name: Badge
-              href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
-            - name: Checkbox
-              href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
-            - name: Date picker
-              href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
-            - name: Dropdown
-              href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
-            - name: Header
-              href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
-            - name: Info button
-              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
             - name: Link
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
-            - name: Progress bar
+            - name: Progress bar 
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
-            - name: Radio group
-              href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
-            - name: Spinner
-              href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
-            - name: Table
-              href: ./canvas-apps/controls/modern-controls/modern-control-table.md
+            - name: Slider
+              href: ./canvas-apps/controls/modern-controls/modern-control-slider.md
             - name: Tabs or tab list
               href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
-            - name: Text
+            - name: Badge (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
+            - name: Checkbox (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
+            - name: Date picker (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
+            - name: Dropdown (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
+            - name: Header (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-controls-header.md
+            - name: Info button (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
+            - name: Radio group (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
+            - name: Spinner (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
+            - name: Table (preview)
+              href: ./canvas-apps/controls/modern-controls/modern-control-table.md
+            - name: Text (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-text.md
-            - name: Text input
+            - name: Text input (preview)
               href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
           - name: Control reference
             items:
@@ -1318,18 +1322,24 @@
           href: ./canvas-apps/component-properties.md
   - name: Performance and optimization
     items:
+    - name: Overview
+      href: ./canvas-apps/create-performant-apps-overview.md
     - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
-    - name: Common sources of slow performance
-      href: ./canvas-apps/slow-performance-sources.md
-    - name: Common performance issues and resolutions
-      href: ./canvas-apps/common-performance-issue-resolutions.md
-    - name: Performance tips and best practices
-      href: ./canvas-apps/performance-tips.md
-    - name: Canvas apps coding standards and guidelines
-      href: https://aka.ms/powerappscanvasguidelines
+    - name: Small data payload
+      href: ./canvas-apps/small-data-payloads.md
+    - name: Optimized query data patterns 
+      href: ./canvas-apps/optimized-query-data-patterns.md 
+    - name: Speed up app or page load
+      href: ./canvas-apps/fast-app-page-load.md
+    - name: Fast calculations
+      href: ./canvas-apps/efficient-calculations.md
+    - name: Other performance considerations
+      href: ./canvas-apps/app-performance-considerations.md
     - name: Build large and complex apps
       href: ./canvas-apps/working-with-large-apps.md
+    - name: Canvas apps coding standards and guidelines
+      href: https://aka.ms/powerappscanvasguidelines
   - name: Important changes and deprecations
     href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
@@ -1783,6 +1793,12 @@
     href: ../mobile/scan-QR-code.md
   - name: Switch to a different directory in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
+  - name: Optimize canvas app screens for devices
+    items:
+    - name: Optimize for devices overview (preview)
+      href: ../mobile/optimize-for-devices-overview.md
+    - name: Optimize for devices controls (preview)
+      href: ../mobile/optimize-for-devices-controls.md
   - name: Mobile offline for model-driven apps
     items:
     - name: Mobile offline overview
@@ -1813,6 +1829,8 @@
       href: ../mobile/canvas-mobile-offline-overview.md
     - name: Set up mobile offline for canvas apps (preview)
       href: ../mobile/canvas-mobile-offline-setup.md
+    - name: Configure files and images in offline canvas apps (preview)
+      href: ../mobile/files-images-offline-canvas-apps.md
     - name: Work with canvas apps offline (preview)
       href: ../mobile/canvas-mobile-offline-working.md
   - name: Troubleshoot issues in the mobile app
@@ -1907,7 +1925,7 @@
            href: ./portals/use-content-editor.md
     - name: Update domain name
       href: ./portals/admin/update-portal-domain.md
-    - name: Customize the Azure AD B2C user interface
+    - name: Customize the Microsoft Entra B2C user interface
       href: ./portals/configure/azure-ad-b2c.md
     - name: Integrate Power BI
       items:
@@ -1949,9 +1967,10 @@
       href: ./data-platform/data-platform-import-export.md
     - name: "Configure tables to use Copilot"
       href: ./data-platform/table-settings-for-copilot.md  
-    - name: Long term data retention for tables
-      href: ./data-platform/data-retention-overview.md
+    - name: Long term data retention for tables (preview)
       items:
+      - name: Long term data retention overview
+        href: ./data-platform/data-retention-overview.md
       - name: Set a data retention policy
         href: ./data-platform/data-retention-set.md
       - name: Manage data retention policies
@@ -1971,7 +1990,7 @@
         href: ./data-platform/setup-virtual-table-relationships.md
       - name: Virtual tables known issues and troubleshooting
         href: ./data-platform/limits-tshoot-virtual-tables.md
-    - name: Create and edit elastic tables (preview)
+    - name: Create and edit elastic tables
       href: ./data-platform/create-edit-elastic-tables.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
@@ -2051,7 +2070,7 @@
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
-    - name: Fx formula columns (preview)
+    - name: Fx formula columns
       href: ./data-platform/formula-columns.md
     - name: Set managed properties for columns
       href: ./data-platform/set-managed-properties-for-field.md
@@ -2139,7 +2158,17 @@
         - name: View component dependencies
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
-          href: ./data-platform/EnvironmentVariables.md
+          items:
+          - name: Environment variables overview
+            href: ./data-platform/EnvironmentVariables.md
+          - name: Use data source environment variables in canvas apps
+            href: ./data-platform/EnvironmentVariables-data-source-canvas-apps.md
+          - name: Use environment variables in Power Automate solution cloud flows
+            href: ./data-platform/EnvironmentVariables-power-automate.md
+          - name: Use Azure Key Vault secrets
+            href: ./data-platform/EnvironmentVariables-azure-key-vault-secrets.md
+          - name: Environment variables FAQ
+            href: ./data-platform/environment-variables-faq.md
         - name: Use settings
           href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
@@ -2288,8 +2317,10 @@
         href: ./data-platform/azure-synapse-link-choices-serverless.md
       - name: Export data in Delta Lake format
         href: ./data-platform/azure-synapse-link-delta-lake.md
-      - name: View Dataverse data in Microsoft Fabric (preview)
+      - name: View Dataverse data in Microsoft Fabric
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
+      - name: Build apps using Fabric data (preview)
+        href: ./data-platform/azure-synapse-link-build-apps-with-fabric.md
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
       - name: Ingest exported data with Azure Data Factory
@@ -2396,7 +2427,7 @@
           href: ../teams/add-app-notifications.md
         - name: Integrate with Planner
           href: ../teams/integrate-planner.md
-        - name: Integrate with Azure Active Directory
+        - name: Integrate with Microsoft Entra ID
           href: ../teams/integrate-azure-ad.md
         - name: Integrate with calls and meetings
           href: ../teams/integrate-calls-and-meetings.md
@@ -2533,6 +2564,12 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
+- name: AI plugins (preview)
+  items:
+  - name: AI plugins in Power Platform
+    href: common/ai-plugin.md 
+  - name: Building AI plugins for discovery by Copilot
+    href: common/build-ai-plugin-for-copilot.md   
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
@@ -2597,6 +2634,8 @@
     href: ./common/faqs-email-assist-rte.md
   - name: FAQ for Excel to table and app
     href: ./common/faqs-excel-to-table-app.md
+  - name: FAQ for drafting well-written, input text with Copilot
+    href: ./common/faq-draft-with-copilot.md
 - name: Resources
   items:
   - name: Blog

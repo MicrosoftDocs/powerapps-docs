@@ -215,7 +215,7 @@ The root class for the charts.
 
 |Property Name|Description|
 |-------------|------------|
-|PaletteCustomColor|Gets or sets an array of custom palette colors.  It follows the priority as shown below: <br/> - Renders the color defined in the `Series` node. <br/> - If the color pallet is specified, chart picks the color from the color pallet. <br/> - If none is specified, it picks up the default color pallet.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
+|PaletteCustomColor|Gets or sets an array of custom palette colors.  It follows the priority as shown below: <br/> - Renders the color defined in the `Series` node. <br/> - If the color palette is specified, chart picks the color from the color palette. <br/> - If none is specified, it picks up the default color palette.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 
 **Example**
 
