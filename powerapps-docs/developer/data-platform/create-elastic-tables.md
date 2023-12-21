@@ -189,7 +189,6 @@ You can also create columns by using the SDK or Web API. However, there are limi
 - MultiSelectPicklist (`MultiSelectPicklistAttributeMetadata`)
 - State (`StateAttributeMetadata`)
 - Status (`StatusAttributeMetadata`)
-- File (`FileAttributeMetadata`)
 - Image (`ImageAttributeMetadata`)
 - Calculated, Rollup, or Formula Columns
 

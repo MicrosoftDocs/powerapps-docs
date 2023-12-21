@@ -2167,6 +2167,8 @@
             href: ./data-platform/EnvironmentVariables-power-automate.md
           - name: Use Azure Key Vault secrets
             href: ./data-platform/EnvironmentVariables-azure-key-vault-secrets.md
+          - name: Environment variables FAQ
+            href: ./data-platform/environment-variables-faq.md
         - name: Use settings
           href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
@@ -2562,8 +2564,12 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
-- name: Building AI plugins for discovery by Copilot (preview)
-  href: common/build-ai-plugin-for-copilot.md     
+- name: AI plugins (preview)
+  items:
+  - name: AI plugins in Power Platform
+    href: common/ai-plugin.md 
+  - name: Building AI plugins for discovery by Copilot
+    href: common/build-ai-plugin-for-copilot.md   
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
