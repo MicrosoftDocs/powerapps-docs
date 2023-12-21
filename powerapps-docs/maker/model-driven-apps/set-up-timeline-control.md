@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 10/05/2023
+ms.date: 12/14/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -494,46 +494,7 @@ Go to your timeline configuration in [make.powerapps.com](https://make.powerapps
 
 ## Configure mentions in notes and posts on timeline
 
-To enable mentions in notes and posts, contact [Microsoft Help + support](/power-platform/admin/get-help-support). You can also temporarily try out this feature before asking Microsoft to enable it by appending the following text string to your current browser session URL:
-
-```
-     &flags=FCB.TimelineWallRichTextPosts=true,FCB.TimelineNotesRichTextMentions=true
-
-```
-
-When the rich text editor is enabled, users can mention other users and entities in notes and posts using the **@** and **#** symbols. Configuration for the rich text editor is available in the maker experience in **Power Apps**: [make.powerapps.com](https://make.powerapps.com "make.powerapps.com"). The users and entities that are displayed are pulled from the configuration file provided in the **Rich text editor configuration URL** column. More information: [Use the rich text editor control in Power Apps](/powerapps/maker/model-driven-apps/rich-text-editor-control)
-
-By default, the **@** symbol returns matches with the first name, family name, or email address of system users starting with the search string.
-
-By default, the **#** symbol returns matches with the account and contact name table records starting with the search string.
-
-As an administrator, you can configure other entities to appear when a user types these symbols. Adding more entities to the default configured entities may result in slower load times, so only add the entities your organization requires. You can add the following entities:
-
-- "systemuser"
-- "contact"
-- "competitor"
-- "lead"
-- "account"
-- "incident"
-- "opportunity"
-- "knowledge article"
-
-To configure more entities, add and modify the following code to the configuration file you're using for rich text notes and posts:
-
-```
-     "defaultSupportedProps": {
-        "pcfmentions" : {
-            "markerMap" : {
-                "@" : ["systemuser"],
-                "#" : ["account", "contact"]
-            },
-            "calloutWidthInpx" : "300px",
-            "debounceInms" : 250
-        }
-      }
-
-```
-The "systemser" table persists for **@** and the "account" and "contact" entities for **#** regardless of how the file is edited.
+To enable mentions in notes and posts, follow the instructions provided in this article: [Use @mention for collaborating with your team using notes](/power-apps/user/use-@mentions)
 
 > [!IMPORTANT]
 > The mentions feature doesn't work with Power Platform environments that were created with the **Enable Dynamics 365 apps** option set to **No**. For more information about this option, go to [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
