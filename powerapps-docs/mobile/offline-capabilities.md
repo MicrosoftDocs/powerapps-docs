@@ -97,6 +97,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Grids**
     - Column filtering is disabled when an offline profile is set up even when there's network connectivity. The grid works with the local database and doesn't support custom filters.
+    - Primary image thumbnails aren't available for offline unless they were previously displayed online.
     - Custom icons alongside values in grids aren't available for offline. For more information about this capability, go to [How to display custom icons](../maker/data-platform/display-custom-icons-instead.md).
  
 - **Views** aren't supported for the following tables in offline mode: 
