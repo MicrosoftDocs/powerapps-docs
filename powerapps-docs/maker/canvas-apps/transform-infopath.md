@@ -26,7 +26,7 @@ Like most InfoPath power users, you've been using your unique skill set to build
 The Power Apps team has heard these and many other challenges. They've worked hard to incorporate a better experience and enable you to create canvas apps by leveraging your existing business and technology skills. By using Power Apps, you can quickly build and deploy the right business solutions without writing code.
 
 **Power Apps enable a powerful future**  
-Power Apps is a Software as a Service (SaaS) platform that's designed to let you quickly build high-functioning apps that you can deploy to the web, SharePoint, Dynamics 365, Teams, Power BI, or a mobile device without any extra work. Because you can deploy them by just giving someone the URL to your published app, they're also just as easy to update.
+Power Apps is a Platform as a Service (PaaS) that's designed to let you quickly build high-functioning apps that you can deploy to the web, SharePoint, Dynamics 365, Teams, Power BI, or a mobile device without any extra work. Because you can deploy them by just giving someone the URL to your published app, they're also just as easy to update.
 
 **Share your apps**  
 Have you ever tried to build an app and then publish it for iOS or Android devices? It's complicated. If you want to deploy a second app or update that existing one, your users must take a lot more steps. Not with Power Apps. Your users install Power Apps Mobile on their devices and sign in. Voila, they have all of the highly functional apps that you have shared with them. In the future, when you update those apps or push new apps out to them, those apps will show up on your users' devices. Mobile apps without the pain of managing devices is a big win for you and your business.
