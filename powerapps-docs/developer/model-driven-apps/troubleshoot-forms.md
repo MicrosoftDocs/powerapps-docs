@@ -3,7 +3,7 @@ title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Micr
 description: "Learn about how to resolve the common issues on model-driven apps forms."
 author: HemantGaur
 ms.author: hemantg
-ms.date: 11/06/2023
+ms.date: 12/24/2023
 ms.reviewer: jdaly
 ms.subservice: troubleshoot
 ms.topic: article
@@ -350,7 +350,7 @@ Audit history isn't supported in these cases:
 - Dynamics for Outlook
 
 
-## Related menu item appears in Related tab when it shouldn't
+## Unexpected related menu item appears in related tab
 
 A **Related menu item** might appear when it shouldn't.
 
@@ -358,23 +358,25 @@ A **Related menu item** might appear when it shouldn't.
 
 A related menu item might appear because:
 
-#### Related table has self many-to-many relationship with the main table
+#### Related table has self-referencing many-to-many relationship with the main table
 
-The system ignores form XML customizations for self many-to-many relationships. This is because it's not possible to indicate whether the customizations are for the primary table or the related table, which are both the same table in this case. Therefore, the system ignores these customizations.
+The system ignores form XML customizations for self-referencing many-to-many relationships. The system ignores these customizations because it isn't possible to indicate whether the customizations are for the primary table or the related table, which are both the same table in this case. Therefore, the system ignores these customizations.
 
-If you've modified the form XML to hide the related menu item, it will still appear. In fact, any form XML customizations for self relationships are ignored, like changing the order or the label of the related item.
+If you modify the form XML to hide the related menu item, it still appears. Any form XML customizations for self-referencing relationships are ignored, like changing the order or the label of the related item.
 
-#### Some system tables cannot be hidden
+#### Some system tables can't be hidden
 
-For example, custom tables always show Activities related menu item. It's not possible to hide it with the form designer or by modifying the form XML.
+For example, custom tables always show **Activities** related menu item. It isn't possible to hide it with the form designer or by modifying the form XML.
 
 ## Related menu items aren't translated as expected
 
+The text for related menu items aren't in the expected language.
+
 ### How to troubleshoot
 
-If some related menu items are displaying in a different language from the user's language, it's likely that the form XML is missing translated labels.
+If some related menu items are displaying in a different language from the user's language, check whether the form XML is missing translated labels.
 
-Check the form xml to see if there are labels defined for each language. For example, this form XML shows that the navContacts item only has an English (US) label, "Contacts".
+Check the form XML to see if there are labels defined for each language. For example, this form XML shows that the `navContacts` item only has a US English (1033) label: `Contacts`.
 
 ```xml
 <NavBarByRelationshipItem Id="navContacts" Area="Sales" Sequence="10064" RelationshipName="contact_customer_accounts" Show="true">
@@ -384,7 +386,7 @@ Check the form xml to see if there are labels defined for each language. For exa
 </NavBarByRelationshipItem>
 ```
 
-To fix this issue, add the translated labels to the form XML. For example, this form XML shows that the navContacts item with English (US) and German (Germany) labels.
+To fix this issue, add the translated labels to the form XML. For example, this form XML shows that the `navContacts` item with both US English (1033) and German (1031) labels.
 
 ```xml
 <NavBarByRelationshipItem Id="navContacts" Area="Sales" Sequence="10064" RelationshipName="contact_customer_accounts" Show="true">
@@ -395,7 +397,7 @@ To fix this issue, add the translated labels to the form XML. For example, this 
 </NavBarByRelationshipItem>
 ```
 
-If the text for the user's language isn't defined, the system uses the organization's base language. If that doesn't exist either, the system uses the English (US) text.
+If the text for the user's language isn't defined, the system uses the organization's base language. If that doesn't exist either, the system uses the US English text.
 
 ## Why is a form showing or not showing in the form selector?
 
