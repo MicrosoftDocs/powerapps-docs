@@ -24,8 +24,8 @@ The examples in this article use the [Hospital Emergency Response sample solutio
 
 ## Use App.Formulas instead of App.OnStart
 
-> [!IMPORTANT]
-> Named formulas is an experimental feature. Experimental features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback You can use the With function and canvas component custom output properties as an alternative to named formulas. They're harder to use than named formulas, but are fully supported.
+> [!TIP]
+> You can use [With](/power-platform/power-fx/reference/function-with) function and canvas component custom output properties as an alternative to named formulas.
 
 The best way to reduce loading time for both Power Apps Studio and your app is to replace variable and collection initialization in **App.OnStart** with [named formulas in **App.Formulas**](/power-platform/power-fx/reference/object-app#formulas-property).
 
