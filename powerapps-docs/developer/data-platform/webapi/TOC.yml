@@ -15,7 +15,7 @@
   - name: (PowerShell)
     items:
     - name: Get started using PowerShell
-      href: quick-start-ps-2.md
+      href: quick-start-ps.md
 - name: Web service authentication
   href: authenticate-web-api.md
 - name: Types and operations
@@ -103,6 +103,8 @@
     href: setup-postman-environment.md
   - name: Use Postman to perform operations
     href: use-postman-perform-operations.md
+- name: Use PowerShell and Visual Studio Code with Web API
+  href: use-ps-and-vscode-web-api.md
 - name: Client-side JavaScript using Web API in model-driven apps
   href: get-started-web-api-client-side-javascript.md
 - name: Web API versions and limitations
