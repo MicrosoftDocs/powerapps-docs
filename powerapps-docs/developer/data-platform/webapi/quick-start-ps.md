@@ -29,7 +29,7 @@ In this quick start, learn how to:
 
 ## Prerequisites
 
-Do not proceed without confirming each of the following prerequisites have been met.
+Don't proceed without confirming each of the following prerequisites are met.
 
 ### Install or verify that the following are installed
 
@@ -37,14 +37,14 @@ Do not proceed without confirming each of the following prerequisites have been 
 - Install the PowerShell extension for Visual Studio Code. See [PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 - Install PowerShell 7.4 or higher. See [Install PowerShell on Windows, Linux, and macOS](/powershell/scripting/install/installing-powershell)
 - Install Azure CLI version 2.54.0 or higher. See [How to install the Azure CLI](/cli/azure/install-azure-cli)
-- Install the Azure Powershell AZ module. [How to install Azure PowerShell](/powershell/azure/install-azure-powershell)
+- Install the Azure PowerShell AZ module. [How to install Azure PowerShell](/powershell/azure/install-azure-powershell)
 
 ### Verify installation
 
 1. Open Visual Studio Code.
 1. In the **Terminal** menu, select **New Terminal**.
 1. In Visual Studio Code navigation pane, select the :::image type="icon" source="media/visual-studio-code-powershell-extension-icon.png" border="false"::: icon for the PowerShell extension.
-1. Copy and paste the following in the Visual Studio Code terminal:
+1. Copy and paste the following script in the Visual Studio Code terminal:
 
    ```powershell
    Write-Host 'PowerShell Version:'
@@ -69,7 +69,7 @@ Do not proceed without confirming each of the following prerequisites have been 
    ```
 
 
-### You will also need the following
+### You'll also need the following
 
 - Valid user account for a Dataverse environment
 - Url to the Dataverse environment you want to connect to. See [View developer resources](../view-download-developer-resources.md) to learn how to find it. It looks something like this: `https://yourorg.crm.dynamics.com/`
@@ -99,7 +99,7 @@ Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -H
 | ConvertTo-Json
 ```
 
-### [Powershell AZ](#tab/powershellaz)
+### [PowerShell AZ](#tab/powershellaz)
 
 ```powershell
 $environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
@@ -127,18 +127,18 @@ Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -H
 
 1. Copy and paste either the **Azure CLI** or **Powershell AZ**  PowerShell scripts above in the new file.
 
-   Visual Studio Code should automatically recognize it is a PowerShell script.
+   Visual Studio Code should automatically recognize it's a PowerShell script.
 
 1. Edit the `$environmentUrl` variable to match your Dataverse environment URL.
 1. Press <kbd>F5</kbd>, or use the Visual Studio Code **Run** > **Start Debugging** menu command instead.
 
-   A browser window will open. Enter or select the credentials you want to use to authenticate.
+   A browser window opens. Enter or select the credentials you want to use to authenticate.
 
 1. Verify the output in the Visual Studio Code terminal window
 
    Some of the output is different depending on the script you use.
 
-   The **Azure CLI** script will have this warning:
+   The **Azure CLI** script has this warning:
 
    ```powershell
    WARNING: A web browser has been opened at https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize. Please continue the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow with `az login --use-device-code`.
@@ -168,17 +168,17 @@ This section describes the details of the **Azure CLI** and **Powershell AZ**  P
 
 ### Authentication
 
-You can authenticate with Dataverse using either Azure CLI or the Powershell AZ module. For this quick start, we are presenting both ways so you can compare. Use whichever shortens your learning curve. [Learn more about choosing the right Azure command-line tool](/cli/azure/choose-the-right-azure-command-line-tool)
+You can authenticate with Dataverse using either Azure CLI or the PowerShell AZ module. For this quick start, we're presenting both ways so you can compare. Use whichever shortens your learning curve. [Learn more about choosing the right Azure command-line tool](/cli/azure/choose-the-right-azure-command-line-tool)
 
 The differences are in the following table:
 
-|Azure CLI|Powershell AZ|Description|
+|Azure CLI|PowerShell AZ|Description|
 |---------|---------|---------|
 |[az login](/cli/azure/reference-index#az-login)|[Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)|Opens a browser to accept credentials to login to Azure.|
 |[az account get-access-token](/cli/azure/account#az-account-get-access-token)|[Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken)|Generates an access token you can use to perform Dataverse operations.|
 
 
-Either of the scripts above will set the `$token` variable with an access token you can use to authenticate with the Dataverse Web API.
+Either of the scripts above sets the `$token` variable with an access token you can use to authenticate with the Dataverse Web API.
 
 ### Use `Invoke-RestMethod` with the WhoAmI function
 
@@ -186,7 +186,7 @@ Once you have an access token set to the `$token` variable, you need to compose 
 
 #### Set headers
 
-All Dataverse Web API requests must include a set of common HTTP request headers, including a `Authorization` header that includes the access token value. Some operations require additional headers, but the following are the minimum. [Learn more about Dataverse Web API request headers](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#http-headers)
+All Dataverse Web API requests must include a set of common HTTP request headers, including a `Authorization` header that includes the access token value. Some operations require more headers, but the following are the minimum. [Learn more about Dataverse Web API request headers](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#http-headers)
 
 ```powershell
 # Common headers
@@ -200,7 +200,7 @@ $headers = @{
 
 #### Send the Request
 
-The [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) is one of the simplest Dataverse operations you can perform. Because it is an OData *function* rather than an *action*, it requires the `GET` HTTP method. [Learn more about Web API functions](/power-apps/developer/data-platform/webapi/use-web-api-functions)
+The [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) is one of the simplest Dataverse operations you can perform. Because it's an OData *function* rather than an *action*, it requires the `GET` HTTP method. [Learn more about Web API functions](/power-apps/developer/data-platform/webapi/use-web-api-functions)
 
 Use the [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) `Uri`, `Method`, and `Headers` parameters to send this request.
 
@@ -216,13 +216,13 @@ The [ConvertTo-Json cmdlet](/powershell/module/microsoft.powershell.utility/conv
 
 ## Troubleshooting
 
-Make sure you have verified all the required programs are installed as described in [Verify installation](#verify-installation).
+Make sure you verify all the required programs are installed as described in [Verify installation](#verify-installation).
 
 The following are situations that can cause this to fail:
 
 ### Nothing happens when I press <kbd>F5</kbd>
 
-Make sure that your function keys are enabled on your keyboard by pressing the <kbd>F-Lock</kbd>,<kbd>Fn Lock</kbd>, or <kbd>Function Lock</kbd> key on your keyboard.
+Make sure that your function keys are enabled on your keyboard by pressing the <kbd>F-Lock</kbd>, <kbd>Fn Lock</kbd>, or <kbd>Function Lock</kbd> key on your keyboard.
 
 You can also use the Visual Studio Code **Run** > **Start Debugging** menu command instead.
 
@@ -265,7 +265,7 @@ Learn more about Dataverse Web API capabilities by understanding the service doc
 
 Learn more advanced capabilities to be more productive using PowerShell and Visual Studio Code with the Dataverse Web API, such as:
 
-- Interactive auto-login
+- Interactive autologin
 - Handling exceptions
 - Patterns to create reusable functions
 - Manage Dataverse Service protection limits
