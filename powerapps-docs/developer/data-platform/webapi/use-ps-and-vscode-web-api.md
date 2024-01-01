@@ -385,6 +385,64 @@ Let's put functions to perform table operations a file named `TableOperations.ps
 
 ## Handling exceptions
 
+So far in this article you have been copying and pasting code provided for you. But when you start writing your own functions and using them, you will encounter errors. When these errors occur, they might be from Dataverse or they could be from your script.
+
+Let's add a pair of helper functions that can help detect the source of the errors and extract relevant details from errors returned by Dataverse.
+
+1. Edit the `Core.ps1` file to add the following functions:
+
+   ```powershell
+   function Invoke-DataverseCommands {
+      param (
+         [Parameter(Mandatory)] 
+         $commands
+      )
+      try {
+         Invoke-Command $commands
+      }
+      catch [Microsoft.PowerShell.Commands.HttpResponseException] {
+         Write-Host "An error occurred calling Dataverse:" -ForegroundColor Red
+         Get-ErrorDetails | Format-List 
+      }
+      catch {
+         Write-Host "An error occurred in the script:" -ForegroundColor Red
+         Write-Host $_
+      }
+   }
+
+   function Get-ErrorDetails {
+      try {
+         $statuscode = $_.Exception.StatusCode
+         $code = $null
+         $message = $null
+         if ((!$null -eq $_.ErrorDetails.Message) -and (Test-Json $_.ErrorDetails.Message) ) {
+            $json = $_.ErrorDetails.Message | ConvertFrom-Json
+            $code = $json.error.code
+            $message = $json.error.message
+         }
+         return [PSCustomObject]@{
+            statuscode = $statuscode
+            code       = $code
+            message    = $message
+         }
+      }
+      catch {
+         # throw $_
+         $_.Exception
+      }
+   }
+   ```
+
+   The `Invoke-DataverseCommands` function uses the [Invoke-Command cmdlet](/powershell/module/microsoft.powershell.core/invoke-command) to process a set of commands within a [try/catch block](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). Any errors returned from Dataverse will be <xref:Microsoft.PowerShell.Commands.HttpResponseException> errors, so the first `catch` block writes a `An error occurred calling Dataverse:` message to the terminal and then processes the errors using the `Get-ErrorDetails` function 
+
+   Otherwise, the errors are written back to the terminal window with a message: `An error occurred in the script:`
+
+   The `Get-ErrorDetails` function processes the JSON error returned from Dataverse to extract common error properties: 
+   `statuscode`, `code`, and `message`.
+
+1. Save the `Core.ps1` file.
+1. Edit the `test.ps1` file ... TODO
+
 ## Manage Dataverse Service protection limits
 
 ## Troubleshooting
