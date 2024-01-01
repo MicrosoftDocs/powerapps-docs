@@ -18,10 +18,10 @@ In this quick start, learn how to:
 - Compose requests to the Dataverse Web API using the PowerShell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
 > [!NOTE]
-> This Quick Start article only introduces basic concepts. This should be enough for basic testing. After your complete the steps in this article, go to  [Use PowerShell and Visual Studio Code with the Dataverse Web API](use-ps-and-vscode-web-api.md) to learn more advanced capabilities that will make you more productive, such as:
+> This Quick Start article only introduces basic concepts. This should be enough for basic testing. After your complete the steps in this article, go to  [Use PowerShell and Visual Studio Code with the Dataverse Web API](use-ps-and-vscode-web-api.md) to learn more advanced capabilities that will make you more productive, such as how to:
 > 
-> - Handling exceptions
-> - Patterns to create reusable functions
+> - Create reusable functions
+> - Handle exceptions
 > - Manage Dataverse Service protection limits
 >
 > The instructions below should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
@@ -31,13 +31,6 @@ In this quick start, learn how to:
 Don't proceed without confirming each of the following prerequisites are met.
 
 [!INCLUDE [cc-visual-studio-code-powershell-prerequisites](../includes/cc-visual-studio-code-powershell-prerequisites.md)]
-
-
-### You'll also need
-
-- A valid user account for a Dataverse environment
-- The Url to the Dataverse environment you want to connect to. See [View developer resources](../view-download-developer-resources.md) to learn how to find it. It looks something like this: `https://yourorg.crm.dynamics.com/`
-- Basic understanding of the PowerShell scripting language
 
 ## Try it
 
@@ -69,12 +62,12 @@ Don't proceed without confirming each of the following prerequisites are met.
 
    Visual Studio Code should automatically detect it's a PowerShell script.
 
-1. Edit the `$environmentUrl` variable to match your Dataverse environment URL.
+1. Edit the `$environmentUrl` variable value (`https://yourorg.crm.dynamics.com/`) to match your Dataverse environment URL.
 1. Press <kbd>F5</kbd>, or use the Visual Studio Code **Run** > **Start Debugging** menu command.
 
    A browser window opens. In the browser window, enter or select the credentials you want to use to authenticate.
 
-1. Verify the output in the Visual Studio Code terminal window
+1. Verify the output in the Visual Studio Code terminal window.
 
    At the bottom of the terminal should find the [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse) value expected for the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI). It should look something like this:
 
@@ -118,7 +111,7 @@ to open a browser window where you can enter or select your credentials to log-i
 Finally, the script uses the [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) command with the `-ResourceUrl $environmentUrl` to get a 
 [PSAccessToken](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken) instance, which contains a string [Token](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken.token#microsoft-azure-commands-profile-models-psaccesstoken-token) property that is an access token you can use to authenticate with Dataverse.
 
-When you want to connect to another environment, you need to use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command.
+When you want to connect with a different set of credentials, you need to use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command.
 
 ### Use `Invoke-RestMethod` with the WhoAmI function
 
@@ -152,7 +145,15 @@ Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -H
 
 For operations that use `POST` or `PATCH` HTTP methods, set use the `Body` parameter to send the JSON payload.
 
-The [ConvertTo-Json cmdlet](/powershell/module/microsoft.powershell.utility/convertto-json) converts the object to a JSON-formatted string that is easy to see in the terminal.
+The [ConvertTo-Json cmdlet](/powershell/module/microsoft.powershell.utility/convertto-json) converts the object returned to a JSON-formatted string that is easy to see in the terminal.
+
+If you want to capture only the `UserId` property of the response, you can use this instead:
+
+```powershell
+# Get UserId
+$userId = (Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -Headers $headers).UserId
+Write-Host $userId
+```
 
 ## Troubleshooting
 
@@ -178,7 +179,7 @@ If you see this error after running the script:
       | No such host is known.
    ```
 
-Check that the `$environmentUrl` represents an environment you have access to.
+Check that the `$environmentUrl` represents an environment you have access to. Make sure you have changed it from the default value (`https://yourorg.crm.dynamics.com/`).
 
 ### The user is not a member of the organization
 
@@ -194,22 +195,22 @@ If you see this error after running the script:
 
 Make sure that the account you select in the browser window is that account that has access to the Dataverse environment specified by the `$environmentUrl` parameter.
 
-If you are connecting to a different environment than one you used before, use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command in the terminal window.
+If you are using a different set of credentials than you used before, use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command in the terminal window.
 
 ## Next steps
 
 Now that you have the ability to authenticate and send Dataverse Web API requests using PowerShell, you can try other Web API operations.
 
-Learn more about Dataverse Web API capabilities by understanding the service documents.
+Learn more advanced capabilities to be more productive using PowerShell and Visual Studio Code with the Dataverse Web API, such as how to:
 
-> [!div class="nextstepaction"]
-> [Web API types and operations](web-api-types-operations.md)
-
-Learn more advanced capabilities to be more productive using PowerShell and Visual Studio Code with the Dataverse Web API, such as:
-
-- Handling exceptions
-- Patterns to create reusable functions
+- Create reusable functions
+- Handle exceptions
 - Manage Dataverse Service protection limits
 
 > [!div class="nextstepaction"]
 > [Use PowerShell and Visual Studio Code with the Dataverse Web API](use-ps-and-vscode-web-api.md)
+
+Learn more about Dataverse Web API capabilities by understanding the service documents.
+
+> [!div class="nextstepaction"]
+> [Web API types and operations](web-api-types-operations.md)

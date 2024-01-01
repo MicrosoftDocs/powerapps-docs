@@ -12,11 +12,14 @@ contributors:
 ---
 # Use PowerShell and Visual Studio Code with the Dataverse Web API
 
-This article expands on the [Quick Start Web API with PowerShell](quick-start-ps.md) article to describe advanced capabilities using PowerShell and Visual Studio Code with the Dataverse Web API:
+This article expands on the [Quick Start Web API with PowerShell](quick-start-ps.md) article to describe advanced capabilities using PowerShell and Visual Studio Code with the Dataverse Web API to:
 
-- Patterns to create reusable functions
-- Handling exceptions
+- Create reusable functions
+- Handle exceptions
 - Manage Dataverse Service protection limits
+
+> [!NOTE]
+> The instructions below should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
 
 
 ## Prerequisites
@@ -26,11 +29,11 @@ The content of this article has the same prerequisites as the [Quick Start Web A
 [!INCLUDE [cc-visual-studio-code-powershell-prerequisites](../includes/cc-visual-studio-code-powershell-prerequisites.md)]
 
 
-## Patterns to create reusable functions
+## Create reusable functions
 
-[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio code, but none of the code was saved and it isn't reusable. 
+[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio code. This may be all you need to for an ad-hoc test of one or more operations. However, as your scripts become more complex, you will find yourself typing the same code again and again. To apply the patterns in the following [Handling exceptions](#handling-exceptions) and [Manage Dataverse Service protection limits](#manage-dataverse-service-protection-limits) sections, you will need to create some reusable functions.
 
-In this section we will start creating a set of reusable libraries that we can access using *[dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing)*. Use dot sourcing to load a file containing PowerShell scripts that can contain functions and variables that become part of the local script scope.
+In this section we will start creating a set of reusable functions in separate files that we can access using *[dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing)*. Use dot sourcing to load a file containing PowerShell scripts that can contain functions and variables that become part of the local script scope.
 
 ### Create a Connect function
 
@@ -83,13 +86,13 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
 
    `. C:\scripts\Core.ps1` at the top of the file shows using dot sourcing to direct the script to load the contents of that file, so you don't need to repeat it here.
 
-1. Change the 'https://yourorg.crm.dynamics.com/' value to match the URL for your environment
+1. Change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment
 1. Press <kbd>F5</kbd> to run the script.
 
    The output should look something like this:
 
    ```powershell
-   . 'C:\scripts\test.ps1'
+   PS C:\scripts> . 'C:\scripts\test.ps1'
    {
    "@odata.context": "https://yourorg.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
    "BusinessUnitId": "3a277578-5996-ee11-be36-002248227994",
@@ -133,10 +136,10 @@ Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.W
    Get-WhoAmI | ConvertTo-Json
    ```
 
-1. Change the 'https://yourorg.crm.dynamics.com/' value to match the URL for your environment.
+1. Change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
 1. Press <kbd>F5</kbd> to run the script.
 
-   The output should look something like this:
+   The output should look exactly like it did before, but you can type just 11 characters rather than 100 each time you want to use the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI).
 
    ```powershell
    PS C:\scripts> . 'C:\scripts\test.ps1'
@@ -150,7 +153,7 @@ Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.W
 
 ### Create table operations functions
 
-Let's put functions to perform table operations a file named `TableOperations.ps1` so we can reuse them.
+Let's put functions to perform common table operations a file named `TableOperations.ps1` so we can reuse them.
 
 1. Create a new text file named `TableOperations.ps1` in your `scripts` folder.
 1. Copy and paste the following function definitions in the `TableOperations.ps1`.
@@ -282,7 +285,7 @@ Let's put functions to perform table operations a file named `TableOperations.ps
    - [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)
 
 1. Save the `TableOperations.ps1` file.
-1. Edit the `test.ps1` file, change the content to look like the following:
+1. Copy the following code and paste it into the `test.ps1` file.
 
    ```powershell
    . C:\scripts\Core.ps1
@@ -318,7 +321,7 @@ Let's put functions to perform table operations a file named `TableOperations.ps
    accountcategorycode@OData.Community.Display.V1.FormattedValue
 
    # Update a record
-   Write-Host 'Update the record'
+   Write-Host 'Update the record:'
    $updateAccountData = @{
       name                = 'Updated Example account';
       accountcategorycode = 2; #Standard
@@ -345,7 +348,8 @@ Let's put functions to perform table operations a file named `TableOperations.ps
    Write-Host "The account with ID $newAccountID was deleted"
    ```
 
-1. Change the 'https://yourorg.crm.dynamics.com/' value to match the URL for your environment.
+1. Change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
+1. Change the dot source folder references (`. C:\scripts\`) to match the folders you are using.
 1. Press <kbd>F5</kbd> to run the script.
 
    The output should look something like this:
@@ -369,7 +373,7 @@ Let's put functions to perform table operations a file named `TableOperations.ps
    accountcategorycode                                           : 1
    accountcategorycode@OData.Community.Display.V1.FormattedValue : Preferred Customer
 
-   Update the record
+   Update the record:
 
    Retrieve the updated the record:
 
@@ -387,9 +391,9 @@ Let's put functions to perform table operations a file named `TableOperations.ps
 
 So far in this article you have been copying and pasting code provided for you. But when you start writing your own functions and using them, you will encounter errors. When these errors occur, they might be from Dataverse or they could be from your script.
 
-Let's add a pair of helper functions that can help detect the source of the errors and extract relevant details from errors returned by Dataverse.
+Let's add helper function that can help detect the source of the errors and extract relevant details from errors returned by Dataverse.
 
-1. Edit the `Core.ps1` file to add the following functions:
+1. Edit the `Core.ps1` file to add the following `Invoke-DataverseCommands` function:
 
    ```powershell
    function Invoke-DataverseCommands {
@@ -402,48 +406,83 @@ Let's add a pair of helper functions that can help detect the source of the erro
       }
       catch [Microsoft.PowerShell.Commands.HttpResponseException] {
          Write-Host "An error occurred calling Dataverse:" -ForegroundColor Red
-         Get-ErrorDetails | Format-List 
+         $statuscode = [int]$_.Exception.StatusCode;
+         $statusText = $_.Exception.StatusCode
+         Write-Host "StatusCode: $statuscode ($statusText)"
+         $_.ErrorDetails.Message
       }
       catch {
          Write-Host "An error occurred in the script:" -ForegroundColor Red
-         Write-Host $_
-      }
-   }
-
-   function Get-ErrorDetails {
-      try {
-         $statuscode = $_.Exception.StatusCode
-         $code = $null
-         $message = $null
-         if ((!$null -eq $_.ErrorDetails.Message) -and (Test-Json $_.ErrorDetails.Message) ) {
-            $json = $_.ErrorDetails.Message | ConvertFrom-Json
-            $code = $json.error.code
-            $message = $json.error.message
-         }
-         return [PSCustomObject]@{
-            statuscode = $statuscode
-            code       = $code
-            message    = $message
-         }
-      }
-      catch {
-         # throw $_
-         $_.Exception
+         $_
       }
    }
    ```
 
-   The `Invoke-DataverseCommands` function uses the [Invoke-Command cmdlet](/powershell/module/microsoft.powershell.core/invoke-command) to process a set of commands within a [try/catch block](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). Any errors returned from Dataverse will be <xref:Microsoft.PowerShell.Commands.HttpResponseException> errors, so the first `catch` block writes a `An error occurred calling Dataverse:` message to the terminal and then processes the errors using the `Get-ErrorDetails` function 
+   The `Invoke-DataverseCommands` function uses the [Invoke-Command cmdlet](/powershell/module/microsoft.powershell.core/invoke-command) to process a set of commands within a [try/catch block](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). Any errors returned from Dataverse will be <xref:Microsoft.PowerShell.Commands.HttpResponseException> errors, so the first `catch` block writes a `An error occurred calling Dataverse:` message to the terminal with the JSON error data.
 
    Otherwise, the errors are written back to the terminal window with a message: `An error occurred in the script:`
 
-   The `Get-ErrorDetails` function processes the JSON error returned from Dataverse to extract common error properties: 
-   `statuscode`, `code`, and `message`.
-
 1. Save the `Core.ps1` file.
-1. Edit the `test.ps1` file ... TODO
+1. Edit the `test.ps1` file to use the following script that uses an invalid `setName` parameter value. `account` should be `accounts`. [This is a common error](/troubleshoot/power-platform/power-apps/dataverse/web-api-client-errors#resource-not-found-for-the-segment)
+
+   ```powershell
+   Invoke-DataverseCommands{
+
+   # Retrieve Records
+   Write-Host 'Retrieve first three account records:'
+   (Get-Records `
+      -setName account `
+      -query '?$select=name&$top=3').value | 
+   Format-Table -Property name, accountid
+
+   }
+   ```
+
+1. Press <kbd>F5</kbd> to run the script.
+
+   The output should look something like this:
+
+   ```powershell
+   PS C:\scripts> . 'C:\scripts\test.ps1'
+   Retrieve first three account records:
+   An error occurred calling Dataverse:
+   StatusCode: 404 (NotFound)
+
+   {
+   "error": {
+      "code": "0x80060888",
+      "message": "Resource not found for the segment \u0027account\u0027."
+      }
+   }
+   ```
+
+1. Edit the `test.ps1` file to throw a script error within the `Invoke-DataverseCommands` block:
+
+   ```powershell
+   Invoke-DataverseCommands {
+
+      throw 'A script error'
+
+   }
+   ```
+
+1. Press <kbd>F5</kbd> to run the script.
+
+   The output should be almost the same as if it wasn't included in the `Invoke-DataverseCommands` block:
+
+   ```powershell
+   PS C:\scripts> . 'C:\scripts\test.ps1'
+   An error occurred in the script:
+   Exception: C:\scripts\test.ps1:8:4
+   Line |
+      8 |     throw 'A script error'
+        |     ~~~~~~~~~~~~~~~~~~~~~~
+        | A script error
+   ```
 
 ## Manage Dataverse Service protection limits
+
+
 
 ## Troubleshooting
 
@@ -455,3 +494,11 @@ This error might occur at times when debugging using Visual Studio Code. To reso
 
 1. Select **View** > **Command Palette...** from the Visual Studio Code menu, or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>.
 1. Type `restart` and select `Powershell: Restart session`. See [PowerShell/vscode-powershell GitHub Issue 4332](https://github.com/PowerShell/vscode-powershell/issues/4332) for more information.
+
+
+## Next steps
+
+Learn more about Dataverse Web API capabilities by understanding the service documents.
+
+> [!div class="nextstepaction"]
+> [Web API types and operations](web-api-types-operations.md)
