@@ -13,6 +13,9 @@ contributors:
 
 # Quick Start: Web API with PowerShell  OLD
 
+> [!IMPORTANT]
+> Ignore this. See [Quick Start Web API with PowerShell](quick-start-ps.md) instead
+
 In this quick start, learn how to:
 
 - Use Visual Studio Code with PowerShell to use reusable functions for ad-hoc testing of Web API operations.

@@ -18,9 +18,8 @@ In this quick start, learn how to:
 - Compose requests to the Dataverse Web API using the PowerShell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
 > [!NOTE]
-> This Quick Start article provides only an introduction of the basic concepts. This should be enough for basic testing. [Use PowerShell and Visual Studio Code with the Dataverse Web API](use-ps-and-vscode-web-api.md) builds on this introduction to describe more advanced capabilities to be more productive:
+> This Quick Start article only introduces basic concepts. This should be enough for basic testing. After your complete the steps in this article, go to  [Use PowerShell and Visual Studio Code with the Dataverse Web API](use-ps-and-vscode-web-api.md) to learn more advanced capabilities that will make you more productive, such as:
 > 
-> - Interactive auto-login
 > - Handling exceptions
 > - Patterns to create reusable functions
 > - Manage Dataverse Service protection limits
@@ -31,127 +30,53 @@ In this quick start, learn how to:
 
 Don't proceed without confirming each of the following prerequisites are met.
 
-### Install or verify that the following are installed
-
-- Install Visual Studio Code. See [Download Visual Studio Code](https://code.visualstudio.com/download)
-- Install the PowerShell extension for Visual Studio Code. See [PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
-- Install PowerShell 7.4 or higher. See [Install PowerShell on Windows, Linux, and macOS](/powershell/scripting/install/installing-powershell)
-- Install Azure CLI version 2.54.0 or higher. See [How to install the Azure CLI](/cli/azure/install-azure-cli)
-- Install the Azure PowerShell AZ module. [How to install Azure PowerShell](/powershell/azure/install-azure-powershell)
-
-### Verify installation
-
-1. Open Visual Studio Code.
-1. In the **Terminal** menu, select **New Terminal**.
-1. In Visual Studio Code navigation pane, select the :::image type="icon" source="media/visual-studio-code-powershell-extension-icon.png" border="false"::: icon for the PowerShell extension.
-1. Copy and paste the following script in the Visual Studio Code terminal:
-
-   ```powershell
-   Write-Host 'PowerShell Version:'
-   $PSVersionTable.PSVersion.ToString()
-   Write-Host 'Azure CLI Version:'
-   az version --output table
-   Write-Host 'PowerShell Az version:'
-   (Get-InstalledModule Az).Version
-   ```
-
-1. Press <kbd>Enter</kbd>. The output should resemble the following:
-
-   ```powershell
-   PowerShell Version:
-   7.4.0
-   Azure CLI Version:
-   Azure-cli    Azure-cli-core    Azure-cli-telemetry
-   -----------  ----------------  ---------------------
-   2.55.0       2.55.0            1.1.0
-   PowerShell Az version:
-   11.1.0
-   ```
+[!INCLUDE [cc-visual-studio-code-powershell-prerequisites](../includes/cc-visual-studio-code-powershell-prerequisites.md)]
 
 
-### You'll also need the following
+### You'll also need
 
-- Valid user account for a Dataverse environment
-- Url to the Dataverse environment you want to connect to. See [View developer resources](../view-download-developer-resources.md) to learn how to find it. It looks something like this: `https://yourorg.crm.dynamics.com/`
+- A valid user account for a Dataverse environment
+- The Url to the Dataverse environment you want to connect to. See [View developer resources](../view-download-developer-resources.md) to learn how to find it. It looks something like this: `https://yourorg.crm.dynamics.com/`
 - Basic understanding of the PowerShell scripting language
 
 ## Try it
-
-For this quick start, you can use either the **Azure CLI** or **Powershell AZ**  PowerShell scripts below. The details for both scripts are described in the [How it works](#how-it-works) section.
-
-### [Azure CLI](#tab/azurecli)
-
-```powershell
-$environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
-# Login to Azure
-az login --allow-no-subscriptions | Out-Null
-# Get an access token
-$token = (az account get-access-token --resource $environmentUrl --query accessToken --output tsv)
-# Common headers
-$headers = @{
-   'Authorization'    = 'Bearer ' + $token
-   'Accept'           = 'application/json'
-   'OData-MaxVersion' = '4.0'
-   'OData-Version'    = '4.0'
-}
-# Invoke WhoAmI Function
-Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -Headers $headers
-| ConvertTo-Json
-```
-
-### [PowerShell AZ](#tab/powershellaz)
-
-```powershell
-$environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
-# Login to Azure
-Connect-AzAccount | Out-Null
-# Get an access token
-$token = (Get-AzAccessToken -ResourceUrl $environmentUrl).Token
-# Common headers
-$headers = @{
-   'Authorization'    = 'Bearer ' + $token
-   'Accept'           = 'application/json'
-   'OData-MaxVersion' = '4.0'
-   'OData-Version'    = '4.0'
-}
-# Invoke WhoAmI Function
-Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -Headers $headers
-| ConvertTo-Json
-```
-
----
 
 1. In Visual Studio Code, select **File** > **New Text File**, or <kbd>Ctrl</kbd>+<kbd>N</kbd> to open a new file.
 
    You don't need to save the file.
 
-1. Copy and paste either the **Azure CLI** or **Powershell AZ**  PowerShell scripts above in the new file.
+1. Copy and paste the following script into the new file.
 
-   Visual Studio Code should automatically recognize it's a PowerShell script.
+   ```powershell
+   $environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
+   ## Login if not already logged in
+   if ($null -eq (Get-AzTenant -ErrorAction SilentlyContinue)) {
+      Connect-AzAccount | Out-Null
+   }
+   # Get an access token
+   $token = (Get-AzAccessToken -ResourceUrl $environmentUrl).Token
+   # Common headers
+   $headers = @{
+      'Authorization'    = 'Bearer ' + $token
+      'Accept'           = 'application/json'
+      'OData-MaxVersion' = '4.0'
+      'OData-Version'    = '4.0'
+   }
+   # Invoke WhoAmI Function
+   Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -Headers $headers
+   | ConvertTo-Json
+   ```
+
+   Visual Studio Code should automatically detect it's a PowerShell script.
 
 1. Edit the `$environmentUrl` variable to match your Dataverse environment URL.
-1. Press <kbd>F5</kbd>, or use the Visual Studio Code **Run** > **Start Debugging** menu command instead.
+1. Press <kbd>F5</kbd>, or use the Visual Studio Code **Run** > **Start Debugging** menu command.
 
-   A browser window opens. Enter or select the credentials you want to use to authenticate.
+   A browser window opens. In the browser window, enter or select the credentials you want to use to authenticate.
 
 1. Verify the output in the Visual Studio Code terminal window
 
-   Some of the output is different depending on the script you use.
-
-   The **Azure CLI** script has this warning:
-
-   ```powershell
-   WARNING: A web browser has been opened at https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize. Please continue the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow with `az login --use-device-code`.
-   ```
-
-   The **Powershell AZ** script may have this warning:
-
-   ```powershell
-   WARNING: TenantId '<your tenant id>' contains more than one active subscription. First one will be selected for further use. To select another subscription, use Set-AzContext. 
-   To override which subscription Connect-AzAccount selects by default, use `Update-AzConfig -DefaultSubscriptionForLogin 00000000-0000-0000-0000-000000000000`. Go to https://go.microsoft.com/fwlink/?linkid=2200610 for more information.
-   ```
-   
-   Both scripts should return the [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse) expected for the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI). It should look something like this:
+   At the bottom of the terminal should find the [WhoAmIResponse complex type](xref:Microsoft.Dynamics.CRM.WhoAmIResponse) value expected for the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI). It should look something like this:
 
    ```json
    {
@@ -162,23 +87,38 @@ Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -H
    }
    ```
 
+   > [!NOTE]
+   > When you run the script for the first time and login using the browser you may get a warning like the following:
+   > 
+   > ```powershell
+   > WARNING: TenantId '<your tenant id>' contains more than one active subscription. First one will be selected for further use. 
+   > To select another subscription, use Set-AzContext. 
+   > To override which subscription Connect-AzAccount selects by default, use `Update-AzConfig -DefaultSubscriptionForLogin 00000000-0000-0000-0000-000000000000`. 
+   > Go to https://go.microsoft.com/fwlink/?linkid=2200610 for more information.
+   > ```
+   > 
+   > You can ignore this warning if you see it. These requests do not require a subscription.
+
+1. In the terminal window, type `cls` to clear the terminal content.
+1. Press <kbd>F5</kbd>, or use the Visual Studio Code **Run** > **Start Debugging** menu command to run the script again.
+
+   Because you are already logged in, the browser window will not open. You can continue to edit and run your script to try different requests.
+
 ## How it works
 
-This section describes the details of the **Azure CLI** and **Powershell AZ**  PowerShell scripts included in the [Try it section](#try-it).
+This section describes the details of the PowerShell script included in the [Try it section](#try-it).
 
 ### Authentication
 
-You can authenticate with Dataverse using either Azure CLI or the PowerShell AZ module. For this quick start, we're presenting both ways so you can compare. Use whichever shortens your learning curve. [Learn more about choosing the right Azure command-line tool](/cli/azure/choose-the-right-azure-command-line-tool)
+The script uses the PowerShell Az module [Get-AzTenant](/powershell/module/az.accounts/get-aztenant) command to get tenants authorized for the current user. When you aren't logged in, this command returns an error. This script uses the `-ErrorAction SilentlyContinue` parameter to ignore the error and nothing is returned.
 
-The differences are in the following table:
+When the `Get-AzTenant` command doesn't return anything, the script uses the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) 
+to open a browser window where you can enter or select your credentials to log-in.
 
-|Azure CLI|PowerShell AZ|Description|
-|---------|---------|---------|
-|[az login](/cli/azure/reference-index#az-login)|[Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)|Opens a browser to accept credentials to login to Azure.|
-|[az account get-access-token](/cli/azure/account#az-account-get-access-token)|[Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken)|Generates an access token you can use to perform Dataverse operations.|
+Finally, the script uses the [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) command with the `-ResourceUrl $environmentUrl` to get a 
+[PSAccessToken](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken) instance, which contains a string [Token](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken.token#microsoft-azure-commands-profile-models-psaccesstoken-token) property that is an access token you can use to authenticate with Dataverse.
 
-
-Either of the scripts above sets the `$token` variable with an access token you can use to authenticate with the Dataverse Web API.
+When you want to connect to another environment, you need to use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command.
 
 ### Use `Invoke-RestMethod` with the WhoAmI function
 
@@ -186,7 +126,7 @@ Once you have an access token set to the `$token` variable, you need to compose 
 
 #### Set headers
 
-All Dataverse Web API requests must include a set of common HTTP request headers, including a `Authorization` header that includes the access token value. Some operations require more headers, but the following are the minimum. [Learn more about Dataverse Web API request headers](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#http-headers)
+All Dataverse Web API requests must include a set of common HTTP request headers, including a `Authorization` header that includes the access token value. Some operations require more headers. [Learn more about Dataverse Web API request headers](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#http-headers)
 
 ```powershell
 # Common headers
@@ -218,7 +158,7 @@ The [ConvertTo-Json cmdlet](/powershell/module/microsoft.powershell.utility/conv
 
 Make sure you verify all the required programs are installed as described in [Verify installation](#verify-installation).
 
-The following are situations that can cause this to fail:
+The following are situations that can cause the instructions in this quick start to fail:
 
 ### Nothing happens when I press <kbd>F5</kbd>
 
@@ -252,7 +192,9 @@ If you see this error after running the script:
       |  {   "error": {     "code": "0x80072560",     "message": "The user is not a member of the organization."   } }
    ```
 
-Make sure that the account you select in the browser window is that account that has access to the Dataverse environment.
+Make sure that the account you select in the browser window is that account that has access to the Dataverse environment specified by the `$environmentUrl` parameter.
+
+If you are connecting to a different environment than one you used before, use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command in the terminal window.
 
 ## Next steps
 
@@ -265,7 +207,6 @@ Learn more about Dataverse Web API capabilities by understanding the service doc
 
 Learn more advanced capabilities to be more productive using PowerShell and Visual Studio Code with the Dataverse Web API, such as:
 
-- Interactive autologin
 - Handling exceptions
 - Patterns to create reusable functions
 - Manage Dataverse Service protection limits
