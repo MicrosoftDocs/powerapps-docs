@@ -6,7 +6,7 @@ ms.topic: overview
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: mkaur
-ms.date: 03/15/2022
+ms.date: 01/02/2023
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -58,13 +58,9 @@ For more information about how to customize your formula for custom updates, see
 
 [Patch](functions/function-patch.md)<br />[Collect](functions/function-clear-collect-clearcollect.md)<br />[Update](functions/function-update-updateif.md)
 
-Some data sources return data that is dynamic. Meaning the schema is not known beforehand. For example the same action may return the same table but with different columns. Conditions that may cause the columns in the tables to differ for different calls include the action input parameters, the user or role that's executing the action, and the group in which the user is working. For working with dynamic schema, the [connector documentation](/connectors) shows **The outputs of this operation are dynamic.** as the return value.
+Dynamic schema is a common type of result for action based connectors. Dynamic schema refers to the possibility that the same action may return a table with different columns depending on how it is called. Conditions that may cause the columns in the table to differ include input parameters, the user or role that's executing the action, and the group in which the user is working, among others. For example, SQL Server stored procedures may return different columns if run with different inputs, or an Azure DevOps instance may use custom fields that aren't available by default. Note that the [connector documentation](/connectors) shows dynamic schema results with this message **"The outputs of this operation are dynamic."** as the return value.
 
-For information about how to work with untyped and dynamic schema in Power Apps, see [Working with untyped and dynamic objects](untyped-and-dynamic-objects.md)
-
-
-
-
+For more information about how to work with dynamic schema in Power Apps, see [Working with Untyped and Dynamic objects](untyped-and-dynamic-objects.md) for an overview and [Connect to Azure DevOps from Power Apps](connections/azure-devops.md) for a detailed example.
 
 ## Popular connectors
 
@@ -115,14 +111,9 @@ This type of connection isn't secure because it doesn't rely on end-user authent
 
 In SQL Server, this type of connection is called **SQL Server Authentication**.  Many other database data sources provide a similar capability.  When you publish your application, your users don't need to supply a unique user name and password.  They're using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users can't see the user name or password, but the connection will be available to them.  **There are valid scenarios for this type of connection. For instance if you have a read-only database that is available to everyone in the company. Reference data scenarios (for example, a corporate calendar) can be useful for this kind of connection.** More information: [Use Microsoft SQL Server securely with Power Apps](connections/sql-server-security.md)
 
-### Secure Implicit Connections (preview)
+### Secure Implicit Connections
 
-[This section is prerelease documentation and is subject to change.]
-
-Power Apps now has full preview support for **[Secure implicit connections](working-with-experimental-preview.md)**. The default setting for this feature is **On**. The secure implicit shared connections are more secure than the existing implicit connections. Power Apps implicitly shared connections are ones that use a fixed credential such as a SQL Server connection string rather than the end user's specific credentials such as Microsoft Entra ID. With this feature, connections are no longer directly shared with the users of Power Apps. Instead, a proxy connection object that only grants access to the underlying resource such as a specific SQL server table is shared. End user authors can't create new applications with either the connection or the proxy connection. This feature also limits the end user to such actions as **get**, **put/patch**, and **delete** that are defined in the corresponding app. The result is that end users who are also authors can't create new applications with either the connection or the proxy connection object.
-
-> [!NOTE]
-> **Secure implicit connections** is now **On** by default for new apps.
+Secure implicit shared connections replace the previous implicitly shared connections. Power Apps implicitly shared connections are ones that use a fixed credential such as a SQL Server connection string rather than the end user's specific credentials such as Microsoft Entra ID. With this feature, connections are not directly shared with Power Apps application users. Instead, a proxy connection object that only grants access to the underlying resource, such as a specific SQL server table, is shared. End user authors can't create new applications with either the connection or the proxy connection. This feature also limits the end user to actions such as **get**, **put/patch**, and **delete** that are defined in the app. The result is that end users who are also authors can't create new applications with either the connection or the proxy connection object.
 
 #### Notification to update your apps
 If you have applications that may be upgraded to use this feature then you'll see a message on the Apps page. It indicates the number of apps that need your attention.  
@@ -140,11 +131,11 @@ Select the *open* icon to the right of the app name to open and republish it.  S
 #### Enable secure implicit connections for an existing app
 
 Open an existing [app open for editing](../../edit-app.md) with implicitly shared connections that has previously been published:
-1. On the command bar, select **Settings** > **Upcoming features**.
-2. From the **Preview** tab, set the toggle for **Secure implicit connections** to **On**.
+1. On the command bar, select **Settings** and search for **"Secure"**.
+2. Update the feature switch appropriately to enable secure implicit connections. 
 3. Save and publish the app.
 
-#### Sharing
+#### Unsharing
 
 Once the app is published follow these steps to verify that sharing works correctly:
 
@@ -155,14 +146,14 @@ Once the app is published follow these steps to verify that sharing works correc
 
 - To verify the feature works correctly, share the app with a different user who isn't an owner. Once you have shared the app, check the **Connections** list in the **Dataverse** tab in [Power Apps](https://make.powerapps.com) for that user. Verify that the user doesn't have a connection available.
 
-- Open the **Sharing** panel to change the end-user's right to the connection. Choosing the **X** will remove the user's access to the connection. 
+- Open the **Sharing** panel to change the end-user's right to the connection. Choosing the **X** will remove the user's access to the connection.
 
    > [!div class="mx-imgBorder"]
    > ![Can Use / Revoke.](./media/connections-list/can-use-revoke.png)
 
 #### Use apps with a new secure implicit connection
 
-When your app is republished and shared, then end-users won't have access to the connection but will work with the hidden proxy connection. They won't be able to create a new app based on your original connection. 
+When your app is republished and shared, then end-users won't have access to the connection but will work with the hidden proxy connection. They won't be able to create a new app based on your original connection.
 
 #### Limitations
 
@@ -172,7 +163,7 @@ When your app is republished and shared, then end-users won't have access to the
 4. Action based connectors limit based on the specific API being used in the application. 
 5. Warnings are still enabled in sharing. The warning around implicitly shared connections still warns while in private preview. However, your connection with this feature is secure – despite the warning.
 6. Publishing to an entire tenant, as opposed to specific groups or individuals isn't supported.  
-7. There is a known issue when importing an implicitly shared secure connection via a connection reference. The security is not set properly in the target enviroment. 
+7. There is a known issue when importing an implicitly shared secure connection via a connection reference. The security is not set properly in the target environment.
 8. There is a known issue importing a solution using a service principal, causing import failure. A workaround is to share the connection with the service principal.
 
 ### Windows Authentication
@@ -207,6 +198,8 @@ When users open an app that uses connectors for the first time, they see a "conn
 
 For some connections, Power Platform can automatically authenticate a user to access a data source. However, if the automatic sign-in fails, this dialog prompts users to fix a connection by manually signing in. Power Platform can only attempt automatic sign-in for a connection when a data source preauthorizes Microsoft’s Azure API connections service principal, granting it permission to perform single sign-on for a user when a connection is created. For more information on single sign-on, see [What is single sign-on (SSO)?](/azure/active-directory/manage-apps/what-is-single-sign-on)
 
+Note that for model driven apps that use custom pages, when there are multiple custom pages in an app, the consent dialog asks for data permissions for all of the connectors in all the custom pages even if they haven't yet been opened.
+
 The following image is an example of the connection consent dialog for an app connecting to a SharePoint site.  
 
 ![Power Apps consent dialog](./media/connections-list/power_apps_consent_dialog.png)
@@ -228,6 +221,6 @@ Microsoft Power Platform is only able to suppress the consent dialog for connect
 1. The data source preauthorizes Microsoft’s Azure API connections service principal to enable single-sign-on.
 1. An admin configures an app to suppress the consent for the preceding connections.
 
-The preauthorization of Microsoft’s Azure API connections service principal exists for Microsoft's first-party data sources, and may be configured by custom applications registered in an Microsoft Entra tenant that are used by custom connectors. An admin manages consent suppression on a per-app basis (as opposed to connector basis), so suppression is managed at the most granular app experience level&mdash;this level of granularity prevents consent suppression for an organization’s "approved apps" from inadvertently suppressing consent for apps that aren't approved or reviewed.
+The pre-authorization of Microsoft’s Azure API connections service principal exists for Microsoft's first-party data sources, and may be configured by custom applications registered in an Microsoft Entra tenant that are used by custom connectors. An admin manages consent suppression on a per-app basis (as opposed to connector basis), so suppression is managed at the most granular app experience level&mdash;this level of granularity prevents consent suppression for an organization’s "approved apps" from inadvertently suppressing consent for apps that aren't approved or reviewed.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
