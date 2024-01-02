@@ -22,7 +22,7 @@ In this quick start, learn how to:
 > 
 > - Create reusable functions
 > - Handle exceptions
-> - Manage Dataverse Service protection limits
+> - Manage Dataverse service protection limits
 >
 > The instructions below should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
 
@@ -205,7 +205,7 @@ Learn more advanced capabilities to be more productive using PowerShell and Visu
 
 - Create reusable functions
 - Handle exceptions
-- Manage Dataverse Service protection limits
+- Manage Dataverse service protection limits
 
 > [!div class="nextstepaction"]
 > [Use PowerShell and Visual Studio Code with the Dataverse Web API](use-ps-and-vscode-web-api.md)

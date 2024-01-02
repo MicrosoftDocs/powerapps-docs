@@ -16,7 +16,7 @@ This article expands on the [Quick Start Web API with PowerShell](quick-start-ps
 
 - Create reusable functions
 - Handle exceptions
-- Manage Dataverse Service protection limits
+- Manage Dataverse service protection limits
 
 > [!NOTE]
 > The instructions below should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
@@ -31,7 +31,7 @@ The content of this article has the same prerequisites as the [Quick Start Web A
 
 ## Create reusable functions
 
-[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio code. This may be all you need to for an ad-hoc test of one or more operations. However, as your scripts become more complex, you will find yourself typing the same code again and again. To apply the patterns in the following [Handling exceptions](#handling-exceptions) and [Manage Dataverse Service protection limits](#manage-dataverse-service-protection-limits) sections, you will need to create some reusable functions.
+[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio code. This may be all you need to for an ad-hoc test of one or more operations. However, as your scripts become more complex, you will find yourself typing the same code again and again. 
 
 In this section we will start creating a set of reusable functions in separate files that we can access using *[dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing)*. Use dot sourcing to load a file containing PowerShell scripts that can contain functions and variables that become part of the local script scope.
 
@@ -159,6 +159,9 @@ Let's put functions to perform common table operations a file named `TableOperat
 1. Copy and paste the following function definitions in the `TableOperations.ps1`.
 
    ```powershell
+   # The number of times to re-try a request when re-triable errors occur.
+   $maxRetries = 3
+
    function Get-Records {
       param (
          [Parameter(Mandatory)] 
@@ -178,7 +181,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          Method  = 'Get'
          Headers = $getHeaders
       }
-      Invoke-RestMethod @RetrieveMultipleRequest
+      Invoke-RestMethod @RetrieveMultipleRequest -MaximumRetryCount $maxRetries
    }
 
    function New-Record {
@@ -199,7 +202,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          Headers = $postHeaders
          Body    = ConvertTo-Json $body
       }
-      Invoke-RestMethod @CreateRequest -ResponseHeadersVariable rh
+      Invoke-RestMethod @CreateRequest -ResponseHeadersVariable rh -MaximumRetryCount $maxRetries
       $url = $rh['OData-EntityId']
       $selectedString = Select-String -InputObject $url -Pattern '(?<=\().*?(?=\))'
       return [System.Guid]::New($selectedString.Matches.Value.ToString())
@@ -226,7 +229,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          Method  = 'Get'
          Headers = $getHeaders
       }
-      Invoke-RestMethod @RetrieveRequest
+      Invoke-RestMethod @RetrieveRequest  -MaximumRetryCount $maxRetries
    }
 
    function Update-Record {
@@ -253,7 +256,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          Headers = $updateHeaders
          Body    = ConvertTo-Json $body
       }
-      Invoke-RestMethod @UpdateRequest
+      Invoke-RestMethod @UpdateRequest -MaximumRetryCount $maxRetries
    }
 
    function Remove-Record {
@@ -272,8 +275,9 @@ Let's put functions to perform common table operations a file named `TableOperat
          Method  = 'Delete'
          Headers = $baseHeaders
       }
-      Invoke-RestMethod @DeleteRequest
+      Invoke-RestMethod @DeleteRequest -MaximumRetryCount $maxRetries
    }
+
    ```
 
    For information about how to compose these requests, see the following articles:
@@ -283,6 +287,7 @@ Let's put functions to perform common table operations a file named `TableOperat
    - [Create a table row using the Web API](create-entity-web-api.md)
    - [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)
    - [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)
+   - The `MaximumRetryCount` parameter and the `$maxRetries` variable explained in [Manage Dataverse service protection limits](#manage-service-protection-limits)
 
 1. Save the `TableOperations.ps1` file.
 1. Copy the following code and paste it into the `test.ps1` file.
@@ -480,9 +485,15 @@ Let's add helper function that can help detect the source of the errors and extr
         | A script error
    ```
 
-## Manage Dataverse Service protection limits
+## Manage Dataverse service protection limits
 
+We recommend that you specify a value for the Powershell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) [MaximumRetryCount parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-maximumretrycount) for any functions you create that might be used to send large volume of requests to Dataverse. The functions defined for the `TableOperations.ps1` in the [Create table operations functions](#create-table-operations-functions) section of this article demonstrate this best practice.
 
+[Dataverse Service protection API limits](../api-limits.md) help ensure that Dataverse provides consistent availability and performance. When client applications make extraordinary demands on server resources using the Web API, Dataverse returns [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors and client application must pause operations for the duration specified in the [Retry-After header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After).
+
+You may never encounter a service protection limit error while you are learning how to use the Dataverse Web API with Powershell. You might not expect that the scripts you are writing will be used to send a high the large number of requests will encounter these errors, but you should be aware that they can occur and how you can manage them using PowerShell.
+
+The `MaximumRetryCount` parameter specifies how many times PowerShell retries a request when a failure code is between 400 and 599, inclusive or 304 is received. This means PowerShell will retry Dataverse service protection 429 errors when you include a value for this parameter. The `MaximumRetryCount` parameter can be used with the [RetryIntervalSec](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-retryintervalsec) to specify the number of seconds to wait. The default is 5 seconds. However, if the error response includes a `Retry-After` header for a 429 error, that value will be used instead, even when you set a `RetryIntervalSec` value.
 
 ## Troubleshooting
 
