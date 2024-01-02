@@ -1,7 +1,7 @@
 ---
 title: Use PowerShell and Visual Studio Code with the Dataverse Web API
 description: Describes how to use PowerShell and Visual Studio Code to create reusable PowerShell functions to interactively test using the Dataverse Web API
-ms.date: 12/30/2023
+ms.date: 01/05/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -54,14 +54,15 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
          [String] 
          $uri
       )
-      # Set environment URL
-      $global:environmentUrl = $uri
+
       ## Login if not already logged in
       if ($null -eq (Get-AzTenant -ErrorAction SilentlyContinue)) {
          Connect-AzAccount | Out-Null
       }
+
       # Get an access token
-      $token = (Get-AzAccessToken -ResourceUrl $environmentUrl).Token
+      $token = (Get-AzAccessToken -ResourceUrl $uri).Token
+
       # Define common set of headers
       $global:baseHeaders = @{
          'Authorization'    = 'Bearer ' + $token
@@ -69,11 +70,14 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
          'OData-MaxVersion' = '4.0'
          'OData-Version'    = '4.0'
       }
+
+      # Set baseURI
+      $global:baseURI = $uri + 'api/data/v9.2/'
    }
    ```
 
    > [!NOTE]
-   > The script adds the `environmentUrl` and `baseHeaders` variables to the global context using the `$global` [scope modifier](/powershell/module/microsoft.powershell.core/about/about_scopes#scope-modifiers) so that they are available to other scripts in the same session.
+   > The script adds the `baseURI` and `baseHeaders` variables to the global context using the `$global` [scope modifier](/powershell/module/microsoft.powershell.core/about/about_scopes#scope-modifiers) so that they are available to other scripts in the same session.
 
 1. Create another text file using Visual Studio Code named `test.ps1` in your `scripts` folder.
 1. Copy and paste the following script into the `test.ps1` file:
@@ -83,7 +87,7 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
 
    Connect 'https://yourorg.crm.dynamics.com/' # change this
    # Invoke WhoAmI Function
-   Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -Headers $baseHeaders
+   Invoke-RestMethod -Uri ($baseURI + 'WhoAmI') -Method Get -Headers $baseHeaders
    | ConvertTo-Json
    ```
 
@@ -115,7 +119,7 @@ Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.W
    function Get-WhoAmI{
 
       $WhoAmIRequest = @{
-         Uri = $environmentUrl + 'api/data/v9.2/WhoAmI'
+         Uri = $baseURI + 'WhoAmI'
          Method = 'Get'
          Headers = $baseHeaders
       }
@@ -164,7 +168,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          [String] 
          $query
       )
-      $uri = $environmentUrl + 'api/data/v9.2/' + $setName + $query
+      $uri = $baseURI + $setName + $query
       # Header for GET operations that have annotations
       $getHeaders = $baseHeaders.Clone()
       $getHeaders.Add('If-None-Match', $null)
@@ -190,7 +194,7 @@ Let's put functions to perform common table operations a file named `TableOperat
       $postHeaders.Add('Content-Type', 'application/json')
       
       $CreateRequest = @{
-         Uri     = $environmentUrl + 'api/data/v9.2/' + $setName
+         Uri     = $baseURI + $setName
          Method  = 'Post'
          Headers = $postHeaders
          Body    = ConvertTo-Json $body
@@ -212,7 +216,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          [String] 
          $query
       )
-      $uri = $environmentUrl + 'api/data/v9.2/' + $setName
+      $uri = $baseURI + $setName
       $uri = $uri + '(' + $id.Guid + ')' + $query
       $getHeaders = $baseHeaders.Clone()
       $getHeaders.Add('If-None-Match', $null)
@@ -237,7 +241,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          [hashtable]
          $body
       )
-      $uri = $environmentUrl + 'api/data/v9.2/' + $setName
+      $uri = $baseURI + $setName
       $uri = $uri + '(' + $id.Guid + ')'
       # Header for Update operations
       $updateHeaders = $baseHeaders.Clone()
@@ -261,7 +265,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          [Guid] 
          $id
       )
-      $uri = $environmentUrl + 'api/data/v9.2/' + $setName
+      $uri = $baseURI + $setName
       $uri = $uri + '(' + $id.Guid + ')'
       $DeleteRequest = @{
          Uri     = $uri
@@ -424,17 +428,24 @@ Let's add helper function that can help detect the source of the errors and extr
 1. Edit the `test.ps1` file to use the following script that uses an invalid `setName` parameter value. `account` should be `accounts`. [This is a common error](/troubleshoot/power-platform/power-apps/dataverse/web-api-client-errors#resource-not-found-for-the-segment)
 
    ```powershell
-   Invoke-DataverseCommands{
+   . C:\scripts\Core.ps1
+   . C:\scripts\TableOperations.ps1
 
-   # Retrieve Records
-   Write-Host 'Retrieve first three account records:'
-   (Get-Records `
-      -setName account `
-      -query '?$select=name&$top=3').value | 
-   Format-Table -Property name, accountid
+   Connect 'https://yourorg.crm.dynamics.com/' # change this
 
+   Invoke-DataverseCommands {
+
+      # Retrieve Records
+      Write-Host 'Retrieve first three account records:'
+         (Get-Records `
+         -setName account `
+         -query '?$select=name&$top=3').value | 
+      Format-Table -Property name, accountid
+      
    }
    ```
+
+   Change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
 
 1. Press <kbd>F5</kbd> to run the script.
 
