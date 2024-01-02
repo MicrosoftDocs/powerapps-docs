@@ -6,7 +6,7 @@ ms.topic: overview
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: mkaur
-ms.date: 03/15/2022
+ms.date: 01/02/2023
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -52,7 +52,7 @@ If your connector provides actions, you must still select your data source as yo
 If you need to handle custom data updates for action connectors, build a formula that includes the **Patch** function. In the formula, identify the action and the fields that you'll bind to the action.  
 
 > [!NOTE]
-> For action-based connectors, galleries and other controls don't page in more data automatically the same way they do for tables. For instance, if you bind an action to a gallery then it’ll retrieve the first set or page of records. But if the data requested exceeds the size for a page of data, then the control won't automatically fetch the next page. You must manage this directly with collections.
+> For action-based connectors, galleries and other controls don't page in more data automatically the same way they do for tabular connectors. For instance, if you bind a tabular data source to a gallery then it will retrieve the first set or page of records (e.g., 100 records.) And, then it will page in more data as the control requests it. For an action based connector however, it will retrieve a "page" of data.  But if the data requested exceeds the size for a page of data, then the control won't automatically fetch the next page. 
 
 For more information about how to customize your formula for custom updates, see these articles:
 
@@ -61,7 +61,6 @@ For more information about how to customize your formula for custom updates, see
 Dynamic schema is a common type of result for action based connectors. Dynamic schema refers to the possibility that the same action may return a table with different columns depending on how it is called. Conditions that may cause the columns in the table to differ include input parameters, the user or role that's executing the action, and the group in which the user is working, among others. For example, SQL Server stored procedures may return different columns if run with different inputs, or an Azure DevOps instance may use custom fields that aren't available by default. Note that the [connector documentation](/connectors) shows dynamic schema results with this message **"The outputs of this operation are dynamic."** as the return value.
 
 For more information about how to work with dynamic schema in Power Apps, see [Working with Untyped and Dynamic objects](untyped-and-dynamic-objects.md) for an overview and [Connect to Azure DevOps from Power Apps](connections/azure-devops.md) for a detailed example.
-
 
 ## Popular connectors
 

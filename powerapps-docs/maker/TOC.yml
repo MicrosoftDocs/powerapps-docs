@@ -51,6 +51,8 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
+  - name: Draft well-written, input text with Copilot (preview)
+    href: ../user/well-written-input-text-copilot.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -2632,6 +2634,8 @@
     href: ./common/faqs-email-assist-rte.md
   - name: FAQ for Excel to table and app
     href: ./common/faqs-excel-to-table-app.md
+  - name: FAQ for drafting well-written, input text with Copilot
+    href: ./common/faq-draft-with-copilot.md
 - name: Resources
   items:
   - name: Blog

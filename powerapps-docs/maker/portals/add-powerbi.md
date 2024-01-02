@@ -42,11 +42,11 @@ To add a Power BI component to a webpage:
 
         ![Power BI Access type.](media/powerbi-access-type.png "Power BI Access type")
 
-        1. **Embed for your customers** - Allows you to securely share the Power BI dashboards or reports to external users without a Power BI license or Azure Active Directory authentication setup. This option uses Power BI Embedded services to integrate Power BI dashboards or reports into your portal.
+        1. **Embed for your customers** - Allows you to securely share the Power BI dashboards or reports to external users without a Power BI license or Microsoft Entra authentication setup. This option uses Power BI Embedded services to integrate Power BI dashboards or reports into your portal.
             > [!NOTE]
             > Ensure [Power BI Embedded service is enabled](../portals/admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service) and respective Power BI workspaces are selected and shared with the maker or the logged-in user.
 
-        1. **Embed for your organization** - Allows you to securely share the Power BI dashboards or reports with Azure Active Directory authenticated users.
+        1. **Embed for your organization** - Allows you to securely share the Power BI dashboards or reports with Microsoft Entra ID authenticated users.
 
             > [!NOTE]
             > Ensure you've shared Power BI workspaces with the maker and target portal users.
@@ -103,7 +103,7 @@ The following list explains Power BI access types in brief and lists access type
 - **Embed for your organization**:
 
     - Shows the list of workspaces shared with a logged-in user.
-    - Uses Azure Active Directory authentication.
+    - Uses Microsoft Entra authentication.
 
 - **Publish to web**: Anyone on the internet can view your published report or visual. This option requires no authentication and includes viewing detail-level data that your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Don't publish confidential or sensitive information. Refer to your organization's policies before publishing.
 
@@ -113,7 +113,7 @@ The following list explains Power BI access types in brief and lists access type
     - A high number of workspaces shared with a logged-in user.
     - Power BI workspaces are shared with many users.
 - [The capture Liquid variable](../portals/liquid/portals-entity-tags.md#powerbi) isn't supported in portals Studio while working with a Power BI component.
-- If you [reset a portal](../portals/admin/reset-portal.md) and provision a new portal, you must add the portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, go to [Set up Power BI integration](../portals/admin/set-up-power-bi-integration.md#create-security-group-and-add-to-power-bi-account).
+- If you [reset a portal](../portals/admin/reset-portal.md) and provision a new portal, you must add the portal application ID of the new portal to the **Portal Power BI Embedded service** Microsoft Entra security group. For more information, go to [Set up Power BI integration](../portals/admin/set-up-power-bi-integration.md#create-security-group-and-add-to-power-bi-account).
 - If you make a change in the Power Apps portals admin center, you must reload the portals Studio if you already have it open.
 - Adding users to Power BI dashboards and reports may take a while to reflect in the portals Studio.
 - Power BI dashboards and reports connected to a shared dataset present on a different workspace aren't supported.
