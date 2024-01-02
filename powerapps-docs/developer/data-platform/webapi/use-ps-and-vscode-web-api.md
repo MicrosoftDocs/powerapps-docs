@@ -1,6 +1,6 @@
 ---
 title: Use PowerShell and Visual Studio Code with the Dataverse Web API
-description: Describes how to use Powershell and Visual Studio Code to create reusable PowerShell functions to interactively test using the Dataverse Web API
+description: Describes how to use PowerShell and Visual Studio Code to create reusable PowerShell functions to interactively test using the Dataverse Web API
 ms.date: 12/30/2023
 author: divkamath
 ms.author: dikamath
@@ -14,12 +14,12 @@ contributors:
 
 This article expands on the [Quick Start Web API with PowerShell](quick-start-ps.md) article to describe advanced capabilities using PowerShell and Visual Studio Code with the Dataverse Web API to:
 
-- Create reusable functions
-- Handle exceptions
-- Manage Dataverse service protection limits
+- [Create reusable functions](#create-reusable-functions)
+- [Handle exceptions](#handle-exceptions)
+- [Manage Dataverse service protection limits](#manage-dataverse-service-protection-limits)
 
 > [!NOTE]
-> The instructions below should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
+> The instructions in this article should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
 
 
 ## Prerequisites
@@ -31,20 +31,23 @@ The content of this article has the same prerequisites as the [Quick Start Web A
 
 ## Create reusable functions
 
-[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio code. This may be all you need to for an ad-hoc test of one or more operations. However, as your scripts become more complex, you will find yourself typing the same code again and again. 
+[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio Code. This might be all you need to for an ad-hoc test of one or more operations. However, as your scripts become more complex, you might find yourself typing the same code again and again. 
 
-In this section we will start creating a set of reusable functions in separate files that we can access using *[dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing)*. Use dot sourcing to load a file containing PowerShell scripts that can contain functions and variables that become part of the local script scope.
+In this section, we start creating a set of reusable functions in separate files that we can access using *[dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing)*. Use dot sourcing to load a file containing PowerShell scripts that can contain functions and variables that become part of the local script scope.
 
 ### Create a Connect function
 
-Let's put the code to authenticate to Dataverse in a function called `Connect` inside a file named `Core.ps1` so we can reuse it.
+Let's put the code to authenticate to Dataverse in a function called `Connect` inside a file named `Core.ps1` so we can reuse it in a single line of code.
 
-1. Create a folder. In this example, we will create a folder in `C:\scripts`.
-1. Open the scripts folder using Visual Studio Code.
+1. Create a folder. In this example, we create a folder in `C:\scripts`.
+1. [Open the scripts folder using Visual Studio Code](https://code.visualstudio.com/docs/editor/workspaces).
 1. Create a text file in the scripts folder named `Core.ps1`.
 1. Copy and paste the following `Connect` function into the `Core.ps1` file.
 
    ```powershell
+   #Requires -Version 7.4.0
+   #Requires -Modules @{ ModuleName="Az"; ModuleVersion="11.1.0" }
+
    function Connect {
       param (
          [Parameter(Mandatory)] 
@@ -84,7 +87,7 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
    | ConvertTo-Json
    ```
 
-   `. C:\scripts\Core.ps1` at the top of the file shows using dot sourcing to direct the script to load the contents of that file, so you don't need to repeat it here.
+   `. C:\scripts\Core.ps1` at the top of the file shows using dot sourcing to direct the script to load the contents of that file. Set the path to a different folder if you didn't use `C:\scripts`.
 
 1. Change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment
 1. Press <kbd>F5</kbd> to run the script.
@@ -103,7 +106,7 @@ Let's put the code to authenticate to Dataverse in a function called `Connect` i
 
 ### Create a WhoAmI function
 
-Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) in a function called `Get-WhoAmI` inside a file named `CommonFunctions.ps1` so we can reuse it.
+Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) in a function called `Get-WhoAmI` inside a file named `CommonFunctions.ps1` so we  can type just 11 characters rather than 100 each time you want to use the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI)
 
 1. Create a new text file named `CommonFunctions.ps1` in your `scripts` folder.
 1. Copy and paste the following function definition in the `CommonFunctions.ps1`.
@@ -125,7 +128,7 @@ Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.W
    > This function definition uses a technique called *[splatting](/powershell/module/microsoft.powershell.core/about/about_splatting)*. Splatting makes your commands shorter and easier to read because it passes a collection of parameter values to a command as a unit.
 
 1. Save the `CommonFunctions.ps1` file.
-1. Edit the `test.ps1` file, change the content to look like the following:
+1. Edit the `test.ps1` file, change the content to look like the following script:
 
    ```powershell
    . C:\scripts\Core.ps1
@@ -139,17 +142,7 @@ Let's put the code to invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.W
 1. Change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
 1. Press <kbd>F5</kbd> to run the script.
 
-   The output should look exactly like it did before, but you can type just 11 characters rather than 100 each time you want to use the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI).
-
-   ```powershell
-   PS C:\scripts> . 'C:\scripts\test.ps1'
-   {
-   "@odata.context": "https://yourorg.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
-   "BusinessUnitId": "3a277578-5996-ee11-be36-002248227994",
-   "UserId": "2c2e7578-5996-ee11-be36-002248227994",
-   "OrganizationId": "97bf0e8b-aa99-ee11-be32-000d3a106c3a"
-   }
-   ```
+   The output should look exactly like it did before.
 
 ### Create table operations functions
 
@@ -287,7 +280,7 @@ Let's put functions to perform common table operations a file named `TableOperat
    - [Create a table row using the Web API](create-entity-web-api.md)
    - [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)
    - [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)
-   - The `MaximumRetryCount` parameter and the `$maxRetries` variable explained in [Manage Dataverse service protection limits](#manage-service-protection-limits)
+   - The `MaximumRetryCount` parameter and the `$maxRetries` variable are explained in [Manage Dataverse service protection limits](#manage-dataverse-service-protection-limits)
 
 1. Save the `TableOperations.ps1` file.
 1. Copy the following code and paste it into the `test.ps1` file.
@@ -354,7 +347,7 @@ Let's put functions to perform common table operations a file named `TableOperat
    ```
 
 1. Change the `https://yourorg.crm.dynamics.com/` value to match the URL for your environment.
-1. Change the dot source folder references (`. C:\scripts\`) to match the folders you are using.
+1. Change the dot source folder references (`. C:\scripts\`) to match the folders you're using.
 1. Press <kbd>F5</kbd> to run the script.
 
    The output should look something like this:
@@ -392,9 +385,9 @@ Let's put functions to perform common table operations a file named `TableOperat
    The account with ID  a2c3ebc2-39a8-ee11-be37-000d3a8e8e07 was deleted
    ```
 
-## Handling exceptions
+## Handle exceptions
 
-So far in this article you have been copying and pasting code provided for you. But when you start writing your own functions and using them, you will encounter errors. When these errors occur, they might be from Dataverse or they could be from your script.
+So far in this article you have been copying and pasting code provided for you. But when you start writing your own functions and using them, you'll encounter errors. When these errors occur, they might be from Dataverse, or they could be from your script.
 
 Let's add helper function that can help detect the source of the errors and extract relevant details from errors returned by Dataverse.
 
@@ -423,7 +416,7 @@ Let's add helper function that can help detect the source of the errors and extr
    }
    ```
 
-   The `Invoke-DataverseCommands` function uses the [Invoke-Command cmdlet](/powershell/module/microsoft.powershell.core/invoke-command) to process a set of commands within a [try/catch block](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). Any errors returned from Dataverse will be <xref:Microsoft.PowerShell.Commands.HttpResponseException> errors, so the first `catch` block writes a `An error occurred calling Dataverse:` message to the terminal with the JSON error data.
+   The `Invoke-DataverseCommands` function uses the [Invoke-Command cmdlet](/powershell/module/microsoft.powershell.core/invoke-command) to process a set of commands within a [try/catch block](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). Any errors returned from Dataverse are <xref:Microsoft.PowerShell.Commands.HttpResponseException> errors, so the first `catch` block writes a `An error occurred calling Dataverse:` message to the terminal with the JSON error data.
 
    Otherwise, the errors are written back to the terminal window with a message: `An error occurred in the script:`
 
@@ -487,13 +480,13 @@ Let's add helper function that can help detect the source of the errors and extr
 
 ## Manage Dataverse service protection limits
 
-We recommend that you specify a value for the Powershell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) [MaximumRetryCount parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-maximumretrycount) for any functions you create that might be used to send large volume of requests to Dataverse. The functions defined for the `TableOperations.ps1` in the [Create table operations functions](#create-table-operations-functions) section of this article demonstrate this best practice.
+We recommend that you specify a value for the PowerShell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) [MaximumRetryCount parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-maximumretrycount) for any functions you create that might be used to send large volume of requests to Dataverse. The functions defined for the `TableOperations.ps1` in the [Create table operations functions](#create-table-operations-functions) section of this article demonstrate this best practice.
 
 [Dataverse Service protection API limits](../api-limits.md) help ensure that Dataverse provides consistent availability and performance. When client applications make extraordinary demands on server resources using the Web API, Dataverse returns [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors and client application must pause operations for the duration specified in the [Retry-After header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After).
 
-You may never encounter a service protection limit error while you are learning how to use the Dataverse Web API with Powershell. You might not expect that the scripts you are writing will be used to send a high the large number of requests will encounter these errors, but you should be aware that they can occur and how you can manage them using PowerShell.
+You might never encounter a service protection limit error while you're learning how to use the Dataverse Web API with PowerShell. Scripts you write might be used to send the large number of requests necessary to encounter these errors, so you should know they can occur and how you can manage them using PowerShell.
 
-The `MaximumRetryCount` parameter specifies how many times PowerShell retries a request when a failure code is between 400 and 599, inclusive or 304 is received. This means PowerShell will retry Dataverse service protection 429 errors when you include a value for this parameter. The `MaximumRetryCount` parameter can be used with the [RetryIntervalSec](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-retryintervalsec) to specify the number of seconds to wait. The default is 5 seconds. However, if the error response includes a `Retry-After` header for a 429 error, that value will be used instead, even when you set a `RetryIntervalSec` value.
+The `MaximumRetryCount` parameter specifies how many times PowerShell retries a request when a failure code is between 400 and 599, inclusive or 304 is received. This means PowerShell retries Dataverse service protection 429 errors when you include a value for this parameter. The `MaximumRetryCount` parameter can be used with the [RetryIntervalSec](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-retryintervalsec) to specify the number of seconds to wait. The default is 5 seconds. If the error response includes a `Retry-After` header for a 429 error, as Dataverse service protection errors do, that value is used instead.
 
 ## Troubleshooting
 

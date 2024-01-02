@@ -3,9 +3,9 @@
 - Install Visual Studio Code. See [Download Visual Studio Code](https://code.visualstudio.com/download)
 - Install the PowerShell extension for Visual Studio Code. See [PowerShell for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 - Install PowerShell 7.4 or higher. See [Install PowerShell on Windows, Linux, and macOS](/powershell/scripting/install/installing-powershell)
-- Install the Azure PowerShell AZ module version 11.1.0 or higher. See [How to install Azure PowerShell](/powershell/azure/install-azure-powershell)
+- Install the Az PowerShell  module version 11.1.0 or higher. See [How to install Azure PowerShell](/powershell/azure/install-azure-powershell)
 
-   To [update an existing installation](/powershell/module/powershellget/update-module), use `Update-Module -Name Az -Force`
+   To [update an existing installation to the latest version](/powershell/module/powershellget/update-module), use `Update-Module -Name Az -Force`
 
 ### Verify installation
 
@@ -31,5 +31,5 @@ If you don't see results like this, install or update the prerequisites.
 ### You'll also need
 
 - A valid user account for a Dataverse environment
-- The Url to the Dataverse environment you want to connect to. See [View developer resources](../view-download-developer-resources.md) to learn how to find it. It looks something like this: `https://yourorg.crm.dynamics.com/`
+- The Url to the Dataverse environment you want to connect to. See [View developer resources](../view-download-developer-resources.md) to learn how to find it. It looks something like this: `https://yourorg.crm.dynamics.com/`, where `yourorg.crm` is different.
 - Basic understanding of the PowerShell scripting language

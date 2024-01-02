@@ -24,7 +24,7 @@ In this quick start, learn how to:
 > - Handle exceptions
 > - Manage Dataverse service protection limits
 >
-> The instructions below should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
+> The instructions in this article should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
 
 ## Prerequisites
 
@@ -95,7 +95,7 @@ Don't proceed without confirming each of the following prerequisites are met.
 1. In the terminal window, type `cls` to clear the terminal content.
 1. Press <kbd>F5</kbd>, or use the Visual Studio Code **Run** > **Start Debugging** menu command to run the script again.
 
-   Because you are already logged in, the browser window will not open. You can continue to edit and run your script to try different requests.
+   Because you're already logged in, the browser window doesn't open. You can continue to edit and run your script to try different requests.
 
 ## How it works
 
@@ -103,10 +103,10 @@ This section describes the details of the PowerShell script included in the [Try
 
 ### Authentication
 
-The script uses the PowerShell Az module [Get-AzTenant](/powershell/module/az.accounts/get-aztenant) command to get tenants authorized for the current user. When you aren't logged in, this command returns an error. This script uses the `-ErrorAction SilentlyContinue` parameter to ignore the error and nothing is returned.
+The script uses the Az PowerShell module [Get-AzTenant](/powershell/module/az.accounts/get-aztenant) command to get tenants authorized for the current user. When you aren't logged in, this command returns an error. This script uses the `-ErrorAction SilentlyContinue` parameter to ignore the error and nothing is returned.
 
 When the `Get-AzTenant` command doesn't return anything, the script uses the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) 
-to open a browser window where you can enter or select your credentials to log-in.
+to open a browser window where you can enter or select your credentials to log in.
 
 Finally, the script uses the [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) command with the `-ResourceUrl $environmentUrl` to get a 
 [PSAccessToken](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken) instance, which contains a string [Token](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken.token#microsoft-azure-commands-profile-models-psaccesstoken-token) property that is an access token you can use to authenticate with Dataverse.
@@ -147,11 +147,16 @@ For operations that use `POST` or `PATCH` HTTP methods, set use the `Body` param
 
 The [ConvertTo-Json cmdlet](/powershell/module/microsoft.powershell.utility/convertto-json) converts the object returned to a JSON-formatted string that is easy to see in the terminal.
 
-If you want to capture only the `UserId` property of the response, you can use this instead:
+If you want to capture only the `UserId` property of the response, you can use the following script instead:
 
 ```powershell
 # Get UserId
-$userId = (Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -Headers $headers).UserId
+$userId = (
+   Invoke-RestMethod `
+   -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') `
+   -Method 'Get' `
+   -Headers $headers
+   ).UserId
 Write-Host $userId
 ```
 
