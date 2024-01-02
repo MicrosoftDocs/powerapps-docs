@@ -119,7 +119,7 @@ When you want to connect with a different set of credentials, you need to use th
 
 [Azure PowerShell works using Windows PowerShell and PowerShell shell environments, but not Cmd and Bash shell environments](/cli/azure/choose-the-right-azure-command-line-tool#different-shell-environments). If you want to authenticate with Cmd or Bash shell environments, you can use the Azure CLI.
 
-This script uses the following Azure CLI commands to achieve the same result.
+This script uses Azure CLI commands to authenticate:
 
 ```powershell
 $environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
@@ -131,11 +131,14 @@ if ($null -eq (az account tenant list  --only-show-errors)) {
 $token = az account get-access-token --resource=$environmentUrl --query accessToken --output tsv
 ```
 
-|Command|Description |
-|---------|---------|
-|[az account tenant list](/cli/azure/account/tenant#az-account-tenant-list)|To detect if you are already logged in|
-|[az login](/cli/azure/reference-index#az-login)|To login to Azure|
-|[az account get-access-token](/cli/azure/account#az-account-get-access-token)|To get an access token|
+This table shows the equivalent Az Powershell and Azure CLI commands:
+
+|Az PowerShell|Azure CLI|Description |
+|---------|---------|---------|
+|[Get-AzTenant](/powershell/module/az.accounts/get-aztenant)|[az account tenant list](/cli/azure/account/tenant#az-account-tenant-list)|Try to retrieve a list of tenants to detect if you are already logged in|
+|[Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)|[az login](/cli/azure/reference-index#az-login)|To login to Azure|
+|[Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken)|[az account get-access-token](/cli/azure/account#az-account-get-access-token)|To get an access token|
+|[Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount)|[az logout](/cli/azure/reference-index#az-logout)|Log out of Azure|
 
 ### Use `Invoke-RestMethod` with the WhoAmI function
 
