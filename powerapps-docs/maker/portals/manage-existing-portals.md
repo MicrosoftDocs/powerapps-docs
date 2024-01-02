@@ -113,7 +113,7 @@ If you want to remove the portal configurations from your environment completely
 
 > [!NOTE]
 > - If you don't have sufficient privileges to delete a portal, following error is displayed. <br /> `Permission denied` <br />
-`You do not have sufficient privileges to delete the portal [Name] portal.` <br/> You must have the System Administrator role to delete a portal. Also, you must be the owner of the portal application in Azure Active Directory. The user who creates the portal is by default the owner and can delete a portal. For information on adding yourself as an owner, see [Add yourself as an owner of the Azure AD application](admin/admin-overview.md#add-yourself-as-an-owner-of-the-azure-ad-application).
+`You do not have sufficient privileges to delete the portal [Name] portal.` <br/> You must have the System Administrator role to delete a portal. Also, you must be the owner of the portal application in Microsoft Entra ID. The user who creates the portal is by default the owner and can delete a portal. For information on adding yourself as an owner, see [Add yourself as an owner of the Microsoft Entra application](admin/admin-overview.md#add-yourself-as-an-owner-of-the-azure-ad-application).
 > - When you delete a portal, and create a new portal with a different URL, the authentication provider configuration must be configured for the new portal to work correctly. To configure the authentication provider, go to [Get started with authentication configuration](configure/use-simplified-authentication-configuration.md).
 
 ### Completely delete a portal
