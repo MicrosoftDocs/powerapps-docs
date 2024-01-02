@@ -52,15 +52,19 @@ If your connector provides actions, you must still select your data source as yo
 If you need to handle custom data updates for action connectors, build a formula that includes the **Patch** function. In the formula, identify the action and the fields that you'll bind to the action.  
 
 > [!NOTE]
-> For action-based connectors, galleries and other controls don't page in more data automatically the same way they do for tables. For instance, if you bind an action to a gallery then it’ll retrieve the first set or page of records. But if the data requested exceeds the size for a page of data, then the control won't automatically fetch the next page. You must manage this directly with collections.
+> For action-based connectors, galleries and other controls don't page in more data automatically the same way they do for tabular connectors. For instance, if you bind a tabular data source to a gallery then it will retrieve the first set or page of records (e.g., 100 records.) And, then it will page in more data as the control requests it. For an action based connector however, it will retrieve a "page" of data.  But if the data requested exceeds the size for a page of data, then the control won't automatically fetch the next page. 
 
 For more information about how to customize your formula for custom updates, see these articles:
 
 [Patch](functions/function-patch.md)<br />[Collect](functions/function-clear-collect-clearcollect.md)<br />[Update](functions/function-update-updateif.md)
 
-> [!NOTE]
-> To work with dynamic schema, you can use an **experimental** feature called **Dynamic schema**. Dynamic schema refers to the possibility that the same action may return a different table with different columns. Conditions that may cause the columns in the tables to differ include the action input parameters, the user or role that's executing the action, and the group in which the user is working, among others. For example, SQL Server stored procedures may return different columns if run with different inputs, or an Azure DevOps instance may use custom fields that aren't available by default. For working with dynamic schema, the [connector documentation](/connectors) shows **The outputs of this operation are dynamic.** as the return value.
-> For more information about how to work with dynamic schema in Power Apps, see [working with dynamic schema in Power Apps (experimental)](working-with-dynamic-schema.md)
+Some data sources return data that is dynamic. Meaning the schema is not known beforehand. For example the same action may return the same table but with different columns. Conditions that may cause the columns in the tables to differ for different calls include the action input parameters, the user or role that's executing the action, and the group in which the user is working. For working with dynamic schema, the [connector documentation](/connectors) shows **The outputs of this operation are dynamic.** as the return value.
+
+For information about how to work with untyped and dynamic schema in Power Apps, see [Working with untyped and dynamic objects](untyped-and-dynamic-objects.md)
+
+
+
+
 
 ## Popular connectors
 
