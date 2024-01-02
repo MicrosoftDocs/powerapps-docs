@@ -12,6 +12,8 @@ contributors:
 ---
 # Quick Start Web API with PowerShell
 
+PowerShell is a powerful scripting language that can automate repetitive tasks and streamline workflows, making it an ideal tool for integrating with Dataverse. This quick start focuses on helping you get started using PowerShell with the Dataverse Web API in Visual Studio Code. Visual Studio Code with Powershell provides an alternative to [using Postman with the Dataverse Web API](use-postman-web-api).
+
 In this quick start, learn how to:
 
 - Use Visual Studio Code with PowerShell to interactively authenticate with Dataverse without registering an application.
@@ -112,6 +114,28 @@ Finally, the script uses the [Get-AzAccessToken](/powershell/module/az.accounts/
 [PSAccessToken](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken) instance, which contains a string [Token](/dotnet/api/microsoft.azure.commands.profile.models.psaccesstoken.token#microsoft-azure-commands-profile-models-psaccesstoken-token) property that is an access token you can use to authenticate with Dataverse.
 
 When you want to connect with a different set of credentials, you need to use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command.
+
+#### Authenticate using different shell environments
+
+[Azure PowerShell works using Windows PowerShell and PowerShell shell environments, but not Cmd and Bash shell environments](/cli/azure/choose-the-right-azure-command-line-tool#different-shell-environments). If you want to authenticate with Cmd or Bash shell environments, you can use the Azure CLI.
+
+This script uses the following Azure CLI commands to achieve the same result.
+
+```powershell
+$environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
+## Login if not already logged in
+if ($null -eq (az account tenant list  --only-show-errors)) {
+   az login --allow-no-subscriptions | Out-Null
+}
+# Get token
+$token = az account get-access-token --resource=$environmentUrl --query accessToken --output tsv
+```
+
+|Command|Description |
+|---------|---------|
+|[az account tenant list](/cli/azure/account/tenant#az-account-tenant-list)|To detect if you are already logged in|
+|[az login](/cli/azure/reference-index#az-login)|To login to Azure|
+|[az account get-access-token](/cli/azure/account#az-account-get-access-token)|To get an access token|
 
 ### Use `Invoke-RestMethod` with the WhoAmI function
 
