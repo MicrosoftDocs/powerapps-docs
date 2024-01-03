@@ -1,7 +1,7 @@
 ---
 title: "Invitation (adx_invitation)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Invitation (adx_invitation)  table/entity."
-ms.date: 10/27/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1017,9 +1017,6 @@ Listed by **SchemaName**.
 - [adx_invitation_Annotations](#BKMK_adx_invitation_Annotations)
 - [adx_invitation_adx_inviteredemptions](#BKMK_adx_invitation_adx_inviteredemptions)
 - [adx_invitation_adx_portalcomments](#BKMK_adx_invitation_adx_portalcomments)
-- [adx_invitation_msfp_alerts](#BKMK_adx_invitation_msfp_alerts)
-- [adx_invitation_msfp_surveyinvites](#BKMK_adx_invitation_msfp_surveyinvites)
-- [adx_invitation_msfp_surveyresponses](#BKMK_adx_invitation_msfp_surveyresponses)
 
 
 ### <a name="BKMK_adx_invitation_ActivityPointers"></a> adx_invitation_ActivityPointers
@@ -1409,57 +1406,6 @@ Same as the [adx_invitation_adx_portalcomments](adx_portalcomment.md#BKMK_adx_in
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|adx_invitation_adx_portalcomments|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_adx_invitation_msfp_alerts"></a> adx_invitation_msfp_alerts
-
-**Added by**: Active Solution Solution
-
-Same as the [adx_invitation_msfp_alerts](msfp_alert.md#BKMK_adx_invitation_msfp_alerts) many-to-one relationship for the [msfp_alert](msfp_alert.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_alert|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|adx_invitation_msfp_alerts|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_adx_invitation_msfp_surveyinvites"></a> adx_invitation_msfp_surveyinvites
-
-**Added by**: Active Solution Solution
-
-Same as the [adx_invitation_msfp_surveyinvites](msfp_surveyinvite.md#BKMK_adx_invitation_msfp_surveyinvites) many-to-one relationship for the [msfp_surveyinvite](msfp_surveyinvite.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyinvite|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|adx_invitation_msfp_surveyinvites|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_adx_invitation_msfp_surveyresponses"></a> adx_invitation_msfp_surveyresponses
-
-**Added by**: Active Solution Solution
-
-Same as the [adx_invitation_msfp_surveyresponses](msfp_surveyresponse.md#BKMK_adx_invitation_msfp_surveyresponses) many-to-one relationship for the [msfp_surveyresponse](msfp_surveyresponse.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msfp_surveyresponse|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|adx_invitation_msfp_surveyresponses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 

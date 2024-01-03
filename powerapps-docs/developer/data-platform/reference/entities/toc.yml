@@ -76,6 +76,8 @@
   href: attribute.md
 - name: AttributeImageConfig
   href: attributeimageconfig.md
+- name: AttributeMaskingRule
+  href: attributemaskingrule.md
 - name: Audit
   href: audit.md
 - name: backgroundoperation
@@ -112,6 +114,12 @@
   href: chat.md
 - name: ColumnMapping
   href: columnmapping.md
+- name: componentversion
+  href: componentversion.md
+- name: componentversiondatasource
+  href: componentversiondatasource.md
+- name: componentversionnrddatasource
+  href: componentversionnrddatasource.md
 - name: Connection
   href: connection.md
 - name: ConnectionInstance
@@ -126,6 +134,8 @@
   href: contact.md
 - name: conversationtranscript
   href: conversationtranscript.md
+- name: credential
+  href: credential.md
 - name: CustomAPI
   href: customapi.md
 - name: CustomAPIRequestParameter
@@ -238,6 +248,8 @@
   href: flowmachineimageversion.md
 - name: flowmachinenetwork
   href: flowmachinenetwork.md
+- name: flowrun
+  href: flowrun.md
 - name: flowsession
   href: flowsession.md
 - name: fxexpression
@@ -294,6 +306,8 @@
   href: makerfewshot.md
 - name: ManagedIdentity
   href: managedidentity.md
+- name: MaskingRule
+  href: maskingrule.md
 - name: MetadataForArchival
   href: metadataforarchival.md
 - name: Metric
@@ -420,6 +434,8 @@
   href: msdyn_knowledgesearchinsight.md
 - name: msdyn_mobileapp
   href: msdyn_mobileapp.md
+- name: msdyn_modulerundetail
+  href: msdyn_modulerundetail.md
 - name: msdyn_nonrelationalds
   href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
@@ -484,34 +500,6 @@
   href: msdyn_workflowactionstatus.md
 - name: msdynce_botcontent
   href: msdynce_botcontent.md
-- name: msfp_alert
-  href: msfp_alert.md
-- name: msfp_alertrule
-  href: msfp_alertrule.md
-- name: msfp_emailtemplate
-  href: msfp_emailtemplate.md
-- name: msfp_fileresponse
-  href: msfp_fileresponse.md
-- name: msfp_localizedemailtemplate
-  href: msfp_localizedemailtemplate.md
-- name: msfp_project
-  href: msfp_project.md
-- name: msfp_question
-  href: msfp_question.md
-- name: msfp_questionresponse
-  href: msfp_questionresponse.md
-- name: msfp_satisfactionmetric
-  href: msfp_satisfactionmetric.md
-- name: msfp_survey
-  href: msfp_survey.md
-- name: msfp_surveyinvite
-  href: msfp_surveyinvite.md
-- name: msfp_surveyreminder
-  href: msfp_surveyreminder.md
-- name: msfp_surveyresponse
-  href: msfp_surveyresponse.md
-- name: msfp_unsubscribedrecipient
-  href: msfp_unsubscribedrecipient.md
 - name: MsGraphResourceToSubscription
   href: msgraphresourcetosubscription.md
 - name: mspcat_CatalogSubmissionFiles
