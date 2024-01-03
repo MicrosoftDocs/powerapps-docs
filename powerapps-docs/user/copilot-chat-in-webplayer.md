@@ -2,8 +2,6 @@
 title: Copilot chat in web player (preview)
 description: Learn how users can use Copilot to get data insights in the web player for canvas apps using Dataverse.
 ms.date: 01/02/2023
-ms.custom: 
-  - responsible-ai-faqs
 ms.topic: article
 ms.component: pa-user
 ms.subservice: end-user
