@@ -1,7 +1,7 @@
 ---
 title: "datalakefolder table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the datalakefolder table/entity."
-ms.date: 10/27/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -476,7 +476,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|path|
-|MaxLength|100|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
