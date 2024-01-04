@@ -1,7 +1,7 @@
 ---
 title: "msdyn_analysisresult table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_analysisresult table/entity."
-ms.date: 10/27/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -209,6 +209,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |192350006|Maintainability||
 |192350007|Supportability||
 |192350008|Accessibility||
+|192350009|Licensing||
 
 
 
