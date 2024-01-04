@@ -1,7 +1,7 @@
 ---
 title: "StagedMetadataAsyncOperation table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the StagedMetadataAsyncOperation table/entity."
-ms.date: 10/27/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -194,6 +194,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [Name](#BKMK_Name)
 - [ObjectId](#BKMK_ObjectId)
 - [StagedMetadataAsyncOperationId](#BKMK_StagedMetadataAsyncOperationId)
+- [UnprocessedDependencies](#BKMK_UnprocessedDependencies)
 - [VersionNumber](#BKMK_VersionNumber)
 
 
@@ -520,6 +521,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|stagedmetadataasyncoperationid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_UnprocessedDependencies"></a> UnprocessedDependencies
+
+|Property|Value|
+|--------|-----|
+|Description|List of unprocessed dependencies|
+|DisplayName|Unprocessed dependencies|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|unprocesseddependencies|
+|MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
