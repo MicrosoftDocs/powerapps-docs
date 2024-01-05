@@ -1,7 +1,7 @@
 |Error values|Error name and message|
 |-----|-----|
-|`0x80072559`<br />`-2147015335`|Name: **AADError**<br />Message: `Error from AAD`|
-|`0x80048350`<br />`-2147187888`|Name: **AadGroupTeamsCanOnlyAssignInheritableRoles**<br />Message: `Cannot assign security role with "Team Privileges only" Inheritance to AAD Group or Office Group teams. (TeamId = {0})`|
+|`0x80072559`<br />`-2147015335`|Name: **AADError**<br />Message: `Error from Microsoft Entra ID`|
+|`0x80048350`<br />`-2147187888`|Name: **AadGroupTeamsCanOnlyAssignInheritableRoles**<br />Message: `Cannot assign security role with "Team Privileges only" Inheritance to Microsoft Entra ID Group or Office Group teams. (TeamId = {0})`|
 |`0x80048405`<br />`-2147187707`|Name: **AccessDenied**<br />Message: `Access is denied.`|
 |`0x80060904`<br />`-2147088124`|Name: **AccessDeniedSharePointRecord**<br />Message: `Access denied on SharePoint record in Dynamics 365.`|
 |`0x8005F101`<br />`-2147094271`|Name: **AccessTokenExpired**<br />Message: `The requested resource requires authentication.`|
@@ -37,7 +37,7 @@
 |`0x80090201`<br />`-2146893311`|Name: **AdlsServiceConfigurationMissingData**<br />Message: `Configuration data missing for CDS ADLS service. Setting: {0}.`|
 |`0x80090203`<br />`-2146893309`|Name: **AdlsServiceServerError**<br />Message: `Received unsuccessful response from CDS ADLS service indicating server side error. Error code: ({0}); Response: {1}`|
 |`0x8004F50C`<br />`-2147158772`|Name: **AdminProfileCannotBeEditedOrDeleted**<br />Message: `The System Administrator field security profile cannot be modified or deleted.`|
-|`0x80041d68`<br />`-2147213976`|Name: **ADResourceNotFound**<br />Message: `The Azure AD Group was not found in your Azure Active Directory. Please validate the Group ID and try again.`|
+|`0x80041d68`<br />`-2147213976`|Name: **ADResourceNotFound**<br />Message: `The Entra ID Group was not found in Microsoft Entra ID. Please validate the Group ID and try again.`|
 |`0x80061696`<br />`-2147084650`|Name: **AdvancedSimilarityAzureSearchUnexpectedError**<br />Message: `An unexpected error occurred executing the search. Try again later.`|
 |`0x8004D2B1`<br />`-2147167567`|Name: **AggregateInnerQuery**<br />Message: `The Inner Query must not be an aggregate query.`|
 |`0x8004E023`<br />`-2147164125`|Name: **AggregateQueryRecordLimitExceeded**<br />Message: `The maximum record limit is exceeded. Reduce the number of records.`|
@@ -177,9 +177,9 @@
 |`0x80091043`<br />`-2146889661`|Name: **AutoDataCaptureResponseRetrievalFailureException**<br />Message: `Error while fetching untracked emails from Exchange.`|
 |`0x80060885`<br />`-2147088251`|Name: **AutoNumberAttributeSequenceMissing**<br />Message: `SQL Sequence missing for Auto Number attribute {0} of entity {1}. Will attempt to re-create the SQL Sequence now.`|
 |`0x80090469`<br />`-2146892695`|Name: **AutoNumberForIntegerAttributeNotSupported**<br />Message: `Autonumber feature is not turned on or not available for integer attribute. Attribute '{0}'.`|
-|`0x8004F510`<br />`-2147158768`|Name: **AzureApplicationIdNotFound**<br />Message: `We didn’t find that application ID {0} in your Azure Active Directory (Azure AD) with CorrelationID {1}. Make sure your application is registered in Azure AD.`|
+|`0x8004F510`<br />`-2147158768`|Name: **AzureApplicationIdNotFound**<br />Message: `We didn’t find that application ID {0} in  Microsoft Entra ID with CorrelationID {1}. Make sure your application is registered in Microsoft Entra ID.`|
 |`0x8004F512`<br />`-2147158766`|Name: **AzureApplicationIdNotFoundInOrgDB**<br />Message: `Azure applicationid not found. We didn’t find the application ID {0} in your CRM database. Correct the application ID and resubmit the update.`|
-|`0x80097621`<br />`-2146863583`|Name: **AzureApplicationIdNotFoundRWCTFallback**<br />Message: `We didn’t find the application ID {0} in your Azure Active Directory with CorrelationID {1}. Read write consistency token was also not honored by AAD.`|
+|`0x80097621`<br />`-2146863583`|Name: **AzureApplicationIdNotFoundRWCTFallback**<br />Message: `We didn’t find the application ID {0} in Microsoft Entra ID with CorrelationID {1}. Read write consistency token was also not honored by Microsoft Entra ID.`|
 |`0x80061635`<br />`-2147084747`|Name: **AzureOperationResponseTimedOut**<br />Message: `An Azure operation request did not return a response within stated timeout period. Retry the operation or increase timeout provided for the operation.`|
 |`0x80061604`<br />`-2147084796`|Name: **AzureRecommendationModelBuildNotExist**<br />Message: `The Azure recommendation model build corresponding to the used model version doesn’t exist.`|
 |`0x80061603`<br />`-2147084797`|Name: **AzureRecommendationModelNotExist**<br />Message: `The Azure recommendation model doesn’t exist.`|
@@ -492,7 +492,7 @@
 |`0x8004027a`<br />`-2147220870`|Name: **CannotDeactivateDefaultView**<br />Message: `Default views cannot be deactivated.`|
 |`0x80061105`<br />`-2147086075`|Name: **CannotDeactivateGuestProfile**<br />Message: `You can't set this guest channel access profile as inactive.`|
 |`0x80071129`<br />`-2147020503`|Name: **CannotDefineMultipleValuesOnOwnerFieldInProfileItemEntityFilter**<br />Message: `You cannot define multiple values on this field.`|
-|`0x80048359`<br />`-2147187879`|Name: **CannotDeleteAadUser**<br />Message: `User with SystemUserId={0} and AzureActiveDirectoryObjectId={1} is present in Azure Active Directory with state {2}. Please permanently delete user in Azure first.`|
+|`0x80048359`<br />`-2147187879`|Name: **CannotDeleteAadUser**<br />Message: `User with SystemUserId={0} and AzureActiveDirectoryObjectId={1} is present in Microsoft Entra ID with state {2}. Please permanently delete user in Microsoft Entra ID first.`|
 |`0x8004F880`<br />`-2147157888`|Name: **CannotDeleteActiveCaseCreationRule**<br />Message: `You can't delete an active rule. Deactivate the Record Creation and Update Rule, and then try deleting it.`|
 |`0x8004F894`<br />`-2147157868`|Name: **CannotDeleteActiveRecordCreationRuleItem**<br />Message: `You can’t delete an active record creation rule item. Deactivate the record creation rule, and then try deleting it.`|
 |`0x8004F850`<br />`-2147157936`|Name: **CannotDeleteActiveRule**<br />Message: `You can not delete an active routing rule. Deactivate the rule to delete it.`|
@@ -1564,7 +1564,7 @@
 |`0x8005E212`<br />`-2147098094`|Name: **ForwardMailboxUnexpectedIncomingDeliveryMethod**<br />Message: `Forward mailbox incoming delivery method can only be none or router.`|
 |`0x8005E213`<br />`-2147098093`|Name: **ForwardMailboxUnexpectedOutgoingDeliveryMethod**<br />Message: `Forward mailbox outgoing delivery method can only be none.`|
 |`0x80041d37`<br />`-2147214025`|Name: **GenericActiveDirectoryError**<br />Message: `Active Directory Error.`|
-|`0x80041d54`<br />`-2147213996`|Name: **GenericAzureActiveDirectoryError**<br />Message: `Azure Active Directory Error.`|
+|`0x80041d54`<br />`-2147213996`|Name: **GenericAzureActiveDirectoryError**<br />Message: `Microsoft Entra ID Error.`|
 |`0x80060752`<br />`-2147088558`|Name: **GenericImportTranslationsError**<br />Message: `Errors were encountered while processing the translations import file.`|
 |`0x8004F026`<br />`-2147160026`|Name: **GenericManagedPropertyFailure**<br />Message: `The evaluation of the current component(name={0}, id={1}) in the current operation ({2}) failed during managed property evaluation of condition: {3}`|
 |`0x8005F246`<br />`-2147093946`|Name: **GenericMetadataSyncFailed**<br />Message: `Sorry, something went wrong. Please try again, or restart the app.`|
@@ -1749,7 +1749,7 @@
 |`0x80072037`<br />`-2147016649`|Name: **IncorrectFileFormat**<br />Message: `The file {0} cannot be imported.`|
 |`0x8004A116`<br />`-2147180266`|Name: **IncorrectKeyVaultKeyTypeConfiguration**<br />Message: `Incorrect KeyVault KeyType Configuration.`|
 |`0x80048502`<br />`-2147187454`|Name: **IncorrectSingleFileMultipleEntityMap**<br />Message: `There should be two or more Entity Mappings defined when EntitiesPerFile in ImportMap is set to Multiple`|
-|`0x80048360`<br />`-2147187872`|Name: **IncorrectUserAzureState**<br />Message: `User with SystemUserId={0} and AzureActiveDirectoryObjectId={1} is present in Azure Active Directory with state {2}. AzureState can't be set to incorrect value={3}.`|
+|`0x80048360`<br />`-2147187872`|Name: **IncorrectUserAzureState**<br />Message: `User with SystemUserId={0} and AzureActiveDirectoryObjectId={1} is present in Microsoft Entra ID with state {2}. AzureState can't be set to incorrect value={3}.`|
 |`0x80060991`<br />`-2147087983`|Name: **IncreasingDaysWillResetMobileOfflineData**<br />Message: `Increasing the number of days will cause a reset of mobile offline data and a resynchronization with mobile devices.`|
 |`0x8005E008`<br />`-2147098616`|Name: **IndexOutOfRange**<br />Message: `The index {0} is out of range for {1}. Number of elements present are {2}.`|
 |`0x80060895`<br />`-2147088235`|Name: **IndexSizeConstraintViolated**<br />Message: `Index size exceeded the size limit of {0} bytes. The key is too large. Try removing some columns or making the strings in string columns shorter.`|
@@ -3320,7 +3320,7 @@
 |`0x80048423`<br />`-2147187677`|Name: **RulesInInconsistentStateFound**<br />Message: `One or more rules cannot be unpublished, either because they are in the process of being published, or are in a state where they cannot be unpublished.`|
 |`0x80090308`<br />`-2146893048`|Name: **RuntimeIntegrationPropertiesNotWriteable**<br />Message: `RuntimeIntegrationProperties attribute is not writeable. Please remove this attribute from the payload and try again. Solution unique name: {0}, Solution Id: {1}, Entity name: {2}, Entity primary key: {3}.`|
 |`0x8004F671`<br />`-2147158415`|Name: **RuntimeRibbonXmlValidation**<br />Message: `The most recent customized ribbon for a tab on this page cannot be generated. The out-of-box version of the ribbon is displayed instead.`|
-|`0x80097620`<br />`-2146863584`|Name: **RWCTokenGraphCallFallbackFailed**<br />Message: `Read write consistency token not honored by AAD and consecutive retry call without read write consistency token also failed.`|
+|`0x80097620`<br />`-2146863584`|Name: **RWCTokenGraphCallFallbackFailed**<br />Message: `Read write consistency token not honored by Microsoft Entra ID and consecutive retry call without read write consistency token also failed.`|
 |`0x8005E243`<br />`-2147098045`|Name: **S2SAccessTokenCannotBeAcquired**<br />Message: `Failed to acquire S2S access token from authorization server.`|
 |`0x80044259`<br />`-2147204519`|Name: **S2SNotConfigured**<br />Message: `Office Graph Integration relies on server-based SharePoint integration. To use this feature, enable server-based integration and have at least one active SharePoint site.`|
 |`0x80048ced`<br />`-2147185427`|Name: **SalesOrderAndInvoiceCurrencyNotEqual**<br />Message: `The currency of the record does not match the currency of the price list.`|
@@ -4166,7 +4166,7 @@
 |`0x8004032f`<br />`-2147220689`|Name: **UserCancelledMailMerge**<br />Message: `The mail merge operation was cancelled by the user.`|
 |`0x8004D24C`<br />`-2147167668`|Name: **UserCannotEnableWithoutLicense**<br />Message: `Cannot enable an unlicensed user`|
 |`0x8004D211`<br />`-2147167727`|Name: **UserDataNotFound**<br />Message: `The user data could not be found.`|
-|`0x80041d28`<br />`-2147214040`|Name: **UserDirectoryObjectIdNotFoundInAAD**<br />Message: `The User Directory Object Id ({0}) do not exist in Azure Active Directory.`|
+|`0x80041d28`<br />`-2147214040`|Name: **UserDirectoryObjectIdNotFoundInAAD**<br />Message: `The User Directory Object Id ({0}) does not exist in Microsoft Entra ID.`|
 |`0x80044507`<br />`-2147203833`|Name: **UserDoesNotHaveAccessToTheTenant**<br />Message: `User does not have access to the tenant.`|
 |`0x8004A113`<br />`-2147180269`|Name: **UserDoesNotHaveAdminOnlyModePermissions**<br />Message: `User does not have required privileges (or role membership) to access the org when it is in Admin Only mode.`|
 |`0x80090432`<br />`-2146892750`|Name: **UserDoesNotHaveAdminOrCustomizerPrivileges**<br />Message: `You must be a system administrator or system customizer to execute this request.`|
