@@ -25,12 +25,12 @@ Copilot chat is available when using Power Apps in a browser. It is not availabl
 
 > [!IMPORTANT]
 > - To use this feature, your admin must allow data movement across regions. Your environment must also be in a supported region. For information about supported regions and how to allow data movement across regions, see [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot).
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - This feature is in process of rolling out, and may not be available in your region yet. 
-> - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 > - This capability is powered by [Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability may be subject to usage limits or capacity throttling.
 > - Copilot isn't supported and won't work for environments that have customer-managed key (CMK) or have lockbox.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This feature is in process of rolling out, and may not be available in your region yet. 
+> - For more information about the preview, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
 
 ## How to use this feature
 
