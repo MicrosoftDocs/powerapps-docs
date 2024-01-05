@@ -34,9 +34,9 @@ Copilot chat is available when using Power Apps in a browser. It is not availabl
 
 ## How to use this feature
 
-1. In the Power Apps header, notice the **Copilot** button in the upper-right corner.
-2. Select the Copilot button to open the **Copilot** chat pane.
-3. Type in a question.
+1. In your web browser, go to [Power Apps](https://make.powerapps.com).
+1. In the Power Apps header, select the **Copilot** button in the upper-right corner. 
+1. In the **Copilot** chat pane, type in a question.
 
      > [!Note]
      > You must enter the text in English. This feature only supports the English language at this time.
@@ -47,10 +47,10 @@ Copilot chat is available when using Power Apps in a browser. It is not availabl
 Makers can turn off this feature on a per app-basis within app settings using the [Power Apps](https://make.powerapps.com) maker portal.
 
 1. Go to the [Power Apps](https://make.powerapps.com) maker portal.
-2. Select **Apps** in the navigation pane.
-3. Select the check mark next to a canvas app.
-4. Select **Settings** in the command bar. The **App settings** pane appears.
-5. Select **Off** for the **Copilot chat in web player (preview)** feature.
-6. Select **Save**.
+1. Select **Apps** in the navigation pane.
+1. Select the check mark next to a canvas app.
+1. Select **Settings** in the command bar. The **App settings** pane appears.
+1. Select **Off** for the **Copilot chat in web player (preview)** feature.
+1. Select **Save**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
