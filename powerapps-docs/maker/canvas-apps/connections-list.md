@@ -6,7 +6,7 @@ ms.topic: overview
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: mkaur
-ms.date: 01/02/2023
+ms.date: 01/05/2023
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -103,19 +103,18 @@ This is a secure type of connection.  For example, SharePoint uses this type of 
 
 ### Open-standard authorization (OAuth)
 
-This type of connection is also secure.  For example Twitter uses this type of authentication.  When you connect, you must supply your user name and password.  As an author you can create and work with the data source with your credentials.  When you publish your application and your application user logs in, they must also supply their credentials.  Therefore this type of connection is secure as your users must use their own credentials to access the data source service. 
+This type of connection is also secure.  For example Twitter uses this type of authentication.  When you connect, **you must supply your user name and password.**  As an author you can create and work with the data source with your credentials.  When you publish your application and your application user logs in, they must also supply their credentials.  Therefore this type of connection is secure as your users must use their own credentials to access the data source service. 
 
-### SQL User name and password authentication
+### Shared connections / Secure Implicit Connections
 
-This type of connection isn't secure because it doesn't rely on end-user authentication. **It should only be used in cases where you can safely assume that everyone who has access to this connection can see and use all of the data to which the connection provides access.**  You can't reliably lock down portions of the data accessible within the connection. For instance, if the connection allows access to a single table, you can't rely on a userID to filter and only show data for that specific user within that table. For reliable security, use a more secure connection such as [Microsoft Entra Integrated](connections-list.md#microsoft-entra-id).  
+In a shared connection the user name and password for the connection is supplied by the Power Apps author at the time the data source is created in the application. The connection authentication to the data source is then **Implicitly Shared** with end users.  Once the application is published, the connection is also published and available to your users.  
 
-In SQL Server, this type of connection is called **SQL Server Authentication**.  Many other database data sources provide a similar capability.  When you publish your application, your users don't need to supply a unique user name and password.  They're using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users can't see the user name or password, but the connection will be available to them.  **There are valid scenarios for this type of connection. For instance if you have a read-only database that is available to everyone in the company. Reference data scenarios (for example, a corporate calendar) can be useful for this kind of connection.** More information: [Use Microsoft SQL Server securely with Power Apps](connections/sql-server-security.md)
+Prior to January 2024, your end users could take the connection that is shared with them and create separate new applications.  Your users can't see the user name or password, but the connection would be available to them. However, **after January 2024, all newly created shared connections are secured.** Note that old apps must be republished to be secure. This means that the connection is no longer shared with end users. The published Power App talks to a connection proxy. The connection proxy will only talk to the specific Power App for which it is linked.  The connection proxy limits the actions that are sent to the connections to the ones in the Power App **{Get, Put/Patch, Delete}** for a given data source. If you have an app using the connections published prior to January 2024, you should republish your application and unshare any connections with end users that should not have them. 
 
-### Secure Implicit Connections
+In SQL Server, an example this type of connection is **SQL Server Authentication**.  Many other database data sources provide a similar capability.  When you publish your application, your users don't need to supply a unique user name and password.  
 
-Secure implicit shared connections replace the previous implicitly shared connections. Power Apps implicitly shared connections are ones that use a fixed credential such as a SQL Server connection string rather than the end user's specific credentials such as Microsoft Entra ID. With this feature, connections are not directly shared with Power Apps application users. Instead, a proxy connection object that only grants access to the underlying resource, such as a specific SQL server table, is shared. End user authors can't create new applications with either the connection or the proxy connection. This feature also limits the end user to actions such as **get**, **put/patch**, and **delete** that are defined in the app. The result is that end users who are also authors can't create new applications with either the connection or the proxy connection object.
+#### Notification to update your apps (secure implicit connections)
 
-#### Notification to update your apps
 If you have applications that may be upgraded to use this feature then you'll see a message on the Apps page. It indicates the number of apps that need your attention.  
 
    > [!div class="mx-imgBorder"]
