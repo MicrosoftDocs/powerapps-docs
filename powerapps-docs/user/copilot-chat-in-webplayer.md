@@ -39,8 +39,8 @@ Copilot chat is available when using Power Apps in a browser. It is not availabl
 1. In the **Copilot** chat pane, type in a question.
 
      > [!Note]
-     > You must enter the text in English. This feature only supports the English language at this time.
-     > In some instances, the **Copilot** button is disabled because we are preparing your data. Once we have finished preparing your data, you must refresh the browser to access Copilot.
+     > - You must enter the text in English. This feature only supports the English language at this time.
+     > - In some instances, the **Copilot** button is disabled because we are preparing your data. Once we have finished preparing your data, you must refresh the browser to access Copilot.
 
 ## Turn off this feature
 
