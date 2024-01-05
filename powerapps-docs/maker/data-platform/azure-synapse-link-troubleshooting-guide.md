@@ -26,13 +26,8 @@ When opening a Synapse Link profile, you may see an error with a message and lin
 
 | Error message  | Cause  | Resolution |
 | -------- | -------- | -------- |
-| MSI-801: Synapse Link is unable to access storage account secured via MSI. Data updates are paused 
-| You have enabled managed services identify (MSI) to the storage account selected for this Synapse Link profile. <br> Synase Link service does not have access to the storage account due to MSI configuration issues and the service has paused. <br> You need revisit and verify MSI configuration 
-| Verify that the MSI policy is not deleted <br> Validate that MSI is granted with the required access privileges. <br> See documentation for [MSI configuration](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-msi) <br> Once required access is granted, the service will resume
-|  
-| ADLS-802: Synapse Link is unable to access storage account. Data updates are paused 
-| Row 2, Column 2 
-| Row 2, Column 3 
-|
+| MSI-801: Synapse Link is unable to access storage account secured via MSI. Data updates are paused | You have enabled managed services identify (MSI) to the storage account selected for this Synapse Link profile. <br> Synase Link service does not have access to the storage account due to MSI configuration issues and the service has paused. <br> You need revisit and verify MSI configuration | Verify that the MSI policy is not deleted <br> Validate that MSI is granted with the required access privileges. <br> See documentation for [MSI configuration](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-msi) <br> Once required access is granted, the service will resume |  
+| ADLS-802: Synapse Link is unable to access storage account. Data updates are paused | Synapse Link service can’t access storage account and the service has paused. <br> Permissions associated with storage account assigned to Synapse Link profile may have changed or the storage account may not exist.| Verify that the storage account exists and that the Azure Synapse Link service has owner access to storage account. <br> See [configuration documents](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-data-lake#prerequisites) <br> Once required access is granted, the service will resume |
+
 
 
