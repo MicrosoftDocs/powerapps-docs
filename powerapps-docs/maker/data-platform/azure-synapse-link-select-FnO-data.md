@@ -35,29 +35,30 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 > 
 > - 10.0.34 (PU58) cumulative update 7.0.6931.171 or later.
 > - 10.0.35 (PU59) cumulative update 7.0.6972.149 or later.
-> - 10.0.36 (PU60) cumulative update 7.0.7036.78 or later.
-> - 10.0.37 (PU61) cumulative update 7.0.7068.39 or later. 
+> - 10.0.36 (PU60) cumulative update 7.0.7036.133 or later. 
+> - 10.0.37 (PU61) cumulative update 7.0.7068.109 or later.
+> - 10.0.38 (PU62) cumulative update 7.0.7120.59 or later
 >
 > The [Export to Data Lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) in finance and operations apps is being combined with Azure Synapse Link for Dataverse. We will announce deprecation of Export to Data Lake service and upgrade existing customers to Azure Synapse Link for Dataverse. 
 >
 > If you're planning to adopt the Export to Data Lake feature in finance and operations apps, you should consider adopting Azure Synapse Link with finance and operations data support instead.
-> We will provide guidance and tools for existing customers to transition to Azure Synapse Link for Dataverse. If you're currently using the Export to Data Lake feature in finance and operations apps, you can continue to use both services in parallel until the transition. To stay in touch with the product team and community, you can join the [Viva engage group](https://www.yammer.com/dynamicsaxfeedbackprograms/). 
+> We will provide guidance and tools for existing customers to transition to Azure Synapse Link for Dataverse. If you're currently using the Export to Data Lake feature in finance and operations apps, you can continue to use both services in parallel until the transition. To stay in touch with the product team and community, you can join the [Viva engage group](https://aka.ms/SynapseLinkforDynamics). 
 
 ## Prerequisites
 
-- You must have a finance and operations sandbox (Tier-2) environment that's version update 10.0.34 (PU 58) or later. You can use a finance and operations Tier-1 environment (also known as a cloud-hosted environment) for validation. Your cloud-hosted environment must be version update 10.0.36 (PU 60) or later.
+- You must have a finance and operations sandbox (Tier-2) environment with application versions mentioned earlier. You can use a finance and operations Tier-1 environment (also known as a cloud-hosted environment) for validation. Your cloud-hosted environment must be version update 10.0.36 (PU 60) or later with cumulative updates mentioned above.
 - The finance and operations apps environment must be linked with Microsoft Power Platform.
 - You must have an Azure subscription that has owner access. (You can also add finance and operations data to an existing storage account that's configured with Azure Synapse Link.)
 
     - Storage account
     - Azure Synapse Analytics workspace
-    - Azure Synapse Spark pool that has version 3.1 or later (for Delta Lake conversion)
+    - Azure Synapse Spark pool that has version 3.3 or later (for Delta Lake conversion)
 
 ## Microsoft Power Platform integration
 
-You can enable the preview in an existing finance and operations apps environment if the environment is updated to **version 10.0.34 (PU 58) or later**. You can validate the feature by provisioning a new Tier-1 (cloud-hosted) environment that's **version 10.0.36 (PU 60) or later**.
+You must link your Finance and operations environment with Microsoft Power Platform.  
 
-You must enable Microsoft Power Platform integration. You can link with Microsoft Power Platform when you deploy the new environment. For more information about Microsoft Power Platform integration, see [Enable the Microsoft Power Platform integration](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-power-platform-integration#enable-during-deploy).
+You can link with Microsoft Power Platform when you deploy the new environment. For more information about Microsoft Power Platform integration, see [Enable the Microsoft Power Platform integration](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-power-platform-integration#enable-during-deploy).
 
 To confirm that the finance and operations apps environment is linked with Microsoft Power Platform, review the **Environment** page in Lifecycle Services.
 
@@ -66,7 +67,9 @@ To confirm that the finance and operations apps environment is linked with Micro
 
 ## Add configurations in a finance and operations apps environment
 
-During the preview, you must enable the **Sql row version change tracking** configuration key. To enable this configuration key, you must turn on maintenance mode. For more information about how to use maintenance mode, see [Turn maintenance mode on and off in DevTest/Demo environments hosted in Customer's subscription](/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode#turn-maintenance-mode-on-and-off-in-devtestdemo-environments-hosted-in-customers-subscription).
+You must enable the **Sql row version change tracking** configuration key. In Finance and Operations versions 10.0.39 (PU63) or later, this configuration key may be enabled by default.
+
+To enable this configuration key, you must turn on maintenance mode. For more information about how to use maintenance mode, see [Turn maintenance mode on and off in DevTest/Demo environments hosted in Customer's subscription](/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode#turn-maintenance-mode-on-and-off-in-devtestdemo-environments-hosted-in-customers-subscription).
 
 ![Screenshot that shows the Sql row version change tracking configuration key enabled.](media/Synapse-Link-Enable-Fno-Configuration.png)
 
@@ -81,12 +84,9 @@ You can enable both finance and operations entities and finance and operations a
 
 Finance and operations apps tables are allowed only in Azure Synapse Link. Makers can't currently use them to build apps. **You don't have to define finance and operations apps tables as virtual entities, and you don't have to enable change tracking for each table**.
 
-To enable this feature during the preview, you must use the following URL to open the maker portal. Replace `<environment ID>` with the ID of your environment.
+To include Finance and operations tables in Synapse Link, you must enable [Delta lake feature](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-delta-lake) in your Synapse Link profile. Finance and Operations table selection will not be visible if your Synapse Link profile is not configured for Delta lake. 
 
-`https://make.powerapps.com/environments/<environment ID>/exporttodatalake?athena.enableFnOTables=true`
-
-> [!NOTE]
-> Selection of the Delta Lake feature is mandatory for finance and operations apps Tables preview.
+To include incremental data with Synapse Link (referrred to as 
 
 ### Known limitations
 
