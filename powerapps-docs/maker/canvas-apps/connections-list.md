@@ -6,7 +6,7 @@ ms.topic: overview
 ms.custom: canvas
 ms.collection: get-started
 ms.reviewer: mkaur
-ms.date: 01/02/2023
+ms.date: 01/05/2023
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
