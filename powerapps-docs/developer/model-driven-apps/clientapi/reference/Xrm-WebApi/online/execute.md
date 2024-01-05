@@ -1,9 +1,9 @@
 ---
 title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the Xrm.WebApi.online.execute method.
-author: adrianorth
-ms.author: aorth
-ms.date: 03/12/2022
+author: lancedMicrosoft
+ms.author: lanced
+ms.date: 12/08/2023
 ms.reviewer: jdaly
 
 ms.topic: reference
@@ -71,6 +71,9 @@ Find these examples below:
 - [Delete a record](#delete-a-record)
 - [Associate a record](#associate-a-record)
 - [Disassociate a record](#disassociate-a-record)
+
+> [!TIP]
+> You can use the [Dataverse REST Builder](https://github.com/GuidoPreite/DRB) to generate JavaScript code that uses the `Xrm.WebApi.online.execute` method.
 
 ### Execute an action
 

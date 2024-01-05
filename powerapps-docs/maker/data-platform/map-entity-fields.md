@@ -96,7 +96,7 @@ The following rules show what kinds of data can be mapped.
 - The target column can’t be mapped to another column already.  
 - The source column must be visible on the form.  
 - The target column must be a column that a user can enter data into.  
-- Address ID values can’t be mapped.
+- Address ID values or columns of type partylist can’t be mapped.
 - If you map to or from a column that isn’t displayed on a form, the mapping won't be done until the column is added to a form.
 - If the columns are choices, the integer values for each option should be identical.  
   
