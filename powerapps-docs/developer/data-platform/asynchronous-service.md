@@ -1,12 +1,12 @@
 ---
-title: "Asynchronous service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the asynchronous service that manages system jobs." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "swylezol" # GitHub ID
+title: "Asynchronous service (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about the asynchronous service that manages system jobs."
+ms.date: 01/05/2024
+ms.reviewer: pehecke
+ms.topic: article
+author: swylezol
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: swylezol 
 search.audienceType: 
   - developer
 contributors:
@@ -15,11 +15,9 @@ contributors:
 ---
 # Asynchronous service
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
 The asynchronous service executes long-running operations independent of the main Microsoft Dataverse core operation. This results in improved overall system performance and improved scalability. The asynchronous service features a managed first-in, first-out (FIFO) queue for the execution of asynchronous registered plug-ins, workflows, and operations such as bulk mail, bulk import, and campaign activity propagation. These operations are registered with the asynchronous service and executed periodically when the service processes its queue.
 
-After an event occurs and any synchronous extensions have been processed, the platform serializes the context for any asynchronous extensions and saves it to the database as a **System Job** in the [AsyncOperation Table](reference/entities/asyncoperation.md). The system job defines and tracks the execution of the asynchronous operation. As resources become available system jobs are processed and the operations they define are executed. Any data operations defined in the extension will again be processed by the event execution pipeline, but this time as a synchronous operation.
+After an event occurs and any synchronous extensions have been processed, the platform serializes the context for any asynchronous extensions and saves it in the [System Job (AsyncOperation) table](reference/entities/asyncoperation.md). The system job defines and tracks the execution of the asynchronous operation. As resources become available. Dataverse processes system jobs and executes the operations they define. Any data operations defined in the extension will again be processed by the event execution pipeline, but this time as a synchronous operation.
 
 ## Execution order and dependencies
 
@@ -47,7 +45,7 @@ You can perform the following operations to manage system jobs using the [AsyncO
 
 ## Retrieve system jobs
 
-You can view system jobs in the application by navigating to **Settings** > **System** > **System Jobs** and you can also search them using advanced find.
+You can view system jobs in the application by navigating to **Settings** > **System** > **System Jobs** and you can also search them using [Advanced find in model-driven apps](../../user/advanced-find.md).
 
 Using code, you can retrieve system jobs like any other table. The following table lists selected columns which are important in understanding system jobs:
 
@@ -90,15 +88,15 @@ Using code, you can retrieve system jobs like any other table. The following tab
 
 ### Examples
 
-You can use the following examples to retrieve System Job data
+You can use the following examples to retrieve System Job data.
 
-#### Web API
+#### [Web API](#tab/webapi)
 
 Use the following Web API Query to retrieve the columns in the table above. More information: [Query Data using the Web API](webapi/query-data-web-api.md)
 
 ```
-<organization URL>/api/data/v9.0/asyncoperations?
-$select=
+GET <organization URL>/api/data/v9.2/asyncoperations?$top=1000
+&$select=
 asyncoperationid,
 completedon,
 createdon,
@@ -133,58 +131,122 @@ owningbusinessunit($select=name),
 owningextensionid($select=name),
 owningteam($select=name),
 owninguser($select=fullname)
-
 ```
 
 > [!NOTE]
 > With the Web API there is a single-valued navigation property for each table that supports system jobs. The name of this navigation property follows the pattern `regardingobjectid_<table logical name>`.
 
-#### FetchXml
+#### [FetchXml](#tab/fetchxml)
 
 Use the following FetchXML to retrieve the columns in the table above. More information: [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
 
 ```xml
-<fetch>
-  <entity name="asyncoperation" >
-    <attribute name="asyncoperationid" />
-    <attribute name="completedon" />
-    <attribute name="createdby" />
-    <attribute name="createdon" />
-    <attribute name="data" />
-    <attribute name="dependencytoken" />
-    <attribute name="depth" />
-    <attribute name="errorcode" />
-    <attribute name="executiontimespan" />
-    <attribute name="friendlymessage" />
-    <attribute name="iswaitingforevent" />
-    <attribute name="message" />
-    <attribute name="messagename" />
-    <attribute name="modifiedby" />
-    <attribute name="modifiedon" />
-    <attribute name="name" />
-    <attribute name="operationtype" />
-    <attribute name="ownerid" />
-    <attribute name="owningbusinessunit" />
-    <attribute name="owningextensionid" />
-    <attribute name="owningteam" />
-    <attribute name="owninguser" />
-    <attribute name="postponeuntil" />
-    <attribute name="primaryentitytype" />
-    <attribute name="recurrencepattern" />
-    <attribute name="recurrencestarttime" />
-    <attribute name="regardingobjectid" />
-    <attribute name="retrycount" />
-    <attribute name="sequence" />
-    <attribute name="startedon" />
-    <attribute name="statecode" />
-    <attribute name="utcconversiontimezonecode" />
-    <attribute name="workflowstagename" />
+<fetch top='1000'>
+  <entity name='asyncoperation' >
+    <attribute name='asyncoperationid' />
+    <attribute name='completedon' />
+    <attribute name='createdby' />
+    <attribute name='createdon' />
+    <attribute name='data' />
+    <attribute name='dependencytoken' />
+    <attribute name='depth' />
+    <attribute name='errorcode' />
+    <attribute name='executiontimespan' />
+    <attribute name='friendlymessage' />
+    <attribute name='iswaitingforevent' />
+    <attribute name='message' />
+    <attribute name='messagename' />
+    <attribute name='modifiedby' />
+    <attribute name='modifiedon' />
+    <attribute name='name' />
+    <attribute name='operationtype' />
+    <attribute name='ownerid' />
+    <attribute name='owningbusinessunit' />
+    <attribute name='owningextensionid' />
+    <attribute name='owningteam' />
+    <attribute name='owninguser' />
+    <attribute name='postponeuntil' />
+    <attribute name='primaryentitytype' />
+    <attribute name='recurrencepattern' />
+    <attribute name='recurrencestarttime' />
+    <attribute name='regardingobjectid' />
+    <attribute name='retrycount' />
+    <attribute name='sequence' />
+    <attribute name='startedon' />
+    <attribute name='statecode' />
+    <attribute name='utcconversiontimezonecode' />
+    <attribute name='workflowstagename' />
   </entity>
 </fetch>
 ```
 
 > [!NOTE]
-> Every table that supports system jobs has a listed Many-to-One relationship with the `AsyncOperation` table via the `RegardingObjectId` lookup column. The name of this relationship follows the pattern `<table schema name>_AsyncOperations`.
+> Every table that supports system jobs has a listed Many-to-One relationship with the `AsyncOperation` table via the [`RegardingObjectId` lookup column](reference/entities/asyncoperation.md#BKMK_RegardingObjectId). The name of this relationship follows the pattern `<table schema name>_AsyncOperations`.****
+
+#### [SQL](#tab/sql)
+
+You can use SQL to query the `asyncoperation` table using the [Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md) when it is enabled.
+
+```sql
+SELECT TOP (1000) [asyncoperationid]
+      ,[completedon]
+      ,[createdon]
+      ,[data]
+      ,[dependencytoken]
+      ,[depth]
+      ,[errorcode]
+      ,[executiontimespan]
+      ,[friendlymessage]
+      ,[iswaitingforevent]
+      ,[message]
+      ,[messagename]
+      ,[modifiedon]
+      ,[name]
+      ,[operationtype]
+      ,[operationtypename]      
+      ,[ownerid]
+      ,[postponeuntil]
+      ,[recurrencepattern]
+      ,[recurrencestarttime]
+      ,[regardingobjectid]
+      ,[regardingobjectidname]
+      ,[retrycount]
+      ,[sequence]
+      ,[startedon]
+      ,[statecode]
+      ,[utcconversiontimezonecode]
+      ,[workflowstagename]
+  FROM [dbo].[asyncoperation]
+```
+
+---
+
+### Diagnostic queries
+
+Use queries like the following to help diagnose problems.
+
+#### [Web API](#tab/webapi)
+
+```
+TODO
+```
+
+#### [FetchXml](#tab/fetchxml)
+
+```xml
+TODO
+```
+
+#### [SQL](#tab/sql)
+
+```sql
+TODO
+```
+
+---
+
+
+
 
 ### Operation Types
 
@@ -214,7 +276,7 @@ Recurring system jobs require information about when they should start and how o
 
 Because you will not create `AsyncOperation` records directly with code, you will just need to interpret these values if you query the data. You will only set these properties indirectly by using messages that will create new system jobs. The `BulkDelete` and `BulkDeleteDuplicates` messages both include parameters or properties in the corresponding Web API actions or SDK for .NET request classes. More information: <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest> Class, <xref:Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates Action>, <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> Class, and <xref:Microsoft.Dynamics.CRM.BulkDelete?text=BulkDelete Action>
 
-The `RecurrenceStartTime` is simply a datetime value to indicate when the system job should start. If it isn’t set, the system job was expected to start immediately.
+The `RecurrenceStartTime` is simply a datetime value to indicate when the system job should start. If it isn't set, the system job was expected to start immediately.
 
 The `RecurrencePattern` column stores information about how frequently recurring system jobs occur. This value may be set by the platform when a new asyncoperation table is created. You may set this value to change the pattern.
 
@@ -274,7 +336,7 @@ Together with options to manage views, the following options to manage system jo
 |Postpone|Using the **More Actions** menu.<br />Reschedules a system job|
 |Pause|Using the **More Actions** menu.<br />Pauses a system job.|
 
-Whether the requested operation will occur depends on the state of the system job. For example, you cannot pause a job that has already completed or hasn’t started yet. The table below describes the conditions for each change and what will happen when they are selected.
+Whether the requested operation will occur depends on the state of the system job. For example, you cannot pause a job that has already completed or hasn't started yet. The table below describes the conditions for each change and what will happen when they are selected.
 
 |Option|Valid StateCode values|Change|
 |--|--|--|
