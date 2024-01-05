@@ -35,6 +35,7 @@ Copilot chat is available when using Power Apps in a browser. It is not availabl
 ## How to use this feature
 
 1. In your web browser, go to [Power Apps](https://make.powerapps.com).
+1. Open a canvas app.
 1. In the Power Apps header, select the **Copilot** button in the upper-right corner. 
 1. In the **Copilot** chat pane, type in a question.
 
