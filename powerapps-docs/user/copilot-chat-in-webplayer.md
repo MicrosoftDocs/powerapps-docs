@@ -19,7 +19,7 @@ search.audienceType:
 
 End users can use Copilot chat to quickly get data insights for canvas apps that use Dataverse as their primary data source. Copilot chat allow users to analyze and summarize data easily through conversations with natural language. 
 
-No maker invovlement is needed for users to take advantage of this feature.
+No maker involvement is needed for users to take advantage of this feature.
 
 Copilot chat is available when using Power Apps in a browser. It is not available in the Power Apps mobile app.  
 
