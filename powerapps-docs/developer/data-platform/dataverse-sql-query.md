@@ -40,7 +40,7 @@ You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-ma
 
 #### Security and authentication
 
-Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL. 
+Only Microsoft Entra ID authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL. 
 
 ![Connec dialog.](media/ssms-connect-dialog.PNG)
 
@@ -137,7 +137,7 @@ Querying data using SQL does not trigger any plug-ins registered on the <xref:Mi
 
 Queries using the TDS endpoint execute under the service protection API limits.
 
-The TDS endpoint can't be used with elastic tables. More information: [Elastic tables (Preview)](elastic-tables.md)
+The TDS endpoint can't be used with elastic tables. More information: [Elastic tables](elastic-tables.md)
 
 ## Troubleshooting connection problems
 
@@ -148,9 +148,9 @@ Below are some know error conditions and how to resolve them.
 
 ### Authentication
 
-Only Azure Active Directory authentication is supported on the Dataverse endpoint SQL connection. The preferred authentication mechanism is "Azure Active Directory – Universal" with multi-factor authentication (MFA). However, "Azure Active Directory – Password" will work if MFA is not configured. If you try to use other forms of authentication, you will see errors like the following.
+Only Microsoft Entra ID authentication is supported on the Dataverse endpoint SQL connection. The preferred authentication mechanism is "Microsoft Entra ID – Universal" with multi-factor authentication (MFA). However, "Microsoft Entra ID – Password" will work if MFA is not configured. If you try to use other forms of authentication, you will see errors like the following.
 
-- Error returned when using **Azure Active Directory – Integrated** authentication.
+- Error returned when using **Microsoft Entra ID – Integrated** authentication.
 
 "Login failed: The HTTP request was forbidden with client authentication scheme 'Anonymous'.
 RequestId: TDS;81d8a4f7-0d49-4d21-8f50-04364bddd370;2

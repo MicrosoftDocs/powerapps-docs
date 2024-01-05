@@ -4,7 +4,7 @@ description: Troubleshooting and known issues for the Power Apps mobile app
 author: trdehove
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/01/2023
+ms.date: 10/25/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.reviewer: sericks
@@ -17,9 +17,6 @@ contributors:
 # Troubleshoot issues in the Power Apps mobile app
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
-
-> [!NOTE]
-> If you are having an issue with Power Apps for iOS or Android and you don't find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team.
 
 ## Error: A major update is available. Upgrade your app to the latest version to keep your app working. If you are unable to upgrade, contact your administrator.
 
@@ -91,8 +88,6 @@ If the issue is still not fixed, then try these steps:
 4. Install Microsoft Authenticator again and add your back up accounts again.
 5. Install [Power Apps mobile](../mobile/run-powerapps-on-mobile.md).
 6. Open Power Apps mobile and sign in.
-
-If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
 
 ## App list is empty
 

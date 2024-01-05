@@ -1,7 +1,7 @@
 ---
 title: "InteractionForEmail table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the InteractionForEmail table/entity."
-ms.date: 09/01/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -830,6 +830,8 @@ Listed by **SchemaName**.
 - [interactionforemail_ActivityPointers](#BKMK_interactionforemail_ActivityPointers)
 - [interactionforemail_AsyncOperations](#BKMK_interactionforemail_AsyncOperations)
 - [interactionforemail_chats](#BKMK_interactionforemail_chats)
+- [interactionforemail_adx_inviteredemptions](#BKMK_interactionforemail_adx_inviteredemptions)
+- [interactionforemail_adx_portalcomments](#BKMK_interactionforemail_adx_portalcomments)
 
 
 ### <a name="BKMK_interactionforemail_ActivityPointers"></a> interactionforemail_ActivityPointers
@@ -875,6 +877,40 @@ Same as the [interactionforemail_chats](chat.md#BKMK_interactionforemail_chats) 
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|interactionforemail_chats|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_interactionforemail_adx_inviteredemptions"></a> interactionforemail_adx_inviteredemptions
+
+**Added by**: Active Solution Solution
+
+Same as the [interactionforemail_adx_inviteredemptions](adx_inviteredemption.md#BKMK_interactionforemail_adx_inviteredemptions) many-to-one relationship for the [adx_inviteredemption](adx_inviteredemption.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_inviteredemption|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|interactionforemail_adx_inviteredemptions|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_interactionforemail_adx_portalcomments"></a> interactionforemail_adx_portalcomments
+
+**Added by**: Active Solution Solution
+
+Same as the [interactionforemail_adx_portalcomments](adx_portalcomment.md#BKMK_interactionforemail_adx_portalcomments) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|interactionforemail_adx_portalcomments|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 

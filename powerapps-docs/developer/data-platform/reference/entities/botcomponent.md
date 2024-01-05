@@ -1,7 +1,7 @@
 ---
 title: "Chatbot subcomponent (botcomponent)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Chatbot subcomponent (botcomponent)  table/entity."
-ms.date: 09/01/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -1308,6 +1308,7 @@ Relationship details provided where the botcomponent table is the first table in
 - [botcomponent_environmentvariabledefinition](#BKMK_botcomponent_environmentvariabledefinition)
 - [botcomponent_workflow](#BKMK_botcomponent_workflow)
 - [botcomponent_connectionreference](#BKMK_botcomponent_connectionreference)
+- [botcomponent_aipluginoperation](#BKMK_botcomponent_aipluginoperation)
 
 
 ### <a name="BKMK_bot_botcomponent"></a> bot_botcomponent
@@ -1403,6 +1404,29 @@ IntersectEntityName: botcomponent_connectionreference<br />
 |LogicalName|connectionreference|
 |IntersectAttribute|connectionreferenceid|
 |NavigationPropertyName|botcomponent_connectionreference|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+
+### <a name="BKMK_botcomponent_aipluginoperation"></a> botcomponent_aipluginoperation
+
+IntersectEntityName: botcomponent_aipluginoperation<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|botcomponentid|
+|IsCustomizable|False|
+|LogicalName|botcomponent|
+|NavigationPropertyName|botcomponent_aipluginoperation|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|aipluginoperation|
+|IntersectAttribute|aipluginoperationid|
+|NavigationPropertyName|botcomponent_aipluginoperation|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 
 

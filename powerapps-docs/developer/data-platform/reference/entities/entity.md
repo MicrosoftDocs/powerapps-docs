@@ -1,7 +1,7 @@
 ---
 title: "Entity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Entity table/entity."
-ms.date: 09/01/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -450,6 +450,9 @@ Listed by **SchemaName**.
 - [entity_entityanalyticsconfig](#BKMK_entity_entityanalyticsconfig)
 - [sharedlinksetting_extensionofrecordid](#BKMK_sharedlinksetting_extensionofrecordid)
 - [entity_serviceplanmapping](#BKMK_entity_serviceplanmapping)
+- [DVFileSearchEntity_Entity_Entity](#BKMK_DVFileSearchEntity_Entity_Entity)
+- [DVTableSearchEntity_Entity_Entity](#BKMK_DVTableSearchEntity_Entity_Entity)
+- [AIPluginOperation_Entity_Entity](#BKMK_AIPluginOperation_Entity_Entity)
 - [virtualentitymetadata_extensionofrecordid](#BKMK_virtualentitymetadata_extensionofrecordid)
 - [metadataforarchival_extensionofrecordid](#BKMK_metadataforarchival_extensionofrecordid)
 - [msdyn_insightsstorevirtualentity_extensionofrecordid](#BKMK_msdyn_insightsstorevirtualentity_extensionofrecordid)
@@ -577,6 +580,57 @@ Same as the [entity_serviceplanmapping](serviceplanmapping.md#BKMK_entity_servic
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_DVFileSearchEntity_Entity_Entity"></a> DVFileSearchEntity_Entity_Entity
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+Same as the [DVFileSearchEntity_Entity_Entity](dvfilesearchentity.md#BKMK_DVFileSearchEntity_Entity_Entity) many-to-one relationship for the [dvfilesearchentity](dvfilesearchentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvfilesearchentity|
+|ReferencingAttribute|entity|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|DVFileSearchEntity_Entity_Entity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_DVTableSearchEntity_Entity_Entity"></a> DVTableSearchEntity_Entity_Entity
+
+**Added by**: AIPlatformExtensionsComponents Solution Solution
+
+Same as the [DVTableSearchEntity_Entity_Entity](dvtablesearchentity.md#BKMK_DVTableSearchEntity_Entity_Entity) many-to-one relationship for the [dvtablesearchentity](dvtablesearchentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|dvtablesearchentity|
+|ReferencingAttribute|entity|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|DVTableSearchEntity_Entity_Entity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_AIPluginOperation_Entity_Entity"></a> AIPluginOperation_Entity_Entity
+
+**Added by**: AIPlatformExtensionsCore Solution Solution
+
+Same as the [AIPluginOperation_Entity_Entity](aipluginoperation.md#BKMK_AIPluginOperation_Entity_Entity) many-to-one relationship for the [aipluginoperation](aipluginoperation.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|aipluginoperation|
+|ReferencingAttribute|entity|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|AIPluginOperation_Entity_Entity|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_virtualentitymetadata_extensionofrecordid"></a> virtualentitymetadata_extensionofrecordid
 
 **Added by**: Active Solution Solution
@@ -678,6 +732,16 @@ Same as the [msdyn_entity_msdyn_entitylinkchatconfiguration](msdyn_entitylinkcha
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the Entity table is the first table in the relationship. Listed by **SchemaName**.
+
+
+### <a name="BKMK_card_entity_connections"></a> card_entity_connections
+
+See the [card_entity_connections](card.md#BKMK_card_entity_connections) many-to-many relationship for the [card](card.md) table/entity.
 
 ### See also
 

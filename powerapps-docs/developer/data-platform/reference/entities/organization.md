@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 09/01/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -189,6 +189,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [FiscalYearFormatSuffix](#BKMK_FiscalYearFormatSuffix)
 - [FiscalYearFormatYear](#BKMK_FiscalYearFormatYear)
 - [FiscalYearPeriodConnect](#BKMK_FiscalYearPeriodConnect)
+- [FlowRunTimeToLiveInSeconds](#BKMK_FlowRunTimeToLiveInSeconds)
 - [FullNameConventionCode](#BKMK_FullNameConventionCode)
 - [FutureExpansionWindow](#BKMK_FutureExpansionWindow)
 - [GenerateAlertsForErrors](#BKMK_GenerateAlertsForErrors)
@@ -2570,7 +2571,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_EnableFlowsInSolutionByDefault"></a> EnableFlowsInSolutionByDefault
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -2595,7 +2596,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_EnableFlowsInSolutionByDefaultGracePeriod"></a> EnableFlowsInSolutionByDefaultGracePeriod
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -3266,6 +3267,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|5|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_FlowRunTimeToLiveInSeconds"></a> FlowRunTimeToLiveInSeconds
+
+**Added by**: Power Automate Core Components Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Time to live (in seconds) for flow run|
+|DisplayName|Time to live (in seconds) for flow run|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|flowruntimetoliveinseconds|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_FullNameConventionCode"></a> FullNameConventionCode
@@ -4403,7 +4422,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_IsDesktopFlowSchemaV2Enabled"></a> IsDesktopFlowSchemaV2Enabled
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -5486,7 +5505,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_IsRpaAutoscaleAadJoinEnabled"></a> IsRpaAutoscaleAadJoinEnabled
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -5511,7 +5530,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_IsRpaAutoscaleEnabled"></a> IsRpaAutoscaleEnabled
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -5536,7 +5555,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_IsRpaBoxCrossGeoEnabled"></a> IsRpaBoxCrossGeoEnabled
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -5561,7 +5580,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_IsRpaBoxEnabled"></a> IsRpaBoxEnabled
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -5586,7 +5605,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_IsRpaUnattendedEnabled"></a> IsRpaUnattendedEnabled
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -6665,7 +6684,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_OptOutSchemaV2EnabledByDefault"></a> OptOutSchemaV2EnabledByDefault
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -9806,8 +9825,6 @@ Listed by **SchemaName**.
 - [organization_msdyn_kmpersonalizationsetting](#BKMK_organization_msdyn_kmpersonalizationsetting)
 - [organization_virtualentitymetadata](#BKMK_organization_virtualentitymetadata)
 - [organization_mobileofflineprofileextension](#BKMK_organization_mobileofflineprofileextension)
-- [organization_teammobileofflineprofilemembership](#BKMK_organization_teammobileofflineprofilemembership)
-- [organization_usermobileofflineprofilemembership](#BKMK_organization_usermobileofflineprofilemembership)
 - [organization_organizationdatasyncsubscription](#BKMK_organization_organizationdatasyncsubscription)
 - [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
 - [organization_organizationdatasyncsubscriptionfnotable](#BKMK_organization_organizationdatasyncsubscriptionfnotable)
@@ -9816,17 +9833,23 @@ Listed by **SchemaName**.
 - [organization_metadataforarchival](#BKMK_organization_metadataforarchival)
 - [organization_retentionoperationdetail](#BKMK_organization_retentionoperationdetail)
 - [organization_msdyn_appinsightsmetadata](#BKMK_organization_msdyn_appinsightsmetadata)
+- [organization_msdyn_modulerundetail](#BKMK_organization_msdyn_modulerundetail)
 - [organization_msdyn_workflowactionstatus](#BKMK_organization_msdyn_workflowactionstatus)
 - [organization_userrating](#BKMK_organization_userrating)
 - [organization_msdyn_insightsstorevirtualentity](#BKMK_organization_msdyn_insightsstorevirtualentity)
 - [organization_roleeditorlayout](#BKMK_organization_roleeditorlayout)
+- [organization_maskingrule](#BKMK_organization_maskingrule)
 - [organization_appaction](#BKMK_organization_appaction)
 - [organization_appactionmigration](#BKMK_organization_appactionmigration)
 - [organization_appactionrule](#BKMK_organization_appactionrule)
 - [organization_msdyn_solutionhealthruleset](#BKMK_organization_msdyn_solutionhealthruleset)
+- [organization_mainfewshot](#BKMK_organization_mainfewshot)
+- [organization_makerfewshot](#BKMK_organization_makerfewshot)
 - [organization_searchattributesettings](#BKMK_organization_searchattributesettings)
 - [organization_searchcustomanalyzer](#BKMK_organization_searchcustomanalyzer)
 - [organization_searchrelationshipsettings](#BKMK_organization_searchrelationshipsettings)
+- [organization_adx_externalidentity](#BKMK_organization_adx_externalidentity)
+- [organization_adx_webformsession](#BKMK_organization_adx_webformsession)
 
 
 ### <a name="BKMK_lk_principalobjectattributeaccess_organizationid"></a> lk_principalobjectattributeaccess_organizationid
@@ -11172,7 +11195,7 @@ Same as the [organization_sharedlinksetting](sharedlinksetting.md#BKMK_organizat
 
 ### <a name="BKMK_organization_entityrecordfilter"></a> organization_entityrecordfilter
 
-**Added by**: Active Solution Solution
+**Added by**: AuthorizationCore Solution
 
 Same as the [organization_entityrecordfilter](entityrecordfilter.md#BKMK_organization_entityrecordfilter) many-to-one relationship for the [entityrecordfilter](entityrecordfilter.md) table/entity.
 
@@ -11189,7 +11212,7 @@ Same as the [organization_entityrecordfilter](entityrecordfilter.md#BKMK_organiz
 
 ### <a name="BKMK_organization_recordfilter"></a> organization_recordfilter
 
-**Added by**: Active Solution Solution
+**Added by**: AuthorizationCore Solution
 
 Same as the [organization_recordfilter](recordfilter.md#BKMK_organization_recordfilter) many-to-one relationship for the [recordfilter](recordfilter.md) table/entity.
 
@@ -11357,40 +11380,6 @@ Same as the [organization_mobileofflineprofileextension](mobileofflineprofileext
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_organization_teammobileofflineprofilemembership"></a> organization_teammobileofflineprofilemembership
-
-**Added by**: Active Solution Solution
-
-Same as the [organization_teammobileofflineprofilemembership](teammobileofflineprofilemembership.md#BKMK_organization_teammobileofflineprofilemembership) many-to-one relationship for the [teammobileofflineprofilemembership](teammobileofflineprofilemembership.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|teammobileofflineprofilemembership|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_teammobileofflineprofilemembership|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_organization_usermobileofflineprofilemembership"></a> organization_usermobileofflineprofilemembership
-
-**Added by**: Active Solution Solution
-
-Same as the [organization_usermobileofflineprofilemembership](usermobileofflineprofilemembership.md#BKMK_organization_usermobileofflineprofilemembership) many-to-one relationship for the [usermobileofflineprofilemembership](usermobileofflineprofilemembership.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|usermobileofflineprofilemembership|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_usermobileofflineprofilemembership|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_organization_organizationdatasyncsubscription"></a> organization_organizationdatasyncsubscription
 
 **Added by**: Active Solution Solution
@@ -11527,6 +11516,23 @@ Same as the [organization_msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.m
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_msdyn_modulerundetail"></a> organization_msdyn_modulerundetail
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_msdyn_modulerundetail](msdyn_modulerundetail.md#BKMK_organization_msdyn_modulerundetail) many-to-one relationship for the [msdyn_modulerundetail](msdyn_modulerundetail.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_modulerundetail|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_modulerundetail|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_msdyn_workflowactionstatus"></a> organization_msdyn_workflowactionstatus
 
 **Added by**: Active Solution Solution
@@ -11591,6 +11597,23 @@ Same as the [organization_roleeditorlayout](roleeditorlayout.md#BKMK_organizatio
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organization_roleeditorlayout|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_maskingrule"></a> organization_maskingrule
+
+**Added by**: Column Level Security Solution
+
+Same as the [organization_maskingrule](maskingrule.md#BKMK_organization_maskingrule) many-to-one relationship for the [maskingrule](maskingrule.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|maskingrule|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_maskingrule|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -11663,6 +11686,40 @@ Same as the [organization_msdyn_solutionhealthruleset](msdyn_solutionhealthrules
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_mainfewshot"></a> organization_mainfewshot
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_mainfewshot](mainfewshot.md#BKMK_organization_mainfewshot) many-to-one relationship for the [mainfewshot](mainfewshot.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|mainfewshot|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_mainfewshot|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_makerfewshot"></a> organization_makerfewshot
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_makerfewshot](makerfewshot.md#BKMK_organization_makerfewshot) many-to-one relationship for the [makerfewshot](makerfewshot.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|makerfewshot|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_makerfewshot|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_searchattributesettings"></a> organization_searchattributesettings
 
 **Added by**: Active Solution Solution
@@ -11710,6 +11767,40 @@ Same as the [organization_searchrelationshipsettings](searchrelationshipsettings
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organization_searchrelationshipsettings|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_adx_externalidentity"></a> organization_adx_externalidentity
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_adx_externalidentity](adx_externalidentity.md#BKMK_organization_adx_externalidentity) many-to-one relationship for the [adx_externalidentity](adx_externalidentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_externalidentity|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_adx_externalidentity|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_adx_webformsession"></a> organization_adx_webformsession
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_adx_webformsession](adx_webformsession.md#BKMK_organization_adx_webformsession) many-to-one relationship for the [adx_webformsession](adx_webformsession.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_webformsession|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_adx_webformsession|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

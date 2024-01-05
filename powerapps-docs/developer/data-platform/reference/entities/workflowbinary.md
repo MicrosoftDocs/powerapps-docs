@@ -1,7 +1,7 @@
 ---
 title: "workflowbinary table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the workflowbinary table/entity."
-ms.date: 09/01/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -18,7 +18,7 @@ search.audienceType:
 
 
 
-**Added by**: Power Automate Extensions Workflow Binary package Solution
+**Added by**: Power Automate Workflow Binary Table Solution
 
 
 ## Messages
@@ -85,7 +85,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_FlowSessionId"></a> FlowSessionId
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -135,7 +135,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Metadata"></a> Metadata
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -153,7 +153,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_MimeType"></a> MimeType
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -234,7 +234,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Process"></a> Process
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -250,7 +250,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Reference"></a> Reference
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -268,7 +268,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_ReferenceName"></a> ReferenceName
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -345,7 +345,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Type"></a> Type
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -590,7 +590,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_Data"></a> Data
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -605,7 +605,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_Data_Name"></a> Data_Name
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -623,7 +623,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_FlowSessionIdName"></a> FlowSessionIdName
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -904,7 +904,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_ProcessName"></a> ProcessName
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -1142,7 +1142,7 @@ See the [business_unit_workflowbinary](businessunit.md#BKMK_business_unit_workfl
 
 ### <a name="BKMK_flowsession_workflowbinary_FlowSessionId"></a> flowsession_workflowbinary_FlowSessionId
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 See the [flowsession_workflowbinary_FlowSessionId](flowsession.md#BKMK_flowsession_workflowbinary_FlowSessionId) one-to-many relationship for the [flowsession](flowsession.md) table/entity.
 

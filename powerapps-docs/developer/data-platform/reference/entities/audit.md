@@ -1,7 +1,7 @@
 ---
 title: "Auditing (Audit)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Auditing (Audit)  table/entity."
-ms.date: 09/01/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -220,8 +220,11 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |112|User Access Audit Started||
 |113|User Access Audit Stopped||
 |115|Archive||
+|116|Retain||
+|117|RollbackRetain||
 |118|IPFirewallAcccesDenied||
 |119|IPFirewallAcccesAllowed||
+|120|Restore||
 
 
 
@@ -380,6 +383,9 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4|Access||
 |5|Upsert||
 |115|Archive||
+|116|Retain||
+|117|RollbackRetain||
+|118|Restore||
 |200|CustomOperation||
 
 

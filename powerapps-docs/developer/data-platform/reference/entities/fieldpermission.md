@@ -1,7 +1,7 @@
 ---
 title: "FieldPermission table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the FieldPermission table/entity."
-ms.date: 09/01/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -54,6 +54,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AttributeLogicalName](#BKMK_AttributeLogicalName)
 - [CanCreate](#BKMK_CanCreate)
 - [CanRead](#BKMK_CanRead)
+- [CanReadUnMasked](#BKMK_CanReadUnMasked)
 - [CanUpdate](#BKMK_CanUpdate)
 - [EntityName](#BKMK_EntityName)
 - [FieldPermissionId](#BKMK_FieldPermissionId)
@@ -116,6 +117,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |-----|-----|--------|
 |0|Not Allowed||
 |4|Allowed||
+
+
+
+### <a name="BKMK_CanReadUnMasked"></a> CanReadUnMasked
+
+**Added by**: Column Level Security Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Can this profile read unmasked value of attribute|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|canreadunmasked|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### CanReadUnMasked Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Allowed||
+|1|One Record||
+|3|All Records||
 
 
 

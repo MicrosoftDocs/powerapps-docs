@@ -16,19 +16,19 @@ contributors:
 ---
 # Share a canvas app with guest users
 
-Canvas apps can be shared with guest users of an Azure Active Directory (Azure AD) tenant. This enables inviting external business partners, contractors, and third parties to run your company's canvas apps.
+Canvas apps can be shared with guest users of a Microsoft Entra tenant. This enables inviting external business partners, contractors, and third parties to run your company's canvas apps.
 
 Watch this video to learn how to share an app with guests:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLTiv]
 
 ## Prerequisites
 
-- In Azure AD, enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
+- In Microsoft Entra ID, enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
 
   > [!NOTE]
-  > B2B external collaboration is enabled by default; however, you need to verify that the settings weren't changed by a tenant admin. For more information about Azure AD B2B, go to [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b).
+  > B2B external collaboration is enabled by default; however, you need to verify that the settings weren't changed by a tenant admin. For more information about Microsoft Entra B2B, go to [What is guest user access in Microsoft Entra B2B?](/azure/active-directory/b2b/what-is-b2b).
 
-- Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
+- Access to an account that can add guest users to an Microsoft Entra tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
 
 - To access an app that doesn't connect to Dataverse, the guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
 
@@ -39,9 +39,9 @@ Watch this video to learn how to share an app with guests:
 
 ## Steps to grant guest access
 
-1. In Azure AD, select **New guest user**. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)
+1. In Microsoft Entra ID, select **New guest user**. More information: [Quickstart: Add a new guest user in Microsoft Entra ID](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)
 
-    ![Add a guest in Azure AD.](media/share-app/guest_access_doc_1.png "Add a guest in Azure AD")
+    ![Add a guest in Microsoft Entra ID.](media/share-app/guest_access_doc_1.png "Add a guest in Microsoft Entra ID")
 
 2. If the guest user doesn't already have a license in their home tenant, assign a license to the guest user.
 
@@ -62,7 +62,7 @@ Watch this video to learn how to share an app with guests:
 
     1. On the command bar, select **Share**.
 
-    1. Enter an email address for a guest user from an Azure AD tenant. More information: [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)
+    1. Enter an email address for a guest user from an Microsoft Entra tenant. More information: [What is guest user access in Microsoft Entra B2B?](/azure/active-directory/b2b/what-is-b2b)
 
        ![Share with guest.](media/share-app/guest_access_doc_2.png "Share with guest")
 
@@ -72,9 +72,9 @@ After you share an app for guest access, guests can discover and access apps sha
 
 ## Considerations and limitations for guest access
 
-- Users accessing web experiences in different Azure Active Directory tenants must acces Power Apps in a standalone browser session (different browser or InPrivate browser session) otherwise Power Apps may not pick up the correct Azure B2B user identity for the app being accessed. 
+- Users accessing web experiences in different Microsoft Entra tenants must acces Power Apps in a standalone browser session (different browser or InPrivate browser session) otherwise Power Apps may not pick up the correct Azure B2B user identity for the app being accessed. 
 - Power Apps guest access uses Azure B2B.
-- Power Apps Mobile doesn't support authentication using [Azure AD direct federation](/azure/active-directory/b2b/direct-federation). More information: [Sign in using Power Apps Mobile](../../mobile/run-powerapps-on-mobile.md#sign-in)
+- Power Apps Mobile doesn't support authentication using [Microsoft Entra direct federation](/azure/active-directory/b2b/direct-federation). More information: [Sign in using Power Apps Mobile](../../mobile/run-powerapps-on-mobile.md#sign-in)
 - Power Apps [per app plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants.
 - Power Apps [included with Office](/power-platform/admin/pricing-billing-skus#power-appspower-automate-for-microsoft-365) and Power Apps [per user plans](/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) have the following characteristics:
   - In the Azure public cloud, they're recognized across tenants in guest scenarios because they aren't bound to a specific environment.
@@ -94,7 +94,7 @@ The following table outlines a few core capability differences between Power Pag
 | Guest access in | Interface | Authentication | Accessible data sources |
 |------|--------|----------|-------------------|
 | Power Pages | Browser-only experience | Allows anonymous and authenticated access | Dataverse |
-| Canvas apps | Browser and mobile apps | Requires authentication via Azure AD | Any of approximately 150 out-of-the-box connectors and any custom connector  |
+| Canvas apps | Browser and mobile apps | Requires authentication via Microsoft Entra ID | Any of approximately 150 out-of-the-box connectors and any custom connector  |
 
 ### Can guests access customized forms in SharePoint?
 
@@ -134,23 +134,23 @@ For more information about pricing and the capabilities of various plans, go to 
 
 ### In Power Apps Mobile, how does a guest see apps for their home tenant?
 
-Any user who has used their mobile device to access a canvas app that was published in an Azure AD tenant that isn't their home tenant, can [switch to a different directory](../../mobile/tenant-switcher.md).
+Any user who has used their mobile device to access a canvas app that was published in an Microsoft Entra tenant that isn't their home tenant, can [switch to a different directory](../../mobile/tenant-switcher.md).
 
 ### In Power Apps Mobile, how does a guest see apps in the guest tenant?
 
-The guest user opens the email they received when an app in the guest tenant was shared, and selects **Open the app**. This applies to both Azure AD and Microsoft account users. You can  also create a deep link. For more information, see [Use deep links with Power Apps mobile](/power-apps/mobile/run-powerapps-on-mobile).
+The guest user opens the email they received when an app in the guest tenant was shared, and selects **Open the app**. This applies to both Microsoft Entra and Microsoft account users. You can  also create a deep link. For more information, see [Use deep links with Power Apps mobile](/power-apps/mobile/run-powerapps-on-mobile).
 
-### Must a guest accept the Azure AD guest invitation before an app can be shared with them?
+### Must a guest accept the Microsoft Entra guest invitation before an app can be shared with them?
 
 No. If a guest opens an app that was shared with them before they accepted a guest invitation, the guest will be prompted to accept the invitation as part of the sign-in experience while opening the app.  
 
-### In which Azure AD tenant are connections created for a guest user?
+### In which Microsoft Entra tenant are connections created for a guest user?
 
-Connections for an app are always made in the context of the Azure AD tenant the app is associated with. For example, if an app is created in the Contoso tenant, the connections made for Contoso internal and guest users are made in the context of the Contoso tenant.
+Connections for an app are always made in the context of the Microsoft Entra tenant the app is associated with. For example, if an app is created in the Contoso tenant, the connections made for Contoso internal and guest users are made in the context of the Contoso tenant.
 
 ### Can guests use Microsoft Graph via the Microsoft Security Graph connector or a custom connector by using Microsoft Graph APIs?
 
-No, Azure AD guests can't query Microsoft Graph to retrieve information for a tenant in which they're a guest.
+No, Microsoft Entra guests can't query Microsoft Graph to retrieve information for a tenant in which they're a guest.
 
 ### Which Intune policies apply to guests who are using my apps?
 
@@ -158,7 +158,7 @@ Intune only applies the policies of a user's home tenant. For instance, if Lesa@
 
 ### Which connectors support guest access?
 
-Connectors that don't use any type of Azure AD authentication will support guest access. The following table enumerates all connectors that do use Azure AD authentication, and identifies which connectors currently support guest access. More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
+Connectors that don't use any type of Microsoft Entra authentication will support guest access. The following table enumerates all connectors that do use Microsoft Entra authentication, and identifies which connectors currently support guest access. More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
 
 | **Connector**                                     | **Supports guest access** [1]                                             |
 |---------------------------------------------------|------------------------------------------------------------------------|
@@ -168,7 +168,7 @@ Connectors that don't use any type of Azure AD authentication will support guest
 | Asana                                             | No                                                                     |
 | AtBot Admin                                       | No                                                                     |
 | AtBot Logic                                       | No                                                                     |
-| Azure AD                                          | Yes                                                                    |
+| Microsoft Entra                                          | Yes                                                                    |
 | Azure Automation                                  | Yes                                                                    |
 | Azure Blob Storage                                | No                                                                     |
 | Azure Container Instance                          | Yes                                                                    |
@@ -210,7 +210,7 @@ Connectors that don't use any type of Azure AD authentication will support guest
 | GoToTraining                                      | No                                                                     |
 | GoToWebinar                                       | No                                                                     |
 | Harvest                                           | No                                                                     |
-| HTTP with Azure AD                                | No                                                                     |
+| HTTP with Microsoft Entra ID                                | No                                                                     |
 | Infusionsoft                                      | No                                                                     |
 | Inoreader                                         | No                                                                     |
 | Intercom                                          | No                                                                     |

@@ -1,7 +1,7 @@
 ---
 title: "ProcessStage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ProcessStage table/entity."
-ms.date: 09/01/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -68,7 +68,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_Connector"></a> Connector
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -86,7 +86,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_IsTrigger"></a> IsTrigger
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -111,7 +111,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_OperationId"></a> OperationId
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -129,7 +129,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_OperationKind"></a> OperationKind
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -176,7 +176,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_OperationType"></a> OperationType
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -250,7 +250,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_ParameterName"></a> ParameterName
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -268,7 +268,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_ParameterValue"></a> ParameterValue
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -286,7 +286,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_ParentProcessStageId"></a> ParentProcessStageId
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -458,7 +458,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### <a name="BKMK_ParentProcessStageIdName"></a> ParentProcessStageIdName
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 |Property|Value|
 |--------|-----|
@@ -528,6 +528,7 @@ Listed by **SchemaName**.
 - [lk_expiredprocess_activestageid](#BKMK_lk_expiredprocess_activestageid)
 - [processstage_processstageparameter](#BKMK_processstage_processstageparameter)
 - [processstage_parentprocessstage](#BKMK_processstage_parentprocessstage)
+- [processstage_adx_portalcomment](#BKMK_processstage_adx_portalcomment)
 
 
 ### <a name="BKMK_processstage_knowledgearticle"></a> processstage_knowledgearticle
@@ -772,7 +773,7 @@ Same as the [lk_expiredprocess_activestageid](expiredprocess.md#BKMK_lk_expiredp
 
 ### <a name="BKMK_processstage_processstageparameter"></a> processstage_processstageparameter
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 Same as the [processstage_processstageparameter](processstageparameter.md#BKMK_processstage_processstageparameter) many-to-one relationship for the [processstageparameter](processstageparameter.md) table/entity.
 
@@ -789,7 +790,7 @@ Same as the [processstage_processstageparameter](processstageparameter.md#BKMK_p
 
 ### <a name="BKMK_processstage_parentprocessstage"></a> processstage_parentprocessstage
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Power Automate Core Components Solution
 
 Same as the [processstage_parentprocessstage](processstage.md#BKMK_processstage_parentprocessstage) many-to-one relationship for the [processstage](processstage.md) table/entity.
 
@@ -802,6 +803,23 @@ Same as the [processstage_parentprocessstage](processstage.md#BKMK_processstage_
 |ReferencedEntityNavigationPropertyName|processstage_parentprocessstage|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_processstage_adx_portalcomment"></a> processstage_adx_portalcomment
+
+**Added by**: Active Solution Solution
+
+Same as the [processstage_adx_portalcomment](adx_portalcomment.md#BKMK_processstage_adx_portalcomment) many-to-one relationship for the [adx_portalcomment](adx_portalcomment.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|adx_portalcomment|
+|ReferencingAttribute|stageid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|processstage_adx_portalcomment|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

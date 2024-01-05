@@ -205,6 +205,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - Back()
 - Clear()
 - Collect()
+- Copy()
 - Disable()
 - Enable()
 - Exit()

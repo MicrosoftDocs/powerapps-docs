@@ -74,7 +74,7 @@ and integrated AI and BI.
 
 ## Security
 
-Dataverse uses Azure Active Directory identity and access management mechanisms to help ensure that only authorized users can access the environment, data, and reports.
+Dataverse uses Microsoft Entra identity and access management mechanisms to help ensure that only authorized users can access the environment, data, and reports.
 
 Dataverse uses role-based security to group together a collection of privileges. These security roles can be associated directly with users, or they can be associated with Dataverse teams and business units.
 

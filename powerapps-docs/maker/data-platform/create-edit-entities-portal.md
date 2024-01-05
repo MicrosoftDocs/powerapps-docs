@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
 author: "Mattp123"
-ms.date: 08/23/2023
+ms.date: 12/06/2023
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -33,9 +33,9 @@ You can also select a column heading from the table view, and then select **Filt
 There are several ways to create a new table:
 
 - [Add columns and data](#add-columns-and-data)
-- [Describe the new table (preview)](#describe-the-new-table-preview)
+- [Describe the new table](#describe-the-new-table)
 - [Set advanced properties](#set-advanced-properties)
-- [Upload an Excel file (preview)](#upload-an-excel-file-preview)
+- [Upload an Excel file](#upload-an-excel-file)
 - [Create a virtual table](#create-a-virtual-table)
 
 ### Add columns and data
@@ -47,15 +47,15 @@ Create a table by entering the data rows and columns you want.
 
 More information: [Table designer](#table-designer)
 
-### Describe the new table (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+### Describe the new table
 
 Create a table with the help of AI Copilot.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> [!NOTE]
+> To use this feature, note the following requirements:
+>
+> - Copilot must be enabled for the environment. By default, Copilot is enabled. More information:  [Manage feature settings](/power-platform/admin/settings-features#copilot-preview)
+> - This feature is available in English only across regions. Depending on where your environment is hosted, you might need to enable data movement across regions. For more information go to [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 
 1. From the **Tables** area, on the command bar select **New table** > **Describe the new table**.
 1. Describe the table with the assistance of Copilot. More information: [Review the table](../canvas-apps/ai-conversations-create-app.md#step-2-review-the-table-for-your-app)
@@ -116,19 +116,12 @@ Select **Advanced options** to display additional properties that are optional f
 
 Select **Save** to continue, this will close the **New table** panel and display the [table hub](#edit-table-components-using-the-table-hub).
 
-### Upload an Excel file (preview)
+### Upload an Excel file
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-Use an Excel file to populate a table with your data, which uses AI to assist with the table generation when Copilot is enabled for the environment.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - [!INCLUDE [cross-geo-support](../../../shared/cross-geo-support.md)]
+Use an Excel file to populate a table with your data, which uses AI to assist with the table generation when copilot is enabled for the environment.
 
 1. From the **Tables** area, on the command bar select **New table** > **Upload an Excel file**.
-1. Select from device or drag and drop your Excel file onto the Upload an Excel file page.
+1. Select from device or drag and drop your Excel file onto the **Upload an Excel file** page.
 1. The data from the Excel file is displayed as a Dataverse table. Select a column header > **Edit column** to make changes, such as the column name or data type.
 1. When you're finished, select **Create**.
 

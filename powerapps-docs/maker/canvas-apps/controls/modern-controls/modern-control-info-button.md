@@ -1,6 +1,6 @@
 ---
 title: Information button modern control in Power Apps
-description: Learn about the details, properties and examples of the information button modern control in Power Apps.
+description: Learn about the details, properties, and examples of the information button modern control in Power Apps.
 author: yogeshgupta698
 
 ms.topic: reference
@@ -30,7 +30,9 @@ Use **Info button** control to provide additional information to users.
 ## Key properties
 **Content** – Content to be displayed when users interact with the control.
 
-**Icon size** - Whether the information icon be small, medium or large.
+**Icon size** - Whether the information icon is small, medium, or large.
+
+**Base palette color** - The color palette applied to a control. This impacts all surfaces of the control that render a theme color.  
 
 **Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 

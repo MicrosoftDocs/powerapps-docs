@@ -1,7 +1,7 @@
 ---
 title: "Report table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Report table/entity."
-ms.date: 09/01/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -76,6 +76,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ParentReportId](#BKMK_ParentReportId)
+- [PowerBiFeatureTag](#BKMK_PowerBiFeatureTag)
 - [ReportId](#BKMK_ReportId)
 - [ReportStatus](#BKMK_ReportStatus)
 - [ReportTypeCode](#BKMK_ReportTypeCode)
@@ -344,6 +345,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 
 
+### <a name="BKMK_PowerBiFeatureTag"></a> PowerBiFeatureTag
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Field to maintain the sub application id and feature tag for powerbi reports.|
+|DisplayName|powerbifeaturetag|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|powerbifeaturetag|
+|MaxLength|1024|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ReportId"></a> ReportId
 
 |Property|Value|
@@ -398,6 +418,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |3|Linked Report||
 |4|Power BI Paginated Report||
 |5|Power BI Analytic Report||
+|6|Excel Embedded Report||
+|7|Excel Embedded Report Template||
 
 
 
@@ -538,6 +560,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [ApplicationId](#BKMK_ApplicationId)
 - [CdsDatasetId](#BKMK_CdsDatasetId)
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -548,6 +571,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [CustomReportXml](#BKMK_CustomReportXml)
+- [FileContent](#BKMK_FileContent)
+- [FileContent_Name](#BKMK_FileContent_Name)
 - [FileSize](#BKMK_FileSize)
 - [IsCustomReport](#BKMK_IsCustomReport)
 - [IsManaged](#BKMK_IsManaged)
@@ -568,6 +593,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentReportIdName](#BKMK_ParentReportIdName)
+- [PowerBiReportId](#BKMK_PowerBiReportId)
+- [PowerBiReportInternalState](#BKMK_PowerBiReportInternalState)
 - [PowerBiReportName](#BKMK_PowerBiReportName)
 - [PowerBiWorkspaceInfo](#BKMK_PowerBiWorkspaceInfo)
 - [QueryInfo](#BKMK_QueryInfo)
@@ -578,6 +605,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
+
+
+### <a name="BKMK_ApplicationId"></a> ApplicationId
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Represents the application id to which a CDS powerbi report belongs to.|
+|DisplayName|ApplicationId|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|applicationid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CdsDatasetId"></a> CdsDatasetId
@@ -740,6 +785,39 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|customreportxml|
 |MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_FileContent"></a> FileContent
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|File Content|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|filecontent|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_FileContent_Name"></a> FileContent_Name
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|filecontent_name|
+|MaxLength|200|
 |RequiredLevel|None|
 |Type|String|
 
@@ -1069,6 +1147,42 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|parentreportidname|
 |MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_PowerBiReportId"></a> PowerBiReportId
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Represents the powerbi report id for a CDS report.|
+|DisplayName|PowerBiReportId|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|powerbireportid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_PowerBiReportInternalState"></a> PowerBiReportInternalState
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Field to maintain the internal state of the report|
+|DisplayName|powerbireportinternalstate|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|powerbireportinternalstate|
+|MaxLength|1024|
 |RequiredLevel|None|
 |Type|String|
 
