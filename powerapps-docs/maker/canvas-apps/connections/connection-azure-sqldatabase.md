@@ -5,7 +5,7 @@ author: lancedMicrosoft
 
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/28/2021
+ms.date: 01/05/2024
 ms.subservice: canvas-maker
 ms.author: lanced
 ms.reviewer: mkaur
