@@ -4,7 +4,7 @@ description: Optimizing app and page loading for peak performance in Power Apps.
 author: lancedMicrosoft
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 12/01/2023
+ms.date: 01/05/2024
 ms.author: lanced
 ms.reviewer: mkaur
 search.audienceType:
@@ -37,7 +37,7 @@ This issue is a slight variation of the previous section. Sometimes authors also
 ### Avoid using SaveData() and LoadData() as a full offline scenario
 Some authors use ClearCollect() and then SaveData() to store data for general purpose offline use. You can use SaveData() to save the collection to your device, and LoadData() to load it when you're offline. However, this approach isn't recommended for instances where there's a large amount of data or if the data is complex. It makes your app slower because it has to wait for ClearCollect() to finish before it can show the data. You should only use SaveData() and LoadData() for small and simple data scenarios such as preferences and short lists. A better way to work with large amounts of offline data is to use the Power Apps offline feature that works with Dataverse. This feature can handle larger and more complex data more efficiently.
 
-### Use Explicit Column Selection
+### Use Explicit column selection
 Explicit column selection is on by default. However, some authors turn this feature off. The issue is that with Explicit column selection (ECS) turned on, columns are sometimes not retrieved from the data source if the data is first retrieved into a collection. As some tables may have many columns, ECS automatically computes which columns are necessary to retrieve based on their usage in controls (for example, galleries and forms.) As some tables can many columns, reducing the size of the download can speed up performance. Some tables can have a hundred columns or more. If your app only needs to use 10 columns, and you bring down all the columns from a 100 column table, you are bringing down ten times as much data as you actually need.
 
 Most issues arise when bringing data into collections. If a column is explicitly referenced in a control then ECS works well.  And, ECS generally does work for collections. However, the column lineage is occasionally lost when the data moves through collections and variables.  And, and so Power Apps may lose track of the column it should retrieve. To resolve this issue, you can force Power Apps to "remember" the column by using the `ShowColumns` function. For example:
