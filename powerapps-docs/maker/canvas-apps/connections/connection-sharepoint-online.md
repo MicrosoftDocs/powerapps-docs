@@ -161,6 +161,9 @@ When you find the file that you want, select it to show it in the **Video**, **I
 
 ## Known issues
 
+**Sharing a Canvas apps using SharePoint connector**
+Power Apps won't show canvas apps connecting to SharePoint that are only shared with **Everyone**, unless you're the creator of the app OR you're explicitly shared the app with (as a user, or as a co-owner) through a group membership, or directly through the user assignment. To play such apps, use the direct link to the app.
+
 ### Lists
 
 Power Apps can read column names that contain spaces, but the spaces are replaced with the hexadecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
