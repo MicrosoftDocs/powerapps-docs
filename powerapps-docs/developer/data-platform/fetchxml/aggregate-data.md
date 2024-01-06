@@ -200,8 +200,6 @@ The following example shows a FetchXML aggregation expression that sums the tota
 </fetch>
 ```
 
-
-
 ## Limitations
 
 Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query includes more than 50,000 records you will get the following error:
@@ -214,6 +212,16 @@ Queries that return aggregate values are limited to 50,000 records. This limit h
 To avoid this error add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run your query multiple times and combine the results.
 
 <!-- TODO: This guidance is pretty vague. We should have an example function showing how to do this -->
+
+## Per query limit
+By default, aggregate queries will aggregate across rows limit, people may just want to know if my data has more than current number of rows to make query less expensive, fetchxml support aggregate limit per query.
+It the aggregate count maxmium returned 10: 
+<fetch distinct='false' mapping='logical' aggregate='true' aggregatelimit = '10'> 
+    <entity name='opportunity'> 
+       <attribute name='name' alias='opportunity_count' aggregate='count'/> 
+    </entity> 
+</fetch>
+Per-query limit can't exceed default aggregate limit, which is 50,000
 
 ## Next steps
 
