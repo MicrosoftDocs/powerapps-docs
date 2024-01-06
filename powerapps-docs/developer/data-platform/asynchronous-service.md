@@ -15,15 +15,15 @@ contributors:
 ---
 # Asynchronous service
 
-The asynchronous service executes long-running operations independent of the main Microsoft Dataverse core operation. This results in improved overall system performance and improved scalability. The asynchronous service features a managed first-in, first-out (FIFO) queue for the execution of asynchronous registered plug-ins, workflows, and operations such as bulk mail, bulk import, and campaign activity propagation. These operations are registered with the asynchronous service and executed periodically when the service processes its queue.
+The asynchronous service executes long-running operations independent of the main Microsoft Dataverse core operation. Executing long-running operations this way results in improved overall system performance and improved scalability. The asynchronous service features a managed first-in, first-out (FIFO) queue for the execution of asynchronous registered plug-ins, workflows, and operations such as bulk mail, bulk import, and campaign activity propagation. These operations are registered with the asynchronous service and executed periodically when the service processes its queue.
 
-After an event occurs and any synchronous extensions have been processed, the platform serializes the context for any asynchronous extensions and saves it in the [System Job (AsyncOperation) table](reference/entities/asyncoperation.md). The system job defines and tracks the execution of the asynchronous operation. As resources become available. Dataverse processes system jobs and executes the operations they define. Any data operations defined in the extension will again be processed by the event execution pipeline, but this time as a synchronous operation.
+After an event occurs and any synchronous extensions are processed, the platform serializes the context for any asynchronous extensions and saves it in the [System Job (AsyncOperation) table](reference/entities/asyncoperation.md). The system job defines and tracks the execution of the asynchronous operation. As resources become available. Dataverse processes system jobs and executes the operations they define. Any data operations defined in the extension are processed again by the event execution pipeline, but this time as a synchronous operation.
 
 ## Execution order and dependencies
 
-System jobs are evaluated as a queue using the [CreatedOn](reference/entities/asyncoperation.md#BKMK_CreatedOn) date. If there are no conditions to defer execution they will be executed as soon as resources are available. Execution is not guaranteed to be performed in the order set by the `CreatedOn` date because different types of operations require different resources.
+System jobs are evaluated as a queue using the [CreatedOn](reference/entities/asyncoperation.md#BKMK_CreatedOn) date. If there are no conditions to defer execution, they are executed as soon as resources are available. Execution isn't always performed in the order set by the `CreatedOn` date because different types of operations require different resources.
 
-A system job can be dependent on another system job so that it will begin only after the other system job completes. This dependency is established by the [DependencyToken](reference/entities/asyncoperation.md#BKMK_DependencyToken) column value. Dependencies are established when a system job is created. If the `DependencyToken` value is null, the system job has no dependencies. Dependent system jobs will have the same `DependencyToken` value and will be executed in the order they were created. If a system job is postponed, all subsequent dependent system jobs will continue to wait until the postponed system job executes.
+A system job can be dependent on another system job so that it will begin only after the other system job completes. The [DependencyToken](reference/entities/asyncoperation.md#BKMK_DependencyToken) column value establishes this dependency when a system job is created. If the `DependencyToken` value is null, the system job has no dependencies. Dependent system jobs have the same `DependencyToken` value and are executed in the order they were created. If a system job is postponed, all subsequent dependent system jobs continue to wait until the postponed system job executes.
 
 > [!NOTE]
 > This dependency system cannot be used by plug-ins registered to run asynchronously because the system jobs for them are created by the system.
@@ -47,7 +47,7 @@ You can perform the following operations to manage system jobs using the [AsyncO
 
 You can view system jobs in the application by navigating to **Settings** > **System** > **System Jobs** and you can also search them using [Advanced find in model-driven apps](../../user/advanced-find.md).
 
-Using code, you can retrieve system jobs like any other table. The following table lists selected columns which are important in understanding system jobs:
+Using code, you can retrieve system jobs like any other table. The following table lists selected columns that are important in understanding system jobs:
 
 |**Column**|**Description**|
 |--|--|
@@ -59,7 +59,7 @@ Using code, you can retrieve system jobs like any other table. The following tab
 |`DependencyToken`|Execution of all operations with the same dependency token is serialized. More information: [Execution order and dependencies](#execution-order-and-dependencies) |
 |`Depth`|Number of SDK calls made since the first call.|
 |`ErrorCode`|Error code returned from a canceled system job.|
-|`ExecutionTimeSpan`|Time that the system job has taken to execute.|
+|`ExecutionTimeSpan`|Time that the system job took to execute.|
 |`FriendlyMessage`|Message provided by the system job.|
 |`IsWaitingForEvent`|Indicates that the system job is waiting for an event.|
 |`Message`|Message related to the system job.|
@@ -185,38 +185,38 @@ Use the following FetchXML to retrieve the columns in the table above. More info
 
 #### [SQL](#tab/sql)
 
-You can use SQL to query the `asyncoperation` table using the [Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md) when it is enabled.
+You can use SQL to query the `asyncoperation` table using the [Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md) when it's enabled.
 
 ```sql
-SELECT TOP (1000) [asyncoperationid]
-      ,[completedon]
-      ,[createdon]
-      ,[data]
-      ,[dependencytoken]
-      ,[depth]
-      ,[errorcode]
-      ,[executiontimespan]
-      ,[friendlymessage]
-      ,[iswaitingforevent]
-      ,[message]
-      ,[messagename]
-      ,[modifiedon]
-      ,[name]
-      ,[operationtype]
-      ,[operationtypename]      
-      ,[ownerid]
-      ,[postponeuntil]
-      ,[recurrencepattern]
-      ,[recurrencestarttime]
-      ,[regardingobjectid]
-      ,[regardingobjectidname]
-      ,[retrycount]
-      ,[sequence]
-      ,[startedon]
-      ,[statecode]
-      ,[utcconversiontimezonecode]
-      ,[workflowstagename]
-  FROM [dbo].[asyncoperation]
+SELECT TOP (1000) asyncoperationid
+      ,completedon
+      ,createdon
+      ,data
+      ,dependencytoken
+      ,depth
+      ,errorcode
+      ,executiontimespan
+      ,friendlymessage
+      ,iswaitingforevent
+      ,message
+      ,messagename
+      ,modifiedon
+      ,name
+      ,operationtype
+      ,operationtypename
+      ,ownerid
+      ,postponeuntil
+      ,recurrencepattern
+      ,recurrencestarttime
+      ,regardingobjectid
+      ,regardingobjectidname
+      ,retrycount
+      ,sequence
+      ,startedon
+      ,statecode
+      ,utcconversiontimezonecode
+      ,workflowstagename
+  FROM asyncoperation
 ```
 
 ---
@@ -225,28 +225,201 @@ SELECT TOP (1000) [asyncoperationid]
 
 Use queries like the following to help diagnose problems.
 
-#### [Web API](#tab/webapi)
+#### Jobs by State, Status and type
+
+> **TODO**: 
+> 
+> - Add something about what to look for with this query?
+> - What to look for in the results
+
+##### [Web API](#tab/webapi)
 
 ```
-TODO
+GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=groupby((statecode,statuscode,operationtype),aggregate($count as count))
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+
 ```
 
-#### [FetchXml](#tab/fetchxml)
+##### [FetchXml](#tab/fetchxml)
 
 ```xml
-TODO
+<fetch aggregate='true'>
+  <entity name='asyncoperation'>
+    <attribute name='statecode' alias='statecode' groupby='true' />
+    <attribute name='statuscode' alias='statuscode' groupby='true' />
+    <attribute name='operationtype' alias='operationtype' groupby='true' />
+    <attribute name='asyncoperationid' alias='count' aggregate='count' />
+    <order alias='count' descending='true' />
+  </entity>
+</fetch>
 ```
 
-#### [SQL](#tab/sql)
+##### [SQL](#tab/sql)
 
 ```sql
-TODO
+SELECT statecode,
+      statuscode,
+      operationtype,
+      Count(*) AS count
+FROM  asyncoperation
+GROUP BY  statecode,
+      statuscode,
+      operationtype
+ORDER BY Count DESC
 ```
-
 ---
 
+#### Top system Jobs that are in waiting status by count
 
+> **TODO**: 
+> 
+> - Add something about what to look for with this query?
+> - What to look for in the results
 
+##### [Web API](#tab/webapi)
+
+```
+GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((statecode eq 1))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+```
+
+##### [FetchXml](#tab/fetchxml)
+
+```xml
+<fetch aggregate='true'>
+  <entity name='asyncoperation'>
+    <attribute name='statecode' alias='statecode' groupby='true' />
+    <attribute name='statuscode' alias='statuscode' groupby='true' />
+    <attribute name='operationtype' alias='operationtype' groupby='true' />
+    <attribute name='asyncoperationid' alias='count' aggregate='count' />
+    <filter>
+      <condition attribute='statecode' operator='eq' value='1' />
+    </filter>
+    <order alias='count' descending='true' />
+  </entity>
+</fetch>
+```
+
+##### [SQL](#tab/sql)
+
+```sql
+SELECT statecode,
+      statuscode,
+      operationtype,
+      Count(*) AS count
+FROM  asyncoperation
+WHERE statecode = 1
+GROUP BY  statecode,
+      statuscode,
+      operationtype
+ORDER BY Count DESC
+```
+---
+
+#### Workflows by count
+
+> **TODO**: 
+> 
+> - Add something about what to look for with this query?
+> - What to look for in the results
+
+See [Operation Types](#operation-types)
+
+##### [Web API](#tab/webapi)
+
+```
+GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((operationtype eq 10))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+```
+
+##### [FetchXml](#tab/fetchxml)
+
+```xml
+<fetch aggregate='true'>
+  <entity name='asyncoperation'>
+    <attribute name='statecode' alias='statecode' groupby='true' />
+    <attribute name='statuscode' alias='statuscode' groupby='true' />
+    <attribute name='operationtype' alias='operationtype' groupby='true' />
+    <attribute name='asyncoperationid' alias='count' aggregate='count' />
+    <filter>
+      <condition attribute='operationtype' operator='eq' value='10' />
+    </filter>
+    <order alias='count' descending='true' />
+  </entity>
+</fetch>
+```
+
+##### [SQL](#tab/sql)
+
+```sql
+SELECT statecode,
+      statuscode,
+      operationtype,
+      Count(*) AS count
+FROM  asyncoperation
+WHERE operationtype = 10
+GROUP BY  statecode,
+      statuscode,
+      operationtype
+ORDER BY Count DESC
+```
+---
+
+#### Jobs waiting for system resources to become available
+
+> **TODO**: 
+> 
+> - Add something about what to look for with this query?
+> - What to look for in the results
+
+##### [Web API](#tab/webapi)
+
+```
+GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((statecode eq 0 and statuscode eq 0))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+```
+
+##### [FetchXml](#tab/fetchxml)
+
+```xml
+<fetch aggregate='true'>
+  <entity name='asyncoperation'>
+    <attribute name='statecode' alias='statecode' groupby='true' />
+    <attribute name='statuscode' alias='statuscode' groupby='true' />
+    <attribute name='operationtype' alias='operationtype' groupby='true' />
+    <attribute name='asyncoperationid' alias='count' aggregate='count' />
+    <filter>
+      <condition attribute='statecode' operator='eq' value='0' />
+      <condition attribute='statuscode' operator='eq' value='0' />
+    </filter>
+    <order alias='count' descending='true' />
+  </entity>
+</fetch>
+```
+
+##### [SQL](#tab/sql)
+
+```sql
+SELECT statecode,
+      statuscode,
+      operationtype,
+      Count(*) AS count
+FROM  asyncoperation
+WHERE statecode = 0 AND statuscode = 0
+GROUP BY  statecode,
+      statuscode,
+     operationtype
+ORDER BY Count DESC
+```
+---
 
 ### Operation Types
 
@@ -272,13 +445,13 @@ Some of the types of these platform generated jobs are included in the following
 
 ### Recurrence start times and patterns
 
-Recurring system jobs require information about when they should start and how often they will recur. These values are stored in the `AsyncOperation` table, `RecurrenceStartTime` and `RecurrencePattern` columns.
+Recurring system jobs require information about when they should start and how often to recur. These values are stored in the `AsyncOperation` table, `RecurrenceStartTime` and `RecurrencePattern` columns.
 
-Because you will not create `AsyncOperation` records directly with code, you will just need to interpret these values if you query the data. You will only set these properties indirectly by using messages that will create new system jobs. The `BulkDelete` and `BulkDeleteDuplicates` messages both include parameters or properties in the corresponding Web API actions or SDK for .NET request classes. More information: <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest> Class, <xref:Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates Action>, <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> Class, and <xref:Microsoft.Dynamics.CRM.BulkDelete?text=BulkDelete Action>
+Because you can't create `AsyncOperation` records directly with code, you'll just need to interpret these values if you query the data. You'll only set these properties indirectly by using messages that create new system jobs. The `BulkDelete` and `BulkDeleteDuplicates` messages both include parameters or properties in the corresponding Web API actions or SDK for .NET request classes. More information: <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest> Class, [BulkDetectDuplicates Action](xref:Microsoft.Dynamics.CRM.BulkDetectDuplicates), <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> Class, and [BulkDelete Action](xref:Microsoft.Dynamics.CRM.BulkDelete)
 
 The `RecurrenceStartTime` is simply a datetime value to indicate when the system job should start. If it isn't set, the system job was expected to start immediately.
 
-The `RecurrencePattern` column stores information about how frequently recurring system jobs occur. This value may be set by the platform when a new asyncoperation table is created. You may set this value to change the pattern.
+The `RecurrencePattern` column stores information about how frequently recurring system jobs occur. The platform sometimes sets this value when a new asyncoperation record is created. You can set this value to change the pattern.
 
 The values for this column use parts of the [RFC2445 Internet standard (Internet Calendaring and Scheduling Core Object Specification)](https://www.rfc-editor.org/info/rfc2445).
 
