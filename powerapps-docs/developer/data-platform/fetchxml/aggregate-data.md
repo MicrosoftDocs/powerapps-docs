@@ -216,11 +216,13 @@ To avoid this error add appropriate filters to your query to ensure that it will
 ## Per query limit
 By default, aggregate queries will aggregate across rows limit, people may just want to know if my data has more than current number of rows to make query less expensive, fetchxml support aggregate limit per query.
 It the aggregate count maxmium returned 10: 
+```xml
 <fetch distinct='false' mapping='logical' aggregate='true' aggregatelimit = '10'> 
     <entity name='opportunity'> 
        <attribute name='name' alias='opportunity_count' aggregate='count'/> 
     </entity> 
 </fetch>
+```
 Per-query limit can't exceed default aggregate limit, which is 50,000
 
 ## Next steps
