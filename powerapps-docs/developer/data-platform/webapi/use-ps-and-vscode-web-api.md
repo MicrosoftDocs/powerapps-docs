@@ -2,13 +2,11 @@
 title: Use PowerShell and Visual Studio Code with the Dataverse Web API
 description: Describes how to use PowerShell and Visual Studio Code to create reusable PowerShell functions to interactively test using the Dataverse Web API
 ms.date: 01/05/2024
-author: divkamath
-ms.author: dikamath
+author: JimDaly
+ms.author: jdaly
 ms.reviewer: jdaly
 search.audienceType:
   - developer
-contributors:
-  - JimDaly
 ---
 # Use PowerShell and Visual Studio Code with the Dataverse Web API
 
@@ -17,6 +15,7 @@ This article expands on the [Quick Start Web API with PowerShell](quick-start-ps
 - [Create reusable functions](#create-reusable-functions)
 - [Handle exceptions](#handle-exceptions)
 - [Manage Dataverse service protection limits](#manage-dataverse-service-protection-limits)
+- [Debug using Fiddler](#debug-using-fiddler)
 
 > [!NOTE]
 > The instructions in this article should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
@@ -156,9 +155,6 @@ Let's put functions to perform common table operations a file named `TableOperat
 1. Copy and paste the following function definitions in the `TableOperations.ps1`.
 
    ```powershell
-   # The number of times to re-try a request when re-triable errors occur.
-   $maxRetries = 3
-
    function Get-Records {
       param (
          [Parameter(Mandatory)] 
@@ -178,7 +174,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          Method  = 'Get'
          Headers = $getHeaders
       }
-      Invoke-RestMethod @RetrieveMultipleRequest -MaximumRetryCount $maxRetries
+      Invoke-RestMethod @RetrieveMultipleRequest
    }
 
    function New-Record {
@@ -199,7 +195,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          Headers = $postHeaders
          Body    = ConvertTo-Json $body
       }
-      Invoke-RestMethod @CreateRequest -ResponseHeadersVariable rh -MaximumRetryCount $maxRetries
+      Invoke-RestMethod @CreateRequest -ResponseHeadersVariable rh
       $url = $rh['OData-EntityId']
       $selectedString = Select-String -InputObject $url -Pattern '(?<=\().*?(?=\))'
       return [System.Guid]::New($selectedString.Matches.Value.ToString())
@@ -226,7 +222,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          Method  = 'Get'
          Headers = $getHeaders
       }
-      Invoke-RestMethod @RetrieveRequest  -MaximumRetryCount $maxRetries
+      Invoke-RestMethod @RetrieveRequest
    }
 
    function Update-Record {
@@ -253,7 +249,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          Headers = $updateHeaders
          Body    = ConvertTo-Json $body
       }
-      Invoke-RestMethod @UpdateRequest -MaximumRetryCount $maxRetries
+      Invoke-RestMethod @UpdateRequest
    }
 
    function Remove-Record {
@@ -272,7 +268,7 @@ Let's put functions to perform common table operations a file named `TableOperat
          Method  = 'Delete'
          Headers = $baseHeaders
       }
-      Invoke-RestMethod @DeleteRequest -MaximumRetryCount $maxRetries
+      Invoke-RestMethod @DeleteRequest
    }
 
    ```
@@ -284,7 +280,6 @@ Let's put functions to perform common table operations a file named `TableOperat
    - [Create a table row using the Web API](create-entity-web-api.md)
    - [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)
    - [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)
-   - The `MaximumRetryCount` parameter and the `$maxRetries` variable are explained in [Manage Dataverse service protection limits](#manage-dataverse-service-protection-limits)
 
 1. Save the `TableOperations.ps1` file.
 1. Copy the following code and paste it into the `test.ps1` file.
@@ -411,7 +406,10 @@ Let's add helper function that can help detect the source of the errors and extr
          $statuscode = [int]$_.Exception.StatusCode;
          $statusText = $_.Exception.StatusCode
          Write-Host "StatusCode: $statuscode ($statusText)"
-         $_.ErrorDetails.Message
+         # Replaces escaped characters in the JSON
+         [Regex]::Replace($_.ErrorDetails.Message, "\\[Uu]([0-9A-Fa-f]{4})", 
+            {[char]::ToString([Convert]::ToInt32($args[0].Groups[1].Value, 16))} )
+
       }
       catch {
          Write-Host "An error occurred in the script:" -ForegroundColor Red
@@ -421,6 +419,9 @@ Let's add helper function that can help detect the source of the errors and extr
    ```
 
    The `Invoke-DataverseCommands` function uses the [Invoke-Command cmdlet](/powershell/module/microsoft.powershell.core/invoke-command) to process a set of commands within a [try/catch block](/powershell/module/microsoft.powershell.core/about/about_try_catch_finally). Any errors returned from Dataverse are <xref:Microsoft.PowerShell.Commands.HttpResponseException> errors, so the first `catch` block writes a `An error occurred calling Dataverse:` message to the terminal with the JSON error data.
+
+   The JSON data in `$_.ErrorDetails.Message` contains some escaped unicode characters. For example: `\u0026` instead of `&` and  `\u0027` instead of `'`. This function includes some code that replaces those characters with the unescaped characters so that they exactly match errors you see elsewhere.
+`
 
    Otherwise, the errors are written back to the terminal window with a message: `An error occurred in the script:`
 
@@ -460,7 +461,7 @@ Let's add helper function that can help detect the source of the errors and extr
    {
    "error": {
       "code": "0x80060888",
-      "message": "Resource not found for the segment \u0027account\u0027."
+      "message": "Resource not found for the segment 'account'."
       }
    }
    ```
@@ -491,13 +492,212 @@ Let's add helper function that can help detect the source of the errors and extr
 
 ## Manage Dataverse service protection limits
 
-We recommend that you specify a value for the PowerShell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) [MaximumRetryCount parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-maximumretrycount) for any functions you create that might be used to send large volume of requests to Dataverse. The functions defined for the `TableOperations.ps1` in the [Create table operations functions](#create-table-operations-functions) section of this article demonstrate this best practice.
-
 [Dataverse Service protection API limits](../api-limits.md) help ensure that Dataverse provides consistent availability and performance. When client applications make extraordinary demands on server resources using the Web API, Dataverse returns [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors and client application must pause operations for the duration specified in the [Retry-After header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After).
+
+The PowerShell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) [MaximumRetryCount parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-maximumretrycount) specifies how many times PowerShell retries a request when a failure code is between 400 and 599, inclusive or 304 is received. This means PowerShell retries Dataverse service protection 429 errors when you include a value for this parameter. The `MaximumRetryCount` parameter can be used with the [RetryIntervalSec](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-retryintervalsec) to specify the number of seconds to wait. The default is 5 seconds. If the error response includes a `Retry-After` header for a 429 error, as Dataverse service protection errors do, that value is used instead.
 
 You might never encounter a service protection limit error while you're learning how to use the Dataverse Web API with PowerShell. Scripts you write might be used to send the large number of requests necessary to encounter these errors, so you should know they can occur and how you can manage them using PowerShell.
 
-The `MaximumRetryCount` parameter specifies how many times PowerShell retries a request when a failure code is between 400 and 599, inclusive or 304 is received. This means PowerShell retries Dataverse service protection 429 errors when you include a value for this parameter. The `MaximumRetryCount` parameter can be used with the [RetryIntervalSec](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-retryintervalsec) to specify the number of seconds to wait. The default is 5 seconds. If the error response includes a `Retry-After` header for a 429 error, as Dataverse service protection errors do, that value is used instead.
+If you simply add the `MaximumRetryCount` parameter to every Dataverse call using `Invoke-RestMethod`, PowerShell will retry a very broad range of errors. This will make your scripts slow, especially when developing and testing. You would need to wait 10 to 15 seconds each time an error occurs, depending on how many re-tries you specify. An alternative approach is to encapsulate the `Invoke-RestMethod` in your own method that will manage retries for specific errors.
+
+The following `Invoke-ResilientRestMethod` function takes a `request` hashtable object as a mandatory parameter and a boolean `returnHeader` flag to indicate whether to return the response header or not. It tries to use the `Invoke-RestMethod` using the `request` object. If the `returnHeader` flag is true, it returns the response header. If the REST method fails with a 429 error, it checks if the `request` object has a `MaximumRetryCount` property. If not, it adds one with a value of 3. It then retries the REST method using the request object and the retry-after value from the response header. If the flag is true, it returns the response header. If the REST method fails with any other error, it rethrows the exception.
+
+```powershell
+function Invoke-ResilientRestMethod {
+   param (
+      [Parameter(Mandatory)] 
+      $request,
+      [bool]
+      $returnHeader
+   )
+   try {
+      Invoke-RestMethod @request -ResponseHeadersVariable rhv
+      if ($returnHeader) {
+         return $rhv
+      }
+   }
+   catch [Microsoft.PowerShell.Commands.HttpResponseException] {
+      $statuscode = $_.Exception.Response.StatusCode
+      # 429 errors only
+      if ($statuscode -eq 'TooManyRequests') {
+         if (!$request.ContainsKey('MaximumRetryCount')) {
+            $request.Add('MaximumRetryCount', 3)
+            # Don't need - RetryIntervalSec
+            # When the failure code is 429 and the response includes the Retry-After property in its headers, 
+            # the cmdlet uses that value for the retry interval, even if RetryIntervalSec is specified
+         }
+         # Will attempt retry up to 3 times
+         Invoke-RestMethod @request -ResponseHeadersVariable rhv
+         if ($returnHeader) {
+            return $rhv
+         }
+      }
+      else {
+         throw $_
+      }
+   }
+   catch {
+      throw $_
+   }
+}
+```
+
+You can use a function like this in your re-usable functions. When functions need to return values from the header of the response, they need to set the `returnHeader` value to `$true`. For example, the following `New-Record` function modifies the example function in [Create table operations functions](#create-table-operations-functions) to use `Invoke-ResilientRestMethod` instead of `Invoke-RestMethod` directly.
+
+```powershell
+function New-Record {
+   param (
+      [Parameter(Mandatory)] 
+      [String] 
+      $setName,
+      [Parameter(Mandatory)] 
+      [hashtable]
+      $body
+   )
+   $postHeaders = $baseHeaders.Clone()
+   $postHeaders.Add('Content-Type', 'application/json')
+   
+   $CreateRequest = @{
+      Uri     = $environmentUrl + 'api/data/v9.2/' + $setName
+      Method  = 'Post'
+      Headers = $postHeaders
+      Body    = ConvertTo-Json $body
+
+   }
+   $rh = Invoke-ResilientRestMethod -request $CreateRequest -returnHeader $true
+   $url = $rh[1]['OData-EntityId']
+   $selectedString = Select-String -InputObject $url -Pattern '(?<=\().*?(?=\))'
+   return [System.Guid]::New($selectedString.Matches.Value.ToString())
+}
+```
+
+Otherwise, `Invoke-ResilientRestMethod` can replace the `Invoke-RestMethod` as shown in this `Get-Record` example:
+
+```powershell
+function Get-Record {
+   param (
+      [Parameter(Mandatory)] 
+      [String] 
+      $setName,
+      [Parameter(Mandatory)] 
+      [Guid] 
+      $id,
+      [String] 
+      $query
+   )
+   $uri = $environmentUrl + 'api/data/v9.2/' + $setName
+   $uri = $uri + '(' + $id.Guid + ')' + $query
+   $getHeaders = $baseHeaders.Clone()
+   $getHeaders.Add('If-None-Match', $null)
+   $getHeaders.Add('Prefer', 'odata.include-annotations="*"')
+   $RetrieveRequest = @{
+      Uri     = $uri
+      Method  = 'Get'
+      Headers = $getHeaders
+   }
+   Invoke-ResilientRestMethod $RetrieveRequest
+}
+```
+
+The only difference is that you pass the hashtable to the method instead of using splatting. Otherwise you will get a script error: `A parameter cannot be found that matches parameter name 'Headers'.`
+
+## Debug using Fiddler
+
+[Fiddler](https://www.telerik.com/fiddler) is a web debugging proxy used to view HTTP traffic on your computer. Viewing this data is very useful when debugging scripts. By default, HTTP requests and responses sent using [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) will not be visible using Fiddler.
+
+
+To view HTTP traffic using Fiddler, set the `Invoke-RestMethod` [Proxy parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-proxy) to the URL configured as the Fiddler proxy on your local computer. By default this is `http://127.0.0.1:8888`
+
+For example, if you invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with the `-Proxy` parameter set while Fiddler is capturing traffic:
+
+```powershell
+Invoke-RestMethod `
+   -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') `
+   -Method Get `
+   -Headers $baseHeaders `
+   -Proxy 'http://127.0.0.1:8888'
+```
+
+In Fiddler, you will be able to see all the details:
+
+```http
+GET https://yourorg.api.crm.dynamics.com/api/data/v9.2/WhoAmI HTTP/1.1
+Host: yourorg.api.crm.dynamics.com
+OData-MaxVersion: 4.0
+Accept: application/json
+Authorization: Bearer [REDACTED]
+OData-Version: 4.0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.22631; en-US) PowerShell/7.4.0
+Accept-Encoding: gzip, deflate, br
+
+
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Allow: OPTIONS,GET,HEAD,POST
+Content-Type: application/json; odata.metadata=minimal
+Expires: -1
+Vary: Accept-Encoding
+x-ms-service-request-id: 7341c0c1-3343-430b-98ea-292567ed4776
+Set-Cookie: ARRAffinity=f60cbee43b7af0a5f322e7ce57a018546ed978f67f0c11cbb5e15b02ddb091a915134d20c556b0b34b9b6ae43ec3f5dcdad61788de889ffc592af7aca85fc1c508DC0FC94CB062A12107345846; path=/; secure; HttpOnly
+Set-Cookie: ReqClientId=4fc95009-0b3d-4a19-b223-0d80745636ac; expires=Sun, 07-Jan-2074 21:10:42 GMT; path=/; secure; HttpOnly
+Set-Cookie: orgId=648e8efd-db86-466e-a5bc-a4d5eb9c52d4; expires=Sun, 07-Jan-2074 21:10:42 GMT; path=/; secure; HttpOnly
+x-ms-service-request-id: 1ee13aa7-47f3-4a75-95fa-2916775a1f79
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+REQ_ID: 1ee13aa7-47f3-4a75-95fa-2916775a1f79
+CRM.ServiceId: framework
+AuthActivityId: 0b562cc3-56f6-44f0-a26e-4039cfc4be6a
+x-ms-dop-hint: 48
+x-ms-ratelimit-time-remaining-xrm-requests: 1,200.00
+x-ms-ratelimit-burst-remaining-xrm-requests: 5999
+OData-Version: 4.0
+X-Source: 110212218438874147222728177124203420477168182861012399121919014511175711948418152
+Public: OPTIONS,GET,HEAD,POST
+Set-Cookie: ARRAffinity=f60cbee43b7af0a5f322e7ce57a018546ed978f67f0c11cbb5e15b02ddb091a915134d20c556b0b34b9b6ae43ec3f5dcdad61788de889ffc592af7aca85fc1c508DC0FC94CB062A12107345846; path=/; secure; HttpOnly
+X-Source: 2302101791355821068628523819830862152291172232072372448021147103846182145238216119
+Date: Sun, 07 Jan 2024 21:10:42 GMT
+Content-Length: 277
+
+{"@odata.context":"https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse","BusinessUnitId":"1647bf36-e90a-4c4d-9b61-969d57ce7a66","UserId":"24e34f5e-7f1a-43fe-88da-7e4b862d51ad","OrganizationId":"648e8efd-db86-466e-a5bc-a4d5eb9c52d4"}
+```
+
+If Fiddler is not running, you will get an error like this:
+
+```powershell
+Invoke-RestMethod: C:\scripts\test.ps1:8:1
+Line |
+   8 |  Invoke-RestMethod `
+     |  ~~~~~~~~~~~~~~~~~~~
+     | No connection could be made because the target machine actively refused it.
+```
+
+If you choose to route all your `Invoke-RestMethod` calls through a single function, such as the `Invoke-ResilientRestMethod` described in [Manage Dataverse service protection limits](#manage-dataverse-service-protection-limits), you might set some variables in the `Core.ps1` file to manage configuring this in a single location.
+
+```powershell
+# Set to true only while debugging with Fiddler
+$debug = $true
+# Set this value to the Fiddler proxy URL configured on your computer
+$proxyUrl = 'http://127.0.0.1:8888'
+```
+
+Then, within your centralized function you can set the `-Proxy` parameter only when debugging with Fiddler.
+
+```powershell
+if($debug)
+{
+   Invoke-RestMethod @request -ResponseHeadersVariable rhv -Proxy $proxyUrl
+   if ($returnHeader) {
+      return $rhv
+   }
+}
+else {
+   Invoke-RestMethod @request -ResponseHeadersVariable rhv
+   if ($returnHeader) {
+      return $rhv
+   }
+}
+```
+
+[Learn about capturing web traffic with Fiddler](https://docs.telerik.com/fiddler/observe-traffic/tasks/capturewebtraffic)
 
 ## Troubleshooting
 

@@ -2,13 +2,11 @@
 title: Quick Start Web API with PowerShell
 description: Describes how to interactively authenticate and use the Dataverse Web API from PowerShell
 ms.date: 01/05/2024
-author: divkamath
-ms.author: dikamath
+author: JimDaly
+ms.author: jdaly
 ms.reviewer: jdaly
 search.audienceType:
   - developer
-contributors:
-  - JimDaly
 ---
 # Quick Start Web API with PowerShell
 
@@ -22,9 +20,10 @@ In this quick start, learn how to:
 > [!NOTE]
 > This Quick Start article only introduces basic concepts. This should be enough for basic testing. After your complete the steps in this article, go to  [Use PowerShell and Visual Studio Code with the Dataverse Web API](use-ps-and-vscode-web-api.md) to learn more advanced capabilities that will make you more productive, such as how to:
 > 
-> - Create reusable functions
-> - Handle exceptions
-> - Manage Dataverse service protection limits
+> - [Create reusable functions](use-ps-and-vscode-web-api.md#create-reusable-functions)
+> - [Handle exceptions](use-ps-and-vscode-web-api.md#handle-exceptions)
+> - [Manage Dataverse service protection limits](use-ps-and-vscode-web-api.md#manage-dataverse-service-protection-limits)
+> - [Debug using Fiddler](use-ps-and-vscode-web-api.md#debug-using-fiddler)
 >
 > The instructions in this article should work for Windows, Linux, and macOS, but these steps have only been tested on Windows. If changes are needed, please let us know using the **Feedback** section at the bottom of this article.
 
@@ -51,14 +50,14 @@ Don't proceed without confirming each of the following prerequisites are met.
    # Get an access token
    $token = (Get-AzAccessToken -ResourceUrl $environmentUrl).Token
    # Common headers
-   $headers = @{
+   $baseHeaders = @{
       'Authorization'    = 'Bearer ' + $token
       'Accept'           = 'application/json'
       'OData-MaxVersion' = '4.0'
       'OData-Version'    = '4.0'
    }
    # Invoke WhoAmI Function
-   Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -Headers $headers
+   Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -Headers $baseHeaders
    | ConvertTo-Json
    ```
 
@@ -117,7 +116,7 @@ When you want to connect with a different set of credentials, you need to use th
 
 #### Authenticate using different shell environments
 
-[Azure PowerShell works using Windows PowerShell and PowerShell shell environments, but not Cmd and Bash shell environments](/cli/azure/choose-the-right-azure-command-line-tool#different-shell-environments). If you want to authenticate with Cmd or Bash shell environments, you can use the Azure CLI.
+[Azure PowerShell works using Windows PowerShell and PowerShell shell environments, but not Cmd and Bash shell environments](/cli/azure/choose-the-right-azure-command-line-tool#different-shell-environments). If you want to authenticate with Cmd or Bash shell environments, you can use the [Azure CLI](/cli/azure).
 
 This script uses Azure CLI commands to authenticate:
 
@@ -150,7 +149,7 @@ All Dataverse Web API requests must include a set of common HTTP request headers
 
 ```powershell
 # Common headers
-$headers = @{
+$baseHeaders = @{
    'Authorization'    = 'Bearer ' + $token
    'Accept'           = 'application/json'
    'OData-MaxVersion' = '4.0'
@@ -166,7 +165,7 @@ Use the [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utili
 
 ```powershell
 # Invoke WhoAmI Function
-Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -Headers $headers
+Invoke-RestMethod -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') -Method Get -Headers $baseHeaders
 | ConvertTo-Json
 ```
 
@@ -182,7 +181,7 @@ $userId = (
    Invoke-RestMethod `
    -Uri ($environmentUrl + 'api/data/v9.2/WhoAmI') `
    -Method 'Get' `
-   -Headers $headers
+   -Headers $baseHeaders
    ).UserId
 Write-Host $userId
 ```
@@ -231,16 +230,17 @@ If you are using a different set of credentials than you used before, use the [D
 
 ## Next steps
 
-Now that you have the ability to authenticate and send Dataverse Web API requests using PowerShell, you can try other Web API operations.
-
 Learn more advanced capabilities to be more productive using PowerShell and Visual Studio Code with the Dataverse Web API, such as how to:
 
-- Create reusable functions
-- Handle exceptions
-- Manage Dataverse service protection limits
+- [Create reusable functions](use-ps-and-vscode-web-api.md#create-reusable-functions)
+- [Handle exceptions](use-ps-and-vscode-web-api.md#handle-exceptions)
+- [Manage Dataverse service protection limits](use-ps-and-vscode-web-api.md#manage-dataverse-service-protection-limits)
+- [Debug using Fiddler](use-ps-and-vscode-web-api.md#debug-using-fiddler)
 
 > [!div class="nextstepaction"]
 > [Use PowerShell and Visual Studio Code with the Dataverse Web API](use-ps-and-vscode-web-api.md)
+
+Now that you have the ability to authenticate and send Dataverse Web API requests using PowerShell, you can try other Web API operations.
 
 Learn more about Dataverse Web API capabilities by understanding the service documents.
 
