@@ -1,7 +1,7 @@
 ---
 title: Use PowerShell and Visual Studio Code with the Dataverse Web API
 description: Describes how to use PowerShell and Visual Studio Code to create reusable PowerShell functions to interactively test using the Dataverse Web API
-ms.date: 01/05/2024
+ms.date: 01/10/2024
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
