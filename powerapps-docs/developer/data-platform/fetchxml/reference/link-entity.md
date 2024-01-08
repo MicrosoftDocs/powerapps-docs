@@ -92,7 +92,6 @@ This query returns data from the [SystemUser](../../reference/entities/systemuse
 |`alias`|No|[!INCLUDE [link-entity-name-alias-description](includes/link-entity-alias-description.md)]|
 |`link-type`|No|[!INCLUDE [link-entity-name-link-type-description](includes/link-entity-link-type-description.md)]|
 |`intersect`|No|[!INCLUDE [link-entity-name-intersect-description](includes/link-entity-intersect-description.md)]|
-|`forceseek`|No|[!INCLUDE [link-entity-name-forceseek-description](includes/link-entity-forceseek-description.md)]|
 |`enableprefiltering`|No|[!INCLUDE [link-entity-name-enableprefiltering-description](includes/link-entity-enableprefiltering-description.md)]|
 |`prefilterparametername`|No|[!INCLUDE [link-entity-name-prefilterparametername-description](includes/link-entity-prefilterparametername-description.md)]|
 
