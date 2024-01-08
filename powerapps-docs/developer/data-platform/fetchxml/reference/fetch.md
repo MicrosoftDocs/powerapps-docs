@@ -38,7 +38,6 @@ contributors:
 |`distinct`|No|Boolean value to specify that duplicate rows not be included in the results. [Learn more about returning distinct results](../filter-rows.md#returning-distinct-results)|
 |`latematerialize`|No|Boolean value to direct the query to be broken up into smaller parts and reassemble the results before returning them. This may improve performance for some long-running queries. [Learn more about using Late Materialize query](../optimize-performance.md#late-materialize-query). |
 |`mapping`|No|REMOVE?|
-|`min-active-row-version`|No|REMOVE?|
 |`no-lock`|No|Boolean value to specify that read locks not be placed on the tables in the query.|
 |`options`|No|A string value to apply one or more SQL optimizations. See [Options](#options)|
 |`output-format`|No|REMOVE?|
