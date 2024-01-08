@@ -226,11 +226,24 @@ SELECT TOP (1000) asyncoperationid
 Use queries like the following to help diagnose problems.
 
 #### Jobs by State, Status and type
+Open the SSMS and run the following query. 
 
-> **TODO**: 
-> 
-> - Add something about what to look for with this query?
-> - What to look for in the results
+```
+SELECT 	StateCode, StatusCode, OperationType, Count(*) AS Count
+FROM  AsyncOperation WITH (nolock)
+GROUP BY  StateCode, StatusCode, OperationType
+ORDER BY Count DESC
+```
+
+SELECT StateCode, StatusCode, OperationType, Count(*) AS Count: This command is asking the database to select and display the columns StateCode, StatusCode, and OperationType from the AsyncOperation table. In addition to these, it uses the Count(*) function to count the number of rows that match the criteria of the grouping.
+
+GROUP BY StateCode, StatusCode, OperationType: The GROUP BY clause groups the result set by the unique combinations of StateCode, StatusCode, and OperationType. For each unique combination, the Count(*) function will return the number of occurrences.
+
+ORDER BY Count DESC: This part of the query orders the results by the Count in descending order. This means that the combinations with the highest counts will be listed first. It effectively prioritizes the most frequent occurrences of StateCode, StatusCode, and OperationType combinations.
+
+Overall, this breakdown can help administrators or users to understand the distribution and frequency of different types of jobs and see which jobs might be driving up the volume of the backlog.
+
+
 
 ##### [Web API](#tab/webapi)
 
@@ -272,11 +285,40 @@ ORDER BY Count DESC
 ---
 
 #### Top system Jobs that are in waiting status by count
+The query we show below is tailored to extract a count of all jobs within the asyncoperation table that are in a 'waiting' state, as indicated by statecode = 1. Here's what to look for in the results:
 
-> **TODO**: 
-> 
-> - Add something about what to look for with this query?
-> - What to look for in the results
+Quantifying Waiting Jobs:
+The query specifically targets jobs that are waiting to be processed (statecode = 1). The results will give you a clear count of all such jobs, categorized by their statuscode and operationtype.
+Status Code Specifics:
+
+Each statuscode for a waiting job can indicate a different reason for the job being in a waiting state. Look for patterns or high counts associated with specific status codes which may highlight specific issues or backlogs.
+Operation Type Breakdown:
+
+The count of waiting jobs will be broken down by operationtype, showing you which types of operations are most commonly in a waiting state.
+
+Identifying Potential Bottlenecks:
+A high count of waiting jobs in certain operation types may signify bottlenecks in those areas. This might be due to resource limitations, dependencies on other processes, or system misconfigurations.
+Prioritizing Issues:
+
+By ordering the results by count in descending order, the query immediately highlights the most pressing issues at the top of the list. This helps in prioritizing problem-solving efforts.
+Capacity and Resource Management:
+
+If certain jobs are consistently in the waiting state, it could indicate that the system lacks the necessary resources to process these jobs efficiently.
+
+System Health Check:
+The jobs in a waiting state serve as a health indicator. A healthy system should ideally have minimal jobs in a waiting state or at least show a quick turnover from waiting to active processing.
+
+Workflow Efficiency:
+The results can shed light on workflow efficiency. If a particular operationtype has a high count of waiting jobs, it may indicate inefficiencies or the need for optimization within that workflow.
+
+Alerts for Intervention:
+Certain statuscode values may correspond to statuses that require manual intervention. High counts for these can signal the need for administrative attention.
+
+Understanding the Queue:
+The data can offer insights into how jobs are queued and processed, which can be useful for further analysis or system configuration adjustments.
+
+In the context of this query, you're looking to understand the volume and nature of waiting jobs, identify where the hold-ups are occurring, and make informed decisions about how to address them to improve system performance and throughput.
+
 
 ##### [Web API](#tab/webapi)
 
@@ -322,10 +364,40 @@ ORDER BY Count DESC
 
 #### Workflows by count
 
-> **TODO**: 
-> 
-> - Add something about what to look for with this query?
-> - What to look for in the results
+The query we provide below provides a detailed breakdown of workflow-related jobs within the asyncoperation table, filtered by an operationtype value of 10, which typically represents workflows. When analyzing the results, here’s what to focus on:
+
+Workflow-Specific Jobs:
+
+The operationtype = 10 filter means the query is specifically aggregating data for workflow jobs. You’ll see how many jobs are related to workflows and their current statuses.
+Job State Distribution:
+The statecode will tell you the current state of these workflow jobs, such as whether they are active, waiting, succeeded, or failed.
+
+Status Code Analysis:
+The statuscode can give specific insights into the reason behind a job’s current state. For example, it could indicate if a job is waiting for resources, has been suspended, or has completed.
+Count of Each Category:
+
+The Count(*) function provides the total number of jobs for each statecode and statuscode combination. This helps in identifying the most common outcomes of workflow operations.
+Identifying Common Outcomes:
+
+With the results ordered by Count DESC, you can quickly identify the most frequent outcomes or bottlenecks in workflow processing.
+
+Troubleshooting and Optimization:
+
+High counts in error or suspended states can highlight areas where workflows may be failing or getting stuck, signaling a need for troubleshooting or process optimization.
+
+Performance Metrics:
+Understanding which workflows are most common and how they are distributed across different states can help in assessing the performance and reliability of the workflow management system.
+Capacity Planning:
+
+A high number of active or waiting workflows could suggest that additional resources are needed to handle the load or that there’s a need to optimize the workflow execution environment.
+
+Workflow Management:
+The query can guide administrators on managing workflows more effectively, such as deciding which workflows to prioritize or identifying those that can be optimized or deactivated/disabled.
+
+System Health Check:
+The overall results can serve as a health check for your workflow system, indicating whether the system is performing optimally or if there are areas that require attention.
+By focusing on these aspects, you can use the query results to gain a comprehensive view of workflow jobs, manage system resources more effectively, and ensure that workflows are running smoothly and efficiently.
+
 
 See [Operation Types](#operation-types)
 
@@ -373,10 +445,19 @@ ORDER BY Count DESC
 
 #### Jobs waiting for system resources to become available
 
-> **TODO**: 
-> 
-> - Add something about what to look for with this query?
-> - What to look for in the results
+The query below is structured to retrieve a detailed analysis of jobs from the asyncoperation table that are in a specific state of readiness but are pending execution due to unavailability of system resources. Here's how to interpret the results:
+
+Filter for Ready Jobs Waiting for Resources:
+The WHERE statecode = 0 AND statuscode = 0 clause specifically filters for jobs that are in a 'Ready' state (statecode = 0) and are waiting for resources (statuscode = 0). This combination indicates jobs that are queued up and prepared to run but are on hold.
+
+Optimizing Job Scheduling:
+Identifying patterns in job readiness and wait times can inform improvements in job scheduling, possibly leading to a more balanced distribution of system load.
+
+Identifying Underlying Issues:
+In some cases, jobs waiting for resources might not be solely a resource issue but could be indicative of underlying problems such as deadlocks or inefficient resource locking mechanisms.
+
+Overall, this can be useful to identify factors contributing to slowness and making decisions for efficiency and better handling of backlog. 
+
 
 ##### [Web API](#tab/webapi)
 
