@@ -1,7 +1,7 @@
 ---
 title: FAQ about using AI responsibly in Power Apps
 description: Find FAQ about how to use copilot AI responsibly with Power Apps to build apps through conversation, generate app descriptions, edit apps, and more.
-ms.date: 12/21/2023
+ms.date: 01/08/2024
 ms.custom:
   - responsible-ai-faqs
   - ai-gen-docs-bap
@@ -35,3 +35,4 @@ ms.reviewer: mduelae
 - [FAQ about using Copilot in the rich text editor](faqs-email-assist-rte.md)
 - [Draft well-written, input text with Copilot](../../user/well-written-input-text-copilot.md)
 - [FAQ for drafting well-written, input text with Copilot](faq-draft-with-copilot.md)
+- [Use Copilot chat in canvas apps](../../user/copilot-chat-in-webplayer.md)
