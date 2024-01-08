@@ -87,8 +87,8 @@ This query returns data from the [SystemUser](../../reference/entities/systemuse
 |Name|Required?|Description|
 |---------|---------|---------|
 |`name`|Yes|[!INCLUDE [link-entity-name-description](includes/link-entity-name-description.md)]|
-|`to`|Yes|[!INCLUDE [link-entity-to-description](includes/link-entity-to-description.md)]|
-|`from`|Yes|[!INCLUDE [link-entity-name-from-description](includes/link-entity-from-description.md)]|
+|`to`|No|[!INCLUDE [link-entity-to-description](includes/link-entity-to-description.md)][While not technically required, this attribute is usually used.](../join-tables.md#using-to-and-from-attributes)|
+|`from`|No|[!INCLUDE [link-entity-name-from-description](includes/link-entity-from-description.md)][While not technically required, this attribute is usually used.](../join-tables.md#using-to-and-from-attributes)|
 |`alias`|No|[!INCLUDE [link-entity-name-alias-description](includes/link-entity-alias-description.md)]|
 |`link-type`|No|[!INCLUDE [link-entity-name-link-type-description](includes/link-entity-link-type-description.md)]|
 |`intersect`|No|[!INCLUDE [link-entity-name-intersect-description](includes/link-entity-intersect-description.md)]|
