@@ -32,7 +32,7 @@ contributors:
 |Name|Required?|Description|
 |---------|---------|---------|
 |`aggregate`|No|Boolean value to specify that the query returns aggregate values. [Learn about aggregating data](../aggregate-data.md)|
-|`aggregatelimit`|No|TODO?|
+|`aggregatelimit`|No|Set a limit below the standard 50,000  record aggregate limit. [Learn about aggregate limits](../aggregate-data.md#limitations) |
 |`count`|No|Positive integer value to specify the number of records to return in a page. [Learn about paging results](../page-results.md) |
 |`datasource`|No|TODO? I found this using the FetchXmlBuilder|
 |`distinct`|No|Boolean value to specify that duplicate rows not be included in the results. [Learn more about returning distinct results](../filter-rows.md#returning-distinct-results)|
