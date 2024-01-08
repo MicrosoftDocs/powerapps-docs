@@ -1,14 +1,14 @@
 ---
-title: Quick Start Web API with PowerShell
-description: Describes how to interactively authenticate and use the Dataverse Web API from PowerShell
-ms.date: 01/05/2024
+title: Quick Start Web API with PowerShell and Visual Studio Code
+description: Describes how to interactively authenticate and use the Dataverse Web API from PowerShell with Visual Studio Code
+ms.date: 01/10/2024
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
 search.audienceType:
   - developer
 ---
-# Quick Start Web API with PowerShell
+# Quick Start Web API with PowerShell and Visual Studio Code
 
 PowerShell is a powerful scripting language that can automate repetitive tasks and streamline workflows, making it an ideal tool for integrating with Dataverse. This quick start focuses on helping you get started using PowerShell with the Dataverse Web API in Visual Studio Code. Visual Studio Code with Powershell provides an alternative to [using Postman with the Dataverse Web API](use-postman-web-api.md).
 

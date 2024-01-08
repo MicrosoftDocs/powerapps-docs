@@ -699,6 +699,54 @@ else {
 
 [Learn about capturing web traffic with Fiddler](https://docs.telerik.com/fiddler/observe-traffic/tasks/capturewebtraffic)
 
+## Download the Dataverse Web API CSDL $metadata document
+
+The CSDL $metadata is the source of truth about Dataverse Web API capabilities. You can view it in a browser, but you might find it easier to download the file and view it within Visual Studio Code. The following script is a modified version of the script introduced in [Quick Start Web API with PowerShell](quick-start-ps.md). The difference is that it uses the [Invoke-WebRequest cmdlet](/powershell/module/microsoft.powershell.utility/invoke-webrequest), which is more appropriate for downloading an XML document.
+
+```powershell
+$environmentUrl = 'https://yourorg.crm.dynamics.com/' # change this
+$writeFileTo =  'C:\temp\yourorg.xml' # change this
+
+## Login if not already logged in
+if ($null -eq (Get-AzTenant -ErrorAction SilentlyContinue)) {
+   Connect-AzAccount | Out-Null
+}
+# Get an access token
+$token = (Get-AzAccessToken -ResourceUrl $environmentUrl).Token
+# Common headers
+$xmlHeaders = @{
+   'Authorization'    = 'Bearer ' + $token
+   'Accept'           = 'application/xml'
+   'OData-MaxVersion' = '4.0'
+   'OData-Version'    = '4.0'
+}
+
+$doc = [xml](Invoke-WebRequest `
+      -Uri ($environmentUrl + 'api/data/v9.2/$metadata?annotations=true') `
+      -Method 'Get' `
+      -Headers $xmlHeaders ).Content
+
+$StringWriter = New-Object System.IO.StringWriter
+$XmlWriter = New-Object System.XMl.XmlTextWriter $StringWriter
+$xmlWriter.Formatting = 'indented'
+$xmlWriter.Indentation = 2
+$doc.WriteContentTo($XmlWriter)
+$XmlWriter.Flush()
+$StringWriter.Flush()
+Set-Content -Path $writeFileTo -Value $StringWriter.ToString()
+```
+
+1. Copy the script.
+1. Edit the `$environmentUrl` and `$writeFileTo` variables to match your need.
+1. Run the script in Visual Studio Code.
+1. Open the XML file in Visual Studio Code
+
+You will probably get a notification saying:
+
+> For performance reasons, document symbols have been limited to 5000 items. If a new limit is set, please close and reopen this file to recompute document symbols.
+
+The notification will give the option to change the Visual Studio XML extension `xml.symbols.maxItemsComputed` limit. For most Dataverse Web API CSDL $metadata documents, setting the limit to 500000 should be sufficient.
+
 ## Troubleshooting
 
 This section contains some guidance for issues you might encounter.

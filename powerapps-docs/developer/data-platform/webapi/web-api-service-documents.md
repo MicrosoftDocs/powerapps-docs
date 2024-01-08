@@ -1,7 +1,7 @@
 ---
 title: Web API Service Documents
 description: Describes OData service documents you can use to understand the Dataverse Web API capabilities available in your environment.
-ms.date: 04/06/2022
+ms.date: 01/10/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -70,6 +70,8 @@ Append `$metadata` to the Web API endpoint to retrieve the Common Schema Definit
 For example: `https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata`
 
 This XML document describes all the tables and operations that you can use in your environment.
+
+You can download the CSDL $metadata document using Visual Studio Code and Powershell using [these instructions](use-ps-and-vscode-web-api.md#download-the-dataverse-web-api-csdl-metadata-document).
 
 > [!IMPORTANT]
 > This document is the source of truth for everything related to Web API. You will want to reference it frequently. Use `Ctrl+F` on this document to locate the specific `EntityType`, `Action`, `Function`, `ComplexType`, or `EnumType` that you will use. The names are case sensitive.
