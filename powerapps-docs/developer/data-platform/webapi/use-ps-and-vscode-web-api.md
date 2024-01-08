@@ -30,7 +30,7 @@ The content of this article has the same prerequisites as the [Quick Start Web A
 
 ## Create reusable functions
 
-[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio Code. This might be all you need to for an ad-hoc test of one or more operations. However, as your scripts become more complex, you might find yourself typing the same code again and again. 
+[Quick Start Web API with PowerShell](quick-start-ps.md) introduced how to authenticate and call the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with Visual Studio Code. This approach might be all you need to for an ad-hoc test of one or more operations. However, as your scripts become more complex, you might find yourself typing the same code again and again. 
 
 In this section, we start creating a set of reusable functions in separate files that we can access using *[dot sourcing](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing)*. Use dot sourcing to load a file containing PowerShell scripts that can contain functions and variables that become part of the local script scope.
 
@@ -498,7 +498,7 @@ The PowerShell [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershel
 
 You might never encounter a service protection limit error while you're learning how to use the Dataverse Web API with PowerShell. Scripts you write might be used to send the large number of requests necessary to encounter these errors, so you should know they can occur and how you can manage them using PowerShell.
 
-If you simply add the `MaximumRetryCount` parameter to every Dataverse call using `Invoke-RestMethod`, PowerShell will retry a very broad range of errors. This will make your scripts slow, especially when developing and testing. You would need to wait 10 to 15 seconds each time an error occurs, depending on how many re-tries you specify. An alternative approach is to encapsulate the `Invoke-RestMethod` in your own method that will manage retries for specific errors.
+If you add the `MaximumRetryCount` parameter to every Dataverse call using `Invoke-RestMethod`, PowerShell retries a broad range of errors. Retrying every error makes your scripts slow, especially when developing and testing. You would need to wait 10 to 15 seconds each time an error occurs, depending on how many retries you specify. An alternative approach is to encapsulate the `Invoke-RestMethod` in your own method that manages retries for specific errors.
 
 The following `Invoke-ResilientRestMethod` function takes a `request` hashtable object as a mandatory parameter and a boolean `returnHeader` flag to indicate whether to return the response header or not. It tries to use the `Invoke-RestMethod` using the `request` object. If the `returnHeader` flag is true, it returns the response header. If the REST method fails with a 429 error, it checks if the `request` object has a `MaximumRetryCount` property. If not, it adds one with a value of 3. It then retries the REST method using the request object and the retry-after value from the response header. If the flag is true, it returns the response header. If the REST method fails with any other error, it rethrows the exception.
 
@@ -542,7 +542,7 @@ function Invoke-ResilientRestMethod {
 }
 ```
 
-You can use a function like this in your re-usable functions. When functions need to return values from the header of the response, they need to set the `returnHeader` value to `$true`. For example, the following `New-Record` function modifies the example function in [Create table operations functions](#create-table-operations-functions) to use `Invoke-ResilientRestMethod` instead of `Invoke-RestMethod` directly.
+You can use a function like this in your reusable functions. When functions need to return values from the header of the response, they need to set the `returnHeader` value to `$true`. For example, the following `New-Record` function modifies the example function in [Create table operations functions](#create-table-operations-functions) to use `Invoke-ResilientRestMethod` instead of `Invoke-RestMethod` directly.
 
 ```powershell
 function New-Record {
@@ -599,14 +599,14 @@ function Get-Record {
 }
 ```
 
-The only difference is that you pass the hashtable to the method instead of using splatting. Otherwise you will get a script error: `A parameter cannot be found that matches parameter name 'Headers'.`
+The only difference is that you pass the hashtable to the method instead of using splatting. Otherwise you'll get a script error: `A parameter cannot be found that matches parameter name 'Headers'.`
 
 ## Debug using Fiddler
 
-[Fiddler](https://www.telerik.com/fiddler) is a web debugging proxy used to view HTTP traffic on your computer. Viewing this data is very useful when debugging scripts. By default, HTTP requests and responses sent using [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) will not be visible using Fiddler.
+[Fiddler](https://www.telerik.com/fiddler) is a web debugging proxy used to view HTTP traffic on your computer. Viewing this data is useful when debugging scripts. By default, HTTP requests and responses sent using [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod) won't be visible using Fiddler.
 
 
-To view HTTP traffic using Fiddler, set the `Invoke-RestMethod` [Proxy parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-proxy) to the URL configured as the Fiddler proxy on your local computer. By default this is `http://127.0.0.1:8888`
+To view HTTP traffic using Fiddler, set the `Invoke-RestMethod` [Proxy parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-proxy) to the URL configured as the Fiddler proxy on your local computer. By default, the URL is `http://127.0.0.1:8888`. Yours may be different.
 
 For example, if you invoke the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) with the `-Proxy` parameter set while Fiddler is capturing traffic:
 
@@ -618,7 +618,7 @@ Invoke-RestMethod `
    -Proxy 'http://127.0.0.1:8888'
 ```
 
-In Fiddler, you will be able to see all the details:
+In Fiddler, you'll be able to see all the details:
 
 ```http
 GET https://yourorg.api.crm.dynamics.com/api/data/v9.2/WhoAmI HTTP/1.1
@@ -660,7 +660,7 @@ Content-Length: 277
 {"@odata.context":"https://yourorg.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse","BusinessUnitId":"1647bf36-e90a-4c4d-9b61-969d57ce7a66","UserId":"24e34f5e-7f1a-43fe-88da-7e4b862d51ad","OrganizationId":"648e8efd-db86-466e-a5bc-a4d5eb9c52d4"}
 ```
 
-If Fiddler is not running, you will get an error like this:
+If Fiddler isn't running, you'll get an error like this:
 
 ```powershell
 Invoke-RestMethod: C:\scripts\test.ps1:8:1
@@ -670,7 +670,7 @@ Line |
      | No connection could be made because the target machine actively refused it.
 ```
 
-If you choose to route all your `Invoke-RestMethod` calls through a single function, such as the `Invoke-ResilientRestMethod` described in [Manage Dataverse service protection limits](#manage-dataverse-service-protection-limits), you might set some variables in the `Core.ps1` file to manage configuring this in a single location.
+If you choose to route all your `Invoke-RestMethod` calls through a single function, such as the `Invoke-ResilientRestMethod` described in [Manage Dataverse service protection limits](#manage-dataverse-service-protection-limits), you might set some variables in the `Core.ps1` file to configuring this option in a single location.
 
 ```powershell
 # Set to true only while debugging with Fiddler
@@ -741,11 +741,11 @@ Set-Content -Path $writeFileTo -Value $StringWriter.ToString()
 1. Run the script in Visual Studio Code.
 1. Open the XML file in Visual Studio Code
 
-You will probably get a notification saying:
+You'll probably get a notification saying:
 
 > For performance reasons, document symbols have been limited to 5000 items. If a new limit is set, please close and reopen this file to recompute document symbols.
 
-The notification will give the option to change the Visual Studio XML extension `xml.symbols.maxItemsComputed` limit. For most Dataverse Web API CSDL $metadata documents, setting the limit to 500000 should be sufficient.
+The notification gives the option to change the Visual Studio XML extension `xml.symbols.maxItemsComputed` limit. For most Dataverse Web API CSDL $metadata documents, setting the limit to 500000 should be sufficient.
 
 ## Troubleshooting
 
