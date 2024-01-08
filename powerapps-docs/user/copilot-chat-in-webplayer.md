@@ -1,7 +1,7 @@
 ---
 title: Use Copilot chat in canvas apps (preview)
 description: Learn how users can use Copilot chat to get data insights for canvas apps using Dataverse data.
-ms.date: 01/05/2023
+ms.date: 01/08/2023
 ms.topic: article
 ms.component: pa-user
 ms.subservice: end-user
@@ -17,11 +17,11 @@ search.audienceType:
 
 [This article is prerelease documentation and is subject to change.]
 
-End users can use Copilot chat to quickly get data insights for canvas apps that use Dataverse as their primary data source. Copilot chat allow users to analyze and summarize data easily through conversations with natural language. 
+End users can use Copilot chat to quickly get data insights for canvas apps that use Dataverse as their primary data source. Copilot chat allows users to analyze and summarize data easily through conversations with natural language. 
 
 No maker action is needed for users to take advantage of this feature.
 
-Copilot chat is available when using Power Apps in a browser. It is not available in the Power Apps mobile app.  
+Copilot chat is available when using Power Apps in a browser. It isn't available in the Power Apps mobile app.  
 
 > [!IMPORTANT]
 > - To use this feature, your admin must allow data movement across regions. Your environment must also be in a supported region. For information about supported regions and how to allow data movement across regions, see [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot).
