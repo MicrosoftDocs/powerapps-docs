@@ -221,17 +221,17 @@ SELECT TOP (1000) asyncoperationid
 
 ---
 
-### Diagnostic queries
+## Diagnostic queries
 
 Use queries like the following to help diagnose problems.
 
-#### Jobs by State, Status, and type
+### Jobs by State, Status, and type
 
 
 Use this query to understand the distribution and frequency of different types of jobs. The results might tell you which jobs are causing a problem.
 
 
-##### [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 ```http
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=groupby((statecode,statuscode,operationtype),aggregate($count as count))
@@ -242,7 +242,7 @@ OData-Version: 4.0
 
 [Learn how to query data using the Web API](webapi/query-data-web-api.md)
 
-##### [FetchXml](#tab/fetchxml)
+#### [FetchXml](#tab/fetchxml)
 
 ```xml
 <fetch aggregate='true'>
@@ -258,7 +258,7 @@ OData-Version: 4.0
 
 [Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
 
-##### [SQL](#tab/sql)
+#### [SQL](#tab/sql)
 
 ```sql
 SELECT statecode,
@@ -276,13 +276,62 @@ ORDER BY Count DESC
 
 ---
 
-#### Top system Jobs that are in waiting status by count
+### Top system Jobs that are in waiting status by count
 
 Use this query to extract a count of all jobs within the `asyncoperation` table that are in a 'waiting' state. This query helps you to:
 
 - Understand the volume and nature of waiting jobs.
 - Identify where the hold-ups are occurring.
 - Make informed decisions about how to address them to improve system performance and throughput.
+
+#### [Web API](#tab/webapi)
+
+```http
+GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((statecode eq 1))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+```
+
+[Learn to query data using the Web API](webapi/query-data-web-api.md)
+
+#### [FetchXml](#tab/fetchxml)
+
+```xml
+<fetch aggregate='true'>
+  <entity name='asyncoperation'>
+    <attribute name='statecode' alias='statecode' groupby='true' />
+    <attribute name='statuscode' alias='statuscode' groupby='true' />
+    <attribute name='operationtype' alias='operationtype' groupby='true' />
+    <attribute name='asyncoperationid' alias='count' aggregate='count' />
+    <filter>
+      <condition attribute='statecode' operator='eq' value='1' />
+    </filter>
+    <order alias='count' descending='true' />
+  </entity>
+</fetch>
+```
+
+[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+
+#### [SQL](#tab/sql)
+
+```sql
+SELECT statecode,
+      statuscode,
+      operationtype,
+      Count(*) AS count
+FROM  asyncoperation
+WHERE statecode = 1
+GROUP BY  statecode,
+      statuscode,
+      operationtype
+ORDER BY Count DESC
+```
+
+[Use SQL to query data using the Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md)
+
+---
 
 Here's what to look for in the results:
 
@@ -307,18 +356,22 @@ Here's what to look for in the results:
 - **Understanding the Queue**: The data can offer insights into how jobs are queued and processed, which can be useful for further analysis or system configuration adjustments.
 
 
-##### [Web API](#tab/webapi)
+### Workflows by count
+
+This query provides a detailed breakdown of workflow-related jobs, filtered by an `operationtype` value for workflows. Use the query results to gain a comprehensive view of workflow jobs, manage system resources more effectively, and ensure that workflows are running smoothly and efficiently.
+
+#### [Web API](#tab/webapi)
 
 ```http
-GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((statecode eq 1))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
+GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((operationtype eq 10))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 ```
 
-[Learn to query data using the Web API](webapi/query-data-web-api.md)
+[Learn to query Data using the Web API](webapi/query-data-web-api.md)
 
-##### [FetchXml](#tab/fetchxml)
+#### [FetchXml](#tab/fetchxml)
 
 ```xml
 <fetch aggregate='true'>
@@ -328,7 +381,7 @@ OData-Version: 4.0
     <attribute name='operationtype' alias='operationtype' groupby='true' />
     <attribute name='asyncoperationid' alias='count' aggregate='count' />
     <filter>
-      <condition attribute='statecode' operator='eq' value='1' />
+      <condition attribute='operationtype' operator='eq' value='10' />
     </filter>
     <order alias='count' descending='true' />
   </entity>
@@ -337,7 +390,7 @@ OData-Version: 4.0
 
 [Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
 
-##### [SQL](#tab/sql)
+#### [SQL](#tab/sql)
 
 ```sql
 SELECT statecode,
@@ -345,7 +398,7 @@ SELECT statecode,
       operationtype,
       Count(*) AS count
 FROM  asyncoperation
-WHERE statecode = 1
+WHERE operationtype = 10
 GROUP BY  statecode,
       statuscode,
       operationtype
@@ -355,10 +408,6 @@ ORDER BY Count DESC
 [Use SQL to query data using the Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md)
 
 ---
-
-#### Workflows by count
-
-This query provides a detailed breakdown of workflow-related jobs, filtered by an `operationtype` value for workflows. Use the query results to gain a comprehensive view of workflow jobs, manage system resources more effectively, and ensure that workflows are running smoothly and efficiently.
 
 Here's what to look for in the results:
 
@@ -382,69 +431,12 @@ Here's what to look for in the results:
 
 - **System Health Check**: The overall results can serve as a health check for your workflow system, indicating whether the system is performing optimally or if there are areas that require attention.
 
-##### [Web API](#tab/webapi)
 
-```http
-GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((operationtype eq 10))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```
-
-[Learn to query Data using the Web API](webapi/query-data-web-api.md)
-
-##### [FetchXml](#tab/fetchxml)
-
-```xml
-<fetch aggregate='true'>
-  <entity name='asyncoperation'>
-    <attribute name='statecode' alias='statecode' groupby='true' />
-    <attribute name='statuscode' alias='statuscode' groupby='true' />
-    <attribute name='operationtype' alias='operationtype' groupby='true' />
-    <attribute name='asyncoperationid' alias='count' aggregate='count' />
-    <filter>
-      <condition attribute='operationtype' operator='eq' value='10' />
-    </filter>
-    <order alias='count' descending='true' />
-  </entity>
-</fetch>
-```
-
-[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
-
-##### [SQL](#tab/sql)
-
-```sql
-SELECT statecode,
-      statuscode,
-      operationtype,
-      Count(*) AS count
-FROM  asyncoperation
-WHERE operationtype = 10
-GROUP BY  statecode,
-      statuscode,
-      operationtype
-ORDER BY Count DESC
-```
-
-[Use SQL to query data using the Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md)
-
----
-
-#### Jobs waiting for system resources to become available
+### Jobs waiting for system resources to become available
 
 Use this query to retrieve a detailed analysis of jobs from the `asyncoperation` table that are in a specific state of readiness but are pending execution due to unavailability of system resources. This query can identify factors contributing to slowness and making decisions for efficiency and better handling of backlog.
 
-Here's what to look for in the results:
-
-- **Filter for Ready Jobs Waiting for Resources**: Limiting results where `statecode` = `0` and `statuscode` = `0` filters for jobs that are in a **Ready**  and **Waiting For Resources**. This combination indicates jobs that are queued up and prepared to run but are on hold.
-
-- **Optimizing Job Scheduling**: Identifying patterns in job readiness and wait times can inform improvements in job scheduling, possibly leading to a more balanced distribution of system load.
-
-- **Identifying Underlying Issues**: In some cases, jobs waiting for resources might not be solely a resource issue but could be indicative of underlying problems such as deadlocks or inefficient resource locking mechanisms.
-
-
-##### [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 ```http
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((statecode eq 0 and statuscode eq 0))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
@@ -455,7 +447,7 @@ OData-Version: 4.0
 
 [Learn to query Data using the Web API](webapi/query-data-web-api.md)
 
-##### [FetchXml](#tab/fetchxml)
+#### [FetchXml](#tab/fetchxml)
 
 ```xml
 <fetch aggregate='true'>
@@ -475,7 +467,7 @@ OData-Version: 4.0
 
 [Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
 
-##### [SQL](#tab/sql)
+#### [SQL](#tab/sql)
 
 ```sql
 SELECT statecode,
@@ -494,10 +486,20 @@ ORDER BY Count DESC
 
 ---
 
-## Queries for File Storage 
-AsyncOperationBase record are divided in File Storage and in Database which depends on the size of the record where
-records occupying more than 4 MB will be stored in the file Storage.
-In some senários customers want to delete the records in File to save Space.
+Here's what to look for in the results:
+
+- **Filter for Ready Jobs Waiting for Resources**: Limiting results where `statecode` = `0` and `statuscode` = `0` filters for jobs that are in a **Ready**  and **Waiting For Resources**. This combination indicates jobs that are queued up and prepared to run but are on hold.
+
+- **Optimizing Job Scheduling**: Identifying patterns in job readiness and wait times can inform improvements in job scheduling, possibly leading to a more balanced distribution of system load.
+
+- **Identifying Underlying Issues**: In some cases, jobs waiting for resources might not be solely a resource issue but could be indicative of underlying problems such as deadlocks or inefficient resource locking mechanisms.
+
+
+### Queries for File Storage
+
+AsyncOperation records are divided in File Storage and in Database which depends on the size of the record where records occupying more than 4 MB will be stored in the file Storage.
+
+In some scenarios customers want to delete the records in File to save Space.
 
 ```
 SELECT count(*) AS FileStorageCount  FROM AsyncOperation  WHERE  DataBlobId IS NOT NULL
@@ -512,7 +514,7 @@ SELECT OperationTypeName, NAME, FriendlyMessage count(*) AS Jobs
 ```
 The query results will help us see the Job types, the name of the jobs, and the number of times this job exists on the table consuming File storage. This will enable the identification of the specific job names that have the greatest impact on file consumption. As a result, the customer can initiate a bulk delete process for that particular job by targeting its name.
 
-### Operation Types
+## Operation Types
 
 The [OperationType](reference/entities/asyncoperation.md#BKMK_OperationType) column describes categories of system jobs. Dataverse intiates many of these types to perform maintenance tasks.
 
