@@ -210,7 +210,7 @@ Below sample shows how to return number of children account, entity Account has 
     <attribute name="address1_city" />
     <attribute name="address1_country" />
     <attribute name="address1_latitude" />
- 	    <attribute name="accountid"  alias="CountChildren" rowaggregate="CountChildren"/>
+        <attribute name="accountid"  alias="CountChildren" rowaggregate="CountChildren"/>
     <filter>
       <filter type="or">
         <condition attribute="versionnumber" operator="ge" value="2706199260" />
@@ -219,6 +219,7 @@ Below sample shows how to return number of children account, entity Account has 
   </entity>
 </fetch>
 ```
+
 ## Limitations
 
 Queries that return aggregate values are limited to 50,000 records. This limit helps maintain system performance and reliability. If the filter criteria in your query includes more than 50,000 records you will get the following error:
@@ -228,13 +229,14 @@ Queries that return aggregate values are limited to 50,000 records. This limit h
 > Platform error message: `AggregateQueryRecordLimit exceeded. Cannot perform this operation.`  
 > Client error message: The maximum record limit is exceeded. Reduce the number of records.
 
-To avoid this error add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run your query multiple times and combine the results.
+To avoid this error add appropriate filters to your query to ensure that it will not need to evaluate more than 50,000 records. Then run your query multiple times and combine the results. Appropriate filters depend on the nature of your data, but they could be a date range or a subset of values in a choice column.
 
-<!-- TODO: This guidance is pretty vague. We should have an example function showing how to do this -->
+### Per query limit
 
-## Per query limit
-By default, aggregate queries will aggregate across rows limit, people may just want to know if my data has more than current number of rows to make query less expensive, fetchxml support aggregate limit per query.
-It the aggregate count maxmium returned 10: 
+Even with the default limit for aggregate queries applied, the query may take some time to complete. You can use the `aggregatelimit` attribute in a query to apply a custom lower limit which will return the `AggregateQueryRecordLimit exceeded` error if the results are higher than your custom limit.
+
+In this example, the custom maximum rows limit is 10:
+
 ```xml
 <fetch distinct='false' mapping='logical' aggregate='true' aggregatelimit = '10'> 
     <entity name='opportunity'> 
@@ -242,7 +244,8 @@ It the aggregate count maxmium returned 10:
     </entity> 
 </fetch>
 ```
-Per-query limit can't exceed default aggregate limit, which is 50,000
+
+The per query limit can't exceed default aggregate limit.
 
 ## Next steps
 

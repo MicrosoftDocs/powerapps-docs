@@ -30,9 +30,7 @@ When the `returntotalrecordcount` attribute value is `true`, the <xref:Microsoft
 |<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount>|The total number of records up to 5000; otherwise the value is -1.|
 |<xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCountLimitExceeded>|`true` if the results of the query exceeds the total record count; otherwise, `false`.|
 
-The `TotalRecordCountLimitExceeded` value is useful when exactly 5,000 records are returned. It provides another way to know whether there are more records that match the filter criteria.
-
-<!-- TODO What is the intended use case for TotalRecordCountLimitExceeded? It doesn't seem necessary when MoreRecords would also be true.. -->
+The `TotalRecordCountLimitExceeded` value is useful when you need to calculate how many more paged requests you need to send to get all the results when `TotalRecordCount` equals 5000. If your page size is less than the maximum and `TotalRecordCount` is equal to or less than 5000, you can calculate how many more paged requests you must send to get all the records. When `TotalRecordCountLimitExceeded` is `true` and `TotalRecordCount` equals 5000, you can't perform this calculation.
 
 # [Web API](#tab/webapi)
 
