@@ -502,6 +502,24 @@ ORDER BY Count DESC
 ```
 ---
 
+## Queries for File Storage 
+AsyncOperationBase record are divided in File Storage and in Database which depends on the size of the record where
+records occupying more than 4 MB will be stored in the file Storage.
+In some senários customers want to delete the records in File to save Space.
+
+```
+SELECT count(*) AS FileStorageCount  FROM AsyncOperation  WHERE  DataBlobId IS NOT NULL
+  
+SELECT count(*)  AS DBCount  FROM AsyncOperation WHERE DataBlobId IS NULL
+  
+SELECT OperationTypeName, NAME, FriendlyMessage count(*) AS Jobs  
+  FROM AsyncOperation
+  WHERE DataBlobId IS NOT NULL 
+  GROUP BY OperationTypeName, NAME, FriendlyMessage
+  ORDER BY Jobs DESC
+```
+The query results will help us see the Job types, the name of the jobs, and the number of times this job exists on the table consuming File storage. This will enable the identification of the specific job names that have the greatest impact on file consumption. As a result, the customer can initiate a bulk delete process for that particular job by targeting its name.
+
 ### Operation Types
 
 The [OperationType](reference/entities/asyncoperation.md#BKMK_OperationType) column describes categories of system jobs. Many of these types are initiated by the platform to perform maintenance tasks.
