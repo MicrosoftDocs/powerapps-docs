@@ -15,13 +15,13 @@ contributors:
 ---
 # Asynchronous service
 
-The asynchronous service executes long-running operations independent of the main Microsoft Dataverse core operation. Executing long-running operations this way results in improved overall system performance and improved scalability. The asynchronous service features a managed first-in, first-out (FIFO) queue for the execution of asynchronous registered plug-ins, workflows, and operations such as bulk mail, bulk import, and campaign activity propagation. These operations are registered with the asynchronous service and executed periodically when the service processes its queue.
+The asynchronous service executes long-running operations independent of the main Microsoft Dataverse core operation. Executing long-running operations this way results in improved overall system performance and improved scalability. The asynchronous service is a managed first-in, first-out (FIFO) queue for the execution of asynchronous registered plug-ins, workflows, and operations such as bulk mail, bulk import, and campaign activity propagation. These operations are registered with the asynchronous service and executed periodically when the service processes its queue.
 
-After an event occurs and any synchronous extensions are processed, the platform serializes the context for any asynchronous extensions and saves it in the [System Job (AsyncOperation) table](reference/entities/asyncoperation.md). The system job defines and tracks the execution of the asynchronous operation. As resources become available. Dataverse processes system jobs and executes the operations they define. Any data operations defined in the extension are processed again by the event execution pipeline, but this time as a synchronous operation.
+After an event occurs and any synchronous extensions are processed, Dataverse serializes the context for any asynchronous extensions and saves it in the [System Job (AsyncOperation) table](reference/entities/asyncoperation.md). The system job defines and tracks the execution of the asynchronous operation. As resources become available, Dataverse processes system jobs and executes the operations they define. Dataverse processes any data operations defined in the extension again in the event execution pipeline, but this time as a synchronous operation.
 
 ## Execution order and dependencies
 
-System jobs are evaluated as a queue using the [CreatedOn](reference/entities/asyncoperation.md#BKMK_CreatedOn) date. If there are no conditions to defer execution, they are executed as soon as resources are available. Execution isn't always performed in the order set by the `CreatedOn` date because different types of operations require different resources.
+System jobs are evaluated as a queue using the [CreatedOn](reference/entities/asyncoperation.md#BKMK_CreatedOn) date. If there are no conditions to defer execution, they're executed as soon as resources are available. Execution isn't always performed in the order set by the `CreatedOn` date because different types of operations require different resources.
 
 A system job can be dependent on another system job so that it will begin only after the other system job completes. The [DependencyToken](reference/entities/asyncoperation.md#BKMK_DependencyToken) column value establishes this dependency when a system job is created. If the `DependencyToken` value is null, the system job has no dependencies. Dependent system jobs have the same `DependencyToken` value and are executed in the order they were created. If a system job is postponed, all subsequent dependent system jobs continue to wait until the postponed system job executes.
 
@@ -56,7 +56,7 @@ Using code, you can retrieve system jobs like any other table. The following tab
 |`CreatedBy`|Unique identifier of the user who created the system job.|
 |`CreatedOn`|Date and time when the system job was created.|
 |`Data`|Unstructured data associated with the system job.|
-|`DependencyToken`|Execution of all operations with the same dependency token is serialized. More information: [Execution order and dependencies](#execution-order-and-dependencies) |
+|`DependencyToken`|Execution of all operations with the same dependency token is serialized. [Learn about execution order and dependencies](#execution-order-and-dependencies) |
 |`Depth`|Number of SDK calls made since the first call.|
 |`ErrorCode`|Error code returned from a canceled system job.|
 |`ExecutionTimeSpan`|Time that the system job took to execute.|
@@ -67,22 +67,22 @@ Using code, you can retrieve system jobs like any other table. The following tab
 |`ModifiedBy`|Unique identifier of the user who last modified the system job.|
 |`ModifiedOn`|Date and time when the system job was last modified.|
 |`Name`|Name of the system job.|
-|`OperationType`|Type of the system job. More information: [Operation Types](#operation-types)|
+|`OperationType`|Type of the system job. [Learn about operation types](#operation-types)|
 |`OwnerId`|Unique identifier of the user or team who owns the system job.|
 |`OwningBusinessUnit`|Unique identifier of the business unit that owns the system job.|
 |`OwningExtensionId`|Unique identifier of the owning extension with which the system job is associated.|
 |`OwningTeam`|Unique identifier of the team who owns the record.|
 |`OwningUser`|Unique identifier of the user who owns the record.|
-|`PostponeUntil`|Indicates whether the system job should run only after the specified date and time. More information: [Postpone system jobs](#postpone-system-jobs)|
+|`PostponeUntil`|Indicates whether the system job should run only after the specified date and time. [Learn to postpone system jobs](#postpone-system-jobs)|
 |`PrimaryEntityType`|Type of table with which the system job is primarily associated.|
-|`RecurrencePattern`|Pattern of the system job's recurrence. More information: [Recurrence start times and patterns](#recurrence-start-times-and-patterns)|
-|`RecurrenceStartTime`|Starting time in UTC for the recurrence pattern. More information: [Recurrence start times and patterns](#recurrence-start-times-and-patterns)|
+|`RecurrencePattern`|Pattern of the system job's recurrence. [Learn about recurrence start times and patterns](#recurrence-start-times-and-patterns)|
+|`RecurrenceStartTime`|Starting time in UTC for the recurrence pattern. [Learn about recurrence start times and patterns](#recurrence-start-times-and-patterns)|
 |`RegardingObjectId`|Unique identifier of the object with which the system job is associated.|
 |`RetryCount`|Number of times to retry the system job.|
 |`Sequence` |Order in which operations were submitted.|
 |`StartedOn`|Date and time when the system job was started.|
-|`StateCode`|Status of the system job. More information: [Manage system job states](#manage-system-job-states)|
-|`StatusCode`|Reason for the status of the system job. More information: [Manage system job states](#manage-system-job-states)|
+|`StateCode`|Status of the system job. [Learn to manage system job states](#manage-system-job-states)|
+|`StatusCode`|Reason for the status of the system job. [Learn to manage system job states](#manage-system-job-states)|
 |`UTCConversionTimeZoneCode` |Time zone code that was in use when the record was created.|
 |`WorkflowStageName` |Name of a workflow stage. |
 
@@ -92,9 +92,9 @@ You can use the following examples to retrieve System Job data.
 
 #### [Web API](#tab/webapi)
 
-Use the following Web API Query to retrieve the columns in the table above. More information: [Query Data using the Web API](webapi/query-data-web-api.md)
+Use the following Web API Query to retrieve the columns in the table above. [Learn how to query data using the Web API](webapi/query-data-web-api.md)
 
-```
+```http
 GET <organization URL>/api/data/v9.2/asyncoperations?$top=1000
 &$select=
 asyncoperationid,
@@ -138,7 +138,7 @@ owninguser($select=fullname)
 
 #### [FetchXml](#tab/fetchxml)
 
-Use the following FetchXML to retrieve the columns in the table above. More information: [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
+Use the following FetchXML to retrieve the columns in the table above. [Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
 
 ```xml
 <fetch top='1000'>
@@ -185,7 +185,7 @@ Use the following FetchXML to retrieve the columns in the table above. More info
 
 #### [SQL](#tab/sql)
 
-You can use SQL to query the `asyncoperation` table using the [Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md) when it's enabled.
+You can use SQL to query the `asyncoperation` table using the [Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md) when enabled.
 
 ```sql
 SELECT TOP (1000) asyncoperationid
@@ -225,35 +225,22 @@ SELECT TOP (1000) asyncoperationid
 
 Use queries like the following to help diagnose problems.
 
-#### Jobs by State, Status and type
-Open the SSMS and run the following query. 
+#### Jobs by State, Status, and type
 
-```
-SELECT 	StateCode, StatusCode, OperationType, Count(*) AS Count
-FROM  AsyncOperation WITH (nolock)
-GROUP BY  StateCode, StatusCode, OperationType
-ORDER BY Count DESC
-```
 
-SELECT StateCode, StatusCode, OperationType, Count(*) AS Count: This command is asking the database to select and display the columns StateCode, StatusCode, and OperationType from the AsyncOperation table. In addition to these, it uses the Count(*) function to count the number of rows that match the criteria of the grouping.
-
-GROUP BY StateCode, StatusCode, OperationType: The GROUP BY clause groups the result set by the unique combinations of StateCode, StatusCode, and OperationType. For each unique combination, the Count(*) function will return the number of occurrences.
-
-ORDER BY Count DESC: This part of the query orders the results by the Count in descending order. This means that the combinations with the highest counts will be listed first. It effectively prioritizes the most frequent occurrences of StateCode, StatusCode, and OperationType combinations.
-
-Overall, this breakdown can help administrators or users to understand the distribution and frequency of different types of jobs and see which jobs might be driving up the volume of the backlog.
-
+Use this query to understand the distribution and frequency of different types of jobs. The results might tell you which jobs are causing a problem.
 
 
 ##### [Web API](#tab/webapi)
 
-```
+```http
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=groupby((statecode,statuscode,operationtype),aggregate($count as count))
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
-
 ```
+
+[Learn how to query data using the Web API](webapi/query-data-web-api.md)
 
 ##### [FetchXml](#tab/fetchxml)
 
@@ -269,6 +256,8 @@ OData-Version: 4.0
 </fetch>
 ```
 
+[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+
 ##### [SQL](#tab/sql)
 
 ```sql
@@ -282,52 +271,52 @@ GROUP BY  statecode,
       operationtype
 ORDER BY Count DESC
 ```
+
+[Use SQL to query data using the Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md)
+
 ---
 
 #### Top system Jobs that are in waiting status by count
-The query we show below is tailored to extract a count of all jobs within the asyncoperation table that are in a 'waiting' state, as indicated by statecode = 1. Here's what to look for in the results:
 
-Quantifying Waiting Jobs:
-The query specifically targets jobs that are waiting to be processed (statecode = 1). The results will give you a clear count of all such jobs, categorized by their statuscode and operationtype.
-Status Code Specifics:
+Use this query to extract a count of all jobs within the `asyncoperation` table that are in a 'waiting' state. This query helps you to:
 
-Each statuscode for a waiting job can indicate a different reason for the job being in a waiting state. Look for patterns or high counts associated with specific status codes which may highlight specific issues or backlogs.
-Operation Type Breakdown:
+- Understand the volume and nature of waiting jobs.
+- Identify where the hold-ups are occurring.
+- Make informed decisions about how to address them to improve system performance and throughput.
 
-The count of waiting jobs will be broken down by operationtype, showing you which types of operations are most commonly in a waiting state.
+Here's what to look for in the results:
 
-Identifying Potential Bottlenecks:
-A high count of waiting jobs in certain operation types may signify bottlenecks in those areas. This might be due to resource limitations, dependencies on other processes, or system misconfigurations.
-Prioritizing Issues:
+- **Quantify Waiting Jobs**: The query specifically targets jobs that are waiting to be processed (`statecode` = `1`). The results give you a count of all such jobs, categorized by their `statuscode` and `operationtype`.
 
-By ordering the results by count in descending order, the query immediately highlights the most pressing issues at the top of the list. This helps in prioritizing problem-solving efforts.
-Capacity and Resource Management:
+- **Status Code Specifics**: Each `statuscode` for a waiting job can indicate a different reason for the job being in a waiting state. Look for patterns or high counts associated with specific status codes that might highlight specific issues or backlogs.
 
-If certain jobs are consistently in the waiting state, it could indicate that the system lacks the necessary resources to process these jobs efficiently.
+- **Operation Type Breakdown**: The count of waiting jobs grouped `operationtype`, showing you the types of operations are most commonly in a waiting state.
 
-System Health Check:
-The jobs in a waiting state serve as a health indicator. A healthy system should ideally have minimal jobs in a waiting state or at least show a quick turnover from waiting to active processing.
+- **Identifying Potential Bottlenecks**: A high count of waiting jobs in certain operation types might signify bottlenecks in those areas. A high count might be due to resource limitations, dependencies on other processes, or system misconfigurations.
 
-Workflow Efficiency:
-The results can shed light on workflow efficiency. If a particular operationtype has a high count of waiting jobs, it may indicate inefficiencies or the need for optimization within that workflow.
+- **Prioritizing Issues**: The query returns results by count in descending order to highlight the most pressing issues at the top of the list. This helps in prioritizing problem-solving efforts.
 
-Alerts for Intervention:
-Certain statuscode values may correspond to statuses that require manual intervention. High counts for these can signal the need for administrative attention.
+- **Capacity and Resource Management**: If certain jobs are consistently in the waiting state, it could indicate that the system lacks the necessary resources to process these jobs efficiently.
 
-Understanding the Queue:
-The data can offer insights into how jobs are queued and processed, which can be useful for further analysis or system configuration adjustments.
+- **System Health Check**: The jobs in a waiting state serve as a health indicator. A healthy system should ideally have minimal jobs in a waiting state or at least show a quick turnover from waiting to active processing.
 
-In the context of this query, you're looking to understand the volume and nature of waiting jobs, identify where the hold-ups are occurring, and make informed decisions about how to address them to improve system performance and throughput.
+- **Workflow Efficiency**: The results can shed light on workflow efficiency. If a particular `operationtype` has a high count of waiting jobs, it might indicate inefficiencies or the need for optimization within that workflow.
+
+- **Alerts for Intervention**: Certain `statuscode` values might correspond to statuses that require manual intervention. High counts for these values can signal the need for administrative attention.
+
+- **Understanding the Queue**: The data can offer insights into how jobs are queued and processed, which can be useful for further analysis or system configuration adjustments.
 
 
 ##### [Web API](#tab/webapi)
 
-```
+```http
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((statecode eq 1))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 ```
+
+[Learn to query data using the Web API](webapi/query-data-web-api.md)
 
 ##### [FetchXml](#tab/fetchxml)
 
@@ -346,6 +335,8 @@ OData-Version: 4.0
 </fetch>
 ```
 
+[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+
 ##### [SQL](#tab/sql)
 
 ```sql
@@ -360,55 +351,47 @@ GROUP BY  statecode,
       operationtype
 ORDER BY Count DESC
 ```
+
+[Use SQL to query data using the Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md)
+
 ---
 
 #### Workflows by count
 
-The query we provide below provides a detailed breakdown of workflow-related jobs within the asyncoperation table, filtered by an operationtype value of 10, which typically represents workflows. When analyzing the results, here’s what to focus on:
+This query provides a detailed breakdown of workflow-related jobs, filtered by an `operationtype` value for workflows. Use the query results to gain a comprehensive view of workflow jobs, manage system resources more effectively, and ensure that workflows are running smoothly and efficiently.
 
-Workflow-Specific Jobs:
+Here's what to look for in the results:
 
-The operationtype = 10 filter means the query is specifically aggregating data for workflow jobs. You’ll see how many jobs are related to workflows and their current statuses.
-Job State Distribution:
-The statecode will tell you the current state of these workflow jobs, such as whether they are active, waiting, succeeded, or failed.
+- **Workflow-Specific Jobs**: The `operationtype` = `10` filter limits the results to workflow jobs. You can see how many jobs are related to workflows and their current statuses. You can also apply this example query with other types of operations. [Learn more about Operation Types](#operation-types)
 
-Status Code Analysis:
-The statuscode can give specific insights into the reason behind a job’s current state. For example, it could indicate if a job is waiting for resources, has been suspended, or has completed.
-Count of Each Category:
+- **Job State Distribution**: The `statecode` tells you the current state of these workflow jobs, such as whether they're **Ready**, **Suspended**, **Locked**, or **Completed**.
 
-The Count(*) function provides the total number of jobs for each statecode and statuscode combination. This helps in identifying the most common outcomes of workflow operations.
-Identifying Common Outcomes:
+- **Status Code Analysis**: The `statuscode` can give specific insights into the reason behind a job's current state. For example, it could indicate if a job is **Waiting for Resources**, **Waiting**, **In Progress**, **Pausing**, **Cancelling**, **Succeeded**, **Failed**, or **Cancelled**.
 
-With the results ordered by Count DESC, you can quickly identify the most frequent outcomes or bottlenecks in workflow processing.
+- **Count of Each Category**: The  total number of jobs for each `statecode` and `statuscode` combination. This helps in identifying the most common outcomes of workflow operations.
 
-Troubleshooting and Optimization:
+- **Identifying Common Outcomes**: With the results ordered by count in descending order, you can quickly identify the most frequent outcomes or bottlenecks in workflow processing.
 
-High counts in error or suspended states can highlight areas where workflows may be failing or getting stuck, signaling a need for troubleshooting or process optimization.
+- **Troubleshooting and Optimization**: High counts in failed or suspended states can highlight areas where workflows might be failing or getting stuck, signaling a need for troubleshooting or process optimization.
 
-Performance Metrics:
-Understanding which workflows are most common and how they are distributed across different states can help in assessing the performance and reliability of the workflow management system.
-Capacity Planning:
+- **Performance Metrics**: Understanding which workflows are most common and how they're distributed across different states can help in assessing the performance and reliability of the workflow management system.
 
-A high number of active or waiting workflows could suggest that additional resources are needed to handle the load or that there’s a need to optimize the workflow execution environment.
+- **Capacity Planning**: A high number of **In Progress** or **Waiting** workflows could suggest that more resources are needed to handle the load, or that there's a need to optimize the workflow execution environment.
 
-Workflow Management:
-The query can guide administrators on managing workflows more effectively, such as deciding which workflows to prioritize or identifying those that can be optimized or deactivated/disabled.
+- **Workflow Management**: The query results can guide administrators on managing workflows more effectively, such as deciding which workflows to prioritize or identifying workflows that can be optimized or deactivated/disabled.
 
-System Health Check:
-The overall results can serve as a health check for your workflow system, indicating whether the system is performing optimally or if there are areas that require attention.
-By focusing on these aspects, you can use the query results to gain a comprehensive view of workflow jobs, manage system resources more effectively, and ensure that workflows are running smoothly and efficiently.
-
-
-See [Operation Types](#operation-types)
+- **System Health Check**: The overall results can serve as a health check for your workflow system, indicating whether the system is performing optimally or if there are areas that require attention.
 
 ##### [Web API](#tab/webapi)
 
-```
+```http
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((operationtype eq 10))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 ```
+
+[Learn to query Data using the Web API](webapi/query-data-web-api.md)
 
 ##### [FetchXml](#tab/fetchxml)
 
@@ -427,6 +410,8 @@ OData-Version: 4.0
 </fetch>
 ```
 
+[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+
 ##### [SQL](#tab/sql)
 
 ```sql
@@ -441,32 +426,34 @@ GROUP BY  statecode,
       operationtype
 ORDER BY Count DESC
 ```
+
+[Use SQL to query data using the Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md)
+
 ---
 
 #### Jobs waiting for system resources to become available
 
-The query below is structured to retrieve a detailed analysis of jobs from the asyncoperation table that are in a specific state of readiness but are pending execution due to unavailability of system resources. Here's how to interpret the results:
+Use this query to retrieve a detailed analysis of jobs from the `asyncoperation` table that are in a specific state of readiness but are pending execution due to unavailability of system resources. This query can identify factors contributing to slowness and making decisions for efficiency and better handling of backlog.
 
-Filter for Ready Jobs Waiting for Resources:
-The WHERE statecode = 0 AND statuscode = 0 clause specifically filters for jobs that are in a 'Ready' state (statecode = 0) and are waiting for resources (statuscode = 0). This combination indicates jobs that are queued up and prepared to run but are on hold.
+Here's what to look for in the results:
 
-Optimizing Job Scheduling:
-Identifying patterns in job readiness and wait times can inform improvements in job scheduling, possibly leading to a more balanced distribution of system load.
+- **Filter for Ready Jobs Waiting for Resources**: Limiting results where `statecode` = `0` and `statuscode` = `0` filters for jobs that are in a **Ready**  and **Waiting For Resources**. This combination indicates jobs that are queued up and prepared to run but are on hold.
 
-Identifying Underlying Issues:
-In some cases, jobs waiting for resources might not be solely a resource issue but could be indicative of underlying problems such as deadlocks or inefficient resource locking mechanisms.
+- **Optimizing Job Scheduling**: Identifying patterns in job readiness and wait times can inform improvements in job scheduling, possibly leading to a more balanced distribution of system load.
 
-Overall, this can be useful to identify factors contributing to slowness and making decisions for efficiency and better handling of backlog. 
+- **Identifying Underlying Issues**: In some cases, jobs waiting for resources might not be solely a resource issue but could be indicative of underlying problems such as deadlocks or inefficient resource locking mechanisms.
 
 
 ##### [Web API](#tab/webapi)
 
-```
+```http
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((statecode eq 0 and statuscode eq 0))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 ```
+
+[Learn to query Data using the Web API](webapi/query-data-web-api.md)
 
 ##### [FetchXml](#tab/fetchxml)
 
@@ -486,6 +473,8 @@ OData-Version: 4.0
 </fetch>
 ```
 
+[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+
 ##### [SQL](#tab/sql)
 
 ```sql
@@ -500,11 +489,14 @@ GROUP BY  statecode,
      operationtype
 ORDER BY Count DESC
 ```
+
+[Use SQL to query data using the Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md)
+
 ---
 
 ### Operation Types
 
-The [OperationType](reference/entities/asyncoperation.md#BKMK_OperationType) column describes categories of system jobs. Many of these types are initiated by the platform to perform maintenance tasks.
+The [OperationType](reference/entities/asyncoperation.md#BKMK_OperationType) column describes categories of system jobs. Dataverse intiates many of these types to perform maintenance tasks.
 
 > [!NOTE]
 > You cannot perform cancel, pause, or resume operations on system jobs generated by the platform.
@@ -524,9 +516,11 @@ Some of the types of these platform generated jobs are included in the following
 |27|Update Contract States|
 |31|Storage Limit Notification|
 
+For a complete list, see [OperationType Choices/Options](reference/entities/asyncoperation.md#operationtype-choicesoptions)
+
 ### Recurrence start times and patterns
 
-Recurring system jobs require information about when they should start and how often to recur. These values are stored in the `AsyncOperation` table, `RecurrenceStartTime` and `RecurrencePattern` columns.
+Recurring system jobs require information about when they should start and how often to recur. These values are stored in the `AsyncOperation` table `RecurrenceStartTime` and `RecurrencePattern` columns.
 
 Because you can't create `AsyncOperation` records directly with code, you'll just need to interpret these values if you query the data. You'll only set these properties indirectly by using messages that create new system jobs. The `BulkDelete` and `BulkDeleteDuplicates` messages both include parameters or properties in the corresponding Web API actions or SDK for .NET request classes. More information: <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest> Class, [BulkDetectDuplicates Action](xref:Microsoft.Dynamics.CRM.BulkDetectDuplicates), <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> Class, and [BulkDelete Action](xref:Microsoft.Dynamics.CRM.BulkDelete)
 
@@ -546,20 +540,20 @@ The following table provides from examples:
 |`FREQ=DAILY;INTERVAL=3;`|Every three days|
 |`FREQ=HOURLY;`|Once an hour|
 
-If an `INTERVAL` value is not set, it will be interpreted as `1`.
+If an `INTERVAL` value isn't set, it's interpreted as `1`.
 
 ## Delete system jobs
 
 You can delete system jobs in the application or in code just like any other table if you have the necessary privileges to do so.
 
 > [!NOTE]
-> When registering asynchronous plug-ins, there is an option to automatically delete successful operations. It is recommended that you use it. More information: [Write a plug-in](write-plug-in.md)
+> When registering asynchronous plug-ins, there is an option to automatically delete successful operations. It is recommended that you use it. [Learn to write a plug-in](write-plug-in.md)
 
-The common practice is to create a recurring bulk deletion job that will delete those jobs which succeeded. More information [Remove a large amount of specific, targeted data with bulk deletion](/dynamics365/customer-engagement/admin/delete-bulk-records)
+The common practice is to create a recurring bulk deletion job that deletes successful jobs.[Learn how to remove a large amount of specific, targeted data with bulk deletion](/power-platform/admin/delete-bulk-records)
 
 ## Manage system job states
 
-The status of the system job will change multiple times until the operation is completed. The following are the `StateCode` and `StatusCode` options that represent the available state and status reason values:
+The status of the system job changes multiple times until the operation is completed. The following are the `StateCode` and `StatusCode` options that represent the available state and status reason values:
 
 |StateCode Value|StateCode Label|StatusCode Value|StatusCode Label|
 |--|--|--|--|
@@ -577,7 +571,7 @@ You can change the status of system jobs in the application by navigating to **S
 ![Action commands available for system jobs in the application.](media/system-jobs-more-actions-commands.png)
 
 > [!NOTE]
-> Any action you can perform via this UI can also be performed using code. You cannot perform cancel, pause, or resume operations on system jobs generated by the platform. More information: [Operation types](#operation-types)
+> Any action you can perform via this UI can also be performed using code. You cannot perform cancel, pause, or resume operations on system jobs generated by the platform. [Learn about Operation types](#operation-types)
 
 Together with options to manage views, the following options to manage system jobs are available: 
 
@@ -590,25 +584,25 @@ Together with options to manage views, the following options to manage system jo
 |Postpone|Using the **More Actions** menu.<br />Reschedules a system job|
 |Pause|Using the **More Actions** menu.<br />Pauses a system job.|
 
-Whether the requested operation will occur depends on the state of the system job. For example, you cannot pause a job that has already completed or hasn't started yet. The table below describes the conditions for each change and what will happen when they are selected.
+Whether the requested operation occurs depends on the state of the system job. For example, you can't pause a job that completed or hasn't started yet. The table below describes the conditions for each change and what happen when they're selected.
 
 |Option|Valid StateCode values|Change|
 |--|--|--|
-|Delete|any|System Job is deleted|
-|Cancel|0 (Ready) <br /> 1 (Suspended) <br /> 2 (Locked)|`StateCode` changed to 3 (Completed) and `StatusCode` changed to 32 (Cancelled)|
-|Resume|1 (Suspended)|StateCode changed to 0 (Ready)|
-|Postpone|0 (Ready) <br />2 (Locked)|Postpone Job dialog prompts user for datetime value to postpone the system job. More information: [Postpone system jobs](#postpone-system-jobs)|
-|Pause|2 (Locked)|StateCode changed to 1 (Suspended)|
+|**Delete**|any|System Job is deleted|
+|**Cancel**|`0` (**Ready**) <br /> `1` (**Suspended**) <br /> `2` (**Locked**)|`StateCode` changed to `3` (**Completed**) and `StatusCode` changed to `32` (**Cancelled**)|
+|**Resume**|`1` (**Suspended**)|StateCode changed to `0` (**Ready**)|
+|**Postpone**|`0` (**Ready**) <br />`2` (**Locked**)|Postpone Job dialog prompts user for datetime value to postpone the system job. [Learn to Postpone system jobs](#postpone-system-jobs)|
+|**Pause**|`2` (**Locked**)|StateCode changed to `1` (**Suspended**)|
 
 
 ## Postpone system jobs
 
-The `PostPoneUntil` column contains a datetime value when the system job will change state from 1 (Suspended) to 0 (Ready). Together with the `StateCode` and `StatusCode` columns, these are the only columns supported for update when using the `AsyncOperation` table.
+The `PostPoneUntil` column contains a datetime value when the system job changes state from `1` (**Suspended**) to `0` (**Ready**). Together with the `StateCode` and `StatusCode` columns, these are the only columns supported for update when using the `AsyncOperation` table.
 
 ### See also
 
-[Write a plug-in](write-plug-in.md)<br />
-[Write plug-ins to extend business processes](plug-ins.md) <br />
+[Write a plug-in](write-plug-in.md)   
+[Write plug-ins to extend business processes](plug-ins.md)  
 
 
 
