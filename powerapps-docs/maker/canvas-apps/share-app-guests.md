@@ -156,7 +156,7 @@ Connections for an app are always made in the context of the Microsoft Entra ten
 
 ### Can guests use Microsoft Graph with Power Apps?
 
-By default, Azure B2B users have limited permission to access information from Microsoft Graph. A user’s permission as recognized in Microsoft Graph determine what is returned to these users when using connectors like: Microsoft Security Graph, Office 365 Users, Office 365 Groups, custom connectors using Microsoft Graph APIs. Learn more about Microsoft Graph permissions in [Default user permissions](https://learn.microsoft.com/entra/fundamentals/users-default-permissions?context=graph%2Fcontext#restrict-guest-users-default-permissions) and [Working with users in Microsoft Graph](https://learn.microsoft.com/graph/api/resources/users?view=graph-rest-1.0#user-and-group-search-limitations-for-guest-users-in-organizations).  
+By default, Azure B2B users have limited permission to access information from Microsoft Graph. A user’s permission as recognized in Microsoft Graph determine what is returned to these users when using connectors such as Microsoft Security Graph, Office 365 Users, Office 365 Groups, and custom connectors using Microsoft Graph APIs. Learn more about Microsoft Graph permissions in [Default user permissions](/entra/fundamentals/users-default-permissions?context=graph%2Fcontext#restrict-guest-users-default-permissions) and [Working with users in Microsoft Graph](/graph/api/resources/users?#user-and-group-search-limitations-for-guest-users-in-organizations).  
 
 ### Which Intune policies apply to guests who are using my apps?
 
