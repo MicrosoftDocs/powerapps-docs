@@ -49,8 +49,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 | How you plan to consume Data  |  Synapse Link feature you will use | Pre-resuities and Azure resources needed |
 |-------------------------------|------------------------------------|------------------------------------------|
-| Access Finance and Operations tables via Synapse query |  [Synapse Link - Delta lake](powerapps-docs-pr/powerapps-docs/maker/data-platform
-/azure-synapse-link-delta-lake.md) |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool <br> NOTE: your data will be saved in delta parquet format enabling better read performance | 
+| Access Finance and Operations tables via Synapse query |  [Synapse Link - Delta lake](powerapps-docs-pr/powerapps-docs/maker/data-platform/azure-synapse-link-delta-lake.md) |  Azure Data lake <br> Azure Synapse workspace <br> Azure Synapse Spark pool <br> NOTE: your data will be saved in delta parquet format enabling better read performance | 
 | Load incremental data changes into your own downstream Data warehouse | [Synapse Link - incremental update](azure-synapse-link-incremental.md) | Azure data lake <br> No need to bring Synapse workspace or spark pool as your data will be saved in CSV format |
 | Access Finance and Operations tables via Microsoft Fabric | [Link to Fabric](powerapps-docs/maker/data-platform/azure-synapse-link-view-in-fabric.md)  | Microsoft Fabric workspace |
 
@@ -137,8 +136,6 @@ To create a Synapse Link profile with incremental data:
 
 ### Known limitations
 
-There are several limitations that will be addressed in future releases. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
-
 All the known limitations applicable to Finance and Operations Tables are applicable to incremental data. In addition following limitations apply
 1. 
 
@@ -179,13 +176,12 @@ To enable change tracking, follow these steps.
 2. Select **Properties \> Advance Options**.
 3. Select the **Track changes** checkbox. If the checkbox is unavailable, see [The chosen entity doesn't pass the validation rules that are required to enable change tracking](#entity-fails-val-rules) later in this article.
 
-### Troubleshooting
+### Knwon limitations
+There are several limitations that will be addressed in future releases. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
 
-This section explains how to troubleshoot issues that might occur when you enable change tracking.
-
-#### <a id="entity-fails-val-rules"></a>The chosen entity doesn't pass the validation rules that are required to enable change tracking.
-
-Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities that fail validation rules. For more information about entity validation rules and how you can fix them, see [Enable row version change tracking for data entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You might require developer assistance to complete the steps.
+1. Enabling change tracking may fail with the error message "chosen entity doesn't pass the validation rules..." or the Track changes checkbox may be disabled for some entities. Currently, change tracking can't be enabled for all finance and operations entities. The **Track changes** checkbox is unavailable for entities created in Finance and Operations in the past for data migration.  
+2. For more information about entity validation rules and how you can fix them, see [Enable row version change tracking for data entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-data-entities). You might require developer assistance to complete the steps.
+3. If the chosen Entity is unavailable (ie. due to limitation above), you may be able to choose the tables that comprise the data from that entity.  
 
 > [!NOTE]
 > For a list of ready-made entities that pass validation rules, see [SupportedEntitiesLink](https://www.yammer.com/dynamicsaxfeedbackprograms/uploaded_files/1647660802048). You must be a member of the preview Yammer group to access this list. To join, visit [https://aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics).
