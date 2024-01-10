@@ -53,7 +53,7 @@ When you save and publish your app, on the **Getting ready to publishing** dialo
 
 You can also generate an app description by going to, **Settings** > **General**. Under **Description** select, **Create descriptions using AI**.
 
-Admins can disable this feature for there Managed Environments in the Power Platform admin. For more information, see [Managed Environments panel](/power-platform/admin/managed-environment-enable).
+Admins can disable this feature for Managed Environments in the Power Platform admin. For more information, see [Managed Environments panel](/power-platform/admin/managed-environment-enable).
 
 > [!NOTE]
 > If a description is not added before the app is published, Copilot will help generate one for the app once the app is published. Makers can always go back and edit this description if Copilot didn't quite get it right.
