@@ -48,6 +48,7 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 - You cannot add finance and operations data to an existing storage account that's configured with Azure Synapse Link. You must have access to an Azure subscription so that you can create a new SynapseL ink profile. Depending on the how you plan to consume data, you may need additional Azure resources as shown below.
 
 | How you plan to consume Data  |  Synapse Link feature you will use | Pre-resuities and Azure resources needed |
+|-------------------------------|------------------------------------|------------------------------------------|
 | Access Finance and Operations tables via Synapse query |  Synapse Link - Delta lake |  Azure Data lake <br> Azure Synapse workspace < br> Azure Synapse Spark pool < br> NOTE: your data will be saved in delta parquet format enabling better read performance | 
 | Load incremental data changes into your own downstream Data warehouse | Synapse Link - incremental update | Azure data lake <br> No need to bring Synapse workspace or spark pool as your data will be saved in CSV format |
 | Access Finance and Operations tables via Microsoft Fabric | Link to Fabric  | see Link to Fabric documentation |
