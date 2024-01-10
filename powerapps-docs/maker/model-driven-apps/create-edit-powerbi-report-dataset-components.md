@@ -16,7 +16,7 @@ search.audienceType:
 
 As data culture spreads across more and more organizations, and analytics becomes a vital part of decision making and the daily actions taken by employees, it has become critical to have reliable, up-to-date analytics readily available in your Power Apps.  
 
-As a step towards achieving this goal, it possible to add Power BI reports and datasets as components in Power Apps solutions. Once you've added a Power BI report to a solution, it can be seamlessly managed as part of your ALM process across environments and tenants.
+As a step towards achieving this goal, it is possible to add Power BI reports and datasets as components in Power Apps solutions. Once you've added a Power BI report to a solution, it can be seamlessly managed as part of your ALM process across environments and tenants.
 
 > [!IMPORTANT]
 > - This is a preview feature.
