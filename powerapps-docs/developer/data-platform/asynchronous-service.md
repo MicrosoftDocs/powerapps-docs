@@ -391,15 +391,13 @@ Here's what to look for in the results:
 
 - **Operation Type Breakdown**: The count of waiting jobs grouped `operationtype`, showing you the types of operations are most commonly in a waiting state.
 
-- **Identifying Potential Bottlenecks**: A high count of waiting jobs for extended periods of time may be due to resource limitations, dependencies on other processes, or system misconfigurations. Refer to Bulk Delete, Clean up
-- or optimizing on such cases.
+- **Identifying Potential Bottlenecks**: A high count of waiting jobs for extended periods of time may be due to resource limitations, dependencies on other processes, or system misconfigurations. Refer to Bulk Delete, Clean up or optimizing on such cases.
 
 - **Capacity and Resource Management**: If certain jobs are consistently in the waiting state, it could indicate that the system lacks the necessary resources to process these jobs efficiently.
 
 - **System Health Check**: The jobs in a waiting state serve as a health indicator. A healthy system should ideally have minimal jobs in a waiting state or at least show a quick turnover from waiting to active processing.
 
 - **Workflow Efficiency**: The results can shed light on workflow efficiency. If a particular `operationtype` has a high count of waiting jobs, it might indicate inefficiencies or the need for optimization within that workflow.
-
 
 
 ### Workflows by count
@@ -471,7 +469,7 @@ Here's what to look for in the results:
 
 - **Performance Metrics**: Understanding which workflows are most common and how they're distributed across different states can help in assessing the performance and reliability of the workflow management system.
 
-- **Capacity Planning**: A high number of **In Progress** or **Waiting** workflows could suggest that more resources are needed to handle the load, or that there's a need to optimize the workflow execution environment.
+- **Capacity Planning**: Consistently high number of **In Progress** or **Waiting** workflows could suggest that more resources are needed to handle the load, or that there's a need to optimize the workflow execution environment.
 
 - **Workflow Management**: The query results can guide administrators on managing workflows more effectively, such as deciding which workflows to prioritize or identifying workflows that can be optimized or deactivated/disabled.
 
