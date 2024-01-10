@@ -2,7 +2,7 @@
 title: "Guidelines and troubleshooting when working with embedded canvas apps | MicrosoftDocs"
 description: Understand the recommended ways to work with embedded canvas apps in Power Apps
 ms.custom: ""
-ms.date: 07/21/2022
+ms.date: 01/10/2024
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -68,6 +68,7 @@ This article provides guidance on working with embedded canvas apps as well as h
 - The canvas app custom control is only supported for use with the **Web** client type. Currently, the **Phone** and **Tablet** client types aren't supported.
 - The **Canvas App** privilege in a security role can't be used to grant app users access to either an embedded or standalone canvas app. For more information on sharing an embedded canvas app, go to: [Share an embedded canvas app](share-embedded-canvas-app.md).
 - If you write back the same data that is being displayed in the host model-driven form, the form will continue to display old data until it is refreshed. An easy way to do that is to use the [RefreshForm](embedded-canvas-app-actions.md#refreshformshowprompt) method.
+- Offline and device capability controls like barcode scanning, capturing photos from device, or attaching files aren't supported in embedded canvas apps.
 
 ### The ModelDrivenFormIntegration control doesn't provide a value for columns of a related table
 
