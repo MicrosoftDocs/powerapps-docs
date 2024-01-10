@@ -287,7 +287,8 @@ Use this query to understand the distribution and frequency of different types o
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=groupby((statecode,statuscode,operationtype),aggregate($count as count))
 Accept: application/json  
 OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
 [Learn how to query data using the Web API](webapi/query-data-web-api.md)
@@ -297,11 +298,20 @@ OData-Version: 4.0
 ```xml
 <fetch aggregate='true'>
   <entity name='asyncoperation'>
-    <attribute name='statecode' alias='statecode' groupby='true' />
-    <attribute name='statuscode' alias='statuscode' groupby='true' />
-    <attribute name='operationtype' alias='operationtype' groupby='true' />
-    <attribute name='asyncoperationid' alias='count' aggregate='count' />
-    <order alias='count' descending='true' />
+    <attribute name='statecode'
+      alias='statecode'
+      groupby='true' />
+    <attribute name='statuscode'
+      alias='statuscode'
+      groupby='true' />
+    <attribute name='operationtype'
+      alias='operationtype'
+      groupby='true' />
+    <attribute name='asyncoperationid'
+      alias='count'
+      aggregate='count' />
+    <order alias='count'
+      descending='true' />
   </entity>
 </fetch>
 ```
@@ -340,7 +350,8 @@ Use this query to extract a count of all jobs within the `asyncoperation` table 
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((statecode eq 1))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
 Accept: application/json  
 OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
 [Learn to query data using the Web API](webapi/query-data-web-api.md)
@@ -350,14 +361,25 @@ OData-Version: 4.0
 ```xml
 <fetch aggregate='true'>
   <entity name='asyncoperation'>
-    <attribute name='statecode' alias='statecode' groupby='true' />
-    <attribute name='statuscode' alias='statuscode' groupby='true' />
-    <attribute name='operationtype' alias='operationtype' groupby='true' />
-    <attribute name='asyncoperationid' alias='count' aggregate='count' />
+    <attribute name='statecode'
+      alias='statecode'
+      groupby='true' />
+    <attribute name='statuscode'
+      alias='statuscode'
+      groupby='true' />
+    <attribute name='operationtype'
+      alias='operationtype'
+      groupby='true' />
+    <attribute name='asyncoperationid'
+      alias='count'
+      aggregate='count' />
     <filter>
-      <condition attribute='statecode' operator='eq' value='1' />
+      <condition attribute='statecode'
+        operator='eq'
+        value='1' />
     </filter>
-    <order alias='count' descending='true' />
+    <order alias='count'
+      descending='true' />
   </entity>
 </fetch>
 ```
@@ -410,7 +432,8 @@ This query provides a detailed breakdown of workflow-related jobs, filtered by a
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((operationtype eq 10))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
 Accept: application/json  
 OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
 [Learn to query Data using the Web API](webapi/query-data-web-api.md)
@@ -420,14 +443,25 @@ OData-Version: 4.0
 ```xml
 <fetch aggregate='true'>
   <entity name='asyncoperation'>
-    <attribute name='statecode' alias='statecode' groupby='true' />
-    <attribute name='statuscode' alias='statuscode' groupby='true' />
-    <attribute name='operationtype' alias='operationtype' groupby='true' />
-    <attribute name='asyncoperationid' alias='count' aggregate='count' />
+    <attribute name='statecode'
+      alias='statecode'
+      groupby='true' />
+    <attribute name='statuscode'
+      alias='statuscode'
+      groupby='true' />
+    <attribute name='operationtype'
+      alias='operationtype'
+      groupby='true' />
+    <attribute name='asyncoperationid'
+      alias='count'
+      aggregate='count' />
     <filter>
-      <condition attribute='operationtype' operator='eq' value='10' />
+      <condition attribute='operationtype'
+        operator='eq'
+        value='10' />
     </filter>
-    <order alias='count' descending='true' />
+    <order alias='count'
+      descending='true' />
   </entity>
 </fetch>
 ```
@@ -486,7 +520,8 @@ Use this query to retrieve a detailed analysis of jobs from the `asyncoperation`
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((statecode eq 0 and statuscode eq 0))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
 Accept: application/json  
 OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
 [Learn to query Data using the Web API](webapi/query-data-web-api.md)
@@ -496,15 +531,28 @@ OData-Version: 4.0
 ```xml
 <fetch aggregate='true'>
   <entity name='asyncoperation'>
-    <attribute name='statecode' alias='statecode' groupby='true' />
-    <attribute name='statuscode' alias='statuscode' groupby='true' />
-    <attribute name='operationtype' alias='operationtype' groupby='true' />
-    <attribute name='asyncoperationid' alias='count' aggregate='count' />
+    <attribute name='statecode'
+      alias='statecode'
+      groupby='true' />
+    <attribute name='statuscode'
+      alias='statuscode'
+      groupby='true' />
+    <attribute name='operationtype'
+      alias='operationtype'
+      groupby='true' />
+    <attribute name='asyncoperationid'
+      alias='count'
+      aggregate='count' />
     <filter>
-      <condition attribute='statecode' operator='eq' value='0' />
-      <condition attribute='statuscode' operator='eq' value='0' />
+      <condition attribute='statecode'
+        operator='eq'
+        value='0' />
+      <condition attribute='statuscode'
+        operator='eq'
+        value='0' />
     </filter>
-    <order alias='count' descending='true' />
+    <order alias='count'
+      descending='true' />
   </entity>
 </fetch>
 ```
@@ -560,7 +608,8 @@ If the count is unexpectedly high, it may warrant a further action such as Bulk 
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((datablobid ne null))/aggregate($count as FileStorageCount)
 Accept: application/json  
 OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
 [Learn to query Data using the Web API](webapi/query-data-web-api.md)
@@ -570,9 +619,12 @@ OData-Version: 4.0
 ```xml
 <fetch aggregate='true'>
   <entity name='asyncoperation'>
-    <attribute name='asyncoperationid' alias='FileStorageCount' aggregate='count' />
+    <attribute name='asyncoperationid'
+      alias='FileStorageCount'
+      aggregate='count' />
     <filter>
-      <condition attribute='datablobid' operator='not-null' />
+      <condition attribute='datablobid'
+        operator='not-null' />
     </filter>
   </entity>
 </fetch>
@@ -604,7 +656,8 @@ This simple query is aimed at counting the number of records in the asyncoperati
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((datablobid eq null))/aggregate($count as DBCount)
 Accept: application/json  
 OData-MaxVersion: 4.0  
-OData-Version: 4.0 
+OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
 [Learn to query Data using the Web API](webapi/query-data-web-api.md)
@@ -614,9 +667,12 @@ OData-Version: 4.0
 ```xml
 <fetch aggregate='true'>
   <entity name='asyncoperation'>
-    <attribute name='asyncoperationid' alias='DBCount' aggregate='count' />
+    <attribute name='asyncoperationid'
+      alias='DBCount'
+      aggregate='count' />
     <filter>
-      <condition attribute='datablobid' operator='null' />
+      <condition attribute='datablobid'
+        operator='null' />
     </filter>
   </entity>
 </fetch>
@@ -648,7 +704,8 @@ This will enable the identification of the specific job names that have the grea
 GET [Organization URI]/api/data/v9.2/asyncoperations?$select=operationtype,name,friendlymessage&$filter=(datablobid ne null)&$orderby=operationtype asc,name asc,friendlymessage asc
 Accept: application/json  
 OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
 [Learn to query Data using the Web API](webapi/query-data-web-api.md)
@@ -662,7 +719,8 @@ OData-Version: 4.0
     <attribute name='name' />
     <attribute name='friendlymessage' />
     <filter>
-      <condition attribute='datablobid' operator='not-null' />
+      <condition attribute='datablobid'
+        operator='not-null' />
     </filter>
     <order attribute='operationtype' />
     <order attribute='name' />
@@ -690,6 +748,7 @@ ORDER BY Jobs DESC
 ---
 
 #### Getting the Async Operation File Size Breakdown
+
  The following script is to used to get total file size and record count for Async operations by state, status and owning extension.
 
 Following are the points on what to look for when executing this query and analyzing the results:
@@ -704,17 +763,82 @@ Following are the points on what to look for when executing this query and analy
 
 **Ordering by Total Size:** Since the results are ordered by TotalSize in descending order, pay attention to the top results as they will highlight the operations that are consuming the most storage. This could be important for identifying potential areas for optimization or cleanup.
 
+#### [Web API](#tab/webapi)
+
+This example uses the encoded FetchXml to send the query using Web API. [Learn to use FetchXML with Web API](webapi/use-fetchxml-web-api.md)
+
+```http
+GET [Organization URI]/api/data/v9.2/asyncoperations?fetchXml=%3Cfetch%20aggregate%3D%27true%27%3E%20%3Centity%20name%3D%27asyncoperation%27%3E%20%3Cattribute%20name%3D%27owningextensionid%27%20alias%3D%27owningextensionid%27%20groupby%3D%27true%27%20%2F%3E%20%3Cattribute%20name%3D%27statecode%27%20alias%3D%27statecode%27%20groupby%3D%27true%27%20%2F%3E%20%3Cattribute%20name%3D%27statuscode%27%20alias%3D%27statuscode%27%20groupby%3D%27true%27%20%2F%3E%20%3Cattribute%20name%3D%27operationtype%27%20alias%3D%27operationtype%27%20groupby%3D%27true%27%20%2F%3E%20%3Clink-entity%20name%3D%27fileattachment%27%20to%3D%27datablobid%27%20from%3D%27fileattachmentid%27%20alias%3D%27fileattachment%27%20link-type%3D%27inner%27%3E%20%3Cattribute%20name%3D%27filesizeinbytes%27%20alias%3D%27TotalSize%27%20aggregate%3D%27sum%27%20%2F%3E%20%3Cattribute%20name%3D%27filesizeinbytes%27%20alias%3D%27RecordCount%27%20aggregate%3D%27count%27%20%2F%3E%20%3Cfilter%3E%20%3Ccondition%20attribute%3D%27objectidtypecode%27%20operator%3D%27eq%27%20value%3D%274700%27%20%2F%3E%20%3C%2Ffilter%3E%20%3Corder%20alias%3D%27TotalSize%27%20descending%3D%27true%27%20%2F%3E%20%3C%2Flink-entity%3E%20%3C%2Fentity%3E%20%3C%2Ffetch%3E
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+[Learn to query Data using the Web API](webapi/query-data-web-api.md)   
+
+
+#### [FetchXml](#tab/fetchxml)
+
+```xml
+<fetch aggregate='true'>
+  <entity name='asyncoperation'>
+    <attribute name='owningextensionid'
+      alias='owningextensionid'
+      groupby='true' />
+    <attribute name='statecode'
+      alias='statecode'
+      groupby='true' />
+    <attribute name='statuscode'
+      alias='statuscode'
+      groupby='true' />
+    <attribute name='operationtype'
+      alias='operationtype'
+      groupby='true' />
+    <link-entity name='fileattachment'
+      to='datablobid'
+      from='fileattachmentid'
+      alias='fileattachment'
+      link-type='inner'>
+      <attribute name='filesizeinbytes'
+        alias='TotalSize'
+        aggregate='sum' />
+      <attribute name='filesizeinbytes'
+        alias='RecordCount'
+        aggregate='count' />
+      <filter>
+        <condition attribute='objectidtypecode'
+          operator='eq'
+          value='4700' />
+      </filter>
+      <order alias='TotalSize'
+        descending='true' />
+    </link-entity>
+  </entity>
+</fetch>
+```
+
+[Learn to use FetchXML to construct a query](use-fetchxml-construct-query.md)
+
 #### [SQL](#tab/sql)
 
 ```sql
-SELECT count(*) as RecordCount, sum(FileSizeInBytes) as TotalSize, OwningExtensionId, OwningExtensionIdName, StateCode, StatusCode, OperationType from FileAttachment (nolock)
- join AsyncOperation (nolock) on FileAttachment.FileAttachmentId =  AsyncOperation.DataBlobId
- where FileAttachment.ObjectIdTypeCode = 4700
- group by  OwningExtensionId, OwningExtensionIdName, StateCode, StatusCode, OperationType
+SELECT count(*) as RecordCount
+   ,sum(filesizeinbytes) as TotalSize
+   ,owningextensionid
+   ,owningextensionidname
+   ,statecode
+   ,statuscode
+   ,operationtype from fileattachment
+ join asyncoperation on fileattachment.fileattachmentid =  asyncoperation.datablobid
+ where fileattachment.objectidtypecode = 4700
+ group by  owningextensionid, owningextensionidname, statecode, statuscode, operationtype
  order by TotalSize desc
 ```
 
+[Use SQL to query data using the Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md)
 
+---
 
 
 ## Delete system jobs
