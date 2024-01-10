@@ -78,7 +78,7 @@ Now you can view and manage the policy. More information: [Manage data retention
 > [!IMPORTANT]
 >
 > - The retention policy will not start for environments that have [administration mode](/power-platform/admin/admin-mode) enabled.
-> - The retention policy can't be set for the tables where bulk delete isn't supported. For example, Activity Pointer, Activity Party, and Attachment tables don't support bulk delete.
+> - All parent and associated child activities, emails, attachments will be retained as a set when a customer sets up a policy on a parent table. Similar to Bulk Delete policies (for example - an explicit retention policy can't be set for Activity Pointer, Activity Party, and Attachment), long term retention policies cannot be set for these tables where bulk delete isn't supported.
 > - The parent table and all related rows from child tables, of the parent, will be marked and stored in Dataverse long term storage.
 > - Logic associated with an existing delete action of any table (parent and children) will always be executed during the policy run.
 > - A policy run will take from 72-96 hours irrespective of the data volume. Data retention policies are given a low priority by the platform. Dataverse will always run the retention process in the background to avoid any impact on other platform services, such as apps and flows.
