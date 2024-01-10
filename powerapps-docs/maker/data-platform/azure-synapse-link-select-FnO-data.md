@@ -97,19 +97,22 @@ You can enable both finance and operations entities and finance and operations t
 > Finance and operations apps tables are allowed only in Azure Synapse Link. Makers can't currently use them to build apps. **You don't have to define finance and operations apps tables as virtual entities, and you don't have to enable change tracking for each table**.
 >
 > To include Finance and operations tables in Synapse Link, you must enable [Delta lake feature](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-delta-lake) in your Synapse Link profile. Finance and Operations table selection will not be visible if your Synapse Link profile is not configured for Delta lake.
+> 
 > Delta lake conversion time interval determines how often Table data is updated in delta format. For near real time updates, you may choose 15mins or 1 hr as the desired updated time internal. If the data is not updated frequently, you may choose daily time interval. Delta conversion consumes compute resources from the Spark pool you have provided in the configuration of the Synapse Link profile. Lower the time interval, the more compte resources will be consumed. You can see the compute cost incurred by opening the Spark pool in Azure portal.
-> In the event of errors,   
+> 
+> In the event system ran into an error during inital sync or updates, you will see an error icon and a pointer to trouble-shooting documents that can be used to diagnoze and resolve the error.    
 
 ### Known limitations
 
-The preview has several limitations that will be addressed in future releases. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group](https://www.yammer.com/dynamicsaxfeedbackprograms/).
+There are several limitations that will be addressed in future releases. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
 
-- You must create a new Azure Synapse Link profile. You can't add finance and operations apps tables to existing Azure Synapse Link profiles.
-- Up to 2,750 Microsoft provided finance and operations apps tables are already enabled in Azure Synapse Link with application version 10.0.38. If you have a previous version of finance and operations apps, not all required tables may be enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).  
-- To enable custom tables, you must enable change tracking in them. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
-- When you work with finance and operations data, you must select Delta Lake format as the default format. To enable Delta Lake format, follow the steps in [Export Microsoft Dataverse data in Delta Lake format](azure-synapse-link-delta-lake.md).
-- The initial data export of finance and operations apps tables in Delta Lake format might take up to an hour. However, performance of the initial export will be improved in future updates.
-- You can choose a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Synapse Link profile.
+1. You must create a new Azure Synapse Link profile. You can't add finance and operations apps tables to existing Azure Synapse Link profiles.
+2. Don't see all tables? Up to 2,750 Microsoft provided finance and operations apps tables are already enabled in Azure Synapse Link with application version 10.0.38. If you have a previous version of finance and operations apps, not all required tables may be enabled by default. You can enable more tables yourself by extending table properties and enabling the change tracking feature. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
+3. Don't see your custom tables? you must enable change tracking in them. For more information about how to enable change tracking, see [Enable row version change tracking for tables](/dynamics365/fin-ops-core/dev-itpro/data-entities/rowversion-change-track#enable-row-version-change-tracking-for-tables).
+4. The initial data export of finance and operations apps tables in Delta Lake format might take up to an hour depending on the size of data.
+5. You can choose a maximum of 1,000 tables in an Azure Synapse Link profile. To enable more tables, create another Synapse Link profile.
+6. If the table selected contains data fields that secured via **AOS Authorization**, those fields will be ignored and the exported data does not contain the field. For an Example in CustTable, the field TaxLicenseNum has the metadata property AOS Authorization set to Yes. This field is ignored when CustTable data is exported with Synapse Link.  
+7. If the table selected contains data fields that are of Array type, those fields will be ignored anf the exported data does not contain the field. For an Example i WHSInventTable table, fields FilterCode and FilterGroup are of type Array. These fields are not exported with Synapse Link.
 
 ## Enable finance and operations data entities in Azure Synapse Link
 
