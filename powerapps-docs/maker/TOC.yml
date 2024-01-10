@@ -51,6 +51,10 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
+  - name: Draft well-written, input text with Copilot (preview)
+    href: ../user/well-written-input-text-copilot.md
+  - name: Use Copilot chat in canvas apps (preview)
+    href: ../user/copilot-chat-in-webplayer.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -1320,18 +1324,24 @@
           href: ./canvas-apps/component-properties.md
   - name: Performance and optimization
     items:
+    - name: Overview
+      href: ./canvas-apps/create-performant-apps-overview.md
     - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
-    - name: Common sources of slow performance
-      href: ./canvas-apps/slow-performance-sources.md
-    - name: Common performance issues and resolutions
-      href: ./canvas-apps/common-performance-issue-resolutions.md
-    - name: Performance tips and best practices
-      href: ./canvas-apps/performance-tips.md
-    - name: Canvas apps coding standards and guidelines
-      href: https://aka.ms/powerappscanvasguidelines
+    - name: Small data payload
+      href: ./canvas-apps/small-data-payloads.md
+    - name: Optimized query data patterns 
+      href: ./canvas-apps/optimized-query-data-patterns.md 
+    - name: Speed up app or page load
+      href: ./canvas-apps/fast-app-page-load.md
+    - name: Fast calculations
+      href: ./canvas-apps/efficient-calculations.md
+    - name: Other performance considerations
+      href: ./canvas-apps/app-performance-considerations.md
     - name: Build large and complex apps
       href: ./canvas-apps/working-with-large-apps.md
+    - name: Canvas apps coding standards and guidelines
+      href: https://aka.ms/powerappscanvasguidelines
   - name: Important changes and deprecations
     href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
@@ -2150,7 +2160,17 @@
         - name: View component dependencies
           href: ./data-platform/view-component-dependencies.md
         - name: Use environment variables
-          href: ./data-platform/EnvironmentVariables.md
+          items:
+          - name: Environment variables overview
+            href: ./data-platform/EnvironmentVariables.md
+          - name: Use data source environment variables in canvas apps
+            href: ./data-platform/EnvironmentVariables-data-source-canvas-apps.md
+          - name: Use environment variables in Power Automate solution cloud flows
+            href: ./data-platform/EnvironmentVariables-power-automate.md
+          - name: Use Azure Key Vault secrets
+            href: ./data-platform/EnvironmentVariables-azure-key-vault-secrets.md
+          - name: Environment variables FAQ
+            href: ./data-platform/environment-variables-faq.md
         - name: Use settings
           href: ./data-platform/create-edit-configure-settings.md
         - name: Use a connection reference
@@ -2546,8 +2566,12 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
-- name: Building AI plugins for discovery by Copilot (preview)
-  href: common/build-ai-plugin-for-copilot.md     
+- name: AI plugins (preview)
+  items:
+  - name: AI plugins in Power Platform
+    href: common/ai-plugin.md 
+  - name: Building AI plugins for discovery by Copilot
+    href: common/build-ai-plugin-for-copilot.md   
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
@@ -2612,6 +2636,8 @@
     href: ./common/faqs-email-assist-rte.md
   - name: FAQ for Excel to table and app
     href: ./common/faqs-excel-to-table-app.md
+  - name: FAQ for drafting well-written, input text with Copilot
+    href: ./common/faq-draft-with-copilot.md
 - name: Resources
   items:
   - name: Blog
