@@ -393,8 +393,6 @@ Here's what to look for in the results:
 
 - **Identifying Potential Bottlenecks**: A high count of waiting jobs in certain operation types might signify bottlenecks in those areas. A high count might be due to resource limitations, dependencies on other processes, or system misconfigurations.
 
-- **Prioritizing Issues**: The query returns results by count in descending order to highlight the most pressing issues at the top of the list. This helps in prioritizing problem-solving efforts.
-
 - **Capacity and Resource Management**: If certain jobs are consistently in the waiting state, it could indicate that the system lacks the necessary resources to process these jobs efficiently.
 
 - **System Health Check**: The jobs in a waiting state serve as a health indicator. A healthy system should ideally have minimal jobs in a waiting state or at least show a quick turnover from waiting to active processing.
