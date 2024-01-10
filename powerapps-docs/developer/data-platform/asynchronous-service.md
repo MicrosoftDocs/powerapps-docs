@@ -707,12 +707,11 @@ Following are the points on what to look for when executing this query and analy
 #### [SQL](#tab/sql)
 
 ```sql
-SELECT count(*) as RecordCount, sum(FileSizeInBytes) as TotalSize, OwningExtensionId, OwningExtensionIdName, StateCode, StatusCode, OperationType from FileAttachmentBase (nolock)
- join AsyncOperation (nolock) on FileAttachmentBase.FileAttachmentId =  AsyncOperationBase.DataBlobId
- where FileAttachmentBase.ObjectIdTypeCode = 4700
+SELECT count(*) as RecordCount, sum(FileSizeInBytes) as TotalSize, OwningExtensionId, OwningExtensionIdName, StateCode, StatusCode, OperationType from FileAttachment (nolock)
+ join AsyncOperation (nolock) on FileAttachment.FileAttachmentId =  AsyncOperation.DataBlobId
+ where FileAttachment.ObjectIdTypeCode = 4700
  group by  OwningExtensionId, OwningExtensionIdName, StateCode, StatusCode, OperationType
  order by TotalSize desc
-
 ```
 
 
