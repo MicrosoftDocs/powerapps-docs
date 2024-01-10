@@ -70,7 +70,7 @@ sections:
         In append only mode, you should identify the latest version of record with the same ID using **VersionNumber** and **SinkModifiedOn** then apply **isDeleted=0** on the latest version.
    - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
-         For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgement from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using SinkModifiedOn.     
+         For append only mode, if Azure Synapse Link for Dataverse doesn't get an acknowledgment from the Azure data lake that the data has been committed due to any reason such as network delays, Azure Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using SinkModifiedOn.     
    - question: Which Dataverse tables aren't supported for export?
      answer: |
         Any table that doesn't have change tracking enabled won't be supported in addition to following system tables:
