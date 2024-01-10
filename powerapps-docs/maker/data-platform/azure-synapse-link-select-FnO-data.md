@@ -116,13 +116,14 @@ There are several limitations that will be addressed in future releases. To lear
 7. If the table selected contains data fields that are of Array type, those fields will be ignored anf the exported data does not contain the field. For an Example i WHSInventTable table, fields FilterCode and FilterGroup are of type Array. These fields are not exported with Synapse Link.
 
 ## Access incremental data changes from Finance and Operations
-Load incremental data changes into your own downstream Data warehouse | [Synapse Link - incremental update](azure-synapse-link-incremental.md) | Azure data lake <br> No need to bring Synapse workspace or spark pool as your data will be saved in CSV format 
+If want to load incremental data changes from Finance and Operations into your own downstream Data warehouse, you can create a Synape Link profile that provides only incremental data. Synapse Link will  provide an initial export of all data rows and then provide you with access to data that changed periodically. The data is provided via CSV files stored in time stamped folders and you can easily consume the data using Azure Data factory or other data tools. See  [Synapse Link - incremental update](azure-synapse-link-incremental.md) for more details.
+
+To create a SynapsEL ink profile with incremental data:
 
 1. Sign in to Power Apps and select your preferred environment
 2. On the left navigation pane, select Azure Synapse Link.
 3. In Synapse Link page, On the command bar, select + New link to data lake.
-4. Select Connect to your Azure Synapse Analytics workspace, and then select the Subscription, Resource group, and Workspace name.
-5. Select Use Spark pool for processing, and then select the precreated Spark pool and Storage account.
+4. 
 6. Select Next.
 7. Add the tables you want to export, you will be able to choose Finance and Opetations tables provided the pre-requisites are met.
 8. Select Advanced, select Show advanced configuration settings and enter the time interval, in minutes, for how often the incremental updates should be captured.
