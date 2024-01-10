@@ -401,9 +401,6 @@ Here's what to look for in the results:
 
 - **Workflow Efficiency**: The results can shed light on workflow efficiency. If a particular `operationtype` has a high count of waiting jobs, it might indicate inefficiencies or the need for optimization within that workflow.
 
-- **Alerts for Intervention**: Certain `statuscode` values might correspond to statuses that require manual intervention. High counts for these values can signal the need for administrative attention.
-
-- **Understanding the Queue**: The data can offer insights into how jobs are queued and processed, which can be useful for further analysis or system configuration adjustments.
 
 
 ### Workflows by count
@@ -549,12 +546,16 @@ Here's what to look for in the results:
 
 When the [Data column](reference/entities/asyncoperation.md#BKMK_Data) of the asyncoperation table is larger than 4MB, the data in that column is saved in file storage. When this happens, the [DataBlobId column](reference/entities/asyncoperation.md#BKMK_DataBlobId) has a value. To save space, you might want to identify and delete these records. Use the following queries to discover these records
 
-#### TODO: Subtitle for SELECT count(*) AS FileStorageCount FROM AsyncOperation  WHERE  DataBlobId IS NOT NULL
+#### Async Operation FileStorage Datablob Count
 
-> **TODO**: 
-> 
-> - Add something about what to look for with this query?
-> - What to look for in the results
+The following simple query is designed to count the number of records in the asyncoperation table where the datablobid column is not null. 
+
+**Data Storage Implications**
+For the records reported to FILE, some fields (the biggest ones in size) are moved to the Blob Storage, to save space in the Database. In some senários customers want to delete the records in File to save Space so this is helpful to know.  Large numbers might suggest significant space used by these blobs, which can be important for database size managemement.
+
+**System Performance Considerations**
+If the count is unexpectedly high, it may warrant a further action such as Bulk delete and clean up.
+
 
 #### [Web API](#tab/webapi)
 
@@ -594,12 +595,11 @@ WHERE  datablobid IS NOT NULL
 
 ---
 
-#### TODO: Subtitle for SELECT count(*)  AS DBCount  FROM AsyncOperation WHERE DataBlobId IS NULL
+#### Async Operations not in Blob Storage
 
-> **TODO**: 
-> 
-> - Add something about what to look for with this query?
-> - What to look for in the results
+This simple query is aimed at counting the number of records in the asyncoperation table where the datablobid field is NULL.
+**Understanding Async Operations not in Blob Storage:** The DBCount result will indicate the volume of async operations that do not have associated data blobs. This shows us the storage status when not accounting for the blobs. 
+**Identifying inefficiencies** Unless intended, high count here may suggest the need to schedule cleanup and run bulk delete. Low count in blob storage and high count here would attribute this as the primary volume contributor. 
 
 #### [Web API](#tab/webapi)
 
@@ -691,6 +691,35 @@ ORDER BY Jobs DESC
 [Use SQL to query data using the Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md)
 
 ---
+
+#### Getting the Async Operation File Size Breakdown
+ The following script is to used to get total file size and record count for Async operations by state, status and owning extension.
+
+Following are the points on what to look for when executing this query and analyzing the results:
+
+**Record Count:** Check the RecordCount to understand how many records are being returned for each grouping of AsyncOperation entities. This will give you an idea of the volume of asynchronous operations being performed and which types are most common.
+
+**Total File Size:** Observe the TotalSize column to assess the amount of data these operations are handling. This can help you identify if there are any unusually large files that could be affecting system performance.
+
+**Grouping by Owning Entities:** The query groups results by OwningExtensionId, OwningExtensionIdName, StateCode, StatusCode, and OperationType. Look at these groupings to pinpoint which extensions are generating the most activity and if there are specific operation types that are predominant.
+
+**Operation States and Statuses:** The inclusion of StateCode and StatusCode in the grouping will help you determine the current state and status of these operations, such as which ones are pending, in progress, or completed.
+
+**Ordering by Total Size:** Since the results are ordered by TotalSize in descending order, pay attention to the top results as they will highlight the operations that are consuming the most storage. This could be important for identifying potential areas for optimization or cleanup.
+
+#### [SQL](#tab/sql)
+
+```sql
+SELECT count(*) as RecordCount, sum(FileSizeInBytes) as TotalSize, OwningExtensionId, OwningExtensionIdName, StateCode, StatusCode, OperationType from FileAttachmentBase (nolock)
+ join AsyncOperation (nolock) on FileAttachmentBase.FileAttachmentId =  AsyncOperationBase.DataBlobId
+ where FileAttachmentBase.ObjectIdTypeCode = 4700
+ group by  OwningExtensionId, OwningExtensionIdName, StateCode, StatusCode, OperationType
+ order by TotalSize desc
+
+```
+
+
+
 
 ## Delete system jobs
 
