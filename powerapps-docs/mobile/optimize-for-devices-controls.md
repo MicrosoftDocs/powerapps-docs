@@ -40,7 +40,13 @@ The following controls are available for screens that are optimized for devices.
  - Toggle
 
 > [!Note]
-> Makers must turn on modern controls and themes. They can do this
+> Makers must complete the following steps to turn on modern controls and themes for an app.
+> 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+> 1. In the navigation pane, select **Apps**.
+> 1. Select an app.
+> 1. Select **Settings** in the comand bar.
+> 1. In the **Settings** window, select **General**.
+> 1. Turn the **Modern controls and themes** option **On**.
 
  [**Controls**](../maker/canvas-apps/reference-properties.md)
  - Add picture
