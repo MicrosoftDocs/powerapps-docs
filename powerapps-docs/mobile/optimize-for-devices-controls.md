@@ -46,7 +46,7 @@ The following controls are available for screens that are optimized for devices.
 > 1. Select an app.
 > 1. Select **Settings** in the comand bar.
 > 1. In the **Settings** window, select **General**.
-> 1. Turn the **Modern controls and themes** option **On**.
+> 1. Turn on the **Modern controls and themes** option.
 
  [**Controls**](../maker/canvas-apps/reference-properties.md)
  - Add picture
