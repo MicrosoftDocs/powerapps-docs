@@ -283,6 +283,8 @@ Use this query to understand the distribution and frequency of different types o
 
 #### [Web API](#tab/webapi)
 
+This query doesn't order by `count` descending.
+
 ```http
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=groupby((statecode,statuscode,operationtype),aggregate($count as count))
 Accept: application/json  
@@ -345,6 +347,8 @@ Use this query to extract a count of all jobs within the `asyncoperation` table 
 - Make informed decisions about how to address them to improve system performance and throughput.
 
 #### [Web API](#tab/webapi)
+
+This query doesn't order by count descending.
 
 ```http
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((statecode eq 1))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
@@ -413,7 +417,7 @@ Here's what to look for in the results:
 
 - **Operation Type Breakdown**: The count of waiting jobs grouped `operationtype`, showing you the types of operations are most commonly in a waiting state.
 
-- **Identifying Potential Bottlenecks**: A high count of waiting jobs for extended periods of time may be due to resource limitations, dependencies on other processes, or system misconfigurations. Refer to Bulk Delete, Clean up or optimizing on such cases.
+- **Identifying Potential Bottlenecks**: A high count of waiting jobs for extended periods of time might be due to resource limitations, dependencies on other processes, or system misconfigurations. Refer to Bulk Delete, Clean up or optimizing on such cases.
 
 - **Capacity and Resource Management**: If certain jobs are consistently in the waiting state, it could indicate that the system lacks the necessary resources to process these jobs efficiently.
 
@@ -589,17 +593,17 @@ Here's what to look for in the results:
 
 ### Queries for File Storage
 
-When the [Data column](reference/entities/asyncoperation.md#BKMK_Data) of the asyncoperation table is larger than 4MB, the data in that column is saved in file storage. When this happens, the [DataBlobId column](reference/entities/asyncoperation.md#BKMK_DataBlobId) has a value. To save space, you might want to identify and delete these records. Use the following queries to discover these records
+When the [Data column](reference/entities/asyncoperation.md#BKMK_Data) of the `asyncoperation` table is larger than 4 MB, the data in that column is saved in file storage. The [DataBlobId column](reference/entities/asyncoperation.md#BKMK_DataBlobId) has a value when the row uses file storage. To save space, you might want to identify and delete these records. Use the following queries to discover these records
 
 #### Async Operation FileStorage Datablob Count
 
-The following simple query is designed to count the number of records in the asyncoperation table where the datablobid column is not null. 
+Use this query to count the number of records in the `asyncoperation` table where the `datablobid` column isn't null..
 
-**Data Storage Implications**
-For the records reported to FILE, some fields (the biggest ones in size) are moved to the Blob Storage, to save space in the Database. In some senários customers want to delete the records in File to save Space so this is helpful to know.  Large numbers might suggest significant space used by these blobs, which can be important for database size managemement.
+**Data Storage Implications**:
+You may want to delete the records in using file storage to save space so this is helpful to know.  Large numbers might suggest significant space used by these blobs, which can be important for database size managemement.
 
-**System Performance Considerations**
-If the count is unexpectedly high, it may warrant a further action such as Bulk delete and clean up.
+**System Performance Considerations**:
+If the count is unexpectedly high, you may want to take further action such as Bulk delete and clean up.
 
 
 #### [Web API](#tab/webapi)
@@ -609,7 +613,6 @@ GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((datablobid n
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
-Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
 [Learn to query Data using the Web API](webapi/query-data-web-api.md)
@@ -657,7 +660,6 @@ GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((datablobid e
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
-Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
 [Learn to query Data using the Web API](webapi/query-data-web-api.md)
@@ -700,8 +702,10 @@ This will enable the identification of the specific job names that have the grea
 
 #### [Web API](#tab/webapi)
 
+This query doesn't order by the `jobs` column decending.
+
 ```http
-GET [Organization URI]/api/data/v9.2/asyncoperations?$select=operationtype,name,friendlymessage&$filter=(datablobid ne null)&$orderby=operationtype asc,name asc,friendlymessage asc
+GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((datablobid ne null))/groupby((operationtype,name,friendlymessage),aggregate($count as jobs))
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -713,18 +717,26 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 #### [FetchXml](#tab/fetchxml)
 
 ```xml
-<fetch>
+<fetch aggregate='true'>
   <entity name='asyncoperation'>
-    <attribute name='operationtype' />
-    <attribute name='name' />
-    <attribute name='friendlymessage' />
+    <attribute name='asyncoperationid'
+      aggregate='count'
+      alias='jobs' />
+    <attribute name='operationtype'
+      groupby='true'
+      alias='operationtype' />
+    <attribute name='name'
+      groupby='true'
+      alias='name' />
+    <attribute name='friendlymessage'
+      groupby='true'
+      alias='friendlymessage' />
     <filter>
       <condition attribute='datablobid'
         operator='not-null' />
     </filter>
-    <order attribute='operationtype' />
-    <order attribute='name' />
-    <order attribute='friendlymessage' />
+    <order alias='jobs'
+      descending='true' />
   </entity>
 </fetch>
 ```
@@ -736,6 +748,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```sql
 SELECT operationtypename
       ,name
+      ,friendlymessage
       ,count(*) AS Jobs  
 FROM asyncoperation
 WHERE datablobid IS NOT NULL 
@@ -749,19 +762,19 @@ ORDER BY Jobs DESC
 
 #### Getting the Async Operation File Size Breakdown
 
- The following script is to used to get total file size and record count for Async operations by state, status and owning extension.
+Use this query to get total file size and record count for system jobs by state, status and owning extension.
 
 Following are the points on what to look for when executing this query and analyzing the results:
 
-**Record Count:** Check the RecordCount to understand how many records are being returned for each grouping of AsyncOperation entities. This will give you an idea of the volume of asynchronous operations being performed and which types are most common.
+**Record Count:** `RecordCount` tells you how many records are being returned for each grouping of system job records. This will give you an idea of the volume of asynchronous operations being performed and which types are most common.
 
-**Total File Size:** Observe the TotalSize column to assess the amount of data these operations are handling. This can help you identify if there are any unusually large files that could be affecting system performance.
+**Total File Size:** `TotalSize` tells you the amount of data these operations are handling. This can help you identify if there are any unusually large files that could be affecting system performance.
 
-**Grouping by Owning Entities:** The query groups results by OwningExtensionId, OwningExtensionIdName, StateCode, StatusCode, and OperationType. Look at these groupings to pinpoint which extensions are generating the most activity and if there are specific operation types that are predominant.
+**Grouping by Owning Entities:** The query groups results by `owningextensionid`, `owningextensionidname`, `statecode`, `statuscode`, and `operationtype`. Look at these groupings to pinpoint which extensions are generating the most activity and if there are specific operation types that are predominant.
 
-**Operation States and Statuses:** The inclusion of StateCode and StatusCode in the grouping will help you determine the current state and status of these operations, such as which ones are pending, in progress, or completed.
+**Operation States and Statuses:** The inclusion of `statecode` and `statuscode` in the grouping will help you determine the current state and status of these operations, such as which ones are pending, in progress, or completed.
 
-**Ordering by Total Size:** Since the results are ordered by TotalSize in descending order, pay attention to the top results as they will highlight the operations that are consuming the most storage. This could be important for identifying potential areas for optimization or cleanup.
+**Ordering by Total Size:** Since the results are ordered by `TotalSize` in descending order, pay attention to the top results as they will highlight the operations that are consuming the most storage. This could be important for identifying potential areas for optimization or cleanup.
 
 #### [Web API](#tab/webapi)
 
@@ -883,7 +896,7 @@ Together with options to manage views, the following options to manage system jo
 |Postpone|Using the **More Actions** menu.<br />Reschedules a system job|
 |Pause|Using the **More Actions** menu.<br />Pauses a system job.|
 
-Whether the requested operation occurs depends on the state of the system job. For example, you can't pause a job that completed or hasn't started yet. The table below describes the conditions for each change and what happen when they're selected.
+Whether the requested operation occurs depends on the state of the system job. For example, you can't pause a job that is completed or hasn't started yet. The following table describes the conditions for each change and what happen when they're selected.
 
 |Option|Valid StateCode values|Change|
 |--|--|--|
@@ -896,7 +909,7 @@ Whether the requested operation occurs depends on the state of the system job. F
 
 ## Postpone system jobs
 
-The `PostPoneUntil` column contains a datetime value when the system job changes state from `1` (**Suspended**) to `0` (**Ready**). Together with the `StateCode` and `StatusCode` columns, these are the only columns supported for update when using the `AsyncOperation` table.
+The `PostPoneUntil` column contains a datetime value when the system job changes state from `1` (**Suspended**) to `0` (**Ready**). The `PostPoneUntil`, `StateCode`, and `StatusCode` columns  are the only `asyncoperation` table columns supported for update.
 
 ### See also
 
