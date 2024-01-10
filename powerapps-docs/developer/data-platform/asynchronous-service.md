@@ -391,7 +391,8 @@ Here's what to look for in the results:
 
 - **Operation Type Breakdown**: The count of waiting jobs grouped `operationtype`, showing you the types of operations are most commonly in a waiting state.
 
-- **Identifying Potential Bottlenecks**: A high count of waiting jobs in certain operation types might signify bottlenecks in those areas. A high count might be due to resource limitations, dependencies on other processes, or system misconfigurations.
+- **Identifying Potential Bottlenecks**: A high count of waiting jobs for extended periods of time may be due to resource limitations, dependencies on other processes, or system misconfigurations. Refer to Bulk Delete, Clean up
+- or optimizing on such cases.
 
 - **Capacity and Resource Management**: If certain jobs are consistently in the waiting state, it could indicate that the system lacks the necessary resources to process these jobs efficiently.
 
