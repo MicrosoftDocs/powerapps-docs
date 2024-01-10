@@ -68,13 +68,13 @@ The following controls are available for screens that are optimized for devices.
 
 ## Unsupported controls
 
-If a screen is set to be optimized for devices, but has an unsupported control, you'll see an error message in a box. 
+If a screen is set to be optimized for devices, but has an unsupported control, you see an error message in a box. 
 
 :::image type="content" source="media/optimized-for-devices-control-error.png" alt-text="The error that shows when an unsupported control is on a screen set to optimize for devices.":::
 
 ## Device-optimized properties
 
-Some properties must be specifically configured to be optimized for devices. For example, consider the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control. The maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating the control only works on mobile devices. On a device, in a screen optimized for devices, the control displays a camera feed to enable barcode scanning.
+Some properties must be configured to be optimized for devices. For example, consider the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control. The maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating the control only works on mobile devices. On a device, in a screen optimized for devices, the control displays a camera feed to enable barcode scanning.
 
 ## Known limitations
 
