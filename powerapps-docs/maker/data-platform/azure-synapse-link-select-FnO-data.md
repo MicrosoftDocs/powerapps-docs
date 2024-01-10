@@ -39,6 +39,8 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 >
 > If you're planning to adopt the Export to Data Lake feature in finance and operations apps, you should consider adopting Azure Synapse Link with finance and operations data support instead. See Software lifecycle annoucements related to [Export to Data Lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) for more details. For guidance and tools to upgrade from Export to Data Lake to Synapse Link visit [https://aka.ms/TransitiontoSynapseLinkVideos](https://aka.ms/TransitiontoSynapseLinkVideos)
 >
+> Finance and Operations data in Synapse Link is not yet available in GCC regions.
+> 
 
 ## Prerequisites
 
