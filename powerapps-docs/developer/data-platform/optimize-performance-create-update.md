@@ -22,7 +22,7 @@ When you need to create or update thousands or millions of records in Dataverse,
 
 ## Table type
 
-The type of table you choose to store your data has the greatest impact on how much throughput you can expect with bulk operations. Dataverse offers two types of tables: *standard* and *elastic*. Elastic tables are currently a preview feature.
+The type of table you choose to store your data has the greatest impact on how much throughput you can expect with bulk operations. Dataverse offers two types of tables: *standard* and *elastic*. 
 
 - A **standard** table stores data using Azure SQL. Standard tables provide transaction support and greater capabilities for modeling relationships.
 - An **elastic** table stores data using Azure Cosmos DB. Elastic tables automatically scale horizontally to handle large amounts of data and high levels of throughput with low latency. Elastic tables are suitable for applications that have unpredictable, spiky, or rapidly growing workloads.
@@ -50,7 +50,7 @@ As a developer of a client application performing the bulk operation, you can ap
 
 ## Bulk operation APIs
 
-Dataverse provides [bulk operation APIs](bulk-operations.md) that enable the highest possible throughput for create and update operations. These APIs are currently in preview. These APIs include `CreateMultiple`, `UpdateMultiple`, and for elastic tables only: `DeleteMultiple`. `UpsertMultiple` is coming soon.
+Dataverse provides [bulk operation APIs](bulk-operations.md) that enable the highest possible throughput for create and update operations. These APIs include `CreateMultiple`, `UpdateMultiple`. For elastic tables only, you can use `DeleteMultiple`. [UpsertRequest](xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest) is currently in preview with the SDK for .NET only.
 
 While these APIs provide the highest throughput, they have the following limitations for standard tables:
 
@@ -61,7 +61,7 @@ While these APIs provide the highest throughput, they have the following limitat
 
 Bulk operations are available for all elastic tables and elastic tables can return information about individual operations that fail. [Learn more about bulk operations with elastic tables](use-elastic-tables.md#bulk-operations-with-elastic-tables).
 
-### Batch APIs
+## Batch APIs
 
 If you aren't able to use bulk operation APIs, with the SDK for .NET you can use [ExecuteMultiple](org-service/execute-multiple-requests.md), and with Web API you can use [OData $batch](webapi/execute-batch-operations-using-web-api.md).
 
@@ -134,11 +134,11 @@ Based on the factors previously described, follow these recommendations to optim
 
 ### See also
 
-[Elastic tables (Preview)](elastic-tables.md)   
+[Elastic tables](elastic-tables.md)   
 [Use plug-ins to extend business processes](plug-ins.md)   
 [Bypass synchronous logic](bypass-custom-business-logic.md#bypass-synchronous-logic)   
-[Bulk Operation messages (preview)](bulk-operations.md)   
-[Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](write-plugin-multiple-operation.md)   
+[Bulk Operation messages](bulk-operations.md)   
+[Write plug-ins for CreateMultiple and UpdateMultiple](write-plugin-multiple-operation.md)   
 [Send parallel requests](send-parallel-requests.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -41,7 +41,7 @@ items:
       href: attachment-annotation-file-operations.md
     - name: Query schema definitions and detect changes
       href: retrievemetadatachanges.md
-    - name: Use CreateMultiple and UpdateMultiple (preview)
+    - name: Use bulk operations
       href: create-update-multiple.md
 - name: (JavaScript) samples
   items:

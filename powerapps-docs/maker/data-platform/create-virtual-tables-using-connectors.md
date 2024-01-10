@@ -20,6 +20,7 @@ Virtual tables enable integrating data from external data sources by seamlessly 
 This document covers the new  experience using Power Apps (make.powerapps.com) to create virtual tables using the following virtual connector providers:
 - SQL Server
 - Microsoft SharePoint
+- Microsoft Fabric. More information: [Build apps and automations, drive action with insights from Microsoft Fabric](azure-synapse-link-build-apps-with-fabric.md)
 
 You can create a virtual table for Excel using the virtual connector provider by following the legacy process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
 

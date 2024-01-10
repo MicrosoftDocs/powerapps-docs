@@ -1,7 +1,7 @@
 ---
 title: "msdyn_helppage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_helppage table/entity."
-ms.date: 10/27/2023
+ms.date: 01/03/2024
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -110,7 +110,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Content|
 |DisplayName|Content|
 |Format|Text|
 |IsLocalizable|False|
@@ -172,7 +172,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Locale|
 |DisplayName|Locale|
 |Format|Language|
 |IsValidForForm|True|
