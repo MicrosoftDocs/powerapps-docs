@@ -5,7 +5,7 @@ author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: sericks
-ms.date: 11/14/2023
+ms.date: 01/10/2024
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -13,6 +13,8 @@ search.audienceType:
 contributors:
   - sericks
   - anuitz
+ms.contributors:
+- devangpandya
 ---
 
 # Optimize for devices controls (preview)
@@ -37,6 +39,9 @@ The following controls are available for screens that are optimized for devices.
  - Text input
  - Toggle
 
+> [!Note]
+> Makers must turn on modern controls and themes. They can do this
+
  [**Controls**](../maker/canvas-apps/reference-properties.md)
  - Add picture
  - Barcode reader
@@ -44,6 +49,7 @@ The following controls are available for screens that are optimized for devices.
  - Camera
  - Check box
  - Circle
+ - Components
  - Container (horizontal and vertical included)
  - Gallery (vertical, horizontal, flexible height)
  - Icon (all icons supported)
