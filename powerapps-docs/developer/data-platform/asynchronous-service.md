@@ -283,7 +283,7 @@ Use this query to understand the distribution and frequency of different types o
 
 #### [Web API](#tab/webapi)
 
-This query doesn't order by `count` descending.
+This query doesn't order by `count` descending. You may want to use FetchXml with Web API instead. [Learn to use FetchXML with Web API](webapi/use-fetchxml-web-api.md)
 
 ```http
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=groupby((statecode,statuscode,operationtype),aggregate($count as count))
@@ -348,7 +348,7 @@ Use this query to extract a count of all jobs within the `asyncoperation` table 
 
 #### [Web API](#tab/webapi)
 
-This query doesn't order by count descending.
+This query doesn't order by `count` descending. You may want to use FetchXml with Web API instead. [Learn to use FetchXML with Web API](webapi/use-fetchxml-web-api.md)
 
 ```http
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((statecode eq 1))/groupby((statecode,statuscode,operationtype),aggregate($count as count))
@@ -595,15 +595,12 @@ Here's what to look for in the results:
 
 When the [Data column](reference/entities/asyncoperation.md#BKMK_Data) of the `asyncoperation` table is larger than 4 MB, the data in that column is saved in file storage. The [DataBlobId column](reference/entities/asyncoperation.md#BKMK_DataBlobId) has a value when the row uses file storage. To save space, you might want to identify and delete these records. Use the following queries to discover these records
 
-#### Async Operation FileStorage Datablob Count
+#### AsyncOperation FileStorage Datablob Count
 
-Use this query to count the number of records in the `asyncoperation` table where the `datablobid` column isn't null..
+Use this query to count the number of records in the `asyncoperation` table where the `datablobid` column isn't null.
 
-**Data Storage Implications**:
-You may want to delete the records in using file storage to save space so this is helpful to know.  Large numbers might suggest significant space used by these blobs, which can be important for database size managemement.
 
-**System Performance Considerations**:
-If the count is unexpectedly high, you may want to take further action such as Bulk delete and clean up.
+
 
 
 #### [Web API](#tab/webapi)
@@ -647,11 +644,17 @@ WHERE  datablobid IS NOT NULL
 
 ---
 
+Here's what to look for in the results:
+
+- **Data Storage Implications**:
+You may want to delete the records in using file storage to save space so this is helpful to know.  Large numbers might suggest significant space used by these blobs, which can be important for database size managemement.
+
+- **System Performance Considerations**:
+If the `FileStorageCount` is unexpectedly high, you may want to take further action such as Bulk delete and clean up.
+
 #### Async Operations not in Blob Storage
 
-This simple query is aimed at counting the number of records in the asyncoperation table where the datablobid field is NULL.
-**Understanding Async Operations not in Blob Storage:** The DBCount result will indicate the volume of async operations that do not have associated data blobs. This shows us the storage status when not accounting for the blobs. 
-**Identifying inefficiencies** Unless intended, high count here may suggest the need to schedule cleanup and run bulk delete. Low count in blob storage and high count here would attribute this as the primary volume contributor. 
+Use this query to count the number of records in the `asyncoperation` table where the `datablobid` field is `NULL`.
 
 #### [Web API](#tab/webapi)
 
@@ -694,6 +697,12 @@ WHERE datablobid IS NULL
 
 ---
 
+Here's what to look for in the results:
+
+- **Understanding Async Operations not in Blob Storage:** The `DBCount` result will indicate the volume of async operations that do not have associated data blobs. This shows us the storage status when not accounting for the blobs.
+
+- **Identifying inefficiencies** Unless intended, high count here may suggest the need to schedule cleanup and run bulk delete. Low count in blob storage and high count here would attribute this as the primary volume contributor.
+
 #### Find names of jobs using file storage
 
 The results of this query shows the job types, the name of the jobs, and the number of times this job exists on the table consuming file storage. Use this to identify the specific job names that have the greatest impact on file consumption and create a bulk delete job for records having that name.
@@ -702,7 +711,7 @@ This will enable the identification of the specific job names that have the grea
 
 #### [Web API](#tab/webapi)
 
-This query doesn't order by the `jobs` column decending.
+This query doesn't order by the `jobs` column decending. You may want to use FetchXml with Web API instead. [Learn to use FetchXML with Web API](webapi/use-fetchxml-web-api.md)
 
 ```http
 GET [Organization URI]/api/data/v9.2/asyncoperations?$apply=filter((datablobid ne null))/groupby((operationtype,name,friendlymessage),aggregate($count as jobs))
@@ -764,17 +773,7 @@ ORDER BY Jobs DESC
 
 Use this query to get total file size and record count for system jobs by state, status and owning extension.
 
-Following are the points on what to look for when executing this query and analyzing the results:
 
-**Record Count:** `RecordCount` tells you how many records are being returned for each grouping of system job records. This will give you an idea of the volume of asynchronous operations being performed and which types are most common.
-
-**Total File Size:** `TotalSize` tells you the amount of data these operations are handling. This can help you identify if there are any unusually large files that could be affecting system performance.
-
-**Grouping by Owning Entities:** The query groups results by `owningextensionid`, `owningextensionidname`, `statecode`, `statuscode`, and `operationtype`. Look at these groupings to pinpoint which extensions are generating the most activity and if there are specific operation types that are predominant.
-
-**Operation States and Statuses:** The inclusion of `statecode` and `statuscode` in the grouping will help you determine the current state and status of these operations, such as which ones are pending, in progress, or completed.
-
-**Ordering by Total Size:** Since the results are ordered by `TotalSize` in descending order, pay attention to the top results as they will highlight the operations that are consuming the most storage. This could be important for identifying potential areas for optimization or cleanup.
 
 #### [Web API](#tab/webapi)
 
@@ -852,6 +851,14 @@ SELECT count(*) as RecordCount
 [Use SQL to query data using the Dataverse Tabular Data Stream (TDS) endpoint](dataverse-sql-query.md)
 
 ---
+
+Here's what to look for in the results:
+
+- **Record Count:** `RecordCount` tells you how many records are being returned for each grouping of system job records. This will give you an idea of the volume of asynchronous operations being performed and which types are most common.
+- **Total File Size:** `TotalSize` tells you the amount of data these operations are handling. This can help you identify if there are any unusually large files that could be affecting system performance.
+- **Grouping by Owning Entities:** The query groups results by `owningextensionid`, `owningextensionidname`, `statecode`, `statuscode`, and `operationtype`. Look at these groupings to pinpoint which extensions are generating the most activity and if there are specific operation types that are predominant.
+- **Operation States and Statuses:** The inclusion of `statecode` and `statuscode` in the grouping will help you determine the current state and status of these operations, such as which ones are pending, in progress, or completed.
+- **Ordering by TotalSize:** Since the results are ordered by `TotalSize` in descending order, pay attention to the top results as they will highlight the operations that are consuming the most storage. This could be important for identifying potential areas for optimization or cleanup.
 
 
 ## Delete system jobs
