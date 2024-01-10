@@ -118,22 +118,29 @@ There are several limitations that will be addressed in future releases. To lear
 ## Access incremental data changes from Finance and Operations
 If want to load incremental data changes from Finance and Operations into your own downstream Data warehouse, you can create a Synape Link profile that provides only incremental data. Synapse Link will  provide an initial export of all data rows and then provide you with access to data that changed periodically. The data is provided via CSV files stored in time stamped folders and you can easily consume the data using Azure Data factory or other data tools. See  [Synapse Link - incremental update](azure-synapse-link-incremental.md) for more details.
 
-To create a SynapsEL ink profile with incremental data:
+To create a Synapse Link profile with incremental data:
 
 1. Sign in to Power Apps and select your preferred environment
 2. On the left navigation pane, select Azure Synapse Link.
 3. In Synapse Link page, On the command bar, select + New link to data lake.
-4. 
-6. Select Next.
-7. Add the tables you want to export, you will be able to choose Finance and Opetations tables provided the pre-requisites are met.
-8. Select Advanced, select Show advanced configuration settings and enter the time interval, in minutes, for how often the incremental updates should be captured.
-9. Select Save. Tables selected will be initialized and they are ready for reporting.
+4. Select Subscription, Resource group and a Storage account. Optionally, you can provide a Synapse workspace. 5. You do not need to "User spark pool for Delta lake ..." option   
+6. Select Next. 
+7. Select Advanced, select Show advanced configuration settings and enable the option **Enable incremental update folder structure**
+8. You will be able to choose tables from Dataverse as well as Finance and Operations. 
+11. Select Save. Tables selected will be initialized and you will see incremental data in the storage account
 
 > [!NOTE]
 > 
-> Finance and operations apps tables are allowed only in Azure Synapse Link. Makers can't currently use them to build apps. **You don't have to define finance and operations apps tables as virtual entities, and you don't have to enable change tracking for each table**.
+> If you are upgrading from Export to Data lake feature, enabling incremental data changes option provides similar change data as the [Change feeds feature](https://learn.microsoft.com/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-change-feeds)
 >
+> It is recommended that you create seperate Synapse Link profiles for incremental data and table for ease of management.
 
+### Known limitations
+
+There are several limitations that will be addressed in future releases. To learn more about the upcoming roadmap and stay in touch with product team, join the [preview Viva Engage group aka.ms/SynapseLinkforDynamics](https://aka.ms/SynapseLinkforDynamics/).
+
+All the known limitations applicable to Finance and Operations Tables are applicable to incremental data. In addition following limitations apply
+1. 
 
 ## Enable finance and operations data entities in Azure Synapse Link
 
