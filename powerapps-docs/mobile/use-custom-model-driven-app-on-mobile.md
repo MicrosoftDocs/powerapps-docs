@@ -184,7 +184,7 @@ Your app maker can choose to lock the tabs at the top of a form so they are alwa
 
 ![Tabs are locked at the top of the form.](media/Lock-tabs.png "Tabs are locked at the top of the form.")
 
-Your app maker can turn on this feature. For more inforamtion, see [Features](../maker/model-driven-apps/app-properties.md#features).
+Your app maker can turn on this feature. For more information, see [Features](../maker/model-driven-apps/app-properties.md#features).
 
 ### Mobile commanding improvements
 
