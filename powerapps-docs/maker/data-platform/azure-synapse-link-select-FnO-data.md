@@ -33,28 +33,36 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 > 
 > This feature is generally available with finance and operations application versions shown in the following list. If you have not yet applied these application versions, install the latest cumulative update to use this feature.
 > 
-> - 10.0.34 (PU58) cumulative update 7.0.6931.171 or later.
-> - 10.0.35 (PU59) cumulative update 7.0.6972.149 or later.
 > - 10.0.36 (PU60) cumulative update 7.0.7036.133 or later. 
 > - 10.0.37 (PU61) cumulative update 7.0.7068.109 or later.
 > - 10.0.38 (PU62) cumulative update 7.0.7120.59 or later
 >
-> The [Export to Data Lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) in finance and operations apps is being combined with Azure Synapse Link for Dataverse. We will announce deprecation of Export to Data Lake service and upgrade existing customers to Azure Synapse Link for Dataverse. 
+> If you're planning to adopt the Export to Data Lake feature in finance and operations apps, you should consider adopting Azure Synapse Link with finance and operations data support instead. See Software lifecycle annoucements related to [Export to Data Lake feature](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview) for more details. For guidance and tools to upgrade from Export to Data Lake to Synapse Link visit [https://aka.ms/TransitiontoSynapseLinkVideos](https://aka.ms/TransitiontoSynapseLinkVideos)
 >
-> If you're planning to adopt the Export to Data Lake feature in finance and operations apps, you should consider adopting Azure Synapse Link with finance and operations data support instead.
-> We will provide guidance and tools for existing customers to transition to Azure Synapse Link for Dataverse. If you're currently using the Export to Data Lake feature in finance and operations apps, you can continue to use both services in parallel until the transition. To stay in touch with the product team and community, you can join the [Viva engage group](https://aka.ms/SynapseLinkforDynamics). 
 
 ## Prerequisites
 
-- You must have a finance and operations sandbox (Tier-2) environment with application versions mentioned earlier. You can use a finance and operations Tier-1 environment (also known as a cloud-hosted environment) for validation. Your cloud-hosted environment must be version update 10.0.36 (PU 60) or later with cumulative updates mentioned above.
+- You must have a finance and operations sandbox (Tier-2) or higer environment. You can also use a Tier-1 environment (also known as a cloud-hosted environment) for validation. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later as mentioned above.
 - The finance and operations apps environment must be linked with Microsoft Power Platform.
-- You must have an Azure subscription that has owner access. (You can also add finance and operations data to an existing storage account that's configured with Azure Synapse Link.)
+- Add configuration in Finance and Operations environment
+- You cannot add finance and operations data to an existing storage account that's configured with Azure Synapse Link. You must have access to an Azure subscription so that you can create a new SynapseL ink profile. Depending on the how you plan to consume data, you may need additional Azure resources as shown below.
+
+| How you plan to consume Data  |  Synapse Link feature you will use | Pre-resuities and Azure resources needed |
+| Access Finance and Operations tables via Synapse query |  Synapse Link - Delta lake |  Azure Data lake <br> Azure Synapse workspace < br> Azure Synapse Spark pool < br> NOTE: your data will be saved in delta parquet format enabling better read performance | 
+| Load incremental data changes into your own downstream Data warehouse | Synapse Link - incremental update | Azure data lake <br> No need to bring Synapse workspace or spark pool as your data will be saved in CSV format |
+| Access Finance and Operations tables via Microsoft Fabric | Link to Fabric  | see Link to Fabric documentation |
+
+
+
+
 
     - Storage account
     - Azure Synapse Analytics workspace
     - Azure Synapse Spark pool that has version 3.3 or later (for Delta Lake conversion)
+ 
+  
 
-## Microsoft Power Platform integration
+### Microsoft Power Platform integration
 
 You must link your Finance and operations environment with Microsoft Power Platform.  
 
