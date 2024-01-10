@@ -42,32 +42,32 @@ Azure Synapse Link for Dataverse offers the following features that you can use 
 
 ## Prerequisites
 
-- You must have a finance and operations sandbox (Tier-2) or higer environment. You can also use a Tier-1 environment (also known as a cloud-hosted environment) for validation. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later as mentioned above.
-- The finance and operations apps environment must be linked with Microsoft Power Platform.
-- Add configuration in Finance and Operations environment
-- You cannot add finance and operations data to an existing storage account that's configured with Azure Synapse Link. You must have access to an Azure subscription so that you can create a new SynapseL ink profile. Depending on the how you plan to consume data, you may need additional Azure resources as shown below.
+1. You must have a finance and operations sandbox (Tier-2) or higer environment. You can also use a Tier-1 environment (also known as a cloud-hosted environment) for validation. Your environments must be version 10.0.36 (PU 60) cumulative update 7.0.7036.133 or later as mentioned above.
+2. The finance and operations apps environment must be linked with Microsoft Power Platform.
+3. Add configuration in Finance and Operations environment
+4. You cannot add finance and operations data to an existing storage account that's configured with Azure Synapse Link. You must have access to an Azure subscription so that you can create a new SynapseL ink profile. Depending on the how you plan to consume data, you may need additional Azure resources as shown below.
 
 | How you plan to consume Data  |  Synapse Link feature you will use | Pre-resuities and Azure resources needed |
 |-------------------------------|------------------------------------|------------------------------------------|
 | Access Finance and Operations tables via Synapse query |  Synapse Link - Delta lake |  Azure Data lake <br> Azure Synapse workspace < br> Azure Synapse Spark pool <br> NOTE: your data will be saved in delta parquet format enabling better read performance | 
 | Load incremental data changes into your own downstream Data warehouse | [Synapse Link - incremental update](azure-synapse-link-incremental.md) | Azure data lake <br> No need to bring Synapse workspace or spark pool as your data will be saved in CSV format |
 | Access Finance and Operations tables via Microsoft Fabric | [Link to Fabric](powerapps-docs/maker/data-platform/azure-synapse-link-view-in-fabric.md)  | Microsoft Fabric workspace |
-  
 
-### Microsoft Power Platform integration
 
-You must link your Finance and operations environment with Microsoft Power Platform.  
+### Link your Finance and Operations environment with Microsoft Power Platform 
 
-You can link with Microsoft Power Platform when you deploy the new environment. For more information about Microsoft Power Platform integration, see [Enable the Microsoft Power Platform integration](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-power-platform-integration#enable-during-deploy).
-
+Verify with your Finance and Operations systems administrator whether your Finance and Operations environment is linked to Power platform. 
 To confirm that the finance and operations apps environment is linked with Microsoft Power Platform, review the **Environment** page in Lifecycle Services.
+
+You can link with Microsoft Power Platform when you deploy the new environment. You can also link existing environments with Power platform.
+For more information about Microsoft Power Platform integration, see [Enable the Microsoft Power Platform integration](/dynamics365/fin-ops-core/dev-itpro/power-platform/enable-power-platform-integration#enable-during-deploy).
 
 > [!NOTE]
 > Dual-write setup isn't required to enable finance and operations data in Azure Synapse Link.
 
-## Add configurations in a finance and operations apps environment
+### Add configurations in a finance and operations apps environment
 
-You must enable the **Sql row version change tracking** configuration key. In Finance and Operations versions 10.0.39 (PU63) or later, this configuration key may be enabled by default.
+You must enable the **Sql row version change tracking** configuration key in your Finance and Operations environment. In Finance and Operations versions 10.0.39 (PU63) or later, this configuration key may be enabled by default.
 
 To enable this configuration key, you must turn on maintenance mode. For more information about how to use maintenance mode, see [Turn maintenance mode on and off in DevTest/Demo environments hosted in Customer's subscription](/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode#turn-maintenance-mode-on-and-off-in-devtestdemo-environments-hosted-in-customers-subscription).
 
@@ -78,7 +78,7 @@ To enable this configuration key, you must turn on maintenance mode. For more in
 
 After row version change tracking is enabled, a system event that's triggered in your environment might cause reinitialization of tables in Export to Data Lake. If you have downstream consumption pipelines, you might have to reinitialize the pipelines. For more information, see [Some tables have been "initialized" without user action](/dynamics365/fin-ops-core/dev-itpro/data-entities/finance-data-azure-data-lake#some-tables-have-been-initialized-without-user-action).
 
-## Enable finance and operations apps tables in Azure Synapse Link
+## Add Finance and Operations tables in Azure Synapse Link
 
 You can enable both finance and operations entities and finance and operations apps tables in Azure Synapse Link for Dataverse. This section is focused on finance and operations apps tables.
 
