@@ -5,7 +5,7 @@ author: anuitz
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: sericks
-ms.date: 11/14/2023
+ms.date: 01/10/2024
 ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
@@ -13,6 +13,8 @@ search.audienceType:
 contributors:
   - sericks
   - anuitz
+ms.contributors:
+- devangpandya
 ---
 
 # Optimize for devices controls (preview)
@@ -29,7 +31,7 @@ For a screen to be optimized for devices, it must use controls that are supporte
 ## Device-optimized controls
 The following controls are available for screens that are optimized for devices. All other controls are currently unsupported.
 
-[**Modern controls**](../maker/canvas-apps/controls/modern-controls/modern-controls-reference.md)
+### [Modern controls](../maker/canvas-apps/controls/modern-controls/modern-controls-reference.md)
  - Button
  - Checkbox
  - Date picker
@@ -37,13 +39,23 @@ The following controls are available for screens that are optimized for devices.
  - Text input
  - Toggle
 
- [**Controls**](../maker/canvas-apps/reference-properties.md)
+#### Turn on modern controls
+Makers must complete the following steps to turn on modern controls and themes for an app.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. In the navigation pane, select **Apps**.
+1. Select an app.
+1. Select **Settings** in the comand bar.
+1. In the **Settings** window, select **General**.
+1. Turn on the **Modern controls and themes** option.
+
+ ### [Controls](../maker/canvas-apps/reference-properties.md)
  - Add picture
  - Barcode reader
  - Button
  - Camera
  - Check box
  - Circle
+ - Components
  - Container (horizontal and vertical included)
  - Gallery (vertical, horizontal, flexible height)
  - Icon (all icons supported)
@@ -56,13 +68,13 @@ The following controls are available for screens that are optimized for devices.
 
 ## Unsupported controls
 
-If a screen is set to be optimized for devices, but has an unsupported control, you'll see an error message in a box. 
+If a screen is set to be optimized for devices, but has an unsupported control, you see an error message in a box. 
 
 :::image type="content" source="media/optimized-for-devices-control-error.png" alt-text="The error that shows when an unsupported control is on a screen set to optimize for devices.":::
 
 ## Device-optimized properties
 
-Some properties must be specifically configured to be optimized for devices. For example, consider the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control. The maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating the control only works on mobile devices. On a device, in a screen optimized for devices, the control displays a camera feed to enable barcode scanning.
+Some properties must be configured to be optimized for devices. For example, consider the [barcode reader](../maker/canvas-apps/controls/control-barcodereader.md) control. The maker can select **Scan Inline** for the **Scanning mode** property. In Power Apps Studio, when this mode is selected, the control displays as a warning box indicating the control only works on mobile devices. On a device, in a screen optimized for devices, the control displays a camera feed to enable barcode scanning.
 
 ## Known limitations
 
